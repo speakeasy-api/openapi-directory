@@ -4,27 +4,90 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientsOnpatientAccessDeleteRequest {
-    
-    public PatientsOnpatientAccessDeletePathParams pathParams;
-    public PatientsOnpatientAccessDeleteRequest withPathParams(PatientsOnpatientAccessDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=chart_id")
+    public String chartId;
+    public PatientsOnpatientAccessDeleteRequest withChartId(String chartId) {
+        this.chartId = chartId;
         return this;
     }
     
-    
-    public PatientsOnpatientAccessDeleteQueryParams queryParams;
-    public PatientsOnpatientAccessDeleteRequest withQueryParams(PatientsOnpatientAccessDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_of_birth")
+    public String dateOfBirth;
+    public PatientsOnpatientAccessDeleteRequest withDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientsOnpatientAccessDeleteRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
     
-    public PatientsOnpatientAccessDeleteSecurity security;
-    public PatientsOnpatientAccessDeleteRequest withSecurity(PatientsOnpatientAccessDeleteSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public PatientsOnpatientAccessDeleteRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ethnicity")
+    public String ethnicity;
+    public PatientsOnpatientAccessDeleteRequest withEthnicity(String ethnicity) {
+        this.ethnicity = ethnicity;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_name")
+    public String firstName;
+    public PatientsOnpatientAccessDeleteRequest withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gender")
+    public String gender;
+    public PatientsOnpatientAccessDeleteRequest withGender(String gender) {
+        this.gender = gender;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatientsOnpatientAccessDeleteRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_name")
+    public String lastName;
+    public PatientsOnpatientAccessDeleteRequest withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=preferred_language")
+    public String preferredLanguage;
+    public PatientsOnpatientAccessDeleteRequest withPreferredLanguage(String preferredLanguage) {
+        this.preferredLanguage = preferredLanguage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=race")
+    public String race;
+    public PatientsOnpatientAccessDeleteRequest withRace(String race) {
+        this.race = race;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public PatientsOnpatientAccessDeleteRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

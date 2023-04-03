@@ -79,7 +79,7 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.GetDocumentResponse getDocument(org.openapis.openapi.models.operations.GetDocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentPathParams.class, baseUrl, "/documents/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentRequest.class, baseUrl, "/documents/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -119,7 +119,7 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.GetDocumentProgressResponse getDocumentProgress(org.openapis.openapi.models.operations.GetDocumentProgressRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentProgressPathParams.class, baseUrl, "/documents/{documentId}/progress", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentProgressRequest.class, baseUrl, "/documents/{documentId}/progress", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -173,7 +173,7 @@ public class Document {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDocumentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDocumentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -213,13 +213,13 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.GetSimilarDocumentsResponse getSimilarDocuments(org.openapis.openapi.models.operations.GetSimilarDocumentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSimilarDocumentsPathParams.class, baseUrl, "/documents/{documentId}/similars", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSimilarDocumentsRequest.class, baseUrl, "/documents/{documentId}/similars", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSimilarDocumentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSimilarDocumentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -259,13 +259,13 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.GetUserDocumentsResponse getUserDocuments(org.openapis.openapi.models.operations.GetUserDocumentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserDocumentsPathParams.class, baseUrl, "/{userId}/documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserDocumentsRequest.class, baseUrl, "/{userId}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserDocumentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserDocumentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -305,7 +305,7 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.RegeneratePreviewResponse regeneratePreview(org.openapis.openapi.models.operations.RegeneratePreviewRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegeneratePreviewPathParams.class, baseUrl, "/documents/{documentId}/regenerate_preview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegeneratePreviewRequest.class, baseUrl, "/documents/{documentId}/regenerate_preview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -345,12 +345,12 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.UseAsDraftResponse useAsDraft(org.openapis.openapi.models.operations.UseAsDraftRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UseAsDraftPathParams.class, baseUrl, "/documents/{documentId}/use_as_draft", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UseAsDraftRequest.class, baseUrl, "/documents/{documentId}/use_as_draft", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "useAsDraftPayload", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -387,12 +387,12 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.UseAsRegularResponse useAsRegular(org.openapis.openapi.models.operations.UseAsRegularRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UseAsRegularPathParams.class, baseUrl, "/documents/{documentId}/use_as_regular", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UseAsRegularRequest.class, baseUrl, "/documents/{documentId}/use_as_regular", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "useAsRegularPayload", "json");
         req.setBody(serializedRequestBody);
         
         

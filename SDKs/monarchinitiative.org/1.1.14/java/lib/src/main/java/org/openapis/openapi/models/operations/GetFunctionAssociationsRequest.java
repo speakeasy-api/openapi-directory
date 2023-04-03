@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFunctionAssociationsRequest {
-    
-    public GetFunctionAssociationsPathParams pathParams;
-    public GetFunctionAssociationsRequest withPathParams(GetFunctionAssociationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default) or a specific publication or other supporting object, e.g. ZFIN:ZDB-PUB-060503-2
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
+    public String[] evidence;
+    public GetFunctionAssociationsRequest withEvidence(String[] evidence) {
+        this.evidence = evidence;
         return this;
     }
     
+    /**
+     * CURIE identifier of a function term (e.g. GO:0044598)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetFunctionAssociationsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetFunctionAssociationsQueryParams queryParams;
-    public GetFunctionAssociationsRequest withQueryParams(GetFunctionAssociationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * number of rows
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
+    public Long rows;
+    public GetFunctionAssociationsRequest withRows(Long rows) {
+        this.rows = rows;
+        return this;
+    }
+    
+    /**
+     * beginning row
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Long start;
+    public GetFunctionAssociationsRequest withStart(Long start) {
+        this.start = start;
         return this;
     }
     

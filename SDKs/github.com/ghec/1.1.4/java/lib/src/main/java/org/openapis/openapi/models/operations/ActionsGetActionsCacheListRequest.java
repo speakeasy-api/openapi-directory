@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetActionsCacheListRequest {
-    
-    public ActionsGetActionsCacheListPathParams pathParams;
-    public ActionsGetActionsCacheListRequest withPathParams(ActionsGetActionsCacheListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The direction to sort the results by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public org.openapis.openapi.models.shared.DirectionEnum direction;
+    public ActionsGetActionsCacheListRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * An explicit key or prefix for identifying the cache
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ActionsGetActionsCacheListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
     
-    public ActionsGetActionsCacheListQueryParams queryParams;
-    public ActionsGetActionsCacheListRequest withQueryParams(ActionsGetActionsCacheListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsGetActionsCacheListRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ActionsGetActionsCacheListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ActionsGetActionsCacheListRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/&lt;branch name&gt;` or simply `&lt;branch name&gt;`. To reference a pull request use `refs/pull/&lt;number&gt;/merge`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
+    public String ref;
+    public ActionsGetActionsCacheListRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsGetActionsCacheListRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The property to sort the results by. `created_at` means when the cache was created. `last_accessed_at` means when the cache was last accessed. `size_in_bytes` is the size of the cache in bytes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public org.openapis.openapi.models.shared.ActionsCacheListSortEnum sort;
+    public ActionsGetActionsCacheListRequest withSort(org.openapis.openapi.models.shared.ActionsCacheListSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

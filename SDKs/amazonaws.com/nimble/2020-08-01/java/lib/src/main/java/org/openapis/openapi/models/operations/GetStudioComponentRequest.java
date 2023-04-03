@@ -4,20 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStudioComponentRequest {
-    
-    public GetStudioComponentPathParams pathParams;
-    public GetStudioComponentRequest withPathParams(GetStudioComponentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetStudioComponentRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetStudioComponentRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public GetStudioComponentHeaders headers;
-    public GetStudioComponentRequest withHeaders(GetStudioComponentHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetStudioComponentRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetStudioComponentRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetStudioComponentRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetStudioComponentRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetStudioComponentRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The studio component ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=studioComponentId")
+    public String studioComponentId;
+    public GetStudioComponentRequest withStudioComponentId(String studioComponentId) {
+        this.studioComponentId = studioComponentId;
+        return this;
+    }
+    
+    /**
+     * The studio ID. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=studioId")
+    public String studioId;
+    public GetStudioComponentRequest withStudioId(String studioId) {
+        this.studioId = studioId;
         return this;
     }
     

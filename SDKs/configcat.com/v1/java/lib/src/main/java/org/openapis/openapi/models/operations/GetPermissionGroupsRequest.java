@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPermissionGroupsRequest {
-    
-    public GetPermissionGroupsPathParams pathParams;
-    public GetPermissionGroupsRequest withPathParams(GetPermissionGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The identifier of the Product.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public GetPermissionGroupsRequest withProductId(String productId) {
+        this.productId = productId;
         return this;
     }
     

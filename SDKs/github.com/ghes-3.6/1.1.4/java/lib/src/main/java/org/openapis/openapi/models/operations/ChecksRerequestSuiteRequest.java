@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChecksRerequestSuiteRequest {
+    /**
+     * The unique identifier of the check suite.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=check_suite_id")
+    public Long checkSuiteId;
+    public ChecksRerequestSuiteRequest withCheckSuiteId(Long checkSuiteId) {
+        this.checkSuiteId = checkSuiteId;
+        return this;
+    }
     
-    public ChecksRerequestSuitePathParams pathParams;
-    public ChecksRerequestSuiteRequest withPathParams(ChecksRerequestSuitePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ChecksRerequestSuiteRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ChecksRerequestSuiteRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

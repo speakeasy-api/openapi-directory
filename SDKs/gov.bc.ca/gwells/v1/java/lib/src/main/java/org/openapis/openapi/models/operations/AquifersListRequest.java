@@ -4,13 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AquifersListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aquifer_id")
+    public Double aquiferId;
+    public AquifersListRequest withAquiferId(Double aquiferId) {
+        this.aquiferId = aquiferId;
+        return this;
+    }
     
-    public AquifersListQueryParams queryParams;
-    public AquifersListRequest withQueryParams(AquifersListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public AquifersListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public AquifersListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Which field to use when ordering the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering")
+    public String ordering;
+    public AquifersListRequest withOrdering(String ordering) {
+        this.ordering = ordering;
+        return this;
+    }
+    
+    /**
+     * A search term.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public AquifersListRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

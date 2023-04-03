@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DependabotCreateOrUpdateRepoSecretRequest {
-    
-    public DependabotCreateOrUpdateRepoSecretPathParams pathParams;
-    public DependabotCreateOrUpdateRepoSecretRequest withPathParams(DependabotCreateOrUpdateRepoSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public DependabotCreateOrUpdateRepoSecretRequestBody requestBody;
+    public DependabotCreateOrUpdateRepoSecretRequest withRequestBody(DependabotCreateOrUpdateRepoSecretRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public DependabotCreateOrUpdateRepoSecretRequestBody request;
-    public DependabotCreateOrUpdateRepoSecretRequest withRequest(DependabotCreateOrUpdateRepoSecretRequestBody request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public DependabotCreateOrUpdateRepoSecretRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public DependabotCreateOrUpdateRepoSecretRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The name of the secret.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
+    public String secretName;
+    public DependabotCreateOrUpdateRepoSecretRequest withSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VirtualizationClustersReadRequest {
-    
-    public VirtualizationClustersReadPathParams pathParams;
-    public VirtualizationClustersReadRequest withPathParams(VirtualizationClustersReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this cluster.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public VirtualizationClustersReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -38,7 +38,7 @@ public class Schemas {
      */
     public org.openapis.openapi.models.operations.StoryOutlineSchemaResponse storyOutlineSchema(org.openapis.openapi.models.operations.StoryOutlineSchemaRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryOutlineSchemaPathParams.class, baseUrl, "/outline-schema/{schema_version}/story-outline.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryOutlineSchemaRequest.class, baseUrl, "/outline-schema/{schema_version}/story-outline.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

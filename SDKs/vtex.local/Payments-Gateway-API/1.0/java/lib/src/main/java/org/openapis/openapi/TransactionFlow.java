@@ -44,18 +44,18 @@ public class TransactionFlow {
      */
     public org.openapis.openapi.models.operations.CancelthetransactionResponse cancelthetransaction(org.openapis.openapi.models.operations.CancelthetransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelthetransactionPathParams.class, baseUrl, "/api/pvt/transactions/{transactionId}/cancellation-request", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelthetransactionRequest.class, baseUrl, "/api/pvt/transactions/{transactionId}/cancellation-request", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "cancelthetransactionRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -91,18 +91,18 @@ public class TransactionFlow {
      */
     public org.openapis.openapi.models.operations.RefundthetransactionResponse refundthetransaction(org.openapis.openapi.models.operations.RefundthetransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RefundthetransactionPathParams.class, baseUrl, "/api/pvt/transactions/{transactionId}/refunding-request", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RefundthetransactionRequest.class, baseUrl, "/api/pvt/transactions/{transactionId}/refunding-request", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "refundthetransactionRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -138,18 +138,18 @@ public class TransactionFlow {
      */
     public org.openapis.openapi.models.operations.SettlethetransactionResponse settlethetransaction(org.openapis.openapi.models.operations.SettlethetransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SettlethetransactionPathParams.class, baseUrl, "/api/pvt/transactions/{transactionId}/settlement-request", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SettlethetransactionRequest.class, baseUrl, "/api/pvt/transactions/{transactionId}/settlement-request", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "settlethetransactionRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

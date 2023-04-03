@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApiKeysRequest {
-    
-    public ApiKeysPathParams pathParams;
-    public ApiKeysRequest withPathParams(ApiKeysPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ApiKeysSecurity security;
-    public ApiKeysRequest withSecurity(ApiKeysSecurity security) {
-        this.security = security;
+    /**
+     * The api key service id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceId")
+    public String serviceId;
+    public ApiKeysRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
         return this;
     }
     

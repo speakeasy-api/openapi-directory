@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PredictJsonRequest {
-    
-    public PredictJsonPathParams pathParams;
-    public PredictJsonRequest withPathParams(PredictJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SeldonMessage request;
-    public PredictJsonRequest withRequest(org.openapis.openapi.models.shared.SeldonMessage request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SeldonMessage seldonMessage;
+    public PredictJsonRequest withSeldonMessage(org.openapis.openapi.models.shared.SeldonMessage seldonMessage) {
+        this.seldonMessage = seldonMessage;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment")
+    public String deployment;
+    public PredictJsonRequest withDeployment(String deployment) {
+        this.deployment = deployment;
+        return this;
+    }
     
-    public PredictJsonSecurity security;
-    public PredictJsonRequest withSecurity(PredictJsonSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
+    public String namespace;
+    public PredictJsonRequest withNamespace(String namespace) {
+        this.namespace = namespace;
         return this;
     }
     

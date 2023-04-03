@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesCitationListRequest {
-    
-    public NodesCitationListPathParams pathParams;
-    public NodesCitationListRequest withPathParams(NodesCitationListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the node.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public String nodeId;
+    public NodesCitationListRequest withNodeId(String nodeId) {
+        this.nodeId = nodeId;
         return this;
     }
     

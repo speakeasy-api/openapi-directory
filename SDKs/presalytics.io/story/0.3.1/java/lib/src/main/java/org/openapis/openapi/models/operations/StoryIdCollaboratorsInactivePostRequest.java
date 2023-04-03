@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdCollaboratorsInactivePostRequest {
-    
-    public StoryIdCollaboratorsInactivePostPathParams pathParams;
-    public StoryIdCollaboratorsInactivePostRequest withPathParams(StoryIdCollaboratorsInactivePostPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * the id from the story object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public StoryIdCollaboratorsInactivePostRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
@@ -18,9 +21,9 @@ public class StoryIdCollaboratorsInactivePostRequest {
      * Collaborator user id and permission type
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ModifyInactiveCollaborator request;
-    public StoryIdCollaboratorsInactivePostRequest withRequest(org.openapis.openapi.models.shared.ModifyInactiveCollaborator request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ModifyInactiveCollaborator modifyInactiveCollaborator;
+    public StoryIdCollaboratorsInactivePostRequest withModifyInactiveCollaborator(org.openapis.openapi.models.shared.ModifyInactiveCollaborator modifyInactiveCollaborator) {
+        this.modifyInactiveCollaborator = modifyInactiveCollaborator;
         return this;
     }
     

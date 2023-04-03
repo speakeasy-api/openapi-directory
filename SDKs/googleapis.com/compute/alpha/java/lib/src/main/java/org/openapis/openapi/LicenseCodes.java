@@ -34,25 +34,26 @@ public class LicenseCodes {
     /**
      * Return a specified license code. License codes are mirrored across all projects that have permissions to read the License Code. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images. 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeLicenseCodesGetResponse computeLicenseCodesGet(org.openapis.openapi.models.operations.ComputeLicenseCodesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeLicenseCodesGetResponse computeLicenseCodesGet(org.openapis.openapi.models.operations.ComputeLicenseCodesGetRequest request, org.openapis.openapi.models.operations.ComputeLicenseCodesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeLicenseCodesGetPathParams.class, baseUrl, "/projects/{project}/global/licenseCodes/{licenseCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeLicenseCodesGetRequest.class, baseUrl, "/projects/{project}/global/licenseCodes/{licenseCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeLicenseCodesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeLicenseCodesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class LicenseCodes {
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images. 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeLicenseCodesGetIamPolicyResponse computeLicenseCodesGetIamPolicy(org.openapis.openapi.models.operations.ComputeLicenseCodesGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeLicenseCodesGetIamPolicyResponse computeLicenseCodesGetIamPolicy(org.openapis.openapi.models.operations.ComputeLicenseCodesGetIamPolicyRequest request, org.openapis.openapi.models.operations.ComputeLicenseCodesGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeLicenseCodesGetIamPolicyPathParams.class, baseUrl, "/projects/{project}/global/licenseCodes/{resource}/getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeLicenseCodesGetIamPolicyRequest.class, baseUrl, "/projects/{project}/global/licenseCodes/{resource}/getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeLicenseCodesGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeLicenseCodesGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class LicenseCodes {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images. 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeLicenseCodesSetIamPolicyResponse computeLicenseCodesSetIamPolicy(org.openapis.openapi.models.operations.ComputeLicenseCodesSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeLicenseCodesSetIamPolicyResponse computeLicenseCodesSetIamPolicy(org.openapis.openapi.models.operations.ComputeLicenseCodesSetIamPolicyRequest request, org.openapis.openapi.models.operations.ComputeLicenseCodesSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeLicenseCodesSetIamPolicyPathParams.class, baseUrl, "/projects/{project}/global/licenseCodes/{resource}/setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeLicenseCodesSetIamPolicyRequest.class, baseUrl, "/projects/{project}/global/licenseCodes/{resource}/setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "globalSetPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeLicenseCodesSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeLicenseCodesSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,27 +174,28 @@ public class LicenseCodes {
     /**
      * Returns permissions that a caller has on the specified resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images. 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeLicenseCodesTestIamPermissionsResponse computeLicenseCodesTestIamPermissions(org.openapis.openapi.models.operations.ComputeLicenseCodesTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeLicenseCodesTestIamPermissionsResponse computeLicenseCodesTestIamPermissions(org.openapis.openapi.models.operations.ComputeLicenseCodesTestIamPermissionsRequest request, org.openapis.openapi.models.operations.ComputeLicenseCodesTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeLicenseCodesTestIamPermissionsPathParams.class, baseUrl, "/projects/{project}/global/licenseCodes/{resource}/testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeLicenseCodesTestIamPermissionsRequest.class, baseUrl, "/projects/{project}/global/licenseCodes/{resource}/testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeLicenseCodesTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeLicenseCodesTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

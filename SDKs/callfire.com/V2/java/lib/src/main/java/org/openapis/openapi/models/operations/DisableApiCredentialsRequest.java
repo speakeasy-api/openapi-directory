@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisableApiCredentialsRequest {
-    
-    public DisableApiCredentialsPathParams pathParams;
-    public DisableApiCredentialsRequest withPathParams(DisableApiCredentialsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DisableApiCredentialsSecurity security;
-    public DisableApiCredentialsRequest withSecurity(DisableApiCredentialsSecurity security) {
-        this.security = security;
+    /**
+     * An id of an API credential
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DisableApiCredentialsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

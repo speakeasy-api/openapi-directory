@@ -42,12 +42,12 @@ public class Member {
      */
     public org.openapis.openapi.models.operations.CreateMemberResponse createMember(org.openapis.openapi.models.operations.CreateMemberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateMemberPathParams.class, baseUrl, "/conversations/{conversation_id}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateMemberRequest.class, baseUrl, "/conversations/{conversation_id}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -83,7 +83,7 @@ public class Member {
      */
     public org.openapis.openapi.models.operations.DeleteMemberResponse deleteMember(org.openapis.openapi.models.operations.DeleteMemberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMemberPathParams.class, baseUrl, "/conversations/{conversation_id}/members/{member_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMemberRequest.class, baseUrl, "/conversations/{conversation_id}/members/{member_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -122,7 +122,7 @@ public class Member {
      */
     public org.openapis.openapi.models.operations.GetMemberResponse getMember(org.openapis.openapi.models.operations.GetMemberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMemberPathParams.class, baseUrl, "/conversations/{conversation_id}/members/{member_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMemberRequest.class, baseUrl, "/conversations/{conversation_id}/members/{member_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -162,7 +162,7 @@ public class Member {
      */
     public org.openapis.openapi.models.operations.GetMembersResponse getMembers(org.openapis.openapi.models.operations.GetMembersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMembersPathParams.class, baseUrl, "/conversations/{conversation_id}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMembersRequest.class, baseUrl, "/conversations/{conversation_id}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -201,12 +201,12 @@ public class Member {
      */
     public org.openapis.openapi.models.operations.UpdateMemberResponse updateMember(org.openapis.openapi.models.operations.UpdateMemberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateMemberPathParams.class, baseUrl, "/conversations/{conversation_id}/members/{member_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateMemberRequest.class, baseUrl, "/conversations/{conversation_id}/members/{member_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

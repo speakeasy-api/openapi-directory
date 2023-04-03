@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchFieldTypeRequest {
-    
-    public FetchFieldTypePathParams pathParams;
-    public FetchFieldTypeRequest withPathParams(FetchFieldTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public FetchFieldTypeRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
-    
-    public FetchFieldTypeSecurity security;
-    public FetchFieldTypeRequest withSecurity(FetchFieldTypeSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchFieldTypeRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the FieldType resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchFieldTypeRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

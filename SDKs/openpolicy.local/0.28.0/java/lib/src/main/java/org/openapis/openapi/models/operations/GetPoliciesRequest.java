@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPoliciesRequest {
-    
-    public GetPoliciesQueryParams queryParams;
-    public GetPoliciesRequest withQueryParams(GetPoliciesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If true, response will be in a human-readable format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
+    public Boolean pretty;
+    public GetPoliciesRequest withPretty(Boolean pretty) {
+        this.pretty = pretty;
         return this;
     }
     

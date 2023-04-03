@@ -36,10 +36,11 @@ public class Orders {
      * 
      * If a given order ID does not exist, the ID is ignored instead of generating an error.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BatchRetrieveOrdersResponse batchRetrieveOrders(org.openapis.openapi.models.operations.BatchRetrieveOrdersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BatchRetrieveOrdersResponse batchRetrieveOrders(org.openapis.openapi.models.shared.BatchRetrieveOrdersRequest request, org.openapis.openapi.models.operations.BatchRetrieveOrdersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/orders/batch-retrieve");
         
@@ -53,7 +54,7 @@ public class Orders {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,10 +82,11 @@ public class Orders {
      * CalculateOrder
      * Enables applications to preview order pricing without creating an order.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CalculateOrderResponse calculateOrder(org.openapis.openapi.models.operations.CalculateOrderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CalculateOrderResponse calculateOrder(org.openapis.openapi.models.shared.CalculateOrderRequest request, org.openapis.openapi.models.operations.CalculateOrderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/orders/calculate");
         
@@ -98,7 +100,7 @@ public class Orders {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -132,10 +134,11 @@ public class Orders {
      * 
      * You can modify open orders using the [UpdateOrder](https://developer.squareup.com/reference/square_2021-08-18/orders-api/update-order) endpoint.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateOrderResponse createOrder(org.openapis.openapi.models.operations.CreateOrderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateOrderResponse createOrder(org.openapis.openapi.models.shared.CreateOrderRequest request, org.openapis.openapi.models.operations.CreateOrderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/orders");
         
@@ -149,7 +152,7 @@ public class Orders {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -190,24 +193,25 @@ public class Orders {
      * - Be approved with [delayed capture](https://developer.squareup.com/docs/payments-api/take-payments#delayed-capture).
      * Using a delayed capture payment with `PayOrder` completes the approved payment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PayOrderResponse payOrder(org.openapis.openapi.models.operations.PayOrderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PayOrderResponse payOrder(org.openapis.openapi.models.operations.PayOrderRequest request, org.openapis.openapi.models.operations.PayOrderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PayOrderPathParams.class, baseUrl, "/v2/orders/{order_id}/pay", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PayOrderRequest.class, baseUrl, "/v2/orders/{order_id}/pay", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "payOrderRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -251,10 +255,11 @@ public class Orders {
      * orders have a `created_at` value that reflects the time the order was created,
      * not the time it was subsequently transmitted to Square.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchOrdersResponse searchOrders(org.openapis.openapi.models.operations.SearchOrdersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchOrdersResponse searchOrders(org.openapis.openapi.models.shared.SearchOrdersRequest request, org.openapis.openapi.models.operations.SearchOrdersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/orders/search");
         
@@ -268,7 +273,7 @@ public class Orders {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -296,19 +301,20 @@ public class Orders {
      * RetrieveOrder
      * Retrieves an [Order](https://developer.squareup.com/reference/square_2021-08-18/objects/Order) by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetV2OrdersOrderIdResponse getV2OrdersOrderId(org.openapis.openapi.models.operations.GetV2OrdersOrderIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetV2OrdersOrderIdResponse getV2OrdersOrderId(org.openapis.openapi.models.operations.GetV2OrdersOrderIdRequest request, org.openapis.openapi.models.operations.GetV2OrdersOrderIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2OrdersOrderIdPathParams.class, baseUrl, "/v2/orders/{order_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2OrdersOrderIdRequest.class, baseUrl, "/v2/orders/{order_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -350,24 +356,25 @@ public class Orders {
      * To pay for an order, see 
      * [Pay for Orders](https://developer.squareup.com/docs/orders-api/pay-for-orders).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutV2OrdersOrderIdResponse putV2OrdersOrderId(org.openapis.openapi.models.operations.PutV2OrdersOrderIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutV2OrdersOrderIdResponse putV2OrdersOrderId(org.openapis.openapi.models.operations.PutV2OrdersOrderIdRequest request, org.openapis.openapi.models.operations.PutV2OrdersOrderIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV2OrdersOrderIdPathParams.class, baseUrl, "/v2/orders/{order_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV2OrdersOrderIdRequest.class, baseUrl, "/v2/orders/{order_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateOrderRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

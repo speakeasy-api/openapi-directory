@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NetworksecurityProjectsLocationsUrlListsCreateRequest {
-    
-    public NetworksecurityProjectsLocationsUrlListsCreatePathParams pathParams;
-    public NetworksecurityProjectsLocationsUrlListsCreateRequest withPathParams(NetworksecurityProjectsLocationsUrlListsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public NetworksecurityProjectsLocationsUrlListsCreateQueryParams queryParams;
-    public NetworksecurityProjectsLocationsUrlListsCreateRequest withQueryParams(NetworksecurityProjectsLocationsUrlListsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public NetworksecurityProjectsLocationsUrlListsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UrlListInput request;
-    public NetworksecurityProjectsLocationsUrlListsCreateRequest withRequest(org.openapis.openapi.models.shared.UrlListInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UrlListInput urlListInput;
+    public NetworksecurityProjectsLocationsUrlListsCreateRequest withUrlListInput(org.openapis.openapi.models.shared.UrlListInput urlListInput) {
+        this.urlListInput = urlListInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public NetworksecurityProjectsLocationsUrlListsCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public NetworksecurityProjectsLocationsUrlListsCreateSecurity security;
-    public NetworksecurityProjectsLocationsUrlListsCreateRequest withSecurity(NetworksecurityProjectsLocationsUrlListsCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public NetworksecurityProjectsLocationsUrlListsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public NetworksecurityProjectsLocationsUrlListsCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public NetworksecurityProjectsLocationsUrlListsCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public NetworksecurityProjectsLocationsUrlListsCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public NetworksecurityProjectsLocationsUrlListsCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The parent resource of the UrlList. Must be in the format `projects/* /locations/{location}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public NetworksecurityProjectsLocationsUrlListsCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public NetworksecurityProjectsLocationsUrlListsCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public NetworksecurityProjectsLocationsUrlListsCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public NetworksecurityProjectsLocationsUrlListsCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public NetworksecurityProjectsLocationsUrlListsCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Required. Short name of the UrlList resource to be created. This value should be 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and should not start with a number. E.g. "url_list".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=urlListId")
+    public String urlListId;
+    public NetworksecurityProjectsLocationsUrlListsCreateRequest withUrlListId(String urlListId) {
+        this.urlListId = urlListId;
         return this;
     }
     

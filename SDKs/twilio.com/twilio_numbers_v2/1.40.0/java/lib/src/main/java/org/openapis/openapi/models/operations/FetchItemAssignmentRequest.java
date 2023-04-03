@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchItemAssignmentRequest {
-    
-    public FetchItemAssignmentPathParams pathParams;
-    public FetchItemAssignmentRequest withPathParams(FetchItemAssignmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string that we created to identify the Bundle resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=BundleSid")
+    public String bundleSid;
+    public FetchItemAssignmentRequest withBundleSid(String bundleSid) {
+        this.bundleSid = bundleSid;
         return this;
     }
     
-    
-    public FetchItemAssignmentSecurity security;
-    public FetchItemAssignmentRequest withSecurity(FetchItemAssignmentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchItemAssignmentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that we created to identify the Identity resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchItemAssignmentRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

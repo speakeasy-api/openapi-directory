@@ -4,20 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InventoryVaccinesCreateRequest {
-    
-    public InventoryVaccinesCreateQueryParams queryParams;
-    public InventoryVaccinesCreateRequest withQueryParams(InventoryVaccinesCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cvx_code")
+    public String cvxCode;
+    public InventoryVaccinesCreateRequest withCvxCode(String cvxCode) {
+        this.cvxCode = cvxCode;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public InventoryVaccinesCreateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
     
-    public InventoryVaccinesCreateSecurity security;
-    public InventoryVaccinesCreateRequest withSecurity(InventoryVaccinesCreateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public InventoryVaccinesCreateRequest withSince(String since) {
+        this.since = since;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public InventoryVaccinesCreateRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

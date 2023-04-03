@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectedPlayerSeasonStatsByPlayerRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public ProjectedPlayerSeasonStatsByPlayerFormatEnum format;
+    public ProjectedPlayerSeasonStatsByPlayerRequest withFormat(ProjectedPlayerSeasonStatsByPlayerFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public ProjectedPlayerSeasonStatsByPlayerPathParams pathParams;
-    public ProjectedPlayerSeasonStatsByPlayerRequest withPathParams(ProjectedPlayerSeasonStatsByPlayerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique FantasyData Player ID. Example:&lt;code&gt;20000571&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playerid")
+    public String playerid;
+    public ProjectedPlayerSeasonStatsByPlayerRequest withPlayerid(String playerid) {
+        this.playerid = playerid;
+        return this;
+    }
+    
+    /**
+     * Year of the season (with optional season type).&lt;br&gt;Examples: &lt;code&gt;2018&lt;/code&gt;, &lt;code&gt;2019&lt;/code&gt;, etc.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
+    public String season;
+    public ProjectedPlayerSeasonStatsByPlayerRequest withSeason(String season) {
+        this.season = season;
         return this;
     }
     

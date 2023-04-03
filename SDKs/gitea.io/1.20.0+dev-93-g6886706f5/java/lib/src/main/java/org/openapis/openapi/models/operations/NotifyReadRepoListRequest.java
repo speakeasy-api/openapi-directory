@@ -4,20 +4,67 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NotifyReadRepoListRequest {
-    
-    public NotifyReadRepoListPathParams pathParams;
-    public NotifyReadRepoListRequest withPathParams(NotifyReadRepoListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If true, mark all notifications on this repo. Default value is false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
+    public String all;
+    public NotifyReadRepoListRequest withAll(String all) {
+        this.all = all;
         return this;
     }
     
+    /**
+     * Describes the last point that notifications were checked. Anything updated since this time will not be updated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_read_at")
+    public OffsetDateTime lastReadAt;
+    public NotifyReadRepoListRequest withLastReadAt(OffsetDateTime lastReadAt) {
+        this.lastReadAt = lastReadAt;
+        return this;
+    }
     
-    public NotifyReadRepoListQueryParams queryParams;
-    public NotifyReadRepoListRequest withQueryParams(NotifyReadRepoListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public NotifyReadRepoListRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public NotifyReadRepoListRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status-types")
+    public String[] statusTypes;
+    public NotifyReadRepoListRequest withStatusTypes(String[] statusTypes) {
+        this.statusTypes = statusTypes;
+        return this;
+    }
+    
+    /**
+     * Status to mark notifications as. Defaults to read.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to-status")
+    public String toStatus;
+    public NotifyReadRepoListRequest withToStatus(String toStatus) {
+        this.toStatus = toStatus;
         return this;
     }
     

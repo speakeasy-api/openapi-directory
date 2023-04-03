@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceLldpCdpRequest {
-    
-    public GetDeviceLldpCdpPathParams pathParams;
-    public GetDeviceLldpCdpRequest withPathParams(GetDeviceLldpCdpPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetDeviceLldpCdpRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

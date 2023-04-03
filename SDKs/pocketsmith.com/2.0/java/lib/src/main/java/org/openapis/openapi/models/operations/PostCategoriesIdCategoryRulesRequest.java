@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCategoriesIdCategoryRulesRequest {
-    
-    public PostCategoriesIdCategoryRulesPathParams pathParams;
-    public PostCategoriesIdCategoryRulesRequest withPathParams(PostCategoriesIdCategoryRulesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostCategoriesIdCategoryRulesRequestBody requestBody;
+    public PostCategoriesIdCategoryRulesRequest withRequestBody(PostCategoriesIdCategoryRulesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostCategoriesIdCategoryRulesRequestBody request;
-    public PostCategoriesIdCategoryRulesRequest withRequest(PostCategoriesIdCategoryRulesRequestBody request) {
-        this.request = request;
+    /**
+     * The unique identifier of the category.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostCategoriesIdCategoryRulesRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

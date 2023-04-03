@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetCognitoEventsRequest {
-    
-    public SetCognitoEventsPathParams pathParams;
-    public SetCognitoEventsRequest withPathParams(SetCognitoEventsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SetCognitoEventsHeaders headers;
-    public SetCognitoEventsRequest withHeaders(SetCognitoEventsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Cognito Identity Pool to use when configuring Cognito Events
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IdentityPoolId")
+    public String identityPoolId;
+    public SetCognitoEventsRequest withIdentityPoolId(String identityPoolId) {
+        this.identityPoolId = identityPoolId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public SetCognitoEventsRequestBody request;
-    public SetCognitoEventsRequest withRequest(SetCognitoEventsRequestBody request) {
-        this.request = request;
+    public SetCognitoEventsRequestBody requestBody;
+    public SetCognitoEventsRequest withRequestBody(SetCognitoEventsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public SetCognitoEventsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public SetCognitoEventsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public SetCognitoEventsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public SetCognitoEventsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public SetCognitoEventsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public SetCognitoEventsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public SetCognitoEventsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

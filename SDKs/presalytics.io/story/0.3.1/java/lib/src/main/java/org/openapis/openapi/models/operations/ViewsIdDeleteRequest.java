@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ViewsIdDeleteRequest {
-    
-    public ViewsIdDeletePathParams pathParams;
-    public ViewsIdDeleteRequest withPathParams(ViewsIdDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The primary key for a page view within a session
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=view_id")
+    public String viewId;
+    public ViewsIdDeleteRequest withViewId(String viewId) {
+        this.viewId = viewId;
         return this;
     }
     

@@ -33,10 +33,11 @@ public class BaseConversion {
     /**
      * Convert a given number from one base to another base
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersBaseResponse getNumbersBase(org.openapis.openapi.models.operations.GetNumbersBaseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersBaseResponse getNumbersBase(org.openapis.openapi.models.operations.GetNumbersBaseRequest request, org.openapis.openapi.models.operations.GetNumbersBaseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/base");
         
@@ -44,14 +45,14 @@ public class BaseConversion {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersBaseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersBaseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -72,10 +73,11 @@ public class BaseConversion {
     /**
      * Convert a given number to binary
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersBaseBinaryResponse getNumbersBaseBinary(org.openapis.openapi.models.operations.GetNumbersBaseBinaryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersBaseBinaryResponse getNumbersBaseBinary(org.openapis.openapi.models.operations.GetNumbersBaseBinaryRequest request, org.openapis.openapi.models.operations.GetNumbersBaseBinarySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/base/binary");
         
@@ -83,14 +85,14 @@ public class BaseConversion {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersBaseBinaryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersBaseBinaryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -111,10 +113,11 @@ public class BaseConversion {
     /**
      * Convert a given number to hexadecimal
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersBaseHexResponse getNumbersBaseHex(org.openapis.openapi.models.operations.GetNumbersBaseHexRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersBaseHexResponse getNumbersBaseHex(org.openapis.openapi.models.operations.GetNumbersBaseHexRequest request, org.openapis.openapi.models.operations.GetNumbersBaseHexSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/base/hex");
         
@@ -122,14 +125,14 @@ public class BaseConversion {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersBaseHexQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersBaseHexRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -150,10 +153,11 @@ public class BaseConversion {
     /**
      * Convert a given number to octal
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersBaseOctalResponse getNumbersBaseOctal(org.openapis.openapi.models.operations.GetNumbersBaseOctalRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersBaseOctalResponse getNumbersBaseOctal(org.openapis.openapi.models.operations.GetNumbersBaseOctalRequest request, org.openapis.openapi.models.operations.GetNumbersBaseOctalSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/base/octal");
         
@@ -161,14 +165,14 @@ public class BaseConversion {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersBaseOctalQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersBaseOctalRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

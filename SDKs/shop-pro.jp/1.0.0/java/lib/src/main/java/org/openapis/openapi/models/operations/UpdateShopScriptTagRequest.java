@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateShopScriptTagRequest {
-    
-    public UpdateShopScriptTagPathParams pathParams;
-    public UpdateShopScriptTagRequest withPathParams(UpdateShopScriptTagPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * \u4f5c\u6210\u3059\u308b\u30b9\u30af\u30ea\u30d7\u30c8\u30bf\u30b0\u306e\u60c5\u5831
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateShopScriptTagRequestBody request;
-    public UpdateShopScriptTagRequest withRequest(UpdateShopScriptTagRequestBody request) {
-        this.request = request;
+    public UpdateShopScriptTagRequestBody requestBody;
+    public UpdateShopScriptTagRequest withRequestBody(UpdateShopScriptTagRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateShopScriptTagSecurity security;
-    public UpdateShopScriptTagRequest withSecurity(UpdateShopScriptTagSecurity security) {
-        this.security = security;
+    /**
+     * \u30b9\u30af\u30ea\u30d7\u30c8\u30bf\u30b0ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scriptTagId")
+    public Long scriptTagId;
+    public UpdateShopScriptTagRequest withScriptTagId(Long scriptTagId) {
+        this.scriptTagId = scriptTagId;
         return this;
     }
     

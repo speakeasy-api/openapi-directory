@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesViewOnlyLinksReadRequest {
+    /**
+     * The unique identifier of the view only link.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=link_id")
+    public String linkId;
+    public NodesViewOnlyLinksReadRequest withLinkId(String linkId) {
+        this.linkId = linkId;
+        return this;
+    }
     
-    public NodesViewOnlyLinksReadPathParams pathParams;
-    public NodesViewOnlyLinksReadRequest withPathParams(NodesViewOnlyLinksReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the node.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public String nodeId;
+    public NodesViewOnlyLinksReadRequest withNodeId(String nodeId) {
+        this.nodeId = nodeId;
         return this;
     }
     

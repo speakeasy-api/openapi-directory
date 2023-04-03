@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteGlobalJwtVerifierRequest {
-    
-    public DeleteGlobalJwtVerifierPathParams pathParams;
-    public DeleteGlobalJwtVerifierRequest withPathParams(DeleteGlobalJwtVerifierPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteGlobalJwtVerifierSecurity security;
-    public DeleteGlobalJwtVerifierRequest withSecurity(DeleteGlobalJwtVerifierSecurity security) {
-        this.security = security;
+    /**
+     * The jwt verifier id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=verifierId")
+    public String verifierId;
+    public DeleteGlobalJwtVerifierRequest withVerifierId(String verifierId) {
+        this.verifierId = verifierId;
         return this;
     }
     

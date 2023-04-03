@@ -29,17 +29,13 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/DeleteBinIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteBinIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteBinIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetBinIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBinIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBinIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PatchBinIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PatchBinIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PatchBinIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostBinResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PutBinIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutBinIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutBinIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java

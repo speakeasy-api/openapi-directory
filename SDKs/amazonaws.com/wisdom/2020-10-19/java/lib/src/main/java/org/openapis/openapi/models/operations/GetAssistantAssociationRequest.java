@@ -4,20 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssistantAssociationRequest {
-    
-    public GetAssistantAssociationPathParams pathParams;
-    public GetAssistantAssociationRequest withPathParams(GetAssistantAssociationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetAssistantAssociationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetAssistantAssociationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public GetAssistantAssociationHeaders headers;
-    public GetAssistantAssociationRequest withHeaders(GetAssistantAssociationHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetAssistantAssociationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetAssistantAssociationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetAssistantAssociationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetAssistantAssociationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetAssistantAssociationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The identifier of the assistant association. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assistantAssociationId")
+    public String assistantAssociationId;
+    public GetAssistantAssociationRequest withAssistantAssociationId(String assistantAssociationId) {
+        this.assistantAssociationId = assistantAssociationId;
+        return this;
+    }
+    
+    /**
+     * The identifier of the Wisdom assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assistantId")
+    public String assistantId;
+    public GetAssistantAssociationRequest withAssistantId(String assistantId) {
+        this.assistantId = assistantId;
         return this;
     }
     

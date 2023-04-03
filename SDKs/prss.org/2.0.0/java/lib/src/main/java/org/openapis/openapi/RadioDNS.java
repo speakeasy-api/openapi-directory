@@ -143,14 +143,45 @@ public class RadioDNS {
      * 
      * The response will use standard HTTP cache-control headers to indicate when the document should be refreshed as well as an ETag to allow for lightweight change detection.
      * 
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRadiodnsSpi31SIXmlResponse getRadiodnsSpi31SIXml(org.openapis.openapi.models.operations.GetRadiodnsSpi31SIXmlRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRadiodnsSpi31SIXmlResponse getRadiodnsSpi31SIXml() throws Exception {
+        return this.getRadiodnsSpi31SIXml(null);
+    }
+
+    /**
+     * Get the service information document.
+     * The service information (SI) document holds a definition of services provided by the service provider (e.g. MetaPub), including any relevant metadata and bearer details, such as:
+     * 
+     * * Names
+     * * Descriptions
+     * * Logos
+     * * Bearers (broadcast and IP)
+     * 
+     * MetaPub provides two SI documents. The _National SI document_ describes the distribution services provided by PRSS including basic service metadata, logos, and bearers. The current design defines two IP based services, although this may change in the future:
+     * 
+     * * Streams
+     *     * Bearer ID: prss:streams
+     *     * Service ID: streams
+     * * Files
+     *     * Bearer ID: prss:files
+     *     * Service ID: files
+     * 
+     * The _Station SI document_ describes the stations and broadcast services served by PRSS. Only stations and broadcast services that have opted into metadata publishing are listed in this document.
+     * 
+     * Based on [ETSI TS 102 818 v3.4.1](https://www.etsi.org/deliver/etsi_ts/102800_102899/102818/03.04.01_60/ts_102818v030401p.pdf) section 10.2.4, the SI document will be placed in a defined location on the service website. Using standard HTTP cache mechanisms, the SI document will only need to be fetched and processed occasionally.
+     * 
+     * The response will use standard HTTP cache-control headers to indicate when the document should be refreshed as well as an ETag to allow for lightweight change detection.
+     * 
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetRadiodnsSpi31SIXmlResponse getRadiodnsSpi31SIXml(String serverURL) throws Exception {
         String baseUrl = GET_RADIODNS_SPI31_SI_XML_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/radiodns/spi/3.1/SI.xml");
@@ -212,18 +243,52 @@ public class RadioDNS {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.GetRadiodnsSpi31IdFqdnSidDatePIXmlResponse getRadiodnsSpi31IdFqdnSidDatePIXml(org.openapis.openapi.models.operations.GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest request) throws Exception {
+        return this.getRadiodnsSpi31IdFqdnSidDatePIXml(request, null);
+    }
+
+    /**
+     * Get the program information document.
+     * The program information (PI) document holds the linear and the on-demand schedule of programs for a service over a 24 hour period. This information provides an electronic program guide (EPG) to clients that defines the program metadata such as:
+     * 
+     * *   Names
+     * *   Descriptions
+     * *   Logos
+     * *   Links
+     * *   Genres
+     * *   Program Events (a.k.a. pieces)
+     * 
+     * MetaPub provides both _National PI documents_ and _Station PI documents_. For both documents, only programs with metadata publishing enabled are listed in the document. As per the RadioDNS specification, the authoritative list of services is defined in the corresponding SI document.
+     * 
+     * The National PI documents correspond to the services listed in the National SI document (streams and files). This EPG contains two types of programming, live and on-demand (a.k.a files). A "live with subsequent file (LWSF)" program may appear in both the streams and files services EPG data because it will both a live stream and an on-demand file. File programs with multi-day air windows will appear in the PI file on every day that the air window is open. That is, the EPG data for each day contains the information about programming available that day, even if the programming is also available on other days. The program ID can be used to resolve these duplicates down to a single instance when processing multiple services or multiple days of EPG data.
+     * 
+     * The Station PI documents correspond to the services listed in the Station SI document, and list program and schedule metadata for programs which are subscribed to by the given service. Note that stations may opt into "static" metadata publishing (station and broadcast service metadata) but not "dynamic" metadata publishing (program and schedule metadata). If this is the case, a service that is listed in the Station SI document will not have a corresponding PI document, and a 404 status code will be returned.
+     * 
+     * Each PI document will contain 24 hours of program guide information. The current day, the previous day, and the next day will contain detailed program event information (a.k.a. Content Depot pieces) while PI files outside of this range will only contain the program (a.k.a Content Depot episode) level information. This may change in the future with the use of an API key as defined by the RadioDNS specification to identify "trusted" clients. If metadata for any program in the guide(s) changes, the PI document will be regenerated. Using standard HTTP cache mechanisms, the PI document for the current day can be fetched frequently (e.g. every 5 minutes) to receive last minute changes while future and past days will only be fetched and processed occasionally (e.g. every two hours).
+     * 
+     * By obtaining the full 24 hour guide, clients such as middleware can build a local database/lookup table of program and program event information that allows for more specific program selection based on user configuration, automation events, and other possible inputs. In the event that MetaPub is unreachable for a short period of time, the client has the full guide to prevent any interruption to the on-air broadcast.
+     * 
+     * Construction of the URL to the PI document is described in [ETSI TS 102 818 v3.4.1](https://www.etsi.org/deliver/etsi_ts/102800_102899/102818/03.04.01_60/ts_102818v030401p.pdf) section 10.3. Currently, MetaPub only supports PI URLs constructed from SPI SI, as described in [ETSI TS 103 270 v1.4.1](https://www.etsi.org/deliver/etsi_ts/103200_103299/103270/01.04.01_60/ts_103270v010401p.pdf) section 7.
+     * 
+     * The response will use standard HTTP cache-control headers to indicate when the document should be refreshed as well as an ETag to allow for lightweight change detection.
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetRadiodnsSpi31IdFqdnSidDatePIXmlResponse getRadiodnsSpi31IdFqdnSidDatePIXml(org.openapis.openapi.models.operations.GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest request, String serverURL) throws Exception {
         String baseUrl = GET_RADIODNS_SPI31_ID_FQDN_SID_DATE_PI_XML_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRadiodnsSpi31IdFqdnSidDatePIXmlPathParams.class, baseUrl, "/radiodns/spi/3.1/id/{fqdn}/{sid}/{date}_PI.xml", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest.class, baseUrl, "/radiodns/spi/3.1/id/{fqdn}/{sid}/{date}_PI.xml", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

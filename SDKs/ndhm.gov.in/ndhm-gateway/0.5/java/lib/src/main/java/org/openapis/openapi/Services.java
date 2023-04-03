@@ -39,13 +39,13 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.GetV05HiServicesServiceIdResponse getV05HiServicesServiceId(org.openapis.openapi.models.operations.GetV05HiServicesServiceIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV05HiServicesServiceIdPathParams.class, baseUrl, "/v0.5/hi-services/{service-id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV05HiServicesServiceIdRequest.class, baseUrl, "/v0.5/hi-services/{service-id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

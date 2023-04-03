@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersAddonsListRequest {
-    
-    public UsersAddonsListPathParams pathParams;
-    public UsersAddonsListRequest withPathParams(UsersAddonsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public String userId;
+    public UsersAddonsListRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

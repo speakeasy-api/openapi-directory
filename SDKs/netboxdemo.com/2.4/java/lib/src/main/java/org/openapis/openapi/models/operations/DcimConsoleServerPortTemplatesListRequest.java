@@ -4,13 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimConsoleServerPortTemplatesListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devicetype_id")
+    public String devicetypeId;
+    public DcimConsoleServerPortTemplatesListRequest withDevicetypeId(String devicetypeId) {
+        this.devicetypeId = devicetypeId;
+        return this;
+    }
     
-    public DcimConsoleServerPortTemplatesListQueryParams queryParams;
-    public DcimConsoleServerPortTemplatesListRequest withQueryParams(DcimConsoleServerPortTemplatesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public DcimConsoleServerPortTemplatesListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DcimConsoleServerPortTemplatesListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public DcimConsoleServerPortTemplatesListRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

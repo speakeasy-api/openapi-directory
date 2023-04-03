@@ -4,27 +4,136 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebmastersSitemapsSubmitRequest {
-    
-    public WebmastersSitemapsSubmitPathParams pathParams;
-    public WebmastersSitemapsSubmitRequest withPathParams(WebmastersSitemapsSubmitPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public WebmastersSitemapsSubmitRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public WebmastersSitemapsSubmitQueryParams queryParams;
-    public WebmastersSitemapsSubmitRequest withQueryParams(WebmastersSitemapsSubmitQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public WebmastersSitemapsSubmitRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public WebmastersSitemapsSubmitRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public WebmastersSitemapsSubmitSecurity security;
-    public WebmastersSitemapsSubmitRequest withSecurity(WebmastersSitemapsSubmitSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public WebmastersSitemapsSubmitRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * The URL of the actual sitemap. For example: `http://www.example.com/sitemap.xml`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=feedpath")
+    public String feedpath;
+    public WebmastersSitemapsSubmitRequest withFeedpath(String feedpath) {
+        this.feedpath = feedpath;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public WebmastersSitemapsSubmitRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public WebmastersSitemapsSubmitRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public WebmastersSitemapsSubmitRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public WebmastersSitemapsSubmitRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public WebmastersSitemapsSubmitRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The site's URL, including protocol. For example: `http://www.example.com/`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=siteUrl")
+    public String siteUrl;
+    public WebmastersSitemapsSubmitRequest withSiteUrl(String siteUrl) {
+        this.siteUrl = siteUrl;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public WebmastersSitemapsSubmitRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public WebmastersSitemapsSubmitRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

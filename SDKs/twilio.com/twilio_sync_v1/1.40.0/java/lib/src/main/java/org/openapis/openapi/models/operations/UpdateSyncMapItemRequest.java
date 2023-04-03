@@ -7,38 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSyncMapItemRequest {
-    
-    public UpdateSyncMapItemPathParams pathParams;
-    public UpdateSyncMapItemRequest withPathParams(UpdateSyncMapItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If provided, applies this mutation if (and only if) the \u201crevision\u201d field of this [map item] matches the provided value. This matches the semantics of (and is implemented with) the HTTP [If-Match header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match).
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public UpdateSyncMapItemRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
+    /**
+     * The `key` value of the Sync Map Item resource to update. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Key")
+    public String key;
+    public UpdateSyncMapItemRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
     
-    public UpdateSyncMapItemHeaders headers;
-    public UpdateSyncMapItemRequest withHeaders(UpdateSyncMapItemHeaders headers) {
-        this.headers = headers;
+    /**
+     * The SID of the Sync Map with the Sync Map Item resource to update. Can be the Sync Map resource's `sid` or its `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MapSid")
+    public String mapSid;
+    public UpdateSyncMapItemRequest withMapSid(String mapSid) {
+        this.mapSid = mapSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSyncMapItemUpdateSyncMapItemRequest request;
-    public UpdateSyncMapItemRequest withRequest(UpdateSyncMapItemUpdateSyncMapItemRequest request) {
-        this.request = request;
+    public UpdateSyncMapItemUpdateSyncMapItemRequest requestBody;
+    public UpdateSyncMapItemRequest withRequestBody(UpdateSyncMapItemUpdateSyncMapItemRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSyncMapItemSecurity security;
-    public UpdateSyncMapItemRequest withSecurity(UpdateSyncMapItemSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateSyncMapItemRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map Item resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateSyncMapItemRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchOperationsRequest {
-    
-    public FetchOperationsQueryParams queryParams;
-    public FetchOperationsRequest withQueryParams(FetchOperationsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public FetchOperationsSecurity security;
-    public FetchOperationsRequest withSecurity(FetchOperationsSecurity security) {
-        this.security = security;
+    /**
+     * Optional comma-separated list of resource owner unique identifiers by which to filter results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceOwnerId")
+    public String resourceOwnerId;
+    public FetchOperationsRequest withResourceOwnerId(String resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     

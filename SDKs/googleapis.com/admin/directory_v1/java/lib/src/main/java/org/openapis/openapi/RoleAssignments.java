@@ -34,25 +34,26 @@ public class RoleAssignments {
     /**
      * Deletes a role assignment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryRoleAssignmentsDeleteResponse directoryRoleAssignmentsDelete(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryRoleAssignmentsDeleteResponse directoryRoleAssignmentsDelete(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsDeleteRequest request, org.openapis.openapi.models.operations.DirectoryRoleAssignmentsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsDeletePathParams.class, baseUrl, "/admin/directory/v1/customer/{customer}/roleassignments/{roleAssignmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsDeleteRequest.class, baseUrl, "/admin/directory/v1/customer/{customer}/roleassignments/{roleAssignmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,25 +74,26 @@ public class RoleAssignments {
     /**
      * Retrieves a role assignment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryRoleAssignmentsGetResponse directoryRoleAssignmentsGet(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryRoleAssignmentsGetResponse directoryRoleAssignmentsGet(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsGetRequest request, org.openapis.openapi.models.operations.DirectoryRoleAssignmentsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsGetPathParams.class, baseUrl, "/admin/directory/v1/customer/{customer}/roleassignments/{roleAssignmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsGetRequest.class, baseUrl, "/admin/directory/v1/customer/{customer}/roleassignments/{roleAssignmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,27 +120,28 @@ public class RoleAssignments {
     /**
      * Creates a role assignment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryRoleAssignmentsInsertResponse directoryRoleAssignmentsInsert(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryRoleAssignmentsInsertResponse directoryRoleAssignmentsInsert(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsInsertRequest request, org.openapis.openapi.models.operations.DirectoryRoleAssignmentsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsInsertPathParams.class, baseUrl, "/admin/directory/v1/customer/{customer}/roleassignments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsInsertRequest.class, baseUrl, "/admin/directory/v1/customer/{customer}/roleassignments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "roleAssignmentInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,25 +168,26 @@ public class RoleAssignments {
     /**
      * Retrieves a paginated list of all roleAssignments.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryRoleAssignmentsListResponse directoryRoleAssignmentsList(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryRoleAssignmentsListResponse directoryRoleAssignmentsList(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsListRequest request, org.openapis.openapi.models.operations.DirectoryRoleAssignmentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsListPathParams.class, baseUrl, "/admin/directory/v1/customer/{customer}/roleassignments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsListRequest.class, baseUrl, "/admin/directory/v1/customer/{customer}/roleassignments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryRoleAssignmentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

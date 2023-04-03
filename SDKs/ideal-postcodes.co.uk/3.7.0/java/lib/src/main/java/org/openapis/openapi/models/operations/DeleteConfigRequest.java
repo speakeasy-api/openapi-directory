@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteConfigRequest {
-    
-    public DeleteConfigPathParams pathParams;
-    public DeleteConfigRequest withPathParams(DeleteConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=config")
+    public String config;
+    public DeleteConfigRequest withConfig(String config) {
+        this.config = config;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public DeleteConfigRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
     
-    public DeleteConfigQueryParams queryParams;
-    public DeleteConfigRequest withQueryParams(DeleteConfigQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=user_token")
+    public String userToken;
+    public DeleteConfigRequest withUserToken(String userToken) {
+        this.userToken = userToken;
         return this;
     }
     

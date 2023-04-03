@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BatchPutGeofenceRequest {
-    
-    public BatchPutGeofencePathParams pathParams;
-    public BatchPutGeofenceRequest withPathParams(BatchPutGeofencePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public BatchPutGeofenceHeaders headers;
-    public BatchPutGeofenceRequest withHeaders(BatchPutGeofenceHeaders headers) {
-        this.headers = headers;
+    /**
+     * The geofence collection storing the geofences.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CollectionName")
+    public String collectionName;
+    public BatchPutGeofenceRequest withCollectionName(String collectionName) {
+        this.collectionName = collectionName;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public BatchPutGeofenceRequestBody request;
-    public BatchPutGeofenceRequest withRequest(BatchPutGeofenceRequestBody request) {
-        this.request = request;
+    public BatchPutGeofenceRequestBody requestBody;
+    public BatchPutGeofenceRequest withRequestBody(BatchPutGeofenceRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public BatchPutGeofenceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public BatchPutGeofenceRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public BatchPutGeofenceRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public BatchPutGeofenceRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public BatchPutGeofenceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public BatchPutGeofenceRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public BatchPutGeofenceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

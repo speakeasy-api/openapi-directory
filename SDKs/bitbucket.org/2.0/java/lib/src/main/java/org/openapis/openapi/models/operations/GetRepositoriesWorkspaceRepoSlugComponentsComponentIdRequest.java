@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugComponentsComponentIdRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugComponentsComponentIdPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugComponentsComponentIdRequest withPathParams(GetRepositoriesWorkspaceRepoSlugComponentsComponentIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The component's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=component_id")
+    public Long componentId;
+    public GetRepositoriesWorkspaceRepoSlugComponentsComponentIdRequest withComponentId(Long componentId) {
+        this.componentId = componentId;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugComponentsComponentIdRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public GetRepositoriesWorkspaceRepoSlugComponentsComponentIdSecurity security;
-    public GetRepositoriesWorkspaceRepoSlugComponentsComponentIdRequest withSecurity(GetRepositoriesWorkspaceRepoSlugComponentsComponentIdSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugComponentsComponentIdRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

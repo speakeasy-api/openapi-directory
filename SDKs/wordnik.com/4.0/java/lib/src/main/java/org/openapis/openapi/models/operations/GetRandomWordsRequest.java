@@ -4,13 +4,126 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRandomWordsRequest {
+    /**
+     * CSV part-of-speech values to exclude (allowable values are noun, adjective, verb, adverb, interjection, pronoun, preposition, abbreviation, affix, article, auxiliary-verb, conjunction, definite-article, family-name, given-name, idiom, imperative, noun-plural, noun-posessive, past-participle, phrasal-prefix, proper-noun, proper-noun-plural, proper-noun-posessive, suffix, verb-intransitive, verb-transitive)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludePartOfSpeech")
+    public String excludePartOfSpeech;
+    public GetRandomWordsRequest withExcludePartOfSpeech(String excludePartOfSpeech) {
+        this.excludePartOfSpeech = excludePartOfSpeech;
+        return this;
+    }
     
-    public GetRandomWordsQueryParams queryParams;
-    public GetRandomWordsRequest withQueryParams(GetRandomWordsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only return words with dictionary definitions
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hasDictionaryDef")
+    public String hasDictionaryDef;
+    public GetRandomWordsRequest withHasDictionaryDef(String hasDictionaryDef) {
+        this.hasDictionaryDef = hasDictionaryDef;
+        return this;
+    }
+    
+    /**
+     * CSV part-of-speech values to include (allowable values are noun, adjective, verb, adverb, interjection, pronoun, preposition, abbreviation, affix, article, auxiliary-verb, conjunction, definite-article, family-name, given-name, idiom, imperative, noun-plural, noun-posessive, past-participle, phrasal-prefix, proper-noun, proper-noun-plural, proper-noun-posessive, suffix, verb-intransitive, verb-transitive)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includePartOfSpeech")
+    public String includePartOfSpeech;
+    public GetRandomWordsRequest withIncludePartOfSpeech(String includePartOfSpeech) {
+        this.includePartOfSpeech = includePartOfSpeech;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetRandomWordsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Maximum corpus frequency for terms
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxCorpusCount")
+    public Integer maxCorpusCount;
+    public GetRandomWordsRequest withMaxCorpusCount(Integer maxCorpusCount) {
+        this.maxCorpusCount = maxCorpusCount;
+        return this;
+    }
+    
+    /**
+     * Maximum dictionary count
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDictionaryCount")
+    public Integer maxDictionaryCount;
+    public GetRandomWordsRequest withMaxDictionaryCount(Integer maxDictionaryCount) {
+        this.maxDictionaryCount = maxDictionaryCount;
+        return this;
+    }
+    
+    /**
+     * Maximum word length
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxLength")
+    public Integer maxLength;
+    public GetRandomWordsRequest withMaxLength(Integer maxLength) {
+        this.maxLength = maxLength;
+        return this;
+    }
+    
+    /**
+     * Minimum corpus frequency for terms
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minCorpusCount")
+    public Integer minCorpusCount;
+    public GetRandomWordsRequest withMinCorpusCount(Integer minCorpusCount) {
+        this.minCorpusCount = minCorpusCount;
+        return this;
+    }
+    
+    /**
+     * Minimum dictionary count
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minDictionaryCount")
+    public Integer minDictionaryCount;
+    public GetRandomWordsRequest withMinDictionaryCount(Integer minDictionaryCount) {
+        this.minDictionaryCount = minDictionaryCount;
+        return this;
+    }
+    
+    /**
+     * Minimum word length
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minLength")
+    public Integer minLength;
+    public GetRandomWordsRequest withMinLength(Integer minLength) {
+        this.minLength = minLength;
+        return this;
+    }
+    
+    /**
+     * Attribute to sort by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
+    public GetRandomWordsSortByEnum sortBy;
+    public GetRandomWordsRequest withSortBy(GetRandomWordsSortByEnum sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Sort direction
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
+    public GetRandomWordsSortOrderEnum sortOrder;
+    public GetRandomWordsRequest withSortOrder(GetRandomWordsSortOrderEnum sortOrder) {
+        this.sortOrder = sortOrder;
         return this;
     }
     

@@ -4,27 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClaimBillingNotesReadRequest {
-    
-    public ClaimBillingNotesReadPathParams pathParams;
-    public ClaimBillingNotesReadRequest withPathParams(ClaimBillingNotesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
+    public Long appointment;
+    public ClaimBillingNotesReadRequest withAppointment(Long appointment) {
+        this.appointment = appointment;
         return this;
     }
     
-    
-    public ClaimBillingNotesReadQueryParams queryParams;
-    public ClaimBillingNotesReadRequest withQueryParams(ClaimBillingNotesReadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public ClaimBillingNotesReadRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public ClaimBillingNotesReadSecurity security;
-    public ClaimBillingNotesReadRequest withSecurity(ClaimBillingNotesReadSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ClaimBillingNotesReadRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

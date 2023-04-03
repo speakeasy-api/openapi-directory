@@ -40,7 +40,7 @@ public class Calls {
      */
     public org.openapis.openapi.models.operations.CallAnswerResponse callAnswer(org.openapis.openapi.models.operations.CallAnswerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CallAnswerPathParams.class, baseUrl, "/self/calls/{id}/answer", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CallAnswerRequest.class, baseUrl, "/self/calls/{id}/answer", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -88,7 +88,7 @@ public class Calls {
      */
     public org.openapis.openapi.models.operations.CallHoldResponse callHold(org.openapis.openapi.models.operations.CallHoldRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CallHoldPathParams.class, baseUrl, "/self/calls/{id}/hold", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CallHoldRequest.class, baseUrl, "/self/calls/{id}/hold", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -136,12 +136,12 @@ public class Calls {
      */
     public org.openapis.openapi.models.operations.CallTransferResponse callTransfer(org.openapis.openapi.models.operations.CallTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CallTransferPathParams.class, baseUrl, "/self/calls/{id}/transfer", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CallTransferRequest.class, baseUrl, "/self/calls/{id}/transfer", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "callTransfer", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -189,7 +189,7 @@ public class Calls {
      */
     public org.openapis.openapi.models.operations.CallUnoldResponse callUnold(org.openapis.openapi.models.operations.CallUnoldRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CallUnoldPathParams.class, baseUrl, "/self/calls/{id}/hold", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CallUnoldRequest.class, baseUrl, "/self/calls/{id}/hold", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -237,7 +237,7 @@ public class Calls {
      */
     public org.openapis.openapi.models.operations.CallVMTransferResponse callVMTransfer(org.openapis.openapi.models.operations.CallVMTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CallVMTransferPathParams.class, baseUrl, "/self/calls/{id}/vmtransfer", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CallVMTransferRequest.class, baseUrl, "/self/calls/{id}/vmtransfer", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -283,7 +283,7 @@ public class Calls {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCallResponse createCall(org.openapis.openapi.models.operations.CreateCallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCallResponse createCall(org.openapis.openapi.models.shared.CallCreate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/self/calls");
         
@@ -338,7 +338,7 @@ public class Calls {
      */
     public org.openapis.openapi.models.operations.DestroyCallResponse destroyCall(org.openapis.openapi.models.operations.DestroyCallRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DestroyCallPathParams.class, baseUrl, "/self/calls/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DestroyCallRequest.class, baseUrl, "/self/calls/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -392,7 +392,7 @@ public class Calls {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCallsCountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCallsCountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -440,7 +440,7 @@ public class Calls {
      */
     public org.openapis.openapi.models.operations.GetRolesResponse getRoles(org.openapis.openapi.models.operations.GetRolesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRolesPathParams.class, baseUrl, "/self/calls/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRolesRequest.class, baseUrl, "/self/calls/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -495,7 +495,7 @@ public class Calls {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCallsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCallsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

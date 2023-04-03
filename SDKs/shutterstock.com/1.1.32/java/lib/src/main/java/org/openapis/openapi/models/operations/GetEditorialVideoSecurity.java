@@ -14,9 +14,9 @@ public class GetEditorialVideoSecurity {
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeCustomerAccessCode customerAccessCode;
-    public GetEditorialVideoSecurity withCustomerAccessCode(org.openapis.openapi.models.shared.SchemeCustomerAccessCode customerAccessCode) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String customerAccessCode;
+    public GetEditorialVideoSecurity withCustomerAccessCode(String customerAccessCode) {
         this.customerAccessCode = customerAccessCode;
         return this;
     }

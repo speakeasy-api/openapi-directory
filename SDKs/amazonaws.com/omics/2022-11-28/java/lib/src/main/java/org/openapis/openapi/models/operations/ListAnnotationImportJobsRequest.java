@@ -7,24 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAnnotationImportJobsRequest {
-    
-    public ListAnnotationImportJobsQueryParams queryParams;
-    public ListAnnotationImportJobsRequest withQueryParams(ListAnnotationImportJobsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListAnnotationImportJobsHeaders headers;
-    public ListAnnotationImportJobsRequest withHeaders(ListAnnotationImportJobsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ListAnnotationImportJobsRequestBody request;
-    public ListAnnotationImportJobsRequest withRequest(ListAnnotationImportJobsRequestBody request) {
-        this.request = request;
+    public ListAnnotationImportJobsRequestBody requestBody;
+    public ListAnnotationImportJobsRequest withRequestBody(ListAnnotationImportJobsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListAnnotationImportJobsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListAnnotationImportJobsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListAnnotationImportJobsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListAnnotationImportJobsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListAnnotationImportJobsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListAnnotationImportJobsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListAnnotationImportJobsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The maximum number of jobs to return in one page of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListAnnotationImportJobsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Specify the pagination token from a previous request to retrieve the next page of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListAnnotationImportJobsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     

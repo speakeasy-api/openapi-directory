@@ -40,7 +40,7 @@ public class SubnetPool {
      */
     public org.openapis.openapi.models.operations.GetNetworkCellularGatewaySubnetPoolResponse getNetworkCellularGatewaySubnetPool(org.openapis.openapi.models.operations.GetNetworkCellularGatewaySubnetPoolRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCellularGatewaySubnetPoolPathParams.class, baseUrl, "/networks/{networkId}/cellularGateway/subnetPool", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCellularGatewaySubnetPoolRequest.class, baseUrl, "/networks/{networkId}/cellularGateway/subnetPool", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class SubnetPool {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkCellularGatewaySubnetPoolResponse updateNetworkCellularGatewaySubnetPool(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewaySubnetPoolRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewaySubnetPoolPathParams.class, baseUrl, "/networks/{networkId}/cellularGateway/subnetPool", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewaySubnetPoolRequest.class, baseUrl, "/networks/{networkId}/cellularGateway/subnetPool", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

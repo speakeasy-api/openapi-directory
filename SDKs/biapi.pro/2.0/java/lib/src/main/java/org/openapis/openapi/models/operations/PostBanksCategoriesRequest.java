@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostBanksCategoriesRequest {
-    
-    public PostBanksCategoriesQueryParams queryParams;
-    public PostBanksCategoriesRequest withQueryParams(PostBanksCategoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public PostBanksCategoriesRequestBody requestBody;
+    public PostBanksCategoriesRequest withRequestBody(PostBanksCategoriesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostBanksCategoriesRequestBody request;
-    public PostBanksCategoriesRequest withRequest(PostBanksCategoriesRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PostBanksCategoriesRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     

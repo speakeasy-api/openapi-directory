@@ -7,16 +7,16 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TpcerSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAPIKey apiKey;
-    public TpcerSecurity withApiKey(org.openapis.openapi.models.shared.SchemeAPIKey apiKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-APISETU-APIKEY")
+    public String apiKey;
+    public TpcerSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeClientID clientId;
-    public TpcerSecurity withClientId(org.openapis.openapi.models.shared.SchemeClientID clientId) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-APISETU-CLIENTID")
+    public String clientId;
+    public TpcerSecurity withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }

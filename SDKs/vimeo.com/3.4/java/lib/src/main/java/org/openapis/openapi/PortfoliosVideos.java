@@ -33,19 +33,20 @@ public class PortfoliosVideos {
     /**
      * Add a video to a portfolio
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideoToPortfolioResponse addVideoToPortfolio(org.openapis.openapi.models.operations.AddVideoToPortfolioRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideoToPortfolioResponse addVideoToPortfolio(org.openapis.openapi.models.operations.AddVideoToPortfolioRequest request, org.openapis.openapi.models.operations.AddVideoToPortfolioSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToPortfolioPathParams.class, baseUrl, "/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToPortfolioRequest.class, baseUrl, "/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -74,19 +75,20 @@ public class PortfoliosVideos {
     /**
      * Add a video to a portfolio
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideoToPortfolioAlt1Response addVideoToPortfolioAlt1(org.openapis.openapi.models.operations.AddVideoToPortfolioAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideoToPortfolioAlt1Response addVideoToPortfolioAlt1(org.openapis.openapi.models.operations.AddVideoToPortfolioAlt1Request request, org.openapis.openapi.models.operations.AddVideoToPortfolioAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToPortfolioAlt1PathParams.class, baseUrl, "/me/portfolios/{portfolio_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToPortfolioAlt1Request.class, baseUrl, "/me/portfolios/{portfolio_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -115,19 +117,20 @@ public class PortfoliosVideos {
     /**
      * Remove a video from a portfolio
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVideoFromPortfolioResponse deleteVideoFromPortfolio(org.openapis.openapi.models.operations.DeleteVideoFromPortfolioRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVideoFromPortfolioResponse deleteVideoFromPortfolio(org.openapis.openapi.models.operations.DeleteVideoFromPortfolioRequest request, org.openapis.openapi.models.operations.DeleteVideoFromPortfolioSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoFromPortfolioPathParams.class, baseUrl, "/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoFromPortfolioRequest.class, baseUrl, "/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -156,19 +159,20 @@ public class PortfoliosVideos {
     /**
      * Remove a video from a portfolio
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVideoFromPortfolioAlt1Response deleteVideoFromPortfolioAlt1(org.openapis.openapi.models.operations.DeleteVideoFromPortfolioAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVideoFromPortfolioAlt1Response deleteVideoFromPortfolioAlt1(org.openapis.openapi.models.operations.DeleteVideoFromPortfolioAlt1Request request, org.openapis.openapi.models.operations.DeleteVideoFromPortfolioAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoFromPortfolioAlt1PathParams.class, baseUrl, "/me/portfolios/{portfolio_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoFromPortfolioAlt1Request.class, baseUrl, "/me/portfolios/{portfolio_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -202,7 +206,7 @@ public class PortfoliosVideos {
      */
     public org.openapis.openapi.models.operations.GetPortfolioVideoResponse getPortfolioVideo(org.openapis.openapi.models.operations.GetPortfolioVideoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortfolioVideoPathParams.class, baseUrl, "/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortfolioVideoRequest.class, baseUrl, "/users/{user_id}/portfolios/{portfolio_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -241,7 +245,7 @@ public class PortfoliosVideos {
      */
     public org.openapis.openapi.models.operations.GetPortfolioVideoAlt1Response getPortfolioVideoAlt1(org.openapis.openapi.models.operations.GetPortfolioVideoAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortfolioVideoAlt1PathParams.class, baseUrl, "/me/portfolios/{portfolio_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortfolioVideoAlt1Request.class, baseUrl, "/me/portfolios/{portfolio_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -280,13 +284,13 @@ public class PortfoliosVideos {
      */
     public org.openapis.openapi.models.operations.GetPortfolioVideosResponse getPortfolioVideos(org.openapis.openapi.models.operations.GetPortfolioVideosRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortfolioVideosPathParams.class, baseUrl, "/users/{user_id}/portfolios/{portfolio_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortfolioVideosRequest.class, baseUrl, "/users/{user_id}/portfolios/{portfolio_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPortfolioVideosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPortfolioVideosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -325,13 +329,13 @@ public class PortfoliosVideos {
      */
     public org.openapis.openapi.models.operations.GetPortfolioVideosAlt1Response getPortfolioVideosAlt1(org.openapis.openapi.models.operations.GetPortfolioVideosAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortfolioVideosAlt1PathParams.class, baseUrl, "/me/portfolios/{portfolio_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortfolioVideosAlt1Request.class, baseUrl, "/me/portfolios/{portfolio_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPortfolioVideosAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPortfolioVideosAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

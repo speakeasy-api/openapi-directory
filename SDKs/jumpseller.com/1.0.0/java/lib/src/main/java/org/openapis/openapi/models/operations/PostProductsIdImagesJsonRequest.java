@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProductsIdImagesJsonRequest {
-    
-    public PostProductsIdImagesJsonPathParams pathParams;
-    public PostProductsIdImagesJsonRequest withPathParams(PostProductsIdImagesJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostProductsIdImagesJsonQueryParams queryParams;
-    public PostProductsIdImagesJsonRequest withQueryParams(PostProductsIdImagesJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Product Image parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ImageEdit request;
-    public PostProductsIdImagesJsonRequest withRequest(org.openapis.openapi.models.shared.ImageEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ImageEdit imageEdit;
+    public PostProductsIdImagesJsonRequest withImageEdit(org.openapis.openapi.models.shared.ImageEdit imageEdit) {
+        this.imageEdit = imageEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PostProductsIdImagesJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the Product
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PostProductsIdImagesJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PostProductsIdImagesJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

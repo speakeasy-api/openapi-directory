@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUnderstandModelBuildRequest {
-    
-    public DeleteUnderstandModelBuildPathParams pathParams;
-    public DeleteUnderstandModelBuildRequest withPathParams(DeleteUnderstandModelBuildPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public DeleteUnderstandModelBuildRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
-    
-    public DeleteUnderstandModelBuildSecurity security;
-    public DeleteUnderstandModelBuildRequest withSecurity(DeleteUnderstandModelBuildSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteUnderstandModelBuildRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteUnderstandModelBuildRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

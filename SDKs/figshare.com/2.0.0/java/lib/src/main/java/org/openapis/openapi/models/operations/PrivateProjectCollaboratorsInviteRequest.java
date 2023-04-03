@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateProjectCollaboratorsInviteRequest {
-    
-    public PrivateProjectCollaboratorsInvitePathParams pathParams;
-    public PrivateProjectCollaboratorsInviteRequest withPathParams(PrivateProjectCollaboratorsInvitePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * viewer or collaborator role. User user_id or email of user
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProjectCollaboratorInvite request;
-    public PrivateProjectCollaboratorsInviteRequest withRequest(org.openapis.openapi.models.shared.ProjectCollaboratorInvite request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ProjectCollaboratorInvite projectCollaboratorInvite;
+    public PrivateProjectCollaboratorsInviteRequest withProjectCollaboratorInvite(org.openapis.openapi.models.shared.ProjectCollaboratorInvite projectCollaboratorInvite) {
+        this.projectCollaboratorInvite = projectCollaboratorInvite;
         return this;
     }
     
-    
-    public PrivateProjectCollaboratorsInviteSecurity security;
-    public PrivateProjectCollaboratorsInviteRequest withSecurity(PrivateProjectCollaboratorsInviteSecurity security) {
-        this.security = security;
+    /**
+     * Project unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Long projectId;
+    public PrivateProjectCollaboratorsInviteRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

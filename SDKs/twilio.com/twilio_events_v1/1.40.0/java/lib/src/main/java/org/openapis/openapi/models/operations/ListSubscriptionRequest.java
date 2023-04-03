@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSubscriptionRequest {
-    
-    public ListSubscriptionQueryParams queryParams;
-    public ListSubscriptionRequest withQueryParams(ListSubscriptionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListSubscriptionRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListSubscriptionSecurity security;
-    public ListSubscriptionRequest withSecurity(ListSubscriptionSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListSubscriptionRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListSubscriptionRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
     
-    public String serverURL;
-    public ListSubscriptionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the sink that the list of Subscriptions should be filtered by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SinkSid")
+    public String sinkSid;
+    public ListSubscriptionRequest withSinkSid(String sinkSid) {
+        this.sinkSid = sinkSid;
         return this;
     }
     

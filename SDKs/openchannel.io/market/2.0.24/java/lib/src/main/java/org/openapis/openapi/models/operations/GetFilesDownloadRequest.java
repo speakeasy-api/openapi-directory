@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFilesDownloadRequest {
+    /**
+     * The URL of the file to be uploaded
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fileId")
+    public String fileId;
+    public GetFilesDownloadRequest withFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
     
-    public GetFilesDownloadQueryParams queryParams;
-    public GetFilesDownloadRequest withQueryParams(GetFilesDownloadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of seconds that this signed URL should be valid for. The default is 60.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=validSeconds")
+    public Long validSeconds;
+    public GetFilesDownloadRequest withValidSeconds(Long validSeconds) {
+        this.validSeconds = validSeconds;
         return this;
     }
     

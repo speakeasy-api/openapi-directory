@@ -43,13 +43,13 @@ public class Ramps {
      */
     public org.openapis.openapi.models.operations.GETRampByRampNumberResponse getRampByRampNumber(org.openapis.openapi.models.operations.GETRampByRampNumberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRampByRampNumberPathParams.class, baseUrl, "/v1/ramps/{rampNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRampByRampNumberRequest.class, baseUrl, "/v1/ramps/{rampNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -102,13 +102,13 @@ public class Ramps {
      */
     public org.openapis.openapi.models.operations.GETRampMetricsByOrderNumberResponse getRampMetricsByOrderNumber(org.openapis.openapi.models.operations.GETRampMetricsByOrderNumberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRampMetricsByOrderNumberPathParams.class, baseUrl, "/v1/orders/{orderNumber}/ramp-metrics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRampMetricsByOrderNumberRequest.class, baseUrl, "/v1/orders/{orderNumber}/ramp-metrics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -161,13 +161,13 @@ public class Ramps {
      */
     public org.openapis.openapi.models.operations.GETRampMetricsByRampNumberResponse getRampMetricsByRampNumber(org.openapis.openapi.models.operations.GETRampMetricsByRampNumberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRampMetricsByRampNumberPathParams.class, baseUrl, "/v1/ramps/{rampNumber}/ramp-metrics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRampMetricsByRampNumberRequest.class, baseUrl, "/v1/ramps/{rampNumber}/ramp-metrics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -220,13 +220,13 @@ public class Ramps {
      */
     public org.openapis.openapi.models.operations.GETRampMetricsBySubscriptionKeyResponse getRampMetricsBySubscriptionKey(org.openapis.openapi.models.operations.GETRampMetricsBySubscriptionKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRampMetricsBySubscriptionKeyPathParams.class, baseUrl, "/v1/subscriptions/{subscriptionKey}/ramp-metrics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRampMetricsBySubscriptionKeyRequest.class, baseUrl, "/v1/subscriptions/{subscriptionKey}/ramp-metrics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -272,13 +272,13 @@ public class Ramps {
      */
     public org.openapis.openapi.models.operations.GETRampsBySubscriptionKeyResponse getRampsBySubscriptionKey(org.openapis.openapi.models.operations.GETRampsBySubscriptionKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRampsBySubscriptionKeyPathParams.class, baseUrl, "/v1/subscriptions/{subscriptionKey}/ramps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRampsBySubscriptionKeyRequest.class, baseUrl, "/v1/subscriptions/{subscriptionKey}/ramps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

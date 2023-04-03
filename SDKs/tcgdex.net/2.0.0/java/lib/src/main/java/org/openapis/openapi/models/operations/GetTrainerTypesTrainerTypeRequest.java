@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTrainerTypesTrainerTypeRequest {
-    
-    public GetTrainerTypesTrainerTypePathParams pathParams;
-    public GetTrainerTypesTrainerTypeRequest withPathParams(GetTrainerTypesTrainerTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=trainer-type")
+    public String trainerType;
+    public GetTrainerTypesTrainerTypeRequest withTrainerType(String trainerType) {
+        this.trainerType = trainerType;
         return this;
     }
     

@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOrganisationsRequest {
-    
-    public PostOrganisationsHeaders headers;
-    public PostOrganisationsRequest withHeaders(PostOrganisationsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public PostOrganisationsRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
@@ -18,9 +21,9 @@ public class PostOrganisationsRequest {
      * Organisation resource
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.OrganisationInput request;
-    public PostOrganisationsRequest withRequest(org.openapis.openapi.models.shared.OrganisationInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.OrganisationInput organisationInput;
+    public PostOrganisationsRequest withOrganisationInput(org.openapis.openapi.models.shared.OrganisationInput organisationInput) {
+        this.organisationInput = organisationInput;
         return this;
     }
     

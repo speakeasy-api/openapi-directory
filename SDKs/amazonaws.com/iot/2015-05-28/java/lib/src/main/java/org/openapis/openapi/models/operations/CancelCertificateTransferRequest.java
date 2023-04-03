@@ -4,20 +4,65 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelCertificateTransferRequest {
-    
-    public CancelCertificateTransferPathParams pathParams;
-    public CancelCertificateTransferRequest withPathParams(CancelCertificateTransferPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public CancelCertificateTransferRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public CancelCertificateTransferRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public CancelCertificateTransferHeaders headers;
-    public CancelCertificateTransferRequest withHeaders(CancelCertificateTransferHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public CancelCertificateTransferRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public CancelCertificateTransferRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public CancelCertificateTransferRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public CancelCertificateTransferRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public CancelCertificateTransferRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The ID of the certificate. (The last part of the certificate ARN contains the certificate ID.)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=certificateId")
+    public String certificateId;
+    public CancelCertificateTransferRequest withCertificateId(String certificateId) {
+        this.certificateId = certificateId;
         return this;
     }
     

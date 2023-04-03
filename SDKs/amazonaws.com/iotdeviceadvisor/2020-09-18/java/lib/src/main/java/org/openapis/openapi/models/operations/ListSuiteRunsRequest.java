@@ -4,20 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSuiteRunsRequest {
-    
-    public ListSuiteRunsQueryParams queryParams;
-    public ListSuiteRunsRequest withQueryParams(ListSuiteRunsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListSuiteRunsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListSuiteRunsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public ListSuiteRunsHeaders headers;
-    public ListSuiteRunsRequest withHeaders(ListSuiteRunsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListSuiteRunsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListSuiteRunsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListSuiteRunsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListSuiteRunsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListSuiteRunsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to return at once.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListSuiteRunsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * A token to retrieve the next set of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListSuiteRunsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * Lists the test suite runs of the specified test suite based on suite definition ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=suiteDefinitionId")
+    public String suiteDefinitionId;
+    public ListSuiteRunsRequest withSuiteDefinitionId(String suiteDefinitionId) {
+        this.suiteDefinitionId = suiteDefinitionId;
+        return this;
+    }
+    
+    /**
+     * Must be passed along with &lt;code&gt;suiteDefinitionId&lt;/code&gt;. Lists the test suite runs of the specified test suite based on suite definition version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=suiteDefinitionVersion")
+    public String suiteDefinitionVersion;
+    public ListSuiteRunsRequest withSuiteDefinitionVersion(String suiteDefinitionVersion) {
+        this.suiteDefinitionVersion = suiteDefinitionVersion;
         return this;
     }
     

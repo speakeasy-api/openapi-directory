@@ -40,7 +40,7 @@ public class CalendarEventResponse {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCalendarEventResponseResponse createCalendarEventResponse(org.openapis.openapi.models.operations.CreateCalendarEventResponseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCalendarEventResponseResponse createCalendarEventResponse(org.openapis.openapi.models.shared.CreateCalendarEventResponseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/calendar_event_response");
         

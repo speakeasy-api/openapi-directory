@@ -18,10 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.ComposerProjectsLocationsEnvironmentsCreateSecurity;
-import org.openapis.openapi.models.operations.ComposerProjectsLocationsEnvironmentsCreatePathParams;
-import org.openapis.openapi.models.operations.ComposerProjectsLocationsEnvironmentsCreateQueryParams;
 import org.openapis.openapi.models.operations.ComposerProjectsLocationsEnvironmentsCreateRequest;
 import org.openapis.openapi.models.operations.ComposerProjectsLocationsEnvironmentsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.EnvironmentStateEnum;
 import org.openapis.openapi.models.shared.EnvironmentInput;
 import org.openapis.openapi.models.shared.EnvironmentConfigEnvironmentSizeEnum;
@@ -47,10 +46,7 @@ import org.openapis.openapi.models.shared.CidrBlock;
 import org.openapis.openapi.models.shared.MaintenanceWindow;
 import org.openapis.openapi.models.shared.EncryptionConfig;
 import org.openapis.openapi.models.shared.DatabaseConfig;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -59,191 +55,169 @@ public class Application {
                 .build();
 
             ComposerProjectsLocationsEnvironmentsCreateRequest req = new ComposerProjectsLocationsEnvironmentsCreateRequest() {{
-                security = new ComposerProjectsLocationsEnvironmentsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new ComposerProjectsLocationsEnvironmentsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new ComposerProjectsLocationsEnvironmentsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new EnvironmentInput() {{
+                dollarXgafv = "2";
+                environmentInput = new EnvironmentInput() {{
                     config = new EnvironmentConfigInput() {{
-                        airflowUri = "suscipit";
-                        dagGcsPrefix = "iure";
+                        airflowUri = "provident";
+                        dagGcsPrefix = "distinctio";
                         databaseConfig = new DatabaseConfig() {{
-                            machineType = "magnam";
+                            machineType = "quibusdam";
                         }};
                         encryptionConfig = new EncryptionConfig() {{
-                            kmsKeyName = "debitis";
+                            kmsKeyName = "unde";
                         }};
-                        environmentSize = "ENVIRONMENT_SIZE_UNSPECIFIED";
-                        gkeCluster = "delectus";
+                        environmentSize = "ENVIRONMENT_SIZE_LARGE";
+                        gkeCluster = "corrupti";
                         maintenanceWindow = new MaintenanceWindow() {{
-                            endTime = "tempora";
-                            recurrence = "suscipit";
-                            startTime = "molestiae";
+                            endTime = "illum";
+                            recurrence = "vel";
+                            startTime = "error";
                         }};
                         masterAuthorizedNetworksConfig = new MasterAuthorizedNetworksConfig() {{
                             cidrBlocks = new org.openapis.openapi.models.shared.CidrBlock[]{{
                                 add(new CidrBlock() {{
-                                    cidrBlock = "placeat";
-                                    displayName = "voluptatum";
+                                    cidrBlock = "suscipit";
+                                    displayName = "iure";
                                 }}),
                                 add(new CidrBlock() {{
-                                    cidrBlock = "iusto";
-                                    displayName = "excepturi";
+                                    cidrBlock = "magnam";
+                                    displayName = "debitis";
                                 }}),
                                 add(new CidrBlock() {{
-                                    cidrBlock = "nisi";
-                                    displayName = "recusandae";
-                                }}),
-                                add(new CidrBlock() {{
-                                    cidrBlock = "temporibus";
-                                    displayName = "ab";
+                                    cidrBlock = "ipsa";
+                                    displayName = "delectus";
                                 }}),
                             }};
                             enabled = false;
                         }};
                         nodeConfig = new NodeConfig() {{
-                            diskSizeGb = 337396;
+                            diskSizeGb = 272656;
                             enableIpMasqAgent = false;
                             ipAllocationPolicy = new IPAllocationPolicy() {{
-                                clusterIpv4CidrBlock = "veritatis";
-                                clusterSecondaryRangeName = "deserunt";
-                                servicesIpv4CidrBlock = "perferendis";
-                                servicesSecondaryRangeName = "ipsam";
+                                clusterIpv4CidrBlock = "suscipit";
+                                clusterSecondaryRangeName = "molestiae";
+                                servicesIpv4CidrBlock = "minus";
+                                servicesSecondaryRangeName = "placeat";
                                 useIpAliases = false;
                             }};
-                            location = "repellendus";
-                            machineType = "sapiente";
-                            network = "quo";
+                            location = "voluptatum";
+                            machineType = "iusto";
+                            network = "excepturi";
                             oauthScopes = new String[]{{
-                                add("at"),
+                                add("recusandae"),
+                                add("temporibus"),
                             }};
-                            serviceAccount = "at";
-                            subnetwork = "maiores";
+                            serviceAccount = "ab";
+                            subnetwork = "quis";
                             tags = new String[]{{
-                                add("quod"),
-                                add("quod"),
+                                add("deserunt"),
                             }};
                         }};
-                        nodeCount = 461479;
+                        nodeCount = 20218;
                         privateEnvironmentConfig = new PrivateEnvironmentConfigInput() {{
-                            cloudComposerConnectionSubnetwork = "totam";
-                            cloudComposerNetworkIpv4CidrBlock = "porro";
-                            cloudSqlIpv4CidrBlock = "dolorum";
+                            cloudComposerConnectionSubnetwork = "ipsam";
+                            cloudComposerNetworkIpv4CidrBlock = "repellendus";
+                            cloudSqlIpv4CidrBlock = "sapiente";
                             enablePrivateEnvironment = false;
                             enablePrivatelyUsedPublicIps = false;
                             networkingConfig = new NetworkingConfig() {{
-                                connectionType = "CONNECTION_TYPE_UNSPECIFIED";
+                                connectionType = "PRIVATE_SERVICE_CONNECT";
                             }};
                             privateClusterConfig = new PrivateClusterConfigInput() {{
                                 enablePrivateEndpoint = false;
-                                masterIpv4CidrBlock = "nam";
+                                masterIpv4CidrBlock = "odit";
                             }};
-                            webServerIpv4CidrBlock = "officia";
+                            webServerIpv4CidrBlock = "at";
                         }};
                         recoveryConfig = new RecoveryConfig() {{
                             scheduledSnapshotsConfig = new ScheduledSnapshotsConfig() {{
                                 enabled = false;
-                                snapshotCreationSchedule = "occaecati";
-                                snapshotLocation = "fugit";
-                                timeZone = "deleniti";
+                                snapshotCreationSchedule = "at";
+                                snapshotLocation = "maiores";
+                                timeZone = "molestiae";
                             }};
                         }};
                         softwareConfig = new SoftwareConfig() {{
                             airflowConfigOverrides = new java.util.HashMap<String, String>() {{
-                                put("optio", "totam");
-                                put("beatae", "commodi");
-                                put("molestiae", "modi");
-                                put("qui", "impedit");
+                                put("quod", "esse");
+                                put("totam", "porro");
+                                put("dolorum", "dicta");
+                                put("nam", "officia");
                             }};
                             envVariables = new java.util.HashMap<String, String>() {{
-                                put("esse", "ipsum");
-                                put("excepturi", "aspernatur");
-                                put("perferendis", "ad");
+                                put("fugit", "deleniti");
+                                put("hic", "optio");
+                                put("totam", "beatae");
                             }};
-                            imageVersion = "natus";
+                            imageVersion = "commodi";
                             pypiPackages = new java.util.HashMap<String, String>() {{
-                                put("iste", "dolor");
+                                put("modi", "qui");
+                                put("impedit", "cum");
                             }};
-                            pythonVersion = "natus";
-                            schedulerCount = 386489;
+                            pythonVersion = "esse";
+                            schedulerCount = 216550;
                         }};
                         webServerConfig = new WebServerConfig() {{
-                            machineType = "hic";
+                            machineType = "excepturi";
                         }};
                         webServerNetworkAccessControl = new WebServerNetworkAccessControl() {{
                             allowedIpRanges = new org.openapis.openapi.models.shared.AllowedIpRange[]{{
                                 add(new AllowedIpRange() {{
-                                    description = "fuga";
-                                    value = "in";
-                                }}),
-                                add(new AllowedIpRange() {{
-                                    description = "corporis";
-                                    value = "iste";
-                                }}),
-                                add(new AllowedIpRange() {{
-                                    description = "iure";
-                                    value = "saepe";
-                                }}),
-                                add(new AllowedIpRange() {{
-                                    description = "quidem";
-                                    value = "architecto";
+                                    description = "perferendis";
+                                    value = "ad";
                                 }}),
                             }};
                         }};
                         workloadsConfig = new WorkloadsConfig() {{
                             scheduler = new SchedulerResource() {{
-                                count = 60225;
-                                cpu = 9698.1;
-                                memoryGb = 6667.67;
-                                storageGb = 6531.4;
+                                count = 617636;
+                                cpu = 1496.75;
+                                memoryGb = 6120.96;
+                                storageGb = 2223.21;
                             }};
                             webServer = new WebServerResource() {{
-                                cpu = 6706.38;
-                                memoryGb = 1709.09;
-                                storageGb = 2103.82;
+                                cpu = 6169.34;
+                                memoryGb = 3864.89;
+                                storageGb = 9437.49;
                             }};
                             worker = new WorkerResource() {{
-                                cpu = 3581.52;
-                                maxCount = 128926;
-                                memoryGb = 7506.86;
-                                minCount = 315428;
-                                storageGb = 6078.31;
+                                cpu = 9025.99;
+                                maxCount = 681820;
+                                memoryGb = 4499.5;
+                                minCount = 359508;
+                                storageGb = 6130.64;
                             }};
                         }};
                     }};
-                    createTime = "nemo";
+                    createTime = "iure";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("excepturi", "accusantium");
-                        put("iure", "culpa");
+                        put("quidem", "architecto");
+                        put("ipsa", "reiciendis");
+                        put("est", "mollitia");
+                        put("laborum", "dolores");
                     }};
-                    name = "doloribus";
-                    state = "ERROR";
-                    updateTime = "architecto";
-                    uuid = "a3a2fa94-6773-4925-9aa5-2c3f5ad019da";
+                    name = "dolorem";
+                    state = "RUNNING";
+                    updateTime = "explicabo";
+                    uuid = "c5955907-aff1-4a3a-afa9-467739251aa5";
                 }};
-            }};            
+                accessToken = "odit";
+                alt = "proto";
+                callback = "sequi";
+                fields = "tenetur";
+                key = "ipsam";
+                oauthToken = "id";
+                parent = "possimus";
+                prettyPrint = false;
+                quotaUser = "aut";
+                uploadType = "quasi";
+                uploadProtocol = "error";
+            }}            
 
-            ComposerProjectsLocationsEnvironmentsCreateResponse res = sdk.projects.composerProjectsLocationsEnvironmentsCreate(req);
+            ComposerProjectsLocationsEnvironmentsCreateResponse res = sdk.projects.composerProjectsLocationsEnvironmentsCreate(req, new ComposerProjectsLocationsEnvironmentsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response
@@ -255,7 +229,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

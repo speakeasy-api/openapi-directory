@@ -4,27 +4,136 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LHDeepLinksFFPRequest {
-    
-    public LHDeepLinksFFPQueryParams queryParams;
-    public LHDeepLinksFFPRequest withQueryParams(LHDeepLinksFFPQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public LHDeepLinksFFPRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public LHDeepLinksFFPHeaders headers;
-    public LHDeepLinksFFPRequest withHeaders(LHDeepLinksFFPHeaders headers) {
-        this.headers = headers;
+    /**
+     * Cabin class: 'economy', 'premium_economy', 'business', 'first' (Acceptable values are: "", "economy", "premium_economy", "business", "first")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cabin-class")
+    public String cabinClass;
+    public LHDeepLinksFFPRequest withCabinClass(String cabinClass) {
+        this.cabinClass = cabinClass;
         return this;
     }
     
+    /**
+     * Carrier for which the deep link will be created (e.g. 'LH')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=catalogues")
+    public String catalogues;
+    public LHDeepLinksFFPRequest withCatalogues(String catalogues) {
+        this.catalogues = catalogues;
+        return this;
+    }
     
-    public LHDeepLinksFFPSecurity security;
-    public LHDeepLinksFFPRequest withSecurity(LHDeepLinksFFPSecurity security) {
-        this.security = security;
+    /**
+     * 2-letter ISO 3166-1 country code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public LHDeepLinksFFPRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    
+    /**
+     * Journey destination. 3-letter IATA airport or city code (e.g. 'MAD')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination")
+    public String destination;
+    public LHDeepLinksFFPRequest withDestination(String destination) {
+        this.destination = destination;
+        return this;
+    }
+    
+    /**
+     * Deep link encryption-key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=encryption-key")
+    public String encryptionKey;
+    public LHDeepLinksFFPRequest withEncryptionKey(String encryptionKey) {
+        this.encryptionKey = encryptionKey;
+        return this;
+    }
+    
+    /**
+     * 2-letter ISO 3166-1 language code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public LHDeepLinksFFPRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    
+    /**
+     * Journey origin. 3-letter IATA airport or city code (e.g. 'FRA')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=origin")
+    public String origin;
+    public LHDeepLinksFFPRequest withOrigin(String origin) {
+        this.origin = origin;
+        return this;
+    }
+    
+    /**
+     * Deep link partner id (e.g. '1247')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partnerid")
+    public String partnerid;
+    public LHDeepLinksFFPRequest withPartnerid(String partnerid) {
+        this.partnerid = partnerid;
+        return this;
+    }
+    
+    /**
+     * Journey return-date (YYYY-MM-DD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=return-date")
+    public String returnDate;
+    public LHDeepLinksFFPRequest withReturnDate(String returnDate) {
+        this.returnDate = returnDate;
+        return this;
+    }
+    
+    /**
+     * Deep link tracking ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trackingid")
+    public String trackingid;
+    public LHDeepLinksFFPRequest withTrackingid(String trackingid) {
+        this.trackingid = trackingid;
+        return this;
+    }
+    
+    /**
+     * Journey travel-date (YYYY-MM-DD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travel-date")
+    public String travelDate;
+    public LHDeepLinksFFPRequest withTravelDate(String travelDate) {
+        this.travelDate = travelDate;
+        return this;
+    }
+    
+    /**
+     * Type and number of travelers (e.g. '(adult=2;child=2;infant=1)')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelers")
+    public String travelers;
+    public LHDeepLinksFFPRequest withTravelers(String travelers) {
+        this.travelers = travelers;
         return this;
     }
     

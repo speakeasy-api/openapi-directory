@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PepRetrieveRequest {
-    
-    public PepRetrievePathParams pathParams;
-    public PepRetrieveRequest withPathParams(PepRetrievePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The type (pdf or json) in which the check should be returned
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
+    public PepRetrieveAcceptEnum accept;
+    public PepRetrieveRequest withAccept(PepRetrieveAcceptEnum accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public PepRetrieveHeaders headers;
-    public PepRetrieveRequest withHeaders(PepRetrieveHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public PepRetrieveSecurity security;
-    public PepRetrieveRequest withSecurity(PepRetrieveSecurity security) {
-        this.security = security;
+    /**
+     * The id of the ordered Pep Sanction Check (id as returned by orderPepSanction call)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PepRetrieveRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemConditionPoliciesRequest {
-    
-    public GetItemConditionPoliciesPathParams pathParams;
-    public GetItemConditionPoliciesRequest withPathParams(GetItemConditionPoliciesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This query parameter limits the response by returning policy information for only the selected sections of the category tree. Supply &lt;b&gt;categoryId&lt;/b&gt; values for the sections of the tree you want returned.  &lt;br&gt;&lt;br&gt;When you specify a &lt;b&gt;categoryId&lt;/b&gt; value, the returned category tree includes the policies for that parent node, plus the policies for any leaf nodes below that parent node.  &lt;br&gt;&lt;br&gt;The parameter takes a list of &lt;b&gt;categoryId&lt;/b&gt; values and you can specify up to 50 separate category IDs. Separate multiple values with a pipe character ('|'). If you specify more than 50 &lt;code&gt;categoryId&lt;/code&gt; values, eBay returns the policies for the first 50 IDs and a warning that not all categories were returned.  &lt;br&gt;&lt;br&gt;&lt;b&gt;Example:&lt;/b&gt; &lt;code&gt;filter=categoryIds:{100|101|102}&lt;/code&gt;  &lt;br&gt;&lt;br&gt;Note that you must URL-encode the parameter list, which results in the following filter for the above example: &lt;br&gt;&lt;br&gt; &amp;nbsp;&amp;nbsp;&lt;code&gt;filter=categoryIds%3A%7B100%7C101%7C102%7D&lt;/code&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public GetItemConditionPoliciesRequest withFilter(String filter) {
+        this.filter = filter;
         return this;
     }
     
-    
-    public GetItemConditionPoliciesQueryParams queryParams;
-    public GetItemConditionPoliciesRequest withQueryParams(GetItemConditionPoliciesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetItemConditionPoliciesSecurity security;
-    public GetItemConditionPoliciesRequest withSecurity(GetItemConditionPoliciesSecurity security) {
-        this.security = security;
+    /**
+     * This path parameter specifies the eBay marketplace for which policy information is retrieved. See the following page for a list of valid eBay marketplace IDs: &lt;a href="/api-docs/static/rest-request-components.html#marketpl" target="_blank"&gt;Request components&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplace_id")
+    public String marketplaceId;
+    public GetItemConditionPoliciesRequest withMarketplaceId(String marketplaceId) {
+        this.marketplaceId = marketplaceId;
         return this;
     }
     

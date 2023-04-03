@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.BatchExecuteStatementXAmzTargetEnum;
-import org.openapis.openapi.models.operations.BatchExecuteStatementHeaders;
 import org.openapis.openapi.models.operations.BatchExecuteStatementRequest;
 import org.openapis.openapi.models.operations.BatchExecuteStatementResponse;
 import org.openapis.openapi.models.shared.BatchExecuteStatementInput;
@@ -31,95 +30,88 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchExecuteStatementRequest req = new BatchExecuteStatementRequest() {{
-                headers = new BatchExecuteStatementHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "DynamoDB_20120810.BatchExecuteStatement";
-                }};
-                request = new BatchExecuteStatementInput() {{
-                    returnConsumedCapacity = "NONE";
+                batchExecuteStatementInput = new BatchExecuteStatementInput() {{
+                    returnConsumedCapacity = "TOTAL";
                     statements = new org.openapis.openapi.models.shared.BatchStatementRequest[]{{
                         add(new BatchStatementRequest() {{
                             consistentRead = false;
                             parameters = new org.openapis.openapi.models.shared.AttributeValue[]{{
                                 add(new AttributeValue() {{
-                                    b = "deserunt";
+                                    b = "quibusdam";
                                     bool = false;
                                     bs = new String[]{{
-                                        add("iure"),
-                                        add("magnam"),
+                                        add("nulla"),
+                                        add("corrupti"),
+                                        add("illum"),
                                     }};
                                     l = new org.openapis.openapi.models.shared.AttributeValue[]{{
                                         add(new AttributeValue() {{}}),
                                         add(new AttributeValue() {{}}),
-                                        add(new AttributeValue() {{}}),
-                                        add(new AttributeValue() {{}}),
                                     }};
                                     m = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                        put("delectus", new AttributeValue() {{}});
+                                        put("deserunt", new AttributeValue() {{}});
+                                        put("suscipit", new AttributeValue() {{}});
+                                        put("iure", new AttributeValue() {{}});
                                     }};
-                                    n = "tempora";
+                                    n = "magnam";
                                     ns = new String[]{{
-                                        add("molestiae"),
-                                        add("minus"),
+                                        add("ipsa"),
+                                        add("delectus"),
+                                        add("tempora"),
+                                        add("suscipit"),
                                     }};
                                     null_ = false;
-                                    s = "placeat";
+                                    s = "molestiae";
                                     ss = new String[]{{
+                                        add("placeat"),
+                                        add("voluptatum"),
                                         add("iusto"),
                                         add("excepturi"),
-                                        add("nisi"),
                                     }};
                                 }}),
                                 add(new AttributeValue() {{
-                                    b = "recusandae";
+                                    b = "nisi";
                                     bool = false;
                                     bs = new String[]{{
+                                        add("temporibus"),
                                         add("ab"),
                                         add("quis"),
                                         add("veritatis"),
-                                        add("deserunt"),
                                     }};
                                     l = new org.openapis.openapi.models.shared.AttributeValue[]{{
                                         add(new AttributeValue() {{}}),
+                                        add(new AttributeValue() {{}}),
+                                        add(new AttributeValue() {{}}),
                                     }};
                                     m = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
-                                        put("repellendus", new AttributeValue() {{}});
-                                        put("sapiente", new AttributeValue() {{}});
+                                        put("ipsam", new AttributeValue() {{}});
                                     }};
-                                    n = "quo";
+                                    n = "repellendus";
                                     ns = new String[]{{
+                                        add("quo"),
+                                        add("odit"),
+                                        add("at"),
                                         add("at"),
                                     }};
                                     null_ = false;
-                                    s = "at";
+                                    s = "maiores";
                                     ss = new String[]{{
-                                        add("molestiae"),
                                         add("quod"),
                                         add("quod"),
-                                        add("esse"),
                                     }};
                                 }}),
                                 add(new AttributeValue() {{
-                                    b = "totam";
+                                    b = "esse";
                                     bool = false;
                                     bs = new String[]{{
+                                        add("porro"),
                                         add("dolorum"),
                                         add("dicta"),
-                                        add("nam"),
-                                        add("officia"),
                                     }};
                                     l = new org.openapis.openapi.models.shared.AttributeValue[]{{
                                         add(new AttributeValue() {{}}),
@@ -127,6 +119,8 @@ public class Application {
                                         add(new AttributeValue() {{}}),
                                     }};
                                     m = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
+                                        put("occaecati", new AttributeValue() {{}});
+                                        put("fugit", new AttributeValue() {{}});
                                         put("deleniti", new AttributeValue() {{}});
                                     }};
                                     n = "hic";
@@ -211,9 +205,83 @@ public class Application {
                             }};
                             statement = "accusantium";
                         }}),
+                        add(new BatchStatementRequest() {{
+                            consistentRead = false;
+                            parameters = new org.openapis.openapi.models.shared.AttributeValue[]{{
+                                add(new AttributeValue() {{
+                                    b = "culpa";
+                                    bool = false;
+                                    bs = new String[]{{
+                                        add("sapiente"),
+                                        add("architecto"),
+                                        add("mollitia"),
+                                        add("dolorem"),
+                                    }};
+                                    l = new org.openapis.openapi.models.shared.AttributeValue[]{{
+                                        add(new AttributeValue() {{}}),
+                                        add(new AttributeValue() {{}}),
+                                        add(new AttributeValue() {{}}),
+                                    }};
+                                    m = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
+                                        put("repellat", new AttributeValue() {{}});
+                                    }};
+                                    n = "mollitia";
+                                    ns = new String[]{{
+                                        add("numquam"),
+                                        add("commodi"),
+                                        add("quam"),
+                                    }};
+                                    null_ = false;
+                                    s = "molestiae";
+                                    ss = new String[]{{
+                                        add("error"),
+                                    }};
+                                }}),
+                                add(new AttributeValue() {{
+                                    b = "quia";
+                                    bool = false;
+                                    bs = new String[]{{
+                                        add("vitae"),
+                                        add("laborum"),
+                                    }};
+                                    l = new org.openapis.openapi.models.shared.AttributeValue[]{{
+                                        add(new AttributeValue() {{}}),
+                                        add(new AttributeValue() {{}}),
+                                        add(new AttributeValue() {{}}),
+                                    }};
+                                    m = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeValue>() {{
+                                        put("odit", new AttributeValue() {{}});
+                                        put("quo", new AttributeValue() {{}});
+                                    }};
+                                    n = "sequi";
+                                    ns = new String[]{{
+                                        add("ipsam"),
+                                        add("id"),
+                                        add("possimus"),
+                                        add("aut"),
+                                    }};
+                                    null_ = false;
+                                    s = "quasi";
+                                    ss = new String[]{{
+                                        add("temporibus"),
+                                        add("laborum"),
+                                        add("quasi"),
+                                    }};
+                                }}),
+                            }};
+                            statement = "reiciendis";
+                        }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "voluptatibus";
+                xAmzContentSha256 = "vero";
+                xAmzCredential = "nihil";
+                xAmzDate = "praesentium";
+                xAmzSecurityToken = "voluptatibus";
+                xAmzSignature = "ipsa";
+                xAmzSignedHeaders = "omnis";
+                xAmzTarget = "DynamoDB_20120810.BatchExecuteStatement";
+            }}            
 
             BatchExecuteStatementResponse res = sdk.batchExecuteStatement(req);
 
@@ -227,7 +295,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

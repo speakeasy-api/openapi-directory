@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebhooksResolveRequest {
-    
-    public WebhooksResolvePathParams pathParams;
-    public WebhooksResolveRequest withPathParams(WebhooksResolvePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public WebhooksResolveQueryParams queryParams;
-    public WebhooksResolveRequest withQueryParams(WebhooksResolveQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public WebhooksResolveRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public WebhooksResolveRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of downstream event when connector does not supply in body or header
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=e")
+    public String e;
+    public WebhooksResolveRequest withE(String e) {
+        this.e = e;
+        return this;
+    }
     
-    public WebhooksResolveSecurity security;
-    public WebhooksResolveRequest withSecurity(WebhooksResolveSecurity security) {
-        this.security = security;
+    /**
+     * JWT Webhook token that represents the connection lookupId. Signed so we know source came from us
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public WebhooksResolveRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Service provider ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceId")
+    public String serviceId;
+    public WebhooksResolveRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
         return this;
     }
     

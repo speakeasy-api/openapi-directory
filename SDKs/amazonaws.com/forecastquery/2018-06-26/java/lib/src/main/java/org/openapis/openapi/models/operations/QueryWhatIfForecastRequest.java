@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QueryWhatIfForecastRequest {
-    
-    public QueryWhatIfForecastHeaders headers;
-    public QueryWhatIfForecastRequest withHeaders(QueryWhatIfForecastHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.QueryWhatIfForecastRequest queryWhatIfForecastRequest;
+    public QueryWhatIfForecastRequest withQueryWhatIfForecastRequest(org.openapis.openapi.models.shared.QueryWhatIfForecastRequest queryWhatIfForecastRequest) {
+        this.queryWhatIfForecastRequest = queryWhatIfForecastRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.QueryWhatIfForecastRequest request;
-    public QueryWhatIfForecastRequest withRequest(org.openapis.openapi.models.shared.QueryWhatIfForecastRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public QueryWhatIfForecastRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public QueryWhatIfForecastRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public QueryWhatIfForecastRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public QueryWhatIfForecastRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public QueryWhatIfForecastRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public QueryWhatIfForecastRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public QueryWhatIfForecastRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public QueryWhatIfForecastXAmzTargetEnum xAmzTarget;
+    public QueryWhatIfForecastRequest withXAmzTarget(QueryWhatIfForecastXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

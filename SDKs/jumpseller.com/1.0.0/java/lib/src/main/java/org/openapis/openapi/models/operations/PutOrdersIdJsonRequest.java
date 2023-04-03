@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutOrdersIdJsonRequest {
-    
-    public PutOrdersIdJsonPathParams pathParams;
-    public PutOrdersIdJsonRequest withPathParams(PutOrdersIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutOrdersIdJsonQueryParams queryParams;
-    public PutOrdersIdJsonRequest withQueryParams(PutOrdersIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Order parameters to change
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.OrderEdit request;
-    public PutOrdersIdJsonRequest withRequest(org.openapis.openapi.models.shared.OrderEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.OrderEdit orderEdit;
+    public PutOrdersIdJsonRequest withOrderEdit(org.openapis.openapi.models.shared.OrderEdit orderEdit) {
+        this.orderEdit = orderEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PutOrdersIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the Order
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PutOrdersIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PutOrdersIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

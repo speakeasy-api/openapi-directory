@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCuratedPodcastsRequest {
-    
-    public GetCuratedPodcastsQueryParams queryParams;
-    public GetCuratedPodcastsRequest withQueryParams(GetCuratedPodcastsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Get API Key on listennotes.com/api
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
+    public String xListenAPIKey;
+    public GetCuratedPodcastsRequest withXListenAPIKey(String xListenAPIKey) {
+        this.xListenAPIKey = xListenAPIKey;
         return this;
     }
     
-    
-    public GetCuratedPodcastsHeaders headers;
-    public GetCuratedPodcastsRequest withHeaders(GetCuratedPodcastsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Page number of curated lists.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetCuratedPodcastsRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     

@@ -40,18 +40,18 @@ public class ImagePredictionApi {
      */
     public org.openapis.openapi.models.operations.ClassifyImageResponse classifyImage(org.openapis.openapi.models.operations.ClassifyImageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClassifyImagePathParams.class, baseUrl, "/{projectId}/classify/iterations/{publishedName}/image", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClassifyImageRequest.class, baseUrl, "/{projectId}/classify/iterations/{publishedName}/image", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClassifyImageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClassifyImageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -118,18 +118,18 @@ public class ImagePredictionApi {
      */
     public org.openapis.openapi.models.operations.ClassifyImageUrlWithNoStoreFormResponse classifyImageUrlWithNoStoreForm(org.openapis.openapi.models.operations.ClassifyImageUrlWithNoStoreFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClassifyImageUrlWithNoStoreFormPathParams.class, baseUrl, "/{projectId}/classify/iterations/{publishedName}/url/nostore", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClassifyImageUrlWithNoStoreFormRequest.class, baseUrl, "/{projectId}/classify/iterations/{publishedName}/url/nostore", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "imageUrl", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClassifyImageUrlWithNoStoreFormQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClassifyImageUrlWithNoStoreFormRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -196,18 +196,18 @@ public class ImagePredictionApi {
      */
     public org.openapis.openapi.models.operations.ClassifyImageUrlWithNoStoreJsonResponse classifyImageUrlWithNoStoreJson(org.openapis.openapi.models.operations.ClassifyImageUrlWithNoStoreJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClassifyImageUrlWithNoStoreJsonPathParams.class, baseUrl, "/{projectId}/classify/iterations/{publishedName}/url/nostore", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClassifyImageUrlWithNoStoreJsonRequest.class, baseUrl, "/{projectId}/classify/iterations/{publishedName}/url/nostore", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "imageUrl", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClassifyImageUrlWithNoStoreJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClassifyImageUrlWithNoStoreJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -274,18 +274,18 @@ public class ImagePredictionApi {
      */
     public org.openapis.openapi.models.operations.ClassifyImageUrlWithNoStoreRawResponse classifyImageUrlWithNoStoreRaw(org.openapis.openapi.models.operations.ClassifyImageUrlWithNoStoreRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClassifyImageUrlWithNoStoreRawPathParams.class, baseUrl, "/{projectId}/classify/iterations/{publishedName}/url/nostore", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClassifyImageUrlWithNoStoreRawRequest.class, baseUrl, "/{projectId}/classify/iterations/{publishedName}/url/nostore", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClassifyImageUrlWithNoStoreRawQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClassifyImageUrlWithNoStoreRawRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -352,18 +352,18 @@ public class ImagePredictionApi {
      */
     public org.openapis.openapi.models.operations.ClassifyImageUrlFormResponse classifyImageUrlForm(org.openapis.openapi.models.operations.ClassifyImageUrlFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClassifyImageUrlFormPathParams.class, baseUrl, "/{projectId}/classify/iterations/{publishedName}/url", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClassifyImageUrlFormRequest.class, baseUrl, "/{projectId}/classify/iterations/{publishedName}/url", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "imageUrl", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClassifyImageUrlFormQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClassifyImageUrlFormRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -430,18 +430,18 @@ public class ImagePredictionApi {
      */
     public org.openapis.openapi.models.operations.ClassifyImageUrlJsonResponse classifyImageUrlJson(org.openapis.openapi.models.operations.ClassifyImageUrlJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClassifyImageUrlJsonPathParams.class, baseUrl, "/{projectId}/classify/iterations/{publishedName}/url", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClassifyImageUrlJsonRequest.class, baseUrl, "/{projectId}/classify/iterations/{publishedName}/url", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "imageUrl", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClassifyImageUrlJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClassifyImageUrlJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -508,18 +508,18 @@ public class ImagePredictionApi {
      */
     public org.openapis.openapi.models.operations.ClassifyImageUrlRawResponse classifyImageUrlRaw(org.openapis.openapi.models.operations.ClassifyImageUrlRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClassifyImageUrlRawPathParams.class, baseUrl, "/{projectId}/classify/iterations/{publishedName}/url", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClassifyImageUrlRawRequest.class, baseUrl, "/{projectId}/classify/iterations/{publishedName}/url", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClassifyImageUrlRawQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClassifyImageUrlRawRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -586,18 +586,18 @@ public class ImagePredictionApi {
      */
     public org.openapis.openapi.models.operations.ClassifyImageWithNoStoreResponse classifyImageWithNoStore(org.openapis.openapi.models.operations.ClassifyImageWithNoStoreRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClassifyImageWithNoStorePathParams.class, baseUrl, "/{projectId}/classify/iterations/{publishedName}/image/nostore", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClassifyImageWithNoStoreRequest.class, baseUrl, "/{projectId}/classify/iterations/{publishedName}/image/nostore", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClassifyImageWithNoStoreQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClassifyImageWithNoStoreRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -664,18 +664,18 @@ public class ImagePredictionApi {
      */
     public org.openapis.openapi.models.operations.DetectImageResponse detectImage(org.openapis.openapi.models.operations.DetectImageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DetectImagePathParams.class, baseUrl, "/{projectId}/detect/iterations/{publishedName}/image", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DetectImageRequest.class, baseUrl, "/{projectId}/detect/iterations/{publishedName}/image", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DetectImageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DetectImageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -742,18 +742,18 @@ public class ImagePredictionApi {
      */
     public org.openapis.openapi.models.operations.DetectImageUrlWithNoStoreFormResponse detectImageUrlWithNoStoreForm(org.openapis.openapi.models.operations.DetectImageUrlWithNoStoreFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DetectImageUrlWithNoStoreFormPathParams.class, baseUrl, "/{projectId}/detect/iterations/{publishedName}/url/nostore", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DetectImageUrlWithNoStoreFormRequest.class, baseUrl, "/{projectId}/detect/iterations/{publishedName}/url/nostore", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "imageUrl", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DetectImageUrlWithNoStoreFormQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DetectImageUrlWithNoStoreFormRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -820,18 +820,18 @@ public class ImagePredictionApi {
      */
     public org.openapis.openapi.models.operations.DetectImageUrlWithNoStoreJsonResponse detectImageUrlWithNoStoreJson(org.openapis.openapi.models.operations.DetectImageUrlWithNoStoreJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DetectImageUrlWithNoStoreJsonPathParams.class, baseUrl, "/{projectId}/detect/iterations/{publishedName}/url/nostore", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DetectImageUrlWithNoStoreJsonRequest.class, baseUrl, "/{projectId}/detect/iterations/{publishedName}/url/nostore", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "imageUrl", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DetectImageUrlWithNoStoreJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DetectImageUrlWithNoStoreJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -898,18 +898,18 @@ public class ImagePredictionApi {
      */
     public org.openapis.openapi.models.operations.DetectImageUrlWithNoStoreRawResponse detectImageUrlWithNoStoreRaw(org.openapis.openapi.models.operations.DetectImageUrlWithNoStoreRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DetectImageUrlWithNoStoreRawPathParams.class, baseUrl, "/{projectId}/detect/iterations/{publishedName}/url/nostore", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DetectImageUrlWithNoStoreRawRequest.class, baseUrl, "/{projectId}/detect/iterations/{publishedName}/url/nostore", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DetectImageUrlWithNoStoreRawQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DetectImageUrlWithNoStoreRawRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -976,18 +976,18 @@ public class ImagePredictionApi {
      */
     public org.openapis.openapi.models.operations.DetectImageUrlFormResponse detectImageUrlForm(org.openapis.openapi.models.operations.DetectImageUrlFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DetectImageUrlFormPathParams.class, baseUrl, "/{projectId}/detect/iterations/{publishedName}/url", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DetectImageUrlFormRequest.class, baseUrl, "/{projectId}/detect/iterations/{publishedName}/url", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "imageUrl", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DetectImageUrlFormQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DetectImageUrlFormRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1054,18 +1054,18 @@ public class ImagePredictionApi {
      */
     public org.openapis.openapi.models.operations.DetectImageUrlJsonResponse detectImageUrlJson(org.openapis.openapi.models.operations.DetectImageUrlJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DetectImageUrlJsonPathParams.class, baseUrl, "/{projectId}/detect/iterations/{publishedName}/url", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DetectImageUrlJsonRequest.class, baseUrl, "/{projectId}/detect/iterations/{publishedName}/url", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "imageUrl", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DetectImageUrlJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DetectImageUrlJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1132,18 +1132,18 @@ public class ImagePredictionApi {
      */
     public org.openapis.openapi.models.operations.DetectImageUrlRawResponse detectImageUrlRaw(org.openapis.openapi.models.operations.DetectImageUrlRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DetectImageUrlRawPathParams.class, baseUrl, "/{projectId}/detect/iterations/{publishedName}/url", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DetectImageUrlRawRequest.class, baseUrl, "/{projectId}/detect/iterations/{publishedName}/url", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DetectImageUrlRawQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DetectImageUrlRawRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1210,18 +1210,18 @@ public class ImagePredictionApi {
      */
     public org.openapis.openapi.models.operations.DetectImageWithNoStoreResponse detectImageWithNoStore(org.openapis.openapi.models.operations.DetectImageWithNoStoreRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DetectImageWithNoStorePathParams.class, baseUrl, "/{projectId}/detect/iterations/{publishedName}/image/nostore", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DetectImageWithNoStoreRequest.class, baseUrl, "/{projectId}/detect/iterations/{publishedName}/image/nostore", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DetectImageWithNoStoreQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DetectImageWithNoStoreRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

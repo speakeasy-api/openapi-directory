@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RotateAccountKeyRequest {
-    
-    public RotateAccountKeyPathParams pathParams;
-    public RotateAccountKeyRequest withPathParams(RotateAccountKeyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RotateAccountKeySecurity security;
-    public RotateAccountKeyRequest withSecurity(RotateAccountKeySecurity security) {
-        this.security = security;
+    /**
+     * UUID of the key to retrieve
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key_id")
+    public String keyId;
+    public RotateAccountKeyRequest withKeyId(String keyId) {
+        this.keyId = keyId;
         return this;
     }
     

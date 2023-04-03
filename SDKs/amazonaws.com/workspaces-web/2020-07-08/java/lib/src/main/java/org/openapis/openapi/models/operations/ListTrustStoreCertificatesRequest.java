@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListTrustStoreCertificatesRequest {
-    
-    public ListTrustStoreCertificatesPathParams pathParams;
-    public ListTrustStoreCertificatesRequest withPathParams(ListTrustStoreCertificatesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListTrustStoreCertificatesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public ListTrustStoreCertificatesQueryParams queryParams;
-    public ListTrustStoreCertificatesRequest withQueryParams(ListTrustStoreCertificatesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListTrustStoreCertificatesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListTrustStoreCertificatesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public ListTrustStoreCertificatesHeaders headers;
-    public ListTrustStoreCertificatesRequest withHeaders(ListTrustStoreCertificatesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListTrustStoreCertificatesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListTrustStoreCertificatesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListTrustStoreCertificatesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListTrustStoreCertificatesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to be included in the next page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListTrustStoreCertificatesRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The pagination token used to retrieve the next page of results for this operation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListTrustStoreCertificatesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The ARN of the trust store
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=trustStoreArn")
+    public String trustStoreArn;
+    public ListTrustStoreCertificatesRequest withTrustStoreArn(String trustStoreArn) {
+        this.trustStoreArn = trustStoreArn;
         return this;
     }
     

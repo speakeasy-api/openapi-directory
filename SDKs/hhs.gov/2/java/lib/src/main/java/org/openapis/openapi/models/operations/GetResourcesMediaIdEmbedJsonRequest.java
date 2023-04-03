@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesMediaIdEmbedJsonRequest {
-    
-    public GetResourcesMediaIdEmbedJsonPathParams pathParams;
-    public GetResourcesMediaIdEmbedJsonRequest withPathParams(GetResourcesMediaIdEmbedJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Method used to render an html request. Accepts one: [mv, list, feed]
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=displayMethod")
+    public String displayMethod;
+    public GetResourcesMediaIdEmbedJsonRequest withDisplayMethod(String displayMethod) {
+        this.displayMethod = displayMethod;
         return this;
     }
     
+    /**
+     * Should the div to insert content into have a specific name?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=divId")
+    public String divId;
+    public GetResourcesMediaIdEmbedJsonRequest withDivId(String divId) {
+        this.divId = divId;
+        return this;
+    }
     
-    public GetResourcesMediaIdEmbedJsonQueryParams queryParams;
-    public GetResourcesMediaIdEmbedJsonRequest withQueryParams(GetResourcesMediaIdEmbedJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Should the div to insert content into be omitted?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=excludeDiv")
+    public Boolean excludeDiv;
+    public GetResourcesMediaIdEmbedJsonRequest withExcludeDiv(Boolean excludeDiv) {
+        this.excludeDiv = excludeDiv;
+        return this;
+    }
+    
+    /**
+     * Should a reference to the JQuery Library be omitted?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=excludeJquery")
+    public Boolean excludeJquery;
+    public GetResourcesMediaIdEmbedJsonRequest withExcludeJquery(Boolean excludeJquery) {
+        this.excludeJquery = excludeJquery;
+        return this;
+    }
+    
+    /**
+     * Currently supports 'iframe', defaults to 'javascript'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=flavor")
+    public String flavor;
+    public GetResourcesMediaIdEmbedJsonRequest withFlavor(String flavor) {
+        this.flavor = flavor;
+        return this;
+    }
+    
+    /**
+     * The height of the generated iframe.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=height")
+    public Integer height;
+    public GetResourcesMediaIdEmbedJsonRequest withHeight(Integer height) {
+        this.height = height;
+        return this;
+    }
+    
+    /**
+     * The id of the media to get embed code for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetResourcesMediaIdEmbedJsonRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * The name of the iframe element
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=iframeName")
+    public String iframeName;
+    public GetResourcesMediaIdEmbedJsonRequest withIframeName(String iframeName) {
+        this.iframeName = iframeName;
+        return this;
+    }
+    
+    /**
+     * The width of the generated iframe.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=width")
+    public Integer width;
+    public GetResourcesMediaIdEmbedJsonRequest withWidth(Integer width) {
+        this.width = width;
         return this;
     }
     

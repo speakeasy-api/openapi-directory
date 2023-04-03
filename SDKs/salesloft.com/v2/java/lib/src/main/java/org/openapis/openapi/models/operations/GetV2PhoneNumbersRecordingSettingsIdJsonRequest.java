@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2PhoneNumbersRecordingSettingsIdJsonRequest {
-    
-    public GetV2PhoneNumbersRecordingSettingsIdJsonPathParams pathParams;
-    public GetV2PhoneNumbersRecordingSettingsIdJsonRequest withPathParams(GetV2PhoneNumbersRecordingSettingsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * E.164 Phone Number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetV2PhoneNumbersRecordingSettingsIdJsonRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

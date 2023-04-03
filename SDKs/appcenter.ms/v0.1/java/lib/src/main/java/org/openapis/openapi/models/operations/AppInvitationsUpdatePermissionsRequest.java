@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppInvitationsUpdatePermissionsRequest {
-    
-    public AppInvitationsUpdatePermissionsPathParams pathParams;
-    public AppInvitationsUpdatePermissionsRequest withPathParams(AppInvitationsUpdatePermissionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The value to update the user permission in the invite.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AppInvitationsUpdatePermissionsRequestBody request;
-    public AppInvitationsUpdatePermissionsRequest withRequest(AppInvitationsUpdatePermissionsRequestBody request) {
-        this.request = request;
+    public AppInvitationsUpdatePermissionsRequestBody requestBody;
+    public AppInvitationsUpdatePermissionsRequest withRequestBody(AppInvitationsUpdatePermissionsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AppInvitationsUpdatePermissionsRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public AppInvitationsUpdatePermissionsSecurity security;
-    public AppInvitationsUpdatePermissionsRequest withSecurity(AppInvitationsUpdatePermissionsSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AppInvitationsUpdatePermissionsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * The email of the user to invite
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_email")
+    public String userEmail;
+    public AppInvitationsUpdatePermissionsRequest withUserEmail(String userEmail) {
+        this.userEmail = userEmail;
         return this;
     }
     

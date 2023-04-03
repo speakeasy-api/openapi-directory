@@ -7,17 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsUpdateDiscussionInOrgRequest {
-    
-    public TeamsUpdateDiscussionInOrgPathParams pathParams;
-    public TeamsUpdateDiscussionInOrgRequest withPathParams(TeamsUpdateDiscussionInOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public TeamsUpdateDiscussionInOrgRequestBody requestBody;
+    public TeamsUpdateDiscussionInOrgRequest withRequestBody(TeamsUpdateDiscussionInOrgRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsUpdateDiscussionInOrgRequestBody request;
-    public TeamsUpdateDiscussionInOrgRequest withRequest(TeamsUpdateDiscussionInOrgRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
+    public Long discussionNumber;
+    public TeamsUpdateDiscussionInOrgRequest withDiscussionNumber(Long discussionNumber) {
+        this.discussionNumber = discussionNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public TeamsUpdateDiscussionInOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * team_slug parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
+    public String teamSlug;
+    public TeamsUpdateDiscussionInOrgRequest withTeamSlug(String teamSlug) {
+        this.teamSlug = teamSlug;
         return this;
     }
     

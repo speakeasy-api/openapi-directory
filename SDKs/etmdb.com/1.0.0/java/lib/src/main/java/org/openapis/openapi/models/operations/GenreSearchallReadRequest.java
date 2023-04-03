@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenreSearchallReadRequest {
-    
-    public GenreSearchallReadPathParams pathParams;
-    public GenreSearchallReadRequest withPathParams(GenreSearchallReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=movie_genre_type")
+    public String movieGenreType;
+    public GenreSearchallReadRequest withMovieGenreType(String movieGenreType) {
+        this.movieGenreType = movieGenreType;
         return this;
     }
     

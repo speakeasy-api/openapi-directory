@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConsumerV1ServicesIdResourcesRequest {
-    
-    public GetConsumerV1ServicesIdResourcesPathParams pathParams;
-    public GetConsumerV1ServicesIdResourcesRequest withPathParams(GetConsumerV1ServicesIdResourcesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of service object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetConsumerV1ServicesIdResourcesRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Page limit default 20, max 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetConsumerV1ServicesIdResourcesRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetConsumerV1ServicesIdResourcesQueryParams queryParams;
-    public GetConsumerV1ServicesIdResourcesRequest withQueryParams(GetConsumerV1ServicesIdResourcesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * id of business location, defaults to primary business location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
+    public String locationId;
+    public GetConsumerV1ServicesIdResourcesRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * Starting row of page, default 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetConsumerV1ServicesIdResourcesRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

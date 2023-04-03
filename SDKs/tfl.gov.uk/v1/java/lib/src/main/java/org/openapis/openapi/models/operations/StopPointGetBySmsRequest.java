@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointGetBySmsRequest {
-    
-    public StopPointGetBySmsPathParams pathParams;
-    public StopPointGetBySmsRequest withPathParams(StopPointGetBySmsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A 5-digit Countdown Bus Stop Code e.g. 73241, 50435, 56334.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public StopPointGetBySmsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public StopPointGetBySmsQueryParams queryParams;
-    public StopPointGetBySmsRequest withQueryParams(StopPointGetBySmsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If set to "web", a 302 redirect to relevant website bus stop page is returned. Valid values are : web. All other values are ignored.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=output")
+    public String output;
+    public StopPointGetBySmsRequest withOutput(String output) {
+        this.output = output;
         return this;
     }
     

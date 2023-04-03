@@ -4,20 +4,206 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LocalservicesDetailedLeadReportsSearchRequest {
-    
-    public LocalservicesDetailedLeadReportsSearchQueryParams queryParams;
-    public LocalservicesDetailedLeadReportsSearchRequest withQueryParams(LocalservicesDetailedLeadReportsSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public LocalservicesDetailedLeadReportsSearchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public LocalservicesDetailedLeadReportsSearchRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public LocalservicesDetailedLeadReportsSearchSecurity security;
-    public LocalservicesDetailedLeadReportsSearchRequest withSecurity(LocalservicesDetailedLeadReportsSearchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public LocalservicesDetailedLeadReportsSearchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public LocalservicesDetailedLeadReportsSearchRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate.day")
+    public Long endDateDay;
+    public LocalservicesDetailedLeadReportsSearchRequest withEndDateDay(Long endDateDay) {
+        this.endDateDay = endDateDay;
+        return this;
+    }
+    
+    /**
+     * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate.month")
+    public Long endDateMonth;
+    public LocalservicesDetailedLeadReportsSearchRequest withEndDateMonth(Long endDateMonth) {
+        this.endDateMonth = endDateMonth;
+        return this;
+    }
+    
+    /**
+     * Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate.year")
+    public Long endDateYear;
+    public LocalservicesDetailedLeadReportsSearchRequest withEndDateYear(Long endDateYear) {
+        this.endDateYear = endDateYear;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public LocalservicesDetailedLeadReportsSearchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public LocalservicesDetailedLeadReportsSearchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public LocalservicesDetailedLeadReportsSearchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The maximum number of accounts to return. If the page size is unset, page size will default to 1000. Maximum page_size is 10000. Optional.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public LocalservicesDetailedLeadReportsSearchRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The `next_page_token` value returned from a previous request to SearchDetailedLeadReports that indicates where listing should continue. Optional.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public LocalservicesDetailedLeadReportsSearchRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public LocalservicesDetailedLeadReportsSearchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * A query string for searching for account reports. Caller must provide a customer id of their MCC account with an associated Gaia Mint that allows read permission on their linked accounts. Search expressions are case insensitive. Example query: | Query | Description | |-------------------------|-----------------------------------------------| | manager_customer_id:123 | Get Detailed Lead Report for Manager with id | | | 123. | Required.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public LocalservicesDetailedLeadReportsSearchRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public LocalservicesDetailedLeadReportsSearchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate.day")
+    public Long startDateDay;
+    public LocalservicesDetailedLeadReportsSearchRequest withStartDateDay(Long startDateDay) {
+        this.startDateDay = startDateDay;
+        return this;
+    }
+    
+    /**
+     * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate.month")
+    public Long startDateMonth;
+    public LocalservicesDetailedLeadReportsSearchRequest withStartDateMonth(Long startDateMonth) {
+        this.startDateMonth = startDateMonth;
+        return this;
+    }
+    
+    /**
+     * Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate.year")
+    public Long startDateYear;
+    public LocalservicesDetailedLeadReportsSearchRequest withStartDateYear(Long startDateYear) {
+        this.startDateYear = startDateYear;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public LocalservicesDetailedLeadReportsSearchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public LocalservicesDetailedLeadReportsSearchRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

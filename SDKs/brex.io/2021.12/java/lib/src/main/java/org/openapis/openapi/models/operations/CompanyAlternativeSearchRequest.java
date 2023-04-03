@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompanyAlternativeSearchRequest {
-    
-    public CompanyAlternativeSearchPathParams pathParams;
-    public CompanyAlternativeSearchRequest withPathParams(CompanyAlternativeSearchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * VAT number and the company details
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CompanyAlternativeSearchRequestBody request;
-    public CompanyAlternativeSearchRequest withRequest(CompanyAlternativeSearchRequestBody request) {
-        this.request = request;
+    public CompanyAlternativeSearchRequestBody requestBody;
+    public CompanyAlternativeSearchRequest withRequestBody(CompanyAlternativeSearchRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CompanyAlternativeSearchSecurity security;
-    public CompanyAlternativeSearchRequest withSecurity(CompanyAlternativeSearchSecurity security) {
-        this.security = security;
+    /**
+     * ISO_3166-1_alpha-2 representation of a country name - 2 chars
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country")
+    public String country;
+    public CompanyAlternativeSearchRequest withCountry(String country) {
+        this.country = country;
         return this;
     }
     

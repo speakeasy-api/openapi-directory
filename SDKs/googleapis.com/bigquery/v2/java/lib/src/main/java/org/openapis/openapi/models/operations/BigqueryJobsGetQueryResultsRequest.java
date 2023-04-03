@@ -4,27 +4,146 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BigqueryJobsGetQueryResultsRequest {
-    
-    public BigqueryJobsGetQueryResultsPathParams pathParams;
-    public BigqueryJobsGetQueryResultsRequest withPathParams(BigqueryJobsGetQueryResultsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public BigqueryJobsGetQueryResultsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public BigqueryJobsGetQueryResultsQueryParams queryParams;
-    public BigqueryJobsGetQueryResultsRequest withQueryParams(BigqueryJobsGetQueryResultsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public BigqueryJobsGetQueryResultsRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
+    /**
+     * [Required] Job ID of the query job
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public BigqueryJobsGetQueryResultsRequest withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
     
-    public BigqueryJobsGetQueryResultsSecurity security;
-    public BigqueryJobsGetQueryResultsRequest withSecurity(BigqueryJobsGetQueryResultsSecurity security) {
-        this.security = security;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public BigqueryJobsGetQueryResultsRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The geographic location where the job should run. Required except for US and EU. See details at https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location")
+    public String location;
+    public BigqueryJobsGetQueryResultsRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results to read
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public BigqueryJobsGetQueryResultsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public BigqueryJobsGetQueryResultsRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Page token, returned by a previous call, to request the next page of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public BigqueryJobsGetQueryResultsRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public BigqueryJobsGetQueryResultsRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * [Required] Project ID of the query job
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public BigqueryJobsGetQueryResultsRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public BigqueryJobsGetQueryResultsRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Zero-based index of the starting row
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
+    public String startIndex;
+    public BigqueryJobsGetQueryResultsRequest withStartIndex(String startIndex) {
+        this.startIndex = startIndex;
+        return this;
+    }
+    
+    /**
+     * How long to wait for the query to complete, in milliseconds, before returning. Default is 10 seconds. If the timeout passes before the job completes, the 'jobComplete' field in the response will be false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeoutMs")
+    public Long timeoutMs;
+    public BigqueryJobsGetQueryResultsRequest withTimeoutMs(Long timeoutMs) {
+        this.timeoutMs = timeoutMs;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public BigqueryJobsGetQueryResultsRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

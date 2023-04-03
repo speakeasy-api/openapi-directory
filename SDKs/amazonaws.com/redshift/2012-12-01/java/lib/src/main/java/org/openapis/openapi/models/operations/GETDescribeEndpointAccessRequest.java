@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeEndpointAccessRequest {
-    
-    public GETDescribeEndpointAccessQueryParams queryParams;
-    public GETDescribeEndpointAccessRequest withQueryParams(GETDescribeEndpointAccessQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeEndpointAccessActionEnum action;
+    public GETDescribeEndpointAccessRequest withAction(GETDescribeEndpointAccessActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The cluster identifier associated with the described endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETDescribeEndpointAccessRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
     
-    public GETDescribeEndpointAccessHeaders headers;
-    public GETDescribeEndpointAccessRequest withHeaders(GETDescribeEndpointAccessHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the endpoint to be described.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndpointName")
+    public String endpointName;
+    public GETDescribeEndpointAccessRequest withEndpointName(String endpointName) {
+        this.endpointName = endpointName;
+        return this;
+    }
+    
+    /**
+     * An optional pagination token provided by a previous &lt;code&gt;DescribeEndpointAccess&lt;/code&gt; request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by the &lt;code&gt;MaxRecords&lt;/code&gt; parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDescribeEndpointAccessRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * The maximum number of records to include in the response. If more records exist than the specified &lt;code&gt;MaxRecords&lt;/code&gt; value, a pagination token called a &lt;code&gt;Marker&lt;/code&gt; is included in the response so that the remaining results can be retrieved.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeEndpointAccessRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    /**
+     * The Amazon Web Services account ID of the owner of the cluster.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceOwner")
+    public String resourceOwner;
+    public GETDescribeEndpointAccessRequest withResourceOwner(String resourceOwner) {
+        this.resourceOwner = resourceOwner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeEndpointAccessVersionEnum version;
+    public GETDescribeEndpointAccessRequest withVersion(GETDescribeEndpointAccessVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * The virtual private cloud (VPC) identifier with access to the cluster.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcId")
+    public String vpcId;
+    public GETDescribeEndpointAccessRequest withVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeEndpointAccessRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeEndpointAccessRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeEndpointAccessRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeEndpointAccessRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeEndpointAccessRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeEndpointAccessRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeEndpointAccessRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

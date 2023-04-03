@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkWirelessRfProfileRequest {
-    
-    public UpdateNetworkWirelessRfProfilePathParams pathParams;
-    public UpdateNetworkWirelessRfProfileRequest withPathParams(UpdateNetworkWirelessRfProfilePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkWirelessRfProfileRequestBody requestBody;
+    public UpdateNetworkWirelessRfProfileRequest withRequestBody(UpdateNetworkWirelessRfProfileRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkWirelessRfProfileRequestBody request;
-    public UpdateNetworkWirelessRfProfileRequest withRequest(UpdateNetworkWirelessRfProfileRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkWirelessRfProfileRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rfProfileId")
+    public String rfProfileId;
+    public UpdateNetworkWirelessRfProfileRequest withRfProfileId(String rfProfileId) {
+        this.rfProfileId = rfProfileId;
         return this;
     }
     

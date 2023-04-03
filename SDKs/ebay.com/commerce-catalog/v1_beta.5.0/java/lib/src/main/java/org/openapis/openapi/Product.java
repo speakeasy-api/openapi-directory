@@ -32,18 +32,19 @@ public class Product {
     /**
      * This method retrieves details of the catalog product identified by the eBay product identifier (ePID) specified in the request. These details include the product's title and description, aspects and their values, associated images, applicable category IDs, and any recognized identifiers that apply to the product. &lt;br /&gt;&lt;br /&gt; For a new listing, you can use the &lt;b&gt;search&lt;/b&gt; method to identify candidate products on which to base the listing, then use the &lt;b&gt;getProduct&lt;/b&gt; method to present the full details of those candidate products to the seller to make a a final selection.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetProductResponse getProduct(org.openapis.openapi.models.operations.GetProductRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetProductResponse getProduct(org.openapis.openapi.models.operations.GetProductRequest request, org.openapis.openapi.models.operations.GetProductSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductPathParams.class, baseUrl, "/product/{epid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductRequest.class, baseUrl, "/product/{epid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -52,7 +53,7 @@ public class Product {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

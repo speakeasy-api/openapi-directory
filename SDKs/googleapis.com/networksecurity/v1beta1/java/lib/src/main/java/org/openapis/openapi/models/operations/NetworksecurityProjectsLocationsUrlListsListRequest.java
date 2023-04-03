@@ -4,27 +4,146 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NetworksecurityProjectsLocationsUrlListsListRequest {
-    
-    public NetworksecurityProjectsLocationsUrlListsListPathParams pathParams;
-    public NetworksecurityProjectsLocationsUrlListsListRequest withPathParams(NetworksecurityProjectsLocationsUrlListsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public NetworksecurityProjectsLocationsUrlListsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public NetworksecurityProjectsLocationsUrlListsListQueryParams queryParams;
-    public NetworksecurityProjectsLocationsUrlListsListRequest withQueryParams(NetworksecurityProjectsLocationsUrlListsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public NetworksecurityProjectsLocationsUrlListsListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public NetworksecurityProjectsLocationsUrlListsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public NetworksecurityProjectsLocationsUrlListsListSecurity security;
-    public NetworksecurityProjectsLocationsUrlListsListRequest withSecurity(NetworksecurityProjectsLocationsUrlListsListSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public NetworksecurityProjectsLocationsUrlListsListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public NetworksecurityProjectsLocationsUrlListsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public NetworksecurityProjectsLocationsUrlListsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public NetworksecurityProjectsLocationsUrlListsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Maximum number of UrlLists to return per call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public NetworksecurityProjectsLocationsUrlListsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The value returned by the last `ListUrlListsResponse` Indicates that this is a continuation of a prior `ListUrlLists` call, and that the system should return the next page of data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public NetworksecurityProjectsLocationsUrlListsListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Required. The project and location from which the UrlLists should be listed, specified in the format `projects/{project}/locations/{location}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public NetworksecurityProjectsLocationsUrlListsListRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public NetworksecurityProjectsLocationsUrlListsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public NetworksecurityProjectsLocationsUrlListsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public NetworksecurityProjectsLocationsUrlListsListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public NetworksecurityProjectsLocationsUrlListsListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

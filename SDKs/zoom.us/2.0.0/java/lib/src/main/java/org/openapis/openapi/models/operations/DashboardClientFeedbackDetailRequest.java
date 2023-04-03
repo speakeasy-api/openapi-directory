@@ -4,27 +4,45 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DashboardClientFeedbackDetailRequest {
-    
-    public DashboardClientFeedbackDetailPathParams pathParams;
-    public DashboardClientFeedbackDetailRequest withPathParams(DashboardClientFeedbackDetailPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Feedback Detail Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=feedbackId")
+    public String feedbackId;
+    public DashboardClientFeedbackDetailRequest withFeedbackId(String feedbackId) {
+        this.feedbackId = feedbackId;
         return this;
     }
     
-    
-    public DashboardClientFeedbackDetailQueryParams queryParams;
-    public DashboardClientFeedbackDetailRequest withQueryParams(DashboardClientFeedbackDetailQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public LocalDate from;
+    public DashboardClientFeedbackDetailRequest withFrom(LocalDate from) {
+        this.from = from;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public DashboardClientFeedbackDetailRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
     
-    public DashboardClientFeedbackDetailSecurity security;
-    public DashboardClientFeedbackDetailRequest withSecurity(DashboardClientFeedbackDetailSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public DashboardClientFeedbackDetailRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public LocalDate to;
+    public DashboardClientFeedbackDetailRequest withTo(LocalDate to) {
+        this.to = to;
         return this;
     }
     

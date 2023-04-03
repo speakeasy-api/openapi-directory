@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveDeletedNodesRequest {
-    
-    public RemoveDeletedNodesHeaders headers;
-    public RemoveDeletedNodesRequest withHeaders(RemoveDeletedNodesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.DeleteDeletedNodesRequest deleteDeletedNodesRequest;
+    public RemoveDeletedNodesRequest withDeleteDeletedNodesRequest(org.openapis.openapi.models.shared.DeleteDeletedNodesRequest deleteDeletedNodesRequest) {
+        this.deleteDeletedNodesRequest = deleteDeletedNodesRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DeleteDeletedNodesRequest request;
-    public RemoveDeletedNodesRequest withRequest(org.openapis.openapi.models.shared.DeleteDeletedNodesRequest request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RemoveDeletedNodesRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

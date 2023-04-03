@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateIPSetRequest {
-    
-    public UpdateIPSetHeaders headers;
-    public UpdateIPSetRequest withHeaders(UpdateIPSetHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UpdateIPSetRequest updateIPSetRequest;
+    public UpdateIPSetRequest withUpdateIPSetRequest(org.openapis.openapi.models.shared.UpdateIPSetRequest updateIPSetRequest) {
+        this.updateIPSetRequest = updateIPSetRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateIPSetRequest request;
-    public UpdateIPSetRequest withRequest(org.openapis.openapi.models.shared.UpdateIPSetRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateIPSetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateIPSetRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateIPSetRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateIPSetRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateIPSetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateIPSetRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateIPSetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public UpdateIPSetXAmzTargetEnum xAmzTarget;
+    public UpdateIPSetRequest withXAmzTarget(UpdateIPSetXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

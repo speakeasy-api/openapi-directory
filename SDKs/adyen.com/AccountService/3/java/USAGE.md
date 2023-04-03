@@ -5,10 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.PostCloseAccountHolderSecurity;
-import org.openapis.openapi.models.operations.PostCloseAccountHolderRequest;
 import org.openapis.openapi.models.operations.PostCloseAccountHolderResponse;
 import org.openapis.openapi.models.shared.CloseAccountHolderRequest;
-import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
 import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
@@ -17,18 +15,13 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            PostCloseAccountHolderRequest req = new PostCloseAccountHolderRequest() {{
-                security = new PostCloseAccountHolderSecurity() {{
-                    apiKeyAuth = new SchemeAPIKeyAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                request = new CloseAccountHolderRequest() {{
-                    accountHolderCode = "corrupti";
-                }};
-            }};            
+            org.openapis.openapi.models.shared.CloseAccountHolderRequest req = new CloseAccountHolderRequest() {{
+                accountHolderCode = "corrupti";
+            }}            
 
-            PostCloseAccountHolderResponse res = sdk.accountHolders.postCloseAccountHolder(req);
+            PostCloseAccountHolderResponse res = sdk.accountHolders.postCloseAccountHolder(req, new PostCloseAccountHolderSecurity() {{
+                apiKeyAuth = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.closeAccountHolderResponse.isPresent()) {
                 // handle response

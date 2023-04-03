@@ -59,10 +59,30 @@ public class Authentication {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUsers2FALoginResponse postUsers2FALogin(org.openapis.openapi.models.operations.PostUsers2FALoginRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUsers2FALoginResponse postUsers2FALogin(org.openapis.openapi.models.shared.Users2FALoginRequest request) throws Exception {
+        return this.postUsers2FALogin(request, null);
+    }
+
+    /**
+     * Second factor authentication.
+     * When a user has 2FA enabled, this is the second call to perform after
+     * `/v2/users/login` call.
+     * 
+     * Creates and returns a bearer token in JWT format that you can use to authenticate with Docker Hub APIs.
+     * 
+     * The returned token is used in the HTTP Authorization header like `Authorization: Bearer {TOKEN}`.
+     * 
+     * Most Docker Hub APIs require this token either to consume or to get detailed information. For example, to list images in a private repository.
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostUsers2FALoginResponse postUsers2FALogin(org.openapis.openapi.models.shared.Users2FALoginRequest request, String serverURL) throws Exception {
         String baseUrl = POST_USERS2_FA_LOGIN_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/users/2fa-login");
@@ -122,10 +142,28 @@ public class Authentication {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUsersLoginResponse postUsersLogin(org.openapis.openapi.models.operations.PostUsersLoginRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUsersLoginResponse postUsersLogin(org.openapis.openapi.models.shared.UsersLoginRequest request) throws Exception {
+        return this.postUsersLogin(request, null);
+    }
+
+    /**
+     * Create an authentication token
+     * Creates and returns a bearer token in JWT format that you can use to
+     * authenticate with Docker Hub APIs.
+     * 
+     * The returned token is used in the HTTP Authorization header like `Authorization: Bearer {TOKEN}`.
+     * 
+     * Most Docker Hub APIs require this token either to consume or to get detailed information. For example, to list images in a private repository.
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostUsersLoginResponse postUsersLogin(org.openapis.openapi.models.shared.UsersLoginRequest request, String serverURL) throws Exception {
         String baseUrl = POST_USERS_LOGIN_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/users/login");

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestUserKeyPairRequest {
-    
-    public RequestUserKeyPairQueryParams queryParams;
-    public RequestUserKeyPairRequest withQueryParams(RequestUserKeyPairQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestUserKeyPairRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestUserKeyPairXSdsDateFormatEnum xSdsDateFormat;
+    public RequestUserKeyPairRequest withXSdsDateFormat(RequestUserKeyPairXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
     
-    public RequestUserKeyPairHeaders headers;
-    public RequestUserKeyPairRequest withHeaders(RequestUserKeyPairHeaders headers) {
-        this.headers = headers;
+    /**
+     * Version (NEW)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public RequestUserKeyPairRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

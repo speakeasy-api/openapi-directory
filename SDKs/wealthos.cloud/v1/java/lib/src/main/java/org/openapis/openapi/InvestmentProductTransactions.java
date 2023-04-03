@@ -40,20 +40,21 @@ public class InvestmentProductTransactions {
      * Execute Buy Transaction(s)
      * Invoke execution of one or more buy transactions as defined in the request
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExecuteBuyTrasactionResponse executeBuyTrasaction(org.openapis.openapi.models.operations.ExecuteBuyTrasactionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExecuteBuyTrasactionResponse executeBuyTrasaction(org.openapis.openapi.models.operations.ExecuteBuyTrasactionRequest request, org.openapis.openapi.models.operations.ExecuteBuyTrasactionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tenant/transactions/v1/buy");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -62,7 +63,7 @@ public class InvestmentProductTransactions {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -146,20 +147,21 @@ public class InvestmentProductTransactions {
      * Execute Sell Transaction(s)
      * Invoke execution of one or more Sell transactions as defined in the request
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExecuteSellTrasactionResponse executeSellTrasaction(org.openapis.openapi.models.operations.ExecuteSellTrasactionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExecuteSellTrasactionResponse executeSellTrasaction(org.openapis.openapi.models.operations.ExecuteSellTrasactionRequest request, org.openapis.openapi.models.operations.ExecuteSellTrasactionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tenant/transactions/v1/sell");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -168,7 +170,7 @@ public class InvestmentProductTransactions {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

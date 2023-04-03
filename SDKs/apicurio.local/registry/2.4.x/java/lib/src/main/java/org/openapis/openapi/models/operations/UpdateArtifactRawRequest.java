@@ -7,20 +7,6 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateArtifactRawRequest {
-    
-    public UpdateArtifactRawPathParams pathParams;
-    public UpdateArtifactRawRequest withPathParams(UpdateArtifactRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateArtifactRawHeaders headers;
-    public UpdateArtifactRawRequest withHeaders(UpdateArtifactRawHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The new content of the artifact being updated. This is often, but not always, JSON data
      * representing one of the supported artifact types:
@@ -37,9 +23,82 @@ public class UpdateArtifactRawRequest {
      * 
      */
     @SpeakeasyMetadata("request:mediaType=*/*")
-    public byte[] request;
-    public UpdateArtifactRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public UpdateArtifactRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Specifies the artifact description of this new version of the artifact content. Description must be ASCII-only string. If this is not provided, the server will extract the description from the artifact content.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Description")
+    public String xRegistryDescription;
+    public UpdateArtifactRawRequest withXRegistryDescription(String xRegistryDescription) {
+        this.xRegistryDescription = xRegistryDescription;
+        return this;
+    }
+    
+    /**
+     * Specifies the artifact description of this new version of the artifact content. Value of this must be Base64 encoded string. If this is not provided, the server will extract the description from the artifact content.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Description-Encoded")
+    public String xRegistryDescriptionEncoded;
+    public UpdateArtifactRawRequest withXRegistryDescriptionEncoded(String xRegistryDescriptionEncoded) {
+        this.xRegistryDescriptionEncoded = xRegistryDescriptionEncoded;
+        return this;
+    }
+    
+    /**
+     * Specifies the artifact name of this new version of the artifact content. Name must be ASCII-only string. If this is not
+     * provided, the server will extract the name from the artifact content.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Name")
+    public String xRegistryName;
+    public UpdateArtifactRawRequest withXRegistryName(String xRegistryName) {
+        this.xRegistryName = xRegistryName;
+        return this;
+    }
+    
+    /**
+     * Specifies the artifact name of this new version of the artifact content. Value of this must be Base64 encoded string. If this is not provided, the server will extract the name from the artifact content.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Name-Encoded")
+    public String xRegistryNameEncoded;
+    public UpdateArtifactRawRequest withXRegistryNameEncoded(String xRegistryNameEncoded) {
+        this.xRegistryNameEncoded = xRegistryNameEncoded;
+        return this;
+    }
+    
+    /**
+     * Specifies the version number of this new version of the artifact content.  This would typically
+     * be a simple integer or a SemVer value.  If not provided, the server will assign a version number
+     * automatically.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Version")
+    public String xRegistryVersion;
+    public UpdateArtifactRawRequest withXRegistryVersion(String xRegistryVersion) {
+        this.xRegistryVersion = xRegistryVersion;
+        return this;
+    }
+    
+    /**
+     * The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public UpdateArtifactRawRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
+        return this;
+    }
+    
+    /**
+     * The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public UpdateArtifactRawRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

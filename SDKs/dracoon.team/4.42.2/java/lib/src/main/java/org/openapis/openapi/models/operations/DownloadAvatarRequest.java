@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadAvatarRequest {
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Long userId;
+    public DownloadAvatarRequest withUserId(Long userId) {
+        this.userId = userId;
+        return this;
+    }
     
-    public DownloadAvatarPathParams pathParams;
-    public DownloadAvatarRequest withPathParams(DownloadAvatarPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * UUID of the avatar
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
+    public String uuid;
+    public DownloadAvatarRequest withUuid(String uuid) {
+        this.uuid = uuid;
         return this;
     }
     

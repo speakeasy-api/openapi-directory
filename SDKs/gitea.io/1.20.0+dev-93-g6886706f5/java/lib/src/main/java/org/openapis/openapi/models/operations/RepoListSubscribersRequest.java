@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoListSubscribersRequest {
-    
-    public RepoListSubscribersPathParams pathParams;
-    public RepoListSubscribersRequest withPathParams(RepoListSubscribersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public RepoListSubscribersRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoListSubscribersRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public RepoListSubscribersQueryParams queryParams;
-    public RepoListSubscribersRequest withQueryParams(RepoListSubscribersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public RepoListSubscribersRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoListSubscribersRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

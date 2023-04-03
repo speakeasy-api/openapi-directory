@@ -4,27 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugSrcRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugSrcPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugSrcRequest withPathParams(GetRepositoriesWorkspaceRepoSlugSrcPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Instead of returning the file's contents, return the (json) meta data for it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetRepositoriesWorkspaceRepoSlugSrcFormatEnum format;
+    public GetRepositoriesWorkspaceRepoSlugSrcRequest withFormat(GetRepositoriesWorkspaceRepoSlugSrcFormatEnum format) {
+        this.format = format;
         return this;
     }
     
-    
-    public GetRepositoriesWorkspaceRepoSlugSrcQueryParams queryParams;
-    public GetRepositoriesWorkspaceRepoSlugSrcRequest withQueryParams(GetRepositoriesWorkspaceRepoSlugSrcQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugSrcRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
         return this;
     }
     
-    
-    public GetRepositoriesWorkspaceRepoSlugSrcSecurity security;
-    public GetRepositoriesWorkspaceRepoSlugSrcRequest withSecurity(GetRepositoriesWorkspaceRepoSlugSrcSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugSrcRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

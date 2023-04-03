@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GistsGetCommentRequest {
+    /**
+     * comment_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
+    public Long commentId;
+    public GistsGetCommentRequest withCommentId(Long commentId) {
+        this.commentId = commentId;
+        return this;
+    }
     
-    public GistsGetCommentPathParams pathParams;
-    public GistsGetCommentRequest withPathParams(GistsGetCommentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * gist_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gist_id")
+    public String gistId;
+    public GistsGetCommentRequest withGistId(String gistId) {
+        this.gistId = gistId;
         return this;
     }
     

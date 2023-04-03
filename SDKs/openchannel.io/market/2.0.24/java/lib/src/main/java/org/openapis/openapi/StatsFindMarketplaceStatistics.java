@@ -36,13 +36,13 @@ public class StatsFindMarketplaceStatistics {
      */
     public org.openapis.openapi.models.operations.GetStatsSeriesPeriodFieldsResponse getStatsSeriesPeriodFields(org.openapis.openapi.models.operations.GetStatsSeriesPeriodFieldsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStatsSeriesPeriodFieldsPathParams.class, baseUrl, "/stats/series/{period}/{fields}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStatsSeriesPeriodFieldsRequest.class, baseUrl, "/stats/series/{period}/{fields}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStatsSeriesPeriodFieldsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStatsSeriesPeriodFieldsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -86,7 +86,7 @@ public class StatsFindMarketplaceStatistics {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStatsTotalQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStatsTotalRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -125,13 +125,13 @@ public class StatsFindMarketplaceStatistics {
      */
     public org.openapis.openapi.models.operations.PostStatsIncrementFieldResponse postStatsIncrementField(org.openapis.openapi.models.operations.PostStatsIncrementFieldRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostStatsIncrementFieldPathParams.class, baseUrl, "/stats/increment/{field}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostStatsIncrementFieldRequest.class, baseUrl, "/stats/increment/{field}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostStatsIncrementFieldQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostStatsIncrementFieldRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

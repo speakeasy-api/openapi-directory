@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateContainerServiceRequest {
-    
-    public CreateContainerServiceHeaders headers;
-    public CreateContainerServiceRequest withHeaders(CreateContainerServiceHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateContainerServiceRequest createContainerServiceRequest;
+    public CreateContainerServiceRequest withCreateContainerServiceRequest(org.openapis.openapi.models.shared.CreateContainerServiceRequest createContainerServiceRequest) {
+        this.createContainerServiceRequest = createContainerServiceRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateContainerServiceRequest request;
-    public CreateContainerServiceRequest withRequest(org.openapis.openapi.models.shared.CreateContainerServiceRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public CreateContainerServiceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public CreateContainerServiceRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public CreateContainerServiceRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public CreateContainerServiceRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public CreateContainerServiceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public CreateContainerServiceRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public CreateContainerServiceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public CreateContainerServiceXAmzTargetEnum xAmzTarget;
+    public CreateContainerServiceRequest withXAmzTarget(CreateContainerServiceXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

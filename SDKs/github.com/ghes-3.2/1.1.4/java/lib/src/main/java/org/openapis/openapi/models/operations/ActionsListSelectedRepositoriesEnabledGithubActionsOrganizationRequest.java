@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationRequest {
-    
-    public ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationPathParams pathParams;
-    public ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationRequest withPathParams(ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationQueryParams queryParams;
-    public ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationRequest withQueryParams(ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

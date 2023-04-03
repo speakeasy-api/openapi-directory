@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FunctionsGetExecutionRequest {
-    
-    public FunctionsGetExecutionPathParams pathParams;
-    public FunctionsGetExecutionRequest withPathParams(FunctionsGetExecutionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Execution unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
+    public String executionId;
+    public FunctionsGetExecutionRequest withExecutionId(String executionId) {
+        this.executionId = executionId;
         return this;
     }
     
-    
-    public FunctionsGetExecutionSecurity security;
-    public FunctionsGetExecutionRequest withSecurity(FunctionsGetExecutionSecurity security) {
-        this.security = security;
+    /**
+     * Function unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionId")
+    public String functionId;
+    public FunctionsGetExecutionRequest withFunctionId(String functionId) {
+        this.functionId = functionId;
         return this;
     }
     

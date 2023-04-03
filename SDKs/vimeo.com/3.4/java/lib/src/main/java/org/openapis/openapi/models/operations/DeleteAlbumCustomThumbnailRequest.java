@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAlbumCustomThumbnailRequest {
-    
-    public DeleteAlbumCustomThumbnailPathParams pathParams;
-    public DeleteAlbumCustomThumbnailRequest withPathParams(DeleteAlbumCustomThumbnailPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the album.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=album_id")
+    public Double albumId;
+    public DeleteAlbumCustomThumbnailRequest withAlbumId(Double albumId) {
+        this.albumId = albumId;
         return this;
     }
     
+    /**
+     * The ID of the custom thumbnail.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=thumbnail_id")
+    public Double thumbnailId;
+    public DeleteAlbumCustomThumbnailRequest withThumbnailId(Double thumbnailId) {
+        this.thumbnailId = thumbnailId;
+        return this;
+    }
     
-    public DeleteAlbumCustomThumbnailSecurity security;
-    public DeleteAlbumCustomThumbnailRequest withSecurity(DeleteAlbumCustomThumbnailSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public DeleteAlbumCustomThumbnailRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

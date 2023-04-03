@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateFormByIdRequest {
-    
-    public UpdateFormByIdPathParams pathParams;
-    public UpdateFormByIdRequest withPathParams(UpdateFormByIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateFormByIdHeaders headers;
-    public UpdateFormByIdRequest withHeaders(UpdateFormByIdHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateFormByIdUpdateFormByIdRequestBody request;
-    public UpdateFormByIdRequest withRequest(UpdateFormByIdUpdateFormByIdRequestBody request) {
-        this.request = request;
+    public UpdateFormByIdUpdateFormByIdRequestBody requestBody;
+    public UpdateFormByIdRequest withRequestBody(UpdateFormByIdUpdateFormByIdRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public UpdateFormByIdRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
+        return this;
+    }
+    
+    /**
+     * API Key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public UpdateFormByIdRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
+    
+    /**
+     * Form unique ID number.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public UpdateFormByIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

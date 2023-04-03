@@ -7,24 +7,93 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTDescribeIpamResourceDiscoveryAssociationsRequest {
-    
-    public POSTDescribeIpamResourceDiscoveryAssociationsQueryParams queryParams;
-    public POSTDescribeIpamResourceDiscoveryAssociationsRequest withQueryParams(POSTDescribeIpamResourceDiscoveryAssociationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public POSTDescribeIpamResourceDiscoveryAssociationsActionEnum action;
+    public POSTDescribeIpamResourceDiscoveryAssociationsRequest withAction(POSTDescribeIpamResourceDiscoveryAssociationsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public String maxResults;
+    public POSTDescribeIpamResourceDiscoveryAssociationsRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
     
-    public POSTDescribeIpamResourceDiscoveryAssociationsHeaders headers;
-    public POSTDescribeIpamResourceDiscoveryAssociationsRequest withHeaders(POSTDescribeIpamResourceDiscoveryAssociationsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public POSTDescribeIpamResourceDiscoveryAssociationsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public POSTDescribeIpamResourceDiscoveryAssociationsRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public POSTDescribeIpamResourceDiscoveryAssociationsRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public POSTDescribeIpamResourceDiscoveryAssociationsVersionEnum version;
+    public POSTDescribeIpamResourceDiscoveryAssociationsRequest withVersion(POSTDescribeIpamResourceDiscoveryAssociationsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public POSTDescribeIpamResourceDiscoveryAssociationsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public POSTDescribeIpamResourceDiscoveryAssociationsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public POSTDescribeIpamResourceDiscoveryAssociationsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public POSTDescribeIpamResourceDiscoveryAssociationsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public POSTDescribeIpamResourceDiscoveryAssociationsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public POSTDescribeIpamResourceDiscoveryAssociationsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public POSTDescribeIpamResourceDiscoveryAssociationsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

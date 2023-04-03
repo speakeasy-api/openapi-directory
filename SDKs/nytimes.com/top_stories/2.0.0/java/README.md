@@ -19,8 +19,6 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetSectionFormatFormatEnum;
 import org.openapis.openapi.models.operations.GetSectionFormatSectionEnum;
-import org.openapis.openapi.models.operations.GetSectionFormatPathParams;
-import org.openapis.openapi.models.operations.GetSectionFormatQueryParams;
 import org.openapis.openapi.models.operations.GetSectionFormatRequest;
 import org.openapis.openapi.models.operations.GetSectionFormatResponse;
 
@@ -29,21 +27,15 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apikey = new SchemeApikey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apikey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetSectionFormatRequest req = new GetSectionFormatRequest() {{
-                pathParams = new GetSectionFormatPathParams() {{
-                    format = "jsonp";
-                    section = "theater";
-                }};
-                queryParams = new GetSectionFormatQueryParams() {{
-                    callback = "distinctio";
-                }};
-            }};            
+                callback = "corrupti";
+                format = "jsonp";
+                section = "tmagazine";
+            }}            
 
             GetSectionFormatResponse res = sdk.stories.getSectionFormat(req);
 
@@ -57,7 +49,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### stories

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkL7FirewallRulesRequest {
-    
-    public GetNetworkL7FirewallRulesPathParams pathParams;
-    public GetNetworkL7FirewallRulesRequest withPathParams(GetNetworkL7FirewallRulesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkL7FirewallRulesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

@@ -34,18 +34,19 @@ public class AccountAccess {
      * Delete Account Access Consents
      * Delete Account Access Consents by Consent ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteAccountAccessConsentsConsentIdResponse deleteAccountAccessConsentsConsentId(org.openapis.openapi.models.operations.DeleteAccountAccessConsentsConsentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteAccountAccessConsentsConsentIdResponse deleteAccountAccessConsentsConsentId(org.openapis.openapi.models.operations.DeleteAccountAccessConsentsConsentIdRequest request, org.openapis.openapi.models.operations.DeleteAccountAccessConsentsConsentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAccountAccessConsentsConsentIdPathParams.class, baseUrl, "/account-access-consents/{consentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAccountAccessConsentsConsentIdRequest.class, baseUrl, "/account-access-consents/{consentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -54,7 +55,7 @@ public class AccountAccess {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -90,18 +91,19 @@ public class AccountAccess {
      * Get Account Access Consents
      * Get Account Access Consents by Consent ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAccountAccessConsentsConsentIdResponse getAccountAccessConsentsConsentId(org.openapis.openapi.models.operations.GetAccountAccessConsentsConsentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAccountAccessConsentsConsentIdResponse getAccountAccessConsentsConsentId(org.openapis.openapi.models.operations.GetAccountAccessConsentsConsentIdRequest request, org.openapis.openapi.models.operations.GetAccountAccessConsentsConsentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountAccessConsentsConsentIdPathParams.class, baseUrl, "/account-access-consents/{consentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountAccessConsentsConsentIdRequest.class, baseUrl, "/account-access-consents/{consentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -110,7 +112,7 @@ public class AccountAccess {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -160,20 +162,21 @@ public class AccountAccess {
      * Create Account Access Consents
      * Create Account Access Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAccountAccessConsentsResponse postAccountAccessConsents(org.openapis.openapi.models.operations.PostAccountAccessConsentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAccountAccessConsentsResponse postAccountAccessConsents(org.openapis.openapi.models.operations.PostAccountAccessConsentsRequest request, org.openapis.openapi.models.operations.PostAccountAccessConsentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account-access-consents");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "obReadConsent1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -182,7 +185,7 @@ public class AccountAccess {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

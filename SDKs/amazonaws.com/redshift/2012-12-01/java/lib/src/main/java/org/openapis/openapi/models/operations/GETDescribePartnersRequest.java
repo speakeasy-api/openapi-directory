@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribePartnersRequest {
-    
-    public GETDescribePartnersQueryParams queryParams;
-    public GETDescribePartnersRequest withQueryParams(GETDescribePartnersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Amazon Web Services account ID that owns the cluster.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccountId")
+    public String accountId;
+    public GETDescribePartnersRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribePartnersActionEnum action;
+    public GETDescribePartnersRequest withAction(GETDescribePartnersActionEnum action) {
+        this.action = action;
+        return this;
+    }
     
-    public GETDescribePartnersHeaders headers;
-    public GETDescribePartnersRequest withHeaders(GETDescribePartnersHeaders headers) {
-        this.headers = headers;
+    /**
+     * The cluster identifier of the cluster whose partner integration is being described.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETDescribePartnersRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * The name of the database whose partner integration is being described. If database name is not specified, then all databases in the cluster are described.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DatabaseName")
+    public String databaseName;
+    public GETDescribePartnersRequest withDatabaseName(String databaseName) {
+        this.databaseName = databaseName;
+        return this;
+    }
+    
+    /**
+     * The name of the partner that is being described. If partner name is not specified, then all partner integrations are described.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PartnerName")
+    public String partnerName;
+    public GETDescribePartnersRequest withPartnerName(String partnerName) {
+        this.partnerName = partnerName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribePartnersVersionEnum version;
+    public GETDescribePartnersRequest withVersion(GETDescribePartnersVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribePartnersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribePartnersRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribePartnersRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribePartnersRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribePartnersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribePartnersRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribePartnersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

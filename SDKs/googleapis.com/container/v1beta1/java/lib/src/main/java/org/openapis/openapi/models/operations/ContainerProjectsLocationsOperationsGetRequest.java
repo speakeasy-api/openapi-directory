@@ -4,27 +4,156 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContainerProjectsLocationsOperationsGetRequest {
-    
-    public ContainerProjectsLocationsOperationsGetPathParams pathParams;
-    public ContainerProjectsLocationsOperationsGetRequest withPathParams(ContainerProjectsLocationsOperationsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ContainerProjectsLocationsOperationsGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public ContainerProjectsLocationsOperationsGetQueryParams queryParams;
-    public ContainerProjectsLocationsOperationsGetRequest withQueryParams(ContainerProjectsLocationsOperationsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ContainerProjectsLocationsOperationsGetRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ContainerProjectsLocationsOperationsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public ContainerProjectsLocationsOperationsGetSecurity security;
-    public ContainerProjectsLocationsOperationsGetRequest withSecurity(ContainerProjectsLocationsOperationsGetSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ContainerProjectsLocationsOperationsGetRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ContainerProjectsLocationsOperationsGetRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ContainerProjectsLocationsOperationsGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The name (project, location, operation id) of the operation to get. Specified in the format `projects/* /locations/* /operations/*`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public ContainerProjectsLocationsOperationsGetRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ContainerProjectsLocationsOperationsGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. Deprecated. The server-assigned `name` of the operation. This field has been deprecated and replaced by the name field.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=operationId")
+    public String operationId;
+    public ContainerProjectsLocationsOperationsGetRequest withOperationId(String operationId) {
+        this.operationId = operationId;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ContainerProjectsLocationsOperationsGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Required. Deprecated. The Google Developers Console [project ID or project number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field has been deprecated and replaced by the name field.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projectId")
+    public String projectId;
+    public ContainerProjectsLocationsOperationsGetRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ContainerProjectsLocationsOperationsGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ContainerProjectsLocationsOperationsGetRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ContainerProjectsLocationsOperationsGetRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Required. Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the name field.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zone")
+    public String zone;
+    public ContainerProjectsLocationsOperationsGetRequest withZone(String zone) {
+        this.zone = zone;
         return this;
     }
     

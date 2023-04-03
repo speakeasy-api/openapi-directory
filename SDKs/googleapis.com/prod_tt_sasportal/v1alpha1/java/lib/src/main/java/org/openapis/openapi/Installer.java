@@ -35,27 +35,28 @@ public class Installer {
     /**
      * Generates a secret to be used with the ValidateInstaller.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProdTtSasportalInstallerGenerateSecretResponse prodTtSasportalInstallerGenerateSecret(org.openapis.openapi.models.operations.ProdTtSasportalInstallerGenerateSecretRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProdTtSasportalInstallerGenerateSecretResponse prodTtSasportalInstallerGenerateSecret(org.openapis.openapi.models.operations.ProdTtSasportalInstallerGenerateSecretRequest request, org.openapis.openapi.models.operations.ProdTtSasportalInstallerGenerateSecretSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1alpha1/installer:generateSecret");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalInstallerGenerateSecretQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalInstallerGenerateSecretRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Installer {
     /**
      * Validates the identity of a Certified Professional Installer (CPI).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProdTtSasportalInstallerValidateResponse prodTtSasportalInstallerValidate(org.openapis.openapi.models.operations.ProdTtSasportalInstallerValidateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProdTtSasportalInstallerValidateResponse prodTtSasportalInstallerValidate(org.openapis.openapi.models.operations.ProdTtSasportalInstallerValidateRequest request, org.openapis.openapi.models.operations.ProdTtSasportalInstallerValidateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1alpha1/installer:validate");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sasPortalValidateInstallerRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalInstallerValidateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalInstallerValidateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

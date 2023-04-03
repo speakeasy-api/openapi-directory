@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReportCloudRecordingRequest {
-    
-    public ReportCloudRecordingQueryParams queryParams;
-    public ReportCloudRecordingRequest withQueryParams(ReportCloudRecordingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Start date in 'yyyy-mm-dd' format. The date range defined by the "from" and "to" parameters should only be one month as the report includes only one month worth of data at once.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public LocalDate from;
+    public ReportCloudRecordingRequest withFrom(LocalDate from) {
+        this.from = from;
         return this;
     }
     
-    
-    public ReportCloudRecordingSecurity security;
-    public ReportCloudRecordingRequest withSecurity(ReportCloudRecordingSecurity security) {
-        this.security = security;
+    /**
+     * End date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public LocalDate to;
+    public ReportCloudRecordingRequest withTo(LocalDate to) {
+        this.to = to;
         return this;
     }
     

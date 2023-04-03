@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchWorkspaceRequest {
-    
-    public FetchWorkspacePathParams pathParams;
-    public FetchWorkspaceRequest withPathParams(FetchWorkspacePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchWorkspaceSecurity security;
-    public FetchWorkspaceRequest withSecurity(FetchWorkspaceSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchWorkspaceRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchWorkspaceRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

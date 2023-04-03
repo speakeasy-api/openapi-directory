@@ -4,27 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveCatalogObjectRequest {
-    
-    public RetrieveCatalogObjectPathParams pathParams;
-    public RetrieveCatalogObjectRequest withPathParams(RetrieveCatalogObjectPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Requests objects as of a specific version of the catalog. This allows you to retrieve historical
+     * versions of objects. The value to retrieve a specific version of an object can be found
+     * in the version field of [CatalogObject](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogObject)s.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=catalog_version")
+    public Long catalogVersion;
+    public RetrieveCatalogObjectRequest withCatalogVersion(Long catalogVersion) {
+        this.catalogVersion = catalogVersion;
         return this;
     }
     
-    
-    public RetrieveCatalogObjectQueryParams queryParams;
-    public RetrieveCatalogObjectRequest withQueryParams(RetrieveCatalogObjectQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If `true`, the response will include additional objects that are related to the
+     * requested object, as follows:
+     * 
+     * If the `object` field of the response contains a `CatalogItem`, its associated
+     * `CatalogCategory`, `CatalogTax`, `CatalogImage` and `CatalogModifierList` objects will
+     * be returned in the `related_objects` field of the response. If the `object` field of
+     * the response contains a `CatalogItemVariation`, its parent `CatalogItem` will be returned
+     * in the `related_objects` field of the response.
+     * 
+     * Default value: `false`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_related_objects")
+    public Boolean includeRelatedObjects;
+    public RetrieveCatalogObjectRequest withIncludeRelatedObjects(Boolean includeRelatedObjects) {
+        this.includeRelatedObjects = includeRelatedObjects;
         return this;
     }
     
-    
-    public RetrieveCatalogObjectSecurity security;
-    public RetrieveCatalogObjectRequest withSecurity(RetrieveCatalogObjectSecurity security) {
-        this.security = security;
+    /**
+     * The object ID of any type of catalog objects to be retrieved.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object_id")
+    public String objectId;
+    public RetrieveCatalogObjectRequest withObjectId(String objectId) {
+        this.objectId = objectId;
         return this;
     }
     

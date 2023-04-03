@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AvatarsGetImageRequest {
-    
-    public AvatarsGetImageQueryParams queryParams;
-    public AvatarsGetImageRequest withQueryParams(AvatarsGetImageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Resize preview image height, Pass an integer between 0 to 2000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
+    public Integer height;
+    public AvatarsGetImageRequest withHeight(Integer height) {
+        this.height = height;
         return this;
     }
     
+    /**
+     * Image URL which you want to crop.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public String url;
+    public AvatarsGetImageRequest withUrl(String url) {
+        this.url = url;
+        return this;
+    }
     
-    public AvatarsGetImageSecurity security;
-    public AvatarsGetImageRequest withSecurity(AvatarsGetImageSecurity security) {
-        this.security = security;
+    /**
+     * Resize preview image width, Pass an integer between 0 to 2000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
+    public Integer width;
+    public AvatarsGetImageRequest withWidth(Integer width) {
+        this.width = width;
         return this;
     }
     

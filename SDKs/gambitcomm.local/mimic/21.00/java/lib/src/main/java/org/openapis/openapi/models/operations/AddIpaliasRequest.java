@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddIpaliasRequest {
+    /**
+     * IP address , IPv4 or IPv6
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IP")
+    public String ip;
+    public AddIpaliasRequest withIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
     
-    public AddIpaliasPathParams pathParams;
-    public AddIpaliasRequest withPathParams(AddIpaliasPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to add the IP alias
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public AddIpaliasRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
+    
+    /**
+     * Interface. Empty for default
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=interface")
+    public String interface_;
+    public AddIpaliasRequest withInterface(String interface_) {
+        this.interface_ = interface_;
+        return this;
+    }
+    
+    /**
+     * Netmask, empty for default
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mask")
+    public String mask;
+    public AddIpaliasRequest withMask(String mask) {
+        this.mask = mask;
+        return this;
+    }
+    
+    /**
+     * SNMP port , 0 or empty for default
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
+    public Integer port;
+    public AddIpaliasRequest withPort(Integer port) {
+        this.port = port;
         return this;
     }
     

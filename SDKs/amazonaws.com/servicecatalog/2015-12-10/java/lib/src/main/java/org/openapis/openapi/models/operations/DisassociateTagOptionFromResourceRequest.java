@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisassociateTagOptionFromResourceRequest {
-    
-    public DisassociateTagOptionFromResourceHeaders headers;
-    public DisassociateTagOptionFromResourceRequest withHeaders(DisassociateTagOptionFromResourceHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.DisassociateTagOptionFromResourceInput disassociateTagOptionFromResourceInput;
+    public DisassociateTagOptionFromResourceRequest withDisassociateTagOptionFromResourceInput(org.openapis.openapi.models.shared.DisassociateTagOptionFromResourceInput disassociateTagOptionFromResourceInput) {
+        this.disassociateTagOptionFromResourceInput = disassociateTagOptionFromResourceInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DisassociateTagOptionFromResourceInput request;
-    public DisassociateTagOptionFromResourceRequest withRequest(org.openapis.openapi.models.shared.DisassociateTagOptionFromResourceInput request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DisassociateTagOptionFromResourceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DisassociateTagOptionFromResourceRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DisassociateTagOptionFromResourceRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DisassociateTagOptionFromResourceRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DisassociateTagOptionFromResourceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DisassociateTagOptionFromResourceRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DisassociateTagOptionFromResourceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public DisassociateTagOptionFromResourceXAmzTargetEnum xAmzTarget;
+    public DisassociateTagOptionFromResourceRequest withXAmzTarget(DisassociateTagOptionFromResourceXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolIpmiGetStatisticsRequest {
-    
-    public ProtocolIpmiGetStatisticsPathParams pathParams;
-    public ProtocolIpmiGetStatisticsRequest withPathParams(ProtocolIpmiGetStatisticsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show IPMI statistics
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolIpmiGetStatisticsRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

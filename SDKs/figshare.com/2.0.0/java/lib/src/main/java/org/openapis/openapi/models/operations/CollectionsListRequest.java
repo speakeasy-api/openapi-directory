@@ -4,20 +4,143 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectionsListRequest {
-    
-    public CollectionsListQueryParams queryParams;
-    public CollectionsListRequest withQueryParams(CollectionsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Unique hash used for bypassing the item retrieval limit of 9,000 entities. When using this parameter, please note that the offset parameter will not be available, but the limit parameter will still work as expected.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Cursor")
+    public String xCursor;
+    public CollectionsListRequest withXCursor(String xCursor) {
+        this.xCursor = xCursor;
         return this;
     }
     
+    /**
+     * only return collections with this doi
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doi")
+    public String doi;
+    public CollectionsListRequest withDoi(String doi) {
+        this.doi = doi;
+        return this;
+    }
     
-    public CollectionsListHeaders headers;
-    public CollectionsListRequest withHeaders(CollectionsListHeaders headers) {
-        this.headers = headers;
+    /**
+     * only return collections from this group
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public Long group;
+    public CollectionsListRequest withGroup(Long group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * only return collections with this handle
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=handle")
+    public String handle;
+    public CollectionsListRequest withHandle(String handle) {
+        this.handle = handle;
+        return this;
+    }
+    
+    /**
+     * only return collections from this institution
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=institution")
+    public Long institution;
+    public CollectionsListRequest withInstitution(Long institution) {
+        this.institution = institution;
+        return this;
+    }
+    
+    /**
+     * Number of results included on a page. Used for pagination with query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public CollectionsListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Filter by collection modified date. Will only return collections published after the date. date(ISO 8601) YYYY-MM-DD
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modified_since")
+    public String modifiedSince;
+    public CollectionsListRequest withModifiedSince(String modifiedSince) {
+        this.modifiedSince = modifiedSince;
+        return this;
+    }
+    
+    /**
+     * Where to start the listing(the offset of the first result). Used for pagination with limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public CollectionsListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The field by which to order. Default varies by endpoint/resource.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public CollectionsListOrderEnum order;
+    public CollectionsListRequest withOrder(CollectionsListOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_direction")
+    public CollectionsListOrderDirectionEnum orderDirection;
+    public CollectionsListRequest withOrderDirection(CollectionsListOrderDirectionEnum orderDirection) {
+        this.orderDirection = orderDirection;
+        return this;
+    }
+    
+    /**
+     * Page number. Used for pagination with page_size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public CollectionsListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results included on a page. Used for pagination with page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public CollectionsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Filter by collection publishing date. Will only return collections published after the date. date(ISO 8601) YYYY-MM-DD
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=published_since")
+    public String publishedSince;
+    public CollectionsListRequest withPublishedSince(String publishedSince) {
+        this.publishedSince = publishedSince;
+        return this;
+    }
+    
+    /**
+     * only return collections with this resource_doi
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resource_doi")
+    public String resourceDoi;
+    public CollectionsListRequest withResourceDoi(String resourceDoi) {
+        this.resourceDoi = resourceDoi;
         return this;
     }
     

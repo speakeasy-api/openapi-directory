@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsUpdateRequest {
-    
-    public DistributionGroupsUpdatePathParams pathParams;
-    public DistributionGroupsUpdateRequest withPathParams(DistributionGroupsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The attributes to update for the distribution group
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DistributionGroupsUpdateRequestBody request;
-    public DistributionGroupsUpdateRequest withRequest(DistributionGroupsUpdateRequestBody request) {
-        this.request = request;
+    public DistributionGroupsUpdateRequestBody requestBody;
+    public DistributionGroupsUpdateRequest withRequestBody(DistributionGroupsUpdateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public DistributionGroupsUpdateRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public DistributionGroupsUpdateSecurity security;
-    public DistributionGroupsUpdateRequest withSecurity(DistributionGroupsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * The name of the distribution group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
+    public String distributionGroupName;
+    public DistributionGroupsUpdateRequest withDistributionGroupName(String distributionGroupName) {
+        this.distributionGroupName = distributionGroupName;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public DistributionGroupsUpdateRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

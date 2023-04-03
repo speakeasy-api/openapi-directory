@@ -39,7 +39,7 @@ public class Workspace {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateWorkspaceResponse createWorkspace(org.openapis.openapi.models.operations.CreateWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateWorkspaceResponse createWorkspace(org.openapis.openapi.models.shared.WorkspaceCreate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/workspaces/create");
         
@@ -90,7 +90,7 @@ public class Workspace {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteWorkspaceResponse deleteWorkspace(org.openapis.openapi.models.operations.DeleteWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteWorkspaceResponse deleteWorkspace(org.openapis.openapi.models.shared.WorkspaceIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/workspaces/delete");
         
@@ -143,7 +143,7 @@ public class Workspace {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspaceResponse getWorkspace(org.openapis.openapi.models.operations.GetWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspaceResponse getWorkspace(org.openapis.openapi.models.shared.WorkspaceIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/workspaces/get");
         
@@ -202,7 +202,7 @@ public class Workspace {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspaceByConnectionIdResponse getWorkspaceByConnectionId(org.openapis.openapi.models.operations.GetWorkspaceByConnectionIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspaceByConnectionIdResponse getWorkspaceByConnectionId(org.openapis.openapi.models.shared.ConnectionIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/workspaces/get_by_connection_id");
         
@@ -261,7 +261,7 @@ public class Workspace {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspaceBySlugResponse getWorkspaceBySlug(org.openapis.openapi.models.operations.GetWorkspaceBySlugRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspaceBySlugResponse getWorkspaceBySlug(org.openapis.openapi.models.shared.SlugRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/workspaces/get_by_slug");
         
@@ -357,7 +357,7 @@ public class Workspace {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateWorkspaceResponse updateWorkspace(org.openapis.openapi.models.operations.UpdateWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateWorkspaceResponse updateWorkspace(org.openapis.openapi.models.shared.WorkspaceUpdate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/workspaces/update");
         
@@ -416,7 +416,7 @@ public class Workspace {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateWorkspaceFeedbackResponse updateWorkspaceFeedback(org.openapis.openapi.models.operations.UpdateWorkspaceFeedbackRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateWorkspaceFeedbackResponse updateWorkspaceFeedback(org.openapis.openapi.models.shared.WorkspaceGiveFeedback request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/workspaces/tag_feedback_status_as_done");
         
@@ -461,7 +461,7 @@ public class Workspace {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateWorkspaceNameResponse updateWorkspaceName(org.openapis.openapi.models.operations.UpdateWorkspaceNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateWorkspaceNameResponse updateWorkspaceName(org.openapis.openapi.models.shared.WorkspaceUpdateName request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/workspaces/update_name");
         

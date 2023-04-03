@@ -39,19 +39,20 @@ public class SpotInsertions {
     /**
      * Deletes the spot insertion with the given ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteApiV2SpotinsertionsIdResponse deleteApiV2SpotinsertionsId(org.openapis.openapi.models.operations.DeleteApiV2SpotinsertionsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteApiV2SpotinsertionsIdResponse deleteApiV2SpotinsertionsId(org.openapis.openapi.models.operations.DeleteApiV2SpotinsertionsIdRequest request, org.openapis.openapi.models.operations.DeleteApiV2SpotinsertionsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiV2SpotinsertionsIdPathParams.class, baseUrl, "/api/v2/spotinsertions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiV2SpotinsertionsIdRequest.class, baseUrl, "/api/v2/spotinsertions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,10 +81,11 @@ public class SpotInsertions {
     /**
      * Returns the spot insertions matching the query parameters.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV2SpotinsertionsResponse getApiV2Spotinsertions(org.openapis.openapi.models.operations.GetApiV2SpotinsertionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV2SpotinsertionsResponse getApiV2Spotinsertions(org.openapis.openapi.models.operations.GetApiV2SpotinsertionsRequest request, org.openapis.openapi.models.operations.GetApiV2SpotinsertionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/spotinsertions");
         
@@ -91,14 +93,14 @@ public class SpotInsertions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV2SpotinsertionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV2SpotinsertionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -133,19 +135,20 @@ public class SpotInsertions {
     /**
      * Returns the spot insertion matching the given ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV2SpotinsertionsIdResponse getApiV2SpotinsertionsId(org.openapis.openapi.models.operations.GetApiV2SpotinsertionsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV2SpotinsertionsIdResponse getApiV2SpotinsertionsId(org.openapis.openapi.models.operations.GetApiV2SpotinsertionsIdRequest request, org.openapis.openapi.models.operations.GetApiV2SpotinsertionsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2SpotinsertionsIdPathParams.class, baseUrl, "/api/v2/spotinsertions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2SpotinsertionsIdRequest.class, baseUrl, "/api/v2/spotinsertions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -180,10 +183,11 @@ public class SpotInsertions {
     /**
      * Creates a new spot insertion.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV2SpotinsertionsResponse postApiV2Spotinsertions(org.openapis.openapi.models.operations.PostApiV2SpotinsertionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiV2SpotinsertionsResponse postApiV2Spotinsertions(org.openapis.openapi.models.shared.SpotInsertionInput request, org.openapis.openapi.models.operations.PostApiV2SpotinsertionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/spotinsertions");
         
@@ -194,7 +198,7 @@ public class SpotInsertions {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

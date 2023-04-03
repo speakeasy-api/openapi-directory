@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostWebhooksIdWebhookRequest {
-    
-    public PostWebhooksIdWebhookPathParams pathParams;
-    public PostWebhooksIdWebhookRequest withPathParams(PostWebhooksIdWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostWebhooksIdWebhookQueryParams queryParams;
-    public PostWebhooksIdWebhookRequest withQueryParams(PostWebhooksIdWebhookQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostWebhooksIdWebhookRequestBody request;
-    public PostWebhooksIdWebhookRequest withRequest(PostWebhooksIdWebhookRequestBody request) {
-        this.request = request;
+    public PostWebhooksIdWebhookRequestBody requestBody;
+    public PostWebhooksIdWebhookRequest withRequestBody(PostWebhooksIdWebhookRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PostWebhooksIdWebhookRequest withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_webhook")
+    public Long idWebhook;
+    public PostWebhooksIdWebhookRequest withIdWebhook(Long idWebhook) {
+        this.idWebhook = idWebhook;
         return this;
     }
     

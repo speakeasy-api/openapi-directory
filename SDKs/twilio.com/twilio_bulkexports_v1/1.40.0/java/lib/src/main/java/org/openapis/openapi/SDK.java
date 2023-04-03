@@ -179,22 +179,26 @@ public class SDK {
 		
 	}
 
-    public org.openapis.openapi.models.operations.CreateExportCustomJobResponse createExportCustomJob(org.openapis.openapi.models.operations.CreateExportCustomJobRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateExportCustomJobResponse createExportCustomJob(org.openapis.openapi.models.operations.CreateExportCustomJobRequest request, org.openapis.openapi.models.operations.CreateExportCustomJobSecurity security) throws Exception {
+        return this.createExportCustomJob(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreateExportCustomJobResponse createExportCustomJob(org.openapis.openapi.models.operations.CreateExportCustomJobRequest request, org.openapis.openapi.models.operations.CreateExportCustomJobSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_EXPORT_CUSTOM_JOB_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateExportCustomJobPathParams.class, baseUrl, "/v1/Exports/{ResourceType}/Jobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateExportCustomJobRequest.class, baseUrl, "/v1/Exports/{ResourceType}/Jobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,20 +222,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DeleteJobResponse deleteJob(org.openapis.openapi.models.operations.DeleteJobRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteJobResponse deleteJob(org.openapis.openapi.models.operations.DeleteJobRequest request, org.openapis.openapi.models.operations.DeleteJobSecurity security) throws Exception {
+        return this.deleteJob(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.DeleteJobResponse deleteJob(org.openapis.openapi.models.operations.DeleteJobRequest request, org.openapis.openapi.models.operations.DeleteJobSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_JOB_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteJobPathParams.class, baseUrl, "/v1/Exports/Jobs/{JobSid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteJobRequest.class, baseUrl, "/v1/Exports/Jobs/{JobSid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -252,23 +260,36 @@ public class SDK {
     /**
      * Fetch a specific Day.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchDayResponse fetchDay(org.openapis.openapi.models.operations.FetchDayRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchDayResponse fetchDay(org.openapis.openapi.models.operations.FetchDayRequest request, org.openapis.openapi.models.operations.FetchDaySecurity security) throws Exception {
+        return this.fetchDay(request, security, null);
+    }
+
+    /**
+     * Fetch a specific Day.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchDayResponse fetchDay(org.openapis.openapi.models.operations.FetchDayRequest request, org.openapis.openapi.models.operations.FetchDaySecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_DAY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchDayPathParams.class, baseUrl, "/v1/Exports/{ResourceType}/Days/{Day}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchDayRequest.class, baseUrl, "/v1/Exports/{ResourceType}/Days/{Day}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -295,23 +316,36 @@ public class SDK {
     /**
      * Fetch a specific Export.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchExportResponse fetchExport(org.openapis.openapi.models.operations.FetchExportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchExportResponse fetchExport(org.openapis.openapi.models.operations.FetchExportRequest request, org.openapis.openapi.models.operations.FetchExportSecurity security) throws Exception {
+        return this.fetchExport(request, security, null);
+    }
+
+    /**
+     * Fetch a specific Export.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchExportResponse fetchExport(org.openapis.openapi.models.operations.FetchExportRequest request, org.openapis.openapi.models.operations.FetchExportSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_EXPORT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchExportPathParams.class, baseUrl, "/v1/Exports/{ResourceType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchExportRequest.class, baseUrl, "/v1/Exports/{ResourceType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -338,23 +372,36 @@ public class SDK {
     /**
      * Fetch a specific Export Configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchExportConfigurationResponse fetchExportConfiguration(org.openapis.openapi.models.operations.FetchExportConfigurationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchExportConfigurationResponse fetchExportConfiguration(org.openapis.openapi.models.operations.FetchExportConfigurationRequest request, org.openapis.openapi.models.operations.FetchExportConfigurationSecurity security) throws Exception {
+        return this.fetchExportConfiguration(request, security, null);
+    }
+
+    /**
+     * Fetch a specific Export Configuration.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchExportConfigurationResponse fetchExportConfiguration(org.openapis.openapi.models.operations.FetchExportConfigurationRequest request, org.openapis.openapi.models.operations.FetchExportConfigurationSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_EXPORT_CONFIGURATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchExportConfigurationPathParams.class, baseUrl, "/v1/Exports/{ResourceType}/Configuration", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchExportConfigurationRequest.class, baseUrl, "/v1/Exports/{ResourceType}/Configuration", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -378,20 +425,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchJobResponse fetchJob(org.openapis.openapi.models.operations.FetchJobRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchJobResponse fetchJob(org.openapis.openapi.models.operations.FetchJobRequest request, org.openapis.openapi.models.operations.FetchJobSecurity security) throws Exception {
+        return this.fetchJob(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchJobResponse fetchJob(org.openapis.openapi.models.operations.FetchJobRequest request, org.openapis.openapi.models.operations.FetchJobSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_JOB_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchJobPathParams.class, baseUrl, "/v1/Exports/Jobs/{JobSid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchJobRequest.class, baseUrl, "/v1/Exports/Jobs/{JobSid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -418,29 +469,42 @@ public class SDK {
     /**
      * Retrieve a list of all Days for a resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListDayResponse listDay(org.openapis.openapi.models.operations.ListDayRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListDayResponse listDay(org.openapis.openapi.models.operations.ListDayRequest request, org.openapis.openapi.models.operations.ListDaySecurity security) throws Exception {
+        return this.listDay(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all Days for a resource.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListDayResponse listDay(org.openapis.openapi.models.operations.ListDayRequest request, org.openapis.openapi.models.operations.ListDaySecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_DAY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListDayPathParams.class, baseUrl, "/v1/Exports/{ResourceType}/Days", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListDayRequest.class, baseUrl, "/v1/Exports/{ResourceType}/Days", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDayQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDayRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -464,26 +528,30 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListExportCustomJobResponse listExportCustomJob(org.openapis.openapi.models.operations.ListExportCustomJobRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListExportCustomJobResponse listExportCustomJob(org.openapis.openapi.models.operations.ListExportCustomJobRequest request, org.openapis.openapi.models.operations.ListExportCustomJobSecurity security) throws Exception {
+        return this.listExportCustomJob(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListExportCustomJobResponse listExportCustomJob(org.openapis.openapi.models.operations.ListExportCustomJobRequest request, org.openapis.openapi.models.operations.ListExportCustomJobSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_EXPORT_CUSTOM_JOB_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListExportCustomJobPathParams.class, baseUrl, "/v1/Exports/{ResourceType}/Jobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListExportCustomJobRequest.class, baseUrl, "/v1/Exports/{ResourceType}/Jobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListExportCustomJobQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListExportCustomJobRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -510,25 +578,38 @@ public class SDK {
     /**
      * Update a specific Export Configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateExportConfigurationResponse updateExportConfiguration(org.openapis.openapi.models.operations.UpdateExportConfigurationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateExportConfigurationResponse updateExportConfiguration(org.openapis.openapi.models.operations.UpdateExportConfigurationRequest request, org.openapis.openapi.models.operations.UpdateExportConfigurationSecurity security) throws Exception {
+        return this.updateExportConfiguration(request, security, null);
+    }
+
+    /**
+     * Update a specific Export Configuration.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateExportConfigurationResponse updateExportConfiguration(org.openapis.openapi.models.operations.UpdateExportConfigurationRequest request, org.openapis.openapi.models.operations.UpdateExportConfigurationSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_EXPORT_CONFIGURATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateExportConfigurationPathParams.class, baseUrl, "/v1/Exports/{ResourceType}/Configuration", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateExportConfigurationRequest.class, baseUrl, "/v1/Exports/{ResourceType}/Configuration", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

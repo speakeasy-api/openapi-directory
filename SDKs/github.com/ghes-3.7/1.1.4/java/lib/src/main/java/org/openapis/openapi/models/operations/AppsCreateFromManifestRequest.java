@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsCreateFromManifestRequest {
-    
-    public AppsCreateFromManifestPathParams pathParams;
-    public AppsCreateFromManifestRequest withPathParams(AppsCreateFromManifestPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=code")
+    public String code;
+    public AppsCreateFromManifestRequest withCode(String code) {
+        this.code = code;
         return this;
     }
     

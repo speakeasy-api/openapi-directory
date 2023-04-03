@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveCashDrawerShiftRequest {
-    
-    public RetrieveCashDrawerShiftPathParams pathParams;
-    public RetrieveCashDrawerShiftRequest withPathParams(RetrieveCashDrawerShiftPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the location to retrieve cash drawer shifts from.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
+    public String locationId;
+    public RetrieveCashDrawerShiftRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     
-    
-    public RetrieveCashDrawerShiftQueryParams queryParams;
-    public RetrieveCashDrawerShiftRequest withQueryParams(RetrieveCashDrawerShiftQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public RetrieveCashDrawerShiftSecurity security;
-    public RetrieveCashDrawerShiftRequest withSecurity(RetrieveCashDrawerShiftSecurity security) {
-        this.security = security;
+    /**
+     * The shift ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shift_id")
+    public String shiftId;
+    public RetrieveCashDrawerShiftRequest withShiftId(String shiftId) {
+        this.shiftId = shiftId;
         return this;
     }
     

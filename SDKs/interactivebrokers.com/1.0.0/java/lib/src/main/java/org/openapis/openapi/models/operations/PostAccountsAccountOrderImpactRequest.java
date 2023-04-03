@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAccountsAccountOrderImpactRequest {
-    
-    public PostAccountsAccountOrderImpactPathParams pathParams;
-    public PostAccountsAccountOrderImpactRequest withPathParams(PostAccountsAccountOrderImpactPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Order Parameters
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostAccountsAccountOrderImpactRequestBody request;
-    public PostAccountsAccountOrderImpactRequest withRequest(PostAccountsAccountOrderImpactRequestBody request) {
-        this.request = request;
+    public PostAccountsAccountOrderImpactRequestBody requestBody;
+    public PostAccountsAccountOrderImpactRequest withRequestBody(PostAccountsAccountOrderImpactRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Account Number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account")
+    public String account;
+    public PostAccountsAccountOrderImpactRequest withAccount(String account) {
+        this.account = account;
         return this;
     }
     

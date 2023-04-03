@@ -47,7 +47,7 @@ public class PartyCoordinatedExpenditures {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSchedulesScheduleFQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSchedulesScheduleFRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -86,13 +86,13 @@ public class PartyCoordinatedExpenditures {
      */
     public org.openapis.openapi.models.operations.GetSchedulesScheduleFSubIdResponse getSchedulesScheduleFSubId(org.openapis.openapi.models.operations.GetSchedulesScheduleFSubIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSchedulesScheduleFSubIdPathParams.class, baseUrl, "/schedules/schedule_f/{sub_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSchedulesScheduleFSubIdRequest.class, baseUrl, "/schedules/schedule_f/{sub_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSchedulesScheduleFSubIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSchedulesScheduleFSubIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

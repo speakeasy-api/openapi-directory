@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPickupPpointsByLocationRequest {
-    
-    public ListPickupPpointsByLocationQueryParams queryParams;
-    public ListPickupPpointsByLocationRequest withQueryParams(ListPickupPpointsByLocationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ListPickupPpointsByLocationRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ListPickupPpointsByLocationRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public ListPickupPpointsByLocationHeaders headers;
-    public ListPickupPpointsByLocationRequest withHeaders(ListPickupPpointsByLocationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Three letter country code refering to the `postalCode` field. Pass the country code only if you are searching pickup points by postal code.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=countryCode")
+    public String countryCode;
+    public ListPickupPpointsByLocationRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+        return this;
+    }
+    
+    /**
+     * Geocoordinates (first longitude, then latitude) around which to search for pickup points. If you use this type of search, do not pass postal and country codes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geoCoordinates")
+    public Double[] geoCoordinates;
+    public ListPickupPpointsByLocationRequest withGeoCoordinates(Double[] geoCoordinates) {
+        this.geoCoordinates = geoCoordinates;
+        return this;
+    }
+    
+    /**
+     * Postal code around which to search for pickup points. If you use this type of search, make sure to pass a `countryCode` and do not pass `geoCoordinates`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=postalCode")
+    public String postalCode;
+    public ListPickupPpointsByLocationRequest withPostalCode(String postalCode) {
+        this.postalCode = postalCode;
         return this;
     }
     

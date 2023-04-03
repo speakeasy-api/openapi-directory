@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TopONDRequest {
-    
-    public TopONDQueryParams queryParams;
-    public TopONDRequest withQueryParams(TopONDQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Mandatory http header:  application/xml or application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public TopONDRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public TopONDHeaders headers;
-    public TopONDRequest withHeaders(TopONDHeaders headers) {
-        this.headers = headers;
+    /**
+     * Carrier for which the OND will be retrieved (e.g. 'LH')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=catalogues")
+    public String catalogues;
+    public TopONDRequest withCatalogues(String catalogues) {
+        this.catalogues = catalogues;
         return this;
     }
     
-    
-    public TopONDSecurity security;
-    public TopONDRequest withSecurity(TopONDSecurity security) {
-        this.security = security;
+    /**
+     * Enter the origin country code (e.g. 'DE'). Leave empty to search Top OND across all countries
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=origin")
+    public String origin;
+    public TopONDRequest withOrigin(String origin) {
+        this.origin = origin;
         return this;
     }
     

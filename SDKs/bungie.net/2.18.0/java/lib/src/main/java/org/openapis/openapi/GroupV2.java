@@ -38,7 +38,7 @@ public class GroupV2 {
      */
     public org.openapis.openapi.models.operations.GroupV2AbdicateFoundershipResponse groupV2AbdicateFoundership(org.openapis.openapi.models.operations.GroupV2AbdicateFoundershipRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2AbdicateFoundershipPathParams.class, baseUrl, "/GroupV2/{groupId}/Admin/AbdicateFoundership/{membershipType}/{founderIdNew}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2AbdicateFoundershipRequest.class, baseUrl, "/GroupV2/{groupId}/Admin/AbdicateFoundership/{membershipType}/{founderIdNew}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -70,19 +70,20 @@ public class GroupV2 {
     /**
      * Add a new optional conversation/chat channel. Requires admin permissions to the group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2AddOptionalConversationResponse groupV2AddOptionalConversation(org.openapis.openapi.models.operations.GroupV2AddOptionalConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2AddOptionalConversationResponse groupV2AddOptionalConversation(org.openapis.openapi.models.operations.GroupV2AddOptionalConversationRequest request, org.openapis.openapi.models.operations.GroupV2AddOptionalConversationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2AddOptionalConversationPathParams.class, baseUrl, "/GroupV2/{groupId}/OptionalConversations/Add/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2AddOptionalConversationRequest.class, baseUrl, "/GroupV2/{groupId}/OptionalConversations/Add/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -108,19 +109,20 @@ public class GroupV2 {
     /**
      * Approve all of the pending users for the given group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2ApproveAllPendingResponse groupV2ApproveAllPending(org.openapis.openapi.models.operations.GroupV2ApproveAllPendingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2ApproveAllPendingResponse groupV2ApproveAllPending(org.openapis.openapi.models.operations.GroupV2ApproveAllPendingRequest request, org.openapis.openapi.models.operations.GroupV2ApproveAllPendingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2ApproveAllPendingPathParams.class, baseUrl, "/GroupV2/{groupId}/Members/ApproveAll/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2ApproveAllPendingRequest.class, baseUrl, "/GroupV2/{groupId}/Members/ApproveAll/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -146,19 +148,20 @@ public class GroupV2 {
     /**
      * Approve the given membershipId to join the group/clan as long as they have applied.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2ApprovePendingResponse groupV2ApprovePending(org.openapis.openapi.models.operations.GroupV2ApprovePendingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2ApprovePendingResponse groupV2ApprovePending(org.openapis.openapi.models.operations.GroupV2ApprovePendingRequest request, org.openapis.openapi.models.operations.GroupV2ApprovePendingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2ApprovePendingPathParams.class, baseUrl, "/GroupV2/{groupId}/Members/Approve/{membershipType}/{membershipId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2ApprovePendingRequest.class, baseUrl, "/GroupV2/{groupId}/Members/Approve/{membershipType}/{membershipId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -184,19 +187,20 @@ public class GroupV2 {
     /**
      * Approve all of the pending users for the given group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2ApprovePendingForListResponse groupV2ApprovePendingForList(org.openapis.openapi.models.operations.GroupV2ApprovePendingForListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2ApprovePendingForListResponse groupV2ApprovePendingForList(org.openapis.openapi.models.operations.GroupV2ApprovePendingForListRequest request, org.openapis.openapi.models.operations.GroupV2ApprovePendingForListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2ApprovePendingForListPathParams.class, baseUrl, "/GroupV2/{groupId}/Members/ApproveList/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2ApprovePendingForListRequest.class, baseUrl, "/GroupV2/{groupId}/Members/ApproveList/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -222,19 +226,20 @@ public class GroupV2 {
     /**
      * Bans the requested member from the requested group for the specified period of time.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2BanMemberResponse groupV2BanMember(org.openapis.openapi.models.operations.GroupV2BanMemberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2BanMemberResponse groupV2BanMember(org.openapis.openapi.models.operations.GroupV2BanMemberRequest request, org.openapis.openapi.models.operations.GroupV2BanMemberSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2BanMemberPathParams.class, baseUrl, "/GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Ban/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2BanMemberRequest.class, baseUrl, "/GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Ban/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -260,19 +265,20 @@ public class GroupV2 {
     /**
      * Deny all of the pending users for the given group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2DenyAllPendingResponse groupV2DenyAllPending(org.openapis.openapi.models.operations.GroupV2DenyAllPendingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2DenyAllPendingResponse groupV2DenyAllPending(org.openapis.openapi.models.operations.GroupV2DenyAllPendingRequest request, org.openapis.openapi.models.operations.GroupV2DenyAllPendingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2DenyAllPendingPathParams.class, baseUrl, "/GroupV2/{groupId}/Members/DenyAll/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2DenyAllPendingRequest.class, baseUrl, "/GroupV2/{groupId}/Members/DenyAll/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -298,19 +304,20 @@ public class GroupV2 {
     /**
      * Deny all of the pending users for the given group that match the passed-in .
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2DenyPendingForListResponse groupV2DenyPendingForList(org.openapis.openapi.models.operations.GroupV2DenyPendingForListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2DenyPendingForListResponse groupV2DenyPendingForList(org.openapis.openapi.models.operations.GroupV2DenyPendingForListRequest request, org.openapis.openapi.models.operations.GroupV2DenyPendingForListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2DenyPendingForListPathParams.class, baseUrl, "/GroupV2/{groupId}/Members/DenyList/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2DenyPendingForListRequest.class, baseUrl, "/GroupV2/{groupId}/Members/DenyList/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -336,19 +343,20 @@ public class GroupV2 {
     /**
      * Edit an existing group's clan banner. You must have suitable permissions in the group to perform this operation. All fields are required.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2EditClanBannerResponse groupV2EditClanBanner(org.openapis.openapi.models.operations.GroupV2EditClanBannerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2EditClanBannerResponse groupV2EditClanBanner(org.openapis.openapi.models.operations.GroupV2EditClanBannerRequest request, org.openapis.openapi.models.operations.GroupV2EditClanBannerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2EditClanBannerPathParams.class, baseUrl, "/GroupV2/{groupId}/EditClanBanner/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2EditClanBannerRequest.class, baseUrl, "/GroupV2/{groupId}/EditClanBanner/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -374,19 +382,20 @@ public class GroupV2 {
     /**
      * Edit group options only available to a founder. You must have suitable permissions in the group to perform this operation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2EditFounderOptionsResponse groupV2EditFounderOptions(org.openapis.openapi.models.operations.GroupV2EditFounderOptionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2EditFounderOptionsResponse groupV2EditFounderOptions(org.openapis.openapi.models.operations.GroupV2EditFounderOptionsRequest request, org.openapis.openapi.models.operations.GroupV2EditFounderOptionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2EditFounderOptionsPathParams.class, baseUrl, "/GroupV2/{groupId}/EditFounderOptions/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2EditFounderOptionsRequest.class, baseUrl, "/GroupV2/{groupId}/EditFounderOptions/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -412,19 +421,20 @@ public class GroupV2 {
     /**
      * Edit an existing group. You must have suitable permissions in the group to perform this operation. This latest revision will only edit the fields you pass in - pass null for properties you want to leave unaltered.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2EditGroupResponse groupV2EditGroup(org.openapis.openapi.models.operations.GroupV2EditGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2EditGroupResponse groupV2EditGroup(org.openapis.openapi.models.operations.GroupV2EditGroupRequest request, org.openapis.openapi.models.operations.GroupV2EditGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2EditGroupPathParams.class, baseUrl, "/GroupV2/{groupId}/Edit/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2EditGroupRequest.class, baseUrl, "/GroupV2/{groupId}/Edit/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -450,19 +460,20 @@ public class GroupV2 {
     /**
      * Edit the membership type of a given member. You must have suitable permissions in the group to perform this operation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2EditGroupMembershipResponse groupV2EditGroupMembership(org.openapis.openapi.models.operations.GroupV2EditGroupMembershipRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2EditGroupMembershipResponse groupV2EditGroupMembership(org.openapis.openapi.models.operations.GroupV2EditGroupMembershipRequest request, org.openapis.openapi.models.operations.GroupV2EditGroupMembershipSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2EditGroupMembershipPathParams.class, baseUrl, "/GroupV2/{groupId}/Members/{membershipType}/{membershipId}/SetMembershipType/{memberType}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2EditGroupMembershipRequest.class, baseUrl, "/GroupV2/{groupId}/Members/{membershipType}/{membershipId}/SetMembershipType/{memberType}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -488,19 +499,20 @@ public class GroupV2 {
     /**
      * Edit the settings of an optional conversation/chat channel. Requires admin permissions to the group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2EditOptionalConversationResponse groupV2EditOptionalConversation(org.openapis.openapi.models.operations.GroupV2EditOptionalConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2EditOptionalConversationResponse groupV2EditOptionalConversation(org.openapis.openapi.models.operations.GroupV2EditOptionalConversationRequest request, org.openapis.openapi.models.operations.GroupV2EditOptionalConversationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2EditOptionalConversationPathParams.class, baseUrl, "/GroupV2/{groupId}/OptionalConversations/Edit/{conversationId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2EditOptionalConversationRequest.class, baseUrl, "/GroupV2/{groupId}/OptionalConversations/Edit/{conversationId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -531,13 +543,13 @@ public class GroupV2 {
      */
     public org.openapis.openapi.models.operations.GroupV2GetAdminsAndFounderOfGroupResponse groupV2GetAdminsAndFounderOfGroup(org.openapis.openapi.models.operations.GroupV2GetAdminsAndFounderOfGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetAdminsAndFounderOfGroupPathParams.class, baseUrl, "/GroupV2/{groupId}/AdminsAndFounder/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetAdminsAndFounderOfGroupRequest.class, baseUrl, "/GroupV2/{groupId}/AdminsAndFounder/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupV2GetAdminsAndFounderOfGroupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupV2GetAdminsAndFounderOfGroupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -641,25 +653,26 @@ public class GroupV2 {
     /**
      * Get the list of banned members in a given group. Only accessible to group Admins and above. Not applicable to all groups. Check group features.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2GetBannedMembersOfGroupResponse groupV2GetBannedMembersOfGroup(org.openapis.openapi.models.operations.GroupV2GetBannedMembersOfGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2GetBannedMembersOfGroupResponse groupV2GetBannedMembersOfGroup(org.openapis.openapi.models.operations.GroupV2GetBannedMembersOfGroupRequest request, org.openapis.openapi.models.operations.GroupV2GetBannedMembersOfGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetBannedMembersOfGroupPathParams.class, baseUrl, "/GroupV2/{groupId}/Banned/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetBannedMembersOfGroupRequest.class, baseUrl, "/GroupV2/{groupId}/Banned/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupV2GetBannedMembersOfGroupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupV2GetBannedMembersOfGroupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -690,7 +703,7 @@ public class GroupV2 {
      */
     public org.openapis.openapi.models.operations.GroupV2GetGroupResponse groupV2GetGroup(org.openapis.openapi.models.operations.GroupV2GetGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetGroupPathParams.class, baseUrl, "/GroupV2/{groupId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetGroupRequest.class, baseUrl, "/GroupV2/{groupId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -727,7 +740,7 @@ public class GroupV2 {
      */
     public org.openapis.openapi.models.operations.GroupV2GetGroupByNameResponse groupV2GetGroupByName(org.openapis.openapi.models.operations.GroupV2GetGroupByNameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetGroupByNamePathParams.class, baseUrl, "/GroupV2/Name/{groupName}/{groupType}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetGroupByNameRequest.class, baseUrl, "/GroupV2/Name/{groupName}/{groupType}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -800,7 +813,7 @@ public class GroupV2 {
      */
     public org.openapis.openapi.models.operations.GroupV2GetGroupOptionalConversationsResponse groupV2GetGroupOptionalConversations(org.openapis.openapi.models.operations.GroupV2GetGroupOptionalConversationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetGroupOptionalConversationsPathParams.class, baseUrl, "/GroupV2/{groupId}/OptionalConversations/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetGroupOptionalConversationsRequest.class, baseUrl, "/GroupV2/{groupId}/OptionalConversations/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -837,7 +850,7 @@ public class GroupV2 {
      */
     public org.openapis.openapi.models.operations.GroupV2GetGroupsForMemberResponse groupV2GetGroupsForMember(org.openapis.openapi.models.operations.GroupV2GetGroupsForMemberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetGroupsForMemberPathParams.class, baseUrl, "/GroupV2/User/{membershipType}/{membershipId}/{filter}/{groupType}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetGroupsForMemberRequest.class, baseUrl, "/GroupV2/User/{membershipType}/{membershipId}/{filter}/{groupType}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -869,25 +882,26 @@ public class GroupV2 {
     /**
      * Get the list of users who have been invited into the group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2GetInvitedIndividualsResponse groupV2GetInvitedIndividuals(org.openapis.openapi.models.operations.GroupV2GetInvitedIndividualsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2GetInvitedIndividualsResponse groupV2GetInvitedIndividuals(org.openapis.openapi.models.operations.GroupV2GetInvitedIndividualsRequest request, org.openapis.openapi.models.operations.GroupV2GetInvitedIndividualsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetInvitedIndividualsPathParams.class, baseUrl, "/GroupV2/{groupId}/Members/InvitedIndividuals/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetInvitedIndividualsRequest.class, baseUrl, "/GroupV2/{groupId}/Members/InvitedIndividuals/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupV2GetInvitedIndividualsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupV2GetInvitedIndividualsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -918,13 +932,13 @@ public class GroupV2 {
      */
     public org.openapis.openapi.models.operations.GroupV2GetMembersOfGroupResponse groupV2GetMembersOfGroup(org.openapis.openapi.models.operations.GroupV2GetMembersOfGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetMembersOfGroupPathParams.class, baseUrl, "/GroupV2/{groupId}/Members/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetMembersOfGroupRequest.class, baseUrl, "/GroupV2/{groupId}/Members/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupV2GetMembersOfGroupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupV2GetMembersOfGroupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -956,25 +970,26 @@ public class GroupV2 {
     /**
      * Get the list of users who are awaiting a decision on their application to join a given group. Modified to include application info.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2GetPendingMembershipsResponse groupV2GetPendingMemberships(org.openapis.openapi.models.operations.GroupV2GetPendingMembershipsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2GetPendingMembershipsResponse groupV2GetPendingMemberships(org.openapis.openapi.models.operations.GroupV2GetPendingMembershipsRequest request, org.openapis.openapi.models.operations.GroupV2GetPendingMembershipsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetPendingMembershipsPathParams.class, baseUrl, "/GroupV2/{groupId}/Members/Pending/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetPendingMembershipsRequest.class, baseUrl, "/GroupV2/{groupId}/Members/Pending/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupV2GetPendingMembershipsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupV2GetPendingMembershipsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1005,7 +1020,7 @@ public class GroupV2 {
      */
     public org.openapis.openapi.models.operations.GroupV2GetPotentialGroupsForMemberResponse groupV2GetPotentialGroupsForMember(org.openapis.openapi.models.operations.GroupV2GetPotentialGroupsForMemberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetPotentialGroupsForMemberPathParams.class, baseUrl, "/GroupV2/User/Potential/{membershipType}/{membershipId}/{filter}/{groupType}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetPotentialGroupsForMemberRequest.class, baseUrl, "/GroupV2/User/Potential/{membershipType}/{membershipId}/{filter}/{groupType}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1037,19 +1052,20 @@ public class GroupV2 {
     /**
      * Gets groups recommended for you based on the groups to whom those you follow belong.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2GetRecommendedGroupsResponse groupV2GetRecommendedGroups(org.openapis.openapi.models.operations.GroupV2GetRecommendedGroupsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2GetRecommendedGroupsResponse groupV2GetRecommendedGroups(org.openapis.openapi.models.operations.GroupV2GetRecommendedGroupsRequest request, org.openapis.openapi.models.operations.GroupV2GetRecommendedGroupsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetRecommendedGroupsPathParams.class, baseUrl, "/GroupV2/Recommended/{groupType}/{createDateRange}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetRecommendedGroupsRequest.class, baseUrl, "/GroupV2/Recommended/{groupType}/{createDateRange}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1075,19 +1091,20 @@ public class GroupV2 {
     /**
      * Gets the state of the user's clan invite preferences for a particular membership type - true if they wish to be invited to clans, false otherwise.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2GetUserClanInviteSettingResponse groupV2GetUserClanInviteSetting(org.openapis.openapi.models.operations.GroupV2GetUserClanInviteSettingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2GetUserClanInviteSettingResponse groupV2GetUserClanInviteSetting(org.openapis.openapi.models.operations.GroupV2GetUserClanInviteSettingRequest request, org.openapis.openapi.models.operations.GroupV2GetUserClanInviteSettingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetUserClanInviteSettingPathParams.class, baseUrl, "/GroupV2/GetUserClanInviteSetting/{mType}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2GetUserClanInviteSettingRequest.class, baseUrl, "/GroupV2/GetUserClanInviteSetting/{mType}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1149,19 +1166,20 @@ public class GroupV2 {
     /**
      * Invite a user to join this group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteResponse groupV2IndividualGroupInvite(org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteResponse groupV2IndividualGroupInvite(org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteRequest request, org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2IndividualGroupInvitePathParams.class, baseUrl, "/GroupV2/{groupId}/Members/IndividualInvite/{membershipType}/{membershipId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteRequest.class, baseUrl, "/GroupV2/{groupId}/Members/IndividualInvite/{membershipType}/{membershipId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1187,19 +1205,20 @@ public class GroupV2 {
     /**
      * Cancels a pending invitation to join a group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteCancelResponse groupV2IndividualGroupInviteCancel(org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteCancelResponse groupV2IndividualGroupInviteCancel(org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteCancelRequest request, org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteCancelPathParams.class, baseUrl, "/GroupV2/{groupId}/Members/IndividualInviteCancel/{membershipType}/{membershipId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2IndividualGroupInviteCancelRequest.class, baseUrl, "/GroupV2/{groupId}/Members/IndividualInviteCancel/{membershipType}/{membershipId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1225,19 +1244,20 @@ public class GroupV2 {
     /**
      * Kick a member from the given group, forcing them to reapply if they wish to re-join the group. You must have suitable permissions in the group to perform this operation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2KickMemberResponse groupV2KickMember(org.openapis.openapi.models.operations.GroupV2KickMemberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2KickMemberResponse groupV2KickMember(org.openapis.openapi.models.operations.GroupV2KickMemberRequest request, org.openapis.openapi.models.operations.GroupV2KickMemberSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2KickMemberPathParams.class, baseUrl, "/GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Kick/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2KickMemberRequest.class, baseUrl, "/GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Kick/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1268,7 +1288,7 @@ public class GroupV2 {
      */
     public org.openapis.openapi.models.operations.GroupV2RecoverGroupForFounderResponse groupV2RecoverGroupForFounder(org.openapis.openapi.models.operations.GroupV2RecoverGroupForFounderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2RecoverGroupForFounderPathParams.class, baseUrl, "/GroupV2/Recover/{membershipType}/{membershipId}/{groupType}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2RecoverGroupForFounderRequest.class, baseUrl, "/GroupV2/Recover/{membershipType}/{membershipId}/{groupType}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1300,19 +1320,20 @@ public class GroupV2 {
     /**
      * Unbans the requested member, allowing them to re-apply for membership.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupV2UnbanMemberResponse groupV2UnbanMember(org.openapis.openapi.models.operations.GroupV2UnbanMemberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupV2UnbanMemberResponse groupV2UnbanMember(org.openapis.openapi.models.operations.GroupV2UnbanMemberRequest request, org.openapis.openapi.models.operations.GroupV2UnbanMemberSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2UnbanMemberPathParams.class, baseUrl, "/GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Unban/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupV2UnbanMemberRequest.class, baseUrl, "/GroupV2/{groupId}/Members/{membershipType}/{membershipId}/Unban/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ForgotPasswordOneTimeCodeRequest {
-    
-    public ForgotPasswordOneTimeCodePathParams pathParams;
-    public ForgotPasswordOneTimeCodeRequest withPathParams(ForgotPasswordOneTimeCodePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ForgotPasswordOneTimeCodeQueryParams queryParams;
-    public ForgotPasswordOneTimeCodeRequest withQueryParams(ForgotPasswordOneTimeCodeQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=text/plain")
-    public byte[] request;
-    public ForgotPasswordOneTimeCodeRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public ForgotPasswordOneTimeCodeRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sendEmail")
+    public String sendEmail;
+    public ForgotPasswordOneTimeCodeRequest withSendEmail(String sendEmail) {
+        this.sendEmail = sendEmail;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public ForgotPasswordOneTimeCodeRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

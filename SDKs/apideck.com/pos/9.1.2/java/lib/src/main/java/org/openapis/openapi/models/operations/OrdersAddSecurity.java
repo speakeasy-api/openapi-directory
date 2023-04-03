@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrdersAddSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAPIKey apiKey;
-    public OrdersAddSecurity withApiKey(org.openapis.openapi.models.shared.SchemeAPIKey apiKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
+    public String apiKey;
+    public OrdersAddSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }

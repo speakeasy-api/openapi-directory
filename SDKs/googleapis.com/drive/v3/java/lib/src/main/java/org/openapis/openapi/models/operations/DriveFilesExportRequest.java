@@ -4,27 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveFilesExportRequest {
-    
-    public DriveFilesExportPathParams pathParams;
-    public DriveFilesExportRequest withPathParams(DriveFilesExportPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DriveFilesExportRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public DriveFilesExportQueryParams queryParams;
-    public DriveFilesExportRequest withQueryParams(DriveFilesExportQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DriveFilesExportRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
+    /**
+     * The ID of the file.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
+    public String fileId;
+    public DriveFilesExportRequest withFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
     
-    public DriveFilesExportSecurity security;
-    public DriveFilesExportRequest withSecurity(DriveFilesExportSecurity security) {
-        this.security = security;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DriveFilesExportRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The MIME type of the format requested for this export.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mimeType")
+    public String mimeType;
+    public DriveFilesExportRequest withMimeType(String mimeType) {
+        this.mimeType = mimeType;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DriveFilesExportRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DriveFilesExportRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DriveFilesExportRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public DriveFilesExportRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

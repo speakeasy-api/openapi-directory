@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueCreateMilestoneRequest {
-    
-    public IssueCreateMilestonePathParams pathParams;
-    public IssueCreateMilestoneRequest withPathParams(IssueCreateMilestonePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateMilestoneOption createMilestoneOption;
+    public IssueCreateMilestoneRequest withCreateMilestoneOption(org.openapis.openapi.models.shared.CreateMilestoneOption createMilestoneOption) {
+        this.createMilestoneOption = createMilestoneOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateMilestoneOption request;
-    public IssueCreateMilestoneRequest withRequest(org.openapis.openapi.models.shared.CreateMilestoneOption request) {
-        this.request = request;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueCreateMilestoneRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueCreateMilestoneRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

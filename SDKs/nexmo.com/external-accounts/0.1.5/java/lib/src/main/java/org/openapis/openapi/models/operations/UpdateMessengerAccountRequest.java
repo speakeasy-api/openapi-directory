@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateMessengerAccountRequest {
-    
-    public UpdateMessengerAccountPathParams pathParams;
-    public UpdateMessengerAccountRequest withPathParams(UpdateMessengerAccountPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Request body can contain any of the following
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateMessengerAccountRequestBody request;
-    public UpdateMessengerAccountRequest withRequest(UpdateMessengerAccountRequestBody request) {
-        this.request = request;
+    public UpdateMessengerAccountRequestBody requestBody;
+    public UpdateMessengerAccountRequest withRequestBody(UpdateMessengerAccountRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateMessengerAccountSecurity security;
-    public UpdateMessengerAccountRequest withSecurity(UpdateMessengerAccountSecurity security) {
-        this.security = security;
+    /**
+     * External id of the account you want to update. In this case it is the Facebook Page ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=external_id")
+    public String externalId;
+    public UpdateMessengerAccountRequest withExternalId(String externalId) {
+        this.externalId = externalId;
         return this;
     }
     

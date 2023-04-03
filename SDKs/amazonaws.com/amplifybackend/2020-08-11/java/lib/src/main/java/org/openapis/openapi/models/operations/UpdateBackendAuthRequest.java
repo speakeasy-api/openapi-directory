@@ -7,24 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBackendAuthRequest {
-    
-    public UpdateBackendAuthPathParams pathParams;
-    public UpdateBackendAuthRequest withPathParams(UpdateBackendAuthPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateBackendAuthHeaders headers;
-    public UpdateBackendAuthRequest withHeaders(UpdateBackendAuthHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateBackendAuthRequestBody request;
-    public UpdateBackendAuthRequest withRequest(UpdateBackendAuthRequestBody request) {
-        this.request = request;
+    public UpdateBackendAuthRequestBody requestBody;
+    public UpdateBackendAuthRequest withRequestBody(UpdateBackendAuthRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateBackendAuthRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateBackendAuthRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateBackendAuthRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateBackendAuthRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateBackendAuthRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateBackendAuthRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateBackendAuthRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The app ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public String appId;
+    public UpdateBackendAuthRequest withAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    
+    /**
+     * The name of the backend environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=backendEnvironmentName")
+    public String backendEnvironmentName;
+    public UpdateBackendAuthRequest withBackendEnvironmentName(String backendEnvironmentName) {
+        this.backendEnvironmentName = backendEnvironmentName;
         return this;
     }
     

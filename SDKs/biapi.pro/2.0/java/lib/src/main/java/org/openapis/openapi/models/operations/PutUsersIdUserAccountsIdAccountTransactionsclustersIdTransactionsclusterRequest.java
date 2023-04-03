@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest {
-    
-    public PutUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterPathParams pathParams;
-    public PutUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withPathParams(PutUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PutUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account")
+    public Long idAccount;
+    public PutUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withIdAccount(Long idAccount) {
+        this.idAccount = idAccount;
+        return this;
+    }
     
-    public PutUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterQueryParams queryParams;
-    public PutUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withQueryParams(PutUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_transactionscluster")
+    public Long idTransactionscluster;
+    public PutUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withIdTransactionscluster(Long idTransactionscluster) {
+        this.idTransactionscluster = idTransactionscluster;
+        return this;
+    }
+    
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public PutUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

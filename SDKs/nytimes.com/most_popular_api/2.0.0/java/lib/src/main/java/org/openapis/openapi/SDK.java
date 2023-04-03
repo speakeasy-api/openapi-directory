@@ -123,19 +123,20 @@ public class SDK {
     /**
      * Most Emailed by Section &amp; Time Period
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonResponse getMostemailedSectionTimePeriodJson(org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonResponse getMostemailedSectionTimePeriodJson(org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonRequest request, org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonPathParams.class, baseUrl, "/mostemailed/{section}/{time-period}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonRequest.class, baseUrl, "/mostemailed/{section}/{time-period}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -193,19 +194,20 @@ public class SDK {
     /**
      * Most Shared by Section &amp; Time Period
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GETMostsharedSectionTimePeriodJsonResponse getMostsharedSectionTimePeriodJson(org.openapis.openapi.models.operations.GETMostsharedSectionTimePeriodJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GETMostsharedSectionTimePeriodJsonResponse getMostsharedSectionTimePeriodJson(org.openapis.openapi.models.operations.GETMostsharedSectionTimePeriodJsonRequest request, org.openapis.openapi.models.operations.GETMostsharedSectionTimePeriodJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETMostsharedSectionTimePeriodJsonPathParams.class, baseUrl, "/mostshared/{section}/{time-period}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETMostsharedSectionTimePeriodJsonRequest.class, baseUrl, "/mostshared/{section}/{time-period}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -240,19 +242,20 @@ public class SDK {
     /**
      * Most Viewed by Section &amp; Time Period
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GETMostviewedSectionTimePeriodJsonResponse getMostviewedSectionTimePeriodJson(org.openapis.openapi.models.operations.GETMostviewedSectionTimePeriodJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GETMostviewedSectionTimePeriodJsonResponse getMostviewedSectionTimePeriodJson(org.openapis.openapi.models.operations.GETMostviewedSectionTimePeriodJsonRequest request, org.openapis.openapi.models.operations.GETMostviewedSectionTimePeriodJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETMostviewedSectionTimePeriodJsonPathParams.class, baseUrl, "/mostviewed/{section}/{time-period}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETMostviewedSectionTimePeriodJsonRequest.class, baseUrl, "/mostviewed/{section}/{time-period}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

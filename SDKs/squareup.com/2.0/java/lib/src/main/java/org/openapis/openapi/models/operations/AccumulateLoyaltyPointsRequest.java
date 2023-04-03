@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccumulateLoyaltyPointsRequest {
-    
-    public AccumulateLoyaltyPointsPathParams pathParams;
-    public AccumulateLoyaltyPointsRequest withPathParams(AccumulateLoyaltyPointsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AccumulateLoyaltyPointsRequest request;
-    public AccumulateLoyaltyPointsRequest withRequest(org.openapis.openapi.models.shared.AccumulateLoyaltyPointsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AccumulateLoyaltyPointsRequest accumulateLoyaltyPointsRequest;
+    public AccumulateLoyaltyPointsRequest withAccumulateLoyaltyPointsRequest(org.openapis.openapi.models.shared.AccumulateLoyaltyPointsRequest accumulateLoyaltyPointsRequest) {
+        this.accumulateLoyaltyPointsRequest = accumulateLoyaltyPointsRequest;
         return this;
     }
     
-    
-    public AccumulateLoyaltyPointsSecurity security;
-    public AccumulateLoyaltyPointsRequest withSecurity(AccumulateLoyaltyPointsSecurity security) {
-        this.security = security;
+    /**
+     * The [loyalty account](https://developer.squareup.com/reference/square_2021-08-18/objects/LoyaltyAccount) ID to which to add the points.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
+    public String accountId;
+    public AccumulateLoyaltyPointsRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReceivedTimeCardRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=timeCard_id")
+    public String timeCardId;
+    public GetReceivedTimeCardRequest withTimeCardId(String timeCardId) {
+        this.timeCardId = timeCardId;
+        return this;
+    }
     
-    public GetReceivedTimeCardPathParams pathParams;
-    public GetReceivedTimeCardRequest withPathParams(GetReceivedTimeCardPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public GetReceivedTimeCardRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

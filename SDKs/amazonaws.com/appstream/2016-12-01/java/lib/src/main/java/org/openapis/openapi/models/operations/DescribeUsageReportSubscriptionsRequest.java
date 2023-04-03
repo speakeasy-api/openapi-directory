@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeUsageReportSubscriptionsRequest {
-    
-    public DescribeUsageReportSubscriptionsHeaders headers;
-    public DescribeUsageReportSubscriptionsRequest withHeaders(DescribeUsageReportSubscriptionsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.DescribeUsageReportSubscriptionsRequest describeUsageReportSubscriptionsRequest;
+    public DescribeUsageReportSubscriptionsRequest withDescribeUsageReportSubscriptionsRequest(org.openapis.openapi.models.shared.DescribeUsageReportSubscriptionsRequest describeUsageReportSubscriptionsRequest) {
+        this.describeUsageReportSubscriptionsRequest = describeUsageReportSubscriptionsRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DescribeUsageReportSubscriptionsRequest request;
-    public DescribeUsageReportSubscriptionsRequest withRequest(org.openapis.openapi.models.shared.DescribeUsageReportSubscriptionsRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeUsageReportSubscriptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeUsageReportSubscriptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeUsageReportSubscriptionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeUsageReportSubscriptionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeUsageReportSubscriptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeUsageReportSubscriptionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeUsageReportSubscriptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public DescribeUsageReportSubscriptionsXAmzTargetEnum xAmzTarget;
+    public DescribeUsageReportSubscriptionsRequest withXAmzTarget(DescribeUsageReportSubscriptionsXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

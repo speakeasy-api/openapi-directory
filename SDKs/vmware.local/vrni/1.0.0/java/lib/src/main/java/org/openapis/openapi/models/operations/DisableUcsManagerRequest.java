@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisableUcsManagerRequest {
-    
-    public DisableUcsManagerPathParams pathParams;
-    public DisableUcsManagerRequest withPathParams(DisableUcsManagerPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DisableUcsManagerSecurity security;
-    public DisableUcsManagerRequest withSecurity(DisableUcsManagerSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DisableUcsManagerRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

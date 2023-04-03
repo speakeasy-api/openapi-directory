@@ -7,24 +7,76 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeConfigRulesRequest {
-    
-    public DescribeConfigRulesQueryParams queryParams;
-    public DescribeConfigRulesRequest withQueryParams(DescribeConfigRulesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DescribeConfigRulesHeaders headers;
-    public DescribeConfigRulesRequest withHeaders(DescribeConfigRulesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DescribeConfigRulesRequest request;
-    public DescribeConfigRulesRequest withRequest(org.openapis.openapi.models.shared.DescribeConfigRulesRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DescribeConfigRulesRequest describeConfigRulesRequest;
+    public DescribeConfigRulesRequest withDescribeConfigRulesRequest(org.openapis.openapi.models.shared.DescribeConfigRulesRequest describeConfigRulesRequest) {
+        this.describeConfigRulesRequest = describeConfigRulesRequest;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public DescribeConfigRulesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeConfigRulesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeConfigRulesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeConfigRulesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeConfigRulesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeConfigRulesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeConfigRulesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeConfigRulesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public DescribeConfigRulesXAmzTargetEnum xAmzTarget;
+    public DescribeConfigRulesRequest withXAmzTarget(DescribeConfigRulesXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

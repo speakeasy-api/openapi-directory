@@ -4,27 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteBillingGroupRequest {
-    
-    public DeleteBillingGroupPathParams pathParams;
-    public DeleteBillingGroupRequest withPathParams(DeleteBillingGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DeleteBillingGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public DeleteBillingGroupQueryParams queryParams;
-    public DeleteBillingGroupRequest withQueryParams(DeleteBillingGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DeleteBillingGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DeleteBillingGroupRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public DeleteBillingGroupHeaders headers;
-    public DeleteBillingGroupRequest withHeaders(DeleteBillingGroupHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DeleteBillingGroupRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DeleteBillingGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DeleteBillingGroupRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DeleteBillingGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The name of the billing group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=billingGroupName")
+    public String billingGroupName;
+    public DeleteBillingGroupRequest withBillingGroupName(String billingGroupName) {
+        this.billingGroupName = billingGroupName;
+        return this;
+    }
+    
+    /**
+     * The expected version of the billing group. If the version of the billing group does not match the expected version specified in the request, the &lt;code&gt;DeleteBillingGroup&lt;/code&gt; request is rejected with a &lt;code&gt;VersionConflictException&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expectedVersion")
+    public Long expectedVersion;
+    public DeleteBillingGroupRequest withExpectedVersion(Long expectedVersion) {
+        this.expectedVersion = expectedVersion;
         return this;
     }
     

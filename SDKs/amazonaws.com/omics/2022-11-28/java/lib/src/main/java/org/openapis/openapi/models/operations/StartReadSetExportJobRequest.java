@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartReadSetExportJobRequest {
-    
-    public StartReadSetExportJobPathParams pathParams;
-    public StartReadSetExportJobRequest withPathParams(StartReadSetExportJobPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public StartReadSetExportJobHeaders headers;
-    public StartReadSetExportJobRequest withHeaders(StartReadSetExportJobHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public StartReadSetExportJobRequestBody request;
-    public StartReadSetExportJobRequest withRequest(StartReadSetExportJobRequestBody request) {
-        this.request = request;
+    public StartReadSetExportJobRequestBody requestBody;
+    public StartReadSetExportJobRequest withRequestBody(StartReadSetExportJobRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public StartReadSetExportJobRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public StartReadSetExportJobRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public StartReadSetExportJobRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public StartReadSetExportJobRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public StartReadSetExportJobRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public StartReadSetExportJobRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public StartReadSetExportJobRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The read set's sequence store ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sequenceStoreId")
+    public String sequenceStoreId;
+    public StartReadSetExportJobRequest withSequenceStoreId(String sequenceStoreId) {
+        this.sequenceStoreId = sequenceStoreId;
         return this;
     }
     

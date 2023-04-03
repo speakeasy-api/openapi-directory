@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.DeleteLexiconPathParams;
-import org.openapis.openapi.models.operations.DeleteLexiconHeaders;
 import org.openapis.openapi.models.operations.DeleteLexiconRequest;
 import org.openapis.openapi.models.operations.DeleteLexiconResponse;
 
@@ -27,26 +25,20 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             DeleteLexiconRequest req = new DeleteLexiconRequest() {{
-                pathParams = new DeleteLexiconPathParams() {{
-                    lexiconName = "corrupti";
-                }};
-                headers = new DeleteLexiconHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-            }};            
+                lexiconName = "corrupti";
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+            }}            
 
             DeleteLexiconResponse res = sdk.deleteLexicon(req);
 
@@ -60,7 +52,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

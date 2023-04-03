@@ -4,20 +4,61 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUsersIdUserConnectionsIdConnectionRequest {
-    
-    public PutUsersIdUserConnectionsIdConnectionPathParams pathParams;
-    public PutUsersIdUserConnectionsIdConnectionRequest withPathParams(PutUsersIdUserConnectionsIdConnectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * do the connection synchronization in background
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=background")
+    public Boolean background;
+    public PutUsersIdUserConnectionsIdConnectionRequest withBackground(Boolean background) {
+        this.background = background;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PutUsersIdUserConnectionsIdConnectionRequest withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
     
-    public PutUsersIdUserConnectionsIdConnectionQueryParams queryParams;
-    public PutUsersIdUserConnectionsIdConnectionRequest withQueryParams(PutUsersIdUserConnectionsIdConnectionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
+    public Long idConnection;
+    public PutUsersIdUserConnectionsIdConnectionRequest withIdConnection(Long idConnection) {
+        this.idConnection = idConnection;
+        return this;
+    }
+    
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public PutUsersIdUserConnectionsIdConnectionRequest withIdUser(String idUser) {
+        this.idUser = idUser;
+        return this;
+    }
+    
+    /**
+     * if supplied, get transactions inserted since this date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_update")
+    public OffsetDateTime lastUpdate;
+    public PutUsersIdUserConnectionsIdConnectionRequest withLastUpdate(OffsetDateTime lastUpdate) {
+        this.lastUpdate = lastUpdate;
+        return this;
+    }
+    
+    /**
+     * Whether the connection synchronization is asked by the PSU or not (default is true)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=psu_requested")
+    public Boolean psuRequested;
+    public PutUsersIdUserConnectionsIdConnectionRequest withPsuRequested(Boolean psuRequested) {
+        this.psuRequested = psuRequested;
         return this;
     }
     

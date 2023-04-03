@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1ServicesIdRequest {
-    
-    public PutSetupV1ServicesIdPathParams pathParams;
-    public PutSetupV1ServicesIdRequest withPathParams(PutSetupV1ServicesIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ServiceUpdateModel serviceUpdateModel;
+    public PutSetupV1ServicesIdRequest withServiceUpdateModel(org.openapis.openapi.models.shared.ServiceUpdateModel serviceUpdateModel) {
+        this.serviceUpdateModel = serviceUpdateModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ServiceUpdateModel request;
-    public PutSetupV1ServicesIdRequest withRequest(org.openapis.openapi.models.shared.ServiceUpdateModel request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutSetupV1ServicesIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureMailboxAutoForwardRequest {
-    
-    public ConfigureMailboxAutoForwardPathParams pathParams;
-    public ConfigureMailboxAutoForwardRequest withPathParams(ConfigureMailboxAutoForwardPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ConfigureMailboxAutoForwardQueryParams queryParams;
-    public ConfigureMailboxAutoForwardRequest withQueryParams(ConfigureMailboxAutoForwardQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Contains the auto-forward information.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AutoForward request;
-    public ConfigureMailboxAutoForwardRequest withRequest(org.openapis.openapi.models.shared.AutoForward request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AutoForward autoForward;
+    public ConfigureMailboxAutoForwardRequest withAutoForward(org.openapis.openapi.models.shared.AutoForward autoForward) {
+        this.autoForward = autoForward;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mailboxName")
+    public String mailboxNamePathParameter;
+    public ConfigureMailboxAutoForwardRequest withMailboxNamePathParameter(String mailboxNamePathParameter) {
+        this.mailboxNamePathParameter = mailboxNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Mailbox name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mailbox_name")
+    public String mailboxNameQueryParameter;
+    public ConfigureMailboxAutoForwardRequest withMailboxNameQueryParameter(String mailboxNameQueryParameter) {
+        this.mailboxNameQueryParameter = mailboxNameQueryParameter;
         return this;
     }
     

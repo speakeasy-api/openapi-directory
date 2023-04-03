@@ -4,20 +4,107 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTrackLicenseListRequest {
-    
-    public GetTrackLicenseListQueryParams queryParams;
-    public GetTrackLicenseListRequest withQueryParams(GetTrackLicenseListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Show licenses for the specified track ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=audio_id")
+    public String audioId;
+    public GetTrackLicenseListRequest withAudioId(String audioId) {
+        this.audioId = audioId;
         return this;
     }
     
+    /**
+     * Filter licenses by download availability
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=download_availability")
+    public GetTrackLicenseListDownloadAvailabilityEnum downloadAvailability;
+    public GetTrackLicenseListRequest withDownloadAvailability(GetTrackLicenseListDownloadAvailabilityEnum downloadAvailability) {
+        this.downloadAvailability = downloadAvailability;
+        return this;
+    }
     
-    public GetTrackLicenseListSecurity security;
-    public GetTrackLicenseListRequest withSecurity(GetTrackLicenseListSecurity security) {
-        this.security = security;
+    /**
+     * Show licenses created before the specified date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public OffsetDateTime endDate;
+    public GetTrackLicenseListRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * Restrict results by license. Prepending a `-` sign will exclude results by license
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public String license;
+    public GetTrackLicenseListRequest withLicense(String license) {
+        this.license = license;
+        return this;
+    }
+    
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetTrackLicenseListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetTrackLicenseListRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Sort order
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetTrackLicenseListSortEnum sort;
+    public GetTrackLicenseListRequest withSort(GetTrackLicenseListSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Show licenses created on or after the specified date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public OffsetDateTime startDate;
+    public GetTrackLicenseListRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * Set to true to see license history for all members of your team.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team_history")
+    public Boolean teamHistory;
+    public GetTrackLicenseListRequest withTeamHistory(Boolean teamHistory) {
+        this.teamHistory = teamHistory;
+        return this;
+    }
+    
+    /**
+     * Filter licenses by username of licensee
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public GetTrackLicenseListRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

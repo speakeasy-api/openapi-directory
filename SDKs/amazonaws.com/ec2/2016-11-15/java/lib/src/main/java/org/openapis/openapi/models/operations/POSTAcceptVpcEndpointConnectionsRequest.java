@@ -7,24 +7,73 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTAcceptVpcEndpointConnectionsRequest {
-    
-    public POSTAcceptVpcEndpointConnectionsQueryParams queryParams;
-    public POSTAcceptVpcEndpointConnectionsRequest withQueryParams(POSTAcceptVpcEndpointConnectionsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public POSTAcceptVpcEndpointConnectionsHeaders headers;
-    public POSTAcceptVpcEndpointConnectionsRequest withHeaders(POSTAcceptVpcEndpointConnectionsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public POSTAcceptVpcEndpointConnectionsActionEnum action;
+    public POSTAcceptVpcEndpointConnectionsRequest withAction(POSTAcceptVpcEndpointConnectionsActionEnum action) {
+        this.action = action;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public POSTAcceptVpcEndpointConnectionsRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public POSTAcceptVpcEndpointConnectionsRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public POSTAcceptVpcEndpointConnectionsVersionEnum version;
+    public POSTAcceptVpcEndpointConnectionsRequest withVersion(POSTAcceptVpcEndpointConnectionsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public POSTAcceptVpcEndpointConnectionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public POSTAcceptVpcEndpointConnectionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public POSTAcceptVpcEndpointConnectionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public POSTAcceptVpcEndpointConnectionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public POSTAcceptVpcEndpointConnectionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public POSTAcceptVpcEndpointConnectionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public POSTAcceptVpcEndpointConnectionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

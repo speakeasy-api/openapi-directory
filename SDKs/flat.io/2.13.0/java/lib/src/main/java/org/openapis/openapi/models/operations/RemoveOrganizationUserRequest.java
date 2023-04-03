@@ -4,27 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveOrganizationUserRequest {
-    
-    public RemoveOrganizationUserPathParams pathParams;
-    public RemoveOrganizationUserRequest withPathParams(RemoveOrganizationUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If `true`, the account will be only removed from the organization and converted into an individual account on our public website, https://flat.io.
+     * This operation will remove the education-related data from the account.
+     * Before realizing this operation, you need to be sure that the user is at least 13 years old and that this one has read and agreed to the Individual Terms of Services of Flat available on https://flat.io/legal.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=convertToIndividual")
+    public Boolean convertToIndividual;
+    public RemoveOrganizationUserRequest withConvertToIndividual(Boolean convertToIndividual) {
+        this.convertToIndividual = convertToIndividual;
         return this;
     }
     
-    
-    public RemoveOrganizationUserQueryParams queryParams;
-    public RemoveOrganizationUserRequest withQueryParams(RemoveOrganizationUserQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public RemoveOrganizationUserSecurity security;
-    public RemoveOrganizationUserRequest withSecurity(RemoveOrganizationUserSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the Flat account
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user")
+    public String user;
+    public RemoveOrganizationUserRequest withUser(String user) {
+        this.user = user;
         return this;
     }
     

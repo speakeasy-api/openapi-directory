@@ -34,10 +34,11 @@ public class PrivateRiddles {
     /**
      * Create a random Riddle entry.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteRiddleResponse deleteRiddle(org.openapis.openapi.models.operations.DeleteRiddleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteRiddleResponse deleteRiddle(org.openapis.openapi.models.operations.DeleteRiddleRequest request, org.openapis.openapi.models.operations.DeleteRiddleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/riddle");
         
@@ -45,14 +46,14 @@ public class PrivateRiddles {
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteRiddleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteRiddleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,10 +74,11 @@ public class PrivateRiddles {
     /**
      * Get a Riddle entry for a given id. Retrieves a riddle question and answer based on the id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRiddleResponse getRiddle(org.openapis.openapi.models.operations.GetRiddleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRiddleResponse getRiddle(org.openapis.openapi.models.operations.GetRiddleRequest request, org.openapis.openapi.models.operations.GetRiddleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/riddle");
         
@@ -84,14 +86,14 @@ public class PrivateRiddles {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRiddleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRiddleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -112,10 +114,11 @@ public class PrivateRiddles {
     /**
      * Create a random Riddle entry. Same as 'PUT' but can be used when some of the client libraries don't support 'PUT'.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRiddleResponse postRiddle(org.openapis.openapi.models.operations.PostRiddleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRiddleResponse postRiddle(org.openapis.openapi.models.operations.PostRiddleRequest request, org.openapis.openapi.models.operations.PostRiddleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/riddle");
         
@@ -123,14 +126,14 @@ public class PrivateRiddles {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRiddleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRiddleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -151,10 +154,11 @@ public class PrivateRiddles {
     /**
      * Create a random Riddle entry.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutRiddleResponse putRiddle(org.openapis.openapi.models.operations.PutRiddleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutRiddleResponse putRiddle(org.openapis.openapi.models.operations.PutRiddleRequest request, org.openapis.openapi.models.operations.PutRiddleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/riddle");
         
@@ -162,14 +166,14 @@ public class PrivateRiddles {
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutRiddleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutRiddleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

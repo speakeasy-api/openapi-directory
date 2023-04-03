@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostWebhooksIdWebhookAddToDataKeyRequest {
-    
-    public PostWebhooksIdWebhookAddToDataKeyPathParams pathParams;
-    public PostWebhooksIdWebhookAddToDataKeyRequest withPathParams(PostWebhooksIdWebhookAddToDataKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PostWebhooksIdWebhookAddToDataKeyRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_webhook")
+    public Long idWebhook;
+    public PostWebhooksIdWebhookAddToDataKeyRequest withIdWebhook(Long idWebhook) {
+        this.idWebhook = idWebhook;
+        return this;
+    }
     
-    public PostWebhooksIdWebhookAddToDataKeyQueryParams queryParams;
-    public PostWebhooksIdWebhookAddToDataKeyRequest withQueryParams(PostWebhooksIdWebhookAddToDataKeyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public PostWebhooksIdWebhookAddToDataKeyRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

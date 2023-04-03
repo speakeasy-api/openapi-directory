@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutEmailIdentityDkimAttributesRequest {
-    
-    public PutEmailIdentityDkimAttributesPathParams pathParams;
-    public PutEmailIdentityDkimAttributesRequest withPathParams(PutEmailIdentityDkimAttributesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutEmailIdentityDkimAttributesHeaders headers;
-    public PutEmailIdentityDkimAttributesRequest withHeaders(PutEmailIdentityDkimAttributesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The email identity that you want to change the DKIM settings for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmailIdentity")
+    public String emailIdentity;
+    public PutEmailIdentityDkimAttributesRequest withEmailIdentity(String emailIdentity) {
+        this.emailIdentity = emailIdentity;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutEmailIdentityDkimAttributesRequestBody request;
-    public PutEmailIdentityDkimAttributesRequest withRequest(PutEmailIdentityDkimAttributesRequestBody request) {
-        this.request = request;
+    public PutEmailIdentityDkimAttributesRequestBody requestBody;
+    public PutEmailIdentityDkimAttributesRequest withRequestBody(PutEmailIdentityDkimAttributesRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public PutEmailIdentityDkimAttributesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public PutEmailIdentityDkimAttributesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public PutEmailIdentityDkimAttributesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public PutEmailIdentityDkimAttributesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public PutEmailIdentityDkimAttributesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public PutEmailIdentityDkimAttributesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public PutEmailIdentityDkimAttributesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

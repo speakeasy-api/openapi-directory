@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetthermpointRequest {
-    
-    public SetthermpointQueryParams queryParams;
-    public SetthermpointRequest withQueryParams(SetthermpointQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The relay id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
+    public String deviceId;
+    public SetthermpointRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
     
+    /**
+     * The thermostat id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=module_id")
+    public String moduleId;
+    public SetthermpointRequest withModuleId(String moduleId) {
+        this.moduleId = moduleId;
+        return this;
+    }
     
-    public SetthermpointSecurity security;
-    public SetthermpointRequest withSecurity(SetthermpointSecurity security) {
-        this.security = security;
+    /**
+     * When using the manual or max setpoint_mode, this parameter defines when the setpoint expires.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setpoint_endtime")
+    public Integer setpointEndtime;
+    public SetthermpointRequest withSetpointEndtime(Integer setpointEndtime) {
+        this.setpointEndtime = setpointEndtime;
+        return this;
+    }
+    
+    /**
+     * Chosen setpoint_mode
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setpoint_mode")
+    public SetthermpointSetpointModeEnum setpointMode;
+    public SetthermpointRequest withSetpointMode(SetthermpointSetpointModeEnum setpointMode) {
+        this.setpointMode = setpointMode;
+        return this;
+    }
+    
+    /**
+     * When using the manual setpoint_mode, this parameter defines the temperature setpoint (in Celcius) to use.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setpoint_temp")
+    public Float setpointTemp;
+    public SetthermpointRequest withSetpointTemp(Float setpointTemp) {
+        this.setpointTemp = setpointTemp;
         return this;
     }
     

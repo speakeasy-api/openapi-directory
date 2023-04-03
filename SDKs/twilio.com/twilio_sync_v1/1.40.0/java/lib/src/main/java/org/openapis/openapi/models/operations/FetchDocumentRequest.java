@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchDocumentRequest {
-    
-    public FetchDocumentPathParams pathParams;
-    public FetchDocumentRequest withPathParams(FetchDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchDocumentRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public FetchDocumentSecurity security;
-    public FetchDocumentRequest withSecurity(FetchDocumentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchDocumentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Document resource to fetch. Can be the Document resource's `sid` or its `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchDocumentRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

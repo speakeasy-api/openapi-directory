@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteChannelPrivacyUserRequest {
-    
-    public DeleteChannelPrivacyUserPathParams pathParams;
-    public DeleteChannelPrivacyUserRequest withPathParams(DeleteChannelPrivacyUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public DeleteChannelPrivacyUserRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     
-    
-    public DeleteChannelPrivacyUserSecurity security;
-    public DeleteChannelPrivacyUserRequest withSecurity(DeleteChannelPrivacyUserSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public DeleteChannelPrivacyUserRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

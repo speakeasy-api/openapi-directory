@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CreateArtifactRulePathParams;
 import org.openapis.openapi.models.operations.CreateArtifactRuleRequest;
 import org.openapis.openapi.models.operations.CreateArtifactRuleResponse;
 import org.openapis.openapi.models.shared.Rule;
@@ -17,14 +16,12 @@ public class Application {
                 .build();
 
             CreateArtifactRuleRequest req = new CreateArtifactRuleRequest() {{
-                pathParams = new CreateArtifactRulePathParams() {{
-                    artifactId = "corrupti";
-                }};
-                request = new Rule() {{
-                    config = "provident";
+                rule = new Rule() {{
+                    config = "corrupti";
                     type = "VALIDITY";
                 }};
-            }};            
+                artifactId = "provident";
+            }}            
 
             CreateArtifactRuleResponse res = sdk.artifactRules.createArtifactRule(req);
 

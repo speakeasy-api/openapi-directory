@@ -4,20 +4,65 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDataflowEndpointGroupRequest {
-    
-    public DeleteDataflowEndpointGroupPathParams pathParams;
-    public DeleteDataflowEndpointGroupRequest withPathParams(DeleteDataflowEndpointGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DeleteDataflowEndpointGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DeleteDataflowEndpointGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public DeleteDataflowEndpointGroupHeaders headers;
-    public DeleteDataflowEndpointGroupRequest withHeaders(DeleteDataflowEndpointGroupHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DeleteDataflowEndpointGroupRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DeleteDataflowEndpointGroupRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DeleteDataflowEndpointGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DeleteDataflowEndpointGroupRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DeleteDataflowEndpointGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * UUID of a dataflow endpoint group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataflowEndpointGroupId")
+    public String dataflowEndpointGroupId;
+    public DeleteDataflowEndpointGroupRequest withDataflowEndpointGroupId(String dataflowEndpointGroupId) {
+        this.dataflowEndpointGroupId = dataflowEndpointGroupId;
         return this;
     }
     

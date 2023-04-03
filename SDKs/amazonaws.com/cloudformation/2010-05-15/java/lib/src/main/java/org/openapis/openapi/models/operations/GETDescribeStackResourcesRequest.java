@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeStackResourcesRequest {
-    
-    public GETDescribeStackResourcesQueryParams queryParams;
-    public GETDescribeStackResourcesRequest withQueryParams(GETDescribeStackResourcesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeStackResourcesActionEnum action;
+    public GETDescribeStackResourcesRequest withAction(GETDescribeStackResourcesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The logical name of the resource as specified in the template.&lt;/p&gt; &lt;p&gt;Default: There is no default value.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LogicalResourceId")
+    public String logicalResourceId;
+    public GETDescribeStackResourcesRequest withLogicalResourceId(String logicalResourceId) {
+        this.logicalResourceId = logicalResourceId;
+        return this;
+    }
     
-    public GETDescribeStackResourcesHeaders headers;
-    public GETDescribeStackResourcesRequest withHeaders(GETDescribeStackResourcesHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The name or unique identifier that corresponds to a physical instance ID of a resource supported by CloudFormation.&lt;/p&gt; &lt;p&gt;For example, for an Amazon Elastic Compute Cloud (EC2) instance, &lt;code&gt;PhysicalResourceId&lt;/code&gt; corresponds to the &lt;code&gt;InstanceId&lt;/code&gt;. You can pass the EC2 &lt;code&gt;InstanceId&lt;/code&gt; to &lt;code&gt;DescribeStackResources&lt;/code&gt; to find which stack the instance belongs to and what other resources are part of the stack.&lt;/p&gt; &lt;p&gt;Required: Conditional. If you don't specify &lt;code&gt;PhysicalResourceId&lt;/code&gt;, you must specify &lt;code&gt;StackName&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;Default: There is no default value.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PhysicalResourceId")
+    public String physicalResourceId;
+    public GETDescribeStackResourcesRequest withPhysicalResourceId(String physicalResourceId) {
+        this.physicalResourceId = physicalResourceId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name or the unique stack ID that is associated with the stack, which aren't always interchangeable:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Running stacks: You can specify either the stack's name or its unique stack ID.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Deleted stacks: You must specify the unique stack ID.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Default: There is no default value.&lt;/p&gt; &lt;p&gt;Required: Conditional. If you don't specify &lt;code&gt;StackName&lt;/code&gt;, you must specify &lt;code&gt;PhysicalResourceId&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackName")
+    public String stackName;
+    public GETDescribeStackResourcesRequest withStackName(String stackName) {
+        this.stackName = stackName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeStackResourcesVersionEnum version;
+    public GETDescribeStackResourcesRequest withVersion(GETDescribeStackResourcesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeStackResourcesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeStackResourcesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeStackResourcesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeStackResourcesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeStackResourcesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeStackResourcesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeStackResourcesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAccountInformationUsingPOSTRequest {
-    
-    public UpdateAccountInformationUsingPOSTHeaders headers;
-    public UpdateAccountInformationUsingPOSTRequest withHeaders(UpdateAccountInformationUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public UpdateAccountInformationUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,19 @@ public class UpdateAccountInformationUsingPOSTRequest {
      * request
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateAccountRequest request;
-    public UpdateAccountInformationUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.UpdateAccountRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateAccountRequest updateAccountRequest;
+    public UpdateAccountInformationUsingPOSTRequest withUpdateAccountRequest(org.openapis.openapi.models.shared.UpdateAccountRequest updateAccountRequest) {
+        this.updateAccountRequest = updateAccountRequest;
         return this;
     }
     
-    
-    public UpdateAccountInformationUsingPOSTSecurity security;
-    public UpdateAccountInformationUsingPOSTRequest withSecurity(UpdateAccountInformationUsingPOSTSecurity security) {
-        this.security = security;
+    /**
+     * Auth Token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Token")
+    public String xToken;
+    public UpdateAccountInformationUsingPOSTRequest withXToken(String xToken) {
+        this.xToken = xToken;
         return this;
     }
     

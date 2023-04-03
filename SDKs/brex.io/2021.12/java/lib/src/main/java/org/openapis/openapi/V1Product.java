@@ -38,19 +38,20 @@ public class V1Product {
      * Retrieves a document availability result
      * Check availability and valid options for a particular product for a particular company identfied by its id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProductAvailabilityResponse productAvailability(org.openapis.openapi.models.operations.ProductAvailabilityRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProductAvailabilityResponse productAvailability(org.openapis.openapi.models.operations.ProductAvailabilityRequest request, org.openapis.openapi.models.operations.ProductAvailabilitySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductAvailabilityPathParams.class, baseUrl, "/api/v1/product/availability/{sku}/{subjectId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductAvailabilityRequest.class, baseUrl, "/api/v1/product/availability/{sku}/{subjectId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -86,19 +87,20 @@ public class V1Product {
      * Returns a catalog of products
      * Returns a catalog of purchasable products available with some metadata for a particular country
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProductCatalogResponse productCatalog(org.openapis.openapi.models.operations.ProductCatalogRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProductCatalogResponse productCatalog(org.openapis.openapi.models.operations.ProductCatalogRequest request, org.openapis.openapi.models.operations.ProductCatalogSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductCatalogPathParams.class, baseUrl, "/api/v1/product/catalog/{country}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductCatalogRequest.class, baseUrl, "/api/v1/product/catalog/{country}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -134,19 +136,20 @@ public class V1Product {
      * Returns metadata for a notifier
      * Queries and returns all metadata associated with a notifier identified by its notifer id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProductNotifierResponse productNotifier(org.openapis.openapi.models.operations.ProductNotifierRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProductNotifierResponse productNotifier(org.openapis.openapi.models.operations.ProductNotifierRequest request, org.openapis.openapi.models.operations.ProductNotifierSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductNotifierPathParams.class, baseUrl, "/api/v1/product/notifier/{notifierId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductNotifierRequest.class, baseUrl, "/api/v1/product/notifier/{notifierId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -182,19 +185,20 @@ public class V1Product {
      * Creates a notifier for an order
      * Create a notifier for a particular order. Parameters can be supplied in the path
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProductNotifierCreateResponse productNotifierCreate(org.openapis.openapi.models.operations.ProductNotifierCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProductNotifierCreateResponse productNotifierCreate(org.openapis.openapi.models.operations.ProductNotifierCreateRequest request, org.openapis.openapi.models.operations.ProductNotifierCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductNotifierCreatePathParams.class, baseUrl, "/api/v1/product/notifier/{orderId}/{type}/{uri}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductNotifierCreateRequest.class, baseUrl, "/api/v1/product/notifier/{orderId}/{type}/{uri}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -230,19 +234,20 @@ public class V1Product {
      * Places a product order
      * Place an order for a particular product identified by its SKU for a particular company identified by its id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProductOrderResponse productOrder(org.openapis.openapi.models.operations.ProductOrderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProductOrderResponse productOrder(org.openapis.openapi.models.operations.ProductOrderRequest request, org.openapis.openapi.models.operations.ProductOrderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductOrderPathParams.class, baseUrl, "/api/v1/product/order/{sku}/{subjectId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductOrderRequest.class, baseUrl, "/api/v1/product/order/{sku}/{subjectId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -278,10 +283,11 @@ public class V1Product {
      * Places a concierge order
      * Place an order for a concierge product
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProductOrderConciergeResponse productOrderConcierge(org.openapis.openapi.models.operations.ProductOrderConciergeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProductOrderConciergeResponse productOrderConcierge(org.openapis.openapi.models.operations.ProductOrderConciergeRequestBody request, org.openapis.openapi.models.operations.ProductOrderConciergeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/product/order/concierge");
         
@@ -292,7 +298,7 @@ public class V1Product {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -328,10 +334,11 @@ public class V1Product {
      * Places a UBO order
      * Place an order for a UBO (ultimate beneficial owner) discovery report
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProductOrderUboResponse productOrderUbo(org.openapis.openapi.models.operations.ProductOrderUboRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProductOrderUboResponse productOrderUbo(org.openapis.openapi.models.operations.ProductOrderUboRequestBody request, org.openapis.openapi.models.operations.ProductOrderUboSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/product/order/ubo");
         
@@ -342,7 +349,7 @@ public class V1Product {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -378,19 +385,20 @@ public class V1Product {
      * Places a product order
      * Place an order for a particular product identified by its SKU with a particular option for a particular company identified by its id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProductOrderWithOptionResponse productOrderWithOption(org.openapis.openapi.models.operations.ProductOrderWithOptionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProductOrderWithOptionResponse productOrderWithOption(org.openapis.openapi.models.operations.ProductOrderWithOptionRequest request, org.openapis.openapi.models.operations.ProductOrderWithOptionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductOrderWithOptionPathParams.class, baseUrl, "/api/v1/product/order/{sku}/{option}/{subjectId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductOrderWithOptionRequest.class, baseUrl, "/api/v1/product/order/{sku}/{option}/{subjectId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -426,19 +434,20 @@ public class V1Product {
      * Retrieves the result of an order
      * Retrieves the document or structured data associated with a completed order identified with its order id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProductRetrieveResponse productRetrieve(org.openapis.openapi.models.operations.ProductRetrieveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProductRetrieveResponse productRetrieve(org.openapis.openapi.models.operations.ProductRetrieveRequest request, org.openapis.openapi.models.operations.ProductRetrieveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductRetrievePathParams.class, baseUrl, "/api/v1/product/{orderId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductRetrieveRequest.class, baseUrl, "/api/v1/product/{orderId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -474,19 +483,20 @@ public class V1Product {
      * Returns a list of products
      * Search for possible products for a particular company identified by its id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProductSearchResponse productSearch(org.openapis.openapi.models.operations.ProductSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProductSearchResponse productSearch(org.openapis.openapi.models.operations.ProductSearchRequest request, org.openapis.openapi.models.operations.ProductSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductSearchPathParams.class, baseUrl, "/api/v1/product/search/{subjectId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductSearchRequest.class, baseUrl, "/api/v1/product/search/{subjectId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -522,19 +532,20 @@ public class V1Product {
      * Returns metadata for a order
      * Retrieve the current status of an order identified by its order id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProductStatusResponse productStatus(org.openapis.openapi.models.operations.ProductStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProductStatusResponse productStatus(org.openapis.openapi.models.operations.ProductStatusRequest request, org.openapis.openapi.models.operations.ProductStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductStatusPathParams.class, baseUrl, "/api/v1/product/status/{orderId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductStatusRequest.class, baseUrl, "/api/v1/product/status/{orderId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -570,21 +581,22 @@ public class V1Product {
      * Updates metadata of an order
      * Update an existing order identified by its order id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProductUpdateActionResponse productUpdateAction(org.openapis.openapi.models.operations.ProductUpdateActionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProductUpdateActionResponse productUpdateAction(org.openapis.openapi.models.operations.ProductUpdateActionRequest request, org.openapis.openapi.models.operations.ProductUpdateActionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductUpdateActionPathParams.class, baseUrl, "/api/v1/product/update/{action}/{orderId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductUpdateActionRequest.class, baseUrl, "/api/v1/product/update/{action}/{orderId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

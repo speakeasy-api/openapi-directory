@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteResourcesRequest {
-    
-    public DeleteResourcesHeaders headers;
-    public DeleteResourcesRequest withHeaders(DeleteResourcesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public DeleteResourcesDeleteResourcesRequestBody requestBody;
+    public DeleteResourcesRequest withRequestBody(DeleteResourcesDeleteResourcesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public DeleteResourcesDeleteResourcesRequestBody request;
-    public DeleteResourcesRequest withRequest(DeleteResourcesDeleteResourcesRequestBody request) {
-        this.request = request;
+    /**
+     * Access Token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public DeleteResourcesRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
+        return this;
+    }
+    
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public DeleteResourcesRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
         return this;
     }
     

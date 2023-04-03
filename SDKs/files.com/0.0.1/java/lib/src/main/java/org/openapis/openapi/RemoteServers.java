@@ -43,7 +43,7 @@ public class RemoteServers {
      */
     public org.openapis.openapi.models.operations.DeleteRemoteServersIdResponse deleteRemoteServersId(org.openapis.openapi.models.operations.DeleteRemoteServersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRemoteServersIdPathParams.class, baseUrl, "/remote_servers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRemoteServersIdRequest.class, baseUrl, "/remote_servers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class RemoteServers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRemoteServersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRemoteServersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -123,7 +123,7 @@ public class RemoteServers {
      */
     public org.openapis.openapi.models.operations.GetRemoteServersIdResponse getRemoteServersId(org.openapis.openapi.models.operations.GetRemoteServersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRemoteServersIdPathParams.class, baseUrl, "/remote_servers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRemoteServersIdRequest.class, baseUrl, "/remote_servers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -164,7 +164,7 @@ public class RemoteServers {
      */
     public org.openapis.openapi.models.operations.GetRemoteServersIdConfigurationFileResponse getRemoteServersIdConfigurationFile(org.openapis.openapi.models.operations.GetRemoteServersIdConfigurationFileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRemoteServersIdConfigurationFilePathParams.class, baseUrl, "/remote_servers/{id}/configuration_file", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRemoteServersIdConfigurationFileRequest.class, baseUrl, "/remote_servers/{id}/configuration_file", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -205,12 +205,12 @@ public class RemoteServers {
      */
     public org.openapis.openapi.models.operations.PatchRemoteServersIdResponse patchRemoteServersId(org.openapis.openapi.models.operations.PatchRemoteServersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchRemoteServersIdPathParams.class, baseUrl, "/remote_servers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchRemoteServersIdRequest.class, baseUrl, "/remote_servers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
@@ -246,7 +246,7 @@ public class RemoteServers {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRemoteServersResponse postRemoteServers(org.openapis.openapi.models.operations.PostRemoteServersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRemoteServersResponse postRemoteServers(org.openapis.openapi.models.operations.PostRemoteServersRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/remote_servers");
         
@@ -291,12 +291,12 @@ public class RemoteServers {
      */
     public org.openapis.openapi.models.operations.PostRemoteServersIdConfigurationFileResponse postRemoteServersIdConfigurationFile(org.openapis.openapi.models.operations.PostRemoteServersIdConfigurationFileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRemoteServersIdConfigurationFilePathParams.class, baseUrl, "/remote_servers/{id}/configuration_file", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRemoteServersIdConfigurationFileRequest.class, baseUrl, "/remote_servers/{id}/configuration_file", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         

@@ -4,20 +4,166 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssetPropertyAggregatesRequest {
-    
-    public GetAssetPropertyAggregatesQueryParams queryParams;
-    public GetAssetPropertyAggregatesRequest withQueryParams(GetAssetPropertyAggregatesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetAssetPropertyAggregatesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetAssetPropertyAggregatesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public GetAssetPropertyAggregatesHeaders headers;
-    public GetAssetPropertyAggregatesRequest withHeaders(GetAssetPropertyAggregatesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetAssetPropertyAggregatesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetAssetPropertyAggregatesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetAssetPropertyAggregatesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetAssetPropertyAggregatesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetAssetPropertyAggregatesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The data aggregating function.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aggregateTypes")
+    public org.openapis.openapi.models.shared.AggregateTypeEnum[] aggregateTypes;
+    public GetAssetPropertyAggregatesRequest withAggregateTypes(org.openapis.openapi.models.shared.AggregateTypeEnum[] aggregateTypes) {
+        this.aggregateTypes = aggregateTypes;
+        return this;
+    }
+    
+    /**
+     * The ID of the asset.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assetId")
+    public String assetId;
+    public GetAssetPropertyAggregatesRequest withAssetId(String assetId) {
+        this.assetId = assetId;
+        return this;
+    }
+    
+    /**
+     * The inclusive end of the range from which to query historical data, expressed in seconds in Unix epoch time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public OffsetDateTime endDate;
+    public GetAssetPropertyAggregatesRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The maximum number of results to return for each paginated request.&lt;/p&gt; &lt;p&gt;Default: 100&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public GetAssetPropertyAggregatesRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The token to be used for the next set of paginated results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public GetAssetPropertyAggregatesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The alias that identifies the property, such as an OPC-UA server data stream path (for example, &lt;code&gt;/company/windfarm/3/turbine/7/temperature&lt;/code&gt;). For more information, see &lt;a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/connect-data-streams.html"&gt;Mapping industrial data streams to asset properties&lt;/a&gt; in the &lt;i&gt;IoT SiteWise User Guide&lt;/i&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyAlias")
+    public String propertyAlias;
+    public GetAssetPropertyAggregatesRequest withPropertyAlias(String propertyAlias) {
+        this.propertyAlias = propertyAlias;
+        return this;
+    }
+    
+    /**
+     * The ID of the asset property.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyId")
+    public String propertyId;
+    public GetAssetPropertyAggregatesRequest withPropertyId(String propertyId) {
+        this.propertyId = propertyId;
+        return this;
+    }
+    
+    /**
+     * The quality by which to filter asset data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=qualities")
+    public org.openapis.openapi.models.shared.QualityEnum[] qualities;
+    public GetAssetPropertyAggregatesRequest withQualities(org.openapis.openapi.models.shared.QualityEnum[] qualities) {
+        this.qualities = qualities;
+        return this;
+    }
+    
+    /**
+     * The time interval over which to aggregate data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolution")
+    public String resolution;
+    public GetAssetPropertyAggregatesRequest withResolution(String resolution) {
+        this.resolution = resolution;
+        return this;
+    }
+    
+    /**
+     * The exclusive start of the range from which to query historical data, expressed in seconds in Unix epoch time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public OffsetDateTime startDate;
+    public GetAssetPropertyAggregatesRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The chronological sorting order of the requested information.&lt;/p&gt; &lt;p&gt;Default: &lt;code&gt;ASCENDING&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeOrdering")
+    public GetAssetPropertyAggregatesTimeOrderingEnum timeOrdering;
+    public GetAssetPropertyAggregatesRequest withTimeOrdering(GetAssetPropertyAggregatesTimeOrderingEnum timeOrdering) {
+        this.timeOrdering = timeOrdering;
         return this;
     }
     

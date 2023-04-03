@@ -7,31 +7,160 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppengineAppsServicesPatchRequest {
-    
-    public AppengineAppsServicesPatchPathParams pathParams;
-    public AppengineAppsServicesPatchRequest withPathParams(AppengineAppsServicesPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AppengineAppsServicesPatchQueryParams queryParams;
-    public AppengineAppsServicesPatchRequest withQueryParams(AppengineAppsServicesPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AppengineAppsServicesPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Service request;
-    public AppengineAppsServicesPatchRequest withRequest(org.openapis.openapi.models.shared.Service request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Service service;
+    public AppengineAppsServicesPatchRequest withService(org.openapis.openapi.models.shared.Service service) {
+        this.service = service;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AppengineAppsServicesPatchRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public AppengineAppsServicesPatchSecurity security;
-    public AppengineAppsServicesPatchRequest withSecurity(AppengineAppsServicesPatchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AppengineAppsServicesPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * Part of `name`. Name of the resource to update. Example: apps/myapp/services/default.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appsId")
+    public String appsId;
+    public AppengineAppsServicesPatchRequest withAppsId(String appsId) {
+        this.appsId = appsId;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AppengineAppsServicesPatchRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AppengineAppsServicesPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AppengineAppsServicesPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Set to true to gradually shift traffic to one or more versions that you specify. By default, traffic is shifted immediately. For gradual traffic migration, the target versions must be located within instances that are configured for both warmup requests (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#InboundServiceType) and automatic scaling (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#AutomaticScaling). You must specify the shardBy (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services#ShardBy) field in the Service resource. Gradual traffic migration is not supported in the App Engine flexible environment. For examples, see Migrating and Splitting Traffic (https://cloud.google.com/appengine/docs/admin-api/migrating-splitting-traffic).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=migrateTraffic")
+    public Boolean migrateTraffic;
+    public AppengineAppsServicesPatchRequest withMigrateTraffic(Boolean migrateTraffic) {
+        this.migrateTraffic = migrateTraffic;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AppengineAppsServicesPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AppengineAppsServicesPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AppengineAppsServicesPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Part of `name`. See documentation of `appsId`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=servicesId")
+    public String servicesId;
+    public AppengineAppsServicesPatchRequest withServicesId(String servicesId) {
+        this.servicesId = servicesId;
+        return this;
+    }
+    
+    /**
+     * Required. Standard field mask for the set of fields to be updated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
+    public String updateMask;
+    public AppengineAppsServicesPatchRequest withUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AppengineAppsServicesPatchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AppengineAppsServicesPatchRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

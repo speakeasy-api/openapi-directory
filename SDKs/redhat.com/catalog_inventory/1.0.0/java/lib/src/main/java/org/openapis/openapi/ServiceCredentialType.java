@@ -46,7 +46,7 @@ public class ServiceCredentialType {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceCredentialTypesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceCredentialTypesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -86,7 +86,7 @@ public class ServiceCredentialType {
      */
     public org.openapis.openapi.models.operations.ShowServiceCredentialTypeResponse showServiceCredentialType(org.openapis.openapi.models.operations.ShowServiceCredentialTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ShowServiceCredentialTypePathParams.class, baseUrl, "/service_credential_types/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ShowServiceCredentialTypeRequest.class, baseUrl, "/service_credential_types/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

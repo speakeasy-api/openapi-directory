@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGamesEndpointsUsingGETRequest {
-    
-    public GETGamesEndpointsUsingGETPathParams pathParams;
-    public GETGamesEndpointsUsingGETRequest withPathParams(GETGamesEndpointsUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public GETGamesEndpointsUsingGETRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

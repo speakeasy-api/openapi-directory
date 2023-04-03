@@ -4,27 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LabOrdersSummaryReadRequest {
-    
-    public LabOrdersSummaryReadPathParams pathParams;
-    public LabOrdersSummaryReadRequest withPathParams(LabOrdersSummaryReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public LabOrdersSummaryReadRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public LabOrdersSummaryReadQueryParams queryParams;
-    public LabOrdersSummaryReadRequest withQueryParams(LabOrdersSummaryReadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public LabOrdersSummaryReadRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public LabOrdersSummaryReadRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
     
-    public LabOrdersSummaryReadSecurity security;
-    public LabOrdersSummaryReadRequest withSecurity(LabOrdersSummaryReadSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public LabOrdersSummaryReadRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

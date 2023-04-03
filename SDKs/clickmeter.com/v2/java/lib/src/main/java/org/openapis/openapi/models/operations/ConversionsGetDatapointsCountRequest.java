@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsGetDatapointsCountRequest {
-    
-    public ConversionsGetDatapointsCountPathParams pathParams;
-    public ConversionsGetDatapointsCountRequest withPathParams(ConversionsGetDatapointsCountPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the conversion
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
+    public Long conversionId;
+    public ConversionsGetDatapointsCountRequest withConversionId(Long conversionId) {
+        this.conversionId = conversionId;
         return this;
     }
     
+    /**
+     * Exclude datapoints created before this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
+    public String createdAfter;
+    public ConversionsGetDatapointsCountRequest withCreatedAfter(String createdAfter) {
+        this.createdAfter = createdAfter;
+        return this;
+    }
     
-    public ConversionsGetDatapointsCountQueryParams queryParams;
-    public ConversionsGetDatapointsCountRequest withQueryParams(ConversionsGetDatapointsCountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Exclude datapoints created after this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
+    public String createdBefore;
+    public ConversionsGetDatapointsCountRequest withCreatedBefore(String createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
+    
+    /**
+     * Status of datapoint ("deleted"/"active"/"paused"/"spam")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public ConversionsGetDatapointsCountRequest withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Filter by this tag name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public ConversionsGetDatapointsCountRequest withTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    
+    /**
+     * Filter fields by this pattern
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
+    public String textSearch;
+    public ConversionsGetDatapointsCountRequest withTextSearch(String textSearch) {
+        this.textSearch = textSearch;
+        return this;
+    }
+    
+    /**
+     * Type of datapoint ("tl"/"tp")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public ConversionsGetDatapointsCountRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBlockIndexRequest {
-    
-    public GetBlockIndexPathParams pathParams;
-    public GetBlockIndexRequest withPathParams(GetBlockIndexPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Block Index
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=blockindex")
+    public Double blockindex;
+    public GetBlockIndexRequest withBlockindex(Double blockindex) {
+        this.blockindex = blockindex;
         return this;
     }
     

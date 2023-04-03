@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MovePadUsingPOSTRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationID")
+    public String destinationID;
+    public MovePadUsingPOSTRequest withDestinationID(String destinationID) {
+        this.destinationID = destinationID;
+        return this;
+    }
     
-    public MovePadUsingPOSTQueryParams queryParams;
-    public MovePadUsingPOSTRequest withQueryParams(MovePadUsingPOSTQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=force")
+    public String force;
+    public MovePadUsingPOSTRequest withForce(String force) {
+        this.force = force;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceID")
+    public String sourceID;
+    public MovePadUsingPOSTRequest withSourceID(String sourceID) {
+        this.sourceID = sourceID;
         return this;
     }
     

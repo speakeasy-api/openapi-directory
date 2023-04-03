@@ -42,7 +42,7 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.CreateTagResponse createTag(org.openapis.openapi.models.operations.CreateTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateTagPathParams.class, baseUrl, "/v1/tags/{tag_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateTagRequest.class, baseUrl, "/v1/tags/{tag_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -90,7 +90,7 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.DeleteTagResponse deleteTag(org.openapis.openapi.models.operations.DeleteTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTagPathParams.class, baseUrl, "/v1/tags/{tag_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTagRequest.class, baseUrl, "/v1/tags/{tag_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -189,7 +189,7 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.RenameTagResponse renameTag(org.openapis.openapi.models.operations.RenameTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RenameTagPathParams.class, baseUrl, "/v1/tags/{tag_name}/{new_tag_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RenameTagRequest.class, baseUrl, "/v1/tags/{tag_name}/{new_tag_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

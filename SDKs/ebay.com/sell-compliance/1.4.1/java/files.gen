@@ -32,16 +32,11 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetListingViolationsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetListingViolationsQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetListingViolationsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetListingViolationsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetListingViolationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/SuppressViolationSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/SuppressViolationRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SuppressViolationResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetListingViolationsSummarySecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetListingViolationsSummaryQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetListingViolationsSummaryHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetListingViolationsSummaryRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetListingViolationsSummaryResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PagedComplianceViolationCollection.java
@@ -52,7 +47,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/VariationDetails.java
 lib/src/main/java/org/openapis/openapi/models/shared/CorrectiveRecommendations.java
 lib/src/main/java/org/openapis/openapi/models/shared/ProductRecommendation.java
 lib/src/main/java/org/openapis/openapi/models/shared/AspectRecommendations.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/SuppressViolationRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ComplianceSummary.java
 lib/src/main/java/org/openapis/openapi/models/shared/ComplianceSummaryInfo.java

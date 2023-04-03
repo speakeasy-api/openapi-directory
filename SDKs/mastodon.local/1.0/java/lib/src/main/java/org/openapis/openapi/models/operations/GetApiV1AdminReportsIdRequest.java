@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1AdminReportsIdRequest {
-    
-    public GetApiV1AdminReportsIdPathParams pathParams;
-    public GetApiV1AdminReportsIdRequest withPathParams(GetApiV1AdminReportsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetApiV1AdminReportsIdSecurity security;
-    public GetApiV1AdminReportsIdRequest withSecurity(GetApiV1AdminReportsIdSecurity security) {
-        this.security = security;
+    /**
+     * ID of the report
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetApiV1AdminReportsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

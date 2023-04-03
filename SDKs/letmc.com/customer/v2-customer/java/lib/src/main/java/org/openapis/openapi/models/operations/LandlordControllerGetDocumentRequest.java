@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LandlordControllerGetDocumentRequest {
-    
-    public LandlordControllerGetDocumentPathParams pathParams;
-    public LandlordControllerGetDocumentRequest withPathParams(LandlordControllerGetDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Document ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ID")
+    public String id;
+    public LandlordControllerGetDocumentRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public LandlordControllerGetDocumentRequest withShortName(String shortName) {
+        this.shortName = shortName;
+        return this;
+    }
     
-    public LandlordControllerGetDocumentQueryParams queryParams;
-    public LandlordControllerGetDocumentRequest withQueryParams(LandlordControllerGetDocumentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The login token returned from the /session POST call
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public LandlordControllerGetDocumentRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

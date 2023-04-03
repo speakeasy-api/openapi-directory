@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteChannelWebhookRequest {
-    
-    public DeleteChannelWebhookPathParams pathParams;
-    public DeleteChannelWebhookRequest withPathParams(DeleteChannelWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the Channel Webhook resource to delete belongs to. This value can be the Channel resource's `sid` or `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public DeleteChannelWebhookRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
         return this;
     }
     
-    
-    public DeleteChannelWebhookSecurity security;
-    public DeleteChannelWebhookRequest withSecurity(DeleteChannelWebhookSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) with the Channel to delete the Webhook resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteChannelWebhookRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteChannelWebhookRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Channel Webhook resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteChannelWebhookRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

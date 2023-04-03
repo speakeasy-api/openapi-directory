@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteVodGenreRequest {
-    
-    public DeleteVodGenrePathParams pathParams;
-    public DeleteVodGenreRequest withPathParams(DeleteVodGenrePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the genre.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=genre_id")
+    public String genreId;
+    public DeleteVodGenreRequest withGenreId(String genreId) {
+        this.genreId = genreId;
         return this;
     }
     
-    
-    public DeleteVodGenreSecurity security;
-    public DeleteVodGenreRequest withSecurity(DeleteVodGenreSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public DeleteVodGenreRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
         return this;
     }
     

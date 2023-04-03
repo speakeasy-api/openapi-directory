@@ -4,20 +4,50 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListPullRequestsAssociatedWithCommitRequest {
-    
-    public ReposListPullRequestsAssociatedWithCommitPathParams pathParams;
-    public ReposListPullRequestsAssociatedWithCommitRequest withPathParams(ReposListPullRequestsAssociatedWithCommitPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * commit_sha parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit_sha")
+    public String commitSha;
+    public ReposListPullRequestsAssociatedWithCommitRequest withCommitSha(String commitSha) {
+        this.commitSha = commitSha;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposListPullRequestsAssociatedWithCommitRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ReposListPullRequestsAssociatedWithCommitQueryParams queryParams;
-    public ReposListPullRequestsAssociatedWithCommitRequest withQueryParams(ReposListPullRequestsAssociatedWithCommitQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReposListPullRequestsAssociatedWithCommitRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReposListPullRequestsAssociatedWithCommitRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposListPullRequestsAssociatedWithCommitRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

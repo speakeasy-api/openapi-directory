@@ -4,20 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RunsForRunRequest {
-    
-    public RunsForRunPathParams pathParams;
-    public RunsForRunRequest withPathParams(RunsForRunPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Date of the request. (optional - defaults to now)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_utc")
+    public OffsetDateTime dateUtc;
+    public RunsForRunRequest withDateUtc(OffsetDateTime dateUtc) {
+        this.dateUtc = dateUtc;
         return this;
     }
     
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public RunsForRunRequest withDevid(String devid) {
+        this.devid = devid;
+        return this;
+    }
     
-    public RunsForRunQueryParams queryParams;
-    public RunsForRunRequest withQueryParams(RunsForRunQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * List of objects to be returned in full (i.e. expanded) - options include: All, VehiclePosition, VehicleDescriptor, or None. Default is None.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public RunsForRunExpandEnum[] expand;
+    public RunsForRunRequest withExpand(RunsForRunExpandEnum[] expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    /**
+     * Indicates if geopath data will be returned (default = false)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_geopath")
+    public Boolean includeGeopath;
+    public RunsForRunRequest withIncludeGeopath(Boolean includeGeopath) {
+        this.includeGeopath = includeGeopath;
+        return this;
+    }
+    
+    /**
+     * The run_ref is the identifier of a run as returned by the departures/* and runs/* endpoints. WARNING, run_id is deprecated. Use run_ref instead.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_ref")
+    public String runRef;
+    public RunsForRunRequest withRunRef(String runRef) {
+        this.runRef = runRef;
+        return this;
+    }
+    
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public RunsForRunRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public RunsForRunRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

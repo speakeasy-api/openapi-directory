@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFeaturedImageCollectionListRequest {
-    
-    public GetFeaturedImageCollectionListQueryParams queryParams;
-    public GetFeaturedImageCollectionListRequest withQueryParams(GetFeaturedImageCollectionListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Cover image size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_hint")
+    public GetFeaturedImageCollectionListAssetHintEnum assetHint;
+    public GetFeaturedImageCollectionListRequest withAssetHint(GetFeaturedImageCollectionListAssetHintEnum assetHint) {
+        this.assetHint = assetHint;
         return this;
     }
     
+    /**
+     * Which sharing information to include in the response, such as a URL to the collection
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
+    public GetFeaturedImageCollectionListEmbedEnum embed;
+    public GetFeaturedImageCollectionListRequest withEmbed(GetFeaturedImageCollectionListEmbedEnum embed) {
+        this.embed = embed;
+        return this;
+    }
     
-    public GetFeaturedImageCollectionListSecurity security;
-    public GetFeaturedImageCollectionListRequest withSecurity(GetFeaturedImageCollectionListSecurity security) {
-        this.security = security;
+    /**
+     * The types of collections to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GetFeaturedImageCollectionListTypeEnum[] type;
+    public GetFeaturedImageCollectionListRequest withType(GetFeaturedImageCollectionListTypeEnum[] type) {
+        this.type = type;
         return this;
     }
     

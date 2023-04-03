@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AddOrReplaceDocumentsQueryParams;
 import org.openapis.openapi.models.operations.AddOrReplaceDocumentsRequestBody;
 import org.openapis.openapi.models.operations.AddOrReplaceDocumentsRequest;
 import org.openapis.openapi.models.operations.AddOrReplaceDocumentsResponse;
@@ -29,10 +28,7 @@ public class Application {
                 .build();
 
             AddOrReplaceDocumentsRequest req = new AddOrReplaceDocumentsRequest() {{
-                queryParams = new AddOrReplaceDocumentsQueryParams() {{
-                    primaryKey = "id";
-                }};
-                request = new org.openapis.openapi.models.operations.AddOrReplaceDocumentsRequestBody[]{{
+                requestBody = new org.openapis.openapi.models.operations.AddOrReplaceDocumentsRequestBody[]{{
                     add(new AddOrReplaceDocumentsRequestBody() {{
                         author = "Jane Austen";
                         genre = "romance";
@@ -55,7 +51,8 @@ public class Application {
                         title = "Pride and Prejudice";
                     }}),
                 }};
-            }};            
+                primaryKey = "id";
+            }}            
 
             AddOrReplaceDocumentsResponse res = sdk.documents.addOrReplaceDocuments(req);
 
@@ -69,7 +66,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### documents

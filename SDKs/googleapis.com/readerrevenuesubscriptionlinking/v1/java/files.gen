@@ -30,16 +30,10 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/ReaderrevenuesubscriptionlinkingPublicationsReadersDeletePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/ReaderrevenuesubscriptionlinkingPublicationsReadersDeleteQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReaderrevenuesubscriptionlinkingPublicationsReadersDeleteRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReaderrevenuesubscriptionlinkingPublicationsReadersDeleteResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ReaderrevenuesubscriptionlinkingPublicationsReadersGetEntitlementsPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/ReaderrevenuesubscriptionlinkingPublicationsReadersGetEntitlementsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReaderrevenuesubscriptionlinkingPublicationsReadersGetEntitlementsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReaderrevenuesubscriptionlinkingPublicationsReadersGetEntitlementsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlementsPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlementsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlementsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReaderrevenuesubscriptionlinkingPublicationsReadersUpdateEntitlementsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java

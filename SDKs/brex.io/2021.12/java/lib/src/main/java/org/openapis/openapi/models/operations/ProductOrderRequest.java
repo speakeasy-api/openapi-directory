@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductOrderRequest {
-    
-    public ProductOrderPathParams pathParams;
-    public ProductOrderRequest withPathParams(ProductOrderPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * SKU - 9 character value from a Product object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sku")
+    public String sku;
+    public ProductOrderRequest withSku(String sku) {
+        this.sku = sku;
         return this;
     }
     
-    
-    public ProductOrderSecurity security;
-    public ProductOrderRequest withSecurity(ProductOrderSecurity security) {
-        this.security = security;
+    /**
+     * Subject (e.g. Company) ID - 32 character hex value
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subjectId")
+    public String subjectId;
+    public ProductOrderRequest withSubjectId(String subjectId) {
+        this.subjectId = subjectId;
         return this;
     }
     

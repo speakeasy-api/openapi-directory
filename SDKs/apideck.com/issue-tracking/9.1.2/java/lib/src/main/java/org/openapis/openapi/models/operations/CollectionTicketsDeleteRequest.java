@@ -4,34 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectionTicketsDeleteRequest {
-    
-    public CollectionTicketsDeletePathParams pathParams;
-    public CollectionTicketsDeleteRequest withPathParams(CollectionTicketsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The collection ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
+    public String collectionId;
+    public CollectionTicketsDeleteRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
         return this;
     }
     
-    
-    public CollectionTicketsDeleteQueryParams queryParams;
-    public CollectionTicketsDeleteRequest withQueryParams(CollectionTicketsDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public CollectionTicketsDeleteRequest withRaw(Boolean raw) {
+        this.raw = raw;
         return this;
     }
     
-    
-    public CollectionTicketsDeleteHeaders headers;
-    public CollectionTicketsDeleteRequest withHeaders(CollectionTicketsDeleteHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID of the ticket you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ticket_id")
+    public String ticketId;
+    public CollectionTicketsDeleteRequest withTicketId(String ticketId) {
+        this.ticketId = ticketId;
         return this;
     }
     
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public CollectionTicketsDeleteRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
     
-    public CollectionTicketsDeleteSecurity security;
-    public CollectionTicketsDeleteRequest withSecurity(CollectionTicketsDeleteSecurity security) {
-        this.security = security;
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public CollectionTicketsDeleteRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public CollectionTicketsDeleteRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

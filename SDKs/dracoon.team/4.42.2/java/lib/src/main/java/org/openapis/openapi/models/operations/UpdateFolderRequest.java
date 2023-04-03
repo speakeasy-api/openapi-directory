@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateFolderRequest {
-    
-    public UpdateFolderPathParams pathParams;
-    public UpdateFolderRequest withPathParams(UpdateFolderPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateFolderHeaders headers;
-    public UpdateFolderRequest withHeaders(UpdateFolderHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateFolderRequest request;
-    public UpdateFolderRequest withRequest(org.openapis.openapi.models.shared.UpdateFolderRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateFolderRequest updateFolderRequest;
+    public UpdateFolderRequest withUpdateFolderRequest(org.openapis.openapi.models.shared.UpdateFolderRequest updateFolderRequest) {
+        this.updateFolderRequest = updateFolderRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UpdateFolderRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public UpdateFolderXSdsDateFormatEnum xSdsDateFormat;
+    public UpdateFolderRequest withXSdsDateFormat(UpdateFolderXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * Folder ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=folder_id")
+    public Long folderId;
+    public UpdateFolderRequest withFolderId(Long folderId) {
+        this.folderId = folderId;
         return this;
     }
     

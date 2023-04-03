@@ -69,10 +69,11 @@ public class Behavior {
      * **NOTE:** If the reason of your report is not here, please contact Truora support team.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReportBehaviorResponse reportBehavior(org.openapis.openapi.models.operations.ReportBehaviorRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReportBehaviorResponse reportBehavior(org.openapis.openapi.models.shared.CreateBehaviorInput request, org.openapis.openapi.models.operations.ReportBehaviorSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/behavior");
         
@@ -86,7 +87,7 @@ public class Behavior {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

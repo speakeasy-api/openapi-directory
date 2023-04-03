@@ -34,25 +34,26 @@ public class DirectorySites {
     /**
      * Gets one directory site by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingDirectorySitesGetResponse dfareportingDirectorySitesGet(org.openapis.openapi.models.operations.DfareportingDirectorySitesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingDirectorySitesGetResponse dfareportingDirectorySitesGet(org.openapis.openapi.models.operations.DfareportingDirectorySitesGetRequest request, org.openapis.openapi.models.operations.DfareportingDirectorySitesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingDirectorySitesGetPathParams.class, baseUrl, "/userprofiles/{profileId}/directorySites/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingDirectorySitesGetRequest.class, baseUrl, "/userprofiles/{profileId}/directorySites/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingDirectorySitesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingDirectorySitesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class DirectorySites {
     /**
      * Inserts a new directory site.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingDirectorySitesInsertResponse dfareportingDirectorySitesInsert(org.openapis.openapi.models.operations.DfareportingDirectorySitesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingDirectorySitesInsertResponse dfareportingDirectorySitesInsert(org.openapis.openapi.models.operations.DfareportingDirectorySitesInsertRequest request, org.openapis.openapi.models.operations.DfareportingDirectorySitesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingDirectorySitesInsertPathParams.class, baseUrl, "/userprofiles/{profileId}/directorySites", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingDirectorySitesInsertRequest.class, baseUrl, "/userprofiles/{profileId}/directorySites", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "directorySite", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingDirectorySitesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingDirectorySitesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class DirectorySites {
     /**
      * Retrieves a list of directory sites, possibly filtered. This method supports paging.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingDirectorySitesListResponse dfareportingDirectorySitesList(org.openapis.openapi.models.operations.DfareportingDirectorySitesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingDirectorySitesListResponse dfareportingDirectorySitesList(org.openapis.openapi.models.operations.DfareportingDirectorySitesListRequest request, org.openapis.openapi.models.operations.DfareportingDirectorySitesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingDirectorySitesListPathParams.class, baseUrl, "/userprofiles/{profileId}/directorySites", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingDirectorySitesListRequest.class, baseUrl, "/userprofiles/{profileId}/directorySites", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingDirectorySitesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingDirectorySitesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

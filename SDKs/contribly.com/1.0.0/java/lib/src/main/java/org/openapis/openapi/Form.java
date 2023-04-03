@@ -45,7 +45,7 @@ public class Form {
      */
     public org.openapis.openapi.models.operations.DeleteFormsIdResponse deleteFormsId(org.openapis.openapi.models.operations.DeleteFormsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFormsIdPathParams.class, baseUrl, "/forms/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFormsIdRequest.class, baseUrl, "/forms/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -83,7 +83,7 @@ public class Form {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFormResponsesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFormResponsesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -123,7 +123,7 @@ public class Form {
      */
     public org.openapis.openapi.models.operations.GetFormResponsesIdResponse getFormResponsesId(org.openapis.openapi.models.operations.GetFormResponsesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFormResponsesIdPathParams.class, baseUrl, "/form-responses/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFormResponsesIdRequest.class, baseUrl, "/form-responses/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -169,7 +169,7 @@ public class Form {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFormsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFormsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -209,7 +209,7 @@ public class Form {
      */
     public org.openapis.openapi.models.operations.GetFormsIdResponse getFormsId(org.openapis.openapi.models.operations.GetFormsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFormsIdPathParams.class, baseUrl, "/forms/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFormsIdRequest.class, baseUrl, "/forms/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -247,7 +247,7 @@ public class Form {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostFormResponsesResponse postFormResponses(org.openapis.openapi.models.operations.PostFormResponsesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostFormResponsesResponse postFormResponses(org.openapis.openapi.models.shared.FormResponseSubmission request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/form-responses");
         
@@ -290,7 +290,7 @@ public class Form {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostFormsResponse postForms(org.openapis.openapi.models.operations.PostFormsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostFormsResponse postForms(org.openapis.openapi.models.shared.FormSubmission request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/forms");
         

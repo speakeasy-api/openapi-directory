@@ -7,24 +7,99 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListIndexRequest {
-    
-    public ListIndexQueryParams queryParams;
-    public ListIndexRequest withQueryParams(ListIndexQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public String maxResults;
+    public ListIndexRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
     
-    
-    public ListIndexHeaders headers;
-    public ListIndexRequest withHeaders(ListIndexHeaders headers) {
-        this.headers = headers;
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListIndexRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ListIndexRequestBody request;
-    public ListIndexRequest withRequest(ListIndexRequestBody request) {
-        this.request = request;
+    public ListIndexRequestBody requestBody;
+    public ListIndexRequest withRequestBody(ListIndexRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListIndexRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListIndexRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListIndexRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListIndexRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListIndexRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListIndexRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListIndexRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The consistency level to execute the request at.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-consistency-level")
+    public ListIndexXAmzConsistencyLevelEnum xAmzConsistencyLevel;
+    public ListIndexRequest withXAmzConsistencyLevel(ListIndexXAmzConsistencyLevelEnum xAmzConsistencyLevel) {
+        this.xAmzConsistencyLevel = xAmzConsistencyLevel;
+        return this;
+    }
+    
+    /**
+     * The ARN of the directory that the index exists in.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-data-partition")
+    public String xAmzDataPartition;
+    public ListIndexRequest withXAmzDataPartition(String xAmzDataPartition) {
+        this.xAmzDataPartition = xAmzDataPartition;
         return this;
     }
     

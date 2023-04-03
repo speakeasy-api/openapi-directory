@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientUnsubscribeRequest {
+    /**
+     * Agent to change MQTT state
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolMqttClientUnsubscribeRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolMqttClientUnsubscribePathParams pathParams;
-    public ProtocolMqttClientUnsubscribeRequest withPathParams(ProtocolMqttClientUnsubscribePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Subscription Number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subNum")
+    public Integer subNum;
+    public ProtocolMqttClientUnsubscribeRequest withSubNum(Integer subNum) {
+        this.subNum = subNum;
         return this;
     }
     

@@ -39,7 +39,7 @@ public class PermissionsV2 {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateRoleResponse createRole(org.openapis.openapi.models.operations.CreateRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateRoleResponse createRole(org.openapis.openapi.models.shared.CreateRoleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/roles");
         

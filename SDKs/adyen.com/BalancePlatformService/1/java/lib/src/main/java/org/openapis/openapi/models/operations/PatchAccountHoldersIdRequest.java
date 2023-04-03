@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchAccountHoldersIdRequest {
-    
-    public PatchAccountHoldersIdPathParams pathParams;
-    public PatchAccountHoldersIdRequest withPathParams(PatchAccountHoldersIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AccountHolderInput request;
-    public PatchAccountHoldersIdRequest withRequest(org.openapis.openapi.models.shared.AccountHolderInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AccountHolderInput accountHolderInput;
+    public PatchAccountHoldersIdRequest withAccountHolderInput(org.openapis.openapi.models.shared.AccountHolderInput accountHolderInput) {
+        this.accountHolderInput = accountHolderInput;
         return this;
     }
     
-    
-    public PatchAccountHoldersIdSecurity security;
-    public PatchAccountHoldersIdRequest withSecurity(PatchAccountHoldersIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the account holder.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchAccountHoldersIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

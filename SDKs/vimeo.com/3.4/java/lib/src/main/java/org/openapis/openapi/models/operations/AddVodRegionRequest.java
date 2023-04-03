@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddVodRegionRequest {
-    
-    public AddVodRegionPathParams pathParams;
-    public AddVodRegionRequest withPathParams(AddVodRegionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The country code.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country")
+    public String country;
+    public AddVodRegionRequest withCountry(String country) {
+        this.country = country;
         return this;
     }
     
-    
-    public AddVodRegionSecurity security;
-    public AddVodRegionRequest withSecurity(AddVodRegionSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public AddVodRegionRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
         return this;
     }
     

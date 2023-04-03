@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVariablesRequest {
-    
-    public GetVariablesPathParams pathParams;
-    public GetVariablesRequest withPathParams(GetVariablesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The chargestation id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetVariablesRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSupportingDocumentRequest {
-    
-    public UpdateSupportingDocumentPathParams pathParams;
-    public UpdateSupportingDocumentRequest withPathParams(UpdateSupportingDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSupportingDocumentUpdateSupportingDocumentRequest request;
-    public UpdateSupportingDocumentRequest withRequest(UpdateSupportingDocumentUpdateSupportingDocumentRequest request) {
-        this.request = request;
+    public UpdateSupportingDocumentUpdateSupportingDocumentRequest requestBody;
+    public UpdateSupportingDocumentRequest withRequestBody(UpdateSupportingDocumentUpdateSupportingDocumentRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSupportingDocumentSecurity security;
-    public UpdateSupportingDocumentRequest withSecurity(UpdateSupportingDocumentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateSupportingDocumentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string created by Twilio to identify the Supporting Document resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateSupportingDocumentRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

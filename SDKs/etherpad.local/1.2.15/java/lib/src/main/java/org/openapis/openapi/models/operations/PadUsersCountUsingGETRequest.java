@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PadUsersCountUsingGETRequest {
-    
-    public PadUsersCountUsingGETQueryParams queryParams;
-    public PadUsersCountUsingGETRequest withQueryParams(PadUsersCountUsingGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
+    public String padID;
+    public PadUsersCountUsingGETRequest withPadID(String padID) {
+        this.padID = padID;
         return this;
     }
     

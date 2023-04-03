@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TenancyTenantGroupsPartialUpdateRequest {
-    
-    public TenancyTenantGroupsPartialUpdatePathParams pathParams;
-    public TenancyTenantGroupsPartialUpdateRequest withPathParams(TenancyTenantGroupsPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableTenantGroupInput writableTenantGroupInput;
+    public TenancyTenantGroupsPartialUpdateRequest withWritableTenantGroupInput(org.openapis.openapi.models.shared.WritableTenantGroupInput writableTenantGroupInput) {
+        this.writableTenantGroupInput = writableTenantGroupInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableTenantGroupInput request;
-    public TenancyTenantGroupsPartialUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableTenantGroupInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this tenant group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public TenancyTenantGroupsPartialUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

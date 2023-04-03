@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCrmV3ExtensionsCardsAppIdCreateSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public org.openapis.openapi.models.shared.SchemeDeveloperHapikey developerHapikey;
-    public PostCrmV3ExtensionsCardsAppIdCreateSecurity withDeveloperHapikey(org.openapis.openapi.models.shared.SchemeDeveloperHapikey developerHapikey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=hapikey")
+    public String developerHapikey;
+    public PostCrmV3ExtensionsCardsAppIdCreateSecurity withDeveloperHapikey(String developerHapikey) {
         this.developerHapikey = developerHapikey;
         return this;
     }

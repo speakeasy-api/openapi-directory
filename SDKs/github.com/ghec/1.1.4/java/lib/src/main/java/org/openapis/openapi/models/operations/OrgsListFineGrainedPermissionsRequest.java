@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsListFineGrainedPermissionsRequest {
-    
-    public OrgsListFineGrainedPermissionsPathParams pathParams;
-    public OrgsListFineGrainedPermissionsRequest withPathParams(OrgsListFineGrainedPermissionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsListFineGrainedPermissionsRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

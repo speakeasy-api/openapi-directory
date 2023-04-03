@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodePushDeploymentMetricsGetRequest {
-    
-    public CodePushDeploymentMetricsGetPathParams pathParams;
-    public CodePushDeploymentMetricsGetRequest withPathParams(CodePushDeploymentMetricsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CodePushDeploymentMetricsGetRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * deployment name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment_name")
+    public String deploymentName;
+    public CodePushDeploymentMetricsGetRequest withDeploymentName(String deploymentName) {
+        this.deploymentName = deploymentName;
+        return this;
+    }
     
-    public CodePushDeploymentMetricsGetSecurity security;
-    public CodePushDeploymentMetricsGetRequest withSecurity(CodePushDeploymentMetricsGetSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CodePushDeploymentMetricsGetRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateBatchOrderInvoiceRequest {
-    
-    public GenerateBatchOrderInvoiceQueryParams queryParams;
-    public GenerateBatchOrderInvoiceRequest withQueryParams(GenerateBatchOrderInvoiceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.GenerateBatchOrderInvoiceRequestItem[] requestBody;
+    public GenerateBatchOrderInvoiceRequest withRequestBody(org.openapis.openapi.models.shared.GenerateBatchOrderInvoiceRequestItem[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GenerateBatchOrderInvoiceRequestItem[] request;
-    public GenerateBatchOrderInvoiceRequest withRequest(org.openapis.openapi.models.shared.GenerateBatchOrderInvoiceRequestItem[] request) {
-        this.request = request;
+    /**
+     * Sometimes the user in the e-commerce application is not the same as user associated with the current subscription key. We recommend providing your application's user login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userName")
+    public String userName;
+    public GenerateBatchOrderInvoiceRequest withUserName(String userName) {
+        this.userName = userName;
         return this;
     }
     

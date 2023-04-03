@@ -7,29 +7,22 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnlinkCustomerFromGiftCardRequest {
-    
-    public UnlinkCustomerFromGiftCardPathParams pathParams;
-    public UnlinkCustomerFromGiftCardRequest withPathParams(UnlinkCustomerFromGiftCardPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UnlinkCustomerFromGiftCardRequest request;
-    public UnlinkCustomerFromGiftCardRequest withRequest(org.openapis.openapi.models.shared.UnlinkCustomerFromGiftCardRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UnlinkCustomerFromGiftCardRequest unlinkCustomerFromGiftCardRequest;
+    public UnlinkCustomerFromGiftCardRequest withUnlinkCustomerFromGiftCardRequest(org.openapis.openapi.models.shared.UnlinkCustomerFromGiftCardRequest unlinkCustomerFromGiftCardRequest) {
+        this.unlinkCustomerFromGiftCardRequest = unlinkCustomerFromGiftCardRequest;
         return this;
     }
     
-    
-    public UnlinkCustomerFromGiftCardSecurity security;
-    public UnlinkCustomerFromGiftCardRequest withSecurity(UnlinkCustomerFromGiftCardSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gift_card_id")
+    public String giftCardId;
+    public UnlinkCustomerFromGiftCardRequest withGiftCardId(String giftCardId) {
+        this.giftCardId = giftCardId;
         return this;
     }
     

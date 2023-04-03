@@ -7,24 +7,73 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTDeleteLoadBalancerListenersRequest {
-    
-    public POSTDeleteLoadBalancerListenersQueryParams queryParams;
-    public POSTDeleteLoadBalancerListenersRequest withQueryParams(POSTDeleteLoadBalancerListenersQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public POSTDeleteLoadBalancerListenersHeaders headers;
-    public POSTDeleteLoadBalancerListenersRequest withHeaders(POSTDeleteLoadBalancerListenersHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public POSTDeleteLoadBalancerListenersActionEnum action;
+    public POSTDeleteLoadBalancerListenersRequest withAction(POSTDeleteLoadBalancerListenersActionEnum action) {
+        this.action = action;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public POSTDeleteLoadBalancerListenersRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public POSTDeleteLoadBalancerListenersRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public POSTDeleteLoadBalancerListenersVersionEnum version;
+    public POSTDeleteLoadBalancerListenersRequest withVersion(POSTDeleteLoadBalancerListenersVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public POSTDeleteLoadBalancerListenersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public POSTDeleteLoadBalancerListenersRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public POSTDeleteLoadBalancerListenersRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public POSTDeleteLoadBalancerListenersRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public POSTDeleteLoadBalancerListenersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public POSTDeleteLoadBalancerListenersRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public POSTDeleteLoadBalancerListenersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

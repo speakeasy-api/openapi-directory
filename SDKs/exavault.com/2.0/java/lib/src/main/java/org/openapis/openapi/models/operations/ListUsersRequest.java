@@ -4,20 +4,138 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListUsersRequest {
-    
-    public ListUsersQueryParams queryParams;
-    public ListUsersRequest withQueryParams(ListUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Email to search for. Ignored if `username` is provided. Supports wildcard searches
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public ListUsersRequest withEmail(String email) {
+        this.email = email;
         return this;
     }
     
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public ListUsersRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
+        return this;
+    }
     
-    public ListUsersHeaders headers;
-    public ListUsersRequest withHeaders(ListUsersHeaders headers) {
-        this.headers = headers;
+    /**
+     * API key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public ListUsersRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
+    
+    /**
+     * Resource identifier for user's home directory. Does not support wildcard searches.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=homeResource")
+    public String homeResource;
+    public ListUsersRequest withHomeResource(String homeResource) {
+        this.homeResource = homeResource;
+        return this;
+    }
+    
+    /**
+     * Comma separated list of relationships to include in response. Valid options are **homeResource** and **ownerAccount**.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public String include;
+    public ListUsersRequest withInclude(String include) {
+        this.include = include;
+        return this;
+    }
+    
+    /**
+     * Number of users to return. Can be used for pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public ListUsersRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Nickname to search for. Ignored if `username` is provided. Supports wildcard searches.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nickname")
+    public String nickname;
+    public ListUsersRequest withNickname(String nickname) {
+        this.nickname = nickname;
+        return this;
+    }
+    
+    /**
+     * Starting user record in the result set. Can be used for pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public ListUsersRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Types of users to include the list. Ignored if `username` is provided. Valid options are **admin**, **master** and **user**
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
+    public String role;
+    public ListUsersRequest withRole(String role) {
+        this.role = role;
+        return this;
+    }
+    
+    /**
+     * Searches the nickname, email, role and homeDir fields for the provided value. Ignored if `username` is provided. Supports wildcard searches.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public ListUsersRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * Sort order or matching users. You can sort by multiple columns by separating sort options with a comma; the sort will be applied in the order specified. The sort order for each sort field is ascending unless it is prefixed with a minus (\u201c-\u201c), in which case it will be descending.
+     * 
+     * Valid sort fields are: **nickname**, **username**, **email**, **homeDir** and **modified**
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public ListUsersRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Whether a user is locked. Ignored if `username` is provided. **0** means user is locked, **1** means user is not locked. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public Long status;
+    public ListUsersRequest withStatus(Long status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * The username of the user you are looking for. Only entries with the same username as this will be in the list of results. Does not support wildcard searches.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public ListUsersRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

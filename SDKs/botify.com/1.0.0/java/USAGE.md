@@ -4,9 +4,7 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateUrlsExportPathParams;
 import org.openapis.openapi.models.operations.CreateUrlsExportAreaEnum;
-import org.openapis.openapi.models.operations.CreateUrlsExportQueryParams;
 import org.openapis.openapi.models.operations.CreateUrlsExportRequest;
 import org.openapis.openapi.models.operations.CreateUrlsExportResponse;
 import org.openapis.openapi.models.shared.UrlsQuery;
@@ -16,44 +14,38 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    djangoRestToken = new SchemeDjangoRestToken() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    djangoRestToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateUrlsExportRequest req = new CreateUrlsExportRequest() {{
-                pathParams = new CreateUrlsExportPathParams() {{
-                    analysisSlug = "corrupti";
-                    projectSlug = "provident";
-                    username = "Micheal_Sporer";
-                }};
-                queryParams = new CreateUrlsExportQueryParams() {{
-                    area = "new";
-                }};
-                request = new UrlsQuery() {{
+                urlsQuery = new UrlsQuery() {{
                     fields = new String[]{{
-                        add("vel"),
-                        add("error"),
-                        add("deserunt"),
-                        add("suscipit"),
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
                     filters = new java.util.HashMap<String, Object>() {{
-                        put("magnam", "debitis");
-                        put("ipsa", "delectus");
+                        put("nulla", "corrupti");
+                        put("illum", "vel");
+                        put("error", "deserunt");
                     }};
                     sort = new java.util.HashMap<String, Object>[]{{
                         add(new java.util.HashMap<String, Object>() {{
-                            put("molestiae", "minus");
-                            put("placeat", "voluptatum");
+                            put("magnam", "debitis");
+                            put("ipsa", "delectus");
                         }}),
                         add(new java.util.HashMap<String, Object>() {{
-                            put("excepturi", "nisi");
-                            put("recusandae", "temporibus");
+                            put("suscipit", "molestiae");
+                            put("minus", "placeat");
                         }}),
                     }};
                 }};
-            }};            
+                analysisSlug = "voluptatum";
+                area = "disappeared";
+                projectSlug = "excepturi";
+                username = "Glen.Walsh33";
+            }}            
 
             CreateUrlsExportResponse res = sdk.analysis.createUrlsExport(req);
 

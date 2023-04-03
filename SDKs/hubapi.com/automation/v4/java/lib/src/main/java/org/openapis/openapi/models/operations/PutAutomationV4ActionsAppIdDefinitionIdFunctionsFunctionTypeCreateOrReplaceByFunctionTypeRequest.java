@@ -7,27 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeRequest {
-    
-    public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypePathParams pathParams;
-    public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeRequest withPathParams(PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The function source code. Must be valid JavaScript code.
      */
     @SpeakeasyMetadata("request:mediaType=text/plain")
-    public String request;
-    public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeRequest withRequest(String request) {
-        this.request = request;
+    public String requestBody;
+    public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeRequest withAppId(Integer appId) {
+        this.appId = appId;
+        return this;
+    }
     
-    public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeSecurity security;
-    public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeRequest withSecurity(PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the custom workflow action.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=definitionId")
+    public String definitionId;
+    public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeRequest withDefinitionId(String definitionId) {
+        this.definitionId = definitionId;
+        return this;
+    }
+    
+    /**
+     * The type of function. This determines when the function will be called.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionType")
+    public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeFunctionTypeEnum functionType;
+    public PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeRequest withFunctionType(PutAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeCreateOrReplaceByFunctionTypeFunctionTypeEnum functionType) {
+        this.functionType = functionType;
         return this;
     }
     

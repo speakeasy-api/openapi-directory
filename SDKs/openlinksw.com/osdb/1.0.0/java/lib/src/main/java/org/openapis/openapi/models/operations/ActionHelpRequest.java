@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionHelpRequest {
+    /**
+     * Action ID of the action for which help text is being requested.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=actionId")
+    public String actionId;
+    public ActionHelpRequest withActionId(String actionId) {
+        this.actionId = actionId;
+        return this;
+    }
     
-    public ActionHelpPathParams pathParams;
-    public ActionHelpRequest withPathParams(ActionHelpPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Service ID of the service supporting the action.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceId")
+    public String serviceId;
+    public ActionHelpRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
         return this;
     }
     

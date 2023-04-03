@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTracksTrackIdRepostersRequest {
-    
-    public GetTracksTrackIdRepostersPathParams pathParams;
-    public GetTracksTrackIdRepostersRequest withPathParams(GetTracksTrackIdRepostersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Number of results to return in the collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetTracksTrackIdRepostersRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetTracksTrackIdRepostersQueryParams queryParams;
-    public GetTracksTrackIdRepostersRequest withQueryParams(GetTracksTrackIdRepostersQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetTracksTrackIdRepostersSecurity security;
-    public GetTracksTrackIdRepostersRequest withSecurity(GetTracksTrackIdRepostersSecurity security) {
-        this.security = security;
+    /**
+     * SoundCloud Track id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=track_id")
+    public Long trackId;
+    public GetTracksTrackIdRepostersRequest withTrackId(Long trackId) {
+        this.trackId = trackId;
         return this;
     }
     

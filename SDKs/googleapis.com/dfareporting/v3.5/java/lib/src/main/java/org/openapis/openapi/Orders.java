@@ -33,25 +33,26 @@ public class Orders {
     /**
      * Gets one order by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingOrdersGetResponse dfareportingOrdersGet(org.openapis.openapi.models.operations.DfareportingOrdersGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingOrdersGetResponse dfareportingOrdersGet(org.openapis.openapi.models.operations.DfareportingOrdersGetRequest request, org.openapis.openapi.models.operations.DfareportingOrdersGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingOrdersGetPathParams.class, baseUrl, "/userprofiles/{profileId}/projects/{projectId}/orders/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingOrdersGetRequest.class, baseUrl, "/userprofiles/{profileId}/projects/{projectId}/orders/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingOrdersGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingOrdersGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class Orders {
     /**
      * Retrieves a list of orders, possibly filtered. This method supports paging.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingOrdersListResponse dfareportingOrdersList(org.openapis.openapi.models.operations.DfareportingOrdersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingOrdersListResponse dfareportingOrdersList(org.openapis.openapi.models.operations.DfareportingOrdersListRequest request, org.openapis.openapi.models.operations.DfareportingOrdersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingOrdersListPathParams.class, baseUrl, "/userprofiles/{profileId}/projects/{projectId}/orders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingOrdersListRequest.class, baseUrl, "/userprofiles/{profileId}/projects/{projectId}/orders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingOrdersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingOrdersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

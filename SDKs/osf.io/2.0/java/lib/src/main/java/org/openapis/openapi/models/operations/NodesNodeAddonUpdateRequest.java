@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesNodeAddonUpdateRequest {
-    
-    public NodesNodeAddonUpdatePathParams pathParams;
-    public NodesNodeAddonUpdateRequest withPathParams(NodesNodeAddonUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> requestBody;
+    public NodesNodeAddonUpdateRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public NodesNodeAddonUpdateRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    /**
+     * The unique identifier of the node.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public String nodeId;
+    public NodesNodeAddonUpdateRequest withNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the addon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=provider")
+    public String provider;
+    public NodesNodeAddonUpdateRequest withProvider(String provider) {
+        this.provider = provider;
         return this;
     }
     

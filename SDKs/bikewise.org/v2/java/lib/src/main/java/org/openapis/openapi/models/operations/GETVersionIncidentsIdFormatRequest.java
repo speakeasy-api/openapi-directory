@@ -4,13 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETVersionIncidentsIdFormatRequest {
-    
-    public GETVersionIncidentsIdFormatPathParams pathParams;
-    public GETVersionIncidentsIdFormatRequest withPathParams(GETVersionIncidentsIdFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * &lt;p&gt;Incident ID&lt;/p&gt;
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GETVersionIncidentsIdFormatRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostContainersNameOrIdStopRequest {
-    
-    public PostContainersNameOrIdStopPathParams pathParams;
-    public PostContainersNameOrIdStopRequest withPathParams(PostContainersNameOrIdStopPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space &lt;space_name&gt; --guid`, where `&lt;space_name&gt;` is the name of your space, to retrieve your space ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public PostContainersNameOrIdStopRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
         return this;
     }
     
-    
-    public PostContainersNameOrIdStopQueryParams queryParams;
-    public PostContainersNameOrIdStopRequest withQueryParams(PostContainersNameOrIdStopQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public PostContainersNameOrIdStopRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
         return this;
     }
     
+    /**
+     * The unique identifier or name of the container that you want to stop. Run `cf ic ps` or call the `GET /containers/json` endpoint to review the containers in your space that are currently in a running state.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name_or_id")
+    public String nameOrId;
+    public PostContainersNameOrIdStopRequest withNameOrId(String nameOrId) {
+        this.nameOrId = nameOrId;
+        return this;
+    }
     
-    public PostContainersNameOrIdStopHeaders headers;
-    public PostContainersNameOrIdStopRequest withHeaders(PostContainersNameOrIdStopHeaders headers) {
-        this.headers = headers;
+    /**
+     * The number of seconds to wait before the container is stopped. For example, if you want a container to stop after 10 seconds, enter `t=10`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t")
+    public Long t;
+    public PostContainersNameOrIdStopRequest withT(Long t) {
+        this.t = t;
         return this;
     }
     

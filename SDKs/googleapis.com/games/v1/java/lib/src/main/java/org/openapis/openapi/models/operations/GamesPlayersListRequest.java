@@ -4,27 +4,156 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GamesPlayersListRequest {
-    
-    public GamesPlayersListPathParams pathParams;
-    public GamesPlayersListRequest withPathParams(GamesPlayersListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public GamesPlayersListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public GamesPlayersListQueryParams queryParams;
-    public GamesPlayersListRequest withQueryParams(GamesPlayersListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public GamesPlayersListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public GamesPlayersListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public GamesPlayersListSecurity security;
-    public GamesPlayersListRequest withSecurity(GamesPlayersListSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public GamesPlayersListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Collection of players being retrieved
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
+    public GamesPlayersListCollectionEnum collection;
+    public GamesPlayersListRequest withCollection(GamesPlayersListCollectionEnum collection) {
+        this.collection = collection;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GamesPlayersListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GamesPlayersListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The preferred language to use for strings returned by this method.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public GamesPlayersListRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * The maximum number of player resources to return in the response, used for paging. For any response, the actual number of player resources returned may be less than the specified `maxResults`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public GamesPlayersListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public GamesPlayersListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The token returned by the previous request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public GamesPlayersListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public GamesPlayersListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public GamesPlayersListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public GamesPlayersListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public GamesPlayersListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointGetRequest {
-    
-    public StopPointGetPathParams pathParams;
-    public StopPointGetRequest withPathParams(StopPointGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A comma-separated list of stop point ids (station naptan code e.g. 940GZZLUASL). Max. approx. 20 ids.
+     *             You can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
+    public String[] ids;
+    public StopPointGetRequest withIds(String[] ids) {
+        this.ids = ids;
         return this;
     }
     
-    
-    public StopPointGetQueryParams queryParams;
-    public StopPointGetRequest withQueryParams(StopPointGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Include the crowding data (static). To Filter further use: /StopPoint/{ids}/Crowding/{line}
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeCrowdingData")
+    public Boolean includeCrowdingData;
+    public StopPointGetRequest withIncludeCrowdingData(Boolean includeCrowdingData) {
+        this.includeCrowdingData = includeCrowdingData;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSigninSigninIdRequest {
-    
-    public PutSigninSigninIdPathParams pathParams;
-    public PutSigninSigninIdRequest withPathParams(PutSigninSigninIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Signin signin;
+    public PutSigninSigninIdRequest withSignin(org.openapis.openapi.models.shared.Signin signin) {
+        this.signin = signin;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Signin request;
-    public PutSigninSigninIdRequest withRequest(org.openapis.openapi.models.shared.Signin request) {
-        this.request = request;
+    /**
+     * The ID of the signin record to be retrieved.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=signinId")
+    public Long signinId;
+    public PutSigninSigninIdRequest withSigninId(Long signinId) {
+        this.signinId = signinId;
         return this;
     }
     

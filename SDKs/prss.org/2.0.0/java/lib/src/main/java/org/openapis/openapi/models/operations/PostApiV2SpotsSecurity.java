@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV2SpotsSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeCdOauth2 cdOauth2;
-    public PostApiV2SpotsSecurity withCdOauth2(org.openapis.openapi.models.shared.SchemeCdOauth2 cdOauth2) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String cdOauth2;
+    public PostApiV2SpotsSecurity withCdOauth2(String cdOauth2) {
         this.cdOauth2 = cdOauth2;
         return this;
     }

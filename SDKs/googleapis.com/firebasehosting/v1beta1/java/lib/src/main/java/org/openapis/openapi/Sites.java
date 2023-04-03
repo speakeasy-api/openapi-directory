@@ -35,27 +35,28 @@ public class Sites {
     /**
      * Creates a new channel in the specified site.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasehostingSitesChannelsCreateResponse firebasehostingSitesChannelsCreate(org.openapis.openapi.models.operations.FirebasehostingSitesChannelsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasehostingSitesChannelsCreateResponse firebasehostingSitesChannelsCreate(org.openapis.openapi.models.operations.FirebasehostingSitesChannelsCreateRequest request, org.openapis.openapi.models.operations.FirebasehostingSitesChannelsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesChannelsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/channels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesChannelsCreateRequest.class, baseUrl, "/v1beta1/{parent}/channels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "channelInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesChannelsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesChannelsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Sites {
     /**
      * Lists the channels for the specified site. All sites have a default `live` channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasehostingSitesChannelsListResponse firebasehostingSitesChannelsList(org.openapis.openapi.models.operations.FirebasehostingSitesChannelsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasehostingSitesChannelsListResponse firebasehostingSitesChannelsList(org.openapis.openapi.models.operations.FirebasehostingSitesChannelsListRequest request, org.openapis.openapi.models.operations.FirebasehostingSitesChannelsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesChannelsListPathParams.class, baseUrl, "/v1beta1/{parent}/channels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesChannelsListRequest.class, baseUrl, "/v1beta1/{parent}/channels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesChannelsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesChannelsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Sites {
     /**
      * Creates a domain mapping on the specified site.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasehostingSitesDomainsCreateResponse firebasehostingSitesDomainsCreate(org.openapis.openapi.models.operations.FirebasehostingSitesDomainsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasehostingSitesDomainsCreateResponse firebasehostingSitesDomainsCreate(org.openapis.openapi.models.operations.FirebasehostingSitesDomainsCreateRequest request, org.openapis.openapi.models.operations.FirebasehostingSitesDomainsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesDomainsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/domains", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesDomainsCreateRequest.class, baseUrl, "/v1beta1/{parent}/domains", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "domain", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesDomainsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesDomainsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Sites {
     /**
      * Lists the domains for the specified site.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasehostingSitesDomainsListResponse firebasehostingSitesDomainsList(org.openapis.openapi.models.operations.FirebasehostingSitesDomainsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasehostingSitesDomainsListResponse firebasehostingSitesDomainsList(org.openapis.openapi.models.operations.FirebasehostingSitesDomainsListRequest request, org.openapis.openapi.models.operations.FirebasehostingSitesDomainsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesDomainsListPathParams.class, baseUrl, "/v1beta1/{parent}/domains", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesDomainsListRequest.class, baseUrl, "/v1beta1/{parent}/domains", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesDomainsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesDomainsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,27 +223,28 @@ public class Sites {
     /**
      * Updates the specified domain mapping, creating the mapping as if it does not exist.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasehostingSitesDomainsUpdateResponse firebasehostingSitesDomainsUpdate(org.openapis.openapi.models.operations.FirebasehostingSitesDomainsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasehostingSitesDomainsUpdateResponse firebasehostingSitesDomainsUpdate(org.openapis.openapi.models.operations.FirebasehostingSitesDomainsUpdateRequest request, org.openapis.openapi.models.operations.FirebasehostingSitesDomainsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesDomainsUpdatePathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesDomainsUpdateRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "domain", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesDomainsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesDomainsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,27 +271,28 @@ public class Sites {
     /**
      * Creates a new release, which makes the content of the specified version actively display on the appropriate URL(s).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasehostingSitesReleasesCreateResponse firebasehostingSitesReleasesCreate(org.openapis.openapi.models.operations.FirebasehostingSitesReleasesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasehostingSitesReleasesCreateResponse firebasehostingSitesReleasesCreate(org.openapis.openapi.models.operations.FirebasehostingSitesReleasesCreateRequest request, org.openapis.openapi.models.operations.FirebasehostingSitesReleasesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesReleasesCreatePathParams.class, baseUrl, "/v1beta1/{parent}/releases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesReleasesCreateRequest.class, baseUrl, "/v1beta1/{parent}/releases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "release", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesReleasesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesReleasesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -313,25 +319,26 @@ public class Sites {
     /**
      * Lists the releases that have been created for the specified site or channel. When used to list releases for a site, this list includes releases for both the default `live` channel and any active preview channels for the specified site.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasehostingSitesReleasesListResponse firebasehostingSitesReleasesList(org.openapis.openapi.models.operations.FirebasehostingSitesReleasesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasehostingSitesReleasesListResponse firebasehostingSitesReleasesList(org.openapis.openapi.models.operations.FirebasehostingSitesReleasesListRequest request, org.openapis.openapi.models.operations.FirebasehostingSitesReleasesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesReleasesListPathParams.class, baseUrl, "/v1beta1/{parent}/releases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesReleasesListRequest.class, baseUrl, "/v1beta1/{parent}/releases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesReleasesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesReleasesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,27 +365,28 @@ public class Sites {
     /**
      * Creates a new version on the specified target site using the content of the specified version.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCloneResponse firebasehostingSitesVersionsClone(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCloneRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCloneResponse firebasehostingSitesVersionsClone(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCloneRequest request, org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCloneSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsClonePathParams.class, baseUrl, "/v1beta1/{parent}/versions:clone", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCloneRequest.class, baseUrl, "/v1beta1/{parent}/versions:clone", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "cloneVersionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCloneQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCloneRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -405,27 +413,28 @@ public class Sites {
     /**
      * Creates a new version for the specified site.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCreateResponse firebasehostingSitesVersionsCreate(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCreateResponse firebasehostingSitesVersionsCreate(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCreateRequest request, org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCreateRequest.class, baseUrl, "/v1beta1/{parent}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "version", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -452,25 +461,26 @@ public class Sites {
     /**
      * Deletes the specified version.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasehostingSitesVersionsDeleteResponse firebasehostingSitesVersionsDelete(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasehostingSitesVersionsDeleteResponse firebasehostingSitesVersionsDelete(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsDeleteRequest request, org.openapis.openapi.models.operations.FirebasehostingSitesVersionsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsDeletePathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsDeleteRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,25 +507,26 @@ public class Sites {
     /**
      * Lists the remaining files to be uploaded for the specified version.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasehostingSitesVersionsFilesListResponse firebasehostingSitesVersionsFilesList(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsFilesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasehostingSitesVersionsFilesListResponse firebasehostingSitesVersionsFilesList(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsFilesListRequest request, org.openapis.openapi.models.operations.FirebasehostingSitesVersionsFilesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsFilesListPathParams.class, baseUrl, "/v1beta1/{parent}/files", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsFilesListRequest.class, baseUrl, "/v1beta1/{parent}/files", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsFilesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsFilesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -542,25 +553,26 @@ public class Sites {
     /**
      * Get the specified version that has been created for the specified site. This can include versions that were created for the default `live` channel or for any active preview channels for the specified site.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasehostingSitesVersionsGetResponse firebasehostingSitesVersionsGet(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasehostingSitesVersionsGetResponse firebasehostingSitesVersionsGet(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsGetRequest request, org.openapis.openapi.models.operations.FirebasehostingSitesVersionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsGetPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsGetRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -587,25 +599,26 @@ public class Sites {
     /**
      * Lists the versions that have been created for the specified site. This list includes versions for both the default `live` channel and any active preview channels for the specified site.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasehostingSitesVersionsListResponse firebasehostingSitesVersionsList(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasehostingSitesVersionsListResponse firebasehostingSitesVersionsList(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsListRequest request, org.openapis.openapi.models.operations.FirebasehostingSitesVersionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsListPathParams.class, baseUrl, "/v1beta1/{parent}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsListRequest.class, baseUrl, "/v1beta1/{parent}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -632,27 +645,28 @@ public class Sites {
     /**
      *  Updates the specified metadata for the specified version. This method will fail with `FAILED_PRECONDITION` in the event of an invalid state transition. The supported [state](../sites.versions#versionstatus) transitions for a version are from `CREATED` to `FINALIZED`. Use [`DeleteVersion`](delete) to set the status of a version to `DELETED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPatchResponse firebasehostingSitesVersionsPatch(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPatchResponse firebasehostingSitesVersionsPatch(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPatchRequest request, org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPatchPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPatchRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "version", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -679,27 +693,28 @@ public class Sites {
     /**
      *  Adds content files to the specified version. Each file must be under 2 GB.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPopulateFilesResponse firebasehostingSitesVersionsPopulateFiles(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPopulateFilesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPopulateFilesResponse firebasehostingSitesVersionsPopulateFiles(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPopulateFilesRequest request, org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPopulateFilesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPopulateFilesPathParams.class, baseUrl, "/v1beta1/{parent}:populateFiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPopulateFilesRequest.class, baseUrl, "/v1beta1/{parent}:populateFiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "populateVersionFilesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPopulateFilesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasehostingSitesVersionsPopulateFilesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

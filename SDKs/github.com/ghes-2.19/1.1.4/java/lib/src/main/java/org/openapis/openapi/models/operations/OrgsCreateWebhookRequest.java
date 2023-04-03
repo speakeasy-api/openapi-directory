@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsCreateWebhookRequest {
-    
-    public OrgsCreateWebhookPathParams pathParams;
-    public OrgsCreateWebhookRequest withPathParams(OrgsCreateWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public OrgsCreateWebhookRequestBody requestBody;
+    public OrgsCreateWebhookRequest withRequestBody(OrgsCreateWebhookRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public OrgsCreateWebhookRequestBody request;
-    public OrgsCreateWebhookRequest withRequest(OrgsCreateWebhookRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsCreateWebhookRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

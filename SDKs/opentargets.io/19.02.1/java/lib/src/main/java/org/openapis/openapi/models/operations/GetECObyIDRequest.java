@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetECObyIDRequest {
-    
-    public GetECObyIDPathParams pathParams;
-    public GetECObyIDRequest withPathParams(GetECObyIDPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An [evidence code ontology](http://www.ebi.ac.uk/ols/v2/browse.do?ontName=ECO) ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ECO_ID")
+    public String ecoId;
+    public GetECObyIDRequest withEcoId(String ecoId) {
+        this.ecoId = ecoId;
         return this;
     }
     

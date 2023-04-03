@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdWebhooksRequest {
-    
-    public GetMerchantsMerchantIdWebhooksPathParams pathParams;
-    public GetMerchantsMerchantIdWebhooksRequest withPathParams(GetMerchantsMerchantIdWebhooksPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public GetMerchantsMerchantIdWebhooksRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     
-    
-    public GetMerchantsMerchantIdWebhooksQueryParams queryParams;
-    public GetMerchantsMerchantIdWebhooksRequest withQueryParams(GetMerchantsMerchantIdWebhooksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of the page to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Integer pageNumber;
+    public GetMerchantsMerchantIdWebhooksRequest withPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
     
-    
-    public GetMerchantsMerchantIdWebhooksSecurity security;
-    public GetMerchantsMerchantIdWebhooksRequest withSecurity(GetMerchantsMerchantIdWebhooksSecurity security) {
-        this.security = security;
+    /**
+     * The number of items to have on a page, maximum 100. The default is 10 items on a page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetMerchantsMerchantIdWebhooksRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

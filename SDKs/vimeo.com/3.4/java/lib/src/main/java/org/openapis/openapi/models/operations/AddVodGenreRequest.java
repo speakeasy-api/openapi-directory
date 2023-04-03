@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddVodGenreRequest {
-    
-    public AddVodGenrePathParams pathParams;
-    public AddVodGenreRequest withPathParams(AddVodGenrePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the genre.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=genre_id")
+    public String genreId;
+    public AddVodGenreRequest withGenreId(String genreId) {
+        this.genreId = genreId;
         return this;
     }
     
-    
-    public AddVodGenreSecurity security;
-    public AddVodGenreRequest withSecurity(AddVodGenreSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public AddVodGenreRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
         return this;
     }
     

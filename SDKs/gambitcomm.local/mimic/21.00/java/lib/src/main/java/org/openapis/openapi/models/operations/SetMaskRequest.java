@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetMaskRequest {
+    /**
+     * Agent to set the primary IP address mask
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Long agentNum;
+    public SetMaskRequest withAgentNum(Long agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public SetMaskPathParams pathParams;
-    public SetMaskRequest withPathParams(SetMaskPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Mask to set for the agent primary IP address
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mask")
+    public String mask;
+    public SetMaskRequest withMask(String mask) {
+        this.mask = mask;
         return this;
     }
     

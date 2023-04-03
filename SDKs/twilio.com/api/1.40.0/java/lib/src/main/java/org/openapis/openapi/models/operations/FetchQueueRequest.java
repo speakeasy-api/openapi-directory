@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchQueueRequest {
-    
-    public FetchQueuePathParams pathParams;
-    public FetchQueueRequest withPathParams(FetchQueuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Queue resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public FetchQueueRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public FetchQueueSecurity security;
-    public FetchQueueRequest withSecurity(FetchQueueSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchQueueRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Queue resource to fetch
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchQueueRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

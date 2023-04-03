@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1ScansIdRequest {
-    
-    public GetApiV1ScansIdPathParams pathParams;
-    public GetApiV1ScansIdRequest withPathParams(GetApiV1ScansIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetApiV1ScansIdSecurity security;
-    public GetApiV1ScansIdRequest withSecurity(GetApiV1ScansIdSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetApiV1ScansIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

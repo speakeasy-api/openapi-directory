@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NewsSearchReadRequest {
-    
-    public NewsSearchReadPathParams pathParams;
-    public NewsSearchReadRequest withPathParams(NewsSearchReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=title")
+    public String title;
+    public NewsSearchReadRequest withTitle(String title) {
+        this.title = title;
         return this;
     }
     

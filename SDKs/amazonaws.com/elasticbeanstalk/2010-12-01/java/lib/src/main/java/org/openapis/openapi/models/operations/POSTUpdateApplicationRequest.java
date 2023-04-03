@@ -7,24 +7,73 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTUpdateApplicationRequest {
-    
-    public POSTUpdateApplicationQueryParams queryParams;
-    public POSTUpdateApplicationRequest withQueryParams(POSTUpdateApplicationQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public POSTUpdateApplicationHeaders headers;
-    public POSTUpdateApplicationRequest withHeaders(POSTUpdateApplicationHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public POSTUpdateApplicationActionEnum action;
+    public POSTUpdateApplicationRequest withAction(POSTUpdateApplicationActionEnum action) {
+        this.action = action;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public POSTUpdateApplicationRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public POSTUpdateApplicationRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public POSTUpdateApplicationVersionEnum version;
+    public POSTUpdateApplicationRequest withVersion(POSTUpdateApplicationVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public POSTUpdateApplicationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public POSTUpdateApplicationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public POSTUpdateApplicationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public POSTUpdateApplicationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public POSTUpdateApplicationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public POSTUpdateApplicationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public POSTUpdateApplicationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -7,23 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsUpdateSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeJwt jwt;
-    public TeamsUpdateSecurity withJwt(org.openapis.openapi.models.shared.SchemeJwt jwt) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-JWT")
+    public String jwt;
+    public TeamsUpdateSecurity withJwt(String jwt) {
         this.jwt = jwt;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeKey key;
-    public TeamsUpdateSecurity withKey(org.openapis.openapi.models.shared.SchemeKey key) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-Key")
+    public String key;
+    public TeamsUpdateSecurity withKey(String key) {
         this.key = key;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeProject project;
-    public TeamsUpdateSecurity withProject(org.openapis.openapi.models.shared.SchemeProject project) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-Project")
+    public String project;
+    public TeamsUpdateSecurity withProject(String project) {
         this.project = project;
         return this;
     }

@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetEndpointsQueryParams;
 import org.openapis.openapi.models.operations.GetEndpointsRequest;
 import org.openapis.openapi.models.operations.GetEndpointsResponse;
 
@@ -13,17 +12,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }})
                 .build();
 
             GetEndpointsRequest req = new GetEndpointsRequest() {{
-                queryParams = new GetEndpointsQueryParams() {{
-                    openapi = true;
-                }};
-            }};            
+                openapi = true;
+            }}            
 
             GetEndpointsResponse res = sdk.apiInformation.getEndpoints(req);
 

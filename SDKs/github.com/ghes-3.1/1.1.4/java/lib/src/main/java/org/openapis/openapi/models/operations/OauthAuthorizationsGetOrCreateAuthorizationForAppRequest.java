@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OauthAuthorizationsGetOrCreateAuthorizationForAppRequest {
-    
-    public OauthAuthorizationsGetOrCreateAuthorizationForAppPathParams pathParams;
-    public OauthAuthorizationsGetOrCreateAuthorizationForAppRequest withPathParams(OauthAuthorizationsGetOrCreateAuthorizationForAppPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public OauthAuthorizationsGetOrCreateAuthorizationForAppRequestBody requestBody;
+    public OauthAuthorizationsGetOrCreateAuthorizationForAppRequest withRequestBody(OauthAuthorizationsGetOrCreateAuthorizationForAppRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public OauthAuthorizationsGetOrCreateAuthorizationForAppRequestBody request;
-    public OauthAuthorizationsGetOrCreateAuthorizationForAppRequest withRequest(OauthAuthorizationsGetOrCreateAuthorizationForAppRequestBody request) {
-        this.request = request;
+    /**
+     * The client ID of the GitHub app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
+    public String clientId;
+    public OauthAuthorizationsGetOrCreateAuthorizationForAppRequest withClientId(String clientId) {
+        this.clientId = clientId;
         return this;
     }
     

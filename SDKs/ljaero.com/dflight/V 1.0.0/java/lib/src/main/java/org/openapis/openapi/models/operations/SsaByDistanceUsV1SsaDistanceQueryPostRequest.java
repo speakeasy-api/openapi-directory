@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SsaByDistanceUsV1SsaDistanceQueryPostRequest {
-    
-    public SsaByDistanceUsV1SsaDistanceQueryPostHeaders headers;
-    public SsaByDistanceUsV1SsaDistanceQueryPostRequest withHeaders(SsaByDistanceUsV1SsaDistanceQueryPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.SSAByDistance ssaByDistance;
+    public SsaByDistanceUsV1SsaDistanceQueryPostRequest withSSAByDistance(org.openapis.openapi.models.shared.SSAByDistance ssaByDistance) {
+        this.ssaByDistance = ssaByDistance;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SSAByDistance request;
-    public SsaByDistanceUsV1SsaDistanceQueryPostRequest withRequest(org.openapis.openapi.models.shared.SSAByDistance request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public SsaByDistanceUsV1SsaDistanceQueryPostRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

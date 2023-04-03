@@ -4,20 +4,176 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BooksMyconfigRequestAccessRequest {
-    
-    public BooksMyconfigRequestAccessQueryParams queryParams;
-    public BooksMyconfigRequestAccessRequest withQueryParams(BooksMyconfigRequestAccessQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public BooksMyconfigRequestAccessRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public BooksMyconfigRequestAccessRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public BooksMyconfigRequestAccessSecurity security;
-    public BooksMyconfigRequestAccessRequest withSecurity(BooksMyconfigRequestAccessSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public BooksMyconfigRequestAccessRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public BooksMyconfigRequestAccessRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * The device/version ID from which to request the restrictions.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cpksver")
+    public String cpksver;
+    public BooksMyconfigRequestAccessRequest withCpksver(String cpksver) {
+        this.cpksver = cpksver;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public BooksMyconfigRequestAccessRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public BooksMyconfigRequestAccessRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The type of access license to request. If not specified, the default is BOTH.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=licenseTypes")
+    public BooksMyconfigRequestAccessLicenseTypesEnum licenseTypes;
+    public BooksMyconfigRequestAccessRequest withLicenseTypes(BooksMyconfigRequestAccessLicenseTypesEnum licenseTypes) {
+        this.licenseTypes = licenseTypes;
+        return this;
+    }
+    
+    /**
+     * ISO-639-1, ISO-3166-1 codes for message localization, i.e. en_US.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public BooksMyconfigRequestAccessRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
+    
+    /**
+     * The client nonce value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nonce")
+    public String nonce;
+    public BooksMyconfigRequestAccessRequest withNonce(String nonce) {
+        this.nonce = nonce;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public BooksMyconfigRequestAccessRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public BooksMyconfigRequestAccessRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public BooksMyconfigRequestAccessRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * String to identify the originator of this request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public String source;
+    public BooksMyconfigRequestAccessRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public BooksMyconfigRequestAccessRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public BooksMyconfigRequestAccessRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * The volume to request concurrent/download restrictions for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=volumeId")
+    public String volumeId;
+    public BooksMyconfigRequestAccessRequest withVolumeId(String volumeId) {
+        this.volumeId = volumeId;
         return this;
     }
     

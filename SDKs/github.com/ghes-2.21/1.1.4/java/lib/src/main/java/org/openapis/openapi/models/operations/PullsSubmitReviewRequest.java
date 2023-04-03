@@ -7,17 +7,41 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsSubmitReviewRequest {
-    
-    public PullsSubmitReviewPathParams pathParams;
-    public PullsSubmitReviewRequest withPathParams(PullsSubmitReviewPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PullsSubmitReviewRequestBody requestBody;
+    public PullsSubmitReviewRequest withRequestBody(PullsSubmitReviewRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PullsSubmitReviewRequestBody request;
-    public PullsSubmitReviewRequest withRequest(PullsSubmitReviewRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public PullsSubmitReviewRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_number")
+    public Long pullNumber;
+    public PullsSubmitReviewRequest withPullNumber(Long pullNumber) {
+        this.pullNumber = pullNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public PullsSubmitReviewRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * review_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=review_id")
+    public Long reviewId;
+    public PullsSubmitReviewRequest withReviewId(Long reviewId) {
+        this.reviewId = reviewId;
         return this;
     }
     

@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCustomerRequest {
-    
-    public UpdateCustomerPathParams pathParams;
-    public UpdateCustomerRequest withPathParams(UpdateCustomerPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateCustomerRequest request;
-    public UpdateCustomerRequest withRequest(org.openapis.openapi.models.shared.UpdateCustomerRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateCustomerRequest updateCustomerRequest;
+    public UpdateCustomerRequest withUpdateCustomerRequest(org.openapis.openapi.models.shared.UpdateCustomerRequest updateCustomerRequest) {
+        this.updateCustomerRequest = updateCustomerRequest;
         return this;
     }
     
-    
-    public UpdateCustomerSecurity security;
-    public UpdateCustomerRequest withSecurity(UpdateCustomerSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the customer to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer_id")
+    public String customerId;
+    public UpdateCustomerRequest withCustomerId(String customerId) {
+        this.customerId = customerId;
         return this;
     }
     

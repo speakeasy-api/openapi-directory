@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05PatientsProfileOnShareRawRequest {
-    
-    public PostV05PatientsProfileOnShareRawHeaders headers;
-    public PostV05PatientsProfileOnShareRawRequest withHeaders(PostV05PatientsProfileOnShareRawHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05PatientsProfileOnShareRawRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/xml")
-    public byte[] request;
-    public PostV05PatientsProfileOnShareRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public PostV05PatientsProfileOnShareRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Suffix of the consent manager to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CM-ID")
+    public String xCmId;
+    public PostV05PatientsProfileOnShareRawRequest withXCmId(String xCmId) {
+        this.xCmId = xCmId;
         return this;
     }
     

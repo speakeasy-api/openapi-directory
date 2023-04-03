@@ -4,20 +4,60 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListNodeSubscriptionsRequest {
-    
-    public ListNodeSubscriptionsQueryParams queryParams;
-    public ListNodeSubscriptionsRequest withQueryParams(ListNodeSubscriptionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public ListNodeSubscriptionsRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
+    /**
+     * Filter string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public ListNodeSubscriptionsRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public ListNodeSubscriptionsHeaders headers;
-    public ListNodeSubscriptionsRequest withHeaders(ListNodeSubscriptionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Range limit.
+     * 
+     * Maximum 500.
+     * 
+     *  For more results please use paging (`offset` + `limit`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public ListNodeSubscriptionsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Range offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public ListNodeSubscriptionsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Sort string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public ListNodeSubscriptionsRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

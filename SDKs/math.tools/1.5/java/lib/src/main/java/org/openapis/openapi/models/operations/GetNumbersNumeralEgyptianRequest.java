@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersNumeralEgyptianRequest {
-    
-    public GetNumbersNumeralEgyptianQueryParams queryParams;
-    public GetNumbersNumeralEgyptianRequest withQueryParams(GetNumbersNumeralEgyptianQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetNumbersNumeralEgyptianSecurity security;
-    public GetNumbersNumeralEgyptianRequest withSecurity(GetNumbersNumeralEgyptianSecurity security) {
-        this.security = security;
+    /**
+     * Number to convert
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public Long number;
+    public GetNumbersNumeralEgyptianRequest withNumber(Long number) {
+        this.number = number;
         return this;
     }
     

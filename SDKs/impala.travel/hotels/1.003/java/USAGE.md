@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CancelBookingPathParams;
 import org.openapis.openapi.models.operations.CancelBookingRequest;
 import org.openapis.openapi.models.operations.CancelBookingResponse;
 
@@ -13,17 +12,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKeyAuthentication = new SchemeAPIKeyAuthentication() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKeyAuthentication = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CancelBookingRequest req = new CancelBookingRequest() {{
-                pathParams = new CancelBookingPathParams() {{
-                    bookingId = "corrupti";
-                }};
-            }};            
+                bookingId = "corrupti";
+            }}            
 
             CancelBookingResponse res = sdk.bookings.cancelBooking(req);
 

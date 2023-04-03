@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Delete11Request {
-    
-    public Delete11PathParams pathParams;
-    public Delete11Request withPathParams(Delete11PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * report's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reportId")
+    public Long reportId;
+    public Delete11Request withReportId(Long reportId) {
+        this.reportId = reportId;
         return this;
     }
     

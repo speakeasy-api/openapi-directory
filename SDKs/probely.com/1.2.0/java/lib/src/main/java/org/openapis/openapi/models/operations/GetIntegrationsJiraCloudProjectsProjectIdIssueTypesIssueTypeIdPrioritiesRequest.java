@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdPrioritiesRequest {
+    /**
+     * Jira issue type id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_type_id")
+    public String issueTypeId;
+    public GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdPrioritiesRequest withIssueTypeId(String issueTypeId) {
+        this.issueTypeId = issueTypeId;
+        return this;
+    }
     
-    public GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdPrioritiesPathParams pathParams;
-    public GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdPrioritiesRequest withPathParams(GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdPrioritiesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Jira Project Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdPrioritiesRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

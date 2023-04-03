@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetVehicleDetailsByRegistrationNumberHeaders;
 import org.openapis.openapi.models.operations.GetVehicleDetailsByRegistrationNumberRequest;
 import org.openapis.openapi.models.operations.GetVehicleDetailsByRegistrationNumberResponse;
 import org.openapis.openapi.models.shared.VehicleRequest;
@@ -29,14 +28,12 @@ public class Application {
                 .build();
 
             GetVehicleDetailsByRegistrationNumberRequest req = new GetVehicleDetailsByRegistrationNumberRequest() {{
-                headers = new GetVehicleDetailsByRegistrationNumberHeaders() {{
-                    xCorrelationId = "corrupti";
-                    xApiKey = "provident";
+                vehicleRequest = new VehicleRequest() {{
+                    registrationNumber = "corrupti";
                 }};
-                request = new VehicleRequest() {{
-                    registrationNumber = "distinctio";
-                }};
-            }};            
+                xCorrelationId = "provident";
+                xApiKey = "distinctio";
+            }}            
 
             GetVehicleDetailsByRegistrationNumberResponse res = sdk.vehicle.getVehicleDetailsByRegistrationNumber(req);
 
@@ -50,7 +47,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### vehicle

@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoCreateTagRawRequest {
-    
-    public RepoCreateTagRawPathParams pathParams;
-    public RepoCreateTagRawRequest withPathParams(RepoCreateTagRawPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=text/plain")
+    public byte[] requestBody;
+    public RepoCreateTagRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=text/plain")
-    public byte[] request;
-    public RepoCreateTagRawRequest withRequest(byte[] request) {
-        this.request = request;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoCreateTagRawRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoCreateTagRawRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

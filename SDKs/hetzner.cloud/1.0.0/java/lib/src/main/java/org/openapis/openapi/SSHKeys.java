@@ -43,7 +43,7 @@ public class SSHKeys {
      */
     public org.openapis.openapi.models.operations.DeleteSshKeysIdResponse deleteSshKeysId(org.openapis.openapi.models.operations.DeleteSshKeysIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSshKeysIdPathParams.class, baseUrl, "/ssh_keys/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSshKeysIdRequest.class, baseUrl, "/ssh_keys/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class SSHKeys {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSshKeysQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSshKeysRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -121,7 +121,7 @@ public class SSHKeys {
      */
     public org.openapis.openapi.models.operations.GetSshKeysIdResponse getSshKeysId(org.openapis.openapi.models.operations.GetSshKeysIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSshKeysIdPathParams.class, baseUrl, "/ssh_keys/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSshKeysIdRequest.class, baseUrl, "/ssh_keys/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -158,7 +158,7 @@ public class SSHKeys {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSshKeysResponse postSshKeys(org.openapis.openapi.models.operations.PostSshKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSshKeysResponse postSshKeys(org.openapis.openapi.models.operations.PostSshKeysRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ssh_keys");
         
@@ -204,12 +204,12 @@ public class SSHKeys {
      */
     public org.openapis.openapi.models.operations.PutSshKeysIdResponse putSshKeysId(org.openapis.openapi.models.operations.PutSshKeysIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSshKeysIdPathParams.class, baseUrl, "/ssh_keys/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSshKeysIdRequest.class, baseUrl, "/ssh_keys/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

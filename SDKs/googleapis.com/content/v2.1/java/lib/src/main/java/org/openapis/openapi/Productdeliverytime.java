@@ -34,27 +34,28 @@ public class Productdeliverytime {
     /**
      * Creates or updates the delivery time of a product.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentProductdeliverytimeCreateResponse contentProductdeliverytimeCreate(org.openapis.openapi.models.operations.ContentProductdeliverytimeCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentProductdeliverytimeCreateResponse contentProductdeliverytimeCreate(org.openapis.openapi.models.operations.ContentProductdeliverytimeCreateRequest request, org.openapis.openapi.models.operations.ContentProductdeliverytimeCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentProductdeliverytimeCreatePathParams.class, baseUrl, "/{merchantId}/productdeliverytime", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentProductdeliverytimeCreateRequest.class, baseUrl, "/{merchantId}/productdeliverytime", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "productDeliveryTime", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentProductdeliverytimeCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentProductdeliverytimeCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class Productdeliverytime {
     /**
      * Deletes the delivery time of a product.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentProductdeliverytimeDeleteResponse contentProductdeliverytimeDelete(org.openapis.openapi.models.operations.ContentProductdeliverytimeDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentProductdeliverytimeDeleteResponse contentProductdeliverytimeDelete(org.openapis.openapi.models.operations.ContentProductdeliverytimeDeleteRequest request, org.openapis.openapi.models.operations.ContentProductdeliverytimeDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentProductdeliverytimeDeletePathParams.class, baseUrl, "/{merchantId}/productdeliverytime/{productId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentProductdeliverytimeDeleteRequest.class, baseUrl, "/{merchantId}/productdeliverytime/{productId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentProductdeliverytimeDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentProductdeliverytimeDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -120,25 +122,26 @@ public class Productdeliverytime {
     /**
      * Gets `productDeliveryTime` by `productId`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentProductdeliverytimeGetResponse contentProductdeliverytimeGet(org.openapis.openapi.models.operations.ContentProductdeliverytimeGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentProductdeliverytimeGetResponse contentProductdeliverytimeGet(org.openapis.openapi.models.operations.ContentProductdeliverytimeGetRequest request, org.openapis.openapi.models.operations.ContentProductdeliverytimeGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentProductdeliverytimeGetPathParams.class, baseUrl, "/{merchantId}/productdeliverytime/{productId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentProductdeliverytimeGetRequest.class, baseUrl, "/{merchantId}/productdeliverytime/{productId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentProductdeliverytimeGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentProductdeliverytimeGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

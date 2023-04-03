@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSPRatingsRequest {
+    /**
+     * Team filter (required if year not specified)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public GetSPRatingsRequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
     
-    public GetSPRatingsQueryParams queryParams;
-    public GetSPRatingsRequest withQueryParams(GetSPRatingsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Season filter (required if team not specified)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetSPRatingsRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

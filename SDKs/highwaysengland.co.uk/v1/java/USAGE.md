@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AreasGetPathParams;
 import org.openapis.openapi.models.operations.AreasGetRequest;
 import org.openapis.openapi.models.operations.AreasGetResponse;
 
@@ -15,10 +14,8 @@ public class Application {
                 .build();
 
             AreasGetRequest req = new AreasGetRequest() {{
-                pathParams = new AreasGetPathParams() {{
-                    version = "corrupti";
-                }};
-            }};            
+                version = "corrupti";
+            }}            
 
             AreasGetResponse res = sdk.areas.areasGet(req);
 

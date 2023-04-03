@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateServiceConversationScopedWebhookRequest {
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public UpdateServiceConversationScopedWebhookRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
+        return this;
+    }
     
-    public UpdateServiceConversationScopedWebhookPathParams pathParams;
-    public UpdateServiceConversationScopedWebhookRequest withPathParams(UpdateServiceConversationScopedWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConversationSid")
+    public String conversationSid;
+    public UpdateServiceConversationScopedWebhookRequest withConversationSid(String conversationSid) {
+        this.conversationSid = conversationSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateServiceConversationScopedWebhookUpdateServiceConversationScopedWebhookRequest request;
-    public UpdateServiceConversationScopedWebhookRequest withRequest(UpdateServiceConversationScopedWebhookUpdateServiceConversationScopedWebhookRequest request) {
-        this.request = request;
+    public UpdateServiceConversationScopedWebhookUpdateServiceConversationScopedWebhookRequest requestBody;
+    public UpdateServiceConversationScopedWebhookRequest withRequestBody(UpdateServiceConversationScopedWebhookUpdateServiceConversationScopedWebhookRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateServiceConversationScopedWebhookSecurity security;
-    public UpdateServiceConversationScopedWebhookRequest withSecurity(UpdateServiceConversationScopedWebhookSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateServiceConversationScopedWebhookRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateServiceConversationScopedWebhookRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

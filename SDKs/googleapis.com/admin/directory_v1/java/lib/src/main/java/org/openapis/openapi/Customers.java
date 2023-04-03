@@ -36,27 +36,28 @@ public class Customers {
     /**
      * Creates multiple print servers.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchCreatePrintServersResponse adminCustomersChromePrintServersBatchCreatePrintServers(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchCreatePrintServersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchCreatePrintServersResponse adminCustomersChromePrintServersBatchCreatePrintServers(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchCreatePrintServersRequest request, org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchCreatePrintServersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchCreatePrintServersPathParams.class, baseUrl, "/admin/directory/v1/{parent}/chrome/printServers:batchCreatePrintServers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchCreatePrintServersRequest.class, baseUrl, "/admin/directory/v1/{parent}/chrome/printServers:batchCreatePrintServers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchCreatePrintServersRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchCreatePrintServersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchCreatePrintServersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -83,27 +84,28 @@ public class Customers {
     /**
      * Deletes multiple print servers.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchDeletePrintServersResponse adminCustomersChromePrintServersBatchDeletePrintServers(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchDeletePrintServersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchDeletePrintServersResponse adminCustomersChromePrintServersBatchDeletePrintServers(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchDeletePrintServersRequest request, org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchDeletePrintServersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchDeletePrintServersPathParams.class, baseUrl, "/admin/directory/v1/{parent}/chrome/printServers:batchDeletePrintServers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchDeletePrintServersRequest.class, baseUrl, "/admin/directory/v1/{parent}/chrome/printServers:batchDeletePrintServers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchDeletePrintServersRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchDeletePrintServersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersBatchDeletePrintServersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -130,27 +132,28 @@ public class Customers {
     /**
      * Creates a print server.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdminCustomersChromePrintServersCreateResponse adminCustomersChromePrintServersCreate(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdminCustomersChromePrintServersCreateResponse adminCustomersChromePrintServersCreate(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersCreateRequest request, org.openapis.openapi.models.operations.AdminCustomersChromePrintServersCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersCreatePathParams.class, baseUrl, "/admin/directory/v1/{parent}/chrome/printServers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersCreateRequest.class, baseUrl, "/admin/directory/v1/{parent}/chrome/printServers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "printServerInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -177,25 +180,26 @@ public class Customers {
     /**
      * Deletes a print server.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdminCustomersChromePrintServersDeleteResponse adminCustomersChromePrintServersDelete(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdminCustomersChromePrintServersDeleteResponse adminCustomersChromePrintServersDelete(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersDeleteRequest request, org.openapis.openapi.models.operations.AdminCustomersChromePrintServersDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersDeletePathParams.class, baseUrl, "/admin/directory/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersDeleteRequest.class, baseUrl, "/admin/directory/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -222,25 +226,26 @@ public class Customers {
     /**
      * Returns a print server's configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdminCustomersChromePrintServersGetResponse adminCustomersChromePrintServersGet(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdminCustomersChromePrintServersGetResponse adminCustomersChromePrintServersGet(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersGetRequest request, org.openapis.openapi.models.operations.AdminCustomersChromePrintServersGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersGetPathParams.class, baseUrl, "/admin/directory/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersGetRequest.class, baseUrl, "/admin/directory/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -267,25 +272,26 @@ public class Customers {
     /**
      * Lists print server configurations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdminCustomersChromePrintServersListResponse adminCustomersChromePrintServersList(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdminCustomersChromePrintServersListResponse adminCustomersChromePrintServersList(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersListRequest request, org.openapis.openapi.models.operations.AdminCustomersChromePrintServersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersListPathParams.class, baseUrl, "/admin/directory/v1/{parent}/chrome/printServers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersListRequest.class, baseUrl, "/admin/directory/v1/{parent}/chrome/printServers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -312,27 +318,28 @@ public class Customers {
     /**
      * Updates a print server's configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdminCustomersChromePrintServersPatchResponse adminCustomersChromePrintServersPatch(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdminCustomersChromePrintServersPatchResponse adminCustomersChromePrintServersPatch(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersPatchRequest request, org.openapis.openapi.models.operations.AdminCustomersChromePrintServersPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersPatchPathParams.class, baseUrl, "/admin/directory/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersPatchRequest.class, baseUrl, "/admin/directory/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "printServerInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintServersPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -359,27 +366,28 @@ public class Customers {
     /**
      * Creates printers under given Organization Unit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchCreatePrintersResponse adminCustomersChromePrintersBatchCreatePrinters(org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchCreatePrintersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchCreatePrintersResponse adminCustomersChromePrintersBatchCreatePrinters(org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchCreatePrintersRequest request, org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchCreatePrintersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchCreatePrintersPathParams.class, baseUrl, "/admin/directory/v1/{parent}/chrome/printers:batchCreatePrinters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchCreatePrintersRequest.class, baseUrl, "/admin/directory/v1/{parent}/chrome/printers:batchCreatePrinters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchCreatePrintersRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchCreatePrintersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchCreatePrintersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -406,27 +414,28 @@ public class Customers {
     /**
      * Deletes printers in batch.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchDeletePrintersResponse adminCustomersChromePrintersBatchDeletePrinters(org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchDeletePrintersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchDeletePrintersResponse adminCustomersChromePrintersBatchDeletePrinters(org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchDeletePrintersRequest request, org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchDeletePrintersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchDeletePrintersPathParams.class, baseUrl, "/admin/directory/v1/{parent}/chrome/printers:batchDeletePrinters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchDeletePrintersRequest.class, baseUrl, "/admin/directory/v1/{parent}/chrome/printers:batchDeletePrinters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchDeletePrintersRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchDeletePrintersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintersBatchDeletePrintersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -453,27 +462,28 @@ public class Customers {
     /**
      * Creates a printer under given Organization Unit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdminCustomersChromePrintersCreateResponse adminCustomersChromePrintersCreate(org.openapis.openapi.models.operations.AdminCustomersChromePrintersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdminCustomersChromePrintersCreateResponse adminCustomersChromePrintersCreate(org.openapis.openapi.models.operations.AdminCustomersChromePrintersCreateRequest request, org.openapis.openapi.models.operations.AdminCustomersChromePrintersCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintersCreatePathParams.class, baseUrl, "/admin/directory/v1/{parent}/chrome/printers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintersCreateRequest.class, baseUrl, "/admin/directory/v1/{parent}/chrome/printers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "printerInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintersCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintersCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -500,25 +510,26 @@ public class Customers {
     /**
      * List printers configs.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdminCustomersChromePrintersListResponse adminCustomersChromePrintersList(org.openapis.openapi.models.operations.AdminCustomersChromePrintersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdminCustomersChromePrintersListResponse adminCustomersChromePrintersList(org.openapis.openapi.models.operations.AdminCustomersChromePrintersListRequest request, org.openapis.openapi.models.operations.AdminCustomersChromePrintersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintersListPathParams.class, baseUrl, "/admin/directory/v1/{parent}/chrome/printers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintersListRequest.class, baseUrl, "/admin/directory/v1/{parent}/chrome/printers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -545,25 +556,26 @@ public class Customers {
     /**
      * Lists the supported printer models.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdminCustomersChromePrintersListPrinterModelsResponse adminCustomersChromePrintersListPrinterModels(org.openapis.openapi.models.operations.AdminCustomersChromePrintersListPrinterModelsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdminCustomersChromePrintersListPrinterModelsResponse adminCustomersChromePrintersListPrinterModels(org.openapis.openapi.models.operations.AdminCustomersChromePrintersListPrinterModelsRequest request, org.openapis.openapi.models.operations.AdminCustomersChromePrintersListPrinterModelsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintersListPrinterModelsPathParams.class, baseUrl, "/admin/directory/v1/{parent}/chrome/printers:listPrinterModels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomersChromePrintersListPrinterModelsRequest.class, baseUrl, "/admin/directory/v1/{parent}/chrome/printers:listPrinterModels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintersListPrinterModelsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomersChromePrintersListPrinterModelsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -590,25 +602,26 @@ public class Customers {
     /**
      * Retrieves a customer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryCustomersGetResponse directoryCustomersGet(org.openapis.openapi.models.operations.DirectoryCustomersGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryCustomersGetResponse directoryCustomersGet(org.openapis.openapi.models.operations.DirectoryCustomersGetRequest request, org.openapis.openapi.models.operations.DirectoryCustomersGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryCustomersGetPathParams.class, baseUrl, "/admin/directory/v1/customers/{customerKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryCustomersGetRequest.class, baseUrl, "/admin/directory/v1/customers/{customerKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryCustomersGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryCustomersGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -635,27 +648,28 @@ public class Customers {
     /**
      * Patches a customer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryCustomersPatchResponse directoryCustomersPatch(org.openapis.openapi.models.operations.DirectoryCustomersPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryCustomersPatchResponse directoryCustomersPatch(org.openapis.openapi.models.operations.DirectoryCustomersPatchRequest request, org.openapis.openapi.models.operations.DirectoryCustomersPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryCustomersPatchPathParams.class, baseUrl, "/admin/directory/v1/customers/{customerKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryCustomersPatchRequest.class, baseUrl, "/admin/directory/v1/customers/{customerKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customer", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryCustomersPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryCustomersPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -682,27 +696,28 @@ public class Customers {
     /**
      * Updates a customer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryCustomersUpdateResponse directoryCustomersUpdate(org.openapis.openapi.models.operations.DirectoryCustomersUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryCustomersUpdateResponse directoryCustomersUpdate(org.openapis.openapi.models.operations.DirectoryCustomersUpdateRequest request, org.openapis.openapi.models.operations.DirectoryCustomersUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryCustomersUpdatePathParams.class, baseUrl, "/admin/directory/v1/customers/{customerKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryCustomersUpdateRequest.class, baseUrl, "/admin/directory/v1/customers/{customerKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customer", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryCustomersUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryCustomersUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

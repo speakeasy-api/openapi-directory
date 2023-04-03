@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEloRatingsRequest {
+    /**
+     * Conference filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
+    public String conference;
+    public GetEloRatingsRequest withConference(String conference) {
+        this.conference = conference;
+        return this;
+    }
     
-    public GetEloRatingsQueryParams queryParams;
-    public GetEloRatingsRequest withQueryParams(GetEloRatingsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Team filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public GetEloRatingsRequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
+    
+    /**
+     * Maximum week filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=week")
+    public Long week;
+    public GetEloRatingsRequest withWeek(Long week) {
+        this.week = week;
+        return this;
+    }
+    
+    /**
+     * Season filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetEloRatingsRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

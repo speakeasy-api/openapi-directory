@@ -29,19 +29,15 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetCriticsResourceTypeJsonPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCriticsResourceTypeJsonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCriticsResourceTypeJSON200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCriticsResourceTypeJsonResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetReviewsSearchJsonCriticsPickEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetReviewsSearchJsonQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetReviewsSearchJsonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetReviewsSearchJSON200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetReviewsSearchJsonResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetReviewsResourceTypeJsonResourceTypeEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetReviewsResourceTypeJsonPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetReviewsResourceTypeJsonOrderEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetReviewsResourceTypeJsonQueryParams.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetReviewsResourceTypeJsonResourceTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetReviewsResourceTypeJsonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetReviewsResourceTypeJSON200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetReviewsResourceTypeJsonResponse.java
@@ -52,6 +48,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/MovieLink.java
 lib/src/main/java/org/openapis/openapi/models/shared/MovieMultimediaResource.java
 lib/src/main/java/org/openapis/openapi/models/shared/MovieMultimedia.java
 lib/src/main/java/org/openapis/openapi/models/shared/Movie.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeApikey.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

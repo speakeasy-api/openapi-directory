@@ -4,27 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGameConfigurationRequest {
-    
-    public GetGameConfigurationPathParams pathParams;
-    public GetGameConfigurationRequest withPathParams(GetGameConfigurationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the game.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=GameName")
+    public String gameName;
+    public GetGameConfigurationRequest withGameName(String gameName) {
+        this.gameName = gameName;
         return this;
     }
     
-    
-    public GetGameConfigurationQueryParams queryParams;
-    public GetGameConfigurationRequest withQueryParams(GetGameConfigurationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The list of sections to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Sections")
+    public String[] sections;
+    public GetGameConfigurationRequest withSections(String[] sections) {
+        this.sections = sections;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetGameConfigurationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
     
-    public GetGameConfigurationHeaders headers;
-    public GetGameConfigurationRequest withHeaders(GetGameConfigurationHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetGameConfigurationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetGameConfigurationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetGameConfigurationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetGameConfigurationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetGameConfigurationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetGameConfigurationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

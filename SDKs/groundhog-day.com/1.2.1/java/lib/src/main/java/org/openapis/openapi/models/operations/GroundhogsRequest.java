@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroundhogsRequest {
+    /**
+     * Filter groundhogs by country of origin (USA or Canada).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public GroundhogsRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
     
-    public GroundhogsQueryParams queryParams;
-    public GroundhogsRequest withQueryParams(GroundhogsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter groundhogs by type (actual, alive groundhogs, or other prognosticators)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isGroundhog")
+    public GroundhogsIsGroundhogEnum isGroundhog;
+    public GroundhogsRequest withIsGroundhog(GroundhogsIsGroundhogEnum isGroundhog) {
+        this.isGroundhog = isGroundhog;
         return this;
     }
     

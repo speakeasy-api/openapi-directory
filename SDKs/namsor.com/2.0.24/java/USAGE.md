@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AnonymizePathParams;
 import org.openapis.openapi.models.operations.AnonymizeRequest;
 import org.openapis.openapi.models.operations.AnonymizeResponse;
 
@@ -13,19 +12,15 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AnonymizeRequest req = new AnonymizeRequest() {{
-                pathParams = new AnonymizePathParams() {{
-                    anonymized = false;
-                    source = "corrupti";
-                    token = "provident";
-                }};
-            }};            
+                anonymized = false;
+                source = "corrupti";
+                token = "provident";
+            }}            
 
             AnonymizeResponse res = sdk.admin.anonymize(req);
 

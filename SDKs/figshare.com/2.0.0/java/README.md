@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.AccountArticleReportSecurity;
-import org.openapis.openapi.models.operations.AccountArticleReportQueryParams;
 import org.openapis.openapi.models.operations.AccountArticleReportRequest;
 import org.openapis.openapi.models.operations.AccountArticleReportResponse;
-import org.openapis.openapi.models.shared.SchemeOAuth2;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,17 +28,12 @@ public class Application {
                 .build();
 
             AccountArticleReportRequest req = new AccountArticleReportRequest() {{
-                security = new AccountArticleReportSecurity() {{
-                    oAuth2 = new SchemeOAuth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                queryParams = new AccountArticleReportQueryParams() {{
-                    groupId = 548814;
-                }};
-            }};            
+                groupId = 548814;
+            }}            
 
-            AccountArticleReportResponse res = sdk.articles.accountArticleReport(req);
+            AccountArticleReportResponse res = sdk.articles.accountArticleReport(req, new AccountArticleReportSecurity() {{
+                oAuth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.accountReports.isPresent()) {
                 // handle response
@@ -52,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### articles

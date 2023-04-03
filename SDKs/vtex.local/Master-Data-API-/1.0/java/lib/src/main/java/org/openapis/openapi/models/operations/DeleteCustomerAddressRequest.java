@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCustomerAddressRequest {
-    
-    public DeleteCustomerAddressPathParams pathParams;
-    public DeleteCustomerAddressRequest withPathParams(DeleteCustomerAddressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public DeleteCustomerAddressRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public DeleteCustomerAddressRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public DeleteCustomerAddressHeaders headers;
-    public DeleteCustomerAddressRequest withHeaders(DeleteCustomerAddressHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID of the Document.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteCustomerAddressRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1CalendarsIdRequest {
-    
-    public GetSetupV1CalendarsIdPathParams pathParams;
-    public GetSetupV1CalendarsIdRequest withPathParams(GetSetupV1CalendarsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of calendar object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSetupV1CalendarsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

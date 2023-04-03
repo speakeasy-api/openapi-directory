@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAttachmentRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket_id")
+    public String bucketId;
+    public DeleteAttachmentRequest withBucketId(String bucketId) {
+        this.bucketId = bucketId;
+        return this;
+    }
     
-    public DeleteAttachmentPathParams pathParams;
-    public DeleteAttachmentRequest withPathParams(DeleteAttachmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
+    public String collectionId;
+    public DeleteAttachmentRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteAttachmentRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

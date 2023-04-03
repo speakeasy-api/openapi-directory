@@ -4,27 +4,166 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EventarcProjectsLocationsProvidersListRequest {
-    
-    public EventarcProjectsLocationsProvidersListPathParams pathParams;
-    public EventarcProjectsLocationsProvidersListRequest withPathParams(EventarcProjectsLocationsProvidersListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public EventarcProjectsLocationsProvidersListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public EventarcProjectsLocationsProvidersListQueryParams queryParams;
-    public EventarcProjectsLocationsProvidersListRequest withQueryParams(EventarcProjectsLocationsProvidersListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public EventarcProjectsLocationsProvidersListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public EventarcProjectsLocationsProvidersListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public EventarcProjectsLocationsProvidersListSecurity security;
-    public EventarcProjectsLocationsProvidersListRequest withSecurity(EventarcProjectsLocationsProvidersListSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public EventarcProjectsLocationsProvidersListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public EventarcProjectsLocationsProvidersListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * The filter field that the list request will filter on.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public EventarcProjectsLocationsProvidersListRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public EventarcProjectsLocationsProvidersListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public EventarcProjectsLocationsProvidersListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The sorting order of the resources returned. Value should be a comma-separated list of fields. The default sorting oder is ascending. To specify descending order for a field, append a `desc` suffix; for example: `name desc, _id`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
+    public String orderBy;
+    public EventarcProjectsLocationsProvidersListRequest withOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    /**
+     * The maximum number of providers to return on each page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public EventarcProjectsLocationsProvidersListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token; provide the value from the `next_page_token` field in a previous `ListProviders` call to retrieve the subsequent page. When paginating, all other parameters provided to `ListProviders` must match the call that provided the page token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public EventarcProjectsLocationsProvidersListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Required. The parent of the provider to get.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public EventarcProjectsLocationsProvidersListRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public EventarcProjectsLocationsProvidersListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public EventarcProjectsLocationsProvidersListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public EventarcProjectsLocationsProvidersListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public EventarcProjectsLocationsProvidersListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

@@ -7,24 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompileRequest {
-    
-    public CompilePathParams pathParams;
-    public CompileRequest withPathParams(CompilePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CompileQueryParams queryParams;
-    public CompileRequest withQueryParams(CompileQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public CompileHeaders headers;
-    public CompileRequest withHeaders(CompileHeaders headers) {
-        this.headers = headers;
+    /**
+     * Should be set to "application/json"
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CompileRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
@@ -32,9 +21,69 @@ public class CompileRequest {
      * Post the dynamic data for the template to compile the document PDF.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public CompileRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public CompileRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The doc-file-name is a string parameter which determines the name of the file. Note that the extension of the file is not required.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doc-file-name")
+    public String docFileName;
+    public CompileRequest withDocFileName(String docFileName) {
+        this.docFileName = docFileName;
+        return this;
+    }
+    
+    /**
+     * The doc-url-expires-in is a numerical parameter which takes integers and describes after how many seconds the provided URL is available to download the document.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doc-url-expires-in")
+    public Long docUrlExpiresIn;
+    public CompileRequest withDocUrlExpiresIn(Long docUrlExpiresIn) {
+        this.docUrlExpiresIn = docUrlExpiresIn;
+        return this;
+    }
+    
+    /**
+     * The latex-compiler parameter can take the following values:  pdflatex lualatex
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latex-compiler")
+    public CompileLatexCompilerEnum latexCompiler;
+    public CompileRequest withLatexCompiler(CompileLatexCompilerEnum latexCompiler) {
+        this.latexCompiler = latexCompiler;
+        return this;
+    }
+    
+    /**
+     * The latex-runs is a numerical parameter and can take values of 1, 2 and 3. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latex-runs ")
+    public Long latexRuns;
+    public CompileRequest withLatexRuns(Long latexRuns) {
+        this.latexRuns = latexRuns;
+        return this;
+    }
+    
+    /**
+     * The main-file-name is a string parameter which identifies the main file to compile.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=main-file-name")
+    public String mainFileName;
+    public CompileRequest withMainFileName(String mainFileName) {
+        this.mainFileName = mainFileName;
+        return this;
+    }
+    
+    /**
+     * The template-token is available in your template settings after publishing your template.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=template-token")
+    public String templateToken;
+    public CompileRequest withTemplateToken(String templateToken) {
+        this.templateToken = templateToken;
         return this;
     }
     

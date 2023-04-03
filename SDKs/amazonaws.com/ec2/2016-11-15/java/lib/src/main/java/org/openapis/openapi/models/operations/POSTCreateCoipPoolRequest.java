@@ -7,24 +7,73 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTCreateCoipPoolRequest {
-    
-    public POSTCreateCoipPoolQueryParams queryParams;
-    public POSTCreateCoipPoolRequest withQueryParams(POSTCreateCoipPoolQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public POSTCreateCoipPoolHeaders headers;
-    public POSTCreateCoipPoolRequest withHeaders(POSTCreateCoipPoolHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public POSTCreateCoipPoolActionEnum action;
+    public POSTCreateCoipPoolRequest withAction(POSTCreateCoipPoolActionEnum action) {
+        this.action = action;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public POSTCreateCoipPoolRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public POSTCreateCoipPoolRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public POSTCreateCoipPoolVersionEnum version;
+    public POSTCreateCoipPoolRequest withVersion(POSTCreateCoipPoolVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public POSTCreateCoipPoolRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public POSTCreateCoipPoolRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public POSTCreateCoipPoolRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public POSTCreateCoipPoolRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public POSTCreateCoipPoolRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public POSTCreateCoipPoolRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public POSTCreateCoipPoolRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

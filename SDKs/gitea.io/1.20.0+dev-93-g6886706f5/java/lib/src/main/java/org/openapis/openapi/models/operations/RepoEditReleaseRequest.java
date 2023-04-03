@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoEditReleaseRequest {
-    
-    public RepoEditReleasePathParams pathParams;
-    public RepoEditReleaseRequest withPathParams(RepoEditReleasePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EditReleaseOption editReleaseOption;
+    public RepoEditReleaseRequest withEditReleaseOption(org.openapis.openapi.models.shared.EditReleaseOption editReleaseOption) {
+        this.editReleaseOption = editReleaseOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditReleaseOption request;
-    public RepoEditReleaseRequest withRequest(org.openapis.openapi.models.shared.EditReleaseOption request) {
-        this.request = request;
+    /**
+     * id of the release to edit
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public RepoEditReleaseRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoEditReleaseRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoEditReleaseRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

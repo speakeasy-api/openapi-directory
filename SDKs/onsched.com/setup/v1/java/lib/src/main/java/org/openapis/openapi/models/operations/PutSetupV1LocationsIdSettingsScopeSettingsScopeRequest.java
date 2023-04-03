@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1LocationsIdSettingsScopeSettingsScopeRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutSetupV1LocationsIdSettingsScopeSettingsScopeRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PutSetupV1LocationsIdSettingsScopeSettingsScopePathParams pathParams;
-    public PutSetupV1LocationsIdSettingsScopeSettingsScopeRequest withPathParams(PutSetupV1LocationsIdSettingsScopeSettingsScopePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingsScope")
+    public String settingsScope;
+    public PutSetupV1LocationsIdSettingsScopeSettingsScopeRequest withSettingsScope(String settingsScope) {
+        this.settingsScope = settingsScope;
         return this;
     }
     

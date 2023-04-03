@@ -4,13 +4,70 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelsRequest {
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetChannelsDirectionEnum direction;
+    public GetChannelsRequest withDirection(GetChannelsDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public GetChannelsQueryParams queryParams;
-    public GetChannelsRequest withQueryParams(GetChannelsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The attribute by which to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public GetChannelsFilterEnum filter;
+    public GetChannelsRequest withFilter(GetChannelsFilterEnum filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetChannelsRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetChannelsRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The search query to use to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetChannelsRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     * 
+     * Option descriptions:
+     *  * `relevant` - Relevant sorting is available only for search queries.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetChannelsSortEnum sort;
+    public GetChannelsRequest withSort(GetChannelsSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

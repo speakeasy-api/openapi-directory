@@ -36,10 +36,11 @@ public class Clinical {
     /**
      * Create patient allergy
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AllergiesCreateResponse allergiesCreate(org.openapis.openapi.models.operations.AllergiesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AllergiesCreateResponse allergiesCreate(org.openapis.openapi.models.operations.AllergiesCreateRequest request, org.openapis.openapi.models.operations.AllergiesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/allergies");
         
@@ -47,14 +48,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AllergiesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AllergiesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -83,10 +84,11 @@ public class Clinical {
     /**
      * Retrieve or search patient allergies
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AllergiesListResponse allergiesList(org.openapis.openapi.models.operations.AllergiesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AllergiesListResponse allergiesList(org.openapis.openapi.models.operations.AllergiesListRequest request, org.openapis.openapi.models.operations.AllergiesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/allergies");
         
@@ -94,14 +96,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AllergiesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AllergiesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -130,25 +132,26 @@ public class Clinical {
     /**
      * Update an existing patient allergy
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AllergiesPartialUpdateResponse allergiesPartialUpdate(org.openapis.openapi.models.operations.AllergiesPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AllergiesPartialUpdateResponse allergiesPartialUpdate(org.openapis.openapi.models.operations.AllergiesPartialUpdateRequest request, org.openapis.openapi.models.operations.AllergiesPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AllergiesPartialUpdatePathParams.class, baseUrl, "/api/allergies/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AllergiesPartialUpdateRequest.class, baseUrl, "/api/allergies/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AllergiesPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AllergiesPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,25 +172,26 @@ public class Clinical {
     /**
      * Retrieve an existing patient allergy
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AllergiesReadResponse allergiesRead(org.openapis.openapi.models.operations.AllergiesReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AllergiesReadResponse allergiesRead(org.openapis.openapi.models.operations.AllergiesReadRequest request, org.openapis.openapi.models.operations.AllergiesReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AllergiesReadPathParams.class, baseUrl, "/api/allergies/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AllergiesReadRequest.class, baseUrl, "/api/allergies/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AllergiesReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AllergiesReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,25 +220,26 @@ public class Clinical {
     /**
      * Update an existing patient allergy
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AllergiesUpdateResponse allergiesUpdate(org.openapis.openapi.models.operations.AllergiesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AllergiesUpdateResponse allergiesUpdate(org.openapis.openapi.models.operations.AllergiesUpdateRequest request, org.openapis.openapi.models.operations.AllergiesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AllergiesUpdatePathParams.class, baseUrl, "/api/allergies/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AllergiesUpdateRequest.class, baseUrl, "/api/allergies/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AllergiesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AllergiesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -255,10 +260,11 @@ public class Clinical {
     /**
      * Create patient amendments to a patient's clinical records
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AmendmentsCreateResponse amendmentsCreate(org.openapis.openapi.models.operations.AmendmentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AmendmentsCreateResponse amendmentsCreate(org.openapis.openapi.models.operations.AmendmentsCreateRequest request, org.openapis.openapi.models.operations.AmendmentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/amendments");
         
@@ -266,14 +272,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AmendmentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AmendmentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -302,25 +308,26 @@ public class Clinical {
     /**
      * Delete an existing patient amendment, you can only interact with amendments created by your API application
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AmendmentsDeleteResponse amendmentsDelete(org.openapis.openapi.models.operations.AmendmentsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AmendmentsDeleteResponse amendmentsDelete(org.openapis.openapi.models.operations.AmendmentsDeleteRequest request, org.openapis.openapi.models.operations.AmendmentsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AmendmentsDeletePathParams.class, baseUrl, "/api/amendments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AmendmentsDeleteRequest.class, baseUrl, "/api/amendments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AmendmentsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AmendmentsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -341,10 +348,11 @@ public class Clinical {
     /**
      * Retrieve or search patient amendments. You can only interact with amendments created by your API application
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AmendmentsListResponse amendmentsList(org.openapis.openapi.models.operations.AmendmentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AmendmentsListResponse amendmentsList(org.openapis.openapi.models.operations.AmendmentsListRequest request, org.openapis.openapi.models.operations.AmendmentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/amendments");
         
@@ -352,14 +360,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AmendmentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AmendmentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -388,25 +396,26 @@ public class Clinical {
     /**
      * Update an existing patient amendment, you can only interact with amendments created by your API application
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AmendmentsPartialUpdateResponse amendmentsPartialUpdate(org.openapis.openapi.models.operations.AmendmentsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AmendmentsPartialUpdateResponse amendmentsPartialUpdate(org.openapis.openapi.models.operations.AmendmentsPartialUpdateRequest request, org.openapis.openapi.models.operations.AmendmentsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AmendmentsPartialUpdatePathParams.class, baseUrl, "/api/amendments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AmendmentsPartialUpdateRequest.class, baseUrl, "/api/amendments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AmendmentsPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AmendmentsPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -427,25 +436,26 @@ public class Clinical {
     /**
      * Retrieve an existing patient amendment, you can only interact with amendments created by your API application
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AmendmentsReadResponse amendmentsRead(org.openapis.openapi.models.operations.AmendmentsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AmendmentsReadResponse amendmentsRead(org.openapis.openapi.models.operations.AmendmentsReadRequest request, org.openapis.openapi.models.operations.AmendmentsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AmendmentsReadPathParams.class, baseUrl, "/api/amendments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AmendmentsReadRequest.class, baseUrl, "/api/amendments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AmendmentsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AmendmentsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -474,25 +484,26 @@ public class Clinical {
     /**
      * Update an existing patient amendment, you can only interact with amendments created by your API application
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AmendmentsUpdateResponse amendmentsUpdate(org.openapis.openapi.models.operations.AmendmentsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AmendmentsUpdateResponse amendmentsUpdate(org.openapis.openapi.models.operations.AmendmentsUpdateRequest request, org.openapis.openapi.models.operations.AmendmentsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AmendmentsUpdatePathParams.class, baseUrl, "/api/amendments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AmendmentsUpdateRequest.class, baseUrl, "/api/amendments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AmendmentsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AmendmentsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -513,10 +524,11 @@ public class Clinical {
     /**
      * Create appointment profiles for a doctor's calendar
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppointmentProfilesCreateResponse appointmentProfilesCreate(org.openapis.openapi.models.operations.AppointmentProfilesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppointmentProfilesCreateResponse appointmentProfilesCreate(org.openapis.openapi.models.operations.AppointmentProfilesCreateRequest request, org.openapis.openapi.models.operations.AppointmentProfilesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/appointment_profiles");
         
@@ -524,14 +536,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentProfilesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentProfilesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -560,25 +572,26 @@ public class Clinical {
     /**
      * Delete an existing appointment profile
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppointmentProfilesDeleteResponse appointmentProfilesDelete(org.openapis.openapi.models.operations.AppointmentProfilesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppointmentProfilesDeleteResponse appointmentProfilesDelete(org.openapis.openapi.models.operations.AppointmentProfilesDeleteRequest request, org.openapis.openapi.models.operations.AppointmentProfilesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentProfilesDeletePathParams.class, baseUrl, "/api/appointment_profiles/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentProfilesDeleteRequest.class, baseUrl, "/api/appointment_profiles/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentProfilesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentProfilesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -599,10 +612,11 @@ public class Clinical {
     /**
      * Retrieve or search appointment profiles for a doctor's calendar
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppointmentProfilesListResponse appointmentProfilesList(org.openapis.openapi.models.operations.AppointmentProfilesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppointmentProfilesListResponse appointmentProfilesList(org.openapis.openapi.models.operations.AppointmentProfilesListRequest request, org.openapis.openapi.models.operations.AppointmentProfilesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/appointment_profiles");
         
@@ -610,14 +624,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentProfilesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentProfilesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -646,25 +660,26 @@ public class Clinical {
     /**
      * Update an existing appointment profile
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppointmentProfilesPartialUpdateResponse appointmentProfilesPartialUpdate(org.openapis.openapi.models.operations.AppointmentProfilesPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppointmentProfilesPartialUpdateResponse appointmentProfilesPartialUpdate(org.openapis.openapi.models.operations.AppointmentProfilesPartialUpdateRequest request, org.openapis.openapi.models.operations.AppointmentProfilesPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentProfilesPartialUpdatePathParams.class, baseUrl, "/api/appointment_profiles/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentProfilesPartialUpdateRequest.class, baseUrl, "/api/appointment_profiles/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentProfilesPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentProfilesPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -685,25 +700,26 @@ public class Clinical {
     /**
      * Retrieve an existing appointment profile
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppointmentProfilesReadResponse appointmentProfilesRead(org.openapis.openapi.models.operations.AppointmentProfilesReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppointmentProfilesReadResponse appointmentProfilesRead(org.openapis.openapi.models.operations.AppointmentProfilesReadRequest request, org.openapis.openapi.models.operations.AppointmentProfilesReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentProfilesReadPathParams.class, baseUrl, "/api/appointment_profiles/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentProfilesReadRequest.class, baseUrl, "/api/appointment_profiles/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentProfilesReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentProfilesReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -732,25 +748,26 @@ public class Clinical {
     /**
      * Update an existing appointment profile
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppointmentProfilesUpdateResponse appointmentProfilesUpdate(org.openapis.openapi.models.operations.AppointmentProfilesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppointmentProfilesUpdateResponse appointmentProfilesUpdate(org.openapis.openapi.models.operations.AppointmentProfilesUpdateRequest request, org.openapis.openapi.models.operations.AppointmentProfilesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentProfilesUpdatePathParams.class, baseUrl, "/api/appointment_profiles/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentProfilesUpdateRequest.class, baseUrl, "/api/appointment_profiles/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentProfilesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentProfilesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -771,10 +788,11 @@ public class Clinical {
     /**
      * Create appointment templates for a doctor's calendar
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppointmentTemplatesCreateResponse appointmentTemplatesCreate(org.openapis.openapi.models.operations.AppointmentTemplatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppointmentTemplatesCreateResponse appointmentTemplatesCreate(org.openapis.openapi.models.operations.AppointmentTemplatesCreateRequest request, org.openapis.openapi.models.operations.AppointmentTemplatesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/appointment_templates");
         
@@ -782,14 +800,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentTemplatesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentTemplatesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -818,25 +836,26 @@ public class Clinical {
     /**
      * Delete an existing appointment template
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppointmentTemplatesDeleteResponse appointmentTemplatesDelete(org.openapis.openapi.models.operations.AppointmentTemplatesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppointmentTemplatesDeleteResponse appointmentTemplatesDelete(org.openapis.openapi.models.operations.AppointmentTemplatesDeleteRequest request, org.openapis.openapi.models.operations.AppointmentTemplatesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentTemplatesDeletePathParams.class, baseUrl, "/api/appointment_templates/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentTemplatesDeleteRequest.class, baseUrl, "/api/appointment_templates/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentTemplatesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentTemplatesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -857,10 +876,11 @@ public class Clinical {
     /**
      * Retrieve or search appointment templates for a doctor's calendar
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppointmentTemplatesListResponse appointmentTemplatesList(org.openapis.openapi.models.operations.AppointmentTemplatesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppointmentTemplatesListResponse appointmentTemplatesList(org.openapis.openapi.models.operations.AppointmentTemplatesListRequest request, org.openapis.openapi.models.operations.AppointmentTemplatesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/appointment_templates");
         
@@ -868,14 +888,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentTemplatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentTemplatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -904,25 +924,26 @@ public class Clinical {
     /**
      * Update an existing appointment template
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppointmentTemplatesPartialUpdateResponse appointmentTemplatesPartialUpdate(org.openapis.openapi.models.operations.AppointmentTemplatesPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppointmentTemplatesPartialUpdateResponse appointmentTemplatesPartialUpdate(org.openapis.openapi.models.operations.AppointmentTemplatesPartialUpdateRequest request, org.openapis.openapi.models.operations.AppointmentTemplatesPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentTemplatesPartialUpdatePathParams.class, baseUrl, "/api/appointment_templates/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentTemplatesPartialUpdateRequest.class, baseUrl, "/api/appointment_templates/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentTemplatesPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentTemplatesPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -943,25 +964,26 @@ public class Clinical {
     /**
      * Retrieve an existing appointment template
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppointmentTemplatesReadResponse appointmentTemplatesRead(org.openapis.openapi.models.operations.AppointmentTemplatesReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppointmentTemplatesReadResponse appointmentTemplatesRead(org.openapis.openapi.models.operations.AppointmentTemplatesReadRequest request, org.openapis.openapi.models.operations.AppointmentTemplatesReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentTemplatesReadPathParams.class, baseUrl, "/api/appointment_templates/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentTemplatesReadRequest.class, baseUrl, "/api/appointment_templates/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentTemplatesReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentTemplatesReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -990,25 +1012,26 @@ public class Clinical {
     /**
      * Update an existing appointment template
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppointmentTemplatesUpdateResponse appointmentTemplatesUpdate(org.openapis.openapi.models.operations.AppointmentTemplatesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppointmentTemplatesUpdateResponse appointmentTemplatesUpdate(org.openapis.openapi.models.operations.AppointmentTemplatesUpdateRequest request, org.openapis.openapi.models.operations.AppointmentTemplatesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentTemplatesUpdatePathParams.class, baseUrl, "/api/appointment_templates/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentTemplatesUpdateRequest.class, baseUrl, "/api/appointment_templates/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentTemplatesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentTemplatesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1029,10 +1052,11 @@ public class Clinical {
     /**
      * Create a new appointment or break on doctor's calendar
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppointmentsCreateResponse appointmentsCreate(org.openapis.openapi.models.operations.AppointmentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppointmentsCreateResponse appointmentsCreate(org.openapis.openapi.models.operations.AppointmentsCreateRequest request, org.openapis.openapi.models.operations.AppointmentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/appointments");
         
@@ -1040,14 +1064,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1076,25 +1100,26 @@ public class Clinical {
     /**
      * Delete an existing appointment or break
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppointmentsDeleteResponse appointmentsDelete(org.openapis.openapi.models.operations.AppointmentsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppointmentsDeleteResponse appointmentsDelete(org.openapis.openapi.models.operations.AppointmentsDeleteRequest request, org.openapis.openapi.models.operations.AppointmentsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentsDeletePathParams.class, baseUrl, "/api/appointments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentsDeleteRequest.class, baseUrl, "/api/appointments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1115,10 +1140,11 @@ public class Clinical {
     /**
      * Retrieve or search appointment or breaks. - &lt;b&gt;Note:&lt;/b&gt; Either `since`, `date` or `date_range` parameter must be specified. -             
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppointmentsListResponse appointmentsList(org.openapis.openapi.models.operations.AppointmentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppointmentsListResponse appointmentsList(org.openapis.openapi.models.operations.AppointmentsListRequest request, org.openapis.openapi.models.operations.AppointmentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/appointments");
         
@@ -1126,14 +1152,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1162,25 +1188,26 @@ public class Clinical {
     /**
      * Update an existing appointment or break
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppointmentsPartialUpdateResponse appointmentsPartialUpdate(org.openapis.openapi.models.operations.AppointmentsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppointmentsPartialUpdateResponse appointmentsPartialUpdate(org.openapis.openapi.models.operations.AppointmentsPartialUpdateRequest request, org.openapis.openapi.models.operations.AppointmentsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentsPartialUpdatePathParams.class, baseUrl, "/api/appointments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentsPartialUpdateRequest.class, baseUrl, "/api/appointments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentsPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentsPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1201,25 +1228,26 @@ public class Clinical {
     /**
      * Retrieve an existing appointment or break
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppointmentsReadResponse appointmentsRead(org.openapis.openapi.models.operations.AppointmentsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppointmentsReadResponse appointmentsRead(org.openapis.openapi.models.operations.AppointmentsReadRequest request, org.openapis.openapi.models.operations.AppointmentsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentsReadPathParams.class, baseUrl, "/api/appointments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentsReadRequest.class, baseUrl, "/api/appointments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1248,25 +1276,26 @@ public class Clinical {
     /**
      * Update an existing appointment or break
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppointmentsUpdateResponse appointmentsUpdate(org.openapis.openapi.models.operations.AppointmentsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppointmentsUpdateResponse appointmentsUpdate(org.openapis.openapi.models.operations.AppointmentsUpdateRequest request, org.openapis.openapi.models.operations.AppointmentsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentsUpdatePathParams.class, baseUrl, "/api/appointments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppointmentsUpdateRequest.class, baseUrl, "/api/appointments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppointmentsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1287,10 +1316,11 @@ public class Clinical {
     /**
      * Retrieve or search care plans
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CarePlansListResponse carePlansList(org.openapis.openapi.models.operations.CarePlansListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CarePlansListResponse carePlansList(org.openapis.openapi.models.operations.CarePlansListRequest request, org.openapis.openapi.models.operations.CarePlansListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/care_plans");
         
@@ -1298,14 +1328,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CarePlansListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CarePlansListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1334,25 +1364,26 @@ public class Clinical {
     /**
      * Retrieve an existing care plan
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CarePlansReadResponse carePlansRead(org.openapis.openapi.models.operations.CarePlansReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CarePlansReadResponse carePlansRead(org.openapis.openapi.models.operations.CarePlansReadRequest request, org.openapis.openapi.models.operations.CarePlansReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CarePlansReadPathParams.class, baseUrl, "/api/care_plans/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CarePlansReadRequest.class, baseUrl, "/api/care_plans/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CarePlansReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CarePlansReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1378,7 +1409,7 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CareTeamMembersListResponse careTeamMembersList(org.openapis.openapi.models.operations.CareTeamMembersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CareTeamMembersListResponse careTeamMembersList(org.openapis.openapi.models.operations.CareTeamMembersListRequest request, org.openapis.openapi.models.operations.CareTeamMembersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/care_team_members");
         
@@ -1386,14 +1417,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CareTeamMembersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CareTeamMembersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1419,22 +1450,22 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CareTeamMembersReadResponse careTeamMembersRead(org.openapis.openapi.models.operations.CareTeamMembersReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CareTeamMembersReadResponse careTeamMembersRead(org.openapis.openapi.models.operations.CareTeamMembersReadRequest request, org.openapis.openapi.models.operations.CareTeamMembersReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CareTeamMembersReadPathParams.class, baseUrl, "/api/care_team_members/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CareTeamMembersReadRequest.class, baseUrl, "/api/care_team_members/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CareTeamMembersReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CareTeamMembersReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1463,10 +1494,11 @@ public class Clinical {
     /**
      * Create a new billing note
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClaimBillingNotesCreateResponse claimBillingNotesCreate(org.openapis.openapi.models.operations.ClaimBillingNotesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClaimBillingNotesCreateResponse claimBillingNotesCreate(org.openapis.openapi.models.operations.ClaimBillingNotesCreateRequest request, org.openapis.openapi.models.operations.ClaimBillingNotesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/claim_billing_notes");
         
@@ -1474,14 +1506,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClaimBillingNotesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClaimBillingNotesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1510,10 +1542,11 @@ public class Clinical {
     /**
      * Retrieve or search billing notes
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClaimBillingNotesListResponse claimBillingNotesList(org.openapis.openapi.models.operations.ClaimBillingNotesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClaimBillingNotesListResponse claimBillingNotesList(org.openapis.openapi.models.operations.ClaimBillingNotesListRequest request, org.openapis.openapi.models.operations.ClaimBillingNotesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/claim_billing_notes");
         
@@ -1521,14 +1554,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClaimBillingNotesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClaimBillingNotesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1557,25 +1590,26 @@ public class Clinical {
     /**
      * Retrieve an existing billing note
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClaimBillingNotesReadResponse claimBillingNotesRead(org.openapis.openapi.models.operations.ClaimBillingNotesReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClaimBillingNotesReadResponse claimBillingNotesRead(org.openapis.openapi.models.operations.ClaimBillingNotesReadRequest request, org.openapis.openapi.models.operations.ClaimBillingNotesReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClaimBillingNotesReadPathParams.class, baseUrl, "/api/claim_billing_notes/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClaimBillingNotesReadRequest.class, baseUrl, "/api/claim_billing_notes/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClaimBillingNotesReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClaimBillingNotesReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1604,10 +1638,11 @@ public class Clinical {
     /**
      * Retrieve or search clinical note field types
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClinicalNoteFieldTypesListResponse clinicalNoteFieldTypesList(org.openapis.openapi.models.operations.ClinicalNoteFieldTypesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClinicalNoteFieldTypesListResponse clinicalNoteFieldTypesList(org.openapis.openapi.models.operations.ClinicalNoteFieldTypesListRequest request, org.openapis.openapi.models.operations.ClinicalNoteFieldTypesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/clinical_note_field_types");
         
@@ -1615,14 +1650,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNoteFieldTypesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNoteFieldTypesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1651,25 +1686,26 @@ public class Clinical {
     /**
      * Retrieve an existing clinial note field type
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClinicalNoteFieldTypesReadResponse clinicalNoteFieldTypesRead(org.openapis.openapi.models.operations.ClinicalNoteFieldTypesReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClinicalNoteFieldTypesReadResponse clinicalNoteFieldTypesRead(org.openapis.openapi.models.operations.ClinicalNoteFieldTypesReadRequest request, org.openapis.openapi.models.operations.ClinicalNoteFieldTypesReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClinicalNoteFieldTypesReadPathParams.class, baseUrl, "/api/clinical_note_field_types/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClinicalNoteFieldTypesReadRequest.class, baseUrl, "/api/clinical_note_field_types/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNoteFieldTypesReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNoteFieldTypesReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1698,10 +1734,11 @@ public class Clinical {
     /**
      * Create clinical note field value
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClinicalNoteFieldValuesCreateResponse clinicalNoteFieldValuesCreate(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClinicalNoteFieldValuesCreateResponse clinicalNoteFieldValuesCreate(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesCreateRequest request, org.openapis.openapi.models.operations.ClinicalNoteFieldValuesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/clinical_note_field_values");
         
@@ -1709,14 +1746,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1745,10 +1782,11 @@ public class Clinical {
     /**
      * Retrieve or search clinical note field values
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClinicalNoteFieldValuesListResponse clinicalNoteFieldValuesList(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClinicalNoteFieldValuesListResponse clinicalNoteFieldValuesList(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesListRequest request, org.openapis.openapi.models.operations.ClinicalNoteFieldValuesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/clinical_note_field_values");
         
@@ -1756,14 +1794,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1792,25 +1830,26 @@ public class Clinical {
     /**
      * Update an existing clinical note field value
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClinicalNoteFieldValuesPartialUpdateResponse clinicalNoteFieldValuesPartialUpdate(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClinicalNoteFieldValuesPartialUpdateResponse clinicalNoteFieldValuesPartialUpdate(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesPartialUpdateRequest request, org.openapis.openapi.models.operations.ClinicalNoteFieldValuesPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesPartialUpdatePathParams.class, baseUrl, "/api/clinical_note_field_values/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesPartialUpdateRequest.class, baseUrl, "/api/clinical_note_field_values/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1831,25 +1870,26 @@ public class Clinical {
     /**
      * Retrieve an existing clinical note field value
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClinicalNoteFieldValuesReadResponse clinicalNoteFieldValuesRead(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClinicalNoteFieldValuesReadResponse clinicalNoteFieldValuesRead(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesReadRequest request, org.openapis.openapi.models.operations.ClinicalNoteFieldValuesReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesReadPathParams.class, baseUrl, "/api/clinical_note_field_values/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesReadRequest.class, baseUrl, "/api/clinical_note_field_values/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1878,25 +1918,26 @@ public class Clinical {
     /**
      * Update an existing clinical note field value
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClinicalNoteFieldValuesUpdateResponse clinicalNoteFieldValuesUpdate(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClinicalNoteFieldValuesUpdateResponse clinicalNoteFieldValuesUpdate(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesUpdateRequest request, org.openapis.openapi.models.operations.ClinicalNoteFieldValuesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesUpdatePathParams.class, baseUrl, "/api/clinical_note_field_values/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesUpdateRequest.class, baseUrl, "/api/clinical_note_field_values/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNoteFieldValuesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1917,10 +1958,11 @@ public class Clinical {
     /**
      * Retrieve or search clinical note templates
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClinicalNoteTemplatesListResponse clinicalNoteTemplatesList(org.openapis.openapi.models.operations.ClinicalNoteTemplatesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClinicalNoteTemplatesListResponse clinicalNoteTemplatesList(org.openapis.openapi.models.operations.ClinicalNoteTemplatesListRequest request, org.openapis.openapi.models.operations.ClinicalNoteTemplatesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/clinical_note_templates");
         
@@ -1928,14 +1970,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNoteTemplatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNoteTemplatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1964,25 +2006,26 @@ public class Clinical {
     /**
      * Retrieve an existing clinical note tempalte
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClinicalNoteTemplatesReadResponse clinicalNoteTemplatesRead(org.openapis.openapi.models.operations.ClinicalNoteTemplatesReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClinicalNoteTemplatesReadResponse clinicalNoteTemplatesRead(org.openapis.openapi.models.operations.ClinicalNoteTemplatesReadRequest request, org.openapis.openapi.models.operations.ClinicalNoteTemplatesReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClinicalNoteTemplatesReadPathParams.class, baseUrl, "/api/clinical_note_templates/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClinicalNoteTemplatesReadRequest.class, baseUrl, "/api/clinical_note_templates/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNoteTemplatesReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNoteTemplatesReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2008,7 +2051,7 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ClinicalNotesListResponse clinicalNotesList(org.openapis.openapi.models.operations.ClinicalNotesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClinicalNotesListResponse clinicalNotesList(org.openapis.openapi.models.operations.ClinicalNotesListRequest request, org.openapis.openapi.models.operations.ClinicalNotesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/clinical_notes");
         
@@ -2016,14 +2059,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNotesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNotesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2049,22 +2092,22 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ClinicalNotesReadResponse clinicalNotesRead(org.openapis.openapi.models.operations.ClinicalNotesReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClinicalNotesReadResponse clinicalNotesRead(org.openapis.openapi.models.operations.ClinicalNotesReadRequest request, org.openapis.openapi.models.operations.ClinicalNotesReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClinicalNotesReadPathParams.class, baseUrl, "/api/clinical_notes/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClinicalNotesReadRequest.class, baseUrl, "/api/clinical_notes/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNotesReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClinicalNotesReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2093,25 +2136,26 @@ public class Clinical {
     /**
      * Assign (apply) a consent form to appointment
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConsentFormsApplyToAppointmentResponse consentFormsApplyToAppointment(org.openapis.openapi.models.operations.ConsentFormsApplyToAppointmentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConsentFormsApplyToAppointmentResponse consentFormsApplyToAppointment(org.openapis.openapi.models.operations.ConsentFormsApplyToAppointmentRequest request, org.openapis.openapi.models.operations.ConsentFormsApplyToAppointmentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConsentFormsApplyToAppointmentPathParams.class, baseUrl, "/api/consent_forms/{id}/apply_to_appointment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConsentFormsApplyToAppointmentRequest.class, baseUrl, "/api/consent_forms/{id}/apply_to_appointment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConsentFormsApplyToAppointmentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConsentFormsApplyToAppointmentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2132,10 +2176,11 @@ public class Clinical {
     /**
      * Create a patient consent form
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConsentFormsCreateResponse consentFormsCreate(org.openapis.openapi.models.operations.ConsentFormsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConsentFormsCreateResponse consentFormsCreate(org.openapis.openapi.models.operations.ConsentFormsCreateRequest request, org.openapis.openapi.models.operations.ConsentFormsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/consent_forms");
         
@@ -2143,14 +2188,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConsentFormsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConsentFormsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2179,10 +2224,11 @@ public class Clinical {
     /**
      * Retrieve or search patient consent forms
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConsentFormsListResponse consentFormsList(org.openapis.openapi.models.operations.ConsentFormsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConsentFormsListResponse consentFormsList(org.openapis.openapi.models.operations.ConsentFormsListRequest request, org.openapis.openapi.models.operations.ConsentFormsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/consent_forms");
         
@@ -2190,14 +2236,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConsentFormsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConsentFormsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2226,25 +2272,26 @@ public class Clinical {
     /**
      * Update an existing patient consent form
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConsentFormsPartialUpdateResponse consentFormsPartialUpdate(org.openapis.openapi.models.operations.ConsentFormsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConsentFormsPartialUpdateResponse consentFormsPartialUpdate(org.openapis.openapi.models.operations.ConsentFormsPartialUpdateRequest request, org.openapis.openapi.models.operations.ConsentFormsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConsentFormsPartialUpdatePathParams.class, baseUrl, "/api/consent_forms/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConsentFormsPartialUpdateRequest.class, baseUrl, "/api/consent_forms/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConsentFormsPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConsentFormsPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2265,25 +2312,26 @@ public class Clinical {
     /**
      * Retrieve an existing patient consent form
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConsentFormsReadResponse consentFormsRead(org.openapis.openapi.models.operations.ConsentFormsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConsentFormsReadResponse consentFormsRead(org.openapis.openapi.models.operations.ConsentFormsReadRequest request, org.openapis.openapi.models.operations.ConsentFormsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConsentFormsReadPathParams.class, baseUrl, "/api/consent_forms/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConsentFormsReadRequest.class, baseUrl, "/api/consent_forms/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConsentFormsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConsentFormsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2312,25 +2360,26 @@ public class Clinical {
     /**
      * Unassign (unapply) a consent form from appointment
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConsentFormsUnapplyFromAppointmentResponse consentFormsUnapplyFromAppointment(org.openapis.openapi.models.operations.ConsentFormsUnapplyFromAppointmentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConsentFormsUnapplyFromAppointmentResponse consentFormsUnapplyFromAppointment(org.openapis.openapi.models.operations.ConsentFormsUnapplyFromAppointmentRequest request, org.openapis.openapi.models.operations.ConsentFormsUnapplyFromAppointmentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConsentFormsUnapplyFromAppointmentPathParams.class, baseUrl, "/api/consent_forms/{id}/unapply_from_appointment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConsentFormsUnapplyFromAppointmentRequest.class, baseUrl, "/api/consent_forms/{id}/unapply_from_appointment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConsentFormsUnapplyFromAppointmentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConsentFormsUnapplyFromAppointmentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2351,25 +2400,26 @@ public class Clinical {
     /**
      * Update an existing patient consent form
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConsentFormsUpdateResponse consentFormsUpdate(org.openapis.openapi.models.operations.ConsentFormsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConsentFormsUpdateResponse consentFormsUpdate(org.openapis.openapi.models.operations.ConsentFormsUpdateRequest request, org.openapis.openapi.models.operations.ConsentFormsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConsentFormsUpdatePathParams.class, baseUrl, "/api/consent_forms/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConsentFormsUpdateRequest.class, baseUrl, "/api/consent_forms/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConsentFormsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConsentFormsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2390,10 +2440,11 @@ public class Clinical {
     /**
      * Create custom appointment fields
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomAppointmentFieldsCreateResponse customAppointmentFieldsCreate(org.openapis.openapi.models.operations.CustomAppointmentFieldsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomAppointmentFieldsCreateResponse customAppointmentFieldsCreate(org.openapis.openapi.models.operations.CustomAppointmentFieldsCreateRequest request, org.openapis.openapi.models.operations.CustomAppointmentFieldsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/custom_appointment_fields");
         
@@ -2401,14 +2452,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomAppointmentFieldsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomAppointmentFieldsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2437,10 +2488,11 @@ public class Clinical {
     /**
      * Retrieve or search custom appointment fields
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomAppointmentFieldsListResponse customAppointmentFieldsList(org.openapis.openapi.models.operations.CustomAppointmentFieldsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomAppointmentFieldsListResponse customAppointmentFieldsList(org.openapis.openapi.models.operations.CustomAppointmentFieldsListRequest request, org.openapis.openapi.models.operations.CustomAppointmentFieldsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/custom_appointment_fields");
         
@@ -2448,14 +2500,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomAppointmentFieldsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomAppointmentFieldsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2484,25 +2536,26 @@ public class Clinical {
     /**
      * Update an existing custom appointment field
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomAppointmentFieldsPartialUpdateResponse customAppointmentFieldsPartialUpdate(org.openapis.openapi.models.operations.CustomAppointmentFieldsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomAppointmentFieldsPartialUpdateResponse customAppointmentFieldsPartialUpdate(org.openapis.openapi.models.operations.CustomAppointmentFieldsPartialUpdateRequest request, org.openapis.openapi.models.operations.CustomAppointmentFieldsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomAppointmentFieldsPartialUpdatePathParams.class, baseUrl, "/api/custom_appointment_fields/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomAppointmentFieldsPartialUpdateRequest.class, baseUrl, "/api/custom_appointment_fields/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomAppointmentFieldsPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomAppointmentFieldsPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2523,25 +2576,26 @@ public class Clinical {
     /**
      * Retrieve an existing custom appointment field
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomAppointmentFieldsReadResponse customAppointmentFieldsRead(org.openapis.openapi.models.operations.CustomAppointmentFieldsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomAppointmentFieldsReadResponse customAppointmentFieldsRead(org.openapis.openapi.models.operations.CustomAppointmentFieldsReadRequest request, org.openapis.openapi.models.operations.CustomAppointmentFieldsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomAppointmentFieldsReadPathParams.class, baseUrl, "/api/custom_appointment_fields/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomAppointmentFieldsReadRequest.class, baseUrl, "/api/custom_appointment_fields/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomAppointmentFieldsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomAppointmentFieldsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2570,25 +2624,26 @@ public class Clinical {
     /**
      * Update an existing custom appointment field
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomAppointmentFieldsUpdateResponse customAppointmentFieldsUpdate(org.openapis.openapi.models.operations.CustomAppointmentFieldsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomAppointmentFieldsUpdateResponse customAppointmentFieldsUpdate(org.openapis.openapi.models.operations.CustomAppointmentFieldsUpdateRequest request, org.openapis.openapi.models.operations.CustomAppointmentFieldsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomAppointmentFieldsUpdatePathParams.class, baseUrl, "/api/custom_appointment_fields/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomAppointmentFieldsUpdateRequest.class, baseUrl, "/api/custom_appointment_fields/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomAppointmentFieldsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomAppointmentFieldsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2609,10 +2664,11 @@ public class Clinical {
     /**
      * Create custom demographics fields
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomDemographicsCreateResponse customDemographicsCreate(org.openapis.openapi.models.operations.CustomDemographicsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomDemographicsCreateResponse customDemographicsCreate(org.openapis.openapi.models.operations.CustomDemographicsCreateRequest request, org.openapis.openapi.models.operations.CustomDemographicsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/custom_demographics");
         
@@ -2620,14 +2676,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomDemographicsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomDemographicsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2656,10 +2712,11 @@ public class Clinical {
     /**
      * Retrieve or search custom demographics fields
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomDemographicsListResponse customDemographicsList(org.openapis.openapi.models.operations.CustomDemographicsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomDemographicsListResponse customDemographicsList(org.openapis.openapi.models.operations.CustomDemographicsListRequest request, org.openapis.openapi.models.operations.CustomDemographicsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/custom_demographics");
         
@@ -2667,14 +2724,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomDemographicsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomDemographicsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2703,25 +2760,26 @@ public class Clinical {
     /**
      * Update an existing custom demographics field
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomDemographicsPartialUpdateResponse customDemographicsPartialUpdate(org.openapis.openapi.models.operations.CustomDemographicsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomDemographicsPartialUpdateResponse customDemographicsPartialUpdate(org.openapis.openapi.models.operations.CustomDemographicsPartialUpdateRequest request, org.openapis.openapi.models.operations.CustomDemographicsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomDemographicsPartialUpdatePathParams.class, baseUrl, "/api/custom_demographics/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomDemographicsPartialUpdateRequest.class, baseUrl, "/api/custom_demographics/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomDemographicsPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomDemographicsPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2742,25 +2800,26 @@ public class Clinical {
     /**
      * Retrieve an existing custom demographics field
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomDemographicsReadResponse customDemographicsRead(org.openapis.openapi.models.operations.CustomDemographicsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomDemographicsReadResponse customDemographicsRead(org.openapis.openapi.models.operations.CustomDemographicsReadRequest request, org.openapis.openapi.models.operations.CustomDemographicsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomDemographicsReadPathParams.class, baseUrl, "/api/custom_demographics/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomDemographicsReadRequest.class, baseUrl, "/api/custom_demographics/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomDemographicsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomDemographicsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2789,25 +2848,26 @@ public class Clinical {
     /**
      * Update an existing custom demographics field
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomDemographicsUpdateResponse customDemographicsUpdate(org.openapis.openapi.models.operations.CustomDemographicsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomDemographicsUpdateResponse customDemographicsUpdate(org.openapis.openapi.models.operations.CustomDemographicsUpdateRequest request, org.openapis.openapi.models.operations.CustomDemographicsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomDemographicsUpdatePathParams.class, baseUrl, "/api/custom_demographics/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomDemographicsUpdateRequest.class, baseUrl, "/api/custom_demographics/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomDemographicsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomDemographicsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2828,10 +2888,11 @@ public class Clinical {
     /**
      * Retrieve or search custom vital types
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomVitalsListResponse customVitalsList(org.openapis.openapi.models.operations.CustomVitalsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomVitalsListResponse customVitalsList(org.openapis.openapi.models.operations.CustomVitalsListRequest request, org.openapis.openapi.models.operations.CustomVitalsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/custom_vitals");
         
@@ -2839,14 +2900,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomVitalsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomVitalsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2875,25 +2936,26 @@ public class Clinical {
     /**
      * Retrieve an existing custom vital type
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomVitalsReadResponse customVitalsRead(org.openapis.openapi.models.operations.CustomVitalsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomVitalsReadResponse customVitalsRead(org.openapis.openapi.models.operations.CustomVitalsReadRequest request, org.openapis.openapi.models.operations.CustomVitalsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomVitalsReadPathParams.class, baseUrl, "/api/custom_vitals/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomVitalsReadRequest.class, baseUrl, "/api/custom_vitals/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomVitalsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomVitalsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2922,10 +2984,11 @@ public class Clinical {
     /**
      * Create documents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentsCreateResponse documentsCreate(org.openapis.openapi.models.operations.DocumentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentsCreateResponse documentsCreate(org.openapis.openapi.models.operations.DocumentsCreateRequest request, org.openapis.openapi.models.operations.DocumentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/documents");
         
@@ -2933,14 +2996,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2969,25 +3032,26 @@ public class Clinical {
     /**
      * Delete an existing appointment template
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentsDeleteResponse documentsDelete(org.openapis.openapi.models.operations.DocumentsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentsDeleteResponse documentsDelete(org.openapis.openapi.models.operations.DocumentsDeleteRequest request, org.openapis.openapi.models.operations.DocumentsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentsDeletePathParams.class, baseUrl, "/api/documents/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentsDeleteRequest.class, baseUrl, "/api/documents/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3008,10 +3072,11 @@ public class Clinical {
     /**
      * Retrieve or search documents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentsListResponse documentsList(org.openapis.openapi.models.operations.DocumentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentsListResponse documentsList(org.openapis.openapi.models.operations.DocumentsListRequest request, org.openapis.openapi.models.operations.DocumentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/documents");
         
@@ -3019,14 +3084,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3055,25 +3120,26 @@ public class Clinical {
     /**
      * Update an existing appointment template
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentsPartialUpdateResponse documentsPartialUpdate(org.openapis.openapi.models.operations.DocumentsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentsPartialUpdateResponse documentsPartialUpdate(org.openapis.openapi.models.operations.DocumentsPartialUpdateRequest request, org.openapis.openapi.models.operations.DocumentsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentsPartialUpdatePathParams.class, baseUrl, "/api/documents/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentsPartialUpdateRequest.class, baseUrl, "/api/documents/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentsPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentsPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3094,25 +3160,26 @@ public class Clinical {
     /**
      * Retrieve an existing appointment template
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentsReadResponse documentsRead(org.openapis.openapi.models.operations.DocumentsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentsReadResponse documentsRead(org.openapis.openapi.models.operations.DocumentsReadRequest request, org.openapis.openapi.models.operations.DocumentsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentsReadPathParams.class, baseUrl, "/api/documents/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentsReadRequest.class, baseUrl, "/api/documents/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3141,25 +3208,26 @@ public class Clinical {
     /**
      * Update an existing appointment template
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentsUpdateResponse documentsUpdate(org.openapis.openapi.models.operations.DocumentsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentsUpdateResponse documentsUpdate(org.openapis.openapi.models.operations.DocumentsUpdateRequest request, org.openapis.openapi.models.operations.DocumentsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentsUpdatePathParams.class, baseUrl, "/api/documents/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentsUpdateRequest.class, baseUrl, "/api/documents/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3180,10 +3248,11 @@ public class Clinical {
     /**
      * Create EOB object
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EobsCreateResponse eobsCreate(org.openapis.openapi.models.operations.EobsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EobsCreateResponse eobsCreate(org.openapis.openapi.models.operations.EobsCreateRequest request, org.openapis.openapi.models.operations.EobsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/eobs");
         
@@ -3191,14 +3260,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EobsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EobsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3227,10 +3296,11 @@ public class Clinical {
     /**
      * Retrieve or search EOB objects
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EobsListResponse eobsList(org.openapis.openapi.models.operations.EobsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EobsListResponse eobsList(org.openapis.openapi.models.operations.EobsListRequest request, org.openapis.openapi.models.operations.EobsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/eobs");
         
@@ -3238,14 +3308,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EobsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EobsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3274,25 +3344,26 @@ public class Clinical {
     /**
      * Retrieve an existing EOB object
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EobsReadResponse eobsRead(org.openapis.openapi.models.operations.EobsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EobsReadResponse eobsRead(org.openapis.openapi.models.operations.EobsReadRequest request, org.openapis.openapi.models.operations.EobsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EobsReadPathParams.class, baseUrl, "/api/eobs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EobsReadRequest.class, baseUrl, "/api/eobs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EobsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EobsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3318,7 +3389,7 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FeeSchedulesListResponse feeSchedulesList(org.openapis.openapi.models.operations.FeeSchedulesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FeeSchedulesListResponse feeSchedulesList(org.openapis.openapi.models.operations.FeeSchedulesListRequest request, org.openapis.openapi.models.operations.FeeSchedulesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/fee_schedules");
         
@@ -3326,14 +3397,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FeeSchedulesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FeeSchedulesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3359,22 +3430,22 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FeeSchedulesReadResponse feeSchedulesRead(org.openapis.openapi.models.operations.FeeSchedulesReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FeeSchedulesReadResponse feeSchedulesRead(org.openapis.openapi.models.operations.FeeSchedulesReadRequest request, org.openapis.openapi.models.operations.FeeSchedulesReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FeeSchedulesReadPathParams.class, baseUrl, "/api/fee_schedules/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FeeSchedulesReadRequest.class, baseUrl, "/api/fee_schedules/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FeeSchedulesReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FeeSchedulesReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3403,10 +3474,11 @@ public class Clinical {
     /**
      * Retrieve or search implantable devices
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ImplantableDevicesListResponse implantableDevicesList(org.openapis.openapi.models.operations.ImplantableDevicesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ImplantableDevicesListResponse implantableDevicesList(org.openapis.openapi.models.operations.ImplantableDevicesListRequest request, org.openapis.openapi.models.operations.ImplantableDevicesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/implantable_devices");
         
@@ -3414,14 +3486,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ImplantableDevicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ImplantableDevicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3450,25 +3522,26 @@ public class Clinical {
     /**
      * Retrieve an existing implantable device
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ImplantableDevicesReadResponse implantableDevicesRead(org.openapis.openapi.models.operations.ImplantableDevicesReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ImplantableDevicesReadResponse implantableDevicesRead(org.openapis.openapi.models.operations.ImplantableDevicesReadRequest request, org.openapis.openapi.models.operations.ImplantableDevicesReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImplantableDevicesReadPathParams.class, baseUrl, "/api/implantable_devices/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImplantableDevicesReadRequest.class, baseUrl, "/api/implantable_devices/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ImplantableDevicesReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ImplantableDevicesReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3494,7 +3567,7 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.InsurancesListResponse insurancesList(org.openapis.openapi.models.operations.InsurancesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.InsurancesListResponse insurancesList(org.openapis.openapi.models.operations.InsurancesListRequest request, org.openapis.openapi.models.operations.InsurancesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/insurances");
         
@@ -3502,14 +3575,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.InsurancesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.InsurancesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3535,22 +3608,22 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.InsurancesReadResponse insurancesRead(org.openapis.openapi.models.operations.InsurancesReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.InsurancesReadResponse insurancesRead(org.openapis.openapi.models.operations.InsurancesReadRequest request, org.openapis.openapi.models.operations.InsurancesReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InsurancesReadPathParams.class, baseUrl, "/api/insurances/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InsurancesReadRequest.class, baseUrl, "/api/insurances/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.InsurancesReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.InsurancesReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3579,10 +3652,11 @@ public class Clinical {
     /**
      * Create lab order documents. An example lab workflow is as following: -  - - When you get orders, submit them via `/api/lab_orders`, such that doctors can see them in drchrono. -  - - When results come in, submit the result document PDF via `/api/lab_documents` and submit the results data via `/api/lab_results` -  - - Update `/api/lab_orders` status - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabDocumentsCreateResponse labDocumentsCreate(org.openapis.openapi.models.operations.LabDocumentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabDocumentsCreateResponse labDocumentsCreate(org.openapis.openapi.models.operations.LabDocumentsCreateRequest request, org.openapis.openapi.models.operations.LabDocumentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/lab_documents");
         
@@ -3590,14 +3664,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabDocumentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabDocumentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3626,25 +3700,26 @@ public class Clinical {
     /**
      * Delete an existing lab order document
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabDocumentsDeleteResponse labDocumentsDelete(org.openapis.openapi.models.operations.LabDocumentsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabDocumentsDeleteResponse labDocumentsDelete(org.openapis.openapi.models.operations.LabDocumentsDeleteRequest request, org.openapis.openapi.models.operations.LabDocumentsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabDocumentsDeletePathParams.class, baseUrl, "/api/lab_documents/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabDocumentsDeleteRequest.class, baseUrl, "/api/lab_documents/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabDocumentsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabDocumentsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3665,10 +3740,11 @@ public class Clinical {
     /**
      * Retrieve or search lab order documents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabDocumentsListResponse labDocumentsList(org.openapis.openapi.models.operations.LabDocumentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabDocumentsListResponse labDocumentsList(org.openapis.openapi.models.operations.LabDocumentsListRequest request, org.openapis.openapi.models.operations.LabDocumentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/lab_documents");
         
@@ -3676,14 +3752,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabDocumentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabDocumentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3712,25 +3788,26 @@ public class Clinical {
     /**
      * Update an existing lab order document
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabDocumentsPartialUpdateResponse labDocumentsPartialUpdate(org.openapis.openapi.models.operations.LabDocumentsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabDocumentsPartialUpdateResponse labDocumentsPartialUpdate(org.openapis.openapi.models.operations.LabDocumentsPartialUpdateRequest request, org.openapis.openapi.models.operations.LabDocumentsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabDocumentsPartialUpdatePathParams.class, baseUrl, "/api/lab_documents/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabDocumentsPartialUpdateRequest.class, baseUrl, "/api/lab_documents/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabDocumentsPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabDocumentsPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3751,25 +3828,26 @@ public class Clinical {
     /**
      * Retrieve an existing lab order document
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabDocumentsReadResponse labDocumentsRead(org.openapis.openapi.models.operations.LabDocumentsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabDocumentsReadResponse labDocumentsRead(org.openapis.openapi.models.operations.LabDocumentsReadRequest request, org.openapis.openapi.models.operations.LabDocumentsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabDocumentsReadPathParams.class, baseUrl, "/api/lab_documents/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabDocumentsReadRequest.class, baseUrl, "/api/lab_documents/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabDocumentsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabDocumentsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3798,25 +3876,26 @@ public class Clinical {
     /**
      * Update an existing lab order document
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabDocumentsUpdateResponse labDocumentsUpdate(org.openapis.openapi.models.operations.LabDocumentsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabDocumentsUpdateResponse labDocumentsUpdate(org.openapis.openapi.models.operations.LabDocumentsUpdateRequest request, org.openapis.openapi.models.operations.LabDocumentsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabDocumentsUpdatePathParams.class, baseUrl, "/api/lab_documents/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabDocumentsUpdateRequest.class, baseUrl, "/api/lab_documents/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabDocumentsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabDocumentsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3837,10 +3916,11 @@ public class Clinical {
     /**
      * Create lab orders. An example lab workflow is as following: -  - - When you get orders, submit them via `/api/lab_orders`, such that doctors can see them in drchrono. -  - - When results come in, submit the result document PDF via `/api/lab_documents` and submit the results data via `/api/lab_results` -  - - Update `/api/lab_orders` status - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabOrdersCreateResponse labOrdersCreate(org.openapis.openapi.models.operations.LabOrdersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabOrdersCreateResponse labOrdersCreate(org.openapis.openapi.models.operations.LabOrdersCreateRequest request, org.openapis.openapi.models.operations.LabOrdersCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/lab_orders");
         
@@ -3848,14 +3928,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabOrdersCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabOrdersCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3884,25 +3964,26 @@ public class Clinical {
     /**
      * Delete an existing lab order
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabOrdersDeleteResponse labOrdersDelete(org.openapis.openapi.models.operations.LabOrdersDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabOrdersDeleteResponse labOrdersDelete(org.openapis.openapi.models.operations.LabOrdersDeleteRequest request, org.openapis.openapi.models.operations.LabOrdersDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabOrdersDeletePathParams.class, baseUrl, "/api/lab_orders/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabOrdersDeleteRequest.class, baseUrl, "/api/lab_orders/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabOrdersDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabOrdersDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3923,10 +4004,11 @@ public class Clinical {
     /**
      * Retrieve or search lab orders
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabOrdersListResponse labOrdersList(org.openapis.openapi.models.operations.LabOrdersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabOrdersListResponse labOrdersList(org.openapis.openapi.models.operations.LabOrdersListRequest request, org.openapis.openapi.models.operations.LabOrdersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/lab_orders");
         
@@ -3934,14 +4016,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabOrdersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabOrdersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3970,25 +4052,26 @@ public class Clinical {
     /**
      * Update an existing lab order
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabOrdersPartialUpdateResponse labOrdersPartialUpdate(org.openapis.openapi.models.operations.LabOrdersPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabOrdersPartialUpdateResponse labOrdersPartialUpdate(org.openapis.openapi.models.operations.LabOrdersPartialUpdateRequest request, org.openapis.openapi.models.operations.LabOrdersPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabOrdersPartialUpdatePathParams.class, baseUrl, "/api/lab_orders/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabOrdersPartialUpdateRequest.class, baseUrl, "/api/lab_orders/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabOrdersPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabOrdersPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4009,25 +4092,26 @@ public class Clinical {
     /**
      * Retrieve an existing lab order
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabOrdersReadResponse labOrdersRead(org.openapis.openapi.models.operations.LabOrdersReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabOrdersReadResponse labOrdersRead(org.openapis.openapi.models.operations.LabOrdersReadRequest request, org.openapis.openapi.models.operations.LabOrdersReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabOrdersReadPathParams.class, baseUrl, "/api/lab_orders/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabOrdersReadRequest.class, baseUrl, "/api/lab_orders/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabOrdersReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabOrdersReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4053,7 +4137,7 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.LabOrdersSummaryListResponse labOrdersSummaryList(org.openapis.openapi.models.operations.LabOrdersSummaryListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabOrdersSummaryListResponse labOrdersSummaryList(org.openapis.openapi.models.operations.LabOrdersSummaryListRequest request, org.openapis.openapi.models.operations.LabOrdersSummaryListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/lab_orders_summary");
         
@@ -4061,14 +4145,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabOrdersSummaryListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabOrdersSummaryListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4094,22 +4178,22 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.LabOrdersSummaryReadResponse labOrdersSummaryRead(org.openapis.openapi.models.operations.LabOrdersSummaryReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabOrdersSummaryReadResponse labOrdersSummaryRead(org.openapis.openapi.models.operations.LabOrdersSummaryReadRequest request, org.openapis.openapi.models.operations.LabOrdersSummaryReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabOrdersSummaryReadPathParams.class, baseUrl, "/api/lab_orders_summary/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabOrdersSummaryReadRequest.class, baseUrl, "/api/lab_orders_summary/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabOrdersSummaryReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabOrdersSummaryReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4138,25 +4222,26 @@ public class Clinical {
     /**
      * Update an existing lab order
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabOrdersUpdateResponse labOrdersUpdate(org.openapis.openapi.models.operations.LabOrdersUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabOrdersUpdateResponse labOrdersUpdate(org.openapis.openapi.models.operations.LabOrdersUpdateRequest request, org.openapis.openapi.models.operations.LabOrdersUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabOrdersUpdatePathParams.class, baseUrl, "/api/lab_orders/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabOrdersUpdateRequest.class, baseUrl, "/api/lab_orders/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabOrdersUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabOrdersUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4177,10 +4262,11 @@ public class Clinical {
     /**
      * Create lab results. An example lab workflow is as following: -  - - When you get orders, submit them via `/api/lab_orders`, such that doctors can see them in drchrono. -  - - When results come in, submit the result document PDF via `/api/lab_documents` and submit the results data via `/api/lab_results` -  - - Update `/api/lab_orders` status - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabResultsCreateResponse labResultsCreate(org.openapis.openapi.models.operations.LabResultsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabResultsCreateResponse labResultsCreate(org.openapis.openapi.models.operations.LabResultsCreateRequest request, org.openapis.openapi.models.operations.LabResultsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/lab_results");
         
@@ -4188,14 +4274,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabResultsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabResultsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4224,25 +4310,26 @@ public class Clinical {
     /**
      * Delete an existing lab result
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabResultsDeleteResponse labResultsDelete(org.openapis.openapi.models.operations.LabResultsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabResultsDeleteResponse labResultsDelete(org.openapis.openapi.models.operations.LabResultsDeleteRequest request, org.openapis.openapi.models.operations.LabResultsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabResultsDeletePathParams.class, baseUrl, "/api/lab_results/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabResultsDeleteRequest.class, baseUrl, "/api/lab_results/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabResultsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabResultsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4263,10 +4350,11 @@ public class Clinical {
     /**
      * Retrieve or search lab results
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabResultsListResponse labResultsList(org.openapis.openapi.models.operations.LabResultsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabResultsListResponse labResultsList(org.openapis.openapi.models.operations.LabResultsListRequest request, org.openapis.openapi.models.operations.LabResultsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/lab_results");
         
@@ -4274,14 +4362,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabResultsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabResultsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4310,25 +4398,26 @@ public class Clinical {
     /**
      * Update an existing lab result
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabResultsPartialUpdateResponse labResultsPartialUpdate(org.openapis.openapi.models.operations.LabResultsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabResultsPartialUpdateResponse labResultsPartialUpdate(org.openapis.openapi.models.operations.LabResultsPartialUpdateRequest request, org.openapis.openapi.models.operations.LabResultsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabResultsPartialUpdatePathParams.class, baseUrl, "/api/lab_results/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabResultsPartialUpdateRequest.class, baseUrl, "/api/lab_results/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabResultsPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabResultsPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4349,25 +4438,26 @@ public class Clinical {
     /**
      * Retrieve an existing lab result
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabResultsReadResponse labResultsRead(org.openapis.openapi.models.operations.LabResultsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabResultsReadResponse labResultsRead(org.openapis.openapi.models.operations.LabResultsReadRequest request, org.openapis.openapi.models.operations.LabResultsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabResultsReadPathParams.class, baseUrl, "/api/lab_results/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabResultsReadRequest.class, baseUrl, "/api/lab_results/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabResultsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabResultsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4396,25 +4486,26 @@ public class Clinical {
     /**
      * Update an existing lab result
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabResultsUpdateResponse labResultsUpdate(org.openapis.openapi.models.operations.LabResultsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabResultsUpdateResponse labResultsUpdate(org.openapis.openapi.models.operations.LabResultsUpdateRequest request, org.openapis.openapi.models.operations.LabResultsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabResultsUpdatePathParams.class, baseUrl, "/api/lab_results/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabResultsUpdateRequest.class, baseUrl, "/api/lab_results/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabResultsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabResultsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4435,10 +4526,11 @@ public class Clinical {
     /**
      * Create lab tests. An example lab workflow is as following: -  - - When you get orders, submit them via `/api/lab_orders`, such that doctors can see them in drchrono. -  - - When results come in, submit the result document PDF via `/api/lab_documents` and submit the results data via `/api/lab_results` -  - - Update `/api/lab_orders` status - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabTestsCreateResponse labTestsCreate(org.openapis.openapi.models.operations.LabTestsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabTestsCreateResponse labTestsCreate(org.openapis.openapi.models.operations.LabTestsCreateRequest request, org.openapis.openapi.models.operations.LabTestsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/lab_tests");
         
@@ -4446,14 +4538,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabTestsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabTestsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4482,25 +4574,26 @@ public class Clinical {
     /**
      * Delete an existing lab test
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabTestsDeleteResponse labTestsDelete(org.openapis.openapi.models.operations.LabTestsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabTestsDeleteResponse labTestsDelete(org.openapis.openapi.models.operations.LabTestsDeleteRequest request, org.openapis.openapi.models.operations.LabTestsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabTestsDeletePathParams.class, baseUrl, "/api/lab_tests/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabTestsDeleteRequest.class, baseUrl, "/api/lab_tests/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabTestsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabTestsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4521,10 +4614,11 @@ public class Clinical {
     /**
      * Retrieve or search lab tests
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabTestsListResponse labTestsList(org.openapis.openapi.models.operations.LabTestsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabTestsListResponse labTestsList(org.openapis.openapi.models.operations.LabTestsListRequest request, org.openapis.openapi.models.operations.LabTestsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/lab_tests");
         
@@ -4532,14 +4626,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabTestsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabTestsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4568,25 +4662,26 @@ public class Clinical {
     /**
      * Update an existing lab test
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabTestsPartialUpdateResponse labTestsPartialUpdate(org.openapis.openapi.models.operations.LabTestsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabTestsPartialUpdateResponse labTestsPartialUpdate(org.openapis.openapi.models.operations.LabTestsPartialUpdateRequest request, org.openapis.openapi.models.operations.LabTestsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabTestsPartialUpdatePathParams.class, baseUrl, "/api/lab_tests/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabTestsPartialUpdateRequest.class, baseUrl, "/api/lab_tests/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabTestsPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabTestsPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4607,25 +4702,26 @@ public class Clinical {
     /**
      * Retrieve an existing lab test
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabTestsReadResponse labTestsRead(org.openapis.openapi.models.operations.LabTestsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabTestsReadResponse labTestsRead(org.openapis.openapi.models.operations.LabTestsReadRequest request, org.openapis.openapi.models.operations.LabTestsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabTestsReadPathParams.class, baseUrl, "/api/lab_tests/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabTestsReadRequest.class, baseUrl, "/api/lab_tests/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabTestsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabTestsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4654,25 +4750,26 @@ public class Clinical {
     /**
      * Update an existing lab test
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LabTestsUpdateResponse labTestsUpdate(org.openapis.openapi.models.operations.LabTestsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LabTestsUpdateResponse labTestsUpdate(org.openapis.openapi.models.operations.LabTestsUpdateRequest request, org.openapis.openapi.models.operations.LabTestsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabTestsUpdatePathParams.class, baseUrl, "/api/lab_tests/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LabTestsUpdateRequest.class, baseUrl, "/api/lab_tests/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabTestsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LabTestsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4693,25 +4790,26 @@ public class Clinical {
     /**
      * Append a message to the "pharmacy_note" section of the prescription, in a new paragraph
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MedicationsAppendToPharmacyNoteResponse medicationsAppendToPharmacyNote(org.openapis.openapi.models.operations.MedicationsAppendToPharmacyNoteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MedicationsAppendToPharmacyNoteResponse medicationsAppendToPharmacyNote(org.openapis.openapi.models.operations.MedicationsAppendToPharmacyNoteRequest request, org.openapis.openapi.models.operations.MedicationsAppendToPharmacyNoteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MedicationsAppendToPharmacyNotePathParams.class, baseUrl, "/api/medications/{id}/append_to_pharmacy_note", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MedicationsAppendToPharmacyNoteRequest.class, baseUrl, "/api/medications/{id}/append_to_pharmacy_note", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MedicationsAppendToPharmacyNoteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MedicationsAppendToPharmacyNoteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4732,10 +4830,11 @@ public class Clinical {
     /**
      * Create patient medications
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MedicationsCreateResponse medicationsCreate(org.openapis.openapi.models.operations.MedicationsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MedicationsCreateResponse medicationsCreate(org.openapis.openapi.models.operations.MedicationsCreateRequest request, org.openapis.openapi.models.operations.MedicationsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/medications");
         
@@ -4743,14 +4842,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MedicationsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MedicationsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4779,10 +4878,11 @@ public class Clinical {
     /**
      * Retrieve or search patient medications
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MedicationsListResponse medicationsList(org.openapis.openapi.models.operations.MedicationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MedicationsListResponse medicationsList(org.openapis.openapi.models.operations.MedicationsListRequest request, org.openapis.openapi.models.operations.MedicationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/medications");
         
@@ -4790,14 +4890,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MedicationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MedicationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4826,25 +4926,26 @@ public class Clinical {
     /**
      * Update an existing patient medications
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MedicationsPartialUpdateResponse medicationsPartialUpdate(org.openapis.openapi.models.operations.MedicationsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MedicationsPartialUpdateResponse medicationsPartialUpdate(org.openapis.openapi.models.operations.MedicationsPartialUpdateRequest request, org.openapis.openapi.models.operations.MedicationsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MedicationsPartialUpdatePathParams.class, baseUrl, "/api/medications/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MedicationsPartialUpdateRequest.class, baseUrl, "/api/medications/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MedicationsPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MedicationsPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4865,25 +4966,26 @@ public class Clinical {
     /**
      * Retrieve an existing patient medications
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MedicationsReadResponse medicationsRead(org.openapis.openapi.models.operations.MedicationsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MedicationsReadResponse medicationsRead(org.openapis.openapi.models.operations.MedicationsReadRequest request, org.openapis.openapi.models.operations.MedicationsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MedicationsReadPathParams.class, baseUrl, "/api/medications/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MedicationsReadRequest.class, baseUrl, "/api/medications/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MedicationsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MedicationsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4912,25 +5014,26 @@ public class Clinical {
     /**
      * Update an existing patient medications
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MedicationsUpdateResponse medicationsUpdate(org.openapis.openapi.models.operations.MedicationsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MedicationsUpdateResponse medicationsUpdate(org.openapis.openapi.models.operations.MedicationsUpdateRequest request, org.openapis.openapi.models.operations.MedicationsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MedicationsUpdatePathParams.class, baseUrl, "/api/medications/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MedicationsUpdateRequest.class, baseUrl, "/api/medications/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MedicationsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MedicationsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4951,10 +5054,11 @@ public class Clinical {
     /**
      * Create patient communication for CQM
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientCommunicationsCreateResponse patientCommunicationsCreate(org.openapis.openapi.models.operations.PatientCommunicationsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientCommunicationsCreateResponse patientCommunicationsCreate(org.openapis.openapi.models.operations.PatientCommunicationsCreateRequest request, org.openapis.openapi.models.operations.PatientCommunicationsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patient_communications");
         
@@ -4962,14 +5066,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientCommunicationsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientCommunicationsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4998,10 +5102,11 @@ public class Clinical {
     /**
      * Retrieve or search patient communications for CQM
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientCommunicationsListResponse patientCommunicationsList(org.openapis.openapi.models.operations.PatientCommunicationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientCommunicationsListResponse patientCommunicationsList(org.openapis.openapi.models.operations.PatientCommunicationsListRequest request, org.openapis.openapi.models.operations.PatientCommunicationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patient_communications");
         
@@ -5009,14 +5114,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientCommunicationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientCommunicationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5045,25 +5150,26 @@ public class Clinical {
     /**
      * Update an existing patient communication for CQM
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientCommunicationsPartialUpdateResponse patientCommunicationsPartialUpdate(org.openapis.openapi.models.operations.PatientCommunicationsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientCommunicationsPartialUpdateResponse patientCommunicationsPartialUpdate(org.openapis.openapi.models.operations.PatientCommunicationsPartialUpdateRequest request, org.openapis.openapi.models.operations.PatientCommunicationsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientCommunicationsPartialUpdatePathParams.class, baseUrl, "/api/patient_communications/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientCommunicationsPartialUpdateRequest.class, baseUrl, "/api/patient_communications/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientCommunicationsPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientCommunicationsPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5084,25 +5190,26 @@ public class Clinical {
     /**
      * Retrieve an existing patient communication for CQM
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientCommunicationsReadResponse patientCommunicationsRead(org.openapis.openapi.models.operations.PatientCommunicationsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientCommunicationsReadResponse patientCommunicationsRead(org.openapis.openapi.models.operations.PatientCommunicationsReadRequest request, org.openapis.openapi.models.operations.PatientCommunicationsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientCommunicationsReadPathParams.class, baseUrl, "/api/patient_communications/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientCommunicationsReadRequest.class, baseUrl, "/api/patient_communications/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientCommunicationsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientCommunicationsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5131,25 +5238,26 @@ public class Clinical {
     /**
      * Update an existing patient communication for CQM
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientCommunicationsUpdateResponse patientCommunicationsUpdate(org.openapis.openapi.models.operations.PatientCommunicationsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientCommunicationsUpdateResponse patientCommunicationsUpdate(org.openapis.openapi.models.operations.PatientCommunicationsUpdateRequest request, org.openapis.openapi.models.operations.PatientCommunicationsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientCommunicationsUpdatePathParams.class, baseUrl, "/api/patient_communications/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientCommunicationsUpdateRequest.class, baseUrl, "/api/patient_communications/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientCommunicationsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientCommunicationsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5170,10 +5278,11 @@ public class Clinical {
     /**
      * Create patient flag types
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientFlagTypesCreateResponse patientFlagTypesCreate(org.openapis.openapi.models.operations.PatientFlagTypesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientFlagTypesCreateResponse patientFlagTypesCreate(org.openapis.openapi.models.operations.PatientFlagTypesCreateRequest request, org.openapis.openapi.models.operations.PatientFlagTypesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patient_flag_types");
         
@@ -5181,14 +5290,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientFlagTypesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientFlagTypesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5217,10 +5326,11 @@ public class Clinical {
     /**
      * Retrieve or search patient flag types
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientFlagTypesListResponse patientFlagTypesList(org.openapis.openapi.models.operations.PatientFlagTypesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientFlagTypesListResponse patientFlagTypesList(org.openapis.openapi.models.operations.PatientFlagTypesListRequest request, org.openapis.openapi.models.operations.PatientFlagTypesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patient_flag_types");
         
@@ -5228,14 +5338,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientFlagTypesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientFlagTypesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5264,25 +5374,26 @@ public class Clinical {
     /**
      * Update an existing patient flag type
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientFlagTypesPartialUpdateResponse patientFlagTypesPartialUpdate(org.openapis.openapi.models.operations.PatientFlagTypesPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientFlagTypesPartialUpdateResponse patientFlagTypesPartialUpdate(org.openapis.openapi.models.operations.PatientFlagTypesPartialUpdateRequest request, org.openapis.openapi.models.operations.PatientFlagTypesPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientFlagTypesPartialUpdatePathParams.class, baseUrl, "/api/patient_flag_types/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientFlagTypesPartialUpdateRequest.class, baseUrl, "/api/patient_flag_types/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientFlagTypesPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientFlagTypesPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5303,25 +5414,26 @@ public class Clinical {
     /**
      * Retrieve an existing patient flag type
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientFlagTypesReadResponse patientFlagTypesRead(org.openapis.openapi.models.operations.PatientFlagTypesReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientFlagTypesReadResponse patientFlagTypesRead(org.openapis.openapi.models.operations.PatientFlagTypesReadRequest request, org.openapis.openapi.models.operations.PatientFlagTypesReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientFlagTypesReadPathParams.class, baseUrl, "/api/patient_flag_types/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientFlagTypesReadRequest.class, baseUrl, "/api/patient_flag_types/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientFlagTypesReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientFlagTypesReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5350,25 +5462,26 @@ public class Clinical {
     /**
      * Update an existing patient flag type
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientFlagTypesUpdateResponse patientFlagTypesUpdate(org.openapis.openapi.models.operations.PatientFlagTypesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientFlagTypesUpdateResponse patientFlagTypesUpdate(org.openapis.openapi.models.operations.PatientFlagTypesUpdateRequest request, org.openapis.openapi.models.operations.PatientFlagTypesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientFlagTypesUpdatePathParams.class, baseUrl, "/api/patient_flag_types/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientFlagTypesUpdateRequest.class, baseUrl, "/api/patient_flag_types/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientFlagTypesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientFlagTypesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5389,10 +5502,11 @@ public class Clinical {
     /**
      * Create patient intervention for CQM
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientInterventionsCreateResponse patientInterventionsCreate(org.openapis.openapi.models.operations.PatientInterventionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientInterventionsCreateResponse patientInterventionsCreate(org.openapis.openapi.models.operations.PatientInterventionsCreateRequest request, org.openapis.openapi.models.operations.PatientInterventionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patient_interventions");
         
@@ -5400,14 +5514,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientInterventionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientInterventionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5436,10 +5550,11 @@ public class Clinical {
     /**
      * Retrieve or search patient interventions for CQM
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientInterventionsListResponse patientInterventionsList(org.openapis.openapi.models.operations.PatientInterventionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientInterventionsListResponse patientInterventionsList(org.openapis.openapi.models.operations.PatientInterventionsListRequest request, org.openapis.openapi.models.operations.PatientInterventionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patient_interventions");
         
@@ -5447,14 +5562,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientInterventionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientInterventionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5483,25 +5598,26 @@ public class Clinical {
     /**
      * Update an existing patient intervention for CQM
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientInterventionsPartialUpdateResponse patientInterventionsPartialUpdate(org.openapis.openapi.models.operations.PatientInterventionsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientInterventionsPartialUpdateResponse patientInterventionsPartialUpdate(org.openapis.openapi.models.operations.PatientInterventionsPartialUpdateRequest request, org.openapis.openapi.models.operations.PatientInterventionsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientInterventionsPartialUpdatePathParams.class, baseUrl, "/api/patient_interventions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientInterventionsPartialUpdateRequest.class, baseUrl, "/api/patient_interventions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientInterventionsPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientInterventionsPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5522,25 +5638,26 @@ public class Clinical {
     /**
      * Retrieve an existing patient intervention for CQM
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientInterventionsReadResponse patientInterventionsRead(org.openapis.openapi.models.operations.PatientInterventionsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientInterventionsReadResponse patientInterventionsRead(org.openapis.openapi.models.operations.PatientInterventionsReadRequest request, org.openapis.openapi.models.operations.PatientInterventionsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientInterventionsReadPathParams.class, baseUrl, "/api/patient_interventions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientInterventionsReadRequest.class, baseUrl, "/api/patient_interventions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientInterventionsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientInterventionsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5569,25 +5686,26 @@ public class Clinical {
     /**
      * Update an existing patient intervention for CQM
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientInterventionsUpdateResponse patientInterventionsUpdate(org.openapis.openapi.models.operations.PatientInterventionsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientInterventionsUpdateResponse patientInterventionsUpdate(org.openapis.openapi.models.operations.PatientInterventionsUpdateRequest request, org.openapis.openapi.models.operations.PatientInterventionsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientInterventionsUpdatePathParams.class, baseUrl, "/api/patient_interventions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientInterventionsUpdateRequest.class, baseUrl, "/api/patient_interventions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientInterventionsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientInterventionsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5605,7 +5723,7 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientLabResultsCreateResponse patientLabResultsCreate(org.openapis.openapi.models.operations.PatientLabResultsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientLabResultsCreateResponse patientLabResultsCreate(org.openapis.openapi.models.operations.PatientLabResultsCreateRequest request, org.openapis.openapi.models.operations.PatientLabResultsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patient_lab_results");
         
@@ -5613,14 +5731,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientLabResultsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientLabResultsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5646,22 +5764,22 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientLabResultsDeleteResponse patientLabResultsDelete(org.openapis.openapi.models.operations.PatientLabResultsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientLabResultsDeleteResponse patientLabResultsDelete(org.openapis.openapi.models.operations.PatientLabResultsDeleteRequest request, org.openapis.openapi.models.operations.PatientLabResultsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientLabResultsDeletePathParams.class, baseUrl, "/api/patient_lab_results/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientLabResultsDeleteRequest.class, baseUrl, "/api/patient_lab_results/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientLabResultsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientLabResultsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5679,7 +5797,7 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientLabResultsListResponse patientLabResultsList(org.openapis.openapi.models.operations.PatientLabResultsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientLabResultsListResponse patientLabResultsList(org.openapis.openapi.models.operations.PatientLabResultsListRequest request, org.openapis.openapi.models.operations.PatientLabResultsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patient_lab_results");
         
@@ -5687,14 +5805,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientLabResultsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientLabResultsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5720,22 +5838,22 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientLabResultsPartialUpdateResponse patientLabResultsPartialUpdate(org.openapis.openapi.models.operations.PatientLabResultsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientLabResultsPartialUpdateResponse patientLabResultsPartialUpdate(org.openapis.openapi.models.operations.PatientLabResultsPartialUpdateRequest request, org.openapis.openapi.models.operations.PatientLabResultsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientLabResultsPartialUpdatePathParams.class, baseUrl, "/api/patient_lab_results/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientLabResultsPartialUpdateRequest.class, baseUrl, "/api/patient_lab_results/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientLabResultsPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientLabResultsPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5753,22 +5871,22 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientLabResultsReadResponse patientLabResultsRead(org.openapis.openapi.models.operations.PatientLabResultsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientLabResultsReadResponse patientLabResultsRead(org.openapis.openapi.models.operations.PatientLabResultsReadRequest request, org.openapis.openapi.models.operations.PatientLabResultsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientLabResultsReadPathParams.class, baseUrl, "/api/patient_lab_results/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientLabResultsReadRequest.class, baseUrl, "/api/patient_lab_results/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientLabResultsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientLabResultsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5794,22 +5912,22 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientLabResultsUpdateResponse patientLabResultsUpdate(org.openapis.openapi.models.operations.PatientLabResultsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientLabResultsUpdateResponse patientLabResultsUpdate(org.openapis.openapi.models.operations.PatientLabResultsUpdateRequest request, org.openapis.openapi.models.operations.PatientLabResultsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientLabResultsUpdatePathParams.class, baseUrl, "/api/patient_lab_results/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientLabResultsUpdateRequest.class, baseUrl, "/api/patient_lab_results/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientLabResultsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientLabResultsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5827,7 +5945,7 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientMessagesCreateResponse patientMessagesCreate(org.openapis.openapi.models.operations.PatientMessagesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientMessagesCreateResponse patientMessagesCreate(org.openapis.openapi.models.operations.PatientMessagesCreateRequest request, org.openapis.openapi.models.operations.PatientMessagesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patient_messages");
         
@@ -5835,14 +5953,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientMessagesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientMessagesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5868,7 +5986,7 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientMessagesListResponse patientMessagesList(org.openapis.openapi.models.operations.PatientMessagesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientMessagesListResponse patientMessagesList(org.openapis.openapi.models.operations.PatientMessagesListRequest request, org.openapis.openapi.models.operations.PatientMessagesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patient_messages");
         
@@ -5876,14 +5994,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientMessagesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientMessagesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5909,22 +6027,22 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientMessagesPartialUpdateResponse patientMessagesPartialUpdate(org.openapis.openapi.models.operations.PatientMessagesPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientMessagesPartialUpdateResponse patientMessagesPartialUpdate(org.openapis.openapi.models.operations.PatientMessagesPartialUpdateRequest request, org.openapis.openapi.models.operations.PatientMessagesPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientMessagesPartialUpdatePathParams.class, baseUrl, "/api/patient_messages/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientMessagesPartialUpdateRequest.class, baseUrl, "/api/patient_messages/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientMessagesPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientMessagesPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5942,22 +6060,22 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientMessagesReadResponse patientMessagesRead(org.openapis.openapi.models.operations.PatientMessagesReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientMessagesReadResponse patientMessagesRead(org.openapis.openapi.models.operations.PatientMessagesReadRequest request, org.openapis.openapi.models.operations.PatientMessagesReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientMessagesReadPathParams.class, baseUrl, "/api/patient_messages/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientMessagesReadRequest.class, baseUrl, "/api/patient_messages/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientMessagesReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientMessagesReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5983,22 +6101,22 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientMessagesUpdateResponse patientMessagesUpdate(org.openapis.openapi.models.operations.PatientMessagesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientMessagesUpdateResponse patientMessagesUpdate(org.openapis.openapi.models.operations.PatientMessagesUpdateRequest request, org.openapis.openapi.models.operations.PatientMessagesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientMessagesUpdatePathParams.class, baseUrl, "/api/patient_messages/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientMessagesUpdateRequest.class, baseUrl, "/api/patient_messages/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientMessagesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientMessagesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6019,10 +6137,11 @@ public class Clinical {
     /**
      * Create patient physical exam for CQM
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientPhysicalExamsCreateResponse patientPhysicalExamsCreate(org.openapis.openapi.models.operations.PatientPhysicalExamsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientPhysicalExamsCreateResponse patientPhysicalExamsCreate(org.openapis.openapi.models.operations.PatientPhysicalExamsCreateRequest request, org.openapis.openapi.models.operations.PatientPhysicalExamsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patient_physical_exams");
         
@@ -6030,14 +6149,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientPhysicalExamsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientPhysicalExamsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6066,10 +6185,11 @@ public class Clinical {
     /**
      * Retrieve or search patient physical exams for CQM
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientPhysicalExamsListResponse patientPhysicalExamsList(org.openapis.openapi.models.operations.PatientPhysicalExamsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientPhysicalExamsListResponse patientPhysicalExamsList(org.openapis.openapi.models.operations.PatientPhysicalExamsListRequest request, org.openapis.openapi.models.operations.PatientPhysicalExamsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patient_physical_exams");
         
@@ -6077,14 +6197,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientPhysicalExamsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientPhysicalExamsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6113,25 +6233,26 @@ public class Clinical {
     /**
      * Update an existing patient physical exam for CQM
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientPhysicalExamsPartialUpdateResponse patientPhysicalExamsPartialUpdate(org.openapis.openapi.models.operations.PatientPhysicalExamsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientPhysicalExamsPartialUpdateResponse patientPhysicalExamsPartialUpdate(org.openapis.openapi.models.operations.PatientPhysicalExamsPartialUpdateRequest request, org.openapis.openapi.models.operations.PatientPhysicalExamsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientPhysicalExamsPartialUpdatePathParams.class, baseUrl, "/api/patient_physical_exams/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientPhysicalExamsPartialUpdateRequest.class, baseUrl, "/api/patient_physical_exams/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientPhysicalExamsPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientPhysicalExamsPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6152,25 +6273,26 @@ public class Clinical {
     /**
      * Retrieve an existing patient physical exam for CQM
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientPhysicalExamsReadResponse patientPhysicalExamsRead(org.openapis.openapi.models.operations.PatientPhysicalExamsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientPhysicalExamsReadResponse patientPhysicalExamsRead(org.openapis.openapi.models.operations.PatientPhysicalExamsReadRequest request, org.openapis.openapi.models.operations.PatientPhysicalExamsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientPhysicalExamsReadPathParams.class, baseUrl, "/api/patient_physical_exams/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientPhysicalExamsReadRequest.class, baseUrl, "/api/patient_physical_exams/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientPhysicalExamsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientPhysicalExamsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6199,25 +6321,26 @@ public class Clinical {
     /**
      * Update an existing patient physical exam for CQM
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientPhysicalExamsUpdateResponse patientPhysicalExamsUpdate(org.openapis.openapi.models.operations.PatientPhysicalExamsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientPhysicalExamsUpdateResponse patientPhysicalExamsUpdate(org.openapis.openapi.models.operations.PatientPhysicalExamsUpdateRequest request, org.openapis.openapi.models.operations.PatientPhysicalExamsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientPhysicalExamsUpdatePathParams.class, baseUrl, "/api/patient_physical_exams/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientPhysicalExamsUpdateRequest.class, baseUrl, "/api/patient_physical_exams/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientPhysicalExamsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientPhysicalExamsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6235,7 +6358,7 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientRiskAssessmentsCreateResponse patientRiskAssessmentsCreate(org.openapis.openapi.models.operations.PatientRiskAssessmentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientRiskAssessmentsCreateResponse patientRiskAssessmentsCreate(org.openapis.openapi.models.operations.PatientRiskAssessmentsCreateRequest request, org.openapis.openapi.models.operations.PatientRiskAssessmentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patient_risk_assessments");
         
@@ -6243,14 +6366,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientRiskAssessmentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientRiskAssessmentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6276,7 +6399,7 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientRiskAssessmentsListResponse patientRiskAssessmentsList(org.openapis.openapi.models.operations.PatientRiskAssessmentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientRiskAssessmentsListResponse patientRiskAssessmentsList(org.openapis.openapi.models.operations.PatientRiskAssessmentsListRequest request, org.openapis.openapi.models.operations.PatientRiskAssessmentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patient_risk_assessments");
         
@@ -6284,14 +6407,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientRiskAssessmentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientRiskAssessmentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6317,22 +6440,22 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientRiskAssessmentsPartialUpdateResponse patientRiskAssessmentsPartialUpdate(org.openapis.openapi.models.operations.PatientRiskAssessmentsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientRiskAssessmentsPartialUpdateResponse patientRiskAssessmentsPartialUpdate(org.openapis.openapi.models.operations.PatientRiskAssessmentsPartialUpdateRequest request, org.openapis.openapi.models.operations.PatientRiskAssessmentsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientRiskAssessmentsPartialUpdatePathParams.class, baseUrl, "/api/patient_risk_assessments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientRiskAssessmentsPartialUpdateRequest.class, baseUrl, "/api/patient_risk_assessments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientRiskAssessmentsPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientRiskAssessmentsPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6350,22 +6473,22 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientRiskAssessmentsReadResponse patientRiskAssessmentsRead(org.openapis.openapi.models.operations.PatientRiskAssessmentsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientRiskAssessmentsReadResponse patientRiskAssessmentsRead(org.openapis.openapi.models.operations.PatientRiskAssessmentsReadRequest request, org.openapis.openapi.models.operations.PatientRiskAssessmentsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientRiskAssessmentsReadPathParams.class, baseUrl, "/api/patient_risk_assessments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientRiskAssessmentsReadRequest.class, baseUrl, "/api/patient_risk_assessments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientRiskAssessmentsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientRiskAssessmentsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6391,22 +6514,22 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientRiskAssessmentsUpdateResponse patientRiskAssessmentsUpdate(org.openapis.openapi.models.operations.PatientRiskAssessmentsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientRiskAssessmentsUpdateResponse patientRiskAssessmentsUpdate(org.openapis.openapi.models.operations.PatientRiskAssessmentsUpdateRequest request, org.openapis.openapi.models.operations.PatientRiskAssessmentsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientRiskAssessmentsUpdatePathParams.class, baseUrl, "/api/patient_risk_assessments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientRiskAssessmentsUpdateRequest.class, baseUrl, "/api/patient_risk_assessments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientRiskAssessmentsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientRiskAssessmentsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6427,10 +6550,11 @@ public class Clinical {
     /**
      * Create patient vaccine records
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientVaccineRecordsCreateResponse patientVaccineRecordsCreate(org.openapis.openapi.models.operations.PatientVaccineRecordsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientVaccineRecordsCreateResponse patientVaccineRecordsCreate(org.openapis.openapi.models.operations.PatientVaccineRecordsCreateRequest request, org.openapis.openapi.models.operations.PatientVaccineRecordsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patient_vaccine_records");
         
@@ -6438,14 +6562,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientVaccineRecordsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientVaccineRecordsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6474,10 +6598,11 @@ public class Clinical {
     /**
      * Retrieve or search patient vaccine records
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientVaccineRecordsListResponse patientVaccineRecordsList(org.openapis.openapi.models.operations.PatientVaccineRecordsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientVaccineRecordsListResponse patientVaccineRecordsList(org.openapis.openapi.models.operations.PatientVaccineRecordsListRequest request, org.openapis.openapi.models.operations.PatientVaccineRecordsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patient_vaccine_records");
         
@@ -6485,14 +6610,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientVaccineRecordsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientVaccineRecordsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6521,25 +6646,26 @@ public class Clinical {
     /**
      * Update an existing patient vaccine records
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientVaccineRecordsPartialUpdateResponse patientVaccineRecordsPartialUpdate(org.openapis.openapi.models.operations.PatientVaccineRecordsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientVaccineRecordsPartialUpdateResponse patientVaccineRecordsPartialUpdate(org.openapis.openapi.models.operations.PatientVaccineRecordsPartialUpdateRequest request, org.openapis.openapi.models.operations.PatientVaccineRecordsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientVaccineRecordsPartialUpdatePathParams.class, baseUrl, "/api/patient_vaccine_records/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientVaccineRecordsPartialUpdateRequest.class, baseUrl, "/api/patient_vaccine_records/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientVaccineRecordsPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientVaccineRecordsPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6560,25 +6686,26 @@ public class Clinical {
     /**
      * Retrieve an existing patient vaccine records
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientVaccineRecordsReadResponse patientVaccineRecordsRead(org.openapis.openapi.models.operations.PatientVaccineRecordsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientVaccineRecordsReadResponse patientVaccineRecordsRead(org.openapis.openapi.models.operations.PatientVaccineRecordsReadRequest request, org.openapis.openapi.models.operations.PatientVaccineRecordsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientVaccineRecordsReadPathParams.class, baseUrl, "/api/patient_vaccine_records/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientVaccineRecordsReadRequest.class, baseUrl, "/api/patient_vaccine_records/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientVaccineRecordsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientVaccineRecordsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6607,25 +6734,26 @@ public class Clinical {
     /**
      * Update an existing patient vaccine records
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientVaccineRecordsUpdateResponse patientVaccineRecordsUpdate(org.openapis.openapi.models.operations.PatientVaccineRecordsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientVaccineRecordsUpdateResponse patientVaccineRecordsUpdate(org.openapis.openapi.models.operations.PatientVaccineRecordsUpdateRequest request, org.openapis.openapi.models.operations.PatientVaccineRecordsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientVaccineRecordsUpdatePathParams.class, baseUrl, "/api/patient_vaccine_records/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientVaccineRecordsUpdateRequest.class, baseUrl, "/api/patient_vaccine_records/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientVaccineRecordsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientVaccineRecordsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6646,25 +6774,26 @@ public class Clinical {
     /**
      * Retrieve patient CCDA
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientsCcdaResponse patientsCcda(org.openapis.openapi.models.operations.PatientsCcdaRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientsCcdaResponse patientsCcda(org.openapis.openapi.models.operations.PatientsCcdaRequest request, org.openapis.openapi.models.operations.PatientsCcdaSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsCcdaPathParams.class, baseUrl, "/api/patients/{id}/ccda", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsCcdaRequest.class, baseUrl, "/api/patients/{id}/ccda", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsCcdaQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsCcdaRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6692,10 +6821,11 @@ public class Clinical {
     /**
      * Create patient
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientsCreateResponse patientsCreate(org.openapis.openapi.models.operations.PatientsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientsCreateResponse patientsCreate(org.openapis.openapi.models.operations.PatientsCreateRequest request, org.openapis.openapi.models.operations.PatientsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patients");
         
@@ -6703,14 +6833,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6739,25 +6869,26 @@ public class Clinical {
     /**
      * Delete an existing patient
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientsDeleteResponse patientsDelete(org.openapis.openapi.models.operations.PatientsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientsDeleteResponse patientsDelete(org.openapis.openapi.models.operations.PatientsDeleteRequest request, org.openapis.openapi.models.operations.PatientsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsDeletePathParams.class, baseUrl, "/api/patients/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsDeleteRequest.class, baseUrl, "/api/patients/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6778,10 +6909,11 @@ public class Clinical {
     /**
      * Retrieve or search patients
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientsListResponse patientsList(org.openapis.openapi.models.operations.PatientsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientsListResponse patientsList(org.openapis.openapi.models.operations.PatientsListRequest request, org.openapis.openapi.models.operations.PatientsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patients");
         
@@ -6789,14 +6921,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6825,25 +6957,26 @@ public class Clinical {
     /**
      * Send new onpatient invite to patient
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientsOnpatientAccessCreateResponse patientsOnpatientAccessCreate(org.openapis.openapi.models.operations.PatientsOnpatientAccessCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientsOnpatientAccessCreateResponse patientsOnpatientAccessCreate(org.openapis.openapi.models.operations.PatientsOnpatientAccessCreateRequest request, org.openapis.openapi.models.operations.PatientsOnpatientAccessCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsOnpatientAccessCreatePathParams.class, baseUrl, "/api/patients/{id}/onpatient_access", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsOnpatientAccessCreateRequest.class, baseUrl, "/api/patients/{id}/onpatient_access", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsOnpatientAccessCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsOnpatientAccessCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6872,25 +7005,26 @@ public class Clinical {
     /**
      * Revoke sent onpatient invites
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientsOnpatientAccessDeleteResponse patientsOnpatientAccessDelete(org.openapis.openapi.models.operations.PatientsOnpatientAccessDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientsOnpatientAccessDeleteResponse patientsOnpatientAccessDelete(org.openapis.openapi.models.operations.PatientsOnpatientAccessDeleteRequest request, org.openapis.openapi.models.operations.PatientsOnpatientAccessDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsOnpatientAccessDeletePathParams.class, baseUrl, "/api/patients/{id}/onpatient_access", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsOnpatientAccessDeleteRequest.class, baseUrl, "/api/patients/{id}/onpatient_access", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsOnpatientAccessDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsOnpatientAccessDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6911,25 +7045,26 @@ public class Clinical {
     /**
      * Retrieve or search existing onpatient access invites
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientsOnpatientAccessReadResponse patientsOnpatientAccessRead(org.openapis.openapi.models.operations.PatientsOnpatientAccessReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientsOnpatientAccessReadResponse patientsOnpatientAccessRead(org.openapis.openapi.models.operations.PatientsOnpatientAccessReadRequest request, org.openapis.openapi.models.operations.PatientsOnpatientAccessReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsOnpatientAccessReadPathParams.class, baseUrl, "/api/patients/{id}/onpatient_access", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsOnpatientAccessReadRequest.class, baseUrl, "/api/patients/{id}/onpatient_access", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsOnpatientAccessReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsOnpatientAccessReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6958,25 +7093,26 @@ public class Clinical {
     /**
      * Update an existing patient
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientsPartialUpdateResponse patientsPartialUpdate(org.openapis.openapi.models.operations.PatientsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientsPartialUpdateResponse patientsPartialUpdate(org.openapis.openapi.models.operations.PatientsPartialUpdateRequest request, org.openapis.openapi.models.operations.PatientsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsPartialUpdatePathParams.class, baseUrl, "/api/patients/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsPartialUpdateRequest.class, baseUrl, "/api/patients/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -6997,25 +7133,26 @@ public class Clinical {
     /**
      * Retrieve patient QRDA1
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientsQrda1Response patientsQrda1(org.openapis.openapi.models.operations.PatientsQrda1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientsQrda1Response patientsQrda1(org.openapis.openapi.models.operations.PatientsQrda1Request request, org.openapis.openapi.models.operations.PatientsQrda1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsQrda1PathParams.class, baseUrl, "/api/patients/{id}/qrda1", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsQrda1Request.class, baseUrl, "/api/patients/{id}/qrda1", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsQrda1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsQrda1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7043,25 +7180,26 @@ public class Clinical {
     /**
      * Retrieve an existing patient
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientsReadResponse patientsRead(org.openapis.openapi.models.operations.PatientsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientsReadResponse patientsRead(org.openapis.openapi.models.operations.PatientsReadRequest request, org.openapis.openapi.models.operations.PatientsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsReadPathParams.class, baseUrl, "/api/patients/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsReadRequest.class, baseUrl, "/api/patients/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7087,7 +7225,7 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientsSummaryCreateResponse patientsSummaryCreate(org.openapis.openapi.models.operations.PatientsSummaryCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientsSummaryCreateResponse patientsSummaryCreate(org.openapis.openapi.models.operations.PatientsSummaryCreateRequest request, org.openapis.openapi.models.operations.PatientsSummaryCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patients_summary");
         
@@ -7095,14 +7233,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsSummaryCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsSummaryCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7128,22 +7266,22 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientsSummaryDeleteResponse patientsSummaryDelete(org.openapis.openapi.models.operations.PatientsSummaryDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientsSummaryDeleteResponse patientsSummaryDelete(org.openapis.openapi.models.operations.PatientsSummaryDeleteRequest request, org.openapis.openapi.models.operations.PatientsSummaryDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsSummaryDeletePathParams.class, baseUrl, "/api/patients_summary/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsSummaryDeleteRequest.class, baseUrl, "/api/patients_summary/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsSummaryDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsSummaryDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7161,7 +7299,7 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientsSummaryListResponse patientsSummaryList(org.openapis.openapi.models.operations.PatientsSummaryListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientsSummaryListResponse patientsSummaryList(org.openapis.openapi.models.operations.PatientsSummaryListRequest request, org.openapis.openapi.models.operations.PatientsSummaryListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patients_summary");
         
@@ -7169,14 +7307,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsSummaryListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsSummaryListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7202,22 +7340,22 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientsSummaryPartialUpdateResponse patientsSummaryPartialUpdate(org.openapis.openapi.models.operations.PatientsSummaryPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientsSummaryPartialUpdateResponse patientsSummaryPartialUpdate(org.openapis.openapi.models.operations.PatientsSummaryPartialUpdateRequest request, org.openapis.openapi.models.operations.PatientsSummaryPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsSummaryPartialUpdatePathParams.class, baseUrl, "/api/patients_summary/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsSummaryPartialUpdateRequest.class, baseUrl, "/api/patients_summary/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsSummaryPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsSummaryPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7235,22 +7373,22 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientsSummaryReadResponse patientsSummaryRead(org.openapis.openapi.models.operations.PatientsSummaryReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientsSummaryReadResponse patientsSummaryRead(org.openapis.openapi.models.operations.PatientsSummaryReadRequest request, org.openapis.openapi.models.operations.PatientsSummaryReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsSummaryReadPathParams.class, baseUrl, "/api/patients_summary/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsSummaryReadRequest.class, baseUrl, "/api/patients_summary/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsSummaryReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsSummaryReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7276,22 +7414,22 @@ public class Clinical {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatientsSummaryUpdateResponse patientsSummaryUpdate(org.openapis.openapi.models.operations.PatientsSummaryUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientsSummaryUpdateResponse patientsSummaryUpdate(org.openapis.openapi.models.operations.PatientsSummaryUpdateRequest request, org.openapis.openapi.models.operations.PatientsSummaryUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsSummaryUpdatePathParams.class, baseUrl, "/api/patients_summary/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsSummaryUpdateRequest.class, baseUrl, "/api/patients_summary/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsSummaryUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsSummaryUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7312,25 +7450,26 @@ public class Clinical {
     /**
      * Update an existing patient
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientsUpdateResponse patientsUpdate(org.openapis.openapi.models.operations.PatientsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientsUpdateResponse patientsUpdate(org.openapis.openapi.models.operations.PatientsUpdateRequest request, org.openapis.openapi.models.operations.PatientsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsUpdatePathParams.class, baseUrl, "/api/patients/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientsUpdateRequest.class, baseUrl, "/api/patients/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7351,10 +7490,11 @@ public class Clinical {
     /**
      * Retrieve or search prescription messages
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrescriptionMessagesListResponse prescriptionMessagesList(org.openapis.openapi.models.operations.PrescriptionMessagesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrescriptionMessagesListResponse prescriptionMessagesList(org.openapis.openapi.models.operations.PrescriptionMessagesListRequest request, org.openapis.openapi.models.operations.PrescriptionMessagesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/prescription_messages");
         
@@ -7362,14 +7502,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrescriptionMessagesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrescriptionMessagesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7398,25 +7538,26 @@ public class Clinical {
     /**
      * Retrieve an existing prescription message
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrescriptionMessagesReadResponse prescriptionMessagesRead(org.openapis.openapi.models.operations.PrescriptionMessagesReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrescriptionMessagesReadResponse prescriptionMessagesRead(org.openapis.openapi.models.operations.PrescriptionMessagesReadRequest request, org.openapis.openapi.models.operations.PrescriptionMessagesReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrescriptionMessagesReadPathParams.class, baseUrl, "/api/prescription_messages/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrescriptionMessagesReadRequest.class, baseUrl, "/api/prescription_messages/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrescriptionMessagesReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrescriptionMessagesReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7445,10 +7586,11 @@ public class Clinical {
     /**
      * Create patient problems
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProblemsCreateResponse problemsCreate(org.openapis.openapi.models.operations.ProblemsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProblemsCreateResponse problemsCreate(org.openapis.openapi.models.operations.ProblemsCreateRequest request, org.openapis.openapi.models.operations.ProblemsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/problems");
         
@@ -7456,14 +7598,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProblemsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProblemsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7492,10 +7634,11 @@ public class Clinical {
     /**
      * Retrieve or search patient problems
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProblemsListResponse problemsList(org.openapis.openapi.models.operations.ProblemsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProblemsListResponse problemsList(org.openapis.openapi.models.operations.ProblemsListRequest request, org.openapis.openapi.models.operations.ProblemsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/problems");
         
@@ -7503,14 +7646,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProblemsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProblemsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7539,25 +7682,26 @@ public class Clinical {
     /**
      * Update an existing patient problems
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProblemsPartialUpdateResponse problemsPartialUpdate(org.openapis.openapi.models.operations.ProblemsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProblemsPartialUpdateResponse problemsPartialUpdate(org.openapis.openapi.models.operations.ProblemsPartialUpdateRequest request, org.openapis.openapi.models.operations.ProblemsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProblemsPartialUpdatePathParams.class, baseUrl, "/api/problems/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProblemsPartialUpdateRequest.class, baseUrl, "/api/problems/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProblemsPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProblemsPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7578,25 +7722,26 @@ public class Clinical {
     /**
      * Retrieve an existing patient problems
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProblemsReadResponse problemsRead(org.openapis.openapi.models.operations.ProblemsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProblemsReadResponse problemsRead(org.openapis.openapi.models.operations.ProblemsReadRequest request, org.openapis.openapi.models.operations.ProblemsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProblemsReadPathParams.class, baseUrl, "/api/problems/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProblemsReadRequest.class, baseUrl, "/api/problems/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProblemsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProblemsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7625,25 +7770,26 @@ public class Clinical {
     /**
      * Update an existing patient problems
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProblemsUpdateResponse problemsUpdate(org.openapis.openapi.models.operations.ProblemsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProblemsUpdateResponse problemsUpdate(org.openapis.openapi.models.operations.ProblemsUpdateRequest request, org.openapis.openapi.models.operations.ProblemsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProblemsUpdatePathParams.class, baseUrl, "/api/problems/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProblemsUpdateRequest.class, baseUrl, "/api/problems/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProblemsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProblemsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7664,10 +7810,11 @@ public class Clinical {
     /**
      * Create reminder profile
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReminderProfilesCreateResponse reminderProfilesCreate(org.openapis.openapi.models.operations.ReminderProfilesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReminderProfilesCreateResponse reminderProfilesCreate(org.openapis.openapi.models.operations.ReminderProfilesCreateRequest request, org.openapis.openapi.models.operations.ReminderProfilesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/reminder_profiles");
         
@@ -7675,14 +7822,14 @@ public class Clinical {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReminderProfilesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReminderProfilesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7711,25 +7858,26 @@ public class Clinical {
     /**
      * Delete an existing reminder profile
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReminderProfilesDeleteResponse reminderProfilesDelete(org.openapis.openapi.models.operations.ReminderProfilesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReminderProfilesDeleteResponse reminderProfilesDelete(org.openapis.openapi.models.operations.ReminderProfilesDeleteRequest request, org.openapis.openapi.models.operations.ReminderProfilesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReminderProfilesDeletePathParams.class, baseUrl, "/api/reminder_profiles/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReminderProfilesDeleteRequest.class, baseUrl, "/api/reminder_profiles/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReminderProfilesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReminderProfilesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7750,10 +7898,11 @@ public class Clinical {
     /**
      * Retrieve or search reminder profiles
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReminderProfilesListResponse reminderProfilesList(org.openapis.openapi.models.operations.ReminderProfilesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReminderProfilesListResponse reminderProfilesList(org.openapis.openapi.models.operations.ReminderProfilesListRequest request, org.openapis.openapi.models.operations.ReminderProfilesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/reminder_profiles");
         
@@ -7761,14 +7910,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReminderProfilesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReminderProfilesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7797,25 +7946,26 @@ public class Clinical {
     /**
      * Update an existing reminder profile
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReminderProfilesPartialUpdateResponse reminderProfilesPartialUpdate(org.openapis.openapi.models.operations.ReminderProfilesPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReminderProfilesPartialUpdateResponse reminderProfilesPartialUpdate(org.openapis.openapi.models.operations.ReminderProfilesPartialUpdateRequest request, org.openapis.openapi.models.operations.ReminderProfilesPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReminderProfilesPartialUpdatePathParams.class, baseUrl, "/api/reminder_profiles/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReminderProfilesPartialUpdateRequest.class, baseUrl, "/api/reminder_profiles/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReminderProfilesPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReminderProfilesPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7836,25 +7986,26 @@ public class Clinical {
     /**
      * Retrieve an existing reminder profile
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReminderProfilesReadResponse reminderProfilesRead(org.openapis.openapi.models.operations.ReminderProfilesReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReminderProfilesReadResponse reminderProfilesRead(org.openapis.openapi.models.operations.ReminderProfilesReadRequest request, org.openapis.openapi.models.operations.ReminderProfilesReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReminderProfilesReadPathParams.class, baseUrl, "/api/reminder_profiles/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReminderProfilesReadRequest.class, baseUrl, "/api/reminder_profiles/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReminderProfilesReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReminderProfilesReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7883,25 +8034,26 @@ public class Clinical {
     /**
      * Update an existing reminder profile
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReminderProfilesUpdateResponse reminderProfilesUpdate(org.openapis.openapi.models.operations.ReminderProfilesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReminderProfilesUpdateResponse reminderProfilesUpdate(org.openapis.openapi.models.operations.ReminderProfilesUpdateRequest request, org.openapis.openapi.models.operations.ReminderProfilesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReminderProfilesUpdatePathParams.class, baseUrl, "/api/reminder_profiles/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReminderProfilesUpdateRequest.class, baseUrl, "/api/reminder_profiles/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReminderProfilesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReminderProfilesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7921,11 +8073,10 @@ public class Clinical {
 
     /**
      * Create sub-vendors -  - - When you get orders, submit them via `/api/lab_orders`, such that doctors can see them in drchrono. -  - - When results come in, submit the result document PDF via `/api/lab_documents` and submit the results data via `/api/lab_results` -  - - Update `/api/lab_orders` status - 
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SublabsCreateResponse sublabsCreate(org.openapis.openapi.models.operations.SublabsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SublabsCreateResponse sublabsCreate() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/sublabs");
         
@@ -7934,8 +8085,7 @@ public class Clinical {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -7963,19 +8113,20 @@ public class Clinical {
     /**
      * Delete an existing sub vendor
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SublabsDeleteResponse sublabsDelete(org.openapis.openapi.models.operations.SublabsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SublabsDeleteResponse sublabsDelete(org.openapis.openapi.models.operations.SublabsDeleteRequest request, org.openapis.openapi.models.operations.SublabsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SublabsDeletePathParams.class, baseUrl, "/api/sublabs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SublabsDeleteRequest.class, baseUrl, "/api/sublabs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7996,10 +8147,11 @@ public class Clinical {
     /**
      * Retrieve or search sub vendors
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SublabsListResponse sublabsList(org.openapis.openapi.models.operations.SublabsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SublabsListResponse sublabsList(org.openapis.openapi.models.operations.SublabsListRequest request, org.openapis.openapi.models.operations.SublabsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/sublabs");
         
@@ -8007,14 +8159,14 @@ public class Clinical {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SublabsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SublabsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -8043,19 +8195,20 @@ public class Clinical {
     /**
      * Update an existing sub vendor
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SublabsPartialUpdateResponse sublabsPartialUpdate(org.openapis.openapi.models.operations.SublabsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SublabsPartialUpdateResponse sublabsPartialUpdate(org.openapis.openapi.models.operations.SublabsPartialUpdateRequest request, org.openapis.openapi.models.operations.SublabsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SublabsPartialUpdatePathParams.class, baseUrl, "/api/sublabs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SublabsPartialUpdateRequest.class, baseUrl, "/api/sublabs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -8076,19 +8229,20 @@ public class Clinical {
     /**
      * Retrieve an existing sub vendor
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SublabsReadResponse sublabsRead(org.openapis.openapi.models.operations.SublabsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SublabsReadResponse sublabsRead(org.openapis.openapi.models.operations.SublabsReadRequest request, org.openapis.openapi.models.operations.SublabsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SublabsReadPathParams.class, baseUrl, "/api/sublabs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SublabsReadRequest.class, baseUrl, "/api/sublabs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -8117,19 +8271,20 @@ public class Clinical {
     /**
      * Update an existing sub vendor
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SublabsUpdateResponse sublabsUpdate(org.openapis.openapi.models.operations.SublabsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SublabsUpdateResponse sublabsUpdate(org.openapis.openapi.models.operations.SublabsUpdateRequest request, org.openapis.openapi.models.operations.SublabsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SublabsUpdatePathParams.class, baseUrl, "/api/sublabs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SublabsUpdateRequest.class, baseUrl, "/api/sublabs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountPlanAddonCancelRequest {
-    
-    public AccountPlanAddonCancelPathParams pathParams;
-    public AccountPlanAddonCancelRequest withPathParams(AccountPlanAddonCancelPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AccountPlanAddonCancelApplicationJSON request;
-    public AccountPlanAddonCancelRequest withRequest(AccountPlanAddonCancelApplicationJSON request) {
-        this.request = request;
+    public AccountPlanAddonCancelApplicationJSON requestBody;
+    public AccountPlanAddonCancelRequest withRequestBody(AccountPlanAddonCancelApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public AccountPlanAddonCancelSecurity security;
-    public AccountPlanAddonCancelRequest withSecurity(AccountPlanAddonCancelSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AccountPlanAddonCancelRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

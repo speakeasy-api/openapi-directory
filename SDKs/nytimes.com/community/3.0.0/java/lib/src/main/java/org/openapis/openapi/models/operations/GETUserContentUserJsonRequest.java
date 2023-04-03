@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUserContentUserJsonRequest {
-    
-    public GETUserContentUserJsonQueryParams queryParams;
-    public GETUserContentUserJsonRequest withQueryParams(GETUserContentUserJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GETUserContentUserJsonSecurity security;
-    public GETUserContentUserJsonRequest withSecurity(GETUserContentUserJsonSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userID")
+    public Long userID;
+    public GETUserContentUserJsonRequest withUserID(Long userID) {
+        this.userID = userID;
         return this;
     }
     

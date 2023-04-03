@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TrainProjectRequest {
-    
-    public TrainProjectPathParams pathParams;
-    public TrainProjectRequest withPathParams(TrainProjectPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public TrainProjectRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
         return this;
     }
     
-    
-    public TrainProjectHeaders headers;
-    public TrainProjectRequest withHeaders(TrainProjectHeaders headers) {
-        this.headers = headers;
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public TrainProjectRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

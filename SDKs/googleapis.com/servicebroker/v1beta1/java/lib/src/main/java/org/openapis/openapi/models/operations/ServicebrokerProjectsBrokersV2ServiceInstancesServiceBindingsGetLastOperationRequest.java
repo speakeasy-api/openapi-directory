@@ -4,27 +4,158 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest {
-    
-    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationPathParams pathParams;
-    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest withPathParams(ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams queryParams;
-    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest withQueryParams(ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationSecurity security;
-    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest withSecurity(ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Name must match
+     * `projects/[PROJECT_ID]/brokers/[BROKER_ID]/v2/service_instances/[INSTANCE_ID]/service_binding/[BINDING_ID]`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * If `operation` was returned during mutation operation, this field must be
+     * populated with the provided value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=operation")
+    public String operation;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest withOperation(String operation) {
+        this.operation = operation;
+        return this;
+    }
+    
+    /**
+     * Plan id.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=planId")
+    public String planId;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest withPlanId(String planId) {
+        this.planId = planId;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Service id.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceId")
+    public String serviceId;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsGetLastOperationRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

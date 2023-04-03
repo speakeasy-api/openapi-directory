@@ -4,13 +4,100 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateJobRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=APIVersion")
+    public String apiVersion;
+    public GETUpdateJobRequest withAPIVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
     
-    public GETUpdateJobQueryParams queryParams;
-    public GETUpdateJobRequest withQueryParams(GETUpdateJobQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccessKeyId")
+    public String awsAccessKeyId;
+    public GETUpdateJobRequest withAWSAccessKeyId(String awsAccessKeyId) {
+        this.awsAccessKeyId = awsAccessKeyId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETUpdateJobActionEnum action;
+    public GETUpdateJobRequest withAction(GETUpdateJobActionEnum action) {
+        this.action = action;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=JobId")
+    public String jobId;
+    public GETUpdateJobRequest withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    
+    /**
+     * Specifies whether the job to initiate is an import or export job.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=JobType")
+    public GETUpdateJobJobTypeEnum jobType;
+    public GETUpdateJobRequest withJobType(GETUpdateJobJobTypeEnum jobType) {
+        this.jobType = jobType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Manifest")
+    public String manifest;
+    public GETUpdateJobRequest withManifest(String manifest) {
+        this.manifest = manifest;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Operation")
+    public GETUpdateJobOperationEnum operation;
+    public GETUpdateJobRequest withOperation(GETUpdateJobOperationEnum operation) {
+        this.operation = operation;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Signature")
+    public String signature;
+    public GETUpdateJobRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureMethod")
+    public String signatureMethod;
+    public GETUpdateJobRequest withSignatureMethod(String signatureMethod) {
+        this.signatureMethod = signatureMethod;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureVersion")
+    public String signatureVersion;
+    public GETUpdateJobRequest withSignatureVersion(String signatureVersion) {
+        this.signatureVersion = signatureVersion;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timestamp")
+    public String timestamp;
+    public GETUpdateJobRequest withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ValidateOnly")
+    public Boolean validateOnly;
+    public GETUpdateJobRequest withValidateOnly(Boolean validateOnly) {
+        this.validateOnly = validateOnly;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETUpdateJobVersionEnum version;
+    public GETUpdateJobRequest withVersion(GETUpdateJobVersionEnum version) {
+        this.version = version;
         return this;
     }
     

@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetCriticsResourceTypeJsonPathParams;
 import org.openapis.openapi.models.operations.GetCriticsResourceTypeJsonRequest;
 import org.openapis.openapi.models.operations.GetCriticsResourceTypeJsonResponse;
 
@@ -26,17 +25,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apikey = new SchemeApikey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apikey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetCriticsResourceTypeJsonRequest req = new GetCriticsResourceTypeJsonRequest() {{
-                pathParams = new GetCriticsResourceTypeJsonPathParams() {{
-                    resourceType = "corrupti";
-                }};
-            }};            
+                resourceType = "corrupti";
+            }}            
 
             GetCriticsResourceTypeJsonResponse res = sdk.getCriticsResourceTypeJson(req);
 
@@ -50,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

@@ -4,20 +4,561 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchTasksForWorkspaceRequest {
-    
-    public SearchTasksForWorkspacePathParams pathParams;
-    public SearchTasksForWorkspaceRequest withPathParams(SearchTasksForWorkspacePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Comma-separated list of user identifiers
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assigned_by.any")
+    public String assignedByAny;
+    public SearchTasksForWorkspaceRequest withAssignedByAny(String assignedByAny) {
+        this.assignedByAny = assignedByAny;
         return this;
     }
     
+    /**
+     * Comma-separated list of user identifiers
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assigned_by.not")
+    public String assignedByNot;
+    public SearchTasksForWorkspaceRequest withAssignedByNot(String assignedByNot) {
+        this.assignedByNot = assignedByNot;
+        return this;
+    }
     
-    public SearchTasksForWorkspaceQueryParams queryParams;
-    public SearchTasksForWorkspaceRequest withQueryParams(SearchTasksForWorkspaceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Comma-separated list of user identifiers
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee.any")
+    public String assigneeAny;
+    public SearchTasksForWorkspaceRequest withAssigneeAny(String assigneeAny) {
+        this.assigneeAny = assigneeAny;
+        return this;
+    }
+    
+    /**
+     * Comma-separated list of user identifiers
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee.not")
+    public String assigneeNot;
+    public SearchTasksForWorkspaceRequest withAssigneeNot(String assigneeNot) {
+        this.assigneeNot = assigneeNot;
+        return this;
+    }
+    
+    /**
+     * Comma-separated list of user identifiers
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=commented_on_by.not")
+    public String commentedOnByNot;
+    public SearchTasksForWorkspaceRequest withCommentedOnByNot(String commentedOnByNot) {
+        this.commentedOnByNot = commentedOnByNot;
+        return this;
+    }
+    
+    /**
+     * Filter to completed tasks
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completed")
+    public Boolean completed;
+    public SearchTasksForWorkspaceRequest withCompleted(Boolean completed) {
+        this.completed = completed;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 datetime string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completed_at.after")
+    public OffsetDateTime completedAtAfter;
+    public SearchTasksForWorkspaceRequest withCompletedAtAfter(OffsetDateTime completedAtAfter) {
+        this.completedAtAfter = completedAtAfter;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 datetime string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completed_at.before")
+    public OffsetDateTime completedAtBefore;
+    public SearchTasksForWorkspaceRequest withCompletedAtBefore(OffsetDateTime completedAtBefore) {
+        this.completedAtBefore = completedAtBefore;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 date string or `null`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completed_on")
+    public LocalDate completedOn;
+    public SearchTasksForWorkspaceRequest withCompletedOn(LocalDate completedOn) {
+        this.completedOn = completedOn;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 date string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completed_on.after")
+    public LocalDate completedOnAfter;
+    public SearchTasksForWorkspaceRequest withCompletedOnAfter(LocalDate completedOnAfter) {
+        this.completedOnAfter = completedOnAfter;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 date string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completed_on.before")
+    public LocalDate completedOnBefore;
+    public SearchTasksForWorkspaceRequest withCompletedOnBefore(LocalDate completedOnBefore) {
+        this.completedOnBefore = completedOnBefore;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 datetime string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at.after")
+    public OffsetDateTime createdAtAfter;
+    public SearchTasksForWorkspaceRequest withCreatedAtAfter(OffsetDateTime createdAtAfter) {
+        this.createdAtAfter = createdAtAfter;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 datetime string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at.before")
+    public OffsetDateTime createdAtBefore;
+    public SearchTasksForWorkspaceRequest withCreatedAtBefore(OffsetDateTime createdAtBefore) {
+        this.createdAtBefore = createdAtBefore;
+        return this;
+    }
+    
+    /**
+     * Comma-separated list of user identifiers
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_by.any")
+    public String createdByAny;
+    public SearchTasksForWorkspaceRequest withCreatedByAny(String createdByAny) {
+        this.createdByAny = createdByAny;
+        return this;
+    }
+    
+    /**
+     * Comma-separated list of user identifiers
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_by.not")
+    public String createdByNot;
+    public SearchTasksForWorkspaceRequest withCreatedByNot(String createdByNot) {
+        this.createdByNot = createdByNot;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 date string or `null`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_on")
+    public LocalDate createdOn;
+    public SearchTasksForWorkspaceRequest withCreatedOn(LocalDate createdOn) {
+        this.createdOn = createdOn;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 date string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_on.after")
+    public LocalDate createdOnAfter;
+    public SearchTasksForWorkspaceRequest withCreatedOnAfter(LocalDate createdOnAfter) {
+        this.createdOnAfter = createdOnAfter;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 date string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_on.before")
+    public LocalDate createdOnBefore;
+    public SearchTasksForWorkspaceRequest withCreatedOnBefore(LocalDate createdOnBefore) {
+        this.createdOnBefore = createdOnBefore;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 datetime string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_at.after")
+    public OffsetDateTime dueAtAfter;
+    public SearchTasksForWorkspaceRequest withDueAtAfter(OffsetDateTime dueAtAfter) {
+        this.dueAtAfter = dueAtAfter;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 datetime string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_at.before")
+    public OffsetDateTime dueAtBefore;
+    public SearchTasksForWorkspaceRequest withDueAtBefore(OffsetDateTime dueAtBefore) {
+        this.dueAtBefore = dueAtBefore;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 date string or `null`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_on")
+    public LocalDate dueOn;
+    public SearchTasksForWorkspaceRequest withDueOn(LocalDate dueOn) {
+        this.dueOn = dueOn;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 date string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_on.after")
+    public LocalDate dueOnAfter;
+    public SearchTasksForWorkspaceRequest withDueOnAfter(LocalDate dueOnAfter) {
+        this.dueOnAfter = dueOnAfter;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 date string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_on.before")
+    public LocalDate dueOnBefore;
+    public SearchTasksForWorkspaceRequest withDueOnBefore(LocalDate dueOnBefore) {
+        this.dueOnBefore = dueOnBefore;
+        return this;
+    }
+    
+    /**
+     * Comma-separated list of user identifiers
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=followers.not")
+    public String followersNot;
+    public SearchTasksForWorkspaceRequest withFollowersNot(String followersNot) {
+        this.followersNot = followersNot;
+        return this;
+    }
+    
+    /**
+     * Filter to tasks with attachments
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=has_attachment")
+    public Boolean hasAttachment;
+    public SearchTasksForWorkspaceRequest withHasAttachment(Boolean hasAttachment) {
+        this.hasAttachment = hasAttachment;
+        return this;
+    }
+    
+    /**
+     * Filter to tasks with incomplete dependencies
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_blocked")
+    public Boolean isBlocked;
+    public SearchTasksForWorkspaceRequest withIsBlocked(Boolean isBlocked) {
+        this.isBlocked = isBlocked;
+        return this;
+    }
+    
+    /**
+     * Filter to incomplete tasks with dependents
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_blocking")
+    public Boolean isBlocking;
+    public SearchTasksForWorkspaceRequest withIsBlocking(Boolean isBlocking) {
+        this.isBlocking = isBlocking;
+        return this;
+    }
+    
+    /**
+     * Filter to subtasks
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_subtask")
+    public Boolean isSubtask;
+    public SearchTasksForWorkspaceRequest withIsSubtask(Boolean isSubtask) {
+        this.isSubtask = isSubtask;
+        return this;
+    }
+    
+    /**
+     * Comma-separated list of user identifiers
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=liked_by.not")
+    public String likedByNot;
+    public SearchTasksForWorkspaceRequest withLikedByNot(String likedByNot) {
+        this.likedByNot = likedByNot;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 datetime string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modified_at.after")
+    public OffsetDateTime modifiedAtAfter;
+    public SearchTasksForWorkspaceRequest withModifiedAtAfter(OffsetDateTime modifiedAtAfter) {
+        this.modifiedAtAfter = modifiedAtAfter;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 datetime string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modified_at.before")
+    public OffsetDateTime modifiedAtBefore;
+    public SearchTasksForWorkspaceRequest withModifiedAtBefore(OffsetDateTime modifiedAtBefore) {
+        this.modifiedAtBefore = modifiedAtBefore;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 date string or `null`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modified_on")
+    public LocalDate modifiedOn;
+    public SearchTasksForWorkspaceRequest withModifiedOn(LocalDate modifiedOn) {
+        this.modifiedOn = modifiedOn;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 date string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modified_on.after")
+    public LocalDate modifiedOnAfter;
+    public SearchTasksForWorkspaceRequest withModifiedOnAfter(LocalDate modifiedOnAfter) {
+        this.modifiedOnAfter = modifiedOnAfter;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 date string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modified_on.before")
+    public LocalDate modifiedOnBefore;
+    public SearchTasksForWorkspaceRequest withModifiedOnBefore(LocalDate modifiedOnBefore) {
+        this.modifiedOnBefore = modifiedOnBefore;
+        return this;
+    }
+    
+    /**
+     * Defines fields to return.
+     * Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
+     * The id of included objects will always be returned, regardless of the field options.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
+    public String[] optFields;
+    public SearchTasksForWorkspaceRequest withOptFields(String[] optFields) {
+        this.optFields = optFields;
+        return this;
+    }
+    
+    /**
+     * Provides \u201cpretty\u201d output.
+     * Provides the response in a \u201cpretty\u201d format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
+    public Boolean optPretty;
+    public SearchTasksForWorkspaceRequest withOptPretty(Boolean optPretty) {
+        this.optPretty = optPretty;
+        return this;
+    }
+    
+    /**
+     * Comma-separated list of portfolio IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=portfolios.any")
+    public String portfoliosAny;
+    public SearchTasksForWorkspaceRequest withPortfoliosAny(String portfoliosAny) {
+        this.portfoliosAny = portfoliosAny;
+        return this;
+    }
+    
+    /**
+     * Comma-separated list of project IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projects.all")
+    public String projectsAll;
+    public SearchTasksForWorkspaceRequest withProjectsAll(String projectsAll) {
+        this.projectsAll = projectsAll;
+        return this;
+    }
+    
+    /**
+     * Comma-separated list of project IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projects.any")
+    public String projectsAny;
+    public SearchTasksForWorkspaceRequest withProjectsAny(String projectsAny) {
+        this.projectsAny = projectsAny;
+        return this;
+    }
+    
+    /**
+     * Comma-separated list of project IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projects.not")
+    public String projectsNot;
+    public SearchTasksForWorkspaceRequest withProjectsNot(String projectsNot) {
+        this.projectsNot = projectsNot;
+        return this;
+    }
+    
+    /**
+     * Filters results by the task's resource_subtype
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resource_subtype")
+    public SearchTasksForWorkspaceResourceSubtypeEnum resourceSubtype;
+    public SearchTasksForWorkspaceRequest withResourceSubtype(SearchTasksForWorkspaceResourceSubtypeEnum resourceSubtype) {
+        this.resourceSubtype = resourceSubtype;
+        return this;
+    }
+    
+    /**
+     * Comma-separated list of section or column IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sections.all")
+    public String sectionsAll;
+    public SearchTasksForWorkspaceRequest withSectionsAll(String sectionsAll) {
+        this.sectionsAll = sectionsAll;
+        return this;
+    }
+    
+    /**
+     * Comma-separated list of section or column IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sections.any")
+    public String sectionsAny;
+    public SearchTasksForWorkspaceRequest withSectionsAny(String sectionsAny) {
+        this.sectionsAny = sectionsAny;
+        return this;
+    }
+    
+    /**
+     * Comma-separated list of section or column IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sections.not")
+    public String sectionsNot;
+    public SearchTasksForWorkspaceRequest withSectionsNot(String sectionsNot) {
+        this.sectionsNot = sectionsNot;
+        return this;
+    }
+    
+    /**
+     * Default `false`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_ascending")
+    public Boolean sortAscending;
+    public SearchTasksForWorkspaceRequest withSortAscending(Boolean sortAscending) {
+        this.sortAscending = sortAscending;
+        return this;
+    }
+    
+    /**
+     * One of `due_date`, `created_at`, `completed_at`, `likes`, or `modified_at`, defaults to `modified_at`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public SearchTasksForWorkspaceSortByEnum sortBy;
+    public SearchTasksForWorkspaceRequest withSortBy(SearchTasksForWorkspaceSortByEnum sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 date string or `null`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_on")
+    public LocalDate startOn;
+    public SearchTasksForWorkspaceRequest withStartOn(LocalDate startOn) {
+        this.startOn = startOn;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 date string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_on.after")
+    public LocalDate startOnAfter;
+    public SearchTasksForWorkspaceRequest withStartOnAfter(LocalDate startOnAfter) {
+        this.startOnAfter = startOnAfter;
+        return this;
+    }
+    
+    /**
+     * ISO 8601 date string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_on.before")
+    public LocalDate startOnBefore;
+    public SearchTasksForWorkspaceRequest withStartOnBefore(LocalDate startOnBefore) {
+        this.startOnBefore = startOnBefore;
+        return this;
+    }
+    
+    /**
+     * Comma-separated list of tag IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags.all")
+    public String tagsAll;
+    public SearchTasksForWorkspaceRequest withTagsAll(String tagsAll) {
+        this.tagsAll = tagsAll;
+        return this;
+    }
+    
+    /**
+     * Comma-separated list of tag IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags.any")
+    public String tagsAny;
+    public SearchTasksForWorkspaceRequest withTagsAny(String tagsAny) {
+        this.tagsAny = tagsAny;
+        return this;
+    }
+    
+    /**
+     * Comma-separated list of tag IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags.not")
+    public String tagsNot;
+    public SearchTasksForWorkspaceRequest withTagsNot(String tagsNot) {
+        this.tagsNot = tagsNot;
+        return this;
+    }
+    
+    /**
+     * Comma-separated list of team IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=teams.any")
+    public String teamsAny;
+    public SearchTasksForWorkspaceRequest withTeamsAny(String teamsAny) {
+        this.teamsAny = teamsAny;
+        return this;
+    }
+    
+    /**
+     * Performs full-text search on both task name and description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public SearchTasksForWorkspaceRequest withText(String text) {
+        this.text = text;
+        return this;
+    }
+    
+    /**
+     * Globally unique identifier for the workspace or organization.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_gid")
+    public String workspaceGid;
+    public SearchTasksForWorkspaceRequest withWorkspaceGid(String workspaceGid) {
+        this.workspaceGid = workspaceGid;
         return this;
     }
     

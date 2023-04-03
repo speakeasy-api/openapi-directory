@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePDFRequest {
-    
-    public CreatePDFPathParams pathParams;
-    public CreatePDFRequest withPathParams(CreatePDFPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the check
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=check_id")
+    public String checkId;
+    public CreatePDFRequest withCheckId(String checkId) {
+        this.checkId = checkId;
         return this;
     }
     

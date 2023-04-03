@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRiskSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAPIKeyHeader apiKeyHeader;
-    public GetRiskSecurity withApiKeyHeader(org.openapis.openapi.models.shared.SchemeAPIKeyHeader apiKeyHeader) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=x-api-key")
+    public String apiKeyHeader;
+    public GetRiskSecurity withApiKeyHeader(String apiKeyHeader) {
         this.apiKeyHeader = apiKeyHeader;
         return this;
     }

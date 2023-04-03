@@ -144,20 +144,24 @@ public class SDK {
 		
 	}
 
-    public org.openapis.openapi.models.operations.FetchAlertResponse fetchAlert(org.openapis.openapi.models.operations.FetchAlertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchAlertResponse fetchAlert(org.openapis.openapi.models.operations.FetchAlertRequest request, org.openapis.openapi.models.operations.FetchAlertSecurity security) throws Exception {
+        return this.fetchAlert(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchAlertResponse fetchAlert(org.openapis.openapi.models.operations.FetchAlertRequest request, org.openapis.openapi.models.operations.FetchAlertSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_ALERT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchAlertPathParams.class, baseUrl, "/v1/Alerts/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchAlertRequest.class, baseUrl, "/v1/Alerts/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -181,20 +185,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchEventResponse fetchEvent(org.openapis.openapi.models.operations.FetchEventRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchEventResponse fetchEvent(org.openapis.openapi.models.operations.FetchEventRequest request, org.openapis.openapi.models.operations.FetchEventSecurity security) throws Exception {
+        return this.fetchEvent(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchEventResponse fetchEvent(org.openapis.openapi.models.operations.FetchEventRequest request, org.openapis.openapi.models.operations.FetchEventSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_EVENT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchEventPathParams.class, baseUrl, "/v1/Events/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchEventRequest.class, baseUrl, "/v1/Events/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,10 +226,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListAlertResponse listAlert(org.openapis.openapi.models.operations.ListAlertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListAlertResponse listAlert(org.openapis.openapi.models.operations.ListAlertRequest request, org.openapis.openapi.models.operations.ListAlertSecurity security) throws Exception {
+        return this.listAlert(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListAlertResponse listAlert(org.openapis.openapi.models.operations.ListAlertRequest request, org.openapis.openapi.models.operations.ListAlertSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_ALERT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Alerts");
@@ -230,14 +242,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAlertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAlertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,13 +276,26 @@ public class SDK {
     /**
      * Returns a list of events in the account, sorted by event-date.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListEventResponse listEvent(org.openapis.openapi.models.operations.ListEventRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListEventResponse listEvent(org.openapis.openapi.models.operations.ListEventRequest request, org.openapis.openapi.models.operations.ListEventSecurity security) throws Exception {
+        return this.listEvent(request, security, null);
+    }
+
+    /**
+     * Returns a list of events in the account, sorted by event-date.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListEventResponse listEvent(org.openapis.openapi.models.operations.ListEventRequest request, org.openapis.openapi.models.operations.ListEventSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_EVENT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Events");
@@ -279,14 +304,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListEventQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListEventRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

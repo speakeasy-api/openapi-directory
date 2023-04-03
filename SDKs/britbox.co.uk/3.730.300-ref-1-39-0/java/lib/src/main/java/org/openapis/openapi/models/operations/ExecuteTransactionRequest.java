@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExecuteTransactionRequest {
-    
-    public ExecuteTransactionPathParams pathParams;
-    public ExecuteTransactionRequest withPathParams(ExecuteTransactionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ExecuteTransactionQueryParams queryParams;
-    public ExecuteTransactionRequest withQueryParams(ExecuteTransactionQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Details of a transaction request.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ItvRokuTransactionRequest request;
-    public ExecuteTransactionRequest withRequest(org.openapis.openapi.models.shared.ItvRokuTransactionRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ItvRokuTransactionRequest itvRokuTransactionRequest;
+    public ExecuteTransactionRequest withItvRokuTransactionRequest(org.openapis.openapi.models.shared.ItvRokuTransactionRequest itvRokuTransactionRequest) {
+        this.itvRokuTransactionRequest = itvRokuTransactionRequest;
+        return this;
+    }
+    
+    /**
+     * Language code for the preferred language to be returned in the response.
+     * 
+     * Parameter value is case-insensitive and should be
+     *   - a valid 2 letter language code without region such as en, de
+     *   - or with region such as en_us, en_au
+     * 
+     * If undefined then defaults to 'en', unless the server has been configured
+     * with a custom default.
+     * 
+     * See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public ExecuteTransactionRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    
+    /**
+     * The identifier of the Roku transaction (subscribe/upgrade/downgrade/cancellation).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionid")
+    public String transactionid;
+    public ExecuteTransactionRequest withTransactionid(String transactionid) {
+        this.transactionid = transactionid;
         return this;
     }
     

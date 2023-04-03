@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PreprintsPartialUpdateRequest {
-    
-    public PreprintsPartialUpdatePathParams pathParams;
-    public PreprintsPartialUpdateRequest withPathParams(PreprintsPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> requestBody;
+    public PreprintsPartialUpdateRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PreprintsPartialUpdateRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    /**
+     * The unique identifier of the preprint.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=preprint_id")
+    public String preprintId;
+    public PreprintsPartialUpdateRequest withPreprintId(String preprintId) {
+        this.preprintId = preprintId;
         return this;
     }
     

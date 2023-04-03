@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAlbumLogoRequest {
+    /**
+     * The ID of the album.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=album_id")
+    public Double albumId;
+    public GetAlbumLogoRequest withAlbumId(Double albumId) {
+        this.albumId = albumId;
+        return this;
+    }
     
-    public GetAlbumLogoPathParams pathParams;
-    public GetAlbumLogoRequest withPathParams(GetAlbumLogoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the custom logo.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=logo_id")
+    public Double logoId;
+    public GetAlbumLogoRequest withLogoId(Double logoId) {
+        this.logoId = logoId;
+        return this;
+    }
+    
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public GetAlbumLogoRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

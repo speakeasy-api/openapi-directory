@@ -5,13 +5,11 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.AddPaymentMethodSecurity;
-import org.openapis.openapi.models.operations.AddPaymentMethodQueryParams;
 import org.openapis.openapi.models.operations.AddPaymentMethodRequest;
 import org.openapis.openapi.models.operations.AddPaymentMethodResponse;
+import org.openapis.openapi.models.shared.FeatureFlagsEnum;
 import org.openapis.openapi.models.shared.AddPaymentMethodRequestTypeEnum;
 import org.openapis.openapi.models.shared.AddPaymentMethodRequest;
-import org.openapis.openapi.models.shared.FeatureFlagsEnum;
-import org.openapis.openapi.models.shared.SchemeAccountAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -20,27 +18,22 @@ public class Application {
                 .build();
 
             AddPaymentMethodRequest req = new AddPaymentMethodRequest() {{
-                security = new AddPaymentMethodSecurity() {{
-                    accountAuth = new SchemeAccountAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                queryParams = new AddPaymentMethodQueryParams() {{
-                    ff = new org.openapis.openapi.models.shared.FeatureFlagsEnum[]{{
-                        add("rpt"),
-                        add("cas"),
-                        add("lrl"),
-                    }};
-                    lang = "unde";
-                }};
-                request = new AddPaymentMethodRequest() {{
+                addPaymentMethodRequest = new AddPaymentMethodRequest() {{
                     makeDefault = false;
-                    token = "nulla";
+                    token = "corrupti";
                     type = "Card";
                 }};
-            }};            
+                ff = new org.openapis.openapi.models.shared.FeatureFlagsEnum[]{{
+                    add("cas"),
+                    add("lrl"),
+                    add("rpt"),
+                }};
+                lang = "nulla";
+            }}            
 
-            AddPaymentMethodResponse res = sdk.account.addPaymentMethod(req);
+            AddPaymentMethodResponse res = sdk.account.addPaymentMethod(req, new AddPaymentMethodSecurity() {{
+                accountAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.paymentMethod.isPresent()) {
                 // handle response

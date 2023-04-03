@@ -4,27 +4,55 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClinicalNotesReadRequest {
-    
-    public ClinicalNotesReadPathParams pathParams;
-    public ClinicalNotesReadRequest withPathParams(ClinicalNotesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public String date;
+    public ClinicalNotesReadRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     
-    
-    public ClinicalNotesReadQueryParams queryParams;
-    public ClinicalNotesReadRequest withQueryParams(ClinicalNotesReadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_range")
+    public String dateRange;
+    public ClinicalNotesReadRequest withDateRange(String dateRange) {
+        this.dateRange = dateRange;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public ClinicalNotesReadRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
     
-    public ClinicalNotesReadSecurity security;
-    public ClinicalNotesReadRequest withSecurity(ClinicalNotesReadSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ClinicalNotesReadRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
+    public Long office;
+    public ClinicalNotesReadRequest withOffice(Long office) {
+        this.office = office;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public ClinicalNotesReadRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public ClinicalNotesReadRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

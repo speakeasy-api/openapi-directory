@@ -4,27 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPaymentsRequest {
-    
-    public ListPaymentsPathParams pathParams;
-    public ListPaymentsRequest withPathParams(ListPaymentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A pagination cursor to retrieve the next set of results for your
+     * original query to the endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batch_token")
+    public String batchToken;
+    public ListPaymentsRequest withBatchToken(String batchToken) {
+        this.batchToken = batchToken;
         return this;
     }
     
-    
-    public ListPaymentsQueryParams queryParams;
-    public ListPaymentsRequest withQueryParams(ListPaymentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The beginning of the requested reporting period, in ISO 8601 format. If this value is before January 1, 2013 (2013-01-01T00:00:00Z), this endpoint returns an error. Default value: The current time minus one year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_time")
+    public String beginTime;
+    public ListPaymentsRequest withBeginTime(String beginTime) {
+        this.beginTime = beginTime;
         return this;
     }
     
+    /**
+     * The end of the requested reporting period, in ISO 8601 format. If this value is more than one year greater than begin_time, this endpoint returns an error. Default value: The current time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
+    public String endTime;
+    public ListPaymentsRequest withEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
     
-    public ListPaymentsSecurity security;
-    public ListPaymentsRequest withSecurity(ListPaymentsSecurity security) {
-        this.security = security;
+    /**
+     * Indicates whether or not to include partial payments in the response. Partial payments will have the tenders collected so far, but the itemizations will be empty until the payment is completed.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_partial")
+    public Boolean includePartial;
+    public ListPaymentsRequest withIncludePartial(Boolean includePartial) {
+        this.includePartial = includePartial;
+        return this;
+    }
+    
+    /**
+     * The maximum number of payments to return in a single response. This value cannot exceed 200.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListPaymentsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The ID of the location to list payments for. If you specify me, this endpoint returns payments aggregated from all of the business's locations.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public ListPaymentsRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * The order in which payments are listed in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public String order;
+    public ListPaymentsRequest withOrder(String order) {
+        this.order = order;
         return this;
     }
     

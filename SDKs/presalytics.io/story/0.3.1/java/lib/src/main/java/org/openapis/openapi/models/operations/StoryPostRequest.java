@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryPostRequest {
-    
-    public StoryPostQueryParams queryParams;
-    public StoryPostRequest withQueryParams(StoryPostQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Determines whether a repsonse including story objects should include the story outline.  Defaults to true. Useful for speeding up processing times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_outline")
+    public Boolean includeOutline;
+    public StoryPostRequest withIncludeOutline(Boolean includeOutline) {
+        this.includeOutline = includeOutline;
         return this;
     }
     
@@ -18,9 +21,9 @@ public class StoryPostRequest {
      * A story outline json object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Outline request;
-    public StoryPostRequest withRequest(org.openapis.openapi.models.shared.Outline request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Outline outline;
+    public StoryPostRequest withOutline(org.openapis.openapi.models.shared.Outline outline) {
+        this.outline = outline;
         return this;
     }
     

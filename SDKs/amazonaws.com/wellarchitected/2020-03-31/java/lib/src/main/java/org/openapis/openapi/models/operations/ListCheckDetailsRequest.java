@@ -7,31 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCheckDetailsRequest {
-    
-    public ListCheckDetailsPathParams pathParams;
-    public ListCheckDetailsRequest withPathParams(ListCheckDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public String maxResults;
+    public ListCheckDetailsRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
     
-    
-    public ListCheckDetailsQueryParams queryParams;
-    public ListCheckDetailsRequest withQueryParams(ListCheckDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListCheckDetailsHeaders headers;
-    public ListCheckDetailsRequest withHeaders(ListCheckDetailsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListCheckDetailsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ListCheckDetailsRequestBody request;
-    public ListCheckDetailsRequest withRequest(ListCheckDetailsRequestBody request) {
-        this.request = request;
+    public ListCheckDetailsRequestBody requestBody;
+    public ListCheckDetailsRequest withRequestBody(ListCheckDetailsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkloadId")
+    public String workloadId;
+    public ListCheckDetailsRequest withWorkloadId(String workloadId) {
+        this.workloadId = workloadId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListCheckDetailsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListCheckDetailsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListCheckDetailsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListCheckDetailsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListCheckDetailsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListCheckDetailsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListCheckDetailsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

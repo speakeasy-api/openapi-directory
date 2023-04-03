@@ -4,27 +4,136 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TranscoderProjectsLocationsJobTemplatesDeleteRequest {
-    
-    public TranscoderProjectsLocationsJobTemplatesDeletePathParams pathParams;
-    public TranscoderProjectsLocationsJobTemplatesDeleteRequest withPathParams(TranscoderProjectsLocationsJobTemplatesDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public TranscoderProjectsLocationsJobTemplatesDeleteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public TranscoderProjectsLocationsJobTemplatesDeleteQueryParams queryParams;
-    public TranscoderProjectsLocationsJobTemplatesDeleteRequest withQueryParams(TranscoderProjectsLocationsJobTemplatesDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public TranscoderProjectsLocationsJobTemplatesDeleteRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * If set to true, and the job template is not found, the request will succeed but no action will be taken on the server.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allowMissing")
+    public Boolean allowMissing;
+    public TranscoderProjectsLocationsJobTemplatesDeleteRequest withAllowMissing(Boolean allowMissing) {
+        this.allowMissing = allowMissing;
+        return this;
+    }
     
-    public TranscoderProjectsLocationsJobTemplatesDeleteSecurity security;
-    public TranscoderProjectsLocationsJobTemplatesDeleteRequest withSecurity(TranscoderProjectsLocationsJobTemplatesDeleteSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public TranscoderProjectsLocationsJobTemplatesDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public TranscoderProjectsLocationsJobTemplatesDeleteRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public TranscoderProjectsLocationsJobTemplatesDeleteRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public TranscoderProjectsLocationsJobTemplatesDeleteRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Required. The name of the job template to delete. `projects/{project}/locations/{location}/jobTemplates/{job_template}`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public TranscoderProjectsLocationsJobTemplatesDeleteRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public TranscoderProjectsLocationsJobTemplatesDeleteRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public TranscoderProjectsLocationsJobTemplatesDeleteRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public TranscoderProjectsLocationsJobTemplatesDeleteRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public TranscoderProjectsLocationsJobTemplatesDeleteRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public TranscoderProjectsLocationsJobTemplatesDeleteRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

@@ -35,23 +35,24 @@ public class DomesticPayments {
     /**
      * Create Domestic Payment Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsJsonResponse createDomesticPaymentConsentsJson(org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsJsonResponse createDomesticPaymentConsentsJson(org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsJsonRequest request, org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/domestic-payment-consents");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "obWriteDomesticConsent4", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -60,7 +61,7 @@ public class DomesticPayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,23 +124,24 @@ public class DomesticPayments {
     /**
      * Create Domestic Payment Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsRawResponse createDomesticPaymentConsentsRaw(org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsRawResponse createDomesticPaymentConsentsRaw(org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsRawRequest request, org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsRawSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/domestic-payment-consents");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -148,7 +150,7 @@ public class DomesticPayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -211,23 +213,24 @@ public class DomesticPayments {
     /**
      * Create Domestic Payments
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDomesticPaymentsJsonResponse createDomesticPaymentsJson(org.openapis.openapi.models.operations.CreateDomesticPaymentsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDomesticPaymentsJsonResponse createDomesticPaymentsJson(org.openapis.openapi.models.operations.CreateDomesticPaymentsJsonRequest request, org.openapis.openapi.models.operations.CreateDomesticPaymentsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/domestic-payments");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "obWriteDomestic2", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -236,7 +239,7 @@ public class DomesticPayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -299,23 +302,24 @@ public class DomesticPayments {
     /**
      * Create Domestic Payments
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDomesticPaymentsRawResponse createDomesticPaymentsRaw(org.openapis.openapi.models.operations.CreateDomesticPaymentsRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDomesticPaymentsRawResponse createDomesticPaymentsRaw(org.openapis.openapi.models.operations.CreateDomesticPaymentsRawRequest request, org.openapis.openapi.models.operations.CreateDomesticPaymentsRawSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/domestic-payments");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -324,7 +328,7 @@ public class DomesticPayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -387,18 +391,19 @@ public class DomesticPayments {
     /**
      * Get Domestic Payment Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdResponse getDomesticPaymentConsentsConsentId(org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdResponse getDomesticPaymentConsentsConsentId(org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdRequest request, org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdPathParams.class, baseUrl, "/domestic-payment-consents/{ConsentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdRequest.class, baseUrl, "/domestic-payment-consents/{ConsentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -407,7 +412,7 @@ public class DomesticPayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -470,18 +475,19 @@ public class DomesticPayments {
     /**
      * Get Domestic Payment Consents Funds Confirmation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse getDomesticPaymentConsentsConsentIdFundsConfirmation(org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdFundsConfirmationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdFundsConfirmationResponse getDomesticPaymentConsentsConsentIdFundsConfirmation(org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdFundsConfirmationRequest request, org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdFundsConfirmationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdFundsConfirmationPathParams.class, baseUrl, "/domestic-payment-consents/{ConsentId}/funds-confirmation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomesticPaymentConsentsConsentIdFundsConfirmationRequest.class, baseUrl, "/domestic-payment-consents/{ConsentId}/funds-confirmation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -490,7 +496,7 @@ public class DomesticPayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -553,18 +559,19 @@ public class DomesticPayments {
     /**
      * Get Domestic Payments
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdResponse getDomesticPaymentsDomesticPaymentId(org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdResponse getDomesticPaymentsDomesticPaymentId(org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdRequest request, org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdPathParams.class, baseUrl, "/domestic-payments/{DomesticPaymentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdRequest.class, baseUrl, "/domestic-payments/{DomesticPaymentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -573,7 +580,7 @@ public class DomesticPayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

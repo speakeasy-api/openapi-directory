@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteImageBackgroundSearchRequest {
-    
-    public GetQuoteImageBackgroundSearchQueryParams queryParams;
-    public GetQuoteImageBackgroundSearchRequest withQueryParams(GetQuoteImageBackgroundSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetQuoteImageBackgroundSearchSecurity security;
-    public GetQuoteImageBackgroundSearchRequest withSecurity(GetQuoteImageBackgroundSearchSecurity security) {
-        this.security = security;
+    /**
+     * Tag string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetQuoteImageBackgroundSearchRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

@@ -32,12 +32,9 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/SrcSearchlyApiV1ControllersSimilarityByContentRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/SrcSearchlyApiV1ControllersSimilarityByContentRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SrcSearchlyApiV1ControllersSimilarityByContentResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/SrcSearchlyApiV1ControllersSimilarityBySongQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/SrcSearchlyApiV1ControllersSimilarityBySongRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SrcSearchlyApiV1ControllersSimilarityBySongResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/SrcSearchlyApiV1ControllersSongSearchQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/SrcSearchlyApiV1ControllersSongSearchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SrcSearchlyApiV1ControllersSongSearchResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/APIResponseSimilarityResponseSimilarityList.java

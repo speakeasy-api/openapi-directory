@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkApplianceFirewallInboundFirewallRulesRequest {
-    
-    public UpdateNetworkApplianceFirewallInboundFirewallRulesPathParams pathParams;
-    public UpdateNetworkApplianceFirewallInboundFirewallRulesRequest withPathParams(UpdateNetworkApplianceFirewallInboundFirewallRulesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkApplianceFirewallInboundFirewallRulesRequestBody requestBody;
+    public UpdateNetworkApplianceFirewallInboundFirewallRulesRequest withRequestBody(UpdateNetworkApplianceFirewallInboundFirewallRulesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkApplianceFirewallInboundFirewallRulesRequestBody request;
-    public UpdateNetworkApplianceFirewallInboundFirewallRulesRequest withRequest(UpdateNetworkApplianceFirewallInboundFirewallRulesRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkApplianceFirewallInboundFirewallRulesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

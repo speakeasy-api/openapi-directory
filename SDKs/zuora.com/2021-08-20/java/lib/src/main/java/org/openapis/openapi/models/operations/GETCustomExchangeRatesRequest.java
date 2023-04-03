@@ -4,27 +4,69 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCustomExchangeRatesRequest {
-    
-    public GETCustomExchangeRatesPathParams pathParams;
-    public GETCustomExchangeRatesRequest withPathParams(GETCustomExchangeRatesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public GETCustomExchangeRatesRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
         return this;
     }
     
-    
-    public GETCustomExchangeRatesQueryParams queryParams;
-    public GETCustomExchangeRatesRequest withQueryParams(GETCustomExchangeRatesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public GETCustomExchangeRatesRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
         return this;
     }
     
+    /**
+     * The target base currency of the tenant. The exchange rates in the response are calculated in relation to the target currency.
+     * 
+     * The value must be a three-letter currency code, for example, USD. 
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=currency")
+    public String currency;
+    public GETCustomExchangeRatesRequest withCurrency(String currency) {
+        this.currency = currency;
+        return this;
+    }
     
-    public GETCustomExchangeRatesHeaders headers;
-    public GETCustomExchangeRatesRequest withHeaders(GETCustomExchangeRatesHeaders headers) {
-        this.headers = headers;
+    /**
+     * End date of the date range for which you want to get exchange rates.
+     * 
+     * The date must be in yyyy-mm-dd format, for example, 2016-01-16. The end date can be a maximum of 90 days after the start date.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public String endDate;
+    public GETCustomExchangeRatesRequest withEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * Start date of the date range for which you want to get exchange rates.
+     * 
+     * The date must be in yyyy-mm-dd format, for example, 2016-01-15. The start date cannot be later than the end date.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public String startDate;
+    public GETCustomExchangeRatesRequest withStartDate(String startDate) {
+        this.startDate = startDate;
         return this;
     }
     

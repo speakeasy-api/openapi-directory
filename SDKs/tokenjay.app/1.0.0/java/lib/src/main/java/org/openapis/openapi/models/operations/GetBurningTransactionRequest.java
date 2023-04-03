@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBurningTransactionRequest {
-    
-    public GetBurningTransactionPathParams pathParams;
-    public GetBurningTransactionRequest withPathParams(GetBurningTransactionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
+    public String uuid;
+    public GetBurningTransactionRequest withUuid(String uuid) {
+        this.uuid = uuid;
         return this;
     }
     

@@ -4,13 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImGroupRequest {
-    
-    public ImGroupPathParams pathParams;
-    public ImGroupRequest withPathParams(ImGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The group ID.&lt;br&gt;
+     * Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public ImGroupRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

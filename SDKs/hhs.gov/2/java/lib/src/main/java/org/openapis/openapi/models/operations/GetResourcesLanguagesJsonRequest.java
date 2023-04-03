@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesLanguagesJsonRequest {
+    /**
+     * The maximum number of records to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=max")
+    public Integer max;
+    public GetResourcesLanguagesJsonRequest withMax(Integer max) {
+        this.max = max;
+        return this;
+    }
     
-    public GetResourcesLanguagesJsonQueryParams queryParams;
-    public GetResourcesLanguagesJsonRequest withQueryParams(GetResourcesLanguagesJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return records starting at the offset index.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=offset")
+    public Integer offset;
+    public GetResourcesLanguagesJsonRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The name of the property to which sorting will be applied
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
+    public String sort;
+    public GetResourcesLanguagesJsonRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

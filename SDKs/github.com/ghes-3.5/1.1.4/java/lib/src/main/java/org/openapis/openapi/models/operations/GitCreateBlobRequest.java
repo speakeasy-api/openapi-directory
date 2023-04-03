@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GitCreateBlobRequest {
-    
-    public GitCreateBlobPathParams pathParams;
-    public GitCreateBlobRequest withPathParams(GitCreateBlobPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public GitCreateBlobRequestBody requestBody;
+    public GitCreateBlobRequest withRequestBody(GitCreateBlobRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public GitCreateBlobRequestBody request;
-    public GitCreateBlobRequest withRequest(GitCreateBlobRequestBody request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public GitCreateBlobRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public GitCreateBlobRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

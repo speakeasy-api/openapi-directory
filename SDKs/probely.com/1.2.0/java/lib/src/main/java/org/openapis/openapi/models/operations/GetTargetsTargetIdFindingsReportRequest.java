@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTargetsTargetIdFindingsReportRequest {
-    
-    public GetTargetsTargetIdFindingsReportPathParams pathParams;
-    public GetTargetsTargetIdFindingsReportRequest withPathParams(GetTargetsTargetIdFindingsReportPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Target id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_id")
+    public String targetId;
+    public GetTargetsTargetIdFindingsReportRequest withTargetId(String targetId) {
+        this.targetId = targetId;
         return this;
     }
     
-    
-    public GetTargetsTargetIdFindingsReportQueryParams queryParams;
-    public GetTargetsTargetIdFindingsReportRequest withQueryParams(GetTargetsTargetIdFindingsReportQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Token received from the finding report endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public GetTargetsTargetIdFindingsReportRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsPutDatapointRequest {
-    
-    public GroupsPutDatapointPathParams pathParams;
-    public GroupsPutDatapointRequest withPathParams(GroupsPutDatapointPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The body of the datapoint
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiCoreDtoDatapointsDatapoint request;
-    public GroupsPutDatapointRequest withRequest(org.openapis.openapi.models.shared.ApiCoreDtoDatapointsDatapoint request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiCoreDtoDatapointsDatapoint apiCoreDtoDatapointsDatapoint;
+    public GroupsPutDatapointRequest withApiCoreDtoDatapointsDatapoint(org.openapis.openapi.models.shared.ApiCoreDtoDatapointsDatapoint apiCoreDtoDatapointsDatapoint) {
+        this.apiCoreDtoDatapointsDatapoint = apiCoreDtoDatapointsDatapoint;
+        return this;
+    }
+    
+    /**
+     * The id of the group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GroupsPutDatapointRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

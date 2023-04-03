@@ -4,13 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamScheduleRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public TeamScheduleFormatEnum format;
+    public TeamScheduleRequest withFormat(TeamScheduleFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public TeamSchedulePathParams pathParams;
-    public TeamScheduleRequest withPathParams(TeamSchedulePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Year of the season (with optional season type).&lt;br&gt;Examples: &lt;code&gt;2018&lt;/code&gt;, &lt;code&gt;2018PRE&lt;/code&gt;, &lt;code&gt;2018POST&lt;/code&gt;, &lt;code&gt;2018STAR&lt;/code&gt;, &lt;code&gt;2019&lt;/code&gt;, etc.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
+    public String season;
+    public TeamScheduleRequest withSeason(String season) {
+        this.season = season;
+        return this;
+    }
+    
+    /**
+     * The abbreviation of the requested team.
+     * Examples: &lt;code&gt;SF&lt;/code&gt;, &lt;code&gt;NYY&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team")
+    public String team;
+    public TeamScheduleRequest withTeam(String team) {
+        this.team = team;
         return this;
     }
     

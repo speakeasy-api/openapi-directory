@@ -4,27 +4,146 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeploymentmanagerManifestsGetRequest {
-    
-    public DeploymentmanagerManifestsGetPathParams pathParams;
-    public DeploymentmanagerManifestsGetRequest withPathParams(DeploymentmanagerManifestsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DeploymentmanagerManifestsGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public DeploymentmanagerManifestsGetQueryParams queryParams;
-    public DeploymentmanagerManifestsGetRequest withQueryParams(DeploymentmanagerManifestsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DeploymentmanagerManifestsGetRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DeploymentmanagerManifestsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public DeploymentmanagerManifestsGetSecurity security;
-    public DeploymentmanagerManifestsGetRequest withSecurity(DeploymentmanagerManifestsGetSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DeploymentmanagerManifestsGetRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * The name of the deployment for this request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment")
+    public String deployment;
+    public DeploymentmanagerManifestsGetRequest withDeployment(String deployment) {
+        this.deployment = deployment;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DeploymentmanagerManifestsGetRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DeploymentmanagerManifestsGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The name of the manifest for this request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=manifest")
+    public String manifest;
+    public DeploymentmanagerManifestsGetRequest withManifest(String manifest) {
+        this.manifest = manifest;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DeploymentmanagerManifestsGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DeploymentmanagerManifestsGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * The project ID for this request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public DeploymentmanagerManifestsGetRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DeploymentmanagerManifestsGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DeploymentmanagerManifestsGetRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DeploymentmanagerManifestsGetRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

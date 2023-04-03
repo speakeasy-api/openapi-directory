@@ -4,20 +4,107 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEditorialVideoLicenseListRequest {
-    
-    public GetEditorialVideoLicenseListQueryParams queryParams;
-    public GetEditorialVideoLicenseListRequest withQueryParams(GetEditorialVideoLicenseListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter licenses by download availability
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=download_availability")
+    public GetEditorialVideoLicenseListDownloadAvailabilityEnum downloadAvailability;
+    public GetEditorialVideoLicenseListRequest withDownloadAvailability(GetEditorialVideoLicenseListDownloadAvailabilityEnum downloadAvailability) {
+        this.downloadAvailability = downloadAvailability;
         return this;
     }
     
+    /**
+     * Show licenses created before the specified date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public OffsetDateTime endDate;
+    public GetEditorialVideoLicenseListRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
+        return this;
+    }
     
-    public GetEditorialVideoLicenseListSecurity security;
-    public GetEditorialVideoLicenseListRequest withSecurity(GetEditorialVideoLicenseListSecurity security) {
-        this.security = security;
+    /**
+     * Show editorial videos that are available with the specified license name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public String license;
+    public GetEditorialVideoLicenseListRequest withLicense(String license) {
+        this.license = license;
+        return this;
+    }
+    
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetEditorialVideoLicenseListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetEditorialVideoLicenseListRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Sort order
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetEditorialVideoLicenseListSortEnum sort;
+    public GetEditorialVideoLicenseListRequest withSort(GetEditorialVideoLicenseListSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Show licenses created on or after the specified date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public OffsetDateTime startDate;
+    public GetEditorialVideoLicenseListRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * Set to true to see license history for all members of your team.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team_history")
+    public Boolean teamHistory;
+    public GetEditorialVideoLicenseListRequest withTeamHistory(Boolean teamHistory) {
+        this.teamHistory = teamHistory;
+        return this;
+    }
+    
+    /**
+     * Filter licenses by username of licensee
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public GetEditorialVideoLicenseListRequest withUsername(String username) {
+        this.username = username;
+        return this;
+    }
+    
+    /**
+     * Show licenses for the specified editorial video ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=video_id")
+    public String videoId;
+    public GetEditorialVideoLicenseListRequest withVideoId(String videoId) {
+        this.videoId = videoId;
         return this;
     }
     

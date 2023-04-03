@@ -7,31 +7,160 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BigquerydatatransferProjectsTransferConfigsCreateRequest {
-    
-    public BigquerydatatransferProjectsTransferConfigsCreatePathParams pathParams;
-    public BigquerydatatransferProjectsTransferConfigsCreateRequest withPathParams(BigquerydatatransferProjectsTransferConfigsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public BigquerydatatransferProjectsTransferConfigsCreateQueryParams queryParams;
-    public BigquerydatatransferProjectsTransferConfigsCreateRequest withQueryParams(BigquerydatatransferProjectsTransferConfigsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public BigquerydatatransferProjectsTransferConfigsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TransferConfigInput request;
-    public BigquerydatatransferProjectsTransferConfigsCreateRequest withRequest(org.openapis.openapi.models.shared.TransferConfigInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TransferConfigInput transferConfigInput;
+    public BigquerydatatransferProjectsTransferConfigsCreateRequest withTransferConfigInput(org.openapis.openapi.models.shared.TransferConfigInput transferConfigInput) {
+        this.transferConfigInput = transferConfigInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public BigquerydatatransferProjectsTransferConfigsCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public BigquerydatatransferProjectsTransferConfigsCreateSecurity security;
-    public BigquerydatatransferProjectsTransferConfigsCreateRequest withSecurity(BigquerydatatransferProjectsTransferConfigsCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public BigquerydatatransferProjectsTransferConfigsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * Optional OAuth2 authorization code to use with this transfer configuration. This is required only if `transferConfig.dataSourceId` is 'youtube_channel' and new credentials are needed, as indicated by `CheckValidCreds`. In order to obtain authorization_code, make a request to the following URL: https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;response_type=authorization_code&amp;client_id=client_id&amp;scope=data_source_scopes * The client_id is the OAuth client_id of the a data source as returned by ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources method. Note that this should not be set when `service_account_name` is used to create the transfer config.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authorizationCode")
+    public String authorizationCode;
+    public BigquerydatatransferProjectsTransferConfigsCreateRequest withAuthorizationCode(String authorizationCode) {
+        this.authorizationCode = authorizationCode;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public BigquerydatatransferProjectsTransferConfigsCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public BigquerydatatransferProjectsTransferConfigsCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public BigquerydatatransferProjectsTransferConfigsCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public BigquerydatatransferProjectsTransferConfigsCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The BigQuery project id where the transfer configuration should be created. Must be in the format projects/{project_id}/locations/{location_id} or projects/{project_id}. If specified location and location of the destination bigquery dataset do not match - the request will fail.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public BigquerydatatransferProjectsTransferConfigsCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public BigquerydatatransferProjectsTransferConfigsCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public BigquerydatatransferProjectsTransferConfigsCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Optional service account email. If this field is set, the transfer config will be created with this service account's credentials. It requires that the requesting user calling this API has permissions to act as this service account. Note that not all data sources support service account credentials when creating a transfer config. For the latest list of data sources, read about [using service accounts](https://cloud.google.com/bigquery-transfer/docs/use-service-accounts).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceAccountName")
+    public String serviceAccountName;
+    public BigquerydatatransferProjectsTransferConfigsCreateRequest withServiceAccountName(String serviceAccountName) {
+        this.serviceAccountName = serviceAccountName;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public BigquerydatatransferProjectsTransferConfigsCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public BigquerydatatransferProjectsTransferConfigsCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Optional version info. This is required only if `transferConfig.dataSourceId` is not 'youtube_channel' and new credentials are needed, as indicated by `CheckValidCreds`. In order to obtain version info, make a request to the following URL: https://www.gstatic.com/bigquerydatatransfer/oauthz/auth?redirect_uri=urn:ietf:wg:oauth:2.0:oob&amp;response_type=version_info&amp;client_id=client_id&amp;scope=data_source_scopes * The client_id is the OAuth client_id of the a data source as returned by ListDataSources method. * data_source_scopes are the scopes returned by ListDataSources method. Note that this should not be set when `service_account_name` is used to create the transfer config.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=versionInfo")
+    public String versionInfo;
+    public BigquerydatatransferProjectsTransferConfigsCreateRequest withVersionInfo(String versionInfo) {
+        this.versionInfo = versionInfo;
         return this;
     }
     

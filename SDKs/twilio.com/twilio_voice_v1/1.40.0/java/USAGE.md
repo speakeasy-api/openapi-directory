@@ -9,9 +9,7 @@ import org.openapis.openapi.models.operations.CreateByocTrunkCreateByocTrunkRequ
 import org.openapis.openapi.models.operations.CreateByocTrunkCreateByocTrunkRequestVoiceFallbackMethodEnum;
 import org.openapis.openapi.models.operations.CreateByocTrunkCreateByocTrunkRequestVoiceMethodEnum;
 import org.openapis.openapi.models.operations.CreateByocTrunkCreateByocTrunkRequest;
-import org.openapis.openapi.models.operations.CreateByocTrunkRequest;
 import org.openapis.openapi.models.operations.CreateByocTrunkResponse;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -19,28 +17,23 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateByocTrunkRequest req = new CreateByocTrunkRequest() {{
-                security = new CreateByocTrunkSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                request = new CreateByocTrunkCreateByocTrunkRequest() {{
-                    cnamLookupEnabled = false;
-                    connectionPolicySid = "corrupti";
-                    friendlyName = "provident";
-                    fromDomainSid = "distinctio";
-                    statusCallbackMethod = "DELETE";
-                    statusCallbackUrl = "https://tidy-mascara.org";
-                    voiceFallbackMethod = "POST";
-                    voiceFallbackUrl = "https://present-giggle.info";
-                    voiceMethod = "GET";
-                    voiceUrl = "https://awesome-voter.biz";
-                }};
-            }};            
+            CreateByocTrunkCreateByocTrunkRequest req = new CreateByocTrunkCreateByocTrunkRequest() {{
+                cnamLookupEnabled = false;
+                connectionPolicySid = "corrupti";
+                friendlyName = "provident";
+                fromDomainSid = "distinctio";
+                statusCallbackMethod = "DELETE";
+                statusCallbackUrl = "https://tidy-mascara.org";
+                voiceFallbackMethod = "POST";
+                voiceFallbackUrl = "https://present-giggle.info";
+                voiceMethod = "GET";
+                voiceUrl = "https://awesome-voter.biz";
+            }}            
 
-            CreateByocTrunkResponse res = sdk.createByocTrunk(req);
+            CreateByocTrunkResponse res = sdk.createByocTrunk(req, new CreateByocTrunkSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.voiceV1ByocTrunk.isPresent()) {
                 // handle response

@@ -4,20 +4,70 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceCameraAnalyticsZoneHistoryRequest {
-    
-    public GetDeviceCameraAnalyticsZoneHistoryPathParams pathParams;
-    public GetDeviceCameraAnalyticsZoneHistoryRequest withPathParams(GetDeviceCameraAnalyticsZoneHistoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle].
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=objectType")
+    public GetDeviceCameraAnalyticsZoneHistoryObjectTypeEnum objectType;
+    public GetDeviceCameraAnalyticsZoneHistoryRequest withObjectType(GetDeviceCameraAnalyticsZoneHistoryObjectTypeEnum objectType) {
+        this.objectType = objectType;
         return this;
     }
     
+    /**
+     * The time resolution in seconds for returned data. The valid resolutions are: 60. The default is 60.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolution")
+    public Long resolution;
+    public GetDeviceCameraAnalyticsZoneHistoryRequest withResolution(Long resolution) {
+        this.resolution = resolution;
+        return this;
+    }
     
-    public GetDeviceCameraAnalyticsZoneHistoryQueryParams queryParams;
-    public GetDeviceCameraAnalyticsZoneHistoryRequest withQueryParams(GetDeviceCameraAnalyticsZoneHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetDeviceCameraAnalyticsZoneHistoryRequest withSerial(String serial) {
+        this.serial = serial;
+        return this;
+    }
+    
+    /**
+     * The beginning of the timespan for the data. The maximum lookback period is 365 days from today.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
+    public String t0;
+    public GetDeviceCameraAnalyticsZoneHistoryRequest withT0(String t0) {
+        this.t0 = t0;
+        return this;
+    }
+    
+    /**
+     * The end of the timespan for the data. t1 can be a maximum of 14 hours after t0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t1")
+    public String t1;
+    public GetDeviceCameraAnalyticsZoneHistoryRequest withT1(String t1) {
+        this.t1 = t1;
+        return this;
+    }
+    
+    /**
+     * The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 14 hours. The default is 1 hour.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
+    public Float timespan;
+    public GetDeviceCameraAnalyticsZoneHistoryRequest withTimespan(Float timespan) {
+        this.timespan = timespan;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zoneId")
+    public String zoneId;
+    public GetDeviceCameraAnalyticsZoneHistoryRequest withZoneId(String zoneId) {
+        this.zoneId = zoneId;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePostRequest {
-    
-    public UpdatePostPathParams pathParams;
-    public UpdatePostRequest withPathParams(UpdatePostPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public UpdatePostRequestBody requestBody;
+    public UpdatePostRequest withRequestBody(UpdatePostRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public UpdatePostRequestBody request;
-    public UpdatePostRequest withRequest(UpdatePostRequestBody request) {
-        this.request = request;
+    /**
+     * The ID of the post to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=post_id")
+    public String postId;
+    public UpdatePostRequest withPostId(String postId) {
+        this.postId = postId;
         return this;
     }
     

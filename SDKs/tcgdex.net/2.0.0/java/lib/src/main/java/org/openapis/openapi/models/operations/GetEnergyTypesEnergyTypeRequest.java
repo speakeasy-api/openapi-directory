@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEnergyTypesEnergyTypeRequest {
-    
-    public GetEnergyTypesEnergyTypePathParams pathParams;
-    public GetEnergyTypesEnergyTypeRequest withPathParams(GetEnergyTypesEnergyTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=energy-type")
+    public String energyType;
+    public GetEnergyTypesEnergyTypeRequest withEnergyType(String energyType) {
+        this.energyType = energyType;
         return this;
     }
     

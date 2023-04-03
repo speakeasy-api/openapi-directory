@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChatHeadUsingPOSTRequest {
-    
-    public GetChatHeadUsingPOSTQueryParams queryParams;
-    public GetChatHeadUsingPOSTRequest withQueryParams(GetChatHeadUsingPOSTQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
+    public String padID;
+    public GetChatHeadUsingPOSTRequest withPadID(String padID) {
+        this.padID = padID;
         return this;
     }
     

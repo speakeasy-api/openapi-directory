@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BuildsGetDownloadUriRequest {
-    
-    public BuildsGetDownloadUriPathParams pathParams;
-    public BuildsGetDownloadUriRequest withPathParams(BuildsGetDownloadUriPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public BuildsGetDownloadUriRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The build ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=build_id")
+    public Long buildId;
+    public BuildsGetDownloadUriRequest withBuildId(Long buildId) {
+        this.buildId = buildId;
+        return this;
+    }
     
-    public BuildsGetDownloadUriSecurity security;
-    public BuildsGetDownloadUriRequest withSecurity(BuildsGetDownloadUriSecurity security) {
-        this.security = security;
+    /**
+     * The download type
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=download_type")
+    public BuildsGetDownloadUriDownloadTypeEnum downloadType;
+    public BuildsGetDownloadUriRequest withDownloadType(BuildsGetDownloadUriDownloadTypeEnum downloadType) {
+        this.downloadType = downloadType;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public BuildsGetDownloadUriRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

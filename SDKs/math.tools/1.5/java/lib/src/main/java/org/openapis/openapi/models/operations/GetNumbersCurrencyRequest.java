@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersCurrencyRequest {
-    
-    public GetNumbersCurrencyQueryParams queryParams;
-    public GetNumbersCurrencyRequest withQueryParams(GetNumbersCurrencyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Language to use
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public GetNumbersCurrencyRequest withLanguage(String language) {
+        this.language = language;
         return this;
     }
     
-    
-    public GetNumbersCurrencySecurity security;
-    public GetNumbersCurrencyRequest withSecurity(GetNumbersCurrencySecurity security) {
-        this.security = security;
+    /**
+     * Number to spell
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public Long number;
+    public GetNumbersCurrencyRequest withNumber(Long number) {
+        this.number = number;
         return this;
     }
     

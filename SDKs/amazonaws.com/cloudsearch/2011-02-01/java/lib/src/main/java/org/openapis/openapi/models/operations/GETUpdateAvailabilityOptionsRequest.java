@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateAvailabilityOptionsRequest {
-    
-    public GETUpdateAvailabilityOptionsQueryParams queryParams;
-    public GETUpdateAvailabilityOptionsRequest withQueryParams(GETUpdateAvailabilityOptionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETUpdateAvailabilityOptionsActionEnum action;
+    public GETUpdateAvailabilityOptionsRequest withAction(GETUpdateAvailabilityOptionsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
+    public String domainName;
+    public GETUpdateAvailabilityOptionsRequest withDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
     
-    public GETUpdateAvailabilityOptionsHeaders headers;
-    public GETUpdateAvailabilityOptionsRequest withHeaders(GETUpdateAvailabilityOptionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * You expand an existing search domain to a second Availability Zone by setting the Multi-AZ option to true. Similarly, you can turn off the Multi-AZ option to downgrade the domain to a single Availability Zone by setting the Multi-AZ option to &lt;code&gt;false&lt;/code&gt;. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MultiAZ")
+    public Boolean multiAZ;
+    public GETUpdateAvailabilityOptionsRequest withMultiAZ(Boolean multiAZ) {
+        this.multiAZ = multiAZ;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETUpdateAvailabilityOptionsVersionEnum version;
+    public GETUpdateAvailabilityOptionsRequest withVersion(GETUpdateAvailabilityOptionsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETUpdateAvailabilityOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETUpdateAvailabilityOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETUpdateAvailabilityOptionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETUpdateAvailabilityOptionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETUpdateAvailabilityOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETUpdateAvailabilityOptionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETUpdateAvailabilityOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

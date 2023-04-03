@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeClusterTracksRequest {
-    
-    public GETDescribeClusterTracksQueryParams queryParams;
-    public GETDescribeClusterTracksRequest withQueryParams(GETDescribeClusterTracksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeClusterTracksActionEnum action;
+    public GETDescribeClusterTracksRequest withAction(GETDescribeClusterTracksActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the maintenance track. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaintenanceTrackName")
+    public String maintenanceTrackName;
+    public GETDescribeClusterTracksRequest withMaintenanceTrackName(String maintenanceTrackName) {
+        this.maintenanceTrackName = maintenanceTrackName;
+        return this;
+    }
     
-    public GETDescribeClusterTracksHeaders headers;
-    public GETDescribeClusterTracksRequest withHeaders(GETDescribeClusterTracksHeaders headers) {
-        this.headers = headers;
+    /**
+     * An optional parameter that specifies the starting point to return a set of response records. When the results of a &lt;code&gt;DescribeClusterTracks&lt;/code&gt; request exceed the value specified in &lt;code&gt;MaxRecords&lt;/code&gt;, Amazon Redshift returns a value in the &lt;code&gt;Marker&lt;/code&gt; field of the response. You can retrieve the next set of response records by providing the returned marker value in the &lt;code&gt;Marker&lt;/code&gt; parameter and retrying the request. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDescribeClusterTracksRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * An integer value for the maximum number of maintenance tracks to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeClusterTracksRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeClusterTracksVersionEnum version;
+    public GETDescribeClusterTracksRequest withVersion(GETDescribeClusterTracksVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeClusterTracksRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeClusterTracksRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeClusterTracksRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeClusterTracksRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeClusterTracksRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeClusterTracksRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeClusterTracksRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,27 +4,166 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudassetAnalyzeOrgPolicyGovernedAssetsRequest {
-    
-    public CloudassetAnalyzeOrgPolicyGovernedAssetsPathParams pathParams;
-    public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withPathParams(CloudassetAnalyzeOrgPolicyGovernedAssetsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public CloudassetAnalyzeOrgPolicyGovernedAssetsQueryParams queryParams;
-    public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withQueryParams(CloudassetAnalyzeOrgPolicyGovernedAssetsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public CloudassetAnalyzeOrgPolicyGovernedAssetsSecurity security;
-    public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withSecurity(CloudassetAnalyzeOrgPolicyGovernedAssetsSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Required. The name of the constraint to analyze governed assets for. The analysis only contains analyzed organization policies for the provided constraint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=constraint")
+    public String constraint;
+    public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withConstraint(String constraint) {
+        this.constraint = constraint;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * The expression to filter the governed assets in result. The only supported fields for governed resources are `governed_resource.project` and `governed_resource.folders`. The only supported fields for governed iam policies are `governed_iam_policy.project` and `governed_iam_policy.folders`. The only supported operator is `=`. Example 1: governed_resource.project="projects/12345678" filter will return all governed resources under projects/12345678 including the project ifself, if applicable. Example 2: governed_iam_policy.folders="folders/12345678" filter will return all governed iam policies under folders/12345678, if applicable.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The maximum number of items to return per page. If unspecified, AnalyzeOrgPolicyGovernedAssetsResponse.governed_assets will contain 100 items with a maximum of 200.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The pagination token to retrieve the next page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Required. The organization to scope the request. Only organization policies within the scope will be analyzed. The output assets will also be limited to the ones governed by those in-scope organization policies. * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/123456")
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scope")
+    public String scope;
+    public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public CloudassetAnalyzeOrgPolicyGovernedAssetsRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

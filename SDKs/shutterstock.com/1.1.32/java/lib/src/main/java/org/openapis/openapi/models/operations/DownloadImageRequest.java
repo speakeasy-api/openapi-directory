@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadImageRequest {
-    
-    public DownloadImagePathParams pathParams;
-    public DownloadImageRequest withPathParams(DownloadImagePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Information about the images to redownload
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RedownloadImage request;
-    public DownloadImageRequest withRequest(org.openapis.openapi.models.shared.RedownloadImage request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RedownloadImage redownloadImage;
+    public DownloadImageRequest withRedownloadImage(org.openapis.openapi.models.shared.RedownloadImage redownloadImage) {
+        this.redownloadImage = redownloadImage;
         return this;
     }
     
-    
-    public DownloadImageSecurity security;
-    public DownloadImageRequest withSecurity(DownloadImageSecurity security) {
-        this.security = security;
+    /**
+     * License ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DownloadImageRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

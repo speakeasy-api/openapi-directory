@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostChargeRequest {
-    
-    public PostChargePathParams pathParams;
-    public PostChargeRequest withPathParams(PostChargePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Include command properties to send here
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostChargeRequestBody request;
-    public PostChargeRequest withRequest(PostChargeRequestBody request) {
-        this.request = request;
+    public PostChargeRequestBody requestBody;
+    public PostChargeRequest withRequestBody(PostChargeRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The vehicle id that needs to be fetched
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostChargeRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

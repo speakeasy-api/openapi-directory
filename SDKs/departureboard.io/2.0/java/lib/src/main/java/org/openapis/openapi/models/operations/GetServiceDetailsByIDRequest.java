@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetServiceDetailsByIDRequest {
-    
-    public GetServiceDetailsByIDPathParams pathParams;
-    public GetServiceDetailsByIDRequest withPathParams(GetServiceDetailsByIDPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The National Rail OpenLDBWS API Key to use for looking up service information. You must register with National Rail to obtain this key and whitelist it with us. See https://api.departureboard.io/docs/registration for more information.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apiKey")
+    public String apiKey;
+    public GetServiceDetailsByIDRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public GetServiceDetailsByIDQueryParams queryParams;
-    public GetServiceDetailsByIDRequest withQueryParams(GetServiceDetailsByIDQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Service ID for the Train Service you wish to look up in the URL Safe format. For example "qsec4O8LW7k8ITcOt_ir4Q--".
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceID")
+    public String serviceID;
+    public GetServiceDetailsByIDRequest withServiceID(String serviceID) {
+        this.serviceID = serviceID;
         return this;
     }
     

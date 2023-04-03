@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeTableRestoreStatusRequest {
-    
-    public GETDescribeTableRestoreStatusQueryParams queryParams;
-    public GETDescribeTableRestoreStatusRequest withQueryParams(GETDescribeTableRestoreStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeTableRestoreStatusActionEnum action;
+    public GETDescribeTableRestoreStatusRequest withAction(GETDescribeTableRestoreStatusActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The Amazon Redshift cluster that the table is being restored to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETDescribeTableRestoreStatusRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
     
-    public GETDescribeTableRestoreStatusHeaders headers;
-    public GETDescribeTableRestoreStatusRequest withHeaders(GETDescribeTableRestoreStatusHeaders headers) {
-        this.headers = headers;
+    /**
+     * An optional pagination token provided by a previous &lt;code&gt;DescribeTableRestoreStatus&lt;/code&gt; request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by the &lt;code&gt;MaxRecords&lt;/code&gt; parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDescribeTableRestoreStatusRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * The maximum number of records to include in the response. If more records exist than the specified &lt;code&gt;MaxRecords&lt;/code&gt; value, a pagination token called a marker is included in the response so that the remaining results can be retrieved.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeTableRestoreStatusRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    /**
+     * The identifier of the table restore request to return status for. If you don't specify a &lt;code&gt;TableRestoreRequestId&lt;/code&gt; value, then &lt;code&gt;DescribeTableRestoreStatus&lt;/code&gt; returns the status of all in-progress table restore requests.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TableRestoreRequestId")
+    public String tableRestoreRequestId;
+    public GETDescribeTableRestoreStatusRequest withTableRestoreRequestId(String tableRestoreRequestId) {
+        this.tableRestoreRequestId = tableRestoreRequestId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeTableRestoreStatusVersionEnum version;
+    public GETDescribeTableRestoreStatusRequest withVersion(GETDescribeTableRestoreStatusVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeTableRestoreStatusRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeTableRestoreStatusRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeTableRestoreStatusRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeTableRestoreStatusRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeTableRestoreStatusRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeTableRestoreStatusRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeTableRestoreStatusRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

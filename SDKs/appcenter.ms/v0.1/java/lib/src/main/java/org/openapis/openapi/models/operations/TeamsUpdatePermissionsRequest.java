@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsUpdatePermissionsRequest {
-    
-    public TeamsUpdatePermissionsPathParams pathParams;
-    public TeamsUpdatePermissionsRequest withPathParams(TeamsUpdatePermissionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsUpdatePermissionsRequestBody request;
-    public TeamsUpdatePermissionsRequest withRequest(TeamsUpdatePermissionsRequestBody request) {
-        this.request = request;
+    public TeamsUpdatePermissionsRequestBody requestBody;
+    public TeamsUpdatePermissionsRequest withRequestBody(TeamsUpdatePermissionsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public TeamsUpdatePermissionsRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public TeamsUpdatePermissionsSecurity security;
-    public TeamsUpdatePermissionsRequest withSecurity(TeamsUpdatePermissionsSecurity security) {
-        this.security = security;
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public TeamsUpdatePermissionsRequest withOrgName(String orgName) {
+        this.orgName = orgName;
+        return this;
+    }
+    
+    /**
+     * The team's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_name")
+    public String teamName;
+    public TeamsUpdatePermissionsRequest withTeamName(String teamName) {
+        this.teamName = teamName;
         return this;
     }
     

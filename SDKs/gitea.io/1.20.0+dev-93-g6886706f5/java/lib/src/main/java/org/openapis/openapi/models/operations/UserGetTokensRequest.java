@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserGetTokensRequest {
-    
-    public UserGetTokensPathParams pathParams;
-    public UserGetTokensRequest withPathParams(UserGetTokensPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public UserGetTokensRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public UserGetTokensRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public UserGetTokensQueryParams queryParams;
-    public UserGetTokensRequest withQueryParams(UserGetTokensQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * username of user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public UserGetTokensRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

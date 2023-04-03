@@ -4,27 +4,186 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DlpProjectsLocationsDlpJobsListRequest {
-    
-    public DlpProjectsLocationsDlpJobsListPathParams pathParams;
-    public DlpProjectsLocationsDlpJobsListRequest withPathParams(DlpProjectsLocationsDlpJobsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DlpProjectsLocationsDlpJobsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public DlpProjectsLocationsDlpJobsListQueryParams queryParams;
-    public DlpProjectsLocationsDlpJobsListRequest withQueryParams(DlpProjectsLocationsDlpJobsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DlpProjectsLocationsDlpJobsListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DlpProjectsLocationsDlpJobsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public DlpProjectsLocationsDlpJobsListSecurity security;
-    public DlpProjectsLocationsDlpJobsListRequest withSecurity(DlpProjectsLocationsDlpJobsListSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DlpProjectsLocationsDlpJobsListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DlpProjectsLocationsDlpJobsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Allows filtering. Supported syntax: * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by `AND` or `OR` logical operators. A sequence of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. * Supported fields/values for inspect jobs: - `state` - PENDING|RUNNING|CANCELED|FINISHED|FAILED - `inspected_storage` - DATASTORE|CLOUD_STORAGE|BIGQUERY - `trigger_name` - The name of the trigger that created the job. - 'end_time` - Corresponds to the time the job finished. - 'start_time` - Corresponds to the time the job finished. * Supported fields for risk analysis jobs: - `state` - RUNNING|CANCELED|FINISHED|FAILED - 'end_time` - Corresponds to the time the job finished. - 'start_time` - Corresponds to the time the job finished. * The operator must be `=` or `!=`. Examples: * inspected_storage = cloud_storage AND state = done * inspected_storage = cloud_storage OR inspected_storage = bigquery * inspected_storage = cloud_storage AND (state = done OR state = canceled) * end_time &gt; \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than 500 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public DlpProjectsLocationsDlpJobsListRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DlpProjectsLocationsDlpJobsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Deprecated. This field has no effect.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
+    public String locationId;
+    public DlpProjectsLocationsDlpJobsListRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DlpProjectsLocationsDlpJobsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Comma separated list of fields to order by, followed by `asc` or `desc` postfix. This list is case-insensitive, default sorting order is ascending, redundant space characters are insignificant. Example: `name asc, end_time asc, create_time desc` Supported fields are: - `create_time`: corresponds to the time the job was created. - `end_time`: corresponds to the time the job ended. - `name`: corresponds to the job's name. - `state`: corresponds to `state`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
+    public String orderBy;
+    public DlpProjectsLocationsDlpJobsListRequest withOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    /**
+     * The standard list page size.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public DlpProjectsLocationsDlpJobsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The standard list page token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public DlpProjectsLocationsDlpJobsListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Required. Parent resource name. The format of this value varies depending on whether you have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID The following example `parent` string specifies a parent project with the identifier `example-project`, and specifies the `europe-west3` location for processing data: parent=projects/example-project/locations/europe-west3
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public DlpProjectsLocationsDlpJobsListRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DlpProjectsLocationsDlpJobsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DlpProjectsLocationsDlpJobsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The type of job. Defaults to `DlpJobType.INSPECT`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public DlpProjectsLocationsDlpJobsListTypeEnum type;
+    public DlpProjectsLocationsDlpJobsListRequest withType(DlpProjectsLocationsDlpJobsListTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DlpProjectsLocationsDlpJobsListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DlpProjectsLocationsDlpJobsListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

@@ -4,20 +4,105 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSlotRequest {
-    
-    public DeleteSlotPathParams pathParams;
-    public DeleteSlotRequest withPathParams(DeleteSlotPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DeleteSlotRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DeleteSlotRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public DeleteSlotHeaders headers;
-    public DeleteSlotRequest withHeaders(DeleteSlotHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DeleteSlotRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DeleteSlotRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DeleteSlotRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DeleteSlotRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DeleteSlotRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The identifier of the bot associated with the slot to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botId")
+    public String botId;
+    public DeleteSlotRequest withBotId(String botId) {
+        this.botId = botId;
+        return this;
+    }
+    
+    /**
+     * The version of the bot associated with the slot to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botVersion")
+    public String botVersion;
+    public DeleteSlotRequest withBotVersion(String botVersion) {
+        this.botVersion = botVersion;
+        return this;
+    }
+    
+    /**
+     * The identifier of the intent associated with the slot.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=intentId")
+    public String intentId;
+    public DeleteSlotRequest withIntentId(String intentId) {
+        this.intentId = intentId;
+        return this;
+    }
+    
+    /**
+     * The identifier of the language and locale that the slot will be deleted from. The string must match one of the supported locales. For more information, see &lt;a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"&gt;Supported languages&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=localeId")
+    public String localeId;
+    public DeleteSlotRequest withLocaleId(String localeId) {
+        this.localeId = localeId;
+        return this;
+    }
+    
+    /**
+     * The identifier of the slot to delete. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slotId")
+    public String slotId;
+    public DeleteSlotRequest withSlotId(String slotId) {
+        this.slotId = slotId;
         return this;
     }
     

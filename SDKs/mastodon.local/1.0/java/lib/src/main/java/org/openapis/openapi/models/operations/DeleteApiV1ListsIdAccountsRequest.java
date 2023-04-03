@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteApiV1ListsIdAccountsRequest {
-    
-    public DeleteApiV1ListsIdAccountsPathParams pathParams;
-    public DeleteApiV1ListsIdAccountsRequest withPathParams(DeleteApiV1ListsIdAccountsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Array of account IDs to add to the list.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account_ids")
+    public String[] accountIds;
+    public DeleteApiV1ListsIdAccountsRequest withAccountIds(String[] accountIds) {
+        this.accountIds = accountIds;
         return this;
     }
     
-    
-    public DeleteApiV1ListsIdAccountsQueryParams queryParams;
-    public DeleteApiV1ListsIdAccountsRequest withQueryParams(DeleteApiV1ListsIdAccountsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteApiV1ListsIdAccountsSecurity security;
-    public DeleteApiV1ListsIdAccountsRequest withSecurity(DeleteApiV1ListsIdAccountsSecurity security) {
-        this.security = security;
+    /**
+     * ID of the list in the database
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteApiV1ListsIdAccountsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

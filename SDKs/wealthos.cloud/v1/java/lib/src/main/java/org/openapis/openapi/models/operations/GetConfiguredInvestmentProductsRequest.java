@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConfiguredInvestmentProductsRequest {
-    
-    public GetConfiguredInvestmentProductsQueryParams queryParams;
-    public GetConfiguredInvestmentProductsRequest withQueryParams(GetConfiguredInvestmentProductsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number for the query. This end-point has paginations capabilities. This value should be a positive integer value. If this is not provided, both page_size and page_number will be defaulted to 1000 and 1. Results are sorted decending order of the created date &amp; time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_number")
+    public String pageNumber;
+    public GetConfiguredInvestmentProductsRequest withPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
     
-    
-    public GetConfiguredInvestmentProductsHeaders headers;
-    public GetConfiguredInvestmentProductsRequest withHeaders(GetConfiguredInvestmentProductsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Page size for the query. This end-point has paginations capabilities. This value should be a positive integer value. If this is not provided, both page_size and page_number will be defaulted to 1000 and 1. Results are sorted decending order of the created date &amp; time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public String pageSize;
+    public GetConfiguredInvestmentProductsRequest withPageSize(String pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
+    /**
+     * status of investment product. If empty will return all investment products.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GetConfiguredInvestmentProductsStatusEnum status;
+    public GetConfiguredInvestmentProductsRequest withStatus(GetConfiguredInvestmentProductsStatusEnum status) {
+        this.status = status;
+        return this;
+    }
     
-    public GetConfiguredInvestmentProductsSecurity security;
-    public GetConfiguredInvestmentProductsRequest withSecurity(GetConfiguredInvestmentProductsSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetConfiguredInvestmentProductsRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

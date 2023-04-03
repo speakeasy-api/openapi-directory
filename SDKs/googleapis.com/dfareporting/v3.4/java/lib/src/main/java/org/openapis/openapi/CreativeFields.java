@@ -34,25 +34,26 @@ public class CreativeFields {
     /**
      * Deletes an existing creative field.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingCreativeFieldsDeleteResponse dfareportingCreativeFieldsDelete(org.openapis.openapi.models.operations.DfareportingCreativeFieldsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingCreativeFieldsDeleteResponse dfareportingCreativeFieldsDelete(org.openapis.openapi.models.operations.DfareportingCreativeFieldsDeleteRequest request, org.openapis.openapi.models.operations.DfareportingCreativeFieldsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingCreativeFieldsDeletePathParams.class, baseUrl, "/userprofiles/{profileId}/creativeFields/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingCreativeFieldsDeleteRequest.class, baseUrl, "/userprofiles/{profileId}/creativeFields/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingCreativeFieldsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingCreativeFieldsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,25 +74,26 @@ public class CreativeFields {
     /**
      * Gets one creative field by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingCreativeFieldsGetResponse dfareportingCreativeFieldsGet(org.openapis.openapi.models.operations.DfareportingCreativeFieldsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingCreativeFieldsGetResponse dfareportingCreativeFieldsGet(org.openapis.openapi.models.operations.DfareportingCreativeFieldsGetRequest request, org.openapis.openapi.models.operations.DfareportingCreativeFieldsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingCreativeFieldsGetPathParams.class, baseUrl, "/userprofiles/{profileId}/creativeFields/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingCreativeFieldsGetRequest.class, baseUrl, "/userprofiles/{profileId}/creativeFields/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingCreativeFieldsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingCreativeFieldsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,27 +120,28 @@ public class CreativeFields {
     /**
      * Inserts a new creative field.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingCreativeFieldsInsertResponse dfareportingCreativeFieldsInsert(org.openapis.openapi.models.operations.DfareportingCreativeFieldsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingCreativeFieldsInsertResponse dfareportingCreativeFieldsInsert(org.openapis.openapi.models.operations.DfareportingCreativeFieldsInsertRequest request, org.openapis.openapi.models.operations.DfareportingCreativeFieldsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingCreativeFieldsInsertPathParams.class, baseUrl, "/userprofiles/{profileId}/creativeFields", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingCreativeFieldsInsertRequest.class, baseUrl, "/userprofiles/{profileId}/creativeFields", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "creativeField", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingCreativeFieldsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingCreativeFieldsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,25 +168,26 @@ public class CreativeFields {
     /**
      * Retrieves a list of creative fields, possibly filtered. This method supports paging.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingCreativeFieldsListResponse dfareportingCreativeFieldsList(org.openapis.openapi.models.operations.DfareportingCreativeFieldsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingCreativeFieldsListResponse dfareportingCreativeFieldsList(org.openapis.openapi.models.operations.DfareportingCreativeFieldsListRequest request, org.openapis.openapi.models.operations.DfareportingCreativeFieldsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingCreativeFieldsListPathParams.class, baseUrl, "/userprofiles/{profileId}/creativeFields", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingCreativeFieldsListRequest.class, baseUrl, "/userprofiles/{profileId}/creativeFields", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingCreativeFieldsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingCreativeFieldsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -210,27 +214,28 @@ public class CreativeFields {
     /**
      * Updates an existing creative field. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingCreativeFieldsPatchResponse dfareportingCreativeFieldsPatch(org.openapis.openapi.models.operations.DfareportingCreativeFieldsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingCreativeFieldsPatchResponse dfareportingCreativeFieldsPatch(org.openapis.openapi.models.operations.DfareportingCreativeFieldsPatchRequest request, org.openapis.openapi.models.operations.DfareportingCreativeFieldsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingCreativeFieldsPatchPathParams.class, baseUrl, "/userprofiles/{profileId}/creativeFields", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingCreativeFieldsPatchRequest.class, baseUrl, "/userprofiles/{profileId}/creativeFields", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "creativeField", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingCreativeFieldsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingCreativeFieldsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -257,27 +262,28 @@ public class CreativeFields {
     /**
      * Updates an existing creative field.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingCreativeFieldsUpdateResponse dfareportingCreativeFieldsUpdate(org.openapis.openapi.models.operations.DfareportingCreativeFieldsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingCreativeFieldsUpdateResponse dfareportingCreativeFieldsUpdate(org.openapis.openapi.models.operations.DfareportingCreativeFieldsUpdateRequest request, org.openapis.openapi.models.operations.DfareportingCreativeFieldsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingCreativeFieldsUpdatePathParams.class, baseUrl, "/userprofiles/{profileId}/creativeFields", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingCreativeFieldsUpdateRequest.class, baseUrl, "/userprofiles/{profileId}/creativeFields", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "creativeField", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingCreativeFieldsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingCreativeFieldsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

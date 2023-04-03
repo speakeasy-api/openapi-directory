@@ -4,20 +4,148 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeparturesGetForStopAndRouteRequest {
-    
-    public DeparturesGetForStopAndRoutePathParams pathParams;
-    public DeparturesGetForStopAndRouteRequest withPathParams(DeparturesGetForStopAndRoutePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter by the date and time of the request (ISO 8601 UTC format) (default = current date and time)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_utc")
+    public OffsetDateTime dateUtc;
+    public DeparturesGetForStopAndRouteRequest withDateUtc(OffsetDateTime dateUtc) {
+        this.dateUtc = dateUtc;
         return this;
     }
     
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public DeparturesGetForStopAndRouteRequest withDevid(String devid) {
+        this.devid = devid;
+        return this;
+    }
     
-    public DeparturesGetForStopAndRouteQueryParams queryParams;
-    public DeparturesGetForStopAndRouteRequest withQueryParams(DeparturesGetForStopAndRouteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter by identifier of direction of travel; values returned by Directions API - /v3/directions/route/{route_id}
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction_id")
+    public Integer directionId;
+    public DeparturesGetForStopAndRouteRequest withDirectionId(Integer directionId) {
+        this.directionId = directionId;
+        return this;
+    }
+    
+    /**
+     * List of objects to be returned in full (i.e. expanded) - options include: All, Stop, Route, Run, Direction, Disruption, VehiclePosition, VehicleDescriptor or None.
+     *             Run must be expanded to receive VehiclePosition and VehicleDescriptor information.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public DeparturesGetForStopAndRouteExpandEnum[] expand;
+    public DeparturesGetForStopAndRouteRequest withExpand(DeparturesGetForStopAndRouteExpandEnum[] expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    /**
+     * Indicates that stop_id parameter will accept "GTFS stop_id" data
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gtfs")
+    public Boolean gtfs;
+    public DeparturesGetForStopAndRouteRequest withGtfs(Boolean gtfs) {
+        this.gtfs = gtfs;
+        return this;
+    }
+    
+    /**
+     * Indicates if cancelled services (if they exist) are returned (default = false) - metropolitan train only
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_cancelled")
+    public Boolean includeCancelled;
+    public DeparturesGetForStopAndRouteRequest withIncludeCancelled(Boolean includeCancelled) {
+        this.includeCancelled = includeCancelled;
+        return this;
+    }
+    
+    /**
+     * Indicates if the route geopath should be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_geopath")
+    public Boolean includeGeopath;
+    public DeparturesGetForStopAndRouteRequest withIncludeGeopath(Boolean includeGeopath) {
+        this.includeGeopath = includeGeopath;
+        return this;
+    }
+    
+    /**
+     * Indicates if filtering runs (and their departures) to those that arrive at destination before date_utc (default = false). Requires max_results &amp;gt; 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=look_backwards")
+    public Boolean lookBackwards;
+    public DeparturesGetForStopAndRouteRequest withLookBackwards(Boolean lookBackwards) {
+        this.lookBackwards = lookBackwards;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_results")
+    public Integer maxResults;
+    public DeparturesGetForStopAndRouteRequest withMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Identifier of route; values returned by Routes API - v3/routes
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_id")
+    public String routeId;
+    public DeparturesGetForStopAndRouteRequest withRouteId(String routeId) {
+        this.routeId = routeId;
+        return this;
+    }
+    
+    /**
+     * Number identifying transport mode; values returned via RouteTypes API
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_type")
+    public DeparturesGetForStopAndRouteRouteTypeEnum routeType;
+    public DeparturesGetForStopAndRouteRequest withRouteType(DeparturesGetForStopAndRouteRouteTypeEnum routeType) {
+        this.routeType = routeType;
+        return this;
+    }
+    
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public DeparturesGetForStopAndRouteRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Identifier of stop; values returned by Stops API
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stop_id")
+    public Integer stopId;
+    public DeparturesGetForStopAndRouteRequest withStopId(Integer stopId) {
+        this.stopId = stopId;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public DeparturesGetForStopAndRouteRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

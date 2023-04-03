@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostcodesRequest {
-    
-    public PostcodesPathParams pathParams;
-    public PostcodesRequest withPathParams(PostcodesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=api_key")
+    public String apiKey;
+    public PostcodesRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=filter")
+    public String filter;
+    public PostcodesRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public PostcodesQueryParams queryParams;
-    public PostcodesRequest withQueryParams(PostcodesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=page")
+    public Integer page;
+    public PostcodesRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Postcode to retrieve
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=postcode")
+    public String postcode;
+    public PostcodesRequest withPostcode(String postcode) {
+        this.postcode = postcode;
         return this;
     }
     

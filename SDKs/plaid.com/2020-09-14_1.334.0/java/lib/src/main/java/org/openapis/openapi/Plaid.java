@@ -42,7 +42,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountsBalanceGetResponse accountsBalanceGet(org.openapis.openapi.models.operations.AccountsBalanceGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountsBalanceGetResponse accountsBalanceGet(org.openapis.openapi.models.shared.AccountsBalanceGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/accounts/balance/get");
         
@@ -91,7 +91,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountsGetResponse accountsGet(org.openapis.openapi.models.operations.AccountsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountsGetResponse accountsGet(org.openapis.openapi.models.shared.AccountsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/accounts/get");
         
@@ -144,7 +144,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApplicationGetResponse applicationGet(org.openapis.openapi.models.operations.ApplicationGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApplicationGetResponse applicationGet(org.openapis.openapi.models.shared.ApplicationGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/application/get");
         
@@ -200,7 +200,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssetReportAuditCopyCreateResponse assetReportAuditCopyCreate(org.openapis.openapi.models.operations.AssetReportAuditCopyCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssetReportAuditCopyCreateResponse assetReportAuditCopyCreate(org.openapis.openapi.models.shared.AssetReportAuditCopyCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/asset_report/audit_copy/create");
         
@@ -246,7 +246,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssetReportAuditCopyGetResponse assetReportAuditCopyGet(org.openapis.openapi.models.operations.AssetReportAuditCopyGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssetReportAuditCopyGetResponse assetReportAuditCopyGet(org.openapis.openapi.models.shared.AssetReportAuditCopyGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/asset_report/audit_copy/get");
         
@@ -292,7 +292,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssetReportAuditCopyRemoveResponse assetReportAuditCopyRemove(org.openapis.openapi.models.operations.AssetReportAuditCopyRemoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssetReportAuditCopyRemoveResponse assetReportAuditCopyRemove(org.openapis.openapi.models.shared.AssetReportAuditCopyRemoveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/asset_report/audit_copy/remove");
         
@@ -342,7 +342,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssetReportCreateResponse assetReportCreate(org.openapis.openapi.models.operations.AssetReportCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssetReportCreateResponse assetReportCreate(org.openapis.openapi.models.shared.AssetReportCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/asset_report/create");
         
@@ -394,7 +394,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssetReportFilterResponse assetReportFilter(org.openapis.openapi.models.operations.AssetReportFilterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssetReportFilterResponse assetReportFilter(org.openapis.openapi.models.shared.AssetReportFilterRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/asset_report/filter");
         
@@ -444,7 +444,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssetReportGetResponse assetReportGet(org.openapis.openapi.models.operations.AssetReportGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssetReportGetResponse assetReportGet(org.openapis.openapi.models.shared.AssetReportGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/asset_report/get");
         
@@ -494,7 +494,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssetReportPdfGetResponse assetReportPdfGet(org.openapis.openapi.models.operations.AssetReportPdfGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssetReportPdfGetResponse assetReportPdfGet(org.openapis.openapi.models.shared.AssetReportPDFGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/asset_report/pdf/get");
         
@@ -541,7 +541,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssetReportRefreshResponse assetReportRefresh(org.openapis.openapi.models.operations.AssetReportRefreshRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssetReportRefreshResponse assetReportRefresh(org.openapis.openapi.models.shared.AssetReportRefreshRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/asset_report/refresh");
         
@@ -589,7 +589,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssetReportRemoveResponse assetReportRemove(org.openapis.openapi.models.operations.AssetReportRemoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssetReportRemoveResponse assetReportRemove(org.openapis.openapi.models.shared.AssetReportRemoveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/asset_report/remove");
         
@@ -639,7 +639,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AuthGetResponse authGet(org.openapis.openapi.models.operations.AuthGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AuthGetResponse authGet(org.openapis.openapi.models.shared.AuthGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/auth/get");
         
@@ -697,7 +697,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BankTransferBalanceGetResponse bankTransferBalanceGet(org.openapis.openapi.models.operations.BankTransferBalanceGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BankTransferBalanceGetResponse bankTransferBalanceGet(org.openapis.openapi.models.shared.BankTransferBalanceGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/bank_transfer/balance/get");
         
@@ -751,7 +751,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BankTransferCancelResponse bankTransferCancel(org.openapis.openapi.models.operations.BankTransferCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BankTransferCancelResponse bankTransferCancel(org.openapis.openapi.models.shared.BankTransferCancelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/bank_transfer/cancel");
         
@@ -805,7 +805,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BankTransferCreateResponse bankTransferCreate(org.openapis.openapi.models.operations.BankTransferCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BankTransferCreateResponse bankTransferCreate(org.openapis.openapi.models.shared.BankTransferCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/bank_transfer/create");
         
@@ -859,7 +859,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BankTransferEventListResponse bankTransferEventList(org.openapis.openapi.models.operations.BankTransferEventListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BankTransferEventListResponse bankTransferEventList(org.openapis.openapi.models.shared.BankTransferEventListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/bank_transfer/event/list");
         
@@ -913,7 +913,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BankTransferEventSyncResponse bankTransferEventSync(org.openapis.openapi.models.operations.BankTransferEventSyncRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BankTransferEventSyncResponse bankTransferEventSync(org.openapis.openapi.models.shared.BankTransferEventSyncRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/bank_transfer/event/sync");
         
@@ -967,7 +967,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BankTransferGetResponse bankTransferGet(org.openapis.openapi.models.operations.BankTransferGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BankTransferGetResponse bankTransferGet(org.openapis.openapi.models.shared.BankTransferGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/bank_transfer/get");
         
@@ -1022,7 +1022,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BankTransferListResponse bankTransferList(org.openapis.openapi.models.operations.BankTransferListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BankTransferListResponse bankTransferList(org.openapis.openapi.models.shared.BankTransferListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/bank_transfer/list");
         
@@ -1076,7 +1076,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BankTransferMigrateAccountResponse bankTransferMigrateAccount(org.openapis.openapi.models.operations.BankTransferMigrateAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BankTransferMigrateAccountResponse bankTransferMigrateAccount(org.openapis.openapi.models.shared.BankTransferMigrateAccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/bank_transfer/migrate_account");
         
@@ -1130,7 +1130,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BankTransferSweepGetResponse bankTransferSweepGet(org.openapis.openapi.models.operations.BankTransferSweepGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BankTransferSweepGetResponse bankTransferSweepGet(org.openapis.openapi.models.shared.BankTransferSweepGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/bank_transfer/sweep/get");
         
@@ -1184,7 +1184,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BankTransferSweepListResponse bankTransferSweepList(org.openapis.openapi.models.operations.BankTransferSweepListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BankTransferSweepListResponse bankTransferSweepList(org.openapis.openapi.models.shared.BankTransferSweepListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/bank_transfer/sweep/list");
         
@@ -1238,7 +1238,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CategoriesGetResponse categoriesGet(org.openapis.openapi.models.operations.CategoriesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CategoriesGetResponse categoriesGet(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/categories/get");
         
@@ -1294,7 +1294,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreatePaymentTokenResponse createPaymentToken(org.openapis.openapi.models.operations.CreatePaymentTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreatePaymentTokenResponse createPaymentToken(org.openapis.openapi.models.shared.PaymentInitiationPaymentTokenCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payment_initiation/payment/token/create");
         
@@ -1340,7 +1340,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreditAssetReportFreddieMacGetResponse creditAssetReportFreddieMacGet(org.openapis.openapi.models.operations.CreditAssetReportFreddieMacGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreditAssetReportFreddieMacGetResponse creditAssetReportFreddieMacGet(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/credit/asset_report/freddie_mac/get");
         
@@ -1388,7 +1388,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreditAuditCopyTokenCreateResponse creditAuditCopyTokenCreate(org.openapis.openapi.models.operations.CreditAuditCopyTokenCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreditAuditCopyTokenCreateResponse creditAuditCopyTokenCreate(org.openapis.openapi.models.shared.CreditAuditCopyTokenCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/credit/audit_copy_token/create");
         
@@ -1434,7 +1434,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreditAuditCopyTokenUpdateResponse creditAuditCopyTokenUpdate(org.openapis.openapi.models.operations.CreditAuditCopyTokenUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreditAuditCopyTokenUpdateResponse creditAuditCopyTokenUpdate(org.openapis.openapi.models.shared.CreditAuditCopyTokenUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/credit/audit_copy_token/update");
         
@@ -1480,7 +1480,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreditBankEmploymentGetResponse creditBankEmploymentGet(org.openapis.openapi.models.operations.CreditBankEmploymentGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreditBankEmploymentGetResponse creditBankEmploymentGet(org.openapis.openapi.models.shared.CreditBankEmploymentGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/beta/credit/v1/bank_employment/get");
         
@@ -1526,7 +1526,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreditBankIncomeGetResponse creditBankIncomeGet(org.openapis.openapi.models.operations.CreditBankIncomeGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreditBankIncomeGetResponse creditBankIncomeGet(org.openapis.openapi.models.shared.CreditBankIncomeGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/credit/bank_income/get");
         
@@ -1572,7 +1572,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreditBankIncomePdfGetResponse creditBankIncomePdfGet(org.openapis.openapi.models.operations.CreditBankIncomePdfGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreditBankIncomePdfGetResponse creditBankIncomePdfGet(org.openapis.openapi.models.shared.CreditBankIncomePDFGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/credit/bank_income/pdf/get");
         
@@ -1617,7 +1617,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreditBankIncomeRefreshResponse creditBankIncomeRefresh(org.openapis.openapi.models.operations.CreditBankIncomeRefreshRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreditBankIncomeRefreshResponse creditBankIncomeRefresh(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/credit/bank_income/refresh");
         
@@ -1663,7 +1663,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreditEmploymentGetResponse creditEmploymentGet(org.openapis.openapi.models.operations.CreditEmploymentGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreditEmploymentGetResponse creditEmploymentGet(org.openapis.openapi.models.shared.CreditEmploymentGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/credit/employment/get");
         
@@ -1709,7 +1709,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreditFreddieMacReportsGetResponse creditFreddieMacReportsGet(org.openapis.openapi.models.operations.CreditFreddieMacReportsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreditFreddieMacReportsGetResponse creditFreddieMacReportsGet(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/credit/freddie_mac/reports/get");
         
@@ -1755,7 +1755,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreditPayrollIncomeGetResponse creditPayrollIncomeGet(org.openapis.openapi.models.operations.CreditPayrollIncomeGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreditPayrollIncomeGetResponse creditPayrollIncomeGet(org.openapis.openapi.models.shared.CreditPayrollIncomeGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/credit/payroll_income/get");
         
@@ -1805,7 +1805,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreditPayrollIncomePrecheckResponse creditPayrollIncomePrecheck(org.openapis.openapi.models.operations.CreditPayrollIncomePrecheckRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreditPayrollIncomePrecheckResponse creditPayrollIncomePrecheck(org.openapis.openapi.models.shared.CreditPayrollIncomePrecheckRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/credit/payroll_income/precheck");
         
@@ -1851,7 +1851,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreditPayrollIncomeRefreshResponse creditPayrollIncomeRefresh(org.openapis.openapi.models.operations.CreditPayrollIncomeRefreshRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreditPayrollIncomeRefreshResponse creditPayrollIncomeRefresh(org.openapis.openapi.models.shared.CreditPayrollIncomeRefreshRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/credit/payroll_income/refresh");
         
@@ -1907,7 +1907,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreditRelayCreateResponse creditRelayCreate(org.openapis.openapi.models.operations.CreditRelayCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreditRelayCreateResponse creditRelayCreate(org.openapis.openapi.models.shared.CreditRelayCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/credit/relay/create");
         
@@ -1953,7 +1953,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreditRelayGetResponse creditRelayGet(org.openapis.openapi.models.operations.CreditRelayGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreditRelayGetResponse creditRelayGet(org.openapis.openapi.models.shared.CreditRelayGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/credit/relay/get");
         
@@ -1999,7 +1999,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreditRelayRefreshResponse creditRelayRefresh(org.openapis.openapi.models.operations.CreditRelayRefreshRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreditRelayRefreshResponse creditRelayRefresh(org.openapis.openapi.models.shared.CreditRelayRefreshRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/credit/relay/refresh");
         
@@ -2045,7 +2045,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreditRelayRemoveResponse creditRelayRemove(org.openapis.openapi.models.operations.CreditRelayRemoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreditRelayRemoveResponse creditRelayRemove(org.openapis.openapi.models.shared.CreditRelayRemoveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/credit/relay/remove");
         
@@ -2091,7 +2091,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreditReportAuditCopyRemoveResponse creditReportAuditCopyRemove(org.openapis.openapi.models.operations.CreditReportAuditCopyRemoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreditReportAuditCopyRemoveResponse creditReportAuditCopyRemove(org.openapis.openapi.models.shared.CreditAuditCopyTokenRemoveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/credit/audit_copy_token/remove");
         
@@ -2139,7 +2139,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreditSessionsGetResponse creditSessionsGet(org.openapis.openapi.models.operations.CreditSessionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreditSessionsGetResponse creditSessionsGet(org.openapis.openapi.models.shared.CreditSessionsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/credit/sessions/get");
         
@@ -2185,7 +2185,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardUserGetResponse dashboardUserGet(org.openapis.openapi.models.operations.DashboardUserGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardUserGetResponse dashboardUserGet(org.openapis.openapi.models.shared.DashboardUserGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dashboard_user/get");
         
@@ -2231,7 +2231,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardUserListResponse dashboardUserList(org.openapis.openapi.models.operations.DashboardUserListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardUserListResponse dashboardUserList(org.openapis.openapi.models.shared.DashboardUserListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dashboard_user/list");
         
@@ -2277,7 +2277,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DepositSwitchAltCreateResponse depositSwitchAltCreate(org.openapis.openapi.models.operations.DepositSwitchAltCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DepositSwitchAltCreateResponse depositSwitchAltCreate(org.openapis.openapi.models.shared.DepositSwitchAltCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/deposit_switch/alt/create");
         
@@ -2323,7 +2323,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DepositSwitchCreateResponse depositSwitchCreate(org.openapis.openapi.models.operations.DepositSwitchCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DepositSwitchCreateResponse depositSwitchCreate(org.openapis.openapi.models.shared.DepositSwitchCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/deposit_switch/create");
         
@@ -2369,7 +2369,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DepositSwitchGetResponse depositSwitchGet(org.openapis.openapi.models.operations.DepositSwitchGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DepositSwitchGetResponse depositSwitchGet(org.openapis.openapi.models.shared.DepositSwitchGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/deposit_switch/get");
         
@@ -2416,7 +2416,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DepositSwitchTokenCreateResponse depositSwitchTokenCreate(org.openapis.openapi.models.operations.DepositSwitchTokenCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DepositSwitchTokenCreateResponse depositSwitchTokenCreate(org.openapis.openapi.models.shared.DepositSwitchTokenCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/deposit_switch/token/create");
         
@@ -2464,7 +2464,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EmployersSearchResponse employersSearch(org.openapis.openapi.models.operations.EmployersSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EmployersSearchResponse employersSearch(org.openapis.openapi.models.shared.EmployersSearchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/employers/search");
         
@@ -2512,7 +2512,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EmploymentVerificationGetResponse employmentVerificationGet(org.openapis.openapi.models.operations.EmploymentVerificationGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EmploymentVerificationGetResponse employmentVerificationGet(org.openapis.openapi.models.shared.EmploymentVerificationGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/employment/verification/get");
         
@@ -2558,7 +2558,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FdxNotificationsResponse fdxNotifications(org.openapis.openapi.models.operations.FdxNotificationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FdxNotificationsResponse fdxNotifications(org.openapis.openapi.models.shared.FDXNotification request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/fdx/notifications");
         
@@ -2610,7 +2610,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentityGetResponse identityGet(org.openapis.openapi.models.operations.IdentityGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentityGetResponse identityGet(org.openapis.openapi.models.shared.IdentityGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/identity/get");
         
@@ -2658,7 +2658,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentityMatchResponse identityMatch(org.openapis.openapi.models.operations.IdentityMatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentityMatchResponse identityMatch(org.openapis.openapi.models.shared.IdentityMatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/identity/match");
         
@@ -2706,7 +2706,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentityVerificationCreateResponse identityVerificationCreate(org.openapis.openapi.models.operations.IdentityVerificationCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentityVerificationCreateResponse identityVerificationCreate(org.openapis.openapi.models.shared.IdentityVerificationCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/identity_verification/create");
         
@@ -2752,7 +2752,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentityVerificationGetResponse identityVerificationGet(org.openapis.openapi.models.operations.IdentityVerificationGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentityVerificationGetResponse identityVerificationGet(org.openapis.openapi.models.shared.IdentityVerificationGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/identity_verification/get");
         
@@ -2798,7 +2798,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentityVerificationListResponse identityVerificationList(org.openapis.openapi.models.operations.IdentityVerificationListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentityVerificationListResponse identityVerificationList(org.openapis.openapi.models.shared.IdentityVerificationListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/identity_verification/list");
         
@@ -2844,7 +2844,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentityVerificationRetryResponse identityVerificationRetry(org.openapis.openapi.models.operations.IdentityVerificationRetryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentityVerificationRetryResponse identityVerificationRetry(org.openapis.openapi.models.shared.IdentityVerificationRetryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/identity_verification/retry");
         
@@ -2890,7 +2890,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IncomeVerificationCreateResponse incomeVerificationCreate(org.openapis.openapi.models.operations.IncomeVerificationCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IncomeVerificationCreateResponse incomeVerificationCreate(org.openapis.openapi.models.shared.IncomeVerificationCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/income/verification/create");
         
@@ -2944,7 +2944,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IncomeVerificationDocumentsDownloadResponse incomeVerificationDocumentsDownload(org.openapis.openapi.models.operations.IncomeVerificationDocumentsDownloadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IncomeVerificationDocumentsDownloadResponse incomeVerificationDocumentsDownload(org.openapis.openapi.models.shared.IncomeVerificationDocumentsDownloadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/income/verification/documents/download");
         
@@ -2991,7 +2991,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IncomeVerificationPaystubsGetResponse incomeVerificationPaystubsGet(org.openapis.openapi.models.operations.IncomeVerificationPaystubsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IncomeVerificationPaystubsGetResponse incomeVerificationPaystubsGet(org.openapis.openapi.models.shared.IncomeVerificationPaystubsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/income/verification/paystubs/get");
         
@@ -3041,7 +3041,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IncomeVerificationPrecheckResponse incomeVerificationPrecheck(org.openapis.openapi.models.operations.IncomeVerificationPrecheckRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IncomeVerificationPrecheckResponse incomeVerificationPrecheck(org.openapis.openapi.models.shared.IncomeVerificationPrecheckRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/income/verification/precheck");
         
@@ -3089,7 +3089,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IncomeVerificationTaxformsGetResponse incomeVerificationTaxformsGet(org.openapis.openapi.models.operations.IncomeVerificationTaxformsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IncomeVerificationTaxformsGetResponse incomeVerificationTaxformsGet(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/income/verification/taxforms/get");
         
@@ -3145,7 +3145,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.InstitutionsGetResponse institutionsGet(org.openapis.openapi.models.operations.InstitutionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.InstitutionsGetResponse institutionsGet(org.openapis.openapi.models.shared.InstitutionsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/institutions/get");
         
@@ -3202,7 +3202,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.InstitutionsGetByIdResponse institutionsGetById(org.openapis.openapi.models.operations.InstitutionsGetByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.InstitutionsGetByIdResponse institutionsGetById(org.openapis.openapi.models.shared.InstitutionsGetByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/institutions/get_by_id");
         
@@ -3259,7 +3259,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.InstitutionsSearchResponse institutionsSearch(org.openapis.openapi.models.operations.InstitutionsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.InstitutionsSearchResponse institutionsSearch(org.openapis.openapi.models.shared.InstitutionsSearchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/institutions/search");
         
@@ -3313,7 +3313,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.InvestmentsHoldingsGetResponse investmentsHoldingsGet(org.openapis.openapi.models.operations.InvestmentsHoldingsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.InvestmentsHoldingsGetResponse investmentsHoldingsGet(org.openapis.openapi.models.shared.InvestmentsHoldingsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/investments/holdings/get");
         
@@ -3365,7 +3365,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.InvestmentsTransactionsGetResponse investmentsTransactionsGet(org.openapis.openapi.models.operations.InvestmentsTransactionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.InvestmentsTransactionsGetResponse investmentsTransactionsGet(org.openapis.openapi.models.shared.InvestmentsTransactionsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/investments/transactions/get");
         
@@ -3414,7 +3414,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ItemAccessTokenInvalidateResponse itemAccessTokenInvalidate(org.openapis.openapi.models.operations.ItemAccessTokenInvalidateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ItemAccessTokenInvalidateResponse itemAccessTokenInvalidate(org.openapis.openapi.models.shared.ItemAccessTokenInvalidateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/item/access_token/invalidate");
         
@@ -3459,7 +3459,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ItemActivityListResponse itemActivityList(org.openapis.openapi.models.operations.ItemActivityListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ItemActivityListResponse itemActivityList(org.openapis.openapi.models.shared.ItemActivityListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/item/activity/list");
         
@@ -3512,7 +3512,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ItemApplicationListResponse itemApplicationList(org.openapis.openapi.models.operations.ItemApplicationListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ItemApplicationListResponse itemApplicationList(org.openapis.openapi.models.shared.ItemApplicationListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/item/application/list");
         
@@ -3565,7 +3565,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ItemApplicationScopesUpdateResponse itemApplicationScopesUpdate(org.openapis.openapi.models.operations.ItemApplicationScopesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ItemApplicationScopesUpdateResponse itemApplicationScopesUpdate(org.openapis.openapi.models.shared.ItemApplicationScopesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/item/application/scopes/update");
         
@@ -3625,7 +3625,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ItemCreatePublicTokenResponse itemCreatePublicToken(org.openapis.openapi.models.operations.ItemCreatePublicTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ItemCreatePublicTokenResponse itemCreatePublicToken(org.openapis.openapi.models.shared.ItemPublicTokenCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/item/public_token/create");
         
@@ -3671,7 +3671,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ItemGetResponse itemGet(org.openapis.openapi.models.operations.ItemGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ItemGetResponse itemGet(org.openapis.openapi.models.shared.ItemGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/item/get");
         
@@ -3726,7 +3726,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ItemImportResponse itemImport(org.openapis.openapi.models.operations.ItemImportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ItemImportResponse itemImport(org.openapis.openapi.models.shared.ItemImportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/item/import");
         
@@ -3774,7 +3774,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ItemPublicTokenExchangeResponse itemPublicTokenExchange(org.openapis.openapi.models.operations.ItemPublicTokenExchangeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ItemPublicTokenExchangeResponse itemPublicTokenExchange(org.openapis.openapi.models.shared.ItemPublicTokenExchangeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/item/public_token/exchange");
         
@@ -3826,7 +3826,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ItemRemoveResponse itemRemove(org.openapis.openapi.models.operations.ItemRemoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ItemRemoveResponse itemRemove(org.openapis.openapi.models.shared.ItemRemoveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/item/remove");
         
@@ -3880,7 +3880,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ItemWebhookUpdateResponse itemWebhookUpdate(org.openapis.openapi.models.operations.ItemWebhookUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ItemWebhookUpdateResponse itemWebhookUpdate(org.openapis.openapi.models.shared.ItemWebhookUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/item/webhook/update");
         
@@ -3930,7 +3930,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LiabilitiesGetResponse liabilitiesGet(org.openapis.openapi.models.operations.LiabilitiesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LiabilitiesGetResponse liabilitiesGet(org.openapis.openapi.models.shared.LiabilitiesGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/liabilities/get");
         
@@ -3976,7 +3976,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LinkDeliveryCreateResponse linkDeliveryCreate(org.openapis.openapi.models.operations.LinkDeliveryCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LinkDeliveryCreateResponse linkDeliveryCreate(org.openapis.openapi.models.shared.LinkDeliveryCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/link_delivery/create");
         
@@ -4030,7 +4030,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LinkDeliveryGetResponse linkDeliveryGet(org.openapis.openapi.models.operations.LinkDeliveryGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LinkDeliveryGetResponse linkDeliveryGet(org.openapis.openapi.models.shared.LinkDeliveryGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/link_delivery/get");
         
@@ -4085,7 +4085,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LinkOauthCorrelationIdExchangeResponse linkOauthCorrelationIdExchange(org.openapis.openapi.models.operations.LinkOauthCorrelationIdExchangeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LinkOauthCorrelationIdExchangeResponse linkOauthCorrelationIdExchange(org.openapis.openapi.models.shared.LinkOAuthCorrelationIdExchangeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/link/oauth/correlation_id/exchange");
         
@@ -4133,7 +4133,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LinkTokenCreateResponse linkTokenCreate(org.openapis.openapi.models.operations.LinkTokenCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LinkTokenCreateResponse linkTokenCreate(org.openapis.openapi.models.shared.LinkTokenCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/link/token/create");
         
@@ -4180,7 +4180,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LinkTokenGetResponse linkTokenGet(org.openapis.openapi.models.operations.LinkTokenGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LinkTokenGetResponse linkTokenGet(org.openapis.openapi.models.shared.LinkTokenGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/link/token/get");
         
@@ -4226,7 +4226,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PartnerCustomerCreateResponse partnerCustomerCreate(org.openapis.openapi.models.operations.PartnerCustomerCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PartnerCustomerCreateResponse partnerCustomerCreate(org.openapis.openapi.models.shared.PartnerCustomerCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/partner/customer/create");
         
@@ -4280,7 +4280,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PartnerCustomerEnableResponse partnerCustomerEnable(org.openapis.openapi.models.operations.PartnerCustomerEnableRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PartnerCustomerEnableResponse partnerCustomerEnable(org.openapis.openapi.models.shared.PartnerCustomerEnableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/partner/customer/enable");
         
@@ -4334,7 +4334,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PartnerCustomerGetResponse partnerCustomerGet(org.openapis.openapi.models.operations.PartnerCustomerGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PartnerCustomerGetResponse partnerCustomerGet(org.openapis.openapi.models.shared.PartnerCustomerGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/partner/customer/get");
         
@@ -4388,7 +4388,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PartnerCustomerOauthInstitutionsGetResponse partnerCustomerOauthInstitutionsGet(org.openapis.openapi.models.operations.PartnerCustomerOauthInstitutionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PartnerCustomerOauthInstitutionsGetResponse partnerCustomerOauthInstitutionsGet(org.openapis.openapi.models.shared.PartnerCustomerOAuthInstitutionsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/partner/customer/oauth_institutions/get");
         
@@ -4442,7 +4442,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PartnerCustomerRemoveResponse partnerCustomerRemove(org.openapis.openapi.models.operations.PartnerCustomerRemoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PartnerCustomerRemoveResponse partnerCustomerRemove(org.openapis.openapi.models.shared.PartnerCustomerRemoveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/partner/customer/remove");
         
@@ -4498,7 +4498,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PaymentInitiationConsentCreateResponse paymentInitiationConsentCreate(org.openapis.openapi.models.operations.PaymentInitiationConsentCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PaymentInitiationConsentCreateResponse paymentInitiationConsentCreate(org.openapis.openapi.models.shared.PaymentInitiationConsentCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payment_initiation/consent/create");
         
@@ -4544,7 +4544,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PaymentInitiationConsentGetResponse paymentInitiationConsentGet(org.openapis.openapi.models.operations.PaymentInitiationConsentGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PaymentInitiationConsentGetResponse paymentInitiationConsentGet(org.openapis.openapi.models.shared.PaymentInitiationConsentGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payment_initiation/consent/get");
         
@@ -4590,7 +4590,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PaymentInitiationConsentPaymentExecuteResponse paymentInitiationConsentPaymentExecute(org.openapis.openapi.models.operations.PaymentInitiationConsentPaymentExecuteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PaymentInitiationConsentPaymentExecuteResponse paymentInitiationConsentPaymentExecute(org.openapis.openapi.models.shared.PaymentInitiationConsentPaymentExecuteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payment_initiation/consent/payment/execute");
         
@@ -4636,7 +4636,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PaymentInitiationConsentRevokeResponse paymentInitiationConsentRevoke(org.openapis.openapi.models.operations.PaymentInitiationConsentRevokeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PaymentInitiationConsentRevokeResponse paymentInitiationConsentRevoke(org.openapis.openapi.models.shared.PaymentInitiationConsentRevokeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payment_initiation/consent/revoke");
         
@@ -4686,7 +4686,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PaymentInitiationPaymentCreateResponse paymentInitiationPaymentCreate(org.openapis.openapi.models.operations.PaymentInitiationPaymentCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PaymentInitiationPaymentCreateResponse paymentInitiationPaymentCreate(org.openapis.openapi.models.shared.PaymentInitiationPaymentCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payment_initiation/payment/create");
         
@@ -4732,7 +4732,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PaymentInitiationPaymentGetResponse paymentInitiationPaymentGet(org.openapis.openapi.models.operations.PaymentInitiationPaymentGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PaymentInitiationPaymentGetResponse paymentInitiationPaymentGet(org.openapis.openapi.models.shared.PaymentInitiationPaymentGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payment_initiation/payment/get");
         
@@ -4778,7 +4778,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PaymentInitiationPaymentListResponse paymentInitiationPaymentList(org.openapis.openapi.models.operations.PaymentInitiationPaymentListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PaymentInitiationPaymentListResponse paymentInitiationPaymentList(org.openapis.openapi.models.shared.PaymentInitiationPaymentListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payment_initiation/payment/list");
         
@@ -4836,7 +4836,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PaymentInitiationPaymentReverseResponse paymentInitiationPaymentReverse(org.openapis.openapi.models.operations.PaymentInitiationPaymentReverseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PaymentInitiationPaymentReverseResponse paymentInitiationPaymentReverse(org.openapis.openapi.models.shared.PaymentInitiationPaymentReverseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payment_initiation/payment/reverse");
         
@@ -4887,7 +4887,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PaymentInitiationRecipientCreateResponse paymentInitiationRecipientCreate(org.openapis.openapi.models.operations.PaymentInitiationRecipientCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PaymentInitiationRecipientCreateResponse paymentInitiationRecipientCreate(org.openapis.openapi.models.shared.PaymentInitiationRecipientCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payment_initiation/recipient/create");
         
@@ -4933,7 +4933,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PaymentInitiationRecipientGetResponse paymentInitiationRecipientGet(org.openapis.openapi.models.operations.PaymentInitiationRecipientGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PaymentInitiationRecipientGetResponse paymentInitiationRecipientGet(org.openapis.openapi.models.shared.PaymentInitiationRecipientGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payment_initiation/recipient/get");
         
@@ -4979,7 +4979,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PaymentInitiationRecipientListResponse paymentInitiationRecipientList(org.openapis.openapi.models.operations.PaymentInitiationRecipientListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PaymentInitiationRecipientListResponse paymentInitiationRecipientList(org.openapis.openapi.models.shared.PaymentInitiationRecipientListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payment_initiation/recipient/list");
         
@@ -5027,7 +5027,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PaymentProfileCreateResponse paymentProfileCreate(org.openapis.openapi.models.operations.PaymentProfileCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PaymentProfileCreateResponse paymentProfileCreate(org.openapis.openapi.models.shared.PaymentProfileCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payment_profile/create");
         
@@ -5081,7 +5081,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PaymentProfileGetResponse paymentProfileGet(org.openapis.openapi.models.operations.PaymentProfileGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PaymentProfileGetResponse paymentProfileGet(org.openapis.openapi.models.shared.PaymentProfileGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payment_profile/get");
         
@@ -5135,7 +5135,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PaymentProfileRemoveResponse paymentProfileRemove(org.openapis.openapi.models.operations.PaymentProfileRemoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PaymentProfileRemoveResponse paymentProfileRemove(org.openapis.openapi.models.shared.PaymentProfileRemoveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payment_profile/remove");
         
@@ -5189,7 +5189,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProcessorApexProcessorTokenCreateResponse processorApexProcessorTokenCreate(org.openapis.openapi.models.operations.ProcessorApexProcessorTokenCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProcessorApexProcessorTokenCreateResponse processorApexProcessorTokenCreate(org.openapis.openapi.models.shared.ProcessorApexProcessorTokenCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/processor/apex/processor_token/create");
         
@@ -5238,7 +5238,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProcessorAuthGetResponse processorAuthGet(org.openapis.openapi.models.operations.ProcessorAuthGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProcessorAuthGetResponse processorAuthGet(org.openapis.openapi.models.shared.ProcessorAuthGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/processor/auth/get");
         
@@ -5284,7 +5284,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProcessorBalanceGetResponse processorBalanceGet(org.openapis.openapi.models.operations.ProcessorBalanceGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProcessorBalanceGetResponse processorBalanceGet(org.openapis.openapi.models.shared.ProcessorBalanceGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/processor/balance/get");
         
@@ -5330,7 +5330,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProcessorBankTransferCreateResponse processorBankTransferCreate(org.openapis.openapi.models.operations.ProcessorBankTransferCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProcessorBankTransferCreateResponse processorBankTransferCreate(org.openapis.openapi.models.shared.ProcessorBankTransferCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/processor/bank_transfer/create");
         
@@ -5384,7 +5384,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProcessorIdentityGetResponse processorIdentityGet(org.openapis.openapi.models.operations.ProcessorIdentityGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProcessorIdentityGetResponse processorIdentityGet(org.openapis.openapi.models.shared.ProcessorIdentityGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/processor/identity/get");
         
@@ -5430,7 +5430,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProcessorSignalDecisionReportResponse processorSignalDecisionReport(org.openapis.openapi.models.operations.ProcessorSignalDecisionReportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProcessorSignalDecisionReportResponse processorSignalDecisionReport(org.openapis.openapi.models.shared.ProcessorSignalDecisionReportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/processor/signal/decision/report");
         
@@ -5488,7 +5488,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProcessorSignalEvaluateResponse processorSignalEvaluate(org.openapis.openapi.models.operations.ProcessorSignalEvaluateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProcessorSignalEvaluateResponse processorSignalEvaluate(org.openapis.openapi.models.shared.ProcessorSignalEvaluateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/processor/signal/evaluate");
         
@@ -5542,7 +5542,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProcessorSignalReturnReportResponse processorSignalReturnReport(org.openapis.openapi.models.operations.ProcessorSignalReturnReportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProcessorSignalReturnReportResponse processorSignalReturnReport(org.openapis.openapi.models.shared.ProcessorSignalReturnReportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/processor/signal/return/report");
         
@@ -5601,7 +5601,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProcessorStripeBankAccountTokenCreateResponse processorStripeBankAccountTokenCreate(org.openapis.openapi.models.operations.ProcessorStripeBankAccountTokenCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProcessorStripeBankAccountTokenCreateResponse processorStripeBankAccountTokenCreate(org.openapis.openapi.models.shared.ProcessorStripeBankAccountTokenCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/processor/stripe/bank_account_token/create");
         
@@ -5647,7 +5647,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProcessorTokenCreateResponse processorTokenCreate(org.openapis.openapi.models.operations.ProcessorTokenCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProcessorTokenCreateResponse processorTokenCreate(org.openapis.openapi.models.shared.ProcessorTokenCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/processor/token/create");
         
@@ -5693,7 +5693,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SandboxBankTransferFireWebhookResponse sandboxBankTransferFireWebhook(org.openapis.openapi.models.operations.SandboxBankTransferFireWebhookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SandboxBankTransferFireWebhookResponse sandboxBankTransferFireWebhook(org.openapis.openapi.models.shared.SandboxBankTransferFireWebhookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sandbox/bank_transfer/fire_webhook");
         
@@ -5747,7 +5747,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SandboxBankTransferSimulateResponse sandboxBankTransferSimulate(org.openapis.openapi.models.operations.SandboxBankTransferSimulateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SandboxBankTransferSimulateResponse sandboxBankTransferSimulate(org.openapis.openapi.models.shared.SandboxBankTransferSimulateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sandbox/bank_transfer/simulate");
         
@@ -5801,7 +5801,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SandboxIncomeFireWebhookResponse sandboxIncomeFireWebhook(org.openapis.openapi.models.operations.SandboxIncomeFireWebhookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SandboxIncomeFireWebhookResponse sandboxIncomeFireWebhook(org.openapis.openapi.models.shared.SandboxIncomeFireWebhookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sandbox/income/fire_webhook");
         
@@ -5867,7 +5867,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SandboxItemFireWebhookResponse sandboxItemFireWebhook(org.openapis.openapi.models.operations.SandboxItemFireWebhookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SandboxItemFireWebhookResponse sandboxItemFireWebhook(org.openapis.openapi.models.shared.SandboxItemFireWebhookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sandbox/item/fire_webhook");
         
@@ -5924,7 +5924,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SandboxItemResetLoginResponse sandboxItemResetLogin(org.openapis.openapi.models.operations.SandboxItemResetLoginRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SandboxItemResetLoginResponse sandboxItemResetLogin(org.openapis.openapi.models.shared.SandboxItemResetLoginRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sandbox/item/reset_login");
         
@@ -5974,7 +5974,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SandboxItemSetVerificationStatusResponse sandboxItemSetVerificationStatus(org.openapis.openapi.models.operations.SandboxItemSetVerificationStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SandboxItemSetVerificationStatusResponse sandboxItemSetVerificationStatus(org.openapis.openapi.models.shared.SandboxItemSetVerificationStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sandbox/item/set_verification_status");
         
@@ -6019,7 +6019,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SandboxOauthSelectAccountsResponse sandboxOauthSelectAccounts(org.openapis.openapi.models.operations.SandboxOauthSelectAccountsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SandboxOauthSelectAccountsResponse sandboxOauthSelectAccounts(org.openapis.openapi.models.shared.SandboxOauthSelectAccountsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sandbox/oauth/select_accounts");
         
@@ -6077,7 +6077,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SandboxPaymentProfileResetLoginResponse sandboxPaymentProfileResetLogin(org.openapis.openapi.models.operations.SandboxPaymentProfileResetLoginRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SandboxPaymentProfileResetLoginResponse sandboxPaymentProfileResetLogin(org.openapis.openapi.models.shared.SandboxPaymentProfileResetLoginRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sandbox/payment_profile/reset_login");
         
@@ -6123,7 +6123,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SandboxProcessorTokenCreateResponse sandboxProcessorTokenCreate(org.openapis.openapi.models.operations.SandboxProcessorTokenCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SandboxProcessorTokenCreateResponse sandboxProcessorTokenCreate(org.openapis.openapi.models.shared.SandboxProcessorTokenCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sandbox/processor_token/create");
         
@@ -6177,7 +6177,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SandboxPublicTokenCreateResponse sandboxPublicTokenCreate(org.openapis.openapi.models.operations.SandboxPublicTokenCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SandboxPublicTokenCreateResponse sandboxPublicTokenCreate(org.openapis.openapi.models.shared.SandboxPublicTokenCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sandbox/public_token/create");
         
@@ -6231,7 +6231,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SandboxTransferFireWebhookResponse sandboxTransferFireWebhook(org.openapis.openapi.models.operations.SandboxTransferFireWebhookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SandboxTransferFireWebhookResponse sandboxTransferFireWebhook(org.openapis.openapi.models.shared.SandboxTransferFireWebhookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sandbox/transfer/fire_webhook");
         
@@ -6285,7 +6285,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SandboxTransferRepaymentSimulateResponse sandboxTransferRepaymentSimulate(org.openapis.openapi.models.operations.SandboxTransferRepaymentSimulateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SandboxTransferRepaymentSimulateResponse sandboxTransferRepaymentSimulate(org.openapis.openapi.models.shared.SandboxTransferRepaymentSimulateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sandbox/transfer/repayment/simulate");
         
@@ -6339,7 +6339,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SandboxTransferSimulateResponse sandboxTransferSimulate(org.openapis.openapi.models.operations.SandboxTransferSimulateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SandboxTransferSimulateResponse sandboxTransferSimulate(org.openapis.openapi.models.shared.SandboxTransferSimulateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sandbox/transfer/simulate");
         
@@ -6393,7 +6393,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SandboxTransferSweepSimulateResponse sandboxTransferSweepSimulate(org.openapis.openapi.models.operations.SandboxTransferSweepSimulateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SandboxTransferSweepSimulateResponse sandboxTransferSweepSimulate(org.openapis.openapi.models.shared.SandboxTransferSweepSimulateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sandbox/transfer/sweep/simulate");
         
@@ -6455,7 +6455,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SandboxTransferTestClockAdvanceResponse sandboxTransferTestClockAdvance(org.openapis.openapi.models.operations.SandboxTransferTestClockAdvanceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SandboxTransferTestClockAdvanceResponse sandboxTransferTestClockAdvance(org.openapis.openapi.models.shared.SandboxTransferTestClockAdvanceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sandbox/transfer/test_clock/advance");
         
@@ -6513,7 +6513,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SandboxTransferTestClockCreateResponse sandboxTransferTestClockCreate(org.openapis.openapi.models.operations.SandboxTransferTestClockCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SandboxTransferTestClockCreateResponse sandboxTransferTestClockCreate(org.openapis.openapi.models.shared.SandboxTransferTestClockCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sandbox/transfer/test_clock/create");
         
@@ -6567,7 +6567,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SandboxTransferTestClockGetResponse sandboxTransferTestClockGet(org.openapis.openapi.models.operations.SandboxTransferTestClockGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SandboxTransferTestClockGetResponse sandboxTransferTestClockGet(org.openapis.openapi.models.shared.SandboxTransferTestClockGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sandbox/transfer/test_clock/get");
         
@@ -6621,7 +6621,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SandboxTransferTestClockListResponse sandboxTransferTestClockList(org.openapis.openapi.models.operations.SandboxTransferTestClockListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SandboxTransferTestClockListResponse sandboxTransferTestClockList(org.openapis.openapi.models.shared.SandboxTransferTestClockListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sandbox/transfer/test_clock/list");
         
@@ -6675,7 +6675,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SignalDecisionReportResponse signalDecisionReport(org.openapis.openapi.models.operations.SignalDecisionReportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SignalDecisionReportResponse signalDecisionReport(org.openapis.openapi.models.shared.SignalDecisionReportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/signal/decision/report");
         
@@ -6733,7 +6733,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SignalEvaluateResponse signalEvaluate(org.openapis.openapi.models.operations.SignalEvaluateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SignalEvaluateResponse signalEvaluate(org.openapis.openapi.models.shared.SignalEvaluateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/signal/evaluate");
         
@@ -6791,7 +6791,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SignalPrepareResponse signalPrepare(org.openapis.openapi.models.operations.SignalPrepareRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SignalPrepareResponse signalPrepare(org.openapis.openapi.models.shared.SignalPrepareRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/signal/prepare");
         
@@ -6845,7 +6845,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SignalReturnReportResponse signalReturnReport(org.openapis.openapi.models.operations.SignalReturnReportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SignalReturnReportResponse signalReturnReport(org.openapis.openapi.models.shared.SignalReturnReportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/signal/return/report");
         
@@ -6900,7 +6900,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransactionsEnhanceResponse transactionsEnhance(org.openapis.openapi.models.operations.TransactionsEnhanceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransactionsEnhanceResponse transactionsEnhance(org.openapis.openapi.models.shared.TransactionsEnhanceGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/beta/transactions/v1/enhance");
         
@@ -6956,7 +6956,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransactionsEnrichResponse transactionsEnrich(org.openapis.openapi.models.operations.TransactionsEnrichRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransactionsEnrichResponse transactionsEnrich(org.openapis.openapi.models.shared.TransactionsEnrichGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transactions/enrich");
         
@@ -7018,7 +7018,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransactionsGetResponse transactionsGet(org.openapis.openapi.models.operations.TransactionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransactionsGetResponse transactionsGet(org.openapis.openapi.models.shared.TransactionsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transactions/get");
         
@@ -7078,7 +7078,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransactionsRecurringGetResponse transactionsRecurringGet(org.openapis.openapi.models.operations.TransactionsRecurringGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransactionsRecurringGetResponse transactionsRecurringGet(org.openapis.openapi.models.shared.TransactionsRecurringGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transactions/recurring/get");
         
@@ -7134,7 +7134,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransactionsRefreshResponse transactionsRefresh(org.openapis.openapi.models.operations.TransactionsRefreshRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransactionsRefreshResponse transactionsRefresh(org.openapis.openapi.models.shared.TransactionsRefreshRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transactions/refresh");
         
@@ -7191,7 +7191,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransactionsRulesCreateResponse transactionsRulesCreate(org.openapis.openapi.models.operations.TransactionsRulesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransactionsRulesCreateResponse transactionsRulesCreate(org.openapis.openapi.models.shared.TransactionsRulesCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/beta/transactions/rules/v1/create");
         
@@ -7244,7 +7244,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransactionsRulesListResponse transactionsRulesList(org.openapis.openapi.models.operations.TransactionsRulesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransactionsRulesListResponse transactionsRulesList(org.openapis.openapi.models.shared.TransactionsRulesListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/beta/transactions/rules/v1/list");
         
@@ -7297,7 +7297,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransactionsRulesRemoveResponse transactionsRulesRemove(org.openapis.openapi.models.operations.TransactionsRulesRemoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransactionsRulesRemoveResponse transactionsRulesRemove(org.openapis.openapi.models.shared.TransactionsRulesRemoveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/beta/transactions/rules/v1/remove");
         
@@ -7369,7 +7369,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransactionsSyncResponse transactionsSync(org.openapis.openapi.models.operations.TransactionsSyncRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransactionsSyncResponse transactionsSync(org.openapis.openapi.models.shared.TransactionsSyncRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transactions/sync");
         
@@ -7439,7 +7439,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferAuthorizationCreateResponse transferAuthorizationCreate(org.openapis.openapi.models.operations.TransferAuthorizationCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferAuthorizationCreateResponse transferAuthorizationCreate(org.openapis.openapi.models.shared.TransferAuthorizationCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/authorization/create");
         
@@ -7493,7 +7493,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferCancelResponse transferCancel(org.openapis.openapi.models.operations.TransferCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferCancelResponse transferCancel(org.openapis.openapi.models.shared.TransferCancelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/cancel");
         
@@ -7547,7 +7547,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferCapabilitiesGetResponse transferCapabilitiesGet(org.openapis.openapi.models.operations.TransferCapabilitiesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferCapabilitiesGetResponse transferCapabilitiesGet(org.openapis.openapi.models.shared.TransferCapabilitiesGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/capabilities/get");
         
@@ -7601,7 +7601,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferCreateResponse transferCreate(org.openapis.openapi.models.operations.TransferCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferCreateResponse transferCreate(org.openapis.openapi.models.shared.TransferCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/create");
         
@@ -7655,7 +7655,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferEventListResponse transferEventList(org.openapis.openapi.models.operations.TransferEventListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferEventListResponse transferEventList(org.openapis.openapi.models.shared.TransferEventListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/event/list");
         
@@ -7709,7 +7709,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferEventSyncResponse transferEventSync(org.openapis.openapi.models.operations.TransferEventSyncRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferEventSyncResponse transferEventSync(org.openapis.openapi.models.shared.TransferEventSyncRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/event/sync");
         
@@ -7763,7 +7763,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferGetResponse transferGet(org.openapis.openapi.models.operations.TransferGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferGetResponse transferGet(org.openapis.openapi.models.shared.TransferGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/get");
         
@@ -7817,7 +7817,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferIntentCreateResponse transferIntentCreate(org.openapis.openapi.models.operations.TransferIntentCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferIntentCreateResponse transferIntentCreate(org.openapis.openapi.models.shared.TransferIntentCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/intent/create");
         
@@ -7871,7 +7871,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferIntentGetResponse transferIntentGet(org.openapis.openapi.models.operations.TransferIntentGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferIntentGetResponse transferIntentGet(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/intent/get");
         
@@ -7926,7 +7926,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferListResponse transferList(org.openapis.openapi.models.operations.TransferListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferListResponse transferList(org.openapis.openapi.models.shared.TransferListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/list");
         
@@ -7980,7 +7980,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferMigrateAccountResponse transferMigrateAccount(org.openapis.openapi.models.operations.TransferMigrateAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferMigrateAccountResponse transferMigrateAccount(org.openapis.openapi.models.shared.TransferMigrateAccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/migrate_account");
         
@@ -8034,7 +8034,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferOriginatorCreateResponse transferOriginatorCreate(org.openapis.openapi.models.operations.TransferOriginatorCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferOriginatorCreateResponse transferOriginatorCreate(org.openapis.openapi.models.shared.TransferOriginatorCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/originator/create");
         
@@ -8088,7 +8088,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferOriginatorGetJsonResponse transferOriginatorGetJson(org.openapis.openapi.models.operations.TransferOriginatorGetJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferOriginatorGetJsonResponse transferOriginatorGetJson(org.openapis.openapi.models.shared.TransferOriginatorGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/originator/get");
         
@@ -8142,7 +8142,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferOriginatorGetRawResponse transferOriginatorGetRaw(org.openapis.openapi.models.operations.TransferOriginatorGetRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferOriginatorGetRawResponse transferOriginatorGetRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/originator/get");
         
@@ -8196,7 +8196,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferOriginatorListResponse transferOriginatorList(org.openapis.openapi.models.operations.TransferOriginatorListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferOriginatorListResponse transferOriginatorList(org.openapis.openapi.models.shared.TransferOriginatorListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/originator/list");
         
@@ -8250,7 +8250,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferQuestionnaireCreateResponse transferQuestionnaireCreate(org.openapis.openapi.models.operations.TransferQuestionnaireCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferQuestionnaireCreateResponse transferQuestionnaireCreate(org.openapis.openapi.models.shared.TransferQuestionnaireCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/questionnaire/create");
         
@@ -8304,7 +8304,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferRecurringCancelResponse transferRecurringCancel(org.openapis.openapi.models.operations.TransferRecurringCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferRecurringCancelResponse transferRecurringCancel(org.openapis.openapi.models.shared.TransferRecurringCancelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/recurring/cancel");
         
@@ -8358,7 +8358,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferRecurringCreateResponse transferRecurringCreate(org.openapis.openapi.models.operations.TransferRecurringCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferRecurringCreateResponse transferRecurringCreate(org.openapis.openapi.models.shared.TransferRecurringCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/recurring/create");
         
@@ -8412,7 +8412,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferRecurringGetResponse transferRecurringGet(org.openapis.openapi.models.operations.TransferRecurringGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferRecurringGetResponse transferRecurringGet(org.openapis.openapi.models.shared.TransferRecurringGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/recurring/get");
         
@@ -8467,7 +8467,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferRecurringListResponse transferRecurringList(org.openapis.openapi.models.operations.TransferRecurringListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferRecurringListResponse transferRecurringList(org.openapis.openapi.models.shared.TransferRecurringListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/recurring/list");
         
@@ -8521,7 +8521,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferRefundCancelResponse transferRefundCancel(org.openapis.openapi.models.operations.TransferRefundCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferRefundCancelResponse transferRefundCancel(org.openapis.openapi.models.shared.TransferRefundCancelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/refund/cancel");
         
@@ -8577,7 +8577,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferRefundCreateResponse transferRefundCreate(org.openapis.openapi.models.operations.TransferRefundCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferRefundCreateResponse transferRefundCreate(org.openapis.openapi.models.shared.TransferRefundCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/refund/create");
         
@@ -8631,7 +8631,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferRefundGetResponse transferRefundGet(org.openapis.openapi.models.operations.TransferRefundGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferRefundGetResponse transferRefundGet(org.openapis.openapi.models.shared.TransferRefundGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/refund/get");
         
@@ -8685,7 +8685,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferRepaymentListResponse transferRepaymentList(org.openapis.openapi.models.operations.TransferRepaymentListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferRepaymentListResponse transferRepaymentList(org.openapis.openapi.models.shared.TransferRepaymentListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/repayment/list");
         
@@ -8739,7 +8739,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferRepaymentReturnListResponse transferRepaymentReturnList(org.openapis.openapi.models.operations.TransferRepaymentReturnListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferRepaymentReturnListResponse transferRepaymentReturnList(org.openapis.openapi.models.shared.TransferRepaymentReturnListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/repayment/return/list");
         
@@ -8793,7 +8793,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferSweepGetResponse transferSweepGet(org.openapis.openapi.models.operations.TransferSweepGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferSweepGetResponse transferSweepGet(org.openapis.openapi.models.shared.TransferSweepGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/sweep/get");
         
@@ -8847,7 +8847,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferSweepListResponse transferSweepList(org.openapis.openapi.models.operations.TransferSweepListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferSweepListResponse transferSweepList(org.openapis.openapi.models.shared.TransferSweepListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transfer/sweep/list");
         
@@ -8905,7 +8905,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UserCreateResponse userCreate(org.openapis.openapi.models.operations.UserCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UserCreateResponse userCreate(org.openapis.openapi.models.shared.UserCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user/create");
         
@@ -8951,7 +8951,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WalletCreateResponse walletCreate(org.openapis.openapi.models.operations.WalletCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WalletCreateResponse walletCreate(org.openapis.openapi.models.shared.WalletCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/wallet/create");
         
@@ -8997,7 +8997,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WalletGetResponse walletGet(org.openapis.openapi.models.operations.WalletGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WalletGetResponse walletGet(org.openapis.openapi.models.shared.WalletGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/wallet/get");
         
@@ -9043,7 +9043,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WalletListResponse walletList(org.openapis.openapi.models.operations.WalletListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WalletListResponse walletList(org.openapis.openapi.models.shared.WalletListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/wallet/list");
         
@@ -9091,7 +9091,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WalletTransactionExecuteResponse walletTransactionExecute(org.openapis.openapi.models.operations.WalletTransactionExecuteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WalletTransactionExecuteResponse walletTransactionExecute(org.openapis.openapi.models.shared.WalletTransactionExecuteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/wallet/transaction/execute");
         
@@ -9137,7 +9137,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WalletTransactionGetResponse walletTransactionGet(org.openapis.openapi.models.operations.WalletTransactionGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WalletTransactionGetResponse walletTransactionGet(org.openapis.openapi.models.shared.WalletTransactionGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/wallet/transaction/get");
         
@@ -9183,7 +9183,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WalletTransactionListResponse walletTransactionList(org.openapis.openapi.models.operations.WalletTransactionListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WalletTransactionListResponse walletTransactionList(org.openapis.openapi.models.shared.WalletTransactionListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/wallet/transaction/list");
         
@@ -9229,7 +9229,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WatchlistScreeningEntityCreateResponse watchlistScreeningEntityCreate(org.openapis.openapi.models.operations.WatchlistScreeningEntityCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WatchlistScreeningEntityCreateResponse watchlistScreeningEntityCreate(org.openapis.openapi.models.shared.WatchlistScreeningEntityCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/watchlist_screening/entity/create");
         
@@ -9275,7 +9275,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WatchlistScreeningEntityGetResponse watchlistScreeningEntityGet(org.openapis.openapi.models.operations.WatchlistScreeningEntityGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WatchlistScreeningEntityGetResponse watchlistScreeningEntityGet(org.openapis.openapi.models.shared.WatchlistScreeningEntityGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/watchlist_screening/entity/get");
         
@@ -9321,7 +9321,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WatchlistScreeningEntityHistoryListResponse watchlistScreeningEntityHistoryList(org.openapis.openapi.models.operations.WatchlistScreeningEntityHistoryListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WatchlistScreeningEntityHistoryListResponse watchlistScreeningEntityHistoryList(org.openapis.openapi.models.shared.WatchlistScreeningEntityHistoryListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/watchlist_screening/entity/history/list");
         
@@ -9367,7 +9367,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WatchlistScreeningEntityHitListResponse watchlistScreeningEntityHitList(org.openapis.openapi.models.operations.WatchlistScreeningEntityHitListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WatchlistScreeningEntityHitListResponse watchlistScreeningEntityHitList(org.openapis.openapi.models.shared.WatchlistScreeningEntityHitListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/watchlist_screening/entity/hit/list");
         
@@ -9413,7 +9413,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WatchlistScreeningEntityListResponse watchlistScreeningEntityList(org.openapis.openapi.models.operations.WatchlistScreeningEntityListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WatchlistScreeningEntityListResponse watchlistScreeningEntityList(org.openapis.openapi.models.shared.WatchlistScreeningEntityListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/watchlist_screening/entity/list");
         
@@ -9459,7 +9459,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WatchlistScreeningEntityProgramGetResponse watchlistScreeningEntityProgramGet(org.openapis.openapi.models.operations.WatchlistScreeningEntityProgramGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WatchlistScreeningEntityProgramGetResponse watchlistScreeningEntityProgramGet(org.openapis.openapi.models.shared.WatchlistScreeningEntityProgramGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/watchlist_screening/entity/program/get");
         
@@ -9505,7 +9505,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WatchlistScreeningEntityProgramListResponse watchlistScreeningEntityProgramList(org.openapis.openapi.models.operations.WatchlistScreeningEntityProgramListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WatchlistScreeningEntityProgramListResponse watchlistScreeningEntityProgramList(org.openapis.openapi.models.shared.WatchlistScreeningEntityProgramListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/watchlist_screening/entity/program/list");
         
@@ -9551,7 +9551,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WatchlistScreeningEntityReviewCreateResponse watchlistScreeningEntityReviewCreate(org.openapis.openapi.models.operations.WatchlistScreeningEntityReviewCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WatchlistScreeningEntityReviewCreateResponse watchlistScreeningEntityReviewCreate(org.openapis.openapi.models.shared.WatchlistScreeningEntityReviewCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/watchlist_screening/entity/review/create");
         
@@ -9597,7 +9597,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WatchlistScreeningEntityReviewListResponse watchlistScreeningEntityReviewList(org.openapis.openapi.models.operations.WatchlistScreeningEntityReviewListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WatchlistScreeningEntityReviewListResponse watchlistScreeningEntityReviewList(org.openapis.openapi.models.shared.WatchlistScreeningEntityReviewListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/watchlist_screening/entity/review/list");
         
@@ -9643,7 +9643,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WatchlistScreeningEntityUpdateResponse watchlistScreeningEntityUpdate(org.openapis.openapi.models.operations.WatchlistScreeningEntityUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WatchlistScreeningEntityUpdateResponse watchlistScreeningEntityUpdate(org.openapis.openapi.models.shared.WatchlistScreeningEntityUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/watchlist_screening/entity/update");
         
@@ -9689,7 +9689,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WatchlistScreeningIndividualCreateResponse watchlistScreeningIndividualCreate(org.openapis.openapi.models.operations.WatchlistScreeningIndividualCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WatchlistScreeningIndividualCreateResponse watchlistScreeningIndividualCreate(org.openapis.openapi.models.shared.WatchlistScreeningIndividualCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/watchlist_screening/individual/create");
         
@@ -9735,7 +9735,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WatchlistScreeningIndividualGetResponse watchlistScreeningIndividualGet(org.openapis.openapi.models.operations.WatchlistScreeningIndividualGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WatchlistScreeningIndividualGetResponse watchlistScreeningIndividualGet(org.openapis.openapi.models.shared.WatchlistScreeningIndividualGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/watchlist_screening/individual/get");
         
@@ -9781,7 +9781,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WatchlistScreeningIndividualHistoryListResponse watchlistScreeningIndividualHistoryList(org.openapis.openapi.models.operations.WatchlistScreeningIndividualHistoryListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WatchlistScreeningIndividualHistoryListResponse watchlistScreeningIndividualHistoryList(org.openapis.openapi.models.shared.WatchlistScreeningIndividualHistoryListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/watchlist_screening/individual/history/list");
         
@@ -9827,7 +9827,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WatchlistScreeningIndividualHitListResponse watchlistScreeningIndividualHitList(org.openapis.openapi.models.operations.WatchlistScreeningIndividualHitListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WatchlistScreeningIndividualHitListResponse watchlistScreeningIndividualHitList(org.openapis.openapi.models.shared.WatchlistScreeningIndividualHitListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/watchlist_screening/individual/hit/list");
         
@@ -9873,7 +9873,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WatchlistScreeningIndividualListResponse watchlistScreeningIndividualList(org.openapis.openapi.models.operations.WatchlistScreeningIndividualListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WatchlistScreeningIndividualListResponse watchlistScreeningIndividualList(org.openapis.openapi.models.shared.WatchlistScreeningIndividualListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/watchlist_screening/individual/list");
         
@@ -9919,7 +9919,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WatchlistScreeningIndividualProgramGetResponse watchlistScreeningIndividualProgramGet(org.openapis.openapi.models.operations.WatchlistScreeningIndividualProgramGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WatchlistScreeningIndividualProgramGetResponse watchlistScreeningIndividualProgramGet(org.openapis.openapi.models.shared.WatchlistScreeningIndividualProgramGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/watchlist_screening/individual/program/get");
         
@@ -9965,7 +9965,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WatchlistScreeningIndividualProgramListResponse watchlistScreeningIndividualProgramList(org.openapis.openapi.models.operations.WatchlistScreeningIndividualProgramListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WatchlistScreeningIndividualProgramListResponse watchlistScreeningIndividualProgramList(org.openapis.openapi.models.shared.WatchlistScreeningIndividualProgramListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/watchlist_screening/individual/program/list");
         
@@ -10011,7 +10011,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WatchlistScreeningIndividualReviewCreateResponse watchlistScreeningIndividualReviewCreate(org.openapis.openapi.models.operations.WatchlistScreeningIndividualReviewCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WatchlistScreeningIndividualReviewCreateResponse watchlistScreeningIndividualReviewCreate(org.openapis.openapi.models.shared.WatchlistScreeningIndividualReviewCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/watchlist_screening/individual/review/create");
         
@@ -10057,7 +10057,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WatchlistScreeningIndividualReviewListResponse watchlistScreeningIndividualReviewList(org.openapis.openapi.models.operations.WatchlistScreeningIndividualReviewListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WatchlistScreeningIndividualReviewListResponse watchlistScreeningIndividualReviewList(org.openapis.openapi.models.shared.WatchlistScreeningIndividualReviewListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/watchlist_screening/individual/review/list");
         
@@ -10103,7 +10103,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WatchlistScreeningIndividualUpdateResponse watchlistScreeningIndividualUpdate(org.openapis.openapi.models.operations.WatchlistScreeningIndividualUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WatchlistScreeningIndividualUpdateResponse watchlistScreeningIndividualUpdate(org.openapis.openapi.models.shared.WatchlistScreeningIndividualUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/watchlist_screening/individual/update");
         
@@ -10151,7 +10151,7 @@ public class Plaid {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebhookVerificationKeyGetResponse webhookVerificationKeyGet(org.openapis.openapi.models.operations.WebhookVerificationKeyGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebhookVerificationKeyGetResponse webhookVerificationKeyGet(org.openapis.openapi.models.shared.WebhookVerificationKeyGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/webhook_verification_key/get");
         

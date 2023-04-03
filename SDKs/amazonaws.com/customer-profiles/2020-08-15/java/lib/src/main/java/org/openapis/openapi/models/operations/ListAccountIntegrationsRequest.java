@@ -7,24 +7,89 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAccountIntegrationsRequest {
-    
-    public ListAccountIntegrationsQueryParams queryParams;
-    public ListAccountIntegrationsRequest withQueryParams(ListAccountIntegrationsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListAccountIntegrationsHeaders headers;
-    public ListAccountIntegrationsRequest withHeaders(ListAccountIntegrationsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ListAccountIntegrationsRequestBody request;
-    public ListAccountIntegrationsRequest withRequest(ListAccountIntegrationsRequestBody request) {
-        this.request = request;
+    public ListAccountIntegrationsRequestBody requestBody;
+    public ListAccountIntegrationsRequest withRequestBody(ListAccountIntegrationsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListAccountIntegrationsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListAccountIntegrationsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListAccountIntegrationsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListAccountIntegrationsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListAccountIntegrationsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListAccountIntegrationsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListAccountIntegrationsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * Boolean to indicate if hidden integration should be returned. Defaults to &lt;code&gt;False&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include-hidden")
+    public Boolean includeHidden;
+    public ListAccountIntegrationsRequest withIncludeHidden(Boolean includeHidden) {
+        this.includeHidden = includeHidden;
+        return this;
+    }
+    
+    /**
+     * The maximum number of objects returned per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max-results")
+    public Long maxResults;
+    public ListAccountIntegrationsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The pagination token from the previous ListAccountIntegrations API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next-token")
+    public String nextToken;
+    public ListAccountIntegrationsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     

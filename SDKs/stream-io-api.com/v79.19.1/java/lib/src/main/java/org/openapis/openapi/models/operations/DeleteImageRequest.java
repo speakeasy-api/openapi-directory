@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteImageRequest {
-    
-    public DeleteImagePathParams pathParams;
-    public DeleteImageRequest withPathParams(DeleteImagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteImageRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public String type;
+    public DeleteImageRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
     
-    public DeleteImageQueryParams queryParams;
-    public DeleteImageRequest withQueryParams(DeleteImageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:serialization=json,name=url")
+    public String url;
+    public DeleteImageRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

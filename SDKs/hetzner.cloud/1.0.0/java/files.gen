@@ -58,7 +58,6 @@ lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetActionsSortParameterSortEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetActionsStatusParameterStatusEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetActionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetActionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetActionsActionsResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetActionsActionsResponseActionResources.java
@@ -68,7 +67,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetActionsActionsRespon
 lib/src/main/java/org/openapis/openapi/models/operations/GetActionsActionsResponseMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetActionsActionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetActionsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetActionsIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetActionsIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetActionsIdActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetActionsIdActionResponseActionResources.java
@@ -76,10 +74,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetActionsIdActionRespo
 lib/src/main/java/org/openapis/openapi/models/operations/GetActionsIdActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetActionsIdActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetActionsIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdActionsPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdActionsSortParameterSortEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdActionsStatusParameterStatusEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdActionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdActionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdActionsActionsResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdActionsActionsResponseActionResources.java
@@ -89,7 +85,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdAction
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdActionsActionsResponseMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdActionsActionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdActionsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdActionsActionIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdActionsActionIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdActionsActionIdActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdActionsActionIdActionResponseActionResources.java
@@ -97,7 +92,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdAction
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdActionsActionIdActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdActionsActionIdActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdActionsActionIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostCertificatesIdActionsRetryPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostCertificatesIdActionsRetryRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostCertificatesIdActionsRetryActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostCertificatesIdActionsRetryActionResponseActionResources.java
@@ -105,12 +99,10 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostCertificatesIdActio
 lib/src/main/java/org/openapis/openapi/models/operations/PostCertificatesIdActionsRetryActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostCertificatesIdActionsRetryActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostCertificatesIdActionsRetryResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/DeleteCertificatesIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteCertificatesIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteCertificatesIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesSortEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesTypeParameterTypeEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesCertificatesResponseCertificateStatusError.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesCertificatesResponseCertificateStatusIssuanceEnum.java
@@ -123,7 +115,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesCertific
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesCertificatesResponseMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesCertificatesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdCertificateResponseCertificateStatusError.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdCertificateResponseCertificateStatusIssuanceEnum.java
@@ -136,7 +127,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdCertif
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatesIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostCertificatesCreateCertificateRequestTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostCertificatesCreateCertificateRequest.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostCertificatesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostCertificatesCreateCertificateResponseNullableActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostCertificatesCreateCertificateResponseNullableActionResources.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostCertificatesCreateCertificateResponseNullableActionStatusEnum.java
@@ -150,7 +140,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostCertificatesCreateC
 lib/src/main/java/org/openapis/openapi/models/operations/PostCertificatesCreateCertificateResponseCertificate.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostCertificatesCreateCertificateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostCertificatesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PutCertificatesIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutCertificatesIdUpdateCertificateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutCertificatesIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutCertificatesIdCertificateResponseCertificateStatusError.java
@@ -162,24 +151,20 @@ lib/src/main/java/org/openapis/openapi/models/operations/PutCertificatesIdCertif
 lib/src/main/java/org/openapis/openapi/models/operations/PutCertificatesIdCertificateResponseCertificate.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutCertificatesIdCertificateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutCertificatesIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetDatacentersQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDatacentersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDatacenters200ApplicationJSONDatacentersLocation.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDatacenters200ApplicationJSONDatacentersServerTypes.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDatacenters200ApplicationJSONDatacenters.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDatacenters200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDatacentersResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetDatacentersIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDatacentersIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDatacentersId200ApplicationJSONDatacenterLocation.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDatacentersId200ApplicationJSONDatacenterServerTypes.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDatacentersId200ApplicationJSONDatacenter.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDatacentersId200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDatacentersIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdActionsPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdActionsSortParameterSortEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdActionsStatusParameterStatusEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdActionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdActionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdActionsActionsResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdActionsActionsResponseActionResources.java
@@ -189,7 +174,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdActionsAc
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdActionsActionsResponseMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdActionsActionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdActionsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdActionsActionIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdActionsActionIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdActionsActionIdActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdActionsActionIdActionResponseActionResources.java
@@ -197,7 +181,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdActionsAc
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdActionsActionIdActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdActionsActionIdActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdActionsActionIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsApplyToResourcesPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesLabelSelector.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesServer.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum.java
@@ -212,7 +195,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsA
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsApplyToResourcesActionsResponseMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsApplyToResourcesActionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsApplyToResourcesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsRemoveFromResourcesPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesLabelSelector.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesServer.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesTypeEnum.java
@@ -227,7 +209,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsR
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsRemoveFromResourcesActionsResponseMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsRemoveFromResourcesActionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsRemoveFromResourcesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsSetRulesPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsSetRulesSetRulesRequestRuleDirectionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsSetRulesSetRulesRequestRuleProtocolEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsSetRulesSetRulesRequestRule.java
@@ -241,11 +222,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsS
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsSetRulesActionsResponseMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsSetRulesActionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsIdActionsSetRulesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/DeleteFirewallsIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteFirewallsIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteFirewallsIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsSortEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsFirewallsResponseFirewallAppliedToAppliedToResourcesServer.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsFirewallsResponseFirewallAppliedToAppliedToResourcesTypeEnum.java
@@ -262,7 +241,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsFirewallsRe
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsFirewallsResponseMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsFirewallsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdFirewallResponseFirewallAppliedToAppliedToResourcesServer.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFirewallsIdFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum.java
@@ -285,7 +263,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsCreateFire
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsCreateFirewallRequestRuleProtocolEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsCreateFirewallRequestRule.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsCreateFirewallRequest.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsCreateFirewallResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsCreateFirewallResponseActionResources.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsCreateFirewallResponseActionStatusEnum.java
@@ -303,7 +280,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsCreateFire
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsCreateFirewallResponseFirewall.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsCreateFirewallResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFirewallsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PutFirewallsIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutFirewallsIdUpdateFirewallRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutFirewallsIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutFirewallsIdFirewallResponseFirewallAppliedToAppliedToResourcesServer.java
@@ -319,10 +295,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/PutFirewallsIdFirewallR
 lib/src/main/java/org/openapis/openapi/models/operations/PutFirewallsIdFirewallResponseFirewall.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutFirewallsIdFirewallResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutFirewallsIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdActionsPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdActionsSortParameterSortEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdActionsStatusParameterStatusEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdActionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdActionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdActions200ApplicationJSONActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdActions200ApplicationJSONActionResources.java
@@ -330,7 +304,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdActions
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdActions200ApplicationJSONAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdActions200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdActionsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdActionsActionIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdActionsActionIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdActionsActionIdActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdActionsActionIdActionResponseActionResources.java
@@ -338,7 +311,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdActions
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdActionsActionIdActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdActionsActionIdActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdActionsActionIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsAssignPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsAssignAssignFloatingIPRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsAssignRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsAssignActionResponseActionError.java
@@ -347,7 +319,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdAction
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsAssignActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsAssignActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsAssignResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsChangeDnsPtrPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsChangeDnsPtrChangeDNSPTRRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsChangeDnsPtrRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsChangeDnsPtrActionResponseActionError.java
@@ -356,7 +327,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdAction
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsChangeDnsPtrActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsChangeDnsPtrActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsChangeDnsPtrResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsChangeProtectionPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsChangeProtectionChangeProtectionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsChangeProtectionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsChangeProtectionActionResponseActionError.java
@@ -365,7 +335,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdAction
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsChangeProtectionActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsChangeProtectionActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsChangeProtectionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsUnassignPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsUnassignRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsUnassignActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsUnassignActionResponseActionResources.java
@@ -373,11 +342,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdAction
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsUnassignActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsUnassignActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsIdActionsUnassignResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/DeleteFloatingIpsIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteFloatingIpsIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteFloatingIpsIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsSortEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIps200ApplicationJSONFloatingIpsDnsPtr.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIps200ApplicationJSONFloatingIpsHomeLocation.java
@@ -388,7 +355,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIps200Applic
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIps200ApplicationJSONMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIps200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsId200ApplicationJSONFloatingIpDnsPtr.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsId200ApplicationJSONFloatingIpHomeLocation.java
@@ -399,7 +365,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsId200Appl
 lib/src/main/java/org/openapis/openapi/models/operations/GetFloatingIpsIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsCreateFloatingIPRequestTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsCreateFloatingIPRequest.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIps201ApplicationJSONActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIps201ApplicationJSONActionResources.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIps201ApplicationJSONActionStatusEnum.java
@@ -411,7 +376,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIps201Appli
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIps201ApplicationJSONFloatingIp.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIps201ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostFloatingIpsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PutFloatingIpsIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutFloatingIpsIdUpdateFloatingIPRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutFloatingIpsIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutFloatingIpsId200ApplicationJSONFloatingIpDnsPtr.java
@@ -421,7 +385,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PutFloatingIpsId200Appl
 lib/src/main/java/org/openapis/openapi/models/operations/PutFloatingIpsId200ApplicationJSONFloatingIp.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutFloatingIpsId200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutFloatingIpsIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetIsosQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetIsosRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetIsos200ApplicationJSONIsosTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetIsos200ApplicationJSONIsos.java
@@ -429,16 +392,13 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetIsos200ApplicationJS
 lib/src/main/java/org/openapis/openapi/models/operations/GetIsos200ApplicationJSONMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetIsos200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetIsosResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetIsosIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetIsosIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetIsosId200ApplicationJSONIsoTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetIsosId200ApplicationJSONIso.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetIsosId200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetIsosIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdActionsPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdActionsSortParameterSortEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdActionsStatusParameterStatusEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdActionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdActionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdActionsActionsResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdActionsActionsResponseActionResources.java
@@ -448,7 +408,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdActionsActio
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdActionsActionsResponseMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdActionsActionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdActionsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdActionsActionIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdActionsActionIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdActionsActionIdActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdActionsActionIdActionResponseActionResources.java
@@ -456,7 +415,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdActionsActio
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdActionsActionIdActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdActionsActionIdActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdActionsActionIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostImagesIdActionsChangeProtectionPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostImagesIdActionsChangeProtectionRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostImagesIdActionsChangeProtectionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostImagesIdActionsChangeProtectionActionResponseActionError.java
@@ -465,13 +423,11 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostImagesIdActionsChan
 lib/src/main/java/org/openapis/openapi/models/operations/PostImagesIdActionsChangeProtectionActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostImagesIdActionsChangeProtectionActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostImagesIdActionsChangeProtectionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/DeleteImagesIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteImagesIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteImagesIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesSortEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesTypeEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetImagesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImages200ApplicationJSONImagesCreatedFrom.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImages200ApplicationJSONImagesOsFlavorEnum.java
@@ -483,7 +439,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetImages200Application
 lib/src/main/java/org/openapis/openapi/models/operations/GetImages200ApplicationJSONMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImages200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesId200ApplicationJSONImageCreatedFrom.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesId200ApplicationJSONImageOsFlavorEnum.java
@@ -493,7 +448,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetImagesId200Applicati
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesId200ApplicationJSONImage.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesId200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PutImagesIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutImagesIdUpdateImageRequestTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutImagesIdUpdateImageRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutImagesIdRequest.java
@@ -505,10 +459,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/PutImagesId200Applicati
 lib/src/main/java/org/openapis/openapi/models/operations/PutImagesId200ApplicationJSONImage.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutImagesId200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutImagesIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdActionsPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdActionsSortParameterSortEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdActionsStatusParameterStatusEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdActionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdActionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdActionsActionsResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdActionsActionsResponseActionResources.java
@@ -518,7 +470,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdActio
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdActionsActionsResponseMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdActionsActionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdActionsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdActionsActionIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdActionsActionIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdActionsActionIdActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdActionsActionIdActionResponseActionResources.java
@@ -526,7 +477,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdActio
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdActionsActionIdActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdActionsActionIdActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdActionsActionIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAddServicePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAddServiceLoadBalancerServiceLoadBalancerServiceHealthCheckHttp.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAddServiceLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAddServiceLoadBalancerServiceLoadBalancerServiceHealthCheck.java
@@ -540,7 +490,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActi
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAddServiceActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAddServiceActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAddServiceResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAddTargetPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAddTargetAddTargetRequestIp.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAddTargetAddTargetRequestLabelSelector.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAddTargetAddTargetRequestServer.java
@@ -553,7 +502,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActi
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAddTargetActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAddTargetActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAddTargetResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAttachToNetworkPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAttachToNetworkRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAttachToNetworkRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAttachToNetworkActionResponseActionError.java
@@ -562,7 +510,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActi
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAttachToNetworkActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAttachToNetworkActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsAttachToNetworkResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeAlgorithmPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeAlgorithmRequestBodyTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeAlgorithmRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeAlgorithmRequest.java
@@ -572,7 +519,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActi
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeAlgorithmActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeAlgorithmActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeAlgorithmResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeDnsPtrPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeDnsPtrChangeLoadbalancerDnsPtrRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeDnsPtrRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeDnsPtrActionResponseActionError.java
@@ -581,7 +527,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActi
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeDnsPtrActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeDnsPtrActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeDnsPtrResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeProtectionPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeProtectionRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeProtectionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeProtectionActionResponseActionError.java
@@ -590,7 +535,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActi
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeProtectionActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeProtectionActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeProtectionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeTypePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeTypeChangeTypeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeTypeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeTypeActionResponseActionError.java
@@ -599,7 +543,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActi
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeTypeActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeTypeActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsChangeTypeResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDeleteServicePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDeleteServiceRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDeleteServiceRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDeleteServiceActionResponseActionError.java
@@ -608,7 +551,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActi
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDeleteServiceActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDeleteServiceActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDeleteServiceResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDetachFromNetworkPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDetachFromNetworkRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDetachFromNetworkRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDetachFromNetworkActionResponseActionError.java
@@ -617,7 +559,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActi
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDetachFromNetworkActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDetachFromNetworkActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDetachFromNetworkResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDisablePublicInterfacePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDisablePublicInterfaceRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDisablePublicInterfaceActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDisablePublicInterfaceActionResponseActionResources.java
@@ -625,7 +566,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActi
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDisablePublicInterfaceActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDisablePublicInterfaceActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsDisablePublicInterfaceResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsEnablePublicInterfacePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsEnablePublicInterfaceRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsEnablePublicInterfaceActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsEnablePublicInterfaceActionResponseActionResources.java
@@ -633,7 +573,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActi
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsEnablePublicInterfaceActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsEnablePublicInterfaceActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsEnablePublicInterfaceResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsRemoveTargetPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequestIp.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequestLabelSelector.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequestServer.java
@@ -646,7 +585,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActi
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsRemoveTargetActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsRemoveTargetActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsRemoveTargetResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsUpdateServicePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHealthCheckHttp.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHealthCheckProtocolEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHealthCheck.java
@@ -660,7 +598,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActi
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsUpdateServiceActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsUpdateServiceActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersIdActionsUpdateServiceResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancerTypesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancerTypesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancerTypes200ApplicationJSONLoadBalancerTypesPricesPriceHourly.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancerTypes200ApplicationJSONLoadBalancerTypesPricesPriceMonthly.java
@@ -668,7 +605,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancerTypes200
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancerTypes200ApplicationJSONLoadBalancerTypes.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancerTypes200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancerTypesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancerTypesIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancerTypesIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancerTypesId200ApplicationJSONLoadBalancerTypePricesPriceHourly.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancerTypesId200ApplicationJSONLoadBalancerTypePricesPriceMonthly.java
@@ -676,11 +612,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancerTypesId2
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancerTypesId200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancerTypesIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/DeleteLoadBalancersIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteLoadBalancersIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteLoadBalancersIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersSortEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancers200ApplicationJSONLoadBalancersAlgorithmTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancers200ApplicationJSONLoadBalancersAlgorithm.java
@@ -716,7 +650,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancers200Appl
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancers200ApplicationJSONMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancers200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersId200ApplicationJSONLoadBalancerAlgorithmTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersId200ApplicationJSONLoadBalancerAlgorithm.java
@@ -750,9 +683,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersId200Ap
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersId200ApplicationJSONLoadBalancer.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersId200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdMetricsPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdMetricsTypeEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdMetricsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdMetricsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdMetrics200ApplicationJSONMetricsTimeSeries.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLoadBalancersIdMetrics200ApplicationJSONMetrics.java
@@ -779,7 +710,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersCreate
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTarget.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersCreateLoadBalancerRequest.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancers201ApplicationJSONActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancers201ApplicationJSONActionResources.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancers201ApplicationJSONActionStatusEnum.java
@@ -816,7 +746,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancers201App
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancers201ApplicationJSONLoadBalancer.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancers201ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostLoadBalancersResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PutLoadBalancersIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutLoadBalancersIdRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutLoadBalancersIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutLoadBalancersId200ApplicationJSONLoadBalancerAlgorithmTypeEnum.java
@@ -851,20 +780,16 @@ lib/src/main/java/org/openapis/openapi/models/operations/PutLoadBalancersId200Ap
 lib/src/main/java/org/openapis/openapi/models/operations/PutLoadBalancersId200ApplicationJSONLoadBalancer.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutLoadBalancersId200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutLoadBalancersIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetLocationsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLocationsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLocations200ApplicationJSONLocations.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLocations200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLocationsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetLocationsIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLocationsIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLocationsId200ApplicationJSONLocation.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLocationsId200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLocationsIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdActionsPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdActionsSortParameterSortEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdActionsStatusParameterStatusEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdActionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdActionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdActionsActionsResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdActionsActionsResponseActionResources.java
@@ -874,7 +799,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdActionsAct
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdActionsActionsResponseMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdActionsActionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdActionsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdActionsActionIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdActionsActionIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdActionsActionIdActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdActionsActionIdActionResponseActionResources.java
@@ -882,7 +806,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdActionsAct
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdActionsActionIdActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdActionsActionIdActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdActionsActionIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsAddRoutePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsAddRouteAddDeleteRouteRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsAddRouteRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsAddRouteActionResponseActionError.java
@@ -891,7 +814,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsAd
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsAddRouteActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsAddRouteActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsAddRouteResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsAddSubnetPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsAddSubnetAddSubnetRequestTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsAddSubnetAddSubnetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsAddSubnetRequest.java
@@ -901,7 +823,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsAd
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsAddSubnetActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsAddSubnetActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsAddSubnetResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsChangeIpRangePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsChangeIPRangeChangeIPRangeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsChangeIpRangeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsChangeIpRangeActionResponseActionError.java
@@ -910,7 +831,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsCh
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsChangeIpRangeActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsChangeIpRangeActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsChangeIpRangeResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsChangeProtectionPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsChangeProtectionChangeProtectionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsChangeProtectionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsChangeProtectionActionResponseActionError.java
@@ -919,7 +839,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsCh
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsChangeProtectionActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsChangeProtectionActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsChangeProtectionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsDeleteRoutePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsDeleteRouteAddDeleteRouteRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsDeleteRouteRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsDeleteRouteActionResponseActionError.java
@@ -928,7 +847,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsDe
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsDeleteRouteActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsDeleteRouteActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsDeleteRouteResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsDeleteSubnetPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsDeleteSubnetDeleteSubnetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsDeleteSubnetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsDeleteSubnetActionResponseActionError.java
@@ -937,10 +855,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsDe
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsDeleteSubnetActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsDeleteSubnetActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksIdActionsDeleteSubnetResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/DeleteNetworksIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteNetworksIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteNetworksIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworks200ApplicationJSONMetaPagination.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworks200ApplicationJSONMeta.java
@@ -951,7 +867,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetNetworks200Applicati
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworks200ApplicationJSONNetworks.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworks200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksId200ApplicationJSONNetworkProtection.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNetworksId200ApplicationJSONNetworkRoutes.java
@@ -965,7 +880,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksCreateNetwo
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksCreateNetworkRequestSubnetsTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksCreateNetworkRequestSubnets.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksCreateNetworkRequest.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworks201ApplicationJSONNetworkProtection.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworks201ApplicationJSONNetworkRoutes.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworks201ApplicationJSONNetworkSubnetsTypeEnum.java
@@ -973,7 +887,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostNetworks201Applicat
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworks201ApplicationJSONNetwork.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworks201ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostNetworksResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PutNetworksIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutNetworksIdUpdateNetworkRequestLabels.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutNetworksIdUpdateNetworkRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutNetworksIdRequest.java
@@ -984,12 +897,10 @@ lib/src/main/java/org/openapis/openapi/models/operations/PutNetworksId200Applica
 lib/src/main/java/org/openapis/openapi/models/operations/PutNetworksId200ApplicationJSONNetwork.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutNetworksId200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutNetworksIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/DeletePlacementGroupsIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeletePlacementGroupsIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeletePlacementGroupsIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPlacementGroupsSortEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPlacementGroupsTypeParameterTypeEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPlacementGroupsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPlacementGroupsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPlacementGroupsPlacementGroupsResponseMetaPagination.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPlacementGroupsPlacementGroupsResponseMeta.java
@@ -997,7 +908,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetPlacementGroupsPlace
 lib/src/main/java/org/openapis/openapi/models/operations/GetPlacementGroupsPlacementGroupsResponsePlacementGroup.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPlacementGroupsPlacementGroupsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPlacementGroupsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPlacementGroupsIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPlacementGroupsIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPlacementGroupsIdPlacementGroupResponsePlacementGroupTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPlacementGroupsIdPlacementGroupResponsePlacementGroup.java
@@ -1005,7 +915,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetPlacementGroupsIdPla
 lib/src/main/java/org/openapis/openapi/models/operations/GetPlacementGroupsIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPlacementGroupsCreatePlacementGroupRequestTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPlacementGroupsCreatePlacementGroupRequest.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostPlacementGroupsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPlacementGroupsCreatePlacementGroupResponseNullableActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPlacementGroupsCreatePlacementGroupResponseNullableActionResources.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPlacementGroupsCreatePlacementGroupResponseNullableActionStatusEnum.java
@@ -1014,7 +923,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostPlacementGroupsCrea
 lib/src/main/java/org/openapis/openapi/models/operations/PostPlacementGroupsCreatePlacementGroupResponsePlacementGroup.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPlacementGroupsCreatePlacementGroupResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPlacementGroupsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PutPlacementGroupsIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutPlacementGroupsIdUpdatePlacementGroupRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutPlacementGroupsIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutPlacementGroupsIdPlacementGroupResponsePlacementGroupTypeEnum.java
@@ -1050,7 +958,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetPricing200Applicatio
 lib/src/main/java/org/openapis/openapi/models/operations/GetPricing200ApplicationJSONPricing.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPricing200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPricingResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsAssignPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsAssignAssignPrimaryIPRequestAssigneeTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsAssignAssignPrimaryIPRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsAssignRequest.java
@@ -1060,7 +967,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActions
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsAssignActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsAssignActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsAssignResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsChangeDnsPtrPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsChangeDnsPtrChangeDNSPTRRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsChangeDnsPtrRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsChangeDnsPtrActionResponseActionError.java
@@ -1069,7 +975,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActions
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsChangeDnsPtrActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsChangeDnsPtrActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsChangeDnsPtrResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsChangeProtectionPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsChangeProtectionChangeProtectionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsChangeProtectionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsChangeProtectionActionResponseActionError.java
@@ -1078,7 +983,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActions
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsChangeProtectionActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsChangeProtectionActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsChangeProtectionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsUnassignPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsUnassignRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsUnassignActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsUnassignActionResponseActionResources.java
@@ -1086,11 +990,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActions
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsUnassignActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsUnassignActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsIdActionsUnassignResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/DeletePrimaryIpsIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeletePrimaryIpsIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeletePrimaryIpsIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPrimaryIpsSortEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPrimaryIpsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPrimaryIpsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPrimaryIpsPrimaryIPsResponseMetaPagination.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPrimaryIpsPrimaryIPsResponseMeta.java
@@ -1104,7 +1006,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetPrimaryIpsPrimaryIPs
 lib/src/main/java/org/openapis/openapi/models/operations/GetPrimaryIpsPrimaryIPsResponsePrimaryIP.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPrimaryIpsPrimaryIPsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPrimaryIpsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPrimaryIpsIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPrimaryIpsIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPrimaryIpsIdPrimaryIPResponsePrimaryIPAssigneeTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPrimaryIpsIdPrimaryIPResponsePrimaryIPDatacenterLocation.java
@@ -1119,7 +1020,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetPrimaryIpsIdResponse
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsCreatePrimaryIPRequestAssigneeTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsCreatePrimaryIPRequestTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsCreatePrimaryIPRequest.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsCreatePrimaryIPResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsCreatePrimaryIPResponseActionResources.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsCreatePrimaryIPResponseActionStatusEnum.java
@@ -1134,7 +1034,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsCreatePri
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsCreatePrimaryIPResponsePrimaryIP.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsCreatePrimaryIPResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPrimaryIpsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PutPrimaryIpsIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutPrimaryIpsIdUpdatePrimaryIPRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutPrimaryIpsIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutPrimaryIpsIdPrimaryIPResponsePrimaryIPAssigneeTypeEnum.java
@@ -1147,37 +1046,30 @@ lib/src/main/java/org/openapis/openapi/models/operations/PutPrimaryIpsIdPrimaryI
 lib/src/main/java/org/openapis/openapi/models/operations/PutPrimaryIpsIdPrimaryIPResponsePrimaryIP.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutPrimaryIpsIdPrimaryIPResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutPrimaryIpsIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/DeleteSshKeysIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteSshKeysIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteSshKeysIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSshKeysSortEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetSshKeysQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSshKeysRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSshKeys200ApplicationJSONMetaPagination.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSshKeys200ApplicationJSONMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSshKeys200ApplicationJSONSshKeys.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSshKeys200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSshKeysResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetSshKeysIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSshKeysIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSshKeysId200ApplicationJSONSshKey.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSshKeysId200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSshKeysIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostSshKeysRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostSshKeysRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostSshKeys201ApplicationJSONSshKey.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostSshKeys201ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostSshKeysResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PutSshKeysIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutSshKeysIdRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutSshKeysIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutSshKeysId200ApplicationJSONSshKey.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutSshKeysId200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutSshKeysIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdActionsPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdActionsSortParameterSortEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdActionsStatusParameterStatusEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdActionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdActionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdActionsActionsResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdActionsActionsResponseActionResources.java
@@ -1187,7 +1079,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdActionsActi
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdActionsActionsResponseMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdActionsActionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdActionsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdActionsActionIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdActionsActionIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdActionsActionIdActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdActionsActionIdActionResponseActionResources.java
@@ -1195,7 +1086,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdActionsActi
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdActionsActionIdActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdActionsActionIdActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdActionsActionIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAddToPlacementGroupPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAddToPlacementGroupAddToPlacementGroupRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAddToPlacementGroupRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAddToPlacementGroupActionResponseActionError.java
@@ -1204,7 +1094,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAdd
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAddToPlacementGroupActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAddToPlacementGroupActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAddToPlacementGroupResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAttachIsoPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAttachIsoRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAttachIsoRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAttachIsoActionResponseActionError.java
@@ -1213,7 +1102,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAtt
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAttachIsoActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAttachIsoActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAttachIsoResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAttachToNetworkPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAttachToNetworkAttachToNetworkRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAttachToNetworkRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAttachToNetworkActionResponseActionError.java
@@ -1222,7 +1110,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAtt
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAttachToNetworkActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAttachToNetworkActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsAttachToNetworkResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeAliasIpsPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeAliasIpsRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeAliasIpsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeAliasIpsActionResponseActionError.java
@@ -1231,7 +1118,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsCha
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeAliasIpsActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeAliasIpsActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeAliasIpsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeDnsPtrPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeDnsPtrRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeDnsPtrRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeDnsPtrActionResponseActionError.java
@@ -1240,7 +1126,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsCha
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeDnsPtrActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeDnsPtrActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeDnsPtrResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeProtectionPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeProtectionRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeProtectionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeProtectionActionResponseActionError.java
@@ -1249,7 +1134,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsCha
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeProtectionActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeProtectionActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeProtectionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeTypePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeTypeRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeTypeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeTypeActionResponseActionError.java
@@ -1258,7 +1142,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsCha
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeTypeActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeTypeActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsChangeTypeResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsCreateImagePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsCreateImageCreateImageRequestLabels.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsCreateImageCreateImageRequestTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsCreateImageCreateImageRequest.java
@@ -1275,7 +1158,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsCre
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsCreateImage201ApplicationJSONImage.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsCreateImage201ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsCreateImageResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDetachFromNetworkPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDetachFromNetworkDetachFromNetworkRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDetachFromNetworkRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDetachFromNetworkActionResponseActionError.java
@@ -1284,7 +1166,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDet
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDetachFromNetworkActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDetachFromNetworkActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDetachFromNetworkResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDetachIsoPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDetachIsoRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDetachIsoActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDetachIsoActionResponseActionResources.java
@@ -1292,7 +1173,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDet
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDetachIsoActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDetachIsoActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDetachIsoResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDisableBackupPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDisableBackupRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDisableBackupActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDisableBackupActionResponseActionResources.java
@@ -1300,7 +1180,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDis
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDisableBackupActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDisableBackupActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDisableBackupResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDisableRescuePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDisableRescueRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDisableRescueActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDisableRescueActionResponseActionResources.java
@@ -1308,7 +1187,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDis
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDisableRescueActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDisableRescueActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsDisableRescueResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsEnableBackupPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsEnableBackupRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsEnableBackupActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsEnableBackupActionResponseActionResources.java
@@ -1316,7 +1194,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsEna
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsEnableBackupActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsEnableBackupActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsEnableBackupResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsEnableRescuePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsEnableRescueRequestBodyTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsEnableRescueRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsEnableRescueRequest.java
@@ -1326,7 +1203,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsEna
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsEnableRescue201ApplicationJSONAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsEnableRescue201ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsEnableRescueResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsPoweroffPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsPoweroffRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsPoweroffActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsPoweroffActionResponseActionResources.java
@@ -1334,7 +1210,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsPow
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsPoweroffActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsPoweroffActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsPoweroffResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsPoweronPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsPoweronRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsPoweronActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsPoweronActionResponseActionResources.java
@@ -1342,7 +1217,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsPow
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsPoweronActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsPoweronActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsPoweronResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRebootPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRebootRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRebootActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRebootActionResponseActionResources.java
@@ -1350,7 +1224,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsReb
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRebootActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRebootActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRebootResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRebuildPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRebuildRebuildServerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRebuildRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRebuild201ApplicationJSONActionError.java
@@ -1359,7 +1232,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsReb
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRebuild201ApplicationJSONAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRebuild201ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRebuildResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRemoveFromPlacementGroupPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRemoveFromPlacementGroupRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRemoveFromPlacementGroupActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRemoveFromPlacementGroupActionResponseActionResources.java
@@ -1367,7 +1239,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRem
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRemoveFromPlacementGroupActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRemoveFromPlacementGroupActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRemoveFromPlacementGroupResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRequestConsolePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRequestConsoleRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRequestConsole201ApplicationJSONActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRequestConsole201ApplicationJSONActionResources.java
@@ -1375,7 +1246,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsReq
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRequestConsole201ApplicationJSONAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRequestConsole201ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRequestConsoleResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsResetPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsResetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsResetActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsResetActionResponseActionResources.java
@@ -1383,7 +1253,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRes
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsResetActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsResetActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsResetResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsResetPasswordPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsResetPasswordRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsResetPassword201ApplicationJSONActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsResetPassword201ApplicationJSONActionResources.java
@@ -1391,7 +1260,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsRes
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsResetPassword201ApplicationJSONAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsResetPassword201ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsResetPasswordResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsShutdownPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsShutdownRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsShutdownActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsShutdownActionResponseActionResources.java
@@ -1399,7 +1267,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsShu
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsShutdownActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsShutdownActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersIdActionsShutdownResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetServerTypesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServerTypesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServerTypes200ApplicationJSONServerTypesCpuTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServerTypes200ApplicationJSONServerTypesPricesPriceHourly.java
@@ -1409,7 +1276,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetServerTypes200Applic
 lib/src/main/java/org/openapis/openapi/models/operations/GetServerTypes200ApplicationJSONServerTypes.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServerTypes200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServerTypesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetServerTypesIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServerTypesIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServerTypesId200ApplicationJSONServerTypeCpuTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServerTypesId200ApplicationJSONServerTypePricesPriceHourly.java
@@ -1419,7 +1285,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetServerTypesId200Appl
 lib/src/main/java/org/openapis/openapi/models/operations/GetServerTypesId200ApplicationJSONServerType.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServerTypesId200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServerTypesIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/DeleteServersIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteServersIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteServersId200ApplicationJSONActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteServersId200ApplicationJSONActionResources.java
@@ -1429,7 +1294,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DeleteServersId200Appli
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteServersIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersSortEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersStatusEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetServersQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServers200ApplicationJSONMetaPagination.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServers200ApplicationJSONMeta.java
@@ -1464,7 +1328,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetServers200Applicatio
 lib/src/main/java/org/openapis/openapi/models/operations/GetServers200ApplicationJSONServers.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServers200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersId200ApplicationJSONServerDatacenterLocation.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersId200ApplicationJSONServerDatacenterServerTypes.java
@@ -1497,9 +1360,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetServersId200Applicat
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersId200ApplicationJSONServer.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersId200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdMetricsPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdMetricsTypeEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdMetricsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdMetricsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdMetrics200ApplicationJSONMetricsTimeSeries.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdMetrics200ApplicationJSONMetrics.java
@@ -1508,7 +1369,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetServersIdMetricsResp
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersCreateServerRequestFirewalls.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersCreateServerRequestPublicNet.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersCreateServerRequest.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostServersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersCreateServerResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersCreateServerResponseActionResources.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersCreateServerResponseActionStatusEnum.java
@@ -1544,7 +1404,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostServersCreateServer
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersCreateServerResponseServer.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersCreateServerResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostServersResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PutServersIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutServersIdUpdateServerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutServersIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutServersId200ApplicationJSONServerDatacenterLocation.java
@@ -1578,10 +1437,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/PutServersId200Applicat
 lib/src/main/java/org/openapis/openapi/models/operations/PutServersId200ApplicationJSONServer.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutServersId200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutServersIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdActionsPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdActionsSortParameterSortEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdActionsStatusParameterStatusEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdActionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdActionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdActionsActionsResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdActionsActionsResponseActionResources.java
@@ -1591,7 +1448,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdActionsActi
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdActionsActionsResponseMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdActionsActionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdActionsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdActionsActionIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdActionsActionIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdActionsActionIdActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdActionsActionIdActionResponseActionResources.java
@@ -1599,7 +1455,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdActionsActi
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdActionsActionIdActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdActionsActionIdActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdActionsActionIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsAttachPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsAttachAttachVolumeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsAttachRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsAttachActionResponseActionError.java
@@ -1608,7 +1463,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsAtt
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsAttachActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsAttachActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsAttachResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsChangeProtectionPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsChangeProtectionRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsChangeProtectionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsChangeProtectionActionResponseActionError.java
@@ -1617,7 +1471,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsCha
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsChangeProtectionActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsChangeProtectionActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsChangeProtectionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsDetachPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsDetachRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsDetachActionResponseActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsDetachActionResponseActionResources.java
@@ -1625,7 +1478,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsDet
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsDetachActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsDetachActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsDetachResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsResizePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsResizeRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsResizeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsResizeActionResponseActionError.java
@@ -1634,12 +1486,10 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsRes
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsResizeActionResponseAction.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsResizeActionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesIdActionsResizeResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/DeleteVolumesIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteVolumesIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteVolumesIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesSortEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesStatusEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumes200ApplicationJSONMetaPagination.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumes200ApplicationJSONMeta.java
@@ -1649,7 +1499,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetVolumes200Applicatio
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumes200ApplicationJSONVolumes.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumes200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesId200ApplicationJSONVolumeLocation.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesId200ApplicationJSONVolumeProtection.java
@@ -1658,7 +1507,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesId200Applicat
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesId200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVolumesIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesCreateVolumeRequest.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumes201ApplicationJSONActionError.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumes201ApplicationJSONActionResources.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumes201ApplicationJSONActionStatusEnum.java
@@ -1669,7 +1517,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostVolumes201Applicati
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumes201ApplicationJSONVolume.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumes201ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVolumesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PutVolumesIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutVolumesIdUpdateVolumeRequestLabels.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutVolumesIdUpdateVolumeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutVolumesIdRequest.java

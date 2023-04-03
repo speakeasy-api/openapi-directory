@@ -34,25 +34,26 @@ public class Projects {
     /**
      * Retrieve all attachments associated with a support case.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsupportProjectsCasesAttachmentsListResponse cloudsupportProjectsCasesAttachmentsList(org.openapis.openapi.models.operations.CloudsupportProjectsCasesAttachmentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsupportProjectsCasesAttachmentsListResponse cloudsupportProjectsCasesAttachmentsList(org.openapis.openapi.models.operations.CloudsupportProjectsCasesAttachmentsListRequest request, org.openapis.openapi.models.operations.CloudsupportProjectsCasesAttachmentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportProjectsCasesAttachmentsListPathParams.class, baseUrl, "/v2beta/{parent}/attachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportProjectsCasesAttachmentsListRequest.class, baseUrl, "/v2beta/{parent}/attachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportProjectsCasesAttachmentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportProjectsCasesAttachmentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class Projects {
     /**
      * Close the specified case.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsupportProjectsCasesCloseResponse cloudsupportProjectsCasesClose(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCloseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsupportProjectsCasesCloseResponse cloudsupportProjectsCasesClose(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCloseRequest request, org.openapis.openapi.models.operations.CloudsupportProjectsCasesCloseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportProjectsCasesClosePathParams.class, baseUrl, "/v2beta/{name}:close", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCloseRequest.class, baseUrl, "/v2beta/{name}:close", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCloseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCloseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,27 +128,28 @@ public class Projects {
     /**
      * Add a new comment to the specified Case. The comment object must have the following fields set: body.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsupportProjectsCasesCommentsCreateResponse cloudsupportProjectsCasesCommentsCreate(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCommentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsupportProjectsCasesCommentsCreateResponse cloudsupportProjectsCasesCommentsCreate(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCommentsCreateRequest request, org.openapis.openapi.models.operations.CloudsupportProjectsCasesCommentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCommentsCreatePathParams.class, baseUrl, "/v2beta/{parent}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCommentsCreateRequest.class, baseUrl, "/v2beta/{parent}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "commentInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCommentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCommentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,25 +176,26 @@ public class Projects {
     /**
      * Retrieve all Comments associated with the Case object.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsupportProjectsCasesCommentsListResponse cloudsupportProjectsCasesCommentsList(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCommentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsupportProjectsCasesCommentsListResponse cloudsupportProjectsCasesCommentsList(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCommentsListRequest request, org.openapis.openapi.models.operations.CloudsupportProjectsCasesCommentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCommentsListPathParams.class, baseUrl, "/v2beta/{parent}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCommentsListRequest.class, baseUrl, "/v2beta/{parent}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCommentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCommentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,27 +222,28 @@ public class Projects {
     /**
      * Create a new case and associate it with the given Cloud resource. The case object must have the following fields set: display_name, description, classification, and severity.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsupportProjectsCasesCreateResponse cloudsupportProjectsCasesCreate(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsupportProjectsCasesCreateResponse cloudsupportProjectsCasesCreate(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCreateRequest request, org.openapis.openapi.models.operations.CloudsupportProjectsCasesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCreatePathParams.class, baseUrl, "/v2beta/{parent}/cases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCreateRequest.class, baseUrl, "/v2beta/{parent}/cases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "caseInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportProjectsCasesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -265,27 +270,28 @@ public class Projects {
     /**
      * Escalate a case. Escalating a case will initiate the Cloud Support escalation management process. This operation is only available to certain Customer Care tiers. Go to https://cloud.google.com/support and look for 'Technical support escalations' in the feature list to find out which tiers are able to perform escalations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsupportProjectsCasesEscalateResponse cloudsupportProjectsCasesEscalate(org.openapis.openapi.models.operations.CloudsupportProjectsCasesEscalateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsupportProjectsCasesEscalateResponse cloudsupportProjectsCasesEscalate(org.openapis.openapi.models.operations.CloudsupportProjectsCasesEscalateRequest request, org.openapis.openapi.models.operations.CloudsupportProjectsCasesEscalateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportProjectsCasesEscalatePathParams.class, baseUrl, "/v2beta/{name}:escalate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportProjectsCasesEscalateRequest.class, baseUrl, "/v2beta/{name}:escalate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "escalateCaseRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportProjectsCasesEscalateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportProjectsCasesEscalateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -312,25 +318,26 @@ public class Projects {
     /**
      * Retrieve the specified case.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsupportProjectsCasesGetResponse cloudsupportProjectsCasesGet(org.openapis.openapi.models.operations.CloudsupportProjectsCasesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsupportProjectsCasesGetResponse cloudsupportProjectsCasesGet(org.openapis.openapi.models.operations.CloudsupportProjectsCasesGetRequest request, org.openapis.openapi.models.operations.CloudsupportProjectsCasesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportProjectsCasesGetPathParams.class, baseUrl, "/v2beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportProjectsCasesGetRequest.class, baseUrl, "/v2beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportProjectsCasesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportProjectsCasesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -357,25 +364,26 @@ public class Projects {
     /**
      * Retrieve all cases under the specified parent. Note: Listing cases under an Organization returns only the cases directly parented by that organization. To retrieve all cases under an organization, including cases parented by projects under that organization, use `cases.search`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsupportProjectsCasesListResponse cloudsupportProjectsCasesList(org.openapis.openapi.models.operations.CloudsupportProjectsCasesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsupportProjectsCasesListResponse cloudsupportProjectsCasesList(org.openapis.openapi.models.operations.CloudsupportProjectsCasesListRequest request, org.openapis.openapi.models.operations.CloudsupportProjectsCasesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportProjectsCasesListPathParams.class, baseUrl, "/v2beta/{parent}/cases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportProjectsCasesListRequest.class, baseUrl, "/v2beta/{parent}/cases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportProjectsCasesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportProjectsCasesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -402,27 +410,28 @@ public class Projects {
     /**
      * Update the specified case. Only a subset of fields can be updated.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsupportProjectsUpdateCasesResponse cloudsupportProjectsUpdateCases(org.openapis.openapi.models.operations.CloudsupportProjectsUpdateCasesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsupportProjectsUpdateCasesResponse cloudsupportProjectsUpdateCases(org.openapis.openapi.models.operations.CloudsupportProjectsUpdateCasesRequest request, org.openapis.openapi.models.operations.CloudsupportProjectsUpdateCasesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportProjectsUpdateCasesPathParams.class, baseUrl, "/v2beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportProjectsUpdateCasesRequest.class, baseUrl, "/v2beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "caseInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportProjectsUpdateCasesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportProjectsUpdateCasesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

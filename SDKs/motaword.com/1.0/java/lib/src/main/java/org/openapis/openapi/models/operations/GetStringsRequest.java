@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStringsRequest {
+    /**
+     * Requested page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetStringsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetStringsQueryParams queryParams;
-    public GetStringsRequest withQueryParams(GetStringsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Source Language Code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source_language")
+    public String sourceLanguage;
+    public GetStringsRequest withSourceLanguage(String sourceLanguage) {
+        this.sourceLanguage = sourceLanguage;
         return this;
     }
     

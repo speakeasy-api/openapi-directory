@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteVodRegionsRequest {
-    
-    public DeleteVodRegionsPathParams pathParams;
-    public DeleteVodRegionsRequest withPathParams(DeleteVodRegionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.ondemand.region+json")
-    public DeleteVodRegionsRequestBody request;
-    public DeleteVodRegionsRequest withRequest(DeleteVodRegionsRequestBody request) {
-        this.request = request;
+    public DeleteVodRegionsRequestBody requestBody;
+    public DeleteVodRegionsRequest withRequestBody(DeleteVodRegionsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public DeleteVodRegionsSecurity security;
-    public DeleteVodRegionsRequest withSecurity(DeleteVodRegionsSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public DeleteVodRegionsRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
         return this;
     }
     

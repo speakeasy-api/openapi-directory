@@ -34,25 +34,26 @@ public class InstantSnapshots {
     /**
      * Retrieves an aggregated list of instantSnapshots.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstantSnapshotsAggregatedListResponse computeInstantSnapshotsAggregatedList(org.openapis.openapi.models.operations.ComputeInstantSnapshotsAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstantSnapshotsAggregatedListResponse computeInstantSnapshotsAggregatedList(org.openapis.openapi.models.operations.ComputeInstantSnapshotsAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeInstantSnapshotsAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstantSnapshotsAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/instantSnapshots", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstantSnapshotsAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/instantSnapshots", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstantSnapshotsAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstantSnapshotsAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class InstantSnapshots {
     /**
      * Deletes the specified InstantSnapshot resource. Keep in mind that deleting a single instantSnapshot might not necessarily delete all the data on that instantSnapshot. If any data on the instantSnapshot that is marked for deletion is needed for subsequent instantSnapshots, the data will be moved to the next corresponding instantSnapshot. For more information, see Deleting instantSnapshots.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstantSnapshotsDeleteResponse computeInstantSnapshotsDelete(org.openapis.openapi.models.operations.ComputeInstantSnapshotsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstantSnapshotsDeleteResponse computeInstantSnapshotsDelete(org.openapis.openapi.models.operations.ComputeInstantSnapshotsDeleteRequest request, org.openapis.openapi.models.operations.ComputeInstantSnapshotsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstantSnapshotsDeletePathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instantSnapshots/{instantSnapshot}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstantSnapshotsDeleteRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instantSnapshots/{instantSnapshot}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstantSnapshotsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstantSnapshotsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class InstantSnapshots {
     /**
      * Export the changed blocks between two instant snapshots to a customer's bucket in the user specified format.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstantSnapshotsExportResponse computeInstantSnapshotsExport(org.openapis.openapi.models.operations.ComputeInstantSnapshotsExportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstantSnapshotsExportResponse computeInstantSnapshotsExport(org.openapis.openapi.models.operations.ComputeInstantSnapshotsExportRequest request, org.openapis.openapi.models.operations.ComputeInstantSnapshotsExportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstantSnapshotsExportPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instantSnapshots/{instantSnapshot}/export", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstantSnapshotsExportRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instantSnapshots/{instantSnapshot}/export", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instantSnapshotsExportRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstantSnapshotsExportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstantSnapshotsExportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class InstantSnapshots {
     /**
      * Returns the specified InstantSnapshot resource in the specified zone.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetResponse computeInstantSnapshotsGet(org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetResponse computeInstantSnapshotsGet(org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetRequest request, org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instantSnapshots/{instantSnapshot}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instantSnapshots/{instantSnapshot}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,25 +220,26 @@ public class InstantSnapshots {
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetIamPolicyResponse computeInstantSnapshotsGetIamPolicy(org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetIamPolicyResponse computeInstantSnapshotsGetIamPolicy(org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetIamPolicyRequest request, org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetIamPolicyPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instantSnapshots/{resource}/getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetIamPolicyRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instantSnapshots/{resource}/getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstantSnapshotsGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,27 +266,28 @@ public class InstantSnapshots {
     /**
      * Creates an instant snapshot in the specified zone.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstantSnapshotsInsertResponse computeInstantSnapshotsInsert(org.openapis.openapi.models.operations.ComputeInstantSnapshotsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstantSnapshotsInsertResponse computeInstantSnapshotsInsert(org.openapis.openapi.models.operations.ComputeInstantSnapshotsInsertRequest request, org.openapis.openapi.models.operations.ComputeInstantSnapshotsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstantSnapshotsInsertPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instantSnapshots", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstantSnapshotsInsertRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instantSnapshots", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instantSnapshot", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstantSnapshotsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstantSnapshotsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -308,25 +314,26 @@ public class InstantSnapshots {
     /**
      * Retrieves the list of InstantSnapshot resources contained within the specified zone.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstantSnapshotsListResponse computeInstantSnapshotsList(org.openapis.openapi.models.operations.ComputeInstantSnapshotsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstantSnapshotsListResponse computeInstantSnapshotsList(org.openapis.openapi.models.operations.ComputeInstantSnapshotsListRequest request, org.openapis.openapi.models.operations.ComputeInstantSnapshotsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstantSnapshotsListPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instantSnapshots", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstantSnapshotsListRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instantSnapshots", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstantSnapshotsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstantSnapshotsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -353,27 +360,28 @@ public class InstantSnapshots {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetIamPolicyResponse computeInstantSnapshotsSetIamPolicy(org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetIamPolicyResponse computeInstantSnapshotsSetIamPolicy(org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetIamPolicyRequest request, org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetIamPolicyPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instantSnapshots/{resource}/setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetIamPolicyRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instantSnapshots/{resource}/setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "zoneSetPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -400,27 +408,28 @@ public class InstantSnapshots {
     /**
      * Sets the labels on a instantSnapshot in the given zone. To learn more about labels, read the Labeling Resources documentation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetLabelsResponse computeInstantSnapshotsSetLabels(org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetLabelsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetLabelsResponse computeInstantSnapshotsSetLabels(org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetLabelsRequest request, org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetLabelsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetLabelsPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instantSnapshots/{resource}/setLabels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetLabelsRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instantSnapshots/{resource}/setLabels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "zoneSetLabelsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetLabelsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstantSnapshotsSetLabelsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -447,27 +456,28 @@ public class InstantSnapshots {
     /**
      * Returns permissions that a caller has on the specified resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstantSnapshotsTestIamPermissionsResponse computeInstantSnapshotsTestIamPermissions(org.openapis.openapi.models.operations.ComputeInstantSnapshotsTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstantSnapshotsTestIamPermissionsResponse computeInstantSnapshotsTestIamPermissions(org.openapis.openapi.models.operations.ComputeInstantSnapshotsTestIamPermissionsRequest request, org.openapis.openapi.models.operations.ComputeInstantSnapshotsTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstantSnapshotsTestIamPermissionsPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instantSnapshots/{resource}/testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstantSnapshotsTestIamPermissionsRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instantSnapshots/{resource}/testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstantSnapshotsTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstantSnapshotsTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

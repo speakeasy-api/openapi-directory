@@ -34,10 +34,11 @@ public class APIs {
      * Scheme Certificate
      * API to verify Scheme Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EpfscResponse epfsc(org.openapis.openapi.models.operations.EpfscRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EpfscResponse epfsc(org.openapis.openapi.models.operations.EpfscRequestBody request, org.openapis.openapi.models.operations.EpfscSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/epfsc/certificate");
         
@@ -48,7 +49,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,10 +127,11 @@ public class APIs {
      * Pension Certificate
      * API to verify Pension Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PecerResponse pecer(org.openapis.openapi.models.operations.PecerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PecerResponse pecer(org.openapis.openapi.models.operations.PecerRequestBody request, org.openapis.openapi.models.operations.PecerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/pecer/certificate");
         
@@ -140,7 +142,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,10 +220,11 @@ public class APIs {
      * UAN Card
      * API to verify UAN Card.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UncrdResponse uncrd(org.openapis.openapi.models.operations.UncrdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UncrdResponse uncrd(org.openapis.openapi.models.operations.UncrdRequestBody request, org.openapis.openapi.models.operations.UncrdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/uncrd/certificate");
         
@@ -232,7 +235,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

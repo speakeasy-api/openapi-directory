@@ -4,27 +4,101 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CrashGroupsListRequest {
-    
-    public CrashGroupsListPathParams pathParams;
-    public CrashGroupsListRequest withPathParams(CrashGroupsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * the OData-like $orderby argument
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$orderby")
+    public CrashGroupsListDollarOrderbyEnum dollarOrderby;
+    public CrashGroupsListRequest withDollarOrderby(CrashGroupsListDollarOrderbyEnum dollarOrderby) {
+        this.dollarOrderby = dollarOrderby;
         return this;
     }
     
-    
-    public CrashGroupsListQueryParams queryParams;
-    public CrashGroupsListRequest withQueryParams(CrashGroupsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CrashGroupsListRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * version
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_version")
+    public String appVersion;
+    public CrashGroupsListRequest withAppVersion(String appVersion) {
+        this.appVersion = appVersion;
+        return this;
+    }
     
-    public CrashGroupsListSecurity security;
-    public CrashGroupsListRequest withSecurity(CrashGroupsListSecurity security) {
-        this.security = security;
+    /**
+     * Cassandra request continuation token. The token is used for pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=continuation_token")
+    public String continuationToken;
+    public CrashGroupsListRequest withContinuationToken(String continuationToken) {
+        this.continuationToken = continuationToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_status")
+    public CrashGroupsListGroupStatusEnum groupStatus;
+    public CrashGroupsListRequest withGroupStatus(CrashGroupsListGroupStatusEnum groupStatus) {
+        this.groupStatus = groupStatus;
+        return this;
+    }
+    
+    /**
+     * A freetext search that matches in crash, crash types, crash stack_traces and crash user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_text_search")
+    public String groupTextSearch;
+    public CrashGroupsListRequest withGroupTextSearch(String groupTextSearch) {
+        this.groupTextSearch = groupTextSearch;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_type")
+    public CrashGroupsListGroupTypeEnum groupType;
+    public CrashGroupsListRequest withGroupType(CrashGroupsListGroupTypeEnum groupType) {
+        this.groupType = groupType;
+        return this;
+    }
+    
+    /**
+     * Earliest date when the last time a crash occured in a crash group
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_occurrence_from")
+    public OffsetDateTime lastOccurrenceFrom;
+    public CrashGroupsListRequest withLastOccurrenceFrom(OffsetDateTime lastOccurrenceFrom) {
+        this.lastOccurrenceFrom = lastOccurrenceFrom;
+        return this;
+    }
+    
+    /**
+     * Latest date when the last time a crash occured in a crash group
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_occurrence_to")
+    public OffsetDateTime lastOccurrenceTo;
+    public CrashGroupsListRequest withLastOccurrenceTo(OffsetDateTime lastOccurrenceTo) {
+        this.lastOccurrenceTo = lastOccurrenceTo;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CrashGroupsListRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

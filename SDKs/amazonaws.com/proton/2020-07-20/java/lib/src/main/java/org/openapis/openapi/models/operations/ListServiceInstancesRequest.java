@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListServiceInstancesRequest {
-    
-    public ListServiceInstancesQueryParams queryParams;
-    public ListServiceInstancesRequest withQueryParams(ListServiceInstancesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListServiceInstancesHeaders headers;
-    public ListServiceInstancesRequest withHeaders(ListServiceInstancesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ListServiceInstancesInput request;
-    public ListServiceInstancesRequest withRequest(org.openapis.openapi.models.shared.ListServiceInstancesInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ListServiceInstancesInput listServiceInstancesInput;
+    public ListServiceInstancesRequest withListServiceInstancesInput(org.openapis.openapi.models.shared.ListServiceInstancesInput listServiceInstancesInput) {
+        this.listServiceInstancesInput = listServiceInstancesInput;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListServiceInstancesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListServiceInstancesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListServiceInstancesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListServiceInstancesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListServiceInstancesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListServiceInstancesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListServiceInstancesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public ListServiceInstancesXAmzTargetEnum xAmzTarget;
+    public ListServiceInstancesRequest withXAmzTarget(ListServiceInstancesXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public String maxResults;
+    public ListServiceInstancesRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListServiceInstancesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     

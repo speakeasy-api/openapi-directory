@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SessionControllerCreateLandlordLoginRequest {
-    
-    public SessionControllerCreateLandlordLoginPathParams pathParams;
-    public SessionControllerCreateLandlordLoginRequest withPathParams(SessionControllerCreateLandlordLoginPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * (Optional) The branch ID linked to the login. This will determine which in tray the request display in
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=branchID")
+    public String branchID;
+    public SessionControllerCreateLandlordLoginRequest withBranchID(String branchID) {
+        this.branchID = branchID;
         return this;
     }
     
+    /**
+     * Contact details of the landlord
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contactDetails")
+    public String contactDetails;
+    public SessionControllerCreateLandlordLoginRequest withContactDetails(String contactDetails) {
+        this.contactDetails = contactDetails;
+        return this;
+    }
     
-    public SessionControllerCreateLandlordLoginQueryParams queryParams;
-    public SessionControllerCreateLandlordLoginRequest withQueryParams(SessionControllerCreateLandlordLoginQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The email address of the landlord
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public SessionControllerCreateLandlordLoginRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    
+    /**
+     * The forename of the landlord
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forename")
+    public String forename;
+    public SessionControllerCreateLandlordLoginRequest withForename(String forename) {
+        this.forename = forename;
+        return this;
+    }
+    
+    /**
+     * Address of the property linked to the landlord
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyAddress")
+    public String propertyAddress;
+    public SessionControllerCreateLandlordLoginRequest withPropertyAddress(String propertyAddress) {
+        this.propertyAddress = propertyAddress;
+        return this;
+    }
+    
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public SessionControllerCreateLandlordLoginRequest withShortName(String shortName) {
+        this.shortName = shortName;
+        return this;
+    }
+    
+    /**
+     * The surname of the landlord
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=surname")
+    public String surname;
+    public SessionControllerCreateLandlordLoginRequest withSurname(String surname) {
+        this.surname = surname;
+        return this;
+    }
+    
+    /**
+     * The title of the landlord
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
+    public String title;
+    public SessionControllerCreateLandlordLoginRequest withTitle(String title) {
+        this.title = title;
         return this;
     }
     

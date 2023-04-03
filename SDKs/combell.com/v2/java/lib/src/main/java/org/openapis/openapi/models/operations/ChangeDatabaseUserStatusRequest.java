@@ -7,27 +7,53 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeDatabaseUserStatusRequest {
-    
-    public ChangeDatabaseUserStatusPathParams pathParams;
-    public ChangeDatabaseUserStatusRequest withPathParams(ChangeDatabaseUserStatusPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ChangeDatabaseUserStatusQueryParams queryParams;
-    public ChangeDatabaseUserStatusRequest withQueryParams(ChangeDatabaseUserStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Whether the user is enabled or not.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateUserStatusRequest request;
-    public ChangeDatabaseUserStatusRequest withRequest(org.openapis.openapi.models.shared.UpdateUserStatusRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateUserStatusRequest updateUserStatusRequest;
+    public ChangeDatabaseUserStatusRequest withUpdateUserStatusRequest(org.openapis.openapi.models.shared.UpdateUserStatusRequest updateUserStatusRequest) {
+        this.updateUserStatusRequest = updateUserStatusRequest;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=databaseName")
+    public String databaseNamePathParameter;
+    public ChangeDatabaseUserStatusRequest withDatabaseNamePathParameter(String databaseNamePathParameter) {
+        this.databaseNamePathParameter = databaseNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Name of the database.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=database_name")
+    public String databaseNameQueryParameter;
+    public ChangeDatabaseUserStatusRequest withDatabaseNameQueryParameter(String databaseNameQueryParameter) {
+        this.databaseNameQueryParameter = databaseNameQueryParameter;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userName")
+    public String userNamePathParameter;
+    public ChangeDatabaseUserStatusRequest withUserNamePathParameter(String userNamePathParameter) {
+        this.userNamePathParameter = userNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Name of the user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_name")
+    public String userNameQueryParameter;
+    public ChangeDatabaseUserStatusRequest withUserNameQueryParameter(String userNameQueryParameter) {
+        this.userNameQueryParameter = userNameQueryParameter;
         return this;
     }
     

@@ -4,13 +4,175 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchCalendarEventsRequest {
+    /**
+     * Comma-separated list of coach or patient ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, `filter[organization]`, or `filter[attendees]`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[attendees]")
+    public String filterAttendees;
+    public FetchCalendarEventsRequest withFilterAttendees(String filterAttendees) {
+        this.filterAttendees = filterAttendees;
+        return this;
+    }
     
-    public FetchCalendarEventsQueryParams queryParams;
-    public FetchCalendarEventsRequest withQueryParams(FetchCalendarEventsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If not specified, return all calendar events. If set to `true` return only events marked as completed, if set to `false`, return only events not marked as completed yet.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[completed]")
+    public Boolean filterCompleted;
+    public FetchCalendarEventsRequest withFilterCompleted(Boolean filterCompleted) {
+        this.filterCompleted = filterCompleted;
+        return this;
+    }
+    
+    /**
+     * The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for events completed in November 2017 (America/New_York): `filter[completed_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[completed_at]")
+    public String filterCompletedAt;
+    public FetchCalendarEventsRequest withFilterCompletedAt(String filterCompletedAt) {
+        this.filterCompletedAt = filterCompletedAt;
+        return this;
+    }
+    
+    /**
+     * The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for events created in November 2017 (America/New_York): `filter[created_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[created_at]")
+    public String filterCreatedAt;
+    public FetchCalendarEventsRequest withFilterCreatedAt(String filterCreatedAt) {
+        this.filterCreatedAt = filterCreatedAt;
+        return this;
+    }
+    
+    /**
+     * The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for events ending in November 2017 (America/New_York): `filter[end_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[end_at]")
+    public String filterEndAt;
+    public FetchCalendarEventsRequest withFilterEndAt(String filterEndAt) {
+        this.filterEndAt = filterEndAt;
+        return this;
+    }
+    
+    /**
+     * Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, `filter[organization]`, or `filter[attendees]`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[groups]")
+    public String filterGroups;
+    public FetchCalendarEventsRequest withFilterGroups(String filterGroups) {
+        this.filterGroups = filterGroups;
+        return this;
+    }
+    
+    /**
+     * Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, `filter[organization]`, or `filter[attendees]`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[organization]")
+    public String filterOrganization;
+    public FetchCalendarEventsRequest withFilterOrganization(String filterOrganization) {
+        this.filterOrganization = filterOrganization;
+        return this;
+    }
+    
+    /**
+     * Patient id to fetch calendar event. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, `filter[organization]`, or `filter[attendees]`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[patient]")
+    public String filterPatient;
+    public FetchCalendarEventsRequest withFilterPatient(String filterPatient) {
+        this.filterPatient = filterPatient;
+        return this;
+    }
+    
+    /**
+     * The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for events starting in November 2017 (America/New_York): `filter[start_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[start_at]")
+    public String filterStartAt;
+    public FetchCalendarEventsRequest withFilterStartAt(String filterStartAt) {
+        this.filterStartAt = filterStartAt;
+        return this;
+    }
+    
+    /**
+     * Calendar event type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[type]")
+    public FetchCalendarEventsFilterTypeEnum filterType;
+    public FetchCalendarEventsRequest withFilterType(FetchCalendarEventsFilterTypeEnum filterType) {
+        this.filterType = filterType;
+        return this;
+    }
+    
+    /**
+     * The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for events updated in November 2017 (America/New_York): `filter[updated_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[updated_at]")
+    public String filterUpdatedAt;
+    public FetchCalendarEventsRequest withFilterUpdatedAt(String filterUpdatedAt) {
+        this.filterUpdatedAt = filterUpdatedAt;
+        return this;
+    }
+    
+    /**
+     * List of related resources to include in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public FetchCalendarEventsIncludeEnum include;
+    public FetchCalendarEventsRequest withInclude(FetchCalendarEventsIncludeEnum include) {
+        this.include = include;
+        return this;
+    }
+    
+    /**
+     * Page cursor
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[cursor]")
+    public String pageCursor;
+    public FetchCalendarEventsRequest withPageCursor(String pageCursor) {
+        this.pageCursor = pageCursor;
+        return this;
+    }
+    
+    /**
+     * Page limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[limit]")
+    public Long pageLimit;
+    public FetchCalendarEventsRequest withPageLimit(Long pageLimit) {
+        this.pageLimit = pageLimit;
+        return this;
+    }
+    
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
+    public Long pageNumber;
+    public FetchCalendarEventsRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    
+    /**
+     * Page size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
+    public Long pageSize;
+    public FetchCalendarEventsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

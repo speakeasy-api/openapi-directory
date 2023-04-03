@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReminderProfilesCreateRequest {
-    
-    public ReminderProfilesCreateQueryParams queryParams;
-    public ReminderProfilesCreateRequest withQueryParams(ReminderProfilesCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ReminderProfilesCreateSecurity security;
-    public ReminderProfilesCreateRequest withSecurity(ReminderProfilesCreateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public ReminderProfilesCreateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     

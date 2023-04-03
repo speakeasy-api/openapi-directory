@@ -7,65 +7,65 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCmsV3DomainsGetPageSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public org.openapis.openapi.models.shared.SchemeHapikey hapikey;
-    public GetCmsV3DomainsGetPageSecurity withHapikey(org.openapis.openapi.models.shared.SchemeHapikey hapikey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=hapikey")
+    public String hapikey;
+    public GetCmsV3DomainsGetPageSecurity withHapikey(String hapikey) {
         this.hapikey = hapikey;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOauth2 oauth2;
-    public GetCmsV3DomainsGetPageSecurity withOauth2(org.openapis.openapi.models.shared.SchemeOauth2 oauth2) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oauth2;
+    public GetCmsV3DomainsGetPageSecurity withOauth2(String oauth2) {
         this.oauth2 = oauth2;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOauth2Legacy oauth2Legacy;
-    public GetCmsV3DomainsGetPageSecurity withOauth2Legacy(org.openapis.openapi.models.shared.SchemeOauth2Legacy oauth2Legacy) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oauth2Legacy;
+    public GetCmsV3DomainsGetPageSecurity withOauth2Legacy(String oauth2Legacy) {
         this.oauth2Legacy = oauth2Legacy;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOauth2Legacy oauth2Legacy1;
-    public GetCmsV3DomainsGetPageSecurity withOauth2Legacy1(org.openapis.openapi.models.shared.SchemeOauth2Legacy oauth2Legacy1) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oauth2Legacy1;
+    public GetCmsV3DomainsGetPageSecurity withOauth2Legacy1(String oauth2Legacy1) {
         this.oauth2Legacy1 = oauth2Legacy1;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOauth2 oauth3;
-    public GetCmsV3DomainsGetPageSecurity withOauth3(org.openapis.openapi.models.shared.SchemeOauth2 oauth3) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oauth3;
+    public GetCmsV3DomainsGetPageSecurity withOauth3(String oauth3) {
         this.oauth3 = oauth3;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemePrivateApps privateApps;
-    public GetCmsV3DomainsGetPageSecurity withPrivateApps(org.openapis.openapi.models.shared.SchemePrivateApps privateApps) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=private-app")
+    public String privateApps;
+    public GetCmsV3DomainsGetPageSecurity withPrivateApps(String privateApps) {
         this.privateApps = privateApps;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemePrivateApps privateApps1;
-    public GetCmsV3DomainsGetPageSecurity withPrivateApps1(org.openapis.openapi.models.shared.SchemePrivateApps privateApps1) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=private-app")
+    public String privateApps1;
+    public GetCmsV3DomainsGetPageSecurity withPrivateApps1(String privateApps1) {
         this.privateApps1 = privateApps1;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemePrivateAppsLegacy privateAppsLegacy;
-    public GetCmsV3DomainsGetPageSecurity withPrivateAppsLegacy(org.openapis.openapi.models.shared.SchemePrivateAppsLegacy privateAppsLegacy) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=private-app-legacy")
+    public String privateAppsLegacy;
+    public GetCmsV3DomainsGetPageSecurity withPrivateAppsLegacy(String privateAppsLegacy) {
         this.privateAppsLegacy = privateAppsLegacy;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemePrivateAppsLegacy privateAppsLegacy1;
-    public GetCmsV3DomainsGetPageSecurity withPrivateAppsLegacy1(org.openapis.openapi.models.shared.SchemePrivateAppsLegacy privateAppsLegacy1) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=private-app-legacy")
+    public String privateAppsLegacy1;
+    public GetCmsV3DomainsGetPageSecurity withPrivateAppsLegacy1(String privateAppsLegacy1) {
         this.privateAppsLegacy1 = privateAppsLegacy1;
         return this;
     }

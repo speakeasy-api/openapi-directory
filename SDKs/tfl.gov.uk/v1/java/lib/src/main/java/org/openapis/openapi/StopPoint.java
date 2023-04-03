@@ -39,13 +39,13 @@ public class StopPoint {
      */
     public org.openapis.openapi.models.operations.StopPointArrivalDeparturesResponse stopPointArrivalDepartures(org.openapis.openapi.models.operations.StopPointArrivalDeparturesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointArrivalDeparturesPathParams.class, baseUrl, "/StopPoint/{id}/ArrivalDepartures", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointArrivalDeparturesRequest.class, baseUrl, "/StopPoint/{id}/ArrivalDepartures", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointArrivalDeparturesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointArrivalDeparturesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -99,7 +99,7 @@ public class StopPoint {
      */
     public org.openapis.openapi.models.operations.StopPointArrivalsResponse stopPointArrivals(org.openapis.openapi.models.operations.StopPointArrivalsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointArrivalsPathParams.class, baseUrl, "/StopPoint/{id}/Arrivals", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointArrivalsRequest.class, baseUrl, "/StopPoint/{id}/Arrivals", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -153,13 +153,13 @@ public class StopPoint {
      */
     public org.openapis.openapi.models.operations.StopPointCrowdingResponse stopPointCrowding(org.openapis.openapi.models.operations.StopPointCrowdingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointCrowdingPathParams.class, baseUrl, "/StopPoint/{id}/Crowding/{line}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointCrowdingRequest.class, baseUrl, "/StopPoint/{id}/Crowding/{line}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointCrowdingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointCrowdingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -213,13 +213,13 @@ public class StopPoint {
      */
     public org.openapis.openapi.models.operations.StopPointDirectionResponse stopPointDirection(org.openapis.openapi.models.operations.StopPointDirectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointDirectionPathParams.class, baseUrl, "/StopPoint/{id}/DirectionTo/{toStopPointId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointDirectionRequest.class, baseUrl, "/StopPoint/{id}/DirectionTo/{toStopPointId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointDirectionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointDirectionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -271,13 +271,13 @@ public class StopPoint {
      */
     public org.openapis.openapi.models.operations.StopPointDisruptionResponse stopPointDisruption(org.openapis.openapi.models.operations.StopPointDisruptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointDisruptionPathParams.class, baseUrl, "/StopPoint/{ids}/Disruption", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointDisruptionRequest.class, baseUrl, "/StopPoint/{ids}/Disruption", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointDisruptionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointDisruptionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -331,13 +331,13 @@ public class StopPoint {
      */
     public org.openapis.openapi.models.operations.StopPointDisruptionByModeResponse stopPointDisruptionByMode(org.openapis.openapi.models.operations.StopPointDisruptionByModeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointDisruptionByModePathParams.class, baseUrl, "/StopPoint/Mode/{modes}/Disruption", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointDisruptionByModeRequest.class, baseUrl, "/StopPoint/Mode/{modes}/Disruption", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointDisruptionByModeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointDisruptionByModeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -391,13 +391,13 @@ public class StopPoint {
      */
     public org.openapis.openapi.models.operations.StopPointGetResponse stopPointGet(org.openapis.openapi.models.operations.StopPointGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointGetPathParams.class, baseUrl, "/StopPoint/{ids}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointGetRequest.class, baseUrl, "/StopPoint/{ids}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -457,7 +457,7 @@ public class StopPoint {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointGetByGeoPointQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointGetByGeoPointRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -511,13 +511,13 @@ public class StopPoint {
      */
     public org.openapis.openapi.models.operations.StopPointGetByModeResponse stopPointGetByMode(org.openapis.openapi.models.operations.StopPointGetByModeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointGetByModePathParams.class, baseUrl, "/StopPoint/Mode/{modes}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointGetByModeRequest.class, baseUrl, "/StopPoint/Mode/{modes}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointGetByModeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointGetByModeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -571,13 +571,13 @@ public class StopPoint {
      */
     public org.openapis.openapi.models.operations.StopPointGetBySmsResponse stopPointGetBySms(org.openapis.openapi.models.operations.StopPointGetBySmsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointGetBySmsPathParams.class, baseUrl, "/StopPoint/Sms/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointGetBySmsRequest.class, baseUrl, "/StopPoint/Sms/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointGetBySmsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointGetBySmsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -631,7 +631,7 @@ public class StopPoint {
      */
     public org.openapis.openapi.models.operations.StopPointGetByTypeResponse stopPointGetByType(org.openapis.openapi.models.operations.StopPointGetByTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointGetByTypePathParams.class, baseUrl, "/StopPoint/Type/{types}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointGetByTypeRequest.class, baseUrl, "/StopPoint/Type/{types}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -685,7 +685,7 @@ public class StopPoint {
      */
     public org.openapis.openapi.models.operations.StopPointGetByTypeWithPaginationResponse stopPointGetByTypeWithPagination(org.openapis.openapi.models.operations.StopPointGetByTypeWithPaginationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointGetByTypeWithPaginationPathParams.class, baseUrl, "/StopPoint/Type/{types}/page/{page}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointGetByTypeWithPaginationRequest.class, baseUrl, "/StopPoint/Type/{types}/page/{page}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -739,7 +739,7 @@ public class StopPoint {
      */
     public org.openapis.openapi.models.operations.StopPointGetCarParksByIdResponse stopPointGetCarParksById(org.openapis.openapi.models.operations.StopPointGetCarParksByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointGetCarParksByIdPathParams.class, baseUrl, "/StopPoint/{stopPointId}/CarParks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointGetCarParksByIdRequest.class, baseUrl, "/StopPoint/{stopPointId}/CarParks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -799,7 +799,7 @@ public class StopPoint {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointGetServiceTypesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointGetServiceTypesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -853,7 +853,7 @@ public class StopPoint {
      */
     public org.openapis.openapi.models.operations.StopPointGetTaxiRanksByIdsResponse stopPointGetTaxiRanksByIds(org.openapis.openapi.models.operations.StopPointGetTaxiRanksByIdsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointGetTaxiRanksByIdsPathParams.class, baseUrl, "/StopPoint/{stopPointId}/TaxiRanks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointGetTaxiRanksByIdsRequest.class, baseUrl, "/StopPoint/{stopPointId}/TaxiRanks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1066,13 +1066,13 @@ public class StopPoint {
      */
     public org.openapis.openapi.models.operations.StopPointReachableFromResponse stopPointReachableFrom(org.openapis.openapi.models.operations.StopPointReachableFromRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointReachableFromPathParams.class, baseUrl, "/StopPoint/{id}/CanReachOnLine/{lineId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointReachableFromRequest.class, baseUrl, "/StopPoint/{id}/CanReachOnLine/{lineId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointReachableFromQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointReachableFromRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1126,13 +1126,13 @@ public class StopPoint {
      */
     public org.openapis.openapi.models.operations.StopPointRouteResponse stopPointRoute(org.openapis.openapi.models.operations.StopPointRouteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointRoutePathParams.class, baseUrl, "/StopPoint/{id}/Route", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointRouteRequest.class, baseUrl, "/StopPoint/{id}/Route", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointRouteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointRouteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1186,13 +1186,13 @@ public class StopPoint {
      */
     public org.openapis.openapi.models.operations.StopPointSearchResponse stopPointSearch(org.openapis.openapi.models.operations.StopPointSearchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointSearchPathParams.class, baseUrl, "/StopPoint/Search/{query}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPointSearchRequest.class, baseUrl, "/StopPoint/Search/{query}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopPointSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1252,7 +1252,7 @@ public class StopPoint {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStopPointSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStopPointSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1306,13 +1306,13 @@ public class StopPoint {
      */
     public org.openapis.openapi.models.operations.GetStopPointIdPlaceTypesResponse getStopPointIdPlaceTypes(org.openapis.openapi.models.operations.GetStopPointIdPlaceTypesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStopPointIdPlaceTypesPathParams.class, baseUrl, "/StopPoint/{id}/placeTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStopPointIdPlaceTypesRequest.class, baseUrl, "/StopPoint/{id}/placeTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStopPointIdPlaceTypesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStopPointIdPlaceTypesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

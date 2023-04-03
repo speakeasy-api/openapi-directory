@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFiltersFiltersRequest {
-    
-    public GetFiltersFiltersPathParams pathParams;
-    public GetFiltersFiltersRequest withPathParams(GetFiltersFiltersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * String list (semicolon delimited).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filters")
+    public String filters;
+    public GetFiltersFiltersRequest withFilters(String filters) {
+        this.filters = filters;
         return this;
     }
     

@@ -7,38 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUserRequest {
-    
-    public CreateUserPathParams pathParams;
-    public CreateUserRequest withPathParams(CreateUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateUserHeaders headers;
-    public CreateUserRequest withHeaders(CreateUserHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateUserCreateUserRequest request;
-    public CreateUserRequest withRequest(CreateUserCreateUserRequest request) {
-        this.request = request;
+    public CreateUserCreateUserRequest requestBody;
+    public CreateUserRequest withRequestBody(CreateUserCreateUserRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateUserSecurity security;
-    public CreateUserRequest withSecurity(CreateUserSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the User resource under.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateUserRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public CreateUserRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.UserEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public CreateUserRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.UserEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

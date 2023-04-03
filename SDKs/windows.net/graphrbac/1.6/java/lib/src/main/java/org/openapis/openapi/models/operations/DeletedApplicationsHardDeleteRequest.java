@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletedApplicationsHardDeleteRequest {
-    
-    public DeletedApplicationsHardDeletePathParams pathParams;
-    public DeletedApplicationsHardDeleteRequest withPathParams(DeletedApplicationsHardDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public DeletedApplicationsHardDeleteRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * Application object ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=applicationObjectId")
+    public String applicationObjectId;
+    public DeletedApplicationsHardDeleteRequest withApplicationObjectId(String applicationObjectId) {
+        this.applicationObjectId = applicationObjectId;
+        return this;
+    }
     
-    public DeletedApplicationsHardDeleteQueryParams queryParams;
-    public DeletedApplicationsHardDeleteRequest withQueryParams(DeletedApplicationsHardDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public DeletedApplicationsHardDeleteRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

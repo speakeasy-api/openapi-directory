@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetstateabbreviationQueryParams;
 import org.openapis.openapi.models.operations.GetstateabbreviationRequest;
 import org.openapis.openapi.models.operations.GetstateabbreviationResponse;
 
@@ -15,11 +14,9 @@ public class Application {
                 .build();
 
             GetstateabbreviationRequest req = new GetstateabbreviationRequest() {{
-                queryParams = new GetstateabbreviationQueryParams() {{
-                    license = "corrupti";
-                    state = "provident";
-                }};
-            }};            
+                license = "corrupti";
+                state = "provident";
+            }}            
 
             GetstateabbreviationResponse res = sdk.stateDataStandardization.getstateabbreviation(req);
 

@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoListPullRequestsRequest {
-    
-    public RepoListPullRequestsPathParams pathParams;
-    public RepoListPullRequestsRequest withPathParams(RepoListPullRequestsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Label IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=labels")
+    public Long[] labels;
+    public RepoListPullRequestsRequest withLabels(Long[] labels) {
+        this.labels = labels;
         return this;
     }
     
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public RepoListPullRequestsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public RepoListPullRequestsQueryParams queryParams;
-    public RepoListPullRequestsRequest withQueryParams(RepoListPullRequestsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * ID of the milestone
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=milestone")
+    public Long milestone;
+    public RepoListPullRequestsRequest withMilestone(Long milestone) {
+        this.milestone = milestone;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoListPullRequestsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public RepoListPullRequestsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoListPullRequestsRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * Type of sort
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public RepoListPullRequestsSortEnum sort;
+    public RepoListPullRequestsRequest withSort(RepoListPullRequestsSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * State of pull request: open or closed (optional)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public RepoListPullRequestsStateEnum state;
+    public RepoListPullRequestsRequest withState(RepoListPullRequestsStateEnum state) {
+        this.state = state;
         return this;
     }
     

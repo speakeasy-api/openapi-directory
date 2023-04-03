@@ -43,7 +43,7 @@ public class Messages {
      */
     public org.openapis.openapi.models.operations.DeleteMessagesIdResponse deleteMessagesId(org.openapis.openapi.models.operations.DeleteMessagesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMessagesIdPathParams.class, baseUrl, "/messages/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMessagesIdRequest.class, baseUrl, "/messages/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class Messages {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMessagesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMessagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -123,7 +123,7 @@ public class Messages {
      */
     public org.openapis.openapi.models.operations.GetMessagesIdResponse getMessagesId(org.openapis.openapi.models.operations.GetMessagesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMessagesIdPathParams.class, baseUrl, "/messages/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMessagesIdRequest.class, baseUrl, "/messages/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -164,12 +164,12 @@ public class Messages {
      */
     public org.openapis.openapi.models.operations.PatchMessagesIdResponse patchMessagesId(org.openapis.openapi.models.operations.PatchMessagesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchMessagesIdPathParams.class, baseUrl, "/messages/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchMessagesIdRequest.class, baseUrl, "/messages/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -208,7 +208,7 @@ public class Messages {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMessagesResponse postMessages(org.openapis.openapi.models.operations.PostMessagesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMessagesResponse postMessages(org.openapis.openapi.models.operations.PostMessagesRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/messages");
         

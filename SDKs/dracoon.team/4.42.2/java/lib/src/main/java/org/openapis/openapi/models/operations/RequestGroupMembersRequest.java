@@ -4,27 +4,60 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestGroupMembersRequest {
-    
-    public RequestGroupMembersPathParams pathParams;
-    public RequestGroupMembersRequest withPathParams(RequestGroupMembersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestGroupMembersRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestGroupMembersQueryParams queryParams;
-    public RequestGroupMembersRequest withQueryParams(RequestGroupMembersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public RequestGroupMembersRequest withFilter(String filter) {
+        this.filter = filter;
         return this;
     }
     
+    /**
+     * Group ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Long groupId;
+    public RequestGroupMembersRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
     
-    public RequestGroupMembersHeaders headers;
-    public RequestGroupMembersRequest withHeaders(RequestGroupMembersHeaders headers) {
-        this.headers = headers;
+    /**
+     * Range limit.
+     * 
+     * Maximum 500.
+     * 
+     *  For more results please use paging (`offset` + `limit`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public RequestGroupMembersRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Range offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public RequestGroupMembersRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

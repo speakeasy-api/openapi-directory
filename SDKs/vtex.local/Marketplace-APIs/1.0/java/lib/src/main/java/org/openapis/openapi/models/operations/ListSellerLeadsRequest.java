@@ -4,20 +4,110 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSellerLeadsRequest {
-    
-    public ListSellerLeadsQueryParams queryParams;
-    public ListSellerLeadsRequest withQueryParams(ListSellerLeadsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ListSellerLeadsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ListSellerLeadsRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public ListSellerLeadsHeaders headers;
-    public ListSellerLeadsRequest withHeaders(ListSellerLeadsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Name of the VTEX account that belongs to the marketplace. All data extracted, and changes added will be posted into this account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public ListSellerLeadsRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    
+    /**
+     * Environment to use. Used as part of the URL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
+    public String environment;
+    public ListSellerLeadsRequest withEnvironment(String environment) {
+        this.environment = environment;
+        return this;
+    }
+    
+    /**
+     * Query param that enables results to be filter by whether the seller lead is already connected to the marketplace or not.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isConnected")
+    public String isConnected;
+    public ListSellerLeadsRequest withIsConnected(String isConnected) {
+        this.isConnected = isConnected;
+        return this;
+    }
+    
+    /**
+     * This field determines the limit used to retrieve the list of sellers. The response includes objects until the value inputted here.            
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public ListSellerLeadsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * This field determines the limit used to retrieve the list of sellers. The response includes objects starting `from` the value inputted here.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public ListSellerLeadsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Query param determining how data will be ordered in the response, ordering by name or ID in descending our ascending order. Includes the following values: 
+     * 
+     * `namesort` = desc/asc 
+     * 
+     * `idsort` = desc/asc
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
+    public String orderBy;
+    public ListSellerLeadsRequest withOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    /**
+     * Custom search field, that filters sellers invited by specific marketplace operator's  email.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public ListSellerLeadsRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * Seller Lead's status. Includes `accepted`, `connected` or `invited`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public ListSellerLeadsRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

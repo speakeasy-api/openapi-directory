@@ -7,24 +7,70 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUrlsRequest {
-    
-    public GetUrlsPathParams pathParams;
-    public GetUrlsRequest withPathParams(GetUrlsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetUrlsQueryParams queryParams;
-    public GetUrlsRequest withQueryParams(GetUrlsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UrlsQuery request;
-    public GetUrlsRequest withRequest(org.openapis.openapi.models.shared.UrlsQuery request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UrlsQuery urlsQuery;
+    public GetUrlsRequest withUrlsQuery(org.openapis.openapi.models.shared.UrlsQuery urlsQuery) {
+        this.urlsQuery = urlsQuery;
+        return this;
+    }
+    
+    /**
+     * Analysis' identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
+    public String analysisSlug;
+    public GetUrlsRequest withAnalysisSlug(String analysisSlug) {
+        this.analysisSlug = analysisSlug;
+        return this;
+    }
+    
+    /**
+     * Analysis context to execute the query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=area")
+    public GetUrlsAreaEnum area;
+    public GetUrlsRequest withArea(GetUrlsAreaEnum area) {
+        this.area = area;
+        return this;
+    }
+    
+    /**
+     * Page Number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetUrlsRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Project's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
+    public String projectSlug;
+    public GetUrlsRequest withProjectSlug(String projectSlug) {
+        this.projectSlug = projectSlug;
+        return this;
+    }
+    
+    /**
+     * Page Size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Integer size;
+    public GetUrlsRequest withSize(Integer size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * User's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetUrlsRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

@@ -7,31 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDeployedDevicesDeploymentRequest {
-    
-    public CreateDeployedDevicesDeploymentPathParams pathParams;
-    public CreateDeployedDevicesDeploymentRequest withPathParams(CreateDeployedDevicesDeploymentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FleetSid")
+    public String fleetSid;
+    public CreateDeployedDevicesDeploymentRequest withFleetSid(String fleetSid) {
+        this.fleetSid = fleetSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateDeployedDevicesDeploymentCreateDeployedDevicesDeploymentRequest request;
-    public CreateDeployedDevicesDeploymentRequest withRequest(CreateDeployedDevicesDeploymentCreateDeployedDevicesDeploymentRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateDeployedDevicesDeploymentSecurity security;
-    public CreateDeployedDevicesDeploymentRequest withSecurity(CreateDeployedDevicesDeploymentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateDeployedDevicesDeploymentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateDeployedDevicesDeploymentCreateDeployedDevicesDeploymentRequest requestBody;
+    public CreateDeployedDevicesDeploymentRequest withRequestBody(CreateDeployedDevicesDeploymentCreateDeployedDevicesDeploymentRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

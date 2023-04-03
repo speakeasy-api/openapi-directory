@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudbuildProjectsLocationsOperationsCancelResponse cloudbuildProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.CloudbuildProjectsLocationsOperationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudbuildProjectsLocationsOperationsCancelResponse cloudbuildProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.CloudbuildProjectsLocationsOperationsCancelRequest request, org.openapis.openapi.models.operations.CloudbuildProjectsLocationsOperationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudbuildProjectsLocationsOperationsCancelPathParams.class, baseUrl, "/v1alpha1/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudbuildProjectsLocationsOperationsCancelRequest.class, baseUrl, "/v1alpha1/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudbuildProjectsLocationsOperationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudbuildProjectsLocationsOperationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Projects {
     /**
      * Creates a `WorkerPool` to run the builds, and returns the new worker pool.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsCreateResponse cloudbuildProjectsWorkerPoolsCreate(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsCreateResponse cloudbuildProjectsWorkerPoolsCreate(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsCreateRequest request, org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsCreatePathParams.class, baseUrl, "/v1alpha1/{parent}/workerPools", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsCreateRequest.class, baseUrl, "/v1alpha1/{parent}/workerPools", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "workerPool", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,25 +131,26 @@ public class Projects {
     /**
      * Deletes a `WorkerPool` by its project ID and WorkerPool name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsDeleteResponse cloudbuildProjectsWorkerPoolsDelete(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsDeleteResponse cloudbuildProjectsWorkerPoolsDelete(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsDeleteRequest request, org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsDeletePathParams.class, baseUrl, "/v1alpha1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsDeleteRequest.class, baseUrl, "/v1alpha1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Projects {
     /**
      * Returns information about a `WorkerPool`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsGetResponse cloudbuildProjectsWorkerPoolsGet(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsGetResponse cloudbuildProjectsWorkerPoolsGet(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsGetRequest request, org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsGetPathParams.class, baseUrl, "/v1alpha1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsGetRequest.class, baseUrl, "/v1alpha1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,25 +223,26 @@ public class Projects {
     /**
      * List project's `WorkerPool`s.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsListResponse cloudbuildProjectsWorkerPoolsList(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsListResponse cloudbuildProjectsWorkerPoolsList(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsListRequest request, org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsListPathParams.class, baseUrl, "/v1alpha1/{parent}/workerPools", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsListRequest.class, baseUrl, "/v1alpha1/{parent}/workerPools", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,27 +269,28 @@ public class Projects {
     /**
      * Update a `WorkerPool`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsPatchResponse cloudbuildProjectsWorkerPoolsPatch(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsPatchResponse cloudbuildProjectsWorkerPoolsPatch(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsPatchRequest request, org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsPatchPathParams.class, baseUrl, "/v1alpha1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsPatchRequest.class, baseUrl, "/v1alpha1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "workerPool", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudbuildProjectsWorkerPoolsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

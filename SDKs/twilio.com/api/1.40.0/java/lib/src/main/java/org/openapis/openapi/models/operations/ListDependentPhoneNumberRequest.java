@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDependentPhoneNumberRequest {
-    
-    public ListDependentPhoneNumberPathParams pathParams;
-    public ListDependentPhoneNumberRequest withPathParams(ListDependentPhoneNumberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the DependentPhoneNumber resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListDependentPhoneNumberRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListDependentPhoneNumberQueryParams queryParams;
-    public ListDependentPhoneNumberRequest withQueryParams(ListDependentPhoneNumberQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The SID of the Address resource associated with the phone number.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AddressSid")
+    public String addressSid;
+    public ListDependentPhoneNumberRequest withAddressSid(String addressSid) {
+        this.addressSid = addressSid;
         return this;
     }
     
-    
-    public ListDependentPhoneNumberSecurity security;
-    public ListDependentPhoneNumberRequest withSecurity(ListDependentPhoneNumberSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListDependentPhoneNumberRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListDependentPhoneNumberRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListDependentPhoneNumberRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListDependentPhoneNumberRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

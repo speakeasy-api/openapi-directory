@@ -4,20 +4,106 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidApnsPostRequest {
-    
-    public KkidApnsPostQueryParams queryParams;
-    public KkidApnsPostRequest withQueryParams(KkidApnsPostQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number for badge icon (optional for send)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=badge")
+    public Long badge;
+    public KkidApnsPostRequest withBadge(Long badge) {
+        this.badge = badge;
         return this;
     }
     
+    /**
+     * Name of device to associate to token (required for register)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devicename")
+    public String devicename;
+    public KkidApnsPostRequest withDevicename(String devicename) {
+        this.devicename = devicename;
+        return this;
+    }
     
-    public KkidApnsPostSecurity security;
-    public KkidApnsPostRequest withSecurity(KkidApnsPostSecurity security) {
-        this.security = security;
+    /**
+     * userID of the kid
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kidUserId")
+    public Long kidUserId;
+    public KkidApnsPostRequest withKidUserId(Long kidUserId) {
+        this.kidUserId = kidUserId;
+        return this;
+    }
+    
+    /**
+     * APNS message body (required for send)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=message")
+    public String message;
+    public KkidApnsPostRequest withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    
+    /**
+     * Notification section name (optional for send, default is active)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=priority")
+    public KkidApnsPostPriorityEnum priority;
+    public KkidApnsPostRequest withPriority(KkidApnsPostPriorityEnum priority) {
+        this.priority = priority;
+        return this;
+    }
+    
+    /**
+     * Notification section name (required for send/subscribe/unsubscribe)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=section")
+    public KkidApnsPostSectionEnum section;
+    public KkidApnsPostRequest withSection(KkidApnsPostSectionEnum section) {
+        this.section = section;
+        return this;
+    }
+    
+    /**
+     * Name of sound file to play for send notification (optional for send)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sound")
+    public String sound;
+    public KkidApnsPostRequest withSound(String sound) {
+        this.sound = sound;
+        return this;
+    }
+    
+    /**
+     * title of APNS message (required for send)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
+    public String title;
+    public KkidApnsPostRequest withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    
+    /**
+     * device APNS token (required for register)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public KkidApnsPostRequest withToken(String token) {
+        this.token = token;
+        return this;
+    }
+    
+    /**
+     * tool you wish to talk to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tool")
+    public KkidApnsPostToolEnum tool;
+    public KkidApnsPostRequest withTool(KkidApnsPostToolEnum tool) {
+        this.tool = tool;
         return this;
     }
     

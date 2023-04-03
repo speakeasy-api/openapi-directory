@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrderListFullV3Request {
-    
-    public GetOrderListFullV3Headers headers;
-    public GetOrderListFullV3Request withHeaders(GetOrderListFullV3Headers headers) {
-        this.headers = headers;
+    /**
+     * Allows the client to indicate wether it accepts a compressed encoding to reduce traffic size
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Encoding")
+    public String acceptEncoding;
+    public GetOrderListFullV3Request withAcceptEncoding(String acceptEncoding) {
+        this.acceptEncoding = acceptEncoding;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.OrderListRequest request;
-    public GetOrderListFullV3Request withRequest(org.openapis.openapi.models.shared.OrderListRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.OrderListRequest orderListRequest;
+    public GetOrderListFullV3Request withOrderListRequest(org.openapis.openapi.models.shared.OrderListRequest orderListRequest) {
+        this.orderListRequest = orderListRequest;
         return this;
     }
     

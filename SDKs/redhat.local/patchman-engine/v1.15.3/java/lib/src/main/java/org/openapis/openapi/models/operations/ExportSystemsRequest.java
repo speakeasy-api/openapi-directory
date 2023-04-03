@@ -4,20 +4,156 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportSystemsRequest {
-    
-    public ExportSystemsQueryParams queryParams;
-    public ExportSystemsRequest withQueryParams(ExportSystemsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[display_name]")
+    public String filterDisplayName;
+    public ExportSystemsRequest withFilterDisplayName(String filterDisplayName) {
+        this.filterDisplayName = filterDisplayName;
         return this;
     }
     
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[id]")
+    public String filterId;
+    public ExportSystemsRequest withFilterId(String filterId) {
+        this.filterId = filterId;
+        return this;
+    }
     
-    public ExportSystemsSecurity security;
-    public ExportSystemsRequest withSecurity(ExportSystemsSecurity security) {
-        this.security = security;
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[last_evaluation]")
+    public String filterLastEvaluation;
+    public ExportSystemsRequest withFilterLastEvaluation(String filterLastEvaluation) {
+        this.filterLastEvaluation = filterLastEvaluation;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[last_upload]")
+    public String filterLastUpload;
+    public ExportSystemsRequest withFilterLastUpload(String filterLastUpload) {
+        this.filterLastUpload = filterLastUpload;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[other_count]")
+    public String filterOtherCount;
+    public ExportSystemsRequest withFilterOtherCount(String filterOtherCount) {
+        this.filterOtherCount = filterOtherCount;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[packages_installed]")
+    public String filterPackagesInstalled;
+    public ExportSystemsRequest withFilterPackagesInstalled(String filterPackagesInstalled) {
+        this.filterPackagesInstalled = filterPackagesInstalled;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[packages_updatable]")
+    public String filterPackagesUpdatable;
+    public ExportSystemsRequest withFilterPackagesUpdatable(String filterPackagesUpdatable) {
+        this.filterPackagesUpdatable = filterPackagesUpdatable;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[rhba_count]")
+    public String filterRhbaCount;
+    public ExportSystemsRequest withFilterRhbaCount(String filterRhbaCount) {
+        this.filterRhbaCount = filterRhbaCount;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[rhea_count]")
+    public String filterRheaCount;
+    public ExportSystemsRequest withFilterRheaCount(String filterRheaCount) {
+        this.filterRheaCount = filterRheaCount;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[rhsa_count]")
+    public String filterRhsaCount;
+    public ExportSystemsRequest withFilterRhsaCount(String filterRhsaCount) {
+        this.filterRhsaCount = filterRhsaCount;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[stale]")
+    public String filterStale;
+    public ExportSystemsRequest withFilterStale(String filterStale) {
+        this.filterStale = filterStale;
+        return this;
+    }
+    
+    /**
+     * Filter systems by their SAP SIDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_sids][in]")
+    public String[] filterSystemProfileSapSidsIn;
+    public ExportSystemsRequest withFilterSystemProfileSapSidsIn(String[] filterSystemProfileSapSidsIn) {
+        this.filterSystemProfileSapSidsIn = filterSystemProfileSapSidsIn;
+        return this;
+    }
+    
+    /**
+     * Filter only SAP systems
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_system]")
+    public String filterSystemProfileSapSystem;
+    public ExportSystemsRequest withFilterSystemProfileSapSystem(String filterSystemProfileSapSystem) {
+        this.filterSystemProfileSapSystem = filterSystemProfileSapSystem;
+        return this;
+    }
+    
+    /**
+     * Find matching text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public ExportSystemsRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * Tag filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String[] tags;
+    public ExportSystemsRequest withTags(String[] tags) {
+        this.tags = tags;
         return this;
     }
     

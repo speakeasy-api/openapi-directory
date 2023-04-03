@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListReceiptRuleSetsRequest {
-    
-    public GETListReceiptRuleSetsQueryParams queryParams;
-    public GETListReceiptRuleSetsRequest withQueryParams(GETListReceiptRuleSetsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETListReceiptRuleSetsActionEnum action;
+    public GETListReceiptRuleSetsRequest withAction(GETListReceiptRuleSetsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * A token returned from a previous call to &lt;code&gt;ListReceiptRuleSets&lt;/code&gt; to indicate the position in the receipt rule set list.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETListReceiptRuleSetsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
     
-    public GETListReceiptRuleSetsHeaders headers;
-    public GETListReceiptRuleSetsRequest withHeaders(GETListReceiptRuleSetsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETListReceiptRuleSetsVersionEnum version;
+    public GETListReceiptRuleSetsRequest withVersion(GETListReceiptRuleSetsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETListReceiptRuleSetsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETListReceiptRuleSetsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETListReceiptRuleSetsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETListReceiptRuleSetsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETListReceiptRuleSetsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETListReceiptRuleSetsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETListReceiptRuleSetsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

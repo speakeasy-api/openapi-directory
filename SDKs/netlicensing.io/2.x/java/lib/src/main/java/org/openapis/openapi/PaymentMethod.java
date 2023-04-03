@@ -38,19 +38,20 @@ public class PaymentMethod {
      * Get Payment Method
      * Return a Payment Method info by 'paymentMethodNumber'
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPaymentMethodResponse getPaymentMethod(org.openapis.openapi.models.operations.GetPaymentMethodRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPaymentMethodResponse getPaymentMethod(org.openapis.openapi.models.operations.GetPaymentMethodRequest request, org.openapis.openapi.models.operations.GetPaymentMethodSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentMethodPathParams.class, baseUrl, "/paymentmethod/{paymentMethodNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentMethodRequest.class, baseUrl, "/paymentmethod/{paymentMethodNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,11 +85,10 @@ public class PaymentMethod {
     /**
      * List Payment Methods
      * Return a list of all Payment Methods for the current Vendor
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListPaymentMethodsResponse listPaymentMethods(org.openapis.openapi.models.operations.ListPaymentMethodsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListPaymentMethodsResponse listPaymentMethods() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/paymentmethod");
         
@@ -97,8 +97,7 @@ public class PaymentMethod {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -132,21 +131,22 @@ public class PaymentMethod {
      * Update Payment Method
      * Sets the provided properties to a Payment Method. Return an updated Payment Method
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdatePaymentMethodResponse updatePaymentMethod(org.openapis.openapi.models.operations.UpdatePaymentMethodRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdatePaymentMethodResponse updatePaymentMethod(org.openapis.openapi.models.operations.UpdatePaymentMethodRequest request, org.openapis.openapi.models.operations.UpdatePaymentMethodSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePaymentMethodPathParams.class, baseUrl, "/paymentmethod/{paymentMethodNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePaymentMethodRequest.class, baseUrl, "/paymentmethod/{paymentMethodNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

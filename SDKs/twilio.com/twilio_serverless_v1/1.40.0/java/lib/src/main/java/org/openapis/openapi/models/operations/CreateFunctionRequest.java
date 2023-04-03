@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateFunctionRequest {
-    
-    public CreateFunctionPathParams pathParams;
-    public CreateFunctionRequest withPathParams(CreateFunctionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateFunctionCreateFunctionRequest request;
-    public CreateFunctionRequest withRequest(CreateFunctionCreateFunctionRequest request) {
-        this.request = request;
+    public CreateFunctionCreateFunctionRequest requestBody;
+    public CreateFunctionRequest withRequestBody(CreateFunctionCreateFunctionRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateFunctionSecurity security;
-    public CreateFunctionRequest withSecurity(CreateFunctionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateFunctionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Service to create the Function resource under.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateFunctionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

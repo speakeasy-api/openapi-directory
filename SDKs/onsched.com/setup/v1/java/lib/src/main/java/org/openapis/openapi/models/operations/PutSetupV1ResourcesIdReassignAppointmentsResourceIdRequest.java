@@ -4,20 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest {
-    
-    public PutSetupV1ResourcesIdReassignAppointmentsResourceIdPathParams pathParams;
-    public PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest withPathParams(PutSetupV1ResourcesIdReassignAppointmentsResourceIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * CalendarId of calendar containing appointments
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=calendarId")
+    public String calendarId;
+    public PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest withCalendarId(String calendarId) {
+        this.calendarId = calendarId;
         return this;
     }
     
+    /**
+     * YYYY-MM-DD, Appt range end date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public OffsetDateTime endDate;
+    public PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
+        return this;
+    }
     
-    public PutSetupV1ResourcesIdReassignAppointmentsResourceIdQueryParams queryParams;
-    public PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest withQueryParams(PutSetupV1ResourcesIdReassignAppointmentsResourceIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * id of the original resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * id of the target resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resourceId")
+    public String resourceId;
+    public PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest withResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    
+    /**
+     * YYYY-MM-DD, Appt range start date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public OffsetDateTime startDate;
+    public PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
         return this;
     }
     

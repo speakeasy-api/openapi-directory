@@ -4,27 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeChannelRequest {
-    
-    public DescribeChannelPathParams pathParams;
-    public DescribeChannelRequest withPathParams(DescribeChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeChannelRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public DescribeChannelQueryParams queryParams;
-    public DescribeChannelRequest withQueryParams(DescribeChannelQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeChannelRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeChannelRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public DescribeChannelHeaders headers;
-    public DescribeChannelRequest withHeaders(DescribeChannelHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeChannelRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeChannelRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeChannelRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeChannelRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The name of the channel whose information is retrieved.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelName")
+    public String channelName;
+    public DescribeChannelRequest withChannelName(String channelName) {
+        this.channelName = channelName;
+        return this;
+    }
+    
+    /**
+     * If true, additional statistical information about the channel is included in the response. This feature can't be used with a channel whose S3 storage is customer-managed.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeStatistics")
+    public Boolean includeStatistics;
+    public DescribeChannelRequest withIncludeStatistics(Boolean includeStatistics) {
+        this.includeStatistics = includeStatistics;
         return this;
     }
     

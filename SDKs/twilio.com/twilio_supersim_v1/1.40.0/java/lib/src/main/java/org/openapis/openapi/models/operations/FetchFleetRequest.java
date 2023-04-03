@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchFleetRequest {
-    
-    public FetchFleetPathParams pathParams;
-    public FetchFleetRequest withPathParams(FetchFleetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchFleetSecurity security;
-    public FetchFleetRequest withSecurity(FetchFleetSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchFleetRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Fleet resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchFleetRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

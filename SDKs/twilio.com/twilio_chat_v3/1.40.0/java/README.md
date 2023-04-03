@@ -18,14 +18,11 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.UpdateChannelSecurity;
-import org.openapis.openapi.models.operations.UpdateChannelPathParams;
-import org.openapis.openapi.models.operations.UpdateChannelHeaders;
 import org.openapis.openapi.models.operations.UpdateChannelUpdateChannelRequest;
 import org.openapis.openapi.models.operations.UpdateChannelRequest;
 import org.openapis.openapi.models.operations.UpdateChannelResponse;
-import org.openapis.openapi.models.shared.ChannelEnumChannelTypeEnum;
 import org.openapis.openapi.models.shared.ChannelEnumWebhookEnabledTypeEnum;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
+import org.openapis.openapi.models.shared.ChannelEnumChannelTypeEnum;
 
 public class Application {
     public static void main(String[] args) {
@@ -34,26 +31,19 @@ public class Application {
                 .build();
 
             UpdateChannelRequest req = new UpdateChannelRequest() {{
-                security = new UpdateChannelSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                pathParams = new UpdateChannelPathParams() {{
-                    serviceSid = "corrupti";
-                    sid = "provident";
-                }};
-                headers = new UpdateChannelHeaders() {{
-                    xTwilioWebhookEnabled = "false";
-                }};
-                request = new UpdateChannelUpdateChannelRequest() {{
-                    messagingServiceSid = "quibusdam";
+                requestBody = new UpdateChannelUpdateChannelRequest() {{
+                    messagingServiceSid = "corrupti";
                     type = "private";
                 }};
-            }};            
+                serviceSid = "distinctio";
+                sid = "quibusdam";
+                xTwilioWebhookEnabled = "false";
+            }}            
 
-            UpdateChannelResponse res = sdk.updateChannel(req);
+            UpdateChannelResponse res = sdk.updateChannel(req, new UpdateChannelSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.chatV3Channel.isPresent()) {
                 // handle response
@@ -65,7 +55,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

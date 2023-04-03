@@ -4,13 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCallsRequest {
+    /**
+     * Filter by call direction. For multiple criteria, seperate values by a comma.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public ListCallsDirectionEnum direction;
+    public ListCallsRequest withDirection(ListCallsDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public ListCallsQueryParams queryParams;
-    public ListCallsRequest withQueryParams(ListCallsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return calls that occurred after this point in time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDate")
+    public Long fromDate;
+    public ListCallsRequest withFromDate(Long fromDate) {
+        this.fromDate = fromDate;
+        return this;
+    }
+    
+    /**
+     * Page number of calls to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ListCallsRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Sort in either ascending or descending order
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public ListCallsOrderEnum order;
+    public ListCallsRequest withOrder(ListCallsOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * Return this amount of calls in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Long size;
+    public ListCallsRequest withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * Sort calls by property
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public ListCallsRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Filter calls by state. For multiple criteria, seperate values by a comma.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=states")
+    public ListCallsStatesEnum states;
+    public ListCallsRequest withStates(ListCallsStatesEnum states) {
+        this.states = states;
+        return this;
+    }
+    
+    /**
+     * Return calls that occurred before this point in time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDate")
+    public Long toDate;
+    public ListCallsRequest withToDate(Long toDate) {
+        this.toDate = toDate;
         return this;
     }
     

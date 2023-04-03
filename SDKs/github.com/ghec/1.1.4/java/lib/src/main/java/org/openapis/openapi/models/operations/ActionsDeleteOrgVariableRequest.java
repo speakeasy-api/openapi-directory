@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsDeleteOrgVariableRequest {
+    /**
+     * The name of the variable.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public ActionsDeleteOrgVariableRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public ActionsDeleteOrgVariablePathParams pathParams;
-    public ActionsDeleteOrgVariableRequest withPathParams(ActionsDeleteOrgVariablePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsDeleteOrgVariableRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

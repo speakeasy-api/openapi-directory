@@ -38,10 +38,11 @@ public class AccountMerchantLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Account read
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMerchantsResponse getMerchants(org.openapis.openapi.models.operations.GetMerchantsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMerchantsResponse getMerchants(org.openapis.openapi.models.operations.GetMerchantsRequest request, org.openapis.openapi.models.operations.GetMerchantsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/merchants");
         
@@ -49,14 +50,14 @@ public class AccountMerchantLevel {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMerchantsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMerchantsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -97,19 +98,20 @@ public class AccountMerchantLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Account read
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdResponse getMerchantsMerchantId(org.openapis.openapi.models.operations.GetMerchantsMerchantIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdResponse getMerchantsMerchantId(org.openapis.openapi.models.operations.GetMerchantsMerchantIdRequest request, org.openapis.openapi.models.operations.GetMerchantsMerchantIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPathParams.class, baseUrl, "/merchants/{merchantId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdRequest.class, baseUrl, "/merchants/{merchantId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -152,10 +154,11 @@ public class AccountMerchantLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Accounts read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMerchantsResponse postMerchants(org.openapis.openapi.models.operations.PostMerchantsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMerchantsResponse postMerchants(org.openapis.openapi.models.shared.CreateMerchantRequest request, org.openapis.openapi.models.operations.PostMerchantsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/merchants");
         
@@ -166,7 +169,7 @@ public class AccountMerchantLevel {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -211,19 +214,20 @@ public class AccountMerchantLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Accounts read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdActivateResponse postMerchantsMerchantIdActivate(org.openapis.openapi.models.operations.PostMerchantsMerchantIdActivateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdActivateResponse postMerchantsMerchantIdActivate(org.openapis.openapi.models.operations.PostMerchantsMerchantIdActivateRequest request, org.openapis.openapi.models.operations.PostMerchantsMerchantIdActivateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdActivatePathParams.class, baseUrl, "/merchants/{merchantId}/activate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdActivateRequest.class, baseUrl, "/merchants/{merchantId}/activate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

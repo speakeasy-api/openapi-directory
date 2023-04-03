@@ -7,24 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JobSchedulePatchRequest {
-    
-    public JobSchedulePatchPathParams pathParams;
-    public JobSchedulePatchRequest withPathParams(JobSchedulePatchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An ETag is specified. Specify this header to perform the operation only if the resource's ETag is an exact match as specified.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public JobSchedulePatchRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
-    
-    public JobSchedulePatchQueryParams queryParams;
-    public JobSchedulePatchRequest withQueryParams(JobSchedulePatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specify this header to perform the operation only if the resource has been modified since the specified date/time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
+    public String ifModifiedSince;
+    public JobSchedulePatchRequest withIfModifiedSince(String ifModifiedSince) {
+        this.ifModifiedSince = ifModifiedSince;
         return this;
     }
     
+    /**
+     * An ETag is specified. Specify this header to perform the operation only if the resource's ETag does not match the specified ETag.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public JobSchedulePatchRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
+        return this;
+    }
     
-    public JobSchedulePatchHeaders headers;
-    public JobSchedulePatchRequest withHeaders(JobSchedulePatchHeaders headers) {
-        this.headers = headers;
+    /**
+     * Specify this header to perform the operation only if the resource has not been modified since the specified date/time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Unmodified-Since")
+    public String ifUnmodifiedSince;
+    public JobSchedulePatchRequest withIfUnmodifiedSince(String ifUnmodifiedSince) {
+        this.ifUnmodifiedSince = ifUnmodifiedSince;
         return this;
     }
     
@@ -32,9 +51,69 @@ public class JobSchedulePatchRequest {
      * The parameters for the request.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.JobSchedulePatchParameter request;
-    public JobSchedulePatchRequest withRequest(org.openapis.openapi.models.shared.JobSchedulePatchParameter request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.JobSchedulePatchParameter jobSchedulePatchParameter;
+    public JobSchedulePatchRequest withJobSchedulePatchParameter(org.openapis.openapi.models.shared.JobSchedulePatchParameter jobSchedulePatchParameter) {
+        this.jobSchedulePatchParameter = jobSchedulePatchParameter;
+        return this;
+    }
+    
+    /**
+     * Client API Version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public JobSchedulePatchRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * The caller-generated request identity, in the form of a GUID with no decoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
+    public String clientRequestId;
+    public JobSchedulePatchRequest withClientRequestId(String clientRequestId) {
+        this.clientRequestId = clientRequestId;
+        return this;
+    }
+    
+    /**
+     * The id of the job schedule to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobScheduleId")
+    public String jobScheduleId;
+    public JobSchedulePatchRequest withJobScheduleId(String jobScheduleId) {
+        this.jobScheduleId = jobScheduleId;
+        return this;
+    }
+    
+    /**
+     * The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
+    public String ocpDate;
+    public JobSchedulePatchRequest withOcpDate(String ocpDate) {
+        this.ocpDate = ocpDate;
+        return this;
+    }
+    
+    /**
+     * Whether the server should return the client-request-id identifier in the response.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
+    public Boolean returnClientRequestId;
+    public JobSchedulePatchRequest withReturnClientRequestId(Boolean returnClientRequestId) {
+        this.returnClientRequestId = returnClientRequestId;
+        return this;
+    }
+    
+    /**
+     * The maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
+    public Integer timeout;
+    public JobSchedulePatchRequest withTimeout(Integer timeout) {
+        this.timeout = timeout;
         return this;
     }
     

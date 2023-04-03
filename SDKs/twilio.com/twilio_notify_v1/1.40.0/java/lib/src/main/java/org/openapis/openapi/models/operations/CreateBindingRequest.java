@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateBindingRequest {
-    
-    public CreateBindingPathParams pathParams;
-    public CreateBindingRequest withPathParams(CreateBindingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateBindingCreateBindingRequest request;
-    public CreateBindingRequest withRequest(CreateBindingCreateBindingRequest request) {
-        this.request = request;
+    public CreateBindingCreateBindingRequest requestBody;
+    public CreateBindingRequest withRequestBody(CreateBindingCreateBindingRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateBindingSecurity security;
-    public CreateBindingRequest withSecurity(CreateBindingSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateBindingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/notify/api/service-resource) to create the resource under.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateBindingRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

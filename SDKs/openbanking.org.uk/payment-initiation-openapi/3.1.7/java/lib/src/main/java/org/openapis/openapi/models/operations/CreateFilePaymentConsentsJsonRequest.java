@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateFilePaymentConsentsJsonRequest {
-    
-    public CreateFilePaymentConsentsJsonHeaders headers;
-    public CreateFilePaymentConsentsJsonRequest withHeaders(CreateFilePaymentConsentsJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * An Authorisation Token as per https://tools.ietf.org/html/rfc6750
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public CreateFilePaymentConsentsJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
@@ -18,16 +21,73 @@ public class CreateFilePaymentConsentsJsonRequest {
      * Default
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.OBWriteFileConsent3 request;
-    public CreateFilePaymentConsentsJsonRequest withRequest(org.openapis.openapi.models.shared.OBWriteFileConsent3 request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.OBWriteFileConsent3 obWriteFileConsent3;
+    public CreateFilePaymentConsentsJsonRequest withOBWriteFileConsent3(org.openapis.openapi.models.shared.OBWriteFileConsent3 obWriteFileConsent3) {
+        this.obWriteFileConsent3 = obWriteFileConsent3;
         return this;
     }
     
+    /**
+     * Indicates the user-agent that the PSU is using.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
+    public String xCustomerUserAgent;
+    public CreateFilePaymentConsentsJsonRequest withXCustomerUserAgent(String xCustomerUserAgent) {
+        this.xCustomerUserAgent = xCustomerUserAgent;
+        return this;
+    }
     
-    public CreateFilePaymentConsentsJsonSecurity security;
-    public CreateFilePaymentConsentsJsonRequest withSecurity(CreateFilePaymentConsentsJsonSecurity security) {
-        this.security = security;
+    /**
+     * The time when the PSU last logged in with the TPP. 
+     * All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
+     * Sun, 10 Sep 2017 19:43:31 UTC
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
+    public String xFapiAuthDate;
+    public CreateFilePaymentConsentsJsonRequest withXFapiAuthDate(String xFapiAuthDate) {
+        this.xFapiAuthDate = xFapiAuthDate;
+        return this;
+    }
+    
+    /**
+     * The PSU's IP address if the PSU is currently logged in with the TPP.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
+    public String xFapiCustomerIpAddress;
+    public CreateFilePaymentConsentsJsonRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
+        this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
+        return this;
+    }
+    
+    /**
+     * An RFC4122 UID used as a correlation id.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
+    public String xFapiInteractionId;
+    public CreateFilePaymentConsentsJsonRequest withXFapiInteractionId(String xFapiInteractionId) {
+        this.xFapiInteractionId = xFapiInteractionId;
+        return this;
+    }
+    
+    /**
+     * Every request will be processed only once per x-idempotency-key.  The
+     * Idempotency Key will be valid for 24 hours.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-idempotency-key")
+    public String xIdempotencyKey;
+    public CreateFilePaymentConsentsJsonRequest withXIdempotencyKey(String xIdempotencyKey) {
+        this.xIdempotencyKey = xIdempotencyKey;
+        return this;
+    }
+    
+    /**
+     * A detached JWS signature of the body of the payload.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-jws-signature")
+    public String xJwsSignature;
+    public CreateFilePaymentConsentsJsonRequest withXJwsSignature(String xJwsSignature) {
+        this.xJwsSignature = xJwsSignature;
         return this;
     }
     

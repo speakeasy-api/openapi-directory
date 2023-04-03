@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CancelResourceRequestXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CancelResourceRequestHeaders;
 import org.openapis.openapi.models.operations.CancelResourceRequestRequest;
 import org.openapis.openapi.models.operations.CancelResourceRequestResponse;
 import org.openapis.openapi.models.shared.CancelResourceRequestInput;
@@ -28,27 +27,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CancelResourceRequestRequest req = new CancelResourceRequestRequest() {{
-                headers = new CancelResourceRequestHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "CloudApiService.CancelResourceRequest";
+                cancelResourceRequestInput = new CancelResourceRequestInput() {{
+                    requestToken = "corrupti";
                 }};
-                request = new CancelResourceRequestInput() {{
-                    requestToken = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+                xAmzTarget = "CloudApiService.CancelResourceRequest";
+            }}            
 
             CancelResourceRequestResponse res = sdk.cancelResourceRequest(req);
 
@@ -62,7 +57,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

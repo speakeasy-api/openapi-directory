@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KeywordSearchRequest {
+    /**
+     * domain for the search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domainCode")
+    public String domainCode;
+    public KeywordSearchRequest withDomainCode(String domainCode) {
+        this.domainCode = domainCode;
+        return this;
+    }
     
-    public KeywordSearchQueryParams queryParams;
-    public KeywordSearchRequest withQueryParams(KeywordSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * keyword to search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword")
+    public String keyword;
+    public KeywordSearchRequest withKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    
+    /**
+     * number of the results (max 20)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=numberOfProducts")
+    public Long numberOfProducts;
+    public KeywordSearchRequest withNumberOfProducts(Long numberOfProducts) {
+        this.numberOfProducts = numberOfProducts;
+        return this;
+    }
+    
+    /**
+     * sort option
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
+    public String sortBy;
+    public KeywordSearchRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
         return this;
     }
     

@@ -35,25 +35,26 @@ public class Projects {
     /**
      * Lists information about the supported locations for this service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsListResponse servicedirectoryProjectsLocationsList(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsListResponse servicedirectoryProjectsLocationsList(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsListRequest request, org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsListPathParams.class, baseUrl, "/v1/{name}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsListRequest.class, baseUrl, "/v1/{name}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,27 +81,28 @@ public class Projects {
     /**
      * Creates a namespace, and returns the new namespace.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesCreateResponse servicedirectoryProjectsLocationsNamespacesCreate(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesCreateResponse servicedirectoryProjectsLocationsNamespacesCreate(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesCreateRequest request, org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesCreatePathParams.class, baseUrl, "/v1/{parent}/namespaces", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesCreateRequest.class, baseUrl, "/v1/{parent}/namespaces", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "namespaceInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Projects {
     /**
      * Lists all namespaces.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesListResponse servicedirectoryProjectsLocationsNamespacesList(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesListResponse servicedirectoryProjectsLocationsNamespacesList(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesListRequest request, org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesListPathParams.class, baseUrl, "/v1/{parent}/namespaces", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesListRequest.class, baseUrl, "/v1/{parent}/namespaces", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,27 +175,28 @@ public class Projects {
     /**
      * Creates a service, and returns the new service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesCreateResponse servicedirectoryProjectsLocationsNamespacesServicesCreate(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesCreateResponse servicedirectoryProjectsLocationsNamespacesServicesCreate(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesCreateRequest request, org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesCreatePathParams.class, baseUrl, "/v1/{parent}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesCreateRequest.class, baseUrl, "/v1/{parent}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "serviceInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,27 +223,28 @@ public class Projects {
     /**
      * Creates an endpoint, and returns the new endpoint.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreateResponse servicedirectoryProjectsLocationsNamespacesServicesEndpointsCreate(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreateResponse servicedirectoryProjectsLocationsNamespacesServicesEndpointsCreate(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreateRequest request, org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreatePathParams.class, baseUrl, "/v1/{parent}/endpoints", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreateRequest.class, baseUrl, "/v1/{parent}/endpoints", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "endpointInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,25 +271,26 @@ public class Projects {
     /**
      * Deletes an endpoint.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDeleteResponse servicedirectoryProjectsLocationsNamespacesServicesEndpointsDelete(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDeleteResponse servicedirectoryProjectsLocationsNamespacesServicesEndpointsDelete(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDeleteRequest request, org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,25 +317,26 @@ public class Projects {
     /**
      * Gets an endpoint.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGetResponse servicedirectoryProjectsLocationsNamespacesServicesEndpointsGet(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGetResponse servicedirectoryProjectsLocationsNamespacesServicesEndpointsGet(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGetRequest request, org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -356,25 +363,26 @@ public class Projects {
     /**
      * Lists all endpoints.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListResponse servicedirectoryProjectsLocationsNamespacesServicesEndpointsList(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListResponse servicedirectoryProjectsLocationsNamespacesServicesEndpointsList(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListRequest request, org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListPathParams.class, baseUrl, "/v1/{parent}/endpoints", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListRequest.class, baseUrl, "/v1/{parent}/endpoints", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -401,27 +409,28 @@ public class Projects {
     /**
      * Updates an endpoint.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatchResponse servicedirectoryProjectsLocationsNamespacesServicesEndpointsPatch(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatchResponse servicedirectoryProjectsLocationsNamespacesServicesEndpointsPatch(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatchRequest request, org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "endpointInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -448,27 +457,28 @@ public class Projects {
     /**
      * Gets the IAM Policy for a resource (namespace or service only).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicyResponse servicedirectoryProjectsLocationsNamespacesServicesGetIamPolicy(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicyResponse servicedirectoryProjectsLocationsNamespacesServicesGetIamPolicy(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicyRequest request, org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicyPathParams.class, baseUrl, "/v1/{resource}:getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicyRequest.class, baseUrl, "/v1/{resource}:getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "getIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -495,25 +505,26 @@ public class Projects {
     /**
      * Lists all services belonging to a namespace.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesListResponse servicedirectoryProjectsLocationsNamespacesServicesList(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesListResponse servicedirectoryProjectsLocationsNamespacesServicesList(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesListRequest request, org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesListPathParams.class, baseUrl, "/v1/{parent}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesListRequest.class, baseUrl, "/v1/{parent}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -540,27 +551,28 @@ public class Projects {
     /**
      * Returns a service and its associated endpoints. Resolving a service is not considered an active developer method.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesResolveResponse servicedirectoryProjectsLocationsNamespacesServicesResolve(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesResolveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesResolveResponse servicedirectoryProjectsLocationsNamespacesServicesResolve(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesResolveRequest request, org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesResolveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesResolvePathParams.class, baseUrl, "/v1/{name}:resolve", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesResolveRequest.class, baseUrl, "/v1/{name}:resolve", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resolveServiceRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesResolveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesResolveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -587,27 +599,28 @@ public class Projects {
     /**
      * Sets the IAM Policy for a resource (namespace or service only).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyResponse servicedirectoryProjectsLocationsNamespacesServicesSetIamPolicy(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyResponse servicedirectoryProjectsLocationsNamespacesServicesSetIamPolicy(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyRequest request, org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyPathParams.class, baseUrl, "/v1/{resource}:setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyRequest.class, baseUrl, "/v1/{resource}:setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -634,27 +647,28 @@ public class Projects {
     /**
      * Tests IAM permissions for a resource (namespace or service only).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissionsResponse servicedirectoryProjectsLocationsNamespacesServicesTestIamPermissions(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissionsResponse servicedirectoryProjectsLocationsNamespacesServicesTestIamPermissions(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissionsRequest request, org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissionsPathParams.class, baseUrl, "/v1/{resource}:testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissionsRequest.class, baseUrl, "/v1/{resource}:testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testIamPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkFirmwareUpgradesStagedGroupsRequest {
-    
-    public GetNetworkFirmwareUpgradesStagedGroupsPathParams pathParams;
-    public GetNetworkFirmwareUpgradesStagedGroupsRequest withPathParams(GetNetworkFirmwareUpgradesStagedGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkFirmwareUpgradesStagedGroupsRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

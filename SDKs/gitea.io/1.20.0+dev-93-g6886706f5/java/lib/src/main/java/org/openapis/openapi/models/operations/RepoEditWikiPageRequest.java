@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoEditWikiPageRequest {
-    
-    public RepoEditWikiPagePathParams pathParams;
-    public RepoEditWikiPageRequest withPathParams(RepoEditWikiPagePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateWikiPageOptions createWikiPageOptions;
+    public RepoEditWikiPageRequest withCreateWikiPageOptions(org.openapis.openapi.models.shared.CreateWikiPageOptions createWikiPageOptions) {
+        this.createWikiPageOptions = createWikiPageOptions;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateWikiPageOptions request;
-    public RepoEditWikiPageRequest withRequest(org.openapis.openapi.models.shared.CreateWikiPageOptions request) {
-        this.request = request;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoEditWikiPageRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the page
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pageName")
+    public String pageName;
+    public RepoEditWikiPageRequest withPageName(String pageName) {
+        this.pageName = pageName;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoEditWikiPageRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

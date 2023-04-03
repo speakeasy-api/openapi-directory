@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFormByShareHashRequest {
-    
-    public GetFormByShareHashQueryParams queryParams;
-    public GetFormByShareHashRequest withQueryParams(GetFormByShareHashQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Access Token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public GetFormByShareHashRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
         return this;
     }
     
+    /**
+     * API key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public GetFormByShareHashRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
     
-    public GetFormByShareHashHeaders headers;
-    public GetFormByShareHashRequest withHeaders(GetFormByShareHashHeaders headers) {
-        this.headers = headers;
+    /**
+     * Related record types to include in the response. Valid option is **share**
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public GetFormByShareHashIncludeEnum include;
+    public GetFormByShareHashRequest withInclude(GetFormByShareHashIncludeEnum include) {
+        this.include = include;
+        return this;
+    }
+    
+    /**
+     * Share hash to retrieve the form for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=shareHash")
+    public String shareHash;
+    public GetFormByShareHashRequest withShareHash(String shareHash) {
+        this.shareHash = shareHash;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestSyslogConfigRequest {
-    
-    public RequestSyslogConfigHeaders headers;
-    public RequestSyslogConfigRequest withHeaders(RequestSyslogConfigHeaders headers) {
-        this.headers = headers;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestSyslogConfigRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

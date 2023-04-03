@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CatalogChangeCustomColumnExpressionRequest {
-    
-    public CatalogChangeCustomColumnExpressionPathParams pathParams;
-    public CatalogChangeCustomColumnExpressionRequest withPathParams(CatalogChangeCustomColumnExpressionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ChangeCustomColumnExpressionRequest changeCustomColumnExpressionRequest;
+    public CatalogChangeCustomColumnExpressionRequest withChangeCustomColumnExpressionRequest(org.openapis.openapi.models.shared.ChangeCustomColumnExpressionRequest changeCustomColumnExpressionRequest) {
+        this.changeCustomColumnExpressionRequest = changeCustomColumnExpressionRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ChangeCustomColumnExpressionRequest request;
-    public CatalogChangeCustomColumnExpressionRequest withRequest(org.openapis.openapi.models.shared.ChangeCustomColumnExpressionRequest request) {
-        this.request = request;
+    /**
+     * The custom column identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnId")
+    public String columnId;
+    public CatalogChangeCustomColumnExpressionRequest withColumnId(String columnId) {
+        this.columnId = columnId;
+        return this;
+    }
+    
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public CatalogChangeCustomColumnExpressionRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTagRequest {
-    
-    public GetTagPathParams pathParams;
-    public GetTagRequest withPathParams(GetTagPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The iteration to retrieve this tag from. Optional, defaults to current training set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
+    public String iterationId;
+    public GetTagRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
         return this;
     }
     
+    /**
+     * The project this tag belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public GetTagRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
     
-    public GetTagQueryParams queryParams;
-    public GetTagRequest withQueryParams(GetTagQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The tag id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
+    public String tagId;
+    public GetTagRequest withTagId(String tagId) {
+        this.tagId = tagId;
         return this;
     }
     

@@ -34,25 +34,26 @@ public class BackupRuns {
     /**
      * Deletes the backup taken by a backup run.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlBackupRunsDeleteResponse sqlBackupRunsDelete(org.openapis.openapi.models.operations.SqlBackupRunsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlBackupRunsDeleteResponse sqlBackupRunsDelete(org.openapis.openapi.models.operations.SqlBackupRunsDeleteRequest request, org.openapis.openapi.models.operations.SqlBackupRunsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlBackupRunsDeletePathParams.class, baseUrl, "/sql/v1beta4/projects/{project}/instances/{instance}/backupRuns/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlBackupRunsDeleteRequest.class, baseUrl, "/sql/v1beta4/projects/{project}/instances/{instance}/backupRuns/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlBackupRunsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlBackupRunsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class BackupRuns {
     /**
      * Retrieves a resource containing information about a backup run.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlBackupRunsGetResponse sqlBackupRunsGet(org.openapis.openapi.models.operations.SqlBackupRunsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlBackupRunsGetResponse sqlBackupRunsGet(org.openapis.openapi.models.operations.SqlBackupRunsGetRequest request, org.openapis.openapi.models.operations.SqlBackupRunsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlBackupRunsGetPathParams.class, baseUrl, "/sql/v1beta4/projects/{project}/instances/{instance}/backupRuns/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlBackupRunsGetRequest.class, baseUrl, "/sql/v1beta4/projects/{project}/instances/{instance}/backupRuns/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlBackupRunsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlBackupRunsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class BackupRuns {
     /**
      * Creates a new backup run on demand.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlBackupRunsInsertResponse sqlBackupRunsInsert(org.openapis.openapi.models.operations.SqlBackupRunsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlBackupRunsInsertResponse sqlBackupRunsInsert(org.openapis.openapi.models.operations.SqlBackupRunsInsertRequest request, org.openapis.openapi.models.operations.SqlBackupRunsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlBackupRunsInsertPathParams.class, baseUrl, "/sql/v1beta4/projects/{project}/instances/{instance}/backupRuns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlBackupRunsInsertRequest.class, baseUrl, "/sql/v1beta4/projects/{project}/instances/{instance}/backupRuns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "backupRun", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlBackupRunsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlBackupRunsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class BackupRuns {
     /**
      * Lists all backup runs associated with the project or a given instance and configuration in the reverse chronological order of the backup initiation time.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlBackupRunsListResponse sqlBackupRunsList(org.openapis.openapi.models.operations.SqlBackupRunsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlBackupRunsListResponse sqlBackupRunsList(org.openapis.openapi.models.operations.SqlBackupRunsListRequest request, org.openapis.openapi.models.operations.SqlBackupRunsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlBackupRunsListPathParams.class, baseUrl, "/sql/v1beta4/projects/{project}/instances/{instance}/backupRuns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlBackupRunsListRequest.class, baseUrl, "/sql/v1beta4/projects/{project}/instances/{instance}/backupRuns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlBackupRunsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlBackupRunsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

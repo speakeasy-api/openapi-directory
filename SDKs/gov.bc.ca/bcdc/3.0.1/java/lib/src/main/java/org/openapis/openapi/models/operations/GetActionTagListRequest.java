@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActionTagListRequest {
+    /**
+     * The number of tags to be returned per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetActionTagListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetActionTagListQueryParams queryParams;
-    public GetActionTagListRequest withQueryParams(GetActionTagListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The offset (index) of the first tag to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetActionTagListRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

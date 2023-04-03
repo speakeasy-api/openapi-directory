@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrievePricingAllCountriesRequest {
-    
-    public RetrievePricingAllCountriesPathParams pathParams;
-    public RetrievePricingAllCountriesRequest withPathParams(RetrievePricingAllCountriesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your Nexmo API key.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public RetrievePricingAllCountriesRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * Your Nexmo API secret.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_secret")
+    public String apiSecret;
+    public RetrievePricingAllCountriesRequest withApiSecret(String apiSecret) {
+        this.apiSecret = apiSecret;
+        return this;
+    }
     
-    public RetrievePricingAllCountriesQueryParams queryParams;
-    public RetrievePricingAllCountriesRequest withQueryParams(RetrievePricingAllCountriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The type of service you wish to retrieve data about: either `sms`, `sms-transit` or `voice`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public String type;
+    public RetrievePricingAllCountriesRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHpHpRequest {
-    
-    public GetHpHpPathParams pathParams;
-    public GetHpHpRequest withPathParams(GetHpHpPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hp")
+    public String hp;
+    public GetHpHpRequest withHp(String hp) {
+        this.hp = hp;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchWorkspaceRequest {
-    
-    public SearchWorkspacePathParams pathParams;
-    public SearchWorkspaceRequest withPathParams(SearchWorkspacePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Which page of the search results to retrieve
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public SearchWorkspaceRequest withPage(Integer page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many search results to retrieve per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagelen")
+    public Integer pagelen;
+    public SearchWorkspaceRequest withPagelen(Integer pagelen) {
+        this.pagelen = pagelen;
+        return this;
+    }
     
-    public SearchWorkspaceQueryParams queryParams;
-    public SearchWorkspaceRequest withQueryParams(SearchWorkspaceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The search query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_query")
+    public String searchQuery;
+    public SearchWorkspaceRequest withSearchQuery(String searchQuery) {
+        this.searchQuery = searchQuery;
+        return this;
+    }
+    
+    /**
+     * The workspace to search in; either the slug or the UUID in curly braces
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public SearchWorkspaceRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

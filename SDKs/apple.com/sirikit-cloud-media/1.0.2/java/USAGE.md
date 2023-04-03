@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.ExtensionConfigurationHeaders;
 import org.openapis.openapi.models.operations.ExtensionConfigurationRequest;
 import org.openapis.openapi.models.operations.ExtensionConfigurationResponse;
 
@@ -15,16 +14,14 @@ public class Application {
                 .build();
 
             ExtensionConfigurationRequest req = new ExtensionConfigurationRequest() {{
-                headers = new ExtensionConfigurationHeaders() {{
-                    acceptLanguage = "corrupti";
-                    cacheControl = "provident";
-                    ifNoneMatch = "distinctio";
-                    requestTimeout = 8442.66;
-                    userAgent = "unde";
-                    xApplecloudextensionRetryCount = 8579.46;
-                    xApplecloudextensionSessionId = "corrupti";
-                }};
-            }};            
+                acceptLanguage = "corrupti";
+                cacheControl = "provident";
+                ifNoneMatch = "distinctio";
+                requestTimeout = 8442.66;
+                userAgent = "unde";
+                xApplecloudextensionRetryCount = 8579.46;
+                xApplecloudextensionSessionId = "corrupti";
+            }}            
 
             ExtensionConfigurationResponse res = sdk.config.extensionConfiguration(req);
 

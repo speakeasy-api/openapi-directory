@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyEmailSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeVerifyEmailAuth verifyEmailAuth;
-    public VerifyEmailSecurity withVerifyEmailAuth(org.openapis.openapi.models.shared.SchemeVerifyEmailAuth verifyEmailAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=authorization")
+    public String verifyEmailAuth;
+    public VerifyEmailSecurity withVerifyEmailAuth(String verifyEmailAuth) {
         this.verifyEmailAuth = verifyEmailAuth;
         return this;
     }

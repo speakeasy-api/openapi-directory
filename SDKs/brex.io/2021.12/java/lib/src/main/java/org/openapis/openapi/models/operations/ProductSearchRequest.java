@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductSearchRequest {
-    
-    public ProductSearchPathParams pathParams;
-    public ProductSearchRequest withPathParams(ProductSearchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ProductSearchSecurity security;
-    public ProductSearchRequest withSecurity(ProductSearchSecurity security) {
-        this.security = security;
+    /**
+     * Subject (e.g. Company) ID - 32 character hex value
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subjectId")
+    public String subjectId;
+    public ProductSearchRequest withSubjectId(String subjectId) {
+        this.subjectId = subjectId;
         return this;
     }
     

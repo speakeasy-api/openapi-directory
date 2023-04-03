@@ -4,27 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRecommendationsRequest {
-    
-    public GetRecommendationsPathParams pathParams;
-    public GetRecommendationsRequest withPathParams(GetRecommendationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetRecommendationsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public GetRecommendationsQueryParams queryParams;
-    public GetRecommendationsRequest withQueryParams(GetRecommendationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetRecommendationsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetRecommendationsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public GetRecommendationsHeaders headers;
-    public GetRecommendationsRequest withHeaders(GetRecommendationsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetRecommendationsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetRecommendationsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetRecommendationsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetRecommendationsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The identifier of the Wisdom assistant. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assistantId")
+    public String assistantId;
+    public GetRecommendationsRequest withAssistantId(String assistantId) {
+        this.assistantId = assistantId;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public GetRecommendationsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The identifier of the session. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sessionId")
+    public String sessionId;
+    public GetRecommendationsRequest withSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    
+    /**
+     * The duration (in seconds) for which the call waits for a recommendation to be made available before returning. If a recommendation is available, the call returns sooner than &lt;code&gt;WaitTimeSeconds&lt;/code&gt;. If no messages are available and the wait time expires, the call returns successfully with an empty list.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=waitTimeSeconds")
+    public Long waitTimeSeconds;
+    public GetRecommendationsRequest withWaitTimeSeconds(Long waitTimeSeconds) {
+        this.waitTimeSeconds = waitTimeSeconds;
         return this;
     }
     

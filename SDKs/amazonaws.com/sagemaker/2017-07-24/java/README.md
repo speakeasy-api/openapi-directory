@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AddAssociationXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AddAssociationHeaders;
 import org.openapis.openapi.models.operations.AddAssociationRequest;
 import org.openapis.openapi.models.operations.AddAssociationResponse;
 import org.openapis.openapi.models.shared.AddAssociationRequest;
@@ -29,29 +28,25 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddAssociationRequest req = new AddAssociationRequest() {{
-                headers = new AddAssociationHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "SageMaker.AddAssociation";
+                addAssociationRequest = new AddAssociationRequest() {{
+                    associationType = "DerivedFrom";
+                    destinationArn = "provident";
+                    sourceArn = "distinctio";
                 }};
-                request = new AddAssociationRequest() {{
-                    associationType = "Produced";
-                    destinationArn = "vel";
-                    sourceArn = "error";
-                }};
-            }};            
+                xAmzAlgorithm = "quibusdam";
+                xAmzContentSha256 = "unde";
+                xAmzCredential = "nulla";
+                xAmzDate = "corrupti";
+                xAmzSecurityToken = "illum";
+                xAmzSignature = "vel";
+                xAmzSignedHeaders = "error";
+                xAmzTarget = "SageMaker.AddAssociation";
+            }}            
 
             AddAssociationResponse res = sdk.addAssociation(req);
 
@@ -65,7 +60,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

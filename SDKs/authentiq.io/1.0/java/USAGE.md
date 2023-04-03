@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AuthorizeQueryParams;
 import org.openapis.openapi.models.operations.AuthorizeRequest;
 import org.openapis.openapi.models.operations.AuthorizeResponse;
 
@@ -15,20 +14,18 @@ public class Application {
                 .build();
 
             AuthorizeRequest req = new AuthorizeRequest() {{
-                queryParams = new AuthorizeQueryParams() {{
-                    clientId = "corrupti";
-                    display = "provident";
-                    maxAge = 715190;
-                    nonce = "quibusdam";
-                    prompt = "unde";
-                    redirectUri = "nulla";
-                    responseMode = "corrupti";
-                    responseType = "illum";
-                    scope = "vel";
-                    state = "error";
-                    uiLocales = "deserunt";
-                }};
-            }};            
+                clientId = "corrupti";
+                display = "provident";
+                maxAge = 715190;
+                nonce = "quibusdam";
+                prompt = "unde";
+                redirectUri = "nulla";
+                responseMode = "corrupti";
+                responseType = "illum";
+                scope = "vel";
+                state = "error";
+                uiLocales = "deserunt";
+            }}            
 
             AuthorizeResponse res = sdk.authentication.authorize(req);
 

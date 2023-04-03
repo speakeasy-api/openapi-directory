@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomerCategoriesIdJsonRequest {
-    
-    public GetCustomerCategoriesIdJsonPathParams pathParams;
-    public GetCustomerCategoriesIdJsonRequest withPathParams(GetCustomerCategoriesIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public GetCustomerCategoriesIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Id of the CustomerCategory
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetCustomerCategoriesIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetCustomerCategoriesIdJsonQueryParams queryParams;
-    public GetCustomerCategoriesIdJsonRequest withQueryParams(GetCustomerCategoriesIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public GetCustomerCategoriesIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

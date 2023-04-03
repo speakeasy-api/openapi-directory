@@ -35,27 +35,28 @@ public class Properties {
     /**
      * Creates information about multiple access bindings to an account or property. This method is transactional. If any AccessBinding cannot be created, none of the AccessBindings will be created.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchCreateResponse analyticsadminPropertiesAccessBindingsBatchCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchCreateResponse analyticsadminPropertiesAccessBindingsBatchCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchCreateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchCreatePathParams.class, baseUrl, "/v1alpha/{parent}/accessBindings:batchCreate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchCreateRequest.class, baseUrl, "/v1alpha/{parent}/accessBindings:batchCreate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaBatchCreateAccessBindingsRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Properties {
     /**
      * Deletes information about multiple users' links to an account or property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchDeleteResponse analyticsadminPropertiesAccessBindingsBatchDelete(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchDeleteResponse analyticsadminPropertiesAccessBindingsBatchDelete(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchDeleteRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchDeletePathParams.class, baseUrl, "/v1alpha/{parent}/accessBindings:batchDelete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchDeleteRequest.class, baseUrl, "/v1alpha/{parent}/accessBindings:batchDelete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaBatchDeleteAccessBindingsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,25 +131,26 @@ public class Properties {
     /**
      * Gets information about multiple access bindings to an account or property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchGetResponse analyticsadminPropertiesAccessBindingsBatchGet(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchGetResponse analyticsadminPropertiesAccessBindingsBatchGet(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchGetRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchGetPathParams.class, baseUrl, "/v1alpha/{parent}/accessBindings:batchGet", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchGetRequest.class, baseUrl, "/v1alpha/{parent}/accessBindings:batchGet", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,27 +177,28 @@ public class Properties {
     /**
      * Updates information about multiple access bindings to an account or property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchUpdateResponse analyticsadminPropertiesAccessBindingsBatchUpdate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchUpdateResponse analyticsadminPropertiesAccessBindingsBatchUpdate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchUpdateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchUpdatePathParams.class, baseUrl, "/v1alpha/{parent}/accessBindings:batchUpdate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchUpdateRequest.class, baseUrl, "/v1alpha/{parent}/accessBindings:batchUpdate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaBatchUpdateAccessBindingsRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsBatchUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -221,27 +225,28 @@ public class Properties {
     /**
      * Creates an access binding on an account or property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsCreateResponse analyticsadminPropertiesAccessBindingsCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsCreateResponse analyticsadminPropertiesAccessBindingsCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsCreateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsCreatePathParams.class, baseUrl, "/v1alpha/{parent}/accessBindings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsCreateRequest.class, baseUrl, "/v1alpha/{parent}/accessBindings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaAccessBindingInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -268,25 +273,26 @@ public class Properties {
     /**
      * Lists all access bindings on an account or property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsListResponse analyticsadminPropertiesAccessBindingsList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsListResponse analyticsadminPropertiesAccessBindingsList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsListRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsListPathParams.class, baseUrl, "/v1alpha/{parent}/accessBindings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsListRequest.class, baseUrl, "/v1alpha/{parent}/accessBindings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAccessBindingsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -313,27 +319,28 @@ public class Properties {
     /**
      * Acknowledges the terms of user data collection for the specified property. This acknowledgement must be completed (either in the Google Analytics UI or through this API) before MeasurementProtocolSecret resources may be created.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionResponse analyticsadminPropertiesAcknowledgeUserDataCollection(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionResponse analyticsadminPropertiesAcknowledgeUserDataCollection(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionPathParams.class, baseUrl, "/v1alpha/{property}:acknowledgeUserDataCollection", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest.class, baseUrl, "/v1alpha/{property}:acknowledgeUserDataCollection", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaAcknowledgeUserDataCollectionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -360,27 +367,28 @@ public class Properties {
     /**
      * Creates an Audience.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesCreateResponse analyticsadminPropertiesAudiencesCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesCreateResponse analyticsadminPropertiesAudiencesCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesCreateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesCreatePathParams.class, baseUrl, "/v1alpha/{parent}/audiences", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesCreateRequest.class, baseUrl, "/v1alpha/{parent}/audiences", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaAudienceInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -407,25 +415,26 @@ public class Properties {
     /**
      * Lists Audiences on a property. Audiences created before 2020 may not be supported. Default audiences will not show filter definitions.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesListResponse analyticsadminPropertiesAudiencesList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesListResponse analyticsadminPropertiesAudiencesList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesListRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesListPathParams.class, baseUrl, "/v1alpha/{parent}/audiences", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesListRequest.class, baseUrl, "/v1alpha/{parent}/audiences", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesAudiencesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -452,25 +461,26 @@ public class Properties {
     /**
      * Lists BigQuery Links on a property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesBigQueryLinksListResponse analyticsadminPropertiesBigQueryLinksList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesBigQueryLinksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesBigQueryLinksListResponse analyticsadminPropertiesBigQueryLinksList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesBigQueryLinksListRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesBigQueryLinksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesBigQueryLinksListPathParams.class, baseUrl, "/v1alpha/{parent}/bigQueryLinks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesBigQueryLinksListRequest.class, baseUrl, "/v1alpha/{parent}/bigQueryLinks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesBigQueryLinksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesBigQueryLinksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,27 +507,28 @@ public class Properties {
     /**
      * Creates a conversion event with the specified attributes.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsCreateResponse analyticsadminPropertiesConversionEventsCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsCreateResponse analyticsadminPropertiesConversionEventsCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsCreateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsCreatePathParams.class, baseUrl, "/v1alpha/{parent}/conversionEvents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsCreateRequest.class, baseUrl, "/v1alpha/{parent}/conversionEvents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaConversionEventInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -544,25 +555,26 @@ public class Properties {
     /**
      * Returns a list of conversion events in the specified parent property. Returns an empty list if no conversion events are found.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsListResponse analyticsadminPropertiesConversionEventsList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsListResponse analyticsadminPropertiesConversionEventsList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsListRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsListPathParams.class, baseUrl, "/v1alpha/{parent}/conversionEvents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsListRequest.class, baseUrl, "/v1alpha/{parent}/conversionEvents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesConversionEventsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -589,27 +601,28 @@ public class Properties {
     /**
      * Creates an "GA4" property with the specified location and attributes.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateResponse analyticsadminPropertiesCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateResponse analyticsadminPropertiesCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1alpha/properties");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaPropertyInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -636,27 +649,28 @@ public class Properties {
     /**
      * Creates a connected site tag for a Universal Analytics property. You can create a maximum of 20 connected site tags per property. Note: This API cannot be used on GA4 properties.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateConnectedSiteTagResponse analyticsadminPropertiesCreateConnectedSiteTag(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateConnectedSiteTagRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateConnectedSiteTagResponse analyticsadminPropertiesCreateConnectedSiteTag(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateConnectedSiteTagRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateConnectedSiteTagSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1alpha/properties:createConnectedSiteTag");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaCreateConnectedSiteTagRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateConnectedSiteTagQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCreateConnectedSiteTagRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -683,27 +697,28 @@ public class Properties {
     /**
      * Creates a CustomDimension.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsCreateResponse analyticsadminPropertiesCustomDimensionsCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsCreateResponse analyticsadminPropertiesCustomDimensionsCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsCreateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsCreatePathParams.class, baseUrl, "/v1alpha/{parent}/customDimensions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsCreateRequest.class, baseUrl, "/v1alpha/{parent}/customDimensions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaCustomDimensionInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -730,25 +745,26 @@ public class Properties {
     /**
      * Lists CustomDimensions on a property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsListResponse analyticsadminPropertiesCustomDimensionsList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsListResponse analyticsadminPropertiesCustomDimensionsList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsListRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsListPathParams.class, baseUrl, "/v1alpha/{parent}/customDimensions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsListRequest.class, baseUrl, "/v1alpha/{parent}/customDimensions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomDimensionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -775,27 +791,28 @@ public class Properties {
     /**
      * Archives a CustomMetric on a property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsArchiveResponse analyticsadminPropertiesCustomMetricsArchive(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsArchiveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsArchiveResponse analyticsadminPropertiesCustomMetricsArchive(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsArchiveRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsArchiveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsArchivePathParams.class, baseUrl, "/v1alpha/{name}:archive", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsArchiveRequest.class, baseUrl, "/v1alpha/{name}:archive", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsArchiveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsArchiveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -822,27 +839,28 @@ public class Properties {
     /**
      * Creates a CustomMetric.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsCreateResponse analyticsadminPropertiesCustomMetricsCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsCreateResponse analyticsadminPropertiesCustomMetricsCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsCreateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsCreatePathParams.class, baseUrl, "/v1alpha/{parent}/customMetrics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsCreateRequest.class, baseUrl, "/v1alpha/{parent}/customMetrics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaCustomMetricInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -869,25 +887,26 @@ public class Properties {
     /**
      * Lists CustomMetrics on a property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsListResponse analyticsadminPropertiesCustomMetricsList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsListResponse analyticsadminPropertiesCustomMetricsList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsListRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsListPathParams.class, baseUrl, "/v1alpha/{parent}/customMetrics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsListRequest.class, baseUrl, "/v1alpha/{parent}/customMetrics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesCustomMetricsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -914,27 +933,28 @@ public class Properties {
     /**
      * Creates a DataStream.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsCreateResponse analyticsadminPropertiesDataStreamsCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsCreateResponse analyticsadminPropertiesDataStreamsCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsCreateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsCreatePathParams.class, baseUrl, "/v1alpha/{parent}/dataStreams", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsCreateRequest.class, baseUrl, "/v1alpha/{parent}/dataStreams", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaDataStreamInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -961,25 +981,26 @@ public class Properties {
     /**
      * Lists DataStreams on a property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsListResponse analyticsadminPropertiesDataStreamsList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsListResponse analyticsadminPropertiesDataStreamsList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsListRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsListPathParams.class, baseUrl, "/v1alpha/{parent}/dataStreams", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsListRequest.class, baseUrl, "/v1alpha/{parent}/dataStreams", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1006,27 +1027,28 @@ public class Properties {
     /**
      * Creates a measurement protocol secret.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateResponse analyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateResponse analyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreatePathParams.class, baseUrl, "/v1alpha/{parent}/measurementProtocolSecrets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateRequest.class, baseUrl, "/v1alpha/{parent}/measurementProtocolSecrets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaMeasurementProtocolSecretInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1053,25 +1075,26 @@ public class Properties {
     /**
      * Returns child MeasurementProtocolSecrets under the specified parent Property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListResponse analyticsadminPropertiesDataStreamsMeasurementProtocolSecretsList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListResponse analyticsadminPropertiesDataStreamsMeasurementProtocolSecretsList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListPathParams.class, baseUrl, "/v1alpha/{parent}/measurementProtocolSecrets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListRequest.class, baseUrl, "/v1alpha/{parent}/measurementProtocolSecrets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDataStreamsMeasurementProtocolSecretsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1098,27 +1121,28 @@ public class Properties {
     /**
      * Deletes a connected site tag for a Universal Analytics property. Note: this has no effect on GA4 properties.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDeleteConnectedSiteTagResponse analyticsadminPropertiesDeleteConnectedSiteTag(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDeleteConnectedSiteTagRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDeleteConnectedSiteTagResponse analyticsadminPropertiesDeleteConnectedSiteTag(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDeleteConnectedSiteTagRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesDeleteConnectedSiteTagSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1alpha/properties:deleteConnectedSiteTag");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaDeleteConnectedSiteTagRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDeleteConnectedSiteTagQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDeleteConnectedSiteTagRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1145,27 +1169,28 @@ public class Properties {
     /**
      * Approves a DisplayVideo360AdvertiserLinkProposal. The DisplayVideo360AdvertiserLinkProposal will be deleted and a new DisplayVideo360AdvertiserLink will be created.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsApproveResponse analyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsApprove(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsApproveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsApproveResponse analyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsApprove(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsApproveRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsApproveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsApprovePathParams.class, baseUrl, "/v1alpha/{name}:approve", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsApproveRequest.class, baseUrl, "/v1alpha/{name}:approve", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsApproveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsApproveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1192,27 +1217,28 @@ public class Properties {
     /**
      * Cancels a DisplayVideo360AdvertiserLinkProposal. Cancelling can mean either: - Declining a proposal initiated from Display &amp; Video 360 - Withdrawing a proposal initiated from Google Analytics After being cancelled, a proposal will eventually be deleted automatically.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancelResponse analyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancel(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancelResponse analyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancel(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancelRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancelPathParams.class, baseUrl, "/v1alpha/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancelRequest.class, baseUrl, "/v1alpha/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1239,27 +1265,28 @@ public class Properties {
     /**
      * Creates a DisplayVideo360AdvertiserLinkProposal.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreateResponse analyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreateResponse analyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreatePathParams.class, baseUrl, "/v1alpha/{parent}/displayVideo360AdvertiserLinkProposals", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreateRequest.class, baseUrl, "/v1alpha/{parent}/displayVideo360AdvertiserLinkProposals", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposalInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1286,25 +1313,26 @@ public class Properties {
     /**
      * Lists DisplayVideo360AdvertiserLinkProposals on a property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListResponse analyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListResponse analyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListPathParams.class, baseUrl, "/v1alpha/{parent}/displayVideo360AdvertiserLinkProposals", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListRequest.class, baseUrl, "/v1alpha/{parent}/displayVideo360AdvertiserLinkProposals", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinkProposalsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1331,27 +1359,28 @@ public class Properties {
     /**
      * Creates a DisplayVideo360AdvertiserLink. This can only be utilized by users who have proper authorization both on the Google Analytics property and on the Display &amp; Video 360 advertiser. Users who do not have access to the Display &amp; Video 360 advertiser should instead seek to create a DisplayVideo360LinkProposal.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateResponse analyticsadminPropertiesDisplayVideo360AdvertiserLinksCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateResponse analyticsadminPropertiesDisplayVideo360AdvertiserLinksCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreatePathParams.class, baseUrl, "/v1alpha/{parent}/displayVideo360AdvertiserLinks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest.class, baseUrl, "/v1alpha/{parent}/displayVideo360AdvertiserLinks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1378,25 +1407,26 @@ public class Properties {
     /**
      * Lists all DisplayVideo360AdvertiserLinks on a property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksListResponse analyticsadminPropertiesDisplayVideo360AdvertiserLinksList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksListResponse analyticsadminPropertiesDisplayVideo360AdvertiserLinksList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksListRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksListPathParams.class, baseUrl, "/v1alpha/{parent}/displayVideo360AdvertiserLinks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksListRequest.class, baseUrl, "/v1alpha/{parent}/displayVideo360AdvertiserLinks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesDisplayVideo360AdvertiserLinksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1423,27 +1453,28 @@ public class Properties {
     /**
      * Creates a ExpandedDataSet.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsCreateResponse analyticsadminPropertiesExpandedDataSetsCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsCreateResponse analyticsadminPropertiesExpandedDataSetsCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsCreateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsCreatePathParams.class, baseUrl, "/v1alpha/{parent}/expandedDataSets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsCreateRequest.class, baseUrl, "/v1alpha/{parent}/expandedDataSets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaExpandedDataSetInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1470,25 +1501,26 @@ public class Properties {
     /**
      * Lists ExpandedDataSets on a property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsListResponse analyticsadminPropertiesExpandedDataSetsList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsListResponse analyticsadminPropertiesExpandedDataSetsList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsListRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsListPathParams.class, baseUrl, "/v1alpha/{parent}/expandedDataSets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsListRequest.class, baseUrl, "/v1alpha/{parent}/expandedDataSets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesExpandedDataSetsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1515,27 +1547,28 @@ public class Properties {
     /**
      * Fetches the opt out status for the automated GA4 setup process for a UA property. Note: this has no effect on GA4 property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutResponse analyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOut(org.openapis.openapi.models.operations.AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutResponse analyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOut(org.openapis.openapi.models.operations.AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1alpha/properties:fetchAutomatedGa4ConfigurationOptOut");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1562,27 +1595,28 @@ public class Properties {
     /**
      * Creates a FirebaseLink. Properties can have at most one FirebaseLink.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksCreateResponse analyticsadminPropertiesFirebaseLinksCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksCreateResponse analyticsadminPropertiesFirebaseLinksCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksCreateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksCreatePathParams.class, baseUrl, "/v1alpha/{parent}/firebaseLinks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksCreateRequest.class, baseUrl, "/v1alpha/{parent}/firebaseLinks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaFirebaseLinkInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1609,25 +1643,26 @@ public class Properties {
     /**
      * Lists FirebaseLinks on a property. Properties can have at most one FirebaseLink.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksListResponse analyticsadminPropertiesFirebaseLinksList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksListResponse analyticsadminPropertiesFirebaseLinksList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksListRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksListPathParams.class, baseUrl, "/v1alpha/{parent}/firebaseLinks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksListRequest.class, baseUrl, "/v1alpha/{parent}/firebaseLinks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesFirebaseLinksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1654,27 +1689,28 @@ public class Properties {
     /**
      * Creates a GoogleAdsLink.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksCreateResponse analyticsadminPropertiesGoogleAdsLinksCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksCreateResponse analyticsadminPropertiesGoogleAdsLinksCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksCreateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksCreatePathParams.class, baseUrl, "/v1alpha/{parent}/googleAdsLinks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksCreateRequest.class, baseUrl, "/v1alpha/{parent}/googleAdsLinks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaGoogleAdsLinkInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1701,25 +1737,26 @@ public class Properties {
     /**
      * Lists GoogleAdsLinks on a property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksListResponse analyticsadminPropertiesGoogleAdsLinksList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksListResponse analyticsadminPropertiesGoogleAdsLinksList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksListRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksListPathParams.class, baseUrl, "/v1alpha/{parent}/googleAdsLinks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksListRequest.class, baseUrl, "/v1alpha/{parent}/googleAdsLinks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesGoogleAdsLinksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1746,10 +1783,11 @@ public class Properties {
     /**
      * Returns child Properties under the specified parent Account. Only "GA4" properties will be returned. Properties will be excluded if the caller does not have access. Soft-deleted (ie: "trashed") properties are excluded by default. Returns an empty list if no relevant properties are found.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesListResponse analyticsadminPropertiesList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesListResponse analyticsadminPropertiesList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesListRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1alpha/properties");
         
@@ -1757,14 +1795,14 @@ public class Properties {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1791,27 +1829,28 @@ public class Properties {
     /**
      * Lists the connected site tags for a Universal Analytics property. A maximum of 20 connected site tags will be returned. Note: this has no effect on GA4 property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesListConnectedSiteTagsResponse analyticsadminPropertiesListConnectedSiteTags(org.openapis.openapi.models.operations.AnalyticsadminPropertiesListConnectedSiteTagsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesListConnectedSiteTagsResponse analyticsadminPropertiesListConnectedSiteTags(org.openapis.openapi.models.operations.AnalyticsadminPropertiesListConnectedSiteTagsRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesListConnectedSiteTagsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1alpha/properties:listConnectedSiteTags");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaListConnectedSiteTagsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesListConnectedSiteTagsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesListConnectedSiteTagsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1838,27 +1877,28 @@ public class Properties {
     /**
      * Returns a customized report of data access records. The report provides records of each time a user reads Google Analytics reporting data. Access records are retained for up to 2 years. Data Access Reports can be requested for a property. The property must be in Google Analytics 360. This method is only available to Administrators. These data access records include GA4 UI Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase &amp; Admob that can retrieve data from Google Analytics through a linkage. These records don't include property configuration changes like adding a stream or changing a property's time zone. For configuration change history, see [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesRunAccessReportResponse analyticsadminPropertiesRunAccessReport(org.openapis.openapi.models.operations.AnalyticsadminPropertiesRunAccessReportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesRunAccessReportResponse analyticsadminPropertiesRunAccessReport(org.openapis.openapi.models.operations.AnalyticsadminPropertiesRunAccessReportRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesRunAccessReportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesRunAccessReportPathParams.class, baseUrl, "/v1alpha/{entity}:runAccessReport", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesRunAccessReportRequest.class, baseUrl, "/v1alpha/{entity}:runAccessReport", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaRunAccessReportRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesRunAccessReportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesRunAccessReportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1885,27 +1925,28 @@ public class Properties {
     /**
      * Creates a SearchAds360Link.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksCreateResponse analyticsadminPropertiesSearchAds360LinksCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksCreateResponse analyticsadminPropertiesSearchAds360LinksCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksCreateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksCreatePathParams.class, baseUrl, "/v1alpha/{parent}/searchAds360Links", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksCreateRequest.class, baseUrl, "/v1alpha/{parent}/searchAds360Links", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaSearchAds360LinkInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1932,25 +1973,26 @@ public class Properties {
     /**
      * Lists all SearchAds360Links on a property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksListResponse analyticsadminPropertiesSearchAds360LinksList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksListResponse analyticsadminPropertiesSearchAds360LinksList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksListRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksListPathParams.class, baseUrl, "/v1alpha/{parent}/searchAds360Links", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksListRequest.class, baseUrl, "/v1alpha/{parent}/searchAds360Links", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesSearchAds360LinksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1977,27 +2019,28 @@ public class Properties {
     /**
      * Sets the opt out status for the automated GA4 setup process for a UA property. Note: this has no effect on GA4 property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutResponse analyticsadminPropertiesSetAutomatedGa4ConfigurationOptOut(org.openapis.openapi.models.operations.AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutResponse analyticsadminPropertiesSetAutomatedGa4ConfigurationOptOut(org.openapis.openapi.models.operations.AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1alpha/properties:setAutomatedGa4ConfigurationOptOut");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaSetAutomatedGa4ConfigurationOptOutRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesSetAutomatedGa4ConfigurationOptOutRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2024,27 +2067,28 @@ public class Properties {
     /**
      * Lists all user links on an account or property, including implicit ones that come from effective permissions granted by groups or organization admin roles. If a returned user link does not have direct permissions, they cannot be removed from the account or property directly with the DeleteUserLink command. They have to be removed from the group/etc that gives them permissions, which is currently only usable/discoverable in the GA or GMP UIs.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksAuditResponse analyticsadminPropertiesUserLinksAudit(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksAuditRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksAuditResponse analyticsadminPropertiesUserLinksAudit(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksAuditRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksAuditSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksAuditPathParams.class, baseUrl, "/v1alpha/{parent}/userLinks:audit", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksAuditRequest.class, baseUrl, "/v1alpha/{parent}/userLinks:audit", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaAuditUserLinksRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksAuditQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksAuditRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2071,27 +2115,28 @@ public class Properties {
     /**
      * Creates information about multiple users' links to an account or property. This method is transactional. If any UserLink cannot be created, none of the UserLinks will be created.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchCreateResponse analyticsadminPropertiesUserLinksBatchCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchCreateResponse analyticsadminPropertiesUserLinksBatchCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchCreateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchCreatePathParams.class, baseUrl, "/v1alpha/{parent}/userLinks:batchCreate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchCreateRequest.class, baseUrl, "/v1alpha/{parent}/userLinks:batchCreate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaBatchCreateUserLinksRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2118,27 +2163,28 @@ public class Properties {
     /**
      * Deletes information about multiple users' links to an account or property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchDeleteResponse analyticsadminPropertiesUserLinksBatchDelete(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchDeleteResponse analyticsadminPropertiesUserLinksBatchDelete(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchDeleteRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchDeletePathParams.class, baseUrl, "/v1alpha/{parent}/userLinks:batchDelete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchDeleteRequest.class, baseUrl, "/v1alpha/{parent}/userLinks:batchDelete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaBatchDeleteUserLinksRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2165,25 +2211,26 @@ public class Properties {
     /**
      * Gets information about multiple users' links to an account or property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchGetResponse analyticsadminPropertiesUserLinksBatchGet(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchGetResponse analyticsadminPropertiesUserLinksBatchGet(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchGetRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchGetPathParams.class, baseUrl, "/v1alpha/{parent}/userLinks:batchGet", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchGetRequest.class, baseUrl, "/v1alpha/{parent}/userLinks:batchGet", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2210,27 +2257,28 @@ public class Properties {
     /**
      * Updates information about multiple users' links to an account or property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchUpdateResponse analyticsadminPropertiesUserLinksBatchUpdate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchUpdateResponse analyticsadminPropertiesUserLinksBatchUpdate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchUpdateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchUpdatePathParams.class, baseUrl, "/v1alpha/{parent}/userLinks:batchUpdate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchUpdateRequest.class, baseUrl, "/v1alpha/{parent}/userLinks:batchUpdate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaBatchUpdateUserLinksRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksBatchUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2257,27 +2305,28 @@ public class Properties {
     /**
      * Creates a user link on an account or property. If the user with the specified email already has permissions on the account or property, then the user's existing permissions will be unioned with the permissions specified in the new UserLink.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksCreateResponse analyticsadminPropertiesUserLinksCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksCreateResponse analyticsadminPropertiesUserLinksCreate(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksCreateRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksCreatePathParams.class, baseUrl, "/v1alpha/{parent}/userLinks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksCreateRequest.class, baseUrl, "/v1alpha/{parent}/userLinks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaUserLinkInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2304,25 +2353,26 @@ public class Properties {
     /**
      * Deletes a user link on an account or property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksDeleteResponse analyticsadminPropertiesUserLinksDelete(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksDeleteResponse analyticsadminPropertiesUserLinksDelete(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksDeleteRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksDeletePathParams.class, baseUrl, "/v1alpha/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksDeleteRequest.class, baseUrl, "/v1alpha/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2349,25 +2399,26 @@ public class Properties {
     /**
      * Gets information about a user's link to an account or property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksGetResponse analyticsadminPropertiesUserLinksGet(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksGetResponse analyticsadminPropertiesUserLinksGet(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksGetRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksGetPathParams.class, baseUrl, "/v1alpha/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksGetRequest.class, baseUrl, "/v1alpha/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2394,25 +2445,26 @@ public class Properties {
     /**
      * Lists all user links on an account or property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksListResponse analyticsadminPropertiesUserLinksList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksListResponse analyticsadminPropertiesUserLinksList(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksListRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksListPathParams.class, baseUrl, "/v1alpha/{parent}/userLinks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksListRequest.class, baseUrl, "/v1alpha/{parent}/userLinks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2439,27 +2491,28 @@ public class Properties {
     /**
      * Updates a user link on an account or property.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksPatchResponse analyticsadminPropertiesUserLinksPatch(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksPatchResponse analyticsadminPropertiesUserLinksPatch(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksPatchRequest request, org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksPatchPathParams.class, baseUrl, "/v1alpha/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksPatchRequest.class, baseUrl, "/v1alpha/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaUserLinkInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminPropertiesUserLinksPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

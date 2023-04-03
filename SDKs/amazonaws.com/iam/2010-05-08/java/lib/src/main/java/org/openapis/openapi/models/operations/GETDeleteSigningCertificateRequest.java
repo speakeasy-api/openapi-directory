@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteSigningCertificateRequest {
-    
-    public GETDeleteSigningCertificateQueryParams queryParams;
-    public GETDeleteSigningCertificateRequest withQueryParams(GETDeleteSigningCertificateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteSigningCertificateActionEnum action;
+    public GETDeleteSigningCertificateRequest withAction(GETDeleteSigningCertificateActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The ID of the signing certificate to delete.&lt;/p&gt; &lt;p&gt;The format of this parameter, as described by its &lt;a href="http://wikipedia.org/wiki/regex"&gt;regex&lt;/a&gt; pattern, is a string of characters that can be upper- or lower-cased letters or digits.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CertificateId")
+    public String certificateId;
+    public GETDeleteSigningCertificateRequest withCertificateId(String certificateId) {
+        this.certificateId = certificateId;
+        return this;
+    }
     
-    public GETDeleteSigningCertificateHeaders headers;
-    public GETDeleteSigningCertificateRequest withHeaders(GETDeleteSigningCertificateHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The name of the user the signing certificate belongs to.&lt;/p&gt; &lt;p&gt;This parameter allows (through its &lt;a href="http://wikipedia.org/wiki/regex"&gt;regex pattern&lt;/a&gt;) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserName")
+    public String userName;
+    public GETDeleteSigningCertificateRequest withUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteSigningCertificateVersionEnum version;
+    public GETDeleteSigningCertificateRequest withVersion(GETDeleteSigningCertificateVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteSigningCertificateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteSigningCertificateRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteSigningCertificateRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteSigningCertificateRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteSigningCertificateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteSigningCertificateRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteSigningCertificateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

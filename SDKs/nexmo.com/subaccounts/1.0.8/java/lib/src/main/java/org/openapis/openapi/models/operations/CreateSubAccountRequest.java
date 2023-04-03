@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSubAccountRequest {
-    
-    public CreateSubAccountPathParams pathParams;
-    public CreateSubAccountRequest withPathParams(CreateSubAccountPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.NewSubaccountRequest request;
-    public CreateSubAccountRequest withRequest(org.openapis.openapi.models.shared.NewSubaccountRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.NewSubaccountRequest newSubaccountRequest;
+    public CreateSubAccountRequest withNewSubaccountRequest(org.openapis.openapi.models.shared.NewSubaccountRequest newSubaccountRequest) {
+        this.newSubaccountRequest = newSubaccountRequest;
         return this;
     }
     
-    
-    public CreateSubAccountSecurity security;
-    public CreateSubAccountRequest withSecurity(CreateSubAccountSecurity security) {
-        this.security = security;
+    /**
+     * ID of the primary account
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api_key")
+    public String apiKey;
+    public CreateSubAccountRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

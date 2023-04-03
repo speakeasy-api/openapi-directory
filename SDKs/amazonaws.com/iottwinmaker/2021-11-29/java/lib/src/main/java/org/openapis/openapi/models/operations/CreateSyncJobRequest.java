@@ -7,24 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSyncJobRequest {
-    
-    public CreateSyncJobPathParams pathParams;
-    public CreateSyncJobRequest withPathParams(CreateSyncJobPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateSyncJobHeaders headers;
-    public CreateSyncJobRequest withHeaders(CreateSyncJobHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateSyncJobRequestBody request;
-    public CreateSyncJobRequest withRequest(CreateSyncJobRequestBody request) {
-        this.request = request;
+    public CreateSyncJobRequestBody requestBody;
+    public CreateSyncJobRequest withRequestBody(CreateSyncJobRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public CreateSyncJobRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public CreateSyncJobRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public CreateSyncJobRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public CreateSyncJobRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public CreateSyncJobRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public CreateSyncJobRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public CreateSyncJobRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The sync source.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Currently the only supported syncSoource is &lt;code&gt;SITEWISE &lt;/code&gt;.&lt;/p&gt; &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=syncSource")
+    public String syncSource;
+    public CreateSyncJobRequest withSyncSource(String syncSource) {
+        this.syncSource = syncSource;
+        return this;
+    }
+    
+    /**
+     * The workspace ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspaceId")
+    public String workspaceId;
+    public CreateSyncJobRequest withWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
         return this;
     }
     

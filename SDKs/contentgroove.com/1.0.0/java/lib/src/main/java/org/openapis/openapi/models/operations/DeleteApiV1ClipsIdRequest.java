@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteApiV1ClipsIdRequest {
-    
-    public DeleteApiV1ClipsIdPathParams pathParams;
-    public DeleteApiV1ClipsIdRequest withPathParams(DeleteApiV1ClipsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteApiV1ClipsIdSecurity security;
-    public DeleteApiV1ClipsIdRequest withSecurity(DeleteApiV1ClipsIdSecurity security) {
-        this.security = security;
+    /**
+     * The id of the clip to be retrieved
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteApiV1ClipsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

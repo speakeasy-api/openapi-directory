@@ -37,19 +37,20 @@ public class Vaults {
     /**
      * Get Vault details and metadata
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetVaultByIdResponse getVaultById(org.openapis.openapi.models.operations.GetVaultByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetVaultByIdResponse getVaultById(org.openapis.openapi.models.operations.GetVaultByIdRequest request, org.openapis.openapi.models.operations.GetVaultByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVaultByIdPathParams.class, baseUrl, "/vaults/{vaultUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVaultByIdRequest.class, baseUrl, "/vaults/{vaultUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,10 +85,11 @@ public class Vaults {
     /**
      * Get all Vaults
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetVaultsResponse getVaults(org.openapis.openapi.models.operations.GetVaultsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetVaultsResponse getVaults(org.openapis.openapi.models.operations.GetVaultsRequest request, org.openapis.openapi.models.operations.GetVaultsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/vaults");
         
@@ -95,14 +97,14 @@ public class Vaults {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVaultsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVaultsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

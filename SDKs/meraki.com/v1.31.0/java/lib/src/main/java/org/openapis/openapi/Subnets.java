@@ -39,7 +39,7 @@ public class Subnets {
      */
     public org.openapis.openapi.models.operations.GetDeviceApplianceDhcpSubnetsResponse getDeviceApplianceDhcpSubnets(org.openapis.openapi.models.operations.GetDeviceApplianceDhcpSubnetsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceApplianceDhcpSubnetsPathParams.class, baseUrl, "/devices/{serial}/appliance/dhcp/subnets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceApplianceDhcpSubnetsRequest.class, baseUrl, "/devices/{serial}/appliance/dhcp/subnets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

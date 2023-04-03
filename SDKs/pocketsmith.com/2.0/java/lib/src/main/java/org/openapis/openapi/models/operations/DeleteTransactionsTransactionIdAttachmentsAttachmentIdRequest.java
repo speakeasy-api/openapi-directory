@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTransactionsTransactionIdAttachmentsAttachmentIdRequest {
+    /**
+     * The unique identifier of the attachment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attachment_id")
+    public Long attachmentId;
+    public DeleteTransactionsTransactionIdAttachmentsAttachmentIdRequest withAttachmentId(Long attachmentId) {
+        this.attachmentId = attachmentId;
+        return this;
+    }
     
-    public DeleteTransactionsTransactionIdAttachmentsAttachmentIdPathParams pathParams;
-    public DeleteTransactionsTransactionIdAttachmentsAttachmentIdRequest withPathParams(DeleteTransactionsTransactionIdAttachmentsAttachmentIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the transaction.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transaction_id")
+    public Long transactionId;
+    public DeleteTransactionsTransactionIdAttachmentsAttachmentIdRequest withTransactionId(Long transactionId) {
+        this.transactionId = transactionId;
         return this;
     }
     

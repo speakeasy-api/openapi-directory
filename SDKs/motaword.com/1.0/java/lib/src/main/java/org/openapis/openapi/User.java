@@ -32,16 +32,16 @@ public class User {
 		this._genVersion = genVersion;
 	}
 
-    public org.openapis.openapi.models.operations.ApproveVendorApplicationResponse approveVendorApplication(org.openapis.openapi.models.operations.ApproveVendorApplicationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApproveVendorApplicationResponse approveVendorApplication(org.openapis.openapi.models.operations.ApproveVendorApplicationRequest request, org.openapis.openapi.models.operations.ApproveVendorApplicationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApproveVendorApplicationPathParams.class, baseUrl, "/{userId}/approve", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApproveVendorApplicationRequest.class, baseUrl, "/{userId}/approve", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -87,10 +87,10 @@ public class User {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "user", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreateUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreateUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -176,7 +176,7 @@ public class User {
      */
     public org.openapis.openapi.models.operations.DeleteUserAccountResponse deleteUserAccount(org.openapis.openapi.models.operations.DeleteUserAccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserAccountPathParams.class, baseUrl, "/{userId}/delete-account", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserAccountRequest.class, baseUrl, "/{userId}/delete-account", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -258,16 +258,16 @@ public class User {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DowngradeUserProofreaderResponse downgradeUserProofreader(org.openapis.openapi.models.operations.DowngradeUserProofreaderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DowngradeUserProofreaderResponse downgradeUserProofreader(org.openapis.openapi.models.operations.DowngradeUserProofreaderRequest request, org.openapis.openapi.models.operations.DowngradeUserProofreaderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DowngradeUserProofreaderPathParams.class, baseUrl, "/{userId}/downgrade-proofreader", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DowngradeUserProofreaderRequest.class, baseUrl, "/{userId}/downgrade-proofreader", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,7 +358,7 @@ public class User {
      */
     public org.openapis.openapi.models.operations.FreezeUserAccountResponse freezeUserAccount(org.openapis.openapi.models.operations.FreezeUserAccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FreezeUserAccountPathParams.class, baseUrl, "/{userId}/freeze-account", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FreezeUserAccountRequest.class, baseUrl, "/{userId}/freeze-account", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -499,10 +499,10 @@ public class User {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "filterVendorRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFilteredVendorsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFilteredVendorsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -681,7 +681,7 @@ public class User {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResponsivityQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResponsivityRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -775,7 +775,7 @@ public class User {
      */
     public org.openapis.openapi.models.operations.GetThisUserGroupsResponse getThisUserGroups(org.openapis.openapi.models.operations.GetThisUserGroupsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetThisUserGroupsPathParams.class, baseUrl, "/{userId}/user-groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetThisUserGroupsRequest.class, baseUrl, "/{userId}/user-groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -809,19 +809,20 @@ public class User {
     /**
      * Get user information, including client or vendor specific info.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserResponse getUser(org.openapis.openapi.models.operations.GetUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUserResponse getUser(org.openapis.openapi.models.operations.GetUserRequest request, org.openapis.openapi.models.operations.GetUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserPathParams.class, baseUrl, "/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserRequest.class, baseUrl, "/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -856,19 +857,20 @@ public class User {
     /**
      * Returns your vendor earnings. Includes real-time earnings from ongoing projects, and fixed earnings from completed projects. Also includes total earnings and string edits.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserEarningsResponse getUserEarnings(org.openapis.openapi.models.operations.GetUserEarningsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUserEarningsResponse getUserEarnings(org.openapis.openapi.models.operations.GetUserEarningsRequest request, org.openapis.openapi.models.operations.GetUserEarningsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserEarningsPathParams.class, baseUrl, "/{userId}/earnings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserEarningsRequest.class, baseUrl, "/{userId}/earnings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -948,7 +950,7 @@ public class User {
      */
     public org.openapis.openapi.models.operations.GetUserPaymentInfoResponse getUserPaymentInfo(org.openapis.openapi.models.operations.GetUserPaymentInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserPaymentInfoPathParams.class, baseUrl, "/{userId}/payment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserPaymentInfoRequest.class, baseUrl, "/{userId}/payment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -995,7 +997,7 @@ public class User {
      */
     public org.openapis.openapi.models.operations.GetUserPermissionsResponse getUserPermissions(org.openapis.openapi.models.operations.GetUserPermissionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserPermissionsPathParams.class, baseUrl, "/{userId}/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserPermissionsRequest.class, baseUrl, "/{userId}/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1029,19 +1031,20 @@ public class User {
     /**
      * Returns the language pairs that the user has ordered most.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserPopularPairsResponse getUserPopularPairs(org.openapis.openapi.models.operations.GetUserPopularPairsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUserPopularPairsResponse getUserPopularPairs(org.openapis.openapi.models.operations.GetUserPopularPairsRequest request, org.openapis.openapi.models.operations.GetUserPopularPairsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserPopularPairsPathParams.class, baseUrl, "/{userId}/stats/popular-pairs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserPopularPairsRequest.class, baseUrl, "/{userId}/stats/popular-pairs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1076,19 +1079,20 @@ public class User {
     /**
      * Returns a user's project statistics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserProjectStatsResponse getUserProjectStats(org.openapis.openapi.models.operations.GetUserProjectStatsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUserProjectStatsResponse getUserProjectStats(org.openapis.openapi.models.operations.GetUserProjectStatsRequest request, org.openapis.openapi.models.operations.GetUserProjectStatsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserProjectStatsPathParams.class, baseUrl, "/{userId}/stats/projects", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserProjectStatsRequest.class, baseUrl, "/{userId}/stats/projects", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1123,25 +1127,26 @@ public class User {
     /**
      * Returns a user's vendor responsivity stats
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserResponsivityResponse getUserResponsivity(org.openapis.openapi.models.operations.GetUserResponsivityRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUserResponsivityResponse getUserResponsivity(org.openapis.openapi.models.operations.GetUserResponsivityRequest request, org.openapis.openapi.models.operations.GetUserResponsivitySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserResponsivityPathParams.class, baseUrl, "/{userId}/responsivity", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserResponsivityRequest.class, baseUrl, "/{userId}/responsivity", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserResponsivityQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserResponsivityRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1176,19 +1181,20 @@ public class User {
     /**
      * Returns a user's client and vendor statistics. This used to be called "summary" (\@deprecated).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserStatsResponse getUserStats(org.openapis.openapi.models.operations.GetUserStatsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUserStatsResponse getUserStats(org.openapis.openapi.models.operations.GetUserStatsRequest request, org.openapis.openapi.models.operations.GetUserStatsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserStatsPathParams.class, baseUrl, "/{userId}/stats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserStatsRequest.class, baseUrl, "/{userId}/stats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1235,7 +1241,7 @@ public class User {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1272,7 +1278,7 @@ public class User {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LogLocationResponse logLocation(org.openapis.openapi.models.operations.LogLocationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LogLocationResponse logLocation(org.openapis.openapi.models.shared.LocationUpdateContent request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/location");
         
@@ -1358,16 +1364,16 @@ public class User {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.MakeUserProofreaderResponse makeUserProofreader(org.openapis.openapi.models.operations.MakeUserProofreaderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MakeUserProofreaderResponse makeUserProofreader(org.openapis.openapi.models.operations.MakeUserProofreaderRequest request, org.openapis.openapi.models.operations.MakeUserProofreaderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MakeUserProofreaderPathParams.class, baseUrl, "/{userId}/make-proofreader", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MakeUserProofreaderRequest.class, baseUrl, "/{userId}/make-proofreader", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1401,16 +1407,16 @@ public class User {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.RejectVendorApplicationResponse rejectVendorApplication(org.openapis.openapi.models.operations.RejectVendorApplicationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RejectVendorApplicationResponse rejectVendorApplication(org.openapis.openapi.models.operations.RejectVendorApplicationRequest request, org.openapis.openapi.models.operations.RejectVendorApplicationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RejectVendorApplicationPathParams.class, baseUrl, "/{userId}/reject", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RejectVendorApplicationRequest.class, baseUrl, "/{userId}/reject", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1486,7 +1492,7 @@ public class User {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SendPasswordReminderResponse sendPasswordReminder(org.openapis.openapi.models.operations.SendPasswordReminderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SendPasswordReminderResponse sendPasswordReminder(org.openapis.openapi.models.shared.Email request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users/send-password-reminder");
         
@@ -1532,19 +1538,20 @@ public class User {
     /**
      * Sends email confirmation email for a user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SendUserEmailConfirmationResponse sendUserEmailConfirmation(org.openapis.openapi.models.operations.SendUserEmailConfirmationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SendUserEmailConfirmationResponse sendUserEmailConfirmation(org.openapis.openapi.models.operations.SendUserEmailConfirmationRequest request, org.openapis.openapi.models.operations.SendUserEmailConfirmationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendUserEmailConfirmationPathParams.class, baseUrl, "/{userId}/resend-email-confirmation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendUserEmailConfirmationRequest.class, baseUrl, "/{userId}/resend-email-confirmation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1591,7 +1598,7 @@ public class User {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubscribeNotificationResponse subscribeNotification(org.openapis.openapi.models.operations.SubscribeNotificationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubscribeNotificationResponse subscribeNotification(org.openapis.openapi.models.shared.NotificationSubscription request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/notifications/subscribe");
         
@@ -1634,18 +1641,18 @@ public class User {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.SubscribeUserNotificationResponse subscribeUserNotification(org.openapis.openapi.models.operations.SubscribeUserNotificationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubscribeUserNotificationResponse subscribeUserNotification(org.openapis.openapi.models.operations.SubscribeUserNotificationRequest request, org.openapis.openapi.models.operations.SubscribeUserNotificationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubscribeUserNotificationPathParams.class, baseUrl, "/{userId}/notifications/subscribe", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubscribeUserNotificationRequest.class, baseUrl, "/{userId}/notifications/subscribe", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "notificationSubscription", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1677,18 +1684,18 @@ public class User {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.SuspendUserResponse suspendUser(org.openapis.openapi.models.operations.SuspendUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SuspendUserResponse suspendUser(org.openapis.openapi.models.operations.SuspendUserRequest request, org.openapis.openapi.models.operations.SuspendUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SuspendUserPathParams.class, baseUrl, "/{userId}/suspend", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SuspendUserRequest.class, baseUrl, "/{userId}/suspend", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "suspendUserRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1777,7 +1784,7 @@ public class User {
      */
     public org.openapis.openapi.models.operations.UnfreezeUserAccountResponse unfreezeUserAccount(org.openapis.openapi.models.operations.UnfreezeUserAccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnfreezeUserAccountPathParams.class, baseUrl, "/{userId}/unfreeze-account", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnfreezeUserAccountRequest.class, baseUrl, "/{userId}/unfreeze-account", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1818,7 +1825,7 @@ public class User {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UnsubscribeNotificationResponse unsubscribeNotification(org.openapis.openapi.models.operations.UnsubscribeNotificationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnsubscribeNotificationResponse unsubscribeNotification(org.openapis.openapi.models.shared.NotificationSubscription request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/notifications/unsubscribe");
         
@@ -1861,18 +1868,18 @@ public class User {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UnsubscribeUserNotificationResponse unsubscribeUserNotification(org.openapis.openapi.models.operations.UnsubscribeUserNotificationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnsubscribeUserNotificationResponse unsubscribeUserNotification(org.openapis.openapi.models.operations.UnsubscribeUserNotificationRequest request, org.openapis.openapi.models.operations.UnsubscribeUserNotificationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnsubscribeUserNotificationPathParams.class, baseUrl, "/{userId}/notifications/unsubscribe", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnsubscribeUserNotificationRequest.class, baseUrl, "/{userId}/notifications/unsubscribe", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "notificationSubscription", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1910,7 +1917,7 @@ public class User {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateMeResponse updateMe(org.openapis.openapi.models.operations.UpdateMeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateMeResponse updateMe(org.openapis.openapi.models.shared.UserUpdateContent request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me");
         
@@ -1960,7 +1967,7 @@ public class User {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdatePasswordResponse updatePassword(org.openapis.openapi.models.operations.UpdatePasswordRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdatePasswordResponse updatePassword(org.openapis.openapi.models.shared.PasswordUpdateContent request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/password");
         
@@ -2010,7 +2017,7 @@ public class User {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdatePaymentInfoResponse updatePaymentInfo(org.openapis.openapi.models.operations.UpdatePaymentInfoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdatePaymentInfoResponse updatePaymentInfo(org.openapis.openapi.models.shared.UpdatePaymentInfo request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payment");
         
@@ -2055,12 +2062,12 @@ public class User {
 
     public org.openapis.openapi.models.operations.UpdateUserResponse updateUser(org.openapis.openapi.models.operations.UpdateUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserPathParams.class, baseUrl, "/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserRequest.class, baseUrl, "/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "userUpdateContent", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2096,18 +2103,18 @@ public class User {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UpdateUserGroupResponse updateUserGroup(org.openapis.openapi.models.operations.UpdateUserGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateUserGroupResponse updateUserGroup(org.openapis.openapi.models.operations.UpdateUserGroupRequest request, org.openapis.openapi.models.operations.UpdateUserGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserGroupPathParams.class, baseUrl, "/{userId}/user-groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserGroupRequest.class, baseUrl, "/{userId}/user-groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "activeWidget", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2148,12 +2155,12 @@ public class User {
      */
     public org.openapis.openapi.models.operations.UpdateUserPaymentInfoResponse updateUserPaymentInfo(org.openapis.openapi.models.operations.UpdateUserPaymentInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserPaymentInfoPathParams.class, baseUrl, "/{userId}/payment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserPaymentInfoRequest.class, baseUrl, "/{userId}/payment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "paymentInfo", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2196,7 +2203,7 @@ public class User {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UploadProfilePictureJsonResponse uploadProfilePictureJson(org.openapis.openapi.models.operations.UploadProfilePictureJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UploadProfilePictureJsonResponse uploadProfilePictureJson(org.openapis.openapi.models.shared.ProfilePictureUpload request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/profile-picture");
         
@@ -2246,7 +2253,7 @@ public class User {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UploadProfilePictureMultipartResponse uploadProfilePictureMultipart(org.openapis.openapi.models.operations.UploadProfilePictureMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UploadProfilePictureMultipartResponse uploadProfilePictureMultipart(org.openapis.openapi.models.shared.ProfilePictureUpload1 request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/profile-picture");
         
@@ -2289,18 +2296,18 @@ public class User {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UploadUserProfilePictureJsonResponse uploadUserProfilePictureJson(org.openapis.openapi.models.operations.UploadUserProfilePictureJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UploadUserProfilePictureJsonResponse uploadUserProfilePictureJson(org.openapis.openapi.models.operations.UploadUserProfilePictureJsonRequest request, org.openapis.openapi.models.operations.UploadUserProfilePictureJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadUserProfilePictureJsonPathParams.class, baseUrl, "/{userId}/profile-picture", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadUserProfilePictureJsonRequest.class, baseUrl, "/{userId}/profile-picture", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "profilePictureUpload", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2332,18 +2339,18 @@ public class User {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UploadUserProfilePictureMultipartResponse uploadUserProfilePictureMultipart(org.openapis.openapi.models.operations.UploadUserProfilePictureMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UploadUserProfilePictureMultipartResponse uploadUserProfilePictureMultipart(org.openapis.openapi.models.operations.UploadUserProfilePictureMultipartRequest request, org.openapis.openapi.models.operations.UploadUserProfilePictureMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadUserProfilePictureMultipartPathParams.class, baseUrl, "/{userId}/profile-picture", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadUserProfilePictureMultipartRequest.class, baseUrl, "/{userId}/profile-picture", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "profilePictureUpload1", "multipart");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSipIpAccessControlListMappingRequest {
-    
-    public ListSipIpAccessControlListMappingPathParams pathParams;
-    public ListSipIpAccessControlListMappingRequest withPathParams(ListSipIpAccessControlListMappingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique id of the Account that is responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListSipIpAccessControlListMappingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListSipIpAccessControlListMappingQueryParams queryParams;
-    public ListSipIpAccessControlListMappingRequest withQueryParams(ListSipIpAccessControlListMappingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A 34 character string that uniquely identifies the SIP domain.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainSid")
+    public String domainSid;
+    public ListSipIpAccessControlListMappingRequest withDomainSid(String domainSid) {
+        this.domainSid = domainSid;
         return this;
     }
     
-    
-    public ListSipIpAccessControlListMappingSecurity security;
-    public ListSipIpAccessControlListMappingRequest withSecurity(ListSipIpAccessControlListMappingSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListSipIpAccessControlListMappingRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListSipIpAccessControlListMappingRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListSipIpAccessControlListMappingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListSipIpAccessControlListMappingRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsRemoveAppRequest {
-    
-    public TeamsRemoveAppPathParams pathParams;
-    public TeamsRemoveAppRequest withPathParams(TeamsRemoveAppPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public TeamsRemoveAppRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public TeamsRemoveAppRequest withOrgName(String orgName) {
+        this.orgName = orgName;
+        return this;
+    }
     
-    public TeamsRemoveAppSecurity security;
-    public TeamsRemoveAppRequest withSecurity(TeamsRemoveAppSecurity security) {
-        this.security = security;
+    /**
+     * The team's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_name")
+    public String teamName;
+    public TeamsRemoveAppRequest withTeamName(String teamName) {
+        this.teamName = teamName;
         return this;
     }
     

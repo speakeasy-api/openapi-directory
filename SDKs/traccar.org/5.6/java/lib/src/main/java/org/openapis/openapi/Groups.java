@@ -42,7 +42,7 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.DeleteGroupsIdResponse deleteGroupsId(org.openapis.openapi.models.operations.DeleteGroupsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteGroupsIdPathParams.class, baseUrl, "/groups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteGroupsIdRequest.class, baseUrl, "/groups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class Groups {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGroupsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGroupsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -119,7 +119,7 @@ public class Groups {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGroupsResponse postGroups(org.openapis.openapi.models.operations.PostGroupsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGroupsResponse postGroups(org.openapis.openapi.models.shared.Group request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/groups");
         
@@ -167,12 +167,12 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.PutGroupsIdResponse putGroupsId(org.openapis.openapi.models.operations.PutGroupsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutGroupsIdPathParams.class, baseUrl, "/groups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutGroupsIdRequest.class, baseUrl, "/groups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "group", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

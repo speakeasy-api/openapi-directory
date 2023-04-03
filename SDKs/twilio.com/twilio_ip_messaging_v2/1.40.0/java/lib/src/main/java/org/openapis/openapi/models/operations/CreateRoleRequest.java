@@ -7,31 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateRoleRequest {
-    
-    public CreateRolePathParams pathParams;
-    public CreateRoleRequest withPathParams(CreateRolePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateRoleCreateRoleRequest request;
-    public CreateRoleRequest withRequest(CreateRoleCreateRoleRequest request) {
-        this.request = request;
+    public CreateRoleCreateRoleRequest requestBody;
+    public CreateRoleRequest withRequestBody(CreateRoleCreateRoleRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateRoleSecurity security;
-    public CreateRoleRequest withSecurity(CreateRoleSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateRoleRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateRoleRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

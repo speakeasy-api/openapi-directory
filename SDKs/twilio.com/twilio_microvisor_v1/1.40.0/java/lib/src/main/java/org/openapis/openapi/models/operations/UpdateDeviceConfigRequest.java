@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeviceConfigRequest {
+    /**
+     * A 34-character string that uniquely identifies the Device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DeviceSid")
+    public String deviceSid;
+    public UpdateDeviceConfigRequest withDeviceSid(String deviceSid) {
+        this.deviceSid = deviceSid;
+        return this;
+    }
     
-    public UpdateDeviceConfigPathParams pathParams;
-    public UpdateDeviceConfigRequest withPathParams(UpdateDeviceConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The config key; up to 100 characters.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Key")
+    public String key;
+    public UpdateDeviceConfigRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateDeviceConfigUpdateDeviceConfigRequest request;
-    public UpdateDeviceConfigRequest withRequest(UpdateDeviceConfigUpdateDeviceConfigRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public UpdateDeviceConfigSecurity security;
-    public UpdateDeviceConfigRequest withSecurity(UpdateDeviceConfigSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateDeviceConfigRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public UpdateDeviceConfigUpdateDeviceConfigRequest requestBody;
+    public UpdateDeviceConfigRequest withRequestBody(UpdateDeviceConfigUpdateDeviceConfigRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

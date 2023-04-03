@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDomainInformationByCertificateIdRequest {
+    /**
+     * Certificate id to lookup
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=certificateId")
+    public String certificateId;
+    public GetDomainInformationByCertificateIdRequest withCertificateId(String certificateId) {
+        this.certificateId = certificateId;
+        return this;
+    }
     
-    public GetDomainInformationByCertificateIdPathParams pathParams;
-    public GetDomainInformationByCertificateIdRequest withPathParams(GetDomainInformationByCertificateIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An identifier for a customer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
+    public String customerId;
+    public GetDomainInformationByCertificateIdRequest withCustomerId(String customerId) {
+        this.customerId = customerId;
         return this;
     }
     

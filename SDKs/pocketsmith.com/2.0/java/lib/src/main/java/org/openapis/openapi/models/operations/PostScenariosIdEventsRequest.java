@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostScenariosIdEventsRequest {
-    
-    public PostScenariosIdEventsPathParams pathParams;
-    public PostScenariosIdEventsRequest withPathParams(PostScenariosIdEventsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostScenariosIdEventsRequestBody requestBody;
+    public PostScenariosIdEventsRequest withRequestBody(PostScenariosIdEventsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostScenariosIdEventsRequestBody request;
-    public PostScenariosIdEventsRequest withRequest(PostScenariosIdEventsRequestBody request) {
-        this.request = request;
+    /**
+     * The unique identifier of the scenario.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostScenariosIdEventsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

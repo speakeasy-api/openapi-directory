@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IpamRolesDeleteRequest {
-    
-    public IpamRolesDeletePathParams pathParams;
-    public IpamRolesDeleteRequest withPathParams(IpamRolesDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this role.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public IpamRolesDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

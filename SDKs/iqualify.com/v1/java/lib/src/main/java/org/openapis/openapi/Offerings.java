@@ -181,7 +181,7 @@ public class Offerings {
      */
     public org.openapis.openapi.models.operations.GetOfferingsInfoTextPatternResponse getOfferingsInfoTextPattern(org.openapis.openapi.models.operations.GetOfferingsInfoTextPatternRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsInfoTextPatternPathParams.class, baseUrl, "/offerings/info/{textPattern}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsInfoTextPatternRequest.class, baseUrl, "/offerings/info/{textPattern}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -276,7 +276,7 @@ public class Offerings {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdResponse getOfferingsOfferingId(org.openapis.openapi.models.operations.GetOfferingsOfferingIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdPathParams.class, baseUrl, "/offerings/{offeringId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdRequest.class, baseUrl, "/offerings/{offeringId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -324,12 +324,12 @@ public class Offerings {
      */
     public org.openapis.openapi.models.operations.PatchOfferingsOfferingIdResponse patchOfferingsOfferingId(org.openapis.openapi.models.operations.PatchOfferingsOfferingIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchOfferingsOfferingIdPathParams.class, baseUrl, "/offerings/{offeringId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchOfferingsOfferingIdRequest.class, baseUrl, "/offerings/{offeringId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "offering", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -375,7 +375,7 @@ public class Offerings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostOfferingsResponse postOfferings(org.openapis.openapi.models.operations.PostOfferingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostOfferingsResponse postOfferings(org.openapis.openapi.models.shared.OfferingRequired request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/offerings");
         

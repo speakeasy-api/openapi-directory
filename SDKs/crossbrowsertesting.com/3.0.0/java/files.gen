@@ -30,18 +30,12 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonBaseResultIdSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonBaseResultIdPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonBaseResultIdQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonBaseResultIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonBaseResultIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SingleComparisonTestBase.java
@@ -50,7 +44,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Target.java
 lib/src/main/java/org/openapis/openapi/models/shared/Screenshot.java
 lib/src/main/java/org/openapis/openapi/models/shared/Comparison.java
 lib/src/main/java/org/openapis/openapi/models/shared/Element.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeBasicAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/FullComparisonTestBase.java
 lib/src/main/java/org/openapis/openapi/models/shared/FullComparisonTest.java
 USAGE.md

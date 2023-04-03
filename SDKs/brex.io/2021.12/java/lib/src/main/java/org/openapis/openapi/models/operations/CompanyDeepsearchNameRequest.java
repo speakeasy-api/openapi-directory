@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompanyDeepsearchNameRequest {
-    
-    public CompanyDeepsearchNamePathParams pathParams;
-    public CompanyDeepsearchNameRequest withPathParams(CompanyDeepsearchNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ISO_3166-1_alpha-2 representation of a country name - 2 chars
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country")
+    public String country;
+    public CompanyDeepsearchNameRequest withCountry(String country) {
+        this.country = country;
         return this;
     }
     
-    
-    public CompanyDeepsearchNameSecurity security;
-    public CompanyDeepsearchNameRequest withSecurity(CompanyDeepsearchNameSecurity security) {
-        this.security = security;
+    /**
+     * company name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public CompanyDeepsearchNameRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

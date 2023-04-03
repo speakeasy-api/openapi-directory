@@ -34,10 +34,11 @@ public class Accounts {
      * Close an account
      * Closes an account. If an account is closed, you cannot process transactions, pay out its funds, or reopen it. If payments are made to a closed account, the payments are sent to your liable account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCloseAccountResponse postCloseAccount(org.openapis.openapi.models.operations.PostCloseAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCloseAccountResponse postCloseAccount(org.openapis.openapi.models.shared.CloseAccountRequest request, org.openapis.openapi.models.operations.PostCloseAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/closeAccount");
         
@@ -48,7 +49,7 @@ public class Accounts {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,10 +85,11 @@ public class Accounts {
      * Create an account
      * Creates an account under an account holder. An account holder can have [multiple accounts](https://docs.adyen.com/marketplaces-and-platforms/classic/account-holders-and-accounts#create-additional-accounts).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCreateAccountResponse postCreateAccount(org.openapis.openapi.models.operations.PostCreateAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCreateAccountResponse postCreateAccount(org.openapis.openapi.models.shared.CreateAccountRequest request, org.openapis.openapi.models.operations.PostCreateAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/createAccount");
         
@@ -98,7 +100,7 @@ public class Accounts {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -134,10 +136,11 @@ public class Accounts {
      * Update an account
      * Updates the description or payout schedule of an account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUpdateAccountResponse postUpdateAccount(org.openapis.openapi.models.operations.PostUpdateAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUpdateAccountResponse postUpdateAccount(org.openapis.openapi.models.shared.UpdateAccountRequest request, org.openapis.openapi.models.operations.PostUpdateAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/updateAccount");
         
@@ -148,7 +151,7 @@ public class Accounts {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

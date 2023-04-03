@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductApiNewFormRequest {
-    
-    public ProductApiNewFormHeaders headers;
-    public ProductApiNewFormRequest withHeaders(ProductApiNewFormHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public org.openapis.openapi.models.shared.ProductCreateApiModel productCreateApiModel;
+    public ProductApiNewFormRequest withProductCreateApiModel(org.openapis.openapi.models.shared.ProductCreateApiModel productCreateApiModel) {
+        this.productCreateApiModel = productCreateApiModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.ProductCreateApiModel request;
-    public ProductApiNewFormRequest withRequest(org.openapis.openapi.models.shared.ProductCreateApiModel request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public ProductApiNewFormRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public ProductApiNewFormRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

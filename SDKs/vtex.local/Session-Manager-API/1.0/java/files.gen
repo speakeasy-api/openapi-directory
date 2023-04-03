@@ -32,11 +32,8 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetSegmentResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreatenewsessionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreatenewsessionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/EditsessionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/EditsessionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetSessionQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSessionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSessionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreatenewsessionRequest.java

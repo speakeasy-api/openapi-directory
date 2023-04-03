@@ -7,20 +7,63 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOrUpdateAnnotationRequest {
-    
-    public CreateOrUpdateAnnotationPathParams pathParams;
-    public CreateOrUpdateAnnotationRequest withPathParams(CreateOrUpdateAnnotationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The annotation to create or update
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public CreateOrUpdateAnnotationRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public CreateOrUpdateAnnotationRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Either the uuid or external-id of the annotation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=annotationId")
+    public String annotationId;
+    public CreateOrUpdateAnnotationRequest withAnnotationId(String annotationId) {
+        this.annotationId = annotationId;
+        return this;
+    }
+    
+    /**
+     * The commit the report belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
+    public String commit;
+    public CreateOrUpdateAnnotationRequest withCommit(String commit) {
+        this.commit = commit;
+        return this;
+    }
+    
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public CreateOrUpdateAnnotationRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * Either the uuid or external-id of the report.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reportId")
+    public String reportId;
+    public CreateOrUpdateAnnotationRequest withReportId(String reportId) {
+        this.reportId = reportId;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public CreateOrUpdateAnnotationRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

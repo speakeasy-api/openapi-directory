@@ -36,18 +36,18 @@ public class SubscriptionGroup {
      */
     public org.openapis.openapi.models.operations.AdditemsubscriptionGroupIdResponse additemsubscriptionGroupId(org.openapis.openapi.models.operations.AdditemsubscriptionGroupIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdditemsubscriptionGroupIdPathParams.class, baseUrl, "/subscriptions-group/{groupId}/additem", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdditemsubscriptionGroupIdRequest.class, baseUrl, "/subscriptions-group/{groupId}/additem", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "additemsubscriptionGroupIdRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -83,13 +83,13 @@ public class SubscriptionGroup {
      */
     public org.openapis.openapi.models.operations.CancelSubscriptionbygroupIdResponse cancelSubscriptionbygroupId(org.openapis.openapi.models.operations.CancelSubscriptionbygroupIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelSubscriptionbygroupIdPathParams.class, baseUrl, "/subscriptions-group/{groupId}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelSubscriptionbygroupIdRequest.class, baseUrl, "/subscriptions-group/{groupId}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -131,7 +131,7 @@ public class SubscriptionGroup {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -167,13 +167,13 @@ public class SubscriptionGroup {
      */
     public org.openapis.openapi.models.operations.GetConfigsubscriptionsgroupResponse getConfigsubscriptionsgroup(org.openapis.openapi.models.operations.GetConfigsubscriptionsgroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConfigsubscriptionsgroupPathParams.class, baseUrl, "/subscriptions-group/{groupId}/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConfigsubscriptionsgroupRequest.class, baseUrl, "/subscriptions-group/{groupId}/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -209,13 +209,13 @@ public class SubscriptionGroup {
      */
     public org.openapis.openapi.models.operations.GetConversationMessagebygroupIdResponse getConversationMessagebygroupId(org.openapis.openapi.models.operations.GetConversationMessagebygroupIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConversationMessagebygroupIdPathParams.class, baseUrl, "/subscriptions-group/{groupId}/conversation-message", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConversationMessagebygroupIdRequest.class, baseUrl, "/subscriptions-group/{groupId}/conversation-message", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -251,13 +251,13 @@ public class SubscriptionGroup {
      */
     public org.openapis.openapi.models.operations.GetNextpurchaseResponse getNextpurchase(org.openapis.openapi.models.operations.GetNextpurchaseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNextpurchasePathParams.class, baseUrl, "/subscriptions-group/nextPurchase/{dateStr}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNextpurchaseRequest.class, baseUrl, "/subscriptions-group/nextPurchase/{dateStr}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -293,13 +293,13 @@ public class SubscriptionGroup {
      */
     public org.openapis.openapi.models.operations.GetSimulatebysubscriptionGroupResponse getSimulatebysubscriptionGroup(org.openapis.openapi.models.operations.GetSimulatebysubscriptionGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSimulatebysubscriptionGroupPathParams.class, baseUrl, "/subscriptions-group/simulate/{groupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSimulatebysubscriptionGroupRequest.class, baseUrl, "/subscriptions-group/simulate/{groupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -335,13 +335,13 @@ public class SubscriptionGroup {
      */
     public org.openapis.openapi.models.operations.GetSubscriptionbygroupIdResponse getSubscriptionbygroupId(org.openapis.openapi.models.operations.GetSubscriptionbygroupIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubscriptionbygroupIdPathParams.class, baseUrl, "/subscriptions-group/{groupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubscriptionbygroupIdRequest.class, baseUrl, "/subscriptions-group/{groupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -377,13 +377,13 @@ public class SubscriptionGroup {
      */
     public org.openapis.openapi.models.operations.GetaddressesbygroupIdResponse getaddressesbygroupId(org.openapis.openapi.models.operations.GetaddressesbygroupIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetaddressesbygroupIdPathParams.class, baseUrl, "/subscriptions-group/{groupId}/addresses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetaddressesbygroupIdRequest.class, baseUrl, "/subscriptions-group/{groupId}/addresses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -419,13 +419,13 @@ public class SubscriptionGroup {
      */
     public org.openapis.openapi.models.operations.GetfrequencyoptionsbygroupIdResponse getfrequencyoptionsbygroupId(org.openapis.openapi.models.operations.GetfrequencyoptionsbygroupIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetfrequencyoptionsbygroupIdPathParams.class, baseUrl, "/subscriptions-group/{groupId}/frequency-options", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetfrequencyoptionsbygroupIdRequest.class, baseUrl, "/subscriptions-group/{groupId}/frequency-options", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -461,13 +461,13 @@ public class SubscriptionGroup {
      */
     public org.openapis.openapi.models.operations.GetpaymentSystembygroupIdResponse getpaymentSystembygroupId(org.openapis.openapi.models.operations.GetpaymentSystembygroupIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetpaymentSystembygroupIdPathParams.class, baseUrl, "/subscriptions-group/{groupId}/payment-systems", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetpaymentSystembygroupIdRequest.class, baseUrl, "/subscriptions-group/{groupId}/payment-systems", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -509,7 +509,7 @@ public class SubscriptionGroup {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -545,13 +545,13 @@ public class SubscriptionGroup {
      */
     public org.openapis.openapi.models.operations.GetwillcreatebygroupIdResponse getwillcreatebygroupId(org.openapis.openapi.models.operations.GetwillcreatebygroupIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetwillcreatebygroupIdPathParams.class, baseUrl, "/subscriptions-group/{groupId}/will-create", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetwillcreatebygroupIdRequest.class, baseUrl, "/subscriptions-group/{groupId}/will-create", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -587,18 +587,18 @@ public class SubscriptionGroup {
      */
     public org.openapis.openapi.models.operations.InsertAddressesbygroupIdResponse insertAddressesbygroupId(org.openapis.openapi.models.operations.InsertAddressesbygroupIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InsertAddressesbygroupIdPathParams.class, baseUrl, "/subscriptions-group/{groupId}/addresses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InsertAddressesbygroupIdRequest.class, baseUrl, "/subscriptions-group/{groupId}/addresses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "insertAddressesbygroupIdRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -634,13 +634,13 @@ public class SubscriptionGroup {
      */
     public org.openapis.openapi.models.operations.RetrysubscriptionbygroupIdResponse retrysubscriptionbygroupId(org.openapis.openapi.models.operations.RetrysubscriptionbygroupIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrysubscriptionbygroupIdPathParams.class, baseUrl, "/subscriptions-group/{groupid}/instances/{instanceId}/retry", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrysubscriptionbygroupIdRequest.class, baseUrl, "/subscriptions-group/{groupid}/instances/{instanceId}/retry", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -676,12 +676,12 @@ public class SubscriptionGroup {
      */
     public org.openapis.openapi.models.operations.UpdateSubscriptionbygroupIdResponse updateSubscriptionbygroupId(org.openapis.openapi.models.operations.UpdateSubscriptionbygroupIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSubscriptionbygroupIdPathParams.class, baseUrl, "/subscriptions-group/{groupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSubscriptionbygroupIdRequest.class, baseUrl, "/subscriptions-group/{groupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateSubscriptionbygroupIdRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

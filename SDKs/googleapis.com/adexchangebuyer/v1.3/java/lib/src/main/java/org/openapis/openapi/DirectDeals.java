@@ -33,25 +33,26 @@ public class DirectDeals {
     /**
      * Gets one direct deal by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsGetResponse adexchangebuyerDirectDealsGet(org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsGetResponse adexchangebuyerDirectDealsGet(org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsGetRequest request, org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsGetPathParams.class, baseUrl, "/directdeals/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsGetRequest.class, baseUrl, "/directdeals/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,10 +79,11 @@ public class DirectDeals {
     /**
      * Retrieves the authenticated user's list of direct deals.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsListResponse adexchangebuyerDirectDealsList(org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsListResponse adexchangebuyerDirectDealsList(org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsListRequest request, org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/directdeals");
         
@@ -89,14 +91,14 @@ public class DirectDeals {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerDirectDealsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

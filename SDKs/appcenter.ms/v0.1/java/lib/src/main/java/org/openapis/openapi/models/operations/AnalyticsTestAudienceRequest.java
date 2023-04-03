@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsTestAudienceRequest {
-    
-    public AnalyticsTestAudiencePathParams pathParams;
-    public AnalyticsTestAudienceRequest withPathParams(AnalyticsTestAudiencePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Audience definition
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AnalyticsTestAudienceRequestBody request;
-    public AnalyticsTestAudienceRequest withRequest(AnalyticsTestAudienceRequestBody request) {
-        this.request = request;
+    public AnalyticsTestAudienceRequestBody requestBody;
+    public AnalyticsTestAudienceRequest withRequestBody(AnalyticsTestAudienceRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AnalyticsTestAudienceRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public AnalyticsTestAudienceSecurity security;
-    public AnalyticsTestAudienceRequest withSecurity(AnalyticsTestAudienceSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AnalyticsTestAudienceRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

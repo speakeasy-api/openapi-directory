@@ -4,20 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCallsRequest {
-    
-    public GetCallsQueryParams queryParams;
-    public GetCallsRequest withQueryParams(GetCallsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return all the records associated with a specific conversation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conversation_uuid")
+    public String conversationUuid;
+    public GetCallsRequest withConversationUuid(String conversationUuid) {
+        this.conversationUuid = conversationUuid;
         return this;
     }
     
+    /**
+     * Return the records that occurred before this point in time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_end")
+    public OffsetDateTime dateEnd;
+    public GetCallsRequest withDateEnd(OffsetDateTime dateEnd) {
+        this.dateEnd = dateEnd;
+        return this;
+    }
     
-    public GetCallsSecurity security;
-    public GetCallsRequest withSecurity(GetCallsSecurity security) {
-        this.security = security;
+    /**
+     * Return the records that occurred after this point in time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_start")
+    public OffsetDateTime dateStart;
+    public GetCallsRequest withDateStart(OffsetDateTime dateStart) {
+        this.dateStart = dateStart;
+        return this;
+    }
+    
+    /**
+     * Either ascending or  descending order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public GetCallsOrderEnum order;
+    public GetCallsRequest withOrder(GetCallsOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * Return this amount of records in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetCallsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Return calls from this index in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=record_index")
+    public Long recordIndex;
+    public GetCallsRequest withRecordIndex(Long recordIndex) {
+        this.recordIndex = recordIndex;
+        return this;
+    }
+    
+    /**
+     * Filter by call status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GetCallsStatusEnum status;
+    public GetCallsRequest withStatus(GetCallsStatusEnum status) {
+        this.status = status;
         return this;
     }
     

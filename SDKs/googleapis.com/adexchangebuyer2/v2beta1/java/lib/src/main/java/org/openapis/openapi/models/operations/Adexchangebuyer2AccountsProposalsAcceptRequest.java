@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Adexchangebuyer2AccountsProposalsAcceptRequest {
-    
-    public Adexchangebuyer2AccountsProposalsAcceptPathParams pathParams;
-    public Adexchangebuyer2AccountsProposalsAcceptRequest withPathParams(Adexchangebuyer2AccountsProposalsAcceptPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public Adexchangebuyer2AccountsProposalsAcceptQueryParams queryParams;
-    public Adexchangebuyer2AccountsProposalsAcceptRequest withQueryParams(Adexchangebuyer2AccountsProposalsAcceptQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public Adexchangebuyer2AccountsProposalsAcceptRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AcceptProposalRequest request;
-    public Adexchangebuyer2AccountsProposalsAcceptRequest withRequest(org.openapis.openapi.models.shared.AcceptProposalRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AcceptProposalRequest acceptProposalRequest;
+    public Adexchangebuyer2AccountsProposalsAcceptRequest withAcceptProposalRequest(org.openapis.openapi.models.shared.AcceptProposalRequest acceptProposalRequest) {
+        this.acceptProposalRequest = acceptProposalRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public Adexchangebuyer2AccountsProposalsAcceptRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public Adexchangebuyer2AccountsProposalsAcceptSecurity security;
-    public Adexchangebuyer2AccountsProposalsAcceptRequest withSecurity(Adexchangebuyer2AccountsProposalsAcceptSecurity security) {
-        this.security = security;
+    /**
+     * Account ID of the buyer.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public Adexchangebuyer2AccountsProposalsAcceptRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public Adexchangebuyer2AccountsProposalsAcceptRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public Adexchangebuyer2AccountsProposalsAcceptRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public Adexchangebuyer2AccountsProposalsAcceptRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public Adexchangebuyer2AccountsProposalsAcceptRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public Adexchangebuyer2AccountsProposalsAcceptRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public Adexchangebuyer2AccountsProposalsAcceptRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * The ID of the proposal to accept.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=proposalId")
+    public String proposalId;
+    public Adexchangebuyer2AccountsProposalsAcceptRequest withProposalId(String proposalId) {
+        this.proposalId = proposalId;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public Adexchangebuyer2AccountsProposalsAcceptRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public Adexchangebuyer2AccountsProposalsAcceptRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public Adexchangebuyer2AccountsProposalsAcceptRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAccountRequest {
-    
-    public ListAccountQueryParams queryParams;
-    public ListAccountRequest withQueryParams(ListAccountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only return the Account resources with friendly names that exactly match this name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FriendlyName")
+    public String friendlyName;
+    public ListAccountRequest withFriendlyName(String friendlyName) {
+        this.friendlyName = friendlyName;
         return this;
     }
     
-    
-    public ListAccountSecurity security;
-    public ListAccountRequest withSecurity(ListAccountSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListAccountRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListAccountRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListAccountRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListAccountRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Only return Account resources with the given status. Can be `closed`, `suspended` or `active`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public org.openapis.openapi.models.shared.AccountEnumStatusEnum status;
+    public ListAccountRequest withStatus(org.openapis.openapi.models.shared.AccountEnumStatusEnum status) {
+        this.status = status;
         return this;
     }
     

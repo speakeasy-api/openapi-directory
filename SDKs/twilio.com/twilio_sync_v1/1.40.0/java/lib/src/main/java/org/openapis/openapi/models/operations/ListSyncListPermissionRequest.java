@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSyncListPermissionRequest {
-    
-    public ListSyncListPermissionPathParams pathParams;
-    public ListSyncListPermissionRequest withPathParams(ListSyncListPermissionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Sync List with the Sync List Permission resources to read. Can be the Sync List resource's `sid` or its `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ListSid")
+    public String listSid;
+    public ListSyncListPermissionRequest withListSid(String listSid) {
+        this.listSid = listSid;
         return this;
     }
     
-    
-    public ListSyncListPermissionQueryParams queryParams;
-    public ListSyncListPermissionRequest withQueryParams(ListSyncListPermissionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListSyncListPermissionRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListSyncListPermissionSecurity security;
-    public ListSyncListPermissionRequest withSecurity(ListSyncListPermissionSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListSyncListPermissionRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListSyncListPermissionRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
     
-    public String serverURL;
-    public ListSyncListPermissionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List Permission resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public ListSyncListPermissionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

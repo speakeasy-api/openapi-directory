@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCheckpointFirewallRequest {
-    
-    public UpdateCheckpointFirewallPathParams pathParams;
-    public UpdateCheckpointFirewallRequest withPathParams(UpdateCheckpointFirewallPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SwitchDataSource request;
-    public UpdateCheckpointFirewallRequest withRequest(org.openapis.openapi.models.shared.SwitchDataSource request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SwitchDataSource switchDataSource;
+    public UpdateCheckpointFirewallRequest withSwitchDataSource(org.openapis.openapi.models.shared.SwitchDataSource switchDataSource) {
+        this.switchDataSource = switchDataSource;
         return this;
     }
     
-    
-    public UpdateCheckpointFirewallSecurity security;
-    public UpdateCheckpointFirewallRequest withSecurity(UpdateCheckpointFirewallSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateCheckpointFirewallRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

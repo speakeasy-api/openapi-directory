@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepositoryConfigurationsListRequest {
-    
-    public RepositoryConfigurationsListPathParams pathParams;
-    public RepositoryConfigurationsListRequest withPathParams(RepositoryConfigurationsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public RepositoryConfigurationsListRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public RepositoryConfigurationsListQueryParams queryParams;
-    public RepositoryConfigurationsListRequest withQueryParams(RepositoryConfigurationsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Include inactive configurations if none are active
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeInactive")
+    public Boolean includeInactive;
+    public RepositoryConfigurationsListRequest withIncludeInactive(Boolean includeInactive) {
+        this.includeInactive = includeInactive;
         return this;
     }
     
-    
-    public RepositoryConfigurationsListSecurity security;
-    public RepositoryConfigurationsListRequest withSecurity(RepositoryConfigurationsListSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public RepositoryConfigurationsListRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

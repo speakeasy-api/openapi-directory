@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.SendCommandXAmzTargetEnum;
-import org.openapis.openapi.models.operations.SendCommandHeaders;
 import org.openapis.openapi.models.operations.SendCommandRequest;
 import org.openapis.openapi.models.operations.SendCommandResponse;
 import org.openapis.openapi.models.shared.SendCommandRequest;
@@ -20,68 +19,71 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             SendCommandRequest req = new SendCommandRequest() {{
-                headers = new SendCommandHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "QLDBSession.SendCommand";
-                }};
-                request = new SendCommandRequest() {{
+                sendCommandRequest = new SendCommandRequest() {{
                     abortTransaction = new java.util.HashMap<String, Object>() {{
-                        put("vel", "error");
+                        put("provident", "distinctio");
+                        put("quibusdam", "unde");
+                        put("nulla", "corrupti");
+                    }};
+                    commitTransaction = new CommitTransactionRequest() {{
+                        commitDigest = "illum";
+                        transactionId = "vel";
+                    }};
+                    endSession = new java.util.HashMap<String, Object>() {{
                         put("deserunt", "suscipit");
                         put("iure", "magnam");
                         put("debitis", "ipsa");
                     }};
-                    commitTransaction = new CommitTransactionRequest() {{
-                        commitDigest = "delectus";
-                        transactionId = "tempora";
-                    }};
-                    endSession = new java.util.HashMap<String, Object>() {{
-                        put("molestiae", "minus");
-                        put("placeat", "voluptatum");
-                    }};
                     executeStatement = new ExecuteStatementRequest() {{
                         parameters = new org.openapis.openapi.models.shared.ValueHolder[]{{
                             add(new ValueHolder() {{
-                                ionBinary = "excepturi";
-                                ionText = "nisi";
+                                ionBinary = "tempora";
+                                ionText = "suscipit";
                             }}),
                             add(new ValueHolder() {{
-                                ionBinary = "recusandae";
-                                ionText = "temporibus";
+                                ionBinary = "molestiae";
+                                ionText = "minus";
+                            }}),
+                            add(new ValueHolder() {{
+                                ionBinary = "placeat";
+                                ionText = "voluptatum";
+                            }}),
+                            add(new ValueHolder() {{
+                                ionBinary = "iusto";
+                                ionText = "excepturi";
                             }}),
                         }};
-                        statement = "ab";
-                        transactionId = "quis";
+                        statement = "nisi";
+                        transactionId = "recusandae";
                     }};
                     fetchPage = new FetchPageRequest() {{
-                        nextPageToken = "veritatis";
-                        transactionId = "deserunt";
+                        nextPageToken = "temporibus";
+                        transactionId = "ab";
                     }};
-                    sessionToken = "perferendis";
+                    sessionToken = "quis";
                     startSession = new StartSessionRequest() {{
-                        ledgerName = "ipsam";
+                        ledgerName = "veritatis";
                     }};
                     startTransaction = new java.util.HashMap<String, Object>() {{
-                        put("sapiente", "quo");
-                        put("odit", "at");
-                        put("at", "maiores");
-                        put("molestiae", "quod");
+                        put("perferendis", "ipsam");
+                        put("repellendus", "sapiente");
+                        put("quo", "odit");
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "at";
+                xAmzContentSha256 = "at";
+                xAmzCredential = "maiores";
+                xAmzDate = "molestiae";
+                xAmzSecurityToken = "quod";
+                xAmzSignature = "quod";
+                xAmzSignedHeaders = "esse";
+                xAmzTarget = "QLDBSession.SendCommand";
+            }}            
 
             SendCommandResponse res = sdk.sendCommand(req);
 

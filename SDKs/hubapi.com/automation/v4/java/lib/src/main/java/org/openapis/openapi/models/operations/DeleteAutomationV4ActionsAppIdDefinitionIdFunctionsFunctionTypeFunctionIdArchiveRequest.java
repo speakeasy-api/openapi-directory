@@ -4,20 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchiveRequest {
-    
-    public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchivePathParams pathParams;
-    public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchiveRequest withPathParams(DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchivePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchiveRequest withAppId(Integer appId) {
+        this.appId = appId;
         return this;
     }
     
+    /**
+     * The ID of the custom workflow action
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=definitionId")
+    public String definitionId;
+    public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchiveRequest withDefinitionId(String definitionId) {
+        this.definitionId = definitionId;
+        return this;
+    }
     
-    public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchiveSecurity security;
-    public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchiveRequest withSecurity(DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchiveSecurity security) {
-        this.security = security;
+    /**
+     * The ID qualifier for the function. This is used to specify which input field a function is associated with for `PRE_FETCH_OPTIONS` and `POST_FETCH_OPTIONS` function types.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionId")
+    public String functionId;
+    public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchiveRequest withFunctionId(String functionId) {
+        this.functionId = functionId;
+        return this;
+    }
+    
+    /**
+     * The type of function. This determines when the function will be called.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionType")
+    public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchiveFunctionTypeEnum functionType;
+    public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchiveRequest withFunctionType(DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeFunctionIdArchiveFunctionTypeEnum functionType) {
+        this.functionType = functionType;
         return this;
     }
     

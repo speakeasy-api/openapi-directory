@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssetByIdRequest {
-    
-    public GetAssetByIdPathParams pathParams;
-    public GetAssetByIdRequest withPathParams(GetAssetByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * fixed asset id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetAssetByIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetAssetByIdHeaders headers;
-    public GetAssetByIdRequest withHeaders(GetAssetByIdHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetAssetByIdSecurity security;
-    public GetAssetByIdRequest withSecurity(GetAssetByIdSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
+    public String xeroTenantId;
+    public GetAssetByIdRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GamesTwitchReadRequest {
-    
-    public GamesTwitchReadPathParams pathParams;
-    public GamesTwitchReadRequest withPathParams(GamesTwitchReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An ID or a slug identifying this Game.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GamesTwitchReadRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

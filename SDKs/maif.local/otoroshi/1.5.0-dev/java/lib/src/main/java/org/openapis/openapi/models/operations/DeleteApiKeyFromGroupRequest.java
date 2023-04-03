@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteApiKeyFromGroupRequest {
-    
-    public DeleteApiKeyFromGroupPathParams pathParams;
-    public DeleteApiKeyFromGroupRequest withPathParams(DeleteApiKeyFromGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * the api key id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")
+    public String clientId;
+    public DeleteApiKeyFromGroupRequest withClientId(String clientId) {
+        this.clientId = clientId;
         return this;
     }
     
-    
-    public DeleteApiKeyFromGroupSecurity security;
-    public DeleteApiKeyFromGroupRequest withSecurity(DeleteApiKeyFromGroupSecurity security) {
-        this.security = security;
+    /**
+     * The api key group id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public DeleteApiKeyFromGroupRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteScheduledPickupRequest {
-    
-    public DeleteScheduledPickupPathParams pathParams;
-    public DeleteScheduledPickupRequest withPathParams(DeleteScheduledPickupPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pickup_id")
+    public String pickupId;
+    public DeleteScheduledPickupRequest withPickupId(String pickupId) {
+        this.pickupId = pickupId;
         return this;
     }
     

@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeLifecycleHooksRequest {
-    
-    public GETDescribeLifecycleHooksQueryParams queryParams;
-    public GETDescribeLifecycleHooksRequest withQueryParams(GETDescribeLifecycleHooksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeLifecycleHooksActionEnum action;
+    public GETDescribeLifecycleHooksRequest withAction(GETDescribeLifecycleHooksActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the Auto Scaling group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
+    public String autoScalingGroupName;
+    public GETDescribeLifecycleHooksRequest withAutoScalingGroupName(String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        return this;
+    }
     
-    public GETDescribeLifecycleHooksHeaders headers;
-    public GETDescribeLifecycleHooksRequest withHeaders(GETDescribeLifecycleHooksHeaders headers) {
-        this.headers = headers;
+    /**
+     * The names of one or more lifecycle hooks. If you omit this property, all lifecycle hooks are described.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LifecycleHookNames")
+    public String[] lifecycleHookNames;
+    public GETDescribeLifecycleHooksRequest withLifecycleHookNames(String[] lifecycleHookNames) {
+        this.lifecycleHookNames = lifecycleHookNames;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeLifecycleHooksVersionEnum version;
+    public GETDescribeLifecycleHooksRequest withVersion(GETDescribeLifecycleHooksVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeLifecycleHooksRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeLifecycleHooksRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeLifecycleHooksRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeLifecycleHooksRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeLifecycleHooksRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeLifecycleHooksRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeLifecycleHooksRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest {
-    
-    public AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsPathParams pathParams;
-    public AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest withPathParams(AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsQueryParams queryParams;
-    public AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest withQueryParams(AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest request;
-    public AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest googleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest withGoogleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest(org.openapis.openapi.models.shared.GoogleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest googleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest) {
+        this.googleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest = googleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsSecurity security;
-    public AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest withSecurity(AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Required. The `name` field is used to identify the workload. Format: organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

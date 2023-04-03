@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompleteStreamingUploadRequest {
-    
-    public CompleteStreamingUploadPathParams pathParams;
-    public CompleteStreamingUploadRequest withPathParams(CompleteStreamingUploadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The crypto signature of the completed upload.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public CompleteStreamingUploadRequest withSignature(String signature) {
+        this.signature = signature;
         return this;
     }
     
-    
-    public CompleteStreamingUploadQueryParams queryParams;
-    public CompleteStreamingUploadRequest withQueryParams(CompleteStreamingUploadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the upload attempt.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=upload")
+    public Double upload;
+    public CompleteStreamingUploadRequest withUpload(Double upload) {
+        this.upload = upload;
         return this;
     }
     
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public CompleteStreamingUploadRequest withUserId(Double userId) {
+        this.userId = userId;
+        return this;
+    }
     
-    public CompleteStreamingUploadSecurity security;
-    public CompleteStreamingUploadRequest withSecurity(CompleteStreamingUploadSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the uploaded file.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=video_file_id")
+    public Double videoFileId;
+    public CompleteStreamingUploadRequest withVideoFileId(Double videoFileId) {
+        this.videoFileId = videoFileId;
         return this;
     }
     

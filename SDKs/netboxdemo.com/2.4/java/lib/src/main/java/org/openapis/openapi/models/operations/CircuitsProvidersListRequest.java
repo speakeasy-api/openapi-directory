@@ -4,13 +4,92 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CircuitsProvidersListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account")
+    public String account;
+    public CircuitsProvidersListRequest withAccount(String account) {
+        this.account = account;
+        return this;
+    }
     
-    public CircuitsProvidersListQueryParams queryParams;
-    public CircuitsProvidersListRequest withQueryParams(CircuitsProvidersListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asn")
+    public Double asn;
+    public CircuitsProvidersListRequest withAsn(Double asn) {
+        this.asn = asn;
+        return this;
+    }
+    
+    /**
+     * Multiple values may be separated by commas.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__in")
+    public String idIn;
+    public CircuitsProvidersListRequest withIdIn(String idIn) {
+        this.idIn = idIn;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public CircuitsProvidersListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public CircuitsProvidersListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public CircuitsProvidersListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public CircuitsProvidersListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
+    public String site;
+    public CircuitsProvidersListRequest withSite(String site) {
+        this.site = site;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site_id")
+    public String siteId;
+    public CircuitsProvidersListRequest withSiteId(String siteId) {
+        this.siteId = siteId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug")
+    public String slug;
+    public CircuitsProvidersListRequest withSlug(String slug) {
+        this.slug = slug;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public CircuitsProvidersListRequest withTag(String tag) {
+        this.tag = tag;
         return this;
     }
     

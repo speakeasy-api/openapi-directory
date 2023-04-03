@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMerchantsMerchantIdWebhooksWebhookIdTestRequest {
-    
-    public PostMerchantsMerchantIdWebhooksWebhookIdTestPathParams pathParams;
-    public PostMerchantsMerchantIdWebhooksWebhookIdTestRequest withPathParams(PostMerchantsMerchantIdWebhooksWebhookIdTestPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TestWebhookRequest request;
-    public PostMerchantsMerchantIdWebhooksWebhookIdTestRequest withRequest(org.openapis.openapi.models.shared.TestWebhookRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TestWebhookRequest testWebhookRequest;
+    public PostMerchantsMerchantIdWebhooksWebhookIdTestRequest withTestWebhookRequest(org.openapis.openapi.models.shared.TestWebhookRequest testWebhookRequest) {
+        this.testWebhookRequest = testWebhookRequest;
         return this;
     }
     
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public PostMerchantsMerchantIdWebhooksWebhookIdTestRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
+        return this;
+    }
     
-    public PostMerchantsMerchantIdWebhooksWebhookIdTestSecurity security;
-    public PostMerchantsMerchantIdWebhooksWebhookIdTestRequest withSecurity(PostMerchantsMerchantIdWebhooksWebhookIdTestSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the webhook configuration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhookId")
+    public String webhookId;
+    public PostMerchantsMerchantIdWebhooksWebhookIdTestRequest withWebhookId(String webhookId) {
+        this.webhookId = webhookId;
         return this;
     }
     

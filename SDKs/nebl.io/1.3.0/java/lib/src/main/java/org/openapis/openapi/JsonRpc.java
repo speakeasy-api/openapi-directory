@@ -50,13 +50,27 @@ public class JsonRpc {
      * Send a JSON-RPC call to a localhost neblio-Qt or nebliod node
      * Call any Neblio RPC command from the Neblio API libraries. Useful for signing transactions with a local node and other functions. Will not work from a browser due to CORS restrictions. Requires a node to be running locally at 127.0.0.1
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JsonRpcResponse jsonRpc(org.openapis.openapi.models.operations.JsonRpcRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JsonRpcResponse jsonRpc(org.openapis.openapi.models.shared.RpcRequest request, org.openapis.openapi.models.operations.JsonRpcSecurity security) throws Exception {
+        return this.jsonRpc(request, security, null);
+    }
+
+    /**
+     * Send a JSON-RPC call to a localhost neblio-Qt or nebliod node
+     * Call any Neblio RPC command from the Neblio API libraries. Useful for signing transactions with a local node and other functions. Will not work from a browser due to CORS restrictions. Requires a node to be running locally at 127.0.0.1
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.JsonRpcResponse jsonRpc(org.openapis.openapi.models.shared.RpcRequest request, org.openapis.openapi.models.operations.JsonRpcSecurity security, String serverURL) throws Exception {
         String baseUrl = JSON_RPC_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/");
@@ -71,7 +85,7 @@ public class JsonRpc {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

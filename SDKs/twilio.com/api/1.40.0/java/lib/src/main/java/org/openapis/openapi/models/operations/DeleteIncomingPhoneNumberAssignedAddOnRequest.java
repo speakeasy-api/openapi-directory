@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteIncomingPhoneNumberAssignedAddOnRequest {
-    
-    public DeleteIncomingPhoneNumberAssignedAddOnPathParams pathParams;
-    public DeleteIncomingPhoneNumberAssignedAddOnRequest withPathParams(DeleteIncomingPhoneNumberAssignedAddOnPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the resources to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public DeleteIncomingPhoneNumberAssignedAddOnRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public DeleteIncomingPhoneNumberAssignedAddOnSecurity security;
-    public DeleteIncomingPhoneNumberAssignedAddOnRequest withSecurity(DeleteIncomingPhoneNumberAssignedAddOnSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Phone Number to which the Add-on is assigned.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ResourceSid")
+    public String resourceSid;
+    public DeleteIncomingPhoneNumberAssignedAddOnRequest withResourceSid(String resourceSid) {
+        this.resourceSid = resourceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteIncomingPhoneNumberAssignedAddOnRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteIncomingPhoneNumberAssignedAddOnRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

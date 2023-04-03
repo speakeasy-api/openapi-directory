@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListFirewallDomainListsRequest {
-    
-    public ListFirewallDomainListsQueryParams queryParams;
-    public ListFirewallDomainListsRequest withQueryParams(ListFirewallDomainListsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListFirewallDomainListsHeaders headers;
-    public ListFirewallDomainListsRequest withHeaders(ListFirewallDomainListsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ListFirewallDomainListsRequest request;
-    public ListFirewallDomainListsRequest withRequest(org.openapis.openapi.models.shared.ListFirewallDomainListsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ListFirewallDomainListsRequest listFirewallDomainListsRequest;
+    public ListFirewallDomainListsRequest withListFirewallDomainListsRequest(org.openapis.openapi.models.shared.ListFirewallDomainListsRequest listFirewallDomainListsRequest) {
+        this.listFirewallDomainListsRequest = listFirewallDomainListsRequest;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public String maxResults;
+    public ListFirewallDomainListsRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListFirewallDomainListsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListFirewallDomainListsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListFirewallDomainListsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListFirewallDomainListsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListFirewallDomainListsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListFirewallDomainListsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListFirewallDomainListsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListFirewallDomainListsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public ListFirewallDomainListsXAmzTargetEnum xAmzTarget;
+    public ListFirewallDomainListsRequest withXAmzTarget(ListFirewallDomainListsXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

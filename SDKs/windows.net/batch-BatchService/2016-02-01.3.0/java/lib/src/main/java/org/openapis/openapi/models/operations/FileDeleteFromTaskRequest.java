@@ -4,27 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FileDeleteFromTaskRequest {
-    
-    public FileDeleteFromTaskPathParams pathParams;
-    public FileDeleteFromTaskRequest withPathParams(FileDeleteFromTaskPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client API Version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public FileDeleteFromTaskRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
-    
-    public FileDeleteFromTaskQueryParams queryParams;
-    public FileDeleteFromTaskRequest withQueryParams(FileDeleteFromTaskQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The caller-generated request identity, in the form of a GUID with no decoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
+    public String clientRequestId;
+    public FileDeleteFromTaskRequest withClientRequestId(String clientRequestId) {
+        this.clientRequestId = clientRequestId;
         return this;
     }
     
+    /**
+     * The path to the task file that you want to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileName")
+    public String fileName;
+    public FileDeleteFromTaskRequest withFileName(String fileName) {
+        this.fileName = fileName;
+        return this;
+    }
     
-    public FileDeleteFromTaskHeaders headers;
-    public FileDeleteFromTaskRequest withHeaders(FileDeleteFromTaskHeaders headers) {
-        this.headers = headers;
+    /**
+     * The id of the job that contains the task.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public FileDeleteFromTaskRequest withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    
+    /**
+     * The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
+    public String ocpDate;
+    public FileDeleteFromTaskRequest withOcpDate(String ocpDate) {
+        this.ocpDate = ocpDate;
+        return this;
+    }
+    
+    /**
+     * Whether to delete children of a directory. If the fileName parameter represents a directory instead of a file, you can set Recursive to true to delete the directory and all of the files and subdirectories in it. If Recursive is false then the directory must be empty or deletion will fail.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
+    public Boolean recursive;
+    public FileDeleteFromTaskRequest withRecursive(Boolean recursive) {
+        this.recursive = recursive;
+        return this;
+    }
+    
+    /**
+     * Whether the server should return the client-request-id identifier in the response.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
+    public Boolean returnClientRequestId;
+    public FileDeleteFromTaskRequest withReturnClientRequestId(Boolean returnClientRequestId) {
+        this.returnClientRequestId = returnClientRequestId;
+        return this;
+    }
+    
+    /**
+     * The id of the task whose file you want to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
+    public String taskId;
+    public FileDeleteFromTaskRequest withTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    
+    /**
+     * The maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
+    public Integer timeout;
+    public FileDeleteFromTaskRequest withTimeout(Integer timeout) {
+        this.timeout = timeout;
         return this;
     }
     

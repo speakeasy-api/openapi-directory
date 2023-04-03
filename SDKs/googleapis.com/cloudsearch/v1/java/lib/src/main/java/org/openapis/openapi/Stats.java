@@ -33,10 +33,11 @@ public class Stats {
     /**
      * Gets indexed item statistics aggreggated across all data sources. This API only returns statistics for previous dates; it doesn't return statistics for the current day. **Note:** This API requires a standard end user account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchStatsGetIndexResponse cloudsearchStatsGetIndex(org.openapis.openapi.models.operations.CloudsearchStatsGetIndexRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchStatsGetIndexResponse cloudsearchStatsGetIndex(org.openapis.openapi.models.operations.CloudsearchStatsGetIndexRequest request, org.openapis.openapi.models.operations.CloudsearchStatsGetIndexSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/stats/index");
         
@@ -44,14 +45,14 @@ public class Stats {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchStatsGetIndexQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchStatsGetIndexRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,10 +79,11 @@ public class Stats {
     /**
      * Get the query statistics for customer. **Note:** This API requires a standard end user account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchStatsGetQueryResponse cloudsearchStatsGetQuery(org.openapis.openapi.models.operations.CloudsearchStatsGetQueryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchStatsGetQueryResponse cloudsearchStatsGetQuery(org.openapis.openapi.models.operations.CloudsearchStatsGetQueryRequest request, org.openapis.openapi.models.operations.CloudsearchStatsGetQuerySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/stats/query");
         
@@ -89,14 +91,14 @@ public class Stats {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchStatsGetQueryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchStatsGetQueryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,10 +125,11 @@ public class Stats {
     /**
      * Get search application stats for customer. **Note:** This API requires a standard end user account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchStatsGetSearchapplicationResponse cloudsearchStatsGetSearchapplication(org.openapis.openapi.models.operations.CloudsearchStatsGetSearchapplicationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchStatsGetSearchapplicationResponse cloudsearchStatsGetSearchapplication(org.openapis.openapi.models.operations.CloudsearchStatsGetSearchapplicationRequest request, org.openapis.openapi.models.operations.CloudsearchStatsGetSearchapplicationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/stats/searchapplication");
         
@@ -134,14 +137,14 @@ public class Stats {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchStatsGetSearchapplicationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchStatsGetSearchapplicationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -168,10 +171,11 @@ public class Stats {
     /**
      * Get the # of search sessions, % of successful sessions with a click query statistics for customer. **Note:** This API requires a standard end user account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchStatsGetSessionResponse cloudsearchStatsGetSession(org.openapis.openapi.models.operations.CloudsearchStatsGetSessionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchStatsGetSessionResponse cloudsearchStatsGetSession(org.openapis.openapi.models.operations.CloudsearchStatsGetSessionRequest request, org.openapis.openapi.models.operations.CloudsearchStatsGetSessionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/stats/session");
         
@@ -179,14 +183,14 @@ public class Stats {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchStatsGetSessionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchStatsGetSessionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -213,10 +217,11 @@ public class Stats {
     /**
      * Get the users statistics for customer. **Note:** This API requires a standard end user account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchStatsGetUserResponse cloudsearchStatsGetUser(org.openapis.openapi.models.operations.CloudsearchStatsGetUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchStatsGetUserResponse cloudsearchStatsGetUser(org.openapis.openapi.models.operations.CloudsearchStatsGetUserRequest request, org.openapis.openapi.models.operations.CloudsearchStatsGetUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/stats/user");
         
@@ -224,14 +229,14 @@ public class Stats {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchStatsGetUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchStatsGetUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -258,25 +263,26 @@ public class Stats {
     /**
      * Gets indexed item statistics for a single data source. **Note:** This API requires a standard end user account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchStatsIndexDatasourcesGetResponse cloudsearchStatsIndexDatasourcesGet(org.openapis.openapi.models.operations.CloudsearchStatsIndexDatasourcesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchStatsIndexDatasourcesGetResponse cloudsearchStatsIndexDatasourcesGet(org.openapis.openapi.models.operations.CloudsearchStatsIndexDatasourcesGetRequest request, org.openapis.openapi.models.operations.CloudsearchStatsIndexDatasourcesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchStatsIndexDatasourcesGetPathParams.class, baseUrl, "/v1/stats/index/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchStatsIndexDatasourcesGetRequest.class, baseUrl, "/v1/stats/index/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchStatsIndexDatasourcesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchStatsIndexDatasourcesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -303,25 +309,26 @@ public class Stats {
     /**
      * Get the query statistics for search application. **Note:** This API requires a standard end user account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchStatsQuerySearchapplicationsGetResponse cloudsearchStatsQuerySearchapplicationsGet(org.openapis.openapi.models.operations.CloudsearchStatsQuerySearchapplicationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchStatsQuerySearchapplicationsGetResponse cloudsearchStatsQuerySearchapplicationsGet(org.openapis.openapi.models.operations.CloudsearchStatsQuerySearchapplicationsGetRequest request, org.openapis.openapi.models.operations.CloudsearchStatsQuerySearchapplicationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchStatsQuerySearchapplicationsGetPathParams.class, baseUrl, "/v1/stats/query/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchStatsQuerySearchapplicationsGetRequest.class, baseUrl, "/v1/stats/query/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchStatsQuerySearchapplicationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchStatsQuerySearchapplicationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -348,25 +355,26 @@ public class Stats {
     /**
      * Get the # of search sessions, % of successful sessions with a click query statistics for search application. **Note:** This API requires a standard end user account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchStatsSessionSearchapplicationsGetResponse cloudsearchStatsSessionSearchapplicationsGet(org.openapis.openapi.models.operations.CloudsearchStatsSessionSearchapplicationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchStatsSessionSearchapplicationsGetResponse cloudsearchStatsSessionSearchapplicationsGet(org.openapis.openapi.models.operations.CloudsearchStatsSessionSearchapplicationsGetRequest request, org.openapis.openapi.models.operations.CloudsearchStatsSessionSearchapplicationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchStatsSessionSearchapplicationsGetPathParams.class, baseUrl, "/v1/stats/session/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchStatsSessionSearchapplicationsGetRequest.class, baseUrl, "/v1/stats/session/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchStatsSessionSearchapplicationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchStatsSessionSearchapplicationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -393,25 +401,26 @@ public class Stats {
     /**
      * Get the users statistics for search application. **Note:** This API requires a standard end user account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchStatsUserSearchapplicationsGetResponse cloudsearchStatsUserSearchapplicationsGet(org.openapis.openapi.models.operations.CloudsearchStatsUserSearchapplicationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchStatsUserSearchapplicationsGetResponse cloudsearchStatsUserSearchapplicationsGet(org.openapis.openapi.models.operations.CloudsearchStatsUserSearchapplicationsGetRequest request, org.openapis.openapi.models.operations.CloudsearchStatsUserSearchapplicationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchStatsUserSearchapplicationsGetPathParams.class, baseUrl, "/v1/stats/user/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchStatsUserSearchapplicationsGetRequest.class, baseUrl, "/v1/stats/user/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchStatsUserSearchapplicationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchStatsUserSearchapplicationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyAddressAttributeRequest {
-    
-    public GETModifyAddressAttributeQueryParams queryParams;
-    public GETModifyAddressAttributeRequest withQueryParams(GETModifyAddressAttributeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyAddressAttributeActionEnum action;
+    public GETModifyAddressAttributeRequest withAction(GETModifyAddressAttributeActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * [EC2-VPC] The allocation ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllocationId")
+    public String allocationId;
+    public GETModifyAddressAttributeRequest withAllocationId(String allocationId) {
+        this.allocationId = allocationId;
+        return this;
+    }
     
-    public GETModifyAddressAttributeHeaders headers;
-    public GETModifyAddressAttributeRequest withHeaders(GETModifyAddressAttributeHeaders headers) {
-        this.headers = headers;
+    /**
+     * The domain name to modify for the IP address.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
+    public String domainName;
+    public GETModifyAddressAttributeRequest withDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETModifyAddressAttributeRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyAddressAttributeVersionEnum version;
+    public GETModifyAddressAttributeRequest withVersion(GETModifyAddressAttributeVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyAddressAttributeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyAddressAttributeRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyAddressAttributeRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyAddressAttributeRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyAddressAttributeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyAddressAttributeRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyAddressAttributeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

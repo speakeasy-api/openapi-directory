@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETConsoleOutputRequest {
-    
-    public GETGETConsoleOutputQueryParams queryParams;
-    public GETGETConsoleOutputRequest withQueryParams(GETGETConsoleOutputQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETConsoleOutputActionEnum action;
+    public GETGETConsoleOutputRequest withAction(GETGETConsoleOutputActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETGETConsoleOutputRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETGETConsoleOutputHeaders headers;
-    public GETGETConsoleOutputRequest withHeaders(GETGETConsoleOutputHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the instance.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
+    public String instanceId;
+    public GETGETConsoleOutputRequest withInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;When enabled, retrieves the latest console output for the instance.&lt;/p&gt; &lt;p&gt;Default: disabled (&lt;code&gt;false&lt;/code&gt;)&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Latest")
+    public Boolean latest;
+    public GETGETConsoleOutputRequest withLatest(Boolean latest) {
+        this.latest = latest;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETConsoleOutputVersionEnum version;
+    public GETGETConsoleOutputRequest withVersion(GETGETConsoleOutputVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGETConsoleOutputRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGETConsoleOutputRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGETConsoleOutputRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGETConsoleOutputRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGETConsoleOutputRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGETConsoleOutputRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGETConsoleOutputRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

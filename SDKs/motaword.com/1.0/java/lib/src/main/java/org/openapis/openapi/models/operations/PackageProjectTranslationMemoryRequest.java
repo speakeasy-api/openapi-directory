@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackageProjectTranslationMemoryRequest {
-    
-    public PackageProjectTranslationMemoryPathParams pathParams;
-    public PackageProjectTranslationMemoryRequest withPathParams(PackageProjectTranslationMemoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If you want to package and download the translation memory synchronously, mark this parameter as '0'. It will package the translation memory and then return the packaged file in the response, identical to async/download call after an asynchronous /package call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=async")
+    public Long async;
+    public PackageProjectTranslationMemoryRequest withAsync(Long async) {
+        this.async = async;
         return this;
     }
     
+    /**
+     * Translation Memory file format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public String format;
+    public PackageProjectTranslationMemoryRequest withFormat(String format) {
+        this.format = format;
+        return this;
+    }
     
-    public PackageProjectTranslationMemoryQueryParams queryParams;
-    public PackageProjectTranslationMemoryRequest withQueryParams(PackageProjectTranslationMemoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public PackageProjectTranslationMemoryRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsAddUserRequest {
-    
-    public DistributionGroupsAddUserPathParams pathParams;
-    public DistributionGroupsAddUserRequest withPathParams(DistributionGroupsAddUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The list of members to add
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DistributionGroupsAddUserRequestBody request;
-    public DistributionGroupsAddUserRequest withRequest(DistributionGroupsAddUserRequestBody request) {
-        this.request = request;
+    public DistributionGroupsAddUserRequestBody requestBody;
+    public DistributionGroupsAddUserRequest withRequestBody(DistributionGroupsAddUserRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public DistributionGroupsAddUserRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public DistributionGroupsAddUserSecurity security;
-    public DistributionGroupsAddUserRequest withSecurity(DistributionGroupsAddUserSecurity security) {
-        this.security = security;
+    /**
+     * The name of the distribution group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
+    public String distributionGroupName;
+    public DistributionGroupsAddUserRequest withDistributionGroupName(String distributionGroupName) {
+        this.distributionGroupName = distributionGroupName;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public DistributionGroupsAddUserRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeLogStreamsRequest {
-    
-    public DescribeLogStreamsQueryParams queryParams;
-    public DescribeLogStreamsRequest withQueryParams(DescribeLogStreamsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DescribeLogStreamsHeaders headers;
-    public DescribeLogStreamsRequest withHeaders(DescribeLogStreamsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DescribeLogStreamsRequest request;
-    public DescribeLogStreamsRequest withRequest(org.openapis.openapi.models.shared.DescribeLogStreamsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DescribeLogStreamsRequest describeLogStreamsRequest;
+    public DescribeLogStreamsRequest withDescribeLogStreamsRequest(org.openapis.openapi.models.shared.DescribeLogStreamsRequest describeLogStreamsRequest) {
+        this.describeLogStreamsRequest = describeLogStreamsRequest;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeLogStreamsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeLogStreamsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeLogStreamsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeLogStreamsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeLogStreamsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeLogStreamsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeLogStreamsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public DescribeLogStreamsXAmzTargetEnum xAmzTarget;
+    public DescribeLogStreamsRequest withXAmzTarget(DescribeLogStreamsXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public DescribeLogStreamsRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public DescribeLogStreamsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     

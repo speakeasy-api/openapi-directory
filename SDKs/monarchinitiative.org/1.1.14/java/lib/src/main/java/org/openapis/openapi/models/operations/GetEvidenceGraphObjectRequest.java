@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEvidenceGraphObjectRequest {
-    
-    public GetEvidenceGraphObjectPathParams pathParams;
-    public GetEvidenceGraphObjectRequest withPathParams(GetEvidenceGraphObjectPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * association id, e.g. 68e686f6-d05b-46b8-ab1f-1da2fff97ada
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetEvidenceGraphObjectRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

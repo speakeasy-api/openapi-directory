@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImageRequest {
-    
-    public GetImagePathParams pathParams;
-    public GetImageRequest withPathParams(GetImagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Image ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetImageRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetImageQueryParams queryParams;
-    public GetImageRequest withQueryParams(GetImageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Language for the keywords and categories in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public org.openapis.openapi.models.shared.LanguageEnum language;
+    public GetImageRequest withLanguage(org.openapis.openapi.models.shared.LanguageEnum language) {
+        this.language = language;
         return this;
     }
     
+    /**
+     * The ID of the search that is related to this request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_id")
+    public String searchId;
+    public GetImageRequest withSearchId(String searchId) {
+        this.searchId = searchId;
+        return this;
+    }
     
-    public GetImageSecurity security;
-    public GetImageRequest withSecurity(GetImageSecurity security) {
-        this.security = security;
+    /**
+     * Amount of detail to render in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
+    public GetImageViewEnum view;
+    public GetImageRequest withView(GetImageViewEnum view) {
+        this.view = view;
         return this;
     }
     

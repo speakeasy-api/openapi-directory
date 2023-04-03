@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostLoadBalancersIdActionsChangeDnsPtrRequest {
-    
-    public PostLoadBalancersIdActionsChangeDnsPtrPathParams pathParams;
-    public PostLoadBalancersIdActionsChangeDnsPtrRequest withPathParams(PostLoadBalancersIdActionsChangeDnsPtrPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Select the IP address for which to change the DNS entry by passing `ip`. It can be either IPv4 or IPv6. The target hostname is set by passing `dns_ptr`.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostLoadBalancersIdActionsChangeDnsPtrChangeLoadbalancerDnsPtrRequest request;
-    public PostLoadBalancersIdActionsChangeDnsPtrRequest withRequest(PostLoadBalancersIdActionsChangeDnsPtrChangeLoadbalancerDnsPtrRequest request) {
-        this.request = request;
+    public PostLoadBalancersIdActionsChangeDnsPtrChangeLoadbalancerDnsPtrRequest requestBody;
+    public PostLoadBalancersIdActionsChangeDnsPtrRequest withRequestBody(PostLoadBalancersIdActionsChangeDnsPtrChangeLoadbalancerDnsPtrRequest requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID of the Load Balancer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostLoadBalancersIdActionsChangeDnsPtrRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

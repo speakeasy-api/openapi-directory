@@ -5,8 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.ItemsAddSecurity;
-import org.openapis.openapi.models.operations.ItemsAddQueryParams;
-import org.openapis.openapi.models.operations.ItemsAddHeaders;
 import org.openapis.openapi.models.operations.ItemsAddRequest;
 import org.openapis.openapi.models.operations.ItemsAddResponse;
 import org.openapis.openapi.models.shared.ItemCategoriesInput;
@@ -17,7 +15,6 @@ import org.openapis.openapi.models.shared.ItemVariationsPricingTypeEnum;
 import org.openapis.openapi.models.shared.ItemVariationsInput;
 import org.openapis.openapi.models.shared.ItemInput;
 import org.openapis.openapi.models.shared.CurrencyEnum;
-import org.openapis.openapi.models.shared.SchemeAPIKey;
 
 public class Application {
     public static void main(String[] args) {
@@ -26,26 +23,12 @@ public class Application {
                 .build();
 
             ItemsAddRequest req = new ItemsAddRequest() {{
-                security = new ItemsAddSecurity() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                queryParams = new ItemsAddQueryParams() {{
-                    raw = false;
-                }};
-                headers = new ItemsAddHeaders() {{
-                    xApideckAppId = "corrupti";
-                    xApideckConsumerId = "provident";
-                    xApideckServiceId = "distinctio";
-                }};
-                request = new ItemInput() {{
+                itemInput = new ItemInput() {{
                     abbreviation = "Ch";
                     absentAtLocationIds = new String[]{{
-                        add("unde"),
-                        add("nulla"),
-                        add("corrupti"),
-                        add("illum"),
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
                     available = true;
                     availableForPickup = false;
@@ -56,15 +39,26 @@ public class Application {
                                 add("12345"),
                                 add("12345"),
                                 add("12345"),
+                                add("12345"),
                             }};
-                            name = "deserunt";
+                            name = "corrupti";
                         }}),
                         add(new ItemCategoriesInput() {{
                             imageIds = new String[]{{
                                 add("12345"),
                                 add("12345"),
+                                add("12345"),
+                                add("12345"),
                             }};
-                            name = "iure";
+                            name = "vel";
+                        }}),
+                        add(new ItemCategoriesInput() {{
+                            imageIds = new String[]{{
+                                add("12345"),
+                                add("12345"),
+                                add("12345"),
+                            }};
+                            name = "deserunt";
                         }}),
                     }};
                     code = "11910345";
@@ -94,10 +88,8 @@ public class Application {
                     productType = "regular";
                     sku = "11910345";
                     taxIds = new String[]{{
-                        add("ipsa"),
-                        add("delectus"),
-                        add("tempora"),
-                        add("suscipit"),
+                        add("magnam"),
+                        add("debitis"),
                     }};
                     variations = new org.openapis.openapi.models.shared.ItemVariationsInput[]{{
                         add(new ItemVariationsInput() {{
@@ -110,21 +102,17 @@ public class Application {
                             sku = "11910345";
                             stockable = false;
                         }}),
-                        add(new ItemVariationsInput() {{
-                            name = "Variation";
-                            presentAtAllLocations = false;
-                            priceAmount = 10;
-                            priceCurrency = "USD";
-                            pricingType = "fixed";
-                            sequence = 1;
-                            sku = "11910345";
-                            stockable = false;
-                        }}),
                     }};
                 }};
-            }};            
+                raw = false;
+                xApideckAppId = "delectus";
+                xApideckConsumerId = "tempora";
+                xApideckServiceId = "suscipit";
+            }}            
 
-            ItemsAddResponse res = sdk.items.itemsAdd(req);
+            ItemsAddResponse res = sdk.items.itemsAdd(req, new ItemsAddSecurity() {{
+                apiKey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.createItemResponse.isPresent()) {
                 // handle response

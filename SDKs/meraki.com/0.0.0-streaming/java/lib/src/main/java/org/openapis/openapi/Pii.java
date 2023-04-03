@@ -47,12 +47,12 @@ public class Pii {
      */
     public org.openapis.openapi.models.operations.CreateNetworkPiiRequestResponse createNetworkPiiRequest(org.openapis.openapi.models.operations.CreateNetworkPiiRequestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkPiiRequestPathParams.class, baseUrl, "/networks/{networkId}/pii/requests", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkPiiRequestRequest.class, baseUrl, "/networks/{networkId}/pii/requests", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -95,7 +95,7 @@ public class Pii {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkPiiRequestResponse deleteNetworkPiiRequest(org.openapis.openapi.models.operations.DeleteNetworkPiiRequestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkPiiRequestPathParams.class, baseUrl, "/networks/{networkId}/pii/requests/{requestId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkPiiRequestRequest.class, baseUrl, "/networks/{networkId}/pii/requests/{requestId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -135,13 +135,13 @@ public class Pii {
      */
     public org.openapis.openapi.models.operations.GetNetworkPiiPiiKeysResponse getNetworkPiiPiiKeys(org.openapis.openapi.models.operations.GetNetworkPiiPiiKeysRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkPiiPiiKeysPathParams.class, baseUrl, "/networks/{networkId}/pii/piiKeys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkPiiPiiKeysRequest.class, baseUrl, "/networks/{networkId}/pii/piiKeys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkPiiPiiKeysQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkPiiPiiKeysRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -187,7 +187,7 @@ public class Pii {
      */
     public org.openapis.openapi.models.operations.GetNetworkPiiRequestResponse getNetworkPiiRequest(org.openapis.openapi.models.operations.GetNetworkPiiRequestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkPiiRequestPathParams.class, baseUrl, "/networks/{networkId}/pii/requests/{requestId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkPiiRequestRequest.class, baseUrl, "/networks/{networkId}/pii/requests/{requestId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -233,7 +233,7 @@ public class Pii {
      */
     public org.openapis.openapi.models.operations.GetNetworkPiiRequestsResponse getNetworkPiiRequests(org.openapis.openapi.models.operations.GetNetworkPiiRequestsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkPiiRequestsPathParams.class, baseUrl, "/networks/{networkId}/pii/requests", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkPiiRequestsRequest.class, baseUrl, "/networks/{networkId}/pii/requests", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -279,13 +279,13 @@ public class Pii {
      */
     public org.openapis.openapi.models.operations.GetNetworkPiiSmDevicesForKeyResponse getNetworkPiiSmDevicesForKey(org.openapis.openapi.models.operations.GetNetworkPiiSmDevicesForKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkPiiSmDevicesForKeyPathParams.class, baseUrl, "/networks/{networkId}/pii/smDevicesForKey", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkPiiSmDevicesForKeyRequest.class, baseUrl, "/networks/{networkId}/pii/smDevicesForKey", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkPiiSmDevicesForKeyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkPiiSmDevicesForKeyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -331,13 +331,13 @@ public class Pii {
      */
     public org.openapis.openapi.models.operations.GetNetworkPiiSmOwnersForKeyResponse getNetworkPiiSmOwnersForKey(org.openapis.openapi.models.operations.GetNetworkPiiSmOwnersForKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkPiiSmOwnersForKeyPathParams.class, baseUrl, "/networks/{networkId}/pii/smOwnersForKey", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkPiiSmOwnersForKeyRequest.class, baseUrl, "/networks/{networkId}/pii/smOwnersForKey", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkPiiSmOwnersForKeyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkPiiSmOwnersForKeyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -34,24 +34,25 @@ public class Earnings {
      * Add/Update Earning
      * Add/Update Earning API sends new or updated employee earnings information directly to Web Pay.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddOrUpdateAnEmployeeEarningResponse addOrUpdateAnEmployeeEarning(org.openapis.openapi.models.operations.AddOrUpdateAnEmployeeEarningRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddOrUpdateAnEmployeeEarningResponse addOrUpdateAnEmployeeEarning(org.openapis.openapi.models.operations.AddOrUpdateAnEmployeeEarningRequest request, org.openapis.openapi.models.operations.AddOrUpdateAnEmployeeEarningSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddOrUpdateAnEmployeeEarningPathParams.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/earnings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddOrUpdateAnEmployeeEarningRequest.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/earnings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "earning", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,19 +82,20 @@ public class Earnings {
      * Delete Earning by Earning Code and Start Date
      * Delete Earning by Earning Code and Start Date
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteEarningByEarningCodeAndStartDateResponse deleteEarningByEarningCodeAndStartDate(org.openapis.openapi.models.operations.DeleteEarningByEarningCodeAndStartDateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteEarningByEarningCodeAndStartDateResponse deleteEarningByEarningCodeAndStartDate(org.openapis.openapi.models.operations.DeleteEarningByEarningCodeAndStartDateRequest request, org.openapis.openapi.models.operations.DeleteEarningByEarningCodeAndStartDateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteEarningByEarningCodeAndStartDatePathParams.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}/{startDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteEarningByEarningCodeAndStartDateRequest.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}/{startDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,19 +125,20 @@ public class Earnings {
      * Get All Earnings
      * Get All Earnings returns all earnings for the selected employee.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAllEarningsResponse getAllEarnings(org.openapis.openapi.models.operations.GetAllEarningsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAllEarningsResponse getAllEarnings(org.openapis.openapi.models.operations.GetAllEarningsRequest request, org.openapis.openapi.models.operations.GetAllEarningsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllEarningsPathParams.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/earnings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllEarningsRequest.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/earnings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,19 +176,20 @@ public class Earnings {
      * Get Earning by Earning Code and Start Date
      * Get Earnings returns the single earning with the provided earning code and start date for the selected employee.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEarningByEarningCodeAndStartDateResponse getEarningByEarningCodeAndStartDate(org.openapis.openapi.models.operations.GetEarningByEarningCodeAndStartDateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEarningByEarningCodeAndStartDateResponse getEarningByEarningCodeAndStartDate(org.openapis.openapi.models.operations.GetEarningByEarningCodeAndStartDateRequest request, org.openapis.openapi.models.operations.GetEarningByEarningCodeAndStartDateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEarningByEarningCodeAndStartDatePathParams.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}/{startDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEarningByEarningCodeAndStartDateRequest.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}/{startDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -223,19 +227,20 @@ public class Earnings {
      * Get Earnings by Earning Code
      * Get Earnings returns all earnings with the provided earning code for the selected employee.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEarningsByEarningCodeResponse getEarningsByEarningCode(org.openapis.openapi.models.operations.GetEarningsByEarningCodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEarningsByEarningCodeResponse getEarningsByEarningCode(org.openapis.openapi.models.operations.GetEarningsByEarningCodeRequest request, org.openapis.openapi.models.operations.GetEarningsByEarningCodeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEarningsByEarningCodePathParams.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEarningsByEarningCodeRequest.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

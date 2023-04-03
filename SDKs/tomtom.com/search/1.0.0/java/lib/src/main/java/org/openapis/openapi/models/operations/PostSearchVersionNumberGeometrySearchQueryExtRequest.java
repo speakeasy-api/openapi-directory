@@ -7,24 +7,92 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSearchVersionNumberGeometrySearchQueryExtRequest {
-    
-    public PostSearchVersionNumberGeometrySearchQueryExtPathParams pathParams;
-    public PostSearchVersionNumberGeometrySearchQueryExtRequest withPathParams(PostSearchVersionNumberGeometrySearchQueryExtPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostSearchVersionNumberGeometrySearchQueryExtQueryParams queryParams;
-    public PostSearchVersionNumberGeometrySearchQueryExtRequest withQueryParams(PostSearchVersionNumberGeometrySearchQueryExtQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSearchVersionNumberGeometrySearchQueryExtRequestBody request;
-    public PostSearchVersionNumberGeometrySearchQueryExtRequest withRequest(PostSearchVersionNumberGeometrySearchQueryExtRequestBody request) {
-        this.request = request;
+    public PostSearchVersionNumberGeometrySearchQueryExtRequestBody requestBody;
+    public PostSearchVersionNumberGeometrySearchQueryExtRequest withRequestBody(PostSearchVersionNumberGeometrySearchQueryExtRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Expected response format.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
+    public org.openapis.openapi.models.shared.ExtEnum ext;
+    public PostSearchVersionNumberGeometrySearchQueryExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
+        this.ext = ext;
+        return this;
+    }
+    
+    /**
+     * Indexes for which extended postal codes should be included in the results. Available indexes are:
+     *   - &lt;b&gt;Addr&lt;/b&gt; = Address ranges
+     *   - &lt;b&gt;Geo&lt;/b&gt; = Geographies
+     *   - &lt;b&gt;PAD&lt;/b&gt; = Point Addresses
+     *   - &lt;b&gt;POI&lt;/b&gt; = Points of Interest
+     *   - &lt;b&gt;Str&lt;/b&gt; = Streets
+     *   - &lt;b&gt;XStr&lt;/b&gt; = Cross Streets (intersections)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=extendedPostalCodesFor")
+    public String extendedPostalCodesFor;
+    public PostSearchVersionNumberGeometrySearchQueryExtRequest withExtendedPostalCodesFor(String extendedPostalCodesFor) {
+        this.extendedPostalCodesFor = extendedPostalCodesFor;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of indexes which should be utilized for the search. Item order does not matter. Available indexes are:
+     *   - &lt;b&gt;Addr&lt;/b&gt; = Address range interpolation (when there is no PAD)
+     *   - &lt;b&gt;Geo&lt;/b&gt; = Geographies
+     *   - &lt;b&gt;PAD&lt;/b&gt; = Point Addresses
+     *   - &lt;b&gt;POI&lt;/b&gt; = Points of interest
+     *   - &lt;b&gt;Str&lt;/b&gt; = Streets
+     *   - &lt;b&gt;Xstr&lt;/b&gt; = Cross Streets (intersections)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idxSet")
+    public String idxSet;
+    public PostSearchVersionNumberGeometrySearchQueryExtRequest withIdxSet(String idxSet) {
+        this.idxSet = idxSet;
+        return this;
+    }
+    
+    /**
+     * Language in which search results should be returned. Should be one of &lt;a href="/search-api/search-api-documentation/supported-languages"&gt;supported IETF language tags&lt;/a&gt;, case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public PostSearchVersionNumberGeometrySearchQueryExtRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * Maximum number of search results that will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public PostSearchVersionNumberGeometrySearchQueryExtRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Query string. Must be properly URL encoded.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=query")
+    public String query;
+    public PostSearchVersionNumberGeometrySearchQueryExtRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * Service version number. The current value is 2.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
+    public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+    public PostSearchVersionNumberGeometrySearchQueryExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
         return this;
     }
     

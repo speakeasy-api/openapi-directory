@@ -39,7 +39,7 @@ public class FundingManagerPrivate {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateFundingAccountV2Response createFundingAccountV2(org.openapis.openapi.models.operations.CreateFundingAccountV2Request request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateFundingAccountV2Response createFundingAccountV2(org.openapis.openapi.models.shared.CreateFundingAccountRequestV2 request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/fundingAccounts");
         
@@ -103,7 +103,7 @@ public class FundingManagerPrivate {
      */
     public org.openapis.openapi.models.operations.DeleteSourceAccountV3Response deleteSourceAccountV3(org.openapis.openapi.models.operations.DeleteSourceAccountV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSourceAccountV3PathParams.class, baseUrl, "/v3/sourceAccounts/{sourceAccountId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSourceAccountV3Request.class, baseUrl, "/v3/sourceAccounts/{sourceAccountId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");

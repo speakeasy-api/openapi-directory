@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsRequest {
-    
-    public GetMerchantsQueryParams queryParams;
-    public GetMerchantsRequest withQueryParams(GetMerchantsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of the page to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Integer pageNumber;
+    public GetMerchantsRequest withPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
     
-    
-    public GetMerchantsSecurity security;
-    public GetMerchantsRequest withSecurity(GetMerchantsSecurity security) {
-        this.security = security;
+    /**
+     * The number of items to have on a page, maximum 100. The default is 10 items on a page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetMerchantsRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

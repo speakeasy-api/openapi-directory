@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCartInstallmentsRequest {
-    
-    public GetCartInstallmentsPathParams pathParams;
-    public GetCartInstallmentsRequest withPathParams(GetCartInstallmentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetCartInstallmentsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetCartInstallmentsQueryParams queryParams;
-    public GetCartInstallmentsRequest withQueryParams(GetCartInstallmentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetCartInstallmentsRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * ID of the `orderForm` to be consulted for installments.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderFormId")
+    public String orderFormId;
+    public GetCartInstallmentsRequest withOrderFormId(String orderFormId) {
+        this.orderFormId = orderFormId;
+        return this;
+    }
     
-    public GetCartInstallmentsHeaders headers;
-    public GetCartInstallmentsRequest withHeaders(GetCartInstallmentsHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID of the payment method to be consulted for installments.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paymentSystem")
+    public Long paymentSystem;
+    public GetCartInstallmentsRequest withPaymentSystem(Long paymentSystem) {
+        this.paymentSystem = paymentSystem;
         return this;
     }
     

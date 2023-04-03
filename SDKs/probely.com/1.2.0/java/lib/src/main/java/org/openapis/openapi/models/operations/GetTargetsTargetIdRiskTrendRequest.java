@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTargetsTargetIdRiskTrendRequest {
-    
-    public GetTargetsTargetIdRiskTrendPathParams pathParams;
-    public GetTargetsTargetIdRiskTrendRequest withPathParams(GetTargetsTargetIdRiskTrendPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Target id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_id")
+    public String targetId;
+    public GetTargetsTargetIdRiskTrendRequest withTargetId(String targetId) {
+        this.targetId = targetId;
         return this;
     }
     

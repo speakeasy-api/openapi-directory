@@ -42,13 +42,13 @@ public class BandwidthUsageHistory {
      */
     public org.openapis.openapi.models.operations.GetNetworkClientsBandwidthUsageHistoryResponse getNetworkClientsBandwidthUsageHistory(org.openapis.openapi.models.operations.GetNetworkClientsBandwidthUsageHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientsBandwidthUsageHistoryPathParams.class, baseUrl, "/networks/{networkId}/clients/bandwidthUsageHistory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientsBandwidthUsageHistoryRequest.class, baseUrl, "/networks/{networkId}/clients/bandwidthUsageHistory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkClientsBandwidthUsageHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkClientsBandwidthUsageHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -90,13 +90,13 @@ public class BandwidthUsageHistory {
      */
     public org.openapis.openapi.models.operations.GetOrganizationClientsBandwidthUsageHistoryResponse getOrganizationClientsBandwidthUsageHistory(org.openapis.openapi.models.operations.GetOrganizationClientsBandwidthUsageHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationClientsBandwidthUsageHistoryPathParams.class, baseUrl, "/organizations/{organizationId}/clients/bandwidthUsageHistory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationClientsBandwidthUsageHistoryRequest.class, baseUrl, "/organizations/{organizationId}/clients/bandwidthUsageHistory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationClientsBandwidthUsageHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationClientsBandwidthUsageHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyTrafficMirrorFilterNetworkServicesRequest {
-    
-    public GETModifyTrafficMirrorFilterNetworkServicesQueryParams queryParams;
-    public GETModifyTrafficMirrorFilterNetworkServicesRequest withQueryParams(GETModifyTrafficMirrorFilterNetworkServicesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyTrafficMirrorFilterNetworkServicesActionEnum action;
+    public GETModifyTrafficMirrorFilterNetworkServicesRequest withAction(GETModifyTrafficMirrorFilterNetworkServicesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The network service, for example Amazon DNS, that you want to mirror.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AddNetworkService")
+    public GETModifyTrafficMirrorFilterNetworkServicesAddNetworkServiceEnum[] addNetworkService;
+    public GETModifyTrafficMirrorFilterNetworkServicesRequest withAddNetworkService(GETModifyTrafficMirrorFilterNetworkServicesAddNetworkServiceEnum[] addNetworkService) {
+        this.addNetworkService = addNetworkService;
+        return this;
+    }
     
-    public GETModifyTrafficMirrorFilterNetworkServicesHeaders headers;
-    public GETModifyTrafficMirrorFilterNetworkServicesRequest withHeaders(GETModifyTrafficMirrorFilterNetworkServicesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETModifyTrafficMirrorFilterNetworkServicesRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The network service, for example Amazon DNS, that you no longer want to mirror.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoveNetworkService")
+    public GETModifyTrafficMirrorFilterNetworkServicesRemoveNetworkServiceEnum[] removeNetworkService;
+    public GETModifyTrafficMirrorFilterNetworkServicesRequest withRemoveNetworkService(GETModifyTrafficMirrorFilterNetworkServicesRemoveNetworkServiceEnum[] removeNetworkService) {
+        this.removeNetworkService = removeNetworkService;
+        return this;
+    }
+    
+    /**
+     * The ID of the Traffic Mirror filter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TrafficMirrorFilterId")
+    public String trafficMirrorFilterId;
+    public GETModifyTrafficMirrorFilterNetworkServicesRequest withTrafficMirrorFilterId(String trafficMirrorFilterId) {
+        this.trafficMirrorFilterId = trafficMirrorFilterId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyTrafficMirrorFilterNetworkServicesVersionEnum version;
+    public GETModifyTrafficMirrorFilterNetworkServicesRequest withVersion(GETModifyTrafficMirrorFilterNetworkServicesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyTrafficMirrorFilterNetworkServicesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyTrafficMirrorFilterNetworkServicesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyTrafficMirrorFilterNetworkServicesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyTrafficMirrorFilterNetworkServicesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyTrafficMirrorFilterNetworkServicesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyTrafficMirrorFilterNetworkServicesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyTrafficMirrorFilterNetworkServicesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

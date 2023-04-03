@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AirtravelCoordinatesRequest {
-    
-    public AirtravelCoordinatesHeaders headers;
-    public AirtravelCoordinatesRequest withHeaders(AirtravelCoordinatesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public AirtravelCoordinatesRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public AirtravelCoordinatesRequestBody request;
-    public AirtravelCoordinatesRequest withRequest(AirtravelCoordinatesRequestBody request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public AirtravelCoordinatesRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public AirtravelCoordinatesRequestBody requestBody;
+    public AirtravelCoordinatesRequest withRequestBody(AirtravelCoordinatesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

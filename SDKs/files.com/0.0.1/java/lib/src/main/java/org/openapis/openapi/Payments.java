@@ -49,7 +49,7 @@ public class Payments {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPaymentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPaymentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -90,7 +90,7 @@ public class Payments {
      */
     public org.openapis.openapi.models.operations.GetPaymentsIdResponse getPaymentsId(org.openapis.openapi.models.operations.GetPaymentsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentsIdPathParams.class, baseUrl, "/payments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentsIdRequest.class, baseUrl, "/payments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

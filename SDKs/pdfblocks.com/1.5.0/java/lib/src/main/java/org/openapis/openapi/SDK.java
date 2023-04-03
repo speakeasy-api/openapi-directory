@@ -158,7 +158,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddImageWatermarkV1Response addImageWatermarkV1(org.openapis.openapi.models.operations.AddImageWatermarkV1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.AddImageWatermarkV1Response addImageWatermarkV1(org.openapis.openapi.models.operations.AddImageWatermarkV1RequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/add_watermark/image");
         
@@ -211,7 +211,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddPasswordV1Response addPasswordV1(org.openapis.openapi.models.operations.AddPasswordV1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.AddPasswordV1Response addPasswordV1(org.openapis.openapi.models.operations.AddPasswordV1RequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/add_password");
         
@@ -264,7 +264,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddRestrictionsV1Response addRestrictionsV1(org.openapis.openapi.models.operations.AddRestrictionsV1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.AddRestrictionsV1Response addRestrictionsV1(org.openapis.openapi.models.operations.AddRestrictionsV1RequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/add_restrictions");
         
@@ -317,7 +317,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddTextWatermarkV1Response addTextWatermarkV1(org.openapis.openapi.models.operations.AddTextWatermarkV1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.AddTextWatermarkV1Response addTextWatermarkV1(org.openapis.openapi.models.operations.AddTextWatermarkV1RequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/add_watermark/text");
         
@@ -370,7 +370,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExtractPagesV1Response extractPagesV1(org.openapis.openapi.models.operations.ExtractPagesV1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.ExtractPagesV1Response extractPagesV1(org.openapis.openapi.models.operations.ExtractPagesV1RequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/extract_pages");
         
@@ -423,7 +423,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MergeDocumentsV1Response mergeDocumentsV1(org.openapis.openapi.models.operations.MergeDocumentsV1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.MergeDocumentsV1Response mergeDocumentsV1(org.openapis.openapi.models.operations.MergeDocumentsV1RequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/merge_documents");
         
@@ -476,7 +476,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemovePagesV1Response removePagesV1(org.openapis.openapi.models.operations.RemovePagesV1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.RemovePagesV1Response removePagesV1(org.openapis.openapi.models.operations.RemovePagesV1RequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/remove_pages");
         
@@ -529,7 +529,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemovePasswordV1Response removePasswordV1(org.openapis.openapi.models.operations.RemovePasswordV1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.RemovePasswordV1Response removePasswordV1(org.openapis.openapi.models.operations.RemovePasswordV1RequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/remove_password");
         
@@ -582,7 +582,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemoveRestrictionsV1Response removeRestrictionsV1(org.openapis.openapi.models.operations.RemoveRestrictionsV1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.RemoveRestrictionsV1Response removeRestrictionsV1(org.openapis.openapi.models.operations.RemoveRestrictionsV1RequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/remove_restrictions");
         
@@ -635,7 +635,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemoveSignaturesV1Response removeSignaturesV1(org.openapis.openapi.models.operations.RemoveSignaturesV1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.RemoveSignaturesV1Response removeSignaturesV1(org.openapis.openapi.models.operations.RemoveSignaturesV1RequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/remove_signatures");
         
@@ -688,7 +688,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReversePagesV1Response reversePagesV1(org.openapis.openapi.models.operations.ReversePagesV1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.ReversePagesV1Response reversePagesV1(org.openapis.openapi.models.operations.ReversePagesV1RequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/reverse_pages");
         
@@ -741,7 +741,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RotatePagesV1Response rotatePagesV1(org.openapis.openapi.models.operations.RotatePagesV1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.RotatePagesV1Response rotatePagesV1(org.openapis.openapi.models.operations.RotatePagesV1RequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/rotate_pages");
         

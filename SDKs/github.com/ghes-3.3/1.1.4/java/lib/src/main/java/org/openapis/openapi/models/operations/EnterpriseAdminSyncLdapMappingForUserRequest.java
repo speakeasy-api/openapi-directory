@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminSyncLdapMappingForUserRequest {
-    
-    public EnterpriseAdminSyncLdapMappingForUserPathParams pathParams;
-    public EnterpriseAdminSyncLdapMappingForUserRequest withPathParams(EnterpriseAdminSyncLdapMappingForUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public EnterpriseAdminSyncLdapMappingForUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

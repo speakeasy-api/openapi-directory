@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSharedReferenceFilesRequest {
-    
-    public GetSharedReferenceFilesPathParams pathParams;
-    public GetSharedReferenceFilesRequest withPathParams(GetSharedReferenceFilesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * job's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public GetSharedReferenceFilesRequest withJobId(String jobId) {
+        this.jobId = jobId;
         return this;
     }
     

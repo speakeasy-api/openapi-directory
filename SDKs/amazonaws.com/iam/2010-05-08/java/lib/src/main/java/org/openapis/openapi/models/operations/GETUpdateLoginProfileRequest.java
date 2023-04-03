@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateLoginProfileRequest {
-    
-    public GETUpdateLoginProfileQueryParams queryParams;
-    public GETUpdateLoginProfileRequest withQueryParams(GETUpdateLoginProfileQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETUpdateLoginProfileActionEnum action;
+    public GETUpdateLoginProfileRequest withAction(GETUpdateLoginProfileActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The new password for the specified IAM user.&lt;/p&gt; &lt;p&gt;The &lt;a href="http://wikipedia.org/wiki/regex"&gt;regex pattern&lt;/a&gt; used to validate this parameter is a string of characters consisting of the following:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Any printable ASCII character ranging from the space character (&lt;code&gt;\ u0020&lt;/code&gt;) through the end of the ASCII character range&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;The printable characters in the Basic Latin and Latin-1 Supplement character set (through &lt;code&gt;\ u00FF&lt;/code&gt;)&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;The special characters tab (&lt;code&gt;\ u0009&lt;/code&gt;), line feed (&lt;code&gt;\ u000A&lt;/code&gt;), and carriage return (&lt;code&gt;\ u000D&lt;/code&gt;)&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;However, the format can be further restricted by the account administrator by setting a password policy on the Amazon Web Services account. For more information, see &lt;a&gt;UpdateAccountPasswordPolicy&lt;/a&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Password")
+    public String password;
+    public GETUpdateLoginProfileRequest withPassword(String password) {
+        this.password = password;
+        return this;
+    }
     
-    public GETUpdateLoginProfileHeaders headers;
-    public GETUpdateLoginProfileRequest withHeaders(GETUpdateLoginProfileHeaders headers) {
-        this.headers = headers;
+    /**
+     * Allows this new password to be used only once by requiring the specified IAM user to set a new password on next sign-in.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PasswordResetRequired")
+    public Boolean passwordResetRequired;
+    public GETUpdateLoginProfileRequest withPasswordResetRequired(Boolean passwordResetRequired) {
+        this.passwordResetRequired = passwordResetRequired;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the user whose password you want to update.&lt;/p&gt; &lt;p&gt;This parameter allows (through its &lt;a href="http://wikipedia.org/wiki/regex"&gt;regex pattern&lt;/a&gt;) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserName")
+    public String userName;
+    public GETUpdateLoginProfileRequest withUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETUpdateLoginProfileVersionEnum version;
+    public GETUpdateLoginProfileRequest withVersion(GETUpdateLoginProfileVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETUpdateLoginProfileRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETUpdateLoginProfileRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETUpdateLoginProfileRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETUpdateLoginProfileRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETUpdateLoginProfileRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETUpdateLoginProfileRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETUpdateLoginProfileRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

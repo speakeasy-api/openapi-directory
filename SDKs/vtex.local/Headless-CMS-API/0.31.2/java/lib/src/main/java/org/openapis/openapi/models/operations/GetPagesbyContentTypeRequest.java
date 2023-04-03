@@ -4,20 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPagesbyContentTypeRequest {
-    
-    public GetPagesbyContentTypePathParams pathParams;
-    public GetPagesbyContentTypeRequest withPathParams(GetPagesbyContentTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Builder ID specified in the settings of the CMS app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=builderId")
+    public String builderId;
+    public GetPagesbyContentTypeRequest withBuilderId(String builderId) {
+        this.builderId = builderId;
         return this;
     }
     
+    /**
+     * Content Type identifier defined in the FastStore project.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=content-type")
+    public String contentType;
+    public GetPagesbyContentTypeRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetPagesbyContentTypeQueryParams queryParams;
-    public GetPagesbyContentTypeRequest withQueryParams(GetPagesbyContentTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter results by a property of the page (e.g., `filters[status]`) or by a nested custom field of the `parameters` object (e.g., `filters[parameters.collection.sort]`).
+     * *Replace {field} with the desired property.*
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filters[{field}]")
+    public String filtersField;
+    public GetPagesbyContentTypeRequest withFiltersField(String filtersField) {
+        this.filtersField = filtersField;
+        return this;
+    }
+    
+    /**
+     * Release ID presented in the URL path of a CMS preview.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=releaseId")
+    public String releaseId;
+    public GetPagesbyContentTypeRequest withReleaseId(String releaseId) {
+        this.releaseId = releaseId;
+        return this;
+    }
+    
+    /**
+     * Version ID presented in the URL path of a CMS preview.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=versionId")
+    public String versionId;
+    public GetPagesbyContentTypeRequest withVersionId(String versionId) {
+        this.versionId = versionId;
         return this;
     }
     

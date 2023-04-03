@@ -4,20 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CareTeamMembersListRequest {
-    
-    public CareTeamMembersListQueryParams queryParams;
-    public CareTeamMembersListRequest withQueryParams(CareTeamMembersListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
+    public Long appointment;
+    public CareTeamMembersListRequest withAppointment(Long appointment) {
+        this.appointment = appointment;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public CareTeamMembersListRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public CareTeamMembersListSecurity security;
-    public CareTeamMembersListRequest withSecurity(CareTeamMembersListSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public CareTeamMembersListRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public CareTeamMembersListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public CareTeamMembersListRequest withPatient(Long patient) {
+        this.patient = patient;
         return this;
     }
     

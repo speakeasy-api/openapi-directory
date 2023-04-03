@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateMessageFeedbackRequest {
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreateMessageFeedbackRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public CreateMessageFeedbackPathParams pathParams;
-    public CreateMessageFeedbackRequest withPathParams(CreateMessageFeedbackPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Message resource for which the feedback was provided.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MessageSid")
+    public String messageSid;
+    public CreateMessageFeedbackRequest withMessageSid(String messageSid) {
+        this.messageSid = messageSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateMessageFeedbackCreateMessageFeedbackRequest request;
-    public CreateMessageFeedbackRequest withRequest(CreateMessageFeedbackCreateMessageFeedbackRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateMessageFeedbackSecurity security;
-    public CreateMessageFeedbackRequest withSecurity(CreateMessageFeedbackSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateMessageFeedbackRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateMessageFeedbackCreateMessageFeedbackRequest requestBody;
+    public CreateMessageFeedbackRequest withRequestBody(CreateMessageFeedbackCreateMessageFeedbackRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

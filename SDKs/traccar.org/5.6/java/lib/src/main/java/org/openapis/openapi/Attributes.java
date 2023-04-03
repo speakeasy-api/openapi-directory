@@ -42,7 +42,7 @@ public class Attributes {
      */
     public org.openapis.openapi.models.operations.DeleteAttributesComputedIdResponse deleteAttributesComputedId(org.openapis.openapi.models.operations.DeleteAttributesComputedIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAttributesComputedIdPathParams.class, baseUrl, "/attributes/computed/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAttributesComputedIdRequest.class, baseUrl, "/attributes/computed/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class Attributes {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAttributesComputedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAttributesComputedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -119,7 +119,7 @@ public class Attributes {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAttributesComputedResponse postAttributesComputed(org.openapis.openapi.models.operations.PostAttributesComputedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAttributesComputedResponse postAttributesComputed(org.openapis.openapi.models.shared.Attribute request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/attributes/computed");
         
@@ -165,12 +165,12 @@ public class Attributes {
      */
     public org.openapis.openapi.models.operations.PutAttributesComputedIdResponse putAttributesComputedId(org.openapis.openapi.models.operations.PutAttributesComputedIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutAttributesComputedIdPathParams.class, baseUrl, "/attributes/computed/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutAttributesComputedIdRequest.class, baseUrl, "/attributes/computed/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "attribute", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

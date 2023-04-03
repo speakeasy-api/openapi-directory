@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWorkflowRequest {
-    
-    public UpdateWorkflowPathParams pathParams;
-    public UpdateWorkflowRequest withPathParams(UpdateWorkflowPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateWorkflowUpdateWorkflowRequest request;
-    public UpdateWorkflowRequest withRequest(UpdateWorkflowUpdateWorkflowRequest request) {
-        this.request = request;
+    public UpdateWorkflowUpdateWorkflowRequest requestBody;
+    public UpdateWorkflowRequest withRequestBody(UpdateWorkflowUpdateWorkflowRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateWorkflowSecurity security;
-    public UpdateWorkflowRequest withSecurity(UpdateWorkflowSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Workflow resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateWorkflowRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateWorkflowRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the Workflow to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public UpdateWorkflowRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

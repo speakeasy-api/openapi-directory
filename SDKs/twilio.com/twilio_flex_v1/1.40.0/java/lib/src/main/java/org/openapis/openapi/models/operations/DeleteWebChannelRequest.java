@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWebChannelRequest {
-    
-    public DeleteWebChannelPathParams pathParams;
-    public DeleteWebChannelRequest withPathParams(DeleteWebChannelPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteWebChannelSecurity security;
-    public DeleteWebChannelRequest withSecurity(DeleteWebChannelSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteWebChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the WebChannel resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteWebChannelRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

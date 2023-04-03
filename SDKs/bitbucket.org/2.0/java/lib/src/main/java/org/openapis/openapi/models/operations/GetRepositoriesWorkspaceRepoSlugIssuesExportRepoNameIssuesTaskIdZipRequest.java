@@ -4,20 +4,50 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipRequest withPathParams(GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_name")
+    public String repoName;
+    public GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipRequest withRepoName(String repoName) {
+        this.repoName = repoName;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipSecurity security;
-    public GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipRequest withSecurity(GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the export task
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=task_id")
+    public String taskId;
+    public GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipRequest withTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

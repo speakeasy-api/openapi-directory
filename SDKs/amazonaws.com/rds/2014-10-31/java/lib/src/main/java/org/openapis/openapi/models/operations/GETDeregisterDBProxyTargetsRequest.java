@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeregisterDBProxyTargetsRequest {
-    
-    public GETDeregisterDBProxyTargetsQueryParams queryParams;
-    public GETDeregisterDBProxyTargetsRequest withQueryParams(GETDeregisterDBProxyTargetsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeregisterDBProxyTargetsActionEnum action;
+    public GETDeregisterDBProxyTargetsRequest withAction(GETDeregisterDBProxyTargetsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * One or more DB cluster identifiers.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterIdentifiers")
+    public String[] dbClusterIdentifiers;
+    public GETDeregisterDBProxyTargetsRequest withDBClusterIdentifiers(String[] dbClusterIdentifiers) {
+        this.dbClusterIdentifiers = dbClusterIdentifiers;
+        return this;
+    }
     
-    public GETDeregisterDBProxyTargetsHeaders headers;
-    public GETDeregisterDBProxyTargetsRequest withHeaders(GETDeregisterDBProxyTargetsHeaders headers) {
-        this.headers = headers;
+    /**
+     * One or more DB instance identifiers.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceIdentifiers")
+    public String[] dbInstanceIdentifiers;
+    public GETDeregisterDBProxyTargetsRequest withDBInstanceIdentifiers(String[] dbInstanceIdentifiers) {
+        this.dbInstanceIdentifiers = dbInstanceIdentifiers;
+        return this;
+    }
+    
+    /**
+     * The identifier of the &lt;code&gt;DBProxy&lt;/code&gt; that is associated with the &lt;code&gt;DBProxyTargetGroup&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBProxyName")
+    public String dbProxyName;
+    public GETDeregisterDBProxyTargetsRequest withDBProxyName(String dbProxyName) {
+        this.dbProxyName = dbProxyName;
+        return this;
+    }
+    
+    /**
+     * The identifier of the &lt;code&gt;DBProxyTargetGroup&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetGroupName")
+    public String targetGroupName;
+    public GETDeregisterDBProxyTargetsRequest withTargetGroupName(String targetGroupName) {
+        this.targetGroupName = targetGroupName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeregisterDBProxyTargetsVersionEnum version;
+    public GETDeregisterDBProxyTargetsRequest withVersion(GETDeregisterDBProxyTargetsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeregisterDBProxyTargetsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeregisterDBProxyTargetsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeregisterDBProxyTargetsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeregisterDBProxyTargetsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeregisterDBProxyTargetsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeregisterDBProxyTargetsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeregisterDBProxyTargetsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

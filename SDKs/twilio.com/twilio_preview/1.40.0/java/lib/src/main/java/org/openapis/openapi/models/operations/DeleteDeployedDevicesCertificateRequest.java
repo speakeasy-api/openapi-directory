@@ -4,27 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDeployedDevicesCertificateRequest {
-    
-    public DeleteDeployedDevicesCertificatePathParams pathParams;
-    public DeleteDeployedDevicesCertificateRequest withPathParams(DeleteDeployedDevicesCertificatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FleetSid")
+    public String fleetSid;
+    public DeleteDeployedDevicesCertificateRequest withFleetSid(String fleetSid) {
+        this.fleetSid = fleetSid;
         return this;
     }
     
-    
-    public DeleteDeployedDevicesCertificateSecurity security;
-    public DeleteDeployedDevicesCertificateRequest withSecurity(DeleteDeployedDevicesCertificateSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteDeployedDevicesCertificateRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Provides a 34 character string that uniquely identifies the requested Certificate credential resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteDeployedDevicesCertificateRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

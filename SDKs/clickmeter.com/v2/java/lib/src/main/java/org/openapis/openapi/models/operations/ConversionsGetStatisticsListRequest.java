@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsGetStatisticsListRequest {
-    
-    public ConversionsGetStatisticsListPathParams pathParams;
-    public ConversionsGetStatisticsListRequest withPathParams(ConversionsGetStatisticsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the conversion
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
+    public Long conversionId;
+    public ConversionsGetStatisticsListRequest withConversionId(Long conversionId) {
+        this.conversionId = conversionId;
         return this;
     }
     
+    /**
+     * If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
+    public String fromDay;
+    public ConversionsGetStatisticsListRequest withFromDay(String fromDay) {
+        this.fromDay = fromDay;
+        return this;
+    }
     
-    public ConversionsGetStatisticsListQueryParams queryParams;
-    public ConversionsGetStatisticsListRequest withQueryParams(ConversionsGetStatisticsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The temporal entity you want to group by ("week"/"month"). If unspecified is "day".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupBy")
+    public ConversionsGetStatisticsListGroupByEnum groupBy;
+    public ConversionsGetStatisticsListRequest withGroupBy(ConversionsGetStatisticsListGroupByEnum groupBy) {
+        this.groupBy = groupBy;
+        return this;
+    }
+    
+    /**
+     * Timeframe of the request. See list at $timeframeList
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
+    public ConversionsGetStatisticsListTimeFrameEnum timeFrame;
+    public ConversionsGetStatisticsListRequest withTimeFrame(ConversionsGetStatisticsListTimeFrameEnum timeFrame) {
+        this.timeFrame = timeFrame;
+        return this;
+    }
+    
+    /**
+     * If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
+    public String toDay;
+    public ConversionsGetStatisticsListRequest withToDay(String toDay) {
+        this.toDay = toDay;
         return this;
     }
     

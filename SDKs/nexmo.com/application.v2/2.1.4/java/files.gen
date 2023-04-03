@@ -32,7 +32,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/CreateApplicationRequestBodyKeys.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateApplicationRequestBodyPrivacy.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateApplicationRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateApplicationRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateApplication415ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateApplication406ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateApplication405ApplicationJSON.java
@@ -43,21 +42,18 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateApplication201App
 lib/src/main/java/org/openapis/openapi/models/operations/CreateApplication201ApplicationJSONPrivacy.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateApplication201ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateApplicationResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/DeleteApplicationPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteApplicationRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteApplication406ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteApplication405ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteApplication404ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteApplication401ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteApplicationResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetApplicationPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApplicationRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApplication406ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApplication405ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApplication404ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApplication401ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApplicationResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListApplicationQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListApplicationRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListApplication406ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListApplication405ApplicationJSON.java
@@ -65,7 +61,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListApplication401Appli
 lib/src/main/java/org/openapis/openapi/models/operations/ListApplication400ApplicationJSONInvalidParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListApplication400ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListApplicationResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateApplicationPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateApplicationRequestBodyKeys.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateApplicationRequestBodyPrivacy.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateApplicationRequestBody.java
@@ -120,6 +115,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ApplicationResponsePrivacy.
 lib/src/main/java/org/openapis/openapi/models/shared/ApplicationResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ApplicationResponseCollectionEmbedded.java
 lib/src/main/java/org/openapis/openapi/models/shared/ApplicationResponseCollection.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeBasicAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

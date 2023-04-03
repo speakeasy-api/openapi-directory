@@ -4,20 +4,83 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TasksListRequest {
-    
-    public TasksListQueryParams queryParams;
-    public TasksListRequest withQueryParams(TasksListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee_group")
+    public Long assigneeGroup;
+    public TasksListRequest withAssigneeGroup(Long assigneeGroup) {
+        this.assigneeGroup = assigneeGroup;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee_user")
+    public Long assigneeUser;
+    public TasksListRequest withAssigneeUser(Long assigneeUser) {
+        this.assigneeUser = assigneeUser;
+        return this;
+    }
     
-    public TasksListSecurity security;
-    public TasksListRequest withSecurity(TasksListSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public Long category;
+    public TasksListRequest withCategory(Long category) {
+        this.category = category;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public TasksListRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_at_date")
+    public String dueAtDate;
+    public TasksListRequest withDueAtDate(String dueAtDate) {
+        this.dueAtDate = dueAtDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_at_range")
+    public String dueAtRange;
+    public TasksListRequest withDueAtRange(String dueAtRange) {
+        this.dueAtRange = dueAtRange;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_at_since")
+    public String dueAtSince;
+    public TasksListRequest withDueAtSince(String dueAtSince) {
+        this.dueAtSince = dueAtSince;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_at_unknown")
+    public String dueAtUnknown;
+    public TasksListRequest withDueAtUnknown(String dueAtUnknown) {
+        this.dueAtUnknown = dueAtUnknown;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public TasksListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public TasksListRequest withSince(String since) {
+        this.since = since;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public Long status;
+    public TasksListRequest withStatus(Long status) {
+        this.status = status;
         return this;
     }
     

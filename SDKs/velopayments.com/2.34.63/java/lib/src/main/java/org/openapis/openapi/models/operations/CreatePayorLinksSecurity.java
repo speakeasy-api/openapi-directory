@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePayorLinksSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOAuthVeloBackOffice oAuthVeloBackOffice;
-    public CreatePayorLinksSecurity withOAuthVeloBackOffice(org.openapis.openapi.models.shared.SchemeOAuthVeloBackOffice oAuthVeloBackOffice) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oAuthVeloBackOffice;
+    public CreatePayorLinksSecurity withOAuthVeloBackOffice(String oAuthVeloBackOffice) {
         this.oAuthVeloBackOffice = oAuthVeloBackOffice;
         return this;
     }

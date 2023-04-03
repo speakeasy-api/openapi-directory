@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRealmRolesByIdRoleIdCompositesRequest {
-    
-    public DeleteRealmRolesByIdRoleIdCompositesPathParams pathParams;
-    public DeleteRealmRolesByIdRoleIdCompositesRequest withPathParams(DeleteRealmRolesByIdRoleIdCompositesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A set of roles to be removed
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RoleRepresentation[] request;
-    public DeleteRealmRolesByIdRoleIdCompositesRequest withRequest(org.openapis.openapi.models.shared.RoleRepresentation[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RoleRepresentation[] requestBody;
+    public DeleteRealmRolesByIdRoleIdCompositesRequest withRequestBody(org.openapis.openapi.models.shared.RoleRepresentation[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public DeleteRealmRolesByIdRoleIdCompositesRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
+    
+    /**
+     * Role id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=role-id")
+    public String roleId;
+    public DeleteRealmRolesByIdRoleIdCompositesRequest withRoleId(String roleId) {
+        this.roleId = roleId;
         return this;
     }
     

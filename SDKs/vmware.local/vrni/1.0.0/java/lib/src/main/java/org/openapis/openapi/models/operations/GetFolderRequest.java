@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFolderRequest {
-    
-    public GetFolderPathParams pathParams;
-    public GetFolderRequest withPathParams(GetFolderPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetFolderRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetFolderQueryParams queryParams;
-    public GetFolderRequest withQueryParams(GetFolderQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetFolderSecurity security;
-    public GetFolderRequest withSecurity(GetFolderSecurity security) {
-        this.security = security;
+    /**
+     * time in epoch seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time")
+    public Long time;
+    public GetFolderRequest withTime(Long time) {
+        this.time = time;
         return this;
     }
     

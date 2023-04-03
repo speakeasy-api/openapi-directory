@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDatasetsSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer")
-    public org.openapis.openapi.models.shared.SchemeBearerToken bearerToken;
-    public ListDatasetsSecurity withBearerToken(org.openapis.openapi.models.shared.SchemeBearerToken bearerToken) {
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
+    public String bearerToken;
+    public ListDatasetsSecurity withBearerToken(String bearerToken) {
         this.bearerToken = bearerToken;
         return this;
     }

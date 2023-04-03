@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHazardousMaterialsLabelsRequest {
-    
-    public GetHazardousMaterialsLabelsPathParams pathParams;
-    public GetHazardousMaterialsLabelsRequest withPathParams(GetHazardousMaterialsLabelsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetHazardousMaterialsLabelsSecurity security;
-    public GetHazardousMaterialsLabelsRequest withSecurity(GetHazardousMaterialsLabelsSecurity security) {
-        this.security = security;
+    /**
+     * A path parameter that specifies the eBay marketplace for which hazardous materials label information shall be retrieved.&lt;p&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Tip:&lt;/strong&gt; See &lt;a href="/api-docs/static/rest-request-components.html#marketpl" &gt;Request components&lt;/a&gt; for a list of valid eBay marketplace IDs.&lt;/span&gt;&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplace_id")
+    public String marketplaceId;
+    public GetHazardousMaterialsLabelsRequest withMarketplaceId(String marketplaceId) {
+        this.marketplaceId = marketplaceId;
         return this;
     }
     

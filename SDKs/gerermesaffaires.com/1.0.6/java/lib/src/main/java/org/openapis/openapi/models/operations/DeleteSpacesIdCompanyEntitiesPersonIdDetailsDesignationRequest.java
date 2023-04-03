@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSpacesIdCompanyEntitiesPersonIdDetailsDesignationRequest {
+    /**
+     * designation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=designation")
+    public String designation;
+    public DeleteSpacesIdCompanyEntitiesPersonIdDetailsDesignationRequest withDesignation(String designation) {
+        this.designation = designation;
+        return this;
+    }
     
-    public DeleteSpacesIdCompanyEntitiesPersonIdDetailsDesignationPathParams pathParams;
-    public DeleteSpacesIdCompanyEntitiesPersonIdDetailsDesignationRequest withPathParams(DeleteSpacesIdCompanyEntitiesPersonIdDetailsDesignationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteSpacesIdCompanyEntitiesPersonIdDetailsDesignationRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the person or memberId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=personId")
+    public String personId;
+    public DeleteSpacesIdCompanyEntitiesPersonIdDetailsDesignationRequest withPersonId(String personId) {
+        this.personId = personId;
         return this;
     }
     

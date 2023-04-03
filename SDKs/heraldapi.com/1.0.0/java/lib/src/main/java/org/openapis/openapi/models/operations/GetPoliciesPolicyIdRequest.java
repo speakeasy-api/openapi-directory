@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPoliciesPolicyIdRequest {
-    
-    public GetPoliciesPolicyIdPathParams pathParams;
-    public GetPoliciesPolicyIdRequest withPathParams(GetPoliciesPolicyIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * `id` for a specific policy
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=policy_id")
+    public String policyId;
+    public GetPoliciesPolicyIdRequest withPolicyId(String policyId) {
+        this.policyId = policyId;
         return this;
     }
     

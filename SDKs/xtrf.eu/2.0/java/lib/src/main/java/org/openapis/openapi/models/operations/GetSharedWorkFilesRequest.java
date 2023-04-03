@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSharedWorkFilesRequest {
-    
-    public GetSharedWorkFilesPathParams pathParams;
-    public GetSharedWorkFilesRequest withPathParams(GetSharedWorkFilesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * job's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public GetSharedWorkFilesRequest withJobId(String jobId) {
+        this.jobId = jobId;
         return this;
     }
     

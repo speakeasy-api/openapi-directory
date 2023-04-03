@@ -38,7 +38,7 @@ public class ProjectStatus {
      */
     public org.openapis.openapi.models.operations.GetProjectStatusResponse getProjectStatus(org.openapis.openapi.models.operations.GetProjectStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectStatusPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projectStatus", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectStatusRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projectStatus", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -157,7 +157,7 @@ public class ProjectStatus {
      */
     public org.openapis.openapi.models.operations.GetProjectStatusOfClientResponse getProjectStatusOfClient(org.openapis.openapi.models.operations.GetProjectStatusOfClientRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectStatusOfClientPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/clientWorkgroups/{client_workgroup_id}/projectStatus", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectStatusOfClientRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/clientWorkgroups/{client_workgroup_id}/projectStatus", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

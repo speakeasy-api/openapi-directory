@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubclassificationIndianRequest {
-    
-    public SubclassificationIndianPathParams pathParams;
-    public SubclassificationIndianRequest withPathParams(SubclassificationIndianPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstName")
+    public String firstName;
+    public SubclassificationIndianRequest withFirstName(String firstName) {
+        this.firstName = firstName;
         return this;
     }
     
-    
-    public SubclassificationIndianSecurity security;
-    public SubclassificationIndianRequest withSecurity(SubclassificationIndianSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lastName")
+    public String lastName;
+    public SubclassificationIndianRequest withLastName(String lastName) {
+        this.lastName = lastName;
         return this;
     }
     

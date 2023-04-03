@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyClusterSnapshotScheduleRequest {
-    
-    public GETModifyClusterSnapshotScheduleQueryParams queryParams;
-    public GETModifyClusterSnapshotScheduleRequest withQueryParams(GETModifyClusterSnapshotScheduleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyClusterSnapshotScheduleActionEnum action;
+    public GETModifyClusterSnapshotScheduleRequest withAction(GETModifyClusterSnapshotScheduleActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * A unique identifier for the cluster whose snapshot schedule you want to modify. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETModifyClusterSnapshotScheduleRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
     
-    public GETModifyClusterSnapshotScheduleHeaders headers;
-    public GETModifyClusterSnapshotScheduleRequest withHeaders(GETModifyClusterSnapshotScheduleHeaders headers) {
-        this.headers = headers;
+    /**
+     * A boolean to indicate whether to remove the assoiciation between the cluster and the schedule.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DisassociateSchedule")
+    public Boolean disassociateSchedule;
+    public GETModifyClusterSnapshotScheduleRequest withDisassociateSchedule(Boolean disassociateSchedule) {
+        this.disassociateSchedule = disassociateSchedule;
+        return this;
+    }
+    
+    /**
+     * A unique alphanumeric identifier for the schedule that you want to associate with the cluster.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ScheduleIdentifier")
+    public String scheduleIdentifier;
+    public GETModifyClusterSnapshotScheduleRequest withScheduleIdentifier(String scheduleIdentifier) {
+        this.scheduleIdentifier = scheduleIdentifier;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyClusterSnapshotScheduleVersionEnum version;
+    public GETModifyClusterSnapshotScheduleRequest withVersion(GETModifyClusterSnapshotScheduleVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyClusterSnapshotScheduleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyClusterSnapshotScheduleRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyClusterSnapshotScheduleRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyClusterSnapshotScheduleRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyClusterSnapshotScheduleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyClusterSnapshotScheduleRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyClusterSnapshotScheduleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

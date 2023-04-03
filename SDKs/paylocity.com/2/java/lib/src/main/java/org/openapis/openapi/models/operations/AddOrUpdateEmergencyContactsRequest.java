@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddOrUpdateEmergencyContactsRequest {
-    
-    public AddOrUpdateEmergencyContactsPathParams pathParams;
-    public AddOrUpdateEmergencyContactsRequest withPathParams(AddOrUpdateEmergencyContactsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Company Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public AddOrUpdateEmergencyContactsRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
@@ -18,16 +21,19 @@ public class AddOrUpdateEmergencyContactsRequest {
      * Emergency Contact Model
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EmergencyContact request;
-    public AddOrUpdateEmergencyContactsRequest withRequest(org.openapis.openapi.models.shared.EmergencyContact request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.EmergencyContact emergencyContact;
+    public AddOrUpdateEmergencyContactsRequest withEmergencyContact(org.openapis.openapi.models.shared.EmergencyContact emergencyContact) {
+        this.emergencyContact = emergencyContact;
         return this;
     }
     
-    
-    public AddOrUpdateEmergencyContactsSecurity security;
-    public AddOrUpdateEmergencyContactsRequest withSecurity(AddOrUpdateEmergencyContactsSecurity security) {
-        this.security = security;
+    /**
+     * Employee Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
+    public String employeeId;
+    public AddOrUpdateEmergencyContactsRequest withEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
         return this;
     }
     

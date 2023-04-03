@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListServiceInventoriesRequest {
+    /**
+     * Filter for querying collections.
+     */
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=filter")
+    public java.util.Map<String, Object> filter;
+    public ListServiceInventoriesRequest withFilter(java.util.Map<String, Object> filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public ListServiceInventoriesQueryParams queryParams;
-    public ListServiceInventoriesRequest withQueryParams(ListServiceInventoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The numbers of items to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListServiceInventoriesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The number of items to skip before starting to collect the result set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ListServiceInventoriesRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The list of attribute and order to sort the result set by.
+     */
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=sort_by")
+    public java.util.Map<String, Object> sortBy;
+    public ListServiceInventoriesRequest withSortBy(java.util.Map<String, Object> sortBy) {
+        this.sortBy = sortBy;
         return this;
     }
     

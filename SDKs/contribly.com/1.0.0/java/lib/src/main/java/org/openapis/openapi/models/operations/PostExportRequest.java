@@ -4,13 +4,187 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostExportRequest {
+    /**
+     * Restrict results to contributions submitted to this assignment.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignment")
+    public String assignment;
+    public PostExportRequest withAssignment(String assignment) {
+        this.assignment = assignment;
+        return this;
+    }
     
-    public PostExportQueryParams queryParams;
-    public PostExportRequest withQueryParams(PostExportQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Included a combined file with all contribution text.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=combined")
+    public Boolean combined;
+    public PostExportRequest withCombined(Boolean combined) {
+        this.combined = combined;
+        return this;
+    }
+    
+    /**
+     * Limit results to contributions which have a publicly visible location within the given country (specified by two letter country code).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public PostExportRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    
+    /**
+     * Limit results to contributions created after this date time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
+    public OffsetDateTime createdAfter;
+    public PostExportRequest withCreatedAfter(OffsetDateTime createdAfter) {
+        this.createdAfter = createdAfter;
+        return this;
+    }
+    
+    /**
+     * Limit results to contributions created before this date time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
+    public OffsetDateTime createdBefore;
+    public PostExportRequest withCreatedBefore(OffsetDateTime createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
+    
+    /**
+     * Media format to export; none, fullsize, tagged or original.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public String format;
+    public PostExportRequest withFormat(String format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * Restrict results to contributions which have specified a location which falls within this geohash (or comma seperated list of multiple geohashes)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geohash")
+    public String geohash;
+    public PostExportRequest withGeohash(String geohash) {
+        this.geohash = geohash;
+        return this;
+    }
+    
+    /**
+     * Restrict results to contributions which have a publicly visible location.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hasLocation")
+    public Boolean hasLocation;
+    public PostExportRequest withHasLocation(Boolean hasLocation) {
+        this.hasLocation = hasLocation;
+        return this;
+    }
+    
+    /**
+     * Include individual text files for each contribution.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=individual")
+    public Boolean individual;
+    public PostExportRequest withIndividual(Boolean individual) {
+        this.individual = individual;
+        return this;
+    }
+    
+    /**
+     * Include raw JSON for each contribution.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=json")
+    public Boolean json;
+    public PostExportRequest withJson(Boolean json) {
+        this.json = json;
+        return this;
+    }
+    
+    /**
+     * Limit results to contributions with location near this latitude and longitude (comma seperated lat/long pair). Also see radius
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latLong")
+    public String latLong;
+    public PostExportRequest withLatLong(String latLong) {
+        this.latLong = latLong;
+        return this;
+    }
+    
+    /**
+     * Restrict results to contributions which include a media file of the given type (ie. image / video)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mediaType")
+    public String mediaType;
+    public PostExportRequest withMediaType(String mediaType) {
+        this.mediaType = mediaType;
+        return this;
+    }
+    
+    /**
+     * Restrict results to contributions which are fall under the jurisdiction by this user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ownedBy")
+    public String ownedBy;
+    public PostExportRequest withOwnedBy(String ownedBy) {
+        this.ownedBy = ownedBy;
+        return this;
+    }
+    
+    /**
+     * Restrict results to contributions whose headline text matches this keyword.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public PostExportRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * When limiting result by location with the latLong parameter, specify the radius in kilometers.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
+    public Double radius;
+    public PostExportRequest withRadius(Double radius) {
+        this.radius = radius;
+        return this;
+    }
+    
+    /**
+     * Should exported media files be tagged with metadata. Deprecated; use format instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagged")
+    public Boolean tagged;
+    public PostExportRequest withTagged(Boolean tagged) {
+        this.tagged = tagged;
+        return this;
+    }
+    
+    /**
+     * Locate a specific contribution by URL words
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=urlWords")
+    public String urlWords;
+    public PostExportRequest withUrlWords(String urlWords) {
+        this.urlWords = urlWords;
+        return this;
+    }
+    
+    /**
+     * Restrict results to contributions by this user identified by id.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
+    public String user;
+    public PostExportRequest withUser(String user) {
+        this.user = user;
         return this;
     }
     

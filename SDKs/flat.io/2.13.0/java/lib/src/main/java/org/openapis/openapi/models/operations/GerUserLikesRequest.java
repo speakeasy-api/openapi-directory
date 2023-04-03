@@ -4,27 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GerUserLikesRequest {
-    
-    public GerUserLikesPathParams pathParams;
-    public GerUserLikesRequest withPathParams(GerUserLikesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Return only the identifiers of the scores
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
+    public Boolean ids;
+    public GerUserLikesRequest withIds(Boolean ids) {
+        this.ids = ids;
         return this;
     }
     
-    
-    public GerUserLikesQueryParams queryParams;
-    public GerUserLikesRequest withQueryParams(GerUserLikesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GerUserLikesSecurity security;
-    public GerUserLikesRequest withSecurity(GerUserLikesSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of a Flat user. If you authenticated, you can use `me` to refer to the current user.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user")
+    public String user;
+    public GerUserLikesRequest withUser(String user) {
+        this.user = user;
         return this;
     }
     

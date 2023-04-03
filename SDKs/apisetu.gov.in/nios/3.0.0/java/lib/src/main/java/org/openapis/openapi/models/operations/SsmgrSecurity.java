@@ -7,16 +7,16 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SsmgrSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAPIKey apiKey;
-    public SsmgrSecurity withApiKey(org.openapis.openapi.models.shared.SchemeAPIKey apiKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-APISETU-APIKEY")
+    public String apiKey;
+    public SsmgrSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeClientID clientId;
-    public SsmgrSecurity withClientId(org.openapis.openapi.models.shared.SchemeClientID clientId) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-APISETU-CLIENTID")
+    public String clientId;
+    public SsmgrSecurity withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }

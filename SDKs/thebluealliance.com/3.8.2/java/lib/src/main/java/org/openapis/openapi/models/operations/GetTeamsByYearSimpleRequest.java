@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamsByYearSimpleRequest {
-    
-    public GetTeamsByYearSimplePathParams pathParams;
-    public GetTeamsByYearSimpleRequest withPathParams(GetTeamsByYearSimplePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Value of the `ETag` header in the most recently cached response by the client.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetTeamsByYearSimpleRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
-    
-    public GetTeamsByYearSimpleHeaders headers;
-    public GetTeamsByYearSimpleRequest withHeaders(GetTeamsByYearSimpleHeaders headers) {
-        this.headers = headers;
+    /**
+     * Page number of results to return, zero-indexed
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page_num")
+    public Long pageNum;
+    public GetTeamsByYearSimpleRequest withPageNum(Long pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
     
-    
-    public GetTeamsByYearSimpleSecurity security;
-    public GetTeamsByYearSimpleRequest withSecurity(GetTeamsByYearSimpleSecurity security) {
-        this.security = security;
+    /**
+     * Competition Year (or Season). Must be 4 digits.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=year")
+    public Long year;
+    public GetTeamsByYearSimpleRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

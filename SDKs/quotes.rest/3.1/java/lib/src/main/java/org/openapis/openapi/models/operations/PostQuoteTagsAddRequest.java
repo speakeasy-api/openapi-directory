@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostQuoteTagsAddRequest {
-    
-    public PostQuoteTagsAddQueryParams queryParams;
-    public PostQuoteTagsAddRequest withQueryParams(PostQuoteTagsAddQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Quote ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public PostQuoteTagsAddRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public PostQuoteTagsAddSecurity security;
-    public PostQuoteTagsAddRequest withSecurity(PostQuoteTagsAddSecurity security) {
-        this.security = security;
+    /**
+     * Comma Separated tags
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public PostQuoteTagsAddRequest withTags(String tags) {
+        this.tags = tags;
         return this;
     }
     

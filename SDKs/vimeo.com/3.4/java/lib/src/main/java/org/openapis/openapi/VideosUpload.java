@@ -34,25 +34,26 @@ public class VideosUpload {
     /**
      * Complete a user's streaming upload
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompleteStreamingUploadResponse completeStreamingUpload(org.openapis.openapi.models.operations.CompleteStreamingUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompleteStreamingUploadResponse completeStreamingUpload(org.openapis.openapi.models.operations.CompleteStreamingUploadRequest request, org.openapis.openapi.models.operations.CompleteStreamingUploadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompleteStreamingUploadPathParams.class, baseUrl, "/users/{user_id}/uploads/{upload}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompleteStreamingUploadRequest.class, baseUrl, "/users/{user_id}/uploads/{upload}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CompleteStreamingUploadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CompleteStreamingUploadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,19 +82,20 @@ public class VideosUpload {
     /**
      * Get a user's upload attempt
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUploadAttemptResponse getUploadAttempt(org.openapis.openapi.models.operations.GetUploadAttemptRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUploadAttemptResponse getUploadAttempt(org.openapis.openapi.models.operations.GetUploadAttemptRequest request, org.openapis.openapi.models.operations.GetUploadAttemptSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUploadAttemptPathParams.class, baseUrl, "/users/{user_id}/uploads/{upload}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUploadAttemptRequest.class, baseUrl, "/users/{user_id}/uploads/{upload}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,12 +128,12 @@ public class VideosUpload {
      */
     public org.openapis.openapi.models.operations.UploadVideoResponse uploadVideo(org.openapis.openapi.models.operations.UploadVideoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadVideoPathParams.class, baseUrl, "/users/{user_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadVideoRequest.class, baseUrl, "/users/{user_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -177,7 +179,7 @@ public class VideosUpload {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UploadVideoAlt1Response uploadVideoAlt1(org.openapis.openapi.models.operations.UploadVideoAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.UploadVideoAlt1Response uploadVideoAlt1(org.openapis.openapi.models.operations.UploadVideoAlt1RequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/videos");
         

@@ -7,27 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateProjectJsonRequest {
-    
-    public UpdateProjectJsonPathParams pathParams;
-    public UpdateProjectJsonRequest withPathParams(UpdateProjectJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateProjectJsonHeaders headers;
-    public UpdateProjectJsonRequest withHeaders(UpdateProjectJsonHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The updated project model
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProjectInput request;
-    public UpdateProjectJsonRequest withRequest(org.openapis.openapi.models.shared.ProjectInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ProjectInput projectInput;
+    public UpdateProjectJsonRequest withProjectInput(org.openapis.openapi.models.shared.ProjectInput projectInput) {
+        this.projectInput = projectInput;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public UpdateProjectJsonRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
+        return this;
+    }
+    
+    /**
+     * The id of the project to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public UpdateProjectJsonRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

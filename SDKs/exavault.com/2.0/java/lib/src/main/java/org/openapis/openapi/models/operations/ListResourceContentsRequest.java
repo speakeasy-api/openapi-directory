@@ -4,27 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListResourceContentsRequest {
-    
-    public ListResourceContentsPathParams pathParams;
-    public ListResourceContentsRequest withPathParams(ListResourceContentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public ListResourceContentsRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
         return this;
     }
     
-    
-    public ListResourceContentsQueryParams queryParams;
-    public ListResourceContentsRequest withQueryParams(ListResourceContentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API Key required to make the API call. 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public ListResourceContentsRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
         return this;
     }
     
+    /**
+     * ID of the parent resource to get a list of resources for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ListResourceContentsRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public ListResourceContentsHeaders headers;
-    public ListResourceContentsRequest withHeaders(ListResourceContentsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Comma separated list of relationships to include in response. Possible values are **share**, **notifications**, **directFile**, **parentResource**, **ownerUser**, **ownerUser**.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public String include;
+    public ListResourceContentsRequest withInclude(String include) {
+        this.include = include;
+        return this;
+    }
+    
+    /**
+     * The number of files to limit the result. Cannot be set higher than 100. If you have more than one hundred files in your directory, make multiple calls, incrementing the `offset parameter, above.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public ListResourceContentsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Determines which item to start on for pagination. Use zero (0) to start at the beginning of the list.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public ListResourceContentsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Endpoint support multiple sort fields by allowing array of sort params. Sort fields should be applied in the order specified. The sort order for each sort field is ascending unless it is prefixed with a minus (\u201c-\u201c), in which case it will be descending.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public ListResourceContentsRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Limit types of resources returned to "file" or "dir" only.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public ListResourceContentsRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

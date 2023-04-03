@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposCompareCommitsRequest {
+    /**
+     * The base branch and head branch to compare. This parameter expects the format `{base}...{head}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=basehead")
+    public String basehead;
+    public ReposCompareCommitsRequest withBasehead(String basehead) {
+        this.basehead = basehead;
+        return this;
+    }
     
-    public ReposCompareCommitsPathParams pathParams;
-    public ReposCompareCommitsRequest withPathParams(ReposCompareCommitsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposCompareCommitsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposCompareCommitsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

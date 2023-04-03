@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCertificatePdfSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeCertAuth certAuth;
-    public GetCertificatePdfSecurity withCertAuth(org.openapis.openapi.models.shared.SchemeCertAuth certAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String certAuth;
+    public GetCertificatePdfSecurity withCertAuth(String certAuth) {
         this.certAuth = certAuth;
         return this;
     }

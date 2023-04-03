@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSpacesSpaceIdFoldersIdProviderRequest {
-    
-    public PatchSpacesSpaceIdFoldersIdProviderPathParams pathParams;
-    public PatchSpacesSpaceIdFoldersIdProviderRequest withPathParams(PatchSpacesSpaceIdFoldersIdProviderPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Provider to modify (except name, class and archivaldate)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchSpacesSpaceIdFoldersIdProviderRequestBody request;
-    public PatchSpacesSpaceIdFoldersIdProviderRequest withRequest(PatchSpacesSpaceIdFoldersIdProviderRequestBody request) {
-        this.request = request;
+    public PatchSpacesSpaceIdFoldersIdProviderRequestBody requestBody;
+    public PatchSpacesSpaceIdFoldersIdProviderRequest withRequestBody(PatchSpacesSpaceIdFoldersIdProviderRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchSpacesSpaceIdFoldersIdProviderRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PatchSpacesSpaceIdFoldersIdProviderRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLoadBalancerTypesRequest {
-    
-    public GetLoadBalancerTypesQueryParams queryParams;
-    public GetLoadBalancerTypesRequest withQueryParams(GetLoadBalancerTypesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used to filter Load Balancer types by their name. The response will only contain the Load Balancer type matching the specified name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetLoadBalancerTypesRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

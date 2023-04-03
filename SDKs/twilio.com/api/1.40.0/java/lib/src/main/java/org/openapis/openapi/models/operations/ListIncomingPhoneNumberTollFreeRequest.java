@@ -4,34 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListIncomingPhoneNumberTollFreeRequest {
-    
-    public ListIncomingPhoneNumberTollFreePathParams pathParams;
-    public ListIncomingPhoneNumberTollFreeRequest withPathParams(ListIncomingPhoneNumberTollFreePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListIncomingPhoneNumberTollFreeRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListIncomingPhoneNumberTollFreeQueryParams queryParams;
-    public ListIncomingPhoneNumberTollFreeRequest withQueryParams(ListIncomingPhoneNumberTollFreeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Whether to include phone numbers new to the Twilio platform. Can be: `true` or `false` and the default is `true`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Beta")
+    public Boolean beta;
+    public ListIncomingPhoneNumberTollFreeRequest withBeta(Boolean beta) {
+        this.beta = beta;
         return this;
     }
     
-    
-    public ListIncomingPhoneNumberTollFreeSecurity security;
-    public ListIncomingPhoneNumberTollFreeRequest withSecurity(ListIncomingPhoneNumberTollFreeSecurity security) {
-        this.security = security;
+    /**
+     * A string that identifies the resources to read.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FriendlyName")
+    public String friendlyName;
+    public ListIncomingPhoneNumberTollFreeRequest withFriendlyName(String friendlyName) {
+        this.friendlyName = friendlyName;
         return this;
     }
     
+    /**
+     * Whether to include phone numbers based on their origin. Can be: `twilio` or `hosted`. By default, phone numbers of all origin are included.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Origin")
+    public String origin;
+    public ListIncomingPhoneNumberTollFreeRequest withOrigin(String origin) {
+        this.origin = origin;
+        return this;
+    }
     
-    public String serverURL;
-    public ListIncomingPhoneNumberTollFreeRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListIncomingPhoneNumberTollFreeRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListIncomingPhoneNumberTollFreeRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListIncomingPhoneNumberTollFreeRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The phone numbers of the IncomingPhoneNumber resources to read. You can specify partial numbers and use '*' as a wildcard for any digit.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PhoneNumber")
+    public String phoneNumber;
+    public ListIncomingPhoneNumberTollFreeRequest withPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
         return this;
     }
     

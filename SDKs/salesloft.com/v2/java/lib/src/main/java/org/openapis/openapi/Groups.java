@@ -47,7 +47,7 @@ public class Groups {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2GroupsJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2GroupsJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -86,7 +86,7 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GetV2GroupsIdJsonResponse getV2GroupsIdJson(org.openapis.openapi.models.operations.GetV2GroupsIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2GroupsIdJsonPathParams.class, baseUrl, "/v2/groups/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2GroupsIdJsonRequest.class, baseUrl, "/v2/groups/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

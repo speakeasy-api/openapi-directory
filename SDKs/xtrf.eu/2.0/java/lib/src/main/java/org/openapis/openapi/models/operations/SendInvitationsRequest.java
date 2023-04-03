@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendInvitationsRequest {
-    
-    public SendInvitationsPathParams pathParams;
-    public SendInvitationsRequest withPathParams(SendInvitationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * person's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=personId")
+    public Long personId;
+    public SendInvitationsRequest withPersonId(Long personId) {
+        this.personId = personId;
         return this;
     }
     

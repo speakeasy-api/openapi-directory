@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppkeyPatchRequest {
+    /**
+     * compromised app key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_key")
+    public String appKey;
+    public AppkeyPatchRequest withAppKey(String appKey) {
+        this.appKey = appKey;
+        return this;
+    }
     
-    public AppkeyPatchQueryParams queryParams;
-    public AppkeyPatchRequest withQueryParams(AppkeyPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Comments (like how was this compromised)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=comments")
+    public String comments;
+    public AppkeyPatchRequest withComments(String comments) {
+        this.comments = comments;
         return this;
     }
     

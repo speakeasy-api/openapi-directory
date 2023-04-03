@@ -5,19 +5,15 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectionsCreateSecurity;
-import org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectionsCreatePathParams;
-import org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectionsCreateQueryParams;
 import org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectionsCreateRequest;
 import org.openapis.openapi.models.operations.BeyondcorpProjectsLocationsAppConnectionsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleCloudBeyondcorpAppconnectionsV1AppConnectionTypeEnum;
 import org.openapis.openapi.models.shared.GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput;
 import org.openapis.openapi.models.shared.GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayTypeEnum;
 import org.openapis.openapi.models.shared.GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayInput;
 import org.openapis.openapi.models.shared.GoogleCloudBeyondcorpAppconnectionsV1AppConnectionApplicationEndpoint;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -26,58 +22,50 @@ public class Application {
                 .build();
 
             BeyondcorpProjectsLocationsAppConnectionsCreateRequest req = new BeyondcorpProjectsLocationsAppConnectionsCreateRequest() {{
-                security = new BeyondcorpProjectsLocationsAppConnectionsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new BeyondcorpProjectsLocationsAppConnectionsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new BeyondcorpProjectsLocationsAppConnectionsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    appConnectionId = "unde";
-                    callback = "nulla";
-                    fields = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    requestId = "deserunt";
-                    uploadType = "suscipit";
-                    uploadProtocol = "iure";
-                    validateOnly = false;
-                }};
-                request = new GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput() {{
+                dollarXgafv = "2";
+                googleCloudBeyondcorpAppconnectionsV1AppConnectionInput = new GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput() {{
                     applicationEndpoint = new GoogleCloudBeyondcorpAppconnectionsV1AppConnectionApplicationEndpoint() {{
-                        host = "magnam";
-                        port = 891773;
+                        host = "provident";
+                        port = 715190;
                     }};
                     connectors = new String[]{{
-                        add("delectus"),
+                        add("unde"),
+                        add("nulla"),
+                        add("corrupti"),
+                        add("illum"),
                     }};
-                    displayName = "tempora";
+                    displayName = "vel";
                     gateway = new GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayInput() {{
-                        appGateway = "suscipit";
-                        type = "TYPE_UNSPECIFIED";
+                        appGateway = "error";
+                        type = "GCP_REGIONAL_MIG";
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("placeat", "voluptatum");
-                        put("iusto", "excepturi");
-                        put("nisi", "recusandae");
-                        put("temporibus", "ab");
+                        put("iure", "magnam");
+                        put("debitis", "ipsa");
                     }};
-                    name = "quis";
+                    name = "delectus";
                     type = "TYPE_UNSPECIFIED";
                 }};
-            }};            
+                accessToken = "suscipit";
+                alt = "media";
+                appConnectionId = "minus";
+                callback = "placeat";
+                fields = "voluptatum";
+                key = "iusto";
+                oauthToken = "excepturi";
+                parent = "nisi";
+                prettyPrint = false;
+                quotaUser = "recusandae";
+                requestId = "temporibus";
+                uploadType = "ab";
+                uploadProtocol = "quis";
+                validateOnly = false;
+            }}            
 
-            BeyondcorpProjectsLocationsAppConnectionsCreateResponse res = sdk.projects.beyondcorpProjectsLocationsAppConnectionsCreate(req);
+            BeyondcorpProjectsLocationsAppConnectionsCreateResponse res = sdk.projects.beyondcorpProjectsLocationsAppConnectionsCreate(req, new BeyondcorpProjectsLocationsAppConnectionsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.googleLongrunningOperation.isPresent()) {
                 // handle response

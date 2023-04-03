@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoresReadRequest {
-    
-    public StoresReadPathParams pathParams;
-    public StoresReadRequest withPathParams(StoresReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this Store.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public StoresReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

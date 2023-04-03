@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteInsightRulesRequest {
-    
-    public GETDeleteInsightRulesQueryParams queryParams;
-    public GETDeleteInsightRulesRequest withQueryParams(GETDeleteInsightRulesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteInsightRulesActionEnum action;
+    public GETDeleteInsightRulesRequest withAction(GETDeleteInsightRulesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * An array of the rule names to delete. If you need to find out the names of your rules, use &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_DescribeInsightRules.html"&gt;DescribeInsightRules&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleNames")
+    public String[] ruleNames;
+    public GETDeleteInsightRulesRequest withRuleNames(String[] ruleNames) {
+        this.ruleNames = ruleNames;
+        return this;
+    }
     
-    public GETDeleteInsightRulesHeaders headers;
-    public GETDeleteInsightRulesRequest withHeaders(GETDeleteInsightRulesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteInsightRulesVersionEnum version;
+    public GETDeleteInsightRulesRequest withVersion(GETDeleteInsightRulesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteInsightRulesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteInsightRulesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteInsightRulesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteInsightRulesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteInsightRulesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteInsightRulesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteInsightRulesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

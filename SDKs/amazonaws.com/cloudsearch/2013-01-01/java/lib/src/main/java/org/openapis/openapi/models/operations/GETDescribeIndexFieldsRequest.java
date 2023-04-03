@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeIndexFieldsRequest {
-    
-    public GETDescribeIndexFieldsQueryParams queryParams;
-    public GETDescribeIndexFieldsRequest withQueryParams(GETDescribeIndexFieldsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeIndexFieldsActionEnum action;
+    public GETDescribeIndexFieldsRequest withAction(GETDescribeIndexFieldsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Whether to display the deployed configuration (&lt;code&gt;true&lt;/code&gt;) or include any pending changes (&lt;code&gt;false&lt;/code&gt;). Defaults to &lt;code&gt;false&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Deployed")
+    public Boolean deployed;
+    public GETDescribeIndexFieldsRequest withDeployed(Boolean deployed) {
+        this.deployed = deployed;
+        return this;
+    }
     
-    public GETDescribeIndexFieldsHeaders headers;
-    public GETDescribeIndexFieldsRequest withHeaders(GETDescribeIndexFieldsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the domain you want to describe.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
+    public String domainName;
+    public GETDescribeIndexFieldsRequest withDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    
+    /**
+     * A list of the index fields you want to describe. If not specified, information is returned for all configured index fields.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FieldNames")
+    public String[] fieldNames;
+    public GETDescribeIndexFieldsRequest withFieldNames(String[] fieldNames) {
+        this.fieldNames = fieldNames;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeIndexFieldsVersionEnum version;
+    public GETDescribeIndexFieldsRequest withVersion(GETDescribeIndexFieldsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeIndexFieldsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeIndexFieldsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeIndexFieldsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeIndexFieldsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeIndexFieldsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeIndexFieldsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeIndexFieldsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

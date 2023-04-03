@@ -43,7 +43,7 @@ public class MovieCast {
      */
     public org.openapis.openapi.models.operations.MovieCastSearchReadResponse movieCastSearchRead(org.openapis.openapi.models.operations.MovieCastSearchReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MovieCastSearchReadPathParams.class, baseUrl, "/api/v1/movie-cast/search/{movie_title}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MovieCastSearchReadRequest.class, baseUrl, "/api/v1/movie-cast/search/{movie_title}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -87,7 +87,7 @@ public class MovieCast {
      */
     public org.openapis.openapi.models.operations.MovieCastSearchallReadResponse movieCastSearchallRead(org.openapis.openapi.models.operations.MovieCastSearchallReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MovieCastSearchallReadPathParams.class, baseUrl, "/api/v1/movie-cast/searchall/{param}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MovieCastSearchallReadRequest.class, baseUrl, "/api/v1/movie-cast/searchall/{param}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetErc20AddressRequest {
-    
-    public GetErc20AddressPathParams pathParams;
-    public GetErc20AddressRequest withPathParams(GetErc20AddressPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=address")
+    public String address;
+    public GetErc20AddressRequest withAddress(String address) {
+        this.address = address;
         return this;
     }
     

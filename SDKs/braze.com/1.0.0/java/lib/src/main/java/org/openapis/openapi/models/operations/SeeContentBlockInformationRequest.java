@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SeeContentBlockInformationRequest {
+    /**
+     * (Required) String
+     * 
+     * The Content Block ID. This can be found by either listing Content Block information or going to the Developer Console, then API Settings, then scrolling to the bottom and searching for your Content Block API Identifier.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content_block_id")
+    public String contentBlockId;
+    public SeeContentBlockInformationRequest withContentBlockId(String contentBlockId) {
+        this.contentBlockId = contentBlockId;
+        return this;
+    }
     
-    public SeeContentBlockInformationQueryParams queryParams;
-    public SeeContentBlockInformationRequest withQueryParams(SeeContentBlockInformationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Optional) Boolean
+     * 
+     * When set to \u2018true\u2019, the API returns back the Message Variation API ID of Campaigns and Canvases where this content block is included, to be used in subsequent calls. The results exclude archived or deleted Campaigns or Canvases.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_inclusion_data")
+    public String includeInclusionData;
+    public SeeContentBlockInformationRequest withIncludeInclusionData(String includeInclusionData) {
+        this.includeInclusionData = includeInclusionData;
         return this;
     }
     

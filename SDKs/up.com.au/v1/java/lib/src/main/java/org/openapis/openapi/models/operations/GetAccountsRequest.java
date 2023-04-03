@@ -4,13 +4,42 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountsRequest {
+    /**
+     * The type of account for which to return records. This
+     * can be used to filter Savers from spending accounts.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[accountType]")
+    public org.openapis.openapi.models.shared.AccountTypeEnumEnum filterAccountType;
+    public GetAccountsRequest withFilterAccountType(org.openapis.openapi.models.shared.AccountTypeEnumEnum filterAccountType) {
+        this.filterAccountType = filterAccountType;
+        return this;
+    }
     
-    public GetAccountsQueryParams queryParams;
-    public GetAccountsRequest withQueryParams(GetAccountsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The account ownership structure for which to return
+     * records. This can be used to filter 2Up accounts from Up
+     * accounts.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[ownershipType]")
+    public org.openapis.openapi.models.shared.OwnershipTypeEnumEnum filterOwnershipType;
+    public GetAccountsRequest withFilterOwnershipType(org.openapis.openapi.models.shared.OwnershipTypeEnumEnum filterOwnershipType) {
+        this.filterOwnershipType = filterOwnershipType;
+        return this;
+    }
+    
+    /**
+     * The number of records to return in each page.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
+    public Long pageSize;
+    public GetAccountsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

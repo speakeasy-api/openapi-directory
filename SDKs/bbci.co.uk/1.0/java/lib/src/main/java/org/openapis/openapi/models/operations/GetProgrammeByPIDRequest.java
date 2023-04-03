@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProgrammeByPIDRequest {
-    
-    public GetProgrammeByPIDPathParams pathParams;
-    public GetProgrammeByPIDRequest withPathParams(GetProgrammeByPIDPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Whether to return all, or available programmes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=availability")
+    public org.openapis.openapi.models.shared.AvailabilityEnum availability;
+    public GetProgrammeByPIDRequest withAvailability(org.openapis.openapi.models.shared.AvailabilityEnum availability) {
+        this.availability = availability;
         return this;
     }
     
+    /**
+     * Request additional data in the output
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mixin")
+    public org.openapis.openapi.models.shared.MixinEnum mixin;
+    public GetProgrammeByPIDRequest withMixin(org.openapis.openapi.models.shared.MixinEnum mixin) {
+        this.mixin = mixin;
+        return this;
+    }
     
-    public GetProgrammeByPIDQueryParams queryParams;
-    public GetProgrammeByPIDRequest withQueryParams(GetProgrammeByPIDQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The programme identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pid")
+    public String pid;
+    public GetProgrammeByPIDRequest withPid(String pid) {
+        this.pid = pid;
+        return this;
+    }
+    
+    /**
+     * The rights group to limit results to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rights")
+    public org.openapis.openapi.models.shared.RightsEnum rights;
+    public GetProgrammeByPIDRequest withRights(org.openapis.openapi.models.shared.RightsEnum rights) {
+        this.rights = rights;
         return this;
     }
     

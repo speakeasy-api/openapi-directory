@@ -4,34 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPotsRequest {
-    
-    public GetPotsPathParams pathParams;
-    public GetPotsRequest withPathParams(GetPotsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * multiple financial product ids as comma seperated string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=financial_product_id")
+    public String financialProductId;
+    public GetPotsRequest withFinancialProductId(String financialProductId) {
+        this.financialProductId = financialProductId;
         return this;
     }
     
-    
-    public GetPotsQueryParams queryParams;
-    public GetPotsRequest withQueryParams(GetPotsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Investor Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=investor_id")
+    public String investorId;
+    public GetPotsRequest withInvestorId(String investorId) {
+        this.investorId = investorId;
         return this;
     }
     
-    
-    public GetPotsHeaders headers;
-    public GetPotsRequest withHeaders(GetPotsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetPotsSecurity security;
-    public GetPotsRequest withSecurity(GetPotsSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetPotsRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

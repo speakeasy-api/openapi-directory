@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchMemberRequest {
-    
-    public FetchMemberPathParams pathParams;
-    public FetchMemberRequest withPathParams(FetchMemberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the Member resource to fetch belongs to. This value can be the Channel resource's `sid` or `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public FetchMemberRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
         return this;
     }
     
-    
-    public FetchMemberSecurity security;
-    public FetchMemberRequest withSecurity(FetchMemberSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to fetch the Member resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchMemberRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchMemberRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Member resource to fetch. This value can be either the Member's `sid` or its `identity` value.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchMemberRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

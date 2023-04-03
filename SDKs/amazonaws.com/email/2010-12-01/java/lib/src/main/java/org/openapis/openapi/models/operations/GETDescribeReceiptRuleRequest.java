@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeReceiptRuleRequest {
-    
-    public GETDescribeReceiptRuleQueryParams queryParams;
-    public GETDescribeReceiptRuleRequest withQueryParams(GETDescribeReceiptRuleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeReceiptRuleActionEnum action;
+    public GETDescribeReceiptRuleRequest withAction(GETDescribeReceiptRuleActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the receipt rule.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleName")
+    public String ruleName;
+    public GETDescribeReceiptRuleRequest withRuleName(String ruleName) {
+        this.ruleName = ruleName;
+        return this;
+    }
     
-    public GETDescribeReceiptRuleHeaders headers;
-    public GETDescribeReceiptRuleRequest withHeaders(GETDescribeReceiptRuleHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the receipt rule set that the receipt rule belongs to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleSetName")
+    public String ruleSetName;
+    public GETDescribeReceiptRuleRequest withRuleSetName(String ruleSetName) {
+        this.ruleSetName = ruleSetName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeReceiptRuleVersionEnum version;
+    public GETDescribeReceiptRuleRequest withVersion(GETDescribeReceiptRuleVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeReceiptRuleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeReceiptRuleRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeReceiptRuleRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeReceiptRuleRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeReceiptRuleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeReceiptRuleRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeReceiptRuleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

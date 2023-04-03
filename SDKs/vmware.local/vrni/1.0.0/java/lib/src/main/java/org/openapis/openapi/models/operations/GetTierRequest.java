@@ -4,27 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTierRequest {
-    
-    public GetTierPathParams pathParams;
-    public GetTierRequest withPathParams(GetTierPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authorization Header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetTierRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
-    
-    public GetTierHeaders headers;
-    public GetTierRequest withHeaders(GetTierHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetTierSecurity security;
-    public GetTierRequest withSecurity(GetTierSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tier-id")
+    public String tierId;
+    public GetTierRequest withTierId(String tierId) {
+        this.tierId = tierId;
         return this;
     }
     

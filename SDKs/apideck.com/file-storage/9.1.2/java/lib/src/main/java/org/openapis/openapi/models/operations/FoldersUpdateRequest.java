@@ -7,38 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FoldersUpdateRequest {
-    
-    public FoldersUpdatePathParams pathParams;
-    public FoldersUpdateRequest withPathParams(FoldersUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FoldersUpdateQueryParams queryParams;
-    public FoldersUpdateRequest withQueryParams(FoldersUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public FoldersUpdateHeaders headers;
-    public FoldersUpdateRequest withHeaders(FoldersUpdateHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateFolderRequestInput request;
-    public FoldersUpdateRequest withRequest(org.openapis.openapi.models.shared.UpdateFolderRequestInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateFolderRequestInput updateFolderRequestInput;
+    public FoldersUpdateRequest withUpdateFolderRequestInput(org.openapis.openapi.models.shared.UpdateFolderRequestInput updateFolderRequestInput) {
+        this.updateFolderRequestInput = updateFolderRequestInput;
         return this;
     }
     
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public FoldersUpdateRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public FoldersUpdateSecurity security;
-    public FoldersUpdateRequest withSecurity(FoldersUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public FoldersUpdateRequest withRaw(Boolean raw) {
+        this.raw = raw;
+        return this;
+    }
+    
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public FoldersUpdateRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public FoldersUpdateRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public FoldersUpdateRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

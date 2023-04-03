@@ -37,13 +37,13 @@ public class AppsFindAndModifyApps {
      */
     public org.openapis.openapi.models.operations.DeleteAppsAppIdResponse deleteAppsAppId(org.openapis.openapi.models.operations.DeleteAppsAppIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAppsAppIdPathParams.class, baseUrl, "/apps/{appId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAppsAppIdRequest.class, baseUrl, "/apps/{appId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteAppsAppIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteAppsAppIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -78,13 +78,13 @@ public class AppsFindAndModifyApps {
      */
     public org.openapis.openapi.models.operations.DeleteAppsAppIdVersionsVersionResponse deleteAppsAppIdVersionsVersion(org.openapis.openapi.models.operations.DeleteAppsAppIdVersionsVersionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAppsAppIdVersionsVersionPathParams.class, baseUrl, "/apps/{appId}/versions/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAppsAppIdVersionsVersionRequest.class, baseUrl, "/apps/{appId}/versions/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteAppsAppIdVersionsVersionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteAppsAppIdVersionsVersionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -126,7 +126,7 @@ public class AppsFindAndModifyApps {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAppsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAppsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -168,13 +168,13 @@ public class AppsFindAndModifyApps {
      */
     public org.openapis.openapi.models.operations.GetAppsBySafeNameSafeNameResponse getAppsBySafeNameSafeName(org.openapis.openapi.models.operations.GetAppsBySafeNameSafeNameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAppsBySafeNameSafeNamePathParams.class, baseUrl, "/apps/bySafeName/{safeName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAppsBySafeNameSafeNameRequest.class, baseUrl, "/apps/bySafeName/{safeName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAppsBySafeNameSafeNameQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAppsBySafeNameSafeNameRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -222,7 +222,7 @@ public class AppsFindAndModifyApps {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAppsTextSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAppsTextSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -272,7 +272,7 @@ public class AppsFindAndModifyApps {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAppsVersionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAppsVersionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -314,13 +314,13 @@ public class AppsFindAndModifyApps {
      */
     public org.openapis.openapi.models.operations.GetAppsAppIdResponse getAppsAppId(org.openapis.openapi.models.operations.GetAppsAppIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAppsAppIdPathParams.class, baseUrl, "/apps/{appId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAppsAppIdRequest.class, baseUrl, "/apps/{appId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAppsAppIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAppsAppIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -362,13 +362,13 @@ public class AppsFindAndModifyApps {
      */
     public org.openapis.openapi.models.operations.GetAppsAppIdVersionsVersionResponse getAppsAppIdVersionsVersion(org.openapis.openapi.models.operations.GetAppsAppIdVersionsVersionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAppsAppIdVersionsVersionPathParams.class, baseUrl, "/apps/{appId}/versions/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAppsAppIdVersionsVersionRequest.class, baseUrl, "/apps/{appId}/versions/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAppsAppIdVersionsVersionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAppsAppIdVersionsVersionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -413,13 +413,13 @@ public class AppsFindAndModifyApps {
      */
     public org.openapis.openapi.models.operations.PatchAppsAppIdVersionsVersionResponse patchAppsAppIdVersionsVersion(org.openapis.openapi.models.operations.PatchAppsAppIdVersionsVersionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchAppsAppIdVersionsVersionPathParams.class, baseUrl, "/apps/{appId}/versions/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchAppsAppIdVersionsVersionRequest.class, baseUrl, "/apps/{appId}/versions/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatchAppsAppIdVersionsVersionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatchAppsAppIdVersionsVersionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -469,7 +469,7 @@ public class AppsFindAndModifyApps {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostAppsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostAppsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -511,13 +511,13 @@ public class AppsFindAndModifyApps {
      */
     public org.openapis.openapi.models.operations.PostAppsAppIdLiveResponse postAppsAppIdLive(org.openapis.openapi.models.operations.PostAppsAppIdLiveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAppsAppIdLivePathParams.class, baseUrl, "/apps/{appId}/live", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAppsAppIdLiveRequest.class, baseUrl, "/apps/{appId}/live", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostAppsAppIdLiveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostAppsAppIdLiveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -553,13 +553,13 @@ public class AppsFindAndModifyApps {
      */
     public org.openapis.openapi.models.operations.PostAppsAppIdPublishResponse postAppsAppIdPublish(org.openapis.openapi.models.operations.PostAppsAppIdPublishRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAppsAppIdPublishPathParams.class, baseUrl, "/apps/{appId}/publish", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAppsAppIdPublishRequest.class, baseUrl, "/apps/{appId}/publish", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostAppsAppIdPublishQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostAppsAppIdPublishRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -597,13 +597,13 @@ public class AppsFindAndModifyApps {
      */
     public org.openapis.openapi.models.operations.PostAppsAppIdVersionsVersionResponse postAppsAppIdVersionsVersion(org.openapis.openapi.models.operations.PostAppsAppIdVersionsVersionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAppsAppIdVersionsVersionPathParams.class, baseUrl, "/apps/{appId}/versions/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAppsAppIdVersionsVersionRequest.class, baseUrl, "/apps/{appId}/versions/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostAppsAppIdVersionsVersionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostAppsAppIdVersionsVersionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -645,13 +645,13 @@ public class AppsFindAndModifyApps {
      */
     public org.openapis.openapi.models.operations.PostAppsAppIdVersionsVersionStatusResponse postAppsAppIdVersionsVersionStatus(org.openapis.openapi.models.operations.PostAppsAppIdVersionsVersionStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAppsAppIdVersionsVersionStatusPathParams.class, baseUrl, "/apps/{appId}/versions/{version}/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAppsAppIdVersionsVersionStatusRequest.class, baseUrl, "/apps/{appId}/versions/{version}/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostAppsAppIdVersionsVersionStatusQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostAppsAppIdVersionsVersionStatusRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

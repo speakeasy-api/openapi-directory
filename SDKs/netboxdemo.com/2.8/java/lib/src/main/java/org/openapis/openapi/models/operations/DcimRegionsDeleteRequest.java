@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimRegionsDeleteRequest {
-    
-    public DcimRegionsDeletePathParams pathParams;
-    public DcimRegionsDeleteRequest withPathParams(DcimRegionsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this region.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimRegionsDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

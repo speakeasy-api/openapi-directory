@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOrganizationPolicyObjectsGroupRequest {
-    
-    public CreateOrganizationPolicyObjectsGroupPathParams pathParams;
-    public CreateOrganizationPolicyObjectsGroupRequest withPathParams(CreateOrganizationPolicyObjectsGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateOrganizationPolicyObjectsGroupRequestBody requestBody;
+    public CreateOrganizationPolicyObjectsGroupRequest withRequestBody(CreateOrganizationPolicyObjectsGroupRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateOrganizationPolicyObjectsGroupRequestBody request;
-    public CreateOrganizationPolicyObjectsGroupRequest withRequest(CreateOrganizationPolicyObjectsGroupRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public CreateOrganizationPolicyObjectsGroupRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

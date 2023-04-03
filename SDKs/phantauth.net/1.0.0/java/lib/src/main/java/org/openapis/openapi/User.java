@@ -58,7 +58,7 @@ public class User {
      */
     public org.openapis.openapi.models.operations.GetUserUsernameResponse getUserUsername(org.openapis.openapi.models.operations.GetUserUsernameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserUsernamePathParams.class, baseUrl, "/user/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserUsernameRequest.class, baseUrl, "/user/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -100,13 +100,13 @@ public class User {
      */
     public org.openapis.openapi.models.operations.GetUserUsernameTokenKindResponse getUserUsernameTokenKind(org.openapis.openapi.models.operations.GetUserUsernameTokenKindRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserUsernameTokenKindPathParams.class, baseUrl, "/user/{username}/token/{kind}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserUsernameTokenKindRequest.class, baseUrl, "/user/{username}/token/{kind}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserUsernameTokenKindQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserUsernameTokenKindRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -141,7 +141,7 @@ public class User {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUserResponse postUser(org.openapis.openapi.models.operations.PostUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUserResponse postUser(org.openapis.openapi.models.operations.PostUserRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user");
         

@@ -40,7 +40,7 @@ public class PortForwardingRules {
      */
     public org.openapis.openapi.models.operations.GetDeviceCellularGatewayPortForwardingRulesResponse getDeviceCellularGatewayPortForwardingRules(org.openapis.openapi.models.operations.GetDeviceCellularGatewayPortForwardingRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCellularGatewayPortForwardingRulesPathParams.class, baseUrl, "/devices/{serial}/cellularGateway/portForwardingRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCellularGatewayPortForwardingRulesRequest.class, baseUrl, "/devices/{serial}/cellularGateway/portForwardingRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,7 +80,7 @@ public class PortForwardingRules {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceFirewallPortForwardingRulesResponse getNetworkApplianceFirewallPortForwardingRules(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallPortForwardingRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallPortForwardingRulesPathParams.class, baseUrl, "/networks/{networkId}/appliance/firewall/portForwardingRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallPortForwardingRulesRequest.class, baseUrl, "/networks/{networkId}/appliance/firewall/portForwardingRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,12 +120,12 @@ public class PortForwardingRules {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceCellularGatewayPortForwardingRulesResponse updateDeviceCellularGatewayPortForwardingRules(org.openapis.openapi.models.operations.UpdateDeviceCellularGatewayPortForwardingRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCellularGatewayPortForwardingRulesPathParams.class, baseUrl, "/devices/{serial}/cellularGateway/portForwardingRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCellularGatewayPortForwardingRulesRequest.class, baseUrl, "/devices/{serial}/cellularGateway/portForwardingRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -162,12 +162,12 @@ public class PortForwardingRules {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceFirewallPortForwardingRulesResponse updateNetworkApplianceFirewallPortForwardingRules(org.openapis.openapi.models.operations.UpdateNetworkApplianceFirewallPortForwardingRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceFirewallPortForwardingRulesPathParams.class, baseUrl, "/networks/{networkId}/appliance/firewall/portForwardingRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceFirewallPortForwardingRulesRequest.class, baseUrl, "/networks/{networkId}/appliance/firewall/portForwardingRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

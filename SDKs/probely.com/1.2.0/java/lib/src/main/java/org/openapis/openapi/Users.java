@@ -43,7 +43,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.DeleteUsersIdResponse deleteUsersId(org.openapis.openapi.models.operations.DeleteUsersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersIdPathParams.class, baseUrl, "/users/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersIdRequest.class, baseUrl, "/users/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -106,7 +106,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProfileQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProfileRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -151,7 +151,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -198,7 +198,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.GetUsersIdResponse getUsersId(org.openapis.openapi.models.operations.GetUsersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdPathParams.class, baseUrl, "/users/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdRequest.class, baseUrl, "/users/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -253,12 +253,12 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.PatchUsersIdResponse patchUsersId(org.openapis.openapi.models.operations.PatchUsersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchUsersIdPathParams.class, baseUrl, "/users/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchUsersIdRequest.class, baseUrl, "/users/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -330,7 +330,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostProfileChangePasswordResponse postProfileChangePassword(org.openapis.openapi.models.operations.PostProfileChangePasswordRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostProfileChangePasswordResponse postProfileChangePassword(org.openapis.openapi.models.operations.PostProfileChangePasswordRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/profile/change_password/");
         
@@ -390,7 +390,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUsersResponse postUsers(org.openapis.openapi.models.operations.PostUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUsersResponse postUsers(org.openapis.openapi.models.operations.PostUsersRequestBodyInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users/");
         
@@ -436,12 +436,12 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.PutUsersIdResponse putUsersId(org.openapis.openapi.models.operations.PutUsersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUsersIdPathParams.class, baseUrl, "/users/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUsersIdRequest.class, baseUrl, "/users/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

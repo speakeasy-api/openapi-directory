@@ -40,7 +40,7 @@ public class Netflow {
      */
     public org.openapis.openapi.models.operations.GetNetworkNetflowResponse getNetworkNetflow(org.openapis.openapi.models.operations.GetNetworkNetflowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkNetflowPathParams.class, baseUrl, "/networks/{networkId}/netflow", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkNetflowRequest.class, baseUrl, "/networks/{networkId}/netflow", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class Netflow {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkNetflowResponse updateNetworkNetflow(org.openapis.openapi.models.operations.UpdateNetworkNetflowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkNetflowPathParams.class, baseUrl, "/networks/{networkId}/netflow", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkNetflowRequest.class, baseUrl, "/networks/{networkId}/netflow", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

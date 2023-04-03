@@ -7,24 +7,93 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTDescribeByoipCidrsRequest {
-    
-    public POSTDescribeByoipCidrsQueryParams queryParams;
-    public POSTDescribeByoipCidrsRequest withQueryParams(POSTDescribeByoipCidrsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public POSTDescribeByoipCidrsActionEnum action;
+    public POSTDescribeByoipCidrsRequest withAction(POSTDescribeByoipCidrsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public String maxResults;
+    public POSTDescribeByoipCidrsRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
     
-    public POSTDescribeByoipCidrsHeaders headers;
-    public POSTDescribeByoipCidrsRequest withHeaders(POSTDescribeByoipCidrsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public POSTDescribeByoipCidrsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public POSTDescribeByoipCidrsRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public POSTDescribeByoipCidrsRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public POSTDescribeByoipCidrsVersionEnum version;
+    public POSTDescribeByoipCidrsRequest withVersion(POSTDescribeByoipCidrsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public POSTDescribeByoipCidrsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public POSTDescribeByoipCidrsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public POSTDescribeByoipCidrsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public POSTDescribeByoipCidrsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public POSTDescribeByoipCidrsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public POSTDescribeByoipCidrsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public POSTDescribeByoipCidrsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

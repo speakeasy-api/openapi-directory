@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EmailValidationRequest {
+    /**
+     * (Required) USER_EMAIL_HERE
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=USER_EMAIL_HERE")
+    public String userEmailHere;
+    public EmailValidationRequest withUserEmailHere(String userEmailHere) {
+        this.userEmailHere = userEmailHere;
+        return this;
+    }
     
-    public EmailValidationPathParams pathParams;
-    public EmailValidationRequest withPathParams(EmailValidationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * (Required) YOUR_API_KEY_HERE
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=YOUR_API_KEY_HERE")
+    public String yourApiKeyHere;
+    public EmailValidationRequest withYourApiKeyHere(String yourApiKeyHere) {
+        this.yourApiKeyHere = yourApiKeyHere;
         return this;
     }
     

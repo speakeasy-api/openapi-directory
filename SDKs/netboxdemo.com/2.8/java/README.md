@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CircuitsCircuitTerminationsCreateRequest;
 import org.openapis.openapi.models.operations.CircuitsCircuitTerminationsCreateResponse;
 import org.openapis.openapi.models.shared.WritableCircuitTerminationConnectionStatusEnum;
 import org.openapis.openapi.models.shared.WritableCircuitTerminationTerminationEnum;
@@ -29,28 +28,24 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    bearer = new SchemeBearer() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    bearer = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CircuitsCircuitTerminationsCreateRequest req = new CircuitsCircuitTerminationsCreateRequest() {{
-                request = new WritableCircuitTerminationInput() {{
-                    cable = new NestedCableInput() {{
-                        label = "corrupti";
-                    }};
-                    circuit = 592845;
-                    connectionStatus = "true";
-                    description = "quibusdam";
-                    portSpeed = 602763;
-                    ppInfo = "nulla";
-                    site = 544883;
-                    termSide = "Z";
-                    upstreamSpeed = 423655;
-                    xconnectId = "error";
+            org.openapis.openapi.models.shared.WritableCircuitTerminationInput req = new WritableCircuitTerminationInput() {{
+                cable = new NestedCableInput() {{
+                    label = "corrupti";
                 }};
-            }};            
+                circuit = 592845;
+                connectionStatus = "true";
+                description = "quibusdam";
+                portSpeed = 602763;
+                ppInfo = "nulla";
+                site = 544883;
+                termSide = "Z";
+                upstreamSpeed = 423655;
+                xconnectId = "error";
+            }}            
 
             CircuitsCircuitTerminationsCreateResponse res = sdk.circuits.circuitsCircuitTerminationsCreate(req);
 
@@ -64,7 +59,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### circuits

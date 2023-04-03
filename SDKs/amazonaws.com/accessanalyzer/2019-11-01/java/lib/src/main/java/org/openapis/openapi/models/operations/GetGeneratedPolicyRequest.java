@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGeneratedPolicyRequest {
-    
-    public GetGeneratedPolicyPathParams pathParams;
-    public GetGeneratedPolicyRequest withPathParams(GetGeneratedPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetGeneratedPolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public GetGeneratedPolicyQueryParams queryParams;
-    public GetGeneratedPolicyRequest withQueryParams(GetGeneratedPolicyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetGeneratedPolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetGeneratedPolicyRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public GetGeneratedPolicyHeaders headers;
-    public GetGeneratedPolicyRequest withHeaders(GetGeneratedPolicyHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetGeneratedPolicyRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetGeneratedPolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetGeneratedPolicyRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetGeneratedPolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The level of detail that you want to generate. You can specify whether to generate policies with placeholders for resource ARNs for actions that support resource level granularity in policies.&lt;/p&gt; &lt;p&gt;For example, in the resource section of a policy, you can receive a placeholder such as &lt;code&gt;"Resource":"arn:aws:s3:::${BucketName}"&lt;/code&gt; instead of &lt;code&gt;"*"&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeResourcePlaceholders")
+    public Boolean includeResourcePlaceholders;
+    public GetGeneratedPolicyRequest withIncludeResourcePlaceholders(Boolean includeResourcePlaceholders) {
+        this.includeResourcePlaceholders = includeResourcePlaceholders;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The level of detail that you want to generate. You can specify whether to generate service-level policies. &lt;/p&gt; &lt;p&gt;IAM Access Analyzer uses &lt;code&gt;iam:servicelastaccessed&lt;/code&gt; to identify services that have been used recently to create this service-level template.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeServiceLevelTemplate")
+    public Boolean includeServiceLevelTemplate;
+    public GetGeneratedPolicyRequest withIncludeServiceLevelTemplate(Boolean includeServiceLevelTemplate) {
+        this.includeServiceLevelTemplate = includeServiceLevelTemplate;
+        return this;
+    }
+    
+    /**
+     * The &lt;code&gt;JobId&lt;/code&gt; that is returned by the &lt;code&gt;StartPolicyGeneration&lt;/code&gt; operation. The &lt;code&gt;JobId&lt;/code&gt; can be used with &lt;code&gt;GetGeneratedPolicy&lt;/code&gt; to retrieve the generated policies or used with &lt;code&gt;CancelPolicyGeneration&lt;/code&gt; to cancel the policy generation request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public GetGeneratedPolicyRequest withJobId(String jobId) {
+        this.jobId = jobId;
         return this;
     }
     

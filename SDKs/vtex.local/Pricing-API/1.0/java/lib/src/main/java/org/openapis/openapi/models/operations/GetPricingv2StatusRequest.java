@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPricingv2StatusRequest {
-    
-    public GetPricingv2StatusHeaders headers;
-    public GetPricingv2StatusRequest withHeaders(GetPricingv2StatusHeaders headers) {
-        this.headers = headers;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetPricingv2StatusRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public String serverURL;
-    public GetPricingv2StatusRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetPricingv2StatusRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     

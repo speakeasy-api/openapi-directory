@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProfileRequest {
-    
-    public GetProfileQueryParams queryParams;
-    public GetProfileRequest withQueryParams(GetProfileQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetProfileSecurity security;
-    public GetProfileRequest withSecurity(GetProfileSecurity security) {
-        this.security = security;
+    /**
+     * to get a contract (if not signed error 404 + html contract)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Contract")
+    public String contract;
+    public GetProfileRequest withContract(String contract) {
+        this.contract = contract;
         return this;
     }
     

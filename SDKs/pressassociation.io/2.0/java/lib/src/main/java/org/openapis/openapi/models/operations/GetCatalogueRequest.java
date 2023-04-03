@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCatalogueRequest {
-    
-    public GetCataloguePathParams pathParams;
-    public GetCatalogueRequest withPathParams(GetCataloguePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetCatalogueSecurity security;
-    public GetCatalogueRequest withSecurity(GetCatalogueSecurity security) {
-        this.security = security;
+    /**
+     * The identifier for the selected catalogue.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=catalogueId")
+    public String catalogueId;
+    public GetCatalogueRequest withCatalogueId(String catalogueId) {
+        this.catalogueId = catalogueId;
         return this;
     }
     

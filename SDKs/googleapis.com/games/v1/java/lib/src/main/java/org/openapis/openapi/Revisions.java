@@ -33,10 +33,11 @@ public class Revisions {
     /**
      * Checks whether the games client is out of date.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesRevisionsCheckResponse gamesRevisionsCheck(org.openapis.openapi.models.operations.GamesRevisionsCheckRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesRevisionsCheckResponse gamesRevisionsCheck(org.openapis.openapi.models.operations.GamesRevisionsCheckRequest request, org.openapis.openapi.models.operations.GamesRevisionsCheckSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/games/v1/revisions/check");
         
@@ -44,14 +45,14 @@ public class Revisions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesRevisionsCheckQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesRevisionsCheckRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

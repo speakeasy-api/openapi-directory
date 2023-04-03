@@ -37,7 +37,7 @@ public class Sessions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreatenewsessionResponse createnewsession(org.openapis.openapi.models.operations.CreatenewsessionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreatenewsessionResponse createnewsession(org.openapis.openapi.models.shared.CreatenewsessionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sessions");
         
@@ -79,7 +79,7 @@ public class Sessions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EditsessionResponse editsession(org.openapis.openapi.models.operations.EditsessionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EditsessionResponse editsession(org.openapis.openapi.models.shared.EditsessionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sessions");
         
@@ -129,7 +129,7 @@ public class Sessions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSessionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSessionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

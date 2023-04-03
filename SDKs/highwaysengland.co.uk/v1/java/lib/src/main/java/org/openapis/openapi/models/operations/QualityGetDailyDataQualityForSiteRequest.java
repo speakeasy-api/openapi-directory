@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QualityGetDailyDataQualityForSiteRequest {
-    
-    public QualityGetDailyDataQualityForSitePathParams pathParams;
-    public QualityGetDailyDataQualityForSiteRequest withPathParams(QualityGetDailyDataQualityForSitePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The end date of the report in the format ddmmyyyy (i.e 31012016)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public String endDate;
+    public QualityGetDailyDataQualityForSiteRequest withEndDate(String endDate) {
+        this.endDate = endDate;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=siteId")
+    public String siteId;
+    public QualityGetDailyDataQualityForSiteRequest withSiteId(String siteId) {
+        this.siteId = siteId;
+        return this;
+    }
     
-    public QualityGetDailyDataQualityForSiteQueryParams queryParams;
-    public QualityGetDailyDataQualityForSiteRequest withQueryParams(QualityGetDailyDataQualityForSiteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The start date of the report in the format ddmmyyyy (i.e 31012016)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public String startDate;
+    public QualityGetDailyDataQualityForSiteRequest withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public QualityGetDailyDataQualityForSiteRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

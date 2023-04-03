@@ -7,38 +7,41 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateMessageRequest {
-    
-    public UpdateMessagePathParams pathParams;
-    public UpdateMessageRequest withPathParams(UpdateMessagePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateMessageHeaders headers;
-    public UpdateMessageRequest withHeaders(UpdateMessageHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public UpdateMessageRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateMessageUpdateMessageRequest request;
-    public UpdateMessageRequest withRequest(UpdateMessageUpdateMessageRequest request) {
-        this.request = request;
+    public UpdateMessageUpdateMessageRequest requestBody;
+    public UpdateMessageRequest withRequestBody(UpdateMessageUpdateMessageRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateMessageSecurity security;
-    public UpdateMessageRequest withSecurity(UpdateMessageSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateMessageRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateMessageRequest withSid(String sid) {
+        this.sid = sid;
+        return this;
+    }
     
-    public String serverURL;
-    public UpdateMessageRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.MessageEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public UpdateMessageRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.MessageEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

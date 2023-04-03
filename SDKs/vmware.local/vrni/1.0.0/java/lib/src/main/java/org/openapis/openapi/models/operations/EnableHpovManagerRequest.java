@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnableHpovManagerRequest {
-    
-    public EnableHpovManagerPathParams pathParams;
-    public EnableHpovManagerRequest withPathParams(EnableHpovManagerPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public EnableHpovManagerSecurity security;
-    public EnableHpovManagerRequest withSecurity(EnableHpovManagerSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public EnableHpovManagerRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

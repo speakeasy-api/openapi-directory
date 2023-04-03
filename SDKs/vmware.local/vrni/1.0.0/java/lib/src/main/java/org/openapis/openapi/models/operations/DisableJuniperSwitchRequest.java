@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisableJuniperSwitchRequest {
-    
-    public DisableJuniperSwitchPathParams pathParams;
-    public DisableJuniperSwitchRequest withPathParams(DisableJuniperSwitchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DisableJuniperSwitchSecurity security;
-    public DisableJuniperSwitchRequest withSecurity(DisableJuniperSwitchSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DisableJuniperSwitchRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

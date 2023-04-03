@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminGetGlobalWebhookRequest {
-    
-    public EnterpriseAdminGetGlobalWebhookPathParams pathParams;
-    public EnterpriseAdminGetGlobalWebhookRequest withPathParams(EnterpriseAdminGetGlobalWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the hook.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
+    public Long hookId;
+    public EnterpriseAdminGetGlobalWebhookRequest withHookId(Long hookId) {
+        this.hookId = hookId;
         return this;
     }
     

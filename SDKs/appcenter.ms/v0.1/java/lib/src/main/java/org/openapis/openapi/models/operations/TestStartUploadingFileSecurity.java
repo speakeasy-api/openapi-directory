@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestStartUploadingFileSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAPIToken apiToken;
-    public TestStartUploadingFileSecurity withAPIToken(org.openapis.openapi.models.shared.SchemeAPIToken apiToken) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-API-Token")
+    public String apiToken;
+    public TestStartUploadingFileSecurity withAPIToken(String apiToken) {
         this.apiToken = apiToken;
         return this;
     }

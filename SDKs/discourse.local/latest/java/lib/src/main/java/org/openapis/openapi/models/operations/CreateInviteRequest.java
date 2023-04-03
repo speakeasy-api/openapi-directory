@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateInviteRequest {
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Key")
+    public String apiKey;
+    public CreateInviteRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public CreateInviteHeaders headers;
-    public CreateInviteRequest withHeaders(CreateInviteHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Username")
+    public String apiUsername;
+    public CreateInviteRequest withApiUsername(String apiUsername) {
+        this.apiUsername = apiUsername;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateInviteRequestBody request;
-    public CreateInviteRequest withRequest(CreateInviteRequestBody request) {
-        this.request = request;
+    public CreateInviteRequestBody requestBody;
+    public CreateInviteRequest withRequestBody(CreateInviteRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

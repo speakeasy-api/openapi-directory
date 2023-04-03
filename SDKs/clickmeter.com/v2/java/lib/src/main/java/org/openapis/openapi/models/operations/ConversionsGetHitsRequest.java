@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsGetHitsRequest {
-    
-    public ConversionsGetHitsPathParams pathParams;
-    public ConversionsGetHitsRequest withPathParams(ConversionsGetHitsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the conversion
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
+    public Long conversionId;
+    public ConversionsGetHitsRequest withConversionId(Long conversionId) {
+        this.conversionId = conversionId;
         return this;
     }
     
+    /**
+     * Filter event type ("spiders"/"uniques"/"nonuniques"/"conversions")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public ConversionsGetHitsFilterEnum filter;
+    public ConversionsGetHitsRequest withFilter(ConversionsGetHitsFilterEnum filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public ConversionsGetHitsQueryParams queryParams;
-    public ConversionsGetHitsRequest withQueryParams(ConversionsGetHitsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
+    public String fromDay;
+    public ConversionsGetHitsRequest withFromDay(String fromDay) {
+        this.fromDay = fromDay;
+        return this;
+    }
+    
+    /**
+     * Limit results to this number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public ConversionsGetHitsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset where to start from (it's the lastKey field in the response object)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public ConversionsGetHitsRequest withOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Timeframe of the request. See list at $timeframeList
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeframe")
+    public ConversionsGetHitsTimeframeEnum timeframe;
+    public ConversionsGetHitsRequest withTimeframe(ConversionsGetHitsTimeframeEnum timeframe) {
+        this.timeframe = timeframe;
+        return this;
+    }
+    
+    /**
+     * If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
+    public String toDay;
+    public ConversionsGetHitsRequest withToDay(String toDay) {
+        this.toDay = toDay;
         return this;
     }
     

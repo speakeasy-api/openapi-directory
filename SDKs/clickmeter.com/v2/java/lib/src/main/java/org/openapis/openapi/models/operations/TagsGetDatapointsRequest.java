@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagsGetDatapointsRequest {
-    
-    public TagsGetDatapointsPathParams pathParams;
-    public TagsGetDatapointsRequest withPathParams(TagsGetDatapointsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Exclude datapoints created before this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
+    public String createdAfter;
+    public TagsGetDatapointsRequest withCreatedAfter(String createdAfter) {
+        this.createdAfter = createdAfter;
         return this;
     }
     
+    /**
+     * Exclude datapoints created after this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
+    public String createdBefore;
+    public TagsGetDatapointsRequest withCreatedBefore(String createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
     
-    public TagsGetDatapointsQueryParams queryParams;
-    public TagsGetDatapointsRequest withQueryParams(TagsGetDatapointsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Maximum elements to retrieve. Default to 20 if not specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public TagsGetDatapointsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Where to start when retrieving elements. Default is 0 if not specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public TagsGetDatapointsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Status of the datapoint
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public TagsGetDatapointsStatusEnum status;
+    public TagsGetDatapointsRequest withStatus(TagsGetDatapointsStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Id of the tag.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
+    public Long tagId;
+    public TagsGetDatapointsRequest withTagId(Long tagId) {
+        this.tagId = tagId;
+        return this;
+    }
+    
+    /**
+     * Filter fields by this pattern
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
+    public String textSearch;
+    public TagsGetDatapointsRequest withTextSearch(String textSearch) {
+        this.textSearch = textSearch;
+        return this;
+    }
+    
+    /**
+     * Type of the datapoint ("tp"/"tl")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public TagsGetDatapointsTypeEnum type;
+    public TagsGetDatapointsRequest withType(TagsGetDatapointsTypeEnum type) {
+        this.type = type;
         return this;
     }
     

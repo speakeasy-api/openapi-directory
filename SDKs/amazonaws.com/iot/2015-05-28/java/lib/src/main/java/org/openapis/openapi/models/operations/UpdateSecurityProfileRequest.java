@@ -7,31 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSecurityProfileRequest {
-    
-    public UpdateSecurityProfilePathParams pathParams;
-    public UpdateSecurityProfileRequest withPathParams(UpdateSecurityProfilePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateSecurityProfileQueryParams queryParams;
-    public UpdateSecurityProfileRequest withQueryParams(UpdateSecurityProfileQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public UpdateSecurityProfileHeaders headers;
-    public UpdateSecurityProfileRequest withHeaders(UpdateSecurityProfileHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateSecurityProfileRequestBody request;
-    public UpdateSecurityProfileRequest withRequest(UpdateSecurityProfileRequestBody request) {
-        this.request = request;
+    public UpdateSecurityProfileRequestBody requestBody;
+    public UpdateSecurityProfileRequest withRequestBody(UpdateSecurityProfileRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateSecurityProfileRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateSecurityProfileRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateSecurityProfileRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateSecurityProfileRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateSecurityProfileRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateSecurityProfileRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateSecurityProfileRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The expected version of the security profile. A new version is generated whenever the security profile is updated. If you specify a value that is different from the actual version, a &lt;code&gt;VersionConflictException&lt;/code&gt; is thrown.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expectedVersion")
+    public Long expectedVersion;
+    public UpdateSecurityProfileRequest withExpectedVersion(Long expectedVersion) {
+        this.expectedVersion = expectedVersion;
+        return this;
+    }
+    
+    /**
+     * The name of the security profile you want to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=securityProfileName")
+    public String securityProfileName;
+    public UpdateSecurityProfileRequest withSecurityProfileName(String securityProfileName) {
+        this.securityProfileName = securityProfileName;
         return this;
     }
     

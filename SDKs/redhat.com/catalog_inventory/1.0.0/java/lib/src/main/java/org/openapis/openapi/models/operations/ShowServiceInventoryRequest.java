@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ShowServiceInventoryRequest {
-    
-    public ShowServiceInventoryPathParams pathParams;
-    public ShowServiceInventoryRequest withPathParams(ShowServiceInventoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ShowServiceInventoryRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

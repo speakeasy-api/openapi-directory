@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNegativeKeywordRequest {
-    
-    public UpdateNegativeKeywordPathParams pathParams;
-    public UpdateNegativeKeywordRequest withPathParams(UpdateNegativeKeywordPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A type that defines the fields for the request to update a negative keyword.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateNegativeKeywordRequest request;
-    public UpdateNegativeKeywordRequest withRequest(org.openapis.openapi.models.shared.UpdateNegativeKeywordRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateNegativeKeywordRequest updateNegativeKeywordRequest;
+    public UpdateNegativeKeywordRequest withUpdateNegativeKeywordRequest(org.openapis.openapi.models.shared.UpdateNegativeKeywordRequest updateNegativeKeywordRequest) {
+        this.updateNegativeKeywordRequest = updateNegativeKeywordRequest;
         return this;
     }
     
-    
-    public UpdateNegativeKeywordSecurity security;
-    public UpdateNegativeKeywordRequest withSecurity(UpdateNegativeKeywordSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier for the negative keyword.&lt;br /&gt;&lt;br /&gt;This value is returned in the &lt;b&gt;Location&lt;/b&gt; response header from the &lt;a href="/api-docs/sell/marketing/resources/negative_keyword/methods/createNegativeKeyword"&gt;createNegativeKeyword&lt;/a&gt; method.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=negative_keyword_id")
+    public String negativeKeywordId;
+    public UpdateNegativeKeywordRequest withNegativeKeywordId(String negativeKeywordId) {
+        this.negativeKeywordId = negativeKeywordId;
         return this;
     }
     

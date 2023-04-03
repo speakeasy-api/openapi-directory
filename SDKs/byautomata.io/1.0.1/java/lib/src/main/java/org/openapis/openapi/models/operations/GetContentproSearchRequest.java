@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContentproSearchRequest {
-    
-    public GetContentproSearchQueryParams queryParams;
-    public GetContentproSearchRequest withQueryParams(GetContentproSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * We provide information about related companies and articles based on the search terms you provide. Separate search terms with commas. Ex. https://api.byautomata.io/contentpro-search?terms=cloud+computing,enterprise,security
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=terms")
+    public String terms;
+    public GetContentproSearchRequest withTerms(String terms) {
+        this.terms = terms;
         return this;
     }
     

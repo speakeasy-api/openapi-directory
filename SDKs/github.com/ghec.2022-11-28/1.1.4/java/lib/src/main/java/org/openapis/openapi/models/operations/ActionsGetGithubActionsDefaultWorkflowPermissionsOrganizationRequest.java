@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetGithubActionsDefaultWorkflowPermissionsOrganizationRequest {
-    
-    public ActionsGetGithubActionsDefaultWorkflowPermissionsOrganizationPathParams pathParams;
-    public ActionsGetGithubActionsDefaultWorkflowPermissionsOrganizationRequest withPathParams(ActionsGetGithubActionsDefaultWorkflowPermissionsOrganizationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsGetGithubActionsDefaultWorkflowPermissionsOrganizationRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETContextKeysForCustomPolicyRequest {
-    
-    public GETGETContextKeysForCustomPolicyQueryParams queryParams;
-    public GETGETContextKeysForCustomPolicyRequest withQueryParams(GETGETContextKeysForCustomPolicyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETContextKeysForCustomPolicyActionEnum action;
+    public GETGETContextKeysForCustomPolicyRequest withAction(GETGETContextKeysForCustomPolicyActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;A list of policies for which you want the list of context keys referenced in those policies. Each document is specified as a string containing the complete, valid JSON text of an IAM policy.&lt;/p&gt; &lt;p&gt;The &lt;a href="http://wikipedia.org/wiki/regex"&gt;regex pattern&lt;/a&gt; used to validate this parameter is a string of characters consisting of the following:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Any printable ASCII character ranging from the space character (&lt;code&gt;\ u0020&lt;/code&gt;) through the end of the ASCII character range&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;The printable characters in the Basic Latin and Latin-1 Supplement character set (through &lt;code&gt;\ u00FF&lt;/code&gt;)&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;The special characters tab (&lt;code&gt;\ u0009&lt;/code&gt;), line feed (&lt;code&gt;\ u000A&lt;/code&gt;), and carriage return (&lt;code&gt;\ u000D&lt;/code&gt;)&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyInputList")
+    public String[] policyInputList;
+    public GETGETContextKeysForCustomPolicyRequest withPolicyInputList(String[] policyInputList) {
+        this.policyInputList = policyInputList;
+        return this;
+    }
     
-    public GETGETContextKeysForCustomPolicyHeaders headers;
-    public GETGETContextKeysForCustomPolicyRequest withHeaders(GETGETContextKeysForCustomPolicyHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETContextKeysForCustomPolicyVersionEnum version;
+    public GETGETContextKeysForCustomPolicyRequest withVersion(GETGETContextKeysForCustomPolicyVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGETContextKeysForCustomPolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGETContextKeysForCustomPolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGETContextKeysForCustomPolicyRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGETContextKeysForCustomPolicyRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGETContextKeysForCustomPolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGETContextKeysForCustomPolicyRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGETContextKeysForCustomPolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

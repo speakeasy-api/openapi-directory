@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditMessageSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOAuth oAuth;
-    public EditMessageSecurity withOAuth(org.openapis.openapi.models.shared.SchemeOAuth oAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oAuth;
+    public EditMessageSecurity withOAuth(String oAuth) {
         this.oAuth = oAuth;
         return this;
     }

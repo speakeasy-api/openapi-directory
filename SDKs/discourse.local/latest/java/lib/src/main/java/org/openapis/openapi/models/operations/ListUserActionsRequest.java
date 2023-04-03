@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListUserActionsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public ListUserActionsRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public ListUserActionsQueryParams queryParams;
-    public ListUserActionsRequest withQueryParams(ListUserActionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ListUserActionsRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public ListUserActionsRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

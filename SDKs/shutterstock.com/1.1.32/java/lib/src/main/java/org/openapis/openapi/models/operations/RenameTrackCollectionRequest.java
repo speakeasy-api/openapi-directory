@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RenameTrackCollectionRequest {
-    
-    public RenameTrackCollectionPathParams pathParams;
-    public RenameTrackCollectionRequest withPathParams(RenameTrackCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Collection changes
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CollectionUpdateRequest request;
-    public RenameTrackCollectionRequest withRequest(org.openapis.openapi.models.shared.CollectionUpdateRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CollectionUpdateRequest collectionUpdateRequest;
+    public RenameTrackCollectionRequest withCollectionUpdateRequest(org.openapis.openapi.models.shared.CollectionUpdateRequest collectionUpdateRequest) {
+        this.collectionUpdateRequest = collectionUpdateRequest;
         return this;
     }
     
-    
-    public RenameTrackCollectionSecurity security;
-    public RenameTrackCollectionRequest withSecurity(RenameTrackCollectionSecurity security) {
-        this.security = security;
+    /**
+     * Collection ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public RenameTrackCollectionRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

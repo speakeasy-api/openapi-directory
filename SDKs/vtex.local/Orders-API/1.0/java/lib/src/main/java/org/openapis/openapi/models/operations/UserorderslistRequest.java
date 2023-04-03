@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserorderslistRequest {
-    
-    public UserorderslistQueryParams queryParams;
-    public UserorderslistRequest withQueryParams(UserorderslistQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public UserorderslistRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public UserorderslistRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public UserorderslistHeaders headers;
-    public UserorderslistRequest withHeaders(UserorderslistHeaders headers) {
-        this.headers = headers;
+    /**
+     * Customer email.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientEmail")
+    public String clientEmail;
+    public UserorderslistRequest withClientEmail(String clientEmail) {
+        this.clientEmail = clientEmail;
+        return this;
+    }
+    
+    /**
+     * Page number for result pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public UserorderslistRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Page quantity for result pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public String perPage;
+    public UserorderslistRequest withPerPage(String perPage) {
+        this.perPage = perPage;
         return this;
     }
     

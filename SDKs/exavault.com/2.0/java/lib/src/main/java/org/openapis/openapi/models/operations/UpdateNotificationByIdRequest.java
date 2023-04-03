@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNotificationByIdRequest {
-    
-    public UpdateNotificationByIdPathParams pathParams;
-    public UpdateNotificationByIdRequest withPathParams(UpdateNotificationByIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateNotificationByIdHeaders headers;
-    public UpdateNotificationByIdRequest withHeaders(UpdateNotificationByIdHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNotificationByIdUpdateNotificationByIdRequestBody request;
-    public UpdateNotificationByIdRequest withRequest(UpdateNotificationByIdUpdateNotificationByIdRequestBody request) {
-        this.request = request;
+    public UpdateNotificationByIdUpdateNotificationByIdRequestBody requestBody;
+    public UpdateNotificationByIdRequest withRequestBody(UpdateNotificationByIdUpdateNotificationByIdRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public UpdateNotificationByIdRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
+        return this;
+    }
+    
+    /**
+     * API Key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public UpdateNotificationByIdRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
+    
+    /**
+     * ID of the notification. Use [GET /notifications](#operation/listNotifications) if you need to lookup an ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UpdateNotificationByIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

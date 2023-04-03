@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CatalogGetProductsRequest {
-    
-    public CatalogGetProductsPathParams pathParams;
-    public CatalogGetProductsRequest withPathParams(CatalogGetProductsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.GetProductsRequest getProductsRequest;
+    public CatalogGetProductsRequest withGetProductsRequest(org.openapis.openapi.models.shared.GetProductsRequest getProductsRequest) {
+        this.getProductsRequest = getProductsRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GetProductsRequest request;
-    public CatalogGetProductsRequest withRequest(org.openapis.openapi.models.shared.GetProductsRequest request) {
-        this.request = request;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public CatalogGetProductsRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

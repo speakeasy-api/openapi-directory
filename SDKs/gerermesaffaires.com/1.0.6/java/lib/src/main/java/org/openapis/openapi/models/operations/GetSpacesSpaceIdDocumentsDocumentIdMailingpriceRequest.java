@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdDocumentsDocumentIdMailingpriceRequest {
-    
-    public GetSpacesSpaceIdDocumentsDocumentIdMailingpricePathParams pathParams;
-    public GetSpacesSpaceIdDocumentsDocumentIdMailingpriceRequest withPathParams(GetSpacesSpaceIdDocumentsDocumentIdMailingpricePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public String documentId;
+    public GetSpacesSpaceIdDocumentsDocumentIdMailingpriceRequest withDocumentId(String documentId) {
+        this.documentId = documentId;
         return this;
     }
     
-    
-    public GetSpacesSpaceIdDocumentsDocumentIdMailingpriceSecurity security;
-    public GetSpacesSpaceIdDocumentsDocumentIdMailingpriceRequest withSecurity(GetSpacesSpaceIdDocumentsDocumentIdMailingpriceSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdDocumentsDocumentIdMailingpriceRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

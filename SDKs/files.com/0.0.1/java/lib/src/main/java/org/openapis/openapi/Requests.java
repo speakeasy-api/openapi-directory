@@ -43,7 +43,7 @@ public class Requests {
      */
     public org.openapis.openapi.models.operations.DeleteRequestsIdResponse deleteRequestsId(org.openapis.openapi.models.operations.DeleteRequestsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRequestsIdPathParams.class, baseUrl, "/requests/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRequestsIdRequest.class, baseUrl, "/requests/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class Requests {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRequestsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRequestsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -123,13 +123,13 @@ public class Requests {
      */
     public org.openapis.openapi.models.operations.GetRequestsFoldersPathResponse getRequestsFoldersPath(org.openapis.openapi.models.operations.GetRequestsFoldersPathRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRequestsFoldersPathPathParams.class, baseUrl, "/requests/folders/{path}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRequestsFoldersPathRequest.class, baseUrl, "/requests/folders/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRequestsFoldersPathQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRequestsFoldersPathRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -168,7 +168,7 @@ public class Requests {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRequestsResponse postRequests(org.openapis.openapi.models.operations.PostRequestsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRequestsResponse postRequests(org.openapis.openapi.models.operations.PostRequestsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/requests");
         

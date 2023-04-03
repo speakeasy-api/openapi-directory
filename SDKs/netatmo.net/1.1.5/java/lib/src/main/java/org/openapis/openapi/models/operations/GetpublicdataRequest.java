@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetpublicdataRequest {
-    
-    public GetpublicdataQueryParams queryParams;
-    public GetpublicdataRequest withQueryParams(GetpublicdataQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * True to exclude stations with abnormal temperature measures. Default is false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public Boolean filter;
+    public GetpublicdataRequest withFilter(Boolean filter) {
+        this.filter = filter;
         return this;
     }
     
+    /**
+     * Latitude of the north east corner of the requested area. -85 &lt;= lat_ne &lt;= 85 and lat_ne&gt;lat_sw
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat_ne")
+    public Integer latNe;
+    public GetpublicdataRequest withLatNe(Integer latNe) {
+        this.latNe = latNe;
+        return this;
+    }
     
-    public GetpublicdataSecurity security;
-    public GetpublicdataRequest withSecurity(GetpublicdataSecurity security) {
-        this.security = security;
+    /**
+     * Latitude of the south west corner of the requested area. -85 &lt;= lat_sw &lt;= 85
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat_sw")
+    public Integer latSw;
+    public GetpublicdataRequest withLatSw(Integer latSw) {
+        this.latSw = latSw;
+        return this;
+    }
+    
+    /**
+     * Longitude of the north east corner of the requested area. -180 &lt;= lon_ne &lt;= 180 and lon_ne&gt;lon_sw
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lon_ne")
+    public Integer lonNe;
+    public GetpublicdataRequest withLonNe(Integer lonNe) {
+        this.lonNe = lonNe;
+        return this;
+    }
+    
+    /**
+     * Longitude of the south west corner of the requested area. -180 &lt;= lon_sw &lt;= 180
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lon_sw")
+    public Integer lonSw;
+    public GetpublicdataRequest withLonSw(Integer lonSw) {
+        this.lonSw = lonSw;
+        return this;
+    }
+    
+    /**
+     * To filter stations based on relevant measurements you want (e.g. rain will only return stations with rain gauges). Default is no filter. You can find all measurements available on the Thermostat page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=required_data")
+    public GetpublicdataRequiredDataEnum[] requiredData;
+    public GetpublicdataRequest withRequiredData(GetpublicdataRequiredDataEnum[] requiredData) {
+        this.requiredData = requiredData;
         return this;
     }
     

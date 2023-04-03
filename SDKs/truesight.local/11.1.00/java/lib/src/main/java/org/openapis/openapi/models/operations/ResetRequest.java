@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResetRequest {
-    
-    public ResetPathParams pathParams;
-    public ResetRequest withPathParams(ResetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
+    public Integer deviceId;
+    public ResetRequest withDeviceId(Integer deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
     
+    /**
+     * The Monitor Class of the device.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=monitorClass")
+    public String monitorClass;
+    public ResetRequest withMonitorClass(String monitorClass) {
+        this.monitorClass = monitorClass;
+        return this;
+    }
     
-    public ResetQueryParams queryParams;
-    public ResetRequest withQueryParams(ResetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Monitor SID of the device.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=monitorSid")
+    public String monitorSid;
+    public ResetRequest withMonitorSid(String monitorSid) {
+        this.monitorSid = monitorSid;
         return this;
     }
     

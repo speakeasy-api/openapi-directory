@@ -4,27 +4,105 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListStreamingSessionsRequest {
-    
-    public ListStreamingSessionsPathParams pathParams;
-    public ListStreamingSessionsRequest withPathParams(ListStreamingSessionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListStreamingSessionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public ListStreamingSessionsQueryParams queryParams;
-    public ListStreamingSessionsRequest withQueryParams(ListStreamingSessionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListStreamingSessionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListStreamingSessionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public ListStreamingSessionsHeaders headers;
-    public ListStreamingSessionsRequest withHeaders(ListStreamingSessionsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListStreamingSessionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListStreamingSessionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListStreamingSessionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListStreamingSessionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * Filters the request to streaming sessions created by the given user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBy")
+    public String createdBy;
+    public ListStreamingSessionsRequest withCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+        return this;
+    }
+    
+    /**
+     * The token for the next set of results, or null if there are no more results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListStreamingSessionsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * Filters the request to streaming session owned by the given user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ownedBy")
+    public String ownedBy;
+    public ListStreamingSessionsRequest withOwnedBy(String ownedBy) {
+        this.ownedBy = ownedBy;
+        return this;
+    }
+    
+    /**
+     * Filters the request to only the provided session IDs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sessionIds")
+    public String sessionIds;
+    public ListStreamingSessionsRequest withSessionIds(String sessionIds) {
+        this.sessionIds = sessionIds;
+        return this;
+    }
+    
+    /**
+     * The studio ID. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=studioId")
+    public String studioId;
+    public ListStreamingSessionsRequest withStudioId(String studioId) {
+        this.studioId = studioId;
         return this;
     }
     

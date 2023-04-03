@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PaymentLinkApiDeleteJsonRequest {
-    
-    public PaymentLinkApiDeleteJsonHeaders headers;
-    public PaymentLinkApiDeleteJsonRequest withHeaders(PaymentLinkApiDeleteJsonHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.PaymentLink paymentLink;
+    public PaymentLinkApiDeleteJsonRequest withPaymentLink(org.openapis.openapi.models.shared.PaymentLink paymentLink) {
+        this.paymentLink = paymentLink;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PaymentLink request;
-    public PaymentLinkApiDeleteJsonRequest withRequest(org.openapis.openapi.models.shared.PaymentLink request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public PaymentLinkApiDeleteJsonRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public PaymentLinkApiDeleteJsonRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

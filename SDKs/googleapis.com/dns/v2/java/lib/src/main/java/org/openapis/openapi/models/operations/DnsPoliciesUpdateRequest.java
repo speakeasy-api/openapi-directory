@@ -7,31 +7,160 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DnsPoliciesUpdateRequest {
-    
-    public DnsPoliciesUpdatePathParams pathParams;
-    public DnsPoliciesUpdateRequest withPathParams(DnsPoliciesUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DnsPoliciesUpdateQueryParams queryParams;
-    public DnsPoliciesUpdateRequest withQueryParams(DnsPoliciesUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DnsPoliciesUpdateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Policy request;
-    public DnsPoliciesUpdateRequest withRequest(org.openapis.openapi.models.shared.Policy request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Policy policy1;
+    public DnsPoliciesUpdateRequest withPolicy1(org.openapis.openapi.models.shared.Policy policy1) {
+        this.policy1 = policy1;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DnsPoliciesUpdateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public DnsPoliciesUpdateSecurity security;
-    public DnsPoliciesUpdateRequest withSecurity(DnsPoliciesUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DnsPoliciesUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DnsPoliciesUpdateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientOperationId")
+    public String clientOperationId;
+    public DnsPoliciesUpdateRequest withClientOperationId(String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DnsPoliciesUpdateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DnsPoliciesUpdateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Specifies the location of the resource. This information will be used for routing and will be part of the resource name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public DnsPoliciesUpdateRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DnsPoliciesUpdateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * User given friendly name of the policy addressed by this request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=policy")
+    public String policyPathParameter;
+    public DnsPoliciesUpdateRequest withPolicyPathParameter(String policyPathParameter) {
+        this.policyPathParameter = policyPathParameter;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DnsPoliciesUpdateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Identifies the project addressed by this request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public DnsPoliciesUpdateRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DnsPoliciesUpdateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DnsPoliciesUpdateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DnsPoliciesUpdateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

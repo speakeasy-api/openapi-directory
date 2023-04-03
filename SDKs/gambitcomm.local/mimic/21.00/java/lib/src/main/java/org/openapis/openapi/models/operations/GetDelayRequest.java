@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDelayRequest {
-    
-    public GetDelayPathParams pathParams;
-    public GetDelayRequest withPathParams(GetDelayPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the delay time
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public GetDelayRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

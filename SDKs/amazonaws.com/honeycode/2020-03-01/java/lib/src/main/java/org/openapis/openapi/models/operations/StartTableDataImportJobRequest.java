@@ -7,24 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartTableDataImportJobRequest {
-    
-    public StartTableDataImportJobPathParams pathParams;
-    public StartTableDataImportJobRequest withPathParams(StartTableDataImportJobPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public StartTableDataImportJobHeaders headers;
-    public StartTableDataImportJobRequest withHeaders(StartTableDataImportJobHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public StartTableDataImportJobRequestBody request;
-    public StartTableDataImportJobRequest withRequest(StartTableDataImportJobRequestBody request) {
-        this.request = request;
+    public StartTableDataImportJobRequestBody requestBody;
+    public StartTableDataImportJobRequest withRequestBody(StartTableDataImportJobRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public StartTableDataImportJobRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public StartTableDataImportJobRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public StartTableDataImportJobRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public StartTableDataImportJobRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public StartTableDataImportJobRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public StartTableDataImportJobRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public StartTableDataImportJobRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The ID of the table where the rows are being imported.&lt;/p&gt; &lt;p&gt; If a table with the specified id could not be found, this API throws ResourceNotFoundException. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tableId")
+    public String tableId;
+    public StartTableDataImportJobRequest withTableId(String tableId) {
+        this.tableId = tableId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The ID of the workbook where the rows are being imported.&lt;/p&gt; &lt;p&gt; If a workbook with the specified id could not be found, this API throws ResourceNotFoundException. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workbookId")
+    public String workbookId;
+    public StartTableDataImportJobRequest withWorkbookId(String workbookId) {
+        this.workbookId = workbookId;
         return this;
     }
     

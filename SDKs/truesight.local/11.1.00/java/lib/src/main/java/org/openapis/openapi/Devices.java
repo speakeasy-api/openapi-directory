@@ -39,7 +39,7 @@ public class Devices {
      */
     public org.openapis.openapi.models.operations.GetAgentDevicesResponse getAgentDevices(org.openapis.openapi.models.operations.GetAgentDevicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAgentDevicesPathParams.class, baseUrl, "/hardware/devices/{deviceId}/agent-devices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAgentDevicesRequest.class, baseUrl, "/hardware/devices/{deviceId}/agent-devices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -77,7 +77,7 @@ public class Devices {
      */
     public org.openapis.openapi.models.operations.GetDeviceResponse getDevice(org.openapis.openapi.models.operations.GetDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDevicePathParams.class, baseUrl, "/hardware/devices/{deviceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceRequest.class, baseUrl, "/hardware/devices/{deviceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -115,7 +115,7 @@ public class Devices {
      */
     public org.openapis.openapi.models.operations.GetDeviceAgentResponse getDeviceAgent(org.openapis.openapi.models.operations.GetDeviceAgentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceAgentPathParams.class, baseUrl, "/hardware/devices/{deviceId}/agent", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceAgentRequest.class, baseUrl, "/hardware/devices/{deviceId}/agent", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -153,13 +153,13 @@ public class Devices {
      */
     public org.openapis.openapi.models.operations.GetDeviceEnergyUsageResponse getDeviceEnergyUsage(org.openapis.openapi.models.operations.GetDeviceEnergyUsageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceEnergyUsagePathParams.class, baseUrl, "/hardware/energy-usage/{deviceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceEnergyUsageRequest.class, baseUrl, "/hardware/energy-usage/{deviceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceEnergyUsageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceEnergyUsageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -197,7 +197,7 @@ public class Devices {
      */
     public org.openapis.openapi.models.operations.GetDeviceMonitorsResponse getDeviceMonitors(org.openapis.openapi.models.operations.GetDeviceMonitorsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceMonitorsPathParams.class, baseUrl, "/hardware/device-monitors/{deviceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceMonitorsRequest.class, baseUrl, "/hardware/device-monitors/{deviceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -237,13 +237,13 @@ public class Devices {
      */
     public org.openapis.openapi.models.operations.GetDeviceParameterHistoryResponse getDeviceParameterHistory(org.openapis.openapi.models.operations.GetDeviceParameterHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceParameterHistoryPathParams.class, baseUrl, "/hardware/devices/{deviceId}/parameter-history", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceParameterHistoryRequest.class, baseUrl, "/hardware/devices/{deviceId}/parameter-history", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceParameterHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceParameterHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -287,7 +287,7 @@ public class Devices {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDevicesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDevicesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -368,7 +368,7 @@ public class Devices {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetHeatingMarginCoverageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetHeatingMarginCoverageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -412,7 +412,7 @@ public class Devices {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchDevicesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchDevicesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

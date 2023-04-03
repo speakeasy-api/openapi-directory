@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestnetGetTokenHoldersRequest {
-    
-    public TestnetGetTokenHoldersPathParams pathParams;
-    public TestnetGetTokenHoldersRequest withPathParams(TestnetGetTokenHoldersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * TokenId to request metadata for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tokenid")
+    public String tokenid;
+    public TestnetGetTokenHoldersRequest withTokenid(String tokenid) {
+        this.tokenid = tokenid;
         return this;
     }
     

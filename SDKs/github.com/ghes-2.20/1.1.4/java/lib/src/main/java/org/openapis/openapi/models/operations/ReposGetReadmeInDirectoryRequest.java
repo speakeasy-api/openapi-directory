@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposGetReadmeInDirectoryRequest {
-    
-    public ReposGetReadmeInDirectoryPathParams pathParams;
-    public ReposGetReadmeInDirectoryRequest withPathParams(ReposGetReadmeInDirectoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The alternate path to look for a README file
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dir")
+    public String dir;
+    public ReposGetReadmeInDirectoryRequest withDir(String dir) {
+        this.dir = dir;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposGetReadmeInDirectoryRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ReposGetReadmeInDirectoryQueryParams queryParams;
-    public ReposGetReadmeInDirectoryRequest withQueryParams(ReposGetReadmeInDirectoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the commit/branch/tag. Default: the repository\u2019s default branch (usually `master`)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
+    public String ref;
+    public ReposGetReadmeInDirectoryRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposGetReadmeInDirectoryRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

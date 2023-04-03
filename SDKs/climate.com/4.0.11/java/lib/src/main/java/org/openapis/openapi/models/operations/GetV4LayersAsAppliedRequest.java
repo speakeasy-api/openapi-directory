@@ -4,27 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV4LayersAsAppliedRequest {
-    
-    public GetV4LayersAsAppliedQueryParams queryParams;
-    public GetV4LayersAsAppliedRequest withQueryParams(GetV4LayersAsAppliedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Must be either \* /* or application/octet-stream,application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetV4LayersAsAppliedRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetV4LayersAsAppliedHeaders headers;
-    public GetV4LayersAsAppliedRequest withHeaders(GetV4LayersAsAppliedHeaders headers) {
-        this.headers = headers;
+    /**
+     * Max number of results to return per batch.  Must be between 1 and 100 inclusive.  Defaults to 100.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Limit")
+    public Integer xLimit;
+    public GetV4LayersAsAppliedRequest withXLimit(Integer xLimit) {
+        this.xLimit = xLimit;
         return this;
     }
     
+    /**
+     * Opaque string which allows for fetching the next batch of results.  Can be used to poll for changes.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Next-Token")
+    public String xNextToken;
+    public GetV4LayersAsAppliedRequest withXNextToken(String xNextToken) {
+        this.xNextToken = xNextToken;
+        return this;
+    }
     
-    public GetV4LayersAsAppliedSecurity security;
-    public GetV4LayersAsAppliedRequest withSecurity(GetV4LayersAsAppliedSecurity security) {
-        this.security = security;
+    /**
+     * Optional start time by which to filter layer results. Time must be in ISO 8601 format with time zone, e.g. 2016-05-13T00:00:00Z (https://tools.ietf.org/html/rfc3339). Layers with an end time at or after (inclusive) the specified time will match this filter. If both occurredAfter and occurredBefore are populated, occurredAfter must be &lt;= occurredBefore.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurredAfter")
+    public OffsetDateTime occurredAfter;
+    public GetV4LayersAsAppliedRequest withOccurredAfter(OffsetDateTime occurredAfter) {
+        this.occurredAfter = occurredAfter;
+        return this;
+    }
+    
+    /**
+     * Optional end time by which to filter layer results. Time must be in ISO 8601 format with time zone, e.g. 2016-05-13T00:00:00Z (https://tools.ietf.org/html/rfc3339). Layers with a start time at or before (inclusive) the specified time. If both occurredAfter and occurredBefore are populated, occurredAfter must be &lt;= occurredBefore.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurredBefore")
+    public OffsetDateTime occurredBefore;
+    public GetV4LayersAsAppliedRequest withOccurredBefore(OffsetDateTime occurredBefore) {
+        this.occurredBefore = occurredBefore;
+        return this;
+    }
+    
+    /**
+     * Optional unique identifier of the resource owner.  If resourceOwnerId is not specified, it defaults to the x-authenticated-user-uuid.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceOwnerId")
+    public String resourceOwnerId;
+    public GetV4LayersAsAppliedRequest withResourceOwnerId(String resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    
+    /**
+     * Optional updated time by which to filter layer results. Time must be in ISO 8601 format with time zone, e.g. 2016-05-13T00:00:00Z (https://tools.ietf.org/html/rfc3339). Layers with a modification time at or after (inclusive) the specified time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAfter")
+    public OffsetDateTime updatedAfter;
+    public GetV4LayersAsAppliedRequest withUpdatedAfter(OffsetDateTime updatedAfter) {
+        this.updatedAfter = updatedAfter;
         return this;
     }
     

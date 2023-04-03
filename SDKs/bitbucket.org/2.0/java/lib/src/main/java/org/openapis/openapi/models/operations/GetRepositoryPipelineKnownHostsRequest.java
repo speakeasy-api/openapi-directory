@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoryPipelineKnownHostsRequest {
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoryPipelineKnownHostsRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public GetRepositoryPipelineKnownHostsPathParams pathParams;
-    public GetRepositoryPipelineKnownHostsRequest withPathParams(GetRepositoryPipelineKnownHostsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoryPipelineKnownHostsRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

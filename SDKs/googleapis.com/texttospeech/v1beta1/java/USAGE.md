@@ -5,14 +5,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetSecurity;
-import org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetPathParams;
-import org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetQueryParams;
 import org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetRequest;
 import org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -21,33 +17,24 @@ public class Application {
                 .build();
 
             TexttospeechProjectsLocationsOperationsGetRequest req = new TexttospeechProjectsLocationsOperationsGetRequest() {{
-                security = new TexttospeechProjectsLocationsOperationsGetSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new TexttospeechProjectsLocationsOperationsGetPathParams() {{
-                    name = "corrupti";
-                }};
-                queryParams = new TexttospeechProjectsLocationsOperationsGetQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                key = "nulla";
+                name = "corrupti";
+                oauthToken = "illum";
+                prettyPrint = false;
+                quotaUser = "vel";
+                uploadType = "error";
+                uploadProtocol = "deserunt";
+            }}            
 
-            TexttospeechProjectsLocationsOperationsGetResponse res = sdk.projects.texttospeechProjectsLocationsOperationsGet(req);
+            TexttospeechProjectsLocationsOperationsGetResponse res = sdk.projects.texttospeechProjectsLocationsOperationsGet(req, new TexttospeechProjectsLocationsOperationsGetSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response

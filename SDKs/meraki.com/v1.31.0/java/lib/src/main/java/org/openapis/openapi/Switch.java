@@ -43,12 +43,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.AddNetworkSwitchStackResponse addNetworkSwitchStack(org.openapis.openapi.models.operations.AddNetworkSwitchStackRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddNetworkSwitchStackPathParams.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/add", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddNetworkSwitchStackRequest.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/add", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -88,12 +88,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.CloneOrganizationSwitchDevicesResponse cloneOrganizationSwitchDevices(org.openapis.openapi.models.operations.CloneOrganizationSwitchDevicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloneOrganizationSwitchDevicesPathParams.class, baseUrl, "/organizations/{organizationId}/switch/devices/clone", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloneOrganizationSwitchDevicesRequest.class, baseUrl, "/organizations/{organizationId}/switch/devices/clone", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -133,12 +133,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.CreateDeviceSwitchRoutingInterfaceResponse createDeviceSwitchRoutingInterface(org.openapis.openapi.models.operations.CreateDeviceSwitchRoutingInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDeviceSwitchRoutingInterfacePathParams.class, baseUrl, "/devices/{serial}/switch/routing/interfaces", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDeviceSwitchRoutingInterfaceRequest.class, baseUrl, "/devices/{serial}/switch/routing/interfaces", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -175,12 +175,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.CreateDeviceSwitchRoutingStaticRouteResponse createDeviceSwitchRoutingStaticRoute(org.openapis.openapi.models.operations.CreateDeviceSwitchRoutingStaticRouteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDeviceSwitchRoutingStaticRoutePathParams.class, baseUrl, "/devices/{serial}/switch/routing/staticRoutes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDeviceSwitchRoutingStaticRouteRequest.class, baseUrl, "/devices/{serial}/switch/routing/staticRoutes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -220,12 +220,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.CreateNetworkSwitchAccessPolicyResponse createNetworkSwitchAccessPolicy(org.openapis.openapi.models.operations.CreateNetworkSwitchAccessPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchAccessPolicyPathParams.class, baseUrl, "/networks/{networkId}/switch/accessPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchAccessPolicyRequest.class, baseUrl, "/networks/{networkId}/switch/accessPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -265,12 +265,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerResponse createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(org.openapis.openapi.models.operations.CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerPathParams.class, baseUrl, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest.class, baseUrl, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -310,12 +310,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.CreateNetworkSwitchLinkAggregationResponse createNetworkSwitchLinkAggregation(org.openapis.openapi.models.operations.CreateNetworkSwitchLinkAggregationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchLinkAggregationPathParams.class, baseUrl, "/networks/{networkId}/switch/linkAggregations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchLinkAggregationRequest.class, baseUrl, "/networks/{networkId}/switch/linkAggregations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -352,12 +352,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.CreateNetworkSwitchPortScheduleResponse createNetworkSwitchPortSchedule(org.openapis.openapi.models.operations.CreateNetworkSwitchPortScheduleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchPortSchedulePathParams.class, baseUrl, "/networks/{networkId}/switch/portSchedules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchPortScheduleRequest.class, baseUrl, "/networks/{networkId}/switch/portSchedules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -397,12 +397,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.CreateNetworkSwitchQosRuleResponse createNetworkSwitchQosRule(org.openapis.openapi.models.operations.CreateNetworkSwitchQosRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchQosRulePathParams.class, baseUrl, "/networks/{networkId}/switch/qosRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchQosRuleRequest.class, baseUrl, "/networks/{networkId}/switch/qosRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -442,12 +442,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.CreateNetworkSwitchRoutingMulticastRendezvousPointResponse createNetworkSwitchRoutingMulticastRendezvousPoint(org.openapis.openapi.models.operations.CreateNetworkSwitchRoutingMulticastRendezvousPointRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchRoutingMulticastRendezvousPointPathParams.class, baseUrl, "/networks/{networkId}/switch/routing/multicast/rendezvousPoints", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchRoutingMulticastRendezvousPointRequest.class, baseUrl, "/networks/{networkId}/switch/routing/multicast/rendezvousPoints", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -487,12 +487,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.CreateNetworkSwitchStackResponse createNetworkSwitchStack(org.openapis.openapi.models.operations.CreateNetworkSwitchStackRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchStackPathParams.class, baseUrl, "/networks/{networkId}/switch/stacks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchStackRequest.class, baseUrl, "/networks/{networkId}/switch/stacks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -532,12 +532,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.CreateNetworkSwitchStackRoutingInterfaceResponse createNetworkSwitchStackRoutingInterface(org.openapis.openapi.models.operations.CreateNetworkSwitchStackRoutingInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchStackRoutingInterfacePathParams.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchStackRoutingInterfaceRequest.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -577,12 +577,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.CreateNetworkSwitchStackRoutingStaticRouteResponse createNetworkSwitchStackRoutingStaticRoute(org.openapis.openapi.models.operations.CreateNetworkSwitchStackRoutingStaticRouteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchStackRoutingStaticRoutePathParams.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchStackRoutingStaticRouteRequest.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -622,12 +622,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.CycleDeviceSwitchPortsResponse cycleDeviceSwitchPorts(org.openapis.openapi.models.operations.CycleDeviceSwitchPortsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CycleDeviceSwitchPortsPathParams.class, baseUrl, "/devices/{serial}/switch/ports/cycle", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CycleDeviceSwitchPortsRequest.class, baseUrl, "/devices/{serial}/switch/ports/cycle", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -667,7 +667,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.DeleteDeviceSwitchRoutingInterfaceResponse deleteDeviceSwitchRoutingInterface(org.openapis.openapi.models.operations.DeleteDeviceSwitchRoutingInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDeviceSwitchRoutingInterfacePathParams.class, baseUrl, "/devices/{serial}/switch/routing/interfaces/{interfaceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDeviceSwitchRoutingInterfaceRequest.class, baseUrl, "/devices/{serial}/switch/routing/interfaces/{interfaceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -701,7 +701,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.DeleteDeviceSwitchRoutingStaticRouteResponse deleteDeviceSwitchRoutingStaticRoute(org.openapis.openapi.models.operations.DeleteDeviceSwitchRoutingStaticRouteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDeviceSwitchRoutingStaticRoutePathParams.class, baseUrl, "/devices/{serial}/switch/routing/staticRoutes/{staticRouteId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDeviceSwitchRoutingStaticRouteRequest.class, baseUrl, "/devices/{serial}/switch/routing/staticRoutes/{staticRouteId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -735,7 +735,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkSwitchAccessPolicyResponse deleteNetworkSwitchAccessPolicy(org.openapis.openapi.models.operations.DeleteNetworkSwitchAccessPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchAccessPolicyPathParams.class, baseUrl, "/networks/{networkId}/switch/accessPolicies/{accessPolicyNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchAccessPolicyRequest.class, baseUrl, "/networks/{networkId}/switch/accessPolicies/{accessPolicyNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -769,7 +769,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerResponse deleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(org.openapis.openapi.models.operations.DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerPathParams.class, baseUrl, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers/{trustedServerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest.class, baseUrl, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers/{trustedServerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -803,7 +803,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkSwitchLinkAggregationResponse deleteNetworkSwitchLinkAggregation(org.openapis.openapi.models.operations.DeleteNetworkSwitchLinkAggregationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchLinkAggregationPathParams.class, baseUrl, "/networks/{networkId}/switch/linkAggregations/{linkAggregationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchLinkAggregationRequest.class, baseUrl, "/networks/{networkId}/switch/linkAggregations/{linkAggregationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -837,7 +837,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkSwitchPortScheduleResponse deleteNetworkSwitchPortSchedule(org.openapis.openapi.models.operations.DeleteNetworkSwitchPortScheduleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchPortSchedulePathParams.class, baseUrl, "/networks/{networkId}/switch/portSchedules/{portScheduleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchPortScheduleRequest.class, baseUrl, "/networks/{networkId}/switch/portSchedules/{portScheduleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -871,7 +871,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkSwitchQosRuleResponse deleteNetworkSwitchQosRule(org.openapis.openapi.models.operations.DeleteNetworkSwitchQosRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchQosRulePathParams.class, baseUrl, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchQosRuleRequest.class, baseUrl, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -905,7 +905,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkSwitchRoutingMulticastRendezvousPointResponse deleteNetworkSwitchRoutingMulticastRendezvousPoint(org.openapis.openapi.models.operations.DeleteNetworkSwitchRoutingMulticastRendezvousPointRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchRoutingMulticastRendezvousPointPathParams.class, baseUrl, "/networks/{networkId}/switch/routing/multicast/rendezvousPoints/{rendezvousPointId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchRoutingMulticastRendezvousPointRequest.class, baseUrl, "/networks/{networkId}/switch/routing/multicast/rendezvousPoints/{rendezvousPointId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -939,7 +939,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkSwitchStackResponse deleteNetworkSwitchStack(org.openapis.openapi.models.operations.DeleteNetworkSwitchStackRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchStackPathParams.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchStackRequest.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -973,7 +973,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkSwitchStackRoutingInterfaceResponse deleteNetworkSwitchStackRoutingInterface(org.openapis.openapi.models.operations.DeleteNetworkSwitchStackRoutingInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchStackRoutingInterfacePathParams.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchStackRoutingInterfaceRequest.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1007,7 +1007,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkSwitchStackRoutingStaticRouteResponse deleteNetworkSwitchStackRoutingStaticRoute(org.openapis.openapi.models.operations.DeleteNetworkSwitchStackRoutingStaticRouteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchStackRoutingStaticRoutePathParams.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchStackRoutingStaticRouteRequest.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1041,7 +1041,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetDeviceSwitchPortResponse getDeviceSwitchPort(org.openapis.openapi.models.operations.GetDeviceSwitchPortRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchPortPathParams.class, baseUrl, "/devices/{serial}/switch/ports/{portId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchPortRequest.class, baseUrl, "/devices/{serial}/switch/ports/{portId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1081,7 +1081,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetDeviceSwitchPortsResponse getDeviceSwitchPorts(org.openapis.openapi.models.operations.GetDeviceSwitchPortsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchPortsPathParams.class, baseUrl, "/devices/{serial}/switch/ports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchPortsRequest.class, baseUrl, "/devices/{serial}/switch/ports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1121,13 +1121,13 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetDeviceSwitchPortsStatusesResponse getDeviceSwitchPortsStatuses(org.openapis.openapi.models.operations.GetDeviceSwitchPortsStatusesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchPortsStatusesPathParams.class, baseUrl, "/devices/{serial}/switch/ports/statuses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchPortsStatusesRequest.class, baseUrl, "/devices/{serial}/switch/ports/statuses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceSwitchPortsStatusesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceSwitchPortsStatusesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1167,13 +1167,13 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetDeviceSwitchPortsStatusesPacketsResponse getDeviceSwitchPortsStatusesPackets(org.openapis.openapi.models.operations.GetDeviceSwitchPortsStatusesPacketsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchPortsStatusesPacketsPathParams.class, baseUrl, "/devices/{serial}/switch/ports/statuses/packets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchPortsStatusesPacketsRequest.class, baseUrl, "/devices/{serial}/switch/ports/statuses/packets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceSwitchPortsStatusesPacketsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceSwitchPortsStatusesPacketsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1213,7 +1213,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetDeviceSwitchRoutingInterfaceResponse getDeviceSwitchRoutingInterface(org.openapis.openapi.models.operations.GetDeviceSwitchRoutingInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchRoutingInterfacePathParams.class, baseUrl, "/devices/{serial}/switch/routing/interfaces/{interfaceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchRoutingInterfaceRequest.class, baseUrl, "/devices/{serial}/switch/routing/interfaces/{interfaceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1253,7 +1253,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetDeviceSwitchRoutingInterfaceDhcpResponse getDeviceSwitchRoutingInterfaceDhcp(org.openapis.openapi.models.operations.GetDeviceSwitchRoutingInterfaceDhcpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchRoutingInterfaceDhcpPathParams.class, baseUrl, "/devices/{serial}/switch/routing/interfaces/{interfaceId}/dhcp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchRoutingInterfaceDhcpRequest.class, baseUrl, "/devices/{serial}/switch/routing/interfaces/{interfaceId}/dhcp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1293,7 +1293,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetDeviceSwitchRoutingInterfacesResponse getDeviceSwitchRoutingInterfaces(org.openapis.openapi.models.operations.GetDeviceSwitchRoutingInterfacesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchRoutingInterfacesPathParams.class, baseUrl, "/devices/{serial}/switch/routing/interfaces", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchRoutingInterfacesRequest.class, baseUrl, "/devices/{serial}/switch/routing/interfaces", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1333,7 +1333,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetDeviceSwitchRoutingStaticRouteResponse getDeviceSwitchRoutingStaticRoute(org.openapis.openapi.models.operations.GetDeviceSwitchRoutingStaticRouteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchRoutingStaticRoutePathParams.class, baseUrl, "/devices/{serial}/switch/routing/staticRoutes/{staticRouteId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchRoutingStaticRouteRequest.class, baseUrl, "/devices/{serial}/switch/routing/staticRoutes/{staticRouteId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1373,7 +1373,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetDeviceSwitchRoutingStaticRoutesResponse getDeviceSwitchRoutingStaticRoutes(org.openapis.openapi.models.operations.GetDeviceSwitchRoutingStaticRoutesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchRoutingStaticRoutesPathParams.class, baseUrl, "/devices/{serial}/switch/routing/staticRoutes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchRoutingStaticRoutesRequest.class, baseUrl, "/devices/{serial}/switch/routing/staticRoutes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1413,7 +1413,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetDeviceSwitchWarmSpareResponse getDeviceSwitchWarmSpare(org.openapis.openapi.models.operations.GetDeviceSwitchWarmSpareRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchWarmSparePathParams.class, baseUrl, "/devices/{serial}/switch/warmSpare", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchWarmSpareRequest.class, baseUrl, "/devices/{serial}/switch/warmSpare", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1453,7 +1453,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchAccessControlListsResponse getNetworkSwitchAccessControlLists(org.openapis.openapi.models.operations.GetNetworkSwitchAccessControlListsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchAccessControlListsPathParams.class, baseUrl, "/networks/{networkId}/switch/accessControlLists", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchAccessControlListsRequest.class, baseUrl, "/networks/{networkId}/switch/accessControlLists", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1493,7 +1493,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchAccessPoliciesResponse getNetworkSwitchAccessPolicies(org.openapis.openapi.models.operations.GetNetworkSwitchAccessPoliciesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchAccessPoliciesPathParams.class, baseUrl, "/networks/{networkId}/switch/accessPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchAccessPoliciesRequest.class, baseUrl, "/networks/{networkId}/switch/accessPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1533,7 +1533,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchAccessPolicyResponse getNetworkSwitchAccessPolicy(org.openapis.openapi.models.operations.GetNetworkSwitchAccessPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchAccessPolicyPathParams.class, baseUrl, "/networks/{networkId}/switch/accessPolicies/{accessPolicyNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchAccessPolicyRequest.class, baseUrl, "/networks/{networkId}/switch/accessPolicies/{accessPolicyNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1573,7 +1573,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchAlternateManagementInterfaceResponse getNetworkSwitchAlternateManagementInterface(org.openapis.openapi.models.operations.GetNetworkSwitchAlternateManagementInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchAlternateManagementInterfacePathParams.class, baseUrl, "/networks/{networkId}/switch/alternateManagementInterface", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchAlternateManagementInterfaceRequest.class, baseUrl, "/networks/{networkId}/switch/alternateManagementInterface", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1613,7 +1613,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyResponse getNetworkSwitchDhcpServerPolicy(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyPathParams.class, baseUrl, "/networks/{networkId}/switch/dhcpServerPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyRequest.class, baseUrl, "/networks/{networkId}/switch/dhcpServerPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1653,13 +1653,13 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServersResponse getNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServersPathParams.class, baseUrl, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServersRequest.class, baseUrl, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1701,13 +1701,13 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResponse getNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevicePathParams.class, baseUrl, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/warnings/byDevice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDeviceRequest.class, baseUrl, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/warnings/byDevice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDeviceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDeviceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1749,13 +1749,13 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchDhcpV4ServersSeenResponse getNetworkSwitchDhcpV4ServersSeen(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpV4ServersSeenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpV4ServersSeenPathParams.class, baseUrl, "/networks/{networkId}/switch/dhcp/v4/servers/seen", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpV4ServersSeenRequest.class, baseUrl, "/networks/{networkId}/switch/dhcp/v4/servers/seen", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpV4ServersSeenQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpV4ServersSeenRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1797,7 +1797,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchDscpToCosMappingsResponse getNetworkSwitchDscpToCosMappings(org.openapis.openapi.models.operations.GetNetworkSwitchDscpToCosMappingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchDscpToCosMappingsPathParams.class, baseUrl, "/networks/{networkId}/switch/dscpToCosMappings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchDscpToCosMappingsRequest.class, baseUrl, "/networks/{networkId}/switch/dscpToCosMappings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1837,7 +1837,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchLinkAggregationsResponse getNetworkSwitchLinkAggregations(org.openapis.openapi.models.operations.GetNetworkSwitchLinkAggregationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchLinkAggregationsPathParams.class, baseUrl, "/networks/{networkId}/switch/linkAggregations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchLinkAggregationsRequest.class, baseUrl, "/networks/{networkId}/switch/linkAggregations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1877,7 +1877,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchMtuResponse getNetworkSwitchMtu(org.openapis.openapi.models.operations.GetNetworkSwitchMtuRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchMtuPathParams.class, baseUrl, "/networks/{networkId}/switch/mtu", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchMtuRequest.class, baseUrl, "/networks/{networkId}/switch/mtu", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1917,7 +1917,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchPortSchedulesResponse getNetworkSwitchPortSchedules(org.openapis.openapi.models.operations.GetNetworkSwitchPortSchedulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchPortSchedulesPathParams.class, baseUrl, "/networks/{networkId}/switch/portSchedules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchPortSchedulesRequest.class, baseUrl, "/networks/{networkId}/switch/portSchedules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1957,7 +1957,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchQosRuleResponse getNetworkSwitchQosRule(org.openapis.openapi.models.operations.GetNetworkSwitchQosRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchQosRulePathParams.class, baseUrl, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchQosRuleRequest.class, baseUrl, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1997,7 +1997,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchQosRulesResponse getNetworkSwitchQosRules(org.openapis.openapi.models.operations.GetNetworkSwitchQosRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchQosRulesPathParams.class, baseUrl, "/networks/{networkId}/switch/qosRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchQosRulesRequest.class, baseUrl, "/networks/{networkId}/switch/qosRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2037,7 +2037,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchQosRulesOrderResponse getNetworkSwitchQosRulesOrder(org.openapis.openapi.models.operations.GetNetworkSwitchQosRulesOrderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchQosRulesOrderPathParams.class, baseUrl, "/networks/{networkId}/switch/qosRules/order", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchQosRulesOrderRequest.class, baseUrl, "/networks/{networkId}/switch/qosRules/order", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2077,7 +2077,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchRoutingMulticastResponse getNetworkSwitchRoutingMulticast(org.openapis.openapi.models.operations.GetNetworkSwitchRoutingMulticastRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchRoutingMulticastPathParams.class, baseUrl, "/networks/{networkId}/switch/routing/multicast", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchRoutingMulticastRequest.class, baseUrl, "/networks/{networkId}/switch/routing/multicast", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2117,7 +2117,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchRoutingMulticastRendezvousPointResponse getNetworkSwitchRoutingMulticastRendezvousPoint(org.openapis.openapi.models.operations.GetNetworkSwitchRoutingMulticastRendezvousPointRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchRoutingMulticastRendezvousPointPathParams.class, baseUrl, "/networks/{networkId}/switch/routing/multicast/rendezvousPoints/{rendezvousPointId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchRoutingMulticastRendezvousPointRequest.class, baseUrl, "/networks/{networkId}/switch/routing/multicast/rendezvousPoints/{rendezvousPointId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2157,7 +2157,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchRoutingMulticastRendezvousPointsResponse getNetworkSwitchRoutingMulticastRendezvousPoints(org.openapis.openapi.models.operations.GetNetworkSwitchRoutingMulticastRendezvousPointsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchRoutingMulticastRendezvousPointsPathParams.class, baseUrl, "/networks/{networkId}/switch/routing/multicast/rendezvousPoints", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchRoutingMulticastRendezvousPointsRequest.class, baseUrl, "/networks/{networkId}/switch/routing/multicast/rendezvousPoints", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2197,7 +2197,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchRoutingOspfResponse getNetworkSwitchRoutingOspf(org.openapis.openapi.models.operations.GetNetworkSwitchRoutingOspfRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchRoutingOspfPathParams.class, baseUrl, "/networks/{networkId}/switch/routing/ospf", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchRoutingOspfRequest.class, baseUrl, "/networks/{networkId}/switch/routing/ospf", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2237,7 +2237,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchSettingsResponse getNetworkSwitchSettings(org.openapis.openapi.models.operations.GetNetworkSwitchSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchSettingsPathParams.class, baseUrl, "/networks/{networkId}/switch/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchSettingsRequest.class, baseUrl, "/networks/{networkId}/switch/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2277,7 +2277,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchStackResponse getNetworkSwitchStack(org.openapis.openapi.models.operations.GetNetworkSwitchStackRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStackPathParams.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStackRequest.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2317,7 +2317,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingInterfaceResponse getNetworkSwitchStackRoutingInterface(org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingInterfacePathParams.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingInterfaceRequest.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2357,7 +2357,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingInterfaceDhcpResponse getNetworkSwitchStackRoutingInterfaceDhcp(org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingInterfaceDhcpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingInterfaceDhcpPathParams.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingInterfaceDhcpRequest.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2397,7 +2397,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingInterfacesResponse getNetworkSwitchStackRoutingInterfaces(org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingInterfacesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingInterfacesPathParams.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingInterfacesRequest.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2437,7 +2437,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingStaticRouteResponse getNetworkSwitchStackRoutingStaticRoute(org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingStaticRouteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingStaticRoutePathParams.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingStaticRouteRequest.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2477,7 +2477,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingStaticRoutesResponse getNetworkSwitchStackRoutingStaticRoutes(org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingStaticRoutesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingStaticRoutesPathParams.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingStaticRoutesRequest.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2517,7 +2517,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchStacksResponse getNetworkSwitchStacks(org.openapis.openapi.models.operations.GetNetworkSwitchStacksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStacksPathParams.class, baseUrl, "/networks/{networkId}/switch/stacks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStacksRequest.class, baseUrl, "/networks/{networkId}/switch/stacks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2557,7 +2557,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchStormControlResponse getNetworkSwitchStormControl(org.openapis.openapi.models.operations.GetNetworkSwitchStormControlRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStormControlPathParams.class, baseUrl, "/networks/{networkId}/switch/stormControl", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStormControlRequest.class, baseUrl, "/networks/{networkId}/switch/stormControl", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2597,7 +2597,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchStpResponse getNetworkSwitchStp(org.openapis.openapi.models.operations.GetNetworkSwitchStpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStpPathParams.class, baseUrl, "/networks/{networkId}/switch/stp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStpRequest.class, baseUrl, "/networks/{networkId}/switch/stp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2637,7 +2637,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilePortResponse getOrganizationConfigTemplateSwitchProfilePort(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilePortRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilePortPathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports/{portId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilePortRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports/{portId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2677,7 +2677,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilePortsResponse getOrganizationConfigTemplateSwitchProfilePorts(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilePortsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilePortsPathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilePortsRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2717,7 +2717,7 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilesResponse getOrganizationConfigTemplateSwitchProfiles(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilesPathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilesRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2757,13 +2757,13 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSwitchPortsBySwitchResponse getOrganizationSwitchPortsBySwitch(org.openapis.openapi.models.operations.GetOrganizationSwitchPortsBySwitchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSwitchPortsBySwitchPathParams.class, baseUrl, "/organizations/{organizationId}/switch/ports/bySwitch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSwitchPortsBySwitchRequest.class, baseUrl, "/organizations/{organizationId}/switch/ports/bySwitch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSwitchPortsBySwitchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSwitchPortsBySwitchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2805,12 +2805,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.RemoveNetworkSwitchStackResponse removeNetworkSwitchStack(org.openapis.openapi.models.operations.RemoveNetworkSwitchStackRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveNetworkSwitchStackPathParams.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/remove", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveNetworkSwitchStackRequest.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/remove", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2850,12 +2850,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceSwitchPortResponse updateDeviceSwitchPort(org.openapis.openapi.models.operations.UpdateDeviceSwitchPortRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceSwitchPortPathParams.class, baseUrl, "/devices/{serial}/switch/ports/{portId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceSwitchPortRequest.class, baseUrl, "/devices/{serial}/switch/ports/{portId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2892,12 +2892,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceSwitchRoutingInterfaceResponse updateDeviceSwitchRoutingInterface(org.openapis.openapi.models.operations.UpdateDeviceSwitchRoutingInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceSwitchRoutingInterfacePathParams.class, baseUrl, "/devices/{serial}/switch/routing/interfaces/{interfaceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceSwitchRoutingInterfaceRequest.class, baseUrl, "/devices/{serial}/switch/routing/interfaces/{interfaceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2934,12 +2934,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceSwitchRoutingInterfaceDhcpResponse updateDeviceSwitchRoutingInterfaceDhcp(org.openapis.openapi.models.operations.UpdateDeviceSwitchRoutingInterfaceDhcpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceSwitchRoutingInterfaceDhcpPathParams.class, baseUrl, "/devices/{serial}/switch/routing/interfaces/{interfaceId}/dhcp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceSwitchRoutingInterfaceDhcpRequest.class, baseUrl, "/devices/{serial}/switch/routing/interfaces/{interfaceId}/dhcp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2976,12 +2976,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceSwitchRoutingStaticRouteResponse updateDeviceSwitchRoutingStaticRoute(org.openapis.openapi.models.operations.UpdateDeviceSwitchRoutingStaticRouteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceSwitchRoutingStaticRoutePathParams.class, baseUrl, "/devices/{serial}/switch/routing/staticRoutes/{staticRouteId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceSwitchRoutingStaticRouteRequest.class, baseUrl, "/devices/{serial}/switch/routing/staticRoutes/{staticRouteId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3018,12 +3018,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceSwitchWarmSpareResponse updateDeviceSwitchWarmSpare(org.openapis.openapi.models.operations.UpdateDeviceSwitchWarmSpareRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceSwitchWarmSparePathParams.class, baseUrl, "/devices/{serial}/switch/warmSpare", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceSwitchWarmSpareRequest.class, baseUrl, "/devices/{serial}/switch/warmSpare", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -3063,12 +3063,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchAccessControlListsResponse updateNetworkSwitchAccessControlLists(org.openapis.openapi.models.operations.UpdateNetworkSwitchAccessControlListsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchAccessControlListsPathParams.class, baseUrl, "/networks/{networkId}/switch/accessControlLists", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchAccessControlListsRequest.class, baseUrl, "/networks/{networkId}/switch/accessControlLists", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -3108,12 +3108,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchAccessPolicyResponse updateNetworkSwitchAccessPolicy(org.openapis.openapi.models.operations.UpdateNetworkSwitchAccessPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchAccessPolicyPathParams.class, baseUrl, "/networks/{networkId}/switch/accessPolicies/{accessPolicyNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchAccessPolicyRequest.class, baseUrl, "/networks/{networkId}/switch/accessPolicies/{accessPolicyNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3150,12 +3150,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchAlternateManagementInterfaceResponse updateNetworkSwitchAlternateManagementInterface(org.openapis.openapi.models.operations.UpdateNetworkSwitchAlternateManagementInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchAlternateManagementInterfacePathParams.class, baseUrl, "/networks/{networkId}/switch/alternateManagementInterface", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchAlternateManagementInterfaceRequest.class, baseUrl, "/networks/{networkId}/switch/alternateManagementInterface", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3192,12 +3192,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchDhcpServerPolicyResponse updateNetworkSwitchDhcpServerPolicy(org.openapis.openapi.models.operations.UpdateNetworkSwitchDhcpServerPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchDhcpServerPolicyPathParams.class, baseUrl, "/networks/{networkId}/switch/dhcpServerPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchDhcpServerPolicyRequest.class, baseUrl, "/networks/{networkId}/switch/dhcpServerPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3234,12 +3234,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerResponse updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(org.openapis.openapi.models.operations.UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerPathParams.class, baseUrl, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers/{trustedServerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest.class, baseUrl, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers/{trustedServerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3276,12 +3276,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchDscpToCosMappingsResponse updateNetworkSwitchDscpToCosMappings(org.openapis.openapi.models.operations.UpdateNetworkSwitchDscpToCosMappingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchDscpToCosMappingsPathParams.class, baseUrl, "/networks/{networkId}/switch/dscpToCosMappings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchDscpToCosMappingsRequest.class, baseUrl, "/networks/{networkId}/switch/dscpToCosMappings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -3321,12 +3321,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchLinkAggregationResponse updateNetworkSwitchLinkAggregation(org.openapis.openapi.models.operations.UpdateNetworkSwitchLinkAggregationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchLinkAggregationPathParams.class, baseUrl, "/networks/{networkId}/switch/linkAggregations/{linkAggregationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchLinkAggregationRequest.class, baseUrl, "/networks/{networkId}/switch/linkAggregations/{linkAggregationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3363,12 +3363,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchMtuResponse updateNetworkSwitchMtu(org.openapis.openapi.models.operations.UpdateNetworkSwitchMtuRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchMtuPathParams.class, baseUrl, "/networks/{networkId}/switch/mtu", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchMtuRequest.class, baseUrl, "/networks/{networkId}/switch/mtu", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3405,12 +3405,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchPortScheduleResponse updateNetworkSwitchPortSchedule(org.openapis.openapi.models.operations.UpdateNetworkSwitchPortScheduleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchPortSchedulePathParams.class, baseUrl, "/networks/{networkId}/switch/portSchedules/{portScheduleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchPortScheduleRequest.class, baseUrl, "/networks/{networkId}/switch/portSchedules/{portScheduleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3447,12 +3447,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchQosRuleResponse updateNetworkSwitchQosRule(org.openapis.openapi.models.operations.UpdateNetworkSwitchQosRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchQosRulePathParams.class, baseUrl, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchQosRuleRequest.class, baseUrl, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3489,12 +3489,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchQosRulesOrderResponse updateNetworkSwitchQosRulesOrder(org.openapis.openapi.models.operations.UpdateNetworkSwitchQosRulesOrderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchQosRulesOrderPathParams.class, baseUrl, "/networks/{networkId}/switch/qosRules/order", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchQosRulesOrderRequest.class, baseUrl, "/networks/{networkId}/switch/qosRules/order", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -3534,12 +3534,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchRoutingMulticastResponse updateNetworkSwitchRoutingMulticast(org.openapis.openapi.models.operations.UpdateNetworkSwitchRoutingMulticastRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchRoutingMulticastPathParams.class, baseUrl, "/networks/{networkId}/switch/routing/multicast", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchRoutingMulticastRequest.class, baseUrl, "/networks/{networkId}/switch/routing/multicast", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3576,12 +3576,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchRoutingMulticastRendezvousPointResponse updateNetworkSwitchRoutingMulticastRendezvousPoint(org.openapis.openapi.models.operations.UpdateNetworkSwitchRoutingMulticastRendezvousPointRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchRoutingMulticastRendezvousPointPathParams.class, baseUrl, "/networks/{networkId}/switch/routing/multicast/rendezvousPoints/{rendezvousPointId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchRoutingMulticastRendezvousPointRequest.class, baseUrl, "/networks/{networkId}/switch/routing/multicast/rendezvousPoints/{rendezvousPointId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -3621,12 +3621,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchRoutingOspfResponse updateNetworkSwitchRoutingOspf(org.openapis.openapi.models.operations.UpdateNetworkSwitchRoutingOspfRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchRoutingOspfPathParams.class, baseUrl, "/networks/{networkId}/switch/routing/ospf", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchRoutingOspfRequest.class, baseUrl, "/networks/{networkId}/switch/routing/ospf", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3663,12 +3663,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsResponse updateNetworkSwitchSettings(org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsPathParams.class, baseUrl, "/networks/{networkId}/switch/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsRequest.class, baseUrl, "/networks/{networkId}/switch/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3705,12 +3705,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchStackRoutingInterfaceResponse updateNetworkSwitchStackRoutingInterface(org.openapis.openapi.models.operations.UpdateNetworkSwitchStackRoutingInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchStackRoutingInterfacePathParams.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchStackRoutingInterfaceRequest.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3747,12 +3747,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse updateNetworkSwitchStackRoutingInterfaceDhcp(org.openapis.openapi.models.operations.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3789,12 +3789,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchStackRoutingStaticRouteResponse updateNetworkSwitchStackRoutingStaticRoute(org.openapis.openapi.models.operations.UpdateNetworkSwitchStackRoutingStaticRouteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchStackRoutingStaticRoutePathParams.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchStackRoutingStaticRouteRequest.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/staticRoutes/{staticRouteId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3831,12 +3831,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchStormControlResponse updateNetworkSwitchStormControl(org.openapis.openapi.models.operations.UpdateNetworkSwitchStormControlRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchStormControlPathParams.class, baseUrl, "/networks/{networkId}/switch/stormControl", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchStormControlRequest.class, baseUrl, "/networks/{networkId}/switch/stormControl", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3873,12 +3873,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchStpResponse updateNetworkSwitchStp(org.openapis.openapi.models.operations.UpdateNetworkSwitchStpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchStpPathParams.class, baseUrl, "/networks/{networkId}/switch/stp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchStpRequest.class, baseUrl, "/networks/{networkId}/switch/stp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3915,12 +3915,12 @@ public class Switch {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationConfigTemplateSwitchProfilePortResponse updateOrganizationConfigTemplateSwitchProfilePort(org.openapis.openapi.models.operations.UpdateOrganizationConfigTemplateSwitchProfilePortRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationConfigTemplateSwitchProfilePortPathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports/{portId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationConfigTemplateSwitchProfilePortRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports/{portId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

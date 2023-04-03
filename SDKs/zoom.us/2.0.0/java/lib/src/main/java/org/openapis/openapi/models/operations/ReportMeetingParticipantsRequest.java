@@ -4,27 +4,50 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReportMeetingParticipantsRequest {
-    
-    public ReportMeetingParticipantsPathParams pathParams;
-    public ReportMeetingParticipantsRequest withPathParams(ReportMeetingParticipantsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Provide `registrant_id` as the value for this field if you would like to see the registrant ID attribute in the response of this API call. A registrant ID is a unique identifier of a [meeting registrant](https://marketplace.zoom.us/docs/api-reference/zoom-api/meetings/meetingregistrants).&lt;br&gt;
+     * 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_fields")
+    public ReportMeetingParticipantsIncludeFieldsEnum includeFields;
+    public ReportMeetingParticipantsRequest withIncludeFields(ReportMeetingParticipantsIncludeFieldsEnum includeFields) {
+        this.includeFields = includeFields;
         return this;
     }
     
-    
-    public ReportMeetingParticipantsQueryParams queryParams;
-    public ReportMeetingParticipantsRequest withQueryParams(ReportMeetingParticipantsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The meeting ID or the meeting UUID.  If a meeting ID is provided in the request instead of a UUID, the response will be for the latest meeting instance.
+     * 
+     * If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public String meetingId;
+    public ReportMeetingParticipantsRequest withMeetingId(String meetingId) {
+        this.meetingId = meetingId;
         return this;
     }
     
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public ReportMeetingParticipantsRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
     
-    public ReportMeetingParticipantsSecurity security;
-    public ReportMeetingParticipantsRequest withSecurity(ReportMeetingParticipantsSecurity security) {
-        this.security = security;
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public ReportMeetingParticipantsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

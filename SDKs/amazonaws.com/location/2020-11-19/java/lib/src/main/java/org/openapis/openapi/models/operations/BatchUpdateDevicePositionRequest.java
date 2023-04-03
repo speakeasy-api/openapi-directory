@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BatchUpdateDevicePositionRequest {
-    
-    public BatchUpdateDevicePositionPathParams pathParams;
-    public BatchUpdateDevicePositionRequest withPathParams(BatchUpdateDevicePositionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public BatchUpdateDevicePositionHeaders headers;
-    public BatchUpdateDevicePositionRequest withHeaders(BatchUpdateDevicePositionHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public BatchUpdateDevicePositionRequestBody request;
-    public BatchUpdateDevicePositionRequest withRequest(BatchUpdateDevicePositionRequestBody request) {
-        this.request = request;
+    public BatchUpdateDevicePositionRequestBody requestBody;
+    public BatchUpdateDevicePositionRequest withRequestBody(BatchUpdateDevicePositionRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The name of the tracker resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrackerName")
+    public String trackerName;
+    public BatchUpdateDevicePositionRequest withTrackerName(String trackerName) {
+        this.trackerName = trackerName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public BatchUpdateDevicePositionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public BatchUpdateDevicePositionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public BatchUpdateDevicePositionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public BatchUpdateDevicePositionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public BatchUpdateDevicePositionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public BatchUpdateDevicePositionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public BatchUpdateDevicePositionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

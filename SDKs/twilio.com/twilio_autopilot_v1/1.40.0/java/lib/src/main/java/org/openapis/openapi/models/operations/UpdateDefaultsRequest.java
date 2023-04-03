@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDefaultsRequest {
-    
-    public UpdateDefaultsPathParams pathParams;
-    public UpdateDefaultsRequest withPathParams(UpdateDefaultsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public UpdateDefaultsRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateDefaultsUpdateDefaultsRequest request;
-    public UpdateDefaultsRequest withRequest(UpdateDefaultsUpdateDefaultsRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public UpdateDefaultsSecurity security;
-    public UpdateDefaultsRequest withSecurity(UpdateDefaultsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateDefaultsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public UpdateDefaultsUpdateDefaultsRequest requestBody;
+    public UpdateDefaultsRequest withRequestBody(UpdateDefaultsUpdateDefaultsRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

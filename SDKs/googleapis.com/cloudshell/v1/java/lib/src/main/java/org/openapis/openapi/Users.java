@@ -34,27 +34,28 @@ public class Users {
     /**
      * Adds a public SSH key to an environment, allowing clients with the corresponding private key to connect to that environment via SSH. If a key with the same content already exists, this will error with ALREADY_EXISTS.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAddPublicKeyResponse cloudshellUsersEnvironmentsAddPublicKey(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAddPublicKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAddPublicKeyResponse cloudshellUsersEnvironmentsAddPublicKey(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAddPublicKeyRequest request, org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAddPublicKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAddPublicKeyPathParams.class, baseUrl, "/v1/{environment}:addPublicKey", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAddPublicKeyRequest.class, baseUrl, "/v1/{environment}:addPublicKey", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addPublicKeyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAddPublicKeyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAddPublicKeyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class Users {
     /**
      * Sends OAuth credentials to a running environment on behalf of a user. When this completes, the environment will be authorized to run various Google Cloud command line tools without requiring the user to manually authenticate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAuthorizeResponse cloudshellUsersEnvironmentsAuthorize(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAuthorizeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAuthorizeResponse cloudshellUsersEnvironmentsAuthorize(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAuthorizeRequest request, org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAuthorizeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAuthorizePathParams.class, baseUrl, "/v1/{name}:authorize", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAuthorizeRequest.class, baseUrl, "/v1/{name}:authorize", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "authorizeEnvironmentRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAuthorizeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsAuthorizeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,25 +130,26 @@ public class Users {
     /**
      * Gets an environment. Returns NOT_FOUND if the environment does not exist.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsGetResponse cloudshellUsersEnvironmentsGet(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsGetResponse cloudshellUsersEnvironmentsGet(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsGetRequest request, org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,27 +176,28 @@ public class Users {
     /**
      * Removes a public SSH key from an environment. Clients will no longer be able to connect to the environment using the corresponding private key. If a key with the same content is not present, this will error with NOT_FOUND.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsRemovePublicKeyResponse cloudshellUsersEnvironmentsRemovePublicKey(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsRemovePublicKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsRemovePublicKeyResponse cloudshellUsersEnvironmentsRemovePublicKey(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsRemovePublicKeyRequest request, org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsRemovePublicKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsRemovePublicKeyPathParams.class, baseUrl, "/v1/{environment}:removePublicKey", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsRemovePublicKeyRequest.class, baseUrl, "/v1/{environment}:removePublicKey", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "removePublicKeyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsRemovePublicKeyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsRemovePublicKeyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -220,27 +224,28 @@ public class Users {
     /**
      * Starts an existing environment, allowing clients to connect to it. The returned operation will contain an instance of StartEnvironmentMetadata in its metadata field. Users can wait for the environment to start by polling this operation via GetOperation. Once the environment has finished starting and is ready to accept connections, the operation will contain a StartEnvironmentResponse in its response field.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsStartResponse cloudshellUsersEnvironmentsStart(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsStartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsStartResponse cloudshellUsersEnvironmentsStart(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsStartRequest request, org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsStartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsStartPathParams.class, baseUrl, "/v1/{name}:start", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsStartRequest.class, baseUrl, "/v1/{name}:start", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "startEnvironmentRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsStartQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudshellUsersEnvironmentsStartRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

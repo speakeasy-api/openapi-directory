@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Adexchangebuyer2BiddersFilterSetsCreateRequest {
-    
-    public Adexchangebuyer2BiddersFilterSetsCreatePathParams pathParams;
-    public Adexchangebuyer2BiddersFilterSetsCreateRequest withPathParams(Adexchangebuyer2BiddersFilterSetsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public Adexchangebuyer2BiddersFilterSetsCreateQueryParams queryParams;
-    public Adexchangebuyer2BiddersFilterSetsCreateRequest withQueryParams(Adexchangebuyer2BiddersFilterSetsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public Adexchangebuyer2BiddersFilterSetsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FilterSet request;
-    public Adexchangebuyer2BiddersFilterSetsCreateRequest withRequest(org.openapis.openapi.models.shared.FilterSet request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FilterSet filterSet;
+    public Adexchangebuyer2BiddersFilterSetsCreateRequest withFilterSet(org.openapis.openapi.models.shared.FilterSet filterSet) {
+        this.filterSet = filterSet;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public Adexchangebuyer2BiddersFilterSetsCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public Adexchangebuyer2BiddersFilterSetsCreateSecurity security;
-    public Adexchangebuyer2BiddersFilterSetsCreateRequest withSecurity(Adexchangebuyer2BiddersFilterSetsCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public Adexchangebuyer2BiddersFilterSetsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public Adexchangebuyer2BiddersFilterSetsCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public Adexchangebuyer2BiddersFilterSetsCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Whether the filter set is transient, or should be persisted indefinitely. By default, filter sets are not transient. If transient, it will be available for at least 1 hour after creation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isTransient")
+    public Boolean isTransient;
+    public Adexchangebuyer2BiddersFilterSetsCreateRequest withIsTransient(Boolean isTransient) {
+        this.isTransient = isTransient;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public Adexchangebuyer2BiddersFilterSetsCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public Adexchangebuyer2BiddersFilterSetsCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Name of the owner (bidder or account) of the filter set to be created. For example: - For a bidder-level filter set for bidder 123: `bidders/123` - For an account-level filter set for the buyer account representing bidder 123: `bidders/123/accounts/123` - For an account-level filter set for the child seat buyer account 456 whose bidder is 123: `bidders/123/accounts/456`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ownerName")
+    public String ownerName;
+    public Adexchangebuyer2BiddersFilterSetsCreateRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public Adexchangebuyer2BiddersFilterSetsCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public Adexchangebuyer2BiddersFilterSetsCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public Adexchangebuyer2BiddersFilterSetsCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public Adexchangebuyer2BiddersFilterSetsCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

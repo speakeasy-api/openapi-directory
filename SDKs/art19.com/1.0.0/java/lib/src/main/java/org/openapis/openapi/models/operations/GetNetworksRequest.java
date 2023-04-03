@@ -4,20 +4,88 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworksRequest {
-    
-    public GetNetworksQueryParams queryParams;
-    public GetNetworksRequest withQueryParams(GetNetworksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Limit the result to networks containing at least one series with an ad deal matching one of the
+     * values in this parameter.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ad_deal_status")
+    public GetNetworksAdDealStatusEnum[] adDealStatus;
+    public GetNetworksRequest withAdDealStatus(GetNetworksAdDealStatusEnum[] adDealStatus) {
+        this.adDealStatus = adDealStatus;
         return this;
     }
     
+    /**
+     * Limit the result to networks containing at least one series with an ad deal of this Ad Ops profile.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ad_rep_account_id")
+    public String adRepAccountId;
+    public GetNetworksRequest withAdRepAccountId(String adRepAccountId) {
+        this.adRepAccountId = adRepAccountId;
+        return this;
+    }
     
-    public GetNetworksSecurity security;
-    public GetNetworksRequest withSecurity(GetNetworksSecurity security) {
-        this.security = security;
+    /**
+     * The list of IDs to filter by. Repeat this parameter for each ID you want to include in the filter.
+     * The brackets *MUST* be percent-encoded, per the requirements in
+     * [RFC 3986 \u00a7 3.4](https://tools.ietf.org/html/rfc3986#section-3.4).
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids[]")
+    public String[] ids;
+    public GetNetworksRequest withIds(String[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    /**
+     * Select which page number to receive results for. Pages are numbered starting at 1.
+     * 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
+    public Long pageNumber;
+    public GetNetworksRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    
+    /**
+     * Indicate how many records to return per page. The maximum is 100.
+     * 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
+    public Long pageSize;
+    public GetNetworksRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Limit the result to networks with a name containing this parameter in a case-insensitive way.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetNetworksRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * Specify how to sort the result. Please refer to either the top section or the
+     * [JSON:API specification](https://jsonapi.org/format/#fetching-sorting) on how sorting works in general.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
+    public GetNetworksSortEnum[] sort;
+    public GetNetworksRequest withSort(GetNetworksSortEnum[] sort) {
+        this.sort = sort;
         return this;
     }
     

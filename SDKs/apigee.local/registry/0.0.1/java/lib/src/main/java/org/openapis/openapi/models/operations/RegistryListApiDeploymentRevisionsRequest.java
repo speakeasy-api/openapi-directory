@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryListApiDeploymentRevisionsRequest {
-    
-    public RegistryListApiDeploymentRevisionsPathParams pathParams;
-    public RegistryListApiDeploymentRevisionsRequest withPathParams(RegistryListApiDeploymentRevisionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The api id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
+    public String api;
+    public RegistryListApiDeploymentRevisionsRequest withApi(String api) {
+        this.api = api;
         return this;
     }
     
+    /**
+     * The deployment id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment")
+    public String deployment;
+    public RegistryListApiDeploymentRevisionsRequest withDeployment(String deployment) {
+        this.deployment = deployment;
+        return this;
+    }
     
-    public RegistryListApiDeploymentRevisionsQueryParams queryParams;
-    public RegistryListApiDeploymentRevisionsRequest withQueryParams(RegistryListApiDeploymentRevisionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryListApiDeploymentRevisionsRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The maximum number of revisions to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public RegistryListApiDeploymentRevisionsRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token, received from a previous ListApiDeploymentRevisions call. Provide this to retrieve the subsequent page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public RegistryListApiDeploymentRevisionsRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryListApiDeploymentRevisionsRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

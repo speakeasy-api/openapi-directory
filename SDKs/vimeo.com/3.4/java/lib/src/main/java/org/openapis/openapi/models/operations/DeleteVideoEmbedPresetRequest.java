@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteVideoEmbedPresetRequest {
-    
-    public DeleteVideoEmbedPresetPathParams pathParams;
-    public DeleteVideoEmbedPresetRequest withPathParams(DeleteVideoEmbedPresetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the preset.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=preset_id")
+    public Double presetId;
+    public DeleteVideoEmbedPresetRequest withPresetId(Double presetId) {
+        this.presetId = presetId;
         return this;
     }
     
-    
-    public DeleteVideoEmbedPresetSecurity security;
-    public DeleteVideoEmbedPresetRequest withSecurity(DeleteVideoEmbedPresetSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public DeleteVideoEmbedPresetRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

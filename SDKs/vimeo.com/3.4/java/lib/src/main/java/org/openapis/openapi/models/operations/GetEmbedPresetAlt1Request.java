@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEmbedPresetAlt1Request {
-    
-    public GetEmbedPresetAlt1PathParams pathParams;
-    public GetEmbedPresetAlt1Request withPathParams(GetEmbedPresetAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the preset.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=preset_id")
+    public Double presetId;
+    public GetEmbedPresetAlt1Request withPresetId(Double presetId) {
+        this.presetId = presetId;
         return this;
     }
     

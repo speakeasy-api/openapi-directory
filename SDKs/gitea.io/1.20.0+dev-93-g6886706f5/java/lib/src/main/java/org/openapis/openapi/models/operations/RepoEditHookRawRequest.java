@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoEditHookRawRequest {
-    
-    public RepoEditHookRawPathParams pathParams;
-    public RepoEditHookRawRequest withPathParams(RepoEditHookRawPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=text/plain")
+    public byte[] requestBody;
+    public RepoEditHookRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=text/plain")
-    public byte[] request;
-    public RepoEditHookRawRequest withRequest(byte[] request) {
-        this.request = request;
+    /**
+     * index of the hook
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public RepoEditHookRawRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoEditHookRawRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoEditHookRawRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -4,20 +4,87 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RunsForRunAndRouteTypeRequest {
-    
-    public RunsForRunAndRouteTypePathParams pathParams;
-    public RunsForRunAndRouteTypeRequest withPathParams(RunsForRunAndRouteTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Date of the request. (optional - defaults to now)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_utc")
+    public OffsetDateTime dateUtc;
+    public RunsForRunAndRouteTypeRequest withDateUtc(OffsetDateTime dateUtc) {
+        this.dateUtc = dateUtc;
         return this;
     }
     
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public RunsForRunAndRouteTypeRequest withDevid(String devid) {
+        this.devid = devid;
+        return this;
+    }
     
-    public RunsForRunAndRouteTypeQueryParams queryParams;
-    public RunsForRunAndRouteTypeRequest withQueryParams(RunsForRunAndRouteTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * List of objects to be returned in full (i.e. expanded) - options include: All, VehiclePosition, VehicleDescriptor, or None. Default is None.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public RunsForRunAndRouteTypeExpandEnum[] expand;
+    public RunsForRunAndRouteTypeRequest withExpand(RunsForRunAndRouteTypeExpandEnum[] expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    /**
+     * Indicates if geopath data will be returned (default = false)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_geopath")
+    public Boolean includeGeopath;
+    public RunsForRunAndRouteTypeRequest withIncludeGeopath(Boolean includeGeopath) {
+        this.includeGeopath = includeGeopath;
+        return this;
+    }
+    
+    /**
+     * Number identifying transport mode; values returned via RouteTypes API
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_type")
+    public RunsForRunAndRouteTypeRouteTypeEnum routeType;
+    public RunsForRunAndRouteTypeRequest withRouteType(RunsForRunAndRouteTypeRouteTypeEnum routeType) {
+        this.routeType = routeType;
+        return this;
+    }
+    
+    /**
+     * The run_ref is the identifier of a run as returned by the departures/* and runs/* endpoints. WARNING, run_id is deprecated. Use run_ref instead.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_ref")
+    public String runRef;
+    public RunsForRunAndRouteTypeRequest withRunRef(String runRef) {
+        this.runRef = runRef;
+        return this;
+    }
+    
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public RunsForRunAndRouteTypeRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public RunsForRunAndRouteTypeRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

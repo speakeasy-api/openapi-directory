@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostPathRequest {
-    
-    public PostPathPathParams pathParams;
-    public PostPathRequest withPathParams(PostPathPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=:name")
+    public String name;
+    public PostPathRequest withName(String name) {
+        this.name = name;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jcr:primaryType")
+    public String jcrPrimaryType;
+    public PostPathRequest withJcrPrimaryType(String jcrPrimaryType) {
+        this.jcrPrimaryType = jcrPrimaryType;
+        return this;
+    }
     
-    public PostPathQueryParams queryParams;
-    public PostPathRequest withQueryParams(PostPathQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public PostPathRequest withPath(String path) {
+        this.path = path;
         return this;
     }
     

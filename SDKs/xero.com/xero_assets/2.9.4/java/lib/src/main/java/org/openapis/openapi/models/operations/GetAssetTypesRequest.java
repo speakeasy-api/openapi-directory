@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssetTypesRequest {
-    
-    public GetAssetTypesHeaders headers;
-    public GetAssetTypesRequest withHeaders(GetAssetTypesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetAssetTypesSecurity security;
-    public GetAssetTypesRequest withSecurity(GetAssetTypesSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
+    public String xeroTenantId;
+    public GetAssetTypesRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

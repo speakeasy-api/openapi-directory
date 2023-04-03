@@ -4,13 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListUserSSubscriptionGroupStatusSmsRequest {
+    /**
+     * (Required*) String
+     * 
+     * The `external_id` of the user (must include at least one and at most 50 `external_ids`).
+     * 
+     * Only external_id or phone is accepted for SMS subscription groups
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=external_id")
+    public String externalId;
+    public ListUserSSubscriptionGroupStatusSmsRequest withExternalId(String externalId) {
+        this.externalId = externalId;
+        return this;
+    }
     
-    public ListUserSSubscriptionGroupStatusSmsQueryParams queryParams;
-    public ListUserSSubscriptionGroupStatusSmsRequest withQueryParams(ListUserSSubscriptionGroupStatusSmsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Required*) String
+     * 
+     * The phone number of the user (must include at least one phone number and at most 50 phone numbers). The recommendation is to provide this in the E.164 format.
+     * 
+     * Only external_id or phone is accepted for SMS subscription groups
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=phone")
+    public String phone;
+    public ListUserSSubscriptionGroupStatusSmsRequest withPhone(String phone) {
+        this.phone = phone;
+        return this;
+    }
+    
+    /**
+     * (Required) String
+     * 
+     * The `id` of your subscription group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subscription_group_id")
+    public String subscriptionGroupId;
+    public ListUserSSubscriptionGroupStatusSmsRequest withSubscriptionGroupId(String subscriptionGroupId) {
+        this.subscriptionGroupId = subscriptionGroupId;
         return this;
     }
     

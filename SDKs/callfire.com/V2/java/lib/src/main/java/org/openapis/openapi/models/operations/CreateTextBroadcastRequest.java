@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTextBroadcastRequest {
-    
-    public CreateTextBroadcastQueryParams queryParams;
-    public CreateTextBroadcastRequest withQueryParams(CreateTextBroadcastQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * A TextBroadcast object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TextBroadcastInput request;
-    public CreateTextBroadcastRequest withRequest(org.openapis.openapi.models.shared.TextBroadcastInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TextBroadcastInput textBroadcastInput;
+    public CreateTextBroadcastRequest withTextBroadcastInput(org.openapis.openapi.models.shared.TextBroadcastInput textBroadcastInput) {
+        this.textBroadcastInput = textBroadcastInput;
         return this;
     }
     
+    /**
+     * If true then starts the campaign immediately (not required).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Boolean start;
+    public CreateTextBroadcastRequest withStart(Boolean start) {
+        this.start = start;
+        return this;
+    }
     
-    public CreateTextBroadcastSecurity security;
-    public CreateTextBroadcastRequest withSecurity(CreateTextBroadcastSecurity security) {
-        this.security = security;
+    /**
+     * Turns on strict validation for recipients. System will reply with BAD_REQUEST(400) if strictValidation = true and one of numbers didn't pass validation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=strictValidation")
+    public Boolean strictValidation;
+    public CreateTextBroadcastRequest withStrictValidation(Boolean strictValidation) {
+        this.strictValidation = strictValidation;
         return this;
     }
     

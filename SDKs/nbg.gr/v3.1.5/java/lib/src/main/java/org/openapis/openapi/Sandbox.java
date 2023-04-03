@@ -34,19 +34,20 @@ public class Sandbox {
      * Delete Sandbox
      * Delete Sandbox
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteSandboxSandboxIdResponse deleteSandboxSandboxId(org.openapis.openapi.models.operations.DeleteSandboxSandboxIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteSandboxSandboxIdResponse deleteSandboxSandboxId(org.openapis.openapi.models.operations.DeleteSandboxSandboxIdRequest request, org.openapis.openapi.models.operations.DeleteSandboxSandboxIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSandboxSandboxIdPathParams.class, baseUrl, "/sandbox/{sandboxId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSandboxSandboxIdRequest.class, baseUrl, "/sandbox/{sandboxId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,19 +83,20 @@ public class Sandbox {
      * Export Sandbox
      * Export Sandbox
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSandboxSandboxIdResponse getSandboxSandboxId(org.openapis.openapi.models.operations.GetSandboxSandboxIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSandboxSandboxIdResponse getSandboxSandboxId(org.openapis.openapi.models.operations.GetSandboxSandboxIdRequest request, org.openapis.openapi.models.operations.GetSandboxSandboxIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSandboxSandboxIdPathParams.class, baseUrl, "/sandbox/{sandboxId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSandboxSandboxIdRequest.class, baseUrl, "/sandbox/{sandboxId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -144,10 +146,11 @@ public class Sandbox {
      * Create Sandbox
      * Create Sandbox
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSandboxResponse postSandbox(org.openapis.openapi.models.operations.PostSandboxRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSandboxResponse postSandbox(org.openapis.openapi.models.shared.SandboxRequest request, org.openapis.openapi.models.operations.PostSandboxSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sandbox");
         
@@ -158,7 +161,7 @@ public class Sandbox {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -208,10 +211,11 @@ public class Sandbox {
      * Import Sandbox
      * Import Sandbox
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutSandboxResponse putSandbox(org.openapis.openapi.models.operations.PutSandboxRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutSandboxResponse putSandbox(org.openapis.openapi.models.shared.Sandbox request, org.openapis.openapi.models.operations.PutSandboxSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sandbox");
         
@@ -222,7 +226,7 @@ public class Sandbox {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

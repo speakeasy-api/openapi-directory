@@ -4,20 +4,130 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestLogEventsAsJsonRequest {
-    
-    public RequestLogEventsAsJsonQueryParams queryParams;
-    public RequestLogEventsAsJsonRequest withQueryParams(RequestLogEventsAsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestLogEventsAsJsonRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestLogEventsAsJsonXSdsDateFormatEnum xSdsDateFormat;
+    public RequestLogEventsAsJsonRequest withXSdsDateFormat(RequestLogEventsAsJsonXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
     
-    public RequestLogEventsAsJsonHeaders headers;
-    public RequestLogEventsAsJsonRequest withHeaders(RequestLogEventsAsJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Filter events until given date 
+     * 
+     * e.g. `2015-12-31T23:59:00`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_end")
+    public String dateEnd;
+    public RequestLogEventsAsJsonRequest withDateEnd(String dateEnd) {
+        this.dateEnd = dateEnd;
+        return this;
+    }
+    
+    /**
+     * Filter events from given date 
+     * 
+     * e.g. `2015-12-31T23:59:00`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_start")
+    public String dateStart;
+    public RequestLogEventsAsJsonRequest withDateStart(String dateStart) {
+        this.dateStart = dateStart;
+        return this;
+    }
+    
+    /**
+     * Range limit.
+     * 
+     * Maximum 500.
+     * 
+     *  For more results please use paging (`offset` + `limit`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public RequestLogEventsAsJsonRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Range offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public RequestLogEventsAsJsonRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Sort string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public RequestLogEventsAsJsonRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Operation status:
+     * 
+     * * `0` - Success
+     * 
+     * * `2` - Error
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public RequestLogEventsAsJsonStatusEnum status;
+    public RequestLogEventsAsJsonRequest withStatus(RequestLogEventsAsJsonStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Operation ID 
+     * 
+     * cf. `GET /eventlog/operations`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public Integer type;
+    public RequestLogEventsAsJsonRequest withType(Integer type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * User client
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_client")
+    public String userClient;
+    public RequestLogEventsAsJsonRequest withUserClient(String userClient) {
+        this.userClient = userClient;
+        return this;
+    }
+    
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
+    public Long userId;
+    public RequestLogEventsAsJsonRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

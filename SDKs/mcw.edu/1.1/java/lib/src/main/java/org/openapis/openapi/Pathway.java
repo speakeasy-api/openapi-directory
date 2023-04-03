@@ -34,7 +34,7 @@ public class Pathway {
      */
     public org.openapis.openapi.models.operations.GETPathwaysWithDiagramsForCategoryUsingGETResponse getPathwaysWithDiagramsForCategoryUsingGET(org.openapis.openapi.models.operations.GETPathwaysWithDiagramsForCategoryUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETPathwaysWithDiagramsForCategoryUsingGETPathParams.class, baseUrl, "/pathways/diagramsForCategory/{category}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETPathwaysWithDiagramsForCategoryUsingGETRequest.class, baseUrl, "/pathways/diagramsForCategory/{category}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -73,7 +73,7 @@ public class Pathway {
      */
     public org.openapis.openapi.models.operations.SearchPathwaysUsingGETResponse searchPathwaysUsingGET(org.openapis.openapi.models.operations.SearchPathwaysUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SearchPathwaysUsingGETPathParams.class, baseUrl, "/pathways/diagrams/search/{searchString}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SearchPathwaysUsingGETRequest.class, baseUrl, "/pathways/diagrams/search/{searchString}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

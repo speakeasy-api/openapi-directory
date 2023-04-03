@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGenesForLatestAssemblyUsingGETRequest {
-    
-    public GETGenesForLatestAssemblyUsingGETPathParams pathParams;
-    public GETGenesForLatestAssemblyUsingGETRequest withPathParams(GETGenesForLatestAssemblyUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The taxon ID for species
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxonId")
+    public String taxonId;
+    public GETGenesForLatestAssemblyUsingGETRequest withTaxonId(String taxonId) {
+        this.taxonId = taxonId;
         return this;
     }
     

@@ -40,12 +40,12 @@ public class StyleGuide {
      */
     public org.openapis.openapi.models.operations.CreateStyleGuideJsonResponse createStyleGuideJson(org.openapis.openapi.models.operations.CreateStyleGuideJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateStyleGuideJsonPathParams.class, baseUrl, "/projects/{projectId}/styleguides", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateStyleGuideJsonRequest.class, baseUrl, "/projects/{projectId}/styleguides", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "styleGuideUploadRequest", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -90,12 +90,12 @@ public class StyleGuide {
      */
     public org.openapis.openapi.models.operations.CreateStyleGuideMultipartResponse createStyleGuideMultipart(org.openapis.openapi.models.operations.CreateStyleGuideMultipartRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateStyleGuideMultipartPathParams.class, baseUrl, "/projects/{projectId}/styleguides", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateStyleGuideMultipartRequest.class, baseUrl, "/projects/{projectId}/styleguides", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "styleGuideUploadRequest1", "multipart");
         req.setBody(serializedRequestBody);
         
         
@@ -140,7 +140,7 @@ public class StyleGuide {
      */
     public org.openapis.openapi.models.operations.DeleteStyleGuideResponse deleteStyleGuide(org.openapis.openapi.models.operations.DeleteStyleGuideRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteStyleGuidePathParams.class, baseUrl, "/projects/{projectId}/styleguides/{styleGuideId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteStyleGuideRequest.class, baseUrl, "/projects/{projectId}/styleguides/{styleGuideId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -234,7 +234,7 @@ public class StyleGuide {
      */
     public org.openapis.openapi.models.operations.DownloadStyleGuideResponse downloadStyleGuide(org.openapis.openapi.models.operations.DownloadStyleGuideRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadStyleGuidePathParams.class, baseUrl, "/projects/{projectId}/styleguides/{styleGuideId}/download", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadStyleGuideRequest.class, baseUrl, "/projects/{projectId}/styleguides/{styleGuideId}/download", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -281,13 +281,13 @@ public class StyleGuide {
      */
     public org.openapis.openapi.models.operations.GetStyleGuideResponse getStyleGuide(org.openapis.openapi.models.operations.GetStyleGuideRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStyleGuidePathParams.class, baseUrl, "/projects/{projectId}/styleguides/{styleGuideId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStyleGuideRequest.class, baseUrl, "/projects/{projectId}/styleguides/{styleGuideId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStyleGuideQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStyleGuideRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -335,13 +335,13 @@ public class StyleGuide {
      */
     public org.openapis.openapi.models.operations.GetStyleGuidesResponse getStyleGuides(org.openapis.openapi.models.operations.GetStyleGuidesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStyleGuidesPathParams.class, baseUrl, "/projects/{projectId}/styleguides", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStyleGuidesRequest.class, baseUrl, "/projects/{projectId}/styleguides", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStyleGuidesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStyleGuidesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -387,7 +387,7 @@ public class StyleGuide {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateGlobalStyleGuideJsonResponse updateGlobalStyleGuideJson(org.openapis.openapi.models.operations.UpdateGlobalStyleGuideJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateGlobalStyleGuideJsonResponse updateGlobalStyleGuideJson(org.openapis.openapi.models.shared.AccountStyleGuideUploadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/styleguide");
         
@@ -437,7 +437,7 @@ public class StyleGuide {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateGlobalStyleGuideMultipartResponse updateGlobalStyleGuideMultipart(org.openapis.openapi.models.operations.UpdateGlobalStyleGuideMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateGlobalStyleGuideMultipartResponse updateGlobalStyleGuideMultipart(org.openapis.openapi.models.shared.AccountStyleGuideUploadRequest1 request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/styleguide");
         
@@ -489,12 +489,12 @@ public class StyleGuide {
      */
     public org.openapis.openapi.models.operations.UpdateStyleGuideJsonResponse updateStyleGuideJson(org.openapis.openapi.models.operations.UpdateStyleGuideJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateStyleGuideJsonPathParams.class, baseUrl, "/projects/{projectId}/styleguides/{styleGuideId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateStyleGuideJsonRequest.class, baseUrl, "/projects/{projectId}/styleguides/{styleGuideId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "styleGuideUploadRequest", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -539,12 +539,12 @@ public class StyleGuide {
      */
     public org.openapis.openapi.models.operations.UpdateStyleGuideMultipartResponse updateStyleGuideMultipart(org.openapis.openapi.models.operations.UpdateStyleGuideMultipartRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateStyleGuideMultipartPathParams.class, baseUrl, "/projects/{projectId}/styleguides/{styleGuideId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateStyleGuideMultipartRequest.class, baseUrl, "/projects/{projectId}/styleguides/{styleGuideId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "styleGuideUploadRequest1", "multipart");
         req.setBody(serializedRequestBody);
         
         

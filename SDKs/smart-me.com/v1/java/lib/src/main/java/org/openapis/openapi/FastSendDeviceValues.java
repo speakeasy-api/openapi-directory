@@ -34,7 +34,7 @@ public class FastSendDeviceValues {
      */
     public org.openapis.openapi.models.operations.FastSendDeviceValuesGetResponse fastSendDeviceValuesGet(org.openapis.openapi.models.operations.FastSendDeviceValuesGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FastSendDeviceValuesGetPathParams.class, baseUrl, "/api/FastSendDeviceValues/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FastSendDeviceValuesGetRequest.class, baseUrl, "/api/FastSendDeviceValues/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

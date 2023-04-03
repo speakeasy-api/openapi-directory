@@ -7,31 +7,150 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FitnessUsersDataSourcesDatasetsPatchRequest {
-    
-    public FitnessUsersDataSourcesDatasetsPatchPathParams pathParams;
-    public FitnessUsersDataSourcesDatasetsPatchRequest withPathParams(FitnessUsersDataSourcesDatasetsPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FitnessUsersDataSourcesDatasetsPatchQueryParams queryParams;
-    public FitnessUsersDataSourcesDatasetsPatchRequest withQueryParams(FitnessUsersDataSourcesDatasetsPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public FitnessUsersDataSourcesDatasetsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Dataset request;
-    public FitnessUsersDataSourcesDatasetsPatchRequest withRequest(org.openapis.openapi.models.shared.Dataset request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Dataset dataset;
+    public FitnessUsersDataSourcesDatasetsPatchRequest withDataset(org.openapis.openapi.models.shared.Dataset dataset) {
+        this.dataset = dataset;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public FitnessUsersDataSourcesDatasetsPatchRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public FitnessUsersDataSourcesDatasetsPatchSecurity security;
-    public FitnessUsersDataSourcesDatasetsPatchRequest withSecurity(FitnessUsersDataSourcesDatasetsPatchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public FitnessUsersDataSourcesDatasetsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public FitnessUsersDataSourcesDatasetsPatchRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * The data stream ID of the data source that created the dataset.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataSourceId")
+    public String dataSourceId;
+    public FitnessUsersDataSourcesDatasetsPatchRequest withDataSourceId(String dataSourceId) {
+        this.dataSourceId = dataSourceId;
+        return this;
+    }
+    
+    /**
+     * This field is not used, and can be safely omitted.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=datasetId")
+    public String datasetId;
+    public FitnessUsersDataSourcesDatasetsPatchRequest withDatasetId(String datasetId) {
+        this.datasetId = datasetId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FitnessUsersDataSourcesDatasetsPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public FitnessUsersDataSourcesDatasetsPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public FitnessUsersDataSourcesDatasetsPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public FitnessUsersDataSourcesDatasetsPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public FitnessUsersDataSourcesDatasetsPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public FitnessUsersDataSourcesDatasetsPatchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public FitnessUsersDataSourcesDatasetsPatchRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Patch a dataset for the person identified. Use me to indicate the authenticated user. Only me is supported at this time.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public FitnessUsersDataSourcesDatasetsPatchRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

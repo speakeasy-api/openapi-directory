@@ -4,27 +4,105 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRecommendationFeedbackRequest {
-    
-    public ListRecommendationFeedbackPathParams pathParams;
-    public ListRecommendationFeedbackRequest withPathParams(ListRecommendationFeedbackPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Amazon Resource Name (ARN) of the &lt;a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_CodeReview.html"&gt;CodeReview&lt;/a&gt; object. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CodeReviewArn")
+    public String codeReviewArn;
+    public ListRecommendationFeedbackRequest withCodeReviewArn(String codeReviewArn) {
+        this.codeReviewArn = codeReviewArn;
         return this;
     }
     
-    
-    public ListRecommendationFeedbackQueryParams queryParams;
-    public ListRecommendationFeedbackRequest withQueryParams(ListRecommendationFeedbackQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum number of results that are returned per call. The default is 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public ListRecommendationFeedbackRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
     
+    /**
+     * If &lt;code&gt;nextToken&lt;/code&gt; is returned, there are more results available. The value of &lt;code&gt;nextToken&lt;/code&gt; is a unique pagination token for each page. Make the call again using the returned token to retrieve the next page. Keep all other arguments unchanged.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListRecommendationFeedbackRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
     
-    public ListRecommendationFeedbackHeaders headers;
-    public ListRecommendationFeedbackRequest withHeaders(ListRecommendationFeedbackHeaders headers) {
-        this.headers = headers;
+    /**
+     * Used to query the recommendation feedback for a given recommendation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RecommendationIds")
+    public String[] recommendationIds;
+    public ListRecommendationFeedbackRequest withRecommendationIds(String[] recommendationIds) {
+        this.recommendationIds = recommendationIds;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;An Amazon Web Services user's account ID or Amazon Resource Name (ARN). Use this ID to query the recommendation feedback for a code review from that user.&lt;/p&gt; &lt;p&gt; The &lt;code&gt;UserId&lt;/code&gt; is an IAM principal that can be specified as an Amazon Web Services account ID or an Amazon Resource Name (ARN). For more information, see &lt;a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html#Principal_specifying"&gt; Specifying a Principal&lt;/a&gt; in the &lt;i&gt;Amazon Web Services Identity and Access Management User Guide&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserIds")
+    public String[] userIds;
+    public ListRecommendationFeedbackRequest withUserIds(String[] userIds) {
+        this.userIds = userIds;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListRecommendationFeedbackRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListRecommendationFeedbackRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListRecommendationFeedbackRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListRecommendationFeedbackRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListRecommendationFeedbackRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListRecommendationFeedbackRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListRecommendationFeedbackRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

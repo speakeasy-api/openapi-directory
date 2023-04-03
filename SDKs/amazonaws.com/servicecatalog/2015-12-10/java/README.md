@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AcceptPortfolioShareXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AcceptPortfolioShareHeaders;
 import org.openapis.openapi.models.operations.AcceptPortfolioShareRequest;
 import org.openapis.openapi.models.operations.AcceptPortfolioShareResponse;
 import org.openapis.openapi.models.shared.AcceptPortfolioShareInput;
@@ -29,29 +28,25 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AcceptPortfolioShareRequest req = new AcceptPortfolioShareRequest() {{
-                headers = new AcceptPortfolioShareHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AWS242ServiceCatalogService.AcceptPortfolioShare";
+                acceptPortfolioShareInput = new AcceptPortfolioShareInput() {{
+                    acceptLanguage = "corrupti";
+                    portfolioId = "provident";
+                    portfolioShareType = "AWS_ORGANIZATIONS";
                 }};
-                request = new AcceptPortfolioShareInput() {{
-                    acceptLanguage = "illum";
-                    portfolioId = "vel";
-                    portfolioShareType = "AWS_SERVICECATALOG";
-                }};
-            }};            
+                xAmzAlgorithm = "quibusdam";
+                xAmzContentSha256 = "unde";
+                xAmzCredential = "nulla";
+                xAmzDate = "corrupti";
+                xAmzSecurityToken = "illum";
+                xAmzSignature = "vel";
+                xAmzSignedHeaders = "error";
+                xAmzTarget = "AWS242ServiceCatalogService.AcceptPortfolioShare";
+            }}            
 
             AcceptPortfolioShareResponse res = sdk.acceptPortfolioShare(req);
 
@@ -65,7 +60,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

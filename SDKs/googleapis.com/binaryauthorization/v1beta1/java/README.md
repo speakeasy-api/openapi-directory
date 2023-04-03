@@ -18,19 +18,15 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateSecurity;
-import org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreatePathParams;
-import org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateQueryParams;
 import org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateRequest;
 import org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.AttestorInput;
 import org.openapis.openapi.models.shared.UserOwnedDrydockNoteInput;
 import org.openapis.openapi.models.shared.AttestorPublicKey;
 import org.openapis.openapi.models.shared.PkixPublicKeySignatureAlgorithmEnum;
 import org.openapis.openapi.models.shared.PkixPublicKey;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -39,80 +35,71 @@ public class Application {
                 .build();
 
             BinaryauthorizationProjectsAttestorsCreateRequest req = new BinaryauthorizationProjectsAttestorsCreateRequest() {{
-                security = new BinaryauthorizationProjectsAttestorsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new BinaryauthorizationProjectsAttestorsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new BinaryauthorizationProjectsAttestorsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    attestorId = "unde";
-                    callback = "nulla";
-                    fields = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    uploadType = "deserunt";
-                    uploadProtocol = "suscipit";
-                }};
-                request = new AttestorInput() {{
-                    description = "iure";
-                    etag = "magnam";
-                    name = "debitis";
+                dollarXgafv = "2";
+                attestorInput = new AttestorInput() {{
+                    description = "provident";
+                    etag = "distinctio";
+                    name = "quibusdam";
                     userOwnedDrydockNote = new UserOwnedDrydockNoteInput() {{
-                        noteReference = "ipsa";
+                        noteReference = "unde";
                         publicKeys = new org.openapis.openapi.models.shared.AttestorPublicKey[]{{
                             add(new AttestorPublicKey() {{
-                                asciiArmoredPgpPublicKey = "tempora";
-                                comment = "suscipit";
-                                id = "molestiae";
+                                asciiArmoredPgpPublicKey = "corrupti";
+                                comment = "illum";
+                                id = "vel";
                                 pkixPublicKey = new PkixPublicKey() {{
-                                    publicKeyPem = "minus";
-                                    signatureAlgorithm = "ECDSA_P384_SHA384";
-                                }};
-                            }}),
-                            add(new AttestorPublicKey() {{
-                                asciiArmoredPgpPublicKey = "voluptatum";
-                                comment = "iusto";
-                                id = "excepturi";
-                                pkixPublicKey = new PkixPublicKey() {{
-                                    publicKeyPem = "nisi";
-                                    signatureAlgorithm = "ECDSA_P521_SHA512";
-                                }};
-                            }}),
-                            add(new AttestorPublicKey() {{
-                                asciiArmoredPgpPublicKey = "temporibus";
-                                comment = "ab";
-                                id = "quis";
-                                pkixPublicKey = new PkixPublicKey() {{
-                                    publicKeyPem = "veritatis";
+                                    publicKeyPem = "error";
                                     signatureAlgorithm = "RSA_SIGN_PKCS1_4096_SHA512";
                                 }};
                             }}),
                             add(new AttestorPublicKey() {{
-                                asciiArmoredPgpPublicKey = "perferendis";
-                                comment = "ipsam";
-                                id = "repellendus";
+                                asciiArmoredPgpPublicKey = "suscipit";
+                                comment = "iure";
+                                id = "magnam";
                                 pkixPublicKey = new PkixPublicKey() {{
-                                    publicKeyPem = "sapiente";
-                                    signatureAlgorithm = "EC_SIGN_P256_SHA256";
+                                    publicKeyPem = "debitis";
+                                    signatureAlgorithm = "RSA_PSS_2048_SHA256";
+                                }};
+                            }}),
+                            add(new AttestorPublicKey() {{
+                                asciiArmoredPgpPublicKey = "delectus";
+                                comment = "tempora";
+                                id = "suscipit";
+                                pkixPublicKey = new PkixPublicKey() {{
+                                    publicKeyPem = "molestiae";
+                                    signatureAlgorithm = "ECDSA_P384_SHA384";
+                                }};
+                            }}),
+                            add(new AttestorPublicKey() {{
+                                asciiArmoredPgpPublicKey = "placeat";
+                                comment = "voluptatum";
+                                id = "iusto";
+                                pkixPublicKey = new PkixPublicKey() {{
+                                    publicKeyPem = "excepturi";
+                                    signatureAlgorithm = "RSA_PSS_4096_SHA512";
                                 }};
                             }}),
                         }};
                     }};
                 }};
-            }};            
+                accessToken = "recusandae";
+                alt = "proto";
+                attestorId = "ab";
+                callback = "quis";
+                fields = "veritatis";
+                key = "deserunt";
+                oauthToken = "perferendis";
+                parent = "ipsam";
+                prettyPrint = false;
+                quotaUser = "repellendus";
+                uploadType = "sapiente";
+                uploadProtocol = "quo";
+            }}            
 
-            BinaryauthorizationProjectsAttestorsCreateResponse res = sdk.projects.binaryauthorizationProjectsAttestorsCreate(req);
+            BinaryauthorizationProjectsAttestorsCreateResponse res = sdk.projects.binaryauthorizationProjectsAttestorsCreate(req, new BinaryauthorizationProjectsAttestorsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.attestor.isPresent()) {
                 // handle response
@@ -124,7 +111,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

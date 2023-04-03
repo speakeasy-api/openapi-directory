@@ -4,13 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamesDecisionsRecentRequest {
+    /**
+     * The number of days used to define the time window of naming decisions to search.  The number is interpreted as searching for 'names affected by decisions within the last X days'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=days")
+    public Long days;
+    public GetNamesDecisionsRecentRequest withDays(Long days) {
+        this.days = days;
+        return this;
+    }
     
-    public GetNamesDecisionsRecentQueryParams queryParams;
-    public GetNamesDecisionsRecentRequest withQueryParams(GetNamesDecisionsRecentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A flag to indicate whether to embed the corresponding 'feature' into each matching name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
+    public GetNamesDecisionsRecentEmbedEnum embed;
+    public GetNamesDecisionsRecentRequest withEmbed(GetNamesDecisionsRecentEmbedEnum embed) {
+        this.embed = embed;
+        return this;
+    }
+    
+    /**
+     * A filter to limit the search to names associated with features of a certain 'category'  The value of this parameter should be a 'featureCategoryCode' value returned by the /featureCategories resource, or an asterisk (*) to request that all feature categories be included.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureCategory")
+    public String featureCategory;
+    public GetNamesDecisionsRecentRequest withFeatureCategory(String featureCategory) {
+        this.featureCategory = featureCategory;
+        return this;
+    }
+    
+    /**
+     * A filter to limit the search to names associated with features of a certain 'class'  The value of this parameter should be a 'featureClassCode' value returned by the /featureClasses resource, or an asterisk (*) to request that all feature classes be included.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureClass")
+    public String featureClass;
+    public GetNamesDecisionsRecentRequest withFeatureClass(String featureClass) {
+        this.featureClass = featureClass;
+        return this;
+    }
+    
+    /**
+     * A filter to limit the search to names associated with features of a certain 'type'  The value of this parameter should be a 'featureTypeCode' value returned by the /featureTypes resource, or an asterisk (*) to request that all feature types be included
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureType")
+    public String featureType;
+    public GetNamesDecisionsRecentRequest withFeatureType(String featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    
+    /**
+     * The number of search results to return (1-200)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=itemsPerPage")
+    public Long itemsPerPage;
+    public GetNamesDecisionsRecentRequest withItemsPerPage(Long itemsPerPage) {
+        this.itemsPerPage = itemsPerPage;
+        return this;
+    }
+    
+    /**
+     * The format of the output.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputFormat")
+    public GetNamesDecisionsRecentOutputFormatEnum outputFormat;
+    public GetNamesDecisionsRecentRequest withOutputFormat(GetNamesDecisionsRecentOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    
+    /**
+     * The EPSG code of the spatial reference system (SRS) to use for output geometries.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
+    public GetNamesDecisionsRecentOutputSrsEnum outputSRS;
+    public GetNamesDecisionsRecentRequest withOutputSRS(GetNamesDecisionsRecentOutputSrsEnum outputSRS) {
+        this.outputSRS = outputSRS;
+        return this;
+    }
+    
+    /**
+     * A flag indicating whether to include with each matching name a succinct list of attributes (summary), or a comprehensive list of attributes (detail)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputStyle")
+    public GetNamesDecisionsRecentOutputStyleEnum outputStyle;
+    public GetNamesDecisionsRecentRequest withOutputStyle(GetNamesDecisionsRecentOutputStyleEnum outputStyle) {
+        this.outputStyle = outputStyle;
+        return this;
+    }
+    
+    /**
+     * The distance to move the accessPoint away from the curb and towards the inside of the parcel (in metres). Ignored if locationDescriptor not set to accessPoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
+    public GetNamesDecisionsRecentSortByEnum sortBy;
+    public GetNamesDecisionsRecentRequest withSortBy(GetNamesDecisionsRecentSortByEnum sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * The index of the first record to be returned (&gt;= 1)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
+    public Long startIndex;
+    public GetNamesDecisionsRecentRequest withStartIndex(Long startIndex) {
+        this.startIndex = startIndex;
         return this;
     }
     

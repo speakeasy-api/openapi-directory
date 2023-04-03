@@ -38,7 +38,7 @@ public class VotedEpisodes {
      */
     public org.openapis.openapi.models.operations.DeleteUserVotesEpisodesEpisodeIdResponse deleteUserVotesEpisodesEpisodeId(org.openapis.openapi.models.operations.DeleteUserVotesEpisodesEpisodeIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserVotesEpisodesEpisodeIdPathParams.class, baseUrl, "/user/votes/episodes/{episode_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserVotesEpisodesEpisodeIdRequest.class, baseUrl, "/user/votes/episodes/{episode_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -109,7 +109,7 @@ public class VotedEpisodes {
      */
     public org.openapis.openapi.models.operations.GetUserVotesEpisodesEpisodeIdResponse getUserVotesEpisodesEpisodeId(org.openapis.openapi.models.operations.GetUserVotesEpisodesEpisodeIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserVotesEpisodesEpisodeIdPathParams.class, baseUrl, "/user/votes/episodes/{episode_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserVotesEpisodesEpisodeIdRequest.class, baseUrl, "/user/votes/episodes/{episode_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -150,12 +150,12 @@ public class VotedEpisodes {
      */
     public org.openapis.openapi.models.operations.PutUserVotesEpisodesEpisodeIdResponse putUserVotesEpisodesEpisodeId(org.openapis.openapi.models.operations.PutUserVotesEpisodesEpisodeIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUserVotesEpisodesEpisodeIdPathParams.class, baseUrl, "/user/votes/episodes/{episode_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUserVotesEpisodesEpisodeIdRequest.class, baseUrl, "/user/votes/episodes/{episode_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "episodeVoteInput", "json");
         req.setBody(serializedRequestBody);
         
         

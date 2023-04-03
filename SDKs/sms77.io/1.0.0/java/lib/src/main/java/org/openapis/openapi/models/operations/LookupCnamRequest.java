@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LookupCnamRequest {
-    
-    public LookupCnamQueryParams queryParams;
-    public LookupCnamRequest withQueryParams(LookupCnamQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The phone number to look up.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=number")
+    public String[] number;
+    public LookupCnamRequest withNumber(String[] number) {
+        this.number = number;
         return this;
     }
     

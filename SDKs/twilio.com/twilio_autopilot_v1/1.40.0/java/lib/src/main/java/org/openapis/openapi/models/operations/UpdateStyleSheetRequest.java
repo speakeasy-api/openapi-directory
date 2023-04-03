@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateStyleSheetRequest {
-    
-    public UpdateStyleSheetPathParams pathParams;
-    public UpdateStyleSheetRequest withPathParams(UpdateStyleSheetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public UpdateStyleSheetRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateStyleSheetUpdateStyleSheetRequest request;
-    public UpdateStyleSheetRequest withRequest(UpdateStyleSheetUpdateStyleSheetRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public UpdateStyleSheetSecurity security;
-    public UpdateStyleSheetRequest withSecurity(UpdateStyleSheetSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateStyleSheetRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public UpdateStyleSheetUpdateStyleSheetRequest requestBody;
+    public UpdateStyleSheetRequest withRequestBody(UpdateStyleSheetUpdateStyleSheetRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

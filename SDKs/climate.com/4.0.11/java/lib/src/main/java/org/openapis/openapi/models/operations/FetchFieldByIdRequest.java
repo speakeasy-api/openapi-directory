@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchFieldByIdRequest {
-    
-    public FetchFieldByIdPathParams pathParams;
-    public FetchFieldByIdRequest withPathParams(FetchFieldByIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchFieldByIdSecurity security;
-    public FetchFieldByIdRequest withSecurity(FetchFieldByIdSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the Field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fieldId")
+    public String fieldId;
+    public FetchFieldByIdRequest withFieldId(String fieldId) {
+        this.fieldId = fieldId;
         return this;
     }
     

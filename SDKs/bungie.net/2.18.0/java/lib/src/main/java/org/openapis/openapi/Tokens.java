@@ -32,19 +32,20 @@ public class Tokens {
     /**
      * Apply a partner offer to the targeted user. This endpoint does not claim a new offer, but any already claimed offers will be applied to the game if not already.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TokensApplyMissingPartnerOffersWithoutClaimResponse tokensApplyMissingPartnerOffersWithoutClaim(org.openapis.openapi.models.operations.TokensApplyMissingPartnerOffersWithoutClaimRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TokensApplyMissingPartnerOffersWithoutClaimResponse tokensApplyMissingPartnerOffersWithoutClaim(org.openapis.openapi.models.operations.TokensApplyMissingPartnerOffersWithoutClaimRequest request, org.openapis.openapi.models.operations.TokensApplyMissingPartnerOffersWithoutClaimSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TokensApplyMissingPartnerOffersWithoutClaimPathParams.class, baseUrl, "/Tokens/Partner/ApplyMissingOffers/{partnerApplicationId}/{targetBnetMembershipId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TokensApplyMissingPartnerOffersWithoutClaimRequest.class, baseUrl, "/Tokens/Partner/ApplyMissingOffers/{partnerApplicationId}/{targetBnetMembershipId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -69,11 +70,10 @@ public class Tokens {
 
     /**
      * Claim a partner offer as the authenticated user.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TokensClaimPartnerOfferResponse tokensClaimPartnerOffer(org.openapis.openapi.models.operations.TokensClaimPartnerOfferRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TokensClaimPartnerOfferResponse tokensClaimPartnerOffer() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Tokens/Partner/ClaimOffer/");
         
@@ -82,8 +82,7 @@ public class Tokens {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -107,11 +106,10 @@ public class Tokens {
 
     /**
      * Twitch Drops self-repair function - scans twitch for drops not marked as fulfilled and resyncs them.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TokensForceDropsRepairResponse tokensForceDropsRepair(org.openapis.openapi.models.operations.TokensForceDropsRepairRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TokensForceDropsRepairResponse tokensForceDropsRepair() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Tokens/Partner/ForceDropsRepair/");
         
@@ -120,8 +118,7 @@ public class Tokens {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -146,19 +143,20 @@ public class Tokens {
     /**
      * Returns the bungie rewards for the targeted user when a platform membership Id and Type are used.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TokensGetBungieRewardsForPlatformUserResponse tokensGetBungieRewardsForPlatformUser(org.openapis.openapi.models.operations.TokensGetBungieRewardsForPlatformUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TokensGetBungieRewardsForPlatformUserResponse tokensGetBungieRewardsForPlatformUser(org.openapis.openapi.models.operations.TokensGetBungieRewardsForPlatformUserRequest request, org.openapis.openapi.models.operations.TokensGetBungieRewardsForPlatformUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TokensGetBungieRewardsForPlatformUserPathParams.class, baseUrl, "/Tokens/Rewards/GetRewardsForPlatformUser/{membershipId}/{membershipType}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TokensGetBungieRewardsForPlatformUserRequest.class, baseUrl, "/Tokens/Rewards/GetRewardsForPlatformUser/{membershipId}/{membershipType}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -184,19 +182,20 @@ public class Tokens {
     /**
      * Returns the bungie rewards for the targeted user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TokensGetBungieRewardsForUserResponse tokensGetBungieRewardsForUser(org.openapis.openapi.models.operations.TokensGetBungieRewardsForUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TokensGetBungieRewardsForUserResponse tokensGetBungieRewardsForUser(org.openapis.openapi.models.operations.TokensGetBungieRewardsForUserRequest request, org.openapis.openapi.models.operations.TokensGetBungieRewardsForUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TokensGetBungieRewardsForUserPathParams.class, baseUrl, "/Tokens/Rewards/GetRewardsForUser/{membershipId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TokensGetBungieRewardsForUserRequest.class, baseUrl, "/Tokens/Rewards/GetRewardsForUser/{membershipId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -258,19 +257,20 @@ public class Tokens {
     /**
      * Returns the partner sku and offer history of the targeted user. Elevated permissions are required to see users that are not yourself.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TokensGetPartnerOfferSkuHistoryResponse tokensGetPartnerOfferSkuHistory(org.openapis.openapi.models.operations.TokensGetPartnerOfferSkuHistoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TokensGetPartnerOfferSkuHistoryResponse tokensGetPartnerOfferSkuHistory(org.openapis.openapi.models.operations.TokensGetPartnerOfferSkuHistoryRequest request, org.openapis.openapi.models.operations.TokensGetPartnerOfferSkuHistorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TokensGetPartnerOfferSkuHistoryPathParams.class, baseUrl, "/Tokens/Partner/History/{partnerApplicationId}/{targetBnetMembershipId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TokensGetPartnerOfferSkuHistoryRequest.class, baseUrl, "/Tokens/Partner/History/{partnerApplicationId}/{targetBnetMembershipId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -296,19 +296,20 @@ public class Tokens {
     /**
      * Returns the partner rewards history of the targeted user, both partner offers and Twitch drops.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TokensGetPartnerRewardHistoryResponse tokensGetPartnerRewardHistory(org.openapis.openapi.models.operations.TokensGetPartnerRewardHistoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TokensGetPartnerRewardHistoryResponse tokensGetPartnerRewardHistory(org.openapis.openapi.models.operations.TokensGetPartnerRewardHistoryRequest request, org.openapis.openapi.models.operations.TokensGetPartnerRewardHistorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TokensGetPartnerRewardHistoryPathParams.class, baseUrl, "/Tokens/Partner/History/{targetBnetMembershipId}/Application/{partnerApplicationId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TokensGetPartnerRewardHistoryRequest.class, baseUrl, "/Tokens/Partner/History/{targetBnetMembershipId}/Application/{partnerApplicationId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

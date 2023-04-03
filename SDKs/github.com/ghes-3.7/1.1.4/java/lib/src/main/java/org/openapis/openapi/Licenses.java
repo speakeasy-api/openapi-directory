@@ -42,7 +42,7 @@ public class Licenses {
      */
     public org.openapis.openapi.models.operations.LicensesGetResponse licensesGet(org.openapis.openapi.models.operations.LicensesGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LicensesGetPathParams.class, baseUrl, "/licenses/{license}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LicensesGetRequest.class, baseUrl, "/licenses/{license}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -97,7 +97,7 @@ public class Licenses {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LicensesGetAllCommonlyUsedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LicensesGetAllCommonlyUsedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -141,7 +141,7 @@ public class Licenses {
      */
     public org.openapis.openapi.models.operations.LicensesGetForRepoResponse licensesGetForRepo(org.openapis.openapi.models.operations.LicensesGetForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LicensesGetForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/license", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LicensesGetForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/license", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

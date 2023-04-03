@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateConsentSecurity;
-import org.openapis.openapi.models.operations.CreateConsentHeaders;
 import org.openapis.openapi.models.operations.CreateConsentRequest;
 import org.openapis.openapi.models.operations.CreateConsentResponse;
 import org.openapis.openapi.models.shared.Consents;
@@ -29,7 +28,6 @@ import org.openapis.openapi.models.shared.AccountAccess;
 import org.openapis.openapi.models.shared.AccountReference16CH;
 import org.openapis.openapi.models.shared.AdditionalInformationAccess;
 import org.openapis.openapi.models.shared.PSUHttpMethodEnum;
-import org.openapis.openapi.models.shared.SchemeBearerAuthOAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -38,39 +36,32 @@ public class Application {
                 .build();
 
             CreateConsentRequest req = new CreateConsentRequest() {{
-                security = new CreateConsentSecurity() {{
-                    bearerAuthOAuth = new SchemeBearerAuthOAuth() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
-                    }};
-                }};
-                headers = new CreateConsentHeaders() {{
-                    digest = "corrupti";
-                    psuAccept = "provident";
-                    psuAcceptCharset = "distinctio";
-                    psuAcceptEncoding = "quibusdam";
-                    psuAcceptLanguage = "unde";
-                    psuCorporateID = "nulla";
-                    psuCorporateIDType = "corrupti";
-                    psuDeviceID = "illum";
-                    psuGeoLocation = "vel";
-                    psuHttpMethod = "PATCH";
-                    psuId = "deserunt";
-                    psuIDType = "suscipit";
-                    psuIPAddress = "112.76.228.14";
-                    psuIPPort = "delectus";
-                    psuUserAgent = "tempora";
-                    signature = "suscipit";
-                    tppBrandLoggingInformation = "molestiae";
-                    tppExplicitAuthorisationPreferred = false;
-                    tppNokRedirectURI = "https://studious-lynx.info";
-                    tppNotificationContentPreferred = "excepturi";
-                    tppNotificationURI = "nisi";
-                    tppRedirectPreferred = false;
-                    tppRedirectURI = "https://tangible-bathroom.info";
-                    tppSignatureCertificate = "veritatis";
-                    xRequestID = "deserunt";
-                }};
-                request = new Consents() {{
+                digest = "corrupti";
+                psuAccept = "provident";
+                psuAcceptCharset = "distinctio";
+                psuAcceptEncoding = "quibusdam";
+                psuAcceptLanguage = "unde";
+                psuCorporateID = "nulla";
+                psuCorporateIDType = "corrupti";
+                psuDeviceID = "illum";
+                psuGeoLocation = "vel";
+                psuHttpMethod = "PATCH";
+                psuId = "deserunt";
+                psuIDType = "suscipit";
+                psuIPAddress = "112.76.228.14";
+                psuIPPort = "delectus";
+                psuUserAgent = "tempora";
+                signature = "suscipit";
+                tppBrandLoggingInformation = "molestiae";
+                tppExplicitAuthorisationPreferred = false;
+                tppNokRedirectURI = "https://studious-lynx.info";
+                tppNotificationContentPreferred = "excepturi";
+                tppNotificationURI = "nisi";
+                tppRedirectPreferred = false;
+                tppRedirectURI = "https://tangible-bathroom.info";
+                tppSignatureCertificate = "veritatis";
+                xRequestID = "deserunt";
+                consents = new Consents() {{
                     access = new AccountAccess() {{
                         accounts = new org.openapis.openapi.models.shared.AccountReference16CH[]{{
                             add(new AccountReference16CH() {{
@@ -194,9 +185,11 @@ public class Application {
                     recurringIndicator = false;
                     validUntil = "2020-12-31";
                 }};
-            }};            
+            }}            
 
-            CreateConsentResponse res = sdk.accountInformationServiceAIS.createConsent(req);
+            CreateConsentResponse res = sdk.accountInformationServiceAIS.createConsent(req, new CreateConsentSecurity() {{
+                bearerAuthOAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
+            }});
 
             if (res.consentsResponse201.isPresent()) {
                 // handle response
@@ -208,7 +201,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### accountInformationServiceAIS

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataSubjectRightDeleteStatusRequestRequest {
-    
-    public DataSubjectRightDeleteStatusRequestPathParams pathParams;
-    public DataSubjectRightDeleteStatusRequestRequest withPathParams(DataSubjectRightDeleteStatusRequestPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Email used for delete with x-authz-bypass headers
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public DataSubjectRightDeleteStatusRequestRequest withEmail(String email) {
+        this.email = email;
         return this;
     }
     
-    
-    public DataSubjectRightDeleteStatusRequestQueryParams queryParams;
-    public DataSubjectRightDeleteStatusRequestRequest withQueryParams(DataSubjectRightDeleteStatusRequestQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DataSubjectRightDeleteStatusRequestSecurity security;
-    public DataSubjectRightDeleteStatusRequestRequest withSecurity(DataSubjectRightDeleteStatusRequestSecurity security) {
-        this.security = security;
+    /**
+     * Unique request ID (GUID)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
+    public String token;
+    public DataSubjectRightDeleteStatusRequestRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

@@ -37,10 +37,11 @@ public class JwtVerifiers {
      * Create one global JWT verifiers
      * Create one global JWT verifiers
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateGlobalJwtVerifierResponse createGlobalJwtVerifier(org.openapis.openapi.models.operations.CreateGlobalJwtVerifierRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateGlobalJwtVerifierResponse createGlobalJwtVerifier(org.openapis.openapi.models.shared.GlobalJwtVerifier request, org.openapis.openapi.models.operations.CreateGlobalJwtVerifierSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/verifiers");
         
@@ -51,7 +52,7 @@ public class JwtVerifiers {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,19 +82,20 @@ public class JwtVerifiers {
      * Delete one global JWT verifiers
      * Delete one global JWT verifiers
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteGlobalJwtVerifierResponse deleteGlobalJwtVerifier(org.openapis.openapi.models.operations.DeleteGlobalJwtVerifierRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteGlobalJwtVerifierResponse deleteGlobalJwtVerifier(org.openapis.openapi.models.operations.DeleteGlobalJwtVerifierRequest request, org.openapis.openapi.models.operations.DeleteGlobalJwtVerifierSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteGlobalJwtVerifierPathParams.class, baseUrl, "/api/verifiers/{verifierId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteGlobalJwtVerifierRequest.class, baseUrl, "/api/verifiers/{verifierId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -122,11 +124,10 @@ public class JwtVerifiers {
     /**
      * Get all global JWT verifiers
      * Get all global JWT verifiers
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindAllGlobalJwtVerifiersResponse findAllGlobalJwtVerifiers(org.openapis.openapi.models.operations.FindAllGlobalJwtVerifiersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindAllGlobalJwtVerifiersResponse findAllGlobalJwtVerifiers() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/verifiers");
         
@@ -135,8 +136,7 @@ public class JwtVerifiers {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -165,19 +165,20 @@ public class JwtVerifiers {
      * Get one global JWT verifiers
      * Get one global JWT verifiers
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindGlobalJwtVerifiersByIdResponse findGlobalJwtVerifiersById(org.openapis.openapi.models.operations.FindGlobalJwtVerifiersByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindGlobalJwtVerifiersByIdResponse findGlobalJwtVerifiersById(org.openapis.openapi.models.operations.FindGlobalJwtVerifiersByIdRequest request, org.openapis.openapi.models.operations.FindGlobalJwtVerifiersByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FindGlobalJwtVerifiersByIdPathParams.class, baseUrl, "/api/verifiers/{verifierId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FindGlobalJwtVerifiersByIdRequest.class, baseUrl, "/api/verifiers/{verifierId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -207,21 +208,22 @@ public class JwtVerifiers {
      * Update one global JWT verifiers
      * Update one global JWT verifiers
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchGlobalJwtVerifierResponse patchGlobalJwtVerifier(org.openapis.openapi.models.operations.PatchGlobalJwtVerifierRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchGlobalJwtVerifierResponse patchGlobalJwtVerifier(org.openapis.openapi.models.operations.PatchGlobalJwtVerifierRequest request, org.openapis.openapi.models.operations.PatchGlobalJwtVerifierSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchGlobalJwtVerifierPathParams.class, baseUrl, "/api/verifiers/{verifierId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchGlobalJwtVerifierRequest.class, baseUrl, "/api/verifiers/{verifierId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -251,21 +253,22 @@ public class JwtVerifiers {
      * Update one global JWT verifiers
      * Update one global JWT verifiers
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateGlobalJwtVerifierResponse updateGlobalJwtVerifier(org.openapis.openapi.models.operations.UpdateGlobalJwtVerifierRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateGlobalJwtVerifierResponse updateGlobalJwtVerifier(org.openapis.openapi.models.operations.UpdateGlobalJwtVerifierRequest request, org.openapis.openapi.models.operations.UpdateGlobalJwtVerifierSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateGlobalJwtVerifierPathParams.class, baseUrl, "/api/verifiers/{verifierId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateGlobalJwtVerifierRequest.class, baseUrl, "/api/verifiers/{verifierId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "globalJwtVerifier", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

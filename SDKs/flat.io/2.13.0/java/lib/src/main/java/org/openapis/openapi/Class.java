@@ -40,19 +40,20 @@ public class Class {
      * Mark the class as `active`. This is mainly used for classes synchronized from Clever that are initially with an `inactive` state and hidden in the UI.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ActivateClassResponse activateClass(org.openapis.openapi.models.operations.ActivateClassRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ActivateClassResponse activateClass(org.openapis.openapi.models.operations.ActivateClassRequest request, org.openapis.openapi.models.operations.ActivateClassSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivateClassPathParams.class, baseUrl, "/classes/{class}/activate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivateClassRequest.class, baseUrl, "/classes/{class}/activate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -93,19 +94,20 @@ public class Class {
      * When enrolling a user in the class, Flat will automatically add this user to the corresponding Class group, based on this role in the Organization.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddClassUserResponse addClassUser(org.openapis.openapi.models.operations.AddClassUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddClassUserResponse addClassUser(org.openapis.openapi.models.operations.AddClassUserRequest request, org.openapis.openapi.models.operations.AddClassUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddClassUserPathParams.class, baseUrl, "/classes/{class}/users/{user}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddClassUserRequest.class, baseUrl, "/classes/{class}/users/{user}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -136,19 +138,20 @@ public class Class {
      * Archive the assignment
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ArchiveAssignmentResponse archiveAssignment(org.openapis.openapi.models.operations.ArchiveAssignmentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ArchiveAssignmentResponse archiveAssignment(org.openapis.openapi.models.operations.ArchiveAssignmentRequest request, org.openapis.openapi.models.operations.ArchiveAssignmentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArchiveAssignmentPathParams.class, baseUrl, "/classes/{class}/assignments/{assignment}/archive", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArchiveAssignmentRequest.class, baseUrl, "/classes/{class}/assignments/{assignment}/archive", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -185,19 +188,20 @@ public class Class {
      * Mark the class as `archived`. When this course is synchronized with another app, like Google Classroom, this state will be automatically be updated.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ArchiveClassResponse archiveClass(org.openapis.openapi.models.operations.ArchiveClassRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ArchiveClassResponse archiveClass(org.openapis.openapi.models.operations.ArchiveClassRequest request, org.openapis.openapi.models.operations.ArchiveClassSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArchiveClassPathParams.class, baseUrl, "/classes/{class}/archive", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArchiveClassRequest.class, baseUrl, "/classes/{class}/archive", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -238,24 +242,25 @@ public class Class {
      * If the new class is synchronized with an external app (e.g. Google Classroom), the copied assignment will also be posted on the external app.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CopyAssignmentResponse copyAssignment(org.openapis.openapi.models.operations.CopyAssignmentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CopyAssignmentResponse copyAssignment(org.openapis.openapi.models.operations.CopyAssignmentRequest request, org.openapis.openapi.models.operations.CopyAssignmentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CopyAssignmentPathParams.class, baseUrl, "/classes/{class}/assignments/{assignment}/copy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CopyAssignmentRequest.class, baseUrl, "/classes/{class}/assignments/{assignment}/copy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "assignmentCopy", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -294,21 +299,22 @@ public class Class {
      * If the class is synchronized with Google Classroom, the assignment will be automatically posted to your Classroom course.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAssignmentResponse createAssignment(org.openapis.openapi.models.operations.CreateAssignmentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAssignmentResponse createAssignment(org.openapis.openapi.models.operations.CreateAssignmentRequest request, org.openapis.openapi.models.operations.CreateAssignmentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateAssignmentPathParams.class, baseUrl, "/classes/{class}/assignments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateAssignmentRequest.class, baseUrl, "/classes/{class}/assignments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "assignmentCreation", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -351,10 +357,11 @@ public class Class {
      * You can add users to this class using `PUT /classes/{class}/users/{user}`, they will automatically added to the group based on their role on Flat. Users can also enroll themselves to this class using `POST /classes/enroll/{enrollmentCode}` and the `enrollmentCode` returned in the `ClassDetails` response.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateClassResponse createClass(org.openapis.openapi.models.operations.CreateClassRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateClassResponse createClass(org.openapis.openapi.models.shared.ClassCreation request, org.openapis.openapi.models.operations.CreateClassSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/classes");
         
@@ -368,7 +375,7 @@ public class Class {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -407,24 +414,25 @@ public class Class {
      * Teachers can use `PUT /classes/{class}/assignments/{assignment}/submissions/{submission}` to update a submission by id.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateSubmissionResponse createSubmission(org.openapis.openapi.models.operations.CreateSubmissionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateSubmissionResponse createSubmission(org.openapis.openapi.models.operations.CreateSubmissionRequest request, org.openapis.openapi.models.operations.CreateSubmissionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSubmissionPathParams.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSubmissionRequest.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "assignmentSubmissionUpdate", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -463,19 +471,20 @@ public class Class {
      * Warning: Removing a user from the class will remove the associated resources, including the submissions and feedback related to these submissions.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteClassUserResponse deleteClassUser(org.openapis.openapi.models.operations.DeleteClassUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteClassUserResponse deleteClassUser(org.openapis.openapi.models.operations.DeleteClassUserRequest request, org.openapis.openapi.models.operations.DeleteClassUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteClassUserPathParams.class, baseUrl, "/classes/{class}/users/{user}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteClassUserRequest.class, baseUrl, "/classes/{class}/users/{user}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -506,19 +515,20 @@ public class Class {
      * Use this method as a teacher to delete a submission and allow student to start over the assignment
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteSubmissionResponse deleteSubmission(org.openapis.openapi.models.operations.DeleteSubmissionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteSubmissionResponse deleteSubmission(org.openapis.openapi.models.operations.DeleteSubmissionRequest request, org.openapis.openapi.models.operations.DeleteSubmissionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubmissionPathParams.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions/{submission}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubmissionRequest.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions/{submission}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -547,19 +557,20 @@ public class Class {
     /**
      * Delete a feedback comment to a submission
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteSubmissionCommentResponse deleteSubmissionComment(org.openapis.openapi.models.operations.DeleteSubmissionCommentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteSubmissionCommentResponse deleteSubmissionComment(org.openapis.openapi.models.operations.DeleteSubmissionCommentRequest request, org.openapis.openapi.models.operations.DeleteSubmissionCommentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubmissionCommentPathParams.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions/{submission}/comments/{comment}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubmissionCommentRequest.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions/{submission}/comments/{comment}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -591,24 +602,25 @@ public class Class {
      * Teachers can only set `return`, `draftGrade` and `grade`
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EditSubmissionResponse editSubmission(org.openapis.openapi.models.operations.EditSubmissionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EditSubmissionResponse editSubmission(org.openapis.openapi.models.operations.EditSubmissionRequest request, org.openapis.openapi.models.operations.EditSubmissionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditSubmissionPathParams.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions/{submission}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditSubmissionRequest.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions/{submission}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "assignmentSubmissionUpdate", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -647,19 +659,20 @@ public class Class {
      * Flat will automatically add the user to the corresponding class group based on this role in the organization.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnrollClassResponse enrollClass(org.openapis.openapi.models.operations.EnrollClassRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnrollClassResponse enrollClass(org.openapis.openapi.models.operations.EnrollClassRequest request, org.openapis.openapi.models.operations.EnrollClassSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnrollClassPathParams.class, baseUrl, "/classes/enroll/{enrollmentCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnrollClassRequest.class, baseUrl, "/classes/enroll/{enrollmentCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -695,19 +708,20 @@ public class Class {
      * CSV Grades exports
      * Export list of submissions grades to a CSV file
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportSubmissionsReviewsAsCsvResponse exportSubmissionsReviewsAsCsv(org.openapis.openapi.models.operations.ExportSubmissionsReviewsAsCsvRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportSubmissionsReviewsAsCsvResponse exportSubmissionsReviewsAsCsv(org.openapis.openapi.models.operations.ExportSubmissionsReviewsAsCsvRequest request, org.openapis.openapi.models.operations.ExportSubmissionsReviewsAsCsvSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportSubmissionsReviewsAsCsvPathParams.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions/csv", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportSubmissionsReviewsAsCsvRequest.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions/csv", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -741,19 +755,20 @@ public class Class {
      * Excel Grades exports
      * Export list of submissions grades to an Excel file
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportSubmissionsReviewsAsExcelResponse exportSubmissionsReviewsAsExcel(org.openapis.openapi.models.operations.ExportSubmissionsReviewsAsExcelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportSubmissionsReviewsAsExcelResponse exportSubmissionsReviewsAsExcel(org.openapis.openapi.models.operations.ExportSubmissionsReviewsAsExcelRequest request, org.openapis.openapi.models.operations.ExportSubmissionsReviewsAsExcelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportSubmissionsReviewsAsExcelPathParams.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions/excel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportSubmissionsReviewsAsExcelRequest.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions/excel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -790,30 +805,31 @@ public class Class {
      * When using a [Flat for Education](https://flat.io/edu) account, the inline and contextualized comments will be accessible in the child document.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ForkScoreResponse forkScore(org.openapis.openapi.models.operations.ForkScoreRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ForkScoreResponse forkScore(org.openapis.openapi.models.operations.ForkScoreRequest request, org.openapis.openapi.models.operations.ForkScoreSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ForkScorePathParams.class, baseUrl, "/scores/{score}/fork", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ForkScoreRequest.class, baseUrl, "/scores/{score}/fork", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "scoreFork", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ForkScoreQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ForkScoreRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -848,19 +864,20 @@ public class Class {
     /**
      * Get the details of a single class
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetClassResponse getClass(org.openapis.openapi.models.operations.GetClassRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetClassResponse getClass(org.openapis.openapi.models.operations.GetClassRequest request, org.openapis.openapi.models.operations.GetClassSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClassPathParams.class, baseUrl, "/classes/{class}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClassRequest.class, baseUrl, "/classes/{class}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -897,19 +914,20 @@ public class Class {
      * This API call will list the different assignments submissions where the score is attached. This method can be used by anyone that are part of the organization and have at least read access to the document.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetScoreSubmissionsResponse getScoreSubmissions(org.openapis.openapi.models.operations.GetScoreSubmissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetScoreSubmissionsResponse getScoreSubmissions(org.openapis.openapi.models.operations.GetScoreSubmissionsRequest request, org.openapis.openapi.models.operations.GetScoreSubmissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetScoreSubmissionsPathParams.class, baseUrl, "/scores/{score}/submissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetScoreSubmissionsRequest.class, baseUrl, "/scores/{score}/submissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -944,19 +962,20 @@ public class Class {
     /**
      * Get a student submission
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSubmissionResponse getSubmission(org.openapis.openapi.models.operations.GetSubmissionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSubmissionResponse getSubmission(org.openapis.openapi.models.operations.GetSubmissionRequest request, org.openapis.openapi.models.operations.GetSubmissionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubmissionPathParams.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions/{submission}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubmissionRequest.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions/{submission}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -991,19 +1010,20 @@ public class Class {
     /**
      * List the feedback comments of a submission
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSubmissionCommentsResponse getSubmissionComments(org.openapis.openapi.models.operations.GetSubmissionCommentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSubmissionCommentsResponse getSubmissionComments(org.openapis.openapi.models.operations.GetSubmissionCommentsRequest request, org.openapis.openapi.models.operations.GetSubmissionCommentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubmissionCommentsPathParams.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions/{submission}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubmissionCommentsRequest.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions/{submission}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1040,19 +1060,20 @@ public class Class {
      * For teachers only. Returns a detailed history of the submission. This currently includes state and grade histories.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSubmissionHistoryResponse getSubmissionHistory(org.openapis.openapi.models.operations.GetSubmissionHistoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSubmissionHistoryResponse getSubmissionHistory(org.openapis.openapi.models.operations.GetSubmissionHistoryRequest request, org.openapis.openapi.models.operations.GetSubmissionHistorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubmissionHistoryPathParams.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions/{submission}/history", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubmissionHistoryRequest.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions/{submission}/history", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1087,19 +1108,20 @@ public class Class {
     /**
      * List the students' submissions
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSubmissionsResponse getSubmissions(org.openapis.openapi.models.operations.GetSubmissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSubmissionsResponse getSubmissions(org.openapis.openapi.models.operations.GetSubmissionsRequest request, org.openapis.openapi.models.operations.GetSubmissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubmissionsPathParams.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubmissionsRequest.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1134,19 +1156,20 @@ public class Class {
     /**
      * Assignments listing
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListAssignmentsResponse listAssignments(org.openapis.openapi.models.operations.ListAssignmentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListAssignmentsResponse listAssignments(org.openapis.openapi.models.operations.ListAssignmentsRequest request, org.openapis.openapi.models.operations.ListAssignmentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListAssignmentsPathParams.class, baseUrl, "/classes/{class}/assignments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListAssignmentsRequest.class, baseUrl, "/classes/{class}/assignments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1183,19 +1206,20 @@ public class Class {
      * Use this method as a teacher to list all the assignment submissions sent by a student of the class
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListClassStudentSubmissionsResponse listClassStudentSubmissions(org.openapis.openapi.models.operations.ListClassStudentSubmissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListClassStudentSubmissionsResponse listClassStudentSubmissions(org.openapis.openapi.models.operations.ListClassStudentSubmissionsRequest request, org.openapis.openapi.models.operations.ListClassStudentSubmissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListClassStudentSubmissionsPathParams.class, baseUrl, "/classes/{class}/students/{user}/submissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListClassStudentSubmissionsRequest.class, baseUrl, "/classes/{class}/students/{user}/submissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1230,10 +1254,11 @@ public class Class {
     /**
      * List the classes available for the current user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListClassesResponse listClasses(org.openapis.openapi.models.operations.ListClassesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListClassesResponse listClasses(org.openapis.openapi.models.operations.ListClassesRequest request, org.openapis.openapi.models.operations.ListClassesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/classes");
         
@@ -1241,14 +1266,14 @@ public class Class {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListClassesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListClassesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1283,24 +1308,25 @@ public class Class {
     /**
      * Add a feedback comment to a submission
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSubmissionCommentResponse postSubmissionComment(org.openapis.openapi.models.operations.PostSubmissionCommentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSubmissionCommentResponse postSubmissionComment(org.openapis.openapi.models.operations.PostSubmissionCommentRequest request, org.openapis.openapi.models.operations.PostSubmissionCommentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSubmissionCommentPathParams.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions/{submission}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSubmissionCommentRequest.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions/{submission}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "assignmentSubmissionCommentCreation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1337,19 +1363,20 @@ public class Class {
      * Mark the assignment as `active`.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnarchiveAssignmentResponse unarchiveAssignment(org.openapis.openapi.models.operations.UnarchiveAssignmentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnarchiveAssignmentResponse unarchiveAssignment(org.openapis.openapi.models.operations.UnarchiveAssignmentRequest request, org.openapis.openapi.models.operations.UnarchiveAssignmentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnarchiveAssignmentPathParams.class, baseUrl, "/classes/{class}/assignments/{assignment}/archive", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnarchiveAssignmentRequest.class, baseUrl, "/classes/{class}/assignments/{assignment}/archive", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1386,19 +1413,20 @@ public class Class {
      * Mark the class as `active`. When this course is synchronized with another app, like Google Classroom, this state will be automatically be updated.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnarchiveClassResponse unarchiveClass(org.openapis.openapi.models.operations.UnarchiveClassRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnarchiveClassResponse unarchiveClass(org.openapis.openapi.models.operations.UnarchiveClassRequest request, org.openapis.openapi.models.operations.UnarchiveClassSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnarchiveClassPathParams.class, baseUrl, "/classes/{class}/archive", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnarchiveClassRequest.class, baseUrl, "/classes/{class}/archive", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1435,21 +1463,22 @@ public class Class {
      * Update the meta information of the class
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateClassResponse updateClass(org.openapis.openapi.models.operations.UpdateClassRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateClassResponse updateClass(org.openapis.openapi.models.operations.UpdateClassRequest request, org.openapis.openapi.models.operations.UpdateClassSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateClassPathParams.class, baseUrl, "/classes/{class}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateClassRequest.class, baseUrl, "/classes/{class}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "classUpdate", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1484,24 +1513,25 @@ public class Class {
     /**
      * Update a feedback comment to a submission
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateSubmissionCommentResponse updateSubmissionComment(org.openapis.openapi.models.operations.UpdateSubmissionCommentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateSubmissionCommentResponse updateSubmissionComment(org.openapis.openapi.models.operations.UpdateSubmissionCommentRequest request, org.openapis.openapi.models.operations.UpdateSubmissionCommentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSubmissionCommentPathParams.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions/{submission}/comments/{comment}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSubmissionCommentRequest.class, baseUrl, "/classes/{class}/assignments/{assignment}/submissions/{submission}/comments/{comment}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "assignmentSubmissionCommentCreation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

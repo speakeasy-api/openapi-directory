@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetTypeConfigurationRequest {
-    
-    public GETSetTypeConfigurationQueryParams queryParams;
-    public GETSetTypeConfigurationRequest withQueryParams(GETSetTypeConfigurationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETSetTypeConfigurationActionEnum action;
+    public GETSetTypeConfigurationRequest withAction(GETSetTypeConfigurationActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The configuration data for the extension, in this account and region.&lt;/p&gt; &lt;p&gt;The configuration data must be formatted as JSON, and validate against the schema returned in the &lt;code&gt;ConfigurationSchema&lt;/code&gt; response element of &lt;a href="AWSCloudFormation/latest/APIReference/API_DescribeType.html"&gt;API_DescribeType&lt;/a&gt;. For more information, see &lt;a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-model.html#resource-type-howto-configuration"&gt;Defining account-level configuration data for an extension&lt;/a&gt; in the &lt;i&gt;CloudFormation CLI User Guide&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Configuration")
+    public String configuration;
+    public GETSetTypeConfigurationRequest withConfiguration(String configuration) {
+        this.configuration = configuration;
+        return this;
+    }
     
-    public GETSetTypeConfigurationHeaders headers;
-    public GETSetTypeConfigurationRequest withHeaders(GETSetTypeConfigurationHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;An alias by which to refer to this extension configuration data.&lt;/p&gt; &lt;p&gt;Conditional: Specifying a configuration alias is required when setting a configuration for a resource type extension.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConfigurationAlias")
+    public String configurationAlias;
+    public GETSetTypeConfigurationRequest withConfigurationAlias(String configurationAlias) {
+        this.configurationAlias = configurationAlias;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The type of extension.&lt;/p&gt; &lt;p&gt;Conditional: You must specify &lt;code&gt;ConfigurationArn&lt;/code&gt;, or &lt;code&gt;Type&lt;/code&gt; and &lt;code&gt;TypeName&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
+    public GETSetTypeConfigurationTypeEnum type;
+    public GETSetTypeConfigurationRequest withType(GETSetTypeConfigurationTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The Amazon Resource Name (ARN) for the extension, in this account and region.&lt;/p&gt; &lt;p&gt;For public extensions, this will be the ARN assigned when you &lt;a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ActivateType.html"&gt;activate the type&lt;/a&gt; in this account and region. For private extensions, this will be the ARN assigned when you &lt;a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html"&gt;register the type&lt;/a&gt; in this account and region.&lt;/p&gt; &lt;p&gt;Do not include the extension versions suffix at the end of the ARN. You can set the configuration for an extension, but not for a specific extension version.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeArn")
+    public String typeArn;
+    public GETSetTypeConfigurationRequest withTypeArn(String typeArn) {
+        this.typeArn = typeArn;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the extension.&lt;/p&gt; &lt;p&gt;Conditional: You must specify &lt;code&gt;ConfigurationArn&lt;/code&gt;, or &lt;code&gt;Type&lt;/code&gt; and &lt;code&gt;TypeName&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeName")
+    public String typeName;
+    public GETSetTypeConfigurationRequest withTypeName(String typeName) {
+        this.typeName = typeName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETSetTypeConfigurationVersionEnum version;
+    public GETSetTypeConfigurationRequest withVersion(GETSetTypeConfigurationVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETSetTypeConfigurationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETSetTypeConfigurationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETSetTypeConfigurationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETSetTypeConfigurationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETSetTypeConfigurationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETSetTypeConfigurationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETSetTypeConfigurationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

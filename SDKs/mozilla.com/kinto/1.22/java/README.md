@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CreateAttachmentPathParams;
 import org.openapis.openapi.models.operations.CreateAttachmentRequest;
 import org.openapis.openapi.models.operations.CreateAttachmentResponse;
 
@@ -28,12 +27,10 @@ public class Application {
                 .build();
 
             CreateAttachmentRequest req = new CreateAttachmentRequest() {{
-                pathParams = new CreateAttachmentPathParams() {{
-                    bucketId = "corrupti";
-                    collectionId = "provident";
-                    id = "distinctio";
-                }};
-            }};            
+                bucketId = "corrupti";
+                collectionId = "provident";
+                id = "distinctio";
+            }}            
 
             CreateAttachmentResponse res = sdk.attachment.createAttachment(req);
 
@@ -47,7 +44,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### attachment

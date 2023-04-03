@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FileActionBeginUploadRequest {
-    
-    public FileActionBeginUploadPathParams pathParams;
-    public FileActionBeginUploadRequest withPathParams(FileActionBeginUploadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public FileActionBeginUploadRequestBody requestBody;
+    public FileActionBeginUploadRequest withRequestBody(FileActionBeginUploadRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public FileActionBeginUploadRequestBody request;
-    public FileActionBeginUploadRequest withRequest(FileActionBeginUploadRequestBody request) {
-        this.request = request;
+    /**
+     * Path to operate on.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public FileActionBeginUploadRequest withPath(String path) {
+        this.path = path;
         return this;
     }
     

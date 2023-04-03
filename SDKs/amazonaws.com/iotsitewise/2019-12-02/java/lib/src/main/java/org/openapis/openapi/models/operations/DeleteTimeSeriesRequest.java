@@ -7,24 +7,89 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTimeSeriesRequest {
-    
-    public DeleteTimeSeriesQueryParams queryParams;
-    public DeleteTimeSeriesRequest withQueryParams(DeleteTimeSeriesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteTimeSeriesHeaders headers;
-    public DeleteTimeSeriesRequest withHeaders(DeleteTimeSeriesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DeleteTimeSeriesRequestBody request;
-    public DeleteTimeSeriesRequest withRequest(DeleteTimeSeriesRequestBody request) {
-        this.request = request;
+    public DeleteTimeSeriesRequestBody requestBody;
+    public DeleteTimeSeriesRequest withRequestBody(DeleteTimeSeriesRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DeleteTimeSeriesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DeleteTimeSeriesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DeleteTimeSeriesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DeleteTimeSeriesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DeleteTimeSeriesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DeleteTimeSeriesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DeleteTimeSeriesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The alias that identifies the time series.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alias")
+    public String alias;
+    public DeleteTimeSeriesRequest withAlias(String alias) {
+        this.alias = alias;
+        return this;
+    }
+    
+    /**
+     * The ID of the asset in which the asset property was created.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assetId")
+    public String assetId;
+    public DeleteTimeSeriesRequest withAssetId(String assetId) {
+        this.assetId = assetId;
+        return this;
+    }
+    
+    /**
+     * The ID of the asset property.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyId")
+    public String propertyId;
+    public DeleteTimeSeriesRequest withPropertyId(String propertyId) {
+        this.propertyId = propertyId;
         return this;
     }
     

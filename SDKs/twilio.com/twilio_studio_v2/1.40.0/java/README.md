@@ -18,11 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateExecutionSecurity;
-import org.openapis.openapi.models.operations.CreateExecutionPathParams;
 import org.openapis.openapi.models.operations.CreateExecutionCreateExecutionRequest;
 import org.openapis.openapi.models.operations.CreateExecutionRequest;
 import org.openapis.openapi.models.operations.CreateExecutionResponse;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,23 +29,18 @@ public class Application {
                 .build();
 
             CreateExecutionRequest req = new CreateExecutionRequest() {{
-                security = new CreateExecutionSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                pathParams = new CreateExecutionPathParams() {{
-                    flowSid = "corrupti";
-                }};
-                request = new CreateExecutionCreateExecutionRequest() {{
+                flowSid = "corrupti";
+                requestBody = new CreateExecutionCreateExecutionRequest() {{
                     from = "provident";
                     parameters = "distinctio";
                     to = "quibusdam";
                 }};
-            }};            
+            }}            
 
-            CreateExecutionResponse res = sdk.createExecution(req);
+            CreateExecutionResponse res = sdk.createExecution(req, new CreateExecutionSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.studioV2FlowExecution.isPresent()) {
                 // handle response
@@ -59,7 +52,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

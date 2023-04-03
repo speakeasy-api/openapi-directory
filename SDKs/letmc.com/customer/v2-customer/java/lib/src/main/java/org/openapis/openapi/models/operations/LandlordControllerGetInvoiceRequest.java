@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LandlordControllerGetInvoiceRequest {
-    
-    public LandlordControllerGetInvoicePathParams pathParams;
-    public LandlordControllerGetInvoiceRequest withPathParams(LandlordControllerGetInvoicePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The invoice ID to load.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=invoiceID")
+    public String invoiceID;
+    public LandlordControllerGetInvoiceRequest withInvoiceID(String invoiceID) {
+        this.invoiceID = invoiceID;
         return this;
     }
     
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public LandlordControllerGetInvoiceRequest withShortName(String shortName) {
+        this.shortName = shortName;
+        return this;
+    }
     
-    public LandlordControllerGetInvoiceQueryParams queryParams;
-    public LandlordControllerGetInvoiceRequest withQueryParams(LandlordControllerGetInvoiceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The login token returned from the /session POST call
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public LandlordControllerGetInvoiceRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

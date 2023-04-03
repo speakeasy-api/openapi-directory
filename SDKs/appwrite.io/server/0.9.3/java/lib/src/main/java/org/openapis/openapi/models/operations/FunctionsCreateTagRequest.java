@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FunctionsCreateTagRequest {
-    
-    public FunctionsCreateTagPathParams pathParams;
-    public FunctionsCreateTagRequest withPathParams(FunctionsCreateTagPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public FunctionsCreateTagRequestBody request;
-    public FunctionsCreateTagRequest withRequest(FunctionsCreateTagRequestBody request) {
-        this.request = request;
+    public FunctionsCreateTagRequestBody requestBody;
+    public FunctionsCreateTagRequest withRequestBody(FunctionsCreateTagRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public FunctionsCreateTagSecurity security;
-    public FunctionsCreateTagRequest withSecurity(FunctionsCreateTagSecurity security) {
-        this.security = security;
+    /**
+     * Function unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionId")
+    public String functionId;
+    public FunctionsCreateTagRequest withFunctionId(String functionId) {
+        this.functionId = functionId;
         return this;
     }
     

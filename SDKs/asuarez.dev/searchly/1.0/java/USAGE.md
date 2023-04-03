@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.SrcSearchlyApiV1ControllersSimilarityByContentRequestBody;
-import org.openapis.openapi.models.operations.SrcSearchlyApiV1ControllersSimilarityByContentRequest;
 import org.openapis.openapi.models.operations.SrcSearchlyApiV1ControllersSimilarityByContentResponse;
 
 public class Application {
@@ -14,11 +13,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            SrcSearchlyApiV1ControllersSimilarityByContentRequest req = new SrcSearchlyApiV1ControllersSimilarityByContentRequest() {{
-                request = new SrcSearchlyApiV1ControllersSimilarityByContentRequestBody() {{
-                    content = "corrupti";
-                }};
-            }};            
+            SrcSearchlyApiV1ControllersSimilarityByContentRequestBody req = new SrcSearchlyApiV1ControllersSimilarityByContentRequestBody() {{
+                content = "corrupti";
+            }}            
 
             SrcSearchlyApiV1ControllersSimilarityByContentResponse res = sdk.similarity.srcSearchlyApiV1ControllersSimilarityByContent(req);
 

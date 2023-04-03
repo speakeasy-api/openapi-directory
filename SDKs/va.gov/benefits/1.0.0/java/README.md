@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadSecurity;
-import org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadPathParams;
 import org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadRequest;
 import org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadResponse;
-import org.openapis.openapi.models.shared.SchemeApikey;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,17 +28,12 @@ public class Application {
                 .build();
 
             GetBenefitsDocumentUploadDownloadRequest req = new GetBenefitsDocumentUploadDownloadRequest() {{
-                security = new GetBenefitsDocumentUploadDownloadSecurity() {{
-                    apikey = new SchemeApikey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                pathParams = new GetBenefitsDocumentUploadDownloadPathParams() {{
-                    id = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
-                }};
-            }};            
+                id = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
+            }}            
 
-            GetBenefitsDocumentUploadDownloadResponse res = sdk.vbaDocuments.getBenefitsDocumentUploadDownload(req);
+            GetBenefitsDocumentUploadDownloadResponse res = sdk.vbaDocuments.getBenefitsDocumentUploadDownload(req, new GetBenefitsDocumentUploadDownloadSecurity() {{
+                apikey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.getBenefitsDocumentUploadDownload200ApplicationZipBinaryString.isPresent()) {
                 // handle response
@@ -52,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### vbaDocuments

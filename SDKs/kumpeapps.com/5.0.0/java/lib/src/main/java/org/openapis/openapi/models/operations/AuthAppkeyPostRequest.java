@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthAppkeyPostRequest {
+    /**
+     * Password assigned to your app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=password")
+    public String password;
+    public AuthAppkeyPostRequest withPassword(String password) {
+        this.password = password;
+        return this;
+    }
     
-    public AuthAppkeyPostQueryParams queryParams;
-    public AuthAppkeyPostRequest withQueryParams(AuthAppkeyPostQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * App supports YubiKey OTP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsYubikey")
+    public Boolean supportsYubikey;
+    public AuthAppkeyPostRequest withSupportsYubikey(Boolean supportsYubikey) {
+        this.supportsYubikey = supportsYubikey;
+        return this;
+    }
+    
+    /**
+     * Username assigned to your app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public AuthAppkeyPostRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

@@ -21,10 +21,9 @@ import org.openapis.openapi.models.operations.DocsDocumentsBatchUpdateSecurityOp
 import org.openapis.openapi.models.operations.DocsDocumentsBatchUpdateSecurityOption2;
 import org.openapis.openapi.models.operations.DocsDocumentsBatchUpdateSecurityOption3;
 import org.openapis.openapi.models.operations.DocsDocumentsBatchUpdateSecurity;
-import org.openapis.openapi.models.operations.DocsDocumentsBatchUpdatePathParams;
-import org.openapis.openapi.models.operations.DocsDocumentsBatchUpdateQueryParams;
 import org.openapis.openapi.models.operations.DocsDocumentsBatchUpdateRequest;
 import org.openapis.openapi.models.operations.DocsDocumentsBatchUpdateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.BatchUpdateDocumentRequest;
 import org.openapis.openapi.models.shared.WriteControl;
 import org.openapis.openapi.models.shared.Request;
@@ -106,10 +105,7 @@ import org.openapis.openapi.models.shared.CreateHeaderRequest;
 import org.openapis.openapi.models.shared.CreateFootnoteRequest;
 import org.openapis.openapi.models.shared.CreateFooterRequestTypeEnum;
 import org.openapis.openapi.models.shared.CreateFooterRequest;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -118,251 +114,226 @@ public class Application {
                 .build();
 
             DocsDocumentsBatchUpdateRequest req = new DocsDocumentsBatchUpdateRequest() {{
-                security = new DocsDocumentsBatchUpdateSecurity() {{
-                    option1 = new DocsDocumentsBatchUpdateSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new DocsDocumentsBatchUpdatePathParams() {{
-                    documentId = "corrupti";
-                }};
-                queryParams = new DocsDocumentsBatchUpdateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new BatchUpdateDocumentRequest() {{
+                dollarXgafv = "2";
+                batchUpdateDocumentRequest = new BatchUpdateDocumentRequest() {{
                     requests = new org.openapis.openapi.models.shared.Request[]{{
                         add(new Request() {{
                             createFooter = new CreateFooterRequest() {{
                                 sectionBreakLocation = new Location() {{
-                                    index = 437587;
-                                    segmentId = "magnam";
+                                    index = 715190;
+                                    segmentId = "quibusdam";
                                 }};
                                 type = "DEFAULT";
                             }};
                             createFootnote = new CreateFootnoteRequest() {{
                                 endOfSegmentLocation = new EndOfSegmentLocation() {{
-                                    segmentId = "ipsa";
+                                    segmentId = "nulla";
                                 }};
                                 location = new Location() {{
-                                    index = 963663;
-                                    segmentId = "tempora";
+                                    index = 544883;
+                                    segmentId = "illum";
                                 }};
                             }};
                             createHeader = new CreateHeaderRequest() {{
                                 sectionBreakLocation = new Location() {{
-                                    index = 383441;
-                                    segmentId = "molestiae";
+                                    index = 423655;
+                                    segmentId = "error";
                                 }};
                                 type = "DEFAULT";
                             }};
                             createNamedRange = new CreateNamedRangeRequest() {{
-                                name = "placeat";
+                                name = "suscipit";
                                 range = new Range() {{
-                                    endIndex = 528895;
-                                    segmentId = "iusto";
-                                    startIndex = 568045;
+                                    endIndex = 437587;
+                                    segmentId = "magnam";
+                                    startIndex = 891773;
                                 }};
                             }};
                             createParagraphBullets = new CreateParagraphBulletsRequest() {{
-                                bulletPreset = "BULLET_ARROW3D_CIRCLE_SQUARE";
+                                bulletPreset = "BULLET_GLYPH_PRESET_UNSPECIFIED";
+                                range = new Range() {{
+                                    endIndex = 963663;
+                                    segmentId = "tempora";
+                                    startIndex = 383441;
+                                }};
+                            }};
+                            deleteContentRange = new DeleteContentRangeRequest() {{
+                                range = new Range() {{
+                                    endIndex = 477665;
+                                    segmentId = "minus";
+                                    startIndex = 812169;
+                                }};
+                            }};
+                            deleteFooter = new DeleteFooterRequest() {{
+                                footerId = "voluptatum";
+                            }};
+                            deleteHeader = new DeleteHeaderRequest() {{
+                                headerId = "iusto";
+                            }};
+                            deleteNamedRange = new DeleteNamedRangeRequest() {{
+                                name = "excepturi";
+                                namedRangeId = "nisi";
+                            }};
+                            deleteParagraphBullets = new DeleteParagraphBulletsRequest() {{
                                 range = new Range() {{
                                     endIndex = 925597;
                                     segmentId = "temporibus";
                                     startIndex = 71036;
                                 }};
                             }};
-                            deleteContentRange = new DeleteContentRangeRequest() {{
-                                range = new Range() {{
-                                    endIndex = 337396;
-                                    segmentId = "veritatis";
-                                    startIndex = 648172;
-                                }};
-                            }};
-                            deleteFooter = new DeleteFooterRequest() {{
-                                footerId = "perferendis";
-                            }};
-                            deleteHeader = new DeleteHeaderRequest() {{
-                                headerId = "ipsam";
-                            }};
-                            deleteNamedRange = new DeleteNamedRangeRequest() {{
-                                name = "repellendus";
-                                namedRangeId = "sapiente";
-                            }};
-                            deleteParagraphBullets = new DeleteParagraphBulletsRequest() {{
-                                range = new Range() {{
-                                    endIndex = 778157;
-                                    segmentId = "odit";
-                                    startIndex = 870013;
-                                }};
-                            }};
                             deletePositionedObject = new DeletePositionedObjectRequest() {{
-                                objectId = "at";
+                                objectId = "quis";
                             }};
                             deleteTableColumn = new DeleteTableColumnRequest() {{
                                 tableCellLocation = new TableCellLocation() {{
-                                    columnIndex = 978619;
-                                    rowIndex = 473608;
+                                    columnIndex = 87129;
+                                    rowIndex = 648172;
                                     tableStartLocation = new Location() {{
-                                        index = 799159;
-                                        segmentId = "quod";
+                                        index = 20218;
+                                        segmentId = "ipsam";
                                     }};
                                 }};
                             }};
                             deleteTableRow = new DeleteTableRowRequest() {{
                                 tableCellLocation = new TableCellLocation() {{
-                                    columnIndex = 461479;
-                                    rowIndex = 520478;
+                                    columnIndex = 832620;
+                                    rowIndex = 957156;
                                     tableStartLocation = new Location() {{
-                                        index = 780529;
-                                        segmentId = "dolorum";
+                                        index = 778157;
+                                        segmentId = "odit";
                                     }};
                                 }};
                             }};
                             insertInlineImage = new InsertInlineImageRequest() {{
                                 endOfSegmentLocation = new EndOfSegmentLocation() {{
-                                    segmentId = "dicta";
+                                    segmentId = "at";
                                 }};
                                 location = new Location() {{
-                                    index = 720633;
-                                    segmentId = "officia";
+                                    index = 870088;
+                                    segmentId = "maiores";
                                 }};
                                 objectSize = new Size() {{
                                     height = new Dimension() {{
-                                        magnitude = 5820.2;
-                                        unit = "UNIT_UNSPECIFIED";
-                                    }};
-                                    width = new Dimension() {{
-                                        magnitude = 5373.73;
+                                        magnitude = 4736.08;
                                         unit = "PT";
                                     }};
+                                    width = new Dimension() {{
+                                        magnitude = 8009.11;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
                                 }};
-                                uri = "https://mean-brick.info";
+                                uri = "https://soulful-poppy.com";
                             }};
                             insertPageBreak = new InsertPageBreakRequest() {{
                                 endOfSegmentLocation = new EndOfSegmentLocation() {{
-                                    segmentId = "molestiae";
+                                    segmentId = "nam";
                                 }};
                                 location = new Location() {{
-                                    index = 264555;
-                                    segmentId = "qui";
+                                    index = 639921;
+                                    segmentId = "occaecati";
                                 }};
                             }};
                             insertSectionBreak = new InsertSectionBreakRequest() {{
                                 endOfSegmentLocation = new EndOfSegmentLocation() {{
-                                    segmentId = "impedit";
+                                    segmentId = "fugit";
                                 }};
                                 location = new Location() {{
-                                    index = 736918;
-                                    segmentId = "esse";
+                                    index = 537373;
+                                    segmentId = "hic";
                                 }};
-                                sectionType = "SECTION_TYPE_UNSPECIFIED";
+                                sectionType = "NEXT_PAGE";
                             }};
                             insertTable = new InsertTableRequest() {{
-                                columns = 568434;
+                                columns = 521848;
                                 endOfSegmentLocation = new EndOfSegmentLocation() {{
-                                    segmentId = "aspernatur";
+                                    segmentId = "beatae";
                                 }};
                                 location = new Location() {{
-                                    index = 18789;
-                                    segmentId = "ad";
+                                    index = 414662;
+                                    segmentId = "molestiae";
                                 }};
-                                rows = 617636;
+                                rows = 264555;
                             }};
                             insertTableColumn = new InsertTableColumnRequest() {{
                                 insertRight = false;
                                 tableCellLocation = new TableCellLocation() {{
-                                    columnIndex = 149675;
-                                    rowIndex = 612096;
+                                    columnIndex = 186332;
+                                    rowIndex = 774234;
                                     tableStartLocation = new Location() {{
-                                        index = 222321;
-                                        segmentId = "natus";
+                                        index = 736918;
+                                        segmentId = "esse";
                                     }};
                                 }};
                             }};
                             insertTableRow = new InsertTableRowRequest() {{
                                 insertBelow = false;
                                 tableCellLocation = new TableCellLocation() {{
-                                    columnIndex = 386489;
-                                    rowIndex = 943749;
+                                    columnIndex = 216550;
+                                    rowIndex = 568434;
                                     tableStartLocation = new Location() {{
-                                        index = 902599;
-                                        segmentId = "fuga";
+                                        index = 135218;
+                                        segmentId = "perferendis";
                                     }};
                                 }};
                             }};
                             insertText = new InsertTextRequest() {{
                                 endOfSegmentLocation = new EndOfSegmentLocation() {{
-                                    segmentId = "in";
+                                    segmentId = "ad";
                                 }};
                                 location = new Location() {{
-                                    index = 359508;
-                                    segmentId = "iste";
+                                    index = 617636;
+                                    segmentId = "sed";
                                 }};
-                                text = "iure";
+                                text = "iste";
                             }};
                             mergeTableCells = new MergeTableCellsRequest() {{
                                 tableRange = new TableRange() {{
-                                    columnSpan = 902349;
-                                    rowSpan = 697631;
+                                    columnSpan = 222321;
+                                    rowSpan = 616934;
                                     tableCellLocation = new TableCellLocation() {{
-                                        columnIndex = 99280;
-                                        rowIndex = 60225;
+                                        columnIndex = 386489;
+                                        rowIndex = 943749;
                                         tableStartLocation = new Location() {{
-                                            index = 969810;
-                                            segmentId = "est";
+                                            index = 902599;
+                                            segmentId = "fuga";
                                         }};
                                     }};
                                 }};
                             }};
                             pinTableHeaderRows = new PinTableHeaderRowsRequest() {{
-                                pinnedHeaderRowsCount = 653140;
+                                pinnedHeaderRowsCount = 449950;
                                 tableStartLocation = new Location() {{
-                                    index = 670638;
-                                    segmentId = "dolores";
+                                    index = 359508;
+                                    segmentId = "iste";
                                 }};
                             }};
                             replaceAllText = new ReplaceAllTextRequest() {{
                                 containsText = new SubstringMatchCriteria() {{
                                     matchCase = false;
-                                    text = "dolorem";
+                                    text = "iure";
                                 }};
-                                replaceText = "corporis";
+                                replaceText = "saepe";
                             }};
                             replaceImage = new ReplaceImageRequest() {{
-                                imageObjectId = "explicabo";
-                                imageReplaceMethod = "CENTER_CROP";
-                                uri = "http://palatable-forum.biz";
+                                imageObjectId = "quidem";
+                                imageReplaceMethod = "IMAGE_REPLACE_METHOD_UNSPECIFIED";
+                                uri = "http://wiggly-plane.name";
                             }};
                             replaceNamedRangeContent = new ReplaceNamedRangeContentRequest() {{
-                                namedRangeId = "excepturi";
-                                namedRangeName = "accusantium";
-                                text = "iure";
+                                namedRangeId = "laborum";
+                                namedRangeName = "dolores";
+                                text = "dolorem";
                             }};
                             unmergeTableCells = new UnmergeTableCellsRequest() {{
                                 tableRange = new TableRange() {{
-                                    columnSpan = 634274;
-                                    rowSpan = 988374;
+                                    columnSpan = 358152;
+                                    rowSpan = 128926;
                                     tableCellLocation = new TableCellLocation() {{
-                                        columnIndex = 958950;
-                                        rowIndex = 102044;
+                                        columnIndex = 750686;
+                                        rowIndex = 315428;
                                         tableStartLocation = new Location() {{
-                                            index = 652790;
-                                            segmentId = "dolorem";
+                                            index = 607831;
+                                            segmentId = "nemo";
                                         }};
                                     }};
                                 }};
@@ -373,62 +344,62 @@ public class Application {
                                         color = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 6350.59;
-                                                    green = 1613.09;
-                                                    red = 9953;
+                                                    blue = 3250.47;
+                                                    green = 5701.97;
+                                                    red = 384.25;
                                                 }};
                                             }};
                                         }};
                                     }};
-                                    defaultFooterId = "mollitia";
-                                    defaultHeaderId = "occaecati";
-                                    evenPageFooterId = "numquam";
-                                    evenPageHeaderId = "commodi";
-                                    firstPageFooterId = "quam";
-                                    firstPageHeaderId = "molestiae";
+                                    defaultFooterId = "iure";
+                                    defaultHeaderId = "culpa";
+                                    evenPageFooterId = "doloribus";
+                                    evenPageHeaderId = "sapiente";
+                                    firstPageFooterId = "architecto";
+                                    firstPageHeaderId = "mollitia";
                                     marginBottom = new Dimension() {{
-                                        magnitude = 2444.25;
+                                        magnitude = 2088.76;
                                         unit = "PT";
                                     }};
                                     marginFooter = new Dimension() {{
-                                        magnitude = 1589.69;
-                                        unit = "UNIT_UNSPECIFIED";
+                                        magnitude = 1613.09;
+                                        unit = "PT";
                                     }};
                                     marginHeader = new Dimension() {{
-                                        magnitude = 1103.75;
+                                        magnitude = 6531.08;
                                         unit = "PT";
                                     }};
                                     marginLeft = new Dimension() {{
-                                        magnitude = 6563.3;
+                                        magnitude = 2532.91;
                                         unit = "UNIT_UNSPECIFIED";
                                     }};
                                     marginRight = new Dimension() {{
-                                        magnitude = 1381.83;
-                                        unit = "PT";
+                                        magnitude = 4663.11;
+                                        unit = "UNIT_UNSPECIFIED";
                                     }};
                                     marginTop = new Dimension() {{
-                                        magnitude = 1965.82;
+                                        magnitude = 2444.25;
                                         unit = "PT";
                                     }};
-                                    pageNumberStart = 368725;
+                                    pageNumberStart = 158969;
                                     pageSize = new Size() {{
                                         height = new Dimension() {{
-                                            magnitude = 6625.27;
-                                            unit = "PT";
+                                            magnitude = 3380.07;
+                                            unit = "UNIT_UNSPECIFIED";
                                         }};
                                         width = new Dimension() {{
-                                            magnitude = 135.71;
-                                            unit = "UNIT_UNSPECIFIED";
+                                            magnitude = 6747.52;
+                                            unit = "PT";
                                         }};
                                     }};
                                     useCustomHeaderFooterMargins = false;
                                     useEvenPageHeaderFooter = false;
                                     useFirstPageHeaderFooter = false;
                                 }};
-                                fields = "error";
+                                fields = "enim";
                             }};
                             updateParagraphStyle = new UpdateParagraphStyleRequest() {{
-                                fields = "temporibus";
+                                fields = "odit";
                                 paragraphStyle = new ParagraphStyle() {{
                                     alignment = "END";
                                     avoidWidowAndOrphan = false;
@@ -436,39 +407,39 @@ public class Application {
                                         color = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 960.98;
-                                                    green = 9719.45;
-                                                    red = 9764.6;
+                                                    blue = 1965.82;
+                                                    green = 9495.72;
+                                                    red = 3687.25;
                                                 }};
                                             }};
                                         }};
-                                        dashStyle = "DASH";
+                                        dashStyle = "DOT";
                                         padding = new Dimension() {{
-                                            magnitude = 4686.51;
-                                            unit = "PT";
+                                            magnitude = 8209.94;
+                                            unit = "UNIT_UNSPECIFIED";
                                         }};
                                         width = new Dimension() {{
-                                            magnitude = 9767.62;
-                                            unit = "UNIT_UNSPECIFIED";
+                                            magnitude = 971.01;
+                                            unit = "PT";
                                         }};
                                     }};
                                     borderBottom = new ParagraphBorder() {{
                                         color = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 6048.46;
-                                                    green = 4511.59;
-                                                    red = 7392.64;
+                                                    blue = 8379.45;
+                                                    green = 6736.6;
+                                                    red = 960.98;
                                                 }};
                                             }};
                                         }};
-                                        dashStyle = "DASH_STYLE_UNSPECIFIED";
+                                        dashStyle = "DASH";
                                         padding = new Dimension() {{
-                                            magnitude = 391.87;
-                                            unit = "UNIT_UNSPECIFIED";
+                                            magnitude = 9764.6;
+                                            unit = "PT";
                                         }};
                                         width = new Dimension() {{
-                                            magnitude = 2828.07;
+                                            magnitude = 4686.51;
                                             unit = "PT";
                                         }};
                                     }};
@@ -476,39 +447,39 @@ public class Application {
                                         color = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 1201.96;
-                                                    green = 3594.44;
-                                                    red = 2961.4;
+                                                    blue = 9767.62;
+                                                    green = 557.14;
+                                                    red = 6048.46;
                                                 }};
                                             }};
                                         }};
                                         dashStyle = "SOLID";
                                         padding = new Dimension() {{
-                                            magnitude = 1187.27;
-                                            unit = "PT";
+                                            magnitude = 7392.64;
+                                            unit = "UNIT_UNSPECIFIED";
                                         }};
                                         width = new Dimension() {{
-                                            magnitude = 3179.83;
-                                            unit = "PT";
+                                            magnitude = 391.87;
+                                            unit = "UNIT_UNSPECIFIED";
                                         }};
                                     }};
                                     borderRight = new ParagraphBorder() {{
                                         color = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 4142.63;
-                                                    green = 9182.36;
-                                                    red = 641.47;
+                                                    blue = 2828.07;
+                                                    green = 9795.87;
+                                                    red = 1201.96;
                                                 }};
                                             }};
                                         }};
-                                        dashStyle = "DASH_STYLE_UNSPECIFIED";
+                                        dashStyle = "SOLID";
                                         padding = new Dimension() {{
-                                            magnitude = 6924.72;
-                                            unit = "PT";
+                                            magnitude = 2961.4;
+                                            unit = "UNIT_UNSPECIFIED";
                                         }};
                                         width = new Dimension() {{
-                                            magnitude = 5666.02;
+                                            magnitude = 1187.27;
                                             unit = "PT";
                                         }};
                                     }};
@@ -516,164 +487,177 @@ public class Application {
                                         color = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 2653.89;
-                                                    green = 5089.69;
-                                                    red = 5232.48;
+                                                    blue = 3179.83;
+                                                    green = 8804.76;
+                                                    red = 4142.63;
                                                 }};
                                             }};
                                         }};
                                         dashStyle = "DASH";
                                         padding = new Dimension() {{
-                                            magnitude = 939.4;
-                                            unit = "PT";
-                                        }};
-                                        width = new Dimension() {{
-                                            magnitude = 5759.47;
+                                            magnitude = 641.47;
                                             unit = "UNIT_UNSPECIFIED";
                                         }};
+                                        width = new Dimension() {{
+                                            magnitude = 6924.72;
+                                            unit = "PT";
+                                        }};
                                     }};
-                                    direction = "RIGHT_TO_LEFT";
-                                    headingId = "incidunt";
+                                    direction = "LEFT_TO_RIGHT";
+                                    headingId = "pariatur";
                                     indentEnd = new Dimension() {{
-                                        magnitude = 3185.69;
-                                        unit = "UNIT_UNSPECIFIED";
+                                        magnitude = 2653.89;
+                                        unit = "PT";
                                     }};
                                     indentFirstLine = new Dimension() {{
-                                        magnitude = 6674.11;
+                                        magnitude = 5232.48;
                                         unit = "PT";
                                     }};
                                     indentStart = new Dimension() {{
-                                        magnitude = 1317.97;
+                                        magnitude = 939.4;
                                         unit = "PT";
                                     }};
                                     keepLinesTogether = false;
                                     keepWithNext = false;
-                                    lineSpacing = 7163.27;
-                                    namedStyleType = "HEADING_5";
+                                    lineSpacing = 5759.47;
+                                    namedStyleType = "NAMED_STYLE_TYPE_UNSPECIFIED";
                                     pageBreakBefore = false;
                                     shading = new Shading() {{
                                         backgroundColor = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 2894.06;
-                                                    green = 2647.3;
-                                                    red = 1831.91;
+                                                    blue = 9292.97;
+                                                    green = 2777.18;
+                                                    red = 3185.69;
                                                 }};
                                             }};
                                         }};
                                     }};
                                     spaceAbove = new Dimension() {{
-                                        magnitude = 3978.21;
+                                        magnitude = 93.56;
                                         unit = "PT";
                                     }};
                                     spaceBelow = new Dimension() {{
-                                        magnitude = 5528.22;
+                                        magnitude = 8423.42;
                                         unit = "UNIT_UNSPECIFIED";
                                     }};
-                                    spacingMode = "SPACING_MODE_UNSPECIFIED";
+                                    spacingMode = "NEVER_COLLAPSE";
                                     tabStops = new org.openapis.openapi.models.shared.TabStop[]{{
-                                        add(new TabStop() {{
-                                            alignment = "START";
-                                            offset = new Dimension() {{
-                                                magnitude = 46.95;
-                                                unit = "UNIT_UNSPECIFIED";
-                                            }};
-                                        }}),
-                                        add(new TabStop() {{
-                                            alignment = "CENTER";
-                                            offset = new Dimension() {{
-                                                magnitude = 5696.18;
-                                                unit = "UNIT_UNSPECIFIED";
-                                            }};
-                                        }}),
-                                        add(new TabStop() {{
-                                            alignment = "CENTER";
-                                            offset = new Dimension() {{
-                                                magnitude = 7351.94;
-                                                unit = "UNIT_UNSPECIFIED";
-                                            }};
-                                        }}),
                                         add(new TabStop() {{
                                             alignment = "END";
                                             offset = new Dimension() {{
-                                                magnitude = 4332.88;
+                                                magnitude = 2894.06;
+                                                unit = "UNIT_UNSPECIFIED";
+                                            }};
+                                        }}),
+                                        add(new TabStop() {{
+                                            alignment = "TAB_STOP_ALIGNMENT_UNSPECIFIED";
+                                            offset = new Dimension() {{
+                                                magnitude = 3978.21;
+                                                unit = "PT";
+                                            }};
+                                        }}),
+                                        add(new TabStop() {{
+                                            alignment = "CENTER";
+                                            offset = new Dimension() {{
+                                                magnitude = 201.07;
                                                 unit = "UNIT_UNSPECIFIED";
                                             }};
                                         }}),
                                     }};
                                 }};
                                 range = new Range() {{
-                                    endIndex = 756107;
-                                    segmentId = "sint";
-                                    startIndex = 396098;
+                                    endIndex = 828940;
+                                    segmentId = "ipsam";
+                                    startIndex = 4695;
                                 }};
                             }};
                             updateSectionStyle = new UpdateSectionStyleRequest() {{
-                                fields = "provident";
+                                fields = "fugit";
                                 range = new Range() {{
-                                    endIndex = 896039;
-                                    segmentId = "sint";
-                                    startIndex = 638921;
+                                    endIndex = 677817;
+                                    segmentId = "excepturi";
+                                    startIndex = 270008;
                                 }};
                                 sectionStyle = new SectionStyle() {{
                                     columnProperties = new org.openapis.openapi.models.shared.SectionColumnProperties[]{{
                                         add(new SectionColumnProperties() {{
                                             paddingEnd = new Dimension() {{
-                                                magnitude = 8915.55;
-                                                unit = "PT";
+                                                magnitude = 7351.94;
+                                                unit = "UNIT_UNSPECIFIED";
                                             }};
                                             width = new Dimension() {{
-                                                magnitude = 6800.56;
+                                                magnitude = 9621.89;
                                                 unit = "UNIT_UNSPECIFIED";
                                             }};
                                         }}),
+                                        add(new SectionColumnProperties() {{
+                                            paddingEnd = new Dimension() {{
+                                                magnitude = 2487.53;
+                                                unit = "PT";
+                                            }};
+                                            width = new Dimension() {{
+                                                magnitude = 5761.57;
+                                                unit = "UNIT_UNSPECIFIED";
+                                            }};
+                                        }}),
+                                        add(new SectionColumnProperties() {{
+                                            paddingEnd = new Dimension() {{
+                                                magnitude = 5920.42;
+                                                unit = "PT";
+                                            }};
+                                            width = new Dimension() {{
+                                                magnitude = 5722.52;
+                                                unit = "PT";
+                                            }};
+                                        }}),
                                     }};
-                                    columnSeparatorStyle = "NONE";
+                                    columnSeparatorStyle = "COLUMN_SEPARATOR_STYLE_UNSPECIFIED";
                                     contentDirection = "RIGHT_TO_LEFT";
-                                    defaultFooterId = "maiores";
-                                    defaultHeaderId = "rerum";
-                                    evenPageFooterId = "dicta";
-                                    evenPageHeaderId = "magnam";
-                                    firstPageFooterId = "cumque";
-                                    firstPageHeaderId = "facere";
+                                    defaultFooterId = "a";
+                                    defaultHeaderId = "dolorum";
+                                    evenPageFooterId = "in";
+                                    evenPageHeaderId = "in";
+                                    firstPageFooterId = "illum";
+                                    firstPageHeaderId = "maiores";
                                     marginBottom = new Dimension() {{
-                                        magnitude = 4118.2;
+                                        magnitude = 6994.79;
                                         unit = "UNIT_UNSPECIFIED";
                                     }};
                                     marginFooter = new Dimension() {{
-                                        magnitude = 6754.39;
+                                        magnitude = 2974.37;
                                         unit = "PT";
                                     }};
                                     marginHeader = new Dimension() {{
-                                        magnitude = 2497.96;
-                                        unit = "PT";
+                                        magnitude = 8137.98;
+                                        unit = "UNIT_UNSPECIFIED";
                                     }};
                                     marginLeft = new Dimension() {{
-                                        magnitude = 3132.18;
+                                        magnitude = 3965.06;
                                         unit = "PT";
                                     }};
                                     marginRight = new Dimension() {{
-                                        magnitude = 9654.17;
-                                        unit = "PT";
+                                        magnitude = 8811.04;
+                                        unit = "UNIT_UNSPECIFIED";
                                     }};
                                     marginTop = new Dimension() {{
-                                        magnitude = 5884.65;
-                                        unit = "PT";
+                                        magnitude = 5812.73;
+                                        unit = "UNIT_UNSPECIFIED";
                                     }};
-                                    pageNumberStart = 659669;
-                                    sectionType = "CONTINUOUS";
+                                    pageNumberStart = 881736;
+                                    sectionType = "NEXT_PAGE";
                                     useFirstPageHeaderFooter = false;
                                 }};
                             }};
                             updateTableCellStyle = new UpdateTableCellStyleRequest() {{
-                                fields = "deleniti";
+                                fields = "quidem";
                                 tableCellStyle = new TableCellStyle() {{
                                     backgroundColor = new OptionalColor() {{
                                         color = new Color() {{
                                             rgbColor = new RgbColor() {{
-                                                blue = 9560.84;
-                                                green = 2305.33;
-                                                red = 6439.9;
+                                                blue = 5884.65;
+                                                green = 7252.55;
+                                                red = 6596.69;
                                             }};
                                         }};
                                     }};
@@ -681,15 +665,15 @@ public class Application {
                                         color = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 3948.69;
-                                                    green = 4238.55;
-                                                    red = 6188.09;
+                                                    blue = 5013.24;
+                                                    green = 5332.06;
+                                                    red = 9560.84;
                                                 }};
                                             }};
                                         }};
-                                        dashStyle = "DOT";
+                                        dashStyle = "DASH_STYLE_UNSPECIFIED";
                                         width = new Dimension() {{
-                                            magnitude = 4748.67;
+                                            magnitude = 6439.9;
                                             unit = "UNIT_UNSPECIFIED";
                                         }};
                                     }};
@@ -697,15 +681,15 @@ public class Application {
                                         color = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 4701.32;
-                                                    green = 3015.75;
-                                                    red = 7160.75;
+                                                    blue = 4238.55;
+                                                    green = 6188.09;
+                                                    red = 6063.93;
                                                 }};
                                             }};
                                         }};
-                                        dashStyle = "DOT";
+                                        dashStyle = "SOLID";
                                         width = new Dimension() {{
-                                            magnitude = 2879.91;
+                                            magnitude = 191.93;
                                             unit = "UNIT_UNSPECIFIED";
                                         }};
                                     }};
@@ -713,15 +697,15 @@ public class Application {
                                         color = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 3834.62;
-                                                    green = 6180.16;
-                                                    red = 7491.7;
+                                                    blue = 3015.75;
+                                                    green = 7160.75;
+                                                    red = 6601.74;
                                                 }};
                                             }};
                                         }};
                                         dashStyle = "SOLID";
                                         width = new Dimension() {{
-                                            magnitude = 8784.53;
+                                            magnitude = 2900.77;
                                             unit = "UNIT_UNSPECIFIED";
                                         }};
                                     }};
@@ -729,104 +713,118 @@ public class Application {
                                         color = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 1028.63;
-                                                    green = 2982.82;
-                                                    red = 923.73;
+                                                    blue = 6180.16;
+                                                    green = 7491.7;
+                                                    red = 4287.69;
                                                 }};
                                             }};
                                         }};
-                                        dashStyle = "DOT";
+                                        dashStyle = "DASH";
                                         width = new Dimension() {{
-                                            magnitude = 3540.47;
-                                            unit = "PT";
+                                            magnitude = 1354.74;
+                                            unit = "UNIT_UNSPECIFIED";
                                         }};
                                     }};
-                                    columnSpan = 551816;
-                                    contentAlignment = "TOP";
+                                    columnSpan = 298282;
+                                    contentAlignment = "CONTENT_ALIGNMENT_UNSPECIFIED";
                                     paddingBottom = new Dimension() {{
-                                        magnitude = 336.25;
-                                        unit = "PT";
+                                        magnitude = 5699.65;
+                                        unit = "UNIT_UNSPECIFIED";
                                     }};
                                     paddingLeft = new Dimension() {{
-                                        magnitude = 9689.62;
+                                        magnitude = 5908.73;
                                         unit = "PT";
                                     }};
                                     paddingRight = new Dimension() {{
-                                        magnitude = 3209.97;
+                                        magnitude = 5743.25;
                                         unit = "UNIT_UNSPECIFIED";
                                     }};
                                     paddingTop = new Dimension() {{
-                                        magnitude = 2212.62;
+                                        magnitude = 6532.01;
                                         unit = "PT";
                                     }};
-                                    rowSpan = 141264;
+                                    rowSpan = 652103;
                                 }};
                                 tableRange = new TableRange() {{
-                                    columnSpan = 367562;
-                                    rowSpan = 97260;
+                                    columnSpan = 320997;
+                                    rowSpan = 431418;
                                     tableCellLocation = new TableCellLocation() {{
-                                        columnIndex = 435865;
-                                        rowIndex = 984043;
+                                        columnIndex = 221262;
+                                        rowIndex = 896547;
                                         tableStartLocation = new Location() {{
-                                            index = 891924;
-                                            segmentId = "eius";
+                                            index = 141264;
+                                            segmentId = "nemo";
                                         }};
                                     }};
                                 }};
                                 tableStartLocation = new Location() {{
-                                    index = 806194;
-                                    segmentId = "deleniti";
+                                    index = 97260;
+                                    segmentId = "iure";
                                 }};
                             }};
                             updateTableColumnProperties = new UpdateTableColumnPropertiesRequest() {{
                                 columnIndices = new Integer[]{{
-                                    add(447926),
-                                    add(100226),
-                                    add(99569),
+                                    add(891924),
+                                    add(260341),
+                                    add(806194),
+                                    add(537023),
                                 }};
-                                fields = "repudiandae";
+                                fields = "facilis";
                                 tableColumnProperties = new TableColumnProperties() {{
                                     width = new Dimension() {{
-                                        magnitude = 3523.12;
-                                        unit = "PT";
+                                        magnitude = 4479.26;
+                                        unit = "UNIT_UNSPECIFIED";
                                     }};
-                                    widthType = "EVENLY_DISTRIBUTED";
+                                    widthType = "WIDTH_TYPE_UNSPECIFIED";
                                 }};
                                 tableStartLocation = new Location() {{
-                                    index = 998848;
-                                    segmentId = "quibusdam";
+                                    index = 919483;
+                                    segmentId = "ullam";
                                 }};
                             }};
                             updateTableRowStyle = new UpdateTableRowStyleRequest() {{
-                                fields = "sed";
+                                fields = "expedita";
                                 rowIndices = new Integer[]{{
-                                    add(868126),
-                                    add(37559),
-                                    add(162493),
-                                    add(508315),
+                                    add(998848),
+                                    add(841140),
                                 }};
                                 tableRowStyle = new TableRowStyle() {{
                                     minRowHeight = new Dimension() {{
-                                        magnitude = 6155.6;
-                                        unit = "UNIT_UNSPECIFIED";
+                                        magnitude = 1494.48;
+                                        unit = "PT";
                                     }};
                                     preventOverflow = false;
                                     tableHeader = false;
                                 }};
                                 tableStartLocation = new Location() {{
-                                    index = 123820;
-                                    segmentId = "quo";
+                                    index = 868126;
+                                    segmentId = "accusantium";
                                 }};
                             }};
                             updateTextStyle = new UpdateTextStyleRequest() {{
-                                fields = "illum";
+                                fields = "consequuntur";
                                 range = new Range() {{
-                                    endIndex = 864934;
-                                    segmentId = "maxime";
-                                    startIndex = 411397;
+                                    endIndex = 508315;
+                                    segmentId = "natus";
+                                    startIndex = 166847;
                                 }};
                                 textStyle = new TextStyle() {{
                                     backgroundColor = new OptionalColor() {{
+                                        color = new Color() {{
+                                            rgbColor = new RgbColor() {{
+                                                blue = 1238.2;
+                                                green = 7790.51;
+                                                red = 8480.09;
+                                            }};
+                                        }};
+                                    }};
+                                    baselineOffset = "SUBSCRIPT";
+                                    bold = false;
+                                    fontSize = new Dimension() {{
+                                        magnitude = 8073.19;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                    foregroundColor = new OptionalColor() {{
                                         color = new Color() {{
                                             rgbColor = new RgbColor() {{
                                                 blue = 5691.01;
@@ -835,33 +833,18 @@ public class Application {
                                             }};
                                         }};
                                     }};
-                                    baselineOffset = "BASELINE_OFFSET_UNSPECIFIED";
-                                    bold = false;
-                                    fontSize = new Dimension() {{
-                                        magnitude = 691.67;
-                                        unit = "PT";
-                                    }};
-                                    foregroundColor = new OptionalColor() {{
-                                        color = new Color() {{
-                                            rgbColor = new RgbColor() {{
-                                                blue = 6974.29;
-                                                green = 3732.91;
-                                                red = 4535.43;
-                                            }};
-                                        }};
-                                    }};
                                     italic = false;
                                     link = new Link() {{
-                                        bookmarkId = "autem";
-                                        headingId = "nam";
-                                        url = "eaque";
+                                        bookmarkId = "accusantium";
+                                        headingId = "ab";
+                                        url = "maiores";
                                     }};
                                     smallCaps = false;
                                     strikethrough = false;
                                     underline = false;
                                     weightedFontFamily = new WeightedFontFamily() {{
-                                        fontFamily = "pariatur";
-                                        weight = 365496;
+                                        fontFamily = "quidem";
+                                        weight = 373291;
                                     }};
                                 }};
                             }};
@@ -869,220 +852,220 @@ public class Application {
                         add(new Request() {{
                             createFooter = new CreateFooterRequest() {{
                                 sectionBreakLocation = new Location() {{
-                                    index = 975522;
-                                    segmentId = "perferendis";
+                                    index = 453543;
+                                    segmentId = "autem";
                                 }};
                                 type = "DEFAULT";
                             }};
                             createFootnote = new CreateFootnoteRequest() {{
                                 endOfSegmentLocation = new EndOfSegmentLocation() {{
-                                    segmentId = "amet";
+                                    segmentId = "eaque";
                                 }};
                                 location = new Location() {{
-                                    index = 11714;
-                                    segmentId = "cumque";
+                                    index = 866383;
+                                    segmentId = "nemo";
                                 }};
                             }};
                             createHeader = new CreateHeaderRequest() {{
                                 sectionBreakLocation = new Location() {{
-                                    index = 359978;
-                                    segmentId = "hic";
+                                    index = 975522;
+                                    segmentId = "perferendis";
                                 }};
                                 type = "DEFAULT";
                             }};
                             createNamedRange = new CreateNamedRangeRequest() {{
-                                name = "nobis";
+                                name = "amet";
                                 range = new Range() {{
-                                    endIndex = 171629;
-                                    segmentId = "quis";
-                                    startIndex = 521037;
+                                    endIndex = 11714;
+                                    segmentId = "cumque";
+                                    startIndex = 359978;
                                 }};
                             }};
                             createParagraphBullets = new CreateParagraphBulletsRequest() {{
-                                bulletPreset = "BULLET_LEFTTRIANGLE_DIAMOND_DISC";
+                                bulletPreset = "NUMBERED_ZERODECIMAL_ALPHA_ROMAN";
                                 range = new Range() {{
-                                    endIndex = 54338;
-                                    segmentId = "quis";
-                                    startIndex = 199996;
+                                    endIndex = 729991;
+                                    segmentId = "nobis";
+                                    startIndex = 171629;
                                 }};
                             }};
                             deleteContentRange = new DeleteContentRangeRequest() {{
                                 range = new Range() {{
-                                    endIndex = 179490;
-                                    segmentId = "perferendis";
-                                    startIndex = 170986;
+                                    endIndex = 339404;
+                                    segmentId = "totam";
+                                    startIndex = 489549;
                                 }};
                             }};
                             deleteFooter = new DeleteFooterRequest() {{
-                                footerId = "minus";
+                                footerId = "eaque";
                             }};
                             deleteHeader = new DeleteHeaderRequest() {{
-                                headerId = "quam";
+                                headerId = "quis";
                             }};
                             deleteNamedRange = new DeleteNamedRangeRequest() {{
-                                name = "dolor";
-                                namedRangeId = "vero";
+                                name = "nesciunt";
+                                namedRangeId = "eos";
                             }};
                             deleteParagraphBullets = new DeleteParagraphBulletsRequest() {{
                                 range = new Range() {{
-                                    endIndex = 345352;
-                                    segmentId = "hic";
-                                    startIndex = 928082;
+                                    endIndex = 18521;
+                                    segmentId = "dolores";
+                                    startIndex = 793698;
                                 }};
                             }};
                             deletePositionedObject = new DeletePositionedObjectRequest() {{
-                                objectId = "omnis";
+                                objectId = "quam";
                             }};
                             deleteTableColumn = new DeleteTableColumnRequest() {{
                                 tableCellLocation = new TableCellLocation() {{
-                                    columnIndex = 704415;
-                                    rowIndex = 596656;
+                                    columnIndex = 223924;
+                                    rowIndex = 874573;
                                     tableStartLocation = new Location() {{
-                                        index = 31838;
-                                        segmentId = "porro";
+                                        index = 345352;
+                                        segmentId = "hic";
                                     }};
                                 }};
                             }};
                             deleteTableRow = new DeleteTableRowRequest() {{
                                 tableCellLocation = new TableCellLocation() {{
-                                    columnIndex = 164694;
-                                    rowIndex = 500026;
+                                    columnIndex = 928082;
+                                    rowIndex = 608253;
                                     tableStartLocation = new Location() {{
-                                        index = 621479;
-                                        segmentId = "eaque";
+                                        index = 704415;
+                                        segmentId = "perspiciatis";
                                     }};
                                 }};
                             }};
                             insertInlineImage = new InsertInlineImageRequest() {{
                                 endOfSegmentLocation = new EndOfSegmentLocation() {{
-                                    segmentId = "occaecati";
+                                    segmentId = "voluptatem";
                                 }};
                                 location = new Location() {{
-                                    index = 699098;
-                                    segmentId = "adipisci";
+                                    index = 783645;
+                                    segmentId = "consequuntur";
                                 }};
                                 objectSize = new Size() {{
                                     height = new Dimension() {{
-                                        magnitude = 9923.97;
+                                        magnitude = 5000.26;
                                         unit = "PT";
                                     }};
                                     width = new Dimension() {{
-                                        magnitude = 2672.62;
+                                        magnitude = 503.7;
                                         unit = "PT";
                                     }};
                                 }};
-                                uri = "https://minty-subgroup.name";
+                                uri = "https://enraged-wrench.org";
                             }};
                             insertPageBreak = new InsertPageBreakRequest() {{
                                 endOfSegmentLocation = new EndOfSegmentLocation() {{
-                                    segmentId = "nobis";
+                                    segmentId = "modi";
                                 }};
                                 location = new Location() {{
-                                    index = 730122;
-                                    segmentId = "delectus";
+                                    index = 613966;
+                                    segmentId = "dolorum";
                                 }};
                             }};
                             insertSectionBreak = new InsertSectionBreakRequest() {{
                                 endOfSegmentLocation = new EndOfSegmentLocation() {{
-                                    segmentId = "quaerat";
+                                    segmentId = "deleniti";
                                 }};
                                 location = new Location() {{
-                                    index = 554242;
-                                    segmentId = "aliquid";
+                                    index = 864282;
+                                    segmentId = "provident";
                                 }};
-                                sectionType = "SECTION_TYPE_UNSPECIFIED";
+                                sectionType = "NEXT_PAGE";
                             }};
                             insertTable = new InsertTableRequest() {{
-                                columns = 209843;
+                                columns = 730122;
                                 endOfSegmentLocation = new EndOfSegmentLocation() {{
-                                    segmentId = "dolor";
+                                    segmentId = "delectus";
                                 }};
                                 location = new Location() {{
-                                    index = 186193;
-                                    segmentId = "ipsum";
+                                    index = 311945;
+                                    segmentId = "quos";
                                 }};
-                                rows = 944373;
+                                rows = 398221;
                             }};
                             insertTableColumn = new InsertTableColumnRequest() {{
                                 insertRight = false;
                                 tableCellLocation = new TableCellLocation() {{
-                                    columnIndex = 569574;
-                                    rowIndex = 739551;
+                                    columnIndex = 212390;
+                                    rowIndex = 209843;
                                     tableStartLocation = new Location() {{
-                                        index = 452109;
-                                        segmentId = "dignissimos";
+                                        index = 222443;
+                                        segmentId = "qui";
                                     }};
                                 }};
                             }};
                             insertTableRow = new InsertTableRowRequest() {{
                                 insertBelow = false;
                                 tableCellLocation = new TableCellLocation() {{
-                                    columnIndex = 970237;
-                                    rowIndex = 227414;
+                                    columnIndex = 218749;
+                                    rowIndex = 944373;
                                     tableStartLocation = new Location() {{
-                                        index = 680545;
-                                        segmentId = "numquam";
+                                        index = 569574;
+                                        segmentId = "cum";
                                     }};
                                 }};
                             }};
                             insertText = new InsertTextRequest() {{
                                 endOfSegmentLocation = new EndOfSegmentLocation() {{
-                                    segmentId = "veritatis";
+                                    segmentId = "voluptate";
                                 }};
                                 location = new Location() {{
-                                    index = 58029;
-                                    segmentId = "ipsa";
+                                    index = 490459;
+                                    segmentId = "reiciendis";
                                 }};
-                                text = "iure";
+                                text = "amet";
                             }};
                             mergeTableCells = new MergeTableCellsRequest() {{
                                 tableRange = new TableRange() {{
-                                    columnSpan = 487838;
-                                    rowSpan = 311796;
+                                    columnSpan = 680545;
+                                    rowSpan = 254356;
                                     tableCellLocation = new TableCellLocation() {{
-                                        columnIndex = 881005;
-                                        rowIndex = 696344;
+                                        columnIndex = 85295;
+                                        rowIndex = 58029;
                                         tableStartLocation = new Location() {{
-                                            index = 976405;
-                                            segmentId = "voluptas";
+                                            index = 56418;
+                                            segmentId = "iure";
                                         }};
                                     }};
                                 }};
                             }};
                             pinTableHeaderRows = new PinTableHeaderRowsRequest() {{
-                                pinnedHeaderRowsCount = 617658;
+                                pinnedHeaderRowsCount = 487838;
                                 tableStartLocation = new Location() {{
-                                    index = 179603;
-                                    segmentId = "atque";
+                                    index = 311796;
+                                    segmentId = "accusamus";
                                 }};
                             }};
                             replaceAllText = new ReplaceAllTextRequest() {{
                                 containsText = new SubstringMatchCriteria() {{
                                     matchCase = false;
-                                    text = "sit";
+                                    text = "quidem";
                                 }};
-                                replaceText = "fugiat";
+                                replaceText = "voluptatibus";
                             }};
                             replaceImage = new ReplaceImageRequest() {{
-                                imageObjectId = "ab";
+                                imageObjectId = "voluptas";
                                 imageReplaceMethod = "CENTER_CROP";
-                                uri = "https://late-in-laws.net";
+                                uri = "http://monstrous-ambassador.org";
                             }};
                             replaceNamedRangeContent = new ReplaceNamedRangeContentRequest() {{
-                                namedRangeId = "deleniti";
-                                namedRangeName = "omnis";
-                                text = "necessitatibus";
+                                namedRangeId = "ab";
+                                namedRangeName = "soluta";
+                                text = "dolorum";
                             }};
                             unmergeTableCells = new UnmergeTableCellsRequest() {{
                                 tableRange = new TableRange() {{
-                                    columnSpan = 714697;
-                                    rowSpan = 990339;
+                                    columnSpan = 478596;
+                                    rowSpan = 453697;
                                     tableCellLocation = new TableCellLocation() {{
-                                        columnIndex = 469497;
-                                        rowIndex = 216897;
+                                        columnIndex = 677082;
+                                        rowIndex = 536579;
                                         tableStartLocation = new Location() {{
-                                            index = 456015;
-                                            segmentId = "id";
+                                            index = 607045;
+                                            segmentId = "necessitatibus";
                                         }};
                                     }};
                                 }};
@@ -1093,205 +1076,219 @@ public class Application {
                                         color = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 9064.18;
-                                                    green = 2633.22;
-                                                    red = 1372.2;
+                                                    blue = 7146.97;
+                                                    green = 9903.39;
+                                                    red = 4694.97;
                                                 }};
                                             }};
                                         }};
                                     }};
-                                    defaultFooterId = "perferendis";
-                                    defaultHeaderId = "amet";
-                                    evenPageFooterId = "optio";
-                                    evenPageHeaderId = "accusamus";
-                                    firstPageFooterId = "ad";
-                                    firstPageHeaderId = "saepe";
+                                    defaultFooterId = "ipsum";
+                                    defaultHeaderId = "voluptate";
+                                    evenPageFooterId = "id";
+                                    evenPageHeaderId = "saepe";
+                                    firstPageFooterId = "eius";
+                                    firstPageHeaderId = "aspernatur";
                                     marginBottom = new Dimension() {{
-                                        magnitude = 3834.64;
-                                        unit = "PT";
-                                    }};
-                                    marginFooter = new Dimension() {{
-                                        magnitude = 5883.17;
+                                        magnitude = 206.51;
                                         unit = "UNIT_UNSPECIFIED";
                                     }};
+                                    marginFooter = new Dimension() {{
+                                        magnitude = 7583.79;
+                                        unit = "PT";
+                                    }};
                                     marginHeader = new Dimension() {{
-                                        magnitude = 8310.49;
+                                        magnitude = 3200.17;
                                         unit = "PT";
                                     }};
                                     marginLeft = new Dimension() {{
-                                        magnitude = 6289.82;
-                                        unit = "UNIT_UNSPECIFIED";
+                                        magnitude = 3834.64;
+                                        unit = "PT";
                                     }};
                                     marginRight = new Dimension() {{
-                                        magnitude = 8726.51;
+                                        magnitude = 5883.17;
                                         unit = "UNIT_UNSPECIFIED";
                                     }};
                                     marginTop = new Dimension() {{
-                                        magnitude = 2735.42;
-                                        unit = "UNIT_UNSPECIFIED";
+                                        magnitude = 8310.49;
+                                        unit = "PT";
                                     }};
-                                    pageNumberStart = 798047;
+                                    pageNumberStart = 628982;
                                     pageSize = new Size() {{
                                         height = new Dimension() {{
-                                            magnitude = 8853.38;
-                                            unit = "UNIT_UNSPECIFIED";
+                                            magnitude = 0.55;
+                                            unit = "PT";
                                         }};
                                         width = new Dimension() {{
-                                            magnitude = 6798.8;
-                                            unit = "PT";
+                                            magnitude = 3118.6;
+                                            unit = "UNIT_UNSPECIFIED";
                                         }};
                                     }};
                                     useCustomHeaderFooterMargins = false;
                                     useEvenPageHeaderFooter = false;
                                     useFirstPageHeaderFooter = false;
                                 }};
-                                fields = "esse";
+                                fields = "vel";
                             }};
                             updateParagraphStyle = new UpdateParagraphStyleRequest() {{
-                                fields = "harum";
+                                fields = "quod";
                                 paragraphStyle = new ParagraphStyle() {{
-                                    alignment = "CENTER";
+                                    alignment = "JUSTIFIED";
                                     avoidWidowAndOrphan = false;
                                     borderBetween = new ParagraphBorder() {{
                                         color = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 2155.07;
-                                                    green = 7887.4;
-                                                    red = 9473.71;
+                                                    blue = 1856.36;
+                                                    green = 6798.8;
+                                                    red = 9527.92;
                                                 }};
                                             }};
                                         }};
-                                        dashStyle = "DASH_STYLE_UNSPECIFIED";
+                                        dashStyle = "SOLID";
                                         padding = new Dimension() {{
-                                            magnitude = 7308.56;
-                                            unit = "PT";
+                                            magnitude = 6874.88;
+                                            unit = "UNIT_UNSPECIFIED";
                                         }};
                                         width = new Dimension() {{
-                                            magnitude = 2539.41;
-                                            unit = "UNIT_UNSPECIFIED";
+                                            magnitude = 2155.07;
+                                            unit = "PT";
                                         }};
                                     }};
                                     borderBottom = new ParagraphBorder() {{
                                         color = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 2133.12;
-                                                    green = 9574.51;
-                                                    red = 5182.01;
+                                                    blue = 9473.71;
+                                                    green = 2294.42;
+                                                    red = 7308.56;
                                                 }};
                                             }};
                                         }};
-                                        dashStyle = "SOLID";
+                                        dashStyle = "DASH";
                                         padding = new Dimension() {{
-                                            magnitude = 256.62;
-                                            unit = "PT";
+                                            magnitude = 2539.41;
+                                            unit = "UNIT_UNSPECIFIED";
                                         }};
                                         width = new Dimension() {{
-                                            magnitude = 2074.7;
-                                            unit = "UNIT_UNSPECIFIED";
+                                            magnitude = 2133.12;
+                                            unit = "PT";
                                         }};
                                     }};
                                     borderLeft = new ParagraphBorder() {{
                                         color = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 4246.85;
-                                                    green = 7304.42;
-                                                    red = 3741.7;
+                                                    blue = 5182.01;
+                                                    green = 4717.52;
+                                                    red = 256.62;
                                                 }};
                                             }};
                                         }};
                                         dashStyle = "DOT";
                                         padding = new Dimension() {{
-                                            magnitude = 4635.75;
+                                            magnitude = 2074.7;
                                             unit = "UNIT_UNSPECIFIED";
                                         }};
                                         width = new Dimension() {{
-                                            magnitude = 2776.28;
-                                            unit = "UNIT_UNSPECIFIED";
+                                            magnitude = 4246.85;
+                                            unit = "PT";
                                         }};
                                     }};
                                     borderRight = new ParagraphBorder() {{
                                         color = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 5867.84;
-                                                    green = 8075.81;
-                                                    red = 8638.56;
+                                                    blue = 3741.7;
+                                                    green = 6462.65;
+                                                    red = 4635.75;
                                                 }};
                                             }};
                                         }};
-                                        dashStyle = "DOT";
+                                        dashStyle = "DASH_STYLE_UNSPECIFIED";
                                         padding = new Dimension() {{
-                                            magnitude = 1175.31;
-                                            unit = "PT";
+                                            magnitude = 2776.28;
+                                            unit = "UNIT_UNSPECIFIED";
                                         }};
                                         width = new Dimension() {{
-                                            magnitude = 5173.79;
-                                            unit = "UNIT_UNSPECIFIED";
+                                            magnitude = 5867.84;
+                                            unit = "PT";
                                         }};
                                     }};
                                     borderTop = new ParagraphBorder() {{
                                         color = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 1320.68;
-                                                    green = 1749.09;
-                                                    red = 7168.6;
+                                                    blue = 8638.56;
+                                                    green = 7470.8;
+                                                    red = 1175.31;
                                                 }};
                                             }};
                                         }};
                                         dashStyle = "DOT";
                                         padding = new Dimension() {{
-                                            magnitude = 3960.6;
+                                            magnitude = 5173.79;
                                             unit = "UNIT_UNSPECIFIED";
                                         }};
                                         width = new Dimension() {{
-                                            magnitude = 5654.21;
-                                            unit = "PT";
+                                            magnitude = 1320.68;
+                                            unit = "UNIT_UNSPECIFIED";
                                         }};
                                     }};
-                                    direction = "CONTENT_DIRECTION_UNSPECIFIED";
-                                    headingId = "neque";
+                                    direction = "RIGHT_TO_LEFT";
+                                    headingId = "facilis";
                                     indentEnd = new Dimension() {{
-                                        magnitude = 1448.47;
+                                        magnitude = 3960.6;
                                         unit = "UNIT_UNSPECIFIED";
                                     }};
                                     indentFirstLine = new Dimension() {{
-                                        magnitude = 4880.56;
-                                        unit = "UNIT_UNSPECIFIED";
+                                        magnitude = 5654.21;
+                                        unit = "PT";
                                     }};
                                     indentStart = new Dimension() {{
-                                        magnitude = 3556.13;
-                                        unit = "PT";
+                                        magnitude = 1832.8;
+                                        unit = "UNIT_UNSPECIFIED";
                                     }};
                                     keepLinesTogether = false;
                                     keepWithNext = false;
-                                    lineSpacing = 9404.32;
-                                    namedStyleType = "NAMED_STYLE_TYPE_UNSPECIFIED";
+                                    lineSpacing = 1448.47;
+                                    namedStyleType = "NORMAL_TEXT";
                                     pageBreakBefore = false;
                                     shading = new Shading() {{
                                         backgroundColor = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 7653.26;
-                                                    green = 7469.94;
-                                                    red = 7486.64;
+                                                    blue = 4880.56;
+                                                    green = 1248.33;
+                                                    red = 3556.13;
                                                 }};
                                             }};
                                         }};
                                     }};
                                     spaceAbove = new Dimension() {{
-                                        magnitude = 925.96;
+                                        magnitude = 7220.81;
                                         unit = "PT";
                                     }};
                                     spaceBelow = new Dimension() {{
-                                        magnitude = 2174.5;
-                                        unit = "UNIT_UNSPECIFIED";
+                                        magnitude = 304.52;
+                                        unit = "PT";
                                     }};
                                     spacingMode = "COLLAPSE_LISTS";
                                     tabStops = new org.openapis.openapi.models.shared.TabStop[]{{
+                                        add(new TabStop() {{
+                                            alignment = "TAB_STOP_ALIGNMENT_UNSPECIFIED";
+                                            offset = new Dimension() {{
+                                                magnitude = 9037.2;
+                                                unit = "UNIT_UNSPECIFIED";
+                                            }};
+                                        }}),
+                                        add(new TabStop() {{
+                                            alignment = "TAB_STOP_ALIGNMENT_UNSPECIFIED";
+                                            offset = new Dimension() {{
+                                                magnitude = 7492.55;
+                                                unit = "PT";
+                                            }};
+                                        }}),
                                         add(new TabStop() {{
                                             alignment = "CENTER";
                                             offset = new Dimension() {{
@@ -1299,128 +1296,132 @@ public class Application {
                                                 unit = "UNIT_UNSPECIFIED";
                                             }};
                                         }}),
-                                        add(new TabStop() {{
-                                            alignment = "END";
-                                            offset = new Dimension() {{
-                                                magnitude = 2091.57;
-                                                unit = "UNIT_UNSPECIFIED";
-                                            }};
-                                        }}),
-                                        add(new TabStop() {{
-                                            alignment = "START";
-                                            offset = new Dimension() {{
-                                                magnitude = 2408.29;
-                                                unit = "PT";
-                                            }};
-                                        }}),
                                     }};
                                 }};
                                 range = new Range() {{
-                                    endIndex = 100294;
-                                    segmentId = "quae";
-                                    startIndex = 16429;
+                                    endIndex = 961937;
+                                    segmentId = "dolorem";
+                                    startIndex = 292147;
                                 }};
                             }};
                             updateSectionStyle = new UpdateSectionStyleRequest() {{
-                                fields = "quas";
+                                fields = "labore";
                                 range = new Range() {{
-                                    endIndex = 929530;
-                                    segmentId = "consequatur";
-                                    startIndex = 669917;
+                                    endIndex = 240829;
+                                    segmentId = "dolorum";
+                                    startIndex = 100294;
                                 }};
                                 sectionStyle = new SectionStyle() {{
                                     columnProperties = new org.openapis.openapi.models.shared.SectionColumnProperties[]{{
                                         add(new SectionColumnProperties() {{
                                             paddingEnd = new Dimension() {{
-                                                magnitude = 7851.53;
+                                                magnitude = 164.29;
                                                 unit = "PT";
                                             }};
                                             width = new Dimension() {{
-                                                magnitude = 2817.3;
-                                                unit = "PT";
-                                            }};
-                                        }}),
-                                        add(new SectionColumnProperties() {{
-                                            paddingEnd = new Dimension() {{
-                                                magnitude = 5864.1;
-                                                unit = "UNIT_UNSPECIFIED";
-                                            }};
-                                            width = new Dimension() {{
-                                                magnitude = 639.55;
-                                                unit = "PT";
-                                            }};
-                                        }}),
-                                        add(new SectionColumnProperties() {{
-                                            paddingEnd = new Dimension() {{
-                                                magnitude = 4856.28;
-                                                unit = "PT";
-                                            }};
-                                            width = new Dimension() {{
-                                                magnitude = 9774.96;
-                                                unit = "PT";
-                                            }};
-                                        }}),
-                                        add(new SectionColumnProperties() {{
-                                            paddingEnd = new Dimension() {{
-                                                magnitude = 8765.06;
-                                                unit = "PT";
-                                            }};
-                                            width = new Dimension() {{
-                                                magnitude = 3381.59;
+                                                magnitude = 9295.3;
                                                 unit = "UNIT_UNSPECIFIED";
                                             }};
                                         }}),
                                     }};
                                     columnSeparatorStyle = "BETWEEN_EACH_COLUMN";
-                                    contentDirection = "LEFT_TO_RIGHT";
-                                    defaultFooterId = "consectetur";
-                                    defaultHeaderId = "vero";
-                                    evenPageFooterId = "tenetur";
-                                    evenPageHeaderId = "dignissimos";
-                                    firstPageFooterId = "hic";
-                                    firstPageHeaderId = "distinctio";
+                                    contentDirection = "RIGHT_TO_LEFT";
+                                    defaultFooterId = "porro";
+                                    defaultHeaderId = "doloribus";
+                                    evenPageFooterId = "ut";
+                                    evenPageHeaderId = "facilis";
+                                    firstPageFooterId = "cupiditate";
+                                    firstPageHeaderId = "qui";
                                     marginBottom = new Dimension() {{
-                                        magnitude = 7992.03;
-                                        unit = "UNIT_UNSPECIFIED";
+                                        magnitude = 639.55;
+                                        unit = "PT";
                                     }};
                                     marginFooter = new Dimension() {{
-                                        magnitude = 6304.48;
+                                        magnitude = 4856.28;
                                         unit = "PT";
                                     }};
                                     marginHeader = new Dimension() {{
-                                        magnitude = 8742.88;
-                                        unit = "UNIT_UNSPECIFIED";
+                                        magnitude = 9774.96;
+                                        unit = "PT";
                                     }};
                                     marginLeft = new Dimension() {{
-                                        magnitude = 2930.2;
+                                        magnitude = 8765.06;
                                         unit = "PT";
                                     }};
                                     marginRight = new Dimension() {{
-                                        magnitude = 8489.44;
+                                        magnitude = 3381.59;
                                         unit = "UNIT_UNSPECIFIED";
                                     }};
                                     marginTop = new Dimension() {{
-                                        magnitude = 6178.77;
-                                        unit = "PT";
+                                        magnitude = 9615.71;
+                                        unit = "UNIT_UNSPECIFIED";
                                     }};
-                                    pageNumberStart = 13236;
+                                    pageNumberStart = 231701;
                                     sectionType = "NEXT_PAGE";
                                     useFirstPageHeaderFooter = false;
                                 }};
                             }};
                             updateTableCellStyle = new UpdateTableCellStyleRequest() {{
-                                fields = "exercitationem";
+                                fields = "tenetur";
                                 tableCellStyle = new TableCellStyle() {{
                                     backgroundColor = new OptionalColor() {{
                                         color = new Color() {{
                                             rgbColor = new RgbColor() {{
-                                                blue = 8623.1;
-                                                green = 1481.41;
-                                                red = 7804.27;
+                                                blue = 4922.68;
+                                                green = 9413.78;
+                                                red = 7155.61;
                                             }};
                                         }};
                                     }};
                                     borderBottom = new TableCellBorder() {{
+                                        color = new OptionalColor() {{
+                                            color = new Color() {{
+                                                rgbColor = new RgbColor() {{
+                                                    blue = 7992.03;
+                                                    green = 4861.6;
+                                                    red = 6304.48;
+                                                }};
+                                            }};
+                                        }};
+                                        dashStyle = "DOT";
+                                        width = new Dimension() {{
+                                            magnitude = 8742.88;
+                                            unit = "UNIT_UNSPECIFIED";
+                                        }};
+                                    }};
+                                    borderLeft = new TableCellBorder() {{
+                                        color = new OptionalColor() {{
+                                            color = new Color() {{
+                                                rgbColor = new RgbColor() {{
+                                                    blue = 2930.2;
+                                                    green = 8445.5;
+                                                    red = 8489.44;
+                                                }};
+                                            }};
+                                        }};
+                                        dashStyle = "DASH_STYLE_UNSPECIFIED";
+                                        width = new Dimension() {{
+                                            magnitude = 6178.77;
+                                            unit = "PT";
+                                        }};
+                                    }};
+                                    borderRight = new TableCellBorder() {{
+                                        color = new OptionalColor() {{
+                                            color = new Color() {{
+                                                rgbColor = new RgbColor() {{
+                                                    blue = 132.36;
+                                                    green = 9742.59;
+                                                    red = 3472.33;
+                                                }};
+                                            }};
+                                        }};
+                                        dashStyle = "DASH";
+                                        width = new Dimension() {{
+                                            magnitude = 1481.41;
+                                            unit = "PT";
+                                        }};
+                                    }};
+                                    borderTop = new TableCellBorder() {{
                                         color = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
@@ -1436,19 +1437,691 @@ public class Application {
                                             unit = "UNIT_UNSPECIFIED";
                                         }};
                                     }};
-                                    borderLeft = new TableCellBorder() {{
+                                    columnSpan = 639473;
+                                    contentAlignment = "CONTENT_ALIGNMENT_UNSUPPORTED";
+                                    paddingBottom = new Dimension() {{
+                                        magnitude = 3685.84;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                    paddingLeft = new Dimension() {{
+                                        magnitude = 1369;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                    paddingRight = new Dimension() {{
+                                        magnitude = 8221.18;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                    paddingTop = new Dimension() {{
+                                        magnitude = 1898.48;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                    rowSpan = 511319;
+                                }};
+                                tableRange = new TableRange() {{
+                                    columnSpan = 120657;
+                                    rowSpan = 224317;
+                                    tableCellLocation = new TableCellLocation() {{
+                                        columnIndex = 980700;
+                                        rowIndex = 97844;
+                                        tableStartLocation = new Location() {{
+                                            index = 406120;
+                                            segmentId = "nulla";
+                                        }};
+                                    }};
+                                }};
+                                tableStartLocation = new Location() {{
+                                    index = 569211;
+                                    segmentId = "voluptatibus";
+                                }};
+                            }};
+                            updateTableColumnProperties = new UpdateTableColumnPropertiesRequest() {{
+                                columnIndices = new Integer[]{{
+                                    add(960835),
+                                    add(788873),
+                                }};
+                                fields = "saepe";
+                                tableColumnProperties = new TableColumnProperties() {{
+                                    width = new Dimension() {{
+                                        magnitude = 4113.72;
+                                        unit = "PT";
+                                    }};
+                                    widthType = "EVENLY_DISTRIBUTED";
+                                }};
+                                tableStartLocation = new Location() {{
+                                    index = 333145;
+                                    segmentId = "aliquid";
+                                }};
+                            }};
+                            updateTableRowStyle = new UpdateTableRowStyleRequest() {{
+                                fields = "inventore";
+                                rowIndices = new Integer[]{{
+                                    add(407241),
+                                    add(775220),
+                                }};
+                                tableRowStyle = new TableRowStyle() {{
+                                    minRowHeight = new Dimension() {{
+                                        magnitude = 2322.34;
+                                        unit = "PT";
+                                    }};
+                                    preventOverflow = false;
+                                    tableHeader = false;
+                                }};
+                                tableStartLocation = new Location() {{
+                                    index = 132487;
+                                    segmentId = "minima";
+                                }};
+                            }};
+                            updateTextStyle = new UpdateTextStyleRequest() {{
+                                fields = "eaque";
+                                range = new Range() {{
+                                    endIndex = 952871;
+                                    segmentId = "libero";
+                                    startIndex = 13948;
+                                }};
+                                textStyle = new TextStyle() {{
+                                    backgroundColor = new OptionalColor() {{
+                                        color = new Color() {{
+                                            rgbColor = new RgbColor() {{
+                                                blue = 114.27;
+                                                green = 5334.66;
+                                                red = 7705.81;
+                                            }};
+                                        }};
+                                    }};
+                                    baselineOffset = "NONE";
+                                    bold = false;
+                                    fontSize = new Dimension() {{
+                                        magnitude = 1469.46;
+                                        unit = "PT";
+                                    }};
+                                    foregroundColor = new OptionalColor() {{
+                                        color = new Color() {{
+                                            rgbColor = new RgbColor() {{
+                                                blue = 795.22;
+                                                green = 2506.22;
+                                                red = 896.03;
+                                            }};
+                                        }};
+                                    }};
+                                    italic = false;
+                                    link = new Link() {{
+                                        bookmarkId = "dolorum";
+                                        headingId = "laborum";
+                                        url = "placeat";
+                                    }};
+                                    smallCaps = false;
+                                    strikethrough = false;
+                                    underline = false;
+                                    weightedFontFamily = new WeightedFontFamily() {{
+                                        fontFamily = "velit";
+                                        weight = 432148;
+                                    }};
+                                }};
+                            }};
+                        }}),
+                        add(new Request() {{
+                            createFooter = new CreateFooterRequest() {{
+                                sectionBreakLocation = new Location() {{
+                                    index = 420539;
+                                    segmentId = "nobis";
+                                }};
+                                type = "DEFAULT";
+                            }};
+                            createFootnote = new CreateFootnoteRequest() {{
+                                endOfSegmentLocation = new EndOfSegmentLocation() {{
+                                    segmentId = "assumenda";
+                                }};
+                                location = new Location() {{
+                                    index = 860552;
+                                    segmentId = "voluptas";
+                                }};
+                            }};
+                            createHeader = new CreateHeaderRequest() {{
+                                sectionBreakLocation = new Location() {{
+                                    index = 727044;
+                                    segmentId = "quasi";
+                                }};
+                                type = "HEADER_FOOTER_TYPE_UNSPECIFIED";
+                            }};
+                            createNamedRange = new CreateNamedRangeRequest() {{
+                                name = "numquam";
+                                range = new Range() {{
+                                    endIndex = 131482;
+                                    segmentId = "provident";
+                                    startIndex = 55374;
+                                }};
+                            }};
+                            createParagraphBullets = new CreateParagraphBulletsRequest() {{
+                                bulletPreset = "BULLET_LEFTTRIANGLE_DIAMOND_DISC";
+                                range = new Range() {{
+                                    endIndex = 301598;
+                                    segmentId = "odio";
+                                    startIndex = 262118;
+                                }};
+                            }};
+                            deleteContentRange = new DeleteContentRangeRequest() {{
+                                range = new Range() {{
+                                    endIndex = 458515;
+                                    segmentId = "esse";
+                                    startIndex = 524593;
+                                }};
+                            }};
+                            deleteFooter = new DeleteFooterRequest() {{
+                                footerId = "fuga";
+                            }};
+                            deleteHeader = new DeleteHeaderRequest() {{
+                                headerId = "reprehenderit";
+                            }};
+                            deleteNamedRange = new DeleteNamedRangeRequest() {{
+                                name = "quidem";
+                                namedRangeId = "fugiat";
+                            }};
+                            deleteParagraphBullets = new DeleteParagraphBulletsRequest() {{
+                                range = new Range() {{
+                                    endIndex = 283519;
+                                    segmentId = "eum";
+                                    startIndex = 379927;
+                                }};
+                            }};
+                            deletePositionedObject = new DeletePositionedObjectRequest() {{
+                                objectId = "assumenda";
+                            }};
+                            deleteTableColumn = new DeleteTableColumnRequest() {{
+                                tableCellLocation = new TableCellLocation() {{
+                                    columnIndex = 181151;
+                                    rowIndex = 509342;
+                                    tableStartLocation = new Location() {{
+                                        index = 788546;
+                                        segmentId = "veritatis";
+                                    }};
+                                }};
+                            }};
+                            deleteTableRow = new DeleteTableRowRequest() {{
+                                tableCellLocation = new TableCellLocation() {{
+                                    columnIndex = 56848;
+                                    rowIndex = 660040;
+                                    tableStartLocation = new Location() {{
+                                        index = 696997;
+                                        segmentId = "neque";
+                                    }};
+                                }};
+                            }};
+                            insertInlineImage = new InsertInlineImageRequest() {{
+                                endOfSegmentLocation = new EndOfSegmentLocation() {{
+                                    segmentId = "quo";
+                                }};
+                                location = new Location() {{
+                                    index = 847276;
+                                    segmentId = "quo";
+                                }};
+                                objectSize = new Size() {{
+                                    height = new Dimension() {{
+                                        magnitude = 6813.59;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                    width = new Dimension() {{
+                                        magnitude = 1783.67;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                }};
+                                uri = "http://official-admin.biz";
+                            }};
+                            insertPageBreak = new InsertPageBreakRequest() {{
+                                endOfSegmentLocation = new EndOfSegmentLocation() {{
+                                    segmentId = "debitis";
+                                }};
+                                location = new Location() {{
+                                    index = 370853;
+                                    segmentId = "aspernatur";
+                                }};
+                            }};
+                            insertSectionBreak = new InsertSectionBreakRequest() {{
+                                endOfSegmentLocation = new EndOfSegmentLocation() {{
+                                    segmentId = "sequi";
+                                }};
+                                location = new Location() {{
+                                    index = 779192;
+                                    segmentId = "esse";
+                                }};
+                                sectionType = "NEXT_PAGE";
+                            }};
+                            insertTable = new InsertTableRequest() {{
+                                columns = 44612;
+                                endOfSegmentLocation = new EndOfSegmentLocation() {{
+                                    segmentId = "distinctio";
+                                }};
+                                location = new Location() {{
+                                    index = 799796;
+                                    segmentId = "dignissimos";
+                                }};
+                                rows = 76956;
+                            }};
+                            insertTableColumn = new InsertTableColumnRequest() {{
+                                insertRight = false;
+                                tableCellLocation = new TableCellLocation() {{
+                                    columnIndex = 469498;
+                                    rowIndex = 518835;
+                                    tableStartLocation = new Location() {{
+                                        index = 882710;
+                                        segmentId = "aliquam";
+                                    }};
+                                }};
+                            }};
+                            insertTableRow = new InsertTableRowRequest() {{
+                                insertBelow = false;
+                                tableCellLocation = new TableCellLocation() {{
+                                    columnIndex = 488410;
+                                    rowIndex = 577543;
+                                    tableStartLocation = new Location() {{
+                                        index = 414567;
+                                        segmentId = "sapiente";
+                                    }};
+                                }};
+                            }};
+                            insertText = new InsertTextRequest() {{
+                                endOfSegmentLocation = new EndOfSegmentLocation() {{
+                                    segmentId = "dolores";
+                                }};
+                                location = new Location() {{
+                                    index = 645570;
+                                    segmentId = "molestiae";
+                                }};
+                                text = "accusantium";
+                            }};
+                            mergeTableCells = new MergeTableCellsRequest() {{
+                                tableRange = new TableRange() {{
+                                    columnSpan = 783648;
+                                    rowSpan = 430402;
+                                    tableCellLocation = new TableCellLocation() {{
+                                        columnIndex = 556429;
+                                        rowIndex = 510017;
+                                        tableStartLocation = new Location() {{
+                                            index = 159867;
+                                            segmentId = "deleniti";
+                                        }};
+                                    }};
+                                }};
+                            }};
+                            pinTableHeaderRows = new PinTableHeaderRowsRequest() {{
+                                pinnedHeaderRowsCount = 143829;
+                                tableStartLocation = new Location() {{
+                                    index = 681393;
+                                    segmentId = "mollitia";
+                                }};
+                            }};
+                            replaceAllText = new ReplaceAllTextRequest() {{
+                                containsText = new SubstringMatchCriteria() {{
+                                    matchCase = false;
+                                    text = "incidunt";
+                                }};
+                                replaceText = "atque";
+                            }};
+                            replaceImage = new ReplaceImageRequest() {{
+                                imageObjectId = "explicabo";
+                                imageReplaceMethod = "IMAGE_REPLACE_METHOD_UNSPECIFIED";
+                                uri = "http://costly-vicinity.com";
+                            }};
+                            replaceNamedRangeContent = new ReplaceNamedRangeContentRequest() {{
+                                namedRangeId = "ratione";
+                                namedRangeName = "explicabo";
+                                text = "saepe";
+                            }};
+                            unmergeTableCells = new UnmergeTableCellsRequest() {{
+                                tableRange = new TableRange() {{
+                                    columnSpan = 578922;
+                                    rowSpan = 543806;
+                                    tableCellLocation = new TableCellLocation() {{
+                                        columnIndex = 92260;
+                                        rowIndex = 456911;
+                                        tableStartLocation = new Location() {{
+                                            index = 910545;
+                                            segmentId = "accusamus";
+                                        }};
+                                    }};
+                                }};
+                            }};
+                            updateDocumentStyle = new UpdateDocumentStyleRequest() {{
+                                documentStyle = new DocumentStyle() {{
+                                    background = new Background() {{
                                         color = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 6394.73;
-                                                    green = 2694.79;
-                                                    red = 3685.84;
+                                                    blue = 829.71;
+                                                    green = 4586.04;
+                                                    red = 8003.79;
+                                                }};
+                                            }};
+                                        }};
+                                    }};
+                                    defaultFooterId = "nam";
+                                    defaultHeaderId = "vero";
+                                    evenPageFooterId = "aliquid";
+                                    evenPageHeaderId = "quasi";
+                                    firstPageFooterId = "saepe";
+                                    firstPageHeaderId = "vel";
+                                    marginBottom = new Dimension() {{
+                                        magnitude = 6900.25;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                    marginFooter = new Dimension() {{
+                                        magnitude = 6996.22;
+                                        unit = "PT";
+                                    }};
+                                    marginHeader = new Dimension() {{
+                                        magnitude = 3277.2;
+                                        unit = "PT";
+                                    }};
+                                    marginLeft = new Dimension() {{
+                                        magnitude = 7567.79;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                    marginRight = new Dimension() {{
+                                        magnitude = 6360.61;
+                                        unit = "PT";
+                                    }};
+                                    marginTop = new Dimension() {{
+                                        magnitude = 2400.2;
+                                        unit = "PT";
+                                    }};
+                                    pageNumberStart = 160538;
+                                    pageSize = new Size() {{
+                                        height = new Dimension() {{
+                                            magnitude = 97.66;
+                                            unit = "PT";
+                                        }};
+                                        width = new Dimension() {{
+                                            magnitude = 3082.86;
+                                            unit = "PT";
+                                        }};
+                                    }};
+                                    useCustomHeaderFooterMargins = false;
+                                    useEvenPageHeaderFooter = false;
+                                    useFirstPageHeaderFooter = false;
+                                }};
+                                fields = "consectetur";
+                            }};
+                            updateParagraphStyle = new UpdateParagraphStyleRequest() {{
+                                fields = "esse";
+                                paragraphStyle = new ParagraphStyle() {{
+                                    alignment = "CENTER";
+                                    avoidWidowAndOrphan = false;
+                                    borderBetween = new ParagraphBorder() {{
+                                        color = new OptionalColor() {{
+                                            color = new Color() {{
+                                                rgbColor = new RgbColor() {{
+                                                    blue = 5909.84;
+                                                    green = 9537.22;
+                                                    red = 8577.23;
+                                                }};
+                                            }};
+                                        }};
+                                        dashStyle = "DOT";
+                                        padding = new Dimension() {{
+                                            magnitude = 4572.23;
+                                            unit = "UNIT_UNSPECIFIED";
+                                        }};
+                                        width = new Dimension() {{
+                                            magnitude = 9518.75;
+                                            unit = "PT";
+                                        }};
+                                    }};
+                                    borderBottom = new ParagraphBorder() {{
+                                        color = new OptionalColor() {{
+                                            color = new Color() {{
+                                                rgbColor = new RgbColor() {{
+                                                    blue = 5757.51;
+                                                    green = 8630.23;
+                                                    red = 8207.67;
+                                                }};
+                                            }};
+                                        }};
+                                        dashStyle = "DASH_STYLE_UNSPECIFIED";
+                                        padding = new Dimension() {{
+                                            magnitude = 9088.44;
+                                            unit = "PT";
+                                        }};
+                                        width = new Dimension() {{
+                                            magnitude = 8155.24;
+                                            unit = "UNIT_UNSPECIFIED";
+                                        }};
+                                    }};
+                                    borderLeft = new ParagraphBorder() {{
+                                        color = new OptionalColor() {{
+                                            color = new Color() {{
+                                                rgbColor = new RgbColor() {{
+                                                    blue = 1594.14;
+                                                    green = 944.58;
+                                                    red = 6288.99;
+                                                }};
+                                            }};
+                                        }};
+                                        dashStyle = "DOT";
+                                        padding = new Dimension() {{
+                                            magnitude = 3984.34;
+                                            unit = "PT";
+                                        }};
+                                        width = new Dimension() {{
+                                            magnitude = 627.13;
+                                            unit = "PT";
+                                        }};
+                                    }};
+                                    borderRight = new ParagraphBorder() {{
+                                        color = new OptionalColor() {{
+                                            color = new Color() {{
+                                                rgbColor = new RgbColor() {{
+                                                    blue = 4240.32;
+                                                    green = 4473.78;
+                                                    red = 2586.84;
+                                                }};
+                                            }};
+                                        }};
+                                        dashStyle = "DOT";
+                                        padding = new Dimension() {{
+                                            magnitude = 8490.39;
+                                            unit = "PT";
+                                        }};
+                                        width = new Dimension() {{
+                                            magnitude = 333.04;
+                                            unit = "UNIT_UNSPECIFIED";
+                                        }};
+                                    }};
+                                    borderTop = new ParagraphBorder() {{
+                                        color = new OptionalColor() {{
+                                            color = new Color() {{
+                                                rgbColor = new RgbColor() {{
+                                                    blue = 9589.83;
+                                                    green = 1197.71;
+                                                    red = 3553.69;
+                                                }};
+                                            }};
+                                        }};
+                                        dashStyle = "SOLID";
+                                        padding = new Dimension() {{
+                                            magnitude = 3567.07;
+                                            unit = "UNIT_UNSPECIFIED";
+                                        }};
+                                        width = new Dimension() {{
+                                            magnitude = 163.28;
+                                            unit = "PT";
+                                        }};
+                                    }};
+                                    direction = "CONTENT_DIRECTION_UNSPECIFIED";
+                                    headingId = "quibusdam";
+                                    indentEnd = new Dimension() {{
+                                        magnitude = 4012.59;
+                                        unit = "PT";
+                                    }};
+                                    indentFirstLine = new Dimension() {{
+                                        magnitude = 9292.92;
+                                        unit = "PT";
+                                    }};
+                                    indentStart = new Dimension() {{
+                                        magnitude = 996.15;
+                                        unit = "PT";
+                                    }};
+                                    keepLinesTogether = false;
+                                    keepWithNext = false;
+                                    lineSpacing = 9453.02;
+                                    namedStyleType = "NAMED_STYLE_TYPE_UNSPECIFIED";
+                                    pageBreakBefore = false;
+                                    shading = new Shading() {{
+                                        backgroundColor = new OptionalColor() {{
+                                            color = new Color() {{
+                                                rgbColor = new RgbColor() {{
+                                                    blue = 8694.89;
+                                                    green = 920.27;
+                                                    red = 4541.62;
+                                                }};
+                                            }};
+                                        }};
+                                    }};
+                                    spaceAbove = new Dimension() {{
+                                        magnitude = 559.65;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                    spaceBelow = new Dimension() {{
+                                        magnitude = 865.32;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                    spacingMode = "SPACING_MODE_UNSPECIFIED";
+                                    tabStops = new org.openapis.openapi.models.shared.TabStop[]{{
+                                        add(new TabStop() {{
+                                            alignment = "END";
+                                            offset = new Dimension() {{
+                                                magnitude = 330.74;
+                                                unit = "PT";
+                                            }};
+                                        }}),
+                                        add(new TabStop() {{
+                                            alignment = "TAB_STOP_ALIGNMENT_UNSPECIFIED";
+                                            offset = new Dimension() {{
+                                                magnitude = 5130.75;
+                                                unit = "UNIT_UNSPECIFIED";
+                                            }};
+                                        }}),
+                                        add(new TabStop() {{
+                                            alignment = "CENTER";
+                                            offset = new Dimension() {{
+                                                magnitude = 680.74;
+                                                unit = "PT";
+                                            }};
+                                        }}),
+                                    }};
+                                }};
+                                range = new Range() {{
+                                    endIndex = 251941;
+                                    segmentId = "voluptatem";
+                                    startIndex = 221161;
+                                }};
+                            }};
+                            updateSectionStyle = new UpdateSectionStyleRequest() {{
+                                fields = "occaecati";
+                                range = new Range() {{
+                                    endIndex = 253191;
+                                    segmentId = "impedit";
+                                    startIndex = 131055;
+                                }};
+                                sectionStyle = new SectionStyle() {{
+                                    columnProperties = new org.openapis.openapi.models.shared.SectionColumnProperties[]{{
+                                        add(new SectionColumnProperties() {{
+                                            paddingEnd = new Dimension() {{
+                                                magnitude = 120.36;
+                                                unit = "UNIT_UNSPECIFIED";
+                                            }};
+                                            width = new Dimension() {{
+                                                magnitude = 1154.84;
+                                                unit = "PT";
+                                            }};
+                                        }}),
+                                        add(new SectionColumnProperties() {{
+                                            paddingEnd = new Dimension() {{
+                                                magnitude = 6184.8;
+                                                unit = "UNIT_UNSPECIFIED";
+                                            }};
+                                            width = new Dimension() {{
+                                                magnitude = 9742.57;
+                                                unit = "UNIT_UNSPECIFIED";
+                                            }};
+                                        }}),
+                                    }};
+                                    columnSeparatorStyle = "BETWEEN_EACH_COLUMN";
+                                    contentDirection = "CONTENT_DIRECTION_UNSPECIFIED";
+                                    defaultFooterId = "ea";
+                                    defaultHeaderId = "quaerat";
+                                    evenPageFooterId = "consequuntur";
+                                    evenPageHeaderId = "repellendus";
+                                    firstPageFooterId = "officia";
+                                    firstPageHeaderId = "maxime";
+                                    marginBottom = new Dimension() {{
+                                        magnitude = 4903.05;
+                                        unit = "PT";
+                                    }};
+                                    marginFooter = new Dimension() {{
+                                        magnitude = 9894.1;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                    marginHeader = new Dimension() {{
+                                        magnitude = 653.04;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                    marginLeft = new Dimension() {{
+                                        magnitude = 7832.35;
+                                        unit = "PT";
+                                    }};
+                                    marginRight = new Dimension() {{
+                                        magnitude = 2883.98;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                    marginTop = new Dimension() {{
+                                        magnitude = 2414.18;
+                                        unit = "PT";
+                                    }};
+                                    pageNumberStart = 662505;
+                                    sectionType = "CONTINUOUS";
+                                    useFirstPageHeaderFooter = false;
+                                }};
+                            }};
+                            updateTableCellStyle = new UpdateTableCellStyleRequest() {{
+                                fields = "velit";
+                                tableCellStyle = new TableCellStyle() {{
+                                    backgroundColor = new OptionalColor() {{
+                                        color = new Color() {{
+                                            rgbColor = new RgbColor() {{
+                                                blue = 6339.31;
+                                                green = 6658.59;
+                                                red = 9268.8;
+                                            }};
+                                        }};
+                                    }};
+                                    borderBottom = new TableCellBorder() {{
+                                        color = new OptionalColor() {{
+                                            color = new Color() {{
+                                                rgbColor = new RgbColor() {{
+                                                    blue = 5173.09;
+                                                    green = 8539.4;
+                                                    red = 4240.89;
                                                 }};
                                             }};
                                         }};
                                         dashStyle = "SOLID";
                                         width = new Dimension() {{
-                                            magnitude = 1369;
+                                            magnitude = 5546.88;
+                                            unit = "UNIT_UNSPECIFIED";
+                                        }};
+                                    }};
+                                    borderLeft = new TableCellBorder() {{
+                                        color = new OptionalColor() {{
+                                            color = new Color() {{
+                                                rgbColor = new RgbColor() {{
+                                                    blue = 2870.51;
+                                                    green = 8225.6;
+                                                    red = 7065.75;
+                                                }};
+                                            }};
+                                        }};
+                                        dashStyle = "DOT";
+                                        width = new Dimension() {{
+                                            magnitude = 4148.57;
                                             unit = "UNIT_UNSPECIFIED";
                                         }};
                                     }};
@@ -1456,15 +2129,15 @@ public class Application {
                                         color = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 8221.18;
-                                                    green = 2978.42;
-                                                    red = 1898.48;
+                                                    blue = 3605.45;
+                                                    green = 9689.04;
+                                                    red = 8286.57;
                                                 }};
                                             }};
                                         }};
                                         dashStyle = "SOLID";
                                         width = new Dimension() {{
-                                            magnitude = 5113.19;
+                                            magnitude = 9249.67;
                                             unit = "UNIT_UNSPECIFIED";
                                         }};
                                     }};
@@ -1472,152 +2145,164 @@ public class Application {
                                         color = new OptionalColor() {{
                                             color = new Color() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 2243.17;
-                                                    green = 9807;
-                                                    red = 978.44;
+                                                    blue = 460.07;
+                                                    green = 7386.83;
+                                                    red = 2326.27;
                                                 }};
                                             }};
                                         }};
                                         dashStyle = "SOLID";
                                         width = new Dimension() {{
-                                            magnitude = 8621.92;
+                                            magnitude = 3485.19;
                                             unit = "PT";
                                         }};
                                     }};
-                                    columnSpan = 972920;
+                                    columnSpan = 814967;
                                     contentAlignment = "CONTENT_ALIGNMENT_UNSUPPORTED";
                                     paddingBottom = new Dimension() {{
-                                        magnitude = 9608.35;
-                                        unit = "PT";
+                                        magnitude = 9854.92;
+                                        unit = "UNIT_UNSPECIFIED";
                                     }};
                                     paddingLeft = new Dimension() {{
-                                        magnitude = 9065.56;
-                                        unit = "UNIT_UNSPECIFIED";
+                                        magnitude = 9689.72;
+                                        unit = "PT";
                                     }};
                                     paddingRight = new Dimension() {{
-                                        magnitude = 7740.48;
-                                        unit = "UNIT_UNSPECIFIED";
+                                        magnitude = 9049.49;
+                                        unit = "PT";
                                     }};
                                     paddingTop = new Dimension() {{
-                                        magnitude = 3331.45;
+                                        magnitude = 2965.56;
                                         unit = "UNIT_UNSPECIFIED";
                                     }};
-                                    rowSpan = 81101;
+                                    rowSpan = 992012;
                                 }};
                                 tableRange = new TableRange() {{
-                                    columnSpan = 301831;
-                                    rowSpan = 407241;
+                                    columnSpan = 241545;
+                                    rowSpan = 249420;
                                     tableCellLocation = new TableCellLocation() {{
-                                        columnIndex = 775220;
-                                        rowIndex = 232234;
+                                        columnIndex = 228263;
+                                        rowIndex = 105906;
                                         tableStartLocation = new Location() {{
-                                            index = 926213;
-                                            segmentId = "aspernatur";
+                                            index = 489509;
+                                            segmentId = "a";
                                         }};
                                     }};
                                 }};
                                 tableStartLocation = new Location() {{
-                                    index = 325310;
-                                    segmentId = "eaque";
+                                    index = 891523;
+                                    segmentId = "consectetur";
                                 }};
                             }};
                             updateTableColumnProperties = new UpdateTableColumnPropertiesRequest() {{
                                 columnIndices = new Integer[]{{
-                                    add(725595),
-                                    add(13948),
-                                    add(11427),
-                                    add(533466),
+                                    add(689768),
+                                    add(385237),
                                 }};
-                                fields = "impedit";
+                                fields = "ipsa";
                                 tableColumnProperties = new TableColumnProperties() {{
                                     width = new Dimension() {{
-                                        magnitude = 3045.82;
-                                        unit = "UNIT_UNSPECIFIED";
+                                        magnitude = 9167.27;
+                                        unit = "PT";
                                     }};
-                                    widthType = "FIXED_WIDTH";
+                                    widthType = "WIDTH_TYPE_UNSPECIFIED";
                                 }};
                                 tableStartLocation = new Location() {{
-                                    index = 79522;
-                                    segmentId = "non";
+                                    index = 881721;
+                                    segmentId = "similique";
                                 }};
                             }};
                             updateTableRowStyle = new UpdateTableRowStyleRequest() {{
-                                fields = "et";
+                                fields = "tempora";
                                 rowIndices = new Integer[]{{
-                                    add(672048),
-                                    add(810424),
-                                    add(245367),
+                                    add(379057),
                                 }};
                                 tableRowStyle = new TableRowStyle() {{
                                     minRowHeight = new Dimension() {{
-                                        magnitude = 4321.48;
+                                        magnitude = 3742.44;
                                         unit = "UNIT_UNSPECIFIED";
                                     }};
                                     preventOverflow = false;
                                     tableHeader = false;
                                 }};
                                 tableStartLocation = new Location() {{
-                                    index = 752135;
-                                    segmentId = "quas";
+                                    index = 324405;
+                                    segmentId = "nobis";
                                 }};
                             }};
                             updateTextStyle = new UpdateTextStyleRequest() {{
-                                fields = "assumenda";
+                                fields = "dolorum";
                                 range = new Range() {{
-                                    endIndex = 860552;
-                                    segmentId = "voluptas";
-                                    startIndex = 727044;
+                                    endIndex = 237807;
+                                    segmentId = "minus";
+                                    startIndex = 171853;
                                 }};
                                 textStyle = new TextStyle() {{
                                     backgroundColor = new OptionalColor() {{
                                         color = new Color() {{
                                             rgbColor = new RgbColor() {{
-                                                blue = 965.49;
-                                                green = 2703.28;
-                                                red = 2561.39;
+                                                blue = 5039.34;
+                                                green = 4492.92;
+                                                red = 2962.42;
                                             }};
                                         }};
                                     }};
-                                    baselineOffset = "BASELINE_OFFSET_UNSPECIFIED";
+                                    baselineOffset = "NONE";
                                     bold = false;
                                     fontSize = new Dimension() {{
-                                        magnitude = 5919.35;
-                                        unit = "UNIT_UNSPECIFIED";
+                                        magnitude = 8859.63;
+                                        unit = "PT";
                                     }};
                                     foregroundColor = new OptionalColor() {{
                                         color = new Color() {{
                                             rgbColor = new RgbColor() {{
-                                                blue = 4764.77;
-                                                green = 3015.98;
-                                                red = 4879.35;
+                                                blue = 3518.7;
+                                                green = 2377.42;
+                                                red = 7383.91;
                                             }};
                                         }};
                                     }};
                                     italic = false;
                                     link = new Link() {{
-                                        bookmarkId = "eius";
-                                        headingId = "esse";
-                                        url = "esse";
+                                        bookmarkId = "blanditiis";
+                                        headingId = "quas";
+                                        url = "hic";
                                     }};
                                     smallCaps = false;
                                     strikethrough = false;
                                     underline = false;
                                     weightedFontFamily = new WeightedFontFamily() {{
-                                        fontFamily = "rem";
-                                        weight = 683282;
+                                        fontFamily = "nesciunt";
+                                        weight = 633998;
                                     }};
                                 }};
                             }};
                         }}),
                     }};
                     writeControl = new WriteControl() {{
-                        requiredRevisionId = "reprehenderit";
-                        targetRevisionId = "quidem";
+                        requiredRevisionId = "corrupti";
+                        targetRevisionId = "pariatur";
                     }};
                 }};
-            }};            
+                accessToken = "totam";
+                alt = "proto";
+                callback = "exercitationem";
+                documentId = "nobis";
+                fields = "sit";
+                key = "rerum";
+                oauthToken = "sed";
+                prettyPrint = false;
+                quotaUser = "reiciendis";
+                uploadType = "explicabo";
+                uploadProtocol = "asperiores";
+            }}            
 
-            DocsDocumentsBatchUpdateResponse res = sdk.documents.docsDocumentsBatchUpdate(req);
+            DocsDocumentsBatchUpdateResponse res = sdk.documents.docsDocumentsBatchUpdate(req, new DocsDocumentsBatchUpdateSecurity() {{
+                option1 = new DocsDocumentsBatchUpdateSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.batchUpdateDocumentResponse.isPresent()) {
                 // handle response
@@ -1629,7 +2314,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### documents

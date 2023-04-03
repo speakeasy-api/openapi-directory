@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetJobForWorkflowRunRequest {
+    /**
+     * job_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=job_id")
+    public Long jobId;
+    public ActionsGetJobForWorkflowRunRequest withJobId(Long jobId) {
+        this.jobId = jobId;
+        return this;
+    }
     
-    public ActionsGetJobForWorkflowRunPathParams pathParams;
-    public ActionsGetJobForWorkflowRunRequest withPathParams(ActionsGetJobForWorkflowRunPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsGetJobForWorkflowRunRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsGetJobForWorkflowRunRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

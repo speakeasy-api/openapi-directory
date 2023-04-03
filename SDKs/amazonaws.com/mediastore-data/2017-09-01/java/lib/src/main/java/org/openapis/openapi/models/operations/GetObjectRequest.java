@@ -4,20 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetObjectRequest {
-    
-    public GetObjectPathParams pathParams;
-    public GetObjectRequest withPathParams(GetObjectPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * &lt;p&gt;The path (including the file name) where the object is stored in the container. Format: &amp;lt;folder name&amp;gt;/&amp;lt;folder name&amp;gt;/&amp;lt;file name&amp;gt;&lt;/p&gt; &lt;p&gt;For example, to upload the file &lt;code&gt;mlaw.avi&lt;/code&gt; to the folder path &lt;code&gt;premium\canada&lt;/code&gt; in the container &lt;code&gt;movies&lt;/code&gt;, enter the path &lt;code&gt;premium/canada/mlaw.avi&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;Do not include the container name in this path.&lt;/p&gt; &lt;p&gt;If the path includes any folders that don't exist yet, the service creates them. For example, suppose you have an existing &lt;code&gt;premium/usa&lt;/code&gt; subfolder. If you specify &lt;code&gt;premium/canada&lt;/code&gt;, the service creates a &lt;code&gt;canada&lt;/code&gt; subfolder in the &lt;code&gt;premium&lt;/code&gt; folder. You then have two subfolders, &lt;code&gt;usa&lt;/code&gt; and &lt;code&gt;canada&lt;/code&gt;, in the &lt;code&gt;premium&lt;/code&gt; folder. &lt;/p&gt; &lt;p&gt;There is no correlation between the path to the source and the path (folders) in the container in AWS Elemental MediaStore.&lt;/p&gt; &lt;p&gt;For more information about folders and how they exist in a container, see the &lt;a href="http://docs.aws.amazon.com/mediastore/latest/ug/"&gt;AWS Elemental MediaStore User Guide&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;The file name is the name that is assigned to the file that you upload. The file can have the same name inside and outside of AWS Elemental MediaStore, or it can have the same name. The file name can include or omit an extension. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Path")
+    public String path;
+    public GetObjectRequest withPath(String path) {
+        this.path = path;
         return this;
     }
     
+    /**
+     * The range bytes of an object to retrieve. For more information about the &lt;code&gt;Range&lt;/code&gt; header, see &lt;a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.35"&gt;http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.35&lt;/a&gt;. AWS Elemental MediaStore ignores this header for partially uploaded objects that have streaming upload availability.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Range")
+    public String range;
+    public GetObjectRequest withRange(String range) {
+        this.range = range;
+        return this;
+    }
     
-    public GetObjectHeaders headers;
-    public GetObjectRequest withHeaders(GetObjectHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetObjectRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetObjectRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetObjectRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetObjectRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetObjectRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetObjectRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetObjectRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

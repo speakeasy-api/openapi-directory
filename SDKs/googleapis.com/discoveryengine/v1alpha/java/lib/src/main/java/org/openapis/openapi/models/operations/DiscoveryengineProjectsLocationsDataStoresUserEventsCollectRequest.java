@@ -4,27 +4,156 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest {
-    
-    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectPathParams pathParams;
-    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withPathParams(DiscoveryengineProjectsLocationsDataStoresUserEventsCollectPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectQueryParams queryParams;
-    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withQueryParams(DiscoveryengineProjectsLocationsDataStoresUserEventsCollectQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectSecurity security;
-    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withSecurity(DiscoveryengineProjectsLocationsDataStoresUserEventsCollectSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * The event timestamp in milliseconds. This prevents browser caching of otherwise identical get requests. The name is abbreviated to reduce the payload bytes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ets")
+    public String ets;
+    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withEts(String ets) {
+        this.ets = ets;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The parent DataStore resource name, such as `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * The URL including cgi-parameters but excluding the hash fragment with a length limit of 5,000 characters. This is often more useful than the referer URL, because many browsers only send the domain for 3rd party requests.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uri")
+    public String uri;
+    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withUri(String uri) {
+        this.uri = uri;
+        return this;
+    }
+    
+    /**
+     * Required. URL encoded UserEvent proto with a length limit of 2,000,000 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userEvent")
+    public String userEvent;
+    public DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest withUserEvent(String userEvent) {
+        this.userEvent = userEvent;
         return this;
     }
     

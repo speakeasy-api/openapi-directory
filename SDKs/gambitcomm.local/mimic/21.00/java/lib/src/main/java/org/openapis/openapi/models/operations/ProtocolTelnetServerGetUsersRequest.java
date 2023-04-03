@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolTelnetServerGetUsersRequest {
-    
-    public ProtocolTelnetServerGetUsersPathParams pathParams;
-    public ProtocolTelnetServerGetUsersRequest withPathParams(ProtocolTelnetServerGetUsersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show TELNET configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolTelnetServerGetUsersRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

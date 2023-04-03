@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveBookingRequest {
-    
-    public RetrieveBookingPathParams pathParams;
-    public RetrieveBookingRequest withPathParams(RetrieveBookingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetrieveBookingSecurity security;
-    public RetrieveBookingRequest withSecurity(RetrieveBookingSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the [Booking](https://developer.squareup.com/reference/square_2021-08-18/objects/Booking) object representing the to-be-retrieved booking.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=booking_id")
+    public String bookingId;
+    public RetrieveBookingRequest withBookingId(String bookingId) {
+        this.bookingId = bookingId;
         return this;
     }
     

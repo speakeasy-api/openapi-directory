@@ -7,34 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTextBroadcastRequest {
-    
-    public UpdateTextBroadcastPathParams pathParams;
-    public UpdateTextBroadcastRequest withPathParams(UpdateTextBroadcastPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateTextBroadcastQueryParams queryParams;
-    public UpdateTextBroadcastRequest withQueryParams(UpdateTextBroadcastQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * A TextBroadcast object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TextBroadcastInput request;
-    public UpdateTextBroadcastRequest withRequest(org.openapis.openapi.models.shared.TextBroadcastInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TextBroadcastInput textBroadcastInput;
+    public UpdateTextBroadcastRequest withTextBroadcastInput(org.openapis.openapi.models.shared.TextBroadcastInput textBroadcastInput) {
+        this.textBroadcastInput = textBroadcastInput;
         return this;
     }
     
+    /**
+     * An id of a text broadcast
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UpdateTextBroadcastRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public UpdateTextBroadcastSecurity security;
-    public UpdateTextBroadcastRequest withSecurity(UpdateTextBroadcastSecurity security) {
-        this.security = security;
+    /**
+     * Turns on strict validation for recipients. System will reply with BAD_REQUEST(400) if strictValidation = true and one of numbers didn't pass validation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=strictValidation")
+    public Boolean strictValidation;
+    public UpdateTextBroadcastRequest withStrictValidation(Boolean strictValidation) {
+        this.strictValidation = strictValidation;
         return this;
     }
     

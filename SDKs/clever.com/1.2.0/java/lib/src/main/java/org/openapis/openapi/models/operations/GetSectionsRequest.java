@@ -4,13 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSectionsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_before")
+    public String endingBefore;
+    public GetSectionsRequest withEndingBefore(String endingBefore) {
+        this.endingBefore = endingBefore;
+        return this;
+    }
     
-    public GetSectionsQueryParams queryParams;
-    public GetSectionsRequest withQueryParams(GetSectionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetSectionsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=starting_after")
+    public String startingAfter;
+    public GetSectionsRequest withStartingAfter(String startingAfter) {
+        this.startingAfter = startingAfter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=where")
+    public String where;
+    public GetSectionsRequest withWhere(String where) {
+        this.where = where;
         return this;
     }
     

@@ -53,13 +53,13 @@ public class Committee {
      */
     public org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesResponse getCandidateCandidateIdCommittees(org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesPathParams.class, baseUrl, "/candidate/{candidate_id}/committees/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesRequest.class, baseUrl, "/candidate/{candidate_id}/committees/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -98,13 +98,13 @@ public class Committee {
      */
     public org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesHistoryResponse getCandidateCandidateIdCommitteesHistory(org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesHistoryPathParams.class, baseUrl, "/candidate/{candidate_id}/committees/history/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesHistoryRequest.class, baseUrl, "/candidate/{candidate_id}/committees/history/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -143,13 +143,13 @@ public class Committee {
      */
     public org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesHistoryCycleResponse getCandidateCandidateIdCommitteesHistoryCycle(org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesHistoryCycleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesHistoryCyclePathParams.class, baseUrl, "/candidate/{candidate_id}/committees/history/{cycle}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesHistoryCycleRequest.class, baseUrl, "/candidate/{candidate_id}/committees/history/{cycle}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesHistoryCycleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCandidateCandidateIdCommitteesHistoryCycleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -188,13 +188,13 @@ public class Committee {
      */
     public org.openapis.openapi.models.operations.GetCommitteeCommitteeIdResponse getCommitteeCommitteeId(org.openapis.openapi.models.operations.GetCommitteeCommitteeIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCommitteeCommitteeIdPathParams.class, baseUrl, "/committee/{committee_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCommitteeCommitteeIdRequest.class, baseUrl, "/committee/{committee_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCommitteeCommitteeIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCommitteeCommitteeIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -233,13 +233,13 @@ public class Committee {
      */
     public org.openapis.openapi.models.operations.GetCommitteeCommitteeIdHistoryResponse getCommitteeCommitteeIdHistory(org.openapis.openapi.models.operations.GetCommitteeCommitteeIdHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCommitteeCommitteeIdHistoryPathParams.class, baseUrl, "/committee/{committee_id}/history/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCommitteeCommitteeIdHistoryRequest.class, baseUrl, "/committee/{committee_id}/history/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCommitteeCommitteeIdHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCommitteeCommitteeIdHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -278,13 +278,13 @@ public class Committee {
      */
     public org.openapis.openapi.models.operations.GetCommitteeCommitteeIdHistoryCycleResponse getCommitteeCommitteeIdHistoryCycle(org.openapis.openapi.models.operations.GetCommitteeCommitteeIdHistoryCycleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCommitteeCommitteeIdHistoryCyclePathParams.class, baseUrl, "/committee/{committee_id}/history/{cycle}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCommitteeCommitteeIdHistoryCycleRequest.class, baseUrl, "/committee/{committee_id}/history/{cycle}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCommitteeCommitteeIdHistoryCycleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCommitteeCommitteeIdHistoryCycleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -329,7 +329,7 @@ public class Committee {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCommitteesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCommitteesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditVideoCreditRequest {
-    
-    public EditVideoCreditPathParams pathParams;
-    public EditVideoCreditRequest withPathParams(EditVideoCreditPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.credit+json")
-    public EditVideoCreditRequestBody request;
-    public EditVideoCreditRequest withRequest(EditVideoCreditRequestBody request) {
-        this.request = request;
+    public EditVideoCreditRequestBody requestBody;
+    public EditVideoCreditRequest withRequestBody(EditVideoCreditRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The ID of the credit.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=credit_id")
+    public Double creditId;
+    public EditVideoCreditRequest withCreditId(Double creditId) {
+        this.creditId = creditId;
+        return this;
+    }
     
-    public EditVideoCreditSecurity security;
-    public EditVideoCreditRequest withSecurity(EditVideoCreditSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public EditVideoCreditRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

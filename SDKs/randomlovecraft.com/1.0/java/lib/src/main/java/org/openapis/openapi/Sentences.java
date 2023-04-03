@@ -44,7 +44,7 @@ public class Sentences {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSentencesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSentencesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -82,13 +82,13 @@ public class Sentences {
      */
     public org.openapis.openapi.models.operations.GetSentencesFromBookResponse getSentencesFromBook(org.openapis.openapi.models.operations.GetSentencesFromBookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSentencesFromBookPathParams.class, baseUrl, "/books/{id}/sentences", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSentencesFromBookRequest.class, baseUrl, "/books/{id}/sentences", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSentencesFromBookQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSentencesFromBookRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -126,7 +126,7 @@ public class Sentences {
      */
     public org.openapis.openapi.models.operations.GetSpecificSentenceResponse getSpecificSentence(org.openapis.openapi.models.operations.GetSpecificSentenceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpecificSentencePathParams.class, baseUrl, "/sentences/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpecificSentenceRequest.class, baseUrl, "/sentences/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -7,24 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCampaignRequest {
-    
-    public UpdateCampaignPathParams pathParams;
-    public UpdateCampaignRequest withPathParams(UpdateCampaignPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateCampaignHeaders headers;
-    public UpdateCampaignRequest withHeaders(UpdateCampaignHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateCampaignRequestBody request;
-    public UpdateCampaignRequest withRequest(UpdateCampaignRequestBody request) {
-        this.request = request;
+    public UpdateCampaignRequestBody requestBody;
+    public UpdateCampaignRequest withRequestBody(UpdateCampaignRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateCampaignRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateCampaignRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateCampaignRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateCampaignRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateCampaignRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateCampaignRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateCampaignRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The unique identifier for the application. This identifier is displayed as the &lt;b&gt;Project ID&lt;/b&gt; on the Amazon Pinpoint console.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application-id")
+    public String applicationId;
+    public UpdateCampaignRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
+    
+    /**
+     * The unique identifier for the campaign.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaign-id")
+    public String campaignId;
+    public UpdateCampaignRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
         return this;
     }
     

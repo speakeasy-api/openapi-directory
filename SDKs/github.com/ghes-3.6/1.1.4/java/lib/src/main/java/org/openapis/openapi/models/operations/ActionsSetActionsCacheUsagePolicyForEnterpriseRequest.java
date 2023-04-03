@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsSetActionsCacheUsagePolicyForEnterpriseRequest {
-    
-    public ActionsSetActionsCacheUsagePolicyForEnterprisePathParams pathParams;
-    public ActionsSetActionsCacheUsagePolicyForEnterpriseRequest withPathParams(ActionsSetActionsCacheUsagePolicyForEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ActionsCacheUsagePolicyEnterprise actionsCacheUsagePolicyEnterprise;
+    public ActionsSetActionsCacheUsagePolicyForEnterpriseRequest withActionsCacheUsagePolicyEnterprise(org.openapis.openapi.models.shared.ActionsCacheUsagePolicyEnterprise actionsCacheUsagePolicyEnterprise) {
+        this.actionsCacheUsagePolicyEnterprise = actionsCacheUsagePolicyEnterprise;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ActionsCacheUsagePolicyEnterprise request;
-    public ActionsSetActionsCacheUsagePolicyForEnterpriseRequest withRequest(org.openapis.openapi.models.shared.ActionsCacheUsagePolicyEnterprise request) {
-        this.request = request;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public ActionsSetActionsCacheUsagePolicyForEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
         return this;
     }
     

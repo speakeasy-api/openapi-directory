@@ -4,20 +4,106 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2SearchRequest {
-    
-    public GetApiV2SearchQueryParams queryParams;
-    public GetApiV2SearchRequest withQueryParams(GetApiV2SearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If provided, statuses returned will be authored only by this account
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account_id")
+    public String accountId;
+    public GetApiV2SearchRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
+    /**
+     * Filter out unreviewed tags? Defaults to false. Use true when trying to find trending tags.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_unreviewed")
+    public Boolean excludeUnreviewed;
+    public GetApiV2SearchRequest withExcludeUnreviewed(Boolean excludeUnreviewed) {
+        this.excludeUnreviewed = excludeUnreviewed;
+        return this;
+    }
     
-    public GetApiV2SearchSecurity security;
-    public GetApiV2SearchRequest withSecurity(GetApiV2SearchSecurity security) {
-        this.security = security;
+    /**
+     * Only who the user is following. Defaults to false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=following")
+    public Boolean following;
+    public GetApiV2SearchRequest withFollowing(Boolean following) {
+        this.following = following;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results. Defaults to 40.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetApiV2SearchRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Return results older than this id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_id")
+    public String maxId;
+    public GetApiV2SearchRequest withMaxId(String maxId) {
+        this.maxId = maxId;
+        return this;
+    }
+    
+    /**
+     * Return results immediately newer than this id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_id")
+    public String minId;
+    public GetApiV2SearchRequest withMinId(String minId) {
+        this.minId = minId;
+        return this;
+    }
+    
+    /**
+     * Offset in search results. Used for pagination. Defaults to 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetApiV2SearchRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * What to search for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetApiV2SearchRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * Attempt WebFinger lookup.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolve")
+    public String resolve;
+    public GetApiV2SearchRequest withResolve(String resolve) {
+        this.resolve = resolve;
+        return this;
+    }
+    
+    /**
+     * Enum(accounts, hashtags, statuses)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GetApiV2SearchTypeEnum type;
+    public GetApiV2SearchRequest withType(GetApiV2SearchTypeEnum type) {
+        this.type = type;
         return this;
     }
     

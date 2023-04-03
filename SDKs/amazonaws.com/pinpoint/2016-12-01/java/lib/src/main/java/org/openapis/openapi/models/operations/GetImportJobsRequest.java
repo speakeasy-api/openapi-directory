@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImportJobsRequest {
-    
-    public GetImportJobsPathParams pathParams;
-    public GetImportJobsRequest withPathParams(GetImportJobsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetImportJobsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public GetImportJobsQueryParams queryParams;
-    public GetImportJobsRequest withQueryParams(GetImportJobsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetImportJobsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetImportJobsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public GetImportJobsHeaders headers;
-    public GetImportJobsRequest withHeaders(GetImportJobsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetImportJobsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetImportJobsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetImportJobsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetImportJobsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The unique identifier for the application. This identifier is displayed as the &lt;b&gt;Project ID&lt;/b&gt; on the Amazon Pinpoint console.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application-id")
+    public String applicationId;
+    public GetImportJobsRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
+    
+    /**
+     * The maximum number of items to include in each page of a paginated response. This parameter is not supported for application, campaign, and journey metrics.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page-size")
+    public String pageSize;
+    public GetImportJobsRequest withPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The NextToken string that specifies which page of results to return in a paginated response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public GetImportJobsRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

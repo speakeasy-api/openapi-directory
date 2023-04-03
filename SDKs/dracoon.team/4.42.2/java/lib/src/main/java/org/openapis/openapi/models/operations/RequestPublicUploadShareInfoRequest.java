@@ -4,20 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestPublicUploadShareInfoRequest {
-    
-    public RequestPublicUploadShareInfoPathParams pathParams;
-    public RequestPublicUploadShareInfoRequest withPathParams(RequestPublicUploadShareInfoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestPublicUploadShareInfoXSdsDateFormatEnum xSdsDateFormat;
+    public RequestPublicUploadShareInfoRequest withXSdsDateFormat(RequestPublicUploadShareInfoXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
         return this;
     }
     
+    /**
+     * Upload share password. Should be base64-encoded.
+     * 
+     * Plain X-Sds-Share-Passwords are *deprecated* and will be removed in the future
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Share-Password")
+    public String xSdsSharePassword;
+    public RequestPublicUploadShareInfoRequest withXSdsSharePassword(String xSdsSharePassword) {
+        this.xSdsSharePassword = xSdsSharePassword;
+        return this;
+    }
     
-    public RequestPublicUploadShareInfoHeaders headers;
-    public RequestPublicUploadShareInfoRequest withHeaders(RequestPublicUploadShareInfoHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=access_key")
+    public String accessKey;
+    public RequestPublicUploadShareInfoRequest withAccessKey(String accessKey) {
+        this.accessKey = accessKey;
         return this;
     }
     

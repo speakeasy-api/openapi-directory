@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1DirectoryRequest {
+    /**
+     * How many accounts to load. Default 40.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetApiV1DirectoryRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetApiV1DirectoryQueryParams queryParams;
-    public GetApiV1DirectoryRequest withQueryParams(GetApiV1DirectoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only return local accounts.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=local")
+    public Boolean local;
+    public GetApiV1DirectoryRequest withLocal(Boolean local) {
+        this.local = local;
+        return this;
+    }
+    
+    /**
+     * How many accounts to skip before returning results. Default 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetApiV1DirectoryRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * the `active` to sort by most recently posted statuses (default) or `new` to sort by most recently created profiles.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public GetApiV1DirectoryOrderEnum order;
+    public GetApiV1DirectoryRequest withOrder(GetApiV1DirectoryOrderEnum order) {
+        this.order = order;
         return this;
     }
     

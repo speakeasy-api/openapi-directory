@@ -4,20 +4,169 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETActivateTypeRequest {
-    
-    public GETActivateTypeQueryParams queryParams;
-    public GETActivateTypeRequest withQueryParams(GETActivateTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETActivateTypeActionEnum action;
+    public GETActivateTypeRequest withAction(GETActivateTypeActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;Whether to automatically update the extension in this account and region when a new &lt;i&gt;minor&lt;/i&gt; version is published by the extension publisher. Major versions released by the publisher must be manually updated.&lt;/p&gt; &lt;p&gt;The default is &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoUpdate")
+    public Boolean autoUpdate;
+    public GETActivateTypeRequest withAutoUpdate(Boolean autoUpdate) {
+        this.autoUpdate = autoUpdate;
+        return this;
+    }
     
-    public GETActivateTypeHeaders headers;
-    public GETActivateTypeRequest withHeaders(GETActivateTypeHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the IAM execution role to use to activate the extension.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ExecutionRoleArn")
+    public String executionRoleArn;
+    public GETActivateTypeRequest withExecutionRoleArn(String executionRoleArn) {
+        this.executionRoleArn = executionRoleArn;
+        return this;
+    }
+    
+    /**
+     * Contains logging configuration information for an extension.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoggingConfig")
+    public GETActivateTypeLoggingConfig loggingConfig;
+    public GETActivateTypeRequest withLoggingConfig(GETActivateTypeLoggingConfig loggingConfig) {
+        this.loggingConfig = loggingConfig;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The major version of this extension you want to activate, if multiple major versions are available. The default is the latest major version. CloudFormation uses the latest available &lt;i&gt;minor&lt;/i&gt; version of the major version selected.&lt;/p&gt; &lt;p&gt;You can specify &lt;code&gt;MajorVersion&lt;/code&gt; or &lt;code&gt;VersionBump&lt;/code&gt;, but not both.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MajorVersion")
+    public Long majorVersion;
+    public GETActivateTypeRequest withMajorVersion(Long majorVersion) {
+        this.majorVersion = majorVersion;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the public extension.&lt;/p&gt; &lt;p&gt;Conditional: You must specify &lt;code&gt;PublicTypeArn&lt;/code&gt;, or &lt;code&gt;TypeName&lt;/code&gt;, &lt;code&gt;Type&lt;/code&gt;, and &lt;code&gt;PublisherId&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PublicTypeArn")
+    public String publicTypeArn;
+    public GETActivateTypeRequest withPublicTypeArn(String publicTypeArn) {
+        this.publicTypeArn = publicTypeArn;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The ID of the extension publisher.&lt;/p&gt; &lt;p&gt;Conditional: You must specify &lt;code&gt;PublicTypeArn&lt;/code&gt;, or &lt;code&gt;TypeName&lt;/code&gt;, &lt;code&gt;Type&lt;/code&gt;, and &lt;code&gt;PublisherId&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PublisherId")
+    public String publisherId;
+    public GETActivateTypeRequest withPublisherId(String publisherId) {
+        this.publisherId = publisherId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The extension type.&lt;/p&gt; &lt;p&gt;Conditional: You must specify &lt;code&gt;PublicTypeArn&lt;/code&gt;, or &lt;code&gt;TypeName&lt;/code&gt;, &lt;code&gt;Type&lt;/code&gt;, and &lt;code&gt;PublisherId&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
+    public GETActivateTypeTypeEnum type;
+    public GETActivateTypeRequest withType(GETActivateTypeTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the extension.&lt;/p&gt; &lt;p&gt;Conditional: You must specify &lt;code&gt;PublicTypeArn&lt;/code&gt;, or &lt;code&gt;TypeName&lt;/code&gt;, &lt;code&gt;Type&lt;/code&gt;, and &lt;code&gt;PublisherId&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeName")
+    public String typeName;
+    public GETActivateTypeRequest withTypeName(String typeName) {
+        this.typeName = typeName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;An alias to assign to the public extension, in this account and region. If you specify an alias for the extension, CloudFormation treats the alias as the extension type name within this account and region. You must use the alias to refer to the extension in your templates, API calls, and CloudFormation console.&lt;/p&gt; &lt;p&gt;An extension alias must be unique within a given account and region. You can activate the same public resource multiple times in the same account and region, using different type name aliases.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeNameAlias")
+    public String typeNameAlias;
+    public GETActivateTypeRequest withTypeNameAlias(String typeNameAlias) {
+        this.typeNameAlias = typeNameAlias;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETActivateTypeVersionEnum version;
+    public GETActivateTypeRequest withVersion(GETActivateTypeVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Manually updates a previously-activated type to a new major or minor version, if available. You can also use this parameter to update the value of &lt;code&gt;AutoUpdate&lt;/code&gt;.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;MAJOR&lt;/code&gt;: CloudFormation updates the extension to the newest major version, if one is available.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;MINOR&lt;/code&gt;: CloudFormation updates the extension to the newest minor version, if one is available.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VersionBump")
+    public GETActivateTypeVersionBumpEnum versionBump;
+    public GETActivateTypeRequest withVersionBump(GETActivateTypeVersionBumpEnum versionBump) {
+        this.versionBump = versionBump;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETActivateTypeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETActivateTypeRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETActivateTypeRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETActivateTypeRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETActivateTypeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETActivateTypeRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETActivateTypeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

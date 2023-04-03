@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostContainersNameOrIdRestartRequest {
-    
-    public PostContainersNameOrIdRestartPathParams pathParams;
-    public PostContainersNameOrIdRestartRequest withPathParams(PostContainersNameOrIdRestartPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space &lt;space_name&gt; --guid`, where `&lt;space_name&gt;` is the name of your space, to retrieve your space ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public PostContainersNameOrIdRestartRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
         return this;
     }
     
-    
-    public PostContainersNameOrIdRestartQueryParams queryParams;
-    public PostContainersNameOrIdRestartRequest withQueryParams(PostContainersNameOrIdRestartQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public PostContainersNameOrIdRestartRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
         return this;
     }
     
+    /**
+     * The unique identifier or name of the container that you want to restart. Run `cf ic ps` or call the `GET /containers/json` endpoint to review all containers in your space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name_or_id")
+    public String nameOrId;
+    public PostContainersNameOrIdRestartRequest withNameOrId(String nameOrId) {
+        this.nameOrId = nameOrId;
+        return this;
+    }
     
-    public PostContainersNameOrIdRestartHeaders headers;
-    public PostContainersNameOrIdRestartRequest withHeaders(PostContainersNameOrIdRestartHeaders headers) {
-        this.headers = headers;
+    /**
+     * The number of seconds to wait before the container is restarted. For example, if you want a container to restart after 10 seconds, enter `t=10`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t")
+    public Long t;
+    public PostContainersNameOrIdRestartRequest withT(Long t) {
+        this.t = t;
         return this;
     }
     

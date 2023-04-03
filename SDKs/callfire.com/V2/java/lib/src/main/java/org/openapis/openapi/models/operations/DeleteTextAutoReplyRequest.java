@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTextAutoReplyRequest {
-    
-    public DeleteTextAutoReplyPathParams pathParams;
-    public DeleteTextAutoReplyRequest withPathParams(DeleteTextAutoReplyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteTextAutoReplySecurity security;
-    public DeleteTextAutoReplyRequest withSecurity(DeleteTextAutoReplySecurity security) {
-        this.security = security;
+    /**
+     * An id of a text auto reply
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DeleteTextAutoReplyRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestOpenIdIdpConfigRequest {
-    
-    public RequestOpenIdIdpConfigPathParams pathParams;
-    public RequestOpenIdIdpConfigRequest withPathParams(RequestOpenIdIdpConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestOpenIdIdpConfigRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestOpenIdIdpConfigHeaders headers;
-    public RequestOpenIdIdpConfigRequest withHeaders(RequestOpenIdIdpConfigHeaders headers) {
-        this.headers = headers;
+    /**
+     * OpenID Connect IDP configuration ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=idp_id")
+    public Integer idpId;
+    public RequestOpenIdIdpConfigRequest withIdpId(Integer idpId) {
+        this.idpId = idpId;
         return this;
     }
     

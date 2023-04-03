@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateShippingFulfillmentRequest {
-    
-    public CreateShippingFulfillmentPathParams pathParams;
-    public CreateShippingFulfillmentRequest withPathParams(CreateShippingFulfillmentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * fulfillment payload
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ShippingFulfillmentDetails request;
-    public CreateShippingFulfillmentRequest withRequest(org.openapis.openapi.models.shared.ShippingFulfillmentDetails request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ShippingFulfillmentDetails shippingFulfillmentDetails;
+    public CreateShippingFulfillmentRequest withShippingFulfillmentDetails(org.openapis.openapi.models.shared.ShippingFulfillmentDetails shippingFulfillmentDetails) {
+        this.shippingFulfillmentDetails = shippingFulfillmentDetails;
         return this;
     }
     
-    
-    public CreateShippingFulfillmentSecurity security;
-    public CreateShippingFulfillmentRequest withSecurity(CreateShippingFulfillmentSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the order. Order ID values are shown in My eBay/Seller Hub, and are also returned by the &lt;b&gt;getOrders&lt;/b&gt; method in the &lt;b&gt;orders.orderId&lt;/b&gt; field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public CreateShippingFulfillmentRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

@@ -40,7 +40,7 @@ public class GamesAdmin {
      */
     public org.openapis.openapi.models.operations.GETGamesEndpointsUsingGETResponse getGamesEndpointsUsingGET(org.openapis.openapi.models.operations.GETGamesEndpointsUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGamesEndpointsUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/endpoints", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGamesEndpointsUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/endpoints", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -182,7 +182,7 @@ public class GamesAdmin {
      */
     public org.openapis.openapi.models.operations.RestoreDeletedGameUsingPOSTResponse restoreDeletedGameUsingPOST(org.openapis.openapi.models.operations.RestoreDeletedGameUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RestoreDeletedGameUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/restore", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RestoreDeletedGameUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/restore", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

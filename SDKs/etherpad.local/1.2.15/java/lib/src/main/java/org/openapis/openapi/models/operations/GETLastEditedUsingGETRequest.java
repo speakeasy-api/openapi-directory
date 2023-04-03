@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETLastEditedUsingGETRequest {
-    
-    public GETLastEditedUsingGETQueryParams queryParams;
-    public GETLastEditedUsingGETRequest withQueryParams(GETLastEditedUsingGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
+    public String padID;
+    public GETLastEditedUsingGETRequest withPadID(String padID) {
+        this.padID = padID;
         return this;
     }
     

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserIdWebProfilesRequest {
-    
-    public GetUsersUserIdWebProfilesPathParams pathParams;
-    public GetUsersUserIdWebProfilesRequest withPathParams(GetUsersUserIdWebProfilesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Number of results to return in the collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetUsersUserIdWebProfilesRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetUsersUserIdWebProfilesQueryParams queryParams;
-    public GetUsersUserIdWebProfilesRequest withQueryParams(GetUsersUserIdWebProfilesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetUsersUserIdWebProfilesSecurity security;
-    public GetUsersUserIdWebProfilesRequest withSecurity(GetUsersUserIdWebProfilesSecurity security) {
-        this.security = security;
+    /**
+     * SoundCloud User id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Long userId;
+    public GetUsersUserIdWebProfilesRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

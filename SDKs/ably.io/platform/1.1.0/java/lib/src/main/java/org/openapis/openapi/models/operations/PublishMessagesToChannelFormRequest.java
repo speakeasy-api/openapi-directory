@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishMessagesToChannelFormRequest {
-    
-    public PublishMessagesToChannelFormPathParams pathParams;
-    public PublishMessagesToChannelFormRequest withPathParams(PublishMessagesToChannelFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PublishMessagesToChannelFormQueryParams queryParams;
-    public PublishMessagesToChannelFormRequest withQueryParams(PublishMessagesToChannelFormQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public PublishMessagesToChannelFormHeaders headers;
-    public PublishMessagesToChannelFormRequest withHeaders(PublishMessagesToChannelFormHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.MessageInput request;
-    public PublishMessagesToChannelFormRequest withRequest(org.openapis.openapi.models.shared.MessageInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.MessageInput messageInput;
+    public PublishMessagesToChannelFormRequest withMessageInput(org.openapis.openapi.models.shared.MessageInput messageInput) {
+        this.messageInput = messageInput;
+        return this;
+    }
+    
+    /**
+     * The version of the API you wish to use.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
+    public String xAblyVersion;
+    public PublishMessagesToChannelFormRequest withXAblyVersion(String xAblyVersion) {
+        this.xAblyVersion = xAblyVersion;
+        return this;
+    }
+    
+    /**
+     * The [Channel's ID](https://www.ably.io/documentation/rest/channels).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public String channelId;
+    public PublishMessagesToChannelFormRequest withChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+    
+    /**
+     * The response format you would like
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+    public PublishMessagesToChannelFormRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
+        this.format = format;
         return this;
     }
     

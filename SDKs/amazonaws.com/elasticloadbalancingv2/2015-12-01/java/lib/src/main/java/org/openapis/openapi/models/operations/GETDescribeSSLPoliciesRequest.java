@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeSSLPoliciesRequest {
-    
-    public GETDescribeSSLPoliciesQueryParams queryParams;
-    public GETDescribeSSLPoliciesRequest withQueryParams(GETDescribeSSLPoliciesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeSSLPoliciesActionEnum action;
+    public GETDescribeSSLPoliciesRequest withAction(GETDescribeSSLPoliciesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     *  The type of load balancer. The default lists the SSL policies for all load balancers.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoadBalancerType")
+    public GETDescribeSSLPoliciesLoadBalancerTypeEnum loadBalancerType;
+    public GETDescribeSSLPoliciesRequest withLoadBalancerType(GETDescribeSSLPoliciesLoadBalancerTypeEnum loadBalancerType) {
+        this.loadBalancerType = loadBalancerType;
+        return this;
+    }
     
-    public GETDescribeSSLPoliciesHeaders headers;
-    public GETDescribeSSLPoliciesRequest withHeaders(GETDescribeSSLPoliciesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The marker for the next set of results. (You received this marker from a previous call.)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDescribeSSLPoliciesRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * The names of the policies.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Names")
+    public String[] names;
+    public GETDescribeSSLPoliciesRequest withNames(String[] names) {
+        this.names = names;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to return with this call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public GETDescribeSSLPoliciesRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeSSLPoliciesVersionEnum version;
+    public GETDescribeSSLPoliciesRequest withVersion(GETDescribeSSLPoliciesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeSSLPoliciesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeSSLPoliciesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeSSLPoliciesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeSSLPoliciesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeSSLPoliciesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeSSLPoliciesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeSSLPoliciesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

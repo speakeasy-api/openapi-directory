@@ -39,13 +39,13 @@ public class MotorcycleSearch {
      */
     public org.openapis.openapi.models.operations.GetListingMotorcycleIdResponse getListingMotorcycleId(org.openapis.openapi.models.operations.GetListingMotorcycleIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetListingMotorcycleIdPathParams.class, baseUrl, "/listing/motorcycle/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetListingMotorcycleIdRequest.class, baseUrl, "/listing/motorcycle/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListingMotorcycleIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListingMotorcycleIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -93,13 +93,13 @@ public class MotorcycleSearch {
      */
     public org.openapis.openapi.models.operations.GetListingMotorcycleIdExtraResponse getListingMotorcycleIdExtra(org.openapis.openapi.models.operations.GetListingMotorcycleIdExtraRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetListingMotorcycleIdExtraPathParams.class, baseUrl, "/listing/motorcycle/{id}/extra", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetListingMotorcycleIdExtraRequest.class, baseUrl, "/listing/motorcycle/{id}/extra", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListingMotorcycleIdExtraQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListingMotorcycleIdExtraRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -147,13 +147,13 @@ public class MotorcycleSearch {
      */
     public org.openapis.openapi.models.operations.GetListingMotorcycleIdMediaResponse getListingMotorcycleIdMedia(org.openapis.openapi.models.operations.GetListingMotorcycleIdMediaRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetListingMotorcycleIdMediaPathParams.class, baseUrl, "/listing/motorcycle/{id}/media", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetListingMotorcycleIdMediaRequest.class, baseUrl, "/listing/motorcycle/{id}/media", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListingMotorcycleIdMediaQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListingMotorcycleIdMediaRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -218,7 +218,7 @@ public class MotorcycleSearch {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchMotorcycleActiveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchMotorcycleActiveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -272,7 +272,7 @@ public class MotorcycleSearch {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchMotorcycleAutoCompleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchMotorcycleAutoCompleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

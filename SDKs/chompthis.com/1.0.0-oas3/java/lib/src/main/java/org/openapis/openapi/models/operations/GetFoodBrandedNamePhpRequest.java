@@ -4,20 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFoodBrandedNamePhpRequest {
-    
-    public GetFoodBrandedNamePhpQueryParams queryParams;
-    public GetFoodBrandedNamePhpRequest withQueryParams(GetFoodBrandedNamePhpQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * #### Set maximum number of records you want the API to return. The default value is "**10**."
+     * 
+     * **Example**
+     * &gt; ```&amp;limit=10```
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public GetFoodBrandedNamePhpLimitEnum limit;
+    public GetFoodBrandedNamePhpRequest withLimit(GetFoodBrandedNamePhpLimitEnum limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * #### Search for branded food items using a general food name keyword. This does not have to exactly match the "official" name for the food.
+     * 
+     * **Example**
+     * &gt; ```&amp;name=Starburst```
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetFoodBrandedNamePhpRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public GetFoodBrandedNamePhpSecurity security;
-    public GetFoodBrandedNamePhpRequest withSecurity(GetFoodBrandedNamePhpSecurity security) {
-        this.security = security;
+    /**
+     * #### This is how you paginate the search result. By default, you will see the first 10 records. You must increment the page number to access the next 10 records, and so on. The default value is "**1**."
+     * 
+     * **Example**
+     * &gt; ```&amp;page=1```
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetFoodBrandedNamePhpRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     

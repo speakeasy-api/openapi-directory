@@ -43,12 +43,12 @@ public class CarrierAccounts {
      */
     public org.openapis.openapi.models.operations.ConnectCarrierResponse connectCarrier(org.openapis.openapi.models.operations.ConnectCarrierRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectCarrierPathParams.class, baseUrl, "/v1/connections/carriers/{carrier_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectCarrierRequest.class, baseUrl, "/v1/connections/carriers/{carrier_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -96,7 +96,7 @@ public class CarrierAccounts {
      */
     public org.openapis.openapi.models.operations.DisconnectCarrierResponse disconnectCarrier(org.openapis.openapi.models.operations.DisconnectCarrierRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisconnectCarrierPathParams.class, baseUrl, "/v1/connections/carriers/{carrier_name}/{carrier_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisconnectCarrierRequest.class, baseUrl, "/v1/connections/carriers/{carrier_name}/{carrier_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -148,7 +148,7 @@ public class CarrierAccounts {
      */
     public org.openapis.openapi.models.operations.GetCarrierSettingsResponse getCarrierSettings(org.openapis.openapi.models.operations.GetCarrierSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCarrierSettingsPathParams.class, baseUrl, "/v1/connections/carriers/{carrier_name}/{carrier_id}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCarrierSettingsRequest.class, baseUrl, "/v1/connections/carriers/{carrier_name}/{carrier_id}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -196,12 +196,12 @@ public class CarrierAccounts {
      */
     public org.openapis.openapi.models.operations.UpdateCarrierSettingsResponse updateCarrierSettings(org.openapis.openapi.models.operations.UpdateCarrierSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCarrierSettingsPathParams.class, baseUrl, "/v1/connections/carriers/{carrier_name}/{carrier_id}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCarrierSettingsRequest.class, baseUrl, "/v1/connections/carriers/{carrier_name}/{carrier_id}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

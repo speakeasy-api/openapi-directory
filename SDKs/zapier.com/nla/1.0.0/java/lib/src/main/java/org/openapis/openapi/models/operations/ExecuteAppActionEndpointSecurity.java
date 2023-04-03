@@ -7,30 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExecuteAppActionEndpointSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAccessPointAPIKeyHeader accessPointApiKeyHeader;
-    public ExecuteAppActionEndpointSecurity withAccessPointApiKeyHeader(org.openapis.openapi.models.shared.SchemeAccessPointAPIKeyHeader accessPointApiKeyHeader) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-API-Key")
+    public String accessPointApiKeyHeader;
+    public ExecuteAppActionEndpointSecurity withAccessPointApiKeyHeader(String accessPointApiKeyHeader) {
         this.accessPointApiKeyHeader = accessPointApiKeyHeader;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public org.openapis.openapi.models.shared.SchemeAccessPointAPIKeyQuery accessPointApiKeyQuery;
-    public ExecuteAppActionEndpointSecurity withAccessPointApiKeyQuery(org.openapis.openapi.models.shared.SchemeAccessPointAPIKeyQuery accessPointApiKeyQuery) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=api_key")
+    public String accessPointApiKeyQuery;
+    public ExecuteAppActionEndpointSecurity withAccessPointApiKeyQuery(String accessPointApiKeyQuery) {
         this.accessPointApiKeyQuery = accessPointApiKeyQuery;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeAccessPointOAuth accessPointOAuth;
-    public ExecuteAppActionEndpointSecurity withAccessPointOAuth(org.openapis.openapi.models.shared.SchemeAccessPointOAuth accessPointOAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String accessPointOAuth;
+    public ExecuteAppActionEndpointSecurity withAccessPointOAuth(String accessPointOAuth) {
         this.accessPointOAuth = accessPointOAuth;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=cookie")
-    public org.openapis.openapi.models.shared.SchemeSessionAuth sessionAuth;
-    public ExecuteAppActionEndpointSecurity withSessionAuth(org.openapis.openapi.models.shared.SchemeSessionAuth sessionAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=cookie,name=sessionid")
+    public String sessionAuth;
+    public ExecuteAppActionEndpointSecurity withSessionAuth(String sessionAuth) {
         this.sessionAuth = sessionAuth;
         return this;
     }

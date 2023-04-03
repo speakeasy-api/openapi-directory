@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAPIKey apiKey;
-    public SearchSecurity withApiKey(org.openapis.openapi.models.shared.SchemeAPIKey apiKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=x-dcs-apikey")
+    public String apiKey;
+    public SearchSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }

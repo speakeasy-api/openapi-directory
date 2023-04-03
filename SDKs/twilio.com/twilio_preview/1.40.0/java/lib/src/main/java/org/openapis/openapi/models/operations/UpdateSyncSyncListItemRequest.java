@@ -7,38 +7,41 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSyncSyncListItemRequest {
-    
-    public UpdateSyncSyncListItemPathParams pathParams;
-    public UpdateSyncSyncListItemRequest withPathParams(UpdateSyncSyncListItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The If-Match HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public UpdateSyncSyncListItemRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Index")
+    public Long index;
+    public UpdateSyncSyncListItemRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
     
-    public UpdateSyncSyncListItemHeaders headers;
-    public UpdateSyncSyncListItemRequest withHeaders(UpdateSyncSyncListItemHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ListSid")
+    public String listSid;
+    public UpdateSyncSyncListItemRequest withListSid(String listSid) {
+        this.listSid = listSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSyncSyncListItemUpdateSyncSyncListItemRequest request;
-    public UpdateSyncSyncListItemRequest withRequest(UpdateSyncSyncListItemUpdateSyncSyncListItemRequest request) {
-        this.request = request;
+    public UpdateSyncSyncListItemUpdateSyncSyncListItemRequest requestBody;
+    public UpdateSyncSyncListItemRequest withRequestBody(UpdateSyncSyncListItemUpdateSyncSyncListItemRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSyncSyncListItemSecurity security;
-    public UpdateSyncSyncListItemRequest withSecurity(UpdateSyncSyncListItemSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateSyncSyncListItemRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateSyncSyncListItemRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

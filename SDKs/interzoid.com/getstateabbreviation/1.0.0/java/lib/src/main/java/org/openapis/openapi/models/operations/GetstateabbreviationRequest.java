@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetstateabbreviationRequest {
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public String license;
+    public GetstateabbreviationRequest withLicense(String license) {
+        this.license = license;
+        return this;
+    }
     
-    public GetstateabbreviationQueryParams queryParams;
-    public GetstateabbreviationRequest withQueryParams(GetstateabbreviationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * State (or province) name from which to retrieve the two letter abbreviation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public GetstateabbreviationRequest withState(String state) {
+        this.state = state;
         return this;
     }
     

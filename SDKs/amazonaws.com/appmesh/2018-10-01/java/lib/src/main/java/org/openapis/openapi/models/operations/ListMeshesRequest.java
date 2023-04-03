@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListMeshesRequest {
-    
-    public ListMeshesQueryParams queryParams;
-    public ListMeshesRequest withQueryParams(ListMeshesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListMeshesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListMeshesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public ListMeshesHeaders headers;
-    public ListMeshesRequest withHeaders(ListMeshesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListMeshesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListMeshesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListMeshesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListMeshesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListMeshesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The maximum number of mesh results returned by &lt;code&gt;ListMeshes&lt;/code&gt; in paginated
+     *          output. When this parameter is used, &lt;code&gt;ListMeshes&lt;/code&gt; only returns
+     *             &lt;code&gt;limit&lt;/code&gt; results in a single page along with a &lt;code&gt;nextToken&lt;/code&gt; response
+     *          element. The remaining results of the initial request can be seen by sending another
+     *             &lt;code&gt;ListMeshes&lt;/code&gt; request with the returned &lt;code&gt;nextToken&lt;/code&gt; value. This
+     *          value can be between 1 and 100. If this parameter is not
+     *          used, then &lt;code&gt;ListMeshes&lt;/code&gt; returns up to 100 results and a
+     *             &lt;code&gt;nextToken&lt;/code&gt; value if applicable.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListMeshesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The &lt;code&gt;nextToken&lt;/code&gt; value returned from a previous paginated
+     *          &lt;code&gt;ListMeshes&lt;/code&gt; request where &lt;code&gt;limit&lt;/code&gt; was used and the
+     *          results exceeded the value of that parameter. Pagination continues from the end of the
+     *          previous results that returned the &lt;code&gt;nextToken&lt;/code&gt; value.&lt;/p&gt;
+     *          &lt;note&gt;
+     *             &lt;p&gt;This token should be treated as an opaque identifier that is only used to
+     *                 retrieve the next items in a list and not for other programmatic purposes.&lt;/p&gt;
+     *         &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListMeshesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     

@@ -45,7 +45,7 @@ public class FolderMenu {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FolderMenuGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FolderMenuGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -97,7 +97,7 @@ public class FolderMenu {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FolderMenuPostFormResponse folderMenuPostForm(org.openapis.openapi.models.operations.FolderMenuPostFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FolderMenuPostFormResponse folderMenuPostForm(org.openapis.openapi.models.shared.FolderMenuConfiguration request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/FolderMenu");
         
@@ -134,7 +134,7 @@ public class FolderMenu {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FolderMenuPostJsonResponse folderMenuPostJson(org.openapis.openapi.models.operations.FolderMenuPostJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FolderMenuPostJsonResponse folderMenuPostJson(org.openapis.openapi.models.shared.FolderMenuConfiguration request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/FolderMenu");
         
@@ -171,7 +171,7 @@ public class FolderMenu {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FolderMenuPostRawResponse folderMenuPostRaw(org.openapis.openapi.models.operations.FolderMenuPostRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FolderMenuPostRawResponse folderMenuPostRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/FolderMenu");
         

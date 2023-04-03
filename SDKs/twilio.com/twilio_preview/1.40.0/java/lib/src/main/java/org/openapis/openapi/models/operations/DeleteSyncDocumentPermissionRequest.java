@@ -4,27 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSyncDocumentPermissionRequest {
-    
-    public DeleteSyncDocumentPermissionPathParams pathParams;
-    public DeleteSyncDocumentPermissionRequest withPathParams(DeleteSyncDocumentPermissionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Identifier of the Sync Document. Either a SID or a unique name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DocumentSid")
+    public String documentSid;
+    public DeleteSyncDocumentPermissionRequest withDocumentSid(String documentSid) {
+        this.documentSid = documentSid;
         return this;
     }
     
-    
-    public DeleteSyncDocumentPermissionSecurity security;
-    public DeleteSyncDocumentPermissionRequest withSecurity(DeleteSyncDocumentPermissionSecurity security) {
-        this.security = security;
+    /**
+     * Arbitrary string identifier representing a user associated with an FPA token, assigned by the developer.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Identity")
+    public String identity;
+    public DeleteSyncDocumentPermissionRequest withIdentity(String identity) {
+        this.identity = identity;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteSyncDocumentPermissionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteSyncDocumentPermissionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

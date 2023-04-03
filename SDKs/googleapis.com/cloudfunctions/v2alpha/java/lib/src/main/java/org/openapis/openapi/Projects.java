@@ -34,27 +34,28 @@ public class Projects {
     /**
      * Creates a new function. If a function with the given name already exists in the specified project, the long running operation will return `ALREADY_EXISTS` error.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsCreateResponse cloudfunctionsProjectsLocationsFunctionsCreate(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsCreateResponse cloudfunctionsProjectsLocationsFunctionsCreate(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsCreateRequest request, org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsCreatePathParams.class, baseUrl, "/v2alpha/{parent}/functions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsCreateRequest.class, baseUrl, "/v2alpha/{parent}/functions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "functionInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class Projects {
     /**
      * Deletes a function with the given name from the specified project. If the given function is used by some trigger, the trigger will be updated to remove this function.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsDeleteResponse cloudfunctionsProjectsLocationsFunctionsDelete(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsDeleteResponse cloudfunctionsProjectsLocationsFunctionsDelete(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsDeleteRequest request, org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsDeletePathParams.class, baseUrl, "/v2alpha/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsDeleteRequest.class, baseUrl, "/v2alpha/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,27 +128,28 @@ public class Projects {
     /**
      * Returns a signed URL for downloading deployed function source code. The URL is only valid for a limited period and should be used within 30 minutes of generation. For more information about the signed URL usage see: https://cloud.google.com/storage/docs/access-control/signed-urls
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateDownloadUrlResponse cloudfunctionsProjectsLocationsFunctionsGenerateDownloadUrl(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateDownloadUrlRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateDownloadUrlResponse cloudfunctionsProjectsLocationsFunctionsGenerateDownloadUrl(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateDownloadUrlRequest request, org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateDownloadUrlSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateDownloadUrlPathParams.class, baseUrl, "/v2alpha/{name}:generateDownloadUrl", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateDownloadUrlRequest.class, baseUrl, "/v2alpha/{name}:generateDownloadUrl", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateDownloadUrlQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateDownloadUrlRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,27 +176,28 @@ public class Projects {
     /**
      * Returns a signed URL for uploading a function source code. For more information about the signed URL usage see: https://cloud.google.com/storage/docs/access-control/signed-urls. Once the function source code upload is complete, the used signed URL should be provided in CreateFunction or UpdateFunction request as a reference to the function source code. When uploading source code to the generated signed URL, please follow these restrictions: * Source file type should be a zip file. * No credentials should be attached - the signed URLs provide access to the target bucket using internal service identity; if credentials were attached, the identity from the credentials would be used, but that identity does not have permissions to upload files to the URL. When making a HTTP PUT request, these two headers need to be specified: * `content-type: application/zip` And this header SHOULD NOT be specified: * `Authorization: Bearer YOUR_TOKEN`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlResponse cloudfunctionsProjectsLocationsFunctionsGenerateUploadUrl(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlResponse cloudfunctionsProjectsLocationsFunctionsGenerateUploadUrl(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlRequest request, org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlPathParams.class, baseUrl, "/v2alpha/{parent}/functions:generateUploadUrl", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlRequest.class, baseUrl, "/v2alpha/{parent}/functions:generateUploadUrl", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "generateUploadUrlRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGenerateUploadUrlRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -220,25 +224,26 @@ public class Projects {
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGetIamPolicyResponse cloudfunctionsProjectsLocationsFunctionsGetIamPolicy(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGetIamPolicyResponse cloudfunctionsProjectsLocationsFunctionsGetIamPolicy(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGetIamPolicyRequest request, org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGetIamPolicyPathParams.class, baseUrl, "/v2alpha/{resource}:getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGetIamPolicyRequest.class, baseUrl, "/v2alpha/{resource}:getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -265,25 +270,26 @@ public class Projects {
     /**
      * Returns a list of functions that belong to the requested project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsListResponse cloudfunctionsProjectsLocationsFunctionsList(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsListResponse cloudfunctionsProjectsLocationsFunctionsList(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsListRequest request, org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsListPathParams.class, baseUrl, "/v2alpha/{parent}/functions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsListRequest.class, baseUrl, "/v2alpha/{parent}/functions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -310,27 +316,28 @@ public class Projects {
     /**
      * Updates existing function.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsPatchResponse cloudfunctionsProjectsLocationsFunctionsPatch(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsPatchResponse cloudfunctionsProjectsLocationsFunctionsPatch(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsPatchRequest request, org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsPatchPathParams.class, baseUrl, "/v2alpha/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsPatchRequest.class, baseUrl, "/v2alpha/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "functionInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -357,27 +364,28 @@ public class Projects {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsSetIamPolicyResponse cloudfunctionsProjectsLocationsFunctionsSetIamPolicy(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsSetIamPolicyResponse cloudfunctionsProjectsLocationsFunctionsSetIamPolicy(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsSetIamPolicyRequest request, org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsSetIamPolicyPathParams.class, baseUrl, "/v2alpha/{resource}:setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsSetIamPolicyRequest.class, baseUrl, "/v2alpha/{resource}:setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -404,27 +412,28 @@ public class Projects {
     /**
      * Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsTestIamPermissionsResponse cloudfunctionsProjectsLocationsFunctionsTestIamPermissions(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsTestIamPermissionsResponse cloudfunctionsProjectsLocationsFunctionsTestIamPermissions(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsTestIamPermissionsRequest request, org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsTestIamPermissionsPathParams.class, baseUrl, "/v2alpha/{resource}:testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsTestIamPermissionsRequest.class, baseUrl, "/v2alpha/{resource}:testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testIamPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -451,25 +460,26 @@ public class Projects {
     /**
      * Lists information about the supported locations for this service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsListResponse cloudfunctionsProjectsLocationsList(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsListResponse cloudfunctionsProjectsLocationsList(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsListRequest request, org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsListPathParams.class, baseUrl, "/v2alpha/{name}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsListRequest.class, baseUrl, "/v2alpha/{name}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -496,25 +506,26 @@ public class Projects {
     /**
      * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsGetResponse cloudfunctionsProjectsLocationsOperationsGet(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsGetResponse cloudfunctionsProjectsLocationsOperationsGet(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsGetRequest request, org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsGetPathParams.class, baseUrl, "/v2alpha/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsGetRequest.class, baseUrl, "/v2alpha/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -541,25 +552,26 @@ public class Projects {
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsListResponse cloudfunctionsProjectsLocationsOperationsList(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsListResponse cloudfunctionsProjectsLocationsOperationsList(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsListRequest request, org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsListPathParams.class, baseUrl, "/v2alpha/{name}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsListRequest.class, baseUrl, "/v2alpha/{name}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -586,25 +598,26 @@ public class Projects {
     /**
      * Returns a list of runtimes that are supported for the requested project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsRuntimesListResponse cloudfunctionsProjectsLocationsRuntimesList(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsRuntimesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsRuntimesListResponse cloudfunctionsProjectsLocationsRuntimesList(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsRuntimesListRequest request, org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsRuntimesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsRuntimesListPathParams.class, baseUrl, "/v2alpha/{parent}/runtimes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsRuntimesListRequest.class, baseUrl, "/v2alpha/{parent}/runtimes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsRuntimesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsRuntimesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CancelChangeSetQueryParams;
-import org.openapis.openapi.models.operations.CancelChangeSetHeaders;
 import org.openapis.openapi.models.operations.CancelChangeSetRequest;
 import org.openapis.openapi.models.operations.CancelChangeSetResponse;
 
@@ -14,27 +12,21 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CancelChangeSetRequest req = new CancelChangeSetRequest() {{
-                queryParams = new CancelChangeSetQueryParams() {{
-                    catalog = "corrupti";
-                    changeSetId = "provident";
-                }};
-                headers = new CancelChangeSetHeaders() {{
-                    xAmzAlgorithm = "distinctio";
-                    xAmzContentSha256 = "quibusdam";
-                    xAmzCredential = "unde";
-                    xAmzDate = "nulla";
-                    xAmzSecurityToken = "corrupti";
-                    xAmzSignature = "illum";
-                    xAmzSignedHeaders = "vel";
-                }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "provident";
+                xAmzCredential = "distinctio";
+                xAmzDate = "quibusdam";
+                xAmzSecurityToken = "unde";
+                xAmzSignature = "nulla";
+                xAmzSignedHeaders = "corrupti";
+                catalog = "illum";
+                changeSetId = "vel";
+            }}            
 
             CancelChangeSetResponse res = sdk.cancelChangeSet(req);
 

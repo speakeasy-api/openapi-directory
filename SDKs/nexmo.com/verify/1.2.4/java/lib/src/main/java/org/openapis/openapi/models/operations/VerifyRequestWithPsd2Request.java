@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyRequestWithPsd2Request {
-    
-    public VerifyRequestWithPsd2PathParams pathParams;
-    public VerifyRequestWithPsd2Request withPathParams(VerifyRequestWithPsd2PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The response format.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public org.openapis.openapi.models.shared.FormatEnum format;
+    public VerifyRequestWithPsd2Request withFormat(org.openapis.openapi.models.shared.FormatEnum format) {
+        this.format = format;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.Psd2Request request;
-    public VerifyRequestWithPsd2Request withRequest(org.openapis.openapi.models.shared.Psd2Request request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Psd2Request psd2Request;
+    public VerifyRequestWithPsd2Request withPsd2Request(org.openapis.openapi.models.shared.Psd2Request psd2Request) {
+        this.psd2Request = psd2Request;
         return this;
     }
     

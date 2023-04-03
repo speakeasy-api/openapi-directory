@@ -35,7 +35,7 @@ public class KeyManagement {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAKeyResponse createAKey(org.openapis.openapi.models.operations.CreateAKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAKeyResponse createAKey(org.openapis.openapi.models.operations.CreateAKeyRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/keys");
         
@@ -110,7 +110,7 @@ public class KeyManagement {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetKeysQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetKeysRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -173,7 +173,7 @@ public class KeyManagement {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateAKeyResponse updateAKey(org.openapis.openapi.models.operations.UpdateAKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateAKeyResponse updateAKey(org.openapis.openapi.models.operations.UpdateAKeyRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/keys/wYZjGJyBcdb0621b97999c233246a8ec0a35d0fcd9a6417ef8ccee0c8978b64b123af2dd");
         

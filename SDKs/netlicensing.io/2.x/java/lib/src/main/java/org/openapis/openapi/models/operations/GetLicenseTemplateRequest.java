@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLicenseTemplateRequest {
-    
-    public GetLicenseTemplatePathParams pathParams;
-    public GetLicenseTemplateRequest withPathParams(GetLicenseTemplatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetLicenseTemplateSecurity security;
-    public GetLicenseTemplateRequest withSecurity(GetLicenseTemplateSecurity security) {
-        this.security = security;
+    /**
+     * Unique number (across all Products of a Vendor) that identifies the License Template. Vendor can assign this number when creating a License Template or let NetLicensing generate one. Read-only after creation of the first License from this License Template.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=licenseTemplateNumber")
+    public String licenseTemplateNumber;
+    public GetLicenseTemplateRequest withLicenseTemplateNumber(String licenseTemplateNumber) {
+        this.licenseTemplateNumber = licenseTemplateNumber;
         return this;
     }
     

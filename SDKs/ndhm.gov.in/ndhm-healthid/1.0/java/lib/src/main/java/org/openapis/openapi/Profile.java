@@ -35,23 +35,24 @@ public class Profile {
      * Change password via Aadhar for heath id.
      * Change password via Aadhar for heath id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChangePasswordViaAadharUsingPOSTResponse changePasswordViaAadharUsingPOST(org.openapis.openapi.models.operations.ChangePasswordViaAadharUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChangePasswordViaAadharUsingPOSTResponse changePasswordViaAadharUsingPOST(org.openapis.openapi.models.operations.ChangePasswordViaAadharUsingPOSTRequest request, org.openapis.openapi.models.operations.ChangePasswordViaAadharUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/account/change/passwd/byAadhaar");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "hidOtpRequestPaylaod", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -60,7 +61,7 @@ public class Profile {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -89,23 +90,24 @@ public class Profile {
      * Change password via mobile for heath id.
      * Change password via mobile for heath id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChangePasswordViaMobileUsingPOSTResponse changePasswordViaMobileUsingPOST(org.openapis.openapi.models.operations.ChangePasswordViaMobileUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChangePasswordViaMobileUsingPOSTResponse changePasswordViaMobileUsingPOST(org.openapis.openapi.models.operations.ChangePasswordViaMobileUsingPOSTRequest request, org.openapis.openapi.models.operations.ChangePasswordViaMobileUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/account/change/passwd/byMobile");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "hidOtpRequestPaylaod", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -114,7 +116,7 @@ public class Profile {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -143,23 +145,24 @@ public class Profile {
      * Change password via password for heath id.
      * Change password via password for heath id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChangePasswordViaUsingPOSTResponse changePasswordViaUsingPOST(org.openapis.openapi.models.operations.ChangePasswordViaUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChangePasswordViaUsingPOSTResponse changePasswordViaUsingPOST(org.openapis.openapi.models.operations.ChangePasswordViaUsingPOSTRequest request, org.openapis.openapi.models.operations.ChangePasswordViaUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/account/change/password");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "hidChangePasswordRequestPayload", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -168,7 +171,7 @@ public class Profile {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -196,10 +199,11 @@ public class Profile {
     /**
      * Delete account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DELETEAccountUsingDELETEResponse deleteAccountUsingDELETE(org.openapis.openapi.models.operations.DELETEAccountUsingDELETERequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DELETEAccountUsingDELETEResponse deleteAccountUsingDELETE(org.openapis.openapi.models.operations.DELETEAccountUsingDELETERequest request, org.openapis.openapi.models.operations.DELETEAccountUsingDELETESecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/account/profile");
         
@@ -207,7 +211,7 @@ public class Profile {
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -216,7 +220,7 @@ public class Profile {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -245,10 +249,11 @@ public class Profile {
      * Generate Aadhaar OTP on registrered mobile number.
      * Generate Aadhaar OTP on registrered mobile number.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenerateAadharOTPUsingGETResponse generateAadharOTPUsingGET(org.openapis.openapi.models.operations.GenerateAadharOTPUsingGETRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenerateAadharOTPUsingGETResponse generateAadharOTPUsingGET(org.openapis.openapi.models.operations.GenerateAadharOTPUsingGETRequest request, org.openapis.openapi.models.operations.GenerateAadharOTPUsingGETSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/account/change/passwd/generateAadhaarOTP");
         
@@ -256,7 +261,7 @@ public class Profile {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -265,7 +270,7 @@ public class Profile {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -293,10 +298,11 @@ public class Profile {
     /**
      * Generate Health ID card in PDF format
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenerateCardUsingGETResponse generateCardUsingGET(org.openapis.openapi.models.operations.GenerateCardUsingGETRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenerateCardUsingGETResponse generateCardUsingGET(org.openapis.openapi.models.operations.GenerateCardUsingGETRequest request, org.openapis.openapi.models.operations.GenerateCardUsingGETSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/account/getCard");
         
@@ -304,7 +310,7 @@ public class Profile {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -313,7 +319,7 @@ public class Profile {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -342,10 +348,11 @@ public class Profile {
      * Generate Mobile OTP to start registration.
      * Generate Mobile OTP to start registration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenerateMobileOTPUsingGETResponse generateMobileOTPUsingGET(org.openapis.openapi.models.operations.GenerateMobileOTPUsingGETRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenerateMobileOTPUsingGETResponse generateMobileOTPUsingGET(org.openapis.openapi.models.operations.GenerateMobileOTPUsingGETRequest request, org.openapis.openapi.models.operations.GenerateMobileOTPUsingGETSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/account/change/passwd/generateMobileOTP");
         
@@ -353,7 +360,7 @@ public class Profile {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -362,7 +369,7 @@ public class Profile {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -390,10 +397,11 @@ public class Profile {
     /**
      * Generate Health ID card PNG
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GeneratePngCardUsingGETResponse generatePngCardUsingGET(org.openapis.openapi.models.operations.GeneratePngCardUsingGETRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GeneratePngCardUsingGETResponse generatePngCardUsingGET(org.openapis.openapi.models.operations.GeneratePngCardUsingGETRequest request, org.openapis.openapi.models.operations.GeneratePngCardUsingGETSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/account/getPngCard");
         
@@ -401,7 +409,7 @@ public class Profile {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -410,7 +418,7 @@ public class Profile {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -438,10 +446,11 @@ public class Profile {
     /**
      * Generate Health ID card SVG
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenerateSvgCardUsingGETResponse generateSvgCardUsingGET(org.openapis.openapi.models.operations.GenerateSvgCardUsingGETRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenerateSvgCardUsingGETResponse generateSvgCardUsingGET(org.openapis.openapi.models.operations.GenerateSvgCardUsingGETRequest request, org.openapis.openapi.models.operations.GenerateSvgCardUsingGETSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/account/getSvgCard");
         
@@ -449,7 +458,7 @@ public class Profile {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -458,7 +467,7 @@ public class Profile {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -487,10 +496,11 @@ public class Profile {
      * Generate Aadhaar OTP on registrered for link account with aadhar number
      * Generate Aadhaar OTP on registrered for link account with aadhar number
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GeneratereKycAadharOTPUsingPOSTResponse generatereKycAadharOTPUsingPOST(org.openapis.openapi.models.operations.GeneratereKycAadharOTPUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GeneratereKycAadharOTPUsingPOSTResponse generatereKycAadharOTPUsingPOST(org.openapis.openapi.models.operations.GeneratereKycAadharOTPUsingPOSTRequest request, org.openapis.openapi.models.operations.GeneratereKycAadharOTPUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/account/aadhaar/generateOTP");
         
@@ -498,7 +508,7 @@ public class Profile {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -507,7 +517,7 @@ public class Profile {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -535,10 +545,11 @@ public class Profile {
     /**
      * Get account information.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GETAccountInformationUsingGETResponse getAccountInformationUsingGET(org.openapis.openapi.models.operations.GETAccountInformationUsingGETRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GETAccountInformationUsingGETResponse getAccountInformationUsingGET(org.openapis.openapi.models.operations.GETAccountInformationUsingGETRequest request, org.openapis.openapi.models.operations.GETAccountInformationUsingGETSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/account/profile");
         
@@ -546,7 +557,7 @@ public class Profile {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -555,7 +566,7 @@ public class Profile {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -583,10 +594,11 @@ public class Profile {
     /**
      * Get List of Benefits associated with HealthID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GETBenefitsUsingGETResponse getBenefitsUsingGET(org.openapis.openapi.models.operations.GETBenefitsUsingGETRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GETBenefitsUsingGETResponse getBenefitsUsingGET(org.openapis.openapi.models.operations.GETBenefitsUsingGETRequest request, org.openapis.openapi.models.operations.GETBenefitsUsingGETSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/account/benefits");
         
@@ -594,7 +606,7 @@ public class Profile {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -603,7 +615,7 @@ public class Profile {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -631,10 +643,11 @@ public class Profile {
     /**
      * Get Quick Response code in PNG format for this account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GETQrCodeUsingGETResponse getQrCodeUsingGET(org.openapis.openapi.models.operations.GETQrCodeUsingGETRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GETQrCodeUsingGETResponse getQrCodeUsingGET(org.openapis.openapi.models.operations.GETQrCodeUsingGETRequest request, org.openapis.openapi.models.operations.GETQrCodeUsingGETSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/account/qrCode");
         
@@ -642,7 +655,7 @@ public class Profile {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -651,7 +664,7 @@ public class Profile {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -684,23 +697,24 @@ public class Profile {
     /**
      * Update account information
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateAccountInformationUsingPOSTResponse updateAccountInformationUsingPOST(org.openapis.openapi.models.operations.UpdateAccountInformationUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateAccountInformationUsingPOSTResponse updateAccountInformationUsingPOST(org.openapis.openapi.models.operations.UpdateAccountInformationUsingPOSTRequest request, org.openapis.openapi.models.operations.UpdateAccountInformationUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/account/profile");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateAccountRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -709,7 +723,7 @@ public class Profile {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -737,23 +751,24 @@ public class Profile {
     /**
      * Validate auth token
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ValidateTokenUsingPOSTResponse validateTokenUsingPOST(org.openapis.openapi.models.operations.ValidateTokenUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ValidateTokenUsingPOSTResponse validateTokenUsingPOST(org.openapis.openapi.models.operations.ValidateTokenUsingPOSTRequest request, org.openapis.openapi.models.operations.ValidateTokenUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/account/token");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "validateTokenRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -762,7 +777,7 @@ public class Profile {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -791,23 +806,24 @@ public class Profile {
      * Verify Aadhaar OTP to complete KYC/re-KYC verification.
      * Verify Aadhaar OTP to complete KYC/re-KYC verification
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VerifyAadharOTPOnlyUsingPOST1Response verifyAadharOTPOnlyUsingPOST1(org.openapis.openapi.models.operations.VerifyAadharOTPOnlyUsingPOST1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.VerifyAadharOTPOnlyUsingPOST1Response verifyAadharOTPOnlyUsingPOST1(org.openapis.openapi.models.operations.VerifyAadharOTPOnlyUsingPOST1Request request, org.openapis.openapi.models.operations.VerifyAadharOTPOnlyUsingPOST1Security security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/account/aadhaar/verifyOTP");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "verifyAadhaarOtp", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -816,7 +832,7 @@ public class Profile {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

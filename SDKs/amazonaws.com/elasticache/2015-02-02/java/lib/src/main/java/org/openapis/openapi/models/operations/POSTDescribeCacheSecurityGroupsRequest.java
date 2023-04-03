@@ -7,24 +7,93 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTDescribeCacheSecurityGroupsRequest {
-    
-    public POSTDescribeCacheSecurityGroupsQueryParams queryParams;
-    public POSTDescribeCacheSecurityGroupsRequest withQueryParams(POSTDescribeCacheSecurityGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public POSTDescribeCacheSecurityGroupsActionEnum action;
+    public POSTDescribeCacheSecurityGroupsRequest withAction(POSTDescribeCacheSecurityGroupsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public POSTDescribeCacheSecurityGroupsRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
     
-    public POSTDescribeCacheSecurityGroupsHeaders headers;
-    public POSTDescribeCacheSecurityGroupsRequest withHeaders(POSTDescribeCacheSecurityGroupsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public String maxRecords;
+    public POSTDescribeCacheSecurityGroupsRequest withMaxRecords(String maxRecords) {
+        this.maxRecords = maxRecords;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public POSTDescribeCacheSecurityGroupsRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public POSTDescribeCacheSecurityGroupsRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public POSTDescribeCacheSecurityGroupsVersionEnum version;
+    public POSTDescribeCacheSecurityGroupsRequest withVersion(POSTDescribeCacheSecurityGroupsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public POSTDescribeCacheSecurityGroupsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public POSTDescribeCacheSecurityGroupsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public POSTDescribeCacheSecurityGroupsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public POSTDescribeCacheSecurityGroupsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public POSTDescribeCacheSecurityGroupsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public POSTDescribeCacheSecurityGroupsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public POSTDescribeCacheSecurityGroupsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

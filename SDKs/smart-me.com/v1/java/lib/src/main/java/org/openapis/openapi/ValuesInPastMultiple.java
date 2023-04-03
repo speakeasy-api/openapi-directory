@@ -38,13 +38,13 @@ public class ValuesInPastMultiple {
      */
     public org.openapis.openapi.models.operations.ValuesInPastMultipleGetResponse valuesInPastMultipleGet(org.openapis.openapi.models.operations.ValuesInPastMultipleGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ValuesInPastMultipleGetPathParams.class, baseUrl, "/api/ValuesInPastMultiple/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ValuesInPastMultipleGetRequest.class, baseUrl, "/api/ValuesInPastMultiple/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ValuesInPastMultipleGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ValuesInPastMultipleGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

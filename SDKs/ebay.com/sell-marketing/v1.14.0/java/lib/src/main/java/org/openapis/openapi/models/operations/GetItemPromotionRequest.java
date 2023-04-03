@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemPromotionRequest {
-    
-    public GetItemPromotionPathParams pathParams;
-    public GetItemPromotionRequest withPathParams(GetItemPromotionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetItemPromotionSecurity security;
-    public GetItemPromotionRequest withSecurity(GetItemPromotionSecurity security) {
-        this.security = security;
+    /**
+     * This path parameter takes a concatenation of the ID of the promotion you want to retrieve plus the marketplace ID on which the promotion is hosted. Concatenate the two values by separating them with an "at sign" (&lt;b&gt;@&lt;/b&gt;).  &lt;br&gt;&lt;br&gt;The ID of the promotion (&lt;b&gt;promotionId&lt;/b&gt;) is a unique eBay-assigned value that's generated when the promotion is created. The Marketplace ID is the ENUM value of eBay marketplace where the promotion is hosted. &lt;br&gt;&lt;br&gt;&lt;b&gt;Example:&lt;/b&gt; &lt;code&gt;1********5@EBAY_US&lt;/code&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=promotion_id")
+    public String promotionId;
+    public GetItemPromotionRequest withPromotionId(String promotionId) {
+        this.promotionId = promotionId;
         return this;
     }
     

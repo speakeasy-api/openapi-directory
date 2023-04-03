@@ -17,14 +17,12 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.MybusinessverificationsLocationsFetchVerificationOptionsPathParams;
-import org.openapis.openapi.models.operations.MybusinessverificationsLocationsFetchVerificationOptionsQueryParams;
 import org.openapis.openapi.models.operations.MybusinessverificationsLocationsFetchVerificationOptionsRequest;
 import org.openapis.openapi.models.operations.MybusinessverificationsLocationsFetchVerificationOptionsResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.FetchVerificationOptionsRequest;
 import org.openapis.openapi.models.shared.ServiceBusinessContext;
 import org.openapis.openapi.models.shared.PostalAddress;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -34,48 +32,44 @@ public class Application {
                 .build();
 
             MybusinessverificationsLocationsFetchVerificationOptionsRequest req = new MybusinessverificationsLocationsFetchVerificationOptionsRequest() {{
-                pathParams = new MybusinessverificationsLocationsFetchVerificationOptionsPathParams() {{
-                    location = "corrupti";
-                }};
-                queryParams = new MybusinessverificationsLocationsFetchVerificationOptionsQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new FetchVerificationOptionsRequest() {{
+                dollarXgafv = "2";
+                fetchVerificationOptionsRequest = new FetchVerificationOptionsRequest() {{
                     context = new ServiceBusinessContext() {{
                         address = new PostalAddress() {{
                             addressLines = new String[]{{
-                                add("iure"),
-                                add("magnam"),
+                                add("distinctio"),
+                                add("quibusdam"),
+                                add("unde"),
                             }};
-                            administrativeArea = "debitis";
-                            languageCode = "ipsa";
-                            locality = "delectus";
-                            organization = "tempora";
-                            postalCode = "47854";
+                            administrativeArea = "nulla";
+                            languageCode = "corrupti";
+                            locality = "illum";
+                            organization = "vel";
+                            postalCode = "63428-0923";
                             recipients = new String[]{{
-                                add("nisi"),
-                                add("recusandae"),
-                                add("temporibus"),
+                                add("minus"),
+                                add("placeat"),
                             }};
-                            regionCode = "ab";
-                            revision = 337396;
-                            sortingCode = "veritatis";
-                            sublocality = "deserunt";
+                            regionCode = "voluptatum";
+                            revision = 479977;
+                            sortingCode = "excepturi";
+                            sublocality = "nisi";
                         }};
                     }};
-                    languageCode = "perferendis";
+                    languageCode = "recusandae";
                 }};
-            }};            
+                accessToken = "temporibus";
+                alt = "json";
+                callback = "quis";
+                fields = "veritatis";
+                key = "deserunt";
+                location = "perferendis";
+                oauthToken = "ipsam";
+                prettyPrint = false;
+                quotaUser = "repellendus";
+                uploadType = "sapiente";
+                uploadProtocol = "quo";
+            }}            
 
             MybusinessverificationsLocationsFetchVerificationOptionsResponse res = sdk.locations.mybusinessverificationsLocationsFetchVerificationOptions(req);
 
@@ -89,7 +83,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### locations

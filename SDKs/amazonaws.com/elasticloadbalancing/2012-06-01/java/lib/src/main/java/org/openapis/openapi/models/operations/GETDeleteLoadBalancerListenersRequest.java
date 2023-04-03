@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteLoadBalancerListenersRequest {
-    
-    public GETDeleteLoadBalancerListenersQueryParams queryParams;
-    public GETDeleteLoadBalancerListenersRequest withQueryParams(GETDeleteLoadBalancerListenersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteLoadBalancerListenersActionEnum action;
+    public GETDeleteLoadBalancerListenersRequest withAction(GETDeleteLoadBalancerListenersActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the load balancer.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoadBalancerName")
+    public String loadBalancerName;
+    public GETDeleteLoadBalancerListenersRequest withLoadBalancerName(String loadBalancerName) {
+        this.loadBalancerName = loadBalancerName;
+        return this;
+    }
     
-    public GETDeleteLoadBalancerListenersHeaders headers;
-    public GETDeleteLoadBalancerListenersRequest withHeaders(GETDeleteLoadBalancerListenersHeaders headers) {
-        this.headers = headers;
+    /**
+     * The client port numbers of the listeners.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoadBalancerPorts")
+    public Long[] loadBalancerPorts;
+    public GETDeleteLoadBalancerListenersRequest withLoadBalancerPorts(Long[] loadBalancerPorts) {
+        this.loadBalancerPorts = loadBalancerPorts;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteLoadBalancerListenersVersionEnum version;
+    public GETDeleteLoadBalancerListenersRequest withVersion(GETDeleteLoadBalancerListenersVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteLoadBalancerListenersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteLoadBalancerListenersRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteLoadBalancerListenersRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteLoadBalancerListenersRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteLoadBalancerListenersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteLoadBalancerListenersRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteLoadBalancerListenersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

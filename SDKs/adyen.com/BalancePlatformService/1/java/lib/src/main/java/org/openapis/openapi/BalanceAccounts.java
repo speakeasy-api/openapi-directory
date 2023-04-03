@@ -35,19 +35,20 @@ public class BalanceAccounts {
      * Get a balance account
      * Returns a balance account and its balances for the default currency and other currencies with a non-zero balance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBalanceAccountsIdResponse getBalanceAccountsId(org.openapis.openapi.models.operations.GetBalanceAccountsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBalanceAccountsIdResponse getBalanceAccountsId(org.openapis.openapi.models.operations.GetBalanceAccountsIdRequest request, org.openapis.openapi.models.operations.GetBalanceAccountsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBalanceAccountsIdPathParams.class, baseUrl, "/balanceAccounts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBalanceAccountsIdRequest.class, baseUrl, "/balanceAccounts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -85,25 +86,26 @@ public class BalanceAccounts {
      * 
      * To fetch multiple pages, use the query parameters.For example, to limit the page to 3 payment instruments and to skip the first 6, use `/balanceAccounts/{id}/paymentInstruments?limit=3&amp;offset=6`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBalanceAccountsIdPaymentInstrumentsResponse getBalanceAccountsIdPaymentInstruments(org.openapis.openapi.models.operations.GetBalanceAccountsIdPaymentInstrumentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBalanceAccountsIdPaymentInstrumentsResponse getBalanceAccountsIdPaymentInstruments(org.openapis.openapi.models.operations.GetBalanceAccountsIdPaymentInstrumentsRequest request, org.openapis.openapi.models.operations.GetBalanceAccountsIdPaymentInstrumentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBalanceAccountsIdPaymentInstrumentsPathParams.class, baseUrl, "/balanceAccounts/{id}/paymentInstruments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBalanceAccountsIdPaymentInstrumentsRequest.class, baseUrl, "/balanceAccounts/{id}/paymentInstruments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBalanceAccountsIdPaymentInstrumentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBalanceAccountsIdPaymentInstrumentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -139,21 +141,22 @@ public class BalanceAccounts {
      * Update a balance account
      * Updates a balance account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchBalanceAccountsIdResponse patchBalanceAccountsId(org.openapis.openapi.models.operations.PatchBalanceAccountsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchBalanceAccountsIdResponse patchBalanceAccountsId(org.openapis.openapi.models.operations.PatchBalanceAccountsIdRequest request, org.openapis.openapi.models.operations.PatchBalanceAccountsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchBalanceAccountsIdPathParams.class, baseUrl, "/balanceAccounts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchBalanceAccountsIdRequest.class, baseUrl, "/balanceAccounts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "balanceAccountUpdateRequestInput", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -189,10 +192,11 @@ public class BalanceAccounts {
      * Create a balance account
      * Creates a balance account that holds the funds of the associated account holder.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostBalanceAccountsResponse postBalanceAccounts(org.openapis.openapi.models.operations.PostBalanceAccountsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostBalanceAccountsResponse postBalanceAccounts(org.openapis.openapi.models.shared.BalanceAccountInfoInput request, org.openapis.openapi.models.operations.PostBalanceAccountsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/balanceAccounts");
         
@@ -203,7 +207,7 @@ public class BalanceAccounts {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

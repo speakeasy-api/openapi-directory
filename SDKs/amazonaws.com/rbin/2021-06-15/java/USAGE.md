@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateRuleHeaders;
 import org.openapis.openapi.models.operations.CreateRuleRequestBodyLockConfiguration;
 import org.openapis.openapi.models.operations.CreateRuleRequestBodyResourceTypeEnum;
 import org.openapis.openapi.models.operations.CreateRuleRequestBodyRetentionPeriod;
@@ -22,61 +21,57 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateRuleRequest req = new CreateRuleRequest() {{
-                headers = new CreateRuleHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateRuleRequestBody() {{
-                    description = "illum";
+                requestBody = new CreateRuleRequestBody() {{
+                    description = "corrupti";
                     lockConfiguration = new CreateRuleRequestBodyLockConfiguration() {{
                         unlockDelay = new UnlockDelay() {{
                             unlockDelayUnit = "DAYS";
-                            unlockDelayValue = 423655;
+                            unlockDelayValue = 592845;
                         }};
                     }};
                     resourceTags = new org.openapis.openapi.models.shared.ResourceTag[]{{
                         add(new ResourceTag() {{
-                            resourceTagKey = "deserunt";
-                            resourceTagValue = "suscipit";
+                            resourceTagKey = "quibusdam";
+                            resourceTagValue = "unde";
                         }}),
                         add(new ResourceTag() {{
-                            resourceTagKey = "iure";
-                            resourceTagValue = "magnam";
+                            resourceTagKey = "nulla";
+                            resourceTagValue = "corrupti";
                         }}),
                         add(new ResourceTag() {{
-                            resourceTagKey = "debitis";
-                            resourceTagValue = "ipsa";
+                            resourceTagKey = "illum";
+                            resourceTagValue = "vel";
                         }}),
                     }};
                     resourceType = "EC2_IMAGE";
                     retentionPeriod = new CreateRuleRequestBodyRetentionPeriod() {{
                         retentionPeriodUnit = "DAYS";
-                        retentionPeriodValue = 272656;
+                        retentionPeriodValue = 645894;
                     }};
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "molestiae";
-                            value = "minus";
+                            key = "iure";
+                            value = "magnam";
                         }}),
                         add(new Tag() {{
-                            key = "placeat";
-                            value = "voluptatum";
+                            key = "debitis";
+                            value = "ipsa";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "delectus";
+                xAmzContentSha256 = "tempora";
+                xAmzCredential = "suscipit";
+                xAmzDate = "molestiae";
+                xAmzSecurityToken = "minus";
+                xAmzSignature = "placeat";
+                xAmzSignedHeaders = "voluptatum";
+            }}            
 
             CreateRuleResponse res = sdk.createRule(req);
 

@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteByocTrunkRequest {
-    
-    public DeleteByocTrunkPathParams pathParams;
-    public DeleteByocTrunkRequest withPathParams(DeleteByocTrunkPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteByocTrunkSecurity security;
-    public DeleteByocTrunkRequest withSecurity(DeleteByocTrunkSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteByocTrunkRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the BYOC Trunk resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteByocTrunkRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

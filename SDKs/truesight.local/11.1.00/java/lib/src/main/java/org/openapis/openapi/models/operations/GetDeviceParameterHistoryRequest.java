@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceParameterHistoryRequest {
-    
-    public GetDeviceParameterHistoryPathParams pathParams;
-    public GetDeviceParameterHistoryRequest withPathParams(GetDeviceParameterHistoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
+    public Integer deviceId;
+    public GetDeviceParameterHistoryRequest withDeviceId(Integer deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
     
+    /**
+     * Beginning of the period (Epoch time, in seconds).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public Long from;
+    public GetDeviceParameterHistoryRequest withFrom(Long from) {
+        this.from = from;
+        return this;
+    }
     
-    public GetDeviceParameterHistoryQueryParams queryParams;
-    public GetDeviceParameterHistoryRequest withQueryParams(GetDeviceParameterHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Monitor SID (to filter the list of Monitors).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=monitorSid")
+    public String monitorSid;
+    public GetDeviceParameterHistoryRequest withMonitorSid(String monitorSid) {
+        this.monitorSid = monitorSid;
+        return this;
+    }
+    
+    /**
+     * The unique name of the Monitor type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=monitorType")
+    public String monitorType;
+    public GetDeviceParameterHistoryRequest withMonitorType(String monitorType) {
+        this.monitorType = monitorType;
+        return this;
+    }
+    
+    /**
+     * The name of the parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameterName")
+    public String parameterName;
+    public GetDeviceParameterHistoryRequest withParameterName(String parameterName) {
+        this.parameterName = parameterName;
+        return this;
+    }
+    
+    /**
+     * End of the period (Epoch time, in seconds).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public Long to;
+    public GetDeviceParameterHistoryRequest withTo(Long to) {
+        this.to = to;
         return this;
     }
     

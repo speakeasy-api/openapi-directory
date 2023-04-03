@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRetiredObjectCountUsingGETRequest {
+    /**
+     * dateYYYYMMDD
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dateYYYYMMDD")
+    public String dateYYYYMMDD;
+    public GETRetiredObjectCountUsingGETRequest withDateYYYYMMDD(String dateYYYYMMDD) {
+        this.dateYYYYMMDD = dateYYYYMMDD;
+        return this;
+    }
     
-    public GETRetiredObjectCountUsingGETPathParams pathParams;
-    public GETRetiredObjectCountUsingGETRequest withPathParams(GETRetiredObjectCountUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * speciesTypeKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
+    public Integer speciesTypeKey;
+    public GETRetiredObjectCountUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
+        this.speciesTypeKey = speciesTypeKey;
         return this;
     }
     

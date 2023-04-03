@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRealmUsersIdResetPasswordRequest {
-    
-    public PutRealmUsersIdResetPasswordPathParams pathParams;
-    public PutRealmUsersIdResetPasswordRequest withPathParams(PutRealmUsersIdResetPasswordPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The representation must contain a rawPassword with the plain-text password
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CredentialRepresentation request;
-    public PutRealmUsersIdResetPasswordRequest withRequest(org.openapis.openapi.models.shared.CredentialRepresentation request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CredentialRepresentation credentialRepresentation;
+    public PutRealmUsersIdResetPasswordRequest withCredentialRepresentation(org.openapis.openapi.models.shared.CredentialRepresentation credentialRepresentation) {
+        this.credentialRepresentation = credentialRepresentation;
+        return this;
+    }
+    
+    /**
+     * User id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutRealmUsersIdResetPasswordRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PutRealmUsersIdResetPasswordRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

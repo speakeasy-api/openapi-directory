@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetClassRequest {
-    
-    public GetClassPathParams pathParams;
-    public GetClassRequest withPathParams(GetClassPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetClassSecurity security;
-    public GetClassRequest withSecurity(GetClassSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the class
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
+    public String class_;
+    public GetClassRequest withClass(String class_) {
+        this.class_ = class_;
         return this;
     }
     

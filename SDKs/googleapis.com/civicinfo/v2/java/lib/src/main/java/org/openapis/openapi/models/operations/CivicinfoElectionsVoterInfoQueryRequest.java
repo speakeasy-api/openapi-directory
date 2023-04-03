@@ -4,13 +4,156 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CivicinfoElectionsVoterInfoQueryRequest {
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public CivicinfoElectionsVoterInfoQueryRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
+        return this;
+    }
     
-    public CivicinfoElectionsVoterInfoQueryQueryParams queryParams;
-    public CivicinfoElectionsVoterInfoQueryRequest withQueryParams(CivicinfoElectionsVoterInfoQueryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public CivicinfoElectionsVoterInfoQueryRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
+    
+    /**
+     * The registered address of the voter to look up.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address")
+    public String address;
+    public CivicinfoElectionsVoterInfoQueryRequest withAddress(String address) {
+        this.address = address;
+        return this;
+    }
+    
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public CivicinfoElectionsVoterInfoQueryRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public CivicinfoElectionsVoterInfoQueryRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * The unique ID of the election to look up. A list of election IDs can be obtained at https://www.googleapis.com/civicinfo/{version}/elections. If no election ID is specified in the query and there is more than one election with data for the given voter, the additional elections are provided in the otherElections response field.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=electionId")
+    public String electionId;
+    public CivicinfoElectionsVoterInfoQueryRequest withElectionId(String electionId) {
+        this.electionId = electionId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public CivicinfoElectionsVoterInfoQueryRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public CivicinfoElectionsVoterInfoQueryRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public CivicinfoElectionsVoterInfoQueryRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * If set to true, only data from official state sources will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=officialOnly")
+    public Boolean officialOnly;
+    public CivicinfoElectionsVoterInfoQueryRequest withOfficialOnly(Boolean officialOnly) {
+        this.officialOnly = officialOnly;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public CivicinfoElectionsVoterInfoQueryRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public CivicinfoElectionsVoterInfoQueryRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * If set to true, the query will return the success code and include any partial information when it is unable to determine a matching address or unable to determine the election for electionId=0 queries.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=returnAllAvailableData")
+    public Boolean returnAllAvailableData;
+    public CivicinfoElectionsVoterInfoQueryRequest withReturnAllAvailableData(Boolean returnAllAvailableData) {
+        this.returnAllAvailableData = returnAllAvailableData;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public CivicinfoElectionsVoterInfoQueryRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public CivicinfoElectionsVoterInfoQueryRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

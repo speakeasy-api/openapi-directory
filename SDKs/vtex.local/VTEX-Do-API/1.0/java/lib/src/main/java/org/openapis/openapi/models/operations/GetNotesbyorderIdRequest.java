@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNotesbyorderIdRequest {
-    
-    public GetNotesbyorderIdQueryParams queryParams;
-    public GetNotesbyorderIdRequest withQueryParams(GetNotesbyorderIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetNotesbyorderIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetNotesbyorderIdRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetNotesbyorderIdHeaders headers;
-    public GetNotesbyorderIdRequest withHeaders(GetNotesbyorderIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Number of the page to be retrieved.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetNotesbyorderIdRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of notes per page. Maximum: 30.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public Long perPage;
+    public GetNotesbyorderIdRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * This parameter is relevant only for PII-compliant accounts. When sending requests to this endpoint, PII-compliant accounts can use this parameter to declare the reason for requesting unmasked data. Otherwise, this endpoint will return masked PII data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
+    public String reason;
+    public GetNotesbyorderIdRequest withReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    
+    /**
+     * ID of the order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target.id")
+    public String targetId;
+    public GetNotesbyorderIdRequest withTargetId(String targetId) {
+        this.targetId = targetId;
         return this;
     }
     

@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTrustProductEvaluationRequest {
-    
-    public CreateTrustProductEvaluationPathParams pathParams;
-    public CreateTrustProductEvaluationRequest withPathParams(CreateTrustProductEvaluationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateTrustProductEvaluationCreateTrustProductEvaluationRequest request;
-    public CreateTrustProductEvaluationRequest withRequest(CreateTrustProductEvaluationCreateTrustProductEvaluationRequest request) {
-        this.request = request;
+    public CreateTrustProductEvaluationCreateTrustProductEvaluationRequest requestBody;
+    public CreateTrustProductEvaluationRequest withRequestBody(CreateTrustProductEvaluationCreateTrustProductEvaluationRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateTrustProductEvaluationSecurity security;
-    public CreateTrustProductEvaluationRequest withSecurity(CreateTrustProductEvaluationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateTrustProductEvaluationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that we created to identify the trust_product resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrustProductSid")
+    public String trustProductSid;
+    public CreateTrustProductEvaluationRequest withTrustProductSid(String trustProductSid) {
+        this.trustProductSid = trustProductSid;
         return this;
     }
     

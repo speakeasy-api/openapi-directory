@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRelationByENSGIDRequest {
-    
-    public GetRelationByENSGIDPathParams pathParams;
-    public GetRelationByENSGIDRequest withPathParams(GetRelationByENSGIDPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An Ensembl gene identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target")
+    public String target;
+    public GetRelationByENSGIDRequest withTarget(String target) {
+        this.target = target;
         return this;
     }
     

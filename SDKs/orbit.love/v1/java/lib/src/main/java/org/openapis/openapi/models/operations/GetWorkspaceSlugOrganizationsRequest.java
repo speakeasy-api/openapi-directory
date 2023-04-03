@@ -4,27 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspaceSlugOrganizationsRequest {
-    
-    public GetWorkspaceSlugOrganizationsPathParams pathParams;
-    public GetWorkspaceSlugOrganizationsRequest withPathParams(GetWorkspaceSlugOrganizationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetWorkspaceSlugOrganizationsDirectionEnum direction;
+    public GetWorkspaceSlugOrganizationsRequest withDirection(GetWorkspaceSlugOrganizationsDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
-    
-    public GetWorkspaceSlugOrganizationsQueryParams queryParams;
-    public GetWorkspaceSlugOrganizationsRequest withQueryParams(GetWorkspaceSlugOrganizationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=items")
+    public GetWorkspaceSlugOrganizationsItemsEnum items;
+    public GetWorkspaceSlugOrganizationsRequest withItems(GetWorkspaceSlugOrganizationsItemsEnum items) {
+        this.items = items;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetWorkspaceSlugOrganizationsRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetWorkspaceSlugOrganizationsSecurity security;
-    public GetWorkspaceSlugOrganizationsRequest withSecurity(GetWorkspaceSlugOrganizationsSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetWorkspaceSlugOrganizationsRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetWorkspaceSlugOrganizationsSortEnum sort;
+    public GetWorkspaceSlugOrganizationsRequest withSort(GetWorkspaceSlugOrganizationsSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
+    public String workspaceSlug;
+    public GetWorkspaceSlugOrganizationsRequest withWorkspaceSlug(String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
         return this;
     }
     

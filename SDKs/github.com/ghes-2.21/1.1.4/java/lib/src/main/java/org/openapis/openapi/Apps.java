@@ -50,7 +50,7 @@ public class Apps {
      */
     public org.openapis.openapi.models.operations.AppsAddRepoToInstallationResponse appsAddRepoToInstallation(org.openapis.openapi.models.operations.AppsAddRepoToInstallationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsAddRepoToInstallationPathParams.class, baseUrl, "/user/installations/{installation_id}/repositories/{repository_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsAddRepoToInstallationRequest.class, baseUrl, "/user/installations/{installation_id}/repositories/{repository_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -94,7 +94,7 @@ public class Apps {
      */
     public org.openapis.openapi.models.operations.AppsCheckAuthorizationResponse appsCheckAuthorization(org.openapis.openapi.models.operations.AppsCheckAuthorizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsCheckAuthorizationPathParams.class, baseUrl, "/applications/{client_id}/tokens/{access_token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsCheckAuthorizationRequest.class, baseUrl, "/applications/{client_id}/tokens/{access_token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -142,12 +142,12 @@ public class Apps {
      */
     public org.openapis.openapi.models.operations.AppsCheckTokenResponse appsCheckToken(org.openapis.openapi.models.operations.AppsCheckTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsCheckTokenPathParams.class, baseUrl, "/applications/{client_id}/token", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsCheckTokenRequest.class, baseUrl, "/applications/{client_id}/token", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -207,12 +207,12 @@ public class Apps {
      */
     public org.openapis.openapi.models.operations.AppsCreateContentAttachmentResponse appsCreateContentAttachment(org.openapis.openapi.models.operations.AppsCreateContentAttachmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsCreateContentAttachmentPathParams.class, baseUrl, "/repos/{owner}/{repo}/content_references/{content_reference_id}/attachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsCreateContentAttachmentRequest.class, baseUrl, "/repos/{owner}/{repo}/content_references/{content_reference_id}/attachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -278,12 +278,12 @@ public class Apps {
      */
     public org.openapis.openapi.models.operations.AppsCreateFromManifestResponse appsCreateFromManifest(org.openapis.openapi.models.operations.AppsCreateFromManifestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsCreateFromManifestPathParams.class, baseUrl, "/app-manifests/{code}/conversions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsCreateFromManifestRequest.class, baseUrl, "/app-manifests/{code}/conversions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -338,15 +338,15 @@ public class Apps {
      */
     public org.openapis.openapi.models.operations.AppsCreateInstallationAccessTokenResponse appsCreateInstallationAccessToken(org.openapis.openapi.models.operations.AppsCreateInstallationAccessTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsCreateInstallationAccessTokenPathParams.class, baseUrl, "/app/installations/{installation_id}/access_tokens", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsCreateInstallationAccessTokenRequest.class, baseUrl, "/app/installations/{installation_id}/access_tokens", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -413,12 +413,12 @@ public class Apps {
      */
     public org.openapis.openapi.models.operations.AppsDeleteAuthorizationResponse appsDeleteAuthorization(org.openapis.openapi.models.operations.AppsDeleteAuthorizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsDeleteAuthorizationPathParams.class, baseUrl, "/applications/{client_id}/grant", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsDeleteAuthorizationRequest.class, baseUrl, "/applications/{client_id}/grant", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -457,13 +457,13 @@ public class Apps {
      */
     public org.openapis.openapi.models.operations.AppsDeleteInstallationResponse appsDeleteInstallation(org.openapis.openapi.models.operations.AppsDeleteInstallationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsDeleteInstallationPathParams.class, baseUrl, "/app/installations/{installation_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsDeleteInstallationRequest.class, baseUrl, "/app/installations/{installation_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -507,12 +507,12 @@ public class Apps {
      */
     public org.openapis.openapi.models.operations.AppsDeleteTokenResponse appsDeleteToken(org.openapis.openapi.models.operations.AppsDeleteTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsDeleteTokenPathParams.class, baseUrl, "/applications/{client_id}/token", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsDeleteTokenRequest.class, baseUrl, "/applications/{client_id}/token", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -597,7 +597,7 @@ public class Apps {
      */
     public org.openapis.openapi.models.operations.AppsGetBySlugResponse appsGetBySlug(org.openapis.openapi.models.operations.AppsGetBySlugRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsGetBySlugPathParams.class, baseUrl, "/apps/{app_slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsGetBySlugRequest.class, baseUrl, "/apps/{app_slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -655,13 +655,13 @@ public class Apps {
      */
     public org.openapis.openapi.models.operations.AppsGetInstallationResponse appsGetInstallation(org.openapis.openapi.models.operations.AppsGetInstallationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsGetInstallationPathParams.class, baseUrl, "/app/installations/{installation_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsGetInstallationRequest.class, baseUrl, "/app/installations/{installation_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -721,13 +721,13 @@ public class Apps {
      */
     public org.openapis.openapi.models.operations.AppsGetOrgInstallationResponse appsGetOrgInstallation(org.openapis.openapi.models.operations.AppsGetOrgInstallationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsGetOrgInstallationPathParams.class, baseUrl, "/orgs/{org}/installation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsGetOrgInstallationRequest.class, baseUrl, "/orgs/{org}/installation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -771,13 +771,13 @@ public class Apps {
      */
     public org.openapis.openapi.models.operations.AppsGetRepoInstallationResponse appsGetRepoInstallation(org.openapis.openapi.models.operations.AppsGetRepoInstallationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsGetRepoInstallationPathParams.class, baseUrl, "/repos/{owner}/{repo}/installation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsGetRepoInstallationRequest.class, baseUrl, "/repos/{owner}/{repo}/installation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -829,13 +829,13 @@ public class Apps {
      */
     public org.openapis.openapi.models.operations.AppsGetUserInstallationResponse appsGetUserInstallation(org.openapis.openapi.models.operations.AppsGetUserInstallationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsGetUserInstallationPathParams.class, baseUrl, "/users/{username}/installation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsGetUserInstallationRequest.class, baseUrl, "/users/{username}/installation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -883,19 +883,19 @@ public class Apps {
      */
     public org.openapis.openapi.models.operations.AppsListInstallationReposForAuthenticatedUserResponse appsListInstallationReposForAuthenticatedUser(org.openapis.openapi.models.operations.AppsListInstallationReposForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsListInstallationReposForAuthenticatedUserPathParams.class, baseUrl, "/user/installations/{installation_id}/repositories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsListInstallationReposForAuthenticatedUserRequest.class, baseUrl, "/user/installations/{installation_id}/repositories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppsListInstallationReposForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppsListInstallationReposForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -957,13 +957,13 @@ public class Apps {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppsListInstallationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppsListInstallationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1019,13 +1019,13 @@ public class Apps {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppsListInstallationsForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppsListInstallationsForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1095,13 +1095,13 @@ public class Apps {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppsListReposAccessibleToInstallationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppsListReposAccessibleToInstallationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1157,7 +1157,7 @@ public class Apps {
      */
     public org.openapis.openapi.models.operations.AppsRemoveRepoFromInstallationResponse appsRemoveRepoFromInstallation(org.openapis.openapi.models.operations.AppsRemoveRepoFromInstallationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsRemoveRepoFromInstallationPathParams.class, baseUrl, "/user/installations/{installation_id}/repositories/{repository_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsRemoveRepoFromInstallationRequest.class, baseUrl, "/user/installations/{installation_id}/repositories/{repository_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1201,7 +1201,7 @@ public class Apps {
      */
     public org.openapis.openapi.models.operations.AppsResetAuthorizationResponse appsResetAuthorization(org.openapis.openapi.models.operations.AppsResetAuthorizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsResetAuthorizationPathParams.class, baseUrl, "/applications/{client_id}/tokens/{access_token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsResetAuthorizationRequest.class, baseUrl, "/applications/{client_id}/tokens/{access_token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1241,12 +1241,12 @@ public class Apps {
      */
     public org.openapis.openapi.models.operations.AppsResetTokenResponse appsResetToken(org.openapis.openapi.models.operations.AppsResetTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsResetTokenPathParams.class, baseUrl, "/applications/{client_id}/token", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsResetTokenRequest.class, baseUrl, "/applications/{client_id}/token", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1296,7 +1296,7 @@ public class Apps {
      */
     public org.openapis.openapi.models.operations.AppsRevokeAuthorizationForApplicationResponse appsRevokeAuthorizationForApplication(org.openapis.openapi.models.operations.AppsRevokeAuthorizationForApplicationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsRevokeAuthorizationForApplicationPathParams.class, baseUrl, "/applications/{client_id}/tokens/{access_token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsRevokeAuthorizationForApplicationRequest.class, baseUrl, "/applications/{client_id}/tokens/{access_token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1334,7 +1334,7 @@ public class Apps {
      */
     public org.openapis.openapi.models.operations.AppsRevokeGrantForApplicationResponse appsRevokeGrantForApplication(org.openapis.openapi.models.operations.AppsRevokeGrantForApplicationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsRevokeGrantForApplicationPathParams.class, baseUrl, "/applications/{client_id}/grants/{access_token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsRevokeGrantForApplicationRequest.class, baseUrl, "/applications/{client_id}/grants/{access_token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");

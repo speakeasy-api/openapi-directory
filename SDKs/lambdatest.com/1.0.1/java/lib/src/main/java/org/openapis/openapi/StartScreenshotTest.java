@@ -34,10 +34,11 @@ public class StartScreenshotTest {
      * Start Screenshot Test
      * Start Screenshot Test
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StartScreenshotTestResponse startScreenshotTest(org.openapis.openapi.models.operations.StartScreenshotTestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StartScreenshotTestResponse startScreenshotTest(org.openapis.openapi.models.shared.ScreenshotPayload request, org.openapis.openapi.models.operations.StartScreenshotTestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/");
         
@@ -51,7 +52,7 @@ public class StartScreenshotTest {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

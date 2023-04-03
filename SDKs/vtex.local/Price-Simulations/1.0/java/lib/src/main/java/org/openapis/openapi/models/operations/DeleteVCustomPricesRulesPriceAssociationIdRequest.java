@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteVCustomPricesRulesPriceAssociationIdRequest {
-    
-    public DeleteVCustomPricesRulesPriceAssociationIdPathParams pathParams;
-    public DeleteVCustomPricesRulesPriceAssociationIdRequest withPathParams(DeleteVCustomPricesRulesPriceAssociationIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public DeleteVCustomPricesRulesPriceAssociationIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Describes the type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public DeleteVCustomPricesRulesPriceAssociationIdRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public DeleteVCustomPricesRulesPriceAssociationIdHeaders headers;
-    public DeleteVCustomPricesRulesPriceAssociationIdRequest withHeaders(DeleteVCustomPricesRulesPriceAssociationIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Price Association unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=priceAssociationId")
+    public Long priceAssociationId;
+    public DeleteVCustomPricesRulesPriceAssociationIdRequest withPriceAssociationId(Long priceAssociationId) {
+        this.priceAssociationId = priceAssociationId;
         return this;
     }
     

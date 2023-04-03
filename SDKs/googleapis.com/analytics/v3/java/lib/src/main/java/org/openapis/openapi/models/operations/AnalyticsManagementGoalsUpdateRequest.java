@@ -7,31 +7,120 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsManagementGoalsUpdateRequest {
-    
-    public AnalyticsManagementGoalsUpdatePathParams pathParams;
-    public AnalyticsManagementGoalsUpdateRequest withPathParams(AnalyticsManagementGoalsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AnalyticsManagementGoalsUpdateQueryParams queryParams;
-    public AnalyticsManagementGoalsUpdateRequest withQueryParams(AnalyticsManagementGoalsUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Goal request;
-    public AnalyticsManagementGoalsUpdateRequest withRequest(org.openapis.openapi.models.shared.Goal request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Goal goal;
+    public AnalyticsManagementGoalsUpdateRequest withGoal(org.openapis.openapi.models.shared.Goal goal) {
+        this.goal = goal;
         return this;
     }
     
+    /**
+     * Account ID to update the goal.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AnalyticsManagementGoalsUpdateRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public AnalyticsManagementGoalsUpdateSecurity security;
-    public AnalyticsManagementGoalsUpdateRequest withSecurity(AnalyticsManagementGoalsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AnalyticsManagementGoalsUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AnalyticsManagementGoalsUpdateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Index of the goal to be updated.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=goalId")
+    public String goalId;
+    public AnalyticsManagementGoalsUpdateRequest withGoalId(String goalId) {
+        this.goalId = goalId;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AnalyticsManagementGoalsUpdateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AnalyticsManagementGoalsUpdateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AnalyticsManagementGoalsUpdateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * View (Profile) ID to update the goal.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
+    public String profileId;
+    public AnalyticsManagementGoalsUpdateRequest withProfileId(String profileId) {
+        this.profileId = profileId;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AnalyticsManagementGoalsUpdateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AnalyticsManagementGoalsUpdateRequest withUserIp(String userIp) {
+        this.userIp = userIp;
+        return this;
+    }
+    
+    /**
+     * Web property ID to update the goal.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webPropertyId")
+    public String webPropertyId;
+    public AnalyticsManagementGoalsUpdateRequest withWebPropertyId(String webPropertyId) {
+        this.webPropertyId = webPropertyId;
         return this;
     }
     

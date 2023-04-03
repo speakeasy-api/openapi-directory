@@ -7,24 +7,44 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PUTBasicSummaryJournalEntryRequest {
-    
-    public PUTBasicSummaryJournalEntryPathParams pathParams;
-    public PUTBasicSummaryJournalEntryRequest withPathParams(PUTBasicSummaryJournalEntryPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PUTBasicSummaryJournalEntryHeaders headers;
-    public PUTBasicSummaryJournalEntryRequest withHeaders(PUTBasicSummaryJournalEntryHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PUTBasicSummaryJournalEntryType request;
-    public PUTBasicSummaryJournalEntryRequest withRequest(org.openapis.openapi.models.shared.PUTBasicSummaryJournalEntryType request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PUTBasicSummaryJournalEntryType putBasicSummaryJournalEntryType;
+    public PUTBasicSummaryJournalEntryRequest withPUTBasicSummaryJournalEntryType(org.openapis.openapi.models.shared.PUTBasicSummaryJournalEntryType putBasicSummaryJournalEntryType) {
+        this.putBasicSummaryJournalEntryType = putBasicSummaryJournalEntryType;
+        return this;
+    }
+    
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public PUTBasicSummaryJournalEntryRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
+        return this;
+    }
+    
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public PUTBasicSummaryJournalEntryRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
+        return this;
+    }
+    
+    /**
+     * Journal entry number in the format JE-00000001.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=je-number")
+    public String jeNumber;
+    public PUTBasicSummaryJournalEntryRequest withJeNumber(String jeNumber) {
+        this.jeNumber = jeNumber;
         return this;
     }
     

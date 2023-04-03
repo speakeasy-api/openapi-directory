@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUnderstandFieldRequest {
-    
-    public CreateUnderstandFieldPathParams pathParams;
-    public CreateUnderstandFieldRequest withPathParams(CreateUnderstandFieldPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the parent Assistant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public CreateUnderstandFieldRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateUnderstandFieldCreateUnderstandFieldRequest request;
-    public CreateUnderstandFieldRequest withRequest(CreateUnderstandFieldCreateUnderstandFieldRequest request) {
-        this.request = request;
+    public CreateUnderstandFieldCreateUnderstandFieldRequest requestBody;
+    public CreateUnderstandFieldRequest withRequestBody(CreateUnderstandFieldCreateUnderstandFieldRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateUnderstandFieldSecurity security;
-    public CreateUnderstandFieldRequest withSecurity(CreateUnderstandFieldSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateUnderstandFieldRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique ID of the Task associated with this Field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TaskSid")
+    public String taskSid;
+    public CreateUnderstandFieldRequest withTaskSid(String taskSid) {
+        this.taskSid = taskSid;
         return this;
     }
     

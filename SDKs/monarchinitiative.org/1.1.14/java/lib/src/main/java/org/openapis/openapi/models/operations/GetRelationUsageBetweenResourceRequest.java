@@ -4,20 +4,42 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRelationUsageBetweenResourceRequest {
-    
-    public GetRelationUsageBetweenResourcePathParams pathParams;
-    public GetRelationUsageBetweenResourceRequest withPathParams(GetRelationUsageBetweenResourcePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default)
+     *                     or a specific publication or other supporting ibject, e.g. ZFIN:ZDB-PUB-060503-2.
+     *                     
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
+    public String evidence;
+    public GetRelationUsageBetweenResourceRequest withEvidence(String evidence) {
+        this.evidence = evidence;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object_category")
+    public String objectCategory;
+    public GetRelationUsageBetweenResourceRequest withObjectCategory(String objectCategory) {
+        this.objectCategory = objectCategory;
+        return this;
+    }
     
-    public GetRelationUsageBetweenResourceQueryParams queryParams;
-    public GetRelationUsageBetweenResourceRequest withQueryParams(GetRelationUsageBetweenResourceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subject_category")
+    public String subjectCategory;
+    public GetRelationUsageBetweenResourceRequest withSubjectCategory(String subjectCategory) {
+        this.subjectCategory = subjectCategory;
+        return this;
+    }
+    
+    /**
+     * SUBJECT TAXON id, e.g. NCBITaxon:9606. Includes inferred by default
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject_taxon")
+    public String subjectTaxon;
+    public GetRelationUsageBetweenResourceRequest withSubjectTaxon(String subjectTaxon) {
+        this.subjectTaxon = subjectTaxon;
         return this;
     }
     

@@ -34,27 +34,28 @@ public class Networks {
     /**
      * Adds a peering to the specified network.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNetworksAddPeeringResponse computeNetworksAddPeering(org.openapis.openapi.models.operations.ComputeNetworksAddPeeringRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNetworksAddPeeringResponse computeNetworksAddPeering(org.openapis.openapi.models.operations.ComputeNetworksAddPeeringRequest request, org.openapis.openapi.models.operations.ComputeNetworksAddPeeringSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksAddPeeringPathParams.class, baseUrl, "/projects/{project}/global/networks/{network}/addPeering", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksAddPeeringRequest.class, baseUrl, "/projects/{project}/global/networks/{network}/addPeering", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "networksAddPeeringRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksAddPeeringQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksAddPeeringRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class Networks {
     /**
      * Deletes the specified network.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNetworksDeleteResponse computeNetworksDelete(org.openapis.openapi.models.operations.ComputeNetworksDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNetworksDeleteResponse computeNetworksDelete(org.openapis.openapi.models.operations.ComputeNetworksDeleteRequest request, org.openapis.openapi.models.operations.ComputeNetworksDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksDeletePathParams.class, baseUrl, "/projects/{project}/global/networks/{network}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksDeleteRequest.class, baseUrl, "/projects/{project}/global/networks/{network}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class Networks {
     /**
      * Returns the specified network.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNetworksGetResponse computeNetworksGet(org.openapis.openapi.models.operations.ComputeNetworksGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNetworksGetResponse computeNetworksGet(org.openapis.openapi.models.operations.ComputeNetworksGetRequest request, org.openapis.openapi.models.operations.ComputeNetworksGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksGetPathParams.class, baseUrl, "/projects/{project}/global/networks/{network}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksGetRequest.class, baseUrl, "/projects/{project}/global/networks/{network}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class Networks {
     /**
      * Returns the effective firewalls on a given network.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNetworksGetEffectiveFirewallsResponse computeNetworksGetEffectiveFirewalls(org.openapis.openapi.models.operations.ComputeNetworksGetEffectiveFirewallsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNetworksGetEffectiveFirewallsResponse computeNetworksGetEffectiveFirewalls(org.openapis.openapi.models.operations.ComputeNetworksGetEffectiveFirewallsRequest request, org.openapis.openapi.models.operations.ComputeNetworksGetEffectiveFirewallsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksGetEffectiveFirewallsPathParams.class, baseUrl, "/projects/{project}/global/networks/{network}/getEffectiveFirewalls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksGetEffectiveFirewallsRequest.class, baseUrl, "/projects/{project}/global/networks/{network}/getEffectiveFirewalls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksGetEffectiveFirewallsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksGetEffectiveFirewallsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,27 +220,28 @@ public class Networks {
     /**
      * Creates a network in the specified project using the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNetworksInsertResponse computeNetworksInsert(org.openapis.openapi.models.operations.ComputeNetworksInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNetworksInsertResponse computeNetworksInsert(org.openapis.openapi.models.operations.ComputeNetworksInsertRequest request, org.openapis.openapi.models.operations.ComputeNetworksInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksInsertPathParams.class, baseUrl, "/projects/{project}/global/networks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksInsertRequest.class, baseUrl, "/projects/{project}/global/networks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "network", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,25 +268,26 @@ public class Networks {
     /**
      * Retrieves the list of networks available to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNetworksListResponse computeNetworksList(org.openapis.openapi.models.operations.ComputeNetworksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNetworksListResponse computeNetworksList(org.openapis.openapi.models.operations.ComputeNetworksListRequest request, org.openapis.openapi.models.operations.ComputeNetworksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksListPathParams.class, baseUrl, "/projects/{project}/global/networks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksListRequest.class, baseUrl, "/projects/{project}/global/networks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -308,25 +314,26 @@ public class Networks {
     /**
      * Lists the peering routes exchanged over peering connection.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNetworksListPeeringRoutesResponse computeNetworksListPeeringRoutes(org.openapis.openapi.models.operations.ComputeNetworksListPeeringRoutesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNetworksListPeeringRoutesResponse computeNetworksListPeeringRoutes(org.openapis.openapi.models.operations.ComputeNetworksListPeeringRoutesRequest request, org.openapis.openapi.models.operations.ComputeNetworksListPeeringRoutesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksListPeeringRoutesPathParams.class, baseUrl, "/projects/{project}/global/networks/{network}/listPeeringRoutes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksListPeeringRoutesRequest.class, baseUrl, "/projects/{project}/global/networks/{network}/listPeeringRoutes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksListPeeringRoutesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksListPeeringRoutesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -353,27 +360,28 @@ public class Networks {
     /**
      * Patches the specified network with the data included in the request. Only the following fields can be modified: routingConfig.routingMode.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNetworksPatchResponse computeNetworksPatch(org.openapis.openapi.models.operations.ComputeNetworksPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNetworksPatchResponse computeNetworksPatch(org.openapis.openapi.models.operations.ComputeNetworksPatchRequest request, org.openapis.openapi.models.operations.ComputeNetworksPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksPatchPathParams.class, baseUrl, "/projects/{project}/global/networks/{network}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksPatchRequest.class, baseUrl, "/projects/{project}/global/networks/{network}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "network1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -400,27 +408,28 @@ public class Networks {
     /**
      * Removes a peering from the specified network.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNetworksRemovePeeringResponse computeNetworksRemovePeering(org.openapis.openapi.models.operations.ComputeNetworksRemovePeeringRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNetworksRemovePeeringResponse computeNetworksRemovePeering(org.openapis.openapi.models.operations.ComputeNetworksRemovePeeringRequest request, org.openapis.openapi.models.operations.ComputeNetworksRemovePeeringSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksRemovePeeringPathParams.class, baseUrl, "/projects/{project}/global/networks/{network}/removePeering", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksRemovePeeringRequest.class, baseUrl, "/projects/{project}/global/networks/{network}/removePeering", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "networksRemovePeeringRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksRemovePeeringQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksRemovePeeringRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -447,25 +456,26 @@ public class Networks {
     /**
      * Switches the network mode from auto subnet mode to custom subnet mode.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNetworksSwitchToCustomModeResponse computeNetworksSwitchToCustomMode(org.openapis.openapi.models.operations.ComputeNetworksSwitchToCustomModeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNetworksSwitchToCustomModeResponse computeNetworksSwitchToCustomMode(org.openapis.openapi.models.operations.ComputeNetworksSwitchToCustomModeRequest request, org.openapis.openapi.models.operations.ComputeNetworksSwitchToCustomModeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksSwitchToCustomModePathParams.class, baseUrl, "/projects/{project}/global/networks/{network}/switchToCustomMode", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksSwitchToCustomModeRequest.class, baseUrl, "/projects/{project}/global/networks/{network}/switchToCustomMode", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksSwitchToCustomModeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksSwitchToCustomModeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -492,27 +502,28 @@ public class Networks {
     /**
      * Updates the specified network peering with the data included in the request. You can only modify the NetworkPeering.export_custom_routes field and the NetworkPeering.import_custom_routes field.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNetworksUpdatePeeringResponse computeNetworksUpdatePeering(org.openapis.openapi.models.operations.ComputeNetworksUpdatePeeringRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNetworksUpdatePeeringResponse computeNetworksUpdatePeering(org.openapis.openapi.models.operations.ComputeNetworksUpdatePeeringRequest request, org.openapis.openapi.models.operations.ComputeNetworksUpdatePeeringSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksUpdatePeeringPathParams.class, baseUrl, "/projects/{project}/global/networks/{network}/updatePeering", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworksUpdatePeeringRequest.class, baseUrl, "/projects/{project}/global/networks/{network}/updatePeering", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "networksUpdatePeeringRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksUpdatePeeringQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworksUpdatePeeringRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteContainersNameOrIdRequest {
-    
-    public DeleteContainersNameOrIdPathParams pathParams;
-    public DeleteContainersNameOrIdRequest withPathParams(DeleteContainersNameOrIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space &lt;space_name&gt; --guid`, where `&lt;space_name&gt;` is the name of your space, to retrieve your space ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public DeleteContainersNameOrIdRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
         return this;
     }
     
-    
-    public DeleteContainersNameOrIdQueryParams queryParams;
-    public DeleteContainersNameOrIdRequest withQueryParams(DeleteContainersNameOrIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public DeleteContainersNameOrIdRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
         return this;
     }
     
+    /**
+     * Use the `force` query parameter if you want to delete the container independent of their current state. The container does not need to be stopped first. To force the deletion of a container, enter `force=true`, `force=True`, or `force=1`. If you want to delete containers that are in a non-running state only, do either not set this query parameter, or enter `force=false`, `force=False`, or `force=0`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=force")
+    public Boolean force;
+    public DeleteContainersNameOrIdRequest withForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
     
-    public DeleteContainersNameOrIdHeaders headers;
-    public DeleteContainersNameOrIdRequest withHeaders(DeleteContainersNameOrIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique identifier or name of the container that you want to delete. Run `cf ic ps -a` or call the `GET /containers/json?all=true` endpoint to review all containers in your space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name_or_id")
+    public String nameOrId;
+    public DeleteContainersNameOrIdRequest withNameOrId(String nameOrId) {
+        this.nameOrId = nameOrId;
         return this;
     }
     

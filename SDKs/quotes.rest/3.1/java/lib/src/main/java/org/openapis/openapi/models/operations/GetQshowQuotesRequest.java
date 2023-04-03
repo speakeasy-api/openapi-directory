@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQshowQuotesRequest {
-    
-    public GetQshowQuotesQueryParams queryParams;
-    public GetQshowQuotesRequest withQueryParams(GetQshowQuotesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetQshowQuotesSecurity security;
-    public GetQshowQuotesRequest withSecurity(GetQshowQuotesSecurity security) {
-        this.security = security;
+    /**
+     * Qshow ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetQshowQuotesRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

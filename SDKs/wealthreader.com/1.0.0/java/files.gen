@@ -32,12 +32,10 @@ lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetEntitiesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetErrorCodesLangEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetErrorCodesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetErrorCodesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetErrorCodesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostEntitiesRequestBodyDocumentTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostEntitiesRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostEntitiesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostEntities200ApplicationJSON4Payload.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostEntities200ApplicationJSON4.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostEntities200ApplicationJSON3Payload.java

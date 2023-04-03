@@ -4,34 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest {
-    
-    public OperationsFlightstatusRouteDateByOriginAndDestinationGetPathParams pathParams;
-    public OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest withPathParams(OperationsFlightstatusRouteDateByOriginAndDestinationGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public OperationsFlightstatusRouteDateByOriginAndDestinationGetQueryParams queryParams;
-    public OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest withQueryParams(OperationsFlightstatusRouteDateByOriginAndDestinationGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Departure date (YYYY-MM-DD) in local time of departure airport
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
+    public String date;
+    public OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     
-    
-    public OperationsFlightstatusRouteDateByOriginAndDestinationGetHeaders headers;
-    public OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest withHeaders(OperationsFlightstatusRouteDateByOriginAndDestinationGetHeaders headers) {
-        this.headers = headers;
+    /**
+     * 3-letter IATA airport code (e.g. 'JFK')
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destination")
+    public String destination;
+    public OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest withDestination(String destination) {
+        this.destination = destination;
         return this;
     }
     
+    /**
+     * Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public OperationsFlightstatusRouteDateByOriginAndDestinationGetSecurity security;
-    public OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest withSecurity(OperationsFlightstatusRouteDateByOriginAndDestinationGetSecurity security) {
-        this.security = security;
+    /**
+     * Number of records skipped. Defaults to 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest withOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * 3-letter IATA airport (e.g. 'FRA')
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=origin")
+    public String origin;
+    public OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest withOrigin(String origin) {
+        this.origin = origin;
         return this;
     }
     

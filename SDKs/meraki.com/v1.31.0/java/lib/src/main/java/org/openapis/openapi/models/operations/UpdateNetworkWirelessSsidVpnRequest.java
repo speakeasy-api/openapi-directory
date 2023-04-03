@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkWirelessSsidVpnRequest {
-    
-    public UpdateNetworkWirelessSsidVpnPathParams pathParams;
-    public UpdateNetworkWirelessSsidVpnRequest withPathParams(UpdateNetworkWirelessSsidVpnPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkWirelessSsidVpnRequestBody requestBody;
+    public UpdateNetworkWirelessSsidVpnRequest withRequestBody(UpdateNetworkWirelessSsidVpnRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkWirelessSsidVpnRequestBody request;
-    public UpdateNetworkWirelessSsidVpnRequest withRequest(UpdateNetworkWirelessSsidVpnRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkWirelessSsidVpnRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
+    public String number;
+    public UpdateNetworkWirelessSsidVpnRequest withNumber(String number) {
+        this.number = number;
         return this;
     }
     

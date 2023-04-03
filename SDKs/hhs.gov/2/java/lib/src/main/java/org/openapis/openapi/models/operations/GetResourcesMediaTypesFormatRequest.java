@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesMediaTypesFormatRequest {
-    
-    public GetResourcesMediaTypesFormatPathParams pathParams;
-    public GetResourcesMediaTypesFormatRequest withPathParams(GetResourcesMediaTypesFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public String format;
+    public GetResourcesMediaTypesFormatRequest withFormat(String format) {
+        this.format = format;
         return this;
     }
     

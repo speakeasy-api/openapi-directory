@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveAnEventSubscriptionRequest {
-    
-    public RetrieveAnEventSubscriptionPathParams pathParams;
-    public RetrieveAnEventSubscriptionRequest withPathParams(RetrieveAnEventSubscriptionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=event_subscription_id")
+    public String eventSubscriptionId;
+    public RetrieveAnEventSubscriptionRequest withEventSubscriptionId(String eventSubscriptionId) {
+        this.eventSubscriptionId = eventSubscriptionId;
         return this;
     }
     

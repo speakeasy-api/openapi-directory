@@ -37,21 +37,22 @@ public class Templates {
     /**
      * Create template
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TemplatesCreateResponse templatesCreate(org.openapis.openapi.models.operations.TemplatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TemplatesCreateResponse templatesCreate(org.openapis.openapi.models.operations.TemplatesCreateRequest request, org.openapis.openapi.models.operations.TemplatesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TemplatesCreatePathParams.class, baseUrl, "/v1/accounts/{accountId}/templates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TemplatesCreateRequest.class, baseUrl, "/v1/accounts/{accountId}/templates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "templateRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,19 +79,20 @@ public class Templates {
     /**
      * Fetch template by ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TemplatesFetchResponse templatesFetch(org.openapis.openapi.models.operations.TemplatesFetchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TemplatesFetchResponse templatesFetch(org.openapis.openapi.models.operations.TemplatesFetchRequest request, org.openapis.openapi.models.operations.TemplatesFetchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TemplatesFetchPathParams.class, baseUrl, "/v1/accounts/{accountId}/templates/{templateId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TemplatesFetchRequest.class, baseUrl, "/v1/accounts/{accountId}/templates/{templateId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -117,25 +119,26 @@ public class Templates {
     /**
      * Fetch templates
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TemplatesFetchAllResponse templatesFetchAll(org.openapis.openapi.models.operations.TemplatesFetchAllRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TemplatesFetchAllResponse templatesFetchAll(org.openapis.openapi.models.operations.TemplatesFetchAllRequest request, org.openapis.openapi.models.operations.TemplatesFetchAllSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TemplatesFetchAllPathParams.class, baseUrl, "/v1/accounts/{accountId}/templates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TemplatesFetchAllRequest.class, baseUrl, "/v1/accounts/{accountId}/templates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TemplatesFetchAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TemplatesFetchAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -170,19 +173,20 @@ public class Templates {
     /**
      * Deletes a template
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TemplatesRemoveResponse templatesRemove(org.openapis.openapi.models.operations.TemplatesRemoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TemplatesRemoveResponse templatesRemove(org.openapis.openapi.models.operations.TemplatesRemoveRequest request, org.openapis.openapi.models.operations.TemplatesRemoveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TemplatesRemovePathParams.class, baseUrl, "/v1/accounts/{accountId}/templates/{templateId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TemplatesRemoveRequest.class, baseUrl, "/v1/accounts/{accountId}/templates/{templateId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -209,19 +213,20 @@ public class Templates {
     /**
      * Updates a template
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TemplatesUpdateResponse templatesUpdate(org.openapis.openapi.models.operations.TemplatesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TemplatesUpdateResponse templatesUpdate(org.openapis.openapi.models.operations.TemplatesUpdateRequest request, org.openapis.openapi.models.operations.TemplatesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TemplatesUpdatePathParams.class, baseUrl, "/v1/accounts/{accountId}/templates/{templateId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TemplatesUpdateRequest.class, baseUrl, "/v1/accounts/{accountId}/templates/{templateId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

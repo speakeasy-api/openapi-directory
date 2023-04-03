@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompanyLogoRequest {
-    
-    public CompanyLogoQueryParams queryParams;
-    public CompanyLogoRequest withQueryParams(CompanyLogoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * URL of the company
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
+    public String domain;
+    public CompanyLogoRequest withDomain(String domain) {
+        this.domain = domain;
         return this;
     }
     

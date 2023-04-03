@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteVideoFromWatchLaterAlt1Request {
-    
-    public DeleteVideoFromWatchLaterAlt1PathParams pathParams;
-    public DeleteVideoFromWatchLaterAlt1Request withPathParams(DeleteVideoFromWatchLaterAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteVideoFromWatchLaterAlt1Security security;
-    public DeleteVideoFromWatchLaterAlt1Request withSecurity(DeleteVideoFromWatchLaterAlt1Security security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public DeleteVideoFromWatchLaterAlt1Request withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTopSearchesRequest {
-    
-    public GetTopSearchesQueryParams queryParams;
-    public GetTopSearchesRequest withQueryParams(GetTopSearchesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Indicates the target language as a BCP 47 language code. The Intelligent Search must have indexed the account in the target language.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public GetTopSearchesRequest withLocale(String locale) {
+        this.locale = locale;
         return this;
     }
     

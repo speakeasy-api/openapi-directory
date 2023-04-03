@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDiscoveryV2VenuesIdRequest {
-    
-    public GetDiscoveryV2VenuesIdPathParams pathParams;
-    public GetDiscoveryV2VenuesIdRequest withPathParams(GetDiscoveryV2VenuesIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the venue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetDiscoveryV2VenuesIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * True if you want to display licensed content
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLicensedContent")
+    public GetDiscoveryV2VenuesIdIncludeLicensedContentEnum includeLicensedContent;
+    public GetDiscoveryV2VenuesIdRequest withIncludeLicensedContent(GetDiscoveryV2VenuesIdIncludeLicensedContentEnum includeLicensedContent) {
+        this.includeLicensedContent = includeLicensedContent;
+        return this;
+    }
     
-    public GetDiscoveryV2VenuesIdQueryParams queryParams;
-    public GetDiscoveryV2VenuesIdRequest withQueryParams(GetDiscoveryV2VenuesIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The locale in ISO code format. Multiple comma-separated values can be provided. When omitting the country part of the code (e.g. only 'en' or 'fr') then the first matching locale is used. When using a '*' it matches all locales. '*' can only be used at the end (e.g. 'en-us,en,*') 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public GetDiscoveryV2VenuesIdRequest withLocale(String locale) {
+        this.locale = locale;
         return this;
     }
     

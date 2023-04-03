@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteLicenseTemplateRequest {
-    
-    public DeleteLicenseTemplatePathParams pathParams;
-    public DeleteLicenseTemplateRequest withPathParams(DeleteLicenseTemplatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Force object deletion and all descendants.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forceCascade")
+    public Boolean forceCascade;
+    public DeleteLicenseTemplateRequest withForceCascade(Boolean forceCascade) {
+        this.forceCascade = forceCascade;
         return this;
     }
     
-    
-    public DeleteLicenseTemplateQueryParams queryParams;
-    public DeleteLicenseTemplateRequest withQueryParams(DeleteLicenseTemplateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteLicenseTemplateSecurity security;
-    public DeleteLicenseTemplateRequest withSecurity(DeleteLicenseTemplateSecurity security) {
-        this.security = security;
+    /**
+     * Unique number (across all Products of a Vendor) that identifies the License Template.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=licenseTemplateNumber")
+    public String licenseTemplateNumber;
+    public DeleteLicenseTemplateRequest withLicenseTemplateNumber(String licenseTemplateNumber) {
+        this.licenseTemplateNumber = licenseTemplateNumber;
         return this;
     }
     

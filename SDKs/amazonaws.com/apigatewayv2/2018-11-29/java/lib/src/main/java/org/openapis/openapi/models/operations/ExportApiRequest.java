@@ -4,27 +4,115 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportApiRequest {
-    
-    public ExportApiPathParams pathParams;
-    public ExportApiRequest withPathParams(ExportApiPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ExportApiRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public ExportApiQueryParams queryParams;
-    public ExportApiRequest withQueryParams(ExportApiQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ExportApiRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ExportApiRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public ExportApiHeaders headers;
-    public ExportApiRequest withHeaders(ExportApiHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ExportApiRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ExportApiRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ExportApiRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ExportApiRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The API identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
+    public String apiId;
+    public ExportApiRequest withApiId(String apiId) {
+        this.apiId = apiId;
+        return this;
+    }
+    
+    /**
+     * The version of the API Gateway export algorithm. API Gateway uses the latest version by default. Currently, the only supported version is 1.0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exportVersion")
+    public String exportVersion;
+    public ExportApiRequest withExportVersion(String exportVersion) {
+        this.exportVersion = exportVersion;
+        return this;
+    }
+    
+    /**
+     * Specifies whether to include &lt;a href="https://docs.aws.amazon.com//apigateway/latest/developerguide/api-gateway-swagger-extensions.html"&gt;API Gateway extensions&lt;/a&gt; in the exported API definition. API Gateway extensions are included by default.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeExtensions")
+    public Boolean includeExtensions;
+    public ExportApiRequest withIncludeExtensions(Boolean includeExtensions) {
+        this.includeExtensions = includeExtensions;
+        return this;
+    }
+    
+    /**
+     * The output type of the exported definition file. Valid values are JSON and YAML.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputType")
+    public String outputType;
+    public ExportApiRequest withOutputType(String outputType) {
+        this.outputType = outputType;
+        return this;
+    }
+    
+    /**
+     * The version of the API specification to use. OAS30, for OpenAPI 3.0, is the only supported value.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=specification")
+    public String specification;
+    public ExportApiRequest withSpecification(String specification) {
+        this.specification = specification;
+        return this;
+    }
+    
+    /**
+     * The name of the API stage to export. If you don't specify this property, a representation of the latest API configuration is exported.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stageName")
+    public String stageName;
+    public ExportApiRequest withStageName(String stageName) {
+        this.stageName = stageName;
         return this;
     }
     

@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MoveOrganizationLicensesRequest {
-    
-    public MoveOrganizationLicensesPathParams pathParams;
-    public MoveOrganizationLicensesRequest withPathParams(MoveOrganizationLicensesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public MoveOrganizationLicensesRequestBody requestBody;
+    public MoveOrganizationLicensesRequest withRequestBody(MoveOrganizationLicensesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public MoveOrganizationLicensesRequestBody request;
-    public MoveOrganizationLicensesRequest withRequest(MoveOrganizationLicensesRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public MoveOrganizationLicensesRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

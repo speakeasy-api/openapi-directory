@@ -7,17 +7,27 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OptimiseAllRequest {
-    
-    public OptimiseAllPathParams pathParams;
-    public OptimiseAllRequest withPathParams(OptimiseAllPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=actionName")
+    public org.openapis.openapi.models.shared.OptimisationActionNameGeneralParametersEnum actionName;
+    public OptimiseAllRequest withActionName(org.openapis.openapi.models.shared.OptimisationActionNameGeneralParametersEnum actionName) {
+        this.actionName = actionName;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.OptimiseAllRequest request;
-    public OptimiseAllRequest withRequest(org.openapis.openapi.models.shared.OptimiseAllRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.OptimiseAllRequest optimiseAllRequest;
+    public OptimiseAllRequest withOptimiseAllRequest(org.openapis.openapi.models.shared.OptimiseAllRequest optimiseAllRequest) {
+        this.optimiseAllRequest = optimiseAllRequest;
+        return this;
+    }
+    
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public OptimiseAllRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

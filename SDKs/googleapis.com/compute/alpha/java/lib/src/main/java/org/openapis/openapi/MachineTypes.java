@@ -33,25 +33,26 @@ public class MachineTypes {
     /**
      * Retrieves an aggregated list of machine types.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeMachineTypesAggregatedListResponse computeMachineTypesAggregatedList(org.openapis.openapi.models.operations.ComputeMachineTypesAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeMachineTypesAggregatedListResponse computeMachineTypesAggregatedList(org.openapis.openapi.models.operations.ComputeMachineTypesAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeMachineTypesAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeMachineTypesAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/machineTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeMachineTypesAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/machineTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeMachineTypesAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeMachineTypesAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class MachineTypes {
     /**
      * Returns the specified machine type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeMachineTypesGetResponse computeMachineTypesGet(org.openapis.openapi.models.operations.ComputeMachineTypesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeMachineTypesGetResponse computeMachineTypesGet(org.openapis.openapi.models.operations.ComputeMachineTypesGetRequest request, org.openapis.openapi.models.operations.ComputeMachineTypesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeMachineTypesGetPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/machineTypes/{machineType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeMachineTypesGetRequest.class, baseUrl, "/projects/{project}/zones/{zone}/machineTypes/{machineType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeMachineTypesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeMachineTypesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,25 +125,26 @@ public class MachineTypes {
     /**
      * Retrieves a list of machine types available to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeMachineTypesListResponse computeMachineTypesList(org.openapis.openapi.models.operations.ComputeMachineTypesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeMachineTypesListResponse computeMachineTypesList(org.openapis.openapi.models.operations.ComputeMachineTypesListRequest request, org.openapis.openapi.models.operations.ComputeMachineTypesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeMachineTypesListPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/machineTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeMachineTypesListRequest.class, baseUrl, "/projects/{project}/zones/{zone}/machineTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeMachineTypesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeMachineTypesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

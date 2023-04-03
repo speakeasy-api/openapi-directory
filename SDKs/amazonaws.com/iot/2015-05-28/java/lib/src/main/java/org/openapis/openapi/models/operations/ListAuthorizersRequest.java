@@ -4,20 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAuthorizersRequest {
-    
-    public ListAuthorizersQueryParams queryParams;
-    public ListAuthorizersRequest withQueryParams(ListAuthorizersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListAuthorizersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListAuthorizersRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public ListAuthorizersHeaders headers;
-    public ListAuthorizersRequest withHeaders(ListAuthorizersHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListAuthorizersRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListAuthorizersRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListAuthorizersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListAuthorizersRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListAuthorizersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * Return the list of authorizers in ascending alphabetical order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isAscendingOrder")
+    public Boolean isAscendingOrder;
+    public ListAuthorizersRequest withIsAscendingOrder(Boolean isAscendingOrder) {
+        this.isAscendingOrder = isAscendingOrder;
+        return this;
+    }
+    
+    /**
+     * A marker used to get the next set of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=marker")
+    public String marker;
+    public ListAuthorizersRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to return at one time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public ListAuthorizersRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The status of the list authorizers request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public ListAuthorizersStatusEnum status;
+    public ListAuthorizersRequest withStatus(ListAuthorizersStatusEnum status) {
+        this.status = status;
         return this;
     }
     

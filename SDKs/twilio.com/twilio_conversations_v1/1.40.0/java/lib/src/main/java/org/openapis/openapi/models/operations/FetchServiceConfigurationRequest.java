@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchServiceConfigurationRequest {
-    
-    public FetchServiceConfigurationPathParams pathParams;
-    public FetchServiceConfigurationRequest withPathParams(FetchServiceConfigurationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchServiceConfigurationSecurity security;
-    public FetchServiceConfigurationRequest withSecurity(FetchServiceConfigurationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchServiceConfigurationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Service configuration resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public FetchServiceConfigurationRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     

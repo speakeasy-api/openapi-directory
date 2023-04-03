@@ -34,10 +34,11 @@ public class OrderTask {
     /**
      * This method creates an order download task with filter criteria for the order report. When using this method, specify the &lt;b&gt; feedType&lt;/b&gt;, &lt;b&gt; schemaVersion&lt;/b&gt;, and &lt;b&gt; filterCriteria&lt;/b&gt; for the report. The method returns the &lt;b&gt; location&lt;/b&gt; response header containing the getOrderTask call URI to retrieve the order task you just created. The URL includes the eBay-assigned task ID, which you can use to reference the order task. &lt;br /&gt;&lt;br /&gt;To retrieve the status of the task, use the &lt;b&gt; getOrderTask&lt;/b&gt; method to retrieve a single task ID or the &lt;b&gt;getOrderTasks&lt;/b&gt; method to retrieve multiple order task IDs.&lt;p&gt; &lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; The scope depends on the feed type. An error message results when an unsupported scope or feed type is specified.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The following list contains this method's authorization scope and its corresponding feed type:&lt;ul&gt;&lt;li&gt;https://api.ebay.com/oauth/api_scope/sell.fulfillment: LMS_ORDER_REPORT&lt;/li&gt;&lt;/ul&gt; &lt;/p&gt;&lt;p&gt;For details about how this method is used, see &lt;a href="/api-docs/sell/static/feed/general-feed-tasks.html"&gt;General feed types&lt;/a&gt; in the Selling Integration Guide. &lt;p&gt; &lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; At this time, the &lt;strong&gt;createOrderTask&lt;/strong&gt; method only supports order creation date filters and not modified order date filters. Do not include the &lt;strong&gt;modifiedDateRange&lt;/strong&gt; filter in your request payload.&lt;/span&gt;&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateOrderTaskResponse createOrderTask(org.openapis.openapi.models.operations.CreateOrderTaskRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateOrderTaskResponse createOrderTask(org.openapis.openapi.models.shared.CreateOrderTaskRequest request, org.openapis.openapi.models.operations.CreateOrderTaskSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/order_task");
         
@@ -51,7 +52,7 @@ public class OrderTask {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -72,19 +73,20 @@ public class OrderTask {
     /**
      * This method retrieves the task details and status of the specified task. The input is &lt;strong&gt;task_id&lt;/strong&gt;. &lt;p&gt;For details about how this method is used, see &lt;a href="/api-docs/sell/static/orders/generating-and-retrieving-order-reports.html"&gt;Working with Order Feeds&lt;/a&gt; in the Selling Integration Guide.  &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetOrderTaskResponse getOrderTask(org.openapis.openapi.models.operations.GetOrderTaskRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetOrderTaskResponse getOrderTask(org.openapis.openapi.models.operations.GetOrderTaskRequest request, org.openapis.openapi.models.operations.GetOrderTaskSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrderTaskPathParams.class, baseUrl, "/order_task/{task_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrderTaskRequest.class, baseUrl, "/order_task/{task_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -113,10 +115,11 @@ public class OrderTask {
     /**
      * This method returns the details and status for an array of order tasks based on a specified &lt;strong&gt;feed_type&lt;/strong&gt; or &lt;strong&gt;schedule_id&lt;/strong&gt;. Specifying both &lt;strong&gt;feed_type&lt;/strong&gt; and &lt;strong&gt;schedule_id&lt;/strong&gt; results in an error. Since schedules are based on feed types, you can specify a schedule (&lt;strong&gt;schedule_id&lt;/strong&gt;) that returns the needed &lt;strong&gt;feed_type&lt;/strong&gt;.&lt;br /&gt;&lt;br /&gt;If specifying the &lt;strong&gt;feed_type&lt;/strong&gt;, limit which order tasks are returned by specifying filters such as the creation date range or period of time using &lt;strong&gt;look_back_days&lt;/strong&gt;. &lt;br /&gt;&lt;br /&gt;If specifying a &lt;strong&gt;schedule_id&lt;/strong&gt;, the schedule template (that the &lt;strong&gt;schedule_id&lt;/strong&gt; is based on) determines which order tasks are returned (see &lt;strong&gt;schedule_id&lt;/strong&gt; for additional information). Each &lt;strong&gt;schedule_id&lt;/strong&gt; applies to one &lt;strong&gt;feed_type&lt;/strong&gt;.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetOrderTasksResponse getOrderTasks(org.openapis.openapi.models.operations.GetOrderTasksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetOrderTasksResponse getOrderTasks(org.openapis.openapi.models.operations.GetOrderTasksRequest request, org.openapis.openapi.models.operations.GetOrderTasksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/order_task");
         
@@ -124,14 +127,14 @@ public class OrderTask {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrderTasksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrderTasksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAddressByPostalCodeRequest {
-    
-    public GetAddressByPostalCodePathParams pathParams;
-    public GetAddressByPostalCodeRequest withPathParams(GetAddressByPostalCodePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetAddressByPostalCodeRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetAddressByPostalCodeRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetAddressByPostalCodeHeaders headers;
-    public GetAddressByPostalCodeRequest withHeaders(GetAddressByPostalCodeHeaders headers) {
-        this.headers = headers;
+    /**
+     * Three letter country code refering to the `postalCode` field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryCode")
+    public String countryCode;
+    public GetAddressByPostalCodeRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+        return this;
+    }
+    
+    /**
+     * Postal code.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=postalCode")
+    public String postalCode;
+    public GetAddressByPostalCodeRequest withPostalCode(String postalCode) {
+        this.postalCode = postalCode;
         return this;
     }
     

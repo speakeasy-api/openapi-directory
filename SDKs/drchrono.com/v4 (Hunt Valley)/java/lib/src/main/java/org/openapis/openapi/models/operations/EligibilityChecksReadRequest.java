@@ -4,27 +4,62 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EligibilityChecksReadRequest {
-    
-    public EligibilityChecksReadPathParams pathParams;
-    public EligibilityChecksReadRequest withPathParams(EligibilityChecksReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
+    public Long appointment;
+    public EligibilityChecksReadRequest withAppointment(Long appointment) {
+        this.appointment = appointment;
         return this;
     }
     
-    
-    public EligibilityChecksReadQueryParams queryParams;
-    public EligibilityChecksReadRequest withQueryParams(EligibilityChecksReadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment_date")
+    public String appointmentDate;
+    public EligibilityChecksReadRequest withAppointmentDate(String appointmentDate) {
+        this.appointmentDate = appointmentDate;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment_date_range")
+    public String appointmentDateRange;
+    public EligibilityChecksReadRequest withAppointmentDateRange(String appointmentDateRange) {
+        this.appointmentDateRange = appointmentDateRange;
+        return this;
+    }
     
-    public EligibilityChecksReadSecurity security;
-    public EligibilityChecksReadRequest withSecurity(EligibilityChecksReadSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public EligibilityChecksReadRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public EligibilityChecksReadRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public EligibilityChecksReadRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query_date")
+    public String queryDate;
+    public EligibilityChecksReadRequest withQueryDate(String queryDate) {
+        this.queryDate = queryDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query_date_range")
+    public String queryDateRange;
+    public EligibilityChecksReadRequest withQueryDateRange(String queryDateRange) {
+        this.queryDateRange = queryDateRange;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetOwnerRequest {
+    /**
+     * Agent to set the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public SetOwnerRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public SetOwnerPathParams pathParams;
-    public SetOwnerRequest withPathParams(SetOwnerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Owner of the agent
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public SetOwnerRequest withOwner(String owner) {
+        this.owner = owner;
         return this;
     }
     

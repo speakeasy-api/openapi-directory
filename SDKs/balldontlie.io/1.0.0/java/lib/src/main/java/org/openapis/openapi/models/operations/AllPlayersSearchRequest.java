@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AllPlayersSearchRequest {
-    
-    public AllPlayersSearchQueryParams queryParams;
-    public AllPlayersSearchRequest withQueryParams(AllPlayersSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public AllPlayersSearchRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

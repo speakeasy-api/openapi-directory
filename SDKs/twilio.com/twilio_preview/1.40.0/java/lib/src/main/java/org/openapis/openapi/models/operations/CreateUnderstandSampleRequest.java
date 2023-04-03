@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUnderstandSampleRequest {
-    
-    public CreateUnderstandSamplePathParams pathParams;
-    public CreateUnderstandSampleRequest withPathParams(CreateUnderstandSamplePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the Assistant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public CreateUnderstandSampleRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateUnderstandSampleCreateUnderstandSampleRequest request;
-    public CreateUnderstandSampleRequest withRequest(CreateUnderstandSampleCreateUnderstandSampleRequest request) {
-        this.request = request;
+    public CreateUnderstandSampleCreateUnderstandSampleRequest requestBody;
+    public CreateUnderstandSampleRequest withRequestBody(CreateUnderstandSampleCreateUnderstandSampleRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateUnderstandSampleSecurity security;
-    public CreateUnderstandSampleRequest withSecurity(CreateUnderstandSampleSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateUnderstandSampleRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique ID of the Task associated with this Sample.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TaskSid")
+    public String taskSid;
+    public CreateUnderstandSampleRequest withTaskSid(String taskSid) {
+        this.taskSid = taskSid;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveAUserLevelChannelMemberRequest {
-    
-    public RemoveAUserLevelChannelMemberPathParams pathParams;
-    public RemoveAUserLevelChannelMemberRequest withPathParams(RemoveAUserLevelChannelMemberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique Identifier of the Channel from where you would like to remove a member. This can be retrieved from the [List Channels API](https://marketplace.zoom.us/docs/api-reference/zoom-api/chat-channels/getchannels).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
+    public String channelId;
+    public RemoveAUserLevelChannelMemberRequest withChannelId(String channelId) {
+        this.channelId = channelId;
         return this;
     }
     
-    
-    public RemoveAUserLevelChannelMemberSecurity security;
-    public RemoveAUserLevelChannelMemberRequest withSecurity(RemoveAUserLevelChannelMemberSecurity security) {
-        this.security = security;
+    /**
+     * Email address of the member whom you would like to be remove from the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=memberId")
+    public String memberId;
+    public RemoveAUserLevelChannelMemberRequest withMemberId(String memberId) {
+        this.memberId = memberId;
         return this;
     }
     

@@ -4,13 +4,196 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DrivelabelsLabelsListRequest {
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DrivelabelsLabelsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
+        return this;
+    }
     
-    public DrivelabelsLabelsListQueryParams queryParams;
-    public DrivelabelsLabelsListRequest withQueryParams(DrivelabelsLabelsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DrivelabelsLabelsListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
+    
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DrivelabelsLabelsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DrivelabelsLabelsListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * The customer to scope this list request to. For example: "customers/abcd1234". If unset, will return all labels within the current customer.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customer")
+    public String customer;
+    public DrivelabelsLabelsListRequest withCustomer(String customer) {
+        this.customer = customer;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DrivelabelsLabelsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DrivelabelsLabelsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The BCP-47 language code to use for evaluating localized field labels. When not specified, values in the default configured language are used.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=languageCode")
+    public String languageCode;
+    public DrivelabelsLabelsListRequest withLanguageCode(String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+    }
+    
+    /**
+     * Specifies the level of access the user must have on the returned Labels. The minimum role a user must have on a label. Defaults to `READER`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minimumRole")
+    public DrivelabelsLabelsListMinimumRoleEnum minimumRole;
+    public DrivelabelsLabelsListRequest withMinimumRole(DrivelabelsLabelsListMinimumRoleEnum minimumRole) {
+        this.minimumRole = minimumRole;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DrivelabelsLabelsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Maximum number of labels to return per page. Default: 50. Max: 200.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public DrivelabelsLabelsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The token of the page to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public DrivelabelsLabelsListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DrivelabelsLabelsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Whether to include only published labels in the results. * When `true`, only the current published label revisions are returned. Disabled labels are included. Returned label resource names reference the published revision (`labels/{id}/{revision_id}`). * When `false`, the current label revisions are returned, which might not be published. Returned label resource names don't reference a specific revision (`labels/{id}`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=publishedOnly")
+    public Boolean publishedOnly;
+    public DrivelabelsLabelsListRequest withPublishedOnly(Boolean publishedOnly) {
+        this.publishedOnly = publishedOnly;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DrivelabelsLabelsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DrivelabelsLabelsListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DrivelabelsLabelsListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Set to `true` in order to use the user's admin credentials. This will return all Labels within the customer.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useAdminAccess")
+    public Boolean useAdminAccess;
+    public DrivelabelsLabelsListRequest withUseAdminAccess(Boolean useAdminAccess) {
+        this.useAdminAccess = useAdminAccess;
+        return this;
+    }
+    
+    /**
+     * When specified, only certain fields belonging to the indicated view are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
+    public DrivelabelsLabelsListViewEnum view;
+    public DrivelabelsLabelsListRequest withView(DrivelabelsLabelsListViewEnum view) {
+        this.view = view;
         return this;
     }
     

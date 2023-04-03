@@ -39,15 +39,15 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsCancelResponse cloudidentityCustomersUserinvitationsCancel(org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsCancelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsCancelPathParams.class, baseUrl, "/v1beta1/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsCancelRequest.class, baseUrl, "/v1beta1/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -85,13 +85,13 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsIsInvitableUserResponse cloudidentityCustomersUserinvitationsIsInvitableUser(org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsIsInvitableUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsIsInvitableUserPathParams.class, baseUrl, "/v1beta1/{name}:isInvitableUser", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsIsInvitableUserRequest.class, baseUrl, "/v1beta1/{name}:isInvitableUser", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsIsInvitableUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsIsInvitableUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -129,13 +129,13 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsListResponse cloudidentityCustomersUserinvitationsList(org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsListPathParams.class, baseUrl, "/v1beta1/{parent}/userinvitations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsListRequest.class, baseUrl, "/v1beta1/{parent}/userinvitations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -173,15 +173,15 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsSendResponse cloudidentityCustomersUserinvitationsSend(org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsSendRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsSendPathParams.class, baseUrl, "/v1beta1/{name}:send", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsSendRequest.class, baseUrl, "/v1beta1/{name}:send", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsSendQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsSendRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

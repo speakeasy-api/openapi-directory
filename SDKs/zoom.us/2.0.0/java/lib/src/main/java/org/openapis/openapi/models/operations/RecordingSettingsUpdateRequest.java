@@ -7,27 +7,27 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RecordingSettingsUpdateRequest {
-    
-    public RecordingSettingsUpdatePathParams pathParams;
-    public RecordingSettingsUpdateRequest withPathParams(RecordingSettingsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Meeting recording Settings
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public RecordingSettingsUpdateRecordingSettings request;
-    public RecordingSettingsUpdateRequest withRequest(RecordingSettingsUpdateRecordingSettings request) {
-        this.request = request;
+    public RecordingSettingsUpdateRecordingSettings requestBody;
+    public RecordingSettingsUpdateRequest withRequestBody(RecordingSettingsUpdateRecordingSettings requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public RecordingSettingsUpdateSecurity security;
-    public RecordingSettingsUpdateRequest withSecurity(RecordingSettingsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance. 
+     * 
+     * To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance. 
+     * 
+     * If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875=="), you must **double encode** the UUID before making an API request. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public String meetingId;
+    public RecordingSettingsUpdateRequest withMeetingId(String meetingId) {
+        this.meetingId = meetingId;
         return this;
     }
     

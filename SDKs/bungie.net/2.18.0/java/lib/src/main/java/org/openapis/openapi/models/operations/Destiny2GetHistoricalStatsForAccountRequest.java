@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetHistoricalStatsForAccountRequest {
-    
-    public Destiny2GetHistoricalStatsForAccountPathParams pathParams;
-    public Destiny2GetHistoricalStatsForAccountRequest withPathParams(Destiny2GetHistoricalStatsForAccountPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Destiny membershipId of the user to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
+    public Long destinyMembershipId;
+    public Destiny2GetHistoricalStatsForAccountRequest withDestinyMembershipId(Long destinyMembershipId) {
+        this.destinyMembershipId = destinyMembershipId;
         return this;
     }
     
+    /**
+     * Groups of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=groups")
+    public Integer[] groups;
+    public Destiny2GetHistoricalStatsForAccountRequest withGroups(Integer[] groups) {
+        this.groups = groups;
+        return this;
+    }
     
-    public Destiny2GetHistoricalStatsForAccountQueryParams queryParams;
-    public Destiny2GetHistoricalStatsForAccountRequest withQueryParams(Destiny2GetHistoricalStatsForAccountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A valid non-BungieNet membership type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public Destiny2GetHistoricalStatsForAccountRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

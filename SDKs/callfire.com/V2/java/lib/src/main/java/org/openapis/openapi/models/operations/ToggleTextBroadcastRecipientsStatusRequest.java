@@ -7,34 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ToggleTextBroadcastRecipientsStatusRequest {
-    
-    public ToggleTextBroadcastRecipientsStatusPathParams pathParams;
-    public ToggleTextBroadcastRecipientsStatusRequest withPathParams(ToggleTextBroadcastRecipientsStatusPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ToggleTextBroadcastRecipientsStatusQueryParams queryParams;
-    public ToggleTextBroadcastRecipientsStatusRequest withQueryParams(ToggleTextBroadcastRecipientsStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * List of Recipient objects. By recipient we mean either phone number or contact id.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Recipient[] request;
-    public ToggleTextBroadcastRecipientsStatusRequest withRequest(org.openapis.openapi.models.shared.Recipient[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Recipient[] requestBody;
+    public ToggleTextBroadcastRecipientsStatusRequest withRequestBody(org.openapis.openapi.models.shared.Recipient[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Flag which indicate what to do with texts (true will enable texts in DISABLED status and vice versa)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enable")
+    public Boolean enable;
+    public ToggleTextBroadcastRecipientsStatusRequest withEnable(Boolean enable) {
+        this.enable = enable;
+        return this;
+    }
     
-    public ToggleTextBroadcastRecipientsStatusSecurity security;
-    public ToggleTextBroadcastRecipientsStatusRequest withSecurity(ToggleTextBroadcastRecipientsStatusSecurity security) {
-        this.security = security;
+    /**
+     * An id of a text broadcast
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ToggleTextBroadcastRecipientsStatusRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

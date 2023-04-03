@@ -31,27 +31,28 @@ public class Pools {
     /**
      * Deletes a replica pool.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteResponse replicapoolPoolsDelete(org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteResponse replicapoolPoolsDelete(org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteRequest request, org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplicapoolPoolsDeletePathParams.class, baseUrl, "/{projectName}/zones/{zone}/pools/{poolName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteRequest.class, baseUrl, "/{projectName}/zones/{zone}/pools/{poolName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "poolsDeleteRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -72,25 +73,26 @@ public class Pools {
     /**
      * Gets information about a single replica pool.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReplicapoolPoolsGetResponse replicapoolPoolsGet(org.openapis.openapi.models.operations.ReplicapoolPoolsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReplicapoolPoolsGetResponse replicapoolPoolsGet(org.openapis.openapi.models.operations.ReplicapoolPoolsGetRequest request, org.openapis.openapi.models.operations.ReplicapoolPoolsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplicapoolPoolsGetPathParams.class, baseUrl, "/{projectName}/zones/{zone}/pools/{poolName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplicapoolPoolsGetRequest.class, baseUrl, "/{projectName}/zones/{zone}/pools/{poolName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReplicapoolPoolsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReplicapoolPoolsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -116,27 +118,28 @@ public class Pools {
     /**
      * Inserts a new replica pool.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReplicapoolPoolsInsertResponse replicapoolPoolsInsert(org.openapis.openapi.models.operations.ReplicapoolPoolsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReplicapoolPoolsInsertResponse replicapoolPoolsInsert(org.openapis.openapi.models.operations.ReplicapoolPoolsInsertRequest request, org.openapis.openapi.models.operations.ReplicapoolPoolsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplicapoolPoolsInsertPathParams.class, baseUrl, "/{projectName}/zones/{zone}/pools", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplicapoolPoolsInsertRequest.class, baseUrl, "/{projectName}/zones/{zone}/pools", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pool", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReplicapoolPoolsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReplicapoolPoolsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -162,25 +165,26 @@ public class Pools {
     /**
      * List all replica pools.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReplicapoolPoolsListResponse replicapoolPoolsList(org.openapis.openapi.models.operations.ReplicapoolPoolsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReplicapoolPoolsListResponse replicapoolPoolsList(org.openapis.openapi.models.operations.ReplicapoolPoolsListRequest request, org.openapis.openapi.models.operations.ReplicapoolPoolsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplicapoolPoolsListPathParams.class, baseUrl, "/{projectName}/zones/{zone}/pools", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplicapoolPoolsListRequest.class, baseUrl, "/{projectName}/zones/{zone}/pools", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReplicapoolPoolsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReplicapoolPoolsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -206,25 +210,26 @@ public class Pools {
     /**
      * Resize a pool. This is an asynchronous operation, and multiple overlapping resize requests can be made. Replica Pools will use the information from the last resize request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReplicapoolPoolsResizeResponse replicapoolPoolsResize(org.openapis.openapi.models.operations.ReplicapoolPoolsResizeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReplicapoolPoolsResizeResponse replicapoolPoolsResize(org.openapis.openapi.models.operations.ReplicapoolPoolsResizeRequest request, org.openapis.openapi.models.operations.ReplicapoolPoolsResizeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplicapoolPoolsResizePathParams.class, baseUrl, "/{projectName}/zones/{zone}/pools/{poolName}/resize", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplicapoolPoolsResizeRequest.class, baseUrl, "/{projectName}/zones/{zone}/pools/{poolName}/resize", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReplicapoolPoolsResizeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReplicapoolPoolsResizeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -250,27 +255,28 @@ public class Pools {
     /**
      * Update the template used by the pool.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReplicapoolPoolsUpdatetemplateResponse replicapoolPoolsUpdatetemplate(org.openapis.openapi.models.operations.ReplicapoolPoolsUpdatetemplateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReplicapoolPoolsUpdatetemplateResponse replicapoolPoolsUpdatetemplate(org.openapis.openapi.models.operations.ReplicapoolPoolsUpdatetemplateRequest request, org.openapis.openapi.models.operations.ReplicapoolPoolsUpdatetemplateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplicapoolPoolsUpdatetemplatePathParams.class, baseUrl, "/{projectName}/zones/{zone}/pools/{poolName}/updateTemplate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplicapoolPoolsUpdatetemplateRequest.class, baseUrl, "/{projectName}/zones/{zone}/pools/{poolName}/updateTemplate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "template", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReplicapoolPoolsUpdatetemplateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReplicapoolPoolsUpdatetemplateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

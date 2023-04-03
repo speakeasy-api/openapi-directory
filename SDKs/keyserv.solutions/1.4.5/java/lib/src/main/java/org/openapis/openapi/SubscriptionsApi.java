@@ -31,7 +31,7 @@ public class SubscriptionsApi {
 		this._genVersion = genVersion;
 	}
 
-    public org.openapis.openapi.models.operations.SubscriptionsApiCountResponse subscriptionsApiCount(org.openapis.openapi.models.operations.SubscriptionsApiCountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubscriptionsApiCountResponse subscriptionsApiCount(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/SubscriptionsApi/Count");
         
@@ -70,19 +70,19 @@ public class SubscriptionsApi {
 
     public org.openapis.openapi.models.operations.SubscriptionsApiDeleteSubscriptionResponse subscriptionsApiDeleteSubscription(org.openapis.openapi.models.operations.SubscriptionsApiDeleteSubscriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubscriptionsApiDeleteSubscriptionPathParams.class, baseUrl, "/v1/SubscriptionsApi/{serial}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubscriptionsApiDeleteSubscriptionRequest.class, baseUrl, "/v1/SubscriptionsApi/{serial}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SubscriptionsApiDeleteSubscriptionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SubscriptionsApiDeleteSubscriptionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -110,19 +110,19 @@ public class SubscriptionsApi {
 
     public org.openapis.openapi.models.operations.SubscriptionsApiDeleteSubscription2Response subscriptionsApiDeleteSubscription2(org.openapis.openapi.models.operations.SubscriptionsApiDeleteSubscription2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubscriptionsApiDeleteSubscription2PathParams.class, baseUrl, "/v1/SubscriptionsApi/{serial}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubscriptionsApiDeleteSubscription2Request.class, baseUrl, "/v1/SubscriptionsApi/{serial}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SubscriptionsApiDeleteSubscription2QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SubscriptionsApiDeleteSubscription2Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -148,7 +148,7 @@ public class SubscriptionsApi {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.SubscriptionsApiDisableResponse subscriptionsApiDisable(org.openapis.openapi.models.operations.SubscriptionsApiDisableRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubscriptionsApiDisableResponse subscriptionsApiDisable(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/SubscriptionsApi/Disable");
         
@@ -179,7 +179,7 @@ public class SubscriptionsApi {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.SubscriptionsApiDisable2Response subscriptionsApiDisable2(org.openapis.openapi.models.operations.SubscriptionsApiDisable2Request request) throws Exception {
+    public org.openapis.openapi.models.operations.SubscriptionsApiDisable2Response subscriptionsApiDisable2(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/SubscriptionsApi/Disable");
         
@@ -210,7 +210,7 @@ public class SubscriptionsApi {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.SubscriptionsApiEnableResponse subscriptionsApiEnable(org.openapis.openapi.models.operations.SubscriptionsApiEnableRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubscriptionsApiEnableResponse subscriptionsApiEnable(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/SubscriptionsApi/Enable");
         
@@ -241,7 +241,7 @@ public class SubscriptionsApi {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.SubscriptionsApiEnable2Response subscriptionsApiEnable2(org.openapis.openapi.models.operations.SubscriptionsApiEnable2Request request) throws Exception {
+    public org.openapis.openapi.models.operations.SubscriptionsApiEnable2Response subscriptionsApiEnable2(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/SubscriptionsApi/Enable");
         
@@ -272,7 +272,7 @@ public class SubscriptionsApi {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.SubscriptionsApiFindResponse subscriptionsApiFind(org.openapis.openapi.models.operations.SubscriptionsApiFindRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubscriptionsApiFindResponse subscriptionsApiFind(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/SubscriptionsApi/Find");
         
@@ -316,13 +316,13 @@ public class SubscriptionsApi {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SubscriptionsApiListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SubscriptionsApiListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -352,7 +352,7 @@ public class SubscriptionsApi {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.SubscriptionsApiPutSubscriptionResponse subscriptionsApiPutSubscription(org.openapis.openapi.models.operations.SubscriptionsApiPutSubscriptionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubscriptionsApiPutSubscriptionResponse subscriptionsApiPutSubscription(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/SubscriptionsApi");
         
@@ -383,7 +383,7 @@ public class SubscriptionsApi {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.SubscriptionsApiPutSubscription2Response subscriptionsApiPutSubscription2(org.openapis.openapi.models.operations.SubscriptionsApiPutSubscription2Request request) throws Exception {
+    public org.openapis.openapi.models.operations.SubscriptionsApiPutSubscription2Response subscriptionsApiPutSubscription2(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/SubscriptionsApi");
         
@@ -414,7 +414,7 @@ public class SubscriptionsApi {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.SubscriptionsApiSaveResponse subscriptionsApiSave(org.openapis.openapi.models.operations.SubscriptionsApiSaveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubscriptionsApiSaveResponse subscriptionsApiSave(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/SubscriptionsApi/Save");
         

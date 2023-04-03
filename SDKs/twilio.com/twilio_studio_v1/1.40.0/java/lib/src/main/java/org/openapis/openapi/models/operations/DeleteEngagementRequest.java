@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteEngagementRequest {
-    
-    public DeleteEngagementPathParams pathParams;
-    public DeleteEngagementRequest withPathParams(DeleteEngagementPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Flow to delete Engagements from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FlowSid")
+    public String flowSid;
+    public DeleteEngagementRequest withFlowSid(String flowSid) {
+        this.flowSid = flowSid;
         return this;
     }
     
-    
-    public DeleteEngagementSecurity security;
-    public DeleteEngagementRequest withSecurity(DeleteEngagementSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteEngagementRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Engagement resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteEngagementRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

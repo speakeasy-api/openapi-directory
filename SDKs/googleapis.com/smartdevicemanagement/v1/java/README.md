@@ -18,15 +18,11 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandSecurity;
-import org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandPathParams;
-import org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandQueryParams;
 import org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest;
 import org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandResponse;
-import org.openapis.openapi.models.shared.GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -35,40 +31,32 @@ public class Application {
                 .build();
 
             SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest req = new SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest() {{
-                security = new SmartdevicemanagementEnterprisesDevicesExecuteCommandSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new SmartdevicemanagementEnterprisesDevicesExecuteCommandPathParams() {{
-                    name = "corrupti";
-                }};
-                queryParams = new SmartdevicemanagementEnterprisesDevicesExecuteCommandQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest() {{
-                    command = "suscipit";
+                dollarXgafv = "2";
+                googleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest = new GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest() {{
+                    command = "provident";
                     params = new java.util.HashMap<String, Object>() {{
-                        put("magnam", "debitis");
-                        put("ipsa", "delectus");
+                        put("quibusdam", "unde");
+                        put("nulla", "corrupti");
+                        put("illum", "vel");
                     }};
                 }};
-            }};            
+                accessToken = "error";
+                alt = "media";
+                callback = "suscipit";
+                fields = "iure";
+                key = "magnam";
+                name = "debitis";
+                oauthToken = "ipsa";
+                prettyPrint = false;
+                quotaUser = "delectus";
+                uploadType = "tempora";
+                uploadProtocol = "suscipit";
+            }}            
 
-            SmartdevicemanagementEnterprisesDevicesExecuteCommandResponse res = sdk.enterprises.smartdevicemanagementEnterprisesDevicesExecuteCommand(req);
+            SmartdevicemanagementEnterprisesDevicesExecuteCommandResponse res = sdk.enterprises.smartdevicemanagementEnterprisesDevicesExecuteCommand(req, new SmartdevicemanagementEnterprisesDevicesExecuteCommandSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.googleHomeEnterpriseSdmV1ExecuteDeviceCommandResponse.isPresent()) {
                 // handle response
@@ -80,7 +68,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### enterprises

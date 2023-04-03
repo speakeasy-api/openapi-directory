@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVodPosterRequest {
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public GetVodPosterRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
+        return this;
+    }
     
-    public GetVodPosterPathParams pathParams;
-    public GetVodPosterRequest withPathParams(GetVodPosterPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the picture.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poster_id")
+    public Double posterId;
+    public GetVodPosterRequest withPosterId(Double posterId) {
+        this.posterId = posterId;
         return this;
     }
     

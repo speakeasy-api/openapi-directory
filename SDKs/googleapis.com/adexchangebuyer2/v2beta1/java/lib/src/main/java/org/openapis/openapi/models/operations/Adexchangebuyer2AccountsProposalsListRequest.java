@@ -4,27 +4,166 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Adexchangebuyer2AccountsProposalsListRequest {
-    
-    public Adexchangebuyer2AccountsProposalsListPathParams pathParams;
-    public Adexchangebuyer2AccountsProposalsListRequest withPathParams(Adexchangebuyer2AccountsProposalsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public Adexchangebuyer2AccountsProposalsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public Adexchangebuyer2AccountsProposalsListQueryParams queryParams;
-    public Adexchangebuyer2AccountsProposalsListRequest withQueryParams(Adexchangebuyer2AccountsProposalsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public Adexchangebuyer2AccountsProposalsListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Account ID of the buyer.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public Adexchangebuyer2AccountsProposalsListRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public Adexchangebuyer2AccountsProposalsListSecurity security;
-    public Adexchangebuyer2AccountsProposalsListRequest withSecurity(Adexchangebuyer2AccountsProposalsListSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public Adexchangebuyer2AccountsProposalsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public Adexchangebuyer2AccountsProposalsListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public Adexchangebuyer2AccountsProposalsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * An optional PQL filter query used to query for proposals. Nested repeated fields, such as proposal.deals.targetingCriterion, cannot be filtered.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public Adexchangebuyer2AccountsProposalsListRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * Syntax the filter is written in. Current implementation defaults to PQL but in the future it will be LIST_FILTER.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterSyntax")
+    public Adexchangebuyer2AccountsProposalsListFilterSyntaxEnum filterSyntax;
+    public Adexchangebuyer2AccountsProposalsListRequest withFilterSyntax(Adexchangebuyer2AccountsProposalsListFilterSyntaxEnum filterSyntax) {
+        this.filterSyntax = filterSyntax;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public Adexchangebuyer2AccountsProposalsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public Adexchangebuyer2AccountsProposalsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Requested page size. The server may return fewer results than requested. If unspecified, the server will pick an appropriate default.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public Adexchangebuyer2AccountsProposalsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token as returned from ListProposalsResponse.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public Adexchangebuyer2AccountsProposalsListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public Adexchangebuyer2AccountsProposalsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public Adexchangebuyer2AccountsProposalsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public Adexchangebuyer2AccountsProposalsListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public Adexchangebuyer2AccountsProposalsListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

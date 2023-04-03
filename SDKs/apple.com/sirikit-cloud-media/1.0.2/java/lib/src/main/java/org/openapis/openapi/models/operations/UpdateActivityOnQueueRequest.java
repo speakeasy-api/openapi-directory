@@ -7,17 +7,38 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateActivityOnQueueRequest {
-    
-    public UpdateActivityOnQueueHeaders headers;
-    public UpdateActivityOnQueueRequest withHeaders(UpdateActivityOnQueueHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public UpdateActivityOnQueueRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateActivityRequest request;
-    public UpdateActivityOnQueueRequest withRequest(org.openapis.openapi.models.shared.UpdateActivityRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateActivityRequest updateActivityRequest;
+    public UpdateActivityOnQueueRequest withUpdateActivityRequest(org.openapis.openapi.models.shared.UpdateActivityRequest updateActivityRequest) {
+        this.updateActivityRequest = updateActivityRequest;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=User-Agent")
+    public String userAgent;
+    public UpdateActivityOnQueueRequest withUserAgent(String userAgent) {
+        this.userAgent = userAgent;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-applecloudextension-retry-count")
+    public Double xApplecloudextensionRetryCount;
+    public UpdateActivityOnQueueRequest withXApplecloudextensionRetryCount(Double xApplecloudextensionRetryCount) {
+        this.xApplecloudextensionRetryCount = xApplecloudextensionRetryCount;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-applecloudextension-session-id")
+    public String xApplecloudextensionSessionId;
+    public UpdateActivityOnQueueRequest withXApplecloudextensionSessionId(String xApplecloudextensionSessionId) {
+        this.xApplecloudextensionSessionId = xApplecloudextensionSessionId;
         return this;
     }
     

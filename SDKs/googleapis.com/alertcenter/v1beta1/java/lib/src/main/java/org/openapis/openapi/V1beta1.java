@@ -34,10 +34,11 @@ public class V1beta1 {
     /**
      * Returns customer-level settings.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AlertcenterGetSettingsResponse alertcenterGetSettings(org.openapis.openapi.models.operations.AlertcenterGetSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AlertcenterGetSettingsResponse alertcenterGetSettings(org.openapis.openapi.models.operations.AlertcenterGetSettingsRequest request, org.openapis.openapi.models.operations.AlertcenterGetSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1beta1/settings");
         
@@ -45,14 +46,14 @@ public class V1beta1 {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterGetSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterGetSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class V1beta1 {
     /**
      * Updates the customer-level settings.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AlertcenterUpdateSettingsResponse alertcenterUpdateSettings(org.openapis.openapi.models.operations.AlertcenterUpdateSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AlertcenterUpdateSettingsResponse alertcenterUpdateSettings(org.openapis.openapi.models.operations.AlertcenterUpdateSettingsRequest request, org.openapis.openapi.models.operations.AlertcenterUpdateSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1beta1/settings");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "settings", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterUpdateSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterUpdateSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

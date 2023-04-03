@@ -4,20 +4,138 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest {
-    
-    public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtPathParams pathParams;
-    public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withPathParams(GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Expected response format.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
+    public org.openapis.openapi.models.shared.ExtEnum ext;
+    public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
+        this.ext = ext;
         return this;
     }
     
+    /**
+     * Indexes for which extended postal codes should be included in the results. Available indexes are:
+     *   - &lt;b&gt;Addr&lt;/b&gt; = Address ranges
+     *   - &lt;b&gt;Geo&lt;/b&gt; = Geographies
+     *   - &lt;b&gt;PAD&lt;/b&gt; = Point Addresses
+     *   - &lt;b&gt;POI&lt;/b&gt; = Points of Interest
+     *   - &lt;b&gt;Str&lt;/b&gt; = Streets
+     *   - &lt;b&gt;XStr&lt;/b&gt; = Cross Streets (intersections)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=extendedPostalCodesFor")
+    public String extendedPostalCodesFor;
+    public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withExtendedPostalCodesFor(String extendedPostalCodesFor) {
+        this.extendedPostalCodesFor = extendedPostalCodesFor;
+        return this;
+    }
     
-    public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtQueryParams queryParams;
-    public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withQueryParams(GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The directional heading in degrees, usually similar to the course along a road segment. Entered in degrees, measured clockwise from north (so north is 0, east is 90, etc.)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=heading")
+    public Float heading;
+    public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withHeading(Float heading) {
+        this.heading = heading;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of indexes which should be utilized for the search. Item order does not matter. Available indexes are:
+     *   - &lt;b&gt;Addr&lt;/b&gt; = Address range interpolation (when there is no PAD)
+     *   - &lt;b&gt;Geo&lt;/b&gt; = Geographies
+     *   - &lt;b&gt;PAD&lt;/b&gt; = Point Addresses
+     *   - &lt;b&gt;POI&lt;/b&gt; = Points of interest
+     *   - &lt;b&gt;Str&lt;/b&gt; = Streets
+     *   - &lt;b&gt;Xstr&lt;/b&gt; = Cross Streets (intersections)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idxSet")
+    public String idxSet;
+    public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withIdxSet(String idxSet) {
+        this.idxSet = idxSet;
+        return this;
+    }
+    
+    /**
+     * Language in which search results should be returned. Should be one of &lt;a href="/search-api/search-api-documentation/supported-languages"&gt;supported IETF language tags&lt;/a&gt;, case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * Maximum number of search results that will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Multiplies the limit by N to gather more candidate POIs, which will then be sorted by drive distance, returning only the top candidates according to the limit.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=multiplier")
+    public Long multiplier;
+    public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withMultiplier(Long multiplier) {
+        this.multiplier = multiplier;
+        return this;
+    }
+    
+    /**
+     * This is specified as a comma separated string composed of lat., lon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=position")
+    public String position;
+    public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withPosition(String position) {
+        this.position = position;
+        return this;
+    }
+    
+    /**
+     * Query string. Must be properly URL encoded.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=query")
+    public String query;
+    public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * Only return results that arrive from routing engine within this time limit.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routingTimeout")
+    public Long routingTimeout;
+    public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withRoutingTimeout(Long routingTimeout) {
+        this.routingTimeout = routingTimeout;
+        return this;
+    }
+    
+    /**
+     * If the "typeahead" flag is set, the query will be interpreted as a partial input and the search will enter &lt;b&gt;predictive&lt;/b&gt; mode.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=typeahead")
+    public Boolean typeahead;
+    public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withTypeahead(Boolean typeahead) {
+        this.typeahead = typeahead;
+        return this;
+    }
+    
+    /**
+     * Service version number. The current value is 2.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
+    public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+    public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
         return this;
     }
     

@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUnderstandSampleRequest {
-    
-    public UpdateUnderstandSamplePathParams pathParams;
-    public UpdateUnderstandSampleRequest withPathParams(UpdateUnderstandSamplePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the Assistant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public UpdateUnderstandSampleRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateUnderstandSampleUpdateUnderstandSampleRequest request;
-    public UpdateUnderstandSampleRequest withRequest(UpdateUnderstandSampleUpdateUnderstandSampleRequest request) {
-        this.request = request;
+    public UpdateUnderstandSampleUpdateUnderstandSampleRequest requestBody;
+    public UpdateUnderstandSampleRequest withRequestBody(UpdateUnderstandSampleUpdateUnderstandSampleRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateUnderstandSampleSecurity security;
-    public UpdateUnderstandSampleRequest withSecurity(UpdateUnderstandSampleSecurity security) {
-        this.security = security;
+    /**
+     * A 34 character string that uniquely identifies this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateUnderstandSampleRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateUnderstandSampleRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique ID of the Task associated with this Sample.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TaskSid")
+    public String taskSid;
+    public UpdateUnderstandSampleRequest withTaskSid(String taskSid) {
+        this.taskSid = taskSid;
         return this;
     }
     

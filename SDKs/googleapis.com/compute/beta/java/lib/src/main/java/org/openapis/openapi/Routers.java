@@ -34,25 +34,26 @@ public class Routers {
     /**
      * Retrieves an aggregated list of routers.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRoutersAggregatedListResponse computeRoutersAggregatedList(org.openapis.openapi.models.operations.ComputeRoutersAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRoutersAggregatedListResponse computeRoutersAggregatedList(org.openapis.openapi.models.operations.ComputeRoutersAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeRoutersAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/routers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/routers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class Routers {
     /**
      * Deletes the specified Router resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRoutersDeleteResponse computeRoutersDelete(org.openapis.openapi.models.operations.ComputeRoutersDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRoutersDeleteResponse computeRoutersDelete(org.openapis.openapi.models.operations.ComputeRoutersDeleteRequest request, org.openapis.openapi.models.operations.ComputeRoutersDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersDeletePathParams.class, baseUrl, "/projects/{project}/regions/{region}/routers/{router}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersDeleteRequest.class, baseUrl, "/projects/{project}/regions/{region}/routers/{router}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,25 +126,26 @@ public class Routers {
     /**
      * Returns the specified Router resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRoutersGetResponse computeRoutersGet(org.openapis.openapi.models.operations.ComputeRoutersGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRoutersGetResponse computeRoutersGet(org.openapis.openapi.models.operations.ComputeRoutersGetRequest request, org.openapis.openapi.models.operations.ComputeRoutersGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersGetPathParams.class, baseUrl, "/projects/{project}/regions/{region}/routers/{router}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersGetRequest.class, baseUrl, "/projects/{project}/regions/{region}/routers/{router}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,25 +172,26 @@ public class Routers {
     /**
      * Retrieves runtime Nat mapping information of VM endpoints.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRoutersGetNatMappingInfoResponse computeRoutersGetNatMappingInfo(org.openapis.openapi.models.operations.ComputeRoutersGetNatMappingInfoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRoutersGetNatMappingInfoResponse computeRoutersGetNatMappingInfo(org.openapis.openapi.models.operations.ComputeRoutersGetNatMappingInfoRequest request, org.openapis.openapi.models.operations.ComputeRoutersGetNatMappingInfoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersGetNatMappingInfoPathParams.class, baseUrl, "/projects/{project}/regions/{region}/routers/{router}/getNatMappingInfo", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersGetNatMappingInfoRequest.class, baseUrl, "/projects/{project}/regions/{region}/routers/{router}/getNatMappingInfo", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersGetNatMappingInfoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersGetNatMappingInfoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -214,25 +218,26 @@ public class Routers {
     /**
      * Retrieves runtime information of the specified router.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRoutersGetRouterStatusResponse computeRoutersGetRouterStatus(org.openapis.openapi.models.operations.ComputeRoutersGetRouterStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRoutersGetRouterStatusResponse computeRoutersGetRouterStatus(org.openapis.openapi.models.operations.ComputeRoutersGetRouterStatusRequest request, org.openapis.openapi.models.operations.ComputeRoutersGetRouterStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersGetRouterStatusPathParams.class, baseUrl, "/projects/{project}/regions/{region}/routers/{router}/getRouterStatus", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersGetRouterStatusRequest.class, baseUrl, "/projects/{project}/regions/{region}/routers/{router}/getRouterStatus", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersGetRouterStatusQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersGetRouterStatusRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -259,27 +264,28 @@ public class Routers {
     /**
      * Creates a Router resource in the specified project and region using the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRoutersInsertResponse computeRoutersInsert(org.openapis.openapi.models.operations.ComputeRoutersInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRoutersInsertResponse computeRoutersInsert(org.openapis.openapi.models.operations.ComputeRoutersInsertRequest request, org.openapis.openapi.models.operations.ComputeRoutersInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersInsertPathParams.class, baseUrl, "/projects/{project}/regions/{region}/routers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersInsertRequest.class, baseUrl, "/projects/{project}/regions/{region}/routers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "router", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -306,25 +312,26 @@ public class Routers {
     /**
      * Retrieves a list of Router resources available to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRoutersListResponse computeRoutersList(org.openapis.openapi.models.operations.ComputeRoutersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRoutersListResponse computeRoutersList(org.openapis.openapi.models.operations.ComputeRoutersListRequest request, org.openapis.openapi.models.operations.ComputeRoutersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersListPathParams.class, baseUrl, "/projects/{project}/regions/{region}/routers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersListRequest.class, baseUrl, "/projects/{project}/regions/{region}/routers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -351,27 +358,28 @@ public class Routers {
     /**
      * Patches the specified Router resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRoutersPatchResponse computeRoutersPatch(org.openapis.openapi.models.operations.ComputeRoutersPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRoutersPatchResponse computeRoutersPatch(org.openapis.openapi.models.operations.ComputeRoutersPatchRequest request, org.openapis.openapi.models.operations.ComputeRoutersPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersPatchPathParams.class, baseUrl, "/projects/{project}/regions/{region}/routers/{router}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersPatchRequest.class, baseUrl, "/projects/{project}/regions/{region}/routers/{router}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "router1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -398,27 +406,28 @@ public class Routers {
     /**
      * Preview fields auto-generated during router create and update operations. Calling this method does NOT create or update the router.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRoutersPreviewResponse computeRoutersPreview(org.openapis.openapi.models.operations.ComputeRoutersPreviewRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRoutersPreviewResponse computeRoutersPreview(org.openapis.openapi.models.operations.ComputeRoutersPreviewRequest request, org.openapis.openapi.models.operations.ComputeRoutersPreviewSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersPreviewPathParams.class, baseUrl, "/projects/{project}/regions/{region}/routers/{router}/preview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersPreviewRequest.class, baseUrl, "/projects/{project}/regions/{region}/routers/{router}/preview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "router1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersPreviewQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersPreviewRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -445,27 +454,28 @@ public class Routers {
     /**
      * Returns permissions that a caller has on the specified resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRoutersTestIamPermissionsResponse computeRoutersTestIamPermissions(org.openapis.openapi.models.operations.ComputeRoutersTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRoutersTestIamPermissionsResponse computeRoutersTestIamPermissions(org.openapis.openapi.models.operations.ComputeRoutersTestIamPermissionsRequest request, org.openapis.openapi.models.operations.ComputeRoutersTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersTestIamPermissionsPathParams.class, baseUrl, "/projects/{project}/regions/{region}/routers/{resource}/testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersTestIamPermissionsRequest.class, baseUrl, "/projects/{project}/regions/{region}/routers/{resource}/testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -492,27 +502,28 @@ public class Routers {
     /**
      * Updates the specified Router resource with the data included in the request. This method conforms to PUT semantics, which requests that the state of the target resource be created or replaced with the state defined by the representation enclosed in the request message payload.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRoutersUpdateResponse computeRoutersUpdate(org.openapis.openapi.models.operations.ComputeRoutersUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRoutersUpdateResponse computeRoutersUpdate(org.openapis.openapi.models.operations.ComputeRoutersUpdateRequest request, org.openapis.openapi.models.operations.ComputeRoutersUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersUpdatePathParams.class, baseUrl, "/projects/{project}/regions/{region}/routers/{router}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRoutersUpdateRequest.class, baseUrl, "/projects/{project}/regions/{region}/routers/{router}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "router1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRoutersUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

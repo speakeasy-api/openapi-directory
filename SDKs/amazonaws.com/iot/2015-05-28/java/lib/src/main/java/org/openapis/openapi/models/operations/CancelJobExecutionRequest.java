@@ -7,31 +7,89 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelJobExecutionRequest {
-    
-    public CancelJobExecutionPathParams pathParams;
-    public CancelJobExecutionRequest withPathParams(CancelJobExecutionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CancelJobExecutionQueryParams queryParams;
-    public CancelJobExecutionRequest withQueryParams(CancelJobExecutionQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public CancelJobExecutionHeaders headers;
-    public CancelJobExecutionRequest withHeaders(CancelJobExecutionHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CancelJobExecutionRequestBody request;
-    public CancelJobExecutionRequest withRequest(CancelJobExecutionRequestBody request) {
-        this.request = request;
+    public CancelJobExecutionRequestBody requestBody;
+    public CancelJobExecutionRequest withRequestBody(CancelJobExecutionRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public CancelJobExecutionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public CancelJobExecutionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public CancelJobExecutionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public CancelJobExecutionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public CancelJobExecutionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public CancelJobExecutionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public CancelJobExecutionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;(Optional) If &lt;code&gt;true&lt;/code&gt; the job execution will be canceled if it has status IN_PROGRESS or QUEUED, otherwise the job execution will be canceled only if it has status QUEUED. If you attempt to cancel a job execution that is IN_PROGRESS, and you do not set &lt;code&gt;force&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt;, then an &lt;code&gt;InvalidStateTransitionException&lt;/code&gt; will be thrown. The default is &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;Canceling a job execution which is "IN_PROGRESS", will cause the device to be unable to update the job execution status. Use caution and ensure that the device is able to recover to a valid state.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=force")
+    public Boolean force;
+    public CancelJobExecutionRequest withForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    
+    /**
+     * The ID of the job to be canceled.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public CancelJobExecutionRequest withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    
+    /**
+     * The name of the thing whose execution of the job will be canceled.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=thingName")
+    public String thingName;
+    public CancelJobExecutionRequest withThingName(String thingName) {
+        this.thingName = thingName;
         return this;
     }
     

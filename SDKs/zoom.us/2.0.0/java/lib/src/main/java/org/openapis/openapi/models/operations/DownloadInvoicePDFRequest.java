@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadInvoicePDFRequest {
-    
-    public DownloadInvoicePDFPathParams pathParams;
-    public DownloadInvoicePDFRequest withPathParams(DownloadInvoicePDFPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoiceId")
+    public String invoiceId;
+    public DownloadInvoicePDFRequest withInvoiceId(String invoiceId) {
+        this.invoiceId = invoiceId;
         return this;
     }
     

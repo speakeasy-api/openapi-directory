@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateInternalNotes1Request {
-    
-    public UpdateInternalNotes1PathParams pathParams;
-    public UpdateInternalNotes1Request withPathParams(UpdateInternalNotes1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated Internal Notes for a quote.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.StringDTO request;
-    public UpdateInternalNotes1Request withRequest(org.openapis.openapi.models.shared.StringDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.StringDTO stringDTO;
+    public UpdateInternalNotes1Request withStringDTO(org.openapis.openapi.models.shared.StringDTO stringDTO) {
+        this.stringDTO = stringDTO;
+        return this;
+    }
+    
+    /**
+     * quote's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
+    public String quoteId;
+    public UpdateInternalNotes1Request withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
         return this;
     }
     

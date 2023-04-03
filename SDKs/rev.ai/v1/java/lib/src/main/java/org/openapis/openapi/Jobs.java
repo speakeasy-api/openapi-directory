@@ -40,7 +40,7 @@ public class Jobs {
      */
     public org.openapis.openapi.models.operations.DeleteJobByIdResponse deleteJobById(org.openapis.openapi.models.operations.DeleteJobByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteJobByIdPathParams.class, baseUrl, "/jobs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteJobByIdRequest.class, baseUrl, "/jobs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -98,7 +98,7 @@ public class Jobs {
      */
     public org.openapis.openapi.models.operations.GetJobByIdResponse getJobById(org.openapis.openapi.models.operations.GetJobByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJobByIdPathParams.class, baseUrl, "/jobs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJobByIdRequest.class, baseUrl, "/jobs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -160,7 +160,7 @@ public class Jobs {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListOfJobsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListOfJobsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -214,7 +214,7 @@ public class Jobs {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubmitTranscriptionJobJsonResponse submitTranscriptionJobJson(org.openapis.openapi.models.operations.SubmitTranscriptionJobJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubmitTranscriptionJobJsonResponse submitTranscriptionJobJson(org.openapis.openapi.models.shared.SubmitJobMediaUrlOptions request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/jobs");
         
@@ -283,7 +283,7 @@ public class Jobs {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubmitTranscriptionJobMultipartResponse submitTranscriptionJobMultipart(org.openapis.openapi.models.operations.SubmitTranscriptionJobMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubmitTranscriptionJobMultipartResponse submitTranscriptionJobMultipart(org.openapis.openapi.models.operations.SubmitTranscriptionJobMultipartFormData request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/jobs");
         

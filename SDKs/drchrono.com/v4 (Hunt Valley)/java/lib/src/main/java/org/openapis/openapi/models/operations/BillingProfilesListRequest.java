@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BillingProfilesListRequest {
-    
-    public BillingProfilesListQueryParams queryParams;
-    public BillingProfilesListRequest withQueryParams(BillingProfilesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public BillingProfilesListRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public BillingProfilesListRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
     
-    public BillingProfilesListSecurity security;
-    public BillingProfilesListRequest withSecurity(BillingProfilesListSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public BillingProfilesListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

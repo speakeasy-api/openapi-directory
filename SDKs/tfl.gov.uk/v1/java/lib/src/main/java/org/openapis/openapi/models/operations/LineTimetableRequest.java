@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineTimetableRequest {
+    /**
+     * The originating station's stop point id (station naptan code e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fromStopPointId")
+    public String fromStopPointId;
+    public LineTimetableRequest withFromStopPointId(String fromStopPointId) {
+        this.fromStopPointId = fromStopPointId;
+        return this;
+    }
     
-    public LineTimetablePathParams pathParams;
-    public LineTimetableRequest withPathParams(LineTimetablePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A single line id e.g. victoria
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public LineTimetableRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

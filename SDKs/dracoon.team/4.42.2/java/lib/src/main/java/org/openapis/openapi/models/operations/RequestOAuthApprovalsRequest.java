@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestOAuthApprovalsRequest {
-    
-    public RequestOAuthApprovalsQueryParams queryParams;
-    public RequestOAuthApprovalsRequest withQueryParams(RequestOAuthApprovalsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestOAuthApprovalsRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestOAuthApprovalsXSdsDateFormatEnum xSdsDateFormat;
+    public RequestOAuthApprovalsRequest withXSdsDateFormat(RequestOAuthApprovalsXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
     
-    public RequestOAuthApprovalsHeaders headers;
-    public RequestOAuthApprovalsRequest withHeaders(RequestOAuthApprovalsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Sort string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public RequestOAuthApprovalsRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

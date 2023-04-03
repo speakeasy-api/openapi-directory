@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestnetGetStatusRequest {
-    
-    public TestnetGetStatusQueryParams queryParams;
-    public TestnetGetStatusRequest withQueryParams(TestnetGetStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Function to call, getInfo, getDifficulty, getBestBlockHash, or getLastBlockHash
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public TestnetGetStatusRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     

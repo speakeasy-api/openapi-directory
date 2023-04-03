@@ -33,25 +33,26 @@ public class Projects {
     /**
      * Returns the email address of the service account for your project used for interactions with Google Cloud KMS.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryProjectsGetServiceAccountResponse bigqueryProjectsGetServiceAccount(org.openapis.openapi.models.operations.BigqueryProjectsGetServiceAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryProjectsGetServiceAccountResponse bigqueryProjectsGetServiceAccount(org.openapis.openapi.models.operations.BigqueryProjectsGetServiceAccountRequest request, org.openapis.openapi.models.operations.BigqueryProjectsGetServiceAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryProjectsGetServiceAccountPathParams.class, baseUrl, "/projects/{projectId}/serviceAccount", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryProjectsGetServiceAccountRequest.class, baseUrl, "/projects/{projectId}/serviceAccount", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryProjectsGetServiceAccountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryProjectsGetServiceAccountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,10 +79,11 @@ public class Projects {
     /**
      * Lists all projects to which you have been granted any project role.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryProjectsListResponse bigqueryProjectsList(org.openapis.openapi.models.operations.BigqueryProjectsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryProjectsListResponse bigqueryProjectsList(org.openapis.openapi.models.operations.BigqueryProjectsListRequest request, org.openapis.openapi.models.operations.BigqueryProjectsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/projects");
         
@@ -89,14 +91,14 @@ public class Projects {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryProjectsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryProjectsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

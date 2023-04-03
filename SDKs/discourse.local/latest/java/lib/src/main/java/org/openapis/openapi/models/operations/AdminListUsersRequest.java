@@ -4,20 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdminListUsersRequest {
-    
-    public AdminListUsersPathParams pathParams;
-    public AdminListUsersRequest withPathParams(AdminListUsersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asc")
+    public AdminListUsersAscEnum asc;
+    public AdminListUsersRequest withAsc(AdminListUsersAscEnum asc) {
+        this.asc = asc;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=flag")
+    public AdminListUsersFlagEnum flag;
+    public AdminListUsersRequest withFlag(AdminListUsersFlagEnum flag) {
+        this.flag = flag;
+        return this;
+    }
     
-    public AdminListUsersQueryParams queryParams;
-    public AdminListUsersRequest withQueryParams(AdminListUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public AdminListUsersOrderEnum order;
+    public AdminListUsersRequest withOrder(AdminListUsersOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public AdminListUsersRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=show_emails")
+    public Boolean showEmails;
+    public AdminListUsersRequest withShowEmails(Boolean showEmails) {
+        this.showEmails = showEmails;
         return this;
     }
     

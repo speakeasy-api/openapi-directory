@@ -49,19 +49,20 @@ public class Snippets {
      * Delete a snippet
      * Deletes a snippet and returns an empty response.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdResponse deleteSnippetsWorkspaceEncodedId(org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdResponse deleteSnippetsWorkspaceEncodedId(org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdRequest request, org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -93,19 +94,20 @@ public class Snippets {
      * 
      * Comments can only be removed by the comment author, snippet creator, or workspace admin.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdResponse deleteSnippetsWorkspaceEncodedIdCommentsCommentId(org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdResponse deleteSnippetsWorkspaceEncodedIdCommentsCommentId(org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdRequest request, org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}/comments/{comment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}/comments/{comment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -136,19 +138,20 @@ public class Snippets {
      * Used to stop watching a specific snippet. Returns 204 (No Content)
      * to indicate success.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdWatchResponse deleteSnippetsWorkspaceEncodedIdWatch(org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdWatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdWatchResponse deleteSnippetsWorkspaceEncodedIdWatch(org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdWatchRequest request, org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdWatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdWatchPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}/watch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdWatchRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}/watch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -185,19 +188,20 @@ public class Snippets {
      * To delete a snippet, regardless of whether or not concurrent changes
      * are being made to it, use `DELETE /snippets/{encoded_id}` instead.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdNodeIdResponse deleteSnippetsWorkspaceEncodedIdNodeId(org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdNodeIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdNodeIdResponse deleteSnippetsWorkspaceEncodedIdNodeId(org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdNodeIdRequest request, org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdNodeIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdNodeIdPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}/{node_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdNodeIdRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}/{node_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -248,10 +252,11 @@ public class Snippets {
      * `multipart/form-data` or `multipart/related`. As a result, it is not
      * possible to include the file contents.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSnippetsResponse getSnippets(org.openapis.openapi.models.operations.GetSnippetsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSnippetsResponse getSnippets(org.openapis.openapi.models.operations.GetSnippetsRequest request, org.openapis.openapi.models.operations.GetSnippetsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/snippets");
         
@@ -259,14 +264,14 @@ public class Snippets {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSnippetsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSnippetsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -304,25 +309,26 @@ public class Snippets {
      * by the snippet owner and only those that are owned by `{workspace}` are
      * returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceResponse getSnippetsWorkspace(org.openapis.openapi.models.operations.GetSnippetsWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceResponse getSnippetsWorkspace(org.openapis.openapi.models.operations.GetSnippetsWorkspaceRequest request, org.openapis.openapi.models.operations.GetSnippetsWorkspaceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspacePathParams.class, baseUrl, "/snippets/{workspace}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceRequest.class, baseUrl, "/snippets/{workspace}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSnippetsWorkspaceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSnippetsWorkspaceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -543,19 +549,20 @@ public class Snippets {
      *     AqxFUD6OMxcvkO+UfKfkOyXfKdsv/AYCHMLVkHAFWgAAAABJRU5ErkJggg==
      *     ------------------------------5957323a6b76--
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdResponse getSnippetsWorkspaceEncodedId(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdResponse getSnippetsWorkspaceEncodedId(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRequest request, org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -617,19 +624,20 @@ public class Snippets {
      * The default sorting is oldest to newest and can be overridden with
      * the `sort` query parameter.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsResponse getSnippetsWorkspaceEncodedIdComments(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsResponse getSnippetsWorkspaceEncodedIdComments(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsRequest request, org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -665,19 +673,20 @@ public class Snippets {
      * Get a comment on a snippet
      * Returns the specific snippet comment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsCommentIdResponse getSnippetsWorkspaceEncodedIdCommentsCommentId(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsCommentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsCommentIdResponse getSnippetsWorkspaceEncodedIdCommentsCommentId(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsCommentIdRequest request, org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsCommentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsCommentIdPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}/comments/{comment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsCommentIdRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}/comments/{comment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -713,19 +722,20 @@ public class Snippets {
      * List snippet changes
      * Returns the changes (commits) made on this snippet.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsResponse getSnippetsWorkspaceEncodedIdCommits(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsResponse getSnippetsWorkspaceEncodedIdCommits(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsRequest request, org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}/commits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}/commits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -761,19 +771,20 @@ public class Snippets {
      * Get a previous snippet change
      * Returns the changes made on this snippet in this commit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse getSnippetsWorkspaceEncodedIdCommitsRevision(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsRevisionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse getSnippetsWorkspaceEncodedIdCommitsRevision(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsRevisionRequest request, org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsRevisionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsRevisionPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}/commits/{revision}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsRevisionRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}/commits/{revision}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -811,19 +822,20 @@ public class Snippets {
      * need for first having to retrieve the snippet itself and having to pull
      * out the versioned file links.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdFilesPathResponse getSnippetsWorkspaceEncodedIdFilesPath(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdFilesPathRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdFilesPathResponse getSnippetsWorkspaceEncodedIdFilesPath(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdFilesPathRequest request, org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdFilesPathSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdFilesPathPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}/files/{path}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdFilesPathRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}/files/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -860,19 +872,20 @@ public class Snippets {
      * 
      * Hitting this endpoint anonymously always returns a 404.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchResponse getSnippetsWorkspaceEncodedIdWatch(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchResponse getSnippetsWorkspaceEncodedIdWatch(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchRequest request, org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}/watch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}/watch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -902,19 +915,20 @@ public class Snippets {
      * List users watching a snippet
      * Returns a paginated list of all users watching a specific snippet.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchersResponse getSnippetsWorkspaceEncodedIdWatchers(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchersResponse getSnippetsWorkspaceEncodedIdWatchers(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchersRequest request, org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchersPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}/watchers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchersRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}/watchers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -958,19 +972,20 @@ public class Snippets {
      * 
      * Other than that, the two endpoints are identical in behavior.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdResponse getSnippetsWorkspaceEncodedIdNodeId(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdResponse getSnippetsWorkspaceEncodedIdNodeId(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdRequest request, org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}/{node_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}/{node_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1034,19 +1049,20 @@ public class Snippets {
      * Note that for text files, no character encoding is included as part of
      * the content type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdFilesPathResponse getSnippetsWorkspaceEncodedIdNodeIdFilesPath(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdFilesPathResponse getSnippetsWorkspaceEncodedIdNodeIdFilesPath(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest request, org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdFilesPathSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdFilesPathPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}/{node_id}/files/{path}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}/{node_id}/files/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1096,25 +1112,26 @@ public class Snippets {
      * unspecified as Git does not track this, making it hard for
      * Bitbucket to reliably determine this.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionDiffResponse getSnippetsWorkspaceEncodedIdRevisionDiff(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionDiffRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionDiffResponse getSnippetsWorkspaceEncodedIdRevisionDiff(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionDiffRequest request, org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionDiffSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionDiffPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}/{revision}/diff", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionDiffRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}/{revision}/diff", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionDiffQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionDiffRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1163,19 +1180,20 @@ public class Snippets {
      * unspecified as Git does not track this, making it hard for
      * Bitbucket to reliably determine this.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionPatchResponse getSnippetsWorkspaceEncodedIdRevisionPatch(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionPatchResponse getSnippetsWorkspaceEncodedIdRevisionPatch(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionPatchRequest request, org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionPatchPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}/{revision}/patch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionPatchRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}/{revision}/patch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1352,10 +1370,11 @@ public class Snippets {
      * To create the snippet under a workspace, just append the workspace ID
      * to the URL. See [`/2.0/snippets/{workspace}`](/cloud/bitbucket/rest/api-group-snippets/#api-snippets-workspace-post).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSnippetsResponse postSnippets(org.openapis.openapi.models.operations.PostSnippetsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSnippetsResponse postSnippets(java.util.Map<String, Object> request, org.openapis.openapi.models.operations.PostSnippetsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/snippets");
         
@@ -1369,7 +1388,7 @@ public class Snippets {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1409,24 +1428,25 @@ public class Snippets {
      * created under the workspace specified in the path parameter
      * `{workspace}`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSnippetsWorkspaceResponse postSnippetsWorkspace(org.openapis.openapi.models.operations.PostSnippetsWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSnippetsWorkspaceResponse postSnippetsWorkspace(org.openapis.openapi.models.operations.PostSnippetsWorkspaceRequest request, org.openapis.openapi.models.operations.PostSnippetsWorkspaceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSnippetsWorkspacePathParams.class, baseUrl, "/snippets/{workspace}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSnippetsWorkspaceRequest.class, baseUrl, "/snippets/{workspace}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1468,24 +1488,25 @@ public class Snippets {
      * 
      * To create a threaded reply to an existing comment, include `parent.id`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSnippetsWorkspaceEncodedIdCommentsResponse postSnippetsWorkspaceEncodedIdComments(org.openapis.openapi.models.operations.PostSnippetsWorkspaceEncodedIdCommentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSnippetsWorkspaceEncodedIdCommentsResponse postSnippetsWorkspaceEncodedIdComments(org.openapis.openapi.models.operations.PostSnippetsWorkspaceEncodedIdCommentsRequest request, org.openapis.openapi.models.operations.PostSnippetsWorkspaceEncodedIdCommentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSnippetsWorkspaceEncodedIdCommentsPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSnippetsWorkspaceEncodedIdCommentsRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1720,19 +1741,20 @@ public class Snippets {
      * regardless of whether or not they are listed in `files`, as a
      * convenience to the client.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdResponse putSnippetsWorkspaceEncodedId(org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdResponse putSnippetsWorkspaceEncodedId(org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdRequest request, org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1792,24 +1814,25 @@ public class Snippets {
      * 
      * Comments can only be updated by their author.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdCommentsCommentIdResponse putSnippetsWorkspaceEncodedIdCommentsCommentId(org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdCommentsCommentIdResponse putSnippetsWorkspaceEncodedIdCommentsCommentId(org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest request, org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdCommentsCommentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdCommentsCommentIdPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}/comments/{comment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}/comments/{comment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1845,19 +1868,20 @@ public class Snippets {
      * Watch a snippet
      * Used to start watching a specific snippet. Returns 204 (No Content).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdWatchResponse putSnippetsWorkspaceEncodedIdWatch(org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdWatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdWatchResponse putSnippetsWorkspaceEncodedIdWatch(org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdWatchRequest request, org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdWatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdWatchPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}/watch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdWatchRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}/watch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1900,19 +1924,20 @@ public class Snippets {
      * 
      * Other than that, the two endpoints are identical in behavior.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdNodeIdResponse putSnippetsWorkspaceEncodedIdNodeId(org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdNodeIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdNodeIdResponse putSnippetsWorkspaceEncodedIdNodeId(org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdNodeIdRequest request, org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdNodeIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdNodeIdPathParams.class, baseUrl, "/snippets/{workspace}/{encoded_id}/{node_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdNodeIdRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}/{node_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

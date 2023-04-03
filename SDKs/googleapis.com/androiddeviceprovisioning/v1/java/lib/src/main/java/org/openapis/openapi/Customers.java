@@ -40,15 +40,15 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsCreateResponse androiddeviceprovisioningCustomersConfigurationsCreate(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsCreatePathParams.class, baseUrl, "/v1/{parent}/configurations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsCreateRequest.class, baseUrl, "/v1/{parent}/configurations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "configurationInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -86,13 +86,13 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsDeleteResponse androiddeviceprovisioningCustomersConfigurationsDelete(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -130,13 +130,13 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsListResponse androiddeviceprovisioningCustomersConfigurationsList(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsListPathParams.class, baseUrl, "/v1/{parent}/configurations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsListRequest.class, baseUrl, "/v1/{parent}/configurations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -174,15 +174,15 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsPatchResponse androiddeviceprovisioningCustomersConfigurationsPatch(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsPatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "configurationInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -220,15 +220,15 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesApplyConfigurationResponse androiddeviceprovisioningCustomersDevicesApplyConfiguration(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesApplyConfigurationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesApplyConfigurationPathParams.class, baseUrl, "/v1/{parent}/devices:applyConfiguration", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesApplyConfigurationRequest.class, baseUrl, "/v1/{parent}/devices:applyConfiguration", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customerApplyConfigurationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesApplyConfigurationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesApplyConfigurationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -266,13 +266,13 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesListResponse androiddeviceprovisioningCustomersDevicesList(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesListPathParams.class, baseUrl, "/v1/{parent}/devices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesListRequest.class, baseUrl, "/v1/{parent}/devices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -310,15 +310,15 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesRemoveConfigurationResponse androiddeviceprovisioningCustomersDevicesRemoveConfiguration(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesRemoveConfigurationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesRemoveConfigurationPathParams.class, baseUrl, "/v1/{parent}/devices:removeConfiguration", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesRemoveConfigurationRequest.class, baseUrl, "/v1/{parent}/devices:removeConfiguration", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customerRemoveConfigurationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesRemoveConfigurationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesRemoveConfigurationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -356,15 +356,15 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesUnclaimResponse androiddeviceprovisioningCustomersDevicesUnclaim(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesUnclaimRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesUnclaimPathParams.class, baseUrl, "/v1/{parent}/devices:unclaim", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesUnclaimRequest.class, baseUrl, "/v1/{parent}/devices:unclaim", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customerUnclaimDeviceRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesUnclaimQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDevicesUnclaimRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -402,13 +402,13 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDpcsListResponse androiddeviceprovisioningCustomersDpcsList(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDpcsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDpcsListPathParams.class, baseUrl, "/v1/{parent}/dpcs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDpcsListRequest.class, baseUrl, "/v1/{parent}/dpcs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDpcsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersDpcsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -452,7 +452,7 @@ public class Customers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

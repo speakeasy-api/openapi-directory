@@ -43,7 +43,7 @@ public class MessageComments {
      */
     public org.openapis.openapi.models.operations.DeleteMessageCommentsIdResponse deleteMessageCommentsId(org.openapis.openapi.models.operations.DeleteMessageCommentsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMessageCommentsIdPathParams.class, baseUrl, "/message_comments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMessageCommentsIdRequest.class, baseUrl, "/message_comments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class MessageComments {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMessageCommentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMessageCommentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -123,7 +123,7 @@ public class MessageComments {
      */
     public org.openapis.openapi.models.operations.GetMessageCommentsIdResponse getMessageCommentsId(org.openapis.openapi.models.operations.GetMessageCommentsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMessageCommentsIdPathParams.class, baseUrl, "/message_comments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMessageCommentsIdRequest.class, baseUrl, "/message_comments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -164,12 +164,12 @@ public class MessageComments {
      */
     public org.openapis.openapi.models.operations.PatchMessageCommentsIdResponse patchMessageCommentsId(org.openapis.openapi.models.operations.PatchMessageCommentsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchMessageCommentsIdPathParams.class, baseUrl, "/message_comments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchMessageCommentsIdRequest.class, baseUrl, "/message_comments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -208,7 +208,7 @@ public class MessageComments {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMessageCommentsResponse postMessageComments(org.openapis.openapi.models.operations.PostMessageCommentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMessageCommentsResponse postMessageComments(org.openapis.openapi.models.operations.PostMessageCommentsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/message_comments");
         

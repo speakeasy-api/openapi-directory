@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchMerchantsMerchantIdStoresReferenceTerminalSettingsRequest {
-    
-    public PatchMerchantsMerchantIdStoresReferenceTerminalSettingsPathParams pathParams;
-    public PatchMerchantsMerchantIdStoresReferenceTerminalSettingsRequest withPathParams(PatchMerchantsMerchantIdStoresReferenceTerminalSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TerminalSettings request;
-    public PatchMerchantsMerchantIdStoresReferenceTerminalSettingsRequest withRequest(org.openapis.openapi.models.shared.TerminalSettings request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TerminalSettings terminalSettings;
+    public PatchMerchantsMerchantIdStoresReferenceTerminalSettingsRequest withTerminalSettings(org.openapis.openapi.models.shared.TerminalSettings terminalSettings) {
+        this.terminalSettings = terminalSettings;
         return this;
     }
     
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public PatchMerchantsMerchantIdStoresReferenceTerminalSettingsRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
+        return this;
+    }
     
-    public PatchMerchantsMerchantIdStoresReferenceTerminalSettingsSecurity security;
-    public PatchMerchantsMerchantIdStoresReferenceTerminalSettingsRequest withSecurity(PatchMerchantsMerchantIdStoresReferenceTerminalSettingsSecurity security) {
-        this.security = security;
+    /**
+     * The reference that identifies the store.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reference")
+    public String reference;
+    public PatchMerchantsMerchantIdStoresReferenceTerminalSettingsRequest withReference(String reference) {
+        this.reference = reference;
         return this;
     }
     

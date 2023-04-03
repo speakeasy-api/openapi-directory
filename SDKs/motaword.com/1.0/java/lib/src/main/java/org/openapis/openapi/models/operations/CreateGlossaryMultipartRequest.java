@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateGlossaryMultipartRequest {
-    
-    public CreateGlossaryMultipartPathParams pathParams;
-    public CreateGlossaryMultipartRequest withPathParams(CreateGlossaryMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public org.openapis.openapi.models.shared.GlossaryUploadRequest1 glossaryUploadRequest1;
+    public CreateGlossaryMultipartRequest withGlossaryUploadRequest1(org.openapis.openapi.models.shared.GlossaryUploadRequest1 glossaryUploadRequest1) {
+        this.glossaryUploadRequest1 = glossaryUploadRequest1;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public org.openapis.openapi.models.shared.GlossaryUploadRequest1 request;
-    public CreateGlossaryMultipartRequest withRequest(org.openapis.openapi.models.shared.GlossaryUploadRequest1 request) {
-        this.request = request;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public CreateGlossaryMultipartRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

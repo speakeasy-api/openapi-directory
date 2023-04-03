@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVodSeasonVideosRequest {
-    
-    public GetVodSeasonVideosPathParams pathParams;
-    public GetVodSeasonVideosRequest withPathParams(GetVodSeasonVideosPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The attribute by which to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public GetVodSeasonVideosFilterEnum filter;
+    public GetVodSeasonVideosRequest withFilter(GetVodSeasonVideosFilterEnum filter) {
+        this.filter = filter;
         return this;
     }
     
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public GetVodSeasonVideosRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
+        return this;
+    }
     
-    public GetVodSeasonVideosQueryParams queryParams;
-    public GetVodSeasonVideosRequest withQueryParams(GetVodSeasonVideosQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetVodSeasonVideosRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetVodSeasonVideosRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The ID of the season.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season_id")
+    public Double seasonId;
+    public GetVodSeasonVideosRequest withSeasonId(Double seasonId) {
+        this.seasonId = seasonId;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetVodSeasonVideosSortEnum sort;
+    public GetVodSeasonVideosRequest withSort(GetVodSeasonVideosSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

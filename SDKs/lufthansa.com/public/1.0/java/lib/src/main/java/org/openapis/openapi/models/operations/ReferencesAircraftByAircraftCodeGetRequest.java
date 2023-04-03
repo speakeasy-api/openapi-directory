@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReferencesAircraftByAircraftCodeGetRequest {
-    
-    public ReferencesAircraftByAircraftCodeGetPathParams pathParams;
-    public ReferencesAircraftByAircraftCodeGetRequest withPathParams(ReferencesAircraftByAircraftCodeGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ReferencesAircraftByAircraftCodeGetRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public ReferencesAircraftByAircraftCodeGetQueryParams queryParams;
-    public ReferencesAircraftByAircraftCodeGetRequest withQueryParams(ReferencesAircraftByAircraftCodeGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * 3-character IATA aircraft code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aircraftCode")
+    public String aircraftCode;
+    public ReferencesAircraftByAircraftCodeGetRequest withAircraftCode(String aircraftCode) {
+        this.aircraftCode = aircraftCode;
         return this;
     }
     
-    
-    public ReferencesAircraftByAircraftCodeGetHeaders headers;
-    public ReferencesAircraftByAircraftCodeGetRequest withHeaders(ReferencesAircraftByAircraftCodeGetHeaders headers) {
-        this.headers = headers;
+    /**
+     * Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public ReferencesAircraftByAircraftCodeGetRequest withLimit(String limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public ReferencesAircraftByAircraftCodeGetSecurity security;
-    public ReferencesAircraftByAircraftCodeGetRequest withSecurity(ReferencesAircraftByAircraftCodeGetSecurity security) {
-        this.security = security;
+    /**
+     * Number of records skipped. Defaults to 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public ReferencesAircraftByAircraftCodeGetRequest withOffset(String offset) {
+        this.offset = offset;
         return this;
     }
     

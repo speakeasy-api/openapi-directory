@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangePhpMemoryLimitRequest {
-    
-    public ChangePhpMemoryLimitPathParams pathParams;
-    public ChangePhpMemoryLimitRequest withPathParams(ChangePhpMemoryLimitPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ChangePhpMemoryLimitQueryParams queryParams;
-    public ChangePhpMemoryLimitRequest withQueryParams(ChangePhpMemoryLimitQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Memory limit config
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdatePhpMemoryLimitRequest request;
-    public ChangePhpMemoryLimitRequest withRequest(org.openapis.openapi.models.shared.UpdatePhpMemoryLimitRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdatePhpMemoryLimitRequest updatePhpMemoryLimitRequest;
+    public ChangePhpMemoryLimitRequest withUpdatePhpMemoryLimitRequest(org.openapis.openapi.models.shared.UpdatePhpMemoryLimitRequest updatePhpMemoryLimitRequest) {
+        this.updatePhpMemoryLimitRequest = updatePhpMemoryLimitRequest;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public ChangePhpMemoryLimitRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Linux hosting domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public ChangePhpMemoryLimitRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     

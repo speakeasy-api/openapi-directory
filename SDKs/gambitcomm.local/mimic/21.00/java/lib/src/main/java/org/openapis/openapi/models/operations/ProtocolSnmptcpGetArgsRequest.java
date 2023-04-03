@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmptcpGetArgsRequest {
-    
-    public ProtocolSnmptcpGetArgsPathParams pathParams;
-    public ProtocolSnmptcpGetArgsRequest withPathParams(ProtocolSnmptcpGetArgsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show the SNMPTCP argument structure
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSnmptcpGetArgsRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

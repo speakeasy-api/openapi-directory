@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionTypeRequest {
-    
-    public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionTypePathParams pathParams;
-    public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionTypeRequest withPathParams(DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionTypeRequest withAppId(Integer appId) {
+        this.appId = appId;
         return this;
     }
     
+    /**
+     * The ID of the custom workflow action.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=definitionId")
+    public String definitionId;
+    public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionTypeRequest withDefinitionId(String definitionId) {
+        this.definitionId = definitionId;
+        return this;
+    }
     
-    public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionTypeSecurity security;
-    public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionTypeRequest withSecurity(DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionTypeSecurity security) {
-        this.security = security;
+    /**
+     * The type of function. This determines when the function will be called.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionType")
+    public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionTypeFunctionTypeEnum functionType;
+    public DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionTypeRequest withFunctionType(DeleteAutomationV4ActionsAppIdDefinitionIdFunctionsFunctionTypeArchiveByFunctionTypeFunctionTypeEnum functionType) {
+        this.functionType = functionType;
         return this;
     }
     

@@ -33,19 +33,20 @@ public class CategoriesSubscriptions {
     /**
      * Check if a user follows a category
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CheckIfUserSubscribedToCategoryResponse checkIfUserSubscribedToCategory(org.openapis.openapi.models.operations.CheckIfUserSubscribedToCategoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CheckIfUserSubscribedToCategoryResponse checkIfUserSubscribedToCategory(org.openapis.openapi.models.operations.CheckIfUserSubscribedToCategoryRequest request, org.openapis.openapi.models.operations.CheckIfUserSubscribedToCategorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfUserSubscribedToCategoryPathParams.class, baseUrl, "/users/{user_id}/categories/{category}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfUserSubscribedToCategoryRequest.class, baseUrl, "/users/{user_id}/categories/{category}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -66,19 +67,20 @@ public class CategoriesSubscriptions {
     /**
      * Check if a user follows a category
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CheckIfUserSubscribedToCategoryAlt1Response checkIfUserSubscribedToCategoryAlt1(org.openapis.openapi.models.operations.CheckIfUserSubscribedToCategoryAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.CheckIfUserSubscribedToCategoryAlt1Response checkIfUserSubscribedToCategoryAlt1(org.openapis.openapi.models.operations.CheckIfUserSubscribedToCategoryAlt1Request request, org.openapis.openapi.models.operations.CheckIfUserSubscribedToCategoryAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfUserSubscribedToCategoryAlt1PathParams.class, baseUrl, "/me/categories/{category}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfUserSubscribedToCategoryAlt1Request.class, baseUrl, "/me/categories/{category}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -99,25 +101,26 @@ public class CategoriesSubscriptions {
     /**
      * Get all the categories that a user follows
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCategorySubscriptionsResponse getCategorySubscriptions(org.openapis.openapi.models.operations.GetCategorySubscriptionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCategorySubscriptionsResponse getCategorySubscriptions(org.openapis.openapi.models.operations.GetCategorySubscriptionsRequest request, org.openapis.openapi.models.operations.GetCategorySubscriptionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCategorySubscriptionsPathParams.class, baseUrl, "/users/{user_id}/categories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCategorySubscriptionsRequest.class, baseUrl, "/users/{user_id}/categories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCategorySubscriptionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCategorySubscriptionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -152,10 +155,11 @@ public class CategoriesSubscriptions {
     /**
      * Get all the categories that a user follows
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCategorySubscriptionsAlt1Response getCategorySubscriptionsAlt1(org.openapis.openapi.models.operations.GetCategorySubscriptionsAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCategorySubscriptionsAlt1Response getCategorySubscriptionsAlt1(org.openapis.openapi.models.operations.GetCategorySubscriptionsAlt1Request request, org.openapis.openapi.models.operations.GetCategorySubscriptionsAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/categories");
         
@@ -163,14 +167,14 @@ public class CategoriesSubscriptions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCategorySubscriptionsAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCategorySubscriptionsAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -205,19 +209,20 @@ public class CategoriesSubscriptions {
     /**
      * Subscribe a user to a single category
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubscribeToCategoryResponse subscribeToCategory(org.openapis.openapi.models.operations.SubscribeToCategoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubscribeToCategoryResponse subscribeToCategory(org.openapis.openapi.models.operations.SubscribeToCategoryRequest request, org.openapis.openapi.models.operations.SubscribeToCategorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubscribeToCategoryPathParams.class, baseUrl, "/users/{user_id}/categories/{category}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubscribeToCategoryRequest.class, baseUrl, "/users/{user_id}/categories/{category}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -238,19 +243,20 @@ public class CategoriesSubscriptions {
     /**
      * Subscribe a user to a single category
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubscribeToCategoryAlt1Response subscribeToCategoryAlt1(org.openapis.openapi.models.operations.SubscribeToCategoryAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.SubscribeToCategoryAlt1Response subscribeToCategoryAlt1(org.openapis.openapi.models.operations.SubscribeToCategoryAlt1Request request, org.openapis.openapi.models.operations.SubscribeToCategoryAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubscribeToCategoryAlt1PathParams.class, baseUrl, "/me/categories/{category}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubscribeToCategoryAlt1Request.class, baseUrl, "/me/categories/{category}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -271,19 +277,20 @@ public class CategoriesSubscriptions {
     /**
      * Unsubscribe a user from a category
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnsubscribeFromCategoryResponse unsubscribeFromCategory(org.openapis.openapi.models.operations.UnsubscribeFromCategoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnsubscribeFromCategoryResponse unsubscribeFromCategory(org.openapis.openapi.models.operations.UnsubscribeFromCategoryRequest request, org.openapis.openapi.models.operations.UnsubscribeFromCategorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnsubscribeFromCategoryPathParams.class, baseUrl, "/users/{user_id}/categories/{category}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnsubscribeFromCategoryRequest.class, baseUrl, "/users/{user_id}/categories/{category}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -304,19 +311,20 @@ public class CategoriesSubscriptions {
     /**
      * Unsubscribe a user from a category
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnsubscribeFromCategoryAlt1Response unsubscribeFromCategoryAlt1(org.openapis.openapi.models.operations.UnsubscribeFromCategoryAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.UnsubscribeFromCategoryAlt1Response unsubscribeFromCategoryAlt1(org.openapis.openapi.models.operations.UnsubscribeFromCategoryAlt1Request request, org.openapis.openapi.models.operations.UnsubscribeFromCategoryAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnsubscribeFromCategoryAlt1PathParams.class, baseUrl, "/me/categories/{category}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnsubscribeFromCategoryAlt1Request.class, baseUrl, "/me/categories/{category}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -43,10 +43,11 @@ public class Users {
      * Create user
      * Can only be used by an **administrative** user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddUserResponse addUser(org.openapis.openapi.models.operations.AddUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddUserResponse addUser(org.openapis.openapi.models.shared.UserInput request, org.openapis.openapi.models.operations.AddUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users");
         
@@ -60,7 +61,7 @@ public class Users {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -88,19 +89,20 @@ public class Users {
      * Delete user
      * Can only be used by an **administrative** user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteUserResponse deleteUser(org.openapis.openapi.models.operations.DeleteUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteUserResponse deleteUser(org.openapis.openapi.models.operations.DeleteUserRequest request, org.openapis.openapi.models.operations.DeleteUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserPathParams.class, baseUrl, "/users/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserRequest.class, baseUrl, "/users/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,19 +130,20 @@ public class Users {
      * Get user
      * Can only be used by an **administrative** user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserByIdResponse getUserById(org.openapis.openapi.models.operations.GetUserByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUserByIdResponse getUserById(org.openapis.openapi.models.operations.GetUserByIdRequest request, org.openapis.openapi.models.operations.GetUserByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserByIdPathParams.class, baseUrl, "/users/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserByIdRequest.class, baseUrl, "/users/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -168,10 +171,11 @@ public class Users {
      * Get all users
      * Can only be used by an **administrative** user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUsersResponse getUsers(org.openapis.openapi.models.operations.GetUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUsersResponse getUsers(org.openapis.openapi.models.operations.GetUsersRequest request, org.openapis.openapi.models.operations.GetUsersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users");
         
@@ -179,14 +183,14 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -214,24 +218,25 @@ public class Users {
      * Update existing user
      * Can only be used by an **administrative** user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateUserResponse updateUser(org.openapis.openapi.models.operations.UpdateUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateUserResponse updateUser(org.openapis.openapi.models.operations.UpdateUserRequest request, org.openapis.openapi.models.operations.UpdateUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserPathParams.class, baseUrl, "/users/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserRequest.class, baseUrl, "/users/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "userInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMatrixSolutionRequest {
-    
-    public GetMatrixSolutionPathParams pathParams;
-    public GetMatrixSolutionRequest withPathParams(GetMatrixSolutionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Request solution with jobId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public GetMatrixSolutionRequest withJobId(String jobId) {
+        this.jobId = jobId;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiTriggerEventJsonRequest {
-    
-    public OrderApiTriggerEventJsonPathParams pathParams;
-    public OrderApiTriggerEventJsonRequest withPathParams(OrderApiTriggerEventJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer rechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer;
+    public OrderApiTriggerEventJsonRequest withRechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer rechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer) {
+        this.rechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer = rechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer request;
-    public OrderApiTriggerEventJsonRequest withRequest(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer request) {
-        this.request = request;
+    /**
+     * The id of the order
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrderApiTriggerEventJsonRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

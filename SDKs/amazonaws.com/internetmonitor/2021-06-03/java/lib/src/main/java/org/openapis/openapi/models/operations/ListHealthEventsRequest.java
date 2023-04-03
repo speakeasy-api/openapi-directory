@@ -4,27 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListHealthEventsRequest {
-    
-    public ListHealthEventsPathParams pathParams;
-    public ListHealthEventsRequest withPathParams(ListHealthEventsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The time when a health event ended. If the health event is still ongoing, then the end time is not set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndTime")
+    public OffsetDateTime endTime;
+    public ListHealthEventsRequest withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
         return this;
     }
     
-    
-    public ListHealthEventsQueryParams queryParams;
-    public ListHealthEventsRequest withQueryParams(ListHealthEventsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The status of a health event.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EventStatus")
+    public ListHealthEventsEventStatusEnum eventStatus;
+    public ListHealthEventsRequest withEventStatus(ListHealthEventsEventStatusEnum eventStatus) {
+        this.eventStatus = eventStatus;
         return this;
     }
     
+    /**
+     * The number of health event objects that you want to return with this call. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public ListHealthEventsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
     
-    public ListHealthEventsHeaders headers;
-    public ListHealthEventsRequest withHeaders(ListHealthEventsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the monitor.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MonitorName")
+    public String monitorName;
+    public ListHealthEventsRequest withMonitorName(String monitorName) {
+        this.monitorName = monitorName;
+        return this;
+    }
+    
+    /**
+     * The token for the next set of results. You receive this token from a previous call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListHealthEventsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The time when a health event started.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartTime")
+    public OffsetDateTime startTime;
+    public ListHealthEventsRequest withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListHealthEventsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListHealthEventsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListHealthEventsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListHealthEventsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListHealthEventsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListHealthEventsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListHealthEventsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

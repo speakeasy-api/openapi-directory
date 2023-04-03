@@ -40,12 +40,12 @@ public class LinkAggregations {
      */
     public org.openapis.openapi.models.operations.CreateNetworkSwitchLinkAggregationResponse createNetworkSwitchLinkAggregation(org.openapis.openapi.models.operations.CreateNetworkSwitchLinkAggregationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchLinkAggregationPathParams.class, baseUrl, "/networks/{networkId}/switch/linkAggregations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchLinkAggregationRequest.class, baseUrl, "/networks/{networkId}/switch/linkAggregations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -82,7 +82,7 @@ public class LinkAggregations {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkSwitchLinkAggregationResponse deleteNetworkSwitchLinkAggregation(org.openapis.openapi.models.operations.DeleteNetworkSwitchLinkAggregationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchLinkAggregationPathParams.class, baseUrl, "/networks/{networkId}/switch/linkAggregations/{linkAggregationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchLinkAggregationRequest.class, baseUrl, "/networks/{networkId}/switch/linkAggregations/{linkAggregationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -116,7 +116,7 @@ public class LinkAggregations {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchLinkAggregationsResponse getNetworkSwitchLinkAggregations(org.openapis.openapi.models.operations.GetNetworkSwitchLinkAggregationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchLinkAggregationsPathParams.class, baseUrl, "/networks/{networkId}/switch/linkAggregations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchLinkAggregationsRequest.class, baseUrl, "/networks/{networkId}/switch/linkAggregations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -156,12 +156,12 @@ public class LinkAggregations {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchLinkAggregationResponse updateNetworkSwitchLinkAggregation(org.openapis.openapi.models.operations.UpdateNetworkSwitchLinkAggregationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchLinkAggregationPathParams.class, baseUrl, "/networks/{networkId}/switch/linkAggregations/{linkAggregationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchLinkAggregationRequest.class, baseUrl, "/networks/{networkId}/switch/linkAggregations/{linkAggregationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

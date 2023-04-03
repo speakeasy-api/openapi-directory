@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerCancelAppointmentRequest {
+    /**
+     * The unique appointment id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appointmentID")
+    public String appointmentID;
+    public DiaryControllerCancelAppointmentRequest withAppointmentID(String appointmentID) {
+        this.appointmentID = appointmentID;
+        return this;
+    }
     
-    public DiaryControllerCancelAppointmentPathParams pathParams;
-    public DiaryControllerCancelAppointmentRequest withPathParams(DiaryControllerCancelAppointmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public DiaryControllerCancelAppointmentRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     

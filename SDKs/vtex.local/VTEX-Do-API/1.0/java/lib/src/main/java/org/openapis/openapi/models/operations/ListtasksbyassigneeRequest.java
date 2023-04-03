@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListtasksbyassigneeRequest {
-    
-    public ListtasksbyassigneeQueryParams queryParams;
-    public ListtasksbyassigneeRequest withQueryParams(ListtasksbyassigneeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ListtasksbyassigneeRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ListtasksbyassigneeRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public ListtasksbyassigneeHeaders headers;
-    public ListtasksbyassigneeRequest withHeaders(ListtasksbyassigneeHeaders headers) {
-        this.headers = headers;
+    /**
+     * If you wish to list tasks by assignee, insert the desired assignee's email and status.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee.email")
+    public String assigneeEmail;
+    public ListtasksbyassigneeRequest withAssigneeEmail(String assigneeEmail) {
+        this.assigneeEmail = assigneeEmail;
+        return this;
+    }
+    
+    /**
+     * If you wish to list tasks by context, insert the desired context, `page`, `perPage` and `status`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=context")
+    public String context;
+    public ListtasksbyassigneeRequest withContext(String context) {
+        this.context = context;
+        return this;
+    }
+    
+    /**
+     * If you wish to list tasks by context, also insert the desired `page`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public ListtasksbyassigneeRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * If you wish to list tasks by context, also insert the desired `perPage` value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public String perPage;
+    public ListtasksbyassigneeRequest withPerPage(String perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * If you wish to list tasks by context, also insert the desired `status`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public ListtasksbyassigneeRequest withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * If you wish to list tasks by target, insert the desired `targetId` and `status`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target.id")
+    public String targetId;
+    public ListtasksbyassigneeRequest withTargetId(String targetId) {
+        this.targetId = targetId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EchoRequest {
-    
-    public EchoQueryParams queryParams;
-    public EchoRequest withQueryParams(EchoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Text to echo
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public EchoRequest withText(String text) {
+        this.text = text;
         return this;
     }
     

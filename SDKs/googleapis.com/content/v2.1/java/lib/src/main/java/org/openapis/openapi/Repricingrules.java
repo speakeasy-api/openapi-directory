@@ -34,27 +34,28 @@ public class Repricingrules {
     /**
      * Creates a repricing rule for your Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentRepricingrulesCreateResponse contentRepricingrulesCreate(org.openapis.openapi.models.operations.ContentRepricingrulesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentRepricingrulesCreateResponse contentRepricingrulesCreate(org.openapis.openapi.models.operations.ContentRepricingrulesCreateRequest request, org.openapis.openapi.models.operations.ContentRepricingrulesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentRepricingrulesCreatePathParams.class, baseUrl, "/{merchantId}/repricingrules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentRepricingrulesCreateRequest.class, baseUrl, "/{merchantId}/repricingrules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "repricingRuleInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentRepricingrulesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentRepricingrulesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class Repricingrules {
     /**
      * Deletes a repricing rule in your Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentRepricingrulesDeleteResponse contentRepricingrulesDelete(org.openapis.openapi.models.operations.ContentRepricingrulesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentRepricingrulesDeleteResponse contentRepricingrulesDelete(org.openapis.openapi.models.operations.ContentRepricingrulesDeleteRequest request, org.openapis.openapi.models.operations.ContentRepricingrulesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentRepricingrulesDeletePathParams.class, baseUrl, "/{merchantId}/repricingrules/{ruleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentRepricingrulesDeleteRequest.class, baseUrl, "/{merchantId}/repricingrules/{ruleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentRepricingrulesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentRepricingrulesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -120,25 +122,26 @@ public class Repricingrules {
     /**
      * Retrieves a repricing rule from your Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentRepricingrulesGetResponse contentRepricingrulesGet(org.openapis.openapi.models.operations.ContentRepricingrulesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentRepricingrulesGetResponse contentRepricingrulesGet(org.openapis.openapi.models.operations.ContentRepricingrulesGetRequest request, org.openapis.openapi.models.operations.ContentRepricingrulesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentRepricingrulesGetPathParams.class, baseUrl, "/{merchantId}/repricingrules/{ruleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentRepricingrulesGetRequest.class, baseUrl, "/{merchantId}/repricingrules/{ruleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentRepricingrulesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentRepricingrulesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,25 +168,26 @@ public class Repricingrules {
     /**
      * Lists the repricing rules in your Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentRepricingrulesListResponse contentRepricingrulesList(org.openapis.openapi.models.operations.ContentRepricingrulesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentRepricingrulesListResponse contentRepricingrulesList(org.openapis.openapi.models.operations.ContentRepricingrulesListRequest request, org.openapis.openapi.models.operations.ContentRepricingrulesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentRepricingrulesListPathParams.class, baseUrl, "/{merchantId}/repricingrules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentRepricingrulesListRequest.class, baseUrl, "/{merchantId}/repricingrules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentRepricingrulesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentRepricingrulesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -210,27 +214,28 @@ public class Repricingrules {
     /**
      * Updates a repricing rule in your Merchant Center account. All mutable fields will be overwritten in each update request. In each update, you must provide all required mutable fields, or an error will be thrown. If you do not provide an optional field in the update request, if that field currently exists, it will be deleted from the rule.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentRepricingrulesPatchResponse contentRepricingrulesPatch(org.openapis.openapi.models.operations.ContentRepricingrulesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentRepricingrulesPatchResponse contentRepricingrulesPatch(org.openapis.openapi.models.operations.ContentRepricingrulesPatchRequest request, org.openapis.openapi.models.operations.ContentRepricingrulesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentRepricingrulesPatchPathParams.class, baseUrl, "/{merchantId}/repricingrules/{ruleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentRepricingrulesPatchRequest.class, baseUrl, "/{merchantId}/repricingrules/{ruleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "repricingRuleInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentRepricingrulesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentRepricingrulesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -257,25 +262,26 @@ public class Repricingrules {
     /**
      * Lists the metrics report for a given Repricing rule.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentRepricingrulesRepricingreportsListResponse contentRepricingrulesRepricingreportsList(org.openapis.openapi.models.operations.ContentRepricingrulesRepricingreportsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentRepricingrulesRepricingreportsListResponse contentRepricingrulesRepricingreportsList(org.openapis.openapi.models.operations.ContentRepricingrulesRepricingreportsListRequest request, org.openapis.openapi.models.operations.ContentRepricingrulesRepricingreportsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentRepricingrulesRepricingreportsListPathParams.class, baseUrl, "/{merchantId}/repricingrules/{ruleId}/repricingreports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentRepricingrulesRepricingreportsListRequest.class, baseUrl, "/{merchantId}/repricingrules/{ruleId}/repricingreports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentRepricingrulesRepricingreportsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentRepricingrulesRepricingreportsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

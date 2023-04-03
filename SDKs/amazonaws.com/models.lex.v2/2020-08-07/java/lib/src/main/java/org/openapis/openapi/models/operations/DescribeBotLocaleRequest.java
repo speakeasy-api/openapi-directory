@@ -4,20 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeBotLocaleRequest {
-    
-    public DescribeBotLocalePathParams pathParams;
-    public DescribeBotLocaleRequest withPathParams(DescribeBotLocalePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeBotLocaleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeBotLocaleRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public DescribeBotLocaleHeaders headers;
-    public DescribeBotLocaleRequest withHeaders(DescribeBotLocaleHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeBotLocaleRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeBotLocaleRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeBotLocaleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeBotLocaleRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeBotLocaleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The identifier of the bot associated with the locale.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botId")
+    public String botId;
+    public DescribeBotLocaleRequest withBotId(String botId) {
+        this.botId = botId;
+        return this;
+    }
+    
+    /**
+     * The identifier of the version of the bot associated with the locale.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botVersion")
+    public String botVersion;
+    public DescribeBotLocaleRequest withBotVersion(String botVersion) {
+        this.botVersion = botVersion;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the locale to describe. The string must match one of the supported locales. For more information, see &lt;a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"&gt;Supported languages&lt;/a&gt;. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=localeId")
+    public String localeId;
+    public DescribeBotLocaleRequest withLocaleId(String localeId) {
+        this.localeId = localeId;
         return this;
     }
     

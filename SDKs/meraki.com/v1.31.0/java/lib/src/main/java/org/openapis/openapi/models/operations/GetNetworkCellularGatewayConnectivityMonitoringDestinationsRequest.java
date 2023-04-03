@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkCellularGatewayConnectivityMonitoringDestinationsRequest {
-    
-    public GetNetworkCellularGatewayConnectivityMonitoringDestinationsPathParams pathParams;
-    public GetNetworkCellularGatewayConnectivityMonitoringDestinationsRequest withPathParams(GetNetworkCellularGatewayConnectivityMonitoringDestinationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkCellularGatewayConnectivityMonitoringDestinationsRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

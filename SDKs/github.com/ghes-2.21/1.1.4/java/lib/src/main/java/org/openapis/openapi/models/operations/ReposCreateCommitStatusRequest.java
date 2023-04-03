@@ -7,17 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposCreateCommitStatusRequest {
-    
-    public ReposCreateCommitStatusPathParams pathParams;
-    public ReposCreateCommitStatusRequest withPathParams(ReposCreateCommitStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReposCreateCommitStatusRequestBody requestBody;
+    public ReposCreateCommitStatusRequest withRequestBody(ReposCreateCommitStatusRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReposCreateCommitStatusRequestBody request;
-    public ReposCreateCommitStatusRequest withRequest(ReposCreateCommitStatusRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposCreateCommitStatusRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposCreateCommitStatusRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sha")
+    public String sha;
+    public ReposCreateCommitStatusRequest withSha(String sha) {
+        this.sha = sha;
         return this;
     }
     

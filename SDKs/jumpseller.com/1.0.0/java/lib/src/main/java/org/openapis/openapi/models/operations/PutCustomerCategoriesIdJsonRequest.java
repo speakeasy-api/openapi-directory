@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutCustomerCategoriesIdJsonRequest {
-    
-    public PutCustomerCategoriesIdJsonPathParams pathParams;
-    public PutCustomerCategoriesIdJsonRequest withPathParams(PutCustomerCategoriesIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutCustomerCategoriesIdJsonQueryParams queryParams;
-    public PutCustomerCategoriesIdJsonRequest withQueryParams(PutCustomerCategoriesIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * CustomerCategory parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CustomerCategoryEdit request;
-    public PutCustomerCategoriesIdJsonRequest withRequest(org.openapis.openapi.models.shared.CustomerCategoryEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CustomerCategoryEdit customerCategoryEdit;
+    public PutCustomerCategoriesIdJsonRequest withCustomerCategoryEdit(org.openapis.openapi.models.shared.CustomerCategoryEdit customerCategoryEdit) {
+        this.customerCategoryEdit = customerCategoryEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PutCustomerCategoriesIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the CustomerCategory
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PutCustomerCategoriesIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PutCustomerCategoriesIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

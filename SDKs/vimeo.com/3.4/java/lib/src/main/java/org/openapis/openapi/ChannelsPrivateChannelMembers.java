@@ -35,19 +35,20 @@ public class ChannelsPrivateChannelMembers {
      * Restrict a user from viewing a private channel
      * This method prevents a single user from being able to access the specified private channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteChannelPrivacyUserResponse deleteChannelPrivacyUser(org.openapis.openapi.models.operations.DeleteChannelPrivacyUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteChannelPrivacyUserResponse deleteChannelPrivacyUser(org.openapis.openapi.models.operations.DeleteChannelPrivacyUserRequest request, org.openapis.openapi.models.operations.DeleteChannelPrivacyUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteChannelPrivacyUserPathParams.class, baseUrl, "/channels/{channel_id}/privacy/users/{user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteChannelPrivacyUserRequest.class, baseUrl, "/channels/{channel_id}/privacy/users/{user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,13 +83,13 @@ public class ChannelsPrivateChannelMembers {
      */
     public org.openapis.openapi.models.operations.GetChannelPrivacyUsersResponse getChannelPrivacyUsers(org.openapis.openapi.models.operations.GetChannelPrivacyUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelPrivacyUsersPathParams.class, baseUrl, "/channels/{channel_id}/privacy/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelPrivacyUsersRequest.class, baseUrl, "/channels/{channel_id}/privacy/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChannelPrivacyUsersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChannelPrivacyUsersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -131,19 +132,20 @@ public class ChannelsPrivateChannelMembers {
      * Permit a specific user to view a private channel
      * This method gives a single user access to the specified private channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SetChannelPrivacyUserResponse setChannelPrivacyUser(org.openapis.openapi.models.operations.SetChannelPrivacyUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SetChannelPrivacyUserResponse setChannelPrivacyUser(org.openapis.openapi.models.operations.SetChannelPrivacyUserRequest request, org.openapis.openapi.models.operations.SetChannelPrivacyUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetChannelPrivacyUserPathParams.class, baseUrl, "/channels/{channel_id}/privacy/users/{user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetChannelPrivacyUserRequest.class, baseUrl, "/channels/{channel_id}/privacy/users/{user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,24 +175,25 @@ public class ChannelsPrivateChannelMembers {
      * Permit a list of users to view a private channel
      * This method gives multiple users access to the specified private channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SetChannelPrivacyUsersResponse setChannelPrivacyUsers(org.openapis.openapi.models.operations.SetChannelPrivacyUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SetChannelPrivacyUsersResponse setChannelPrivacyUsers(org.openapis.openapi.models.operations.SetChannelPrivacyUsersRequest request, org.openapis.openapi.models.operations.SetChannelPrivacyUsersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetChannelPrivacyUsersPathParams.class, baseUrl, "/channels/{channel_id}/privacy/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetChannelPrivacyUsersRequest.class, baseUrl, "/channels/{channel_id}/privacy/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

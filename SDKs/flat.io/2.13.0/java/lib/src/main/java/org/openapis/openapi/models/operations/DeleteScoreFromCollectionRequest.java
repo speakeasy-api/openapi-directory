@@ -4,27 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteScoreFromCollectionRequest {
-    
-    public DeleteScoreFromCollectionPathParams pathParams;
-    public DeleteScoreFromCollectionRequest withPathParams(DeleteScoreFromCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the collection.
+     * The following aliases are supported:
+     * - `root`: The root collection of the account
+     * - `sharedWithMe`: Automatically contains new resources that have been shared individually
+     * - `trash`: Automatically contains resources that have been deleted
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
+    public String collection;
+    public DeleteScoreFromCollectionRequest withCollection(String collection) {
+        this.collection = collection;
         return this;
     }
     
-    
-    public DeleteScoreFromCollectionQueryParams queryParams;
-    public DeleteScoreFromCollectionRequest withQueryParams(DeleteScoreFromCollectionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
+    public String score;
+    public DeleteScoreFromCollectionRequest withScore(String score) {
+        this.score = score;
         return this;
     }
     
-    
-    public DeleteScoreFromCollectionSecurity security;
-    public DeleteScoreFromCollectionRequest withSecurity(DeleteScoreFromCollectionSecurity security) {
-        this.security = security;
+    /**
+     * This sharing key must be specified to access to a score or collection with a `privacy` mode set to `privateLink` and the current user is not a collaborator of the document.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharingKey")
+    public String sharingKey;
+    public DeleteScoreFromCollectionRequest withSharingKey(String sharingKey) {
+        this.sharingKey = sharingKey;
         return this;
     }
     

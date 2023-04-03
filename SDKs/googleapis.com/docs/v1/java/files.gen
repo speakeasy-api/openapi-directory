@@ -34,15 +34,12 @@ lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsBatchUpdat
 lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsBatchUpdateSecurityOption2.java
 lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsBatchUpdateSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsBatchUpdateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsBatchUpdatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsBatchUpdateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsBatchUpdateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsBatchUpdateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsCreateSecurityOption1.java
 lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsCreateSecurityOption2.java
 lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsCreateSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsCreateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsCreateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsCreateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsCreateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsGetSecurityOption1.java
@@ -51,9 +48,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsGetSecurit
 lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsGetSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsGetSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsGetSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsGetPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsGetSuggestionsViewModeEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsGetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DocsDocumentsGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/BatchUpdateDocumentResponse.java
@@ -66,6 +61,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/CreateNamedRangeResponse.ja
 lib/src/main/java/org/openapis/openapi/models/shared/CreateHeaderResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateFootnoteResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateFooterResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/BatchUpdateDocumentRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Request.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateTextStyleRequest.java
@@ -146,10 +142,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/CreateHeaderRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateFootnoteRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateFooterRequestTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateFooterRequest.java
-lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 lib/src/main/java/org/openapis/openapi/models/shared/DocumentSuggestionsViewModeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Document.java
 lib/src/main/java/org/openapis/openapi/models/shared/DocumentInput.java

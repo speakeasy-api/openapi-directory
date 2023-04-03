@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AllStarsRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public AllStarsFormatEnum format;
+    public AllStarsRequest withFormat(AllStarsFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public AllStarsPathParams pathParams;
-    public AllStarsRequest withPathParams(AllStarsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Year of the season.
+     * &lt;br&gt;Examples: &lt;code&gt;2015&lt;/code&gt;, &lt;code&gt;2016&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
+    public String season;
+    public AllStarsRequest withSeason(String season) {
+        this.season = season;
         return this;
     }
     

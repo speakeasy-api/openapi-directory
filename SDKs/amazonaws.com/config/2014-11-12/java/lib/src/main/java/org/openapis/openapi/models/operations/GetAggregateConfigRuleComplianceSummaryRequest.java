@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAggregateConfigRuleComplianceSummaryRequest {
-    
-    public GetAggregateConfigRuleComplianceSummaryQueryParams queryParams;
-    public GetAggregateConfigRuleComplianceSummaryRequest withQueryParams(GetAggregateConfigRuleComplianceSummaryQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetAggregateConfigRuleComplianceSummaryHeaders headers;
-    public GetAggregateConfigRuleComplianceSummaryRequest withHeaders(GetAggregateConfigRuleComplianceSummaryHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GetAggregateConfigRuleComplianceSummaryRequest request;
-    public GetAggregateConfigRuleComplianceSummaryRequest withRequest(org.openapis.openapi.models.shared.GetAggregateConfigRuleComplianceSummaryRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GetAggregateConfigRuleComplianceSummaryRequest getAggregateConfigRuleComplianceSummaryRequest;
+    public GetAggregateConfigRuleComplianceSummaryRequest withGetAggregateConfigRuleComplianceSummaryRequest(org.openapis.openapi.models.shared.GetAggregateConfigRuleComplianceSummaryRequest getAggregateConfigRuleComplianceSummaryRequest) {
+        this.getAggregateConfigRuleComplianceSummaryRequest = getAggregateConfigRuleComplianceSummaryRequest;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Limit")
+    public String limit;
+    public GetAggregateConfigRuleComplianceSummaryRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GetAggregateConfigRuleComplianceSummaryRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetAggregateConfigRuleComplianceSummaryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetAggregateConfigRuleComplianceSummaryRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetAggregateConfigRuleComplianceSummaryRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetAggregateConfigRuleComplianceSummaryRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetAggregateConfigRuleComplianceSummaryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetAggregateConfigRuleComplianceSummaryRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetAggregateConfigRuleComplianceSummaryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public GetAggregateConfigRuleComplianceSummaryXAmzTargetEnum xAmzTarget;
+    public GetAggregateConfigRuleComplianceSummaryRequest withXAmzTarget(GetAggregateConfigRuleComplianceSummaryXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContentSourceSectionTimePeriodJsonRequest {
-    
-    public GetContentSourceSectionTimePeriodJsonPathParams pathParams;
-    public GetContentSourceSectionTimePeriodJsonRequest withPathParams(GetContentSourceSectionTimePeriodJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Limits the number of results, between 1 and 20
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetContentSourceSectionTimePeriodJsonRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Sets the starting point of the result set
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetContentSourceSectionTimePeriodJsonRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
     
-    public GetContentSourceSectionTimePeriodJsonQueryParams queryParams;
-    public GetContentSourceSectionTimePeriodJsonRequest withQueryParams(GetContentSourceSectionTimePeriodJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Limits the set of items by one or more sections
+     * all | One or more section names, separated by semicolons
+     * 
+     *  To get all sections, specify all. To get a particular section or sections, use the section names returned by this request:
+     *  http://api.nytimes.com/svc/news/v3/content/section-list.json
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=section")
+    public String section;
+    public GetContentSourceSectionTimePeriodJsonRequest withSection(String section) {
+        this.section = section;
+        return this;
+    }
+    
+    /**
+     * Limits the set of items by originating source
+     * 
+     * all = items from both The New York Times and The International New York Times
+     * nyt = New York Times items only
+     * iht = International New York Times items only
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=source")
+    public GetContentSourceSectionTimePeriodJsonSourceEnum source;
+    public GetContentSourceSectionTimePeriodJsonRequest withSource(GetContentSourceSectionTimePeriodJsonSourceEnum source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * Limits the set of items by time published, integer in number of hours
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=time-period")
+    public Long timePeriod;
+    public GetContentSourceSectionTimePeriodJsonRequest withTimePeriod(Long timePeriod) {
+        this.timePeriod = timePeriod;
         return this;
     }
     

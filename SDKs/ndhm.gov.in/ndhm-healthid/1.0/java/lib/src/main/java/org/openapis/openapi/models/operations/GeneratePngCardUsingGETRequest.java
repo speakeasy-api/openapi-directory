@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GeneratePngCardUsingGETRequest {
-    
-    public GeneratePngCardUsingGETHeaders headers;
-    public GeneratePngCardUsingGETRequest withHeaders(GeneratePngCardUsingGETHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public GeneratePngCardUsingGETRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
-    
-    public GeneratePngCardUsingGETSecurity security;
-    public GeneratePngCardUsingGETRequest withSecurity(GeneratePngCardUsingGETSecurity security) {
-        this.security = security;
+    /**
+     * Auth Token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Token")
+    public String xToken;
+    public GeneratePngCardUsingGETRequest withXToken(String xToken) {
+        this.xToken = xToken;
         return this;
     }
     

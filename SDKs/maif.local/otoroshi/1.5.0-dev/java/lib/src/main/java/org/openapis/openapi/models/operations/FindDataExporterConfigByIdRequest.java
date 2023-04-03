@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindDataExporterConfigByIdRequest {
-    
-    public FindDataExporterConfigByIdPathParams pathParams;
-    public FindDataExporterConfigByIdRequest withPathParams(FindDataExporterConfigByIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FindDataExporterConfigByIdSecurity security;
-    public FindDataExporterConfigByIdRequest withSecurity(FindDataExporterConfigByIdSecurity security) {
-        this.security = security;
+    /**
+     * The data exporter config id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataExporterConfigId")
+    public String dataExporterConfigId;
+    public FindDataExporterConfigByIdRequest withDataExporterConfigId(String dataExporterConfigId) {
+        this.dataExporterConfigId = dataExporterConfigId;
         return this;
     }
     

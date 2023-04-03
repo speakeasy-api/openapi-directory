@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolDhcpGetConfigRequest {
-    
-    public ProtocolDhcpGetConfigPathParams pathParams;
-    public ProtocolDhcpGetConfigRequest withPathParams(ProtocolDhcpGetConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show the DHCP configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolDhcpGetConfigRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

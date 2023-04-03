@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSegmentQueryFiltersConfigUsingPUTRequest {
-    
-    public UpdateSegmentQueryFiltersConfigUsingPUTPathParams pathParams;
-    public UpdateSegmentQueryFiltersConfigUsingPUTRequest withPathParams(UpdateSegmentQueryFiltersConfigUsingPUTPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * segmentQueryConfig
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SegmentQueryFilterConfigModel request;
-    public UpdateSegmentQueryFiltersConfigUsingPUTRequest withRequest(org.openapis.openapi.models.shared.SegmentQueryFilterConfigModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SegmentQueryFilterConfigModel segmentQueryFilterConfigModel;
+    public UpdateSegmentQueryFiltersConfigUsingPUTRequest withSegmentQueryFilterConfigModel(org.openapis.openapi.models.shared.SegmentQueryFilterConfigModel segmentQueryFilterConfigModel) {
+        this.segmentQueryFilterConfigModel = segmentQueryFilterConfigModel;
+        return this;
+    }
+    
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public UpdateSegmentQueryFiltersConfigUsingPUTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

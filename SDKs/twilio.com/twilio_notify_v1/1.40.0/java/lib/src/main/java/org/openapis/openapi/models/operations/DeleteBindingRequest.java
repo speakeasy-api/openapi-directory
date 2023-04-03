@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteBindingRequest {
-    
-    public DeleteBindingPathParams pathParams;
-    public DeleteBindingRequest withPathParams(DeleteBindingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/notify/api/service-resource) to delete the resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteBindingRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public DeleteBindingSecurity security;
-    public DeleteBindingRequest withSecurity(DeleteBindingSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteBindingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Binding resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteBindingRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

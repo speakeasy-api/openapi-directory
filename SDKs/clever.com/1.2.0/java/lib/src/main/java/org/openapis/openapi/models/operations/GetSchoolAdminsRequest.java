@@ -4,13 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchoolAdminsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_before")
+    public String endingBefore;
+    public GetSchoolAdminsRequest withEndingBefore(String endingBefore) {
+        this.endingBefore = endingBefore;
+        return this;
+    }
     
-    public GetSchoolAdminsQueryParams queryParams;
-    public GetSchoolAdminsRequest withQueryParams(GetSchoolAdminsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetSchoolAdminsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=starting_after")
+    public String startingAfter;
+    public GetSchoolAdminsRequest withStartingAfter(String startingAfter) {
+        this.startingAfter = startingAfter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=where")
+    public String where;
+    public GetSchoolAdminsRequest withWhere(String where) {
+        this.where = where;
         return this;
     }
     

@@ -4,20 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLaunchProfileMemberRequest {
-    
-    public GetLaunchProfileMemberPathParams pathParams;
-    public GetLaunchProfileMemberRequest withPathParams(GetLaunchProfileMemberPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetLaunchProfileMemberRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetLaunchProfileMemberRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public GetLaunchProfileMemberHeaders headers;
-    public GetLaunchProfileMemberRequest withHeaders(GetLaunchProfileMemberHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetLaunchProfileMemberRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetLaunchProfileMemberRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetLaunchProfileMemberRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetLaunchProfileMemberRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetLaunchProfileMemberRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The ID of the launch profile used to control access from the streaming session.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=launchProfileId")
+    public String launchProfileId;
+    public GetLaunchProfileMemberRequest withLaunchProfileId(String launchProfileId) {
+        this.launchProfileId = launchProfileId;
+        return this;
+    }
+    
+    /**
+     * The principal ID. This currently supports a IAM Identity Center UserId. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=principalId")
+    public String principalId;
+    public GetLaunchProfileMemberRequest withPrincipalId(String principalId) {
+        this.principalId = principalId;
+        return this;
+    }
+    
+    /**
+     * The studio ID. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=studioId")
+    public String studioId;
+    public GetLaunchProfileMemberRequest withStudioId(String studioId) {
+        this.studioId = studioId;
         return this;
     }
     

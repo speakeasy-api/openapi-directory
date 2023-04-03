@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtrasObjectChangesReadRequest {
-    
-    public ExtrasObjectChangesReadPathParams pathParams;
-    public ExtrasObjectChangesReadRequest withPathParams(ExtrasObjectChangesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this object change.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ExtrasObjectChangesReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

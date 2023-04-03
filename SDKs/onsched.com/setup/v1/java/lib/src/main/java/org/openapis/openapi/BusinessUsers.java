@@ -40,7 +40,7 @@ public class BusinessUsers {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1BusinessusersIdResponse deleteSetupV1BusinessusersId(org.openapis.openapi.models.operations.DeleteSetupV1BusinessusersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1BusinessusersIdPathParams.class, baseUrl, "/setup/v1/businessusers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1BusinessusersIdRequest.class, baseUrl, "/setup/v1/businessusers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -80,7 +80,7 @@ public class BusinessUsers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1BusinessusersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1BusinessusersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -126,7 +126,7 @@ public class BusinessUsers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1BusinessusersPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1BusinessusersPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -166,13 +166,13 @@ public class BusinessUsers {
      */
     public org.openapis.openapi.models.operations.GetSetupV1BusinessusersEmailCompaniesResponse getSetupV1BusinessusersEmailCompanies(org.openapis.openapi.models.operations.GetSetupV1BusinessusersEmailCompaniesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1BusinessusersEmailCompaniesPathParams.class, baseUrl, "/setup/v1/businessusers/{email}/companies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1BusinessusersEmailCompaniesRequest.class, baseUrl, "/setup/v1/businessusers/{email}/companies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1BusinessusersEmailCompaniesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1BusinessusersEmailCompaniesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -212,7 +212,7 @@ public class BusinessUsers {
      */
     public org.openapis.openapi.models.operations.GetSetupV1BusinessusersIdResponse getSetupV1BusinessusersId(org.openapis.openapi.models.operations.GetSetupV1BusinessusersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1BusinessusersIdPathParams.class, baseUrl, "/setup/v1/businessusers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1BusinessusersIdRequest.class, baseUrl, "/setup/v1/businessusers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -253,7 +253,7 @@ public class BusinessUsers {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSetupV1BusinessusersResponse postSetupV1Businessusers(org.openapis.openapi.models.operations.PostSetupV1BusinessusersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSetupV1BusinessusersResponse postSetupV1Businessusers(org.openapis.openapi.models.shared.BusinessUserInputModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setup/v1/businessusers");
         
@@ -299,12 +299,12 @@ public class BusinessUsers {
      */
     public org.openapis.openapi.models.operations.PutSetupV1BusinessusersIdResponse putSetupV1BusinessusersId(org.openapis.openapi.models.operations.PutSetupV1BusinessusersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1BusinessusersIdPathParams.class, baseUrl, "/setup/v1/businessusers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1BusinessusersIdRequest.class, baseUrl, "/setup/v1/businessusers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "businessUserUpdateModel", "json");
         req.setBody(serializedRequestBody);
         
         

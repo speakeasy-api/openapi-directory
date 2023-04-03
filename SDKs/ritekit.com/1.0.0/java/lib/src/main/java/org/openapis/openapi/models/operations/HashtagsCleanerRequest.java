@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HashtagsCleanerRequest {
-    
-    public HashtagsCleanerQueryParams queryParams;
-    public HashtagsCleanerRequest withQueryParams(HashtagsCleanerQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * post
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=post")
+    public String post;
+    public HashtagsCleanerRequest withPost(String post) {
+        this.post = post;
         return this;
     }
     

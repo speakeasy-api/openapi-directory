@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatabaseDeleteDocumentRequest {
-    
-    public DatabaseDeleteDocumentPathParams pathParams;
-    public DatabaseDeleteDocumentRequest withPathParams(DatabaseDeleteDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Collection unique ID. You can create a new collection with validation rules using the Database service [server integration](/docs/server/database#createCollection).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collectionId")
+    public String collectionId;
+    public DatabaseDeleteDocumentRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
         return this;
     }
     
-    
-    public DatabaseDeleteDocumentSecurity security;
-    public DatabaseDeleteDocumentRequest withSecurity(DatabaseDeleteDocumentSecurity security) {
-        this.security = security;
+    /**
+     * Document unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public String documentId;
+    public DatabaseDeleteDocumentRequest withDocumentId(String documentId) {
+        this.documentId = documentId;
         return this;
     }
     

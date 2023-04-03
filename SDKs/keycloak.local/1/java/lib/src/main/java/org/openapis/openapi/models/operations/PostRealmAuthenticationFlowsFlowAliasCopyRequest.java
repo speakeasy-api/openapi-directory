@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmAuthenticationFlowsFlowAliasCopyRequest {
-    
-    public PostRealmAuthenticationFlowsFlowAliasCopyPathParams pathParams;
-    public PostRealmAuthenticationFlowsFlowAliasCopyRequest withPathParams(PostRealmAuthenticationFlowsFlowAliasCopyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * JSON containing 'newName' attribute
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PostRealmAuthenticationFlowsFlowAliasCopyRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PostRealmAuthenticationFlowsFlowAliasCopyRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Name of the existing authentication flow
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=flowAlias")
+    public String flowAlias;
+    public PostRealmAuthenticationFlowsFlowAliasCopyRequest withFlowAlias(String flowAlias) {
+        this.flowAlias = flowAlias;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmAuthenticationFlowsFlowAliasCopyRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

@@ -34,27 +34,28 @@ public class Systemapks {
     /**
      * Creates an APK which is suitable for inclusion in a system image from an already uploaded Android App Bundle.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsCreateResponse androidpublisherSystemapksVariantsCreate(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsCreateResponse androidpublisherSystemapksVariantsCreate(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsCreateRequest request, org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsCreatePathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsCreateRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "variantInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class Systemapks {
     /**
      * Downloads a previously created system APK which is suitable for inclusion in a system image.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsDownloadResponse androidpublisherSystemapksVariantsDownload(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsDownloadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsDownloadResponse androidpublisherSystemapksVariantsDownload(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsDownloadRequest request, org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsDownloadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsDownloadPathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants/{variantId}:download", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsDownloadRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants/{variantId}:download", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsDownloadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsDownloadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -120,25 +122,26 @@ public class Systemapks {
     /**
      * Returns a previously created system APK variant.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsGetResponse androidpublisherSystemapksVariantsGet(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsGetResponse androidpublisherSystemapksVariantsGet(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsGetRequest request, org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsGetPathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants/{variantId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsGetRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants/{variantId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,25 +168,26 @@ public class Systemapks {
     /**
      * Returns the list of previously created system APK variants.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsListResponse androidpublisherSystemapksVariantsList(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsListResponse androidpublisherSystemapksVariantsList(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsListRequest request, org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsListPathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsListRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/systemApks/{versionCode}/variants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherSystemapksVariantsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

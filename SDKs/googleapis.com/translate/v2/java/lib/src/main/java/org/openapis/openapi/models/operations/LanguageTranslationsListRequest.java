@@ -4,20 +4,203 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LanguageTranslationsListRequest {
-    
-    public LanguageTranslationsListQueryParams queryParams;
-    public LanguageTranslationsListRequest withQueryParams(LanguageTranslationsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public LanguageTranslationsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public LanguageTranslationsListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public LanguageTranslationsListSecurity security;
-    public LanguageTranslationsListRequest withSecurity(LanguageTranslationsListSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public LanguageTranslationsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * OAuth bearer token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bearer_token")
+    public String bearerToken;
+    public LanguageTranslationsListRequest withBearerToken(String bearerToken) {
+        this.bearerToken = bearerToken;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public LanguageTranslationsListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * The customization id for translate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cid")
+    public String[] cid;
+    public LanguageTranslationsListRequest withCid(String[] cid) {
+        this.cid = cid;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public LanguageTranslationsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * The format of the source text, in either HTML (default) or plain-text. A
+     * value of "html" indicates HTML and a value of "text" indicates plain-text.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public LanguageTranslationsListFormatEnum format;
+    public LanguageTranslationsListRequest withFormat(LanguageTranslationsListFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public LanguageTranslationsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The `model` type requested for this translation. Valid values are
+     * listed in public documentation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
+    public String model;
+    public LanguageTranslationsListRequest withModel(String model) {
+        this.model = model;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public LanguageTranslationsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Pretty-print response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pp")
+    public Boolean pp;
+    public LanguageTranslationsListRequest withPp(Boolean pp) {
+        this.pp = pp;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public LanguageTranslationsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * The input text to translate. Repeat this parameter to perform translation
+     * operations on multiple text inputs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String[] q;
+    public LanguageTranslationsListRequest withQ(String[] q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public LanguageTranslationsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The language of the source text, set to one of the language codes listed in
+     * Language Support. If the source language is not specified, the API will
+     * attempt to identify the source language automatically and return it within
+     * the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public String source;
+    public LanguageTranslationsListRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * The language to use for translation of the input text, set to one of the
+     * language codes listed in Language Support.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target")
+    public String target;
+    public LanguageTranslationsListRequest withTarget(String target) {
+        this.target = target;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public LanguageTranslationsListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public LanguageTranslationsListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

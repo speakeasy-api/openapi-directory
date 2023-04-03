@@ -5,13 +5,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriSecurity;
-import org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriQueryParams;
 import org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriRequest;
 import org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriResponse;
-import org.openapis.openapi.models.shared.IdentitytoolkitRelyingpartyCreateAuthUriRequest;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
+import org.openapis.openapi.models.shared.IdentitytoolkitRelyingpartyCreateAuthUriRequest;
 
 public class Application {
     public static void main(String[] args) {
@@ -20,48 +17,42 @@ public class Application {
                 .build();
 
             IdentitytoolkitRelyingpartyCreateAuthUriRequest req = new IdentitytoolkitRelyingpartyCreateAuthUriRequest() {{
-                security = new IdentitytoolkitRelyingpartyCreateAuthUriSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                queryParams = new IdentitytoolkitRelyingpartyCreateAuthUriQueryParams() {{
-                    alt = "json";
-                    fields = "corrupti";
-                    key = "provident";
-                    oauthToken = "distinctio";
-                    prettyPrint = false;
-                    quotaUser = "quibusdam";
-                    userIp = "unde";
-                }};
-                request = new IdentitytoolkitRelyingpartyCreateAuthUriRequest() {{
-                    appId = "nulla";
-                    authFlowType = "corrupti";
-                    clientId = "illum";
-                    context = "vel";
-                    continueUri = "error";
+                identitytoolkitRelyingpartyCreateAuthUriRequest = new IdentitytoolkitRelyingpartyCreateAuthUriRequest() {{
+                    appId = "corrupti";
+                    authFlowType = "provident";
+                    clientId = "distinctio";
+                    context = "quibusdam";
+                    continueUri = "unde";
                     customParameter = new java.util.HashMap<String, String>() {{
-                        put("suscipit", "iure");
-                        put("magnam", "debitis");
-                        put("ipsa", "delectus");
+                        put("corrupti", "illum");
+                        put("vel", "error");
+                        put("deserunt", "suscipit");
+                        put("iure", "magnam");
                     }};
-                    hostedDomain = "tempora";
-                    identifier = "suscipit";
-                    oauthConsumerKey = "molestiae";
-                    oauthScope = "minus";
-                    openidRealm = "placeat";
-                    otaApp = "voluptatum";
-                    providerId = "iusto";
-                    sessionId = "excepturi";
-                    tenantId = "nisi";
-                    tenantProjectNumber = "recusandae";
+                    hostedDomain = "debitis";
+                    identifier = "ipsa";
+                    oauthConsumerKey = "delectus";
+                    oauthScope = "tempora";
+                    openidRealm = "suscipit";
+                    otaApp = "molestiae";
+                    providerId = "minus";
+                    sessionId = "placeat";
+                    tenantId = "voluptatum";
+                    tenantProjectNumber = "iusto";
                 }};
-            }};            
+                alt = "json";
+                fields = "excepturi";
+                key = "nisi";
+                oauthToken = "recusandae";
+                prettyPrint = false;
+                quotaUser = "temporibus";
+                userIp = "ab";
+            }}            
 
-            IdentitytoolkitRelyingpartyCreateAuthUriResponse res = sdk.relyingparty.identitytoolkitRelyingpartyCreateAuthUri(req);
+            IdentitytoolkitRelyingpartyCreateAuthUriResponse res = sdk.relyingparty.identitytoolkitRelyingpartyCreateAuthUri(req, new IdentitytoolkitRelyingpartyCreateAuthUriSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.createAuthUriResponse.isPresent()) {
                 // handle response

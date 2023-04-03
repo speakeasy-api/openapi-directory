@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VenByDistanceUsV1VenuesDistanceQueryPostRequest {
-    
-    public VenByDistanceUsV1VenuesDistanceQueryPostHeaders headers;
-    public VenByDistanceUsV1VenuesDistanceQueryPostRequest withHeaders(VenByDistanceUsV1VenuesDistanceQueryPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.VenuesByDistance venuesByDistance;
+    public VenByDistanceUsV1VenuesDistanceQueryPostRequest withVenuesByDistance(org.openapis.openapi.models.shared.VenuesByDistance venuesByDistance) {
+        this.venuesByDistance = venuesByDistance;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.VenuesByDistance request;
-    public VenByDistanceUsV1VenuesDistanceQueryPostRequest withRequest(org.openapis.openapi.models.shared.VenuesByDistance request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public VenByDistanceUsV1VenuesDistanceQueryPostRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

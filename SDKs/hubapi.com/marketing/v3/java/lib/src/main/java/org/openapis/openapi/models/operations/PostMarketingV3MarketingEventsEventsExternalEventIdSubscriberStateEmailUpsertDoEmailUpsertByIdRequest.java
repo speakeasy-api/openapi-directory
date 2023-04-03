@@ -7,31 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdRequest {
-    
-    public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdPathParams pathParams;
-    public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdRequest withPathParams(PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdQueryParams queryParams;
-    public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdRequest withQueryParams(PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BatchInputMarketingEventEmailSubscriber request;
-    public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdRequest withRequest(org.openapis.openapi.models.shared.BatchInputMarketingEventEmailSubscriber request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BatchInputMarketingEventEmailSubscriber batchInputMarketingEventEmailSubscriber;
+    public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdRequest withBatchInputMarketingEventEmailSubscriber(org.openapis.openapi.models.shared.BatchInputMarketingEventEmailSubscriber batchInputMarketingEventEmailSubscriber) {
+        this.batchInputMarketingEventEmailSubscriber = batchInputMarketingEventEmailSubscriber;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=externalAccountId")
+    public String externalAccountId;
+    public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdRequest withExternalAccountId(String externalAccountId) {
+        this.externalAccountId = externalAccountId;
+        return this;
+    }
     
-    public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdSecurity security;
-    public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdRequest withSecurity(PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalEventId")
+    public String externalEventId;
+    public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdRequest withExternalEventId(String externalEventId) {
+        this.externalEventId = externalEventId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriberState")
+    public String subscriberState;
+    public PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdRequest withSubscriberState(String subscriberState) {
+        this.subscriberState = subscriberState;
         return this;
     }
     

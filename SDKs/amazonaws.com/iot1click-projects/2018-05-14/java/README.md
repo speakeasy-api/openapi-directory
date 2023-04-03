@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AssociateDeviceWithPlacementPathParams;
-import org.openapis.openapi.models.operations.AssociateDeviceWithPlacementHeaders;
 import org.openapis.openapi.models.operations.AssociateDeviceWithPlacementRequestBody;
 import org.openapis.openapi.models.operations.AssociateDeviceWithPlacementRequest;
 import org.openapis.openapi.models.operations.AssociateDeviceWithPlacementResponse;
@@ -28,31 +26,25 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateDeviceWithPlacementRequest req = new AssociateDeviceWithPlacementRequest() {{
-                pathParams = new AssociateDeviceWithPlacementPathParams() {{
-                    deviceTemplateName = "corrupti";
-                    placementName = "provident";
-                    projectName = "distinctio";
+                requestBody = new AssociateDeviceWithPlacementRequestBody() {{
+                    deviceId = "corrupti";
                 }};
-                headers = new AssociateDeviceWithPlacementHeaders() {{
-                    xAmzAlgorithm = "quibusdam";
-                    xAmzContentSha256 = "unde";
-                    xAmzCredential = "nulla";
-                    xAmzDate = "corrupti";
-                    xAmzSecurityToken = "illum";
-                    xAmzSignature = "vel";
-                    xAmzSignedHeaders = "error";
-                }};
-                request = new AssociateDeviceWithPlacementRequestBody() {{
-                    deviceId = "deserunt";
-                }};
-            }};            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+                deviceTemplateName = "vel";
+                placementName = "error";
+                projectName = "deserunt";
+            }}            
 
             AssociateDeviceWithPlacementResponse res = sdk.associateDeviceWithPlacement(req);
 
@@ -66,7 +58,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

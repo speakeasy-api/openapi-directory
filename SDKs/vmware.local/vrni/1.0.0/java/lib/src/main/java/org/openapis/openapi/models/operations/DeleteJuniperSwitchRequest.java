@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteJuniperSwitchRequest {
-    
-    public DeleteJuniperSwitchPathParams pathParams;
-    public DeleteJuniperSwitchRequest withPathParams(DeleteJuniperSwitchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteJuniperSwitchSecurity security;
-    public DeleteJuniperSwitchRequest withSecurity(DeleteJuniperSwitchSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteJuniperSwitchRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

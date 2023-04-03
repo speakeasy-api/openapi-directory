@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETEnableMFADeviceRequest {
-    
-    public GETEnableMFADeviceQueryParams queryParams;
-    public GETEnableMFADeviceRequest withQueryParams(GETEnableMFADeviceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETEnableMFADeviceActionEnum action;
+    public GETEnableMFADeviceRequest withAction(GETEnableMFADeviceActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;An authentication code emitted by the device. &lt;/p&gt; &lt;p&gt;The format for this parameter is a string of six digits.&lt;/p&gt; &lt;important&gt; &lt;p&gt;Submit your request immediately after generating the authentication codes. If you generate the codes and then wait too long to submit the request, the MFA device successfully associates with the user but the MFA device becomes out of sync. This happens because time-based one-time passwords (TOTP) expire after a short period of time. If this happens, you can &lt;a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_sync.html"&gt;resync the device&lt;/a&gt;.&lt;/p&gt; &lt;/important&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AuthenticationCode1")
+    public String authenticationCode1;
+    public GETEnableMFADeviceRequest withAuthenticationCode1(String authenticationCode1) {
+        this.authenticationCode1 = authenticationCode1;
+        return this;
+    }
     
-    public GETEnableMFADeviceHeaders headers;
-    public GETEnableMFADeviceRequest withHeaders(GETEnableMFADeviceHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;A subsequent authentication code emitted by the device.&lt;/p&gt; &lt;p&gt;The format for this parameter is a string of six digits.&lt;/p&gt; &lt;important&gt; &lt;p&gt;Submit your request immediately after generating the authentication codes. If you generate the codes and then wait too long to submit the request, the MFA device successfully associates with the user but the MFA device becomes out of sync. This happens because time-based one-time passwords (TOTP) expire after a short period of time. If this happens, you can &lt;a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_sync.html"&gt;resync the device&lt;/a&gt;.&lt;/p&gt; &lt;/important&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AuthenticationCode2")
+    public String authenticationCode2;
+    public GETEnableMFADeviceRequest withAuthenticationCode2(String authenticationCode2) {
+        this.authenticationCode2 = authenticationCode2;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The serial number that uniquely identifies the MFA device. For virtual MFA devices, the serial number is the device ARN.&lt;/p&gt; &lt;p&gt;This parameter allows (through its &lt;a href="http://wikipedia.org/wiki/regex"&gt;regex pattern&lt;/a&gt;) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: =,.@:/-&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SerialNumber")
+    public String serialNumber;
+    public GETEnableMFADeviceRequest withSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the IAM user for whom you want to enable the MFA device.&lt;/p&gt; &lt;p&gt;This parameter allows (through its &lt;a href="http://wikipedia.org/wiki/regex"&gt;regex pattern&lt;/a&gt;) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserName")
+    public String userName;
+    public GETEnableMFADeviceRequest withUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETEnableMFADeviceVersionEnum version;
+    public GETEnableMFADeviceRequest withVersion(GETEnableMFADeviceVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETEnableMFADeviceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETEnableMFADeviceRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETEnableMFADeviceRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETEnableMFADeviceRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETEnableMFADeviceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETEnableMFADeviceRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETEnableMFADeviceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

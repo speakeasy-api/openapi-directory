@@ -158,7 +158,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetComicIdInfo0JsonResponse getComicIdInfo0Json(org.openapis.openapi.models.operations.GetComicIdInfo0JsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetComicIdInfo0JsonPathParams.class, baseUrl, "/{comicId}/info.0.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetComicIdInfo0JsonRequest.class, baseUrl, "/{comicId}/info.0.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

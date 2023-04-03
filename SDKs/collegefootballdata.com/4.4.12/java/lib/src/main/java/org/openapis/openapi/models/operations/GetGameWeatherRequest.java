@@ -4,13 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGameWeatherRequest {
+    /**
+     * Division classification filter (fbs/fcs/ii/iii)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classification")
+    public String classification;
+    public GetGameWeatherRequest withClassification(String classification) {
+        this.classification = classification;
+        return this;
+    }
     
-    public GetGameWeatherQueryParams queryParams;
-    public GetGameWeatherRequest withQueryParams(GetGameWeatherQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Conference filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
+    public String conference;
+    public GetGameWeatherRequest withConference(String conference) {
+        this.conference = conference;
+        return this;
+    }
+    
+    /**
+     * Game id filter (required if no year)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gameId")
+    public Long gameId;
+    public GetGameWeatherRequest withGameId(Long gameId) {
+        this.gameId = gameId;
+        return this;
+    }
+    
+    /**
+     * Season type filter (regular, postseason, or both)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=seasonType")
+    public String seasonType;
+    public GetGameWeatherRequest withSeasonType(String seasonType) {
+        this.seasonType = seasonType;
+        return this;
+    }
+    
+    /**
+     * Team filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public GetGameWeatherRequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
+    
+    /**
+     * Week filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=week")
+    public Long week;
+    public GetGameWeatherRequest withWeek(Long week) {
+        this.week = week;
+        return this;
+    }
+    
+    /**
+     * Year filter (required if no game id)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetGameWeatherRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

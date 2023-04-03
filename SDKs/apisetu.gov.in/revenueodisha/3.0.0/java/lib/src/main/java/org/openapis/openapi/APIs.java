@@ -34,10 +34,11 @@ public class APIs {
      * Copy of Registered Deed
      * API to verify Copy of Registered Deed.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RdcerResponse rdcer(org.openapis.openapi.models.operations.RdcerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RdcerResponse rdcer(org.openapis.openapi.models.operations.RdcerRequestBody request, org.openapis.openapi.models.operations.RdcerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/rdcer/certificate");
         
@@ -48,7 +49,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,10 +127,11 @@ public class APIs {
      * Records of Rights
      * API to verify Records of Rights.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Ror1bResponse ror1b(org.openapis.openapi.models.operations.Ror1bRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Ror1bResponse ror1b(org.openapis.openapi.models.operations.Ror1bRequestBody request, org.openapis.openapi.models.operations.Ror1bSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ror1b/certificate");
         
@@ -140,7 +142,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

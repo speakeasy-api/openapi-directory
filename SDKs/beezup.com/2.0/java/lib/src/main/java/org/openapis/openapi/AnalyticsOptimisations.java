@@ -38,12 +38,12 @@ public class AnalyticsOptimisations {
      */
     public org.openapis.openapi.models.operations.CopyOptimisationResponse copyOptimisation(org.openapis.openapi.models.operations.CopyOptimisationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CopyOptimisationPathParams.class, baseUrl, "/v2/user/analytics/{storeId}/optimisations/copy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CopyOptimisationRequest.class, baseUrl, "/v2/user/analytics/{storeId}/optimisations/copy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "copyOptimisationRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -93,12 +93,12 @@ public class AnalyticsOptimisations {
      */
     public org.openapis.openapi.models.operations.OptimiseResponse optimise(org.openapis.openapi.models.operations.OptimiseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptimisePathParams.class, baseUrl, "/v2/user/analytics/{storeId}/optimisations/{actionName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptimiseRequest.class, baseUrl, "/v2/user/analytics/{storeId}/optimisations/{actionName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "optimiseRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -142,12 +142,12 @@ public class AnalyticsOptimisations {
      */
     public org.openapis.openapi.models.operations.OptimiseAllResponse optimiseAll(org.openapis.openapi.models.operations.OptimiseAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptimiseAllPathParams.class, baseUrl, "/v2/user/analytics/{storeId}/optimisations/all/{actionName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptimiseAllRequest.class, baseUrl, "/v2/user/analytics/{storeId}/optimisations/all/{actionName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "optimiseAllRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -190,12 +190,12 @@ public class AnalyticsOptimisations {
      */
     public org.openapis.openapi.models.operations.OptimiseByCategoryResponse optimiseByCategory(org.openapis.openapi.models.operations.OptimiseByCategoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptimiseByCategoryPathParams.class, baseUrl, "/v2/user/analytics/{storeId}/optimisations/bycategory/{catalogCategoryId}/{actionName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptimiseByCategoryRequest.class, baseUrl, "/v2/user/analytics/{storeId}/optimisations/bycategory/{catalogCategoryId}/{actionName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -235,7 +235,7 @@ public class AnalyticsOptimisations {
      */
     public org.openapis.openapi.models.operations.OptimiseByChannelResponse optimiseByChannel(org.openapis.openapi.models.operations.OptimiseByChannelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptimiseByChannelPathParams.class, baseUrl, "/v2/user/analytics/{storeId}/optimisations/bychannel/{channelId}/{actionName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptimiseByChannelRequest.class, baseUrl, "/v2/user/analytics/{storeId}/optimisations/bychannel/{channelId}/{actionName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -278,12 +278,12 @@ public class AnalyticsOptimisations {
      */
     public org.openapis.openapi.models.operations.OptimiseByProductResponse optimiseByProduct(org.openapis.openapi.models.operations.OptimiseByProductRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptimiseByProductPathParams.class, baseUrl, "/v2/user/analytics/{storeId}/optimisations/byproduct/{productId}/{actionName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptimiseByProductRequest.class, baseUrl, "/v2/user/analytics/{storeId}/optimisations/byproduct/{productId}/{actionName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

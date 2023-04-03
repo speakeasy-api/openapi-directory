@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsListForReleaseRequest {
-    
-    public ReactionsListForReleasePathParams pathParams;
-    public ReactionsListForReleaseRequest withPathParams(ReactionsListForReleasePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Returns a single [reaction type](https://docs.github.com/enterprise-cloud@latest//rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a release.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content")
+    public ReactionsListForReleaseContentEnum content;
+    public ReactionsListForReleaseRequest withContent(ReactionsListForReleaseContentEnum content) {
+        this.content = content;
         return this;
     }
     
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReactionsListForReleaseRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ReactionsListForReleaseQueryParams queryParams;
-    public ReactionsListForReleaseRequest withQueryParams(ReactionsListForReleaseQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReactionsListForReleaseRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReactionsListForReleaseRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the release.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
+    public Long releaseId;
+    public ReactionsListForReleaseRequest withReleaseId(Long releaseId) {
+        this.releaseId = releaseId;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReactionsListForReleaseRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

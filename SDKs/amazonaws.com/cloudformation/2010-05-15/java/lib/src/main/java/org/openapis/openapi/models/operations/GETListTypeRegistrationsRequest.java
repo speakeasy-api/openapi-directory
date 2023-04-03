@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListTypeRegistrationsRequest {
-    
-    public GETListTypeRegistrationsQueryParams queryParams;
-    public GETListTypeRegistrationsRequest withQueryParams(GETListTypeRegistrationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETListTypeRegistrationsActionEnum action;
+    public GETListTypeRegistrationsRequest withAction(GETListTypeRegistrationsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The maximum number of results to be returned with a single call. If the number of available results exceeds this maximum, the response includes a &lt;code&gt;NextToken&lt;/code&gt; value that you can assign to the &lt;code&gt;NextToken&lt;/code&gt; request parameter to get the next set of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public GETListTypeRegistrationsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
     
-    public GETListTypeRegistrationsHeaders headers;
-    public GETListTypeRegistrationsRequest withHeaders(GETListTypeRegistrationsHeaders headers) {
-        this.headers = headers;
+    /**
+     * If the previous paginated request didn't return all the remaining results, the response object's &lt;code&gt;NextToken&lt;/code&gt; parameter value is set to a token. To retrieve the next set of results, call this action again and assign that token to the request object's &lt;code&gt;NextToken&lt;/code&gt; parameter. If there are no remaining results, the previous response object's &lt;code&gt;NextToken&lt;/code&gt; parameter is set to &lt;code&gt;null&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETListTypeRegistrationsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The current status of the extension registration request.&lt;/p&gt; &lt;p&gt;The default is &lt;code&gt;IN_PROGRESS&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RegistrationStatusFilter")
+    public GETListTypeRegistrationsRegistrationStatusFilterEnum registrationStatusFilter;
+    public GETListTypeRegistrationsRequest withRegistrationStatusFilter(GETListTypeRegistrationsRegistrationStatusFilterEnum registrationStatusFilter) {
+        this.registrationStatusFilter = registrationStatusFilter;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The kind of extension.&lt;/p&gt; &lt;p&gt;Conditional: You must specify either &lt;code&gt;TypeName&lt;/code&gt; and &lt;code&gt;Type&lt;/code&gt;, or &lt;code&gt;Arn&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
+    public GETListTypeRegistrationsTypeEnum type;
+    public GETListTypeRegistrationsRequest withType(GETListTypeRegistrationsTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the extension.&lt;/p&gt; &lt;p&gt;Conditional: You must specify either &lt;code&gt;TypeName&lt;/code&gt; and &lt;code&gt;Type&lt;/code&gt;, or &lt;code&gt;Arn&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeArn")
+    public String typeArn;
+    public GETListTypeRegistrationsRequest withTypeArn(String typeArn) {
+        this.typeArn = typeArn;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the extension.&lt;/p&gt; &lt;p&gt;Conditional: You must specify either &lt;code&gt;TypeName&lt;/code&gt; and &lt;code&gt;Type&lt;/code&gt;, or &lt;code&gt;Arn&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeName")
+    public String typeName;
+    public GETListTypeRegistrationsRequest withTypeName(String typeName) {
+        this.typeName = typeName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETListTypeRegistrationsVersionEnum version;
+    public GETListTypeRegistrationsRequest withVersion(GETListTypeRegistrationsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETListTypeRegistrationsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETListTypeRegistrationsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETListTypeRegistrationsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETListTypeRegistrationsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETListTypeRegistrationsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETListTypeRegistrationsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETListTypeRegistrationsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

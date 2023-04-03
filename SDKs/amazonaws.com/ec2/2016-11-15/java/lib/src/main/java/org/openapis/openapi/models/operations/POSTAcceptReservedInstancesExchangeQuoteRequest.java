@@ -7,24 +7,73 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTAcceptReservedInstancesExchangeQuoteRequest {
-    
-    public POSTAcceptReservedInstancesExchangeQuoteQueryParams queryParams;
-    public POSTAcceptReservedInstancesExchangeQuoteRequest withQueryParams(POSTAcceptReservedInstancesExchangeQuoteQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public POSTAcceptReservedInstancesExchangeQuoteHeaders headers;
-    public POSTAcceptReservedInstancesExchangeQuoteRequest withHeaders(POSTAcceptReservedInstancesExchangeQuoteHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public POSTAcceptReservedInstancesExchangeQuoteActionEnum action;
+    public POSTAcceptReservedInstancesExchangeQuoteRequest withAction(POSTAcceptReservedInstancesExchangeQuoteActionEnum action) {
+        this.action = action;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public POSTAcceptReservedInstancesExchangeQuoteRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public POSTAcceptReservedInstancesExchangeQuoteRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public POSTAcceptReservedInstancesExchangeQuoteVersionEnum version;
+    public POSTAcceptReservedInstancesExchangeQuoteRequest withVersion(POSTAcceptReservedInstancesExchangeQuoteVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public POSTAcceptReservedInstancesExchangeQuoteRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public POSTAcceptReservedInstancesExchangeQuoteRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public POSTAcceptReservedInstancesExchangeQuoteRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public POSTAcceptReservedInstancesExchangeQuoteRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public POSTAcceptReservedInstancesExchangeQuoteRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public POSTAcceptReservedInstancesExchangeQuoteRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public POSTAcceptReservedInstancesExchangeQuoteRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

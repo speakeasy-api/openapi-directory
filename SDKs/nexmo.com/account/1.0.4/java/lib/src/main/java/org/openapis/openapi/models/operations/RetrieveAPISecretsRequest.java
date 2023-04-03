@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveAPISecretsRequest {
-    
-    public RetrieveAPISecretsPathParams pathParams;
-    public RetrieveAPISecretsRequest withPathParams(RetrieveAPISecretsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetrieveAPISecretsSecurity security;
-    public RetrieveAPISecretsRequest withSecurity(RetrieveAPISecretsSecurity security) {
-        this.security = security;
+    /**
+     * The API key to manage secrets for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api_key")
+    public String apiKey;
+    public RetrieveAPISecretsRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

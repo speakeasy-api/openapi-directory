@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequest {
-    
-    public EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterprisePathParams pathParams;
-    public EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequest withPathParams(EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBody requestBody;
+    public EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequest withRequestBody(EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBody request;
-    public EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequest withRequest(EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequestBody request) {
-        this.request = request;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the self-hosted runner group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_group_id")
+    public Long runnerGroupId;
+    public EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequest withRunnerGroupId(Long runnerGroupId) {
+        this.runnerGroupId = runnerGroupId;
         return this;
     }
     

@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAemHealthCheckRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=combineTagsOr")
+    public Boolean combineTagsOr;
+    public GetAemHealthCheckRequest withCombineTagsOr(Boolean combineTagsOr) {
+        this.combineTagsOr = combineTagsOr;
+        return this;
+    }
     
-    public GetAemHealthCheckQueryParams queryParams;
-    public GetAemHealthCheckRequest withQueryParams(GetAemHealthCheckQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public GetAemHealthCheckRequest withTags(String tags) {
+        this.tags = tags;
         return this;
     }
     

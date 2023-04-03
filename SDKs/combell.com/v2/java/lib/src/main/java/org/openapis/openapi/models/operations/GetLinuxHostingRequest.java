@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLinuxHostingRequest {
-    
-    public GetLinuxHostingPathParams pathParams;
-    public GetLinuxHostingRequest withPathParams(GetLinuxHostingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public GetLinuxHostingRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
         return this;
     }
     
-    
-    public GetLinuxHostingQueryParams queryParams;
-    public GetLinuxHostingRequest withQueryParams(GetLinuxHostingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Linux hosting domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public GetLinuxHostingRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     

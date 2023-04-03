@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Batch writes new spans to new or existing traces. You cannot update existing spans.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudtraceProjectsTracesBatchWriteResponse cloudtraceProjectsTracesBatchWrite(org.openapis.openapi.models.operations.CloudtraceProjectsTracesBatchWriteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudtraceProjectsTracesBatchWriteResponse cloudtraceProjectsTracesBatchWrite(org.openapis.openapi.models.operations.CloudtraceProjectsTracesBatchWriteRequest request, org.openapis.openapi.models.operations.CloudtraceProjectsTracesBatchWriteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudtraceProjectsTracesBatchWritePathParams.class, baseUrl, "/v2/{name}/traces:batchWrite", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudtraceProjectsTracesBatchWriteRequest.class, baseUrl, "/v2/{name}/traces:batchWrite", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchWriteSpansRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudtraceProjectsTracesBatchWriteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudtraceProjectsTracesBatchWriteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Projects {
     /**
      * Creates a new span.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudtraceProjectsTracesSpansCreateSpanResponse cloudtraceProjectsTracesSpansCreateSpan(org.openapis.openapi.models.operations.CloudtraceProjectsTracesSpansCreateSpanRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudtraceProjectsTracesSpansCreateSpanResponse cloudtraceProjectsTracesSpansCreateSpan(org.openapis.openapi.models.operations.CloudtraceProjectsTracesSpansCreateSpanRequest request, org.openapis.openapi.models.operations.CloudtraceProjectsTracesSpansCreateSpanSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudtraceProjectsTracesSpansCreateSpanPathParams.class, baseUrl, "/v2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudtraceProjectsTracesSpansCreateSpanRequest.class, baseUrl, "/v2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "span", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudtraceProjectsTracesSpansCreateSpanQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudtraceProjectsTracesSpansCreateSpanRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

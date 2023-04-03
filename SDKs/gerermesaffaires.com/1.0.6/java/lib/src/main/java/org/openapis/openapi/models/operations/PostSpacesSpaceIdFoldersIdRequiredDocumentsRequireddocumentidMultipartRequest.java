@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartRequest {
-    
-    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartRequest withPathParams(PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Required Document to add
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartFormData request;
-    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartRequest withRequest(PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartFormData request) {
-        this.request = request;
+    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartFormData requestBody;
+    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartRequest withRequestBody(PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartFormData requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the folder exchange or followup
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartSecurity security;
-    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartRequest withSecurity(PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartSecurity security) {
-        this.security = security;
+    /**
+     * Id of the requireddocument
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=requireddocumentid")
+    public String requireddocumentid;
+    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartRequest withRequireddocumentid(String requireddocumentid) {
+        this.requireddocumentid = requireddocumentid;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

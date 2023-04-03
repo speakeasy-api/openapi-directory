@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchConnectorRequest {
-    
-    public PatchConnectorPathParams pathParams;
-    public PatchConnectorRequest withPathParams(PatchConnectorPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Include connector properties to update here
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchConnectorRequestBody request;
-    public PatchConnectorRequest withRequest(PatchConnectorRequestBody request) {
-        this.request = request;
+    public PatchConnectorRequestBody requestBody;
+    public PatchConnectorRequest withRequestBody(PatchConnectorRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID of connector that needs to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchConnectorRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

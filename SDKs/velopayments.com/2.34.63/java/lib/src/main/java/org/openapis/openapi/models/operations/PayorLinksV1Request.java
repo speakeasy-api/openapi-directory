@@ -4,13 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PayorLinksV1Request {
+    /**
+     * The Payor ID from which to start the query to show all descendants
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=descendantsOfPayor")
+    public String descendantsOfPayor;
+    public PayorLinksV1Request withDescendantsOfPayor(String descendantsOfPayor) {
+        this.descendantsOfPayor = descendantsOfPayor;
+        return this;
+    }
     
-    public PayorLinksV1QueryParams queryParams;
-    public PayorLinksV1Request withQueryParams(PayorLinksV1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * &lt;p&gt;List of additional Payor fields to include in the response for each Payor&lt;/p&gt;
+     * &lt;p&gt;The values of payorId and payorName are always included for each Payor by default&lt;/p&gt;
+     * &lt;p&gt;You can add fields to the response for each payor by including them in the fields parameter separated by commas&lt;/p&gt;
+     * &lt;p&gt;The supported fields are any combination of: primaryContactEmail,kycState&lt;/p&gt;
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public PayorLinksV1Request withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Query for the parent payor details for this payor id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parentOfPayor")
+    public String parentOfPayor;
+    public PayorLinksV1Request withParentOfPayor(String parentOfPayor) {
+        this.parentOfPayor = parentOfPayor;
         return this;
     }
     

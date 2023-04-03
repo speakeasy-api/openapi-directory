@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddSshKeyRequest {
-    
-    public AddSshKeyPathParams pathParams;
-    public AddSshKeyRequest withPathParams(AddSshKeyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AddSshKeyQueryParams queryParams;
-    public AddSshKeyRequest withQueryParams(AddSshKeyQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * SSH key public key.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AddSshKeyRequest request;
-    public AddSshKeyRequest withRequest(org.openapis.openapi.models.shared.AddSshKeyRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AddSshKeyRequest addSshKeyRequest;
+    public AddSshKeyRequest withAddSshKeyRequest(org.openapis.openapi.models.shared.AddSshKeyRequest addSshKeyRequest) {
+        this.addSshKeyRequest = addSshKeyRequest;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public AddSshKeyRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Linux hosting domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public AddSshKeyRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     

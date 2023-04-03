@@ -37,19 +37,20 @@ public class AllowedOriginsMerchantLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014API credentials read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse deleteMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginId(org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse deleteMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginId(org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdRequest request, org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdPathParams.class, baseUrl, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdRequest.class, baseUrl, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,19 +83,20 @@ public class AllowedOriginsMerchantLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014API credentials read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsResponse getMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOrigins(org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsResponse getMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOrigins(org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsRequest request, org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsPathParams.class, baseUrl, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsRequest.class, baseUrl, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -135,19 +137,20 @@ public class AllowedOriginsMerchantLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014API credentials read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse getMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginId(org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse getMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginId(org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdRequest request, org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdPathParams.class, baseUrl, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdRequest.class, baseUrl, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -188,21 +191,22 @@ public class AllowedOriginsMerchantLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014API credentials read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsResponse postMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOrigins(org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsResponse postMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOrigins(org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsRequest request, org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsPathParams.class, baseUrl, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsRequest.class, baseUrl, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "allowedOrigin", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

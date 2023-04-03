@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AcceptSharedDirectoryXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AcceptSharedDirectoryHeaders;
 import org.openapis.openapi.models.operations.AcceptSharedDirectoryRequest;
 import org.openapis.openapi.models.operations.AcceptSharedDirectoryResponse;
 import org.openapis.openapi.models.shared.AcceptSharedDirectoryRequest;
@@ -28,27 +27,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AcceptSharedDirectoryRequest req = new AcceptSharedDirectoryRequest() {{
-                headers = new AcceptSharedDirectoryHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "DirectoryService_20150416.AcceptSharedDirectory";
+                acceptSharedDirectoryRequest = new AcceptSharedDirectoryRequest() {{
+                    sharedDirectoryId = "corrupti";
                 }};
-                request = new AcceptSharedDirectoryRequest() {{
-                    sharedDirectoryId = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+                xAmzTarget = "DirectoryService_20150416.AcceptSharedDirectory";
+            }}            
 
             AcceptSharedDirectoryResponse res = sdk.acceptSharedDirectory(req);
 
@@ -62,7 +57,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

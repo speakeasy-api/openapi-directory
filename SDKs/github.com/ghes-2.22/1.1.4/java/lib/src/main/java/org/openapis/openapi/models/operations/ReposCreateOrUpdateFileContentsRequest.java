@@ -7,17 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposCreateOrUpdateFileContentsRequest {
-    
-    public ReposCreateOrUpdateFileContentsPathParams pathParams;
-    public ReposCreateOrUpdateFileContentsRequest withPathParams(ReposCreateOrUpdateFileContentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReposCreateOrUpdateFileContentsRequestBody requestBody;
+    public ReposCreateOrUpdateFileContentsRequest withRequestBody(ReposCreateOrUpdateFileContentsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReposCreateOrUpdateFileContentsRequestBody request;
-    public ReposCreateOrUpdateFileContentsRequest withRequest(ReposCreateOrUpdateFileContentsRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposCreateOrUpdateFileContentsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * path parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public ReposCreateOrUpdateFileContentsRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposCreateOrUpdateFileContentsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

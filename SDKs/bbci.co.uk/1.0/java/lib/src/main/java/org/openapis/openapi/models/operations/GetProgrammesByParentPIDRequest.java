@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProgrammesByParentPIDRequest {
-    
-    public GetProgrammesByParentPIDPathParams pathParams;
-    public GetProgrammesByParentPIDRequest withPathParams(GetProgrammesByParentPIDPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Whether to return all, or available programmes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=availability")
+    public org.openapis.openapi.models.shared.AvailabilityEnum availability;
+    public GetProgrammesByParentPIDRequest withAvailability(org.openapis.openapi.models.shared.AvailabilityEnum availability) {
+        this.availability = availability;
         return this;
     }
     
+    /**
+     * The depth to return child entities.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=initial_child_count")
+    public Long initialChildCount;
+    public GetProgrammesByParentPIDRequest withInitialChildCount(Long initialChildCount) {
+        this.initialChildCount = initialChildCount;
+        return this;
+    }
     
-    public GetProgrammesByParentPIDQueryParams queryParams;
-    public GetProgrammesByParentPIDRequest withQueryParams(GetProgrammesByParentPIDQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The programme identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pid")
+    public String pid;
+    public GetProgrammesByParentPIDRequest withPid(String pid) {
+        this.pid = pid;
+        return this;
+    }
+    
+    /**
+     * The rights group to limit results to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rights")
+    public org.openapis.openapi.models.shared.RightsEnum rights;
+    public GetProgrammesByParentPIDRequest withRights(org.openapis.openapi.models.shared.RightsEnum rights) {
+        this.rights = rights;
         return this;
     }
     

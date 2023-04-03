@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.BatchGetCollectionXAmzTargetEnum;
-import org.openapis.openapi.models.operations.BatchGetCollectionHeaders;
 import org.openapis.openapi.models.operations.BatchGetCollectionRequest;
 import org.openapis.openapi.models.operations.BatchGetCollectionResponse;
 import org.openapis.openapi.models.shared.BatchGetCollectionRequest;
@@ -15,36 +14,32 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchGetCollectionRequest req = new BatchGetCollectionRequest() {{
-                headers = new BatchGetCollectionHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "OpenSearchServerless.BatchGetCollection";
-                }};
-                request = new BatchGetCollectionRequest() {{
+                batchGetCollectionRequest = new BatchGetCollectionRequest() {{
                     ids = new String[]{{
-                        add("vel"),
-                        add("error"),
-                        add("deserunt"),
-                        add("suscipit"),
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
                     names = new String[]{{
-                        add("magnam"),
-                        add("debitis"),
+                        add("nulla"),
+                        add("corrupti"),
+                        add("illum"),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "vel";
+                xAmzContentSha256 = "error";
+                xAmzCredential = "deserunt";
+                xAmzDate = "suscipit";
+                xAmzSecurityToken = "iure";
+                xAmzSignature = "magnam";
+                xAmzSignedHeaders = "debitis";
+                xAmzTarget = "OpenSearchServerless.BatchGetCollection";
+            }}            
 
             BatchGetCollectionResponse res = sdk.batchGetCollection(req);
 

@@ -32,15 +32,11 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetItemUsagesSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetItemUsagesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetItemUsages200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetItemUsagesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSignInAttemptsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetSignInAttemptsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSignInAttempts200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSignInAttemptsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetAuthIntrospectSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetAuthIntrospectRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAuthIntrospectResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ItemUsage.java
 lib/src/main/java/org/openapis/openapi/models/shared/User.java
@@ -49,7 +45,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ErrorError.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java
 lib/src/main/java/org/openapis/openapi/models/shared/Cursor.java
 lib/src/main/java/org/openapis/openapi/models/shared/ResetCursor.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeJwtsa.java
 lib/src/main/java/org/openapis/openapi/models/shared/SignInAttemptCategoryEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/SignInAttemptTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/SignInAttempt.java

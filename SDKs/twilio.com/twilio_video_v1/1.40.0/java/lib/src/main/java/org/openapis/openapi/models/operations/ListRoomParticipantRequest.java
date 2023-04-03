@@ -4,34 +4,87 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRoomParticipantRequest {
-    
-    public ListRoomParticipantPathParams pathParams;
-    public ListRoomParticipantRequest withPathParams(ListRoomParticipantPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Read only Participants that started after this date in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#UTC) format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreatedAfter")
+    public OffsetDateTime dateCreatedAfter;
+    public ListRoomParticipantRequest withDateCreatedAfter(OffsetDateTime dateCreatedAfter) {
+        this.dateCreatedAfter = dateCreatedAfter;
         return this;
     }
     
-    
-    public ListRoomParticipantQueryParams queryParams;
-    public ListRoomParticipantRequest withQueryParams(ListRoomParticipantQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Read only Participants that started before this date in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#UTC) format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreatedBefore")
+    public OffsetDateTime dateCreatedBefore;
+    public ListRoomParticipantRequest withDateCreatedBefore(OffsetDateTime dateCreatedBefore) {
+        this.dateCreatedBefore = dateCreatedBefore;
         return this;
     }
     
-    
-    public ListRoomParticipantSecurity security;
-    public ListRoomParticipantRequest withSecurity(ListRoomParticipantSecurity security) {
-        this.security = security;
+    /**
+     * Read only the Participants with this [User](https://www.twilio.com/docs/chat/rest/user-resource) `identity` value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Identity")
+    public String identity;
+    public ListRoomParticipantRequest withIdentity(String identity) {
+        this.identity = identity;
         return this;
     }
     
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListRoomParticipantRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public String serverURL;
-    public ListRoomParticipantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListRoomParticipantRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListRoomParticipantRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The SID of the room with the Participant resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=RoomSid")
+    public String roomSid;
+    public ListRoomParticipantRequest withRoomSid(String roomSid) {
+        this.roomSid = roomSid;
+        return this;
+    }
+    
+    /**
+     * Read only the participants with this status. Can be: `connected` or `disconnected`. For `in-progress` Rooms the default Status is `connected`, for `completed` Rooms only `disconnected` Participants are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public org.openapis.openapi.models.shared.RoomParticipantEnumStatusEnum status;
+    public ListRoomParticipantRequest withStatus(org.openapis.openapi.models.shared.RoomParticipantEnumStatusEnum status) {
+        this.status = status;
         return this;
     }
     

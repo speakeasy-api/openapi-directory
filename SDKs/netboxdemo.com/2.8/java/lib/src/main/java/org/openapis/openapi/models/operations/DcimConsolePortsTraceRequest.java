@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimConsolePortsTraceRequest {
-    
-    public DcimConsolePortsTracePathParams pathParams;
-    public DcimConsolePortsTraceRequest withPathParams(DcimConsolePortsTracePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this console port.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimConsolePortsTraceRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

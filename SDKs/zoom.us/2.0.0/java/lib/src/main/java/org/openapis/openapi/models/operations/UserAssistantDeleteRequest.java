@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserAssistantDeleteRequest {
+    /**
+     * Assistant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assistantId")
+    public String assistantId;
+    public UserAssistantDeleteRequest withAssistantId(String assistantId) {
+        this.assistantId = assistantId;
+        return this;
+    }
     
-    public UserAssistantDeletePathParams pathParams;
-    public UserAssistantDeleteRequest withPathParams(UserAssistantDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UserAssistantDeleteRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

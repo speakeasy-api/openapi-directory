@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposGetCollaboratorPermissionLevelRequest {
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposGetCollaboratorPermissionLevelRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ReposGetCollaboratorPermissionLevelPathParams pathParams;
-    public ReposGetCollaboratorPermissionLevelRequest withPathParams(ReposGetCollaboratorPermissionLevelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposGetCollaboratorPermissionLevelRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public ReposGetCollaboratorPermissionLevelRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

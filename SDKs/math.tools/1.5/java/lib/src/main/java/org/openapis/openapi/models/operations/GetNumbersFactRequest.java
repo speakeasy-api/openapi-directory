@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersFactRequest {
-    
-    public GetNumbersFactQueryParams queryParams;
-    public GetNumbersFactRequest withQueryParams(GetNumbersFactQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetNumbersFactSecurity security;
-    public GetNumbersFactRequest withSecurity(GetNumbersFactSecurity security) {
-        this.security = security;
+    /**
+     * Number value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public Long number;
+    public GetNumbersFactRequest withNumber(Long number) {
+        this.number = number;
         return this;
     }
     

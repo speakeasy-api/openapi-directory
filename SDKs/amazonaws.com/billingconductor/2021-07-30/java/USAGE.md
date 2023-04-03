@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AssociateAccountsHeaders;
 import org.openapis.openapi.models.operations.AssociateAccountsRequestBody;
 import org.openapis.openapi.models.operations.AssociateAccountsRequest;
 import org.openapis.openapi.models.operations.AssociateAccountsResponse;
@@ -14,32 +13,27 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateAccountsRequest req = new AssociateAccountsRequest() {{
-                headers = new AssociateAccountsHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new AssociateAccountsRequestBody() {{
+                requestBody = new AssociateAccountsRequestBody() {{
                     accountIds = new String[]{{
-                        add("vel"),
-                        add("error"),
-                        add("deserunt"),
-                        add("suscipit"),
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
-                    arn = "iure";
+                    arn = "unde";
                 }};
-            }};            
+                xAmzAlgorithm = "nulla";
+                xAmzContentSha256 = "corrupti";
+                xAmzCredential = "illum";
+                xAmzDate = "vel";
+                xAmzSecurityToken = "error";
+                xAmzSignature = "deserunt";
+                xAmzSignedHeaders = "suscipit";
+            }}            
 
             AssociateAccountsResponse res = sdk.associateAccounts(req);
 

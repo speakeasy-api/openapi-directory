@@ -34,25 +34,26 @@ public class Achievements {
     /**
      * Increments the steps of the achievement with the given ID for the currently authenticated player.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesAchievementsIncrementResponse gamesAchievementsIncrement(org.openapis.openapi.models.operations.GamesAchievementsIncrementRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesAchievementsIncrementResponse gamesAchievementsIncrement(org.openapis.openapi.models.operations.GamesAchievementsIncrementRequest request, org.openapis.openapi.models.operations.GamesAchievementsIncrementSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesAchievementsIncrementPathParams.class, baseUrl, "/games/v1/achievements/{achievementId}/increment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesAchievementsIncrementRequest.class, baseUrl, "/games/v1/achievements/{achievementId}/increment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesAchievementsIncrementQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesAchievementsIncrementRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class Achievements {
     /**
      * Lists the progress for all your application's achievements for the currently authenticated player.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesAchievementsListResponse gamesAchievementsList(org.openapis.openapi.models.operations.GamesAchievementsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesAchievementsListResponse gamesAchievementsList(org.openapis.openapi.models.operations.GamesAchievementsListRequest request, org.openapis.openapi.models.operations.GamesAchievementsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesAchievementsListPathParams.class, baseUrl, "/games/v1/players/{playerId}/achievements", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesAchievementsListRequest.class, baseUrl, "/games/v1/players/{playerId}/achievements", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesAchievementsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesAchievementsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,25 +126,26 @@ public class Achievements {
     /**
      * Sets the state of the achievement with the given ID to `REVEALED` for the currently authenticated player.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesAchievementsRevealResponse gamesAchievementsReveal(org.openapis.openapi.models.operations.GamesAchievementsRevealRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesAchievementsRevealResponse gamesAchievementsReveal(org.openapis.openapi.models.operations.GamesAchievementsRevealRequest request, org.openapis.openapi.models.operations.GamesAchievementsRevealSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesAchievementsRevealPathParams.class, baseUrl, "/games/v1/achievements/{achievementId}/reveal", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesAchievementsRevealRequest.class, baseUrl, "/games/v1/achievements/{achievementId}/reveal", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesAchievementsRevealQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesAchievementsRevealRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,25 +172,26 @@ public class Achievements {
     /**
      * Sets the steps for the currently authenticated player towards unlocking an achievement. If the steps parameter is less than the current number of steps that the player already gained for the achievement, the achievement is not modified.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesAchievementsSetStepsAtLeastResponse gamesAchievementsSetStepsAtLeast(org.openapis.openapi.models.operations.GamesAchievementsSetStepsAtLeastRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesAchievementsSetStepsAtLeastResponse gamesAchievementsSetStepsAtLeast(org.openapis.openapi.models.operations.GamesAchievementsSetStepsAtLeastRequest request, org.openapis.openapi.models.operations.GamesAchievementsSetStepsAtLeastSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesAchievementsSetStepsAtLeastPathParams.class, baseUrl, "/games/v1/achievements/{achievementId}/setStepsAtLeast", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesAchievementsSetStepsAtLeastRequest.class, baseUrl, "/games/v1/achievements/{achievementId}/setStepsAtLeast", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesAchievementsSetStepsAtLeastQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesAchievementsSetStepsAtLeastRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -214,25 +218,26 @@ public class Achievements {
     /**
      * Unlocks this achievement for the currently authenticated player.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesAchievementsUnlockResponse gamesAchievementsUnlock(org.openapis.openapi.models.operations.GamesAchievementsUnlockRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesAchievementsUnlockResponse gamesAchievementsUnlock(org.openapis.openapi.models.operations.GamesAchievementsUnlockRequest request, org.openapis.openapi.models.operations.GamesAchievementsUnlockSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesAchievementsUnlockPathParams.class, baseUrl, "/games/v1/achievements/{achievementId}/unlock", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesAchievementsUnlockRequest.class, baseUrl, "/games/v1/achievements/{achievementId}/unlock", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesAchievementsUnlockQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesAchievementsUnlockRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -259,27 +264,28 @@ public class Achievements {
     /**
      * Updates multiple achievements for the currently authenticated player.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesAchievementsUpdateMultipleResponse gamesAchievementsUpdateMultiple(org.openapis.openapi.models.operations.GamesAchievementsUpdateMultipleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesAchievementsUpdateMultipleResponse gamesAchievementsUpdateMultiple(org.openapis.openapi.models.operations.GamesAchievementsUpdateMultipleRequest request, org.openapis.openapi.models.operations.GamesAchievementsUpdateMultipleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/games/v1/achievements/updateMultiple");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "achievementUpdateMultipleRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesAchievementsUpdateMultipleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesAchievementsUpdateMultipleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

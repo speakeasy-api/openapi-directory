@@ -4,20 +4,126 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchAppsAppIdVersionsVersionRequest {
-    
-    public PatchAppsAppIdVersionsVersionPathParams pathParams;
-    public PatchAppsAppIdVersionsVersionRequest withPathParams(PatchAppsAppIdVersionsVersionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * JSON array of data access requirements
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access")
+    public String access;
+    public PatchAppsAppIdVersionsVersionRequest withAccess(String access) {
+        this.access = access;
         return this;
     }
     
+    /**
+     * JSON object to allow users to purchase or view this app. Example: {'purchase':{'country':['Canada','Mexico']}} allows only users from canada and mexico to purchase this app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allow")
+    public String allow;
+    public PatchAppsAppIdVersionsVersionRequest withAllow(String allow) {
+        this.allow = allow;
+        return this;
+    }
     
-    public PatchAppsAppIdVersionsVersionQueryParams queryParams;
-    public PatchAppsAppIdVersionsVersionRequest withQueryParams(PatchAppsAppIdVersionsVersionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id of the App to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public String appId;
+    public PatchAppsAppIdVersionsVersionRequest withAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    
+    /**
+     * False if updates should skip the approval process and be available immediately. Default is True
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=approvalRequired")
+    public String approvalRequired;
+    public PatchAppsAppIdVersionsVersionRequest withApprovalRequired(String approvalRequired) {
+        this.approvalRequired = approvalRequired;
+        return this;
+    }
+    
+    /**
+     * A custom set of app attributes defined by the administrator and attached to this app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=attributes")
+    public String attributes;
+    public PatchAppsAppIdVersionsVersionRequest withAttributes(String attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    
+    /**
+     * A custom JSON object that you can create and attach to this record
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
+    public String customData;
+    public PatchAppsAppIdVersionsVersionRequest withCustomData(String customData) {
+        this.customData = customData;
+        return this;
+    }
+    
+    /**
+     * The unique id of the developer that is updating this app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developerId")
+    public String developerId;
+    public PatchAppsAppIdVersionsVersionRequest withDeveloperId(String developerId) {
+        this.developerId = developerId;
+        return this;
+    }
+    
+    /**
+     * A JSON object representing the pricing model type for this app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
+    public String model;
+    public PatchAppsAppIdVersionsVersionRequest withModel(String model) {
+        this.model = model;
+        return this;
+    }
+    
+    /**
+     * The name of the app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public PatchAppsAppIdVersionsVersionRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * JSON object to restrict users from purchasing or viewing this app. Example: {'view':{'country':['Canada','Mexico']},'purchase':{'country':['Canada','Mexico']}} restricts users from canada and mexico from viewing or purchasing this app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=restrict")
+    public String restrict;
+    public PatchAppsAppIdVersionsVersionRequest withRestrict(String restrict) {
+        this.restrict = restrict;
+        return this;
+    }
+    
+    /**
+     * The type for this app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public PatchAppsAppIdVersionsVersionRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * The version of the App to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public PatchAppsAppIdVersionsVersionRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

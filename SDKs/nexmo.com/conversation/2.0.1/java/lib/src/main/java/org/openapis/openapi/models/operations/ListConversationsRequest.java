@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListConversationsRequest {
+    /**
+     * Return the records that occurred before this point in time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_end")
+    public String dateEnd;
+    public ListConversationsRequest withDateEnd(String dateEnd) {
+        this.dateEnd = dateEnd;
+        return this;
+    }
     
-    public ListConversationsQueryParams queryParams;
-    public ListConversationsRequest withQueryParams(ListConversationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return the records that occurred after this point in time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_start")
+    public String dateStart;
+    public ListConversationsRequest withDateStart(String dateStart) {
+        this.dateStart = dateStart;
+        return this;
+    }
+    
+    /**
+     * Return the records in ascending or descending order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public org.openapis.openapi.models.shared.OrderEnum order;
+    public ListConversationsRequest withOrder(org.openapis.openapi.models.shared.OrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * Return this amount of records in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Double pageSize;
+    public ListConversationsRequest withPageSize(Double pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Return calls from this index in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=record_index")
+    public Double recordIndex;
+    public ListConversationsRequest withRecordIndex(Double recordIndex) {
+        this.recordIndex = recordIndex;
         return this;
     }
     

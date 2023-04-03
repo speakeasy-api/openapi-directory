@@ -40,7 +40,7 @@ public class WarmSpare {
      */
     public org.openapis.openapi.models.operations.GetDeviceSwitchWarmSpareResponse getDeviceSwitchWarmSpare(org.openapis.openapi.models.operations.GetDeviceSwitchWarmSpareRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchWarmSparePathParams.class, baseUrl, "/devices/{serial}/switch/warmSpare", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchWarmSpareRequest.class, baseUrl, "/devices/{serial}/switch/warmSpare", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,7 +80,7 @@ public class WarmSpare {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceWarmSpareResponse getNetworkApplianceWarmSpare(org.openapis.openapi.models.operations.GetNetworkApplianceWarmSpareRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceWarmSparePathParams.class, baseUrl, "/networks/{networkId}/appliance/warmSpare", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceWarmSpareRequest.class, baseUrl, "/networks/{networkId}/appliance/warmSpare", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,7 +120,7 @@ public class WarmSpare {
      */
     public org.openapis.openapi.models.operations.SwapNetworkApplianceWarmSpareResponse swapNetworkApplianceWarmSpare(org.openapis.openapi.models.operations.SwapNetworkApplianceWarmSpareRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SwapNetworkApplianceWarmSparePathParams.class, baseUrl, "/networks/{networkId}/appliance/warmSpare/swap", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SwapNetworkApplianceWarmSpareRequest.class, baseUrl, "/networks/{networkId}/appliance/warmSpare/swap", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -160,12 +160,12 @@ public class WarmSpare {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceSwitchWarmSpareResponse updateDeviceSwitchWarmSpare(org.openapis.openapi.models.operations.UpdateDeviceSwitchWarmSpareRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceSwitchWarmSparePathParams.class, baseUrl, "/devices/{serial}/switch/warmSpare", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceSwitchWarmSpareRequest.class, baseUrl, "/devices/{serial}/switch/warmSpare", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -205,12 +205,12 @@ public class WarmSpare {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceWarmSpareResponse updateNetworkApplianceWarmSpare(org.openapis.openapi.models.operations.UpdateNetworkApplianceWarmSpareRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceWarmSparePathParams.class, baseUrl, "/networks/{networkId}/appliance/warmSpare", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceWarmSpareRequest.class, baseUrl, "/networks/{networkId}/appliance/warmSpare", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -43,7 +43,7 @@ public class AssetsCorrelationMatrix {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixResponse postAssetsCorrelationMatrix(org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixResponse postAssetsCorrelationMatrix(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/correlation/matrix");
         
@@ -92,7 +92,7 @@ public class AssetsCorrelationMatrix {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixBoundsResponse postAssetsCorrelationMatrixBounds(org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixBoundsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixBoundsResponse postAssetsCorrelationMatrixBounds(org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixBoundsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/correlation/matrix/bounds");
         
@@ -142,7 +142,7 @@ public class AssetsCorrelationMatrix {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixDenoisedResponse postAssetsCorrelationMatrixDenoised(org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixDenoisedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixDenoisedResponse postAssetsCorrelationMatrixDenoised(org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixDenoisedRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/correlation/matrix/denoised");
         
@@ -195,7 +195,7 @@ public class AssetsCorrelationMatrix {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixDistanceResponse postAssetsCorrelationMatrixDistance(org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixDistanceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixDistanceResponse postAssetsCorrelationMatrixDistance(org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixDistanceRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/correlation/matrix/distance");
         
@@ -244,7 +244,7 @@ public class AssetsCorrelationMatrix {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixEffectiveRankResponse postAssetsCorrelationMatrixEffectiveRank(org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixEffectiveRankRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixEffectiveRankResponse postAssetsCorrelationMatrixEffectiveRank(org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixEffectiveRankRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/correlation/matrix/effective-rank");
         
@@ -298,7 +298,7 @@ public class AssetsCorrelationMatrix {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixInformativenessResponse postAssetsCorrelationMatrixInformativeness(org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixInformativenessRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixInformativenessResponse postAssetsCorrelationMatrixInformativeness(org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixInformativenessRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/correlation/matrix/informativeness");
         
@@ -347,7 +347,7 @@ public class AssetsCorrelationMatrix {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixNearestResponse postAssetsCorrelationMatrixNearest(org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixNearestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixNearestResponse postAssetsCorrelationMatrixNearest(org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixNearestRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/correlation/matrix/nearest");
         
@@ -396,7 +396,7 @@ public class AssetsCorrelationMatrix {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixRandomResponse postAssetsCorrelationMatrixRandom(org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixRandomRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixRandomResponse postAssetsCorrelationMatrixRandom(org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixRandomRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/correlation/matrix/random");
         
@@ -449,7 +449,7 @@ public class AssetsCorrelationMatrix {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixShrinkageResponse postAssetsCorrelationMatrixShrinkage(org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixShrinkageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixShrinkageResponse postAssetsCorrelationMatrixShrinkage(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/correlation/matrix/shrinkage");
         
@@ -500,7 +500,7 @@ public class AssetsCorrelationMatrix {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixTheoryImpliedResponse postAssetsCorrelationMatrixTheoryImplied(org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixTheoryImpliedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixTheoryImpliedResponse postAssetsCorrelationMatrixTheoryImplied(org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixTheoryImpliedRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/correlation/matrix/theory-implied");
         
@@ -549,7 +549,7 @@ public class AssetsCorrelationMatrix {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixValidationResponse postAssetsCorrelationMatrixValidation(org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixValidationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixValidationResponse postAssetsCorrelationMatrixValidation(org.openapis.openapi.models.operations.PostAssetsCorrelationMatrixValidationRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/correlation/matrix/validation");
         

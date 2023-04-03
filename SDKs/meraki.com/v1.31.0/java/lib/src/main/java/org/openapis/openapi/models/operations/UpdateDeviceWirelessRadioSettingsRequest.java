@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeviceWirelessRadioSettingsRequest {
-    
-    public UpdateDeviceWirelessRadioSettingsPathParams pathParams;
-    public UpdateDeviceWirelessRadioSettingsRequest withPathParams(UpdateDeviceWirelessRadioSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateDeviceWirelessRadioSettingsRequestBody requestBody;
+    public UpdateDeviceWirelessRadioSettingsRequest withRequestBody(UpdateDeviceWirelessRadioSettingsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateDeviceWirelessRadioSettingsRequestBody request;
-    public UpdateDeviceWirelessRadioSettingsRequest withRequest(UpdateDeviceWirelessRadioSettingsRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public UpdateDeviceWirelessRadioSettingsRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

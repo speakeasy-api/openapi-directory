@@ -34,27 +34,28 @@ public class Marketplacedeals {
     /**
      * Delete the specified deals from the proposal
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsDeleteResponse adexchangebuyerMarketplacedealsDelete(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsDeleteResponse adexchangebuyerMarketplacedealsDelete(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsDeleteRequest request, org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsDeletePathParams.class, baseUrl, "/proposals/{proposalId}/deals/delete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsDeleteRequest.class, baseUrl, "/proposals/{proposalId}/deals/delete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "deleteOrderDealsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class Marketplacedeals {
     /**
      * Add new deals for the specified proposal
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsInsertResponse adexchangebuyerMarketplacedealsInsert(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsInsertResponse adexchangebuyerMarketplacedealsInsert(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsInsertRequest request, org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsInsertPathParams.class, baseUrl, "/proposals/{proposalId}/deals/insert", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsInsertRequest.class, baseUrl, "/proposals/{proposalId}/deals/insert", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addOrderDealsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,25 +130,26 @@ public class Marketplacedeals {
     /**
      * List all the deals for a given proposal
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsListResponse adexchangebuyerMarketplacedealsList(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsListResponse adexchangebuyerMarketplacedealsList(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsListRequest request, org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsListPathParams.class, baseUrl, "/proposals/{proposalId}/deals", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsListRequest.class, baseUrl, "/proposals/{proposalId}/deals", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,27 +176,28 @@ public class Marketplacedeals {
     /**
      * Replaces all the deals in the proposal with the passed in deals
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsUpdateResponse adexchangebuyerMarketplacedealsUpdate(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsUpdateResponse adexchangebuyerMarketplacedealsUpdate(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsUpdateRequest request, org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsUpdatePathParams.class, baseUrl, "/proposals/{proposalId}/deals/update", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsUpdateRequest.class, baseUrl, "/proposals/{proposalId}/deals/update", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "editAllOrderDealsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerMarketplacedealsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

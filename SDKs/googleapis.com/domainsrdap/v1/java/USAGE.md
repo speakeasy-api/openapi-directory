@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.DomainsrdapAutnumGetPathParams;
-import org.openapis.openapi.models.operations.DomainsrdapAutnumGetQueryParams;
 import org.openapis.openapi.models.operations.DomainsrdapAutnumGetRequest;
 import org.openapis.openapi.models.operations.DomainsrdapAutnumGetResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -18,23 +16,19 @@ public class Application {
                 .build();
 
             DomainsrdapAutnumGetRequest req = new DomainsrdapAutnumGetRequest() {{
-                pathParams = new DomainsrdapAutnumGetPathParams() {{
-                    autnumId = "corrupti";
-                }};
-                queryParams = new DomainsrdapAutnumGetQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                autnumId = "quibusdam";
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
+                oauthToken = "illum";
+                prettyPrint = false;
+                quotaUser = "vel";
+                uploadType = "error";
+                uploadProtocol = "deserunt";
+            }}            
 
             DomainsrdapAutnumGetResponse res = sdk.autnum.domainsrdapAutnumGet(req);
 

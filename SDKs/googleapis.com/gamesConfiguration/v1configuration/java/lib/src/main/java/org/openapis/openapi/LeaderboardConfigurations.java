@@ -34,25 +34,26 @@ public class LeaderboardConfigurations {
     /**
      * Delete the leaderboard configuration with the given ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsDeleteResponse gamesConfigurationLeaderboardConfigurationsDelete(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsDeleteResponse gamesConfigurationLeaderboardConfigurationsDelete(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsDeleteRequest request, org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsDeletePathParams.class, baseUrl, "/games/v1configuration/leaderboards/{leaderboardId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsDeleteRequest.class, baseUrl, "/games/v1configuration/leaderboards/{leaderboardId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,25 +74,26 @@ public class LeaderboardConfigurations {
     /**
      * Retrieves the metadata of the leaderboard configuration with the given ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsGetResponse gamesConfigurationLeaderboardConfigurationsGet(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsGetResponse gamesConfigurationLeaderboardConfigurationsGet(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsGetRequest request, org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsGetPathParams.class, baseUrl, "/games/v1configuration/leaderboards/{leaderboardId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsGetRequest.class, baseUrl, "/games/v1configuration/leaderboards/{leaderboardId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,27 +120,28 @@ public class LeaderboardConfigurations {
     /**
      * Insert a new leaderboard configuration in this application.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsInsertResponse gamesConfigurationLeaderboardConfigurationsInsert(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsInsertResponse gamesConfigurationLeaderboardConfigurationsInsert(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsInsertRequest request, org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsInsertPathParams.class, baseUrl, "/games/v1configuration/applications/{applicationId}/leaderboards", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsInsertRequest.class, baseUrl, "/games/v1configuration/applications/{applicationId}/leaderboards", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "leaderboardConfiguration", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,25 +168,26 @@ public class LeaderboardConfigurations {
     /**
      * Returns a list of the leaderboard configurations in this application.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsListResponse gamesConfigurationLeaderboardConfigurationsList(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsListResponse gamesConfigurationLeaderboardConfigurationsList(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsListRequest request, org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsListPathParams.class, baseUrl, "/games/v1configuration/applications/{applicationId}/leaderboards", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsListRequest.class, baseUrl, "/games/v1configuration/applications/{applicationId}/leaderboards", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -210,27 +214,28 @@ public class LeaderboardConfigurations {
     /**
      * Update the metadata of the leaderboard configuration with the given ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsUpdateResponse gamesConfigurationLeaderboardConfigurationsUpdate(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsUpdateResponse gamesConfigurationLeaderboardConfigurationsUpdate(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsUpdateRequest request, org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsUpdatePathParams.class, baseUrl, "/games/v1configuration/leaderboards/{leaderboardId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsUpdateRequest.class, baseUrl, "/games/v1configuration/leaderboards/{leaderboardId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "leaderboardConfiguration", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesConfigurationLeaderboardConfigurationsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

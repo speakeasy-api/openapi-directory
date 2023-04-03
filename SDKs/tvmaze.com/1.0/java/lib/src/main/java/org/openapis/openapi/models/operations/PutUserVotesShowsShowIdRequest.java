@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUserVotesShowsShowIdRequest {
-    
-    public PutUserVotesShowsShowIdPathParams pathParams;
-    public PutUserVotesShowsShowIdRequest withPathParams(PutUserVotesShowsShowIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ShowVoteInput showVoteInput;
+    public PutUserVotesShowsShowIdRequest withShowVoteInput(org.openapis.openapi.models.shared.ShowVoteInput showVoteInput) {
+        this.showVoteInput = showVoteInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ShowVoteInput request;
-    public PutUserVotesShowsShowIdRequest withRequest(org.openapis.openapi.models.shared.ShowVoteInput request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=show_id")
+    public Long showId;
+    public PutUserVotesShowsShowIdRequest withShowId(Long showId) {
+        this.showId = showId;
         return this;
     }
     

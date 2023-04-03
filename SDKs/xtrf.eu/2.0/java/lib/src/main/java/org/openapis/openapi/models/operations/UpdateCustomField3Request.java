@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCustomField3Request {
-    
-    public UpdateCustomField3PathParams pathParams;
-    public UpdateCustomField3Request withPathParams(UpdateCustomField3PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated custom field with a specified key in a quote.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SmartCustomFieldDTO request;
-    public UpdateCustomField3Request withRequest(org.openapis.openapi.models.shared.SmartCustomFieldDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SmartCustomFieldDTO smartCustomFieldDTO;
+    public UpdateCustomField3Request withSmartCustomFieldDTO(org.openapis.openapi.models.shared.SmartCustomFieldDTO smartCustomFieldDTO) {
+        this.smartCustomFieldDTO = smartCustomFieldDTO;
+        return this;
+    }
+    
+    /**
+     * custom field's key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public UpdateCustomField3Request withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * quote's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
+    public String quoteId;
+    public UpdateCustomField3Request withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
         return this;
     }
     

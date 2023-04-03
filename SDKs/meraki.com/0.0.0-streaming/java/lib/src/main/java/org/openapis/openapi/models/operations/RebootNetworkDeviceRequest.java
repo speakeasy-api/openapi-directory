@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RebootNetworkDeviceRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public RebootNetworkDeviceRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public RebootNetworkDevicePathParams pathParams;
-    public RebootNetworkDeviceRequest withPathParams(RebootNetworkDevicePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public RebootNetworkDeviceRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

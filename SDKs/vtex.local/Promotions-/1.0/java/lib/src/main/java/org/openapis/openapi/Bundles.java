@@ -42,9 +42,21 @@ public class Bundles {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.CalculatediscountsandtaxesBundlesResponse calculatediscountsandtaxesBundles(org.openapis.openapi.models.operations.CalculatediscountsandtaxesBundlesRequest request) throws Exception {
+        return this.calculatediscountsandtaxesBundles(request, null);
+    }
+
+    /**
+     * Calculate discounts and taxes (Bundles)
+     * Calculate discounts and taxes
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CalculatediscountsandtaxesBundlesResponse calculatediscountsandtaxesBundles(org.openapis.openapi.models.operations.CalculatediscountsandtaxesBundlesRequest request, String serverURL) throws Exception {
         String baseUrl = CALCULATEDISCOUNTSANDTAXES_BUNDLES_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/pub/bundles");
@@ -52,13 +64,13 @@ public class Bundles {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "calculatediscountsandtaxesBundlesRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

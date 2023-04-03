@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAppsAppIdRequest {
-    
-    public GetAppsAppIdPathParams pathParams;
-    public GetAppsAppIdRequest withPathParams(GetAppsAppIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the App to be located
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public String appId;
+    public GetAppsAppIdRequest withAppId(String appId) {
+        this.appId = appId;
         return this;
     }
     
+    /**
+     * Whether this call should be tracked as a 'view' for this app. Default is false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trackViews")
+    public Boolean trackViews;
+    public GetAppsAppIdRequest withTrackViews(Boolean trackViews) {
+        this.trackViews = trackViews;
+        return this;
+    }
     
-    public GetAppsAppIdQueryParams queryParams;
-    public GetAppsAppIdRequest withQueryParams(GetAppsAppIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique id of the user that is requesting this resource
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
+    public String userId;
+    public GetAppsAppIdRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkCellularGatewaySubnetPoolRequest {
-    
-    public GetNetworkCellularGatewaySubnetPoolPathParams pathParams;
-    public GetNetworkCellularGatewaySubnetPoolRequest withPathParams(GetNetworkCellularGatewaySubnetPoolPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkCellularGatewaySubnetPoolRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

@@ -34,25 +34,26 @@ public class PacketMirrorings {
     /**
      * Retrieves an aggregated list of packetMirrorings.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputePacketMirroringsAggregatedListResponse computePacketMirroringsAggregatedList(org.openapis.openapi.models.operations.ComputePacketMirroringsAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputePacketMirroringsAggregatedListResponse computePacketMirroringsAggregatedList(org.openapis.openapi.models.operations.ComputePacketMirroringsAggregatedListRequest request, org.openapis.openapi.models.operations.ComputePacketMirroringsAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePacketMirroringsAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/packetMirrorings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePacketMirroringsAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/packetMirrorings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePacketMirroringsAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePacketMirroringsAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class PacketMirrorings {
     /**
      * Deletes the specified PacketMirroring resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputePacketMirroringsDeleteResponse computePacketMirroringsDelete(org.openapis.openapi.models.operations.ComputePacketMirroringsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputePacketMirroringsDeleteResponse computePacketMirroringsDelete(org.openapis.openapi.models.operations.ComputePacketMirroringsDeleteRequest request, org.openapis.openapi.models.operations.ComputePacketMirroringsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePacketMirroringsDeletePathParams.class, baseUrl, "/projects/{project}/regions/{region}/packetMirrorings/{packetMirroring}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePacketMirroringsDeleteRequest.class, baseUrl, "/projects/{project}/regions/{region}/packetMirrorings/{packetMirroring}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePacketMirroringsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePacketMirroringsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,25 +126,26 @@ public class PacketMirrorings {
     /**
      * Returns the specified PacketMirroring resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputePacketMirroringsGetResponse computePacketMirroringsGet(org.openapis.openapi.models.operations.ComputePacketMirroringsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputePacketMirroringsGetResponse computePacketMirroringsGet(org.openapis.openapi.models.operations.ComputePacketMirroringsGetRequest request, org.openapis.openapi.models.operations.ComputePacketMirroringsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePacketMirroringsGetPathParams.class, baseUrl, "/projects/{project}/regions/{region}/packetMirrorings/{packetMirroring}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePacketMirroringsGetRequest.class, baseUrl, "/projects/{project}/regions/{region}/packetMirrorings/{packetMirroring}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePacketMirroringsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePacketMirroringsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,27 +172,28 @@ public class PacketMirrorings {
     /**
      * Creates a PacketMirroring resource in the specified project and region using the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputePacketMirroringsInsertResponse computePacketMirroringsInsert(org.openapis.openapi.models.operations.ComputePacketMirroringsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputePacketMirroringsInsertResponse computePacketMirroringsInsert(org.openapis.openapi.models.operations.ComputePacketMirroringsInsertRequest request, org.openapis.openapi.models.operations.ComputePacketMirroringsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePacketMirroringsInsertPathParams.class, baseUrl, "/projects/{project}/regions/{region}/packetMirrorings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePacketMirroringsInsertRequest.class, baseUrl, "/projects/{project}/regions/{region}/packetMirrorings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "packetMirroring", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePacketMirroringsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePacketMirroringsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,25 +220,26 @@ public class PacketMirrorings {
     /**
      * Retrieves a list of PacketMirroring resources available to the specified project and region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputePacketMirroringsListResponse computePacketMirroringsList(org.openapis.openapi.models.operations.ComputePacketMirroringsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputePacketMirroringsListResponse computePacketMirroringsList(org.openapis.openapi.models.operations.ComputePacketMirroringsListRequest request, org.openapis.openapi.models.operations.ComputePacketMirroringsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePacketMirroringsListPathParams.class, baseUrl, "/projects/{project}/regions/{region}/packetMirrorings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePacketMirroringsListRequest.class, baseUrl, "/projects/{project}/regions/{region}/packetMirrorings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePacketMirroringsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePacketMirroringsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,27 +266,28 @@ public class PacketMirrorings {
     /**
      * Patches the specified PacketMirroring resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputePacketMirroringsPatchResponse computePacketMirroringsPatch(org.openapis.openapi.models.operations.ComputePacketMirroringsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputePacketMirroringsPatchResponse computePacketMirroringsPatch(org.openapis.openapi.models.operations.ComputePacketMirroringsPatchRequest request, org.openapis.openapi.models.operations.ComputePacketMirroringsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePacketMirroringsPatchPathParams.class, baseUrl, "/projects/{project}/regions/{region}/packetMirrorings/{packetMirroring}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePacketMirroringsPatchRequest.class, baseUrl, "/projects/{project}/regions/{region}/packetMirrorings/{packetMirroring}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "packetMirroring1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePacketMirroringsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePacketMirroringsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -308,27 +314,28 @@ public class PacketMirrorings {
     /**
      * Returns permissions that a caller has on the specified resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputePacketMirroringsTestIamPermissionsResponse computePacketMirroringsTestIamPermissions(org.openapis.openapi.models.operations.ComputePacketMirroringsTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputePacketMirroringsTestIamPermissionsResponse computePacketMirroringsTestIamPermissions(org.openapis.openapi.models.operations.ComputePacketMirroringsTestIamPermissionsRequest request, org.openapis.openapi.models.operations.ComputePacketMirroringsTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePacketMirroringsTestIamPermissionsPathParams.class, baseUrl, "/projects/{project}/regions/{region}/packetMirrorings/{resource}/testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePacketMirroringsTestIamPermissionsRequest.class, baseUrl, "/projects/{project}/regions/{region}/packetMirrorings/{resource}/testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePacketMirroringsTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePacketMirroringsTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserUpdateRequest {
-    
-    public UserUpdatePathParams pathParams;
-    public UserUpdateRequest withPathParams(UserUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UserUpdateQueryParams queryParams;
-    public UserUpdateRequest withQueryParams(UserUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * User
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UserUpdateApplicationJSON request;
-    public UserUpdateRequest withRequest(UserUpdateApplicationJSON request) {
-        this.request = request;
+    public UserUpdateApplicationJSON requestBody;
+    public UserUpdateRequest withRequestBody(UserUpdateApplicationJSON requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * `0` - Facebook.&lt;br&gt;`1` - Google.&lt;br&gt;`99` - API.&lt;br&gt;`100` - Zoom.&lt;br&gt;`101` - SSO.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login_type")
+    public UserUpdateLoginTypeEnum loginType;
+    public UserUpdateRequest withLoginType(UserUpdateLoginTypeEnum loginType) {
+        this.loginType = loginType;
+        return this;
+    }
+    
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UserUpdateRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

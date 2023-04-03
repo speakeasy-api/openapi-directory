@@ -40,12 +40,12 @@ public class ConfigTemplates {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationConfigTemplateResponse createOrganizationConfigTemplate(org.openapis.openapi.models.operations.CreateOrganizationConfigTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationConfigTemplatePathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationConfigTemplateRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -85,7 +85,7 @@ public class ConfigTemplates {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationConfigTemplateResponse deleteOrganizationConfigTemplate(org.openapis.openapi.models.operations.DeleteOrganizationConfigTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationConfigTemplatePathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationConfigTemplateRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -119,7 +119,7 @@ public class ConfigTemplates {
      */
     public org.openapis.openapi.models.operations.GetOrganizationConfigTemplateResponse getOrganizationConfigTemplate(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplatePathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -159,7 +159,7 @@ public class ConfigTemplates {
      */
     public org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilePortResponse getOrganizationConfigTemplateSwitchProfilePort(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilePortRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilePortPathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports/{portId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilePortRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports/{portId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -199,7 +199,7 @@ public class ConfigTemplates {
      */
     public org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilePortsResponse getOrganizationConfigTemplateSwitchProfilePorts(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilePortsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilePortsPathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilePortsRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -239,7 +239,7 @@ public class ConfigTemplates {
      */
     public org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilesResponse getOrganizationConfigTemplateSwitchProfiles(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilesPathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilesRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -279,7 +279,7 @@ public class ConfigTemplates {
      */
     public org.openapis.openapi.models.operations.GetOrganizationConfigTemplatesResponse getOrganizationConfigTemplates(org.openapis.openapi.models.operations.GetOrganizationConfigTemplatesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplatesPathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplatesRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -319,12 +319,12 @@ public class ConfigTemplates {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationConfigTemplateResponse updateOrganizationConfigTemplate(org.openapis.openapi.models.operations.UpdateOrganizationConfigTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationConfigTemplatePathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationConfigTemplateRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -361,12 +361,12 @@ public class ConfigTemplates {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationConfigTemplateSwitchProfilePortResponse updateOrganizationConfigTemplateSwitchProfilePort(org.openapis.openapi.models.operations.UpdateOrganizationConfigTemplateSwitchProfilePortRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationConfigTemplateSwitchProfilePortPathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports/{portId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationConfigTemplateSwitchProfilePortRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports/{portId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

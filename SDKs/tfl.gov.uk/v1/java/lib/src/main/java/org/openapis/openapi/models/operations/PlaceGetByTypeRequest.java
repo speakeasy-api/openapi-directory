@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlaceGetByTypeRequest {
-    
-    public PlaceGetByTypePathParams pathParams;
-    public PlaceGetByTypeRequest withPathParams(PlaceGetByTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An optional parameter to limit the results to active records only (Currently only the 'VariableMessageSign' place type is supported)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=activeOnly")
+    public Boolean activeOnly;
+    public PlaceGetByTypeRequest withActiveOnly(Boolean activeOnly) {
+        this.activeOnly = activeOnly;
         return this;
     }
     
-    
-    public PlaceGetByTypeQueryParams queryParams;
-    public PlaceGetByTypeRequest withQueryParams(PlaceGetByTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comma-separated list of the types to return. Max. approx 12 types.
+     *             A valid list of place types can be obtained from the /Place/Meta/placeTypes endpoint.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=types")
+    public String[] types;
+    public PlaceGetByTypeRequest withTypes(String[] types) {
+        this.types = types;
         return this;
     }
     

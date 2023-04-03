@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllIds2Request {
+    /**
+     * exact email of client
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=emailEquals")
+    public String emailEquals;
+    public GetAllIds2Request withEmailEquals(String emailEquals) {
+        this.emailEquals = emailEquals;
+        return this;
+    }
     
-    public GetAllIds2QueryParams queryParams;
-    public GetAllIds2Request withQueryParams(GetAllIds2QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * exact name of client
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nameEquals")
+    public String nameEquals;
+    public GetAllIds2Request withNameEquals(String nameEquals) {
+        this.nameEquals = nameEquals;
+        return this;
+    }
+    
+    /**
+     * only clients modified since this timestamp
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedSince")
+    public Long updatedSince;
+    public GetAllIds2Request withUpdatedSince(Long updatedSince) {
+        this.updatedSince = updatedSince;
         return this;
     }
     

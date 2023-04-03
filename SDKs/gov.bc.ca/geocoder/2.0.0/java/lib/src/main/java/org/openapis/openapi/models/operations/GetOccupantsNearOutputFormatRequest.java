@@ -4,20 +4,98 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOccupantsNearOutputFormatRequest {
-    
-    public GetOccupantsNearOutputFormatPathParams pathParams;
-    public GetOccupantsNearOutputFormatRequest withPathParams(GetOccupantsNearOutputFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If true, include only basic match and address details in results. Not supported for shp, csv, and gml formats.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=brief")
+    public Boolean brief;
+    public GetOccupantsNearOutputFormatRequest withBrief(Boolean brief) {
+        this.brief = brief;
         return this;
     }
     
+    /**
+     * Describes the nature of the address location. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank"&gt;locationDescriptor&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationDescriptor")
+    public GetOccupantsNearOutputFormatLocationDescriptorEnum locationDescriptor;
+    public GetOccupantsNearOutputFormatRequest withLocationDescriptor(GetOccupantsNearOutputFormatLocationDescriptorEnum locationDescriptor) {
+        this.locationDescriptor = locationDescriptor;
+        return this;
+    }
     
-    public GetOccupantsNearOutputFormatQueryParams queryParams;
-    public GetOccupantsNearOutputFormatRequest withQueryParams(GetOccupantsNearOutputFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum distance (in metres) to search from the given point.  If not specified, the search distance is unlimited.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDistance")
+    public Long maxDistance;
+    public GetOccupantsNearOutputFormatRequest withMaxDistance(Long maxDistance) {
+        this.maxDistance = maxDistance;
+        return this;
+    }
+    
+    /**
+     * The maximum number of search results to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public GetOccupantsNearOutputFormatRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Results format. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank"&gt;outputFormat&lt;/a&gt;. 
+     * 
+     * Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
+    public GetOccupantsNearOutputFormatOutputFormatEnum outputFormat;
+    public GetOccupantsNearOutputFormatRequest withOutputFormat(GetOccupantsNearOutputFormatOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    
+    /**
+     * The EPSG code of the spatial reference system (SRS) to use for output geometries. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank"&gt;outputSRS&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
+    public GetOccupantsNearOutputFormatOutputSrsEnum outputSRS;
+    public GetOccupantsNearOutputFormatRequest withOutputSRS(GetOccupantsNearOutputFormatOutputSrsEnum outputSRS) {
+        this.outputSRS = outputSRS;
+        return this;
+    }
+    
+    /**
+     * The point (x,y) from which the nearest site will be identified. The coordinates must be specified in the same SRS as given by the 'outputSRS' parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=point")
+    public String point;
+    public GetOccupantsNearOutputFormatRequest withPoint(String point) {
+        this.point = point;
+        return this;
+    }
+    
+    /**
+     * The distance to move the accessPoint away from the curb and towards the inside of the parcel (in metres). Ignored if locationDescriptor not set to accessPoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setBack")
+    public Long setBack;
+    public GetOccupantsNearOutputFormatRequest withSetBack(Long setBack) {
+        this.setBack = setBack;
+        return this;
+    }
+    
+    /**
+     * Example: schools;courts;employment&lt;br&gt;A list of tags separated by semicolons.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public GetOccupantsNearOutputFormatRequest withTags(String tags) {
+        this.tags = tags;
         return this;
     }
     

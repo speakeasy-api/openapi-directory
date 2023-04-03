@@ -7,10 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddDoNotContactsSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
-    public org.openapis.openapi.models.shared.SchemeBasicAuth basicAuth;
-    public AddDoNotContactsSecurity withBasicAuth(org.openapis.openapi.models.shared.SchemeBasicAuth basicAuth) {
-        this.basicAuth = basicAuth;
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=password")
+    public String password;
+    public AddDoNotContactsSecurity withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=username")
+    public String username;
+    public AddDoNotContactsSecurity withUsername(String username) {
+        this.username = username;
         return this;
     }
     

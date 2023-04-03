@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetAccessTokensAccessTokensPathParams;
-import org.openapis.openapi.models.operations.GetAccessTokensAccessTokensQueryParams;
 import org.openapis.openapi.models.operations.GetAccessTokensAccessTokensRequest;
 import org.openapis.openapi.models.operations.GetAccessTokensAccessTokensResponse;
 
@@ -16,16 +14,12 @@ public class Application {
                 .build();
 
             GetAccessTokensAccessTokensRequest req = new GetAccessTokensAccessTokensRequest() {{
-                pathParams = new GetAccessTokensAccessTokensPathParams() {{
-                    accessTokens = "corrupti";
-                }};
-                queryParams = new GetAccessTokensAccessTokensQueryParams() {{
-                    callback = "provident";
-                    filter = "distinctio";
-                    page = 844266;
-                    pagesize = 602763;
-                }};
-            }};            
+                accessTokens = "corrupti";
+                callback = "provident";
+                filter = "distinctio";
+                page = 844266;
+                pagesize = 602763;
+            }}            
 
             GetAccessTokensAccessTokensResponse res = sdk.getAccessTokensAccessTokens(req);
 

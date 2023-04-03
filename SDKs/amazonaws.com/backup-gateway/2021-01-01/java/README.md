@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AssociateGatewayToServerXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AssociateGatewayToServerHeaders;
 import org.openapis.openapi.models.operations.AssociateGatewayToServerRequest;
 import org.openapis.openapi.models.operations.AssociateGatewayToServerResponse;
 import org.openapis.openapi.models.shared.AssociateGatewayToServerInput;
@@ -28,28 +27,24 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateGatewayToServerRequest req = new AssociateGatewayToServerRequest() {{
-                headers = new AssociateGatewayToServerHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "BackupOnPremises_v20210101.AssociateGatewayToServer";
+                associateGatewayToServerInput = new AssociateGatewayToServerInput() {{
+                    gatewayArn = "corrupti";
+                    serverArn = "provident";
                 }};
-                request = new AssociateGatewayToServerInput() {{
-                    gatewayArn = "illum";
-                    serverArn = "vel";
-                }};
-            }};            
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+                xAmzTarget = "BackupOnPremises_v20210101.AssociateGatewayToServer";
+            }}            
 
             AssociateGatewayToServerResponse res = sdk.associateGatewayToServer(req);
 
@@ -63,7 +58,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

@@ -7,17 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSubContractorIntoEmployerRequest {
-    
-    public PostSubContractorIntoEmployerPathParams pathParams;
-    public PostSubContractorIntoEmployerRequest withPathParams(PostSubContractorIntoEmployerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public PostSubContractorIntoEmployerRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostSubContractorIntoEmployerRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public PostSubContractorIntoEmployerHeaders headers;
-    public PostSubContractorIntoEmployerRequest withHeaders(PostSubContractorIntoEmployerHeaders headers) {
-        this.headers = headers;
+    /**
+     * The employers' unique identifier. E.g ER001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmployerId")
+    public String employerId;
+    public PostSubContractorIntoEmployerRequest withEmployerId(String employerId) {
+        this.employerId = employerId;
         return this;
     }
     
@@ -25,9 +41,9 @@ public class PostSubContractorIntoEmployerRequest {
      * The sub contractor object.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SubContractor request;
-    public PostSubContractorIntoEmployerRequest withRequest(org.openapis.openapi.models.shared.SubContractor request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SubContractor subContractor;
+    public PostSubContractorIntoEmployerRequest withSubContractor(org.openapis.openapi.models.shared.SubContractor subContractor) {
+        this.subContractor = subContractor;
         return this;
     }
     

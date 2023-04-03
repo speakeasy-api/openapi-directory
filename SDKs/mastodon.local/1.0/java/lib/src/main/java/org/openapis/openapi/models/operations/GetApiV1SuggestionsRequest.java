@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1SuggestionsRequest {
-    
-    public GetApiV1SuggestionsQueryParams queryParams;
-    public GetApiV1SuggestionsRequest withQueryParams(GetApiV1SuggestionsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetApiV1SuggestionsSecurity security;
-    public GetApiV1SuggestionsRequest withSecurity(GetApiV1SuggestionsSecurity security) {
-        this.security = security;
+    /**
+     * Maximum number of results to return. Defaults to 40.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetApiV1SuggestionsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

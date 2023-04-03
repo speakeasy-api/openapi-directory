@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDraftRegistrationsDraftIdRequest {
-    
-    public DeleteDraftRegistrationsDraftIdPathParams pathParams;
-    public DeleteDraftRegistrationsDraftIdRequest withPathParams(DeleteDraftRegistrationsDraftIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the draft registration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=draft_id")
+    public String draftId;
+    public DeleteDraftRegistrationsDraftIdRequest withDraftId(String draftId) {
+        this.draftId = draftId;
         return this;
     }
     

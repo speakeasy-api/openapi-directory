@@ -18,14 +18,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.FcmdataProjectsAndroidAppsDeliveryDataListSecurity;
-import org.openapis.openapi.models.operations.FcmdataProjectsAndroidAppsDeliveryDataListPathParams;
-import org.openapis.openapi.models.operations.FcmdataProjectsAndroidAppsDeliveryDataListQueryParams;
 import org.openapis.openapi.models.operations.FcmdataProjectsAndroidAppsDeliveryDataListRequest;
 import org.openapis.openapi.models.operations.FcmdataProjectsAndroidAppsDeliveryDataListResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -34,35 +30,26 @@ public class Application {
                 .build();
 
             FcmdataProjectsAndroidAppsDeliveryDataListRequest req = new FcmdataProjectsAndroidAppsDeliveryDataListRequest() {{
-                security = new FcmdataProjectsAndroidAppsDeliveryDataListSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new FcmdataProjectsAndroidAppsDeliveryDataListPathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new FcmdataProjectsAndroidAppsDeliveryDataListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    pageSize = 423655;
-                    pageToken = "error";
-                    prettyPrint = false;
-                    quotaUser = "deserunt";
-                    uploadType = "suscipit";
-                    uploadProtocol = "iure";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                key = "nulla";
+                oauthToken = "corrupti";
+                pageSize = 847252;
+                pageToken = "vel";
+                parent = "error";
+                prettyPrint = false;
+                quotaUser = "deserunt";
+                uploadType = "suscipit";
+                uploadProtocol = "iure";
+            }}            
 
-            FcmdataProjectsAndroidAppsDeliveryDataListResponse res = sdk.projects.fcmdataProjectsAndroidAppsDeliveryDataList(req);
+            FcmdataProjectsAndroidAppsDeliveryDataListResponse res = sdk.projects.fcmdataProjectsAndroidAppsDeliveryDataList(req, new FcmdataProjectsAndroidAppsDeliveryDataListSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.googleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse.isPresent()) {
                 // handle response
@@ -74,7 +61,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

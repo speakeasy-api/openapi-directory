@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateConfigRequest {
-    
-    public CreateConfigPathParams pathParams;
-    public CreateConfigRequest withPathParams(CreateConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateConfigQueryParams queryParams;
-    public CreateConfigRequest withQueryParams(CreateConfigQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ConfigNewParam request;
-    public CreateConfigRequest withRequest(org.openapis.openapi.models.shared.ConfigNewParam request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ConfigNewParam configNewParam;
+    public CreateConfigRequest withConfigNewParam(org.openapis.openapi.models.shared.ConfigNewParam configNewParam) {
+        this.configNewParam = configNewParam;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public CreateConfigRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=user_token")
+    public String userToken;
+    public CreateConfigRequest withUserToken(String userToken) {
+        this.userToken = userToken;
         return this;
     }
     

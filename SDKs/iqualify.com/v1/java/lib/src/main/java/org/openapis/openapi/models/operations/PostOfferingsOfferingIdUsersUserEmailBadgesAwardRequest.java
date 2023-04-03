@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOfferingsOfferingIdUsersUserEmailBadgesAwardRequest {
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public PostOfferingsOfferingIdUsersUserEmailBadgesAwardRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
+        return this;
+    }
     
-    public PostOfferingsOfferingIdUsersUserEmailBadgesAwardPathParams pathParams;
-    public PostOfferingsOfferingIdUsersUserEmailBadgesAwardRequest withPathParams(PostOfferingsOfferingIdUsersUserEmailBadgesAwardPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * user's email
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
+    public String userEmail;
+    public PostOfferingsOfferingIdUsersUserEmailBadgesAwardRequest withUserEmail(String userEmail) {
+        this.userEmail = userEmail;
         return this;
     }
     

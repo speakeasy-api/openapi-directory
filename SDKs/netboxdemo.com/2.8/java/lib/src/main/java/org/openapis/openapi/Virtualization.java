@@ -33,7 +33,7 @@ public class Virtualization {
 		this._genVersion = genVersion;
 	}
 
-    public org.openapis.openapi.models.operations.VirtualizationClusterGroupsCreateResponse virtualizationClusterGroupsCreate(org.openapis.openapi.models.operations.VirtualizationClusterGroupsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VirtualizationClusterGroupsCreateResponse virtualizationClusterGroupsCreate(org.openapis.openapi.models.shared.ClusterGroupInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/virtualization/cluster-groups/");
         
@@ -73,7 +73,7 @@ public class Virtualization {
 
     public org.openapis.openapi.models.operations.VirtualizationClusterGroupsDeleteResponse virtualizationClusterGroupsDelete(org.openapis.openapi.models.operations.VirtualizationClusterGroupsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClusterGroupsDeletePathParams.class, baseUrl, "/virtualization/cluster-groups/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClusterGroupsDeleteRequest.class, baseUrl, "/virtualization/cluster-groups/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -112,7 +112,7 @@ public class Virtualization {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VirtualizationClusterGroupsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VirtualizationClusterGroupsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -145,12 +145,12 @@ public class Virtualization {
 
     public org.openapis.openapi.models.operations.VirtualizationClusterGroupsPartialUpdateResponse virtualizationClusterGroupsPartialUpdate(org.openapis.openapi.models.operations.VirtualizationClusterGroupsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClusterGroupsPartialUpdatePathParams.class, baseUrl, "/virtualization/cluster-groups/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClusterGroupsPartialUpdateRequest.class, baseUrl, "/virtualization/cluster-groups/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "clusterGroupInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -189,7 +189,7 @@ public class Virtualization {
      */
     public org.openapis.openapi.models.operations.VirtualizationClusterGroupsReadResponse virtualizationClusterGroupsRead(org.openapis.openapi.models.operations.VirtualizationClusterGroupsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClusterGroupsReadPathParams.class, baseUrl, "/virtualization/cluster-groups/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClusterGroupsReadRequest.class, baseUrl, "/virtualization/cluster-groups/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -222,12 +222,12 @@ public class Virtualization {
 
     public org.openapis.openapi.models.operations.VirtualizationClusterGroupsUpdateResponse virtualizationClusterGroupsUpdate(org.openapis.openapi.models.operations.VirtualizationClusterGroupsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClusterGroupsUpdatePathParams.class, baseUrl, "/virtualization/cluster-groups/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClusterGroupsUpdateRequest.class, baseUrl, "/virtualization/cluster-groups/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "clusterGroupInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -258,7 +258,7 @@ public class Virtualization {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.VirtualizationClusterTypesCreateResponse virtualizationClusterTypesCreate(org.openapis.openapi.models.operations.VirtualizationClusterTypesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VirtualizationClusterTypesCreateResponse virtualizationClusterTypesCreate(org.openapis.openapi.models.shared.ClusterTypeInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/virtualization/cluster-types/");
         
@@ -298,7 +298,7 @@ public class Virtualization {
 
     public org.openapis.openapi.models.operations.VirtualizationClusterTypesDeleteResponse virtualizationClusterTypesDelete(org.openapis.openapi.models.operations.VirtualizationClusterTypesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClusterTypesDeletePathParams.class, baseUrl, "/virtualization/cluster-types/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClusterTypesDeleteRequest.class, baseUrl, "/virtualization/cluster-types/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -337,7 +337,7 @@ public class Virtualization {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VirtualizationClusterTypesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VirtualizationClusterTypesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -370,12 +370,12 @@ public class Virtualization {
 
     public org.openapis.openapi.models.operations.VirtualizationClusterTypesPartialUpdateResponse virtualizationClusterTypesPartialUpdate(org.openapis.openapi.models.operations.VirtualizationClusterTypesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClusterTypesPartialUpdatePathParams.class, baseUrl, "/virtualization/cluster-types/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClusterTypesPartialUpdateRequest.class, baseUrl, "/virtualization/cluster-types/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "clusterTypeInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -414,7 +414,7 @@ public class Virtualization {
      */
     public org.openapis.openapi.models.operations.VirtualizationClusterTypesReadResponse virtualizationClusterTypesRead(org.openapis.openapi.models.operations.VirtualizationClusterTypesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClusterTypesReadPathParams.class, baseUrl, "/virtualization/cluster-types/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClusterTypesReadRequest.class, baseUrl, "/virtualization/cluster-types/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -447,12 +447,12 @@ public class Virtualization {
 
     public org.openapis.openapi.models.operations.VirtualizationClusterTypesUpdateResponse virtualizationClusterTypesUpdate(org.openapis.openapi.models.operations.VirtualizationClusterTypesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClusterTypesUpdatePathParams.class, baseUrl, "/virtualization/cluster-types/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClusterTypesUpdateRequest.class, baseUrl, "/virtualization/cluster-types/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "clusterTypeInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -483,7 +483,7 @@ public class Virtualization {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.VirtualizationClustersCreateResponse virtualizationClustersCreate(org.openapis.openapi.models.operations.VirtualizationClustersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VirtualizationClustersCreateResponse virtualizationClustersCreate(org.openapis.openapi.models.shared.WritableClusterInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/virtualization/clusters/");
         
@@ -523,7 +523,7 @@ public class Virtualization {
 
     public org.openapis.openapi.models.operations.VirtualizationClustersDeleteResponse virtualizationClustersDelete(org.openapis.openapi.models.operations.VirtualizationClustersDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClustersDeletePathParams.class, baseUrl, "/virtualization/clusters/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClustersDeleteRequest.class, baseUrl, "/virtualization/clusters/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -562,7 +562,7 @@ public class Virtualization {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VirtualizationClustersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VirtualizationClustersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -595,12 +595,12 @@ public class Virtualization {
 
     public org.openapis.openapi.models.operations.VirtualizationClustersPartialUpdateResponse virtualizationClustersPartialUpdate(org.openapis.openapi.models.operations.VirtualizationClustersPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClustersPartialUpdatePathParams.class, baseUrl, "/virtualization/clusters/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClustersPartialUpdateRequest.class, baseUrl, "/virtualization/clusters/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableClusterInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -639,7 +639,7 @@ public class Virtualization {
      */
     public org.openapis.openapi.models.operations.VirtualizationClustersReadResponse virtualizationClustersRead(org.openapis.openapi.models.operations.VirtualizationClustersReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClustersReadPathParams.class, baseUrl, "/virtualization/clusters/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClustersReadRequest.class, baseUrl, "/virtualization/clusters/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -672,12 +672,12 @@ public class Virtualization {
 
     public org.openapis.openapi.models.operations.VirtualizationClustersUpdateResponse virtualizationClustersUpdate(org.openapis.openapi.models.operations.VirtualizationClustersUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClustersUpdatePathParams.class, baseUrl, "/virtualization/clusters/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationClustersUpdateRequest.class, baseUrl, "/virtualization/clusters/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableClusterInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -708,7 +708,7 @@ public class Virtualization {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.VirtualizationInterfacesCreateResponse virtualizationInterfacesCreate(org.openapis.openapi.models.operations.VirtualizationInterfacesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VirtualizationInterfacesCreateResponse virtualizationInterfacesCreate(org.openapis.openapi.models.shared.WritableVirtualMachineInterfaceInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/virtualization/interfaces/");
         
@@ -748,7 +748,7 @@ public class Virtualization {
 
     public org.openapis.openapi.models.operations.VirtualizationInterfacesDeleteResponse virtualizationInterfacesDelete(org.openapis.openapi.models.operations.VirtualizationInterfacesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationInterfacesDeletePathParams.class, baseUrl, "/virtualization/interfaces/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationInterfacesDeleteRequest.class, baseUrl, "/virtualization/interfaces/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -787,7 +787,7 @@ public class Virtualization {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VirtualizationInterfacesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VirtualizationInterfacesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -820,12 +820,12 @@ public class Virtualization {
 
     public org.openapis.openapi.models.operations.VirtualizationInterfacesPartialUpdateResponse virtualizationInterfacesPartialUpdate(org.openapis.openapi.models.operations.VirtualizationInterfacesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationInterfacesPartialUpdatePathParams.class, baseUrl, "/virtualization/interfaces/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationInterfacesPartialUpdateRequest.class, baseUrl, "/virtualization/interfaces/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableVirtualMachineInterfaceInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -864,7 +864,7 @@ public class Virtualization {
      */
     public org.openapis.openapi.models.operations.VirtualizationInterfacesReadResponse virtualizationInterfacesRead(org.openapis.openapi.models.operations.VirtualizationInterfacesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationInterfacesReadPathParams.class, baseUrl, "/virtualization/interfaces/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationInterfacesReadRequest.class, baseUrl, "/virtualization/interfaces/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -897,12 +897,12 @@ public class Virtualization {
 
     public org.openapis.openapi.models.operations.VirtualizationInterfacesUpdateResponse virtualizationInterfacesUpdate(org.openapis.openapi.models.operations.VirtualizationInterfacesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationInterfacesUpdatePathParams.class, baseUrl, "/virtualization/interfaces/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationInterfacesUpdateRequest.class, baseUrl, "/virtualization/interfaces/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableVirtualMachineInterfaceInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -933,7 +933,7 @@ public class Virtualization {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.VirtualizationVirtualMachinesCreateResponse virtualizationVirtualMachinesCreate(org.openapis.openapi.models.operations.VirtualizationVirtualMachinesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VirtualizationVirtualMachinesCreateResponse virtualizationVirtualMachinesCreate(org.openapis.openapi.models.shared.WritableVirtualMachineWithConfigContextInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/virtualization/virtual-machines/");
         
@@ -973,7 +973,7 @@ public class Virtualization {
 
     public org.openapis.openapi.models.operations.VirtualizationVirtualMachinesDeleteResponse virtualizationVirtualMachinesDelete(org.openapis.openapi.models.operations.VirtualizationVirtualMachinesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationVirtualMachinesDeletePathParams.class, baseUrl, "/virtualization/virtual-machines/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationVirtualMachinesDeleteRequest.class, baseUrl, "/virtualization/virtual-machines/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1012,7 +1012,7 @@ public class Virtualization {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VirtualizationVirtualMachinesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VirtualizationVirtualMachinesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1045,12 +1045,12 @@ public class Virtualization {
 
     public org.openapis.openapi.models.operations.VirtualizationVirtualMachinesPartialUpdateResponse virtualizationVirtualMachinesPartialUpdate(org.openapis.openapi.models.operations.VirtualizationVirtualMachinesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationVirtualMachinesPartialUpdatePathParams.class, baseUrl, "/virtualization/virtual-machines/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationVirtualMachinesPartialUpdateRequest.class, baseUrl, "/virtualization/virtual-machines/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableVirtualMachineWithConfigContextInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1089,7 +1089,7 @@ public class Virtualization {
      */
     public org.openapis.openapi.models.operations.VirtualizationVirtualMachinesReadResponse virtualizationVirtualMachinesRead(org.openapis.openapi.models.operations.VirtualizationVirtualMachinesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationVirtualMachinesReadPathParams.class, baseUrl, "/virtualization/virtual-machines/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationVirtualMachinesReadRequest.class, baseUrl, "/virtualization/virtual-machines/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1122,12 +1122,12 @@ public class Virtualization {
 
     public org.openapis.openapi.models.operations.VirtualizationVirtualMachinesUpdateResponse virtualizationVirtualMachinesUpdate(org.openapis.openapi.models.operations.VirtualizationVirtualMachinesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationVirtualMachinesUpdatePathParams.class, baseUrl, "/virtualization/virtual-machines/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualizationVirtualMachinesUpdateRequest.class, baseUrl, "/virtualization/virtual-machines/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableVirtualMachineWithConfigContextInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

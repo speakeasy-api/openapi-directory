@@ -45,7 +45,7 @@ public class Creators {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreatorsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreatorsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -83,7 +83,7 @@ public class Creators {
      */
     public org.openapis.openapi.models.operations.CreatorsReadResponse creatorsRead(org.openapis.openapi.models.operations.CreatorsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatorsReadPathParams.class, baseUrl, "/creators/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatorsReadRequest.class, baseUrl, "/creators/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

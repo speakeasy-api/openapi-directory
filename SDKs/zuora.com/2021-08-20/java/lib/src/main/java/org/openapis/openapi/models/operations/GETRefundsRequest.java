@@ -4,20 +4,217 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRefundsRequest {
-    
-    public GETRefundsQueryParams queryParams;
-    public GETRefundsRequest withQueryParams(GETRefundsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public GETRefundsRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
         return this;
     }
     
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public GETRefundsRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
+        return this;
+    }
     
-    public GETRefundsHeaders headers;
-    public GETRefundsRequest withHeaders(GETRefundsHeaders headers) {
-        this.headers = headers;
+    /**
+     * This parameter filters the response based on the `accountId` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountId")
+    public String accountId;
+    public GETRefundsRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `amount` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amount")
+    public Double amount;
+    public GETRefundsRequest withAmount(Double amount) {
+        this.amount = amount;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `createdById` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdById")
+    public String createdById;
+    public GETRefundsRequest withCreatedById(String createdById) {
+        this.createdById = createdById;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `createdDate` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdDate")
+    public OffsetDateTime createdDate;
+    public GETRefundsRequest withCreatedDate(OffsetDateTime createdDate) {
+        this.createdDate = createdDate;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `methodType` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=methodType")
+    public GETRefundsMethodTypeEnum methodType;
+    public GETRefundsRequest withMethodType(GETRefundsMethodTypeEnum methodType) {
+        this.methodType = methodType;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `number` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public String number;
+    public GETRefundsRequest withNumber(String number) {
+        this.number = number;
+        return this;
+    }
+    
+    /**
+     * Number of rows returned per page.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public GETRefundsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `paymentId` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paymentId")
+    public String paymentId;
+    public GETRefundsRequest withPaymentId(String paymentId) {
+        this.paymentId = paymentId;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `refundDate` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=refundDate")
+    public LocalDate refundDate;
+    public GETRefundsRequest withRefundDate(LocalDate refundDate) {
+        this.refundDate = refundDate;
+        return this;
+    }
+    
+    /**
+     * This parameter restricts the order of the data returned in the response. You can use this parameter to supply a dimension you want to sort on.
+     * 
+     * A sortable field uses the following form: 
+     * 
+     * *operator* *field_name*
+     * 
+     * You can use at most two sortable fields in one URL path. Use a comma to separate sortable fields. For example:  *operator* *field_name*, *operator* *field_name*  
+     * 
+     * *operator* is used to mark the order of sequencing. The operator is optional. If you only specify the sortable field without any operator, the response data is sorted in descending order by this field.
+     * 
+     *   - The `-` operator indicates an ascending order.
+     *   - The `+` operator indicates a descending order.
+     * 
+     * By default, the response data is displayed in descending order by refund number.
+     * 
+     * *field_name* indicates the name of a sortable field. The supported sortable fields of this operation are as below:
+     * 
+     *   - number
+     *   - accountId
+     *   - amount
+     *   - refundDate
+     *   - paymentId
+     *   - createdDate
+     *   - createdById
+     *   - updatedDate
+     *   - updatedById
+     *   
+     * Examples:
+     * 
+     * - /v1/refunds?sort=+number
+     * 
+     * - /v1/refunds?status=Processed&amp;sort=-number,+amount
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GETRefundsRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `status` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GETRefundsStatusEnum status;
+    public GETRefundsRequest withStatus(GETRefundsStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `type` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GETRefundsTypeEnum type;
+    public GETRefundsRequest withType(GETRefundsTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `updatedById` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedById")
+    public String updatedById;
+    public GETRefundsRequest withUpdatedById(String updatedById) {
+        this.updatedById = updatedById;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `updatedDate` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedDate")
+    public OffsetDateTime updatedDate;
+    public GETRefundsRequest withUpdatedDate(OffsetDateTime updatedDate) {
+        this.updatedDate = updatedDate;
         return this;
     }
     

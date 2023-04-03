@@ -79,7 +79,7 @@ public class Corporate {
      */
     public org.openapis.openapi.models.operations.GetAvailableCorporatePermissionsByIdResponse getAvailableCorporatePermissionsById(org.openapis.openapi.models.operations.GetAvailableCorporatePermissionsByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAvailableCorporatePermissionsByIdPathParams.class, baseUrl, "/corporates/{corporateId}/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAvailableCorporatePermissionsByIdRequest.class, baseUrl, "/corporates/{corporateId}/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -158,7 +158,7 @@ public class Corporate {
      */
     public org.openapis.openapi.models.operations.GetCorporateByIdResponse getCorporateById(org.openapis.openapi.models.operations.GetCorporateByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCorporateByIdPathParams.class, baseUrl, "/corporates/{corporateId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCorporateByIdRequest.class, baseUrl, "/corporates/{corporateId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -237,7 +237,7 @@ public class Corporate {
      */
     public org.openapis.openapi.models.operations.GetCorporateUserGroupsByIdResponse getCorporateUserGroupsById(org.openapis.openapi.models.operations.GetCorporateUserGroupsByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCorporateUserGroupsByIdPathParams.class, baseUrl, "/corporates/{corporateId}/user-groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCorporateUserGroupsByIdRequest.class, baseUrl, "/corporates/{corporateId}/user-groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -316,7 +316,7 @@ public class Corporate {
      */
     public org.openapis.openapi.models.operations.GetCorporateUsersByIdResponse getCorporateUsersById(org.openapis.openapi.models.operations.GetCorporateUsersByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCorporateUsersByIdPathParams.class, baseUrl, "/corporates/{corporateId}/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCorporateUsersByIdRequest.class, baseUrl, "/corporates/{corporateId}/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -393,7 +393,7 @@ public class Corporate {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SaveCorporateUserResponse saveCorporateUser(org.openapis.openapi.models.operations.SaveCorporateUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SaveCorporateUserResponse saveCorporateUser(org.openapis.openapi.models.shared.UserUpdateContent request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/corporate/users");
         
@@ -438,7 +438,7 @@ public class Corporate {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SaveCorporateUserGroupResponse saveCorporateUserGroup(org.openapis.openapi.models.operations.SaveCorporateUserGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SaveCorporateUserGroupResponse saveCorporateUserGroup(org.openapis.openapi.models.shared.UserGroup request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/corporate/user-groups");
         
@@ -485,12 +485,12 @@ public class Corporate {
      */
     public org.openapis.openapi.models.operations.SaveCorporateUserGroupByIdResponse saveCorporateUserGroupById(org.openapis.openapi.models.operations.SaveCorporateUserGroupByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SaveCorporateUserGroupByIdPathParams.class, baseUrl, "/corporates/{corporateId}/user-groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SaveCorporateUserGroupByIdRequest.class, baseUrl, "/corporates/{corporateId}/user-groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "userGroup", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

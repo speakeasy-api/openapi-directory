@@ -34,24 +34,25 @@ public class OnDemandPromotions {
     /**
      * Add a promotion to an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateVodPromotionResponse createVodPromotion(org.openapis.openapi.models.operations.CreateVodPromotionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateVodPromotionResponse createVodPromotion(org.openapis.openapi.models.operations.CreateVodPromotionRequest request, org.openapis.openapi.models.operations.CreateVodPromotionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateVodPromotionPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/promotions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateVodPromotionRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/promotions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -86,19 +87,20 @@ public class OnDemandPromotions {
     /**
      * Remove a promotion from an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVodPromotionResponse deleteVodPromotion(org.openapis.openapi.models.operations.DeleteVodPromotionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVodPromotionResponse deleteVodPromotion(org.openapis.openapi.models.operations.DeleteVodPromotionRequest request, org.openapis.openapi.models.operations.DeleteVodPromotionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVodPromotionPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/promotions/{promotion_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVodPromotionRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/promotions/{promotion_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,19 +129,20 @@ public class OnDemandPromotions {
     /**
      * Get a specific promotion on an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetVodPromotionResponse getVodPromotion(org.openapis.openapi.models.operations.GetVodPromotionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetVodPromotionResponse getVodPromotion(org.openapis.openapi.models.operations.GetVodPromotionRequest request, org.openapis.openapi.models.operations.GetVodPromotionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodPromotionPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/promotions/{promotion_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodPromotionRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/promotions/{promotion_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class OnDemandPromotions {
     /**
      * Get all the codes of a promotion on an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetVodPromotionCodesResponse getVodPromotionCodes(org.openapis.openapi.models.operations.GetVodPromotionCodesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetVodPromotionCodesResponse getVodPromotionCodes(org.openapis.openapi.models.operations.GetVodPromotionCodesRequest request, org.openapis.openapi.models.operations.GetVodPromotionCodesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodPromotionCodesPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/promotions/{promotion_id}/codes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodPromotionCodesRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/promotions/{promotion_id}/codes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVodPromotionCodesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVodPromotionCodesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -227,25 +231,26 @@ public class OnDemandPromotions {
     /**
      * Get all the promotions on an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetVodPromotionsResponse getVodPromotions(org.openapis.openapi.models.operations.GetVodPromotionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetVodPromotionsResponse getVodPromotions(org.openapis.openapi.models.operations.GetVodPromotionsRequest request, org.openapis.openapi.models.operations.GetVodPromotionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodPromotionsPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/promotions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodPromotionsRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/promotions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVodPromotionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVodPromotionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

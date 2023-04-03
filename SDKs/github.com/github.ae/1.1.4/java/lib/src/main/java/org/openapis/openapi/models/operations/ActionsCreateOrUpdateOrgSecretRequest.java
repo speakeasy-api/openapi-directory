@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsCreateOrUpdateOrgSecretRequest {
-    
-    public ActionsCreateOrUpdateOrgSecretPathParams pathParams;
-    public ActionsCreateOrUpdateOrgSecretRequest withPathParams(ActionsCreateOrUpdateOrgSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsCreateOrUpdateOrgSecretRequestBody requestBody;
+    public ActionsCreateOrUpdateOrgSecretRequest withRequestBody(ActionsCreateOrUpdateOrgSecretRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsCreateOrUpdateOrgSecretRequestBody request;
-    public ActionsCreateOrUpdateOrgSecretRequest withRequest(ActionsCreateOrUpdateOrgSecretRequestBody request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsCreateOrUpdateOrgSecretRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * The name of the secret.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
+    public String secretName;
+    public ActionsCreateOrUpdateOrgSecretRequest withSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
     

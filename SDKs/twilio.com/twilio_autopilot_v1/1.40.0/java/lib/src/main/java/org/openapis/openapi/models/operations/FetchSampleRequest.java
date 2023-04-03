@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSampleRequest {
-    
-    public FetchSamplePathParams pathParams;
-    public FetchSampleRequest withPathParams(FetchSamplePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public FetchSampleRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
-    
-    public FetchSampleSecurity security;
-    public FetchSampleRequest withSecurity(FetchSampleSecurity security) {
-        this.security = security;
+    /**
+     * The Twilio-provided string that uniquely identifies the Sample resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchSampleRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchSampleRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Task](https://www.twilio.com/docs/autopilot/api/task) associated with the Sample resource to create.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TaskSid")
+    public String taskSid;
+    public FetchSampleRequest withTaskSid(String taskSid) {
+        this.taskSid = taskSid;
         return this;
     }
     

@@ -38,19 +38,20 @@ public class VisionModels {
      * Delete a Model
      * Deletes the specified model.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteModel1Response deleteModel1(org.openapis.openapi.models.operations.DeleteModel1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteModel1Response deleteModel1(org.openapis.openapi.models.operations.DeleteModel1Request request, org.openapis.openapi.models.operations.DeleteModel1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteModel1PathParams.class, baseUrl, "/v2/vision/models/{modelId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteModel1Request.class, baseUrl, "/v2/vision/models/{modelId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class VisionModels {
      * Get Model Learning Curve
      * Returns the metrics for each epoch in a model.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTrainedModelLearningCurve1Response getTrainedModelLearningCurve1(org.openapis.openapi.models.operations.GetTrainedModelLearningCurve1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTrainedModelLearningCurve1Response getTrainedModelLearningCurve1(org.openapis.openapi.models.operations.GetTrainedModelLearningCurve1Request request, org.openapis.openapi.models.operations.GetTrainedModelLearningCurve1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTrainedModelLearningCurve1PathParams.class, baseUrl, "/v2/vision/models/{modelId}/lc", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTrainedModelLearningCurve1Request.class, baseUrl, "/v2/vision/models/{modelId}/lc", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTrainedModelLearningCurve1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTrainedModelLearningCurve1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,19 +126,20 @@ public class VisionModels {
      * Get Model Metrics
      * Returns the metrics for a model
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTrainedModelMetrics1Response getTrainedModelMetrics1(org.openapis.openapi.models.operations.GetTrainedModelMetrics1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTrainedModelMetrics1Response getTrainedModelMetrics1(org.openapis.openapi.models.operations.GetTrainedModelMetrics1Request request, org.openapis.openapi.models.operations.GetTrainedModelMetrics1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTrainedModelMetrics1PathParams.class, baseUrl, "/v2/vision/models/{modelId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTrainedModelMetrics1Request.class, baseUrl, "/v2/vision/models/{modelId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -164,25 +167,26 @@ public class VisionModels {
      * Get All Models
      * Returns all models for the specified dataset.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTrainedModels1Response getTrainedModels1(org.openapis.openapi.models.operations.GetTrainedModels1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTrainedModels1Response getTrainedModels1(org.openapis.openapi.models.operations.GetTrainedModels1Request request, org.openapis.openapi.models.operations.GetTrainedModels1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTrainedModels1PathParams.class, baseUrl, "/v2/vision/datasets/{datasetId}/models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTrainedModels1Request.class, baseUrl, "/v2/vision/datasets/{datasetId}/models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTrainedModels1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTrainedModels1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

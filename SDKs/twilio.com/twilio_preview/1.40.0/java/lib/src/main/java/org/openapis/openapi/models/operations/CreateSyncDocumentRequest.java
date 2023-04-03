@@ -7,31 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSyncDocumentRequest {
-    
-    public CreateSyncDocumentPathParams pathParams;
-    public CreateSyncDocumentRequest withPathParams(CreateSyncDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateSyncDocumentCreateSyncDocumentRequest request;
-    public CreateSyncDocumentRequest withRequest(CreateSyncDocumentCreateSyncDocumentRequest request) {
-        this.request = request;
+    public CreateSyncDocumentCreateSyncDocumentRequest requestBody;
+    public CreateSyncDocumentRequest withRequestBody(CreateSyncDocumentCreateSyncDocumentRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateSyncDocumentSecurity security;
-    public CreateSyncDocumentRequest withSecurity(CreateSyncDocumentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateSyncDocumentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateSyncDocumentRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

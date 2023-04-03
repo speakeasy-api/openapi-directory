@@ -7,10 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV1DonationsCreateSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
-    public org.openapis.openapi.models.shared.SchemeBasicAuth basicAuth;
-    public PostApiV1DonationsCreateSecurity withBasicAuth(org.openapis.openapi.models.shared.SchemeBasicAuth basicAuth) {
-        this.basicAuth = basicAuth;
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=password")
+    public String password;
+    public PostApiV1DonationsCreateSecurity withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=username")
+    public String username;
+    public PostApiV1DonationsCreateSecurity withUsername(String username) {
+        this.username = username;
         return this;
     }
     

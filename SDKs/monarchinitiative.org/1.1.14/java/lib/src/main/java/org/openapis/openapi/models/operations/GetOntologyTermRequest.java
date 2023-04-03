@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOntologyTermRequest {
-    
-    public GetOntologyTermPathParams pathParams;
-    public GetOntologyTermRequest withPathParams(GetOntologyTermPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * CURIE identifier of a GO term, e.g. GO:0003677
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetOntologyTermRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

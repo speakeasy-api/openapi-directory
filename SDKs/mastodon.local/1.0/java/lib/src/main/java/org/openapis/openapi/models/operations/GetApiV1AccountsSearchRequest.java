@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1AccountsSearchRequest {
-    
-    public GetApiV1AccountsSearchQueryParams queryParams;
-    public GetApiV1AccountsSearchRequest withQueryParams(GetApiV1AccountsSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only who the user is following. Defaults to false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=following")
+    public Boolean following;
+    public GetApiV1AccountsSearchRequest withFollowing(Boolean following) {
+        this.following = following;
         return this;
     }
     
+    /**
+     * Maximum number of results. Defaults to 40.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetApiV1AccountsSearchRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetApiV1AccountsSearchSecurity security;
-    public GetApiV1AccountsSearchRequest withSecurity(GetApiV1AccountsSearchSecurity security) {
-        this.security = security;
+    /**
+     * What to search for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetApiV1AccountsSearchRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * Attempt WebFinger lookup. Defaults to false. Use this when `q` is an exact address.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolve")
+    public String resolve;
+    public GetApiV1AccountsSearchRequest withResolve(String resolve) {
+        this.resolve = resolve;
         return this;
     }
     

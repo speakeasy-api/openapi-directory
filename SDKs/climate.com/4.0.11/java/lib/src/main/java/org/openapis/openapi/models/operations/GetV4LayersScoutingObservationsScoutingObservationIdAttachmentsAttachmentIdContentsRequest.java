@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsRequest {
-    
-    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsPathParams pathParams;
-    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsRequest withPathParams(GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Must be either \* /* or application/octet-stream,application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsHeaders headers;
-    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsRequest withHeaders(GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Byte range `bytes=start-end` (https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.35.1). e.g. bytes=0-1048576. Currently only single range value is supported. Both start and end need to be specified, end value should be greater than start and end - start should not be greater than 5MiB.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Range")
+    public String range;
+    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsRequest withRange(String range) {
+        this.range = range;
         return this;
     }
     
+    /**
+     * Unique identifier of the attachment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attachmentId")
+    public String attachmentId;
+    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsRequest withAttachmentId(String attachmentId) {
+        this.attachmentId = attachmentId;
+        return this;
+    }
     
-    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsSecurity security;
-    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsRequest withSecurity(GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the Scouting Observation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scoutingObservationId")
+    public String scoutingObservationId;
+    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsRequest withScoutingObservationId(String scoutingObservationId) {
+        this.scoutingObservationId = scoutingObservationId;
         return this;
     }
     

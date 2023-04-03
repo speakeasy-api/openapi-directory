@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetJournalReportOuputRequest {
-    
-    public GetJournalReportOuputQueryParams queryParams;
-    public GetJournalReportOuputRequest withQueryParams(GetJournalReportOuputQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public GetJournalReportOuputRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetJournalReportOuputRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public GetJournalReportOuputHeaders headers;
-    public GetJournalReportOuputRequest withHeaders(GetJournalReportOuputHeaders headers) {
-        this.headers = headers;
+    /**
+     * The employer unique key. E.g. ER001
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EmployerKey")
+    public String employerKey;
+    public GetJournalReportOuputRequest withEmployerKey(String employerKey) {
+        this.employerKey = employerKey;
+        return this;
+    }
+    
+    /**
+     * Specific to JOURNAL report, a filter used to select the journal lines for the specified ledger target. E.g. [Default]
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LedgerTarget")
+    public String ledgerTarget;
+    public GetJournalReportOuputRequest withLedgerTarget(String ledgerTarget) {
+        this.ledgerTarget = ledgerTarget;
+        return this;
+    }
+    
+    /**
+     * The pay frequency option. E.g. Monthly
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PayFrequency")
+    public String payFrequency;
+    public GetJournalReportOuputRequest withPayFrequency(String payFrequency) {
+        this.payFrequency = payFrequency;
+        return this;
+    }
+    
+    /**
+     * The tax period number.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TaxPeriod")
+    public String taxPeriod;
+    public GetJournalReportOuputRequest withTaxPeriod(String taxPeriod) {
+        this.taxPeriod = taxPeriod;
+        return this;
+    }
+    
+    /**
+     * The tax year. E.g. 2017 = 2017/18 year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TaxYear")
+    public String taxYear;
+    public GetJournalReportOuputRequest withTaxYear(String taxYear) {
+        this.taxYear = taxYear;
         return this;
     }
     

@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVersionsRequest {
-    
-    public GetVersionsPathParams pathParams;
-    public GetVersionsRequest withPathParams(GetVersionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetVersionsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetVersionsQueryParams queryParams;
-    public GetVersionsRequest withQueryParams(GetVersionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetVersionsRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Name of the VTEX account. Used as part of the URL
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public GetVersionsRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
     
-    public GetVersionsHeaders headers;
-    public GetVersionsRequest withHeaders(GetVersionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * A string that identifies the seller in the marketplace. This ID must be created by the marketplace and informed to the seller before the integration is built.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
+    public String sellerId;
+    public GetVersionsRequest withSellerId(String sellerId) {
+        this.sellerId = sellerId;
+        return this;
+    }
+    
+    /**
+     * A string that identifies the SKU in the marketplace. This is the ID that the marketplace will use for future references to this SKU, such as price and inventory notifications.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerskuid")
+    public String sellerskuid;
+    public GetVersionsRequest withSellerskuid(String sellerskuid) {
+        this.sellerskuid = sellerskuid;
         return this;
     }
     

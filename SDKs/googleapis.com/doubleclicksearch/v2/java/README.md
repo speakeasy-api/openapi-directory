@@ -18,14 +18,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.DoubleclicksearchConversionGetSecurity;
-import org.openapis.openapi.models.operations.DoubleclicksearchConversionGetPathParams;
-import org.openapis.openapi.models.operations.DoubleclicksearchConversionGetQueryParams;
 import org.openapis.openapi.models.operations.DoubleclicksearchConversionGetRequest;
 import org.openapis.openapi.models.operations.DoubleclicksearchConversionGetResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -34,44 +30,35 @@ public class Application {
                 .build();
 
             DoubleclicksearchConversionGetRequest req = new DoubleclicksearchConversionGetRequest() {{
-                security = new DoubleclicksearchConversionGetSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new DoubleclicksearchConversionGetPathParams() {{
-                    advertiserId = "corrupti";
-                    agencyId = "provident";
-                    engineAccountId = "distinctio";
-                }};
-                queryParams = new DoubleclicksearchConversionGetQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "unde";
-                    adGroupId = "nulla";
-                    adId = "corrupti";
-                    alt = "proto";
-                    callback = "vel";
-                    campaignId = "error";
-                    criterionId = "deserunt";
-                    customerId = "suscipit";
-                    endDate = 437587;
-                    fields = "magnam";
-                    key = "debitis";
-                    oauthToken = "ipsa";
-                    prettyPrint = false;
-                    quotaUser = "delectus";
-                    rowCount = 272656;
-                    startDate = 383441;
-                    startRow = 477665;
-                    uploadType = "minus";
-                    uploadProtocol = "placeat";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                adGroupId = "distinctio";
+                adId = "quibusdam";
+                advertiserId = "unde";
+                agencyId = "nulla";
+                alt = "media";
+                callback = "illum";
+                campaignId = "vel";
+                criterionId = "error";
+                customerId = "deserunt";
+                endDate = 384382;
+                engineAccountId = "iure";
+                fields = "magnam";
+                key = "debitis";
+                oauthToken = "ipsa";
+                prettyPrint = false;
+                quotaUser = "delectus";
+                rowCount = 272656;
+                startDate = 383441;
+                startRow = 477665;
+                uploadType = "minus";
+                uploadProtocol = "placeat";
+            }}            
 
-            DoubleclicksearchConversionGetResponse res = sdk.conversion.doubleclicksearchConversionGet(req);
+            DoubleclicksearchConversionGetResponse res = sdk.conversion.doubleclicksearchConversionGet(req, new DoubleclicksearchConversionGetSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.conversionList.isPresent()) {
                 // handle response
@@ -83,7 +70,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### conversion

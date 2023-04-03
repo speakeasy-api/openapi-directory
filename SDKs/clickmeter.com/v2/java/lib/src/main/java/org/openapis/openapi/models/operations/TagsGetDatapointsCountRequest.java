@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagsGetDatapointsCountRequest {
-    
-    public TagsGetDatapointsCountPathParams pathParams;
-    public TagsGetDatapointsCountRequest withPathParams(TagsGetDatapointsCountPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Exclude datapoints created before this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
+    public String createdAfter;
+    public TagsGetDatapointsCountRequest withCreatedAfter(String createdAfter) {
+        this.createdAfter = createdAfter;
         return this;
     }
     
+    /**
+     * Exclude datapoints created after this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
+    public String createdBefore;
+    public TagsGetDatapointsCountRequest withCreatedBefore(String createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
     
-    public TagsGetDatapointsCountQueryParams queryParams;
-    public TagsGetDatapointsCountRequest withQueryParams(TagsGetDatapointsCountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Status of the datapoint
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public TagsGetDatapointsCountStatusEnum status;
+    public TagsGetDatapointsCountRequest withStatus(TagsGetDatapointsCountStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Id of the tag.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
+    public Long tagId;
+    public TagsGetDatapointsCountRequest withTagId(Long tagId) {
+        this.tagId = tagId;
+        return this;
+    }
+    
+    /**
+     * Filter fields by this pattern
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
+    public String textSearch;
+    public TagsGetDatapointsCountRequest withTextSearch(String textSearch) {
+        this.textSearch = textSearch;
+        return this;
+    }
+    
+    /**
+     * Type of the datapoint ("tp"/"tl")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public TagsGetDatapointsCountTypeEnum type;
+    public TagsGetDatapointsCountRequest withType(TagsGetDatapointsCountTypeEnum type) {
+        this.type = type;
         return this;
     }
     

@@ -39,7 +39,7 @@ public class Dhcp {
      */
     public org.openapis.openapi.models.operations.ProtocolDhcpGetArgsResponse protocolDhcpGetArgs(org.openapis.openapi.models.operations.ProtocolDhcpGetArgsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolDhcpGetArgsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/dhcp/get/args", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolDhcpGetArgsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/dhcp/get/args", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -81,7 +81,7 @@ public class Dhcp {
      */
     public org.openapis.openapi.models.operations.ProtocolDhcpGetConfigResponse protocolDhcpGetConfig(org.openapis.openapi.models.operations.ProtocolDhcpGetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolDhcpGetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/dhcp/get/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolDhcpGetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/dhcp/get/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -123,7 +123,7 @@ public class Dhcp {
      */
     public org.openapis.openapi.models.operations.ProtocolDhcpGetStatisticsResponse protocolDhcpGetStatistics(org.openapis.openapi.models.operations.ProtocolDhcpGetStatisticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolDhcpGetStatisticsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/dhcp/get/statistics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolDhcpGetStatisticsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/dhcp/get/statistics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -206,7 +206,7 @@ public class Dhcp {
      */
     public org.openapis.openapi.models.operations.ProtocolDhcpGetTraceResponse protocolDhcpGetTrace(org.openapis.openapi.models.operations.ProtocolDhcpGetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolDhcpGetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/dhcp/get/trace", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolDhcpGetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/dhcp/get/trace", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -248,7 +248,7 @@ public class Dhcp {
      */
     public org.openapis.openapi.models.operations.ProtocolDhcpParamsResponse protocolDhcpParams(org.openapis.openapi.models.operations.ProtocolDhcpParamsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolDhcpParamsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/dhcp/params", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolDhcpParamsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/dhcp/params", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -290,7 +290,7 @@ public class Dhcp {
      */
     public org.openapis.openapi.models.operations.ProtocolDhcpSetConfigResponse protocolDhcpSetConfig(org.openapis.openapi.models.operations.ProtocolDhcpSetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolDhcpSetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/dhcp/set/config/{argument}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolDhcpSetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/dhcp/set/config/{argument}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -331,7 +331,7 @@ public class Dhcp {
      */
     public org.openapis.openapi.models.operations.ProtocolDhcpSetTraceResponse protocolDhcpSetTrace(org.openapis.openapi.models.operations.ProtocolDhcpSetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolDhcpSetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/dhcp/set/trace/{enableOrNot}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolDhcpSetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/dhcp/set/trace/{enableOrNot}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

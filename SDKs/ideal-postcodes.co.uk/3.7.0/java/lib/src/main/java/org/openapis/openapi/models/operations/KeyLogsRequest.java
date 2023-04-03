@@ -4,20 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KeyLogsRequest {
-    
-    public KeyLogsPathParams pathParams;
-    public KeyLogsRequest withPathParams(KeyLogsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An end date/time in the form of a UNIX Timestamp in milliseconds, e.g. `1418556452651`. If no end time is provided, the current time will be used.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=end")
+    public Integer end;
+    public KeyLogsRequest withEnd(Integer end) {
+        this.end = end;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public KeyLogsRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
     
-    public KeyLogsQueryParams queryParams;
-    public KeyLogsRequest withQueryParams(KeyLogsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Sublicensed keys only. This will restrict the analysed dataset to a specific licensee.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=licensee")
+    public String licensee;
+    public KeyLogsRequest withLicensee(String licensee) {
+        this.licensee = licensee;
+        return this;
+    }
+    
+    /**
+     * An start date/time in the form of a UNIX Timestamp in milliseconds, e.g. `1418556452651`. If no start time is provided, the start time will be assigned to a time 21 days prior to the end time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=start")
+    public Integer start;
+    public KeyLogsRequest withStart(Integer start) {
+        this.start = start;
         return this;
     }
     

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSessionRequest {
-    
-    public FetchSessionPathParams pathParams;
-    public FetchSessionRequest withPathParams(FetchSessionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchSessionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public FetchSessionSecurity security;
-    public FetchSessionRequest withSecurity(FetchSessionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchSessionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Session resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchSessionRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContactsRemoveRequest {
-    
-    public ContactsRemovePathParams pathParams;
-    public ContactsRemoveRequest withPathParams(ContactsRemovePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public ContactsRemoveRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public ContactsRemoveSecurity security;
-    public ContactsRemoveRequest withSecurity(ContactsRemoveSecurity security) {
-        this.security = security;
+    /**
+     * Contact id to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contactId")
+    public String contactId;
+    public ContactsRemoveRequest withContactId(String contactId) {
+        this.contactId = contactId;
         return this;
     }
     

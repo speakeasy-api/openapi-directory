@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.ActionsAddCustomLabelsToSelfHostedRunnerForOrgPathParams;
 import org.openapis.openapi.models.operations.ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequestBody;
 import org.openapis.openapi.models.operations.ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest;
 import org.openapis.openapi.models.operations.ActionsAddCustomLabelsToSelfHostedRunnerForOrgResponse;
@@ -16,18 +15,16 @@ public class Application {
                 .build();
 
             ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest req = new ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest() {{
-                pathParams = new ActionsAddCustomLabelsToSelfHostedRunnerForOrgPathParams() {{
-                    org = "corrupti";
-                    runnerId = 592845;
-                }};
-                request = new ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequestBody() {{
+                requestBody = new ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequestBody() {{
                     labels = new String[]{{
+                        add("provident"),
+                        add("distinctio"),
                         add("quibusdam"),
-                        add("unde"),
-                        add("nulla"),
                     }};
                 }};
-            }};            
+                org = "unde";
+                runnerId = 857946;
+            }}            
 
             ActionsAddCustomLabelsToSelfHostedRunnerForOrgResponse res = sdk.actions.actionsAddCustomLabelsToSelfHostedRunnerForOrg(req);
 

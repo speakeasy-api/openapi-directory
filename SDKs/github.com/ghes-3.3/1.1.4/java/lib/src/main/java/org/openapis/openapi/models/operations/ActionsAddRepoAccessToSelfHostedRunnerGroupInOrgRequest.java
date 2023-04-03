@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest {
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams pathParams;
-    public ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest withPathParams(ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository_id")
+    public Long repositoryId;
+    public ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest withRepositoryId(Long repositoryId) {
+        this.repositoryId = repositoryId;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the self-hosted runner group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_group_id")
+    public Long runnerGroupId;
+    public ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest withRunnerGroupId(Long runnerGroupId) {
+        this.runnerGroupId = runnerGroupId;
         return this;
     }
     

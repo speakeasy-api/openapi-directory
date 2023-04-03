@@ -4,13 +4,481 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimDeviceTypesListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=console_ports")
+    public String consolePorts;
+    public DcimDeviceTypesListRequest withConsolePorts(String consolePorts) {
+        this.consolePorts = consolePorts;
+        return this;
+    }
     
-    public DcimDeviceTypesListQueryParams queryParams;
-    public DcimDeviceTypesListRequest withQueryParams(DcimDeviceTypesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=console_server_ports")
+    public String consoleServerPorts;
+    public DcimDeviceTypesListRequest withConsoleServerPorts(String consoleServerPorts) {
+        this.consoleServerPorts = consoleServerPorts;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created")
+    public String created;
+    public DcimDeviceTypesListRequest withCreated(String created) {
+        this.created = created;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created__gte")
+    public String createdGte;
+    public DcimDeviceTypesListRequest withCreatedGte(String createdGte) {
+        this.createdGte = createdGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created__lte")
+    public String createdLte;
+    public DcimDeviceTypesListRequest withCreatedLte(String createdLte) {
+        this.createdLte = createdLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_bays")
+    public String deviceBays;
+    public DcimDeviceTypesListRequest withDeviceBays(String deviceBays) {
+        this.deviceBays = deviceBays;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public DcimDeviceTypesListRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gt")
+    public String idGt;
+    public DcimDeviceTypesListRequest withIdGt(String idGt) {
+        this.idGt = idGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gte")
+    public String idGte;
+    public DcimDeviceTypesListRequest withIdGte(String idGte) {
+        this.idGte = idGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lt")
+    public String idLt;
+    public DcimDeviceTypesListRequest withIdLt(String idLt) {
+        this.idLt = idLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lte")
+    public String idLte;
+    public DcimDeviceTypesListRequest withIdLte(String idLte) {
+        this.idLte = idLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__n")
+    public String idN;
+    public DcimDeviceTypesListRequest withIdN(String idN) {
+        this.idN = idN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interfaces")
+    public String interfaces;
+    public DcimDeviceTypesListRequest withInterfaces(String interfaces) {
+        this.interfaces = interfaces;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_full_depth")
+    public String isFullDepth;
+    public DcimDeviceTypesListRequest withIsFullDepth(String isFullDepth) {
+        this.isFullDepth = isFullDepth;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_updated")
+    public String lastUpdated;
+    public DcimDeviceTypesListRequest withLastUpdated(String lastUpdated) {
+        this.lastUpdated = lastUpdated;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_updated__gte")
+    public String lastUpdatedGte;
+    public DcimDeviceTypesListRequest withLastUpdatedGte(String lastUpdatedGte) {
+        this.lastUpdatedGte = lastUpdatedGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_updated__lte")
+    public String lastUpdatedLte;
+    public DcimDeviceTypesListRequest withLastUpdatedLte(String lastUpdatedLte) {
+        this.lastUpdatedLte = lastUpdatedLte;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public DcimDeviceTypesListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=manufacturer")
+    public String manufacturer;
+    public DcimDeviceTypesListRequest withManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=manufacturer__n")
+    public String manufacturerN;
+    public DcimDeviceTypesListRequest withManufacturerN(String manufacturerN) {
+        this.manufacturerN = manufacturerN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=manufacturer_id")
+    public String manufacturerId;
+    public DcimDeviceTypesListRequest withManufacturerId(String manufacturerId) {
+        this.manufacturerId = manufacturerId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=manufacturer_id__n")
+    public String manufacturerIdN;
+    public DcimDeviceTypesListRequest withManufacturerIdN(String manufacturerIdN) {
+        this.manufacturerIdN = manufacturerIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
+    public String model;
+    public DcimDeviceTypesListRequest withModel(String model) {
+        this.model = model;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model__ic")
+    public String modelIc;
+    public DcimDeviceTypesListRequest withModelIc(String modelIc) {
+        this.modelIc = modelIc;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model__ie")
+    public String modelIe;
+    public DcimDeviceTypesListRequest withModelIe(String modelIe) {
+        this.modelIe = modelIe;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model__iew")
+    public String modelIew;
+    public DcimDeviceTypesListRequest withModelIew(String modelIew) {
+        this.modelIew = modelIew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model__isw")
+    public String modelIsw;
+    public DcimDeviceTypesListRequest withModelIsw(String modelIsw) {
+        this.modelIsw = modelIsw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model__n")
+    public String modelN;
+    public DcimDeviceTypesListRequest withModelN(String modelN) {
+        this.modelN = modelN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model__nic")
+    public String modelNic;
+    public DcimDeviceTypesListRequest withModelNic(String modelNic) {
+        this.modelNic = modelNic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model__nie")
+    public String modelNie;
+    public DcimDeviceTypesListRequest withModelNie(String modelNie) {
+        this.modelNie = modelNie;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model__niew")
+    public String modelNiew;
+    public DcimDeviceTypesListRequest withModelNiew(String modelNiew) {
+        this.modelNiew = modelNiew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model__nisw")
+    public String modelNisw;
+    public DcimDeviceTypesListRequest withModelNisw(String modelNisw) {
+        this.modelNisw = modelNisw;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public DcimDeviceTypesListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_number")
+    public String partNumber;
+    public DcimDeviceTypesListRequest withPartNumber(String partNumber) {
+        this.partNumber = partNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_number__ic")
+    public String partNumberIc;
+    public DcimDeviceTypesListRequest withPartNumberIc(String partNumberIc) {
+        this.partNumberIc = partNumberIc;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_number__ie")
+    public String partNumberIe;
+    public DcimDeviceTypesListRequest withPartNumberIe(String partNumberIe) {
+        this.partNumberIe = partNumberIe;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_number__iew")
+    public String partNumberIew;
+    public DcimDeviceTypesListRequest withPartNumberIew(String partNumberIew) {
+        this.partNumberIew = partNumberIew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_number__isw")
+    public String partNumberIsw;
+    public DcimDeviceTypesListRequest withPartNumberIsw(String partNumberIsw) {
+        this.partNumberIsw = partNumberIsw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_number__n")
+    public String partNumberN;
+    public DcimDeviceTypesListRequest withPartNumberN(String partNumberN) {
+        this.partNumberN = partNumberN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_number__nic")
+    public String partNumberNic;
+    public DcimDeviceTypesListRequest withPartNumberNic(String partNumberNic) {
+        this.partNumberNic = partNumberNic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_number__nie")
+    public String partNumberNie;
+    public DcimDeviceTypesListRequest withPartNumberNie(String partNumberNie) {
+        this.partNumberNie = partNumberNie;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_number__niew")
+    public String partNumberNiew;
+    public DcimDeviceTypesListRequest withPartNumberNiew(String partNumberNiew) {
+        this.partNumberNiew = partNumberNiew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_number__nisw")
+    public String partNumberNisw;
+    public DcimDeviceTypesListRequest withPartNumberNisw(String partNumberNisw) {
+        this.partNumberNisw = partNumberNisw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pass_through_ports")
+    public String passThroughPorts;
+    public DcimDeviceTypesListRequest withPassThroughPorts(String passThroughPorts) {
+        this.passThroughPorts = passThroughPorts;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=power_outlets")
+    public String powerOutlets;
+    public DcimDeviceTypesListRequest withPowerOutlets(String powerOutlets) {
+        this.powerOutlets = powerOutlets;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=power_ports")
+    public String powerPorts;
+    public DcimDeviceTypesListRequest withPowerPorts(String powerPorts) {
+        this.powerPorts = powerPorts;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public DcimDeviceTypesListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug")
+    public String slug;
+    public DcimDeviceTypesListRequest withSlug(String slug) {
+        this.slug = slug;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__ic")
+    public String slugIc;
+    public DcimDeviceTypesListRequest withSlugIc(String slugIc) {
+        this.slugIc = slugIc;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__ie")
+    public String slugIe;
+    public DcimDeviceTypesListRequest withSlugIe(String slugIe) {
+        this.slugIe = slugIe;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__iew")
+    public String slugIew;
+    public DcimDeviceTypesListRequest withSlugIew(String slugIew) {
+        this.slugIew = slugIew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__isw")
+    public String slugIsw;
+    public DcimDeviceTypesListRequest withSlugIsw(String slugIsw) {
+        this.slugIsw = slugIsw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__n")
+    public String slugN;
+    public DcimDeviceTypesListRequest withSlugN(String slugN) {
+        this.slugN = slugN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__nic")
+    public String slugNic;
+    public DcimDeviceTypesListRequest withSlugNic(String slugNic) {
+        this.slugNic = slugNic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__nie")
+    public String slugNie;
+    public DcimDeviceTypesListRequest withSlugNie(String slugNie) {
+        this.slugNie = slugNie;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__niew")
+    public String slugNiew;
+    public DcimDeviceTypesListRequest withSlugNiew(String slugNiew) {
+        this.slugNiew = slugNiew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__nisw")
+    public String slugNisw;
+    public DcimDeviceTypesListRequest withSlugNisw(String slugNisw) {
+        this.slugNisw = slugNisw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subdevice_role")
+    public String subdeviceRole;
+    public DcimDeviceTypesListRequest withSubdeviceRole(String subdeviceRole) {
+        this.subdeviceRole = subdeviceRole;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subdevice_role__n")
+    public String subdeviceRoleN;
+    public DcimDeviceTypesListRequest withSubdeviceRoleN(String subdeviceRoleN) {
+        this.subdeviceRoleN = subdeviceRoleN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public DcimDeviceTypesListRequest withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag__n")
+    public String tagN;
+    public DcimDeviceTypesListRequest withTagN(String tagN) {
+        this.tagN = tagN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=u_height")
+    public String uHeight;
+    public DcimDeviceTypesListRequest withUHeight(String uHeight) {
+        this.uHeight = uHeight;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=u_height__gt")
+    public String uHeightGt;
+    public DcimDeviceTypesListRequest withUHeightGt(String uHeightGt) {
+        this.uHeightGt = uHeightGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=u_height__gte")
+    public String uHeightGte;
+    public DcimDeviceTypesListRequest withUHeightGte(String uHeightGte) {
+        this.uHeightGte = uHeightGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=u_height__lt")
+    public String uHeightLt;
+    public DcimDeviceTypesListRequest withUHeightLt(String uHeightLt) {
+        this.uHeightLt = uHeightLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=u_height__lte")
+    public String uHeightLte;
+    public DcimDeviceTypesListRequest withUHeightLte(String uHeightLte) {
+        this.uHeightLte = uHeightLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=u_height__n")
+    public String uHeightN;
+    public DcimDeviceTypesListRequest withUHeightN(String uHeightN) {
+        this.uHeightN = uHeightN;
         return this;
     }
     

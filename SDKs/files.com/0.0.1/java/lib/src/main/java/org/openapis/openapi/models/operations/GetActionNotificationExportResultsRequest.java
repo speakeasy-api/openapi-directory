@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActionNotificationExportResultsRequest {
+    /**
+     * ID of the associated action notification export.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action_notification_export_id")
+    public Integer actionNotificationExportId;
+    public GetActionNotificationExportResultsRequest withActionNotificationExportId(Integer actionNotificationExportId) {
+        this.actionNotificationExportId = actionNotificationExportId;
+        return this;
+    }
     
-    public GetActionNotificationExportResultsQueryParams queryParams;
-    public GetActionNotificationExportResultsRequest withQueryParams(GetActionNotificationExportResultsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public GetActionNotificationExportResultsRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    /**
+     * Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetActionNotificationExportResultsRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * User ID.  Provide a value of `0` to operate the current session's user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
+    public Integer userId;
+    public GetActionNotificationExportResultsRequest withUserId(Integer userId) {
+        this.userId = userId;
         return this;
     }
     

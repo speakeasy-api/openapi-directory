@@ -34,10 +34,11 @@ public class Translation {
     /**
      * Translate from English to pirate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPirateTranslateResponse getPirateTranslate(org.openapis.openapi.models.operations.GetPirateTranslateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPirateTranslateResponse getPirateTranslate(org.openapis.openapi.models.operations.GetPirateTranslateRequest request, org.openapis.openapi.models.operations.GetPirateTranslateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/pirate/translate");
         
@@ -45,14 +46,14 @@ public class Translation {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPirateTranslateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPirateTranslateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

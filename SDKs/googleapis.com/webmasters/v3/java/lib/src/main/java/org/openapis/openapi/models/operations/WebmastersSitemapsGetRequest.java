@@ -4,27 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebmastersSitemapsGetRequest {
-    
-    public WebmastersSitemapsGetPathParams pathParams;
-    public WebmastersSitemapsGetRequest withPathParams(WebmastersSitemapsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public WebmastersSitemapsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public WebmastersSitemapsGetQueryParams queryParams;
-    public WebmastersSitemapsGetRequest withQueryParams(WebmastersSitemapsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The URL of the actual sitemap. For example: http://www.example.com/sitemap.xml
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=feedpath")
+    public String feedpath;
+    public WebmastersSitemapsGetRequest withFeedpath(String feedpath) {
+        this.feedpath = feedpath;
         return this;
     }
     
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public WebmastersSitemapsGetRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public WebmastersSitemapsGetSecurity security;
-    public WebmastersSitemapsGetRequest withSecurity(WebmastersSitemapsGetSecurity security) {
-        this.security = security;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public WebmastersSitemapsGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public WebmastersSitemapsGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public WebmastersSitemapsGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public WebmastersSitemapsGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The site's URL, including protocol. For example: http://www.example.com/
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=siteUrl")
+    public String siteUrl;
+    public WebmastersSitemapsGetRequest withSiteUrl(String siteUrl) {
+        this.siteUrl = siteUrl;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public WebmastersSitemapsGetRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

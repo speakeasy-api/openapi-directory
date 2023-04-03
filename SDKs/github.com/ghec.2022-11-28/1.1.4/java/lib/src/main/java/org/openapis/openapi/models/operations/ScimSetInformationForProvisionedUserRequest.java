@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ScimSetInformationForProvisionedUserRequest {
-    
-    public ScimSetInformationForProvisionedUserPathParams pathParams;
-    public ScimSetInformationForProvisionedUserRequest withPathParams(ScimSetInformationForProvisionedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ScimSetInformationForProvisionedUserRequestBody requestBody;
+    public ScimSetInformationForProvisionedUserRequest withRequestBody(ScimSetInformationForProvisionedUserRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ScimSetInformationForProvisionedUserRequestBody request;
-    public ScimSetInformationForProvisionedUserRequest withRequest(ScimSetInformationForProvisionedUserRequestBody request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ScimSetInformationForProvisionedUserRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the SCIM user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scim_user_id")
+    public String scimUserId;
+    public ScimSetInformationForProvisionedUserRequest withScimUserId(String scimUserId) {
+        this.scimUserId = scimUserId;
         return this;
     }
     

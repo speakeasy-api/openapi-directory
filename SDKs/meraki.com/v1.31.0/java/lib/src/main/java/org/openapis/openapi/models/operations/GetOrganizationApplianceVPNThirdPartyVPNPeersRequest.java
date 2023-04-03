@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationApplianceVPNThirdPartyVPNPeersRequest {
-    
-    public GetOrganizationApplianceVPNThirdPartyVPNPeersPathParams pathParams;
-    public GetOrganizationApplianceVPNThirdPartyVPNPeersRequest withPathParams(GetOrganizationApplianceVPNThirdPartyVPNPeersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationApplianceVPNThirdPartyVPNPeersRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

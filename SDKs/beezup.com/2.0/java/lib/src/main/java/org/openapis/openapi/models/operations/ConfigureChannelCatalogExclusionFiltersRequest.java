@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureChannelCatalogExclusionFiltersRequest {
-    
-    public ConfigureChannelCatalogExclusionFiltersPathParams pathParams;
-    public ConfigureChannelCatalogExclusionFiltersRequest withPathParams(ConfigureChannelCatalogExclusionFiltersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ExclusionFilter[] requestBody;
+    public ConfigureChannelCatalogExclusionFiltersRequest withRequestBody(org.openapis.openapi.models.shared.ExclusionFilter[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ExclusionFilter[] request;
-    public ConfigureChannelCatalogExclusionFiltersRequest withRequest(org.openapis.openapi.models.shared.ExclusionFilter[] request) {
-        this.request = request;
+    /**
+     * The channel catalog identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
+    public String channelCatalogId;
+    public ConfigureChannelCatalogExclusionFiltersRequest withChannelCatalogId(String channelCatalogId) {
+        this.channelCatalogId = channelCatalogId;
         return this;
     }
     

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCompaniesCompanyIdUsersRequest {
-    
-    public PostCompaniesCompanyIdUsersPathParams pathParams;
-    public PostCompaniesCompanyIdUsersRequest withPathParams(PostCompaniesCompanyIdUsersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateCompanyUserRequest request;
-    public PostCompaniesCompanyIdUsersRequest withRequest(org.openapis.openapi.models.shared.CreateCompanyUserRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateCompanyUserRequest createCompanyUserRequest;
+    public PostCompaniesCompanyIdUsersRequest withCreateCompanyUserRequest(org.openapis.openapi.models.shared.CreateCompanyUserRequest createCompanyUserRequest) {
+        this.createCompanyUserRequest = createCompanyUserRequest;
         return this;
     }
     
-    
-    public PostCompaniesCompanyIdUsersSecurity security;
-    public PostCompaniesCompanyIdUsersRequest withSecurity(PostCompaniesCompanyIdUsersSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public PostCompaniesCompanyIdUsersRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     

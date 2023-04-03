@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchConversationScopedWebhookRequest {
-    
-    public FetchConversationScopedWebhookPathParams pathParams;
-    public FetchConversationScopedWebhookRequest withPathParams(FetchConversationScopedWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConversationSid")
+    public String conversationSid;
+    public FetchConversationScopedWebhookRequest withConversationSid(String conversationSid) {
+        this.conversationSid = conversationSid;
         return this;
     }
     
-    
-    public FetchConversationScopedWebhookSecurity security;
-    public FetchConversationScopedWebhookRequest withSecurity(FetchConversationScopedWebhookSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchConversationScopedWebhookRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchConversationScopedWebhookRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

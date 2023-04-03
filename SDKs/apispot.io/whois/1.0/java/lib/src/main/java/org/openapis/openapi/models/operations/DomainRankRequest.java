@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DomainRankRequest {
-    
-    public DomainRankPathParams pathParams;
-    public DomainRankRequest withPathParams(DomainRankPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Domain
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domain")
+    public String domain;
+    public DomainRankRequest withDomain(String domain) {
+        this.domain = domain;
         return this;
     }
     

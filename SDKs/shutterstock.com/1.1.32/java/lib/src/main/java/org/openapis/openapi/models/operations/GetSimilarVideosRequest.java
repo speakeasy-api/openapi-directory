@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSimilarVideosRequest {
-    
-    public GetSimilarVideosQueryParams queryParams;
-    public GetSimilarVideosRequest withQueryParams(GetSimilarVideosQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The asset ID or upload ID to find similar videos for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_id")
+    public String assetId;
+    public GetSimilarVideosRequest withAssetId(String assetId) {
+        this.assetId = assetId;
         return this;
     }
     
+    /**
+     * Language for the keywords and categories in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public org.openapis.openapi.models.shared.LanguageEnum language;
+    public GetSimilarVideosRequest withLanguage(org.openapis.openapi.models.shared.LanguageEnum language) {
+        this.language = language;
+        return this;
+    }
     
-    public GetSimilarVideosSecurity security;
-    public GetSimilarVideosRequest withSecurity(GetSimilarVideosSecurity security) {
-        this.security = security;
+    /**
+     * Show only videos with the specified license
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public GetSimilarVideosLicenseEnum[] license;
+    public GetSimilarVideosRequest withLicense(GetSimilarVideosLicenseEnum[] license) {
+        this.license = license;
+        return this;
+    }
+    
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetSimilarVideosRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetSimilarVideosRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Enable or disable safe search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=safe")
+    public Boolean safe;
+    public GetSimilarVideosRequest withSafe(Boolean safe) {
+        this.safe = safe;
+        return this;
+    }
+    
+    /**
+     * Amount of detail to render in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
+    public GetSimilarVideosViewEnum view;
+    public GetSimilarVideosRequest withView(GetSimilarVideosViewEnum view) {
+        this.view = view;
         return this;
     }
     

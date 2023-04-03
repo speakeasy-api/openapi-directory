@@ -36,7 +36,7 @@ public class EnrichmentWebService {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEnrichmentDataUsingPOSTResponse getEnrichmentDataUsingPOST(org.openapis.openapi.models.operations.GetEnrichmentDataUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEnrichmentDataUsingPOSTResponse getEnrichmentDataUsingPOST(org.openapis.openapi.models.shared.EnrichmentGeneRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/enrichment/annotatedGenes");
         
@@ -80,7 +80,7 @@ public class EnrichmentWebService {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEnrichmentDataUsingPOST1Response getEnrichmentDataUsingPOST1(org.openapis.openapi.models.operations.GetEnrichmentDataUsingPOST1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEnrichmentDataUsingPOST1Response getEnrichmentDataUsingPOST1(org.openapis.openapi.models.shared.EnrichmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/enrichment/data");
         

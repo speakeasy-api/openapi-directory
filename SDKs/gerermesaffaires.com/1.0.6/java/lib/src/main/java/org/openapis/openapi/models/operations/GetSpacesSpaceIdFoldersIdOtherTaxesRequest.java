@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdFoldersIdOtherTaxesRequest {
-    
-    public GetSpacesSpaceIdFoldersIdOtherTaxesPathParams pathParams;
-    public GetSpacesSpaceIdFoldersIdOtherTaxesRequest withPathParams(GetSpacesSpaceIdFoldersIdOtherTaxesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * range date of the documents
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Date")
+    public String date;
+    public GetSpacesSpaceIdFoldersIdOtherTaxesRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     
+    /**
+     * index range of the results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Range")
+    public String range;
+    public GetSpacesSpaceIdFoldersIdOtherTaxesRequest withRange(String range) {
+        this.range = range;
+        return this;
+    }
     
-    public GetSpacesSpaceIdFoldersIdOtherTaxesQueryParams queryParams;
-    public GetSpacesSpaceIdFoldersIdOtherTaxesRequest withQueryParams(GetSpacesSpaceIdFoldersIdOtherTaxesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the folder taxcontract
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesSpaceIdFoldersIdOtherTaxesRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdFoldersIdOtherTaxesRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

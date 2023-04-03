@@ -7,31 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUnderstandFieldValueRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public CreateUnderstandFieldValueRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
+        return this;
+    }
     
-    public CreateUnderstandFieldValuePathParams pathParams;
-    public CreateUnderstandFieldValueRequest withPathParams(CreateUnderstandFieldValuePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FieldTypeSid")
+    public String fieldTypeSid;
+    public CreateUnderstandFieldValueRequest withFieldTypeSid(String fieldTypeSid) {
+        this.fieldTypeSid = fieldTypeSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateUnderstandFieldValueCreateUnderstandFieldValueRequest request;
-    public CreateUnderstandFieldValueRequest withRequest(CreateUnderstandFieldValueCreateUnderstandFieldValueRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateUnderstandFieldValueSecurity security;
-    public CreateUnderstandFieldValueRequest withSecurity(CreateUnderstandFieldValueSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateUnderstandFieldValueRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateUnderstandFieldValueCreateUnderstandFieldValueRequest requestBody;
+    public CreateUnderstandFieldValueRequest withRequestBody(CreateUnderstandFieldValueCreateUnderstandFieldValueRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

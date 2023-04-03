@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAssociateTransitGatewayRouteTableRequest {
-    
-    public GETAssociateTransitGatewayRouteTableQueryParams queryParams;
-    public GETAssociateTransitGatewayRouteTableRequest withQueryParams(GETAssociateTransitGatewayRouteTableQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETAssociateTransitGatewayRouteTableActionEnum action;
+    public GETAssociateTransitGatewayRouteTableRequest withAction(GETAssociateTransitGatewayRouteTableActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETAssociateTransitGatewayRouteTableRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETAssociateTransitGatewayRouteTableHeaders headers;
-    public GETAssociateTransitGatewayRouteTableRequest withHeaders(GETAssociateTransitGatewayRouteTableHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the attachment.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayAttachmentId")
+    public String transitGatewayAttachmentId;
+    public GETAssociateTransitGatewayRouteTableRequest withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
+        this.transitGatewayAttachmentId = transitGatewayAttachmentId;
+        return this;
+    }
+    
+    /**
+     * The ID of the transit gateway route table.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayRouteTableId")
+    public String transitGatewayRouteTableId;
+    public GETAssociateTransitGatewayRouteTableRequest withTransitGatewayRouteTableId(String transitGatewayRouteTableId) {
+        this.transitGatewayRouteTableId = transitGatewayRouteTableId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETAssociateTransitGatewayRouteTableVersionEnum version;
+    public GETAssociateTransitGatewayRouteTableRequest withVersion(GETAssociateTransitGatewayRouteTableVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETAssociateTransitGatewayRouteTableRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETAssociateTransitGatewayRouteTableRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETAssociateTransitGatewayRouteTableRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETAssociateTransitGatewayRouteTableRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETAssociateTransitGatewayRouteTableRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETAssociateTransitGatewayRouteTableRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETAssociateTransitGatewayRouteTableRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

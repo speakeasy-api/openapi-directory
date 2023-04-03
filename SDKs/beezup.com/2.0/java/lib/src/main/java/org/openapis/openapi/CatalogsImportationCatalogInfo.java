@@ -40,12 +40,12 @@ public class CatalogsImportationCatalogInfo {
      */
     public org.openapis.openapi.models.operations.ImportationConfigureCatalogColumnResponse importationConfigureCatalogColumn(org.openapis.openapi.models.operations.ImportationConfigureCatalogColumnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationConfigureCatalogColumnPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationConfigureCatalogColumnRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "configureCatalogColumnCatalogRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -85,7 +85,7 @@ public class CatalogsImportationCatalogInfo {
      */
     public org.openapis.openapi.models.operations.ImportationDeleteCustomColumnResponse importationDeleteCustomColumn(org.openapis.openapi.models.operations.ImportationDeleteCustomColumnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationDeleteCustomColumnPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationDeleteCustomColumnRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -125,7 +125,7 @@ public class CatalogsImportationCatalogInfo {
      */
     public org.openapis.openapi.models.operations.ImportationGetCustomColumnExpressionResponse importationGetCustomColumnExpression(org.openapis.openapi.models.operations.ImportationGetCustomColumnExpressionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationGetCustomColumnExpressionPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}/expression", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationGetCustomColumnExpressionRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}/expression", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -170,7 +170,7 @@ public class CatalogsImportationCatalogInfo {
      */
     public org.openapis.openapi.models.operations.ImportationGetCustomColumnsResponse importationGetCustomColumns(org.openapis.openapi.models.operations.ImportationGetCustomColumnsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationGetCustomColumnsPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationGetCustomColumnsRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -216,7 +216,7 @@ public class CatalogsImportationCatalogInfo {
      */
     public org.openapis.openapi.models.operations.ImportationGetDetectedCatalogColumnsResponse importationGetDetectedCatalogColumns(org.openapis.openapi.models.operations.ImportationGetDetectedCatalogColumnsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationGetDetectedCatalogColumnsPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationGetDetectedCatalogColumnsRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -262,7 +262,7 @@ public class CatalogsImportationCatalogInfo {
      */
     public org.openapis.openapi.models.operations.ImportationGetProductSampleResponse importationGetProductSample(org.openapis.openapi.models.operations.ImportationGetProductSampleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationGetProductSamplePathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/productSamples/{productSampleIndex}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationGetProductSampleRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/productSamples/{productSampleIndex}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -311,7 +311,7 @@ public class CatalogsImportationCatalogInfo {
      */
     public org.openapis.openapi.models.operations.ImportationGetProductSampleCustomColumnValueResponse importationGetProductSampleCustomColumnValue(org.openapis.openapi.models.operations.ImportationGetProductSampleCustomColumnValueRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationGetProductSampleCustomColumnValuePathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/productSamples/{productSampleIndex}/customColumns/{columnId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationGetProductSampleCustomColumnValueRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/productSamples/{productSampleIndex}/customColumns/{columnId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -366,7 +366,7 @@ public class CatalogsImportationCatalogInfo {
      */
     public org.openapis.openapi.models.operations.ImportationIgnoreColumnResponse importationIgnoreColumn(org.openapis.openapi.models.operations.ImportationIgnoreColumnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationIgnoreColumnPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/ignore", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationIgnoreColumnRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/ignore", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -406,12 +406,12 @@ public class CatalogsImportationCatalogInfo {
      */
     public org.openapis.openapi.models.operations.ImportationMapCatalogColumnResponse importationMapCatalogColumn(org.openapis.openapi.models.operations.ImportationMapCatalogColumnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationMapCatalogColumnPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/map", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationMapCatalogColumnRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/map", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "mapBeezUPColumnRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -451,12 +451,12 @@ public class CatalogsImportationCatalogInfo {
      */
     public org.openapis.openapi.models.operations.ImportationMapCustomColumnResponse importationMapCustomColumn(org.openapis.openapi.models.operations.ImportationMapCustomColumnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationMapCustomColumnPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}/map", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationMapCustomColumnRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}/map", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "mapBeezUPColumnRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -496,7 +496,7 @@ public class CatalogsImportationCatalogInfo {
      */
     public org.openapis.openapi.models.operations.ImportationReattendColumnResponse importationReattendColumn(org.openapis.openapi.models.operations.ImportationReattendColumnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationReattendColumnPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/reattend", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationReattendColumnRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/reattend", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -536,12 +536,12 @@ public class CatalogsImportationCatalogInfo {
      */
     public org.openapis.openapi.models.operations.ImportationSaveCustomColumnResponse importationSaveCustomColumn(org.openapis.openapi.models.operations.ImportationSaveCustomColumnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationSaveCustomColumnPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationSaveCustomColumnRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "changeCustomColumnRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -581,7 +581,7 @@ public class CatalogsImportationCatalogInfo {
      */
     public org.openapis.openapi.models.operations.ImportationUnmapCatalogColumnResponse importationUnmapCatalogColumn(org.openapis.openapi.models.operations.ImportationUnmapCatalogColumnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationUnmapCatalogColumnPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/unmap", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationUnmapCatalogColumnRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/catalogColumns/{columnId}/unmap", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -621,7 +621,7 @@ public class CatalogsImportationCatalogInfo {
      */
     public org.openapis.openapi.models.operations.ImportationUnmapCustomColumnResponse importationUnmapCustomColumn(org.openapis.openapi.models.operations.ImportationUnmapCustomColumnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationUnmapCustomColumnPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}/unmap", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationUnmapCustomColumnRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/customColumns/{columnId}/unmap", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

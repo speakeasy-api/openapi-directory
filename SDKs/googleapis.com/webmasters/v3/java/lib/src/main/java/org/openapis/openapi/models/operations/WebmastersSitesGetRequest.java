@@ -4,27 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebmastersSitesGetRequest {
-    
-    public WebmastersSitesGetPathParams pathParams;
-    public WebmastersSitesGetRequest withPathParams(WebmastersSitesGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public WebmastersSitesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public WebmastersSitesGetQueryParams queryParams;
-    public WebmastersSitesGetRequest withQueryParams(WebmastersSitesGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public WebmastersSitesGetRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public WebmastersSitesGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
     
-    public WebmastersSitesGetSecurity security;
-    public WebmastersSitesGetRequest withSecurity(WebmastersSitesGetSecurity security) {
-        this.security = security;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public WebmastersSitesGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public WebmastersSitesGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public WebmastersSitesGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The URI of the property as defined in Search Console. Examples: http://www.example.com/ or android-app://com.example/ Note: for property-sets, use the URI that starts with sc-set: which is used in Search Console URLs.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=siteUrl")
+    public String siteUrl;
+    public WebmastersSitesGetRequest withSiteUrl(String siteUrl) {
+        this.siteUrl = siteUrl;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public WebmastersSitesGetRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

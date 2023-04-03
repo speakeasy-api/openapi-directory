@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChunkedUploadRequest {
-    
-    public ChunkedUploadPathParams pathParams;
-    public ChunkedUploadRequest withPathParams(ChunkedUploadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Byte range `bytes start-end/total` (https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.16). e.g. bytes 0-5242880/10242880. Downloads larger than 5MiB (5242880 bytes) in size must be downloaded in chunks no larger than 5MiB (5242880 bytes) and no smaller than 1MiB (1048576 bytes). The last chunk could be less than 1MiB (1048576 bytes).
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Range")
+    public String contentRange;
+    public ChunkedUploadRequest withContentRange(String contentRange) {
+        this.contentRange = contentRange;
         return this;
     }
     
-    
-    public ChunkedUploadHeaders headers;
-    public ChunkedUploadRequest withHeaders(ChunkedUploadHeaders headers) {
-        this.headers = headers;
+    /**
+     * Must be `application/octet-stream`
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ChunkedUploadRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
-    
-    public ChunkedUploadSecurity security;
-    public ChunkedUploadRequest withSecurity(ChunkedUploadSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of an Upload.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uploadId")
+    public String uploadId;
+    public ChunkedUploadRequest withUploadId(String uploadId) {
+        this.uploadId = uploadId;
         return this;
     }
     

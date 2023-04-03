@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAlmawsV1TaskListsPrintoutsRequest {
+    /**
+     * Printout Name. Optional. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=letter")
+    public String letter;
+    public GetAlmawsV1TaskListsPrintoutsRequest withLetter(String letter) {
+        this.letter = letter;
+        return this;
+    }
     
-    public GetAlmawsV1TaskListsPrintoutsQueryParams queryParams;
-    public GetAlmawsV1TaskListsPrintoutsRequest withQueryParams(GetAlmawsV1TaskListsPrintoutsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Limits the number of results. Optional. Valid values are 0-100. Default value: 10.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetAlmawsV1TaskListsPrintoutsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset of the results returned. Optional. Default value: 0, which means that the first results will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetAlmawsV1TaskListsPrintoutsRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Printout Printer
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=printer_id")
+    public String printerId;
+    public GetAlmawsV1TaskListsPrintoutsRequest withPrinterId(String printerId) {
+        this.printerId = printerId;
+        return this;
+    }
+    
+    /**
+     * A list of Printout IDs (for example: 123,456,778) from 1 to the limit of 100 Optional. Use of this option overrides all of the filtering parameters
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=printout_id")
+    public String printoutId;
+    public GetAlmawsV1TaskListsPrintoutsRequest withPrintoutId(String printoutId) {
+        this.printoutId = printoutId;
+        return this;
+    }
+    
+    /**
+     * Printout status. Optional. Valid values are: Printed, Pending, Canceled.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public GetAlmawsV1TaskListsPrintoutsRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

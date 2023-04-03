@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMerchantsMerchantIdShippingLocationsRequest {
-    
-    public PostMerchantsMerchantIdShippingLocationsPathParams pathParams;
-    public PostMerchantsMerchantIdShippingLocationsRequest withPathParams(PostMerchantsMerchantIdShippingLocationsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ShippingLocation request;
-    public PostMerchantsMerchantIdShippingLocationsRequest withRequest(org.openapis.openapi.models.shared.ShippingLocation request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ShippingLocation shippingLocation;
+    public PostMerchantsMerchantIdShippingLocationsRequest withShippingLocation(org.openapis.openapi.models.shared.ShippingLocation shippingLocation) {
+        this.shippingLocation = shippingLocation;
         return this;
     }
     
-    
-    public PostMerchantsMerchantIdShippingLocationsSecurity security;
-    public PostMerchantsMerchantIdShippingLocationsRequest withSecurity(PostMerchantsMerchantIdShippingLocationsSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public PostMerchantsMerchantIdShippingLocationsRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerDeleteAppointmentRequest {
-    
-    public DiaryControllerDeleteAppointmentPathParams pathParams;
-    public DiaryControllerDeleteAppointmentRequest withPathParams(DiaryControllerDeleteAppointmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique appointment id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointmentID")
+    public String appointmentID;
+    public DiaryControllerDeleteAppointmentRequest withAppointmentID(String appointmentID) {
+        this.appointmentID = appointmentID;
         return this;
     }
     
-    
-    public DiaryControllerDeleteAppointmentQueryParams queryParams;
-    public DiaryControllerDeleteAppointmentRequest withQueryParams(DiaryControllerDeleteAppointmentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public DiaryControllerDeleteAppointmentRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     

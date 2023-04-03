@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatapipelinesProjectsLocationsPipelinesCreateRequest {
-    
-    public DatapipelinesProjectsLocationsPipelinesCreatePathParams pathParams;
-    public DatapipelinesProjectsLocationsPipelinesCreateRequest withPathParams(DatapipelinesProjectsLocationsPipelinesCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DatapipelinesProjectsLocationsPipelinesCreateQueryParams queryParams;
-    public DatapipelinesProjectsLocationsPipelinesCreateRequest withQueryParams(DatapipelinesProjectsLocationsPipelinesCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DatapipelinesProjectsLocationsPipelinesCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1PipelineInput request;
-    public DatapipelinesProjectsLocationsPipelinesCreateRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1PipelineInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1PipelineInput googleCloudDatapipelinesV1PipelineInput;
+    public DatapipelinesProjectsLocationsPipelinesCreateRequest withGoogleCloudDatapipelinesV1PipelineInput(org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1PipelineInput googleCloudDatapipelinesV1PipelineInput) {
+        this.googleCloudDatapipelinesV1PipelineInput = googleCloudDatapipelinesV1PipelineInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DatapipelinesProjectsLocationsPipelinesCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public DatapipelinesProjectsLocationsPipelinesCreateSecurity security;
-    public DatapipelinesProjectsLocationsPipelinesCreateRequest withSecurity(DatapipelinesProjectsLocationsPipelinesCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DatapipelinesProjectsLocationsPipelinesCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DatapipelinesProjectsLocationsPipelinesCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DatapipelinesProjectsLocationsPipelinesCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DatapipelinesProjectsLocationsPipelinesCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DatapipelinesProjectsLocationsPipelinesCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The location name. For example: `projects/PROJECT_ID/locations/LOCATION_ID`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public DatapipelinesProjectsLocationsPipelinesCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DatapipelinesProjectsLocationsPipelinesCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DatapipelinesProjectsLocationsPipelinesCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DatapipelinesProjectsLocationsPipelinesCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DatapipelinesProjectsLocationsPipelinesCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

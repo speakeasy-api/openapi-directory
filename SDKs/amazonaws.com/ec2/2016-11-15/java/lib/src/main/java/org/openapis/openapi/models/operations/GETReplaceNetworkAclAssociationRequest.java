@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETReplaceNetworkAclAssociationRequest {
-    
-    public GETReplaceNetworkAclAssociationQueryParams queryParams;
-    public GETReplaceNetworkAclAssociationRequest withQueryParams(GETReplaceNetworkAclAssociationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETReplaceNetworkAclAssociationActionEnum action;
+    public GETReplaceNetworkAclAssociationRequest withAction(GETReplaceNetworkAclAssociationActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The ID of the current association between the original network ACL and the subnet.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AssociationId")
+    public String associationId;
+    public GETReplaceNetworkAclAssociationRequest withAssociationId(String associationId) {
+        this.associationId = associationId;
+        return this;
+    }
     
-    public GETReplaceNetworkAclAssociationHeaders headers;
-    public GETReplaceNetworkAclAssociationRequest withHeaders(GETReplaceNetworkAclAssociationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETReplaceNetworkAclAssociationRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The ID of the new network ACL to associate with the subnet.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkAclId")
+    public String networkAclId;
+    public GETReplaceNetworkAclAssociationRequest withNetworkAclId(String networkAclId) {
+        this.networkAclId = networkAclId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETReplaceNetworkAclAssociationVersionEnum version;
+    public GETReplaceNetworkAclAssociationRequest withVersion(GETReplaceNetworkAclAssociationVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETReplaceNetworkAclAssociationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETReplaceNetworkAclAssociationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETReplaceNetworkAclAssociationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETReplaceNetworkAclAssociationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETReplaceNetworkAclAssociationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETReplaceNetworkAclAssociationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETReplaceNetworkAclAssociationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListInboundAchTransferReturnsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListInboundAchTransferReturnsRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public ListInboundAchTransferReturnsQueryParams queryParams;
-    public ListInboundAchTransferReturnsRequest withQueryParams(ListInboundAchTransferReturnsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListInboundAchTransferReturnsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

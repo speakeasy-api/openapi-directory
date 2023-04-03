@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRolesinUserRequest {
-    
-    public PutRolesinUserPathParams pathParams;
-    public PutRolesinUserRequest withPathParams(PutRolesinUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * List of roles' IDs to add to the user or application key.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Integer[] request;
-    public PutRolesinUserRequest withRequest(Integer[] request) {
-        this.request = request;
+    public Integer[] requestBody;
+    public PutRolesinUserRequest withRequestBody(Integer[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID corresponding to the user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public PutRolesinUserRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -43,7 +43,7 @@ public class SftpHostKeys {
      */
     public org.openapis.openapi.models.operations.DeleteSftpHostKeysIdResponse deleteSftpHostKeysId(org.openapis.openapi.models.operations.DeleteSftpHostKeysIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSftpHostKeysIdPathParams.class, baseUrl, "/sftp_host_keys/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSftpHostKeysIdRequest.class, baseUrl, "/sftp_host_keys/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class SftpHostKeys {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSftpHostKeysQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSftpHostKeysRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -123,7 +123,7 @@ public class SftpHostKeys {
      */
     public org.openapis.openapi.models.operations.GetSftpHostKeysIdResponse getSftpHostKeysId(org.openapis.openapi.models.operations.GetSftpHostKeysIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSftpHostKeysIdPathParams.class, baseUrl, "/sftp_host_keys/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSftpHostKeysIdRequest.class, baseUrl, "/sftp_host_keys/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -164,12 +164,12 @@ public class SftpHostKeys {
      */
     public org.openapis.openapi.models.operations.PatchSftpHostKeysIdResponse patchSftpHostKeysId(org.openapis.openapi.models.operations.PatchSftpHostKeysIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSftpHostKeysIdPathParams.class, baseUrl, "/sftp_host_keys/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSftpHostKeysIdRequest.class, baseUrl, "/sftp_host_keys/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
@@ -205,7 +205,7 @@ public class SftpHostKeys {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSftpHostKeysResponse postSftpHostKeys(org.openapis.openapi.models.operations.PostSftpHostKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSftpHostKeysResponse postSftpHostKeys(org.openapis.openapi.models.operations.PostSftpHostKeysRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sftp_host_keys");
         

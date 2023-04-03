@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTrackingLogFromLabelRequest {
-    
-    public GetTrackingLogFromLabelPathParams pathParams;
-    public GetTrackingLogFromLabelRequest withPathParams(GetTrackingLogFromLabelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Label ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=label_id")
+    public String labelId;
+    public GetTrackingLogFromLabelRequest withLabelId(String labelId) {
+        this.labelId = labelId;
         return this;
     }
     

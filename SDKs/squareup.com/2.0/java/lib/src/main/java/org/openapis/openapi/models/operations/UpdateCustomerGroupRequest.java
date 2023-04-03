@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCustomerGroupRequest {
-    
-    public UpdateCustomerGroupPathParams pathParams;
-    public UpdateCustomerGroupRequest withPathParams(UpdateCustomerGroupPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateCustomerGroupRequest request;
-    public UpdateCustomerGroupRequest withRequest(org.openapis.openapi.models.shared.UpdateCustomerGroupRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateCustomerGroupRequest updateCustomerGroupRequest;
+    public UpdateCustomerGroupRequest withUpdateCustomerGroupRequest(org.openapis.openapi.models.shared.UpdateCustomerGroupRequest updateCustomerGroupRequest) {
+        this.updateCustomerGroupRequest = updateCustomerGroupRequest;
         return this;
     }
     
-    
-    public UpdateCustomerGroupSecurity security;
-    public UpdateCustomerGroupRequest withSecurity(UpdateCustomerGroupSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the customer group to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public UpdateCustomerGroupRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

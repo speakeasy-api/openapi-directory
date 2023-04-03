@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteIpamRequest {
-    
-    public GETDeleteIpamQueryParams queryParams;
-    public GETDeleteIpamRequest withQueryParams(GETDeleteIpamQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteIpamActionEnum action;
+    public GETDeleteIpamRequest withAction(GETDeleteIpamActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;Enables you to quickly delete an IPAM, private scopes, pools in private scopes, and any allocations in the pools in private scopes. You cannot delete the IPAM with this option if there is a pool in your public scope. If you use this option, IPAM does the following:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Deallocates any CIDRs allocated to VPC resources (such as VPCs) in pools in private scopes.&lt;/p&gt; &lt;note&gt; &lt;p&gt;No VPC resources are deleted as a result of enabling this option. The CIDR associated with the resource will no longer be allocated from an IPAM pool, but the CIDR itself will remain unchanged.&lt;/p&gt; &lt;/note&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Deprovisions all IPv4 CIDRs provisioned to IPAM pools in private scopes.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Deletes all IPAM pools in private scopes.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Deletes all non-default private scopes in the IPAM.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Deletes the default public and private scopes and the IPAM.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Cascade")
+    public Boolean cascade;
+    public GETDeleteIpamRequest withCascade(Boolean cascade) {
+        this.cascade = cascade;
+        return this;
+    }
     
-    public GETDeleteIpamHeaders headers;
-    public GETDeleteIpamRequest withHeaders(GETDeleteIpamHeaders headers) {
-        this.headers = headers;
+    /**
+     * A check for whether you have the required permissions for the action without actually making the request and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETDeleteIpamRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The ID of the IPAM to delete.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IpamId")
+    public String ipamId;
+    public GETDeleteIpamRequest withIpamId(String ipamId) {
+        this.ipamId = ipamId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteIpamVersionEnum version;
+    public GETDeleteIpamRequest withVersion(GETDeleteIpamVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteIpamRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteIpamRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteIpamRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteIpamRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteIpamRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteIpamRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteIpamRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

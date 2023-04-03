@@ -33,19 +33,20 @@ public class UsersWatchHistory {
     /**
      * Delete a specific video from a user's watch history
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteFromWatchHistoryResponse deleteFromWatchHistory(org.openapis.openapi.models.operations.DeleteFromWatchHistoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteFromWatchHistoryResponse deleteFromWatchHistory(org.openapis.openapi.models.operations.DeleteFromWatchHistoryRequest request, org.openapis.openapi.models.operations.DeleteFromWatchHistorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFromWatchHistoryPathParams.class, baseUrl, "/me/watched/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFromWatchHistoryRequest.class, baseUrl, "/me/watched/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -65,11 +66,10 @@ public class UsersWatchHistory {
 
     /**
      * Delete a user's watch history
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteWatchHistoryResponse deleteWatchHistory(org.openapis.openapi.models.operations.DeleteWatchHistoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteWatchHistoryResponse deleteWatchHistory() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/watched/videos");
         
@@ -78,7 +78,7 @@ public class UsersWatchHistory {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -99,10 +99,11 @@ public class UsersWatchHistory {
     /**
      * Get all the videos that a user has watched
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWatchHistoryResponse getWatchHistory(org.openapis.openapi.models.operations.GetWatchHistoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWatchHistoryResponse getWatchHistory(org.openapis.openapi.models.operations.GetWatchHistoryRequest request, org.openapis.openapi.models.operations.GetWatchHistorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/watched/videos");
         
@@ -110,14 +111,14 @@ public class UsersWatchHistory {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWatchHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWatchHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

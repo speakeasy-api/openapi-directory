@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TenancyTenantsDeleteRequest {
-    
-    public TenancyTenantsDeletePathParams pathParams;
-    public TenancyTenantsDeleteRequest withPathParams(TenancyTenantsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this tenant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public TenancyTenantsDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

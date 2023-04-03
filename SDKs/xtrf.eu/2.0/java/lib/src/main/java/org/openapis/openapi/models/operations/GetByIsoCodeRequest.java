@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetByIsoCodeRequest {
-    
-    public GetByIsoCodePathParams pathParams;
-    public GetByIsoCodeRequest withPathParams(GetByIsoCodePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * iso code, https://www.xe.com/iso4217.php
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=isoCode")
+    public String isoCode;
+    public GetByIsoCodeRequest withIsoCode(String isoCode) {
+        this.isoCode = isoCode;
         return this;
     }
     

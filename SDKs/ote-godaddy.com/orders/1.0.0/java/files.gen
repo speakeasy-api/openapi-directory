@@ -30,13 +30,9 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListSortEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Order.java

@@ -40,7 +40,7 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.GetDeviceApplianceUplinksSettingsResponse getDeviceApplianceUplinksSettings(org.openapis.openapi.models.operations.GetDeviceApplianceUplinksSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceApplianceUplinksSettingsPathParams.class, baseUrl, "/devices/{serial}/appliance/uplinks/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceApplianceUplinksSettingsRequest.class, baseUrl, "/devices/{serial}/appliance/uplinks/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,7 +80,7 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraVideoSettingsResponse getDeviceCameraVideoSettings(org.openapis.openapi.models.operations.GetDeviceCameraVideoSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraVideoSettingsPathParams.class, baseUrl, "/devices/{serial}/camera/video/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraVideoSettingsRequest.class, baseUrl, "/devices/{serial}/camera/video/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,7 +120,7 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.GetDeviceWirelessBluetoothSettingsResponse getDeviceWirelessBluetoothSettings(org.openapis.openapi.models.operations.GetDeviceWirelessBluetoothSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceWirelessBluetoothSettingsPathParams.class, baseUrl, "/devices/{serial}/wireless/bluetooth/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceWirelessBluetoothSettingsRequest.class, baseUrl, "/devices/{serial}/wireless/bluetooth/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -160,7 +160,7 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.GetDeviceWirelessRadioSettingsResponse getDeviceWirelessRadioSettings(org.openapis.openapi.models.operations.GetDeviceWirelessRadioSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceWirelessRadioSettingsPathParams.class, baseUrl, "/devices/{serial}/wireless/radio/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceWirelessRadioSettingsRequest.class, baseUrl, "/devices/{serial}/wireless/radio/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -200,7 +200,7 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.GetNetworkAlertsSettingsResponse getNetworkAlertsSettings(org.openapis.openapi.models.operations.GetNetworkAlertsSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkAlertsSettingsPathParams.class, baseUrl, "/networks/{networkId}/alerts/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkAlertsSettingsRequest.class, baseUrl, "/networks/{networkId}/alerts/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -240,7 +240,7 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceFirewallSettingsResponse getNetworkApplianceFirewallSettings(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallSettingsPathParams.class, baseUrl, "/networks/{networkId}/appliance/firewall/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallSettingsRequest.class, baseUrl, "/networks/{networkId}/appliance/firewall/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -280,7 +280,7 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceSettingsResponse getNetworkApplianceSettings(org.openapis.openapi.models.operations.GetNetworkApplianceSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceSettingsPathParams.class, baseUrl, "/networks/{networkId}/appliance/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceSettingsRequest.class, baseUrl, "/networks/{networkId}/appliance/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -320,7 +320,7 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceVlansSettingsResponse getNetworkApplianceVlansSettings(org.openapis.openapi.models.operations.GetNetworkApplianceVlansSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceVlansSettingsPathParams.class, baseUrl, "/networks/{networkId}/appliance/vlans/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceVlansSettingsRequest.class, baseUrl, "/networks/{networkId}/appliance/vlans/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -360,7 +360,7 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.GetNetworkSettingsResponse getNetworkSettings(org.openapis.openapi.models.operations.GetNetworkSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSettingsPathParams.class, baseUrl, "/networks/{networkId}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSettingsRequest.class, baseUrl, "/networks/{networkId}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -400,7 +400,7 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchSettingsResponse getNetworkSwitchSettings(org.openapis.openapi.models.operations.GetNetworkSwitchSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchSettingsPathParams.class, baseUrl, "/networks/{networkId}/switch/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchSettingsRequest.class, baseUrl, "/networks/{networkId}/switch/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -440,7 +440,7 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessBluetoothSettingsResponse getNetworkWirelessBluetoothSettings(org.openapis.openapi.models.operations.GetNetworkWirelessBluetoothSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessBluetoothSettingsPathParams.class, baseUrl, "/networks/{networkId}/wireless/bluetooth/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessBluetoothSettingsRequest.class, baseUrl, "/networks/{networkId}/wireless/bluetooth/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -480,7 +480,7 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSettingsResponse getNetworkWirelessSettings(org.openapis.openapi.models.operations.GetNetworkWirelessSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSettingsPathParams.class, baseUrl, "/networks/{networkId}/wireless/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSettingsRequest.class, baseUrl, "/networks/{networkId}/wireless/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -520,7 +520,7 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidSplashSettingsResponse getNetworkWirelessSsidSplashSettings(org.openapis.openapi.models.operations.GetNetworkWirelessSsidSplashSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidSplashSettingsPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/splash/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidSplashSettingsRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/splash/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -560,7 +560,7 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicySettingsResponse getOrganizationAdaptivePolicySettings(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicySettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicySettingsPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicySettingsRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -600,12 +600,12 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceApplianceUplinksSettingsResponse updateDeviceApplianceUplinksSettings(org.openapis.openapi.models.operations.UpdateDeviceApplianceUplinksSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceApplianceUplinksSettingsPathParams.class, baseUrl, "/devices/{serial}/appliance/uplinks/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceApplianceUplinksSettingsRequest.class, baseUrl, "/devices/{serial}/appliance/uplinks/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -645,12 +645,12 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceCameraVideoSettingsResponse updateDeviceCameraVideoSettings(org.openapis.openapi.models.operations.UpdateDeviceCameraVideoSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCameraVideoSettingsPathParams.class, baseUrl, "/devices/{serial}/camera/video/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCameraVideoSettingsRequest.class, baseUrl, "/devices/{serial}/camera/video/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -687,12 +687,12 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceWirelessBluetoothSettingsResponse updateDeviceWirelessBluetoothSettings(org.openapis.openapi.models.operations.UpdateDeviceWirelessBluetoothSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceWirelessBluetoothSettingsPathParams.class, baseUrl, "/devices/{serial}/wireless/bluetooth/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceWirelessBluetoothSettingsRequest.class, baseUrl, "/devices/{serial}/wireless/bluetooth/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -729,12 +729,12 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceWirelessRadioSettingsResponse updateDeviceWirelessRadioSettings(org.openapis.openapi.models.operations.UpdateDeviceWirelessRadioSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceWirelessRadioSettingsPathParams.class, baseUrl, "/devices/{serial}/wireless/radio/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceWirelessRadioSettingsRequest.class, baseUrl, "/devices/{serial}/wireless/radio/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -771,12 +771,12 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkAlertsSettingsResponse updateNetworkAlertsSettings(org.openapis.openapi.models.operations.UpdateNetworkAlertsSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkAlertsSettingsPathParams.class, baseUrl, "/networks/{networkId}/alerts/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkAlertsSettingsRequest.class, baseUrl, "/networks/{networkId}/alerts/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -813,12 +813,12 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceFirewallSettingsResponse updateNetworkApplianceFirewallSettings(org.openapis.openapi.models.operations.UpdateNetworkApplianceFirewallSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceFirewallSettingsPathParams.class, baseUrl, "/networks/{networkId}/appliance/firewall/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceFirewallSettingsRequest.class, baseUrl, "/networks/{networkId}/appliance/firewall/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -855,12 +855,12 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceSettingsResponse updateNetworkApplianceSettings(org.openapis.openapi.models.operations.UpdateNetworkApplianceSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceSettingsPathParams.class, baseUrl, "/networks/{networkId}/appliance/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceSettingsRequest.class, baseUrl, "/networks/{networkId}/appliance/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -897,12 +897,12 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceVlansSettingsResponse updateNetworkApplianceVlansSettings(org.openapis.openapi.models.operations.UpdateNetworkApplianceVlansSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceVlansSettingsPathParams.class, baseUrl, "/networks/{networkId}/appliance/vlans/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceVlansSettingsRequest.class, baseUrl, "/networks/{networkId}/appliance/vlans/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -939,12 +939,12 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSettingsResponse updateNetworkSettings(org.openapis.openapi.models.operations.UpdateNetworkSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSettingsPathParams.class, baseUrl, "/networks/{networkId}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSettingsRequest.class, baseUrl, "/networks/{networkId}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -981,12 +981,12 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsResponse updateNetworkSwitchSettings(org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsPathParams.class, baseUrl, "/networks/{networkId}/switch/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchSettingsRequest.class, baseUrl, "/networks/{networkId}/switch/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1023,12 +1023,12 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessBluetoothSettingsResponse updateNetworkWirelessBluetoothSettings(org.openapis.openapi.models.operations.UpdateNetworkWirelessBluetoothSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessBluetoothSettingsPathParams.class, baseUrl, "/networks/{networkId}/wireless/bluetooth/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessBluetoothSettingsRequest.class, baseUrl, "/networks/{networkId}/wireless/bluetooth/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1065,12 +1065,12 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSettingsResponse updateNetworkWirelessSettings(org.openapis.openapi.models.operations.UpdateNetworkWirelessSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSettingsPathParams.class, baseUrl, "/networks/{networkId}/wireless/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSettingsRequest.class, baseUrl, "/networks/{networkId}/wireless/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1107,12 +1107,12 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidSplashSettingsResponse updateNetworkWirelessSsidSplashSettings(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidSplashSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidSplashSettingsPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/splash/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidSplashSettingsRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/splash/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1149,12 +1149,12 @@ public class Settings {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicySettingsResponse updateOrganizationAdaptivePolicySettings(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicySettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicySettingsPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicySettingsRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

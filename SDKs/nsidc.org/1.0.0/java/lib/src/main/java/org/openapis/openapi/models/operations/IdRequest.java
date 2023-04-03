@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IdRequest {
+    /**
+     * Search terms typed into the interface (minimum two characters)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public IdRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
     
-    public IdQueryParams queryParams;
-    public IdRequest withQueryParams(IdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Custom parameter for selecting which source to use; the Arctic Data Explorer (ADE) uses data aggregated from many sources, including, but not limited to, NSIDC
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public IdSourceEnum source;
+    public IdRequest withSource(IdSourceEnum source) {
+        this.source = source;
         return this;
     }
     

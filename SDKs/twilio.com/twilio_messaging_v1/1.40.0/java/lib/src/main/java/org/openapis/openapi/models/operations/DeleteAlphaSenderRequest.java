@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAlphaSenderRequest {
-    
-    public DeleteAlphaSenderPathParams pathParams;
-    public DeleteAlphaSenderRequest withPathParams(DeleteAlphaSenderPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteAlphaSenderRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public DeleteAlphaSenderSecurity security;
-    public DeleteAlphaSenderRequest withSecurity(DeleteAlphaSenderSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteAlphaSenderRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the AlphaSender resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteAlphaSenderRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

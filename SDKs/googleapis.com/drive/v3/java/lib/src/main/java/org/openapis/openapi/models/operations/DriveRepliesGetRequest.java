@@ -4,27 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveRepliesGetRequest {
-    
-    public DriveRepliesGetPathParams pathParams;
-    public DriveRepliesGetRequest withPathParams(DriveRepliesGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DriveRepliesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public DriveRepliesGetQueryParams queryParams;
-    public DriveRepliesGetRequest withQueryParams(DriveRepliesGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the comment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commentId")
+    public String commentId;
+    public DriveRepliesGetRequest withCommentId(String commentId) {
+        this.commentId = commentId;
         return this;
     }
     
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DriveRepliesGetRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public DriveRepliesGetSecurity security;
-    public DriveRepliesGetRequest withSecurity(DriveRepliesGetSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the file.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
+    public String fileId;
+    public DriveRepliesGetRequest withFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    
+    /**
+     * Whether to return deleted replies. Deleted replies will not include their original content.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeDeleted")
+    public Boolean includeDeleted;
+    public DriveRepliesGetRequest withIncludeDeleted(Boolean includeDeleted) {
+        this.includeDeleted = includeDeleted;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DriveRepliesGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DriveRepliesGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DriveRepliesGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DriveRepliesGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The ID of the reply.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=replyId")
+    public String replyId;
+    public DriveRepliesGetRequest withReplyId(String replyId) {
+        this.replyId = replyId;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public DriveRepliesGetRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

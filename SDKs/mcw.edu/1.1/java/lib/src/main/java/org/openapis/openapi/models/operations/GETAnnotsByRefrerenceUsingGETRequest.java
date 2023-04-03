@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAnnotsByRefrerenceUsingGETRequest {
-    
-    public GETAnnotsByRefrerenceUsingGETPathParams pathParams;
-    public GETAnnotsByRefrerenceUsingGETRequest withPathParams(GETAnnotsByRefrerenceUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Reference RGD ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=refRgdId")
+    public Integer refRgdId;
+    public GETAnnotsByRefrerenceUsingGETRequest withRefRgdId(Integer refRgdId) {
+        this.refRgdId = refRgdId;
         return this;
     }
     

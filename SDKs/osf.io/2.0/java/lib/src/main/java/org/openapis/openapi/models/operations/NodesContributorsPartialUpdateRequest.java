@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesContributorsPartialUpdateRequest {
-    
-    public NodesContributorsPartialUpdatePathParams pathParams;
-    public NodesContributorsPartialUpdateRequest withPathParams(NodesContributorsPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public NodesContributorsPartialUpdateContributorInput requestBody;
+    public NodesContributorsPartialUpdateRequest withRequestBody(NodesContributorsPartialUpdateContributorInput requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public NodesContributorsPartialUpdateContributorInput request;
-    public NodesContributorsPartialUpdateRequest withRequest(NodesContributorsPartialUpdateContributorInput request) {
-        this.request = request;
+    /**
+     * The unique identifier of the node.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public String nodeId;
+    public NodesContributorsPartialUpdateRequest withNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public String userId;
+    public NodesContributorsPartialUpdateRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

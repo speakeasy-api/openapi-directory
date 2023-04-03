@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetVendorRequest {
-    
-    public Destiny2GetVendorPathParams pathParams;
-    public Destiny2GetVendorRequest withPathParams(Destiny2GetVendorPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Destiny Character ID of the character for whom we're getting vendor info.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=characterId")
+    public Long characterId;
+    public Destiny2GetVendorRequest withCharacterId(Long characterId) {
+        this.characterId = characterId;
         return this;
     }
     
+    /**
+     * A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=components")
+    public Integer[] components;
+    public Destiny2GetVendorRequest withComponents(Integer[] components) {
+        this.components = components;
+        return this;
+    }
     
-    public Destiny2GetVendorQueryParams queryParams;
-    public Destiny2GetVendorRequest withQueryParams(Destiny2GetVendorQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Destiny membership ID of another user. You may be denied.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
+    public Long destinyMembershipId;
+    public Destiny2GetVendorRequest withDestinyMembershipId(Long destinyMembershipId) {
+        this.destinyMembershipId = destinyMembershipId;
+        return this;
+    }
+    
+    /**
+     * A valid non-BungieNet membership type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public Destiny2GetVendorRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
+        return this;
+    }
+    
+    /**
+     * The Hash identifier of the Vendor to be returned.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vendorHash")
+    public Long vendorHash;
+    public Destiny2GetVendorRequest withVendorHash(Long vendorHash) {
+        this.vendorHash = vendorHash;
         return this;
     }
     

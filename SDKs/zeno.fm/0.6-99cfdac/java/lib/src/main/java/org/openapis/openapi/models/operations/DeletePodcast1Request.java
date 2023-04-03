@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePodcast1Request {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=episodeKey")
+    public String episodeKey;
+    public DeletePodcast1Request withEpisodeKey(String episodeKey) {
+        this.episodeKey = episodeKey;
+        return this;
+    }
     
-    public DeletePodcast1PathParams pathParams;
-    public DeletePodcast1Request withPathParams(DeletePodcast1PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=podcastKey")
+    public String podcastKey;
+    public DeletePodcast1Request withPodcastKey(String podcastKey) {
+        this.podcastKey = podcastKey;
         return this;
     }
     

@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest {
-    
-    public ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustPathParams pathParams;
-    public ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest withPathParams(ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustQueryParams queryParams;
-    public ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest withQueryParams(ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DetachTrustRequestInput request;
-    public ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest withRequest(org.openapis.openapi.models.shared.DetachTrustRequestInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DetachTrustRequestInput detachTrustRequestInput;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest withDetachTrustRequestInput(org.openapis.openapi.models.shared.DetachTrustRequestInput detachTrustRequestInput) {
+        this.detachTrustRequestInput = detachTrustRequestInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustSecurity security;
-    public ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest withSecurity(ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Required. The resource domain name, project name, and location using the form: `projects/{project_id}/locations/global/domains/{domain_name}`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

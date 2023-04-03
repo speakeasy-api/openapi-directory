@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchFunctionVersionContentRequest {
-    
-    public FetchFunctionVersionContentPathParams pathParams;
-    public FetchFunctionVersionContentRequest withPathParams(FetchFunctionVersionContentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Function that is the parent of the Function Version content to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FunctionSid")
+    public String functionSid;
+    public FetchFunctionVersionContentRequest withFunctionSid(String functionSid) {
+        this.functionSid = functionSid;
         return this;
     }
     
-    
-    public FetchFunctionVersionContentSecurity security;
-    public FetchFunctionVersionContentRequest withSecurity(FetchFunctionVersionContentSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Service to fetch the Function Version content from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchFunctionVersionContentRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchFunctionVersionContentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Function Version content to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchFunctionVersionContentRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

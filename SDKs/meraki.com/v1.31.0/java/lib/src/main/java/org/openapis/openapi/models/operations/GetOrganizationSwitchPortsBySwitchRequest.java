@@ -4,20 +4,123 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationSwitchPortsBySwitchRequest {
-    
-    public GetOrganizationSwitchPortsBySwitchPathParams pathParams;
-    public GetOrganizationSwitchPortsBySwitchRequest withPathParams(GetOrganizationSwitchPortsBySwitchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Optional parameter to filter results by switches where the configuration has been updated after the given timestamp.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=configurationUpdatedAfter")
+    public String configurationUpdatedAfter;
+    public GetOrganizationSwitchPortsBySwitchRequest withConfigurationUpdatedAfter(String configurationUpdatedAfter) {
+        this.configurationUpdatedAfter = configurationUpdatedAfter;
         return this;
     }
     
+    /**
+     * A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
+    public String endingBefore;
+    public GetOrganizationSwitchPortsBySwitchRequest withEndingBefore(String endingBefore) {
+        this.endingBefore = endingBefore;
+        return this;
+    }
     
-    public GetOrganizationSwitchPortsBySwitchQueryParams queryParams;
-    public GetOrganizationSwitchPortsBySwitchRequest withQueryParams(GetOrganizationSwitchPortsBySwitchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Optional parameter to filter switchports belonging to switches by MAC address. All returned switches will have a MAC address that contains the search term or is an exact match.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mac")
+    public String mac;
+    public GetOrganizationSwitchPortsBySwitchRequest withMac(String mac) {
+        this.mac = mac;
+        return this;
+    }
+    
+    /**
+     * Optional parameter to filter switchports by one or more MAC addresses belonging to devices. All switchports returned belong to MAC addresses of switches that are an exact match.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=macs")
+    public String[] macs;
+    public GetOrganizationSwitchPortsBySwitchRequest withMacs(String[] macs) {
+        this.macs = macs;
+        return this;
+    }
+    
+    /**
+     * Optional parameter to filter switchports belonging to switches by name. All returned switches will have a name that contains the search term or is an exact match.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetOrganizationSwitchPortsBySwitchRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Optional parameter to filter switchports by network.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=networkIds")
+    public String[] networkIds;
+    public GetOrganizationSwitchPortsBySwitchRequest withNetworkIds(String[] networkIds) {
+        this.networkIds = networkIds;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationSwitchPortsBySwitchRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    
+    /**
+     * The number of entries per page returned. Acceptable range is 3 - 50. Default is 50.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public Long perPage;
+    public GetOrganizationSwitchPortsBySwitchRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Optional parameter to filter switchports belonging to the specified switchport profiles.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=portProfileIds")
+    public String[] portProfileIds;
+    public GetOrganizationSwitchPortsBySwitchRequest withPortProfileIds(String[] portProfileIds) {
+        this.portProfileIds = portProfileIds;
+        return this;
+    }
+    
+    /**
+     * Optional parameter to filter switchports belonging to switches by serial number. All returned switches will have a serial number that contains the search term or is an exact match.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serial")
+    public String serial;
+    public GetOrganizationSwitchPortsBySwitchRequest withSerial(String serial) {
+        this.serial = serial;
+        return this;
+    }
+    
+    /**
+     * Optional parameter to filter switchports belonging to switches with one or more serial numbers. All switchports returned belong to serial numbers of switches that are an exact match.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=serials")
+    public String[] serials;
+    public GetOrganizationSwitchPortsBySwitchRequest withSerials(String[] serials) {
+        this.serials = serials;
+        return this;
+    }
+    
+    /**
+     * A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
+    public String startingAfter;
+    public GetOrganizationSwitchPortsBySwitchRequest withStartingAfter(String startingAfter) {
+        this.startingAfter = startingAfter;
         return this;
     }
     

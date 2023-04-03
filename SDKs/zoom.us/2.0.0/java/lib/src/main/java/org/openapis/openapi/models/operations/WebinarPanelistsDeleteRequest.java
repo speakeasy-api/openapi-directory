@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebinarPanelistsDeleteRequest {
-    
-    public WebinarPanelistsDeletePathParams pathParams;
-    public WebinarPanelistsDeleteRequest withPathParams(WebinarPanelistsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public WebinarPanelistsDeleteSecurity security;
-    public WebinarPanelistsDeleteRequest withSecurity(WebinarPanelistsDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The webinar ID in "**long**" format(represented as int64 data type in JSON). 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webinarId")
+    public Long webinarId;
+    public WebinarPanelistsDeleteRequest withWebinarId(Long webinarId) {
+        this.webinarId = webinarId;
         return this;
     }
     

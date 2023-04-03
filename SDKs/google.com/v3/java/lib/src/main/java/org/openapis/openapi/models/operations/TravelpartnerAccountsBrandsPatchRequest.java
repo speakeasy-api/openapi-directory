@@ -7,24 +7,150 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TravelpartnerAccountsBrandsPatchRequest {
-    
-    public TravelpartnerAccountsBrandsPatchPathParams pathParams;
-    public TravelpartnerAccountsBrandsPatchRequest withPathParams(TravelpartnerAccountsBrandsPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public TravelpartnerAccountsBrandsPatchQueryParams queryParams;
-    public TravelpartnerAccountsBrandsPatchRequest withQueryParams(TravelpartnerAccountsBrandsPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public TravelpartnerAccountsBrandsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BrandInput request;
-    public TravelpartnerAccountsBrandsPatchRequest withRequest(org.openapis.openapi.models.shared.BrandInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BrandInput brandInput;
+    public TravelpartnerAccountsBrandsPatchRequest withBrandInput(org.openapis.openapi.models.shared.BrandInput brandInput) {
+        this.brandInput = brandInput;
+        return this;
+    }
+    
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public TravelpartnerAccountsBrandsPatchRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
+    
+    /**
+     * When true, and the Brand is not found, a new Brand will be created. In this situation, `update_mask` is ignored.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allowMissing")
+    public Boolean allowMissing;
+    public TravelpartnerAccountsBrandsPatchRequest withAllowMissing(Boolean allowMissing) {
+        this.allowMissing = allowMissing;
+        return this;
+    }
+    
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public TravelpartnerAccountsBrandsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public TravelpartnerAccountsBrandsPatchRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public TravelpartnerAccountsBrandsPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public TravelpartnerAccountsBrandsPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Output only. The resource name for the brand in the format `accounts/{account_id}/brands/{brand_id}`. The `brand_id` corresponds to the partner's brand identifier used for landing page matching and the property-level brand identifier. A default brand is applied to properties that do not have a brand. The `brand_id` of the default brand is `NO_BRAND_ID`. It can be fetched and updated like any configured brand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public TravelpartnerAccountsBrandsPatchRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public TravelpartnerAccountsBrandsPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public TravelpartnerAccountsBrandsPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public TravelpartnerAccountsBrandsPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Required. The field to update. Only the `display_names` and `icon` fields can be updated. Use the syntax shown in the example URI below and provide the new value in the request body. Example request URI and request body: ``` PATCH https://travelpartner.googleapis.com/v3/accounts/123456789/ brands/my-brand?update_mask=brand.display_names ``` ``` { "display_names": [{ "language": "en" "text": "Gilles' Gites" }] } ``` The information above is sufficient for forming the URI and request body. The sentence below is auto-generated, supplemental information about the `FieldMask` format in general.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
+    public String updateMask;
+    public TravelpartnerAccountsBrandsPatchRequest withUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public TravelpartnerAccountsBrandsPatchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public TravelpartnerAccountsBrandsPatchRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

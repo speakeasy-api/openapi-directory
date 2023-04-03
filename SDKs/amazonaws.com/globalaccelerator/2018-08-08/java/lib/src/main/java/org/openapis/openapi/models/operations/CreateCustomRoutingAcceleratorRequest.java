@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCustomRoutingAcceleratorRequest {
-    
-    public CreateCustomRoutingAcceleratorHeaders headers;
-    public CreateCustomRoutingAcceleratorRequest withHeaders(CreateCustomRoutingAcceleratorHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateCustomRoutingAcceleratorRequest createCustomRoutingAcceleratorRequest;
+    public CreateCustomRoutingAcceleratorRequest withCreateCustomRoutingAcceleratorRequest(org.openapis.openapi.models.shared.CreateCustomRoutingAcceleratorRequest createCustomRoutingAcceleratorRequest) {
+        this.createCustomRoutingAcceleratorRequest = createCustomRoutingAcceleratorRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateCustomRoutingAcceleratorRequest request;
-    public CreateCustomRoutingAcceleratorRequest withRequest(org.openapis.openapi.models.shared.CreateCustomRoutingAcceleratorRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public CreateCustomRoutingAcceleratorRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public CreateCustomRoutingAcceleratorRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public CreateCustomRoutingAcceleratorRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public CreateCustomRoutingAcceleratorRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public CreateCustomRoutingAcceleratorRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public CreateCustomRoutingAcceleratorRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public CreateCustomRoutingAcceleratorRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public CreateCustomRoutingAcceleratorXAmzTargetEnum xAmzTarget;
+    public CreateCustomRoutingAcceleratorRequest withXAmzTarget(CreateCustomRoutingAcceleratorXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

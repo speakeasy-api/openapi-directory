@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateNewCustomerAddressRequest {
-    
-    public CreateNewCustomerAddressQueryParams queryParams;
-    public CreateNewCustomerAddressRequest withQueryParams(CreateNewCustomerAddressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CreateNewCustomerAddressRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CreateNewCustomerAddressRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public CreateNewCustomerAddressHeaders headers;
-    public CreateNewCustomerAddressRequest withHeaders(CreateNewCustomerAddressHeaders headers) {
-        this.headers = headers;
+    /**
+     * Name of the schema the document to be created needs to be compliant with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_schema")
+    public String schema;
+    public CreateNewCustomerAddressRequest withSchema(String schema) {
+        this.schema = schema;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateUpdateAddressRequests request;
-    public CreateNewCustomerAddressRequest withRequest(org.openapis.openapi.models.shared.CreateUpdateAddressRequests request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateUpdateAddressRequests createUpdateAddressRequests;
+    public CreateNewCustomerAddressRequest withCreateUpdateAddressRequests(org.openapis.openapi.models.shared.CreateUpdateAddressRequests createUpdateAddressRequests) {
+        this.createUpdateAddressRequests = createUpdateAddressRequests;
         return this;
     }
     

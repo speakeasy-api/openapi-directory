@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserDeleteRequest {
-    
-    public UserDeletePathParams pathParams;
-    public UserDeleteRequest withPathParams(UserDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Delete action options:&lt;br&gt;`disassociate` - Disassociate a user.&lt;br&gt;`delete`-  Permanently delete a user.&lt;br&gt;Note: To delete pending user in the account, use `disassociate`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action")
+    public UserDeleteActionEnum action;
+    public UserDeleteRequest withAction(UserDeleteActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Transfer email.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transfer_email")
+    public String transferEmail;
+    public UserDeleteRequest withTransferEmail(String transferEmail) {
+        this.transferEmail = transferEmail;
+        return this;
+    }
     
-    public UserDeleteQueryParams queryParams;
-    public UserDeleteRequest withQueryParams(UserDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Transfer meeting.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transfer_meeting")
+    public Boolean transferMeeting;
+    public UserDeleteRequest withTransferMeeting(Boolean transferMeeting) {
+        this.transferMeeting = transferMeeting;
+        return this;
+    }
+    
+    /**
+     * Transfer recording.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transfer_recording")
+    public Boolean transferRecording;
+    public UserDeleteRequest withTransferRecording(Boolean transferRecording) {
+        this.transferRecording = transferRecording;
+        return this;
+    }
+    
+    /**
+     * Transfer webinar.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transfer_webinar")
+    public Boolean transferWebinar;
+    public UserDeleteRequest withTransferWebinar(Boolean transferWebinar) {
+        this.transferWebinar = transferWebinar;
+        return this;
+    }
+    
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UserDeleteRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

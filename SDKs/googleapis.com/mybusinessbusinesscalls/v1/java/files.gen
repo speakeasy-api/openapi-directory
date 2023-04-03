@@ -30,16 +30,10 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/MybusinessbusinesscallsLocationsBusinesscallsinsightsListPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/MybusinessbusinesscallsLocationsBusinesscallsinsightsListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/MybusinessbusinesscallsLocationsBusinesscallsinsightsListResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/MybusinessbusinesscallsLocationsGetBusinesscallssettingsPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/MybusinessbusinesscallsLocationsGetBusinesscallssettingsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/MybusinessbusinesscallsLocationsGetBusinesscallssettingsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/MybusinessbusinesscallsLocationsGetBusinesscallssettingsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/MybusinessbusinesscallsLocationsUpdateBusinesscallssettingsPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/MybusinessbusinesscallsLocationsUpdateBusinesscallssettingsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/MybusinessbusinesscallsLocationsUpdateBusinesscallssettingsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/MybusinessbusinesscallsLocationsUpdateBusinesscallssettingsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListBusinessCallsInsightsResponse.java

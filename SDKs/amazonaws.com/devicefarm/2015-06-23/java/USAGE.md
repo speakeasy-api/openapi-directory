@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateDevicePoolXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CreateDevicePoolHeaders;
 import org.openapis.openapi.models.operations.CreateDevicePoolRequest;
 import org.openapis.openapi.models.operations.CreateDevicePoolResponse;
 import org.openapis.openapi.models.shared.CreateDevicePoolRequest;
@@ -18,42 +17,43 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateDevicePoolRequest req = new CreateDevicePoolRequest() {{
-                headers = new CreateDevicePoolHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "DeviceFarm_20150623.CreateDevicePool";
-                }};
-                request = new CreateDevicePoolRequest() {{
-                    description = "illum";
-                    maxDevices = 423655;
-                    name = "error";
-                    projectArn = "deserunt";
+                createDevicePoolRequest = new CreateDevicePoolRequest() {{
+                    description = "corrupti";
+                    maxDevices = 592845;
+                    name = "distinctio";
+                    projectArn = "quibusdam";
                     rules = new org.openapis.openapi.models.shared.Rule[]{{
                         add(new Rule() {{
-                            attribute = "REMOTE_DEBUG_ENABLED";
-                            operator = "LESS_THAN_OR_EQUALS";
-                            value = "debitis";
+                            attribute = "MODEL";
+                            operator = "GREATER_THAN_OR_EQUALS";
+                            value = "illum";
                         }}),
                         add(new Rule() {{
-                            attribute = "ARN";
-                            operator = "CONTAINS";
-                            value = "tempora";
+                            attribute = "REMOTE_DEBUG_ENABLED";
+                            operator = "GREATER_THAN_OR_EQUALS";
+                            value = "deserunt";
+                        }}),
+                        add(new Rule() {{
+                            attribute = "REMOTE_ACCESS_ENABLED";
+                            operator = "GREATER_THAN";
+                            value = "magnam";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "debitis";
+                xAmzContentSha256 = "ipsa";
+                xAmzCredential = "delectus";
+                xAmzDate = "tempora";
+                xAmzSecurityToken = "suscipit";
+                xAmzSignature = "molestiae";
+                xAmzSignedHeaders = "minus";
+                xAmzTarget = "DeviceFarm_20150623.CreateDevicePool";
+            }}            
 
             CreateDevicePoolResponse res = sdk.createDevicePool(req);
 

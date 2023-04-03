@@ -50,7 +50,7 @@ public class Story {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StoryGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StoryGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -97,7 +97,7 @@ public class Story {
      */
     public org.openapis.openapi.models.operations.StoryIdAnalyticsResponse storyIdAnalytics(org.openapis.openapi.models.operations.StoryIdAnalyticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdAnalyticsPathParams.class, baseUrl, "/{id}/analytics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdAnalyticsRequest.class, baseUrl, "/{id}/analytics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -150,7 +150,7 @@ public class Story {
      */
     public org.openapis.openapi.models.operations.StoryIdDeleteResponse storyIdDelete(org.openapis.openapi.models.operations.StoryIdDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdDeletePathParams.class, baseUrl, "/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdDeleteRequest.class, baseUrl, "/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -191,7 +191,7 @@ public class Story {
      */
     public org.openapis.openapi.models.operations.StoryIdFileOoxmlautomationidDeleteResponse storyIdFileOoxmlautomationidDelete(org.openapis.openapi.models.operations.StoryIdFileOoxmlautomationidDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdFileOoxmlautomationidDeletePathParams.class, baseUrl, "/{id}/file/{ooxml_automation_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdFileOoxmlautomationidDeleteRequest.class, baseUrl, "/{id}/file/{ooxml_automation_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -232,7 +232,7 @@ public class Story {
      */
     public org.openapis.openapi.models.operations.StoryIdFileOoxmlautomationidGetResponse storyIdFileOoxmlautomationidGet(org.openapis.openapi.models.operations.StoryIdFileOoxmlautomationidGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdFileOoxmlautomationidGetPathParams.class, baseUrl, "/{id}/file/{ooxml_automation_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdFileOoxmlautomationidGetRequest.class, baseUrl, "/{id}/file/{ooxml_automation_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -288,18 +288,18 @@ public class Story {
      */
     public org.openapis.openapi.models.operations.StoryIdFilePostResponse storyIdFilePost(org.openapis.openapi.models.operations.StoryIdFilePostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdFilePostPathParams.class, baseUrl, "/{id}/file", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdFilePostRequest.class, baseUrl, "/{id}/file", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StoryIdFilePostQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StoryIdFilePostRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -346,13 +346,13 @@ public class Story {
      */
     public org.openapis.openapi.models.operations.StoryIdGetResponse storyIdGet(org.openapis.openapi.models.operations.StoryIdGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdGetPathParams.class, baseUrl, "/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdGetRequest.class, baseUrl, "/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StoryIdGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StoryIdGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -399,7 +399,7 @@ public class Story {
      */
     public org.openapis.openapi.models.operations.StoryIdOutlineGetResponse storyIdOutlineGet(org.openapis.openapi.models.operations.StoryIdOutlineGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdOutlineGetPathParams.class, baseUrl, "/{id}/outline", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdOutlineGetRequest.class, baseUrl, "/{id}/outline", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -455,12 +455,12 @@ public class Story {
      */
     public org.openapis.openapi.models.operations.StoryIdOutlinePostResponse storyIdOutlinePost(org.openapis.openapi.models.operations.StoryIdOutlinePostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdOutlinePostPathParams.class, baseUrl, "/{id}/outline", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdOutlinePostRequest.class, baseUrl, "/{id}/outline", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "string");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "string");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -501,7 +501,7 @@ public class Story {
      */
     public org.openapis.openapi.models.operations.StoryIdPublicResponse storyIdPublic(org.openapis.openapi.models.operations.StoryIdPublicRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdPublicPathParams.class, baseUrl, "/{id}/public/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdPublicRequest.class, baseUrl, "/{id}/public/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -549,18 +549,18 @@ public class Story {
      */
     public org.openapis.openapi.models.operations.StoryIdPutResponse storyIdPut(org.openapis.openapi.models.operations.StoryIdPutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdPutPathParams.class, baseUrl, "/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdPutRequest.class, baseUrl, "/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "story", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StoryIdPutQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StoryIdPutRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -607,7 +607,7 @@ public class Story {
      */
     public org.openapis.openapi.models.operations.StoryIdRevealResponse storyIdReveal(org.openapis.openapi.models.operations.StoryIdRevealRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdRevealPathParams.class, baseUrl, "/{id}/reveal", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdRevealRequest.class, baseUrl, "/{id}/reveal", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -660,7 +660,7 @@ public class Story {
      */
     public org.openapis.openapi.models.operations.StoryIdStatusGetResponse storyIdStatusGet(org.openapis.openapi.models.operations.StoryIdStatusGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdStatusGetPathParams.class, baseUrl, "/{id}/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdStatusGetRequest.class, baseUrl, "/{id}/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -714,13 +714,13 @@ public class Story {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "outline", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StoryPostQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StoryPostRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -772,13 +772,13 @@ public class Story {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StoryPostFileQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StoryPostFileRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -830,10 +830,10 @@ public class Story {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "fileUpload", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StoryPostFileJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StoryPostFileJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

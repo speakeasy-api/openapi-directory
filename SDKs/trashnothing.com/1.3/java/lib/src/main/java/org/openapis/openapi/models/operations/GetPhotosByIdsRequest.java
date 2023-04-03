@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPhotosByIdsRequest {
+    /**
+     * Client device pixel ratio used to determine thumbnail size (default 1.0).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_pixel_ratio")
+    public Double devicePixelRatio;
+    public GetPhotosByIdsRequest withDevicePixelRatio(Double devicePixelRatio) {
+        this.devicePixelRatio = devicePixelRatio;
+        return this;
+    }
     
-    public GetPhotosByIdsQueryParams queryParams;
-    public GetPhotosByIdsRequest withQueryParams(GetPhotosByIdsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The IDs of the photos to retrieve.  If more than 50 photo IDs are passed, only the first 50 photos will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=photo_ids")
+    public String photoIds;
+    public GetPhotosByIdsRequest withPhotoIds(String photoIds) {
+        this.photoIds = photoIds;
         return this;
     }
     

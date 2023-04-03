@@ -39,10 +39,11 @@ public class Season {
      * only active seasons for active series are included.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSeasonsResponse getSeasons(org.openapis.openapi.models.operations.GetSeasonsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSeasonsResponse getSeasons(org.openapis.openapi.models.operations.GetSeasonsRequest request, org.openapis.openapi.models.operations.GetSeasonsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/seasons");
         
@@ -50,14 +51,14 @@ public class Season {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSeasonsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSeasonsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -98,19 +99,20 @@ public class Season {
     /**
      * Get a specific season
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSeasonsIdResponse getSeasonsId(org.openapis.openapi.models.operations.GetSeasonsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSeasonsIdResponse getSeasonsId(org.openapis.openapi.models.operations.GetSeasonsIdRequest request, org.openapis.openapi.models.operations.GetSeasonsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSeasonsIdPathParams.class, baseUrl, "/seasons/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSeasonsIdRequest.class, baseUrl, "/seasons/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAll3Request {
-    
-    public GetAll3QueryParams queryParams;
-    public GetAll3Request withQueryParams(GetAll3QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * exact name of entity
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nameEquals")
+    public String nameEquals;
+    public GetAll3Request withNameEquals(String nameEquals) {
+        this.nameEquals = nameEquals;
         return this;
     }
     

@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETExecuteChangeSetRequest {
-    
-    public GETExecuteChangeSetQueryParams queryParams;
-    public GETExecuteChangeSetRequest withQueryParams(GETExecuteChangeSetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETExecuteChangeSetActionEnum action;
+    public GETExecuteChangeSetRequest withAction(GETExecuteChangeSetActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name or Amazon Resource Name (ARN) of the change set that you want use to update the specified stack.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ChangeSetName")
+    public String changeSetName;
+    public GETExecuteChangeSetRequest withChangeSetName(String changeSetName) {
+        this.changeSetName = changeSetName;
+        return this;
+    }
     
-    public GETExecuteChangeSetHeaders headers;
-    public GETExecuteChangeSetRequest withHeaders(GETExecuteChangeSetHeaders headers) {
-        this.headers = headers;
+    /**
+     * A unique identifier for this &lt;code&gt;ExecuteChangeSet&lt;/code&gt; request. Specify this token if you plan to retry requests so that CloudFormation knows that you're not attempting to execute a change set to update a stack with the same name. You might retry &lt;code&gt;ExecuteChangeSet&lt;/code&gt; requests to ensure that CloudFormation successfully received them.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientRequestToken")
+    public String clientRequestToken;
+    public GETExecuteChangeSetRequest withClientRequestToken(String clientRequestToken) {
+        this.clientRequestToken = clientRequestToken;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Preserves the state of previously provisioned resources when an operation fails.&lt;/p&gt; &lt;p&gt;Default: &lt;code&gt;True&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DisableRollback")
+    public Boolean disableRollback;
+    public GETExecuteChangeSetRequest withDisableRollback(Boolean disableRollback) {
+        this.disableRollback = disableRollback;
+        return this;
+    }
+    
+    /**
+     * If you specified the name of a change set, specify the stack name or Amazon Resource Name (ARN) that's associated with the change set you want to execute.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackName")
+    public String stackName;
+    public GETExecuteChangeSetRequest withStackName(String stackName) {
+        this.stackName = stackName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETExecuteChangeSetVersionEnum version;
+    public GETExecuteChangeSetRequest withVersion(GETExecuteChangeSetVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETExecuteChangeSetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETExecuteChangeSetRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETExecuteChangeSetRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETExecuteChangeSetRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETExecuteChangeSetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETExecuteChangeSetRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETExecuteChangeSetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

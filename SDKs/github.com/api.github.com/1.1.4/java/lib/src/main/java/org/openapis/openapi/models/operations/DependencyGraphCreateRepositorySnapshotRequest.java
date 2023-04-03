@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DependencyGraphCreateRepositorySnapshotRequest {
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public DependencyGraphCreateRepositorySnapshotRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public DependencyGraphCreateRepositorySnapshotPathParams pathParams;
-    public DependencyGraphCreateRepositorySnapshotRequest withPathParams(DependencyGraphCreateRepositorySnapshotPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public DependencyGraphCreateRepositorySnapshotRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Snapshot request;
-    public DependencyGraphCreateRepositorySnapshotRequest withRequest(org.openapis.openapi.models.shared.Snapshot request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Snapshot snapshot;
+    public DependencyGraphCreateRepositorySnapshotRequest withSnapshot(org.openapis.openapi.models.shared.Snapshot snapshot) {
+        this.snapshot = snapshot;
         return this;
     }
     

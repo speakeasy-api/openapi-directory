@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListParticipantConversationRequest {
-    
-    public ListParticipantConversationQueryParams queryParams;
-    public ListParticipantConversationRequest withQueryParams(ListParticipantConversationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A unique string identifier for the conversation participant who's not a Conversation User. This parameter could be found in messaging_binding.address field of Participant resource. It should be url-encoded.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Address")
+    public String address;
+    public ListParticipantConversationRequest withAddress(String address) {
+        this.address = address;
         return this;
     }
     
-    
-    public ListParticipantConversationSecurity security;
-    public ListParticipantConversationRequest withSecurity(ListParticipantConversationSecurity security) {
-        this.security = security;
+    /**
+     * A unique string identifier for the conversation participant as [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource). This parameter is non-null if (and only if) the participant is using the Conversations SDK to communicate. Limited to 256 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Identity")
+    public String identity;
+    public ListParticipantConversationRequest withIdentity(String identity) {
+        this.identity = identity;
         return this;
     }
     
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListParticipantConversationRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public String serverURL;
-    public ListParticipantConversationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListParticipantConversationRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListParticipantConversationRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

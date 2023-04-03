@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdFoldersIdNominativeSocialDeclarationsRequest {
-    
-    public GetSpacesSpaceIdFoldersIdNominativeSocialDeclarationsPathParams pathParams;
-    public GetSpacesSpaceIdFoldersIdNominativeSocialDeclarationsRequest withPathParams(GetSpacesSpaceIdFoldersIdNominativeSocialDeclarationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * range date of the documents
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Date")
+    public String date;
+    public GetSpacesSpaceIdFoldersIdNominativeSocialDeclarationsRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     
+    /**
+     * index range of the results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Range")
+    public String range;
+    public GetSpacesSpaceIdFoldersIdNominativeSocialDeclarationsRequest withRange(String range) {
+        this.range = range;
+        return this;
+    }
     
-    public GetSpacesSpaceIdFoldersIdNominativeSocialDeclarationsQueryParams queryParams;
-    public GetSpacesSpaceIdFoldersIdNominativeSocialDeclarationsRequest withQueryParams(GetSpacesSpaceIdFoldersIdNominativeSocialDeclarationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the folder social
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesSpaceIdFoldersIdNominativeSocialDeclarationsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdFoldersIdNominativeSocialDeclarationsRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

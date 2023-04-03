@@ -7,10 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostNewDpsJobRequest {
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public PostNewDpsJobRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
     
-    public PostNewDpsJobHeaders headers;
-    public PostNewDpsJobRequest withHeaders(PostNewDpsJobHeaders headers) {
-        this.headers = headers;
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostNewDpsJobRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
@@ -18,9 +31,9 @@ public class PostNewDpsJobRequest {
      * The the DPS job instruction object.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DpsJobInstruction request;
-    public PostNewDpsJobRequest withRequest(org.openapis.openapi.models.shared.DpsJobInstruction request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DpsJobInstruction dpsJobInstruction;
+    public PostNewDpsJobRequest withDpsJobInstruction(org.openapis.openapi.models.shared.DpsJobInstruction dpsJobInstruction) {
+        this.dpsJobInstruction = dpsJobInstruction;
         return this;
     }
     

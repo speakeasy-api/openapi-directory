@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsGroupOperatingSystemCountsRequest {
-    
-    public ErrorsGroupOperatingSystemCountsPathParams pathParams;
-    public ErrorsGroupOperatingSystemCountsRequest withPathParams(ErrorsGroupOperatingSystemCountsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The maximum number of results to return. (0 will fetch all results till the max number.)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$top")
+    public Long dollarTop;
+    public ErrorsGroupOperatingSystemCountsRequest withDollarTop(Long dollarTop) {
+        this.dollarTop = dollarTop;
         return this;
     }
     
-    
-    public ErrorsGroupOperatingSystemCountsQueryParams queryParams;
-    public ErrorsGroupOperatingSystemCountsRequest withQueryParams(ErrorsGroupOperatingSystemCountsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ErrorsGroupOperatingSystemCountsRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The id of the error group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorGroupId")
+    public String errorGroupId;
+    public ErrorsGroupOperatingSystemCountsRequest withErrorGroupId(String errorGroupId) {
+        this.errorGroupId = errorGroupId;
+        return this;
+    }
     
-    public ErrorsGroupOperatingSystemCountsSecurity security;
-    public ErrorsGroupOperatingSystemCountsRequest withSecurity(ErrorsGroupOperatingSystemCountsSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ErrorsGroupOperatingSystemCountsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

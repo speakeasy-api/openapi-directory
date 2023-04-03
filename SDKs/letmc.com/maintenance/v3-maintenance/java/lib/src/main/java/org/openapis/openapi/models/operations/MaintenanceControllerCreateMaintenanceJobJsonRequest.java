@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MaintenanceControllerCreateMaintenanceJobJsonRequest {
-    
-    public MaintenanceControllerCreateMaintenanceJobJsonPathParams pathParams;
-    public MaintenanceControllerCreateMaintenanceJobJsonRequest withPathParams(MaintenanceControllerCreateMaintenanceJobJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A JSON object containing details of the maintenance job
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.MaintenanceIssueModel request;
-    public MaintenanceControllerCreateMaintenanceJobJsonRequest withRequest(org.openapis.openapi.models.shared.MaintenanceIssueModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.MaintenanceIssueModel maintenanceIssueModel;
+    public MaintenanceControllerCreateMaintenanceJobJsonRequest withMaintenanceIssueModel(org.openapis.openapi.models.shared.MaintenanceIssueModel maintenanceIssueModel) {
+        this.maintenanceIssueModel = maintenanceIssueModel;
+        return this;
+    }
+    
+    /**
+     * The unique ID of the Branch
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branchID")
+    public String branchID;
+    public MaintenanceControllerCreateMaintenanceJobJsonRequest withBranchID(String branchID) {
+        this.branchID = branchID;
+        return this;
+    }
+    
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public MaintenanceControllerCreateMaintenanceJobJsonRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     

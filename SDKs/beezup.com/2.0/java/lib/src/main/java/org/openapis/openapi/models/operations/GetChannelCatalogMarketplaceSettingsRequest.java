@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelCatalogMarketplaceSettingsRequest {
-    
-    public GetChannelCatalogMarketplaceSettingsPathParams pathParams;
-    public GetChannelCatalogMarketplaceSettingsRequest withPathParams(GetChannelCatalogMarketplaceSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Channel Catalog Id to query (required)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
+    public String channelCatalogId;
+    public GetChannelCatalogMarketplaceSettingsRequest withChannelCatalogId(String channelCatalogId) {
+        this.channelCatalogId = channelCatalogId;
         return this;
     }
     

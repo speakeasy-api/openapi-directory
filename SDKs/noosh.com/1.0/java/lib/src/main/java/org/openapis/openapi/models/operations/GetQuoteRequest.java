@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public GetQuoteRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
     
-    public GetQuotePathParams pathParams;
-    public GetQuoteRequest withPathParams(GetQuotePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quote_id")
+    public String quoteId;
+    public GetQuoteRequest withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public GetQuoteRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

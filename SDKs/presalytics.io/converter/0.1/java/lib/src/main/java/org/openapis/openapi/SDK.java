@@ -125,7 +125,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SvgconvertResponse svgconvert(org.openapis.openapi.models.operations.SvgconvertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SvgconvertResponse svgconvert(org.openapis.openapi.models.operations.SvgconvertFileToConvert request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/svgconvert");
         

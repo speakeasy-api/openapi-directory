@@ -34,10 +34,11 @@ public class AccountHolders {
      * Close an account holder
      * Changes the [status of an account holder](https://docs.adyen.com/marketplaces-and-platforms/classic/account-holders-and-accounts#account-holder-statuses) to **Closed**. This state is final. If an account holder is closed, you can't process transactions, pay out funds, or reopen it. If payments are made to an account of an account holder with a **Closed** [`status`](https://docs.adyen.com/api-explorer/#/Account/latest/post/getAccountHolder__resParam_verification-accountHolder-checks-status), the payments are sent to your liable account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCloseAccountHolderResponse postCloseAccountHolder(org.openapis.openapi.models.operations.PostCloseAccountHolderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCloseAccountHolderResponse postCloseAccountHolder(org.openapis.openapi.models.shared.CloseAccountHolderRequest request, org.openapis.openapi.models.operations.PostCloseAccountHolderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/closeAccountHolder");
         
@@ -48,7 +49,7 @@ public class AccountHolders {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,10 +85,11 @@ public class AccountHolders {
      * Create an account holder
      * Creates an account holder that [represents the sub-merchant's entity](https://docs.adyen.com/marketplaces-and-platforms/classic/account-structure#your-platform) in your platform. The details that you need to provide in the request depend on the sub-merchant's legal entity type. For more information, refer to [Account holder and accounts](https://docs.adyen.com/marketplaces-and-platforms/classic/account-holders-and-accounts#legal-entity-types).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCreateAccountHolderResponse postCreateAccountHolder(org.openapis.openapi.models.operations.PostCreateAccountHolderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCreateAccountHolderResponse postCreateAccountHolder(org.openapis.openapi.models.shared.CreateAccountHolderRequest request, org.openapis.openapi.models.operations.PostCreateAccountHolderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/createAccountHolder");
         
@@ -98,7 +100,7 @@ public class AccountHolders {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -134,10 +136,11 @@ public class AccountHolders {
      * Get an account holder
      * Returns the details of an account holder.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetAccountHolderResponse postGetAccountHolder(org.openapis.openapi.models.operations.PostGetAccountHolderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetAccountHolderResponse postGetAccountHolder(org.openapis.openapi.models.shared.GetAccountHolderRequest request, org.openapis.openapi.models.operations.PostGetAccountHolderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/getAccountHolder");
         
@@ -148,7 +151,7 @@ public class AccountHolders {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -184,10 +187,11 @@ public class AccountHolders {
      * Get a tax form
      * Generates a tax form for account holders operating in the US. For more information, refer to [Providing tax forms](https://docs.adyen.com/marketplaces-and-platforms/classic/tax-forms).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetTaxFormResponse postGetTaxForm(org.openapis.openapi.models.operations.PostGetTaxFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetTaxFormResponse postGetTaxForm(org.openapis.openapi.models.shared.GetTaxFormRequest request, org.openapis.openapi.models.operations.PostGetTaxFormSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/getTaxForm");
         
@@ -198,7 +202,7 @@ public class AccountHolders {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -234,10 +238,11 @@ public class AccountHolders {
      * Suspend an account holder
      * Changes the [status of an account holder](https://docs.adyen.com/marketplaces-and-platforms/classic/account-holders-and-accounts#account-holder-statuses) to **Suspended**.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSuspendAccountHolderResponse postSuspendAccountHolder(org.openapis.openapi.models.operations.PostSuspendAccountHolderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSuspendAccountHolderResponse postSuspendAccountHolder(org.openapis.openapi.models.shared.SuspendAccountHolderRequest request, org.openapis.openapi.models.operations.PostSuspendAccountHolderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/suspendAccountHolder");
         
@@ -248,7 +253,7 @@ public class AccountHolders {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -287,10 +292,11 @@ public class AccountHolders {
      * 
      * You can only unsuspend account holders if they do not have verification checks with a **FAILED** [`status`](https://docs.adyen.com/api-explorer/#/Account/latest/post/getAccountHolder__resParam_verification-accountHolder-checks-status).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUnSuspendAccountHolderResponse postUnSuspendAccountHolder(org.openapis.openapi.models.operations.PostUnSuspendAccountHolderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUnSuspendAccountHolderResponse postUnSuspendAccountHolder(org.openapis.openapi.models.shared.UnSuspendAccountHolderRequest request, org.openapis.openapi.models.operations.PostUnSuspendAccountHolderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/unSuspendAccountHolder");
         
@@ -301,7 +307,7 @@ public class AccountHolders {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -357,10 +363,11 @@ public class AccountHolders {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUpdateAccountHolderResponse postUpdateAccountHolder(org.openapis.openapi.models.operations.PostUpdateAccountHolderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUpdateAccountHolderResponse postUpdateAccountHolder(org.openapis.openapi.models.shared.UpdateAccountHolderRequest request, org.openapis.openapi.models.operations.PostUpdateAccountHolderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/updateAccountHolder");
         
@@ -371,7 +378,7 @@ public class AccountHolders {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -407,10 +414,11 @@ public class AccountHolders {
      * Update payout or processing state
      * Disables or enables the processing or payout state of an account holder.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUpdateAccountHolderStateResponse postUpdateAccountHolderState(org.openapis.openapi.models.operations.PostUpdateAccountHolderStateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUpdateAccountHolderStateResponse postUpdateAccountHolderState(org.openapis.openapi.models.shared.UpdateAccountHolderStateRequest request, org.openapis.openapi.models.operations.PostUpdateAccountHolderStateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/updateAccountHolderState");
         
@@ -421,7 +429,7 @@ public class AccountHolders {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

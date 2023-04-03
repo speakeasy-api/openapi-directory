@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPipelineVariableForUserRequest {
+    /**
+     * Either the UUID of the account surrounded by curly-braces, for example `{account UUID}`, OR an Atlassian Account ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=selected_user")
+    public String selectedUser;
+    public GetPipelineVariableForUserRequest withSelectedUser(String selectedUser) {
+        this.selectedUser = selectedUser;
+        return this;
+    }
     
-    public GetPipelineVariableForUserPathParams pathParams;
-    public GetPipelineVariableForUserRequest withPathParams(GetPipelineVariableForUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The UUID of the variable to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=variable_uuid")
+    public String variableUuid;
+    public GetPipelineVariableForUserRequest withVariableUuid(String variableUuid) {
+        this.variableUuid = variableUuid;
         return this;
     }
     

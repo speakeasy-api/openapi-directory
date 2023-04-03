@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoGetEditorConfigRequest {
-    
-    public RepoGetEditorConfigPathParams pathParams;
-    public RepoGetEditorConfigRequest withPathParams(RepoGetEditorConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * filepath of file to get
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filepath")
+    public String filepath;
+    public RepoGetEditorConfigRequest withFilepath(String filepath) {
+        this.filepath = filepath;
         return this;
     }
     
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoGetEditorConfigRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public RepoGetEditorConfigQueryParams queryParams;
-    public RepoGetEditorConfigRequest withQueryParams(RepoGetEditorConfigQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the commit/branch/tag. Default the repository\u2019s default branch (usually master)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
+    public String ref;
+    public RepoGetEditorConfigRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoGetEditorConfigRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

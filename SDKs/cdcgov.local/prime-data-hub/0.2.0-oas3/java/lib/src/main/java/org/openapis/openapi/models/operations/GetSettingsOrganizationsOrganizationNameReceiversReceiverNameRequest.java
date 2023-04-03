@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest {
-    
-    public GetSettingsOrganizationsOrganizationNameReceiversReceiverNamePathParams pathParams;
-    public GetSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest withPathParams(GetSettingsOrganizationsOrganizationNameReceiversReceiverNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Create receivers under this organization name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationName")
+    public String organizationName;
+    public GetSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest withOrganizationName(String organizationName) {
+        this.organizationName = organizationName;
         return this;
     }
     
-    
-    public GetSettingsOrganizationsOrganizationNameReceiversReceiverNameSecurity security;
-    public GetSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest withSecurity(GetSettingsOrganizationsOrganizationNameReceiversReceiverNameSecurity security) {
-        this.security = security;
+    /**
+     * The name of the receiver
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=receiverName")
+    public String receiverName;
+    public GetSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest withReceiverName(String receiverName) {
+        this.receiverName = receiverName;
         return this;
     }
     

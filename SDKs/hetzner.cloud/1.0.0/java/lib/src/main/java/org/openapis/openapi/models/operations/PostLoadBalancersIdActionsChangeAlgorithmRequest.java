@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostLoadBalancersIdActionsChangeAlgorithmRequest {
-    
-    public PostLoadBalancersIdActionsChangeAlgorithmPathParams pathParams;
-    public PostLoadBalancersIdActionsChangeAlgorithmRequest withPathParams(PostLoadBalancersIdActionsChangeAlgorithmPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostLoadBalancersIdActionsChangeAlgorithmRequestBody requestBody;
+    public PostLoadBalancersIdActionsChangeAlgorithmRequest withRequestBody(PostLoadBalancersIdActionsChangeAlgorithmRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostLoadBalancersIdActionsChangeAlgorithmRequestBody request;
-    public PostLoadBalancersIdActionsChangeAlgorithmRequest withRequest(PostLoadBalancersIdActionsChangeAlgorithmRequestBody request) {
-        this.request = request;
+    /**
+     * ID of the Load Balancer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostLoadBalancersIdActionsChangeAlgorithmRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

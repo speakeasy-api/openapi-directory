@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminDeletePublicKeyRequest {
-    
-    public EnterpriseAdminDeletePublicKeyPathParams pathParams;
-    public EnterpriseAdminDeletePublicKeyRequest withPathParams(EnterpriseAdminDeletePublicKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key_ids")
+    public String keyIds;
+    public EnterpriseAdminDeletePublicKeyRequest withKeyIds(String keyIds) {
+        this.keyIds = keyIds;
         return this;
     }
     

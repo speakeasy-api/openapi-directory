@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSpecialization1Request {
-    
-    public UpdateSpecialization1PathParams pathParams;
-    public UpdateSpecialization1Request withPathParams(UpdateSpecialization1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated specialization for a quote.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SpecializationDTO request;
-    public UpdateSpecialization1Request withRequest(org.openapis.openapi.models.shared.SpecializationDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SpecializationDTO specializationDTO;
+    public UpdateSpecialization1Request withSpecializationDTO(org.openapis.openapi.models.shared.SpecializationDTO specializationDTO) {
+        this.specializationDTO = specializationDTO;
+        return this;
+    }
+    
+    /**
+     * quote's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
+    public String quoteId;
+    public UpdateSpecialization1Request withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
         return this;
     }
     

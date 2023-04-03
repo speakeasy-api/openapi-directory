@@ -37,10 +37,11 @@ public class InvestorAccounts {
     /**
      * Retrieve all the investor accounts
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAllinvestorAccountsResponse getAllinvestorAccounts(org.openapis.openapi.models.operations.GetAllinvestorAccountsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAllinvestorAccountsResponse getAllinvestorAccounts(org.openapis.openapi.models.operations.GetAllinvestorAccountsRequest request, org.openapis.openapi.models.operations.GetAllinvestorAccountsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tenant/investor-accounts/v1");
         
@@ -48,13 +49,13 @@ public class InvestorAccounts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllinvestorAccountsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllinvestorAccountsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -63,7 +64,7 @@ public class InvestorAccounts {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -146,18 +147,19 @@ public class InvestorAccounts {
     /**
      * Retrieve existing investor account from account id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetinvestorAccountResponse getinvestorAccount(org.openapis.openapi.models.operations.GetinvestorAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetinvestorAccountResponse getinvestorAccount(org.openapis.openapi.models.operations.GetinvestorAccountRequest request, org.openapis.openapi.models.operations.GetinvestorAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetinvestorAccountPathParams.class, baseUrl, "/tenant/investor-accounts/v1/{account_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetinvestorAccountRequest.class, baseUrl, "/tenant/investor-accounts/v1/{account_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -166,7 +168,7 @@ public class InvestorAccounts {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

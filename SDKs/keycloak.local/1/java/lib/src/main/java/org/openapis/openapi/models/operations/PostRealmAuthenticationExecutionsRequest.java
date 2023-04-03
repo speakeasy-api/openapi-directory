@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmAuthenticationExecutionsRequest {
-    
-    public PostRealmAuthenticationExecutionsPathParams pathParams;
-    public PostRealmAuthenticationExecutionsRequest withPathParams(PostRealmAuthenticationExecutionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * JSON model describing authentication execution
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AuthenticationExecutionRepresentation request;
-    public PostRealmAuthenticationExecutionsRequest withRequest(org.openapis.openapi.models.shared.AuthenticationExecutionRepresentation request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AuthenticationExecutionRepresentation authenticationExecutionRepresentation;
+    public PostRealmAuthenticationExecutionsRequest withAuthenticationExecutionRepresentation(org.openapis.openapi.models.shared.AuthenticationExecutionRepresentation authenticationExecutionRepresentation) {
+        this.authenticationExecutionRepresentation = authenticationExecutionRepresentation;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmAuthenticationExecutionsRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

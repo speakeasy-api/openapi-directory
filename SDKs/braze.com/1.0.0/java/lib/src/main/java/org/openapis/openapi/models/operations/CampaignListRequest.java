@@ -4,13 +4,54 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CampaignListRequest {
+    /**
+     * (Optional) Boolean
+     * 
+     * Whether or not to include archived campaigns, defaults to false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_archived")
+    public String includeArchived;
+    public CampaignListRequest withIncludeArchived(String includeArchived) {
+        this.includeArchived = includeArchived;
+        return this;
+    }
     
-    public CampaignListQueryParams queryParams;
-    public CampaignListRequest withQueryParams(CampaignListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Optional) DateTime (ISO 8601 string)
+     * 
+     * Filters the results and only returns campaigns that were edited greater than the time provided till now. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_edit.time[gt]")
+    public String lastEditTimeGt;
+    public CampaignListRequest withLastEditTimeGt(String lastEditTimeGt) {
+        this.lastEditTimeGt = lastEditTimeGt;
+        return this;
+    }
+    
+    /**
+     * (Optional) Integer
+     * 
+     * The page of campaigns to return, defaults to 0 (returns the first set of up to 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public CampaignListRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * (Optional) String
+     * 
+     * Pass in the value `desc` to sort by creation time from newest to oldest. Pass in `asc` to sort from oldest to newest. If sort_direction is not included, the default order is oldest to newest.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
+    public String sortDirection;
+    public CampaignListRequest withSortDirection(String sortDirection) {
+        this.sortDirection = sortDirection;
         return this;
     }
     

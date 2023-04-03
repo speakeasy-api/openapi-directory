@@ -34,10 +34,11 @@ public class Initialization {
      * Store payout details
      * Stores payment details under the `PAYOUT` recurring contract. These payment details can be used later to submit a payout via the `/submitThirdParty` call.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostStoreDetailResponse postStoreDetail(org.openapis.openapi.models.operations.PostStoreDetailRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostStoreDetailResponse postStoreDetail(org.openapis.openapi.models.shared.StoreDetailRequest request, org.openapis.openapi.models.operations.PostStoreDetailSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/storeDetail");
         
@@ -48,7 +49,7 @@ public class Initialization {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -86,10 +87,11 @@ public class Initialization {
      * 
      * The submitted payout must be confirmed or declined either by a reviewer or via `/confirmThirdParty` or `/declineThirdParty` calls.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostStoreDetailAndSubmitThirdPartyResponse postStoreDetailAndSubmitThirdParty(org.openapis.openapi.models.operations.PostStoreDetailAndSubmitThirdPartyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostStoreDetailAndSubmitThirdPartyResponse postStoreDetailAndSubmitThirdParty(org.openapis.openapi.models.shared.StoreDetailAndSubmitRequest request, org.openapis.openapi.models.operations.PostStoreDetailAndSubmitThirdPartySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/storeDetailAndSubmitThirdParty");
         
@@ -100,7 +102,7 @@ public class Initialization {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -138,10 +140,11 @@ public class Initialization {
      * 
      * The submitted payout must be confirmed or declined either by a reviewer or via `/confirmThirdParty` or `/declineThirdParty` calls.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSubmitThirdPartyResponse postSubmitThirdParty(org.openapis.openapi.models.operations.PostSubmitThirdPartyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSubmitThirdPartyResponse postSubmitThirdParty(org.openapis.openapi.models.shared.SubmitRequest request, org.openapis.openapi.models.operations.PostSubmitThirdPartySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/submitThirdParty");
         
@@ -152,7 +155,7 @@ public class Initialization {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

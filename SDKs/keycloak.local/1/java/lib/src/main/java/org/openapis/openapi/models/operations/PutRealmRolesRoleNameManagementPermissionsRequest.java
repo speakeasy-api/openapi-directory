@@ -7,17 +7,27 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRealmRolesRoleNameManagementPermissionsRequest {
-    
-    public PutRealmRolesRoleNameManagementPermissionsPathParams pathParams;
-    public PutRealmRolesRoleNameManagementPermissionsRequest withPathParams(PutRealmRolesRoleNameManagementPermissionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ManagementPermissionReference managementPermissionReference;
+    public PutRealmRolesRoleNameManagementPermissionsRequest withManagementPermissionReference(org.openapis.openapi.models.shared.ManagementPermissionReference managementPermissionReference) {
+        this.managementPermissionReference = managementPermissionReference;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ManagementPermissionReference request;
-    public PutRealmRolesRoleNameManagementPermissionsRequest withRequest(org.openapis.openapi.models.shared.ManagementPermissionReference request) {
-        this.request = request;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PutRealmRolesRoleNameManagementPermissionsRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=role-name")
+    public String roleName;
+    public PutRealmRolesRoleNameManagementPermissionsRequest withRoleName(String roleName) {
+        this.roleName = roleName;
         return this;
     }
     

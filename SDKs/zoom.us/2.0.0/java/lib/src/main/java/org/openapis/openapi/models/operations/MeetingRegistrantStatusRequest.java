@@ -7,31 +7,32 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MeetingRegistrantStatusRequest {
-    
-    public MeetingRegistrantStatusPathParams pathParams;
-    public MeetingRegistrantStatusRequest withPathParams(MeetingRegistrantStatusPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public MeetingRegistrantStatusQueryParams queryParams;
-    public MeetingRegistrantStatusRequest withQueryParams(MeetingRegistrantStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public MeetingRegistrantStatusApplicationJSON request;
-    public MeetingRegistrantStatusRequest withRequest(MeetingRegistrantStatusApplicationJSON request) {
-        this.request = request;
+    public MeetingRegistrantStatusApplicationJSON requestBody;
+    public MeetingRegistrantStatusRequest withRequestBody(MeetingRegistrantStatusApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
+     * 
+     * While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public Long meetingId;
+    public MeetingRegistrantStatusRequest withMeetingId(Long meetingId) {
+        this.meetingId = meetingId;
+        return this;
+    }
     
-    public MeetingRegistrantStatusSecurity security;
-    public MeetingRegistrantStatusRequest withSecurity(MeetingRegistrantStatusSecurity security) {
-        this.security = security;
+    /**
+     * The meeting occurrence ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurrence_id")
+    public String occurrenceId;
+    public MeetingRegistrantStatusRequest withOccurrenceId(String occurrenceId) {
+        this.occurrenceId = occurrenceId;
         return this;
     }
     

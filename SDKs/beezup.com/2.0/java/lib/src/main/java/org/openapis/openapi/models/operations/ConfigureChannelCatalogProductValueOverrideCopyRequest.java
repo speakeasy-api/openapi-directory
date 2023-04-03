@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureChannelCatalogProductValueOverrideCopyRequest {
+    /**
+     * The channel catalog identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
+    public String channelCatalogId;
+    public ConfigureChannelCatalogProductValueOverrideCopyRequest withChannelCatalogId(String channelCatalogId) {
+        this.channelCatalogId = channelCatalogId;
+        return this;
+    }
     
-    public ConfigureChannelCatalogProductValueOverrideCopyPathParams pathParams;
-    public ConfigureChannelCatalogProductValueOverrideCopyRequest withPathParams(ConfigureChannelCatalogProductValueOverrideCopyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The product identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public ConfigureChannelCatalogProductValueOverrideCopyRequest withProductId(String productId) {
+        this.productId = productId;
         return this;
     }
     

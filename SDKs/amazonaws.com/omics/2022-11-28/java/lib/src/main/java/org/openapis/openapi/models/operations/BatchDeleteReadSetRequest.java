@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BatchDeleteReadSetRequest {
-    
-    public BatchDeleteReadSetPathParams pathParams;
-    public BatchDeleteReadSetRequest withPathParams(BatchDeleteReadSetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public BatchDeleteReadSetHeaders headers;
-    public BatchDeleteReadSetRequest withHeaders(BatchDeleteReadSetHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public BatchDeleteReadSetRequestBody request;
-    public BatchDeleteReadSetRequest withRequest(BatchDeleteReadSetRequestBody request) {
-        this.request = request;
+    public BatchDeleteReadSetRequestBody requestBody;
+    public BatchDeleteReadSetRequest withRequestBody(BatchDeleteReadSetRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public BatchDeleteReadSetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public BatchDeleteReadSetRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public BatchDeleteReadSetRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public BatchDeleteReadSetRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public BatchDeleteReadSetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public BatchDeleteReadSetRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public BatchDeleteReadSetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The read sets' sequence store ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sequenceStoreId")
+    public String sequenceStoreId;
+    public BatchDeleteReadSetRequest withSequenceStoreId(String sequenceStoreId) {
+        this.sequenceStoreId = sequenceStoreId;
         return this;
     }
     

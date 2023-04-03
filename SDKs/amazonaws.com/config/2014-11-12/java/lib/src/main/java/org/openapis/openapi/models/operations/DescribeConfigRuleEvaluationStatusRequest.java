@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeConfigRuleEvaluationStatusRequest {
-    
-    public DescribeConfigRuleEvaluationStatusQueryParams queryParams;
-    public DescribeConfigRuleEvaluationStatusRequest withQueryParams(DescribeConfigRuleEvaluationStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DescribeConfigRuleEvaluationStatusHeaders headers;
-    public DescribeConfigRuleEvaluationStatusRequest withHeaders(DescribeConfigRuleEvaluationStatusHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DescribeConfigRuleEvaluationStatusRequest request;
-    public DescribeConfigRuleEvaluationStatusRequest withRequest(org.openapis.openapi.models.shared.DescribeConfigRuleEvaluationStatusRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DescribeConfigRuleEvaluationStatusRequest describeConfigRuleEvaluationStatusRequest;
+    public DescribeConfigRuleEvaluationStatusRequest withDescribeConfigRuleEvaluationStatusRequest(org.openapis.openapi.models.shared.DescribeConfigRuleEvaluationStatusRequest describeConfigRuleEvaluationStatusRequest) {
+        this.describeConfigRuleEvaluationStatusRequest = describeConfigRuleEvaluationStatusRequest;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Limit")
+    public String limit;
+    public DescribeConfigRuleEvaluationStatusRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public DescribeConfigRuleEvaluationStatusRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeConfigRuleEvaluationStatusRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeConfigRuleEvaluationStatusRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeConfigRuleEvaluationStatusRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeConfigRuleEvaluationStatusRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeConfigRuleEvaluationStatusRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeConfigRuleEvaluationStatusRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeConfigRuleEvaluationStatusRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public DescribeConfigRuleEvaluationStatusXAmzTargetEnum xAmzTarget;
+    public DescribeConfigRuleEvaluationStatusRequest withXAmzTarget(DescribeConfigRuleEvaluationStatusXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

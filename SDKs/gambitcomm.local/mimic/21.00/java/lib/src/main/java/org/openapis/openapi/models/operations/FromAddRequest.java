@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FromAddRequest {
+    /**
+     * IP of the port, 0.0.0.0 for any
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IP")
+    public String ip;
+    public FromAddRequest withIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
     
-    public FromAddPathParams pathParams;
-    public FromAddRequest withPathParams(FromAddPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to add the IP source
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public FromAddRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
+    
+    /**
+     * port of the source, 0 for any
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
+    public Integer port;
+    public FromAddRequest withPort(Integer port) {
+        this.port = port;
         return this;
     }
     

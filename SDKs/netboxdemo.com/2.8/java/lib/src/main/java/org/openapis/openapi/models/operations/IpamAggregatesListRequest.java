@@ -4,13 +4,215 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IpamAggregatesListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created")
+    public String created;
+    public IpamAggregatesListRequest withCreated(String created) {
+        this.created = created;
+        return this;
+    }
     
-    public IpamAggregatesListQueryParams queryParams;
-    public IpamAggregatesListRequest withQueryParams(IpamAggregatesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created__gte")
+    public String createdGte;
+    public IpamAggregatesListRequest withCreatedGte(String createdGte) {
+        this.createdGte = createdGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created__lte")
+    public String createdLte;
+    public IpamAggregatesListRequest withCreatedLte(String createdLte) {
+        this.createdLte = createdLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_added")
+    public String dateAdded;
+    public IpamAggregatesListRequest withDateAdded(String dateAdded) {
+        this.dateAdded = dateAdded;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_added__gt")
+    public String dateAddedGt;
+    public IpamAggregatesListRequest withDateAddedGt(String dateAddedGt) {
+        this.dateAddedGt = dateAddedGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_added__gte")
+    public String dateAddedGte;
+    public IpamAggregatesListRequest withDateAddedGte(String dateAddedGte) {
+        this.dateAddedGte = dateAddedGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_added__lt")
+    public String dateAddedLt;
+    public IpamAggregatesListRequest withDateAddedLt(String dateAddedLt) {
+        this.dateAddedLt = dateAddedLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_added__lte")
+    public String dateAddedLte;
+    public IpamAggregatesListRequest withDateAddedLte(String dateAddedLte) {
+        this.dateAddedLte = dateAddedLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_added__n")
+    public String dateAddedN;
+    public IpamAggregatesListRequest withDateAddedN(String dateAddedN) {
+        this.dateAddedN = dateAddedN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=family")
+    public Double family;
+    public IpamAggregatesListRequest withFamily(Double family) {
+        this.family = family;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public IpamAggregatesListRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gt")
+    public String idGt;
+    public IpamAggregatesListRequest withIdGt(String idGt) {
+        this.idGt = idGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gte")
+    public String idGte;
+    public IpamAggregatesListRequest withIdGte(String idGte) {
+        this.idGte = idGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lt")
+    public String idLt;
+    public IpamAggregatesListRequest withIdLt(String idLt) {
+        this.idLt = idLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lte")
+    public String idLte;
+    public IpamAggregatesListRequest withIdLte(String idLte) {
+        this.idLte = idLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__n")
+    public String idN;
+    public IpamAggregatesListRequest withIdN(String idN) {
+        this.idN = idN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_updated")
+    public String lastUpdated;
+    public IpamAggregatesListRequest withLastUpdated(String lastUpdated) {
+        this.lastUpdated = lastUpdated;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_updated__gte")
+    public String lastUpdatedGte;
+    public IpamAggregatesListRequest withLastUpdatedGte(String lastUpdatedGte) {
+        this.lastUpdatedGte = lastUpdatedGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_updated__lte")
+    public String lastUpdatedLte;
+    public IpamAggregatesListRequest withLastUpdatedLte(String lastUpdatedLte) {
+        this.lastUpdatedLte = lastUpdatedLte;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public IpamAggregatesListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public IpamAggregatesListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prefix")
+    public String prefix;
+    public IpamAggregatesListRequest withPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public IpamAggregatesListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rir")
+    public String rir;
+    public IpamAggregatesListRequest withRir(String rir) {
+        this.rir = rir;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rir__n")
+    public String rirN;
+    public IpamAggregatesListRequest withRirN(String rirN) {
+        this.rirN = rirN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rir_id")
+    public String rirId;
+    public IpamAggregatesListRequest withRirId(String rirId) {
+        this.rirId = rirId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rir_id__n")
+    public String rirIdN;
+    public IpamAggregatesListRequest withRirIdN(String rirIdN) {
+        this.rirIdN = rirIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public IpamAggregatesListRequest withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag__n")
+    public String tagN;
+    public IpamAggregatesListRequest withTagN(String tagN) {
+        this.tagN = tagN;
         return this;
     }
     

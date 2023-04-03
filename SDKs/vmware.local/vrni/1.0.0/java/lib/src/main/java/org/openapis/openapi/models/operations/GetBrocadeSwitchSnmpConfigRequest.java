@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBrocadeSwitchSnmpConfigRequest {
-    
-    public GetBrocadeSwitchSnmpConfigPathParams pathParams;
-    public GetBrocadeSwitchSnmpConfigRequest withPathParams(GetBrocadeSwitchSnmpConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetBrocadeSwitchSnmpConfigSecurity security;
-    public GetBrocadeSwitchSnmpConfigRequest withSecurity(GetBrocadeSwitchSnmpConfigSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetBrocadeSwitchSnmpConfigRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

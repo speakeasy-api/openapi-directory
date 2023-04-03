@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAddonLinkersLinkerKeyValuesValueIdRequest {
-    
-    public GetAddonLinkersLinkerKeyValuesValueIdPathParams pathParams;
-    public GetAddonLinkersLinkerKeyValuesValueIdRequest withPathParams(GetAddonLinkersLinkerKeyValuesValueIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique key of a [linker module](/cloud/bitbucket/modules/linker/)
+     * as defined in an application descriptor.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=linker_key")
+    public String linkerKey;
+    public GetAddonLinkersLinkerKeyValuesValueIdRequest withLinkerKey(String linkerKey) {
+        this.linkerKey = linkerKey;
         return this;
     }
     
-    
-    public GetAddonLinkersLinkerKeyValuesValueIdSecurity security;
-    public GetAddonLinkersLinkerKeyValuesValueIdRequest withSecurity(GetAddonLinkersLinkerKeyValuesValueIdSecurity security) {
-        this.security = security;
+    /**
+     * The numeric ID of the linker value.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=value_id")
+    public Long valueId;
+    public GetAddonLinkersLinkerKeyValuesValueIdRequest withValueId(Long valueId) {
+        this.valueId = valueId;
         return this;
     }
     

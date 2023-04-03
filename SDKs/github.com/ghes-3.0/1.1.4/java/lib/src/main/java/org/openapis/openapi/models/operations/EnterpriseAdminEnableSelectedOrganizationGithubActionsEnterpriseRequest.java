@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseRequest {
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
+        return this;
+    }
     
-    public EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterprisePathParams pathParams;
-    public EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseRequest withPathParams(EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of an organization.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_id")
+    public Long orgId;
+    public EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterpriseRequest withOrgId(Long orgId) {
+        this.orgId = orgId;
         return this;
     }
     

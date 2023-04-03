@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Adds a new Feature.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesCreateResponse gkehubProjectsLocationsFeaturesCreate(org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesCreateResponse gkehubProjectsLocationsFeaturesCreate(org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesCreateRequest request, org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesCreatePathParams.class, baseUrl, "/v1/{parent}/features", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesCreateRequest.class, baseUrl, "/v1/{parent}/features", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "featureInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Lists Features in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesListResponse gkehubProjectsLocationsFeaturesList(org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesListResponse gkehubProjectsLocationsFeaturesList(org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesListRequest request, org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesListPathParams.class, baseUrl, "/v1/{parent}/features", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesListRequest.class, baseUrl, "/v1/{parent}/features", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsFeaturesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Projects {
     /**
      * Lists information about the supported locations for this service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GkehubProjectsLocationsListResponse gkehubProjectsLocationsList(org.openapis.openapi.models.operations.GkehubProjectsLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GkehubProjectsLocationsListResponse gkehubProjectsLocationsList(org.openapis.openapi.models.operations.GkehubProjectsLocationsListRequest request, org.openapis.openapi.models.operations.GkehubProjectsLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsListPathParams.class, baseUrl, "/v1/{name}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsListRequest.class, baseUrl, "/v1/{name}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,27 +175,28 @@ public class Projects {
     /**
      * Creates a MembershipBinding.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsCreateResponse gkehubProjectsLocationsMembershipsBindingsCreate(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsCreateResponse gkehubProjectsLocationsMembershipsBindingsCreate(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsCreateRequest request, org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsCreatePathParams.class, baseUrl, "/v1/{parent}/bindings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsCreateRequest.class, baseUrl, "/v1/{parent}/bindings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "membershipBindingInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,25 +223,26 @@ public class Projects {
     /**
      * Lists MembershipBindings.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsListResponse gkehubProjectsLocationsMembershipsBindingsList(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsListResponse gkehubProjectsLocationsMembershipsBindingsList(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsListRequest request, org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsListPathParams.class, baseUrl, "/v1/{parent}/bindings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsListRequest.class, baseUrl, "/v1/{parent}/bindings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,27 +269,28 @@ public class Projects {
     /**
      * Updates a MembershipBinding.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsPatchResponse gkehubProjectsLocationsMembershipsBindingsPatch(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsPatchResponse gkehubProjectsLocationsMembershipsBindingsPatch(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsPatchRequest request, org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "membershipBindingInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsBindingsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,27 +317,28 @@ public class Projects {
     /**
      * Creates a new Membership. **This is currently only supported for GKE clusters on Google Cloud**. To register other clusters, follow the instructions at https://cloud.google.com/anthos/multicluster-management/connect/registering-a-cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsCreateResponse gkehubProjectsLocationsMembershipsCreate(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsCreateResponse gkehubProjectsLocationsMembershipsCreate(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsCreateRequest request, org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsCreatePathParams.class, baseUrl, "/v1/{parent}/memberships", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsCreateRequest.class, baseUrl, "/v1/{parent}/memberships", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "membershipInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,25 +365,26 @@ public class Projects {
     /**
      * Generates the manifest for deployment of the GKE connect agent. **This method is used internally by Google-provided libraries.** Most clients should not need to call this method directly.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGenerateConnectManifestResponse gkehubProjectsLocationsMembershipsGenerateConnectManifest(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGenerateConnectManifestResponse gkehubProjectsLocationsMembershipsGenerateConnectManifest(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest request, org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGenerateConnectManifestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGenerateConnectManifestPathParams.class, baseUrl, "/v1/{name}:generateConnectManifest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest.class, baseUrl, "/v1/{name}:generateConnectManifest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGenerateConnectManifestQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -403,25 +411,26 @@ public class Projects {
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGetIamPolicyResponse gkehubProjectsLocationsMembershipsGetIamPolicy(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGetIamPolicyResponse gkehubProjectsLocationsMembershipsGetIamPolicy(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGetIamPolicyRequest request, org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGetIamPolicyPathParams.class, baseUrl, "/v1/{resource}:getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGetIamPolicyRequest.class, baseUrl, "/v1/{resource}:getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -448,25 +457,26 @@ public class Projects {
     /**
      * Lists Memberships in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsListResponse gkehubProjectsLocationsMembershipsList(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsListResponse gkehubProjectsLocationsMembershipsList(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsListRequest request, org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsListPathParams.class, baseUrl, "/v1/{parent}/memberships", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsListRequest.class, baseUrl, "/v1/{parent}/memberships", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -493,27 +503,28 @@ public class Projects {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsSetIamPolicyResponse gkehubProjectsLocationsMembershipsSetIamPolicy(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsSetIamPolicyResponse gkehubProjectsLocationsMembershipsSetIamPolicy(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsSetIamPolicyRequest request, org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsSetIamPolicyPathParams.class, baseUrl, "/v1/{resource}:setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsSetIamPolicyRequest.class, baseUrl, "/v1/{resource}:setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -540,27 +551,28 @@ public class Projects {
     /**
      * Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsTestIamPermissionsResponse gkehubProjectsLocationsMembershipsTestIamPermissions(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsTestIamPermissionsResponse gkehubProjectsLocationsMembershipsTestIamPermissions(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsTestIamPermissionsRequest request, org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsTestIamPermissionsPathParams.class, baseUrl, "/v1/{resource}:testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsTestIamPermissionsRequest.class, baseUrl, "/v1/{resource}:testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testIamPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsMembershipsTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -587,27 +599,28 @@ public class Projects {
     /**
      * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsCancelResponse gkehubProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsCancelResponse gkehubProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsCancelRequest request, org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsCancelPathParams.class, baseUrl, "/v1/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsCancelRequest.class, baseUrl, "/v1/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -634,25 +647,26 @@ public class Projects {
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsListResponse gkehubProjectsLocationsOperationsList(org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsListResponse gkehubProjectsLocationsOperationsList(org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsListRequest request, org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsListPathParams.class, baseUrl, "/v1/{name}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsListRequest.class, baseUrl, "/v1/{name}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -679,27 +693,28 @@ public class Projects {
     /**
      * Creates a Scope.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesCreateResponse gkehubProjectsLocationsScopesCreate(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesCreateResponse gkehubProjectsLocationsScopesCreate(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesCreateRequest request, org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesCreatePathParams.class, baseUrl, "/v1/{parent}/scopes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesCreateRequest.class, baseUrl, "/v1/{parent}/scopes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "scopeInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -726,25 +741,26 @@ public class Projects {
     /**
      * Deletes a Scope.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesDeleteResponse gkehubProjectsLocationsScopesDelete(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesDeleteResponse gkehubProjectsLocationsScopesDelete(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesDeleteRequest request, org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -771,25 +787,26 @@ public class Projects {
     /**
      * Returns the details of a Scope.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesGetResponse gkehubProjectsLocationsScopesGet(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesGetResponse gkehubProjectsLocationsScopesGet(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesGetRequest request, org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -816,25 +833,26 @@ public class Projects {
     /**
      * Lists Scopes.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesListResponse gkehubProjectsLocationsScopesList(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesListResponse gkehubProjectsLocationsScopesList(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesListRequest request, org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesListPathParams.class, baseUrl, "/v1/{parent}/scopes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesListRequest.class, baseUrl, "/v1/{parent}/scopes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GkehubProjectsLocationsScopesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetApplicationsStatusQueryParams;
 import org.openapis.openapi.models.operations.GetApplicationsStatusRequest;
 import org.openapis.openapi.models.operations.GetApplicationsStatusResponse;
 
@@ -13,17 +12,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetApplicationsStatusRequest req = new GetApplicationsStatusRequest() {{
-                queryParams = new GetApplicationsStatusQueryParams() {{
-                    key = "corrupti";
-                }};
-            }};            
+                key = "corrupti";
+            }}            
 
             GetApplicationsStatusResponse res = sdk.application.getApplicationsStatus(req);
 

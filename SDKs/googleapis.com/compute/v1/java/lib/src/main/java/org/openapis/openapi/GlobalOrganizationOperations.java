@@ -33,25 +33,26 @@ public class GlobalOrganizationOperations {
     /**
      * Deletes the specified Operations resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsDeleteResponse computeGlobalOrganizationOperationsDelete(org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsDeleteResponse computeGlobalOrganizationOperationsDelete(org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsDeleteRequest request, org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsDeletePathParams.class, baseUrl, "/locations/global/operations/{operation}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsDeleteRequest.class, baseUrl, "/locations/global/operations/{operation}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -72,25 +73,26 @@ public class GlobalOrganizationOperations {
     /**
      * Retrieves the specified Operations resource. Gets a list of operations by making a `list()` request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsGetResponse computeGlobalOrganizationOperationsGet(org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsGetResponse computeGlobalOrganizationOperationsGet(org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsGetRequest request, org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsGetPathParams.class, baseUrl, "/locations/global/operations/{operation}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsGetRequest.class, baseUrl, "/locations/global/operations/{operation}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -117,10 +119,11 @@ public class GlobalOrganizationOperations {
     /**
      * Retrieves a list of Operation resources contained within the specified organization.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsListResponse computeGlobalOrganizationOperationsList(org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsListResponse computeGlobalOrganizationOperationsList(org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsListRequest request, org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/locations/global/operations");
         
@@ -128,14 +131,14 @@ public class GlobalOrganizationOperations {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalOrganizationOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

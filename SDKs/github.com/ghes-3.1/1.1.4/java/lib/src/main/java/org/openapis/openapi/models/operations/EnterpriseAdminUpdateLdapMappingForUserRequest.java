@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminUpdateLdapMappingForUserRequest {
-    
-    public EnterpriseAdminUpdateLdapMappingForUserPathParams pathParams;
-    public EnterpriseAdminUpdateLdapMappingForUserRequest withPathParams(EnterpriseAdminUpdateLdapMappingForUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public EnterpriseAdminUpdateLdapMappingForUserRequestBody requestBody;
+    public EnterpriseAdminUpdateLdapMappingForUserRequest withRequestBody(EnterpriseAdminUpdateLdapMappingForUserRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public EnterpriseAdminUpdateLdapMappingForUserRequestBody request;
-    public EnterpriseAdminUpdateLdapMappingForUserRequest withRequest(EnterpriseAdminUpdateLdapMappingForUserRequestBody request) {
-        this.request = request;
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public EnterpriseAdminUpdateLdapMappingForUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

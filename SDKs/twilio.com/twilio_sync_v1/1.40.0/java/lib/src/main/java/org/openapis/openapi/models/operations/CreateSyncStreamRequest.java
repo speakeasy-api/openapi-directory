@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSyncStreamRequest {
-    
-    public CreateSyncStreamPathParams pathParams;
-    public CreateSyncStreamRequest withPathParams(CreateSyncStreamPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateSyncStreamCreateSyncStreamRequest request;
-    public CreateSyncStreamRequest withRequest(CreateSyncStreamCreateSyncStreamRequest request) {
-        this.request = request;
+    public CreateSyncStreamCreateSyncStreamRequest requestBody;
+    public CreateSyncStreamRequest withRequestBody(CreateSyncStreamCreateSyncStreamRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateSyncStreamSecurity security;
-    public CreateSyncStreamRequest withSecurity(CreateSyncStreamSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateSyncStreamRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the new Stream in.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateSyncStreamRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

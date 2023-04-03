@@ -7,24 +7,38 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCollectionFromSchemaRequest {
-    
-    public CreateCollectionFromSchemaPathParams pathParams;
-    public CreateCollectionFromSchemaRequest withPathParams(CreateCollectionFromSchemaPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateCollectionFromSchemaQueryParams queryParams;
-    public CreateCollectionFromSchemaRequest withQueryParams(CreateCollectionFromSchemaQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateCollectionFromSchemaRequestBody request;
-    public CreateCollectionFromSchemaRequest withRequest(CreateCollectionFromSchemaRequestBody request) {
-        this.request = request;
+    public CreateCollectionFromSchemaRequestBody requestBody;
+    public CreateCollectionFromSchemaRequest withRequestBody(CreateCollectionFromSchemaRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
+    public String apiId;
+    public CreateCollectionFromSchemaRequest withApiId(String apiId) {
+        this.apiId = apiId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiVersionId")
+    public String apiVersionId;
+    public CreateCollectionFromSchemaRequest withApiVersionId(String apiVersionId) {
+        this.apiVersionId = apiVersionId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schemaId")
+    public String schemaId;
+    public CreateCollectionFromSchemaRequest withSchemaId(String schemaId) {
+        this.schemaId = schemaId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workspace")
+    public String workspace;
+    public CreateCollectionFromSchemaRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

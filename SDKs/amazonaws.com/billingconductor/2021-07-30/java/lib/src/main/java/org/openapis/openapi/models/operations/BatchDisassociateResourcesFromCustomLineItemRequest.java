@@ -7,17 +7,59 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BatchDisassociateResourcesFromCustomLineItemRequest {
-    
-    public BatchDisassociateResourcesFromCustomLineItemHeaders headers;
-    public BatchDisassociateResourcesFromCustomLineItemRequest withHeaders(BatchDisassociateResourcesFromCustomLineItemHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public BatchDisassociateResourcesFromCustomLineItemRequestBody requestBody;
+    public BatchDisassociateResourcesFromCustomLineItemRequest withRequestBody(BatchDisassociateResourcesFromCustomLineItemRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public BatchDisassociateResourcesFromCustomLineItemRequestBody request;
-    public BatchDisassociateResourcesFromCustomLineItemRequest withRequest(BatchDisassociateResourcesFromCustomLineItemRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public BatchDisassociateResourcesFromCustomLineItemRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public BatchDisassociateResourcesFromCustomLineItemRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public BatchDisassociateResourcesFromCustomLineItemRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public BatchDisassociateResourcesFromCustomLineItemRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public BatchDisassociateResourcesFromCustomLineItemRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public BatchDisassociateResourcesFromCustomLineItemRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public BatchDisassociateResourcesFromCustomLineItemRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

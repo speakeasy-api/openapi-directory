@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoDeletePushMirrorRequest {
+    /**
+     * remote name of the pushMirror
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public RepoDeletePushMirrorRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public RepoDeletePushMirrorPathParams pathParams;
-    public RepoDeletePushMirrorRequest withPathParams(RepoDeletePushMirrorPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoDeletePushMirrorRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoDeletePushMirrorRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

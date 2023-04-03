@@ -4,27 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClinicalNoteFieldValuesPartialUpdateRequest {
-    
-    public ClinicalNoteFieldValuesPartialUpdatePathParams pathParams;
-    public ClinicalNoteFieldValuesPartialUpdateRequest withPathParams(ClinicalNoteFieldValuesPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
+    public Long appointment;
+    public ClinicalNoteFieldValuesPartialUpdateRequest withAppointment(Long appointment) {
+        this.appointment = appointment;
         return this;
     }
     
-    
-    public ClinicalNoteFieldValuesPartialUpdateQueryParams queryParams;
-    public ClinicalNoteFieldValuesPartialUpdateRequest withQueryParams(ClinicalNoteFieldValuesPartialUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clinical_note_field")
+    public Long clinicalNoteField;
+    public ClinicalNoteFieldValuesPartialUpdateRequest withClinicalNoteField(Long clinicalNoteField) {
+        this.clinicalNoteField = clinicalNoteField;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clinical_note_template")
+    public Long clinicalNoteTemplate;
+    public ClinicalNoteFieldValuesPartialUpdateRequest withClinicalNoteTemplate(Long clinicalNoteTemplate) {
+        this.clinicalNoteTemplate = clinicalNoteTemplate;
+        return this;
+    }
     
-    public ClinicalNoteFieldValuesPartialUpdateSecurity security;
-    public ClinicalNoteFieldValuesPartialUpdateRequest withSecurity(ClinicalNoteFieldValuesPartialUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public ClinicalNoteFieldValuesPartialUpdateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ClinicalNoteFieldValuesPartialUpdateRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public ClinicalNoteFieldValuesPartialUpdateRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

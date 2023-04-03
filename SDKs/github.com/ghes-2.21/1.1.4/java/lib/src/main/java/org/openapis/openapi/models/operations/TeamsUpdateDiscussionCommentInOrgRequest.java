@@ -7,17 +7,41 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsUpdateDiscussionCommentInOrgRequest {
-    
-    public TeamsUpdateDiscussionCommentInOrgPathParams pathParams;
-    public TeamsUpdateDiscussionCommentInOrgRequest withPathParams(TeamsUpdateDiscussionCommentInOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public TeamsUpdateDiscussionCommentInOrgRequestBody requestBody;
+    public TeamsUpdateDiscussionCommentInOrgRequest withRequestBody(TeamsUpdateDiscussionCommentInOrgRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsUpdateDiscussionCommentInOrgRequestBody request;
-    public TeamsUpdateDiscussionCommentInOrgRequest withRequest(TeamsUpdateDiscussionCommentInOrgRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_number")
+    public Long commentNumber;
+    public TeamsUpdateDiscussionCommentInOrgRequest withCommentNumber(Long commentNumber) {
+        this.commentNumber = commentNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
+    public Long discussionNumber;
+    public TeamsUpdateDiscussionCommentInOrgRequest withDiscussionNumber(Long discussionNumber) {
+        this.discussionNumber = discussionNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public TeamsUpdateDiscussionCommentInOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * team_slug parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
+    public String teamSlug;
+    public TeamsUpdateDiscussionCommentInOrgRequest withTeamSlug(String teamSlug) {
+        this.teamSlug = teamSlug;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubmitUserFeedbackRequest {
-    
-    public SubmitUserFeedbackPathParams pathParams;
-    public SubmitUserFeedbackRequest withPathParams(SubmitUserFeedbackPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public SubmitUserFeedbackRequestBody requestBody;
+    public SubmitUserFeedbackRequest withRequestBody(SubmitUserFeedbackRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public SubmitUserFeedbackRequestBody request;
-    public SubmitUserFeedbackRequest withRequest(SubmitUserFeedbackRequestBody request) {
-        this.request = request;
+    /**
+     * A user ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public String userId;
+    public SubmitUserFeedbackRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInventoryRequest {
-    
-    public GetInventoryQueryParams queryParams;
-    public GetInventoryRequest withQueryParams(GetInventoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A CSV of sku reference names, 'skuName1' or 'skuName1,skuName2,skuName3'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=externalSkuNames")
+    public String[] externalSkuNames;
+    public GetInventoryRequest withExternalSkuNames(String[] externalSkuNames) {
+        this.externalSkuNames = externalSkuNames;
         return this;
     }
     
+    /**
+     * The numbers of items to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetInventoryRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetInventorySecurity security;
-    public GetInventoryRequest withSecurity(GetInventorySecurity security) {
-        this.security = security;
+    /**
+     * A CSV of merchant id, '123' or '1,2,3'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=merchantIds")
+    public Long[] merchantIds;
+    public GetInventoryRequest withMerchantIds(Long[] merchantIds) {
+        this.merchantIds = merchantIds;
+        return this;
+    }
+    
+    /**
+     * A multiplier of the number of items (limit parameter) to skip before returning results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetInventoryRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * A CSV of warehouse id, '123' or '1,2,3'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=warehouseIds")
+    public Long[] warehouseIds;
+    public GetInventoryRequest withWarehouseIds(Long[] warehouseIds) {
+        this.warehouseIds = warehouseIds;
         return this;
     }
     

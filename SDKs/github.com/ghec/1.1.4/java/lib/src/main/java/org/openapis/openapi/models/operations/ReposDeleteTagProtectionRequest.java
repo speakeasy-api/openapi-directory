@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposDeleteTagProtectionRequest {
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposDeleteTagProtectionRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ReposDeleteTagProtectionPathParams pathParams;
-    public ReposDeleteTagProtectionRequest withPathParams(ReposDeleteTagProtectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposDeleteTagProtectionRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the tag protection.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag_protection_id")
+    public Long tagProtectionId;
+    public ReposDeleteTagProtectionRequest withTagProtectionId(Long tagProtectionId) {
+        this.tagProtectionId = tagProtectionId;
         return this;
     }
     

@@ -4,13 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMonthCategoryByIdRequest {
+    /**
+     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=budget_id")
+    public String budgetId;
+    public GetMonthCategoryByIdRequest withBudgetId(String budgetId) {
+        this.budgetId = budgetId;
+        return this;
+    }
     
-    public GetMonthCategoryByIdPathParams pathParams;
-    public GetMonthCategoryByIdRequest withPathParams(GetMonthCategoryByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the category
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category_id")
+    public String categoryId;
+    public GetMonthCategoryByIdRequest withCategoryId(String categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    
+    /**
+     * The budget month in ISO format (e.g. 2016-12-01) ("current" can also be used to specify the current calendar month (UTC))
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=month")
+    public LocalDate month;
+    public GetMonthCategoryByIdRequest withMonth(LocalDate month) {
+        this.month = month;
         return this;
     }
     

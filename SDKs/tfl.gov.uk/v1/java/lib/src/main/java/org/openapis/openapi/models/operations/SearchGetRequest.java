@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchGetRequest {
-    
-    public SearchGetQueryParams queryParams;
-    public SearchGetRequest withQueryParams(SearchGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The search query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public SearchGetRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

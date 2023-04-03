@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVaultItemsRequest {
-    
-    public GetVaultItemsPathParams pathParams;
-    public GetVaultItemsRequest withPathParams(GetVaultItemsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter the Item collection based on Item name using SCIM eq filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public GetVaultItemsRequest withFilter(String filter) {
+        this.filter = filter;
         return this;
     }
     
-    
-    public GetVaultItemsQueryParams queryParams;
-    public GetVaultItemsRequest withQueryParams(GetVaultItemsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetVaultItemsSecurity security;
-    public GetVaultItemsRequest withSecurity(GetVaultItemsSecurity security) {
-        this.security = security;
+    /**
+     * The UUID of the Vault to fetch Items from
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vaultUuid")
+    public String vaultUuid;
+    public GetVaultItemsRequest withVaultUuid(String vaultUuid) {
+        this.vaultUuid = vaultUuid;
         return this;
     }
     

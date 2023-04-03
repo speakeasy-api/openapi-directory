@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetExamplesSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer")
-    public org.openapis.openapi.models.shared.SchemeBearerToken bearerToken;
-    public GetExamplesSecurity withBearerToken(org.openapis.openapi.models.shared.SchemeBearerToken bearerToken) {
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
+    public String bearerToken;
+    public GetExamplesSecurity withBearerToken(String bearerToken) {
         this.bearerToken = bearerToken;
         return this;
     }

@@ -41,13 +41,13 @@ public class DeviceCommandLogs {
      */
     public org.openapis.openapi.models.operations.GetNetworkSmDeviceDeviceCommandLogsResponse getNetworkSmDeviceDeviceCommandLogs(org.openapis.openapi.models.operations.GetNetworkSmDeviceDeviceCommandLogsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmDeviceDeviceCommandLogsPathParams.class, baseUrl, "/networks/{networkId}/sm/devices/{deviceId}/deviceCommandLogs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmDeviceDeviceCommandLogsRequest.class, baseUrl, "/networks/{networkId}/sm/devices/{deviceId}/deviceCommandLogs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSmDeviceDeviceCommandLogsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSmDeviceDeviceCommandLogsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -4,27 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListJobRunsRequest {
-    
-    public ListJobRunsPathParams pathParams;
-    public ListJobRunsRequest withPathParams(ListJobRunsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListJobRunsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public ListJobRunsQueryParams queryParams;
-    public ListJobRunsRequest withQueryParams(ListJobRunsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListJobRunsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListJobRunsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public ListJobRunsHeaders headers;
-    public ListJobRunsRequest withHeaders(ListJobRunsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListJobRunsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListJobRunsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListJobRunsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListJobRunsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The ID of the application for which to list the job run.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=applicationId")
+    public String applicationId;
+    public ListJobRunsRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
+    
+    /**
+     * The lower bound of the option to filter by creation date and time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAtAfter")
+    public OffsetDateTime createdAtAfter;
+    public ListJobRunsRequest withCreatedAtAfter(OffsetDateTime createdAtAfter) {
+        this.createdAtAfter = createdAtAfter;
+        return this;
+    }
+    
+    /**
+     * The upper bound of the option to filter by creation date and time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAtBefore")
+    public OffsetDateTime createdAtBefore;
+    public ListJobRunsRequest withCreatedAtBefore(OffsetDateTime createdAtBefore) {
+        this.createdAtBefore = createdAtBefore;
+        return this;
+    }
+    
+    /**
+     * The maximum number of job runs that can be listed.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListJobRunsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The token for the next set of job run results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListJobRunsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * An optional filter for job run states. Note that if this filter contains multiple states, the resulting list will be grouped by the state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=states")
+    public org.openapis.openapi.models.shared.JobRunStateEnum[] states;
+    public ListJobRunsRequest withStates(org.openapis.openapi.models.shared.JobRunStateEnum[] states) {
+        this.states = states;
         return this;
     }
     

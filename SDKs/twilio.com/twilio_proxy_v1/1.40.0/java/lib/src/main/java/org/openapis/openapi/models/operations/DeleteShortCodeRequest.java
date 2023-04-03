@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteShortCodeRequest {
-    
-    public DeleteShortCodePathParams pathParams;
-    public DeleteShortCodeRequest withPathParams(DeleteShortCodePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource to delete the ShortCode resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteShortCodeRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public DeleteShortCodeSecurity security;
-    public DeleteShortCodeRequest withSecurity(DeleteShortCodeSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteShortCodeRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the ShortCode resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteShortCodeRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

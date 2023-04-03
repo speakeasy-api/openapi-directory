@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListServiceSpecificCredentialsRequest {
-    
-    public GETListServiceSpecificCredentialsQueryParams queryParams;
-    public GETListServiceSpecificCredentialsRequest withQueryParams(GETListServiceSpecificCredentialsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETListServiceSpecificCredentialsActionEnum action;
+    public GETListServiceSpecificCredentialsRequest withAction(GETListServiceSpecificCredentialsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Filters the returned results to only those for the specified Amazon Web Services service. If not specified, then Amazon Web Services returns service-specific credentials for all services.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServiceName")
+    public String serviceName;
+    public GETListServiceSpecificCredentialsRequest withServiceName(String serviceName) {
+        this.serviceName = serviceName;
+        return this;
+    }
     
-    public GETListServiceSpecificCredentialsHeaders headers;
-    public GETListServiceSpecificCredentialsRequest withHeaders(GETListServiceSpecificCredentialsHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The name of the user whose service-specific credentials you want information about. If this value is not specified, then the operation assumes the user whose credentials are used to call the operation.&lt;/p&gt; &lt;p&gt;This parameter allows (through its &lt;a href="http://wikipedia.org/wiki/regex"&gt;regex pattern&lt;/a&gt;) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserName")
+    public String userName;
+    public GETListServiceSpecificCredentialsRequest withUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETListServiceSpecificCredentialsVersionEnum version;
+    public GETListServiceSpecificCredentialsRequest withVersion(GETListServiceSpecificCredentialsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETListServiceSpecificCredentialsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETListServiceSpecificCredentialsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETListServiceSpecificCredentialsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETListServiceSpecificCredentialsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETListServiceSpecificCredentialsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETListServiceSpecificCredentialsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETListServiceSpecificCredentialsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

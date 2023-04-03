@@ -4,13 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchPatientHealthMetricsRequest {
+    /**
+     * Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[groups]")
+    public String filterGroups;
+    public FetchPatientHealthMetricsRequest withFilterGroups(String filterGroups) {
+        this.filterGroups = filterGroups;
+        return this;
+    }
     
-    public FetchPatientHealthMetricsQueryParams queryParams;
-    public FetchPatientHealthMetricsRequest withQueryParams(FetchPatientHealthMetricsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[organization]")
+    public String filterOrganization;
+    public FetchPatientHealthMetricsRequest withFilterOrganization(String filterOrganization) {
+        this.filterOrganization = filterOrganization;
+        return this;
+    }
+    
+    /**
+     * Filter the patient health metrics for a specified patient. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[patient]")
+    public String filterPatient;
+    public FetchPatientHealthMetricsRequest withFilterPatient(String filterPatient) {
+        this.filterPatient = filterPatient;
+        return this;
+    }
+    
+    /**
+     * Page cursor
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[cursor]")
+    public String pageCursor;
+    public FetchPatientHealthMetricsRequest withPageCursor(String pageCursor) {
+        this.pageCursor = pageCursor;
+        return this;
+    }
+    
+    /**
+     * Page limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[limit]")
+    public Long pageLimit;
+    public FetchPatientHealthMetricsRequest withPageLimit(Long pageLimit) {
+        this.pageLimit = pageLimit;
+        return this;
+    }
+    
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
+    public Long pageNumber;
+    public FetchPatientHealthMetricsRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    
+    /**
+     * Page size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
+    public Long pageSize;
+    public FetchPatientHealthMetricsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

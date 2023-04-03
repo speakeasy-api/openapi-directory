@@ -36,23 +36,24 @@ public class FilePayments {
     /**
      * Create File Payment Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileJsonResponse createFilePaymentConsentsConsentIdFileJson(org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileJsonResponse createFilePaymentConsentsConsentIdFileJson(org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileJsonRequest request, org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileJsonPathParams.class, baseUrl, "/file-payment-consents/{ConsentId}/file", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileJsonRequest.class, baseUrl, "/file-payment-consents/{ConsentId}/file", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -61,7 +62,7 @@ public class FilePayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -105,23 +106,24 @@ public class FilePayments {
     /**
      * Create File Payment Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileRawResponse createFilePaymentConsentsConsentIdFileRaw(org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileRawResponse createFilePaymentConsentsConsentIdFileRaw(org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileRawRequest request, org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileRawSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileRawPathParams.class, baseUrl, "/file-payment-consents/{ConsentId}/file", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateFilePaymentConsentsConsentIdFileRawRequest.class, baseUrl, "/file-payment-consents/{ConsentId}/file", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -130,7 +132,7 @@ public class FilePayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,23 +176,24 @@ public class FilePayments {
     /**
      * Create File Payment Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateFilePaymentConsentsJsonResponse createFilePaymentConsentsJson(org.openapis.openapi.models.operations.CreateFilePaymentConsentsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateFilePaymentConsentsJsonResponse createFilePaymentConsentsJson(org.openapis.openapi.models.operations.CreateFilePaymentConsentsJsonRequest request, org.openapis.openapi.models.operations.CreateFilePaymentConsentsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/file-payment-consents");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "obWriteFileConsent3", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -199,7 +202,7 @@ public class FilePayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -262,23 +265,24 @@ public class FilePayments {
     /**
      * Create File Payment Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateFilePaymentConsentsRawResponse createFilePaymentConsentsRaw(org.openapis.openapi.models.operations.CreateFilePaymentConsentsRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateFilePaymentConsentsRawResponse createFilePaymentConsentsRaw(org.openapis.openapi.models.operations.CreateFilePaymentConsentsRawRequest request, org.openapis.openapi.models.operations.CreateFilePaymentConsentsRawSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/file-payment-consents");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -287,7 +291,7 @@ public class FilePayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -350,23 +354,24 @@ public class FilePayments {
     /**
      * Create File Payments
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateFilePaymentsJsonResponse createFilePaymentsJson(org.openapis.openapi.models.operations.CreateFilePaymentsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateFilePaymentsJsonResponse createFilePaymentsJson(org.openapis.openapi.models.operations.CreateFilePaymentsJsonRequest request, org.openapis.openapi.models.operations.CreateFilePaymentsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/file-payments");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "obWriteFile2", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -375,7 +380,7 @@ public class FilePayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -438,23 +443,24 @@ public class FilePayments {
     /**
      * Create File Payments
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateFilePaymentsRawResponse createFilePaymentsRaw(org.openapis.openapi.models.operations.CreateFilePaymentsRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateFilePaymentsRawResponse createFilePaymentsRaw(org.openapis.openapi.models.operations.CreateFilePaymentsRawRequest request, org.openapis.openapi.models.operations.CreateFilePaymentsRawSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/file-payments");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -463,7 +469,7 @@ public class FilePayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -526,18 +532,19 @@ public class FilePayments {
     /**
      * Get File Payment Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdResponse getFilePaymentConsentsConsentId(org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdResponse getFilePaymentConsentsConsentId(org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdRequest request, org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdPathParams.class, baseUrl, "/file-payment-consents/{ConsentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdRequest.class, baseUrl, "/file-payment-consents/{ConsentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -546,7 +553,7 @@ public class FilePayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -609,18 +616,19 @@ public class FilePayments {
     /**
      * Get File Payment Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdFileResponse getFilePaymentConsentsConsentIdFile(org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdFileResponse getFilePaymentConsentsConsentIdFile(org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdFileRequest request, org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdFileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdFilePathParams.class, baseUrl, "/file-payment-consents/{ConsentId}/file", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFilePaymentConsentsConsentIdFileRequest.class, baseUrl, "/file-payment-consents/{ConsentId}/file", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -629,7 +637,7 @@ public class FilePayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -692,18 +700,19 @@ public class FilePayments {
     /**
      * Get File Payments
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdResponse getFilePaymentsFilePaymentId(org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdResponse getFilePaymentsFilePaymentId(org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdRequest request, org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdPathParams.class, baseUrl, "/file-payments/{FilePaymentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdRequest.class, baseUrl, "/file-payments/{FilePaymentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -712,7 +721,7 @@ public class FilePayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -775,18 +784,19 @@ public class FilePayments {
     /**
      * Get File Payments
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdReportFileResponse getFilePaymentsFilePaymentIdReportFile(org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdReportFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdReportFileResponse getFilePaymentsFilePaymentIdReportFile(org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdReportFileRequest request, org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdReportFileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdReportFilePathParams.class, baseUrl, "/file-payments/{FilePaymentId}/report-file", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdReportFileRequest.class, baseUrl, "/file-payments/{FilePaymentId}/report-file", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -795,7 +805,7 @@ public class FilePayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

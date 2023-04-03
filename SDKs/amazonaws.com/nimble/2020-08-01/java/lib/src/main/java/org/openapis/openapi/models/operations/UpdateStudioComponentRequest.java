@@ -7,24 +7,89 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateStudioComponentRequest {
-    
-    public UpdateStudioComponentPathParams pathParams;
-    public UpdateStudioComponentRequest withPathParams(UpdateStudioComponentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateStudioComponentHeaders headers;
-    public UpdateStudioComponentRequest withHeaders(UpdateStudioComponentHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateStudioComponentRequestBody request;
-    public UpdateStudioComponentRequest withRequest(UpdateStudioComponentRequestBody request) {
-        this.request = request;
+    public UpdateStudioComponentRequestBody requestBody;
+    public UpdateStudioComponentRequest withRequestBody(UpdateStudioComponentRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateStudioComponentRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    /**
+     * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If you don\u2019t specify a client token, the Amazon Web Services SDK automatically generates a client token and uses it for the request to ensure idempotency.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Client-Token")
+    public String xAmzClientToken;
+    public UpdateStudioComponentRequest withXAmzClientToken(String xAmzClientToken) {
+        this.xAmzClientToken = xAmzClientToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateStudioComponentRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateStudioComponentRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateStudioComponentRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateStudioComponentRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateStudioComponentRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateStudioComponentRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The studio component ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=studioComponentId")
+    public String studioComponentId;
+    public UpdateStudioComponentRequest withStudioComponentId(String studioComponentId) {
+        this.studioComponentId = studioComponentId;
+        return this;
+    }
+    
+    /**
+     * The studio ID. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=studioId")
+    public String studioId;
+    public UpdateStudioComponentRequest withStudioId(String studioId) {
+        this.studioId = studioId;
         return this;
     }
     

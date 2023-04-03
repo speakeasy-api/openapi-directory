@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETMappedGenesByPositionUsingGETRequest {
+    /**
+     * Chromosome
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=chr")
+    public String chr;
+    public GETMappedGenesByPositionUsingGETRequest withChr(String chr) {
+        this.chr = chr;
+        return this;
+    }
     
-    public GETMappedGenesByPositionUsingGETPathParams pathParams;
-    public GETMappedGenesByPositionUsingGETRequest withPathParams(GETMappedGenesByPositionUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A list of RGD assembly map keys can be found in the lookup service
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mapKey")
+    public Integer mapKey;
+    public GETMappedGenesByPositionUsingGETRequest withMapKey(Integer mapKey) {
+        this.mapKey = mapKey;
+        return this;
+    }
+    
+    /**
+     * Start Position
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=start")
+    public Long start;
+    public GETMappedGenesByPositionUsingGETRequest withStart(Long start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * Stop Position
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stop")
+    public Long stop;
+    public GETMappedGenesByPositionUsingGETRequest withStop(Long stop) {
+        this.stop = stop;
         return this;
     }
     

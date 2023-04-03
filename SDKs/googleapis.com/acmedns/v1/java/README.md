@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsGetPathParams;
-import org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsGetQueryParams;
 import org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsGetRequest;
 import org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsGetResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -31,23 +29,19 @@ public class Application {
                 .build();
 
             AcmednsAcmeChallengeSetsGetRequest req = new AcmednsAcmeChallengeSetsGetRequest() {{
-                pathParams = new AcmednsAcmeChallengeSetsGetPathParams() {{
-                    rootDomain = "corrupti";
-                }};
-                queryParams = new AcmednsAcmeChallengeSetsGetQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                key = "nulla";
+                oauthToken = "corrupti";
+                prettyPrint = false;
+                quotaUser = "illum";
+                rootDomain = "vel";
+                uploadType = "error";
+                uploadProtocol = "deserunt";
+            }}            
 
             AcmednsAcmeChallengeSetsGetResponse res = sdk.acmeChallengeSets.acmednsAcmeChallengeSetsGet(req);
 
@@ -61,7 +55,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### acmeChallengeSets

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteBuildRequest {
-    
-    public DeleteBuildPathParams pathParams;
-    public DeleteBuildRequest withPathParams(DeleteBuildPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Service to delete the Build resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteBuildRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public DeleteBuildSecurity security;
-    public DeleteBuildRequest withSecurity(DeleteBuildSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteBuildRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Build resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteBuildRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

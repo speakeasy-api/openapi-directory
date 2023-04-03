@@ -44,7 +44,7 @@ public class AttendeesSignins {
      */
     public org.openapis.openapi.models.operations.DeleteSigninSigninIdResponse deleteSigninSigninId(org.openapis.openapi.models.operations.DeleteSigninSigninIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSigninSigninIdPathParams.class, baseUrl, "/signin/{signinId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSigninSigninIdRequest.class, baseUrl, "/signin/{signinId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -87,7 +87,7 @@ public class AttendeesSignins {
      */
     public org.openapis.openapi.models.operations.GetSigninSigninIdResponse getSigninSigninId(org.openapis.openapi.models.operations.GetSigninSigninIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSigninSigninIdPathParams.class, baseUrl, "/signin/{signinId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSigninSigninIdRequest.class, baseUrl, "/signin/{signinId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -141,7 +141,7 @@ public class AttendeesSignins {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSigninsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSigninsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -194,7 +194,7 @@ public class AttendeesSignins {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSigninResponse postSignin(org.openapis.openapi.models.operations.PostSigninRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSigninResponse postSignin(org.openapis.openapi.models.shared.Signin request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/signin");
         
@@ -255,12 +255,12 @@ public class AttendeesSignins {
      */
     public org.openapis.openapi.models.operations.PutSigninSigninIdResponse putSigninSigninId(org.openapis.openapi.models.operations.PutSigninSigninIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSigninSigninIdPathParams.class, baseUrl, "/signin/{signinId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSigninSigninIdRequest.class, baseUrl, "/signin/{signinId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "signin", "json");
         req.setBody(serializedRequestBody);
         
         

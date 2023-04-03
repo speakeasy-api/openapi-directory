@@ -38,13 +38,13 @@ public class Rti {
      */
     public org.openapis.openapi.models.operations.DeleteRtiTransactionResponse deleteRtiTransaction(org.openapis.openapi.models.operations.DeleteRtiTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRtiTransactionPathParams.class, baseUrl, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRtiTransactionRequest.class, baseUrl, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -87,13 +87,13 @@ public class Rti {
      */
     public org.openapis.openapi.models.operations.GetAllRtiTransactionTagsResponse getAllRtiTransactionTags(org.openapis.openapi.models.operations.GetAllRtiTransactionTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllRtiTransactionTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/RtiTransactions/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllRtiTransactionTagsRequest.class, baseUrl, "/Employer/{EmployerId}/RtiTransactions/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -142,13 +142,13 @@ public class Rti {
      */
     public org.openapis.openapi.models.operations.GetRtiTransactionFromEmployerResponse getRtiTransactionFromEmployer(org.openapis.openapi.models.operations.GetRtiTransactionFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRtiTransactionFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRtiTransactionFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -197,13 +197,13 @@ public class Rti {
      */
     public org.openapis.openapi.models.operations.GetRtiTransactionSummariesFromEmployerResponse getRtiTransactionSummariesFromEmployer(org.openapis.openapi.models.operations.GetRtiTransactionSummariesFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRtiTransactionSummariesFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/RtiTransactions/Summary", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRtiTransactionSummariesFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/RtiTransactions/Summary", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -252,13 +252,13 @@ public class Rti {
      */
     public org.openapis.openapi.models.operations.GetRtiTransactionSummaryFromEmployerResponse getRtiTransactionSummaryFromEmployer(org.openapis.openapi.models.operations.GetRtiTransactionSummaryFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRtiTransactionSummaryFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}/Summary", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRtiTransactionSummaryFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}/Summary", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -307,13 +307,13 @@ public class Rti {
      */
     public org.openapis.openapi.models.operations.GetRtiTransactionsFromEmployerResponse getRtiTransactionsFromEmployer(org.openapis.openapi.models.operations.GetRtiTransactionsFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRtiTransactionsFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/RtiTransactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRtiTransactionsFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/RtiTransactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -362,13 +362,13 @@ public class Rti {
      */
     public org.openapis.openapi.models.operations.GetRtiTransactionsWithTagResponse getRtiTransactionsWithTag(org.openapis.openapi.models.operations.GetRtiTransactionsWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRtiTransactionsWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/RtiTransactions/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRtiTransactionsWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/RtiTransactions/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

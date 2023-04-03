@@ -33,10 +33,11 @@ public class NumberSystemsConversion {
     /**
      * Convert base 10 representation of a given number to chinese numeral.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersNumeralChineseResponse getNumbersNumeralChinese(org.openapis.openapi.models.operations.GetNumbersNumeralChineseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersNumeralChineseResponse getNumbersNumeralChinese(org.openapis.openapi.models.operations.GetNumbersNumeralChineseRequest request, org.openapis.openapi.models.operations.GetNumbersNumeralChineseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/numeral/chinese");
         
@@ -44,14 +45,14 @@ public class NumberSystemsConversion {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersNumeralChineseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersNumeralChineseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -72,10 +73,11 @@ public class NumberSystemsConversion {
     /**
      * Convert base 10 representation of a given number to egyptian numeral.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersNumeralEgyptianResponse getNumbersNumeralEgyptian(org.openapis.openapi.models.operations.GetNumbersNumeralEgyptianRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersNumeralEgyptianResponse getNumbersNumeralEgyptian(org.openapis.openapi.models.operations.GetNumbersNumeralEgyptianRequest request, org.openapis.openapi.models.operations.GetNumbersNumeralEgyptianSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/numeral/egyptian");
         
@@ -83,14 +85,14 @@ public class NumberSystemsConversion {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersNumeralEgyptianQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersNumeralEgyptianRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -111,10 +113,11 @@ public class NumberSystemsConversion {
     /**
      * Convert base 10 representation of a given number to roman numeral.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersNumeralRomanResponse getNumbersNumeralRoman(org.openapis.openapi.models.operations.GetNumbersNumeralRomanRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersNumeralRomanResponse getNumbersNumeralRoman(org.openapis.openapi.models.operations.GetNumbersNumeralRomanRequest request, org.openapis.openapi.models.operations.GetNumbersNumeralRomanSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/numeral/roman");
         
@@ -122,14 +125,14 @@ public class NumberSystemsConversion {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersNumeralRomanQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersNumeralRomanRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

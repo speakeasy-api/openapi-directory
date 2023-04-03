@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchTaskQueueRequest {
-    
-    public FetchTaskQueuePathParams pathParams;
-    public FetchTaskQueueRequest withPathParams(FetchTaskQueuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the TaskQueue resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchTaskQueueRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public FetchTaskQueueSecurity security;
-    public FetchTaskQueueRequest withSecurity(FetchTaskQueueSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchTaskQueueRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the TaskQueue to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public FetchTaskQueueRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

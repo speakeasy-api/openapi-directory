@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoDeleteCollaboratorRequest {
+    /**
+     * username of the collaborator to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collaborator")
+    public String collaborator;
+    public RepoDeleteCollaboratorRequest withCollaborator(String collaborator) {
+        this.collaborator = collaborator;
+        return this;
+    }
     
-    public RepoDeleteCollaboratorPathParams pathParams;
-    public RepoDeleteCollaboratorRequest withPathParams(RepoDeleteCollaboratorPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoDeleteCollaboratorRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoDeleteCollaboratorRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -7,16 +7,16 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCharginglocationsSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeUserAccessToken userAccessToken;
-    public PostCharginglocationsSecurity withUserAccessToken(org.openapis.openapi.models.shared.SchemeUserAccessToken userAccessToken) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String userAccessToken;
+    public PostCharginglocationsSecurity withUserAccessToken(String userAccessToken) {
         this.userAccessToken = userAccessToken;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeUserAccessToken userAccessToken1;
-    public PostCharginglocationsSecurity withUserAccessToken1(org.openapis.openapi.models.shared.SchemeUserAccessToken userAccessToken1) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String userAccessToken1;
+    public PostCharginglocationsSecurity withUserAccessToken1(String userAccessToken1) {
         this.userAccessToken1 = userAccessToken1;
         return this;
     }

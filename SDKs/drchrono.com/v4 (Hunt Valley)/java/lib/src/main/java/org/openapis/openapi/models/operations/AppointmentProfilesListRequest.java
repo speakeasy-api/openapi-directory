@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppointmentProfilesListRequest {
-    
-    public AppointmentProfilesListQueryParams queryParams;
-    public AppointmentProfilesListRequest withQueryParams(AppointmentProfilesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public AppointmentProfilesListRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public AppointmentProfilesListRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
     
-    public AppointmentProfilesListSecurity security;
-    public AppointmentProfilesListRequest withSecurity(AppointmentProfilesListSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public AppointmentProfilesListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

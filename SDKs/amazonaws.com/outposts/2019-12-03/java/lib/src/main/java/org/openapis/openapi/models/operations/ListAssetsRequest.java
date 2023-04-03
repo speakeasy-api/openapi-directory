@@ -4,27 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAssetsRequest {
-    
-    public ListAssetsPathParams pathParams;
-    public ListAssetsRequest withPathParams(ListAssetsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filters the results by the host ID of a Dedicated Host.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HostIdFilter")
+    public String[] hostIdFilter;
+    public ListAssetsRequest withHostIdFilter(String[] hostIdFilter) {
+        this.hostIdFilter = hostIdFilter;
         return this;
     }
     
-    
-    public ListAssetsQueryParams queryParams;
-    public ListAssetsRequest withQueryParams(ListAssetsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public ListAssetsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListAssetsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
     
-    public ListAssetsHeaders headers;
-    public ListAssetsRequest withHeaders(ListAssetsHeaders headers) {
-        this.headers = headers;
+    /**
+     *  The ID or the Amazon Resource Name (ARN) of the Outpost. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=OutpostId")
+    public String outpostId;
+    public ListAssetsRequest withOutpostId(String outpostId) {
+        this.outpostId = outpostId;
+        return this;
+    }
+    
+    /**
+     * Filters the results by state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StatusFilter")
+    public org.openapis.openapi.models.shared.AssetStateEnum[] statusFilter;
+    public ListAssetsRequest withStatusFilter(org.openapis.openapi.models.shared.AssetStateEnum[] statusFilter) {
+        this.statusFilter = statusFilter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListAssetsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListAssetsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListAssetsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListAssetsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListAssetsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListAssetsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListAssetsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

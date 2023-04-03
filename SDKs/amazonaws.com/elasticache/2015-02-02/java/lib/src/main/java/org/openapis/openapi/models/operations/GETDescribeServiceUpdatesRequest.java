@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeServiceUpdatesRequest {
-    
-    public GETDescribeServiceUpdatesQueryParams queryParams;
-    public GETDescribeServiceUpdatesRequest withQueryParams(GETDescribeServiceUpdatesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeServiceUpdatesActionEnum action;
+    public GETDescribeServiceUpdatesRequest withAction(GETDescribeServiceUpdatesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * An optional marker returned from a prior request. Use this marker for pagination of results from this operation. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by &lt;code&gt;MaxRecords&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDescribeServiceUpdatesRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
     
-    public GETDescribeServiceUpdatesHeaders headers;
-    public GETDescribeServiceUpdatesRequest withHeaders(GETDescribeServiceUpdatesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The maximum number of records to include in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeServiceUpdatesRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    /**
+     * The unique ID of the service update
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServiceUpdateName")
+    public String serviceUpdateName;
+    public GETDescribeServiceUpdatesRequest withServiceUpdateName(String serviceUpdateName) {
+        this.serviceUpdateName = serviceUpdateName;
+        return this;
+    }
+    
+    /**
+     * The status of the service update
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServiceUpdateStatus")
+    public org.openapis.openapi.models.shared.ServiceUpdateStatusEnum[] serviceUpdateStatus;
+    public GETDescribeServiceUpdatesRequest withServiceUpdateStatus(org.openapis.openapi.models.shared.ServiceUpdateStatusEnum[] serviceUpdateStatus) {
+        this.serviceUpdateStatus = serviceUpdateStatus;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeServiceUpdatesVersionEnum version;
+    public GETDescribeServiceUpdatesRequest withVersion(GETDescribeServiceUpdatesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeServiceUpdatesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeServiceUpdatesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeServiceUpdatesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeServiceUpdatesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeServiceUpdatesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeServiceUpdatesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeServiceUpdatesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

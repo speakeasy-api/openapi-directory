@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SignRetrieveHeadRequest {
-    
-    public SignRetrieveHeadPathParams pathParams;
-    public SignRetrieveHeadRequest withPathParams(SignRetrieveHeadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Job ID (20 chars)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=job")
+    public String job;
+    public SignRetrieveHeadRequest withJob(String job) {
+        this.job = job;
         return this;
     }
     

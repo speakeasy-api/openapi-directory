@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateStreamRequest {
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created this Stream resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreateStreamRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public CreateStreamPathParams pathParams;
-    public CreateStreamRequest withPathParams(CreateStreamPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) the Stream resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public CreateStreamRequest withCallSid(String callSid) {
+        this.callSid = callSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateStreamCreateStreamRequest request;
-    public CreateStreamRequest withRequest(CreateStreamCreateStreamRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateStreamSecurity security;
-    public CreateStreamRequest withSecurity(CreateStreamSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateStreamRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateStreamCreateStreamRequest requestBody;
+    public CreateStreamRequest withRequestBody(CreateStreamCreateStreamRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

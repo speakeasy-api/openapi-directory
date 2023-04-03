@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCreditSessionRequest {
-    
-    public UpdateCreditSessionPathParams pathParams;
-    public UpdateCreditSessionRequest withPathParams(UpdateCreditSessionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * session_request
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SessionInput request;
-    public UpdateCreditSessionRequest withRequest(org.openapis.openapi.models.shared.SessionInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SessionInput sessionInput;
+    public UpdateCreditSessionRequest withSessionInput(org.openapis.openapi.models.shared.SessionInput sessionInput) {
+        this.sessionInput = sessionInput;
+        return this;
+    }
+    
+    /**
+     * session_id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=session_id")
+    public String sessionId;
+    public UpdateCreditSessionRequest withSessionId(String sessionId) {
+        this.sessionId = sessionId;
         return this;
     }
     

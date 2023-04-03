@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.RegistryCreateApiPathParams;
-import org.openapis.openapi.models.operations.RegistryCreateApiQueryParams;
 import org.openapis.openapi.models.operations.RegistryCreateApiRequest;
 import org.openapis.openapi.models.operations.RegistryCreateApiResponse;
 import org.openapis.openapi.models.shared.ApiInput;
@@ -30,31 +28,28 @@ public class Application {
                 .build();
 
             RegistryCreateApiRequest req = new RegistryCreateApiRequest() {{
-                pathParams = new RegistryCreateApiPathParams() {{
-                    location = "corrupti";
-                    project = "provident";
-                }};
-                queryParams = new RegistryCreateApiQueryParams() {{
-                    apiId = "distinctio";
-                }};
-                request = new ApiInput() {{
+                apiInput = new ApiInput() {{
                     annotations = new java.util.HashMap<String, String>() {{
-                        put("unde", "nulla");
-                        put("corrupti", "illum");
-                        put("vel", "error");
-                        put("deserunt", "suscipit");
+                        put("provident", "distinctio");
+                        put("quibusdam", "unde");
+                        put("nulla", "corrupti");
                     }};
-                    availability = "iure";
-                    description = "magnam";
-                    displayName = "debitis";
+                    availability = "illum";
+                    description = "vel";
+                    displayName = "error";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("delectus", "tempora");
+                        put("suscipit", "iure");
+                        put("magnam", "debitis");
+                        put("ipsa", "delectus");
                     }};
-                    name = "suscipit";
-                    recommendedDeployment = "molestiae";
-                    recommendedVersion = "minus";
+                    name = "tempora";
+                    recommendedDeployment = "suscipit";
+                    recommendedVersion = "molestiae";
                 }};
-            }};            
+                apiId = "minus";
+                location = "placeat";
+                project = "voluptatum";
+            }}            
 
             RegistryCreateApiResponse res = sdk.registry.registryCreateApi(req);
 
@@ -68,7 +63,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### registry

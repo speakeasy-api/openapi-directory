@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTemplateRequest {
-    
-    public DeleteTemplateQueryParams queryParams;
-    public DeleteTemplateRequest withQueryParams(DeleteTemplateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Template unique identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=templateId")
+    public Long templateId;
+    public DeleteTemplateRequest withTemplateId(Long templateId) {
+        this.templateId = templateId;
         return this;
     }
     

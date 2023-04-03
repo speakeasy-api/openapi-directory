@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOnePlanRequest {
-    
-    public GetOnePlanPathParams pathParams;
-    public GetOnePlanRequest withPathParams(GetOnePlanPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=plan-id")
+    public String planId;
+    public GetOnePlanRequest withPlanId(String planId) {
+        this.planId = planId;
         return this;
     }
     
-    
-    public GetOnePlanHeaders headers;
-    public GetOnePlanRequest withHeaders(GetOnePlanHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetOnePlanRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

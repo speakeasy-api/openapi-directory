@@ -7,16 +7,16 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CvcerSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAPIKey apiKey;
-    public CvcerSecurity withApiKey(org.openapis.openapi.models.shared.SchemeAPIKey apiKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-APISETU-APIKEY")
+    public String apiKey;
+    public CvcerSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeClientID clientId;
-    public CvcerSecurity withClientId(org.openapis.openapi.models.shared.SchemeClientID clientId) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-APISETU-CLIENTID")
+    public String clientId;
+    public CvcerSecurity withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }

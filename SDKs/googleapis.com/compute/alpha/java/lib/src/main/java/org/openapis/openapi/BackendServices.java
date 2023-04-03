@@ -34,27 +34,28 @@ public class BackendServices {
     /**
      * Adds a key for validating requests with signed URLs for this backend service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeBackendServicesAddSignedUrlKeyResponse computeBackendServicesAddSignedUrlKey(org.openapis.openapi.models.operations.ComputeBackendServicesAddSignedUrlKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeBackendServicesAddSignedUrlKeyResponse computeBackendServicesAddSignedUrlKey(org.openapis.openapi.models.operations.ComputeBackendServicesAddSignedUrlKeyRequest request, org.openapis.openapi.models.operations.ComputeBackendServicesAddSignedUrlKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesAddSignedUrlKeyPathParams.class, baseUrl, "/projects/{project}/global/backendServices/{backendService}/addSignedUrlKey", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesAddSignedUrlKeyRequest.class, baseUrl, "/projects/{project}/global/backendServices/{backendService}/addSignedUrlKey", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "signedUrlKey", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesAddSignedUrlKeyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesAddSignedUrlKeyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class BackendServices {
     /**
      * Retrieves the list of all BackendService resources, regional and global, available to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeBackendServicesAggregatedListResponse computeBackendServicesAggregatedList(org.openapis.openapi.models.operations.ComputeBackendServicesAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeBackendServicesAggregatedListResponse computeBackendServicesAggregatedList(org.openapis.openapi.models.operations.ComputeBackendServicesAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeBackendServicesAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/backendServices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/backendServices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class BackendServices {
     /**
      * Deletes the specified BackendService resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeBackendServicesDeleteResponse computeBackendServicesDelete(org.openapis.openapi.models.operations.ComputeBackendServicesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeBackendServicesDeleteResponse computeBackendServicesDelete(org.openapis.openapi.models.operations.ComputeBackendServicesDeleteRequest request, org.openapis.openapi.models.operations.ComputeBackendServicesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesDeletePathParams.class, baseUrl, "/projects/{project}/global/backendServices/{backendService}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesDeleteRequest.class, baseUrl, "/projects/{project}/global/backendServices/{backendService}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class BackendServices {
     /**
      * Deletes a key for validating requests with signed URLs for this backend service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeBackendServicesDeleteSignedUrlKeyResponse computeBackendServicesDeleteSignedUrlKey(org.openapis.openapi.models.operations.ComputeBackendServicesDeleteSignedUrlKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeBackendServicesDeleteSignedUrlKeyResponse computeBackendServicesDeleteSignedUrlKey(org.openapis.openapi.models.operations.ComputeBackendServicesDeleteSignedUrlKeyRequest request, org.openapis.openapi.models.operations.ComputeBackendServicesDeleteSignedUrlKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesDeleteSignedUrlKeyPathParams.class, baseUrl, "/projects/{project}/global/backendServices/{backendService}/deleteSignedUrlKey", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesDeleteSignedUrlKeyRequest.class, baseUrl, "/projects/{project}/global/backendServices/{backendService}/deleteSignedUrlKey", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesDeleteSignedUrlKeyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesDeleteSignedUrlKeyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,25 +220,26 @@ public class BackendServices {
     /**
      * Returns the specified BackendService resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeBackendServicesGetResponse computeBackendServicesGet(org.openapis.openapi.models.operations.ComputeBackendServicesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeBackendServicesGetResponse computeBackendServicesGet(org.openapis.openapi.models.operations.ComputeBackendServicesGetRequest request, org.openapis.openapi.models.operations.ComputeBackendServicesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesGetPathParams.class, baseUrl, "/projects/{project}/global/backendServices/{backendService}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesGetRequest.class, baseUrl, "/projects/{project}/global/backendServices/{backendService}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,27 +266,28 @@ public class BackendServices {
     /**
      * Gets the most recent health check results for this BackendService. Example request body: { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeBackendServicesGetHealthResponse computeBackendServicesGetHealth(org.openapis.openapi.models.operations.ComputeBackendServicesGetHealthRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeBackendServicesGetHealthResponse computeBackendServicesGetHealth(org.openapis.openapi.models.operations.ComputeBackendServicesGetHealthRequest request, org.openapis.openapi.models.operations.ComputeBackendServicesGetHealthSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesGetHealthPathParams.class, baseUrl, "/projects/{project}/global/backendServices/{backendService}/getHealth", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesGetHealthRequest.class, baseUrl, "/projects/{project}/global/backendServices/{backendService}/getHealth", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resourceGroupReference", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesGetHealthQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesGetHealthRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -308,25 +314,26 @@ public class BackendServices {
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeBackendServicesGetIamPolicyResponse computeBackendServicesGetIamPolicy(org.openapis.openapi.models.operations.ComputeBackendServicesGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeBackendServicesGetIamPolicyResponse computeBackendServicesGetIamPolicy(org.openapis.openapi.models.operations.ComputeBackendServicesGetIamPolicyRequest request, org.openapis.openapi.models.operations.ComputeBackendServicesGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesGetIamPolicyPathParams.class, baseUrl, "/projects/{project}/global/backendServices/{resource}/getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesGetIamPolicyRequest.class, baseUrl, "/projects/{project}/global/backendServices/{resource}/getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -353,27 +360,28 @@ public class BackendServices {
     /**
      * Creates a BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview .
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeBackendServicesInsertResponse computeBackendServicesInsert(org.openapis.openapi.models.operations.ComputeBackendServicesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeBackendServicesInsertResponse computeBackendServicesInsert(org.openapis.openapi.models.operations.ComputeBackendServicesInsertRequest request, org.openapis.openapi.models.operations.ComputeBackendServicesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesInsertPathParams.class, baseUrl, "/projects/{project}/global/backendServices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesInsertRequest.class, baseUrl, "/projects/{project}/global/backendServices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "backendService", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -400,25 +408,26 @@ public class BackendServices {
     /**
      * Retrieves the list of BackendService resources available to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeBackendServicesListResponse computeBackendServicesList(org.openapis.openapi.models.operations.ComputeBackendServicesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeBackendServicesListResponse computeBackendServicesList(org.openapis.openapi.models.operations.ComputeBackendServicesListRequest request, org.openapis.openapi.models.operations.ComputeBackendServicesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesListPathParams.class, baseUrl, "/projects/{project}/global/backendServices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesListRequest.class, baseUrl, "/projects/{project}/global/backendServices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -445,27 +454,28 @@ public class BackendServices {
     /**
      * Patches the specified BackendService resource with the data included in the request. For more information, see Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeBackendServicesPatchResponse computeBackendServicesPatch(org.openapis.openapi.models.operations.ComputeBackendServicesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeBackendServicesPatchResponse computeBackendServicesPatch(org.openapis.openapi.models.operations.ComputeBackendServicesPatchRequest request, org.openapis.openapi.models.operations.ComputeBackendServicesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesPatchPathParams.class, baseUrl, "/projects/{project}/global/backendServices/{backendService}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesPatchRequest.class, baseUrl, "/projects/{project}/global/backendServices/{backendService}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "backendService1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -492,27 +502,28 @@ public class BackendServices {
     /**
      * Sets the edge security policy for the specified backend service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeBackendServicesSetEdgeSecurityPolicyResponse computeBackendServicesSetEdgeSecurityPolicy(org.openapis.openapi.models.operations.ComputeBackendServicesSetEdgeSecurityPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeBackendServicesSetEdgeSecurityPolicyResponse computeBackendServicesSetEdgeSecurityPolicy(org.openapis.openapi.models.operations.ComputeBackendServicesSetEdgeSecurityPolicyRequest request, org.openapis.openapi.models.operations.ComputeBackendServicesSetEdgeSecurityPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesSetEdgeSecurityPolicyPathParams.class, baseUrl, "/projects/{project}/global/backendServices/{backendService}/setEdgeSecurityPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesSetEdgeSecurityPolicyRequest.class, baseUrl, "/projects/{project}/global/backendServices/{backendService}/setEdgeSecurityPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "securityPolicyReference", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesSetEdgeSecurityPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesSetEdgeSecurityPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -539,27 +550,28 @@ public class BackendServices {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeBackendServicesSetIamPolicyResponse computeBackendServicesSetIamPolicy(org.openapis.openapi.models.operations.ComputeBackendServicesSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeBackendServicesSetIamPolicyResponse computeBackendServicesSetIamPolicy(org.openapis.openapi.models.operations.ComputeBackendServicesSetIamPolicyRequest request, org.openapis.openapi.models.operations.ComputeBackendServicesSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesSetIamPolicyPathParams.class, baseUrl, "/projects/{project}/global/backendServices/{resource}/setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesSetIamPolicyRequest.class, baseUrl, "/projects/{project}/global/backendServices/{resource}/setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "globalSetPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -586,27 +598,28 @@ public class BackendServices {
     /**
      * Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeBackendServicesSetSecurityPolicyResponse computeBackendServicesSetSecurityPolicy(org.openapis.openapi.models.operations.ComputeBackendServicesSetSecurityPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeBackendServicesSetSecurityPolicyResponse computeBackendServicesSetSecurityPolicy(org.openapis.openapi.models.operations.ComputeBackendServicesSetSecurityPolicyRequest request, org.openapis.openapi.models.operations.ComputeBackendServicesSetSecurityPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesSetSecurityPolicyPathParams.class, baseUrl, "/projects/{project}/global/backendServices/{backendService}/setSecurityPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesSetSecurityPolicyRequest.class, baseUrl, "/projects/{project}/global/backendServices/{backendService}/setSecurityPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "securityPolicyReference", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesSetSecurityPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesSetSecurityPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -633,27 +646,28 @@ public class BackendServices {
     /**
      * Returns permissions that a caller has on the specified resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeBackendServicesTestIamPermissionsResponse computeBackendServicesTestIamPermissions(org.openapis.openapi.models.operations.ComputeBackendServicesTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeBackendServicesTestIamPermissionsResponse computeBackendServicesTestIamPermissions(org.openapis.openapi.models.operations.ComputeBackendServicesTestIamPermissionsRequest request, org.openapis.openapi.models.operations.ComputeBackendServicesTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesTestIamPermissionsPathParams.class, baseUrl, "/projects/{project}/global/backendServices/{resource}/testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesTestIamPermissionsRequest.class, baseUrl, "/projects/{project}/global/backendServices/{resource}/testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -680,27 +694,28 @@ public class BackendServices {
     /**
      * Updates the specified BackendService resource with the data included in the request. For more information, see Backend services overview.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeBackendServicesUpdateResponse computeBackendServicesUpdate(org.openapis.openapi.models.operations.ComputeBackendServicesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeBackendServicesUpdateResponse computeBackendServicesUpdate(org.openapis.openapi.models.operations.ComputeBackendServicesUpdateRequest request, org.openapis.openapi.models.operations.ComputeBackendServicesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesUpdatePathParams.class, baseUrl, "/projects/{project}/global/backendServices/{backendService}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeBackendServicesUpdateRequest.class, baseUrl, "/projects/{project}/global/backendServices/{backendService}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "backendService1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeBackendServicesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

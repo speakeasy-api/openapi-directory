@@ -7,21 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ValidateAccessTokenRequest {
-    
-    public ValidateAccessTokenHeaders headers;
-    public ValidateAccessTokenRequest withHeaders(ValidateAccessTokenHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * An OTP from the user's registered MFA Device
      * 
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AccessTokenValidationRequest request;
-    public ValidateAccessTokenRequest withRequest(org.openapis.openapi.models.shared.AccessTokenValidationRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AccessTokenValidationRequest accessTokenValidationRequest;
+    public ValidateAccessTokenRequest withAccessTokenValidationRequest(org.openapis.openapi.models.shared.AccessTokenValidationRequest accessTokenValidationRequest) {
+        this.accessTokenValidationRequest = accessTokenValidationRequest;
+        return this;
+    }
+    
+    /**
+     * Bearer token authorization leg of validate
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public ValidateAccessTokenRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCustomerProfileEntityAssignmentRequest {
-    
-    public DeleteCustomerProfileEntityAssignmentPathParams pathParams;
-    public DeleteCustomerProfileEntityAssignmentRequest withPathParams(DeleteCustomerProfileEntityAssignmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string that we created to identify the CustomerProfile resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CustomerProfileSid")
+    public String customerProfileSid;
+    public DeleteCustomerProfileEntityAssignmentRequest withCustomerProfileSid(String customerProfileSid) {
+        this.customerProfileSid = customerProfileSid;
         return this;
     }
     
-    
-    public DeleteCustomerProfileEntityAssignmentSecurity security;
-    public DeleteCustomerProfileEntityAssignmentRequest withSecurity(DeleteCustomerProfileEntityAssignmentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteCustomerProfileEntityAssignmentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that we created to identify the Identity resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteCustomerProfileEntityAssignmentRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceWirelessRadioSettingsRequest {
-    
-    public GetDeviceWirelessRadioSettingsPathParams pathParams;
-    public GetDeviceWirelessRadioSettingsRequest withPathParams(GetDeviceWirelessRadioSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetDeviceWirelessRadioSettingsRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

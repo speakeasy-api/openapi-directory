@@ -41,13 +41,13 @@ public class Logs {
      */
     public org.openapis.openapi.models.operations.GetOrganizationWebhooksLogsResponse getOrganizationWebhooksLogs(org.openapis.openapi.models.operations.GetOrganizationWebhooksLogsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationWebhooksLogsPathParams.class, baseUrl, "/organizations/{organizationId}/webhooks/logs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationWebhooksLogsRequest.class, baseUrl, "/organizations/{organizationId}/webhooks/logs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationWebhooksLogsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationWebhooksLogsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

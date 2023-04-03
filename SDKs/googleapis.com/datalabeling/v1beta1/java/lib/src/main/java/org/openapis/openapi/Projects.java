@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates an annotation spec set by providing a set of labels.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateResponse datalabelingProjectsAnnotationSpecSetsCreate(org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateResponse datalabelingProjectsAnnotationSpecSetsCreate(org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/annotationSpecSets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateRequest.class, baseUrl, "/v1beta1/{parent}/annotationSpecSets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Lists annotation spec sets for a project. Pagination is supported.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsListResponse datalabelingProjectsAnnotationSpecSetsList(org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsListResponse datalabelingProjectsAnnotationSpecSetsList(org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsListRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsListPathParams.class, baseUrl, "/v1beta1/{parent}/annotationSpecSets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsListRequest.class, baseUrl, "/v1beta1/{parent}/annotationSpecSets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Projects {
     /**
      * Lists examples in an annotated dataset. Pagination is supported.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListResponse datalabelingProjectsDatasetsAnnotatedDatasetsExamplesList(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListResponse datalabelingProjectsDatasetsAnnotatedDatasetsExamplesList(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListPathParams.class, baseUrl, "/v1beta1/{parent}/examples", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListRequest.class, baseUrl, "/v1beta1/{parent}/examples", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsExamplesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,27 +175,28 @@ public class Projects {
     /**
      * Create a FeedbackMessage object.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreateResponse datalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreate(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreateResponse datalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreate(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreateRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreatePathParams.class, baseUrl, "/v1beta1/{parent}/feedbackMessages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreateRequest.class, baseUrl, "/v1beta1/{parent}/feedbackMessages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatalabelingV1beta1FeedbackMessage", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,25 +223,26 @@ public class Projects {
     /**
      * List FeedbackMessages with pagination.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListResponse datalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesList(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListResponse datalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesList(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListPathParams.class, baseUrl, "/v1beta1/{parent}/feedbackMessages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListRequest.class, baseUrl, "/v1beta1/{parent}/feedbackMessages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,25 +269,26 @@ public class Projects {
     /**
      * List FeedbackThreads with pagination.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsListResponse datalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsList(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsListResponse datalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsList(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsListRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsListPathParams.class, baseUrl, "/v1beta1/{parent}/feedbackThreads", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsListRequest.class, baseUrl, "/v1beta1/{parent}/feedbackThreads", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -309,25 +315,26 @@ public class Projects {
     /**
      * Lists annotated datasets for a dataset. Pagination is supported.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsListResponse datalabelingProjectsDatasetsAnnotatedDatasetsList(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsListResponse datalabelingProjectsDatasetsAnnotatedDatasetsList(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsListRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsListPathParams.class, baseUrl, "/v1beta1/{parent}/annotatedDatasets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsListRequest.class, baseUrl, "/v1beta1/{parent}/annotatedDatasets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsAnnotatedDatasetsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -354,27 +361,28 @@ public class Projects {
     /**
      * Creates dataset. If success return a Dataset resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsCreateResponse datalabelingProjectsDatasetsCreate(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsCreateResponse datalabelingProjectsDatasetsCreate(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsCreateRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/datasets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsCreateRequest.class, baseUrl, "/v1beta1/{parent}/datasets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatalabelingV1beta1CreateDatasetRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -401,25 +409,26 @@ public class Projects {
     /**
      * Lists data items in a dataset. This API can be called after data are imported into dataset. Pagination is supported.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsDataItemsListResponse datalabelingProjectsDatasetsDataItemsList(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsDataItemsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsDataItemsListResponse datalabelingProjectsDatasetsDataItemsList(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsDataItemsListRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsDataItemsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsDataItemsListPathParams.class, baseUrl, "/v1beta1/{parent}/dataItems", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsDataItemsListRequest.class, baseUrl, "/v1beta1/{parent}/dataItems", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsDataItemsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsDataItemsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -446,27 +455,28 @@ public class Projects {
     /**
      * Searches example comparisons from an evaluation. The return format is a list of example comparisons that show ground truth and prediction(s) for a single input. Search by providing an evaluation ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearchResponse datalabelingProjectsDatasetsEvaluationsExampleComparisonsSearch(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearchResponse datalabelingProjectsDatasetsEvaluationsExampleComparisonsSearch(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearchRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearchPathParams.class, baseUrl, "/v1beta1/{parent}/exampleComparisons:search", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearchRequest.class, baseUrl, "/v1beta1/{parent}/exampleComparisons:search", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatalabelingV1beta1SearchExampleComparisonsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsEvaluationsExampleComparisonsSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -493,27 +503,28 @@ public class Projects {
     /**
      * Exports data and annotations from dataset.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsExportDataResponse datalabelingProjectsDatasetsExportData(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsExportDataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsExportDataResponse datalabelingProjectsDatasetsExportData(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsExportDataRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsExportDataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsExportDataPathParams.class, baseUrl, "/v1beta1/{name}:exportData", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsExportDataRequest.class, baseUrl, "/v1beta1/{name}:exportData", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatalabelingV1beta1ExportDataRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsExportDataQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsExportDataRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -540,27 +551,28 @@ public class Projects {
     /**
      * Starts a labeling task for image. The type of image labeling task is configured by feature in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImageLabelResponse datalabelingProjectsDatasetsImageLabel(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImageLabelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImageLabelResponse datalabelingProjectsDatasetsImageLabel(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImageLabelRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImageLabelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImageLabelPathParams.class, baseUrl, "/v1beta1/{parent}/image:label", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImageLabelRequest.class, baseUrl, "/v1beta1/{parent}/image:label", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatalabelingV1beta1LabelImageRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImageLabelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImageLabelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -587,27 +599,28 @@ public class Projects {
     /**
      * Imports data into dataset based on source locations defined in request. It can be called multiple times for the same dataset. Each dataset can only have one long running operation running on it. For example, no labeling task (also long running operation) can be started while importing is still ongoing. Vice versa.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImportDataResponse datalabelingProjectsDatasetsImportData(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImportDataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImportDataResponse datalabelingProjectsDatasetsImportData(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImportDataRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImportDataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImportDataPathParams.class, baseUrl, "/v1beta1/{name}:importData", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImportDataRequest.class, baseUrl, "/v1beta1/{name}:importData", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatalabelingV1beta1ImportDataRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImportDataQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsImportDataRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -634,25 +647,26 @@ public class Projects {
     /**
      * Lists datasets under a project. Pagination is supported.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsListResponse datalabelingProjectsDatasetsList(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsListResponse datalabelingProjectsDatasetsList(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsListRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsListPathParams.class, baseUrl, "/v1beta1/{parent}/datasets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsListRequest.class, baseUrl, "/v1beta1/{parent}/datasets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -679,27 +693,28 @@ public class Projects {
     /**
      * Starts a labeling task for text. The type of text labeling task is configured by feature in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsTextLabelResponse datalabelingProjectsDatasetsTextLabel(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsTextLabelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsTextLabelResponse datalabelingProjectsDatasetsTextLabel(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsTextLabelRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsTextLabelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsTextLabelPathParams.class, baseUrl, "/v1beta1/{parent}/text:label", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsTextLabelRequest.class, baseUrl, "/v1beta1/{parent}/text:label", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatalabelingV1beta1LabelTextRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsTextLabelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsTextLabelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -726,27 +741,28 @@ public class Projects {
     /**
      * Starts a labeling task for video. The type of video labeling task is configured by feature in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsVideoLabelResponse datalabelingProjectsDatasetsVideoLabel(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsVideoLabelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsVideoLabelResponse datalabelingProjectsDatasetsVideoLabel(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsVideoLabelRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsVideoLabelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsVideoLabelPathParams.class, baseUrl, "/v1beta1/{parent}/video:label", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsVideoLabelRequest.class, baseUrl, "/v1beta1/{parent}/video:label", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatalabelingV1beta1LabelVideoRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsVideoLabelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsDatasetsVideoLabelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -773,27 +789,28 @@ public class Projects {
     /**
      * Creates an evaluation job.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsCreateResponse datalabelingProjectsEvaluationJobsCreate(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsCreateResponse datalabelingProjectsEvaluationJobsCreate(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsCreateRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/evaluationJobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsCreateRequest.class, baseUrl, "/v1beta1/{parent}/evaluationJobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatalabelingV1beta1CreateEvaluationJobRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -820,25 +837,26 @@ public class Projects {
     /**
      * Lists all evaluation jobs within a project with possible filters. Pagination is supported.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsListResponse datalabelingProjectsEvaluationJobsList(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsListResponse datalabelingProjectsEvaluationJobsList(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsListRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsListPathParams.class, baseUrl, "/v1beta1/{parent}/evaluationJobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsListRequest.class, baseUrl, "/v1beta1/{parent}/evaluationJobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -865,27 +883,28 @@ public class Projects {
     /**
      * Updates an evaluation job. You can only update certain fields of the job's EvaluationJobConfig: `humanAnnotationConfig.instruction`, `exampleCount`, and `exampleSamplePercentage`. If you want to change any other aspect of the evaluation job, you must delete the job and create a new one.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPatchResponse datalabelingProjectsEvaluationJobsPatch(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPatchResponse datalabelingProjectsEvaluationJobsPatch(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPatchRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPatchPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPatchRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatalabelingV1beta1EvaluationJob", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -912,27 +931,28 @@ public class Projects {
     /**
      * Pauses an evaluation job. Pausing an evaluation job that is already in a `PAUSED` state is a no-op.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPauseResponse datalabelingProjectsEvaluationJobsPause(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPauseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPauseResponse datalabelingProjectsEvaluationJobsPause(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPauseRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPauseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPausePathParams.class, baseUrl, "/v1beta1/{name}:pause", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPauseRequest.class, baseUrl, "/v1beta1/{name}:pause", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPauseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsPauseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -959,27 +979,28 @@ public class Projects {
     /**
      * Resumes a paused evaluation job. A deleted evaluation job can't be resumed. Resuming a running or scheduled evaluation job is a no-op.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsResumeResponse datalabelingProjectsEvaluationJobsResume(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsResumeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsResumeResponse datalabelingProjectsEvaluationJobsResume(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsResumeRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsResumeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsResumePathParams.class, baseUrl, "/v1beta1/{name}:resume", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsResumeRequest.class, baseUrl, "/v1beta1/{name}:resume", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsResumeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationJobsResumeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1006,25 +1027,26 @@ public class Projects {
     /**
      * Searches evaluations within a project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationsSearchResponse datalabelingProjectsEvaluationsSearch(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationsSearchResponse datalabelingProjectsEvaluationsSearch(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationsSearchRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationsSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationsSearchPathParams.class, baseUrl, "/v1beta1/{parent}/evaluations:search", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationsSearchRequest.class, baseUrl, "/v1beta1/{parent}/evaluations:search", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationsSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsEvaluationsSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1051,27 +1073,28 @@ public class Projects {
     /**
      * Creates an instruction for how data should be labeled.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsCreateResponse datalabelingProjectsInstructionsCreate(org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsCreateResponse datalabelingProjectsInstructionsCreate(org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsCreateRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/instructions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsCreateRequest.class, baseUrl, "/v1beta1/{parent}/instructions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatalabelingV1beta1CreateInstructionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1098,25 +1121,26 @@ public class Projects {
     /**
      * Lists instructions for a project. Pagination is supported.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsListResponse datalabelingProjectsInstructionsList(org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsListResponse datalabelingProjectsInstructionsList(org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsListRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsListPathParams.class, baseUrl, "/v1beta1/{parent}/instructions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsListRequest.class, baseUrl, "/v1beta1/{parent}/instructions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsInstructionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1143,25 +1167,26 @@ public class Projects {
     /**
      * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsOperationsCancelResponse datalabelingProjectsOperationsCancel(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsOperationsCancelResponse datalabelingProjectsOperationsCancel(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsCancelRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsOperationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsCancelPathParams.class, baseUrl, "/v1beta1/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsCancelRequest.class, baseUrl, "/v1beta1/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1188,25 +1213,26 @@ public class Projects {
     /**
      * Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsOperationsDeleteResponse datalabelingProjectsOperationsDelete(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsOperationsDeleteResponse datalabelingProjectsOperationsDelete(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsDeleteRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsOperationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsDeletePathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsDeleteRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1233,25 +1259,26 @@ public class Projects {
     /**
      * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsOperationsGetResponse datalabelingProjectsOperationsGet(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsOperationsGetResponse datalabelingProjectsOperationsGet(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsGetRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsGetPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsGetRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1278,25 +1305,26 @@ public class Projects {
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/* /operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalabelingProjectsOperationsListResponse datalabelingProjectsOperationsList(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalabelingProjectsOperationsListResponse datalabelingProjectsOperationsList(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsListRequest request, org.openapis.openapi.models.operations.DatalabelingProjectsOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsListPathParams.class, baseUrl, "/v1beta1/{name}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsListRequest.class, baseUrl, "/v1beta1/{name}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalabelingProjectsOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

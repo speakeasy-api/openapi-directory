@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FolderAssignPostRequest {
+    /**
+     * The ID of the meter or folder that should be assign
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public String source;
+    public FolderAssignPostRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
     
-    public FolderAssignPostQueryParams queryParams;
-    public FolderAssignPostRequest withQueryParams(FolderAssignPostQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the meter or folder that should be the parent
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target")
+    public String target;
+    public FolderAssignPostRequest withTarget(String target) {
+        this.target = target;
         return this;
     }
     

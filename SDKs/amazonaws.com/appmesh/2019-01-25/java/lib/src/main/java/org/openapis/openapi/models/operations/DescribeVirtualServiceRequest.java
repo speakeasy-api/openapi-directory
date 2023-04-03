@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeVirtualServiceRequest {
-    
-    public DescribeVirtualServicePathParams pathParams;
-    public DescribeVirtualServiceRequest withPathParams(DescribeVirtualServicePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeVirtualServiceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public DescribeVirtualServiceQueryParams queryParams;
-    public DescribeVirtualServiceRequest withQueryParams(DescribeVirtualServiceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeVirtualServiceRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeVirtualServiceRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public DescribeVirtualServiceHeaders headers;
-    public DescribeVirtualServiceRequest withHeaders(DescribeVirtualServiceHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeVirtualServiceRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeVirtualServiceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeVirtualServiceRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeVirtualServiceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The name of the service mesh that the virtual service resides in.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meshName")
+    public String meshName;
+    public DescribeVirtualServiceRequest withMeshName(String meshName) {
+        this.meshName = meshName;
+        return this;
+    }
+    
+    /**
+     * The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account. For more information about mesh sharing, see &lt;a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html"&gt;Working with shared meshes&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=meshOwner")
+    public String meshOwner;
+    public DescribeVirtualServiceRequest withMeshOwner(String meshOwner) {
+        this.meshOwner = meshOwner;
+        return this;
+    }
+    
+    /**
+     * The name of the virtual service to describe.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=virtualServiceName")
+    public String virtualServiceName;
+    public DescribeVirtualServiceRequest withVirtualServiceName(String virtualServiceName) {
+        this.virtualServiceName = virtualServiceName;
         return this;
     }
     

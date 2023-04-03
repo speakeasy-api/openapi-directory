@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoDeleteWikiPageRequest {
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoDeleteWikiPageRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public RepoDeleteWikiPagePathParams pathParams;
-    public RepoDeleteWikiPageRequest withPathParams(RepoDeleteWikiPagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * name of the page
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pageName")
+    public String pageName;
+    public RepoDeleteWikiPageRequest withPageName(String pageName) {
+        this.pageName = pageName;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoDeleteWikiPageRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

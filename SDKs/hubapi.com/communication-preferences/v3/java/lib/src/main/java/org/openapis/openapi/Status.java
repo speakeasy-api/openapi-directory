@@ -37,19 +37,20 @@ public class Status {
      * Get subscription statuses for a contact
      * Returns a list of subscriptions and their status for a given contact.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusResponse getCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatus(org.openapis.openapi.models.operations.GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusResponse getCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatus(org.openapis.openapi.models.operations.GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusRequest request, org.openapis.openapi.models.operations.GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusPathParams.class, baseUrl, "/communication-preferences/v3/status/email/{emailAddress}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusRequest.class, baseUrl, "/communication-preferences/v3/status/email/{emailAddress}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,10 +85,11 @@ public class Status {
      * Subscribe a contact
      * Subscribes a contact to the given subscription type. This API is not valid to use for subscribing a contact at a brand or portal level and will return an error.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCommunicationPreferencesV3SubscribeSubscribeResponse postCommunicationPreferencesV3SubscribeSubscribe(org.openapis.openapi.models.operations.PostCommunicationPreferencesV3SubscribeSubscribeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCommunicationPreferencesV3SubscribeSubscribeResponse postCommunicationPreferencesV3SubscribeSubscribe(org.openapis.openapi.models.shared.PublicUpdateSubscriptionStatusRequest request, org.openapis.openapi.models.operations.PostCommunicationPreferencesV3SubscribeSubscribeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/communication-preferences/v3/subscribe");
         
@@ -101,7 +103,7 @@ public class Status {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -136,10 +138,11 @@ public class Status {
      * Unsubscribe a contact
      * Unsubscribes a contact from the given subscription type. This API is not valid to use for unsubscribing a contact at a brand or portal level and will return an error.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse postCommunicationPreferencesV3UnsubscribeUnsubscribe(org.openapis.openapi.models.operations.PostCommunicationPreferencesV3UnsubscribeUnsubscribeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse postCommunicationPreferencesV3UnsubscribeUnsubscribe(org.openapis.openapi.models.shared.PublicUpdateSubscriptionStatusRequest request, org.openapis.openapi.models.operations.PostCommunicationPreferencesV3UnsubscribeUnsubscribeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/communication-preferences/v3/unsubscribe");
         
@@ -153,7 +156,7 @@ public class Status {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

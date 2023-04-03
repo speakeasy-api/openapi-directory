@@ -35,27 +35,28 @@ public class Apps {
     /**
      * Uploads the specified SSL certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateResponse appengineAppsAuthorizedCertificatesCreate(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateResponse appengineAppsAuthorizedCertificatesCreate(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateRequest request, org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreatePathParams.class, baseUrl, "/v1alpha/apps/{appsId}/authorizedCertificates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateRequest.class, baseUrl, "/v1alpha/apps/{appsId}/authorizedCertificates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "authorizedCertificate", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Apps {
     /**
      * Deletes the specified SSL certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesDeleteResponse appengineAppsAuthorizedCertificatesDelete(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesDeleteResponse appengineAppsAuthorizedCertificatesDelete(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesDeleteRequest request, org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesDeletePathParams.class, baseUrl, "/v1alpha/apps/{appsId}/authorizedCertificates/{authorizedCertificatesId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesDeleteRequest.class, baseUrl, "/v1alpha/apps/{appsId}/authorizedCertificates/{authorizedCertificatesId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Apps {
     /**
      * Gets the specified SSL certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesGetResponse appengineAppsAuthorizedCertificatesGet(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesGetResponse appengineAppsAuthorizedCertificatesGet(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesGetRequest request, org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesGetPathParams.class, baseUrl, "/v1alpha/apps/{appsId}/authorizedCertificates/{authorizedCertificatesId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesGetRequest.class, baseUrl, "/v1alpha/apps/{appsId}/authorizedCertificates/{authorizedCertificatesId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,25 +175,26 @@ public class Apps {
     /**
      * Lists all SSL certificates the user is authorized to administer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesListResponse appengineAppsAuthorizedCertificatesList(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesListResponse appengineAppsAuthorizedCertificatesList(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesListRequest request, org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesListPathParams.class, baseUrl, "/v1alpha/apps/{appsId}/authorizedCertificates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesListRequest.class, baseUrl, "/v1alpha/apps/{appsId}/authorizedCertificates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -217,27 +221,28 @@ public class Apps {
     /**
      * Updates the specified SSL certificate. To renew a certificate and maintain its existing domain mappings, update certificate_data with a new certificate. The new certificate must be applicable to the same domains as the original certificate. The certificate display_name may also be updated.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesPatchResponse appengineAppsAuthorizedCertificatesPatch(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesPatchResponse appengineAppsAuthorizedCertificatesPatch(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesPatchRequest request, org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesPatchPathParams.class, baseUrl, "/v1alpha/apps/{appsId}/authorizedCertificates/{authorizedCertificatesId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesPatchRequest.class, baseUrl, "/v1alpha/apps/{appsId}/authorizedCertificates/{authorizedCertificatesId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "authorizedCertificate", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,25 +269,26 @@ public class Apps {
     /**
      * Lists all domains the user is authorized to administer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppengineAppsAuthorizedDomainsListResponse appengineAppsAuthorizedDomainsList(org.openapis.openapi.models.operations.AppengineAppsAuthorizedDomainsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppengineAppsAuthorizedDomainsListResponse appengineAppsAuthorizedDomainsList(org.openapis.openapi.models.operations.AppengineAppsAuthorizedDomainsListRequest request, org.openapis.openapi.models.operations.AppengineAppsAuthorizedDomainsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsAuthorizedDomainsListPathParams.class, baseUrl, "/v1alpha/apps/{appsId}/authorizedDomains", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsAuthorizedDomainsListRequest.class, baseUrl, "/v1alpha/apps/{appsId}/authorizedDomains", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsAuthorizedDomainsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsAuthorizedDomainsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -309,27 +315,28 @@ public class Apps {
     /**
      * Maps a domain to an application. A user must be authorized to administer a domain in order to map it to an application. For a list of available authorized domains, see AuthorizedDomains.ListAuthorizedDomains.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppengineAppsDomainMappingsCreateResponse appengineAppsDomainMappingsCreate(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppengineAppsDomainMappingsCreateResponse appengineAppsDomainMappingsCreate(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsCreateRequest request, org.openapis.openapi.models.operations.AppengineAppsDomainMappingsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsCreatePathParams.class, baseUrl, "/v1alpha/apps/{appsId}/domainMappings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsCreateRequest.class, baseUrl, "/v1alpha/apps/{appsId}/domainMappings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "domainMapping", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -356,25 +363,26 @@ public class Apps {
     /**
      * Deletes the specified domain mapping. A user must be authorized to administer the associated domain in order to delete a DomainMapping resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppengineAppsDomainMappingsDeleteResponse appengineAppsDomainMappingsDelete(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppengineAppsDomainMappingsDeleteResponse appengineAppsDomainMappingsDelete(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsDeleteRequest request, org.openapis.openapi.models.operations.AppengineAppsDomainMappingsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsDeletePathParams.class, baseUrl, "/v1alpha/apps/{appsId}/domainMappings/{domainMappingsId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsDeleteRequest.class, baseUrl, "/v1alpha/apps/{appsId}/domainMappings/{domainMappingsId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -401,25 +409,26 @@ public class Apps {
     /**
      * Gets the specified domain mapping.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppengineAppsDomainMappingsGetResponse appengineAppsDomainMappingsGet(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppengineAppsDomainMappingsGetResponse appengineAppsDomainMappingsGet(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsGetRequest request, org.openapis.openapi.models.operations.AppengineAppsDomainMappingsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsGetPathParams.class, baseUrl, "/v1alpha/apps/{appsId}/domainMappings/{domainMappingsId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsGetRequest.class, baseUrl, "/v1alpha/apps/{appsId}/domainMappings/{domainMappingsId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -446,25 +455,26 @@ public class Apps {
     /**
      * Lists the domain mappings on an application.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppengineAppsDomainMappingsListResponse appengineAppsDomainMappingsList(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppengineAppsDomainMappingsListResponse appengineAppsDomainMappingsList(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsListRequest request, org.openapis.openapi.models.operations.AppengineAppsDomainMappingsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsListPathParams.class, baseUrl, "/v1alpha/apps/{appsId}/domainMappings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsListRequest.class, baseUrl, "/v1alpha/apps/{appsId}/domainMappings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -491,27 +501,28 @@ public class Apps {
     /**
      * Updates the specified domain mapping. To map an SSL certificate to a domain mapping, update certificate_id to point to an AuthorizedCertificate resource. A user must be authorized to administer the associated domain in order to update a DomainMapping resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppengineAppsDomainMappingsPatchResponse appengineAppsDomainMappingsPatch(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppengineAppsDomainMappingsPatchResponse appengineAppsDomainMappingsPatch(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsPatchRequest request, org.openapis.openapi.models.operations.AppengineAppsDomainMappingsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsPatchPathParams.class, baseUrl, "/v1alpha/apps/{appsId}/domainMappings/{domainMappingsId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsPatchRequest.class, baseUrl, "/v1alpha/apps/{appsId}/domainMappings/{domainMappingsId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "domainMapping", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsDomainMappingsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -538,25 +549,26 @@ public class Apps {
     /**
      * Gets information about a location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppengineAppsLocationsGetResponse appengineAppsLocationsGet(org.openapis.openapi.models.operations.AppengineAppsLocationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppengineAppsLocationsGetResponse appengineAppsLocationsGet(org.openapis.openapi.models.operations.AppengineAppsLocationsGetRequest request, org.openapis.openapi.models.operations.AppengineAppsLocationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsLocationsGetPathParams.class, baseUrl, "/v1alpha/apps/{appsId}/locations/{locationsId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsLocationsGetRequest.class, baseUrl, "/v1alpha/apps/{appsId}/locations/{locationsId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsLocationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsLocationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -583,25 +595,26 @@ public class Apps {
     /**
      * Lists information about the supported locations for this service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppengineAppsLocationsListResponse appengineAppsLocationsList(org.openapis.openapi.models.operations.AppengineAppsLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppengineAppsLocationsListResponse appengineAppsLocationsList(org.openapis.openapi.models.operations.AppengineAppsLocationsListRequest request, org.openapis.openapi.models.operations.AppengineAppsLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsLocationsListPathParams.class, baseUrl, "/v1alpha/apps/{appsId}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsLocationsListRequest.class, baseUrl, "/v1alpha/apps/{appsId}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -628,25 +641,26 @@ public class Apps {
     /**
      * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppengineAppsOperationsGetResponse appengineAppsOperationsGet(org.openapis.openapi.models.operations.AppengineAppsOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppengineAppsOperationsGetResponse appengineAppsOperationsGet(org.openapis.openapi.models.operations.AppengineAppsOperationsGetRequest request, org.openapis.openapi.models.operations.AppengineAppsOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsOperationsGetPathParams.class, baseUrl, "/v1alpha/apps/{appsId}/operations/{operationsId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsOperationsGetRequest.class, baseUrl, "/v1alpha/apps/{appsId}/operations/{operationsId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -673,25 +687,26 @@ public class Apps {
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppengineAppsOperationsListResponse appengineAppsOperationsList(org.openapis.openapi.models.operations.AppengineAppsOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppengineAppsOperationsListResponse appengineAppsOperationsList(org.openapis.openapi.models.operations.AppengineAppsOperationsListRequest request, org.openapis.openapi.models.operations.AppengineAppsOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsOperationsListPathParams.class, baseUrl, "/v1alpha/apps/{appsId}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppengineAppsOperationsListRequest.class, baseUrl, "/v1alpha/apps/{appsId}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppengineAppsOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

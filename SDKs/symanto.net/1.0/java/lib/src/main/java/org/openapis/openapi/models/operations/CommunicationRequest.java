@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CommunicationRequest {
-    
-    public CommunicationQueryParams queryParams;
-    public CommunicationRequest withQueryParams(CommunicationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Post[] requestBody;
+    public CommunicationRequest withRequestBody(org.openapis.openapi.models.shared.Post[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Post[] request;
-    public CommunicationRequest withRequest(org.openapis.openapi.models.shared.Post[] request) {
-        this.request = request;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
+    public Boolean all;
+    public CommunicationRequest withAll(Boolean all) {
+        this.all = all;
         return this;
     }
     

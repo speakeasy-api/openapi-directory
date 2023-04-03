@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeClusterDbRevisionsRequest {
-    
-    public GETDescribeClusterDbRevisionsQueryParams queryParams;
-    public GETDescribeClusterDbRevisionsRequest withQueryParams(GETDescribeClusterDbRevisionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeClusterDbRevisionsActionEnum action;
+    public GETDescribeClusterDbRevisionsRequest withAction(GETDescribeClusterDbRevisionsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * A unique identifier for a cluster whose &lt;code&gt;ClusterDbRevisions&lt;/code&gt; you are requesting. This parameter is case sensitive. All clusters defined for an account are returned by default.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETDescribeClusterDbRevisionsRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
     
-    public GETDescribeClusterDbRevisionsHeaders headers;
-    public GETDescribeClusterDbRevisionsRequest withHeaders(GETDescribeClusterDbRevisionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;An optional parameter that specifies the starting point for returning a set of response records. When the results of a &lt;code&gt;DescribeClusterDbRevisions&lt;/code&gt; request exceed the value specified in &lt;code&gt;MaxRecords&lt;/code&gt;, Amazon Redshift returns a value in the &lt;code&gt;marker&lt;/code&gt; field of the response. You can retrieve the next set of response records by providing the returned &lt;code&gt;marker&lt;/code&gt; value in the &lt;code&gt;marker&lt;/code&gt; parameter and retrying the request. &lt;/p&gt; &lt;p&gt;Constraints: You can specify either the &lt;code&gt;ClusterIdentifier&lt;/code&gt; parameter, or the &lt;code&gt;marker&lt;/code&gt; parameter, but not both.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDescribeClusterDbRevisionsRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The maximum number of response records to return in each call. If the number of remaining response records exceeds the specified MaxRecords value, a value is returned in the &lt;code&gt;marker&lt;/code&gt; field of the response. You can retrieve the next set of response records by providing the returned &lt;code&gt;marker&lt;/code&gt; value in the &lt;code&gt;marker&lt;/code&gt; parameter and retrying the request. &lt;/p&gt; &lt;p&gt;Default: 100&lt;/p&gt; &lt;p&gt;Constraints: minimum 20, maximum 100.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeClusterDbRevisionsRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeClusterDbRevisionsVersionEnum version;
+    public GETDescribeClusterDbRevisionsRequest withVersion(GETDescribeClusterDbRevisionsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeClusterDbRevisionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeClusterDbRevisionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeClusterDbRevisionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeClusterDbRevisionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeClusterDbRevisionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeClusterDbRevisionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeClusterDbRevisionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

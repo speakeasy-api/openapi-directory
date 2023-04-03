@@ -33,24 +33,25 @@ public class Export {
     /**
      * Create new export configuration
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportConfigurationsCreateResponse exportConfigurationsCreate(org.openapis.openapi.models.operations.ExportConfigurationsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportConfigurationsCreateResponse exportConfigurationsCreate(org.openapis.openapi.models.operations.ExportConfigurationsCreateRequest request, org.openapis.openapi.models.operations.ExportConfigurationsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportConfigurationsCreatePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/export_configurations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportConfigurationsCreateRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/export_configurations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -85,19 +86,20 @@ public class Export {
     /**
      * Delete export configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportConfigurationsDeleteResponse exportConfigurationsDelete(org.openapis.openapi.models.operations.ExportConfigurationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportConfigurationsDeleteResponse exportConfigurationsDelete(org.openapis.openapi.models.operations.ExportConfigurationsDeleteRequest request, org.openapis.openapi.models.operations.ExportConfigurationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportConfigurationsDeletePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportConfigurationsDeleteRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,19 +128,20 @@ public class Export {
     /**
      * Disable export configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportConfigurationsDisableResponse exportConfigurationsDisable(org.openapis.openapi.models.operations.ExportConfigurationsDisableRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportConfigurationsDisableResponse exportConfigurationsDisable(org.openapis.openapi.models.operations.ExportConfigurationsDisableRequest request, org.openapis.openapi.models.operations.ExportConfigurationsDisableSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportConfigurationsDisablePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}/disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportConfigurationsDisableRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}/disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -167,19 +170,20 @@ public class Export {
     /**
      * Enable export configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportConfigurationsEnableResponse exportConfigurationsEnable(org.openapis.openapi.models.operations.ExportConfigurationsEnableRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportConfigurationsEnableResponse exportConfigurationsEnable(org.openapis.openapi.models.operations.ExportConfigurationsEnableRequest request, org.openapis.openapi.models.operations.ExportConfigurationsEnableSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportConfigurationsEnablePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}/enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportConfigurationsEnableRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}/enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -208,19 +212,20 @@ public class Export {
     /**
      * Get export configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportConfigurationsGetResponse exportConfigurationsGet(org.openapis.openapi.models.operations.ExportConfigurationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportConfigurationsGetResponse exportConfigurationsGet(org.openapis.openapi.models.operations.ExportConfigurationsGetRequest request, org.openapis.openapi.models.operations.ExportConfigurationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportConfigurationsGetPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportConfigurationsGetRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -255,19 +260,20 @@ public class Export {
     /**
      * List export configurations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportConfigurationsListResponse exportConfigurationsList(org.openapis.openapi.models.operations.ExportConfigurationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportConfigurationsListResponse exportConfigurationsList(org.openapis.openapi.models.operations.ExportConfigurationsListRequest request, org.openapis.openapi.models.operations.ExportConfigurationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportConfigurationsListPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/export_configurations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportConfigurationsListRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/export_configurations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -302,24 +308,25 @@ public class Export {
     /**
      * Partially update export configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportConfigurationsPartialUpdateResponse exportConfigurationsPartialUpdate(org.openapis.openapi.models.operations.ExportConfigurationsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportConfigurationsPartialUpdateResponse exportConfigurationsPartialUpdate(org.openapis.openapi.models.operations.ExportConfigurationsPartialUpdateRequest request, org.openapis.openapi.models.operations.ExportConfigurationsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportConfigurationsPartialUpdatePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportConfigurationsPartialUpdateRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/export_configurations/{export_configuration_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

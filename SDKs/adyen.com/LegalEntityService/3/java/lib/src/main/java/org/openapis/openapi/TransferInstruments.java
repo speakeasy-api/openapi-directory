@@ -34,19 +34,20 @@ public class TransferInstruments {
      * Delete a transfer instrument
      * Deletes a transfer instrument.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteTransferInstrumentsIdResponse deleteTransferInstrumentsId(org.openapis.openapi.models.operations.DeleteTransferInstrumentsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteTransferInstrumentsIdResponse deleteTransferInstrumentsId(org.openapis.openapi.models.operations.DeleteTransferInstrumentsIdRequest request, org.openapis.openapi.models.operations.DeleteTransferInstrumentsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTransferInstrumentsIdPathParams.class, baseUrl, "/transferInstruments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTransferInstrumentsIdRequest.class, baseUrl, "/transferInstruments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -76,19 +77,20 @@ public class TransferInstruments {
      * Get a transfer instrument
      * Returns the details of a transfer instrument.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTransferInstrumentsIdResponse getTransferInstrumentsId(org.openapis.openapi.models.operations.GetTransferInstrumentsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTransferInstrumentsIdResponse getTransferInstrumentsId(org.openapis.openapi.models.operations.GetTransferInstrumentsIdRequest request, org.openapis.openapi.models.operations.GetTransferInstrumentsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransferInstrumentsIdPathParams.class, baseUrl, "/transferInstruments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransferInstrumentsIdRequest.class, baseUrl, "/transferInstruments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,21 +126,22 @@ public class TransferInstruments {
      * Update a transfer instrument
      * Updates a transfer instrument.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchTransferInstrumentsIdResponse patchTransferInstrumentsId(org.openapis.openapi.models.operations.PatchTransferInstrumentsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchTransferInstrumentsIdResponse patchTransferInstrumentsId(org.openapis.openapi.models.operations.PatchTransferInstrumentsIdRequest request, org.openapis.openapi.models.operations.PatchTransferInstrumentsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTransferInstrumentsIdPathParams.class, baseUrl, "/transferInstruments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTransferInstrumentsIdRequest.class, baseUrl, "/transferInstruments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "transferInstrumentInfo", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -178,10 +181,11 @@ public class TransferInstruments {
      * 
      * When the transfer instrument passes the verification checks, you can start sending funds from the balance platform to the transfer instrument (such as payouts).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostTransferInstrumentsResponse postTransferInstruments(org.openapis.openapi.models.operations.PostTransferInstrumentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostTransferInstrumentsResponse postTransferInstruments(org.openapis.openapi.models.shared.TransferInstrumentInfo request, org.openapis.openapi.models.operations.PostTransferInstrumentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transferInstruments");
         
@@ -192,7 +196,7 @@ public class TransferInstruments {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

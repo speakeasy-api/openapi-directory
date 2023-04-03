@@ -4,34 +4,87 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListConferenceRecordingRequest {
-    
-    public ListConferenceRecordingPathParams pathParams;
-    public ListConferenceRecordingRequest withPathParams(ListConferenceRecordingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Conference Recording resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListConferenceRecordingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListConferenceRecordingQueryParams queryParams;
-    public ListConferenceRecordingRequest withQueryParams(ListConferenceRecordingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Conference SID that identifies the conference associated with the recording to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConferenceSid")
+    public String conferenceSid;
+    public ListConferenceRecordingRequest withConferenceSid(String conferenceSid) {
+        this.conferenceSid = conferenceSid;
         return this;
     }
     
-    
-    public ListConferenceRecordingSecurity security;
-    public ListConferenceRecordingRequest withSecurity(ListConferenceRecordingSecurity security) {
-        this.security = security;
+    /**
+     * The `date_created` value, specified as `YYYY-MM-DD`, of the resources to read. You can also specify inequality: `DateCreated&lt;=YYYY-MM-DD` will return recordings generated at or before midnight on a given date, and `DateCreated&gt;=YYYY-MM-DD` returns recordings generated at or after midnight on a date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreated")
+    public LocalDate dateCreated;
+    public ListConferenceRecordingRequest withDateCreated(LocalDate dateCreated) {
+        this.dateCreated = dateCreated;
         return this;
     }
     
+    /**
+     * The `date_created` value, specified as `YYYY-MM-DD`, of the resources to read. You can also specify inequality: `DateCreated&lt;=YYYY-MM-DD` will return recordings generated at or before midnight on a given date, and `DateCreated&gt;=YYYY-MM-DD` returns recordings generated at or after midnight on a date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreated<")
+    public LocalDate dateCreatedLessThan;
+    public ListConferenceRecordingRequest withDateCreatedLessThan(LocalDate dateCreatedLessThan) {
+        this.dateCreatedLessThan = dateCreatedLessThan;
+        return this;
+    }
     
-    public String serverURL;
-    public ListConferenceRecordingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The `date_created` value, specified as `YYYY-MM-DD`, of the resources to read. You can also specify inequality: `DateCreated&lt;=YYYY-MM-DD` will return recordings generated at or before midnight on a given date, and `DateCreated&gt;=YYYY-MM-DD` returns recordings generated at or after midnight on a date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreated>")
+    public LocalDate dateCreatedGreaterThan;
+    public ListConferenceRecordingRequest withDateCreatedGreaterThan(LocalDate dateCreatedGreaterThan) {
+        this.dateCreatedGreaterThan = dateCreatedGreaterThan;
+        return this;
+    }
+    
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListConferenceRecordingRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListConferenceRecordingRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListConferenceRecordingRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

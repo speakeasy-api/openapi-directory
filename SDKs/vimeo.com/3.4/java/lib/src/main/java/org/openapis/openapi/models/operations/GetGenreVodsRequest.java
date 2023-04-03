@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGenreVodsRequest {
-    
-    public GetGenreVodsPathParams pathParams;
-    public GetGenreVodsRequest withPathParams(GetGenreVodsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetGenreVodsDirectionEnum direction;
+    public GetGenreVodsRequest withDirection(GetGenreVodsDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * The attribute by which to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public GetGenreVodsFilterEnum filter;
+    public GetGenreVodsRequest withFilter(GetGenreVodsFilterEnum filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public GetGenreVodsQueryParams queryParams;
-    public GetGenreVodsRequest withQueryParams(GetGenreVodsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the genre.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=genre_id")
+    public String genreId;
+    public GetGenreVodsRequest withGenreId(String genreId) {
+        this.genreId = genreId;
+        return this;
+    }
+    
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetGenreVodsRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetGenreVodsRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The search query to use to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetGenreVodsRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetGenreVodsSortEnum sort;
+    public GetGenreVodsRequest withSort(GetGenreVodsSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

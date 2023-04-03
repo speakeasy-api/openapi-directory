@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveConfigRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=config")
+    public String config;
+    public RetrieveConfigRequest withConfig(String config) {
+        this.config = config;
+        return this;
+    }
     
-    public RetrieveConfigPathParams pathParams;
-    public RetrieveConfigRequest withPathParams(RetrieveConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public RetrieveConfigRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

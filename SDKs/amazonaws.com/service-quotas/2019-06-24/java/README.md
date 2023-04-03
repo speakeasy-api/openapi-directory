@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AssociateServiceQuotaTemplateXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AssociateServiceQuotaTemplateHeaders;
 import org.openapis.openapi.models.operations.AssociateServiceQuotaTemplateRequest;
 import org.openapis.openapi.models.operations.AssociateServiceQuotaTemplateResponse;
 
@@ -27,30 +26,25 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateServiceQuotaTemplateRequest req = new AssociateServiceQuotaTemplateRequest() {{
-                headers = new AssociateServiceQuotaTemplateHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "ServiceQuotasV20190624.AssociateServiceQuotaTemplate";
+                requestBody = new java.util.HashMap<String, Object>() {{
+                    put("provident", "distinctio");
+                    put("quibusdam", "unde");
+                    put("nulla", "corrupti");
                 }};
-                request = new java.util.HashMap<String, Object>() {{
-                    put("vel", "error");
-                    put("deserunt", "suscipit");
-                    put("iure", "magnam");
-                    put("debitis", "ipsa");
-                }};
-            }};            
+                xAmzAlgorithm = "illum";
+                xAmzContentSha256 = "vel";
+                xAmzCredential = "error";
+                xAmzDate = "deserunt";
+                xAmzSecurityToken = "suscipit";
+                xAmzSignature = "iure";
+                xAmzSignedHeaders = "magnam";
+                xAmzTarget = "ServiceQuotasV20190624.AssociateServiceQuotaTemplate";
+            }}            
 
             AssociateServiceQuotaTemplateResponse res = sdk.associateServiceQuotaTemplate(req);
 
@@ -64,7 +58,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

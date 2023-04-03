@@ -4,13 +4,54 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAvailableContentBlocksRequest {
+    /**
+     * (Optional) Positive Number
+     * 
+     * Maximum number of content blocks to retrieve, default to 100 if not provided, maximum acceptable value is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public ListAvailableContentBlocksRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public ListAvailableContentBlocksQueryParams queryParams;
-    public ListAvailableContentBlocksRequest withQueryParams(ListAvailableContentBlocksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Optional) String in ISO 8601
+     * 
+     * Retrieve only content blocks updated at or after the given time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modified_after")
+    public String modifiedAfter;
+    public ListAvailableContentBlocksRequest withModifiedAfter(String modifiedAfter) {
+        this.modifiedAfter = modifiedAfter;
+        return this;
+    }
+    
+    /**
+     * (Optional) String in ISO 8601
+     * 
+     * Retrieve only content blocks updated at or before the given time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modified_before")
+    public String modifiedBefore;
+    public ListAvailableContentBlocksRequest withModifiedBefore(String modifiedBefore) {
+        this.modifiedBefore = modifiedBefore;
+        return this;
+    }
+    
+    /**
+     * (Optional) Positive Number
+     * 
+     * Number of content blocks to skip before returning rest of the templates that fit the search criteria.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public ListAvailableContentBlocksRequest withOffset(String offset) {
+        this.offset = offset;
         return this;
     }
     

@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETAssociatedIpv6PoolCidrsRequest {
-    
-    public GETGETAssociatedIpv6PoolCidrsQueryParams queryParams;
-    public GETGETAssociatedIpv6PoolCidrsRequest withQueryParams(GETGETAssociatedIpv6PoolCidrsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETAssociatedIpv6PoolCidrsActionEnum action;
+    public GETGETAssociatedIpv6PoolCidrsRequest withAction(GETGETAssociatedIpv6PoolCidrsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETGETAssociatedIpv6PoolCidrsRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETGETAssociatedIpv6PoolCidrsHeaders headers;
-    public GETGETAssociatedIpv6PoolCidrsRequest withHeaders(GETGETAssociatedIpv6PoolCidrsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The maximum number of results to return with a single call. To retrieve the remaining results, make another call with the returned &lt;code&gt;nextToken&lt;/code&gt; value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public GETGETAssociatedIpv6PoolCidrsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The token for the next page of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETGETAssociatedIpv6PoolCidrsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The ID of the IPv6 address pool.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PoolId")
+    public String poolId;
+    public GETGETAssociatedIpv6PoolCidrsRequest withPoolId(String poolId) {
+        this.poolId = poolId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETAssociatedIpv6PoolCidrsVersionEnum version;
+    public GETGETAssociatedIpv6PoolCidrsRequest withVersion(GETGETAssociatedIpv6PoolCidrsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGETAssociatedIpv6PoolCidrsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGETAssociatedIpv6PoolCidrsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGETAssociatedIpv6PoolCidrsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGETAssociatedIpv6PoolCidrsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGETAssociatedIpv6PoolCidrsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGETAssociatedIpv6PoolCidrsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGETAssociatedIpv6PoolCidrsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

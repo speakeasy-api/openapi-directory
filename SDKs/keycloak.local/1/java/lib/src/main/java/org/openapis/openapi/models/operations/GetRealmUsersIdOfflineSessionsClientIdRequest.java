@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmUsersIdOfflineSessionsClientIdRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")
+    public String clientId;
+    public GetRealmUsersIdOfflineSessionsClientIdRequest withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
     
-    public GetRealmUsersIdOfflineSessionsClientIdPathParams pathParams;
-    public GetRealmUsersIdOfflineSessionsClientIdRequest withPathParams(GetRealmUsersIdOfflineSessionsClientIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * User id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetRealmUsersIdOfflineSessionsClientIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmUsersIdOfflineSessionsClientIdRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

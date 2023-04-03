@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgCreateTeamRequest {
-    
-    public OrgCreateTeamPathParams pathParams;
-    public OrgCreateTeamRequest withPathParams(OrgCreateTeamPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateTeamOption createTeamOption;
+    public OrgCreateTeamRequest withCreateTeamOption(org.openapis.openapi.models.shared.CreateTeamOption createTeamOption) {
+        this.createTeamOption = createTeamOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateTeamOption request;
-    public OrgCreateTeamRequest withRequest(org.openapis.openapi.models.shared.CreateTeamOption request) {
-        this.request = request;
+    /**
+     * name of the organization
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgCreateTeamRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

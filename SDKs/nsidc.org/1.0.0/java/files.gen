@@ -32,16 +32,13 @@ lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/FacetsSortKeysEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/FacetsSourceEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/FacetsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FacetsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FacetsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/IdSourceEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/IdQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/IdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/IdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/OpenSearchSortKeysEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/OpenSearchSourceEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/OpenSearchQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/OpenSearchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/OpenSearchResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/OpensearchDescriptionResponse.java

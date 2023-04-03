@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteClusterSnapshotRequest {
-    
-    public GETDeleteClusterSnapshotQueryParams queryParams;
-    public GETDeleteClusterSnapshotRequest withQueryParams(GETDeleteClusterSnapshotQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteClusterSnapshotActionEnum action;
+    public GETDeleteClusterSnapshotRequest withAction(GETDeleteClusterSnapshotActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The unique identifier of the cluster the snapshot was created from. This parameter is required if your IAM user or role has a policy containing a snapshot resource element that specifies anything other than * for the cluster name.&lt;/p&gt; &lt;p&gt;Constraints: Must be the name of valid cluster.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotClusterIdentifier")
+    public String snapshotClusterIdentifier;
+    public GETDeleteClusterSnapshotRequest withSnapshotClusterIdentifier(String snapshotClusterIdentifier) {
+        this.snapshotClusterIdentifier = snapshotClusterIdentifier;
+        return this;
+    }
     
-    public GETDeleteClusterSnapshotHeaders headers;
-    public GETDeleteClusterSnapshotRequest withHeaders(GETDeleteClusterSnapshotHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The unique identifier of the manual snapshot to be deleted.&lt;/p&gt; &lt;p&gt;Constraints: Must be the name of an existing snapshot that is in the &lt;code&gt;available&lt;/code&gt;, &lt;code&gt;failed&lt;/code&gt;, or &lt;code&gt;cancelled&lt;/code&gt; state.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotIdentifier")
+    public String snapshotIdentifier;
+    public GETDeleteClusterSnapshotRequest withSnapshotIdentifier(String snapshotIdentifier) {
+        this.snapshotIdentifier = snapshotIdentifier;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteClusterSnapshotVersionEnum version;
+    public GETDeleteClusterSnapshotRequest withVersion(GETDeleteClusterSnapshotVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteClusterSnapshotRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteClusterSnapshotRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteClusterSnapshotRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteClusterSnapshotRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteClusterSnapshotRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteClusterSnapshotRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteClusterSnapshotRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

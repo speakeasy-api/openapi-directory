@@ -4,13 +4,126 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindRequest {
+    /**
+     * Filter attractions by classification id: id of any segment, genre, sub-genre, type, sub-type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classificationId")
+    public Object[] classificationId;
+    public FindRequest withClassificationId(Object[] classificationId) {
+        this.classificationId = classificationId;
+        return this;
+    }
     
-    public FindQueryParams queryParams;
-    public FindRequest withQueryParams(FindQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter attractions by classification name: name of any segment, genre, sub-genre, type, sub-type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classificationName")
+    public Object[] classificationName;
+    public FindRequest withClassificationName(Object[] classificationName) {
+        this.classificationName = classificationName;
+        return this;
+    }
+    
+    /**
+     * Filter entities by its id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public FindRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Yes if you want to display licensed content
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLicensedContent")
+    public FindIncludeLicensedContentEnum includeLicensedContent;
+    public FindRequest withIncludeLicensedContent(FindIncludeLicensedContentEnum includeLicensedContent) {
+        this.includeLicensedContent = includeLicensedContent;
+        return this;
+    }
+    
+    /**
+     * yes, to include spell check suggestions in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeSpellcheck")
+    public FindIncludeSpellcheckEnum includeSpellcheck;
+    public FindRequest withIncludeSpellcheck(FindIncludeSpellcheckEnum includeSpellcheck) {
+        this.includeSpellcheck = includeSpellcheck;
+        return this;
+    }
+    
+    /**
+     * True if you want to have entities flag as test in the response. Only, if you only wanted test entities
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeTest")
+    public FindIncludeTestEnum includeTest;
+    public FindRequest withIncludeTest(FindIncludeTestEnum includeTest) {
+        this.includeTest = includeTest;
+        return this;
+    }
+    
+    /**
+     * Keyword to search on
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword")
+    public String keyword;
+    public FindRequest withKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    
+    /**
+     * The locale in ISO code format. Multiple comma-separated values can be provided. When omitting the country part of the code (e.g. only 'en' or 'fr') then the first matching locale is used. When using a '*' it matches all locales. '*' can only be used at the end (e.g. 'en-us,en,*') 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public FindRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
+    
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public FindRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Page size of the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public String size;
+    public FindRequest withSize(String size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * Sorting order of the search result. Allowable Values : 'name,asc', 'name,desc', 'relevance,asc', 'relevance,desc'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public FindRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Filter entities by its source name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public FindSourceEnum source;
+    public FindRequest withSource(FindSourceEnum source) {
+        this.source = source;
         return this;
     }
     

@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesUpdateRequest {
-    
-    public ReleasesUpdatePathParams pathParams;
-    public ReleasesUpdateRequest withPathParams(ReleasesUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The release information.
      */
     @SpeakeasyMetadata("request:mediaType=text/plain")
-    public byte[] request;
-    public ReleasesUpdateRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public ReleasesUpdateRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ReleasesUpdateRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public ReleasesUpdateSecurity security;
-    public ReleasesUpdateRequest withSecurity(ReleasesUpdateSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ReleasesUpdateRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * The ID of the release
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
+    public Long releaseId;
+    public ReleasesUpdateRequest withReleaseId(Long releaseId) {
+        this.releaseId = releaseId;
         return this;
     }
     

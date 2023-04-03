@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRoomProfileRequest {
-    
-    public UpdateRoomProfilePathParams pathParams;
-    public UpdateRoomProfileRequest withPathParams(UpdateRoomProfilePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateRoomProfileApplicationJSON request;
-    public UpdateRoomProfileRequest withRequest(UpdateRoomProfileApplicationJSON request) {
-        this.request = request;
+    public UpdateRoomProfileApplicationJSON requestBody;
+    public UpdateRoomProfileRequest withRequestBody(UpdateRoomProfileApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateRoomProfileSecurity security;
-    public UpdateRoomProfileRequest withSecurity(UpdateRoomProfileSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of a Zoom Room.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roomId")
+    public String roomId;
+    public UpdateRoomProfileRequest withRoomId(String roomId) {
+        this.roomId = roomId;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdFoldersIdCommonFoldersAllRequest {
-    
-    public GetSpacesSpaceIdFoldersIdCommonFoldersAllPathParams pathParams;
-    public GetSpacesSpaceIdFoldersIdCommonFoldersAllRequest withPathParams(GetSpacesSpaceIdFoldersIdCommonFoldersAllPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * keywords attached to the folder
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Keywords")
+    public String keywords;
+    public GetSpacesSpaceIdFoldersIdCommonFoldersAllRequest withKeywords(String keywords) {
+        this.keywords = keywords;
         return this;
     }
     
+    /**
+     * Name of the folder
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Name")
+    public String name;
+    public GetSpacesSpaceIdFoldersIdCommonFoldersAllRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public GetSpacesSpaceIdFoldersIdCommonFoldersAllQueryParams queryParams;
-    public GetSpacesSpaceIdFoldersIdCommonFoldersAllRequest withQueryParams(GetSpacesSpaceIdFoldersIdCommonFoldersAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesSpaceIdFoldersIdCommonFoldersAllRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdFoldersIdCommonFoldersAllRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

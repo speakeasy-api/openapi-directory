@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchAccessTokenRequest {
-    
-    public FetchAccessTokenPathParams pathParams;
-    public FetchAccessTokenRequest withPathParams(FetchAccessTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique SID identifier of the Service.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchAccessTokenRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public FetchAccessTokenSecurity security;
-    public FetchAccessTokenRequest withSecurity(FetchAccessTokenSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchAccessTokenRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies this Access Token.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchAccessTokenRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

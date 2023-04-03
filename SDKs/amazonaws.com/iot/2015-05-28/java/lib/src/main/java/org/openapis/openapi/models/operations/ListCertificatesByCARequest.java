@@ -4,27 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCertificatesByCARequest {
-    
-    public ListCertificatesByCAPathParams pathParams;
-    public ListCertificatesByCARequest withPathParams(ListCertificatesByCAPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListCertificatesByCARequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public ListCertificatesByCAQueryParams queryParams;
-    public ListCertificatesByCARequest withQueryParams(ListCertificatesByCAQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListCertificatesByCARequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListCertificatesByCARequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public ListCertificatesByCAHeaders headers;
-    public ListCertificatesByCARequest withHeaders(ListCertificatesByCAHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListCertificatesByCARequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListCertificatesByCARequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListCertificatesByCARequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListCertificatesByCARequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The ID of the CA certificate. This operation will list all registered device certificate that were signed by this CA certificate.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=caCertificateId")
+    public String caCertificateId;
+    public ListCertificatesByCARequest withCaCertificateId(String caCertificateId) {
+        this.caCertificateId = caCertificateId;
+        return this;
+    }
+    
+    /**
+     * Specifies the order for results. If True, the results are returned in ascending order, based on the creation date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isAscendingOrder")
+    public Boolean isAscendingOrder;
+    public ListCertificatesByCARequest withIsAscendingOrder(Boolean isAscendingOrder) {
+        this.isAscendingOrder = isAscendingOrder;
+        return this;
+    }
+    
+    /**
+     * The marker for the next set of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=marker")
+    public String marker;
+    public ListCertificatesByCARequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * The result page size.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public ListCertificatesByCARequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

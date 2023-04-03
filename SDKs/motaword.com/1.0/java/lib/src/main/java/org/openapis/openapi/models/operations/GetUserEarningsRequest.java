@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserEarningsRequest {
-    
-    public GetUserEarningsPathParams pathParams;
-    public GetUserEarningsRequest withPathParams(GetUserEarningsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetUserEarningsSecurity security;
-    public GetUserEarningsRequest withSecurity(GetUserEarningsSecurity security) {
-        this.security = security;
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public GetUserEarningsRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

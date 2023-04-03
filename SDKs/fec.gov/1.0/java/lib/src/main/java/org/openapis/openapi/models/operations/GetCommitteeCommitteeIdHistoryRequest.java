@@ -4,20 +4,117 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommitteeCommitteeIdHistoryRequest {
-    
-    public GetCommitteeCommitteeIdHistoryPathParams pathParams;
-    public GetCommitteeCommitteeIdHistoryRequest withPathParams(GetCommitteeCommitteeIdHistoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetCommitteeCommitteeIdHistoryRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=committee_id")
+    public String committeeId;
+    public GetCommitteeCommitteeIdHistoryRequest withCommitteeId(String committeeId) {
+        this.committeeId = committeeId;
+        return this;
+    }
     
-    public GetCommitteeCommitteeIdHistoryQueryParams queryParams;
-    public GetCommitteeCommitteeIdHistoryRequest withQueryParams(GetCommitteeCommitteeIdHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The one-letter designation code of the organization:
+     *          - A authorized by a candidate
+     *          - J joint fundraising committee
+     *          - P principal campaign committee of a candidate
+     *          - U unauthorized
+     *          - B lobbyist/registrant PAC
+     *          - D leadership PAC
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=designation")
+    public GetCommitteeCommitteeIdHistoryDesignationEnum[] designation;
+    public GetCommitteeCommitteeIdHistoryRequest withDesignation(GetCommitteeCommitteeIdHistoryDesignationEnum[] designation) {
+        this.designation = designation;
+        return this;
+    }
+    
+    /**
+     * `True` indicates that full election period of a candidate.
+     * `False` indicates that two year election cycle.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_full")
+    public Boolean electionFull;
+    public GetCommitteeCommitteeIdHistoryRequest withElectionFull(Boolean electionFull) {
+        this.electionFull = electionFull;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetCommitteeCommitteeIdHistoryRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetCommitteeCommitteeIdHistoryRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetCommitteeCommitteeIdHistoryRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetCommitteeCommitteeIdHistoryRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetCommitteeCommitteeIdHistoryRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetCommitteeCommitteeIdHistoryRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
         return this;
     }
     

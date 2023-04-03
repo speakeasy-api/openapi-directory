@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateMockRequest {
-    
-    public UpdateMockPathParams pathParams;
-    public UpdateMockRequest withPathParams(UpdateMockPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateMockRequestBody requestBody;
+    public UpdateMockRequest withRequestBody(UpdateMockRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateMockRequestBody request;
-    public UpdateMockRequest withRequest(UpdateMockRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mock_uid")
+    public String mockUid;
+    public UpdateMockRequest withMockUid(String mockUid) {
+        this.mockUid = mockUid;
         return this;
     }
     

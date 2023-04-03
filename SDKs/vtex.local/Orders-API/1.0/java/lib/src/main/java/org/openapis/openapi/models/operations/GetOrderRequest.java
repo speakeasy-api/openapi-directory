@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrderRequest {
-    
-    public GetOrderPathParams pathParams;
-    public GetOrderRequest withPathParams(GetOrderPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetOrderRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetOrderRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetOrderHeaders headers;
-    public GetOrderRequest withHeaders(GetOrderHeaders headers) {
-        this.headers = headers;
+    /**
+     * Order ID is a unique code that identifies an order. Instead of using `orderId`, you can also make the request using the sequence, a six-digit string that follows the order ID. For example, in order 1268540501456-01 (501456), the sequence is 501456. To use this parameter, replace the value between `{ }` keys in `seq{sequence-number}` with the sequence. For example: `seq501456`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public GetOrderRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryCreateArtifactRequest {
-    
-    public RegistryCreateArtifactPathParams pathParams;
-    public RegistryCreateArtifactRequest withPathParams(RegistryCreateArtifactPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RegistryCreateArtifactQueryParams queryParams;
-    public RegistryCreateArtifactRequest withQueryParams(RegistryCreateArtifactQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ArtifactInput request;
-    public RegistryCreateArtifactRequest withRequest(org.openapis.openapi.models.shared.ArtifactInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ArtifactInput artifactInput;
+    public RegistryCreateArtifactRequest withArtifactInput(org.openapis.openapi.models.shared.ArtifactInput artifactInput) {
+        this.artifactInput = artifactInput;
+        return this;
+    }
+    
+    /**
+     * Required. The ID to use for the artifact, which will become the final component of the artifact's resource name. This value should be 4-63 characters, and valid characters are /[a-z][0-9]-/. Following AIP-162, IDs must not have the form of a UUID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=artifactId")
+    public String artifactId;
+    public RegistryCreateArtifactRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
+        return this;
+    }
+    
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryCreateArtifactRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryCreateArtifactRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest {
-    
-    public DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNamePathParams pathParams;
-    public DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest withPathParams(DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * the organization name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationName")
+    public String organizationName;
+    public DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest withOrganizationName(String organizationName) {
+        this.organizationName = organizationName;
         return this;
     }
     
-    
-    public DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameSecurity security;
-    public DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest withSecurity(DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameSecurity security) {
-        this.security = security;
+    /**
+     * The name of the receiver
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=receiverName")
+    public String receiverName;
+    public DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest withReceiverName(String receiverName) {
+        this.receiverName = receiverName;
         return this;
     }
     

@@ -46,7 +46,7 @@ public class Oidc {
      */
     public org.openapis.openapi.models.operations.OidcGetOidcCustomSubTemplateForOrgResponse oidcGetOidcCustomSubTemplateForOrg(org.openapis.openapi.models.operations.OidcGetOidcCustomSubTemplateForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OidcGetOidcCustomSubTemplateForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/oidc/customization/sub", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OidcGetOidcCustomSubTemplateForOrgRequest.class, baseUrl, "/orgs/{org}/actions/oidc/customization/sub", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -88,12 +88,12 @@ public class Oidc {
      */
     public org.openapis.openapi.models.operations.OidcUpdateOidcCustomSubTemplateForOrgResponse oidcUpdateOidcCustomSubTemplateForOrg(org.openapis.openapi.models.operations.OidcUpdateOidcCustomSubTemplateForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OidcUpdateOidcCustomSubTemplateForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/oidc/customization/sub", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OidcUpdateOidcCustomSubTemplateForOrgRequest.class, baseUrl, "/orgs/{org}/actions/oidc/customization/sub", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "oidcCustomSub", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

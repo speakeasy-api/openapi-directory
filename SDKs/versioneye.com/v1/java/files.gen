@@ -31,17 +31,12 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ScansSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ScansQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ScansRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ScansResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ScansIdSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ScansIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ScansIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ScansIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ScansIdFilesFileIdSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ScansIdFilesFileIdPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ScansIdFilesFileIdQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ScansIdFilesFileIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ScansIdFilesFileIdResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
 USAGE.md

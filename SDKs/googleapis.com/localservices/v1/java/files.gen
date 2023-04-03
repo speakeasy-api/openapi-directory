@@ -32,11 +32,9 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/LocalservicesAccountReportsSearchSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/LocalservicesAccountReportsSearchQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/LocalservicesAccountReportsSearchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/LocalservicesAccountReportsSearchResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/LocalservicesDetailedLeadReportsSearchSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/LocalservicesDetailedLeadReportsSearchQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/LocalservicesDetailedLeadReportsSearchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/LocalservicesDetailedLeadReportsSearchResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleAdsHomeservicesLocalservicesV1SearchAccountReportsResponse.java
@@ -44,8 +42,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleAdsHomeservicesLocals
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleAdsHomeservicesLocalservicesV1AggregatorInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleAdsHomeservicesLocalservicesV1SearchDetailedLeadReportsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum.java

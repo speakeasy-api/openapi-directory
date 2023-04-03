@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteNetworkSwitchAccessPolicyRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accessPolicyNumber")
+    public String accessPolicyNumber;
+    public DeleteNetworkSwitchAccessPolicyRequest withAccessPolicyNumber(String accessPolicyNumber) {
+        this.accessPolicyNumber = accessPolicyNumber;
+        return this;
+    }
     
-    public DeleteNetworkSwitchAccessPolicyPathParams pathParams;
-    public DeleteNetworkSwitchAccessPolicyRequest withPathParams(DeleteNetworkSwitchAccessPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public DeleteNetworkSwitchAccessPolicyRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

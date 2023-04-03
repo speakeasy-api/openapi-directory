@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAlbumCustomThumbRequest {
-    
-    public CreateAlbumCustomThumbPathParams pathParams;
-    public CreateAlbumCustomThumbRequest withPathParams(CreateAlbumCustomThumbPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the album.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=album_id")
+    public Double albumId;
+    public CreateAlbumCustomThumbRequest withAlbumId(Double albumId) {
+        this.albumId = albumId;
         return this;
     }
     
-    
-    public CreateAlbumCustomThumbSecurity security;
-    public CreateAlbumCustomThumbRequest withSecurity(CreateAlbumCustomThumbSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public CreateAlbumCustomThumbRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

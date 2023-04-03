@@ -7,10 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateGlobalJwtVerifierSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
-    public org.openapis.openapi.models.shared.SchemeOtoroshiAuth otoroshiAuth;
-    public CreateGlobalJwtVerifierSecurity withOtoroshiAuth(org.openapis.openapi.models.shared.SchemeOtoroshiAuth otoroshiAuth) {
-        this.otoroshiAuth = otoroshiAuth;
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=password")
+    public String password;
+    public CreateGlobalJwtVerifierSecurity withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=username")
+    public String username;
+    public CreateGlobalJwtVerifierSecurity withUsername(String username) {
+        this.username = username;
         return this;
     }
     

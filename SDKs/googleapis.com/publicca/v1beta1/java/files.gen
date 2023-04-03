@@ -31,13 +31,9 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/PubliccaProjectsLocationsExternalAccountKeysCreateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/PubliccaProjectsLocationsExternalAccountKeysCreatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/PubliccaProjectsLocationsExternalAccountKeysCreateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PubliccaProjectsLocationsExternalAccountKeysCreateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PubliccaProjectsLocationsExternalAccountKeysCreateResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExternalAccountKey.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 USAGE.md

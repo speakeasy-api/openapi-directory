@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListPathwaysRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetListPathwaysFormatEnum format;
+    public GetListPathwaysRequest withFormat(GetListPathwaysFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetListPathwaysQueryParams queryParams;
-    public GetListPathwaysRequest withQueryParams(GetListPathwaysQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The organism to filter by (optional)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=organism")
+    public String organism;
+    public GetListPathwaysRequest withOrganism(String organism) {
+        this.organism = organism;
         return this;
     }
     

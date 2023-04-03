@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditCoveragePlanRequest {
-    
-    public EditCoveragePlanPathParams pathParams;
-    public EditCoveragePlanRequest withPathParams(EditCoveragePlanPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CoveragePlanEditRequest coveragePlanEditRequest;
+    public EditCoveragePlanRequest withCoveragePlanEditRequest(org.openapis.openapi.models.shared.CoveragePlanEditRequest coveragePlanEditRequest) {
+        this.coveragePlanEditRequest = coveragePlanEditRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CoveragePlanEditRequest request;
-    public EditCoveragePlanRequest withRequest(org.openapis.openapi.models.shared.CoveragePlanEditRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the coverage plan in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=plan_id")
+    public String planId;
+    public EditCoveragePlanRequest withPlanId(String planId) {
+        this.planId = planId;
+        return this;
+    }
+    
+    /**
+     * The current version identifier of the coverage plan
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public EditCoveragePlanRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

@@ -31,11 +31,9 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetQueryJsonFacetsEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetQueryJsonQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetQueryJsonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetQueryJSON200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetQueryJsonResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Event.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeApikey.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

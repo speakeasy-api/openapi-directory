@@ -33,25 +33,26 @@ public class Assets {
     /**
      * Lists assets with time and resource types and returns paged results in response.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudassetAssetsListResponse cloudassetAssetsList(org.openapis.openapi.models.operations.CloudassetAssetsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudassetAssetsListResponse cloudassetAssetsList(org.openapis.openapi.models.operations.CloudassetAssetsListRequest request, org.openapis.openapi.models.operations.CloudassetAssetsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetAssetsListPathParams.class, baseUrl, "/v1/{parent}/assets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetAssetsListRequest.class, baseUrl, "/v1/{parent}/assets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetAssetsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetAssetsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

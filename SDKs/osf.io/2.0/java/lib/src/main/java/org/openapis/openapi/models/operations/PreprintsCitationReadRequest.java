@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PreprintsCitationReadRequest {
+    /**
+     * The unique identifier of the preprint.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=preprint_id")
+    public String preprintId;
+    public PreprintsCitationReadRequest withPreprintId(String preprintId) {
+        this.preprintId = preprintId;
+        return this;
+    }
     
-    public PreprintsCitationReadPathParams pathParams;
-    public PreprintsCitationReadRequest withPathParams(PreprintsCitationReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the citation style.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=style_id")
+    public String styleId;
+    public PreprintsCitationReadRequest withStyleId(String styleId) {
+        this.styleId = styleId;
         return this;
     }
     

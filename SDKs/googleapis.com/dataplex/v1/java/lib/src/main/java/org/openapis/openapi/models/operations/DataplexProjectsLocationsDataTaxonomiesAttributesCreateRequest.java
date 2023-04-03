@@ -7,31 +7,150 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest {
-    
-    public DataplexProjectsLocationsDataTaxonomiesAttributesCreatePathParams pathParams;
-    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest withPathParams(DataplexProjectsLocationsDataTaxonomiesAttributesCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateQueryParams queryParams;
-    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest withQueryParams(DataplexProjectsLocationsDataTaxonomiesAttributesCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudDataplexV1DataAttributeInput request;
-    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudDataplexV1DataAttributeInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudDataplexV1DataAttributeInput googleCloudDataplexV1DataAttributeInput;
+    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest withGoogleCloudDataplexV1DataAttributeInput(org.openapis.openapi.models.shared.GoogleCloudDataplexV1DataAttributeInput googleCloudDataplexV1DataAttributeInput) {
+        this.googleCloudDataplexV1DataAttributeInput = googleCloudDataplexV1DataAttributeInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateSecurity security;
-    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest withSecurity(DataplexProjectsLocationsDataTaxonomiesAttributesCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Required. DataAttribute identifier. * Must contain only lowercase letters, numbers and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the DataTaxonomy.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dataAttributeId")
+    public String dataAttributeId;
+    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest withDataAttributeId(String dataAttributeId) {
+        this.dataAttributeId = dataAttributeId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The resource name of the parent data taxonomy projects/{project_number}/locations/{location_id}/dataTaxonomies/{data_taxonomy_id}
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Optional. Only validate the request, but do not perform mutations. The default is false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=validateOnly")
+    public Boolean validateOnly;
+    public DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest withValidateOnly(Boolean validateOnly) {
+        this.validateOnly = validateOnly;
         return this;
     }
     

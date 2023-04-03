@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompleteDirectSendRequest {
-    
-    public CompleteDirectSendPathParams pathParams;
-    public CompleteDirectSendRequest withPathParams(CompleteDirectSendPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Access Token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public CompleteDirectSendRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
         return this;
     }
     
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public CompleteDirectSendRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
     
-    public CompleteDirectSendHeaders headers;
-    public CompleteDirectSendRequest withHeaders(CompleteDirectSendHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID of the share to trigger invitations for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CompleteDirectSendRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

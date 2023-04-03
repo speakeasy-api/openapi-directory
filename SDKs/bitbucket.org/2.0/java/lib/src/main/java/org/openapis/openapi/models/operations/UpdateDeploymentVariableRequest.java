@@ -7,20 +7,53 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeploymentVariableRequest {
-    
-    public UpdateDeploymentVariablePathParams pathParams;
-    public UpdateDeploymentVariableRequest withPathParams(UpdateDeploymentVariablePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The updated deployment variable.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public UpdateDeploymentVariableRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public UpdateDeploymentVariableRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_uuid")
+    public String environmentUuid;
+    public UpdateDeploymentVariableRequest withEnvironmentUuid(String environmentUuid) {
+        this.environmentUuid = environmentUuid;
+        return this;
+    }
+    
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public UpdateDeploymentVariableRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * The UUID of the variable to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=variable_uuid")
+    public String variableUuid;
+    public UpdateDeploymentVariableRequest withVariableUuid(String variableUuid) {
+        this.variableUuid = variableUuid;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public UpdateDeploymentVariableRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

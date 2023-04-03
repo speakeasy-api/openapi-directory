@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmptcpGetTraceRequest {
-    
-    public ProtocolSnmptcpGetTracePathParams pathParams;
-    public ProtocolSnmptcpGetTraceRequest withPathParams(ProtocolSnmptcpGetTracePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show whether SNMPTCP tracing is enabled
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSnmptcpGetTraceRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

@@ -4,20 +4,73 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationLicensesRequest {
-    
-    public GetOrganizationLicensesPathParams pathParams;
-    public GetOrganizationLicensesRequest withPathParams(GetOrganizationLicensesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter the licenses to those assigned to a particular device
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceSerial")
+    public String deviceSerial;
+    public GetOrganizationLicensesRequest withDeviceSerial(String deviceSerial) {
+        this.deviceSerial = deviceSerial;
         return this;
     }
     
+    /**
+     * A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
+    public String endingBefore;
+    public GetOrganizationLicensesRequest withEndingBefore(String endingBefore) {
+        this.endingBefore = endingBefore;
+        return this;
+    }
     
-    public GetOrganizationLicensesQueryParams queryParams;
-    public GetOrganizationLicensesRequest withQueryParams(GetOrganizationLicensesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter the licenses to those assigned in a particular network
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=networkId")
+    public String networkId;
+    public GetOrganizationLicensesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationLicensesRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    
+    /**
+     * The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public Long perPage;
+    public GetOrganizationLicensesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
+    public String startingAfter;
+    public GetOrganizationLicensesRequest withStartingAfter(String startingAfter) {
+        this.startingAfter = startingAfter;
+        return this;
+    }
+    
+    /**
+     * Filter the licenses to those in a particular state. Can be one of 'active', 'expired', 'expiring', 'recentlyQueued', 'unused' or 'unusedActive'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public GetOrganizationLicensesStateEnum state;
+    public GetOrganizationLicensesRequest withState(GetOrganizationLicensesStateEnum state) {
+        this.state = state;
         return this;
     }
     

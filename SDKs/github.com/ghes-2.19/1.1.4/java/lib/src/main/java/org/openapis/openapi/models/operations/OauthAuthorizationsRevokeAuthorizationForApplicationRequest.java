@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OauthAuthorizationsRevokeAuthorizationForApplicationRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=access_token")
+    public String accessToken;
+    public OauthAuthorizationsRevokeAuthorizationForApplicationRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public OauthAuthorizationsRevokeAuthorizationForApplicationPathParams pathParams;
-    public OauthAuthorizationsRevokeAuthorizationForApplicationRequest withPathParams(OauthAuthorizationsRevokeAuthorizationForApplicationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The client ID of your GitHub app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
+    public String clientId;
+    public OauthAuthorizationsRevokeAuthorizationForApplicationRequest withClientId(String clientId) {
+        this.clientId = clientId;
         return this;
     }
     

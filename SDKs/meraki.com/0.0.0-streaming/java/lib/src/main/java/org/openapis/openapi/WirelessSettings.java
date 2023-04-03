@@ -40,7 +40,7 @@ public class WirelessSettings {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSettingsResponse getNetworkWirelessSettings(org.openapis.openapi.models.operations.GetNetworkWirelessSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSettingsPathParams.class, baseUrl, "/networks/{networkId}/wireless/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSettingsRequest.class, baseUrl, "/networks/{networkId}/wireless/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class WirelessSettings {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSettingsResponse updateNetworkWirelessSettings(org.openapis.openapi.models.operations.UpdateNetworkWirelessSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSettingsPathParams.class, baseUrl, "/networks/{networkId}/wireless/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSettingsRequest.class, baseUrl, "/networks/{networkId}/wireless/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

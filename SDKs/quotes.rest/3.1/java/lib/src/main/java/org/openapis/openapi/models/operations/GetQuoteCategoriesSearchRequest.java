@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteCategoriesSearchRequest {
-    
-    public GetQuoteCategoriesSearchQueryParams queryParams;
-    public GetQuoteCategoriesSearchRequest withQueryParams(GetQuoteCategoriesSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Response is paged. This parameter controls how many is returned in the result. The maximum depends on the subscription level.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetQuoteCategoriesSearchRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Text string to search for in the categories
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetQuoteCategoriesSearchRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
     
-    public GetQuoteCategoriesSearchSecurity security;
-    public GetQuoteCategoriesSearchRequest withSecurity(GetQuoteCategoriesSearchSecurity security) {
-        this.security = security;
+    /**
+     * Response is paged. This parameter controls where response starts the listing at
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Integer start;
+    public GetQuoteCategoriesSearchRequest withStart(Integer start) {
+        this.start = start;
         return this;
     }
     

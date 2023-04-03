@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnableCheckpointFirewallRequest {
-    
-    public EnableCheckpointFirewallPathParams pathParams;
-    public EnableCheckpointFirewallRequest withPathParams(EnableCheckpointFirewallPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public EnableCheckpointFirewallSecurity security;
-    public EnableCheckpointFirewallRequest withSecurity(EnableCheckpointFirewallSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public EnableCheckpointFirewallRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

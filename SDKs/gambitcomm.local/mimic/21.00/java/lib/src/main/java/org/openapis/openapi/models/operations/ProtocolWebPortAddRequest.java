@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolWebPortAddRequest {
+    /**
+     * Agent to add WEB port
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolWebPortAddRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolWebPortAddPathParams pathParams;
-    public ProtocolWebPortAddRequest withPathParams(ProtocolWebPortAddPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * TCP port
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
+    public Integer port;
+    public ProtocolWebPortAddRequest withPort(Integer port) {
+        this.port = port;
         return this;
     }
     

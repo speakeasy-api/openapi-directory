@@ -69,7 +69,7 @@ public class Translate {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostDetectResponse postDetect(org.openapis.openapi.models.operations.PostDetectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostDetectResponse postDetect(String request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/detect");
         
@@ -108,7 +108,7 @@ public class Translate {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostTranslateResponse postTranslate(org.openapis.openapi.models.operations.PostTranslateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostTranslateResponse postTranslate(String request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/translate");
         
@@ -147,7 +147,7 @@ public class Translate {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostTranslateFileResponse postTranslateFile(org.openapis.openapi.models.operations.PostTranslateFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostTranslateFileResponse postTranslateFile(String request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/translate_file");
         

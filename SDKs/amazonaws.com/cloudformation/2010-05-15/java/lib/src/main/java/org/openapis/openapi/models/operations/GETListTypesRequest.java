@@ -4,20 +4,139 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListTypesRequest {
-    
-    public GETListTypesQueryParams queryParams;
-    public GETListTypesRequest withQueryParams(GETListTypesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETListTypesActionEnum action;
+    public GETListTypesRequest withAction(GETListTypesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The deprecation status of the extension that you want to get summary information about.&lt;/p&gt; &lt;p&gt;Valid values include:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;LIVE&lt;/code&gt;: The extension is registered for use in CloudFormation operations.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DEPRECATED&lt;/code&gt;: The extension has been deregistered and can no longer be used in CloudFormation operations.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeprecatedStatus")
+    public GETListTypesDeprecatedStatusEnum deprecatedStatus;
+    public GETListTypesRequest withDeprecatedStatus(GETListTypesDeprecatedStatusEnum deprecatedStatus) {
+        this.deprecatedStatus = deprecatedStatus;
+        return this;
+    }
     
-    public GETListTypesHeaders headers;
-    public GETListTypesRequest withHeaders(GETListTypesHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;Filter criteria to use in determining which extensions to return.&lt;/p&gt; &lt;p&gt;Filters must be compatible with &lt;code&gt;Visibility&lt;/code&gt; to return valid results. For example, specifying &lt;code&gt;AWS_TYPES&lt;/code&gt; for &lt;code&gt;Category&lt;/code&gt; and &lt;code&gt;PRIVATE&lt;/code&gt; for &lt;code&gt;Visibility&lt;/code&gt; returns an empty list of types, but specifying &lt;code&gt;PUBLIC&lt;/code&gt; for &lt;code&gt;Visibility&lt;/code&gt; returns the desired list.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Filters")
+    public GETListTypesFilters filters;
+    public GETListTypesRequest withFilters(GETListTypesFilters filters) {
+        this.filters = filters;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to be returned with a single call. If the number of available results exceeds this maximum, the response includes a &lt;code&gt;NextToken&lt;/code&gt; value that you can assign to the &lt;code&gt;NextToken&lt;/code&gt; request parameter to get the next set of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public GETListTypesRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * If the previous paginated request didn't return all the remaining results, the response object's &lt;code&gt;NextToken&lt;/code&gt; parameter value is set to a token. To retrieve the next set of results, call this action again and assign that token to the request object's &lt;code&gt;NextToken&lt;/code&gt; parameter. If there are no remaining results, the previous response object's &lt;code&gt;NextToken&lt;/code&gt; parameter is set to &lt;code&gt;null&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETListTypesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;For resource types, the provisioning behavior of the resource type. CloudFormation determines the provisioning type during registration, based on the types of handlers in the schema handler package submitted.&lt;/p&gt; &lt;p&gt;Valid values include:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;FULLY_MUTABLE&lt;/code&gt;: The resource type includes an update handler to process updates to the type during stack update operations.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;IMMUTABLE&lt;/code&gt;: The resource type doesn't include an update handler, so the type can't be updated and must instead be replaced during stack update operations.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;NON_PROVISIONABLE&lt;/code&gt;: The resource type doesn't include create, read, and delete handlers, and therefore can't actually be provisioned.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;The default is &lt;code&gt;FULLY_MUTABLE&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ProvisioningType")
+    public GETListTypesProvisioningTypeEnum provisioningType;
+    public GETListTypesRequest withProvisioningType(GETListTypesProvisioningTypeEnum provisioningType) {
+        this.provisioningType = provisioningType;
+        return this;
+    }
+    
+    /**
+     * The type of extension.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
+    public GETListTypesTypeEnum type;
+    public GETListTypesRequest withType(GETListTypesTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETListTypesVersionEnum version;
+    public GETListTypesRequest withVersion(GETListTypesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The scope at which the extensions are visible and usable in CloudFormation operations.&lt;/p&gt; &lt;p&gt;Valid values include:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;PRIVATE&lt;/code&gt;: Extensions that are visible and usable within this account and region. This includes:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Private extensions you have registered in this account and region.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Public extensions that you have activated in this account and region.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;PUBLIC&lt;/code&gt;: Extensions that are publicly visible and available to be activated within any Amazon Web Services account. This includes extensions from Amazon Web Services, in addition to third-party publishers.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;The default is &lt;code&gt;PRIVATE&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Visibility")
+    public GETListTypesVisibilityEnum visibility;
+    public GETListTypesRequest withVisibility(GETListTypesVisibilityEnum visibility) {
+        this.visibility = visibility;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETListTypesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETListTypesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETListTypesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETListTypesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETListTypesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETListTypesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETListTypesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

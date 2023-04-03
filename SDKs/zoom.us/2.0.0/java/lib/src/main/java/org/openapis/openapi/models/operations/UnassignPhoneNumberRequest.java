@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnassignPhoneNumberRequest {
-    
-    public UnassignPhoneNumberPathParams pathParams;
-    public UnassignPhoneNumberRequest withPathParams(UnassignPhoneNumberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Provide either phone number or phoneNumberId of the user. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=phoneNumberId")
+    public String phoneNumberId;
+    public UnassignPhoneNumberRequest withPhoneNumberId(String phoneNumberId) {
+        this.phoneNumberId = phoneNumberId;
         return this;
     }
     
-    
-    public UnassignPhoneNumberSecurity security;
-    public UnassignPhoneNumberRequest withSecurity(UnassignPhoneNumberSecurity security) {
-        this.security = security;
+    /**
+     * Provide either userId or email address of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UnassignPhoneNumberRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AvatarsGetBrowserRequest {
-    
-    public AvatarsGetBrowserPathParams pathParams;
-    public AvatarsGetBrowserRequest withPathParams(AvatarsGetBrowserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Browser Code.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=code")
+    public String code;
+    public AvatarsGetBrowserRequest withCode(String code) {
+        this.code = code;
         return this;
     }
     
-    
-    public AvatarsGetBrowserQueryParams queryParams;
-    public AvatarsGetBrowserRequest withQueryParams(AvatarsGetBrowserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Image height. Pass an integer between 0 to 2000. Defaults to 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
+    public Integer height;
+    public AvatarsGetBrowserRequest withHeight(Integer height) {
+        this.height = height;
         return this;
     }
     
+    /**
+     * Image quality. Pass an integer between 0 to 100. Defaults to 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quality")
+    public Integer quality;
+    public AvatarsGetBrowserRequest withQuality(Integer quality) {
+        this.quality = quality;
+        return this;
+    }
     
-    public AvatarsGetBrowserSecurity security;
-    public AvatarsGetBrowserRequest withSecurity(AvatarsGetBrowserSecurity security) {
-        this.security = security;
+    /**
+     * Image width. Pass an integer between 0 to 2000. Defaults to 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
+    public Integer width;
+    public AvatarsGetBrowserRequest withWidth(Integer width) {
+        this.width = width;
         return this;
     }
     

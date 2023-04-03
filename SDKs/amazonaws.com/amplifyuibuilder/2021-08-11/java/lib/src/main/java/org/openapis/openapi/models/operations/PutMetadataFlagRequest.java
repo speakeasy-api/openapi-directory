@@ -7,24 +7,89 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutMetadataFlagRequest {
-    
-    public PutMetadataFlagPathParams pathParams;
-    public PutMetadataFlagRequest withPathParams(PutMetadataFlagPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutMetadataFlagHeaders headers;
-    public PutMetadataFlagRequest withHeaders(PutMetadataFlagHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutMetadataFlagRequestBody request;
-    public PutMetadataFlagRequest withRequest(PutMetadataFlagRequestBody request) {
-        this.request = request;
+    public PutMetadataFlagRequestBody requestBody;
+    public PutMetadataFlagRequest withRequestBody(PutMetadataFlagRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public PutMetadataFlagRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public PutMetadataFlagRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public PutMetadataFlagRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public PutMetadataFlagRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public PutMetadataFlagRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public PutMetadataFlagRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public PutMetadataFlagRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The unique ID for the Amplify app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public String appId;
+    public PutMetadataFlagRequest withAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    
+    /**
+     * The name of the backend environment that is part of the Amplify app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environmentName")
+    public String environmentName;
+    public PutMetadataFlagRequest withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
+        return this;
+    }
+    
+    /**
+     * The name of the feature associated with the metadata.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=featureName")
+    public String featureName;
+    public PutMetadataFlagRequest withFeatureName(String featureName) {
+        this.featureName = featureName;
         return this;
     }
     

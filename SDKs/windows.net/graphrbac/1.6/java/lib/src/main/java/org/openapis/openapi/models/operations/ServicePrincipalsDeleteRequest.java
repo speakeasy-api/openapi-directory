@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServicePrincipalsDeleteRequest {
-    
-    public ServicePrincipalsDeletePathParams pathParams;
-    public ServicePrincipalsDeleteRequest withPathParams(ServicePrincipalsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public ServicePrincipalsDeleteRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The object ID of the service principal to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=objectId")
+    public String objectId;
+    public ServicePrincipalsDeleteRequest withObjectId(String objectId) {
+        this.objectId = objectId;
+        return this;
+    }
     
-    public ServicePrincipalsDeleteQueryParams queryParams;
-    public ServicePrincipalsDeleteRequest withQueryParams(ServicePrincipalsDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public ServicePrincipalsDeleteRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

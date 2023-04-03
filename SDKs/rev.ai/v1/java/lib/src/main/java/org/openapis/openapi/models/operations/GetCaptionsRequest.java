@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCaptionsRequest {
-    
-    public GetCaptionsPathParams pathParams;
-    public GetCaptionsRequest withPathParams(GetCaptionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * MIME type specifying the caption output format
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public org.openapis.openapi.models.shared.AcceptCaptionEnum accept;
+    public GetCaptionsRequest withAccept(org.openapis.openapi.models.shared.AcceptCaptionEnum accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetCaptionsQueryParams queryParams;
-    public GetCaptionsRequest withQueryParams(GetCaptionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Rev.ai API Job Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetCaptionsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetCaptionsHeaders headers;
-    public GetCaptionsRequest withHeaders(GetCaptionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Identifies which channel of the job output to caption. Default is `null` which works only for jobs with no `speaker_channels_count` provided during job submission.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=speaker_channel")
+    public Long speakerChannel;
+    public GetCaptionsRequest withSpeakerChannel(Long speakerChannel) {
+        this.speakerChannel = speakerChannel;
         return this;
     }
     

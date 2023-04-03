@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteMemberRequest {
-    
-    public DeleteMemberPathParams pathParams;
-    public DeleteMemberRequest withPathParams(DeleteMemberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) the message belongs to.  Can be the Channel's `sid` or `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public DeleteMemberRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
         return this;
     }
     
-    
-    public DeleteMemberSecurity security;
-    public DeleteMemberRequest withSecurity(DeleteMemberSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to delete the resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteMemberRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteMemberRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Member resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteMemberRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDistrictStatusRequest {
-    
-    public GetDistrictStatusPathParams pathParams;
-    public GetDistrictStatusRequest withPathParams(GetDistrictStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetDistrictStatusRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

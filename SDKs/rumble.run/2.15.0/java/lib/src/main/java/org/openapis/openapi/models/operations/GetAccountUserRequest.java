@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountUserRequest {
-    
-    public GetAccountUserPathParams pathParams;
-    public GetAccountUserRequest withPathParams(GetAccountUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetAccountUserSecurity security;
-    public GetAccountUserRequest withSecurity(GetAccountUserSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the user to retrieve
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public String userId;
+    public GetAccountUserRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

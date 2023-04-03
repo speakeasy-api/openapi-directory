@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAuthenticatedUserRequest {
-    
-    public GetAuthenticatedUserQueryParams queryParams;
-    public GetAuthenticatedUserRequest withQueryParams(GetAuthenticatedUserQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetAuthenticatedUserSecurity security;
-    public GetAuthenticatedUserRequest withSecurity(GetAuthenticatedUserSecurity security) {
-        this.security = security;
+    /**
+     * Only return the user id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlyId")
+    public Boolean onlyId;
+    public GetAuthenticatedUserRequest withOnlyId(Boolean onlyId) {
+        this.onlyId = onlyId;
         return this;
     }
     

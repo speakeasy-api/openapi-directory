@@ -117,7 +117,7 @@ public class SDK {
 
     public org.openapis.openapi.models.operations.GetAddressResponse getAddress(org.openapis.openapi.models.operations.GetAddressRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddressPathParams.class, baseUrl, "/{address}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddressRequest.class, baseUrl, "/{address}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,27 +4,146 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageObjectsDeleteRequest {
-    
-    public StorageObjectsDeletePathParams pathParams;
-    public StorageObjectsDeleteRequest withPathParams(StorageObjectsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public StorageObjectsDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public StorageObjectsDeleteQueryParams queryParams;
-    public StorageObjectsDeleteRequest withQueryParams(StorageObjectsDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Name of the bucket in which the object resides.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket")
+    public String bucket;
+    public StorageObjectsDeleteRequest withBucket(String bucket) {
+        this.bucket = bucket;
         return this;
     }
     
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public StorageObjectsDeleteRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public StorageObjectsDeleteSecurity security;
-    public StorageObjectsDeleteRequest withSecurity(StorageObjectsDeleteSecurity security) {
-        this.security = security;
+    /**
+     * If present, permanently deletes a specific revision of this object (as opposed to the latest version, the default).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=generation")
+    public String generation;
+    public StorageObjectsDeleteRequest withGeneration(String generation) {
+        this.generation = generation;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the object's current generation matches the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifGenerationMatch")
+    public String ifGenerationMatch;
+    public StorageObjectsDeleteRequest withIfGenerationMatch(String ifGenerationMatch) {
+        this.ifGenerationMatch = ifGenerationMatch;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the object's current generation does not match the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifGenerationNotMatch")
+    public String ifGenerationNotMatch;
+    public StorageObjectsDeleteRequest withIfGenerationNotMatch(String ifGenerationNotMatch) {
+        this.ifGenerationNotMatch = ifGenerationNotMatch;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the object's current metageneration matches the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationMatch")
+    public String ifMetagenerationMatch;
+    public StorageObjectsDeleteRequest withIfMetagenerationMatch(String ifMetagenerationMatch) {
+        this.ifMetagenerationMatch = ifMetagenerationMatch;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the object's current metageneration does not match the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationNotMatch")
+    public String ifMetagenerationNotMatch;
+    public StorageObjectsDeleteRequest withIfMetagenerationNotMatch(String ifMetagenerationNotMatch) {
+        this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public StorageObjectsDeleteRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public StorageObjectsDeleteRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Name of the object.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object")
+    public String object;
+    public StorageObjectsDeleteRequest withObject(String object) {
+        this.object = object;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public StorageObjectsDeleteRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public StorageObjectsDeleteRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public StorageObjectsDeleteRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

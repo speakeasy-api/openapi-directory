@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchUsersRequest {
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public SearchUsersDirectionEnum direction;
+    public SearchUsersRequest withDirection(SearchUsersDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public SearchUsersQueryParams queryParams;
-    public SearchUsersRequest withQueryParams(SearchUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public SearchUsersRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public SearchUsersRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The search query to use to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public SearchUsersRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public SearchUsersSortEnum sort;
+    public SearchUsersRequest withSort(SearchUsersSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

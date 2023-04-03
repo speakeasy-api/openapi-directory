@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNhClothingRequest {
-    
-    public GetNhClothingQueryParams queryParams;
-    public GetNhClothingRequest withQueryParams(GetNhClothingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The version of the API you are calling, written as `1.0.0`. This is specified as required as good practice, but it is not actually enforced by the API. If you do not specify a version, you will be served the latest version, which may eventually result in breaking changes.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Version")
+    public String acceptVersion;
+    public GetNhClothingRequest withAcceptVersion(String acceptVersion) {
+        this.acceptVersion = acceptVersion;
         return this;
     }
     
+    /**
+     * Your UUID secret key, granted to you by the Nookipedia team. Required for accessing the API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-API-KEY")
+    public String xApiKey;
+    public GetNhClothingRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
+        return this;
+    }
     
-    public GetNhClothingHeaders headers;
-    public GetNhClothingRequest withHeaders(GetNhClothingHeaders headers) {
-        this.headers = headers;
+    /**
+     * Specify the category of clothing to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public GetNhClothingCategoryEnum category;
+    public GetNhClothingRequest withCategory(GetNhClothingCategoryEnum category) {
+        this.category = category;
+        return this;
+    }
+    
+    /**
+     * Return clothing that matches the provided colors (may specify one or two colors). Colors are used for gifting villagers.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color")
+    public GetNhClothingColorEnum[] color;
+    public GetNhClothingRequest withColor(GetNhClothingColorEnum[] color) {
+        this.color = color;
+        return this;
+    }
+    
+    /**
+     * When set to `true`, only clothing names are returned. Instead of an array of objects with all details, the return will be an array of strings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludedetails")
+    public String excludedetails;
+    public GetNhClothingRequest withExcludedetails(String excludedetails) {
+        this.excludedetails = excludedetails;
+        return this;
+    }
+    
+    /**
+     * Return clothing that have the specified Label theme. This is used for completing the requested outfit theme for [Label](https://nookipedia.com/wiki/Label) when she visits the player's island.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=labeltheme")
+    public GetNhClothingLabelthemeEnum labeltheme;
+    public GetNhClothingRequest withLabeltheme(GetNhClothingLabelthemeEnum labeltheme) {
+        this.labeltheme = labeltheme;
+        return this;
+    }
+    
+    /**
+     * Return clothing that matches the provided styles (may specify one or two styles). Styles are used for gifting villagers.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=style")
+    public GetNhClothingStyleEnum[] style;
+    public GetNhClothingRequest withStyle(GetNhClothingStyleEnum[] style) {
+        this.style = style;
         return this;
     }
     

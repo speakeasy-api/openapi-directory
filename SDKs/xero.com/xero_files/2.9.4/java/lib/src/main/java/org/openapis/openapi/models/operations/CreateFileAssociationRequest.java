@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateFileAssociationRequest {
-    
-    public CreateFileAssociationPathParams pathParams;
-    public CreateFileAssociationRequest withPathParams(CreateFileAssociationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateFileAssociationHeaders headers;
-    public CreateFileAssociationRequest withHeaders(CreateFileAssociationHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Association request;
-    public CreateFileAssociationRequest withRequest(org.openapis.openapi.models.shared.Association request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Association association;
+    public CreateFileAssociationRequest withAssociation(org.openapis.openapi.models.shared.Association association) {
+        this.association = association;
         return this;
     }
     
+    /**
+     * File id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FileId")
+    public String fileId;
+    public CreateFileAssociationRequest withFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
     
-    public CreateFileAssociationSecurity security;
-    public CreateFileAssociationRequest withSecurity(CreateFileAssociationSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
+    public String xeroTenantId;
+    public CreateFileAssociationRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

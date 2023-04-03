@@ -40,13 +40,13 @@ public class FloatingIPActions {
      */
     public org.openapis.openapi.models.operations.GetFloatingIpsIdActionsResponse getFloatingIpsIdActions(org.openapis.openapi.models.operations.GetFloatingIpsIdActionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFloatingIpsIdActionsPathParams.class, baseUrl, "/floating_ips/{id}/actions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFloatingIpsIdActionsRequest.class, baseUrl, "/floating_ips/{id}/actions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFloatingIpsIdActionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFloatingIpsIdActionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -85,7 +85,7 @@ public class FloatingIPActions {
      */
     public org.openapis.openapi.models.operations.GetFloatingIpsIdActionsActionIdResponse getFloatingIpsIdActionsActionId(org.openapis.openapi.models.operations.GetFloatingIpsIdActionsActionIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFloatingIpsIdActionsActionIdPathParams.class, baseUrl, "/floating_ips/{id}/actions/{action_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFloatingIpsIdActionsActionIdRequest.class, baseUrl, "/floating_ips/{id}/actions/{action_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -124,12 +124,12 @@ public class FloatingIPActions {
      */
     public org.openapis.openapi.models.operations.PostFloatingIpsIdActionsAssignResponse postFloatingIpsIdActionsAssign(org.openapis.openapi.models.operations.PostFloatingIpsIdActionsAssignRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostFloatingIpsIdActionsAssignPathParams.class, baseUrl, "/floating_ips/{id}/actions/assign", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostFloatingIpsIdActionsAssignRequest.class, baseUrl, "/floating_ips/{id}/actions/assign", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -165,12 +165,12 @@ public class FloatingIPActions {
      */
     public org.openapis.openapi.models.operations.PostFloatingIpsIdActionsChangeDnsPtrResponse postFloatingIpsIdActionsChangeDnsPtr(org.openapis.openapi.models.operations.PostFloatingIpsIdActionsChangeDnsPtrRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostFloatingIpsIdActionsChangeDnsPtrPathParams.class, baseUrl, "/floating_ips/{id}/actions/change_dns_ptr", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostFloatingIpsIdActionsChangeDnsPtrRequest.class, baseUrl, "/floating_ips/{id}/actions/change_dns_ptr", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -206,12 +206,12 @@ public class FloatingIPActions {
      */
     public org.openapis.openapi.models.operations.PostFloatingIpsIdActionsChangeProtectionResponse postFloatingIpsIdActionsChangeProtection(org.openapis.openapi.models.operations.PostFloatingIpsIdActionsChangeProtectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostFloatingIpsIdActionsChangeProtectionPathParams.class, baseUrl, "/floating_ips/{id}/actions/change_protection", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostFloatingIpsIdActionsChangeProtectionRequest.class, baseUrl, "/floating_ips/{id}/actions/change_protection", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -247,7 +247,7 @@ public class FloatingIPActions {
      */
     public org.openapis.openapi.models.operations.PostFloatingIpsIdActionsUnassignResponse postFloatingIpsIdActionsUnassign(org.openapis.openapi.models.operations.PostFloatingIpsIdActionsUnassignRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostFloatingIpsIdActionsUnassignPathParams.class, baseUrl, "/floating_ips/{id}/actions/unassign", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostFloatingIpsIdActionsUnassignRequest.class, baseUrl, "/floating_ips/{id}/actions/unassign", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMarketingV3MarketingEventsAppIdSettingsCreateRequest {
-    
-    public PostMarketingV3MarketingEventsAppIdSettingsCreatePathParams pathParams;
-    public PostMarketingV3MarketingEventsAppIdSettingsCreateRequest withPathParams(PostMarketingV3MarketingEventsAppIdSettingsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EventDetailSettingsUrl request;
-    public PostMarketingV3MarketingEventsAppIdSettingsCreateRequest withRequest(org.openapis.openapi.models.shared.EventDetailSettingsUrl request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.EventDetailSettingsUrl eventDetailSettingsUrl;
+    public PostMarketingV3MarketingEventsAppIdSettingsCreateRequest withEventDetailSettingsUrl(org.openapis.openapi.models.shared.EventDetailSettingsUrl eventDetailSettingsUrl) {
+        this.eventDetailSettingsUrl = eventDetailSettingsUrl;
         return this;
     }
     
-    
-    public PostMarketingV3MarketingEventsAppIdSettingsCreateSecurity security;
-    public PostMarketingV3MarketingEventsAppIdSettingsCreateRequest withSecurity(PostMarketingV3MarketingEventsAppIdSettingsCreateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public PostMarketingV3MarketingEventsAppIdSettingsCreateRequest withAppId(Integer appId) {
+        this.appId = appId;
         return this;
     }
     

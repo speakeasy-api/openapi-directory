@@ -4,20 +4,69 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppointmentsListRequest {
-    
-    public AppointmentsListQueryParams queryParams;
-    public AppointmentsListRequest withQueryParams(AppointmentsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public AppointmentsListRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public String date;
+    public AppointmentsListRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
     
-    public AppointmentsListSecurity security;
-    public AppointmentsListRequest withSecurity(AppointmentsListSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_range")
+    public String dateRange;
+    public AppointmentsListRequest withDateRange(String dateRange) {
+        this.dateRange = dateRange;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public AppointmentsListRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
+    public Long office;
+    public AppointmentsListRequest withOffice(Long office) {
+        this.office = office;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public AppointmentsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public AppointmentsListRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public AppointmentsListRequest withSince(String since) {
+        this.since = since;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public AppointmentsListRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

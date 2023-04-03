@@ -34,27 +34,28 @@ public class Presentations {
     /**
      * Applies one or more updates to the presentation. Each request is validated before being applied. If any request is not valid, then the entire request will fail and nothing will be applied. Some requests have replies to give you some information about how they are applied. Other requests do not need to return information; these each return an empty reply. The order of replies matches that of the requests. For example, suppose you call batchUpdate with four updates, and only the third one returns information. The response would have two empty replies: the reply to the third request, and another empty reply, in that order. Because other users may be editing the presentation, the presentation might not exactly reflect your changes: your changes may be altered with respect to collaborator changes. If there are no collaborators, the presentation should reflect your changes. In any case, the updates in your request are guaranteed to be applied together atomically.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdateResponse slidesPresentationsBatchUpdate(org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdateResponse slidesPresentationsBatchUpdate(org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdateRequest request, org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdatePathParams.class, baseUrl, "/v1/presentations/{presentationId}:batchUpdate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdateRequest.class, baseUrl, "/v1/presentations/{presentationId}:batchUpdate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchUpdatePresentationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class Presentations {
     /**
      * Creates a blank presentation using the title given in the request. If a `presentationId` is provided, it is used as the ID of the new presentation. Otherwise, a new ID is generated. Other fields in the request, including any provided content, are ignored. Returns the created presentation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SlidesPresentationsCreateResponse slidesPresentationsCreate(org.openapis.openapi.models.operations.SlidesPresentationsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SlidesPresentationsCreateResponse slidesPresentationsCreate(org.openapis.openapi.models.operations.SlidesPresentationsCreateRequest request, org.openapis.openapi.models.operations.SlidesPresentationsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/presentations");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "presentation", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SlidesPresentationsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SlidesPresentationsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,25 +130,26 @@ public class Presentations {
     /**
      * Gets the latest version of the specified presentation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SlidesPresentationsGetResponse slidesPresentationsGet(org.openapis.openapi.models.operations.SlidesPresentationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SlidesPresentationsGetResponse slidesPresentationsGet(org.openapis.openapi.models.operations.SlidesPresentationsGetRequest request, org.openapis.openapi.models.operations.SlidesPresentationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SlidesPresentationsGetPathParams.class, baseUrl, "/v1/presentations/{presentationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SlidesPresentationsGetRequest.class, baseUrl, "/v1/presentations/{presentationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SlidesPresentationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SlidesPresentationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,25 +176,26 @@ public class Presentations {
     /**
      * Gets the latest version of the specified page in the presentation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SlidesPresentationsPagesGetResponse slidesPresentationsPagesGet(org.openapis.openapi.models.operations.SlidesPresentationsPagesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SlidesPresentationsPagesGetResponse slidesPresentationsPagesGet(org.openapis.openapi.models.operations.SlidesPresentationsPagesGetRequest request, org.openapis.openapi.models.operations.SlidesPresentationsPagesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SlidesPresentationsPagesGetPathParams.class, baseUrl, "/v1/presentations/{presentationId}/pages/{pageObjectId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SlidesPresentationsPagesGetRequest.class, baseUrl, "/v1/presentations/{presentationId}/pages/{pageObjectId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SlidesPresentationsPagesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SlidesPresentationsPagesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,25 +222,26 @@ public class Presentations {
     /**
      * Generates a thumbnail of the latest version of the specified page in the presentation and returns a URL to the thumbnail image. This request counts as an [expensive read request](/slides/limits) for quota purposes.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SlidesPresentationsPagesGetThumbnailResponse slidesPresentationsPagesGetThumbnail(org.openapis.openapi.models.operations.SlidesPresentationsPagesGetThumbnailRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SlidesPresentationsPagesGetThumbnailResponse slidesPresentationsPagesGetThumbnail(org.openapis.openapi.models.operations.SlidesPresentationsPagesGetThumbnailRequest request, org.openapis.openapi.models.operations.SlidesPresentationsPagesGetThumbnailSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SlidesPresentationsPagesGetThumbnailPathParams.class, baseUrl, "/v1/presentations/{presentationId}/pages/{pageObjectId}/thumbnail", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SlidesPresentationsPagesGetThumbnailRequest.class, baseUrl, "/v1/presentations/{presentationId}/pages/{pageObjectId}/thumbnail", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SlidesPresentationsPagesGetThumbnailQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SlidesPresentationsPagesGetThumbnailRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

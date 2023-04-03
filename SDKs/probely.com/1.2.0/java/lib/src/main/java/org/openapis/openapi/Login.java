@@ -42,7 +42,7 @@ public class Login {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAuthObtainResponse postAuthObtain(org.openapis.openapi.models.operations.PostAuthObtainRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAuthObtainResponse postAuthObtain(org.openapis.openapi.models.shared.Login request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/auth/obtain/");
         
@@ -102,7 +102,7 @@ public class Login {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAuthRefreshResponse postAuthRefresh(org.openapis.openapi.models.operations.PostAuthRefreshRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAuthRefreshResponse postAuthRefresh(org.openapis.openapi.models.operations.PostAuthRefreshRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/auth/refresh/");
         
@@ -162,7 +162,7 @@ public class Login {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAuthRevokeResponse postAuthRevoke(org.openapis.openapi.models.operations.PostAuthRevokeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAuthRevokeResponse postAuthRevoke(org.openapis.openapi.models.operations.PostAuthRevokeRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/auth/revoke/");
         
@@ -224,7 +224,7 @@ public class Login {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAuthVerifyResponse postAuthVerify(org.openapis.openapi.models.operations.PostAuthVerifyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAuthVerifyResponse postAuthVerify(org.openapis.openapi.models.operations.PostAuthVerifyRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/auth/verify/");
         
@@ -286,7 +286,7 @@ public class Login {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostEnterpriseAuthObtainResponse postEnterpriseAuthObtain(org.openapis.openapi.models.operations.PostEnterpriseAuthObtainRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostEnterpriseAuthObtainResponse postEnterpriseAuthObtain(org.openapis.openapi.models.shared.Login request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/enterprise/auth/obtain/");
         
@@ -346,7 +346,7 @@ public class Login {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostEnterpriseAuthRefreshResponse postEnterpriseAuthRefresh(org.openapis.openapi.models.operations.PostEnterpriseAuthRefreshRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostEnterpriseAuthRefreshResponse postEnterpriseAuthRefresh(org.openapis.openapi.models.operations.PostEnterpriseAuthRefreshRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/enterprise/auth/refresh/");
         
@@ -406,7 +406,7 @@ public class Login {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostEnterpriseAuthRevokeResponse postEnterpriseAuthRevoke(org.openapis.openapi.models.operations.PostEnterpriseAuthRevokeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostEnterpriseAuthRevokeResponse postEnterpriseAuthRevoke(org.openapis.openapi.models.operations.PostEnterpriseAuthRevokeRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/enterprise/auth/revoke/");
         
@@ -468,7 +468,7 @@ public class Login {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostEnterpriseAuthVerifyResponse postEnterpriseAuthVerify(org.openapis.openapi.models.operations.PostEnterpriseAuthVerifyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostEnterpriseAuthVerifyResponse postEnterpriseAuthVerify(org.openapis.openapi.models.operations.PostEnterpriseAuthVerifyRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/enterprise/auth/verify/");
         

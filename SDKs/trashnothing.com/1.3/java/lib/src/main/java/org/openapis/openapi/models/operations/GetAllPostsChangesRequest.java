@@ -4,20 +4,49 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllPostsChangesRequest {
-    
-    public GetAllPostsChangesQueryParams queryParams;
-    public GetAllPostsChangesRequest withQueryParams(GetAllPostsChangesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only changes older than this UTC date and time will be returned. The UTC date and time used must be within a day or less of date_min. And the date and time must be rounded to the nearest second.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_max")
+    public OffsetDateTime dateMax;
+    public GetAllPostsChangesRequest withDateMax(OffsetDateTime dateMax) {
+        this.dateMax = dateMax;
         return this;
     }
     
+    /**
+     * Only changes newer than or equal to this UTC date and time will be returned. The UTC date and time used must be within a day or less of date_max. And the date and time must be within the last 30 days. And the date and time must be rounded to the nearest second.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_min")
+    public OffsetDateTime dateMin;
+    public GetAllPostsChangesRequest withDateMin(OffsetDateTime dateMin) {
+        this.dateMin = dateMin;
+        return this;
+    }
     
-    public GetAllPostsChangesSecurity security;
-    public GetAllPostsChangesRequest withSecurity(GetAllPostsChangesSecurity security) {
-        this.security = security;
+    /**
+     * The page of changes to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetAllPostsChangesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of changes to return per page (must be &gt;= 1 and &lt;= 50).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetAllPostsChangesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

@@ -7,10 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppApiTokensListSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
-    public org.openapis.openapi.models.shared.SchemeBasic basic;
-    public AppApiTokensListSecurity withBasic(org.openapis.openapi.models.shared.SchemeBasic basic) {
-        this.basic = basic;
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=password")
+    public String password;
+    public AppApiTokensListSecurity withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=username")
+    public String username;
+    public AppApiTokensListSecurity withUsername(String username) {
+        this.username = username;
         return this;
     }
     

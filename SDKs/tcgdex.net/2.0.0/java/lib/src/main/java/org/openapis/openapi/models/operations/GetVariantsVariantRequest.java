@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVariantsVariantRequest {
-    
-    public GetVariantsVariantPathParams pathParams;
-    public GetVariantsVariantRequest withPathParams(GetVariantsVariantPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=variant")
+    public String variant;
+    public GetVariantsVariantRequest withVariant(String variant) {
+        this.variant = variant;
         return this;
     }
     

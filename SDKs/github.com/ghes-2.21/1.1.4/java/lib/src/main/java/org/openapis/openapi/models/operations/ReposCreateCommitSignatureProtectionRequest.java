@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposCreateCommitSignatureProtectionRequest {
+    /**
+     * The name of the branch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
+    public String branch;
+    public ReposCreateCommitSignatureProtectionRequest withBranch(String branch) {
+        this.branch = branch;
+        return this;
+    }
     
-    public ReposCreateCommitSignatureProtectionPathParams pathParams;
-    public ReposCreateCommitSignatureProtectionRequest withPathParams(ReposCreateCommitSignatureProtectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposCreateCommitSignatureProtectionRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposCreateCommitSignatureProtectionRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

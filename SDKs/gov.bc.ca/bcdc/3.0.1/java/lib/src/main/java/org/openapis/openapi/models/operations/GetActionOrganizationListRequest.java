@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActionOrganizationListRequest {
+    /**
+     * The number of organizations to be returned per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetActionOrganizationListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetActionOrganizationListQueryParams queryParams;
-    public GetActionOrganizationListRequest withQueryParams(GetActionOrganizationListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The offset (index) of the first organizations to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetActionOrganizationListRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

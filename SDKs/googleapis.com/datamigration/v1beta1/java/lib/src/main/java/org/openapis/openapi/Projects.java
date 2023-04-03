@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates a new connection profile in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateResponse datamigrationProjectsLocationsConnectionProfilesCreate(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateResponse datamigrationProjectsLocationsConnectionProfilesCreate(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreatePathParams.class, baseUrl, "/v1beta1/{parent}/connectionProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest.class, baseUrl, "/v1beta1/{parent}/connectionProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "connectionProfileInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Retrieve a list of all connection profiles in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesListResponse datamigrationProjectsLocationsConnectionProfilesList(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesListResponse datamigrationProjectsLocationsConnectionProfilesList(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesListRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesListPathParams.class, baseUrl, "/v1beta1/{parent}/connectionProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesListRequest.class, baseUrl, "/v1beta1/{parent}/connectionProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Projects {
     /**
      * Lists information about the supported locations for this service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsListResponse datamigrationProjectsLocationsList(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsListResponse datamigrationProjectsLocationsList(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsListRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsListPathParams.class, baseUrl, "/v1beta1/{name}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsListRequest.class, baseUrl, "/v1beta1/{name}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,27 +175,28 @@ public class Projects {
     /**
      * Creates a new migration job in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsCreateResponse datamigrationProjectsLocationsMigrationJobsCreate(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsCreateResponse datamigrationProjectsLocationsMigrationJobsCreate(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsCreateRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/migrationJobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsCreateRequest.class, baseUrl, "/v1beta1/{parent}/migrationJobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "migrationJobInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,27 +223,28 @@ public class Projects {
     /**
      * Generate a SSH configuration script to configure the reverse SSH connectivity.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptResponse datamigrationProjectsLocationsMigrationJobsGenerateSshScript(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptResponse datamigrationProjectsLocationsMigrationJobsGenerateSshScript(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptPathParams.class, baseUrl, "/v1beta1/{migrationJob}:generateSshScript", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptRequest.class, baseUrl, "/v1beta1/{migrationJob}:generateSshScript", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "generateSshScriptRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGenerateSshScriptRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,25 +271,26 @@ public class Projects {
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyResponse datamigrationProjectsLocationsMigrationJobsGetIamPolicy(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyResponse datamigrationProjectsLocationsMigrationJobsGetIamPolicy(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyPathParams.class, baseUrl, "/v1beta1/{resource}:getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyRequest.class, baseUrl, "/v1beta1/{resource}:getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,25 +317,26 @@ public class Projects {
     /**
      * Lists migration jobs in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsListResponse datamigrationProjectsLocationsMigrationJobsList(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsListResponse datamigrationProjectsLocationsMigrationJobsList(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsListRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsListPathParams.class, baseUrl, "/v1beta1/{parent}/migrationJobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsListRequest.class, baseUrl, "/v1beta1/{parent}/migrationJobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -356,27 +363,28 @@ public class Projects {
     /**
      * Updates the parameters of a single migration job.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPatchResponse datamigrationProjectsLocationsMigrationJobsPatch(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPatchResponse datamigrationProjectsLocationsMigrationJobsPatch(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPatchRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPatchPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPatchRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "migrationJobInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -403,27 +411,28 @@ public class Projects {
     /**
      * Promote a migration job, stopping replication to the destination and promoting the destination to be a standalone database.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPromoteResponse datamigrationProjectsLocationsMigrationJobsPromote(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPromoteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPromoteResponse datamigrationProjectsLocationsMigrationJobsPromote(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPromoteRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPromoteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPromotePathParams.class, baseUrl, "/v1beta1/{name}:promote", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPromoteRequest.class, baseUrl, "/v1beta1/{name}:promote", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPromoteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsPromoteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -450,27 +459,28 @@ public class Projects {
     /**
      * Restart a stopped or failed migration job, resetting the destination instance to its original state and starting the migration process from scratch.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsRestartResponse datamigrationProjectsLocationsMigrationJobsRestart(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsRestartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsRestartResponse datamigrationProjectsLocationsMigrationJobsRestart(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsRestartRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsRestartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsRestartPathParams.class, baseUrl, "/v1beta1/{name}:restart", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsRestartRequest.class, baseUrl, "/v1beta1/{name}:restart", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsRestartQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsRestartRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,27 +507,28 @@ public class Projects {
     /**
      * Resume a migration job that is currently stopped and is resumable (was stopped during CDC phase).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsResumeResponse datamigrationProjectsLocationsMigrationJobsResume(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsResumeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsResumeResponse datamigrationProjectsLocationsMigrationJobsResume(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsResumeRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsResumeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsResumePathParams.class, baseUrl, "/v1beta1/{name}:resume", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsResumeRequest.class, baseUrl, "/v1beta1/{name}:resume", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsResumeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsResumeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -544,27 +555,28 @@ public class Projects {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyResponse datamigrationProjectsLocationsMigrationJobsSetIamPolicy(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyResponse datamigrationProjectsLocationsMigrationJobsSetIamPolicy(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyPathParams.class, baseUrl, "/v1beta1/{resource}:setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyRequest.class, baseUrl, "/v1beta1/{resource}:setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -591,27 +603,28 @@ public class Projects {
     /**
      * Start an already created migration job.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStartResponse datamigrationProjectsLocationsMigrationJobsStart(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStartResponse datamigrationProjectsLocationsMigrationJobsStart(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStartRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStartPathParams.class, baseUrl, "/v1beta1/{name}:start", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStartRequest.class, baseUrl, "/v1beta1/{name}:start", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStartQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStartRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -638,27 +651,28 @@ public class Projects {
     /**
      * Stops a running migration job.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStopResponse datamigrationProjectsLocationsMigrationJobsStop(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStopRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStopResponse datamigrationProjectsLocationsMigrationJobsStop(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStopRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStopSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStopPathParams.class, baseUrl, "/v1beta1/{name}:stop", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStopRequest.class, baseUrl, "/v1beta1/{name}:stop", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStopQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsStopRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -685,27 +699,28 @@ public class Projects {
     /**
      * Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsResponse datamigrationProjectsLocationsMigrationJobsTestIamPermissions(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsResponse datamigrationProjectsLocationsMigrationJobsTestIamPermissions(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsPathParams.class, baseUrl, "/v1beta1/{resource}:testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsRequest.class, baseUrl, "/v1beta1/{resource}:testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testIamPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -732,27 +747,28 @@ public class Projects {
     /**
      * Verify a migration job, making sure the destination can reach the source and that all configuration and prerequisites are met.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsVerifyResponse datamigrationProjectsLocationsMigrationJobsVerify(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsVerifyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsVerifyResponse datamigrationProjectsLocationsMigrationJobsVerify(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsVerifyRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsVerifySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsVerifyPathParams.class, baseUrl, "/v1beta1/{name}:verify", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsVerifyRequest.class, baseUrl, "/v1beta1/{name}:verify", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsVerifyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsMigrationJobsVerifyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -779,27 +795,28 @@ public class Projects {
     /**
      * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsCancelResponse datamigrationProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsCancelResponse datamigrationProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsCancelRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsCancelPathParams.class, baseUrl, "/v1beta1/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsCancelRequest.class, baseUrl, "/v1beta1/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -826,25 +843,26 @@ public class Projects {
     /**
      * Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsDeleteResponse datamigrationProjectsLocationsOperationsDelete(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsDeleteResponse datamigrationProjectsLocationsOperationsDelete(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsDeleteRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsDeletePathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsDeleteRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -871,25 +889,26 @@ public class Projects {
     /**
      * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsGetResponse datamigrationProjectsLocationsOperationsGet(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsGetResponse datamigrationProjectsLocationsOperationsGet(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsGetRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsGetPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsGetRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -916,25 +935,26 @@ public class Projects {
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsListResponse datamigrationProjectsLocationsOperationsList(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsListResponse datamigrationProjectsLocationsOperationsList(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsListRequest request, org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsListPathParams.class, baseUrl, "/v1beta1/{name}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsListRequest.class, baseUrl, "/v1beta1/{name}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatamigrationProjectsLocationsOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

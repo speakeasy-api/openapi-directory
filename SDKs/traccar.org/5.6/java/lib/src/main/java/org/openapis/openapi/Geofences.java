@@ -42,7 +42,7 @@ public class Geofences {
      */
     public org.openapis.openapi.models.operations.DeleteGeofencesIdResponse deleteGeofencesId(org.openapis.openapi.models.operations.DeleteGeofencesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteGeofencesIdPathParams.class, baseUrl, "/geofences/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteGeofencesIdRequest.class, baseUrl, "/geofences/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class Geofences {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeofencesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeofencesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -119,7 +119,7 @@ public class Geofences {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGeofencesResponse postGeofences(org.openapis.openapi.models.operations.PostGeofencesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGeofencesResponse postGeofences(org.openapis.openapi.models.shared.Geofence request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/geofences");
         
@@ -165,12 +165,12 @@ public class Geofences {
      */
     public org.openapis.openapi.models.operations.PutGeofencesIdResponse putGeofencesId(org.openapis.openapi.models.operations.PutGeofencesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutGeofencesIdPathParams.class, baseUrl, "/geofences/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutGeofencesIdRequest.class, baseUrl, "/geofences/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "geofence", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

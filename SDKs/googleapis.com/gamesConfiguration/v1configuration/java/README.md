@@ -18,14 +18,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsDeleteSecurity;
-import org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsDeletePathParams;
-import org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsDeleteQueryParams;
 import org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsDeleteRequest;
 import org.openapis.openapi.models.operations.GamesConfigurationAchievementConfigurationsDeleteResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -34,33 +30,24 @@ public class Application {
                 .build();
 
             GamesConfigurationAchievementConfigurationsDeleteRequest req = new GamesConfigurationAchievementConfigurationsDeleteRequest() {{
-                security = new GamesConfigurationAchievementConfigurationsDeleteSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new GamesConfigurationAchievementConfigurationsDeletePathParams() {{
-                    achievementId = "corrupti";
-                }};
-                queryParams = new GamesConfigurationAchievementConfigurationsDeleteQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                achievementId = "distinctio";
+                alt = "proto";
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
+                oauthToken = "illum";
+                prettyPrint = false;
+                quotaUser = "vel";
+                uploadType = "error";
+                uploadProtocol = "deserunt";
+            }}            
 
-            GamesConfigurationAchievementConfigurationsDeleteResponse res = sdk.achievementConfigurations.gamesConfigurationAchievementConfigurationsDelete(req);
+            GamesConfigurationAchievementConfigurationsDeleteResponse res = sdk.achievementConfigurations.gamesConfigurationAchievementConfigurationsDelete(req, new GamesConfigurationAchievementConfigurationsDeleteSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -72,7 +59,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### achievementConfigurations

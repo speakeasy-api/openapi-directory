@@ -38,13 +38,13 @@ public class WmsWmts {
      */
     public org.openapis.openapi.models.operations.GetCapabilitiesResponse getCapabilities(org.openapis.openapi.models.operations.GetCapabilitiesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCapabilitiesPathParams.class, baseUrl, "/map/{versionNumber}/wms//", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCapabilitiesRequest.class, baseUrl, "/map/{versionNumber}/wms//", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCapabilitiesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCapabilitiesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -80,13 +80,13 @@ public class WmsWmts {
      */
     public org.openapis.openapi.models.operations.GetMapResponse getMap(org.openapis.openapi.models.operations.GetMapRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMapPathParams.class, baseUrl, "/map/{versionNumber}/wms/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMapRequest.class, baseUrl, "/map/{versionNumber}/wms/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMapQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMapRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -125,7 +125,7 @@ public class WmsWmts {
      */
     public org.openapis.openapi.models.operations.GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlResponse getMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXml(org.openapis.openapi.models.operations.GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlPathParams.class, baseUrl, "/map/{versionNumber}/wmts/{key}/{wmtsVersion}/WMTSCapabilities.xml", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlRequest.class, baseUrl, "/map/{versionNumber}/wmts/{key}/{wmtsVersion}/WMTSCapabilities.xml", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

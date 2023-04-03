@@ -7,24 +7,73 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTCreateVerifiedAccessTrustProviderRequest {
-    
-    public POSTCreateVerifiedAccessTrustProviderQueryParams queryParams;
-    public POSTCreateVerifiedAccessTrustProviderRequest withQueryParams(POSTCreateVerifiedAccessTrustProviderQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public POSTCreateVerifiedAccessTrustProviderHeaders headers;
-    public POSTCreateVerifiedAccessTrustProviderRequest withHeaders(POSTCreateVerifiedAccessTrustProviderHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public POSTCreateVerifiedAccessTrustProviderActionEnum action;
+    public POSTCreateVerifiedAccessTrustProviderRequest withAction(POSTCreateVerifiedAccessTrustProviderActionEnum action) {
+        this.action = action;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public POSTCreateVerifiedAccessTrustProviderRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public POSTCreateVerifiedAccessTrustProviderRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public POSTCreateVerifiedAccessTrustProviderVersionEnum version;
+    public POSTCreateVerifiedAccessTrustProviderRequest withVersion(POSTCreateVerifiedAccessTrustProviderVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public POSTCreateVerifiedAccessTrustProviderRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public POSTCreateVerifiedAccessTrustProviderRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public POSTCreateVerifiedAccessTrustProviderRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public POSTCreateVerifiedAccessTrustProviderRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public POSTCreateVerifiedAccessTrustProviderRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public POSTCreateVerifiedAccessTrustProviderRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public POSTCreateVerifiedAccessTrustProviderRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

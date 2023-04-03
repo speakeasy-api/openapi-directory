@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.DescribeAcceleratorOfferingsHeaders;
 import org.openapis.openapi.models.operations.DescribeAcceleratorOfferingsRequestBodyLocationTypeEnum;
 import org.openapis.openapi.models.operations.DescribeAcceleratorOfferingsRequestBody;
 import org.openapis.openapi.models.operations.DescribeAcceleratorOfferingsRequest;
@@ -15,32 +14,27 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             DescribeAcceleratorOfferingsRequest req = new DescribeAcceleratorOfferingsRequest() {{
-                headers = new DescribeAcceleratorOfferingsHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new DescribeAcceleratorOfferingsRequestBody() {{
+                requestBody = new DescribeAcceleratorOfferingsRequestBody() {{
                     acceleratorTypes = new String[]{{
-                        add("vel"),
-                        add("error"),
-                        add("deserunt"),
-                        add("suscipit"),
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
                     locationType = "availability-zone";
                 }};
-            }};            
+                xAmzAlgorithm = "nulla";
+                xAmzContentSha256 = "corrupti";
+                xAmzCredential = "illum";
+                xAmzDate = "vel";
+                xAmzSecurityToken = "error";
+                xAmzSignature = "deserunt";
+                xAmzSignedHeaders = "suscipit";
+            }}            
 
             DescribeAcceleratorOfferingsResponse res = sdk.describeAcceleratorOfferings(req);
 

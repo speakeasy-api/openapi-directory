@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckCategoryForVideoRequest {
+    /**
+     * The name of the category.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category")
+    public String category;
+    public CheckCategoryForVideoRequest withCategory(String category) {
+        this.category = category;
+        return this;
+    }
     
-    public CheckCategoryForVideoPathParams pathParams;
-    public CheckCategoryForVideoRequest withPathParams(CheckCategoryForVideoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public CheckCategoryForVideoRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

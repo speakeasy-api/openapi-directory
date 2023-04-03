@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchAnnotationRequest {
-    
-    public FetchAnnotationPathParams pathParams;
-    public FetchAnnotationRequest withPathParams(FetchAnnotationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchAnnotationSecurity security;
-    public FetchAnnotationRequest withSecurity(FetchAnnotationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchAnnotationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique SID identifier of the Call.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public FetchAnnotationRequest withCallSid(String callSid) {
+        this.callSid = callSid;
         return this;
     }
     

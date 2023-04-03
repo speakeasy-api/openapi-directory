@@ -7,34 +7,44 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QuickTestImageUrlFormRequest {
-    
-    public QuickTestImageUrlFormPathParams pathParams;
-    public QuickTestImageUrlFormRequest withPathParams(QuickTestImageUrlFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public QuickTestImageUrlFormQueryParams queryParams;
-    public QuickTestImageUrlFormRequest withQueryParams(QuickTestImageUrlFormQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public QuickTestImageUrlFormHeaders headers;
-    public QuickTestImageUrlFormRequest withHeaders(QuickTestImageUrlFormHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * An ImageUrl that contains the url of the image to be evaluated.
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.ImageUrl request;
-    public QuickTestImageUrlFormRequest withRequest(org.openapis.openapi.models.shared.ImageUrl request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+    public QuickTestImageUrlFormRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
+        this.imageUrl = imageUrl;
+        return this;
+    }
+    
+    /**
+     * API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public QuickTestImageUrlFormRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
+        return this;
+    }
+    
+    /**
+     * Optional. Specifies the id of a particular iteration to evaluate against.
+     *             The default iteration for the project will be used when not specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
+    public String iterationId;
+    public QuickTestImageUrlFormRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
+        return this;
+    }
+    
+    /**
+     * The project to evaluate against.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public QuickTestImageUrlFormRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

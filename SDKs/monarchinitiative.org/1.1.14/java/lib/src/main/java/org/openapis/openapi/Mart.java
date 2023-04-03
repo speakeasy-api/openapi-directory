@@ -39,13 +39,13 @@ public class Mart {
      */
     public org.openapis.openapi.models.operations.GetMartCaseAssociationsResourceResponse getMartCaseAssociationsResource(org.openapis.openapi.models.operations.GetMartCaseAssociationsResourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMartCaseAssociationsResourcePathParams.class, baseUrl, "/mart/case/{object_category}/{taxon}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMartCaseAssociationsResourceRequest.class, baseUrl, "/mart/case/{object_category}/{taxon}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMartCaseAssociationsResourceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMartCaseAssociationsResourceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -78,13 +78,13 @@ public class Mart {
      */
     public org.openapis.openapi.models.operations.GetMartDiseaseAssociationsResourceResponse getMartDiseaseAssociationsResource(org.openapis.openapi.models.operations.GetMartDiseaseAssociationsResourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMartDiseaseAssociationsResourcePathParams.class, baseUrl, "/mart/disease/{object_category}/{taxon}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMartDiseaseAssociationsResourceRequest.class, baseUrl, "/mart/disease/{object_category}/{taxon}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMartDiseaseAssociationsResourceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMartDiseaseAssociationsResourceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -117,13 +117,13 @@ public class Mart {
      */
     public org.openapis.openapi.models.operations.GetMartGeneAssociationsResourceResponse getMartGeneAssociationsResource(org.openapis.openapi.models.operations.GetMartGeneAssociationsResourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMartGeneAssociationsResourcePathParams.class, baseUrl, "/mart/gene/{object_category}/{taxon}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMartGeneAssociationsResourceRequest.class, baseUrl, "/mart/gene/{object_category}/{taxon}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMartGeneAssociationsResourceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMartGeneAssociationsResourceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -155,7 +155,7 @@ public class Mart {
      */
     public org.openapis.openapi.models.operations.GetMartOrthologAssociationsResourceResponse getMartOrthologAssociationsResource(org.openapis.openapi.models.operations.GetMartOrthologAssociationsResourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMartOrthologAssociationsResourcePathParams.class, baseUrl, "/mart/ortholog/{taxon1}/{taxon2}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMartOrthologAssociationsResourceRequest.class, baseUrl, "/mart/ortholog/{taxon1}/{taxon2}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -187,7 +187,7 @@ public class Mart {
      */
     public org.openapis.openapi.models.operations.GetMartParalogAssociationsResourceResponse getMartParalogAssociationsResource(org.openapis.openapi.models.operations.GetMartParalogAssociationsResourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMartParalogAssociationsResourcePathParams.class, baseUrl, "/mart/paralog/{taxon1}/{taxon2}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMartParalogAssociationsResourceRequest.class, baseUrl, "/mart/paralog/{taxon1}/{taxon2}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

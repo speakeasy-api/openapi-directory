@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutV2Scim20UsersIdRequest {
-    
-    public PutV2Scim20UsersIdPathParams pathParams;
-    public PutV2Scim20UsersIdRequest withPathParams(PutV2Scim20UsersIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/scim+json")
+    public PutV2Scim20UsersIdRequestBody requestBody;
+    public PutV2Scim20UsersIdRequest withRequestBody(PutV2Scim20UsersIdRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/scim+json")
-    public PutV2Scim20UsersIdRequestBody request;
-    public PutV2Scim20UsersIdRequest withRequest(PutV2Scim20UsersIdRequestBody request) {
-        this.request = request;
+    /**
+     * The user ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutV2Scim20UsersIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

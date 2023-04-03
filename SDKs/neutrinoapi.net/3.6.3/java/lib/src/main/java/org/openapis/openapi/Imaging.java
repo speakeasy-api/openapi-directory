@@ -37,7 +37,7 @@ public class Imaging {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.HTMLRenderResponse htmlRender(org.openapis.openapi.models.operations.HTMLRenderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.HTMLRenderResponse htmlRender(org.openapis.openapi.models.operations.HTMLRenderRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/html-render");
         
@@ -90,7 +90,7 @@ public class Imaging {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ImageResizeResponse imageResize(org.openapis.openapi.models.operations.ImageResizeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ImageResizeResponse imageResize(org.openapis.openapi.models.operations.ImageResizeRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/image-resize");
         
@@ -143,7 +143,7 @@ public class Imaging {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ImageWatermarkResponse imageWatermark(org.openapis.openapi.models.operations.ImageWatermarkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ImageWatermarkResponse imageWatermark(org.openapis.openapi.models.operations.ImageWatermarkRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/image-watermark");
         
@@ -196,7 +196,7 @@ public class Imaging {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.QRCodeResponse qrCode(org.openapis.openapi.models.operations.QRCodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.QRCodeResponse qrCode(org.openapis.openapi.models.operations.QRCodeRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/qr-code");
         

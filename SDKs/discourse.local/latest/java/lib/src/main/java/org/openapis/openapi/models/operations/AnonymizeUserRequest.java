@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnonymizeUserRequest {
-    
-    public AnonymizeUserPathParams pathParams;
-    public AnonymizeUserRequest withPathParams(AnonymizeUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public AnonymizeUserRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

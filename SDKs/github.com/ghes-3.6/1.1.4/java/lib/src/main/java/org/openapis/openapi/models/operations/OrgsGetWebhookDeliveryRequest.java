@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsGetWebhookDeliveryRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=delivery_id")
+    public Long deliveryId;
+    public OrgsGetWebhookDeliveryRequest withDeliveryId(Long deliveryId) {
+        this.deliveryId = deliveryId;
+        return this;
+    }
     
-    public OrgsGetWebhookDeliveryPathParams pathParams;
-    public OrgsGetWebhookDeliveryRequest withPathParams(OrgsGetWebhookDeliveryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the hook.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
+    public Long hookId;
+    public OrgsGetWebhookDeliveryRequest withHookId(Long hookId) {
+        this.hookId = hookId;
+        return this;
+    }
+    
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsGetWebhookDeliveryRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

@@ -4,13 +4,69 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConversationsRequest {
+    /**
+     * Used to filter messases by category.  Must be set to one of the following three categories: inbox, archived, blocked
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public String category;
+    public GetConversationsRequest withCategory(String category) {
+        this.category = category;
+        return this;
+    }
     
-    public GetConversationsQueryParams queryParams;
-    public GetConversationsRequest withQueryParams(GetConversationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Client device pixel ratio used to determine thumbnail size (default 1.0).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_pixel_ratio")
+    public Double devicePixelRatio;
+    public GetConversationsRequest withDevicePixelRatio(Double devicePixelRatio) {
+        this.devicePixelRatio = devicePixelRatio;
+        return this;
+    }
+    
+    /**
+     * If set to 1, the num_unread field in the response will be set to the count of the total number of conversations that have unread messages. &lt;br /&gt;&lt;br /&gt; This is useful for showing users the total number of unread messages that they have in their inbox. Calculating the count will slow the request down a bit so setting this should be avoided for requests where it's not needed (eg. requesting archived or blocked conversations or requests that are just paging through older conversations).
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_num_unread")
+    public Long includeNumUnread;
+    public GetConversationsRequest withIncludeNumUnread(Long includeNumUnread) {
+        this.includeNumUnread = includeNumUnread;
+        return this;
+    }
+    
+    /**
+     * The number of recent messages to return with each conversation. Additional messages can be retrieved using get conversation messages endpoint.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=num_messages")
+    public Long numMessages;
+    public GetConversationsRequest withNumMessages(Long numMessages) {
+        this.numMessages = numMessages;
+        return this;
+    }
+    
+    /**
+     * The page of conversations to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetConversationsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of conversations to return per page (must be &gt;= 1 and &lt;= 30).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetConversationsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

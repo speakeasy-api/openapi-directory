@@ -43,7 +43,7 @@ public class Media {
      */
     public org.openapis.openapi.models.operations.MediaSearchReadResponse mediaSearchRead(org.openapis.openapi.models.operations.MediaSearchReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MediaSearchReadPathParams.class, baseUrl, "/api/v1/media/search/{movie_title}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MediaSearchReadRequest.class, baseUrl, "/api/v1/media/search/{movie_title}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -85,7 +85,7 @@ public class Media {
      */
     public org.openapis.openapi.models.operations.MediaSearchallReadResponse mediaSearchallRead(org.openapis.openapi.models.operations.MediaSearchallReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MediaSearchallReadPathParams.class, baseUrl, "/api/v1/media/searchall/{user}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MediaSearchallReadRequest.class, baseUrl, "/api/v1/media/searchall/{user}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

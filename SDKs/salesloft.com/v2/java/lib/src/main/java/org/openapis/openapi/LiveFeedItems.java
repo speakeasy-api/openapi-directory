@@ -37,7 +37,7 @@ public class LiveFeedItems {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV2ThirdPartyLiveFeedItemsResponse postV2ThirdPartyLiveFeedItems(org.openapis.openapi.models.operations.PostV2ThirdPartyLiveFeedItemsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV2ThirdPartyLiveFeedItemsResponse postV2ThirdPartyLiveFeedItems(org.openapis.openapi.models.operations.PostV2ThirdPartyLiveFeedItemsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/third_party_live_feed_items");
         

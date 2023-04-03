@@ -7,31 +7,89 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListWorkflowsRequest {
-    
-    public ListWorkflowsPathParams pathParams;
-    public ListWorkflowsRequest withPathParams(ListWorkflowsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ListWorkflowsQueryParams queryParams;
-    public ListWorkflowsRequest withQueryParams(ListWorkflowsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListWorkflowsHeaders headers;
-    public ListWorkflowsRequest withHeaders(ListWorkflowsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique name of the domain.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainName")
+    public String domainName;
+    public ListWorkflowsRequest withDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ListWorkflowsRequestBody request;
-    public ListWorkflowsRequest withRequest(ListWorkflowsRequestBody request) {
-        this.request = request;
+    public ListWorkflowsRequestBody requestBody;
+    public ListWorkflowsRequest withRequestBody(ListWorkflowsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListWorkflowsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListWorkflowsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListWorkflowsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListWorkflowsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListWorkflowsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListWorkflowsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListWorkflowsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max-results")
+    public Long maxResults;
+    public ListWorkflowsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The token for the next set of results. Use the value returned in the previous response in the next request to retrieve the next set of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next-token")
+    public String nextToken;
+    public ListWorkflowsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     

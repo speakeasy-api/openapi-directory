@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetUniqueWeaponHistoryRequest {
+    /**
+     * The id of the character to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=characterId")
+    public Long characterId;
+    public Destiny2GetUniqueWeaponHistoryRequest withCharacterId(Long characterId) {
+        this.characterId = characterId;
+        return this;
+    }
     
-    public Destiny2GetUniqueWeaponHistoryPathParams pathParams;
-    public Destiny2GetUniqueWeaponHistoryRequest withPathParams(Destiny2GetUniqueWeaponHistoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Destiny membershipId of the user to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
+    public Long destinyMembershipId;
+    public Destiny2GetUniqueWeaponHistoryRequest withDestinyMembershipId(Long destinyMembershipId) {
+        this.destinyMembershipId = destinyMembershipId;
+        return this;
+    }
+    
+    /**
+     * A valid non-BungieNet membership type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public Destiny2GetUniqueWeaponHistoryRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

@@ -4,34 +4,87 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCallRecordingRequest {
-    
-    public ListCallRecordingPathParams pathParams;
-    public ListCallRecordingRequest withPathParams(ListCallRecordingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListCallRecordingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListCallRecordingQueryParams queryParams;
-    public ListCallRecordingRequest withQueryParams(ListCallRecordingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID of the resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public ListCallRecordingRequest withCallSid(String callSid) {
+        this.callSid = callSid;
         return this;
     }
     
-    
-    public ListCallRecordingSecurity security;
-    public ListCallRecordingRequest withSecurity(ListCallRecordingSecurity security) {
-        this.security = security;
+    /**
+     * The `date_created` value, specified as `YYYY-MM-DD`, of the resources to read. You can also specify inequality: `DateCreated&lt;=YYYY-MM-DD` will return recordings generated at or before midnight on a given date, and `DateCreated&gt;=YYYY-MM-DD` returns recordings generated at or after midnight on a date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreated")
+    public LocalDate dateCreated;
+    public ListCallRecordingRequest withDateCreated(LocalDate dateCreated) {
+        this.dateCreated = dateCreated;
         return this;
     }
     
+    /**
+     * The `date_created` value, specified as `YYYY-MM-DD`, of the resources to read. You can also specify inequality: `DateCreated&lt;=YYYY-MM-DD` will return recordings generated at or before midnight on a given date, and `DateCreated&gt;=YYYY-MM-DD` returns recordings generated at or after midnight on a date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreated<")
+    public LocalDate dateCreatedLessThan;
+    public ListCallRecordingRequest withDateCreatedLessThan(LocalDate dateCreatedLessThan) {
+        this.dateCreatedLessThan = dateCreatedLessThan;
+        return this;
+    }
     
-    public String serverURL;
-    public ListCallRecordingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The `date_created` value, specified as `YYYY-MM-DD`, of the resources to read. You can also specify inequality: `DateCreated&lt;=YYYY-MM-DD` will return recordings generated at or before midnight on a given date, and `DateCreated&gt;=YYYY-MM-DD` returns recordings generated at or after midnight on a date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreated>")
+    public LocalDate dateCreatedGreaterThan;
+    public ListCallRecordingRequest withDateCreatedGreaterThan(LocalDate dateCreatedGreaterThan) {
+        this.dateCreatedGreaterThan = dateCreatedGreaterThan;
+        return this;
+    }
+    
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListCallRecordingRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListCallRecordingRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListCallRecordingRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

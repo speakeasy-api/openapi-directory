@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishEventRequest {
-    
-    public PublishEventHeaders headers;
-    public PublishEventRequest withHeaders(PublishEventHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Event
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Event request;
-    public PublishEventRequest withRequest(org.openapis.openapi.models.shared.Event request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Event event;
+    public PublishEventRequest withEvent(org.openapis.openapi.models.shared.Event event) {
+        this.event = event;
+        return this;
+    }
+    
+    /**
+     * Unique correlation id to be able to trace the request in our system
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=TMPS-Correlation-Id")
+    public String tmpsCorrelationId;
+    public PublishEventRequest withTMPSCorrelationId(String tmpsCorrelationId) {
+        this.tmpsCorrelationId = tmpsCorrelationId;
         return this;
     }
     

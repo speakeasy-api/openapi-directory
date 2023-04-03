@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.KeyRevokePathParams;
-import org.openapis.openapi.models.operations.KeyRevokeQueryParams;
 import org.openapis.openapi.models.operations.KeyRevokeRequest;
 import org.openapis.openapi.models.operations.KeyRevokeResponse;
 
@@ -16,13 +14,9 @@ public class Application {
                 .build();
 
             KeyRevokeRequest req = new KeyRevokeRequest() {{
-                pathParams = new KeyRevokePathParams() {{
-                    pk = "corrupti";
-                }};
-                queryParams = new KeyRevokeQueryParams() {{
-                    secret = "provident";
-                }};
-            }};            
+                pk = "corrupti";
+                secret = "provident";
+            }}            
 
             KeyRevokeResponse res = sdk.delete.keyRevoke(req);
 

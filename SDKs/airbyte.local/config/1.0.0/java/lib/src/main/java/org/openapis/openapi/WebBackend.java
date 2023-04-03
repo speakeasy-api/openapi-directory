@@ -41,7 +41,7 @@ public class WebBackend {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetStateTypeResponse getStateType(org.openapis.openapi.models.operations.GetStateTypeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetStateTypeResponse getStateType(org.openapis.openapi.models.shared.ConnectionIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/web_backend/state/get_type");
         
@@ -137,7 +137,7 @@ public class WebBackend {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebBackendCreateConnectionResponse webBackendCreateConnection(org.openapis.openapi.models.operations.WebBackendCreateConnectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebBackendCreateConnectionResponse webBackendCreateConnection(org.openapis.openapi.models.shared.WebBackendConnectionCreate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/web_backend/connections/create");
         
@@ -188,7 +188,7 @@ public class WebBackend {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebBackendGetConnectionResponse webBackendGetConnection(org.openapis.openapi.models.operations.WebBackendGetConnectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebBackendGetConnectionResponse webBackendGetConnection(org.openapis.openapi.models.shared.WebBackendConnectionRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/web_backend/connections/get");
         
@@ -247,7 +247,7 @@ public class WebBackend {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebBackendGetWorkspaceStateResponse webBackendGetWorkspaceState(org.openapis.openapi.models.operations.WebBackendGetWorkspaceStateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebBackendGetWorkspaceStateResponse webBackendGetWorkspaceState(org.openapis.openapi.models.shared.WebBackendWorkspaceState request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/web_backend/workspace/state");
         
@@ -303,7 +303,7 @@ public class WebBackend {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebBackendListConnectionsForWorkspaceResponse webBackendListConnectionsForWorkspace(org.openapis.openapi.models.operations.WebBackendListConnectionsForWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebBackendListConnectionsForWorkspaceResponse webBackendListConnectionsForWorkspace(org.openapis.openapi.models.shared.WebBackendConnectionListRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/web_backend/connections/list");
         
@@ -408,7 +408,7 @@ public class WebBackend {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebBackendUpdateConnectionResponse webBackendUpdateConnection(org.openapis.openapi.models.operations.WebBackendUpdateConnectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebBackendUpdateConnectionResponse webBackendUpdateConnection(org.openapis.openapi.models.shared.WebBackendConnectionUpdate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/web_backend/connections/update");
         

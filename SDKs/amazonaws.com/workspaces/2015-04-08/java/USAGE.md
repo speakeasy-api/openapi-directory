@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AssociateConnectionAliasXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AssociateConnectionAliasHeaders;
 import org.openapis.openapi.models.operations.AssociateConnectionAliasRequest;
 import org.openapis.openapi.models.operations.AssociateConnectionAliasResponse;
 import org.openapis.openapi.models.shared.AssociateConnectionAliasRequest;
@@ -15,28 +14,24 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateConnectionAliasRequest req = new AssociateConnectionAliasRequest() {{
-                headers = new AssociateConnectionAliasHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "WorkspacesService.AssociateConnectionAlias";
+                associateConnectionAliasRequest = new AssociateConnectionAliasRequest() {{
+                    aliasId = "corrupti";
+                    resourceId = "provident";
                 }};
-                request = new AssociateConnectionAliasRequest() {{
-                    aliasId = "illum";
-                    resourceId = "vel";
-                }};
-            }};            
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+                xAmzTarget = "WorkspacesService.AssociateConnectionAlias";
+            }}            
 
             AssociateConnectionAliasResponse res = sdk.associateConnectionAlias(req);
 

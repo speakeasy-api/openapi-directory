@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAdminMappingsRequest {
+    /**
+     * The maximum number of results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetAdminMappingsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetAdminMappingsQueryParams queryParams;
-    public GetAdminMappingsRequest withQueryParams(GetAdminMappingsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The start index of the results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetAdminMappingsRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUrlDetailRequest {
-    
-    public GetUrlDetailPathParams pathParams;
-    public GetUrlDetailRequest withPathParams(GetUrlDetailPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Analysis' identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
+    public String analysisSlug;
+    public GetUrlDetailRequest withAnalysisSlug(String analysisSlug) {
+        this.analysisSlug = analysisSlug;
         return this;
     }
     
+    /**
+     * comma separated list of fields to return (c.f. URLs Datamodel)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=fields")
+    public String[] fields;
+    public GetUrlDetailRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public GetUrlDetailQueryParams queryParams;
-    public GetUrlDetailRequest withQueryParams(GetUrlDetailQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Project's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
+    public String projectSlug;
+    public GetUrlDetailRequest withProjectSlug(String projectSlug) {
+        this.projectSlug = projectSlug;
+        return this;
+    }
+    
+    /**
+     * (Urlencoded) Searched URL
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=url")
+    public String url;
+    public GetUrlDetailRequest withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    
+    /**
+     * User's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetUrlDetailRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

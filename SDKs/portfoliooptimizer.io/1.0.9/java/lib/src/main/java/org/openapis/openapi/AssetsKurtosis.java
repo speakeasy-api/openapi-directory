@@ -41,7 +41,7 @@ public class AssetsKurtosis {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsKurtosisResponse postAssetsKurtosis(org.openapis.openapi.models.operations.PostAssetsKurtosisRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsKurtosisResponse postAssetsKurtosis(org.openapis.openapi.models.operations.PostAssetsKurtosisRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/kurtosis");
         

@@ -47,12 +47,12 @@ public class Tokens {
      */
     public org.openapis.openapi.models.operations.ResendTokenResponse resendToken(org.openapis.openapi.models.operations.ResendTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResendTokenPathParams.class, baseUrl, "/v2/users/{userId}/tokens", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResendTokenRequest.class, baseUrl, "/v2/users/{userId}/tokens", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resendTokenRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

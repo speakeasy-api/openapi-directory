@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsDeleteForTeamDiscussionCommentRequest {
+    /**
+     * The number that identifies the comment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_number")
+    public Long commentNumber;
+    public ReactionsDeleteForTeamDiscussionCommentRequest withCommentNumber(Long commentNumber) {
+        this.commentNumber = commentNumber;
+        return this;
+    }
     
-    public ReactionsDeleteForTeamDiscussionCommentPathParams pathParams;
-    public ReactionsDeleteForTeamDiscussionCommentRequest withPathParams(ReactionsDeleteForTeamDiscussionCommentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The number that identifies the discussion.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
+    public Long discussionNumber;
+    public ReactionsDeleteForTeamDiscussionCommentRequest withDiscussionNumber(Long discussionNumber) {
+        this.discussionNumber = discussionNumber;
+        return this;
+    }
+    
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ReactionsDeleteForTeamDiscussionCommentRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the reaction.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reaction_id")
+    public Long reactionId;
+    public ReactionsDeleteForTeamDiscussionCommentRequest withReactionId(Long reactionId) {
+        this.reactionId = reactionId;
+        return this;
+    }
+    
+    /**
+     * The slug of the team name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
+    public String teamSlug;
+    public ReactionsDeleteForTeamDiscussionCommentRequest withTeamSlug(String teamSlug) {
+        this.teamSlug = teamSlug;
         return this;
     }
     

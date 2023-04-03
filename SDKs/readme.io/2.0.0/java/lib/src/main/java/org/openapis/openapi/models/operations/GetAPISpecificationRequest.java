@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAPISpecificationRequest {
-    
-    public GetAPISpecificationQueryParams queryParams;
-    public GetAPISpecificationRequest withQueryParams(GetAPISpecificationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Used to specify further pages (starts at 1)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetAPISpecificationRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public GetAPISpecificationHeaders headers;
-    public GetAPISpecificationRequest withHeaders(GetAPISpecificationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Number of items to include in pagination (up to 100, defaults to 10)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public Long perPage;
+    public GetAPISpecificationRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     
-    
-    public GetAPISpecificationSecurity security;
-    public GetAPISpecificationRequest withSecurity(GetAPISpecificationSecurity security) {
-        this.security = security;
+    /**
+     * Version number of your docs project, for example, v3.0. To see all valid versions for your docs project call https://docs.readme.com/developers/reference/version#getversions.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-readme-version")
+    public String xReadmeVersion;
+    public GetAPISpecificationRequest withXReadmeVersion(String xReadmeVersion) {
+        this.xReadmeVersion = xReadmeVersion;
         return this;
     }
     

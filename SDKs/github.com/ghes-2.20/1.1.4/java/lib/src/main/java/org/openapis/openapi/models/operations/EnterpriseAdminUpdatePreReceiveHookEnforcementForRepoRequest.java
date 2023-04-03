@@ -7,17 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequest {
-    
-    public EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoPathParams pathParams;
-    public EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequest withPathParams(EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBody requestBody;
+    public EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequest withRequestBody(EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBody request;
-    public EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequest withRequest(EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * pre_receive_hook_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pre_receive_hook_id")
+    public Long preReceiveHookId;
+    public EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequest withPreReceiveHookId(Long preReceiveHookId) {
+        this.preReceiveHookId = preReceiveHookId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCiscoSwitchRequest {
-    
-    public UpdateCiscoSwitchPathParams pathParams;
-    public UpdateCiscoSwitchRequest withPathParams(UpdateCiscoSwitchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CiscoSwitchDataSource request;
-    public UpdateCiscoSwitchRequest withRequest(org.openapis.openapi.models.shared.CiscoSwitchDataSource request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CiscoSwitchDataSource ciscoSwitchDataSource;
+    public UpdateCiscoSwitchRequest withCiscoSwitchDataSource(org.openapis.openapi.models.shared.CiscoSwitchDataSource ciscoSwitchDataSource) {
+        this.ciscoSwitchDataSource = ciscoSwitchDataSource;
         return this;
     }
     
-    
-    public UpdateCiscoSwitchSecurity security;
-    public UpdateCiscoSwitchRequest withSecurity(UpdateCiscoSwitchSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateCiscoSwitchRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

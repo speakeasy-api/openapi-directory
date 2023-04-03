@@ -4,20 +4,71 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWebhooksIdWebhookLogsRequest {
-    
-    public GetWebhooksIdWebhookLogsPathParams pathParams;
-    public GetWebhooksIdWebhookLogsRequest withPathParams(GetWebhooksIdWebhookLogsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetWebhooksIdWebhookLogsRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
+    /**
+     * limit number of results to this user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_user")
+    public Long idUser;
+    public GetWebhooksIdWebhookLogsRequest withIdUser(Long idUser) {
+        this.idUser = idUser;
+        return this;
+    }
     
-    public GetWebhooksIdWebhookLogsQueryParams queryParams;
-    public GetWebhooksIdWebhookLogsRequest withQueryParams(GetWebhooksIdWebhookLogsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_webhook")
+    public Long idWebhook;
+    public GetWebhooksIdWebhookLogsRequest withIdWebhook(Long idWebhook) {
+        this.idWebhook = idWebhook;
+        return this;
+    }
+    
+    /**
+     * limit number of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetWebhooksIdWebhookLogsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * maximum (inclusive) date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
+    public LocalDate maxDate;
+    public GetWebhooksIdWebhookLogsRequest withMaxDate(LocalDate maxDate) {
+        this.maxDate = maxDate;
+        return this;
+    }
+    
+    /**
+     * minimal (inclusive) date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
+    public LocalDate minDate;
+    public GetWebhooksIdWebhookLogsRequest withMinDate(LocalDate minDate) {
+        this.minDate = minDate;
+        return this;
+    }
+    
+    /**
+     * offset of first result
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetWebhooksIdWebhookLogsRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchTrustProductRequest {
-    
-    public FetchTrustProductPathParams pathParams;
-    public FetchTrustProductRequest withPathParams(FetchTrustProductPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchTrustProductSecurity security;
-    public FetchTrustProductRequest withSecurity(FetchTrustProductSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchTrustProductRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that we created to identify the Customer-Profile resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchTrustProductRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PolicyGetRequest {
-    
-    public PolicyGetPathParams pathParams;
-    public PolicyGetRequest withPathParams(PolicyGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PolicyGetRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Describes the type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public PolicyGetRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public PolicyGetHeaders headers;
-    public PolicyGetRequest withHeaders(PolicyGetHeaders headers) {
-        this.headers = headers;
+    /**
+     * Policy ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PolicyGetRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

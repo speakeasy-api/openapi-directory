@@ -7,20 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdRequest {
-    
-    public PatchSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdPathParams pathParams;
-    public PatchSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdRequest withPathParams(PatchSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A VAT Declaration to modify
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdRequestBody request;
-    public PatchSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdRequest withRequest(PatchSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdRequestBody request) {
-        this.request = request;
+    public PatchSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdRequestBody requestBody;
+    public PatchSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdRequest withRequestBody(PatchSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public String documentId;
+    public PatchSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdRequest withDocumentId(String documentId) {
+        this.documentId = documentId;
+        return this;
+    }
+    
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=folderId")
+    public String folderId;
+    public PatchSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdRequest withFolderId(String folderId) {
+        this.folderId = folderId;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PatchSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

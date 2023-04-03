@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeConfigurationAggregatorSourcesStatusRequest {
-    
-    public DescribeConfigurationAggregatorSourcesStatusQueryParams queryParams;
-    public DescribeConfigurationAggregatorSourcesStatusRequest withQueryParams(DescribeConfigurationAggregatorSourcesStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DescribeConfigurationAggregatorSourcesStatusHeaders headers;
-    public DescribeConfigurationAggregatorSourcesStatusRequest withHeaders(DescribeConfigurationAggregatorSourcesStatusHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DescribeConfigurationAggregatorSourcesStatusRequest request;
-    public DescribeConfigurationAggregatorSourcesStatusRequest withRequest(org.openapis.openapi.models.shared.DescribeConfigurationAggregatorSourcesStatusRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DescribeConfigurationAggregatorSourcesStatusRequest describeConfigurationAggregatorSourcesStatusRequest;
+    public DescribeConfigurationAggregatorSourcesStatusRequest withDescribeConfigurationAggregatorSourcesStatusRequest(org.openapis.openapi.models.shared.DescribeConfigurationAggregatorSourcesStatusRequest describeConfigurationAggregatorSourcesStatusRequest) {
+        this.describeConfigurationAggregatorSourcesStatusRequest = describeConfigurationAggregatorSourcesStatusRequest;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Limit")
+    public String limit;
+    public DescribeConfigurationAggregatorSourcesStatusRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public DescribeConfigurationAggregatorSourcesStatusRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeConfigurationAggregatorSourcesStatusRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeConfigurationAggregatorSourcesStatusRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeConfigurationAggregatorSourcesStatusRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeConfigurationAggregatorSourcesStatusRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeConfigurationAggregatorSourcesStatusRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeConfigurationAggregatorSourcesStatusRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeConfigurationAggregatorSourcesStatusRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public DescribeConfigurationAggregatorSourcesStatusXAmzTargetEnum xAmzTarget;
+    public DescribeConfigurationAggregatorSourcesStatusRequest withXAmzTarget(DescribeConfigurationAggregatorSourcesStatusXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

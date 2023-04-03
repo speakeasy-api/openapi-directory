@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubmitPodcastRequest {
-    
-    public SubmitPodcastHeaders headers;
-    public SubmitPodcastRequest withHeaders(SubmitPodcastHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public org.openapis.openapi.models.shared.SubmitPodcastForm submitPodcastForm;
+    public SubmitPodcastRequest withSubmitPodcastForm(org.openapis.openapi.models.shared.SubmitPodcastForm submitPodcastForm) {
+        this.submitPodcastForm = submitPodcastForm;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.SubmitPodcastForm request;
-    public SubmitPodcastRequest withRequest(org.openapis.openapi.models.shared.SubmitPodcastForm request) {
-        this.request = request;
+    /**
+     * Get API Key on listennotes.com/api
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
+    public String xListenAPIKey;
+    public SubmitPodcastRequest withXListenAPIKey(String xListenAPIKey) {
+        this.xListenAPIKey = xListenAPIKey;
         return this;
     }
     

@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeOrderListV3Request {
-    
-    public ChangeOrderListV3QueryParams queryParams;
-    public ChangeOrderListV3Request withQueryParams(ChangeOrderListV3QueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ChangeOrderListRequest changeOrderListRequest;
+    public ChangeOrderListV3Request withChangeOrderListRequest(org.openapis.openapi.models.shared.ChangeOrderListRequest changeOrderListRequest) {
+        this.changeOrderListRequest = changeOrderListRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ChangeOrderListRequest request;
-    public ChangeOrderListV3Request withRequest(org.openapis.openapi.models.shared.ChangeOrderListRequest request) {
-        this.request = request;
+    /**
+     * If true, the operation will be not be sent to marketplace. But the validation will be taken in account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=testMode")
+    public Boolean testMode;
+    public ChangeOrderListV3Request withTestMode(Boolean testMode) {
+        this.testMode = testMode;
+        return this;
+    }
+    
+    /**
+     * Sometimes the user in the e-commerce application is not the same as user associated with the current subscription key. We recommend providing your application's user login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userName")
+    public String userName;
+    public ChangeOrderListV3Request withUserName(String userName) {
+        this.userName = userName;
         return this;
     }
     

@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateExportConfigurationRequest {
-    
-    public UpdateExportConfigurationPathParams pathParams;
-    public UpdateExportConfigurationRequest withPathParams(UpdateExportConfigurationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateExportConfigurationUpdateExportConfigurationRequest request;
-    public UpdateExportConfigurationRequest withRequest(UpdateExportConfigurationUpdateExportConfigurationRequest request) {
-        this.request = request;
+    public UpdateExportConfigurationUpdateExportConfigurationRequest requestBody;
+    public UpdateExportConfigurationRequest withRequestBody(UpdateExportConfigurationUpdateExportConfigurationRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateExportConfigurationSecurity security;
-    public UpdateExportConfigurationRequest withSecurity(UpdateExportConfigurationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateExportConfigurationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The type of communication \u2013 Messages, Calls, Conferences, and Participants
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ResourceType")
+    public String resourceType;
+    public UpdateExportConfigurationRequest withResourceType(String resourceType) {
+        this.resourceType = resourceType;
         return this;
     }
     

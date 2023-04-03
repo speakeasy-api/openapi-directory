@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFormsIdRequest {
-    
-    public GetFormsIdPathParams pathParams;
-    public GetFormsIdRequest withPathParams(GetFormsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the form to return
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetFormsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

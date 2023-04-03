@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTalentRequest {
-    
-    public GetTalentQueryParams queryParams;
-    public GetTalentRequest withQueryParams(GetTalentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Year filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetTalentRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

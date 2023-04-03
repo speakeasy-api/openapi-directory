@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContentByIdRequest {
-    
-    public GetContentByIdPathParams pathParams;
-    public GetContentByIdRequest withPathParams(GetContentByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Global identifier for a single artifact content.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contentId")
+    public Long contentId;
+    public GetContentByIdRequest withContentId(Long contentId) {
+        this.contentId = contentId;
         return this;
     }
     

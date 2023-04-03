@@ -46,7 +46,7 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.ActivityCheckRepoIsStarredByAuthenticatedUserResponse activityCheckRepoIsStarredByAuthenticatedUser(org.openapis.openapi.models.operations.ActivityCheckRepoIsStarredByAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityCheckRepoIsStarredByAuthenticatedUserPathParams.class, baseUrl, "/user/starred/{owner}/{repo}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityCheckRepoIsStarredByAuthenticatedUserRequest.class, baseUrl, "/user/starred/{owner}/{repo}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -88,7 +88,7 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.ActivityDeleteRepoSubscriptionResponse activityDeleteRepoSubscription(org.openapis.openapi.models.operations.ActivityDeleteRepoSubscriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityDeleteRepoSubscriptionPathParams.class, baseUrl, "/repos/{owner}/{repo}/subscription", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityDeleteRepoSubscriptionRequest.class, baseUrl, "/repos/{owner}/{repo}/subscription", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -122,7 +122,7 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.ActivityDeleteThreadSubscriptionResponse activityDeleteThreadSubscription(org.openapis.openapi.models.operations.ActivityDeleteThreadSubscriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityDeleteThreadSubscriptionPathParams.class, baseUrl, "/notifications/threads/{thread_id}/subscription", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityDeleteThreadSubscriptionRequest.class, baseUrl, "/notifications/threads/{thread_id}/subscription", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -212,7 +212,7 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.ActivityGetRepoSubscriptionResponse activityGetRepoSubscription(org.openapis.openapi.models.operations.ActivityGetRepoSubscriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityGetRepoSubscriptionPathParams.class, baseUrl, "/repos/{owner}/{repo}/subscription", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityGetRepoSubscriptionRequest.class, baseUrl, "/repos/{owner}/{repo}/subscription", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -262,7 +262,7 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.ActivityGetThreadResponse activityGetThread(org.openapis.openapi.models.operations.ActivityGetThreadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityGetThreadPathParams.class, baseUrl, "/notifications/threads/{thread_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityGetThreadRequest.class, baseUrl, "/notifications/threads/{thread_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -314,7 +314,7 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.ActivityGetThreadSubscriptionForAuthenticatedUserResponse activityGetThreadSubscriptionForAuthenticatedUser(org.openapis.openapi.models.operations.ActivityGetThreadSubscriptionForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityGetThreadSubscriptionForAuthenticatedUserPathParams.class, baseUrl, "/notifications/threads/{thread_id}/subscription", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityGetThreadSubscriptionForAuthenticatedUserRequest.class, baseUrl, "/notifications/threads/{thread_id}/subscription", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -364,13 +364,13 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.ActivityListEventsForAuthenticatedUserResponse activityListEventsForAuthenticatedUser(org.openapis.openapi.models.operations.ActivityListEventsForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityListEventsForAuthenticatedUserPathParams.class, baseUrl, "/users/{username}/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityListEventsForAuthenticatedUserRequest.class, baseUrl, "/users/{username}/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListEventsForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListEventsForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -416,7 +416,7 @@ public class Activity {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListNotificationsForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListNotificationsForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -476,13 +476,13 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.ActivityListOrgEventsForAuthenticatedUserResponse activityListOrgEventsForAuthenticatedUser(org.openapis.openapi.models.operations.ActivityListOrgEventsForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityListOrgEventsForAuthenticatedUserPathParams.class, baseUrl, "/users/{username}/events/orgs/{org}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityListOrgEventsForAuthenticatedUserRequest.class, baseUrl, "/users/{username}/events/orgs/{org}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListOrgEventsForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListOrgEventsForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -521,13 +521,13 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.ActivityListRepoEventsResponse activityListRepoEvents(org.openapis.openapi.models.operations.ActivityListRepoEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityListRepoEventsPathParams.class, baseUrl, "/repos/{owner}/{repo}/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityListRepoEventsRequest.class, baseUrl, "/repos/{owner}/{repo}/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListRepoEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListRepoEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -567,13 +567,13 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.ActivityListRepoNotificationsForAuthenticatedUserResponse activityListRepoNotificationsForAuthenticatedUser(org.openapis.openapi.models.operations.ActivityListRepoNotificationsForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityListRepoNotificationsForAuthenticatedUserPathParams.class, baseUrl, "/repos/{owner}/{repo}/notifications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityListRepoNotificationsForAuthenticatedUserRequest.class, baseUrl, "/repos/{owner}/{repo}/notifications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListRepoNotificationsForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListRepoNotificationsForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -623,7 +623,7 @@ public class Activity {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListReposStarredByAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListReposStarredByAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -683,13 +683,13 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.ActivityListReposStarredByUserResponse activityListReposStarredByUser(org.openapis.openapi.models.operations.ActivityListReposStarredByUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityListReposStarredByUserPathParams.class, baseUrl, "/users/{username}/starred", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityListReposStarredByUserRequest.class, baseUrl, "/users/{username}/starred", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListReposStarredByUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListReposStarredByUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -731,13 +731,13 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.ActivityListReposWatchedByUserResponse activityListReposWatchedByUser(org.openapis.openapi.models.operations.ActivityListReposWatchedByUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityListReposWatchedByUserPathParams.class, baseUrl, "/users/{username}/subscriptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityListReposWatchedByUserRequest.class, baseUrl, "/users/{username}/subscriptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListReposWatchedByUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListReposWatchedByUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -781,13 +781,13 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.ActivityListStargazersForRepoResponse activityListStargazersForRepo(org.openapis.openapi.models.operations.ActivityListStargazersForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityListStargazersForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/stargazers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityListStargazersForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/stargazers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListStargazersForRepoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListStargazersForRepoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -843,7 +843,7 @@ public class Activity {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListWatchedReposForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListWatchedReposForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -895,13 +895,13 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.ActivityListWatchersForRepoResponse activityListWatchersForRepo(org.openapis.openapi.models.operations.ActivityListWatchersForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityListWatchersForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/subscribers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityListWatchersForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/subscribers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListWatchersForRepoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivityListWatchersForRepoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -941,7 +941,7 @@ public class Activity {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ActivityMarkNotificationsAsReadResponse activityMarkNotificationsAsRead(org.openapis.openapi.models.operations.ActivityMarkNotificationsAsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ActivityMarkNotificationsAsReadResponse activityMarkNotificationsAsRead(org.openapis.openapi.models.operations.ActivityMarkNotificationsAsReadRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/notifications");
         
@@ -995,12 +995,12 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.ActivityMarkRepoNotificationsAsReadResponse activityMarkRepoNotificationsAsRead(org.openapis.openapi.models.operations.ActivityMarkRepoNotificationsAsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityMarkRepoNotificationsAsReadPathParams.class, baseUrl, "/repos/{owner}/{repo}/notifications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityMarkRepoNotificationsAsReadRequest.class, baseUrl, "/repos/{owner}/{repo}/notifications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1039,7 +1039,7 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.ActivityMarkThreadAsReadResponse activityMarkThreadAsRead(org.openapis.openapi.models.operations.ActivityMarkThreadAsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityMarkThreadAsReadPathParams.class, baseUrl, "/notifications/threads/{thread_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityMarkThreadAsReadRequest.class, baseUrl, "/notifications/threads/{thread_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
@@ -1081,12 +1081,12 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.ActivitySetRepoSubscriptionResponse activitySetRepoSubscription(org.openapis.openapi.models.operations.ActivitySetRepoSubscriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivitySetRepoSubscriptionPathParams.class, baseUrl, "/repos/{owner}/{repo}/subscription", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivitySetRepoSubscriptionRequest.class, baseUrl, "/repos/{owner}/{repo}/subscription", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1127,12 +1127,12 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.ActivitySetThreadSubscriptionResponse activitySetThreadSubscription(org.openapis.openapi.models.operations.ActivitySetThreadSubscriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivitySetThreadSubscriptionPathParams.class, baseUrl, "/notifications/threads/{thread_id}/subscription", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivitySetThreadSubscriptionRequest.class, baseUrl, "/notifications/threads/{thread_id}/subscription", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1179,7 +1179,7 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.ActivityStarRepoForAuthenticatedUserResponse activityStarRepoForAuthenticatedUser(org.openapis.openapi.models.operations.ActivityStarRepoForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityStarRepoForAuthenticatedUserPathParams.class, baseUrl, "/user/starred/{owner}/{repo}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityStarRepoForAuthenticatedUserRequest.class, baseUrl, "/user/starred/{owner}/{repo}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -1220,7 +1220,7 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.ActivityUnstarRepoForAuthenticatedUserResponse activityUnstarRepoForAuthenticatedUser(org.openapis.openapi.models.operations.ActivityUnstarRepoForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityUnstarRepoForAuthenticatedUserPathParams.class, baseUrl, "/user/starred/{owner}/{repo}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivityUnstarRepoForAuthenticatedUserRequest.class, baseUrl, "/user/starred/{owner}/{repo}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");

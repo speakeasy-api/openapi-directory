@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutTargetsTargetIdFindingsIdIntegrationsJiraCloudRequest {
-    
-    public PutTargetsTargetIdFindingsIdIntegrationsJiraCloudPathParams pathParams;
-    public PutTargetsTargetIdFindingsIdIntegrationsJiraCloudRequest withPathParams(PutTargetsTargetIdFindingsIdIntegrationsJiraCloudPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.JiraFinding jiraFinding;
+    public PutTargetsTargetIdFindingsIdIntegrationsJiraCloudRequest withJiraFinding(org.openapis.openapi.models.shared.JiraFinding jiraFinding) {
+        this.jiraFinding = jiraFinding;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.JiraFinding request;
-    public PutTargetsTargetIdFindingsIdIntegrationsJiraCloudRequest withRequest(org.openapis.openapi.models.shared.JiraFinding request) {
-        this.request = request;
+    /**
+     * Object Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutTargetsTargetIdFindingsIdIntegrationsJiraCloudRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Target id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_id")
+    public String targetId;
+    public PutTargetsTargetIdFindingsIdIntegrationsJiraCloudRequest withTargetId(String targetId) {
+        this.targetId = targetId;
         return this;
     }
     

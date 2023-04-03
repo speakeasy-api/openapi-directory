@@ -4,27 +4,186 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClouddebuggerDebuggerDebuggeesBreakpointsListRequest {
-    
-    public ClouddebuggerDebuggerDebuggeesBreakpointsListPathParams pathParams;
-    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withPathParams(ClouddebuggerDebuggerDebuggeesBreakpointsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public ClouddebuggerDebuggerDebuggeesBreakpointsListQueryParams queryParams;
-    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withQueryParams(ClouddebuggerDebuggerDebuggeesBreakpointsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Only breakpoints with the specified action will pass the filter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action.value")
+    public ClouddebuggerDebuggerDebuggeesBreakpointsListActionValueEnum actionValue;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withActionValue(ClouddebuggerDebuggerDebuggeesBreakpointsListActionValueEnum actionValue) {
+        this.actionValue = actionValue;
+        return this;
+    }
     
-    public ClouddebuggerDebuggerDebuggeesBreakpointsListSecurity security;
-    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withSecurity(ClouddebuggerDebuggerDebuggeesBreakpointsListSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Required. The client version making the call. Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientVersion")
+    public String clientVersion;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withClientVersion(String clientVersion) {
+        this.clientVersion = clientVersion;
+        return this;
+    }
+    
+    /**
+     * Required. ID of the debuggee whose breakpoints to list.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=debuggeeId")
+    public String debuggeeId;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withDebuggeeId(String debuggeeId) {
+        this.debuggeeId = debuggeeId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * When set to `true`, the response includes the list of breakpoints set by any user. Otherwise, it includes only breakpoints set by the caller.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeAllUsers")
+    public Boolean includeAllUsers;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withIncludeAllUsers(Boolean includeAllUsers) {
+        this.includeAllUsers = includeAllUsers;
+        return this;
+    }
+    
+    /**
+     * When set to `true`, the response includes active and inactive breakpoints. Otherwise, it includes only active breakpoints.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeInactive")
+    public Boolean includeInactive;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withIncludeInactive(Boolean includeInactive) {
+        this.includeInactive = includeInactive;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * This field is deprecated. The following fields are always stripped out of the result: `stack_frames`, `evaluated_expressions` and `variable_table`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stripResults")
+    public Boolean stripResults;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withStripResults(Boolean stripResults) {
+        this.stripResults = stripResults;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * A wait token that, if specified, blocks the call until the breakpoints list has changed, or a server selected timeout has expired. The value should be set from the last response. The error code `google.rpc.Code.ABORTED` (RPC) is returned on wait timeout, which should be called again with the same `wait_token`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=waitToken")
+    public String waitToken;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsListRequest withWaitToken(String waitToken) {
+        this.waitToken = waitToken;
         return this;
     }
     

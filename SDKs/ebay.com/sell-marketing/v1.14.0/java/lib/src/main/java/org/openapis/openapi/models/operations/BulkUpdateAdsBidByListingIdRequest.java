@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BulkUpdateAdsBidByListingIdRequest {
-    
-    public BulkUpdateAdsBidByListingIdPathParams pathParams;
-    public BulkUpdateAdsBidByListingIdRequest withPathParams(BulkUpdateAdsBidByListingIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * This request object defines the fields for the &lt;b&gt;BulkCreateAdsByListingId&lt;/b&gt; request.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BulkCreateAdRequest request;
-    public BulkUpdateAdsBidByListingIdRequest withRequest(org.openapis.openapi.models.shared.BulkCreateAdRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BulkCreateAdRequest bulkCreateAdRequest;
+    public BulkUpdateAdsBidByListingIdRequest withBulkCreateAdRequest(org.openapis.openapi.models.shared.BulkCreateAdRequest bulkCreateAdRequest) {
+        this.bulkCreateAdRequest = bulkCreateAdRequest;
         return this;
     }
     
-    
-    public BulkUpdateAdsBidByListingIdSecurity security;
-    public BulkUpdateAdsBidByListingIdRequest withSecurity(BulkUpdateAdsBidByListingIdSecurity security) {
-        this.security = security;
+    /**
+     * A unique eBay-assigned ID for an ad campaign that's generated when a campaign is created. Get a seller's campaign IDs by calling &lt;a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns"&gt;getCampaigns&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaign_id")
+    public String campaignId;
+    public BulkUpdateAdsBidByListingIdRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
         return this;
     }
     

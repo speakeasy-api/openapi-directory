@@ -36,19 +36,20 @@ public class Edit {
      * 
      * **base URL:** https://api.shotstack.io/{version}
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRenderResponse getRender(org.openapis.openapi.models.operations.GetRenderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRenderResponse getRender(org.openapis.openapi.models.operations.GetRenderRequest request, org.openapis.openapi.models.operations.GetRenderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRenderPathParams.class, baseUrl, "/render/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRenderRequest.class, baseUrl, "/render/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -76,10 +77,11 @@ public class Edit {
      * Render Asset
      * Queue and render the contents of a timeline as a video, image or audio file.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRenderResponse postRender(org.openapis.openapi.models.operations.PostRenderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRenderResponse postRender(org.openapis.openapi.models.shared.Edit request, org.openapis.openapi.models.operations.PostRenderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/render");
         
@@ -93,7 +95,7 @@ public class Edit {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

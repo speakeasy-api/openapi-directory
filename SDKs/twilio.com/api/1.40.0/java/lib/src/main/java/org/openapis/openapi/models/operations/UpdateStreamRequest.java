@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateStreamRequest {
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created this Stream resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateStreamRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public UpdateStreamPathParams pathParams;
-    public UpdateStreamRequest withPathParams(UpdateStreamPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) the Stream resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public UpdateStreamRequest withCallSid(String callSid) {
+        this.callSid = callSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateStreamUpdateStreamRequest request;
-    public UpdateStreamRequest withRequest(UpdateStreamUpdateStreamRequest request) {
-        this.request = request;
+    public UpdateStreamUpdateStreamRequest requestBody;
+    public UpdateStreamRequest withRequestBody(UpdateStreamUpdateStreamRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateStreamSecurity security;
-    public UpdateStreamRequest withSecurity(UpdateStreamSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateStreamRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Stream resource, or the `name` used when creating the resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateStreamRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

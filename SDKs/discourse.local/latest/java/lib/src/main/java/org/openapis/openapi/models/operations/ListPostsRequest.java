@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPostsRequest {
-    
-    public ListPostsQueryParams queryParams;
-    public ListPostsRequest withQueryParams(ListPostsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Key")
+    public String apiKey;
+    public ListPostsRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Username")
+    public String apiUsername;
+    public ListPostsRequest withApiUsername(String apiUsername) {
+        this.apiUsername = apiUsername;
+        return this;
+    }
     
-    public ListPostsHeaders headers;
-    public ListPostsRequest withHeaders(ListPostsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Load posts with an id lower than this value. Useful for pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public String before;
+    public ListPostsRequest withBefore(String before) {
+        this.before = before;
         return this;
     }
     

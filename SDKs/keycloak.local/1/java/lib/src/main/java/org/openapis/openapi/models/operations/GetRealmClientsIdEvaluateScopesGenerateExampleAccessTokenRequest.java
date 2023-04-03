@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmClientsIdEvaluateScopesGenerateExampleAccessTokenRequest {
-    
-    public GetRealmClientsIdEvaluateScopesGenerateExampleAccessTokenPathParams pathParams;
-    public GetRealmClientsIdEvaluateScopesGenerateExampleAccessTokenRequest withPathParams(GetRealmClientsIdEvaluateScopesGenerateExampleAccessTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of client (not client-id)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetRealmClientsIdEvaluateScopesGenerateExampleAccessTokenRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmClientsIdEvaluateScopesGenerateExampleAccessTokenRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
     
-    public GetRealmClientsIdEvaluateScopesGenerateExampleAccessTokenQueryParams queryParams;
-    public GetRealmClientsIdEvaluateScopesGenerateExampleAccessTokenRequest withQueryParams(GetRealmClientsIdEvaluateScopesGenerateExampleAccessTokenQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
+    public String scope;
+    public GetRealmClientsIdEvaluateScopesGenerateExampleAccessTokenRequest withScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
+    public String userId;
+    public GetRealmClientsIdEvaluateScopesGenerateExampleAccessTokenRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

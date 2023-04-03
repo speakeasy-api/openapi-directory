@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PremiumNewsRequest {
-    
-    public PremiumNewsPathParams pathParams;
-    public PremiumNewsRequest withPathParams(PremiumNewsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public PremiumNewsFormatEnum format;
+    public PremiumNewsRequest withFormat(PremiumNewsFormatEnum format) {
+        this.format = format;
         return this;
     }
     

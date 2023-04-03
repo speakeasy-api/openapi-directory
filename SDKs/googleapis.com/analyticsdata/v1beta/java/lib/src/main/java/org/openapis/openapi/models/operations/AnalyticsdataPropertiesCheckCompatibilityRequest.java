@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsdataPropertiesCheckCompatibilityRequest {
-    
-    public AnalyticsdataPropertiesCheckCompatibilityPathParams pathParams;
-    public AnalyticsdataPropertiesCheckCompatibilityRequest withPathParams(AnalyticsdataPropertiesCheckCompatibilityPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AnalyticsdataPropertiesCheckCompatibilityQueryParams queryParams;
-    public AnalyticsdataPropertiesCheckCompatibilityRequest withQueryParams(AnalyticsdataPropertiesCheckCompatibilityQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AnalyticsdataPropertiesCheckCompatibilityRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CheckCompatibilityRequest request;
-    public AnalyticsdataPropertiesCheckCompatibilityRequest withRequest(org.openapis.openapi.models.shared.CheckCompatibilityRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CheckCompatibilityRequest checkCompatibilityRequest;
+    public AnalyticsdataPropertiesCheckCompatibilityRequest withCheckCompatibilityRequest(org.openapis.openapi.models.shared.CheckCompatibilityRequest checkCompatibilityRequest) {
+        this.checkCompatibilityRequest = checkCompatibilityRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AnalyticsdataPropertiesCheckCompatibilityRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public AnalyticsdataPropertiesCheckCompatibilitySecurity security;
-    public AnalyticsdataPropertiesCheckCompatibilityRequest withSecurity(AnalyticsdataPropertiesCheckCompatibilitySecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AnalyticsdataPropertiesCheckCompatibilityRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AnalyticsdataPropertiesCheckCompatibilityRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AnalyticsdataPropertiesCheckCompatibilityRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AnalyticsdataPropertiesCheckCompatibilityRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AnalyticsdataPropertiesCheckCompatibilityRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AnalyticsdataPropertiesCheckCompatibilityRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * A Google Analytics GA4 property identifier whose events are tracked. To learn more, see [where to find your Property ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). `property` should be the same value as in your `runReport` request. Example: properties/1234
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=property")
+    public String property;
+    public AnalyticsdataPropertiesCheckCompatibilityRequest withProperty(String property) {
+        this.property = property;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AnalyticsdataPropertiesCheckCompatibilityRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AnalyticsdataPropertiesCheckCompatibilityRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AnalyticsdataPropertiesCheckCompatibilityRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

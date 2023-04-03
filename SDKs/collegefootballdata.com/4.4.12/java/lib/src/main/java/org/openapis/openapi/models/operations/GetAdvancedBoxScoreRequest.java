@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAdvancedBoxScoreRequest {
-    
-    public GetAdvancedBoxScoreQueryParams queryParams;
-    public GetAdvancedBoxScoreRequest withQueryParams(GetAdvancedBoxScoreQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Game id parameters
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gameId")
+    public Long gameId;
+    public GetAdvancedBoxScoreRequest withGameId(Long gameId) {
+        this.gameId = gameId;
         return this;
     }
     

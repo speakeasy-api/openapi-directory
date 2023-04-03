@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CommentsPutRequest {
-    
-    public CommentsPutPathParams pathParams;
-    public CommentsPutRequest withPathParams(CommentsPutPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> requestBody;
+    public CommentsPutRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public CommentsPutRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    /**
+     * The unique identifier of the comment you wish to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
+    public String commentId;
+    public CommentsPutRequest withCommentId(String commentId) {
+        this.commentId = commentId;
         return this;
     }
     

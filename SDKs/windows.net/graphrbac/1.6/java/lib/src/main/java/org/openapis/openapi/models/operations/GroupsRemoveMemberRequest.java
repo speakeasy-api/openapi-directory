@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsRemoveMemberRequest {
-    
-    public GroupsRemoveMemberPathParams pathParams;
-    public GroupsRemoveMemberRequest withPathParams(GroupsRemoveMemberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public GroupsRemoveMemberRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The object ID of the group from which to remove the member.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupObjectId")
+    public String groupObjectId;
+    public GroupsRemoveMemberRequest withGroupObjectId(String groupObjectId) {
+        this.groupObjectId = groupObjectId;
+        return this;
+    }
     
-    public GroupsRemoveMemberQueryParams queryParams;
-    public GroupsRemoveMemberRequest withQueryParams(GroupsRemoveMemberQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Member object id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=memberObjectId")
+    public String memberObjectId;
+    public GroupsRemoveMemberRequest withMemberObjectId(String memberObjectId) {
+        this.memberObjectId = memberObjectId;
+        return this;
+    }
+    
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public GroupsRemoveMemberRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

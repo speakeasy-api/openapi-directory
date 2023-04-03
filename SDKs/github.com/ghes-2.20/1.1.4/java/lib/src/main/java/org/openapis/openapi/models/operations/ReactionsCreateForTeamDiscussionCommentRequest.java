@@ -7,24 +7,41 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsCreateForTeamDiscussionCommentRequest {
-    
-    public ReactionsCreateForTeamDiscussionCommentPathParams pathParams;
-    public ReactionsCreateForTeamDiscussionCommentRequest withPathParams(ReactionsCreateForTeamDiscussionCommentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ReactionsCreateForTeamDiscussionCommentHeaders headers;
-    public ReactionsCreateForTeamDiscussionCommentRequest withHeaders(ReactionsCreateForTeamDiscussionCommentHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReactionsCreateForTeamDiscussionCommentRequestBody request;
-    public ReactionsCreateForTeamDiscussionCommentRequest withRequest(ReactionsCreateForTeamDiscussionCommentRequestBody request) {
-        this.request = request;
+    public ReactionsCreateForTeamDiscussionCommentRequestBody requestBody;
+    public ReactionsCreateForTeamDiscussionCommentRequest withRequestBody(ReactionsCreateForTeamDiscussionCommentRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * This API is under preview and subject to change.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
+    public String accept;
+    public ReactionsCreateForTeamDiscussionCommentRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_number")
+    public Long commentNumber;
+    public ReactionsCreateForTeamDiscussionCommentRequest withCommentNumber(Long commentNumber) {
+        this.commentNumber = commentNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
+    public Long discussionNumber;
+    public ReactionsCreateForTeamDiscussionCommentRequest withDiscussionNumber(Long discussionNumber) {
+        this.discussionNumber = discussionNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public ReactionsCreateForTeamDiscussionCommentRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

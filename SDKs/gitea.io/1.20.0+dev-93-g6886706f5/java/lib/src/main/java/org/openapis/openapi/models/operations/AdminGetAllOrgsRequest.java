@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdminGetAllOrgsRequest {
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public AdminGetAllOrgsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public AdminGetAllOrgsQueryParams queryParams;
-    public AdminGetAllOrgsRequest withQueryParams(AdminGetAllOrgsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public AdminGetAllOrgsRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     

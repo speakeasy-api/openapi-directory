@@ -18,15 +18,11 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsSecurity;
-import org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsPathParams;
-import org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsQueryParams;
 import org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsRequest;
 import org.openapis.openapi.models.operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsResponse;
-import org.openapis.openapi.models.shared.AddAddressGroupItemsRequest;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.AddAddressGroupItemsRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -35,40 +31,32 @@ public class Application {
                 .build();
 
             NetworksecurityProjectsLocationsAddressGroupsAddItemsRequest req = new NetworksecurityProjectsLocationsAddressGroupsAddItemsRequest() {{
-                security = new NetworksecurityProjectsLocationsAddressGroupsAddItemsSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new NetworksecurityProjectsLocationsAddressGroupsAddItemsPathParams() {{
-                    addressGroup = "corrupti";
-                }};
-                queryParams = new NetworksecurityProjectsLocationsAddressGroupsAddItemsQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new AddAddressGroupItemsRequest() {{
+                dollarXgafv = "2";
+                addAddressGroupItemsRequest = new AddAddressGroupItemsRequest() {{
                     items = new String[]{{
-                        add("iure"),
-                        add("magnam"),
+                        add("distinctio"),
+                        add("quibusdam"),
+                        add("unde"),
                     }};
-                    requestId = "debitis";
+                    requestId = "nulla";
                 }};
-            }};            
+                accessToken = "corrupti";
+                addressGroup = "illum";
+                alt = "media";
+                callback = "error";
+                fields = "deserunt";
+                key = "suscipit";
+                oauthToken = "iure";
+                prettyPrint = false;
+                quotaUser = "magnam";
+                uploadType = "debitis";
+                uploadProtocol = "ipsa";
+            }}            
 
-            NetworksecurityProjectsLocationsAddressGroupsAddItemsResponse res = sdk.projects.networksecurityProjectsLocationsAddressGroupsAddItems(req);
+            NetworksecurityProjectsLocationsAddressGroupsAddItemsResponse res = sdk.projects.networksecurityProjectsLocationsAddressGroupsAddItems(req, new NetworksecurityProjectsLocationsAddressGroupsAddItemsSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response
@@ -80,7 +68,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

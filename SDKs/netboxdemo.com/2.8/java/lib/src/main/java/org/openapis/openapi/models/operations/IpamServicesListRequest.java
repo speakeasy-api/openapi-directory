@@ -4,13 +4,313 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IpamServicesListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created")
+    public String created;
+    public IpamServicesListRequest withCreated(String created) {
+        this.created = created;
+        return this;
+    }
     
-    public IpamServicesListQueryParams queryParams;
-    public IpamServicesListRequest withQueryParams(IpamServicesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created__gte")
+    public String createdGte;
+    public IpamServicesListRequest withCreatedGte(String createdGte) {
+        this.createdGte = createdGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created__lte")
+    public String createdLte;
+    public IpamServicesListRequest withCreatedLte(String createdLte) {
+        this.createdLte = createdLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
+    public String device;
+    public IpamServicesListRequest withDevice(String device) {
+        this.device = device;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device__n")
+    public String deviceN;
+    public IpamServicesListRequest withDeviceN(String deviceN) {
+        this.deviceN = deviceN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
+    public String deviceId;
+    public IpamServicesListRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id__n")
+    public String deviceIdN;
+    public IpamServicesListRequest withDeviceIdN(String deviceIdN) {
+        this.deviceIdN = deviceIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public IpamServicesListRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gt")
+    public String idGt;
+    public IpamServicesListRequest withIdGt(String idGt) {
+        this.idGt = idGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gte")
+    public String idGte;
+    public IpamServicesListRequest withIdGte(String idGte) {
+        this.idGte = idGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lt")
+    public String idLt;
+    public IpamServicesListRequest withIdLt(String idLt) {
+        this.idLt = idLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lte")
+    public String idLte;
+    public IpamServicesListRequest withIdLte(String idLte) {
+        this.idLte = idLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__n")
+    public String idN;
+    public IpamServicesListRequest withIdN(String idN) {
+        this.idN = idN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_updated")
+    public String lastUpdated;
+    public IpamServicesListRequest withLastUpdated(String lastUpdated) {
+        this.lastUpdated = lastUpdated;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_updated__gte")
+    public String lastUpdatedGte;
+    public IpamServicesListRequest withLastUpdatedGte(String lastUpdatedGte) {
+        this.lastUpdatedGte = lastUpdatedGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_updated__lte")
+    public String lastUpdatedLte;
+    public IpamServicesListRequest withLastUpdatedLte(String lastUpdatedLte) {
+        this.lastUpdatedLte = lastUpdatedLte;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public IpamServicesListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public IpamServicesListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__ic")
+    public String nameIc;
+    public IpamServicesListRequest withNameIc(String nameIc) {
+        this.nameIc = nameIc;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__ie")
+    public String nameIe;
+    public IpamServicesListRequest withNameIe(String nameIe) {
+        this.nameIe = nameIe;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__iew")
+    public String nameIew;
+    public IpamServicesListRequest withNameIew(String nameIew) {
+        this.nameIew = nameIew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__isw")
+    public String nameIsw;
+    public IpamServicesListRequest withNameIsw(String nameIsw) {
+        this.nameIsw = nameIsw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__n")
+    public String nameN;
+    public IpamServicesListRequest withNameN(String nameN) {
+        this.nameN = nameN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nic")
+    public String nameNic;
+    public IpamServicesListRequest withNameNic(String nameNic) {
+        this.nameNic = nameNic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nie")
+    public String nameNie;
+    public IpamServicesListRequest withNameNie(String nameNie) {
+        this.nameNie = nameNie;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__niew")
+    public String nameNiew;
+    public IpamServicesListRequest withNameNiew(String nameNiew) {
+        this.nameNiew = nameNiew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nisw")
+    public String nameNisw;
+    public IpamServicesListRequest withNameNisw(String nameNisw) {
+        this.nameNisw = nameNisw;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public IpamServicesListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=port")
+    public String port;
+    public IpamServicesListRequest withPort(String port) {
+        this.port = port;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=port__gt")
+    public String portGt;
+    public IpamServicesListRequest withPortGt(String portGt) {
+        this.portGt = portGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=port__gte")
+    public String portGte;
+    public IpamServicesListRequest withPortGte(String portGte) {
+        this.portGte = portGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=port__lt")
+    public String portLt;
+    public IpamServicesListRequest withPortLt(String portLt) {
+        this.portLt = portLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=port__lte")
+    public String portLte;
+    public IpamServicesListRequest withPortLte(String portLte) {
+        this.portLte = portLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=port__n")
+    public String portN;
+    public IpamServicesListRequest withPortN(String portN) {
+        this.portN = portN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=protocol")
+    public String protocol;
+    public IpamServicesListRequest withProtocol(String protocol) {
+        this.protocol = protocol;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=protocol__n")
+    public String protocolN;
+    public IpamServicesListRequest withProtocolN(String protocolN) {
+        this.protocolN = protocolN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public IpamServicesListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public IpamServicesListRequest withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag__n")
+    public String tagN;
+    public IpamServicesListRequest withTagN(String tagN) {
+        this.tagN = tagN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=virtual_machine")
+    public String virtualMachine;
+    public IpamServicesListRequest withVirtualMachine(String virtualMachine) {
+        this.virtualMachine = virtualMachine;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=virtual_machine__n")
+    public String virtualMachineN;
+    public IpamServicesListRequest withVirtualMachineN(String virtualMachineN) {
+        this.virtualMachineN = virtualMachineN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=virtual_machine_id")
+    public String virtualMachineId;
+    public IpamServicesListRequest withVirtualMachineId(String virtualMachineId) {
+        this.virtualMachineId = virtualMachineId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=virtual_machine_id__n")
+    public String virtualMachineIdN;
+    public IpamServicesListRequest withVirtualMachineIdN(String virtualMachineIdN) {
+        this.virtualMachineIdN = virtualMachineIdN;
         return this;
     }
     

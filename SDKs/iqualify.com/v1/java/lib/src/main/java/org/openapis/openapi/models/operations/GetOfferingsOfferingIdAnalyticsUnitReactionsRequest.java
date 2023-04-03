@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOfferingsOfferingIdAnalyticsUnitReactionsRequest {
-    
-    public GetOfferingsOfferingIdAnalyticsUnitReactionsPathParams pathParams;
-    public GetOfferingsOfferingIdAnalyticsUnitReactionsRequest withPathParams(GetOfferingsOfferingIdAnalyticsUnitReactionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public GetOfferingsOfferingIdAnalyticsUnitReactionsRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
         return this;
     }
     

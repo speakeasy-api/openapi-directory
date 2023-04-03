@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadStyleGuideRequest {
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public DownloadStyleGuideRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
     
-    public DownloadStyleGuidePathParams pathParams;
-    public DownloadStyleGuideRequest withPathParams(DownloadStyleGuidePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Style Guide ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=styleGuideId")
+    public Long styleGuideId;
+    public DownloadStyleGuideRequest withStyleGuideId(Long styleGuideId) {
+        this.styleGuideId = styleGuideId;
         return this;
     }
     

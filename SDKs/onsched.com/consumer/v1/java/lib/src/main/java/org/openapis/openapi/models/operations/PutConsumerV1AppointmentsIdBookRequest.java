@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutConsumerV1AppointmentsIdBookRequest {
-    
-    public PutConsumerV1AppointmentsIdBookPathParams pathParams;
-    public PutConsumerV1AppointmentsIdBookRequest withPathParams(PutConsumerV1AppointmentsIdBookPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AppointmentBookModel appointmentBookModel;
+    public PutConsumerV1AppointmentsIdBookRequest withAppointmentBookModel(org.openapis.openapi.models.shared.AppointmentBookModel appointmentBookModel) {
+        this.appointmentBookModel = appointmentBookModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AppointmentBookModel request;
-    public PutConsumerV1AppointmentsIdBookRequest withRequest(org.openapis.openapi.models.shared.AppointmentBookModel request) {
-        this.request = request;
+    /**
+     * appointment id to book
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutConsumerV1AppointmentsIdBookRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

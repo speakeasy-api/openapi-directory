@@ -31,13 +31,9 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BaremetalsolutionProjectsLocationsSubmitProvisioningConfigPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BaremetalsolutionProjectsLocationsSubmitProvisioningConfigResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BaremetalsolutionProjectsProvisioningQuotasListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BaremetalsolutionProjectsProvisioningQuotasListPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BaremetalsolutionProjectsProvisioningQuotasListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BaremetalsolutionProjectsProvisioningQuotasListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BaremetalsolutionProjectsProvisioningQuotasListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ProvisioningConfig.java
@@ -54,11 +50,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/NetworkConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/VlanAttachment.java
 lib/src/main/java/org/openapis/openapi/models/shared/InstanceConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/NetworkAddress.java
-lib/src/main/java/org/openapis/openapi/models/shared/SubmitProvisioningConfigRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/SubmitProvisioningConfigRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListProvisioningQuotasResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ProvisioningQuota.java
 lib/src/main/java/org/openapis/openapi/models/shared/InstanceQuota.java

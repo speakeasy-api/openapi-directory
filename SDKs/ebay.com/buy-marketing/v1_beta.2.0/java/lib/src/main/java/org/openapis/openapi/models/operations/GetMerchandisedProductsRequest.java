@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchandisedProductsRequest {
-    
-    public GetMerchandisedProductsQueryParams queryParams;
-    public GetMerchandisedProductsRequest withQueryParams(GetMerchandisedProductsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The aspect name/value pairs used to further refine product results. &lt;br /&gt;&lt;br /&gt; For example: &lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;code&gt;/buy/marketing/v1_beta/merchandised_product?category_id=31388&amp;metric_name=BEST_SELLING&amp;aspect_filter=Brand:Canon&lt;/code&gt;  &lt;br /&gt;&lt;br /&gt;You can use the Browse API &lt;b&gt;search&lt;/b&gt; method with the &lt;code&gt;fieldgroups=ASPECT_REFINEMENTS&lt;/code&gt; field to return the aspects of a product. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/buy/marketing/types/gct:MarketingAspectFilter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aspect_filter")
+    public String aspectFilter;
+    public GetMerchandisedProductsRequest withAspectFilter(String aspectFilter) {
+        this.aspectFilter = aspectFilter;
         return this;
     }
     
+    /**
+     * This query parameter limits the products returned to a specific eBay category.  &lt;br /&gt; &lt;br /&gt;The list of eBay category IDs is not published and category IDs are not all the same across all the eBay maketplace. You can use the following techniques to find a category by site: &lt;ul&gt; &lt;li&gt;Use the &lt;a href="https://pages.ebay.com/sellerinformation/news/categorychanges.html" target="_blank"&gt;Category Changes page&lt;/a&gt;.&lt;/li&gt; &lt;li&gt;Use the Taxonomy API. For details see &lt;a href="/api-docs/buy/buy-categories.html"&gt;Get Categories for Buy APIs&lt;/a&gt;. &lt;/li&gt;  &lt;li&gt;Use the Browse API and submit the following method to get the &lt;b&gt; dominantCategoryId&lt;/b&gt; for an item. &lt;br /&gt;&lt;code&gt;/buy/browse/v1/item_summary/search?q=&lt;em&gt;keyword&lt;/em&gt;&amp;fieldgroups=ASPECT_REFINEMENTS  &lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;  &lt;b&gt; Maximum: &lt;/b&gt; 1 &lt;br /&gt; &lt;b&gt; Required: &lt;/b&gt; 1 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category_id")
+    public String categoryId;
+    public GetMerchandisedProductsRequest withCategoryId(String categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
     
-    public GetMerchandisedProductsSecurity security;
-    public GetMerchandisedProductsRequest withSecurity(GetMerchandisedProductsSecurity security) {
-        this.security = security;
+    /**
+     * This value specifies the maximum number of products to return in a result set. &lt;br /&gt; &lt;br /&gt;&lt;span class="tablenote"&gt; &lt;b&gt;Note:&lt;/b&gt; Maximum value means the method will return up &lt;em&gt;to&lt;/em&gt; that many products per set, but it can be less than this value. If the number of products found is less than this value, the method will return all of the products matching the criteria.&lt;/span&gt;  &lt;br /&gt;&lt;br /&gt;&lt;b&gt; Default:&lt;/b&gt; 8&lt;br /&gt;&lt;b&gt; Maximum: &lt;/b&gt;100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public GetMerchandisedProductsRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * This value filters the result set by the specified metric. Only products in this metric are returned. Currently, the only metric supported is &lt;code&gt; BEST_SELLING&lt;/code&gt;. &lt;br /&gt;&lt;br /&gt;&lt;b&gt; Default: &lt;/b&gt;BEST_SELLING &lt;br /&gt; &lt;b&gt; Maximum: &lt;/b&gt; 1 &lt;br /&gt; &lt;b&gt; Required: &lt;/b&gt; 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metric_name")
+    public String metricName;
+    public GetMerchandisedProductsRequest withMetricName(String metricName) {
+        this.metricName = metricName;
         return this;
     }
     

@@ -33,10 +33,11 @@ public class Associationsessions {
     /**
      * Create an association session for initiating an association with an AdSense user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsensehostAssociationsessionsStartResponse adsensehostAssociationsessionsStart(org.openapis.openapi.models.operations.AdsensehostAssociationsessionsStartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsensehostAssociationsessionsStartResponse adsensehostAssociationsessionsStart(org.openapis.openapi.models.operations.AdsensehostAssociationsessionsStartRequest request, org.openapis.openapi.models.operations.AdsensehostAssociationsessionsStartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/associationsessions/start");
         
@@ -44,14 +45,14 @@ public class Associationsessions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostAssociationsessionsStartQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostAssociationsessionsStartRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,10 +79,11 @@ public class Associationsessions {
     /**
      * Verify an association session after the association callback returns from AdSense signup.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsensehostAssociationsessionsVerifyResponse adsensehostAssociationsessionsVerify(org.openapis.openapi.models.operations.AdsensehostAssociationsessionsVerifyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsensehostAssociationsessionsVerifyResponse adsensehostAssociationsessionsVerify(org.openapis.openapi.models.operations.AdsensehostAssociationsessionsVerifyRequest request, org.openapis.openapi.models.operations.AdsensehostAssociationsessionsVerifySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/associationsessions/verify");
         
@@ -89,14 +91,14 @@ public class Associationsessions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostAssociationsessionsVerifyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostAssociationsessionsVerifyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

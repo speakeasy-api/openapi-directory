@@ -37,21 +37,22 @@ public class Campaigns {
     /**
      * Create campaign
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CampaignsCreateResponse campaignsCreate(org.openapis.openapi.models.operations.CampaignsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CampaignsCreateResponse campaignsCreate(org.openapis.openapi.models.operations.CampaignsCreateRequest request, org.openapis.openapi.models.operations.CampaignsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CampaignsCreatePathParams.class, baseUrl, "/v1/accounts/{accountId}/campaigns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CampaignsCreateRequest.class, baseUrl, "/v1/accounts/{accountId}/campaigns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "campaignRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,19 +79,20 @@ public class Campaigns {
     /**
      * Fetch campaign by ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CampaignsFetchResponse campaignsFetch(org.openapis.openapi.models.operations.CampaignsFetchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CampaignsFetchResponse campaignsFetch(org.openapis.openapi.models.operations.CampaignsFetchRequest request, org.openapis.openapi.models.operations.CampaignsFetchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CampaignsFetchPathParams.class, baseUrl, "/v1/accounts/{accountId}/campaigns/{campaignId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CampaignsFetchRequest.class, baseUrl, "/v1/accounts/{accountId}/campaigns/{campaignId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -117,25 +119,26 @@ public class Campaigns {
     /**
      * Fetch campaigns
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CampaignsFetchAllResponse campaignsFetchAll(org.openapis.openapi.models.operations.CampaignsFetchAllRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CampaignsFetchAllResponse campaignsFetchAll(org.openapis.openapi.models.operations.CampaignsFetchAllRequest request, org.openapis.openapi.models.operations.CampaignsFetchAllSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CampaignsFetchAllPathParams.class, baseUrl, "/v1/accounts/{accountId}/campaigns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CampaignsFetchAllRequest.class, baseUrl, "/v1/accounts/{accountId}/campaigns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CampaignsFetchAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CampaignsFetchAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -170,19 +173,20 @@ public class Campaigns {
     /**
      * Deletes a campaign
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CampaignsRemoveResponse campaignsRemove(org.openapis.openapi.models.operations.CampaignsRemoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CampaignsRemoveResponse campaignsRemove(org.openapis.openapi.models.operations.CampaignsRemoveRequest request, org.openapis.openapi.models.operations.CampaignsRemoveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CampaignsRemovePathParams.class, baseUrl, "/v1/accounts/{accountId}/campaigns/{campaignId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CampaignsRemoveRequest.class, baseUrl, "/v1/accounts/{accountId}/campaigns/{campaignId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -209,19 +213,20 @@ public class Campaigns {
     /**
      * Updates a campaign
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CampaignsUpdateResponse campaignsUpdate(org.openapis.openapi.models.operations.CampaignsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CampaignsUpdateResponse campaignsUpdate(org.openapis.openapi.models.operations.CampaignsUpdateRequest request, org.openapis.openapi.models.operations.CampaignsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CampaignsUpdatePathParams.class, baseUrl, "/v1/accounts/{accountId}/campaigns/{campaignId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CampaignsUpdateRequest.class, baseUrl, "/v1/accounts/{accountId}/campaigns/{campaignId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

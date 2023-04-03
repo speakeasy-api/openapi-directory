@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMeLikesTracksRequest {
-    
-    public GetMeLikesTracksQueryParams queryParams;
-    public GetMeLikesTracksRequest withQueryParams(GetMeLikesTracksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of results to return in the collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetMeLikesTracksRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetMeLikesTracksSecurity security;
-    public GetMeLikesTracksRequest withSecurity(GetMeLikesTracksSecurity security) {
-        this.security = security;
+    /**
+     * Returns paginated collection of items (recommended, returning a list without pagination is deprecated and should not be used)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linked_partitioning")
+    public Boolean linkedPartitioning;
+    public GetMeLikesTracksRequest withLinkedPartitioning(Boolean linkedPartitioning) {
+        this.linkedPartitioning = linkedPartitioning;
         return this;
     }
     

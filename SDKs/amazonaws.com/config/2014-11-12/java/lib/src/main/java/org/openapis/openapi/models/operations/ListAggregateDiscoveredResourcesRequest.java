@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAggregateDiscoveredResourcesRequest {
-    
-    public ListAggregateDiscoveredResourcesQueryParams queryParams;
-    public ListAggregateDiscoveredResourcesRequest withQueryParams(ListAggregateDiscoveredResourcesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListAggregateDiscoveredResourcesHeaders headers;
-    public ListAggregateDiscoveredResourcesRequest withHeaders(ListAggregateDiscoveredResourcesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Limit")
+    public String limit;
+    public ListAggregateDiscoveredResourcesRequest withLimit(String limit) {
+        this.limit = limit;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ListAggregateDiscoveredResourcesRequest request;
-    public ListAggregateDiscoveredResourcesRequest withRequest(org.openapis.openapi.models.shared.ListAggregateDiscoveredResourcesRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ListAggregateDiscoveredResourcesRequest listAggregateDiscoveredResourcesRequest;
+    public ListAggregateDiscoveredResourcesRequest withListAggregateDiscoveredResourcesRequest(org.openapis.openapi.models.shared.ListAggregateDiscoveredResourcesRequest listAggregateDiscoveredResourcesRequest) {
+        this.listAggregateDiscoveredResourcesRequest = listAggregateDiscoveredResourcesRequest;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListAggregateDiscoveredResourcesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListAggregateDiscoveredResourcesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListAggregateDiscoveredResourcesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListAggregateDiscoveredResourcesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListAggregateDiscoveredResourcesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListAggregateDiscoveredResourcesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListAggregateDiscoveredResourcesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListAggregateDiscoveredResourcesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public ListAggregateDiscoveredResourcesXAmzTargetEnum xAmzTarget;
+    public ListAggregateDiscoveredResourcesRequest withXAmzTarget(ListAggregateDiscoveredResourcesXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

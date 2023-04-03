@@ -34,25 +34,26 @@ public class RegionInstanceTemplates {
     /**
      * Deletes the specified instance template. Deleting an instance template is permanent and cannot be undone.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesDeleteResponse computeRegionInstanceTemplatesDelete(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesDeleteResponse computeRegionInstanceTemplatesDelete(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesDeleteRequest request, org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesDeletePathParams.class, baseUrl, "/projects/{project}/regions/{region}/instanceTemplates/{instanceTemplate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesDeleteRequest.class, baseUrl, "/projects/{project}/regions/{region}/instanceTemplates/{instanceTemplate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class RegionInstanceTemplates {
     /**
      * Returns the specified instance template.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesGetResponse computeRegionInstanceTemplatesGet(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesGetResponse computeRegionInstanceTemplatesGet(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesGetRequest request, org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesGetPathParams.class, baseUrl, "/projects/{project}/regions/{region}/instanceTemplates/{instanceTemplate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesGetRequest.class, baseUrl, "/projects/{project}/regions/{region}/instanceTemplates/{instanceTemplate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class RegionInstanceTemplates {
     /**
      * Creates an instance template in the specified project and region using the global instance template whose URL is included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesInsertResponse computeRegionInstanceTemplatesInsert(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesInsertResponse computeRegionInstanceTemplatesInsert(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesInsertRequest request, org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesInsertPathParams.class, baseUrl, "/projects/{project}/regions/{region}/instanceTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesInsertRequest.class, baseUrl, "/projects/{project}/regions/{region}/instanceTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instanceTemplate", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class RegionInstanceTemplates {
     /**
      * Retrieves a list of instance templates that are contained within the specified project and region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesListResponse computeRegionInstanceTemplatesList(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesListResponse computeRegionInstanceTemplatesList(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesListRequest request, org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesListPathParams.class, baseUrl, "/projects/{project}/regions/{region}/instanceTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesListRequest.class, baseUrl, "/projects/{project}/regions/{region}/instanceTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionInstanceTemplatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

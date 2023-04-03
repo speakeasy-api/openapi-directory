@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePayable2Request {
-    
-    public CreatePayable2PathParams pathParams;
-    public CreatePayable2Request withPathParams(CreatePayable2PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.PayableCreateDTO payableCreateDTO;
+    public CreatePayable2Request withPayableCreateDTO(org.openapis.openapi.models.shared.PayableCreateDTO payableCreateDTO) {
+        this.payableCreateDTO = payableCreateDTO;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PayableCreateDTO request;
-    public CreatePayable2Request withRequest(org.openapis.openapi.models.shared.PayableCreateDTO request) {
-        this.request = request;
+    /**
+     * project's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public CreatePayable2Request withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

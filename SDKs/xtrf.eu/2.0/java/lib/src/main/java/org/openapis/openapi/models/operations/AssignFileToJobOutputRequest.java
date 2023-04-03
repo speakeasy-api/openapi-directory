@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssignFileToJobOutputRequest {
-    
-    public AssignFileToJobOutputPathParams pathParams;
-    public AssignFileToJobOutputRequest withPathParams(AssignFileToJobOutputPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Assigns file to job output files.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TaskFileDTO request;
-    public AssignFileToJobOutputRequest withRequest(org.openapis.openapi.models.shared.TaskFileDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TaskFileDTO taskFileDTO;
+    public AssignFileToJobOutputRequest withTaskFileDTO(org.openapis.openapi.models.shared.TaskFileDTO taskFileDTO) {
+        this.taskFileDTO = taskFileDTO;
+        return this;
+    }
+    
+    /**
+     * job's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public AssignFileToJobOutputRequest withJobId(String jobId) {
+        this.jobId = jobId;
         return this;
     }
     

@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ParseJapaneseNameRequest {
-    
-    public ParseJapaneseNamePathParams pathParams;
-    public ParseJapaneseNameRequest withPathParams(ParseJapaneseNamePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ParseJapaneseNameSecurity security;
-    public ParseJapaneseNameRequest withSecurity(ParseJapaneseNameSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=japaneseName")
+    public String japaneseName;
+    public ParseJapaneseNameRequest withJapaneseName(String japaneseName) {
+        this.japaneseName = japaneseName;
         return this;
     }
     

@@ -7,31 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePolicyVersionRequest {
-    
-    public CreatePolicyVersionPathParams pathParams;
-    public CreatePolicyVersionRequest withPathParams(CreatePolicyVersionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreatePolicyVersionQueryParams queryParams;
-    public CreatePolicyVersionRequest withQueryParams(CreatePolicyVersionQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public CreatePolicyVersionHeaders headers;
-    public CreatePolicyVersionRequest withHeaders(CreatePolicyVersionHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreatePolicyVersionRequestBody request;
-    public CreatePolicyVersionRequest withRequest(CreatePolicyVersionRequestBody request) {
-        this.request = request;
+    public CreatePolicyVersionRequestBody requestBody;
+    public CreatePolicyVersionRequest withRequestBody(CreatePolicyVersionRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public CreatePolicyVersionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public CreatePolicyVersionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public CreatePolicyVersionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public CreatePolicyVersionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public CreatePolicyVersionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public CreatePolicyVersionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public CreatePolicyVersionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The policy name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=policyName")
+    public String policyName;
+    public CreatePolicyVersionRequest withPolicyName(String policyName) {
+        this.policyName = policyName;
+        return this;
+    }
+    
+    /**
+     * Specifies whether the policy version is set as the default. When this parameter is true, the new policy version becomes the operative version (that is, the version that is in effect for the certificates to which the policy is attached).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setAsDefault")
+    public Boolean setAsDefault;
+    public CreatePolicyVersionRequest withSetAsDefault(Boolean setAsDefault) {
+        this.setAsDefault = setAsDefault;
         return this;
     }
     

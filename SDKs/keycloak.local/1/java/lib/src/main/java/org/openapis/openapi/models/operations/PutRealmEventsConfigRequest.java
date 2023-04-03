@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRealmEventsConfigRequest {
-    
-    public PutRealmEventsConfigPathParams pathParams;
-    public PutRealmEventsConfigRequest withPathParams(PutRealmEventsConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.RealmEventsConfigRepresentation realmEventsConfigRepresentation;
+    public PutRealmEventsConfigRequest withRealmEventsConfigRepresentation(org.openapis.openapi.models.shared.RealmEventsConfigRepresentation realmEventsConfigRepresentation) {
+        this.realmEventsConfigRepresentation = realmEventsConfigRepresentation;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RealmEventsConfigRepresentation request;
-    public PutRealmEventsConfigRequest withRequest(org.openapis.openapi.models.shared.RealmEventsConfigRepresentation request) {
-        this.request = request;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PutRealmEventsConfigRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

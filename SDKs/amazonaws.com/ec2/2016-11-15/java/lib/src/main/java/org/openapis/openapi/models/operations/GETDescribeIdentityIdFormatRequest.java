@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeIdentityIdFormatRequest {
-    
-    public GETDescribeIdentityIdFormatQueryParams queryParams;
-    public GETDescribeIdentityIdFormatRequest withQueryParams(GETDescribeIdentityIdFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeIdentityIdFormatActionEnum action;
+    public GETDescribeIdentityIdFormatRequest withAction(GETDescribeIdentityIdFormatActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The ARN of the principal, which can be an IAM role, IAM user, or the root user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrincipalArn")
+    public String principalArn;
+    public GETDescribeIdentityIdFormatRequest withPrincipalArn(String principalArn) {
+        this.principalArn = principalArn;
+        return this;
+    }
     
-    public GETDescribeIdentityIdFormatHeaders headers;
-    public GETDescribeIdentityIdFormatRequest withHeaders(GETDescribeIdentityIdFormatHeaders headers) {
-        this.headers = headers;
+    /**
+     * The type of resource: &lt;code&gt;bundle&lt;/code&gt; | &lt;code&gt;conversion-task&lt;/code&gt; | &lt;code&gt;customer-gateway&lt;/code&gt; | &lt;code&gt;dhcp-options&lt;/code&gt; | &lt;code&gt;elastic-ip-allocation&lt;/code&gt; | &lt;code&gt;elastic-ip-association&lt;/code&gt; | &lt;code&gt;export-task&lt;/code&gt; | &lt;code&gt;flow-log&lt;/code&gt; | &lt;code&gt;image&lt;/code&gt; | &lt;code&gt;import-task&lt;/code&gt; | &lt;code&gt;instance&lt;/code&gt; | &lt;code&gt;internet-gateway&lt;/code&gt; | &lt;code&gt;network-acl&lt;/code&gt; | &lt;code&gt;network-acl-association&lt;/code&gt; | &lt;code&gt;network-interface&lt;/code&gt; | &lt;code&gt;network-interface-attachment&lt;/code&gt; | &lt;code&gt;prefix-list&lt;/code&gt; | &lt;code&gt;reservation&lt;/code&gt; | &lt;code&gt;route-table&lt;/code&gt; | &lt;code&gt;route-table-association&lt;/code&gt; | &lt;code&gt;security-group&lt;/code&gt; | &lt;code&gt;snapshot&lt;/code&gt; | &lt;code&gt;subnet&lt;/code&gt; | &lt;code&gt;subnet-cidr-block-association&lt;/code&gt; | &lt;code&gt;volume&lt;/code&gt; | &lt;code&gt;vpc&lt;/code&gt; | &lt;code&gt;vpc-cidr-block-association&lt;/code&gt; | &lt;code&gt;vpc-endpoint&lt;/code&gt; | &lt;code&gt;vpc-peering-connection&lt;/code&gt; | &lt;code&gt;vpn-connection&lt;/code&gt; | &lt;code&gt;vpn-gateway&lt;/code&gt; 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Resource")
+    public String resource;
+    public GETDescribeIdentityIdFormatRequest withResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeIdentityIdFormatVersionEnum version;
+    public GETDescribeIdentityIdFormatRequest withVersion(GETDescribeIdentityIdFormatVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeIdentityIdFormatRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeIdentityIdFormatRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeIdentityIdFormatRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeIdentityIdFormatRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeIdentityIdFormatRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeIdentityIdFormatRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeIdentityIdFormatRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

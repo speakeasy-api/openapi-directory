@@ -44,12 +44,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.AssignOrganizationLicensesSeatsResponse assignOrganizationLicensesSeats(org.openapis.openapi.models.operations.AssignOrganizationLicensesSeatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssignOrganizationLicensesSeatsPathParams.class, baseUrl, "/organizations/{organizationId}/licenses/assignSeats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssignOrganizationLicensesSeatsRequest.class, baseUrl, "/organizations/{organizationId}/licenses/assignSeats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -89,12 +89,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.ClaimIntoOrganizationResponse claimIntoOrganization(org.openapis.openapi.models.operations.ClaimIntoOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClaimIntoOrganizationPathParams.class, baseUrl, "/organizations/{organizationId}/claim", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClaimIntoOrganizationRequest.class, baseUrl, "/organizations/{organizationId}/claim", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -131,12 +131,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.ClaimIntoOrganizationInventoryResponse claimIntoOrganizationInventory(org.openapis.openapi.models.operations.ClaimIntoOrganizationInventoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClaimIntoOrganizationInventoryPathParams.class, baseUrl, "/organizations/{organizationId}/inventory/claim", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClaimIntoOrganizationInventoryRequest.class, baseUrl, "/organizations/{organizationId}/inventory/claim", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -173,12 +173,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.CloneOrganizationResponse cloneOrganization(org.openapis.openapi.models.operations.CloneOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloneOrganizationPathParams.class, baseUrl, "/organizations/{organizationId}/clone", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloneOrganizationRequest.class, baseUrl, "/organizations/{organizationId}/clone", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -218,12 +218,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.CombineOrganizationNetworksResponse combineOrganizationNetworks(org.openapis.openapi.models.operations.CombineOrganizationNetworksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CombineOrganizationNetworksPathParams.class, baseUrl, "/organizations/{organizationId}/networks/combine", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CombineOrganizationNetworksRequest.class, baseUrl, "/organizations/{organizationId}/networks/combine", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -261,7 +261,7 @@ public class Organizations {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateOrganizationResponse createOrganization(org.openapis.openapi.models.operations.CreateOrganizationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateOrganizationResponse createOrganization(org.openapis.openapi.models.operations.CreateOrganizationRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/organizations");
         
@@ -308,12 +308,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationActionBatchResponse createOrganizationActionBatch(org.openapis.openapi.models.operations.CreateOrganizationActionBatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationActionBatchPathParams.class, baseUrl, "/organizations/{organizationId}/actionBatches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationActionBatchRequest.class, baseUrl, "/organizations/{organizationId}/actionBatches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -353,12 +353,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationAdaptivePolicyAclResponse createOrganizationAdaptivePolicyAcl(org.openapis.openapi.models.operations.CreateOrganizationAdaptivePolicyAclRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationAdaptivePolicyAclPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/acls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationAdaptivePolicyAclRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/acls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -398,12 +398,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationAdaptivePolicyGroupResponse createOrganizationAdaptivePolicyGroup(org.openapis.openapi.models.operations.CreateOrganizationAdaptivePolicyGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationAdaptivePolicyGroupPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationAdaptivePolicyGroupRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -443,12 +443,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationAdaptivePolicyPolicyResponse createOrganizationAdaptivePolicyPolicy(org.openapis.openapi.models.operations.CreateOrganizationAdaptivePolicyPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationAdaptivePolicyPolicyPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/policies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationAdaptivePolicyPolicyRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/policies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -488,12 +488,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationAdminResponse createOrganizationAdmin(org.openapis.openapi.models.operations.CreateOrganizationAdminRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationAdminPathParams.class, baseUrl, "/organizations/{organizationId}/admins", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationAdminRequest.class, baseUrl, "/organizations/{organizationId}/admins", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -533,12 +533,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationAlertsProfileResponse createOrganizationAlertsProfile(org.openapis.openapi.models.operations.CreateOrganizationAlertsProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationAlertsProfilePathParams.class, baseUrl, "/organizations/{organizationId}/alerts/profiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationAlertsProfileRequest.class, baseUrl, "/organizations/{organizationId}/alerts/profiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -578,12 +578,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationBrandingPolicyResponse createOrganizationBrandingPolicy(org.openapis.openapi.models.operations.CreateOrganizationBrandingPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationBrandingPolicyPathParams.class, baseUrl, "/organizations/{organizationId}/brandingPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationBrandingPolicyRequest.class, baseUrl, "/organizations/{organizationId}/brandingPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -620,12 +620,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationConfigTemplateResponse createOrganizationConfigTemplate(org.openapis.openapi.models.operations.CreateOrganizationConfigTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationConfigTemplatePathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationConfigTemplateRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -665,12 +665,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationEarlyAccessFeaturesOptInResponse createOrganizationEarlyAccessFeaturesOptIn(org.openapis.openapi.models.operations.CreateOrganizationEarlyAccessFeaturesOptInRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationEarlyAccessFeaturesOptInPathParams.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features/optIns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationEarlyAccessFeaturesOptInRequest.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features/optIns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -710,12 +710,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationInventoryOnboardingCloudMonitoringExportEventResponse createOrganizationInventoryOnboardingCloudMonitoringExportEvent(org.openapis.openapi.models.operations.CreateOrganizationInventoryOnboardingCloudMonitoringExportEventRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationInventoryOnboardingCloudMonitoringExportEventPathParams.class, baseUrl, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/exportEvents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationInventoryOnboardingCloudMonitoringExportEventRequest.class, baseUrl, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/exportEvents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -755,12 +755,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationInventoryOnboardingCloudMonitoringImportResponse createOrganizationInventoryOnboardingCloudMonitoringImport(org.openapis.openapi.models.operations.CreateOrganizationInventoryOnboardingCloudMonitoringImportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationInventoryOnboardingCloudMonitoringImportPathParams.class, baseUrl, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/imports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationInventoryOnboardingCloudMonitoringImportRequest.class, baseUrl, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/imports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -800,12 +800,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationNetworkResponse createOrganizationNetwork(org.openapis.openapi.models.operations.CreateOrganizationNetworkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationNetworkPathParams.class, baseUrl, "/organizations/{organizationId}/networks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationNetworkRequest.class, baseUrl, "/organizations/{organizationId}/networks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -845,12 +845,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationPolicyObjectResponse createOrganizationPolicyObject(org.openapis.openapi.models.operations.CreateOrganizationPolicyObjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationPolicyObjectPathParams.class, baseUrl, "/organizations/{organizationId}/policyObjects", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationPolicyObjectRequest.class, baseUrl, "/organizations/{organizationId}/policyObjects", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -890,12 +890,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationPolicyObjectsGroupResponse createOrganizationPolicyObjectsGroup(org.openapis.openapi.models.operations.CreateOrganizationPolicyObjectsGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationPolicyObjectsGroupPathParams.class, baseUrl, "/organizations/{organizationId}/policyObjects/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationPolicyObjectsGroupRequest.class, baseUrl, "/organizations/{organizationId}/policyObjects/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -935,12 +935,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationSamlIdpResponse createOrganizationSamlIdp(org.openapis.openapi.models.operations.CreateOrganizationSamlIdpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationSamlIdpPathParams.class, baseUrl, "/organizations/{organizationId}/saml/idps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationSamlIdpRequest.class, baseUrl, "/organizations/{organizationId}/saml/idps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -980,12 +980,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationSamlRoleResponse createOrganizationSamlRole(org.openapis.openapi.models.operations.CreateOrganizationSamlRoleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationSamlRolePathParams.class, baseUrl, "/organizations/{organizationId}/samlRoles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationSamlRoleRequest.class, baseUrl, "/organizations/{organizationId}/samlRoles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1025,7 +1025,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationResponse deleteOrganization(org.openapis.openapi.models.operations.DeleteOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationPathParams.class, baseUrl, "/organizations/{organizationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationRequest.class, baseUrl, "/organizations/{organizationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1059,7 +1059,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationActionBatchResponse deleteOrganizationActionBatch(org.openapis.openapi.models.operations.DeleteOrganizationActionBatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationActionBatchPathParams.class, baseUrl, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationActionBatchRequest.class, baseUrl, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1093,7 +1093,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationAdaptivePolicyAclResponse deleteOrganizationAdaptivePolicyAcl(org.openapis.openapi.models.operations.DeleteOrganizationAdaptivePolicyAclRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationAdaptivePolicyAclPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationAdaptivePolicyAclRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1127,7 +1127,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationAdaptivePolicyGroupResponse deleteOrganizationAdaptivePolicyGroup(org.openapis.openapi.models.operations.DeleteOrganizationAdaptivePolicyGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationAdaptivePolicyGroupPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationAdaptivePolicyGroupRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1161,7 +1161,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationAdaptivePolicyPolicyResponse deleteOrganizationAdaptivePolicyPolicy(org.openapis.openapi.models.operations.DeleteOrganizationAdaptivePolicyPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationAdaptivePolicyPolicyPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationAdaptivePolicyPolicyRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1195,7 +1195,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationAdminResponse deleteOrganizationAdmin(org.openapis.openapi.models.operations.DeleteOrganizationAdminRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationAdminPathParams.class, baseUrl, "/organizations/{organizationId}/admins/{adminId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationAdminRequest.class, baseUrl, "/organizations/{organizationId}/admins/{adminId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1229,7 +1229,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationAlertsProfileResponse deleteOrganizationAlertsProfile(org.openapis.openapi.models.operations.DeleteOrganizationAlertsProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationAlertsProfilePathParams.class, baseUrl, "/organizations/{organizationId}/alerts/profiles/{alertConfigId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationAlertsProfileRequest.class, baseUrl, "/organizations/{organizationId}/alerts/profiles/{alertConfigId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1263,7 +1263,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationBrandingPolicyResponse deleteOrganizationBrandingPolicy(org.openapis.openapi.models.operations.DeleteOrganizationBrandingPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationBrandingPolicyPathParams.class, baseUrl, "/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationBrandingPolicyRequest.class, baseUrl, "/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1297,7 +1297,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationConfigTemplateResponse deleteOrganizationConfigTemplate(org.openapis.openapi.models.operations.DeleteOrganizationConfigTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationConfigTemplatePathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationConfigTemplateRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1331,7 +1331,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationEarlyAccessFeaturesOptInResponse deleteOrganizationEarlyAccessFeaturesOptIn(org.openapis.openapi.models.operations.DeleteOrganizationEarlyAccessFeaturesOptInRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationEarlyAccessFeaturesOptInPathParams.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationEarlyAccessFeaturesOptInRequest.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1365,7 +1365,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationPolicyObjectResponse deleteOrganizationPolicyObject(org.openapis.openapi.models.operations.DeleteOrganizationPolicyObjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationPolicyObjectPathParams.class, baseUrl, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationPolicyObjectRequest.class, baseUrl, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1399,7 +1399,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationPolicyObjectsGroupResponse deleteOrganizationPolicyObjectsGroup(org.openapis.openapi.models.operations.DeleteOrganizationPolicyObjectsGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationPolicyObjectsGroupPathParams.class, baseUrl, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationPolicyObjectsGroupRequest.class, baseUrl, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1433,7 +1433,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationSamlIdpResponse deleteOrganizationSamlIdp(org.openapis.openapi.models.operations.DeleteOrganizationSamlIdpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationSamlIdpPathParams.class, baseUrl, "/organizations/{organizationId}/saml/idps/{idpId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationSamlIdpRequest.class, baseUrl, "/organizations/{organizationId}/saml/idps/{idpId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1467,7 +1467,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationSamlRoleResponse deleteOrganizationSamlRole(org.openapis.openapi.models.operations.DeleteOrganizationSamlRoleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationSamlRolePathParams.class, baseUrl, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationSamlRoleRequest.class, baseUrl, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1501,7 +1501,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationUserResponse deleteOrganizationUser(org.openapis.openapi.models.operations.DeleteOrganizationUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationUserPathParams.class, baseUrl, "/organizations/{organizationId}/users/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationUserRequest.class, baseUrl, "/organizations/{organizationId}/users/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1535,7 +1535,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationResponse getOrganization(org.openapis.openapi.models.operations.GetOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationPathParams.class, baseUrl, "/organizations/{organizationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationRequest.class, baseUrl, "/organizations/{organizationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1575,7 +1575,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationActionBatchResponse getOrganizationActionBatch(org.openapis.openapi.models.operations.GetOrganizationActionBatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationActionBatchPathParams.class, baseUrl, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationActionBatchRequest.class, baseUrl, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1615,13 +1615,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationActionBatchesResponse getOrganizationActionBatches(org.openapis.openapi.models.operations.GetOrganizationActionBatchesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationActionBatchesPathParams.class, baseUrl, "/organizations/{organizationId}/actionBatches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationActionBatchesRequest.class, baseUrl, "/organizations/{organizationId}/actionBatches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationActionBatchesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationActionBatchesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1661,7 +1661,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyAclResponse getOrganizationAdaptivePolicyAcl(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyAclRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyAclPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyAclRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1701,7 +1701,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyAclsResponse getOrganizationAdaptivePolicyAcls(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyAclsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyAclsPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/acls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyAclsRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/acls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1741,7 +1741,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyGroupResponse getOrganizationAdaptivePolicyGroup(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyGroupPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyGroupRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1781,7 +1781,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyGroupsResponse getOrganizationAdaptivePolicyGroups(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyGroupsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyGroupsPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyGroupsRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1821,7 +1821,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyOverviewResponse getOrganizationAdaptivePolicyOverview(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyOverviewRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyOverviewPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/overview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyOverviewRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/overview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1861,7 +1861,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyPoliciesResponse getOrganizationAdaptivePolicyPolicies(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyPoliciesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyPoliciesPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/policies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyPoliciesRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/policies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1901,7 +1901,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyPolicyResponse getOrganizationAdaptivePolicyPolicy(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyPolicyPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyPolicyRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1941,7 +1941,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicySettingsResponse getOrganizationAdaptivePolicySettings(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicySettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicySettingsPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicySettingsRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1981,7 +1981,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationAdminsResponse getOrganizationAdmins(org.openapis.openapi.models.operations.GetOrganizationAdminsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdminsPathParams.class, baseUrl, "/organizations/{organizationId}/admins", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdminsRequest.class, baseUrl, "/organizations/{organizationId}/admins", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2021,7 +2021,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationAlertsProfilesResponse getOrganizationAlertsProfiles(org.openapis.openapi.models.operations.GetOrganizationAlertsProfilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAlertsProfilesPathParams.class, baseUrl, "/organizations/{organizationId}/alerts/profiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAlertsProfilesRequest.class, baseUrl, "/organizations/{organizationId}/alerts/profiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2061,13 +2061,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationApiRequestsResponse getOrganizationApiRequests(org.openapis.openapi.models.operations.GetOrganizationApiRequestsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApiRequestsPathParams.class, baseUrl, "/organizations/{organizationId}/apiRequests", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApiRequestsRequest.class, baseUrl, "/organizations/{organizationId}/apiRequests", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationApiRequestsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationApiRequestsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2109,13 +2109,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewResponse getOrganizationApiRequestsOverview(org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewPathParams.class, baseUrl, "/organizations/{organizationId}/apiRequests/overview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewRequest.class, baseUrl, "/organizations/{organizationId}/apiRequests/overview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2155,13 +2155,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewResponseCodesByIntervalResponse getOrganizationApiRequestsOverviewResponseCodesByInterval(org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewResponseCodesByIntervalRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewResponseCodesByIntervalPathParams.class, baseUrl, "/organizations/{organizationId}/apiRequests/overview/responseCodes/byInterval", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewResponseCodesByIntervalRequest.class, baseUrl, "/organizations/{organizationId}/apiRequests/overview/responseCodes/byInterval", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewResponseCodesByIntervalQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewResponseCodesByIntervalRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2201,7 +2201,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationBrandingPoliciesResponse getOrganizationBrandingPolicies(org.openapis.openapi.models.operations.GetOrganizationBrandingPoliciesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationBrandingPoliciesPathParams.class, baseUrl, "/organizations/{organizationId}/brandingPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationBrandingPoliciesRequest.class, baseUrl, "/organizations/{organizationId}/brandingPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2241,7 +2241,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationBrandingPoliciesPrioritiesResponse getOrganizationBrandingPoliciesPriorities(org.openapis.openapi.models.operations.GetOrganizationBrandingPoliciesPrioritiesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationBrandingPoliciesPrioritiesPathParams.class, baseUrl, "/organizations/{organizationId}/brandingPolicies/priorities", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationBrandingPoliciesPrioritiesRequest.class, baseUrl, "/organizations/{organizationId}/brandingPolicies/priorities", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2281,7 +2281,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationBrandingPolicyResponse getOrganizationBrandingPolicy(org.openapis.openapi.models.operations.GetOrganizationBrandingPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationBrandingPolicyPathParams.class, baseUrl, "/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationBrandingPolicyRequest.class, baseUrl, "/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2321,13 +2321,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationClientsBandwidthUsageHistoryResponse getOrganizationClientsBandwidthUsageHistory(org.openapis.openapi.models.operations.GetOrganizationClientsBandwidthUsageHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationClientsBandwidthUsageHistoryPathParams.class, baseUrl, "/organizations/{organizationId}/clients/bandwidthUsageHistory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationClientsBandwidthUsageHistoryRequest.class, baseUrl, "/organizations/{organizationId}/clients/bandwidthUsageHistory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationClientsBandwidthUsageHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationClientsBandwidthUsageHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2367,13 +2367,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationClientsOverviewResponse getOrganizationClientsOverview(org.openapis.openapi.models.operations.GetOrganizationClientsOverviewRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationClientsOverviewPathParams.class, baseUrl, "/organizations/{organizationId}/clients/overview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationClientsOverviewRequest.class, baseUrl, "/organizations/{organizationId}/clients/overview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationClientsOverviewQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationClientsOverviewRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2413,13 +2413,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationClientsSearchResponse getOrganizationClientsSearch(org.openapis.openapi.models.operations.GetOrganizationClientsSearchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationClientsSearchPathParams.class, baseUrl, "/organizations/{organizationId}/clients/search", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationClientsSearchRequest.class, baseUrl, "/organizations/{organizationId}/clients/search", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationClientsSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationClientsSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2461,7 +2461,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationConfigTemplateResponse getOrganizationConfigTemplate(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplatePathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2501,7 +2501,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationConfigTemplatesResponse getOrganizationConfigTemplates(org.openapis.openapi.models.operations.GetOrganizationConfigTemplatesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplatesPathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplatesRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2541,13 +2541,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationConfigurationChangesResponse getOrganizationConfigurationChanges(org.openapis.openapi.models.operations.GetOrganizationConfigurationChangesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigurationChangesPathParams.class, baseUrl, "/organizations/{organizationId}/configurationChanges", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigurationChangesRequest.class, baseUrl, "/organizations/{organizationId}/configurationChanges", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationConfigurationChangesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationConfigurationChangesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2589,13 +2589,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationDevicesResponse getOrganizationDevices(org.openapis.openapi.models.operations.GetOrganizationDevicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesPathParams.class, baseUrl, "/organizations/{organizationId}/devices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesRequest.class, baseUrl, "/organizations/{organizationId}/devices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2637,13 +2637,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationDevicesAvailabilitiesResponse getOrganizationDevicesAvailabilities(org.openapis.openapi.models.operations.GetOrganizationDevicesAvailabilitiesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesAvailabilitiesPathParams.class, baseUrl, "/organizations/{organizationId}/devices/availabilities", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesAvailabilitiesRequest.class, baseUrl, "/organizations/{organizationId}/devices/availabilities", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesAvailabilitiesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesAvailabilitiesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2685,13 +2685,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationDevicesPowerModulesStatusesByDeviceResponse getOrganizationDevicesPowerModulesStatusesByDevice(org.openapis.openapi.models.operations.GetOrganizationDevicesPowerModulesStatusesByDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesPowerModulesStatusesByDevicePathParams.class, baseUrl, "/organizations/{organizationId}/devices/powerModules/statuses/byDevice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesPowerModulesStatusesByDeviceRequest.class, baseUrl, "/organizations/{organizationId}/devices/powerModules/statuses/byDevice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesPowerModulesStatusesByDeviceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesPowerModulesStatusesByDeviceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2733,13 +2733,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationDevicesStatusesResponse getOrganizationDevicesStatuses(org.openapis.openapi.models.operations.GetOrganizationDevicesStatusesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesStatusesPathParams.class, baseUrl, "/organizations/{organizationId}/devices/statuses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesStatusesRequest.class, baseUrl, "/organizations/{organizationId}/devices/statuses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesStatusesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesStatusesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2781,13 +2781,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationDevicesStatusesOverviewResponse getOrganizationDevicesStatusesOverview(org.openapis.openapi.models.operations.GetOrganizationDevicesStatusesOverviewRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesStatusesOverviewPathParams.class, baseUrl, "/organizations/{organizationId}/devices/statuses/overview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesStatusesOverviewRequest.class, baseUrl, "/organizations/{organizationId}/devices/statuses/overview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesStatusesOverviewQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesStatusesOverviewRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2827,13 +2827,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDeviceResponse getOrganizationDevicesUplinksAddressesByDevice(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDevicePathParams.class, baseUrl, "/organizations/{organizationId}/devices/uplinks/addresses/byDevice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDeviceRequest.class, baseUrl, "/organizations/{organizationId}/devices/uplinks/addresses/byDevice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDeviceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDeviceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2875,13 +2875,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksLossAndLatencyResponse getOrganizationDevicesUplinksLossAndLatency(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksLossAndLatencyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksLossAndLatencyPathParams.class, baseUrl, "/organizations/{organizationId}/devices/uplinksLossAndLatency", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksLossAndLatencyRequest.class, baseUrl, "/organizations/{organizationId}/devices/uplinksLossAndLatency", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksLossAndLatencyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksLossAndLatencyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2921,7 +2921,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationEarlyAccessFeaturesResponse getOrganizationEarlyAccessFeatures(org.openapis.openapi.models.operations.GetOrganizationEarlyAccessFeaturesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationEarlyAccessFeaturesPathParams.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationEarlyAccessFeaturesRequest.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2961,7 +2961,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationEarlyAccessFeaturesOptInResponse getOrganizationEarlyAccessFeaturesOptIn(org.openapis.openapi.models.operations.GetOrganizationEarlyAccessFeaturesOptInRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationEarlyAccessFeaturesOptInPathParams.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationEarlyAccessFeaturesOptInRequest.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3001,7 +3001,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationEarlyAccessFeaturesOptInsResponse getOrganizationEarlyAccessFeaturesOptIns(org.openapis.openapi.models.operations.GetOrganizationEarlyAccessFeaturesOptInsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationEarlyAccessFeaturesOptInsPathParams.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features/optIns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationEarlyAccessFeaturesOptInsRequest.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features/optIns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3041,13 +3041,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesResponse getOrganizationFirmwareUpgrades(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesPathParams.class, baseUrl, "/organizations/{organizationId}/firmware/upgrades", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesRequest.class, baseUrl, "/organizations/{organizationId}/firmware/upgrades", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3087,13 +3087,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesByDeviceResponse getOrganizationFirmwareUpgradesByDevice(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesByDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesByDevicePathParams.class, baseUrl, "/organizations/{organizationId}/firmware/upgrades/byDevice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesByDeviceRequest.class, baseUrl, "/organizations/{organizationId}/firmware/upgrades/byDevice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesByDeviceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesByDeviceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3135,7 +3135,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationInventoryDeviceResponse getOrganizationInventoryDevice(org.openapis.openapi.models.operations.GetOrganizationInventoryDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationInventoryDevicePathParams.class, baseUrl, "/organizations/{organizationId}/inventory/devices/{serial}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationInventoryDeviceRequest.class, baseUrl, "/organizations/{organizationId}/inventory/devices/{serial}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3175,13 +3175,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationInventoryDevicesResponse getOrganizationInventoryDevices(org.openapis.openapi.models.operations.GetOrganizationInventoryDevicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationInventoryDevicesPathParams.class, baseUrl, "/organizations/{organizationId}/inventory/devices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationInventoryDevicesRequest.class, baseUrl, "/organizations/{organizationId}/inventory/devices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationInventoryDevicesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationInventoryDevicesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3223,13 +3223,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationInventoryOnboardingCloudMonitoringImportsResponse getOrganizationInventoryOnboardingCloudMonitoringImports(org.openapis.openapi.models.operations.GetOrganizationInventoryOnboardingCloudMonitoringImportsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationInventoryOnboardingCloudMonitoringImportsPathParams.class, baseUrl, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/imports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationInventoryOnboardingCloudMonitoringImportsRequest.class, baseUrl, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/imports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationInventoryOnboardingCloudMonitoringImportsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationInventoryOnboardingCloudMonitoringImportsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3269,13 +3269,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationInventoryOnboardingCloudMonitoringNetworksResponse getOrganizationInventoryOnboardingCloudMonitoringNetworks(org.openapis.openapi.models.operations.GetOrganizationInventoryOnboardingCloudMonitoringNetworksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationInventoryOnboardingCloudMonitoringNetworksPathParams.class, baseUrl, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/networks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationInventoryOnboardingCloudMonitoringNetworksRequest.class, baseUrl, "/organizations/{organizationId}/inventory/onboarding/cloudMonitoring/networks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationInventoryOnboardingCloudMonitoringNetworksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationInventoryOnboardingCloudMonitoringNetworksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3317,7 +3317,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationLicenseResponse getOrganizationLicense(org.openapis.openapi.models.operations.GetOrganizationLicenseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLicensePathParams.class, baseUrl, "/organizations/{organizationId}/licenses/{licenseId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLicenseRequest.class, baseUrl, "/organizations/{organizationId}/licenses/{licenseId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3357,13 +3357,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationLicensesResponse getOrganizationLicenses(org.openapis.openapi.models.operations.GetOrganizationLicensesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLicensesPathParams.class, baseUrl, "/organizations/{organizationId}/licenses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLicensesRequest.class, baseUrl, "/organizations/{organizationId}/licenses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationLicensesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationLicensesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3405,7 +3405,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationLicensesOverviewResponse getOrganizationLicensesOverview(org.openapis.openapi.models.operations.GetOrganizationLicensesOverviewRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLicensesOverviewPathParams.class, baseUrl, "/organizations/{organizationId}/licenses/overview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLicensesOverviewRequest.class, baseUrl, "/organizations/{organizationId}/licenses/overview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3445,13 +3445,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationLicensingCotermLicensesResponse getOrganizationLicensingCotermLicenses(org.openapis.openapi.models.operations.GetOrganizationLicensingCotermLicensesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLicensingCotermLicensesPathParams.class, baseUrl, "/organizations/{organizationId}/licensing/coterm/licenses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLicensingCotermLicensesRequest.class, baseUrl, "/organizations/{organizationId}/licensing/coterm/licenses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationLicensingCotermLicensesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationLicensingCotermLicensesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3493,7 +3493,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationLoginSecurityResponse getOrganizationLoginSecurity(org.openapis.openapi.models.operations.GetOrganizationLoginSecurityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLoginSecurityPathParams.class, baseUrl, "/organizations/{organizationId}/loginSecurity", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLoginSecurityRequest.class, baseUrl, "/organizations/{organizationId}/loginSecurity", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3533,13 +3533,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationNetworksResponse getOrganizationNetworks(org.openapis.openapi.models.operations.GetOrganizationNetworksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationNetworksPathParams.class, baseUrl, "/organizations/{organizationId}/networks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationNetworksRequest.class, baseUrl, "/organizations/{organizationId}/networks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationNetworksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationNetworksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3581,7 +3581,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationOpenapiSpecResponse getOrganizationOpenapiSpec(org.openapis.openapi.models.operations.GetOrganizationOpenapiSpecRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationOpenapiSpecPathParams.class, baseUrl, "/organizations/{organizationId}/openapiSpec", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationOpenapiSpecRequest.class, baseUrl, "/organizations/{organizationId}/openapiSpec", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3621,7 +3621,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationPolicyObjectResponse getOrganizationPolicyObject(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectPathParams.class, baseUrl, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectRequest.class, baseUrl, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3661,13 +3661,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsResponse getOrganizationPolicyObjects(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsPathParams.class, baseUrl, "/organizations/{organizationId}/policyObjects", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsRequest.class, baseUrl, "/organizations/{organizationId}/policyObjects", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3709,7 +3709,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsGroupResponse getOrganizationPolicyObjectsGroup(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsGroupPathParams.class, baseUrl, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsGroupRequest.class, baseUrl, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3749,13 +3749,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsGroupsResponse getOrganizationPolicyObjectsGroups(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsGroupsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsGroupsPathParams.class, baseUrl, "/organizations/{organizationId}/policyObjects/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsGroupsRequest.class, baseUrl, "/organizations/{organizationId}/policyObjects/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsGroupsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsGroupsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3797,7 +3797,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSamlResponse getOrganizationSaml(org.openapis.openapi.models.operations.GetOrganizationSamlRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSamlPathParams.class, baseUrl, "/organizations/{organizationId}/saml", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSamlRequest.class, baseUrl, "/organizations/{organizationId}/saml", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3837,7 +3837,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSamlIdpResponse getOrganizationSamlIdp(org.openapis.openapi.models.operations.GetOrganizationSamlIdpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSamlIdpPathParams.class, baseUrl, "/organizations/{organizationId}/saml/idps/{idpId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSamlIdpRequest.class, baseUrl, "/organizations/{organizationId}/saml/idps/{idpId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3877,7 +3877,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSamlIdpsResponse getOrganizationSamlIdps(org.openapis.openapi.models.operations.GetOrganizationSamlIdpsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSamlIdpsPathParams.class, baseUrl, "/organizations/{organizationId}/saml/idps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSamlIdpsRequest.class, baseUrl, "/organizations/{organizationId}/saml/idps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3917,7 +3917,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSamlRoleResponse getOrganizationSamlRole(org.openapis.openapi.models.operations.GetOrganizationSamlRoleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSamlRolePathParams.class, baseUrl, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSamlRoleRequest.class, baseUrl, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3957,7 +3957,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSamlRolesResponse getOrganizationSamlRoles(org.openapis.openapi.models.operations.GetOrganizationSamlRolesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSamlRolesPathParams.class, baseUrl, "/organizations/{organizationId}/samlRoles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSamlRolesRequest.class, baseUrl, "/organizations/{organizationId}/samlRoles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3997,7 +3997,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSnmpResponse getOrganizationSnmp(org.openapis.openapi.models.operations.GetOrganizationSnmpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSnmpPathParams.class, baseUrl, "/organizations/{organizationId}/snmp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSnmpRequest.class, baseUrl, "/organizations/{organizationId}/snmp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4037,13 +4037,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSummaryTopAppliancesByUtilizationResponse getOrganizationSummaryTopAppliancesByUtilization(org.openapis.openapi.models.operations.GetOrganizationSummaryTopAppliancesByUtilizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopAppliancesByUtilizationPathParams.class, baseUrl, "/organizations/{organizationId}/summary/top/appliances/byUtilization", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopAppliancesByUtilizationRequest.class, baseUrl, "/organizations/{organizationId}/summary/top/appliances/byUtilization", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopAppliancesByUtilizationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopAppliancesByUtilizationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4083,13 +4083,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsByUsageResponse getOrganizationSummaryTopClientsByUsage(org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsByUsageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsByUsagePathParams.class, baseUrl, "/organizations/{organizationId}/summary/top/clients/byUsage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsByUsageRequest.class, baseUrl, "/organizations/{organizationId}/summary/top/clients/byUsage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsByUsageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsByUsageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4129,13 +4129,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsManufacturersByUsageResponse getOrganizationSummaryTopClientsManufacturersByUsage(org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsManufacturersByUsageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsManufacturersByUsagePathParams.class, baseUrl, "/organizations/{organizationId}/summary/top/clients/manufacturers/byUsage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsManufacturersByUsageRequest.class, baseUrl, "/organizations/{organizationId}/summary/top/clients/manufacturers/byUsage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsManufacturersByUsageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsManufacturersByUsageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4175,13 +4175,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesByUsageResponse getOrganizationSummaryTopDevicesByUsage(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesByUsageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesByUsagePathParams.class, baseUrl, "/organizations/{organizationId}/summary/top/devices/byUsage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesByUsageRequest.class, baseUrl, "/organizations/{organizationId}/summary/top/devices/byUsage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesByUsageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesByUsageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4221,13 +4221,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesModelsByUsageResponse getOrganizationSummaryTopDevicesModelsByUsage(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesModelsByUsageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesModelsByUsagePathParams.class, baseUrl, "/organizations/{organizationId}/summary/top/devices/models/byUsage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesModelsByUsageRequest.class, baseUrl, "/organizations/{organizationId}/summary/top/devices/models/byUsage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesModelsByUsageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesModelsByUsageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4267,13 +4267,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSummaryTopSsidsByUsageResponse getOrganizationSummaryTopSsidsByUsage(org.openapis.openapi.models.operations.GetOrganizationSummaryTopSsidsByUsageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopSsidsByUsagePathParams.class, baseUrl, "/organizations/{organizationId}/summary/top/ssids/byUsage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopSsidsByUsageRequest.class, baseUrl, "/organizations/{organizationId}/summary/top/ssids/byUsage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopSsidsByUsageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopSsidsByUsageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4313,13 +4313,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSummaryTopSwitchesByEnergyUsageResponse getOrganizationSummaryTopSwitchesByEnergyUsage(org.openapis.openapi.models.operations.GetOrganizationSummaryTopSwitchesByEnergyUsageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopSwitchesByEnergyUsagePathParams.class, baseUrl, "/organizations/{organizationId}/summary/top/switches/byEnergyUsage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopSwitchesByEnergyUsageRequest.class, baseUrl, "/organizations/{organizationId}/summary/top/switches/byEnergyUsage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopSwitchesByEnergyUsageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopSwitchesByEnergyUsageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4359,13 +4359,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationUplinksStatusesResponse getOrganizationUplinksStatuses(org.openapis.openapi.models.operations.GetOrganizationUplinksStatusesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationUplinksStatusesPathParams.class, baseUrl, "/organizations/{organizationId}/uplinks/statuses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationUplinksStatusesRequest.class, baseUrl, "/organizations/{organizationId}/uplinks/statuses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationUplinksStatusesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationUplinksStatusesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4407,13 +4407,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationWebhooksAlertTypesResponse getOrganizationWebhooksAlertTypes(org.openapis.openapi.models.operations.GetOrganizationWebhooksAlertTypesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationWebhooksAlertTypesPathParams.class, baseUrl, "/organizations/{organizationId}/webhooks/alertTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationWebhooksAlertTypesRequest.class, baseUrl, "/organizations/{organizationId}/webhooks/alertTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationWebhooksAlertTypesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationWebhooksAlertTypesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4453,13 +4453,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationWebhooksLogsResponse getOrganizationWebhooksLogs(org.openapis.openapi.models.operations.GetOrganizationWebhooksLogsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationWebhooksLogsPathParams.class, baseUrl, "/organizations/{organizationId}/webhooks/logs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationWebhooksLogsRequest.class, baseUrl, "/organizations/{organizationId}/webhooks/logs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationWebhooksLogsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationWebhooksLogsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4540,12 +4540,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.MoveOrganizationLicensesResponse moveOrganizationLicenses(org.openapis.openapi.models.operations.MoveOrganizationLicensesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MoveOrganizationLicensesPathParams.class, baseUrl, "/organizations/{organizationId}/licenses/move", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MoveOrganizationLicensesRequest.class, baseUrl, "/organizations/{organizationId}/licenses/move", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -4585,12 +4585,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.MoveOrganizationLicensesSeatsResponse moveOrganizationLicensesSeats(org.openapis.openapi.models.operations.MoveOrganizationLicensesSeatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MoveOrganizationLicensesSeatsPathParams.class, baseUrl, "/organizations/{organizationId}/licenses/moveSeats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MoveOrganizationLicensesSeatsRequest.class, baseUrl, "/organizations/{organizationId}/licenses/moveSeats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -4630,12 +4630,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.MoveOrganizationLicensingCotermLicensesResponse moveOrganizationLicensingCotermLicenses(org.openapis.openapi.models.operations.MoveOrganizationLicensingCotermLicensesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MoveOrganizationLicensingCotermLicensesPathParams.class, baseUrl, "/organizations/{organizationId}/licensing/coterm/licenses/move", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MoveOrganizationLicensingCotermLicensesRequest.class, baseUrl, "/organizations/{organizationId}/licensing/coterm/licenses/move", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -4675,12 +4675,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.ReleaseFromOrganizationInventoryResponse releaseFromOrganizationInventory(org.openapis.openapi.models.operations.ReleaseFromOrganizationInventoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleaseFromOrganizationInventoryPathParams.class, baseUrl, "/organizations/{organizationId}/inventory/release", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleaseFromOrganizationInventoryRequest.class, baseUrl, "/organizations/{organizationId}/inventory/release", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -4717,12 +4717,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.RenewOrganizationLicensesSeatsResponse renewOrganizationLicensesSeats(org.openapis.openapi.models.operations.RenewOrganizationLicensesSeatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RenewOrganizationLicensesSeatsPathParams.class, baseUrl, "/organizations/{organizationId}/licenses/renewSeats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RenewOrganizationLicensesSeatsRequest.class, baseUrl, "/organizations/{organizationId}/licenses/renewSeats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -4762,12 +4762,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationResponse updateOrganization(org.openapis.openapi.models.operations.UpdateOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationPathParams.class, baseUrl, "/organizations/{organizationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationRequest.class, baseUrl, "/organizations/{organizationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -4804,12 +4804,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationActionBatchResponse updateOrganizationActionBatch(org.openapis.openapi.models.operations.UpdateOrganizationActionBatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationActionBatchPathParams.class, baseUrl, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationActionBatchRequest.class, baseUrl, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -4846,12 +4846,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicyAclResponse updateOrganizationAdaptivePolicyAcl(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicyAclRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicyAclPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicyAclRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/acls/{aclId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -4888,12 +4888,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicyGroupResponse updateOrganizationAdaptivePolicyGroup(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicyGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicyGroupPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicyGroupRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -4930,12 +4930,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicyPolicyResponse updateOrganizationAdaptivePolicyPolicy(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicyPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicyPolicyPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicyPolicyRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -4972,12 +4972,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicySettingsResponse updateOrganizationAdaptivePolicySettings(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicySettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicySettingsPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicySettingsRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -5014,12 +5014,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationAdminResponse updateOrganizationAdmin(org.openapis.openapi.models.operations.UpdateOrganizationAdminRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationAdminPathParams.class, baseUrl, "/organizations/{organizationId}/admins/{adminId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationAdminRequest.class, baseUrl, "/organizations/{organizationId}/admins/{adminId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -5056,12 +5056,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationAlertsProfileResponse updateOrganizationAlertsProfile(org.openapis.openapi.models.operations.UpdateOrganizationAlertsProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationAlertsProfilePathParams.class, baseUrl, "/organizations/{organizationId}/alerts/profiles/{alertConfigId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationAlertsProfileRequest.class, baseUrl, "/organizations/{organizationId}/alerts/profiles/{alertConfigId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -5098,12 +5098,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationBrandingPoliciesPrioritiesResponse updateOrganizationBrandingPoliciesPriorities(org.openapis.openapi.models.operations.UpdateOrganizationBrandingPoliciesPrioritiesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationBrandingPoliciesPrioritiesPathParams.class, baseUrl, "/organizations/{organizationId}/brandingPolicies/priorities", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationBrandingPoliciesPrioritiesRequest.class, baseUrl, "/organizations/{organizationId}/brandingPolicies/priorities", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -5140,12 +5140,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationBrandingPolicyResponse updateOrganizationBrandingPolicy(org.openapis.openapi.models.operations.UpdateOrganizationBrandingPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationBrandingPolicyPathParams.class, baseUrl, "/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationBrandingPolicyRequest.class, baseUrl, "/organizations/{organizationId}/brandingPolicies/{brandingPolicyId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -5182,12 +5182,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationConfigTemplateResponse updateOrganizationConfigTemplate(org.openapis.openapi.models.operations.UpdateOrganizationConfigTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationConfigTemplatePathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationConfigTemplateRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -5224,12 +5224,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationEarlyAccessFeaturesOptInResponse updateOrganizationEarlyAccessFeaturesOptIn(org.openapis.openapi.models.operations.UpdateOrganizationEarlyAccessFeaturesOptInRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationEarlyAccessFeaturesOptInPathParams.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationEarlyAccessFeaturesOptInRequest.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -5266,12 +5266,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationLicenseResponse updateOrganizationLicense(org.openapis.openapi.models.operations.UpdateOrganizationLicenseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationLicensePathParams.class, baseUrl, "/organizations/{organizationId}/licenses/{licenseId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationLicenseRequest.class, baseUrl, "/organizations/{organizationId}/licenses/{licenseId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -5308,12 +5308,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationLoginSecurityResponse updateOrganizationLoginSecurity(org.openapis.openapi.models.operations.UpdateOrganizationLoginSecurityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationLoginSecurityPathParams.class, baseUrl, "/organizations/{organizationId}/loginSecurity", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationLoginSecurityRequest.class, baseUrl, "/organizations/{organizationId}/loginSecurity", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -5350,12 +5350,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationPolicyObjectResponse updateOrganizationPolicyObject(org.openapis.openapi.models.operations.UpdateOrganizationPolicyObjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationPolicyObjectPathParams.class, baseUrl, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationPolicyObjectRequest.class, baseUrl, "/organizations/{organizationId}/policyObjects/{policyObjectId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -5392,12 +5392,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationPolicyObjectsGroupResponse updateOrganizationPolicyObjectsGroup(org.openapis.openapi.models.operations.UpdateOrganizationPolicyObjectsGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationPolicyObjectsGroupPathParams.class, baseUrl, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationPolicyObjectsGroupRequest.class, baseUrl, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -5434,12 +5434,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationSamlResponse updateOrganizationSaml(org.openapis.openapi.models.operations.UpdateOrganizationSamlRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationSamlPathParams.class, baseUrl, "/organizations/{organizationId}/saml", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationSamlRequest.class, baseUrl, "/organizations/{organizationId}/saml", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -5476,12 +5476,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationSamlIdpResponse updateOrganizationSamlIdp(org.openapis.openapi.models.operations.UpdateOrganizationSamlIdpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationSamlIdpPathParams.class, baseUrl, "/organizations/{organizationId}/saml/idps/{idpId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationSamlIdpRequest.class, baseUrl, "/organizations/{organizationId}/saml/idps/{idpId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -5518,12 +5518,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationSamlRoleResponse updateOrganizationSamlRole(org.openapis.openapi.models.operations.UpdateOrganizationSamlRoleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationSamlRolePathParams.class, baseUrl, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationSamlRoleRequest.class, baseUrl, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -5560,12 +5560,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationSnmpResponse updateOrganizationSnmp(org.openapis.openapi.models.operations.UpdateOrganizationSnmpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationSnmpPathParams.class, baseUrl, "/organizations/{organizationId}/snmp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationSnmpRequest.class, baseUrl, "/organizations/{organizationId}/snmp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

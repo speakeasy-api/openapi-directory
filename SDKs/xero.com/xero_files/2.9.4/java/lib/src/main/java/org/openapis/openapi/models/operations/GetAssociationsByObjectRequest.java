@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssociationsByObjectRequest {
-    
-    public GetAssociationsByObjectPathParams pathParams;
-    public GetAssociationsByObjectRequest withPathParams(GetAssociationsByObjectPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Object id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ObjectId")
+    public String objectId;
+    public GetAssociationsByObjectRequest withObjectId(String objectId) {
+        this.objectId = objectId;
         return this;
     }
     
-    
-    public GetAssociationsByObjectHeaders headers;
-    public GetAssociationsByObjectRequest withHeaders(GetAssociationsByObjectHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetAssociationsByObjectSecurity security;
-    public GetAssociationsByObjectRequest withSecurity(GetAssociationsByObjectSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
+    public String xeroTenantId;
+    public GetAssociationsByObjectRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

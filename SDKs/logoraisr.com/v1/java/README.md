@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.PreviewsReadPathParams;
 import org.openapis.openapi.models.operations.PreviewsReadRequest;
 import org.openapis.openapi.models.operations.PreviewsReadResponse;
 
@@ -26,17 +25,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    token = new SchemeToken() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    token = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             PreviewsReadRequest req = new PreviewsReadRequest() {{
-                pathParams = new PreviewsReadPathParams() {{
-                    fileId = "corrupti";
-                }};
-            }};            
+                fileId = "corrupti";
+            }}            
 
             PreviewsReadResponse res = sdk.previews.previewsRead(req);
 
@@ -50,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### previews

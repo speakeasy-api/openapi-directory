@@ -7,27 +7,63 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRealmUsersIdExecuteActionsEmailRequest {
-    
-    public PutRealmUsersIdExecuteActionsEmailPathParams pathParams;
-    public PutRealmUsersIdExecuteActionsEmailRequest withPathParams(PutRealmUsersIdExecuteActionsEmailPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutRealmUsersIdExecuteActionsEmailQueryParams queryParams;
-    public PutRealmUsersIdExecuteActionsEmailRequest withQueryParams(PutRealmUsersIdExecuteActionsEmailQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * required actions the user needs to complete
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String[] request;
-    public PutRealmUsersIdExecuteActionsEmailRequest withRequest(String[] request) {
-        this.request = request;
+    public String[] requestBody;
+    public PutRealmUsersIdExecuteActionsEmailRequest withRequestBody(String[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Client id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client_id")
+    public String clientId;
+    public PutRealmUsersIdExecuteActionsEmailRequest withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    
+    /**
+     * User id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutRealmUsersIdExecuteActionsEmailRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Number of seconds after which the generated token expires
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lifespan")
+    public Integer lifespan;
+    public PutRealmUsersIdExecuteActionsEmailRequest withLifespan(Integer lifespan) {
+        this.lifespan = lifespan;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PutRealmUsersIdExecuteActionsEmailRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
+    
+    /**
+     * Redirect uri
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirect_uri")
+    public String redirectUri;
+    public PutRealmUsersIdExecuteActionsEmailRequest withRedirectUri(String redirectUri) {
+        this.redirectUri = redirectUri;
         return this;
     }
     

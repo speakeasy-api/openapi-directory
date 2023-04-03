@@ -7,38 +7,70 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FoldersCopyRequest {
-    
-    public FoldersCopyPathParams pathParams;
-    public FoldersCopyRequest withPathParams(FoldersCopyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FoldersCopyQueryParams queryParams;
-    public FoldersCopyRequest withQueryParams(FoldersCopyQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public FoldersCopyHeaders headers;
-    public FoldersCopyRequest withHeaders(FoldersCopyHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CopyFolderRequestInput request;
-    public FoldersCopyRequest withRequest(org.openapis.openapi.models.shared.CopyFolderRequestInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CopyFolderRequestInput copyFolderRequestInput;
+    public FoldersCopyRequest withCopyFolderRequestInput(org.openapis.openapi.models.shared.CopyFolderRequestInput copyFolderRequestInput) {
+        this.copyFolderRequestInput = copyFolderRequestInput;
         return this;
     }
     
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: `fields=name,email,addresses.city`&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FoldersCopyRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public FoldersCopySecurity security;
-    public FoldersCopyRequest withSecurity(FoldersCopySecurity security) {
-        this.security = security;
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public FoldersCopyRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public FoldersCopyRequest withRaw(Boolean raw) {
+        this.raw = raw;
+        return this;
+    }
+    
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public FoldersCopyRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public FoldersCopyRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public FoldersCopyRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

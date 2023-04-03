@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFirewallsIdActionsRequest {
-    
-    public GetFirewallsIdActionsPathParams pathParams;
-    public GetFirewallsIdActionsRequest withPathParams(GetFirewallsIdActionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetFirewallsIdActionsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Can be used multiple times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetFirewallsIdActionsSortParameterSortEnum sort;
+    public GetFirewallsIdActionsRequest withSort(GetFirewallsIdActionsSortParameterSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
     
-    public GetFirewallsIdActionsQueryParams queryParams;
-    public GetFirewallsIdActionsRequest withQueryParams(GetFirewallsIdActionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used multiple times, the response will contain only Actions with specified statuses
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GetFirewallsIdActionsStatusParameterStatusEnum status;
+    public GetFirewallsIdActionsRequest withStatus(GetFirewallsIdActionsStatusParameterStatusEnum status) {
+        this.status = status;
         return this;
     }
     

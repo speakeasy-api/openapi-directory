@@ -4,27 +4,39 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScoreTrackRequest {
-    
-    public GetScoreTrackPathParams pathParams;
-    public GetScoreTrackRequest withPathParams(GetScoreTrackPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
+    public String score;
+    public GetScoreTrackRequest withScore(String score) {
+        this.score = score;
         return this;
     }
     
-    
-    public GetScoreTrackQueryParams queryParams;
-    public GetScoreTrackRequest withQueryParams(GetScoreTrackQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * This sharing key must be specified to access to a score or collection with a `privacy` mode set to `privateLink` and the current user is not a collaborator of the document.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharingKey")
+    public String sharingKey;
+    public GetScoreTrackRequest withSharingKey(String sharingKey) {
+        this.sharingKey = sharingKey;
         return this;
     }
     
-    
-    public GetScoreTrackSecurity security;
-    public GetScoreTrackRequest withSecurity(GetScoreTrackSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of a score audio track
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=track")
+    public String track;
+    public GetScoreTrackRequest withTrack(String track) {
+        this.track = track;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConversionsConversionIdRequest {
-    
-    public GetConversionsConversionIdPathParams pathParams;
-    public GetConversionsConversionIdRequest withPathParams(GetConversionsConversionIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the conversion
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
+    public Long conversionId;
+    public GetConversionsConversionIdRequest withConversionId(Long conversionId) {
+        this.conversionId = conversionId;
         return this;
     }
     

@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCertificatesRequest {
+    /**
+     * Can be used to filter resources by labels. The response will only contain resources matching the label selector.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label_selector")
+    public String labelSelector;
+    public GetCertificatesRequest withLabelSelector(String labelSelector) {
+        this.labelSelector = labelSelector;
+        return this;
+    }
     
-    public GetCertificatesQueryParams queryParams;
-    public GetCertificatesRequest withQueryParams(GetCertificatesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used to filter resources by their name. The response will only contain the resources matching the specified name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetCertificatesRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Can be used multiple times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetCertificatesSortEnum sort;
+    public GetCertificatesRequest withSort(GetCertificatesSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Can be used multiple times. The response will only contain Certificates matching the type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GetCertificatesTypeParameterTypeEnum type;
+    public GetCertificatesRequest withType(GetCertificatesTypeParameterTypeEnum type) {
+        this.type = type;
         return this;
     }
     

@@ -39,13 +39,13 @@ public class PayCode {
      */
     public org.openapis.openapi.models.operations.DeletePayCodeResponse deletePayCode(org.openapis.openapi.models.operations.DeletePayCodeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayCodePathParams.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayCodeRequest.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -88,13 +88,13 @@ public class PayCode {
      */
     public org.openapis.openapi.models.operations.DeletePayCodeRevisionResponse deletePayCodeRevision(org.openapis.openapi.models.operations.DeletePayCodeRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayCodeRevisionPathParams.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayCodeRevisionRequest.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -137,13 +137,13 @@ public class PayCode {
      */
     public org.openapis.openapi.models.operations.DeletePayCodeRevisionByNumberResponse deletePayCodeRevisionByNumber(org.openapis.openapi.models.operations.DeletePayCodeRevisionByNumberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayCodeRevisionByNumberPathParams.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Revision/{RevisionNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayCodeRevisionByNumberRequest.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Revision/{RevisionNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -186,13 +186,13 @@ public class PayCode {
      */
     public org.openapis.openapi.models.operations.GetAllPayCodeTagsResponse getAllPayCodeTags(org.openapis.openapi.models.operations.GetAllPayCodeTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllPayCodeTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/PayCodes/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllPayCodeTagsRequest.class, baseUrl, "/Employer/{EmployerId}/PayCodes/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -241,13 +241,13 @@ public class PayCode {
      */
     public org.openapis.openapi.models.operations.GetPayCodeByEffectiveDateResponse getPayCodeByEffectiveDate(org.openapis.openapi.models.operations.GetPayCodeByEffectiveDateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayCodeByEffectiveDatePathParams.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayCodeByEffectiveDateRequest.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -296,13 +296,13 @@ public class PayCode {
      */
     public org.openapis.openapi.models.operations.GetPayCodeFromEmployerResponse getPayCodeFromEmployer(org.openapis.openapi.models.operations.GetPayCodeFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayCodeFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayCodeFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -351,13 +351,13 @@ public class PayCode {
      */
     public org.openapis.openapi.models.operations.GetPayCodeRevisionByNumberResponse getPayCodeRevisionByNumber(org.openapis.openapi.models.operations.GetPayCodeRevisionByNumberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayCodeRevisionByNumberPathParams.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Revision/{RevisionNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayCodeRevisionByNumberRequest.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Revision/{RevisionNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -406,13 +406,13 @@ public class PayCode {
      */
     public org.openapis.openapi.models.operations.GetPayCodeRevisionsResponse getPayCodeRevisions(org.openapis.openapi.models.operations.GetPayCodeRevisionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayCodeRevisionsPathParams.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Revisions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayCodeRevisionsRequest.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Revisions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -461,13 +461,13 @@ public class PayCode {
      */
     public org.openapis.openapi.models.operations.GetPayCodesByEffectiveDateResponse getPayCodesByEffectiveDate(org.openapis.openapi.models.operations.GetPayCodesByEffectiveDateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayCodesByEffectiveDatePathParams.class, baseUrl, "/Employer/{EmployerId}/PayCodes/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayCodesByEffectiveDateRequest.class, baseUrl, "/Employer/{EmployerId}/PayCodes/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -516,13 +516,13 @@ public class PayCode {
      */
     public org.openapis.openapi.models.operations.GetPayCodesFromEmployerResponse getPayCodesFromEmployer(org.openapis.openapi.models.operations.GetPayCodesFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayCodesFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/PayCodes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayCodesFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/PayCodes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -571,13 +571,13 @@ public class PayCode {
      */
     public org.openapis.openapi.models.operations.GetPayCodesFromNominalCodeResponse getPayCodesFromNominalCode(org.openapis.openapi.models.operations.GetPayCodesFromNominalCodeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayCodesFromNominalCodePathParams.class, baseUrl, "/Employer/{EmployerId}/NominalCode/{NominalCodeId}/PayCodes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayCodesFromNominalCodeRequest.class, baseUrl, "/Employer/{EmployerId}/NominalCode/{NominalCodeId}/PayCodes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -626,13 +626,13 @@ public class PayCode {
      */
     public org.openapis.openapi.models.operations.GetPayCodesWithTagResponse getPayCodesWithTag(org.openapis.openapi.models.operations.GetPayCodesWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayCodesWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/PayCodes/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayCodesWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/PayCodes/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -681,18 +681,18 @@ public class PayCode {
      */
     public org.openapis.openapi.models.operations.PatchPayCodeResponse patchPayCode(org.openapis.openapi.models.operations.PatchPayCodeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchPayCodePathParams.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchPayCodeRequest.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "payCode", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -741,18 +741,18 @@ public class PayCode {
      */
     public org.openapis.openapi.models.operations.PostPayCodeResponse postPayCode(org.openapis.openapi.models.operations.PostPayCodeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostPayCodePathParams.class, baseUrl, "/Employer/{EmployerId}/PayCodes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostPayCodeRequest.class, baseUrl, "/Employer/{EmployerId}/PayCodes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "payCode", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -801,18 +801,18 @@ public class PayCode {
      */
     public org.openapis.openapi.models.operations.PutPayCodeResponse putPayCode(org.openapis.openapi.models.operations.PutPayCodeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPayCodePathParams.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPayCodeRequest.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "payCode", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

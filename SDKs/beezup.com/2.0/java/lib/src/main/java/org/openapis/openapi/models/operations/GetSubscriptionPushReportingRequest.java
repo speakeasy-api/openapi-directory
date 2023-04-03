@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSubscriptionPushReportingRequest {
-    
-    public GetSubscriptionPushReportingPathParams pathParams;
-    public GetSubscriptionPushReportingRequest withPathParams(GetSubscriptionPushReportingPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSubscriptionPushReportingRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Long pageNumber;
+    public GetSubscriptionPushReportingRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
     
-    public GetSubscriptionPushReportingQueryParams queryParams;
-    public GetSubscriptionPushReportingRequest withQueryParams(GetSubscriptionPushReportingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public GetSubscriptionPushReportingRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

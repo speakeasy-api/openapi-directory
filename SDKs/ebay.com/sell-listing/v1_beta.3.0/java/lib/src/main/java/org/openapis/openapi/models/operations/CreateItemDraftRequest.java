@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateItemDraftRequest {
-    
-    public CreateItemDraftHeaders headers;
-    public CreateItemDraftRequest withHeaders(CreateItemDraftHeaders headers) {
-        this.headers = headers;
+    /**
+     * Use this header to specify the natural language of the seller. For details, see Content-Language in HTTP request headers. Required: For EBAY_CA in French. (Content-Language = fr-CA)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Language")
+    public String contentLanguage;
+    public CreateItemDraftRequest withContentLanguage(String contentLanguage) {
+        this.contentLanguage = contentLanguage;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ItemDraft request;
-    public CreateItemDraftRequest withRequest(org.openapis.openapi.models.shared.ItemDraft request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ItemDraft itemDraft;
+    public CreateItemDraftRequest withItemDraft(org.openapis.openapi.models.shared.ItemDraft itemDraft) {
+        this.itemDraft = itemDraft;
         return this;
     }
     
-    
-    public CreateItemDraftSecurity security;
-    public CreateItemDraftRequest withSecurity(CreateItemDraftSecurity security) {
-        this.security = security;
+    /**
+     * Use this header to specify an eBay marketplace ID. For a list of supported sites, see API Restrictions in the Listing API overview.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public CreateItemDraftRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     

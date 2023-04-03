@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeviceRequest {
-    
-    public UpdateDevicePathParams pathParams;
-    public UpdateDeviceRequest withPathParams(UpdateDevicePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateDeviceUpdateDeviceRequest request;
-    public UpdateDeviceRequest withRequest(UpdateDeviceUpdateDeviceRequest request) {
-        this.request = request;
+    public UpdateDeviceUpdateDeviceRequest requestBody;
+    public UpdateDeviceRequest withRequestBody(UpdateDeviceUpdateDeviceRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateDeviceSecurity security;
-    public UpdateDeviceRequest withSecurity(UpdateDeviceSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateDeviceRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34-character string that uniquely identifies this Device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateDeviceRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

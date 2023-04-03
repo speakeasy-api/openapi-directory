@@ -35,27 +35,28 @@ public class Monetization {
     /**
      * Calculates the region prices, using today's exchange rate and country-specific pricing patterns, based on the price in the request for a set of regions.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationConvertRegionPricesResponse androidpublisherMonetizationConvertRegionPrices(org.openapis.openapi.models.operations.AndroidpublisherMonetizationConvertRegionPricesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationConvertRegionPricesResponse androidpublisherMonetizationConvertRegionPrices(org.openapis.openapi.models.operations.AndroidpublisherMonetizationConvertRegionPricesRequest request, org.openapis.openapi.models.operations.AndroidpublisherMonetizationConvertRegionPricesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationConvertRegionPricesPathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/pricing:convertRegionPrices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationConvertRegionPricesRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/pricing:convertRegionPrices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "convertRegionPricesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationConvertRegionPricesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationConvertRegionPricesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Monetization {
     /**
      * Archives a subscription. Can only be done if at least one base plan was active in the past, and no base plan is available for new or existing subscribers currently. This action is irreversible, and the subscription ID will remain reserved.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsArchiveResponse androidpublisherMonetizationSubscriptionsArchive(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsArchiveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsArchiveResponse androidpublisherMonetizationSubscriptionsArchive(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsArchiveRequest request, org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsArchiveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsArchivePathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}:archive", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsArchiveRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}:archive", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsArchiveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsArchiveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,27 +131,28 @@ public class Monetization {
     /**
      * Activates a base plan. Once activated, base plans will be available to new subscribers.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansActivateResponse androidpublisherMonetizationSubscriptionsBasePlansActivate(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansActivateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansActivateResponse androidpublisherMonetizationSubscriptionsBasePlansActivate(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansActivateRequest request, org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansActivateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansActivatePathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}:activate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansActivateRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}:activate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansActivateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansActivateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -176,27 +179,28 @@ public class Monetization {
     /**
      * Deactivates a base plan. Once deactivated, the base plan will become unavailable to new subscribers, but existing subscribers will maintain their subscription
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeactivateResponse androidpublisherMonetizationSubscriptionsBasePlansDeactivate(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeactivateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeactivateResponse androidpublisherMonetizationSubscriptionsBasePlansDeactivate(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeactivateRequest request, org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeactivateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeactivatePathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}:deactivate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeactivateRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}:deactivate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeactivateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeactivateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -223,25 +227,26 @@ public class Monetization {
     /**
      * Deletes a base plan. Can only be done for draft base plans. This action is irreversible.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeleteResponse androidpublisherMonetizationSubscriptionsBasePlansDelete(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeleteResponse androidpublisherMonetizationSubscriptionsBasePlansDelete(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest request, org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeletePathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -262,27 +267,28 @@ public class Monetization {
     /**
      * Migrates subscribers who are receiving an historical subscription price to the currently-offered price for the specified region. Requests will cause price change notifications to be sent to users who are currently receiving an historical price older than the supplied timestamp. Subscribers who do not agree to the new price will have their subscription ended at the next renewal.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesResponse androidpublisherMonetizationSubscriptionsBasePlansMigratePrices(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesResponse androidpublisherMonetizationSubscriptionsBasePlansMigratePrices(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesRequest request, org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesPathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}:migratePrices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}:migratePrices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "migrateBasePlanPricesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansMigratePricesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -309,27 +315,28 @@ public class Monetization {
     /**
      * Activates a subscription offer. Once activated, subscription offers will be available to new subscribers.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersActivateResponse androidpublisherMonetizationSubscriptionsBasePlansOffersActivate(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersActivateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersActivateResponse androidpublisherMonetizationSubscriptionsBasePlansOffersActivate(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersActivateRequest request, org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersActivateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersActivatePathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}:activate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersActivateRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}:activate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersActivateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersActivateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -356,27 +363,28 @@ public class Monetization {
     /**
      * Creates a new subscription offer. Only auto-renewing base plans can have subscription offers. The offer state will be DRAFT until it is activated.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateResponse androidpublisherMonetizationSubscriptionsBasePlansOffersCreate(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateResponse androidpublisherMonetizationSubscriptionsBasePlansOffersCreate(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateRequest request, org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreatePathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "subscriptionOfferInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -403,27 +411,28 @@ public class Monetization {
     /**
      * Deactivates a subscription offer. Once deactivated, existing subscribers will maintain their subscription, but the offer will become unavailable to new subscribers.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateResponse androidpublisherMonetizationSubscriptionsBasePlansOffersDeactivate(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateResponse androidpublisherMonetizationSubscriptionsBasePlansOffersDeactivate(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateRequest request, org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivatePathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}:deactivate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}:deactivate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeactivateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -450,25 +459,26 @@ public class Monetization {
     /**
      * Deletes a subscription offer. Can only be done for draft offers. This action is irreversible.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeleteResponse androidpublisherMonetizationSubscriptionsBasePlansOffersDelete(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeleteResponse androidpublisherMonetizationSubscriptionsBasePlansOffersDelete(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeleteRequest request, org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeletePathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeleteRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -489,25 +499,26 @@ public class Monetization {
     /**
      * Reads a single offer
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetResponse androidpublisherMonetizationSubscriptionsBasePlansOffersGet(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetResponse androidpublisherMonetizationSubscriptionsBasePlansOffersGet(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest request, org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetPathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -534,25 +545,26 @@ public class Monetization {
     /**
      * Lists all offers under a given subscription.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersListResponse androidpublisherMonetizationSubscriptionsBasePlansOffersList(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersListResponse androidpublisherMonetizationSubscriptionsBasePlansOffersList(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersListRequest request, org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersListPathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersListRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -579,27 +591,28 @@ public class Monetization {
     /**
      * Updates an existing subscription offer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchResponse androidpublisherMonetizationSubscriptionsBasePlansOffersPatch(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchResponse androidpublisherMonetizationSubscriptionsBasePlansOffersPatch(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest request, org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchPathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "subscriptionOfferInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -626,27 +639,28 @@ public class Monetization {
     /**
      * Creates a new subscription. Newly added base plans will remain in draft state until activated.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsCreateResponse androidpublisherMonetizationSubscriptionsCreate(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsCreateResponse androidpublisherMonetizationSubscriptionsCreate(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsCreateRequest request, org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsCreatePathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsCreateRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "subscriptionInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -673,25 +687,26 @@ public class Monetization {
     /**
      * Deletes a subscription. A subscription can only be deleted if it has never had a base plan published.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsDeleteResponse androidpublisherMonetizationSubscriptionsDelete(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsDeleteResponse androidpublisherMonetizationSubscriptionsDelete(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsDeleteRequest request, org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsDeletePathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsDeleteRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -712,25 +727,26 @@ public class Monetization {
     /**
      * Reads a single subscription.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsGetResponse androidpublisherMonetizationSubscriptionsGet(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsGetResponse androidpublisherMonetizationSubscriptionsGet(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsGetRequest request, org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsGetPathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsGetRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -757,25 +773,26 @@ public class Monetization {
     /**
      * Lists all subscriptions under a given app.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsListResponse androidpublisherMonetizationSubscriptionsList(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsListResponse androidpublisherMonetizationSubscriptionsList(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsListRequest request, org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsListPathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsListRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -802,27 +819,28 @@ public class Monetization {
     /**
      * Updates an existing subscription.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsPatchResponse androidpublisherMonetizationSubscriptionsPatch(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsPatchResponse androidpublisherMonetizationSubscriptionsPatch(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsPatchRequest request, org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsPatchPathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsPatchRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/subscriptions/{productId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "subscriptionInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherMonetizationSubscriptionsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

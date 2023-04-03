@@ -89,7 +89,7 @@ public class OpenBanking {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListOfAspspsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListOfAspspsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -142,7 +142,7 @@ public class OpenBanking {
      */
     public org.openapis.openapi.models.operations.GetPaymentDetailsResponse getPaymentDetails(org.openapis.openapi.models.operations.GetPaymentDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentDetailsPathParams.class, baseUrl, "/v1/payments/{paymentUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentDetailsRequest.class, baseUrl, "/v1/payments/{paymentUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -220,7 +220,7 @@ public class OpenBanking {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.NewPaymentRequestResponse newPaymentRequest(org.openapis.openapi.models.operations.NewPaymentRequestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.NewPaymentRequestResponse newPaymentRequest(org.openapis.openapi.models.operations.NewPaymentRequestNewPaymentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/paymentrequests");
         

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMappingValuesKeyRequest {
-    
-    public GetMappingValuesKeyPathParams pathParams;
-    public GetMappingValuesKeyRequest withPathParams(GetMappingValuesKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Key of MappingJob for which to get possible values.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public GetMappingValuesKeyKeyEnum key;
+    public GetMappingValuesKeyRequest withKey(GetMappingValuesKeyKeyEnum key) {
+        this.key = key;
         return this;
     }
     

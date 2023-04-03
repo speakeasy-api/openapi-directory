@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RaceResultsRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public RaceResultsFormatEnum format;
+    public RaceResultsRequest withFormat(RaceResultsFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public RaceResultsPathParams pathParams;
-    public RaceResultsRequest withPathParams(RaceResultsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique FantasyData Race ID.
+     * Example:&lt;code&gt;1&lt;/code&gt;, &lt;code&gt;2&lt;/code&gt;, etc.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=raceid")
+    public String raceid;
+    public RaceResultsRequest withRaceid(String raceid) {
+        this.raceid = raceid;
         return this;
     }
     

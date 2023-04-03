@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReportsDatesRequest {
-    
-    public GetReportsDatesQueryParams queryParams;
-    public GetReportsDatesRequest withQueryParams(GetReportsDatesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Unique report hash
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_hash")
+    public String reportHash;
+    public GetReportsDatesRequest withReportHash(String reportHash) {
+        this.reportHash = reportHash;
         return this;
     }
     

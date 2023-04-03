@@ -4,20 +4,222 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LocationsGetV2LocationsLocationIdGetRequest {
-    
-    public LocationsGetV2LocationsLocationIdGetPathParams pathParams;
-    public LocationsGetV2LocationsLocationIdGetRequest withPathParams(LocationsGetV2LocationsLocationIdGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     *         Limit results by a certain city or cities.
+     *         (ex. ?city=Chicago or ?city=Chicago&amp;city=Boston)
+     *         
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
+    public String[] city;
+    public LocationsGetV2LocationsLocationIdGetRequest withCity(String[] city) {
+        this.city = city;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=coordinates")
+    public String coordinates;
+    public LocationsGetV2LocationsLocationIdGetRequest withCoordinates(String coordinates) {
+        this.coordinates = coordinates;
+        return this;
+    }
     
-    public LocationsGetV2LocationsLocationIdGetQueryParams queryParams;
-    public LocationsGetV2LocationsLocationIdGetRequest withQueryParams(LocationsGetV2LocationsLocationIdGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     *         Limit results by a certain country using two letter country code.
+     *         (ex. ?country=US or ?country=US&amp;country=MX)
+     *         
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String[] country;
+    public LocationsGetV2LocationsLocationIdGetRequest withCountry(String[] country) {
+        this.country = country;
+        return this;
+    }
+    
+    /**
+     *         Limit results by a certain country using two letter country code.
+     *         (ex. /US)
+     *         
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country_id")
+    public String countryId;
+    public LocationsGetV2LocationsLocationIdGetRequest withCountryId(String countryId) {
+        this.countryId = countryId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dumpRaw")
+    public Boolean dumpRaw;
+    public LocationsGetV2LocationsLocationIdGetRequest withDumpRaw(Boolean dumpRaw) {
+        this.dumpRaw = dumpRaw;
+        return this;
+    }
+    
+    /**
+     * Source entity type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity")
+    public org.openapis.openapi.models.shared.EntityTypesEnum entity;
+    public LocationsGetV2LocationsLocationIdGetRequest withEntity(org.openapis.openapi.models.shared.EntityTypesEnum entity) {
+        this.entity = entity;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=has_geo")
+    public Boolean hasGeo;
+    public LocationsGetV2LocationsLocationIdGetRequest withHasGeo(Boolean hasGeo) {
+        this.hasGeo = hasGeo;
+        return this;
+    }
+    
+    /**
+     * Data is the product of a previous analysis/aggregation and not raw measurements
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isAnalysis")
+    public Boolean isAnalysis;
+    public LocationsGetV2LocationsLocationIdGetRequest withIsAnalysis(Boolean isAnalysis) {
+        this.isAnalysis = isAnalysis;
+        return this;
+    }
+    
+    /**
+     * Location is mobile
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isMobile")
+    public Boolean isMobile;
+    public LocationsGetV2LocationsLocationIdGetRequest withIsMobile(Boolean isMobile) {
+        this.isMobile = isMobile;
+        return this;
+    }
+    
+    /**
+     * Change the number of results returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public LocationsGetV2LocationsLocationIdGetRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location")
+    public Object[] location;
+    public LocationsGetV2LocationsLocationIdGetRequest withLocation(Object[] location) {
+        this.location = location;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public Long locationId;
+    public LocationsGetV2LocationsLocationIdGetRequest withLocationId(Long locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * Manufacturer of Sensor
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=manufacturerName")
+    public String[] manufacturerName;
+    public LocationsGetV2LocationsLocationIdGetRequest withManufacturerName(String[] manufacturerName) {
+        this.manufacturerName = manufacturerName;
+        return this;
+    }
+    
+    /**
+     * Model Name of Sensor
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modelName")
+    public String[] modelName;
+    public LocationsGetV2LocationsLocationIdGetRequest withModelName(String[] modelName) {
+        this.modelName = modelName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public LocationsGetV2LocationsLocationIdGetRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Order by a field
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
+    public LocationsGetV2LocationsLocationIdGetOrderByLocationsOrderEnum orderBy;
+    public LocationsGetV2LocationsLocationIdGetRequest withOrderBy(LocationsGetV2LocationsLocationIdGetOrderByLocationsOrderEnum orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    /**
+     * Paginate through results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public LocationsGetV2LocationsLocationIdGetRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameter")
+    public Object[] parameter;
+    public LocationsGetV2LocationsLocationIdGetRequest withParameter(Object[] parameter) {
+        this.parameter = parameter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameter_id")
+    public Long parameterId;
+    public LocationsGetV2LocationsLocationIdGetRequest withParameterId(Long parameterId) {
+        this.parameterId = parameterId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
+    public Long radius;
+    public LocationsGetV2LocationsLocationIdGetRequest withRadius(Long radius) {
+        this.radius = radius;
+        return this;
+    }
+    
+    /**
+     * Type of Sensor
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sensorType")
+    public org.openapis.openapi.models.shared.SensorTypesEnum sensorType;
+    public LocationsGetV2LocationsLocationIdGetRequest withSensorType(org.openapis.openapi.models.shared.SensorTypesEnum sensorType) {
+        this.sensorType = sensorType;
+        return this;
+    }
+    
+    /**
+     * Sort Direction
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public LocationsGetV2LocationsLocationIdGetSortSortEnum sort;
+    public LocationsGetV2LocationsLocationIdGetRequest withSort(LocationsGetV2LocationsLocationIdGetSortSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Name of the data source
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceName")
+    public String[] sourceName;
+    public LocationsGetV2LocationsLocationIdGetRequest withSourceName(String[] sourceName) {
+        this.sourceName = sourceName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit")
+    public String[] unit;
+    public LocationsGetV2LocationsLocationIdGetRequest withUnit(String[] unit) {
+        this.unit = unit;
         return this;
     }
     

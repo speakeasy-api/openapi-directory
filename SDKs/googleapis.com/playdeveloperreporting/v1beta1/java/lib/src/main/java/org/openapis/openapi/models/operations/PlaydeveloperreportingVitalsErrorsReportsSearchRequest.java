@@ -4,27 +4,356 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlaydeveloperreportingVitalsErrorsReportsSearchRequest {
-    
-    public PlaydeveloperreportingVitalsErrorsReportsSearchPathParams pathParams;
-    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withPathParams(PlaydeveloperreportingVitalsErrorsReportsSearchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams queryParams;
-    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withQueryParams(PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public PlaydeveloperreportingVitalsErrorsReportsSearchSecurity security;
-    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withSecurity(PlaydeveloperreportingVitalsErrorsReportsSearchSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * A selection predicate to retrieve only a subset of the reports. For filtering basics, please check [AIP-160](https://google.aip.dev/160). ** Supported field names:** * `apiLevel`: Matches error reports that occurred in the requested Android versions (specified as the numeric API level) only. Example: `apiLevel = 28 OR apiLevel = 29`. * `versionCode`: Matches error reports that occurred in the requested app version codes only. Example: `versionCode = 123 OR versionCode = 456`. * `deviceModel`: Matches error reports that occurred in the requested devices. Example: `deviceModel = "walleye" OR deviceModel = "marlin"`. * `deviceType`: Matches error reports that occurred in the requested device types. Example: `deviceType = "PHONE"`. * `errorIssueType`: Matches error reports of the requested types only. Valid candidates: `JAVA_CRASH`, `NATIVE_CRASH`, `ANR`. Example: `errorIssueType = JAVA_CRASH OR errorIssueType = NATIVE_CRASH`. * `errorIssueId`: Matches error reports belonging to the requested error issue ids only. Example: `errorIssueId = 1234 OR errorIssueId = 4567`. * `appProcessState`: Matches error reports on the process state of an app, indicating whether an app runs in the foreground (user-visible) or background. Valid candidates: `FOREGROUND`, `BACKGROUND`. Example: `appProcessState = FOREGROUND`. * `isUserPerceived`: Matches error reports that are user-perceived. It is not accompanied by any operators. Example: `isUserPerceived`. ** Supported operators:** * Comparison operators: The only supported comparison operator is equality. The filtered field must appear on the left hand side of the comparison. * Logical Operators: Logical operators `AND` and `OR` can be used to build complex filters following a conjunctive normal form (CNF), i.e., conjunctions of disjunctions. The `OR` operator takes precedence over `AND` so the use of parenthesis is not necessary when building CNF. The `OR` operator is only supported to build disjunctions that apply to the same field, e.g., `versionCode = 123 OR versionCode = ANR`. The filter expression `versionCode = 123 OR errorIssueType = ANR` is not valid. ** Examples ** Some valid filtering expressions: * `versionCode = 123 AND errorIssueType = ANR` * `versionCode = 123 AND errorIssueType = OR errorIssueType = CRASH` * `versionCode = 123 AND (errorIssueType = OR errorIssueType = CRASH)`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a datetime without a day.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.endTime.day")
+    public Long intervalEndTimeDay;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withIntervalEndTimeDay(Long intervalEndTimeDay) {
+        this.intervalEndTimeDay = intervalEndTimeDay;
+        return this;
+    }
+    
+    /**
+     * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0 (midnight). An API may choose to allow the value "24:00:00" for scenarios like business closing time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.endTime.hours")
+    public Long intervalEndTimeHours;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withIntervalEndTimeHours(Long intervalEndTimeHours) {
+        this.intervalEndTimeHours = intervalEndTimeHours;
+        return this;
+    }
+    
+    /**
+     * Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.endTime.minutes")
+    public Long intervalEndTimeMinutes;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withIntervalEndTimeMinutes(Long intervalEndTimeMinutes) {
+        this.intervalEndTimeMinutes = intervalEndTimeMinutes;
+        return this;
+    }
+    
+    /**
+     * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a month.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.endTime.month")
+    public Long intervalEndTimeMonth;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withIntervalEndTimeMonth(Long intervalEndTimeMonth) {
+        this.intervalEndTimeMonth = intervalEndTimeMonth;
+        return this;
+    }
+    
+    /**
+     * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults to 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.endTime.nanos")
+    public Long intervalEndTimeNanos;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withIntervalEndTimeNanos(Long intervalEndTimeNanos) {
+        this.intervalEndTimeNanos = intervalEndTimeNanos;
+        return this;
+    }
+    
+    /**
+     * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0. An API may allow the value 60 if it allows leap-seconds.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.endTime.seconds")
+    public Long intervalEndTimeSeconds;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withIntervalEndTimeSeconds(Long intervalEndTimeSeconds) {
+        this.intervalEndTimeSeconds = intervalEndTimeSeconds;
+        return this;
+    }
+    
+    /**
+     * IANA Time Zone Database time zone, e.g. "America/New_York".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.endTime.timeZone.id")
+    public String intervalEndTimeTimeZoneId;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withIntervalEndTimeTimeZoneId(String intervalEndTimeTimeZoneId) {
+        this.intervalEndTimeTimeZoneId = intervalEndTimeTimeZoneId;
+        return this;
+    }
+    
+    /**
+     * Optional. IANA Time Zone Database version number, e.g. "2019a".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.endTime.timeZone.version")
+    public String intervalEndTimeTimeZoneVersion;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withIntervalEndTimeTimeZoneVersion(String intervalEndTimeTimeZoneVersion) {
+        this.intervalEndTimeTimeZoneVersion = intervalEndTimeTimeZoneVersion;
+        return this;
+    }
+    
+    /**
+     * UTC offset. Must be whole seconds, between -18 hours and +18 hours. For example, a UTC offset of -4:00 would be represented as { seconds: -14400 }.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.endTime.utcOffset")
+    public String intervalEndTimeUtcOffset;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withIntervalEndTimeUtcOffset(String intervalEndTimeUtcOffset) {
+        this.intervalEndTimeUtcOffset = intervalEndTimeUtcOffset;
+        return this;
+    }
+    
+    /**
+     * Optional. Year of date. Must be from 1 to 9999, or 0 if specifying a datetime without a year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.endTime.year")
+    public Long intervalEndTimeYear;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withIntervalEndTimeYear(Long intervalEndTimeYear) {
+        this.intervalEndTimeYear = intervalEndTimeYear;
+        return this;
+    }
+    
+    /**
+     * Optional. Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a datetime without a day.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.startTime.day")
+    public Long intervalStartTimeDay;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withIntervalStartTimeDay(Long intervalStartTimeDay) {
+        this.intervalStartTimeDay = intervalStartTimeDay;
+        return this;
+    }
+    
+    /**
+     * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults to 0 (midnight). An API may choose to allow the value "24:00:00" for scenarios like business closing time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.startTime.hours")
+    public Long intervalStartTimeHours;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withIntervalStartTimeHours(Long intervalStartTimeHours) {
+        this.intervalStartTimeHours = intervalStartTimeHours;
+        return this;
+    }
+    
+    /**
+     * Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.startTime.minutes")
+    public Long intervalStartTimeMinutes;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withIntervalStartTimeMinutes(Long intervalStartTimeMinutes) {
+        this.intervalStartTimeMinutes = intervalStartTimeMinutes;
+        return this;
+    }
+    
+    /**
+     * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a datetime without a month.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.startTime.month")
+    public Long intervalStartTimeMonth;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withIntervalStartTimeMonth(Long intervalStartTimeMonth) {
+        this.intervalStartTimeMonth = intervalStartTimeMonth;
+        return this;
+    }
+    
+    /**
+     * Optional. Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999, defaults to 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.startTime.nanos")
+    public Long intervalStartTimeNanos;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withIntervalStartTimeNanos(Long intervalStartTimeNanos) {
+        this.intervalStartTimeNanos = intervalStartTimeNanos;
+        return this;
+    }
+    
+    /**
+     * Optional. Seconds of minutes of the time. Must normally be from 0 to 59, defaults to 0. An API may allow the value 60 if it allows leap-seconds.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.startTime.seconds")
+    public Long intervalStartTimeSeconds;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withIntervalStartTimeSeconds(Long intervalStartTimeSeconds) {
+        this.intervalStartTimeSeconds = intervalStartTimeSeconds;
+        return this;
+    }
+    
+    /**
+     * IANA Time Zone Database time zone, e.g. "America/New_York".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.startTime.timeZone.id")
+    public String intervalStartTimeTimeZoneId;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withIntervalStartTimeTimeZoneId(String intervalStartTimeTimeZoneId) {
+        this.intervalStartTimeTimeZoneId = intervalStartTimeTimeZoneId;
+        return this;
+    }
+    
+    /**
+     * Optional. IANA Time Zone Database version number, e.g. "2019a".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.startTime.timeZone.version")
+    public String intervalStartTimeTimeZoneVersion;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withIntervalStartTimeTimeZoneVersion(String intervalStartTimeTimeZoneVersion) {
+        this.intervalStartTimeTimeZoneVersion = intervalStartTimeTimeZoneVersion;
+        return this;
+    }
+    
+    /**
+     * UTC offset. Must be whole seconds, between -18 hours and +18 hours. For example, a UTC offset of -4:00 would be represented as { seconds: -14400 }.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.startTime.utcOffset")
+    public String intervalStartTimeUtcOffset;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withIntervalStartTimeUtcOffset(String intervalStartTimeUtcOffset) {
+        this.intervalStartTimeUtcOffset = intervalStartTimeUtcOffset;
+        return this;
+    }
+    
+    /**
+     * Optional. Year of date. Must be from 1 to 9999, or 0 if specifying a datetime without a year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.startTime.year")
+    public Long intervalStartTimeYear;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withIntervalStartTimeYear(Long intervalStartTimeYear) {
+        this.intervalStartTimeYear = intervalStartTimeYear;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The maximum number of reports to return. The service may return fewer than this value. If unspecified, at most 50 reports will be returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * A page token, received from a previous `SearchErrorReports` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `SearchErrorReports` must match the call that provided the page token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Required. Parent resource of the reports, indicating the application for which they were received. Format: apps/{app}
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public PlaydeveloperreportingVitalsErrorsReportsSearchRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

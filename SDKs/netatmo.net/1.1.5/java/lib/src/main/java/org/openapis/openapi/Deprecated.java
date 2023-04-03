@@ -36,10 +36,11 @@ public class Deprecated {
     /**
      * The method devicelist returns the list of devices owned by the user, and their modules. - A device is identified by its _id (which is its mac address) and each device may have one, several or no modules, also identified by an _id. - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DevicelistResponse devicelist(org.openapis.openapi.models.operations.DevicelistRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DevicelistResponse devicelist(org.openapis.openapi.models.operations.DevicelistRequest request, org.openapis.openapi.models.operations.DevicelistSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/devicelist");
         
@@ -47,14 +48,14 @@ public class Deprecated {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DevicelistQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DevicelistRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,10 +82,11 @@ public class Deprecated {
     /**
      * The method getthermstate returns the last Thermostat measurements, its current weekly schedule, and, if present, its current manual temperature setpoint.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetthermstateResponse getthermstate(org.openapis.openapi.models.operations.GetthermstateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetthermstateResponse getthermstate(org.openapis.openapi.models.operations.GetthermstateRequest request, org.openapis.openapi.models.operations.GetthermstateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/getthermstate");
         
@@ -92,14 +94,14 @@ public class Deprecated {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetthermstateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetthermstateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -125,11 +127,10 @@ public class Deprecated {
 
     /**
      * The method getuser returns information about a user such as prefered language, prefered units, and list of devices. - 
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetuserResponse getuser(org.openapis.openapi.models.operations.GetuserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetuserResponse getuser() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/getuser");
         
@@ -138,8 +139,7 @@ public class Deprecated {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

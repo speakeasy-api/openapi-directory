@@ -110,7 +110,7 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.RequestUserAvatarResponse requestUserAvatar(org.openapis.openapi.models.operations.RequestUserAvatarRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RequestUserAvatarPathParams.class, baseUrl, "/v4/resources/users/{user_id}/avatar/{uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RequestUserAvatarRequest.class, baseUrl, "/v4/resources/users/{user_id}/avatar/{uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

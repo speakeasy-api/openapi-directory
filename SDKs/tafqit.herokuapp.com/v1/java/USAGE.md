@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.ConvertRequestBody;
-import org.openapis.openapi.models.operations.ConvertRequest;
 import org.openapis.openapi.models.operations.ConvertResponse;
 
 public class Application {
@@ -14,13 +13,11 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ConvertRequest req = new ConvertRequest() {{
-                request = new ConvertRequestBody() {{
-                    hundredsForm = "مائة";
-                    theNumber = "2519.50";
-                    unit = " ريال سعودي";
-                }};
-            }};            
+            ConvertRequestBody req = new ConvertRequestBody() {{
+                hundredsForm = "مائة";
+                theNumber = "2519.50";
+                unit = " ريال سعودي";
+            }}            
 
             ConvertResponse res = sdk.convert(req);
 

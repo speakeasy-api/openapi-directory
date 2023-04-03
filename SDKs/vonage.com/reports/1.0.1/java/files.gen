@@ -30,9 +30,7 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetCallLogsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetCallLogsPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCallLogsDirectionEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetCallLogsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCallLogsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCallLogsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ValidationErrorsResponse.java
@@ -45,5 +43,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/NextHref.java
 lib/src/main/java/org/openapis/openapi/models/shared/FirstHref.java
 lib/src/main/java/org/openapis/openapi/models/shared/CallLogsEmbeddedObject.java
 lib/src/main/java/org/openapis/openapi/models/shared/CallLog.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeBearerAuth.java
 USAGE.md

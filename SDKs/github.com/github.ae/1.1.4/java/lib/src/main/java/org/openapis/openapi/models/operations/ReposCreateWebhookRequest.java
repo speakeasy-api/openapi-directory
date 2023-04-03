@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposCreateWebhookRequest {
-    
-    public ReposCreateWebhookPathParams pathParams;
-    public ReposCreateWebhookRequest withPathParams(ReposCreateWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReposCreateWebhookRequestBody requestBody;
+    public ReposCreateWebhookRequest withRequestBody(ReposCreateWebhookRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReposCreateWebhookRequestBody request;
-    public ReposCreateWebhookRequest withRequest(ReposCreateWebhookRequestBody request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposCreateWebhookRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposCreateWebhookRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

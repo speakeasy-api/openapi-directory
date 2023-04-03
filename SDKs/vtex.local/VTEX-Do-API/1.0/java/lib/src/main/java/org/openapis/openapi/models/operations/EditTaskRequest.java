@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditTaskRequest {
-    
-    public EditTaskPathParams pathParams;
-    public EditTaskRequest withPathParams(EditTaskPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public EditTaskRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public EditTaskHeaders headers;
-    public EditTaskRequest withHeaders(EditTaskHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public EditTaskRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditTaskRequest request;
-    public EditTaskRequest withRequest(org.openapis.openapi.models.shared.EditTaskRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.EditTaskRequest editTaskRequest;
+    public EditTaskRequest withEditTaskRequest(org.openapis.openapi.models.shared.EditTaskRequest editTaskRequest) {
+        this.editTaskRequest = editTaskRequest;
+        return this;
+    }
+    
+    /**
+     * Task ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
+    public String taskId;
+    public EditTaskRequest withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

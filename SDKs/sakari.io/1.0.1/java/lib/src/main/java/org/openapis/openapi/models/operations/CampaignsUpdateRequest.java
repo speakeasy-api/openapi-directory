@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CampaignsUpdateRequest {
-    
-    public CampaignsUpdatePathParams pathParams;
-    public CampaignsUpdateRequest withPathParams(CampaignsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public CampaignsUpdateRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public CampaignsUpdateSecurity security;
-    public CampaignsUpdateRequest withSecurity(CampaignsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * ID of campaign
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaignId")
+    public String campaignId;
+    public CampaignsUpdateRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
         return this;
     }
     

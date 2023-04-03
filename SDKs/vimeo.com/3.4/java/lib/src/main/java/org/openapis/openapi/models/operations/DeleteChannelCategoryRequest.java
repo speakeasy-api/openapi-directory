@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteChannelCategoryRequest {
-    
-    public DeleteChannelCategoryPathParams pathParams;
-    public DeleteChannelCategoryRequest withPathParams(DeleteChannelCategoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the category.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category")
+    public String category;
+    public DeleteChannelCategoryRequest withCategory(String category) {
+        this.category = category;
         return this;
     }
     
-    
-    public DeleteChannelCategorySecurity security;
-    public DeleteChannelCategoryRequest withSecurity(DeleteChannelCategorySecurity security) {
-        this.security = security;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public DeleteChannelCategoryRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     

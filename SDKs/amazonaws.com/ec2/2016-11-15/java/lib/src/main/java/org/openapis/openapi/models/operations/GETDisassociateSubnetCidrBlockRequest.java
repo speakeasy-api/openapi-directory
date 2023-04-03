@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDisassociateSubnetCidrBlockRequest {
-    
-    public GETDisassociateSubnetCidrBlockQueryParams queryParams;
-    public GETDisassociateSubnetCidrBlockRequest withQueryParams(GETDisassociateSubnetCidrBlockQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDisassociateSubnetCidrBlockActionEnum action;
+    public GETDisassociateSubnetCidrBlockRequest withAction(GETDisassociateSubnetCidrBlockActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The association ID for the CIDR block.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AssociationId")
+    public String associationId;
+    public GETDisassociateSubnetCidrBlockRequest withAssociationId(String associationId) {
+        this.associationId = associationId;
+        return this;
+    }
     
-    public GETDisassociateSubnetCidrBlockHeaders headers;
-    public GETDisassociateSubnetCidrBlockRequest withHeaders(GETDisassociateSubnetCidrBlockHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDisassociateSubnetCidrBlockVersionEnum version;
+    public GETDisassociateSubnetCidrBlockRequest withVersion(GETDisassociateSubnetCidrBlockVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDisassociateSubnetCidrBlockRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDisassociateSubnetCidrBlockRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDisassociateSubnetCidrBlockRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDisassociateSubnetCidrBlockRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDisassociateSubnetCidrBlockRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDisassociateSubnetCidrBlockRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDisassociateSubnetCidrBlockRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

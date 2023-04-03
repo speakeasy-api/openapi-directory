@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostContainersCreateRequest {
-    
-    public PostContainersCreateQueryParams queryParams;
-    public PostContainersCreateRequest withQueryParams(PostContainersCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public PostContainersCreateHeaders headers;
-    public PostContainersCreateRequest withHeaders(PostContainersCreateHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Summary of input parameter to create a container in IBM Containers.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateContainer request;
-    public PostContainersCreateRequest withRequest(org.openapis.openapi.models.shared.CreateContainer request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateContainer createContainer;
+    public PostContainersCreateRequest withCreateContainer(org.openapis.openapi.models.shared.CreateContainer createContainer) {
+        this.createContainer = createContainer;
+        return this;
+    }
+    
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space &lt;space_name&gt; --guid`, where `&lt;space_name&gt;` is the name of your space, to retrieve your space ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public PostContainersCreateRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
+        return this;
+    }
+    
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public PostContainersCreateRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
+        return this;
+    }
+    
+    /**
+     * Choose a name for your container. The characters in the name can include uppercase letters, lowercase letters, numbers, periods (.), underscores (_), or hyphens (-), but the name must start with a letter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public PostContainersCreateRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

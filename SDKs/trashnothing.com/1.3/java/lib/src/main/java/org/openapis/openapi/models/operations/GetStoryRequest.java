@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStoryRequest {
-    
-    public GetStoryPathParams pathParams;
-    public GetStoryRequest withPathParams(GetStoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client device pixel ratio used to determine thumbnail size (default 1.0).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_pixel_ratio")
+    public Double devicePixelRatio;
+    public GetStoryRequest withDevicePixelRatio(Double devicePixelRatio) {
+        this.devicePixelRatio = devicePixelRatio;
         return this;
     }
     
-    
-    public GetStoryQueryParams queryParams;
-    public GetStoryRequest withQueryParams(GetStoryQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetStorySecurity security;
-    public GetStoryRequest withSecurity(GetStorySecurity security) {
-        this.security = security;
+    /**
+     * The ID of the story to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=story_id")
+    public String storyId;
+    public GetStoryRequest withStoryId(String storyId) {
+        this.storyId = storyId;
         return this;
     }
     

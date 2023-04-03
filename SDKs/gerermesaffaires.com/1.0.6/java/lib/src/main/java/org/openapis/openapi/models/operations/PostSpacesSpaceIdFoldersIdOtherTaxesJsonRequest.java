@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdOtherTaxesJsonRequest {
-    
-    public PostSpacesSpaceIdFoldersIdOtherTaxesJsonPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdOtherTaxesJsonRequest withPathParams(PostSpacesSpaceIdFoldersIdOtherTaxesJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Other tax declaration to add (either (Reference,DocumentId) either (File,Name,Content64Encoded,Title,Reference) is mandatory)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public PostSpacesSpaceIdFoldersIdOtherTaxesJsonRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public PostSpacesSpaceIdFoldersIdOtherTaxesJsonRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the folder tax contract
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdOtherTaxesJsonRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdOtherTaxesJsonSecurity security;
-    public PostSpacesSpaceIdFoldersIdOtherTaxesJsonRequest withSecurity(PostSpacesSpaceIdFoldersIdOtherTaxesJsonSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdOtherTaxesJsonRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

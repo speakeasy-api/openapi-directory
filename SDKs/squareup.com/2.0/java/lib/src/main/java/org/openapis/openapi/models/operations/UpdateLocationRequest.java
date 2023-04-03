@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateLocationRequest {
-    
-    public UpdateLocationPathParams pathParams;
-    public UpdateLocationRequest withPathParams(UpdateLocationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateLocationRequest request;
-    public UpdateLocationRequest withRequest(org.openapis.openapi.models.shared.UpdateLocationRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateLocationRequest updateLocationRequest;
+    public UpdateLocationRequest withUpdateLocationRequest(org.openapis.openapi.models.shared.UpdateLocationRequest updateLocationRequest) {
+        this.updateLocationRequest = updateLocationRequest;
         return this;
     }
     
-    
-    public UpdateLocationSecurity security;
-    public UpdateLocationRequest withSecurity(UpdateLocationSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the location to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public UpdateLocationRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     

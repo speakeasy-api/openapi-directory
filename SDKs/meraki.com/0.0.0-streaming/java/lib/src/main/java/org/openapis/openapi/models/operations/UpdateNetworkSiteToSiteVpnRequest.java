@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkSiteToSiteVpnRequest {
-    
-    public UpdateNetworkSiteToSiteVpnPathParams pathParams;
-    public UpdateNetworkSiteToSiteVpnRequest withPathParams(UpdateNetworkSiteToSiteVpnPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkSiteToSiteVpnRequestBody requestBody;
+    public UpdateNetworkSiteToSiteVpnRequest withRequestBody(UpdateNetworkSiteToSiteVpnRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkSiteToSiteVpnRequestBody request;
-    public UpdateNetworkSiteToSiteVpnRequest withRequest(UpdateNetworkSiteToSiteVpnRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkSiteToSiteVpnRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

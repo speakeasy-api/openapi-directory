@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsPatchFavouriteRequest {
-    
-    public GroupsPatchFavouritePathParams pathParams;
-    public GroupsPatchFavouriteRequest withPathParams(GroupsPatchFavouritePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GroupsPatchFavouriteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

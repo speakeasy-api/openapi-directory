@@ -4,34 +4,87 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListLogRequest {
-    
-    public ListLogPathParams pathParams;
-    public ListLogRequest withPathParams(ListLogPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The date/time (in GMT, ISO 8601) before which the Log resources must have been created. Defaults to current date/time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndDate")
+    public OffsetDateTime endDate;
+    public ListLogRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
         return this;
     }
     
-    
-    public ListLogQueryParams queryParams;
-    public ListLogRequest withQueryParams(ListLogQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The SID of the environment with the Log resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EnvironmentSid")
+    public String environmentSid;
+    public ListLogRequest withEnvironmentSid(String environmentSid) {
+        this.environmentSid = environmentSid;
         return this;
     }
     
-    
-    public ListLogSecurity security;
-    public ListLogRequest withSecurity(ListLogSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the function whose invocation produced the Log resources to read.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FunctionSid")
+    public String functionSid;
+    public ListLogRequest withFunctionSid(String functionSid) {
+        this.functionSid = functionSid;
         return this;
     }
     
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListLogRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public String serverURL;
-    public ListLogRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListLogRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListLogRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The SID of the Service to read the Log resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public ListLogRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
+        return this;
+    }
+    
+    /**
+     * The date/time (in GMT, ISO 8601) after which the Log resources must have been created. Defaults to 1 day prior to current date/time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartDate")
+    public OffsetDateTime startDate;
+    public ListLogRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
         return this;
     }
     

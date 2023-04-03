@@ -4,20 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeFileSystemsRequest {
-    
-    public DescribeFileSystemsQueryParams queryParams;
-    public DescribeFileSystemsRequest withQueryParams(DescribeFileSystemsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Optional) Restricts the list to the file system with this creation token (String). You specify a creation token when you create an Amazon EFS file system.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CreationToken")
+    public String creationToken;
+    public DescribeFileSystemsRequest withCreationToken(String creationToken) {
+        this.creationToken = creationToken;
         return this;
     }
     
+    /**
+     * (Optional) ID of the file system whose description you want to retrieve (String).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FileSystemId")
+    public String fileSystemId;
+    public DescribeFileSystemsRequest withFileSystemId(String fileSystemId) {
+        this.fileSystemId = fileSystemId;
+        return this;
+    }
     
-    public DescribeFileSystemsHeaders headers;
-    public DescribeFileSystemsRequest withHeaders(DescribeFileSystemsHeaders headers) {
-        this.headers = headers;
+    /**
+     * (Optional) Opaque pagination token returned from a previous &lt;code&gt;DescribeFileSystems&lt;/code&gt; operation (String). If present, specifies to continue the list from where the returning call had left off. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public DescribeFileSystemsRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * (Optional) Specifies the maximum number of file systems to return in the response (integer). This number is automatically set to 100. The response is paginated at 100 per page if you have more than 100 file systems. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
+    public Long maxItems;
+    public DescribeFileSystemsRequest withMaxItems(Long maxItems) {
+        this.maxItems = maxItems;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeFileSystemsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeFileSystemsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeFileSystemsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeFileSystemsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeFileSystemsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeFileSystemsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeFileSystemsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

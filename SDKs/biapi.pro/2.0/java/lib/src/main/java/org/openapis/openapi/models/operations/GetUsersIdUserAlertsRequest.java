@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdUserAlertsRequest {
-    
-    public GetUsersIdUserAlertsPathParams pathParams;
-    public GetUsersIdUserAlertsRequest withPathParams(GetUsersIdUserAlertsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetUsersIdUserAlertsRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
-    
-    public GetUsersIdUserAlertsQueryParams queryParams;
-    public GetUsersIdUserAlertsRequest withQueryParams(GetUsersIdUserAlertsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public GetUsersIdUserAlertsRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

@@ -34,25 +34,26 @@ public class WebResource {
     /**
      * Relinquish ownership of a website or domain.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SiteVerificationWebResourceDeleteResponse siteVerificationWebResourceDelete(org.openapis.openapi.models.operations.SiteVerificationWebResourceDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SiteVerificationWebResourceDeleteResponse siteVerificationWebResourceDelete(org.openapis.openapi.models.operations.SiteVerificationWebResourceDeleteRequest request, org.openapis.openapi.models.operations.SiteVerificationWebResourceDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SiteVerificationWebResourceDeletePathParams.class, baseUrl, "/webResource/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SiteVerificationWebResourceDeleteRequest.class, baseUrl, "/webResource/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SiteVerificationWebResourceDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SiteVerificationWebResourceDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,25 +74,26 @@ public class WebResource {
     /**
      * Get the most current data for a website or domain.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SiteVerificationWebResourceGetResponse siteVerificationWebResourceGet(org.openapis.openapi.models.operations.SiteVerificationWebResourceGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SiteVerificationWebResourceGetResponse siteVerificationWebResourceGet(org.openapis.openapi.models.operations.SiteVerificationWebResourceGetRequest request, org.openapis.openapi.models.operations.SiteVerificationWebResourceGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SiteVerificationWebResourceGetPathParams.class, baseUrl, "/webResource/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SiteVerificationWebResourceGetRequest.class, baseUrl, "/webResource/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SiteVerificationWebResourceGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SiteVerificationWebResourceGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,27 +120,28 @@ public class WebResource {
     /**
      * Get a verification token for placing on a website or domain.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SiteVerificationWebResourceGetTokenResponse siteVerificationWebResourceGetToken(org.openapis.openapi.models.operations.SiteVerificationWebResourceGetTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SiteVerificationWebResourceGetTokenResponse siteVerificationWebResourceGetToken(org.openapis.openapi.models.operations.SiteVerificationWebResourceGetTokenRequest request, org.openapis.openapi.models.operations.SiteVerificationWebResourceGetTokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/token");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "siteVerificationWebResourceGettokenRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SiteVerificationWebResourceGetTokenQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SiteVerificationWebResourceGetTokenRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,27 +168,28 @@ public class WebResource {
     /**
      * Attempt verification of a website or domain.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SiteVerificationWebResourceInsertResponse siteVerificationWebResourceInsert(org.openapis.openapi.models.operations.SiteVerificationWebResourceInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SiteVerificationWebResourceInsertResponse siteVerificationWebResourceInsert(org.openapis.openapi.models.operations.SiteVerificationWebResourceInsertRequest request, org.openapis.openapi.models.operations.SiteVerificationWebResourceInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/webResource");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "siteVerificationWebResourceResource", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SiteVerificationWebResourceInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SiteVerificationWebResourceInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -212,10 +216,11 @@ public class WebResource {
     /**
      * Get the list of your verified websites and domains.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SiteVerificationWebResourceListResponse siteVerificationWebResourceList(org.openapis.openapi.models.operations.SiteVerificationWebResourceListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SiteVerificationWebResourceListResponse siteVerificationWebResourceList(org.openapis.openapi.models.operations.SiteVerificationWebResourceListRequest request, org.openapis.openapi.models.operations.SiteVerificationWebResourceListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/webResource");
         
@@ -223,14 +228,14 @@ public class WebResource {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SiteVerificationWebResourceListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SiteVerificationWebResourceListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -257,27 +262,28 @@ public class WebResource {
     /**
      * Modify the list of owners for your website or domain. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SiteVerificationWebResourcePatchResponse siteVerificationWebResourcePatch(org.openapis.openapi.models.operations.SiteVerificationWebResourcePatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SiteVerificationWebResourcePatchResponse siteVerificationWebResourcePatch(org.openapis.openapi.models.operations.SiteVerificationWebResourcePatchRequest request, org.openapis.openapi.models.operations.SiteVerificationWebResourcePatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SiteVerificationWebResourcePatchPathParams.class, baseUrl, "/webResource/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SiteVerificationWebResourcePatchRequest.class, baseUrl, "/webResource/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "siteVerificationWebResourceResource", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SiteVerificationWebResourcePatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SiteVerificationWebResourcePatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -304,27 +310,28 @@ public class WebResource {
     /**
      * Modify the list of owners for your website or domain.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SiteVerificationWebResourceUpdateResponse siteVerificationWebResourceUpdate(org.openapis.openapi.models.operations.SiteVerificationWebResourceUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SiteVerificationWebResourceUpdateResponse siteVerificationWebResourceUpdate(org.openapis.openapi.models.operations.SiteVerificationWebResourceUpdateRequest request, org.openapis.openapi.models.operations.SiteVerificationWebResourceUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SiteVerificationWebResourceUpdatePathParams.class, baseUrl, "/webResource/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SiteVerificationWebResourceUpdateRequest.class, baseUrl, "/webResource/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "siteVerificationWebResourceResource", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SiteVerificationWebResourceUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SiteVerificationWebResourceUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

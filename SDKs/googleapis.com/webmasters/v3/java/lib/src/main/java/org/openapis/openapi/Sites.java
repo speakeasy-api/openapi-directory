@@ -33,25 +33,26 @@ public class Sites {
     /**
      * Adds a site to the set of the user's sites in Search Console.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebmastersSitesAddResponse webmastersSitesAdd(org.openapis.openapi.models.operations.WebmastersSitesAddRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebmastersSitesAddResponse webmastersSitesAdd(org.openapis.openapi.models.operations.WebmastersSitesAddRequest request, org.openapis.openapi.models.operations.WebmastersSitesAddSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebmastersSitesAddPathParams.class, baseUrl, "/sites/{siteUrl}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebmastersSitesAddRequest.class, baseUrl, "/sites/{siteUrl}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebmastersSitesAddQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebmastersSitesAddRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -72,25 +73,26 @@ public class Sites {
     /**
      * Removes a site from the set of the user's Search Console sites.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebmastersSitesDeleteResponse webmastersSitesDelete(org.openapis.openapi.models.operations.WebmastersSitesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebmastersSitesDeleteResponse webmastersSitesDelete(org.openapis.openapi.models.operations.WebmastersSitesDeleteRequest request, org.openapis.openapi.models.operations.WebmastersSitesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebmastersSitesDeletePathParams.class, baseUrl, "/sites/{siteUrl}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebmastersSitesDeleteRequest.class, baseUrl, "/sites/{siteUrl}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebmastersSitesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebmastersSitesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -111,25 +113,26 @@ public class Sites {
     /**
      * Retrieves information about specific site.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebmastersSitesGetResponse webmastersSitesGet(org.openapis.openapi.models.operations.WebmastersSitesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebmastersSitesGetResponse webmastersSitesGet(org.openapis.openapi.models.operations.WebmastersSitesGetRequest request, org.openapis.openapi.models.operations.WebmastersSitesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebmastersSitesGetPathParams.class, baseUrl, "/sites/{siteUrl}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebmastersSitesGetRequest.class, baseUrl, "/sites/{siteUrl}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebmastersSitesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebmastersSitesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -156,10 +159,11 @@ public class Sites {
     /**
      * Lists the user's Search Console sites.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebmastersSitesListResponse webmastersSitesList(org.openapis.openapi.models.operations.WebmastersSitesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebmastersSitesListResponse webmastersSitesList(org.openapis.openapi.models.operations.WebmastersSitesListRequest request, org.openapis.openapi.models.operations.WebmastersSitesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sites");
         
@@ -167,14 +171,14 @@ public class Sites {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebmastersSitesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebmastersSitesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

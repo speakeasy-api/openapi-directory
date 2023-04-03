@@ -34,25 +34,26 @@ public class Projects {
     /**
      * Lists insights for the specified Cloud Resource. Requires the recommender.*.list IAM permission for the specified insight type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsListResponse recommenderProjectsLocationsInsightTypesInsightsList(org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsListResponse recommenderProjectsLocationsInsightTypesInsightsList(org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsListRequest request, org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsListPathParams.class, baseUrl, "/v1beta1/{parent}/insights", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsListRequest.class, baseUrl, "/v1beta1/{parent}/insights", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class Projects {
     /**
      * Marks the Insight State as Accepted. Users can use this method to indicate to the Recommender API that they have applied some action based on the insight. This stops the insight content from being updated. MarkInsightAccepted can be applied to insights in ACTIVE state. Requires the recommender.*.update IAM permission for the specified insight.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedResponse recommenderProjectsLocationsInsightTypesInsightsMarkAccepted(org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedResponse recommenderProjectsLocationsInsightTypesInsightsMarkAccepted(org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedRequest request, org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedPathParams.class, baseUrl, "/v1beta1/{name}:markAccepted", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedRequest.class, baseUrl, "/v1beta1/{name}:markAccepted", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecommenderV1beta1MarkInsightAcceptedRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class Projects {
     /**
      * Gets the requested recommendation. Requires the recommender.*.get IAM permission for the specified recommender.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsGetResponse recommenderProjectsLocationsRecommendersRecommendationsGet(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsGetResponse recommenderProjectsLocationsRecommendersRecommendationsGet(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsGetRequest request, org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsGetPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsGetRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class Projects {
     /**
      * Lists recommendations for the specified Cloud Resource. Requires the recommender.*.list IAM permission for the specified recommender.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsListResponse recommenderProjectsLocationsRecommendersRecommendationsList(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsListResponse recommenderProjectsLocationsRecommendersRecommendationsList(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsListRequest request, org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsListPathParams.class, baseUrl, "/v1beta1/{parent}/recommendations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsListRequest.class, baseUrl, "/v1beta1/{parent}/recommendations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,27 +220,28 @@ public class Projects {
     /**
      * Marks the Recommendation State as Claimed. Users can use this method to indicate to the Recommender API that they are starting to apply the recommendation themselves. This stops the recommendation content from being updated. Associated insights are frozen and placed in the ACCEPTED state. MarkRecommendationClaimed can be applied to recommendations in CLAIMED or ACTIVE state. Requires the recommender.*.update IAM permission for the specified recommender.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedResponse recommenderProjectsLocationsRecommendersRecommendationsMarkClaimed(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedResponse recommenderProjectsLocationsRecommendersRecommendationsMarkClaimed(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedRequest request, org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedPathParams.class, baseUrl, "/v1beta1/{name}:markClaimed", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedRequest.class, baseUrl, "/v1beta1/{name}:markClaimed", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecommenderV1beta1MarkRecommendationClaimedRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,27 +268,28 @@ public class Projects {
     /**
      * Mark the Recommendation State as Dismissed. Users can use this method to indicate to the Recommender API that an ACTIVE recommendation has to be marked back as DISMISSED. MarkRecommendationDismissed can be applied to recommendations in ACTIVE state. Requires the recommender.*.update IAM permission for the specified recommender.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedResponse recommenderProjectsLocationsRecommendersRecommendationsMarkDismissed(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedResponse recommenderProjectsLocationsRecommendersRecommendationsMarkDismissed(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedRequest request, org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedPathParams.class, baseUrl, "/v1beta1/{name}:markDismissed", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedRequest.class, baseUrl, "/v1beta1/{name}:markDismissed", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecommenderV1beta1MarkRecommendationDismissedRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -310,27 +316,28 @@ public class Projects {
     /**
      * Marks the Recommendation State as Failed. Users can use this method to indicate to the Recommender API that they have applied the recommendation themselves, and the operation failed. This stops the recommendation content from being updated. Associated insights are frozen and placed in the ACCEPTED state. MarkRecommendationFailed can be applied to recommendations in ACTIVE, CLAIMED, SUCCEEDED, or FAILED state. Requires the recommender.*.update IAM permission for the specified recommender.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedResponse recommenderProjectsLocationsRecommendersRecommendationsMarkFailed(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedResponse recommenderProjectsLocationsRecommendersRecommendationsMarkFailed(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedRequest request, org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedPathParams.class, baseUrl, "/v1beta1/{name}:markFailed", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedRequest.class, baseUrl, "/v1beta1/{name}:markFailed", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecommenderV1beta1MarkRecommendationFailedRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -357,27 +364,28 @@ public class Projects {
     /**
      * Marks the Recommendation State as Succeeded. Users can use this method to indicate to the Recommender API that they have applied the recommendation themselves, and the operation was successful. This stops the recommendation content from being updated. Associated insights are frozen and placed in the ACCEPTED state. MarkRecommendationSucceeded can be applied to recommendations in ACTIVE, CLAIMED, SUCCEEDED, or FAILED state. Requires the recommender.*.update IAM permission for the specified recommender.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededResponse recommenderProjectsLocationsRecommendersRecommendationsMarkSucceeded(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededResponse recommenderProjectsLocationsRecommendersRecommendationsMarkSucceeded(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededRequest request, org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededPathParams.class, baseUrl, "/v1beta1/{name}:markSucceeded", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededRequest.class, baseUrl, "/v1beta1/{name}:markSucceeded", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecommenderV1beta1MarkRecommendationSucceededRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -404,27 +412,28 @@ public class Projects {
     /**
      * Updates a Recommender Config. This will create a new revision of the config.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersUpdateConfigResponse recommenderProjectsLocationsRecommendersUpdateConfig(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersUpdateConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersUpdateConfigResponse recommenderProjectsLocationsRecommendersUpdateConfig(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersUpdateConfigRequest request, org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersUpdateConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersUpdateConfigPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersUpdateConfigRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecommenderV1beta1RecommenderConfigInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersUpdateConfigQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommenderProjectsLocationsRecommendersUpdateConfigRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

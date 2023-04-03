@@ -4,13 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssignmentsRequest {
+    /**
+     * Select assignments with no closing date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alwaysOpen")
+    public Boolean alwaysOpen;
+    public GetAssignmentsRequest withAlwaysOpen(Boolean alwaysOpen) {
+        this.alwaysOpen = alwaysOpen;
+        return this;
+    }
     
-    public GetAssignmentsQueryParams queryParams;
-    public GetAssignmentsRequest withQueryParams(GetAssignmentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Restrict results to the assignment (or potentially assignments) with this exact name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetAssignmentsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Select open or closed assignments
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=open")
+    public Boolean open;
+    public GetAssignmentsRequest withOpen(Boolean open) {
+        this.open = open;
+        return this;
+    }
+    
+    /**
+     * Restrict results to assignments owned by this user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ownedBy")
+    public String ownedBy;
+    public GetAssignmentsRequest withOwnedBy(String ownedBy) {
+        this.ownedBy = ownedBy;
+        return this;
+    }
+    
+    /**
+     * Pagination page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetAssignmentsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Pagination page size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public GetAssignmentsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Restrict results to assignments whose name or description matches this keyword.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetAssignmentsRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * Restrict results to assignments which are tagged with this tag.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public GetAssignmentsRequest withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    
+    /**
+     * Select an assignment by urlWords.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=urlWords")
+    public String urlWords;
+    public GetAssignmentsRequest withUrlWords(String urlWords) {
+        this.urlWords = urlWords;
         return this;
     }
     

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUsAppToPersonRequest {
-    
-    public DeleteUsAppToPersonPathParams pathParams;
-    public DeleteUsAppToPersonRequest withPathParams(DeleteUsAppToPersonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to delete the resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MessagingServiceSid")
+    public String messagingServiceSid;
+    public DeleteUsAppToPersonRequest withMessagingServiceSid(String messagingServiceSid) {
+        this.messagingServiceSid = messagingServiceSid;
         return this;
     }
     
-    
-    public DeleteUsAppToPersonSecurity security;
-    public DeleteUsAppToPersonRequest withSecurity(DeleteUsAppToPersonSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteUsAppToPersonRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the US A2P Compliance resource to delete `QE2c6890da8086d771620e9b13fadeba0b`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteUsAppToPersonRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

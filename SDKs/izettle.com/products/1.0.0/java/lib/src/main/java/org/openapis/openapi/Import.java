@@ -34,19 +34,20 @@ public class Import {
     /**
      * Get status for latest import
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetLatestImportStatusResponse getLatestImportStatus(org.openapis.openapi.models.operations.GetLatestImportStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetLatestImportStatusResponse getLatestImportStatus(org.openapis.openapi.models.operations.GetLatestImportStatusRequest request, org.openapis.openapi.models.operations.GetLatestImportStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLatestImportStatusPathParams.class, baseUrl, "/organizations/{organizationUuid}/import/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLatestImportStatusRequest.class, baseUrl, "/organizations/{organizationUuid}/import/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -75,19 +76,20 @@ public class Import {
     /**
      * Get status for an import
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetStatusByUuidResponse getStatusByUuid(org.openapis.openapi.models.operations.GetStatusByUuidRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetStatusByUuidResponse getStatusByUuid(org.openapis.openapi.models.operations.GetStatusByUuidRequest request, org.openapis.openapi.models.operations.GetStatusByUuidSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStatusByUuidPathParams.class, baseUrl, "/organizations/{organizationUuid}/import/status/{importUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStatusByUuidRequest.class, baseUrl, "/organizations/{organizationUuid}/import/status/{importUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -116,24 +118,25 @@ public class Import {
     /**
      * Import library items
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ImportLibraryV2Response importLibraryV2(org.openapis.openapi.models.operations.ImportLibraryV2Request request) throws Exception {
+    public org.openapis.openapi.models.operations.ImportLibraryV2Response importLibraryV2(org.openapis.openapi.models.operations.ImportLibraryV2Request request, org.openapis.openapi.models.operations.ImportLibraryV2Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportLibraryV2PathParams.class, baseUrl, "/organizations/{organizationUuid}/import/v2", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportLibraryV2Request.class, baseUrl, "/organizations/{organizationUuid}/import/v2", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "bulkImportRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,27 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVehiclesVehicleidRequest {
-    
-    public GetVehiclesVehicleidPathParams pathParams;
-    public GetVehiclesVehicleidRequest withPathParams(GetVehiclesVehicleidPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An optional array of Vehicle fields that should be included in the response, for example: `?field[]=information&amp;field[]=location` 
+     * 
+     * By default, no fields are included and only the Vehicle ID will be returned. Response time may be impacted by which fields you request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=field[]")
+    public GetVehiclesVehicleidFieldEnum[] field;
+    public GetVehiclesVehicleidRequest withField(GetVehiclesVehicleidFieldEnum[] field) {
+        this.field = field;
         return this;
     }
     
-    
-    public GetVehiclesVehicleidQueryParams queryParams;
-    public GetVehiclesVehicleidRequest withQueryParams(GetVehiclesVehicleidQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetVehiclesVehicleidSecurity security;
-    public GetVehiclesVehicleidRequest withSecurity(GetVehiclesVehicleidSecurity security) {
-        this.security = security;
+    /**
+     * ID of the Vehicle
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vehicleId")
+    public String vehicleId;
+    public GetVehiclesVehicleidRequest withVehicleId(String vehicleId) {
+        this.vehicleId = vehicleId;
         return this;
     }
     

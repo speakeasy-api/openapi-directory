@@ -443,19 +443,20 @@ public class SDK {
     /**
      * Remove a customer space from partner
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteBusinessGroupsIdSpacesSpaceIdResponse deleteBusinessGroupsIdSpacesSpaceId(org.openapis.openapi.models.operations.DeleteBusinessGroupsIdSpacesSpaceIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteBusinessGroupsIdSpacesSpaceIdResponse deleteBusinessGroupsIdSpacesSpaceId(org.openapis.openapi.models.operations.DeleteBusinessGroupsIdSpacesSpaceIdRequest request, org.openapis.openapi.models.operations.DeleteBusinessGroupsIdSpacesSpaceIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBusinessGroupsIdSpacesSpaceIdPathParams.class, baseUrl, "/business-groups/{id}/spaces/{spaceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBusinessGroupsIdSpacesSpaceIdRequest.class, baseUrl, "/business-groups/{id}/spaces/{spaceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -481,7 +482,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesIdResponse deleteSpacesId(org.openapis.openapi.models.operations.DeleteSpacesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesIdPathParams.class, baseUrl, "/spaces/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesIdRequest.class, baseUrl, "/spaces/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -514,7 +515,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesIdCompanyEntitiesPersonIdDetailsDesignationResponse deleteSpacesIdCompanyEntitiesPersonIdDetailsDesignation(org.openapis.openapi.models.operations.DeleteSpacesIdCompanyEntitiesPersonIdDetailsDesignationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesIdCompanyEntitiesPersonIdDetailsDesignationPathParams.class, baseUrl, "/spaces/{id}/company-entities/{personId}/details/{designation}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesIdCompanyEntitiesPersonIdDetailsDesignationRequest.class, baseUrl, "/spaces/{id}/company-entities/{personId}/details/{designation}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -547,7 +548,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesIdGroupsGroupIdFoldersFolderIdResponse deleteSpacesIdGroupsGroupIdFoldersFolderId(org.openapis.openapi.models.operations.DeleteSpacesIdGroupsGroupIdFoldersFolderIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesIdGroupsGroupIdFoldersFolderIdPathParams.class, baseUrl, "/spaces/{id}/groups/{groupId}/folders/{folderId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesIdGroupsGroupIdFoldersFolderIdRequest.class, baseUrl, "/spaces/{id}/groups/{groupId}/folders/{folderId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -580,7 +581,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesIdGroupsGroupIdPersonsMemberIdResponse deleteSpacesIdGroupsGroupIdPersonsMemberId(org.openapis.openapi.models.operations.DeleteSpacesIdGroupsGroupIdPersonsMemberIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesIdGroupsGroupIdPersonsMemberIdPathParams.class, baseUrl, "/spaces/{id}/groups/{groupId}/persons/{memberId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesIdGroupsGroupIdPersonsMemberIdRequest.class, baseUrl, "/spaces/{id}/groups/{groupId}/persons/{memberId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -613,7 +614,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesIdPersonsPersonIdResponse deleteSpacesIdPersonsPersonId(org.openapis.openapi.models.operations.DeleteSpacesIdPersonsPersonIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesIdPersonsPersonIdPathParams.class, baseUrl, "/spaces/{id}/persons/{personId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesIdPersonsPersonIdRequest.class, baseUrl, "/spaces/{id}/persons/{personId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -646,7 +647,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesIdPersonsPersonIdDetailsDesignationResponse deleteSpacesIdPersonsPersonIdDetailsDesignation(org.openapis.openapi.models.operations.DeleteSpacesIdPersonsPersonIdDetailsDesignationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesIdPersonsPersonIdDetailsDesignationPathParams.class, baseUrl, "/spaces/{id}/persons/{personId}/details/{designation}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesIdPersonsPersonIdDetailsDesignationRequest.class, baseUrl, "/spaces/{id}/persons/{personId}/details/{designation}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -679,7 +680,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesIdStatusCodeResponse deleteSpacesIdStatusCode(org.openapis.openapi.models.operations.DeleteSpacesIdStatusCodeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesIdStatusCodePathParams.class, baseUrl, "/spaces/{id}/status/{code}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesIdStatusCodeRequest.class, baseUrl, "/spaces/{id}/status/{code}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -707,19 +708,20 @@ public class SDK {
     /**
      * Deletes a trigger for the space id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteSpacesIdTriggersNameResponse deleteSpacesIdTriggersName(org.openapis.openapi.models.operations.DeleteSpacesIdTriggersNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteSpacesIdTriggersNameResponse deleteSpacesIdTriggersName(org.openapis.openapi.models.operations.DeleteSpacesIdTriggersNameRequest request, org.openapis.openapi.models.operations.DeleteSpacesIdTriggersNameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesIdTriggersNamePathParams.class, baseUrl, "/spaces/{id}/triggers/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesIdTriggersNameRequest.class, baseUrl, "/spaces/{id}/triggers/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -745,7 +747,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdCommonFoldersIdResponse deleteSpacesSpaceIdCommonFoldersId(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdCommonFoldersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdCommonFoldersIdPathParams.class, baseUrl, "/spaces/{spaceId}/common-folders/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdCommonFoldersIdRequest.class, baseUrl, "/spaces/{spaceId}/common-folders/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -778,7 +780,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdBankStatementsDocumentIdResponse deleteSpacesSpaceIdFoldersFolderIdBankStatementsDocumentId(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdBankStatementsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdBankStatementsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/bank-statements/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdBankStatementsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/bank-statements/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -811,7 +813,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdContractualDocumentsDocumentIdResponse deleteSpacesSpaceIdFoldersFolderIdContractualDocumentsDocumentId(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdContractualDocumentsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdContractualDocumentsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/contractual-documents/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdContractualDocumentsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/contractual-documents/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -844,7 +846,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdResponse deleteSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentId(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/corporate-tax-declarations/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/corporate-tax-declarations/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -877,7 +879,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdResponse deleteSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentId(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/expense-proofs/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/expense-proofs/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -910,7 +912,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdExpenseReportsDocumentIdResponse deleteSpacesSpaceIdFoldersFolderIdExpenseReportsDocumentId(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdExpenseReportsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdExpenseReportsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/expense-reports/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdExpenseReportsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/expense-reports/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -943,7 +945,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdInvoicesDocumentIdResponse deleteSpacesSpaceIdFoldersFolderIdInvoicesDocumentId(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdInvoicesDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdInvoicesDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/invoices/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdInvoicesDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/invoices/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -976,7 +978,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdOtherTaxesDocumentIdResponse deleteSpacesSpaceIdFoldersFolderIdOtherTaxesDocumentId(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdOtherTaxesDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdOtherTaxesDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/other-taxes/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdOtherTaxesDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/other-taxes/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1009,7 +1011,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdResponse deleteSpacesSpaceIdFoldersFolderIdPayrollsDocumentId(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/payrolls/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/payrolls/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1042,7 +1044,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdPayslipsDocumentIdResponse deleteSpacesSpaceIdFoldersFolderIdPayslipsDocumentId(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdPayslipsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdPayslipsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/payslips/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdPayslipsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/payslips/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1075,7 +1077,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdSocialContractsDocumentIdResponse deleteSpacesSpaceIdFoldersFolderIdSocialContractsDocumentId(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdSocialContractsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdSocialContractsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/social-contracts/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdSocialContractsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/social-contracts/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1108,7 +1110,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdSocialDeclarationsDocumentIdResponse deleteSpacesSpaceIdFoldersFolderIdSocialDeclarationsDocumentId(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdSocialDeclarationsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdSocialDeclarationsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/social-declarations/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdSocialDeclarationsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/social-declarations/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1141,7 +1143,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdResponse deleteSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentId(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/vat-declarations/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/vat-declarations/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1174,7 +1176,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdAccountingYearResponse deleteSpacesSpaceIdFoldersIdAccountingYear(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdAccountingYearRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdAccountingYearPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/accounting-year", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdAccountingYearRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/accounting-year", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1207,7 +1209,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdBankResponse deleteSpacesSpaceIdFoldersIdBank(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdBankRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdBankPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/bank", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdBankRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/bank", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1240,7 +1242,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdCustomerResponse deleteSpacesSpaceIdFoldersIdCustomer(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdCustomerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdCustomerPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/customer", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdCustomerRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/customer", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1273,7 +1275,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdEmployeeResponse deleteSpacesSpaceIdFoldersIdEmployee(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdEmployeeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdEmployeePathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/employee", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdEmployeeRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/employee", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1306,7 +1308,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdInsuranceResponse deleteSpacesSpaceIdFoldersIdInsurance(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdInsuranceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdInsurancePathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/insurance", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdInsuranceRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/insurance", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1339,7 +1341,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdLoanResponse deleteSpacesSpaceIdFoldersIdLoan(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdLoanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdLoanPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/loan", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdLoanRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/loan", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1372,7 +1374,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdPasswordsPasswordIdResponse deleteSpacesSpaceIdFoldersIdPasswordsPasswordId(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdPasswordsPasswordIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdPasswordsPasswordIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/passwords/{passwordId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdPasswordsPasswordIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/passwords/{passwordId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1400,19 +1402,20 @@ public class SDK {
     /**
      * delete a nominative social declaration in a folder social
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationResponse deleteSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclaration(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationResponse deleteSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclaration(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationRequest request, org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/payrolls/{payrollId}/nominative-social-declaration", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/payrolls/{payrollId}/nominative-social-declaration", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1438,7 +1441,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdPortfolioPortfolioIdResponse deleteSpacesSpaceIdFoldersIdPortfolioPortfolioId(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdPortfolioPortfolioIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdPortfolioPortfolioIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/portfolio/{portfolioId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdPortfolioPortfolioIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/portfolio/{portfolioId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1471,7 +1474,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdProfessionalVehicleResponse deleteSpacesSpaceIdFoldersIdProfessionalVehicle(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdProfessionalVehicleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdProfessionalVehiclePathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/professional-vehicle", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdProfessionalVehicleRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/professional-vehicle", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1504,7 +1507,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdProviderResponse deleteSpacesSpaceIdFoldersIdProvider(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdProviderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdProviderPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/provider", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdProviderRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/provider", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1532,19 +1535,20 @@ public class SDK {
     /**
      * delete a document from a required document
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidDocumentsDocumentIdResponse deleteSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidDocumentsDocumentId(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidDocumentsDocumentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidDocumentsDocumentIdResponse deleteSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidDocumentsDocumentId(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidDocumentsDocumentIdRequest request, org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidDocumentsDocumentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidDocumentsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/required-documents/{requireddocumentid}/documents/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidDocumentsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/required-documents/{requireddocumentid}/documents/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1570,7 +1574,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdSocialRegimesResponse deleteSpacesSpaceIdFoldersIdSocialRegimes(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdSocialRegimesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdSocialRegimesPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/social-regimes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdSocialRegimesRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/social-regimes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1603,7 +1607,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdTaxContractResponse deleteSpacesSpaceIdFoldersIdTaxContract(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdTaxContractRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdTaxContractPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/tax-contract", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdTaxContractRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/tax-contract", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1636,7 +1640,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdDocumentClassResponse deleteSpacesSpaceIdFoldersIdDocumentClass(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdDocumentClassRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdDocumentClassPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/{documentClass}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdFoldersIdDocumentClassRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/{documentClass}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1664,19 +1668,20 @@ public class SDK {
     /**
      * delete the invitation of a person in a space
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdPersonsIdGuestInSpaceResponse deleteSpacesSpaceIdPersonsIdGuestInSpace(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdPersonsIdGuestInSpaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdPersonsIdGuestInSpaceResponse deleteSpacesSpaceIdPersonsIdGuestInSpace(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdPersonsIdGuestInSpaceRequest request, org.openapis.openapi.models.operations.DeleteSpacesSpaceIdPersonsIdGuestInSpaceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdPersonsIdGuestInSpacePathParams.class, baseUrl, "/spaces/{spaceId}/persons/{id}/guest-in-space", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdPersonsIdGuestInSpaceRequest.class, baseUrl, "/spaces/{spaceId}/persons/{id}/guest-in-space", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1697,19 +1702,20 @@ public class SDK {
     /**
      * delete the invitation of a person in a space
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdPersonsIdInvitationResponse deleteSpacesSpaceIdPersonsIdInvitation(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdPersonsIdInvitationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteSpacesSpaceIdPersonsIdInvitationResponse deleteSpacesSpaceIdPersonsIdInvitation(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdPersonsIdInvitationRequest request, org.openapis.openapi.models.operations.DeleteSpacesSpaceIdPersonsIdInvitationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdPersonsIdInvitationPathParams.class, baseUrl, "/spaces/{spaceId}/persons/{id}/invitation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpacesSpaceIdPersonsIdInvitationRequest.class, baseUrl, "/spaces/{spaceId}/persons/{id}/invitation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1729,11 +1735,10 @@ public class SDK {
 
     /**
      * Returns predefined folders and workbooks of the Box for all the spaces
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBoxMenusResponse getBoxMenus(org.openapis.openapi.models.operations.GetBoxMenusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBoxMenusResponse getBoxMenus() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/box/menus");
         
@@ -1742,7 +1747,7 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1769,10 +1774,11 @@ public class SDK {
     /**
      * Returns a list of groups custom ordered by name
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBusinessGroupsResponse getBusinessGroups(org.openapis.openapi.models.operations.GetBusinessGroupsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBusinessGroupsResponse getBusinessGroups(org.openapis.openapi.models.operations.GetBusinessGroupsRequest request, org.openapis.openapi.models.operations.GetBusinessGroupsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/business-groups");
         
@@ -1780,14 +1786,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBusinessGroupsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBusinessGroupsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1814,10 +1820,11 @@ public class SDK {
     /**
      * Returns list of groups custom for managers
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBusinessGroupsAllResponse getBusinessGroupsAll(org.openapis.openapi.models.operations.GetBusinessGroupsAllRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBusinessGroupsAllResponse getBusinessGroupsAll(org.openapis.openapi.models.operations.GetBusinessGroupsAllRequest request, org.openapis.openapi.models.operations.GetBusinessGroupsAllSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/business-groups/all");
         
@@ -1825,14 +1832,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBusinessGroupsAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBusinessGroupsAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1859,19 +1866,20 @@ public class SDK {
     /**
      * Returns a group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBusinessGroupsIdResponse getBusinessGroupsId(org.openapis.openapi.models.operations.GetBusinessGroupsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBusinessGroupsIdResponse getBusinessGroupsId(org.openapis.openapi.models.operations.GetBusinessGroupsIdRequest request, org.openapis.openapi.models.operations.GetBusinessGroupsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBusinessGroupsIdPathParams.class, baseUrl, "/business-groups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBusinessGroupsIdRequest.class, baseUrl, "/business-groups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1898,25 +1906,26 @@ public class SDK {
     /**
      * Returns spaces of the business group with id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBusinessGroupsIdSpacesResponse getBusinessGroupsIdSpaces(org.openapis.openapi.models.operations.GetBusinessGroupsIdSpacesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBusinessGroupsIdSpacesResponse getBusinessGroupsIdSpaces(org.openapis.openapi.models.operations.GetBusinessGroupsIdSpacesRequest request, org.openapis.openapi.models.operations.GetBusinessGroupsIdSpacesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBusinessGroupsIdSpacesPathParams.class, baseUrl, "/business-groups/{id}/spaces", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBusinessGroupsIdSpacesRequest.class, baseUrl, "/business-groups/{id}/spaces", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBusinessGroupsIdSpacesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBusinessGroupsIdSpacesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1943,19 +1952,20 @@ public class SDK {
     /**
      * Returns predefined folders and workbooks of the Hub for all the spaces of the business group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetHubBusinessGroupsIdMenusResponse getHubBusinessGroupsIdMenus(org.openapis.openapi.models.operations.GetHubBusinessGroupsIdMenusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetHubBusinessGroupsIdMenusResponse getHubBusinessGroupsIdMenus(org.openapis.openapi.models.operations.GetHubBusinessGroupsIdMenusRequest request, org.openapis.openapi.models.operations.GetHubBusinessGroupsIdMenusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHubBusinessGroupsIdMenusPathParams.class, baseUrl, "/hub/business-groups/{Id}/menus", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHubBusinessGroupsIdMenusRequest.class, baseUrl, "/hub/business-groups/{Id}/menus", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1981,11 +1991,10 @@ public class SDK {
 
     /**
      * Returns predefined folders and workbooks of the Hub for all the spaces
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetHubMenusResponse getHubMenus(org.openapis.openapi.models.operations.GetHubMenusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetHubMenusResponse getHubMenus() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/hub/menus");
         
@@ -1994,7 +2003,7 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2020,11 +2029,10 @@ public class SDK {
 
     /**
      * Returns predefined folders and workbooks of the Hub for all the spaces and customer spaces
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetHubMenusAllResponse getHubMenusAll(org.openapis.openapi.models.operations.GetHubMenusAllRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetHubMenusAllResponse getHubMenusAll() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/hub/menus/all");
         
@@ -2033,7 +2041,7 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2065,7 +2073,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetHubSpacesSpaceIdMenusResponse getHubSpacesSpaceIdMenus(org.openapis.openapi.models.operations.GetHubSpacesSpaceIdMenusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHubSpacesSpaceIdMenusPathParams.class, baseUrl, "/hub/spaces/{spaceId}/menus", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHubSpacesSpaceIdMenusRequest.class, baseUrl, "/hub/spaces/{spaceId}/menus", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2137,10 +2145,11 @@ public class SDK {
     /**
      * Returns status of member
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetProfileResponse getProfile(org.openapis.openapi.models.operations.GetProfileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetProfileResponse getProfile(org.openapis.openapi.models.operations.GetProfileRequest request, org.openapis.openapi.models.operations.GetProfileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/profile");
         
@@ -2148,14 +2157,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProfileQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProfileRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2193,7 +2202,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProfileIdFileQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProfileIdFileRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2232,10 +2241,11 @@ public class SDK {
     /**
      * Returns the method to get the validation code or the link to register after invitation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRegistrationResponse getRegistration(org.openapis.openapi.models.operations.GetRegistrationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRegistrationResponse getRegistration(org.openapis.openapi.models.operations.GetRegistrationRequest request, org.openapis.openapi.models.operations.GetRegistrationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/registration");
         
@@ -2243,14 +2253,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRegistrationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRegistrationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2276,11 +2286,10 @@ public class SDK {
 
     /**
      * Returns member id of user logged
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSessionResponse getSession(org.openapis.openapi.models.operations.GetSessionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSessionResponse getSession() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/session");
         
@@ -2289,7 +2298,7 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2327,7 +2336,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2372,7 +2381,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2411,7 +2420,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdResponse getSpacesId(org.openapis.openapi.models.operations.GetSpacesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdPathParams.class, baseUrl, "/spaces/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdRequest.class, baseUrl, "/spaces/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2450,13 +2459,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdAccountingYearResponse getSpacesIdAccountingYear(org.openapis.openapi.models.operations.GetSpacesIdAccountingYearRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdAccountingYearPathParams.class, baseUrl, "/spaces/{id}/accounting-year", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdAccountingYearRequest.class, baseUrl, "/spaces/{id}/accounting-year", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesIdAccountingYearQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesIdAccountingYearRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2495,13 +2504,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdCollectiveDecisionResponse getSpacesIdCollectiveDecision(org.openapis.openapi.models.operations.GetSpacesIdCollectiveDecisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdCollectiveDecisionPathParams.class, baseUrl, "/spaces/{id}/collective-decision", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdCollectiveDecisionRequest.class, baseUrl, "/spaces/{id}/collective-decision", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesIdCollectiveDecisionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesIdCollectiveDecisionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2540,13 +2549,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdCompanyEntitiesResponse getSpacesIdCompanyEntities(org.openapis.openapi.models.operations.GetSpacesIdCompanyEntitiesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdCompanyEntitiesPathParams.class, baseUrl, "/spaces/{id}/company-entities", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdCompanyEntitiesRequest.class, baseUrl, "/spaces/{id}/company-entities", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesIdCompanyEntitiesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesIdCompanyEntitiesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2585,13 +2594,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdCompanyEntitiesAllResponse getSpacesIdCompanyEntitiesAll(org.openapis.openapi.models.operations.GetSpacesIdCompanyEntitiesAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdCompanyEntitiesAllPathParams.class, baseUrl, "/spaces/{id}/company-entities/all", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdCompanyEntitiesAllRequest.class, baseUrl, "/spaces/{id}/company-entities/all", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesIdCompanyEntitiesAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesIdCompanyEntitiesAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2630,7 +2639,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdCompanyEntitiesCompanyIdResponse getSpacesIdCompanyEntitiesCompanyId(org.openapis.openapi.models.operations.GetSpacesIdCompanyEntitiesCompanyIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdCompanyEntitiesCompanyIdPathParams.class, baseUrl, "/spaces/{id}/company-entities/{companyId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdCompanyEntitiesCompanyIdRequest.class, baseUrl, "/spaces/{id}/company-entities/{companyId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2669,7 +2678,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdCompanyEntitiesPersonIdDetailsResponse getSpacesIdCompanyEntitiesPersonIdDetails(org.openapis.openapi.models.operations.GetSpacesIdCompanyEntitiesPersonIdDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdCompanyEntitiesPersonIdDetailsPathParams.class, baseUrl, "/spaces/{id}/company-entities/{personId}/details", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdCompanyEntitiesPersonIdDetailsRequest.class, baseUrl, "/spaces/{id}/company-entities/{personId}/details", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2708,7 +2717,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdFoldersFolderIdPersonsMemberIdResponse getSpacesIdFoldersFolderIdPersonsMemberId(org.openapis.openapi.models.operations.GetSpacesIdFoldersFolderIdPersonsMemberIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdFoldersFolderIdPersonsMemberIdPathParams.class, baseUrl, "/spaces/{id}/folders/{folderId}/persons/{memberId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdFoldersFolderIdPersonsMemberIdRequest.class, baseUrl, "/spaces/{id}/folders/{folderId}/persons/{memberId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2747,13 +2756,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdGroupsResponse getSpacesIdGroups(org.openapis.openapi.models.operations.GetSpacesIdGroupsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdGroupsPathParams.class, baseUrl, "/spaces/{id}/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdGroupsRequest.class, baseUrl, "/spaces/{id}/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesIdGroupsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesIdGroupsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2792,13 +2801,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdGroupsAllResponse getSpacesIdGroupsAll(org.openapis.openapi.models.operations.GetSpacesIdGroupsAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdGroupsAllPathParams.class, baseUrl, "/spaces/{id}/groups/all", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdGroupsAllRequest.class, baseUrl, "/spaces/{id}/groups/all", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesIdGroupsAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesIdGroupsAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2837,7 +2846,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdGroupsGroupIdResponse getSpacesIdGroupsGroupId(org.openapis.openapi.models.operations.GetSpacesIdGroupsGroupIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdGroupsGroupIdPathParams.class, baseUrl, "/spaces/{id}/groups/{groupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdGroupsGroupIdRequest.class, baseUrl, "/spaces/{id}/groups/{groupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2876,7 +2885,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdLegalResponse getSpacesIdLegal(org.openapis.openapi.models.operations.GetSpacesIdLegalRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdLegalPathParams.class, baseUrl, "/spaces/{id}/legal", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdLegalRequest.class, baseUrl, "/spaces/{id}/legal", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2915,7 +2924,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdLogoResponse getSpacesIdLogo(org.openapis.openapi.models.operations.GetSpacesIdLogoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdLogoPathParams.class, baseUrl, "/spaces/{id}/logo", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdLogoRequest.class, baseUrl, "/spaces/{id}/logo", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2959,13 +2968,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdPersonsResponse getSpacesIdPersons(org.openapis.openapi.models.operations.GetSpacesIdPersonsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdPersonsPathParams.class, baseUrl, "/spaces/{id}/persons", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdPersonsRequest.class, baseUrl, "/spaces/{id}/persons", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesIdPersonsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesIdPersonsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3004,13 +3013,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdPersonsAllResponse getSpacesIdPersonsAll(org.openapis.openapi.models.operations.GetSpacesIdPersonsAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdPersonsAllPathParams.class, baseUrl, "/spaces/{id}/persons/all", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdPersonsAllRequest.class, baseUrl, "/spaces/{id}/persons/all", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesIdPersonsAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesIdPersonsAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3049,7 +3058,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdResponse getSpacesIdPersonsPersonId(org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdPathParams.class, baseUrl, "/spaces/{id}/persons/{personId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdRequest.class, baseUrl, "/spaces/{id}/persons/{personId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3088,7 +3097,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdDetailsResponse getSpacesIdPersonsPersonIdDetails(org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdDetailsPathParams.class, baseUrl, "/spaces/{id}/persons/{personId}/details", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdDetailsRequest.class, baseUrl, "/spaces/{id}/persons/{personId}/details", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3127,13 +3136,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdFoldersResponse getSpacesIdPersonsPersonIdFolders(org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdFoldersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdFoldersPathParams.class, baseUrl, "/spaces/{id}/persons/{personId}/folders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdFoldersRequest.class, baseUrl, "/spaces/{id}/persons/{personId}/folders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdFoldersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdFoldersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3172,7 +3181,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdGroupsResponse getSpacesIdPersonsPersonIdGroups(org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdGroupsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdGroupsPathParams.class, baseUrl, "/spaces/{id}/persons/{personId}/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdGroupsRequest.class, baseUrl, "/spaces/{id}/persons/{personId}/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3211,7 +3220,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdPortfoliosResponse getSpacesIdPersonsPersonIdPortfolios(org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdPortfoliosRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdPortfoliosPathParams.class, baseUrl, "/spaces/{id}/persons/{personId}/portfolios", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdPersonsPersonIdPortfoliosRequest.class, baseUrl, "/spaces/{id}/persons/{personId}/portfolios", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3250,13 +3259,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdProfessionalVehiclesResponse getSpacesIdProfessionalVehicles(org.openapis.openapi.models.operations.GetSpacesIdProfessionalVehiclesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdProfessionalVehiclesPathParams.class, baseUrl, "/spaces/{id}/professional-vehicles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdProfessionalVehiclesRequest.class, baseUrl, "/spaces/{id}/professional-vehicles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesIdProfessionalVehiclesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesIdProfessionalVehiclesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3290,19 +3299,20 @@ public class SDK {
     /**
      * Returns state of activation of logs
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSpacesIdSettingsNf203LogsResponse getSpacesIdSettingsNf203Logs(org.openapis.openapi.models.operations.GetSpacesIdSettingsNf203LogsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSpacesIdSettingsNf203LogsResponse getSpacesIdSettingsNf203Logs(org.openapis.openapi.models.operations.GetSpacesIdSettingsNf203LogsRequest request, org.openapis.openapi.models.operations.GetSpacesIdSettingsNf203LogsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdSettingsNf203LogsPathParams.class, baseUrl, "/spaces/{id}/settings/nf203/logs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdSettingsNf203LogsRequest.class, baseUrl, "/spaces/{id}/settings/nf203/logs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3334,7 +3344,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdStatusResponse getSpacesIdStatus(org.openapis.openapi.models.operations.GetSpacesIdStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdStatusPathParams.class, baseUrl, "/spaces/{id}/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdStatusRequest.class, baseUrl, "/spaces/{id}/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3373,7 +3383,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesIdTaxContractsResponse getSpacesIdTaxContracts(org.openapis.openapi.models.operations.GetSpacesIdTaxContractsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdTaxContractsPathParams.class, baseUrl, "/spaces/{id}/tax-contracts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdTaxContractsRequest.class, baseUrl, "/spaces/{id}/tax-contracts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3407,19 +3417,20 @@ public class SDK {
     /**
      * Returns list of triggers for the space {id}
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSpacesIdTriggersResponse getSpacesIdTriggers(org.openapis.openapi.models.operations.GetSpacesIdTriggersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSpacesIdTriggersResponse getSpacesIdTriggers(org.openapis.openapi.models.operations.GetSpacesIdTriggersRequest request, org.openapis.openapi.models.operations.GetSpacesIdTriggersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdTriggersPathParams.class, baseUrl, "/spaces/{id}/triggers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesIdTriggersRequest.class, baseUrl, "/spaces/{id}/triggers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3451,7 +3462,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdCompanyEntitiesIdFollowUpsResponse getSpacesSpaceIdCompanyEntitiesIdFollowUps(org.openapis.openapi.models.operations.GetSpacesSpaceIdCompanyEntitiesIdFollowUpsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdCompanyEntitiesIdFollowUpsPathParams.class, baseUrl, "/spaces/{spaceId}/company-entities/{id}/follow-ups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdCompanyEntitiesIdFollowUpsRequest.class, baseUrl, "/spaces/{spaceId}/company-entities/{id}/follow-ups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3490,13 +3501,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdCustomersResponse getSpacesSpaceIdCustomers(org.openapis.openapi.models.operations.GetSpacesSpaceIdCustomersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdCustomersPathParams.class, baseUrl, "/spaces/{spaceId}/customers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdCustomersRequest.class, baseUrl, "/spaces/{spaceId}/customers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdCustomersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdCustomersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3535,13 +3546,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdCustomersAllResponse getSpacesSpaceIdCustomersAll(org.openapis.openapi.models.operations.GetSpacesSpaceIdCustomersAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdCustomersAllPathParams.class, baseUrl, "/spaces/{spaceId}/customers/all", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdCustomersAllRequest.class, baseUrl, "/spaces/{spaceId}/customers/all", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdCustomersAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdCustomersAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3580,13 +3591,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsResponse getSpacesSpaceIdDocuments(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsPathParams.class, baseUrl, "/spaces/{spaceId}/documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsRequest.class, baseUrl, "/spaces/{spaceId}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3625,7 +3636,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdExtendResponse getSpacesSpaceIdDocumentsDocumentIdExtend(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdExtendRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdExtendPathParams.class, baseUrl, "/spaces/{spaceId}/documents/{documentId}/extend", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdExtendRequest.class, baseUrl, "/spaces/{spaceId}/documents/{documentId}/extend", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3664,7 +3675,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdFoldersResponse getSpacesSpaceIdDocumentsDocumentIdFolders(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdFoldersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdFoldersPathParams.class, baseUrl, "/spaces/{spaceId}/documents/{documentId}/folders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdFoldersRequest.class, baseUrl, "/spaces/{spaceId}/documents/{documentId}/folders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3698,19 +3709,20 @@ public class SDK {
     /**
      * returns the number of pages and the price of the pdf to send by mail
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdMailingpriceResponse getSpacesSpaceIdDocumentsDocumentIdMailingprice(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdMailingpriceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdMailingpriceResponse getSpacesSpaceIdDocumentsDocumentIdMailingprice(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdMailingpriceRequest request, org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdMailingpriceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdMailingpricePathParams.class, baseUrl, "/spaces/{spaceId}/documents/{documentId}/mailingprice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdMailingpriceRequest.class, baseUrl, "/spaces/{spaceId}/documents/{documentId}/mailingprice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3742,7 +3754,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdVersionsResponse getSpacesSpaceIdDocumentsDocumentIdVersions(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdVersionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdVersionsPathParams.class, baseUrl, "/spaces/{spaceId}/documents/{documentId}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdVersionsRequest.class, baseUrl, "/spaces/{spaceId}/documents/{documentId}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3781,7 +3793,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdVersionsCurrentResponse getSpacesSpaceIdDocumentsDocumentIdVersionsCurrent(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdVersionsCurrentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdVersionsCurrentPathParams.class, baseUrl, "/spaces/{spaceId}/documents/{documentId}/versions/current", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsDocumentIdVersionsCurrentRequest.class, baseUrl, "/spaces/{spaceId}/documents/{documentId}/versions/current", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3820,7 +3832,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsIdAccessResponse getSpacesSpaceIdDocumentsIdAccess(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsIdAccessRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsIdAccessPathParams.class, baseUrl, "/spaces/{spaceId}/documents/{id}/access", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsIdAccessRequest.class, baseUrl, "/spaces/{spaceId}/documents/{id}/access", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3859,7 +3871,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsIdAccountingResponse getSpacesSpaceIdDocumentsIdAccounting(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsIdAccountingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsIdAccountingPathParams.class, baseUrl, "/spaces/{spaceId}/documents/{id}/accounting", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsIdAccountingRequest.class, baseUrl, "/spaces/{spaceId}/documents/{id}/accounting", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3898,7 +3910,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsIdDownloadResponse getSpacesSpaceIdDocumentsIdDownload(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsIdDownloadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsIdDownloadPathParams.class, baseUrl, "/spaces/{spaceId}/documents/{id}/download", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdDocumentsIdDownloadRequest.class, baseUrl, "/spaces/{spaceId}/documents/{id}/download", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3947,13 +3959,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployeesResponse getSpacesSpaceIdEmployees(org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployeesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployeesPathParams.class, baseUrl, "/spaces/{spaceId}/employees", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployeesRequest.class, baseUrl, "/spaces/{spaceId}/employees", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployeesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployeesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3992,13 +4004,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployeesAllResponse getSpacesSpaceIdEmployeesAll(org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployeesAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployeesAllPathParams.class, baseUrl, "/spaces/{spaceId}/employees/all", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployeesAllRequest.class, baseUrl, "/spaces/{spaceId}/employees/all", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployeesAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployeesAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4037,13 +4049,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployersResponse getSpacesSpaceIdEmployers(org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployersPathParams.class, baseUrl, "/spaces/{spaceId}/employers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployersRequest.class, baseUrl, "/spaces/{spaceId}/employers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4082,13 +4094,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployersAllResponse getSpacesSpaceIdEmployersAll(org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployersAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployersAllPathParams.class, baseUrl, "/spaces/{spaceId}/employers/all", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployersAllRequest.class, baseUrl, "/spaces/{spaceId}/employers/all", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployersAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdEmployersAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4127,7 +4139,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdExtendResponse getSpacesSpaceIdExtend(org.openapis.openapi.models.operations.GetSpacesSpaceIdExtendRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdExtendPathParams.class, baseUrl, "/spaces/{spaceId}/extend", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdExtendRequest.class, baseUrl, "/spaces/{spaceId}/extend", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4166,13 +4178,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersResponse getSpacesSpaceIdFolders(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersPathParams.class, baseUrl, "/spaces/{spaceId}/folders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersRequest.class, baseUrl, "/spaces/{spaceId}/folders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4211,13 +4223,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersAllResponse getSpacesSpaceIdFoldersAll(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersAllPathParams.class, baseUrl, "/spaces/{spaceId}/folders/all", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersAllRequest.class, baseUrl, "/spaces/{spaceId}/folders/all", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4256,7 +4268,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersFolderIdNominativeSocialDeclarationsDocumentIdResponse getSpacesSpaceIdFoldersFolderIdNominativeSocialDeclarationsDocumentId(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersFolderIdNominativeSocialDeclarationsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersFolderIdNominativeSocialDeclarationsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/nominative-social-declarations/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersFolderIdNominativeSocialDeclarationsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/nominative-social-declarations/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4295,7 +4307,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdResponse getSpacesSpaceIdFoldersId(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4334,13 +4346,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdAccountingsResponse getSpacesSpaceIdFoldersIdAccountings(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdAccountingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdAccountingsPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/accountings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdAccountingsRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/accountings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdAccountingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdAccountingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4379,13 +4391,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdAccountingsJournalResponse getSpacesSpaceIdFoldersIdAccountingsJournal(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdAccountingsJournalRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdAccountingsJournalPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/accountings-journal", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdAccountingsJournalRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/accountings-journal", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdAccountingsJournalQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdAccountingsJournalRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4424,7 +4436,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdBankResponse getSpacesSpaceIdFoldersIdBank(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdBankRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdBankPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/bank", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdBankRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/bank", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4463,13 +4475,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdBankStatementsResponse getSpacesSpaceIdFoldersIdBankStatements(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdBankStatementsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdBankStatementsPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/bank-statements", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdBankStatementsRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/bank-statements", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdBankStatementsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdBankStatementsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4508,13 +4520,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCommonFoldersResponse getSpacesSpaceIdFoldersIdCommonFolders(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCommonFoldersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCommonFoldersPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/common-folders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCommonFoldersRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/common-folders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCommonFoldersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCommonFoldersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4553,13 +4565,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCommonFoldersAllResponse getSpacesSpaceIdFoldersIdCommonFoldersAll(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCommonFoldersAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCommonFoldersAllPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/common-folders/all", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCommonFoldersAllRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/common-folders/all", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCommonFoldersAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCommonFoldersAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4598,7 +4610,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdContractingPartnerResponse getSpacesSpaceIdFoldersIdContractingPartner(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdContractingPartnerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdContractingPartnerPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/contracting-partner", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdContractingPartnerRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/contracting-partner", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4637,7 +4649,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdContractingPartnerSpaceResponse getSpacesSpaceIdFoldersIdContractingPartnerSpace(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdContractingPartnerSpaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdContractingPartnerSpacePathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/contracting-partner/space", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdContractingPartnerSpaceRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/contracting-partner/space", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4676,13 +4688,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdContractualDocumentsResponse getSpacesSpaceIdFoldersIdContractualDocuments(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdContractualDocumentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdContractualDocumentsPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/contractual-documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdContractualDocumentsRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/contractual-documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdContractualDocumentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdContractualDocumentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4721,7 +4733,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdContractualRelationshipResponse getSpacesSpaceIdFoldersIdContractualRelationship(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdContractualRelationshipRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdContractualRelationshipPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/contractual-relationship", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdContractualRelationshipRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/contractual-relationship", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4760,13 +4772,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCoporateTaxDeclarationsResponse getSpacesSpaceIdFoldersIdCoporateTaxDeclarations(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCoporateTaxDeclarationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCoporateTaxDeclarationsPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/coporate-tax-declarations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCoporateTaxDeclarationsRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/coporate-tax-declarations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCoporateTaxDeclarationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCoporateTaxDeclarationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4805,7 +4817,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCustomerResponse getSpacesSpaceIdFoldersIdCustomer(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCustomerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCustomerPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/customer", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdCustomerRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/customer", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4844,13 +4856,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdDeliveriesJournalResponse getSpacesSpaceIdFoldersIdDeliveriesJournal(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdDeliveriesJournalRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdDeliveriesJournalPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/deliveries-journal", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdDeliveriesJournalRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/deliveries-journal", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdDeliveriesJournalQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdDeliveriesJournalRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4889,13 +4901,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdDocumentsResponse getSpacesSpaceIdFoldersIdDocuments(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdDocumentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdDocumentsPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdDocumentsRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdDocumentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdDocumentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4934,7 +4946,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdEmployeeResponse getSpacesSpaceIdFoldersIdEmployee(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdEmployeeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdEmployeePathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/employee", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdEmployeeRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/employee", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4973,13 +4985,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdExpenseProofsResponse getSpacesSpaceIdFoldersIdExpenseProofs(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdExpenseProofsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdExpenseProofsPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/expense-proofs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdExpenseProofsRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/expense-proofs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdExpenseProofsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdExpenseProofsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -5018,13 +5030,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdExpenseReportsResponse getSpacesSpaceIdFoldersIdExpenseReports(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdExpenseReportsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdExpenseReportsPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/expense-reports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdExpenseReportsRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/expense-reports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdExpenseReportsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdExpenseReportsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -5063,13 +5075,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdExpenseReportsExpenseReportIdExpenseProofsResponse getSpacesSpaceIdFoldersIdExpenseReportsExpenseReportIdExpenseProofs(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdExpenseReportsExpenseReportIdExpenseProofsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdExpenseReportsExpenseReportIdExpenseProofsPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/expense-reports/{expenseReportId}/expense-proofs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdExpenseReportsExpenseReportIdExpenseProofsRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/expense-reports/{expenseReportId}/expense-proofs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdExpenseReportsExpenseReportIdExpenseProofsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdExpenseReportsExpenseReportIdExpenseProofsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -5108,7 +5120,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdInsuranceResponse getSpacesSpaceIdFoldersIdInsurance(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdInsuranceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdInsurancePathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/insurance", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdInsuranceRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/insurance", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -5147,13 +5159,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdInvoicesResponse getSpacesSpaceIdFoldersIdInvoices(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdInvoicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdInvoicesPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/invoices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdInvoicesRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/invoices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdInvoicesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdInvoicesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -5192,7 +5204,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdLegalEntityResponse getSpacesSpaceIdFoldersIdLegalEntity(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdLegalEntityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdLegalEntityPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/legal-entity", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdLegalEntityRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/legal-entity", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -5231,7 +5243,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdLoanResponse getSpacesSpaceIdFoldersIdLoan(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdLoanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdLoanPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/loan", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdLoanRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/loan", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -5270,13 +5282,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdMessagesResponse getSpacesSpaceIdFoldersIdMessages(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdMessagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdMessagesPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/messages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdMessagesRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/messages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdMessagesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdMessagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -5315,7 +5327,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdMessagesMessageIdResponse getSpacesSpaceIdFoldersIdMessagesMessageId(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdMessagesMessageIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdMessagesMessageIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/messages/{messageId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdMessagesMessageIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/messages/{messageId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -5354,13 +5366,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdNominativeSocialDeclarationsResponse getSpacesSpaceIdFoldersIdNominativeSocialDeclarations(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdNominativeSocialDeclarationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdNominativeSocialDeclarationsPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/nominative-social-declarations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdNominativeSocialDeclarationsRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/nominative-social-declarations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdNominativeSocialDeclarationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdNominativeSocialDeclarationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -5399,13 +5411,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdOtherTaxesResponse getSpacesSpaceIdFoldersIdOtherTaxes(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdOtherTaxesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdOtherTaxesPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/other-taxes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdOtherTaxesRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/other-taxes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdOtherTaxesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdOtherTaxesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -5444,7 +5456,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPasswordsResponse getSpacesSpaceIdFoldersIdPasswords(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPasswordsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPasswordsPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/passwords", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPasswordsRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/passwords", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -5483,7 +5495,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPasswordsPasswordIdResponse getSpacesSpaceIdFoldersIdPasswordsPasswordId(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPasswordsPasswordIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPasswordsPasswordIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/passwords/{passwordId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPasswordsPasswordIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/passwords/{passwordId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -5522,13 +5534,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPayrollsResponse getSpacesSpaceIdFoldersIdPayrolls(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPayrollsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPayrollsPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/payrolls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPayrollsRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/payrolls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPayrollsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPayrollsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -5567,13 +5579,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPayslipsResponse getSpacesSpaceIdFoldersIdPayslips(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPayslipsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPayslipsPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/payslips", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPayslipsRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/payslips", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPayslipsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdPayslipsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -5612,7 +5624,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdProviderResponse getSpacesSpaceIdFoldersIdProvider(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdProviderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdProviderPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/provider", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdProviderRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/provider", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -5651,7 +5663,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdRequiredDocumentsResponse getSpacesSpaceIdFoldersIdRequiredDocuments(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdRequiredDocumentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdRequiredDocumentsPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/required-documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdRequiredDocumentsRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/required-documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -5690,7 +5702,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSectionsResponse getSpacesSpaceIdFoldersIdSections(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSectionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSectionsPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/sections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSectionsRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/sections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -5729,13 +5741,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSocialContractsResponse getSpacesSpaceIdFoldersIdSocialContracts(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSocialContractsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSocialContractsPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/social-contracts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSocialContractsRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/social-contracts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSocialContractsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSocialContractsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -5774,13 +5786,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSocialDeclarationsResponse getSpacesSpaceIdFoldersIdSocialDeclarations(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSocialDeclarationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSocialDeclarationsPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/social-declarations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSocialDeclarationsRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/social-declarations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSocialDeclarationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSocialDeclarationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -5819,7 +5831,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSocialRegimesResponse getSpacesSpaceIdFoldersIdSocialRegimes(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSocialRegimesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSocialRegimesPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/social-regimes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSocialRegimesRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/social-regimes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -5858,13 +5870,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSumInvoicesResponse getSpacesSpaceIdFoldersIdSumInvoices(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSumInvoicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSumInvoicesPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/sum-invoices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSumInvoicesRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/sum-invoices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSumInvoicesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdSumInvoicesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -5903,13 +5915,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdVatDeclarationsResponse getSpacesSpaceIdFoldersIdVatDeclarations(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdVatDeclarationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdVatDeclarationsPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/vat-declarations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdVatDeclarationsRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/vat-declarations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdVatDeclarationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdVatDeclarationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -5948,7 +5960,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdDocumentClassResponse getSpacesSpaceIdFoldersIdDocumentClass(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdDocumentClassRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdDocumentClassPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/{documentClass}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdFoldersIdDocumentClassRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/{documentClass}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -5987,7 +5999,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdBanksResponse getSpacesSpaceIdLegalEntitiesIdBanks(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdBanksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdBanksPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/banks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdBanksRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/banks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6026,7 +6038,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdBanksAllResponse getSpacesSpaceIdLegalEntitiesIdBanksAll(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdBanksAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdBanksAllPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/banks/all", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdBanksAllRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/banks/all", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6065,7 +6077,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdContractsResponse getSpacesSpaceIdLegalEntitiesIdContracts(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdContractsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdContractsPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/contracts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdContractsRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/contracts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6104,7 +6116,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdContractualRelationshipsResponse getSpacesSpaceIdLegalEntitiesIdContractualRelationships(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdContractualRelationshipsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdContractualRelationshipsPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/contractual-relationships", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdContractualRelationshipsRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/contractual-relationships", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6143,7 +6155,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdContractualRelationshipsAllResponse getSpacesSpaceIdLegalEntitiesIdContractualRelationshipsAll(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdContractualRelationshipsAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdContractualRelationshipsAllPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/contractual-relationships/all", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdContractualRelationshipsAllRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/contractual-relationships/all", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6182,7 +6194,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdCustomersResponse getSpacesSpaceIdLegalEntitiesIdCustomers(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdCustomersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdCustomersPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/customers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdCustomersRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/customers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6221,7 +6233,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdCustomersAllResponse getSpacesSpaceIdLegalEntitiesIdCustomersAll(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdCustomersAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdCustomersAllPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/customers/all", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdCustomersAllRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/customers/all", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6260,7 +6272,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdInsurancesResponse getSpacesSpaceIdLegalEntitiesIdInsurances(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdInsurancesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdInsurancesPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/insurances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdInsurancesRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/insurances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6299,7 +6311,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdInsurancesAllResponse getSpacesSpaceIdLegalEntitiesIdInsurancesAll(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdInsurancesAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdInsurancesAllPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/insurances/all", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdInsurancesAllRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/insurances/all", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6338,7 +6350,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdLoansResponse getSpacesSpaceIdLegalEntitiesIdLoans(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdLoansRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdLoansPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/loans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdLoansRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/loans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6377,7 +6389,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdLoansAllResponse getSpacesSpaceIdLegalEntitiesIdLoansAll(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdLoansAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdLoansAllPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/loans/all", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdLoansAllRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/loans/all", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6416,7 +6428,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdProvidersResponse getSpacesSpaceIdLegalEntitiesIdProviders(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdProvidersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdProvidersPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/providers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdProvidersRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/providers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6455,7 +6467,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdProvidersAllResponse getSpacesSpaceIdLegalEntitiesIdProvidersAll(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdProvidersAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdProvidersAllPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/providers/all", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdProvidersAllRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/providers/all", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6494,7 +6506,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdSocialRegimesResponse getSpacesSpaceIdLegalEntitiesIdSocialRegimes(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdSocialRegimesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdSocialRegimesPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/social-regimes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdSocialRegimesRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/social-regimes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6533,7 +6545,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdSocialRegimesAllResponse getSpacesSpaceIdLegalEntitiesIdSocialRegimesAll(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdSocialRegimesAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdSocialRegimesAllPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/social-regimes/all", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLegalEntitiesIdSocialRegimesAllRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/social-regimes/all", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6572,7 +6584,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdLoansResponse getSpacesSpaceIdLoans(org.openapis.openapi.models.operations.GetSpacesSpaceIdLoansRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLoansPathParams.class, baseUrl, "/spaces/{spaceId}/loans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLoansRequest.class, baseUrl, "/spaces/{spaceId}/loans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6611,7 +6623,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdLoansAllResponse getSpacesSpaceIdLoansAll(org.openapis.openapi.models.operations.GetSpacesSpaceIdLoansAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLoansAllPathParams.class, baseUrl, "/spaces/{spaceId}/loans/all", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdLoansAllRequest.class, baseUrl, "/spaces/{spaceId}/loans/all", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6650,7 +6662,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsIdEmployeesResponse getSpacesSpaceIdPersonsIdEmployees(org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsIdEmployeesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsIdEmployeesPathParams.class, baseUrl, "/spaces/{spaceId}/persons/{id}/employees", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsIdEmployeesRequest.class, baseUrl, "/spaces/{spaceId}/persons/{id}/employees", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6689,7 +6701,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsIdEmployeesAllResponse getSpacesSpaceIdPersonsIdEmployeesAll(org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsIdEmployeesAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsIdEmployeesAllPathParams.class, baseUrl, "/spaces/{spaceId}/persons/{id}/employees/all", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsIdEmployeesAllRequest.class, baseUrl, "/spaces/{spaceId}/persons/{id}/employees/all", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6728,7 +6740,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsIdExchangeResponse getSpacesSpaceIdPersonsIdExchange(org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsIdExchangeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsIdExchangePathParams.class, baseUrl, "/spaces/{spaceId}/persons/{id}/exchange", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsIdExchangeRequest.class, baseUrl, "/spaces/{spaceId}/persons/{id}/exchange", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6767,7 +6779,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsIdFollowUpsResponse getSpacesSpaceIdPersonsIdFollowUps(org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsIdFollowUpsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsIdFollowUpsPathParams.class, baseUrl, "/spaces/{spaceId}/persons/{id}/follow-ups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsIdFollowUpsRequest.class, baseUrl, "/spaces/{spaceId}/persons/{id}/follow-ups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6806,7 +6818,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsIdInvitationResponse getSpacesSpaceIdPersonsIdInvitation(org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsIdInvitationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsIdInvitationPathParams.class, baseUrl, "/spaces/{spaceId}/persons/{id}/invitation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsIdInvitationRequest.class, baseUrl, "/spaces/{spaceId}/persons/{id}/invitation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6844,7 +6856,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsMemberIdFoldersIdResponse getSpacesSpaceIdPersonsMemberIdFoldersId(org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsMemberIdFoldersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsMemberIdFoldersIdPathParams.class, baseUrl, "/spaces/{spaceId}/persons/{memberId}/folders/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdPersonsMemberIdFoldersIdRequest.class, baseUrl, "/spaces/{spaceId}/persons/{memberId}/folders/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6883,13 +6895,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdProvidersResponse getSpacesSpaceIdProviders(org.openapis.openapi.models.operations.GetSpacesSpaceIdProvidersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdProvidersPathParams.class, baseUrl, "/spaces/{spaceId}/providers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdProvidersRequest.class, baseUrl, "/spaces/{spaceId}/providers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdProvidersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdProvidersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -6928,13 +6940,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdProvidersAllResponse getSpacesSpaceIdProvidersAll(org.openapis.openapi.models.operations.GetSpacesSpaceIdProvidersAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdProvidersAllPathParams.class, baseUrl, "/spaces/{spaceId}/providers/all", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdProvidersAllRequest.class, baseUrl, "/spaces/{spaceId}/providers/all", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdProvidersAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdProvidersAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -6973,13 +6985,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdSocialRegimesResponse getSpacesSpaceIdSocialRegimes(org.openapis.openapi.models.operations.GetSpacesSpaceIdSocialRegimesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdSocialRegimesPathParams.class, baseUrl, "/spaces/{spaceId}/social-regimes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdSocialRegimesRequest.class, baseUrl, "/spaces/{spaceId}/social-regimes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdSocialRegimesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdSocialRegimesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -7018,13 +7030,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdSocialRegimesAllResponse getSpacesSpaceIdSocialRegimesAll(org.openapis.openapi.models.operations.GetSpacesSpaceIdSocialRegimesAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdSocialRegimesAllPathParams.class, baseUrl, "/spaces/{spaceId}/social-regimes/all", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdSocialRegimesAllRequest.class, baseUrl, "/spaces/{spaceId}/social-regimes/all", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdSocialRegimesAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdSocialRegimesAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -7063,13 +7075,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSpacesSpaceIdSpacesInvoicingsResponse getSpacesSpaceIdSpacesInvoicings(org.openapis.openapi.models.operations.GetSpacesSpaceIdSpacesInvoicingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdSpacesInvoicingsPathParams.class, baseUrl, "/spaces/{spaceId}/spaces-invoicings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpacesSpaceIdSpacesInvoicingsRequest.class, baseUrl, "/spaces/{spaceId}/spaces-invoicings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdSpacesInvoicingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpacesSpaceIdSpacesInvoicingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -7103,10 +7115,11 @@ public class SDK {
     /**
      * Modifies an object
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchBusinessGroupsResponse patchBusinessGroups(org.openapis.openapi.models.operations.PatchBusinessGroupsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchBusinessGroupsResponse patchBusinessGroups(org.openapis.openapi.models.operations.PatchBusinessGroupsRequestBody request, org.openapis.openapi.models.operations.PatchBusinessGroupsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/business-groups");
         
@@ -7120,7 +7133,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7141,10 +7154,11 @@ public class SDK {
     /**
      * modify email of profile
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchProfileEmailResponse patchProfileEmail(org.openapis.openapi.models.operations.PatchProfileEmailRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchProfileEmailResponse patchProfileEmail(Object request, org.openapis.openapi.models.operations.PatchProfileEmailSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/profile/email");
         
@@ -7158,7 +7172,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7179,10 +7193,11 @@ public class SDK {
     /**
      * modify mobile of profile
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchProfileMobileResponse patchProfileMobile(org.openapis.openapi.models.operations.PatchProfileMobileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchProfileMobileResponse patchProfileMobile(Object request, org.openapis.openapi.models.operations.PatchProfileMobileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/profile/mobile");
         
@@ -7196,7 +7211,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7217,10 +7232,11 @@ public class SDK {
     /**
      * modify infos of profile
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchProfileJsonResponse patchProfileJson(org.openapis.openapi.models.operations.PatchProfileJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchProfileJsonResponse patchProfileJson(org.openapis.openapi.models.operations.PatchProfileApplicationJSON request, org.openapis.openapi.models.operations.PatchProfileJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/profile");
         
@@ -7234,7 +7250,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7255,10 +7271,11 @@ public class SDK {
     /**
      * modify infos of profile
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchProfileMultipartResponse patchProfileMultipart(org.openapis.openapi.models.operations.PatchProfileMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchProfileMultipartResponse patchProfileMultipart(org.openapis.openapi.models.operations.PatchProfileMultipartFormData1 request, org.openapis.openapi.models.operations.PatchProfileMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/profile");
         
@@ -7272,7 +7289,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -7298,12 +7315,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesIdResponse patchSpacesId(org.openapis.openapi.models.operations.PatchSpacesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdPathParams.class, baseUrl, "/spaces/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdRequest.class, baseUrl, "/spaces/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -7336,12 +7353,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesIdCompanyEntitiesCompanyIdResponse patchSpacesIdCompanyEntitiesCompanyId(org.openapis.openapi.models.operations.PatchSpacesIdCompanyEntitiesCompanyIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdCompanyEntitiesCompanyIdPathParams.class, baseUrl, "/spaces/{id}/company-entities/{companyId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdCompanyEntitiesCompanyIdRequest.class, baseUrl, "/spaces/{id}/company-entities/{companyId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -7374,12 +7391,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesIdFoldersFolderIdPersonsMemberIdResponse patchSpacesIdFoldersFolderIdPersonsMemberId(org.openapis.openapi.models.operations.PatchSpacesIdFoldersFolderIdPersonsMemberIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdFoldersFolderIdPersonsMemberIdPathParams.class, baseUrl, "/spaces/{id}/folders/{folderId}/persons/{memberId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdFoldersFolderIdPersonsMemberIdRequest.class, baseUrl, "/spaces/{id}/folders/{folderId}/persons/{memberId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -7412,7 +7429,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesIdFoldersFolderIdPersonsMemberIdActiveaccessResponse patchSpacesIdFoldersFolderIdPersonsMemberIdActiveaccess(org.openapis.openapi.models.operations.PatchSpacesIdFoldersFolderIdPersonsMemberIdActiveaccessRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdFoldersFolderIdPersonsMemberIdActiveaccessPathParams.class, baseUrl, "/spaces/{id}/folders/{folderId}/persons/{memberId}/activeaccess", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdFoldersFolderIdPersonsMemberIdActiveaccessRequest.class, baseUrl, "/spaces/{id}/folders/{folderId}/persons/{memberId}/activeaccess", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
@@ -7445,7 +7462,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesIdFoldersFolderIdPersonsMemberIdUnactiveaccessResponse patchSpacesIdFoldersFolderIdPersonsMemberIdUnactiveaccess(org.openapis.openapi.models.operations.PatchSpacesIdFoldersFolderIdPersonsMemberIdUnactiveaccessRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdFoldersFolderIdPersonsMemberIdUnactiveaccessPathParams.class, baseUrl, "/spaces/{id}/folders/{folderId}/persons/{memberId}/unactiveaccess", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdFoldersFolderIdPersonsMemberIdUnactiveaccessRequest.class, baseUrl, "/spaces/{id}/folders/{folderId}/persons/{memberId}/unactiveaccess", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
@@ -7478,12 +7495,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesIdGroupsGroupIdResponse patchSpacesIdGroupsGroupId(org.openapis.openapi.models.operations.PatchSpacesIdGroupsGroupIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdGroupsGroupIdPathParams.class, baseUrl, "/spaces/{id}/groups/{groupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdGroupsGroupIdRequest.class, baseUrl, "/spaces/{id}/groups/{groupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -7516,12 +7533,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesIdGroupsGroupIdFoldersFolderIdResponse patchSpacesIdGroupsGroupIdFoldersFolderId(org.openapis.openapi.models.operations.PatchSpacesIdGroupsGroupIdFoldersFolderIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdGroupsGroupIdFoldersFolderIdPathParams.class, baseUrl, "/spaces/{id}/groups/{groupId}/folders/{folderId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdGroupsGroupIdFoldersFolderIdRequest.class, baseUrl, "/spaces/{id}/groups/{groupId}/folders/{folderId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -7554,7 +7571,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesIdGroupsGroupIdPersonsMemberIdResponse patchSpacesIdGroupsGroupIdPersonsMemberId(org.openapis.openapi.models.operations.PatchSpacesIdGroupsGroupIdPersonsMemberIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdGroupsGroupIdPersonsMemberIdPathParams.class, baseUrl, "/spaces/{id}/groups/{groupId}/persons/{memberId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdGroupsGroupIdPersonsMemberIdRequest.class, baseUrl, "/spaces/{id}/groups/{groupId}/persons/{memberId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
@@ -7587,12 +7604,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesIdLegalResponse patchSpacesIdLegal(org.openapis.openapi.models.operations.PatchSpacesIdLegalRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdLegalPathParams.class, baseUrl, "/spaces/{id}/legal", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdLegalRequest.class, baseUrl, "/spaces/{id}/legal", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "legal", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -7625,12 +7642,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesIdPersonsMemberIdPlayerResponse patchSpacesIdPersonsMemberIdPlayer(org.openapis.openapi.models.operations.PatchSpacesIdPersonsMemberIdPlayerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdPersonsMemberIdPlayerPathParams.class, baseUrl, "/spaces/{id}/persons/{memberId}/player", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdPersonsMemberIdPlayerRequest.class, baseUrl, "/spaces/{id}/persons/{memberId}/player", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -7663,12 +7680,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesIdPersonsPersonIdResponse patchSpacesIdPersonsPersonId(org.openapis.openapi.models.operations.PatchSpacesIdPersonsPersonIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdPersonsPersonIdPathParams.class, baseUrl, "/spaces/{id}/persons/{personId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdPersonsPersonIdRequest.class, baseUrl, "/spaces/{id}/persons/{personId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -7701,12 +7718,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesIdPortfoliosPortfolioIdPersonsMemberIdResponse patchSpacesIdPortfoliosPortfolioIdPersonsMemberId(org.openapis.openapi.models.operations.PatchSpacesIdPortfoliosPortfolioIdPersonsMemberIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdPortfoliosPortfolioIdPersonsMemberIdPathParams.class, baseUrl, "/spaces/{id}/portfolios/{portfolioId}/persons/{memberId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesIdPortfoliosPortfolioIdPersonsMemberIdRequest.class, baseUrl, "/spaces/{id}/portfolios/{portfolioId}/persons/{memberId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -7739,12 +7756,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdCommonFoldersIdResponse patchSpacesSpaceIdCommonFoldersId(org.openapis.openapi.models.operations.PatchSpacesSpaceIdCommonFoldersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdCommonFoldersIdPathParams.class, baseUrl, "/spaces/{spaceId}/common-folders/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdCommonFoldersIdRequest.class, baseUrl, "/spaces/{spaceId}/common-folders/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -7777,12 +7794,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdDocumentsDocumentIdResponse patchSpacesSpaceIdDocumentsDocumentId(org.openapis.openapi.models.operations.PatchSpacesSpaceIdDocumentsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdDocumentsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/documents/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdDocumentsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/documents/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -7815,12 +7832,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdBankStatementsDocumentIdResponse patchSpacesSpaceIdFoldersFolderIdBankStatementsDocumentId(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdBankStatementsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdBankStatementsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/bank-statements/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdBankStatementsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/bank-statements/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -7850,12 +7867,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdContractualDocumentsDocumentIdResponse patchSpacesSpaceIdFoldersFolderIdContractualDocumentsDocumentId(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdContractualDocumentsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdContractualDocumentsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/contractual-documents/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdContractualDocumentsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/contractual-documents/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -7885,12 +7902,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdResponse patchSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentId(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/corporate-tax-declarations/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/corporate-tax-declarations/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -7920,12 +7937,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdResponse patchSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentId(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/expense-proofs/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/expense-proofs/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -7955,12 +7972,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdExpenseReportsDocumentIdResponse patchSpacesSpaceIdFoldersFolderIdExpenseReportsDocumentId(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdExpenseReportsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdExpenseReportsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/expense-reports/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdExpenseReportsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/expense-reports/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -7990,12 +8007,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdInvoicesDocumentIdResponse patchSpacesSpaceIdFoldersFolderIdInvoicesDocumentId(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdInvoicesDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdInvoicesDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/invoices/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdInvoicesDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/invoices/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -8025,12 +8042,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdOtherTaxesDocumentIdResponse patchSpacesSpaceIdFoldersFolderIdOtherTaxesDocumentId(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdOtherTaxesDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdOtherTaxesDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/other-taxes/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdOtherTaxesDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/other-taxes/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -8060,12 +8077,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdResponse patchSpacesSpaceIdFoldersFolderIdPayrollsDocumentId(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/payrolls/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/payrolls/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -8095,12 +8112,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdPayslipsDocumentIdResponse patchSpacesSpaceIdFoldersFolderIdPayslipsDocumentId(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdPayslipsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdPayslipsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/payslips/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdPayslipsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/payslips/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -8130,12 +8147,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdSocialContractsDocumentIdResponse patchSpacesSpaceIdFoldersFolderIdSocialContractsDocumentId(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdSocialContractsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdSocialContractsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/social-contracts/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdSocialContractsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/social-contracts/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -8165,12 +8182,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdSocialDeclarationsDocumentIdResponse patchSpacesSpaceIdFoldersFolderIdSocialDeclarationsDocumentId(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdSocialDeclarationsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdSocialDeclarationsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/social-declarations/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdSocialDeclarationsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/social-declarations/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -8200,12 +8217,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdResponse patchSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentId(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/vat-declarations/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersFolderIdVatDeclarationsDocumentIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/vat-declarations/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -8235,12 +8252,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdResponse patchSpacesSpaceIdFoldersId(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -8273,12 +8290,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdAccountingYearResponse patchSpacesSpaceIdFoldersIdAccountingYear(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdAccountingYearRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdAccountingYearPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/accounting-year", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdAccountingYearRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/accounting-year", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -8311,12 +8328,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdBankResponse patchSpacesSpaceIdFoldersIdBank(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdBankRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdBankPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/bank", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdBankRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/bank", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -8349,12 +8366,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdCollectiveDecisionResponse patchSpacesSpaceIdFoldersIdCollectiveDecision(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdCollectiveDecisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdCollectiveDecisionPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/collective-decision", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdCollectiveDecisionRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/collective-decision", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -8387,12 +8404,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdCustomerResponse patchSpacesSpaceIdFoldersIdCustomer(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdCustomerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdCustomerPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/customer", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdCustomerRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/customer", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -8425,7 +8442,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdDocumentsDocumentIdDetachResponse patchSpacesSpaceIdFoldersIdDocumentsDocumentIdDetach(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdDocumentsDocumentIdDetachRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdDocumentsDocumentIdDetachPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/documents/{documentId}/detach", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdDocumentsDocumentIdDetachRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/documents/{documentId}/detach", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
@@ -8458,12 +8475,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdEmployeeResponse patchSpacesSpaceIdFoldersIdEmployee(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdEmployeeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdEmployeePathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/employee", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdEmployeeRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/employee", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -8496,12 +8513,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdInsuranceResponse patchSpacesSpaceIdFoldersIdInsurance(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdInsuranceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdInsurancePathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/insurance", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdInsuranceRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/insurance", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -8534,12 +8551,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdLoanResponse patchSpacesSpaceIdFoldersIdLoan(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdLoanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdLoanPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/loan", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdLoanRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/loan", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -8572,12 +8589,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdMessagesMessageIdResponse patchSpacesSpaceIdFoldersIdMessagesMessageId(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdMessagesMessageIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdMessagesMessageIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/messages/{messageId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdMessagesMessageIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/messages/{messageId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -8610,12 +8627,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdPasswordsPasswordIdResponse patchSpacesSpaceIdFoldersIdPasswordsPasswordId(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdPasswordsPasswordIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdPasswordsPasswordIdPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/passwords/{passwordId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdPasswordsPasswordIdRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/passwords/{passwordId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -8648,12 +8665,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdProfessionalVehicleResponse patchSpacesSpaceIdFoldersIdProfessionalVehicle(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdProfessionalVehicleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdProfessionalVehiclePathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/professional-vehicle", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdProfessionalVehicleRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/professional-vehicle", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -8686,12 +8703,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdProviderResponse patchSpacesSpaceIdFoldersIdProvider(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdProviderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdProviderPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/provider", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdProviderRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/provider", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -8724,12 +8741,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidResponse patchSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentid(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/required-documents/{requireddocumentid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/required-documents/{requireddocumentid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -8762,12 +8779,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdSocialRegimesResponse patchSpacesSpaceIdFoldersIdSocialRegimes(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdSocialRegimesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdSocialRegimesPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/social-regimes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdSocialRegimesRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/social-regimes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -8800,12 +8817,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdTaxContractResponse patchSpacesSpaceIdFoldersIdTaxContract(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdTaxContractRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdTaxContractPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/tax-contract", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdFoldersIdTaxContractRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/tax-contract", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -8833,24 +8850,25 @@ public class SDK {
     /**
      * modify the invitation of a person to collect documents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdCallForDocumentResponse patchSpacesSpaceIdPersonsIdCallForDocument(org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdCallForDocumentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdCallForDocumentResponse patchSpacesSpaceIdPersonsIdCallForDocument(org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdCallForDocumentRequest request, org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdCallForDocumentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdCallForDocumentPathParams.class, baseUrl, "/spaces/{spaceId}/persons/{id}/call-for-document", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdCallForDocumentRequest.class, baseUrl, "/spaces/{spaceId}/persons/{id}/call-for-document", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "modifyCollect", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -8871,24 +8889,25 @@ public class SDK {
     /**
      * invite a person in a space
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdGuestInSpaceResponse patchSpacesSpaceIdPersonsIdGuestInSpace(org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdGuestInSpaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdGuestInSpaceResponse patchSpacesSpaceIdPersonsIdGuestInSpace(org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdGuestInSpaceRequest request, org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdGuestInSpaceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdGuestInSpacePathParams.class, baseUrl, "/spaces/{spaceId}/persons/{id}/guest-in-space", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdGuestInSpaceRequest.class, baseUrl, "/spaces/{spaceId}/persons/{id}/guest-in-space", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "modifyInvitation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -8909,24 +8928,25 @@ public class SDK {
     /**
      * modify an invitation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdInvitationResponse patchSpacesSpaceIdPersonsIdInvitation(org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdInvitationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdInvitationResponse patchSpacesSpaceIdPersonsIdInvitation(org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdInvitationRequest request, org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdInvitationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdInvitationPathParams.class, baseUrl, "/spaces/{spaceId}/persons/{id}/invitation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsIdInvitationRequest.class, baseUrl, "/spaces/{spaceId}/persons/{id}/invitation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -8952,12 +8972,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsMemberIdFoldersIdResponse patchSpacesSpaceIdPersonsMemberIdFoldersId(org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsMemberIdFoldersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsMemberIdFoldersIdPathParams.class, baseUrl, "/spaces/{spaceId}/persons/{memberId}/folders/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSpacesSpaceIdPersonsMemberIdFoldersIdRequest.class, baseUrl, "/spaces/{spaceId}/persons/{memberId}/folders/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -8985,10 +9005,11 @@ public class SDK {
     /**
      * Adds a group (only for managers and ADN collaborators)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostBusinessGroupsResponse postBusinessGroups(org.openapis.openapi.models.operations.PostBusinessGroupsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostBusinessGroupsResponse postBusinessGroups(org.openapis.openapi.models.operations.PostBusinessGroupsRequestBody request, org.openapis.openapi.models.operations.PostBusinessGroupsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/business-groups");
         
@@ -9002,7 +9023,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9031,24 +9052,25 @@ public class SDK {
     /**
      * send an invitation to manager the private space of personId
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostBusinessGroupsIdSpacesSpaceIdLegalEntitiesPersonIdCustomersFolderIdGuestInSpaceResponse postBusinessGroupsIdSpacesSpaceIdLegalEntitiesPersonIdCustomersFolderIdGuestInSpace(org.openapis.openapi.models.operations.PostBusinessGroupsIdSpacesSpaceIdLegalEntitiesPersonIdCustomersFolderIdGuestInSpaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostBusinessGroupsIdSpacesSpaceIdLegalEntitiesPersonIdCustomersFolderIdGuestInSpaceResponse postBusinessGroupsIdSpacesSpaceIdLegalEntitiesPersonIdCustomersFolderIdGuestInSpace(org.openapis.openapi.models.operations.PostBusinessGroupsIdSpacesSpaceIdLegalEntitiesPersonIdCustomersFolderIdGuestInSpaceRequest request, org.openapis.openapi.models.operations.PostBusinessGroupsIdSpacesSpaceIdLegalEntitiesPersonIdCustomersFolderIdGuestInSpaceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostBusinessGroupsIdSpacesSpaceIdLegalEntitiesPersonIdCustomersFolderIdGuestInSpacePathParams.class, baseUrl, "/business-groups/{id}/spaces/{spaceId}/legal-entities/{personId}/customers/{folderId}/guest-in-space", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostBusinessGroupsIdSpacesSpaceIdLegalEntitiesPersonIdCustomersFolderIdGuestInSpaceRequest.class, baseUrl, "/business-groups/{id}/spaces/{spaceId}/legal-entities/{personId}/customers/{folderId}/guest-in-space", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9077,24 +9099,25 @@ public class SDK {
     /**
      * Add a Space in a group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostBusinessGroupsIdSpacesSpaceIdLegalEntitiesPersonIdCustomersFolderIdSpacesResponse postBusinessGroupsIdSpacesSpaceIdLegalEntitiesPersonIdCustomersFolderIdSpaces(org.openapis.openapi.models.operations.PostBusinessGroupsIdSpacesSpaceIdLegalEntitiesPersonIdCustomersFolderIdSpacesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostBusinessGroupsIdSpacesSpaceIdLegalEntitiesPersonIdCustomersFolderIdSpacesResponse postBusinessGroupsIdSpacesSpaceIdLegalEntitiesPersonIdCustomersFolderIdSpaces(org.openapis.openapi.models.operations.PostBusinessGroupsIdSpacesSpaceIdLegalEntitiesPersonIdCustomersFolderIdSpacesRequest request, org.openapis.openapi.models.operations.PostBusinessGroupsIdSpacesSpaceIdLegalEntitiesPersonIdCustomersFolderIdSpacesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostBusinessGroupsIdSpacesSpaceIdLegalEntitiesPersonIdCustomersFolderIdSpacesPathParams.class, baseUrl, "/business-groups/{id}/spaces/{spaceId}/legal-entities/{personId}/customers/{folderId}/spaces", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostBusinessGroupsIdSpacesSpaceIdLegalEntitiesPersonIdCustomersFolderIdSpacesRequest.class, baseUrl, "/business-groups/{id}/spaces/{spaceId}/legal-entities/{personId}/customers/{folderId}/spaces", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9123,10 +9146,11 @@ public class SDK {
     /**
      * Add a document (this document is analyzed to be saved in the correct folder and correct space)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostHubDocumentsJsonResponse postHubDocumentsJson(org.openapis.openapi.models.operations.PostHubDocumentsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostHubDocumentsJsonResponse postHubDocumentsJson(org.openapis.openapi.models.operations.PostHubDocumentsApplicationJSON request, org.openapis.openapi.models.operations.PostHubDocumentsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/hub/documents");
         
@@ -9140,7 +9164,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9169,10 +9193,11 @@ public class SDK {
     /**
      * Add a document (this document is analyzed to be saved in the correct folder and correct space)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostHubDocumentsMultipartResponse postHubDocumentsMultipart(org.openapis.openapi.models.operations.PostHubDocumentsMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostHubDocumentsMultipartResponse postHubDocumentsMultipart(org.openapis.openapi.models.operations.PostHubDocumentsMultipartFormData1 request, org.openapis.openapi.models.operations.PostHubDocumentsMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/hub/documents");
         
@@ -9186,7 +9211,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9215,10 +9240,11 @@ public class SDK {
     /**
      * Add a payslip (this document is analyzed to be saved in the correct folder and correct space)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostHubPayslipsJsonResponse postHubPayslipsJson(org.openapis.openapi.models.operations.PostHubPayslipsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostHubPayslipsJsonResponse postHubPayslipsJson(org.openapis.openapi.models.operations.PostHubPayslipsApplicationJSON request, org.openapis.openapi.models.operations.PostHubPayslipsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/hub/payslips");
         
@@ -9232,7 +9258,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9261,10 +9287,11 @@ public class SDK {
     /**
      * Add a payslip (this document is analyzed to be saved in the correct folder and correct space)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostHubPayslipsMultipartResponse postHubPayslipsMultipart(org.openapis.openapi.models.operations.PostHubPayslipsMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostHubPayslipsMultipartResponse postHubPayslipsMultipart(org.openapis.openapi.models.operations.PostHubPayslipsMultipartFormData1 request, org.openapis.openapi.models.operations.PostHubPayslipsMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/hub/payslips");
         
@@ -9278,7 +9305,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9307,24 +9334,25 @@ public class SDK {
     /**
      * Add a document in a space (this document is analyzed to be saved in the correct folder)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostHubSpacesSpaceIdDocumentsJsonResponse postHubSpacesSpaceIdDocumentsJson(org.openapis.openapi.models.operations.PostHubSpacesSpaceIdDocumentsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostHubSpacesSpaceIdDocumentsJsonResponse postHubSpacesSpaceIdDocumentsJson(org.openapis.openapi.models.operations.PostHubSpacesSpaceIdDocumentsJsonRequest request, org.openapis.openapi.models.operations.PostHubSpacesSpaceIdDocumentsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostHubSpacesSpaceIdDocumentsJsonPathParams.class, baseUrl, "/hub/spaces/{spaceId}/documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostHubSpacesSpaceIdDocumentsJsonRequest.class, baseUrl, "/hub/spaces/{spaceId}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9353,24 +9381,25 @@ public class SDK {
     /**
      * Add a document in a space (this document is analyzed to be saved in the correct folder)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostHubSpacesSpaceIdDocumentsMultipartResponse postHubSpacesSpaceIdDocumentsMultipart(org.openapis.openapi.models.operations.PostHubSpacesSpaceIdDocumentsMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostHubSpacesSpaceIdDocumentsMultipartResponse postHubSpacesSpaceIdDocumentsMultipart(org.openapis.openapi.models.operations.PostHubSpacesSpaceIdDocumentsMultipartRequest request, org.openapis.openapi.models.operations.PostHubSpacesSpaceIdDocumentsMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostHubSpacesSpaceIdDocumentsMultipartPathParams.class, baseUrl, "/hub/spaces/{spaceId}/documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostHubSpacesSpaceIdDocumentsMultipartRequest.class, baseUrl, "/hub/spaces/{spaceId}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9399,24 +9428,25 @@ public class SDK {
     /**
      * Add a payslip in a space (this document is analyzed to be saved in the correct folder)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostHubSpacesSpaceIdPayslipsJsonResponse postHubSpacesSpaceIdPayslipsJson(org.openapis.openapi.models.operations.PostHubSpacesSpaceIdPayslipsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostHubSpacesSpaceIdPayslipsJsonResponse postHubSpacesSpaceIdPayslipsJson(org.openapis.openapi.models.operations.PostHubSpacesSpaceIdPayslipsJsonRequest request, org.openapis.openapi.models.operations.PostHubSpacesSpaceIdPayslipsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostHubSpacesSpaceIdPayslipsJsonPathParams.class, baseUrl, "/hub/spaces/{spaceId}/payslips", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostHubSpacesSpaceIdPayslipsJsonRequest.class, baseUrl, "/hub/spaces/{spaceId}/payslips", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9445,24 +9475,25 @@ public class SDK {
     /**
      * Add a payslip in a space (this document is analyzed to be saved in the correct folder)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostHubSpacesSpaceIdPayslipsMultipartResponse postHubSpacesSpaceIdPayslipsMultipart(org.openapis.openapi.models.operations.PostHubSpacesSpaceIdPayslipsMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostHubSpacesSpaceIdPayslipsMultipartResponse postHubSpacesSpaceIdPayslipsMultipart(org.openapis.openapi.models.operations.PostHubSpacesSpaceIdPayslipsMultipartRequest request, org.openapis.openapi.models.operations.PostHubSpacesSpaceIdPayslipsMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostHubSpacesSpaceIdPayslipsMultipartPathParams.class, baseUrl, "/hub/spaces/{spaceId}/payslips", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostHubSpacesSpaceIdPayslipsMultipartRequest.class, baseUrl, "/hub/spaces/{spaceId}/payslips", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9491,24 +9522,25 @@ public class SDK {
     /**
      * add a document to the target menuId
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMenusMenuIdDocumentsJsonResponse postMenusMenuIdDocumentsJson(org.openapis.openapi.models.operations.PostMenusMenuIdDocumentsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMenusMenuIdDocumentsJsonResponse postMenusMenuIdDocumentsJson(org.openapis.openapi.models.operations.PostMenusMenuIdDocumentsJsonRequest request, org.openapis.openapi.models.operations.PostMenusMenuIdDocumentsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMenusMenuIdDocumentsJsonPathParams.class, baseUrl, "/menus/{menuId}/documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMenusMenuIdDocumentsJsonRequest.class, baseUrl, "/menus/{menuId}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9535,24 +9567,25 @@ public class SDK {
     /**
      * add a document to the target menuId
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMenusMenuIdDocumentsMultipartResponse postMenusMenuIdDocumentsMultipart(org.openapis.openapi.models.operations.PostMenusMenuIdDocumentsMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMenusMenuIdDocumentsMultipartResponse postMenusMenuIdDocumentsMultipart(org.openapis.openapi.models.operations.PostMenusMenuIdDocumentsMultipartRequest request, org.openapis.openapi.models.operations.PostMenusMenuIdDocumentsMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMenusMenuIdDocumentsMultipartPathParams.class, baseUrl, "/menus/{menuId}/documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMenusMenuIdDocumentsMultipartRequest.class, baseUrl, "/menus/{menuId}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9579,10 +9612,11 @@ public class SDK {
     /**
      * create infos of profile
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostProfileJsonResponse postProfileJson(org.openapis.openapi.models.operations.PostProfileJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostProfileJsonResponse postProfileJson(org.openapis.openapi.models.operations.PostProfileApplicationJSON request, org.openapis.openapi.models.operations.PostProfileJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/profile");
         
@@ -9596,7 +9630,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9617,10 +9651,11 @@ public class SDK {
     /**
      * create infos of profile
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostProfileMultipartResponse postProfileMultipart(org.openapis.openapi.models.operations.PostProfileMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostProfileMultipartResponse postProfileMultipart(org.openapis.openapi.models.operations.PostProfileMultipartFormData1 request, org.openapis.openapi.models.operations.PostProfileMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/profile");
         
@@ -9634,7 +9669,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9655,10 +9690,11 @@ public class SDK {
     /**
      * complete the invitation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRegistrationResponse postRegistration(org.openapis.openapi.models.operations.PostRegistrationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRegistrationResponse postRegistration(org.openapis.openapi.models.operations.PostRegistrationRequestBody request, org.openapis.openapi.models.operations.PostRegistrationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/registration");
         
@@ -9672,7 +9708,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9699,10 +9735,11 @@ public class SDK {
     /**
      * Add a Space in my group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesResponse postSpaces(org.openapis.openapi.models.operations.PostSpacesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesResponse postSpaces(org.openapis.openapi.models.operations.PostSpacesRequestBody request, org.openapis.openapi.models.operations.PostSpacesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/spaces");
         
@@ -9716,7 +9753,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9745,24 +9782,25 @@ public class SDK {
     /**
      * Create a accounting year for the space id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesIdAccountingYearResponse postSpacesIdAccountingYear(org.openapis.openapi.models.operations.PostSpacesIdAccountingYearRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesIdAccountingYearResponse postSpacesIdAccountingYear(org.openapis.openapi.models.operations.PostSpacesIdAccountingYearRequest request, org.openapis.openapi.models.operations.PostSpacesIdAccountingYearSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdAccountingYearPathParams.class, baseUrl, "/spaces/{id}/accounting-year", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdAccountingYearRequest.class, baseUrl, "/spaces/{id}/accounting-year", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9791,24 +9829,25 @@ public class SDK {
     /**
      * Create a colletive decision for the space id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesIdCollectiveDecisionResponse postSpacesIdCollectiveDecision(org.openapis.openapi.models.operations.PostSpacesIdCollectiveDecisionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesIdCollectiveDecisionResponse postSpacesIdCollectiveDecision(org.openapis.openapi.models.operations.PostSpacesIdCollectiveDecisionRequest request, org.openapis.openapi.models.operations.PostSpacesIdCollectiveDecisionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdCollectiveDecisionPathParams.class, baseUrl, "/spaces/{id}/collective-decision", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdCollectiveDecisionRequest.class, baseUrl, "/spaces/{id}/collective-decision", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9837,24 +9876,25 @@ public class SDK {
     /**
      * Add a Company Entity in a Space
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesIdCompanyEntitiesResponse postSpacesIdCompanyEntities(org.openapis.openapi.models.operations.PostSpacesIdCompanyEntitiesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesIdCompanyEntitiesResponse postSpacesIdCompanyEntities(org.openapis.openapi.models.operations.PostSpacesIdCompanyEntitiesRequest request, org.openapis.openapi.models.operations.PostSpacesIdCompanyEntitiesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdCompanyEntitiesPathParams.class, baseUrl, "/spaces/{id}/company-entities", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdCompanyEntitiesRequest.class, baseUrl, "/spaces/{id}/company-entities", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9888,12 +9928,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PostSpacesIdCompanyEntitiesPersonIdDetailsResponse postSpacesIdCompanyEntitiesPersonIdDetails(org.openapis.openapi.models.operations.PostSpacesIdCompanyEntitiesPersonIdDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdCompanyEntitiesPersonIdDetailsPathParams.class, baseUrl, "/spaces/{id}/company-entities/{personId}/details", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdCompanyEntitiesPersonIdDetailsRequest.class, baseUrl, "/spaces/{id}/company-entities/{personId}/details", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -9921,24 +9961,25 @@ public class SDK {
     /**
      * create an archive with documents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesIdDocumentsDownloadResponse postSpacesIdDocumentsDownload(org.openapis.openapi.models.operations.PostSpacesIdDocumentsDownloadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesIdDocumentsDownloadResponse postSpacesIdDocumentsDownload(org.openapis.openapi.models.operations.PostSpacesIdDocumentsDownloadRequest request, org.openapis.openapi.models.operations.PostSpacesIdDocumentsDownloadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdDocumentsDownloadPathParams.class, baseUrl, "/spaces/{id}/documents/download", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdDocumentsDownloadRequest.class, baseUrl, "/spaces/{id}/documents/download", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -9972,24 +10013,25 @@ public class SDK {
     /**
      * invite a owner in a space
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpaceResponse postSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpace(org.openapis.openapi.models.operations.PostSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpaceResponse postSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpace(org.openapis.openapi.models.operations.PostSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpaceRequest request, org.openapis.openapi.models.operations.PostSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpaceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpacePathParams.class, baseUrl, "/spaces/{id}/folders/{folderId}/persons/{personId}/guest-in-space", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpaceRequest.class, baseUrl, "/spaces/{id}/folders/{folderId}/persons/{personId}/guest-in-space", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "invitationPerson", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -10010,24 +10052,25 @@ public class SDK {
     /**
      * Add a group in a Space
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesIdGroupsResponse postSpacesIdGroups(org.openapis.openapi.models.operations.PostSpacesIdGroupsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesIdGroupsResponse postSpacesIdGroups(org.openapis.openapi.models.operations.PostSpacesIdGroupsRequest request, org.openapis.openapi.models.operations.PostSpacesIdGroupsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdGroupsPathParams.class, baseUrl, "/spaces/{id}/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdGroupsRequest.class, baseUrl, "/spaces/{id}/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -10056,24 +10099,25 @@ public class SDK {
     /**
      * Add a Person in a Space
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesIdPersonsResponse postSpacesIdPersons(org.openapis.openapi.models.operations.PostSpacesIdPersonsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesIdPersonsResponse postSpacesIdPersons(org.openapis.openapi.models.operations.PostSpacesIdPersonsRequest request, org.openapis.openapi.models.operations.PostSpacesIdPersonsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdPersonsPathParams.class, baseUrl, "/spaces/{id}/persons", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdPersonsRequest.class, baseUrl, "/spaces/{id}/persons", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -10107,12 +10151,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PostSpacesIdPersonsPersonIdDetailsResponse postSpacesIdPersonsPersonIdDetails(org.openapis.openapi.models.operations.PostSpacesIdPersonsPersonIdDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdPersonsPersonIdDetailsPathParams.class, baseUrl, "/spaces/{id}/persons/{personId}/details", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdPersonsPersonIdDetailsRequest.class, baseUrl, "/spaces/{id}/persons/{personId}/details", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -10140,21 +10184,22 @@ public class SDK {
     /**
      * Create a portfolio for the person personId
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesIdPersonsPersonIdPortfoliosResponse postSpacesIdPersonsPersonIdPortfolios(org.openapis.openapi.models.operations.PostSpacesIdPersonsPersonIdPortfoliosRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesIdPersonsPersonIdPortfoliosResponse postSpacesIdPersonsPersonIdPortfolios(org.openapis.openapi.models.operations.PostSpacesIdPersonsPersonIdPortfoliosRequest request, org.openapis.openapi.models.operations.PostSpacesIdPersonsPersonIdPortfoliosSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdPersonsPersonIdPortfoliosPathParams.class, baseUrl, "/spaces/{id}/persons/{personId}/portfolios", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdPersonsPersonIdPortfoliosRequest.class, baseUrl, "/spaces/{id}/persons/{personId}/portfolios", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -10183,24 +10228,25 @@ public class SDK {
     /**
      * Create a professional vehicle for the space
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesIdProfessionalVehiclesResponse postSpacesIdProfessionalVehicles(org.openapis.openapi.models.operations.PostSpacesIdProfessionalVehiclesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesIdProfessionalVehiclesResponse postSpacesIdProfessionalVehicles(org.openapis.openapi.models.operations.PostSpacesIdProfessionalVehiclesRequest request, org.openapis.openapi.models.operations.PostSpacesIdProfessionalVehiclesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdProfessionalVehiclesPathParams.class, baseUrl, "/spaces/{id}/professional-vehicles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdProfessionalVehiclesRequest.class, baseUrl, "/spaces/{id}/professional-vehicles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -10229,21 +10275,22 @@ public class SDK {
     /**
      * Enable/Disable logs
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesIdSettingsNf203LogsResponse postSpacesIdSettingsNf203Logs(org.openapis.openapi.models.operations.PostSpacesIdSettingsNf203LogsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesIdSettingsNf203LogsResponse postSpacesIdSettingsNf203Logs(org.openapis.openapi.models.operations.PostSpacesIdSettingsNf203LogsRequest request, org.openapis.openapi.models.operations.PostSpacesIdSettingsNf203LogsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdSettingsNf203LogsPathParams.class, baseUrl, "/spaces/{id}/settings/nf203/logs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdSettingsNf203LogsRequest.class, baseUrl, "/spaces/{id}/settings/nf203/logs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -10269,12 +10316,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PostSpacesIdStatusResponse postSpacesIdStatus(org.openapis.openapi.models.operations.PostSpacesIdStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdStatusPathParams.class, baseUrl, "/spaces/{id}/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdStatusRequest.class, baseUrl, "/spaces/{id}/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -10302,24 +10349,25 @@ public class SDK {
     /**
      * Create a tax contract for the space
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesIdTaxContractsResponse postSpacesIdTaxContracts(org.openapis.openapi.models.operations.PostSpacesIdTaxContractsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesIdTaxContractsResponse postSpacesIdTaxContracts(org.openapis.openapi.models.operations.PostSpacesIdTaxContractsRequest request, org.openapis.openapi.models.operations.PostSpacesIdTaxContractsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdTaxContractsPathParams.class, baseUrl, "/spaces/{id}/tax-contracts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdTaxContractsRequest.class, baseUrl, "/spaces/{id}/tax-contracts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -10348,19 +10396,20 @@ public class SDK {
     /**
      * Creates a trigger for the space id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesIdTriggersNameResponse postSpacesIdTriggersName(org.openapis.openapi.models.operations.PostSpacesIdTriggersNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesIdTriggersNameResponse postSpacesIdTriggersName(org.openapis.openapi.models.operations.PostSpacesIdTriggersNameRequest request, org.openapis.openapi.models.operations.PostSpacesIdTriggersNameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdTriggersNamePathParams.class, baseUrl, "/spaces/{id}/triggers/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesIdTriggersNameRequest.class, baseUrl, "/spaces/{id}/triggers/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -10381,24 +10430,25 @@ public class SDK {
     /**
      * Add a data to a document
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdExtendResponse postSpacesSpaceIdDocumentsDocumentIdExtend(org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdExtendRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdExtendResponse postSpacesSpaceIdDocumentsDocumentIdExtend(org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdExtendRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdExtendSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdExtendPathParams.class, baseUrl, "/spaces/{spaceId}/documents/{documentId}/extend", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdExtendRequest.class, baseUrl, "/spaces/{spaceId}/documents/{documentId}/extend", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -10427,24 +10477,25 @@ public class SDK {
     /**
      * send by mail a document
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdMailingResponse postSpacesSpaceIdDocumentsDocumentIdMailing(org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdMailingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdMailingResponse postSpacesSpaceIdDocumentsDocumentIdMailing(org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdMailingRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdMailingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdMailingPathParams.class, baseUrl, "/spaces/{spaceId}/documents/{documentId}/mailing", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdMailingRequest.class, baseUrl, "/spaces/{spaceId}/documents/{documentId}/mailing", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -10471,24 +10522,25 @@ public class SDK {
     /**
      * Add a version to a document and set it as current
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdVersionsJsonResponse postSpacesSpaceIdDocumentsDocumentIdVersionsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdVersionsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdVersionsJsonResponse postSpacesSpaceIdDocumentsDocumentIdVersionsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdVersionsJsonRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdVersionsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdVersionsJsonPathParams.class, baseUrl, "/spaces/{spaceId}/documents/{documentId}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdVersionsJsonRequest.class, baseUrl, "/spaces/{spaceId}/documents/{documentId}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -10517,24 +10569,25 @@ public class SDK {
     /**
      * Add a version to a document and set it as current
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartResponse postSpacesSpaceIdDocumentsDocumentIdVersionsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartResponse postSpacesSpaceIdDocumentsDocumentIdVersionsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartPathParams.class, baseUrl, "/spaces/{spaceId}/documents/{documentId}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartRequest.class, baseUrl, "/spaces/{spaceId}/documents/{documentId}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -10563,24 +10616,25 @@ public class SDK {
     /**
      * Add a data to a space
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdExtendResponse postSpacesSpaceIdExtend(org.openapis.openapi.models.operations.PostSpacesSpaceIdExtendRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdExtendResponse postSpacesSpaceIdExtend(org.openapis.openapi.models.operations.PostSpacesSpaceIdExtendRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdExtendSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdExtendPathParams.class, baseUrl, "/spaces/{spaceId}/extend", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdExtendRequest.class, baseUrl, "/spaces/{spaceId}/extend", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -10614,7 +10668,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdRefreshResponse postSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdRefresh(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdRefreshRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdRefreshPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/payrolls/{documentId}/refresh", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdRefreshRequest.class, baseUrl, "/spaces/{spaceId}/folders/{folderId}/payrolls/{documentId}/refresh", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -10650,24 +10704,25 @@ public class SDK {
     /**
      * Add a bank statement in a folder bank
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdBankStatementsJsonResponse postSpacesSpaceIdFoldersIdBankStatementsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdBankStatementsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdBankStatementsJsonResponse postSpacesSpaceIdFoldersIdBankStatementsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdBankStatementsJsonRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdBankStatementsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdBankStatementsJsonPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/bank-statements", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdBankStatementsJsonRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/bank-statements", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -10696,24 +10751,25 @@ public class SDK {
     /**
      * Add a bank statement in a folder bank
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdBankStatementsMultipartResponse postSpacesSpaceIdFoldersIdBankStatementsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdBankStatementsMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdBankStatementsMultipartResponse postSpacesSpaceIdFoldersIdBankStatementsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdBankStatementsMultipartRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdBankStatementsMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdBankStatementsMultipartPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/bank-statements", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdBankStatementsMultipartRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/bank-statements", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -10742,24 +10798,25 @@ public class SDK {
     /**
      * Add a common folder in another folder
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCommonFoldersResponse postSpacesSpaceIdFoldersIdCommonFolders(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCommonFoldersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCommonFoldersResponse postSpacesSpaceIdFoldersIdCommonFolders(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCommonFoldersRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCommonFoldersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCommonFoldersPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/common-folders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCommonFoldersRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/common-folders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -10788,24 +10845,25 @@ public class SDK {
     /**
      * Add a document in a folder
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdContractualDocumentsJsonResponse postSpacesSpaceIdFoldersIdContractualDocumentsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdContractualDocumentsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdContractualDocumentsJsonResponse postSpacesSpaceIdFoldersIdContractualDocumentsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdContractualDocumentsJsonRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdContractualDocumentsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdContractualDocumentsJsonPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/contractual-documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdContractualDocumentsJsonRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/contractual-documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -10834,24 +10892,25 @@ public class SDK {
     /**
      * Add a document in a folder
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdContractualDocumentsMultipartResponse postSpacesSpaceIdFoldersIdContractualDocumentsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdContractualDocumentsMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdContractualDocumentsMultipartResponse postSpacesSpaceIdFoldersIdContractualDocumentsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdContractualDocumentsMultipartRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdContractualDocumentsMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdContractualDocumentsMultipartPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/contractual-documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdContractualDocumentsMultipartRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/contractual-documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -10880,24 +10939,25 @@ public class SDK {
     /**
      * Add a corporate tax declaration
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsJsonResponse postSpacesSpaceIdFoldersIdCoporateTaxDeclarationsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsJsonResponse postSpacesSpaceIdFoldersIdCoporateTaxDeclarationsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsJsonRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsJsonPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/coporate-tax-declarations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsJsonRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/coporate-tax-declarations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -10926,24 +10986,25 @@ public class SDK {
     /**
      * Add a corporate tax declaration
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartResponse postSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartResponse postSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/coporate-tax-declarations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/coporate-tax-declarations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -10972,24 +11033,25 @@ public class SDK {
     /**
      * Add a document in a folder
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentsJsonResponse postSpacesSpaceIdFoldersIdDocumentsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentsJsonResponse postSpacesSpaceIdFoldersIdDocumentsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentsJsonRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentsJsonPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentsJsonRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11018,24 +11080,25 @@ public class SDK {
     /**
      * Add a document in a folder
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentsMultipartResponse postSpacesSpaceIdFoldersIdDocumentsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentsMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentsMultipartResponse postSpacesSpaceIdFoldersIdDocumentsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentsMultipartRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentsMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentsMultipartPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentsMultipartRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11064,24 +11127,25 @@ public class SDK {
     /**
      * Add a expense proof in a folder followup or exchange
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseProofsJsonResponse postSpacesSpaceIdFoldersIdExpenseProofsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseProofsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseProofsJsonResponse postSpacesSpaceIdFoldersIdExpenseProofsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseProofsJsonRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseProofsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseProofsJsonPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/expense-proofs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseProofsJsonRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/expense-proofs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11110,24 +11174,25 @@ public class SDK {
     /**
      * Add a expense proof in a folder followup or exchange
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseProofsMultipartResponse postSpacesSpaceIdFoldersIdExpenseProofsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseProofsMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseProofsMultipartResponse postSpacesSpaceIdFoldersIdExpenseProofsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseProofsMultipartRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseProofsMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseProofsMultipartPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/expense-proofs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseProofsMultipartRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/expense-proofs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11156,24 +11221,25 @@ public class SDK {
     /**
      * Add a expense report in a folder followup
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseReportsJsonResponse postSpacesSpaceIdFoldersIdExpenseReportsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseReportsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseReportsJsonResponse postSpacesSpaceIdFoldersIdExpenseReportsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseReportsJsonRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseReportsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseReportsJsonPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/expense-reports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseReportsJsonRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/expense-reports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11202,24 +11268,25 @@ public class SDK {
     /**
      * Add a expense report in a folder followup
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseReportsMultipartResponse postSpacesSpaceIdFoldersIdExpenseReportsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseReportsMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseReportsMultipartResponse postSpacesSpaceIdFoldersIdExpenseReportsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseReportsMultipartRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseReportsMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseReportsMultipartPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/expense-reports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdExpenseReportsMultipartRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/expense-reports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11248,24 +11315,25 @@ public class SDK {
     /**
      * Add a invoice in a folder of a customer or a provider
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdInvoicesJsonResponse postSpacesSpaceIdFoldersIdInvoicesJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdInvoicesJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdInvoicesJsonResponse postSpacesSpaceIdFoldersIdInvoicesJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdInvoicesJsonRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdInvoicesJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdInvoicesJsonPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/invoices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdInvoicesJsonRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/invoices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11294,24 +11362,25 @@ public class SDK {
     /**
      * Add a invoice in a folder of a customer or a provider
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdInvoicesMultipartResponse postSpacesSpaceIdFoldersIdInvoicesMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdInvoicesMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdInvoicesMultipartResponse postSpacesSpaceIdFoldersIdInvoicesMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdInvoicesMultipartRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdInvoicesMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdInvoicesMultipartPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/invoices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdInvoicesMultipartRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/invoices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11340,24 +11409,25 @@ public class SDK {
     /**
      * Write a message in the journal of a folder
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdMessagesResponse postSpacesSpaceIdFoldersIdMessages(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdMessagesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdMessagesResponse postSpacesSpaceIdFoldersIdMessages(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdMessagesRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdMessagesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdMessagesPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/messages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdMessagesRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/messages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11378,24 +11448,25 @@ public class SDK {
     /**
      * Add a tax declaration
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdOtherTaxesJsonResponse postSpacesSpaceIdFoldersIdOtherTaxesJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdOtherTaxesJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdOtherTaxesJsonResponse postSpacesSpaceIdFoldersIdOtherTaxesJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdOtherTaxesJsonRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdOtherTaxesJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdOtherTaxesJsonPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/other-taxes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdOtherTaxesJsonRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/other-taxes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11424,24 +11495,25 @@ public class SDK {
     /**
      * Add a tax declaration
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdOtherTaxesMultipartResponse postSpacesSpaceIdFoldersIdOtherTaxesMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdOtherTaxesMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdOtherTaxesMultipartResponse postSpacesSpaceIdFoldersIdOtherTaxesMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdOtherTaxesMultipartRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdOtherTaxesMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdOtherTaxesMultipartPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/other-taxes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdOtherTaxesMultipartRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/other-taxes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11470,24 +11542,25 @@ public class SDK {
     /**
      * Write a identifier/password in aa folder
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPasswordsResponse postSpacesSpaceIdFoldersIdPasswords(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPasswordsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPasswordsResponse postSpacesSpaceIdFoldersIdPasswords(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPasswordsRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPasswordsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPasswordsPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/passwords", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPasswordsRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/passwords", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11508,24 +11581,25 @@ public class SDK {
     /**
      * Add a nominative social declaration in a folder social
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJsonResponse postSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJsonResponse postSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJsonRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJsonPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/payrolls/{payrollId}/nominative-social-declaration", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJsonRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/payrolls/{payrollId}/nominative-social-declaration", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11554,24 +11628,25 @@ public class SDK {
     /**
      * Add a nominative social declaration in a folder social
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartResponse postSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartResponse postSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/payrolls/{payrollId}/nominative-social-declaration", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/payrolls/{payrollId}/nominative-social-declaration", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11600,24 +11675,25 @@ public class SDK {
     /**
      * Add a payroll in a folder social
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsJsonResponse postSpacesSpaceIdFoldersIdPayrollsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsJsonResponse postSpacesSpaceIdFoldersIdPayrollsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsJsonRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsJsonPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/payrolls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsJsonRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/payrolls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11646,24 +11722,25 @@ public class SDK {
     /**
      * Add a payroll in a folder social
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsMultipartResponse postSpacesSpaceIdFoldersIdPayrollsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsMultipartResponse postSpacesSpaceIdFoldersIdPayrollsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsMultipartRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsMultipartPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/payrolls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayrollsMultipartRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/payrolls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11692,24 +11769,25 @@ public class SDK {
     /**
      * Add a payslip in a folder employee
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayslipsJsonResponse postSpacesSpaceIdFoldersIdPayslipsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayslipsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayslipsJsonResponse postSpacesSpaceIdFoldersIdPayslipsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayslipsJsonRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayslipsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayslipsJsonPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/payslips", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayslipsJsonRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/payslips", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11738,24 +11816,25 @@ public class SDK {
     /**
      * Add a payslip in a folder employee
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayslipsMultipartResponse postSpacesSpaceIdFoldersIdPayslipsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayslipsMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayslipsMultipartResponse postSpacesSpaceIdFoldersIdPayslipsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayslipsMultipartRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayslipsMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayslipsMultipartPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/payslips", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdPayslipsMultipartRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/payslips", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11784,24 +11863,25 @@ public class SDK {
     /**
      * Add a required document to a line
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJsonResponse postSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJsonResponse postSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJsonRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJsonPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/required-documents/{requireddocumentid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJsonRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/required-documents/{requireddocumentid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11830,24 +11910,25 @@ public class SDK {
     /**
      * Add a required document to a line
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartResponse postSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartResponse postSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/required-documents/{requireddocumentid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidMultipartRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/required-documents/{requireddocumentid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11876,24 +11957,25 @@ public class SDK {
     /**
      * Add a social contract in a folder employee
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialContractsJsonResponse postSpacesSpaceIdFoldersIdSocialContractsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialContractsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialContractsJsonResponse postSpacesSpaceIdFoldersIdSocialContractsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialContractsJsonRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialContractsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialContractsJsonPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/social-contracts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialContractsJsonRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/social-contracts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11922,24 +12004,25 @@ public class SDK {
     /**
      * Add a social contract in a folder employee
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialContractsMultipartResponse postSpacesSpaceIdFoldersIdSocialContractsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialContractsMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialContractsMultipartResponse postSpacesSpaceIdFoldersIdSocialContractsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialContractsMultipartRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialContractsMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialContractsMultipartPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/social-contracts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialContractsMultipartRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/social-contracts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -11968,24 +12051,25 @@ public class SDK {
     /**
      * Add a social declaration
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialDeclarationsJsonResponse postSpacesSpaceIdFoldersIdSocialDeclarationsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialDeclarationsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialDeclarationsJsonResponse postSpacesSpaceIdFoldersIdSocialDeclarationsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialDeclarationsJsonRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialDeclarationsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialDeclarationsJsonPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/social-declarations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialDeclarationsJsonRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/social-declarations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -12014,24 +12098,25 @@ public class SDK {
     /**
      * Add a social declaration
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartResponse postSpacesSpaceIdFoldersIdSocialDeclarationsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartResponse postSpacesSpaceIdFoldersIdSocialDeclarationsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/social-declarations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/social-declarations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -12060,24 +12145,25 @@ public class SDK {
     /**
      * Add a vat declaration
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdVatDeclarationsJsonResponse postSpacesSpaceIdFoldersIdVatDeclarationsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdVatDeclarationsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdVatDeclarationsJsonResponse postSpacesSpaceIdFoldersIdVatDeclarationsJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdVatDeclarationsJsonRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdVatDeclarationsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdVatDeclarationsJsonPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/vat-declarations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdVatDeclarationsJsonRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/vat-declarations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -12106,24 +12192,25 @@ public class SDK {
     /**
      * Add a vat declaration
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartResponse postSpacesSpaceIdFoldersIdVatDeclarationsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartResponse postSpacesSpaceIdFoldersIdVatDeclarationsMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/vat-declarations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/vat-declarations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -12152,24 +12239,25 @@ public class SDK {
     /**
      * Add a document in a folder
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentClassJsonResponse postSpacesSpaceIdFoldersIdDocumentClassJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentClassJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentClassJsonResponse postSpacesSpaceIdFoldersIdDocumentClassJson(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentClassJsonRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentClassJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentClassJsonPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/{documentClass}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentClassJsonRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/{documentClass}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -12198,24 +12286,25 @@ public class SDK {
     /**
      * Add a document in a folder
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentClassMultipartResponse postSpacesSpaceIdFoldersIdDocumentClassMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentClassMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentClassMultipartResponse postSpacesSpaceIdFoldersIdDocumentClassMultipart(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentClassMultipartRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentClassMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentClassMultipartPathParams.class, baseUrl, "/spaces/{spaceId}/folders/{id}/{documentClass}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdFoldersIdDocumentClassMultipartRequest.class, baseUrl, "/spaces/{spaceId}/folders/{id}/{documentClass}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -12244,24 +12333,25 @@ public class SDK {
     /**
      * Add a folder for a bank
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdBanksResponse postSpacesSpaceIdLegalEntitiesIdBanks(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdBanksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdBanksResponse postSpacesSpaceIdLegalEntitiesIdBanks(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdBanksRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdBanksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdBanksPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/banks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdBanksRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/banks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -12290,24 +12380,25 @@ public class SDK {
     /**
      * Add a folder for a customer
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdCustomersResponse postSpacesSpaceIdLegalEntitiesIdCustomers(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdCustomersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdCustomersResponse postSpacesSpaceIdLegalEntitiesIdCustomers(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdCustomersRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdCustomersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdCustomersPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/customers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdCustomersRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/customers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -12336,24 +12427,25 @@ public class SDK {
     /**
      * Add a folder for a insurance
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdInsurancesResponse postSpacesSpaceIdLegalEntitiesIdInsurances(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdInsurancesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdInsurancesResponse postSpacesSpaceIdLegalEntitiesIdInsurances(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdInsurancesRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdInsurancesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdInsurancesPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/insurances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdInsurancesRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/insurances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -12382,24 +12474,25 @@ public class SDK {
     /**
      * Add a folder for a loan
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdLoansResponse postSpacesSpaceIdLegalEntitiesIdLoans(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdLoansRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdLoansResponse postSpacesSpaceIdLegalEntitiesIdLoans(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdLoansRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdLoansSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdLoansPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/loans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdLoansRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/loans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -12428,24 +12521,25 @@ public class SDK {
     /**
      * Add a folder for a provider
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdProvidersResponse postSpacesSpaceIdLegalEntitiesIdProviders(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdProvidersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdProvidersResponse postSpacesSpaceIdLegalEntitiesIdProviders(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdProvidersRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdProvidersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdProvidersPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/providers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdProvidersRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/providers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -12474,24 +12568,25 @@ public class SDK {
     /**
      * Add a folder for a social regime
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdSocialRegimesResponse postSpacesSpaceIdLegalEntitiesIdSocialRegimes(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdSocialRegimesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdSocialRegimesResponse postSpacesSpaceIdLegalEntitiesIdSocialRegimes(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdSocialRegimesRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdSocialRegimesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdSocialRegimesPathParams.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/social-regimes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdLegalEntitiesIdSocialRegimesRequest.class, baseUrl, "/spaces/{spaceId}/legal-entities/{id}/social-regimes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -12520,24 +12615,25 @@ public class SDK {
     /**
      * invite a person to collect documents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdCallForDocumentResponse postSpacesSpaceIdPersonsIdCallForDocument(org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdCallForDocumentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdCallForDocumentResponse postSpacesSpaceIdPersonsIdCallForDocument(org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdCallForDocumentRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdCallForDocumentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdCallForDocumentPathParams.class, baseUrl, "/spaces/{spaceId}/persons/{id}/call-for-document", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdCallForDocumentRequest.class, baseUrl, "/spaces/{spaceId}/persons/{id}/call-for-document", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "callForDocument", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -12566,24 +12662,25 @@ public class SDK {
     /**
      * Add a folder for a employee
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdEmployeesResponse postSpacesSpaceIdPersonsIdEmployees(org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdEmployeesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdEmployeesResponse postSpacesSpaceIdPersonsIdEmployees(org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdEmployeesRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdEmployeesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdEmployeesPathParams.class, baseUrl, "/spaces/{spaceId}/persons/{id}/employees", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdEmployeesRequest.class, baseUrl, "/spaces/{spaceId}/persons/{id}/employees", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -12612,24 +12709,25 @@ public class SDK {
     /**
      * invite a person in a space
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdGuestInSpaceResponse postSpacesSpaceIdPersonsIdGuestInSpace(org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdGuestInSpaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdGuestInSpaceResponse postSpacesSpaceIdPersonsIdGuestInSpace(org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdGuestInSpaceRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdGuestInSpaceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdGuestInSpacePathParams.class, baseUrl, "/spaces/{spaceId}/persons/{id}/guest-in-space", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdGuestInSpaceRequest.class, baseUrl, "/spaces/{spaceId}/persons/{id}/guest-in-space", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "guestInSpace", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -12650,24 +12748,25 @@ public class SDK {
     /**
      * create an invitation in a space for a person
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdInvitationResponse postSpacesSpaceIdPersonsIdInvitation(org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdInvitationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdInvitationResponse postSpacesSpaceIdPersonsIdInvitation(org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdInvitationRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdInvitationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdInvitationPathParams.class, baseUrl, "/spaces/{spaceId}/persons/{id}/invitation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdInvitationRequest.class, baseUrl, "/spaces/{spaceId}/persons/{id}/invitation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -12694,24 +12793,25 @@ public class SDK {
     /**
      * send the invitation of a person in a space
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendResponse postSpacesSpaceIdPersonsIdInvitationInvitationIdSend(org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendResponse postSpacesSpaceIdPersonsIdInvitationInvitationIdSend(org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendRequest request, org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendPathParams.class, baseUrl, "/spaces/{spaceId}/persons/{id}/invitation/{invitationId}/send", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendRequest.class, baseUrl, "/spaces/{spaceId}/persons/{id}/invitation/{invitationId}/send", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

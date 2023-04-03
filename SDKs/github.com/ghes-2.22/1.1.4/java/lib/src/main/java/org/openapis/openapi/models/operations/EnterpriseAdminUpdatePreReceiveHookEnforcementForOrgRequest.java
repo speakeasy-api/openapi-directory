@@ -7,17 +7,27 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequest {
-    
-    public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgPathParams pathParams;
-    public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequest withPathParams(EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequestBody requestBody;
+    public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequest withRequestBody(EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequestBody request;
-    public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequest withRequest(EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * pre_receive_hook_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pre_receive_hook_id")
+    public Long preReceiveHookId;
+    public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequest withPreReceiveHookId(Long preReceiveHookId) {
+        this.preReceiveHookId = preReceiveHookId;
         return this;
     }
     

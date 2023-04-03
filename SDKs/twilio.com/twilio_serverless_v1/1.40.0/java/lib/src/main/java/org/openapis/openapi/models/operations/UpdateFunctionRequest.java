@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateFunctionRequest {
-    
-    public UpdateFunctionPathParams pathParams;
-    public UpdateFunctionRequest withPathParams(UpdateFunctionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateFunctionUpdateFunctionRequest request;
-    public UpdateFunctionRequest withRequest(UpdateFunctionUpdateFunctionRequest request) {
-        this.request = request;
+    public UpdateFunctionUpdateFunctionRequest requestBody;
+    public UpdateFunctionRequest withRequestBody(UpdateFunctionUpdateFunctionRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateFunctionSecurity security;
-    public UpdateFunctionRequest withSecurity(UpdateFunctionSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Service to update the Function resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateFunctionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateFunctionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Function resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateFunctionRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

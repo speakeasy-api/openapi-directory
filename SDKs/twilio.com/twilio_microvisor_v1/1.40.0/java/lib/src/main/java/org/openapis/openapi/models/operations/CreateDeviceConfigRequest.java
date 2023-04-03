@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDeviceConfigRequest {
-    
-    public CreateDeviceConfigPathParams pathParams;
-    public CreateDeviceConfigRequest withPathParams(CreateDeviceConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A 34-character string that uniquely identifies the Device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DeviceSid")
+    public String deviceSid;
+    public CreateDeviceConfigRequest withDeviceSid(String deviceSid) {
+        this.deviceSid = deviceSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateDeviceConfigCreateDeviceConfigRequest request;
-    public CreateDeviceConfigRequest withRequest(CreateDeviceConfigCreateDeviceConfigRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateDeviceConfigSecurity security;
-    public CreateDeviceConfigRequest withSecurity(CreateDeviceConfigSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateDeviceConfigRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateDeviceConfigCreateDeviceConfigRequest requestBody;
+    public CreateDeviceConfigRequest withRequestBody(CreateDeviceConfigCreateDeviceConfigRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

@@ -42,7 +42,7 @@ public class OwnershipFindOwnership {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOwnershipQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOwnershipRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -83,7 +83,7 @@ public class OwnershipFindOwnership {
      */
     public org.openapis.openapi.models.operations.GetOwnershipOwnershipIdResponse getOwnershipOwnershipId(org.openapis.openapi.models.operations.GetOwnershipOwnershipIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOwnershipOwnershipIdPathParams.class, baseUrl, "/ownership/{ownershipId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOwnershipOwnershipIdRequest.class, baseUrl, "/ownership/{ownershipId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -124,13 +124,13 @@ public class OwnershipFindOwnership {
      */
     public org.openapis.openapi.models.operations.PatchOwnershipOwnershipIdResponse patchOwnershipOwnershipId(org.openapis.openapi.models.operations.PatchOwnershipOwnershipIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchOwnershipOwnershipIdPathParams.class, baseUrl, "/ownership/{ownershipId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchOwnershipOwnershipIdRequest.class, baseUrl, "/ownership/{ownershipId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatchOwnershipOwnershipIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatchOwnershipOwnershipIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -177,7 +177,7 @@ public class OwnershipFindOwnership {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostOwnershipInstallQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostOwnershipInstallRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -218,13 +218,13 @@ public class OwnershipFindOwnership {
      */
     public org.openapis.openapi.models.operations.PostOwnershipUninstallOwnershipIdResponse postOwnershipUninstallOwnershipId(org.openapis.openapi.models.operations.PostOwnershipUninstallOwnershipIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOwnershipUninstallOwnershipIdPathParams.class, baseUrl, "/ownership/uninstall/{ownershipId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOwnershipUninstallOwnershipIdRequest.class, baseUrl, "/ownership/uninstall/{ownershipId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostOwnershipUninstallOwnershipIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostOwnershipUninstallOwnershipIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -265,13 +265,13 @@ public class OwnershipFindOwnership {
      */
     public org.openapis.openapi.models.operations.PostOwnershipOwnershipIdResponse postOwnershipOwnershipId(org.openapis.openapi.models.operations.PostOwnershipOwnershipIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOwnershipOwnershipIdPathParams.class, baseUrl, "/ownership/{ownershipId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOwnershipOwnershipIdRequest.class, baseUrl, "/ownership/{ownershipId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostOwnershipOwnershipIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostOwnershipOwnershipIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

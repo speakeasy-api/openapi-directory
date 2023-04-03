@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MsetValueRequest {
-    
-    public MsetValuePathParams pathParams;
-    public MsetValueRequest withPathParams(MsetValuePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * objInsVarValArray
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String[][] request;
-    public MsetValueRequest withRequest(String[][] request) {
-        this.request = request;
+    public String[][] requestBody;
+    public MsetValueRequest withRequestBody(String[][] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Agent of the value space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public MsetValueRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

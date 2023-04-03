@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DescribeEntitiesDetectionV2JobXAmzTargetEnum;
-import org.openapis.openapi.models.operations.DescribeEntitiesDetectionV2JobHeaders;
 import org.openapis.openapi.models.operations.DescribeEntitiesDetectionV2JobRequest;
 import org.openapis.openapi.models.operations.DescribeEntitiesDetectionV2JobResponse;
 import org.openapis.openapi.models.shared.DescribeEntitiesDetectionV2JobRequest;
@@ -15,27 +14,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             DescribeEntitiesDetectionV2JobRequest req = new DescribeEntitiesDetectionV2JobRequest() {{
-                headers = new DescribeEntitiesDetectionV2JobHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "ComprehendMedical_20181030.DescribeEntitiesDetectionV2Job";
+                describeEntitiesDetectionV2JobRequest = new DescribeEntitiesDetectionV2JobRequest() {{
+                    jobId = "corrupti";
                 }};
-                request = new DescribeEntitiesDetectionV2JobRequest() {{
-                    jobId = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+                xAmzTarget = "ComprehendMedical_20181030.DescribeEntitiesDetectionV2Job";
+            }}            
 
             DescribeEntitiesDetectionV2JobResponse res = sdk.describeEntitiesDetectionV2Job(req);
 

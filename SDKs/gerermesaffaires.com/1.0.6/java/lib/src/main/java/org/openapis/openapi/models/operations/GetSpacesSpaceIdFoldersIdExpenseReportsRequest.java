@@ -4,20 +4,106 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdFoldersIdExpenseReportsRequest {
-    
-    public GetSpacesSpaceIdFoldersIdExpenseReportsPathParams pathParams;
-    public GetSpacesSpaceIdFoldersIdExpenseReportsRequest withPathParams(GetSpacesSpaceIdFoldersIdExpenseReportsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * date range of the documents
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Date")
+    public String date;
+    public GetSpacesSpaceIdFoldersIdExpenseReportsRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     
+    /**
+     * range of ExpenseDate (valid available)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ExpenseDate")
+    public Object expenseDate;
+    public GetSpacesSpaceIdFoldersIdExpenseReportsRequest withExpenseDate(Object expenseDate) {
+        this.expenseDate = expenseDate;
+        return this;
+    }
     
-    public GetSpacesSpaceIdFoldersIdExpenseReportsQueryParams queryParams;
-    public GetSpacesSpaceIdFoldersIdExpenseReportsRequest withQueryParams(GetSpacesSpaceIdFoldersIdExpenseReportsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * date range of attachment
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FolderDate")
+    public String folderDate;
+    public GetSpacesSpaceIdFoldersIdExpenseReportsRequest withFolderDate(String folderDate) {
+        this.folderDate = folderDate;
+        return this;
+    }
+    
+    /**
+     * range of processing date (boolean available)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ProcessingDate")
+    public String processingDate;
+    public GetSpacesSpaceIdFoldersIdExpenseReportsRequest withProcessingDate(String processingDate) {
+        this.processingDate = processingDate;
+        return this;
+    }
+    
+    /**
+     * index range of the results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Range")
+    public String range;
+    public GetSpacesSpaceIdFoldersIdExpenseReportsRequest withRange(String range) {
+        this.range = range;
+        return this;
+    }
+    
+    /**
+     * name of value for sort
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SortName")
+    public GetSpacesSpaceIdFoldersIdExpenseReportsSortNameEnum sortName;
+    public GetSpacesSpaceIdFoldersIdExpenseReportsRequest withSortName(GetSpacesSpaceIdFoldersIdExpenseReportsSortNameEnum sortName) {
+        this.sortName = sortName;
+        return this;
+    }
+    
+    /**
+     * order of sort (if absent default is asc)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SortOrder")
+    public GetSpacesSpaceIdFoldersIdExpenseReportsSortOrderEnum sortOrder;
+    public GetSpacesSpaceIdFoldersIdExpenseReportsRequest withSortOrder(GetSpacesSpaceIdFoldersIdExpenseReportsSortOrderEnum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * If present returns also the data extend
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=WithExtend")
+    public GetSpacesSpaceIdFoldersIdExpenseReportsWithExtendEnum withExtend;
+    public GetSpacesSpaceIdFoldersIdExpenseReportsRequest withWithExtend(GetSpacesSpaceIdFoldersIdExpenseReportsWithExtendEnum withExtend) {
+        this.withExtend = withExtend;
+        return this;
+    }
+    
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesSpaceIdFoldersIdExpenseReportsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdFoldersIdExpenseReportsRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

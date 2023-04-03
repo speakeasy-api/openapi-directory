@@ -4,13 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlayByPlayDeltaRequest {
+    /**
+     * The date of the game(s).
+     * &lt;br&gt;Examples: &lt;code&gt;2017-JUL-31&lt;/code&gt;, &lt;code&gt;2017-SEP-01&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
+    public String date;
+    public PlayByPlayDeltaRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
     
-    public PlayByPlayDeltaPathParams pathParams;
-    public PlayByPlayDeltaRequest withPathParams(PlayByPlayDeltaPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public PlayByPlayDeltaFormatEnum format;
+    public PlayByPlayDeltaRequest withFormat(PlayByPlayDeltaFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * Only returns plays that have changed in the last X minutes.  You specify how many minutes in time to go back.  Valid entries are:
+     * &lt;code&gt;1&lt;/code&gt;, &lt;code&gt;2&lt;/code&gt; ... &lt;code&gt;all&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=minutes")
+    public String minutes;
+    public PlayByPlayDeltaRequest withMinutes(String minutes) {
+        this.minutes = minutes;
         return this;
     }
     

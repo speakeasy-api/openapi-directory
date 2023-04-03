@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateApplicationXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CreateApplicationHeaders;
 import org.openapis.openapi.models.operations.CreateApplicationRequest;
 import org.openapis.openapi.models.operations.CreateApplicationResponse;
 import org.openapis.openapi.models.shared.CreateApplicationRequest;
@@ -30,47 +29,43 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateApplicationRequest req = new CreateApplicationRequest() {{
-                headers = new CreateApplicationHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "EC2WindowsBarleyService.CreateApplication";
-                }};
-                request = new CreateApplicationRequest() {{
+                createApplicationRequest = new CreateApplicationRequest() {{
                     autoConfigEnabled = false;
                     autoCreate = false;
                     cweMonitorEnabled = false;
                     groupingType = "ACCOUNT_BASED";
                     opsCenterEnabled = false;
-                    opsItemSNSTopicArn = "illum";
-                    resourceGroupName = "vel";
+                    opsItemSNSTopicArn = "corrupti";
+                    resourceGroupName = "provident";
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "deserunt";
-                            value = "suscipit";
+                            key = "quibusdam";
+                            value = "unde";
                         }}),
                         add(new Tag() {{
-                            key = "iure";
-                            value = "magnam";
+                            key = "nulla";
+                            value = "corrupti";
                         }}),
                         add(new Tag() {{
-                            key = "debitis";
-                            value = "ipsa";
+                            key = "illum";
+                            value = "vel";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "error";
+                xAmzContentSha256 = "deserunt";
+                xAmzCredential = "suscipit";
+                xAmzDate = "iure";
+                xAmzSecurityToken = "magnam";
+                xAmzSignature = "debitis";
+                xAmzSignedHeaders = "ipsa";
+                xAmzTarget = "EC2WindowsBarleyService.CreateApplication";
+            }}            
 
             CreateApplicationResponse res = sdk.createApplication(req);
 
@@ -84,7 +79,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

@@ -18,14 +18,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.KmsinventoryOrganizationsProtectedResourcesSearchSecurity;
-import org.openapis.openapi.models.operations.KmsinventoryOrganizationsProtectedResourcesSearchPathParams;
-import org.openapis.openapi.models.operations.KmsinventoryOrganizationsProtectedResourcesSearchQueryParams;
 import org.openapis.openapi.models.operations.KmsinventoryOrganizationsProtectedResourcesSearchRequest;
 import org.openapis.openapi.models.operations.KmsinventoryOrganizationsProtectedResourcesSearchResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -34,36 +30,27 @@ public class Application {
                 .build();
 
             KmsinventoryOrganizationsProtectedResourcesSearchRequest req = new KmsinventoryOrganizationsProtectedResourcesSearchRequest() {{
-                security = new KmsinventoryOrganizationsProtectedResourcesSearchSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new KmsinventoryOrganizationsProtectedResourcesSearchPathParams() {{
-                    scope = "corrupti";
-                }};
-                queryParams = new KmsinventoryOrganizationsProtectedResourcesSearchQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    cryptoKey = "nulla";
-                    fields = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    pageSize = 623564;
-                    pageToken = "deserunt";
-                    prettyPrint = false;
-                    quotaUser = "suscipit";
-                    uploadType = "iure";
-                    uploadProtocol = "magnam";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                cryptoKey = "unde";
+                fields = "nulla";
+                key = "corrupti";
+                oauthToken = "illum";
+                pageSize = 423655;
+                pageToken = "error";
+                prettyPrint = false;
+                quotaUser = "deserunt";
+                scope = "suscipit";
+                uploadType = "iure";
+                uploadProtocol = "magnam";
+            }}            
 
-            KmsinventoryOrganizationsProtectedResourcesSearchResponse res = sdk.organizations.kmsinventoryOrganizationsProtectedResourcesSearch(req);
+            KmsinventoryOrganizationsProtectedResourcesSearchResponse res = sdk.organizations.kmsinventoryOrganizationsProtectedResourcesSearch(req, new KmsinventoryOrganizationsProtectedResourcesSearchSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.googleCloudKmsInventoryV1SearchProtectedResourcesResponse.isPresent()) {
                 // handle response
@@ -75,7 +62,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### organizations

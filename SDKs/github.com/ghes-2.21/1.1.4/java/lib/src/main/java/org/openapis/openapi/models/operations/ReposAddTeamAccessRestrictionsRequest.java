@@ -7,17 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposAddTeamAccessRestrictionsRequest {
-    
-    public ReposAddTeamAccessRestrictionsPathParams pathParams;
-    public ReposAddTeamAccessRestrictionsRequest withPathParams(ReposAddTeamAccessRestrictionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public Object requestBody;
+    public ReposAddTeamAccessRestrictionsRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public ReposAddTeamAccessRestrictionsRequest withRequest(Object request) {
-        this.request = request;
+    /**
+     * The name of the branch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
+    public String branch;
+    public ReposAddTeamAccessRestrictionsRequest withBranch(String branch) {
+        this.branch = branch;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposAddTeamAccessRestrictionsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposAddTeamAccessRestrictionsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

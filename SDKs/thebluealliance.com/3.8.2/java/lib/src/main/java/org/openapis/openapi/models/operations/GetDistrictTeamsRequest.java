@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDistrictTeamsRequest {
-    
-    public GetDistrictTeamsPathParams pathParams;
-    public GetDistrictTeamsRequest withPathParams(GetDistrictTeamsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Value of the `ETag` header in the most recently cached response by the client.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetDistrictTeamsRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
-    
-    public GetDistrictTeamsHeaders headers;
-    public GetDistrictTeamsRequest withHeaders(GetDistrictTeamsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetDistrictTeamsSecurity security;
-    public GetDistrictTeamsRequest withSecurity(GetDistrictTeamsSecurity security) {
-        this.security = security;
+    /**
+     * TBA District Key, eg `2016fim`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=district_key")
+    public String districtKey;
+    public GetDistrictTeamsRequest withDistrictKey(String districtKey) {
+        this.districtKey = districtKey;
         return this;
     }
     

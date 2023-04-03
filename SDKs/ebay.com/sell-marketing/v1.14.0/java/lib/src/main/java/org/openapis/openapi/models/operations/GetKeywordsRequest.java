@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetKeywordsRequest {
-    
-    public GetKeywordsPathParams pathParams;
-    public GetKeywordsRequest withPathParams(GetKeywordsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A comma-separated list of ad group IDs. This query parameter is used if the seller wants to retrieve keywords from one or more specific ad groups. If this query parameter is not used, all keywords that are part of the CPC campaign are returned.&lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt;You can call the &lt;a href="/api-docs/sell/marketing/resources/adgroup/methods/getAdGroups"&gt;getAdGroups&lt;/a&gt;  method to retrieve the ad group IDs for a seller.&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ad_group_ids")
+    public String adGroupIds;
+    public GetKeywordsRequest withAdGroupIds(String adGroupIds) {
+        this.adGroupIds = adGroupIds;
         return this;
     }
     
-    
-    public GetKeywordsQueryParams queryParams;
-    public GetKeywordsRequest withQueryParams(GetKeywordsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; You can retrieve the campaign IDs for a specified seller using the &lt;a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns"&gt;getCampaigns&lt;/a&gt; method.&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaign_id")
+    public String campaignId;
+    public GetKeywordsRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
         return this;
     }
     
+    /**
+     * A comma-separated list of keyword statuses. The results will be filtered to only include the given statuses of the keyword. If none are provided, all keywords are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword_status")
+    public String keywordStatus;
+    public GetKeywordsRequest withKeywordStatus(String keywordStatus) {
+        this.keywordStatus = keywordStatus;
+        return this;
+    }
     
-    public GetKeywordsSecurity security;
-    public GetKeywordsRequest withSecurity(GetKeywordsSecurity security) {
-        this.security = security;
+    /**
+     * &lt;p&gt;Specifies the maximum number of results to return on a page in the paginated response.&lt;/p&gt;  &lt;b&gt;Default: &lt;/b&gt;10 &lt;br&gt;&lt;b&gt;Maximum: &lt;/b&gt; 500
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public GetKeywordsRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Specifies the number of results to skip in the result set before returning the first report in the paginated response.  &lt;p&gt;Combine &lt;b&gt;offset&lt;/b&gt; with the &lt;b&gt;limit&lt;/b&gt; query parameter to control the items returned in the response. For example, if you supply an &lt;b&gt;offset&lt;/b&gt; of &lt;code&gt;0&lt;/code&gt; and a &lt;b&gt;limit&lt;/b&gt; of &lt;code&gt;10&lt;/code&gt;, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If &lt;b&gt;offset&lt;/b&gt; is &lt;code&gt;10&lt;/code&gt; and &lt;b&gt;limit&lt;/b&gt; is &lt;code&gt;20&lt;/code&gt;, the first page of the response contains items 11-30 from the complete result set.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Default:&lt;/b&gt; 0&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetKeywordsRequest withOffset(String offset) {
+        this.offset = offset;
         return this;
     }
     

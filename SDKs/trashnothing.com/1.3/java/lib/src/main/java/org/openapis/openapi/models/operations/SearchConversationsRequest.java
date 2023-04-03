@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchConversationsRequest {
+    /**
+     * Client device pixel ratio used to determine thumbnail size (default 1.0).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_pixel_ratio")
+    public Double devicePixelRatio;
+    public SearchConversationsRequest withDevicePixelRatio(Double devicePixelRatio) {
+        this.devicePixelRatio = devicePixelRatio;
+        return this;
+    }
     
-    public SearchConversationsQueryParams queryParams;
-    public SearchConversationsRequest withQueryParams(SearchConversationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page of conversations to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public SearchConversationsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of conversations to return per page (must be &gt;= 1 and &lt;= 30).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public SearchConversationsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The search query used to find conversations and messages.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public SearchConversationsRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

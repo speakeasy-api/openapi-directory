@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContractIdRequest {
-    
-    public GetContractIdPathParams pathParams;
-    public GetContractIdRequest withPathParams(GetContractIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetContractIdSecurity security;
-    public GetContractIdRequest withSecurity(GetContractIdSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetContractIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

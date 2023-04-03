@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AgentStorePersistsRequest {
+    /**
+     * Agent of the value space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public AgentStorePersistsRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public AgentStorePersistsPathParams pathParams;
-    public AgentStorePersistsRequest withPathParams(AgentStorePersistsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Variable name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=var")
+    public String var;
+    public AgentStorePersistsRequest withVar(String var) {
+        this.var = var;
         return this;
     }
     

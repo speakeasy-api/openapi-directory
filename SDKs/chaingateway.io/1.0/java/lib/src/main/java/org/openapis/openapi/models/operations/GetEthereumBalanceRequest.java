@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEthereumBalanceRequest {
-    
-    public GetEthereumBalanceHeaders headers;
-    public GetEthereumBalanceRequest withHeaders(GetEthereumBalanceHeaders headers) {
-        this.headers = headers;
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetEthereumBalanceRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GetEthereumBalanceRequest request;
-    public GetEthereumBalanceRequest withRequest(org.openapis.openapi.models.shared.GetEthereumBalanceRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GetEthereumBalanceRequest getEthereumBalanceRequest;
+    public GetEthereumBalanceRequest withGetEthereumBalanceRequest(org.openapis.openapi.models.shared.GetEthereumBalanceRequest getEthereumBalanceRequest) {
+        this.getEthereumBalanceRequest = getEthereumBalanceRequest;
         return this;
     }
     

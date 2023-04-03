@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnliWithoutApplicationnkApplicationRequest {
-    
-    public UnliWithoutApplicationnkApplicationPathParams pathParams;
-    public UnliWithoutApplicationnkApplicationRequest withPathParams(UnliWithoutApplicationnkApplicationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the application you want to unlink
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application_id")
+    public String applicationId;
+    public UnliWithoutApplicationnkApplicationRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
         return this;
     }
     
+    /**
+     * External id of the account you want to unlink an application from
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=external_id")
+    public String externalId;
+    public UnliWithoutApplicationnkApplicationRequest withExternalId(String externalId) {
+        this.externalId = externalId;
+        return this;
+    }
     
-    public UnliWithoutApplicationnkApplicationSecurity security;
-    public UnliWithoutApplicationnkApplicationRequest withSecurity(UnliWithoutApplicationnkApplicationSecurity security) {
-        this.security = security;
+    /**
+     * Provider of the account you want to unlink an application from
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=provider")
+    public UnliWithoutApplicationnkApplicationProviderEnum provider;
+    public UnliWithoutApplicationnkApplicationRequest withProvider(UnliWithoutApplicationnkApplicationProviderEnum provider) {
+        this.provider = provider;
         return this;
     }
     

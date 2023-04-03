@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddFundsToCarrierRequest {
-    
-    public AddFundsToCarrierPathParams pathParams;
-    public AddFundsToCarrierRequest withPathParams(AddFundsToCarrierPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AddFundsToCarrierRequestBody addFundsToCarrierRequestBody;
+    public AddFundsToCarrierRequest withAddFundsToCarrierRequestBody(org.openapis.openapi.models.shared.AddFundsToCarrierRequestBody addFundsToCarrierRequestBody) {
+        this.addFundsToCarrierRequestBody = addFundsToCarrierRequestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AddFundsToCarrierRequestBody request;
-    public AddFundsToCarrierRequest withRequest(org.openapis.openapi.models.shared.AddFundsToCarrierRequestBody request) {
-        this.request = request;
+    /**
+     * Carrier ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=carrier_id")
+    public String carrierId;
+    public AddFundsToCarrierRequest withCarrierId(String carrierId) {
+        this.carrierId = carrierId;
         return this;
     }
     

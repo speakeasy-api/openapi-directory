@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateIterationJsonRequest {
-    
-    public UpdateIterationJsonPathParams pathParams;
-    public UpdateIterationJsonRequest withPathParams(UpdateIterationJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateIterationJsonHeaders headers;
-    public UpdateIterationJsonRequest withHeaders(UpdateIterationJsonHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The updated iteration model.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.IterationInput request;
-    public UpdateIterationJsonRequest withRequest(org.openapis.openapi.models.shared.IterationInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.IterationInput iterationInput;
+    public UpdateIterationJsonRequest withIterationInput(org.openapis.openapi.models.shared.IterationInput iterationInput) {
+        this.iterationInput = iterationInput;
+        return this;
+    }
+    
+    /**
+     * API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public UpdateIterationJsonRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
+        return this;
+    }
+    
+    /**
+     * Iteration id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=iterationId")
+    public String iterationId;
+    public UpdateIterationJsonRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
+        return this;
+    }
+    
+    /**
+     * Project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public UpdateIterationJsonRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

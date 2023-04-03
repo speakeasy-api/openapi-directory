@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteInternalTransferBatchPaymentRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=batchUuid")
+    public String batchUuid;
+    public DeleteInternalTransferBatchPaymentRequest withBatchUuid(String batchUuid) {
+        this.batchUuid = batchUuid;
+        return this;
+    }
     
-    public DeleteInternalTransferBatchPaymentPathParams pathParams;
-    public DeleteInternalTransferBatchPaymentRequest withPathParams(DeleteInternalTransferBatchPaymentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemUuid")
+    public String itemUuid;
+    public DeleteInternalTransferBatchPaymentRequest withItemUuid(String itemUuid) {
+        this.itemUuid = itemUuid;
         return this;
     }
     

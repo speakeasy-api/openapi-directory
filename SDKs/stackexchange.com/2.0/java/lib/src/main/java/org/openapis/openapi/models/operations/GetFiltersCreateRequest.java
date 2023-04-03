@@ -4,13 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFiltersCreateRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=base")
+    public String base;
+    public GetFiltersCreateRequest withBase(String base) {
+        this.base = base;
+        return this;
+    }
     
-    public GetFiltersCreateQueryParams queryParams;
-    public GetFiltersCreateRequest withQueryParams(GetFiltersCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * String list (semicolon delimited).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude")
+    public String exclude;
+    public GetFiltersCreateRequest withExclude(String exclude) {
+        this.exclude = exclude;
+        return this;
+    }
+    
+    /**
+     * String list (semicolon delimited).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public String include;
+    public GetFiltersCreateRequest withInclude(String include) {
+        this.include = include;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unsafe")
+    public Boolean unsafe;
+    public GetFiltersCreateRequest withUnsafe(Boolean unsafe) {
+        this.unsafe = unsafe;
         return this;
     }
     

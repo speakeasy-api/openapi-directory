@@ -4,20 +4,169 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAssociateVpcCidrBlockRequest {
-    
-    public GETAssociateVpcCidrBlockQueryParams queryParams;
-    public GETAssociateVpcCidrBlockRequest withQueryParams(GETAssociateVpcCidrBlockQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETAssociateVpcCidrBlockActionEnum action;
+    public GETAssociateVpcCidrBlockRequest withAction(GETAssociateVpcCidrBlockActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Requests an Amazon-provided IPv6 CIDR block with a /56 prefix length for the VPC. You cannot specify the range of IPv6 addresses, or the size of the CIDR block.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AmazonProvidedIpv6CidrBlock")
+    public Boolean amazonProvidedIpv6CidrBlock;
+    public GETAssociateVpcCidrBlockRequest withAmazonProvidedIpv6CidrBlock(Boolean amazonProvidedIpv6CidrBlock) {
+        this.amazonProvidedIpv6CidrBlock = amazonProvidedIpv6CidrBlock;
+        return this;
+    }
     
-    public GETAssociateVpcCidrBlockHeaders headers;
-    public GETAssociateVpcCidrBlockRequest withHeaders(GETAssociateVpcCidrBlockHeaders headers) {
-        this.headers = headers;
+    /**
+     * An IPv4 CIDR block to associate with the VPC.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CidrBlock")
+    public String cidrBlock;
+    public GETAssociateVpcCidrBlockRequest withCidrBlock(String cidrBlock) {
+        this.cidrBlock = cidrBlock;
+        return this;
+    }
+    
+    /**
+     * Associate a CIDR allocated from an IPv4 IPAM pool to a VPC. For more information about Amazon VPC IP Address Manager (IPAM), see &lt;a href="https://docs.aws.amazon.com/vpc/latest/ipam/what-is-it-ipam.html"&gt;What is IPAM?&lt;/a&gt; in the &lt;i&gt;Amazon VPC IPAM User Guide&lt;/i&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv4IpamPoolId")
+    public String ipv4IpamPoolId;
+    public GETAssociateVpcCidrBlockRequest withIpv4IpamPoolId(String ipv4IpamPoolId) {
+        this.ipv4IpamPoolId = ipv4IpamPoolId;
+        return this;
+    }
+    
+    /**
+     * The netmask length of the IPv4 CIDR you would like to associate from an Amazon VPC IP Address Manager (IPAM) pool. For more information about IPAM, see &lt;a href="https://docs.aws.amazon.com/vpc/latest/ipam/what-is-it-ipam.html"&gt;What is IPAM?&lt;/a&gt; in the &lt;i&gt;Amazon VPC IPAM User Guide&lt;/i&gt;. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv4NetmaskLength")
+    public Long ipv4NetmaskLength;
+    public GETAssociateVpcCidrBlockRequest withIpv4NetmaskLength(Long ipv4NetmaskLength) {
+        this.ipv4NetmaskLength = ipv4NetmaskLength;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;An IPv6 CIDR block from the IPv6 address pool. You must also specify &lt;code&gt;Ipv6Pool&lt;/code&gt; in the request.&lt;/p&gt; &lt;p&gt;To let Amazon choose the IPv6 CIDR block for you, omit this parameter.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv6CidrBlock")
+    public String ipv6CidrBlock;
+    public GETAssociateVpcCidrBlockRequest withIpv6CidrBlock(String ipv6CidrBlock) {
+        this.ipv6CidrBlock = ipv6CidrBlock;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the location from which we advertise the IPV6 CIDR block. Use this parameter to limit the CIDR block to this location.&lt;/p&gt; &lt;p&gt; You must set &lt;code&gt;AmazonProvidedIpv6CidrBlock&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; to use this parameter.&lt;/p&gt; &lt;p&gt; You can have one IPv6 CIDR block association per network border group.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv6CidrBlockNetworkBorderGroup")
+    public String ipv6CidrBlockNetworkBorderGroup;
+    public GETAssociateVpcCidrBlockRequest withIpv6CidrBlockNetworkBorderGroup(String ipv6CidrBlockNetworkBorderGroup) {
+        this.ipv6CidrBlockNetworkBorderGroup = ipv6CidrBlockNetworkBorderGroup;
+        return this;
+    }
+    
+    /**
+     * Associates a CIDR allocated from an IPv6 IPAM pool to a VPC. For more information about Amazon VPC IP Address Manager (IPAM), see &lt;a href="https://docs.aws.amazon.com/vpc/latest/ipam/what-is-it-ipam.html"&gt;What is IPAM?&lt;/a&gt; in the &lt;i&gt;Amazon VPC IPAM User Guide&lt;/i&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv6IpamPoolId")
+    public String ipv6IpamPoolId;
+    public GETAssociateVpcCidrBlockRequest withIpv6IpamPoolId(String ipv6IpamPoolId) {
+        this.ipv6IpamPoolId = ipv6IpamPoolId;
+        return this;
+    }
+    
+    /**
+     * The netmask length of the IPv6 CIDR you would like to associate from an Amazon VPC IP Address Manager (IPAM) pool. For more information about IPAM, see &lt;a href="https://docs.aws.amazon.com/vpc/latest/ipam/what-is-it-ipam.html"&gt;What is IPAM?&lt;/a&gt; in the &lt;i&gt;Amazon VPC IPAM User Guide&lt;/i&gt;. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv6NetmaskLength")
+    public Long ipv6NetmaskLength;
+    public GETAssociateVpcCidrBlockRequest withIpv6NetmaskLength(Long ipv6NetmaskLength) {
+        this.ipv6NetmaskLength = ipv6NetmaskLength;
+        return this;
+    }
+    
+    /**
+     * The ID of an IPv6 address pool from which to allocate the IPv6 CIDR block.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv6Pool")
+    public String ipv6Pool;
+    public GETAssociateVpcCidrBlockRequest withIpv6Pool(String ipv6Pool) {
+        this.ipv6Pool = ipv6Pool;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETAssociateVpcCidrBlockVersionEnum version;
+    public GETAssociateVpcCidrBlockRequest withVersion(GETAssociateVpcCidrBlockVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * The ID of the VPC.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcId")
+    public String vpcId;
+    public GETAssociateVpcCidrBlockRequest withVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETAssociateVpcCidrBlockRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETAssociateVpcCidrBlockRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETAssociateVpcCidrBlockRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETAssociateVpcCidrBlockRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETAssociateVpcCidrBlockRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETAssociateVpcCidrBlockRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETAssociateVpcCidrBlockRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

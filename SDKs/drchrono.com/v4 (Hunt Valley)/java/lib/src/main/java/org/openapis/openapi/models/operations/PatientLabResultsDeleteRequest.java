@@ -4,27 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientLabResultsDeleteRequest {
-    
-    public PatientLabResultsDeletePathParams pathParams;
-    public PatientLabResultsDeleteRequest withPathParams(PatientLabResultsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientLabResultsDeleteRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public PatientLabResultsDeleteQueryParams queryParams;
-    public PatientLabResultsDeleteRequest withQueryParams(PatientLabResultsDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatientLabResultsDeleteRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering_doctor")
+    public Long orderingDoctor;
+    public PatientLabResultsDeleteRequest withOrderingDoctor(Long orderingDoctor) {
+        this.orderingDoctor = orderingDoctor;
+        return this;
+    }
     
-    public PatientLabResultsDeleteSecurity security;
-    public PatientLabResultsDeleteRequest withSecurity(PatientLabResultsDeleteSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public PatientLabResultsDeleteRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public PatientLabResultsDeleteRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

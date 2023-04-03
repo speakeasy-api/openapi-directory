@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivitypubPersonInboxRequest {
-    
-    public ActivitypubPersonInboxPathParams pathParams;
-    public ActivitypubPersonInboxRequest withPathParams(ActivitypubPersonInboxPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * username of the user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public ActivitypubPersonInboxRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

@@ -18,14 +18,11 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateFileAssociationSecurity;
-import org.openapis.openapi.models.operations.CreateFileAssociationPathParams;
-import org.openapis.openapi.models.operations.CreateFileAssociationHeaders;
 import org.openapis.openapi.models.operations.CreateFileAssociationRequest;
 import org.openapis.openapi.models.operations.CreateFileAssociationResponse;
 import org.openapis.openapi.models.shared.Association;
 import org.openapis.openapi.models.shared.ObjectTypeEnum;
 import org.openapis.openapi.models.shared.ObjectGroupEnum;
-import org.openapis.openapi.models.shared.SchemeOAuth2;
 
 public class Application {
     public static void main(String[] args) {
@@ -34,26 +31,19 @@ public class Application {
                 .build();
 
             CreateFileAssociationRequest req = new CreateFileAssociationRequest() {{
-                security = new CreateFileAssociationSecurity() {{
-                    oAuth2 = new SchemeOAuth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                association = new Association() {{
+                    fileId = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
+                    objectGroup = "Overpayment";
+                    objectId = "05dfc2dd-f7cc-478c-a1ba-928fc816742c";
+                    objectType = "Current";
                 }};
-                pathParams = new CreateFileAssociationPathParams() {{
-                    fileId = "4ff1e5cc-9835-40d5-bb18-09fdb118db9c";
-                }};
-                headers = new CreateFileAssociationHeaders() {{
-                    xeroTenantId = "corrupti";
-                }};
-                request = new Association() {{
-                    fileId = "9bd9d8d6-9a67-44e0-b467-cc8796ed151a";
-                    objectGroup = "Account";
-                    objectId = "5dfc2ddf-7cc7-48ca-9ba9-28fc816742cb";
-                    objectType = "ManJournal";
-                }};
-            }};            
+                fileId = "4ff1e5cc-9835-40d5-bb18-09fdb118db9c";
+                xeroTenantId = "esse";
+            }}            
 
-            CreateFileAssociationResponse res = sdk.files.createFileAssociation(req);
+            CreateFileAssociationResponse res = sdk.files.createFileAssociation(req, new CreateFileAssociationSecurity() {{
+                oAuth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.association.isPresent()) {
                 // handle response
@@ -65,7 +55,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### files

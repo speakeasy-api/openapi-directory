@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsadminPropertiesGoogleAdsLinksPatchRequest {
-    
-    public AnalyticsadminPropertiesGoogleAdsLinksPatchPathParams pathParams;
-    public AnalyticsadminPropertiesGoogleAdsLinksPatchRequest withPathParams(AnalyticsadminPropertiesGoogleAdsLinksPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AnalyticsadminPropertiesGoogleAdsLinksPatchQueryParams queryParams;
-    public AnalyticsadminPropertiesGoogleAdsLinksPatchRequest withQueryParams(AnalyticsadminPropertiesGoogleAdsLinksPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AnalyticsadminPropertiesGoogleAdsLinksPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1betaGoogleAdsLinkInput request;
-    public AnalyticsadminPropertiesGoogleAdsLinksPatchRequest withRequest(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1betaGoogleAdsLinkInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1betaGoogleAdsLinkInput googleAnalyticsAdminV1betaGoogleAdsLinkInput;
+    public AnalyticsadminPropertiesGoogleAdsLinksPatchRequest withGoogleAnalyticsAdminV1betaGoogleAdsLinkInput(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1betaGoogleAdsLinkInput googleAnalyticsAdminV1betaGoogleAdsLinkInput) {
+        this.googleAnalyticsAdminV1betaGoogleAdsLinkInput = googleAnalyticsAdminV1betaGoogleAdsLinkInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AnalyticsadminPropertiesGoogleAdsLinksPatchRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public AnalyticsadminPropertiesGoogleAdsLinksPatchSecurity security;
-    public AnalyticsadminPropertiesGoogleAdsLinksPatchRequest withSecurity(AnalyticsadminPropertiesGoogleAdsLinksPatchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AnalyticsadminPropertiesGoogleAdsLinksPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AnalyticsadminPropertiesGoogleAdsLinksPatchRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AnalyticsadminPropertiesGoogleAdsLinksPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AnalyticsadminPropertiesGoogleAdsLinksPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Output only. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId} Note: googleAdsLinkId is not the Google Ads customer ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public AnalyticsadminPropertiesGoogleAdsLinksPatchRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AnalyticsadminPropertiesGoogleAdsLinksPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AnalyticsadminPropertiesGoogleAdsLinksPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AnalyticsadminPropertiesGoogleAdsLinksPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Required. The list of fields to be updated. Field names must be in snake case (e.g., "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use one path with the string "*" to match all fields.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
+    public String updateMask;
+    public AnalyticsadminPropertiesGoogleAdsLinksPatchRequest withUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AnalyticsadminPropertiesGoogleAdsLinksPatchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AnalyticsadminPropertiesGoogleAdsLinksPatchRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

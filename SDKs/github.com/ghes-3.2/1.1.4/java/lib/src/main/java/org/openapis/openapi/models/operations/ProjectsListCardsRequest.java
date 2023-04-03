@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsListCardsRequest {
-    
-    public ProjectsListCardsPathParams pathParams;
-    public ProjectsListCardsRequest withPathParams(ProjectsListCardsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filters the project cards that are returned by the card's state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=archived_state")
+    public ProjectsListCardsArchivedStateEnum archivedState;
+    public ProjectsListCardsRequest withArchivedState(ProjectsListCardsArchivedStateEnum archivedState) {
+        this.archivedState = archivedState;
         return this;
     }
     
+    /**
+     * The unique identifier of the column.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=column_id")
+    public Long columnId;
+    public ProjectsListCardsRequest withColumnId(Long columnId) {
+        this.columnId = columnId;
+        return this;
+    }
     
-    public ProjectsListCardsQueryParams queryParams;
-    public ProjectsListCardsRequest withQueryParams(ProjectsListCardsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ProjectsListCardsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ProjectsListCardsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

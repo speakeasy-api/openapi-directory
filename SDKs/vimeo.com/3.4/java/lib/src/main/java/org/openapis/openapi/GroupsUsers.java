@@ -38,7 +38,7 @@ public class GroupsUsers {
      */
     public org.openapis.openapi.models.operations.CheckIfUserJoinedGroupResponse checkIfUserJoinedGroup(org.openapis.openapi.models.operations.CheckIfUserJoinedGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfUserJoinedGroupPathParams.class, baseUrl, "/users/{user_id}/groups/{group_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfUserJoinedGroupRequest.class, baseUrl, "/users/{user_id}/groups/{group_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -79,7 +79,7 @@ public class GroupsUsers {
      */
     public org.openapis.openapi.models.operations.CheckIfUserJoinedGroupAlt1Response checkIfUserJoinedGroupAlt1(org.openapis.openapi.models.operations.CheckIfUserJoinedGroupAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfUserJoinedGroupAlt1PathParams.class, baseUrl, "/me/groups/{group_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfUserJoinedGroupAlt1Request.class, baseUrl, "/me/groups/{group_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,13 +120,13 @@ public class GroupsUsers {
      */
     public org.openapis.openapi.models.operations.GetGroupMembersResponse getGroupMembers(org.openapis.openapi.models.operations.GetGroupMembersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGroupMembersPathParams.class, baseUrl, "/groups/{group_id}/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGroupMembersRequest.class, baseUrl, "/groups/{group_id}/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGroupMembersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGroupMembersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -173,13 +173,13 @@ public class GroupsUsers {
      */
     public org.openapis.openapi.models.operations.GetUserGroupsResponse getUserGroups(org.openapis.openapi.models.operations.GetUserGroupsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserGroupsPathParams.class, baseUrl, "/users/{user_id}/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserGroupsRequest.class, baseUrl, "/users/{user_id}/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserGroupsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserGroupsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -224,7 +224,7 @@ public class GroupsUsers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserGroupsAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserGroupsAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

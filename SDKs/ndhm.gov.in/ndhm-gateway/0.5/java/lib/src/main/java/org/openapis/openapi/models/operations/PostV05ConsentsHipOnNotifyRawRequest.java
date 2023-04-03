@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05ConsentsHipOnNotifyRawRequest {
-    
-    public PostV05ConsentsHipOnNotifyRawHeaders headers;
-    public PostV05ConsentsHipOnNotifyRawRequest withHeaders(PostV05ConsentsHipOnNotifyRawHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05ConsentsHipOnNotifyRawRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/xml")
-    public byte[] request;
-    public PostV05ConsentsHipOnNotifyRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public PostV05ConsentsHipOnNotifyRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Suffix of the consent manager to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CM-ID")
+    public String xCmId;
+    public PostV05ConsentsHipOnNotifyRawRequest withXCmId(String xCmId) {
+        this.xCmId = xCmId;
         return this;
     }
     

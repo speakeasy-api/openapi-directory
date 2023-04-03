@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETGroupsForCapacityReservationRequest {
-    
-    public GETGETGroupsForCapacityReservationQueryParams queryParams;
-    public GETGETGroupsForCapacityReservationRequest withQueryParams(GETGETGroupsForCapacityReservationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETGroupsForCapacityReservationActionEnum action;
+    public GETGETGroupsForCapacityReservationRequest withAction(GETGETGroupsForCapacityReservationActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The ID of the Capacity Reservation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CapacityReservationId")
+    public String capacityReservationId;
+    public GETGETGroupsForCapacityReservationRequest withCapacityReservationId(String capacityReservationId) {
+        this.capacityReservationId = capacityReservationId;
+        return this;
+    }
     
-    public GETGETGroupsForCapacityReservationHeaders headers;
-    public GETGETGroupsForCapacityReservationRequest withHeaders(GETGETGroupsForCapacityReservationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETGETGroupsForCapacityReservationRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to return for the request in a single page. The remaining results can be seen by sending another request with the returned &lt;code&gt;nextToken&lt;/code&gt; value. This value can be between 5 and 500. If &lt;code&gt;maxResults&lt;/code&gt; is given a larger value than 500, you receive an error.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public GETGETGroupsForCapacityReservationRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The token to use to retrieve the next page of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETGETGroupsForCapacityReservationRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETGroupsForCapacityReservationVersionEnum version;
+    public GETGETGroupsForCapacityReservationRequest withVersion(GETGETGroupsForCapacityReservationVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGETGroupsForCapacityReservationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGETGroupsForCapacityReservationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGETGroupsForCapacityReservationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGETGroupsForCapacityReservationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGETGroupsForCapacityReservationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGETGroupsForCapacityReservationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGETGroupsForCapacityReservationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

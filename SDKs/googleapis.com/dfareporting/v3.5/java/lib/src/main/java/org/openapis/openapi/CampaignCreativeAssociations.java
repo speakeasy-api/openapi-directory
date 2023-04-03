@@ -34,27 +34,28 @@ public class CampaignCreativeAssociations {
     /**
      * Associates a creative with the specified campaign. This method creates a default ad with dimensions matching the creative in the campaign if such a default ad does not exist already.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsInsertResponse dfareportingCampaignCreativeAssociationsInsert(org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsInsertResponse dfareportingCampaignCreativeAssociationsInsert(org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsInsertRequest request, org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsInsertPathParams.class, baseUrl, "/userprofiles/{profileId}/campaigns/{campaignId}/campaignCreativeAssociations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsInsertRequest.class, baseUrl, "/userprofiles/{profileId}/campaigns/{campaignId}/campaignCreativeAssociations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "campaignCreativeAssociation", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class CampaignCreativeAssociations {
     /**
      * Retrieves the list of creative IDs associated with the specified campaign. This method supports paging.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsListResponse dfareportingCampaignCreativeAssociationsList(org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsListResponse dfareportingCampaignCreativeAssociationsList(org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsListRequest request, org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsListPathParams.class, baseUrl, "/userprofiles/{profileId}/campaigns/{campaignId}/campaignCreativeAssociations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsListRequest.class, baseUrl, "/userprofiles/{profileId}/campaigns/{campaignId}/campaignCreativeAssociations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingCampaignCreativeAssociationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

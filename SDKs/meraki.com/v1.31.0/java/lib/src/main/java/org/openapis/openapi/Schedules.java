@@ -40,7 +40,7 @@ public class Schedules {
      */
     public org.openapis.openapi.models.operations.GetNetworkCameraSchedulesResponse getNetworkCameraSchedules(org.openapis.openapi.models.operations.GetNetworkCameraSchedulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCameraSchedulesPathParams.class, baseUrl, "/networks/{networkId}/camera/schedules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCameraSchedulesRequest.class, baseUrl, "/networks/{networkId}/camera/schedules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,7 +80,7 @@ public class Schedules {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidSchedulesResponse getNetworkWirelessSsidSchedules(org.openapis.openapi.models.operations.GetNetworkWirelessSsidSchedulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidSchedulesPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/schedules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidSchedulesRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/schedules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,12 +120,12 @@ public class Schedules {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidSchedulesResponse updateNetworkWirelessSsidSchedules(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidSchedulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidSchedulesPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/schedules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidSchedulesRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/schedules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

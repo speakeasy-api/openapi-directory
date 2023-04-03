@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTextTrackRequest {
-    
-    public CreateTextTrackPathParams pathParams;
-    public CreateTextTrackRequest withPathParams(CreateTextTrackPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.video.texttrack+json")
-    public CreateTextTrackRequestBody request;
-    public CreateTextTrackRequest withRequest(CreateTextTrackRequestBody request) {
-        this.request = request;
+    public CreateTextTrackRequestBody requestBody;
+    public CreateTextTrackRequest withRequestBody(CreateTextTrackRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateTextTrackSecurity security;
-    public CreateTextTrackRequest withSecurity(CreateTextTrackSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public CreateTextTrackRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

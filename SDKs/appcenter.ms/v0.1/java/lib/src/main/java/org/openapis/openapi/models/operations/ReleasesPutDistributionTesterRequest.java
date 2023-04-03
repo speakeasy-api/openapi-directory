@@ -7,24 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesPutDistributionTesterRequest {
-    
-    public ReleasesPutDistributionTesterPathParams pathParams;
-    public ReleasesPutDistributionTesterRequest withPathParams(ReleasesPutDistributionTesterPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReleasesPutDistributionTesterRequestBody request;
-    public ReleasesPutDistributionTesterRequest withRequest(ReleasesPutDistributionTesterRequestBody request) {
-        this.request = request;
+    public ReleasesPutDistributionTesterRequestBody requestBody;
+    public ReleasesPutDistributionTesterRequest withRequestBody(ReleasesPutDistributionTesterRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ReleasesPutDistributionTesterRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public ReleasesPutDistributionTesterSecurity security;
-    public ReleasesPutDistributionTesterRequest withSecurity(ReleasesPutDistributionTesterSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ReleasesPutDistributionTesterRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * The ID of the release
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
+    public Long releaseId;
+    public ReleasesPutDistributionTesterRequest withReleaseId(Long releaseId) {
+        this.releaseId = releaseId;
+        return this;
+    }
+    
+    /**
+     * The id of the tester
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tester_id")
+    public String testerId;
+    public ReleasesPutDistributionTesterRequest withTesterId(String testerId) {
+        this.testerId = testerId;
         return this;
     }
     

@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticlePutImageRawRequest {
-    
-    public ArticlePutImageRawPathParams pathParams;
-    public ArticlePutImageRawRequest withPathParams(ArticlePutImageRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The ArticleApiImageModel
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public ArticlePutImageRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public ArticlePutImageRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The image id. If you pass 0, the image will be added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=imageId")
+    public Long imageId;
+    public ArticlePutImageRawRequest withImageId(Long imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    
+    /**
+     * The product id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public Long productId;
+    public ArticlePutImageRawRequest withProductId(Long productId) {
+        this.productId = productId;
         return this;
     }
     

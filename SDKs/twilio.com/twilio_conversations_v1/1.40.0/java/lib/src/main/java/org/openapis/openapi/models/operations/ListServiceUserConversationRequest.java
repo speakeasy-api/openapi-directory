@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListServiceUserConversationRequest {
-    
-    public ListServiceUserConversationPathParams pathParams;
-    public ListServiceUserConversationRequest withPathParams(ListServiceUserConversationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Conversation resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public ListServiceUserConversationRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     
-    
-    public ListServiceUserConversationQueryParams queryParams;
-    public ListServiceUserConversationRequest withQueryParams(ListServiceUserConversationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListServiceUserConversationRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListServiceUserConversationSecurity security;
-    public ListServiceUserConversationRequest withSecurity(ListServiceUserConversationSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListServiceUserConversationRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListServiceUserConversationRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
     
-    public String serverURL;
-    public ListServiceUserConversationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource). This value can be either the `sid` or the `identity` of the User resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=UserSid")
+    public String userSid;
+    public ListServiceUserConversationRequest withUserSid(String userSid) {
+        this.userSid = userSid;
         return this;
     }
     

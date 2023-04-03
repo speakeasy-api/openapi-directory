@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestPasswordPoliciesForPasswordTypeRequest {
-    
-    public RequestPasswordPoliciesForPasswordTypePathParams pathParams;
-    public RequestPasswordPoliciesForPasswordTypeRequest withPathParams(RequestPasswordPoliciesForPasswordTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestPasswordPoliciesForPasswordTypeRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestPasswordPoliciesForPasswordTypeHeaders headers;
-    public RequestPasswordPoliciesForPasswordTypeRequest withHeaders(RequestPasswordPoliciesForPasswordTypeHeaders headers) {
-        this.headers = headers;
+    /**
+     * Password type
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=password_type")
+    public RequestPasswordPoliciesForPasswordTypePasswordTypeEnum passwordType;
+    public RequestPasswordPoliciesForPasswordTypeRequest withPasswordType(RequestPasswordPoliciesForPasswordTypePasswordTypeEnum passwordType) {
+        this.passwordType = passwordType;
         return this;
     }
     

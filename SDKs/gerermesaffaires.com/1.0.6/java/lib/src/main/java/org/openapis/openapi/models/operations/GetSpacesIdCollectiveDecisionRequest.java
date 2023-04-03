@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesIdCollectiveDecisionRequest {
-    
-    public GetSpacesIdCollectiveDecisionPathParams pathParams;
-    public GetSpacesIdCollectiveDecisionRequest withPathParams(GetSpacesIdCollectiveDecisionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Date of the collective decision YYYMMDD
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Date")
+    public String date;
+    public GetSpacesIdCollectiveDecisionRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     
+    /**
+     * Event of the collective decision (see post for the list of events)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Event")
+    public String event;
+    public GetSpacesIdCollectiveDecisionRequest withEvent(String event) {
+        this.event = event;
+        return this;
+    }
     
-    public GetSpacesIdCollectiveDecisionQueryParams queryParams;
-    public GetSpacesIdCollectiveDecisionRequest withQueryParams(GetSpacesIdCollectiveDecisionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If true returns only invoices with a CompanyRegistrationCertificate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HasCompanyRegistrationCertificate")
+    public GetSpacesIdCollectiveDecisionHasCompanyRegistrationCertificateEnum hasCompanyRegistrationCertificate;
+    public GetSpacesIdCollectiveDecisionRequest withHasCompanyRegistrationCertificate(GetSpacesIdCollectiveDecisionHasCompanyRegistrationCertificateEnum hasCompanyRegistrationCertificate) {
+        this.hasCompanyRegistrationCertificate = hasCompanyRegistrationCertificate;
+        return this;
+    }
+    
+    /**
+     * If true returns only invoices with Minutes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HasMinutes")
+    public GetSpacesIdCollectiveDecisionHasMinutesEnum hasMinutes;
+    public GetSpacesIdCollectiveDecisionRequest withHasMinutes(GetSpacesIdCollectiveDecisionHasMinutesEnum hasMinutes) {
+        this.hasMinutes = hasMinutes;
+        return this;
+    }
+    
+    /**
+     * If true returns only invoices with a SireneRegister
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HasSireneRegister")
+    public GetSpacesIdCollectiveDecisionHasSireneRegisterEnum hasSireneRegister;
+    public GetSpacesIdCollectiveDecisionRequest withHasSireneRegister(GetSpacesIdCollectiveDecisionHasSireneRegisterEnum hasSireneRegister) {
+        this.hasSireneRegister = hasSireneRegister;
+        return this;
+    }
+    
+    /**
+     * If true returns only invoices with a Status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HasStatus")
+    public GetSpacesIdCollectiveDecisionHasStatusEnum hasStatus;
+    public GetSpacesIdCollectiveDecisionRequest withHasStatus(GetSpacesIdCollectiveDecisionHasStatusEnum hasStatus) {
+        this.hasStatus = hasStatus;
+        return this;
+    }
+    
+    /**
+     * index range of the results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Range")
+    public String range;
+    public GetSpacesIdCollectiveDecisionRequest withRange(String range) {
+        this.range = range;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesIdCollectiveDecisionRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

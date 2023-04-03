@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSavingsPlansPurchaseRecommendationGenerationRequest {
-    
-    public ListSavingsPlansPurchaseRecommendationGenerationHeaders headers;
-    public ListSavingsPlansPurchaseRecommendationGenerationRequest withHeaders(ListSavingsPlansPurchaseRecommendationGenerationHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ListSavingsPlansPurchaseRecommendationGenerationRequest listSavingsPlansPurchaseRecommendationGenerationRequest;
+    public ListSavingsPlansPurchaseRecommendationGenerationRequest withListSavingsPlansPurchaseRecommendationGenerationRequest(org.openapis.openapi.models.shared.ListSavingsPlansPurchaseRecommendationGenerationRequest listSavingsPlansPurchaseRecommendationGenerationRequest) {
+        this.listSavingsPlansPurchaseRecommendationGenerationRequest = listSavingsPlansPurchaseRecommendationGenerationRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ListSavingsPlansPurchaseRecommendationGenerationRequest request;
-    public ListSavingsPlansPurchaseRecommendationGenerationRequest withRequest(org.openapis.openapi.models.shared.ListSavingsPlansPurchaseRecommendationGenerationRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListSavingsPlansPurchaseRecommendationGenerationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListSavingsPlansPurchaseRecommendationGenerationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListSavingsPlansPurchaseRecommendationGenerationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListSavingsPlansPurchaseRecommendationGenerationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListSavingsPlansPurchaseRecommendationGenerationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListSavingsPlansPurchaseRecommendationGenerationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListSavingsPlansPurchaseRecommendationGenerationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public ListSavingsPlansPurchaseRecommendationGenerationXAmzTargetEnum xAmzTarget;
+    public ListSavingsPlansPurchaseRecommendationGenerationRequest withXAmzTarget(ListSavingsPlansPurchaseRecommendationGenerationXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

@@ -4,20 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeGatewayCapabilityConfigurationRequest {
-    
-    public DescribeGatewayCapabilityConfigurationPathParams pathParams;
-    public DescribeGatewayCapabilityConfigurationRequest withPathParams(DescribeGatewayCapabilityConfigurationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeGatewayCapabilityConfigurationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeGatewayCapabilityConfigurationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public DescribeGatewayCapabilityConfigurationHeaders headers;
-    public DescribeGatewayCapabilityConfigurationRequest withHeaders(DescribeGatewayCapabilityConfigurationHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeGatewayCapabilityConfigurationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeGatewayCapabilityConfigurationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeGatewayCapabilityConfigurationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeGatewayCapabilityConfigurationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeGatewayCapabilityConfigurationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The namespace of the capability configuration. For example, if you configure OPC-UA sources from the IoT SiteWise console, your OPC-UA capability configuration has the namespace &lt;code&gt;iotsitewise:opcuacollector:version&lt;/code&gt;, where &lt;code&gt;version&lt;/code&gt; is a number such as &lt;code&gt;1&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=capabilityNamespace")
+    public String capabilityNamespace;
+    public DescribeGatewayCapabilityConfigurationRequest withCapabilityNamespace(String capabilityNamespace) {
+        this.capabilityNamespace = capabilityNamespace;
+        return this;
+    }
+    
+    /**
+     * The ID of the gateway that defines the capability configuration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gatewayId")
+    public String gatewayId;
+    public DescribeGatewayCapabilityConfigurationRequest withGatewayId(String gatewayId) {
+        this.gatewayId = gatewayId;
         return this;
     }
     

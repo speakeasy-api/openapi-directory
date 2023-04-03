@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CampaignsFetchAllRequest {
-    
-    public CampaignsFetchAllPathParams pathParams;
-    public CampaignsFetchAllRequest withPathParams(CampaignsFetchAllPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public CampaignsFetchAllRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public CampaignsFetchAllQueryParams queryParams;
-    public CampaignsFetchAllRequest withQueryParams(CampaignsFetchAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Maximum number of results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public CampaignsFetchAllRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Filter by name or part of
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public CampaignsFetchAllRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public CampaignsFetchAllSecurity security;
-    public CampaignsFetchAllRequest withSecurity(CampaignsFetchAllSecurity security) {
-        this.security = security;
+    /**
+     * Results to skip when paginating through a result set
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public CampaignsFetchAllRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

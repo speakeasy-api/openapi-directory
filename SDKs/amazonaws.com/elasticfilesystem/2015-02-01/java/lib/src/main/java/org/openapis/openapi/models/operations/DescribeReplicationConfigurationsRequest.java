@@ -4,20 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeReplicationConfigurationsRequest {
-    
-    public DescribeReplicationConfigurationsQueryParams queryParams;
-    public DescribeReplicationConfigurationsRequest withQueryParams(DescribeReplicationConfigurationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * You can retrieve the replication configuration for a specific file system by providing its file system ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FileSystemId")
+    public String fileSystemId;
+    public DescribeReplicationConfigurationsRequest withFileSystemId(String fileSystemId) {
+        this.fileSystemId = fileSystemId;
         return this;
     }
     
+    /**
+     * (Optional) To limit the number of objects returned in a response, you can specify the &lt;code&gt;MaxItems&lt;/code&gt; parameter. The default value is 100. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public DescribeReplicationConfigurationsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
     
-    public DescribeReplicationConfigurationsHeaders headers;
-    public DescribeReplicationConfigurationsRequest withHeaders(DescribeReplicationConfigurationsHeaders headers) {
-        this.headers = headers;
+    /**
+     *  &lt;code&gt;NextToken&lt;/code&gt; is present if the response is paginated. You can use &lt;code&gt;NextToken&lt;/code&gt; in a subsequent request to fetch the next page of output.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public DescribeReplicationConfigurationsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeReplicationConfigurationsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeReplicationConfigurationsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeReplicationConfigurationsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeReplicationConfigurationsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeReplicationConfigurationsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeReplicationConfigurationsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeReplicationConfigurationsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDetectStackDriftRequest {
-    
-    public GETDetectStackDriftQueryParams queryParams;
-    public GETDetectStackDriftRequest withQueryParams(GETDetectStackDriftQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDetectStackDriftActionEnum action;
+    public GETDetectStackDriftRequest withAction(GETDetectStackDriftActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The logical names of any resources you want to use as filters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LogicalResourceIds")
+    public String[] logicalResourceIds;
+    public GETDetectStackDriftRequest withLogicalResourceIds(String[] logicalResourceIds) {
+        this.logicalResourceIds = logicalResourceIds;
+        return this;
+    }
     
-    public GETDetectStackDriftHeaders headers;
-    public GETDetectStackDriftRequest withHeaders(GETDetectStackDriftHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the stack for which you want to detect drift.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackName")
+    public String stackName;
+    public GETDetectStackDriftRequest withStackName(String stackName) {
+        this.stackName = stackName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDetectStackDriftVersionEnum version;
+    public GETDetectStackDriftRequest withVersion(GETDetectStackDriftVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDetectStackDriftRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDetectStackDriftRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDetectStackDriftRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDetectStackDriftRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDetectStackDriftRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDetectStackDriftRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDetectStackDriftRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

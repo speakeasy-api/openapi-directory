@@ -36,19 +36,20 @@ public class Subscriptions {
      * Sets the `canceled_date` field to the end of the active billing period.
      * After this date, the status changes from ACTIVE to CANCELED.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CancelSubscriptionResponse cancelSubscription(org.openapis.openapi.models.operations.CancelSubscriptionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CancelSubscriptionResponse cancelSubscription(org.openapis.openapi.models.operations.CancelSubscriptionRequest request, org.openapis.openapi.models.operations.CancelSubscriptionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelSubscriptionPathParams.class, baseUrl, "/v2/subscriptions/{subscription_id}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelSubscriptionRequest.class, baseUrl, "/v2/subscriptions/{subscription_id}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,10 +82,11 @@ public class Subscriptions {
      * address. The subscription starts immediately, unless the request includes
      * the optional `start_date`. Each individual subscription is associated with a particular location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateSubscriptionResponse createSubscription(org.openapis.openapi.models.operations.CreateSubscriptionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateSubscriptionResponse createSubscription(org.openapis.openapi.models.shared.CreateSubscriptionRequest request, org.openapis.openapi.models.operations.CreateSubscriptionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/subscriptions");
         
@@ -98,7 +100,7 @@ public class Subscriptions {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Subscriptions {
      * Lists all events for a specific subscription.
      * In the current implementation, only `START_SUBSCRIPTION` and `STOP_SUBSCRIPTION` (when the subscription was canceled) events are returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListSubscriptionEventsResponse listSubscriptionEvents(org.openapis.openapi.models.operations.ListSubscriptionEventsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListSubscriptionEventsResponse listSubscriptionEvents(org.openapis.openapi.models.operations.ListSubscriptionEventsRequest request, org.openapis.openapi.models.operations.ListSubscriptionEventsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSubscriptionEventsPathParams.class, baseUrl, "/v2/subscriptions/{subscription_id}/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSubscriptionEventsRequest.class, baseUrl, "/v2/subscriptions/{subscription_id}/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSubscriptionEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSubscriptionEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,19 +176,20 @@ public class Subscriptions {
      * ResumeSubscription
      * Resumes a deactivated subscription.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ResumeSubscriptionResponse resumeSubscription(org.openapis.openapi.models.operations.ResumeSubscriptionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ResumeSubscriptionResponse resumeSubscription(org.openapis.openapi.models.operations.ResumeSubscriptionRequest request, org.openapis.openapi.models.operations.ResumeSubscriptionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResumeSubscriptionPathParams.class, baseUrl, "/v2/subscriptions/{subscription_id}/resume", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResumeSubscriptionRequest.class, baseUrl, "/v2/subscriptions/{subscription_id}/resume", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -213,19 +217,20 @@ public class Subscriptions {
      * RetrieveSubscription
      * Retrieves a subscription.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveSubscriptionResponse retrieveSubscription(org.openapis.openapi.models.operations.RetrieveSubscriptionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveSubscriptionResponse retrieveSubscription(org.openapis.openapi.models.operations.RetrieveSubscriptionRequest request, org.openapis.openapi.models.operations.RetrieveSubscriptionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveSubscriptionPathParams.class, baseUrl, "/v2/subscriptions/{subscription_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveSubscriptionRequest.class, baseUrl, "/v2/subscriptions/{subscription_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -268,10 +273,11 @@ public class Subscriptions {
      * For more information, see
      * [Retrieve subscriptions](https://developer.squareup.com/docs/subscriptions-api/overview#retrieve-subscriptions).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchSubscriptionsResponse searchSubscriptions(org.openapis.openapi.models.operations.SearchSubscriptionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchSubscriptionsResponse searchSubscriptions(org.openapis.openapi.models.shared.SearchSubscriptionsRequest request, org.openapis.openapi.models.operations.SearchSubscriptionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/subscriptions/search");
         
@@ -285,7 +291,7 @@ public class Subscriptions {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -314,24 +320,25 @@ public class Subscriptions {
      * Updates a subscription. You can set, modify, and clear the
      * `subscription` field values.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateSubscriptionResponse updateSubscription(org.openapis.openapi.models.operations.UpdateSubscriptionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateSubscriptionResponse updateSubscription(org.openapis.openapi.models.operations.UpdateSubscriptionRequest request, org.openapis.openapi.models.operations.UpdateSubscriptionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSubscriptionPathParams.class, baseUrl, "/v2/subscriptions/{subscription_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSubscriptionRequest.class, baseUrl, "/v2/subscriptions/{subscription_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateSubscriptionRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

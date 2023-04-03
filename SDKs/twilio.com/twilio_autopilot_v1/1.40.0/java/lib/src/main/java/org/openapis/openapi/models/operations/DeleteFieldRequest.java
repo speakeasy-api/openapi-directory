@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFieldRequest {
-    
-    public DeleteFieldPathParams pathParams;
-    public DeleteFieldRequest withPathParams(DeleteFieldPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the resources to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public DeleteFieldRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
-    
-    public DeleteFieldSecurity security;
-    public DeleteFieldRequest withSecurity(DeleteFieldSecurity security) {
-        this.security = security;
+    /**
+     * The Twilio-provided string that uniquely identifies the Field resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteFieldRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteFieldRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Task](https://www.twilio.com/docs/autopilot/api/task) resource associated with the Field resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TaskSid")
+    public String taskSid;
+    public DeleteFieldRequest withTaskSid(String taskSid) {
+        this.taskSid = taskSid;
         return this;
     }
     

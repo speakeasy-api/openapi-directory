@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNextDeparturesByCRSRequest {
-    
-    public GetNextDeparturesByCRSPathParams pathParams;
-    public GetNextDeparturesByCRSRequest withPathParams(GetNextDeparturesByCRSPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The CRS (Computer Reservation System) for the station you wish to get departure information for, e.g. KGX for London Kings Cross.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CRS")
+    public String crs;
+    public GetNextDeparturesByCRSRequest withCrs(String crs) {
+        this.crs = crs;
         return this;
     }
     
+    /**
+     * The National Rail OpenLDBWS API Key to use for looking up service information. You must register with National Rail to obtain this key and whitelist it with us. See https://api.departureboard.io/docs/registration for more information.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apiKey")
+    public String apiKey;
+    public GetNextDeparturesByCRSRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetNextDeparturesByCRSQueryParams queryParams;
-    public GetNextDeparturesByCRSRequest withQueryParams(GetNextDeparturesByCRSQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The CRS (Computer Reservation System) codes to show departing services to. Up to 20 destination stations can be specified. These should be split by a comma, for example HAY,EAL,PAD.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterList")
+    public String filterList;
+    public GetNextDeparturesByCRSRequest withFilterList(String filterList) {
+        this.filterList = filterList;
+        return this;
+    }
+    
+    /**
+     * Should the response contain information on the calling points for each service? If set to false, calling points will not be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceDetails")
+    public Boolean serviceDetails;
+    public GetNextDeparturesByCRSRequest withServiceDetails(Boolean serviceDetails) {
+        this.serviceDetails = serviceDetails;
+        return this;
+    }
+    
+    /**
+     * The time window in minutes to offset the arrival and departure information by. For example, a value of 20 will not show services arriving to or departing from the station within the next 20 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeOffset")
+    public Long timeOffset;
+    public GetNextDeparturesByCRSRequest withTimeOffset(Long timeOffset) {
+        this.timeOffset = timeOffset;
+        return this;
+    }
+    
+    /**
+     * The time window in minutes to offset the arrival and departure information by. For example, a value of 20 will not show services arriving to or departing from the selected station within the next 20 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeWindow")
+    public Long timeWindow;
+    public GetNextDeparturesByCRSRequest withTimeWindow(Long timeWindow) {
+        this.timeWindow = timeWindow;
         return this;
     }
     

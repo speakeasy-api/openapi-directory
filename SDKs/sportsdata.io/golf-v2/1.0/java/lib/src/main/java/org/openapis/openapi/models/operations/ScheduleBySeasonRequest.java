@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ScheduleBySeasonRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public ScheduleBySeasonFormatEnum format;
+    public ScheduleBySeasonRequest withFormat(ScheduleBySeasonFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public ScheduleBySeasonPathParams pathParams;
-    public ScheduleBySeasonRequest withPathParams(ScheduleBySeasonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Year of the season.
+     * &lt;br&gt;Examples: &lt;code&gt;2016&lt;/code&gt;, &lt;code&gt;2017&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
+    public String season;
+    public ScheduleBySeasonRequest withSeason(String season) {
+        this.season = season;
         return this;
     }
     

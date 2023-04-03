@@ -7,27 +7,46 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddDependentsForTaskRequest {
-    
-    public AddDependentsForTaskPathParams pathParams;
-    public AddDependentsForTaskRequest withPathParams(AddDependentsForTaskPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AddDependentsForTaskQueryParams queryParams;
-    public AddDependentsForTaskRequest withQueryParams(AddDependentsForTaskQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The list of tasks to add as dependents.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AddDependentsForTaskRequestBody request;
-    public AddDependentsForTaskRequest withRequest(AddDependentsForTaskRequestBody request) {
-        this.request = request;
+    public AddDependentsForTaskRequestBody requestBody;
+    public AddDependentsForTaskRequest withRequestBody(AddDependentsForTaskRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Defines fields to return.
+     * Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
+     * The id of included objects will always be returned, regardless of the field options.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
+    public String[] optFields;
+    public AddDependentsForTaskRequest withOptFields(String[] optFields) {
+        this.optFields = optFields;
+        return this;
+    }
+    
+    /**
+     * Provides \u201cpretty\u201d output.
+     * Provides the response in a \u201cpretty\u201d format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
+    public Boolean optPretty;
+    public AddDependentsForTaskRequest withOptPretty(Boolean optPretty) {
+        this.optPretty = optPretty;
+        return this;
+    }
+    
+    /**
+     * The task to operate on.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=task_gid")
+    public String taskGid;
+    public AddDependentsForTaskRequest withTaskGid(String taskGid) {
+        this.taskGid = taskGid;
         return this;
     }
     

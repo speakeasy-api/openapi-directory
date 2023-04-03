@@ -4,13 +4,257 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SecretsSecretsListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created")
+    public String created;
+    public SecretsSecretsListRequest withCreated(String created) {
+        this.created = created;
+        return this;
+    }
     
-    public SecretsSecretsListQueryParams queryParams;
-    public SecretsSecretsListRequest withQueryParams(SecretsSecretsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created__gte")
+    public String createdGte;
+    public SecretsSecretsListRequest withCreatedGte(String createdGte) {
+        this.createdGte = createdGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created__lte")
+    public String createdLte;
+    public SecretsSecretsListRequest withCreatedLte(String createdLte) {
+        this.createdLte = createdLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
+    public String device;
+    public SecretsSecretsListRequest withDevice(String device) {
+        this.device = device;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device__n")
+    public String deviceN;
+    public SecretsSecretsListRequest withDeviceN(String deviceN) {
+        this.deviceN = deviceN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
+    public String deviceId;
+    public SecretsSecretsListRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id__n")
+    public String deviceIdN;
+    public SecretsSecretsListRequest withDeviceIdN(String deviceIdN) {
+        this.deviceIdN = deviceIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public SecretsSecretsListRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gt")
+    public String idGt;
+    public SecretsSecretsListRequest withIdGt(String idGt) {
+        this.idGt = idGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gte")
+    public String idGte;
+    public SecretsSecretsListRequest withIdGte(String idGte) {
+        this.idGte = idGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lt")
+    public String idLt;
+    public SecretsSecretsListRequest withIdLt(String idLt) {
+        this.idLt = idLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lte")
+    public String idLte;
+    public SecretsSecretsListRequest withIdLte(String idLte) {
+        this.idLte = idLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__n")
+    public String idN;
+    public SecretsSecretsListRequest withIdN(String idN) {
+        this.idN = idN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_updated")
+    public String lastUpdated;
+    public SecretsSecretsListRequest withLastUpdated(String lastUpdated) {
+        this.lastUpdated = lastUpdated;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_updated__gte")
+    public String lastUpdatedGte;
+    public SecretsSecretsListRequest withLastUpdatedGte(String lastUpdatedGte) {
+        this.lastUpdatedGte = lastUpdatedGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_updated__lte")
+    public String lastUpdatedLte;
+    public SecretsSecretsListRequest withLastUpdatedLte(String lastUpdatedLte) {
+        this.lastUpdatedLte = lastUpdatedLte;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public SecretsSecretsListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public SecretsSecretsListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__ic")
+    public String nameIc;
+    public SecretsSecretsListRequest withNameIc(String nameIc) {
+        this.nameIc = nameIc;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__ie")
+    public String nameIe;
+    public SecretsSecretsListRequest withNameIe(String nameIe) {
+        this.nameIe = nameIe;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__iew")
+    public String nameIew;
+    public SecretsSecretsListRequest withNameIew(String nameIew) {
+        this.nameIew = nameIew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__isw")
+    public String nameIsw;
+    public SecretsSecretsListRequest withNameIsw(String nameIsw) {
+        this.nameIsw = nameIsw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__n")
+    public String nameN;
+    public SecretsSecretsListRequest withNameN(String nameN) {
+        this.nameN = nameN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nic")
+    public String nameNic;
+    public SecretsSecretsListRequest withNameNic(String nameNic) {
+        this.nameNic = nameNic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nie")
+    public String nameNie;
+    public SecretsSecretsListRequest withNameNie(String nameNie) {
+        this.nameNie = nameNie;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__niew")
+    public String nameNiew;
+    public SecretsSecretsListRequest withNameNiew(String nameNiew) {
+        this.nameNiew = nameNiew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nisw")
+    public String nameNisw;
+    public SecretsSecretsListRequest withNameNisw(String nameNisw) {
+        this.nameNisw = nameNisw;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public SecretsSecretsListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public SecretsSecretsListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
+    public String role;
+    public SecretsSecretsListRequest withRole(String role) {
+        this.role = role;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role__n")
+    public String roleN;
+    public SecretsSecretsListRequest withRoleN(String roleN) {
+        this.roleN = roleN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role_id")
+    public String roleId;
+    public SecretsSecretsListRequest withRoleId(String roleId) {
+        this.roleId = roleId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role_id__n")
+    public String roleIdN;
+    public SecretsSecretsListRequest withRoleIdN(String roleIdN) {
+        this.roleIdN = roleIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public SecretsSecretsListRequest withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag__n")
+    public String tagN;
+    public SecretsSecretsListRequest withTagN(String tagN) {
+        this.tagN = tagN;
         return this;
     }
     

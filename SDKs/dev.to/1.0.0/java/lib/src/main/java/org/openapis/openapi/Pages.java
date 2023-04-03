@@ -39,7 +39,7 @@ public class Pages {
      */
     public org.openapis.openapi.models.operations.DeleteApiPagesIdResponse deleteApiPagesId(org.openapis.openapi.models.operations.DeleteApiPagesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiPagesIdPathParams.class, baseUrl, "/api/pages/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiPagesIdRequest.class, baseUrl, "/api/pages/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -120,7 +120,7 @@ public class Pages {
      */
     public org.openapis.openapi.models.operations.GetApiPagesIdResponse getApiPagesId(org.openapis.openapi.models.operations.GetApiPagesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiPagesIdPathParams.class, baseUrl, "/api/pages/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiPagesIdRequest.class, baseUrl, "/api/pages/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -158,7 +158,7 @@ public class Pages {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiPagesResponse postApiPages(org.openapis.openapi.models.operations.PostApiPagesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiPagesResponse postApiPages(org.openapis.openapi.models.operations.PostApiPagesRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/pages");
         
@@ -196,12 +196,12 @@ public class Pages {
      */
     public org.openapis.openapi.models.operations.PutApiPagesIdResponse putApiPagesId(org.openapis.openapi.models.operations.PutApiPagesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutApiPagesIdPathParams.class, baseUrl, "/api/pages/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutApiPagesIdRequest.class, baseUrl, "/api/pages/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "page", "json");
         req.setBody(serializedRequestBody);
         
         

@@ -4,13 +4,243 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CircuitsCircuitTerminationsListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=circuit_id")
+    public String circuitId;
+    public CircuitsCircuitTerminationsListRequest withCircuitId(String circuitId) {
+        this.circuitId = circuitId;
+        return this;
+    }
     
-    public CircuitsCircuitTerminationsListQueryParams queryParams;
-    public CircuitsCircuitTerminationsListRequest withQueryParams(CircuitsCircuitTerminationsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=circuit_id__n")
+    public String circuitIdN;
+    public CircuitsCircuitTerminationsListRequest withCircuitIdN(String circuitIdN) {
+        this.circuitIdN = circuitIdN;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public CircuitsCircuitTerminationsListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public CircuitsCircuitTerminationsListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=port_speed")
+    public String portSpeed;
+    public CircuitsCircuitTerminationsListRequest withPortSpeed(String portSpeed) {
+        this.portSpeed = portSpeed;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=port_speed__gt")
+    public String portSpeedGt;
+    public CircuitsCircuitTerminationsListRequest withPortSpeedGt(String portSpeedGt) {
+        this.portSpeedGt = portSpeedGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=port_speed__gte")
+    public String portSpeedGte;
+    public CircuitsCircuitTerminationsListRequest withPortSpeedGte(String portSpeedGte) {
+        this.portSpeedGte = portSpeedGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=port_speed__lt")
+    public String portSpeedLt;
+    public CircuitsCircuitTerminationsListRequest withPortSpeedLt(String portSpeedLt) {
+        this.portSpeedLt = portSpeedLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=port_speed__lte")
+    public String portSpeedLte;
+    public CircuitsCircuitTerminationsListRequest withPortSpeedLte(String portSpeedLte) {
+        this.portSpeedLte = portSpeedLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=port_speed__n")
+    public String portSpeedN;
+    public CircuitsCircuitTerminationsListRequest withPortSpeedN(String portSpeedN) {
+        this.portSpeedN = portSpeedN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public CircuitsCircuitTerminationsListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
+    public String site;
+    public CircuitsCircuitTerminationsListRequest withSite(String site) {
+        this.site = site;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site__n")
+    public String siteN;
+    public CircuitsCircuitTerminationsListRequest withSiteN(String siteN) {
+        this.siteN = siteN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site_id")
+    public String siteId;
+    public CircuitsCircuitTerminationsListRequest withSiteId(String siteId) {
+        this.siteId = siteId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site_id__n")
+    public String siteIdN;
+    public CircuitsCircuitTerminationsListRequest withSiteIdN(String siteIdN) {
+        this.siteIdN = siteIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=term_side")
+    public String termSide;
+    public CircuitsCircuitTerminationsListRequest withTermSide(String termSide) {
+        this.termSide = termSide;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=term_side__n")
+    public String termSideN;
+    public CircuitsCircuitTerminationsListRequest withTermSideN(String termSideN) {
+        this.termSideN = termSideN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upstream_speed")
+    public String upstreamSpeed;
+    public CircuitsCircuitTerminationsListRequest withUpstreamSpeed(String upstreamSpeed) {
+        this.upstreamSpeed = upstreamSpeed;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upstream_speed__gt")
+    public String upstreamSpeedGt;
+    public CircuitsCircuitTerminationsListRequest withUpstreamSpeedGt(String upstreamSpeedGt) {
+        this.upstreamSpeedGt = upstreamSpeedGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upstream_speed__gte")
+    public String upstreamSpeedGte;
+    public CircuitsCircuitTerminationsListRequest withUpstreamSpeedGte(String upstreamSpeedGte) {
+        this.upstreamSpeedGte = upstreamSpeedGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upstream_speed__lt")
+    public String upstreamSpeedLt;
+    public CircuitsCircuitTerminationsListRequest withUpstreamSpeedLt(String upstreamSpeedLt) {
+        this.upstreamSpeedLt = upstreamSpeedLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upstream_speed__lte")
+    public String upstreamSpeedLte;
+    public CircuitsCircuitTerminationsListRequest withUpstreamSpeedLte(String upstreamSpeedLte) {
+        this.upstreamSpeedLte = upstreamSpeedLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upstream_speed__n")
+    public String upstreamSpeedN;
+    public CircuitsCircuitTerminationsListRequest withUpstreamSpeedN(String upstreamSpeedN) {
+        this.upstreamSpeedN = upstreamSpeedN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=xconnect_id")
+    public String xconnectId;
+    public CircuitsCircuitTerminationsListRequest withXconnectId(String xconnectId) {
+        this.xconnectId = xconnectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=xconnect_id__ic")
+    public String xconnectIdIc;
+    public CircuitsCircuitTerminationsListRequest withXconnectIdIc(String xconnectIdIc) {
+        this.xconnectIdIc = xconnectIdIc;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=xconnect_id__ie")
+    public String xconnectIdIe;
+    public CircuitsCircuitTerminationsListRequest withXconnectIdIe(String xconnectIdIe) {
+        this.xconnectIdIe = xconnectIdIe;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=xconnect_id__iew")
+    public String xconnectIdIew;
+    public CircuitsCircuitTerminationsListRequest withXconnectIdIew(String xconnectIdIew) {
+        this.xconnectIdIew = xconnectIdIew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=xconnect_id__isw")
+    public String xconnectIdIsw;
+    public CircuitsCircuitTerminationsListRequest withXconnectIdIsw(String xconnectIdIsw) {
+        this.xconnectIdIsw = xconnectIdIsw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=xconnect_id__n")
+    public String xconnectIdN;
+    public CircuitsCircuitTerminationsListRequest withXconnectIdN(String xconnectIdN) {
+        this.xconnectIdN = xconnectIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=xconnect_id__nic")
+    public String xconnectIdNic;
+    public CircuitsCircuitTerminationsListRequest withXconnectIdNic(String xconnectIdNic) {
+        this.xconnectIdNic = xconnectIdNic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=xconnect_id__nie")
+    public String xconnectIdNie;
+    public CircuitsCircuitTerminationsListRequest withXconnectIdNie(String xconnectIdNie) {
+        this.xconnectIdNie = xconnectIdNie;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=xconnect_id__niew")
+    public String xconnectIdNiew;
+    public CircuitsCircuitTerminationsListRequest withXconnectIdNiew(String xconnectIdNiew) {
+        this.xconnectIdNiew = xconnectIdNiew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=xconnect_id__nisw")
+    public String xconnectIdNisw;
+    public CircuitsCircuitTerminationsListRequest withXconnectIdNisw(String xconnectIdNisw) {
+        this.xconnectIdNisw = xconnectIdNisw;
         return this;
     }
     

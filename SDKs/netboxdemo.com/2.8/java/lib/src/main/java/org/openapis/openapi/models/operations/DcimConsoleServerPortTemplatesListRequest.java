@@ -4,13 +4,173 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimConsoleServerPortTemplatesListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devicetype_id")
+    public String devicetypeId;
+    public DcimConsoleServerPortTemplatesListRequest withDevicetypeId(String devicetypeId) {
+        this.devicetypeId = devicetypeId;
+        return this;
+    }
     
-    public DcimConsoleServerPortTemplatesListQueryParams queryParams;
-    public DcimConsoleServerPortTemplatesListRequest withQueryParams(DcimConsoleServerPortTemplatesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devicetype_id__n")
+    public String devicetypeIdN;
+    public DcimConsoleServerPortTemplatesListRequest withDevicetypeIdN(String devicetypeIdN) {
+        this.devicetypeIdN = devicetypeIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public DcimConsoleServerPortTemplatesListRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gt")
+    public String idGt;
+    public DcimConsoleServerPortTemplatesListRequest withIdGt(String idGt) {
+        this.idGt = idGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gte")
+    public String idGte;
+    public DcimConsoleServerPortTemplatesListRequest withIdGte(String idGte) {
+        this.idGte = idGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lt")
+    public String idLt;
+    public DcimConsoleServerPortTemplatesListRequest withIdLt(String idLt) {
+        this.idLt = idLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lte")
+    public String idLte;
+    public DcimConsoleServerPortTemplatesListRequest withIdLte(String idLte) {
+        this.idLte = idLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__n")
+    public String idN;
+    public DcimConsoleServerPortTemplatesListRequest withIdN(String idN) {
+        this.idN = idN;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public DcimConsoleServerPortTemplatesListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DcimConsoleServerPortTemplatesListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__ic")
+    public String nameIc;
+    public DcimConsoleServerPortTemplatesListRequest withNameIc(String nameIc) {
+        this.nameIc = nameIc;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__ie")
+    public String nameIe;
+    public DcimConsoleServerPortTemplatesListRequest withNameIe(String nameIe) {
+        this.nameIe = nameIe;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__iew")
+    public String nameIew;
+    public DcimConsoleServerPortTemplatesListRequest withNameIew(String nameIew) {
+        this.nameIew = nameIew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__isw")
+    public String nameIsw;
+    public DcimConsoleServerPortTemplatesListRequest withNameIsw(String nameIsw) {
+        this.nameIsw = nameIsw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__n")
+    public String nameN;
+    public DcimConsoleServerPortTemplatesListRequest withNameN(String nameN) {
+        this.nameN = nameN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nic")
+    public String nameNic;
+    public DcimConsoleServerPortTemplatesListRequest withNameNic(String nameNic) {
+        this.nameNic = nameNic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nie")
+    public String nameNie;
+    public DcimConsoleServerPortTemplatesListRequest withNameNie(String nameNie) {
+        this.nameNie = nameNie;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__niew")
+    public String nameNiew;
+    public DcimConsoleServerPortTemplatesListRequest withNameNiew(String nameNiew) {
+        this.nameNiew = nameNiew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nisw")
+    public String nameNisw;
+    public DcimConsoleServerPortTemplatesListRequest withNameNisw(String nameNisw) {
+        this.nameNisw = nameNisw;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public DcimConsoleServerPortTemplatesListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public DcimConsoleServerPortTemplatesListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public DcimConsoleServerPortTemplatesListRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type__n")
+    public String typeN;
+    public DcimConsoleServerPortTemplatesListRequest withTypeN(String typeN) {
+        this.typeN = typeN;
         return this;
     }
     

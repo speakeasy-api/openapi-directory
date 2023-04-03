@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RecacheTranslationsRequest {
-    
-    public RecacheTranslationsPathParams pathParams;
-    public RecacheTranslationsRequest withPathParams(RecacheTranslationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Continuous Project File ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=file_id")
+    public Long fileId;
+    public RecacheTranslationsRequest withFileId(Long fileId) {
+        this.fileId = fileId;
         return this;
     }
     
+    /**
+     * Locale
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public RecacheTranslationsRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
     
-    public RecacheTranslationsQueryParams queryParams;
-    public RecacheTranslationsRequest withQueryParams(RecacheTranslationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public RecacheTranslationsRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

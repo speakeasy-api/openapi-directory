@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamsRequest {
-    
-    public GetTeamsQueryParams queryParams;
-    public GetTeamsRequest withQueryParams(GetTeamsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Conference abbreviation filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
+    public String conference;
+    public GetTeamsRequest withConference(String conference) {
+        this.conference = conference;
         return this;
     }
     

@@ -4,27 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsManagementCustomDimensionsListRequest {
-    
-    public AnalyticsManagementCustomDimensionsListPathParams pathParams;
-    public AnalyticsManagementCustomDimensionsListRequest withPathParams(AnalyticsManagementCustomDimensionsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account ID for the custom dimensions to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AnalyticsManagementCustomDimensionsListRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public AnalyticsManagementCustomDimensionsListQueryParams queryParams;
-    public AnalyticsManagementCustomDimensionsListRequest withQueryParams(AnalyticsManagementCustomDimensionsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AnalyticsManagementCustomDimensionsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AnalyticsManagementCustomDimensionsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public AnalyticsManagementCustomDimensionsListSecurity security;
-    public AnalyticsManagementCustomDimensionsListRequest withSecurity(AnalyticsManagementCustomDimensionsListSecurity security) {
-        this.security = security;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AnalyticsManagementCustomDimensionsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The maximum number of custom dimensions to include in this response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max-results")
+    public Long maxResults;
+    public AnalyticsManagementCustomDimensionsListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AnalyticsManagementCustomDimensionsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AnalyticsManagementCustomDimensionsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AnalyticsManagementCustomDimensionsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * An index of the first entity to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start-index")
+    public Long startIndex;
+    public AnalyticsManagementCustomDimensionsListRequest withStartIndex(Long startIndex) {
+        this.startIndex = startIndex;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AnalyticsManagementCustomDimensionsListRequest withUserIp(String userIp) {
+        this.userIp = userIp;
+        return this;
+    }
+    
+    /**
+     * Web property ID for the custom dimensions to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webPropertyId")
+    public String webPropertyId;
+    public AnalyticsManagementCustomDimensionsListRequest withWebPropertyId(String webPropertyId) {
+        this.webPropertyId = webPropertyId;
         return this;
     }
     

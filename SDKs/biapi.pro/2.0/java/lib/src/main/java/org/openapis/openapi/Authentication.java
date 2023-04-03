@@ -74,13 +74,13 @@ public class Authentication {
      */
     public org.openapis.openapi.models.operations.DeleteUsersIdUserResponse deleteUsersIdUser(org.openapis.openapi.models.operations.DeleteUsersIdUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersIdUserPathParams.class, baseUrl, "/users/{id_user}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersIdUserRequest.class, baseUrl, "/users/{id_user}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteUsersIdUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteUsersIdUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -156,13 +156,13 @@ public class Authentication {
      */
     public org.openapis.openapi.models.operations.GetCertificateTypeResponse getCertificateType(org.openapis.openapi.models.operations.GetCertificateTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCertificateTypePathParams.class, baseUrl, "/certificate/{type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCertificateTypeRequest.class, baseUrl, "/certificate/{type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCertificateTypeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCertificateTypeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -200,13 +200,13 @@ public class Authentication {
      */
     public org.openapis.openapi.models.operations.GetUsersIdUserResponse getUsersIdUser(org.openapis.openapi.models.operations.GetUsersIdUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserPathParams.class, baseUrl, "/users/{id_user}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserRequest.class, baseUrl, "/users/{id_user}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -243,7 +243,7 @@ public class Authentication {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWebauthResponse getWebauth(org.openapis.openapi.models.operations.GetWebauthRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWebauthResponse getWebauth(org.openapis.openapi.models.operations.GetWebauthRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/webauth");
         
@@ -278,7 +278,7 @@ public class Authentication {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAdminJwtResponse postAdminJwt(org.openapis.openapi.models.operations.PostAdminJwtRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAdminJwtResponse postAdminJwt(org.openapis.openapi.models.operations.PostAdminJwtRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/admin/jwt");
         
@@ -319,7 +319,7 @@ public class Authentication {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAuthInitResponse postAuthInit(org.openapis.openapi.models.operations.PostAuthInitRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAuthInitResponse postAuthInit(org.openapis.openapi.models.operations.PostAuthInitRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/auth/init");
         
@@ -360,7 +360,7 @@ public class Authentication {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAuthJwtResponse postAuthJwt(org.openapis.openapi.models.operations.PostAuthJwtRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAuthJwtResponse postAuthJwt(org.openapis.openapi.models.operations.PostAuthJwtRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/auth/jwt");
         
@@ -400,7 +400,7 @@ public class Authentication {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAuthRenewResponse postAuthRenew(org.openapis.openapi.models.operations.PostAuthRenewRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAuthRenewResponse postAuthRenew(org.openapis.openapi.models.operations.PostAuthRenewRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/auth/renew");
         
@@ -441,7 +441,7 @@ public class Authentication {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAuthTokenAccessResponse postAuthTokenAccess(org.openapis.openapi.models.operations.PostAuthTokenAccessRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAuthTokenAccessResponse postAuthTokenAccess(org.openapis.openapi.models.operations.PostAuthTokenAccessRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/auth/token/access");
         
@@ -484,12 +484,12 @@ public class Authentication {
      */
     public org.openapis.openapi.models.operations.PostUsersIdUserTokenResponse postUsersIdUserToken(org.openapis.openapi.models.operations.PostUsersIdUserTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersIdUserTokenPathParams.class, baseUrl, "/users/{id_user}/token", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersIdUserTokenRequest.class, baseUrl, "/users/{id_user}/token", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

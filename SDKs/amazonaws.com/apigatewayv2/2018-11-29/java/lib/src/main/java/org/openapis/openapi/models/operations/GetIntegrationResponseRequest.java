@@ -4,20 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIntegrationResponseRequest {
-    
-    public GetIntegrationResponsePathParams pathParams;
-    public GetIntegrationResponseRequest withPathParams(GetIntegrationResponsePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetIntegrationResponseRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetIntegrationResponseRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public GetIntegrationResponseHeaders headers;
-    public GetIntegrationResponseRequest withHeaders(GetIntegrationResponseHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetIntegrationResponseRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetIntegrationResponseRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetIntegrationResponseRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetIntegrationResponseRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetIntegrationResponseRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The API identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
+    public String apiId;
+    public GetIntegrationResponseRequest withApiId(String apiId) {
+        this.apiId = apiId;
+        return this;
+    }
+    
+    /**
+     * The integration ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=integrationId")
+    public String integrationId;
+    public GetIntegrationResponseRequest withIntegrationId(String integrationId) {
+        this.integrationId = integrationId;
+        return this;
+    }
+    
+    /**
+     * The integration response ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=integrationResponseId")
+    public String integrationResponseId;
+    public GetIntegrationResponseRequest withIntegrationResponseId(String integrationResponseId) {
+        this.integrationResponseId = integrationResponseId;
         return this;
     }
     

@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsConvertMemberToOutsideCollaboratorRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsConvertMemberToOutsideCollaboratorRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public OrgsConvertMemberToOutsideCollaboratorPathParams pathParams;
-    public OrgsConvertMemberToOutsideCollaboratorRequest withPathParams(OrgsConvertMemberToOutsideCollaboratorPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public OrgsConvertMemberToOutsideCollaboratorRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

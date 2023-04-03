@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkSmCertsRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
+    public String deviceId;
+    public GetNetworkSmCertsRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
     
-    public GetNetworkSmCertsPathParams pathParams;
-    public GetNetworkSmCertsRequest withPathParams(GetNetworkSmCertsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkSmCertsRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

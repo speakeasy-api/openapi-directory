@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMeFollowingsRequest {
-    
-    public GetMeFollowingsQueryParams queryParams;
-    public GetMeFollowingsRequest withQueryParams(GetMeFollowingsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of results to return in the collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetMeFollowingsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetMeFollowingsSecurity security;
-    public GetMeFollowingsRequest withSecurity(GetMeFollowingsSecurity security) {
-        this.security = security;
+    /**
+     * Offset of first result. Deprecated, use `linked_partitioning` instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetMeFollowingsRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

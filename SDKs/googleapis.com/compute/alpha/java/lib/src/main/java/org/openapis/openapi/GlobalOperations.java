@@ -33,25 +33,26 @@ public class GlobalOperations {
     /**
      * Retrieves an aggregated list of all operations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeGlobalOperationsAggregatedListResponse computeGlobalOperationsAggregatedList(org.openapis.openapi.models.operations.ComputeGlobalOperationsAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeGlobalOperationsAggregatedListResponse computeGlobalOperationsAggregatedList(org.openapis.openapi.models.operations.ComputeGlobalOperationsAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeGlobalOperationsAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalOperationsAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalOperationsAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalOperationsAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalOperationsAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class GlobalOperations {
     /**
      * Deletes the specified Operations resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeGlobalOperationsDeleteResponse computeGlobalOperationsDelete(org.openapis.openapi.models.operations.ComputeGlobalOperationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeGlobalOperationsDeleteResponse computeGlobalOperationsDelete(org.openapis.openapi.models.operations.ComputeGlobalOperationsDeleteRequest request, org.openapis.openapi.models.operations.ComputeGlobalOperationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalOperationsDeletePathParams.class, baseUrl, "/projects/{project}/global/operations/{operation}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalOperationsDeleteRequest.class, baseUrl, "/projects/{project}/global/operations/{operation}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalOperationsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalOperationsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -117,25 +119,26 @@ public class GlobalOperations {
     /**
      * Retrieves the specified Operations resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeGlobalOperationsGetResponse computeGlobalOperationsGet(org.openapis.openapi.models.operations.ComputeGlobalOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeGlobalOperationsGetResponse computeGlobalOperationsGet(org.openapis.openapi.models.operations.ComputeGlobalOperationsGetRequest request, org.openapis.openapi.models.operations.ComputeGlobalOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalOperationsGetPathParams.class, baseUrl, "/projects/{project}/global/operations/{operation}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalOperationsGetRequest.class, baseUrl, "/projects/{project}/global/operations/{operation}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -162,25 +165,26 @@ public class GlobalOperations {
     /**
      * Retrieves a list of Operation resources contained within the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeGlobalOperationsListResponse computeGlobalOperationsList(org.openapis.openapi.models.operations.ComputeGlobalOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeGlobalOperationsListResponse computeGlobalOperationsList(org.openapis.openapi.models.operations.ComputeGlobalOperationsListRequest request, org.openapis.openapi.models.operations.ComputeGlobalOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalOperationsListPathParams.class, baseUrl, "/projects/{project}/global/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalOperationsListRequest.class, baseUrl, "/projects/{project}/global/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -207,25 +211,26 @@ public class GlobalOperations {
     /**
      * Waits for the specified Operation resource to return as `DONE` or for the request to approach the 2 minute deadline, and retrieves the specified Operation resource. This method differs from the `GET` method in that it waits for no more than the default deadline (2 minutes) and then returns the current state of the operation, which might be `DONE` or still in progress. This method is called on a best-effort basis. Specifically: - In uncommon cases, when the server is overloaded, the request might return before the default deadline is reached, or might return after zero seconds. - If the default deadline is reached, there is no guarantee that the operation is actually done when the method returns. Be prepared to retry if the operation is not `DONE`. 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeGlobalOperationsWaitResponse computeGlobalOperationsWait(org.openapis.openapi.models.operations.ComputeGlobalOperationsWaitRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeGlobalOperationsWaitResponse computeGlobalOperationsWait(org.openapis.openapi.models.operations.ComputeGlobalOperationsWaitRequest request, org.openapis.openapi.models.operations.ComputeGlobalOperationsWaitSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalOperationsWaitPathParams.class, baseUrl, "/projects/{project}/global/operations/{operation}/wait", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalOperationsWaitRequest.class, baseUrl, "/projects/{project}/global/operations/{operation}/wait", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalOperationsWaitQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalOperationsWaitRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

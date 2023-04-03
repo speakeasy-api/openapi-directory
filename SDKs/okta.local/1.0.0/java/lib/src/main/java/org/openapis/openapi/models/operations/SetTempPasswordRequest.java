@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetTempPasswordRequest {
-    
-    public SetTempPasswordPathParams pathParams;
-    public SetTempPasswordRequest withPathParams(SetTempPasswordPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SetTempPasswordQueryParams queryParams;
-    public SetTempPasswordRequest withQueryParams(SetTempPasswordQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=text/plain")
-    public byte[] request;
-    public SetTempPasswordRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public SetTempPasswordRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tempPassword")
+    public String tempPassword;
+    public SetTempPasswordRequest withTempPassword(String tempPassword) {
+        this.tempPassword = tempPassword;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public SetTempPasswordRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

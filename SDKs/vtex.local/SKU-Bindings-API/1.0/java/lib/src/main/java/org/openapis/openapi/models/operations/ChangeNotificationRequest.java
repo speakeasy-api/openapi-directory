@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeNotificationRequest {
-    
-    public ChangeNotificationPathParams pathParams;
-    public ChangeNotificationRequest withPathParams(ChangeNotificationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ChangeNotificationRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ChangeNotificationRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public ChangeNotificationHeaders headers;
-    public ChangeNotificationRequest withHeaders(ChangeNotificationHeaders headers) {
-        this.headers = headers;
+    /**
+     * A string that identifies the SKU in the marketplace. This is the ID that the marketplace will use to look for the SKU whose change the seller wants to inform. If the marketplace finds this ID, it responds with status code `200`. Otherwise, it responds with status code `404`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
+    public String skuId;
+    public ChangeNotificationRequest withSkuId(String skuId) {
+        this.skuId = skuId;
         return this;
     }
     

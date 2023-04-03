@@ -7,17 +7,45 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlayMediaIntentHandlingRequest {
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public PlayMediaIntentHandlingRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
     
-    public PlayMediaIntentHandlingHeaders headers;
-    public PlayMediaIntentHandlingRequest withHeaders(PlayMediaIntentHandlingHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Request-Timeout")
+    public Double requestTimeout;
+    public PlayMediaIntentHandlingRequest withRequestTimeout(Double requestTimeout) {
+        this.requestTimeout = requestTimeout;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PlayMediaIntentHandlingInvocation[] request;
-    public PlayMediaIntentHandlingRequest withRequest(org.openapis.openapi.models.shared.PlayMediaIntentHandlingInvocation[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PlayMediaIntentHandlingInvocation[] requestBody;
+    public PlayMediaIntentHandlingRequest withRequestBody(org.openapis.openapi.models.shared.PlayMediaIntentHandlingInvocation[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=User-Agent")
+    public String userAgent;
+    public PlayMediaIntentHandlingRequest withUserAgent(String userAgent) {
+        this.userAgent = userAgent;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-applecloudextension-retry-count")
+    public Double xApplecloudextensionRetryCount;
+    public PlayMediaIntentHandlingRequest withXApplecloudextensionRetryCount(Double xApplecloudextensionRetryCount) {
+        this.xApplecloudextensionRetryCount = xApplecloudextensionRetryCount;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-applecloudextension-session-id")
+    public String xApplecloudextensionSessionId;
+    public PlayMediaIntentHandlingRequest withXApplecloudextensionSessionId(String xApplecloudextensionSessionId) {
+        this.xApplecloudextensionSessionId = xApplecloudextensionSessionId;
         return this;
     }
     

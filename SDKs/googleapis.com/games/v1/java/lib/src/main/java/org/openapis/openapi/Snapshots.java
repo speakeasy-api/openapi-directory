@@ -33,25 +33,26 @@ public class Snapshots {
     /**
      * Retrieves the metadata for a given snapshot ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesSnapshotsGetResponse gamesSnapshotsGet(org.openapis.openapi.models.operations.GamesSnapshotsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesSnapshotsGetResponse gamesSnapshotsGet(org.openapis.openapi.models.operations.GamesSnapshotsGetRequest request, org.openapis.openapi.models.operations.GamesSnapshotsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesSnapshotsGetPathParams.class, baseUrl, "/games/v1/snapshots/{snapshotId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesSnapshotsGetRequest.class, baseUrl, "/games/v1/snapshots/{snapshotId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesSnapshotsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesSnapshotsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class Snapshots {
     /**
      * Retrieves a list of snapshots created by your application for the player corresponding to the player ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesSnapshotsListResponse gamesSnapshotsList(org.openapis.openapi.models.operations.GamesSnapshotsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesSnapshotsListResponse gamesSnapshotsList(org.openapis.openapi.models.operations.GamesSnapshotsListRequest request, org.openapis.openapi.models.operations.GamesSnapshotsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesSnapshotsListPathParams.class, baseUrl, "/games/v1/players/{playerId}/snapshots", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesSnapshotsListRequest.class, baseUrl, "/games/v1/players/{playerId}/snapshots", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesSnapshotsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesSnapshotsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

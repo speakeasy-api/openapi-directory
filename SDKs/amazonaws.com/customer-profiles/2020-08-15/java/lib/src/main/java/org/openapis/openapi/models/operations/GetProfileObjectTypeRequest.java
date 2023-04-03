@@ -4,20 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProfileObjectTypeRequest {
-    
-    public GetProfileObjectTypePathParams pathParams;
-    public GetProfileObjectTypeRequest withPathParams(GetProfileObjectTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique name of the domain.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainName")
+    public String domainName;
+    public GetProfileObjectTypeRequest withDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
     
+    /**
+     * The name of the profile object type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ObjectTypeName")
+    public String objectTypeName;
+    public GetProfileObjectTypeRequest withObjectTypeName(String objectTypeName) {
+        this.objectTypeName = objectTypeName;
+        return this;
+    }
     
-    public GetProfileObjectTypeHeaders headers;
-    public GetProfileObjectTypeRequest withHeaders(GetProfileObjectTypeHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetProfileObjectTypeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetProfileObjectTypeRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetProfileObjectTypeRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetProfileObjectTypeRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetProfileObjectTypeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetProfileObjectTypeRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetProfileObjectTypeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -43,7 +43,7 @@ public class OngoingActions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV2OngoingActionsJsonResponse postV2OngoingActionsJson(org.openapis.openapi.models.operations.PostV2OngoingActionsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV2OngoingActionsJsonResponse postV2OngoingActionsJson(org.openapis.openapi.models.operations.PostV2OngoingActionsJsonRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/ongoing_actions.json");
         

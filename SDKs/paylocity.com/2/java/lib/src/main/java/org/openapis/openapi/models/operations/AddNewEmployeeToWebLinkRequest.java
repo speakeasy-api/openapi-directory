@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddNewEmployeeToWebLinkRequest {
-    
-    public AddNewEmployeeToWebLinkPathParams pathParams;
-    public AddNewEmployeeToWebLinkRequest withPathParams(AddNewEmployeeToWebLinkPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Company Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public AddNewEmployeeToWebLinkRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
@@ -18,16 +21,9 @@ public class AddNewEmployeeToWebLinkRequest {
      * StagedEmployee Model
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.StagedEmployee request;
-    public AddNewEmployeeToWebLinkRequest withRequest(org.openapis.openapi.models.shared.StagedEmployee request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public AddNewEmployeeToWebLinkSecurity security;
-    public AddNewEmployeeToWebLinkRequest withSecurity(AddNewEmployeeToWebLinkSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.StagedEmployee stagedEmployee;
+    public AddNewEmployeeToWebLinkRequest withStagedEmployee(org.openapis.openapi.models.shared.StagedEmployee stagedEmployee) {
+        this.stagedEmployee = stagedEmployee;
         return this;
     }
     

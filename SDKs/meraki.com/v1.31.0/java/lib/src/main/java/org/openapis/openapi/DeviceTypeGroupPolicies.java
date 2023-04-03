@@ -40,7 +40,7 @@ public class DeviceTypeGroupPolicies {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidDeviceTypeGroupPoliciesResponse getNetworkWirelessSsidDeviceTypeGroupPolicies(org.openapis.openapi.models.operations.GetNetworkWirelessSsidDeviceTypeGroupPoliciesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidDeviceTypeGroupPoliciesPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/deviceTypeGroupPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidDeviceTypeGroupPoliciesRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/deviceTypeGroupPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class DeviceTypeGroupPolicies {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesResponse updateNetworkWirelessSsidDeviceTypeGroupPolicies(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/deviceTypeGroupPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/deviceTypeGroupPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

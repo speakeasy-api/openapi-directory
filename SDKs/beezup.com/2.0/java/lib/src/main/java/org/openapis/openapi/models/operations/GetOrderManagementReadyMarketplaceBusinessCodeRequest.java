@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrderManagementReadyMarketplaceBusinessCodeRequest {
-    
-    public GetOrderManagementReadyMarketplaceBusinessCodeQueryParams queryParams;
-    public GetOrderManagementReadyMarketplaceBusinessCodeRequest withQueryParams(GetOrderManagementReadyMarketplaceBusinessCodeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Indicates that the client accepts the following languages.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String[] acceptLanguage;
+    public GetOrderManagementReadyMarketplaceBusinessCodeRequest withAcceptLanguage(String[] acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
-    
-    public GetOrderManagementReadyMarketplaceBusinessCodeHeaders headers;
-    public GetOrderManagementReadyMarketplaceBusinessCodeRequest withHeaders(GetOrderManagementReadyMarketplaceBusinessCodeHeaders headers) {
-        this.headers = headers;
+    /**
+     * StoredIds to filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=storeIds")
+    public String[] storeIds;
+    public GetOrderManagementReadyMarketplaceBusinessCodeRequest withStoreIds(String[] storeIds) {
+        this.storeIds = storeIds;
         return this;
     }
     

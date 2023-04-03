@@ -38,7 +38,7 @@ public class SavedSearches {
      */
     public org.openapis.openapi.models.operations.GetUsersIdSavedSearchesResponse getUsersIdSavedSearches(org.openapis.openapi.models.operations.GetUsersIdSavedSearchesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdSavedSearchesPathParams.class, baseUrl, "/users/{id}/saved_searches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdSavedSearchesRequest.class, baseUrl, "/users/{id}/saved_searches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

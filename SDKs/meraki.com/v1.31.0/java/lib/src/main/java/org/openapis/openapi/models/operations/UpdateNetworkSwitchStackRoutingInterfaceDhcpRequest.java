@@ -7,17 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest {
-    
-    public UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams pathParams;
-    public UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest withPathParams(UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody requestBody;
+    public UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest withRequestBody(UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody request;
-    public UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest withRequest(UpdateNetworkSwitchStackRoutingInterfaceDhcpRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=interfaceId")
+    public String interfaceId;
+    public UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest withInterfaceId(String interfaceId) {
+        this.interfaceId = interfaceId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=switchStackId")
+    public String switchStackId;
+    public UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest withSwitchStackId(String switchStackId) {
+        this.switchStackId = switchStackId;
         return this;
     }
     

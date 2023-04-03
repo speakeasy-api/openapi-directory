@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest {
-    
-    public GetSearchVersionNumberRoutedFilterPositionHeadingExtPathParams pathParams;
-    public GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest withPathParams(GetSearchVersionNumberRoutedFilterPositionHeadingExtPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Expected response format.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
+    public org.openapis.openapi.models.shared.ExtEnum ext;
+    public GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
+        this.ext = ext;
         return this;
     }
     
+    /**
+     * The directional heading in degrees, usually similar to the course along a road segment. Entered in degrees, measured clockwise from north (so north is 0, east is 90, etc.)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=heading")
+    public Float heading;
+    public GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest withHeading(Float heading) {
+        this.heading = heading;
+        return this;
+    }
     
-    public GetSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams queryParams;
-    public GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest withQueryParams(GetSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * List of POIs to filter. The only required attribute of a POI is position, everything else is optional and will be echoed back when passed in.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=poiList")
+    public String poiList;
+    public GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest withPoiList(String poiList) {
+        this.poiList = poiList;
+        return this;
+    }
+    
+    /**
+     * This is specified as a comma separated string composed of lat., lon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=position")
+    public String position;
+    public GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest withPosition(String position) {
+        this.position = position;
+        return this;
+    }
+    
+    /**
+     * Only return results that arrive from routing engine within this time limit.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routingTimeout")
+    public Long routingTimeout;
+    public GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest withRoutingTimeout(Long routingTimeout) {
+        this.routingTimeout = routingTimeout;
+        return this;
+    }
+    
+    /**
+     * Service version number. The current value is 2.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
+    public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+    public GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
         return this;
     }
     

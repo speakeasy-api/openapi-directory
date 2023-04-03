@@ -40,7 +40,7 @@ public class AuthenticationExtrasEssentials {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClientAuthResponse clientAuth(org.openapis.openapi.models.operations.ClientAuthRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClientAuthResponse clientAuth(org.openapis.openapi.models.operations.ClientAuthRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/oauth/authorize/client");
         
@@ -92,7 +92,7 @@ public class AuthenticationExtrasEssentials {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConvertAccessTokenResponse convertAccessToken(org.openapis.openapi.models.operations.ConvertAccessTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConvertAccessTokenResponse convertAccessToken(org.openapis.openapi.models.operations.ConvertAccessTokenRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/oauth/authorize/vimeo_oauth1");
         
@@ -191,7 +191,7 @@ public class AuthenticationExtrasEssentials {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExchangeAuthCodeResponse exchangeAuthCode(org.openapis.openapi.models.operations.ExchangeAuthCodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExchangeAuthCodeResponse exchangeAuthCode(org.openapis.openapi.models.operations.ExchangeAuthCodeRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/oauth/access_token");
         

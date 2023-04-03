@@ -4,27 +4,106 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JobScheduleTerminateRequest {
-    
-    public JobScheduleTerminatePathParams pathParams;
-    public JobScheduleTerminateRequest withPathParams(JobScheduleTerminatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An ETag is specified. Specify this header to perform the operation only if the resource's ETag is an exact match as specified.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public JobScheduleTerminateRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
-    
-    public JobScheduleTerminateQueryParams queryParams;
-    public JobScheduleTerminateRequest withQueryParams(JobScheduleTerminateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specify this header to perform the operation only if the resource has been modified since the specified date/time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
+    public String ifModifiedSince;
+    public JobScheduleTerminateRequest withIfModifiedSince(String ifModifiedSince) {
+        this.ifModifiedSince = ifModifiedSince;
         return this;
     }
     
+    /**
+     * An ETag is specified. Specify this header to perform the operation only if the resource's ETag does not match the specified ETag.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public JobScheduleTerminateRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
+        return this;
+    }
     
-    public JobScheduleTerminateHeaders headers;
-    public JobScheduleTerminateRequest withHeaders(JobScheduleTerminateHeaders headers) {
-        this.headers = headers;
+    /**
+     * Specify this header to perform the operation only if the resource has not been modified since the specified date/time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Unmodified-Since")
+    public String ifUnmodifiedSince;
+    public JobScheduleTerminateRequest withIfUnmodifiedSince(String ifUnmodifiedSince) {
+        this.ifUnmodifiedSince = ifUnmodifiedSince;
+        return this;
+    }
+    
+    /**
+     * Client API Version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public JobScheduleTerminateRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
+    public String clientRequestId;
+    public JobScheduleTerminateRequest withClientRequestId(String clientRequestId) {
+        this.clientRequestId = clientRequestId;
+        return this;
+    }
+    
+    /**
+     * The id of the job schedule to terminates.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobScheduleId")
+    public String jobScheduleId;
+    public JobScheduleTerminateRequest withJobScheduleId(String jobScheduleId) {
+        this.jobScheduleId = jobScheduleId;
+        return this;
+    }
+    
+    /**
+     * The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
+    public String ocpDate;
+    public JobScheduleTerminateRequest withOcpDate(String ocpDate) {
+        this.ocpDate = ocpDate;
+        return this;
+    }
+    
+    /**
+     * Specifies if the server should return the client-request-id identifier in the response.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
+    public Boolean returnClientRequestId;
+    public JobScheduleTerminateRequest withReturnClientRequestId(Boolean returnClientRequestId) {
+        this.returnClientRequestId = returnClientRequestId;
+        return this;
+    }
+    
+    /**
+     * Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
+    public Integer timeout;
+    public JobScheduleTerminateRequest withTimeout(Integer timeout) {
+        this.timeout = timeout;
         return this;
     }
     

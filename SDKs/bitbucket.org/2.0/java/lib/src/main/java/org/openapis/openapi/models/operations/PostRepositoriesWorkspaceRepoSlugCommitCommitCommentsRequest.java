@@ -7,27 +7,47 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest {
-    
-    public PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsPathParams pathParams;
-    public PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest withPathParams(PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The specified comment.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The commit's SHA1.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
+    public String commit;
+    public PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest withCommit(String commit) {
+        this.commit = commit;
+        return this;
+    }
     
-    public PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsSecurity security;
-    public PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest withSecurity(PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public PostRepositoriesWorkspaceRepoSlugCommitCommitCommentsRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

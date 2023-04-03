@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacRequest {
-    
-    public PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacPathParams pathParams;
-    public PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacRequest withPathParams(PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
-    
-    public PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacSecurity security;
-    public PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacRequest withSecurity(PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the webhook configuration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhookId")
+    public String webhookId;
+    public PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacRequest withWebhookId(String webhookId) {
+        this.webhookId = webhookId;
         return this;
     }
     

@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CrmCheckPathParams;
-import org.openapis.openapi.models.operations.CrmCheckQueryParams;
 import org.openapis.openapi.models.operations.CrmCheckRequest;
 import org.openapis.openapi.models.operations.CrmCheckResponse;
 
@@ -14,22 +12,16 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    authorizeEndpoint = new SchemeAuthorizeEndpoint() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
+                    password = "YOUR_PASSWORD_HERE";
+                    username = "YOUR_USERNAME_HERE";
                 }})
                 .build();
 
             CrmCheckRequest req = new CrmCheckRequest() {{
-                pathParams = new CrmCheckPathParams() {{
-                    vin = "corrupti";
-                }};
-                queryParams = new CrmCheckQueryParams() {{
-                    apiKey = "provident";
-                    saleDate = "distinctio";
-                }};
-            }};            
+                apiKey = "corrupti";
+                saleDate = "provident";
+                vin = "distinctio";
+            }}            
 
             CrmCheckResponse res = sdk.crmCleanseAPI.crmCheck(req);
 

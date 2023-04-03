@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeServiceAccessPoliciesRequest {
-    
-    public GETDescribeServiceAccessPoliciesQueryParams queryParams;
-    public GETDescribeServiceAccessPoliciesRequest withQueryParams(GETDescribeServiceAccessPoliciesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeServiceAccessPoliciesActionEnum action;
+    public GETDescribeServiceAccessPoliciesRequest withAction(GETDescribeServiceAccessPoliciesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
+    public String domainName;
+    public GETDescribeServiceAccessPoliciesRequest withDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
     
-    public GETDescribeServiceAccessPoliciesHeaders headers;
-    public GETDescribeServiceAccessPoliciesRequest withHeaders(GETDescribeServiceAccessPoliciesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeServiceAccessPoliciesVersionEnum version;
+    public GETDescribeServiceAccessPoliciesRequest withVersion(GETDescribeServiceAccessPoliciesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeServiceAccessPoliciesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeServiceAccessPoliciesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeServiceAccessPoliciesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeServiceAccessPoliciesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeServiceAccessPoliciesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeServiceAccessPoliciesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeServiceAccessPoliciesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

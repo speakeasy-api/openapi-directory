@@ -30,8 +30,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetUserSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetUserRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUserResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UserResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/IndividualAccount.java
@@ -39,5 +37,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/Phone.java
 lib/src/main/java/org/openapis/openapi/models/shared/Address.java
 lib/src/main/java/org/openapis/openapi/models/shared/BusinessAccount.java
 lib/src/main/java/org/openapis/openapi/models/shared/Contact.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIAuth.java
 USAGE.md

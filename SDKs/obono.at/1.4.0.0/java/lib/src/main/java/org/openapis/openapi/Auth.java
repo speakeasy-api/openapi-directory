@@ -34,11 +34,10 @@ public class Auth {
 
     /**
      * Request a JWT access token using your obono username and password.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAuthResponse getAuth(org.openapis.openapi.models.operations.GetAuthRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAuthResponse getAuth() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/auth");
         
@@ -47,7 +46,7 @@ public class Auth {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

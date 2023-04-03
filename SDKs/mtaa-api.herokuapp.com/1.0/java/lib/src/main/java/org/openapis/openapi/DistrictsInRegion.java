@@ -35,7 +35,7 @@ public class DistrictsInRegion {
      */
     public org.openapis.openapi.models.operations.DistrictsInARegionResponse districtsInARegion(org.openapis.openapi.models.operations.DistrictsInARegionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistrictsInARegionPathParams.class, baseUrl, "/{country}/{region}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistrictsInARegionRequest.class, baseUrl, "/{country}/{region}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

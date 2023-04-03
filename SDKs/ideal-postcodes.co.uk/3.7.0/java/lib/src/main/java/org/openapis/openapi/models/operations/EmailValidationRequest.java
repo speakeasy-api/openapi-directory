@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EmailValidationRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=api_key")
+    public String apiKey;
+    public EmailValidationRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public EmailValidationQueryParams queryParams;
-    public EmailValidationRequest withQueryParams(EmailValidationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specifies the email address to validate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=query")
+    public String query;
+    public EmailValidationRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

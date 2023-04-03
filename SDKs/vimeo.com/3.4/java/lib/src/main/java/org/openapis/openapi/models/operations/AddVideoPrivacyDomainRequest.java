@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddVideoPrivacyDomainRequest {
-    
-    public AddVideoPrivacyDomainPathParams pathParams;
-    public AddVideoPrivacyDomainRequest withPathParams(AddVideoPrivacyDomainPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The domain name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domain")
+    public String domain;
+    public AddVideoPrivacyDomainRequest withDomain(String domain) {
+        this.domain = domain;
         return this;
     }
     
-    
-    public AddVideoPrivacyDomainSecurity security;
-    public AddVideoPrivacyDomainRequest withSecurity(AddVideoPrivacyDomainSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public AddVideoPrivacyDomainRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

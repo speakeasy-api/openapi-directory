@@ -44,10 +44,11 @@ public class TrackingField {
      * **Prerequisites:**
      * * Business, Education, API or higher plan
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TrackingfieldCreateResponse trackingfieldCreate(org.openapis.openapi.models.operations.TrackingfieldCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TrackingfieldCreateResponse trackingfieldCreate(org.openapis.openapi.models.operations.TrackingfieldCreateTrackingField request, org.openapis.openapi.models.operations.TrackingfieldCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tracking_fields");
         
@@ -61,7 +62,7 @@ public class TrackingField {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -101,19 +102,20 @@ public class TrackingField {
      * **Prerequisites:**
      * * Business, Education, API or higher plan
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TrackingfieldDeleteResponse trackingfieldDelete(org.openapis.openapi.models.operations.TrackingfieldDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TrackingfieldDeleteResponse trackingfieldDelete(org.openapis.openapi.models.operations.TrackingfieldDeleteRequest request, org.openapis.openapi.models.operations.TrackingfieldDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TrackingfieldDeletePathParams.class, baseUrl, "/tracking_fields/{fieldId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TrackingfieldDeleteRequest.class, baseUrl, "/tracking_fields/{fieldId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -141,19 +143,20 @@ public class TrackingField {
      * * Business, Education, API or higher plan
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TrackingfieldGetResponse trackingfieldGet(org.openapis.openapi.models.operations.TrackingfieldGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TrackingfieldGetResponse trackingfieldGet(org.openapis.openapi.models.operations.TrackingfieldGetRequest request, org.openapis.openapi.models.operations.TrackingfieldGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TrackingfieldGetPathParams.class, baseUrl, "/tracking_fields/{fieldId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TrackingfieldGetRequest.class, baseUrl, "/tracking_fields/{fieldId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -192,11 +195,10 @@ public class TrackingField {
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`&lt;br&gt;
      * **Prerequisites:**
      * * Business, Education, API or higher plan
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TrackingfieldListResponse trackingfieldList(org.openapis.openapi.models.operations.TrackingfieldListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TrackingfieldListResponse trackingfieldList() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tracking_fields");
         
@@ -205,7 +207,7 @@ public class TrackingField {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -243,24 +245,25 @@ public class TrackingField {
      * **Prerequisites:**
      * * Business, Education, API or higher plan
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TrackingfieldUpdateResponse trackingfieldUpdate(org.openapis.openapi.models.operations.TrackingfieldUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TrackingfieldUpdateResponse trackingfieldUpdate(org.openapis.openapi.models.operations.TrackingfieldUpdateRequest request, org.openapis.openapi.models.operations.TrackingfieldUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TrackingfieldUpdatePathParams.class, baseUrl, "/tracking_fields/{fieldId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TrackingfieldUpdateRequest.class, baseUrl, "/tracking_fields/{fieldId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

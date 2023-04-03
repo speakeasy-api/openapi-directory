@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimRackGroupsUpdateRequest {
-    
-    public DcimRackGroupsUpdatePathParams pathParams;
-    public DcimRackGroupsUpdateRequest withPathParams(DcimRackGroupsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableRackGroupInput writableRackGroupInput;
+    public DcimRackGroupsUpdateRequest withWritableRackGroupInput(org.openapis.openapi.models.shared.WritableRackGroupInput writableRackGroupInput) {
+        this.writableRackGroupInput = writableRackGroupInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableRackGroupInput request;
-    public DcimRackGroupsUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableRackGroupInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this rack group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimRackGroupsUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

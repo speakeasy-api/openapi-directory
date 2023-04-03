@@ -4,20 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadCertificateRequest {
-    
-    public DownloadCertificatePathParams pathParams;
-    public DownloadCertificateRequest withPathParams(DownloadCertificatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The file format of the returned file stream:
+     * &lt;ul&gt;&lt;li&gt;PFX: Also known as PKCS #12, is a single, password protected certificate archive that contains the entire certificate chain plus the matching private key.&lt;/li&gt;&lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=file_format")
+    public org.openapis.openapi.models.shared.SslCertificateFileFormatEnum fileFormat;
+    public DownloadCertificateRequest withFileFormat(org.openapis.openapi.models.shared.SslCertificateFileFormatEnum fileFormat) {
+        this.fileFormat = fileFormat;
         return this;
     }
     
+    /**
+     * The password used to protect the certificate file.&lt;br /&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=password")
+    public String password;
+    public DownloadCertificateRequest withPassword(String password) {
+        this.password = password;
+        return this;
+    }
     
-    public DownloadCertificateQueryParams queryParams;
-    public DownloadCertificateRequest withQueryParams(DownloadCertificateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sha1Fingerprint")
+    public String sha1FingerprintPathParameter;
+    public DownloadCertificateRequest withSha1FingerprintPathParameter(String sha1FingerprintPathParameter) {
+        this.sha1FingerprintPathParameter = sha1FingerprintPathParameter;
+        return this;
+    }
+    
+    /**
+     * The SHA-1 fingerprint of the certificate.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sha1_fingerprint")
+    public String sha1FingerprintQueryParameter;
+    public DownloadCertificateRequest withSha1FingerprintQueryParameter(String sha1FingerprintQueryParameter) {
+        this.sha1FingerprintQueryParameter = sha1FingerprintQueryParameter;
         return this;
     }
     

@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutTracksTrackIdMultipartSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAuthHeader authHeader;
-    public PutTracksTrackIdMultipartSecurity withAuthHeader(org.openapis.openapi.models.shared.SchemeAuthHeader authHeader) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
+    public String authHeader;
+    public PutTracksTrackIdMultipartSecurity withAuthHeader(String authHeader) {
         this.authHeader = authHeader;
         return this;
     }

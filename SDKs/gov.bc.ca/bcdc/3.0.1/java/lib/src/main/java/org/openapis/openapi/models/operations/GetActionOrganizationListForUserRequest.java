@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActionOrganizationListForUserRequest {
-    
-    public GetActionOrganizationListForUserQueryParams queryParams;
-    public GetActionOrganizationListForUserRequest withQueryParams(GetActionOrganizationListForUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The permission the user has against the returned organization
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=permission")
+    public String permission;
+    public GetActionOrganizationListForUserRequest withPermission(String permission) {
+        this.permission = permission;
         return this;
     }
     

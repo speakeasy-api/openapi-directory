@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimRacksElevationRequest {
-    
-    public DcimRacksElevationPathParams pathParams;
-    public DcimRacksElevationRequest withPathParams(DcimRacksElevationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude")
+    public Long exclude;
+    public DcimRacksElevationRequest withExclude(Long exclude) {
+        this.exclude = exclude;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand_devices")
+    public Boolean expandDevices;
+    public DcimRacksElevationRequest withExpandDevices(Boolean expandDevices) {
+        this.expandDevices = expandDevices;
+        return this;
+    }
     
-    public DcimRacksElevationQueryParams queryParams;
-    public DcimRacksElevationRequest withQueryParams(DcimRacksElevationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=face")
+    public DcimRacksElevationFaceEnum face;
+    public DcimRacksElevationRequest withFace(DcimRacksElevationFaceEnum face) {
+        this.face = face;
+        return this;
+    }
+    
+    /**
+     * A unique integer value identifying this rack.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimRacksElevationRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_images")
+    public Boolean includeImages;
+    public DcimRacksElevationRequest withIncludeImages(Boolean includeImages) {
+        this.includeImages = includeImages;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=legend_width")
+    public Long legendWidth;
+    public DcimRacksElevationRequest withLegendWidth(Long legendWidth) {
+        this.legendWidth = legendWidth;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public DcimRacksElevationRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=render")
+    public DcimRacksElevationRenderEnum render;
+    public DcimRacksElevationRequest withRender(DcimRacksElevationRenderEnum render) {
+        this.render = render;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit_height")
+    public Long unitHeight;
+    public DcimRacksElevationRequest withUnitHeight(Long unitHeight) {
+        this.unitHeight = unitHeight;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit_width")
+    public Long unitWidth;
+    public DcimRacksElevationRequest withUnitWidth(Long unitWidth) {
+        this.unitWidth = unitWidth;
         return this;
     }
     

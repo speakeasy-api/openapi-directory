@@ -40,12 +40,12 @@ public class MemberElections {
      */
     public org.openapis.openapi.models.operations.CreateMemberElectionResponse createMemberElection(org.openapis.openapi.models.operations.CreateMemberElectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateMemberElectionPathParams.class, baseUrl, "/api/v1/coverage_plans/{plan_id}/member_elections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateMemberElectionRequest.class, baseUrl, "/api/v1/coverage_plans/{plan_id}/member_elections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "memberElectionCreateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -84,12 +84,12 @@ public class MemberElections {
      */
     public org.openapis.openapi.models.operations.EditMemberElectionResponse editMemberElection(org.openapis.openapi.models.operations.EditMemberElectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditMemberElectionPathParams.class, baseUrl, "/api/v1/member_elections/{member_election_id}/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditMemberElectionRequest.class, baseUrl, "/api/v1/member_elections/{member_election_id}/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "memberElectionEditRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -128,13 +128,13 @@ public class MemberElections {
      */
     public org.openapis.openapi.models.operations.GetApplicationMemberElectionsResponse getApplicationMemberElections(org.openapis.openapi.models.operations.GetApplicationMemberElectionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApplicationMemberElectionsPathParams.class, baseUrl, "/api/v1/applications/{application_id}/member_elections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApplicationMemberElectionsRequest.class, baseUrl, "/api/v1/applications/{application_id}/member_elections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApplicationMemberElectionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApplicationMemberElectionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -173,13 +173,13 @@ public class MemberElections {
      */
     public org.openapis.openapi.models.operations.GetCoveragePlanMemberElectionsResponse getCoveragePlanMemberElections(org.openapis.openapi.models.operations.GetCoveragePlanMemberElectionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCoveragePlanMemberElectionsPathParams.class, baseUrl, "/api/v1/coverage_plans/{plan_id}/member_elections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCoveragePlanMemberElectionsRequest.class, baseUrl, "/api/v1/coverage_plans/{plan_id}/member_elections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCoveragePlanMemberElectionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCoveragePlanMemberElectionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -218,7 +218,7 @@ public class MemberElections {
      */
     public org.openapis.openapi.models.operations.GetMemberElectionResponse getMemberElection(org.openapis.openapi.models.operations.GetMemberElectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMemberElectionPathParams.class, baseUrl, "/api/v1/member_elections/{member_election_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMemberElectionRequest.class, baseUrl, "/api/v1/member_elections/{member_election_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

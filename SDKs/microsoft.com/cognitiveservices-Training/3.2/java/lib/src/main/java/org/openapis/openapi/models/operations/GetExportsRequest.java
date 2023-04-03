@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetExportsRequest {
+    /**
+     * The iteration id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=iterationId")
+    public String iterationId;
+    public GetExportsRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
+        return this;
+    }
     
-    public GetExportsPathParams pathParams;
-    public GetExportsRequest withPathParams(GetExportsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public GetExportsRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

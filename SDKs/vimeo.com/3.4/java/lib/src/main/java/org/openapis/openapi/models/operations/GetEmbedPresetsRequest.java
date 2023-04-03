@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEmbedPresetsRequest {
-    
-    public GetEmbedPresetsPathParams pathParams;
-    public GetEmbedPresetsRequest withPathParams(GetEmbedPresetsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetEmbedPresetsRequest withPage(Double page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetEmbedPresetsRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public GetEmbedPresetsQueryParams queryParams;
-    public GetEmbedPresetsRequest withQueryParams(GetEmbedPresetsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public GetEmbedPresetsRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

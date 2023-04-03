@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV1VerificationSendRequest {
+    /**
+     * ISO 3166 country code for the recipient mobile phone number. If parameter is supplied, then some basic telephone number validation is done.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country_code")
+    public String countryCode;
+    public PostV1VerificationSendRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+        return this;
+    }
     
-    public PostV1VerificationSendQueryParams queryParams;
-    public PostV1VerificationSendRequest withQueryParams(PostV1VerificationSendQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Returns the API response in json (default) or xml format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public PostV1VerificationSendFormatEnum format;
+    public PostV1VerificationSendRequest withFormat(PostV1VerificationSendFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * FraudLabs Pro API key.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public PostV1VerificationSendRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The message template for the SMS. Add &lt;otp&gt; as placeholder for the actual OTP to be generated. Max length is 140 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mesg")
+    public String mesg;
+    public PostV1VerificationSendRequest withMesg(String mesg) {
+        this.mesg = mesg;
+        return this;
+    }
+    
+    /**
+     * The recipient mobile phone number in E164 format which is a plus followed by just numbers with no spaces or parentheses.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tel")
+    public String tel;
+    public PostV1VerificationSendRequest withTel(String tel) {
+        this.tel = tel;
         return this;
     }
     

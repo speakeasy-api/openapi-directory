@@ -7,17 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTListDomainsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccessKeyId")
+    public String awsAccessKeyId;
+    public POSTListDomainsRequest withAWSAccessKeyId(String awsAccessKeyId) {
+        this.awsAccessKeyId = awsAccessKeyId;
+        return this;
+    }
     
-    public POSTListDomainsQueryParams queryParams;
-    public POSTListDomainsRequest withQueryParams(POSTListDomainsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public POSTListDomainsActionEnum action;
+    public POSTListDomainsRequest withAction(POSTListDomainsActionEnum action) {
+        this.action = action;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxNumberOfDomains")
+    public String maxNumberOfDomains;
+    public POSTListDomainsRequest withMaxNumberOfDomains(String maxNumberOfDomains) {
+        this.maxNumberOfDomains = maxNumberOfDomains;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public POSTListDomainsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public POSTListDomainsRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public POSTListDomainsRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Signature")
+    public String signature;
+    public POSTListDomainsRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureMethod")
+    public String signatureMethod;
+    public POSTListDomainsRequest withSignatureMethod(String signatureMethod) {
+        this.signatureMethod = signatureMethod;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureVersion")
+    public String signatureVersion;
+    public POSTListDomainsRequest withSignatureVersion(String signatureVersion) {
+        this.signatureVersion = signatureVersion;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timestamp")
+    public String timestamp;
+    public POSTListDomainsRequest withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public POSTListDomainsVersionEnum version;
+    public POSTListDomainsRequest withVersion(POSTListDomainsVersionEnum version) {
+        this.version = version;
         return this;
     }
     

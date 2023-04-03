@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApproveAWireTransferRequest {
-    
-    public ApproveAWireTransferPathParams pathParams;
-    public ApproveAWireTransferRequest withPathParams(ApproveAWireTransferPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=wire_transfer_id")
+    public String wireTransferId;
+    public ApproveAWireTransferRequest withWireTransferId(String wireTransferId) {
+        this.wireTransferId = wireTransferId;
         return this;
     }
     

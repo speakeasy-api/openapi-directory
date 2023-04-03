@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoSigningKeyRequest {
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoSigningKeyRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public RepoSigningKeyPathParams pathParams;
-    public RepoSigningKeyRequest withPathParams(RepoSigningKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoSigningKeyRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

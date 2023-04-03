@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetChannelPrivacyUserRequest {
-    
-    public SetChannelPrivacyUserPathParams pathParams;
-    public SetChannelPrivacyUserRequest withPathParams(SetChannelPrivacyUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public SetChannelPrivacyUserRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     
-    
-    public SetChannelPrivacyUserSecurity security;
-    public SetChannelPrivacyUserRequest withSecurity(SetChannelPrivacyUserSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public SetChannelPrivacyUserRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

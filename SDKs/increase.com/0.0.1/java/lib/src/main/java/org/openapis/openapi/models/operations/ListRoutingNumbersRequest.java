@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRoutingNumbersRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListRoutingNumbersRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public ListRoutingNumbersQueryParams queryParams;
-    public ListRoutingNumbersRequest withQueryParams(ListRoutingNumbersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListRoutingNumbersRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routing_number")
+    public String routingNumber;
+    public ListRoutingNumbersRequest withRoutingNumber(String routingNumber) {
+        this.routingNumber = routingNumber;
         return this;
     }
     

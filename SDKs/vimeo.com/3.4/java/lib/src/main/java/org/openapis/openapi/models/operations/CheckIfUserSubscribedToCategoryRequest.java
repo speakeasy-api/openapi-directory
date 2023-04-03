@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckIfUserSubscribedToCategoryRequest {
-    
-    public CheckIfUserSubscribedToCategoryPathParams pathParams;
-    public CheckIfUserSubscribedToCategoryRequest withPathParams(CheckIfUserSubscribedToCategoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the category.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category")
+    public String category;
+    public CheckIfUserSubscribedToCategoryRequest withCategory(String category) {
+        this.category = category;
         return this;
     }
     
-    
-    public CheckIfUserSubscribedToCategorySecurity security;
-    public CheckIfUserSubscribedToCategoryRequest withSecurity(CheckIfUserSubscribedToCategorySecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public CheckIfUserSubscribedToCategoryRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -7,20 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSpacesIdPortfoliosPortfolioIdPersonsMemberIdRequest {
-    
-    public PatchSpacesIdPortfoliosPortfolioIdPersonsMemberIdPathParams pathParams;
-    public PatchSpacesIdPortfoliosPortfolioIdPersonsMemberIdRequest withPathParams(PatchSpacesIdPortfoliosPortfolioIdPersonsMemberIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Portfolio to modify
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchSpacesIdPortfoliosPortfolioIdPersonsMemberIdRequestBody request;
-    public PatchSpacesIdPortfoliosPortfolioIdPersonsMemberIdRequest withRequest(PatchSpacesIdPortfoliosPortfolioIdPersonsMemberIdRequestBody request) {
-        this.request = request;
+    public PatchSpacesIdPortfoliosPortfolioIdPersonsMemberIdRequestBody requestBody;
+    public PatchSpacesIdPortfoliosPortfolioIdPersonsMemberIdRequest withRequestBody(PatchSpacesIdPortfoliosPortfolioIdPersonsMemberIdRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchSpacesIdPortfoliosPortfolioIdPersonsMemberIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * memberId of the person
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=memberId")
+    public String memberId;
+    public PatchSpacesIdPortfoliosPortfolioIdPersonsMemberIdRequest withMemberId(String memberId) {
+        this.memberId = memberId;
+        return this;
+    }
+    
+    /**
+     * id of the portfolio
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portfolioId")
+    public String portfolioId;
+    public PatchSpacesIdPortfoliosPortfolioIdPersonsMemberIdRequest withPortfolioId(String portfolioId) {
+        this.portfolioId = portfolioId;
         return this;
     }
     

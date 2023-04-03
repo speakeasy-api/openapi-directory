@@ -4,27 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlaylistsPlaylistIdTracksRequest {
-    
-    public GetPlaylistsPlaylistIdTracksPathParams pathParams;
-    public GetPlaylistsPlaylistIdTracksRequest withPathParams(GetPlaylistsPlaylistIdTracksPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filters content by level of access the user (logged in or anonymous) has to the track. The result list will include only tracks with the specified access. Include all options if you'd like to see all possible tracks. See `Track#access` schema for more details.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=access")
+    public org.openapis.openapi.models.shared.AccessEnum[] access;
+    public GetPlaylistsPlaylistIdTracksRequest withAccess(org.openapis.openapi.models.shared.AccessEnum[] access) {
+        this.access = access;
         return this;
     }
     
-    
-    public GetPlaylistsPlaylistIdTracksQueryParams queryParams;
-    public GetPlaylistsPlaylistIdTracksRequest withQueryParams(GetPlaylistsPlaylistIdTracksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Returns paginated collection of items (recommended, returning a list without pagination is deprecated and should not be used)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linked_partitioning")
+    public Boolean linkedPartitioning;
+    public GetPlaylistsPlaylistIdTracksRequest withLinkedPartitioning(Boolean linkedPartitioning) {
+        this.linkedPartitioning = linkedPartitioning;
         return this;
     }
     
+    /**
+     * SoundCloud playlist id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playlist_id")
+    public Long playlistId;
+    public GetPlaylistsPlaylistIdTracksRequest withPlaylistId(Long playlistId) {
+        this.playlistId = playlistId;
+        return this;
+    }
     
-    public GetPlaylistsPlaylistIdTracksSecurity security;
-    public GetPlaylistsPlaylistIdTracksRequest withSecurity(GetPlaylistsPlaylistIdTracksSecurity security) {
-        this.security = security;
+    /**
+     * A secret token to fetch private playlists/tracks
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secret_token")
+    public String secretToken;
+    public GetPlaylistsPlaylistIdTracksRequest withSecretToken(String secretToken) {
+        this.secretToken = secretToken;
         return this;
     }
     

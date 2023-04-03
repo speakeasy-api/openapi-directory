@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPeersListRequest {
+    /**
+     * Set to true to show peers not open to be connected
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=closedApi")
+    public Boolean closedApi;
+    public GetPeersListRequest withClosedApi(Boolean closedApi) {
+        this.closedApi = closedApi;
+        return this;
+    }
     
-    public GetPeersListQueryParams queryParams;
-    public GetPeersListRequest withQueryParams(GetPeersListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetPeersListRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Set to true to show unreachable peers in the list
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unreachable")
+    public Boolean unreachable;
+    public GetPeersListRequest withUnreachable(Boolean unreachable) {
+        this.unreachable = unreachable;
         return this;
     }
     

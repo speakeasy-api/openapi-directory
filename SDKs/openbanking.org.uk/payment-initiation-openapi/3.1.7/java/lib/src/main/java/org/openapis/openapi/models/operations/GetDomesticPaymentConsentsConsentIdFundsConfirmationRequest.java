@@ -4,27 +4,68 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDomesticPaymentConsentsConsentIdFundsConfirmationRequest {
-    
-    public GetDomesticPaymentConsentsConsentIdFundsConfirmationPathParams pathParams;
-    public GetDomesticPaymentConsentsConsentIdFundsConfirmationRequest withPathParams(GetDomesticPaymentConsentsConsentIdFundsConfirmationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An Authorisation Token as per https://tools.ietf.org/html/rfc6750
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetDomesticPaymentConsentsConsentIdFundsConfirmationRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
-    
-    public GetDomesticPaymentConsentsConsentIdFundsConfirmationHeaders headers;
-    public GetDomesticPaymentConsentsConsentIdFundsConfirmationRequest withHeaders(GetDomesticPaymentConsentsConsentIdFundsConfirmationHeaders headers) {
-        this.headers = headers;
+    /**
+     * ConsentId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConsentId")
+    public String consentId;
+    public GetDomesticPaymentConsentsConsentIdFundsConfirmationRequest withConsentId(String consentId) {
+        this.consentId = consentId;
         return this;
     }
     
+    /**
+     * Indicates the user-agent that the PSU is using.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
+    public String xCustomerUserAgent;
+    public GetDomesticPaymentConsentsConsentIdFundsConfirmationRequest withXCustomerUserAgent(String xCustomerUserAgent) {
+        this.xCustomerUserAgent = xCustomerUserAgent;
+        return this;
+    }
     
-    public GetDomesticPaymentConsentsConsentIdFundsConfirmationSecurity security;
-    public GetDomesticPaymentConsentsConsentIdFundsConfirmationRequest withSecurity(GetDomesticPaymentConsentsConsentIdFundsConfirmationSecurity security) {
-        this.security = security;
+    /**
+     * The time when the PSU last logged in with the TPP. 
+     * All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
+     * Sun, 10 Sep 2017 19:43:31 UTC
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
+    public String xFapiAuthDate;
+    public GetDomesticPaymentConsentsConsentIdFundsConfirmationRequest withXFapiAuthDate(String xFapiAuthDate) {
+        this.xFapiAuthDate = xFapiAuthDate;
+        return this;
+    }
+    
+    /**
+     * The PSU's IP address if the PSU is currently logged in with the TPP.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
+    public String xFapiCustomerIpAddress;
+    public GetDomesticPaymentConsentsConsentIdFundsConfirmationRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
+        this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
+        return this;
+    }
+    
+    /**
+     * An RFC4122 UID used as a correlation id.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
+    public String xFapiInteractionId;
+    public GetDomesticPaymentConsentsConsentIdFundsConfirmationRequest withXFapiInteractionId(String xFapiInteractionId) {
+        this.xFapiInteractionId = xFapiInteractionId;
         return this;
     }
     

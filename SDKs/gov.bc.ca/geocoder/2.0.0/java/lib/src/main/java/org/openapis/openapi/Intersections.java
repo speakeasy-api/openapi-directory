@@ -36,13 +36,13 @@ public class Intersections {
      */
     public org.openapis.openapi.models.operations.GetAddressesOutputFormatResponse getAddressesOutputFormat(org.openapis.openapi.models.operations.GetAddressesOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddressesOutputFormatPathParams.class, baseUrl, "/addresses.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddressesOutputFormatRequest.class, baseUrl, "/addresses.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAddressesOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAddressesOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -76,13 +76,13 @@ public class Intersections {
      */
     public org.openapis.openapi.models.operations.GetIntersectionsNearOutputFormatResponse getIntersectionsNearOutputFormat(org.openapis.openapi.models.operations.GetIntersectionsNearOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntersectionsNearOutputFormatPathParams.class, baseUrl, "/intersections/near.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntersectionsNearOutputFormatRequest.class, baseUrl, "/intersections/near.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetIntersectionsNearOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetIntersectionsNearOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -116,13 +116,13 @@ public class Intersections {
      */
     public org.openapis.openapi.models.operations.GetIntersectionsNearestOutputFormatResponse getIntersectionsNearestOutputFormat(org.openapis.openapi.models.operations.GetIntersectionsNearestOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntersectionsNearestOutputFormatPathParams.class, baseUrl, "/intersections/nearest.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntersectionsNearestOutputFormatRequest.class, baseUrl, "/intersections/nearest.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetIntersectionsNearestOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetIntersectionsNearestOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -156,13 +156,13 @@ public class Intersections {
      */
     public org.openapis.openapi.models.operations.GetIntersectionsWithinOutputFormatResponse getIntersectionsWithinOutputFormat(org.openapis.openapi.models.operations.GetIntersectionsWithinOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntersectionsWithinOutputFormatPathParams.class, baseUrl, "/intersections/within.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntersectionsWithinOutputFormatRequest.class, baseUrl, "/intersections/within.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetIntersectionsWithinOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetIntersectionsWithinOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -196,13 +196,13 @@ public class Intersections {
      */
     public org.openapis.openapi.models.operations.GetIntersectionsIntersectionIDOutputFormatResponse getIntersectionsIntersectionIDOutputFormat(org.openapis.openapi.models.operations.GetIntersectionsIntersectionIDOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntersectionsIntersectionIDOutputFormatPathParams.class, baseUrl, "/intersections/{intersectionID}.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntersectionsIntersectionIDOutputFormatRequest.class, baseUrl, "/intersections/{intersectionID}.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetIntersectionsIntersectionIDOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetIntersectionsIntersectionIDOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

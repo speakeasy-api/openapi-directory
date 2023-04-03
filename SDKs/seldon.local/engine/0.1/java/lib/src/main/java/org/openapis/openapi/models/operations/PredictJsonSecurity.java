@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PredictJsonSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer")
-    public org.openapis.openapi.models.shared.SchemeHTTPBearer httpBearer;
-    public PredictJsonSecurity withHTTPBearer(org.openapis.openapi.models.shared.SchemeHTTPBearer httpBearer) {
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
+    public String httpBearer;
+    public PredictJsonSecurity withHTTPBearer(String httpBearer) {
         this.httpBearer = httpBearer;
         return this;
     }

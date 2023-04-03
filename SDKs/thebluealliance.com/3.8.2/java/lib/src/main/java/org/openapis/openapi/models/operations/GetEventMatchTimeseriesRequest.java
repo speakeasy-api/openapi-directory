@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventMatchTimeseriesRequest {
-    
-    public GetEventMatchTimeseriesPathParams pathParams;
-    public GetEventMatchTimeseriesRequest withPathParams(GetEventMatchTimeseriesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Value of the `ETag` header in the most recently cached response by the client.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetEventMatchTimeseriesRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
-    
-    public GetEventMatchTimeseriesHeaders headers;
-    public GetEventMatchTimeseriesRequest withHeaders(GetEventMatchTimeseriesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetEventMatchTimeseriesSecurity security;
-    public GetEventMatchTimeseriesRequest withSecurity(GetEventMatchTimeseriesSecurity security) {
-        this.security = security;
+    /**
+     * TBA Event Key, eg `2016nytr`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=event_key")
+    public String eventKey;
+    public GetEventMatchTimeseriesRequest withEventKey(String eventKey) {
+        this.eventKey = eventKey;
         return this;
     }
     

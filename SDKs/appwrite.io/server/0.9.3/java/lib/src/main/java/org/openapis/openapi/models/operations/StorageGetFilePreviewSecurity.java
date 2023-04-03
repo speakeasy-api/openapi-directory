@@ -7,23 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageGetFilePreviewSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeJwt jwt;
-    public StorageGetFilePreviewSecurity withJwt(org.openapis.openapi.models.shared.SchemeJwt jwt) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-JWT")
+    public String jwt;
+    public StorageGetFilePreviewSecurity withJwt(String jwt) {
         this.jwt = jwt;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeKey key;
-    public StorageGetFilePreviewSecurity withKey(org.openapis.openapi.models.shared.SchemeKey key) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-Key")
+    public String key;
+    public StorageGetFilePreviewSecurity withKey(String key) {
         this.key = key;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeProject project;
-    public StorageGetFilePreviewSecurity withProject(org.openapis.openapi.models.shared.SchemeProject project) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-Project")
+    public String project;
+    public StorageGetFilePreviewSecurity withProject(String project) {
         this.project = project;
         return this;
     }

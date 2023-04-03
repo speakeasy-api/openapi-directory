@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsRemoveRequestedReviewersRequest {
-    
-    public PullsRemoveRequestedReviewersPathParams pathParams;
-    public PullsRemoveRequestedReviewersRequest withPathParams(PullsRemoveRequestedReviewersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PullsRemoveRequestedReviewersRequestBody requestBody;
+    public PullsRemoveRequestedReviewersRequest withRequestBody(PullsRemoveRequestedReviewersRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PullsRemoveRequestedReviewersRequestBody request;
-    public PullsRemoveRequestedReviewersRequest withRequest(PullsRemoveRequestedReviewersRequestBody request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public PullsRemoveRequestedReviewersRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The number that identifies the pull request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_number")
+    public Long pullNumber;
+    public PullsRemoveRequestedReviewersRequest withPullNumber(Long pullNumber) {
+        this.pullNumber = pullNumber;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public PullsRemoveRequestedReviewersRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackageDeleteRequest {
-    
-    public PackageDeleteQueryParams queryParams;
-    public PackageDeleteRequest withQueryParams(PackageDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * primary key of package entity
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PackageId")
+    public Integer packageId;
+    public PackageDeleteRequest withPackageId(Integer packageId) {
+        this.packageId = packageId;
         return this;
     }
     

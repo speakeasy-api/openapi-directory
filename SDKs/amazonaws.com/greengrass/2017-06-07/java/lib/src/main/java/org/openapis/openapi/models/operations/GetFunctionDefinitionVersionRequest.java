@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFunctionDefinitionVersionRequest {
-    
-    public GetFunctionDefinitionVersionPathParams pathParams;
-    public GetFunctionDefinitionVersionRequest withPathParams(GetFunctionDefinitionVersionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the Lambda function definition.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FunctionDefinitionId")
+    public String functionDefinitionId;
+    public GetFunctionDefinitionVersionRequest withFunctionDefinitionId(String functionDefinitionId) {
+        this.functionDefinitionId = functionDefinitionId;
         return this;
     }
     
-    
-    public GetFunctionDefinitionVersionQueryParams queryParams;
-    public GetFunctionDefinitionVersionRequest withQueryParams(GetFunctionDefinitionVersionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the function definition version. This value maps to the ''Version'' property of the corresponding ''VersionInformation'' object, which is returned by ''ListFunctionDefinitionVersions'' requests. If the version is the last one that was associated with a function definition, the value also maps to the ''LatestVersion'' property of the corresponding ''DefinitionInformation'' object.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FunctionDefinitionVersionId")
+    public String functionDefinitionVersionId;
+    public GetFunctionDefinitionVersionRequest withFunctionDefinitionVersionId(String functionDefinitionVersionId) {
+        this.functionDefinitionVersionId = functionDefinitionVersionId;
         return this;
     }
     
+    /**
+     * The token for the next set of results, or ''null'' if there are no additional results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GetFunctionDefinitionVersionRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
     
-    public GetFunctionDefinitionVersionHeaders headers;
-    public GetFunctionDefinitionVersionRequest withHeaders(GetFunctionDefinitionVersionHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetFunctionDefinitionVersionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetFunctionDefinitionVersionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetFunctionDefinitionVersionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetFunctionDefinitionVersionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetFunctionDefinitionVersionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetFunctionDefinitionVersionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetFunctionDefinitionVersionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

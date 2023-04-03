@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFunctionRequest {
-    
-    public DeleteFunctionPathParams pathParams;
-    public DeleteFunctionRequest withPathParams(DeleteFunctionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Service to delete the Function resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteFunctionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public DeleteFunctionSecurity security;
-    public DeleteFunctionRequest withSecurity(DeleteFunctionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteFunctionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Function resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteFunctionRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

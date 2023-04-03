@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFactRequest {
-    
-    public DeleteFactQueryParams queryParams;
-    public DeleteFactRequest withQueryParams(DeleteFactQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteFactSecurity security;
-    public DeleteFactRequest withSecurity(DeleteFactSecurity security) {
-        this.security = security;
+    /**
+     * Fact ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public DeleteFactRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

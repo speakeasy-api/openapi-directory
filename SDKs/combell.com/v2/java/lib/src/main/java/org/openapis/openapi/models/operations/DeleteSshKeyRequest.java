@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSshKeyRequest {
-    
-    public DeleteSshKeyPathParams pathParams;
-    public DeleteSshKeyRequest withPathParams(DeleteSshKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public DeleteSshKeyRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
         return this;
     }
     
+    /**
+     * Linux hosting domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public DeleteSshKeyRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        return this;
+    }
     
-    public DeleteSshKeyQueryParams queryParams;
-    public DeleteSshKeyRequest withQueryParams(DeleteSshKeyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Fingerprint of public key.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fingerprint")
+    public String fingerprint;
+    public DeleteSshKeyRequest withFingerprint(String fingerprint) {
+        this.fingerprint = fingerprint;
         return this;
     }
     

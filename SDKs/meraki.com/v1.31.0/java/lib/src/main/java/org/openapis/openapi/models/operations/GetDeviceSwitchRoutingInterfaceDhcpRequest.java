@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceSwitchRoutingInterfaceDhcpRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=interfaceId")
+    public String interfaceId;
+    public GetDeviceSwitchRoutingInterfaceDhcpRequest withInterfaceId(String interfaceId) {
+        this.interfaceId = interfaceId;
+        return this;
+    }
     
-    public GetDeviceSwitchRoutingInterfaceDhcpPathParams pathParams;
-    public GetDeviceSwitchRoutingInterfaceDhcpRequest withPathParams(GetDeviceSwitchRoutingInterfaceDhcpPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetDeviceSwitchRoutingInterfaceDhcpRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

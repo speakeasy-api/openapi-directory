@@ -7,20 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendDocumentRequest {
-    
-    public SendDocumentPathParams pathParams;
-    public SendDocumentRequest withPathParams(SendDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * List of email-s where you want to send the invoice.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SendDocument request;
-    public SendDocumentRequest withRequest(org.openapis.openapi.models.shared.SendDocument request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SendDocument sendDocument;
+    public SendDocumentRequest withSendDocument(org.openapis.openapi.models.shared.SendDocument sendDocument) {
+        this.sendDocument = sendDocument;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public SendDocumentRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

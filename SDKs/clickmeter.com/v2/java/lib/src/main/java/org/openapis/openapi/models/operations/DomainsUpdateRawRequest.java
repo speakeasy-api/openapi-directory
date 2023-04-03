@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DomainsUpdateRawRequest {
-    
-    public DomainsUpdateRawPathParams pathParams;
-    public DomainsUpdateRawRequest withPathParams(DomainsUpdateRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The domain to update
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public DomainsUpdateRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public DomainsUpdateRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of domain
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DomainsUpdateRawRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

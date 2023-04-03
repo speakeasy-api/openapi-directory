@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TrapConfigDelRequest {
+    /**
+     * IP of the destination
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IP")
+    public String ip;
+    public TrapConfigDelRequest withIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
     
-    public TrapConfigDelPathParams pathParams;
-    public TrapConfigDelRequest withPathParams(TrapConfigDelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to delete the destination
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public TrapConfigDelRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
+    
+    /**
+     * port of the destination
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
+    public Integer port;
+    public TrapConfigDelRequest withPort(Integer port) {
+        this.port = port;
         return this;
     }
     

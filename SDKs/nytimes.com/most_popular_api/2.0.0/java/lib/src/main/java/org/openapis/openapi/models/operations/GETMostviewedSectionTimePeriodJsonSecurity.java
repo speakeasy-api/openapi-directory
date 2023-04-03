@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETMostviewedSectionTimePeriodJsonSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public org.openapis.openapi.models.shared.SchemeAPIKey apiKey;
-    public GETMostviewedSectionTimePeriodJsonSecurity withApiKey(org.openapis.openapi.models.shared.SchemeAPIKey apiKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=api-key")
+    public String apiKey;
+    public GETMostviewedSectionTimePeriodJsonSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }

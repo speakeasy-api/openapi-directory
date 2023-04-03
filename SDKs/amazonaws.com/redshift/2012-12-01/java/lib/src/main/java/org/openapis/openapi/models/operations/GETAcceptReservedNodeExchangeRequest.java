@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAcceptReservedNodeExchangeRequest {
-    
-    public GETAcceptReservedNodeExchangeQueryParams queryParams;
-    public GETAcceptReservedNodeExchangeRequest withQueryParams(GETAcceptReservedNodeExchangeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETAcceptReservedNodeExchangeActionEnum action;
+    public GETAcceptReservedNodeExchangeRequest withAction(GETAcceptReservedNodeExchangeActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * A string representing the node identifier of the DC1 Reserved Node to be exchanged.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReservedNodeId")
+    public String reservedNodeId;
+    public GETAcceptReservedNodeExchangeRequest withReservedNodeId(String reservedNodeId) {
+        this.reservedNodeId = reservedNodeId;
+        return this;
+    }
     
-    public GETAcceptReservedNodeExchangeHeaders headers;
-    public GETAcceptReservedNodeExchangeRequest withHeaders(GETAcceptReservedNodeExchangeHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique identifier of the DC2 Reserved Node offering to be used for the exchange. You can obtain the value for the parameter by calling &lt;a&gt;GetReservedNodeExchangeOfferings&lt;/a&gt; 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetReservedNodeOfferingId")
+    public String targetReservedNodeOfferingId;
+    public GETAcceptReservedNodeExchangeRequest withTargetReservedNodeOfferingId(String targetReservedNodeOfferingId) {
+        this.targetReservedNodeOfferingId = targetReservedNodeOfferingId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETAcceptReservedNodeExchangeVersionEnum version;
+    public GETAcceptReservedNodeExchangeRequest withVersion(GETAcceptReservedNodeExchangeVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETAcceptReservedNodeExchangeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETAcceptReservedNodeExchangeRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETAcceptReservedNodeExchangeRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETAcceptReservedNodeExchangeRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETAcceptReservedNodeExchangeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETAcceptReservedNodeExchangeRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETAcceptReservedNodeExchangeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

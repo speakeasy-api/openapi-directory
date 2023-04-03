@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateLabelFromShipmentRequest {
-    
-    public CreateLabelFromShipmentPathParams pathParams;
-    public CreateLabelFromShipmentRequest withPathParams(CreateLabelFromShipmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateLabelFromShipmentRequestBody createLabelFromShipmentRequestBody;
+    public CreateLabelFromShipmentRequest withCreateLabelFromShipmentRequestBody(org.openapis.openapi.models.shared.CreateLabelFromShipmentRequestBody createLabelFromShipmentRequestBody) {
+        this.createLabelFromShipmentRequestBody = createLabelFromShipmentRequestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateLabelFromShipmentRequestBody request;
-    public CreateLabelFromShipmentRequest withRequest(org.openapis.openapi.models.shared.CreateLabelFromShipmentRequestBody request) {
-        this.request = request;
+    /**
+     * Shipment ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shipment_id")
+    public String shipmentId;
+    public CreateLabelFromShipmentRequest withShipmentId(String shipmentId) {
+        this.shipmentId = shipmentId;
         return this;
     }
     

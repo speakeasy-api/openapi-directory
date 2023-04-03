@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePotRequest {
-    
-    public CreatePotHeaders headers;
-    public CreatePotRequest withHeaders(CreatePotHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreatePotRequestBodyInput request;
-    public CreatePotRequest withRequest(CreatePotRequestBodyInput request) {
-        this.request = request;
+    public CreatePotRequestBodyInput requestBody;
+    public CreatePotRequest withRequestBody(CreatePotRequestBodyInput requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreatePotSecurity security;
-    public CreatePotRequest withSecurity(CreatePotSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public CreatePotRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

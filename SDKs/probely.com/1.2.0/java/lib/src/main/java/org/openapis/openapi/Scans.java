@@ -52,7 +52,7 @@ public class Scans {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsAllScansQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsAllScansRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -99,13 +99,13 @@ public class Scans {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdScansResponse getTargetsTargetIdScans(org.openapis.openapi.models.operations.GetTargetsTargetIdScansRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScansPathParams.class, baseUrl, "/targets/{target_id}/scans/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScansRequest.class, baseUrl, "/targets/{target_id}/scans/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsTargetIdScansQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsTargetIdScansRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -160,7 +160,7 @@ public class Scans {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdScansDatesResponse getTargetsTargetIdScansDates(org.openapis.openapi.models.operations.GetTargetsTargetIdScansDatesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScansDatesPathParams.class, baseUrl, "/targets/{target_id}/scans/dates/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScansDatesRequest.class, baseUrl, "/targets/{target_id}/scans/dates/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -216,13 +216,13 @@ public class Scans {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdScansRetrievePageResponse getTargetsTargetIdScansRetrievePage(org.openapis.openapi.models.operations.GetTargetsTargetIdScansRetrievePageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScansRetrievePagePathParams.class, baseUrl, "/targets/{target_id}/scans/retrieve_page/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScansRetrievePageRequest.class, baseUrl, "/targets/{target_id}/scans/retrieve_page/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsTargetIdScansRetrievePageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsTargetIdScansRetrievePageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -285,7 +285,7 @@ public class Scans {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdResponse getTargetsTargetIdScansId(org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdPathParams.class, baseUrl, "/targets/{target_id}/scans/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdRequest.class, baseUrl, "/targets/{target_id}/scans/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -340,7 +340,7 @@ public class Scans {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdEndpointsResponse getTargetsTargetIdScansIdEndpoints(org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdEndpointsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdEndpointsPathParams.class, baseUrl, "/targets/{target_id}/scans/{id}/endpoints/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdEndpointsRequest.class, baseUrl, "/targets/{target_id}/scans/{id}/endpoints/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -394,7 +394,7 @@ public class Scans {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdReportResponse getTargetsTargetIdScansIdReport(org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdReportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdReportPathParams.class, baseUrl, "/targets/{target_id}/scans/{id}/report/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdReportRequest.class, baseUrl, "/targets/{target_id}/scans/{id}/report/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -448,7 +448,7 @@ public class Scans {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdReportDefaultResponse getTargetsTargetIdScansIdReportDefault(org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdReportDefaultRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdReportDefaultPathParams.class, baseUrl, "/targets/{target_id}/scans/{id}/report/default/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdReportDefaultRequest.class, baseUrl, "/targets/{target_id}/scans/{id}/report/default/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -502,7 +502,7 @@ public class Scans {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdReportOwaspResponse getTargetsTargetIdScansIdReportOwasp(org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdReportOwaspRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdReportOwaspPathParams.class, baseUrl, "/targets/{target_id}/scans/{id}/report/owasp/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdReportOwaspRequest.class, baseUrl, "/targets/{target_id}/scans/{id}/report/owasp/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -556,7 +556,7 @@ public class Scans {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdReportPciResponse getTargetsTargetIdScansIdReportPci(org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdReportPciRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdReportPciPathParams.class, baseUrl, "/targets/{target_id}/scans/{id}/report/pci/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScansIdReportPciRequest.class, baseUrl, "/targets/{target_id}/scans/{id}/report/pci/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -610,12 +610,12 @@ public class Scans {
      */
     public org.openapis.openapi.models.operations.PostTargetsTargetIdScanNowResponse postTargetsTargetIdScanNow(org.openapis.openapi.models.operations.PostTargetsTargetIdScanNowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTargetsTargetIdScanNowPathParams.class, baseUrl, "/targets/{target_id}/scan_now/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTargetsTargetIdScanNowRequest.class, baseUrl, "/targets/{target_id}/scan_now/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -683,7 +683,7 @@ public class Scans {
      */
     public org.openapis.openapi.models.operations.PostTargetsTargetIdScansIdCancelResponse postTargetsTargetIdScansIdCancel(org.openapis.openapi.models.operations.PostTargetsTargetIdScansIdCancelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTargetsTargetIdScansIdCancelPathParams.class, baseUrl, "/targets/{target_id}/scans/{id}/cancel/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTargetsTargetIdScansIdCancelRequest.class, baseUrl, "/targets/{target_id}/scans/{id}/cancel/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

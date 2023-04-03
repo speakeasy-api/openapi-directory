@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyClusterDbRevisionRequest {
-    
-    public GETModifyClusterDbRevisionQueryParams queryParams;
-    public GETModifyClusterDbRevisionRequest withQueryParams(GETModifyClusterDbRevisionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyClusterDbRevisionActionEnum action;
+    public GETModifyClusterDbRevisionRequest withAction(GETModifyClusterDbRevisionActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The unique identifier of a cluster whose database revision you want to modify. &lt;/p&gt; &lt;p&gt;Example: &lt;code&gt;examplecluster&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETModifyClusterDbRevisionRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
     
-    public GETModifyClusterDbRevisionHeaders headers;
-    public GETModifyClusterDbRevisionRequest withHeaders(GETModifyClusterDbRevisionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The identifier of the database revision. You can retrieve this value from the response to the &lt;a&gt;DescribeClusterDbRevisions&lt;/a&gt; request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RevisionTarget")
+    public String revisionTarget;
+    public GETModifyClusterDbRevisionRequest withRevisionTarget(String revisionTarget) {
+        this.revisionTarget = revisionTarget;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyClusterDbRevisionVersionEnum version;
+    public GETModifyClusterDbRevisionRequest withVersion(GETModifyClusterDbRevisionVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyClusterDbRevisionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyClusterDbRevisionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyClusterDbRevisionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyClusterDbRevisionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyClusterDbRevisionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyClusterDbRevisionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyClusterDbRevisionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

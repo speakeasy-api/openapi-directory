@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetOrgVariableRequest {
+    /**
+     * The name of the variable.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public ActionsGetOrgVariableRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public ActionsGetOrgVariablePathParams pathParams;
-    public ActionsGetOrgVariableRequest withPathParams(ActionsGetOrgVariablePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsGetOrgVariableRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

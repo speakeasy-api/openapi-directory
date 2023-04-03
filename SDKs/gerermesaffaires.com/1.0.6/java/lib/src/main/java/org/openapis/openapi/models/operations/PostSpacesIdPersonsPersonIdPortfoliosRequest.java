@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesIdPersonsPersonIdPortfoliosRequest {
-    
-    public PostSpacesIdPersonsPersonIdPortfoliosPathParams pathParams;
-    public PostSpacesIdPersonsPersonIdPortfoliosRequest withPathParams(PostSpacesIdPersonsPersonIdPortfoliosPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Portfolio to add (except Class and Name)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSpacesIdPersonsPersonIdPortfoliosRequestBody request;
-    public PostSpacesIdPersonsPersonIdPortfoliosRequest withRequest(PostSpacesIdPersonsPersonIdPortfoliosRequestBody request) {
-        this.request = request;
+    public PostSpacesIdPersonsPersonIdPortfoliosRequestBody requestBody;
+    public PostSpacesIdPersonsPersonIdPortfoliosRequest withRequestBody(PostSpacesIdPersonsPersonIdPortfoliosRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesIdPersonsPersonIdPortfoliosRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesIdPersonsPersonIdPortfoliosSecurity security;
-    public PostSpacesIdPersonsPersonIdPortfoliosRequest withSecurity(PostSpacesIdPersonsPersonIdPortfoliosSecurity security) {
-        this.security = security;
+    /**
+     * Id of the person who will be the owner of the portfolio
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=personId")
+    public String personId;
+    public PostSpacesIdPersonsPersonIdPortfoliosRequest withPersonId(String personId) {
+        this.personId = personId;
         return this;
     }
     

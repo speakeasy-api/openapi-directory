@@ -47,7 +47,7 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.BillingGetGithubActionsBillingGheResponse billingGetGithubActionsBillingGhe(org.openapis.openapi.models.operations.BillingGetGithubActionsBillingGheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetGithubActionsBillingGhePathParams.class, baseUrl, "/enterprises/{enterprise}/settings/billing/actions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetGithubActionsBillingGheRequest.class, baseUrl, "/enterprises/{enterprise}/settings/billing/actions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -91,7 +91,7 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.BillingGetGithubActionsBillingOrgResponse billingGetGithubActionsBillingOrg(org.openapis.openapi.models.operations.BillingGetGithubActionsBillingOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetGithubActionsBillingOrgPathParams.class, baseUrl, "/orgs/{org}/settings/billing/actions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetGithubActionsBillingOrgRequest.class, baseUrl, "/orgs/{org}/settings/billing/actions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -135,7 +135,7 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.BillingGetGithubActionsBillingUserResponse billingGetGithubActionsBillingUser(org.openapis.openapi.models.operations.BillingGetGithubActionsBillingUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetGithubActionsBillingUserPathParams.class, baseUrl, "/users/{username}/settings/billing/actions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetGithubActionsBillingUserRequest.class, baseUrl, "/users/{username}/settings/billing/actions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -179,13 +179,13 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingGheResponse billingGetGithubAdvancedSecurityBillingGhe(org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingGheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingGhePathParams.class, baseUrl, "/enterprises/{enterprise}/settings/billing/advanced-security", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingGheRequest.class, baseUrl, "/enterprises/{enterprise}/settings/billing/advanced-security", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingGheQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingGheRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -239,13 +239,13 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingOrgResponse billingGetGithubAdvancedSecurityBillingOrg(org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingOrgPathParams.class, baseUrl, "/orgs/{org}/settings/billing/advanced-security", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingOrgRequest.class, baseUrl, "/orgs/{org}/settings/billing/advanced-security", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -297,7 +297,7 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.BillingGetGithubPackagesBillingGheResponse billingGetGithubPackagesBillingGhe(org.openapis.openapi.models.operations.BillingGetGithubPackagesBillingGheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetGithubPackagesBillingGhePathParams.class, baseUrl, "/enterprises/{enterprise}/settings/billing/packages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetGithubPackagesBillingGheRequest.class, baseUrl, "/enterprises/{enterprise}/settings/billing/packages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -341,7 +341,7 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.BillingGetGithubPackagesBillingOrgResponse billingGetGithubPackagesBillingOrg(org.openapis.openapi.models.operations.BillingGetGithubPackagesBillingOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetGithubPackagesBillingOrgPathParams.class, baseUrl, "/orgs/{org}/settings/billing/packages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetGithubPackagesBillingOrgRequest.class, baseUrl, "/orgs/{org}/settings/billing/packages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -385,7 +385,7 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.BillingGetGithubPackagesBillingUserResponse billingGetGithubPackagesBillingUser(org.openapis.openapi.models.operations.BillingGetGithubPackagesBillingUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetGithubPackagesBillingUserPathParams.class, baseUrl, "/users/{username}/settings/billing/packages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetGithubPackagesBillingUserRequest.class, baseUrl, "/users/{username}/settings/billing/packages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -429,7 +429,7 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.BillingGetSharedStorageBillingGheResponse billingGetSharedStorageBillingGhe(org.openapis.openapi.models.operations.BillingGetSharedStorageBillingGheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetSharedStorageBillingGhePathParams.class, baseUrl, "/enterprises/{enterprise}/settings/billing/shared-storage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetSharedStorageBillingGheRequest.class, baseUrl, "/enterprises/{enterprise}/settings/billing/shared-storage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -473,7 +473,7 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.BillingGetSharedStorageBillingOrgResponse billingGetSharedStorageBillingOrg(org.openapis.openapi.models.operations.BillingGetSharedStorageBillingOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetSharedStorageBillingOrgPathParams.class, baseUrl, "/orgs/{org}/settings/billing/shared-storage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetSharedStorageBillingOrgRequest.class, baseUrl, "/orgs/{org}/settings/billing/shared-storage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -517,7 +517,7 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.BillingGetSharedStorageBillingUserResponse billingGetSharedStorageBillingUser(org.openapis.openapi.models.operations.BillingGetSharedStorageBillingUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetSharedStorageBillingUserPathParams.class, baseUrl, "/users/{username}/settings/billing/shared-storage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetSharedStorageBillingUserRequest.class, baseUrl, "/users/{username}/settings/billing/shared-storage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

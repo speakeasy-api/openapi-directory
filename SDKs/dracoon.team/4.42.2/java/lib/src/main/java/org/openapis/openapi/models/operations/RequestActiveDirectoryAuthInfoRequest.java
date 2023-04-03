@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestActiveDirectoryAuthInfoRequest {
-    
-    public RequestActiveDirectoryAuthInfoQueryParams queryParams;
-    public RequestActiveDirectoryAuthInfoRequest withQueryParams(RequestActiveDirectoryAuthInfoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Show only global available items
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_global_available")
+    public Boolean isGlobalAvailable;
+    public RequestActiveDirectoryAuthInfoRequest withIsGlobalAvailable(Boolean isGlobalAvailable) {
+        this.isGlobalAvailable = isGlobalAvailable;
         return this;
     }
     

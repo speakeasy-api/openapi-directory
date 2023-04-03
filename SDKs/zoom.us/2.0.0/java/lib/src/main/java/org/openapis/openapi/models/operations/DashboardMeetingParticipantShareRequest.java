@@ -4,27 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DashboardMeetingParticipantShareRequest {
-    
-    public DashboardMeetingParticipantSharePathParams pathParams;
-    public DashboardMeetingParticipantShareRequest withPathParams(DashboardMeetingParticipantSharePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The meeting ID or the meeting UUID.  If a meeting ID is provided in the request instead of a UUID, the response will be for the latest meeting instance.
+     * 
+     * If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public String meetingId;
+    public DashboardMeetingParticipantShareRequest withMeetingId(String meetingId) {
+        this.meetingId = meetingId;
         return this;
     }
     
-    
-    public DashboardMeetingParticipantShareQueryParams queryParams;
-    public DashboardMeetingParticipantShareRequest withQueryParams(DashboardMeetingParticipantShareQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceed the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public DashboardMeetingParticipantShareRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
         return this;
     }
     
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public DashboardMeetingParticipantShareRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public DashboardMeetingParticipantShareSecurity security;
-    public DashboardMeetingParticipantShareRequest withSecurity(DashboardMeetingParticipantShareSecurity security) {
-        this.security = security;
+    /**
+     * The meeting types: &lt;br&gt;`past` - Past meetings.&lt;br&gt;`live` - Live Meetings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public DashboardMeetingParticipantShareTypeEnum type;
+    public DashboardMeetingParticipantShareRequest withType(DashboardMeetingParticipantShareTypeEnum type) {
+        this.type = type;
         return this;
     }
     

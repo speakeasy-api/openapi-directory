@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUserRequest {
-    
-    public DeleteUserPathParams pathParams;
-    public DeleteUserRequest withPathParams(DeleteUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public DeleteUserRequestBody requestBody;
+    public DeleteUserRequest withRequestBody(DeleteUserRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public DeleteUserRequestBody request;
-    public DeleteUserRequest withRequest(DeleteUserRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DeleteUserRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

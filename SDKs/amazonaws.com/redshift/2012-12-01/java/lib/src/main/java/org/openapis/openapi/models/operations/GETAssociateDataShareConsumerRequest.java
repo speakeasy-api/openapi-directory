@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAssociateDataShareConsumerRequest {
-    
-    public GETAssociateDataShareConsumerQueryParams queryParams;
-    public GETAssociateDataShareConsumerRequest withQueryParams(GETAssociateDataShareConsumerQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETAssociateDataShareConsumerActionEnum action;
+    public GETAssociateDataShareConsumerRequest withAction(GETAssociateDataShareConsumerActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * A value that specifies whether the datashare is associated with the entire account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AssociateEntireAccount")
+    public Boolean associateEntireAccount;
+    public GETAssociateDataShareConsumerRequest withAssociateEntireAccount(Boolean associateEntireAccount) {
+        this.associateEntireAccount = associateEntireAccount;
+        return this;
+    }
     
-    public GETAssociateDataShareConsumerHeaders headers;
-    public GETAssociateDataShareConsumerRequest withHeaders(GETAssociateDataShareConsumerHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Amazon Resource Name (ARN) of the consumer that is associated with the datashare.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConsumerArn")
+    public String consumerArn;
+    public GETAssociateDataShareConsumerRequest withConsumerArn(String consumerArn) {
+        this.consumerArn = consumerArn;
+        return this;
+    }
+    
+    /**
+     * From a datashare consumer account, associates a datashare with all existing and future namespaces in the specified Amazon Web Services Region.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConsumerRegion")
+    public String consumerRegion;
+    public GETAssociateDataShareConsumerRequest withConsumerRegion(String consumerRegion) {
+        this.consumerRegion = consumerRegion;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) of the datashare that the consumer is to use with the account or the namespace.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DataShareArn")
+    public String dataShareArn;
+    public GETAssociateDataShareConsumerRequest withDataShareArn(String dataShareArn) {
+        this.dataShareArn = dataShareArn;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETAssociateDataShareConsumerVersionEnum version;
+    public GETAssociateDataShareConsumerRequest withVersion(GETAssociateDataShareConsumerVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETAssociateDataShareConsumerRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETAssociateDataShareConsumerRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETAssociateDataShareConsumerRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETAssociateDataShareConsumerRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETAssociateDataShareConsumerRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETAssociateDataShareConsumerRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETAssociateDataShareConsumerRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

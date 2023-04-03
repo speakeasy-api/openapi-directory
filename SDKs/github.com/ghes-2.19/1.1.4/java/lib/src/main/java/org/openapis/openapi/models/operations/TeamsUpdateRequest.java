@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsUpdateRequest {
-    
-    public TeamsUpdatePathParams pathParams;
-    public TeamsUpdateRequest withPathParams(TeamsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public TeamsUpdateRequestBody requestBody;
+    public TeamsUpdateRequest withRequestBody(TeamsUpdateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsUpdateRequestBody request;
-    public TeamsUpdateRequest withRequest(TeamsUpdateRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsUpdateRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

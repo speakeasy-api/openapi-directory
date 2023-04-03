@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OptionsBlockIdRequest {
-    
-    public OptionsBlockIdPathParams pathParams;
-    public OptionsBlockIdRequest withPathParams(OptionsBlockIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public OptionsBlockIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

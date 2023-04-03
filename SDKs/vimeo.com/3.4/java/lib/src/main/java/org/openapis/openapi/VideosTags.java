@@ -34,19 +34,20 @@ public class VideosTags {
     /**
      * Add a specific tag to a video
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideoTagResponse addVideoTag(org.openapis.openapi.models.operations.AddVideoTagRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideoTagResponse addVideoTag(org.openapis.openapi.models.operations.AddVideoTagRequest request, org.openapis.openapi.models.operations.AddVideoTagSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoTagPathParams.class, baseUrl, "/videos/{video_id}/tags/{word}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoTagRequest.class, baseUrl, "/videos/{video_id}/tags/{word}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,24 +82,25 @@ public class VideosTags {
     /**
      * Add a list of tags to a video
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideoTagsResponse addVideoTags(org.openapis.openapi.models.operations.AddVideoTagsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideoTagsResponse addVideoTags(org.openapis.openapi.models.operations.AddVideoTagsRequest request, org.openapis.openapi.models.operations.AddVideoTagsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoTagsPathParams.class, baseUrl, "/videos/{video_id}/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoTagsRequest.class, baseUrl, "/videos/{video_id}/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -138,7 +140,7 @@ public class VideosTags {
      */
     public org.openapis.openapi.models.operations.CheckVideoForTagResponse checkVideoForTag(org.openapis.openapi.models.operations.CheckVideoForTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckVideoForTagPathParams.class, baseUrl, "/videos/{video_id}/tags/{word}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckVideoForTagRequest.class, baseUrl, "/videos/{video_id}/tags/{word}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -180,19 +182,20 @@ public class VideosTags {
     /**
      * Remove a tag from a video
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVideoTagResponse deleteVideoTag(org.openapis.openapi.models.operations.DeleteVideoTagRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVideoTagResponse deleteVideoTag(org.openapis.openapi.models.operations.DeleteVideoTagRequest request, org.openapis.openapi.models.operations.DeleteVideoTagSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoTagPathParams.class, baseUrl, "/videos/{video_id}/tags/{word}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoTagRequest.class, baseUrl, "/videos/{video_id}/tags/{word}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -226,7 +229,7 @@ public class VideosTags {
      */
     public org.openapis.openapi.models.operations.GetVideoTagsResponse getVideoTags(org.openapis.openapi.models.operations.GetVideoTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoTagsPathParams.class, baseUrl, "/videos/{video_id}/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoTagsRequest.class, baseUrl, "/videos/{video_id}/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -265,13 +268,13 @@ public class VideosTags {
      */
     public org.openapis.openapi.models.operations.GetVideosWithTagResponse getVideosWithTag(org.openapis.openapi.models.operations.GetVideosWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideosWithTagPathParams.class, baseUrl, "/tags/{word}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideosWithTagRequest.class, baseUrl, "/tags/{word}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVideosWithTagQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVideosWithTagRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

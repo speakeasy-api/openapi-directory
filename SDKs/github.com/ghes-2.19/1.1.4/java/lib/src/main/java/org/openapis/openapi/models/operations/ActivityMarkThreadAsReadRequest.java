@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivityMarkThreadAsReadRequest {
-    
-    public ActivityMarkThreadAsReadPathParams pathParams;
-    public ActivityMarkThreadAsReadRequest withPathParams(ActivityMarkThreadAsReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * thread_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=thread_id")
+    public Long threadId;
+    public ActivityMarkThreadAsReadRequest withThreadId(Long threadId) {
+        this.threadId = threadId;
         return this;
     }
     

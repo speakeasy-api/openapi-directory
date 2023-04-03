@@ -7,10 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostNewCisJobRequest {
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public PostNewCisJobRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
     
-    public PostNewCisJobHeaders headers;
-    public PostNewCisJobRequest withHeaders(PostNewCisJobHeaders headers) {
-        this.headers = headers;
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostNewCisJobRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
@@ -18,9 +31,9 @@ public class PostNewCisJobRequest {
      * The the CIS job instruction object.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CisJobInstructionBase request;
-    public PostNewCisJobRequest withRequest(org.openapis.openapi.models.shared.CisJobInstructionBase request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CisJobInstructionBase cisJobInstructionBase;
+    public PostNewCisJobRequest withCisJobInstructionBase(org.openapis.openapi.models.shared.CisJobInstructionBase cisJobInstructionBase) {
+        this.cisJobInstructionBase = cisJobInstructionBase;
         return this;
     }
     

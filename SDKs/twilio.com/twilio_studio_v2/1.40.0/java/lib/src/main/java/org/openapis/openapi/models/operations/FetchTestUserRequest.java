@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchTestUserRequest {
-    
-    public FetchTestUserPathParams pathParams;
-    public FetchTestUserRequest withPathParams(FetchTestUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchTestUserSecurity security;
-    public FetchTestUserRequest withSecurity(FetchTestUserSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchTestUserRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Unique identifier of the flow.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchTestUserRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

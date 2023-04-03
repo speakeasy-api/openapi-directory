@@ -4,27 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAutomationV4ActionsAppIdGetPageRequest {
-    
-    public GetAutomationV4ActionsAppIdGetPagePathParams pathParams;
-    public GetAutomationV4ActionsAppIdGetPageRequest withPathParams(GetAutomationV4ActionsAppIdGetPagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
+    public String after;
+    public GetAutomationV4ActionsAppIdGetPageRequest withAfter(String after) {
+        this.after = after;
         return this;
     }
     
-    
-    public GetAutomationV4ActionsAppIdGetPageQueryParams queryParams;
-    public GetAutomationV4ActionsAppIdGetPageRequest withQueryParams(GetAutomationV4ActionsAppIdGetPageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public GetAutomationV4ActionsAppIdGetPageRequest withAppId(Integer appId) {
+        this.appId = appId;
         return this;
     }
     
+    /**
+     * Whether to include archived custom actions.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=archived")
+    public Boolean archived;
+    public GetAutomationV4ActionsAppIdGetPageRequest withArchived(Boolean archived) {
+        this.archived = archived;
+        return this;
+    }
     
-    public GetAutomationV4ActionsAppIdGetPageSecurity security;
-    public GetAutomationV4ActionsAppIdGetPageRequest withSecurity(GetAutomationV4ActionsAppIdGetPageSecurity security) {
-        this.security = security;
+    /**
+     * Maximum number of results per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetAutomationV4ActionsAppIdGetPageRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     

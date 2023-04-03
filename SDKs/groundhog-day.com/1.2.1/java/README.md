@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GroundhogPathParams;
 import org.openapis.openapi.models.operations.GroundhogRequest;
 import org.openapis.openapi.models.operations.GroundhogResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             GroundhogRequest req = new GroundhogRequest() {{
-                pathParams = new GroundhogPathParams() {{
-                    slug = "corrupti";
-                }};
-            }};            
+                slug = "corrupti";
+            }}            
 
             GroundhogResponse res = sdk.groundhogs.groundhog(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### groundhogs

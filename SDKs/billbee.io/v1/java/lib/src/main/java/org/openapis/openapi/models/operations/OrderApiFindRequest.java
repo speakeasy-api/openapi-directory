@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiFindRequest {
+    /**
+     * The order id from the external system
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public OrderApiFindRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public OrderApiFindPathParams pathParams;
-    public OrderApiFindRequest withPathParams(OrderApiFindPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Optional the name of the shop/marketplace the order was imported from
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partner")
+    public String partner;
+    public OrderApiFindRequest withPartner(String partner) {
+        this.partner = partner;
         return this;
     }
     

@@ -30,12 +30,8 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/AcmednsAcmeChallengeSetsGetPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/AcmednsAcmeChallengeSetsGetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/AcmednsAcmeChallengeSetsGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AcmednsAcmeChallengeSetsGetResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/AcmednsAcmeChallengeSetsRotateChallengesPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/AcmednsAcmeChallengeSetsRotateChallengesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/AcmednsAcmeChallengeSetsRotateChallengesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AcmednsAcmeChallengeSetsRotateChallengesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AcmeChallengeSet.java

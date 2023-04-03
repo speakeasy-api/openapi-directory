@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCardDisputesRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at.after")
+    public OffsetDateTime createdAtAfter;
+    public ListCardDisputesRequest withCreatedAtAfter(OffsetDateTime createdAtAfter) {
+        this.createdAtAfter = createdAtAfter;
+        return this;
+    }
     
-    public ListCardDisputesQueryParams queryParams;
-    public ListCardDisputesRequest withQueryParams(ListCardDisputesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at.before")
+    public OffsetDateTime createdAtBefore;
+    public ListCardDisputesRequest withCreatedAtBefore(OffsetDateTime createdAtBefore) {
+        this.createdAtBefore = createdAtBefore;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at.on_or_after")
+    public OffsetDateTime createdAtOnOrAfter;
+    public ListCardDisputesRequest withCreatedAtOnOrAfter(OffsetDateTime createdAtOnOrAfter) {
+        this.createdAtOnOrAfter = createdAtOnOrAfter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at.on_or_before")
+    public OffsetDateTime createdAtOnOrBefore;
+    public ListCardDisputesRequest withCreatedAtOnOrBefore(OffsetDateTime createdAtOnOrBefore) {
+        this.createdAtOnOrBefore = createdAtOnOrBefore;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListCardDisputesRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListCardDisputesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status.in")
+    public ListCardDisputesStatusInEnum[] statusIn;
+    public ListCardDisputesRequest withStatusIn(ListCardDisputesStatusInEnum[] statusIn) {
+        this.statusIn = statusIn;
         return this;
     }
     

@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNhArtRequest {
-    
-    public GetNhArtQueryParams queryParams;
-    public GetNhArtRequest withQueryParams(GetNhArtQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The version of the API you are calling, written as `1.0.0`. This is specified as required as good practice, but it is not actually enforced by the API. If you do not specify a version, you will be served the latest version, which may eventually result in breaking changes.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Version")
+    public String acceptVersion;
+    public GetNhArtRequest withAcceptVersion(String acceptVersion) {
+        this.acceptVersion = acceptVersion;
         return this;
     }
     
+    /**
+     * Your UUID secret key, granted to you by the Nookipedia team. Required for accessing the API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-API-KEY")
+    public String xApiKey;
+    public GetNhArtRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
+        return this;
+    }
     
-    public GetNhArtHeaders headers;
-    public GetNhArtRequest withHeaders(GetNhArtHeaders headers) {
-        this.headers = headers;
+    /**
+     * When set to `true`, only artwork names are returned. Instead of an array of objects with all details, the return will be an array of strings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludedetails")
+    public String excludedetails;
+    public GetNhArtRequest withExcludedetails(String excludedetails) {
+        this.excludedetails = excludedetails;
+        return this;
+    }
+    
+    /**
+     * When set to `true`, only artwork that has a fake will be returned. When set to `false`, only artwork without fakes will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hasfake")
+    public String hasfake;
+    public GetNhArtRequest withHasfake(String hasfake) {
+        this.hasfake = hasfake;
+        return this;
+    }
+    
+    /**
+     * Specify the desired width of returned image URLs. When unspecified, the linked image(s) returned by the API will be full-resolution. Note that images can only be reduced in size; specifying a width greater than than the maximum size will return the default full-size image URL. Note that requesting specific image sizes for long lists may result in a very long response time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=thumbsize")
+    public Long thumbsize;
+    public GetNhArtRequest withThumbsize(Long thumbsize) {
+        this.thumbsize = thumbsize;
         return this;
     }
     

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateQueryUsingPOSTRequest {
-    
-    public CreateQueryUsingPOSTPathParams pathParams;
-    public CreateQueryUsingPOSTRequest withPathParams(CreateQueryUsingPOSTPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * query
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ManageQuery request;
-    public CreateQueryUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.ManageQuery request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ManageQuery manageQuery;
+    public CreateQueryUsingPOSTRequest withManageQuery(org.openapis.openapi.models.shared.ManageQuery manageQuery) {
+        this.manageQuery = manageQuery;
+        return this;
+    }
+    
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public CreateQueryUsingPOSTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

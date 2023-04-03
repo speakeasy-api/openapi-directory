@@ -7,17 +7,27 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRealmIdentityProviderInstancesAliasManagementPermissionsRequest {
-    
-    public PutRealmIdentityProviderInstancesAliasManagementPermissionsPathParams pathParams;
-    public PutRealmIdentityProviderInstancesAliasManagementPermissionsRequest withPathParams(PutRealmIdentityProviderInstancesAliasManagementPermissionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ManagementPermissionReference managementPermissionReference;
+    public PutRealmIdentityProviderInstancesAliasManagementPermissionsRequest withManagementPermissionReference(org.openapis.openapi.models.shared.ManagementPermissionReference managementPermissionReference) {
+        this.managementPermissionReference = managementPermissionReference;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ManagementPermissionReference request;
-    public PutRealmIdentityProviderInstancesAliasManagementPermissionsRequest withRequest(org.openapis.openapi.models.shared.ManagementPermissionReference request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=alias")
+    public String alias;
+    public PutRealmIdentityProviderInstancesAliasManagementPermissionsRequest withAlias(String alias) {
+        this.alias = alias;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PutRealmIdentityProviderInstancesAliasManagementPermissionsRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

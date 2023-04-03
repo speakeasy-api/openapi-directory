@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetKeywordsRequest {
-    
-    public GetKeywordsQueryParams queryParams;
-    public GetKeywordsRequest withQueryParams(GetKeywordsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetKeywordsSecurity security;
-    public GetKeywordsRequest withSecurity(GetKeywordsSecurity security) {
-        this.security = security;
+    /**
+     * The asset ID or upload ID to suggest keywords for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_id")
+    public Object assetId;
+    public GetKeywordsRequest withAssetId(Object assetId) {
+        this.assetId = assetId;
         return this;
     }
     

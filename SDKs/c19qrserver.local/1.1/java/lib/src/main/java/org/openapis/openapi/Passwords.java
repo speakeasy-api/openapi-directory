@@ -40,7 +40,7 @@ public class Passwords {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostChangePasswordResponse postChangePassword(org.openapis.openapi.models.operations.PostChangePasswordRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostChangePasswordResponse postChangePassword(org.openapis.openapi.models.operations.PostChangePasswordSample request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/changePassword");
         
@@ -88,7 +88,7 @@ public class Passwords {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRequestPasswordResetResponse postRequestPasswordReset(org.openapis.openapi.models.operations.PostRequestPasswordResetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRequestPasswordResetResponse postRequestPasswordReset(org.openapis.openapi.models.operations.PostRequestPasswordResetSample request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/requestPasswordReset");
         
@@ -142,7 +142,7 @@ public class Passwords {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostVerifyPasswordChangeResponse postVerifyPasswordChange(org.openapis.openapi.models.operations.PostVerifyPasswordChangeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostVerifyPasswordChangeResponse postVerifyPasswordChange(org.openapis.openapi.models.operations.PostVerifyPasswordChangeSample request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/verifyPasswordChange");
         

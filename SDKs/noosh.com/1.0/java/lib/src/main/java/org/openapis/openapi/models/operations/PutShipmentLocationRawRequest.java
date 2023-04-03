@@ -7,17 +7,38 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutShipmentLocationRawRequest {
-    
-    public PutShipmentLocationRawPathParams pathParams;
-    public PutShipmentLocationRawRequest withPathParams(PutShipmentLocationRawPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] requestBody;
+    public PutShipmentLocationRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public PutShipmentLocationRawRequest withRequest(byte[] request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public PutShipmentLocationRawRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public PutShipmentLocationRawRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shipment_id")
+    public String shipmentId;
+    public PutShipmentLocationRawRequest withShipmentId(String shipmentId) {
+        this.shipmentId = shipmentId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public PutShipmentLocationRawRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

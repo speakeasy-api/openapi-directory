@@ -4,27 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveInventoryChangesRequest {
-    
-    public RetrieveInventoryChangesPathParams pathParams;
-    public RetrieveInventoryChangesRequest withPathParams(RetrieveInventoryChangesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the [CatalogObject](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogObject) to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=catalog_object_id")
+    public String catalogObjectId;
+    public RetrieveInventoryChangesRequest withCatalogObjectId(String catalogObjectId) {
+        this.catalogObjectId = catalogObjectId;
         return this;
     }
     
-    
-    public RetrieveInventoryChangesQueryParams queryParams;
-    public RetrieveInventoryChangesRequest withQueryParams(RetrieveInventoryChangesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A pagination cursor returned by a previous call to this endpoint.
+     * Provide this to retrieve the next set of results for the original query.
+     * 
+     * See the [Pagination](https://developer.squareup.com/docs/working-with-apis/pagination) guide for more information.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public RetrieveInventoryChangesRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
-    
-    public RetrieveInventoryChangesSecurity security;
-    public RetrieveInventoryChangesRequest withSecurity(RetrieveInventoryChangesSecurity security) {
-        this.security = security;
+    /**
+     * The [Location](https://developer.squareup.com/reference/square_2021-08-18/objects/Location) IDs to look up as a comma-separated
+     * list. An empty list queries all locations.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_ids")
+    public String locationIds;
+    public RetrieveInventoryChangesRequest withLocationIds(String locationIds) {
+        this.locationIds = locationIds;
         return this;
     }
     

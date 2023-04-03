@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAttachClassicLinkVpcRequest {
-    
-    public GETAttachClassicLinkVpcQueryParams queryParams;
-    public GETAttachClassicLinkVpcRequest withQueryParams(GETAttachClassicLinkVpcQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETAttachClassicLinkVpcActionEnum action;
+    public GETAttachClassicLinkVpcRequest withAction(GETAttachClassicLinkVpcActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETAttachClassicLinkVpcRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETAttachClassicLinkVpcHeaders headers;
-    public GETAttachClassicLinkVpcRequest withHeaders(GETAttachClassicLinkVpcHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of an EC2-Classic instance to link to the ClassicLink-enabled VPC.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
+    public String instanceId;
+    public GETAttachClassicLinkVpcRequest withInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    
+    /**
+     * The ID of one or more of the VPC's security groups. You cannot specify security groups from a different VPC.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SecurityGroupId")
+    public String[] securityGroupId;
+    public GETAttachClassicLinkVpcRequest withSecurityGroupId(String[] securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETAttachClassicLinkVpcVersionEnum version;
+    public GETAttachClassicLinkVpcRequest withVersion(GETAttachClassicLinkVpcVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * The ID of a ClassicLink-enabled VPC.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcId")
+    public String vpcId;
+    public GETAttachClassicLinkVpcRequest withVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETAttachClassicLinkVpcRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETAttachClassicLinkVpcRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETAttachClassicLinkVpcRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETAttachClassicLinkVpcRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETAttachClassicLinkVpcRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETAttachClassicLinkVpcRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETAttachClassicLinkVpcRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

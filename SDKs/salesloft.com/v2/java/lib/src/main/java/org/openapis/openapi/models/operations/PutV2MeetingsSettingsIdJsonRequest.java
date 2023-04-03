@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutV2MeetingsSettingsIdJsonRequest {
-    
-    public PutV2MeetingsSettingsIdJsonPathParams pathParams;
-    public PutV2MeetingsSettingsIdJsonRequest withPathParams(PutV2MeetingsSettingsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public PutV2MeetingsSettingsIdJsonRequestBody requestBody;
+    public PutV2MeetingsSettingsIdJsonRequest withRequestBody(PutV2MeetingsSettingsIdJsonRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public PutV2MeetingsSettingsIdJsonRequestBody request;
-    public PutV2MeetingsSettingsIdJsonRequest withRequest(PutV2MeetingsSettingsIdJsonRequestBody request) {
-        this.request = request;
+    /**
+     * MeetingSetting ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutV2MeetingsSettingsIdJsonRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

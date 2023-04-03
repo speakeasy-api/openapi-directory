@@ -4,27 +4,70 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestRoomUsersRequest {
-    
-    public RequestRoomUsersPathParams pathParams;
-    public RequestRoomUsersRequest withPathParams(RequestRoomUsersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestRoomUsersRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestRoomUsersQueryParams queryParams;
-    public RequestRoomUsersRequest withQueryParams(RequestRoomUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public RequestRoomUsersRequest withFilter(String filter) {
+        this.filter = filter;
         return this;
     }
     
+    /**
+     * Range limit.
+     * 
+     * Maximum 500.
+     * 
+     *  For more results please use paging (`offset` + `limit`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public RequestRoomUsersRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public RequestRoomUsersHeaders headers;
-    public RequestRoomUsersRequest withHeaders(RequestRoomUsersHeaders headers) {
-        this.headers = headers;
+    /**
+     * Range offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public RequestRoomUsersRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Room ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=room_id")
+    public Long roomId;
+    public RequestRoomUsersRequest withRoomId(Long roomId) {
+        this.roomId = roomId;
+        return this;
+    }
+    
+    /**
+     * Sort string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public RequestRoomUsersRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

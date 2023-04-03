@@ -4,27 +4,226 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdsenseAccountsReportsSavedGenerateCsvRequest {
-    
-    public AdsenseAccountsReportsSavedGenerateCsvPathParams pathParams;
-    public AdsenseAccountsReportsSavedGenerateCsvRequest withPathParams(AdsenseAccountsReportsSavedGenerateCsvPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public AdsenseAccountsReportsSavedGenerateCsvQueryParams queryParams;
-    public AdsenseAccountsReportsSavedGenerateCsvRequest withQueryParams(AdsenseAccountsReportsSavedGenerateCsvQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public AdsenseAccountsReportsSavedGenerateCsvSecurity security;
-    public AdsenseAccountsReportsSavedGenerateCsvRequest withSecurity(AdsenseAccountsReportsSavedGenerateCsvSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * The [ISO-4217 currency code](https://en.wikipedia.org/wiki/ISO_4217) to use when reporting on monetary metrics. Defaults to the account's currency if not set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currencyCode")
+    public String currencyCode;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withCurrencyCode(String currencyCode) {
+        this.currencyCode = currencyCode;
+        return this;
+    }
+    
+    /**
+     * Date range of the report, if unset the range will be considered CUSTOM.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateRange")
+    public AdsenseAccountsReportsSavedGenerateCsvDateRangeEnum dateRange;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withDateRange(AdsenseAccountsReportsSavedGenerateCsvDateRangeEnum dateRange) {
+        this.dateRange = dateRange;
+        return this;
+    }
+    
+    /**
+     * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate.day")
+    public Long endDateDay;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withEndDateDay(Long endDateDay) {
+        this.endDateDay = endDateDay;
+        return this;
+    }
+    
+    /**
+     * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate.month")
+    public Long endDateMonth;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withEndDateMonth(Long endDateMonth) {
+        this.endDateMonth = endDateMonth;
+        return this;
+    }
+    
+    /**
+     * Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate.year")
+    public Long endDateYear;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withEndDateYear(Long endDateYear) {
+        this.endDateYear = endDateYear;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The language to use for translating report output. If unspecified, this defaults to English ("en"). If the given language is not supported, report output will be returned in English. The language is specified as an [IETF BCP-47 language code](https://en.wikipedia.org/wiki/IETF_language_tag).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=languageCode")
+    public String languageCode;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withLanguageCode(String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+    }
+    
+    /**
+     * Required. Name of the saved report. Format: accounts/{account}/reports/{report}
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Timezone in which to generate the report. If unspecified, this defaults to the account timezone. For more information, see [changing the time zone of your reports](https://support.google.com/adsense/answer/9830725).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reportingTimeZone")
+    public AdsenseAccountsReportsSavedGenerateCsvReportingTimeZoneEnum reportingTimeZone;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withReportingTimeZone(AdsenseAccountsReportsSavedGenerateCsvReportingTimeZoneEnum reportingTimeZone) {
+        this.reportingTimeZone = reportingTimeZone;
+        return this;
+    }
+    
+    /**
+     * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate.day")
+    public Long startDateDay;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withStartDateDay(Long startDateDay) {
+        this.startDateDay = startDateDay;
+        return this;
+    }
+    
+    /**
+     * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate.month")
+    public Long startDateMonth;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withStartDateMonth(Long startDateMonth) {
+        this.startDateMonth = startDateMonth;
+        return this;
+    }
+    
+    /**
+     * Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate.year")
+    public Long startDateYear;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withStartDateYear(Long startDateYear) {
+        this.startDateYear = startDateYear;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AdsenseAccountsReportsSavedGenerateCsvRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

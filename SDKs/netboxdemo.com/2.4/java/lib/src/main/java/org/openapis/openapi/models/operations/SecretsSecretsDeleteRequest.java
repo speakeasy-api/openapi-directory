@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SecretsSecretsDeleteRequest {
-    
-    public SecretsSecretsDeletePathParams pathParams;
-    public SecretsSecretsDeleteRequest withPathParams(SecretsSecretsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this secret.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public SecretsSecretsDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

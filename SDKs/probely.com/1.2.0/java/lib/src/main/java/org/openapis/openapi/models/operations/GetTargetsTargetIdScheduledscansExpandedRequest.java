@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTargetsTargetIdScheduledscansExpandedRequest {
-    
-    public GetTargetsTargetIdScheduledscansExpandedPathParams pathParams;
-    public GetTargetsTargetIdScheduledscansExpandedRequest withPathParams(GetTargetsTargetIdScheduledscansExpandedPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Number of results to return per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
+    public Long length;
+    public GetTargetsTargetIdScheduledscansExpandedRequest withLength(Long length) {
+        this.length = length;
         return this;
     }
     
-    
-    public GetTargetsTargetIdScheduledscansExpandedQueryParams queryParams;
-    public GetTargetsTargetIdScheduledscansExpandedRequest withQueryParams(GetTargetsTargetIdScheduledscansExpandedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Target id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_id")
+    public String targetId;
+    public GetTargetsTargetIdScheduledscansExpandedRequest withTargetId(String targetId) {
+        this.targetId = targetId;
         return this;
     }
     

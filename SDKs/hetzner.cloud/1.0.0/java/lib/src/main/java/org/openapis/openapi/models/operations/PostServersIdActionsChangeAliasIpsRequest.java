@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostServersIdActionsChangeAliasIpsRequest {
-    
-    public PostServersIdActionsChangeAliasIpsPathParams pathParams;
-    public PostServersIdActionsChangeAliasIpsRequest withPathParams(PostServersIdActionsChangeAliasIpsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostServersIdActionsChangeAliasIpsRequestBody requestBody;
+    public PostServersIdActionsChangeAliasIpsRequest withRequestBody(PostServersIdActionsChangeAliasIpsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostServersIdActionsChangeAliasIpsRequestBody request;
-    public PostServersIdActionsChangeAliasIpsRequest withRequest(PostServersIdActionsChangeAliasIpsRequestBody request) {
-        this.request = request;
+    /**
+     * ID of the Server
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostServersIdActionsChangeAliasIpsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

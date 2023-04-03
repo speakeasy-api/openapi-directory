@@ -4,20 +4,18 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersSelectedUserSshKeysRequest {
-    
-    public GetUsersSelectedUserSshKeysPathParams pathParams;
-    public GetUsersSelectedUserSshKeysRequest withPathParams(GetUsersSelectedUserSshKeysPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetUsersSelectedUserSshKeysSecurity security;
-    public GetUsersSelectedUserSshKeysRequest withSecurity(GetUsersSelectedUserSshKeysSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the UUID of the account, surrounded by curly-braces, for
+     * example: `{account UUID}`, OR an Atlassian Account ID.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=selected_user")
+    public String selectedUser;
+    public GetUsersSelectedUserSshKeysRequest withSelectedUser(String selectedUser) {
+        this.selectedUser = selectedUser;
         return this;
     }
     

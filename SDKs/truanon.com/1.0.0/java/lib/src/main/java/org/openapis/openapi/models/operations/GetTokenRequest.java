@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTokenRequest {
+    /**
+     * This is your unique username or member ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetTokenRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetTokenQueryParams queryParams;
-    public GetTokenRequest withQueryParams(GetTokenQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The service name given to you by TruAnon
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service")
+    public String service;
+    public GetTokenRequest withService(String service) {
+        this.service = service;
         return this;
     }
     

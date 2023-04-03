@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PayorAddPayorLogoV1Request {
-    
-    public PayorAddPayorLogoV1PathParams pathParams;
-    public PayorAddPayorLogoV1Request withPathParams(PayorAddPayorLogoV1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Image file to upload
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public org.openapis.openapi.models.shared.PayorLogoRequest request;
-    public PayorAddPayorLogoV1Request withRequest(org.openapis.openapi.models.shared.PayorLogoRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PayorLogoRequest payorLogoRequest;
+    public PayorAddPayorLogoV1Request withPayorLogoRequest(org.openapis.openapi.models.shared.PayorLogoRequest payorLogoRequest) {
+        this.payorLogoRequest = payorLogoRequest;
+        return this;
+    }
+    
+    /**
+     * The Payor Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payorId")
+    public String payorId;
+    public PayorAddPayorLogoV1Request withPayorId(String payorId) {
+        this.payorId = payorId;
         return this;
     }
     

@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsRaceEthnicityZip5Request {
-    
-    public UsRaceEthnicityZip5PathParams pathParams;
-    public UsRaceEthnicityZip5Request withPathParams(UsRaceEthnicityZip5PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstName")
+    public String firstName;
+    public UsRaceEthnicityZip5Request withFirstName(String firstName) {
+        this.firstName = firstName;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lastName")
+    public String lastName;
+    public UsRaceEthnicityZip5Request withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
     
-    public UsRaceEthnicityZip5Security security;
-    public UsRaceEthnicityZip5Request withSecurity(UsRaceEthnicityZip5Security security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zip5Code")
+    public String zip5Code;
+    public UsRaceEthnicityZip5Request withZip5Code(String zip5Code) {
+        this.zip5Code = zip5Code;
         return this;
     }
     

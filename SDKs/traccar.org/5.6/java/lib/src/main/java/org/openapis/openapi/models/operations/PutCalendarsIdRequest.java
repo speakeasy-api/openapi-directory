@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutCalendarsIdRequest {
-    
-    public PutCalendarsIdPathParams pathParams;
-    public PutCalendarsIdRequest withPathParams(PutCalendarsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Calendar calendar;
+    public PutCalendarsIdRequest withCalendar(org.openapis.openapi.models.shared.Calendar calendar) {
+        this.calendar = calendar;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Calendar request;
-    public PutCalendarsIdRequest withRequest(org.openapis.openapi.models.shared.Calendar request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PutCalendarsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

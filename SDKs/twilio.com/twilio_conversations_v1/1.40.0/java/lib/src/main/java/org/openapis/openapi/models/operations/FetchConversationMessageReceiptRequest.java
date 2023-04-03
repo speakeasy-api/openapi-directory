@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchConversationMessageReceiptRequest {
-    
-    public FetchConversationMessageReceiptPathParams pathParams;
-    public FetchConversationMessageReceiptRequest withPathParams(FetchConversationMessageReceiptPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this message.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConversationSid")
+    public String conversationSid;
+    public FetchConversationMessageReceiptRequest withConversationSid(String conversationSid) {
+        this.conversationSid = conversationSid;
         return this;
     }
     
-    
-    public FetchConversationMessageReceiptSecurity security;
-    public FetchConversationMessageReceiptRequest withSecurity(FetchConversationMessageReceiptSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the message within a [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) the delivery receipt belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MessageSid")
+    public String messageSid;
+    public FetchConversationMessageReceiptRequest withMessageSid(String messageSid) {
+        this.messageSid = messageSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchConversationMessageReceiptRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchConversationMessageReceiptRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

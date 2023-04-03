@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePackageTypeRequest {
-    
-    public UpdatePackageTypePathParams pathParams;
-    public UpdatePackageTypeRequest withPathParams(UpdatePackageTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Package ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=package_id")
+    public String packageId;
+    public UpdatePackageTypeRequest withPackageId(String packageId) {
+        this.packageId = packageId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdatePackageTypeRequestBody request;
-    public UpdatePackageTypeRequest withRequest(org.openapis.openapi.models.shared.UpdatePackageTypeRequestBody request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdatePackageTypeRequestBody updatePackageTypeRequestBody;
+    public UpdatePackageTypeRequest withUpdatePackageTypeRequestBody(org.openapis.openapi.models.shared.UpdatePackageTypeRequestBody updatePackageTypeRequestBody) {
+        this.updatePackageTypeRequestBody = updatePackageTypeRequestBody;
         return this;
     }
     

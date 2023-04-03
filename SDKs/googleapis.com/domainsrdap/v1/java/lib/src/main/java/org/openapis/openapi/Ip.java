@@ -38,13 +38,13 @@ public class Ip {
      */
     public org.openapis.openapi.models.operations.DomainsrdapIpGetResponse domainsrdapIpGet(org.openapis.openapi.models.operations.DomainsrdapIpGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsrdapIpGetPathParams.class, baseUrl, "/v1/ip/{ipId}/{ipId1}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsrdapIpGetRequest.class, baseUrl, "/v1/ip/{ipId}/{ipId1}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsrdapIpGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsrdapIpGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

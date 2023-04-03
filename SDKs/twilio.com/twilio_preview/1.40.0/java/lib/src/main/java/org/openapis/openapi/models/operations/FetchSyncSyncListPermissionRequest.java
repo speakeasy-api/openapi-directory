@@ -4,27 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSyncSyncListPermissionRequest {
-    
-    public FetchSyncSyncListPermissionPathParams pathParams;
-    public FetchSyncSyncListPermissionRequest withPathParams(FetchSyncSyncListPermissionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Arbitrary string identifier representing a user associated with an FPA token, assigned by the developer.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Identity")
+    public String identity;
+    public FetchSyncSyncListPermissionRequest withIdentity(String identity) {
+        this.identity = identity;
         return this;
     }
     
-    
-    public FetchSyncSyncListPermissionSecurity security;
-    public FetchSyncSyncListPermissionRequest withSecurity(FetchSyncSyncListPermissionSecurity security) {
-        this.security = security;
+    /**
+     * Identifier of the Sync List. Either a SID or a unique name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ListSid")
+    public String listSid;
+    public FetchSyncSyncListPermissionRequest withListSid(String listSid) {
+        this.listSid = listSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchSyncSyncListPermissionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchSyncSyncListPermissionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

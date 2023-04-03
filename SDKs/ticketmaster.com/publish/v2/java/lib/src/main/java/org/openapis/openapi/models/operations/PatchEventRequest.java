@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchEventRequest {
-    
-    public PatchEventPathParams pathParams;
-    public PatchEventRequest withPathParams(PatchEventPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PatchEventHeaders headers;
-    public PatchEventRequest withHeaders(PatchEventHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Patch to apply
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AugmentationData request;
-    public PatchEventRequest withRequest(org.openapis.openapi.models.shared.AugmentationData request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AugmentationData augmentationData;
+    public PatchEventRequest withAugmentationData(org.openapis.openapi.models.shared.AugmentationData augmentationData) {
+        this.augmentationData = augmentationData;
+        return this;
+    }
+    
+    /**
+     * Unique correlation id to be able to trace the request in our system
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=TMPS-Correlation-Id")
+    public String tmpsCorrelationId;
+    public PatchEventRequest withTMPSCorrelationId(String tmpsCorrelationId) {
+        this.tmpsCorrelationId = tmpsCorrelationId;
+        return this;
+    }
+    
+    /**
+     * ID of the event the patch will be applied
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchEventRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

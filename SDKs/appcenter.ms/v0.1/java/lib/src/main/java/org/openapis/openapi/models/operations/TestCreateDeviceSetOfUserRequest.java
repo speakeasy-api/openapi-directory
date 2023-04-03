@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestCreateDeviceSetOfUserRequest {
-    
-    public TestCreateDeviceSetOfUserPathParams pathParams;
-    public TestCreateDeviceSetOfUserRequest withPathParams(TestCreateDeviceSetOfUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public TestCreateDeviceSetOfUserDeviceSetUpdateInformation request;
-    public TestCreateDeviceSetOfUserRequest withRequest(TestCreateDeviceSetOfUserDeviceSetUpdateInformation request) {
-        this.request = request;
+    public TestCreateDeviceSetOfUserDeviceSetUpdateInformation requestBody;
+    public TestCreateDeviceSetOfUserRequest withRequestBody(TestCreateDeviceSetOfUserDeviceSetUpdateInformation requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public TestCreateDeviceSetOfUserRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public TestCreateDeviceSetOfUserSecurity security;
-    public TestCreateDeviceSetOfUserRequest withSecurity(TestCreateDeviceSetOfUserSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public TestCreateDeviceSetOfUserRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

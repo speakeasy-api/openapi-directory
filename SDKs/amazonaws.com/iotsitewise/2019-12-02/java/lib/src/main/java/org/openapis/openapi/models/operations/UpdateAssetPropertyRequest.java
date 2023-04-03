@@ -7,24 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAssetPropertyRequest {
-    
-    public UpdateAssetPropertyPathParams pathParams;
-    public UpdateAssetPropertyRequest withPathParams(UpdateAssetPropertyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateAssetPropertyHeaders headers;
-    public UpdateAssetPropertyRequest withHeaders(UpdateAssetPropertyHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateAssetPropertyRequestBody request;
-    public UpdateAssetPropertyRequest withRequest(UpdateAssetPropertyRequestBody request) {
-        this.request = request;
+    public UpdateAssetPropertyRequestBody requestBody;
+    public UpdateAssetPropertyRequest withRequestBody(UpdateAssetPropertyRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateAssetPropertyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateAssetPropertyRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateAssetPropertyRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateAssetPropertyRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateAssetPropertyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateAssetPropertyRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateAssetPropertyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The ID of the asset to be updated.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assetId")
+    public String assetId;
+    public UpdateAssetPropertyRequest withAssetId(String assetId) {
+        this.assetId = assetId;
+        return this;
+    }
+    
+    /**
+     * The ID of the asset property to be updated.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=propertyId")
+    public String propertyId;
+    public UpdateAssetPropertyRequest withPropertyId(String propertyId) {
+        this.propertyId = propertyId;
         return this;
     }
     

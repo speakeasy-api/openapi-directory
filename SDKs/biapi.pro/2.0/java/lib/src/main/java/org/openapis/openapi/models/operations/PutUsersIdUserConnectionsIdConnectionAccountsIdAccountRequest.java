@@ -7,24 +7,41 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequest {
-    
-    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountPathParams pathParams;
-    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequest withPathParams(PutUsersIdUserConnectionsIdConnectionAccountsIdAccountPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountQueryParams queryParams;
-    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequest withQueryParams(PutUsersIdUserConnectionsIdConnectionAccountsIdAccountQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequestBody request;
-    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequest withRequest(PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequestBody request) {
-        this.request = request;
+    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequestBody requestBody;
+    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequest withRequestBody(PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequest withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account")
+    public Long idAccount;
+    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequest withIdAccount(Long idAccount) {
+        this.idAccount = idAccount;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
+    public Long idConnection;
+    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequest withIdConnection(Long idConnection) {
+        this.idConnection = idConnection;
+        return this;
+    }
+    
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

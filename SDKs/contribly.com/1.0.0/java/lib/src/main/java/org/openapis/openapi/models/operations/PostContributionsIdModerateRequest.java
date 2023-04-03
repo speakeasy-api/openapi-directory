@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostContributionsIdModerateRequest {
-    
-    public PostContributionsIdModeratePathParams pathParams;
-    public PostContributionsIdModerateRequest withPathParams(PostContributionsIdModeratePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A moderation action
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ModerationHistoryItemSubmission request;
-    public PostContributionsIdModerateRequest withRequest(org.openapis.openapi.models.shared.ModerationHistoryItemSubmission request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ModerationHistoryItemSubmission moderationHistoryItemSubmission;
+    public PostContributionsIdModerateRequest withModerationHistoryItemSubmission(org.openapis.openapi.models.shared.ModerationHistoryItemSubmission moderationHistoryItemSubmission) {
+        this.moderationHistoryItemSubmission = moderationHistoryItemSubmission;
+        return this;
+    }
+    
+    /**
+     * Id of the contribution to moderate
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostContributionsIdModerateRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

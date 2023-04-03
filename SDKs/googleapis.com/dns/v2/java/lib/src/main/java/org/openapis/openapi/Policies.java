@@ -34,27 +34,28 @@ public class Policies {
     /**
      * Creates a new Policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DnsPoliciesCreateResponse dnsPoliciesCreate(org.openapis.openapi.models.operations.DnsPoliciesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DnsPoliciesCreateResponse dnsPoliciesCreate(org.openapis.openapi.models.operations.DnsPoliciesCreateRequest request, org.openapis.openapi.models.operations.DnsPoliciesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsPoliciesCreatePathParams.class, baseUrl, "/dns/v2/projects/{project}/locations/{location}/policies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsPoliciesCreateRequest.class, baseUrl, "/dns/v2/projects/{project}/locations/{location}/policies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "policy", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsPoliciesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsPoliciesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class Policies {
     /**
      * Deletes a previously created Policy. Fails if the policy is still being referenced by a network.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DnsPoliciesDeleteResponse dnsPoliciesDelete(org.openapis.openapi.models.operations.DnsPoliciesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DnsPoliciesDeleteResponse dnsPoliciesDelete(org.openapis.openapi.models.operations.DnsPoliciesDeleteRequest request, org.openapis.openapi.models.operations.DnsPoliciesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsPoliciesDeletePathParams.class, baseUrl, "/dns/v2/projects/{project}/locations/{location}/policies/{policy}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsPoliciesDeleteRequest.class, baseUrl, "/dns/v2/projects/{project}/locations/{location}/policies/{policy}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsPoliciesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsPoliciesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -120,25 +122,26 @@ public class Policies {
     /**
      * Fetches the representation of an existing Policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DnsPoliciesGetResponse dnsPoliciesGet(org.openapis.openapi.models.operations.DnsPoliciesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DnsPoliciesGetResponse dnsPoliciesGet(org.openapis.openapi.models.operations.DnsPoliciesGetRequest request, org.openapis.openapi.models.operations.DnsPoliciesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsPoliciesGetPathParams.class, baseUrl, "/dns/v2/projects/{project}/locations/{location}/policies/{policy}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsPoliciesGetRequest.class, baseUrl, "/dns/v2/projects/{project}/locations/{location}/policies/{policy}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsPoliciesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsPoliciesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,25 +168,26 @@ public class Policies {
     /**
      * Enumerates all Policies associated with a project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DnsPoliciesListResponse dnsPoliciesList(org.openapis.openapi.models.operations.DnsPoliciesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DnsPoliciesListResponse dnsPoliciesList(org.openapis.openapi.models.operations.DnsPoliciesListRequest request, org.openapis.openapi.models.operations.DnsPoliciesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsPoliciesListPathParams.class, baseUrl, "/dns/v2/projects/{project}/locations/{location}/policies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsPoliciesListRequest.class, baseUrl, "/dns/v2/projects/{project}/locations/{location}/policies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsPoliciesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsPoliciesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -210,27 +214,28 @@ public class Policies {
     /**
      * Applies a partial update to an existing Policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DnsPoliciesPatchResponse dnsPoliciesPatch(org.openapis.openapi.models.operations.DnsPoliciesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DnsPoliciesPatchResponse dnsPoliciesPatch(org.openapis.openapi.models.operations.DnsPoliciesPatchRequest request, org.openapis.openapi.models.operations.DnsPoliciesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsPoliciesPatchPathParams.class, baseUrl, "/dns/v2/projects/{project}/locations/{location}/policies/{policy}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsPoliciesPatchRequest.class, baseUrl, "/dns/v2/projects/{project}/locations/{location}/policies/{policy}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "policy1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsPoliciesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsPoliciesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -257,27 +262,28 @@ public class Policies {
     /**
      * Updates an existing Policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DnsPoliciesUpdateResponse dnsPoliciesUpdate(org.openapis.openapi.models.operations.DnsPoliciesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DnsPoliciesUpdateResponse dnsPoliciesUpdate(org.openapis.openapi.models.operations.DnsPoliciesUpdateRequest request, org.openapis.openapi.models.operations.DnsPoliciesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsPoliciesUpdatePathParams.class, baseUrl, "/dns/v2/projects/{project}/locations/{location}/policies/{policy}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsPoliciesUpdateRequest.class, baseUrl, "/dns/v2/projects/{project}/locations/{location}/policies/{policy}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "policy1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsPoliciesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsPoliciesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAccountStatementsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account_id")
+    public String accountId;
+    public ListAccountStatementsRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public ListAccountStatementsQueryParams queryParams;
-    public ListAccountStatementsRequest withQueryParams(ListAccountStatementsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListAccountStatementsRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListAccountStatementsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=statement_period_start.after")
+    public OffsetDateTime statementPeriodStartAfter;
+    public ListAccountStatementsRequest withStatementPeriodStartAfter(OffsetDateTime statementPeriodStartAfter) {
+        this.statementPeriodStartAfter = statementPeriodStartAfter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=statement_period_start.before")
+    public OffsetDateTime statementPeriodStartBefore;
+    public ListAccountStatementsRequest withStatementPeriodStartBefore(OffsetDateTime statementPeriodStartBefore) {
+        this.statementPeriodStartBefore = statementPeriodStartBefore;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=statement_period_start.on_or_after")
+    public OffsetDateTime statementPeriodStartOnOrAfter;
+    public ListAccountStatementsRequest withStatementPeriodStartOnOrAfter(OffsetDateTime statementPeriodStartOnOrAfter) {
+        this.statementPeriodStartOnOrAfter = statementPeriodStartOnOrAfter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=statement_period_start.on_or_before")
+    public OffsetDateTime statementPeriodStartOnOrBefore;
+    public ListAccountStatementsRequest withStatementPeriodStartOnOrBefore(OffsetDateTime statementPeriodStartOnOrBefore) {
+        this.statementPeriodStartOnOrBefore = statementPeriodStartOnOrBefore;
         return this;
     }
     

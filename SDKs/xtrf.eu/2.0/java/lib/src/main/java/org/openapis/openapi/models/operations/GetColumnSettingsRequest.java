@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetColumnSettingsRequest {
+    /**
+     * column's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnName")
+    public String columnName;
+    public GetColumnSettingsRequest withColumnName(String columnName) {
+        this.columnName = columnName;
+        return this;
+    }
     
-    public GetColumnSettingsPathParams pathParams;
-    public GetColumnSettingsRequest withPathParams(GetColumnSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * view's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
+    public Long viewId;
+    public GetColumnSettingsRequest withViewId(Long viewId) {
+        this.viewId = viewId;
         return this;
     }
     

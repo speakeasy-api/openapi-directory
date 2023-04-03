@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NewsByPlayerRequest {
+    /**
+     *           Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     *         
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public String format;
+    public NewsByPlayerRequest withFormat(String format) {
+        this.format = format;
+        return this;
+    }
     
-    public NewsByPlayerPathParams pathParams;
-    public NewsByPlayerRequest withPathParams(NewsByPlayerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Each NFL player has a unique ID assigned by FantasyData. Player IDs can be determined by pulling player related data. Example:&lt;code&gt;14257&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playerid")
+    public String playerid;
+    public NewsByPlayerRequest withPlayerid(String playerid) {
+        this.playerid = playerid;
         return this;
     }
     

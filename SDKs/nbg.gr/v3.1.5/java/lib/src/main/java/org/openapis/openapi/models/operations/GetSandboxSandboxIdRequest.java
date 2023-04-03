@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSandboxSandboxIdRequest {
-    
-    public GetSandboxSandboxIdPathParams pathParams;
-    public GetSandboxSandboxIdRequest withPathParams(GetSandboxSandboxIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetSandboxSandboxIdSecurity security;
-    public GetSandboxSandboxIdRequest withSecurity(GetSandboxSandboxIdSecurity security) {
-        this.security = security;
+    /**
+     * Sandbox Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sandboxId")
+    public String sandboxId;
+    public GetSandboxSandboxIdRequest withSandboxId(String sandboxId) {
+        this.sandboxId = sandboxId;
         return this;
     }
     

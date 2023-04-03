@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateChannelWebhookRequest {
-    
-    public CreateChannelWebhookPathParams pathParams;
-    public CreateChannelWebhookRequest withPathParams(CreateChannelWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the new Channel Webhook resource belongs to. This value can be the Channel resource's `sid` or `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public CreateChannelWebhookRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateChannelWebhookCreateChannelWebhookRequest request;
-    public CreateChannelWebhookRequest withRequest(CreateChannelWebhookCreateChannelWebhookRequest request) {
-        this.request = request;
+    public CreateChannelWebhookCreateChannelWebhookRequest requestBody;
+    public CreateChannelWebhookRequest withRequestBody(CreateChannelWebhookCreateChannelWebhookRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateChannelWebhookSecurity security;
-    public CreateChannelWebhookRequest withSecurity(CreateChannelWebhookSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateChannelWebhookRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) with the Channel to create the Webhook resource under.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateChannelWebhookRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

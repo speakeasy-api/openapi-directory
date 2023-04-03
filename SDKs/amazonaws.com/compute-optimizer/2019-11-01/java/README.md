@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DeleteRecommendationPreferencesXAmzTargetEnum;
-import org.openapis.openapi.models.operations.DeleteRecommendationPreferencesHeaders;
 import org.openapis.openapi.models.operations.DeleteRecommendationPreferencesRequest;
 import org.openapis.openapi.models.operations.DeleteRecommendationPreferencesResponse;
 import org.openapis.openapi.models.shared.DeleteRecommendationPreferencesRequest;
@@ -32,37 +31,32 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             DeleteRecommendationPreferencesRequest req = new DeleteRecommendationPreferencesRequest() {{
-                headers = new DeleteRecommendationPreferencesHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "ComputeOptimizerService.DeleteRecommendationPreferences";
-                }};
-                request = new DeleteRecommendationPreferencesRequest() {{
+                deleteRecommendationPreferencesRequest = new DeleteRecommendationPreferencesRequest() {{
                     recommendationPreferenceNames = new org.openapis.openapi.models.shared.RecommendationPreferenceNameEnum[]{{
                         add("InferredWorkloadTypes"),
-                        add("InferredWorkloadTypes"),
-                        add("InferredWorkloadTypes"),
-                        add("InferredWorkloadTypes"),
+                        add("ExternalMetricsPreference"),
+                        add("ExternalMetricsPreference"),
                     }};
-                    resourceType = "EbsVolume";
+                    resourceType = "LambdaFunction";
                     scope = new Scope() {{
-                        name = "Organization";
-                        value = "debitis";
+                        name = "ResourceArn";
+                        value = "corrupti";
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "illum";
+                xAmzContentSha256 = "vel";
+                xAmzCredential = "error";
+                xAmzDate = "deserunt";
+                xAmzSecurityToken = "suscipit";
+                xAmzSignature = "iure";
+                xAmzSignedHeaders = "magnam";
+                xAmzTarget = "ComputeOptimizerService.DeleteRecommendationPreferences";
+            }}            
 
             DeleteRecommendationPreferencesResponse res = sdk.deleteRecommendationPreferences(req);
 
@@ -76,7 +70,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

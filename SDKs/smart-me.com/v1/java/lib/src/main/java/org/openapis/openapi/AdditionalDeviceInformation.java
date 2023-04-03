@@ -38,7 +38,7 @@ public class AdditionalDeviceInformation {
      */
     public org.openapis.openapi.models.operations.AdditionalDeviceInformationGetResponse additionalDeviceInformationGet(org.openapis.openapi.models.operations.AdditionalDeviceInformationGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdditionalDeviceInformationGetPathParams.class, baseUrl, "/api/AdditionalDeviceInformation/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdditionalDeviceInformationGetRequest.class, baseUrl, "/api/AdditionalDeviceInformation/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

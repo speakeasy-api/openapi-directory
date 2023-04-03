@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConvertUrlRequest {
-    
-    public ConvertUrlQueryParams queryParams;
-    public ConvertUrlRequest withQueryParams(ConvertUrlQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The URL to retrieve the OpenAPI 2.0 definition from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public String url;
+    public ConvertUrlRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

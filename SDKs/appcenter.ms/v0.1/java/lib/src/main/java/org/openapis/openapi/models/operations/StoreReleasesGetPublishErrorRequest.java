@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoreReleasesGetPublishErrorRequest {
-    
-    public StoreReleasesGetPublishErrorPathParams pathParams;
-    public StoreReleasesGetPublishErrorRequest withPathParams(StoreReleasesGetPublishErrorPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public StoreReleasesGetPublishErrorRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public StoreReleasesGetPublishErrorRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public StoreReleasesGetPublishErrorSecurity security;
-    public StoreReleasesGetPublishErrorRequest withSecurity(StoreReleasesGetPublishErrorSecurity security) {
-        this.security = security;
+    /**
+     * The id of the release
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
+    public Double releaseId;
+    public StoreReleasesGetPublishErrorRequest withReleaseId(Double releaseId) {
+        this.releaseId = releaseId;
+        return this;
+    }
+    
+    /**
+     * The name of the store
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=store_name")
+    public String storeName;
+    public StoreReleasesGetPublishErrorRequest withStoreName(String storeName) {
+        this.storeName = storeName;
         return this;
     }
     

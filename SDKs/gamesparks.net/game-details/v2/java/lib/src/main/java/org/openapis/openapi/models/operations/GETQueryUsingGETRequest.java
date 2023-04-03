@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETQueryUsingGETRequest {
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public GETQueryUsingGETRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GETQueryUsingGETPathParams pathParams;
-    public GETQueryUsingGETRequest withPathParams(GETQueryUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * shortCode
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortCode")
+    public String shortCode;
+    public GETQueryUsingGETRequest withShortCode(String shortCode) {
+        this.shortCode = shortCode;
         return this;
     }
     

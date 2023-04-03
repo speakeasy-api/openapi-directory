@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CncerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/CncerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/CncerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CncerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/CncerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Cncer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Cncer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Cncer504ApplicationJSON.java
@@ -61,7 +60,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/MutanSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/MutanRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/MutanRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/MutanRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/MutanRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Mutan504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Mutan504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Mutan504ApplicationJSON.java
@@ -108,6 +106,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 USAGE.md

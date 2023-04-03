@@ -4,13 +4,150 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AveragesV2GetV2AveragesGetRequest {
+    /**
+     *         Limit results by a certain country using two letter country code.
+     *         (ex. ?country=US or ?country=US&amp;country=MX)
+     *         
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String[] country;
+    public AveragesV2GetV2AveragesGetRequest withCountry(String[] country) {
+        this.country = country;
+        return this;
+    }
     
-    public AveragesV2GetV2AveragesGetQueryParams queryParams;
-    public AveragesV2GetV2AveragesGetRequest withQueryParams(AveragesV2GetV2AveragesGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     *         Limit results by a certain country using two letter country code.
+     *         (ex. /US)
+     *         
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country_id")
+    public String countryId;
+    public AveragesV2GetV2AveragesGetRequest withCountryId(String countryId) {
+        this.countryId = countryId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_from")
+    public Object dateFrom;
+    public AveragesV2GetV2AveragesGetRequest withDateFrom(Object dateFrom) {
+        this.dateFrom = dateFrom;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_to")
+    public Object dateTo;
+    public AveragesV2GetV2AveragesGetRequest withDateTo(Object dateTo) {
+        this.dateTo = dateTo;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public Boolean group;
+    public AveragesV2GetV2AveragesGetRequest withGroup(Boolean group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * Change the number of results returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public AveragesV2GetV2AveragesGetRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location")
+    public String[] location;
+    public AveragesV2GetV2AveragesGetRequest withLocation(String[] location) {
+        this.location = location;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public AveragesV2GetV2AveragesGetRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Paginate through results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public AveragesV2GetV2AveragesGetRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameter")
+    public Object[] parameter;
+    public AveragesV2GetV2AveragesGetRequest withParameter(Object[] parameter) {
+        this.parameter = parameter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameter_id")
+    public Long parameterId;
+    public AveragesV2GetV2AveragesGetRequest withParameterId(Long parameterId) {
+        this.parameterId = parameterId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=project")
+    public Object[] project;
+    public AveragesV2GetV2AveragesGetRequest withProject(Object[] project) {
+        this.project = project;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=project_id")
+    public Long projectId;
+    public AveragesV2GetV2AveragesGetRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * Define sort order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public AveragesV2GetV2AveragesGetSortSortEnum sort;
+    public AveragesV2GetV2AveragesGetRequest withSort(AveragesV2GetV2AveragesGetSortSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * An enumeration.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=spatial")
+    public org.openapis.openapi.models.shared.SpatialEnum spatial;
+    public AveragesV2GetV2AveragesGetRequest withSpatial(org.openapis.openapi.models.shared.SpatialEnum spatial) {
+        this.spatial = spatial;
+        return this;
+    }
+    
+    /**
+     * An enumeration.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=temporal")
+    public org.openapis.openapi.models.shared.TemporalEnum temporal;
+    public AveragesV2GetV2AveragesGetRequest withTemporal(org.openapis.openapi.models.shared.TemporalEnum temporal) {
+        this.temporal = temporal;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit")
+    public String[] unit;
+    public AveragesV2GetV2AveragesGetRequest withUnit(String[] unit) {
+        this.unit = unit;
         return this;
     }
     

@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListsDateListJsonSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public org.openapis.openapi.models.shared.SchemeAPIKey apiKey;
-    public GETListsDateListJsonSecurity withApiKey(org.openapis.openapi.models.shared.SchemeAPIKey apiKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=api-key")
+    public String apiKey;
+    public GETListsDateListJsonSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }

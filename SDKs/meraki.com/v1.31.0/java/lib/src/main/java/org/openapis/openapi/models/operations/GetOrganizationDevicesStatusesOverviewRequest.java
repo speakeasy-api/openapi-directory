@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationDevicesStatusesOverviewRequest {
-    
-    public GetOrganizationDevicesStatusesOverviewPathParams pathParams;
-    public GetOrganizationDevicesStatusesOverviewRequest withPathParams(GetOrganizationDevicesStatusesOverviewPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An optional parameter to filter device statuses by network.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=networkIds")
+    public String[] networkIds;
+    public GetOrganizationDevicesStatusesOverviewRequest withNetworkIds(String[] networkIds) {
+        this.networkIds = networkIds;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationDevicesStatusesOverviewRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
     
-    public GetOrganizationDevicesStatusesOverviewQueryParams queryParams;
-    public GetOrganizationDevicesStatusesOverviewRequest withQueryParams(GetOrganizationDevicesStatusesOverviewQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=productTypes")
+    public GetOrganizationDevicesStatusesOverviewProductTypesEnum[] productTypes;
+    public GetOrganizationDevicesStatusesOverviewRequest withProductTypes(GetOrganizationDevicesStatusesOverviewProductTypesEnum[] productTypes) {
+        this.productTypes = productTypes;
         return this;
     }
     

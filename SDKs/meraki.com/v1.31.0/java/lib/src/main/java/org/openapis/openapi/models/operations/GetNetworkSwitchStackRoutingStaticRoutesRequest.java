@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkSwitchStackRoutingStaticRoutesRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkSwitchStackRoutingStaticRoutesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public GetNetworkSwitchStackRoutingStaticRoutesPathParams pathParams;
-    public GetNetworkSwitchStackRoutingStaticRoutesRequest withPathParams(GetNetworkSwitchStackRoutingStaticRoutesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=switchStackId")
+    public String switchStackId;
+    public GetNetworkSwitchStackRoutingStaticRoutesRequest withSwitchStackId(String switchStackId) {
+        this.switchStackId = switchStackId;
         return this;
     }
     

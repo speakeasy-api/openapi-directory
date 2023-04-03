@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRecommendationSummariesRequest {
-    
-    public GetRecommendationSummariesQueryParams queryParams;
-    public GetRecommendationSummariesRequest withQueryParams(GetRecommendationSummariesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetRecommendationSummariesHeaders headers;
-    public GetRecommendationSummariesRequest withHeaders(GetRecommendationSummariesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GetRecommendationSummariesRequest request;
-    public GetRecommendationSummariesRequest withRequest(org.openapis.openapi.models.shared.GetRecommendationSummariesRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GetRecommendationSummariesRequest getRecommendationSummariesRequest;
+    public GetRecommendationSummariesRequest withGetRecommendationSummariesRequest(org.openapis.openapi.models.shared.GetRecommendationSummariesRequest getRecommendationSummariesRequest) {
+        this.getRecommendationSummariesRequest = getRecommendationSummariesRequest;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetRecommendationSummariesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetRecommendationSummariesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetRecommendationSummariesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetRecommendationSummariesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetRecommendationSummariesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetRecommendationSummariesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetRecommendationSummariesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public GetRecommendationSummariesXAmzTargetEnum xAmzTarget;
+    public GetRecommendationSummariesRequest withXAmzTarget(GetRecommendationSummariesXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public String maxResults;
+    public GetRecommendationSummariesRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public GetRecommendationSummariesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     

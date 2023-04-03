@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetChannelPrivacyUsersRequest {
-    
-    public SetChannelPrivacyUsersPathParams pathParams;
-    public SetChannelPrivacyUsersRequest withPathParams(SetChannelPrivacyUsersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.user+json")
-    public SetChannelPrivacyUsersRequestBody request;
-    public SetChannelPrivacyUsersRequest withRequest(SetChannelPrivacyUsersRequestBody request) {
-        this.request = request;
+    public SetChannelPrivacyUsersRequestBody requestBody;
+    public SetChannelPrivacyUsersRequest withRequestBody(SetChannelPrivacyUsersRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public SetChannelPrivacyUsersSecurity security;
-    public SetChannelPrivacyUsersRequest withSecurity(SetChannelPrivacyUsersSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public SetChannelPrivacyUsersRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     

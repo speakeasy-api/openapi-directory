@@ -33,10 +33,11 @@ public class Transaction {
     /**
      * &lt;div class="msgbox_important"&gt;&lt;p class="msgbox_importantInDiv" data-mc-autonum="&amp;lt;b&amp;gt;&amp;lt;span style=&amp;quot;color: #dd1e31;&amp;quot; class=&amp;quot;mcFormatColor&amp;quot;&amp;gt;Important! &amp;lt;/span&amp;gt;&amp;lt;/b&amp;gt;"&gt;&lt;span class="autonumber"&gt;&lt;span&gt;&lt;b&gt;&lt;span style="color: #dd1e31;" class="mcFormatColor"&gt;Important!&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;&lt;/span&gt; Due to EU &amp;amp; UK Payments regulatory requirements, an additional security verification via Digital Signatures is required for certain API calls that are made on behalf of EU/UK sellers, including all &lt;b&gt;Finances API&lt;/b&gt; methods. Please refer to &lt;a href="/develop/guides/digital-signatures-for-apis " target="_blank"&gt;Digital Signatures for APIs&lt;/a&gt; to learn more on the impacted APIs and the process to create signatures to be included in the HTTP payload.&lt;/p&gt;&lt;/div&gt;&lt;br&gt;The &lt;b&gt;getTransactionSummary&lt;/b&gt; method retrieves cumulative information for monetary transactions. If applicable, the number of payments with a &lt;code&gt;transactionStatus&lt;/code&gt; equal to &lt;code&gt;FUNDS_ON_HOLD&lt;/code&gt; and the total monetary amount of these on-hold payments are also returned.&lt;br&gt;&lt;br&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; For a complete list of transaction types, refer to &lt;a href="/api-docs/sell/finances/types/pay:TransactionTypeEnum " target="_blank "&gt;TransactionTypeEnum&lt;/a&gt;.&lt;/span&gt;&lt;br&gt;Refer to the &lt;a href="#uri.filter "&gt;filter&lt;/a&gt; field for additional information about each filter and its use.&lt;br&gt;&lt;br&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; Unless a &lt;code&gt;transactionType&lt;/code&gt; filter is used to retrieve a specific type of transaction (e.g., &lt;code&gt;SALE&lt;/code&gt;, &lt;code&gt;REFUND&lt;/code&gt;, etc.,) the &lt;a href="#response.creditCount"&gt;creditCount&lt;/a&gt; and &lt;a href="#response.creditAmount"&gt;creditAmount&lt;/a&gt; response fields both include &lt;i&gt;order sales&lt;/i&gt; and &lt;i&gt;seller credits&lt;/i&gt; information. That is, the &lt;b&gt;count&lt;/b&gt; and &lt;b&gt;value&lt;/b&gt; fields do not distinguish between these two types monetary transactions.&lt;/span&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTransactionSummaryResponse getTransactionSummary(org.openapis.openapi.models.operations.GetTransactionSummaryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTransactionSummaryResponse getTransactionSummary(org.openapis.openapi.models.operations.GetTransactionSummaryRequest request, org.openapis.openapi.models.operations.GetTransactionSummarySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transaction_summary");
         
@@ -44,13 +45,13 @@ public class Transaction {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTransactionSummaryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTransactionSummaryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -59,7 +60,7 @@ public class Transaction {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -88,10 +89,11 @@ public class Transaction {
     /**
      * &lt;div class="msgbox_important"&gt;&lt;p class="msgbox_importantInDiv" data-mc-autonum="&amp;lt;b&amp;gt;&amp;lt;span style=&amp;quot;color: #dd1e31;&amp;quot; class=&amp;quot;mcFormatColor&amp;quot;&amp;gt;Important! &amp;lt;/span&amp;gt;&amp;lt;/b&amp;gt;"&gt;&lt;span class="autonumber"&gt;&lt;span&gt;&lt;b&gt;&lt;span style="color: #dd1e31;" class="mcFormatColor"&gt;Important!&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;&lt;/span&gt; Due to EU &amp;amp; UK Payments regulatory requirements, an additional security verification via Digital Signatures is required for certain API calls that are made on behalf of EU/UK sellers, including all &lt;b&gt;Finances API&lt;/b&gt; methods. Please refer to &lt;a href="/develop/guides/digital-signatures-for-apis " target="_blank"&gt;Digital Signatures for APIs&lt;/a&gt; to learn more on the impacted APIs and the process to create signatures to be included in the HTTP payload.&lt;/p&gt;&lt;/div&gt;&lt;br&gt;The &lt;b&gt;getTransactions&lt;/b&gt; method allows a seller to retrieve information about one or more of their monetary transactions.&lt;br&gt;&lt;br&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; For a complete list of transaction types, refer to &lt;a href="/api-docs/sell/finances/types/pay:TransactionTypeEnum " target="_blank "&gt;TransactionTypeEnum&lt;/a&gt;.&lt;/span&gt;&lt;br&gt;Numerous input filters are available which can be used individualy or combined to refine the data that are returned. For example:&lt;ul&gt;&lt;li&gt;&lt;code&gt;SALE&lt;/code&gt; transactions for August 15, 2022;&lt;/li&gt;&lt;li&gt;&lt;code&gt;RETURN&lt;/code&gt; transactions for the month of January, 2021;&lt;/li&gt;&lt;li&gt;Transactions currently in a &lt;code&gt;transactionStatus&lt;/code&gt; equal to &lt;code&gt;FUNDS_ON_HOLD&lt;/code&gt;.&lt;/li&gt;&lt;/ul&gt;Refer to the &lt;a href="#uri.filter "&gt;filter&lt;/a&gt; field for additional information about each filter and its use.&lt;br&gt;&lt;br&gt;Pagination and sort query parameters are also provided that allow users to further control how monetary transactions are displayed in the response.&lt;br&gt;&lt;br&gt;If no monetary transactions match the input criteria, an http status code of &lt;em&gt;204 No Content&lt;/em&gt; is returned with no response payload.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTransactionsResponse getTransactions(org.openapis.openapi.models.operations.GetTransactionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTransactionsResponse getTransactions(org.openapis.openapi.models.operations.GetTransactionsRequest request, org.openapis.openapi.models.operations.GetTransactionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transaction");
         
@@ -99,13 +101,13 @@ public class Transaction {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTransactionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTransactionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -114,7 +116,7 @@ public class Transaction {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -39,15 +39,15 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.MybusinessverificationsLocationsFetchVerificationOptionsResponse mybusinessverificationsLocationsFetchVerificationOptions(org.openapis.openapi.models.operations.MybusinessverificationsLocationsFetchVerificationOptionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessverificationsLocationsFetchVerificationOptionsPathParams.class, baseUrl, "/v1/{location}:fetchVerificationOptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessverificationsLocationsFetchVerificationOptionsRequest.class, baseUrl, "/v1/{location}:fetchVerificationOptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "fetchVerificationOptionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessverificationsLocationsFetchVerificationOptionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessverificationsLocationsFetchVerificationOptionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -85,13 +85,13 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.MybusinessverificationsLocationsGetVoiceOfMerchantStateResponse mybusinessverificationsLocationsGetVoiceOfMerchantState(org.openapis.openapi.models.operations.MybusinessverificationsLocationsGetVoiceOfMerchantStateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessverificationsLocationsGetVoiceOfMerchantStatePathParams.class, baseUrl, "/v1/{name}/VoiceOfMerchantState", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessverificationsLocationsGetVoiceOfMerchantStateRequest.class, baseUrl, "/v1/{name}/VoiceOfMerchantState", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessverificationsLocationsGetVoiceOfMerchantStateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessverificationsLocationsGetVoiceOfMerchantStateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -129,15 +129,15 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerificationsCompleteResponse mybusinessverificationsLocationsVerificationsComplete(org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerificationsCompleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerificationsCompletePathParams.class, baseUrl, "/v1/{name}:complete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerificationsCompleteRequest.class, baseUrl, "/v1/{name}:complete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "completeVerificationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerificationsCompleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerificationsCompleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -175,13 +175,13 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerificationsListResponse mybusinessverificationsLocationsVerificationsList(org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerificationsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerificationsListPathParams.class, baseUrl, "/v1/{parent}/verifications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerificationsListRequest.class, baseUrl, "/v1/{parent}/verifications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerificationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerificationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -219,15 +219,15 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerifyResponse mybusinessverificationsLocationsVerify(org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerifyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerifyPathParams.class, baseUrl, "/v1/{name}:verify", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerifyRequest.class, baseUrl, "/v1/{name}:verify", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "verifyLocationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerifyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessverificationsLocationsVerifyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

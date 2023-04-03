@@ -18,12 +18,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonSecurity;
-import org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonPathParams;
 import org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonRequest;
 import org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonResponse;
 import org.openapis.openapi.models.shared.TimePeriodEnum;
 import org.openapis.openapi.models.shared.SectionEnum;
-import org.openapis.openapi.models.shared.SchemeAPIKey;
 
 public class Application {
     public static void main(String[] args) {
@@ -32,18 +30,13 @@ public class Application {
                 .build();
 
             GETMostemailedSectionTimePeriodJsonRequest req = new GETMostemailedSectionTimePeriodJsonRequest() {{
-                security = new GETMostemailedSectionTimePeriodJsonSecurity() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                pathParams = new GETMostemailedSectionTimePeriodJsonPathParams() {{
-                    section = "Public Editor";
-                    timePeriod = "7";
-                }};
-            }};            
+                section = "Public Editor";
+                timePeriod = "7";
+            }}            
 
-            GETMostemailedSectionTimePeriodJsonResponse res = sdk.getMostemailedSectionTimePeriodJson(req);
+            GETMostemailedSectionTimePeriodJsonResponse res = sdk.getMostemailedSectionTimePeriodJson(req, new GETMostemailedSectionTimePeriodJsonSecurity() {{
+                apiKey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.getMostemailedSectionTimePeriodJSON200ApplicationJSONObject.isPresent()) {
                 // handle response
@@ -55,7 +48,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

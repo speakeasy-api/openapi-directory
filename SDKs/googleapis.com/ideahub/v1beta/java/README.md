@@ -17,13 +17,11 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeaActivitiesCreatePathParams;
-import org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateQueryParams;
 import org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest;
 import org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleSearchIdeahubV1betaIdeaActivityTypeEnum;
 import org.openapis.openapi.models.shared.GoogleSearchIdeahubV1betaIdeaActivity;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -33,35 +31,34 @@ public class Application {
                 .build();
 
             IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest req = new IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest() {{
-                pathParams = new IdeahubPlatformsPropertiesIdeaActivitiesCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new IdeahubPlatformsPropertiesIdeaActivitiesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new GoogleSearchIdeahubV1betaIdeaActivity() {{
+                dollarXgafv = "2";
+                googleSearchIdeahubV1betaIdeaActivity = new GoogleSearchIdeahubV1betaIdeaActivity() {{
                     ideas = new String[]{{
-                        add("iure"),
-                        add("magnam"),
+                        add("distinctio"),
+                        add("quibusdam"),
+                        add("unde"),
                     }};
-                    name = "debitis";
+                    name = "nulla";
                     topics = new String[]{{
-                        add("delectus"),
+                        add("illum"),
+                        add("vel"),
+                        add("error"),
                     }};
-                    type = "POST_DRAFTED";
-                    uri = "http://lasting-sex.net";
+                    type = "POST_DELETED";
+                    uri = "http://innocent-effect.org";
                 }};
-            }};            
+                accessToken = "ipsa";
+                alt = "proto";
+                callback = "tempora";
+                fields = "suscipit";
+                key = "molestiae";
+                oauthToken = "minus";
+                parent = "placeat";
+                prettyPrint = false;
+                quotaUser = "voluptatum";
+                uploadType = "iusto";
+                uploadProtocol = "excepturi";
+            }}            
 
             IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse res = sdk.platforms.ideahubPlatformsPropertiesIdeaActivitiesCreate(req);
 
@@ -75,7 +72,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### platforms

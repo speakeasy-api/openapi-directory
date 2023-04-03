@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesAddDistributionGroupRequest {
-    
-    public ReleasesAddDistributionGroupPathParams pathParams;
-    public ReleasesAddDistributionGroupRequest withPathParams(ReleasesAddDistributionGroupPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The release information.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReleasesAddDistributionGroupRequestBody request;
-    public ReleasesAddDistributionGroupRequest withRequest(ReleasesAddDistributionGroupRequestBody request) {
-        this.request = request;
+    public ReleasesAddDistributionGroupRequestBody requestBody;
+    public ReleasesAddDistributionGroupRequest withRequestBody(ReleasesAddDistributionGroupRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ReleasesAddDistributionGroupRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public ReleasesAddDistributionGroupSecurity security;
-    public ReleasesAddDistributionGroupRequest withSecurity(ReleasesAddDistributionGroupSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ReleasesAddDistributionGroupRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * The ID of the release
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
+    public Long releaseId;
+    public ReleasesAddDistributionGroupRequest withReleaseId(Long releaseId) {
+        this.releaseId = releaseId;
         return this;
     }
     

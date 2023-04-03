@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsDeleteRepoSecretRequest {
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsDeleteRepoSecretRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ActionsDeleteRepoSecretPathParams pathParams;
-    public ActionsDeleteRepoSecretRequest withPathParams(ActionsDeleteRepoSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsDeleteRepoSecretRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The name of the secret.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
+    public String secretName;
+    public ActionsDeleteRepoSecretRequest withSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
     

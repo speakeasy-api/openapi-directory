@@ -64,7 +64,7 @@ public class SchemaResponses {
      */
     public org.openapis.openapi.models.operations.SchemaResponseDeleteResponse schemaResponseDelete(org.openapis.openapi.models.operations.SchemaResponseDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SchemaResponseDeletePathParams.class, baseUrl, "/schema_responses/{schema_response_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SchemaResponseDeleteRequest.class, baseUrl, "/schema_responses/{schema_response_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -101,12 +101,12 @@ public class SchemaResponses {
      */
     public org.openapis.openapi.models.operations.SchemaResponsePatchResponse schemaResponsePatch(org.openapis.openapi.models.operations.SchemaResponsePatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SchemaResponsePatchPathParams.class, baseUrl, "/schema_responses/{schema_response_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SchemaResponsePatchRequest.class, baseUrl, "/schema_responses/{schema_response_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -146,7 +146,7 @@ public class SchemaResponses {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SchemaResponsePpostResponse schemaResponsePpost(org.openapis.openapi.models.operations.SchemaResponsePpostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SchemaResponsePpostResponse schemaResponsePpost(org.openapis.openapi.models.operations.SchemaResponsePpostSchemaResponsesInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/schema_responses/");
         
@@ -236,7 +236,7 @@ public class SchemaResponses {
      */
     public org.openapis.openapi.models.operations.SchemaResponsesReadResponse schemaResponsesRead(org.openapis.openapi.models.operations.SchemaResponsesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SchemaResponsesReadPathParams.class, baseUrl, "/schema_responses/{schema_response_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SchemaResponsesReadRequest.class, baseUrl, "/schema_responses/{schema_response_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

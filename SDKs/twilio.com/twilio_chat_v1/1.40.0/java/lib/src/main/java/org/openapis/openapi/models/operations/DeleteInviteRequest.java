@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteInviteRequest {
-    
-    public DeleteInvitePathParams pathParams;
-    public DeleteInviteRequest withPathParams(DeleteInvitePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) the resource to delete belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public DeleteInviteRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
         return this;
     }
     
-    
-    public DeleteInviteSecurity security;
-    public DeleteInviteRequest withSecurity(DeleteInviteSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to delete the resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteInviteRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteInviteRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Invite resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteInviteRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

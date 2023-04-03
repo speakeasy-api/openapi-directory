@@ -32,19 +32,20 @@ public class GroupsSubscription {
     /**
      * Add a user to a group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JoinGroupResponse joinGroup(org.openapis.openapi.models.operations.JoinGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JoinGroupResponse joinGroup(org.openapis.openapi.models.operations.JoinGroupRequest request, org.openapis.openapi.models.operations.JoinGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JoinGroupPathParams.class, baseUrl, "/users/{user_id}/groups/{group_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JoinGroupRequest.class, baseUrl, "/users/{user_id}/groups/{group_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,19 +74,20 @@ public class GroupsSubscription {
     /**
      * Add a user to a group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JoinGroupAlt1Response joinGroupAlt1(org.openapis.openapi.models.operations.JoinGroupAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.JoinGroupAlt1Response joinGroupAlt1(org.openapis.openapi.models.operations.JoinGroupAlt1Request request, org.openapis.openapi.models.operations.JoinGroupAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JoinGroupAlt1PathParams.class, baseUrl, "/me/groups/{group_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JoinGroupAlt1Request.class, baseUrl, "/me/groups/{group_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -114,19 +116,20 @@ public class GroupsSubscription {
     /**
      * Remove a user from a group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LeaveGroupResponse leaveGroup(org.openapis.openapi.models.operations.LeaveGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LeaveGroupResponse leaveGroup(org.openapis.openapi.models.operations.LeaveGroupRequest request, org.openapis.openapi.models.operations.LeaveGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LeaveGroupPathParams.class, baseUrl, "/users/{user_id}/groups/{group_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LeaveGroupRequest.class, baseUrl, "/users/{user_id}/groups/{group_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -155,19 +158,20 @@ public class GroupsSubscription {
     /**
      * Remove a user from a group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LeaveGroupAlt1Response leaveGroupAlt1(org.openapis.openapi.models.operations.LeaveGroupAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.LeaveGroupAlt1Response leaveGroupAlt1(org.openapis.openapi.models.operations.LeaveGroupAlt1Request request, org.openapis.openapi.models.operations.LeaveGroupAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LeaveGroupAlt1PathParams.class, baseUrl, "/me/groups/{group_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LeaveGroupAlt1Request.class, baseUrl, "/me/groups/{group_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,54 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimConsolePortsListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
+    public String device;
+    public DcimConsolePortsListRequest withDevice(String device) {
+        this.device = device;
+        return this;
+    }
     
-    public DcimConsolePortsListQueryParams queryParams;
-    public DcimConsolePortsListRequest withQueryParams(DcimConsolePortsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
+    public String deviceId;
+    public DcimConsolePortsListRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public DcimConsolePortsListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DcimConsolePortsListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public DcimConsolePortsListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public DcimConsolePortsListRequest withTag(String tag) {
+        this.tag = tag;
         return this;
     }
     

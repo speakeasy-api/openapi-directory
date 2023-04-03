@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SuspendUserRequest {
-    
-    public SuspendUserPathParams pathParams;
-    public SuspendUserRequest withPathParams(SuspendUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the user to suspend.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public SuspendUserRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

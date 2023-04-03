@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivityUnstarRepoForAuthenticatedUserRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActivityUnstarRepoForAuthenticatedUserRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ActivityUnstarRepoForAuthenticatedUserPathParams pathParams;
-    public ActivityUnstarRepoForAuthenticatedUserRequest withPathParams(ActivityUnstarRepoForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActivityUnstarRepoForAuthenticatedUserRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

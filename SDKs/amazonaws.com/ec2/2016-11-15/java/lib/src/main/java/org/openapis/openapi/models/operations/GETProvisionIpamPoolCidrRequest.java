@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETProvisionIpamPoolCidrRequest {
-    
-    public GETProvisionIpamPoolCidrQueryParams queryParams;
-    public GETProvisionIpamPoolCidrRequest withQueryParams(GETProvisionIpamPoolCidrQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETProvisionIpamPoolCidrActionEnum action;
+    public GETProvisionIpamPoolCidrRequest withAction(GETProvisionIpamPoolCidrActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The CIDR you want to assign to the IPAM pool. Either "NetmaskLength" or "Cidr" is required. This value will be null if you specify "NetmaskLength" and will be filled in during the provisioning process.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Cidr")
+    public String cidr;
+    public GETProvisionIpamPoolCidrRequest withCidr(String cidr) {
+        this.cidr = cidr;
+        return this;
+    }
     
-    public GETProvisionIpamPoolCidrHeaders headers;
-    public GETProvisionIpamPoolCidrRequest withHeaders(GETProvisionIpamPoolCidrHeaders headers) {
-        this.headers = headers;
+    /**
+     * A signed document that proves that you are authorized to bring a specified IP address range to Amazon using BYOIP. This option applies to public pools only.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CidrAuthorizationContext")
+    public GETProvisionIpamPoolCidrCidrAuthorizationContext cidrAuthorizationContext;
+    public GETProvisionIpamPoolCidrRequest withCidrAuthorizationContext(GETProvisionIpamPoolCidrCidrAuthorizationContext cidrAuthorizationContext) {
+        this.cidrAuthorizationContext = cidrAuthorizationContext;
+        return this;
+    }
+    
+    /**
+     * A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more information, see &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html"&gt;Ensuring Idempotency&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientToken")
+    public String clientToken;
+    public GETProvisionIpamPoolCidrRequest withClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    
+    /**
+     * A check for whether you have the required permissions for the action without actually making the request and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETProvisionIpamPoolCidrRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The ID of the IPAM pool to which you want to assign a CIDR.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IpamPoolId")
+    public String ipamPoolId;
+    public GETProvisionIpamPoolCidrRequest withIpamPoolId(String ipamPoolId) {
+        this.ipamPoolId = ipamPoolId;
+        return this;
+    }
+    
+    /**
+     * The netmask length of the CIDR you'd like to provision to a pool. Can be used for provisioning Amazon-provided IPv6 CIDRs to top-level pools and for provisioning CIDRs to pools with source pools. Cannot be used to provision BYOIP CIDRs to top-level pools. Either "NetmaskLength" or "Cidr" is required.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetmaskLength")
+    public Long netmaskLength;
+    public GETProvisionIpamPoolCidrRequest withNetmaskLength(Long netmaskLength) {
+        this.netmaskLength = netmaskLength;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETProvisionIpamPoolCidrVersionEnum version;
+    public GETProvisionIpamPoolCidrRequest withVersion(GETProvisionIpamPoolCidrVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETProvisionIpamPoolCidrRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETProvisionIpamPoolCidrRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETProvisionIpamPoolCidrRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETProvisionIpamPoolCidrRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETProvisionIpamPoolCidrRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETProvisionIpamPoolCidrRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETProvisionIpamPoolCidrRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

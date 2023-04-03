@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteGroupsGroupIdMembershipsUserIdRequest {
+    /**
+     * Group ID from which to remove user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Integer groupId;
+    public DeleteGroupsGroupIdMembershipsUserIdRequest withGroupId(Integer groupId) {
+        this.groupId = groupId;
+        return this;
+    }
     
-    public DeleteGroupsGroupIdMembershipsUserIdPathParams pathParams;
-    public DeleteGroupsGroupIdMembershipsUserIdRequest withPathParams(DeleteGroupsGroupIdMembershipsUserIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * User ID to remove from group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Integer userId;
+    public DeleteGroupsGroupIdMembershipsUserIdRequest withUserId(Integer userId) {
+        this.userId = userId;
         return this;
     }
     

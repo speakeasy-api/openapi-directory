@@ -35,25 +35,26 @@ public class LicenseAssignments {
     /**
      * Revoke a license.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeleteResponse licensingLicenseAssignmentsDelete(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeleteResponse licensingLicenseAssignmentsDelete(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeleteRequest request, org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeletePathParams.class, baseUrl, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeleteRequest.class, baseUrl, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,25 +81,26 @@ public class LicenseAssignments {
     /**
      * Get a specific user's license by product SKU.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LicensingLicenseAssignmentsGetResponse licensingLicenseAssignmentsGet(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LicensingLicenseAssignmentsGetResponse licensingLicenseAssignmentsGet(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsGetRequest request, org.openapis.openapi.models.operations.LicensingLicenseAssignmentsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsGetPathParams.class, baseUrl, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsGetRequest.class, baseUrl, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -125,27 +127,28 @@ public class LicenseAssignments {
     /**
      * Assign a license.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LicensingLicenseAssignmentsInsertResponse licensingLicenseAssignmentsInsert(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LicensingLicenseAssignmentsInsertResponse licensingLicenseAssignmentsInsert(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsInsertRequest request, org.openapis.openapi.models.operations.LicensingLicenseAssignmentsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsInsertPathParams.class, baseUrl, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsInsertRequest.class, baseUrl, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "licenseAssignmentInsert", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,25 +175,26 @@ public class LicenseAssignments {
     /**
      * List all users assigned licenses for a specific product SKU.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductResponse licensingLicenseAssignmentsListForProduct(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductResponse licensingLicenseAssignmentsListForProduct(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductRequest request, org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductPathParams.class, baseUrl, "/apps/licensing/v1/product/{productId}/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductRequest.class, baseUrl, "/apps/licensing/v1/product/{productId}/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -217,25 +221,26 @@ public class LicenseAssignments {
     /**
      * List all users assigned licenses for a specific product SKU.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductAndSkuResponse licensingLicenseAssignmentsListForProductAndSku(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductAndSkuRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductAndSkuResponse licensingLicenseAssignmentsListForProductAndSku(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductAndSkuRequest request, org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductAndSkuSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductAndSkuPathParams.class, baseUrl, "/apps/licensing/v1/product/{productId}/sku/{skuId}/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductAndSkuRequest.class, baseUrl, "/apps/licensing/v1/product/{productId}/sku/{skuId}/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductAndSkuQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsListForProductAndSkuRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -262,27 +267,28 @@ public class LicenseAssignments {
     /**
      * Reassign a user's product SKU with a different SKU in the same product. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LicensingLicenseAssignmentsPatchResponse licensingLicenseAssignmentsPatch(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LicensingLicenseAssignmentsPatchResponse licensingLicenseAssignmentsPatch(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsPatchRequest request, org.openapis.openapi.models.operations.LicensingLicenseAssignmentsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsPatchPathParams.class, baseUrl, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsPatchRequest.class, baseUrl, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "licenseAssignment", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -309,27 +315,28 @@ public class LicenseAssignments {
     /**
      * Reassign a user's product SKU with a different SKU in the same product.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LicensingLicenseAssignmentsUpdateResponse licensingLicenseAssignmentsUpdate(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LicensingLicenseAssignmentsUpdateResponse licensingLicenseAssignmentsUpdate(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsUpdateRequest request, org.openapis.openapi.models.operations.LicensingLicenseAssignmentsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsUpdatePathParams.class, baseUrl, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsUpdateRequest.class, baseUrl, "/apps/licensing/v1/product/{productId}/sku/{skuId}/user/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "licenseAssignment", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LicensingLicenseAssignmentsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

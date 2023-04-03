@@ -34,10 +34,11 @@ public class APIs {
      * Character Certificate
      * API to verify Character Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChcerResponse chcer(org.openapis.openapi.models.operations.ChcerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChcerResponse chcer(org.openapis.openapi.models.operations.ChcerRequestBody request, org.openapis.openapi.models.operations.ChcerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/chcer/certificate");
         
@@ -48,7 +49,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,10 +127,11 @@ public class APIs {
      * Distance Certificate
      * API to verify Distance Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DncerResponse dncer(org.openapis.openapi.models.operations.DncerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DncerResponse dncer(org.openapis.openapi.models.operations.DncerRequestBody request, org.openapis.openapi.models.operations.DncerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dncer/certificate");
         
@@ -140,7 +142,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,10 +220,11 @@ public class APIs {
      * Dependency Certificate
      * API to verify Dependency Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DpcerResponse dpcer(org.openapis.openapi.models.operations.DpcerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DpcerResponse dpcer(org.openapis.openapi.models.operations.DpcerRequestBody request, org.openapis.openapi.models.operations.DpcerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dpcer/certificate");
         
@@ -232,7 +235,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -310,10 +313,11 @@ public class APIs {
      * Food Stuff License
      * API to verify Food Stuff License.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FslcsResponse fslcs(org.openapis.openapi.models.operations.FslcsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FslcsResponse fslcs(org.openapis.openapi.models.operations.FslcsRequestBody request, org.openapis.openapi.models.operations.FslcsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/fslcs/certificate");
         
@@ -324,7 +328,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -402,10 +406,11 @@ public class APIs {
      * Grievance Redressal/ Registration
      * API to verify Grievance Redressal/ Registration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GrredResponse grred(org.openapis.openapi.models.operations.GrredRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GrredResponse grred(org.openapis.openapi.models.operations.GrredRequestBody request, org.openapis.openapi.models.operations.GrredSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/grred/certificate");
         
@@ -416,7 +421,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -494,10 +499,11 @@ public class APIs {
      * Income Certificate
      * API to verify Income Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IncerResponse incer(org.openapis.openapi.models.operations.IncerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IncerResponse incer(org.openapis.openapi.models.operations.IncerRequestBody request, org.openapis.openapi.models.operations.IncerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/incer/certificate");
         
@@ -508,7 +514,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -586,10 +592,11 @@ public class APIs {
      * Issue of Arm Licence
      * API to verify Issue of Arm Licence.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IsoalResponse isoal(org.openapis.openapi.models.operations.IsoalRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IsoalResponse isoal(org.openapis.openapi.models.operations.IsoalRequestBody request, org.openapis.openapi.models.operations.IsoalSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/isoal/certificate");
         
@@ -600,7 +607,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -678,10 +685,11 @@ public class APIs {
      * Land Valuation/ Holding/ Record Certificate
      * API to verify Land Valuation/ Holding/ Record Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LvcerResponse lvcer(org.openapis.openapi.models.operations.LvcerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LvcerResponse lvcer(org.openapis.openapi.models.operations.LvcerRequestBody request, org.openapis.openapi.models.operations.LvcerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/lvcer/certificate");
         
@@ -692,7 +700,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -770,10 +778,11 @@ public class APIs {
      * Manufacturer License
      * API to verify Manufacturer License.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MalcsResponse malcs(org.openapis.openapi.models.operations.MalcsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MalcsResponse malcs(org.openapis.openapi.models.operations.MalcsRequestBody request, org.openapis.openapi.models.operations.MalcsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/malcs/certificate");
         
@@ -784,7 +793,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -862,10 +871,11 @@ public class APIs {
      * Small Savings Agent License
      * API to verify Small Savings Agent License.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MpkbyResponse mpkby(org.openapis.openapi.models.operations.MpkbyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MpkbyResponse mpkby(org.openapis.openapi.models.operations.MpkbyRequestBody request, org.openapis.openapi.models.operations.MpkbySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/mpkby/certificate");
         
@@ -876,7 +886,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -954,10 +964,11 @@ public class APIs {
      * OBC Certificate
      * API to verify OBC Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ObcerResponse obcer(org.openapis.openapi.models.operations.ObcerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ObcerResponse obcer(org.openapis.openapi.models.operations.ObcerRequestBody request, org.openapis.openapi.models.operations.ObcerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/obcer/certificate");
         
@@ -968,7 +979,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1046,10 +1057,11 @@ public class APIs {
      * Right to Information
      * API to verify Right to Information.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RitinResponse ritin(org.openapis.openapi.models.operations.RitinRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RitinResponse ritin(org.openapis.openapi.models.operations.RitinRequestBody request, org.openapis.openapi.models.operations.RitinSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ritin/certificate");
         
@@ -1060,7 +1072,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1138,10 +1150,11 @@ public class APIs {
      * Marriage Certificate
      * API to verify Marriage Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RmcerResponse rmcer(org.openapis.openapi.models.operations.RmcerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RmcerResponse rmcer(org.openapis.openapi.models.operations.RmcerRequestBody request, org.openapis.openapi.models.operations.RmcerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/rmcer/certificate");
         
@@ -1152,7 +1165,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1230,10 +1243,11 @@ public class APIs {
      * Residence Certificate
      * API to verify Residence Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RscerResponse rscer(org.openapis.openapi.models.operations.RscerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RscerResponse rscer(org.openapis.openapi.models.operations.RscerRequestBody request, org.openapis.openapi.models.operations.RscerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/rscer/certificate");
         
@@ -1244,7 +1258,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1322,10 +1336,11 @@ public class APIs {
      * SC/ST  Certificate
      * API to verify SC/ST  Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ShcerResponse shcer(org.openapis.openapi.models.operations.ShcerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ShcerResponse shcer(org.openapis.openapi.models.operations.ShcerRequestBody request, org.openapis.openapi.models.operations.ShcerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/shcer/certificate");
         
@@ -1336,7 +1351,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1414,10 +1429,11 @@ public class APIs {
      * Surviving Member Certificate
      * API to verify Surviving Member Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SmcerResponse smcer(org.openapis.openapi.models.operations.SmcerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SmcerResponse smcer(org.openapis.openapi.models.operations.SmcerRequestBody request, org.openapis.openapi.models.operations.SmcerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/smcer/certificate");
         
@@ -1428,7 +1444,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1506,10 +1522,11 @@ public class APIs {
      * Standardized Agency Systems (SAS) Agent License
      * API to verify Standardized Agency Systems (SAS) Agent License.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SslcsResponse sslcs(org.openapis.openapi.models.operations.SslcsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SslcsResponse sslcs(org.openapis.openapi.models.operations.SslcsRequestBody request, org.openapis.openapi.models.operations.SslcsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sslcs/certificate");
         
@@ -1520,7 +1537,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1598,10 +1615,11 @@ public class APIs {
      * License/ Verification of Weights, Measures and Instruments
      * API to verify License/ Verification of Weights, Measures and Instruments.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VrwmiResponse vrwmi(org.openapis.openapi.models.operations.VrwmiRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VrwmiResponse vrwmi(org.openapis.openapi.models.operations.VrwmiRequestBody request, org.openapis.openapi.models.operations.VrwmiSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/vrwmi/certificate");
         
@@ -1612,7 +1630,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

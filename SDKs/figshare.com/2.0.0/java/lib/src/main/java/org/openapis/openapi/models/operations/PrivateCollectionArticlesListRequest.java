@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateCollectionArticlesListRequest {
-    
-    public PrivateCollectionArticlesListPathParams pathParams;
-    public PrivateCollectionArticlesListRequest withPathParams(PrivateCollectionArticlesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Collection unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
+    public Long collectionId;
+    public PrivateCollectionArticlesListRequest withCollectionId(Long collectionId) {
+        this.collectionId = collectionId;
         return this;
     }
     
-    
-    public PrivateCollectionArticlesListQueryParams queryParams;
-    public PrivateCollectionArticlesListRequest withQueryParams(PrivateCollectionArticlesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of results included on a page. Used for pagination with query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public PrivateCollectionArticlesListRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Where to start the listing(the offset of the first result). Used for pagination with limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public PrivateCollectionArticlesListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
     
-    public PrivateCollectionArticlesListSecurity security;
-    public PrivateCollectionArticlesListRequest withSecurity(PrivateCollectionArticlesListSecurity security) {
-        this.security = security;
+    /**
+     * Page number. Used for pagination with page_size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public PrivateCollectionArticlesListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results included on a page. Used for pagination with page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public PrivateCollectionArticlesListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

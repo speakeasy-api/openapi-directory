@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AssociateAssetsPathParams;
-import org.openapis.openapi.models.operations.AssociateAssetsHeaders;
 import org.openapis.openapi.models.operations.AssociateAssetsRequestBody;
 import org.openapis.openapi.models.operations.AssociateAssetsRequest;
 import org.openapis.openapi.models.operations.AssociateAssetsResponse;
@@ -15,31 +13,25 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateAssetsRequest req = new AssociateAssetsRequest() {{
-                pathParams = new AssociateAssetsPathParams() {{
-                    assetId = "corrupti";
+                requestBody = new AssociateAssetsRequestBody() {{
+                    childAssetId = "corrupti";
+                    clientToken = "provident";
+                    hierarchyId = "distinctio";
                 }};
-                headers = new AssociateAssetsHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-                request = new AssociateAssetsRequestBody() {{
-                    childAssetId = "vel";
-                    clientToken = "error";
-                    hierarchyId = "deserunt";
-                }};
-            }};            
+                xAmzAlgorithm = "quibusdam";
+                xAmzContentSha256 = "unde";
+                xAmzCredential = "nulla";
+                xAmzDate = "corrupti";
+                xAmzSecurityToken = "illum";
+                xAmzSignature = "vel";
+                xAmzSignedHeaders = "error";
+                assetId = "deserunt";
+            }}            
 
             AssociateAssetsResponse res = sdk.associateAssets(req);
 

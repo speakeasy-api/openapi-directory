@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateServiceRoleRequest {
-    
-    public UpdateServiceRolePathParams pathParams;
-    public UpdateServiceRoleRequest withPathParams(UpdateServiceRolePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) to update the Role resource in.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public UpdateServiceRoleRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateServiceRoleUpdateServiceRoleRequest request;
-    public UpdateServiceRoleRequest withRequest(UpdateServiceRoleUpdateServiceRoleRequest request) {
-        this.request = request;
+    public UpdateServiceRoleUpdateServiceRoleRequest requestBody;
+    public UpdateServiceRoleRequest withRequestBody(UpdateServiceRoleUpdateServiceRoleRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateServiceRoleSecurity security;
-    public UpdateServiceRoleRequest withSecurity(UpdateServiceRoleSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateServiceRoleRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Role resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateServiceRoleRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

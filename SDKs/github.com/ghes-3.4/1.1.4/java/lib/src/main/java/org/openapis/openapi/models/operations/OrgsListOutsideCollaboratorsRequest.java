@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsListOutsideCollaboratorsRequest {
-    
-    public OrgsListOutsideCollaboratorsPathParams pathParams;
-    public OrgsListOutsideCollaboratorsRequest withPathParams(OrgsListOutsideCollaboratorsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter the list of outside collaborators. `2fa_disabled` means that only outside collaborators without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public OrgsListOutsideCollaboratorsFilterEnum filter;
+    public OrgsListOutsideCollaboratorsRequest withFilter(OrgsListOutsideCollaboratorsFilterEnum filter) {
+        this.filter = filter;
         return this;
     }
     
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsListOutsideCollaboratorsRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public OrgsListOutsideCollaboratorsQueryParams queryParams;
-    public OrgsListOutsideCollaboratorsRequest withQueryParams(OrgsListOutsideCollaboratorsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public OrgsListOutsideCollaboratorsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public OrgsListOutsideCollaboratorsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

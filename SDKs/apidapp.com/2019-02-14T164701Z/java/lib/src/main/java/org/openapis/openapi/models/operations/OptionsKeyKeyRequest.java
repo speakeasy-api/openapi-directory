@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OptionsKeyKeyRequest {
-    
-    public OptionsKeyKeyPathParams pathParams;
-    public OptionsKeyKeyRequest withPathParams(OptionsKeyKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public OptionsKeyKeyRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NewsRequest {
-    
-    public NewsPathParams pathParams;
-    public NewsRequest withPathParams(NewsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=query")
+    public String query;
+    public NewsRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

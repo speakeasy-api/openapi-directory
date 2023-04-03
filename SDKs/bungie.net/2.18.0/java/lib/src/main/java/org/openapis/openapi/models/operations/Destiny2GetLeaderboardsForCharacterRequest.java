@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetLeaderboardsForCharacterRequest {
-    
-    public Destiny2GetLeaderboardsForCharacterPathParams pathParams;
-    public Destiny2GetLeaderboardsForCharacterRequest withPathParams(Destiny2GetLeaderboardsForCharacterPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The specific character to build the leaderboard around for the provided Destiny Membership.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=characterId")
+    public Long characterId;
+    public Destiny2GetLeaderboardsForCharacterRequest withCharacterId(Long characterId) {
+        this.characterId = characterId;
         return this;
     }
     
+    /**
+     * The Destiny membershipId of the user to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
+    public Long destinyMembershipId;
+    public Destiny2GetLeaderboardsForCharacterRequest withDestinyMembershipId(Long destinyMembershipId) {
+        this.destinyMembershipId = destinyMembershipId;
+        return this;
+    }
     
-    public Destiny2GetLeaderboardsForCharacterQueryParams queryParams;
-    public Destiny2GetLeaderboardsForCharacterRequest withQueryParams(Destiny2GetLeaderboardsForCharacterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Maximum number of top players to return. Use a large number to get entire leaderboard.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxtop")
+    public Integer maxtop;
+    public Destiny2GetLeaderboardsForCharacterRequest withMaxtop(Integer maxtop) {
+        this.maxtop = maxtop;
+        return this;
+    }
+    
+    /**
+     * A valid non-BungieNet membership type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public Destiny2GetLeaderboardsForCharacterRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
+        return this;
+    }
+    
+    /**
+     * List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modes")
+    public String modes;
+    public Destiny2GetLeaderboardsForCharacterRequest withModes(String modes) {
+        this.modes = modes;
+        return this;
+    }
+    
+    /**
+     * ID of stat to return rather than returning all Leaderboard stats.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=statid")
+    public String statid;
+    public Destiny2GetLeaderboardsForCharacterRequest withStatid(String statid) {
+        this.statid = statid;
         return this;
     }
     

@@ -34,13 +34,11 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/AnalyticsreportingReportsBatchGetSecurityOption1.java
 lib/src/main/java/org/openapis/openapi/models/operations/AnalyticsreportingReportsBatchGetSecurityOption2.java
 lib/src/main/java/org/openapis/openapi/models/operations/AnalyticsreportingReportsBatchGetSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/AnalyticsreportingReportsBatchGetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/AnalyticsreportingReportsBatchGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AnalyticsreportingReportsBatchGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/AnalyticsreportingUserActivitySearchSecurityOption1.java
 lib/src/main/java/org/openapis/openapi/models/operations/AnalyticsreportingUserActivitySearchSecurityOption2.java
 lib/src/main/java/org/openapis/openapi/models/operations/AnalyticsreportingUserActivitySearchSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/AnalyticsreportingUserActivitySearchQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/AnalyticsreportingUserActivitySearchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AnalyticsreportingUserActivitySearchResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetReportsResponse.java
@@ -56,6 +54,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/PivotHeader.java
 lib/src/main/java/org/openapis/openapi/models/shared/PivotHeaderEntry.java
 lib/src/main/java/org/openapis/openapi/models/shared/MetricHeaderEntryTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/MetricHeaderEntry.java
+lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetReportsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReportRequestSamplingLevelEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReportRequest.java
@@ -93,10 +92,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/DateRange.java
 lib/src/main/java/org/openapis/openapi/models/shared/CohortGroup.java
 lib/src/main/java/org/openapis/openapi/models/shared/CohortTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Cohort.java
-lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 lib/src/main/java/org/openapis/openapi/models/shared/SearchUserActivityResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UserActivitySession.java
 lib/src/main/java/org/openapis/openapi/models/shared/ActivityActivityTypeEnum.java

@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListProvisioningArtifactsForServiceActionRequest {
-    
-    public ListProvisioningArtifactsForServiceActionQueryParams queryParams;
-    public ListProvisioningArtifactsForServiceActionRequest withQueryParams(ListProvisioningArtifactsForServiceActionQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListProvisioningArtifactsForServiceActionHeaders headers;
-    public ListProvisioningArtifactsForServiceActionRequest withHeaders(ListProvisioningArtifactsForServiceActionHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ListProvisioningArtifactsForServiceActionInput request;
-    public ListProvisioningArtifactsForServiceActionRequest withRequest(org.openapis.openapi.models.shared.ListProvisioningArtifactsForServiceActionInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ListProvisioningArtifactsForServiceActionInput listProvisioningArtifactsForServiceActionInput;
+    public ListProvisioningArtifactsForServiceActionRequest withListProvisioningArtifactsForServiceActionInput(org.openapis.openapi.models.shared.ListProvisioningArtifactsForServiceActionInput listProvisioningArtifactsForServiceActionInput) {
+        this.listProvisioningArtifactsForServiceActionInput = listProvisioningArtifactsForServiceActionInput;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public String pageSize;
+    public ListProvisioningArtifactsForServiceActionRequest withPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListProvisioningArtifactsForServiceActionRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListProvisioningArtifactsForServiceActionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListProvisioningArtifactsForServiceActionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListProvisioningArtifactsForServiceActionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListProvisioningArtifactsForServiceActionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListProvisioningArtifactsForServiceActionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListProvisioningArtifactsForServiceActionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListProvisioningArtifactsForServiceActionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public ListProvisioningArtifactsForServiceActionXAmzTargetEnum xAmzTarget;
+    public ListProvisioningArtifactsForServiceActionRequest withXAmzTarget(ListProvisioningArtifactsForServiceActionXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

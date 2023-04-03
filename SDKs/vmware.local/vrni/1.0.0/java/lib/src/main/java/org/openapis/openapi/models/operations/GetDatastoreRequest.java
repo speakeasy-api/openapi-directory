@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDatastoreRequest {
-    
-    public GetDatastorePathParams pathParams;
-    public GetDatastoreRequest withPathParams(GetDatastorePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetDatastoreRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetDatastoreQueryParams queryParams;
-    public GetDatastoreRequest withQueryParams(GetDatastoreQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetDatastoreSecurity security;
-    public GetDatastoreRequest withSecurity(GetDatastoreSecurity security) {
-        this.security = security;
+    /**
+     * time in epoch seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time")
+    public Long time;
+    public GetDatastoreRequest withTime(Long time) {
+        this.time = time;
         return this;
     }
     

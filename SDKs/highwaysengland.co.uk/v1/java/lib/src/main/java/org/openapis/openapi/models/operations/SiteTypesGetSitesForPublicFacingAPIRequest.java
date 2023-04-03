@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SiteTypesGetSitesForPublicFacingAPIRequest {
+    /**
+     * 1 = MIDAS, 2 = TAME, 3 = TMU, 4 = TRADS Legacy
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=siteType_Id")
+    public Integer siteTypeId;
+    public SiteTypesGetSitesForPublicFacingAPIRequest withSiteTypeId(Integer siteTypeId) {
+        this.siteTypeId = siteTypeId;
+        return this;
+    }
     
-    public SiteTypesGetSitesForPublicFacingAPIPathParams pathParams;
-    public SiteTypesGetSitesForPublicFacingAPIRequest withPathParams(SiteTypesGetSitesForPublicFacingAPIPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public SiteTypesGetSitesForPublicFacingAPIRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

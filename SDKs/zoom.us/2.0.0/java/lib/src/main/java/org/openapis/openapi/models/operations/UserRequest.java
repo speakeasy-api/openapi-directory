@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserRequest {
-    
-    public UserPathParams pathParams;
-    public UserRequest withPathParams(UserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * `0` - Facebook.&lt;br&gt;`1` - Google.&lt;br&gt;`99` - API.&lt;br&gt;`100` - Zoom.&lt;br&gt;`101` - SSO.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login_type")
+    public UserLoginTypeEnum loginType;
+    public UserRequest withLoginType(UserLoginTypeEnum loginType) {
+        this.loginType = loginType;
         return this;
     }
     
-    
-    public UserQueryParams queryParams;
-    public UserRequest withQueryParams(UserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UserRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

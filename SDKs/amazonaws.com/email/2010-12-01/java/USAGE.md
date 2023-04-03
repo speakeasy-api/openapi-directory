@@ -6,8 +6,6 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GETCloneReceiptRuleSetActionEnum;
 import org.openapis.openapi.models.operations.GETCloneReceiptRuleSetVersionEnum;
-import org.openapis.openapi.models.operations.GETCloneReceiptRuleSetQueryParams;
-import org.openapis.openapi.models.operations.GETCloneReceiptRuleSetHeaders;
 import org.openapis.openapi.models.operations.GETCloneReceiptRuleSetRequest;
 import org.openapis.openapi.models.operations.GETCloneReceiptRuleSetResponse;
 
@@ -16,29 +14,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GETCloneReceiptRuleSetRequest req = new GETCloneReceiptRuleSetRequest() {{
-                queryParams = new GETCloneReceiptRuleSetQueryParams() {{
-                    action = "CloneReceiptRuleSet";
-                    originalRuleSetName = "corrupti";
-                    ruleSetName = "provident";
-                    version = "2010-12-01";
-                }};
-                headers = new GETCloneReceiptRuleSetHeaders() {{
-                    xAmzAlgorithm = "distinctio";
-                    xAmzContentSha256 = "quibusdam";
-                    xAmzCredential = "unde";
-                    xAmzDate = "nulla";
-                    xAmzSecurityToken = "corrupti";
-                    xAmzSignature = "illum";
-                    xAmzSignedHeaders = "vel";
-                }};
-            }};            
+                action = "CloneReceiptRuleSet";
+                originalRuleSetName = "corrupti";
+                ruleSetName = "provident";
+                version = "2010-12-01";
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+            }}            
 
             GETCloneReceiptRuleSetResponse res = sdk.getCloneReceiptRuleSet(req);
 

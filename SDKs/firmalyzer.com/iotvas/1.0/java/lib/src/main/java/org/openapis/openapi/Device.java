@@ -34,10 +34,11 @@ public class Device {
      * Detect iot device by service banners and mac address
      * Use device service banners and mac address captured by your network port scanner, vulnerability assessment or asset discovery tools to detect device maker, model and firmware information
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DetectDeviceResponse detectDevice(org.openapis.openapi.models.operations.DetectDeviceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DetectDeviceResponse detectDevice(org.openapis.openapi.models.shared.DeviceFeatures request, org.openapis.openapi.models.operations.DetectDeviceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/device/detect");
         
@@ -51,7 +52,7 @@ public class Device {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

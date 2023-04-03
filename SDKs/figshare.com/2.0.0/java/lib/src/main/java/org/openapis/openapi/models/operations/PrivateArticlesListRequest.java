@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateArticlesListRequest {
-    
-    public PrivateArticlesListQueryParams queryParams;
-    public PrivateArticlesListRequest withQueryParams(PrivateArticlesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of results included on a page. Used for pagination with query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public PrivateArticlesListRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Where to start the listing(the offset of the first result). Used for pagination with limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public PrivateArticlesListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
     
-    public PrivateArticlesListSecurity security;
-    public PrivateArticlesListRequest withSecurity(PrivateArticlesListSecurity security) {
-        this.security = security;
+    /**
+     * Page number. Used for pagination with page_size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public PrivateArticlesListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results included on a page. Used for pagination with page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public PrivateArticlesListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

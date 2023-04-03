@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetglobaltimeRequest {
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public String license;
+    public GetglobaltimeRequest withLicense(String license) {
+        this.license = license;
+        return this;
+    }
     
-    public GetglobaltimeQueryParams queryParams;
-    public GetglobaltimeRequest withQueryParams(GetglobaltimeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Geographic locale to get the current time for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public GetglobaltimeRequest withLocale(String locale) {
+        this.locale = locale;
         return this;
     }
     

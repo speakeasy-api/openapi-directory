@@ -42,13 +42,13 @@ public class Stats {
      */
     public org.openapis.openapi.models.operations.GetOrganizationApplianceVpnStatsResponse getOrganizationApplianceVpnStats(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnStatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnStatsPathParams.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/stats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnStatsRequest.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/stats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnStatsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnStatsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

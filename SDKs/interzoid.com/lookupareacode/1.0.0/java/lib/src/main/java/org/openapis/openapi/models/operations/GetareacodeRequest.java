@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetareacodeRequest {
+    /**
+     * Telephone area code to retrieve area code information
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=areacode")
+    public String areacode;
+    public GetareacodeRequest withAreacode(String areacode) {
+        this.areacode = areacode;
+        return this;
+    }
     
-    public GetareacodeQueryParams queryParams;
-    public GetareacodeRequest withQueryParams(GetareacodeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public String license;
+    public GetareacodeRequest withLicense(String license) {
+        this.license = license;
         return this;
     }
     

@@ -4,13 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostPackageUpdateRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_charset_")
+    public String charset;
+    public PostPackageUpdateRequest withCharset(String charset) {
+        this.charset = charset;
+        return this;
+    }
     
-    public PostPackageUpdateQueryParams queryParams;
-    public PostPackageUpdateRequest withQueryParams(PostPackageUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public PostPackageUpdateRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupName")
+    public String groupName;
+    public PostPackageUpdateRequest withGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=packageName")
+    public String packageName;
+    public PostPackageUpdateRequest withPackageName(String packageName) {
+        this.packageName = packageName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
+    public String path;
+    public PostPackageUpdateRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public PostPackageUpdateRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

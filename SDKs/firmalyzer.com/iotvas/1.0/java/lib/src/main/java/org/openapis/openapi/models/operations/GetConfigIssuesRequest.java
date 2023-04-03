@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConfigIssuesRequest {
-    
-    public GetConfigIssuesPathParams pathParams;
-    public GetConfigIssuesRequest withPathParams(GetConfigIssuesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetConfigIssuesSecurity security;
-    public GetConfigIssuesRequest withSecurity(GetConfigIssuesSecurity security) {
-        this.security = security;
+    /**
+     * SHA2 hash of device firmware
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firmware_hash")
+    public String firmwareHash;
+    public GetConfigIssuesRequest withFirmwareHash(String firmwareHash) {
+        this.firmwareHash = firmwareHash;
         return this;
     }
     

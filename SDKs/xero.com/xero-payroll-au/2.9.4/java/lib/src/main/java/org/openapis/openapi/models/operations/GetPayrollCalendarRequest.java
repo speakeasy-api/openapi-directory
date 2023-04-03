@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPayrollCalendarRequest {
-    
-    public GetPayrollCalendarPathParams pathParams;
-    public GetPayrollCalendarRequest withPathParams(GetPayrollCalendarPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Payroll Calendar id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PayrollCalendarID")
+    public String payrollCalendarID;
+    public GetPayrollCalendarRequest withPayrollCalendarID(String payrollCalendarID) {
+        this.payrollCalendarID = payrollCalendarID;
         return this;
     }
     
-    
-    public GetPayrollCalendarHeaders headers;
-    public GetPayrollCalendarRequest withHeaders(GetPayrollCalendarHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetPayrollCalendarSecurity security;
-    public GetPayrollCalendarRequest withSecurity(GetPayrollCalendarSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public GetPayrollCalendarRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

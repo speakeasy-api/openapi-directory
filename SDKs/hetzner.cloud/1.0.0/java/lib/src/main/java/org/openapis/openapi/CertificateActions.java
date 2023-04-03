@@ -42,13 +42,13 @@ public class CertificateActions {
      */
     public org.openapis.openapi.models.operations.GetCertificatesIdActionsResponse getCertificatesIdActions(org.openapis.openapi.models.operations.GetCertificatesIdActionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCertificatesIdActionsPathParams.class, baseUrl, "/certificates/{id}/actions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCertificatesIdActionsRequest.class, baseUrl, "/certificates/{id}/actions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCertificatesIdActionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCertificatesIdActionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -87,7 +87,7 @@ public class CertificateActions {
      */
     public org.openapis.openapi.models.operations.GetCertificatesIdActionsActionIdResponse getCertificatesIdActionsActionId(org.openapis.openapi.models.operations.GetCertificatesIdActionsActionIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCertificatesIdActionsActionIdPathParams.class, baseUrl, "/certificates/{id}/actions/{action_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCertificatesIdActionsActionIdRequest.class, baseUrl, "/certificates/{id}/actions/{action_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -142,7 +142,7 @@ public class CertificateActions {
      */
     public org.openapis.openapi.models.operations.PostCertificatesIdActionsRetryResponse postCertificatesIdActionsRetry(org.openapis.openapi.models.operations.PostCertificatesIdActionsRetryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCertificatesIdActionsRetryPathParams.class, baseUrl, "/certificates/{id}/actions/retry", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCertificatesIdActionsRetryRequest.class, baseUrl, "/certificates/{id}/actions/retry", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateApplicationDocumentRequest {
-    
-    public CreateApplicationDocumentPathParams pathParams;
-    public CreateApplicationDocumentRequest withPathParams(CreateApplicationDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ApplicationDocumentCreateRequest applicationDocumentCreateRequest;
+    public CreateApplicationDocumentRequest withApplicationDocumentCreateRequest(org.openapis.openapi.models.shared.ApplicationDocumentCreateRequest applicationDocumentCreateRequest) {
+        this.applicationDocumentCreateRequest = applicationDocumentCreateRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApplicationDocumentCreateRequest request;
-    public CreateApplicationDocumentRequest withRequest(org.openapis.openapi.models.shared.ApplicationDocumentCreateRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the application in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application_id")
+    public String applicationId;
+    public CreateApplicationDocumentRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
         return this;
     }
     

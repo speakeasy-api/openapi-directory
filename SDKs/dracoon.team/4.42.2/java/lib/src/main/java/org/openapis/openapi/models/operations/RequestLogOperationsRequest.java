@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestLogOperationsRequest {
-    
-    public RequestLogOperationsQueryParams queryParams;
-    public RequestLogOperationsRequest withQueryParams(RequestLogOperationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestLogOperationsRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestLogOperationsHeaders headers;
-    public RequestLogOperationsRequest withHeaders(RequestLogOperationsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Show only deprecated operations
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_deprecated")
+    public Boolean isDeprecated;
+    public RequestLogOperationsRequest withIsDeprecated(Boolean isDeprecated) {
+        this.isDeprecated = isDeprecated;
         return this;
     }
     

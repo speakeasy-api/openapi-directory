@@ -38,10 +38,11 @@ public class Storage {
      * Create File
      * Create a new file. The user who creates the file will automatically be assigned to read and write access unless he has passed custom values for read and write arguments.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StorageCreateFileResponse storageCreateFile(org.openapis.openapi.models.operations.StorageCreateFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StorageCreateFileResponse storageCreateFile(org.openapis.openapi.models.operations.StorageCreateFileRequestBody request, org.openapis.openapi.models.operations.StorageCreateFileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/storage/files");
         
@@ -52,7 +53,7 @@ public class Storage {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,19 +81,20 @@ public class Storage {
      * Delete File
      * Delete a file by its unique ID. Only users with write permissions have access to delete this resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StorageDeleteFileResponse storageDeleteFile(org.openapis.openapi.models.operations.StorageDeleteFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StorageDeleteFileResponse storageDeleteFile(org.openapis.openapi.models.operations.StorageDeleteFileRequest request, org.openapis.openapi.models.operations.StorageDeleteFileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageDeleteFilePathParams.class, baseUrl, "/storage/files/{fileId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageDeleteFileRequest.class, baseUrl, "/storage/files/{fileId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -114,19 +116,20 @@ public class Storage {
      * Get File
      * Get a file by its unique ID. This endpoint response returns a JSON object with the file metadata.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StorageGetFileResponse storageGetFile(org.openapis.openapi.models.operations.StorageGetFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StorageGetFileResponse storageGetFile(org.openapis.openapi.models.operations.StorageGetFileRequest request, org.openapis.openapi.models.operations.StorageGetFileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageGetFilePathParams.class, baseUrl, "/storage/files/{fileId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageGetFileRequest.class, baseUrl, "/storage/files/{fileId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -154,19 +157,20 @@ public class Storage {
      * Get File for Download
      * Get a file content by its unique ID. The endpoint response return with a 'Content-Disposition: attachment' header that tells the browser to start downloading the file to user downloads directory.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StorageGetFileDownloadResponse storageGetFileDownload(org.openapis.openapi.models.operations.StorageGetFileDownloadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StorageGetFileDownloadResponse storageGetFileDownload(org.openapis.openapi.models.operations.StorageGetFileDownloadRequest request, org.openapis.openapi.models.operations.StorageGetFileDownloadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageGetFileDownloadPathParams.class, baseUrl, "/storage/files/{fileId}/download", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageGetFileDownloadRequest.class, baseUrl, "/storage/files/{fileId}/download", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -188,25 +192,26 @@ public class Storage {
      * Get File Preview
      * Get a file preview image. Currently, this method supports preview for image files (jpg, png, and gif), other supported formats, like pdf, docs, slides, and spreadsheets, will return the file icon image. You can also pass query string arguments for cutting and resizing your preview image.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StorageGetFilePreviewResponse storageGetFilePreview(org.openapis.openapi.models.operations.StorageGetFilePreviewRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StorageGetFilePreviewResponse storageGetFilePreview(org.openapis.openapi.models.operations.StorageGetFilePreviewRequest request, org.openapis.openapi.models.operations.StorageGetFilePreviewSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageGetFilePreviewPathParams.class, baseUrl, "/storage/files/{fileId}/preview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageGetFilePreviewRequest.class, baseUrl, "/storage/files/{fileId}/preview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageGetFilePreviewQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageGetFilePreviewRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -228,19 +233,20 @@ public class Storage {
      * Get File for View
      * Get a file content by its unique ID. This endpoint is similar to the download method but returns with no  'Content-Disposition: attachment' header.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StorageGetFileViewResponse storageGetFileView(org.openapis.openapi.models.operations.StorageGetFileViewRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StorageGetFileViewResponse storageGetFileView(org.openapis.openapi.models.operations.StorageGetFileViewRequest request, org.openapis.openapi.models.operations.StorageGetFileViewSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageGetFileViewPathParams.class, baseUrl, "/storage/files/{fileId}/view", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageGetFileViewRequest.class, baseUrl, "/storage/files/{fileId}/view", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -262,10 +268,11 @@ public class Storage {
      * List Files
      * Get a list of all the user files. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's files. [Learn more about different API modes](/docs/admin).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StorageListFilesResponse storageListFiles(org.openapis.openapi.models.operations.StorageListFilesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StorageListFilesResponse storageListFiles(org.openapis.openapi.models.operations.StorageListFilesRequest request, org.openapis.openapi.models.operations.StorageListFilesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/storage/files");
         
@@ -273,14 +280,14 @@ public class Storage {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageListFilesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageListFilesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -308,21 +315,22 @@ public class Storage {
      * Update File
      * Update a file by its unique ID. Only users with write permissions have access to update this resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StorageUpdateFileResponse storageUpdateFile(org.openapis.openapi.models.operations.StorageUpdateFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StorageUpdateFileResponse storageUpdateFile(org.openapis.openapi.models.operations.StorageUpdateFileRequest request, org.openapis.openapi.models.operations.StorageUpdateFileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageUpdateFilePathParams.class, baseUrl, "/storage/files/{fileId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageUpdateFileRequest.class, baseUrl, "/storage/files/{fileId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

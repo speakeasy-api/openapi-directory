@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSentencesRequest {
-    
-    public GetSentencesQueryParams queryParams;
-    public GetSentencesRequest withQueryParams(GetSentencesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetSentencesRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

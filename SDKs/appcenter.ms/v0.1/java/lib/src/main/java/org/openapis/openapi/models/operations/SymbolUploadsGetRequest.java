@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SymbolUploadsGetRequest {
-    
-    public SymbolUploadsGetPathParams pathParams;
-    public SymbolUploadsGetRequest withPathParams(SymbolUploadsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public SymbolUploadsGetRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public SymbolUploadsGetRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public SymbolUploadsGetSecurity security;
-    public SymbolUploadsGetRequest withSecurity(SymbolUploadsGetSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the symbol upload
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=symbol_upload_id")
+    public String symbolUploadId;
+    public SymbolUploadsGetRequest withSymbolUploadId(String symbolUploadId) {
+        this.symbolUploadId = symbolUploadId;
         return this;
     }
     

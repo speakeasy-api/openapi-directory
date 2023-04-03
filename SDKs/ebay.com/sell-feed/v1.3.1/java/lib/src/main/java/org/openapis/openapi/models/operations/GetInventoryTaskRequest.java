@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInventoryTaskRequest {
-    
-    public GetInventoryTaskPathParams pathParams;
-    public GetInventoryTaskRequest withPathParams(GetInventoryTaskPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetInventoryTaskSecurity security;
-    public GetInventoryTaskRequest withSecurity(GetInventoryTaskSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the task. This ID was generated when the task was created by the &lt;strong&gt;createInventoryTask&lt;/strong&gt; method
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=task_id")
+    public String taskId;
+    public GetInventoryTaskRequest withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

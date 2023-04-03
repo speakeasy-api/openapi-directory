@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IpamVlanGroupsDeleteRequest {
-    
-    public IpamVlanGroupsDeletePathParams pathParams;
-    public IpamVlanGroupsDeleteRequest withPathParams(IpamVlanGroupsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this VLAN group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public IpamVlanGroupsDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

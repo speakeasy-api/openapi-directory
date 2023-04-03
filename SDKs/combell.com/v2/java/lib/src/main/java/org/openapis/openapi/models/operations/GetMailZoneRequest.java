@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMailZoneRequest {
-    
-    public GetMailZonePathParams pathParams;
-    public GetMailZoneRequest withPathParams(GetMailZonePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public GetMailZoneRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
         return this;
     }
     
-    
-    public GetMailZoneQueryParams queryParams;
-    public GetMailZoneRequest withQueryParams(GetMailZoneQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Mail zone domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public GetMailZoneRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     

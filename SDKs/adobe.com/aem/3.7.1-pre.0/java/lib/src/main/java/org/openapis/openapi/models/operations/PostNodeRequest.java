@@ -7,24 +7,38 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostNodeRequest {
-    
-    public PostNodePathParams pathParams;
-    public PostNodeRequest withPathParams(PostNodePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostNodeQueryParams queryParams;
-    public PostNodeRequest withQueryParams(PostNodeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=:operation")
+    public String operation;
+    public PostNodeRequest withOperation(String operation) {
+        this.operation = operation;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostNodeRequestBody request;
-    public PostNodeRequest withRequest(PostNodeRequestBody request) {
-        this.request = request;
+    public PostNodeRequestBody requestBody;
+    public PostNodeRequest withRequestBody(PostNodeRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deleteAuthorizable")
+    public String deleteAuthorizable;
+    public PostNodeRequest withDeleteAuthorizable(String deleteAuthorizable) {
+        this.deleteAuthorizable = deleteAuthorizable;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public PostNodeRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public PostNodeRequest withPath(String path) {
+        this.path = path;
         return this;
     }
     

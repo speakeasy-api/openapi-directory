@@ -30,7 +30,7 @@ public class Batch {
 		this._genVersion = genVersion;
 	}
 
-    public org.openapis.openapi.models.operations.BatchResponse batch(org.openapis.openapi.models.operations.BatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BatchResponse batch(org.openapis.openapi.models.operations.BatchBatchPayloadSchema request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/batch");
         

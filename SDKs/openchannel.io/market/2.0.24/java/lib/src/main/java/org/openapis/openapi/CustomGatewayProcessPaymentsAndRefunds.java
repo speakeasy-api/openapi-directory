@@ -38,13 +38,13 @@ public class CustomGatewayProcessPaymentsAndRefunds {
      */
     public org.openapis.openapi.models.operations.PostCustomGatewayPaymentOwnershipIdResponse postCustomGatewayPaymentOwnershipId(org.openapis.openapi.models.operations.PostCustomGatewayPaymentOwnershipIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCustomGatewayPaymentOwnershipIdPathParams.class, baseUrl, "/custom-gateway/payment/{ownershipId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCustomGatewayPaymentOwnershipIdRequest.class, baseUrl, "/custom-gateway/payment/{ownershipId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostCustomGatewayPaymentOwnershipIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostCustomGatewayPaymentOwnershipIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -87,13 +87,13 @@ public class CustomGatewayProcessPaymentsAndRefunds {
      */
     public org.openapis.openapi.models.operations.PostCustomGatewayRefundOwnershipIdResponse postCustomGatewayRefundOwnershipId(org.openapis.openapi.models.operations.PostCustomGatewayRefundOwnershipIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCustomGatewayRefundOwnershipIdPathParams.class, baseUrl, "/custom-gateway/refund/{ownershipId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCustomGatewayRefundOwnershipIdRequest.class, baseUrl, "/custom-gateway/refund/{ownershipId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostCustomGatewayRefundOwnershipIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostCustomGatewayRefundOwnershipIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

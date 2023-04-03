@@ -46,7 +46,7 @@ public class ResourceGroups {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1ResourcegroupsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1ResourcegroupsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -86,7 +86,7 @@ public class ResourceGroups {
      */
     public org.openapis.openapi.models.operations.GetConsumerV1ResourcegroupsIdResponse getConsumerV1ResourcegroupsId(org.openapis.openapi.models.operations.GetConsumerV1ResourcegroupsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConsumerV1ResourcegroupsIdPathParams.class, baseUrl, "/consumer/v1/resourcegroups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConsumerV1ResourcegroupsIdRequest.class, baseUrl, "/consumer/v1/resourcegroups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteDBClusterSnapshotRequest {
-    
-    public GETDeleteDBClusterSnapshotQueryParams queryParams;
-    public GETDeleteDBClusterSnapshotRequest withQueryParams(GETDeleteDBClusterSnapshotQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteDBClusterSnapshotActionEnum action;
+    public GETDeleteDBClusterSnapshotRequest withAction(GETDeleteDBClusterSnapshotActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The identifier of the cluster snapshot to delete.&lt;/p&gt; &lt;p&gt;Constraints: Must be the name of an existing cluster snapshot in the &lt;code&gt;available&lt;/code&gt; state.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterSnapshotIdentifier")
+    public String dbClusterSnapshotIdentifier;
+    public GETDeleteDBClusterSnapshotRequest withDBClusterSnapshotIdentifier(String dbClusterSnapshotIdentifier) {
+        this.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
+        return this;
+    }
     
-    public GETDeleteDBClusterSnapshotHeaders headers;
-    public GETDeleteDBClusterSnapshotRequest withHeaders(GETDeleteDBClusterSnapshotHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteDBClusterSnapshotVersionEnum version;
+    public GETDeleteDBClusterSnapshotRequest withVersion(GETDeleteDBClusterSnapshotVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteDBClusterSnapshotRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteDBClusterSnapshotRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteDBClusterSnapshotRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteDBClusterSnapshotRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteDBClusterSnapshotRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteDBClusterSnapshotRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteDBClusterSnapshotRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

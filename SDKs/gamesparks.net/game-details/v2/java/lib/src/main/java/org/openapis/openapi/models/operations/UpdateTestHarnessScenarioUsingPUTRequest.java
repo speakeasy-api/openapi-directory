@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTestHarnessScenarioUsingPUTRequest {
-    
-    public UpdateTestHarnessScenarioUsingPUTPathParams pathParams;
-    public UpdateTestHarnessScenarioUsingPUTRequest withPathParams(UpdateTestHarnessScenarioUsingPUTPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * testHarnessScenarioDTO
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TestHarnessScenarioModel request;
-    public UpdateTestHarnessScenarioUsingPUTRequest withRequest(org.openapis.openapi.models.shared.TestHarnessScenarioModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TestHarnessScenarioModel testHarnessScenarioModel;
+    public UpdateTestHarnessScenarioUsingPUTRequest withTestHarnessScenarioModel(org.openapis.openapi.models.shared.TestHarnessScenarioModel testHarnessScenarioModel) {
+        this.testHarnessScenarioModel = testHarnessScenarioModel;
+        return this;
+    }
+    
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public UpdateTestHarnessScenarioUsingPUTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    
+    /**
+     * scenarioName
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scenarioName")
+    public String scenarioName;
+    public UpdateTestHarnessScenarioUsingPUTRequest withScenarioName(String scenarioName) {
+        this.scenarioName = scenarioName;
         return this;
     }
     

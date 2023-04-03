@@ -33,10 +33,11 @@ public class Search {
     /**
      * Retrieves a list of search resources
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.YoutubeSearchListResponse youtubeSearchList(org.openapis.openapi.models.operations.YoutubeSearchListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.YoutubeSearchListResponse youtubeSearchList(org.openapis.openapi.models.operations.YoutubeSearchListRequest request, org.openapis.openapi.models.operations.YoutubeSearchListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/youtube/v3/search");
         
@@ -44,14 +45,14 @@ public class Search {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeSearchListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeSearchListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestInfrastructurePropertiesInfoRequest {
-    
-    public RequestInfrastructurePropertiesInfoHeaders headers;
-    public RequestInfrastructurePropertiesInfoRequest withHeaders(RequestInfrastructurePropertiesInfoHeaders headers) {
-        this.headers = headers;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestInfrastructurePropertiesInfoRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

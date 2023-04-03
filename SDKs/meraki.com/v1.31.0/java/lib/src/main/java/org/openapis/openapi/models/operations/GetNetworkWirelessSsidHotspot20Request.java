@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkWirelessSsidHotspot20Request {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkWirelessSsidHotspot20Request withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public GetNetworkWirelessSsidHotspot20PathParams pathParams;
-    public GetNetworkWirelessSsidHotspot20Request withPathParams(GetNetworkWirelessSsidHotspot20PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
+    public String number;
+    public GetNetworkWirelessSsidHotspot20Request withNumber(String number) {
+        this.number = number;
         return this;
     }
     

@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates a new capacity commitment resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateResponse bigqueryreservationProjectsLocationsCapacityCommitmentsCreate(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateResponse bigqueryreservationProjectsLocationsCapacityCommitmentsCreate(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest request, org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/capacityCommitments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest.class, baseUrl, "/v1beta1/{parent}/capacityCommitments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "capacityCommitmentInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Lists all the capacity commitments for the admin project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsListResponse bigqueryreservationProjectsLocationsCapacityCommitmentsList(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsListResponse bigqueryreservationProjectsLocationsCapacityCommitmentsList(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsListRequest request, org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsListPathParams.class, baseUrl, "/v1beta1/{parent}/capacityCommitments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsListRequest.class, baseUrl, "/v1beta1/{parent}/capacityCommitments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Projects {
     /**
      * Merges capacity commitments of the same plan into a single commitment. The resulting capacity commitment has the greater commitment_end_time out of the to-be-merged capacity commitments. Attempting to merge capacity commitments of different plan will fail with the error code `google.rpc.Code.FAILED_PRECONDITION`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsMergeResponse bigqueryreservationProjectsLocationsCapacityCommitmentsMerge(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsMergeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsMergeResponse bigqueryreservationProjectsLocationsCapacityCommitmentsMerge(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsMergeRequest request, org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsMergeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsMergePathParams.class, baseUrl, "/v1beta1/{parent}/capacityCommitments:merge", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsMergeRequest.class, baseUrl, "/v1beta1/{parent}/capacityCommitments:merge", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "mergeCapacityCommitmentsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsMergeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsMergeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,27 +177,28 @@ public class Projects {
     /**
      * Splits capacity commitment to two commitments of the same plan and `commitment_end_time`. A common use case is to enable downgrading commitments. For example, in order to downgrade from 10000 slots to 8000, you might split a 10000 capacity commitment into commitments of 2000 and 8000. Then, you delete the first one after the commitment end time passes.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsSplitResponse bigqueryreservationProjectsLocationsCapacityCommitmentsSplit(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsSplitRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsSplitResponse bigqueryreservationProjectsLocationsCapacityCommitmentsSplit(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsSplitRequest request, org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsSplitSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsSplitPathParams.class, baseUrl, "/v1beta1/{name}:split", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsSplitRequest.class, baseUrl, "/v1beta1/{name}:split", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "splitCapacityCommitmentRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsSplitQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsSplitRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -221,27 +225,28 @@ public class Projects {
     /**
      * Creates an assignment object which allows the given project to submit jobs of a certain type using slots from the specified reservation. Currently a resource (project, folder, organization) can only have one assignment per each (job_type, location) combination, and that reservation will be used for all jobs of the matching type. Different assignments can be created on different levels of the projects, folders or organization hierarchy. During query execution, the assignment is looked up at the project, folder and organization levels in that order. The first assignment found is applied to the query. When creating assignments, it does not matter if other assignments exist at higher levels. Example: * The organization `organizationA` contains two projects, `project1` and `project2`. * Assignments for all three entities (`organizationA`, `project1`, and `project2`) could all be created and mapped to the same or different reservations. "None" assignments represent an absence of the assignment. Projects assigned to None use on-demand pricing. To create a "None" assignment, use "none" as a reservation_id in the parent. Example parent: `projects/myproject/locations/US/reservations/none`. Returns `google.rpc.Code.PERMISSION_DENIED` if user does not have 'bigquery.admin' permissions on the project using the reservation and the project that owns this reservation. Returns `google.rpc.Code.INVALID_ARGUMENT` when location of the assignment does not match location of the reservation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsCreateResponse bigqueryreservationProjectsLocationsReservationsAssignmentsCreate(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsCreateResponse bigqueryreservationProjectsLocationsReservationsAssignmentsCreate(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsCreateRequest request, org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/assignments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsCreateRequest.class, baseUrl, "/v1beta1/{parent}/assignments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "assignmentInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -268,25 +273,26 @@ public class Projects {
     /**
      * Deletes a assignment. No expansion will happen. Example: * Organization `organizationA` contains two projects, `project1` and `project2`. * Reservation `res1` exists and was created previously. * CreateAssignment was used previously to define the following associations between entities and reservations: `` and `` In this example, deletion of the `` assignment won't affect the other assignment ``. After said deletion, queries from `project1` will still use `res1` while queries from `project2` will switch to use on-demand mode.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsDeleteResponse bigqueryreservationProjectsLocationsReservationsAssignmentsDelete(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsDeleteResponse bigqueryreservationProjectsLocationsReservationsAssignmentsDelete(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsDeleteRequest request, org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsDeletePathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsDeleteRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -313,25 +319,26 @@ public class Projects {
     /**
      * Lists assignments. Only explicitly created assignments will be returned. Example: * Organization `organizationA` contains two projects, `project1` and `project2`. * Reservation `res1` exists and was created previously. * CreateAssignment was used previously to define the following associations between entities and reservations: `` and `` In this example, ListAssignments will just return the above two assignments for reservation `res1`, and no expansion/merge will happen. The wildcard "-" can be used for reservations in the request. In that case all assignments belongs to the specified project and location will be listed. **Note** "-" cannot be used for projects nor locations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsListResponse bigqueryreservationProjectsLocationsReservationsAssignmentsList(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsListResponse bigqueryreservationProjectsLocationsReservationsAssignmentsList(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsListRequest request, org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsListPathParams.class, baseUrl, "/v1beta1/{parent}/assignments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsListRequest.class, baseUrl, "/v1beta1/{parent}/assignments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,27 +365,28 @@ public class Projects {
     /**
      * Moves an assignment under a new reservation. This differs from removing an existing assignment and recreating a new one by providing a transactional change that ensures an assignee always has an associated reservation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsMoveResponse bigqueryreservationProjectsLocationsReservationsAssignmentsMove(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsMoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsMoveResponse bigqueryreservationProjectsLocationsReservationsAssignmentsMove(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsMoveRequest request, org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsMoveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsMovePathParams.class, baseUrl, "/v1beta1/{name}:move", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsMoveRequest.class, baseUrl, "/v1beta1/{name}:move", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "moveAssignmentRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsMoveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsMoveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -405,27 +413,28 @@ public class Projects {
     /**
      * Updates an existing assignment. Only the `priority` field can be updated.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsPatchResponse bigqueryreservationProjectsLocationsReservationsAssignmentsPatch(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsPatchResponse bigqueryreservationProjectsLocationsReservationsAssignmentsPatch(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsPatchRequest request, org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsPatchPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsPatchRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "assignmentInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -452,27 +461,28 @@ public class Projects {
     /**
      * Creates a new reservation resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsCreateResponse bigqueryreservationProjectsLocationsReservationsCreate(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsCreateResponse bigqueryreservationProjectsLocationsReservationsCreate(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsCreateRequest request, org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/reservations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsCreateRequest.class, baseUrl, "/v1beta1/{parent}/reservations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "reservationInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -499,25 +509,26 @@ public class Projects {
     /**
      * Returns information about the reservation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsGetResponse bigqueryreservationProjectsLocationsReservationsGet(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsGetResponse bigqueryreservationProjectsLocationsReservationsGet(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsGetRequest request, org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsGetPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsGetRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -544,25 +555,26 @@ public class Projects {
     /**
      * Lists all the reservations for the project in the specified location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsListResponse bigqueryreservationProjectsLocationsReservationsList(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsListResponse bigqueryreservationProjectsLocationsReservationsList(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsListRequest request, org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsListPathParams.class, baseUrl, "/v1beta1/{parent}/reservations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsListRequest.class, baseUrl, "/v1beta1/{parent}/reservations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -589,25 +601,26 @@ public class Projects {
     /**
      * Looks up assignments for a specified resource for a particular region. If the request is about a project: 1. Assignments created on the project will be returned if they exist. 2. Otherwise assignments created on the closest ancestor will be returned. 3. Assignments for different JobTypes will all be returned. The same logic applies if the request is about a folder. If the request is about an organization, then assignments created on the organization will be returned (organization doesn't have ancestors). Comparing to ListAssignments, there are some behavior differences: 1. permission on the assignee will be verified in this API. 2. Hierarchy lookup (project-&gt;folder-&gt;organization) happens in this API. 3. Parent here is `projects/* /locations/*`, instead of `projects/* /locations/*reservations/*`. **Note** "-" cannot be used for projects nor locations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsSearchAssignmentsResponse bigqueryreservationProjectsLocationsSearchAssignments(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsSearchAssignmentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsSearchAssignmentsResponse bigqueryreservationProjectsLocationsSearchAssignments(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsSearchAssignmentsRequest request, org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsSearchAssignmentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsSearchAssignmentsPathParams.class, baseUrl, "/v1beta1/{parent}:searchAssignments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsSearchAssignmentsRequest.class, baseUrl, "/v1beta1/{parent}:searchAssignments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsSearchAssignmentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsSearchAssignmentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

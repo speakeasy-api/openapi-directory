@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Delete4Request {
-    
-    public Delete4PathParams pathParams;
-    public Delete4Request withPathParams(Delete4PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * customer price list's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=priceListId")
+    public Long priceListId;
+    public Delete4Request withPriceListId(Long priceListId) {
+        this.priceListId = priceListId;
         return this;
     }
     

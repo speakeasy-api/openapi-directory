@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetLatestConfigurationQueryParams;
-import org.openapis.openapi.models.operations.GetLatestConfigurationHeaders;
 import org.openapis.openapi.models.operations.GetLatestConfigurationRequest;
 import org.openapis.openapi.models.operations.GetLatestConfigurationResponse;
 
@@ -27,26 +25,20 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetLatestConfigurationRequest req = new GetLatestConfigurationRequest() {{
-                queryParams = new GetLatestConfigurationQueryParams() {{
-                    configurationToken = "corrupti";
-                }};
-                headers = new GetLatestConfigurationHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "provident";
+                xAmzCredential = "distinctio";
+                xAmzDate = "quibusdam";
+                xAmzSecurityToken = "unde";
+                xAmzSignature = "nulla";
+                xAmzSignedHeaders = "corrupti";
+                configurationToken = "illum";
+            }}            
 
             GetLatestConfigurationResponse res = sdk.getLatestConfiguration(req);
 
@@ -60,7 +52,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

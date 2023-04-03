@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListChangeSetsRequest {
-    
-    public GETListChangeSetsQueryParams queryParams;
-    public GETListChangeSetsRequest withQueryParams(GETListChangeSetsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETListChangeSetsActionEnum action;
+    public GETListChangeSetsRequest withAction(GETListChangeSetsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * A string (provided by the &lt;a&gt;ListChangeSets&lt;/a&gt; response output) that identifies the next page of change sets that you want to retrieve.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETListChangeSetsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
     
-    public GETListChangeSetsHeaders headers;
-    public GETListChangeSetsRequest withHeaders(GETListChangeSetsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name or the Amazon Resource Name (ARN) of the stack for which you want to list change sets.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackName")
+    public String stackName;
+    public GETListChangeSetsRequest withStackName(String stackName) {
+        this.stackName = stackName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETListChangeSetsVersionEnum version;
+    public GETListChangeSetsRequest withVersion(GETListChangeSetsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETListChangeSetsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETListChangeSetsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETListChangeSetsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETListChangeSetsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETListChangeSetsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETListChangeSetsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETListChangeSetsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

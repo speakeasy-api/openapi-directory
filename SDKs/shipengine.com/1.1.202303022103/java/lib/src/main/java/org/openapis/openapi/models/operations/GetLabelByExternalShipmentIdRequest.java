@@ -4,20 +4,29 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLabelByExternalShipmentIdRequest {
-    
-    public GetLabelByExternalShipmentIdPathParams pathParams;
-    public GetLabelByExternalShipmentIdRequest withPathParams(GetLabelByExternalShipmentIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=external_shipment_id")
+    public String externalShipmentId;
+    public GetLabelByExternalShipmentIdRequest withExternalShipmentId(String externalShipmentId) {
+        this.externalShipmentId = externalShipmentId;
         return this;
     }
     
-    
-    public GetLabelByExternalShipmentIdQueryParams queryParams;
-    public GetLabelByExternalShipmentIdRequest withQueryParams(GetLabelByExternalShipmentIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * There are two different ways to [download a label](https://www.shipengine.com/docs/labels/downloading/):
+     * 
+     * |Label Download Type | Description
+     * |--------------------|------------------------------
+     * |`url`               |You will receive a URL, which you can use to download the label in a separate request. The URL will remain valid for 90 days.&lt;br&gt;&lt;br&gt;This is the default if `label_download_type` is unspecified.
+     * |`inline`            |You will receive the Base64-encoded label as part of the response. No need for a second request to download the label.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label_download_type")
+    public org.openapis.openapi.models.shared.LabelDownloadTypeEnum labelDownloadType;
+    public GetLabelByExternalShipmentIdRequest withLabelDownloadType(org.openapis.openapi.models.shared.LabelDownloadTypeEnum labelDownloadType) {
+        this.labelDownloadType = labelDownloadType;
         return this;
     }
     

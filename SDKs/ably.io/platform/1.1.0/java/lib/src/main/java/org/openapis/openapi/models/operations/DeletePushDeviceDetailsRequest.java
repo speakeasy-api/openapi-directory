@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePushDeviceDetailsRequest {
-    
-    public DeletePushDeviceDetailsQueryParams queryParams;
-    public DeletePushDeviceDetailsRequest withQueryParams(DeletePushDeviceDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The version of the API you wish to use.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
+    public String xAblyVersion;
+    public DeletePushDeviceDetailsRequest withXAblyVersion(String xAblyVersion) {
+        this.xAblyVersion = xAblyVersion;
         return this;
     }
     
+    /**
+     * Filter to restrict to subscriptions associated with that channel.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=channel")
+    public String channel;
+    public DeletePushDeviceDetailsRequest withChannel(String channel) {
+        this.channel = channel;
+        return this;
+    }
     
-    public DeletePushDeviceDetailsHeaders headers;
-    public DeletePushDeviceDetailsRequest withHeaders(DeletePushDeviceDetailsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Must be set when deviceId is empty, cannot be used with deviceId.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientId")
+    public String clientId;
+    public DeletePushDeviceDetailsRequest withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    
+    /**
+     * Must be set when clientId is empty, cannot be used with clientId.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceId")
+    public String deviceId;
+    public DeletePushDeviceDetailsRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    
+    /**
+     * The response format you would like
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+    public DeletePushDeviceDetailsRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
+        this.format = format;
         return this;
     }
     

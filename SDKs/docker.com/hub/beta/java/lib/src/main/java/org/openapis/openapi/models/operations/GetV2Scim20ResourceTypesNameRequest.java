@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2Scim20ResourceTypesNameRequest {
-    
-    public GetV2Scim20ResourceTypesNamePathParams pathParams;
-    public GetV2Scim20ResourceTypesNameRequest withPathParams(GetV2Scim20ResourceTypesNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public GetV2Scim20ResourceTypesNameRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

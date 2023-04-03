@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ZebraGETRequest {
-    
-    public ZebraGETQueryParams queryParams;
-    public ZebraGETRequest withQueryParams(ZebraGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Most common is CODE_39 or QR_CODE
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public String format;
+    public ZebraGETRequest withFormat(String format) {
+        this.format = format;
         return this;
     }
     
+    /**
+     * Height of the barcode generated image
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
+    public Long height;
+    public ZebraGETRequest withHeight(Long height) {
+        this.height = height;
+        return this;
+    }
     
-    public ZebraGETSecurity security;
-    public ZebraGETRequest withSecurity(ZebraGETSecurity security) {
-        this.security = security;
+    /**
+     * Show label of text below barcode
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showlabel")
+    public Boolean showlabel;
+    public ZebraGETRequest withShowlabel(Boolean showlabel) {
+        this.showlabel = showlabel;
+        return this;
+    }
+    
+    /**
+     * Specify the text value you want to convert
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=value")
+    public String value;
+    public ZebraGETRequest withValue(String value) {
+        this.value = value;
+        return this;
+    }
+    
+    /**
+     * Width of the barcode generated image
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
+    public Long width;
+    public ZebraGETRequest withWidth(Long width) {
+        this.width = width;
         return this;
     }
     

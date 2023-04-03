@@ -337,13 +337,26 @@ public class SDK {
     /**
      * Order an eSIM Profile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateEsimProfileResponse createEsimProfile(org.openapis.openapi.models.operations.CreateEsimProfileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateEsimProfileResponse createEsimProfile(org.openapis.openapi.models.operations.CreateEsimProfileCreateEsimProfileRequest request, org.openapis.openapi.models.operations.CreateEsimProfileSecurity security) throws Exception {
+        return this.createEsimProfile(request, security, null);
+    }
+
+    /**
+     * Order an eSIM Profile.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateEsimProfileResponse createEsimProfile(org.openapis.openapi.models.operations.CreateEsimProfileCreateEsimProfileRequest request, org.openapis.openapi.models.operations.CreateEsimProfileSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_ESIM_PROFILE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/ESimProfiles");
@@ -355,7 +368,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -382,13 +395,26 @@ public class SDK {
     /**
      * Create a Fleet
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateFleetResponse createFleet(org.openapis.openapi.models.operations.CreateFleetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateFleetResponse createFleet(org.openapis.openapi.models.operations.CreateFleetCreateFleetRequest request, org.openapis.openapi.models.operations.CreateFleetSecurity security) throws Exception {
+        return this.createFleet(request, security, null);
+    }
+
+    /**
+     * Create a Fleet
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateFleetResponse createFleet(org.openapis.openapi.models.operations.CreateFleetCreateFleetRequest request, org.openapis.openapi.models.operations.CreateFleetSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_FLEET_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Fleets");
@@ -400,7 +426,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -427,13 +453,26 @@ public class SDK {
     /**
      * Send an IP Command to a Super SIM.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateIpCommandResponse createIpCommand(org.openapis.openapi.models.operations.CreateIpCommandRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateIpCommandResponse createIpCommand(org.openapis.openapi.models.operations.CreateIpCommandCreateIpCommandRequest request, org.openapis.openapi.models.operations.CreateIpCommandSecurity security) throws Exception {
+        return this.createIpCommand(request, security, null);
+    }
+
+    /**
+     * Send an IP Command to a Super SIM.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateIpCommandResponse createIpCommand(org.openapis.openapi.models.operations.CreateIpCommandCreateIpCommandRequest request, org.openapis.openapi.models.operations.CreateIpCommandSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_IP_COMMAND_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/IpCommands");
@@ -445,7 +484,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -472,13 +511,26 @@ public class SDK {
     /**
      * Create a new Network Access Profile
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateNetworkAccessProfileResponse createNetworkAccessProfile(org.openapis.openapi.models.operations.CreateNetworkAccessProfileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateNetworkAccessProfileResponse createNetworkAccessProfile(org.openapis.openapi.models.operations.CreateNetworkAccessProfileCreateNetworkAccessProfileRequest request, org.openapis.openapi.models.operations.CreateNetworkAccessProfileSecurity security) throws Exception {
+        return this.createNetworkAccessProfile(request, security, null);
+    }
+
+    /**
+     * Create a new Network Access Profile
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateNetworkAccessProfileResponse createNetworkAccessProfile(org.openapis.openapi.models.operations.CreateNetworkAccessProfileCreateNetworkAccessProfileRequest request, org.openapis.openapi.models.operations.CreateNetworkAccessProfileSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_NETWORK_ACCESS_PROFILE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/NetworkAccessProfiles");
@@ -490,7 +542,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -517,25 +569,38 @@ public class SDK {
     /**
      * Add a Network resource to the Network Access Profile resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateNetworkAccessProfileNetworkResponse createNetworkAccessProfileNetwork(org.openapis.openapi.models.operations.CreateNetworkAccessProfileNetworkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateNetworkAccessProfileNetworkResponse createNetworkAccessProfileNetwork(org.openapis.openapi.models.operations.CreateNetworkAccessProfileNetworkRequest request, org.openapis.openapi.models.operations.CreateNetworkAccessProfileNetworkSecurity security) throws Exception {
+        return this.createNetworkAccessProfileNetwork(request, security, null);
+    }
+
+    /**
+     * Add a Network resource to the Network Access Profile resource.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateNetworkAccessProfileNetworkResponse createNetworkAccessProfileNetwork(org.openapis.openapi.models.operations.CreateNetworkAccessProfileNetworkRequest request, org.openapis.openapi.models.operations.CreateNetworkAccessProfileNetworkSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_NETWORK_ACCESS_PROFILE_NETWORK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkAccessProfileNetworkPathParams.class, baseUrl, "/v1/NetworkAccessProfiles/{NetworkAccessProfileSid}/Networks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkAccessProfileNetworkRequest.class, baseUrl, "/v1/NetworkAccessProfiles/{NetworkAccessProfileSid}/Networks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -562,13 +627,26 @@ public class SDK {
     /**
      * Register a Super SIM to your Account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateSimResponse createSim(org.openapis.openapi.models.operations.CreateSimRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateSimResponse createSim(org.openapis.openapi.models.operations.CreateSimCreateSimRequest request, org.openapis.openapi.models.operations.CreateSimSecurity security) throws Exception {
+        return this.createSim(request, security, null);
+    }
+
+    /**
+     * Register a Super SIM to your Account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateSimResponse createSim(org.openapis.openapi.models.operations.CreateSimCreateSimRequest request, org.openapis.openapi.models.operations.CreateSimSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_SIM_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Sims");
@@ -580,7 +658,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -607,13 +685,26 @@ public class SDK {
     /**
      * Send SMS Command to a Sim.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateSmsCommandResponse createSmsCommand(org.openapis.openapi.models.operations.CreateSmsCommandRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateSmsCommandResponse createSmsCommand(org.openapis.openapi.models.operations.CreateSmsCommandCreateSmsCommandRequest request, org.openapis.openapi.models.operations.CreateSmsCommandSecurity security) throws Exception {
+        return this.createSmsCommand(request, security, null);
+    }
+
+    /**
+     * Send SMS Command to a Sim.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateSmsCommandResponse createSmsCommand(org.openapis.openapi.models.operations.CreateSmsCommandCreateSmsCommandRequest request, org.openapis.openapi.models.operations.CreateSmsCommandSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_SMS_COMMAND_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/SmsCommands");
@@ -625,7 +716,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -652,23 +743,36 @@ public class SDK {
     /**
      * Remove a Network resource from the Network Access Profile resource's.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteNetworkAccessProfileNetworkResponse deleteNetworkAccessProfileNetwork(org.openapis.openapi.models.operations.DeleteNetworkAccessProfileNetworkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteNetworkAccessProfileNetworkResponse deleteNetworkAccessProfileNetwork(org.openapis.openapi.models.operations.DeleteNetworkAccessProfileNetworkRequest request, org.openapis.openapi.models.operations.DeleteNetworkAccessProfileNetworkSecurity security) throws Exception {
+        return this.deleteNetworkAccessProfileNetwork(request, security, null);
+    }
+
+    /**
+     * Remove a Network resource from the Network Access Profile resource's.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteNetworkAccessProfileNetworkResponse deleteNetworkAccessProfileNetwork(org.openapis.openapi.models.operations.DeleteNetworkAccessProfileNetworkRequest request, org.openapis.openapi.models.operations.DeleteNetworkAccessProfileNetworkSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_NETWORK_ACCESS_PROFILE_NETWORK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkAccessProfileNetworkPathParams.class, baseUrl, "/v1/NetworkAccessProfiles/{NetworkAccessProfileSid}/Networks/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkAccessProfileNetworkRequest.class, baseUrl, "/v1/NetworkAccessProfiles/{NetworkAccessProfileSid}/Networks/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -689,23 +793,36 @@ public class SDK {
     /**
      * Fetch an eSIM Profile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchEsimProfileResponse fetchEsimProfile(org.openapis.openapi.models.operations.FetchEsimProfileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchEsimProfileResponse fetchEsimProfile(org.openapis.openapi.models.operations.FetchEsimProfileRequest request, org.openapis.openapi.models.operations.FetchEsimProfileSecurity security) throws Exception {
+        return this.fetchEsimProfile(request, security, null);
+    }
+
+    /**
+     * Fetch an eSIM Profile.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchEsimProfileResponse fetchEsimProfile(org.openapis.openapi.models.operations.FetchEsimProfileRequest request, org.openapis.openapi.models.operations.FetchEsimProfileSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_ESIM_PROFILE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchEsimProfilePathParams.class, baseUrl, "/v1/ESimProfiles/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchEsimProfileRequest.class, baseUrl, "/v1/ESimProfiles/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -732,23 +849,36 @@ public class SDK {
     /**
      * Fetch a Fleet instance from your account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchFleetResponse fetchFleet(org.openapis.openapi.models.operations.FetchFleetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchFleetResponse fetchFleet(org.openapis.openapi.models.operations.FetchFleetRequest request, org.openapis.openapi.models.operations.FetchFleetSecurity security) throws Exception {
+        return this.fetchFleet(request, security, null);
+    }
+
+    /**
+     * Fetch a Fleet instance from your account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchFleetResponse fetchFleet(org.openapis.openapi.models.operations.FetchFleetRequest request, org.openapis.openapi.models.operations.FetchFleetSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_FLEET_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchFleetPathParams.class, baseUrl, "/v1/Fleets/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchFleetRequest.class, baseUrl, "/v1/Fleets/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -775,23 +905,36 @@ public class SDK {
     /**
      * Fetch IP Command instance from your account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchIpCommandResponse fetchIpCommand(org.openapis.openapi.models.operations.FetchIpCommandRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchIpCommandResponse fetchIpCommand(org.openapis.openapi.models.operations.FetchIpCommandRequest request, org.openapis.openapi.models.operations.FetchIpCommandSecurity security) throws Exception {
+        return this.fetchIpCommand(request, security, null);
+    }
+
+    /**
+     * Fetch IP Command instance from your account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchIpCommandResponse fetchIpCommand(org.openapis.openapi.models.operations.FetchIpCommandRequest request, org.openapis.openapi.models.operations.FetchIpCommandSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_IP_COMMAND_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchIpCommandPathParams.class, baseUrl, "/v1/IpCommands/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchIpCommandRequest.class, baseUrl, "/v1/IpCommands/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -818,23 +961,36 @@ public class SDK {
     /**
      * Fetch a Network resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchNetworkResponse fetchNetwork(org.openapis.openapi.models.operations.FetchNetworkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchNetworkResponse fetchNetwork(org.openapis.openapi.models.operations.FetchNetworkRequest request, org.openapis.openapi.models.operations.FetchNetworkSecurity security) throws Exception {
+        return this.fetchNetwork(request, security, null);
+    }
+
+    /**
+     * Fetch a Network resource.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchNetworkResponse fetchNetwork(org.openapis.openapi.models.operations.FetchNetworkRequest request, org.openapis.openapi.models.operations.FetchNetworkSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_NETWORK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchNetworkPathParams.class, baseUrl, "/v1/Networks/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchNetworkRequest.class, baseUrl, "/v1/Networks/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -861,23 +1017,36 @@ public class SDK {
     /**
      * Fetch a Network Access Profile instance from your account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchNetworkAccessProfileResponse fetchNetworkAccessProfile(org.openapis.openapi.models.operations.FetchNetworkAccessProfileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchNetworkAccessProfileResponse fetchNetworkAccessProfile(org.openapis.openapi.models.operations.FetchNetworkAccessProfileRequest request, org.openapis.openapi.models.operations.FetchNetworkAccessProfileSecurity security) throws Exception {
+        return this.fetchNetworkAccessProfile(request, security, null);
+    }
+
+    /**
+     * Fetch a Network Access Profile instance from your account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchNetworkAccessProfileResponse fetchNetworkAccessProfile(org.openapis.openapi.models.operations.FetchNetworkAccessProfileRequest request, org.openapis.openapi.models.operations.FetchNetworkAccessProfileSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_NETWORK_ACCESS_PROFILE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchNetworkAccessProfilePathParams.class, baseUrl, "/v1/NetworkAccessProfiles/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchNetworkAccessProfileRequest.class, baseUrl, "/v1/NetworkAccessProfiles/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -904,23 +1073,36 @@ public class SDK {
     /**
      * Fetch a Network Access Profile resource's Network resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchNetworkAccessProfileNetworkResponse fetchNetworkAccessProfileNetwork(org.openapis.openapi.models.operations.FetchNetworkAccessProfileNetworkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchNetworkAccessProfileNetworkResponse fetchNetworkAccessProfileNetwork(org.openapis.openapi.models.operations.FetchNetworkAccessProfileNetworkRequest request, org.openapis.openapi.models.operations.FetchNetworkAccessProfileNetworkSecurity security) throws Exception {
+        return this.fetchNetworkAccessProfileNetwork(request, security, null);
+    }
+
+    /**
+     * Fetch a Network Access Profile resource's Network resource.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchNetworkAccessProfileNetworkResponse fetchNetworkAccessProfileNetwork(org.openapis.openapi.models.operations.FetchNetworkAccessProfileNetworkRequest request, org.openapis.openapi.models.operations.FetchNetworkAccessProfileNetworkSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_NETWORK_ACCESS_PROFILE_NETWORK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchNetworkAccessProfileNetworkPathParams.class, baseUrl, "/v1/NetworkAccessProfiles/{NetworkAccessProfileSid}/Networks/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchNetworkAccessProfileNetworkRequest.class, baseUrl, "/v1/NetworkAccessProfiles/{NetworkAccessProfileSid}/Networks/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -947,23 +1129,36 @@ public class SDK {
     /**
      * Fetch a Super SIM instance from your account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchSimResponse fetchSim(org.openapis.openapi.models.operations.FetchSimRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchSimResponse fetchSim(org.openapis.openapi.models.operations.FetchSimRequest request, org.openapis.openapi.models.operations.FetchSimSecurity security) throws Exception {
+        return this.fetchSim(request, security, null);
+    }
+
+    /**
+     * Fetch a Super SIM instance from your account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchSimResponse fetchSim(org.openapis.openapi.models.operations.FetchSimRequest request, org.openapis.openapi.models.operations.FetchSimSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_SIM_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchSimPathParams.class, baseUrl, "/v1/Sims/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchSimRequest.class, baseUrl, "/v1/Sims/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -990,23 +1185,36 @@ public class SDK {
     /**
      * Fetch SMS Command instance from your account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchSmsCommandResponse fetchSmsCommand(org.openapis.openapi.models.operations.FetchSmsCommandRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchSmsCommandResponse fetchSmsCommand(org.openapis.openapi.models.operations.FetchSmsCommandRequest request, org.openapis.openapi.models.operations.FetchSmsCommandSecurity security) throws Exception {
+        return this.fetchSmsCommand(request, security, null);
+    }
+
+    /**
+     * Fetch SMS Command instance from your account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchSmsCommandResponse fetchSmsCommand(org.openapis.openapi.models.operations.FetchSmsCommandRequest request, org.openapis.openapi.models.operations.FetchSmsCommandSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_SMS_COMMAND_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchSmsCommandPathParams.class, baseUrl, "/v1/SmsCommands/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchSmsCommandRequest.class, baseUrl, "/v1/SmsCommands/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1033,29 +1241,42 @@ public class SDK {
     /**
      * Retrieve a list of Billing Periods for a Super SIM.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListBillingPeriodResponse listBillingPeriod(org.openapis.openapi.models.operations.ListBillingPeriodRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListBillingPeriodResponse listBillingPeriod(org.openapis.openapi.models.operations.ListBillingPeriodRequest request, org.openapis.openapi.models.operations.ListBillingPeriodSecurity security) throws Exception {
+        return this.listBillingPeriod(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of Billing Periods for a Super SIM.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListBillingPeriodResponse listBillingPeriod(org.openapis.openapi.models.operations.ListBillingPeriodRequest request, org.openapis.openapi.models.operations.ListBillingPeriodSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_BILLING_PERIOD_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListBillingPeriodPathParams.class, baseUrl, "/v1/Sims/{SimSid}/BillingPeriods", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListBillingPeriodRequest.class, baseUrl, "/v1/Sims/{SimSid}/BillingPeriods", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListBillingPeriodQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListBillingPeriodRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1082,13 +1303,26 @@ public class SDK {
     /**
      * Retrieve a list of eSIM Profiles.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListEsimProfileResponse listEsimProfile(org.openapis.openapi.models.operations.ListEsimProfileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListEsimProfileResponse listEsimProfile(org.openapis.openapi.models.operations.ListEsimProfileRequest request, org.openapis.openapi.models.operations.ListEsimProfileSecurity security) throws Exception {
+        return this.listEsimProfile(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of eSIM Profiles.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListEsimProfileResponse listEsimProfile(org.openapis.openapi.models.operations.ListEsimProfileRequest request, org.openapis.openapi.models.operations.ListEsimProfileSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_ESIM_PROFILE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/ESimProfiles");
@@ -1097,14 +1331,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListEsimProfileQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListEsimProfileRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1131,13 +1365,26 @@ public class SDK {
     /**
      * Retrieve a list of Fleets from your account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListFleetResponse listFleet(org.openapis.openapi.models.operations.ListFleetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListFleetResponse listFleet(org.openapis.openapi.models.operations.ListFleetRequest request, org.openapis.openapi.models.operations.ListFleetSecurity security) throws Exception {
+        return this.listFleet(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of Fleets from your account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListFleetResponse listFleet(org.openapis.openapi.models.operations.ListFleetRequest request, org.openapis.openapi.models.operations.ListFleetSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_FLEET_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Fleets");
@@ -1146,14 +1393,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListFleetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListFleetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1180,13 +1427,26 @@ public class SDK {
     /**
      * Retrieve a list of IP Commands from your account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListIpCommandResponse listIpCommand(org.openapis.openapi.models.operations.ListIpCommandRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListIpCommandResponse listIpCommand(org.openapis.openapi.models.operations.ListIpCommandRequest request, org.openapis.openapi.models.operations.ListIpCommandSecurity security) throws Exception {
+        return this.listIpCommand(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of IP Commands from your account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListIpCommandResponse listIpCommand(org.openapis.openapi.models.operations.ListIpCommandRequest request, org.openapis.openapi.models.operations.ListIpCommandSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_IP_COMMAND_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/IpCommands");
@@ -1195,14 +1455,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListIpCommandQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListIpCommandRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1229,13 +1489,26 @@ public class SDK {
     /**
      * Retrieve a list of Network resources.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListNetworkResponse listNetwork(org.openapis.openapi.models.operations.ListNetworkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListNetworkResponse listNetwork(org.openapis.openapi.models.operations.ListNetworkRequest request, org.openapis.openapi.models.operations.ListNetworkSecurity security) throws Exception {
+        return this.listNetwork(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of Network resources.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListNetworkResponse listNetwork(org.openapis.openapi.models.operations.ListNetworkRequest request, org.openapis.openapi.models.operations.ListNetworkSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_NETWORK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Networks");
@@ -1244,14 +1517,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListNetworkQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListNetworkRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1278,13 +1551,26 @@ public class SDK {
     /**
      * Retrieve a list of Network Access Profiles from your account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListNetworkAccessProfileResponse listNetworkAccessProfile(org.openapis.openapi.models.operations.ListNetworkAccessProfileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListNetworkAccessProfileResponse listNetworkAccessProfile(org.openapis.openapi.models.operations.ListNetworkAccessProfileRequest request, org.openapis.openapi.models.operations.ListNetworkAccessProfileSecurity security) throws Exception {
+        return this.listNetworkAccessProfile(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of Network Access Profiles from your account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListNetworkAccessProfileResponse listNetworkAccessProfile(org.openapis.openapi.models.operations.ListNetworkAccessProfileRequest request, org.openapis.openapi.models.operations.ListNetworkAccessProfileSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_NETWORK_ACCESS_PROFILE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/NetworkAccessProfiles");
@@ -1293,14 +1579,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListNetworkAccessProfileQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListNetworkAccessProfileRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1327,29 +1613,42 @@ public class SDK {
     /**
      * Retrieve a list of Network Access Profile resource's Network resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListNetworkAccessProfileNetworkResponse listNetworkAccessProfileNetwork(org.openapis.openapi.models.operations.ListNetworkAccessProfileNetworkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListNetworkAccessProfileNetworkResponse listNetworkAccessProfileNetwork(org.openapis.openapi.models.operations.ListNetworkAccessProfileNetworkRequest request, org.openapis.openapi.models.operations.ListNetworkAccessProfileNetworkSecurity security) throws Exception {
+        return this.listNetworkAccessProfileNetwork(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of Network Access Profile resource's Network resource.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListNetworkAccessProfileNetworkResponse listNetworkAccessProfileNetwork(org.openapis.openapi.models.operations.ListNetworkAccessProfileNetworkRequest request, org.openapis.openapi.models.operations.ListNetworkAccessProfileNetworkSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_NETWORK_ACCESS_PROFILE_NETWORK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListNetworkAccessProfileNetworkPathParams.class, baseUrl, "/v1/NetworkAccessProfiles/{NetworkAccessProfileSid}/Networks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListNetworkAccessProfileNetworkRequest.class, baseUrl, "/v1/NetworkAccessProfiles/{NetworkAccessProfileSid}/Networks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListNetworkAccessProfileNetworkQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListNetworkAccessProfileNetworkRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1376,13 +1675,26 @@ public class SDK {
     /**
      * Retrieve a list of Settings Updates.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListSettingsUpdateResponse listSettingsUpdate(org.openapis.openapi.models.operations.ListSettingsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListSettingsUpdateResponse listSettingsUpdate(org.openapis.openapi.models.operations.ListSettingsUpdateRequest request, org.openapis.openapi.models.operations.ListSettingsUpdateSecurity security) throws Exception {
+        return this.listSettingsUpdate(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of Settings Updates.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListSettingsUpdateResponse listSettingsUpdate(org.openapis.openapi.models.operations.ListSettingsUpdateRequest request, org.openapis.openapi.models.operations.ListSettingsUpdateSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_SETTINGS_UPDATE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/SettingsUpdates");
@@ -1391,14 +1703,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSettingsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSettingsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1425,13 +1737,26 @@ public class SDK {
     /**
      * Retrieve a list of Super SIMs from your account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListSimResponse listSim(org.openapis.openapi.models.operations.ListSimRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListSimResponse listSim(org.openapis.openapi.models.operations.ListSimRequest request, org.openapis.openapi.models.operations.ListSimSecurity security) throws Exception {
+        return this.listSim(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of Super SIMs from your account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListSimResponse listSim(org.openapis.openapi.models.operations.ListSimRequest request, org.openapis.openapi.models.operations.ListSimSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_SIM_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Sims");
@@ -1440,14 +1765,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSimQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSimRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1474,29 +1799,42 @@ public class SDK {
     /**
      * Retrieve a list of IP Addresses for the given Super SIM.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListSimIpAddressResponse listSimIpAddress(org.openapis.openapi.models.operations.ListSimIpAddressRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListSimIpAddressResponse listSimIpAddress(org.openapis.openapi.models.operations.ListSimIpAddressRequest request, org.openapis.openapi.models.operations.ListSimIpAddressSecurity security) throws Exception {
+        return this.listSimIpAddress(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of IP Addresses for the given Super SIM.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListSimIpAddressResponse listSimIpAddress(org.openapis.openapi.models.operations.ListSimIpAddressRequest request, org.openapis.openapi.models.operations.ListSimIpAddressSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_SIM_IP_ADDRESS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSimIpAddressPathParams.class, baseUrl, "/v1/Sims/{SimSid}/IpAddresses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSimIpAddressRequest.class, baseUrl, "/v1/Sims/{SimSid}/IpAddresses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSimIpAddressQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSimIpAddressRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1523,13 +1861,26 @@ public class SDK {
     /**
      * Retrieve a list of SMS Commands from your account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListSmsCommandResponse listSmsCommand(org.openapis.openapi.models.operations.ListSmsCommandRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListSmsCommandResponse listSmsCommand(org.openapis.openapi.models.operations.ListSmsCommandRequest request, org.openapis.openapi.models.operations.ListSmsCommandSecurity security) throws Exception {
+        return this.listSmsCommand(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of SMS Commands from your account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListSmsCommandResponse listSmsCommand(org.openapis.openapi.models.operations.ListSmsCommandRequest request, org.openapis.openapi.models.operations.ListSmsCommandSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_SMS_COMMAND_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/SmsCommands");
@@ -1538,14 +1889,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSmsCommandQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSmsCommandRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1572,13 +1923,26 @@ public class SDK {
     /**
      * List UsageRecords
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListUsageRecordResponse listUsageRecord(org.openapis.openapi.models.operations.ListUsageRecordRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListUsageRecordResponse listUsageRecord(org.openapis.openapi.models.operations.ListUsageRecordRequest request, org.openapis.openapi.models.operations.ListUsageRecordSecurity security) throws Exception {
+        return this.listUsageRecord(request, security, null);
+    }
+
+    /**
+     * List UsageRecords
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListUsageRecordResponse listUsageRecord(org.openapis.openapi.models.operations.ListUsageRecordRequest request, org.openapis.openapi.models.operations.ListUsageRecordSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_USAGE_RECORD_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/UsageRecords");
@@ -1587,14 +1951,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListUsageRecordQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListUsageRecordRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1621,25 +1985,38 @@ public class SDK {
     /**
      * Updates the given properties of a Super SIM Fleet instance from your account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateFleetResponse updateFleet(org.openapis.openapi.models.operations.UpdateFleetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateFleetResponse updateFleet(org.openapis.openapi.models.operations.UpdateFleetRequest request, org.openapis.openapi.models.operations.UpdateFleetSecurity security) throws Exception {
+        return this.updateFleet(request, security, null);
+    }
+
+    /**
+     * Updates the given properties of a Super SIM Fleet instance from your account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateFleetResponse updateFleet(org.openapis.openapi.models.operations.UpdateFleetRequest request, org.openapis.openapi.models.operations.UpdateFleetSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_FLEET_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateFleetPathParams.class, baseUrl, "/v1/Fleets/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateFleetRequest.class, baseUrl, "/v1/Fleets/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1666,25 +2043,38 @@ public class SDK {
     /**
      * Updates the given properties of a Network Access Profile in your account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateNetworkAccessProfileResponse updateNetworkAccessProfile(org.openapis.openapi.models.operations.UpdateNetworkAccessProfileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateNetworkAccessProfileResponse updateNetworkAccessProfile(org.openapis.openapi.models.operations.UpdateNetworkAccessProfileRequest request, org.openapis.openapi.models.operations.UpdateNetworkAccessProfileSecurity security) throws Exception {
+        return this.updateNetworkAccessProfile(request, security, null);
+    }
+
+    /**
+     * Updates the given properties of a Network Access Profile in your account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateNetworkAccessProfileResponse updateNetworkAccessProfile(org.openapis.openapi.models.operations.UpdateNetworkAccessProfileRequest request, org.openapis.openapi.models.operations.UpdateNetworkAccessProfileSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_NETWORK_ACCESS_PROFILE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkAccessProfilePathParams.class, baseUrl, "/v1/NetworkAccessProfiles/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkAccessProfileRequest.class, baseUrl, "/v1/NetworkAccessProfiles/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1711,25 +2101,38 @@ public class SDK {
     /**
      * Updates the given properties of a Super SIM instance from your account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateSimResponse updateSim(org.openapis.openapi.models.operations.UpdateSimRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateSimResponse updateSim(org.openapis.openapi.models.operations.UpdateSimRequest request, org.openapis.openapi.models.operations.UpdateSimSecurity security) throws Exception {
+        return this.updateSim(request, security, null);
+    }
+
+    /**
+     * Updates the given properties of a Super SIM instance from your account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateSimResponse updateSim(org.openapis.openapi.models.operations.UpdateSimRequest request, org.openapis.openapi.models.operations.UpdateSimSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_SIM_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSimPathParams.class, baseUrl, "/v1/Sims/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSimRequest.class, baseUrl, "/v1/Sims/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

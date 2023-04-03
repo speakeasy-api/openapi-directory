@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAnAccountNumberRequest {
-    
-    public UpdateAnAccountNumberPathParams pathParams;
-    public UpdateAnAccountNumberRequest withPathParams(UpdateAnAccountNumberPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_number_id")
+    public String accountNumberId;
+    public UpdateAnAccountNumberRequest withAccountNumberId(String accountNumberId) {
+        this.accountNumberId = accountNumberId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateAnAccountNumberParameters request;
-    public UpdateAnAccountNumberRequest withRequest(org.openapis.openapi.models.shared.UpdateAnAccountNumberParameters request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateAnAccountNumberParameters updateAnAccountNumberParameters;
+    public UpdateAnAccountNumberRequest withUpdateAnAccountNumberParameters(org.openapis.openapi.models.shared.UpdateAnAccountNumberParameters updateAnAccountNumberParameters) {
+        this.updateAnAccountNumberParameters = updateAnAccountNumberParameters;
         return this;
     }
     

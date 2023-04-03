@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetComicIdInfo0JsonRequest {
-    
-    public GetComicIdInfo0JsonPathParams pathParams;
-    public GetComicIdInfo0JsonRequest withPathParams(GetComicIdInfo0JsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comicId")
+    public Double comicId;
+    public GetComicIdInfo0JsonRequest withComicId(Double comicId) {
+        this.comicId = comicId;
         return this;
     }
     

@@ -7,31 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateResourcePolicyRequest {
-    
-    public UpdateResourcePolicyPathParams pathParams;
-    public UpdateResourcePolicyRequest withPathParams(UpdateResourcePolicyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateResourcePolicyQueryParams queryParams;
-    public UpdateResourcePolicyRequest withQueryParams(UpdateResourcePolicyQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public UpdateResourcePolicyHeaders headers;
-    public UpdateResourcePolicyRequest withHeaders(UpdateResourcePolicyHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateResourcePolicyRequestBody request;
-    public UpdateResourcePolicyRequest withRequest(UpdateResourcePolicyRequestBody request) {
-        this.request = request;
+    public UpdateResourcePolicyRequestBody requestBody;
+    public UpdateResourcePolicyRequest withRequestBody(UpdateResourcePolicyRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateResourcePolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateResourcePolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateResourcePolicyRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateResourcePolicyRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateResourcePolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateResourcePolicyRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateResourcePolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The identifier of the revision of the policy to update. If this revision ID doesn't match the current revision ID, Amazon Lex throws an exception.&lt;/p&gt; &lt;p&gt;If you don't specify a revision, Amazon Lex overwrites the contents of the policy with the new values.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expectedRevisionId")
+    public String expectedRevisionId;
+    public UpdateResourcePolicyRequest withExpectedRevisionId(String expectedRevisionId) {
+        this.expectedRevisionId = expectedRevisionId;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is attached to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resourceArn")
+    public String resourceArn;
+    public UpdateResourcePolicyRequest withResourceArn(String resourceArn) {
+        this.resourceArn = resourceArn;
         return this;
     }
     

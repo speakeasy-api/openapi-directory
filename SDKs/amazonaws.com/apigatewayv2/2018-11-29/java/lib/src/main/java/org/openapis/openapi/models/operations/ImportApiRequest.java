@@ -7,24 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportApiRequest {
-    
-    public ImportApiQueryParams queryParams;
-    public ImportApiRequest withQueryParams(ImportApiQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ImportApiHeaders headers;
-    public ImportApiRequest withHeaders(ImportApiHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ImportApiRequestBody request;
-    public ImportApiRequest withRequest(ImportApiRequestBody request) {
-        this.request = request;
+    public ImportApiRequestBody requestBody;
+    public ImportApiRequest withRequestBody(ImportApiRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ImportApiRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ImportApiRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ImportApiRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ImportApiRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ImportApiRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ImportApiRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ImportApiRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * Specifies how to interpret the base path of the API during import. Valid values are ignore, prepend, and split. The default value is ignore. To learn more, see &lt;a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-import-api-basePath.html"&gt;Set the OpenAPI basePath Property&lt;/a&gt;. Supported only for HTTP APIs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=basepath")
+    public String basepath;
+    public ImportApiRequest withBasepath(String basepath) {
+        this.basepath = basepath;
+        return this;
+    }
+    
+    /**
+     * Specifies whether to rollback the API creation when a warning is encountered. By default, API creation continues if a warning is encountered.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=failOnWarnings")
+    public Boolean failOnWarnings;
+    public ImportApiRequest withFailOnWarnings(Boolean failOnWarnings) {
+        this.failOnWarnings = failOnWarnings;
         return this;
     }
     

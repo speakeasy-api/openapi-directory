@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveAccountKeyRequest {
-    
-    public RemoveAccountKeyPathParams pathParams;
-    public RemoveAccountKeyRequest withPathParams(RemoveAccountKeyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RemoveAccountKeySecurity security;
-    public RemoveAccountKeyRequest withSecurity(RemoveAccountKeySecurity security) {
-        this.security = security;
+    /**
+     * UUID of the key to retrieve
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key_id")
+    public String keyId;
+    public RemoveAccountKeyRequest withKeyId(String keyId) {
+        this.keyId = keyId;
         return this;
     }
     

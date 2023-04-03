@@ -4,9 +4,7 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.DescribeDimensionKeysQueryParams;
 import org.openapis.openapi.models.operations.DescribeDimensionKeysXAmzTargetEnum;
-import org.openapis.openapi.models.operations.DescribeDimensionKeysHeaders;
 import org.openapis.openapi.models.operations.DescribeDimensionKeysRequest;
 import org.openapis.openapi.models.operations.DescribeDimensionKeysResponse;
 import org.openapis.openapi.models.shared.DescribeDimensionKeysRequest;
@@ -18,64 +16,59 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             DescribeDimensionKeysRequest req = new DescribeDimensionKeysRequest() {{
-                queryParams = new DescribeDimensionKeysQueryParams() {{
-                    maxResults = "corrupti";
-                    nextToken = "provident";
-                }};
-                headers = new DescribeDimensionKeysHeaders() {{
-                    xAmzAlgorithm = "distinctio";
-                    xAmzContentSha256 = "quibusdam";
-                    xAmzCredential = "unde";
-                    xAmzDate = "nulla";
-                    xAmzSecurityToken = "corrupti";
-                    xAmzSignature = "illum";
-                    xAmzSignedHeaders = "vel";
-                    xAmzTarget = "PerformanceInsightsv20180227.DescribeDimensionKeys";
-                }};
-                request = new DescribeDimensionKeysRequest() {{
+                describeDimensionKeysRequest = new DescribeDimensionKeysRequest() {{
                     additionalMetrics = new String[]{{
-                        add("deserunt"),
-                        add("suscipit"),
-                        add("iure"),
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
-                    endTime = "2022-02-09T12:04:06.508Z";
+                    endTime = "2021-04-14T16:47:33.722Z";
                     filter = new java.util.HashMap<String, String>() {{
-                        put("delectus", "tempora");
+                        put("illum", "vel");
+                        put("error", "deserunt");
+                        put("suscipit", "iure");
                     }};
                     groupBy = new DimensionGroup() {{
                         dimensions = new String[]{{
-                            add("molestiae"),
-                            add("minus"),
+                            add("debitis"),
+                            add("ipsa"),
                         }};
-                        group = "placeat";
-                        limit = 528895;
+                        group = "delectus";
+                        limit = 272656;
                     }};
-                    identifier = "iusto";
-                    maxResults = 568045;
-                    metric = "nisi";
-                    nextToken = "recusandae";
+                    identifier = "suscipit";
+                    maxResults = 477665;
+                    metric = "minus";
+                    nextToken = "placeat";
                     partitionBy = new DimensionGroup() {{
                         dimensions = new String[]{{
-                            add("ab"),
-                            add("quis"),
-                            add("veritatis"),
-                            add("deserunt"),
+                            add("iusto"),
+                            add("excepturi"),
+                            add("nisi"),
                         }};
-                        group = "perferendis";
-                        limit = 368241;
+                        group = "recusandae";
+                        limit = 836079;
                     }};
-                    periodInSeconds = 832620;
-                    serviceType = "DOCDB";
-                    startTime = "2022-07-31T07:34:52.790Z";
+                    periodInSeconds = 71036;
+                    serviceType = "RDS";
+                    startTime = "2022-05-09T10:00:51.349Z";
                 }};
-            }};            
+                maxResults = "perferendis";
+                nextToken = "ipsam";
+                xAmzAlgorithm = "repellendus";
+                xAmzContentSha256 = "sapiente";
+                xAmzCredential = "quo";
+                xAmzDate = "odit";
+                xAmzSecurityToken = "at";
+                xAmzSignature = "at";
+                xAmzSignedHeaders = "maiores";
+                xAmzTarget = "PerformanceInsightsv20180227.DescribeDimensionKeys";
+            }}            
 
             DescribeDimensionKeysResponse res = sdk.describeDimensionKeys(req);
 

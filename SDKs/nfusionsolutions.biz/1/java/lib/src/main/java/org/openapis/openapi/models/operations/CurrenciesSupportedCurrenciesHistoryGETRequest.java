@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CurrenciesSupportedCurrenciesHistoryGETRequest {
-    
-    public CurrenciesSupportedCurrenciesHistoryGETQueryParams queryParams;
-    public CurrenciesSupportedCurrenciesHistoryGETRequest withQueryParams(CurrenciesSupportedCurrenciesHistoryGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * to override content negotiation specify a value of json or xml
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public CurrenciesSupportedCurrenciesHistoryGETFormatEnum format;
+    public CurrenciesSupportedCurrenciesHistoryGETRequest withFormat(CurrenciesSupportedCurrenciesHistoryGETFormatEnum format) {
+        this.format = format;
         return this;
     }
     

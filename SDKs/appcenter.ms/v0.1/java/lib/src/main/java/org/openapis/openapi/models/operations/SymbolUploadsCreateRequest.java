@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SymbolUploadsCreateRequest {
-    
-    public SymbolUploadsCreatePathParams pathParams;
-    public SymbolUploadsCreateRequest withPathParams(SymbolUploadsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The symbol information
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public SymbolUploadsCreateRequestBody request;
-    public SymbolUploadsCreateRequest withRequest(SymbolUploadsCreateRequestBody request) {
-        this.request = request;
+    public SymbolUploadsCreateRequestBody requestBody;
+    public SymbolUploadsCreateRequest withRequestBody(SymbolUploadsCreateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public SymbolUploadsCreateRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public SymbolUploadsCreateSecurity security;
-    public SymbolUploadsCreateRequest withSecurity(SymbolUploadsCreateSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public SymbolUploadsCreateRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

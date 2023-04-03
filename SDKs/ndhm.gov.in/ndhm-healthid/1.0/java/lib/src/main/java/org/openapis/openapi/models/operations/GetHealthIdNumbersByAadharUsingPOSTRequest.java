@@ -7,27 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHealthIdNumbersByAadharUsingPOSTRequest {
-    
-    public GetHealthIdNumbersByAadharUsingPOSTHeaders headers;
-    public GetHealthIdNumbersByAadharUsingPOSTRequest withHeaders(GetHealthIdNumbersByAadharUsingPOSTHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * aadharNumberRequestPayload
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AadharNumberRequestPayload request;
-    public GetHealthIdNumbersByAadharUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.AadharNumberRequestPayload request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AadharNumberRequestPayload aadharNumberRequestPayload;
+    public GetHealthIdNumbersByAadharUsingPOSTRequest withAadharNumberRequestPayload(org.openapis.openapi.models.shared.AadharNumberRequestPayload aadharNumberRequestPayload) {
+        this.aadharNumberRequestPayload = aadharNumberRequestPayload;
         return this;
     }
     
-    
-    public GetHealthIdNumbersByAadharUsingPOSTSecurity security;
-    public GetHealthIdNumbersByAadharUsingPOSTRequest withSecurity(GetHealthIdNumbersByAadharUsingPOSTSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public GetHealthIdNumbersByAadharUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     

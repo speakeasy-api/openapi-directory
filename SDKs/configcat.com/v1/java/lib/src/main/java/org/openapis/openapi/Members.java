@@ -46,12 +46,12 @@ public class Members {
      */
     public org.openapis.openapi.models.operations.AddMemberToGroupResponse addMemberToGroup(org.openapis.openapi.models.operations.AddMemberToGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddMemberToGroupPathParams.class, baseUrl, "/v1/organizations/{organizationId}/members/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddMemberToGroupRequest.class, baseUrl, "/v1/organizations/{organizationId}/members/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addUserToGroupRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -86,7 +86,7 @@ public class Members {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationMemberResponse deleteOrganizationMember(org.openapis.openapi.models.operations.DeleteOrganizationMemberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationMemberPathParams.class, baseUrl, "/v1/organizations/{organizationId}/members/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationMemberRequest.class, baseUrl, "/v1/organizations/{organizationId}/members/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -121,7 +121,7 @@ public class Members {
      */
     public org.openapis.openapi.models.operations.DeleteProductMemberResponse deleteProductMember(org.openapis.openapi.models.operations.DeleteProductMemberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProductMemberPathParams.class, baseUrl, "/v1/products/{productId}/members/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProductMemberRequest.class, baseUrl, "/v1/products/{productId}/members/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -156,7 +156,7 @@ public class Members {
      */
     public org.openapis.openapi.models.operations.GetOrganizationMembersResponse getOrganizationMembers(org.openapis.openapi.models.operations.GetOrganizationMembersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationMembersPathParams.class, baseUrl, "/v1/organizations/{organizationId}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationMembersRequest.class, baseUrl, "/v1/organizations/{organizationId}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -205,7 +205,7 @@ public class Members {
      */
     public org.openapis.openapi.models.operations.GetProductMembersResponse getProductMembers(org.openapis.openapi.models.operations.GetProductMembersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductMembersPathParams.class, baseUrl, "/v1/products/{productId}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductMembersRequest.class, baseUrl, "/v1/products/{productId}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -253,12 +253,12 @@ public class Members {
      */
     public org.openapis.openapi.models.operations.InviteMemberResponse inviteMember(org.openapis.openapi.models.operations.InviteMemberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InviteMemberPathParams.class, baseUrl, "/v1/products/{productId}/members/invite", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InviteMemberRequest.class, baseUrl, "/v1/products/{productId}/members/invite", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "inviteMembersRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFulfillmentPolicyRequest {
-    
-    public DeleteFulfillmentPolicyPathParams pathParams;
-    public DeleteFulfillmentPolicyRequest withPathParams(DeleteFulfillmentPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteFulfillmentPolicySecurity security;
-    public DeleteFulfillmentPolicyRequest withSecurity(DeleteFulfillmentPolicySecurity security) {
-        this.security = security;
+    /**
+     * This path parameter specifies the ID of the fulfillment policy to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fulfillmentPolicyId")
+    public String fulfillmentPolicyId;
+    public DeleteFulfillmentPolicyRequest withFulfillmentPolicyId(String fulfillmentPolicyId) {
+        this.fulfillmentPolicyId = fulfillmentPolicyId;
         return this;
     }
     

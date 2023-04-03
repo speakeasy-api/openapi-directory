@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AvailablePaymentMethodsRequest {
+    /**
+     * Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public AvailablePaymentMethodsRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public AvailablePaymentMethodsHeaders headers;
-    public AvailablePaymentMethodsRequest withHeaders(AvailablePaymentMethodsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Media type of the body of the request.  Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public AvailablePaymentMethodsRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    
+    /**
+     * The AppKey configured by the merchant (optional configuration)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppKey")
+    public String xPROVIDERAPIAppKey;
+    public AvailablePaymentMethodsRequest withXPROVIDERAPIAppKey(String xPROVIDERAPIAppKey) {
+        this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
+        return this;
+    }
+    
+    /**
+     * The AppToken configured by the merchant (optional configuration)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppToken")
+    public String xPROVIDERAPIAppToken;
+    public AvailablePaymentMethodsRequest withXPROVIDERAPIAppToken(String xPROVIDERAPIAppToken) {
+        this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
         return this;
     }
     

@@ -4,27 +4,58 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadFileViaTokenPublicRequest {
-    
-    public DownloadFileViaTokenPublicPathParams pathParams;
-    public DownloadFileViaTokenPublicRequest withPathParams(DownloadFileViaTokenPublicPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Range 
+     * 
+     * e.g. `bytes=0-999`
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Range")
+    public String range;
+    public DownloadFileViaTokenPublicRequest withRange(String range) {
+        this.range = range;
         return this;
     }
     
-    
-    public DownloadFileViaTokenPublicQueryParams queryParams;
-    public DownloadFileViaTokenPublicRequest withQueryParams(DownloadFileViaTokenPublicQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Access key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=access_key")
+    public String accessKey;
+    public DownloadFileViaTokenPublicRequest withAccessKey(String accessKey) {
+        this.accessKey = accessKey;
         return this;
     }
     
+    /**
+     * Always return `application/octet-stream` instead of specific mimetype
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=generic_mimetype")
+    public Boolean genericMimetype;
+    public DownloadFileViaTokenPublicRequest withGenericMimetype(Boolean genericMimetype) {
+        this.genericMimetype = genericMimetype;
+        return this;
+    }
     
-    public DownloadFileViaTokenPublicHeaders headers;
-    public DownloadFileViaTokenPublicRequest withHeaders(DownloadFileViaTokenPublicHeaders headers) {
-        this.headers = headers;
+    /**
+     * Use Content-Disposition: `inline` instead of `attachment`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inline")
+    public Boolean inline;
+    public DownloadFileViaTokenPublicRequest withInline(Boolean inline) {
+        this.inline = inline;
+        return this;
+    }
+    
+    /**
+     * Download token
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
+    public String token;
+    public DownloadFileViaTokenPublicRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

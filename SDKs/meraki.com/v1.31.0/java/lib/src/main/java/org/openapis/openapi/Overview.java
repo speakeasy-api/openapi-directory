@@ -40,13 +40,13 @@ public class Overview {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewResponse getDeviceCameraAnalyticsOverview(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewPathParams.class, baseUrl, "/devices/{serial}/camera/analytics/overview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewRequest.class, baseUrl, "/devices/{serial}/camera/analytics/overview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -86,13 +86,13 @@ public class Overview {
      */
     public org.openapis.openapi.models.operations.GetNetworkClientsOverviewResponse getNetworkClientsOverview(org.openapis.openapi.models.operations.GetNetworkClientsOverviewRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientsOverviewPathParams.class, baseUrl, "/networks/{networkId}/clients/overview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientsOverviewRequest.class, baseUrl, "/networks/{networkId}/clients/overview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkClientsOverviewQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkClientsOverviewRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -132,7 +132,7 @@ public class Overview {
      */
     public org.openapis.openapi.models.operations.GetNetworkSensorAlertsCurrentOverviewByMetricResponse getNetworkSensorAlertsCurrentOverviewByMetric(org.openapis.openapi.models.operations.GetNetworkSensorAlertsCurrentOverviewByMetricRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSensorAlertsCurrentOverviewByMetricPathParams.class, baseUrl, "/networks/{networkId}/sensor/alerts/current/overview/byMetric", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSensorAlertsCurrentOverviewByMetricRequest.class, baseUrl, "/networks/{networkId}/sensor/alerts/current/overview/byMetric", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -172,13 +172,13 @@ public class Overview {
      */
     public org.openapis.openapi.models.operations.GetNetworkSensorAlertsOverviewByMetricResponse getNetworkSensorAlertsOverviewByMetric(org.openapis.openapi.models.operations.GetNetworkSensorAlertsOverviewByMetricRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSensorAlertsOverviewByMetricPathParams.class, baseUrl, "/networks/{networkId}/sensor/alerts/overview/byMetric", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSensorAlertsOverviewByMetricRequest.class, baseUrl, "/networks/{networkId}/sensor/alerts/overview/byMetric", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSensorAlertsOverviewByMetricQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSensorAlertsOverviewByMetricRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -218,7 +218,7 @@ public class Overview {
      */
     public org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyOverviewResponse getOrganizationAdaptivePolicyOverview(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyOverviewRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyOverviewPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/overview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyOverviewRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/overview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -258,13 +258,13 @@ public class Overview {
      */
     public org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewResponse getOrganizationApiRequestsOverview(org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewPathParams.class, baseUrl, "/organizations/{organizationId}/apiRequests/overview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewRequest.class, baseUrl, "/organizations/{organizationId}/apiRequests/overview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -304,13 +304,13 @@ public class Overview {
      */
     public org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewResponseCodesByIntervalResponse getOrganizationApiRequestsOverviewResponseCodesByInterval(org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewResponseCodesByIntervalRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewResponseCodesByIntervalPathParams.class, baseUrl, "/organizations/{organizationId}/apiRequests/overview/responseCodes/byInterval", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewResponseCodesByIntervalRequest.class, baseUrl, "/organizations/{organizationId}/apiRequests/overview/responseCodes/byInterval", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewResponseCodesByIntervalQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationApiRequestsOverviewResponseCodesByIntervalRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -350,13 +350,13 @@ public class Overview {
      */
     public org.openapis.openapi.models.operations.GetOrganizationClientsOverviewResponse getOrganizationClientsOverview(org.openapis.openapi.models.operations.GetOrganizationClientsOverviewRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationClientsOverviewPathParams.class, baseUrl, "/organizations/{organizationId}/clients/overview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationClientsOverviewRequest.class, baseUrl, "/organizations/{organizationId}/clients/overview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationClientsOverviewQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationClientsOverviewRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -396,13 +396,13 @@ public class Overview {
      */
     public org.openapis.openapi.models.operations.GetOrganizationDevicesStatusesOverviewResponse getOrganizationDevicesStatusesOverview(org.openapis.openapi.models.operations.GetOrganizationDevicesStatusesOverviewRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesStatusesOverviewPathParams.class, baseUrl, "/organizations/{organizationId}/devices/statuses/overview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesStatusesOverviewRequest.class, baseUrl, "/organizations/{organizationId}/devices/statuses/overview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesStatusesOverviewQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesStatusesOverviewRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -442,7 +442,7 @@ public class Overview {
      */
     public org.openapis.openapi.models.operations.GetOrganizationLicensesOverviewResponse getOrganizationLicensesOverview(org.openapis.openapi.models.operations.GetOrganizationLicensesOverviewRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLicensesOverviewPathParams.class, baseUrl, "/organizations/{organizationId}/licenses/overview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLicensesOverviewRequest.class, baseUrl, "/organizations/{organizationId}/licenses/overview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

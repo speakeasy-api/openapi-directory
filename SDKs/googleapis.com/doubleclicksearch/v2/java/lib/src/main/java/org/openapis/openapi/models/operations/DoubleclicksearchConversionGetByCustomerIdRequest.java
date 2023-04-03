@@ -4,27 +4,236 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DoubleclicksearchConversionGetByCustomerIdRequest {
-    
-    public DoubleclicksearchConversionGetByCustomerIdPathParams pathParams;
-    public DoubleclicksearchConversionGetByCustomerIdRequest withPathParams(DoubleclicksearchConversionGetByCustomerIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public DoubleclicksearchConversionGetByCustomerIdQueryParams queryParams;
-    public DoubleclicksearchConversionGetByCustomerIdRequest withQueryParams(DoubleclicksearchConversionGetByCustomerIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Numeric ID of the ad group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=adGroupId")
+    public String adGroupId;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withAdGroupId(String adGroupId) {
+        this.adGroupId = adGroupId;
+        return this;
+    }
     
-    public DoubleclicksearchConversionGetByCustomerIdSecurity security;
-    public DoubleclicksearchConversionGetByCustomerIdRequest withSecurity(DoubleclicksearchConversionGetByCustomerIdSecurity security) {
-        this.security = security;
+    /**
+     * Numeric ID of the ad.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=adId")
+    public String adId;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withAdId(String adId) {
+        this.adId = adId;
+        return this;
+    }
+    
+    /**
+     * Numeric ID of the advertiser.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=advertiserId")
+    public String advertiserId;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withAdvertiserId(String advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+    }
+    
+    /**
+     * Numeric ID of the agency.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=agencyId")
+    public String agencyId;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withAgencyId(String agencyId) {
+        this.agencyId = agencyId;
+        return this;
+    }
+    
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Numeric ID of the campaign.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaignId")
+    public String campaignId;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
+        return this;
+    }
+    
+    /**
+     * Numeric ID of the criterion.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=criterionId")
+    public String criterionId;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withCriterionId(String criterionId) {
+        this.criterionId = criterionId;
+        return this;
+    }
+    
+    /**
+     * Customer ID of a client account in the new Search Ads 360 experience.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
+    public String customerId;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withCustomerId(String customerId) {
+        this.customerId = customerId;
+        return this;
+    }
+    
+    /**
+     * Last date (inclusive) on which to retrieve conversions. Format is yyyymmdd.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public Long endDate;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withEndDate(Long endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * Numeric ID of the engine account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=engineAccountId")
+    public String engineAccountId;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withEngineAccountId(String engineAccountId) {
+        this.engineAccountId = engineAccountId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The number of conversions to return per call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rowCount")
+    public Long rowCount;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withRowCount(Long rowCount) {
+        this.rowCount = rowCount;
+        return this;
+    }
+    
+    /**
+     * First date (inclusive) on which to retrieve conversions. Format is yyyymmdd.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public Long startDate;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withStartDate(Long startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * The 0-based starting index for retrieving conversions results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startRow")
+    public Long startRow;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withStartRow(Long startRow) {
+        this.startRow = startRow;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DoubleclicksearchConversionGetByCustomerIdRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

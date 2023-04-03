@@ -4,20 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LabResultsListRequest {
-    
-    public LabResultsListQueryParams queryParams;
-    public LabResultsListRequest withQueryParams(LabResultsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public LabResultsListRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public LabResultsListRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
     
-    public LabResultsListSecurity security;
-    public LabResultsListRequest withSecurity(LabResultsListSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public Long order;
+    public LabResultsListRequest withOrder(Long order) {
+        this.order = order;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public LabResultsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

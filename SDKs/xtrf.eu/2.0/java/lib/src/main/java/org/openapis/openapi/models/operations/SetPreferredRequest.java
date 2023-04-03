@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetPreferredRequest {
-    
-    public SetPreferredPathParams pathParams;
-    public SetPreferredRequest withPathParams(SetPreferredPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Marked report as preferred or not.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PreferredRequestDTO request;
-    public SetPreferredRequest withRequest(org.openapis.openapi.models.shared.PreferredRequestDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PreferredRequestDTO preferredRequestDTO;
+    public SetPreferredRequest withPreferredRequestDTO(org.openapis.openapi.models.shared.PreferredRequestDTO preferredRequestDTO) {
+        this.preferredRequestDTO = preferredRequestDTO;
+        return this;
+    }
+    
+    /**
+     * report's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reportId")
+    public Long reportId;
+    public SetPreferredRequest withReportId(Long reportId) {
+        this.reportId = reportId;
         return this;
     }
     

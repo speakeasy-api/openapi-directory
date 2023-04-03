@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSetupV1ResourcesIdUploadimageRequest {
-    
-    public PostSetupV1ResourcesIdUploadimagePathParams pathParams;
-    public PostSetupV1ResourcesIdUploadimageRequest withPathParams(PostSetupV1ResourcesIdUploadimagePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Input model for image upload
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ResourceImageInputModel request;
-    public PostSetupV1ResourcesIdUploadimageRequest withRequest(org.openapis.openapi.models.shared.ResourceImageInputModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ResourceImageInputModel resourceImageInputModel;
+    public PostSetupV1ResourcesIdUploadimageRequest withResourceImageInputModel(org.openapis.openapi.models.shared.ResourceImageInputModel resourceImageInputModel) {
+        this.resourceImageInputModel = resourceImageInputModel;
+        return this;
+    }
+    
+    /**
+     * id of resource object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSetupV1ResourcesIdUploadimageRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

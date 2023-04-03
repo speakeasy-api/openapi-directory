@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTranslationCacheRequest {
-    
-    public GetTranslationCachePathParams pathParams;
-    public GetTranslationCacheRequest withPathParams(GetTranslationCachePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Flatten cache results and ignore document keys
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=flatten")
+    public Boolean flatten;
+    public GetTranslationCacheRequest withFlatten(Boolean flatten) {
+        this.flatten = flatten;
         return this;
     }
     
-    
-    public GetTranslationCacheQueryParams queryParams;
-    public GetTranslationCacheRequest withQueryParams(GetTranslationCacheQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public GetTranslationCacheRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

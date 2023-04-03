@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductCatalogRequest {
-    
-    public ProductCatalogPathParams pathParams;
-    public ProductCatalogRequest withPathParams(ProductCatalogPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ProductCatalogSecurity security;
-    public ProductCatalogRequest withSecurity(ProductCatalogSecurity security) {
-        this.security = security;
+    /**
+     * two letter country code in upper case
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country")
+    public String country;
+    public ProductCatalogRequest withCountry(String country) {
+        this.country = country;
         return this;
     }
     

@@ -40,7 +40,7 @@ public class PasswordReset {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCheckResponse postCheck(org.openapis.openapi.models.operations.PostCheckRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCheckResponse postCheck(org.openapis.openapi.models.operations.PostCheckRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/check/");
         
@@ -92,7 +92,7 @@ public class PasswordReset {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostResetResponse postReset(org.openapis.openapi.models.operations.PostResetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostResetResponse postReset(org.openapis.openapi.models.operations.PostResetRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/reset/");
         
@@ -144,7 +144,7 @@ public class PasswordReset {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSetpasswordResponse postSetpassword(org.openapis.openapi.models.operations.PostSetpasswordRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSetpasswordResponse postSetpassword(org.openapis.openapi.models.operations.PostSetpasswordRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setpassword/");
         

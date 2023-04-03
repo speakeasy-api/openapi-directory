@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates a new RuntimeConfig resource. The configuration name must be unique within project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreateResponse runtimeconfigProjectsConfigsCreate(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreateResponse runtimeconfigProjectsConfigsCreate(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreateRequest request, org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/configs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreateRequest.class, baseUrl, "/v1beta1/{parent}/configs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "runtimeConfig", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsGetIamPolicyResponse runtimeconfigProjectsConfigsGetIamPolicy(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsGetIamPolicyResponse runtimeconfigProjectsConfigsGetIamPolicy(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsGetIamPolicyRequest request, org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsGetIamPolicyPathParams.class, baseUrl, "/v1beta1/{resource}:getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsGetIamPolicyRequest.class, baseUrl, "/v1beta1/{resource}:getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Projects {
     /**
      * Lists all the RuntimeConfig resources within project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsListResponse runtimeconfigProjectsConfigsList(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsListResponse runtimeconfigProjectsConfigsList(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsListRequest request, org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsListPathParams.class, baseUrl, "/v1beta1/{parent}/configs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsListRequest.class, baseUrl, "/v1beta1/{parent}/configs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,27 +175,28 @@ public class Projects {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsSetIamPolicyResponse runtimeconfigProjectsConfigsSetIamPolicy(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsSetIamPolicyResponse runtimeconfigProjectsConfigsSetIamPolicy(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsSetIamPolicyRequest request, org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsSetIamPolicyPathParams.class, baseUrl, "/v1beta1/{resource}:setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsSetIamPolicyRequest.class, baseUrl, "/v1beta1/{resource}:setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,27 +223,28 @@ public class Projects {
     /**
      * Creates a variable within the given configuration. You cannot create a variable with a name that is a prefix of an existing variable name, or a name that has an existing variable name as a prefix. To learn more about creating a variable, read the [Setting and Getting Data](/deployment-manager/runtime-configurator/set-and-get-variables) documentation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesCreateResponse runtimeconfigProjectsConfigsVariablesCreate(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesCreateResponse runtimeconfigProjectsConfigsVariablesCreate(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesCreateRequest request, org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesCreatePathParams.class, baseUrl, "/v1beta1/{parent}/variables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesCreateRequest.class, baseUrl, "/v1beta1/{parent}/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "variable", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,25 +271,26 @@ public class Projects {
     /**
      * Lists variables within given a configuration, matching any provided filters. This only lists variable names, not the values, unless `return_values` is true, in which case only variables that user has IAM permission to GetVariable will be returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesListResponse runtimeconfigProjectsConfigsVariablesList(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesListResponse runtimeconfigProjectsConfigsVariablesList(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesListRequest request, org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesListPathParams.class, baseUrl, "/v1beta1/{parent}/variables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesListRequest.class, baseUrl, "/v1beta1/{parent}/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,27 +317,28 @@ public class Projects {
     /**
      * Updates an existing variable with a new value.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesUpdateResponse runtimeconfigProjectsConfigsVariablesUpdate(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesUpdateResponse runtimeconfigProjectsConfigsVariablesUpdate(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesUpdateRequest request, org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesUpdatePathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesUpdateRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "variable", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,27 +365,28 @@ public class Projects {
     /**
      * Watches a specific variable and waits for a change in the variable's value. When there is a change, this method returns the new value or times out. If a variable is deleted while being watched, the `variableState` state is set to `DELETED` and the method returns the last known variable `value`. If you set the deadline for watching to a larger value than internal timeout (60 seconds), the current variable value is returned and the `variableState` will be `VARIABLE_STATE_UNSPECIFIED`. To learn more about creating a watcher, read the [Watching a Variable for Changes](/deployment-manager/runtime-configurator/watching-a-variable) documentation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesWatchResponse runtimeconfigProjectsConfigsVariablesWatch(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesWatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesWatchResponse runtimeconfigProjectsConfigsVariablesWatch(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesWatchRequest request, org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesWatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesWatchPathParams.class, baseUrl, "/v1beta1/{name}:watch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesWatchRequest.class, baseUrl, "/v1beta1/{name}:watch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "watchVariableRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesWatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsVariablesWatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -405,27 +413,28 @@ public class Projects {
     /**
      * Creates a Waiter resource. This operation returns a long-running Operation resource which can be polled for completion. However, a waiter with the given name will exist (and can be retrieved) prior to the operation completing. If the operation fails, the failed Waiter resource will still exist and must be deleted prior to subsequent creation attempts.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersCreateResponse runtimeconfigProjectsConfigsWaitersCreate(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersCreateResponse runtimeconfigProjectsConfigsWaitersCreate(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersCreateRequest request, org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersCreatePathParams.class, baseUrl, "/v1beta1/{parent}/waiters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersCreateRequest.class, baseUrl, "/v1beta1/{parent}/waiters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "waiter", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -452,25 +461,26 @@ public class Projects {
     /**
      * Deletes the waiter with the specified name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersDeleteResponse runtimeconfigProjectsConfigsWaitersDelete(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersDeleteResponse runtimeconfigProjectsConfigsWaitersDelete(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersDeleteRequest request, org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersDeletePathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersDeleteRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,25 +507,26 @@ public class Projects {
     /**
      * Gets information about a single waiter.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersGetResponse runtimeconfigProjectsConfigsWaitersGet(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersGetResponse runtimeconfigProjectsConfigsWaitersGet(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersGetRequest request, org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersGetPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersGetRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -542,25 +553,26 @@ public class Projects {
     /**
      * List waiters within the given configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersListResponse runtimeconfigProjectsConfigsWaitersList(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersListResponse runtimeconfigProjectsConfigsWaitersList(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersListRequest request, org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersListPathParams.class, baseUrl, "/v1beta1/{parent}/waiters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersListRequest.class, baseUrl, "/v1beta1/{parent}/waiters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -587,27 +599,28 @@ public class Projects {
     /**
      * Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersTestIamPermissionsResponse runtimeconfigProjectsConfigsWaitersTestIamPermissions(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersTestIamPermissionsResponse runtimeconfigProjectsConfigsWaitersTestIamPermissions(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest request, org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersTestIamPermissionsPathParams.class, baseUrl, "/v1beta1/{resource}:testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest.class, baseUrl, "/v1beta1/{resource}:testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testIamPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePhoneNumberRequest {
-    
-    public DeletePhoneNumberPathParams pathParams;
-    public DeletePhoneNumberRequest withPathParams(DeletePhoneNumberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the PhoneNumber resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeletePhoneNumberRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public DeletePhoneNumberSecurity security;
-    public DeletePhoneNumberRequest withSecurity(DeletePhoneNumberSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeletePhoneNumberRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the PhoneNumber resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeletePhoneNumberRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

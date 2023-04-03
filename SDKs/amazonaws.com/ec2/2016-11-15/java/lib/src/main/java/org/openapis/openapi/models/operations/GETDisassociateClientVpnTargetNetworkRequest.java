@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDisassociateClientVpnTargetNetworkRequest {
-    
-    public GETDisassociateClientVpnTargetNetworkQueryParams queryParams;
-    public GETDisassociateClientVpnTargetNetworkRequest withQueryParams(GETDisassociateClientVpnTargetNetworkQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDisassociateClientVpnTargetNetworkActionEnum action;
+    public GETDisassociateClientVpnTargetNetworkRequest withAction(GETDisassociateClientVpnTargetNetworkActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The ID of the target network association.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AssociationId")
+    public String associationId;
+    public GETDisassociateClientVpnTargetNetworkRequest withAssociationId(String associationId) {
+        this.associationId = associationId;
+        return this;
+    }
     
-    public GETDisassociateClientVpnTargetNetworkHeaders headers;
-    public GETDisassociateClientVpnTargetNetworkRequest withHeaders(GETDisassociateClientVpnTargetNetworkHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the Client VPN endpoint from which to disassociate the target network.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientVpnEndpointId")
+    public String clientVpnEndpointId;
+    public GETDisassociateClientVpnTargetNetworkRequest withClientVpnEndpointId(String clientVpnEndpointId) {
+        this.clientVpnEndpointId = clientVpnEndpointId;
+        return this;
+    }
+    
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETDisassociateClientVpnTargetNetworkRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDisassociateClientVpnTargetNetworkVersionEnum version;
+    public GETDisassociateClientVpnTargetNetworkRequest withVersion(GETDisassociateClientVpnTargetNetworkVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDisassociateClientVpnTargetNetworkRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDisassociateClientVpnTargetNetworkRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDisassociateClientVpnTargetNetworkRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDisassociateClientVpnTargetNetworkRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDisassociateClientVpnTargetNetworkRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDisassociateClientVpnTargetNetworkRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDisassociateClientVpnTargetNetworkRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

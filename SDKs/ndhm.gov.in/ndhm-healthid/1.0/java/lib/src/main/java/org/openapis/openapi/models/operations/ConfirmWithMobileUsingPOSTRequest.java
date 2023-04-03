@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfirmWithMobileUsingPOSTRequest {
-    
-    public ConfirmWithMobileUsingPOSTHeaders headers;
-    public ConfirmWithMobileUsingPOSTRequest withHeaders(ConfirmWithMobileUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public ConfirmWithMobileUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class ConfirmWithMobileUsingPOSTRequest {
      * authenticationRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AuthAccountMobileOTPRequest request;
-    public ConfirmWithMobileUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.AuthAccountMobileOTPRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public ConfirmWithMobileUsingPOSTSecurity security;
-    public ConfirmWithMobileUsingPOSTRequest withSecurity(ConfirmWithMobileUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.AuthAccountMobileOTPRequest authAccountMobileOTPRequest;
+    public ConfirmWithMobileUsingPOSTRequest withAuthAccountMobileOTPRequest(org.openapis.openapi.models.shared.AuthAccountMobileOTPRequest authAccountMobileOTPRequest) {
+        this.authAccountMobileOTPRequest = authAccountMobileOTPRequest;
         return this;
     }
     

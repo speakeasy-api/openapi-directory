@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodeScanningListRecentAnalysesRequest {
-    
-    public CodeScanningListRecentAnalysesPathParams pathParams;
-    public CodeScanningListRecentAnalysesRequest withPathParams(CodeScanningListRecentAnalysesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public CodeScanningListRecentAnalysesRequest withOwner(String owner) {
+        this.owner = owner;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public CodeScanningListRecentAnalysesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public CodeScanningListRecentAnalysesQueryParams queryParams;
-    public CodeScanningListRecentAnalysesRequest withQueryParams(CodeScanningListRecentAnalysesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public CodeScanningListRecentAnalysesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The Git reference for the analyses you want to list. The `ref` for a branch can be formatted either as `refs/heads/&lt;branch name&gt;` or simply `&lt;branch name&gt;`. To reference a pull request use `refs/pull/&lt;number&gt;/merge`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
+    public String ref;
+    public CodeScanningListRecentAnalysesRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public CodeScanningListRecentAnalysesRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * Filter analyses belonging to the same SARIF upload.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sarif_id")
+    public String sarifId;
+    public CodeScanningListRecentAnalysesRequest withSarifId(String sarifId) {
+        this.sarifId = sarifId;
+        return this;
+    }
+    
+    /**
+     * The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tool_guid")
+    public String toolGuid;
+    public CodeScanningListRecentAnalysesRequest withToolGuid(String toolGuid) {
+        this.toolGuid = toolGuid;
+        return this;
+    }
+    
+    /**
+     * The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tool_name")
+    public String toolName;
+    public CodeScanningListRecentAnalysesRequest withToolName(String toolName) {
+        this.toolName = toolName;
         return this;
     }
     

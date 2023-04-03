@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsSetWorkflowAccessToRepositoryRequest {
-    
-    public ActionsSetWorkflowAccessToRepositoryPathParams pathParams;
-    public ActionsSetWorkflowAccessToRepositoryRequest withPathParams(ActionsSetWorkflowAccessToRepositoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ActionsWorkflowAccessToRepository actionsWorkflowAccessToRepository;
+    public ActionsSetWorkflowAccessToRepositoryRequest withActionsWorkflowAccessToRepository(org.openapis.openapi.models.shared.ActionsWorkflowAccessToRepository actionsWorkflowAccessToRepository) {
+        this.actionsWorkflowAccessToRepository = actionsWorkflowAccessToRepository;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ActionsWorkflowAccessToRepository request;
-    public ActionsSetWorkflowAccessToRepositoryRequest withRequest(org.openapis.openapi.models.shared.ActionsWorkflowAccessToRepository request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsSetWorkflowAccessToRepositoryRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsSetWorkflowAccessToRepositoryRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

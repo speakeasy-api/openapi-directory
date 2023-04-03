@@ -34,19 +34,20 @@ public class UsersPictures {
     /**
      * Add a user picture
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreatePictureResponse createPicture(org.openapis.openapi.models.operations.CreatePictureRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreatePictureResponse createPicture(org.openapis.openapi.models.operations.CreatePictureRequest request, org.openapis.openapi.models.operations.CreatePictureSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePicturePathParams.class, baseUrl, "/users/{user_id}/pictures", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePictureRequest.class, baseUrl, "/users/{user_id}/pictures", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -72,11 +73,10 @@ public class UsersPictures {
 
     /**
      * Add a user picture
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreatePictureAlt1Response createPictureAlt1(org.openapis.openapi.models.operations.CreatePictureAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.CreatePictureAlt1Response createPictureAlt1() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/pictures");
         
@@ -85,7 +85,7 @@ public class UsersPictures {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -112,19 +112,20 @@ public class UsersPictures {
     /**
      * Delete a user picture
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeletePictureResponse deletePicture(org.openapis.openapi.models.operations.DeletePictureRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeletePictureResponse deletePicture(org.openapis.openapi.models.operations.DeletePictureRequest request, org.openapis.openapi.models.operations.DeletePictureSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePicturePathParams.class, baseUrl, "/users/{user_id}/pictures/{portraitset_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePictureRequest.class, baseUrl, "/users/{user_id}/pictures/{portraitset_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -145,19 +146,20 @@ public class UsersPictures {
     /**
      * Delete a user picture
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeletePictureAlt1Response deletePictureAlt1(org.openapis.openapi.models.operations.DeletePictureAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.DeletePictureAlt1Response deletePictureAlt1(org.openapis.openapi.models.operations.DeletePictureAlt1Request request, org.openapis.openapi.models.operations.DeletePictureAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePictureAlt1PathParams.class, baseUrl, "/me/pictures/{portraitset_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePictureAlt1Request.class, baseUrl, "/me/pictures/{portraitset_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -178,21 +180,22 @@ public class UsersPictures {
     /**
      * Edit a user picture
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EditPictureResponse editPicture(org.openapis.openapi.models.operations.EditPictureRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EditPictureResponse editPicture(org.openapis.openapi.models.operations.EditPictureRequest request, org.openapis.openapi.models.operations.EditPictureSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditPicturePathParams.class, baseUrl, "/users/{user_id}/pictures/{portraitset_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditPictureRequest.class, baseUrl, "/users/{user_id}/pictures/{portraitset_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,21 +222,22 @@ public class UsersPictures {
     /**
      * Edit a user picture
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EditPictureAlt1Response editPictureAlt1(org.openapis.openapi.models.operations.EditPictureAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.EditPictureAlt1Response editPictureAlt1(org.openapis.openapi.models.operations.EditPictureAlt1Request request, org.openapis.openapi.models.operations.EditPictureAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditPictureAlt1PathParams.class, baseUrl, "/me/pictures/{portraitset_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditPictureAlt1Request.class, baseUrl, "/me/pictures/{portraitset_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -265,7 +269,7 @@ public class UsersPictures {
      */
     public org.openapis.openapi.models.operations.GetPictureResponse getPicture(org.openapis.openapi.models.operations.GetPictureRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPicturePathParams.class, baseUrl, "/users/{user_id}/pictures/{portraitset_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPictureRequest.class, baseUrl, "/users/{user_id}/pictures/{portraitset_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -304,7 +308,7 @@ public class UsersPictures {
      */
     public org.openapis.openapi.models.operations.GetPictureAlt1Response getPictureAlt1(org.openapis.openapi.models.operations.GetPictureAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPictureAlt1PathParams.class, baseUrl, "/me/pictures/{portraitset_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPictureAlt1Request.class, baseUrl, "/me/pictures/{portraitset_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -343,13 +347,13 @@ public class UsersPictures {
      */
     public org.openapis.openapi.models.operations.GetPicturesResponse getPictures(org.openapis.openapi.models.operations.GetPicturesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPicturesPathParams.class, baseUrl, "/users/{user_id}/pictures", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPicturesRequest.class, baseUrl, "/users/{user_id}/pictures", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPicturesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPicturesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -394,7 +398,7 @@ public class UsersPictures {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPicturesAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPicturesAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

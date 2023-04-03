@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SessionsIdViewsPostRequest {
-    
-    public SessionsIdViewsPostPathParams pathParams;
-    public SessionsIdViewsPostRequest withPathParams(SessionsIdViewsPostPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Collaborator user id and permission type
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public SessionsIdViewsPostRequiredParametersToCreateAView request;
-    public SessionsIdViewsPostRequest withRequest(SessionsIdViewsPostRequiredParametersToCreateAView request) {
-        this.request = request;
+    public SessionsIdViewsPostRequiredParametersToCreateAView requestBody;
+    public SessionsIdViewsPostRequest withRequestBody(SessionsIdViewsPostRequiredParametersToCreateAView requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The primary key for a view session
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=session_id")
+    public String sessionId;
+    public SessionsIdViewsPostRequest withSessionId(String sessionId) {
+        this.sessionId = sessionId;
         return this;
     }
     

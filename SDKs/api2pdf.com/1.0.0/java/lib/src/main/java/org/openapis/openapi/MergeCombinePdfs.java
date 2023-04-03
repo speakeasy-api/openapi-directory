@@ -39,7 +39,7 @@ public class MergeCombinePdfs {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MergePostResponse mergePost(org.openapis.openapi.models.operations.MergePostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MergePostResponse mergePost(org.openapis.openapi.models.shared.MergeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/merge");
         

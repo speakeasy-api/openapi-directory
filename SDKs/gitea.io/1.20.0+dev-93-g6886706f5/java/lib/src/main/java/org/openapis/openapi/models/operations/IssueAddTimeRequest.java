@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueAddTimeRequest {
-    
-    public IssueAddTimePathParams pathParams;
-    public IssueAddTimeRequest withPathParams(IssueAddTimePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AddTimeOption addTimeOption;
+    public IssueAddTimeRequest withAddTimeOption(org.openapis.openapi.models.shared.AddTimeOption addTimeOption) {
+        this.addTimeOption = addTimeOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AddTimeOption request;
-    public IssueAddTimeRequest withRequest(org.openapis.openapi.models.shared.AddTimeOption request) {
-        this.request = request;
+    /**
+     * index of the issue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public IssueAddTimeRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueAddTimeRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueAddTimeRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

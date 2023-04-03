@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSIPTrunkRequest {
+    /**
+     * Unique identifier of the sub account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public DeleteSIPTrunkRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public DeleteSIPTrunkPathParams pathParams;
-    public DeleteSIPTrunkRequest withPathParams(DeleteSIPTrunkPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the SIP Trunk that was previously assigned to a sub account. To retrieve the value of this field, use the List SIP Trunks API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=trunkId")
+    public String trunkId;
+    public DeleteSIPTrunkRequest withTrunkId(String trunkId) {
+        this.trunkId = trunkId;
         return this;
     }
     

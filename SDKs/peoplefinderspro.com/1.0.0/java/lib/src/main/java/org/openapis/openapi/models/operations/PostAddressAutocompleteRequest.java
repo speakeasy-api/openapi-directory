@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAddressAutocompleteRequest {
-    
-    public PostAddressAutocompleteHeaders headers;
-    public PostAddressAutocompleteRequest withHeaders(PostAddressAutocompleteHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostAddressAutocompleteRequestBody requestBody;
+    public PostAddressAutocompleteRequest withRequestBody(PostAddressAutocompleteRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostAddressAutocompleteRequestBody request;
-    public PostAddressAutocompleteRequest withRequest(PostAddressAutocompleteRequestBody request) {
-        this.request = request;
+    /**
+     * e.g. Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=galaxy-ap-name")
+    public String galaxyApName;
+    public PostAddressAutocompleteRequest withGalaxyApName(String galaxyApName) {
+        this.galaxyApName = galaxyApName;
+        return this;
+    }
+    
+    /**
+     * e.g. Secret
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=galaxy-ap-password")
+    public String galaxyApPassword;
+    public PostAddressAutocompleteRequest withGalaxyApPassword(String galaxyApPassword) {
+        this.galaxyApPassword = galaxyApPassword;
+        return this;
+    }
+    
+    /**
+     * e.g. DevAPIAddressAutoComplete
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=galaxy-search-type")
+    public String galaxySearchType;
+    public PostAddressAutocompleteRequest withGalaxySearchType(String galaxySearchType) {
+        this.galaxySearchType = galaxySearchType;
         return this;
     }
     

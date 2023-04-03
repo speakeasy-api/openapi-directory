@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetArtifactVersionRequest {
-    
-    public GetArtifactVersionPathParams pathParams;
-    public GetArtifactVersionRequest withPathParams(GetArtifactVersionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public GetArtifactVersionRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
         return this;
     }
     
+    /**
+     * Allows the user to specify if the content should be dereferenced when being returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dereference")
+    public Boolean dereference;
+    public GetArtifactVersionRequest withDereference(Boolean dereference) {
+        this.dereference = dereference;
+        return this;
+    }
     
-    public GetArtifactVersionQueryParams queryParams;
-    public GetArtifactVersionRequest withQueryParams(GetArtifactVersionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public GetArtifactVersionRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of a specific version of the artifact content.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public GetArtifactVersionRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

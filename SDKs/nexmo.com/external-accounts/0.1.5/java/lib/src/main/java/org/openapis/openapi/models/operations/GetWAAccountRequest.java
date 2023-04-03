@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWAAccountRequest {
-    
-    public GetWAAccountPathParams pathParams;
-    public GetWAAccountRequest withPathParams(GetWAAccountPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetWAAccountSecurity security;
-    public GetWAAccountRequest withSecurity(GetWAAccountSecurity security) {
-        this.security = security;
+    /**
+     * External id of the account you want to retrieve. In this case it will be the WhatsApp number.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=external_id")
+    public String externalId;
+    public GetWAAccountRequest withExternalId(String externalId) {
+        this.externalId = externalId;
         return this;
     }
     

@@ -124,7 +124,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApplyYaraRulesResponse applyYaraRules(org.openapis.openapi.models.operations.ApplyYaraRulesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApplyYaraRulesResponse applyYaraRules(org.openapis.openapi.models.operations.ApplyYaraRulesRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/apply-yara-rules");
         
@@ -204,7 +204,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EmulationOutputResponse emulationOutput(org.openapis.openapi.models.operations.EmulationOutputRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EmulationOutputResponse emulationOutput(org.openapis.openapi.models.operations.EmulationOutputRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/emulation-output");
         
@@ -246,7 +246,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GeneratePartialYaraRuleResponse generatePartialYaraRule(org.openapis.openapi.models.operations.GeneratePartialYaraRuleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GeneratePartialYaraRuleResponse generatePartialYaraRule(org.openapis.openapi.models.operations.GeneratePartialYaraRuleRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/generate-partial-yara-rules");
         
@@ -288,7 +288,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnpackResponse unpack(org.openapis.openapi.models.operations.UnpackRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnpackResponse unpack(org.openapis.openapi.models.operations.UnpackRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/unpack");
         

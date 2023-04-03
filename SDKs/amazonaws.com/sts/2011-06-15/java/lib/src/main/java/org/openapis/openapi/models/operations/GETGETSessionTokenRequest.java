@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETSessionTokenRequest {
-    
-    public GETGETSessionTokenQueryParams queryParams;
-    public GETGETSessionTokenRequest withQueryParams(GETGETSessionTokenQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETSessionTokenActionEnum action;
+    public GETGETSessionTokenRequest withAction(GETGETSessionTokenActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The duration, in seconds, that the credentials should remain valid. Acceptable durations for IAM user sessions range from 900 seconds (15 minutes) to 129,600 seconds (36 hours), with 43,200 seconds (12 hours) as the default. Sessions for Amazon Web Services account owners are restricted to a maximum of 3,600 seconds (one hour). If the duration is longer than one hour, the session for Amazon Web Services account owners defaults to one hour.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DurationSeconds")
+    public Long durationSeconds;
+    public GETGETSessionTokenRequest withDurationSeconds(Long durationSeconds) {
+        this.durationSeconds = durationSeconds;
+        return this;
+    }
     
-    public GETGETSessionTokenHeaders headers;
-    public GETGETSessionTokenRequest withHeaders(GETGETSessionTokenHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The identification number of the MFA device that is associated with the IAM user who is making the &lt;code&gt;GetSessionToken&lt;/code&gt; call. Specify this value if the IAM user has a policy that requires MFA authentication. The value is either the serial number for a hardware device (such as &lt;code&gt;GAHT12345678&lt;/code&gt;) or an Amazon Resource Name (ARN) for a virtual device (such as &lt;code&gt;arn:aws:iam::123456789012:mfa/user&lt;/code&gt;). You can find the device for an IAM user by going to the Amazon Web Services Management Console and viewing the user's security credentials. &lt;/p&gt; &lt;p&gt;The regex used to validate this parameter is a string of characters consisting of upper- and lower-case alphanumeric characters with no spaces. You can also include underscores or any of the following characters: =,.@:/-&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SerialNumber")
+    public String serialNumber;
+    public GETGETSessionTokenRequest withSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The value provided by the MFA device, if MFA is required. If any policy requires the IAM user to submit an MFA code, specify this value. If MFA authentication is required, the user must provide a code when requesting a set of temporary security credentials. A user who fails to provide the code receives an "access denied" response when requesting resources that require MFA authentication.&lt;/p&gt; &lt;p&gt;The format for this parameter, as described by its regex pattern, is a sequence of six numeric digits.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TokenCode")
+    public String tokenCode;
+    public GETGETSessionTokenRequest withTokenCode(String tokenCode) {
+        this.tokenCode = tokenCode;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETSessionTokenVersionEnum version;
+    public GETGETSessionTokenRequest withVersion(GETGETSessionTokenVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGETSessionTokenRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGETSessionTokenRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGETSessionTokenRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGETSessionTokenRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGETSessionTokenRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGETSessionTokenRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGETSessionTokenRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

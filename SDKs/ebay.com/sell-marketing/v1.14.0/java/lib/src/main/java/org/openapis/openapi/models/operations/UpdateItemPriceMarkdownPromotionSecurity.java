@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateItemPriceMarkdownPromotionSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeAPIAuth apiAuth;
-    public UpdateItemPriceMarkdownPromotionSecurity withApiAuth(org.openapis.openapi.models.shared.SchemeAPIAuth apiAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String apiAuth;
+    public UpdateItemPriceMarkdownPromotionSecurity withApiAuth(String apiAuth) {
         this.apiAuth = apiAuth;
         return this;
     }

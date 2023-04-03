@@ -7,13 +7,6 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostFloatingIpsIdActionsChangeDnsPtrRequest {
-    
-    public PostFloatingIpsIdActionsChangeDnsPtrPathParams pathParams;
-    public PostFloatingIpsIdActionsChangeDnsPtrRequest withPathParams(PostFloatingIpsIdActionsChangeDnsPtrPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Select the IP address for which to change the DNS entry by passing `ip`. For a Floating IP of type `ipv4` this must exactly match the IP address of the Floating IP. For a Floating IP of type `ipv6` this must be a single IP within the IPv6 /64 range that belongs to this Floating IP.
      * 
@@ -21,9 +14,19 @@ public class PostFloatingIpsIdActionsChangeDnsPtrRequest {
      * 
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostFloatingIpsIdActionsChangeDnsPtrChangeDNSPTRRequest request;
-    public PostFloatingIpsIdActionsChangeDnsPtrRequest withRequest(PostFloatingIpsIdActionsChangeDnsPtrChangeDNSPTRRequest request) {
-        this.request = request;
+    public PostFloatingIpsIdActionsChangeDnsPtrChangeDNSPTRRequest requestBody;
+    public PostFloatingIpsIdActionsChangeDnsPtrRequest withRequestBody(PostFloatingIpsIdActionsChangeDnsPtrChangeDNSPTRRequest requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID of the Floating IP
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostFloatingIpsIdActionsChangeDnsPtrRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

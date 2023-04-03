@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveWirelessLANRequest {
-    
-    public RemoveWirelessLANPathParams pathParams;
-    public RemoveWirelessLANRequest withPathParams(RemoveWirelessLANPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RemoveWirelessLANSecurity security;
-    public RemoveWirelessLANRequest withSecurity(RemoveWirelessLANSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the wireless LAN to remove
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=wireless_id")
+    public String wirelessId;
+    public RemoveWirelessLANRequest withWirelessId(String wirelessId) {
+        this.wirelessId = wirelessId;
         return this;
     }
     

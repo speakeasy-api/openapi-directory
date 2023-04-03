@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListBYOCSIPTrunkRequest {
-    
-    public ListBYOCSIPTrunkQueryParams queryParams;
-    public ListBYOCSIPTrunkRequest withQueryParams(ListBYOCSIPTrunkQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public ListBYOCSIPTrunkRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
         return this;
     }
     
-    
-    public ListBYOCSIPTrunkSecurity security;
-    public ListBYOCSIPTrunkRequest withSecurity(ListBYOCSIPTrunkSecurity security) {
-        this.security = security;
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public ListBYOCSIPTrunkRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

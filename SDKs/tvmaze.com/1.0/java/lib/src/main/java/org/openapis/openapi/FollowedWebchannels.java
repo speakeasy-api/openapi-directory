@@ -38,7 +38,7 @@ public class FollowedWebchannels {
      */
     public org.openapis.openapi.models.operations.DeleteUserFollowsWebchannelsWebchannelIdResponse deleteUserFollowsWebchannelsWebchannelId(org.openapis.openapi.models.operations.DeleteUserFollowsWebchannelsWebchannelIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserFollowsWebchannelsWebchannelIdPathParams.class, baseUrl, "/user/follows/webchannels/{webchannel_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserFollowsWebchannelsWebchannelIdRequest.class, baseUrl, "/user/follows/webchannels/{webchannel_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -77,7 +77,7 @@ public class FollowedWebchannels {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserFollowsWebchannelsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserFollowsWebchannelsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -116,7 +116,7 @@ public class FollowedWebchannels {
      */
     public org.openapis.openapi.models.operations.GetUserFollowsWebchannelsWebchannelIdResponse getUserFollowsWebchannelsWebchannelId(org.openapis.openapi.models.operations.GetUserFollowsWebchannelsWebchannelIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserFollowsWebchannelsWebchannelIdPathParams.class, baseUrl, "/user/follows/webchannels/{webchannel_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserFollowsWebchannelsWebchannelIdRequest.class, baseUrl, "/user/follows/webchannels/{webchannel_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -157,7 +157,7 @@ public class FollowedWebchannels {
      */
     public org.openapis.openapi.models.operations.PutUserFollowsWebchannelsWebchannelIdResponse putUserFollowsWebchannelsWebchannelId(org.openapis.openapi.models.operations.PutUserFollowsWebchannelsWebchannelIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUserFollowsWebchannelsWebchannelIdPathParams.class, baseUrl, "/user/follows/webchannels/{webchannel_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUserFollowsWebchannelsWebchannelIdRequest.class, baseUrl, "/user/follows/webchannels/{webchannel_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

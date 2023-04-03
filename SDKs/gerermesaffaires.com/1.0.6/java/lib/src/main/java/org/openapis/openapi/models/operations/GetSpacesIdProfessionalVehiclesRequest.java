@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesIdProfessionalVehiclesRequest {
-    
-    public GetSpacesIdProfessionalVehiclesPathParams pathParams;
-    public GetSpacesIdProfessionalVehiclesRequest withPathParams(GetSpacesIdProfessionalVehiclesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * designation of the vehicle
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Designation")
+    public String designation;
+    public GetSpacesIdProfessionalVehiclesRequest withDesignation(String designation) {
+        this.designation = designation;
         return this;
     }
     
-    
-    public GetSpacesIdProfessionalVehiclesQueryParams queryParams;
-    public GetSpacesIdProfessionalVehiclesRequest withQueryParams(GetSpacesIdProfessionalVehiclesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesIdProfessionalVehiclesRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

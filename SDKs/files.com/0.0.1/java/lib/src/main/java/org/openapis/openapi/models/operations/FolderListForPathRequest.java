@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FolderListForPathRequest {
-    
-    public FolderListForPathPathParams pathParams;
-    public FolderListForPathRequest withPathParams(FolderListForPathPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Send cursor to resume an existing list from the point at which you left off.  Get a cursor from an existing list via the X-Files-Cursor-Next header or the X-Files-Cursor-Prev header.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public FolderListForPathRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * If specified, will filter folders/files list by this string.  Wildcards of `*` and `?` are acceptable here.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public FolderListForPathRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public FolderListForPathQueryParams queryParams;
-    public FolderListForPathRequest withQueryParams(FolderListForPathQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Path to operate on.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public FolderListForPathRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    
+    /**
+     * Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public FolderListForPathRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Request a preview size.  Can be `small` (default), `large`, `xlarge`, or `pdf`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=preview_size")
+    public String previewSize;
+    public FolderListForPathRequest withPreviewSize(String previewSize) {
+        this.previewSize = previewSize;
+        return this;
+    }
+    
+    /**
+     * If `search_all` is `true`, provide the search string here.  Otherwise, this parameter acts like an alias of `filter`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public FolderListForPathRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * Search entire site?  If set, we will ignore the folder path provided and search the entire site.  This is the same API used by the search bar in the UI.  Search results are a best effort, not real time, and not guaranteed to match every file.  This field should only be used for ad-hoc (human) searching, and not as part of an automated process.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_all")
+    public Boolean searchAll;
+    public FolderListForPathRequest withSearchAll(Boolean searchAll) {
+        this.searchAll = searchAll;
+        return this;
+    }
+    
+    /**
+     * Include file previews?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with_previews")
+    public Boolean withPreviews;
+    public FolderListForPathRequest withWithPreviews(Boolean withPreviews) {
+        this.withPreviews = withPreviews;
+        return this;
+    }
+    
+    /**
+     * Include file priority color information?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with_priority_color")
+    public Boolean withPriorityColor;
+    public FolderListForPathRequest withWithPriorityColor(Boolean withPriorityColor) {
+        this.withPriorityColor = withPriorityColor;
         return this;
     }
     

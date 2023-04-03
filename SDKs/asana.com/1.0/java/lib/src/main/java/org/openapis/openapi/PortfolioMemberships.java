@@ -42,13 +42,13 @@ public class PortfolioMemberships {
      */
     public org.openapis.openapi.models.operations.GetPortfolioMembershipResponse getPortfolioMembership(org.openapis.openapi.models.operations.GetPortfolioMembershipRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortfolioMembershipPathParams.class, baseUrl, "/portfolio_memberships/{portfolio_membership_gid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortfolioMembershipRequest.class, baseUrl, "/portfolio_memberships/{portfolio_membership_gid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPortfolioMembershipQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPortfolioMembershipRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -102,7 +102,7 @@ public class PortfolioMemberships {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPortfolioMembershipsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPortfolioMembershipsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -150,13 +150,13 @@ public class PortfolioMemberships {
      */
     public org.openapis.openapi.models.operations.GetPortfolioMembershipsForPortfolioResponse getPortfolioMembershipsForPortfolio(org.openapis.openapi.models.operations.GetPortfolioMembershipsForPortfolioRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortfolioMembershipsForPortfolioPathParams.class, baseUrl, "/portfolios/{portfolio_gid}/portfolio_memberships", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortfolioMembershipsForPortfolioRequest.class, baseUrl, "/portfolios/{portfolio_gid}/portfolio_memberships", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPortfolioMembershipsForPortfolioQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPortfolioMembershipsForPortfolioRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

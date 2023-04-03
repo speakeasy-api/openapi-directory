@@ -65,7 +65,7 @@ public class Console {
 
     public org.openapis.openapi.models.operations.GetBundleInfoResponse getBundleInfo(org.openapis.openapi.models.operations.GetBundleInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBundleInfoPathParams.class, baseUrl, "/system/console/bundles/{name}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBundleInfoRequest.class, baseUrl, "/system/console/bundles/{name}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -139,13 +139,13 @@ public class Console {
 
     public org.openapis.openapi.models.operations.PostBundleResponse postBundle(org.openapis.openapi.models.operations.PostBundleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostBundlePathParams.class, baseUrl, "/system/console/bundles/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostBundleRequest.class, baseUrl, "/system/console/bundles/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostBundleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostBundleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -172,7 +172,7 @@ public class Console {
 
     public org.openapis.openapi.models.operations.PostJmxRepositoryResponse postJmxRepository(org.openapis.openapi.models.operations.PostJmxRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostJmxRepositoryPathParams.class, baseUrl, "/system/console/jmx/com.adobe.granite:type=Repository/op/{action}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostJmxRepositoryRequest.class, baseUrl, "/system/console/jmx/com.adobe.granite:type=Repository/op/{action}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -205,7 +205,7 @@ public class Console {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostSamlConfigurationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostSamlConfigurationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

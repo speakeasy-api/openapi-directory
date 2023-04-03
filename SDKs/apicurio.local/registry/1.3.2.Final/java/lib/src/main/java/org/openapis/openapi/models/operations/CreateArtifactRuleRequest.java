@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateArtifactRuleRequest {
-    
-    public CreateArtifactRulePathParams pathParams;
-    public CreateArtifactRuleRequest withPathParams(CreateArtifactRulePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Rule rule;
+    public CreateArtifactRuleRequest withRule(org.openapis.openapi.models.shared.Rule rule) {
+        this.rule = rule;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Rule request;
-    public CreateArtifactRuleRequest withRequest(org.openapis.openapi.models.shared.Rule request) {
-        this.request = request;
+    /**
+     * The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public CreateArtifactRuleRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
         return this;
     }
     

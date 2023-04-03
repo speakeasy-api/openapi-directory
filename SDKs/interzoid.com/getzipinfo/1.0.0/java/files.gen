@@ -30,7 +30,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetzipcodeinfoQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetzipcodeinfoRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Getzipcodeinfo200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetzipcodeinfoResponse.java

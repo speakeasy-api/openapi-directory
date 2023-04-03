@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetOrdersOrderStatusEnum;
-import org.openapis.openapi.models.operations.GetOrdersQueryParams;
 import org.openapis.openapi.models.operations.GetOrdersRequest;
 import org.openapis.openapi.models.operations.GetOrdersResponse;
 
@@ -29,12 +28,10 @@ public class Application {
                 .build();
 
             GetOrdersRequest req = new GetOrdersRequest() {{
-                queryParams = new GetOrdersQueryParams() {{
-                    limit = "corrupti";
-                    offset = "provident";
-                    orderStatus = "Completed";
-                }};
-            }};            
+                limit = "corrupti";
+                offset = "provident";
+                orderStatus = "Completed";
+            }}            
 
             GetOrdersResponse res = sdk.getOrders(req);
 
@@ -48,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

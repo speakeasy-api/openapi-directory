@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETScriptVersionsUsingGETRequest {
-    
-    public GETScriptVersionsUsingGETPathParams pathParams;
-    public GETScriptVersionsUsingGETRequest withPathParams(GETScriptVersionsUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public GETScriptVersionsUsingGETRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * page
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
+    public Integer page;
+    public GETScriptVersionsUsingGETRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public GETScriptVersionsUsingGETQueryParams queryParams;
-    public GETScriptVersionsUsingGETRequest withQueryParams(GETScriptVersionsUsingGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * pageSize
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GETScriptVersionsUsingGETRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

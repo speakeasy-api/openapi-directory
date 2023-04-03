@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTierRequest {
-    
-    public DeleteTierPathParams pathParams;
-    public DeleteTierRequest withPathParams(DeleteTierPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteTierRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public DeleteTierSecurity security;
-    public DeleteTierRequest withSecurity(DeleteTierSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tier-id")
+    public String tierId;
+    public DeleteTierRequest withTierId(String tierId) {
+        this.tierId = tierId;
         return this;
     }
     

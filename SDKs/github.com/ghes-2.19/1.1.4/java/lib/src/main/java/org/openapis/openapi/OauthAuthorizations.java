@@ -47,7 +47,7 @@ public class OauthAuthorizations {
      */
     public org.openapis.openapi.models.operations.OauthAuthorizationsCheckAuthorizationResponse oauthAuthorizationsCheckAuthorization(org.openapis.openapi.models.operations.OauthAuthorizationsCheckAuthorizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsCheckAuthorizationPathParams.class, baseUrl, "/applications/{client_id}/tokens/{access_token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsCheckAuthorizationRequest.class, baseUrl, "/applications/{client_id}/tokens/{access_token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -95,7 +95,7 @@ public class OauthAuthorizations {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OauthAuthorizationsCreateAuthorizationResponse oauthAuthorizationsCreateAuthorization(org.openapis.openapi.models.operations.OauthAuthorizationsCreateAuthorizationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OauthAuthorizationsCreateAuthorizationResponse oauthAuthorizationsCreateAuthorization(org.openapis.openapi.models.operations.OauthAuthorizationsCreateAuthorizationRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/authorizations");
         
@@ -159,7 +159,7 @@ public class OauthAuthorizations {
      */
     public org.openapis.openapi.models.operations.OauthAuthorizationsDeleteAuthorizationResponse oauthAuthorizationsDeleteAuthorization(org.openapis.openapi.models.operations.OauthAuthorizationsDeleteAuthorizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsDeleteAuthorizationPathParams.class, baseUrl, "/authorizations/{authorization_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsDeleteAuthorizationRequest.class, baseUrl, "/authorizations/{authorization_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -203,7 +203,7 @@ public class OauthAuthorizations {
      */
     public org.openapis.openapi.models.operations.OauthAuthorizationsDeleteGrantResponse oauthAuthorizationsDeleteGrant(org.openapis.openapi.models.operations.OauthAuthorizationsDeleteGrantRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsDeleteGrantPathParams.class, baseUrl, "/applications/grants/{grant_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsDeleteGrantRequest.class, baseUrl, "/applications/grants/{grant_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -245,7 +245,7 @@ public class OauthAuthorizations {
      */
     public org.openapis.openapi.models.operations.OauthAuthorizationsGetAuthorizationResponse oauthAuthorizationsGetAuthorization(org.openapis.openapi.models.operations.OauthAuthorizationsGetAuthorizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsGetAuthorizationPathParams.class, baseUrl, "/authorizations/{authorization_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsGetAuthorizationRequest.class, baseUrl, "/authorizations/{authorization_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -295,7 +295,7 @@ public class OauthAuthorizations {
      */
     public org.openapis.openapi.models.operations.OauthAuthorizationsGetGrantResponse oauthAuthorizationsGetGrant(org.openapis.openapi.models.operations.OauthAuthorizationsGetGrantRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsGetGrantPathParams.class, baseUrl, "/applications/grants/{grant_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsGetGrantRequest.class, baseUrl, "/applications/grants/{grant_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -353,12 +353,12 @@ public class OauthAuthorizations {
      */
     public org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppResponse oauthAuthorizationsGetOrCreateAuthorizationForApp(org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppPathParams.class, baseUrl, "/authorizations/clients/{client_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppRequest.class, baseUrl, "/authorizations/clients/{client_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -424,12 +424,12 @@ public class OauthAuthorizations {
      */
     public org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintResponse oauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprint(org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintPathParams.class, baseUrl, "/authorizations/clients/{client_id}/{fingerprint}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest.class, baseUrl, "/authorizations/clients/{client_id}/{fingerprint}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -485,7 +485,7 @@ public class OauthAuthorizations {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OauthAuthorizationsListAuthorizationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OauthAuthorizationsListAuthorizationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -545,7 +545,7 @@ public class OauthAuthorizations {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OauthAuthorizationsListGrantsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OauthAuthorizationsListGrantsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -597,7 +597,7 @@ public class OauthAuthorizations {
      */
     public org.openapis.openapi.models.operations.OauthAuthorizationsResetAuthorizationResponse oauthAuthorizationsResetAuthorization(org.openapis.openapi.models.operations.OauthAuthorizationsResetAuthorizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsResetAuthorizationPathParams.class, baseUrl, "/applications/{client_id}/tokens/{access_token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsResetAuthorizationRequest.class, baseUrl, "/applications/{client_id}/tokens/{access_token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -637,7 +637,7 @@ public class OauthAuthorizations {
      */
     public org.openapis.openapi.models.operations.OauthAuthorizationsRevokeAuthorizationForApplicationResponse oauthAuthorizationsRevokeAuthorizationForApplication(org.openapis.openapi.models.operations.OauthAuthorizationsRevokeAuthorizationForApplicationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsRevokeAuthorizationForApplicationPathParams.class, baseUrl, "/applications/{client_id}/tokens/{access_token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsRevokeAuthorizationForApplicationRequest.class, baseUrl, "/applications/{client_id}/tokens/{access_token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -673,7 +673,7 @@ public class OauthAuthorizations {
      */
     public org.openapis.openapi.models.operations.OauthAuthorizationsRevokeGrantForApplicationResponse oauthAuthorizationsRevokeGrantForApplication(org.openapis.openapi.models.operations.OauthAuthorizationsRevokeGrantForApplicationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsRevokeGrantForApplicationPathParams.class, baseUrl, "/applications/{client_id}/grants/{access_token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsRevokeGrantForApplicationRequest.class, baseUrl, "/applications/{client_id}/grants/{access_token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -711,12 +711,12 @@ public class OauthAuthorizations {
      */
     public org.openapis.openapi.models.operations.OauthAuthorizationsUpdateAuthorizationResponse oauthAuthorizationsUpdateAuthorization(org.openapis.openapi.models.operations.OauthAuthorizationsUpdateAuthorizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsUpdateAuthorizationPathParams.class, baseUrl, "/authorizations/{authorization_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OauthAuthorizationsUpdateAuthorizationRequest.class, baseUrl, "/authorizations/{authorization_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

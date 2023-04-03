@@ -37,7 +37,7 @@ public class Token {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JWTObtainResponse jwtObtain(org.openapis.openapi.models.operations.JWTObtainRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JWTObtainResponse jwtObtain(org.openapis.openapi.models.shared.JWTObtainPairRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/token/new/");
         
@@ -97,7 +97,7 @@ public class Token {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JWTRefreshResponse jwtRefresh(org.openapis.openapi.models.operations.JWTRefreshRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JWTRefreshResponse jwtRefresh(org.openapis.openapi.models.shared.JWTRefreshRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/token/refresh/");
         

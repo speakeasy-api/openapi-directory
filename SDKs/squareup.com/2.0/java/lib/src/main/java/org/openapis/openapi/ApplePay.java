@@ -42,10 +42,11 @@ public class ApplePay {
      * To learn more about Web Apple Pay, see
      * [Add the Apple Pay on the Web Button](https://developer.squareup.com/docs/payment-form/add-digital-wallets/apple-pay).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RegisterDomainResponse registerDomain(org.openapis.openapi.models.operations.RegisterDomainRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RegisterDomainResponse registerDomain(org.openapis.openapi.models.shared.RegisterDomainRequest request, org.openapis.openapi.models.operations.RegisterDomainSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/apple-pay/domains");
         
@@ -59,7 +60,7 @@ public class ApplePay {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

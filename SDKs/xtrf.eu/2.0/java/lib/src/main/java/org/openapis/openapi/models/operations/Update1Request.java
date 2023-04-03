@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Update1Request {
-    
-    public Update1PathParams pathParams;
-    public Update1Request withPathParams(Update1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated existing person.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CustomerPersonDTO request;
-    public Update1Request withRequest(org.openapis.openapi.models.shared.CustomerPersonDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CustomerPersonDTO customerPersonDTO;
+    public Update1Request withCustomerPersonDTO(org.openapis.openapi.models.shared.CustomerPersonDTO customerPersonDTO) {
+        this.customerPersonDTO = customerPersonDTO;
+        return this;
+    }
+    
+    /**
+     * person's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=personId")
+    public Long personId;
+    public Update1Request withPersonId(Long personId) {
+        this.personId = personId;
         return this;
     }
     

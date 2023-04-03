@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ZebraGETSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public org.openapis.openapi.models.shared.SchemeQueryAPIKey queryApiKey;
-    public ZebraGETSecurity withQueryApiKey(org.openapis.openapi.models.shared.SchemeQueryAPIKey queryApiKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=apikey")
+    public String queryApiKey;
+    public ZebraGETSecurity withQueryApiKey(String queryApiKey) {
         this.queryApiKey = queryApiKey;
         return this;
     }

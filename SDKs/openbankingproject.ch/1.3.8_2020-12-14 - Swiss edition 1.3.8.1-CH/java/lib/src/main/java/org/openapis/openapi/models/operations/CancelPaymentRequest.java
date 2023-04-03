@@ -4,27 +4,285 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelPaymentRequest {
-    
-    public CancelPaymentPathParams pathParams;
-    public CancelPaymentRequest withPathParams(CancelPaymentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Is contained if and only if the "Signature" element is contained in the header of the request.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Digest")
+    public String digest;
+    public CancelPaymentRequest withDigest(String digest) {
+        this.digest = digest;
         return this;
     }
     
-    
-    public CancelPaymentHeaders headers;
-    public CancelPaymentRequest withHeaders(CancelPaymentHeaders headers) {
-        this.headers = headers;
+    /**
+     * The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept")
+    public String psuAccept;
+    public CancelPaymentRequest withPSUAccept(String psuAccept) {
+        this.psuAccept = psuAccept;
         return this;
     }
     
+    /**
+     * The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Charset")
+    public String psuAcceptCharset;
+    public CancelPaymentRequest withPSUAcceptCharset(String psuAcceptCharset) {
+        this.psuAcceptCharset = psuAcceptCharset;
+        return this;
+    }
     
-    public CancelPaymentSecurity security;
-    public CancelPaymentRequest withSecurity(CancelPaymentSecurity security) {
-        this.security = security;
+    /**
+     * The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Encoding")
+    public String psuAcceptEncoding;
+    public CancelPaymentRequest withPSUAcceptEncoding(String psuAcceptEncoding) {
+        this.psuAcceptEncoding = psuAcceptEncoding;
+        return this;
+    }
+    
+    /**
+     * The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Language")
+    public String psuAcceptLanguage;
+    public CancelPaymentRequest withPSUAcceptLanguage(String psuAcceptLanguage) {
+        this.psuAcceptLanguage = psuAcceptLanguage;
+        return this;
+    }
+    
+    /**
+     * UUID (Universally Unique Identifier) for a device, which is used by the PSU, if available.
+     * UUID identifies either a device or a device dependant application installation.
+     * In case of an installation identification this ID needs to be unaltered until removal from device.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Device-ID")
+    public String psuDeviceID;
+    public CancelPaymentRequest withPSUDeviceID(String psuDeviceID) {
+        this.psuDeviceID = psuDeviceID;
+        return this;
+    }
+    
+    /**
+     * The forwarded Geo Location of the corresponding http request between PSU and TPP if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Geo-Location")
+    public String psuGeoLocation;
+    public CancelPaymentRequest withPSUGeoLocation(String psuGeoLocation) {
+        this.psuGeoLocation = psuGeoLocation;
+        return this;
+    }
+    
+    /**
+     * HTTP method used at the PSU ? TPP interface, if available.
+     * Valid values are:
+     * * GET
+     * * POST
+     * * PUT
+     * * PATCH
+     * * DELETE
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Http-Method")
+    public org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod;
+    public CancelPaymentRequest withPSUHttpMethod(org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod) {
+        this.psuHttpMethod = psuHttpMethod;
+        return this;
+    }
+    
+    /**
+     * The forwarded IP Address header field consists of the corresponding http request IP Address field between PSU and TPP.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Address")
+    public String psuIPAddress;
+    public CancelPaymentRequest withPSUIPAddress(String psuIPAddress) {
+        this.psuIPAddress = psuIPAddress;
+        return this;
+    }
+    
+    /**
+     * The forwarded IP Port header field consists of the corresponding HTTP request IP Port field between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Port")
+    public String psuIPPort;
+    public CancelPaymentRequest withPSUIPPort(String psuIPPort) {
+        this.psuIPPort = psuIPPort;
+        return this;
+    }
+    
+    /**
+     * The forwarded Agent header field of the HTTP request between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-User-Agent")
+    public String psuUserAgent;
+    public CancelPaymentRequest withPSUUserAgent(String psuUserAgent) {
+        this.psuUserAgent = psuUserAgent;
+        return this;
+    }
+    
+    /**
+     * A signature of the request by the TPP on application level. This might be mandated by ASPSP.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Signature")
+    public String signature;
+    public CancelPaymentRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * If it equals "true", the TPP prefers to start the authorisation process separately,
+     * e.g. because of the usage of a signing basket.
+     * This preference might be ignored by the ASPSP, if a signing basket is not supported as functionality.
+     * 
+     * If it equals "false" or if the parameter is not used, there is no preference of the TPP.
+     * This especially indicates that the TPP assumes a direct authorisation of the transaction in the next step,
+     * without using a signing basket.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Explicit-Authorisation-Preferred")
+    public Boolean tppExplicitAuthorisationPreferred;
+    public CancelPaymentRequest withTPPExplicitAuthorisationPreferred(Boolean tppExplicitAuthorisationPreferred) {
+        this.tppExplicitAuthorisationPreferred = tppExplicitAuthorisationPreferred;
+        return this;
+    }
+    
+    /**
+     * If this URI is contained, the TPP is asking to redirect the transaction flow to this address instead of the TPP-Redirect-URI in case
+     * of a negative result of the redirect SCA method. This might be ignored by the ASPSP.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Nok-Redirect-URI")
+    public String tppNokRedirectURI;
+    public CancelPaymentRequest withTPPNokRedirectURI(String tppNokRedirectURI) {
+        this.tppNokRedirectURI = tppNokRedirectURI;
+        return this;
+    }
+    
+    /**
+     * If it equals "true", the TPP prefers a redirect over an embedded SCA approach.
+     * If it equals "false", the TPP prefers not to be redirected for SCA. The ASPSP will then choose between the Embedded or the Decoupled
+     * SCA approach, depending on the choice of the SCA procedure by the TPP/PSU.
+     * If the parameter is not used, the ASPSP will choose the SCA approach to be applied depending on the SCA method chosen by the
+     * TPP/PSU.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Redirect-Preferred")
+    public Boolean tppRedirectPreferred;
+    public CancelPaymentRequest withTPPRedirectPreferred(Boolean tppRedirectPreferred) {
+        this.tppRedirectPreferred = tppRedirectPreferred;
+        return this;
+    }
+    
+    /**
+     * URI of the TPP, where the transaction flow shall be redirected to after a Redirect.
+     * 
+     * Mandated for the Redirect SCA Approach, specifically
+     * when TPP-Redirect-Preferred equals "true".
+     * It is recommended to always use this header field.
+     * 
+     * **Remark for Future:**
+     * This field might be changed to mandatory in the next version of the specification.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Redirect-URI")
+    public String tppRedirectURI;
+    public CancelPaymentRequest withTPPRedirectURI(String tppRedirectURI) {
+        this.tppRedirectURI = tppRedirectURI;
+        return this;
+    }
+    
+    /**
+     * The certificate used for signing the request, in base64 encoding.
+     * Must be contained if a signature is contained.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Signature-Certificate")
+    public String tppSignatureCertificate;
+    public CancelPaymentRequest withTPPSignatureCertificate(String tppSignatureCertificate) {
+        this.tppSignatureCertificate = tppSignatureCertificate;
+        return this;
+    }
+    
+    /**
+     * ID of the request, unique to the call, as determined by the initiating party.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
+    public String xRequestID;
+    public CancelPaymentRequest withXRequestID(String xRequestID) {
+        this.xRequestID = xRequestID;
+        return this;
+    }
+    
+    /**
+     * The addressed payment product endpoint, e.g. for SEPA Credit Transfers (SCT).
+     * The ASPSP will publish which of the payment products/endpoints will be supported.
+     * 
+     * The following payment products are supported:
+     *   - domestic-swiss-credit-transfers-isr
+     *   - domestic-swiss-credit-transfers
+     *   - domestic-swiss-credit-transfers-qr
+     *   - domestic-swiss-foreign-credit-transfers
+     *   - swiss-sepa-credit-transfers
+     *   - swiss-cross-border-credit-transfers
+     *   - pain.001-sepa-credit-transfers
+     *   - pain.001-cross-border-credit-transfers
+     *   - pain.001-swiss-six-credit-transfers
+     * 
+     * **Remark:** For all SEPA Credit Transfer based endpoints which accept XML encoding,
+     * the XML pain.001 schemes provided by EPC are supported by the ASPSP as a minimum for the body content.
+     * Further XML schemes might be supported by some communities.
+     * 
+     * **Remark:** For cross-border and TARGET-2 payments only community wide pain.001 schemes do exist.
+     * There are plenty of country specificic scheme variants.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment-product")
+    public org.openapis.openapi.models.shared.PaymentProductEnum paymentProduct;
+    public CancelPaymentRequest withPaymentProduct(org.openapis.openapi.models.shared.PaymentProductEnum paymentProduct) {
+        this.paymentProduct = paymentProduct;
+        return this;
+    }
+    
+    /**
+     * Payment service:
+     * 
+     * Possible values are:
+     * * payments
+     * * bulk-payments
+     * * periodic-payments
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment-service")
+    public org.openapis.openapi.models.shared.PaymentServiceEnum paymentService;
+    public CancelPaymentRequest withPaymentService(org.openapis.openapi.models.shared.PaymentServiceEnum paymentService) {
+        this.paymentService = paymentService;
+        return this;
+    }
+    
+    /**
+     * Resource identification of the generated payment initiation resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentId")
+    public String paymentId;
+    public CancelPaymentRequest withPaymentId(String paymentId) {
+        this.paymentId = paymentId;
         return this;
     }
     

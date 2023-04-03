@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaskStatusesUpdateRequest {
-    
-    public TaskStatusesUpdatePathParams pathParams;
-    public TaskStatusesUpdateRequest withPathParams(TaskStatusesUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public TaskStatusesUpdateRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public TaskStatusesUpdateQueryParams queryParams;
-    public TaskStatusesUpdateRequest withQueryParams(TaskStatusesUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public TaskStatusesUpdateSecurity security;
-    public TaskStatusesUpdateRequest withSecurity(TaskStatusesUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public TaskStatusesUpdateRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

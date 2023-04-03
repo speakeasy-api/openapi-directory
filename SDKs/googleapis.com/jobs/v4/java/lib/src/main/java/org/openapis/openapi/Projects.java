@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Report events issued when end user interacts with customer's application that uses Cloud Talent Solution. You may inspect the created events in [self service tools](https://console.cloud.google.com/talent-solution/overview). [Learn more](https://cloud.google.com/talent-solution/docs/management-tools) about self service tools.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JobsProjectsTenantsClientEventsCreateResponse jobsProjectsTenantsClientEventsCreate(org.openapis.openapi.models.operations.JobsProjectsTenantsClientEventsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JobsProjectsTenantsClientEventsCreateResponse jobsProjectsTenantsClientEventsCreate(org.openapis.openapi.models.operations.JobsProjectsTenantsClientEventsCreateRequest request, org.openapis.openapi.models.operations.JobsProjectsTenantsClientEventsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsClientEventsCreatePathParams.class, baseUrl, "/v4/{parent}/clientEvents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsClientEventsCreateRequest.class, baseUrl, "/v4/{parent}/clientEvents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "clientEvent", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsClientEventsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsClientEventsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Projects {
     /**
      * Creates a new company entity.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JobsProjectsTenantsCompaniesCreateResponse jobsProjectsTenantsCompaniesCreate(org.openapis.openapi.models.operations.JobsProjectsTenantsCompaniesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JobsProjectsTenantsCompaniesCreateResponse jobsProjectsTenantsCompaniesCreate(org.openapis.openapi.models.operations.JobsProjectsTenantsCompaniesCreateRequest request, org.openapis.openapi.models.operations.JobsProjectsTenantsCompaniesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsCompaniesCreatePathParams.class, baseUrl, "/v4/{parent}/companies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsCompaniesCreateRequest.class, baseUrl, "/v4/{parent}/companies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "companyInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsCompaniesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsCompaniesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,25 +131,26 @@ public class Projects {
     /**
      * Lists all companies associated with the project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JobsProjectsTenantsCompaniesListResponse jobsProjectsTenantsCompaniesList(org.openapis.openapi.models.operations.JobsProjectsTenantsCompaniesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JobsProjectsTenantsCompaniesListResponse jobsProjectsTenantsCompaniesList(org.openapis.openapi.models.operations.JobsProjectsTenantsCompaniesListRequest request, org.openapis.openapi.models.operations.JobsProjectsTenantsCompaniesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsCompaniesListPathParams.class, baseUrl, "/v4/{parent}/companies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsCompaniesListRequest.class, baseUrl, "/v4/{parent}/companies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsCompaniesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsCompaniesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Projects {
     /**
      * Completes the specified prefix with keyword suggestions. Intended for use by a job search auto-complete search box.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JobsProjectsTenantsCompleteQueryResponse jobsProjectsTenantsCompleteQuery(org.openapis.openapi.models.operations.JobsProjectsTenantsCompleteQueryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JobsProjectsTenantsCompleteQueryResponse jobsProjectsTenantsCompleteQuery(org.openapis.openapi.models.operations.JobsProjectsTenantsCompleteQueryRequest request, org.openapis.openapi.models.operations.JobsProjectsTenantsCompleteQuerySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsCompleteQueryPathParams.class, baseUrl, "/v4/{tenant}:completeQuery", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsCompleteQueryRequest.class, baseUrl, "/v4/{tenant}:completeQuery", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsCompleteQueryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsCompleteQueryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,27 +223,28 @@ public class Projects {
     /**
      * Creates a new tenant entity.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JobsProjectsTenantsCreateResponse jobsProjectsTenantsCreate(org.openapis.openapi.models.operations.JobsProjectsTenantsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JobsProjectsTenantsCreateResponse jobsProjectsTenantsCreate(org.openapis.openapi.models.operations.JobsProjectsTenantsCreateRequest request, org.openapis.openapi.models.operations.JobsProjectsTenantsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsCreatePathParams.class, baseUrl, "/v4/{parent}/tenants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsCreateRequest.class, baseUrl, "/v4/{parent}/tenants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "tenant", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,27 +271,28 @@ public class Projects {
     /**
      * Begins executing a batch create jobs operation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchCreateResponse jobsProjectsTenantsJobsBatchCreate(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchCreateResponse jobsProjectsTenantsJobsBatchCreate(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchCreateRequest request, org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchCreatePathParams.class, baseUrl, "/v4/{parent}/jobs:batchCreate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchCreateRequest.class, baseUrl, "/v4/{parent}/jobs:batchCreate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchCreateJobsRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -313,27 +319,28 @@ public class Projects {
     /**
      * Begins executing a batch delete jobs operation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchDeleteResponse jobsProjectsTenantsJobsBatchDelete(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchDeleteResponse jobsProjectsTenantsJobsBatchDelete(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchDeleteRequest request, org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchDeletePathParams.class, baseUrl, "/v4/{parent}/jobs:batchDelete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchDeleteRequest.class, baseUrl, "/v4/{parent}/jobs:batchDelete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchDeleteJobsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -360,27 +367,28 @@ public class Projects {
     /**
      * Begins executing a batch update jobs operation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchUpdateResponse jobsProjectsTenantsJobsBatchUpdate(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchUpdateResponse jobsProjectsTenantsJobsBatchUpdate(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchUpdateRequest request, org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchUpdatePathParams.class, baseUrl, "/v4/{parent}/jobs:batchUpdate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchUpdateRequest.class, baseUrl, "/v4/{parent}/jobs:batchUpdate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchUpdateJobsRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsBatchUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -407,27 +415,28 @@ public class Projects {
     /**
      * Creates a new job. Typically, the job becomes searchable within 10 seconds, but it may take up to 5 minutes.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JobsProjectsTenantsJobsCreateResponse jobsProjectsTenantsJobsCreate(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JobsProjectsTenantsJobsCreateResponse jobsProjectsTenantsJobsCreate(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsCreateRequest request, org.openapis.openapi.models.operations.JobsProjectsTenantsJobsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsCreatePathParams.class, baseUrl, "/v4/{parent}/jobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsCreateRequest.class, baseUrl, "/v4/{parent}/jobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "jobInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -454,25 +463,26 @@ public class Projects {
     /**
      * Deletes the specified job. Typically, the job becomes unsearchable within 10 seconds, but it may take up to 5 minutes.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JobsProjectsTenantsJobsDeleteResponse jobsProjectsTenantsJobsDelete(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JobsProjectsTenantsJobsDeleteResponse jobsProjectsTenantsJobsDelete(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsDeleteRequest request, org.openapis.openapi.models.operations.JobsProjectsTenantsJobsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsDeletePathParams.class, baseUrl, "/v4/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsDeleteRequest.class, baseUrl, "/v4/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -499,25 +509,26 @@ public class Projects {
     /**
      * Retrieves the specified job, whose status is OPEN or recently EXPIRED within the last 90 days.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JobsProjectsTenantsJobsGetResponse jobsProjectsTenantsJobsGet(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JobsProjectsTenantsJobsGetResponse jobsProjectsTenantsJobsGet(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsGetRequest request, org.openapis.openapi.models.operations.JobsProjectsTenantsJobsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsGetPathParams.class, baseUrl, "/v4/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsGetRequest.class, baseUrl, "/v4/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -544,25 +555,26 @@ public class Projects {
     /**
      * Lists jobs by filter.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JobsProjectsTenantsJobsListResponse jobsProjectsTenantsJobsList(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JobsProjectsTenantsJobsListResponse jobsProjectsTenantsJobsList(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsListRequest request, org.openapis.openapi.models.operations.JobsProjectsTenantsJobsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsListPathParams.class, baseUrl, "/v4/{parent}/jobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsListRequest.class, baseUrl, "/v4/{parent}/jobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -589,27 +601,28 @@ public class Projects {
     /**
      * Updates specified job. Typically, updated contents become visible in search results within 10 seconds, but it may take up to 5 minutes.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JobsProjectsTenantsJobsPatchResponse jobsProjectsTenantsJobsPatch(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JobsProjectsTenantsJobsPatchResponse jobsProjectsTenantsJobsPatch(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsPatchRequest request, org.openapis.openapi.models.operations.JobsProjectsTenantsJobsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsPatchPathParams.class, baseUrl, "/v4/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsPatchRequest.class, baseUrl, "/v4/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "jobInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -636,27 +649,28 @@ public class Projects {
     /**
      * Searches for jobs using the provided SearchJobsRequest. This call constrains the visibility of jobs present in the database, and only returns jobs that the caller has permission to search against.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JobsProjectsTenantsJobsSearchResponse jobsProjectsTenantsJobsSearch(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JobsProjectsTenantsJobsSearchResponse jobsProjectsTenantsJobsSearch(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsSearchRequest request, org.openapis.openapi.models.operations.JobsProjectsTenantsJobsSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsSearchPathParams.class, baseUrl, "/v4/{parent}/jobs:search", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsSearchRequest.class, baseUrl, "/v4/{parent}/jobs:search", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "searchJobsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -683,27 +697,28 @@ public class Projects {
     /**
      * Searches for jobs using the provided SearchJobsRequest. This API call is intended for the use case of targeting passive job seekers (for example, job seekers who have signed up to receive email alerts about potential job opportunities), it has different algorithmic adjustments that are designed to specifically target passive job seekers. This call constrains the visibility of jobs present in the database, and only returns jobs the caller has permission to search against.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JobsProjectsTenantsJobsSearchForAlertResponse jobsProjectsTenantsJobsSearchForAlert(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsSearchForAlertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JobsProjectsTenantsJobsSearchForAlertResponse jobsProjectsTenantsJobsSearchForAlert(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsSearchForAlertRequest request, org.openapis.openapi.models.operations.JobsProjectsTenantsJobsSearchForAlertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsSearchForAlertPathParams.class, baseUrl, "/v4/{parent}/jobs:searchForAlert", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsSearchForAlertRequest.class, baseUrl, "/v4/{parent}/jobs:searchForAlert", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "searchJobsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsSearchForAlertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsJobsSearchForAlertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -730,25 +745,26 @@ public class Projects {
     /**
      * Lists all tenants associated with the project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JobsProjectsTenantsListResponse jobsProjectsTenantsList(org.openapis.openapi.models.operations.JobsProjectsTenantsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JobsProjectsTenantsListResponse jobsProjectsTenantsList(org.openapis.openapi.models.operations.JobsProjectsTenantsListRequest request, org.openapis.openapi.models.operations.JobsProjectsTenantsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsListPathParams.class, baseUrl, "/v4/{parent}/tenants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobsProjectsTenantsListRequest.class, baseUrl, "/v4/{parent}/tenants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.JobsProjectsTenantsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LookupRequest {
+    /**
+     * Determines whether the response shall be returned in JSON format. Does not work with type "format".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=json")
+    public String json;
+    public LookupRequest withJson(String json) {
+        this.json = json;
+        return this;
+    }
     
-    public LookupQueryParams queryParams;
-    public LookupRequest withQueryParams(LookupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The phone number to look up.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=number")
+    public String[] number;
+    public LookupRequest withNumber(String[] number) {
+        this.number = number;
+        return this;
+    }
+    
+    /**
+     * Allowed values are "cnam", "format", "hlr" and "mnp".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public LookupRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

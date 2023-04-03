@@ -7,27 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchAutomationV4ActionsAppIdDefinitionIdUpdateRequest {
-    
-    public PatchAutomationV4ActionsAppIdDefinitionIdUpdatePathParams pathParams;
-    public PatchAutomationV4ActionsAppIdDefinitionIdUpdateRequest withPathParams(PatchAutomationV4ActionsAppIdDefinitionIdUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The custom workflow action fields to be updated.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ExtensionActionDefinitionPatch request;
-    public PatchAutomationV4ActionsAppIdDefinitionIdUpdateRequest withRequest(org.openapis.openapi.models.shared.ExtensionActionDefinitionPatch request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ExtensionActionDefinitionPatch extensionActionDefinitionPatch;
+    public PatchAutomationV4ActionsAppIdDefinitionIdUpdateRequest withExtensionActionDefinitionPatch(org.openapis.openapi.models.shared.ExtensionActionDefinitionPatch extensionActionDefinitionPatch) {
+        this.extensionActionDefinitionPatch = extensionActionDefinitionPatch;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public PatchAutomationV4ActionsAppIdDefinitionIdUpdateRequest withAppId(Integer appId) {
+        this.appId = appId;
+        return this;
+    }
     
-    public PatchAutomationV4ActionsAppIdDefinitionIdUpdateSecurity security;
-    public PatchAutomationV4ActionsAppIdDefinitionIdUpdateRequest withSecurity(PatchAutomationV4ActionsAppIdDefinitionIdUpdateSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the custom workflow action.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=definitionId")
+    public String definitionId;
+    public PatchAutomationV4ActionsAppIdDefinitionIdUpdateRequest withDefinitionId(String definitionId) {
+        this.definitionId = definitionId;
         return this;
     }
     

@@ -7,20 +7,6 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateArtifactRequest {
-    
-    public UpdateArtifactPathParams pathParams;
-    public UpdateArtifactRequest withPathParams(UpdateArtifactPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateArtifactHeaders headers;
-    public UpdateArtifactRequest withHeaders(UpdateArtifactHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The new content of the artifact being updated. This is often, but not always, JSON data
      * representing one of the supported artifact types:
@@ -38,9 +24,40 @@ public class UpdateArtifactRequest {
      * 
      */
     @SpeakeasyMetadata("request:mediaType=*/*")
-    public byte[] request;
-    public UpdateArtifactRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public UpdateArtifactRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Specifies the type of the artifact being added.  Possible values include:
+     * 
+     * * Avro (`AVRO`)
+     * * Protobuf (`PROTOBUF`)
+     * * Protobuf File Descriptor (`PROTOBUF_FD`)
+     * * JSON Schema (`JSON`)
+     * * Kafka Connect (`KCONNECT`)
+     * * OpenAPI (`OPENAPI`)
+     * * AsyncAPI (`ASYNCAPI`)
+     * * GraphQL (`GRAPHQL`)
+     * * Web Services Description Language (`WSDL`)
+     * * XML Schema (`XSD`)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-ArtifactType")
+    public UpdateArtifactXRegistryArtifactTypeEnum xRegistryArtifactType;
+    public UpdateArtifactRequest withXRegistryArtifactType(UpdateArtifactXRegistryArtifactTypeEnum xRegistryArtifactType) {
+        this.xRegistryArtifactType = xRegistryArtifactType;
+        return this;
+    }
+    
+    /**
+     * The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public UpdateArtifactRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
         return this;
     }
     

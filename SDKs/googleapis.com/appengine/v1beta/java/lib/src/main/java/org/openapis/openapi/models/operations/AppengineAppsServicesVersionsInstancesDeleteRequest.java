@@ -4,27 +4,156 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppengineAppsServicesVersionsInstancesDeleteRequest {
-    
-    public AppengineAppsServicesVersionsInstancesDeletePathParams pathParams;
-    public AppengineAppsServicesVersionsInstancesDeleteRequest withPathParams(AppengineAppsServicesVersionsInstancesDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AppengineAppsServicesVersionsInstancesDeleteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public AppengineAppsServicesVersionsInstancesDeleteQueryParams queryParams;
-    public AppengineAppsServicesVersionsInstancesDeleteRequest withQueryParams(AppengineAppsServicesVersionsInstancesDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AppengineAppsServicesVersionsInstancesDeleteRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AppengineAppsServicesVersionsInstancesDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public AppengineAppsServicesVersionsInstancesDeleteSecurity security;
-    public AppengineAppsServicesVersionsInstancesDeleteRequest withSecurity(AppengineAppsServicesVersionsInstancesDeleteSecurity security) {
-        this.security = security;
+    /**
+     * Part of `name`. Name of the resource requested. Example: apps/myapp/services/default/versions/v1/instances/instance-1.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appsId")
+    public String appsId;
+    public AppengineAppsServicesVersionsInstancesDeleteRequest withAppsId(String appsId) {
+        this.appsId = appsId;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AppengineAppsServicesVersionsInstancesDeleteRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AppengineAppsServicesVersionsInstancesDeleteRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Part of `name`. See documentation of `appsId`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instancesId")
+    public String instancesId;
+    public AppengineAppsServicesVersionsInstancesDeleteRequest withInstancesId(String instancesId) {
+        this.instancesId = instancesId;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AppengineAppsServicesVersionsInstancesDeleteRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AppengineAppsServicesVersionsInstancesDeleteRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AppengineAppsServicesVersionsInstancesDeleteRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AppengineAppsServicesVersionsInstancesDeleteRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Part of `name`. See documentation of `appsId`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=servicesId")
+    public String servicesId;
+    public AppengineAppsServicesVersionsInstancesDeleteRequest withServicesId(String servicesId) {
+        this.servicesId = servicesId;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AppengineAppsServicesVersionsInstancesDeleteRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AppengineAppsServicesVersionsInstancesDeleteRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Part of `name`. See documentation of `appsId`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionsId")
+    public String versionsId;
+    public AppengineAppsServicesVersionsInstancesDeleteRequest withVersionsId(String versionsId) {
+        this.versionsId = versionsId;
         return this;
     }
     

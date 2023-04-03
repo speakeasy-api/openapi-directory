@@ -7,20 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSpacesSpaceIdFoldersIdMessagesMessageIdRequest {
-    
-    public PatchSpacesSpaceIdFoldersIdMessagesMessageIdPathParams pathParams;
-    public PatchSpacesSpaceIdFoldersIdMessagesMessageIdRequest withPathParams(PatchSpacesSpaceIdFoldersIdMessagesMessageIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Message to modify (except Author and ModificationAuthor)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchSpacesSpaceIdFoldersIdMessagesMessageIdRequestBody request;
-    public PatchSpacesSpaceIdFoldersIdMessagesMessageIdRequest withRequest(PatchSpacesSpaceIdFoldersIdMessagesMessageIdRequestBody request) {
-        this.request = request;
+    public PatchSpacesSpaceIdFoldersIdMessagesMessageIdRequestBody requestBody;
+    public PatchSpacesSpaceIdFoldersIdMessagesMessageIdRequest withRequestBody(PatchSpacesSpaceIdFoldersIdMessagesMessageIdRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchSpacesSpaceIdFoldersIdMessagesMessageIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the message
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=messageId")
+    public String messageId;
+    public PatchSpacesSpaceIdFoldersIdMessagesMessageIdRequest withMessageId(String messageId) {
+        this.messageId = messageId;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PatchSpacesSpaceIdFoldersIdMessagesMessageIdRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

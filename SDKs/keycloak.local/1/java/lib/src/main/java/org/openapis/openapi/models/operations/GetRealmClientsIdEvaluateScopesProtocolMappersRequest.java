@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmClientsIdEvaluateScopesProtocolMappersRequest {
-    
-    public GetRealmClientsIdEvaluateScopesProtocolMappersPathParams pathParams;
-    public GetRealmClientsIdEvaluateScopesProtocolMappersRequest withPathParams(GetRealmClientsIdEvaluateScopesProtocolMappersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of client (not client-id)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetRealmClientsIdEvaluateScopesProtocolMappersRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmClientsIdEvaluateScopesProtocolMappersRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
     
-    public GetRealmClientsIdEvaluateScopesProtocolMappersQueryParams queryParams;
-    public GetRealmClientsIdEvaluateScopesProtocolMappersRequest withQueryParams(GetRealmClientsIdEvaluateScopesProtocolMappersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
+    public String scope;
+    public GetRealmClientsIdEvaluateScopesProtocolMappersRequest withScope(String scope) {
+        this.scope = scope;
         return this;
     }
     

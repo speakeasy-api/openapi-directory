@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletedApplicationsListRequest {
-    
-    public DeletedApplicationsListPathParams pathParams;
-    public DeletedApplicationsListRequest withPathParams(DeletedApplicationsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The filter to apply to the operation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$filter")
+    public String dollarFilter;
+    public DeletedApplicationsListRequest withDollarFilter(String dollarFilter) {
+        this.dollarFilter = dollarFilter;
         return this;
     }
     
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public DeletedApplicationsListRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
     
-    public DeletedApplicationsListQueryParams queryParams;
-    public DeletedApplicationsListRequest withQueryParams(DeletedApplicationsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public DeletedApplicationsListRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

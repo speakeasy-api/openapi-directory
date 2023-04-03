@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AerodromesByRouteUsV1AerodromesRouteQueryPostRequest {
-    
-    public AerodromesByRouteUsV1AerodromesRouteQueryPostHeaders headers;
-    public AerodromesByRouteUsV1AerodromesRouteQueryPostRequest withHeaders(AerodromesByRouteUsV1AerodromesRouteQueryPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AerodromesByRoute aerodromesByRoute;
+    public AerodromesByRouteUsV1AerodromesRouteQueryPostRequest withAerodromesByRoute(org.openapis.openapi.models.shared.AerodromesByRoute aerodromesByRoute) {
+        this.aerodromesByRoute = aerodromesByRoute;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AerodromesByRoute request;
-    public AerodromesByRouteUsV1AerodromesRouteQueryPostRequest withRequest(org.openapis.openapi.models.shared.AerodromesByRoute request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public AerodromesByRouteUsV1AerodromesRouteQueryPostRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

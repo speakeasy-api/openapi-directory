@@ -4,27 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TasksPartialUpdateRequest {
-    
-    public TasksPartialUpdatePathParams pathParams;
-    public TasksPartialUpdateRequest withPathParams(TasksPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee_group")
+    public Long assigneeGroup;
+    public TasksPartialUpdateRequest withAssigneeGroup(Long assigneeGroup) {
+        this.assigneeGroup = assigneeGroup;
         return this;
     }
     
-    
-    public TasksPartialUpdateQueryParams queryParams;
-    public TasksPartialUpdateRequest withQueryParams(TasksPartialUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee_user")
+    public Long assigneeUser;
+    public TasksPartialUpdateRequest withAssigneeUser(Long assigneeUser) {
+        this.assigneeUser = assigneeUser;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public Long category;
+    public TasksPartialUpdateRequest withCategory(Long category) {
+        this.category = category;
+        return this;
+    }
     
-    public TasksPartialUpdateSecurity security;
-    public TasksPartialUpdateRequest withSecurity(TasksPartialUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_at_date")
+    public String dueAtDate;
+    public TasksPartialUpdateRequest withDueAtDate(String dueAtDate) {
+        this.dueAtDate = dueAtDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_at_range")
+    public String dueAtRange;
+    public TasksPartialUpdateRequest withDueAtRange(String dueAtRange) {
+        this.dueAtRange = dueAtRange;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_at_since")
+    public String dueAtSince;
+    public TasksPartialUpdateRequest withDueAtSince(String dueAtSince) {
+        this.dueAtSince = dueAtSince;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_at_unknown")
+    public String dueAtUnknown;
+    public TasksPartialUpdateRequest withDueAtUnknown(String dueAtUnknown) {
+        this.dueAtUnknown = dueAtUnknown;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public TasksPartialUpdateRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public TasksPartialUpdateRequest withSince(String since) {
+        this.since = since;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public Long status;
+    public TasksPartialUpdateRequest withStatus(Long status) {
+        this.status = status;
         return this;
     }
     

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPickupByIdRequest {
-    
-    public GetPickupByIdPathParams pathParams;
-    public GetPickupByIdRequest withPathParams(GetPickupByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pickup_id")
+    public String pickupId;
+    public GetPickupByIdRequest withPickupId(String pickupId) {
+        this.pickupId = pickupId;
         return this;
     }
     

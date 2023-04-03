@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymenttransactionRequest {
-    
-    public GetPaymenttransactionPathParams pathParams;
-    public GetPaymenttransactionRequest withPathParams(GetPaymenttransactionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetPaymenttransactionRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetPaymenttransactionRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetPaymenttransactionHeaders headers;
-    public GetPaymenttransactionRequest withHeaders(GetPaymenttransactionHeaders headers) {
-        this.headers = headers;
+    /**
+     * Order ID is a unique code that identifies an order.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public GetPaymenttransactionRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

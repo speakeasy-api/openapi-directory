@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEpisodeByIdRequest {
-    
-    public GetEpisodeByIdPathParams pathParams;
-    public GetEpisodeByIdRequest withPathParams(GetEpisodeByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Get API Key on listennotes.com/api
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
+    public String xListenAPIKey;
+    public GetEpisodeByIdRequest withXListenAPIKey(String xListenAPIKey) {
+        this.xListenAPIKey = xListenAPIKey;
         return this;
     }
     
-    
-    public GetEpisodeByIdQueryParams queryParams;
-    public GetEpisodeByIdRequest withQueryParams(GetEpisodeByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * id for a specific episode. You can get episode id from using other endpoints, e.g., `GET /search`...
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetEpisodeByIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetEpisodeByIdHeaders headers;
-    public GetEpisodeByIdRequest withHeaders(GetEpisodeByIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * To include the transcript of this episode or not? If it is 1, then include the transcript in the **transcript** field. The default value is 0 - we don't include transcript by default, because 1) it would make the response data very big, thus slow response time; 2) less than 1% of episodes have transcripts. The transcript field is available only in the PRO/ENTERPRISE plan.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=show_transcript")
+    public Long showTranscript;
+    public GetEpisodeByIdRequest withShowTranscript(Long showTranscript) {
+        this.showTranscript = showTranscript;
         return this;
     }
     

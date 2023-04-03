@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserorderdetailsRequest {
-    
-    public UserorderdetailsPathParams pathParams;
-    public UserorderdetailsRequest withPathParams(UserorderdetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public UserorderdetailsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public UserorderdetailsQueryParams queryParams;
-    public UserorderdetailsRequest withQueryParams(UserorderdetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public UserorderdetailsRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Customer email.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientEmail")
+    public String clientEmail;
+    public UserorderdetailsRequest withClientEmail(String clientEmail) {
+        this.clientEmail = clientEmail;
+        return this;
+    }
     
-    public UserorderdetailsHeaders headers;
-    public UserorderdetailsRequest withHeaders(UserorderdetailsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Order ID is a unique code that identifies an order.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public UserorderdetailsRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

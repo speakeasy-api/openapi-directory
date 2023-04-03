@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveADocumentRequest {
-    
-    public RetrieveADocumentPathParams pathParams;
-    public RetrieveADocumentRequest withPathParams(RetrieveADocumentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=document_id")
+    public String documentId;
+    public RetrieveADocumentRequest withDocumentId(String documentId) {
+        this.documentId = documentId;
         return this;
     }
     

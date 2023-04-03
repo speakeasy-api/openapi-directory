@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsCountRequest {
+    /**
+     * Exclude groups created before this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
+    public String createdAfter;
+    public GroupsCountRequest withCreatedAfter(String createdAfter) {
+        this.createdAfter = createdAfter;
+        return this;
+    }
     
-    public GroupsCountQueryParams queryParams;
-    public GroupsCountRequest withQueryParams(GroupsCountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Exclude groups created after this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
+    public String createdBefore;
+    public GroupsCountRequest withCreatedBefore(String createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
+    
+    /**
+     * Status of the datapoint
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GroupsCountStatusEnum status;
+    public GroupsCountRequest withStatus(GroupsCountStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of tags you want to filter with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public GroupsCountRequest withTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    
+    /**
+     * Filter fields by this pattern
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
+    public String textSearch;
+    public GroupsCountRequest withTextSearch(String textSearch) {
+        this.textSearch = textSearch;
+        return this;
+    }
+    
+    /**
+     * Write permission
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=write")
+    public Boolean write;
+    public GroupsCountRequest withWrite(Boolean write) {
+        this.write = write;
         return this;
     }
     

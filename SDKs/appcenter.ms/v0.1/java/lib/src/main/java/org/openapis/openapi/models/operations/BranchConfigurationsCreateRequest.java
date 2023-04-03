@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BranchConfigurationsCreateRequest {
-    
-    public BranchConfigurationsCreatePathParams pathParams;
-    public BranchConfigurationsCreateRequest withPathParams(BranchConfigurationsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Parameters of the configuration
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public BranchConfigurationsCreateRequestBody request;
-    public BranchConfigurationsCreateRequest withRequest(BranchConfigurationsCreateRequestBody request) {
-        this.request = request;
+    public BranchConfigurationsCreateRequestBody requestBody;
+    public BranchConfigurationsCreateRequest withRequestBody(BranchConfigurationsCreateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public BranchConfigurationsCreateRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public BranchConfigurationsCreateSecurity security;
-    public BranchConfigurationsCreateRequest withSecurity(BranchConfigurationsCreateSecurity security) {
-        this.security = security;
+    /**
+     * The branch name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
+    public String branch;
+    public BranchConfigurationsCreateRequest withBranch(String branch) {
+        this.branch = branch;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public BranchConfigurationsCreateRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

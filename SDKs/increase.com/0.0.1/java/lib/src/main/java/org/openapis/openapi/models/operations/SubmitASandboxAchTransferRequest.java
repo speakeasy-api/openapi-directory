@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubmitASandboxAchTransferRequest {
-    
-    public SubmitASandboxAchTransferPathParams pathParams;
-    public SubmitASandboxAchTransferRequest withPathParams(SubmitASandboxAchTransferPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ach_transfer_id")
+    public String achTransferId;
+    public SubmitASandboxAchTransferRequest withAchTransferId(String achTransferId) {
+        this.achTransferId = achTransferId;
         return this;
     }
     

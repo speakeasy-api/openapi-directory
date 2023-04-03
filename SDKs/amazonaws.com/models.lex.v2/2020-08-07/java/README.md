@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BatchCreateCustomVocabularyItemPathParams;
-import org.openapis.openapi.models.operations.BatchCreateCustomVocabularyItemHeaders;
 import org.openapis.openapi.models.operations.BatchCreateCustomVocabularyItemRequestBody;
 import org.openapis.openapi.models.operations.BatchCreateCustomVocabularyItemRequest;
 import org.openapis.openapi.models.operations.BatchCreateCustomVocabularyItemResponse;
@@ -29,47 +27,41 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchCreateCustomVocabularyItemRequest req = new BatchCreateCustomVocabularyItemRequest() {{
-                pathParams = new BatchCreateCustomVocabularyItemPathParams() {{
-                    botId = "corrupti";
-                    botVersion = "provident";
-                    localeId = "distinctio";
-                }};
-                headers = new BatchCreateCustomVocabularyItemHeaders() {{
-                    xAmzAlgorithm = "quibusdam";
-                    xAmzContentSha256 = "unde";
-                    xAmzCredential = "nulla";
-                    xAmzDate = "corrupti";
-                    xAmzSecurityToken = "illum";
-                    xAmzSignature = "vel";
-                    xAmzSignedHeaders = "error";
-                }};
-                request = new BatchCreateCustomVocabularyItemRequestBody() {{
+                requestBody = new BatchCreateCustomVocabularyItemRequestBody() {{
                     customVocabularyItemList = new org.openapis.openapi.models.shared.NewCustomVocabularyItem[]{{
                         add(new NewCustomVocabularyItem() {{
-                            displayAs = "suscipit";
-                            phrase = "iure";
-                            weight = 297534;
+                            displayAs = "provident";
+                            phrase = "distinctio";
+                            weight = 844266;
                         }}),
                         add(new NewCustomVocabularyItem() {{
-                            displayAs = "debitis";
-                            phrase = "ipsa";
-                            weight = 963663;
+                            displayAs = "unde";
+                            phrase = "nulla";
+                            weight = 544883;
                         }}),
                         add(new NewCustomVocabularyItem() {{
-                            displayAs = "tempora";
-                            phrase = "suscipit";
-                            weight = 477665;
+                            displayAs = "illum";
+                            phrase = "vel";
+                            weight = 623564;
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "deserunt";
+                xAmzContentSha256 = "suscipit";
+                xAmzCredential = "iure";
+                xAmzDate = "magnam";
+                xAmzSecurityToken = "debitis";
+                xAmzSignature = "ipsa";
+                xAmzSignedHeaders = "delectus";
+                botId = "tempora";
+                botVersion = "suscipit";
+                localeId = "molestiae";
+            }}            
 
             BatchCreateCustomVocabularyItemResponse res = sdk.batchCreateCustomVocabularyItem(req);
 
@@ -83,7 +75,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

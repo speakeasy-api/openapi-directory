@@ -7,24 +7,37 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUpdateHolidayRequest {
-    
-    public CreateUpdateHolidayPathParams pathParams;
-    public CreateUpdateHolidayRequest withPathParams(CreateUpdateHolidayPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CreateUpdateHolidayRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public CreateUpdateHolidayHeaders headers;
-    public CreateUpdateHolidayRequest withHeaders(CreateUpdateHolidayHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CreateUpdateHolidayRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateUpdateHolidayCreateUpdateHolidayRequest request;
-    public CreateUpdateHolidayRequest withRequest(CreateUpdateHolidayCreateUpdateHolidayRequest request) {
-        this.request = request;
+    public CreateUpdateHolidayCreateUpdateHolidayRequest requestBody;
+    public CreateUpdateHolidayRequest withRequestBody(CreateUpdateHolidayCreateUpdateHolidayRequest requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=holidayId")
+    public String holidayId;
+    public CreateUpdateHolidayRequest withHolidayId(String holidayId) {
+        this.holidayId = holidayId;
         return this;
     }
     

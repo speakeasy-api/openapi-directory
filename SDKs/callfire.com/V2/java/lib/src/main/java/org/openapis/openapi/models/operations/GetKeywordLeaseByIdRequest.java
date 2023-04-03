@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetKeywordLeaseByIdRequest {
-    
-    public GetKeywordLeaseByIdPathParams pathParams;
-    public GetKeywordLeaseByIdRequest withPathParams(GetKeywordLeaseByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GetKeywordLeaseByIdRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
-    
-    public GetKeywordLeaseByIdQueryParams queryParams;
-    public GetKeywordLeaseByIdRequest withQueryParams(GetKeywordLeaseByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetKeywordLeaseByIdSecurity security;
-    public GetKeywordLeaseByIdRequest withSecurity(GetKeywordLeaseByIdSecurity security) {
-        this.security = security;
+    /**
+     * ~
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetKeywordLeaseByIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

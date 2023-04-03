@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposCompareCommitsRequest {
-    
-    public ReposCompareCommitsPathParams pathParams;
-    public ReposCompareCommitsRequest withPathParams(ReposCompareCommitsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The base branch and head branch to compare. This parameter expects the format `BASE...HEAD`. Both must be branch names in `repo`. To compare with a branch that exists in a different repository in the same network as `repo`, the `basehead` parameter expects the format `USERNAME:BASE...USERNAME:HEAD`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=basehead")
+    public String basehead;
+    public ReposCompareCommitsRequest withBasehead(String basehead) {
+        this.basehead = basehead;
         return this;
     }
     
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposCompareCommitsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ReposCompareCommitsQueryParams queryParams;
-    public ReposCompareCommitsRequest withQueryParams(ReposCompareCommitsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReposCompareCommitsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReposCompareCommitsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposCompareCommitsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

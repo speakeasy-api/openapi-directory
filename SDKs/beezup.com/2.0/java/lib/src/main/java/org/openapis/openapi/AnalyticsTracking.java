@@ -39,13 +39,13 @@ public class AnalyticsTracking {
      */
     public org.openapis.openapi.models.operations.GetStoreTrackedClicksResponse getStoreTrackedClicks(org.openapis.openapi.models.operations.GetStoreTrackedClicksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStoreTrackedClicksPathParams.class, baseUrl, "/v2/user/analytics/{storeId}/tracking/clicks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStoreTrackedClicksRequest.class, baseUrl, "/v2/user/analytics/{storeId}/tracking/clicks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStoreTrackedClicksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStoreTrackedClicksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -91,13 +91,13 @@ public class AnalyticsTracking {
      */
     public org.openapis.openapi.models.operations.GetStoreTrackedExternalOrdersResponse getStoreTrackedExternalOrders(org.openapis.openapi.models.operations.GetStoreTrackedExternalOrdersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStoreTrackedExternalOrdersPathParams.class, baseUrl, "/v2/user/analytics/{storeId}/tracking/externalorders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStoreTrackedExternalOrdersRequest.class, baseUrl, "/v2/user/analytics/{storeId}/tracking/externalorders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStoreTrackedExternalOrdersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStoreTrackedExternalOrdersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -143,13 +143,13 @@ public class AnalyticsTracking {
      */
     public org.openapis.openapi.models.operations.GetStoreTrackedOrdersResponse getStoreTrackedOrders(org.openapis.openapi.models.operations.GetStoreTrackedOrdersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStoreTrackedOrdersPathParams.class, baseUrl, "/v2/user/analytics/{storeId}/tracking/orders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStoreTrackedOrdersRequest.class, baseUrl, "/v2/user/analytics/{storeId}/tracking/orders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStoreTrackedOrdersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStoreTrackedOrdersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -198,7 +198,7 @@ public class AnalyticsTracking {
      */
     public org.openapis.openapi.models.operations.GetStoreTrackingStatusResponse getStoreTrackingStatus(org.openapis.openapi.models.operations.GetStoreTrackingStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStoreTrackingStatusPathParams.class, baseUrl, "/v2/user/analytics/{storeId}/tracking/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStoreTrackingStatusRequest.class, baseUrl, "/v2/user/analytics/{storeId}/tracking/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutProjectJsonRequest {
-    
-    public PutProjectJsonPathParams pathParams;
-    public PutProjectJsonRequest withPathParams(PutProjectJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ProjectPersistVO projectPersistVO;
+    public PutProjectJsonRequest withProjectPersistVO(org.openapis.openapi.models.shared.ProjectPersistVO projectPersistVO) {
+        this.projectPersistVO = projectPersistVO;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProjectPersistVO request;
-    public PutProjectJsonRequest withRequest(org.openapis.openapi.models.shared.ProjectPersistVO request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public PutProjectJsonRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public PutProjectJsonRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

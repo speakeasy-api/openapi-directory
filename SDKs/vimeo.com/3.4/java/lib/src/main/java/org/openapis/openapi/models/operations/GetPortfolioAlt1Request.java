@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPortfolioAlt1Request {
-    
-    public GetPortfolioAlt1PathParams pathParams;
-    public GetPortfolioAlt1Request withPathParams(GetPortfolioAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the portfolio.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portfolio_id")
+    public Double portfolioId;
+    public GetPortfolioAlt1Request withPortfolioId(Double portfolioId) {
+        this.portfolioId = portfolioId;
         return this;
     }
     

@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LongPollRequest {
+    @SpeakeasyMetadata("queryParam:serialization=json,name=connection_id")
+    public String connectionId;
+    public LongPollRequest withConnectionId(String connectionId) {
+        this.connectionId = connectionId;
+        return this;
+    }
     
-    public LongPollQueryParams queryParams;
-    public LongPollRequest withQueryParams(LongPollQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:serialization=json,name=json")
+    public org.openapis.openapi.models.shared.ConnectRequest json;
+    public LongPollRequest withJson(org.openapis.openapi.models.shared.ConnectRequest json) {
+        this.json = json;
         return this;
     }
     

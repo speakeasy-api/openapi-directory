@@ -42,10 +42,11 @@ public class V1Employees {
      * Employee entities cannot be deleted. To disable employee profiles,
      * set the employee's status to &lt;code&gt;INACTIVE&lt;/code&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateEmployeeResponse createEmployee(org.openapis.openapi.models.operations.CreateEmployeeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateEmployeeResponse createEmployee(org.openapis.openapi.models.shared.V1Employee request, org.openapis.openapi.models.operations.CreateEmployeeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/me/employees");
         
@@ -59,7 +60,7 @@ public class V1Employees {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -99,10 +100,11 @@ public class V1Employees {
      * If an employee has no role, they have none of the permissions associated
      * with roles. All employees can accept payments with Square Point of Sale.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateEmployeeRoleResponse createEmployeeRole(org.openapis.openapi.models.operations.CreateEmployeeRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateEmployeeRoleResponse createEmployeeRole(org.openapis.openapi.models.shared.V1EmployeeRole request, org.openapis.openapi.models.operations.CreateEmployeeRoleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/me/roles");
         
@@ -116,7 +118,7 @@ public class V1Employees {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -144,10 +146,11 @@ public class V1Employees {
      * ListEmployeeRoles
      * Provides summary information for all of a business's employee roles.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListEmployeeRolesResponse listEmployeeRoles(org.openapis.openapi.models.operations.ListEmployeeRolesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListEmployeeRolesResponse listEmployeeRoles(org.openapis.openapi.models.operations.ListEmployeeRolesRequest request, org.openapis.openapi.models.operations.ListEmployeeRolesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/me/roles");
         
@@ -155,14 +158,14 @@ public class V1Employees {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListEmployeeRolesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListEmployeeRolesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -190,10 +193,11 @@ public class V1Employees {
      * ListEmployees
      * Provides summary information for all of a business's employees.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListEmployeesResponse listEmployees(org.openapis.openapi.models.operations.ListEmployeesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListEmployeesResponse listEmployees(org.openapis.openapi.models.operations.ListEmployeesRequest request, org.openapis.openapi.models.operations.ListEmployeesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/me/employees");
         
@@ -201,14 +205,14 @@ public class V1Employees {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListEmployeesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListEmployeesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -236,19 +240,20 @@ public class V1Employees {
      * RetrieveEmployee
      * Provides the details for a single employee.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveEmployeeResponse retrieveEmployee(org.openapis.openapi.models.operations.RetrieveEmployeeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveEmployeeResponse retrieveEmployee(org.openapis.openapi.models.operations.RetrieveEmployeeRequest request, org.openapis.openapi.models.operations.RetrieveEmployeeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveEmployeePathParams.class, baseUrl, "/v1/me/employees/{employee_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveEmployeeRequest.class, baseUrl, "/v1/me/employees/{employee_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -276,19 +281,20 @@ public class V1Employees {
      * RetrieveEmployeeRole
      * Provides the details for a single employee role.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveEmployeeRoleResponse retrieveEmployeeRole(org.openapis.openapi.models.operations.RetrieveEmployeeRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveEmployeeRoleResponse retrieveEmployeeRole(org.openapis.openapi.models.operations.RetrieveEmployeeRoleRequest request, org.openapis.openapi.models.operations.RetrieveEmployeeRoleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveEmployeeRolePathParams.class, baseUrl, "/v1/me/roles/{role_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveEmployeeRoleRequest.class, baseUrl, "/v1/me/roles/{role_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -315,24 +321,25 @@ public class V1Employees {
     /**
      * UpdateEmployee
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateEmployeeResponse updateEmployee(org.openapis.openapi.models.operations.UpdateEmployeeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateEmployeeResponse updateEmployee(org.openapis.openapi.models.operations.UpdateEmployeeRequest request, org.openapis.openapi.models.operations.UpdateEmployeeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateEmployeePathParams.class, baseUrl, "/v1/me/employees/{employee_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateEmployeeRequest.class, baseUrl, "/v1/me/employees/{employee_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "v1Employee", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -360,24 +367,25 @@ public class V1Employees {
      * UpdateEmployeeRole
      * Modifies the details of an employee role.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateEmployeeRoleResponse updateEmployeeRole(org.openapis.openapi.models.operations.UpdateEmployeeRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateEmployeeRoleResponse updateEmployeeRole(org.openapis.openapi.models.operations.UpdateEmployeeRoleRequest request, org.openapis.openapi.models.operations.UpdateEmployeeRoleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateEmployeeRolePathParams.class, baseUrl, "/v1/me/roles/{role_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateEmployeeRoleRequest.class, baseUrl, "/v1/me/roles/{role_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "v1EmployeeRole", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

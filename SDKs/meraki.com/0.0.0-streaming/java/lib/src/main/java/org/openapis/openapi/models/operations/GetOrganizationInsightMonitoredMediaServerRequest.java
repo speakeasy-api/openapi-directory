@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationInsightMonitoredMediaServerRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=monitoredMediaServerId")
+    public String monitoredMediaServerId;
+    public GetOrganizationInsightMonitoredMediaServerRequest withMonitoredMediaServerId(String monitoredMediaServerId) {
+        this.monitoredMediaServerId = monitoredMediaServerId;
+        return this;
+    }
     
-    public GetOrganizationInsightMonitoredMediaServerPathParams pathParams;
-    public GetOrganizationInsightMonitoredMediaServerRequest withPathParams(GetOrganizationInsightMonitoredMediaServerPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationInsightMonitoredMediaServerRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

@@ -7,24 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSourceRepositoryBranchesRequest {
-    
-    public ListSourceRepositoryBranchesPathParams pathParams;
-    public ListSourceRepositoryBranchesRequest withPathParams(ListSourceRepositoryBranchesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ListSourceRepositoryBranchesQueryParams queryParams;
-    public ListSourceRepositoryBranchesRequest withQueryParams(ListSourceRepositoryBranchesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ListSourceRepositoryBranchesRequestBody request;
-    public ListSourceRepositoryBranchesRequest withRequest(ListSourceRepositoryBranchesRequestBody request) {
-        this.request = request;
+    public ListSourceRepositoryBranchesRequestBody requestBody;
+    public ListSourceRepositoryBranchesRequest withRequestBody(ListSourceRepositoryBranchesRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public String maxResults;
+    public ListSourceRepositoryBranchesRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListSourceRepositoryBranchesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The name of the project in the space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectName")
+    public String projectName;
+    public ListSourceRepositoryBranchesRequest withProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    
+    /**
+     * The name of the source repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sourceRepositoryName")
+    public String sourceRepositoryName;
+    public ListSourceRepositoryBranchesRequest withSourceRepositoryName(String sourceRepositoryName) {
+        this.sourceRepositoryName = sourceRepositoryName;
+        return this;
+    }
+    
+    /**
+     * The name of the space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceName")
+    public String spaceName;
+    public ListSourceRepositoryBranchesRequest withSpaceName(String spaceName) {
+        this.spaceName = spaceName;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVehicleRequest {
-    
-    public GetVehiclePathParams pathParams;
-    public GetVehicleRequest withPathParams(GetVehiclePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The vehicule id that needs to be fetched
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetVehicleRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Populate driver
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_driver")
+    public Boolean includeDriver;
+    public GetVehicleRequest withIncludeDriver(Boolean includeDriver) {
+        this.includeDriver = includeDriver;
+        return this;
+    }
     
-    public GetVehicleQueryParams queryParams;
-    public GetVehicleRequest withQueryParams(GetVehicleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Populate organization
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_organization")
+    public Boolean includeOrganization;
+    public GetVehicleRequest withIncludeOrganization(Boolean includeOrganization) {
+        this.includeOrganization = includeOrganization;
+        return this;
+    }
+    
+    /**
+     * Populate token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_token")
+    public Boolean includeToken;
+    public GetVehicleRequest withIncludeToken(Boolean includeToken) {
+        this.includeToken = includeToken;
         return this;
     }
     

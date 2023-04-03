@@ -33,25 +33,26 @@ public class Internalappsharingartifacts {
     /**
      * Uploads an APK to internal app sharing. If you are using the Google API client libraries, please increase the timeout of the http request before calling this endpoint (a timeout of 2 minutes is recommended). See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-java-client/errors) for an example in java.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadapkResponse androidpublisherInternalappsharingartifactsUploadapk(org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadapkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadapkResponse androidpublisherInternalappsharingartifactsUploadapk(org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadapkRequest request, org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadapkSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadapkPathParams.class, baseUrl, "/androidpublisher/v3/applications/internalappsharing/{packageName}/artifacts/apk", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadapkRequest.class, baseUrl, "/androidpublisher/v3/applications/internalappsharing/{packageName}/artifacts/apk", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadapkQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadapkRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class Internalappsharingartifacts {
     /**
      * Uploads an app bundle to internal app sharing. If you are using the Google API client libraries, please increase the timeout of the http request before calling this endpoint (a timeout of 2 minutes is recommended). See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-java-client/errors) for an example in java.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadbundleResponse androidpublisherInternalappsharingartifactsUploadbundle(org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadbundleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadbundleResponse androidpublisherInternalappsharingartifactsUploadbundle(org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadbundleRequest request, org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadbundleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadbundlePathParams.class, baseUrl, "/androidpublisher/v3/applications/internalappsharing/{packageName}/artifacts/bundle", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadbundleRequest.class, baseUrl, "/androidpublisher/v3/applications/internalappsharing/{packageName}/artifacts/bundle", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadbundleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherInternalappsharingartifactsUploadbundleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

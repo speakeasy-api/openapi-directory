@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsErrorAttachmentsRequest {
-    
-    public ErrorsErrorAttachmentsPathParams pathParams;
-    public ErrorsErrorAttachmentsRequest withPathParams(ErrorsErrorAttachmentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ErrorsErrorAttachmentsRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The id of the error
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorId")
+    public String errorId;
+    public ErrorsErrorAttachmentsRequest withErrorId(String errorId) {
+        this.errorId = errorId;
+        return this;
+    }
     
-    public ErrorsErrorAttachmentsSecurity security;
-    public ErrorsErrorAttachmentsRequest withSecurity(ErrorsErrorAttachmentsSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ErrorsErrorAttachmentsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

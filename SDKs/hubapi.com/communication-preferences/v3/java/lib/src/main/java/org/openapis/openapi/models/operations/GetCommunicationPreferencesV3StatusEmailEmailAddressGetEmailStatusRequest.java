@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusRequest {
-    
-    public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusPathParams pathParams;
-    public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusRequest withPathParams(GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity security;
-    public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusRequest withSecurity(GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=emailAddress")
+    public String emailAddress;
+    public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusRequest withEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
         return this;
     }
     

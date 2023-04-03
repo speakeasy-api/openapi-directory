@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteReplicationGroupRequest {
-    
-    public GETDeleteReplicationGroupQueryParams queryParams;
-    public GETDeleteReplicationGroupRequest withQueryParams(GETDeleteReplicationGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteReplicationGroupActionEnum action;
+    public GETDeleteReplicationGroupRequest withAction(GETDeleteReplicationGroupActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of a final node group (shard) snapshot. ElastiCache creates the snapshot from the primary node in the cluster, rather than one of the replicas; this is to ensure that it captures the freshest data. After the final snapshot is taken, the replication group is immediately deleted.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FinalSnapshotIdentifier")
+    public String finalSnapshotIdentifier;
+    public GETDeleteReplicationGroupRequest withFinalSnapshotIdentifier(String finalSnapshotIdentifier) {
+        this.finalSnapshotIdentifier = finalSnapshotIdentifier;
+        return this;
+    }
     
-    public GETDeleteReplicationGroupHeaders headers;
-    public GETDeleteReplicationGroupRequest withHeaders(GETDeleteReplicationGroupHeaders headers) {
-        this.headers = headers;
+    /**
+     * The identifier for the cluster to be deleted. This parameter is not case sensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReplicationGroupId")
+    public String replicationGroupId;
+    public GETDeleteReplicationGroupRequest withReplicationGroupId(String replicationGroupId) {
+        this.replicationGroupId = replicationGroupId;
+        return this;
+    }
+    
+    /**
+     * If set to &lt;code&gt;true&lt;/code&gt;, all of the read replicas are deleted, but the primary node is retained.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RetainPrimaryCluster")
+    public Boolean retainPrimaryCluster;
+    public GETDeleteReplicationGroupRequest withRetainPrimaryCluster(Boolean retainPrimaryCluster) {
+        this.retainPrimaryCluster = retainPrimaryCluster;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteReplicationGroupVersionEnum version;
+    public GETDeleteReplicationGroupRequest withVersion(GETDeleteReplicationGroupVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteReplicationGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteReplicationGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteReplicationGroupRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteReplicationGroupRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteReplicationGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteReplicationGroupRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteReplicationGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

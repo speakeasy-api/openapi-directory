@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountInstitutionCurationCommentsRequest {
-    
-    public AccountInstitutionCurationCommentsPathParams pathParams;
-    public AccountInstitutionCurationCommentsRequest withPathParams(AccountInstitutionCurationCommentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the curation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=curation_id")
+    public Long curationId;
+    public AccountInstitutionCurationCommentsRequest withCurationId(Long curationId) {
+        this.curationId = curationId;
         return this;
     }
     
-    
-    public AccountInstitutionCurationCommentsQueryParams queryParams;
-    public AccountInstitutionCurationCommentsRequest withQueryParams(AccountInstitutionCurationCommentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of results included on a page. Used for pagination with query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public AccountInstitutionCurationCommentsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public AccountInstitutionCurationCommentsSecurity security;
-    public AccountInstitutionCurationCommentsRequest withSecurity(AccountInstitutionCurationCommentsSecurity security) {
-        this.security = security;
+    /**
+     * Where to start the listing(the offset of the first result). Used for pagination with limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public AccountInstitutionCurationCommentsRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

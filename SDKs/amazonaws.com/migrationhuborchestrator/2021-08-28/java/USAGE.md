@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateWorkflowHeaders;
 import org.openapis.openapi.models.operations.CreateWorkflowRequestBody;
 import org.openapis.openapi.models.operations.CreateWorkflowRequest;
 import org.openapis.openapi.models.operations.CreateWorkflowResponse;
@@ -15,84 +14,80 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateWorkflowRequest req = new CreateWorkflowRequest() {{
-                headers = new CreateWorkflowHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateWorkflowRequestBody() {{
-                    applicationConfigurationId = "illum";
-                    description = "vel";
+                requestBody = new CreateWorkflowRequestBody() {{
+                    applicationConfigurationId = "corrupti";
+                    description = "provident";
                     inputParameters = new java.util.HashMap<String, org.openapis.openapi.models.shared.StepInput>() {{
-                        put("deserunt", new StepInput() {{
-                            integerValue = 384382;
+                        put("quibusdam", new StepInput() {{
+                            integerValue = 602763;
                             listOfStringsValue = new String[]{{
-                                add("magnam"),
-                                add("debitis"),
+                                add("corrupti"),
+                                add("illum"),
+                                add("vel"),
+                                add("error"),
                             }};
                             mapOfStringValue = new java.util.HashMap<String, String>() {{
-                                put("delectus", "tempora");
+                                put("suscipit", "iure");
+                                put("magnam", "debitis");
+                                put("ipsa", "delectus");
                             }};
-                            stringValue = "suscipit";
+                            stringValue = "tempora";
                         }});
-                        put("molestiae", new StepInput() {{
-                            integerValue = 791725;
+                        put("suscipit", new StepInput() {{
+                            integerValue = 477665;
                             listOfStringsValue = new String[]{{
+                                add("placeat"),
                                 add("voluptatum"),
                                 add("iusto"),
                                 add("excepturi"),
-                                add("nisi"),
                             }};
                             mapOfStringValue = new java.util.HashMap<String, String>() {{
-                                put("temporibus", "ab");
-                                put("quis", "veritatis");
-                                put("deserunt", "perferendis");
-                                put("ipsam", "repellendus");
+                                put("recusandae", "temporibus");
+                                put("ab", "quis");
                             }};
-                            stringValue = "sapiente";
+                            stringValue = "veritatis";
                         }});
-                        put("quo", new StepInput() {{
-                            integerValue = 140350;
+                        put("deserunt", new StepInput() {{
+                            integerValue = 20218;
                             listOfStringsValue = new String[]{{
-                                add("at"),
-                                add("maiores"),
-                                add("molestiae"),
-                                add("quod"),
+                                add("repellendus"),
+                                add("sapiente"),
                             }};
                             mapOfStringValue = new java.util.HashMap<String, String>() {{
-                                put("esse", "totam");
-                                put("porro", "dolorum");
-                                put("dicta", "nam");
-                                put("officia", "occaecati");
+                                put("odit", "at");
+                                put("at", "maiores");
+                                put("molestiae", "quod");
+                                put("quod", "esse");
                             }};
-                            stringValue = "fugit";
+                            stringValue = "totam";
                         }});
                     }};
-                    name = "deleniti";
+                    name = "porro";
                     stepTargets = new String[]{{
-                        add("optio"),
-                        add("totam"),
-                        add("beatae"),
-                        add("commodi"),
+                        add("dicta"),
+                        add("nam"),
+                        add("officia"),
                     }};
                     tags = new java.util.HashMap<String, String>() {{
-                        put("modi", "qui");
-                        put("impedit", "cum");
+                        put("fugit", "deleniti");
+                        put("hic", "optio");
+                        put("totam", "beatae");
                     }};
-                    templateId = "esse";
+                    templateId = "commodi";
                 }};
-            }};            
+                xAmzAlgorithm = "molestiae";
+                xAmzContentSha256 = "modi";
+                xAmzCredential = "qui";
+                xAmzDate = "impedit";
+                xAmzSecurityToken = "cum";
+                xAmzSignature = "esse";
+                xAmzSignedHeaders = "ipsum";
+            }}            
 
             CreateWorkflowResponse res = sdk.createWorkflow(req);
 

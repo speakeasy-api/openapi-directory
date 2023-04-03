@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchInsightsSettingsCommentRequest {
-    
-    public FetchInsightsSettingsCommentHeaders headers;
-    public FetchInsightsSettingsCommentRequest withHeaders(FetchInsightsSettingsCommentHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public FetchInsightsSettingsCommentSecurity security;
-    public FetchInsightsSettingsCommentRequest withSecurity(FetchInsightsSettingsCommentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchInsightsSettingsCommentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Token HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Token")
+    public String token;
+    public FetchInsightsSettingsCommentRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePotSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAPISecretKey apiSecretKey;
-    public UpdatePotSecurity withApiSecretKey(org.openapis.openapi.models.shared.SchemeAPISecretKey apiSecretKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=x-api-key")
+    public String apiSecretKey;
+    public UpdatePotSecurity withApiSecretKey(String apiSecretKey) {
         this.apiSecretKey = apiSecretKey;
         return this;
     }

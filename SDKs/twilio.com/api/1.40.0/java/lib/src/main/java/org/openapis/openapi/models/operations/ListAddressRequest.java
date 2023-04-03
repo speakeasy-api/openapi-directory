@@ -4,34 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAddressRequest {
-    
-    public ListAddressPathParams pathParams;
-    public ListAddressRequest withPathParams(ListAddressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that is responsible for the Address resource to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListAddressRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListAddressQueryParams queryParams;
-    public ListAddressRequest withQueryParams(ListAddressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The `customer_name` of the Address resources to read.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CustomerName")
+    public String customerName;
+    public ListAddressRequest withCustomerName(String customerName) {
+        this.customerName = customerName;
         return this;
     }
     
-    
-    public ListAddressSecurity security;
-    public ListAddressRequest withSecurity(ListAddressSecurity security) {
-        this.security = security;
+    /**
+     * The string that identifies the Address resources to read.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FriendlyName")
+    public String friendlyName;
+    public ListAddressRequest withFriendlyName(String friendlyName) {
+        this.friendlyName = friendlyName;
         return this;
     }
     
+    /**
+     * The ISO country code of the Address resources to read.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IsoCountry")
+    public String isoCountry;
+    public ListAddressRequest withIsoCountry(String isoCountry) {
+        this.isoCountry = isoCountry;
+        return this;
+    }
     
-    public String serverURL;
-    public ListAddressRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListAddressRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListAddressRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListAddressRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

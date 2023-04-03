@@ -4,20 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminListPreReceiveHooksForRepoRequest {
-    
-    public EnterpriseAdminListPreReceiveHooksForRepoPathParams pathParams;
-    public EnterpriseAdminListPreReceiveHooksForRepoRequest withPathParams(EnterpriseAdminListPreReceiveHooksForRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * One of `asc` (ascending) or `desc` (descending).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public org.openapis.openapi.models.shared.DirectionEnum direction;
+    public EnterpriseAdminListPreReceiveHooksForRepoRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public EnterpriseAdminListPreReceiveHooksForRepoRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public EnterpriseAdminListPreReceiveHooksForRepoQueryParams queryParams;
-    public EnterpriseAdminListPreReceiveHooksForRepoRequest withQueryParams(EnterpriseAdminListPreReceiveHooksForRepoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public EnterpriseAdminListPreReceiveHooksForRepoRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public EnterpriseAdminListPreReceiveHooksForRepoRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public EnterpriseAdminListPreReceiveHooksForRepoRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public EnterpriseAdminListPreReceiveHooksForRepoSortEnum sort;
+    public EnterpriseAdminListPreReceiveHooksForRepoRequest withSort(EnterpriseAdminListPreReceiveHooksForRepoSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

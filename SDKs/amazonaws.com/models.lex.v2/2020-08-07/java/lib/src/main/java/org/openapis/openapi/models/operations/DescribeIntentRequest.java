@@ -4,20 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeIntentRequest {
-    
-    public DescribeIntentPathParams pathParams;
-    public DescribeIntentRequest withPathParams(DescribeIntentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeIntentRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeIntentRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public DescribeIntentHeaders headers;
-    public DescribeIntentRequest withHeaders(DescribeIntentHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeIntentRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeIntentRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeIntentRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeIntentRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeIntentRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The identifier of the bot associated with the intent.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botId")
+    public String botId;
+    public DescribeIntentRequest withBotId(String botId) {
+        this.botId = botId;
+        return this;
+    }
+    
+    /**
+     * The version of the bot associated with the intent.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botVersion")
+    public String botVersion;
+    public DescribeIntentRequest withBotVersion(String botVersion) {
+        this.botVersion = botVersion;
+        return this;
+    }
+    
+    /**
+     * The identifier of the intent to describe.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=intentId")
+    public String intentId;
+    public DescribeIntentRequest withIntentId(String intentId) {
+        this.intentId = intentId;
+        return this;
+    }
+    
+    /**
+     * The identifier of the language and locale of the intent to describe. The string must match one of the supported locales. For more information, see &lt;a href="https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html"&gt;Supported languages&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=localeId")
+    public String localeId;
+    public DescribeIntentRequest withLocaleId(String localeId) {
+        this.localeId = localeId;
         return this;
     }
     

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCustomFieldsRequest {
-    
-    public UpdateCustomFieldsPathParams pathParams;
-    public UpdateCustomFieldsRequest withPathParams(UpdateCustomFieldsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated custom fields of a given person.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CustomFieldDTO[] request;
-    public UpdateCustomFieldsRequest withRequest(org.openapis.openapi.models.shared.CustomFieldDTO[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CustomFieldDTO[] requestBody;
+    public UpdateCustomFieldsRequest withRequestBody(org.openapis.openapi.models.shared.CustomFieldDTO[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * person's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=personId")
+    public Long personId;
+    public UpdateCustomFieldsRequest withPersonId(Long personId) {
+        this.personId = personId;
         return this;
     }
     

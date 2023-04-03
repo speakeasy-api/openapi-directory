@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesIdTriggersRequest {
-    
-    public GetSpacesIdTriggersPathParams pathParams;
-    public GetSpacesIdTriggersRequest withPathParams(GetSpacesIdTriggersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetSpacesIdTriggersSecurity security;
-    public GetSpacesIdTriggersRequest withSecurity(GetSpacesIdTriggersSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesIdTriggersRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

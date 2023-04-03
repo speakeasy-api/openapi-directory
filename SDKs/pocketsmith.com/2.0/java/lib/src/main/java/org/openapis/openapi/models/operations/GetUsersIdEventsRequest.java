@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdEventsRequest {
-    
-    public GetUsersIdEventsPathParams pathParams;
-    public GetUsersIdEventsRequest withPathParams(GetUsersIdEventsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Return the events until and including this date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public String endDate;
+    public GetUsersIdEventsRequest withEndDate(String endDate) {
+        this.endDate = endDate;
         return this;
     }
     
+    /**
+     * The unique identifier of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetUsersIdEventsRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetUsersIdEventsQueryParams queryParams;
-    public GetUsersIdEventsRequest withQueryParams(GetUsersIdEventsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return the events from and including this date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public String startDate;
+    public GetUsersIdEventsRequest withStartDate(String startDate) {
+        this.startDate = startDate;
         return this;
     }
     

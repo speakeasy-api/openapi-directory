@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCrmV3ExtensionsCardsAppIdCreateRequest {
-    
-    public PostCrmV3ExtensionsCardsAppIdCreatePathParams pathParams;
-    public PostCrmV3ExtensionsCardsAppIdCreateRequest withPathParams(PostCrmV3ExtensionsCardsAppIdCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The new card definition.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CardCreateRequest request;
-    public PostCrmV3ExtensionsCardsAppIdCreateRequest withRequest(org.openapis.openapi.models.shared.CardCreateRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CardCreateRequest cardCreateRequest;
+    public PostCrmV3ExtensionsCardsAppIdCreateRequest withCardCreateRequest(org.openapis.openapi.models.shared.CardCreateRequest cardCreateRequest) {
+        this.cardCreateRequest = cardCreateRequest;
         return this;
     }
     
-    
-    public PostCrmV3ExtensionsCardsAppIdCreateSecurity security;
-    public PostCrmV3ExtensionsCardsAppIdCreateRequest withSecurity(PostCrmV3ExtensionsCardsAppIdCreateSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the target app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public PostCrmV3ExtensionsCardsAppIdCreateRequest withAppId(Integer appId) {
+        this.appId = appId;
         return this;
     }
     

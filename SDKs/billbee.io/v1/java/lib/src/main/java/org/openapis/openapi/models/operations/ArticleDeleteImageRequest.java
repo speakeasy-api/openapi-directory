@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleDeleteImageRequest {
-    
-    public ArticleDeleteImagePathParams pathParams;
-    public ArticleDeleteImageRequest withPathParams(ArticleDeleteImagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The image id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=imageId")
+    public Long imageId;
+    public ArticleDeleteImageRequest withImageId(Long imageId) {
+        this.imageId = imageId;
         return this;
     }
     

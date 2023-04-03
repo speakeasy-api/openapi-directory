@@ -4,27 +4,176 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentOrderreportsListtransactionsRequest {
-    
-    public ContentOrderreportsListtransactionsPathParams pathParams;
-    public ContentOrderreportsListtransactionsRequest withPathParams(ContentOrderreportsListtransactionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ContentOrderreportsListtransactionsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public ContentOrderreportsListtransactionsQueryParams queryParams;
-    public ContentOrderreportsListtransactionsRequest withQueryParams(ContentOrderreportsListtransactionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ContentOrderreportsListtransactionsRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ContentOrderreportsListtransactionsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public ContentOrderreportsListtransactionsSecurity security;
-    public ContentOrderreportsListtransactionsRequest withSecurity(ContentOrderreportsListtransactionsSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ContentOrderreportsListtransactionsRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * The Google-provided ID of the disbursement (found in Wallet).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=disbursementId")
+    public String disbursementId;
+    public ContentOrderreportsListtransactionsRequest withDisbursementId(String disbursementId) {
+        this.disbursementId = disbursementId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ContentOrderreportsListtransactionsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ContentOrderreportsListtransactionsRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The maximum number of disbursements to return in the response, used for paging.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ContentOrderreportsListtransactionsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The ID of the account that manages the order. This cannot be a multi-client account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public ContentOrderreportsListtransactionsRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ContentOrderreportsListtransactionsRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The token returned by the previous request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public ContentOrderreportsListtransactionsRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ContentOrderreportsListtransactionsRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ContentOrderreportsListtransactionsRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The last date in which transaction occurred. In ISO 8601 format. Default: current date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transactionEndDate")
+    public String transactionEndDate;
+    public ContentOrderreportsListtransactionsRequest withTransactionEndDate(String transactionEndDate) {
+        this.transactionEndDate = transactionEndDate;
+        return this;
+    }
+    
+    /**
+     * The first date in which transaction occurred. In ISO 8601 format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transactionStartDate")
+    public String transactionStartDate;
+    public ContentOrderreportsListtransactionsRequest withTransactionStartDate(String transactionStartDate) {
+        this.transactionStartDate = transactionStartDate;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ContentOrderreportsListtransactionsRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ContentOrderreportsListtransactionsRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

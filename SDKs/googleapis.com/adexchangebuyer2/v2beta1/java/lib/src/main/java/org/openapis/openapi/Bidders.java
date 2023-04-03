@@ -35,25 +35,26 @@ public class Bidders {
     /**
      * Lists all metrics that are measured in terms of number of bids.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidMetricsListResponse adexchangebuyer2BiddersFilterSetsBidMetricsList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidMetricsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidMetricsListResponse adexchangebuyer2BiddersFilterSetsBidMetricsList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidMetricsListRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidMetricsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidMetricsListPathParams.class, baseUrl, "/v2beta1/{filterSetName}/bidMetrics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidMetricsListRequest.class, baseUrl, "/v2beta1/{filterSetName}/bidMetrics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidMetricsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidMetricsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,25 +81,26 @@ public class Bidders {
     /**
      * List all errors that occurred in bid responses, with the number of bid responses affected for each reason.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponseErrorsListResponse adexchangebuyer2BiddersFilterSetsBidResponseErrorsList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponseErrorsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponseErrorsListResponse adexchangebuyer2BiddersFilterSetsBidResponseErrorsList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponseErrorsListRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponseErrorsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponseErrorsListPathParams.class, baseUrl, "/v2beta1/{filterSetName}/bidResponseErrors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponseErrorsListRequest.class, baseUrl, "/v2beta1/{filterSetName}/bidResponseErrors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponseErrorsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponseErrorsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -125,25 +127,26 @@ public class Bidders {
     /**
      * List all reasons for which bid responses were considered to have no applicable bids, with the number of bid responses affected for each reason.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsListResponse adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsListResponse adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsListRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsListPathParams.class, baseUrl, "/v2beta1/{filterSetName}/bidResponsesWithoutBids", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsListRequest.class, baseUrl, "/v2beta1/{filterSetName}/bidResponsesWithoutBids", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -170,27 +173,28 @@ public class Bidders {
     /**
      * Creates the specified filter set for the account with the given account ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsCreateResponse adexchangebuyer2BiddersFilterSetsCreate(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsCreateResponse adexchangebuyer2BiddersFilterSetsCreate(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsCreateRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsCreatePathParams.class, baseUrl, "/v2beta1/{ownerName}/filterSets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsCreateRequest.class, baseUrl, "/v2beta1/{ownerName}/filterSets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "filterSet", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -217,25 +221,26 @@ public class Bidders {
     /**
      * Deletes the requested filter set from the account with the given account ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsDeleteResponse adexchangebuyer2BiddersFilterSetsDelete(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsDeleteResponse adexchangebuyer2BiddersFilterSetsDelete(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsDeleteRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsDeletePathParams.class, baseUrl, "/v2beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsDeleteRequest.class, baseUrl, "/v2beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -262,25 +267,26 @@ public class Bidders {
     /**
      * List all reasons that caused a bid request not to be sent for an impression, with the number of bid requests not sent for each reason.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsListResponse adexchangebuyer2BiddersFilterSetsFilteredBidRequestsList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsListResponse adexchangebuyer2BiddersFilterSetsFilteredBidRequestsList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsListRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsListPathParams.class, baseUrl, "/v2beta1/{filterSetName}/filteredBidRequests", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsListRequest.class, baseUrl, "/v2beta1/{filterSetName}/filteredBidRequests", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -307,25 +313,26 @@ public class Bidders {
     /**
      * List all creatives associated with a specific reason for which bids were filtered, with the number of bids filtered for each creative.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListResponse adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListResponse adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListPathParams.class, baseUrl, "/v2beta1/{filterSetName}/filteredBids/{creativeStatusId}/creatives", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest.class, baseUrl, "/v2beta1/{filterSetName}/filteredBids/{creativeStatusId}/creatives", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -352,25 +359,26 @@ public class Bidders {
     /**
      * List all details associated with a specific reason for which bids were filtered, with the number of bids filtered for each detail.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListResponse adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListResponse adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListPathParams.class, baseUrl, "/v2beta1/{filterSetName}/filteredBids/{creativeStatusId}/details", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListRequest.class, baseUrl, "/v2beta1/{filterSetName}/filteredBids/{creativeStatusId}/details", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -397,25 +405,26 @@ public class Bidders {
     /**
      * List all reasons for which bids were filtered, with the number of bids filtered for each reason.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsListResponse adexchangebuyer2BiddersFilterSetsFilteredBidsList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsListResponse adexchangebuyer2BiddersFilterSetsFilteredBidsList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsListRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsListPathParams.class, baseUrl, "/v2beta1/{filterSetName}/filteredBids", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsListRequest.class, baseUrl, "/v2beta1/{filterSetName}/filteredBids", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -442,25 +451,26 @@ public class Bidders {
     /**
      * Retrieves the requested filter set for the account with the given account ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsGetResponse adexchangebuyer2BiddersFilterSetsGet(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsGetResponse adexchangebuyer2BiddersFilterSetsGet(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsGetRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsGetPathParams.class, baseUrl, "/v2beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsGetRequest.class, baseUrl, "/v2beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -487,25 +497,26 @@ public class Bidders {
     /**
      * Lists all metrics that are measured in terms of number of impressions.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsImpressionMetricsListResponse adexchangebuyer2BiddersFilterSetsImpressionMetricsList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsImpressionMetricsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsImpressionMetricsListResponse adexchangebuyer2BiddersFilterSetsImpressionMetricsList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsImpressionMetricsListRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsImpressionMetricsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsImpressionMetricsListPathParams.class, baseUrl, "/v2beta1/{filterSetName}/impressionMetrics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsImpressionMetricsListRequest.class, baseUrl, "/v2beta1/{filterSetName}/impressionMetrics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsImpressionMetricsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsImpressionMetricsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -532,25 +543,26 @@ public class Bidders {
     /**
      * Lists all filter sets for the account with the given account ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsListResponse adexchangebuyer2BiddersFilterSetsList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsListResponse adexchangebuyer2BiddersFilterSetsList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsListRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsListPathParams.class, baseUrl, "/v2beta1/{ownerName}/filterSets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsListRequest.class, baseUrl, "/v2beta1/{ownerName}/filterSets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -577,25 +589,26 @@ public class Bidders {
     /**
      * List all reasons for which bids lost in the auction, with the number of bids that lost for each reason.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsLosingBidsListResponse adexchangebuyer2BiddersFilterSetsLosingBidsList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsLosingBidsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsLosingBidsListResponse adexchangebuyer2BiddersFilterSetsLosingBidsList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsLosingBidsListRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsLosingBidsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsLosingBidsListPathParams.class, baseUrl, "/v2beta1/{filterSetName}/losingBids", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsLosingBidsListRequest.class, baseUrl, "/v2beta1/{filterSetName}/losingBids", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsLosingBidsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsLosingBidsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -622,25 +635,26 @@ public class Bidders {
     /**
      * List all reasons for which winning bids were not billable, with the number of bids not billed for each reason.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListResponse adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListResponse adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsList(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListPathParams.class, baseUrl, "/v2beta1/{filterSetName}/nonBillableWinningBids", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListRequest.class, baseUrl, "/v2beta1/{filterSetName}/nonBillableWinningBids", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

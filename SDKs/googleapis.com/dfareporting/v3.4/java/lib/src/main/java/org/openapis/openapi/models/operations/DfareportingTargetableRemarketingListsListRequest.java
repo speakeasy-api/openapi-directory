@@ -4,27 +4,196 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingTargetableRemarketingListsListRequest {
-    
-    public DfareportingTargetableRemarketingListsListPathParams pathParams;
-    public DfareportingTargetableRemarketingListsListRequest withPathParams(DfareportingTargetableRemarketingListsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DfareportingTargetableRemarketingListsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public DfareportingTargetableRemarketingListsListQueryParams queryParams;
-    public DfareportingTargetableRemarketingListsListRequest withQueryParams(DfareportingTargetableRemarketingListsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DfareportingTargetableRemarketingListsListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Select only active or only inactive targetable remarketing lists.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=active")
+    public Boolean active;
+    public DfareportingTargetableRemarketingListsListRequest withActive(Boolean active) {
+        this.active = active;
+        return this;
+    }
     
-    public DfareportingTargetableRemarketingListsListSecurity security;
-    public DfareportingTargetableRemarketingListsListRequest withSecurity(DfareportingTargetableRemarketingListsListSecurity security) {
-        this.security = security;
+    /**
+     * Select only targetable remarketing lists targetable by these advertisers.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=advertiserId")
+    public String advertiserId;
+    public DfareportingTargetableRemarketingListsListRequest withAdvertiserId(String advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+    }
+    
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DfareportingTargetableRemarketingListsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DfareportingTargetableRemarketingListsListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DfareportingTargetableRemarketingListsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DfareportingTargetableRemarketingListsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public DfareportingTargetableRemarketingListsListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Allows searching for objects by name or ID. Wildcards (*) are allowed. For example, "remarketing list*2015" will return objects with names like "remarketing list June 2015", "remarketing list April 2015", or simply "remarketing list 2015". Most of the searches also add wildcards implicitly at the start and the end of the search string. For example, a search string of "remarketing list" will match objects with name "my remarketing list", "remarketing list 2015", or simply "remarketing list".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DfareportingTargetableRemarketingListsListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DfareportingTargetableRemarketingListsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Value of the nextPageToken from the previous result page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public DfareportingTargetableRemarketingListsListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DfareportingTargetableRemarketingListsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * User profile ID associated with this request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
+    public String profileId;
+    public DfareportingTargetableRemarketingListsListRequest withProfileId(String profileId) {
+        this.profileId = profileId;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DfareportingTargetableRemarketingListsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Field by which to sort the list.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
+    public DfareportingTargetableRemarketingListsListSortFieldEnum sortField;
+    public DfareportingTargetableRemarketingListsListRequest withSortField(DfareportingTargetableRemarketingListsListSortFieldEnum sortField) {
+        this.sortField = sortField;
+        return this;
+    }
+    
+    /**
+     * Order of sorted results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
+    public DfareportingTargetableRemarketingListsListSortOrderEnum sortOrder;
+    public DfareportingTargetableRemarketingListsListRequest withSortOrder(DfareportingTargetableRemarketingListsListSortOrderEnum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DfareportingTargetableRemarketingListsListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DfareportingTargetableRemarketingListsListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

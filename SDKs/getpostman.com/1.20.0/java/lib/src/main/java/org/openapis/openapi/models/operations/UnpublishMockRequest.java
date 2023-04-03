@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnpublishMockRequest {
-    
-    public UnpublishMockPathParams pathParams;
-    public UnpublishMockRequest withPathParams(UnpublishMockPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mock_uid")
+    public String mockUid;
+    public UnpublishMockRequest withMockUid(String mockUid) {
+        this.mockUid = mockUid;
         return this;
     }
     

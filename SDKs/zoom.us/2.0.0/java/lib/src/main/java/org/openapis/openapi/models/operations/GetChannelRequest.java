@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelRequest {
-    
-    public GetChannelPathParams pathParams;
-    public GetChannelRequest withPathParams(GetChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Channel ID: Unique Identifier of a channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
+    public String channelId;
+    public GetChannelRequest withChannelId(String channelId) {
+        this.channelId = channelId;
         return this;
     }
     
-    
-    public GetChannelSecurity security;
-    public GetChannelRequest withSecurity(GetChannelSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the user who is the owner of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public GetChannelRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

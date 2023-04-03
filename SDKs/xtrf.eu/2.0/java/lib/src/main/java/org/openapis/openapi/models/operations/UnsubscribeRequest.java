@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnsubscribeRequest {
-    
-    public UnsubscribePathParams pathParams;
-    public UnsubscribeRequest withPathParams(UnsubscribePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriptionId")
+    public String subscriptionId;
+    public UnsubscribeRequest withSubscriptionId(String subscriptionId) {
+        this.subscriptionId = subscriptionId;
         return this;
     }
     

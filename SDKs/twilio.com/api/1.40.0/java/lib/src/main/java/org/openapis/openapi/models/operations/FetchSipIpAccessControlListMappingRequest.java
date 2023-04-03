@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSipIpAccessControlListMappingRequest {
-    
-    public FetchSipIpAccessControlListMappingPathParams pathParams;
-    public FetchSipIpAccessControlListMappingRequest withPathParams(FetchSipIpAccessControlListMappingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique id of the Account that is responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public FetchSipIpAccessControlListMappingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public FetchSipIpAccessControlListMappingSecurity security;
-    public FetchSipIpAccessControlListMappingRequest withSecurity(FetchSipIpAccessControlListMappingSecurity security) {
-        this.security = security;
+    /**
+     * A 34 character string that uniquely identifies the SIP domain.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainSid")
+    public String domainSid;
+    public FetchSipIpAccessControlListMappingRequest withDomainSid(String domainSid) {
+        this.domainSid = domainSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchSipIpAccessControlListMappingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies the resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchSipIpAccessControlListMappingRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

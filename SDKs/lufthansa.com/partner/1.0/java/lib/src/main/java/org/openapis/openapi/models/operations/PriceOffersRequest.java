@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PriceOffersRequest {
-    
-    public PriceOffersPathParams pathParams;
-    public PriceOffersRequest withPathParams(PriceOffersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Departure date in local time (YYYY-MM-DD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=departureDate")
+    public String departureDate;
+    public PriceOffersRequest withDepartureDate(String departureDate) {
+        this.departureDate = departureDate;
         return this;
     }
     
-    
-    public PriceOffersQueryParams queryParams;
-    public PriceOffersRequest withQueryParams(PriceOffersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Destination city. 3-letter IATA city code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destination")
+    public String destination;
+    public PriceOffersRequest withDestination(String destination) {
+        this.destination = destination;
         return this;
     }
     
+    /**
+     * Departure city. 3-letter IATA city code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=origin")
+    public String origin;
+    public PriceOffersRequest withOrigin(String origin) {
+        this.origin = origin;
+        return this;
+    }
     
-    public PriceOffersSecurity security;
-    public PriceOffersRequest withSecurity(PriceOffersSecurity security) {
-        this.security = security;
+    /**
+     * Return date in local time (YYYY-MM-DD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=returnDate")
+    public String returnDate;
+    public PriceOffersRequest withReturnDate(String returnDate) {
+        this.returnDate = returnDate;
+        return this;
+    }
+    
+    /**
+     * Optional parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service")
+    public String service;
+    public PriceOffersRequest withService(String service) {
+        this.service = service;
         return this;
     }
     

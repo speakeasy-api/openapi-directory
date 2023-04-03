@@ -7,24 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersIdUserConnectionsIdConnectionAccountsRequest {
-    
-    public PostUsersIdUserConnectionsIdConnectionAccountsPathParams pathParams;
-    public PostUsersIdUserConnectionsIdConnectionAccountsRequest withPathParams(PostUsersIdUserConnectionsIdConnectionAccountsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostUsersIdUserConnectionsIdConnectionAccountsQueryParams queryParams;
-    public PostUsersIdUserConnectionsIdConnectionAccountsRequest withQueryParams(PostUsersIdUserConnectionsIdConnectionAccountsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostUsersIdUserConnectionsIdConnectionAccountsRequestBody request;
-    public PostUsersIdUserConnectionsIdConnectionAccountsRequest withRequest(PostUsersIdUserConnectionsIdConnectionAccountsRequestBody request) {
-        this.request = request;
+    public PostUsersIdUserConnectionsIdConnectionAccountsRequestBody requestBody;
+    public PostUsersIdUserConnectionsIdConnectionAccountsRequest withRequestBody(PostUsersIdUserConnectionsIdConnectionAccountsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PostUsersIdUserConnectionsIdConnectionAccountsRequest withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
+    public Long idConnection;
+    public PostUsersIdUserConnectionsIdConnectionAccountsRequest withIdConnection(Long idConnection) {
+        this.idConnection = idConnection;
+        return this;
+    }
+    
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public PostUsersIdUserConnectionsIdConnectionAccountsRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

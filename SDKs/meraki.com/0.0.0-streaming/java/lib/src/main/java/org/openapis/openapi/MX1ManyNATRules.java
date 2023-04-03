@@ -40,7 +40,7 @@ public class MX1ManyNATRules {
      */
     public org.openapis.openapi.models.operations.GetNetworkOneToManyNatRulesResponse getNetworkOneToManyNatRules(org.openapis.openapi.models.operations.GetNetworkOneToManyNatRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkOneToManyNatRulesPathParams.class, baseUrl, "/networks/{networkId}/oneToManyNatRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkOneToManyNatRulesRequest.class, baseUrl, "/networks/{networkId}/oneToManyNatRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class MX1ManyNATRules {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkOneToManyNatRulesResponse updateNetworkOneToManyNatRules(org.openapis.openapi.models.operations.UpdateNetworkOneToManyNatRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkOneToManyNatRulesPathParams.class, baseUrl, "/networks/{networkId}/oneToManyNatRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkOneToManyNatRulesRequest.class, baseUrl, "/networks/{networkId}/oneToManyNatRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

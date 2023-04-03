@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTrainedModelMetrics1Request {
-    
-    public GetTrainedModelMetrics1PathParams pathParams;
-    public GetTrainedModelMetrics1Request withPathParams(GetTrainedModelMetrics1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetTrainedModelMetrics1Security security;
-    public GetTrainedModelMetrics1Request withSecurity(GetTrainedModelMetrics1Security security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modelId")
+    public String modelId;
+    public GetTrainedModelMetrics1Request withModelId(String modelId) {
+        this.modelId = modelId;
         return this;
     }
     

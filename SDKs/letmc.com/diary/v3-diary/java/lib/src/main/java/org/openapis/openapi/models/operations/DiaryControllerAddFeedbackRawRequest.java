@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerAddFeedbackRawRequest {
-    
-    public DiaryControllerAddFeedbackRawPathParams pathParams;
-    public DiaryControllerAddFeedbackRawRequest withPathParams(DiaryControllerAddFeedbackRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Feedback submission model
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public DiaryControllerAddFeedbackRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public DiaryControllerAddFeedbackRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public DiaryControllerAddFeedbackRawRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     

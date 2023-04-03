@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackageProjectTranslationMemoryStatusRequest {
-    
-    public PackageProjectTranslationMemoryStatusPathParams pathParams;
-    public PackageProjectTranslationMemoryStatusRequest withPathParams(PackageProjectTranslationMemoryStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Async operation key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=async_request_key")
+    public String asyncRequestKey;
+    public PackageProjectTranslationMemoryStatusRequest withAsyncRequestKey(String asyncRequestKey) {
+        this.asyncRequestKey = asyncRequestKey;
         return this;
     }
     
-    
-    public PackageProjectTranslationMemoryStatusQueryParams queryParams;
-    public PackageProjectTranslationMemoryStatusRequest withQueryParams(PackageProjectTranslationMemoryStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public PackageProjectTranslationMemoryStatusRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

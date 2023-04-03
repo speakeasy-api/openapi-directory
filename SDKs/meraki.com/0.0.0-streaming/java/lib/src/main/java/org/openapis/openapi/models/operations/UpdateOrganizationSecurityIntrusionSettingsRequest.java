@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrganizationSecurityIntrusionSettingsRequest {
-    
-    public UpdateOrganizationSecurityIntrusionSettingsPathParams pathParams;
-    public UpdateOrganizationSecurityIntrusionSettingsRequest withPathParams(UpdateOrganizationSecurityIntrusionSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateOrganizationSecurityIntrusionSettingsRequestBody requestBody;
+    public UpdateOrganizationSecurityIntrusionSettingsRequest withRequestBody(UpdateOrganizationSecurityIntrusionSettingsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateOrganizationSecurityIntrusionSettingsRequestBody request;
-    public UpdateOrganizationSecurityIntrusionSettingsRequest withRequest(UpdateOrganizationSecurityIntrusionSettingsRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public UpdateOrganizationSecurityIntrusionSettingsRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

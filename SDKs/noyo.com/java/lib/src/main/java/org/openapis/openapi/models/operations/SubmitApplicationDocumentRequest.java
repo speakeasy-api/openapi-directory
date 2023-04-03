@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubmitApplicationDocumentRequest {
-    
-    public SubmitApplicationDocumentPathParams pathParams;
-    public SubmitApplicationDocumentRequest withPathParams(SubmitApplicationDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ApplicationDocumentEditRequest applicationDocumentEditRequest;
+    public SubmitApplicationDocumentRequest withApplicationDocumentEditRequest(org.openapis.openapi.models.shared.ApplicationDocumentEditRequest applicationDocumentEditRequest) {
+        this.applicationDocumentEditRequest = applicationDocumentEditRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApplicationDocumentEditRequest request;
-    public SubmitApplicationDocumentRequest withRequest(org.openapis.openapi.models.shared.ApplicationDocumentEditRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the application in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application_id")
+    public String applicationId;
+    public SubmitApplicationDocumentRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the application document in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=document_id")
+    public String documentId;
+    public SubmitApplicationDocumentRequest withDocumentId(String documentId) {
+        this.documentId = documentId;
+        return this;
+    }
+    
+    /**
+     * The current version identifier of the application document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public SubmitApplicationDocumentRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

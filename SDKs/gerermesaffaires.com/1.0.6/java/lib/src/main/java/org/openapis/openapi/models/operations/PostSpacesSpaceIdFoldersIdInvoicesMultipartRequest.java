@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdInvoicesMultipartRequest {
-    
-    public PostSpacesSpaceIdFoldersIdInvoicesMultipartPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdInvoicesMultipartRequest withPathParams(PostSpacesSpaceIdFoldersIdInvoicesMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Invoice to add (either DocumentId, InvoiceDate either (File,Name,Content64Encoded,Title,InvoiceDate) is mandatory)
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostSpacesSpaceIdFoldersIdInvoicesMultipartFormData1 request;
-    public PostSpacesSpaceIdFoldersIdInvoicesMultipartRequest withRequest(PostSpacesSpaceIdFoldersIdInvoicesMultipartFormData1 request) {
-        this.request = request;
+    public PostSpacesSpaceIdFoldersIdInvoicesMultipartFormData1 requestBody;
+    public PostSpacesSpaceIdFoldersIdInvoicesMultipartRequest withRequestBody(PostSpacesSpaceIdFoldersIdInvoicesMultipartFormData1 requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdInvoicesMultipartRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdInvoicesMultipartSecurity security;
-    public PostSpacesSpaceIdFoldersIdInvoicesMultipartRequest withSecurity(PostSpacesSpaceIdFoldersIdInvoicesMultipartSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdInvoicesMultipartRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

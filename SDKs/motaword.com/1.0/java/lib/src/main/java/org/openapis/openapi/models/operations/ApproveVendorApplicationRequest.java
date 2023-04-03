@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApproveVendorApplicationRequest {
-    
-    public ApproveVendorApplicationPathParams pathParams;
-    public ApproveVendorApplicationRequest withPathParams(ApproveVendorApplicationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ApproveVendorApplicationSecurity security;
-    public ApproveVendorApplicationRequest withSecurity(ApproveVendorApplicationSecurity security) {
-        this.security = security;
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public ApproveVendorApplicationRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportDataRequest {
-    
-    public ExportDataQueryParams queryParams;
-    public ExportDataRequest withQueryParams(ExportDataQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Indicates if the operation is done for a browser.  If true, the response will be a JSON payload with a property called `href`.  This `href` will be a single-use, naked download link suitable for use by a web browser to download the content.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forBrowser")
+    public Boolean forBrowser;
+    public ExportDataRequest withForBrowser(Boolean forBrowser) {
+        this.forBrowser = forBrowser;
         return this;
     }
     

@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DomainsGetRequest {
+    /**
+     * Limit results to this number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public DomainsGetRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public DomainsGetQueryParams queryParams;
-    public DomainsGetRequest withQueryParams(DomainsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter domains with this anmen
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DomainsGetRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Offset where to start from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public DomainsGetRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Type of domain ("system"/"go"/"personal"/"dedicated"). If not specified default is "system"
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public DomainsGetTypeEnum type;
+    public DomainsGetRequest withType(DomainsGetTypeEnum type) {
+        this.type = type;
         return this;
     }
     

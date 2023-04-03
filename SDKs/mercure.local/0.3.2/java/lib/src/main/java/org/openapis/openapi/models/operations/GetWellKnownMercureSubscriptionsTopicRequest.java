@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWellKnownMercureSubscriptionsTopicRequest {
-    
-    public GetWellKnownMercureSubscriptionsTopicPathParams pathParams;
-    public GetWellKnownMercureSubscriptionsTopicRequest withPathParams(GetWellKnownMercureSubscriptionsTopicPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=topic")
+    public String topic;
+    public GetWellKnownMercureSubscriptionsTopicRequest withTopic(String topic) {
+        this.topic = topic;
         return this;
     }
     

@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeExpressionsRequest {
-    
-    public GETDescribeExpressionsQueryParams queryParams;
-    public GETDescribeExpressionsRequest withQueryParams(GETDescribeExpressionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeExpressionsActionEnum action;
+    public GETDescribeExpressionsRequest withAction(GETDescribeExpressionsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Whether to display the deployed configuration (&lt;code&gt;true&lt;/code&gt;) or include any pending changes (&lt;code&gt;false&lt;/code&gt;). Defaults to &lt;code&gt;false&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Deployed")
+    public Boolean deployed;
+    public GETDescribeExpressionsRequest withDeployed(Boolean deployed) {
+        this.deployed = deployed;
+        return this;
+    }
     
-    public GETDescribeExpressionsHeaders headers;
-    public GETDescribeExpressionsRequest withHeaders(GETDescribeExpressionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the domain you want to describe.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
+    public String domainName;
+    public GETDescribeExpressionsRequest withDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    
+    /**
+     * Limits the &lt;code&gt;&lt;a&gt;DescribeExpressions&lt;/a&gt;&lt;/code&gt; response to the specified expressions. If not specified, all expressions are shown.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ExpressionNames")
+    public String[] expressionNames;
+    public GETDescribeExpressionsRequest withExpressionNames(String[] expressionNames) {
+        this.expressionNames = expressionNames;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeExpressionsVersionEnum version;
+    public GETDescribeExpressionsRequest withVersion(GETDescribeExpressionsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeExpressionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeExpressionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeExpressionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeExpressionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeExpressionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeExpressionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeExpressionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

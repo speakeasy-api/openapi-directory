@@ -38,7 +38,7 @@ public class AnalyticsReports {
      */
     public org.openapis.openapi.models.operations.DeleteReportFilterResponse deleteReportFilter(org.openapis.openapi.models.operations.DeleteReportFilterRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteReportFilterPathParams.class, baseUrl, "/v2/user/analytics/{storeId}/reports/filters/{reportFilterId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteReportFilterRequest.class, baseUrl, "/v2/user/analytics/{storeId}/reports/filters/{reportFilterId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -78,7 +78,7 @@ public class AnalyticsReports {
      */
     public org.openapis.openapi.models.operations.GetReportFilterResponse getReportFilter(org.openapis.openapi.models.operations.GetReportFilterRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReportFilterPathParams.class, baseUrl, "/v2/user/analytics/{storeId}/reports/filters/{reportFilterId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReportFilterRequest.class, baseUrl, "/v2/user/analytics/{storeId}/reports/filters/{reportFilterId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -124,7 +124,7 @@ public class AnalyticsReports {
      */
     public org.openapis.openapi.models.operations.GetReportFiltersResponse getReportFilters(org.openapis.openapi.models.operations.GetReportFiltersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReportFiltersPathParams.class, baseUrl, "/v2/user/analytics/{storeId}/reports/filters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReportFiltersRequest.class, baseUrl, "/v2/user/analytics/{storeId}/reports/filters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -170,12 +170,12 @@ public class AnalyticsReports {
      */
     public org.openapis.openapi.models.operations.SaveReportFilterResponse saveReportFilter(org.openapis.openapi.models.operations.SaveReportFilterRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SaveReportFilterPathParams.class, baseUrl, "/v2/user/analytics/{storeId}/reports/filters/{reportFilterId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SaveReportFilterRequest.class, baseUrl, "/v2/user/analytics/{storeId}/reports/filters/{reportFilterId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "saveReportFilterRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

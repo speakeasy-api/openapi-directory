@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DevicesBySubTypeGetRequest {
-    
-    public DevicesBySubTypeGetQueryParams queryParams;
-    public DevicesBySubTypeGetRequest withQueryParams(DevicesBySubTypeGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=meterSubType")
+    public DevicesBySubTypeGetMeterSubTypeEnum meterSubType;
+    public DevicesBySubTypeGetRequest withMeterSubType(DevicesBySubTypeGetMeterSubTypeEnum meterSubType) {
+        this.meterSubType = meterSubType;
         return this;
     }
     

@@ -4,20 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveMerchantRequest {
-    
-    public RetrieveMerchantPathParams pathParams;
-    public RetrieveMerchantRequest withPathParams(RetrieveMerchantPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetrieveMerchantSecurity security;
-    public RetrieveMerchantRequest withSecurity(RetrieveMerchantSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the merchant to retrieve. If the string "me" is supplied as the ID,
+     * then retrieve the merchant that is currently accessible to this call.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchant_id")
+    public String merchantId;
+    public RetrieveMerchantRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     

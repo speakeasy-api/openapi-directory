@@ -38,12 +38,12 @@ public class ChannelCatalogsExclusionFilters {
      */
     public org.openapis.openapi.models.operations.ConfigureChannelCatalogExclusionFiltersResponse configureChannelCatalogExclusionFilters(org.openapis.openapi.models.operations.ConfigureChannelCatalogExclusionFiltersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConfigureChannelCatalogExclusionFiltersPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/exclusionFilters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConfigureChannelCatalogExclusionFiltersRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/exclusionFilters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -83,7 +83,7 @@ public class ChannelCatalogsExclusionFilters {
      */
     public org.openapis.openapi.models.operations.GetChannelCatalogExclusionFiltersResponse getChannelCatalogExclusionFilters(org.openapis.openapi.models.operations.GetChannelCatalogExclusionFiltersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogExclusionFiltersPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/exclusionFilters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogExclusionFiltersRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/exclusionFilters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

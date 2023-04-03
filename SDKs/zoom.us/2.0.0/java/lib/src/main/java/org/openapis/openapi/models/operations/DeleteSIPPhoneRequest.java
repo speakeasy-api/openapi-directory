@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSIPPhoneRequest {
-    
-    public DeleteSIPPhonePathParams pathParams;
-    public DeleteSIPPhoneRequest withPathParams(DeleteSIPPhonePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteSIPPhoneSecurity security;
-    public DeleteSIPPhoneRequest withSecurity(DeleteSIPPhoneSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the SIP Phone. It can be retrieved from the List SIP Phones API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=phoneId")
+    public String phoneId;
+    public DeleteSIPPhoneRequest withPhoneId(String phoneId) {
+        this.phoneId = phoneId;
         return this;
     }
     

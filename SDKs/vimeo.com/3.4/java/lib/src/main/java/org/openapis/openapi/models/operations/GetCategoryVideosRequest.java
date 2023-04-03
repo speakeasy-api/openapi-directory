@@ -4,20 +4,90 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCategoryVideosRequest {
-    
-    public GetCategoryVideosPathParams pathParams;
-    public GetCategoryVideosRequest withPathParams(GetCategoryVideosPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the category.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category")
+    public String category;
+    public GetCategoryVideosRequest withCategory(String category) {
+        this.category = category;
         return this;
     }
     
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetCategoryVideosDirectionEnum direction;
+    public GetCategoryVideosRequest withDirection(GetCategoryVideosDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public GetCategoryVideosQueryParams queryParams;
-    public GetCategoryVideosRequest withQueryParams(GetCategoryVideosQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The attribute by which to filter the results.
+     * 
+     * Option descriptions:
+     *  * `conditional_featured` - Featured (promoted) videos
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public GetCategoryVideosFilterEnum filter;
+    public GetCategoryVideosRequest withFilter(GetCategoryVideosFilterEnum filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_embeddable")
+    public Boolean filterEmbeddable;
+    public GetCategoryVideosRequest withFilterEmbeddable(Boolean filterEmbeddable) {
+        this.filterEmbeddable = filterEmbeddable;
+        return this;
+    }
+    
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetCategoryVideosRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetCategoryVideosRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The search query to use to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetCategoryVideosRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetCategoryVideosSortEnum sort;
+    public GetCategoryVideosRequest withSort(GetCategoryVideosSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

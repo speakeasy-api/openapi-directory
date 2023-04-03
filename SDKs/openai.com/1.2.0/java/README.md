@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CancelFineTunePathParams;
 import org.openapis.openapi.models.operations.CancelFineTuneRequest;
 import org.openapis.openapi.models.operations.CancelFineTuneResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             CancelFineTuneRequest req = new CancelFineTuneRequest() {{
-                pathParams = new CancelFineTunePathParams() {{
-                    fineTuneId = "ft-AF1WoRqd3aJAHsqc9NY7iL8F";
-                }};
-            }};            
+                fineTuneId = "ft-AF1WoRqd3aJAHsqc9NY7iL8F";
+            }}            
 
             CancelFineTuneResponse res = sdk.openAI.cancelFineTune(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### openAI

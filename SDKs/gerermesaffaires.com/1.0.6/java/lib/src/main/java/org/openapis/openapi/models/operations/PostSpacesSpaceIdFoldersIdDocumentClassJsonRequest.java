@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdDocumentClassJsonRequest {
-    
-    public PostSpacesSpaceIdFoldersIdDocumentClassJsonPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdDocumentClassJsonRequest withPathParams(PostSpacesSpaceIdFoldersIdDocumentClassJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Document to add (either DocumentId either (File,Name,Content64Encoded,Title) is mandatory)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public PostSpacesSpaceIdFoldersIdDocumentClassJsonRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public PostSpacesSpaceIdFoldersIdDocumentClassJsonRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * class of the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentClass")
+    public String documentClass;
+    public PostSpacesSpaceIdFoldersIdDocumentClassJsonRequest withDocumentClass(String documentClass) {
+        this.documentClass = documentClass;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdDocumentClassJsonSecurity security;
-    public PostSpacesSpaceIdFoldersIdDocumentClassJsonRequest withSecurity(PostSpacesSpaceIdFoldersIdDocumentClassJsonSecurity security) {
-        this.security = security;
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdDocumentClassJsonRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdDocumentClassJsonRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

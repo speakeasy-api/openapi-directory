@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BoxScoreRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public BoxScoreFormatEnum format;
+    public BoxScoreRequest withFormat(BoxScoreFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public BoxScorePathParams pathParams;
-    public BoxScoreRequest withPathParams(BoxScorePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique FantasyData Game ID. 
+     * Example:&lt;code&gt;100002649&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gameid")
+    public String gameid;
+    public BoxScoreRequest withGameid(String gameid) {
+        this.gameid = gameid;
         return this;
     }
     

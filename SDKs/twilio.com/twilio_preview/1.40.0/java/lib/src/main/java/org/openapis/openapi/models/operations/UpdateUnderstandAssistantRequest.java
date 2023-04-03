@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUnderstandAssistantRequest {
-    
-    public UpdateUnderstandAssistantPathParams pathParams;
-    public UpdateUnderstandAssistantRequest withPathParams(UpdateUnderstandAssistantPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateUnderstandAssistantUpdateUnderstandAssistantRequest request;
-    public UpdateUnderstandAssistantRequest withRequest(UpdateUnderstandAssistantUpdateUnderstandAssistantRequest request) {
-        this.request = request;
+    public UpdateUnderstandAssistantUpdateUnderstandAssistantRequest requestBody;
+    public UpdateUnderstandAssistantRequest withRequestBody(UpdateUnderstandAssistantUpdateUnderstandAssistantRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateUnderstandAssistantSecurity security;
-    public UpdateUnderstandAssistantRequest withSecurity(UpdateUnderstandAssistantSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateUnderstandAssistantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateUnderstandAssistantRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVideoCollectionRequest {
-    
-    public GetVideoCollectionPathParams pathParams;
-    public GetVideoCollectionRequest withPathParams(GetVideoCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Which sharing information to include in the response, such as a URL to the collection
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
+    public GetVideoCollectionEmbedEnum[] embed;
+    public GetVideoCollectionRequest withEmbed(GetVideoCollectionEmbedEnum[] embed) {
+        this.embed = embed;
         return this;
     }
     
-    
-    public GetVideoCollectionQueryParams queryParams;
-    public GetVideoCollectionRequest withQueryParams(GetVideoCollectionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the collection to return
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetVideoCollectionRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetVideoCollectionSecurity security;
-    public GetVideoCollectionRequest withSecurity(GetVideoCollectionSecurity security) {
-        this.security = security;
+    /**
+     * Code to retrieve a shared collection
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=share_code")
+    public String shareCode;
+    public GetVideoCollectionRequest withShareCode(String shareCode) {
+        this.shareCode = shareCode;
         return this;
     }
     

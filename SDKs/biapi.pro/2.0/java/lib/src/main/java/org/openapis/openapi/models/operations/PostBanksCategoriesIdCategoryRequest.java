@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostBanksCategoriesIdCategoryRequest {
-    
-    public PostBanksCategoriesIdCategoryPathParams pathParams;
-    public PostBanksCategoriesIdCategoryRequest withPathParams(PostBanksCategoriesIdCategoryPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostBanksCategoriesIdCategoryQueryParams queryParams;
-    public PostBanksCategoriesIdCategoryRequest withQueryParams(PostBanksCategoriesIdCategoryQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostBanksCategoriesIdCategoryRequestBody request;
-    public PostBanksCategoriesIdCategoryRequest withRequest(PostBanksCategoriesIdCategoryRequestBody request) {
-        this.request = request;
+    public PostBanksCategoriesIdCategoryRequestBody requestBody;
+    public PostBanksCategoriesIdCategoryRequest withRequestBody(PostBanksCategoriesIdCategoryRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PostBanksCategoriesIdCategoryRequest withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_category")
+    public Long idCategory;
+    public PostBanksCategoriesIdCategoryRequest withIdCategory(Long idCategory) {
+        this.idCategory = idCategory;
         return this;
     }
     

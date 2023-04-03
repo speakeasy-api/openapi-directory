@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RenameTagRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=new_tag_name")
+    public String newTagName;
+    public RenameTagRequest withNewTagName(String newTagName) {
+        this.newTagName = newTagName;
+        return this;
+    }
     
-    public RenameTagPathParams pathParams;
-    public RenameTagRequest withPathParams(RenameTagPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag_name")
+    public String tagName;
+    public RenameTagRequest withTagName(String tagName) {
+        this.tagName = tagName;
         return this;
     }
     

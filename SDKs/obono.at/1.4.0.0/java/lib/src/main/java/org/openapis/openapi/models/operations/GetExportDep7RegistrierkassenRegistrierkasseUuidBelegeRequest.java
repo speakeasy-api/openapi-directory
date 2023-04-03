@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeRequest {
-    
-    public GetExportDep7RegistrierkassenRegistrierkasseUuidBelegePathParams pathParams;
-    public GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeRequest withPathParams(GetExportDep7RegistrierkassenRegistrierkasseUuidBelegePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Only return results that were saved after the specified date-time string (i.e., anything that `Date.parse()` can parse).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
+    public String after;
+    public GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeRequest withAfter(String after) {
+        this.after = after;
         return this;
     }
     
+    /**
+     * Only return results that were saved before the specified date-time string (i.e., anything that `Date.parse()` can parse).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public String before;
+    public GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeRequest withBefore(String before) {
+        this.before = before;
+        return this;
+    }
     
-    public GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeQueryParams queryParams;
-    public GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeRequest withQueryParams(GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The `_uuid` of the `Registrierkasse` to export.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registrierkasseUuid")
+    public String registrierkasseUuid;
+    public GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeRequest withRegistrierkasseUuid(String registrierkasseUuid) {
+        this.registrierkasseUuid = registrierkasseUuid;
         return this;
     }
     

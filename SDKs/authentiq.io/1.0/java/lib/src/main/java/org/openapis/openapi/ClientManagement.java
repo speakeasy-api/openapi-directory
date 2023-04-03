@@ -36,11 +36,10 @@ public class ClientManagement {
      * List clients
      * Retrieve a list of clients.
      * 
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClientResponse client(org.openapis.openapi.models.operations.ClientRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClientResponse client() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/client");
         
@@ -49,8 +48,7 @@ public class ClientManagement {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -103,19 +101,20 @@ public class ClientManagement {
      * 
      * http://openid.net/specs/openid-connect-registration-1_0.html#ClientConfigurationEndpoint - OIDC Client Configuration Endpoint
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClientClientIdResponse clientClientId(org.openapis.openapi.models.operations.ClientClientIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClientClientIdResponse clientClientId(org.openapis.openapi.models.operations.ClientClientIdRequest request, org.openapis.openapi.models.operations.ClientClientIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClientClientIdPathParams.class, baseUrl, "/client/{client_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClientClientIdRequest.class, baseUrl, "/client/{client_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,10 +164,11 @@ public class ClientManagement {
      * 
      * http://openid.net/specs/openid-connect-registration-1_0.html#ClientRegistration - OIDC Client Registration Endpoint
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateClientResponse createClient(org.openapis.openapi.models.operations.CreateClientRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateClientResponse createClient(org.openapis.openapi.models.shared.Client request, org.openapis.openapi.models.operations.CreateClientSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/client");
         
@@ -182,7 +182,7 @@ public class ClientManagement {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -232,19 +232,20 @@ public class ClientManagement {
      * 
      * http://openid.net/specs/openid-connect-registration-1_0.html#ClientConfigurationEndpoint - OIDC Client Configuration Endpoint
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetClientResponse getClient(org.openapis.openapi.models.operations.GetClientRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetClientResponse getClient(org.openapis.openapi.models.operations.GetClientRequest request, org.openapis.openapi.models.operations.GetClientSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClientPathParams.class, baseUrl, "/client/{client_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClientRequest.class, baseUrl, "/client/{client_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -298,24 +299,25 @@ public class ClientManagement {
      * 
      * http://openid.net/specs/openid-connect-registration-1_0.html#ClientConfigurationEndpoint - OIDC Client Configuration Endpoint
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateClientResponse updateClient(org.openapis.openapi.models.operations.UpdateClientRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateClientResponse updateClient(org.openapis.openapi.models.operations.UpdateClientRequest request, org.openapis.openapi.models.operations.UpdateClientSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateClientPathParams.class, baseUrl, "/client/{client_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateClientRequest.class, baseUrl, "/client/{client_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "client", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUcsSnmpConfigRequest {
-    
-    public GetUcsSnmpConfigPathParams pathParams;
-    public GetUcsSnmpConfigRequest withPathParams(GetUcsSnmpConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetUcsSnmpConfigSecurity security;
-    public GetUcsSnmpConfigRequest withSecurity(GetUcsSnmpConfigSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetUcsSnmpConfigRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

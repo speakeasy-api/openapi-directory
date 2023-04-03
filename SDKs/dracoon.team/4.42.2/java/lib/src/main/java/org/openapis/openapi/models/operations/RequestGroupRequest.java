@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestGroupRequest {
-    
-    public RequestGroupPathParams pathParams;
-    public RequestGroupRequest withPathParams(RequestGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestGroupRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestGroupXSdsDateFormatEnum xSdsDateFormat;
+    public RequestGroupRequest withXSdsDateFormat(RequestGroupXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
     
-    public RequestGroupHeaders headers;
-    public RequestGroupRequest withHeaders(RequestGroupHeaders headers) {
-        this.headers = headers;
+    /**
+     * Group ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Long groupId;
+    public RequestGroupRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

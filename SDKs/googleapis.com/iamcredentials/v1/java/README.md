@@ -18,15 +18,11 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenSecurity;
-import org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenPathParams;
-import org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenQueryParams;
 import org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest;
 import org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse;
-import org.openapis.openapi.models.shared.GenerateAccessTokenRequest;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.GenerateAccessTokenRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -35,43 +31,37 @@ public class Application {
                 .build();
 
             IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest req = new IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest() {{
-                security = new IamcredentialsProjectsServiceAccountsGenerateAccessTokenSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new IamcredentialsProjectsServiceAccountsGenerateAccessTokenPathParams() {{
-                    name = "corrupti";
-                }};
-                queryParams = new IamcredentialsProjectsServiceAccountsGenerateAccessTokenQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new GenerateAccessTokenRequest() {{
+                dollarXgafv = "2";
+                generateAccessTokenRequest = new GenerateAccessTokenRequest() {{
                     delegates = new String[]{{
-                        add("iure"),
-                        add("magnam"),
+                        add("distinctio"),
+                        add("quibusdam"),
+                        add("unde"),
                     }};
-                    lifetime = "debitis";
+                    lifetime = "nulla";
                     scope = new String[]{{
-                        add("delectus"),
+                        add("illum"),
+                        add("vel"),
+                        add("error"),
                     }};
                 }};
-            }};            
+                accessToken = "deserunt";
+                alt = "media";
+                callback = "iure";
+                fields = "magnam";
+                key = "debitis";
+                name = "ipsa";
+                oauthToken = "delectus";
+                prettyPrint = false;
+                quotaUser = "tempora";
+                uploadType = "suscipit";
+                uploadProtocol = "molestiae";
+            }}            
 
-            IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse res = sdk.projects.iamcredentialsProjectsServiceAccountsGenerateAccessToken(req);
+            IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse res = sdk.projects.iamcredentialsProjectsServiceAccountsGenerateAccessToken(req, new IamcredentialsProjectsServiceAccountsGenerateAccessTokenSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.generateAccessTokenResponse.isPresent()) {
                 // handle response
@@ -83,7 +73,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

@@ -43,7 +43,7 @@ public class Scim {
      */
     public org.openapis.openapi.models.operations.ScimDeleteUserFromOrgResponse scimDeleteUserFromOrg(org.openapis.openapi.models.operations.ScimDeleteUserFromOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScimDeleteUserFromOrgPathParams.class, baseUrl, "/scim/v2/organizations/{org}/Users/{scim_user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScimDeleteUserFromOrgRequest.class, baseUrl, "/scim/v2/organizations/{org}/Users/{scim_user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -90,7 +90,7 @@ public class Scim {
      */
     public org.openapis.openapi.models.operations.ScimGetProvisioningInformationForUserResponse scimGetProvisioningInformationForUser(org.openapis.openapi.models.operations.ScimGetProvisioningInformationForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScimGetProvisioningInformationForUserPathParams.class, baseUrl, "/scim/v2/organizations/{org}/Users/{scim_user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScimGetProvisioningInformationForUserRequest.class, baseUrl, "/scim/v2/organizations/{org}/Users/{scim_user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -161,13 +161,13 @@ public class Scim {
      */
     public org.openapis.openapi.models.operations.ScimListProvisionedIdentitiesResponse scimListProvisionedIdentities(org.openapis.openapi.models.operations.ScimListProvisionedIdentitiesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScimListProvisionedIdentitiesPathParams.class, baseUrl, "/scim/v2/organizations/{org}/Users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScimListProvisionedIdentitiesRequest.class, baseUrl, "/scim/v2/organizations/{org}/Users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScimListProvisionedIdentitiesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScimListProvisionedIdentitiesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -223,12 +223,12 @@ public class Scim {
      */
     public org.openapis.openapi.models.operations.ScimProvisionAndInviteUserResponse scimProvisionAndInviteUser(org.openapis.openapi.models.operations.ScimProvisionAndInviteUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScimProvisionAndInviteUserPathParams.class, baseUrl, "/scim/v2/organizations/{org}/Users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScimProvisionAndInviteUserRequest.class, baseUrl, "/scim/v2/organizations/{org}/Users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -288,12 +288,12 @@ public class Scim {
      */
     public org.openapis.openapi.models.operations.ScimSetInformationForProvisionedUserResponse scimSetInformationForProvisionedUser(org.openapis.openapi.models.operations.ScimSetInformationForProvisionedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScimSetInformationForProvisionedUserPathParams.class, baseUrl, "/scim/v2/organizations/{org}/Users/{scim_user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScimSetInformationForProvisionedUserRequest.class, baseUrl, "/scim/v2/organizations/{org}/Users/{scim_user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -364,12 +364,12 @@ public class Scim {
      */
     public org.openapis.openapi.models.operations.ScimUpdateAttributeForUserResponse scimUpdateAttributeForUser(org.openapis.openapi.models.operations.ScimUpdateAttributeForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScimUpdateAttributeForUserPathParams.class, baseUrl, "/scim/v2/organizations/{org}/Users/{scim_user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScimUpdateAttributeForUserRequest.class, baseUrl, "/scim/v2/organizations/{org}/Users/{scim_user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FirebaseappcheckProjectsServicesPatchRequest {
-    
-    public FirebaseappcheckProjectsServicesPatchPathParams pathParams;
-    public FirebaseappcheckProjectsServicesPatchRequest withPathParams(FirebaseappcheckProjectsServicesPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FirebaseappcheckProjectsServicesPatchQueryParams queryParams;
-    public FirebaseappcheckProjectsServicesPatchRequest withQueryParams(FirebaseappcheckProjectsServicesPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public FirebaseappcheckProjectsServicesPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1Service request;
-    public FirebaseappcheckProjectsServicesPatchRequest withRequest(org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1Service request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1Service googleFirebaseAppcheckV1Service;
+    public FirebaseappcheckProjectsServicesPatchRequest withGoogleFirebaseAppcheckV1Service(org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1Service googleFirebaseAppcheckV1Service) {
+        this.googleFirebaseAppcheckV1Service = googleFirebaseAppcheckV1Service;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public FirebaseappcheckProjectsServicesPatchRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public FirebaseappcheckProjectsServicesPatchSecurity security;
-    public FirebaseappcheckProjectsServicesPatchRequest withSecurity(FirebaseappcheckProjectsServicesPatchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public FirebaseappcheckProjectsServicesPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public FirebaseappcheckProjectsServicesPatchRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FirebaseappcheckProjectsServicesPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public FirebaseappcheckProjectsServicesPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Required. The relative resource name of the service configuration object, in the format: ``` projects/{project_number}/services/{service_id} ``` Note that the `service_id` element must be a supported service ID. Currently, the following service IDs are supported: * `firebasestorage.googleapis.com` (Cloud Storage for Firebase) * `firebasedatabase.googleapis.com` (Firebase Realtime Database) * `firestore.googleapis.com` (Cloud Firestore)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public FirebaseappcheckProjectsServicesPatchRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public FirebaseappcheckProjectsServicesPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public FirebaseappcheckProjectsServicesPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public FirebaseappcheckProjectsServicesPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Required. A comma-separated list of names of fields in the Service to update. Example: `enforcement_mode`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
+    public String updateMask;
+    public FirebaseappcheckProjectsServicesPatchRequest withUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public FirebaseappcheckProjectsServicesPatchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public FirebaseappcheckProjectsServicesPatchRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

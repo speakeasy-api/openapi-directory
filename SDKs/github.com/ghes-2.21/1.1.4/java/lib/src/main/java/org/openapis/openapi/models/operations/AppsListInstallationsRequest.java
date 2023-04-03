@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsListInstallationsRequest {
-    
-    public AppsListInstallationsQueryParams queryParams;
-    public AppsListInstallationsRequest withQueryParams(AppsListInstallationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * This API is under preview and subject to change.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
+    public String accept;
+    public AppsListInstallationsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public AppsListInstallationsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public AppsListInstallationsHeaders headers;
-    public AppsListInstallationsRequest withHeaders(AppsListInstallationsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public AppsListInstallationsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

@@ -5,14 +5,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.ApigatewayProjectsLocationsGatewaysGetIamPolicySecurity;
-import org.openapis.openapi.models.operations.ApigatewayProjectsLocationsGatewaysGetIamPolicyPathParams;
-import org.openapis.openapi.models.operations.ApigatewayProjectsLocationsGatewaysGetIamPolicyQueryParams;
 import org.openapis.openapi.models.operations.ApigatewayProjectsLocationsGatewaysGetIamPolicyRequest;
 import org.openapis.openapi.models.operations.ApigatewayProjectsLocationsGatewaysGetIamPolicyResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -21,34 +17,25 @@ public class Application {
                 .build();
 
             ApigatewayProjectsLocationsGatewaysGetIamPolicyRequest req = new ApigatewayProjectsLocationsGatewaysGetIamPolicyRequest() {{
-                security = new ApigatewayProjectsLocationsGatewaysGetIamPolicySecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new ApigatewayProjectsLocationsGatewaysGetIamPolicyPathParams() {{
-                    resource = "corrupti";
-                }};
-                queryParams = new ApigatewayProjectsLocationsGatewaysGetIamPolicyQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    optionsRequestedPolicyVersion = 423655;
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    uploadType = "deserunt";
-                    uploadProtocol = "suscipit";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                key = "nulla";
+                oauthToken = "corrupti";
+                optionsRequestedPolicyVersion = 847252;
+                prettyPrint = false;
+                quotaUser = "vel";
+                resource = "error";
+                uploadType = "deserunt";
+                uploadProtocol = "suscipit";
+            }}            
 
-            ApigatewayProjectsLocationsGatewaysGetIamPolicyResponse res = sdk.projects.apigatewayProjectsLocationsGatewaysGetIamPolicy(req);
+            ApigatewayProjectsLocationsGatewaysGetIamPolicyResponse res = sdk.projects.apigatewayProjectsLocationsGatewaysGetIamPolicy(req, new ApigatewayProjectsLocationsGatewaysGetIamPolicySecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.apigatewayPolicy.isPresent()) {
                 // handle response

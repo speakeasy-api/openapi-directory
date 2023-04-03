@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TrackingfieldGetRequest {
-    
-    public TrackingfieldGetPathParams pathParams;
-    public TrackingfieldGetRequest withPathParams(TrackingfieldGetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public TrackingfieldGetSecurity security;
-    public TrackingfieldGetRequest withSecurity(TrackingfieldGetSecurity security) {
-        this.security = security;
+    /**
+     * The Tracking Field ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fieldId")
+    public String fieldId;
+    public TrackingfieldGetRequest withFieldId(String fieldId) {
+        this.fieldId = fieldId;
         return this;
     }
     

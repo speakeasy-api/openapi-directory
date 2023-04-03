@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartRequest {
-    
-    public PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartRequest withPathParams(PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Social declaration to add (either (Reference,DocumentId) either (File,Name,Content64Encoded,Title,Reference) is mandatory)
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartFormData1 request;
-    public PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartRequest withRequest(PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartFormData1 request) {
-        this.request = request;
+    public PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartFormData1 requestBody;
+    public PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartRequest withRequestBody(PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartFormData1 requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the folder social regime
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartSecurity security;
-    public PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartRequest withSecurity(PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdSocialDeclarationsMultipartRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

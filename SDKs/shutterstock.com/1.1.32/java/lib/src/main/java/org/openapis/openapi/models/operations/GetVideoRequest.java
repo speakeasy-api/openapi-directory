@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVideoRequest {
-    
-    public GetVideoPathParams pathParams;
-    public GetVideoRequest withPathParams(GetVideoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Video ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetVideoRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetVideoQueryParams queryParams;
-    public GetVideoRequest withQueryParams(GetVideoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Language for the keywords and categories in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public org.openapis.openapi.models.shared.LanguageEnum language;
+    public GetVideoRequest withLanguage(org.openapis.openapi.models.shared.LanguageEnum language) {
+        this.language = language;
         return this;
     }
     
+    /**
+     * The ID of the search that is related to this request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_id")
+    public String searchId;
+    public GetVideoRequest withSearchId(String searchId) {
+        this.searchId = searchId;
+        return this;
+    }
     
-    public GetVideoSecurity security;
-    public GetVideoRequest withSecurity(GetVideoSecurity security) {
-        this.security = security;
+    /**
+     * Amount of detail to render in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
+    public GetVideoViewEnum view;
+    public GetVideoRequest withView(GetVideoViewEnum view) {
+        this.view = view;
         return this;
     }
     

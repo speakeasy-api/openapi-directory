@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsCreateRemoveTokenForRepoRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsCreateRemoveTokenForRepoRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ActionsCreateRemoveTokenForRepoPathParams pathParams;
-    public ActionsCreateRemoveTokenForRepoRequest withPathParams(ActionsCreateRemoveTokenForRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsCreateRemoveTokenForRepoRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

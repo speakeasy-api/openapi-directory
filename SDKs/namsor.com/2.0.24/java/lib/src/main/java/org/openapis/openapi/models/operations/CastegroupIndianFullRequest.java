@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CastegroupIndianFullRequest {
-    
-    public CastegroupIndianFullPathParams pathParams;
-    public CastegroupIndianFullRequest withPathParams(CastegroupIndianFullPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=personalNameFull")
+    public String personalNameFull;
+    public CastegroupIndianFullRequest withPersonalNameFull(String personalNameFull) {
+        this.personalNameFull = personalNameFull;
         return this;
     }
     
-    
-    public CastegroupIndianFullSecurity security;
-    public CastegroupIndianFullRequest withSecurity(CastegroupIndianFullSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subDivisionIso31662")
+    public String subDivisionIso31662;
+    public CastegroupIndianFullRequest withSubDivisionIso31662(String subDivisionIso31662) {
+        this.subDivisionIso31662 = subDivisionIso31662;
         return this;
     }
     

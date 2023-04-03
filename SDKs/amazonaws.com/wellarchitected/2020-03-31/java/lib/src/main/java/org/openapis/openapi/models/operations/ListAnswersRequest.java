@@ -4,27 +4,100 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAnswersRequest {
-    
-    public ListAnswersPathParams pathParams;
-    public ListAnswersRequest withPathParams(ListAnswersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=LensAlias")
+    public String lensAlias;
+    public ListAnswersRequest withLensAlias(String lensAlias) {
+        this.lensAlias = lensAlias;
         return this;
     }
     
-    
-    public ListAnswersQueryParams queryParams;
-    public ListAnswersRequest withQueryParams(ListAnswersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum number of results to return for this request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public ListAnswersRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MilestoneNumber")
+    public Long milestoneNumber;
+    public ListAnswersRequest withMilestoneNumber(Long milestoneNumber) {
+        this.milestoneNumber = milestoneNumber;
+        return this;
+    }
     
-    public ListAnswersHeaders headers;
-    public ListAnswersRequest withHeaders(ListAnswersHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListAnswersRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PillarId")
+    public String pillarId;
+    public ListAnswersRequest withPillarId(String pillarId) {
+        this.pillarId = pillarId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkloadId")
+    public String workloadId;
+    public ListAnswersRequest withWorkloadId(String workloadId) {
+        this.workloadId = workloadId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListAnswersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListAnswersRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListAnswersRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListAnswersRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListAnswersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListAnswersRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListAnswersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

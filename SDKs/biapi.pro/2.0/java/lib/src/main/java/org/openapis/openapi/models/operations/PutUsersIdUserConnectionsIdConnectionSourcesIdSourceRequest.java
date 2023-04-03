@@ -7,24 +7,51 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest {
-    
-    public PutUsersIdUserConnectionsIdConnectionSourcesIdSourcePathParams pathParams;
-    public PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withPathParams(PutUsersIdUserConnectionsIdConnectionSourcesIdSourcePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutUsersIdUserConnectionsIdConnectionSourcesIdSourceQueryParams queryParams;
-    public PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withQueryParams(PutUsersIdUserConnectionsIdConnectionSourcesIdSourceQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequestBody request;
-    public PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withRequest(PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequestBody request) {
-        this.request = request;
+    public PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequestBody requestBody;
+    public PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withRequestBody(PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * do the synchronization in background (to use with the synchronize parameter)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=background")
+    public Boolean background;
+    public PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withBackground(Boolean background) {
+        this.background = background;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
+    public Long idConnection;
+    public PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withIdConnection(Long idConnection) {
+        this.idConnection = idConnection;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_source")
+    public Long idSource;
+    public PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withIdSource(Long idSource) {
+        this.idSource = idSource;
+        return this;
+    }
+    
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

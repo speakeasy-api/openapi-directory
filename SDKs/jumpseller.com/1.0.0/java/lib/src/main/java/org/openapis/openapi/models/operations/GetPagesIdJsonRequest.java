@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPagesIdJsonRequest {
-    
-    public GetPagesIdJsonPathParams pathParams;
-    public GetPagesIdJsonRequest withPathParams(GetPagesIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public GetPagesIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Id of the Page
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetPagesIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetPagesIdJsonQueryParams queryParams;
-    public GetPagesIdJsonRequest withQueryParams(GetPagesIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public GetPagesIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

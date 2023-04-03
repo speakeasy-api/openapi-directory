@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetAccountsQueryParams;
 import org.openapis.openapi.models.operations.GetAccountsRequest;
 import org.openapis.openapi.models.operations.GetAccountsResponse;
 
@@ -26,17 +25,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    cookieAuth = new SchemeCookieAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    cookieAuth = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetAccountsRequest req = new GetAccountsRequest() {{
-                queryParams = new GetAccountsQueryParams() {{
-                    account = "corrupti";
-                }};
-            }};            
+                account = "corrupti";
+            }}            
 
             GetAccountsResponse res = sdk.accountAndPortfolio.getAccounts(req);
 
@@ -50,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### accountAndPortfolio

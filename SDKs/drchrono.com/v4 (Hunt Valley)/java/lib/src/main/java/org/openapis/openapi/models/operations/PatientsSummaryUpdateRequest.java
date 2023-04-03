@@ -4,27 +4,55 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientsSummaryUpdateRequest {
-    
-    public PatientsSummaryUpdatePathParams pathParams;
-    public PatientsSummaryUpdateRequest withPathParams(PatientsSummaryUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_of_birth")
+    public String dateOfBirth;
+    public PatientsSummaryUpdateRequest withDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
         return this;
     }
     
-    
-    public PatientsSummaryUpdateQueryParams queryParams;
-    public PatientsSummaryUpdateRequest withQueryParams(PatientsSummaryUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientsSummaryUpdateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_name")
+    public String firstName;
+    public PatientsSummaryUpdateRequest withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
     
-    public PatientsSummaryUpdateSecurity security;
-    public PatientsSummaryUpdateRequest withSecurity(PatientsSummaryUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gender")
+    public String gender;
+    public PatientsSummaryUpdateRequest withGender(String gender) {
+        this.gender = gender;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatientsSummaryUpdateRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_name")
+    public String lastName;
+    public PatientsSummaryUpdateRequest withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public PatientsSummaryUpdateRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCompaniesCompanyIdWebhooksRequest {
-    
-    public PostCompaniesCompanyIdWebhooksPathParams pathParams;
-    public PostCompaniesCompanyIdWebhooksRequest withPathParams(PostCompaniesCompanyIdWebhooksPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateCompanyWebhookRequest request;
-    public PostCompaniesCompanyIdWebhooksRequest withRequest(org.openapis.openapi.models.shared.CreateCompanyWebhookRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateCompanyWebhookRequest createCompanyWebhookRequest;
+    public PostCompaniesCompanyIdWebhooksRequest withCreateCompanyWebhookRequest(org.openapis.openapi.models.shared.CreateCompanyWebhookRequest createCompanyWebhookRequest) {
+        this.createCompanyWebhookRequest = createCompanyWebhookRequest;
         return this;
     }
     
-    
-    public PostCompaniesCompanyIdWebhooksSecurity security;
-    public PostCompaniesCompanyIdWebhooksRequest withSecurity(PostCompaniesCompanyIdWebhooksSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the [company account](https://docs.adyen.com/account/account-structure#company-account).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public PostCompaniesCompanyIdWebhooksRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     

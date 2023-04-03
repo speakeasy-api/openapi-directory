@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteCategoriesPopularRequest {
-    
-    public GetQuoteCategoriesPopularQueryParams queryParams;
-    public GetQuoteCategoriesPopularRequest withQueryParams(GetQuoteCategoriesPopularQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Response is paged. This parameter controls how many is returned in the result. The maximum depends on the subscription level.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetQuoteCategoriesPopularRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetQuoteCategoriesPopularSecurity security;
-    public GetQuoteCategoriesPopularRequest withSecurity(GetQuoteCategoriesPopularSecurity security) {
-        this.security = security;
+    /**
+     * Response is paged. This parameter controls where response starts the listing at
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Integer start;
+    public GetQuoteCategoriesPopularRequest withStart(Integer start) {
+        this.start = start;
         return this;
     }
     

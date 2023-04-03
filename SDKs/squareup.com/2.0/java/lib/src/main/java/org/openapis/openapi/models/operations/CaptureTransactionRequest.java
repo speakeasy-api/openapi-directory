@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CaptureTransactionRequest {
-    
-    public CaptureTransactionPathParams pathParams;
-    public CaptureTransactionRequest withPathParams(CaptureTransactionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public CaptureTransactionRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     
-    
-    public CaptureTransactionSecurity security;
-    public CaptureTransactionRequest withSecurity(CaptureTransactionSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transaction_id")
+    public String transactionId;
+    public CaptureTransactionRequest withTransactionId(String transactionId) {
+        this.transactionId = transactionId;
         return this;
     }
     

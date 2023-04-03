@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindCallBroadcastsRequest {
-    
-    public FindCallBroadcastsQueryParams queryParams;
-    public FindCallBroadcastsRequest withQueryParams(FindCallBroadcastsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FindCallBroadcastsRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
+    /**
+     * Start of the find time interval, formatted in unix time milliseconds. Example: 1473781817000 for Sat, 05 Jan 1985 14:03:37 GMT
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intervalBegin")
+    public Long intervalBegin;
+    public FindCallBroadcastsRequest withIntervalBegin(Long intervalBegin) {
+        this.intervalBegin = intervalBegin;
+        return this;
+    }
     
-    public FindCallBroadcastsSecurity security;
-    public FindCallBroadcastsRequest withSecurity(FindCallBroadcastsSecurity security) {
-        this.security = security;
+    /**
+     * End of the find time interval, formatted in unix time milliseconds. Example: 1473781817000 for Sat, 05 Jan 1985 14:03:37 GMT
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intervalEnd")
+    public Long intervalEnd;
+    public FindCallBroadcastsRequest withIntervalEnd(Long intervalEnd) {
+        this.intervalEnd = intervalEnd;
+        return this;
+    }
+    
+    /**
+     * A label of a voice broadcast
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label")
+    public String label;
+    public FindCallBroadcastsRequest withLabel(String label) {
+        this.label = label;
+        return this;
+    }
+    
+    /**
+     * To set the maximum number of records to return in a paged list response. The default is 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public FindCallBroadcastsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * A name of voice broadcast
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public FindCallBroadcastsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Offset to the start of a given page. The default is 0. Check [pagination](https://developers.callfire.com/docs.html#pagination) page for more information about pagination in CallFire API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public FindCallBroadcastsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Specify whether the campaigns should be running or not
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=running")
+    public Boolean running;
+    public FindCallBroadcastsRequest withRunning(Boolean running) {
+        this.running = running;
+        return this;
+    }
+    
+    /**
+     * Specify whether the campaigns should be scheduled or not
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scheduled")
+    public Boolean scheduled;
+    public FindCallBroadcastsRequest withScheduled(Boolean scheduled) {
+        this.scheduled = scheduled;
         return this;
     }
     

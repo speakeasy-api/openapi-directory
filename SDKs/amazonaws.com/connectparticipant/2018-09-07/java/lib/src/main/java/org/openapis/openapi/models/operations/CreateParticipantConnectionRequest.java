@@ -7,17 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateParticipantConnectionRequest {
-    
-    public CreateParticipantConnectionHeaders headers;
-    public CreateParticipantConnectionRequest withHeaders(CreateParticipantConnectionHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateParticipantConnectionRequestBody requestBody;
+    public CreateParticipantConnectionRequest withRequestBody(CreateParticipantConnectionRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateParticipantConnectionRequestBody request;
-    public CreateParticipantConnectionRequest withRequest(CreateParticipantConnectionRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public CreateParticipantConnectionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;This is a header parameter.&lt;/p&gt; &lt;p&gt;The ParticipantToken as obtained from &lt;a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html"&gt;StartChatContact&lt;/a&gt; API response.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Bearer")
+    public String xAmzBearer;
+    public CreateParticipantConnectionRequest withXAmzBearer(String xAmzBearer) {
+        this.xAmzBearer = xAmzBearer;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public CreateParticipantConnectionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public CreateParticipantConnectionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public CreateParticipantConnectionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public CreateParticipantConnectionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public CreateParticipantConnectionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public CreateParticipantConnectionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

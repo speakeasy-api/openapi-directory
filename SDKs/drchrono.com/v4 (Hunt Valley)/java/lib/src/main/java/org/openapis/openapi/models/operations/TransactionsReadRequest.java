@@ -4,27 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TransactionsReadRequest {
-    
-    public TransactionsReadPathParams pathParams;
-    public TransactionsReadRequest withPathParams(TransactionsReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
+    public Long appointment;
+    public TransactionsReadRequest withAppointment(Long appointment) {
+        this.appointment = appointment;
         return this;
     }
     
-    
-    public TransactionsReadQueryParams queryParams;
-    public TransactionsReadRequest withQueryParams(TransactionsReadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public TransactionsReadRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public TransactionsReadRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public TransactionsReadSecurity security;
-    public TransactionsReadRequest withSecurity(TransactionsReadSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=line_item")
+    public Long lineItem;
+    public TransactionsReadRequest withLineItem(Long lineItem) {
+        this.lineItem = lineItem;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=posted_date")
+    public String postedDate;
+    public TransactionsReadRequest withPostedDate(String postedDate) {
+        this.postedDate = postedDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public TransactionsReadRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

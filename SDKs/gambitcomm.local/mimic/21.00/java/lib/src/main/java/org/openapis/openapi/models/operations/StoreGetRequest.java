@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoreGetRequest {
-    
-    public StoreGetPathParams pathParams;
-    public StoreGetRequest withPathParams(StoreGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Variable name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=var")
+    public String var;
+    public StoreGetRequest withVar(String var) {
+        this.var = var;
         return this;
     }
     

@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateProjectRequest {
+    /**
+     * The type of classifier to create for this project.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classificationType")
+    public CreateProjectClassificationTypeEnum classificationType;
+    public CreateProjectRequest withClassificationType(CreateProjectClassificationTypeEnum classificationType) {
+        this.classificationType = classificationType;
+        return this;
+    }
     
-    public CreateProjectQueryParams queryParams;
-    public CreateProjectRequest withQueryParams(CreateProjectQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The description of the project.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public CreateProjectRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    /**
+     * The id of the domain to use for this project. Defaults to General.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domainId")
+    public String domainId;
+    public CreateProjectRequest withDomainId(String domainId) {
+        this.domainId = domainId;
+        return this;
+    }
+    
+    /**
+     * Name of the project.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public CreateProjectRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * List of platforms the trained model is intending exporting to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=targetExportPlatforms")
+    public CreateProjectTargetExportPlatformsEnum[] targetExportPlatforms;
+    public CreateProjectRequest withTargetExportPlatforms(CreateProjectTargetExportPlatformsEnum[] targetExportPlatforms) {
+        this.targetExportPlatforms = targetExportPlatforms;
         return this;
     }
     

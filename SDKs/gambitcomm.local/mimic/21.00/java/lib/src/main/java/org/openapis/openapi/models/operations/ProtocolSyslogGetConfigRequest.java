@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSyslogGetConfigRequest {
-    
-    public ProtocolSyslogGetConfigPathParams pathParams;
-    public ProtocolSyslogGetConfigRequest withPathParams(ProtocolSyslogGetConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show the SYSLOG configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSyslogGetConfigRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchExportContentsByIdRequest {
-    
-    public FetchExportContentsByIdPathParams pathParams;
-    public FetchExportContentsByIdRequest withPathParams(FetchExportContentsByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Must be either \* /* or application/octet-stream,application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public FetchExportContentsByIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public FetchExportContentsByIdHeaders headers;
-    public FetchExportContentsByIdRequest withHeaders(FetchExportContentsByIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Byte range `bytes=start-end` (https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.35.1). e.g. bytes=0-1048576. Currently only single range value is supported. Both start and end need to be specified, end value should be greater than start and end - start should not be greater than 5MiB.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Range")
+    public String range;
+    public FetchExportContentsByIdRequest withRange(String range) {
+        this.range = range;
         return this;
     }
     
-    
-    public FetchExportContentsByIdSecurity security;
-    public FetchExportContentsByIdRequest withSecurity(FetchExportContentsByIdSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of an Export.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=exportId")
+    public String exportId;
+    public FetchExportContentsByIdRequest withExportId(String exportId) {
+        this.exportId = exportId;
         return this;
     }
     

@@ -38,19 +38,20 @@ public class Definitions {
      * Archive a custom action
      * Archives a single custom workflow action with the specified ID. Workflows that currently use this custom action will stop attempting to execute the action, and all future executions will be marked as a failure.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteAutomationV4ActionsAppIdDefinitionIdArchiveResponse deleteAutomationV4ActionsAppIdDefinitionIdArchive(org.openapis.openapi.models.operations.DeleteAutomationV4ActionsAppIdDefinitionIdArchiveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteAutomationV4ActionsAppIdDefinitionIdArchiveResponse deleteAutomationV4ActionsAppIdDefinitionIdArchive(org.openapis.openapi.models.operations.DeleteAutomationV4ActionsAppIdDefinitionIdArchiveRequest request, org.openapis.openapi.models.operations.DeleteAutomationV4ActionsAppIdDefinitionIdArchiveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAutomationV4ActionsAppIdDefinitionIdArchivePathParams.class, baseUrl, "/automation/v4/actions/{appId}/{definitionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAutomationV4ActionsAppIdDefinitionIdArchiveRequest.class, baseUrl, "/automation/v4/actions/{appId}/{definitionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class Definitions {
      * Get a custom action
      * Returns a single custom workflow action with the specified ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdGetByIdResponse getAutomationV4ActionsAppIdDefinitionIdGetById(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdGetByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdGetByIdResponse getAutomationV4ActionsAppIdDefinitionIdGetById(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdGetByIdRequest request, org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdGetByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdGetByIdPathParams.class, baseUrl, "/automation/v4/actions/{appId}/{definitionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdGetByIdRequest.class, baseUrl, "/automation/v4/actions/{appId}/{definitionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdGetByIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdGetByIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -132,25 +134,26 @@ public class Definitions {
      * Get all custom actions
      * Returns a list of all custom workflow actions.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdGetPageResponse getAutomationV4ActionsAppIdGetPage(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdGetPageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdGetPageResponse getAutomationV4ActionsAppIdGetPage(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdGetPageRequest request, org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdGetPageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdGetPagePathParams.class, baseUrl, "/automation/v4/actions/{appId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdGetPageRequest.class, baseUrl, "/automation/v4/actions/{appId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdGetPageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdGetPageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -185,24 +188,25 @@ public class Definitions {
      * Update a custom action
      * Updates a custom workflow action with new values for the specified fields.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchAutomationV4ActionsAppIdDefinitionIdUpdateResponse patchAutomationV4ActionsAppIdDefinitionIdUpdate(org.openapis.openapi.models.operations.PatchAutomationV4ActionsAppIdDefinitionIdUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchAutomationV4ActionsAppIdDefinitionIdUpdateResponse patchAutomationV4ActionsAppIdDefinitionIdUpdate(org.openapis.openapi.models.operations.PatchAutomationV4ActionsAppIdDefinitionIdUpdateRequest request, org.openapis.openapi.models.operations.PatchAutomationV4ActionsAppIdDefinitionIdUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchAutomationV4ActionsAppIdDefinitionIdUpdatePathParams.class, baseUrl, "/automation/v4/actions/{appId}/{definitionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchAutomationV4ActionsAppIdDefinitionIdUpdateRequest.class, baseUrl, "/automation/v4/actions/{appId}/{definitionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "extensionActionDefinitionPatch", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -237,24 +241,25 @@ public class Definitions {
      * Create new custom action
      * Creates a new custom workflow action.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAutomationV4ActionsAppIdCreateResponse postAutomationV4ActionsAppIdCreate(org.openapis.openapi.models.operations.PostAutomationV4ActionsAppIdCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAutomationV4ActionsAppIdCreateResponse postAutomationV4ActionsAppIdCreate(org.openapis.openapi.models.operations.PostAutomationV4ActionsAppIdCreateRequest request, org.openapis.openapi.models.operations.PostAutomationV4ActionsAppIdCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAutomationV4ActionsAppIdCreatePathParams.class, baseUrl, "/automation/v4/actions/{appId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAutomationV4ActionsAppIdCreateRequest.class, baseUrl, "/automation/v4/actions/{appId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "extensionActionDefinitionInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListAllowedNodeTypeModificationsRequest {
-    
-    public GETListAllowedNodeTypeModificationsQueryParams queryParams;
-    public GETListAllowedNodeTypeModificationsRequest withQueryParams(GETListAllowedNodeTypeModificationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETListAllowedNodeTypeModificationsActionEnum action;
+    public GETListAllowedNodeTypeModificationsRequest withAction(GETListAllowedNodeTypeModificationsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The name of the cluster you want to scale up to a larger node instanced type. ElastiCache uses the cluster id to identify the current node type of this cluster and from that to create a list of node types you can scale up to.&lt;/p&gt; &lt;important&gt; &lt;p&gt;You must provide a value for either the &lt;code&gt;CacheClusterId&lt;/code&gt; or the &lt;code&gt;ReplicationGroupId&lt;/code&gt;.&lt;/p&gt; &lt;/important&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheClusterId")
+    public String cacheClusterId;
+    public GETListAllowedNodeTypeModificationsRequest withCacheClusterId(String cacheClusterId) {
+        this.cacheClusterId = cacheClusterId;
+        return this;
+    }
     
-    public GETListAllowedNodeTypeModificationsHeaders headers;
-    public GETListAllowedNodeTypeModificationsRequest withHeaders(GETListAllowedNodeTypeModificationsHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The name of the replication group want to scale up to a larger node type. ElastiCache uses the replication group id to identify the current node type being used by this replication group, and from that to create a list of node types you can scale up to.&lt;/p&gt; &lt;important&gt; &lt;p&gt;You must provide a value for either the &lt;code&gt;CacheClusterId&lt;/code&gt; or the &lt;code&gt;ReplicationGroupId&lt;/code&gt;.&lt;/p&gt; &lt;/important&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReplicationGroupId")
+    public String replicationGroupId;
+    public GETListAllowedNodeTypeModificationsRequest withReplicationGroupId(String replicationGroupId) {
+        this.replicationGroupId = replicationGroupId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETListAllowedNodeTypeModificationsVersionEnum version;
+    public GETListAllowedNodeTypeModificationsRequest withVersion(GETListAllowedNodeTypeModificationsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETListAllowedNodeTypeModificationsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETListAllowedNodeTypeModificationsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETListAllowedNodeTypeModificationsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETListAllowedNodeTypeModificationsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETListAllowedNodeTypeModificationsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETListAllowedNodeTypeModificationsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETListAllowedNodeTypeModificationsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

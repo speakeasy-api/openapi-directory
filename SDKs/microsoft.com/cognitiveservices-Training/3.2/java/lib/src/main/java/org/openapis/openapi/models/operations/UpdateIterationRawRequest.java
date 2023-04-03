@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateIterationRawRequest {
-    
-    public UpdateIterationRawPathParams pathParams;
-    public UpdateIterationRawRequest withPathParams(UpdateIterationRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The updated iteration model.
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public UpdateIterationRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public UpdateIterationRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Iteration id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=iterationId")
+    public String iterationId;
+    public UpdateIterationRawRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
+        return this;
+    }
+    
+    /**
+     * Project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public UpdateIterationRawRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

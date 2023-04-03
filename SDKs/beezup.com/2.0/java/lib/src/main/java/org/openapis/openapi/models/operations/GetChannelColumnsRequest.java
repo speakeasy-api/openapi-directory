@@ -7,17 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelColumnsRequest {
-    
-    public GetChannelColumnsPathParams pathParams;
-    public GetChannelColumnsRequest withPathParams(GetChannelColumnsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetChannelColumnsHeaders headers;
-    public GetChannelColumnsRequest withHeaders(GetChannelColumnsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Indicates that the client accepts that the response will be compressed to reduce traffic size.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Encoding")
+    public String[] acceptEncoding;
+    public GetChannelColumnsRequest withAcceptEncoding(String[] acceptEncoding) {
+        this.acceptEncoding = acceptEncoding;
         return this;
     }
     
@@ -25,9 +21,19 @@ public class GetChannelColumnsRequest {
      * Allow you to filter the channel column identifier list your want to get
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String[] request;
-    public GetChannelColumnsRequest withRequest(String[] request) {
-        this.request = request;
+    public String[] requestBody;
+    public GetChannelColumnsRequest withRequestBody(String[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The channel identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
+    public String channelId;
+    public GetChannelColumnsRequest withChannelId(String channelId) {
+        this.channelId = channelId;
         return this;
     }
     

@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAssociatedApprovalRuleTemplatesForRepositoryRequest {
-    
-    public ListAssociatedApprovalRuleTemplatesForRepositoryQueryParams queryParams;
-    public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withQueryParams(ListAssociatedApprovalRuleTemplatesForRepositoryQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListAssociatedApprovalRuleTemplatesForRepositoryHeaders headers;
-    public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withHeaders(ListAssociatedApprovalRuleTemplatesForRepositoryHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ListAssociatedApprovalRuleTemplatesForRepositoryInput request;
-    public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withRequest(org.openapis.openapi.models.shared.ListAssociatedApprovalRuleTemplatesForRepositoryInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ListAssociatedApprovalRuleTemplatesForRepositoryInput listAssociatedApprovalRuleTemplatesForRepositoryInput;
+    public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withListAssociatedApprovalRuleTemplatesForRepositoryInput(org.openapis.openapi.models.shared.ListAssociatedApprovalRuleTemplatesForRepositoryInput listAssociatedApprovalRuleTemplatesForRepositoryInput) {
+        this.listAssociatedApprovalRuleTemplatesForRepositoryInput = listAssociatedApprovalRuleTemplatesForRepositoryInput;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public ListAssociatedApprovalRuleTemplatesForRepositoryXAmzTargetEnum xAmzTarget;
+    public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withXAmzTarget(ListAssociatedApprovalRuleTemplatesForRepositoryXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public String maxResults;
+    public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListAssociatedApprovalRuleTemplatesForRepositoryRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     

@@ -4,27 +4,58 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdTerminalActionsRequest {
-    
-    public GetCompaniesCompanyIdTerminalActionsPathParams pathParams;
-    public GetCompaniesCompanyIdTerminalActionsRequest withPathParams(GetCompaniesCompanyIdTerminalActionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetCompaniesCompanyIdTerminalActionsRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
-    
-    public GetCompaniesCompanyIdTerminalActionsQueryParams queryParams;
-    public GetCompaniesCompanyIdTerminalActionsRequest withQueryParams(GetCompaniesCompanyIdTerminalActionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of the page to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Integer pageNumber;
+    public GetCompaniesCompanyIdTerminalActionsRequest withPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
     
+    /**
+     * The number of items to have on a page, maximum 100. The default is 20 items on a page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetCompaniesCompanyIdTerminalActionsRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public GetCompaniesCompanyIdTerminalActionsSecurity security;
-    public GetCompaniesCompanyIdTerminalActionsRequest withSecurity(GetCompaniesCompanyIdTerminalActionsSecurity security) {
-        this.security = security;
+    /**
+     * Returns terminal actions with the specified status. 
+     * Allowed values: **pending**, **successful**, **failed**, **cancelled**, **tryLater**.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public GetCompaniesCompanyIdTerminalActionsRequest withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Returns terminal actions of the specified type. 
+     * Allowed values: **InstallAndroidApp**, **UninstallAndroidApp**, **InstallAndroidCertificate**, **UninstallAndroidCertificate**.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public GetCompaniesCompanyIdTerminalActionsRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

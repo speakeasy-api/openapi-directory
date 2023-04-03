@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleGetArticleRequest {
-    
-    public ArticleGetArticlePathParams pathParams;
-    public ArticleGetArticleRequest withPathParams(ArticleGetArticlePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id or the sku of the article to query
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ArticleGetArticleRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public ArticleGetArticleQueryParams queryParams;
-    public ArticleGetArticleRequest withQueryParams(ArticleGetArticleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Either the value id, ean or the value sku to specify the meaning of the id parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lookupBy")
+    public String lookupBy;
+    public ArticleGetArticleRequest withLookupBy(String lookupBy) {
+        this.lookupBy = lookupBy;
         return this;
     }
     

@@ -7,24 +7,87 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAuthorizableKeystoreRequest {
-    
-    public PostAuthorizableKeystorePathParams pathParams;
-    public PostAuthorizableKeystoreRequest withPathParams(PostAuthorizableKeystorePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostAuthorizableKeystoreQueryParams queryParams;
-    public PostAuthorizableKeystoreRequest withQueryParams(PostAuthorizableKeystoreQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=:operation")
+    public String operation;
+    public PostAuthorizableKeystoreRequest withOperation(String operation) {
+        this.operation = operation;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostAuthorizableKeystoreRequestBody request;
-    public PostAuthorizableKeystoreRequest withRequest(PostAuthorizableKeystoreRequestBody request) {
-        this.request = request;
+    public PostAuthorizableKeystoreRequestBody requestBody;
+    public PostAuthorizableKeystoreRequest withRequestBody(PostAuthorizableKeystoreRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alias")
+    public String alias;
+    public PostAuthorizableKeystoreRequest withAlias(String alias) {
+        this.alias = alias;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=authorizableId")
+    public String authorizableId;
+    public PostAuthorizableKeystoreRequest withAuthorizableId(String authorizableId) {
+        this.authorizableId = authorizableId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currentPassword")
+    public String currentPassword;
+    public PostAuthorizableKeystoreRequest withCurrentPassword(String currentPassword) {
+        this.currentPassword = currentPassword;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=intermediatePath")
+    public String intermediatePath;
+    public PostAuthorizableKeystoreRequest withIntermediatePath(String intermediatePath) {
+        this.intermediatePath = intermediatePath;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyPassword")
+    public String keyPassword;
+    public PostAuthorizableKeystoreRequest withKeyPassword(String keyPassword) {
+        this.keyPassword = keyPassword;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyStorePass")
+    public String keyStorePass;
+    public PostAuthorizableKeystoreRequest withKeyStorePass(String keyStorePass) {
+        this.keyStorePass = keyStorePass;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=newAlias")
+    public String newAlias;
+    public PostAuthorizableKeystoreRequest withNewAlias(String newAlias) {
+        this.newAlias = newAlias;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=newPassword")
+    public String newPassword;
+    public PostAuthorizableKeystoreRequest withNewPassword(String newPassword) {
+        this.newPassword = newPassword;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rePassword")
+    public String rePassword;
+    public PostAuthorizableKeystoreRequest withRePassword(String rePassword) {
+        this.rePassword = rePassword;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=removeAlias")
+    public String removeAlias;
+    public PostAuthorizableKeystoreRequest withRemoveAlias(String removeAlias) {
+        this.removeAlias = removeAlias;
         return this;
     }
     

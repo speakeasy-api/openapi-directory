@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSipAuthCallsCredentialListMappingRequest {
-    
-    public ListSipAuthCallsCredentialListMappingPathParams pathParams;
-    public ListSipAuthCallsCredentialListMappingRequest withPathParams(ListSipAuthCallsCredentialListMappingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the CredentialListMapping resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListSipAuthCallsCredentialListMappingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListSipAuthCallsCredentialListMappingQueryParams queryParams;
-    public ListSipAuthCallsCredentialListMappingRequest withQueryParams(ListSipAuthCallsCredentialListMappingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The SID of the SIP domain that contains the resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainSid")
+    public String domainSid;
+    public ListSipAuthCallsCredentialListMappingRequest withDomainSid(String domainSid) {
+        this.domainSid = domainSid;
         return this;
     }
     
-    
-    public ListSipAuthCallsCredentialListMappingSecurity security;
-    public ListSipAuthCallsCredentialListMappingRequest withSecurity(ListSipAuthCallsCredentialListMappingSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListSipAuthCallsCredentialListMappingRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListSipAuthCallsCredentialListMappingRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListSipAuthCallsCredentialListMappingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListSipAuthCallsCredentialListMappingRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

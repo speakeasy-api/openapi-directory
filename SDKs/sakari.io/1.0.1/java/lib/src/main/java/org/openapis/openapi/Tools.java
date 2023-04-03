@@ -36,10 +36,11 @@ public class Tools {
     /**
      * Share file - use to host a file and generate a short link to be used directly in a message or as a link to media for a MMS
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolsShareFileMultipartResponse toolsShareFileMultipart(org.openapis.openapi.models.operations.ToolsShareFileMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolsShareFileMultipartResponse toolsShareFileMultipart(org.openapis.openapi.models.operations.ToolsShareFileMultipartFormData request, org.openapis.openapi.models.operations.ToolsShareFileMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/tools/sharefile");
         
@@ -53,7 +54,7 @@ public class Tools {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -88,10 +89,11 @@ public class Tools {
     /**
      * Share file - use to host a file and generate a short link to be used directly in a message or as a link to media for a MMS
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolsShareFileRawResponse toolsShareFileRaw(org.openapis.openapi.models.operations.ToolsShareFileRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolsShareFileRawResponse toolsShareFileRaw(byte[] request, org.openapis.openapi.models.operations.ToolsShareFileRawSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/tools/sharefile");
         
@@ -105,7 +107,7 @@ public class Tools {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

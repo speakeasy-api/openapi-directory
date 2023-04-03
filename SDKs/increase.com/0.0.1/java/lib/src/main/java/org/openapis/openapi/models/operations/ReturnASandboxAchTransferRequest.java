@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReturnASandboxAchTransferRequest {
-    
-    public ReturnASandboxAchTransferPathParams pathParams;
-    public ReturnASandboxAchTransferRequest withPathParams(ReturnASandboxAchTransferPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ach_transfer_id")
+    public String achTransferId;
+    public ReturnASandboxAchTransferRequest withAchTransferId(String achTransferId) {
+        this.achTransferId = achTransferId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ReturnASandboxAchTransferParameters request;
-    public ReturnASandboxAchTransferRequest withRequest(org.openapis.openapi.models.shared.ReturnASandboxAchTransferParameters request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ReturnASandboxAchTransferParameters returnASandboxAchTransferParameters;
+    public ReturnASandboxAchTransferRequest withReturnASandboxAchTransferParameters(org.openapis.openapi.models.shared.ReturnASandboxAchTransferParameters returnASandboxAchTransferParameters) {
+        this.returnASandboxAchTransferParameters = returnASandboxAchTransferParameters;
         return this;
     }
     

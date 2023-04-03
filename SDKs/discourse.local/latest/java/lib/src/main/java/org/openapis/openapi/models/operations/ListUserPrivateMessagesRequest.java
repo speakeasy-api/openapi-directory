@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListUserPrivateMessagesRequest {
-    
-    public ListUserPrivateMessagesPathParams pathParams;
-    public ListUserPrivateMessagesRequest withPathParams(ListUserPrivateMessagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public ListUserPrivateMessagesRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

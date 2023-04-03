@@ -35,7 +35,7 @@ public class DeveloperAccountsFindAndModifyDeveloperAccounts {
      */
     public org.openapis.openapi.models.operations.DeleteDeveloperAccountsDeveloperAccountIdResponse deleteDeveloperAccountsDeveloperAccountId(org.openapis.openapi.models.operations.DeleteDeveloperAccountsDeveloperAccountIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDeveloperAccountsDeveloperAccountIdPathParams.class, baseUrl, "/developerAccounts/{developerAccountId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDeveloperAccountsDeveloperAccountIdRequest.class, baseUrl, "/developerAccounts/{developerAccountId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -76,7 +76,7 @@ public class DeveloperAccountsFindAndModifyDeveloperAccounts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeveloperAccountsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeveloperAccountsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -116,7 +116,7 @@ public class DeveloperAccountsFindAndModifyDeveloperAccounts {
      */
     public org.openapis.openapi.models.operations.GetDeveloperAccountsDeveloperAccountIdResponse getDeveloperAccountsDeveloperAccountId(org.openapis.openapi.models.operations.GetDeveloperAccountsDeveloperAccountIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeveloperAccountsDeveloperAccountIdPathParams.class, baseUrl, "/developerAccounts/{developerAccountId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeveloperAccountsDeveloperAccountIdRequest.class, baseUrl, "/developerAccounts/{developerAccountId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -156,13 +156,13 @@ public class DeveloperAccountsFindAndModifyDeveloperAccounts {
      */
     public org.openapis.openapi.models.operations.PatchDeveloperAccountsDeveloperAccountIdResponse patchDeveloperAccountsDeveloperAccountId(org.openapis.openapi.models.operations.PatchDeveloperAccountsDeveloperAccountIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchDeveloperAccountsDeveloperAccountIdPathParams.class, baseUrl, "/developerAccounts/{developerAccountId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchDeveloperAccountsDeveloperAccountIdRequest.class, baseUrl, "/developerAccounts/{developerAccountId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatchDeveloperAccountsDeveloperAccountIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatchDeveloperAccountsDeveloperAccountIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -202,13 +202,13 @@ public class DeveloperAccountsFindAndModifyDeveloperAccounts {
      */
     public org.openapis.openapi.models.operations.PostDeveloperAccountsDeveloperAccountIdResponse postDeveloperAccountsDeveloperAccountId(org.openapis.openapi.models.operations.PostDeveloperAccountsDeveloperAccountIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostDeveloperAccountsDeveloperAccountIdPathParams.class, baseUrl, "/developerAccounts/{developerAccountId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostDeveloperAccountsDeveloperAccountIdRequest.class, baseUrl, "/developerAccounts/{developerAccountId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostDeveloperAccountsDeveloperAccountIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostDeveloperAccountsDeveloperAccountIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSampleRequest {
-    
-    public UpdateSamplePathParams pathParams;
-    public UpdateSampleRequest withPathParams(UpdateSamplePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public UpdateSampleRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSampleUpdateSampleRequest request;
-    public UpdateSampleRequest withRequest(UpdateSampleUpdateSampleRequest request) {
-        this.request = request;
+    public UpdateSampleUpdateSampleRequest requestBody;
+    public UpdateSampleRequest withRequestBody(UpdateSampleUpdateSampleRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSampleSecurity security;
-    public UpdateSampleRequest withSecurity(UpdateSampleSecurity security) {
-        this.security = security;
+    /**
+     * The Twilio-provided string that uniquely identifies the Sample resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateSampleRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateSampleRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Task](https://www.twilio.com/docs/autopilot/api/task) associated with the Sample resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TaskSid")
+    public String taskSid;
+    public UpdateSampleRequest withTaskSid(String taskSid) {
+        this.taskSid = taskSid;
         return this;
     }
     

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetStatusRequest {
-    
-    public SetStatusPathParams pathParams;
-    public SetStatusRequest withPathParams(SetStatusPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Changed invoice status to given status.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.StatusRequestDTO request;
-    public SetStatusRequest withRequest(org.openapis.openapi.models.shared.StatusRequestDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.StatusRequestDTO statusRequestDTO;
+    public SetStatusRequest withStatusRequestDTO(org.openapis.openapi.models.shared.StatusRequestDTO statusRequestDTO) {
+        this.statusRequestDTO = statusRequestDTO;
+        return this;
+    }
+    
+    /**
+     * provider invoice's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoiceId")
+    public Long invoiceId;
+    public SetStatusRequest withInvoiceId(Long invoiceId) {
+        this.invoiceId = invoiceId;
         return this;
     }
     

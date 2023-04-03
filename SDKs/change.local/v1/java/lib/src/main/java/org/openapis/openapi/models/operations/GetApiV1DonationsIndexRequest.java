@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1DonationsIndexRequest {
-    
-    public GetApiV1DonationsIndexQueryParams queryParams;
-    public GetApiV1DonationsIndexRequest withQueryParams(GetApiV1DonationsIndexQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetApiV1DonationsIndexSecurity security;
-    public GetApiV1DonationsIndexRequest withSecurity(GetApiV1DonationsIndexSecurity security) {
-        this.security = security;
+    /**
+     * Which page to return. This endpoint is paginated, and returns maximum 30 donations per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetApiV1DonationsIndexRequest withPage(Double page) {
+        this.page = page;
         return this;
     }
     

@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkSwitchLinkAggregationRequest {
-    
-    public UpdateNetworkSwitchLinkAggregationPathParams pathParams;
-    public UpdateNetworkSwitchLinkAggregationRequest withPathParams(UpdateNetworkSwitchLinkAggregationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkSwitchLinkAggregationRequestBody requestBody;
+    public UpdateNetworkSwitchLinkAggregationRequest withRequestBody(UpdateNetworkSwitchLinkAggregationRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkSwitchLinkAggregationRequestBody request;
-    public UpdateNetworkSwitchLinkAggregationRequest withRequest(UpdateNetworkSwitchLinkAggregationRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=linkAggregationId")
+    public String linkAggregationId;
+    public UpdateNetworkSwitchLinkAggregationRequest withLinkAggregationId(String linkAggregationId) {
+        this.linkAggregationId = linkAggregationId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkSwitchLinkAggregationRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

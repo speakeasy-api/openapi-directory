@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRegisterPublisherRequest {
-    
-    public GETRegisterPublisherQueryParams queryParams;
-    public GETRegisterPublisherRequest withQueryParams(GETRegisterPublisherQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * &lt;p&gt;Whether you accept the &lt;a href="https://cloudformation-registry-documents.s3.amazonaws.com/Terms_and_Conditions_for_AWS_CloudFormation_Registry_Publishers.pdf"&gt;Terms and Conditions&lt;/a&gt; for publishing extensions in the CloudFormation registry. You must accept the terms and conditions in order to register to publish public extensions to the CloudFormation registry.&lt;/p&gt; &lt;p&gt;The default is &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AcceptTermsAndConditions")
+    public Boolean acceptTermsAndConditions;
+    public GETRegisterPublisherRequest withAcceptTermsAndConditions(Boolean acceptTermsAndConditions) {
+        this.acceptTermsAndConditions = acceptTermsAndConditions;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRegisterPublisherActionEnum action;
+    public GETRegisterPublisherRequest withAction(GETRegisterPublisherActionEnum action) {
+        this.action = action;
+        return this;
+    }
     
-    public GETRegisterPublisherHeaders headers;
-    public GETRegisterPublisherRequest withHeaders(GETRegisterPublisherHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;If you are using a Bitbucket or GitHub account for identity verification, the Amazon Resource Name (ARN) for your connection to that account.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html#publish-extension-prereqs"&gt;Registering your account to publish CloudFormation extensions&lt;/a&gt; in the &lt;i&gt;CloudFormation CLI User Guide&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConnectionArn")
+    public String connectionArn;
+    public GETRegisterPublisherRequest withConnectionArn(String connectionArn) {
+        this.connectionArn = connectionArn;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRegisterPublisherVersionEnum version;
+    public GETRegisterPublisherRequest withVersion(GETRegisterPublisherVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRegisterPublisherRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRegisterPublisherRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRegisterPublisherRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRegisterPublisherRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRegisterPublisherRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRegisterPublisherRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRegisterPublisherRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

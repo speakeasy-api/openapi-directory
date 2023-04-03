@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListOrganismsRequest {
-    
-    public GetListOrganismsQueryParams queryParams;
-    public GetListOrganismsRequest withQueryParams(GetListOrganismsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetListOrganismsFormatEnum format;
+    public GetListOrganismsRequest withFormat(GetListOrganismsFormatEnum format) {
+        this.format = format;
         return this;
     }
     

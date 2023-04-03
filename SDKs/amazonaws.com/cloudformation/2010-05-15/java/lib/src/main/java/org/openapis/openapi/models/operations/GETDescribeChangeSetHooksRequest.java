@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeChangeSetHooksRequest {
-    
-    public GETDescribeChangeSetHooksQueryParams queryParams;
-    public GETDescribeChangeSetHooksRequest withQueryParams(GETDescribeChangeSetHooksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeChangeSetHooksActionEnum action;
+    public GETDescribeChangeSetHooksRequest withAction(GETDescribeChangeSetHooksActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name or Amazon Resource Name (ARN) of the change set that you want to describe.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ChangeSetName")
+    public String changeSetName;
+    public GETDescribeChangeSetHooksRequest withChangeSetName(String changeSetName) {
+        this.changeSetName = changeSetName;
+        return this;
+    }
     
-    public GETDescribeChangeSetHooksHeaders headers;
-    public GETDescribeChangeSetHooksRequest withHeaders(GETDescribeChangeSetHooksHeaders headers) {
-        this.headers = headers;
+    /**
+     * If specified, lists only the hooks related to the specified &lt;code&gt;LogicalResourceId&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LogicalResourceId")
+    public String logicalResourceId;
+    public GETDescribeChangeSetHooksRequest withLogicalResourceId(String logicalResourceId) {
+        this.logicalResourceId = logicalResourceId;
+        return this;
+    }
+    
+    /**
+     * A string, provided by the &lt;code&gt;DescribeChangeSetHooks&lt;/code&gt; response output, that identifies the next page of information that you want to retrieve.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETDescribeChangeSetHooksRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * If you specified the name of a change set, specify the stack name or stack ID (ARN) of the change set you want to describe.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackName")
+    public String stackName;
+    public GETDescribeChangeSetHooksRequest withStackName(String stackName) {
+        this.stackName = stackName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeChangeSetHooksVersionEnum version;
+    public GETDescribeChangeSetHooksRequest withVersion(GETDescribeChangeSetHooksVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeChangeSetHooksRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeChangeSetHooksRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeChangeSetHooksRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeChangeSetHooksRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeChangeSetHooksRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeChangeSetHooksRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeChangeSetHooksRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

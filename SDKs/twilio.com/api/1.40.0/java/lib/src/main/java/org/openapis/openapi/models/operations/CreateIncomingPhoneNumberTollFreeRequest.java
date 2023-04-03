@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateIncomingPhoneNumberTollFreeRequest {
-    
-    public CreateIncomingPhoneNumberTollFreePathParams pathParams;
-    public CreateIncomingPhoneNumberTollFreeRequest withPathParams(CreateIncomingPhoneNumberTollFreePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreateIncomingPhoneNumberTollFreeRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateIncomingPhoneNumberTollFreeCreateIncomingPhoneNumberTollFreeRequest request;
-    public CreateIncomingPhoneNumberTollFreeRequest withRequest(CreateIncomingPhoneNumberTollFreeCreateIncomingPhoneNumberTollFreeRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateIncomingPhoneNumberTollFreeSecurity security;
-    public CreateIncomingPhoneNumberTollFreeRequest withSecurity(CreateIncomingPhoneNumberTollFreeSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateIncomingPhoneNumberTollFreeRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateIncomingPhoneNumberTollFreeCreateIncomingPhoneNumberTollFreeRequest requestBody;
+    public CreateIncomingPhoneNumberTollFreeRequest withRequestBody(CreateIncomingPhoneNumberTollFreeCreateIncomingPhoneNumberTollFreeRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

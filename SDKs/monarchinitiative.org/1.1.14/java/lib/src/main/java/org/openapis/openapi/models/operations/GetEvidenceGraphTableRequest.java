@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEvidenceGraphTableRequest {
-    
-    public GetEvidenceGraphTablePathParams pathParams;
-    public GetEvidenceGraphTableRequest withPathParams(GetEvidenceGraphTablePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * association id, e.g. 68e686f6-d05b-46b8-ab1f-1da2fff97ada
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetEvidenceGraphTableRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetEvidenceGraphTableQueryParams queryParams;
-    public GetEvidenceGraphTableRequest withQueryParams(GetEvidenceGraphTableQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If true, considers dc:source as edge
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_publication")
+    public Boolean isPublication;
+    public GetEvidenceGraphTableRequest withIsPublication(Boolean isPublication) {
+        this.isPublication = isPublication;
         return this;
     }
     

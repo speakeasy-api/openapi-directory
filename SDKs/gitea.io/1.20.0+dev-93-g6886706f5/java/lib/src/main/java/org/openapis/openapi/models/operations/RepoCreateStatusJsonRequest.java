@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoCreateStatusJsonRequest {
-    
-    public RepoCreateStatusJsonPathParams pathParams;
-    public RepoCreateStatusJsonRequest withPathParams(RepoCreateStatusJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateStatusOption createStatusOption;
+    public RepoCreateStatusJsonRequest withCreateStatusOption(org.openapis.openapi.models.shared.CreateStatusOption createStatusOption) {
+        this.createStatusOption = createStatusOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateStatusOption request;
-    public RepoCreateStatusJsonRequest withRequest(org.openapis.openapi.models.shared.CreateStatusOption request) {
-        this.request = request;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoCreateStatusJsonRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoCreateStatusJsonRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * sha of the commit
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sha")
+    public String sha;
+    public RepoCreateStatusJsonRequest withSha(String sha) {
+        this.sha = sha;
         return this;
     }
     

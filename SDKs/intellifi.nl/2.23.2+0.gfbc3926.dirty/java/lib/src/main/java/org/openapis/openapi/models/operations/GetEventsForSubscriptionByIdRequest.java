@@ -4,20 +4,237 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventsForSubscriptionByIdRequest {
-    
-    public GetEventsForSubscriptionByIdPathParams pathParams;
-    public GetEventsForSubscriptionByIdRequest withPathParams(GetEventsForSubscriptionByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Limits on `time_created`, Marks the start of a range, optionally use `before` to set the end. Result output excludes the given timestamp.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
+    public OffsetDateTime after;
+    public GetEventsForSubscriptionByIdRequest withAfter(OffsetDateTime after) {
+        this.after = after;
         return this;
     }
     
+    /**
+     * Limits directly on `id`. Marks the start of a range, optionally use `before_id` to set the end. Result output excludes the given `id` value. Please note that `id` is in chronological order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after_id")
+    public String afterId;
+    public GetEventsForSubscriptionByIdRequest withAfterId(String afterId) {
+        this.afterId = afterId;
+        return this;
+    }
     
-    public GetEventsForSubscriptionByIdQueryParams queryParams;
-    public GetEventsForSubscriptionByIdRequest withQueryParams(GetEventsForSubscriptionByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Limits on `time_created`. Marks the end of a range, optionally use `after` to set the start. Result output excludes the given timestamp.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public String before;
+    public GetEventsForSubscriptionByIdRequest withBefore(String before) {
+        this.before = before;
+        return this;
+    }
+    
+    /**
+     * Limits directly on `id`. Marks the end of a range, optionally use `after_id` to set the start. Result output excludes the given `id` value. Please note that `id` is in chronological order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before_id")
+    public String beforeId;
+    public GetEventsForSubscriptionByIdRequest withBeforeId(String beforeId) {
+        this.beforeId = beforeId;
+        return this;
+    }
+    
+    /**
+     * Limits on `time_created`. Marks the start of a range, optionally use `until` to set the end. Result output includes the given timestamp.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public String from;
+    public GetEventsForSubscriptionByIdRequest withFrom(String from) {
+        this.from = from;
+        return this;
+    }
+    
+    /**
+     * Limits on `id`. Marks the start of a range, optionally use `until_id` to set the end. Result output includes the given `id` value. Please note that `id` is in chronological order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from_id")
+    public String fromId;
+    public GetEventsForSubscriptionByIdRequest withFromId(String fromId) {
+        this.fromId = fromId;
+        return this;
+    }
+    
+    /**
+     * Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String idPathParameter;
+    public GetEventsForSubscriptionByIdRequest withIdPathParameter(String idPathParameter) {
+        this.idPathParameter = idPathParameter;
+        return this;
+    }
+    
+    /**
+     * Unique identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String idQueryParameter;
+    public GetEventsForSubscriptionByIdRequest withIdQueryParameter(String idQueryParameter) {
+        this.idQueryParameter = idQueryParameter;
+        return this;
+    }
+    
+    /**
+     * Removes `url` fields from output and shows `_id` instead of `_url` in references.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_only")
+    public Boolean idOnly;
+    public GetEventsForSubscriptionByIdRequest withIdOnly(Boolean idOnly) {
+        this.idOnly = idOnly;
+        return this;
+    }
+    
+    /**
+     * Sets the maximum number of returned resources. You may increase this number to large values, keep in mind that query times could become large. We advise you to use the pagination feature whenever you can.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetEventsForSubscriptionByIdRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Expand a reference into the actual resource (lookup). You may add multiple fields by giving a comma separated value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=populate")
+    public String populate;
+    public GetEventsForSubscriptionByIdRequest withPopulate(String populate) {
+        this.populate = populate;
+        return this;
+    }
+    
+    /**
+     * Removes response envelope with information about query, only sends back a JSON array with the applicable resources.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=results_only")
+    public Boolean resultsOnly;
+    public GetEventsForSubscriptionByIdRequest withResultsOnly(Boolean resultsOnly) {
+        this.resultsOnly = resultsOnly;
+        return this;
+    }
+    
+    /**
+     * Select which properties should be returned. You may add multiple fields by giving a comma separated value. Select can also be used together with populate: Specify the resource first, then a period(.) followed by the field.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=select")
+    public String select;
+    public GetEventsForSubscriptionByIdRequest withSelect(String select) {
+        this.select = select;
+        return this;
+    }
+    
+    /**
+     * Allows you to sort on on or more fields in the resource. You may append a minus sign (`-`) to request reverse order (new to old).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetEventsForSubscriptionByIdRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Filter on the time the resource was created.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time_created")
+    public String timeCreated;
+    public GetEventsForSubscriptionByIdRequest withTimeCreated(String timeCreated) {
+        this.timeCreated = timeCreated;
+        return this;
+    }
+    
+    /**
+     * Filter on the time the event was generated on the device.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time_event")
+    public String timeEvent;
+    public GetEventsForSubscriptionByIdRequest withTimeEvent(String timeEvent) {
+        this.timeEvent = timeEvent;
+        return this;
+    }
+    
+    /**
+     * Filter on the time the event will expire.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time_expire")
+    public String timeExpire;
+    public GetEventsForSubscriptionByIdRequest withTimeExpire(String timeExpire) {
+        this.timeExpire = timeExpire;
+        return this;
+    }
+    
+    /**
+     * Overrides the default query timeout (in seconds). A value of 0 means unlimited. IMPORTANT: using high timeouts in production code is strongly discouraged as it may lead to stability issues.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout_s")
+    public Double timeoutS;
+    public GetEventsForSubscriptionByIdRequest withTimeoutS(Double timeoutS) {
+        this.timeoutS = timeoutS;
+        return this;
+    }
+    
+    /**
+     * Filter on the topic action
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=topic.action")
+    public org.openapis.openapi.models.shared.EventTopicActionEnum topicAction;
+    public GetEventsForSubscriptionByIdRequest withTopicAction(org.openapis.openapi.models.shared.EventTopicActionEnum topicAction) {
+        this.topicAction = topicAction;
+        return this;
+    }
+    
+    /**
+     * Filter on the topic resource id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=topic.resource")
+    public String topicResource;
+    public GetEventsForSubscriptionByIdRequest withTopicResource(String topicResource) {
+        this.topicResource = topicResource;
+        return this;
+    }
+    
+    /**
+     * Filter on the topic resource type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=topic.resource_type")
+    public org.openapis.openapi.models.shared.EventTopicResourceTypeEnum topicResourceType;
+    public GetEventsForSubscriptionByIdRequest withTopicResourceType(org.openapis.openapi.models.shared.EventTopicResourceTypeEnum topicResourceType) {
+        this.topicResourceType = topicResourceType;
+        return this;
+    }
+    
+    /**
+     * Limits on `time_created`. Marks the end of a range, optionally use `from` to set the start. Result output includes the given timestamp.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=until")
+    public String until;
+    public GetEventsForSubscriptionByIdRequest withUntil(String until) {
+        this.until = until;
+        return this;
+    }
+    
+    /**
+     * Limits on `id`. Marks the end of a range, optionally use `from_id` to set the start. Result output includes the given `id` value. Please note that `id` is in chronological order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=until_id")
+    public String untilId;
+    public GetEventsForSubscriptionByIdRequest withUntilId(String untilId) {
+        this.untilId = untilId;
         return this;
     }
     

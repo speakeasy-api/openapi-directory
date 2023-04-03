@@ -4,20 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRequest {
-    
-    public ListQueryParams queryParams;
-    public ListRequest withQueryParams(ListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Unique identifier of the Market in which the request is happening
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Market-Id")
+    public String xMarketId;
+    public ListRequest withXMarketId(String xMarketId) {
+        this.xMarketId = xMarketId;
         return this;
     }
     
+    /**
+     * Shopper ID to be operated on, if different from JWT&lt;br/&gt;&lt;b&gt;Reseller subaccounts are not supported&lt;/b&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Shopper-Id")
+    public String xShopperId;
+    public ListRequest withXShopperId(String xShopperId) {
+        this.xShopperId = xShopperId;
+        return this;
+    }
     
-    public ListHeaders headers;
-    public ListRequest withHeaders(ListHeaders headers) {
-        this.headers = headers;
+    /**
+     * Domain name to use as the filter of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
+    public String domain;
+    public ListRequest withDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    
+    /**
+     * Maximum number of items to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Number of results to skip for pagination
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Parent order id to use as the filter of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parentOrderId")
+    public String parentOrderId;
+    public ListRequest withParentOrderId(String parentOrderId) {
+        this.parentOrderId = parentOrderId;
+        return this;
+    }
+    
+    /**
+     * Payment profile id to use as the filter of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paymentProfileId")
+    public Long paymentProfileId;
+    public ListRequest withPaymentProfileId(Long paymentProfileId) {
+        this.paymentProfileId = paymentProfileId;
+        return this;
+    }
+    
+    /**
+     * End of range indicating what time-frame should be returned. Inclusive
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=periodEnd")
+    public String periodEnd;
+    public ListRequest withPeriodEnd(String periodEnd) {
+        this.periodEnd = periodEnd;
+        return this;
+    }
+    
+    /**
+     * Start of range indicating what time-frame should be returned. Inclusive
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=periodStart")
+    public String periodStart;
+    public ListRequest withPeriodStart(String periodStart) {
+        this.periodStart = periodStart;
+        return this;
+    }
+    
+    /**
+     * Product group id to use as the filter of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=productGroupId")
+    public Long productGroupId;
+    public ListRequest withProductGroupId(Long productGroupId) {
+        this.productGroupId = productGroupId;
+        return this;
+    }
+    
+    /**
+     * Property name that will be used to sort results. '-' indicates descending
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public ListSortEnum sort;
+    public ListRequest withSort(ListSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

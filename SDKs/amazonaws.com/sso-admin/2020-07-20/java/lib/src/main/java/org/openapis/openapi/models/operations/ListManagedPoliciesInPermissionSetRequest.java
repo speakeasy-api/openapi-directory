@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListManagedPoliciesInPermissionSetRequest {
-    
-    public ListManagedPoliciesInPermissionSetQueryParams queryParams;
-    public ListManagedPoliciesInPermissionSetRequest withQueryParams(ListManagedPoliciesInPermissionSetQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListManagedPoliciesInPermissionSetHeaders headers;
-    public ListManagedPoliciesInPermissionSetRequest withHeaders(ListManagedPoliciesInPermissionSetHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ListManagedPoliciesInPermissionSetRequest request;
-    public ListManagedPoliciesInPermissionSetRequest withRequest(org.openapis.openapi.models.shared.ListManagedPoliciesInPermissionSetRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ListManagedPoliciesInPermissionSetRequest listManagedPoliciesInPermissionSetRequest;
+    public ListManagedPoliciesInPermissionSetRequest withListManagedPoliciesInPermissionSetRequest(org.openapis.openapi.models.shared.ListManagedPoliciesInPermissionSetRequest listManagedPoliciesInPermissionSetRequest) {
+        this.listManagedPoliciesInPermissionSetRequest = listManagedPoliciesInPermissionSetRequest;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public String maxResults;
+    public ListManagedPoliciesInPermissionSetRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListManagedPoliciesInPermissionSetRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListManagedPoliciesInPermissionSetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListManagedPoliciesInPermissionSetRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListManagedPoliciesInPermissionSetRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListManagedPoliciesInPermissionSetRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListManagedPoliciesInPermissionSetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListManagedPoliciesInPermissionSetRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListManagedPoliciesInPermissionSetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public ListManagedPoliciesInPermissionSetXAmzTargetEnum xAmzTarget;
+    public ListManagedPoliciesInPermissionSetRequest withXAmzTarget(ListManagedPoliciesInPermissionSetXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

@@ -34,25 +34,26 @@ public class FutureReservations {
     /**
      * Retrieves an aggregated list of future reservations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeFutureReservationsAggregatedListResponse computeFutureReservationsAggregatedList(org.openapis.openapi.models.operations.ComputeFutureReservationsAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeFutureReservationsAggregatedListResponse computeFutureReservationsAggregatedList(org.openapis.openapi.models.operations.ComputeFutureReservationsAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeFutureReservationsAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeFutureReservationsAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/futureReservations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeFutureReservationsAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/futureReservations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeFutureReservationsAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeFutureReservationsAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class FutureReservations {
     /**
      * Cancel the specified future reservation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeFutureReservationsCancelResponse computeFutureReservationsCancel(org.openapis.openapi.models.operations.ComputeFutureReservationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeFutureReservationsCancelResponse computeFutureReservationsCancel(org.openapis.openapi.models.operations.ComputeFutureReservationsCancelRequest request, org.openapis.openapi.models.operations.ComputeFutureReservationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeFutureReservationsCancelPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/futureReservations/{futureReservation}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeFutureReservationsCancelRequest.class, baseUrl, "/projects/{project}/zones/{zone}/futureReservations/{futureReservation}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeFutureReservationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeFutureReservationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,25 +126,26 @@ public class FutureReservations {
     /**
      * Deletes the specified future reservation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeFutureReservationsDeleteResponse computeFutureReservationsDelete(org.openapis.openapi.models.operations.ComputeFutureReservationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeFutureReservationsDeleteResponse computeFutureReservationsDelete(org.openapis.openapi.models.operations.ComputeFutureReservationsDeleteRequest request, org.openapis.openapi.models.operations.ComputeFutureReservationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeFutureReservationsDeletePathParams.class, baseUrl, "/projects/{project}/zones/{zone}/futureReservations/{futureReservation}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeFutureReservationsDeleteRequest.class, baseUrl, "/projects/{project}/zones/{zone}/futureReservations/{futureReservation}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeFutureReservationsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeFutureReservationsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,25 +172,26 @@ public class FutureReservations {
     /**
      * Retrieves information about the specified future reservation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeFutureReservationsGetResponse computeFutureReservationsGet(org.openapis.openapi.models.operations.ComputeFutureReservationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeFutureReservationsGetResponse computeFutureReservationsGet(org.openapis.openapi.models.operations.ComputeFutureReservationsGetRequest request, org.openapis.openapi.models.operations.ComputeFutureReservationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeFutureReservationsGetPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/futureReservations/{futureReservation}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeFutureReservationsGetRequest.class, baseUrl, "/projects/{project}/zones/{zone}/futureReservations/{futureReservation}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeFutureReservationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeFutureReservationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -214,27 +218,28 @@ public class FutureReservations {
     /**
      * Creates a new Future Reservation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeFutureReservationsInsertResponse computeFutureReservationsInsert(org.openapis.openapi.models.operations.ComputeFutureReservationsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeFutureReservationsInsertResponse computeFutureReservationsInsert(org.openapis.openapi.models.operations.ComputeFutureReservationsInsertRequest request, org.openapis.openapi.models.operations.ComputeFutureReservationsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeFutureReservationsInsertPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/futureReservations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeFutureReservationsInsertRequest.class, baseUrl, "/projects/{project}/zones/{zone}/futureReservations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "futureReservation", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeFutureReservationsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeFutureReservationsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,25 +266,26 @@ public class FutureReservations {
     /**
      * A list of all the future reservations that have been configured for the specified project in specified zone.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeFutureReservationsListResponse computeFutureReservationsList(org.openapis.openapi.models.operations.ComputeFutureReservationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeFutureReservationsListResponse computeFutureReservationsList(org.openapis.openapi.models.operations.ComputeFutureReservationsListRequest request, org.openapis.openapi.models.operations.ComputeFutureReservationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeFutureReservationsListPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/futureReservations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeFutureReservationsListRequest.class, baseUrl, "/projects/{project}/zones/{zone}/futureReservations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeFutureReservationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeFutureReservationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -306,27 +312,28 @@ public class FutureReservations {
     /**
      * Updates the specified future reservation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeFutureReservationsUpdateResponse computeFutureReservationsUpdate(org.openapis.openapi.models.operations.ComputeFutureReservationsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeFutureReservationsUpdateResponse computeFutureReservationsUpdate(org.openapis.openapi.models.operations.ComputeFutureReservationsUpdateRequest request, org.openapis.openapi.models.operations.ComputeFutureReservationsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeFutureReservationsUpdatePathParams.class, baseUrl, "/projects/{project}/zones/{zone}/futureReservations/{futureReservation}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeFutureReservationsUpdateRequest.class, baseUrl, "/projects/{project}/zones/{zone}/futureReservations/{futureReservation}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "futureReservation1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeFutureReservationsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeFutureReservationsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

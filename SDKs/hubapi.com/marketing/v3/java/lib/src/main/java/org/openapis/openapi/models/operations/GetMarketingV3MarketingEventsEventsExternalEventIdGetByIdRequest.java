@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest {
-    
-    public GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdPathParams pathParams;
-    public GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest withPathParams(GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=externalAccountId")
+    public String externalAccountId;
+    public GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest withExternalAccountId(String externalAccountId) {
+        this.externalAccountId = externalAccountId;
         return this;
     }
     
-    
-    public GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdQueryParams queryParams;
-    public GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest withQueryParams(GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdSecurity security;
-    public GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest withSecurity(GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalEventId")
+    public String externalEventId;
+    public GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest withExternalEventId(String externalEventId) {
+        this.externalEventId = externalEventId;
         return this;
     }
     

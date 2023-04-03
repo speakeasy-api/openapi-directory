@@ -29,7 +29,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/BatchPutMetricsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/BatchPutMetricsRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/BatchPutMetricsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BatchPutMetricsResponse.java
@@ -37,6 +36,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/BatchPutMetricsResponse.jav
 lib/src/main/java/org/openapis/openapi/models/shared/BatchPutMetricsError.java
 lib/src/main/java/org/openapis/openapi/models/shared/PutMetricsErrorCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/RawMetricData.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

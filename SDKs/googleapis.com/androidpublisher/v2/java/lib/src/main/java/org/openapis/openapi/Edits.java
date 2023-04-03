@@ -31,25 +31,26 @@ public class Edits {
     /**
      * Deletes the APK-specific localized listing for a specified APK and language code.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteResponse androidpublisherEditsApklistingsDelete(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteResponse androidpublisherEditsApklistingsDelete(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeletePathParams.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteRequest.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -70,25 +71,26 @@ public class Edits {
     /**
      * Deletes all the APK-specific localized listings for a specified APK.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteallResponse androidpublisherEditsApklistingsDeleteall(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteallResponse androidpublisherEditsApklistingsDeleteall(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteallRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteallPathParams.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteallRequest.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteallQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteallRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -109,25 +111,26 @@ public class Edits {
     /**
      * Fetches the APK-specific localized listing for a specified APK and language code.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsGetResponse androidpublisherEditsApklistingsGet(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsGetResponse androidpublisherEditsApklistingsGet(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsGetRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsGetPathParams.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsGetRequest.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -153,25 +156,26 @@ public class Edits {
     /**
      * Lists all the APK-specific localized listings for a specified APK.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsListResponse androidpublisherEditsApklistingsList(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsListResponse androidpublisherEditsApklistingsList(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsListRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsListPathParams.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsListRequest.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,27 +201,28 @@ public class Edits {
     /**
      * Updates or creates the APK-specific localized listing for a specified APK and language code. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsPatchResponse androidpublisherEditsApklistingsPatch(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsPatchResponse androidpublisherEditsApklistingsPatch(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsPatchRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsPatchPathParams.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsPatchRequest.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apkListing", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -243,27 +248,28 @@ public class Edits {
     /**
      * Updates or creates the APK-specific localized listing for a specified APK and language code.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsUpdateResponse androidpublisherEditsApklistingsUpdate(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsUpdateResponse androidpublisherEditsApklistingsUpdate(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsUpdateRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsUpdatePathParams.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsUpdateRequest.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apkListing", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -289,27 +295,28 @@ public class Edits {
     /**
      * Creates a new APK without uploading the APK itself to Google Play, instead hosting the APK at a specified URL. This function is only available to enterprises using Google Play for Work whose application is configured to restrict distribution to the enterprise domain.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsApksAddexternallyhostedResponse androidpublisherEditsApksAddexternallyhosted(org.openapis.openapi.models.operations.AndroidpublisherEditsApksAddexternallyhostedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsApksAddexternallyhostedResponse androidpublisherEditsApksAddexternallyhosted(org.openapis.openapi.models.operations.AndroidpublisherEditsApksAddexternallyhostedRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsApksAddexternallyhostedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsApksAddexternallyhostedPathParams.class, baseUrl, "/{packageName}/edits/{editId}/apks/externallyHosted", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsApksAddexternallyhostedRequest.class, baseUrl, "/{packageName}/edits/{editId}/apks/externallyHosted", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apksAddExternallyHostedRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsApksAddexternallyhostedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsApksAddexternallyhostedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -332,22 +339,22 @@ public class Edits {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsApksListResponse androidpublisherEditsApksList(org.openapis.openapi.models.operations.AndroidpublisherEditsApksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsApksListResponse androidpublisherEditsApksList(org.openapis.openapi.models.operations.AndroidpublisherEditsApksListRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsApksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsApksListPathParams.class, baseUrl, "/{packageName}/edits/{editId}/apks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsApksListRequest.class, baseUrl, "/{packageName}/edits/{editId}/apks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsApksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsApksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -370,22 +377,22 @@ public class Edits {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsApksUploadResponse androidpublisherEditsApksUpload(org.openapis.openapi.models.operations.AndroidpublisherEditsApksUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsApksUploadResponse androidpublisherEditsApksUpload(org.openapis.openapi.models.operations.AndroidpublisherEditsApksUploadRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsApksUploadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsApksUploadPathParams.class, baseUrl, "/{packageName}/edits/{editId}/apks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsApksUploadRequest.class, baseUrl, "/{packageName}/edits/{editId}/apks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsApksUploadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsApksUploadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -408,22 +415,22 @@ public class Edits {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesListResponse androidpublisherEditsBundlesList(org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesListResponse androidpublisherEditsBundlesList(org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesListRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesListPathParams.class, baseUrl, "/{packageName}/edits/{editId}/bundles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesListRequest.class, baseUrl, "/{packageName}/edits/{editId}/bundles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -449,25 +456,26 @@ public class Edits {
     /**
      * Uploads a new Android App Bundle to this edit. If you are using the Google API client libraries, please increase the timeout of the http request before calling this endpoint (a timeout of 2 minutes is recommended). See: https://developers.google.com/api-client-library/java/google-api-java-client/errors for an example in java.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesUploadResponse androidpublisherEditsBundlesUpload(org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesUploadResponse androidpublisherEditsBundlesUpload(org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesUploadRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesUploadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesUploadPathParams.class, baseUrl, "/{packageName}/edits/{editId}/bundles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesUploadRequest.class, baseUrl, "/{packageName}/edits/{editId}/bundles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesUploadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsBundlesUploadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -493,25 +501,26 @@ public class Edits {
     /**
      * Commits/applies the changes made in this edit back to the app.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsCommitResponse androidpublisherEditsCommit(org.openapis.openapi.models.operations.AndroidpublisherEditsCommitRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsCommitResponse androidpublisherEditsCommit(org.openapis.openapi.models.operations.AndroidpublisherEditsCommitRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsCommitSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsCommitPathParams.class, baseUrl, "/{packageName}/edits/{editId}:commit", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsCommitRequest.class, baseUrl, "/{packageName}/edits/{editId}:commit", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsCommitQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsCommitRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -537,25 +546,26 @@ public class Edits {
     /**
      * Deletes an edit for an app. Creating a new edit will automatically delete any of your previous edits so this method need only be called if you want to preemptively abandon an edit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsDeleteResponse androidpublisherEditsDelete(org.openapis.openapi.models.operations.AndroidpublisherEditsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsDeleteResponse androidpublisherEditsDelete(org.openapis.openapi.models.operations.AndroidpublisherEditsDeleteRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsDeletePathParams.class, baseUrl, "/{packageName}/edits/{editId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsDeleteRequest.class, baseUrl, "/{packageName}/edits/{editId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -576,25 +586,26 @@ public class Edits {
     /**
      * Uploads the deobfuscation file of the specified APK. If a deobfuscation or symbolication file already exists, it will be replaced. See https://developer.android.com/studio/build/shrink-code to learn more about deobfuscation files.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsDeobfuscationfilesUploadResponse androidpublisherEditsDeobfuscationfilesUpload(org.openapis.openapi.models.operations.AndroidpublisherEditsDeobfuscationfilesUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsDeobfuscationfilesUploadResponse androidpublisherEditsDeobfuscationfilesUpload(org.openapis.openapi.models.operations.AndroidpublisherEditsDeobfuscationfilesUploadRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsDeobfuscationfilesUploadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsDeobfuscationfilesUploadPathParams.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/deobfuscationFiles/{deobfuscationFileType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsDeobfuscationfilesUploadRequest.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/deobfuscationFiles/{deobfuscationFileType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsDeobfuscationfilesUploadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsDeobfuscationfilesUploadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -620,25 +631,26 @@ public class Edits {
     /**
      * Fetches app details for this edit. This includes the default language and developer support contact information.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsGetResponse androidpublisherEditsDetailsGet(org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsGetResponse androidpublisherEditsDetailsGet(org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsGetRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsGetPathParams.class, baseUrl, "/{packageName}/edits/{editId}/details", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsGetRequest.class, baseUrl, "/{packageName}/edits/{editId}/details", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -664,27 +676,28 @@ public class Edits {
     /**
      * Updates app details for this edit. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsPatchResponse androidpublisherEditsDetailsPatch(org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsPatchResponse androidpublisherEditsDetailsPatch(org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsPatchRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsPatchPathParams.class, baseUrl, "/{packageName}/edits/{editId}/details", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsPatchRequest.class, baseUrl, "/{packageName}/edits/{editId}/details", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "appDetails", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -710,27 +723,28 @@ public class Edits {
     /**
      * Updates app details for this edit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsUpdateResponse androidpublisherEditsDetailsUpdate(org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsUpdateResponse androidpublisherEditsDetailsUpdate(org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsUpdateRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsUpdatePathParams.class, baseUrl, "/{packageName}/edits/{editId}/details", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsUpdateRequest.class, baseUrl, "/{packageName}/edits/{editId}/details", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "appDetails", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsDetailsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -756,25 +770,26 @@ public class Edits {
     /**
      * Fetches the Expansion File configuration for the APK specified.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesGetResponse androidpublisherEditsExpansionfilesGet(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesGetResponse androidpublisherEditsExpansionfilesGet(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesGetRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesGetPathParams.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesGetRequest.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -800,27 +815,28 @@ public class Edits {
     /**
      * Updates the APK's Expansion File configuration to reference another APK's Expansion Files. To add a new Expansion File use the Upload method. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesPatchResponse androidpublisherEditsExpansionfilesPatch(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesPatchResponse androidpublisherEditsExpansionfilesPatch(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesPatchRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesPatchPathParams.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesPatchRequest.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "expansionFile", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -846,27 +862,28 @@ public class Edits {
     /**
      * Updates the APK's Expansion File configuration to reference another APK's Expansion Files. To add a new Expansion File use the Upload method.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUpdateResponse androidpublisherEditsExpansionfilesUpdate(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUpdateResponse androidpublisherEditsExpansionfilesUpdate(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUpdateRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUpdatePathParams.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUpdateRequest.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "expansionFile", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -892,25 +909,26 @@ public class Edits {
     /**
      * Uploads and attaches a new Expansion File to the APK specified.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUploadResponse androidpublisherEditsExpansionfilesUpload(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUploadResponse androidpublisherEditsExpansionfilesUpload(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUploadRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUploadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUploadPathParams.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUploadRequest.class, baseUrl, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUploadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsExpansionfilesUploadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -936,25 +954,26 @@ public class Edits {
     /**
      * Returns information about the edit specified. Calls will fail if the edit is no long active (e.g. has been deleted, superseded or expired).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsGetResponse androidpublisherEditsGet(org.openapis.openapi.models.operations.AndroidpublisherEditsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsGetResponse androidpublisherEditsGet(org.openapis.openapi.models.operations.AndroidpublisherEditsGetRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsGetPathParams.class, baseUrl, "/{packageName}/edits/{editId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsGetRequest.class, baseUrl, "/{packageName}/edits/{editId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -980,25 +999,26 @@ public class Edits {
     /**
      * Deletes the image (specified by id) from the edit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteResponse androidpublisherEditsImagesDelete(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteResponse androidpublisherEditsImagesDelete(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeletePathParams.class, baseUrl, "/{packageName}/edits/{editId}/listings/{language}/{imageType}/{imageId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteRequest.class, baseUrl, "/{packageName}/edits/{editId}/listings/{language}/{imageType}/{imageId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1019,25 +1039,26 @@ public class Edits {
     /**
      * Deletes all images for the specified language and image type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteallResponse androidpublisherEditsImagesDeleteall(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteallResponse androidpublisherEditsImagesDeleteall(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteallRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteallPathParams.class, baseUrl, "/{packageName}/edits/{editId}/listings/{language}/{imageType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteallRequest.class, baseUrl, "/{packageName}/edits/{editId}/listings/{language}/{imageType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteallQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesDeleteallRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1063,25 +1084,26 @@ public class Edits {
     /**
      * Lists all images for the specified language and image type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsImagesListResponse androidpublisherEditsImagesList(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsImagesListResponse androidpublisherEditsImagesList(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesListRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsImagesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesListPathParams.class, baseUrl, "/{packageName}/edits/{editId}/listings/{language}/{imageType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesListRequest.class, baseUrl, "/{packageName}/edits/{editId}/listings/{language}/{imageType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1107,25 +1129,26 @@ public class Edits {
     /**
      * Uploads a new image and adds it to the list of images for the specified language and image type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsImagesUploadResponse androidpublisherEditsImagesUpload(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsImagesUploadResponse androidpublisherEditsImagesUpload(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesUploadRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsImagesUploadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesUploadPathParams.class, baseUrl, "/{packageName}/edits/{editId}/listings/{language}/{imageType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesUploadRequest.class, baseUrl, "/{packageName}/edits/{editId}/listings/{language}/{imageType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesUploadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsImagesUploadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1151,27 +1174,28 @@ public class Edits {
     /**
      * Creates a new edit for an app, populated with the app's current state.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsInsertResponse androidpublisherEditsInsert(org.openapis.openapi.models.operations.AndroidpublisherEditsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsInsertResponse androidpublisherEditsInsert(org.openapis.openapi.models.operations.AndroidpublisherEditsInsertRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsInsertPathParams.class, baseUrl, "/{packageName}/edits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsInsertRequest.class, baseUrl, "/{packageName}/edits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "appEdit", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1197,25 +1221,26 @@ public class Edits {
     /**
      * Deletes the specified localized store listing from an edit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteResponse androidpublisherEditsListingsDelete(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteResponse androidpublisherEditsListingsDelete(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeletePathParams.class, baseUrl, "/{packageName}/edits/{editId}/listings/{language}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteRequest.class, baseUrl, "/{packageName}/edits/{editId}/listings/{language}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1236,25 +1261,26 @@ public class Edits {
     /**
      * Deletes all localized listings from an edit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteallResponse androidpublisherEditsListingsDeleteall(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteallResponse androidpublisherEditsListingsDeleteall(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteallRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteallPathParams.class, baseUrl, "/{packageName}/edits/{editId}/listings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteallRequest.class, baseUrl, "/{packageName}/edits/{editId}/listings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteallQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsDeleteallRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1275,25 +1301,26 @@ public class Edits {
     /**
      * Fetches information about a localized store listing.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsListingsGetResponse androidpublisherEditsListingsGet(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsListingsGetResponse androidpublisherEditsListingsGet(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsGetRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsListingsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsGetPathParams.class, baseUrl, "/{packageName}/edits/{editId}/listings/{language}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsGetRequest.class, baseUrl, "/{packageName}/edits/{editId}/listings/{language}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1319,25 +1346,26 @@ public class Edits {
     /**
      * Returns all of the localized store listings attached to this edit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsListingsListResponse androidpublisherEditsListingsList(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsListingsListResponse androidpublisherEditsListingsList(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsListRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsListingsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsListPathParams.class, baseUrl, "/{packageName}/edits/{editId}/listings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsListRequest.class, baseUrl, "/{packageName}/edits/{editId}/listings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1363,27 +1391,28 @@ public class Edits {
     /**
      * Creates or updates a localized store listing. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsListingsPatchResponse androidpublisherEditsListingsPatch(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsListingsPatchResponse androidpublisherEditsListingsPatch(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsPatchRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsListingsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsPatchPathParams.class, baseUrl, "/{packageName}/edits/{editId}/listings/{language}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsPatchRequest.class, baseUrl, "/{packageName}/edits/{editId}/listings/{language}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "listing", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1409,27 +1438,28 @@ public class Edits {
     /**
      * Creates or updates a localized store listing.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsListingsUpdateResponse androidpublisherEditsListingsUpdate(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsListingsUpdateResponse androidpublisherEditsListingsUpdate(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsUpdateRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsListingsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsUpdatePathParams.class, baseUrl, "/{packageName}/edits/{editId}/listings/{language}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsUpdateRequest.class, baseUrl, "/{packageName}/edits/{editId}/listings/{language}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "listing", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsListingsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1452,22 +1482,22 @@ public class Edits {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsTestersGetResponse androidpublisherEditsTestersGet(org.openapis.openapi.models.operations.AndroidpublisherEditsTestersGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsTestersGetResponse androidpublisherEditsTestersGet(org.openapis.openapi.models.operations.AndroidpublisherEditsTestersGetRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsTestersGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsTestersGetPathParams.class, baseUrl, "/{packageName}/edits/{editId}/testers/{track}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsTestersGetRequest.class, baseUrl, "/{packageName}/edits/{editId}/testers/{track}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsTestersGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsTestersGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1490,24 +1520,24 @@ public class Edits {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsTestersPatchResponse androidpublisherEditsTestersPatch(org.openapis.openapi.models.operations.AndroidpublisherEditsTestersPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsTestersPatchResponse androidpublisherEditsTestersPatch(org.openapis.openapi.models.operations.AndroidpublisherEditsTestersPatchRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsTestersPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsTestersPatchPathParams.class, baseUrl, "/{packageName}/edits/{editId}/testers/{track}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsTestersPatchRequest.class, baseUrl, "/{packageName}/edits/{editId}/testers/{track}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testers", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsTestersPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsTestersPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1530,24 +1560,24 @@ public class Edits {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsTestersUpdateResponse androidpublisherEditsTestersUpdate(org.openapis.openapi.models.operations.AndroidpublisherEditsTestersUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsTestersUpdateResponse androidpublisherEditsTestersUpdate(org.openapis.openapi.models.operations.AndroidpublisherEditsTestersUpdateRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsTestersUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsTestersUpdatePathParams.class, baseUrl, "/{packageName}/edits/{editId}/testers/{track}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsTestersUpdateRequest.class, baseUrl, "/{packageName}/edits/{editId}/testers/{track}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testers", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsTestersUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsTestersUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1573,25 +1603,26 @@ public class Edits {
     /**
      * Fetches the track configuration for the specified track type. Includes the APK version codes that are in this track.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsTracksGetResponse androidpublisherEditsTracksGet(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsTracksGetResponse androidpublisherEditsTracksGet(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksGetRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsTracksGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksGetPathParams.class, baseUrl, "/{packageName}/edits/{editId}/tracks/{track}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksGetRequest.class, baseUrl, "/{packageName}/edits/{editId}/tracks/{track}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1617,25 +1648,26 @@ public class Edits {
     /**
      * Lists all the track configurations for this edit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsTracksListResponse androidpublisherEditsTracksList(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsTracksListResponse androidpublisherEditsTracksList(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksListRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsTracksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksListPathParams.class, baseUrl, "/{packageName}/edits/{editId}/tracks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksListRequest.class, baseUrl, "/{packageName}/edits/{editId}/tracks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1661,27 +1693,28 @@ public class Edits {
     /**
      * Updates the track configuration for the specified track type. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsTracksPatchResponse androidpublisherEditsTracksPatch(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsTracksPatchResponse androidpublisherEditsTracksPatch(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksPatchRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsTracksPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksPatchPathParams.class, baseUrl, "/{packageName}/edits/{editId}/tracks/{track}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksPatchRequest.class, baseUrl, "/{packageName}/edits/{editId}/tracks/{track}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "track1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1707,27 +1740,28 @@ public class Edits {
     /**
      * Updates the track configuration for the specified track type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsTracksUpdateResponse androidpublisherEditsTracksUpdate(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsTracksUpdateResponse androidpublisherEditsTracksUpdate(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksUpdateRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsTracksUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksUpdatePathParams.class, baseUrl, "/{packageName}/edits/{editId}/tracks/{track}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksUpdateRequest.class, baseUrl, "/{packageName}/edits/{editId}/tracks/{track}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "track1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsTracksUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1753,25 +1787,26 @@ public class Edits {
     /**
      * Checks that the edit can be successfully committed. The edit's changes are not applied to the live app.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherEditsValidateResponse androidpublisherEditsValidate(org.openapis.openapi.models.operations.AndroidpublisherEditsValidateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherEditsValidateResponse androidpublisherEditsValidate(org.openapis.openapi.models.operations.AndroidpublisherEditsValidateRequest request, org.openapis.openapi.models.operations.AndroidpublisherEditsValidateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsValidatePathParams.class, baseUrl, "/{packageName}/edits/{editId}:validate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherEditsValidateRequest.class, baseUrl, "/{packageName}/edits/{editId}:validate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsValidateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherEditsValidateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

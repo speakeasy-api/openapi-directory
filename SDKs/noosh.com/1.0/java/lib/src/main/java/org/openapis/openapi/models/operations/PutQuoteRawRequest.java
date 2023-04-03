@@ -7,17 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutQuoteRawRequest {
-    
-    public PutQuoteRawPathParams pathParams;
-    public PutQuoteRawRequest withPathParams(PutQuoteRawPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] requestBody;
+    public PutQuoteRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public PutQuoteRawRequest withRequest(byte[] request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public PutQuoteRawRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quote_id")
+    public String quoteId;
+    public PutQuoteRawRequest withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public PutQuoteRawRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddUserRequest {
-    
-    public AddUserHeaders headers;
-    public AddUserRequest withHeaders(AddUserHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public AddUserAddUserRequestBody requestBody;
+    public AddUserRequest withRequestBody(AddUserAddUserRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public AddUserAddUserRequestBody request;
-    public AddUserRequest withRequest(AddUserAddUserRequestBody request) {
-        this.request = request;
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public AddUserRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
+        return this;
+    }
+    
+    /**
+     * API key required to make the API call
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public AddUserRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
         return this;
     }
     

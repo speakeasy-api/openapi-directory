@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishPushNotificationToDevicesFormRequest {
-    
-    public PublishPushNotificationToDevicesFormQueryParams queryParams;
-    public PublishPushNotificationToDevicesFormRequest withQueryParams(PublishPushNotificationToDevicesFormQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public PublishPushNotificationToDevicesFormHeaders headers;
-    public PublishPushNotificationToDevicesFormRequest withHeaders(PublishPushNotificationToDevicesFormHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public PublishPushNotificationToDevicesApplicationXWwwFormUrlencoded request;
-    public PublishPushNotificationToDevicesFormRequest withRequest(PublishPushNotificationToDevicesApplicationXWwwFormUrlencoded request) {
-        this.request = request;
+    public PublishPushNotificationToDevicesApplicationXWwwFormUrlencoded requestBody;
+    public PublishPushNotificationToDevicesFormRequest withRequestBody(PublishPushNotificationToDevicesApplicationXWwwFormUrlencoded requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The version of the API you wish to use.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
+    public String xAblyVersion;
+    public PublishPushNotificationToDevicesFormRequest withXAblyVersion(String xAblyVersion) {
+        this.xAblyVersion = xAblyVersion;
+        return this;
+    }
+    
+    /**
+     * The response format you would like
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+    public PublishPushNotificationToDevicesFormRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
+        this.format = format;
         return this;
     }
     

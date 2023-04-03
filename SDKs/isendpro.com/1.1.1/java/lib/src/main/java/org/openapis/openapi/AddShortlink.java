@@ -37,7 +37,7 @@ public class AddShortlink {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddShortlinkResponse addShortlink(org.openapis.openapi.models.operations.AddShortlinkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddShortlinkResponse addShortlink(org.openapis.openapi.models.shared.ShortlinkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/shortlink");
         

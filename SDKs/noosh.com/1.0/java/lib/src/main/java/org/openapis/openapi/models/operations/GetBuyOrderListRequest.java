@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBuyOrderListRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public GetBuyOrderListRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
     
-    public GetBuyOrderListPathParams pathParams;
-    public GetBuyOrderListRequest withPathParams(GetBuyOrderListPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public GetBuyOrderListRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

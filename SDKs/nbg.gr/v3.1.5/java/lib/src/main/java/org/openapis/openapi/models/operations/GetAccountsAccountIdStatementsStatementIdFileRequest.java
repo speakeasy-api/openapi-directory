@@ -4,27 +4,78 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountsAccountIdStatementsStatementIdFileRequest {
-    
-    public GetAccountsAccountIdStatementsStatementIdFilePathParams pathParams;
-    public GetAccountsAccountIdStatementsStatementIdFileRequest withPathParams(GetAccountsAccountIdStatementsStatementIdFilePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * AccountId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public GetAccountsAccountIdStatementsStatementIdFileRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public GetAccountsAccountIdStatementsStatementIdFileHeaders headers;
-    public GetAccountsAccountIdStatementsStatementIdFileRequest withHeaders(GetAccountsAccountIdStatementsStatementIdFileHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique id of the sandbox to be used
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=sandbox-id")
+    public String sandboxId;
+    public GetAccountsAccountIdStatementsStatementIdFileRequest withSandboxId(String sandboxId) {
+        this.sandboxId = sandboxId;
         return this;
     }
     
+    /**
+     * StatementId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=statementId")
+    public String statementId;
+    public GetAccountsAccountIdStatementsStatementIdFileRequest withStatementId(String statementId) {
+        this.statementId = statementId;
+        return this;
+    }
     
-    public GetAccountsAccountIdStatementsStatementIdFileSecurity security;
-    public GetAccountsAccountIdStatementsStatementIdFileRequest withSecurity(GetAccountsAccountIdStatementsStatementIdFileSecurity security) {
-        this.security = security;
+    /**
+     * Indicates the user-agent that the PSU is using.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
+    public String xCustomerUserAgent;
+    public GetAccountsAccountIdStatementsStatementIdFileRequest withXCustomerUserAgent(String xCustomerUserAgent) {
+        this.xCustomerUserAgent = xCustomerUserAgent;
+        return this;
+    }
+    
+    /**
+     * The time when the PSU last logged in with the TPP.
+     * All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below:
+     * Sun, 10 Sep 2017 19:43:31 UTC
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
+    public String xFapiAuthDate;
+    public GetAccountsAccountIdStatementsStatementIdFileRequest withXFapiAuthDate(String xFapiAuthDate) {
+        this.xFapiAuthDate = xFapiAuthDate;
+        return this;
+    }
+    
+    /**
+     * The PSU's IP address if the PSU is currently logged in with the TPP.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
+    public String xFapiCustomerIpAddress;
+    public GetAccountsAccountIdStatementsStatementIdFileRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
+        this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
+        return this;
+    }
+    
+    /**
+     * An RFC4122 UID used as a correlation id.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
+    public String xFapiInteractionId;
+    public GetAccountsAccountIdStatementsStatementIdFileRequest withXFapiInteractionId(String xFapiInteractionId) {
+        this.xFapiInteractionId = xFapiInteractionId;
         return this;
     }
     

@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountCreateSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeProject project;
-    public AccountCreateSecurity withProject(org.openapis.openapi.models.shared.SchemeProject project) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-Project")
+    public String project;
+    public AccountCreateSecurity withProject(String project) {
         this.project = project;
         return this;
     }

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceAppliancePrefixesDelegatedRequest {
-    
-    public GetDeviceAppliancePrefixesDelegatedPathParams pathParams;
-    public GetDeviceAppliancePrefixesDelegatedRequest withPathParams(GetDeviceAppliancePrefixesDelegatedPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetDeviceAppliancePrefixesDelegatedRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

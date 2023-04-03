@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListClassesRequest {
-    
-    public ListClassesQueryParams queryParams;
-    public ListClassesRequest withQueryParams(ListClassesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListClassesSecurity security;
-    public ListClassesRequest withSecurity(ListClassesSecurity security) {
-        this.security = security;
+    /**
+     * Filter the classes by state
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public ListClassesStateEnum state;
+    public ListClassesRequest withState(ListClassesStateEnum state) {
+        this.state = state;
         return this;
     }
     

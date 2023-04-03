@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1NonprofitsShowRequest {
-    
-    public GetApiV1NonprofitsShowQueryParams queryParams;
-    public GetApiV1NonprofitsShowRequest withQueryParams(GetApiV1NonprofitsShowQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetApiV1NonprofitsShowSecurity security;
-    public GetApiV1NonprofitsShowRequest withSecurity(GetApiV1NonprofitsShowSecurity security) {
-        this.security = security;
+    /**
+     * The id of a nonprofit from the CHANGE network.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetApiV1NonprofitsShowRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

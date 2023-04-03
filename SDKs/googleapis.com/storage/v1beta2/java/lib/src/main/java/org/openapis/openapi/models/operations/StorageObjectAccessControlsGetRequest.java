@@ -4,27 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageObjectAccessControlsGetRequest {
-    
-    public StorageObjectAccessControlsGetPathParams pathParams;
-    public StorageObjectAccessControlsGetRequest withPathParams(StorageObjectAccessControlsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public StorageObjectAccessControlsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public StorageObjectAccessControlsGetQueryParams queryParams;
-    public StorageObjectAccessControlsGetRequest withQueryParams(StorageObjectAccessControlsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Name of a bucket.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket")
+    public String bucket;
+    public StorageObjectAccessControlsGetRequest withBucket(String bucket) {
+        this.bucket = bucket;
         return this;
     }
     
+    /**
+     * The entity holding the permission. Can be user-userId, user-emailAddress, group-groupId, group-emailAddress, allUsers, or allAuthenticatedUsers.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=entity")
+    public String entity;
+    public StorageObjectAccessControlsGetRequest withEntity(String entity) {
+        this.entity = entity;
+        return this;
+    }
     
-    public StorageObjectAccessControlsGetSecurity security;
-    public StorageObjectAccessControlsGetRequest withSecurity(StorageObjectAccessControlsGetSecurity security) {
-        this.security = security;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public StorageObjectAccessControlsGetRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * If present, selects a specific revision of this object (as opposed to the latest version, the default).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=generation")
+    public String generation;
+    public StorageObjectAccessControlsGetRequest withGeneration(String generation) {
+        this.generation = generation;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public StorageObjectAccessControlsGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public StorageObjectAccessControlsGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Name of the object.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object")
+    public String object;
+    public StorageObjectAccessControlsGetRequest withObject(String object) {
+        this.object = object;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public StorageObjectAccessControlsGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public StorageObjectAccessControlsGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public StorageObjectAccessControlsGetRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

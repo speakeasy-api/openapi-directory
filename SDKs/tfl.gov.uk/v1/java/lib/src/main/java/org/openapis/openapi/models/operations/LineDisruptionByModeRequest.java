@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineDisruptionByModeRequest {
-    
-    public LineDisruptionByModePathParams pathParams;
-    public LineDisruptionByModeRequest withPathParams(LineDisruptionByModePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A comma-separated list of modes e.g. tube,dlr
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modes")
+    public String[] modes;
+    public LineDisruptionByModeRequest withModes(String[] modes) {
+        this.modes = modes;
         return this;
     }
     

@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NameTypeGeoRequest {
-    
-    public NameTypeGeoPathParams pathParams;
-    public NameTypeGeoRequest withPathParams(NameTypeGeoPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryIso2")
+    public String countryIso2;
+    public NameTypeGeoRequest withCountryIso2(String countryIso2) {
+        this.countryIso2 = countryIso2;
         return this;
     }
     
-    
-    public NameTypeGeoSecurity security;
-    public NameTypeGeoRequest withSecurity(NameTypeGeoSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=properNoun")
+    public String properNoun;
+    public NameTypeGeoRequest withProperNoun(String properNoun) {
+        this.properNoun = properNoun;
         return this;
     }
     

@@ -30,13 +30,10 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/KeywordSearchQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/KeywordSearchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/KeywordSearchResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RequestBuyRecommendationQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RequestBuyRecommendationRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RequestBuyRecommendationResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RequestProductQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RequestProductRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RequestProductResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/SortOptionsResponse.java

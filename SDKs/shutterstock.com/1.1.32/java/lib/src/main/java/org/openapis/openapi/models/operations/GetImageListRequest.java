@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImageListRequest {
-    
-    public GetImageListQueryParams queryParams;
-    public GetImageListRequest withQueryParams(GetImageListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * One or more image IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String[] id;
+    public GetImageListRequest withId(String[] id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * The ID of the search that is related to this request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_id")
+    public String searchId;
+    public GetImageListRequest withSearchId(String searchId) {
+        this.searchId = searchId;
+        return this;
+    }
     
-    public GetImageListSecurity security;
-    public GetImageListRequest withSecurity(GetImageListSecurity security) {
-        this.security = security;
+    /**
+     * Amount of detail to render in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
+    public GetImageListViewEnum view;
+    public GetImageListRequest withView(GetImageListViewEnum view) {
+        this.view = view;
         return this;
     }
     

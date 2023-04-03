@@ -44,7 +44,7 @@ public class ApiKeys {
      */
     public org.openapis.openapi.models.operations.DeleteApiKeysIdResponse deleteApiKeysId(org.openapis.openapi.models.operations.DeleteApiKeysIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiKeysIdPathParams.class, baseUrl, "/api_keys/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiKeysIdRequest.class, baseUrl, "/api_keys/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -83,7 +83,7 @@ public class ApiKeys {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiKeysQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiKeysRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -124,7 +124,7 @@ public class ApiKeys {
      */
     public org.openapis.openapi.models.operations.GetApiKeysIdResponse getApiKeysId(org.openapis.openapi.models.operations.GetApiKeysIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiKeysIdPathParams.class, baseUrl, "/api_keys/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiKeysIdRequest.class, baseUrl, "/api_keys/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -165,12 +165,12 @@ public class ApiKeys {
      */
     public org.openapis.openapi.models.operations.PatchApiKeysIdResponse patchApiKeysId(org.openapis.openapi.models.operations.PatchApiKeysIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchApiKeysIdPathParams.class, baseUrl, "/api_keys/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchApiKeysIdRequest.class, baseUrl, "/api_keys/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
@@ -206,7 +206,7 @@ public class ApiKeys {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiKeysResponse postApiKeys(org.openapis.openapi.models.operations.PostApiKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiKeysResponse postApiKeys(org.openapis.openapi.models.operations.PostApiKeysRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api_keys");
         

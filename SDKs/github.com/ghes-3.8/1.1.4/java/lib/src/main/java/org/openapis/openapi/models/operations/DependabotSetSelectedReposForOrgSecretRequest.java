@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DependabotSetSelectedReposForOrgSecretRequest {
-    
-    public DependabotSetSelectedReposForOrgSecretPathParams pathParams;
-    public DependabotSetSelectedReposForOrgSecretRequest withPathParams(DependabotSetSelectedReposForOrgSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public DependabotSetSelectedReposForOrgSecretRequestBody requestBody;
+    public DependabotSetSelectedReposForOrgSecretRequest withRequestBody(DependabotSetSelectedReposForOrgSecretRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public DependabotSetSelectedReposForOrgSecretRequestBody request;
-    public DependabotSetSelectedReposForOrgSecretRequest withRequest(DependabotSetSelectedReposForOrgSecretRequestBody request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public DependabotSetSelectedReposForOrgSecretRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * The name of the secret.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
+    public String secretName;
+    public DependabotSetSelectedReposForOrgSecretRequest withSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
     

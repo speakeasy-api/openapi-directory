@@ -43,7 +43,7 @@ public class Team {
      */
     public org.openapis.openapi.models.operations.GetTeamTeamnameResponse getTeamTeamname(org.openapis.openapi.models.operations.GetTeamTeamnameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamTeamnamePathParams.class, baseUrl, "/team/{teamname}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamTeamnameRequest.class, baseUrl, "/team/{teamname}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

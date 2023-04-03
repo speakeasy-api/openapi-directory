@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRevokeEndpointAccessRequest {
-    
-    public GETRevokeEndpointAccessQueryParams queryParams;
-    public GETRevokeEndpointAccessRequest withQueryParams(GETRevokeEndpointAccessQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Amazon Web Services account ID whose access is to be revoked.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Account")
+    public String account;
+    public GETRevokeEndpointAccessRequest withAccount(String account) {
+        this.account = account;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRevokeEndpointAccessActionEnum action;
+    public GETRevokeEndpointAccessRequest withAction(GETRevokeEndpointAccessActionEnum action) {
+        this.action = action;
+        return this;
+    }
     
-    public GETRevokeEndpointAccessHeaders headers;
-    public GETRevokeEndpointAccessRequest withHeaders(GETRevokeEndpointAccessHeaders headers) {
-        this.headers = headers;
+    /**
+     * The cluster to revoke access from.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETRevokeEndpointAccessRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * Indicates whether to force the revoke action. If true, the Redshift-managed VPC endpoints associated with the endpoint authorization are also deleted.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Force")
+    public Boolean force;
+    public GETRevokeEndpointAccessRequest withForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRevokeEndpointAccessVersionEnum version;
+    public GETRevokeEndpointAccessRequest withVersion(GETRevokeEndpointAccessVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * The virtual private cloud (VPC) identifiers for which access is to be revoked.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcIds")
+    public String[] vpcIds;
+    public GETRevokeEndpointAccessRequest withVpcIds(String[] vpcIds) {
+        this.vpcIds = vpcIds;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRevokeEndpointAccessRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRevokeEndpointAccessRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRevokeEndpointAccessRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRevokeEndpointAccessRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRevokeEndpointAccessRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRevokeEndpointAccessRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRevokeEndpointAccessRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -34,10 +34,11 @@ public class PlaylistItems {
     /**
      * Deletes a resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.YoutubePlaylistItemsDeleteResponse youtubePlaylistItemsDelete(org.openapis.openapi.models.operations.YoutubePlaylistItemsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.YoutubePlaylistItemsDeleteResponse youtubePlaylistItemsDelete(org.openapis.openapi.models.operations.YoutubePlaylistItemsDeleteRequest request, org.openapis.openapi.models.operations.YoutubePlaylistItemsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/youtube/v3/playlistItems");
         
@@ -45,14 +46,14 @@ public class PlaylistItems {
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubePlaylistItemsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubePlaylistItemsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,27 +74,28 @@ public class PlaylistItems {
     /**
      * Inserts a new resource into this collection.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.YoutubePlaylistItemsInsertResponse youtubePlaylistItemsInsert(org.openapis.openapi.models.operations.YoutubePlaylistItemsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.YoutubePlaylistItemsInsertResponse youtubePlaylistItemsInsert(org.openapis.openapi.models.operations.YoutubePlaylistItemsInsertRequest request, org.openapis.openapi.models.operations.YoutubePlaylistItemsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/youtube/v3/playlistItems");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "playlistItem", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubePlaylistItemsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubePlaylistItemsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -120,10 +122,11 @@ public class PlaylistItems {
     /**
      * Retrieves a list of resources, possibly filtered.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.YoutubePlaylistItemsListResponse youtubePlaylistItemsList(org.openapis.openapi.models.operations.YoutubePlaylistItemsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.YoutubePlaylistItemsListResponse youtubePlaylistItemsList(org.openapis.openapi.models.operations.YoutubePlaylistItemsListRequest request, org.openapis.openapi.models.operations.YoutubePlaylistItemsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/youtube/v3/playlistItems");
         
@@ -131,14 +134,14 @@ public class PlaylistItems {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubePlaylistItemsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubePlaylistItemsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,27 +168,28 @@ public class PlaylistItems {
     /**
      * Updates an existing resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.YoutubePlaylistItemsUpdateResponse youtubePlaylistItemsUpdate(org.openapis.openapi.models.operations.YoutubePlaylistItemsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.YoutubePlaylistItemsUpdateResponse youtubePlaylistItemsUpdate(org.openapis.openapi.models.operations.YoutubePlaylistItemsUpdateRequest request, org.openapis.openapi.models.operations.YoutubePlaylistItemsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/youtube/v3/playlistItems");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "playlistItem", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubePlaylistItemsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubePlaylistItemsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

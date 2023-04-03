@@ -4,27 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSessionRequest {
-    
-    public GetSessionPathParams pathParams;
-    public GetSessionRequest withPathParams(GetSessionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetSessionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public GetSessionQueryParams queryParams;
-    public GetSessionRequest withQueryParams(GetSessionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetSessionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetSessionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public GetSessionHeaders headers;
-    public GetSessionRequest withHeaders(GetSessionHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetSessionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetSessionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetSessionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetSessionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The alias in use for the bot that contains the session data.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botAlias")
+    public String botAlias;
+    public GetSessionRequest withBotAlias(String botAlias) {
+        this.botAlias = botAlias;
+        return this;
+    }
+    
+    /**
+     * The name of the bot that contains the session data.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botName")
+    public String botName;
+    public GetSessionRequest withBotName(String botName) {
+        this.botName = botName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A string used to filter the intents returned in the &lt;code&gt;recentIntentSummaryView&lt;/code&gt; structure. &lt;/p&gt; &lt;p&gt;When you specify a filter, only intents with their &lt;code&gt;checkpointLabel&lt;/code&gt; field set to that string are returned.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=checkpointLabelFilter")
+    public String checkpointLabelFilter;
+    public GetSessionRequest withCheckpointLabelFilter(String checkpointLabelFilter) {
+        this.checkpointLabelFilter = checkpointLabelFilter;
+        return this;
+    }
+    
+    /**
+     * The ID of the client application user. Amazon Lex uses this to identify a user's conversation with your bot. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public GetSessionRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

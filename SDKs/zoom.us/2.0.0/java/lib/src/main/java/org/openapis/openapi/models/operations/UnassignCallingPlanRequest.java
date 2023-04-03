@@ -4,20 +4,24 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnassignCallingPlanRequest {
-    
-    public UnassignCallingPlanPathParams pathParams;
-    public UnassignCallingPlanRequest withPathParams(UnassignCallingPlanPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The [type](https://marketplace.zoom.us/docs/api-reference/other-references/plans#zoom-phone-calling-plans) of the calling plan that was assigned to user. (e.g: The value of type would be "200" for Unlimited US/Canada calling plan.)
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public String type;
+    public UnassignCallingPlanRequest withType(String type) {
+        this.type = type;
         return this;
     }
     
-    
-    public UnassignCallingPlanSecurity security;
-    public UnassignCallingPlanRequest withSecurity(UnassignCallingPlanSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UnassignCallingPlanRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

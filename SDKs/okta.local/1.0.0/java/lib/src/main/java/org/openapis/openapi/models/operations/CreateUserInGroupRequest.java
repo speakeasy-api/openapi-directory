@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUserInGroupRequest {
-    
-    public CreateUserInGroupQueryParams queryParams;
-    public CreateUserInGroupRequest withQueryParams(CreateUserInGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateUserInGroupRequestBody requestBody;
+    public CreateUserInGroupRequest withRequestBody(CreateUserInGroupRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateUserInGroupRequestBody request;
-    public CreateUserInGroupRequest withRequest(CreateUserInGroupRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=activate")
+    public String activate;
+    public CreateUserInGroupRequest withActivate(String activate) {
+        this.activate = activate;
         return this;
     }
     

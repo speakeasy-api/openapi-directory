@@ -42,7 +42,7 @@ public class Scripts {
      */
     public org.openapis.openapi.models.operations.ExportZipUsingGETResponse exportZipUsingGET(org.openapis.openapi.models.operations.ExportZipUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportZipUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/scripts/export", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportZipUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/scripts/export", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -81,7 +81,7 @@ public class Scripts {
      */
     public org.openapis.openapi.models.operations.GETScriptDifferencesUsingGETResponse getScriptDifferencesUsingGET(org.openapis.openapi.models.operations.GETScriptDifferencesUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETScriptDifferencesUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/scripts/differences/{snapshotId1}/{snapshotId2}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETScriptDifferencesUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/scripts/differences/{snapshotId1}/{snapshotId2}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,13 +120,13 @@ public class Scripts {
      */
     public org.openapis.openapi.models.operations.GETScriptVersionsUsingGETResponse getScriptVersionsUsingGET(org.openapis.openapi.models.operations.GETScriptVersionsUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETScriptVersionsUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/scripts/versions/{page}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETScriptVersionsUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/scripts/versions/{page}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETScriptVersionsUsingGETQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETScriptVersionsUsingGETRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -165,13 +165,13 @@ public class Scripts {
      */
     public org.openapis.openapi.models.operations.GETScriptVersionsUsingGET1Response getScriptVersionsUsingGET1(org.openapis.openapi.models.operations.GETScriptVersionsUsingGET1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETScriptVersionsUsingGET1PathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/scripts/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETScriptVersionsUsingGET1Request.class, baseUrl, "/restv2/game/{apiKey}/admin/scripts/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETScriptVersionsUsingGET1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETScriptVersionsUsingGET1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -210,18 +210,18 @@ public class Scripts {
      */
     public org.openapis.openapi.models.operations.ImportAcceptUsingPOSTResponse importAcceptUsingPOST(org.openapis.openapi.models.operations.ImportAcceptUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportAcceptUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/scripts/import/accept", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportAcceptUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/scripts/import/accept", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ImportAcceptUsingPOSTQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ImportAcceptUsingPOSTRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -261,12 +261,12 @@ public class Scripts {
      */
     public org.openapis.openapi.models.operations.ImportZipUsingPOSTResponse importZipUsingPOST(org.openapis.openapi.models.operations.ImportZipUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportZipUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/scripts/import/preview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportZipUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/scripts/import/preview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -39,7 +39,7 @@ public class MBus {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MBusPostFormResponse mBusPostForm(org.openapis.openapi.models.operations.MBusPostFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MBusPostFormResponse mBusPostForm(org.openapis.openapi.models.shared.MBusData request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/MBus");
         
@@ -102,7 +102,7 @@ public class MBus {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MBusPostJsonResponse mBusPostJson(org.openapis.openapi.models.operations.MBusPostJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MBusPostJsonResponse mBusPostJson(org.openapis.openapi.models.shared.MBusData request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/MBus");
         
@@ -165,7 +165,7 @@ public class MBus {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MBusPostRawResponse mBusPostRaw(org.openapis.openapi.models.operations.MBusPostRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MBusPostRawResponse mBusPostRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/MBus");
         

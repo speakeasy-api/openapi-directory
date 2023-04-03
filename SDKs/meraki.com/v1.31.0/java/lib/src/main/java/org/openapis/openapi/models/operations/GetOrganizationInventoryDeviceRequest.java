@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationInventoryDeviceRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationInventoryDeviceRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
     
-    public GetOrganizationInventoryDevicePathParams pathParams;
-    public GetOrganizationInventoryDeviceRequest withPathParams(GetOrganizationInventoryDevicePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetOrganizationInventoryDeviceRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

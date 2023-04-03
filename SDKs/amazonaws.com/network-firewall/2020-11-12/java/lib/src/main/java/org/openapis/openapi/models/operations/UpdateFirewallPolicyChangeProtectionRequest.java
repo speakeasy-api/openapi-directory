@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateFirewallPolicyChangeProtectionRequest {
-    
-    public UpdateFirewallPolicyChangeProtectionHeaders headers;
-    public UpdateFirewallPolicyChangeProtectionRequest withHeaders(UpdateFirewallPolicyChangeProtectionHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UpdateFirewallPolicyChangeProtectionRequest updateFirewallPolicyChangeProtectionRequest;
+    public UpdateFirewallPolicyChangeProtectionRequest withUpdateFirewallPolicyChangeProtectionRequest(org.openapis.openapi.models.shared.UpdateFirewallPolicyChangeProtectionRequest updateFirewallPolicyChangeProtectionRequest) {
+        this.updateFirewallPolicyChangeProtectionRequest = updateFirewallPolicyChangeProtectionRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateFirewallPolicyChangeProtectionRequest request;
-    public UpdateFirewallPolicyChangeProtectionRequest withRequest(org.openapis.openapi.models.shared.UpdateFirewallPolicyChangeProtectionRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateFirewallPolicyChangeProtectionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateFirewallPolicyChangeProtectionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateFirewallPolicyChangeProtectionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateFirewallPolicyChangeProtectionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateFirewallPolicyChangeProtectionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateFirewallPolicyChangeProtectionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateFirewallPolicyChangeProtectionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public UpdateFirewallPolicyChangeProtectionXAmzTargetEnum xAmzTarget;
+    public UpdateFirewallPolicyChangeProtectionRequest withXAmzTarget(UpdateFirewallPolicyChangeProtectionXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

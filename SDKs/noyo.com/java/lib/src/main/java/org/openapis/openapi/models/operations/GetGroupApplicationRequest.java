@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupApplicationRequest {
-    
-    public GetGroupApplicationPathParams pathParams;
-    public GetGroupApplicationRequest withPathParams(GetGroupApplicationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the application in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application_id")
+    public String applicationId;
+    public GetGroupApplicationRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
         return this;
     }
     

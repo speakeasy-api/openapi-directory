@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTracksTrackIdStreamsRequest {
-    
-    public GetTracksTrackIdStreamsPathParams pathParams;
-    public GetTracksTrackIdStreamsRequest withPathParams(GetTracksTrackIdStreamsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A secret token to fetch private playlists/tracks
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secret_token")
+    public String secretToken;
+    public GetTracksTrackIdStreamsRequest withSecretToken(String secretToken) {
+        this.secretToken = secretToken;
         return this;
     }
     
-    
-    public GetTracksTrackIdStreamsQueryParams queryParams;
-    public GetTracksTrackIdStreamsRequest withQueryParams(GetTracksTrackIdStreamsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetTracksTrackIdStreamsSecurity security;
-    public GetTracksTrackIdStreamsRequest withSecurity(GetTracksTrackIdStreamsSecurity security) {
-        this.security = security;
+    /**
+     * SoundCloud Track id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=track_id")
+    public Long trackId;
+    public GetTracksTrackIdStreamsRequest withTrackId(Long trackId) {
+        this.trackId = trackId;
         return this;
     }
     

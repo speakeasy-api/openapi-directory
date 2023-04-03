@@ -161,23 +161,36 @@ public class SDK {
     /**
      * Deletes a Content resource
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteContentResponse deleteContent(org.openapis.openapi.models.operations.DeleteContentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteContentResponse deleteContent(org.openapis.openapi.models.operations.DeleteContentRequest request, org.openapis.openapi.models.operations.DeleteContentSecurity security) throws Exception {
+        return this.deleteContent(request, security, null);
+    }
+
+    /**
+     * Deletes a Content resource
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteContentResponse deleteContent(org.openapis.openapi.models.operations.DeleteContentRequest request, org.openapis.openapi.models.operations.DeleteContentSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_CONTENT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteContentPathParams.class, baseUrl, "/v1/Content/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteContentRequest.class, baseUrl, "/v1/Content/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -198,23 +211,36 @@ public class SDK {
     /**
      * Fetch a Content resource's approval status by its unique Content Sid
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchApprovalFetchResponse fetchApprovalFetch(org.openapis.openapi.models.operations.FetchApprovalFetchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchApprovalFetchResponse fetchApprovalFetch(org.openapis.openapi.models.operations.FetchApprovalFetchRequest request, org.openapis.openapi.models.operations.FetchApprovalFetchSecurity security) throws Exception {
+        return this.fetchApprovalFetch(request, security, null);
+    }
+
+    /**
+     * Fetch a Content resource's approval status by its unique Content Sid
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchApprovalFetchResponse fetchApprovalFetch(org.openapis.openapi.models.operations.FetchApprovalFetchRequest request, org.openapis.openapi.models.operations.FetchApprovalFetchSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_APPROVAL_FETCH_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchApprovalFetchPathParams.class, baseUrl, "/v1/Content/{Sid}/ApprovalRequests", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchApprovalFetchRequest.class, baseUrl, "/v1/Content/{Sid}/ApprovalRequests", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -241,23 +267,36 @@ public class SDK {
     /**
      * Fetch a Content resource by its unique Content Sid
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchContentResponse fetchContent(org.openapis.openapi.models.operations.FetchContentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchContentResponse fetchContent(org.openapis.openapi.models.operations.FetchContentRequest request, org.openapis.openapi.models.operations.FetchContentSecurity security) throws Exception {
+        return this.fetchContent(request, security, null);
+    }
+
+    /**
+     * Fetch a Content resource by its unique Content Sid
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchContentResponse fetchContent(org.openapis.openapi.models.operations.FetchContentRequest request, org.openapis.openapi.models.operations.FetchContentSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_CONTENT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchContentPathParams.class, baseUrl, "/v1/Content/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchContentRequest.class, baseUrl, "/v1/Content/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -284,13 +323,26 @@ public class SDK {
     /**
      * Retrieve a list of Contents belonging to the account used to make the request
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListContentResponse listContent(org.openapis.openapi.models.operations.ListContentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListContentResponse listContent(org.openapis.openapi.models.operations.ListContentRequest request, org.openapis.openapi.models.operations.ListContentSecurity security) throws Exception {
+        return this.listContent(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of Contents belonging to the account used to make the request
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListContentResponse listContent(org.openapis.openapi.models.operations.ListContentRequest request, org.openapis.openapi.models.operations.ListContentSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_CONTENT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Content");
@@ -299,14 +351,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListContentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListContentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -333,13 +385,26 @@ public class SDK {
     /**
      * Retrieve a list of Contents with approval statuses belonging to the account used to make the request
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListContentAndApprovalsResponse listContentAndApprovals(org.openapis.openapi.models.operations.ListContentAndApprovalsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListContentAndApprovalsResponse listContentAndApprovals(org.openapis.openapi.models.operations.ListContentAndApprovalsRequest request, org.openapis.openapi.models.operations.ListContentAndApprovalsSecurity security) throws Exception {
+        return this.listContentAndApprovals(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of Contents with approval statuses belonging to the account used to make the request
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListContentAndApprovalsResponse listContentAndApprovals(org.openapis.openapi.models.operations.ListContentAndApprovalsRequest request, org.openapis.openapi.models.operations.ListContentAndApprovalsSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_CONTENT_AND_APPROVALS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/ContentAndApprovals");
@@ -348,14 +413,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListContentAndApprovalsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListContentAndApprovalsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -382,13 +447,26 @@ public class SDK {
     /**
      * Retrieve a list of Legacy Contents belonging to the account used to make the request
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListLegacyContentResponse listLegacyContent(org.openapis.openapi.models.operations.ListLegacyContentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListLegacyContentResponse listLegacyContent(org.openapis.openapi.models.operations.ListLegacyContentRequest request, org.openapis.openapi.models.operations.ListLegacyContentSecurity security) throws Exception {
+        return this.listLegacyContent(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of Legacy Contents belonging to the account used to make the request
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListLegacyContentResponse listLegacyContent(org.openapis.openapi.models.operations.ListLegacyContentRequest request, org.openapis.openapi.models.operations.ListLegacyContentSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_LEGACY_CONTENT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/LegacyContent");
@@ -397,14 +475,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListLegacyContentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListLegacyContentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

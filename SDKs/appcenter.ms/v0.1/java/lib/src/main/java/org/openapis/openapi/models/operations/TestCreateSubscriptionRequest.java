@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestCreateSubscriptionRequest {
-    
-    public TestCreateSubscriptionPathParams pathParams;
-    public TestCreateSubscriptionRequest withPathParams(TestCreateSubscriptionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public TestCreateSubscriptionRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public TestCreateSubscriptionSecurity security;
-    public TestCreateSubscriptionRequest withSecurity(TestCreateSubscriptionSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public TestCreateSubscriptionRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimDeviceBaysReadRequest {
-    
-    public DcimDeviceBaysReadPathParams pathParams;
-    public DcimDeviceBaysReadRequest withPathParams(DcimDeviceBaysReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this device bay.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimDeviceBaysReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

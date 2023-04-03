@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListBillingPeriodRequest {
-    
-    public ListBillingPeriodPathParams pathParams;
-    public ListBillingPeriodRequest withPathParams(ListBillingPeriodPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListBillingPeriodRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListBillingPeriodQueryParams queryParams;
-    public ListBillingPeriodRequest withQueryParams(ListBillingPeriodQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListBillingPeriodRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public ListBillingPeriodSecurity security;
-    public ListBillingPeriodRequest withSecurity(ListBillingPeriodSecurity security) {
-        this.security = security;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListBillingPeriodRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     
-    
-    public String serverURL;
-    public ListBillingPeriodRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Super SIM to list Billing Periods for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SimSid")
+    public String simSid;
+    public ListBillingPeriodRequest withSimSid(String simSid) {
+        this.simSid = simSid;
         return this;
     }
     

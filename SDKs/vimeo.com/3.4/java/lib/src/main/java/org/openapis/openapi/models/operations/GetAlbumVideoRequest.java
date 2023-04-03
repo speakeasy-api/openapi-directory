@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAlbumVideoRequest {
-    
-    public GetAlbumVideoPathParams pathParams;
-    public GetAlbumVideoRequest withPathParams(GetAlbumVideoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the album.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=album_id")
+    public Double albumId;
+    public GetAlbumVideoRequest withAlbumId(Double albumId) {
+        this.albumId = albumId;
         return this;
     }
     
+    /**
+     * The password of the album.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=password")
+    public String password;
+    public GetAlbumVideoRequest withPassword(String password) {
+        this.password = password;
+        return this;
+    }
     
-    public GetAlbumVideoQueryParams queryParams;
-    public GetAlbumVideoRequest withQueryParams(GetAlbumVideoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public GetAlbumVideoRequest withUserId(Double userId) {
+        this.userId = userId;
+        return this;
+    }
+    
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public GetAlbumVideoRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

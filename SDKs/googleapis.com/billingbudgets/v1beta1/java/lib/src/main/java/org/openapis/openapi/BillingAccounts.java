@@ -35,27 +35,28 @@ public class BillingAccounts {
     /**
      * Creates a new budget. See [Quotas and limits](https://cloud.google.com/billing/quotas) for more information on the limits of the number of budgets you can create.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsCreateResponse billingbudgetsBillingAccountsBudgetsCreate(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsCreateResponse billingbudgetsBillingAccountsBudgetsCreate(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsCreateRequest request, org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/budgets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsCreateRequest.class, baseUrl, "/v1beta1/{parent}/budgets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudBillingBudgetsV1beta1CreateBudgetRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class BillingAccounts {
     /**
      * Deletes a budget. Returns successfully if already deleted.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsDeleteResponse billingbudgetsBillingAccountsBudgetsDelete(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsDeleteResponse billingbudgetsBillingAccountsBudgetsDelete(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsDeleteRequest request, org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsDeletePathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsDeleteRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class BillingAccounts {
     /**
      * Returns a budget. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsGetResponse billingbudgetsBillingAccountsBudgetsGet(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsGetResponse billingbudgetsBillingAccountsBudgetsGet(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsGetRequest request, org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsGetPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsGetRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,25 +175,26 @@ public class BillingAccounts {
     /**
      * Returns a list of budgets for a billing account. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsListResponse billingbudgetsBillingAccountsBudgetsList(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsListResponse billingbudgetsBillingAccountsBudgetsList(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsListRequest request, org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsListPathParams.class, baseUrl, "/v1beta1/{parent}/budgets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsListRequest.class, baseUrl, "/v1beta1/{parent}/budgets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -217,27 +221,28 @@ public class BillingAccounts {
     /**
      * Updates a budget and returns the updated budget. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. Budget fields that are not exposed in this API will not be changed by this method.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsPatchResponse billingbudgetsBillingAccountsBudgetsPatch(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsPatchResponse billingbudgetsBillingAccountsBudgetsPatch(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsPatchRequest request, org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsPatchPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsPatchRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudBillingBudgetsV1beta1UpdateBudgetRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

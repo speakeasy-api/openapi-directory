@@ -4,27 +4,105 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListStudioComponentsRequest {
-    
-    public ListStudioComponentsPathParams pathParams;
-    public ListStudioComponentsRequest withPathParams(ListStudioComponentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListStudioComponentsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public ListStudioComponentsQueryParams queryParams;
-    public ListStudioComponentsRequest withQueryParams(ListStudioComponentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListStudioComponentsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListStudioComponentsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public ListStudioComponentsHeaders headers;
-    public ListStudioComponentsRequest withHeaders(ListStudioComponentsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListStudioComponentsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListStudioComponentsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListStudioComponentsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListStudioComponentsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The max number of results to return in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListStudioComponentsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The token for the next set of results, or null if there are no more results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListStudioComponentsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * Filters the request to studio components that are in one of the given states. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=states")
+    public org.openapis.openapi.models.shared.StudioComponentStateEnum[] states;
+    public ListStudioComponentsRequest withStates(org.openapis.openapi.models.shared.StudioComponentStateEnum[] states) {
+        this.states = states;
+        return this;
+    }
+    
+    /**
+     * The studio ID. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=studioId")
+    public String studioId;
+    public ListStudioComponentsRequest withStudioId(String studioId) {
+        this.studioId = studioId;
+        return this;
+    }
+    
+    /**
+     * Filters the request to studio components that are of one of the given types.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=types")
+    public org.openapis.openapi.models.shared.StudioComponentTypeEnum[] types;
+    public ListStudioComponentsRequest withTypes(org.openapis.openapi.models.shared.StudioComponentTypeEnum[] types) {
+        this.types = types;
         return this;
     }
     

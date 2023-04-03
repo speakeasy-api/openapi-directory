@@ -47,7 +47,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2UsersJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2UsersJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -86,7 +86,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.GetV2UsersIdJsonResponse getV2UsersIdJson(org.openapis.openapi.models.operations.GetV2UsersIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2UsersIdJsonPathParams.class, baseUrl, "/v2/users/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2UsersIdJsonRequest.class, baseUrl, "/v2/users/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

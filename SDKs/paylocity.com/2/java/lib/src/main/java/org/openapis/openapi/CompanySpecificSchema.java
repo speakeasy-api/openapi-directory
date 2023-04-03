@@ -33,18 +33,19 @@ public class CompanySpecificSchema {
      * Get Company-Specific Open API Documentation
      * The company-specific Open API endpoint allows the client to GET an Open API document for the Paylocity API that is customized with company-specific resource schemas. These customized resource schemas define certain properties as enumerations of pre-defined values that correspond to the company's setup with Web Pay. The customized schemas also indicate which properties are required by the company within Web Pay.&lt;br  /&gt;To learn more about Open API, click [here](https://www.openapis.org/)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCompanySpecificOpenAPIDocumentationResponse getCompanySpecificOpenAPIDocumentation(org.openapis.openapi.models.operations.GetCompanySpecificOpenAPIDocumentationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCompanySpecificOpenAPIDocumentationResponse getCompanySpecificOpenAPIDocumentation(org.openapis.openapi.models.operations.GetCompanySpecificOpenAPIDocumentationRequest request, org.openapis.openapi.models.operations.GetCompanySpecificOpenAPIDocumentationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompanySpecificOpenAPIDocumentationPathParams.class, baseUrl, "/v2/companies/{companyId}/openapi", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompanySpecificOpenAPIDocumentationRequest.class, baseUrl, "/v2/companies/{companyId}/openapi", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -53,7 +54,7 @@ public class CompanySpecificSchema {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

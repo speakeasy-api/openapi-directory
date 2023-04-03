@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListServiceRoleRequest {
-    
-    public ListServiceRolePathParams pathParams;
-    public ListServiceRoleRequest withPathParams(ListServiceRolePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) to read the Role resources from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public ListServiceRoleRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     
-    
-    public ListServiceRoleQueryParams queryParams;
-    public ListServiceRoleRequest withQueryParams(ListServiceRoleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListServiceRoleRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListServiceRoleSecurity security;
-    public ListServiceRoleRequest withSecurity(ListServiceRoleSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListServiceRoleRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public String serverURL;
-    public ListServiceRoleRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListServiceRoleRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

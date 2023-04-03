@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListProfileObjectTypesRequest {
-    
-    public ListProfileObjectTypesPathParams pathParams;
-    public ListProfileObjectTypesRequest withPathParams(ListProfileObjectTypesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique name of the domain.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainName")
+    public String domainName;
+    public ListProfileObjectTypesRequest withDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
     
-    
-    public ListProfileObjectTypesQueryParams queryParams;
-    public ListProfileObjectTypesRequest withQueryParams(ListProfileObjectTypesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListProfileObjectTypesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListProfileObjectTypesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public ListProfileObjectTypesHeaders headers;
-    public ListProfileObjectTypesRequest withHeaders(ListProfileObjectTypesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListProfileObjectTypesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListProfileObjectTypesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListProfileObjectTypesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListProfileObjectTypesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListProfileObjectTypesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The maximum number of objects returned per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max-results")
+    public Long maxResults;
+    public ListProfileObjectTypesRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Identifies the next page of results to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next-token")
+    public String nextToken;
+    public ListProfileObjectTypesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     

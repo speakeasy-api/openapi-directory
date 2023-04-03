@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolIpmiGetArgsRequest {
-    
-    public ProtocolIpmiGetArgsPathParams pathParams;
-    public ProtocolIpmiGetArgsRequest withPathParams(ProtocolIpmiGetArgsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show the IPMI argument structure
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolIpmiGetArgsRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

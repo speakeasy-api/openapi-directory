@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWorkspaceRequest {
-    
-    public UpdateWorkspacePathParams pathParams;
-    public UpdateWorkspaceRequest withPathParams(UpdateWorkspacePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateWorkspaceUpdateWorkspaceRequest request;
-    public UpdateWorkspaceRequest withRequest(UpdateWorkspaceUpdateWorkspaceRequest request) {
-        this.request = request;
+    public UpdateWorkspaceUpdateWorkspaceRequest requestBody;
+    public UpdateWorkspaceRequest withRequestBody(UpdateWorkspaceUpdateWorkspaceRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateWorkspaceSecurity security;
-    public UpdateWorkspaceRequest withSecurity(UpdateWorkspaceSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateWorkspaceRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateWorkspaceRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

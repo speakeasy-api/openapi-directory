@@ -7,24 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSellerRequest {
-    
-    public UpdateSellerPathParams pathParams;
-    public UpdateSellerRequest withPathParams(UpdateSellerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public UpdateSellerRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public UpdateSellerQueryParams queryParams;
-    public UpdateSellerRequest withQueryParams(UpdateSellerQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public UpdateSellerHeaders headers;
-    public UpdateSellerRequest withHeaders(UpdateSellerHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public UpdateSellerRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
@@ -32,9 +31,39 @@ public class UpdateSellerRequest {
      * array of objects
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateSellerRequestBody[] request;
-    public UpdateSellerRequest withRequest(UpdateSellerRequestBody[] request) {
-        this.request = request;
+    public UpdateSellerRequestBody[] requestBody;
+    public UpdateSellerRequest withRequestBody(UpdateSellerRequestBody[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Name of the VTEX account that belongs to the marketplace.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public UpdateSellerRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    
+    /**
+     * Environment to use. Used as part of the URL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
+    public String environment;
+    public UpdateSellerRequest withEnvironment(String environment) {
+        this.environment = environment;
+        return this;
+    }
+    
+    /**
+     * A string that identifies the seller in the marketplace. This ID must be created by the marketplace
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
+    public String sellerId;
+    public UpdateSellerRequest withSellerId(String sellerId) {
+        this.sellerId = sellerId;
         return this;
     }
     

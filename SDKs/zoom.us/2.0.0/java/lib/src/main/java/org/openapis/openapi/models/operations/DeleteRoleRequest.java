@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRoleRequest {
-    
-    public DeleteRolePathParams pathParams;
-    public DeleteRoleRequest withPathParams(DeleteRolePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteRoleSecurity security;
-    public DeleteRoleRequest withSecurity(DeleteRoleSecurity security) {
-        this.security = security;
+    /**
+     * Role Id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roleId")
+    public String roleId;
+    public DeleteRoleRequest withRoleId(String roleId) {
+        this.roleId = roleId;
         return this;
     }
     

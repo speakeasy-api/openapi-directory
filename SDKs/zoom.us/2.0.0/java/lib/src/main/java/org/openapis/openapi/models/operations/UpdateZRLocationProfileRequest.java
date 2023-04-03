@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateZRLocationProfileRequest {
-    
-    public UpdateZRLocationProfilePathParams pathParams;
-    public UpdateZRLocationProfileRequest withPathParams(UpdateZRLocationProfilePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateZRLocationProfileApplicationJSON request;
-    public UpdateZRLocationProfileRequest withRequest(UpdateZRLocationProfileApplicationJSON request) {
-        this.request = request;
+    public UpdateZRLocationProfileApplicationJSON requestBody;
+    public UpdateZRLocationProfileRequest withRequestBody(UpdateZRLocationProfileApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateZRLocationProfileSecurity security;
-    public UpdateZRLocationProfileRequest withSecurity(UpdateZRLocationProfileSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the location. This can be retrieved from the [List Zoom Room Locations](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=locationId")
+    public String locationId;
+    public UpdateZRLocationProfileRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     

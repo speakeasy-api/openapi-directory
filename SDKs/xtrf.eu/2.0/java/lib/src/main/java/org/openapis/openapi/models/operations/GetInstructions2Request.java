@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInstructions2Request {
-    
-    public GetInstructions2PathParams pathParams;
-    public GetInstructions2Request withPathParams(GetInstructions2PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * task's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
+    public String taskId;
+    public GetInstructions2Request withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

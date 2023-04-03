@@ -34,27 +34,28 @@ public class Accounts {
     /**
      * Finishes enrolling a second factor for the user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeResponse identitytoolkitAccountsMfaEnrollmentFinalize(org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeResponse identitytoolkitAccountsMfaEnrollmentFinalize(org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeRequest request, org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/accounts/mfaEnrollment:finalize");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIdentitytoolkitV2FinalizeMfaEnrollmentRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentFinalizeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class Accounts {
     /**
      * Step one of the MFA enrollment process. In SMS case, this sends an SMS verification code to the user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentStartResponse identitytoolkitAccountsMfaEnrollmentStart(org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentStartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentStartResponse identitytoolkitAccountsMfaEnrollmentStart(org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentStartRequest request, org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentStartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/accounts/mfaEnrollment:start");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIdentitytoolkitV2StartMfaEnrollmentRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentStartQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentStartRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,27 +130,28 @@ public class Accounts {
     /**
      * Revokes one second factor from the enrolled second factors for an account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentWithdrawResponse identitytoolkitAccountsMfaEnrollmentWithdraw(org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentWithdrawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentWithdrawResponse identitytoolkitAccountsMfaEnrollmentWithdraw(org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentWithdrawRequest request, org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentWithdrawSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/accounts/mfaEnrollment:withdraw");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIdentitytoolkitV2WithdrawMfaRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentWithdrawQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaEnrollmentWithdrawRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -175,27 +178,28 @@ public class Accounts {
     /**
      * Verifies the MFA challenge and performs sign-in
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInFinalizeResponse identitytoolkitAccountsMfaSignInFinalize(org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInFinalizeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInFinalizeResponse identitytoolkitAccountsMfaSignInFinalize(org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInFinalizeRequest request, org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInFinalizeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/accounts/mfaSignIn:finalize");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIdentitytoolkitV2FinalizeMfaSignInRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInFinalizeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInFinalizeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -222,27 +226,28 @@ public class Accounts {
     /**
      * Sends the MFA challenge
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInStartResponse identitytoolkitAccountsMfaSignInStart(org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInStartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInStartResponse identitytoolkitAccountsMfaSignInStart(org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInStartRequest request, org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInStartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/accounts/mfaSignIn:start");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIdentitytoolkitV2StartMfaSignInRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInStartQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitAccountsMfaSignInStartRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetArtifactMetaDataRequest {
-    
-    public GetArtifactMetaDataPathParams pathParams;
-    public GetArtifactMetaDataRequest withPathParams(GetArtifactMetaDataPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public GetArtifactMetaDataRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
         return this;
     }
     

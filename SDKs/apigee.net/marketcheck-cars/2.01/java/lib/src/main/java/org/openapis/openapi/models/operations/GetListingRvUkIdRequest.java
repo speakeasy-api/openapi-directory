@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListingRvUkIdRequest {
-    
-    public GetListingRvUkIdPathParams pathParams;
-    public GetListingRvUkIdRequest withPathParams(GetListingRvUkIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetListingRvUkIdRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public GetListingRvUkIdQueryParams queryParams;
-    public GetListingRvUkIdRequest withQueryParams(GetListingRvUkIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Listing id to get all the listing attributes
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetListingRvUkIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

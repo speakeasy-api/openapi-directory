@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateFleetRequest {
-    
-    public UpdateFleetPathParams pathParams;
-    public UpdateFleetRequest withPathParams(UpdateFleetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateFleetUpdateFleetRequest request;
-    public UpdateFleetRequest withRequest(UpdateFleetUpdateFleetRequest request) {
-        this.request = request;
+    public UpdateFleetUpdateFleetRequest requestBody;
+    public UpdateFleetRequest withRequestBody(UpdateFleetUpdateFleetRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateFleetSecurity security;
-    public UpdateFleetRequest withSecurity(UpdateFleetSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateFleetRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Fleet resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateFleetRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

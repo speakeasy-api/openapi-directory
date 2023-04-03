@@ -4,13 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmpv3UserAddRequest {
+    /**
+     * Agent to add the SNMPv3 user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSnmpv3UserAddRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolSnmpv3UserAddPathParams pathParams;
-    public ProtocolSnmpv3UserAddRequest withPathParams(ProtocolSnmpv3UserAddPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * SNMPv3 user authentication key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=authKey")
+    public String authKey;
+    public ProtocolSnmpv3UserAddRequest withAuthKey(String authKey) {
+        this.authKey = authKey;
+        return this;
+    }
+    
+    /**
+     * SNMPv3 user authentication protocol
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=authProtocol")
+    public String authProtocol;
+    public ProtocolSnmpv3UserAddRequest withAuthProtocol(String authProtocol) {
+        this.authProtocol = authProtocol;
+        return this;
+    }
+    
+    /**
+     * SNMPv3 user privacy encryption key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=privKey")
+    public String privKey;
+    public ProtocolSnmpv3UserAddRequest withPrivKey(String privKey) {
+        this.privKey = privKey;
+        return this;
+    }
+    
+    /**
+     * SNMPv3 user privacy encryption protocol
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=privProtocol")
+    public String privProtocol;
+    public ProtocolSnmpv3UserAddRequest withPrivProtocol(String privProtocol) {
+        this.privProtocol = privProtocol;
+        return this;
+    }
+    
+    /**
+     * SNMPv3 user security name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=securityName")
+    public String securityName;
+    public ProtocolSnmpv3UserAddRequest withSecurityName(String securityName) {
+        this.securityName = securityName;
+        return this;
+    }
+    
+    /**
+     * SNMPv3 user name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userName")
+    public String userName;
+    public ProtocolSnmpv3UserAddRequest withUserName(String userName) {
+        this.userName = userName;
         return this;
     }
     

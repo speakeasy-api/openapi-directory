@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateFavoritesRequest {
-    
-    public UpdateFavoritesHeaders headers;
-    public UpdateFavoritesRequest withHeaders(UpdateFavoritesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UpdateFavoritesBulkRequest updateFavoritesBulkRequest;
+    public UpdateFavoritesRequest withUpdateFavoritesBulkRequest(org.openapis.openapi.models.shared.UpdateFavoritesBulkRequest updateFavoritesBulkRequest) {
+        this.updateFavoritesBulkRequest = updateFavoritesBulkRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateFavoritesBulkRequest request;
-    public UpdateFavoritesRequest withRequest(org.openapis.openapi.models.shared.UpdateFavoritesBulkRequest request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UpdateFavoritesRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

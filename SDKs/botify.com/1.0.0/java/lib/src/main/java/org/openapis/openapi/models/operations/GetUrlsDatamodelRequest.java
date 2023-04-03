@@ -4,20 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUrlsDatamodelRequest {
-    
-    public GetUrlsDatamodelPathParams pathParams;
-    public GetUrlsDatamodelRequest withPathParams(GetUrlsDatamodelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Analysis' identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
+    public String analysisSlug;
+    public GetUrlsDatamodelRequest withAnalysisSlug(String analysisSlug) {
+        this.analysisSlug = analysisSlug;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=area")
+    public GetUrlsDatamodelAreaEnum area;
+    public GetUrlsDatamodelRequest withArea(GetUrlsDatamodelAreaEnum area) {
+        this.area = area;
+        return this;
+    }
     
-    public GetUrlsDatamodelQueryParams queryParams;
-    public GetUrlsDatamodelRequest withQueryParams(GetUrlsDatamodelQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Project's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
+    public String projectSlug;
+    public GetUrlsDatamodelRequest withProjectSlug(String projectSlug) {
+        this.projectSlug = projectSlug;
+        return this;
+    }
+    
+    /**
+     * User's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetUrlsDatamodelRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

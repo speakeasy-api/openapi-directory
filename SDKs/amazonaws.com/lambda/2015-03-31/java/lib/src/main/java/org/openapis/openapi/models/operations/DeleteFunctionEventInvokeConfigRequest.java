@@ -4,27 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFunctionEventInvokeConfigRequest {
-    
-    public DeleteFunctionEventInvokeConfigPathParams pathParams;
-    public DeleteFunctionEventInvokeConfigRequest withPathParams(DeleteFunctionEventInvokeConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * &lt;p&gt;The name of the Lambda function, version, or alias.&lt;/p&gt; &lt;p class="title"&gt; &lt;b&gt;Name formats&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Function name&lt;/b&gt; - &lt;code&gt;my-function&lt;/code&gt; (name-only), &lt;code&gt;my-function:v1&lt;/code&gt; (with alias).&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Function ARN&lt;/b&gt; - &lt;code&gt;arn:aws:lambda:us-west-2:123456789012:function:my-function&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Partial ARN&lt;/b&gt; - &lt;code&gt;123456789012:function:my-function&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;You can append a version number or alias to any of the formats. The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FunctionName")
+    public String functionName;
+    public DeleteFunctionEventInvokeConfigRequest withFunctionName(String functionName) {
+        this.functionName = functionName;
         return this;
     }
     
-    
-    public DeleteFunctionEventInvokeConfigQueryParams queryParams;
-    public DeleteFunctionEventInvokeConfigRequest withQueryParams(DeleteFunctionEventInvokeConfigQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A version number or alias name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Qualifier")
+    public String qualifier;
+    public DeleteFunctionEventInvokeConfigRequest withQualifier(String qualifier) {
+        this.qualifier = qualifier;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DeleteFunctionEventInvokeConfigRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
     
-    public DeleteFunctionEventInvokeConfigHeaders headers;
-    public DeleteFunctionEventInvokeConfigRequest withHeaders(DeleteFunctionEventInvokeConfigHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DeleteFunctionEventInvokeConfigRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DeleteFunctionEventInvokeConfigRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DeleteFunctionEventInvokeConfigRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DeleteFunctionEventInvokeConfigRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DeleteFunctionEventInvokeConfigRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DeleteFunctionEventInvokeConfigRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

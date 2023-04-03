@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LandlordControllerGetProfitLossReportRequest {
-    
-    public LandlordControllerGetProfitLossReportPathParams pathParams;
-    public LandlordControllerGetProfitLossReportRequest withPathParams(LandlordControllerGetProfitLossReportPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public LandlordControllerGetProfitLossReportRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     
-    
-    public LandlordControllerGetProfitLossReportQueryParams queryParams;
-    public LandlordControllerGetProfitLossReportRequest withQueryParams(LandlordControllerGetProfitLossReportQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The login token returned from the /session POST call
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public LandlordControllerGetProfitLossReportRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

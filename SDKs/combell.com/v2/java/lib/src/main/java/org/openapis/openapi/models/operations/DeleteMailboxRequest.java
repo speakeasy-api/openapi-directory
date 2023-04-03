@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteMailboxRequest {
-    
-    public DeleteMailboxPathParams pathParams;
-    public DeleteMailboxRequest withPathParams(DeleteMailboxPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mailboxName")
+    public String mailboxNamePathParameter;
+    public DeleteMailboxRequest withMailboxNamePathParameter(String mailboxNamePathParameter) {
+        this.mailboxNamePathParameter = mailboxNamePathParameter;
         return this;
     }
     
-    
-    public DeleteMailboxQueryParams queryParams;
-    public DeleteMailboxRequest withQueryParams(DeleteMailboxQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Mailbox name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mailbox_name")
+    public String mailboxNameQueryParameter;
+    public DeleteMailboxRequest withMailboxNameQueryParameter(String mailboxNameQueryParameter) {
+        this.mailboxNameQueryParameter = mailboxNameQueryParameter;
         return this;
     }
     

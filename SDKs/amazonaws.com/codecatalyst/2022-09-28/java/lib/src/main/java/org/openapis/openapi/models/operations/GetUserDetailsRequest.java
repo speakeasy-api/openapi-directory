@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserDetailsRequest {
+    /**
+     * The system-generated unique ID of the user. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetUserDetailsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetUserDetailsQueryParams queryParams;
-    public GetUserDetailsRequest withQueryParams(GetUserDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the user as displayed in Amazon CodeCatalyst.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userName")
+    public String userName;
+    public GetUserDetailsRequest withUserName(String userName) {
+        this.userName = userName;
         return this;
     }
     

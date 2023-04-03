@@ -40,7 +40,7 @@ public class Registrierkasse {
      */
     public org.openapis.openapi.models.operations.GetDEPResponse getDEP(org.openapis.openapi.models.operations.GetDEPRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDEPPathParams.class, baseUrl, "/registrierkassen/{registrierkasseUuid}/dep", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDEPRequest.class, baseUrl, "/registrierkassen/{registrierkasseUuid}/dep", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -73,7 +73,7 @@ public class Registrierkasse {
      */
     public org.openapis.openapi.models.operations.GetRegistrierkasseResponse getRegistrierkasse(org.openapis.openapi.models.operations.GetRegistrierkasseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRegistrierkassePathParams.class, baseUrl, "/registrierkassen/{registrierkasseUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRegistrierkasseRequest.class, baseUrl, "/registrierkassen/{registrierkasseUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

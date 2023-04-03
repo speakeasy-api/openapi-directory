@@ -38,7 +38,7 @@ public class Discovery {
      */
     public org.openapis.openapi.models.operations.GetNamespaceResponse getNamespace(org.openapis.openapi.models.operations.GetNamespaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNamespacePathParams.class, baseUrl, "/namespaces/{namespace}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNamespaceRequest.class, baseUrl, "/namespaces/{namespace}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

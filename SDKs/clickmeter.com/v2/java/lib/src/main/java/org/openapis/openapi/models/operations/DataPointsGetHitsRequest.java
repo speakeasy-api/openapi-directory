@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataPointsGetHitsRequest {
-    
-    public DataPointsGetHitsPathParams pathParams;
-    public DataPointsGetHitsRequest withPathParams(DataPointsGetHitsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter event type ("spiders"/"uniques"/"nonuniques"/"conversions")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public DataPointsGetHitsFilterEnum filter;
+    public DataPointsGetHitsRequest withFilter(DataPointsGetHitsFilterEnum filter) {
+        this.filter = filter;
         return this;
     }
     
+    /**
+     * If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
+    public String fromDay;
+    public DataPointsGetHitsRequest withFromDay(String fromDay) {
+        this.fromDay = fromDay;
+        return this;
+    }
     
-    public DataPointsGetHitsQueryParams queryParams;
-    public DataPointsGetHitsRequest withQueryParams(DataPointsGetHitsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the datapoint
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DataPointsGetHitsRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Limit results to this number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public DataPointsGetHitsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset where to start from (it's the lastKey field in the response object)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public DataPointsGetHitsRequest withOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Timeframe of the request. See list at $timeframeList
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeframe")
+    public DataPointsGetHitsTimeframeEnum timeframe;
+    public DataPointsGetHitsRequest withTimeframe(DataPointsGetHitsTimeframeEnum timeframe) {
+        this.timeframe = timeframe;
+        return this;
+    }
+    
+    /**
+     * If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
+    public String toDay;
+    public DataPointsGetHitsRequest withToDay(String toDay) {
+        this.toDay = toDay;
         return this;
     }
     

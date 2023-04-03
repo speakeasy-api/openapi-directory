@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WellsFilesListRequest {
-    
-    public WellsFilesListPathParams pathParams;
-    public WellsFilesListRequest withPathParams(WellsFilesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag")
+    public String tag;
+    public WellsFilesListRequest withTag(String tag) {
+        this.tag = tag;
         return this;
     }
     

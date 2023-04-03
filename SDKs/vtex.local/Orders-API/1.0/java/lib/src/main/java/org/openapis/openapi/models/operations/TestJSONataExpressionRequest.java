@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestJSONataExpressionRequest {
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public TestJSONataExpressionRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public TestJSONataExpressionHeaders headers;
-    public TestJSONataExpressionRequest withHeaders(TestJSONataExpressionHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public TestJSONataExpressionRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TestJSONataExpression request;
-    public TestJSONataExpressionRequest withRequest(org.openapis.openapi.models.shared.TestJSONataExpression request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TestJSONataExpression testJSONataExpression;
+    public TestJSONataExpressionRequest withTestJSONataExpression(org.openapis.openapi.models.shared.TestJSONataExpression testJSONataExpression) {
+        this.testJSONataExpression = testJSONataExpression;
         return this;
     }
     

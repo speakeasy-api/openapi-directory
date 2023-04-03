@@ -4,20 +4,139 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeUsageLimitsRequest {
-    
-    public GETDescribeUsageLimitsQueryParams queryParams;
-    public GETDescribeUsageLimitsRequest withQueryParams(GETDescribeUsageLimitsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeUsageLimitsActionEnum action;
+    public GETDescribeUsageLimitsRequest withAction(GETDescribeUsageLimitsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The identifier of the cluster for which you want to describe usage limits.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETDescribeUsageLimitsRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
     
-    public GETDescribeUsageLimitsHeaders headers;
-    public GETDescribeUsageLimitsRequest withHeaders(GETDescribeUsageLimitsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The feature type for which you want to describe usage limits.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FeatureType")
+    public GETDescribeUsageLimitsFeatureTypeEnum featureType;
+    public GETDescribeUsageLimitsRequest withFeatureType(GETDescribeUsageLimitsFeatureTypeEnum featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    
+    /**
+     * An optional parameter that specifies the starting point to return a set of response records. When the results of a &lt;a&gt;DescribeUsageLimits&lt;/a&gt; request exceed the value specified in &lt;code&gt;MaxRecords&lt;/code&gt;, Amazon Web Services returns a value in the &lt;code&gt;Marker&lt;/code&gt; field of the response. You can retrieve the next set of response records by providing the returned marker value in the &lt;code&gt;Marker&lt;/code&gt; parameter and retrying the request. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDescribeUsageLimitsRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The maximum number of response records to return in each call. If the number of remaining response records exceeds the specified &lt;code&gt;MaxRecords&lt;/code&gt; value, a value is returned in a &lt;code&gt;marker&lt;/code&gt; field of the response. You can retrieve the next set of records by retrying the command with the returned marker value. &lt;/p&gt; &lt;p&gt;Default: &lt;code&gt;100&lt;/code&gt; &lt;/p&gt; &lt;p&gt;Constraints: minimum 20, maximum 100.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeUsageLimitsRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    /**
+     * A tag key or keys for which you want to return all matching usage limit objects that are associated with the specified key or keys. For example, suppose that you have parameter groups that are tagged with keys called &lt;code&gt;owner&lt;/code&gt; and &lt;code&gt;environment&lt;/code&gt;. If you specify both of these tag keys in the request, Amazon Redshift returns a response with the usage limit objects have either or both of these tag keys associated with them.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TagKeys")
+    public String[] tagKeys;
+    public GETDescribeUsageLimitsRequest withTagKeys(String[] tagKeys) {
+        this.tagKeys = tagKeys;
+        return this;
+    }
+    
+    /**
+     * A tag value or values for which you want to return all matching usage limit objects that are associated with the specified tag value or values. For example, suppose that you have parameter groups that are tagged with values called &lt;code&gt;admin&lt;/code&gt; and &lt;code&gt;test&lt;/code&gt;. If you specify both of these tag values in the request, Amazon Redshift returns a response with the usage limit objects that have either or both of these tag values associated with them.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TagValues")
+    public String[] tagValues;
+    public GETDescribeUsageLimitsRequest withTagValues(String[] tagValues) {
+        this.tagValues = tagValues;
+        return this;
+    }
+    
+    /**
+     * The identifier of the usage limit to describe.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UsageLimitId")
+    public String usageLimitId;
+    public GETDescribeUsageLimitsRequest withUsageLimitId(String usageLimitId) {
+        this.usageLimitId = usageLimitId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeUsageLimitsVersionEnum version;
+    public GETDescribeUsageLimitsRequest withVersion(GETDescribeUsageLimitsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeUsageLimitsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeUsageLimitsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeUsageLimitsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeUsageLimitsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeUsageLimitsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeUsageLimitsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeUsageLimitsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

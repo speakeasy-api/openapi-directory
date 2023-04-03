@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkWirelessSsidVpnRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkWirelessSsidVpnRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public GetNetworkWirelessSsidVpnPathParams pathParams;
-    public GetNetworkWirelessSsidVpnRequest withPathParams(GetNetworkWirelessSsidVpnPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
+    public String number;
+    public GetNetworkWirelessSsidVpnRequest withNumber(String number) {
+        this.number = number;
         return this;
     }
     

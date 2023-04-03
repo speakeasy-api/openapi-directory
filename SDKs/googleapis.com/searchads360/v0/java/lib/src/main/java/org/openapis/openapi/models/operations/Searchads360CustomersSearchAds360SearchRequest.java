@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Searchads360CustomersSearchAds360SearchRequest {
-    
-    public Searchads360CustomersSearchAds360SearchPathParams pathParams;
-    public Searchads360CustomersSearchAds360SearchRequest withPathParams(Searchads360CustomersSearchAds360SearchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public Searchads360CustomersSearchAds360SearchQueryParams queryParams;
-    public Searchads360CustomersSearchAds360SearchRequest withQueryParams(Searchads360CustomersSearchAds360SearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public Searchads360CustomersSearchAds360SearchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleAdsSearchads360V0ServicesSearchSearchAds360Request request;
-    public Searchads360CustomersSearchAds360SearchRequest withRequest(org.openapis.openapi.models.shared.GoogleAdsSearchads360V0ServicesSearchSearchAds360Request request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleAdsSearchads360V0ServicesSearchSearchAds360Request googleAdsSearchads360V0ServicesSearchSearchAds360Request;
+    public Searchads360CustomersSearchAds360SearchRequest withGoogleAdsSearchads360V0ServicesSearchSearchAds360Request(org.openapis.openapi.models.shared.GoogleAdsSearchads360V0ServicesSearchSearchAds360Request googleAdsSearchads360V0ServicesSearchSearchAds360Request) {
+        this.googleAdsSearchads360V0ServicesSearchSearchAds360Request = googleAdsSearchads360V0ServicesSearchSearchAds360Request;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public Searchads360CustomersSearchAds360SearchRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public Searchads360CustomersSearchAds360SearchSecurity security;
-    public Searchads360CustomersSearchAds360SearchRequest withSecurity(Searchads360CustomersSearchAds360SearchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public Searchads360CustomersSearchAds360SearchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public Searchads360CustomersSearchAds360SearchRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Required. The ID of the customer being queried.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
+    public String customerId;
+    public Searchads360CustomersSearchAds360SearchRequest withCustomerId(String customerId) {
+        this.customerId = customerId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public Searchads360CustomersSearchAds360SearchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public Searchads360CustomersSearchAds360SearchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public Searchads360CustomersSearchAds360SearchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public Searchads360CustomersSearchAds360SearchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public Searchads360CustomersSearchAds360SearchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public Searchads360CustomersSearchAds360SearchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public Searchads360CustomersSearchAds360SearchRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

@@ -30,19 +30,15 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/BatchMeterUsageXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/BatchMeterUsageHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/BatchMeterUsageRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BatchMeterUsageResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/MeterUsageXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/MeterUsageHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/MeterUsageRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/MeterUsageResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/RegisterUsageXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/RegisterUsageHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/RegisterUsageRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RegisterUsageResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ResolveCustomerXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/ResolveCustomerHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/ResolveCustomerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ResolveCustomerResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/BatchMeterUsageResult.java
@@ -58,6 +54,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/RegisterUsageResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/RegisterUsageRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ResolveCustomerResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/ResolveCustomerRequest.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

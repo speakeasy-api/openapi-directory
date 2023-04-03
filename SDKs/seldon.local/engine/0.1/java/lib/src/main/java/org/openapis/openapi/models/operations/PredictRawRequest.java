@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PredictRawRequest {
-    
-    public PredictRawPathParams pathParams;
-    public PredictRawRequest withPathParams(PredictRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/octet-stream")
-    public byte[] request;
-    public PredictRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public PredictRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment")
+    public String deployment;
+    public PredictRawRequest withDeployment(String deployment) {
+        this.deployment = deployment;
+        return this;
+    }
     
-    public PredictRawSecurity security;
-    public PredictRawRequest withSecurity(PredictRawSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
+    public String namespace;
+    public PredictRawRequest withNamespace(String namespace) {
+        this.namespace = namespace;
         return this;
     }
     

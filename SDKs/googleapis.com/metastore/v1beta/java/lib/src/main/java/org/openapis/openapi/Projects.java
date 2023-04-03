@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates a metastore federation in a project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateResponse metastoreProjectsLocationsFederationsCreate(org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateResponse metastoreProjectsLocationsFederationsCreate(org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreatePathParams.class, baseUrl, "/v1beta/{parent}/federations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateRequest.class, baseUrl, "/v1beta/{parent}/federations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "federationInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Lists federations in a project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsListResponse metastoreProjectsLocationsFederationsList(org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsListResponse metastoreProjectsLocationsFederationsList(org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsListRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsListPathParams.class, baseUrl, "/v1beta/{parent}/federations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsListRequest.class, baseUrl, "/v1beta/{parent}/federations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Projects {
     /**
      * Lists information about the supported locations for this service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsListResponse metastoreProjectsLocationsList(org.openapis.openapi.models.operations.MetastoreProjectsLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsListResponse metastoreProjectsLocationsList(org.openapis.openapi.models.operations.MetastoreProjectsLocationsListRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsListPathParams.class, baseUrl, "/v1beta/{name}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsListRequest.class, baseUrl, "/v1beta/{name}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,27 +175,28 @@ public class Projects {
     /**
      * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to Code.CANCELLED.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsCancelResponse metastoreProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsCancelResponse metastoreProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsCancelRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsCancelPathParams.class, baseUrl, "/v1beta/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsCancelRequest.class, baseUrl, "/v1beta/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,25 +223,26 @@ public class Projects {
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsListResponse metastoreProjectsLocationsOperationsList(org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsListResponse metastoreProjectsLocationsOperationsList(org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsListRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsListPathParams.class, baseUrl, "/v1beta/{name}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsListRequest.class, baseUrl, "/v1beta/{name}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,27 +269,28 @@ public class Projects {
     /**
      * Alter metadata resource location. The metadata resource can be a database, table, or partition. This functionality only updates the parent directory for the respective metadata resource and does not transfer any existing data to the new location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesAlterLocationResponse metastoreProjectsLocationsServicesAlterLocation(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesAlterLocationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesAlterLocationResponse metastoreProjectsLocationsServicesAlterLocation(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesAlterLocationRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesAlterLocationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesAlterLocationPathParams.class, baseUrl, "/v1beta/{service}:alterLocation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesAlterLocationRequest.class, baseUrl, "/v1beta/{service}:alterLocation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "alterMetadataResourceLocationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesAlterLocationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesAlterLocationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,27 +317,28 @@ public class Projects {
     /**
      * Creates a new backup in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsCreateResponse metastoreProjectsLocationsServicesBackupsCreate(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsCreateResponse metastoreProjectsLocationsServicesBackupsCreate(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsCreateRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsCreatePathParams.class, baseUrl, "/v1beta/{parent}/backups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsCreateRequest.class, baseUrl, "/v1beta/{parent}/backups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "backupInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,25 +365,26 @@ public class Projects {
     /**
      * Deletes a single backup.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsDeleteResponse metastoreProjectsLocationsServicesBackupsDelete(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsDeleteResponse metastoreProjectsLocationsServicesBackupsDelete(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsDeleteRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsDeletePathParams.class, baseUrl, "/v1beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsDeleteRequest.class, baseUrl, "/v1beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -403,25 +411,26 @@ public class Projects {
     /**
      * Lists backups in a service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsListResponse metastoreProjectsLocationsServicesBackupsList(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsListResponse metastoreProjectsLocationsServicesBackupsList(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsListRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsListPathParams.class, baseUrl, "/v1beta/{parent}/backups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsListRequest.class, baseUrl, "/v1beta/{parent}/backups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesBackupsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -448,27 +457,28 @@ public class Projects {
     /**
      * Creates a metastore service in a project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesCreateResponse metastoreProjectsLocationsServicesCreate(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesCreateResponse metastoreProjectsLocationsServicesCreate(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesCreateRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesCreatePathParams.class, baseUrl, "/v1beta/{parent}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesCreateRequest.class, baseUrl, "/v1beta/{parent}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "serviceInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -495,25 +505,26 @@ public class Projects {
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesGetIamPolicyResponse metastoreProjectsLocationsServicesDatabasesTablesGetIamPolicy(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesGetIamPolicyResponse metastoreProjectsLocationsServicesDatabasesTablesGetIamPolicy(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesGetIamPolicyRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesGetIamPolicyPathParams.class, baseUrl, "/v1beta/{resource}:getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesGetIamPolicyRequest.class, baseUrl, "/v1beta/{resource}:getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -540,27 +551,28 @@ public class Projects {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy.Can return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesSetIamPolicyResponse metastoreProjectsLocationsServicesDatabasesTablesSetIamPolicy(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesSetIamPolicyResponse metastoreProjectsLocationsServicesDatabasesTablesSetIamPolicy(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesSetIamPolicyRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesSetIamPolicyPathParams.class, baseUrl, "/v1beta/{resource}:setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesSetIamPolicyRequest.class, baseUrl, "/v1beta/{resource}:setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -587,27 +599,28 @@ public class Projects {
     /**
      * Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesTestIamPermissionsResponse metastoreProjectsLocationsServicesDatabasesTablesTestIamPermissions(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesTestIamPermissionsResponse metastoreProjectsLocationsServicesDatabasesTablesTestIamPermissions(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesTestIamPermissionsRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesTestIamPermissionsPathParams.class, baseUrl, "/v1beta/{resource}:testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesTestIamPermissionsRequest.class, baseUrl, "/v1beta/{resource}:testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testIamPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesDatabasesTablesTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -634,27 +647,28 @@ public class Projects {
     /**
      * Exports metadata from a service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesExportMetadataResponse metastoreProjectsLocationsServicesExportMetadata(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesExportMetadataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesExportMetadataResponse metastoreProjectsLocationsServicesExportMetadata(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesExportMetadataRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesExportMetadataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesExportMetadataPathParams.class, baseUrl, "/v1beta/{service}:exportMetadata", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesExportMetadataRequest.class, baseUrl, "/v1beta/{service}:exportMetadata", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "exportMetadataRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesExportMetadataQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesExportMetadataRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -681,25 +695,26 @@ public class Projects {
     /**
      * Lists services in a project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesListResponse metastoreProjectsLocationsServicesList(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesListResponse metastoreProjectsLocationsServicesList(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesListRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesListPathParams.class, baseUrl, "/v1beta/{parent}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesListRequest.class, baseUrl, "/v1beta/{parent}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -726,27 +741,28 @@ public class Projects {
     /**
      * Creates a new MetadataImport in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsCreateResponse metastoreProjectsLocationsServicesMetadataImportsCreate(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsCreateResponse metastoreProjectsLocationsServicesMetadataImportsCreate(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsCreateRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsCreatePathParams.class, baseUrl, "/v1beta/{parent}/metadataImports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsCreateRequest.class, baseUrl, "/v1beta/{parent}/metadataImports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "metadataImportInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -773,25 +789,26 @@ public class Projects {
     /**
      * Gets details of a single import.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsGetResponse metastoreProjectsLocationsServicesMetadataImportsGet(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsGetResponse metastoreProjectsLocationsServicesMetadataImportsGet(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsGetRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsGetPathParams.class, baseUrl, "/v1beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsGetRequest.class, baseUrl, "/v1beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -818,25 +835,26 @@ public class Projects {
     /**
      * Lists imports in a service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsListResponse metastoreProjectsLocationsServicesMetadataImportsList(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsListResponse metastoreProjectsLocationsServicesMetadataImportsList(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsListRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsListPathParams.class, baseUrl, "/v1beta/{parent}/metadataImports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsListRequest.class, baseUrl, "/v1beta/{parent}/metadataImports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -863,27 +881,28 @@ public class Projects {
     /**
      * Updates a single import. Only the description field of MetadataImport is supported to be updated.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsPatchResponse metastoreProjectsLocationsServicesMetadataImportsPatch(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsPatchResponse metastoreProjectsLocationsServicesMetadataImportsPatch(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsPatchRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsPatchPathParams.class, baseUrl, "/v1beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsPatchRequest.class, baseUrl, "/v1beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "metadataImportInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMetadataImportsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -910,27 +929,28 @@ public class Projects {
     /**
      * Move a table to another database.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse metastoreProjectsLocationsServicesMoveTableToDatabase(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseResponse metastoreProjectsLocationsServicesMoveTableToDatabase(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMoveTableToDatabasePathParams.class, baseUrl, "/v1beta/{service}:moveTableToDatabase", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseRequest.class, baseUrl, "/v1beta/{service}:moveTableToDatabase", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "moveTableToDatabaseRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesMoveTableToDatabaseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -957,27 +977,28 @@ public class Projects {
     /**
      * Query DPMS metadata.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesQueryMetadataResponse metastoreProjectsLocationsServicesQueryMetadata(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesQueryMetadataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesQueryMetadataResponse metastoreProjectsLocationsServicesQueryMetadata(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesQueryMetadataRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesQueryMetadataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesQueryMetadataPathParams.class, baseUrl, "/v1beta/{service}:queryMetadata", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesQueryMetadataRequest.class, baseUrl, "/v1beta/{service}:queryMetadata", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "queryMetadataRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesQueryMetadataQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesQueryMetadataRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1004,27 +1025,28 @@ public class Projects {
     /**
      * Removes the attached IAM policies for a resource
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRemoveIamPolicyResponse metastoreProjectsLocationsServicesRemoveIamPolicy(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRemoveIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRemoveIamPolicyResponse metastoreProjectsLocationsServicesRemoveIamPolicy(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRemoveIamPolicyRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRemoveIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRemoveIamPolicyPathParams.class, baseUrl, "/v1beta/{resource}:removeIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRemoveIamPolicyRequest.class, baseUrl, "/v1beta/{resource}:removeIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "removeIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRemoveIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1051,27 +1073,28 @@ public class Projects {
     /**
      * Restores a service from a backup.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRestoreResponse metastoreProjectsLocationsServicesRestore(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRestoreRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRestoreResponse metastoreProjectsLocationsServicesRestore(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRestoreRequest request, org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRestoreSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRestorePathParams.class, baseUrl, "/v1beta/{service}:restore", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRestoreRequest.class, baseUrl, "/v1beta/{service}:restore", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "restoreServiceRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRestoreQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MetastoreProjectsLocationsServicesRestoreRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateConfigurationSetReputationMetricsEnabledRequest {
-    
-    public GETUpdateConfigurationSetReputationMetricsEnabledQueryParams queryParams;
-    public GETUpdateConfigurationSetReputationMetricsEnabledRequest withQueryParams(GETUpdateConfigurationSetReputationMetricsEnabledQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETUpdateConfigurationSetReputationMetricsEnabledActionEnum action;
+    public GETUpdateConfigurationSetReputationMetricsEnabledRequest withAction(GETUpdateConfigurationSetReputationMetricsEnabledActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the configuration set that you want to update.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConfigurationSetName")
+    public String configurationSetName;
+    public GETUpdateConfigurationSetReputationMetricsEnabledRequest withConfigurationSetName(String configurationSetName) {
+        this.configurationSetName = configurationSetName;
+        return this;
+    }
     
-    public GETUpdateConfigurationSetReputationMetricsEnabledHeaders headers;
-    public GETUpdateConfigurationSetReputationMetricsEnabledRequest withHeaders(GETUpdateConfigurationSetReputationMetricsEnabledHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes whether or not Amazon SES will publish reputation metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Enabled")
+    public Boolean enabled;
+    public GETUpdateConfigurationSetReputationMetricsEnabledRequest withEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETUpdateConfigurationSetReputationMetricsEnabledVersionEnum version;
+    public GETUpdateConfigurationSetReputationMetricsEnabledRequest withVersion(GETUpdateConfigurationSetReputationMetricsEnabledVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETUpdateConfigurationSetReputationMetricsEnabledRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETUpdateConfigurationSetReputationMetricsEnabledRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETUpdateConfigurationSetReputationMetricsEnabledRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETUpdateConfigurationSetReputationMetricsEnabledRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETUpdateConfigurationSetReputationMetricsEnabledRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETUpdateConfigurationSetReputationMetricsEnabledRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETUpdateConfigurationSetReputationMetricsEnabledRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

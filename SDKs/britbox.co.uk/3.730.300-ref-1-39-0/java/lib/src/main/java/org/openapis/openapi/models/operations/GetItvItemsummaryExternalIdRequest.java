@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItvItemsummaryExternalIdRequest {
-    
-    public GetItvItemsummaryExternalIdPathParams pathParams;
-    public GetItvItemsummaryExternalIdRequest withPathParams(GetItvItemsummaryExternalIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The external identifier of the item.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalId")
+    public String externalId;
+    public GetItvItemsummaryExternalIdRequest withExternalId(String externalId) {
+        this.externalId = externalId;
         return this;
     }
     

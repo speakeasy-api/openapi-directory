@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUnderstandTaskActionsRequest {
-    
-    public UpdateUnderstandTaskActionsPathParams pathParams;
-    public UpdateUnderstandTaskActionsRequest withPathParams(UpdateUnderstandTaskActionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the parent Assistant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public UpdateUnderstandTaskActionsRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateUnderstandTaskActionsUpdateUnderstandTaskActionsRequest request;
-    public UpdateUnderstandTaskActionsRequest withRequest(UpdateUnderstandTaskActionsUpdateUnderstandTaskActionsRequest request) {
-        this.request = request;
+    public UpdateUnderstandTaskActionsUpdateUnderstandTaskActionsRequest requestBody;
+    public UpdateUnderstandTaskActionsRequest withRequestBody(UpdateUnderstandTaskActionsUpdateUnderstandTaskActionsRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateUnderstandTaskActionsSecurity security;
-    public UpdateUnderstandTaskActionsRequest withSecurity(UpdateUnderstandTaskActionsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateUnderstandTaskActionsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique ID of the Task.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TaskSid")
+    public String taskSid;
+    public UpdateUnderstandTaskActionsRequest withTaskSid(String taskSid) {
+        this.taskSid = taskSid;
         return this;
     }
     

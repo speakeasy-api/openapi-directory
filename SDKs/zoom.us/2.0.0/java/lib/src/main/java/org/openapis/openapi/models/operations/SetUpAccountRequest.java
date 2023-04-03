@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetUpAccountRequest {
-    
-    public SetUpAccountPathParams pathParams;
-    public SetUpAccountRequest withPathParams(SetUpAccountPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public SetUpAccountApplicationJSON request;
-    public SetUpAccountRequest withRequest(SetUpAccountApplicationJSON request) {
-        this.request = request;
+    public SetUpAccountApplicationJSON requestBody;
+    public SetUpAccountRequest withRequestBody(SetUpAccountApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public SetUpAccountSecurity security;
-    public SetUpAccountRequest withSecurity(SetUpAccountSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public SetUpAccountRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

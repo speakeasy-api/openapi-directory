@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateExecutionRequest {
-    
-    public CreateExecutionPathParams pathParams;
-    public CreateExecutionRequest withPathParams(CreateExecutionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Excecution's Flow.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FlowSid")
+    public String flowSid;
+    public CreateExecutionRequest withFlowSid(String flowSid) {
+        this.flowSid = flowSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateExecutionCreateExecutionRequest request;
-    public CreateExecutionRequest withRequest(CreateExecutionCreateExecutionRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateExecutionSecurity security;
-    public CreateExecutionRequest withSecurity(CreateExecutionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateExecutionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateExecutionCreateExecutionRequest requestBody;
+    public CreateExecutionRequest withRequestBody(CreateExecutionCreateExecutionRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

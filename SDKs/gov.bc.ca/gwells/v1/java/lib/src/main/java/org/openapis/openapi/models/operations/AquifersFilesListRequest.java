@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AquifersFilesListRequest {
-    
-    public AquifersFilesListPathParams pathParams;
-    public AquifersFilesListRequest withPathParams(AquifersFilesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aquifer_id")
+    public String aquiferId;
+    public AquifersFilesListRequest withAquiferId(String aquiferId) {
+        this.aquiferId = aquiferId;
         return this;
     }
     

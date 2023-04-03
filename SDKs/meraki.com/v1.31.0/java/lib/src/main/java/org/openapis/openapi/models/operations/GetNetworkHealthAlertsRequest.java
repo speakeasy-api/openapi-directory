@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkHealthAlertsRequest {
-    
-    public GetNetworkHealthAlertsPathParams pathParams;
-    public GetNetworkHealthAlertsRequest withPathParams(GetNetworkHealthAlertsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkHealthAlertsRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

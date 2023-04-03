@@ -34,25 +34,26 @@ public class TargetInstances {
     /**
      * Retrieves an aggregated list of target instances.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetInstancesAggregatedListResponse computeTargetInstancesAggregatedList(org.openapis.openapi.models.operations.ComputeTargetInstancesAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetInstancesAggregatedListResponse computeTargetInstancesAggregatedList(org.openapis.openapi.models.operations.ComputeTargetInstancesAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeTargetInstancesAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetInstancesAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/targetInstances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetInstancesAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/targetInstances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetInstancesAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetInstancesAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class TargetInstances {
     /**
      * Deletes the specified TargetInstance resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetInstancesDeleteResponse computeTargetInstancesDelete(org.openapis.openapi.models.operations.ComputeTargetInstancesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetInstancesDeleteResponse computeTargetInstancesDelete(org.openapis.openapi.models.operations.ComputeTargetInstancesDeleteRequest request, org.openapis.openapi.models.operations.ComputeTargetInstancesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetInstancesDeletePathParams.class, baseUrl, "/projects/{project}/zones/{zone}/targetInstances/{targetInstance}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetInstancesDeleteRequest.class, baseUrl, "/projects/{project}/zones/{zone}/targetInstances/{targetInstance}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetInstancesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetInstancesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,25 +126,26 @@ public class TargetInstances {
     /**
      * Returns the specified TargetInstance resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetInstancesGetResponse computeTargetInstancesGet(org.openapis.openapi.models.operations.ComputeTargetInstancesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetInstancesGetResponse computeTargetInstancesGet(org.openapis.openapi.models.operations.ComputeTargetInstancesGetRequest request, org.openapis.openapi.models.operations.ComputeTargetInstancesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetInstancesGetPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/targetInstances/{targetInstance}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetInstancesGetRequest.class, baseUrl, "/projects/{project}/zones/{zone}/targetInstances/{targetInstance}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetInstancesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetInstancesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,27 +172,28 @@ public class TargetInstances {
     /**
      * Creates a TargetInstance resource in the specified project and zone using the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetInstancesInsertResponse computeTargetInstancesInsert(org.openapis.openapi.models.operations.ComputeTargetInstancesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetInstancesInsertResponse computeTargetInstancesInsert(org.openapis.openapi.models.operations.ComputeTargetInstancesInsertRequest request, org.openapis.openapi.models.operations.ComputeTargetInstancesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetInstancesInsertPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/targetInstances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetInstancesInsertRequest.class, baseUrl, "/projects/{project}/zones/{zone}/targetInstances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "targetInstance", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetInstancesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetInstancesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,25 +220,26 @@ public class TargetInstances {
     /**
      * Retrieves a list of TargetInstance resources available to the specified project and zone.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetInstancesListResponse computeTargetInstancesList(org.openapis.openapi.models.operations.ComputeTargetInstancesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetInstancesListResponse computeTargetInstancesList(org.openapis.openapi.models.operations.ComputeTargetInstancesListRequest request, org.openapis.openapi.models.operations.ComputeTargetInstancesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetInstancesListPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/targetInstances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetInstancesListRequest.class, baseUrl, "/projects/{project}/zones/{zone}/targetInstances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetInstancesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetInstancesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,27 +266,28 @@ public class TargetInstances {
     /**
      * Returns permissions that a caller has on the specified resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetInstancesTestIamPermissionsResponse computeTargetInstancesTestIamPermissions(org.openapis.openapi.models.operations.ComputeTargetInstancesTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetInstancesTestIamPermissionsResponse computeTargetInstancesTestIamPermissions(org.openapis.openapi.models.operations.ComputeTargetInstancesTestIamPermissionsRequest request, org.openapis.openapi.models.operations.ComputeTargetInstancesTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetInstancesTestIamPermissionsPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/targetInstances/{resource}/testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetInstancesTestIamPermissionsRequest.class, baseUrl, "/projects/{project}/zones/{zone}/targetInstances/{resource}/testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetInstancesTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetInstancesTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

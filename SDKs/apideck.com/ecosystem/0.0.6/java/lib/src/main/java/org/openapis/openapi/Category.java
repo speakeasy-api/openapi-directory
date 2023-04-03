@@ -39,13 +39,13 @@ public class Category {
      */
     public org.openapis.openapi.models.operations.CategoriesAllResponse categoriesAll(org.openapis.openapi.models.operations.CategoriesAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CategoriesAllPathParams.class, baseUrl, "/ecosystems/{ecosystem_id}/categories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CategoriesAllRequest.class, baseUrl, "/ecosystems/{ecosystem_id}/categories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CategoriesAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CategoriesAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -84,7 +84,7 @@ public class Category {
      */
     public org.openapis.openapi.models.operations.CategoriesOneResponse categoriesOne(org.openapis.openapi.models.operations.CategoriesOneRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CategoriesOnePathParams.class, baseUrl, "/ecosystems/{ecosystem_id}/categories/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CategoriesOneRequest.class, baseUrl, "/ecosystems/{ecosystem_id}/categories/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -123,13 +123,13 @@ public class Category {
      */
     public org.openapis.openapi.models.operations.CategoryListingsAllResponse categoryListingsAll(org.openapis.openapi.models.operations.CategoryListingsAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CategoryListingsAllPathParams.class, baseUrl, "/ecosystems/{ecosystem_id}/categories/{id}/listings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CategoryListingsAllRequest.class, baseUrl, "/ecosystems/{ecosystem_id}/categories/{id}/listings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CategoryListingsAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CategoryListingsAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

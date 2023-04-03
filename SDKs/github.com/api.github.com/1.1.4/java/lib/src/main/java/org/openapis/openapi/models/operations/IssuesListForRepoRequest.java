@@ -4,20 +4,137 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesListForRepoRequest {
-    
-    public IssuesListForRepoPathParams pathParams;
-    public IssuesListForRepoRequest withPathParams(IssuesListForRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Can be the name of a user. Pass in `none` for issues with no assigned user, and `*` for issues assigned to any user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee")
+    public String assignee;
+    public IssuesListForRepoRequest withAssignee(String assignee) {
+        this.assignee = assignee;
         return this;
     }
     
+    /**
+     * The user that created the issue.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=creator")
+    public String creator;
+    public IssuesListForRepoRequest withCreator(String creator) {
+        this.creator = creator;
+        return this;
+    }
     
-    public IssuesListForRepoQueryParams queryParams;
-    public IssuesListForRepoRequest withQueryParams(IssuesListForRepoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The direction to sort the results by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public org.openapis.openapi.models.shared.DirectionEnum direction;
+    public IssuesListForRepoRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
+    
+    /**
+     * A list of comma separated label names. Example: `bug,ui,@high`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=labels")
+    public String labels;
+    public IssuesListForRepoRequest withLabels(String labels) {
+        this.labels = labels;
+        return this;
+    }
+    
+    /**
+     * A user that's mentioned in the issue.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mentioned")
+    public String mentioned;
+    public IssuesListForRepoRequest withMentioned(String mentioned) {
+        this.mentioned = mentioned;
+        return this;
+    }
+    
+    /**
+     * If an `integer` is passed, it should refer to a milestone by its `number` field. If the string `*` is passed, issues with any milestone are accepted. If the string `none` is passed, issues without milestones are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=milestone")
+    public String milestone;
+    public IssuesListForRepoRequest withMilestone(String milestone) {
+        this.milestone = milestone;
+        return this;
+    }
+    
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssuesListForRepoRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public IssuesListForRepoRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public IssuesListForRepoRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssuesListForRepoRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public OffsetDateTime since;
+    public IssuesListForRepoRequest withSince(OffsetDateTime since) {
+        this.since = since;
+        return this;
+    }
+    
+    /**
+     * What to sort results by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public IssuesListForRepoSortEnum sort;
+    public IssuesListForRepoRequest withSort(IssuesListForRepoSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Indicates the state of the issues to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public IssuesListForRepoStateEnum state;
+    public IssuesListForRepoRequest withState(IssuesListForRepoStateEnum state) {
+        this.state = state;
         return this;
     }
     

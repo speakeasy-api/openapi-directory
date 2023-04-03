@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkWebhooksWebhookTestRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkWebhooksWebhookTestRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public GetNetworkWebhooksWebhookTestPathParams pathParams;
-    public GetNetworkWebhooksWebhookTestRequest withPathParams(GetNetworkWebhooksWebhookTestPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhookTestId")
+    public String webhookTestId;
+    public GetNetworkWebhooksWebhookTestRequest withWebhookTestId(String webhookTestId) {
+        this.webhookTestId = webhookTestId;
         return this;
     }
     

@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoEditGitHookJsonRequest {
-    
-    public RepoEditGitHookJsonPathParams pathParams;
-    public RepoEditGitHookJsonRequest withPathParams(RepoEditGitHookJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EditGitHookOption editGitHookOption;
+    public RepoEditGitHookJsonRequest withEditGitHookOption(org.openapis.openapi.models.shared.EditGitHookOption editGitHookOption) {
+        this.editGitHookOption = editGitHookOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditGitHookOption request;
-    public RepoEditGitHookJsonRequest withRequest(org.openapis.openapi.models.shared.EditGitHookOption request) {
-        this.request = request;
+    /**
+     * id of the hook to get
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public RepoEditGitHookJsonRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoEditGitHookJsonRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoEditGitHookJsonRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

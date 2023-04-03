@@ -7,31 +7,89 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCACertificateRequest {
-    
-    public UpdateCACertificatePathParams pathParams;
-    public UpdateCACertificateRequest withPathParams(UpdateCACertificatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateCACertificateQueryParams queryParams;
-    public UpdateCACertificateRequest withQueryParams(UpdateCACertificateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public UpdateCACertificateHeaders headers;
-    public UpdateCACertificateRequest withHeaders(UpdateCACertificateHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateCACertificateRequestBody request;
-    public UpdateCACertificateRequest withRequest(UpdateCACertificateRequestBody request) {
-        this.request = request;
+    public UpdateCACertificateRequestBody requestBody;
+    public UpdateCACertificateRequest withRequestBody(UpdateCACertificateRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateCACertificateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateCACertificateRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateCACertificateRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateCACertificateRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateCACertificateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateCACertificateRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateCACertificateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The CA certificate identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=caCertificateId")
+    public String caCertificateId;
+    public UpdateCACertificateRequest withCaCertificateId(String caCertificateId) {
+        this.caCertificateId = caCertificateId;
+        return this;
+    }
+    
+    /**
+     * The new value for the auto registration status. Valid values are: "ENABLE" or "DISABLE".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=newAutoRegistrationStatus")
+    public UpdateCACertificateNewAutoRegistrationStatusEnum newAutoRegistrationStatus;
+    public UpdateCACertificateRequest withNewAutoRegistrationStatus(UpdateCACertificateNewAutoRegistrationStatusEnum newAutoRegistrationStatus) {
+        this.newAutoRegistrationStatus = newAutoRegistrationStatus;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The updated status of the CA certificate.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Note:&lt;/b&gt; The status value REGISTER_INACTIVE is deprecated and should not be used.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=newStatus")
+    public UpdateCACertificateNewStatusEnum newStatus;
+    public UpdateCACertificateRequest withNewStatus(UpdateCACertificateNewStatusEnum newStatus) {
+        this.newStatus = newStatus;
         return this;
     }
     

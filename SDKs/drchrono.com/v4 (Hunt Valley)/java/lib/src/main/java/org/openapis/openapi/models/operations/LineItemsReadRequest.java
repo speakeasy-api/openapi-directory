@@ -4,27 +4,62 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineItemsReadRequest {
-    
-    public LineItemsReadPathParams pathParams;
-    public LineItemsReadRequest withPathParams(LineItemsReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
+    public Long appointment;
+    public LineItemsReadRequest withAppointment(Long appointment) {
+        this.appointment = appointment;
         return this;
     }
     
-    
-    public LineItemsReadQueryParams queryParams;
-    public LineItemsReadRequest withQueryParams(LineItemsReadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public LineItemsReadRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public LineItemsReadRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public LineItemsReadSecurity security;
-    public LineItemsReadRequest withSecurity(LineItemsReadSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
+    public Long office;
+    public LineItemsReadRequest withOffice(Long office) {
+        this.office = office;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public LineItemsReadRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=posted_date")
+    public String postedDate;
+    public LineItemsReadRequest withPostedDate(String postedDate) {
+        this.postedDate = postedDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service_date")
+    public String serviceDate;
+    public LineItemsReadRequest withServiceDate(String serviceDate) {
+        this.serviceDate = serviceDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public LineItemsReadRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

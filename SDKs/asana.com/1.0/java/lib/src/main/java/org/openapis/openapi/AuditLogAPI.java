@@ -62,13 +62,13 @@ public class AuditLogAPI {
      */
     public org.openapis.openapi.models.operations.GetAuditLogEventsResponse getAuditLogEvents(org.openapis.openapi.models.operations.GetAuditLogEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAuditLogEventsPathParams.class, baseUrl, "/workspaces/{workspace_gid}/audit_log_events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAuditLogEventsRequest.class, baseUrl, "/workspaces/{workspace_gid}/audit_log_events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAuditLogEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAuditLogEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

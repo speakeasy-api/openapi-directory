@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSyncSyncListRequest {
-    
-    public DeleteSyncSyncListPathParams pathParams;
-    public DeleteSyncSyncListRequest withPathParams(DeleteSyncSyncListPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteSyncSyncListRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public DeleteSyncSyncListSecurity security;
-    public DeleteSyncSyncListRequest withSecurity(DeleteSyncSyncListSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteSyncSyncListRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteSyncSyncListRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETTestTypeRequest {
-    
-    public GETTestTypeQueryParams queryParams;
-    public GETTestTypeRequest withQueryParams(GETTestTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETTestTypeActionEnum action;
+    public GETTestTypeRequest withAction(GETTestTypeActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the extension.&lt;/p&gt; &lt;p&gt;Conditional: You must specify &lt;code&gt;Arn&lt;/code&gt;, or &lt;code&gt;TypeName&lt;/code&gt; and &lt;code&gt;Type&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Arn")
+    public String arn;
+    public GETTestTypeRequest withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
     
-    public GETTestTypeHeaders headers;
-    public GETTestTypeRequest withHeaders(GETTestTypeHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The S3 bucket to which CloudFormation delivers the contract test execution logs.&lt;/p&gt; &lt;p&gt;CloudFormation delivers the logs by the time contract testing has completed and the extension has been assigned a test type status of &lt;code&gt;PASSED&lt;/code&gt; or &lt;code&gt;FAILED&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;The user calling &lt;code&gt;TestType&lt;/code&gt; must be able to access items in the specified S3 bucket. Specifically, the user needs the following permissions:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;GetObject&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;PutObject&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html"&gt;Actions, Resources, and Condition Keys for Amazon S3&lt;/a&gt; in the &lt;i&gt;Amazon Web Services Identity and Access Management User Guide&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LogDeliveryBucket")
+    public String logDeliveryBucket;
+    public GETTestTypeRequest withLogDeliveryBucket(String logDeliveryBucket) {
+        this.logDeliveryBucket = logDeliveryBucket;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The type of the extension to test.&lt;/p&gt; &lt;p&gt;Conditional: You must specify &lt;code&gt;Arn&lt;/code&gt;, or &lt;code&gt;TypeName&lt;/code&gt; and &lt;code&gt;Type&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
+    public GETTestTypeTypeEnum type;
+    public GETTestTypeRequest withType(GETTestTypeTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the extension to test.&lt;/p&gt; &lt;p&gt;Conditional: You must specify &lt;code&gt;Arn&lt;/code&gt;, or &lt;code&gt;TypeName&lt;/code&gt; and &lt;code&gt;Type&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeName")
+    public String typeName;
+    public GETTestTypeRequest withTypeName(String typeName) {
+        this.typeName = typeName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETTestTypeVersionEnum version;
+    public GETTestTypeRequest withVersion(GETTestTypeVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The version of the extension to test.&lt;/p&gt; &lt;p&gt;You can specify the version id with either &lt;code&gt;Arn&lt;/code&gt;, or with &lt;code&gt;TypeName&lt;/code&gt; and &lt;code&gt;Type&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;If you don't specify a version, CloudFormation uses the default version of the extension in this account and region for testing.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VersionId")
+    public String versionId;
+    public GETTestTypeRequest withVersionId(String versionId) {
+        this.versionId = versionId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETTestTypeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETTestTypeRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETTestTypeRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETTestTypeRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETTestTypeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETTestTypeRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETTestTypeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

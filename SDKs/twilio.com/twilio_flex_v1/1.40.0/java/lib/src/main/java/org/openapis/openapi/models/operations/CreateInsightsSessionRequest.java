@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateInsightsSessionRequest {
-    
-    public CreateInsightsSessionHeaders headers;
-    public CreateInsightsSessionRequest withHeaders(CreateInsightsSessionHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public CreateInsightsSessionSecurity security;
-    public CreateInsightsSessionRequest withSecurity(CreateInsightsSessionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateInsightsSessionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Authorization HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public CreateInsightsSessionRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     

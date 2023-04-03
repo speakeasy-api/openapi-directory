@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMemberElectionRequest {
-    
-    public GetMemberElectionPathParams pathParams;
-    public GetMemberElectionRequest withPathParams(GetMemberElectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the member election
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=member_election_id")
+    public String memberElectionId;
+    public GetMemberElectionRequest withMemberElectionId(String memberElectionId) {
+        this.memberElectionId = memberElectionId;
         return this;
     }
     

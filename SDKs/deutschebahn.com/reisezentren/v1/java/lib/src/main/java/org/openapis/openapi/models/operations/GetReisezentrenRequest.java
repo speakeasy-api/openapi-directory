@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReisezentrenRequest {
-    
-    public GetReisezentrenQueryParams queryParams;
-    public GetReisezentrenRequest withQueryParams(GetReisezentrenQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A station name or part of it
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetReisezentrenRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

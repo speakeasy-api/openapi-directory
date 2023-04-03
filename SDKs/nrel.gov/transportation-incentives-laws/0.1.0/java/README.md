@@ -18,8 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.TransportationIncentivesLawsAllOutputFormatEnum;
-import org.openapis.openapi.models.operations.TransportationIncentivesLawsAllPathParams;
-import org.openapis.openapi.models.operations.TransportationIncentivesLawsAllQueryParams;
 import org.openapis.openapi.models.operations.TransportationIncentivesLawsAllRequest;
 import org.openapis.openapi.models.operations.TransportationIncentivesLawsAllResponse;
 
@@ -30,25 +28,21 @@ public class Application {
                 .build();
 
             TransportationIncentivesLawsAllRequest req = new TransportationIncentivesLawsAllRequest() {{
-                pathParams = new TransportationIncentivesLawsAllPathParams() {{
-                    outputFormat = "xml";
-                }};
-                queryParams = new TransportationIncentivesLawsAllQueryParams() {{
-                    apiKey = "provident";
-                    expired = false;
-                    incentiveType = "distinctio";
-                    jurisdiction = "quibusdam";
-                    keyword = "unde";
-                    lawType = "nulla";
-                    limit = 544883;
-                    local = false;
-                    poc = false;
-                    recent = false;
-                    regulationType = "illum";
-                    technology = "vel";
-                    userType = "error";
-                }};
-            }};            
+                apiKey = "corrupti";
+                expired = false;
+                incentiveType = "provident";
+                jurisdiction = "distinctio";
+                keyword = "quibusdam";
+                lawType = "unde";
+                limit = 857946;
+                local = false;
+                outputFormat = "xml";
+                poc = false;
+                recent = false;
+                regulationType = "illum";
+                technology = "vel";
+                userType = "error";
+            }}            
 
             TransportationIncentivesLawsAllResponse res = sdk.transportationIncentivesLawsAll(req);
 
@@ -62,7 +56,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

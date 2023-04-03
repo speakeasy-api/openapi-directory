@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAlmawsV1TaskListsPrintoutsPrintoutIdRequest {
-    
-    public PostAlmawsV1TaskListsPrintoutsPrintoutIdPathParams pathParams;
-    public PostAlmawsV1TaskListsPrintoutsPrintoutIdRequest withPathParams(PostAlmawsV1TaskListsPrintoutsPrintoutIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The operation to perform on the printout. Currently, the options are 'mark_as_printed','mark_as_canceled'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=op")
+    public String op;
+    public PostAlmawsV1TaskListsPrintoutsPrintoutIdRequest withOp(String op) {
+        this.op = op;
         return this;
     }
     
-    
-    public PostAlmawsV1TaskListsPrintoutsPrintoutIdQueryParams queryParams;
-    public PostAlmawsV1TaskListsPrintoutsPrintoutIdRequest withQueryParams(PostAlmawsV1TaskListsPrintoutsPrintoutIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Printout ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=printout_id")
+    public String printoutId;
+    public PostAlmawsV1TaskListsPrintoutsPrintoutIdRequest withPrintoutId(String printoutId) {
+        this.printoutId = printoutId;
         return this;
     }
     

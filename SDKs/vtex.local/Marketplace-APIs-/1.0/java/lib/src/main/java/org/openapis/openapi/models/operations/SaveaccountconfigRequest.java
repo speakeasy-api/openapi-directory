@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveaccountconfigRequest {
-    
-    public SaveaccountconfigQueryParams queryParams;
-    public SaveaccountconfigRequest withQueryParams(SaveaccountconfigQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public SaveaccountconfigRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public SaveaccountconfigHeaders headers;
-    public SaveaccountconfigRequest withHeaders(SaveaccountconfigHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public SaveaccountconfigRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SaveaccountconfigRequest request;
-    public SaveaccountconfigRequest withRequest(org.openapis.openapi.models.shared.SaveaccountconfigRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SaveaccountconfigRequest saveaccountconfigRequest;
+    public SaveaccountconfigRequest withSaveaccountconfigRequest(org.openapis.openapi.models.shared.SaveaccountconfigRequest saveaccountconfigRequest) {
+        this.saveaccountconfigRequest = saveaccountconfigRequest;
+        return this;
+    }
+    
+    /**
+     * Name of the VTEX account that belongs to the marketplace. All data extracted, and changes added will be posted into this account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public SaveaccountconfigRequest withAccountName(String accountName) {
+        this.accountName = accountName;
         return this;
     }
     

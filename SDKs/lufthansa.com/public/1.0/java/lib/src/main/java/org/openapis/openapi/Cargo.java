@@ -34,18 +34,19 @@ public class Cargo {
      * Retrieve all flights
      * Retrieve a list of all possible flights (both direct and connecting) between two airports on a given date. Routes are available for today and up to days in the future.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse cargoGetRouteFromDateProductCodeByOriginAndDestinationGet(org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse cargoGetRouteFromDateProductCodeByOriginAndDestinationGet(org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest request, org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPathParams.class, baseUrl, "/cargo/getRoute/{origin}-{destination}/{fromDate}/{productCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest.class, baseUrl, "/cargo/getRoute/{origin}-{destination}/{fromDate}/{productCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -54,7 +55,7 @@ public class Cargo {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,18 +83,19 @@ public class Cargo {
      * Shipment Tracking
      * With this tracking service you can easily retrieve your shipment or flight status information.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CargoShipmentTrackingByAWBPrefixAndAWBNumberGetResponse cargoShipmentTrackingByAWBPrefixAndAWBNumberGet(org.openapis.openapi.models.operations.CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CargoShipmentTrackingByAWBPrefixAndAWBNumberGetResponse cargoShipmentTrackingByAWBPrefixAndAWBNumberGet(org.openapis.openapi.models.operations.CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest request, org.openapis.openapi.models.operations.CargoShipmentTrackingByAWBPrefixAndAWBNumberGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CargoShipmentTrackingByAWBPrefixAndAWBNumberGetPathParams.class, baseUrl, "/cargo/shipmentTracking/{aWBPrefix}-{aWBNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest.class, baseUrl, "/cargo/shipmentTracking/{aWBPrefix}-{aWBNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -102,7 +104,7 @@ public class Cargo {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

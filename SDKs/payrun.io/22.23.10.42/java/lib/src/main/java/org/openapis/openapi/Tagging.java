@@ -38,13 +38,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.DeleteCisInstructionTagResponse deleteCisInstructionTag(org.openapis.openapi.models.operations.DeleteCisInstructionTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCisInstructionTagPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCisInstructionTagRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -87,13 +87,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.DeleteCisLineTagResponse deleteCisLineTag(org.openapis.openapi.models.operations.DeleteCisLineTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCisLineTagPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCisLineTagRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -136,13 +136,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.DeleteCisLineTypeTagResponse deleteCisLineTypeTag(org.openapis.openapi.models.operations.DeleteCisLineTypeTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCisLineTypeTagPathParams.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCisLineTypeTagRequest.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -185,13 +185,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.DeleteEmployeeTagResponse deleteEmployeeTag(org.openapis.openapi.models.operations.DeleteEmployeeTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteEmployeeTagPathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteEmployeeTagRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -234,13 +234,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.DeleteEmployerTagResponse deleteEmployerTag(org.openapis.openapi.models.operations.DeleteEmployerTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteEmployerTagPathParams.class, baseUrl, "/Employer/{EmployerId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteEmployerTagRequest.class, baseUrl, "/Employer/{EmployerId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -283,13 +283,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.DeleteHolidaySchemeTagResponse deleteHolidaySchemeTag(org.openapis.openapi.models.operations.DeleteHolidaySchemeTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteHolidaySchemeTagPathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteHolidaySchemeTagRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -332,13 +332,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.DeleteJournalLineTagResponse deleteJournalLineTag(org.openapis.openapi.models.operations.DeleteJournalLineTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteJournalLineTagPathParams.class, baseUrl, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteJournalLineTagRequest.class, baseUrl, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -381,13 +381,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.DeletePayCodeTagResponse deletePayCodeTag(org.openapis.openapi.models.operations.DeletePayCodeTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayCodeTagPathParams.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayCodeTagRequest.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -430,13 +430,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.DeletePayInstructionTagResponse deletePayInstructionTag(org.openapis.openapi.models.operations.DeletePayInstructionTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayInstructionTagPathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayInstructionTagRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -479,13 +479,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.DeletePayLineTagResponse deletePayLineTag(org.openapis.openapi.models.operations.DeletePayLineTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayLineTagPathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLine/{PayLineId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayLineTagRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLine/{PayLineId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -528,13 +528,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.DeletePayRunTagResponse deletePayRunTag(org.openapis.openapi.models.operations.DeletePayRunTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayRunTagPathParams.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayRunTagRequest.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -577,13 +577,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.DeletePayScheduleTagResponse deletePayScheduleTag(org.openapis.openapi.models.operations.DeletePayScheduleTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayScheduleTagPathParams.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayScheduleTagRequest.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -626,13 +626,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.DeletePermissionTagResponse deletePermissionTag(org.openapis.openapi.models.operations.DeletePermissionTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePermissionTagPathParams.class, baseUrl, "/Permission/{PermissionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePermissionTagRequest.class, baseUrl, "/Permission/{PermissionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -675,13 +675,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.DeleteRtiTransactionTagResponse deleteRtiTransactionTag(org.openapis.openapi.models.operations.DeleteRtiTransactionTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRtiTransactionTagPathParams.class, baseUrl, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRtiTransactionTagRequest.class, baseUrl, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -724,13 +724,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.DeleteSubContractorTagResponse deleteSubContractorTag(org.openapis.openapi.models.operations.DeleteSubContractorTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubContractorTagPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubContractorTagRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -773,13 +773,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.DeleteThirdPartyTransactionTagResponse deleteThirdPartyTransactionTag(org.openapis.openapi.models.operations.DeleteThirdPartyTransactionTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteThirdPartyTransactionTagPathParams.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteThirdPartyTransactionTagRequest.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -822,13 +822,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.DeleteUserTagResponse deleteUserTag(org.openapis.openapi.models.operations.DeleteUserTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserTagPathParams.class, baseUrl, "/User/{UserId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserTagRequest.class, baseUrl, "/User/{UserId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -871,13 +871,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetAllCisInstructionTagsResponse getAllCisInstructionTags(org.openapis.openapi.models.operations.GetAllCisInstructionTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllCisInstructionTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllCisInstructionTagsRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -926,13 +926,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetAllCisLineTagsResponse getAllCisLineTags(org.openapis.openapi.models.operations.GetAllCisLineTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllCisLineTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLines/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllCisLineTagsRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLines/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -981,13 +981,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetAllCisLineTypeTagsResponse getAllCisLineTypeTags(org.openapis.openapi.models.operations.GetAllCisLineTypeTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllCisLineTypeTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/CisLineTypes/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllCisLineTypeTagsRequest.class, baseUrl, "/Employer/{EmployerId}/CisLineTypes/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1036,13 +1036,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetAllEmployeeTagsResponse getAllEmployeeTags(org.openapis.openapi.models.operations.GetAllEmployeeTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllEmployeeTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/Employees/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllEmployeeTagsRequest.class, baseUrl, "/Employer/{EmployerId}/Employees/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1097,7 +1097,7 @@ public class Tagging {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1146,13 +1146,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetAllHolidaySchemeTagsResponse getAllHolidaySchemeTags(org.openapis.openapi.models.operations.GetAllHolidaySchemeTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllHolidaySchemeTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/HolidaySchemes/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllHolidaySchemeTagsRequest.class, baseUrl, "/Employer/{EmployerId}/HolidaySchemes/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1201,13 +1201,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetAllJournalLineTagsResponse getAllJournalLineTags(org.openapis.openapi.models.operations.GetAllJournalLineTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllJournalLineTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/JournalLines/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllJournalLineTagsRequest.class, baseUrl, "/Employer/{EmployerId}/JournalLines/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1256,13 +1256,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetAllJournalLinesWithTagResponse getAllJournalLinesWithTag(org.openapis.openapi.models.operations.GetAllJournalLinesWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllJournalLinesWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/JournalLines/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllJournalLinesWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/JournalLines/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1311,13 +1311,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetAllPayCodeTagsResponse getAllPayCodeTags(org.openapis.openapi.models.operations.GetAllPayCodeTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllPayCodeTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/PayCodes/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllPayCodeTagsRequest.class, baseUrl, "/Employer/{EmployerId}/PayCodes/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1366,13 +1366,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetAllPayInstructionTagsResponse getAllPayInstructionTags(org.openapis.openapi.models.operations.GetAllPayInstructionTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllPayInstructionTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstructions/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllPayInstructionTagsRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstructions/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1421,13 +1421,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetAllPayLineTagsResponse getAllPayLineTags(org.openapis.openapi.models.operations.GetAllPayLineTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllPayLineTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLines/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllPayLineTagsRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLines/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1476,13 +1476,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetAllPayRunTagsResponse getAllPayRunTags(org.openapis.openapi.models.operations.GetAllPayRunTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllPayRunTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRuns/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllPayRunTagsRequest.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRuns/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1531,13 +1531,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetAllPayScheduleTagsResponse getAllPayScheduleTags(org.openapis.openapi.models.operations.GetAllPayScheduleTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllPayScheduleTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/PaySchedules/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllPayScheduleTagsRequest.class, baseUrl, "/Employer/{EmployerId}/PaySchedules/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1592,7 +1592,7 @@ public class Tagging {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1641,13 +1641,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetAllPermissionsWithTagResponse getAllPermissionsWithTag(org.openapis.openapi.models.operations.GetAllPermissionsWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllPermissionsWithTagPathParams.class, baseUrl, "/Permissions/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllPermissionsWithTagRequest.class, baseUrl, "/Permissions/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1696,13 +1696,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetAllRtiTransactionTagsResponse getAllRtiTransactionTags(org.openapis.openapi.models.operations.GetAllRtiTransactionTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllRtiTransactionTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/RtiTransactions/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllRtiTransactionTagsRequest.class, baseUrl, "/Employer/{EmployerId}/RtiTransactions/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1751,13 +1751,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetAllSubContractorTagsResponse getAllSubContractorTags(org.openapis.openapi.models.operations.GetAllSubContractorTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllSubContractorTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractors/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllSubContractorTagsRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractors/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1806,13 +1806,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetAllThirdPartyTransactionTagsResponse getAllThirdPartyTransactionTags(org.openapis.openapi.models.operations.GetAllThirdPartyTransactionTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllThirdPartyTransactionTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransactions/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllThirdPartyTransactionTagsRequest.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransactions/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1861,13 +1861,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetAllThirdPartyTransactionsWithTagResponse getAllThirdPartyTransactionsWithTag(org.openapis.openapi.models.operations.GetAllThirdPartyTransactionsWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllThirdPartyTransactionsWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransactions/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllThirdPartyTransactionsWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransactions/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1922,7 +1922,7 @@ public class Tagging {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1971,13 +1971,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetAllUsersWithTagResponse getAllUsersWithTag(org.openapis.openapi.models.operations.GetAllUsersWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllUsersWithTagPathParams.class, baseUrl, "/Users/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllUsersWithTagRequest.class, baseUrl, "/Users/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2026,13 +2026,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetCisInstructionsWithTagResponse getCisInstructionsWithTag(org.openapis.openapi.models.operations.GetCisInstructionsWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisInstructionsWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisInstructionsWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2081,13 +2081,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetCisLineTypesWithTagResponse getCisLineTypesWithTag(org.openapis.openapi.models.operations.GetCisLineTypesWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisLineTypesWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/CisLineTypes/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisLineTypesWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/CisLineTypes/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2136,13 +2136,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetCisLinesWithTagResponse getCisLinesWithTag(org.openapis.openapi.models.operations.GetCisLinesWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisLinesWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLines/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisLinesWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLines/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2191,13 +2191,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetEmployeesWithTagResponse getEmployeesWithTag(org.openapis.openapi.models.operations.GetEmployeesWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEmployeesWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/Employees/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEmployeesWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/Employees/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2246,13 +2246,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetEmployersWithTagResponse getEmployersWithTag(org.openapis.openapi.models.operations.GetEmployersWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEmployersWithTagPathParams.class, baseUrl, "/Employers/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEmployersWithTagRequest.class, baseUrl, "/Employers/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2301,13 +2301,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetHolidaySchemesWithTagResponse getHolidaySchemesWithTag(org.openapis.openapi.models.operations.GetHolidaySchemesWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHolidaySchemesWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/HolidaySchemes/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHolidaySchemesWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/HolidaySchemes/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2356,13 +2356,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetPayCodesWithTagResponse getPayCodesWithTag(org.openapis.openapi.models.operations.GetPayCodesWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayCodesWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/PayCodes/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayCodesWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/PayCodes/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2411,13 +2411,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetPayInstructionsWithTagResponse getPayInstructionsWithTag(org.openapis.openapi.models.operations.GetPayInstructionsWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayInstructionsWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstructions/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayInstructionsWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstructions/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2466,13 +2466,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetPayLinesWithTagResponse getPayLinesWithTag(org.openapis.openapi.models.operations.GetPayLinesWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayLinesWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLines/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayLinesWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLines/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2521,13 +2521,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetPayRunsWithTagResponse getPayRunsWithTag(org.openapis.openapi.models.operations.GetPayRunsWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayRunsWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRuns/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayRunsWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRuns/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2576,13 +2576,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetPaySchedulesWithTagResponse getPaySchedulesWithTag(org.openapis.openapi.models.operations.GetPaySchedulesWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaySchedulesWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/PaySchedules/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaySchedulesWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/PaySchedules/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2631,13 +2631,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetRtiTransactionsWithTagResponse getRtiTransactionsWithTag(org.openapis.openapi.models.operations.GetRtiTransactionsWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRtiTransactionsWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/RtiTransactions/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRtiTransactionsWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/RtiTransactions/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2686,13 +2686,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetSubContractorsWithTagResponse getSubContractorsWithTag(org.openapis.openapi.models.operations.GetSubContractorsWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubContractorsWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractors/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubContractorsWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractors/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2741,13 +2741,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromCisInstructionResponse getTagFromCisInstruction(org.openapis.openapi.models.operations.GetTagFromCisInstructionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromCisInstructionPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromCisInstructionRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2796,13 +2796,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromCisLineResponse getTagFromCisLine(org.openapis.openapi.models.operations.GetTagFromCisLineRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromCisLinePathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromCisLineRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2851,13 +2851,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromCisLineTypeResponse getTagFromCisLineType(org.openapis.openapi.models.operations.GetTagFromCisLineTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromCisLineTypePathParams.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromCisLineTypeRequest.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2906,13 +2906,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromEmployeeResponse getTagFromEmployee(org.openapis.openapi.models.operations.GetTagFromEmployeeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromEmployeePathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromEmployeeRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2961,13 +2961,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromEmployeeRevisionResponse getTagFromEmployeeRevision(org.openapis.openapi.models.operations.GetTagFromEmployeeRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromEmployeeRevisionPathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tag/{TagId}/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromEmployeeRevisionRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tag/{TagId}/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -3016,13 +3016,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromEmployerResponse getTagFromEmployer(org.openapis.openapi.models.operations.GetTagFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -3071,13 +3071,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromEmployerRevisionResponse getTagFromEmployerRevision(org.openapis.openapi.models.operations.GetTagFromEmployerRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromEmployerRevisionPathParams.class, baseUrl, "/Employer/{EmployerId}/Tag/{TagId}/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromEmployerRevisionRequest.class, baseUrl, "/Employer/{EmployerId}/Tag/{TagId}/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -3126,13 +3126,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromHolidaySchemeResponse getTagFromHolidayScheme(org.openapis.openapi.models.operations.GetTagFromHolidaySchemeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromHolidaySchemePathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromHolidaySchemeRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -3181,13 +3181,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromHolidaySchemeRevisionResponse getTagFromHolidaySchemeRevision(org.openapis.openapi.models.operations.GetTagFromHolidaySchemeRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromHolidaySchemeRevisionPathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromHolidaySchemeRevisionRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -3236,13 +3236,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromJournalLineResponse getTagFromJournalLine(org.openapis.openapi.models.operations.GetTagFromJournalLineRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromJournalLinePathParams.class, baseUrl, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromJournalLineRequest.class, baseUrl, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -3291,13 +3291,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromPayCodeResponse getTagFromPayCode(org.openapis.openapi.models.operations.GetTagFromPayCodeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromPayCodePathParams.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromPayCodeRequest.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -3346,13 +3346,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromPayInstructionResponse getTagFromPayInstruction(org.openapis.openapi.models.operations.GetTagFromPayInstructionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromPayInstructionPathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromPayInstructionRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -3401,13 +3401,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromPayLineResponse getTagFromPayLine(org.openapis.openapi.models.operations.GetTagFromPayLineRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromPayLinePathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLine/{PayLineId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromPayLineRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLine/{PayLineId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -3456,13 +3456,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromPayRunResponse getTagFromPayRun(org.openapis.openapi.models.operations.GetTagFromPayRunRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromPayRunPathParams.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromPayRunRequest.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -3511,13 +3511,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromPayScheduleResponse getTagFromPaySchedule(org.openapis.openapi.models.operations.GetTagFromPayScheduleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromPaySchedulePathParams.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromPayScheduleRequest.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -3566,13 +3566,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromPermissionResponse getTagFromPermission(org.openapis.openapi.models.operations.GetTagFromPermissionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromPermissionPathParams.class, baseUrl, "/Permission/{PermissionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromPermissionRequest.class, baseUrl, "/Permission/{PermissionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -3621,13 +3621,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromRtiTransactionResponse getTagFromRtiTransaction(org.openapis.openapi.models.operations.GetTagFromRtiTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromRtiTransactionPathParams.class, baseUrl, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromRtiTransactionRequest.class, baseUrl, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -3676,13 +3676,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromSubContractorResponse getTagFromSubContractor(org.openapis.openapi.models.operations.GetTagFromSubContractorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromSubContractorPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromSubContractorRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -3731,13 +3731,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromSubContractorRevisionResponse getTagFromSubContractorRevision(org.openapis.openapi.models.operations.GetTagFromSubContractorRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromSubContractorRevisionPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromSubContractorRevisionRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -3786,13 +3786,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromThirdPartyTransactionResponse getTagFromThirdPartyTransaction(org.openapis.openapi.models.operations.GetTagFromThirdPartyTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromThirdPartyTransactionPathParams.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromThirdPartyTransactionRequest.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -3841,13 +3841,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagFromUserResponse getTagFromUser(org.openapis.openapi.models.operations.GetTagFromUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromUserPathParams.class, baseUrl, "/User/{UserId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromUserRequest.class, baseUrl, "/User/{UserId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -3896,13 +3896,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromCisInstructionResponse getTagsFromCisInstruction(org.openapis.openapi.models.operations.GetTagsFromCisInstructionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromCisInstructionPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromCisInstructionRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -3951,13 +3951,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromCisLineResponse getTagsFromCisLine(org.openapis.openapi.models.operations.GetTagsFromCisLineRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromCisLinePathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromCisLineRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4006,13 +4006,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromCisLineTypeResponse getTagsFromCisLineType(org.openapis.openapi.models.operations.GetTagsFromCisLineTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromCisLineTypePathParams.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromCisLineTypeRequest.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4061,13 +4061,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromEmployeeResponse getTagsFromEmployee(org.openapis.openapi.models.operations.GetTagsFromEmployeeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromEmployeePathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromEmployeeRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4116,13 +4116,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromEmployeeRevisionResponse getTagsFromEmployeeRevision(org.openapis.openapi.models.operations.GetTagsFromEmployeeRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromEmployeeRevisionPathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tags/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromEmployeeRevisionRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tags/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4171,13 +4171,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromEmployerResponse getTagsFromEmployer(org.openapis.openapi.models.operations.GetTagsFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4226,13 +4226,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromEmployerRevisionResponse getTagsFromEmployerRevision(org.openapis.openapi.models.operations.GetTagsFromEmployerRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromEmployerRevisionPathParams.class, baseUrl, "/Employer/{EmployerId}/Tags/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromEmployerRevisionRequest.class, baseUrl, "/Employer/{EmployerId}/Tags/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4281,13 +4281,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromHolidaySchemeResponse getTagsFromHolidayScheme(org.openapis.openapi.models.operations.GetTagsFromHolidaySchemeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromHolidaySchemePathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromHolidaySchemeRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4336,13 +4336,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromHolidaySchemeRevisionResponse getTagsFromHolidaySchemeRevision(org.openapis.openapi.models.operations.GetTagsFromHolidaySchemeRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromHolidaySchemeRevisionPathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tags/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromHolidaySchemeRevisionRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tags/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4391,13 +4391,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromJournalLineResponse getTagsFromJournalLine(org.openapis.openapi.models.operations.GetTagsFromJournalLineRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromJournalLinePathParams.class, baseUrl, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromJournalLineRequest.class, baseUrl, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4446,13 +4446,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromPayCodeResponse getTagsFromPayCode(org.openapis.openapi.models.operations.GetTagsFromPayCodeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromPayCodePathParams.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromPayCodeRequest.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4501,13 +4501,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromPayInstructionResponse getTagsFromPayInstruction(org.openapis.openapi.models.operations.GetTagsFromPayInstructionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromPayInstructionPathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromPayInstructionRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4556,13 +4556,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromPayLineResponse getTagsFromPayLine(org.openapis.openapi.models.operations.GetTagsFromPayLineRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromPayLinePathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLine/{PayLineId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromPayLineRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLine/{PayLineId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4611,13 +4611,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromPayRunResponse getTagsFromPayRun(org.openapis.openapi.models.operations.GetTagsFromPayRunRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromPayRunPathParams.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromPayRunRequest.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4666,13 +4666,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromPayScheduleResponse getTagsFromPaySchedule(org.openapis.openapi.models.operations.GetTagsFromPayScheduleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromPaySchedulePathParams.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromPayScheduleRequest.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4721,13 +4721,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromPermissionResponse getTagsFromPermission(org.openapis.openapi.models.operations.GetTagsFromPermissionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromPermissionPathParams.class, baseUrl, "/Permission/{PermissionId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromPermissionRequest.class, baseUrl, "/Permission/{PermissionId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4776,13 +4776,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromRtiTransactionResponse getTagsFromRtiTransaction(org.openapis.openapi.models.operations.GetTagsFromRtiTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromRtiTransactionPathParams.class, baseUrl, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromRtiTransactionRequest.class, baseUrl, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4831,13 +4831,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromSubContractorResponse getTagsFromSubContractor(org.openapis.openapi.models.operations.GetTagsFromSubContractorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromSubContractorPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromSubContractorRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4886,13 +4886,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromSubContractorRevisionResponse getTagsFromSubContractorRevision(org.openapis.openapi.models.operations.GetTagsFromSubContractorRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromSubContractorRevisionPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tags/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromSubContractorRevisionRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tags/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4941,13 +4941,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromThirdPartyTransactionResponse getTagsFromThirdPartyTransaction(org.openapis.openapi.models.operations.GetTagsFromThirdPartyTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromThirdPartyTransactionPathParams.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromThirdPartyTransactionRequest.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4996,13 +4996,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.GetTagsFromUserResponse getTagsFromUser(org.openapis.openapi.models.operations.GetTagsFromUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromUserPathParams.class, baseUrl, "/User/{UserId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromUserRequest.class, baseUrl, "/User/{UserId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -5051,13 +5051,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.PutCisInstructionTagResponse putCisInstructionTag(org.openapis.openapi.models.operations.PutCisInstructionTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCisInstructionTagPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCisInstructionTagRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -5106,13 +5106,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.PutCisLineTagResponse putCisLineTag(org.openapis.openapi.models.operations.PutCisLineTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCisLineTagPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCisLineTagRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -5161,13 +5161,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.PutCisLineTypeTagResponse putCisLineTypeTag(org.openapis.openapi.models.operations.PutCisLineTypeTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCisLineTypeTagPathParams.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCisLineTypeTagRequest.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -5216,13 +5216,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.PutEmployeeTagResponse putEmployeeTag(org.openapis.openapi.models.operations.PutEmployeeTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutEmployeeTagPathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutEmployeeTagRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -5271,13 +5271,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.PutEmployerTagResponse putEmployerTag(org.openapis.openapi.models.operations.PutEmployerTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutEmployerTagPathParams.class, baseUrl, "/Employer/{EmployerId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutEmployerTagRequest.class, baseUrl, "/Employer/{EmployerId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -5326,13 +5326,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.PutHolidaySchemeTagResponse putHolidaySchemeTag(org.openapis.openapi.models.operations.PutHolidaySchemeTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutHolidaySchemeTagPathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutHolidaySchemeTagRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -5381,13 +5381,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.PutJournalLineTagResponse putJournalLineTag(org.openapis.openapi.models.operations.PutJournalLineTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutJournalLineTagPathParams.class, baseUrl, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutJournalLineTagRequest.class, baseUrl, "/Employer/{EmployerId}/JournalLine/{JournalLineId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -5436,13 +5436,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.PutPayCodeTagResponse putPayCodeTag(org.openapis.openapi.models.operations.PutPayCodeTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPayCodeTagPathParams.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPayCodeTagRequest.class, baseUrl, "/Employer/{EmployerId}/PayCode/{PayCodeId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -5491,13 +5491,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.PutPayInstructionTagResponse putPayInstructionTag(org.openapis.openapi.models.operations.PutPayInstructionTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPayInstructionTagPathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPayInstructionTagRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayInstruction/{PayInstructionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -5546,13 +5546,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.PutPayLineTagResponse putPayLineTag(org.openapis.openapi.models.operations.PutPayLineTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPayLineTagPathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLine/{PayLineId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPayLineTagRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/PayLine/{PayLineId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -5601,13 +5601,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.PutPayRunTagResponse putPayRunTag(org.openapis.openapi.models.operations.PutPayRunTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPayRunTagPathParams.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPayRunTagRequest.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -5656,13 +5656,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.PutPayScheduleTagResponse putPayScheduleTag(org.openapis.openapi.models.operations.PutPayScheduleTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPayScheduleTagPathParams.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPayScheduleTagRequest.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -5711,13 +5711,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.PutPermissionTagResponse putPermissionTag(org.openapis.openapi.models.operations.PutPermissionTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPermissionTagPathParams.class, baseUrl, "/Permission/{PermissionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPermissionTagRequest.class, baseUrl, "/Permission/{PermissionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -5766,13 +5766,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.PutRtiTransactionTagResponse putRtiTransactionTag(org.openapis.openapi.models.operations.PutRtiTransactionTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRtiTransactionTagPathParams.class, baseUrl, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRtiTransactionTagRequest.class, baseUrl, "/Employer/{EmployerId}/RtiTransaction/{RtiTransactionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -5821,13 +5821,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.PutSubContractorTagResponse putSubContractorTag(org.openapis.openapi.models.operations.PutSubContractorTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSubContractorTagPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSubContractorTagRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -5876,13 +5876,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.PutThirdPartyTransactionTagResponse putThirdPartyTransactionTag(org.openapis.openapi.models.operations.PutThirdPartyTransactionTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutThirdPartyTransactionTagPathParams.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutThirdPartyTransactionTagRequest.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -5931,13 +5931,13 @@ public class Tagging {
      */
     public org.openapis.openapi.models.operations.PutUserTagResponse putUserTag(org.openapis.openapi.models.operations.PutUserTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUserTagPathParams.class, baseUrl, "/User/{UserId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUserTagRequest.class, baseUrl, "/User/{UserId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

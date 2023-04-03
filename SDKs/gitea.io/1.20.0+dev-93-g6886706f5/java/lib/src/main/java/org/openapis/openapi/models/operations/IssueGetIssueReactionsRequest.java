@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueGetIssueReactionsRequest {
-    
-    public IssueGetIssueReactionsPathParams pathParams;
-    public IssueGetIssueReactionsRequest withPathParams(IssueGetIssueReactionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * index of the issue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public IssueGetIssueReactionsRequest withIndex(Long index) {
+        this.index = index;
         return this;
     }
     
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public IssueGetIssueReactionsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public IssueGetIssueReactionsQueryParams queryParams;
-    public IssueGetIssueReactionsRequest withQueryParams(IssueGetIssueReactionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueGetIssueReactionsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public IssueGetIssueReactionsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueGetIssueReactionsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

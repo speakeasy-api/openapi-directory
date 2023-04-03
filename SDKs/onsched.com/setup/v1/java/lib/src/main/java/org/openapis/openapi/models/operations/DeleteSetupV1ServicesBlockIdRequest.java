@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSetupV1ServicesBlockIdRequest {
-    
-    public DeleteSetupV1ServicesBlockIdPathParams pathParams;
-    public DeleteSetupV1ServicesBlockIdRequest withPathParams(DeleteSetupV1ServicesBlockIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of serviceBlock object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteSetupV1ServicesBlockIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

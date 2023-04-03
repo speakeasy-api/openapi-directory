@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryGetApiDeploymentRequest {
+    /**
+     * The api id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
+    public String api;
+    public RegistryGetApiDeploymentRequest withApi(String api) {
+        this.api = api;
+        return this;
+    }
     
-    public RegistryGetApiDeploymentPathParams pathParams;
-    public RegistryGetApiDeploymentRequest withPathParams(RegistryGetApiDeploymentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The deployment id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment")
+    public String deployment;
+    public RegistryGetApiDeploymentRequest withDeployment(String deployment) {
+        this.deployment = deployment;
+        return this;
+    }
+    
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryGetApiDeploymentRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryGetApiDeploymentRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

@@ -125,10 +125,11 @@ public class SDK {
     /**
      * Best Seller History List
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GETListsBestSellersHistoryJsonResponse getListsBestSellersHistoryJson(org.openapis.openapi.models.operations.GETListsBestSellersHistoryJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GETListsBestSellersHistoryJsonResponse getListsBestSellersHistoryJson(org.openapis.openapi.models.operations.GETListsBestSellersHistoryJsonRequest request, org.openapis.openapi.models.operations.GETListsBestSellersHistoryJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/lists/best-sellers/history.json");
         
@@ -136,14 +137,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETListsBestSellersHistoryJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETListsBestSellersHistoryJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -170,25 +171,26 @@ public class SDK {
     /**
      * Best Seller List by Date
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GETListsDateListJsonResponse getListsDateListJson(org.openapis.openapi.models.operations.GETListsDateListJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GETListsDateListJsonResponse getListsDateListJson(org.openapis.openapi.models.operations.GETListsDateListJsonRequest request, org.openapis.openapi.models.operations.GETListsDateListJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETListsDateListJsonPathParams.class, baseUrl, "/lists/{date}/{list}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETListsDateListJsonRequest.class, baseUrl, "/lists/{date}/{list}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETListsDateListJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETListsDateListJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -215,25 +217,26 @@ public class SDK {
     /**
      * Best Seller List
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GETListsFormatResponse getListsFormat(org.openapis.openapi.models.operations.GETListsFormatRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GETListsFormatResponse getListsFormat(org.openapis.openapi.models.operations.GETListsFormatRequest request, org.openapis.openapi.models.operations.GETListsFormatSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETListsFormatPathParams.class, baseUrl, "/lists.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETListsFormatRequest.class, baseUrl, "/lists.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETListsFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETListsFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -260,25 +263,26 @@ public class SDK {
     /**
      * Best Seller List Names
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GETListsNamesFormatResponse getListsNamesFormat(org.openapis.openapi.models.operations.GETListsNamesFormatRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GETListsNamesFormatResponse getListsNamesFormat(org.openapis.openapi.models.operations.GETListsNamesFormatRequest request, org.openapis.openapi.models.operations.GETListsNamesFormatSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETListsNamesFormatPathParams.class, baseUrl, "/lists/names.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETListsNamesFormatRequest.class, baseUrl, "/lists/names.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETListsNamesFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETListsNamesFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -305,25 +309,26 @@ public class SDK {
     /**
      * Best Seller List Overview
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GETListsOverviewFormatResponse getListsOverviewFormat(org.openapis.openapi.models.operations.GETListsOverviewFormatRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GETListsOverviewFormatResponse getListsOverviewFormat(org.openapis.openapi.models.operations.GETListsOverviewFormatRequest request, org.openapis.openapi.models.operations.GETListsOverviewFormatSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETListsOverviewFormatPathParams.class, baseUrl, "/lists/overview.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETListsOverviewFormatRequest.class, baseUrl, "/lists/overview.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETListsOverviewFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETListsOverviewFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -350,25 +355,26 @@ public class SDK {
     /**
      * Reviews
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GETReviewsFormatResponse getReviewsFormat(org.openapis.openapi.models.operations.GETReviewsFormatRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GETReviewsFormatResponse getReviewsFormat(org.openapis.openapi.models.operations.GETReviewsFormatRequest request, org.openapis.openapi.models.operations.GETReviewsFormatSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETReviewsFormatPathParams.class, baseUrl, "/reviews.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETReviewsFormatRequest.class, baseUrl, "/reviews.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETReviewsFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETReviewsFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

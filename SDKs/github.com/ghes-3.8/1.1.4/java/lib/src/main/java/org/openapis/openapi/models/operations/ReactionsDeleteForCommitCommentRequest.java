@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsDeleteForCommitCommentRequest {
+    /**
+     * The unique identifier of the comment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
+    public Long commentId;
+    public ReactionsDeleteForCommitCommentRequest withCommentId(Long commentId) {
+        this.commentId = commentId;
+        return this;
+    }
     
-    public ReactionsDeleteForCommitCommentPathParams pathParams;
-    public ReactionsDeleteForCommitCommentRequest withPathParams(ReactionsDeleteForCommitCommentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReactionsDeleteForCommitCommentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the reaction.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reaction_id")
+    public Long reactionId;
+    public ReactionsDeleteForCommitCommentRequest withReactionId(Long reactionId) {
+        this.reactionId = reactionId;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReactionsDeleteForCommitCommentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetReceiptRulePositionRequest {
-    
-    public GETSetReceiptRulePositionQueryParams queryParams;
-    public GETSetReceiptRulePositionRequest withQueryParams(GETSetReceiptRulePositionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETSetReceiptRulePositionActionEnum action;
+    public GETSetReceiptRulePositionRequest withAction(GETSetReceiptRulePositionActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the receipt rule after which to place the specified receipt rule.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=After")
+    public String after;
+    public GETSetReceiptRulePositionRequest withAfter(String after) {
+        this.after = after;
+        return this;
+    }
     
-    public GETSetReceiptRulePositionHeaders headers;
-    public GETSetReceiptRulePositionRequest withHeaders(GETSetReceiptRulePositionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the receipt rule to reposition.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleName")
+    public String ruleName;
+    public GETSetReceiptRulePositionRequest withRuleName(String ruleName) {
+        this.ruleName = ruleName;
+        return this;
+    }
+    
+    /**
+     * The name of the receipt rule set that contains the receipt rule to reposition.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleSetName")
+    public String ruleSetName;
+    public GETSetReceiptRulePositionRequest withRuleSetName(String ruleSetName) {
+        this.ruleSetName = ruleSetName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETSetReceiptRulePositionVersionEnum version;
+    public GETSetReceiptRulePositionRequest withVersion(GETSetReceiptRulePositionVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETSetReceiptRulePositionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETSetReceiptRulePositionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETSetReceiptRulePositionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETSetReceiptRulePositionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETSetReceiptRulePositionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETSetReceiptRulePositionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETSetReceiptRulePositionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RecognizeTextRequest {
-    
-    public RecognizeTextQueryParams queryParams;
-    public RecognizeTextRequest withQueryParams(RecognizeTextQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * A JSON document with a URL pointing to the image that is to be analyzed.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ImageUrl request;
-    public RecognizeTextRequest withRequest(org.openapis.openapi.models.shared.ImageUrl request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+    public RecognizeTextRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
+        this.imageUrl = imageUrl;
+        return this;
+    }
+    
+    /**
+     * Type of text to recognize.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mode")
+    public org.openapis.openapi.models.shared.TextRecognitionModeEnum mode;
+    public RecognizeTextRequest withMode(org.openapis.openapi.models.shared.TextRecognitionModeEnum mode) {
+        this.mode = mode;
         return this;
     }
     

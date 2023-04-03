@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindNumberLeaseConfigsRequest {
-    
-    public FindNumberLeaseConfigsQueryParams queryParams;
-    public FindNumberLeaseConfigsRequest withQueryParams(FindNumberLeaseConfigsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A city name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
+    public String city;
+    public FindNumberLeaseConfigsRequest withCity(String city) {
+        this.city = city;
         return this;
     }
     
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FindNumberLeaseConfigsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public FindNumberLeaseConfigsSecurity security;
-    public FindNumberLeaseConfigsRequest withSecurity(FindNumberLeaseConfigsSecurity security) {
-        this.security = security;
+    /**
+     * A label name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=labelName")
+    public String labelName;
+    public FindNumberLeaseConfigsRequest withLabelName(String labelName) {
+        this.labelName = labelName;
+        return this;
+    }
+    
+    /**
+     * To set the maximum number of records to return in a paged list response. The default is 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public FindNumberLeaseConfigsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset to the start of a given page. The default is 0. Check [pagination](https://developers.callfire.com/docs.html#pagination) page for more information about pagination in CallFire API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public FindNumberLeaseConfigsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * A 4-7 digit prefix
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prefix")
+    public String prefix;
+    public FindNumberLeaseConfigsRequest withPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+    
+    /**
+     * A two-letter state code. Example: CA, IL, etc.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public FindNumberLeaseConfigsRequest withState(String state) {
+        this.state = state;
+        return this;
+    }
+    
+    /**
+     * A five-digit Zipcode
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zipcode")
+    public String zipcode;
+    public FindNumberLeaseConfigsRequest withZipcode(String zipcode) {
+        this.zipcode = zipcode;
         return this;
     }
     

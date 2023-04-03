@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostHubSpacesSpaceIdDocumentsJsonRequest {
-    
-    public PostHubSpacesSpaceIdDocumentsJsonPathParams pathParams;
-    public PostHubSpacesSpaceIdDocumentsJsonRequest withPathParams(PostHubSpacesSpaceIdDocumentsJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Document to add
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostHubSpacesSpaceIdDocumentsApplicationJSON request;
-    public PostHubSpacesSpaceIdDocumentsJsonRequest withRequest(PostHubSpacesSpaceIdDocumentsApplicationJSON request) {
-        this.request = request;
+    public PostHubSpacesSpaceIdDocumentsApplicationJSON requestBody;
+    public PostHubSpacesSpaceIdDocumentsJsonRequest withRequestBody(PostHubSpacesSpaceIdDocumentsApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostHubSpacesSpaceIdDocumentsJsonSecurity security;
-    public PostHubSpacesSpaceIdDocumentsJsonRequest withSecurity(PostHubSpacesSpaceIdDocumentsJsonSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostHubSpacesSpaceIdDocumentsJsonRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

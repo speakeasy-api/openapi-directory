@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BatchPutMessageHeaders;
 import org.openapis.openapi.models.operations.BatchPutMessageRequestBody;
 import org.openapis.openapi.models.operations.BatchPutMessageRequest;
 import org.openapis.openapi.models.operations.BatchPutMessageResponse;
@@ -28,36 +27,36 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchPutMessageRequest req = new BatchPutMessageRequest() {{
-                headers = new BatchPutMessageHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new BatchPutMessageRequestBody() {{
-                    channelName = "illum";
+                requestBody = new BatchPutMessageRequestBody() {{
+                    channelName = "corrupti";
                     messages = new org.openapis.openapi.models.shared.Message[]{{
                         add(new Message() {{
-                            messageId = "error";
-                            payload = "deserunt";
+                            messageId = "distinctio";
+                            payload = "quibusdam";
                         }}),
                         add(new Message() {{
-                            messageId = "suscipit";
-                            payload = "iure";
+                            messageId = "unde";
+                            payload = "nulla";
+                        }}),
+                        add(new Message() {{
+                            messageId = "corrupti";
+                            payload = "illum";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "vel";
+                xAmzContentSha256 = "error";
+                xAmzCredential = "deserunt";
+                xAmzDate = "suscipit";
+                xAmzSecurityToken = "iure";
+                xAmzSignature = "magnam";
+                xAmzSignedHeaders = "debitis";
+            }}            
 
             BatchPutMessageResponse res = sdk.batchPutMessage(req);
 
@@ -71,7 +70,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesIdAccountingYearRequest {
-    
-    public PostSpacesIdAccountingYearPathParams pathParams;
-    public PostSpacesIdAccountingYearRequest withPathParams(PostSpacesIdAccountingYearPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * AccountingYear to add
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSpacesIdAccountingYearRequestBody request;
-    public PostSpacesIdAccountingYearRequest withRequest(PostSpacesIdAccountingYearRequestBody request) {
-        this.request = request;
+    public PostSpacesIdAccountingYearRequestBody requestBody;
+    public PostSpacesIdAccountingYearRequest withRequestBody(PostSpacesIdAccountingYearRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostSpacesIdAccountingYearSecurity security;
-    public PostSpacesIdAccountingYearRequest withSecurity(PostSpacesIdAccountingYearSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesIdAccountingYearRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

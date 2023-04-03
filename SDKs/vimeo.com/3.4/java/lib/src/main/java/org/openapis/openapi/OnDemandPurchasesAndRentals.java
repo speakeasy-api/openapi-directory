@@ -33,19 +33,20 @@ public class OnDemandPurchasesAndRentals {
     /**
      * Check if a user has made a purchase or rental from an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CheckIfVodWasPurchasedResponse checkIfVodWasPurchased(org.openapis.openapi.models.operations.CheckIfVodWasPurchasedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CheckIfVodWasPurchasedResponse checkIfVodWasPurchased(org.openapis.openapi.models.operations.CheckIfVodWasPurchasedRequest request, org.openapis.openapi.models.operations.CheckIfVodWasPurchasedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfVodWasPurchasedPathParams.class, baseUrl, "/users/{user_id}/ondemand/purchases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfVodWasPurchasedRequest.class, baseUrl, "/users/{user_id}/ondemand/purchases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,19 +81,20 @@ public class OnDemandPurchasesAndRentals {
     /**
      * Check if a user has made a purchase or rental from an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CheckIfVodWasPurchasedAlt1Response checkIfVodWasPurchasedAlt1(org.openapis.openapi.models.operations.CheckIfVodWasPurchasedAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.CheckIfVodWasPurchasedAlt1Response checkIfVodWasPurchasedAlt1(org.openapis.openapi.models.operations.CheckIfVodWasPurchasedAlt1Request request, org.openapis.openapi.models.operations.CheckIfVodWasPurchasedAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfVodWasPurchasedAlt1PathParams.class, baseUrl, "/me/ondemand/purchases/{ondemand_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfVodWasPurchasedAlt1Request.class, baseUrl, "/me/ondemand/purchases/{ondemand_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,10 +129,11 @@ public class OnDemandPurchasesAndRentals {
     /**
      * Get all the On Demand purchases and rentals that a user has made
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetVodPurchasesResponse getVodPurchases(org.openapis.openapi.models.operations.GetVodPurchasesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetVodPurchasesResponse getVodPurchases(org.openapis.openapi.models.operations.GetVodPurchasesRequest request, org.openapis.openapi.models.operations.GetVodPurchasesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/ondemand/purchases");
         
@@ -138,14 +141,14 @@ public class OnDemandPurchasesAndRentals {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVodPurchasesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVodPurchasesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

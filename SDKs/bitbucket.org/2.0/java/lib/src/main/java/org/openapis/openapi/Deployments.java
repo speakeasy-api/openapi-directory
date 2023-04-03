@@ -50,12 +50,12 @@ public class Deployments {
      */
     public org.openapis.openapi.models.operations.CreateEnvironmentResponse createEnvironment(org.openapis.openapi.models.operations.CreateEnvironmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateEnvironmentPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/environments/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateEnvironmentRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/environments/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -104,7 +104,7 @@ public class Deployments {
      */
     public org.openapis.openapi.models.operations.DeleteEnvironmentForRepositoryResponse deleteEnvironmentForRepository(org.openapis.openapi.models.operations.DeleteEnvironmentForRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteEnvironmentForRepositoryPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/environments/{environment_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteEnvironmentForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/environments/{environment_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -147,19 +147,20 @@ public class Deployments {
      * https://api.bitbucket.org/2.0/repositories/mleu/test/deploy-keys/1234
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse deleteRepositoriesWorkspaceRepoSlugDeployKeysKeyId(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse deleteRepositoriesWorkspaceRepoSlugDeployKeysKeyId(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyIdRequest request, org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyIdPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deploy-keys/{key_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyIdRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deploy-keys/{key_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -196,19 +197,20 @@ public class Deployments {
      * https://api.bitbucket.org/2.0/workspaces/jzeng/projects/JZ/deploy-keys/1234
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdResponse deleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyId(org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdResponse deleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyId(org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdRequest request, org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdPathParams.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/deploy-keys/{key_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdRequest.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/deploy-keys/{key_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -243,7 +245,7 @@ public class Deployments {
      */
     public org.openapis.openapi.models.operations.GetDeploymentForRepositoryResponse getDeploymentForRepository(org.openapis.openapi.models.operations.GetDeploymentForRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeploymentForRepositoryPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deployments/{deployment_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeploymentForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deployments/{deployment_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -290,7 +292,7 @@ public class Deployments {
      */
     public org.openapis.openapi.models.operations.GetDeploymentsForRepositoryResponse getDeploymentsForRepository(org.openapis.openapi.models.operations.GetDeploymentsForRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeploymentsForRepositoryPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deployments/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeploymentsForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deployments/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -329,7 +331,7 @@ public class Deployments {
      */
     public org.openapis.openapi.models.operations.GetEnvironmentForRepositoryResponse getEnvironmentForRepository(org.openapis.openapi.models.operations.GetEnvironmentForRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEnvironmentForRepositoryPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/environments/{environment_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEnvironmentForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/environments/{environment_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -376,7 +378,7 @@ public class Deployments {
      */
     public org.openapis.openapi.models.operations.GetEnvironmentsForRepositoryResponse getEnvironmentsForRepository(org.openapis.openapi.models.operations.GetEnvironmentsForRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEnvironmentsForRepositoryPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/environments/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEnvironmentsForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/environments/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -445,19 +447,20 @@ public class Deployments {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysResponse getRepositoriesWorkspaceRepoSlugDeployKeys(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysResponse getRepositoriesWorkspaceRepoSlugDeployKeys(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deploy-keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deploy-keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -523,19 +526,20 @@ public class Deployments {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse getRepositoriesWorkspaceRepoSlugDeployKeysKeyId(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse getRepositoriesWorkspaceRepoSlugDeployKeysKeyId(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIdRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIdPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deploy-keys/{key_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDeployKeysKeyIdRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deploy-keys/{key_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -613,19 +617,20 @@ public class Deployments {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse getWorkspacesWorkspaceProjectsProjectKeyDeployKeys(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse getWorkspacesWorkspaceProjectsProjectKeyDeployKeys(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysRequest request, org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysPathParams.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/deploy-keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysRequest.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/deploy-keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -699,19 +704,20 @@ public class Deployments {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdResponse getWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyId(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdResponse getWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyId(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdRequest request, org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdPathParams.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/deploy-keys/{key_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdRequest.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/deploy-keys/{key_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -784,19 +790,20 @@ public class Deployments {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDeployKeysResponse postRepositoriesWorkspaceRepoSlugDeployKeys(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDeployKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDeployKeysResponse postRepositoriesWorkspaceRepoSlugDeployKeys(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDeployKeysRequest request, org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDeployKeysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDeployKeysPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deploy-keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDeployKeysRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deploy-keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -865,19 +872,20 @@ public class Deployments {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse postWorkspacesWorkspaceProjectsProjectKeyDeployKeys(org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsProjectKeyDeployKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse postWorkspacesWorkspaceProjectsProjectKeyDeployKeys(org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsProjectKeyDeployKeysRequest request, org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsProjectKeyDeployKeysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsProjectKeyDeployKeysPathParams.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/deploy-keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsProjectKeyDeployKeysRequest.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/deploy-keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -949,19 +957,20 @@ public class Deployments {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse putRepositoriesWorkspaceRepoSlugDeployKeysKeyId(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIdResponse putRepositoriesWorkspaceRepoSlugDeployKeysKeyId(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIdRequest request, org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIdPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deploy-keys/{key_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugDeployKeysKeyIdRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deploy-keys/{key_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1004,7 +1013,7 @@ public class Deployments {
      */
     public org.openapis.openapi.models.operations.UpdateEnvironmentForRepositoryResponse updateEnvironmentForRepository(org.openapis.openapi.models.operations.UpdateEnvironmentForRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateEnvironmentForRepositoryPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/environments/{environment_uuid}/changes/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateEnvironmentForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/environments/{environment_uuid}/changes/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

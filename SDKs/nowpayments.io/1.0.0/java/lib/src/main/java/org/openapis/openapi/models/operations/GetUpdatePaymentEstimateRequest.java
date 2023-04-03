@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUpdatePaymentEstimateRequest {
-    
-    public GetUpdatePaymentEstimatePathParams pathParams;
-    public GetUpdatePaymentEstimateRequest withPathParams(GetUpdatePaymentEstimatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * payment ID, for which you want to get the estimate
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetUpdatePaymentEstimateRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetUpdatePaymentEstimateHeaders headers;
-    public GetUpdatePaymentEstimateRequest withHeaders(GetUpdatePaymentEstimateHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetUpdatePaymentEstimateRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

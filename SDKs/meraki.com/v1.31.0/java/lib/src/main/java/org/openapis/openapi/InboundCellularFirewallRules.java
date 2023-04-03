@@ -40,7 +40,7 @@ public class InboundCellularFirewallRules {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceFirewallInboundCellularFirewallRulesResponse getNetworkApplianceFirewallInboundCellularFirewallRules(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallInboundCellularFirewallRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallInboundCellularFirewallRulesPathParams.class, baseUrl, "/networks/{networkId}/appliance/firewall/inboundCellularFirewallRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallInboundCellularFirewallRulesRequest.class, baseUrl, "/networks/{networkId}/appliance/firewall/inboundCellularFirewallRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class InboundCellularFirewallRules {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceFirewallInboundCellularFirewallRulesResponse updateNetworkApplianceFirewallInboundCellularFirewallRules(org.openapis.openapi.models.operations.UpdateNetworkApplianceFirewallInboundCellularFirewallRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceFirewallInboundCellularFirewallRulesPathParams.class, baseUrl, "/networks/{networkId}/appliance/firewall/inboundCellularFirewallRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceFirewallInboundCellularFirewallRulesRequest.class, baseUrl, "/networks/{networkId}/appliance/firewall/inboundCellularFirewallRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCompaniesCompanyIdShippingLocationsRequest {
-    
-    public PostCompaniesCompanyIdShippingLocationsPathParams pathParams;
-    public PostCompaniesCompanyIdShippingLocationsRequest withPathParams(PostCompaniesCompanyIdShippingLocationsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ShippingLocation request;
-    public PostCompaniesCompanyIdShippingLocationsRequest withRequest(org.openapis.openapi.models.shared.ShippingLocation request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ShippingLocation shippingLocation;
+    public PostCompaniesCompanyIdShippingLocationsRequest withShippingLocation(org.openapis.openapi.models.shared.ShippingLocation shippingLocation) {
+        this.shippingLocation = shippingLocation;
         return this;
     }
     
-    
-    public PostCompaniesCompanyIdShippingLocationsSecurity security;
-    public PostCompaniesCompanyIdShippingLocationsRequest withSecurity(PostCompaniesCompanyIdShippingLocationsSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public PostCompaniesCompanyIdShippingLocationsRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     

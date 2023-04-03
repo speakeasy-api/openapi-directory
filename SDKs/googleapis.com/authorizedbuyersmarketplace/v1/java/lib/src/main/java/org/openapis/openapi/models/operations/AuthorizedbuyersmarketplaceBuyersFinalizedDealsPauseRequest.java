@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseRequest {
-    
-    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsPausePathParams pathParams;
-    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseRequest withPathParams(AuthorizedbuyersmarketplaceBuyersFinalizedDealsPausePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseQueryParams queryParams;
-    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseRequest withQueryParams(AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PauseFinalizedDealRequest request;
-    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseRequest withRequest(org.openapis.openapi.models.shared.PauseFinalizedDealRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PauseFinalizedDealRequest pauseFinalizedDealRequest;
+    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseRequest withPauseFinalizedDealRequest(org.openapis.openapi.models.shared.PauseFinalizedDealRequest pauseFinalizedDealRequest) {
+        this.pauseFinalizedDealRequest = pauseFinalizedDealRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseSecurity security;
-    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseRequest withSecurity(AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Required. Format: `buyers/{accountId}/finalizedDeals/{dealId}`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

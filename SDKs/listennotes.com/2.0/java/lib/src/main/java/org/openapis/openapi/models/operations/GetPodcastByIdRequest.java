@@ -4,27 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPodcastByIdRequest {
-    
-    public GetPodcastByIdPathParams pathParams;
-    public GetPodcastByIdRequest withPathParams(GetPodcastByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Get API Key on listennotes.com/api
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
+    public String xListenAPIKey;
+    public GetPodcastByIdRequest withXListenAPIKey(String xListenAPIKey) {
+        this.xListenAPIKey = xListenAPIKey;
         return this;
     }
     
-    
-    public GetPodcastByIdQueryParams queryParams;
-    public GetPodcastByIdRequest withQueryParams(GetPodcastByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Podcast id. You can get podcast id from using other endpoints, e.g., `GET /search`, `GET /best_podcasts`...
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetPodcastByIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * For episodes pagination. It's the value of **next_episode_pub_date** from the response of last request. If not specified, just return latest 10 episodes or oldest 10 episodes, depending on the value of the **sort** parameter.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_episode_pub_date")
+    public Long nextEpisodePubDate;
+    public GetPodcastByIdRequest withNextEpisodePubDate(Long nextEpisodePubDate) {
+        this.nextEpisodePubDate = nextEpisodePubDate;
+        return this;
+    }
     
-    public GetPodcastByIdHeaders headers;
-    public GetPodcastByIdRequest withHeaders(GetPodcastByIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * How do you want to sort the episodes of this podcast?
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetPodcastByIdSortEnum sort;
+    public GetPodcastByIdRequest withSort(GetPodcastByIdSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

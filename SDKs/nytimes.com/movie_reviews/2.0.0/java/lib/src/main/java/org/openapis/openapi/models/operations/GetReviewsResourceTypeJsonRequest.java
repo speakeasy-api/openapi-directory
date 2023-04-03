@@ -4,20 +4,45 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReviewsResourceTypeJsonRequest {
-    
-    public GetReviewsResourceTypeJsonPathParams pathParams;
-    public GetReviewsResourceTypeJsonRequest withPathParams(GetReviewsResourceTypeJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Positive integer, multiple of 20
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetReviewsResourceTypeJsonRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     
+    /**
+     * Sets the sort order of the results.
+     * 
+     * Results ordered by-title are in ascending alphabetical order. Results ordered by one of the date parameters are in reverse chronological order.
+     * 
+     * If you do not specify a sort order, the results will be ordered by publication-date.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public GetReviewsResourceTypeJsonOrderEnum order;
+    public GetReviewsResourceTypeJsonRequest withOrder(GetReviewsResourceTypeJsonOrderEnum order) {
+        this.order = order;
+        return this;
+    }
     
-    public GetReviewsResourceTypeJsonQueryParams queryParams;
-    public GetReviewsResourceTypeJsonRequest withQueryParams(GetReviewsResourceTypeJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specify all to retrieve all reviews, including NYT Critics' Picks.
+     * 
+     * Specify picks to get NYT Critics' Picks currently in theaters.
+     * 
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource-type")
+    public GetReviewsResourceTypeJsonResourceTypeEnum resourceType;
+    public GetReviewsResourceTypeJsonRequest withResourceType(GetReviewsResourceTypeJsonResourceTypeEnum resourceType) {
+        this.resourceType = resourceType;
         return this;
     }
     

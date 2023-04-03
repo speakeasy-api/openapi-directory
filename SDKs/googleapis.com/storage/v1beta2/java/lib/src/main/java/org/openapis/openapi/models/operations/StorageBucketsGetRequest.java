@@ -4,27 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageBucketsGetRequest {
-    
-    public StorageBucketsGetPathParams pathParams;
-    public StorageBucketsGetRequest withPathParams(StorageBucketsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public StorageBucketsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public StorageBucketsGetQueryParams queryParams;
-    public StorageBucketsGetRequest withQueryParams(StorageBucketsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Name of a bucket.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket")
+    public String bucket;
+    public StorageBucketsGetRequest withBucket(String bucket) {
+        this.bucket = bucket;
         return this;
     }
     
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public StorageBucketsGetRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public StorageBucketsGetSecurity security;
-    public StorageBucketsGetRequest withSecurity(StorageBucketsGetSecurity security) {
-        this.security = security;
+    /**
+     * Makes the return of the bucket metadata conditional on whether the bucket's current metageneration matches the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationMatch")
+    public String ifMetagenerationMatch;
+    public StorageBucketsGetRequest withIfMetagenerationMatch(String ifMetagenerationMatch) {
+        this.ifMetagenerationMatch = ifMetagenerationMatch;
+        return this;
+    }
+    
+    /**
+     * Makes the return of the bucket metadata conditional on whether the bucket's current metageneration does not match the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationNotMatch")
+    public String ifMetagenerationNotMatch;
+    public StorageBucketsGetRequest withIfMetagenerationNotMatch(String ifMetagenerationNotMatch) {
+        this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public StorageBucketsGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public StorageBucketsGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public StorageBucketsGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Set of properties to return. Defaults to noAcl.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
+    public StorageBucketsGetProjectionEnum projection;
+    public StorageBucketsGetRequest withProjection(StorageBucketsGetProjectionEnum projection) {
+        this.projection = projection;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public StorageBucketsGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public StorageBucketsGetRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

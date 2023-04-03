@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListShipmentRatesRequest {
-    
-    public ListShipmentRatesPathParams pathParams;
-    public ListShipmentRatesRequest withPathParams(ListShipmentRatesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Used to create a filter for when a resource was created (ex. A shipment that was created after a certain time)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at_start")
+    public OffsetDateTime createdAtStart;
+    public ListShipmentRatesRequest withCreatedAtStart(OffsetDateTime createdAtStart) {
+        this.createdAtStart = createdAtStart;
         return this;
     }
     
-    
-    public ListShipmentRatesQueryParams queryParams;
-    public ListShipmentRatesRequest withQueryParams(ListShipmentRatesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Shipment ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shipment_id")
+    public String shipmentId;
+    public ListShipmentRatesRequest withShipmentId(String shipmentId) {
+        this.shipmentId = shipmentId;
         return this;
     }
     

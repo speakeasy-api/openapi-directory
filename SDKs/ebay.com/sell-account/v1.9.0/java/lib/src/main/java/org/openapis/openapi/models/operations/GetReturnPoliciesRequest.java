@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReturnPoliciesRequest {
-    
-    public GetReturnPoliciesQueryParams queryParams;
-    public GetReturnPoliciesRequest withQueryParams(GetReturnPoliciesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetReturnPoliciesSecurity security;
-    public GetReturnPoliciesRequest withSecurity(GetReturnPoliciesSecurity security) {
-        this.security = security;
+    /**
+     * This query parameter specifies the ID of the eBay marketplace of the policy you want to retrieve. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/account/types/ba:MarketplaceIdEnum
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=marketplace_id")
+    public String marketplaceId;
+    public GetReturnPoliciesRequest withMarketplaceId(String marketplaceId) {
+        this.marketplaceId = marketplaceId;
         return this;
     }
     

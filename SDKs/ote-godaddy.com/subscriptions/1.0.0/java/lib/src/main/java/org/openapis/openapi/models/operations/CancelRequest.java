@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelRequest {
-    
-    public CancelPathParams pathParams;
-    public CancelRequest withPathParams(CancelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Shopper ID to cancel subscriptions for when not using JWT
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Shopper-Id")
+    public String xShopperId;
+    public CancelRequest withXShopperId(String xShopperId) {
+        this.xShopperId = xShopperId;
         return this;
     }
     
-    
-    public CancelHeaders headers;
-    public CancelRequest withHeaders(CancelHeaders headers) {
-        this.headers = headers;
+    /**
+     * Unique identifier of the Subscription to cancel
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriptionId")
+    public String subscriptionId;
+    public CancelRequest withSubscriptionId(String subscriptionId) {
+        this.subscriptionId = subscriptionId;
         return this;
     }
     

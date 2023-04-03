@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteMessageCommentReactionsIdRequest {
-    
-    public DeleteMessageCommentReactionsIdPathParams pathParams;
-    public DeleteMessageCommentReactionsIdRequest withPathParams(DeleteMessageCommentReactionsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Message Comment Reaction ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public DeleteMessageCommentReactionsIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

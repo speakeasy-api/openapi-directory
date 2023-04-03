@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDomainsUpdatesDeletedDownloadRequest {
+    /**
+     * API key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetDomainsUpdatesDeletedDownloadRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetDomainsUpdatesDeletedDownloadQueryParams queryParams;
-    public GetDomainsUpdatesDeletedDownloadRequest withQueryParams(GetDomainsUpdatesDeletedDownloadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Request date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public String date;
+    public GetDomainsUpdatesDeletedDownloadRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     

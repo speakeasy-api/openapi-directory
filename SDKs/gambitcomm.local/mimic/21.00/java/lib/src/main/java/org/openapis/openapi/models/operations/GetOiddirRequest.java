@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOiddirRequest {
-    
-    public GetOiddirPathParams pathParams;
-    public GetOiddirRequest withPathParams(GetOiddirPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the directory path
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public GetOiddirRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

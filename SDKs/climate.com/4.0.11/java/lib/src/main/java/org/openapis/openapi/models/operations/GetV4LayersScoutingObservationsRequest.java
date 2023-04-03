@@ -4,27 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV4LayersScoutingObservationsRequest {
-    
-    public GetV4LayersScoutingObservationsQueryParams queryParams;
-    public GetV4LayersScoutingObservationsRequest withQueryParams(GetV4LayersScoutingObservationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Max number of results to return per batch.  Must be between 1 and 100 inclusive.  Defaults to 100.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Limit")
+    public Integer xLimit;
+    public GetV4LayersScoutingObservationsRequest withXLimit(Integer xLimit) {
+        this.xLimit = xLimit;
         return this;
     }
     
-    
-    public GetV4LayersScoutingObservationsHeaders headers;
-    public GetV4LayersScoutingObservationsRequest withHeaders(GetV4LayersScoutingObservationsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Opaque string which allows for fetching the next batch of results.  Can be used to poll for changes.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Next-Token")
+    public String xNextToken;
+    public GetV4LayersScoutingObservationsRequest withXNextToken(String xNextToken) {
+        this.xNextToken = xNextToken;
         return this;
     }
     
+    /**
+     * Optional start time by which to filter layer results. Time must be in ISO 8601 format with time zone, e.g. 2016-05-13T00:00:00Z (https://tools.ietf.org/html/rfc3339). Layers with an end time at or after (inclusive) the specified time will match this filter. If both occurredAfter and occurredBefore are populated, occurredAfter must be &lt;= occurredBefore.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurredAfter")
+    public OffsetDateTime occurredAfter;
+    public GetV4LayersScoutingObservationsRequest withOccurredAfter(OffsetDateTime occurredAfter) {
+        this.occurredAfter = occurredAfter;
+        return this;
+    }
     
-    public GetV4LayersScoutingObservationsSecurity security;
-    public GetV4LayersScoutingObservationsRequest withSecurity(GetV4LayersScoutingObservationsSecurity security) {
-        this.security = security;
+    /**
+     * Optional end time by which to filter layer results. Time must be in ISO 8601 format with time zone, e.g. 2016-05-13T00:00:00Z (https://tools.ietf.org/html/rfc3339). Layers with a start time at or before (inclusive) the specified time. If both occurredAfter and occurredBefore are populated, occurredAfter must be &lt;= occurredBefore.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurredBefore")
+    public OffsetDateTime occurredBefore;
+    public GetV4LayersScoutingObservationsRequest withOccurredBefore(OffsetDateTime occurredBefore) {
+        this.occurredBefore = occurredBefore;
         return this;
     }
     

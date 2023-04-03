@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListFailedIPNsRequest {
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public ListFailedIPNsRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public ListFailedIPNsHeaders headers;
-    public ListFailedIPNsRequest withHeaders(ListFailedIPNsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ListFailedIPNsRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     

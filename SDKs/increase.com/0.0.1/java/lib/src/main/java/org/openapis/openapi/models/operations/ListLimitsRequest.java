@@ -4,13 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListLimitsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListLimitsRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public ListLimitsQueryParams queryParams;
-    public ListLimitsRequest withQueryParams(ListLimitsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListLimitsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model_id")
+    public String modelId;
+    public ListLimitsRequest withModelId(String modelId) {
+        this.modelId = modelId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public ListLimitsRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

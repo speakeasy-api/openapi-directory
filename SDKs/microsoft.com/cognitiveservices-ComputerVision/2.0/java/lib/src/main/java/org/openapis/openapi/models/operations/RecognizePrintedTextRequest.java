@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RecognizePrintedTextRequest {
-    
-    public RecognizePrintedTextQueryParams queryParams;
-    public RecognizePrintedTextRequest withQueryParams(RecognizePrintedTextQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * A JSON document with a URL pointing to the image that is to be analyzed.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ImageUrl request;
-    public RecognizePrintedTextRequest withRequest(org.openapis.openapi.models.shared.ImageUrl request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+    public RecognizePrintedTextRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
+        this.imageUrl = imageUrl;
+        return this;
+    }
+    
+    /**
+     * Whether detect the text orientation in the image. With detectOrientation=true the OCR service tries to detect the image orientation and correct it before further processing (e.g. if it's upside-down).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=detectOrientation")
+    public Boolean detectOrientation;
+    public RecognizePrintedTextRequest withDetectOrientation(Boolean detectOrientation) {
+        this.detectOrientation = detectOrientation;
+        return this;
+    }
+    
+    /**
+     * The BCP-47 language code of the text to be detected in the image. The default value is 'unk'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public org.openapis.openapi.models.shared.OcrLanguageEnum language;
+    public RecognizePrintedTextRequest withLanguage(org.openapis.openapi.models.shared.OcrLanguageEnum language) {
+        this.language = language;
         return this;
     }
     

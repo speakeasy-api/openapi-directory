@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOrgRepoDeprecatedRequest {
-    
-    public CreateOrgRepoDeprecatedPathParams pathParams;
-    public CreateOrgRepoDeprecatedRequest withPathParams(CreateOrgRepoDeprecatedPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateRepoOption createRepoOption;
+    public CreateOrgRepoDeprecatedRequest withCreateRepoOption(org.openapis.openapi.models.shared.CreateRepoOption createRepoOption) {
+        this.createRepoOption = createRepoOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateRepoOption request;
-    public CreateOrgRepoDeprecatedRequest withRequest(org.openapis.openapi.models.shared.CreateRepoOption request) {
-        this.request = request;
+    /**
+     * name of organization
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public CreateOrgRepoDeprecatedRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

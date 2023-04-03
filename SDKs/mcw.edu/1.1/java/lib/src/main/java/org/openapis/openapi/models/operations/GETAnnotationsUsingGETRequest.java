@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAnnotationsUsingGETRequest {
+    /**
+     * Ontology term accession ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accId")
+    public String accId;
+    public GETAnnotationsUsingGETRequest withAccId(String accId) {
+        this.accId = accId;
+        return this;
+    }
     
-    public GETAnnotationsUsingGETPathParams pathParams;
-    public GETAnnotationsUsingGETRequest withPathParams(GETAnnotationsUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * true: return annotations for the term and children, false: return annotations for the term only 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=includeChildren")
+    public Boolean includeChildren;
+    public GETAnnotationsUsingGETRequest withIncludeChildren(Boolean includeChildren) {
+        this.includeChildren = includeChildren;
+        return this;
+    }
+    
+    /**
+     * A list of species type keys can be found using the lookup service
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
+    public Integer speciesTypeKey;
+    public GETAnnotationsUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
+        this.speciesTypeKey = speciesTypeKey;
         return this;
     }
     

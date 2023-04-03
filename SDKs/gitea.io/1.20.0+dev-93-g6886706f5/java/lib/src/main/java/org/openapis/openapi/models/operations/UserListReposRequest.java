@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserListReposRequest {
-    
-    public UserListReposPathParams pathParams;
-    public UserListReposRequest withPathParams(UserListReposPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public UserListReposRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public UserListReposRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public UserListReposQueryParams queryParams;
-    public UserListReposRequest withQueryParams(UserListReposQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * username of user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public UserListReposRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

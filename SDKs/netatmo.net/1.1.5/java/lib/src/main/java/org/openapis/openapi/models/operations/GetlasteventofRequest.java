@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetlasteventofRequest {
-    
-    public GetlasteventofQueryParams queryParams;
-    public GetlasteventofRequest withQueryParams(GetlasteventofQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * ID of the Home you're interested in
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=home_id")
+    public String homeId;
+    public GetlasteventofRequest withHomeId(String homeId) {
+        this.homeId = homeId;
         return this;
     }
     
+    /**
+     * Number of events to retrieve. Default is 30.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetlasteventofRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
     
-    public GetlasteventofSecurity security;
-    public GetlasteventofRequest withSecurity(GetlasteventofSecurity security) {
-        this.security = security;
+    /**
+     * Your request will retrieve all events of the given home until the most recent event of the given person
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=person_id")
+    public String personId;
+    public GetlasteventofRequest withPersonId(String personId) {
+        this.personId = personId;
         return this;
     }
     

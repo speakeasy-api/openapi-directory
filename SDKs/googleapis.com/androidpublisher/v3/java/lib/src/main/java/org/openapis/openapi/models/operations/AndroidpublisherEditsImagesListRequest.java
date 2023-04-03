@@ -4,27 +4,156 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherEditsImagesListRequest {
-    
-    public AndroidpublisherEditsImagesListPathParams pathParams;
-    public AndroidpublisherEditsImagesListRequest withPathParams(AndroidpublisherEditsImagesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AndroidpublisherEditsImagesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public AndroidpublisherEditsImagesListQueryParams queryParams;
-    public AndroidpublisherEditsImagesListRequest withQueryParams(AndroidpublisherEditsImagesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AndroidpublisherEditsImagesListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AndroidpublisherEditsImagesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public AndroidpublisherEditsImagesListSecurity security;
-    public AndroidpublisherEditsImagesListRequest withSecurity(AndroidpublisherEditsImagesListSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AndroidpublisherEditsImagesListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Identifier of the edit.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=editId")
+    public String editId;
+    public AndroidpublisherEditsImagesListRequest withEditId(String editId) {
+        this.editId = editId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AndroidpublisherEditsImagesListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Type of the Image. Providing an image type that refers to no images will return an empty response.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=imageType")
+    public AndroidpublisherEditsImagesListImageTypeEnum imageType;
+    public AndroidpublisherEditsImagesListRequest withImageType(AndroidpublisherEditsImagesListImageTypeEnum imageType) {
+        this.imageType = imageType;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AndroidpublisherEditsImagesListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Language localization code (a BCP-47 language tag; for example, "de-AT" for Austrian German). There must be a store listing for the specified language.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=language")
+    public String language;
+    public AndroidpublisherEditsImagesListRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AndroidpublisherEditsImagesListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Package name of the app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
+    public String packageName;
+    public AndroidpublisherEditsImagesListRequest withPackageName(String packageName) {
+        this.packageName = packageName;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AndroidpublisherEditsImagesListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AndroidpublisherEditsImagesListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AndroidpublisherEditsImagesListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AndroidpublisherEditsImagesListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposGetEnvironmentRequest {
+    /**
+     * The name of the environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_name")
+    public String environmentName;
+    public ReposGetEnvironmentRequest withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
+        return this;
+    }
     
-    public ReposGetEnvironmentPathParams pathParams;
-    public ReposGetEnvironmentRequest withPathParams(ReposGetEnvironmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposGetEnvironmentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposGetEnvironmentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

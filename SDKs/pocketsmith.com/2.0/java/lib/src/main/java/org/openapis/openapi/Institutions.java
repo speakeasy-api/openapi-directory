@@ -40,13 +40,13 @@ public class Institutions {
      */
     public org.openapis.openapi.models.operations.DeleteInstitutionsIdResponse deleteInstitutionsId(org.openapis.openapi.models.operations.DeleteInstitutionsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInstitutionsIdPathParams.class, baseUrl, "/institutions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInstitutionsIdRequest.class, baseUrl, "/institutions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteInstitutionsIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteInstitutionsIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -88,7 +88,7 @@ public class Institutions {
      */
     public org.openapis.openapi.models.operations.GetInstitutionsIdResponse getInstitutionsId(org.openapis.openapi.models.operations.GetInstitutionsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInstitutionsIdPathParams.class, baseUrl, "/institutions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInstitutionsIdRequest.class, baseUrl, "/institutions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -136,7 +136,7 @@ public class Institutions {
      */
     public org.openapis.openapi.models.operations.GetUsersIdInstitutionsResponse getUsersIdInstitutions(org.openapis.openapi.models.operations.GetUsersIdInstitutionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdInstitutionsPathParams.class, baseUrl, "/users/{id}/institutions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdInstitutionsRequest.class, baseUrl, "/users/{id}/institutions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -184,12 +184,12 @@ public class Institutions {
      */
     public org.openapis.openapi.models.operations.PostUsersIdInstitutionsResponse postUsersIdInstitutions(org.openapis.openapi.models.operations.PostUsersIdInstitutionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersIdInstitutionsPathParams.class, baseUrl, "/users/{id}/institutions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersIdInstitutionsRequest.class, baseUrl, "/users/{id}/institutions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -234,12 +234,12 @@ public class Institutions {
      */
     public org.openapis.openapi.models.operations.PutInstitutionsIdResponse putInstitutionsId(org.openapis.openapi.models.operations.PutInstitutionsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutInstitutionsIdPathParams.class, baseUrl, "/institutions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutInstitutionsIdRequest.class, baseUrl, "/institutions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

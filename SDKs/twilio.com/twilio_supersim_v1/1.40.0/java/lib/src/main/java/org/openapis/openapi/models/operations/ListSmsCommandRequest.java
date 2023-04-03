@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSmsCommandRequest {
-    
-    public ListSmsCommandQueryParams queryParams;
-    public ListSmsCommandRequest withQueryParams(ListSmsCommandQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The direction of the SMS Command. Can be `to_sim` or `from_sim`. The value of `to_sim` is synonymous with the term `mobile terminated`, and `from_sim` is synonymous with the term `mobile originated`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Direction")
+    public org.openapis.openapi.models.shared.SmsCommandEnumDirectionEnum direction;
+    public ListSmsCommandRequest withDirection(org.openapis.openapi.models.shared.SmsCommandEnumDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
-    
-    public ListSmsCommandSecurity security;
-    public ListSmsCommandRequest withSecurity(ListSmsCommandSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListSmsCommandRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListSmsCommandRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListSmsCommandRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListSmsCommandRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The SID or unique name of the Sim resource that SMS Command was sent to or from.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Sim")
+    public String sim;
+    public ListSmsCommandRequest withSim(String sim) {
+        this.sim = sim;
+        return this;
+    }
+    
+    /**
+     * The status of the SMS Command. Can be: `queued`, `sent`, `delivered`, `received` or `failed`. See the [SMS Command Status Values](https://www.twilio.com/docs/iot/supersim/api/smscommand-resource#status-values) for a description of each.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public org.openapis.openapi.models.shared.SmsCommandEnumStatusEnum status;
+    public ListSmsCommandRequest withStatus(org.openapis.openapi.models.shared.SmsCommandEnumStatusEnum status) {
+        this.status = status;
         return this;
     }
     

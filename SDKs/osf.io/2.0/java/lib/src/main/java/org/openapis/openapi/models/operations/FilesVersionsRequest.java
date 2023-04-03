@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FilesVersionsRequest {
-    
-    public FilesVersionsPathParams pathParams;
-    public FilesVersionsRequest withPathParams(FilesVersionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the file from which you want to retrieve versions.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=file_id")
+    public String fileId;
+    public FilesVersionsRequest withFileId(String fileId) {
+        this.fileId = fileId;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesSourcesIdSyndicateFormatRequest {
-    
-    public GetResourcesSourcesIdSyndicateFormatPathParams pathParams;
-    public GetResourcesSourcesIdSyndicateFormatRequest withPathParams(GetResourcesSourcesIdSyndicateFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Method used to render an html request. Accepts one: [mv, list, feed]
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=displayMethod")
+    public String displayMethod;
+    public GetResourcesSourcesIdSyndicateFormatRequest withDisplayMethod(String displayMethod) {
+        this.displayMethod = displayMethod;
         return this;
     }
     
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public String format;
+    public GetResourcesSourcesIdSyndicateFormatRequest withFormat(String format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetResourcesSourcesIdSyndicateFormatQueryParams queryParams;
-    public GetResourcesSourcesIdSyndicateFormatRequest withQueryParams(GetResourcesSourcesIdSyndicateFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id of the record to look up
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetResourcesSourcesIdSyndicateFormatRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

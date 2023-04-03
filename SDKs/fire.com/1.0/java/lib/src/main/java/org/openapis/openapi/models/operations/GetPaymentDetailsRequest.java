@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentDetailsRequest {
-    
-    public GetPaymentDetailsPathParams pathParams;
-    public GetPaymentDetailsRequest withPathParams(GetPaymentDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentUuid")
+    public String paymentUuid;
+    public GetPaymentDetailsRequest withPaymentUuid(String paymentUuid) {
+        this.paymentUuid = paymentUuid;
         return this;
     }
     

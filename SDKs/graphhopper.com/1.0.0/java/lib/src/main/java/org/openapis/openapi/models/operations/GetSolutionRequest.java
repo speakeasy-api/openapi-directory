@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSolutionRequest {
-    
-    public GetSolutionPathParams pathParams;
-    public GetSolutionRequest withPathParams(GetSolutionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Request solution with jobId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public GetSolutionRequest withJobId(String jobId) {
+        this.jobId = jobId;
         return this;
     }
     

@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUserDefinedMessageSubscriptionRequest {
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that subscribed to the User Defined Messages.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreateUserDefinedMessageSubscriptionRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public CreateUserDefinedMessageSubscriptionPathParams pathParams;
-    public CreateUserDefinedMessageSubscriptionRequest withPathParams(CreateUserDefinedMessageSubscriptionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) the User Defined Messages subscription is associated with. This refers to the Call SID that is producing the user defined messages.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public CreateUserDefinedMessageSubscriptionRequest withCallSid(String callSid) {
+        this.callSid = callSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateUserDefinedMessageSubscriptionCreateUserDefinedMessageSubscriptionRequest request;
-    public CreateUserDefinedMessageSubscriptionRequest withRequest(CreateUserDefinedMessageSubscriptionCreateUserDefinedMessageSubscriptionRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateUserDefinedMessageSubscriptionSecurity security;
-    public CreateUserDefinedMessageSubscriptionRequest withSecurity(CreateUserDefinedMessageSubscriptionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateUserDefinedMessageSubscriptionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateUserDefinedMessageSubscriptionCreateUserDefinedMessageSubscriptionRequest requestBody;
+    public CreateUserDefinedMessageSubscriptionRequest withRequestBody(CreateUserDefinedMessageSubscriptionCreateUserDefinedMessageSubscriptionRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

@@ -41,7 +41,7 @@ public class TestnetInsight {
      */
     public org.openapis.openapi.models.operations.TestnetGetAddressResponse testnetGetAddress(org.openapis.openapi.models.operations.TestnetGetAddressRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetAddressPathParams.class, baseUrl, "/testnet/ins/addr/{address}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetAddressRequest.class, baseUrl, "/testnet/ins/addr/{address}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,7 +80,7 @@ public class TestnetInsight {
      */
     public org.openapis.openapi.models.operations.TestnetGetAddressBalanceResponse testnetGetAddressBalance(org.openapis.openapi.models.operations.TestnetGetAddressBalanceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetAddressBalancePathParams.class, baseUrl, "/testnet/ins/addr/{address}/balance", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetAddressBalanceRequest.class, baseUrl, "/testnet/ins/addr/{address}/balance", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -119,7 +119,7 @@ public class TestnetInsight {
      */
     public org.openapis.openapi.models.operations.TestnetGetAddressTotalReceivedResponse testnetGetAddressTotalReceived(org.openapis.openapi.models.operations.TestnetGetAddressTotalReceivedRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetAddressTotalReceivedPathParams.class, baseUrl, "/testnet/ins/addr/{address}/totalReceived", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetAddressTotalReceivedRequest.class, baseUrl, "/testnet/ins/addr/{address}/totalReceived", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -158,7 +158,7 @@ public class TestnetInsight {
      */
     public org.openapis.openapi.models.operations.TestnetGetAddressTotalSentResponse testnetGetAddressTotalSent(org.openapis.openapi.models.operations.TestnetGetAddressTotalSentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetAddressTotalSentPathParams.class, baseUrl, "/testnet/ins/addr/{address}/totalSent", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetAddressTotalSentRequest.class, baseUrl, "/testnet/ins/addr/{address}/totalSent", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -197,7 +197,7 @@ public class TestnetInsight {
      */
     public org.openapis.openapi.models.operations.TestnetGetAddressUnconfirmedBalanceResponse testnetGetAddressUnconfirmedBalance(org.openapis.openapi.models.operations.TestnetGetAddressUnconfirmedBalanceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetAddressUnconfirmedBalancePathParams.class, baseUrl, "/testnet/ins/addr/{address}/unconfirmedBalance", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetAddressUnconfirmedBalanceRequest.class, baseUrl, "/testnet/ins/addr/{address}/unconfirmedBalance", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -236,7 +236,7 @@ public class TestnetInsight {
      */
     public org.openapis.openapi.models.operations.TestnetGetAddressUtxosResponse testnetGetAddressUtxos(org.openapis.openapi.models.operations.TestnetGetAddressUtxosRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetAddressUtxosPathParams.class, baseUrl, "/testnet/ins/addr/{address}/utxo", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetAddressUtxosRequest.class, baseUrl, "/testnet/ins/addr/{address}/utxo", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -275,7 +275,7 @@ public class TestnetInsight {
      */
     public org.openapis.openapi.models.operations.TestnetGetBlockResponse testnetGetBlock(org.openapis.openapi.models.operations.TestnetGetBlockRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetBlockPathParams.class, baseUrl, "/testnet/ins/block/{blockhash}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetBlockRequest.class, baseUrl, "/testnet/ins/block/{blockhash}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -314,7 +314,7 @@ public class TestnetInsight {
      */
     public org.openapis.openapi.models.operations.TestnetGetBlockIndexResponse testnetGetBlockIndex(org.openapis.openapi.models.operations.TestnetGetBlockIndexRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetBlockIndexPathParams.class, baseUrl, "/testnet/ins/block-index/{blockindex}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetBlockIndexRequest.class, baseUrl, "/testnet/ins/block-index/{blockindex}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -353,7 +353,7 @@ public class TestnetInsight {
      */
     public org.openapis.openapi.models.operations.TestnetGetRawTxResponse testnetGetRawTx(org.openapis.openapi.models.operations.TestnetGetRawTxRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetRawTxPathParams.class, baseUrl, "/testnet/ins/rawtx/{txid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetRawTxRequest.class, baseUrl, "/testnet/ins/rawtx/{txid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -398,7 +398,7 @@ public class TestnetInsight {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TestnetGetStatusQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TestnetGetStatusRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -475,7 +475,7 @@ public class TestnetInsight {
      */
     public org.openapis.openapi.models.operations.TestnetGetTxResponse testnetGetTx(org.openapis.openapi.models.operations.TestnetGetTxRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetTxPathParams.class, baseUrl, "/testnet/ins/tx/{txid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetTxRequest.class, baseUrl, "/testnet/ins/tx/{txid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -520,7 +520,7 @@ public class TestnetInsight {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TestnetGetTxsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TestnetGetTxsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -558,7 +558,7 @@ public class TestnetInsight {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestnetSendTxResponse testnetSendTx(org.openapis.openapi.models.operations.TestnetSendTxRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestnetSendTxResponse testnetSendTx(org.openapis.openapi.models.shared.SendTxRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/testnet/ins/tx/send");
         

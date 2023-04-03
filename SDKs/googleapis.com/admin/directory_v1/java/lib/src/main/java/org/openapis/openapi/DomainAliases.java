@@ -34,25 +34,26 @@ public class DomainAliases {
     /**
      * Deletes a domain Alias of the customer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryDomainAliasesDeleteResponse directoryDomainAliasesDelete(org.openapis.openapi.models.operations.DirectoryDomainAliasesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryDomainAliasesDeleteResponse directoryDomainAliasesDelete(org.openapis.openapi.models.operations.DirectoryDomainAliasesDeleteRequest request, org.openapis.openapi.models.operations.DirectoryDomainAliasesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryDomainAliasesDeletePathParams.class, baseUrl, "/admin/directory/v1/customer/{customer}/domainaliases/{domainAliasName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryDomainAliasesDeleteRequest.class, baseUrl, "/admin/directory/v1/customer/{customer}/domainaliases/{domainAliasName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryDomainAliasesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryDomainAliasesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,25 +74,26 @@ public class DomainAliases {
     /**
      * Retrieves a domain alias of the customer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryDomainAliasesGetResponse directoryDomainAliasesGet(org.openapis.openapi.models.operations.DirectoryDomainAliasesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryDomainAliasesGetResponse directoryDomainAliasesGet(org.openapis.openapi.models.operations.DirectoryDomainAliasesGetRequest request, org.openapis.openapi.models.operations.DirectoryDomainAliasesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryDomainAliasesGetPathParams.class, baseUrl, "/admin/directory/v1/customer/{customer}/domainaliases/{domainAliasName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryDomainAliasesGetRequest.class, baseUrl, "/admin/directory/v1/customer/{customer}/domainaliases/{domainAliasName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryDomainAliasesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryDomainAliasesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,27 +120,28 @@ public class DomainAliases {
     /**
      * Inserts a domain alias of the customer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryDomainAliasesInsertResponse directoryDomainAliasesInsert(org.openapis.openapi.models.operations.DirectoryDomainAliasesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryDomainAliasesInsertResponse directoryDomainAliasesInsert(org.openapis.openapi.models.operations.DirectoryDomainAliasesInsertRequest request, org.openapis.openapi.models.operations.DirectoryDomainAliasesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryDomainAliasesInsertPathParams.class, baseUrl, "/admin/directory/v1/customer/{customer}/domainaliases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryDomainAliasesInsertRequest.class, baseUrl, "/admin/directory/v1/customer/{customer}/domainaliases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "domainAlias", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryDomainAliasesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryDomainAliasesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,25 +168,26 @@ public class DomainAliases {
     /**
      * Lists the domain aliases of the customer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryDomainAliasesListResponse directoryDomainAliasesList(org.openapis.openapi.models.operations.DirectoryDomainAliasesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryDomainAliasesListResponse directoryDomainAliasesList(org.openapis.openapi.models.operations.DirectoryDomainAliasesListRequest request, org.openapis.openapi.models.operations.DirectoryDomainAliasesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryDomainAliasesListPathParams.class, baseUrl, "/admin/directory/v1/customer/{customer}/domainaliases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryDomainAliasesListRequest.class, baseUrl, "/admin/directory/v1/customer/{customer}/domainaliases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryDomainAliasesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryDomainAliasesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

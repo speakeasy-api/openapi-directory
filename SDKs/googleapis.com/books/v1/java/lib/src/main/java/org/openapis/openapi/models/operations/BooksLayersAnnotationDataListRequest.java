@@ -4,27 +4,246 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BooksLayersAnnotationDataListRequest {
-    
-    public BooksLayersAnnotationDataListPathParams pathParams;
-    public BooksLayersAnnotationDataListRequest withPathParams(BooksLayersAnnotationDataListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public BooksLayersAnnotationDataListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public BooksLayersAnnotationDataListQueryParams queryParams;
-    public BooksLayersAnnotationDataListRequest withQueryParams(BooksLayersAnnotationDataListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public BooksLayersAnnotationDataListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public BooksLayersAnnotationDataListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public BooksLayersAnnotationDataListSecurity security;
-    public BooksLayersAnnotationDataListRequest withSecurity(BooksLayersAnnotationDataListSecurity security) {
-        this.security = security;
+    /**
+     * The list of Annotation Data Ids to retrieve. Pagination is ignored if this is set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=annotationDataId")
+    public String[] annotationDataId;
+    public BooksLayersAnnotationDataListRequest withAnnotationDataId(String[] annotationDataId) {
+        this.annotationDataId = annotationDataId;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public BooksLayersAnnotationDataListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * The content version for the requested volume.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentVersion")
+    public String contentVersion;
+    public BooksLayersAnnotationDataListRequest withContentVersion(String contentVersion) {
+        this.contentVersion = contentVersion;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public BooksLayersAnnotationDataListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * The requested pixel height for any images. If height is provided width must also be provided.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=h")
+    public Long h;
+    public BooksLayersAnnotationDataListRequest withH(Long h) {
+        this.h = h;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public BooksLayersAnnotationDataListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The ID for the layer to get the annotation data.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=layerId")
+    public String layerId;
+    public BooksLayersAnnotationDataListRequest withLayerId(String layerId) {
+        this.layerId = layerId;
+        return this;
+    }
+    
+    /**
+     * The locale information for the data. ISO-639-1 language and ISO-3166-1 country code. Ex: 'en_US'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public BooksLayersAnnotationDataListRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public BooksLayersAnnotationDataListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public BooksLayersAnnotationDataListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The value of the nextToken from the previous page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public BooksLayersAnnotationDataListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public BooksLayersAnnotationDataListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public BooksLayersAnnotationDataListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The requested scale for the image.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scale")
+    public Long scale;
+    public BooksLayersAnnotationDataListRequest withScale(Long scale) {
+        this.scale = scale;
+        return this;
+    }
+    
+    /**
+     * String to identify the originator of this request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public String source;
+    public BooksLayersAnnotationDataListRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * RFC 3339 timestamp to restrict to items updated prior to this timestamp (exclusive).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedMax")
+    public String updatedMax;
+    public BooksLayersAnnotationDataListRequest withUpdatedMax(String updatedMax) {
+        this.updatedMax = updatedMax;
+        return this;
+    }
+    
+    /**
+     * RFC 3339 timestamp to restrict to items updated since this timestamp (inclusive).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedMin")
+    public String updatedMin;
+    public BooksLayersAnnotationDataListRequest withUpdatedMin(String updatedMin) {
+        this.updatedMin = updatedMin;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public BooksLayersAnnotationDataListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public BooksLayersAnnotationDataListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * The volume to retrieve annotation data for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=volumeId")
+    public String volumeId;
+    public BooksLayersAnnotationDataListRequest withVolumeId(String volumeId) {
+        this.volumeId = volumeId;
+        return this;
+    }
+    
+    /**
+     * The requested pixel width for any images. If width is provided height must also be provided.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=w")
+    public Long w;
+    public BooksLayersAnnotationDataListRequest withW(Long w) {
+        this.w = w;
         return this;
     }
     

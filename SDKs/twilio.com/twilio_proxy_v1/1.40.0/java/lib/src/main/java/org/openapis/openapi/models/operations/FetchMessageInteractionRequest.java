@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchMessageInteractionRequest {
-    
-    public FetchMessageInteractionPathParams pathParams;
-    public FetchMessageInteractionRequest withPathParams(FetchMessageInteractionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Participant](https://www.twilio.com/docs/proxy/api/participant) resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ParticipantSid")
+    public String participantSid;
+    public FetchMessageInteractionRequest withParticipantSid(String participantSid) {
+        this.participantSid = participantSid;
         return this;
     }
     
-    
-    public FetchMessageInteractionSecurity security;
-    public FetchMessageInteractionRequest withSecurity(FetchMessageInteractionSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchMessageInteractionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
+    /**
+     * The SID of the parent [Session](https://www.twilio.com/docs/proxy/api/session) of the resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SessionSid")
+    public String sessionSid;
+    public FetchMessageInteractionRequest withSessionSid(String sessionSid) {
+        this.sessionSid = sessionSid;
+        return this;
+    }
     
-    public String serverURL;
-    public FetchMessageInteractionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the MessageInteraction resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchMessageInteractionRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

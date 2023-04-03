@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetExamplesRequest {
-    
-    public GetExamplesPathParams pathParams;
-    public GetExamplesRequest withPathParams(GetExamplesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Show duplicate examples from different sources
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeDuplicates")
+    public GetExamplesIncludeDuplicatesEnum includeDuplicates;
+    public GetExamplesRequest withIncludeDuplicates(GetExamplesIncludeDuplicatesEnum includeDuplicates) {
+        this.includeDuplicates = includeDuplicates;
         return this;
     }
     
+    /**
+     * Maximum number of results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetExamplesRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetExamplesQueryParams queryParams;
-    public GetExamplesRequest withQueryParams(GetExamplesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results to skip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Integer skip;
+    public GetExamplesRequest withSkip(Integer skip) {
+        this.skip = skip;
+        return this;
+    }
+    
+    /**
+     * If true will try to return the correct word root ('cats' -&gt; 'cat'). If false returns exactly what was requested.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useCanonical")
+    public GetExamplesUseCanonicalEnum useCanonical;
+    public GetExamplesRequest withUseCanonical(GetExamplesUseCanonicalEnum useCanonical) {
+        this.useCanonical = useCanonical;
+        return this;
+    }
+    
+    /**
+     * Word to return examples for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=word")
+    public String word;
+    public GetExamplesRequest withWord(String word) {
+        this.word = word;
         return this;
     }
     

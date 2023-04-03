@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersNumeralEgyptianSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeXMathtoolsAPISecret xMathtoolsApiSecret;
-    public GetNumbersNumeralEgyptianSecurity withXMathtoolsApiSecret(org.openapis.openapi.models.shared.SchemeXMathtoolsAPISecret xMathtoolsApiSecret) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Mathtools-Api-Secret")
+    public String xMathtoolsApiSecret;
+    public GetNumbersNumeralEgyptianSecurity withXMathtoolsApiSecret(String xMathtoolsApiSecret) {
         this.xMathtoolsApiSecret = xMathtoolsApiSecret;
         return this;
     }

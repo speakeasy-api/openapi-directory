@@ -30,12 +30,9 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/UserCtrlGetUserByIDSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/UserCtrlGetUserByIDPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/UserCtrlGetUserByIDRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UserCtrlGetUserByIDResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UserCtrlGetUsersSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/UserCtrlGetUsersPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/UserCtrlGetUsersQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/UserCtrlGetUsersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UserCtrlGetUsersResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UserHalResponse.java
@@ -50,7 +47,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/UserExtension.java
 lib/src/main/java/org/openapis/openapi/models/shared/Did.java
 lib/src/main/java/org/openapis/openapi/models/shared/Contact.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeBearerAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/ValidationErrorsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/DetailedInvalidParam.java
 lib/src/main/java/org/openapis/openapi/models/shared/UsersHalResponse.java

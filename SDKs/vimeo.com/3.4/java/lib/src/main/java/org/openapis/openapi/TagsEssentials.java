@@ -37,7 +37,7 @@ public class TagsEssentials {
      */
     public org.openapis.openapi.models.operations.GetTagResponse getTag(org.openapis.openapi.models.operations.GetTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagPathParams.class, baseUrl, "/tags/{word}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagRequest.class, baseUrl, "/tags/{word}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

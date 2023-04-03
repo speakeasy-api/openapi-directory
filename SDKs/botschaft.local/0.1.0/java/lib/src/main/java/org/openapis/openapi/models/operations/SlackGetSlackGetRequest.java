@@ -4,20 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SlackGetSlackGetRequest {
-    
-    public SlackGetSlackGetQueryParams queryParams;
-    public SlackGetSlackGetRequest withQueryParams(SlackGetSlackGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=authorization")
+    public String authorization;
+    public SlackGetSlackGetRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=base64_message")
+    public String base64Message;
+    public SlackGetSlackGetRequest withBase64Message(String base64Message) {
+        this.base64Message = base64Message;
+        return this;
+    }
     
-    public SlackGetSlackGetHeaders headers;
-    public SlackGetSlackGetRequest withHeaders(SlackGetSlackGetHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=channel")
+    public String channel;
+    public SlackGetSlackGetRequest withChannel(String channel) {
+        this.channel = channel;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=message")
+    public String message;
+    public SlackGetSlackGetRequest withMessage(String message) {
+        this.message = message;
         return this;
     }
     

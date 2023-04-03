@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FunctionsDeleteRequest {
-    
-    public FunctionsDeletePathParams pathParams;
-    public FunctionsDeleteRequest withPathParams(FunctionsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FunctionsDeleteSecurity security;
-    public FunctionsDeleteRequest withSecurity(FunctionsDeleteSecurity security) {
-        this.security = security;
+    /**
+     * Function unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionId")
+    public String functionId;
+    public FunctionsDeleteRequest withFunctionId(String functionId) {
+        this.functionId = functionId;
         return this;
     }
     

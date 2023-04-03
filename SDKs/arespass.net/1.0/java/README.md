@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetAboutQueryParams;
 import org.openapis.openapi.models.operations.GetAboutRequest;
 import org.openapis.openapi.models.operations.GetAboutResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             GetAboutRequest req = new GetAboutRequest() {{
-                queryParams = new GetAboutQueryParams() {{
-                    outputFormat = "corrupti";
-                }};
-            }};            
+                outputFormat = "corrupti";
+            }}            
 
             GetAboutResponse res = sdk.getAbout(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

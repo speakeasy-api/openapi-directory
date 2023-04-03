@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteNetworkInsightsAccessScopeAnalysisRequest {
-    
-    public GETDeleteNetworkInsightsAccessScopeAnalysisQueryParams queryParams;
-    public GETDeleteNetworkInsightsAccessScopeAnalysisRequest withQueryParams(GETDeleteNetworkInsightsAccessScopeAnalysisQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteNetworkInsightsAccessScopeAnalysisActionEnum action;
+    public GETDeleteNetworkInsightsAccessScopeAnalysisRequest withAction(GETDeleteNetworkInsightsAccessScopeAnalysisActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETDeleteNetworkInsightsAccessScopeAnalysisRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETDeleteNetworkInsightsAccessScopeAnalysisHeaders headers;
-    public GETDeleteNetworkInsightsAccessScopeAnalysisRequest withHeaders(GETDeleteNetworkInsightsAccessScopeAnalysisHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the Network Access Scope analysis.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInsightsAccessScopeAnalysisId")
+    public String networkInsightsAccessScopeAnalysisId;
+    public GETDeleteNetworkInsightsAccessScopeAnalysisRequest withNetworkInsightsAccessScopeAnalysisId(String networkInsightsAccessScopeAnalysisId) {
+        this.networkInsightsAccessScopeAnalysisId = networkInsightsAccessScopeAnalysisId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteNetworkInsightsAccessScopeAnalysisVersionEnum version;
+    public GETDeleteNetworkInsightsAccessScopeAnalysisRequest withVersion(GETDeleteNetworkInsightsAccessScopeAnalysisVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteNetworkInsightsAccessScopeAnalysisRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteNetworkInsightsAccessScopeAnalysisRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteNetworkInsightsAccessScopeAnalysisRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteNetworkInsightsAccessScopeAnalysisRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteNetworkInsightsAccessScopeAnalysisRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteNetworkInsightsAccessScopeAnalysisRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteNetworkInsightsAccessScopeAnalysisRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

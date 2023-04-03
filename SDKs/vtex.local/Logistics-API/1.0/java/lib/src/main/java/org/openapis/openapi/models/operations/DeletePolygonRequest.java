@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePolygonRequest {
-    
-    public DeletePolygonPathParams pathParams;
-    public DeletePolygonRequest withPathParams(DeletePolygonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public DeletePolygonRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public DeletePolygonRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public DeletePolygonHeaders headers;
-    public DeletePolygonRequest withHeaders(DeletePolygonHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=polygonName")
+    public String polygonName;
+    public DeletePolygonRequest withPolygonName(String polygonName) {
+        this.polygonName = polygonName;
         return this;
     }
     

@@ -30,11 +30,9 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetV1VerificationResultFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetV1VerificationResultQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetV1VerificationResultRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetV1VerificationResultResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostV1VerificationSendFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostV1VerificationSendQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostV1VerificationSendRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostV1VerificationSendResponse.java
 USAGE.md

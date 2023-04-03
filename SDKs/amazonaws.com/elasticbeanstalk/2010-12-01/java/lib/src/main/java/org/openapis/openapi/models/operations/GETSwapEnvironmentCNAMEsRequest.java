@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSwapEnvironmentCNAMEsRequest {
-    
-    public GETSwapEnvironmentCNAMEsQueryParams queryParams;
-    public GETSwapEnvironmentCNAMEsRequest withQueryParams(GETSwapEnvironmentCNAMEsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETSwapEnvironmentCNAMEsActionEnum action;
+    public GETSwapEnvironmentCNAMEsRequest withAction(GETSwapEnvironmentCNAMEsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The ID of the destination environment.&lt;/p&gt; &lt;p&gt; Condition: You must specify at least the &lt;code&gt;DestinationEnvironmentID&lt;/code&gt; or the &lt;code&gt;DestinationEnvironmentName&lt;/code&gt;. You may also specify both. You must specify the &lt;code&gt;SourceEnvironmentId&lt;/code&gt; with the &lt;code&gt;DestinationEnvironmentId&lt;/code&gt;. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationEnvironmentId")
+    public String destinationEnvironmentId;
+    public GETSwapEnvironmentCNAMEsRequest withDestinationEnvironmentId(String destinationEnvironmentId) {
+        this.destinationEnvironmentId = destinationEnvironmentId;
+        return this;
+    }
     
-    public GETSwapEnvironmentCNAMEsHeaders headers;
-    public GETSwapEnvironmentCNAMEsRequest withHeaders(GETSwapEnvironmentCNAMEsHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The name of the destination environment.&lt;/p&gt; &lt;p&gt; Condition: You must specify at least the &lt;code&gt;DestinationEnvironmentID&lt;/code&gt; or the &lt;code&gt;DestinationEnvironmentName&lt;/code&gt;. You may also specify both. You must specify the &lt;code&gt;SourceEnvironmentName&lt;/code&gt; with the &lt;code&gt;DestinationEnvironmentName&lt;/code&gt;. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationEnvironmentName")
+    public String destinationEnvironmentName;
+    public GETSwapEnvironmentCNAMEsRequest withDestinationEnvironmentName(String destinationEnvironmentName) {
+        this.destinationEnvironmentName = destinationEnvironmentName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The ID of the source environment.&lt;/p&gt; &lt;p&gt; Condition: You must specify at least the &lt;code&gt;SourceEnvironmentID&lt;/code&gt; or the &lt;code&gt;SourceEnvironmentName&lt;/code&gt;. You may also specify both. If you specify the &lt;code&gt;SourceEnvironmentId&lt;/code&gt;, you must specify the &lt;code&gt;DestinationEnvironmentId&lt;/code&gt;. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceEnvironmentId")
+    public String sourceEnvironmentId;
+    public GETSwapEnvironmentCNAMEsRequest withSourceEnvironmentId(String sourceEnvironmentId) {
+        this.sourceEnvironmentId = sourceEnvironmentId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the source environment.&lt;/p&gt; &lt;p&gt; Condition: You must specify at least the &lt;code&gt;SourceEnvironmentID&lt;/code&gt; or the &lt;code&gt;SourceEnvironmentName&lt;/code&gt;. You may also specify both. If you specify the &lt;code&gt;SourceEnvironmentName&lt;/code&gt;, you must specify the &lt;code&gt;DestinationEnvironmentName&lt;/code&gt;. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceEnvironmentName")
+    public String sourceEnvironmentName;
+    public GETSwapEnvironmentCNAMEsRequest withSourceEnvironmentName(String sourceEnvironmentName) {
+        this.sourceEnvironmentName = sourceEnvironmentName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETSwapEnvironmentCNAMEsVersionEnum version;
+    public GETSwapEnvironmentCNAMEsRequest withVersion(GETSwapEnvironmentCNAMEsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETSwapEnvironmentCNAMEsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETSwapEnvironmentCNAMEsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETSwapEnvironmentCNAMEsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETSwapEnvironmentCNAMEsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETSwapEnvironmentCNAMEsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETSwapEnvironmentCNAMEsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETSwapEnvironmentCNAMEsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

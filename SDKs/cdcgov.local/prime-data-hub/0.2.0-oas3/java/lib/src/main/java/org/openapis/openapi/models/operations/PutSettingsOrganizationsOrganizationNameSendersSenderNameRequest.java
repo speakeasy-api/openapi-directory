@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSettingsOrganizationsOrganizationNameSendersSenderNameRequest {
-    
-    public PutSettingsOrganizationsOrganizationNameSendersSenderNamePathParams pathParams;
-    public PutSettingsOrganizationsOrganizationNameSendersSenderNameRequest withPathParams(PutSettingsOrganizationsOrganizationNameSendersSenderNamePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SenderInput request;
-    public PutSettingsOrganizationsOrganizationNameSendersSenderNameRequest withRequest(org.openapis.openapi.models.shared.SenderInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SenderInput senderInput;
+    public PutSettingsOrganizationsOrganizationNameSendersSenderNameRequest withSenderInput(org.openapis.openapi.models.shared.SenderInput senderInput) {
+        this.senderInput = senderInput;
         return this;
     }
     
+    /**
+     * Fetch senders with this organization name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationName")
+    public String organizationName;
+    public PutSettingsOrganizationsOrganizationNameSendersSenderNameRequest withOrganizationName(String organizationName) {
+        this.organizationName = organizationName;
+        return this;
+    }
     
-    public PutSettingsOrganizationsOrganizationNameSendersSenderNameSecurity security;
-    public PutSettingsOrganizationsOrganizationNameSendersSenderNameRequest withSecurity(PutSettingsOrganizationsOrganizationNameSendersSenderNameSecurity security) {
-        this.security = security;
+    /**
+     * The name of a sender to the data hub
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=senderName")
+    public String senderName;
+    public PutSettingsOrganizationsOrganizationNameSendersSenderNameRequest withSenderName(String senderName) {
+        this.senderName = senderName;
         return this;
     }
     

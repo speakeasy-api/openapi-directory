@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchRoomRecordingRequest {
-    
-    public FetchRoomRecordingPathParams pathParams;
-    public FetchRoomRecordingRequest withPathParams(FetchRoomRecordingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Room resource with the recording to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=RoomSid")
+    public String roomSid;
+    public FetchRoomRecordingRequest withRoomSid(String roomSid) {
+        this.roomSid = roomSid;
         return this;
     }
     
-    
-    public FetchRoomRecordingSecurity security;
-    public FetchRoomRecordingRequest withSecurity(FetchRoomRecordingSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchRoomRecordingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the RoomRecording resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchRoomRecordingRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

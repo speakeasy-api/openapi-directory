@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutindicesRequest {
-    
-    public PutindicesPathParams pathParams;
-    public PutindicesRequest withPathParams(PutindicesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Request body for creating an index
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PutindicesRequest request;
-    public PutindicesRequest withRequest(org.openapis.openapi.models.shared.PutindicesRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PutindicesRequest putindicesRequest;
+    public PutindicesRequest withPutindicesRequest(org.openapis.openapi.models.shared.PutindicesRequest putindicesRequest) {
+        this.putindicesRequest = putindicesRequest;
+        return this;
+    }
+    
+    /**
+     * Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
+    public String dataEntityName;
+    public PutindicesRequest withDataEntityName(String dataEntityName) {
+        this.dataEntityName = dataEntityName;
         return this;
     }
     

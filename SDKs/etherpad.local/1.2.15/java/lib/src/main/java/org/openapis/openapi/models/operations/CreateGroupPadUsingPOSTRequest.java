@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateGroupPadUsingPOSTRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupID")
+    public String groupID;
+    public CreateGroupPadUsingPOSTRequest withGroupID(String groupID) {
+        this.groupID = groupID;
+        return this;
+    }
     
-    public CreateGroupPadUsingPOSTQueryParams queryParams;
-    public CreateGroupPadUsingPOSTRequest withQueryParams(CreateGroupPadUsingPOSTQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padName")
+    public String padName;
+    public CreateGroupPadUsingPOSTRequest withPadName(String padName) {
+        this.padName = padName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public CreateGroupPadUsingPOSTRequest withText(String text) {
+        this.text = text;
         return this;
     }
     

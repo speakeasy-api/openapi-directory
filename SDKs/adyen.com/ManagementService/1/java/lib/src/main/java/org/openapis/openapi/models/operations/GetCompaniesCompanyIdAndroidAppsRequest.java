@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdAndroidAppsRequest {
-    
-    public GetCompaniesCompanyIdAndroidAppsPathParams pathParams;
-    public GetCompaniesCompanyIdAndroidAppsRequest withPathParams(GetCompaniesCompanyIdAndroidAppsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetCompaniesCompanyIdAndroidAppsRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
-    
-    public GetCompaniesCompanyIdAndroidAppsQueryParams queryParams;
-    public GetCompaniesCompanyIdAndroidAppsRequest withQueryParams(GetCompaniesCompanyIdAndroidAppsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of the page to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Integer pageNumber;
+    public GetCompaniesCompanyIdAndroidAppsRequest withPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
     
-    
-    public GetCompaniesCompanyIdAndroidAppsSecurity security;
-    public GetCompaniesCompanyIdAndroidAppsRequest withSecurity(GetCompaniesCompanyIdAndroidAppsSecurity security) {
-        this.security = security;
+    /**
+     * The number of items to have on a page, maximum 100. The default is 20 items on a page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetCompaniesCompanyIdAndroidAppsRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

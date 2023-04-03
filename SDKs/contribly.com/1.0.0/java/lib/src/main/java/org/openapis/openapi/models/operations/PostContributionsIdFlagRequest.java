@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostContributionsIdFlagRequest {
-    
-    public PostContributionsIdFlagPathParams pathParams;
-    public PostContributionsIdFlagRequest withPathParams(PostContributionsIdFlagPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Flag to be created
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Flag request;
-    public PostContributionsIdFlagRequest withRequest(org.openapis.openapi.models.shared.Flag request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Flag flag;
+    public PostContributionsIdFlagRequest withFlag(org.openapis.openapi.models.shared.Flag flag) {
+        this.flag = flag;
+        return this;
+    }
+    
+    /**
+     * Id of the contribution to flag
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostContributionsIdFlagRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

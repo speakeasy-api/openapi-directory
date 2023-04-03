@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.ActionHelpPathParams;
 import org.openapis.openapi.models.operations.ActionHelpRequest;
 import org.openapis.openapi.models.operations.ActionHelpResponse;
 
@@ -28,11 +27,9 @@ public class Application {
                 .build();
 
             ActionHelpRequest req = new ActionHelpRequest() {{
-                pathParams = new ActionHelpPathParams() {{
-                    actionId = "corrupti";
-                    serviceId = "provident";
-                }};
-            }};            
+                actionId = "corrupti";
+                serviceId = "provident";
+            }}            
 
             ActionHelpResponse res = sdk.osdb.actionHelp(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### osdb

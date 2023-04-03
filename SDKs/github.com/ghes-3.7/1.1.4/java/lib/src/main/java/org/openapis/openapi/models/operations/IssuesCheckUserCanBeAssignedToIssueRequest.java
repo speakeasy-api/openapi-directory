@@ -4,13 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesCheckUserCanBeAssignedToIssueRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignee")
+    public String assignee;
+    public IssuesCheckUserCanBeAssignedToIssueRequest withAssignee(String assignee) {
+        this.assignee = assignee;
+        return this;
+    }
     
-    public IssuesCheckUserCanBeAssignedToIssuePathParams pathParams;
-    public IssuesCheckUserCanBeAssignedToIssueRequest withPathParams(IssuesCheckUserCanBeAssignedToIssuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The number that identifies the issue.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_number")
+    public Long issueNumber;
+    public IssuesCheckUserCanBeAssignedToIssueRequest withIssueNumber(Long issueNumber) {
+        this.issueNumber = issueNumber;
+        return this;
+    }
+    
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssuesCheckUserCanBeAssignedToIssueRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssuesCheckUserCanBeAssignedToIssueRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -7,31 +7,46 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupLockedSettingsRequest {
-    
-    public GroupLockedSettingsPathParams pathParams;
-    public GroupLockedSettingsRequest withPathParams(GroupLockedSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GroupLockedSettingsQueryParams queryParams;
-    public GroupLockedSettingsRequest withQueryParams(GroupLockedSettingsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public GroupLockedSettingsRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public GroupLockedSettingsRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Provide the name of the field by which you would like to filter the response. For example, if you provide "host_video" as the value of this field, you will get a response similar to the following:&lt;br&gt;
+     * {
+     *     "schedule_meeting": {
+     *         "host_video": false
+     *     }
+     * }
+     * &lt;br&gt;You can provide multiple values by separating them with commas(example: "host_video,participant_video\u201d).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=custom_query_fields")
+    public String customQueryFields;
+    public GroupLockedSettingsRequest withCustomQueryFields(String customQueryFields) {
+        this.customQueryFields = customQueryFields;
+        return this;
+    }
     
-    public GroupLockedSettingsSecurity security;
-    public GroupLockedSettingsRequest withSecurity(GroupLockedSettingsSecurity security) {
-        this.security = security;
+    /**
+     * The Id of the group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public GroupLockedSettingsRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * Specify `meeting_security` as the value of this field if you would like to view security settings applied on a meeting hosted by the users in this group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=option")
+    public String option;
+    public GroupLockedSettingsRequest withOption(String option) {
+        this.option = option;
         return this;
     }
     

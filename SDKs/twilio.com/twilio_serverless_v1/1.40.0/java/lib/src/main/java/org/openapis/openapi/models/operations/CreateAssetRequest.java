@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAssetRequest {
-    
-    public CreateAssetPathParams pathParams;
-    public CreateAssetRequest withPathParams(CreateAssetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateAssetCreateAssetRequest request;
-    public CreateAssetRequest withRequest(CreateAssetCreateAssetRequest request) {
-        this.request = request;
+    public CreateAssetCreateAssetRequest requestBody;
+    public CreateAssetRequest withRequestBody(CreateAssetCreateAssetRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateAssetSecurity security;
-    public CreateAssetRequest withSecurity(CreateAssetSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateAssetRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Service to create the Asset resource under.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateAssetRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

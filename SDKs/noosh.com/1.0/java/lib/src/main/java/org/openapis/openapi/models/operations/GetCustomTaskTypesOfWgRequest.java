@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomTaskTypesOfWgRequest {
-    
-    public GetCustomTaskTypesOfWgPathParams pathParams;
-    public GetCustomTaskTypesOfWgRequest withPathParams(GetCustomTaskTypesOfWgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public GetCustomTaskTypesOfWgRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

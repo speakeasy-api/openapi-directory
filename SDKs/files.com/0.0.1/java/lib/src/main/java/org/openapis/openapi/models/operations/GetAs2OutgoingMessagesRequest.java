@@ -4,13 +4,106 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAs2OutgoingMessagesRequest {
+    /**
+     * As2 Partner ID.  If provided, will return message specific to that partner.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=as2_partner_id")
+    public Integer as2PartnerId;
+    public GetAs2OutgoingMessagesRequest withAs2PartnerId(Integer as2PartnerId) {
+        this.as2PartnerId = as2PartnerId;
+        return this;
+    }
     
-    public GetAs2OutgoingMessagesQueryParams queryParams;
-    public GetAs2OutgoingMessagesRequest withQueryParams(GetAs2OutgoingMessagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public GetAs2OutgoingMessagesRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is equal to the supplied value. Valid fields are `created_at`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public java.util.Map<String, Object> filter;
+    public GetAs2OutgoingMessagesRequest withFilter(java.util.Map<String, Object> filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is greater than the supplied value. Valid fields are `created_at`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gt")
+    public java.util.Map<String, Object> filterGt;
+    public GetAs2OutgoingMessagesRequest withFilterGt(java.util.Map<String, Object> filterGt) {
+        this.filterGt = filterGt;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `created_at`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gteq")
+    public java.util.Map<String, Object> filterGteq;
+    public GetAs2OutgoingMessagesRequest withFilterGteq(java.util.Map<String, Object> filterGteq) {
+        this.filterGteq = filterGteq;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is equal to the supplied value. Valid fields are `created_at`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_like")
+    public java.util.Map<String, Object> filterLike;
+    public GetAs2OutgoingMessagesRequest withFilterLike(java.util.Map<String, Object> filterLike) {
+        this.filterLike = filterLike;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is less than the supplied value. Valid fields are `created_at`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lt")
+    public java.util.Map<String, Object> filterLt;
+    public GetAs2OutgoingMessagesRequest withFilterLt(java.util.Map<String, Object> filterLt) {
+        this.filterLt = filterLt;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `created_at`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lteq")
+    public java.util.Map<String, Object> filterLteq;
+    public GetAs2OutgoingMessagesRequest withFilterLteq(java.util.Map<String, Object> filterLteq) {
+        this.filterLteq = filterLteq;
+        return this;
+    }
+    
+    /**
+     * Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetAs2OutgoingMessagesRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[created_at]=desc`). Valid fields are `created_at` and `as2_partner_id`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public java.util.Map<String, Object> sortBy;
+    public GetAs2OutgoingMessagesRequest withSortBy(java.util.Map<String, Object> sortBy) {
+        this.sortBy = sortBy;
         return this;
     }
     

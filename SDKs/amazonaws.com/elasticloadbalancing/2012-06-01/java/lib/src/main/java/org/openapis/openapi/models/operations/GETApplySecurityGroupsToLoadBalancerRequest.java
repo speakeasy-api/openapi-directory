@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETApplySecurityGroupsToLoadBalancerRequest {
-    
-    public GETApplySecurityGroupsToLoadBalancerQueryParams queryParams;
-    public GETApplySecurityGroupsToLoadBalancerRequest withQueryParams(GETApplySecurityGroupsToLoadBalancerQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETApplySecurityGroupsToLoadBalancerActionEnum action;
+    public GETApplySecurityGroupsToLoadBalancerRequest withAction(GETApplySecurityGroupsToLoadBalancerActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the load balancer.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoadBalancerName")
+    public String loadBalancerName;
+    public GETApplySecurityGroupsToLoadBalancerRequest withLoadBalancerName(String loadBalancerName) {
+        this.loadBalancerName = loadBalancerName;
+        return this;
+    }
     
-    public GETApplySecurityGroupsToLoadBalancerHeaders headers;
-    public GETApplySecurityGroupsToLoadBalancerRequest withHeaders(GETApplySecurityGroupsToLoadBalancerHeaders headers) {
-        this.headers = headers;
+    /**
+     * The IDs of the security groups to associate with the load balancer. Note that you cannot specify the name of the security group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SecurityGroups")
+    public String[] securityGroups;
+    public GETApplySecurityGroupsToLoadBalancerRequest withSecurityGroups(String[] securityGroups) {
+        this.securityGroups = securityGroups;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETApplySecurityGroupsToLoadBalancerVersionEnum version;
+    public GETApplySecurityGroupsToLoadBalancerRequest withVersion(GETApplySecurityGroupsToLoadBalancerVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETApplySecurityGroupsToLoadBalancerRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETApplySecurityGroupsToLoadBalancerRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETApplySecurityGroupsToLoadBalancerRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETApplySecurityGroupsToLoadBalancerRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETApplySecurityGroupsToLoadBalancerRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETApplySecurityGroupsToLoadBalancerRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETApplySecurityGroupsToLoadBalancerRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

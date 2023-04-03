@@ -7,31 +7,150 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RecommenderProjectsLocationsRecommendersUpdateConfigRequest {
-    
-    public RecommenderProjectsLocationsRecommendersUpdateConfigPathParams pathParams;
-    public RecommenderProjectsLocationsRecommendersUpdateConfigRequest withPathParams(RecommenderProjectsLocationsRecommendersUpdateConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RecommenderProjectsLocationsRecommendersUpdateConfigQueryParams queryParams;
-    public RecommenderProjectsLocationsRecommendersUpdateConfigRequest withQueryParams(RecommenderProjectsLocationsRecommendersUpdateConfigQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public RecommenderProjectsLocationsRecommendersUpdateConfigRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudRecommenderV1RecommenderConfigInput request;
-    public RecommenderProjectsLocationsRecommendersUpdateConfigRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudRecommenderV1RecommenderConfigInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudRecommenderV1RecommenderConfigInput googleCloudRecommenderV1RecommenderConfigInput;
+    public RecommenderProjectsLocationsRecommendersUpdateConfigRequest withGoogleCloudRecommenderV1RecommenderConfigInput(org.openapis.openapi.models.shared.GoogleCloudRecommenderV1RecommenderConfigInput googleCloudRecommenderV1RecommenderConfigInput) {
+        this.googleCloudRecommenderV1RecommenderConfigInput = googleCloudRecommenderV1RecommenderConfigInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public RecommenderProjectsLocationsRecommendersUpdateConfigRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public RecommenderProjectsLocationsRecommendersUpdateConfigSecurity security;
-    public RecommenderProjectsLocationsRecommendersUpdateConfigRequest withSecurity(RecommenderProjectsLocationsRecommendersUpdateConfigSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public RecommenderProjectsLocationsRecommendersUpdateConfigRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public RecommenderProjectsLocationsRecommendersUpdateConfigRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public RecommenderProjectsLocationsRecommendersUpdateConfigRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public RecommenderProjectsLocationsRecommendersUpdateConfigRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Name of recommender config. Eg, projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]/config
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public RecommenderProjectsLocationsRecommendersUpdateConfigRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public RecommenderProjectsLocationsRecommendersUpdateConfigRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public RecommenderProjectsLocationsRecommendersUpdateConfigRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public RecommenderProjectsLocationsRecommendersUpdateConfigRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The list of fields to be updated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
+    public String updateMask;
+    public RecommenderProjectsLocationsRecommendersUpdateConfigRequest withUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public RecommenderProjectsLocationsRecommendersUpdateConfigRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public RecommenderProjectsLocationsRecommendersUpdateConfigRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * If true, validate the request and preview the change, but do not actually update it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=validateOnly")
+    public Boolean validateOnly;
+    public RecommenderProjectsLocationsRecommendersUpdateConfigRequest withValidateOnly(Boolean validateOnly) {
+        this.validateOnly = validateOnly;
         return this;
     }
     

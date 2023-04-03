@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAliasRequest {
-    
-    public DeleteAliasPathParams pathParams;
-    public DeleteAliasRequest withPathParams(DeleteAliasPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public DeleteAliasRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
         return this;
     }
     
+    /**
+     * Mail zone domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public DeleteAliasRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        return this;
+    }
     
-    public DeleteAliasQueryParams queryParams;
-    public DeleteAliasRequest withQueryParams(DeleteAliasQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=emailAddress")
+    public String emailAddressPathParameter;
+    public DeleteAliasRequest withEmailAddressPathParameter(String emailAddressPathParameter) {
+        this.emailAddressPathParameter = emailAddressPathParameter;
+        return this;
+    }
+    
+    /**
+     * Alias e-mail address.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email_address")
+    public String emailAddressQueryParameter;
+    public DeleteAliasRequest withEmailAddressQueryParameter(String emailAddressQueryParameter) {
+        this.emailAddressQueryParameter = emailAddressQueryParameter;
         return this;
     }
     

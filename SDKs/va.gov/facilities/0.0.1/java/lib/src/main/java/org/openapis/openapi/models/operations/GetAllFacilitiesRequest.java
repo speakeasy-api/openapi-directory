@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllFacilitiesRequest {
-    
-    public GetAllFacilitiesHeaders headers;
-    public GetAllFacilitiesRequest withHeaders(GetAllFacilitiesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetAllFacilitiesSecurity security;
-    public GetAllFacilitiesRequest withSecurity(GetAllFacilitiesSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public GetAllFacilitiesAcceptEnum accept;
+    public GetAllFacilitiesRequest withAccept(GetAllFacilitiesAcceptEnum accept) {
+        this.accept = accept;
         return this;
     }
     

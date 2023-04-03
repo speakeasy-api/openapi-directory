@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccessDelRequest {
-    
-    public AccessDelPathParams pathParams;
-    public AccessDelRequest withPathParams(AccessDelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * username of the simulator hosting system
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user")
+    public String user;
+    public AccessDelRequest withUser(String user) {
+        this.user = user;
         return this;
     }
     

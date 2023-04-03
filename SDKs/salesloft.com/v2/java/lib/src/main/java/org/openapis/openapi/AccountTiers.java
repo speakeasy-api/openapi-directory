@@ -47,7 +47,7 @@ public class AccountTiers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2AccountTiersJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2AccountTiersJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -86,7 +86,7 @@ public class AccountTiers {
      */
     public org.openapis.openapi.models.operations.GetV2AccountTiersIdJsonResponse getV2AccountTiersIdJson(org.openapis.openapi.models.operations.GetV2AccountTiersIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2AccountTiersIdJsonPathParams.class, baseUrl, "/v2/account_tiers/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2AccountTiersIdJsonRequest.class, baseUrl, "/v2/account_tiers/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

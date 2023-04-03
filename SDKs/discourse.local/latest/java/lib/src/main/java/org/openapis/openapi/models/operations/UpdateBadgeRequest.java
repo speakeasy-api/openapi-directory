@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBadgeRequest {
-    
-    public UpdateBadgePathParams pathParams;
-    public UpdateBadgeRequest withPathParams(UpdateBadgePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateBadgeRequestBody requestBody;
+    public UpdateBadgeRequest withRequestBody(UpdateBadgeRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateBadgeRequestBody request;
-    public UpdateBadgeRequest withRequest(UpdateBadgeRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UpdateBadgeRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

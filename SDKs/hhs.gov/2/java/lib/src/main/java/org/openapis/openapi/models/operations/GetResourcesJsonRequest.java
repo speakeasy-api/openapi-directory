@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesJsonRequest {
-    
-    public GetResourcesJsonQueryParams queryParams;
-    public GetResourcesJsonRequest withQueryParams(GetResourcesJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The search query supplied by the user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=q")
+    public String q;
+    public GetResourcesJsonRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     

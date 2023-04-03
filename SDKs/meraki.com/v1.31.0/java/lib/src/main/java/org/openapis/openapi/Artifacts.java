@@ -40,12 +40,12 @@ public class Artifacts {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationCameraCustomAnalyticsArtifactResponse createOrganizationCameraCustomAnalyticsArtifact(org.openapis.openapi.models.operations.CreateOrganizationCameraCustomAnalyticsArtifactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationCameraCustomAnalyticsArtifactPathParams.class, baseUrl, "/organizations/{organizationId}/camera/customAnalytics/artifacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationCameraCustomAnalyticsArtifactRequest.class, baseUrl, "/organizations/{organizationId}/camera/customAnalytics/artifacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -82,7 +82,7 @@ public class Artifacts {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationCameraCustomAnalyticsArtifactResponse deleteOrganizationCameraCustomAnalyticsArtifact(org.openapis.openapi.models.operations.DeleteOrganizationCameraCustomAnalyticsArtifactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationCameraCustomAnalyticsArtifactPathParams.class, baseUrl, "/organizations/{organizationId}/camera/customAnalytics/artifacts/{artifactId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationCameraCustomAnalyticsArtifactRequest.class, baseUrl, "/organizations/{organizationId}/camera/customAnalytics/artifacts/{artifactId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -116,7 +116,7 @@ public class Artifacts {
      */
     public org.openapis.openapi.models.operations.GetOrganizationCameraCustomAnalyticsArtifactResponse getOrganizationCameraCustomAnalyticsArtifact(org.openapis.openapi.models.operations.GetOrganizationCameraCustomAnalyticsArtifactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationCameraCustomAnalyticsArtifactPathParams.class, baseUrl, "/organizations/{organizationId}/camera/customAnalytics/artifacts/{artifactId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationCameraCustomAnalyticsArtifactRequest.class, baseUrl, "/organizations/{organizationId}/camera/customAnalytics/artifacts/{artifactId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -156,7 +156,7 @@ public class Artifacts {
      */
     public org.openapis.openapi.models.operations.GetOrganizationCameraCustomAnalyticsArtifactsResponse getOrganizationCameraCustomAnalyticsArtifacts(org.openapis.openapi.models.operations.GetOrganizationCameraCustomAnalyticsArtifactsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationCameraCustomAnalyticsArtifactsPathParams.class, baseUrl, "/organizations/{organizationId}/camera/customAnalytics/artifacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationCameraCustomAnalyticsArtifactsRequest.class, baseUrl, "/organizations/{organizationId}/camera/customAnalytics/artifacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

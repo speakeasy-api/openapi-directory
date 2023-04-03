@@ -4,13 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesRemoveLabelRequest {
+    /**
+     * The number that identifies the issue.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_number")
+    public Long issueNumber;
+    public IssuesRemoveLabelRequest withIssueNumber(Long issueNumber) {
+        this.issueNumber = issueNumber;
+        return this;
+    }
     
-    public IssuesRemoveLabelPathParams pathParams;
-    public IssuesRemoveLabelRequest withPathParams(IssuesRemoveLabelPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public IssuesRemoveLabelRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssuesRemoveLabelRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssuesRemoveLabelRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

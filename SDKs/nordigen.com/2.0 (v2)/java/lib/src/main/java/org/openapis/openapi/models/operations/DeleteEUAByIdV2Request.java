@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteEUAByIdV2Request {
-    
-    public DeleteEUAByIdV2PathParams pathParams;
-    public DeleteEUAByIdV2Request withPathParams(DeleteEUAByIdV2PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A UUID string identifying this end user agreement.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteEUAByIdV2Request withId(String id) {
+        this.id = id;
         return this;
     }
     

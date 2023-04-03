@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/MicerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/MicerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/MicerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/MicerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/MicerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Micer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Micer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Micer504ApplicationJSON.java
@@ -61,7 +60,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PvcerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PvcerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/PvcerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PvcerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/PvcerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Pvcer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Pvcer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Pvcer504ApplicationJSON.java
@@ -95,6 +93,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 USAGE.md

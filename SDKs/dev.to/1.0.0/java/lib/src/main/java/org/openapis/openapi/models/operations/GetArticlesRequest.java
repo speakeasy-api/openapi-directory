@@ -4,13 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetArticlesRequest {
+    /**
+     * Adding this will allow the client to return the list of articles
+     * belonging to the requested collection, ordered by ascending publication date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=collection_id")
+    public Integer collectionId;
+    public GetArticlesRequest withCollectionId(Integer collectionId) {
+        this.collectionId = collectionId;
+        return this;
+    }
     
-    public GetArticlesQueryParams queryParams;
-    public GetArticlesRequest withQueryParams(GetArticlesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Pagination page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetArticlesRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Page size (the number of items to return per page). The default maximum value can be overridden by "API_PER_PAGE_MAX" environment variable.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetArticlesRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Using this parameter will allow the client to check which articles are fresh or rising.
+     *             If `state=fresh` the server will return fresh articles.
+     *             If `state=rising` the server will return rising articles.
+     *             This param can be used in conjuction with `username`, only if set to `all`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public GetArticlesStateEnum state;
+    public GetArticlesRequest withState(GetArticlesStateEnum state) {
+        this.state = state;
+        return this;
+    }
+    
+    /**
+     * Using this parameter will retrieve articles that contain the requested tag. Articles
+     * will be ordered by descending popularity.This parameter can be used in conjuction with `top`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public GetArticlesRequest withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    
+    /**
+     * Using this parameter will retrieve articles with any of the comma-separated tags.
+     * Articles will be ordered by descending popularity.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public GetArticlesRequest withTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    
+    /**
+     * Using this parameter will retrieve articles that do _not_ contain _any_
+     * of comma-separated tags. Articles will be ordered by descending popularity.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags_exclude")
+    public String tagsExclude;
+    public GetArticlesRequest withTagsExclude(String tagsExclude) {
+        this.tagsExclude = tagsExclude;
+        return this;
+    }
+    
+    /**
+     * Using this parameter will allow the client to return the most popular articles
+     * in the last `N` days.
+     * `top` indicates the number of days since publication of the articles returned.
+     * This param can be used in conjuction with `tag`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=top")
+    public Integer top;
+    public GetArticlesRequest withTop(Integer top) {
+        this.top = top;
+        return this;
+    }
+    
+    /**
+     * Using this parameter will retrieve articles belonging
+     *             to a User or Organization ordered by descending publication date.
+     *             If `state=all` the number of items returned will be `1000` instead of the default `30`.
+     *             This parameter can be used in conjuction with `state`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public GetArticlesRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

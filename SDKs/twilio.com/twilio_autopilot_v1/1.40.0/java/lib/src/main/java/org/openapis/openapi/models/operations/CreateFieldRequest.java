@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateFieldRequest {
-    
-    public CreateFieldPathParams pathParams;
-    public CreateFieldRequest withPathParams(CreateFieldPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task associated with the new resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public CreateFieldRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateFieldCreateFieldRequest request;
-    public CreateFieldRequest withRequest(CreateFieldCreateFieldRequest request) {
-        this.request = request;
+    public CreateFieldCreateFieldRequest requestBody;
+    public CreateFieldRequest withRequestBody(CreateFieldCreateFieldRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateFieldSecurity security;
-    public CreateFieldRequest withSecurity(CreateFieldSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateFieldRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Task](https://www.twilio.com/docs/autopilot/api/task) resource associated with the new Field resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TaskSid")
+    public String taskSid;
+    public CreateFieldRequest withTaskSid(String taskSid) {
+        this.taskSid = taskSid;
         return this;
     }
     

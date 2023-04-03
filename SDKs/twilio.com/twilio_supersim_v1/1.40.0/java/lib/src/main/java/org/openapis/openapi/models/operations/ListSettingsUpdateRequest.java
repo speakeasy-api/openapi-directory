@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSettingsUpdateRequest {
-    
-    public ListSettingsUpdateQueryParams queryParams;
-    public ListSettingsUpdateRequest withQueryParams(ListSettingsUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListSettingsUpdateRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListSettingsUpdateSecurity security;
-    public ListSettingsUpdateRequest withSecurity(ListSettingsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListSettingsUpdateRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListSettingsUpdateRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
     
-    public String serverURL;
-    public ListSettingsUpdateRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Filter the Settings Updates by a Super SIM's SID or UniqueName.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Sim")
+    public String sim;
+    public ListSettingsUpdateRequest withSim(String sim) {
+        this.sim = sim;
+        return this;
+    }
+    
+    /**
+     * Filter the Settings Updates by status. Can be `scheduled`, `in-progress`, `successful`, or `failed`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public org.openapis.openapi.models.shared.SettingsUpdateEnumStatusEnum status;
+    public ListSettingsUpdateRequest withStatus(org.openapis.openapi.models.shared.SettingsUpdateEnumStatusEnum status) {
+        this.status = status;
         return this;
     }
     

@@ -175,7 +175,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.AreGamesInProgressResponse areGamesInProgress(org.openapis.openapi.models.operations.AreGamesInProgressRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AreGamesInProgressPathParams.class, baseUrl, "/{format}/AreAnyGamesInProgress", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AreGamesInProgressRequest.class, baseUrl, "/{format}/AreAnyGamesInProgress", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -215,7 +215,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ByeWeeksResponse byeWeeks(org.openapis.openapi.models.operations.ByeWeeksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ByeWeeksPathParams.class, baseUrl, "/{format}/Byes/{season}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ByeWeeksRequest.class, baseUrl, "/{format}/Byes/{season}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -255,7 +255,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DepthChartsResponse depthCharts(org.openapis.openapi.models.operations.DepthChartsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DepthChartsPathParams.class, baseUrl, "/{format}/DepthCharts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DepthChartsRequest.class, baseUrl, "/{format}/DepthCharts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -294,7 +294,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadResponse gameStatsBySeasonDeprecatedUseTeamGameStatsInstead(org.openapis.openapi.models.operations.GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadPathParams.class, baseUrl, "/{format}/GameStats/{season}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GameStatsBySeasonDeprecatedUseTeamGameStatsInsteadRequest.class, baseUrl, "/{format}/GameStats/{season}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -333,7 +333,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GameStatsByWeekDeprecatedUseTeamGameStatsInsteadResponse gameStatsByWeekDeprecatedUseTeamGameStatsInstead(org.openapis.openapi.models.operations.GameStatsByWeekDeprecatedUseTeamGameStatsInsteadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GameStatsByWeekDeprecatedUseTeamGameStatsInsteadPathParams.class, baseUrl, "/{format}/GameStatsByWeek/{season}/{week}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GameStatsByWeekDeprecatedUseTeamGameStatsInsteadRequest.class, baseUrl, "/{format}/GameStatsByWeek/{season}/{week}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -372,7 +372,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.NewsResponse news(org.openapis.openapi.models.operations.NewsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NewsPathParams.class, baseUrl, "/{format}/News", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NewsRequest.class, baseUrl, "/{format}/News", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -411,7 +411,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.NewsByDateResponse newsByDate(org.openapis.openapi.models.operations.NewsByDateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NewsByDatePathParams.class, baseUrl, "/{format}/NewsByDate/{date}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NewsByDateRequest.class, baseUrl, "/{format}/NewsByDate/{date}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -450,7 +450,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.NewsByPlayerResponse newsByPlayer(org.openapis.openapi.models.operations.NewsByPlayerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NewsByPlayerPathParams.class, baseUrl, "/{format}/NewsByPlayerID/{playerid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NewsByPlayerRequest.class, baseUrl, "/{format}/NewsByPlayerID/{playerid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -489,7 +489,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.NewsByTeamResponse newsByTeam(org.openapis.openapi.models.operations.NewsByTeamRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NewsByTeamPathParams.class, baseUrl, "/{format}/NewsByTeam/{team}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NewsByTeamRequest.class, baseUrl, "/{format}/NewsByTeam/{team}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -528,7 +528,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PlayerDetailsByAvailableResponse playerDetailsByAvailable(org.openapis.openapi.models.operations.PlayerDetailsByAvailableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlayerDetailsByAvailablePathParams.class, baseUrl, "/{format}/Players", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlayerDetailsByAvailableRequest.class, baseUrl, "/{format}/Players", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -567,7 +567,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PlayerDetailsByFreeAgentsResponse playerDetailsByFreeAgents(org.openapis.openapi.models.operations.PlayerDetailsByFreeAgentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlayerDetailsByFreeAgentsPathParams.class, baseUrl, "/{format}/FreeAgents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlayerDetailsByFreeAgentsRequest.class, baseUrl, "/{format}/FreeAgents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -606,7 +606,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PlayerDetailsByPlayerResponse playerDetailsByPlayer(org.openapis.openapi.models.operations.PlayerDetailsByPlayerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlayerDetailsByPlayerPathParams.class, baseUrl, "/{format}/Player/{playerid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlayerDetailsByPlayerRequest.class, baseUrl, "/{format}/Player/{playerid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -645,7 +645,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PlayerDetailsByRookieDraftYearResponse playerDetailsByRookieDraftYear(org.openapis.openapi.models.operations.PlayerDetailsByRookieDraftYearRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlayerDetailsByRookieDraftYearPathParams.class, baseUrl, "/{format}/Rookies/{season}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlayerDetailsByRookieDraftYearRequest.class, baseUrl, "/{format}/Rookies/{season}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -684,7 +684,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PlayerDetailsByTeamResponse playerDetailsByTeam(org.openapis.openapi.models.operations.PlayerDetailsByTeamRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlayerDetailsByTeamPathParams.class, baseUrl, "/{format}/Players/{team}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlayerDetailsByTeamRequest.class, baseUrl, "/{format}/Players/{team}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -724,7 +724,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RefereesResponse referees(org.openapis.openapi.models.operations.RefereesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RefereesPathParams.class, baseUrl, "/{format}/Referees", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RefereesRequest.class, baseUrl, "/{format}/Referees", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -764,7 +764,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ScheduleResponse schedule(org.openapis.openapi.models.operations.ScheduleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SchedulePathParams.class, baseUrl, "/{format}/Schedules/{season}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScheduleRequest.class, baseUrl, "/{format}/Schedules/{season}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -804,7 +804,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ScoresByDateResponse scoresByDate(org.openapis.openapi.models.operations.ScoresByDateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScoresByDatePathParams.class, baseUrl, "/{format}/ScoresByDate/{date}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScoresByDateRequest.class, baseUrl, "/{format}/ScoresByDate/{date}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -844,7 +844,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ScoresBySeasonResponse scoresBySeason(org.openapis.openapi.models.operations.ScoresBySeasonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScoresBySeasonPathParams.class, baseUrl, "/{format}/Scores/{season}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScoresBySeasonRequest.class, baseUrl, "/{format}/Scores/{season}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -884,7 +884,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ScoresByWeekResponse scoresByWeek(org.openapis.openapi.models.operations.ScoresByWeekRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScoresByWeekPathParams.class, baseUrl, "/{format}/ScoresByWeek/{season}/{week}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScoresByWeekRequest.class, baseUrl, "/{format}/ScoresByWeek/{season}/{week}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -924,7 +924,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ScoresByWeekSimulationResponse scoresByWeekSimulation(org.openapis.openapi.models.operations.ScoresByWeekSimulationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScoresByWeekSimulationPathParams.class, baseUrl, "/{format}/SimulatedScores/{numberofplays}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScoresByWeekSimulationRequest.class, baseUrl, "/{format}/SimulatedScores/{numberofplays}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -964,7 +964,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.SeasonCurrentResponse seasonCurrent(org.openapis.openapi.models.operations.SeasonCurrentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SeasonCurrentPathParams.class, baseUrl, "/{format}/CurrentSeason", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SeasonCurrentRequest.class, baseUrl, "/{format}/CurrentSeason", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1004,7 +1004,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.SeasonLastCompletedResponse seasonLastCompleted(org.openapis.openapi.models.operations.SeasonLastCompletedRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SeasonLastCompletedPathParams.class, baseUrl, "/{format}/LastCompletedSeason", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SeasonLastCompletedRequest.class, baseUrl, "/{format}/LastCompletedSeason", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1044,7 +1044,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.SeasonUpcomingResponse seasonUpcoming(org.openapis.openapi.models.operations.SeasonUpcomingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SeasonUpcomingPathParams.class, baseUrl, "/{format}/UpcomingSeason", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SeasonUpcomingRequest.class, baseUrl, "/{format}/UpcomingSeason", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1084,7 +1084,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.StadiumsResponse stadiums(org.openapis.openapi.models.operations.StadiumsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StadiumsPathParams.class, baseUrl, "/{format}/Stadiums", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StadiumsRequest.class, baseUrl, "/{format}/Stadiums", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1123,7 +1123,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.StandingsResponse standings(org.openapis.openapi.models.operations.StandingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StandingsPathParams.class, baseUrl, "/{format}/Standings/{season}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StandingsRequest.class, baseUrl, "/{format}/Standings/{season}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1163,7 +1163,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.TeamGameLogsBySeasonResponse teamGameLogsBySeason(org.openapis.openapi.models.operations.TeamGameLogsBySeasonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamGameLogsBySeasonPathParams.class, baseUrl, "/{format}/TeamGameStatsBySeason/{season}/{teamid}/{numberofgames}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamGameLogsBySeasonRequest.class, baseUrl, "/{format}/TeamGameStatsBySeason/{season}/{teamid}/{numberofgames}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1202,7 +1202,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.TeamGameStatsResponse teamGameStats(org.openapis.openapi.models.operations.TeamGameStatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamGameStatsPathParams.class, baseUrl, "/{format}/TeamGameStats/{season}/{week}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamGameStatsRequest.class, baseUrl, "/{format}/TeamGameStats/{season}/{week}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1241,7 +1241,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.TeamSeasonStatsResponse teamSeasonStats(org.openapis.openapi.models.operations.TeamSeasonStatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamSeasonStatsPathParams.class, baseUrl, "/{format}/TeamSeasonStats/{season}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamSeasonStatsRequest.class, baseUrl, "/{format}/TeamSeasonStats/{season}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1281,7 +1281,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.TeamsActiveResponse teamsActive(org.openapis.openapi.models.operations.TeamsActiveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsActivePathParams.class, baseUrl, "/{format}/Teams", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsActiveRequest.class, baseUrl, "/{format}/Teams", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1321,7 +1321,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.TeamsAllResponse teamsAll(org.openapis.openapi.models.operations.TeamsAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAllPathParams.class, baseUrl, "/{format}/AllTeams", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAllRequest.class, baseUrl, "/{format}/AllTeams", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1361,7 +1361,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.TeamsBySeasonResponse teamsBySeason(org.openapis.openapi.models.operations.TeamsBySeasonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsBySeasonPathParams.class, baseUrl, "/{format}/Teams/{season}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsBySeasonRequest.class, baseUrl, "/{format}/Teams/{season}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1401,7 +1401,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.TimeframesResponse timeframes(org.openapis.openapi.models.operations.TimeframesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TimeframesPathParams.class, baseUrl, "/{format}/Timeframes/{type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TimeframesRequest.class, baseUrl, "/{format}/Timeframes/{type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1441,7 +1441,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.WeekCurrentResponse weekCurrent(org.openapis.openapi.models.operations.WeekCurrentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WeekCurrentPathParams.class, baseUrl, "/{format}/CurrentWeek", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WeekCurrentRequest.class, baseUrl, "/{format}/CurrentWeek", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1481,7 +1481,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.WeekLastCompletedResponse weekLastCompleted(org.openapis.openapi.models.operations.WeekLastCompletedRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WeekLastCompletedPathParams.class, baseUrl, "/{format}/LastCompletedWeek", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WeekLastCompletedRequest.class, baseUrl, "/{format}/LastCompletedWeek", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1521,7 +1521,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.WeekUpcomingResponse weekUpcoming(org.openapis.openapi.models.operations.WeekUpcomingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WeekUpcomingPathParams.class, baseUrl, "/{format}/UpcomingWeek", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WeekUpcomingRequest.class, baseUrl, "/{format}/UpcomingWeek", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1561,7 +1561,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.XPingResponse xPing(org.openapis.openapi.models.operations.XPingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.XPingPathParams.class, baseUrl, "/{format}/Ping/{seconds}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.XPingRequest.class, baseUrl, "/{format}/Ping/{seconds}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

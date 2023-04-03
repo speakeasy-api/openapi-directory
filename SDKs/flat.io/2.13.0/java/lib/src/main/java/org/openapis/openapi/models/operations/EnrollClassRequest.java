@@ -4,20 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnrollClassRequest {
-    
-    public EnrollClassPathParams pathParams;
-    public EnrollClassRequest withPathParams(EnrollClassPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public EnrollClassSecurity security;
-    public EnrollClassRequest withSecurity(EnrollClassSecurity security) {
-        this.security = security;
+    /**
+     * The enrollment code, available to the teacher in `ClassDetails`
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enrollmentCode")
+    public String enrollmentCode;
+    public EnrollClassRequest withEnrollmentCode(String enrollmentCode) {
+        this.enrollmentCode = enrollmentCode;
         return this;
     }
     

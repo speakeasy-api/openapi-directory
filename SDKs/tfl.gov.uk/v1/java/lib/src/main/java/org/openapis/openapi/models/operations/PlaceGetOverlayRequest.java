@@ -4,20 +4,94 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlaceGetOverlayRequest {
-    
-    public PlaceGetOverlayPathParams pathParams;
-    public PlaceGetOverlayRequest withPathParams(PlaceGetOverlayPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Lat")
+    public String latPathParameter;
+    public PlaceGetOverlayRequest withLatPathParameter(String latPathParameter) {
+        this.latPathParameter = latPathParameter;
         return this;
     }
     
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Lon")
+    public String lonPathParameter;
+    public PlaceGetOverlayRequest withLonPathParameter(String lonPathParameter) {
+        this.lonPathParameter = lonPathParameter;
+        return this;
+    }
     
-    public PlaceGetOverlayQueryParams queryParams;
-    public PlaceGetOverlayRequest withQueryParams(PlaceGetOverlayQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The height of the requested overlay.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=height")
+    public Integer height;
+    public PlaceGetOverlayRequest withHeight(Integer height) {
+        this.height = height;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
+    public String latQueryParameter;
+    public PlaceGetOverlayRequest withLatQueryParameter(String latQueryParameter) {
+        this.latQueryParameter = latQueryParameter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location.lat")
+    public Double locationLat;
+    public PlaceGetOverlayRequest withLocationLat(Double locationLat) {
+        this.locationLat = locationLat;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location.lon")
+    public Double locationLon;
+    public PlaceGetOverlayRequest withLocationLon(Double locationLon) {
+        this.locationLon = locationLon;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lon")
+    public String lonQueryParameter;
+    public PlaceGetOverlayRequest withLonQueryParameter(String lonQueryParameter) {
+        this.lonQueryParameter = lonQueryParameter;
+        return this;
+    }
+    
+    /**
+     * The place type (a valid list of place types can be obtained from the /Place/Meta/placeTypes endpoint)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public String[] type;
+    public PlaceGetOverlayRequest withType(String[] type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * The width of the requested overlay.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=width")
+    public Integer width;
+    public PlaceGetOverlayRequest withWidth(Integer width) {
+        this.width = width;
+        return this;
+    }
+    
+    /**
+     * The zoom level
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=z")
+    public Integer z;
+    public PlaceGetOverlayRequest withZ(Integer z) {
+        this.z = z;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETMapsUsingGET1Request {
-    
-    public GETMapsUsingGET1PathParams pathParams;
-    public GETMapsUsingGET1Request withPathParams(GETMapsUsingGET1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * RGD term acc
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accId")
+    public String accId;
+    public GETMapsUsingGET1Request withAccId(String accId) {
+        this.accId = accId;
         return this;
     }
     

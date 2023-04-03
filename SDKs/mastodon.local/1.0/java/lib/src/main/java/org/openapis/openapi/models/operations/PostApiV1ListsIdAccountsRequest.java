@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV1ListsIdAccountsRequest {
-    
-    public PostApiV1ListsIdAccountsPathParams pathParams;
-    public PostApiV1ListsIdAccountsRequest withPathParams(PostApiV1ListsIdAccountsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostApiV1ListsIdAccountsRequestBody request;
-    public PostApiV1ListsIdAccountsRequest withRequest(PostApiV1ListsIdAccountsRequestBody request) {
-        this.request = request;
+    public PostApiV1ListsIdAccountsRequestBody requestBody;
+    public PostApiV1ListsIdAccountsRequest withRequestBody(PostApiV1ListsIdAccountsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostApiV1ListsIdAccountsSecurity security;
-    public PostApiV1ListsIdAccountsRequest withSecurity(PostApiV1ListsIdAccountsSecurity security) {
-        this.security = security;
+    /**
+     * ID of the list in the database
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostApiV1ListsIdAccountsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

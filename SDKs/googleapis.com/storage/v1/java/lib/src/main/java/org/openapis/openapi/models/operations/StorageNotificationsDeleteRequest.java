@@ -4,27 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageNotificationsDeleteRequest {
-    
-    public StorageNotificationsDeletePathParams pathParams;
-    public StorageNotificationsDeleteRequest withPathParams(StorageNotificationsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public StorageNotificationsDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public StorageNotificationsDeleteQueryParams queryParams;
-    public StorageNotificationsDeleteRequest withQueryParams(StorageNotificationsDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The parent bucket of the notification.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket")
+    public String bucket;
+    public StorageNotificationsDeleteRequest withBucket(String bucket) {
+        this.bucket = bucket;
         return this;
     }
     
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public StorageNotificationsDeleteRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public StorageNotificationsDeleteSecurity security;
-    public StorageNotificationsDeleteRequest withSecurity(StorageNotificationsDeleteSecurity security) {
-        this.security = security;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public StorageNotificationsDeleteRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * ID of the notification to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=notification")
+    public String notification;
+    public StorageNotificationsDeleteRequest withNotification(String notification) {
+        this.notification = notification;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public StorageNotificationsDeleteRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public StorageNotificationsDeleteRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public StorageNotificationsDeleteRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "media", "multipart", "resumable").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public StorageNotificationsDeleteRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public StorageNotificationsDeleteRequest withUserIp(String userIp) {
+        this.userIp = userIp;
+        return this;
+    }
+    
+    /**
+     * The project to be billed for this request. Required for Requester Pays buckets.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userProject")
+    public String userProject;
+    public StorageNotificationsDeleteRequest withUserProject(String userProject) {
+        this.userProject = userProject;
         return this;
     }
     

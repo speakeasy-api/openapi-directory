@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DevicesBlockLogsRequest {
-    
-    public DevicesBlockLogsPathParams pathParams;
-    public DevicesBlockLogsRequest withPathParams(DevicesBlockLogsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public DevicesBlockLogsRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The id of the device
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=install_id")
+    public String installId;
+    public DevicesBlockLogsRequest withInstallId(String installId) {
+        this.installId = installId;
+        return this;
+    }
     
-    public DevicesBlockLogsSecurity security;
-    public DevicesBlockLogsRequest withSecurity(DevicesBlockLogsSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public DevicesBlockLogsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

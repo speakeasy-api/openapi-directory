@@ -7,31 +7,80 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeOrderRequest {
-    
-    public ChangeOrderPathParams pathParams;
-    public ChangeOrderRequest withPathParams(ChangeOrderPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ChangeOrderQueryParams queryParams;
-    public ChangeOrderRequest withQueryParams(ChangeOrderQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ChangeOrderHeaders headers;
-    public ChangeOrderRequest withHeaders(ChangeOrderHeaders headers) {
-        this.headers = headers;
+    /**
+     * ETag value to identify the last known version of requested resource.\
+     * To ensure that you are making a change on the lastest version of the resource.\
+     * For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public ChangeOrderRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, String> request;
-    public ChangeOrderRequest withRequest(java.util.Map<String, String> request) {
-        this.request = request;
+    public java.util.Map<String, String> requestBody;
+    public ChangeOrderRequest withRequestBody(java.util.Map<String, String> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public Integer accountId;
+    public ChangeOrderRequest withAccountId(Integer accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    
+    /**
+     * The BeezUP Order identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=beezUPOrderId")
+    public String beezUPOrderId;
+    public ChangeOrderRequest withBeezUPOrderId(String beezUPOrderId) {
+        this.beezUPOrderId = beezUPOrderId;
+        return this;
+    }
+    
+    /**
+     * The Order change type
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=changeOrderType")
+    public String changeOrderType;
+    public ChangeOrderRequest withChangeOrderType(String changeOrderType) {
+        this.changeOrderType = changeOrderType;
+        return this;
+    }
+    
+    /**
+     * The marketplace technical code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
+    public String marketplaceTechnicalCode;
+    public ChangeOrderRequest withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+        return this;
+    }
+    
+    /**
+     * If true, the operation will be not be sent to marketplace. But the validation will be taken in account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=testMode")
+    public Boolean testMode;
+    public ChangeOrderRequest withTestMode(Boolean testMode) {
+        this.testMode = testMode;
+        return this;
+    }
+    
+    /**
+     * Sometimes the user in the e-commerce application is not the same as user associated with the current subscription key. We recommend providing your application's user login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userName")
+    public String userName;
+    public ChangeOrderRequest withUserName(String userName) {
+        this.userName = userName;
         return this;
     }
     

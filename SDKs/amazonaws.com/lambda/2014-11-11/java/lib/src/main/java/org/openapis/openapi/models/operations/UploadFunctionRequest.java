@@ -7,31 +7,139 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadFunctionRequest {
-    
-    public UploadFunctionPathParams pathParams;
-    public UploadFunctionRequest withPathParams(UploadFunctionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A short, user-defined function description. Lambda does not use this value. Assign a meaningful description as you see fit.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Description")
+    public String description;
+    public UploadFunctionRequest withDescription(String description) {
+        this.description = description;
         return this;
     }
     
-    
-    public UploadFunctionQueryParams queryParams;
-    public UploadFunctionRequest withQueryParams(UploadFunctionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name you want to assign to the function you are uploading. The function names appear in the console and are returned in the &lt;a&gt;ListFunctions&lt;/a&gt; API. Function names are used to specify functions to other AWS Lambda APIs, such as &lt;a&gt;InvokeAsync&lt;/a&gt;. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FunctionName")
+    public String functionName;
+    public UploadFunctionRequest withFunctionName(String functionName) {
+        this.functionName = functionName;
         return this;
     }
     
+    /**
+     * The function that Lambda calls to begin execution. For Node.js, it is the &lt;i&gt;module-name&lt;/i&gt;.&lt;i&gt;export&lt;/i&gt; value in your function. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Handler")
+    public String handler;
+    public UploadFunctionRequest withHandler(String handler) {
+        this.handler = handler;
+        return this;
+    }
     
-    public UploadFunctionHeaders headers;
-    public UploadFunctionRequest withHeaders(UploadFunctionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The amount of memory, in MB, your Lambda function is given. Lambda uses this memory size to infer the amount of CPU allocated to your function. Your function use-case determines your CPU and memory requirements. For example, database operation might need less memory compared to image processing function. The default value is 128 MB. The value must be a multiple of 64 MB.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MemorySize")
+    public Long memorySize;
+    public UploadFunctionRequest withMemorySize(Long memorySize) {
+        this.memorySize = memorySize;
+        return this;
+    }
+    
+    /**
+     * How the Lambda function will be invoked. Lambda supports only the "event" mode. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Mode")
+    public UploadFunctionModeEnum mode;
+    public UploadFunctionRequest withMode(UploadFunctionModeEnum mode) {
+        this.mode = mode;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UploadFunctionRequestBody request;
-    public UploadFunctionRequest withRequest(UploadFunctionRequestBody request) {
-        this.request = request;
+    public UploadFunctionRequestBody requestBody;
+    public UploadFunctionRequest withRequestBody(UploadFunctionRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role that Lambda assumes when it executes your function to access any other Amazon Web Services (AWS) resources. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Role")
+    public String role;
+    public UploadFunctionRequest withRole(String role) {
+        this.role = role;
+        return this;
+    }
+    
+    /**
+     * The runtime environment for the Lambda function you are uploading. Currently, Lambda supports only "nodejs" as the runtime.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Runtime")
+    public UploadFunctionRuntimeEnum runtime;
+    public UploadFunctionRequest withRuntime(UploadFunctionRuntimeEnum runtime) {
+        this.runtime = runtime;
+        return this;
+    }
+    
+    /**
+     * The function execution time at which Lambda should terminate the function. Because the execution time has cost implications, we recommend you set this value based on your expected execution time. The default is 3 seconds. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timeout")
+    public Long timeout;
+    public UploadFunctionRequest withTimeout(Long timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UploadFunctionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UploadFunctionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UploadFunctionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UploadFunctionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UploadFunctionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UploadFunctionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UploadFunctionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

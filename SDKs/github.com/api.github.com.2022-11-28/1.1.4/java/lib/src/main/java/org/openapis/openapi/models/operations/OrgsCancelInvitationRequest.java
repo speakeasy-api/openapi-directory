@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsCancelInvitationRequest {
+    /**
+     * The unique identifier of the invitation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invitation_id")
+    public Long invitationId;
+    public OrgsCancelInvitationRequest withInvitationId(Long invitationId) {
+        this.invitationId = invitationId;
+        return this;
+    }
     
-    public OrgsCancelInvitationPathParams pathParams;
-    public OrgsCancelInvitationRequest withPathParams(OrgsCancelInvitationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsCancelInvitationRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

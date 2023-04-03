@@ -4,13 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VirtualTariffConsumptionGetRequest {
+    /**
+     * The end date (UTC)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public OffsetDateTime endDate;
+    public VirtualTariffConsumptionGetRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
+        return this;
+    }
     
-    public VirtualTariffConsumptionGetQueryParams queryParams;
-    public VirtualTariffConsumptionGetRequest withQueryParams(VirtualTariffConsumptionGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the Folder
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=folderId")
+    public String folderId;
+    public VirtualTariffConsumptionGetRequest withFolderId(String folderId) {
+        this.folderId = folderId;
+        return this;
+    }
+    
+    /**
+     * The start date (UTC)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public OffsetDateTime startDate;
+    public VirtualTariffConsumptionGetRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
         return this;
     }
     

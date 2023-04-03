@@ -7,17 +7,27 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRealmGroupsIdRoleMappingsRealmRequest {
-    
-    public DeleteRealmGroupsIdRoleMappingsRealmPathParams pathParams;
-    public DeleteRealmGroupsIdRoleMappingsRealmRequest withPathParams(DeleteRealmGroupsIdRoleMappingsRealmPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.RoleRepresentation[] requestBody;
+    public DeleteRealmGroupsIdRoleMappingsRealmRequest withRequestBody(org.openapis.openapi.models.shared.RoleRepresentation[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RoleRepresentation[] request;
-    public DeleteRealmGroupsIdRoleMappingsRealmRequest withRequest(org.openapis.openapi.models.shared.RoleRepresentation[] request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteRealmGroupsIdRoleMappingsRealmRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public DeleteRealmGroupsIdRoleMappingsRealmRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

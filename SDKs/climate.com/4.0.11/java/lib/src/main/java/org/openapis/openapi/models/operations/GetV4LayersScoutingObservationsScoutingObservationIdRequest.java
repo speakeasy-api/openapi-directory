@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV4LayersScoutingObservationsScoutingObservationIdRequest {
-    
-    public GetV4LayersScoutingObservationsScoutingObservationIdPathParams pathParams;
-    public GetV4LayersScoutingObservationsScoutingObservationIdRequest withPathParams(GetV4LayersScoutingObservationsScoutingObservationIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetV4LayersScoutingObservationsScoutingObservationIdSecurity security;
-    public GetV4LayersScoutingObservationsScoutingObservationIdRequest withSecurity(GetV4LayersScoutingObservationsScoutingObservationIdSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the Scouting Observation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scoutingObservationId")
+    public String scoutingObservationId;
+    public GetV4LayersScoutingObservationsScoutingObservationIdRequest withScoutingObservationId(String scoutingObservationId) {
+        this.scoutingObservationId = scoutingObservationId;
         return this;
     }
     

@@ -135,7 +135,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetReisezentrenQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetReisezentrenRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -182,7 +182,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetReisezentrenLocLatLonResponse getReisezentrenLocLatLon(org.openapis.openapi.models.operations.GetReisezentrenLocLatLonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReisezentrenLocLatLonPathParams.class, baseUrl, "/reisezentren/loc/{lat}/{lon}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReisezentrenLocLatLonRequest.class, baseUrl, "/reisezentren/loc/{lat}/{lon}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -221,7 +221,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetReisezentrenLocLatLonDistResponse getReisezentrenLocLatLonDist(org.openapis.openapi.models.operations.GetReisezentrenLocLatLonDistRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReisezentrenLocLatLonDistPathParams.class, baseUrl, "/reisezentren/loc/{lat}/{lon}/{dist}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReisezentrenLocLatLonDistRequest.class, baseUrl, "/reisezentren/loc/{lat}/{lon}/{dist}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -260,7 +260,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetReisezentrenIdResponse getReisezentrenId(org.openapis.openapi.models.operations.GetReisezentrenIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReisezentrenIdPathParams.class, baseUrl, "/reisezentren/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReisezentrenIdRequest.class, baseUrl, "/reisezentren/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

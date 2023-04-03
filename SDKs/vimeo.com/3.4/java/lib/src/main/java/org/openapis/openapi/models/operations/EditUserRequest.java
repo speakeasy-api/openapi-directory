@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditUserRequest {
-    
-    public EditUserPathParams pathParams;
-    public EditUserRequest withPathParams(EditUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.user+json")
+    public EditUserRequestBody requestBody;
+    public EditUserRequest withRequestBody(EditUserRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.user+json")
-    public EditUserRequestBody request;
-    public EditUserRequest withRequest(EditUserRequestBody request) {
-        this.request = request;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public EditUserRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

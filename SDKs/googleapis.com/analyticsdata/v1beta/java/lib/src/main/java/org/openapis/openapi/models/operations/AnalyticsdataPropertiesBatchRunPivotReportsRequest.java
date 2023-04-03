@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsdataPropertiesBatchRunPivotReportsRequest {
-    
-    public AnalyticsdataPropertiesBatchRunPivotReportsPathParams pathParams;
-    public AnalyticsdataPropertiesBatchRunPivotReportsRequest withPathParams(AnalyticsdataPropertiesBatchRunPivotReportsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AnalyticsdataPropertiesBatchRunPivotReportsQueryParams queryParams;
-    public AnalyticsdataPropertiesBatchRunPivotReportsRequest withQueryParams(AnalyticsdataPropertiesBatchRunPivotReportsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AnalyticsdataPropertiesBatchRunPivotReportsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BatchRunPivotReportsRequest request;
-    public AnalyticsdataPropertiesBatchRunPivotReportsRequest withRequest(org.openapis.openapi.models.shared.BatchRunPivotReportsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BatchRunPivotReportsRequest batchRunPivotReportsRequest;
+    public AnalyticsdataPropertiesBatchRunPivotReportsRequest withBatchRunPivotReportsRequest(org.openapis.openapi.models.shared.BatchRunPivotReportsRequest batchRunPivotReportsRequest) {
+        this.batchRunPivotReportsRequest = batchRunPivotReportsRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AnalyticsdataPropertiesBatchRunPivotReportsRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public AnalyticsdataPropertiesBatchRunPivotReportsSecurity security;
-    public AnalyticsdataPropertiesBatchRunPivotReportsRequest withSecurity(AnalyticsdataPropertiesBatchRunPivotReportsSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AnalyticsdataPropertiesBatchRunPivotReportsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AnalyticsdataPropertiesBatchRunPivotReportsRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AnalyticsdataPropertiesBatchRunPivotReportsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AnalyticsdataPropertiesBatchRunPivotReportsRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AnalyticsdataPropertiesBatchRunPivotReportsRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AnalyticsdataPropertiesBatchRunPivotReportsRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * A Google Analytics GA4 property identifier whose events are tracked. Specified in the URL path and not the body. To learn more, see [where to find your Property ID](https://developers.google.com/analytics/devguides/reporting/data/v1/property-id). This property must be specified for the batch. The property within RunPivotReportRequest may either be unspecified or consistent with this property. Example: properties/1234
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=property")
+    public String property;
+    public AnalyticsdataPropertiesBatchRunPivotReportsRequest withProperty(String property) {
+        this.property = property;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AnalyticsdataPropertiesBatchRunPivotReportsRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AnalyticsdataPropertiesBatchRunPivotReportsRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AnalyticsdataPropertiesBatchRunPivotReportsRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

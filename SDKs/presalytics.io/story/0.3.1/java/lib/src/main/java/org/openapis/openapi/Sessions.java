@@ -41,7 +41,7 @@ public class Sessions {
      */
     public org.openapis.openapi.models.operations.SessionIdDeleteResponse sessionIdDelete(org.openapis.openapi.models.operations.SessionIdDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SessionIdDeletePathParams.class, baseUrl, "/sessions/{session_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SessionIdDeleteRequest.class, baseUrl, "/sessions/{session_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,13 +82,13 @@ public class Sessions {
      */
     public org.openapis.openapi.models.operations.SessionIdGetResponse sessionIdGet(org.openapis.openapi.models.operations.SessionIdGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SessionIdGetPathParams.class, baseUrl, "/sessions/{session_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SessionIdGetRequest.class, baseUrl, "/sessions/{session_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SessionIdGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SessionIdGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -135,12 +135,12 @@ public class Sessions {
      */
     public org.openapis.openapi.models.operations.StoryIdSessionPostResponse storyIdSessionPost(org.openapis.openapi.models.operations.StoryIdSessionPostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdSessionPostPathParams.class, baseUrl, "/{id}/sessions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdSessionPostRequest.class, baseUrl, "/{id}/sessions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createSessionRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -187,13 +187,13 @@ public class Sessions {
      */
     public org.openapis.openapi.models.operations.StoryIdSessionsGetResponse storyIdSessionsGet(org.openapis.openapi.models.operations.StoryIdSessionsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdSessionsGetPathParams.class, baseUrl, "/{id}/sessions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdSessionsGetRequest.class, baseUrl, "/{id}/sessions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StoryIdSessionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StoryIdSessionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

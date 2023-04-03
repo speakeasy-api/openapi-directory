@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRequest {
-    
-    public ListQueryParams queryParams;
-    public ListRequest withQueryParams(ListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * East bounding box
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=e")
+    public Float e;
+    public ListRequest withE(Float e) {
+        this.e = e;
         return this;
     }
     
+    /**
+     * North bounding box
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=n")
+    public Float n;
+    public ListRequest withN(Float n) {
+        this.n = n;
+        return this;
+    }
     
-    public ListSecurity security;
-    public ListRequest withSecurity(ListSecurity security) {
-        this.security = security;
+    /**
+     * South bounding box
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=s")
+    public Float s;
+    public ListRequest withS(Float s) {
+        this.s = s;
+        return this;
+    }
+    
+    /**
+     * West bounding box
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=w")
+    public Float w;
+    public ListRequest withW(Float w) {
+        this.w = w;
         return this;
     }
     

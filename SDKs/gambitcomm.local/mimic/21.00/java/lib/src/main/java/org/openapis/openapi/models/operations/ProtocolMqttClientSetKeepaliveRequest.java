@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientSetKeepaliveRequest {
+    /**
+     * Agent to set MQTT config
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolMqttClientSetKeepaliveRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolMqttClientSetKeepalivePathParams pathParams;
-    public ProtocolMqttClientSetKeepaliveRequest withPathParams(ProtocolMqttClientSetKeepalivePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * period to send keepalive messages
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aliveTime")
+    public Integer aliveTime;
+    public ProtocolMqttClientSetKeepaliveRequest withAliveTime(Integer aliveTime) {
+        this.aliveTime = aliveTime;
         return this;
     }
     

@@ -4,13 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFleetFleetnameRequest {
-    
-    public GetFleetFleetnamePathParams pathParams;
-    public GetFleetFleetnameRequest withPathParams(GetFleetFleetnamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The identifier or email address of the fleet; it is integrated in the `sub` property and is the basis of the other generated properties.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fleetname")
+    public String fleetname;
+    public GetFleetFleetnameRequest withFleetname(String fleetname) {
+        this.fleetname = fleetname;
         return this;
     }
     

@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPipelineRequest {
+    /**
+     * The UUID of the pipeline.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pipeline_uuid")
+    public String pipelineUuid;
+    public StopPipelineRequest withPipelineUuid(String pipelineUuid) {
+        this.pipelineUuid = pipelineUuid;
+        return this;
+    }
     
-    public StopPipelinePathParams pathParams;
-    public StopPipelineRequest withPathParams(StopPipelinePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public StopPipelineRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public StopPipelineRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

@@ -40,7 +40,7 @@ public class L7FirewallRules {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceFirewallL7FirewallRulesResponse getNetworkApplianceFirewallL7FirewallRules(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallL7FirewallRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallL7FirewallRulesPathParams.class, baseUrl, "/networks/{networkId}/appliance/firewall/l7FirewallRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallL7FirewallRulesRequest.class, baseUrl, "/networks/{networkId}/appliance/firewall/l7FirewallRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,7 +80,7 @@ public class L7FirewallRules {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceFirewallL7FirewallRulesApplicationCategoriesResponse getNetworkApplianceFirewallL7FirewallRulesApplicationCategories(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallL7FirewallRulesApplicationCategoriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallL7FirewallRulesApplicationCategoriesPathParams.class, baseUrl, "/networks/{networkId}/appliance/firewall/l7FirewallRules/applicationCategories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallL7FirewallRulesApplicationCategoriesRequest.class, baseUrl, "/networks/{networkId}/appliance/firewall/l7FirewallRules/applicationCategories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,7 +120,7 @@ public class L7FirewallRules {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidFirewallL7FirewallRulesResponse getNetworkWirelessSsidFirewallL7FirewallRules(org.openapis.openapi.models.operations.GetNetworkWirelessSsidFirewallL7FirewallRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidFirewallL7FirewallRulesPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/firewall/l7FirewallRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidFirewallL7FirewallRulesRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/firewall/l7FirewallRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -160,12 +160,12 @@ public class L7FirewallRules {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceFirewallL7FirewallRulesResponse updateNetworkApplianceFirewallL7FirewallRules(org.openapis.openapi.models.operations.UpdateNetworkApplianceFirewallL7FirewallRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceFirewallL7FirewallRulesPathParams.class, baseUrl, "/networks/{networkId}/appliance/firewall/l7FirewallRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceFirewallL7FirewallRulesRequest.class, baseUrl, "/networks/{networkId}/appliance/firewall/l7FirewallRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -202,12 +202,12 @@ public class L7FirewallRules {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidFirewallL7FirewallRulesResponse updateNetworkWirelessSsidFirewallL7FirewallRules(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidFirewallL7FirewallRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidFirewallL7FirewallRulesPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/firewall/l7FirewallRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidFirewallL7FirewallRulesRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/firewall/l7FirewallRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

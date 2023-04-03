@@ -7,10 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostTransformDefinitionRequest {
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public PostTransformDefinitionRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
     
-    public PostTransformDefinitionHeaders headers;
-    public PostTransformDefinitionRequest withHeaders(PostTransformDefinitionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostTransformDefinitionRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
@@ -18,9 +31,9 @@ public class PostTransformDefinitionRequest {
      * The transform definition object to be executed against the report data.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TransformDefinition request;
-    public PostTransformDefinitionRequest withRequest(org.openapis.openapi.models.shared.TransformDefinition request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TransformDefinition transformDefinition;
+    public PostTransformDefinitionRequest withTransformDefinition(org.openapis.openapi.models.shared.TransformDefinition transformDefinition) {
+        this.transformDefinition = transformDefinition;
         return this;
     }
     

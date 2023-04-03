@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiDisplayAdsIdRequest {
-    
-    public GetApiDisplayAdsIdPathParams pathParams;
-    public GetApiDisplayAdsIdRequest withPathParams(GetApiDisplayAdsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the user to unpublish.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetApiDisplayAdsIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

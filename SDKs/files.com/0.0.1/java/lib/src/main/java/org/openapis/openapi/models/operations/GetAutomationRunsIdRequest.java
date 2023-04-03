@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAutomationRunsIdRequest {
-    
-    public GetAutomationRunsIdPathParams pathParams;
-    public GetAutomationRunsIdRequest withPathParams(GetAutomationRunsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automation Run ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetAutomationRunsIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

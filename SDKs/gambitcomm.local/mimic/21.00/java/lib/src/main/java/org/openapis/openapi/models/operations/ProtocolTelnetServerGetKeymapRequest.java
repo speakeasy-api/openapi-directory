@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolTelnetServerGetKeymapRequest {
-    
-    public ProtocolTelnetServerGetKeymapPathParams pathParams;
-    public ProtocolTelnetServerGetKeymapRequest withPathParams(ProtocolTelnetServerGetKeymapPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show TELNET statistics
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolTelnetServerGetKeymapRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

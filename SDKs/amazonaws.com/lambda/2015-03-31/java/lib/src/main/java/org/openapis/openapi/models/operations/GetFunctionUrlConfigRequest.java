@@ -4,27 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFunctionUrlConfigRequest {
-    
-    public GetFunctionUrlConfigPathParams pathParams;
-    public GetFunctionUrlConfigRequest withPathParams(GetFunctionUrlConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * &lt;p&gt;The name of the Lambda function.&lt;/p&gt; &lt;p class="title"&gt; &lt;b&gt;Name formats&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Function name&lt;/b&gt; \u2013 &lt;code&gt;my-function&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Function ARN&lt;/b&gt; \u2013 &lt;code&gt;arn:aws:lambda:us-west-2:123456789012:function:my-function&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Partial ARN&lt;/b&gt; \u2013 &lt;code&gt;123456789012:function:my-function&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FunctionName")
+    public String functionName;
+    public GetFunctionUrlConfigRequest withFunctionName(String functionName) {
+        this.functionName = functionName;
         return this;
     }
     
-    
-    public GetFunctionUrlConfigQueryParams queryParams;
-    public GetFunctionUrlConfigRequest withQueryParams(GetFunctionUrlConfigQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The alias name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Qualifier")
+    public String qualifier;
+    public GetFunctionUrlConfigRequest withQualifier(String qualifier) {
+        this.qualifier = qualifier;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetFunctionUrlConfigRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
     
-    public GetFunctionUrlConfigHeaders headers;
-    public GetFunctionUrlConfigRequest withHeaders(GetFunctionUrlConfigHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetFunctionUrlConfigRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetFunctionUrlConfigRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetFunctionUrlConfigRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetFunctionUrlConfigRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetFunctionUrlConfigRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetFunctionUrlConfigRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

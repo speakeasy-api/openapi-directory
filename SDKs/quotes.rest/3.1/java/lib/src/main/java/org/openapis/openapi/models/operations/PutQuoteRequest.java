@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutQuoteRequest {
-    
-    public PutQuoteQueryParams queryParams;
-    public PutQuoteRequest withQueryParams(PutQuoteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Quote Author
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=author")
+    public String author;
+    public PutQuoteRequest withAuthor(String author) {
+        this.author = author;
         return this;
     }
     
+    /**
+     * Language. If not supplied an auto detection mechanism will be used to detect a language.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public PutQuoteRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
     
-    public PutQuoteSecurity security;
-    public PutQuoteRequest withSecurity(PutQuoteSecurity security) {
-        this.security = security;
+    /**
+     * Quote
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quote")
+    public String quote;
+    public PutQuoteRequest withQuote(String quote) {
+        this.quote = quote;
+        return this;
+    }
+    
+    /**
+     * Comma Separated tags
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public PutQuoteRequest withTags(String tags) {
+        this.tags = tags;
         return this;
     }
     

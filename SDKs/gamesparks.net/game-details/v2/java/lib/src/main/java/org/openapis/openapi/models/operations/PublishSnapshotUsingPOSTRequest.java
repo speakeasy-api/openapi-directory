@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishSnapshotUsingPOSTRequest {
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public PublishSnapshotUsingPOSTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public PublishSnapshotUsingPOSTPathParams pathParams;
-    public PublishSnapshotUsingPOSTRequest withPathParams(PublishSnapshotUsingPOSTPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * snapshotId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=snapshotId")
+    public String snapshotId;
+    public PublishSnapshotUsingPOSTRequest withSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
         return this;
     }
     

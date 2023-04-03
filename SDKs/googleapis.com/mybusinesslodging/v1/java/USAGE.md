@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.MybusinesslodgingLocationsGetLodgingPathParams;
-import org.openapis.openapi.models.operations.MybusinesslodgingLocationsGetLodgingQueryParams;
 import org.openapis.openapi.models.operations.MybusinesslodgingLocationsGetLodgingRequest;
 import org.openapis.openapi.models.operations.MybusinesslodgingLocationsGetLodgingResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -18,24 +16,20 @@ public class Application {
                 .build();
 
             MybusinesslodgingLocationsGetLodgingRequest req = new MybusinesslodgingLocationsGetLodgingRequest() {{
-                pathParams = new MybusinesslodgingLocationsGetLodgingPathParams() {{
-                    name = "corrupti";
-                }};
-                queryParams = new MybusinesslodgingLocationsGetLodgingQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    readMask = "error";
-                    uploadType = "deserunt";
-                    uploadProtocol = "suscipit";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                key = "nulla";
+                name = "corrupti";
+                oauthToken = "illum";
+                prettyPrint = false;
+                quotaUser = "vel";
+                readMask = "error";
+                uploadType = "deserunt";
+                uploadProtocol = "suscipit";
+            }}            
 
             MybusinesslodgingLocationsGetLodgingResponse res = sdk.locations.mybusinesslodgingLocationsGetLodging(req);
 

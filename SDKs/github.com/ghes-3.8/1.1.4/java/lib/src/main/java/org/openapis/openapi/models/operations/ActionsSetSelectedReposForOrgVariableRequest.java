@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsSetSelectedReposForOrgVariableRequest {
-    
-    public ActionsSetSelectedReposForOrgVariablePathParams pathParams;
-    public ActionsSetSelectedReposForOrgVariableRequest withPathParams(ActionsSetSelectedReposForOrgVariablePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsSetSelectedReposForOrgVariableRequestBody requestBody;
+    public ActionsSetSelectedReposForOrgVariableRequest withRequestBody(ActionsSetSelectedReposForOrgVariableRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsSetSelectedReposForOrgVariableRequestBody request;
-    public ActionsSetSelectedReposForOrgVariableRequest withRequest(ActionsSetSelectedReposForOrgVariableRequestBody request) {
-        this.request = request;
+    /**
+     * The name of the variable.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public ActionsSetSelectedReposForOrgVariableRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsSetSelectedReposForOrgVariableRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

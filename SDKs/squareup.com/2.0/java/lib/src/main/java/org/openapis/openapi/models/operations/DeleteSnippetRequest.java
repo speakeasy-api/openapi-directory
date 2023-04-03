@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSnippetRequest {
-    
-    public DeleteSnippetPathParams pathParams;
-    public DeleteSnippetRequest withPathParams(DeleteSnippetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteSnippetSecurity security;
-    public DeleteSnippetRequest withSecurity(DeleteSnippetSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the site that contains the snippet.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=site_id")
+    public String siteId;
+    public DeleteSnippetRequest withSiteId(String siteId) {
+        this.siteId = siteId;
         return this;
     }
     

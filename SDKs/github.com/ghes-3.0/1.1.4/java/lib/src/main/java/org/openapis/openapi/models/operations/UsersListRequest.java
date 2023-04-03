@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersListRequest {
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public UsersListRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public UsersListQueryParams queryParams;
-    public UsersListRequest withQueryParams(UsersListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A user ID. Only return users with an ID greater than this ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public Long since;
+    public UsersListRequest withSince(Long since) {
+        this.since = since;
         return this;
     }
     

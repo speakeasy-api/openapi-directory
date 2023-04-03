@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageRequest {
-    
-    public GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPagePathParams pathParams;
-    public GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageRequest withPathParams(GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPagePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageRequest withAppId(Integer appId) {
+        this.appId = appId;
         return this;
     }
     
-    
-    public GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageSecurity security;
-    public GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageRequest withSecurity(GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the custom workflow action.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=definitionId")
+    public String definitionId;
+    public GetAutomationV4ActionsAppIdDefinitionIdFunctionsGetPageRequest withDefinitionId(String definitionId) {
+        this.definitionId = definitionId;
         return this;
     }
     

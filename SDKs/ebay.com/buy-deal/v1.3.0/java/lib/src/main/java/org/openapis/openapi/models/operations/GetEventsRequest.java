@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventsRequest {
-    
-    public GetEventsQueryParams queryParams;
-    public GetEventsRequest withQueryParams(GetEventsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A header used to specify the eBay marketplace ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public GetEventsRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     
-    
-    public GetEventsHeaders headers;
-    public GetEventsRequest withHeaders(GetEventsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The maximum number of items, from the current result set, returned on a single page. Default: 20 Maximum Value: 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public GetEventsRequest withLimit(String limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetEventsSecurity security;
-    public GetEventsRequest withSecurity(GetEventsSecurity security) {
-        this.security = security;
+    /**
+     * The number of items that will be skipped in the result set. This is used with the limit field to control the pagination of the output. For example, if the offset is set to 0 and the limit is set to 10, the method will retrieve items 1 through 10 from the list of items returned. If the offset is set to 10 and the limit is set to 10, the method will retrieve items 11 through 20 from the list of items returned. Default: 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetEventsRequest withOffset(String offset) {
+        this.offset = offset;
         return this;
     }
     

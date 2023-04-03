@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueGetCommentReactionsRequest {
+    /**
+     * id of the comment to edit
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public IssueGetCommentReactionsRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public IssueGetCommentReactionsPathParams pathParams;
-    public IssueGetCommentReactionsRequest withPathParams(IssueGetCommentReactionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueGetCommentReactionsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueGetCommentReactionsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

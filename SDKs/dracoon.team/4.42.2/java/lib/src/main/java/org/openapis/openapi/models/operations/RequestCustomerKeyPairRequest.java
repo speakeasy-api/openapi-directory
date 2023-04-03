@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestCustomerKeyPairRequest {
-    
-    public RequestCustomerKeyPairHeaders headers;
-    public RequestCustomerKeyPairRequest withHeaders(RequestCustomerKeyPairHeaders headers) {
-        this.headers = headers;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestCustomerKeyPairRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateContainerXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CreateContainerHeaders;
 import org.openapis.openapi.models.operations.CreateContainerRequest;
 import org.openapis.openapi.models.operations.CreateContainerResponse;
 import org.openapis.openapi.models.shared.CreateContainerInput;
@@ -29,37 +28,37 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateContainerRequest req = new CreateContainerRequest() {{
-                headers = new CreateContainerHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "MediaStore_20170901.CreateContainer";
-                }};
-                request = new CreateContainerInput() {{
-                    containerName = "illum";
+                createContainerInput = new CreateContainerInput() {{
+                    containerName = "corrupti";
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "error";
-                            value = "deserunt";
+                            key = "distinctio";
+                            value = "quibusdam";
                         }}),
                         add(new Tag() {{
-                            key = "suscipit";
-                            value = "iure";
+                            key = "unde";
+                            value = "nulla";
+                        }}),
+                        add(new Tag() {{
+                            key = "corrupti";
+                            value = "illum";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "vel";
+                xAmzContentSha256 = "error";
+                xAmzCredential = "deserunt";
+                xAmzDate = "suscipit";
+                xAmzSecurityToken = "iure";
+                xAmzSignature = "magnam";
+                xAmzSignedHeaders = "debitis";
+                xAmzTarget = "MediaStore_20170901.CreateContainer";
+            }}            
 
             CreateContainerResponse res = sdk.createContainer(req);
 
@@ -73,7 +72,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

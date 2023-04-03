@@ -4,20 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TransactionDetailsRequest {
-    
-    public TransactionDetailsPathParams pathParams;
-    public TransactionDetailsRequest withPathParams(TransactionDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public TransactionDetailsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * The Media type of the body of the request.  Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public TransactionDetailsRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public TransactionDetailsHeaders headers;
-    public TransactionDetailsRequest withHeaders(TransactionDetailsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The AppKey configured by the merchant (optional configuration)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppKey")
+    public String xPROVIDERAPIAppKey;
+    public TransactionDetailsRequest withXPROVIDERAPIAppKey(String xPROVIDERAPIAppKey) {
+        this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
+        return this;
+    }
+    
+    /**
+     * The AppToken configured by the merchant (optional configuration)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppToken")
+    public String xPROVIDERAPIAppToken;
+    public TransactionDetailsRequest withXPROVIDERAPIAppToken(String xPROVIDERAPIAppToken) {
+        this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionId")
+    public String transactionId;
+    public TransactionDetailsRequest withTransactionId(String transactionId) {
+        this.transactionId = transactionId;
         return this;
     }
     

@@ -4,13 +4,313 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimRegionsListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public DcimRegionsListRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
     
-    public DcimRegionsListQueryParams queryParams;
-    public DcimRegionsListRequest withQueryParams(DcimRegionsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description__ic")
+    public String descriptionIc;
+    public DcimRegionsListRequest withDescriptionIc(String descriptionIc) {
+        this.descriptionIc = descriptionIc;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description__ie")
+    public String descriptionIe;
+    public DcimRegionsListRequest withDescriptionIe(String descriptionIe) {
+        this.descriptionIe = descriptionIe;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description__iew")
+    public String descriptionIew;
+    public DcimRegionsListRequest withDescriptionIew(String descriptionIew) {
+        this.descriptionIew = descriptionIew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description__isw")
+    public String descriptionIsw;
+    public DcimRegionsListRequest withDescriptionIsw(String descriptionIsw) {
+        this.descriptionIsw = descriptionIsw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description__n")
+    public String descriptionN;
+    public DcimRegionsListRequest withDescriptionN(String descriptionN) {
+        this.descriptionN = descriptionN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description__nic")
+    public String descriptionNic;
+    public DcimRegionsListRequest withDescriptionNic(String descriptionNic) {
+        this.descriptionNic = descriptionNic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description__nie")
+    public String descriptionNie;
+    public DcimRegionsListRequest withDescriptionNie(String descriptionNie) {
+        this.descriptionNie = descriptionNie;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description__niew")
+    public String descriptionNiew;
+    public DcimRegionsListRequest withDescriptionNiew(String descriptionNiew) {
+        this.descriptionNiew = descriptionNiew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description__nisw")
+    public String descriptionNisw;
+    public DcimRegionsListRequest withDescriptionNisw(String descriptionNisw) {
+        this.descriptionNisw = descriptionNisw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public DcimRegionsListRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gt")
+    public String idGt;
+    public DcimRegionsListRequest withIdGt(String idGt) {
+        this.idGt = idGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gte")
+    public String idGte;
+    public DcimRegionsListRequest withIdGte(String idGte) {
+        this.idGte = idGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lt")
+    public String idLt;
+    public DcimRegionsListRequest withIdLt(String idLt) {
+        this.idLt = idLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lte")
+    public String idLte;
+    public DcimRegionsListRequest withIdLte(String idLte) {
+        this.idLte = idLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__n")
+    public String idN;
+    public DcimRegionsListRequest withIdN(String idN) {
+        this.idN = idN;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public DcimRegionsListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DcimRegionsListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__ic")
+    public String nameIc;
+    public DcimRegionsListRequest withNameIc(String nameIc) {
+        this.nameIc = nameIc;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__ie")
+    public String nameIe;
+    public DcimRegionsListRequest withNameIe(String nameIe) {
+        this.nameIe = nameIe;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__iew")
+    public String nameIew;
+    public DcimRegionsListRequest withNameIew(String nameIew) {
+        this.nameIew = nameIew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__isw")
+    public String nameIsw;
+    public DcimRegionsListRequest withNameIsw(String nameIsw) {
+        this.nameIsw = nameIsw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__n")
+    public String nameN;
+    public DcimRegionsListRequest withNameN(String nameN) {
+        this.nameN = nameN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nic")
+    public String nameNic;
+    public DcimRegionsListRequest withNameNic(String nameNic) {
+        this.nameNic = nameNic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nie")
+    public String nameNie;
+    public DcimRegionsListRequest withNameNie(String nameNie) {
+        this.nameNie = nameNie;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__niew")
+    public String nameNiew;
+    public DcimRegionsListRequest withNameNiew(String nameNiew) {
+        this.nameNiew = nameNiew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nisw")
+    public String nameNisw;
+    public DcimRegionsListRequest withNameNisw(String nameNisw) {
+        this.nameNisw = nameNisw;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public DcimRegionsListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent")
+    public String parent;
+    public DcimRegionsListRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent__n")
+    public String parentN;
+    public DcimRegionsListRequest withParentN(String parentN) {
+        this.parentN = parentN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_id")
+    public String parentId;
+    public DcimRegionsListRequest withParentId(String parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_id__n")
+    public String parentIdN;
+    public DcimRegionsListRequest withParentIdN(String parentIdN) {
+        this.parentIdN = parentIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public DcimRegionsListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug")
+    public String slug;
+    public DcimRegionsListRequest withSlug(String slug) {
+        this.slug = slug;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__ic")
+    public String slugIc;
+    public DcimRegionsListRequest withSlugIc(String slugIc) {
+        this.slugIc = slugIc;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__ie")
+    public String slugIe;
+    public DcimRegionsListRequest withSlugIe(String slugIe) {
+        this.slugIe = slugIe;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__iew")
+    public String slugIew;
+    public DcimRegionsListRequest withSlugIew(String slugIew) {
+        this.slugIew = slugIew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__isw")
+    public String slugIsw;
+    public DcimRegionsListRequest withSlugIsw(String slugIsw) {
+        this.slugIsw = slugIsw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__n")
+    public String slugN;
+    public DcimRegionsListRequest withSlugN(String slugN) {
+        this.slugN = slugN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__nic")
+    public String slugNic;
+    public DcimRegionsListRequest withSlugNic(String slugNic) {
+        this.slugNic = slugNic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__nie")
+    public String slugNie;
+    public DcimRegionsListRequest withSlugNie(String slugNie) {
+        this.slugNie = slugNie;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__niew")
+    public String slugNiew;
+    public DcimRegionsListRequest withSlugNiew(String slugNiew) {
+        this.slugNiew = slugNiew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__nisw")
+    public String slugNisw;
+    public DcimRegionsListRequest withSlugNisw(String slugNisw) {
+        this.slugNisw = slugNisw;
         return this;
     }
     

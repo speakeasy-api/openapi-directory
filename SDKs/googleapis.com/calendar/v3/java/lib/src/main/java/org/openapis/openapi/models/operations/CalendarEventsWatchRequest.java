@@ -7,31 +7,283 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalendarEventsWatchRequest {
-    
-    public CalendarEventsWatchPathParams pathParams;
-    public CalendarEventsWatchRequest withPathParams(CalendarEventsWatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CalendarEventsWatchQueryParams queryParams;
-    public CalendarEventsWatchRequest withQueryParams(CalendarEventsWatchQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Channel request;
-    public CalendarEventsWatchRequest withRequest(org.openapis.openapi.models.shared.Channel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Channel channel;
+    public CalendarEventsWatchRequest withChannel(org.openapis.openapi.models.shared.Channel channel) {
+        this.channel = channel;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public CalendarEventsWatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public CalendarEventsWatchSecurity security;
-    public CalendarEventsWatchRequest withSecurity(CalendarEventsWatchSecurity security) {
-        this.security = security;
+    /**
+     * Deprecated and ignored. A value will always be returned in the email field for the organizer, creator and attendees, even if no real email address is available (i.e. a generated, non-working value will be provided).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alwaysIncludeEmail")
+    public Boolean alwaysIncludeEmail;
+    public CalendarEventsWatchRequest withAlwaysIncludeEmail(Boolean alwaysIncludeEmail) {
+        this.alwaysIncludeEmail = alwaysIncludeEmail;
+        return this;
+    }
+    
+    /**
+     * Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=calendarId")
+    public String calendarId;
+    public CalendarEventsWatchRequest withCalendarId(String calendarId) {
+        this.calendarId = calendarId;
+        return this;
+    }
+    
+    /**
+     * Event types to return. Optional. The default is ["default", "outOfOffice", "focusTime"]. This is used by the Working Location developer preview and only the default value is allowed for non-opted-in users.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=eventTypes")
+    public String[] eventTypes;
+    public CalendarEventsWatchRequest withEventTypes(String[] eventTypes) {
+        this.eventTypes = eventTypes;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public CalendarEventsWatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Specifies an event ID in the iCalendar format to be provided in the response. Optional. Use this if you want to search for an event by its iCalendar ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iCalUID")
+    public String iCalUID;
+    public CalendarEventsWatchRequest withICalUID(String iCalUID) {
+        this.iCalUID = iCalUID;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public CalendarEventsWatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The maximum number of attendees to include in the response. If there are more than the specified number of attendees, only the participant is returned. Optional.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxAttendees")
+    public Long maxAttendees;
+    public CalendarEventsWatchRequest withMaxAttendees(Long maxAttendees) {
+        this.maxAttendees = maxAttendees;
+        return this;
+    }
+    
+    /**
+     * Maximum number of events returned on one result page. The number of events in the resulting page may be less than this value, or none at all, even if there are more events matching the query. Incomplete pages can be detected by a non-empty nextPageToken field in the response. By default the value is 250 events. The page size can never be larger than 2500 events. Optional.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public CalendarEventsWatchRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public CalendarEventsWatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The order of the events returned in the result. Optional. The default is an unspecified, stable order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
+    public CalendarEventsWatchOrderByEnum orderBy;
+    public CalendarEventsWatchRequest withOrderBy(CalendarEventsWatchOrderByEnum orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    /**
+     * Token specifying which result page to return. Optional.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public CalendarEventsWatchRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public CalendarEventsWatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Extended properties constraint specified as propertyName=value. Matches only private properties. This parameter might be repeated multiple times to return events that match all given constraints.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=privateExtendedProperty")
+    public String[] privateExtendedProperty;
+    public CalendarEventsWatchRequest withPrivateExtendedProperty(String[] privateExtendedProperty) {
+        this.privateExtendedProperty = privateExtendedProperty;
+        return this;
+    }
+    
+    /**
+     * Free text search terms to find events that match these terms in the following fields: summary, description, location, attendee's displayName, attendee's email. Optional.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public CalendarEventsWatchRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public CalendarEventsWatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Extended properties constraint specified as propertyName=value. Matches only shared properties. This parameter might be repeated multiple times to return events that match all given constraints.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharedExtendedProperty")
+    public String[] sharedExtendedProperty;
+    public CalendarEventsWatchRequest withSharedExtendedProperty(String[] sharedExtendedProperty) {
+        this.sharedExtendedProperty = sharedExtendedProperty;
+        return this;
+    }
+    
+    /**
+     * Whether to include deleted events (with status equals "cancelled") in the result. Cancelled instances of recurring events (but not the underlying recurring event) will still be included if showDeleted and singleEvents are both False. If showDeleted and singleEvents are both True, only single instances of deleted events (but not the underlying recurring events) are returned. Optional. The default is False.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showDeleted")
+    public Boolean showDeleted;
+    public CalendarEventsWatchRequest withShowDeleted(Boolean showDeleted) {
+        this.showDeleted = showDeleted;
+        return this;
+    }
+    
+    /**
+     * Whether to include hidden invitations in the result. Optional. The default is False.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showHiddenInvitations")
+    public Boolean showHiddenInvitations;
+    public CalendarEventsWatchRequest withShowHiddenInvitations(Boolean showHiddenInvitations) {
+        this.showHiddenInvitations = showHiddenInvitations;
+        return this;
+    }
+    
+    /**
+     * Whether to expand recurring events into instances and only return single one-off events and instances of recurring events, but not the underlying recurring events themselves. Optional. The default is False.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=singleEvents")
+    public Boolean singleEvents;
+    public CalendarEventsWatchRequest withSingleEvents(Boolean singleEvents) {
+        this.singleEvents = singleEvents;
+        return this;
+    }
+    
+    /**
+     * Token obtained from the nextSyncToken field returned on the last page of results from the previous list request. It makes the result of this list request contain only entries that have changed since then. All events deleted since the previous list request will always be in the result set and it is not allowed to set showDeleted to False.
+     * There are several query parameters that cannot be specified together with nextSyncToken to ensure consistency of the client state.
+     * 
+     * These are: 
+     * - iCalUID 
+     * - orderBy 
+     * - privateExtendedProperty 
+     * - q 
+     * - sharedExtendedProperty 
+     * - timeMin 
+     * - timeMax 
+     * - updatedMin If the syncToken expires, the server will respond with a 410 GONE response code and the client should clear its storage and perform a full synchronization without any syncToken.
+     * Learn more about incremental synchronization.
+     * Optional. The default is to return all entries.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=syncToken")
+    public String syncToken;
+    public CalendarEventsWatchRequest withSyncToken(String syncToken) {
+        this.syncToken = syncToken;
+        return this;
+    }
+    
+    /**
+     * Upper bound (exclusive) for an event's start time to filter by. Optional. The default is not to filter by start time. Must be an RFC3339 timestamp with mandatory time zone offset, for example, 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but are ignored. If timeMin is set, timeMax must be greater than timeMin.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeMax")
+    public String timeMax;
+    public CalendarEventsWatchRequest withTimeMax(String timeMax) {
+        this.timeMax = timeMax;
+        return this;
+    }
+    
+    /**
+     * Lower bound (exclusive) for an event's end time to filter by. Optional. The default is not to filter by end time. Must be an RFC3339 timestamp with mandatory time zone offset, for example, 2011-06-03T10:00:00-07:00, 2011-06-03T10:00:00Z. Milliseconds may be provided but are ignored. If timeMax is set, timeMin must be smaller than timeMax.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeMin")
+    public String timeMin;
+    public CalendarEventsWatchRequest withTimeMin(String timeMin) {
+        this.timeMin = timeMin;
+        return this;
+    }
+    
+    /**
+     * Time zone used in the response. Optional. The default is the time zone of the calendar.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeZone")
+    public String timeZone;
+    public CalendarEventsWatchRequest withTimeZone(String timeZone) {
+        this.timeZone = timeZone;
+        return this;
+    }
+    
+    /**
+     * Lower bound for an event's last modification time (as a RFC3339 timestamp) to filter by. When specified, entries deleted since this time will always be included regardless of showDeleted. Optional. The default is not to filter by last modification time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedMin")
+    public String updatedMin;
+    public CalendarEventsWatchRequest withUpdatedMin(String updatedMin) {
+        this.updatedMin = updatedMin;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public CalendarEventsWatchRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

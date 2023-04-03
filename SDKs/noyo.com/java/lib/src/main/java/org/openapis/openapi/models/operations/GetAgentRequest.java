@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAgentRequest {
-    
-    public GetAgentPathParams pathParams;
-    public GetAgentRequest withPathParams(GetAgentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the agent in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agent_id")
+    public String agentId;
+    public GetAgentRequest withAgentId(String agentId) {
+        this.agentId = agentId;
         return this;
     }
     

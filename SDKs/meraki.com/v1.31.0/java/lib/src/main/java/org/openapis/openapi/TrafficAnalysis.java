@@ -40,7 +40,7 @@ public class TrafficAnalysis {
      */
     public org.openapis.openapi.models.operations.GetNetworkTrafficAnalysisResponse getNetworkTrafficAnalysis(org.openapis.openapi.models.operations.GetNetworkTrafficAnalysisRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkTrafficAnalysisPathParams.class, baseUrl, "/networks/{networkId}/trafficAnalysis", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkTrafficAnalysisRequest.class, baseUrl, "/networks/{networkId}/trafficAnalysis", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class TrafficAnalysis {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkTrafficAnalysisResponse updateNetworkTrafficAnalysis(org.openapis.openapi.models.operations.UpdateNetworkTrafficAnalysisRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkTrafficAnalysisPathParams.class, baseUrl, "/networks/{networkId}/trafficAnalysis", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkTrafficAnalysisRequest.class, baseUrl, "/networks/{networkId}/trafficAnalysis", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

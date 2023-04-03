@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeApplicationVersionsRequest {
-    
-    public GETDescribeApplicationVersionsQueryParams queryParams;
-    public GETDescribeApplicationVersionsRequest withQueryParams(GETDescribeApplicationVersionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeApplicationVersionsActionEnum action;
+    public GETDescribeApplicationVersionsRequest withAction(GETDescribeApplicationVersionsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Specify an application name to show only application versions for that application.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplicationName")
+    public String applicationName;
+    public GETDescribeApplicationVersionsRequest withApplicationName(String applicationName) {
+        this.applicationName = applicationName;
+        return this;
+    }
     
-    public GETDescribeApplicationVersionsHeaders headers;
-    public GETDescribeApplicationVersionsRequest withHeaders(GETDescribeApplicationVersionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;For a paginated request. Specify a maximum number of application versions to include in each response.&lt;/p&gt; &lt;p&gt;If no &lt;code&gt;MaxRecords&lt;/code&gt; is specified, all available application versions are retrieved in a single response.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeApplicationVersionsRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;For a paginated request. Specify a token from a previous response page to retrieve the next response page. All other parameter values must be identical to the ones specified in the initial request.&lt;/p&gt; &lt;p&gt;If no &lt;code&gt;NextToken&lt;/code&gt; is specified, the first page is retrieved.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETDescribeApplicationVersionsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeApplicationVersionsVersionEnum version;
+    public GETDescribeApplicationVersionsRequest withVersion(GETDescribeApplicationVersionsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * Specify a version label to show a specific application version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VersionLabels")
+    public String[] versionLabels;
+    public GETDescribeApplicationVersionsRequest withVersionLabels(String[] versionLabels) {
+        this.versionLabels = versionLabels;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeApplicationVersionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeApplicationVersionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeApplicationVersionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeApplicationVersionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeApplicationVersionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeApplicationVersionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeApplicationVersionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

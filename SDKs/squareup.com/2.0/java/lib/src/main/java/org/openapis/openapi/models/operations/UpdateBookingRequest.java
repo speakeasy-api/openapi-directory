@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBookingRequest {
-    
-    public UpdateBookingPathParams pathParams;
-    public UpdateBookingRequest withPathParams(UpdateBookingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateBookingRequest request;
-    public UpdateBookingRequest withRequest(org.openapis.openapi.models.shared.UpdateBookingRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateBookingRequest updateBookingRequest;
+    public UpdateBookingRequest withUpdateBookingRequest(org.openapis.openapi.models.shared.UpdateBookingRequest updateBookingRequest) {
+        this.updateBookingRequest = updateBookingRequest;
         return this;
     }
     
-    
-    public UpdateBookingSecurity security;
-    public UpdateBookingRequest withSecurity(UpdateBookingSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the [Booking](https://developer.squareup.com/reference/square_2021-08-18/objects/Booking) object representing the to-be-updated booking.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=booking_id")
+    public String bookingId;
+    public UpdateBookingRequest withBookingId(String bookingId) {
+        this.bookingId = bookingId;
         return this;
     }
     

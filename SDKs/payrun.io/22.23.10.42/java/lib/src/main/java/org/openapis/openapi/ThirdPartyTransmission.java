@@ -38,13 +38,13 @@ public class ThirdPartyTransmission {
      */
     public org.openapis.openapi.models.operations.DeleteThirdPartyTransactionResponse deleteThirdPartyTransaction(org.openapis.openapi.models.operations.DeleteThirdPartyTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteThirdPartyTransactionPathParams.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteThirdPartyTransactionRequest.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -87,13 +87,13 @@ public class ThirdPartyTransmission {
      */
     public org.openapis.openapi.models.operations.GetThirdPartyTransactionResponse getThirdPartyTransaction(org.openapis.openapi.models.operations.GetThirdPartyTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetThirdPartyTransactionPathParams.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetThirdPartyTransactionRequest.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -142,13 +142,13 @@ public class ThirdPartyTransmission {
      */
     public org.openapis.openapi.models.operations.GetThirdPartyTransactionsResponse getThirdPartyTransactions(org.openapis.openapi.models.operations.GetThirdPartyTransactionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetThirdPartyTransactionsPathParams.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetThirdPartyTransactionsRequest.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

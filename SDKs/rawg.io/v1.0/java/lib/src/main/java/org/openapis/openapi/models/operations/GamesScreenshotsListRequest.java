@@ -4,20 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GamesScreenshotsListRequest {
-    
-    public GamesScreenshotsListPathParams pathParams;
-    public GamesScreenshotsListRequest withPathParams(GamesScreenshotsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=game_pk")
+    public String gamePk;
+    public GamesScreenshotsListRequest withGamePk(String gamePk) {
+        this.gamePk = gamePk;
         return this;
     }
     
+    /**
+     * Which field to use when ordering the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering")
+    public String ordering;
+    public GamesScreenshotsListRequest withOrdering(String ordering) {
+        this.ordering = ordering;
+        return this;
+    }
     
-    public GamesScreenshotsListQueryParams queryParams;
-    public GamesScreenshotsListRequest withQueryParams(GamesScreenshotsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A page number within the paginated result set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GamesScreenshotsListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GamesScreenshotsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

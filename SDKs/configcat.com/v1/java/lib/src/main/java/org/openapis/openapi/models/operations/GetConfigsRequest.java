@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConfigsRequest {
-    
-    public GetConfigsPathParams pathParams;
-    public GetConfigsRequest withPathParams(GetConfigsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The identifier of the Product.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public GetConfigsRequest withProductId(String productId) {
+        this.productId = productId;
         return this;
     }
     

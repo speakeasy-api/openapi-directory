@@ -40,7 +40,7 @@ public class MXL3OutboundFirewall {
      */
     public org.openapis.openapi.models.operations.GetNetworkL3FirewallRulesResponse getNetworkL3FirewallRules(org.openapis.openapi.models.operations.GetNetworkL3FirewallRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkL3FirewallRulesPathParams.class, baseUrl, "/networks/{networkId}/l3FirewallRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkL3FirewallRulesRequest.class, baseUrl, "/networks/{networkId}/l3FirewallRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class MXL3OutboundFirewall {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkL3FirewallRulesResponse updateNetworkL3FirewallRules(org.openapis.openapi.models.operations.UpdateNetworkL3FirewallRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkL3FirewallRulesPathParams.class, baseUrl, "/networks/{networkId}/l3FirewallRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkL3FirewallRulesRequest.class, baseUrl, "/networks/{networkId}/l3FirewallRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

@@ -34,25 +34,26 @@ public class RegionSslCertificates {
     /**
      * Deletes the specified SslCertificate resource in the region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionSslCertificatesDeleteResponse computeRegionSslCertificatesDelete(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionSslCertificatesDeleteResponse computeRegionSslCertificatesDelete(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesDeleteRequest request, org.openapis.openapi.models.operations.ComputeRegionSslCertificatesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesDeletePathParams.class, baseUrl, "/projects/{project}/regions/{region}/sslCertificates/{sslCertificate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesDeleteRequest.class, baseUrl, "/projects/{project}/regions/{region}/sslCertificates/{sslCertificate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class RegionSslCertificates {
     /**
      * Returns the specified SslCertificate resource in the specified region. Get a list of available SSL certificates by making a list() request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionSslCertificatesGetResponse computeRegionSslCertificatesGet(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionSslCertificatesGetResponse computeRegionSslCertificatesGet(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesGetRequest request, org.openapis.openapi.models.operations.ComputeRegionSslCertificatesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesGetPathParams.class, baseUrl, "/projects/{project}/regions/{region}/sslCertificates/{sslCertificate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesGetRequest.class, baseUrl, "/projects/{project}/regions/{region}/sslCertificates/{sslCertificate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class RegionSslCertificates {
     /**
      * Creates a SslCertificate resource in the specified project and region using the data included in the request
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionSslCertificatesInsertResponse computeRegionSslCertificatesInsert(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionSslCertificatesInsertResponse computeRegionSslCertificatesInsert(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesInsertRequest request, org.openapis.openapi.models.operations.ComputeRegionSslCertificatesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesInsertPathParams.class, baseUrl, "/projects/{project}/regions/{region}/sslCertificates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesInsertRequest.class, baseUrl, "/projects/{project}/regions/{region}/sslCertificates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sslCertificate", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class RegionSslCertificates {
     /**
      * Retrieves the list of SslCertificate resources available to the specified project in the specified region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionSslCertificatesListResponse computeRegionSslCertificatesList(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionSslCertificatesListResponse computeRegionSslCertificatesList(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesListRequest request, org.openapis.openapi.models.operations.ComputeRegionSslCertificatesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesListPathParams.class, baseUrl, "/projects/{project}/regions/{region}/sslCertificates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesListRequest.class, baseUrl, "/projects/{project}/regions/{region}/sslCertificates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSslCertificatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

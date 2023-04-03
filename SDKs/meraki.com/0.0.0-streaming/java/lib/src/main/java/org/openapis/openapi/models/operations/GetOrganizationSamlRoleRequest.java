@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationSamlRoleRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationSamlRoleRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
     
-    public GetOrganizationSamlRolePathParams pathParams;
-    public GetOrganizationSamlRoleRequest withPathParams(GetOrganizationSamlRolePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=samlRoleId")
+    public String samlRoleId;
+    public GetOrganizationSamlRoleRequest withSamlRoleId(String samlRoleId) {
+        this.samlRoleId = samlRoleId;
         return this;
     }
     

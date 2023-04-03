@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReturnASandboxCheckDepositRequest {
-    
-    public ReturnASandboxCheckDepositPathParams pathParams;
-    public ReturnASandboxCheckDepositRequest withPathParams(ReturnASandboxCheckDepositPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=check_deposit_id")
+    public String checkDepositId;
+    public ReturnASandboxCheckDepositRequest withCheckDepositId(String checkDepositId) {
+        this.checkDepositId = checkDepositId;
         return this;
     }
     

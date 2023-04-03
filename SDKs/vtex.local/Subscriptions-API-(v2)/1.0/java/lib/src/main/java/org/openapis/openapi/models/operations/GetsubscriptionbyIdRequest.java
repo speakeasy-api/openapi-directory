@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetsubscriptionbyIdRequest {
-    
-    public GetsubscriptionbyIdPathParams pathParams;
-    public GetsubscriptionbyIdRequest withPathParams(GetsubscriptionbyIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetsubscriptionbyIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetsubscriptionbyIdRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetsubscriptionbyIdHeaders headers;
-    public GetsubscriptionbyIdRequest withHeaders(GetsubscriptionbyIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Subscription ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriptionId")
+    public String subscriptionId;
+    public GetsubscriptionbyIdRequest withSubscriptionId(String subscriptionId) {
+        this.subscriptionId = subscriptionId;
         return this;
     }
     

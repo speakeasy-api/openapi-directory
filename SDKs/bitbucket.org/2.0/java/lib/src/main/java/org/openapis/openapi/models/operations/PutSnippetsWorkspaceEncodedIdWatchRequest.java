@@ -4,20 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSnippetsWorkspaceEncodedIdWatchRequest {
-    
-    public PutSnippetsWorkspaceEncodedIdWatchPathParams pathParams;
-    public PutSnippetsWorkspaceEncodedIdWatchRequest withPathParams(PutSnippetsWorkspaceEncodedIdWatchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The snippet id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=encoded_id")
+    public String encodedId;
+    public PutSnippetsWorkspaceEncodedIdWatchRequest withEncodedId(String encodedId) {
+        this.encodedId = encodedId;
         return this;
     }
     
-    
-    public PutSnippetsWorkspaceEncodedIdWatchSecurity security;
-    public PutSnippetsWorkspaceEncodedIdWatchRequest withSecurity(PutSnippetsWorkspaceEncodedIdWatchSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public PutSnippetsWorkspaceEncodedIdWatchRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

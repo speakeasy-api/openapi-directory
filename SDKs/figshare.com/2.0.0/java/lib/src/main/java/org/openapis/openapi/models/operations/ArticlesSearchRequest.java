@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticlesSearchRequest {
-    
-    public ArticlesSearchHeaders headers;
-    public ArticlesSearchRequest withHeaders(ArticlesSearchHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Search Parameters
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ArticleSearch request;
-    public ArticlesSearchRequest withRequest(org.openapis.openapi.models.shared.ArticleSearch request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ArticleSearch articleSearch;
+    public ArticlesSearchRequest withArticleSearch(org.openapis.openapi.models.shared.ArticleSearch articleSearch) {
+        this.articleSearch = articleSearch;
+        return this;
+    }
+    
+    /**
+     * Unique hash used for bypassing the item retrieval limit of 9,000 entities. When using this parameter, please note that the offset parameter will not be available, but the limit parameter will still work as expected.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Cursor")
+    public String xCursor;
+    public ArticlesSearchRequest withXCursor(String xCursor) {
+        this.xCursor = xCursor;
         return this;
     }
     

@@ -34,25 +34,26 @@ public class Sitemaps {
     /**
      * Deletes a sitemap from this site.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebmastersSitemapsDeleteResponse webmastersSitemapsDelete(org.openapis.openapi.models.operations.WebmastersSitemapsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebmastersSitemapsDeleteResponse webmastersSitemapsDelete(org.openapis.openapi.models.operations.WebmastersSitemapsDeleteRequest request, org.openapis.openapi.models.operations.WebmastersSitemapsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebmastersSitemapsDeletePathParams.class, baseUrl, "/sites/{siteUrl}/sitemaps/{feedpath}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebmastersSitemapsDeleteRequest.class, baseUrl, "/sites/{siteUrl}/sitemaps/{feedpath}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebmastersSitemapsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebmastersSitemapsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,25 +74,26 @@ public class Sitemaps {
     /**
      * Retrieves information about a specific sitemap.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebmastersSitemapsGetResponse webmastersSitemapsGet(org.openapis.openapi.models.operations.WebmastersSitemapsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebmastersSitemapsGetResponse webmastersSitemapsGet(org.openapis.openapi.models.operations.WebmastersSitemapsGetRequest request, org.openapis.openapi.models.operations.WebmastersSitemapsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebmastersSitemapsGetPathParams.class, baseUrl, "/sites/{siteUrl}/sitemaps/{feedpath}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebmastersSitemapsGetRequest.class, baseUrl, "/sites/{siteUrl}/sitemaps/{feedpath}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebmastersSitemapsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebmastersSitemapsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,25 +120,26 @@ public class Sitemaps {
     /**
      * Lists the sitemaps-entries submitted for this site, or included in the sitemap index file (if sitemapIndex is specified in the request).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebmastersSitemapsListResponse webmastersSitemapsList(org.openapis.openapi.models.operations.WebmastersSitemapsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebmastersSitemapsListResponse webmastersSitemapsList(org.openapis.openapi.models.operations.WebmastersSitemapsListRequest request, org.openapis.openapi.models.operations.WebmastersSitemapsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebmastersSitemapsListPathParams.class, baseUrl, "/sites/{siteUrl}/sitemaps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebmastersSitemapsListRequest.class, baseUrl, "/sites/{siteUrl}/sitemaps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebmastersSitemapsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebmastersSitemapsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -163,25 +166,26 @@ public class Sitemaps {
     /**
      * Submits a sitemap for a site.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebmastersSitemapsSubmitResponse webmastersSitemapsSubmit(org.openapis.openapi.models.operations.WebmastersSitemapsSubmitRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebmastersSitemapsSubmitResponse webmastersSitemapsSubmit(org.openapis.openapi.models.operations.WebmastersSitemapsSubmitRequest request, org.openapis.openapi.models.operations.WebmastersSitemapsSubmitSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebmastersSitemapsSubmitPathParams.class, baseUrl, "/sites/{siteUrl}/sitemaps/{feedpath}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebmastersSitemapsSubmitRequest.class, baseUrl, "/sites/{siteUrl}/sitemaps/{feedpath}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebmastersSitemapsSubmitQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebmastersSitemapsSubmitRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

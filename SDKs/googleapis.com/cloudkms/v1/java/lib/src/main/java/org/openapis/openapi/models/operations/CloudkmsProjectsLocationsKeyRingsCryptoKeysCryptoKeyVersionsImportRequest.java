@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportRequest {
-    
-    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportPathParams pathParams;
-    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportRequest withPathParams(CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportQueryParams queryParams;
-    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportRequest withQueryParams(CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ImportCryptoKeyVersionRequest request;
-    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportRequest withRequest(org.openapis.openapi.models.shared.ImportCryptoKeyVersionRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ImportCryptoKeyVersionRequest importCryptoKeyVersionRequest;
+    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportRequest withImportCryptoKeyVersionRequest(org.openapis.openapi.models.shared.ImportCryptoKeyVersionRequest importCryptoKeyVersionRequest) {
+        this.importCryptoKeyVersionRequest = importCryptoKeyVersionRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportSecurity security;
-    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportRequest withSecurity(CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The name of the CryptoKey to be imported into. The create permission is only required on this key when creating a new CryptoKeyVersion.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public CloudkmsProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersionsImportRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

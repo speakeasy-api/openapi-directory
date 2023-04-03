@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FileActionCopyRequest {
-    
-    public FileActionCopyPathParams pathParams;
-    public FileActionCopyRequest withPathParams(FileActionCopyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public FileActionCopyRequestBody requestBody;
+    public FileActionCopyRequest withRequestBody(FileActionCopyRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public FileActionCopyRequestBody request;
-    public FileActionCopyRequest withRequest(FileActionCopyRequestBody request) {
-        this.request = request;
+    /**
+     * Path to operate on.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public FileActionCopyRequest withPath(String path) {
+        this.path = path;
         return this;
     }
     

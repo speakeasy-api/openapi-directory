@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMarketplaceAccountsSynchronizationV3Request {
-    
-    public GetMarketplaceAccountsSynchronizationV3QueryParams queryParams;
-    public GetMarketplaceAccountsSynchronizationV3Request withQueryParams(GetMarketplaceAccountsSynchronizationV3QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * ETag value to identify the last known version of requested resource.\
+     * To avoid useless exchange, we recommend you to indicate the ETag you previously got from this operation.\
+     * If the ETag value does not match the response will be 200 to give you a new content, otherwise the response will be: 304 Not Modified, without any content.\
+     * For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetMarketplaceAccountsSynchronizationV3Request withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
-    
-    public GetMarketplaceAccountsSynchronizationV3Headers headers;
-    public GetMarketplaceAccountsSynchronizationV3Request withHeaders(GetMarketplaceAccountsSynchronizationV3Headers headers) {
-        this.headers = headers;
+    /**
+     * StoredIds to filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=storeIds")
+    public String[] storeIds;
+    public GetMarketplaceAccountsSynchronizationV3Request withStoreIds(String[] storeIds) {
+        this.storeIds = storeIds;
         return this;
     }
     

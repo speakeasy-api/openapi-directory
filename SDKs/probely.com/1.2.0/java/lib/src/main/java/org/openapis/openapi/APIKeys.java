@@ -46,7 +46,7 @@ public class APIKeys {
      */
     public org.openapis.openapi.models.operations.DeleteKeysIdResponse deleteKeysId(org.openapis.openapi.models.operations.DeleteKeysIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteKeysIdPathParams.class, baseUrl, "/keys/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteKeysIdRequest.class, baseUrl, "/keys/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -95,7 +95,7 @@ public class APIKeys {
      */
     public org.openapis.openapi.models.operations.DeleteTargetsTargetIdKeysIdResponse deleteTargetsTargetIdKeysId(org.openapis.openapi.models.operations.DeleteTargetsTargetIdKeysIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTargetsTargetIdKeysIdPathParams.class, baseUrl, "/targets/{target_id}/keys/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTargetsTargetIdKeysIdRequest.class, baseUrl, "/targets/{target_id}/keys/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -150,7 +150,7 @@ public class APIKeys {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetKeysQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetKeysRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -205,7 +205,7 @@ public class APIKeys {
      */
     public org.openapis.openapi.models.operations.GetKeysIdResponse getKeysId(org.openapis.openapi.models.operations.GetKeysIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetKeysIdPathParams.class, baseUrl, "/keys/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetKeysIdRequest.class, baseUrl, "/keys/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -260,13 +260,13 @@ public class APIKeys {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdKeysResponse getTargetsTargetIdKeys(org.openapis.openapi.models.operations.GetTargetsTargetIdKeysRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdKeysPathParams.class, baseUrl, "/targets/{target_id}/keys/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdKeysRequest.class, baseUrl, "/targets/{target_id}/keys/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsTargetIdKeysQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsTargetIdKeysRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -321,7 +321,7 @@ public class APIKeys {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdKeysIdResponse getTargetsTargetIdKeysId(org.openapis.openapi.models.operations.GetTargetsTargetIdKeysIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdKeysIdPathParams.class, baseUrl, "/targets/{target_id}/keys/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdKeysIdRequest.class, baseUrl, "/targets/{target_id}/keys/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -374,7 +374,7 @@ public class APIKeys {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostKeysResponse postKeys(org.openapis.openapi.models.operations.PostKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostKeysResponse postKeys(org.openapis.openapi.models.shared.APIKeyInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/keys/");
         
@@ -436,12 +436,12 @@ public class APIKeys {
      */
     public org.openapis.openapi.models.operations.PostTargetsTargetIdKeysResponse postTargetsTargetIdKeys(org.openapis.openapi.models.operations.PostTargetsTargetIdKeysRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTargetsTargetIdKeysPathParams.class, baseUrl, "/targets/{target_id}/keys/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTargetsTargetIdKeysRequest.class, baseUrl, "/targets/{target_id}/keys/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiKeyInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

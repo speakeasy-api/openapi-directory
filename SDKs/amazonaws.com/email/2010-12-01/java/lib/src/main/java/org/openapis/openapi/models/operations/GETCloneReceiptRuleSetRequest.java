@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCloneReceiptRuleSetRequest {
-    
-    public GETCloneReceiptRuleSetQueryParams queryParams;
-    public GETCloneReceiptRuleSetRequest withQueryParams(GETCloneReceiptRuleSetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETCloneReceiptRuleSetActionEnum action;
+    public GETCloneReceiptRuleSetRequest withAction(GETCloneReceiptRuleSetActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the rule set to clone.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OriginalRuleSetName")
+    public String originalRuleSetName;
+    public GETCloneReceiptRuleSetRequest withOriginalRuleSetName(String originalRuleSetName) {
+        this.originalRuleSetName = originalRuleSetName;
+        return this;
+    }
     
-    public GETCloneReceiptRuleSetHeaders headers;
-    public GETCloneReceiptRuleSetRequest withHeaders(GETCloneReceiptRuleSetHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The name of the rule set to create. The name must:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;This value can only contain ASCII letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-).&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Start and end with a letter or number.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Contain less than 64 characters.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleSetName")
+    public String ruleSetName;
+    public GETCloneReceiptRuleSetRequest withRuleSetName(String ruleSetName) {
+        this.ruleSetName = ruleSetName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETCloneReceiptRuleSetVersionEnum version;
+    public GETCloneReceiptRuleSetRequest withVersion(GETCloneReceiptRuleSetVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETCloneReceiptRuleSetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETCloneReceiptRuleSetRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETCloneReceiptRuleSetRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETCloneReceiptRuleSetRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETCloneReceiptRuleSetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETCloneReceiptRuleSetRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETCloneReceiptRuleSetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

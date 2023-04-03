@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestPatchTestSeriesRequest {
-    
-    public TestPatchTestSeriesPathParams pathParams;
-    public TestPatchTestSeriesRequest withPathParams(TestPatchTestSeriesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public TestPatchTestSeriesNameOfTheTestSeries request;
-    public TestPatchTestSeriesRequest withRequest(TestPatchTestSeriesNameOfTheTestSeries request) {
-        this.request = request;
+    public TestPatchTestSeriesNameOfTheTestSeries requestBody;
+    public TestPatchTestSeriesRequest withRequestBody(TestPatchTestSeriesNameOfTheTestSeries requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public TestPatchTestSeriesRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public TestPatchTestSeriesSecurity security;
-    public TestPatchTestSeriesRequest withSecurity(TestPatchTestSeriesSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public TestPatchTestSeriesRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * The slug of the test series
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=test_series_slug")
+    public String testSeriesSlug;
+    public TestPatchTestSeriesRequest withTestSeriesSlug(String testSeriesSlug) {
+        this.testSeriesSlug = testSeriesSlug;
         return this;
     }
     

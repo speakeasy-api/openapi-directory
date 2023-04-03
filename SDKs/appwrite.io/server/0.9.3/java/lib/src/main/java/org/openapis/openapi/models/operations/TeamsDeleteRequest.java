@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsDeleteRequest {
-    
-    public TeamsDeletePathParams pathParams;
-    public TeamsDeleteRequest withPathParams(TeamsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public TeamsDeleteSecurity security;
-    public TeamsDeleteRequest withSecurity(TeamsDeleteSecurity security) {
-        this.security = security;
+    /**
+     * Team unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teamId")
+    public String teamId;
+    public TeamsDeleteRequest withTeamId(String teamId) {
+        this.teamId = teamId;
         return this;
     }
     

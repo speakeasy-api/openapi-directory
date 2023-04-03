@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSyncMapItemRequest {
-    
-    public CreateSyncMapItemPathParams pathParams;
-    public CreateSyncMapItemRequest withPathParams(CreateSyncMapItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Sync Map to add the new Map Item to. Can be the Sync Map resource's `sid` or its `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MapSid")
+    public String mapSid;
+    public CreateSyncMapItemRequest withMapSid(String mapSid) {
+        this.mapSid = mapSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateSyncMapItemCreateSyncMapItemRequest request;
-    public CreateSyncMapItemRequest withRequest(CreateSyncMapItemCreateSyncMapItemRequest request) {
-        this.request = request;
+    public CreateSyncMapItemCreateSyncMapItemRequest requestBody;
+    public CreateSyncMapItemRequest withRequestBody(CreateSyncMapItemCreateSyncMapItemRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateSyncMapItemSecurity security;
-    public CreateSyncMapItemRequest withSecurity(CreateSyncMapItemSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateSyncMapItemRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the Map Item in.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateSyncMapItemRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

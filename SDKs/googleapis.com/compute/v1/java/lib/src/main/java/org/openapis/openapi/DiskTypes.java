@@ -33,25 +33,26 @@ public class DiskTypes {
     /**
      * Retrieves an aggregated list of disk types.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeDiskTypesAggregatedListResponse computeDiskTypesAggregatedList(org.openapis.openapi.models.operations.ComputeDiskTypesAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeDiskTypesAggregatedListResponse computeDiskTypesAggregatedList(org.openapis.openapi.models.operations.ComputeDiskTypesAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeDiskTypesAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeDiskTypesAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/diskTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeDiskTypesAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/diskTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeDiskTypesAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeDiskTypesAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class DiskTypes {
     /**
      * Returns the specified disk type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeDiskTypesGetResponse computeDiskTypesGet(org.openapis.openapi.models.operations.ComputeDiskTypesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeDiskTypesGetResponse computeDiskTypesGet(org.openapis.openapi.models.operations.ComputeDiskTypesGetRequest request, org.openapis.openapi.models.operations.ComputeDiskTypesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeDiskTypesGetPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/diskTypes/{diskType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeDiskTypesGetRequest.class, baseUrl, "/projects/{project}/zones/{zone}/diskTypes/{diskType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeDiskTypesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeDiskTypesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,25 +125,26 @@ public class DiskTypes {
     /**
      * Retrieves a list of disk types available to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeDiskTypesListResponse computeDiskTypesList(org.openapis.openapi.models.operations.ComputeDiskTypesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeDiskTypesListResponse computeDiskTypesList(org.openapis.openapi.models.operations.ComputeDiskTypesListRequest request, org.openapis.openapi.models.operations.ComputeDiskTypesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeDiskTypesListPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/diskTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeDiskTypesListRequest.class, baseUrl, "/projects/{project}/zones/{zone}/diskTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeDiskTypesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeDiskTypesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

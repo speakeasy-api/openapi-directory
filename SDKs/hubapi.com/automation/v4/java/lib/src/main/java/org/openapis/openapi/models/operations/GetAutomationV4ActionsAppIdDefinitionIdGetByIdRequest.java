@@ -4,27 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAutomationV4ActionsAppIdDefinitionIdGetByIdRequest {
-    
-    public GetAutomationV4ActionsAppIdDefinitionIdGetByIdPathParams pathParams;
-    public GetAutomationV4ActionsAppIdDefinitionIdGetByIdRequest withPathParams(GetAutomationV4ActionsAppIdDefinitionIdGetByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public GetAutomationV4ActionsAppIdDefinitionIdGetByIdRequest withAppId(Integer appId) {
+        this.appId = appId;
         return this;
     }
     
-    
-    public GetAutomationV4ActionsAppIdDefinitionIdGetByIdQueryParams queryParams;
-    public GetAutomationV4ActionsAppIdDefinitionIdGetByIdRequest withQueryParams(GetAutomationV4ActionsAppIdDefinitionIdGetByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Whether to include archived custom actions.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=archived")
+    public Boolean archived;
+    public GetAutomationV4ActionsAppIdDefinitionIdGetByIdRequest withArchived(Boolean archived) {
+        this.archived = archived;
         return this;
     }
     
-    
-    public GetAutomationV4ActionsAppIdDefinitionIdGetByIdSecurity security;
-    public GetAutomationV4ActionsAppIdDefinitionIdGetByIdRequest withSecurity(GetAutomationV4ActionsAppIdDefinitionIdGetByIdSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the custom workflow action.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=definitionId")
+    public String definitionId;
+    public GetAutomationV4ActionsAppIdDefinitionIdGetByIdRequest withDefinitionId(String definitionId) {
+        this.definitionId = definitionId;
         return this;
     }
     

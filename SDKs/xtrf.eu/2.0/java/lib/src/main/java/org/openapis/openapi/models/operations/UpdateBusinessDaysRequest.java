@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBusinessDaysRequest {
-    
-    public UpdateBusinessDaysPathParams pathParams;
-    public UpdateBusinessDaysRequest withPathParams(UpdateBusinessDaysPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated Business Days for a quote.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Integer request;
-    public UpdateBusinessDaysRequest withRequest(Integer request) {
-        this.request = request;
+    public Integer requestBody;
+    public UpdateBusinessDaysRequest withRequestBody(Integer requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * quote's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
+    public String quoteId;
+    public UpdateBusinessDaysRequest withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
         return this;
     }
     

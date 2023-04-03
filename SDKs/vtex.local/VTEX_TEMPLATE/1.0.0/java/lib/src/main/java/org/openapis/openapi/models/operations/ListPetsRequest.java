@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPetsRequest {
-    
-    public ListPetsQueryParams queryParams;
-    public ListPetsRequest withQueryParams(ListPetsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * How many items to return at one time (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public ListPetsRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     

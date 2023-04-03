@@ -4,27 +4,97 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListEventRequest {
-    
-    public ListEventQueryParams queryParams;
-    public ListEventRequest withQueryParams(ListEventQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only include events initiated by this Actor. Useful for auditing actions taken by specific users or API credentials.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ActorSid")
+    public String actorSid;
+    public ListEventRequest withActorSid(String actorSid) {
+        this.actorSid = actorSid;
         return this;
     }
     
-    
-    public ListEventSecurity security;
-    public ListEventRequest withSecurity(ListEventSecurity security) {
-        this.security = security;
+    /**
+     * Only include events that occurred on or before this date. Specify the date in GMT and [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndDate")
+    public OffsetDateTime endDate;
+    public ListEventRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
         return this;
     }
     
+    /**
+     * Only include events of this [Event Type](https://www.twilio.com/docs/usage/monitor-events#event-types).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EventType")
+    public String eventType;
+    public ListEventRequest withEventType(String eventType) {
+        this.eventType = eventType;
+        return this;
+    }
     
-    public String serverURL;
-    public ListEventRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListEventRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListEventRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListEventRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Only include events that refer to this resource. Useful for discovering the history of a specific resource.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceSid")
+    public String resourceSid;
+    public ListEventRequest withResourceSid(String resourceSid) {
+        this.resourceSid = resourceSid;
+        return this;
+    }
+    
+    /**
+     * Only include events that originated from this IP address. Useful for tracking suspicious activity originating from the API or the Twilio Console.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceIpAddress")
+    public String sourceIpAddress;
+    public ListEventRequest withSourceIpAddress(String sourceIpAddress) {
+        this.sourceIpAddress = sourceIpAddress;
+        return this;
+    }
+    
+    /**
+     * Only include events that occurred on or after this date. Specify the date in GMT and [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartDate")
+    public OffsetDateTime startDate;
+    public ListEventRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
         return this;
     }
     

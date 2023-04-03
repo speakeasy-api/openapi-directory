@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTopExampleRequest {
-    
-    public GetTopExamplePathParams pathParams;
-    public GetTopExampleRequest withPathParams(GetTopExamplePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If true will try to return the correct word root ('cats' -&gt; 'cat'). If false returns exactly what was requested.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useCanonical")
+    public GetTopExampleUseCanonicalEnum useCanonical;
+    public GetTopExampleRequest withUseCanonical(GetTopExampleUseCanonicalEnum useCanonical) {
+        this.useCanonical = useCanonical;
         return this;
     }
     
-    
-    public GetTopExampleQueryParams queryParams;
-    public GetTopExampleRequest withQueryParams(GetTopExampleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Word to fetch examples for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=word")
+    public String word;
+    public GetTopExampleRequest withWord(String word) {
+        this.word = word;
         return this;
     }
     

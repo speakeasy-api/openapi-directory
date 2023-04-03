@@ -4,27 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AcceptCertificateTransferRequest {
-    
-    public AcceptCertificateTransferPathParams pathParams;
-    public AcceptCertificateTransferRequest withPathParams(AcceptCertificateTransferPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public AcceptCertificateTransferRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public AcceptCertificateTransferQueryParams queryParams;
-    public AcceptCertificateTransferRequest withQueryParams(AcceptCertificateTransferQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public AcceptCertificateTransferRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public AcceptCertificateTransferRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public AcceptCertificateTransferHeaders headers;
-    public AcceptCertificateTransferRequest withHeaders(AcceptCertificateTransferHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public AcceptCertificateTransferRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public AcceptCertificateTransferRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public AcceptCertificateTransferRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public AcceptCertificateTransferRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The ID of the certificate. (The last part of the certificate ARN contains the certificate ID.)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=certificateId")
+    public String certificateId;
+    public AcceptCertificateTransferRequest withCertificateId(String certificateId) {
+        this.certificateId = certificateId;
+        return this;
+    }
+    
+    /**
+     * Specifies whether the certificate is active.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setAsActive")
+    public Boolean setAsActive;
+    public AcceptCertificateTransferRequest withSetAsActive(Boolean setAsActive) {
+        this.setAsActive = setAsActive;
         return this;
     }
     

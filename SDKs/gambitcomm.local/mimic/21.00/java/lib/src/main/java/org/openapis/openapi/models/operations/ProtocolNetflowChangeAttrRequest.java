@@ -4,13 +4,44 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolNetflowChangeAttrRequest {
+    /**
+     * Agent to set the NETFLOW
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolNetflowChangeAttrRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolNetflowChangeAttrPathParams pathParams;
-    public ProtocolNetflowChangeAttrRequest withPathParams(ProtocolNetflowChangeAttrPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attr")
+    public String attr;
+    public ProtocolNetflowChangeAttrRequest withAttr(String attr) {
+        this.attr = attr;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=field-num")
+    public Integer fieldNum;
+    public ProtocolNetflowChangeAttrRequest withFieldNum(Integer fieldNum) {
+        this.fieldNum = fieldNum;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=flowset-uid")
+    public Integer flowsetUid;
+    public ProtocolNetflowChangeAttrRequest withFlowsetUid(Integer flowsetUid) {
+        this.flowsetUid = flowsetUid;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=value")
+    public String value;
+    public ProtocolNetflowChangeAttrRequest withValue(String value) {
+        this.value = value;
         return this;
     }
     

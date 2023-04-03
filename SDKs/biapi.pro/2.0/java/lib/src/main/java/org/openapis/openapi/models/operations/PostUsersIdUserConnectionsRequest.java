@@ -7,24 +7,37 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersIdUserConnectionsRequest {
-    
-    public PostUsersIdUserConnectionsPathParams pathParams;
-    public PostUsersIdUserConnectionsRequest withPathParams(PostUsersIdUserConnectionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostUsersIdUserConnectionsQueryParams queryParams;
-    public PostUsersIdUserConnectionsRequest withQueryParams(PostUsersIdUserConnectionsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostUsersIdUserConnectionsRequestBody request;
-    public PostUsersIdUserConnectionsRequest withRequest(PostUsersIdUserConnectionsRequestBody request) {
-        this.request = request;
+    public PostUsersIdUserConnectionsRequestBody requestBody;
+    public PostUsersIdUserConnectionsRequest withRequestBody(PostUsersIdUserConnectionsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PostUsersIdUserConnectionsRequest withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public PostUsersIdUserConnectionsRequest withIdUser(String idUser) {
+        this.idUser = idUser;
+        return this;
+    }
+    
+    /**
+     * optional comma-separated list of sources to use for the connection synchronization
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public String source;
+    public PostUsersIdUserConnectionsRequest withSource(String source) {
+        this.source = source;
         return this;
     }
     

@@ -40,7 +40,7 @@ public class FirewalledServices {
      */
     public org.openapis.openapi.models.operations.GetNetworkFirewalledServiceResponse getNetworkFirewalledService(org.openapis.openapi.models.operations.GetNetworkFirewalledServiceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirewalledServicePathParams.class, baseUrl, "/networks/{networkId}/firewalledServices/{service}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirewalledServiceRequest.class, baseUrl, "/networks/{networkId}/firewalledServices/{service}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,7 +80,7 @@ public class FirewalledServices {
      */
     public org.openapis.openapi.models.operations.GetNetworkFirewalledServicesResponse getNetworkFirewalledServices(org.openapis.openapi.models.operations.GetNetworkFirewalledServicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirewalledServicesPathParams.class, baseUrl, "/networks/{networkId}/firewalledServices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirewalledServicesRequest.class, baseUrl, "/networks/{networkId}/firewalledServices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,12 +120,12 @@ public class FirewalledServices {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkFirewalledServiceResponse updateNetworkFirewalledService(org.openapis.openapi.models.operations.UpdateNetworkFirewalledServiceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkFirewalledServicePathParams.class, baseUrl, "/networks/{networkId}/firewalledServices/{service}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkFirewalledServiceRequest.class, baseUrl, "/networks/{networkId}/firewalledServices/{service}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

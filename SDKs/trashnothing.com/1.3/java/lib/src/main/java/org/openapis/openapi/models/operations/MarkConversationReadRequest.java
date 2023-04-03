@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MarkConversationReadRequest {
-    
-    public MarkConversationReadPathParams pathParams;
-    public MarkConversationReadRequest withPathParams(MarkConversationReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public MarkConversationReadRequestBody requestBody;
+    public MarkConversationReadRequest withRequestBody(MarkConversationReadRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public MarkConversationReadRequestBody request;
-    public MarkConversationReadRequest withRequest(MarkConversationReadRequestBody request) {
-        this.request = request;
+    /**
+     * The ID of the conversation to mark as read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversation_id")
+    public String conversationId;
+    public MarkConversationReadRequest withConversationId(String conversationId) {
+        this.conversationId = conversationId;
         return this;
     }
     

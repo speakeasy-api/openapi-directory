@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveFromBatchRequest {
-    
-    public RemoveFromBatchPathParams pathParams;
-    public RemoveFromBatchRequest withPathParams(RemoveFromBatchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Batch ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=batch_id")
+    public String batchId;
+    public RemoveFromBatchRequest withBatchId(String batchId) {
+        this.batchId = batchId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RemoveFromBatchRequestBody request;
-    public RemoveFromBatchRequest withRequest(org.openapis.openapi.models.shared.RemoveFromBatchRequestBody request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RemoveFromBatchRequestBody removeFromBatchRequestBody;
+    public RemoveFromBatchRequest withRemoveFromBatchRequestBody(org.openapis.openapi.models.shared.RemoveFromBatchRequestBody removeFromBatchRequestBody) {
+        this.removeFromBatchRequestBody = removeFromBatchRequestBody;
         return this;
     }
     

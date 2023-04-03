@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateScalingParametersRequest {
-    
-    public GETUpdateScalingParametersQueryParams queryParams;
-    public GETUpdateScalingParametersRequest withQueryParams(GETUpdateScalingParametersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETUpdateScalingParametersActionEnum action;
+    public GETUpdateScalingParametersRequest withAction(GETUpdateScalingParametersActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
+    public String domainName;
+    public GETUpdateScalingParametersRequest withDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
     
-    public GETUpdateScalingParametersHeaders headers;
-    public GETUpdateScalingParametersRequest withHeaders(GETUpdateScalingParametersHeaders headers) {
-        this.headers = headers;
+    /**
+     * The desired instance type and desired number of replicas of each index partition.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ScalingParameters")
+    public GETUpdateScalingParametersScalingParameters scalingParameters;
+    public GETUpdateScalingParametersRequest withScalingParameters(GETUpdateScalingParametersScalingParameters scalingParameters) {
+        this.scalingParameters = scalingParameters;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETUpdateScalingParametersVersionEnum version;
+    public GETUpdateScalingParametersRequest withVersion(GETUpdateScalingParametersVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETUpdateScalingParametersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETUpdateScalingParametersRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETUpdateScalingParametersRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETUpdateScalingParametersRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETUpdateScalingParametersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETUpdateScalingParametersRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETUpdateScalingParametersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

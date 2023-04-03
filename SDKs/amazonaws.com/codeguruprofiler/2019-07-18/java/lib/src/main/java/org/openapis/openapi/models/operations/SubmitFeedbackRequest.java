@@ -7,24 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubmitFeedbackRequest {
-    
-    public SubmitFeedbackPathParams pathParams;
-    public SubmitFeedbackRequest withPathParams(SubmitFeedbackPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SubmitFeedbackHeaders headers;
-    public SubmitFeedbackRequest withHeaders(SubmitFeedbackHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public SubmitFeedbackRequestBody request;
-    public SubmitFeedbackRequest withRequest(SubmitFeedbackRequestBody request) {
-        this.request = request;
+    public SubmitFeedbackRequestBody requestBody;
+    public SubmitFeedbackRequest withRequestBody(SubmitFeedbackRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public SubmitFeedbackRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public SubmitFeedbackRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public SubmitFeedbackRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public SubmitFeedbackRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public SubmitFeedbackRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public SubmitFeedbackRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public SubmitFeedbackRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The universally unique identifier (UUID) of the &lt;a href="https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_AnomalyInstance.html"&gt; &lt;code&gt;AnomalyInstance&lt;/code&gt; &lt;/a&gt; object that is included in the analysis data.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=anomalyInstanceId")
+    public String anomalyInstanceId;
+    public SubmitFeedbackRequest withAnomalyInstanceId(String anomalyInstanceId) {
+        this.anomalyInstanceId = anomalyInstanceId;
+        return this;
+    }
+    
+    /**
+     * The name of the profiling group that is associated with the analysis data.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profilingGroupName")
+    public String profilingGroupName;
+    public SubmitFeedbackRequest withProfilingGroupName(String profilingGroupName) {
+        this.profilingGroupName = profilingGroupName;
         return this;
     }
     

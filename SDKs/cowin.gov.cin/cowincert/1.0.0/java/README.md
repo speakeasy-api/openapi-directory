@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetCertificatePdfSecurity;
-import org.openapis.openapi.models.operations.GetCertificatePdfRequest;
 import org.openapis.openapi.models.operations.GetCertificatePdfResponse;
 import org.openapis.openapi.models.shared.CertificateRequest;
-import org.openapis.openapi.models.shared.SchemeCertAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -29,19 +27,14 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetCertificatePdfRequest req = new GetCertificatePdfRequest() {{
-                security = new GetCertificatePdfSecurity() {{
-                    certAuth = new SchemeCertAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                request = new CertificateRequest() {{
-                    beneficiaryId = "corrupti";
-                    mobile = "(786) 858-4663 x4280";
-                }};
-            }};            
+            org.openapis.openapi.models.shared.CertificateRequest req = new CertificateRequest() {{
+                beneficiaryId = "corrupti";
+                mobile = "(786) 858-4663 x4280";
+            }}            
 
-            GetCertificatePdfResponse res = sdk.certificate.getCertificatePdf(req);
+            GetCertificatePdfResponse res = sdk.certificate.getCertificatePdf(req, new GetCertificatePdfSecurity() {{
+                certAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -53,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### certificate

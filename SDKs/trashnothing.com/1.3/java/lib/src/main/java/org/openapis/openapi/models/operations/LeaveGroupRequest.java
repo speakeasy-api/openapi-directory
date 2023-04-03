@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LeaveGroupRequest {
-    
-    public LeaveGroupPathParams pathParams;
-    public LeaveGroupRequest withPathParams(LeaveGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the group to leave.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public LeaveGroupRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

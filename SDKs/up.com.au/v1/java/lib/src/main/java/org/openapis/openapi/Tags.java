@@ -57,12 +57,12 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.DeleteTransactionsTransactionIdRelationshipsTagsResponse deleteTransactionsTransactionIdRelationshipsTags(org.openapis.openapi.models.operations.DeleteTransactionsTransactionIdRelationshipsTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTransactionsTransactionIdRelationshipsTagsPathParams.class, baseUrl, "/transactions/{transactionId}/relationships/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTransactionsTransactionIdRelationshipsTagsRequest.class, baseUrl, "/transactions/{transactionId}/relationships/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateTransactionTagsRequest", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -104,7 +104,7 @@ public class Tags {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTagsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTagsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -150,12 +150,12 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.PostTransactionsTransactionIdRelationshipsTagsResponse postTransactionsTransactionIdRelationshipsTags(org.openapis.openapi.models.operations.PostTransactionsTransactionIdRelationshipsTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTransactionsTransactionIdRelationshipsTagsPathParams.class, baseUrl, "/transactions/{transactionId}/relationships/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTransactionsTransactionIdRelationshipsTagsRequest.class, baseUrl, "/transactions/{transactionId}/relationships/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateTransactionTagsRequest", "json");
         req.setBody(serializedRequestBody);
         
         

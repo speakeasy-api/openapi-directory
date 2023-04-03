@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.PostCompileQueryParams;
 import org.openapis.openapi.models.operations.PostCompileRequest;
 import org.openapis.openapi.models.operations.PostCompileResponse;
 
@@ -28,18 +27,16 @@ public class Application {
                 .build();
 
             PostCompileRequest req = new PostCompileRequest() {{
-                queryParams = new PostCompileQueryParams() {{
-                    explain = "corrupti";
-                    instrument = false;
-                    metrics = false;
-                    pretty = false;
+                requestBody = new java.util.HashMap<String, Object>() {{
+                    put("provident", "distinctio");
+                    put("quibusdam", "unde");
+                    put("nulla", "corrupti");
                 }};
-                request = new java.util.HashMap<String, Object>() {{
-                    put("distinctio", "quibusdam");
-                    put("unde", "nulla");
-                    put("corrupti", "illum");
-                }};
-            }};            
+                explain = "illum";
+                instrument = false;
+                metrics = false;
+                pretty = false;
+            }}            
 
             PostCompileResponse res = sdk.compileAPI.postCompile(req);
 
@@ -53,7 +50,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### compileAPI

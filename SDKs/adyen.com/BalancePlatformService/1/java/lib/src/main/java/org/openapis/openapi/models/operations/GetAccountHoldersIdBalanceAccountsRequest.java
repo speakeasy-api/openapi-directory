@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountHoldersIdBalanceAccountsRequest {
-    
-    public GetAccountHoldersIdBalanceAccountsPathParams pathParams;
-    public GetAccountHoldersIdBalanceAccountsRequest withPathParams(GetAccountHoldersIdBalanceAccountsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the account holder.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetAccountHoldersIdBalanceAccountsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetAccountHoldersIdBalanceAccountsQueryParams queryParams;
-    public GetAccountHoldersIdBalanceAccountsRequest withQueryParams(GetAccountHoldersIdBalanceAccountsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of items returned per page, maximum 100 items. By default, the response returns 10 items per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetAccountHoldersIdBalanceAccountsRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetAccountHoldersIdBalanceAccountsSecurity security;
-    public GetAccountHoldersIdBalanceAccountsRequest withSecurity(GetAccountHoldersIdBalanceAccountsSecurity security) {
-        this.security = security;
+    /**
+     * The number of items that you want to skip.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetAccountHoldersIdBalanceAccountsRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LockListForPathRequest {
-    
-    public LockListForPathPathParams pathParams;
-    public LockListForPathRequest withPathParams(LockListForPathPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public LockListForPathRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * Include locks from children objects?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_children")
+    public Boolean includeChildren;
+    public LockListForPathRequest withIncludeChildren(Boolean includeChildren) {
+        this.includeChildren = includeChildren;
+        return this;
+    }
     
-    public LockListForPathQueryParams queryParams;
-    public LockListForPathRequest withQueryParams(LockListForPathQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Path to operate on.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public LockListForPathRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    
+    /**
+     * Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public LockListForPathRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
         return this;
     }
     

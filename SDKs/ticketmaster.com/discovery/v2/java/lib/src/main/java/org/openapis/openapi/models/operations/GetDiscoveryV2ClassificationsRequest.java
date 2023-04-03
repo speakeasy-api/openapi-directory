@@ -4,13 +4,106 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDiscoveryV2ClassificationsRequest {
+    /**
+     * Filter entities by its id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetDiscoveryV2ClassificationsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetDiscoveryV2ClassificationsQueryParams queryParams;
-    public GetDiscoveryV2ClassificationsRequest withQueryParams(GetDiscoveryV2ClassificationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Yes if you want to display licensed content
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLicensedContent")
+    public GetDiscoveryV2ClassificationsIncludeLicensedContentEnum includeLicensedContent;
+    public GetDiscoveryV2ClassificationsRequest withIncludeLicensedContent(GetDiscoveryV2ClassificationsIncludeLicensedContentEnum includeLicensedContent) {
+        this.includeLicensedContent = includeLicensedContent;
+        return this;
+    }
+    
+    /**
+     * yes, to include spell check suggestions in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeSpellcheck")
+    public GetDiscoveryV2ClassificationsIncludeSpellcheckEnum includeSpellcheck;
+    public GetDiscoveryV2ClassificationsRequest withIncludeSpellcheck(GetDiscoveryV2ClassificationsIncludeSpellcheckEnum includeSpellcheck) {
+        this.includeSpellcheck = includeSpellcheck;
+        return this;
+    }
+    
+    /**
+     * True if you want to have entities flag as test in the response. Only, if you only wanted test entities
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeTest")
+    public GetDiscoveryV2ClassificationsIncludeTestEnum includeTest;
+    public GetDiscoveryV2ClassificationsRequest withIncludeTest(GetDiscoveryV2ClassificationsIncludeTestEnum includeTest) {
+        this.includeTest = includeTest;
+        return this;
+    }
+    
+    /**
+     * Keyword to search on
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword")
+    public String keyword;
+    public GetDiscoveryV2ClassificationsRequest withKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    
+    /**
+     * The locale in ISO code format. Multiple comma-separated values can be provided. When omitting the country part of the code (e.g. only 'en' or 'fr') then the first matching locale is used. When using a '*' it matches all locales. '*' can only be used at the end (e.g. 'en-us,en,*') 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public GetDiscoveryV2ClassificationsRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
+    
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetDiscoveryV2ClassificationsRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Page size of the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public String size;
+    public GetDiscoveryV2ClassificationsRequest withSize(String size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * Sorting order of the search result
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetDiscoveryV2ClassificationsRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Filter entities by its source name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public GetDiscoveryV2ClassificationsSourceEnum source;
+    public GetDiscoveryV2ClassificationsRequest withSource(GetDiscoveryV2ClassificationsSourceEnum source) {
+        this.source = source;
         return this;
     }
     

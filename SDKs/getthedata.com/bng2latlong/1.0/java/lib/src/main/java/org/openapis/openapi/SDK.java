@@ -135,7 +135,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetBng2latlongEastingNorthingResponse getBng2latlongEastingNorthing(org.openapis.openapi.models.operations.GetBng2latlongEastingNorthingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBng2latlongEastingNorthingPathParams.class, baseUrl, "/bng2latlong/{easting}/{northing}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBng2latlongEastingNorthingRequest.class, baseUrl, "/bng2latlong/{easting}/{northing}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LeaveGroupAlt1Request {
-    
-    public LeaveGroupAlt1PathParams pathParams;
-    public LeaveGroupAlt1Request withPathParams(LeaveGroupAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public LeaveGroupAlt1Security security;
-    public LeaveGroupAlt1Request withSecurity(LeaveGroupAlt1Security security) {
-        this.security = security;
+    /**
+     * The ID of the group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Double groupId;
+    public LeaveGroupAlt1Request withGroupId(Double groupId) {
+        this.groupId = groupId;
         return this;
     }
     

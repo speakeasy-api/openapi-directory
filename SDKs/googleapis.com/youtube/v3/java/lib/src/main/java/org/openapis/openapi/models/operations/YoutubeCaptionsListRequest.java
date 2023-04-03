@@ -4,20 +4,166 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class YoutubeCaptionsListRequest {
-    
-    public YoutubeCaptionsListQueryParams queryParams;
-    public YoutubeCaptionsListRequest withQueryParams(YoutubeCaptionsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public YoutubeCaptionsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public YoutubeCaptionsListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public YoutubeCaptionsListSecurity security;
-    public YoutubeCaptionsListRequest withSecurity(YoutubeCaptionsListSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public YoutubeCaptionsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public YoutubeCaptionsListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public YoutubeCaptionsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Returns the captions with the given IDs for Stubby or Apiary.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String[] id;
+    public YoutubeCaptionsListRequest withId(String[] id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public YoutubeCaptionsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public YoutubeCaptionsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * ID of the Google+ Page for the channel that the request is on behalf of.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onBehalfOf")
+    public String onBehalfOf;
+    public YoutubeCaptionsListRequest withOnBehalfOf(String onBehalfOf) {
+        this.onBehalfOf = onBehalfOf;
+        return this;
+    }
+    
+    /**
+     * *Note:* This parameter is intended exclusively for YouTube content partners. The *onBehalfOfContentOwner* parameter indicates that the request's authorization credentials identify a YouTube CMS user who is acting on behalf of the content owner specified in the parameter value. This parameter is intended for YouTube content partners that own and manage many different YouTube channels. It allows content owners to authenticate once and get access to all their video and channel data, without having to provide authentication credentials for each individual channel. The actual CMS account that the user authenticates with must be linked to the specified YouTube content owner.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onBehalfOfContentOwner")
+    public String onBehalfOfContentOwner;
+    public YoutubeCaptionsListRequest withOnBehalfOfContentOwner(String onBehalfOfContentOwner) {
+        this.onBehalfOfContentOwner = onBehalfOfContentOwner;
+        return this;
+    }
+    
+    /**
+     * The *part* parameter specifies a comma-separated list of one or more caption resource parts that the API response will include. The part names that you can include in the parameter value are id and snippet.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part")
+    public String[] part;
+    public YoutubeCaptionsListRequest withPart(String[] part) {
+        this.part = part;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public YoutubeCaptionsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public YoutubeCaptionsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public YoutubeCaptionsListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public YoutubeCaptionsListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Returns the captions for the specified video.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=videoId")
+    public String videoId;
+    public YoutubeCaptionsListRequest withVideoId(String videoId) {
+        this.videoId = videoId;
         return this;
     }
     

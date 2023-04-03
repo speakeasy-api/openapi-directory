@@ -33,25 +33,26 @@ public class Generatedapks {
     /**
      * Downloads a single signed APK generated from an app bundle.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksDownloadResponse androidpublisherGeneratedapksDownload(org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksDownloadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksDownloadResponse androidpublisherGeneratedapksDownload(org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksDownloadRequest request, org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksDownloadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksDownloadPathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/generatedApks/{versionCode}/downloads/{downloadId}:download", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksDownloadRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/generatedApks/{versionCode}/downloads/{downloadId}:download", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksDownloadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksDownloadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -72,25 +73,26 @@ public class Generatedapks {
     /**
      * Returns download metadata for all APKs that were generated from a given app bundle.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksListResponse androidpublisherGeneratedapksList(org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksListResponse androidpublisherGeneratedapksList(org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksListRequest request, org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksListPathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/generatedApks/{versionCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksListRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/generatedApks/{versionCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

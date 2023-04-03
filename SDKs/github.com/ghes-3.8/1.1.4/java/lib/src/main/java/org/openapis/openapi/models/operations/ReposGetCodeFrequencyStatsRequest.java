@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposGetCodeFrequencyStatsRequest {
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposGetCodeFrequencyStatsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ReposGetCodeFrequencyStatsPathParams pathParams;
-    public ReposGetCodeFrequencyStatsRequest withPathParams(ReposGetCodeFrequencyStatsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposGetCodeFrequencyStatsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

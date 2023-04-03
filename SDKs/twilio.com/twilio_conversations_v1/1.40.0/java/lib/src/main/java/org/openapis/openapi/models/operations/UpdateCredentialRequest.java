@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCredentialRequest {
-    
-    public UpdateCredentialPathParams pathParams;
-    public UpdateCredentialRequest withPathParams(UpdateCredentialPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateCredentialUpdateCredentialRequest request;
-    public UpdateCredentialRequest withRequest(UpdateCredentialUpdateCredentialRequest request) {
-        this.request = request;
+    public UpdateCredentialUpdateCredentialRequest requestBody;
+    public UpdateCredentialRequest withRequestBody(UpdateCredentialUpdateCredentialRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateCredentialSecurity security;
-    public UpdateCredentialRequest withSecurity(UpdateCredentialSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateCredentialRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateCredentialRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

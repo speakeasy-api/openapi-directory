@@ -39,7 +39,7 @@ public class EarlyDayMotions {
      */
     public org.openapis.openapi.models.operations.PublishedEarlyDayMotionGetResponse publishedEarlyDayMotionGet(org.openapis.openapi.models.operations.PublishedEarlyDayMotionGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PublishedEarlyDayMotionGetPathParams.class, baseUrl, "/EarlyDayMotion/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PublishedEarlyDayMotionGetRequest.class, baseUrl, "/EarlyDayMotion/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -104,7 +104,7 @@ public class EarlyDayMotions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEarlyDayMotionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEarlyDayMotionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

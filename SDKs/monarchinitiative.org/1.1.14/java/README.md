@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetAssociationBySubjectAndAssocTypePathParams;
-import org.openapis.openapi.models.operations.GetAssociationBySubjectAndAssocTypeQueryParams;
 import org.openapis.openapi.models.operations.GetAssociationBySubjectAndAssocTypeRequest;
 import org.openapis.openapi.models.operations.GetAssociationBySubjectAndAssocTypeResponse;
 
@@ -29,20 +27,16 @@ public class Application {
                 .build();
 
             GetAssociationBySubjectAndAssocTypeRequest req = new GetAssociationBySubjectAndAssocTypeRequest() {{
-                pathParams = new GetAssociationBySubjectAndAssocTypePathParams() {{
-                    associationType = "corrupti";
-                }};
-                queryParams = new GetAssociationBySubjectAndAssocTypeQueryParams() {{
-                    evidence = "provident";
-                    excludeAutomaticAssertions = false;
-                    object = "distinctio";
-                    rows = 844266;
-                    start = 602763;
-                    subject = "nulla";
-                    unselectEvidence = false;
-                    useCompactAssociations = false;
-                }};
-            }};            
+                associationType = "corrupti";
+                evidence = "provident";
+                excludeAutomaticAssertions = false;
+                object = "distinctio";
+                rows = 844266;
+                start = 602763;
+                subject = "nulla";
+                unselectEvidence = false;
+                useCompactAssociations = false;
+            }}            
 
             GetAssociationBySubjectAndAssocTypeResponse res = sdk.association.getAssociationBySubjectAndAssocType(req);
 
@@ -56,7 +50,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### association

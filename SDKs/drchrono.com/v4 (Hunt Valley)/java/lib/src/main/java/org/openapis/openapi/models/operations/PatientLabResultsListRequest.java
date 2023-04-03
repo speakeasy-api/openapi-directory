@@ -4,20 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientLabResultsListRequest {
-    
-    public PatientLabResultsListQueryParams queryParams;
-    public PatientLabResultsListRequest withQueryParams(PatientLabResultsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public PatientLabResultsListRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientLabResultsListRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
     
-    public PatientLabResultsListSecurity security;
-    public PatientLabResultsListRequest withSecurity(PatientLabResultsListSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering_doctor")
+    public Long orderingDoctor;
+    public PatientLabResultsListRequest withOrderingDoctor(Long orderingDoctor) {
+        this.orderingDoctor = orderingDoctor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public PatientLabResultsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public PatientLabResultsListRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public PatientLabResultsListRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

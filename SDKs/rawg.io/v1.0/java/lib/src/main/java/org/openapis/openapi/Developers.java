@@ -44,7 +44,7 @@ public class Developers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DevelopersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DevelopersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -82,7 +82,7 @@ public class Developers {
      */
     public org.openapis.openapi.models.operations.DevelopersReadResponse developersRead(org.openapis.openapi.models.operations.DevelopersReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DevelopersReadPathParams.class, baseUrl, "/developers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DevelopersReadRequest.class, baseUrl, "/developers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

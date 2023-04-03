@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRelatedVideosRequest {
-    
-    public GetRelatedVideosPathParams pathParams;
-    public GetRelatedVideosRequest withPathParams(GetRelatedVideosPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The attribute by which to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public GetRelatedVideosFilterEnum filter;
+    public GetRelatedVideosRequest withFilter(GetRelatedVideosFilterEnum filter) {
+        this.filter = filter;
         return this;
     }
     
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetRelatedVideosRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetRelatedVideosQueryParams queryParams;
-    public GetRelatedVideosRequest withQueryParams(GetRelatedVideosQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetRelatedVideosRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public GetRelatedVideosRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

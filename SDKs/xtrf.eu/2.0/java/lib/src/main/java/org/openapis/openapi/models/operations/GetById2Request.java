@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetById2Request {
-    
-    public GetById2PathParams pathParams;
-    public GetById2Request withPathParams(GetById2PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * client's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
+    public Long customerId;
+    public GetById2Request withCustomerId(Long customerId) {
+        this.customerId = customerId;
         return this;
     }
     
-    
-    public GetById2QueryParams queryParams;
-    public GetById2Request withQueryParams(GetById2QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * list of additional fields which should be embedded in the response (available options: persons)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
+    public String embed;
+    public GetById2Request withEmbed(String embed) {
+        this.embed = embed;
         return this;
     }
     

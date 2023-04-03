@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BugTrackerGetRepoIssueFromCrashRequest {
-    
-    public BugTrackerGetRepoIssueFromCrashPathParams pathParams;
-    public BugTrackerGetRepoIssueFromCrashRequest withPathParams(BugTrackerGetRepoIssueFromCrashPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public BugTrackerGetRepoIssueFromCrashRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * CrashGroup Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_group_id")
+    public String crashGroupId;
+    public BugTrackerGetRepoIssueFromCrashRequest withCrashGroupId(String crashGroupId) {
+        this.crashGroupId = crashGroupId;
+        return this;
+    }
     
-    public BugTrackerGetRepoIssueFromCrashSecurity security;
-    public BugTrackerGetRepoIssueFromCrashRequest withSecurity(BugTrackerGetRepoIssueFromCrashSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public BugTrackerGetRepoIssueFromCrashRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

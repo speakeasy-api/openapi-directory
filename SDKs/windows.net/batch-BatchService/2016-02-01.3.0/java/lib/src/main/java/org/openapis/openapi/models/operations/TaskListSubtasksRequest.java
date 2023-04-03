@@ -4,27 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaskListSubtasksRequest {
-    
-    public TaskListSubtasksPathParams pathParams;
-    public TaskListSubtasksRequest withPathParams(TaskListSubtasksPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An OData $select clause.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$select")
+    public String dollarSelect;
+    public TaskListSubtasksRequest withDollarSelect(String dollarSelect) {
+        this.dollarSelect = dollarSelect;
         return this;
     }
     
-    
-    public TaskListSubtasksQueryParams queryParams;
-    public TaskListSubtasksRequest withQueryParams(TaskListSubtasksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Client API Version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public TaskListSubtasksRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The caller-generated request identity, in the form of a GUID with no decoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
+    public String clientRequestId;
+    public TaskListSubtasksRequest withClientRequestId(String clientRequestId) {
+        this.clientRequestId = clientRequestId;
+        return this;
+    }
     
-    public TaskListSubtasksHeaders headers;
-    public TaskListSubtasksRequest withHeaders(TaskListSubtasksHeaders headers) {
-        this.headers = headers;
+    /**
+     * The id of the job.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public TaskListSubtasksRequest withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    
+    /**
+     * The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
+    public String ocpDate;
+    public TaskListSubtasksRequest withOcpDate(String ocpDate) {
+        this.ocpDate = ocpDate;
+        return this;
+    }
+    
+    /**
+     * Whether the server should return the client-request-id identifier in the response.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
+    public Boolean returnClientRequestId;
+    public TaskListSubtasksRequest withReturnClientRequestId(Boolean returnClientRequestId) {
+        this.returnClientRequestId = returnClientRequestId;
+        return this;
+    }
+    
+    /**
+     * The id of the task.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
+    public String taskId;
+    public TaskListSubtasksRequest withTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    
+    /**
+     * The maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
+    public Integer timeout;
+    public TaskListSubtasksRequest withTimeout(Integer timeout) {
+        this.timeout = timeout;
         return this;
     }
     

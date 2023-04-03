@@ -4,20 +4,59 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuestionsRequest {
-    
-    public GetQuestionsQueryParams queryParams;
-    public GetQuestionsRequest withQueryParams(GetQuestionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * e.g. cQovpGcdUT1CSzgYk0KPYdAI0
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-App-Token")
+    public String xAppToken;
+    public GetQuestionsRequest withXAppToken(String xAppToken) {
+        this.xAppToken = xAppToken;
         return this;
     }
     
+    /**
+     * The [Socrata App Token](https://dev.socrata.com/docs/app-tokens.html) to be
+     * used with your request. The `app_token` parameter is required if an app token is not passed via the `X-App-Token` HTTP header. Clients must [register for their own app tokens](https://dev.socrata.com/docs/app-tokens.html).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_token")
+    public String appToken;
+    public GetQuestionsRequest withAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
     
-    public GetQuestionsHeaders headers;
-    public GetQuestionsRequest withHeaders(GetQuestionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Maximum number of results to return.
+     * Must be an integer from 0 to 50000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Double limit;
+    public GetQuestionsRequest withLimit(Double limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Number of results to skip.
+     * Used for pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Double offset;
+    public GetQuestionsRequest withOffset(Double offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * String to search against.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetQuestionsRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

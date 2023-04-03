@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransferInstrumentsIdRequest {
-    
-    public GetTransferInstrumentsIdPathParams pathParams;
-    public GetTransferInstrumentsIdRequest withPathParams(GetTransferInstrumentsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetTransferInstrumentsIdSecurity security;
-    public GetTransferInstrumentsIdRequest withSecurity(GetTransferInstrumentsIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the transfer instrument.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetTransferInstrumentsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

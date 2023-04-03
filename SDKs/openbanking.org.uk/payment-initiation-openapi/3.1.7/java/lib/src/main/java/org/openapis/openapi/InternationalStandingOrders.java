@@ -35,23 +35,24 @@ public class InternationalStandingOrders {
     /**
      * Create International Standing Order Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateInternationalStandingOrderConsentsJsonResponse createInternationalStandingOrderConsentsJson(org.openapis.openapi.models.operations.CreateInternationalStandingOrderConsentsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInternationalStandingOrderConsentsJsonResponse createInternationalStandingOrderConsentsJson(org.openapis.openapi.models.operations.CreateInternationalStandingOrderConsentsJsonRequest request, org.openapis.openapi.models.operations.CreateInternationalStandingOrderConsentsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/international-standing-order-consents");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "obWriteInternationalStandingOrderConsent6", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -60,7 +61,7 @@ public class InternationalStandingOrders {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,23 +124,24 @@ public class InternationalStandingOrders {
     /**
      * Create International Standing Order Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateInternationalStandingOrderConsentsRawResponse createInternationalStandingOrderConsentsRaw(org.openapis.openapi.models.operations.CreateInternationalStandingOrderConsentsRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInternationalStandingOrderConsentsRawResponse createInternationalStandingOrderConsentsRaw(org.openapis.openapi.models.operations.CreateInternationalStandingOrderConsentsRawRequest request, org.openapis.openapi.models.operations.CreateInternationalStandingOrderConsentsRawSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/international-standing-order-consents");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -148,7 +150,7 @@ public class InternationalStandingOrders {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -211,23 +213,24 @@ public class InternationalStandingOrders {
     /**
      * Create International Standing Orders
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateInternationalStandingOrdersJsonResponse createInternationalStandingOrdersJson(org.openapis.openapi.models.operations.CreateInternationalStandingOrdersJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInternationalStandingOrdersJsonResponse createInternationalStandingOrdersJson(org.openapis.openapi.models.operations.CreateInternationalStandingOrdersJsonRequest request, org.openapis.openapi.models.operations.CreateInternationalStandingOrdersJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/international-standing-orders");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "obWriteInternationalStandingOrder4", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -236,7 +239,7 @@ public class InternationalStandingOrders {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -299,23 +302,24 @@ public class InternationalStandingOrders {
     /**
      * Create International Standing Orders
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateInternationalStandingOrdersRawResponse createInternationalStandingOrdersRaw(org.openapis.openapi.models.operations.CreateInternationalStandingOrdersRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInternationalStandingOrdersRawResponse createInternationalStandingOrdersRaw(org.openapis.openapi.models.operations.CreateInternationalStandingOrdersRawRequest request, org.openapis.openapi.models.operations.CreateInternationalStandingOrdersRawSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/international-standing-orders");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -324,7 +328,7 @@ public class InternationalStandingOrders {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -387,18 +391,19 @@ public class InternationalStandingOrders {
     /**
      * Get International Standing Order Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetInternationalStandingOrderConsentsConsentIdResponse getInternationalStandingOrderConsentsConsentId(org.openapis.openapi.models.operations.GetInternationalStandingOrderConsentsConsentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetInternationalStandingOrderConsentsConsentIdResponse getInternationalStandingOrderConsentsConsentId(org.openapis.openapi.models.operations.GetInternationalStandingOrderConsentsConsentIdRequest request, org.openapis.openapi.models.operations.GetInternationalStandingOrderConsentsConsentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInternationalStandingOrderConsentsConsentIdPathParams.class, baseUrl, "/international-standing-order-consents/{ConsentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInternationalStandingOrderConsentsConsentIdRequest.class, baseUrl, "/international-standing-order-consents/{ConsentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -407,7 +412,7 @@ public class InternationalStandingOrders {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -470,18 +475,19 @@ public class InternationalStandingOrders {
     /**
      * Get International Standing Orders
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdResponse getInternationalStandingOrdersInternationalStandingOrderPaymentId(org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdResponse getInternationalStandingOrdersInternationalStandingOrderPaymentId(org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdRequest request, org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdPathParams.class, baseUrl, "/international-standing-orders/{InternationalStandingOrderPaymentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdRequest.class, baseUrl, "/international-standing-orders/{InternationalStandingOrderPaymentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -490,7 +496,7 @@ public class InternationalStandingOrders {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

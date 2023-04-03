@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomPagesRequest {
-    
-    public GetCustomPagesQueryParams queryParams;
-    public GetCustomPagesRequest withQueryParams(GetCustomPagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Used to specify further pages (starts at 1)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetCustomPagesRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public GetCustomPagesSecurity security;
-    public GetCustomPagesRequest withSecurity(GetCustomPagesSecurity security) {
-        this.security = security;
+    /**
+     * Number of items to include in pagination (up to 100, defaults to 10)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public Long perPage;
+    public GetCustomPagesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

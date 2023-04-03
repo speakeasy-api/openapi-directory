@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetAddressPathParams;
 import org.openapis.openapi.models.operations.GetAddressRequest;
 import org.openapis.openapi.models.operations.GetAddressResponse;
 
@@ -15,10 +14,8 @@ public class Application {
                 .build();
 
             GetAddressRequest req = new GetAddressRequest() {{
-                pathParams = new GetAddressPathParams() {{
-                    address = "5786 Little Streets";
-                }};
-            }};            
+                address = "5786 Little Streets";
+            }}            
 
             GetAddressResponse res = sdk.getAddress(req);
 

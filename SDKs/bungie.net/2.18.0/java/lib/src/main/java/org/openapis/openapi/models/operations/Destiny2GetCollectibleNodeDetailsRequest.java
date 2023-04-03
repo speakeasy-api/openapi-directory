@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetCollectibleNodeDetailsRequest {
-    
-    public Destiny2GetCollectibleNodeDetailsPathParams pathParams;
-    public Destiny2GetCollectibleNodeDetailsRequest withPathParams(Destiny2GetCollectibleNodeDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Destiny Character ID of the character for whom we're getting collectible detail info.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=characterId")
+    public Long characterId;
+    public Destiny2GetCollectibleNodeDetailsRequest withCharacterId(Long characterId) {
+        this.characterId = characterId;
         return this;
     }
     
+    /**
+     * The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collectiblePresentationNodeHash")
+    public Long collectiblePresentationNodeHash;
+    public Destiny2GetCollectibleNodeDetailsRequest withCollectiblePresentationNodeHash(Long collectiblePresentationNodeHash) {
+        this.collectiblePresentationNodeHash = collectiblePresentationNodeHash;
+        return this;
+    }
     
-    public Destiny2GetCollectibleNodeDetailsQueryParams queryParams;
-    public Destiny2GetCollectibleNodeDetailsRequest withQueryParams(Destiny2GetCollectibleNodeDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=components")
+    public Integer[] components;
+    public Destiny2GetCollectibleNodeDetailsRequest withComponents(Integer[] components) {
+        this.components = components;
+        return this;
+    }
+    
+    /**
+     * Destiny membership ID of another user. You may be denied.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
+    public Long destinyMembershipId;
+    public Destiny2GetCollectibleNodeDetailsRequest withDestinyMembershipId(Long destinyMembershipId) {
+        this.destinyMembershipId = destinyMembershipId;
+        return this;
+    }
+    
+    /**
+     * A valid non-BungieNet membership type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public Destiny2GetCollectibleNodeDetailsRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

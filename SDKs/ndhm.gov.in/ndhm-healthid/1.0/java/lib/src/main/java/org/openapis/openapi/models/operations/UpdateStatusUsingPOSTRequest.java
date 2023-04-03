@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateStatusUsingPOSTRequest {
-    
-    public UpdateStatusUsingPOSTHeaders headers;
-    public UpdateStatusUsingPOSTRequest withHeaders(UpdateStatusUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public UpdateStatusUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class UpdateStatusUsingPOSTRequest {
      * generateOtpRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.HidStatusRequestPayload request;
-    public UpdateStatusUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.HidStatusRequestPayload request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public UpdateStatusUsingPOSTSecurity security;
-    public UpdateStatusUsingPOSTRequest withSecurity(UpdateStatusUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.HidStatusRequestPayload hidStatusRequestPayload;
+    public UpdateStatusUsingPOSTRequest withHidStatusRequestPayload(org.openapis.openapi.models.shared.HidStatusRequestPayload hidStatusRequestPayload) {
+        this.hidStatusRequestPayload = hidStatusRequestPayload;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteVideoFromChannelRequest {
-    
-    public DeleteVideoFromChannelPathParams pathParams;
-    public DeleteVideoFromChannelRequest withPathParams(DeleteVideoFromChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public DeleteVideoFromChannelRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     
-    
-    public DeleteVideoFromChannelSecurity security;
-    public DeleteVideoFromChannelRequest withSecurity(DeleteVideoFromChannelSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public DeleteVideoFromChannelRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

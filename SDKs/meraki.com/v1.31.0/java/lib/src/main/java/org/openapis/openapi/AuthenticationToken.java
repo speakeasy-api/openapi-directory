@@ -38,7 +38,7 @@ public class AuthenticationToken {
      */
     public org.openapis.openapi.models.operations.CreateDeviceApplianceVmxAuthenticationTokenResponse createDeviceApplianceVmxAuthenticationToken(org.openapis.openapi.models.operations.CreateDeviceApplianceVmxAuthenticationTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDeviceApplianceVmxAuthenticationTokenPathParams.class, baseUrl, "/devices/{serial}/appliance/vmx/authenticationToken", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDeviceApplianceVmxAuthenticationTokenRequest.class, baseUrl, "/devices/{serial}/appliance/vmx/authenticationToken", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

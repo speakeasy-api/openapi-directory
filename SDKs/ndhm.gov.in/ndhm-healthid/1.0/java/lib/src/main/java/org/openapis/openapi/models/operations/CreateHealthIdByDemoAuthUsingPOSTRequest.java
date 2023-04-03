@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateHealthIdByDemoAuthUsingPOSTRequest {
-    
-    public CreateHealthIdByDemoAuthUsingPOSTHeaders headers;
-    public CreateHealthIdByDemoAuthUsingPOSTRequest withHeaders(CreateHealthIdByDemoAuthUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public CreateHealthIdByDemoAuthUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class CreateHealthIdByDemoAuthUsingPOSTRequest {
      * createHIdDemoAuthRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateHIdDemoAuthRequest request;
-    public CreateHealthIdByDemoAuthUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.CreateHIdDemoAuthRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateHealthIdByDemoAuthUsingPOSTSecurity security;
-    public CreateHealthIdByDemoAuthUsingPOSTRequest withSecurity(CreateHealthIdByDemoAuthUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.CreateHIdDemoAuthRequest createHIdDemoAuthRequest;
+    public CreateHealthIdByDemoAuthUsingPOSTRequest withCreateHIdDemoAuthRequest(org.openapis.openapi.models.shared.CreateHIdDemoAuthRequest createHIdDemoAuthRequest) {
+        this.createHIdDemoAuthRequest = createHIdDemoAuthRequest;
         return this;
     }
     

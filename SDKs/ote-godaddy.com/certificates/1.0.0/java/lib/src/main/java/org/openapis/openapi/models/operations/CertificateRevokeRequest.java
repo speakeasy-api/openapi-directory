@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateRevokeRequest {
-    
-    public CertificateRevokePathParams pathParams;
-    public CertificateRevokeRequest withPathParams(CertificateRevokePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The certificate revocation request
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CertificateRevoke request;
-    public CertificateRevokeRequest withRequest(org.openapis.openapi.models.shared.CertificateRevoke request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CertificateRevoke certificateRevoke;
+    public CertificateRevokeRequest withCertificateRevoke(org.openapis.openapi.models.shared.CertificateRevoke certificateRevoke) {
+        this.certificateRevoke = certificateRevoke;
+        return this;
+    }
+    
+    /**
+     * Certificate id to revoke
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=certificateId")
+    public String certificateId;
+    public CertificateRevokeRequest withCertificateId(String certificateId) {
+        this.certificateId = certificateId;
         return this;
     }
     

@@ -4,20 +4,120 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyCapacityReservationFleetRequest {
-    
-    public GETModifyCapacityReservationFleetQueryParams queryParams;
-    public GETModifyCapacityReservationFleetRequest withQueryParams(GETModifyCapacityReservationFleetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyCapacityReservationFleetActionEnum action;
+    public GETModifyCapacityReservationFleetRequest withAction(GETModifyCapacityReservationFleetActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The ID of the Capacity Reservation Fleet to modify.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CapacityReservationFleetId")
+    public String capacityReservationFleetId;
+    public GETModifyCapacityReservationFleetRequest withCapacityReservationFleetId(String capacityReservationFleetId) {
+        this.capacityReservationFleetId = capacityReservationFleetId;
+        return this;
+    }
     
-    public GETModifyCapacityReservationFleetHeaders headers;
-    public GETModifyCapacityReservationFleetRequest withHeaders(GETModifyCapacityReservationFleetHeaders headers) {
-        this.headers = headers;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETModifyCapacityReservationFleetRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The date and time at which the Capacity Reservation Fleet expires. When the Capacity Reservation Fleet expires, its state changes to &lt;code&gt;expired&lt;/code&gt; and all of the Capacity Reservations in the Fleet expire.&lt;/p&gt; &lt;p&gt;The Capacity Reservation Fleet expires within an hour after the specified time. For example, if you specify &lt;code&gt;5/31/2019&lt;/code&gt;, &lt;code&gt;13:30:55&lt;/code&gt;, the Capacity Reservation Fleet is guaranteed to expire between &lt;code&gt;13:30:55&lt;/code&gt; and &lt;code&gt;14:30:55&lt;/code&gt; on &lt;code&gt;5/31/2019&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;You can't specify &lt;b&gt;EndDate&lt;/b&gt; and &lt;b&gt; RemoveEndDate&lt;/b&gt; in the same request.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndDate")
+    public OffsetDateTime endDate;
+    public GETModifyCapacityReservationFleetRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Indicates whether to remove the end date from the Capacity Reservation Fleet. If you remove the end date, the Capacity Reservation Fleet does not expire and it remains active until you explicitly cancel it using the &lt;b&gt;CancelCapacityReservationFleet&lt;/b&gt; action.&lt;/p&gt; &lt;p&gt;You can't specify &lt;b&gt;RemoveEndDate&lt;/b&gt; and &lt;b&gt; EndDate&lt;/b&gt; in the same request.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoveEndDate")
+    public Boolean removeEndDate;
+    public GETModifyCapacityReservationFleetRequest withRemoveEndDate(Boolean removeEndDate) {
+        this.removeEndDate = removeEndDate;
+        return this;
+    }
+    
+    /**
+     * The total number of capacity units to be reserved by the Capacity Reservation Fleet. This value, together with the instance type weights that you assign to each instance type used by the Fleet determine the number of instances for which the Fleet reserves capacity. Both values are based on units that make sense for your workload. For more information, see &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity"&gt;Total target capacity&lt;/a&gt; in the Amazon EC2 User Guide.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TotalTargetCapacity")
+    public Long totalTargetCapacity;
+    public GETModifyCapacityReservationFleetRequest withTotalTargetCapacity(Long totalTargetCapacity) {
+        this.totalTargetCapacity = totalTargetCapacity;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyCapacityReservationFleetVersionEnum version;
+    public GETModifyCapacityReservationFleetRequest withVersion(GETModifyCapacityReservationFleetVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyCapacityReservationFleetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyCapacityReservationFleetRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyCapacityReservationFleetRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyCapacityReservationFleetRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyCapacityReservationFleetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyCapacityReservationFleetRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyCapacityReservationFleetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

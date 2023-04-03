@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommentsAlt1Request {
-    
-    public GetCommentsAlt1PathParams pathParams;
-    public GetCommentsAlt1Request withPathParams(GetCommentsAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public GetCommentsAlt1Request withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetCommentsAlt1DirectionEnum direction;
+    public GetCommentsAlt1Request withDirection(GetCommentsAlt1DirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public GetCommentsAlt1QueryParams queryParams;
-    public GetCommentsAlt1Request withQueryParams(GetCommentsAlt1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetCommentsAlt1Request withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetCommentsAlt1Request withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public GetCommentsAlt1Request withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

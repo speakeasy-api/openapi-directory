@@ -7,31 +7,89 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReimportApiRequest {
-    
-    public ReimportApiPathParams pathParams;
-    public ReimportApiRequest withPathParams(ReimportApiPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ReimportApiQueryParams queryParams;
-    public ReimportApiRequest withQueryParams(ReimportApiQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ReimportApiHeaders headers;
-    public ReimportApiRequest withHeaders(ReimportApiHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReimportApiRequestBody request;
-    public ReimportApiRequest withRequest(ReimportApiRequestBody request) {
-        this.request = request;
+    public ReimportApiRequestBody requestBody;
+    public ReimportApiRequest withRequestBody(ReimportApiRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ReimportApiRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ReimportApiRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ReimportApiRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ReimportApiRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ReimportApiRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ReimportApiRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ReimportApiRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The API identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
+    public String apiId;
+    public ReimportApiRequest withApiId(String apiId) {
+        this.apiId = apiId;
+        return this;
+    }
+    
+    /**
+     * Specifies how to interpret the base path of the API during import. Valid values are ignore, prepend, and split. The default value is ignore. To learn more, see &lt;a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-import-api-basePath.html"&gt;Set the OpenAPI basePath Property&lt;/a&gt;. Supported only for HTTP APIs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=basepath")
+    public String basepath;
+    public ReimportApiRequest withBasepath(String basepath) {
+        this.basepath = basepath;
+        return this;
+    }
+    
+    /**
+     * Specifies whether to rollback the API creation when a warning is encountered. By default, API creation continues if a warning is encountered.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=failOnWarnings")
+    public Boolean failOnWarnings;
+    public ReimportApiRequest withFailOnWarnings(Boolean failOnWarnings) {
+        this.failOnWarnings = failOnWarnings;
         return this;
     }
     

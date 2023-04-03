@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CancelImageCreationHeaders;
 import org.openapis.openapi.models.operations.CancelImageCreationRequestBody;
 import org.openapis.openapi.models.operations.CancelImageCreationRequest;
 import org.openapis.openapi.models.operations.CancelImageCreationResponse;
@@ -14,27 +13,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CancelImageCreationRequest req = new CancelImageCreationRequest() {{
-                headers = new CancelImageCreationHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
+                requestBody = new CancelImageCreationRequestBody() {{
+                    clientToken = "corrupti";
+                    imageBuildVersionArn = "provident";
                 }};
-                request = new CancelImageCreationRequestBody() {{
-                    clientToken = "illum";
-                    imageBuildVersionArn = "vel";
-                }};
-            }};            
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+            }}            
 
             CancelImageCreationResponse res = sdk.cancelImageCreation(req);
 

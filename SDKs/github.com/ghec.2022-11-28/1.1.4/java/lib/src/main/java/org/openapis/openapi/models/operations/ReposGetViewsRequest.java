@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposGetViewsRequest {
-    
-    public ReposGetViewsPathParams pathParams;
-    public ReposGetViewsRequest withPathParams(ReposGetViewsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposGetViewsRequest withOwner(String owner) {
+        this.owner = owner;
         return this;
     }
     
+    /**
+     * The time frame to display results for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per")
+    public org.openapis.openapi.models.shared.PerEnum per;
+    public ReposGetViewsRequest withPer(org.openapis.openapi.models.shared.PerEnum per) {
+        this.per = per;
+        return this;
+    }
     
-    public ReposGetViewsQueryParams queryParams;
-    public ReposGetViewsRequest withQueryParams(ReposGetViewsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposGetViewsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

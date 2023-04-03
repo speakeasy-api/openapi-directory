@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV1AdminAccountsIdUnsuspendRequest {
-    
-    public PostApiV1AdminAccountsIdUnsuspendPathParams pathParams;
-    public PostApiV1AdminAccountsIdUnsuspendRequest withPathParams(PostApiV1AdminAccountsIdUnsuspendPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostApiV1AdminAccountsIdUnsuspendSecurity security;
-    public PostApiV1AdminAccountsIdUnsuspendRequest withSecurity(PostApiV1AdminAccountsIdUnsuspendSecurity security) {
-        this.security = security;
+    /**
+     * ID of the account
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostApiV1AdminAccountsIdUnsuspendRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

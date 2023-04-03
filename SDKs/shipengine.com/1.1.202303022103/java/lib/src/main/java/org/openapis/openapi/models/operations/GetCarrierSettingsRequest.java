@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCarrierSettingsRequest {
+    /**
+     * Carrier ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=carrier_id")
+    public String carrierId;
+    public GetCarrierSettingsRequest withCarrierId(String carrierId) {
+        this.carrierId = carrierId;
+        return this;
+    }
     
-    public GetCarrierSettingsPathParams pathParams;
-    public GetCarrierSettingsRequest withPathParams(GetCarrierSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The carrier name, such as `ups`, `fedex`, or `dhl_express`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=carrier_name")
+    public org.openapis.openapi.models.shared.CarrierNameWithSettingsEnum carrierName;
+    public GetCarrierSettingsRequest withCarrierName(org.openapis.openapi.models.shared.CarrierNameWithSettingsEnum carrierName) {
+        this.carrierName = carrierName;
         return this;
     }
     

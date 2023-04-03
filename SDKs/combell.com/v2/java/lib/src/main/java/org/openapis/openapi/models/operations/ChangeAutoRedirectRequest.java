@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeAutoRedirectRequest {
-    
-    public ChangeAutoRedirectPathParams pathParams;
-    public ChangeAutoRedirectRequest withPathParams(ChangeAutoRedirectPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ChangeAutoRedirectQueryParams queryParams;
-    public ChangeAutoRedirectRequest withQueryParams(ChangeAutoRedirectQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Auto redirect config.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AutoRedirectConfig request;
-    public ChangeAutoRedirectRequest withRequest(org.openapis.openapi.models.shared.AutoRedirectConfig request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AutoRedirectConfig autoRedirectConfig;
+    public ChangeAutoRedirectRequest withAutoRedirectConfig(org.openapis.openapi.models.shared.AutoRedirectConfig autoRedirectConfig) {
+        this.autoRedirectConfig = autoRedirectConfig;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public ChangeAutoRedirectRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Linux hosting domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public ChangeAutoRedirectRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        return this;
+    }
+    
+    /**
+     * Specific hostname.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hostname")
+    public String hostname;
+    public ChangeAutoRedirectRequest withHostname(String hostname) {
+        this.hostname = hostname;
         return this;
     }
     

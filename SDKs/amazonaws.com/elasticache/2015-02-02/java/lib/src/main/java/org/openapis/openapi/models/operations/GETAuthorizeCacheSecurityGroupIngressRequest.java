@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAuthorizeCacheSecurityGroupIngressRequest {
-    
-    public GETAuthorizeCacheSecurityGroupIngressQueryParams queryParams;
-    public GETAuthorizeCacheSecurityGroupIngressRequest withQueryParams(GETAuthorizeCacheSecurityGroupIngressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETAuthorizeCacheSecurityGroupIngressActionEnum action;
+    public GETAuthorizeCacheSecurityGroupIngressRequest withAction(GETAuthorizeCacheSecurityGroupIngressActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The cache security group that allows network ingress.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheSecurityGroupName")
+    public String cacheSecurityGroupName;
+    public GETAuthorizeCacheSecurityGroupIngressRequest withCacheSecurityGroupName(String cacheSecurityGroupName) {
+        this.cacheSecurityGroupName = cacheSecurityGroupName;
+        return this;
+    }
     
-    public GETAuthorizeCacheSecurityGroupIngressHeaders headers;
-    public GETAuthorizeCacheSecurityGroupIngressRequest withHeaders(GETAuthorizeCacheSecurityGroupIngressHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Amazon EC2 security group to be authorized for ingress to the cache security group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EC2SecurityGroupName")
+    public String ec2SecurityGroupName;
+    public GETAuthorizeCacheSecurityGroupIngressRequest withEc2SecurityGroupName(String ec2SecurityGroupName) {
+        this.ec2SecurityGroupName = ec2SecurityGroupName;
+        return this;
+    }
+    
+    /**
+     * The Amazon account number of the Amazon EC2 security group owner. Note that this is not the same thing as an Amazon access key ID - you must provide a valid Amazon account number for this parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EC2SecurityGroupOwnerId")
+    public String ec2SecurityGroupOwnerId;
+    public GETAuthorizeCacheSecurityGroupIngressRequest withEc2SecurityGroupOwnerId(String ec2SecurityGroupOwnerId) {
+        this.ec2SecurityGroupOwnerId = ec2SecurityGroupOwnerId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETAuthorizeCacheSecurityGroupIngressVersionEnum version;
+    public GETAuthorizeCacheSecurityGroupIngressRequest withVersion(GETAuthorizeCacheSecurityGroupIngressVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETAuthorizeCacheSecurityGroupIngressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETAuthorizeCacheSecurityGroupIngressRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETAuthorizeCacheSecurityGroupIngressRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETAuthorizeCacheSecurityGroupIngressRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETAuthorizeCacheSecurityGroupIngressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETAuthorizeCacheSecurityGroupIngressRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETAuthorizeCacheSecurityGroupIngressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

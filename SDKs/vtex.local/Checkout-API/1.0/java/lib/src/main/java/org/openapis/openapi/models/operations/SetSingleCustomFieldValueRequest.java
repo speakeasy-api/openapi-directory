@@ -7,24 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetSingleCustomFieldValueRequest {
-    
-    public SetSingleCustomFieldValuePathParams pathParams;
-    public SetSingleCustomFieldValueRequest withPathParams(SetSingleCustomFieldValuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public SetSingleCustomFieldValueRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public SetSingleCustomFieldValueHeaders headers;
-    public SetSingleCustomFieldValueRequest withHeaders(SetSingleCustomFieldValueHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public SetSingleCustomFieldValueRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SetsinglecustomfieldvalueRequest request;
-    public SetSingleCustomFieldValueRequest withRequest(org.openapis.openapi.models.shared.SetsinglecustomfieldvalueRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SetsinglecustomfieldvalueRequest setsinglecustomfieldvalueRequest;
+    public SetSingleCustomFieldValueRequest withSetsinglecustomfieldvalueRequest(org.openapis.openapi.models.shared.SetsinglecustomfieldvalueRequest setsinglecustomfieldvalueRequest) {
+        this.setsinglecustomfieldvalueRequest = setsinglecustomfieldvalueRequest;
+        return this;
+    }
+    
+    /**
+     * Name of the app's field created through the Update orderForm Configuration endpoint.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appFieldName")
+    public String appFieldName;
+    public SetSingleCustomFieldValueRequest withAppFieldName(String appFieldName) {
+        this.appFieldName = appFieldName;
+        return this;
+    }
+    
+    /**
+     * ID of the app created through the Update orderForm Configuration endpoint.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public String appId;
+    public SetSingleCustomFieldValueRequest withAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    
+    /**
+     * The ID of the orderForm whose custom field's value you want to change.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderFormId")
+    public String orderFormId;
+    public SetSingleCustomFieldValueRequest withOrderFormId(String orderFormId) {
+        this.orderFormId = orderFormId;
         return this;
     }
     

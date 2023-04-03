@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IndividualSubscriptionGETRequest {
-    
-    public IndividualSubscriptionGETPathParams pathParams;
-    public IndividualSubscriptionGETRequest withPathParams(IndividualSubscriptionGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Identifier of an individual subscription to notifications about application package changes
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriptionId")
+    public String subscriptionId;
+    public IndividualSubscriptionGETRequest withSubscriptionId(String subscriptionId) {
+        this.subscriptionId = subscriptionId;
         return this;
     }
     

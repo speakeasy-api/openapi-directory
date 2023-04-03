@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchTollfreeVerificationRequest {
-    
-    public FetchTollfreeVerificationPathParams pathParams;
-    public FetchTollfreeVerificationRequest withPathParams(FetchTollfreeVerificationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchTollfreeVerificationSecurity security;
-    public FetchTollfreeVerificationRequest withSecurity(FetchTollfreeVerificationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchTollfreeVerificationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string to identify Tollfree Verification.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchTollfreeVerificationRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

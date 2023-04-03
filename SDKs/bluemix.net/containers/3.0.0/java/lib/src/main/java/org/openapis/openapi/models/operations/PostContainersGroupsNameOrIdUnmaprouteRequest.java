@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostContainersGroupsNameOrIdUnmaprouteRequest {
-    
-    public PostContainersGroupsNameOrIdUnmaproutePathParams pathParams;
-    public PostContainersGroupsNameOrIdUnmaprouteRequest withPathParams(PostContainersGroupsNameOrIdUnmaproutePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostContainersGroupsNameOrIdUnmaprouteHeaders headers;
-    public PostContainersGroupsNameOrIdUnmaprouteRequest withHeaders(PostContainersGroupsNameOrIdUnmaprouteHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The public route that is unmapped from the container group. A public route consists of the host name and domain.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Route request;
-    public PostContainersGroupsNameOrIdUnmaprouteRequest withRequest(org.openapis.openapi.models.shared.Route request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Route route;
+    public PostContainersGroupsNameOrIdUnmaprouteRequest withRoute(org.openapis.openapi.models.shared.Route route) {
+        this.route = route;
+        return this;
+    }
+    
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space &lt;space_name&gt; --guid`, where `&lt;space_name&gt;` is the name of your space, to retrieve your space ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public PostContainersGroupsNameOrIdUnmaprouteRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
+        return this;
+    }
+    
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public PostContainersGroupsNameOrIdUnmaprouteRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
+        return this;
+    }
+    
+    /**
+     * The name or unique ID (UUID) of the container group that you want to inspect.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name_or_id")
+    public String nameOrId;
+    public PostContainersGroupsNameOrIdUnmaprouteRequest withNameOrId(String nameOrId) {
+        this.nameOrId = nameOrId;
         return this;
     }
     

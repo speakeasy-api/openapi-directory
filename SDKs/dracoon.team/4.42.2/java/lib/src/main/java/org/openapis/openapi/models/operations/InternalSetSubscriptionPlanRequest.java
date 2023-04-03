@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InternalSetSubscriptionPlanRequest {
-    
-    public InternalSetSubscriptionPlanHeaders headers;
-    public InternalSetSubscriptionPlanRequest withHeaders(InternalSetSubscriptionPlanHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.SubscriptionPlanRequest subscriptionPlanRequest;
+    public InternalSetSubscriptionPlanRequest withSubscriptionPlanRequest(org.openapis.openapi.models.shared.SubscriptionPlanRequest subscriptionPlanRequest) {
+        this.subscriptionPlanRequest = subscriptionPlanRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SubscriptionPlanRequest request;
-    public InternalSetSubscriptionPlanRequest withRequest(org.openapis.openapi.models.shared.SubscriptionPlanRequest request) {
-        this.request = request;
+    /**
+     * Service Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Service-Token")
+    public String xSdsServiceToken;
+    public InternalSetSubscriptionPlanRequest withXSdsServiceToken(String xSdsServiceToken) {
+        this.xSdsServiceToken = xSdsServiceToken;
         return this;
     }
     

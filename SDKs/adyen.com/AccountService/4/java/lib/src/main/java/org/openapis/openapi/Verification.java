@@ -34,10 +34,11 @@ public class Verification {
      * Delete bank accounts
      * Deletes bank accounts associated with an account holder. 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostDeleteBankAccountsResponse postDeleteBankAccounts(org.openapis.openapi.models.operations.PostDeleteBankAccountsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostDeleteBankAccountsResponse postDeleteBankAccounts(org.openapis.openapi.models.shared.DeleteBankAccountRequest request, org.openapis.openapi.models.operations.PostDeleteBankAccountsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/deleteBankAccounts");
         
@@ -48,7 +49,7 @@ public class Verification {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,10 +85,11 @@ public class Verification {
      * Delete legal arrangements
      * Deletes legal arrangements and/or legal arrangement entities associated with an account holder.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostDeleteLegalArrangementsResponse postDeleteLegalArrangements(org.openapis.openapi.models.operations.PostDeleteLegalArrangementsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostDeleteLegalArrangementsResponse postDeleteLegalArrangements(org.openapis.openapi.models.shared.DeleteLegalArrangementRequest request, org.openapis.openapi.models.operations.PostDeleteLegalArrangementsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/deleteLegalArrangements");
         
@@ -98,7 +100,7 @@ public class Verification {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -134,10 +136,11 @@ public class Verification {
      * Delete shareholders
      * Deletes shareholders associated with an account holder.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostDeleteShareholdersResponse postDeleteShareholders(org.openapis.openapi.models.operations.PostDeleteShareholdersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostDeleteShareholdersResponse postDeleteShareholders(org.openapis.openapi.models.shared.DeleteShareholderRequest request, org.openapis.openapi.models.operations.PostDeleteShareholdersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/deleteShareholders");
         
@@ -148,7 +151,7 @@ public class Verification {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -184,10 +187,11 @@ public class Verification {
      * Delete signatories
      * Deletes signatories associated with an account holder.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostDeleteSignatoriesResponse postDeleteSignatories(org.openapis.openapi.models.operations.PostDeleteSignatoriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostDeleteSignatoriesResponse postDeleteSignatories(org.openapis.openapi.models.shared.DeleteSignatoriesRequest request, org.openapis.openapi.models.operations.PostDeleteSignatoriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/deleteSignatories");
         
@@ -198,7 +202,7 @@ public class Verification {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -235,10 +239,11 @@ public class Verification {
      * Returns documents that were previously uploaded for an account holder. Adyen uses the documents during the [verification process](https://docs.adyen.com/marketplaces-and-platforms/classic/verification-process).
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetUploadedDocumentsResponse postGetUploadedDocuments(org.openapis.openapi.models.operations.PostGetUploadedDocumentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetUploadedDocumentsResponse postGetUploadedDocuments(org.openapis.openapi.models.shared.GetUploadedDocumentsRequest request, org.openapis.openapi.models.operations.PostGetUploadedDocumentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/getUploadedDocuments");
         
@@ -249,7 +254,7 @@ public class Verification {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -285,10 +290,11 @@ public class Verification {
      * Upload a document
      * Uploads a document for an account holder. Adyen uses the documents during the [verification process](https://docs.adyen.com/marketplaces-and-platforms/classic/verification-process).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUploadDocumentResponse postUploadDocument(org.openapis.openapi.models.operations.PostUploadDocumentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUploadDocumentResponse postUploadDocument(org.openapis.openapi.models.shared.UploadDocumentRequest request, org.openapis.openapi.models.operations.PostUploadDocumentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/uploadDocument");
         
@@ -299,7 +305,7 @@ public class Verification {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

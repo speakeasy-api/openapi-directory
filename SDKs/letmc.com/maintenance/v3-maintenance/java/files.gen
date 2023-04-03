@@ -30,13 +30,10 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/MaintenanceControllerCreateMaintenanceJobFormPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/MaintenanceControllerCreateMaintenanceJobFormRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/MaintenanceControllerCreateMaintenanceJobFormResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/MaintenanceControllerCreateMaintenanceJobJsonPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/MaintenanceControllerCreateMaintenanceJobJsonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/MaintenanceControllerCreateMaintenanceJobJsonResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/MaintenanceControllerCreateMaintenanceJobRawPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/MaintenanceControllerCreateMaintenanceJobRawRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/MaintenanceControllerCreateMaintenanceJobRawResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/MaintenanceIssueModelIssuePriorityEnum.java

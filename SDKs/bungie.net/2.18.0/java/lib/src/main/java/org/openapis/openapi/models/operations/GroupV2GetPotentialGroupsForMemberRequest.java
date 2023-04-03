@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2GetPotentialGroupsForMemberRequest {
+    /**
+     * Filter apply to list of potential joined groups.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filter")
+    public Integer filter;
+    public GroupV2GetPotentialGroupsForMemberRequest withFilter(Integer filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public GroupV2GetPotentialGroupsForMemberPathParams pathParams;
-    public GroupV2GetPotentialGroupsForMemberRequest withPathParams(GroupV2GetPotentialGroupsForMemberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Type of group the supplied member applied.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupType")
+    public Integer groupType;
+    public GroupV2GetPotentialGroupsForMemberRequest withGroupType(Integer groupType) {
+        this.groupType = groupType;
+        return this;
+    }
+    
+    /**
+     * Membership ID to for which to find applied groups.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
+    public Long membershipId;
+    public GroupV2GetPotentialGroupsForMemberRequest withMembershipId(Long membershipId) {
+        this.membershipId = membershipId;
+        return this;
+    }
+    
+    /**
+     * Membership type of the supplied membership ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public GroupV2GetPotentialGroupsForMemberRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

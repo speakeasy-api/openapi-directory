@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestAStopPaymentOnACheckTransferRequest {
-    
-    public RequestAStopPaymentOnACheckTransferPathParams pathParams;
-    public RequestAStopPaymentOnACheckTransferRequest withPathParams(RequestAStopPaymentOnACheckTransferPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=check_transfer_id")
+    public String checkTransferId;
+    public RequestAStopPaymentOnACheckTransferRequest withCheckTransferId(String checkTransferId) {
+        this.checkTransferId = checkTransferId;
         return this;
     }
     

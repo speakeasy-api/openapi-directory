@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAristaSwitchSnmpConfigRequest {
-    
-    public UpdateAristaSwitchSnmpConfigPathParams pathParams;
-    public UpdateAristaSwitchSnmpConfigRequest withPathParams(UpdateAristaSwitchSnmpConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SNMPConfig request;
-    public UpdateAristaSwitchSnmpConfigRequest withRequest(org.openapis.openapi.models.shared.SNMPConfig request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SNMPConfig snmpConfig;
+    public UpdateAristaSwitchSnmpConfigRequest withSNMPConfig(org.openapis.openapi.models.shared.SNMPConfig snmpConfig) {
+        this.snmpConfig = snmpConfig;
         return this;
     }
     
-    
-    public UpdateAristaSwitchSnmpConfigSecurity security;
-    public UpdateAristaSwitchSnmpConfigRequest withSecurity(UpdateAristaSwitchSnmpConfigSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateAristaSwitchSnmpConfigRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PointPointGetSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAPIKeyHeader apiKeyHeader;
-    public PointPointGetSecurity withAPIKeyHeader(org.openapis.openapi.models.shared.SchemeAPIKeyHeader apiKeyHeader) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-API-Key")
+    public String apiKeyHeader;
+    public PointPointGetSecurity withAPIKeyHeader(String apiKeyHeader) {
         this.apiKeyHeader = apiKeyHeader;
         return this;
     }

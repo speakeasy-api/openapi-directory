@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClientApiNewJsonRequest {
-    
-    public ClientApiNewJsonHeaders headers;
-    public ClientApiNewJsonRequest withHeaders(ClientApiNewJsonHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ClientCreateApiModel clientCreateApiModel;
+    public ClientApiNewJsonRequest withClientCreateApiModel(org.openapis.openapi.models.shared.ClientCreateApiModel clientCreateApiModel) {
+        this.clientCreateApiModel = clientCreateApiModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ClientCreateApiModel request;
-    public ClientApiNewJsonRequest withRequest(org.openapis.openapi.models.shared.ClientCreateApiModel request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public ClientApiNewJsonRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public ClientApiNewJsonRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

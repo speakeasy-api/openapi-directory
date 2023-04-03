@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRealmRequest {
-    
-    public PutRealmPathParams pathParams;
-    public PutRealmRequest withPathParams(PutRealmPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.RealmRepresentation realmRepresentation;
+    public PutRealmRequest withRealmRepresentation(org.openapis.openapi.models.shared.RealmRepresentation realmRepresentation) {
+        this.realmRepresentation = realmRepresentation;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RealmRepresentation request;
-    public PutRealmRequest withRequest(org.openapis.openapi.models.shared.RealmRepresentation request) {
-        this.request = request;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PutRealmRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

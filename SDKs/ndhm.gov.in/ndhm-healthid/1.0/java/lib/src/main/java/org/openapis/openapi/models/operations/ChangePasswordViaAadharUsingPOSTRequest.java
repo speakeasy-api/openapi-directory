@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangePasswordViaAadharUsingPOSTRequest {
-    
-    public ChangePasswordViaAadharUsingPOSTHeaders headers;
-    public ChangePasswordViaAadharUsingPOSTRequest withHeaders(ChangePasswordViaAadharUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public ChangePasswordViaAadharUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,19 @@ public class ChangePasswordViaAadharUsingPOSTRequest {
      * hidOtpRequestPaylaod
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.HidOtpRequestPaylaod request;
-    public ChangePasswordViaAadharUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.HidOtpRequestPaylaod request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.HidOtpRequestPaylaod hidOtpRequestPaylaod;
+    public ChangePasswordViaAadharUsingPOSTRequest withHidOtpRequestPaylaod(org.openapis.openapi.models.shared.HidOtpRequestPaylaod hidOtpRequestPaylaod) {
+        this.hidOtpRequestPaylaod = hidOtpRequestPaylaod;
         return this;
     }
     
-    
-    public ChangePasswordViaAadharUsingPOSTSecurity security;
-    public ChangePasswordViaAadharUsingPOSTRequest withSecurity(ChangePasswordViaAadharUsingPOSTSecurity security) {
-        this.security = security;
+    /**
+     * Auth Token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Token")
+    public String xToken;
+    public ChangePasswordViaAadharUsingPOSTRequest withXToken(String xToken) {
+        this.xToken = xToken;
         return this;
     }
     

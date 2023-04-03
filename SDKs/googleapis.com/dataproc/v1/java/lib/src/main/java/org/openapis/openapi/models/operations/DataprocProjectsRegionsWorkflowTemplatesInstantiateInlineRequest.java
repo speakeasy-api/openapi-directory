@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest {
-    
-    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlinePathParams pathParams;
-    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest withPathParams(DataprocProjectsRegionsWorkflowTemplatesInstantiateInlinePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineQueryParams queryParams;
-    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest withQueryParams(DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WorkflowTemplateInput request;
-    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest withRequest(org.openapis.openapi.models.shared.WorkflowTemplateInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.WorkflowTemplateInput workflowTemplateInput;
+    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest withWorkflowTemplateInput(org.openapis.openapi.models.shared.WorkflowTemplateInput workflowTemplateInput) {
+        this.workflowTemplateInput = workflowTemplateInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineSecurity security;
-    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest withSecurity(DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The resource name of the region or location, as described in https://cloud.google.com/apis/design/resource_names. For projects.regions.workflowTemplates,instantiateinline, the resource name of the region has the following format: projects/{project_id}/regions/{region} For projects.locations.workflowTemplates.instantiateinline, the resource name of the location has the following format: projects/{project_id}/locations/{location}
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Optional. A tag that prevents multiple concurrent workflow instances with the same tag from running. This mitigates risk of concurrent instances started due to retries.It is recommended to always set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The tag must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
+    public String requestId;
+    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest withRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

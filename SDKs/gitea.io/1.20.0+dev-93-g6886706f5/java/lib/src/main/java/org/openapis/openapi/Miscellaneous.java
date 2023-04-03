@@ -161,7 +161,7 @@ public class Miscellaneous {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RenderMarkdownResponse renderMarkdown(org.openapis.openapi.models.operations.RenderMarkdownRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RenderMarkdownResponse renderMarkdown(org.openapis.openapi.models.shared.MarkdownOption request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/markdown");
         
@@ -210,7 +210,7 @@ public class Miscellaneous {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RenderMarkdownRawResponse renderMarkdownRaw(org.openapis.openapi.models.operations.RenderMarkdownRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RenderMarkdownRawResponse renderMarkdownRaw(String request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/markdown/raw");
         

@@ -34,25 +34,26 @@ public class FloodlightActivityGroups {
     /**
      * Gets one floodlight activity group by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsGetResponse dfareportingFloodlightActivityGroupsGet(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsGetResponse dfareportingFloodlightActivityGroupsGet(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsGetRequest request, org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsGetPathParams.class, baseUrl, "/userprofiles/{profileId}/floodlightActivityGroups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsGetRequest.class, baseUrl, "/userprofiles/{profileId}/floodlightActivityGroups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class FloodlightActivityGroups {
     /**
      * Inserts a new floodlight activity group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsInsertResponse dfareportingFloodlightActivityGroupsInsert(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsInsertResponse dfareportingFloodlightActivityGroupsInsert(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsInsertRequest request, org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsInsertPathParams.class, baseUrl, "/userprofiles/{profileId}/floodlightActivityGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsInsertRequest.class, baseUrl, "/userprofiles/{profileId}/floodlightActivityGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "floodlightActivityGroup", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class FloodlightActivityGroups {
     /**
      * Retrieves a list of floodlight activity groups, possibly filtered. This method supports paging.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsListResponse dfareportingFloodlightActivityGroupsList(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsListResponse dfareportingFloodlightActivityGroupsList(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsListRequest request, org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsListPathParams.class, baseUrl, "/userprofiles/{profileId}/floodlightActivityGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsListRequest.class, baseUrl, "/userprofiles/{profileId}/floodlightActivityGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,27 +174,28 @@ public class FloodlightActivityGroups {
     /**
      * Updates an existing floodlight activity group. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsPatchResponse dfareportingFloodlightActivityGroupsPatch(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsPatchResponse dfareportingFloodlightActivityGroupsPatch(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsPatchRequest request, org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsPatchPathParams.class, baseUrl, "/userprofiles/{profileId}/floodlightActivityGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsPatchRequest.class, baseUrl, "/userprofiles/{profileId}/floodlightActivityGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "floodlightActivityGroup", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,27 +222,28 @@ public class FloodlightActivityGroups {
     /**
      * Updates an existing floodlight activity group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsUpdateResponse dfareportingFloodlightActivityGroupsUpdate(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsUpdateResponse dfareportingFloodlightActivityGroupsUpdate(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsUpdateRequest request, org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsUpdatePathParams.class, baseUrl, "/userprofiles/{profileId}/floodlightActivityGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsUpdateRequest.class, baseUrl, "/userprofiles/{profileId}/floodlightActivityGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "floodlightActivityGroup", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingFloodlightActivityGroupsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

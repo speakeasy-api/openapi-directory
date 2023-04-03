@@ -7,20 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUserHostedPropertyValueRequest {
-    
-    public UpdateUserHostedPropertyValuePathParams pathParams;
-    public UpdateUserHostedPropertyValueRequest withPathParams(UpdateUserHostedPropertyValuePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The application property to create or update.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public UpdateUserHostedPropertyValueRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public UpdateUserHostedPropertyValueRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The key of the Connect app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_key")
+    public String appKey;
+    public UpdateUserHostedPropertyValueRequest withAppKey(String appKey) {
+        this.appKey = appKey;
+        return this;
+    }
+    
+    /**
+     * The name of the property.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=property_name")
+    public String propertyName;
+    public UpdateUserHostedPropertyValueRequest withPropertyName(String propertyName) {
+        this.propertyName = propertyName;
+        return this;
+    }
+    
+    /**
+     * Either the UUID of the account surrounded by curly-braces, for example `{account UUID}`, OR an Atlassian Account ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=selected_user")
+    public String selectedUser;
+    public UpdateUserHostedPropertyValueRequest withSelectedUser(String selectedUser) {
+        this.selectedUser = selectedUser;
         return this;
     }
     

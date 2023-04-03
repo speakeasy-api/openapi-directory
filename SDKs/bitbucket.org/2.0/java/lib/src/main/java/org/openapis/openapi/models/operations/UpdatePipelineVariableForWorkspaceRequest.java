@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePipelineVariableForWorkspaceRequest {
-    
-    public UpdatePipelineVariableForWorkspacePathParams pathParams;
-    public UpdatePipelineVariableForWorkspaceRequest withPathParams(UpdatePipelineVariableForWorkspacePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The updated variable.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public UpdatePipelineVariableForWorkspaceRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public UpdatePipelineVariableForWorkspaceRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The UUID of the variable.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=variable_uuid")
+    public String variableUuid;
+    public UpdatePipelineVariableForWorkspaceRequest withVariableUuid(String variableUuid) {
+        this.variableUuid = variableUuid;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public UpdatePipelineVariableForWorkspaceRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

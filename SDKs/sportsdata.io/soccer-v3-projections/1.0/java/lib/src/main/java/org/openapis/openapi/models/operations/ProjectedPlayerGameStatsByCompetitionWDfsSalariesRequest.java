@@ -4,13 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectedPlayerGameStatsByCompetitionWDfsSalariesRequest {
+    /**
+     * An indication of a soccer competition/league. This value can be the CompetitionId or the Competition Key. Possible values include: &lt;code&gt;EPL&lt;/code&gt;, &lt;code&gt;1&lt;/code&gt;, &lt;code&gt;MLS&lt;/code&gt;, &lt;code&gt;8&lt;/code&gt;, etc.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=competition")
+    public String competition;
+    public ProjectedPlayerGameStatsByCompetitionWDfsSalariesRequest withCompetition(String competition) {
+        this.competition = competition;
+        return this;
+    }
     
-    public ProjectedPlayerGameStatsByCompetitionWDfsSalariesPathParams pathParams;
-    public ProjectedPlayerGameStatsByCompetitionWDfsSalariesRequest withPathParams(ProjectedPlayerGameStatsByCompetitionWDfsSalariesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The date of the game(s).
+     * &lt;br&gt;Examples: &lt;code&gt;2017-02-27&lt;/code&gt;, &lt;code&gt;2017-09-01&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
+    public String date;
+    public ProjectedPlayerGameStatsByCompetitionWDfsSalariesRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
+    
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public ProjectedPlayerGameStatsByCompetitionWDfsSalariesFormatEnum format;
+    public ProjectedPlayerGameStatsByCompetitionWDfsSalariesRequest withFormat(ProjectedPlayerGameStatsByCompetitionWDfsSalariesFormatEnum format) {
+        this.format = format;
         return this;
     }
     

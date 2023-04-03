@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidWishlistPostRequest {
+    /**
+     * Item Description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public KkidWishlistPostRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
     
-    public KkidWishlistPostQueryParams queryParams;
-    public KkidWishlistPostRequest withQueryParams(KkidWishlistPostQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * userID of the kid
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kidUserId")
+    public Long kidUserId;
+    public KkidWishlistPostRequest withKidUserId(Long kidUserId) {
+        this.kidUserId = kidUserId;
+        return this;
+    }
+    
+    /**
+     * URL Link to item
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=link")
+    public String link;
+    public KkidWishlistPostRequest withLink(String link) {
+        this.link = link;
+        return this;
+    }
+    
+    /**
+     * Item Priority
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=priority")
+    public Long priority;
+    public KkidWishlistPostRequest withPriority(Long priority) {
+        this.priority = priority;
+        return this;
+    }
+    
+    /**
+     * Item title
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
+    public String title;
+    public KkidWishlistPostRequest withTitle(String title) {
+        this.title = title;
         return this;
     }
     

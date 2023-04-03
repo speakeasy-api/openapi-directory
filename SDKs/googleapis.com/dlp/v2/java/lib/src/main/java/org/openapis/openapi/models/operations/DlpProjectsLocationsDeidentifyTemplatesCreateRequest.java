@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DlpProjectsLocationsDeidentifyTemplatesCreateRequest {
-    
-    public DlpProjectsLocationsDeidentifyTemplatesCreatePathParams pathParams;
-    public DlpProjectsLocationsDeidentifyTemplatesCreateRequest withPathParams(DlpProjectsLocationsDeidentifyTemplatesCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DlpProjectsLocationsDeidentifyTemplatesCreateQueryParams queryParams;
-    public DlpProjectsLocationsDeidentifyTemplatesCreateRequest withQueryParams(DlpProjectsLocationsDeidentifyTemplatesCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DlpProjectsLocationsDeidentifyTemplatesCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GooglePrivacyDlpV2CreateDeidentifyTemplateRequestInput request;
-    public DlpProjectsLocationsDeidentifyTemplatesCreateRequest withRequest(org.openapis.openapi.models.shared.GooglePrivacyDlpV2CreateDeidentifyTemplateRequestInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GooglePrivacyDlpV2CreateDeidentifyTemplateRequestInput googlePrivacyDlpV2CreateDeidentifyTemplateRequestInput;
+    public DlpProjectsLocationsDeidentifyTemplatesCreateRequest withGooglePrivacyDlpV2CreateDeidentifyTemplateRequestInput(org.openapis.openapi.models.shared.GooglePrivacyDlpV2CreateDeidentifyTemplateRequestInput googlePrivacyDlpV2CreateDeidentifyTemplateRequestInput) {
+        this.googlePrivacyDlpV2CreateDeidentifyTemplateRequestInput = googlePrivacyDlpV2CreateDeidentifyTemplateRequestInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DlpProjectsLocationsDeidentifyTemplatesCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public DlpProjectsLocationsDeidentifyTemplatesCreateSecurity security;
-    public DlpProjectsLocationsDeidentifyTemplatesCreateRequest withSecurity(DlpProjectsLocationsDeidentifyTemplatesCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DlpProjectsLocationsDeidentifyTemplatesCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DlpProjectsLocationsDeidentifyTemplatesCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DlpProjectsLocationsDeidentifyTemplatesCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DlpProjectsLocationsDeidentifyTemplatesCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DlpProjectsLocationsDeidentifyTemplatesCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. Parent resource name. The format of this value varies depending on the scope of the request (project or organization) and whether you have [specified a processing location](https://cloud.google.com/dlp/docs/specifying-location): + Projects scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location specified (defaults to global): `projects/`PROJECT_ID + Organizations scope, location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no location specified (defaults to global): `organizations/`ORG_ID The following example `parent` string specifies a parent project with the identifier `example-project`, and specifies the `europe-west3` location for processing data: parent=projects/example-project/locations/europe-west3
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public DlpProjectsLocationsDeidentifyTemplatesCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DlpProjectsLocationsDeidentifyTemplatesCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DlpProjectsLocationsDeidentifyTemplatesCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DlpProjectsLocationsDeidentifyTemplatesCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DlpProjectsLocationsDeidentifyTemplatesCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

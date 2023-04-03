@@ -7,17 +7,38 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutShipmentLocationJsonRequest {
-    
-    public PutShipmentLocationJsonPathParams pathParams;
-    public PutShipmentLocationJsonRequest withPathParams(PutShipmentLocationJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ShipmentLocationPersistVO shipmentLocationPersistVO;
+    public PutShipmentLocationJsonRequest withShipmentLocationPersistVO(org.openapis.openapi.models.shared.ShipmentLocationPersistVO shipmentLocationPersistVO) {
+        this.shipmentLocationPersistVO = shipmentLocationPersistVO;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ShipmentLocationPersistVO request;
-    public PutShipmentLocationJsonRequest withRequest(org.openapis.openapi.models.shared.ShipmentLocationPersistVO request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public PutShipmentLocationJsonRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public PutShipmentLocationJsonRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shipment_id")
+    public String shipmentId;
+    public PutShipmentLocationJsonRequest withShipmentId(String shipmentId) {
+        this.shipmentId = shipmentId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public PutShipmentLocationJsonRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

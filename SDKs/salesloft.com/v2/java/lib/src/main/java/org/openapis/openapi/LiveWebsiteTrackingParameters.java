@@ -38,7 +38,7 @@ public class LiveWebsiteTrackingParameters {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV2LiveWebsiteTrackingParametersJsonResponse postV2LiveWebsiteTrackingParametersJson(org.openapis.openapi.models.operations.PostV2LiveWebsiteTrackingParametersJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV2LiveWebsiteTrackingParametersJsonResponse postV2LiveWebsiteTrackingParametersJson(org.openapis.openapi.models.operations.PostV2LiveWebsiteTrackingParametersJsonRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/live_website_tracking_parameters.json");
         

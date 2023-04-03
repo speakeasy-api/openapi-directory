@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEntitySetHomologsRequest {
-    
-    public GetEntitySetHomologsQueryParams queryParams;
-    public GetEntitySetHomologsRequest withQueryParams(GetEntitySetHomologsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject")
+    public String[] subject;
+    public GetEntitySetHomologsRequest withSubject(String[] subject) {
+        this.subject = subject;
         return this;
     }
     

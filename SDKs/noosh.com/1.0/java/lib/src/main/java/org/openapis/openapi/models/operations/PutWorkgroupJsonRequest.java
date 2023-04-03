@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutWorkgroupJsonRequest {
-    
-    public PutWorkgroupJsonPathParams pathParams;
-    public PutWorkgroupJsonRequest withPathParams(PutWorkgroupJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WorkgroupUpdPersistVO workgroupUpdPersistVO;
+    public PutWorkgroupJsonRequest withWorkgroupUpdPersistVO(org.openapis.openapi.models.shared.WorkgroupUpdPersistVO workgroupUpdPersistVO) {
+        this.workgroupUpdPersistVO = workgroupUpdPersistVO;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WorkgroupUpdPersistVO request;
-    public PutWorkgroupJsonRequest withRequest(org.openapis.openapi.models.shared.WorkgroupUpdPersistVO request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public PutWorkgroupJsonRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

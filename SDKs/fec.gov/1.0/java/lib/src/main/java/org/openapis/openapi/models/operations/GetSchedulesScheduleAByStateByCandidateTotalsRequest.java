@@ -4,13 +4,114 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchedulesScheduleAByStateByCandidateTotalsRequest {
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetSchedulesScheduleAByStateByCandidateTotalsRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetSchedulesScheduleAByStateByCandidateTotalsQueryParams queryParams;
-    public GetSchedulesScheduleAByStateByCandidateTotalsRequest withQueryParams(GetSchedulesScheduleAByStateByCandidateTotalsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A unique identifier assigned to each candidate registered with the FEC.
+     * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
+    public String[] candidateId;
+    public GetSchedulesScheduleAByStateByCandidateTotalsRequest withCandidateId(String[] candidateId) {
+        this.candidateId = candidateId;
+        return this;
+    }
+    
+    /**
+     * Filter records to only those that were applicable to a given
+     * two-year period.The cycle begins with an odd year and is named
+     * for its ending, even year.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
+    public Integer[] cycle;
+    public GetSchedulesScheduleAByStateByCandidateTotalsRequest withCycle(Integer[] cycle) {
+        this.cycle = cycle;
+        return this;
+    }
+    
+    /**
+     * `True` indicates that full election period of a candidate.
+     * `False` indicates that two year election cycle.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_full")
+    public Boolean electionFull;
+    public GetSchedulesScheduleAByStateByCandidateTotalsRequest withElectionFull(Boolean electionFull) {
+        this.electionFull = electionFull;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetSchedulesScheduleAByStateByCandidateTotalsRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetSchedulesScheduleAByStateByCandidateTotalsRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetSchedulesScheduleAByStateByCandidateTotalsRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetSchedulesScheduleAByStateByCandidateTotalsRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetSchedulesScheduleAByStateByCandidateTotalsRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetSchedulesScheduleAByStateByCandidateTotalsRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
         return this;
     }
     

@@ -36,10 +36,11 @@ public class Devices {
      * Creates a DeviceCode that can be used to login to a Square Terminal device to enter the connected
      * terminal mode.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDeviceCodeResponse createDeviceCode(org.openapis.openapi.models.operations.CreateDeviceCodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDeviceCodeResponse createDeviceCode(org.openapis.openapi.models.shared.CreateDeviceCodeRequest request, org.openapis.openapi.models.operations.CreateDeviceCodeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/devices/codes");
         
@@ -53,7 +54,7 @@ public class Devices {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,19 +82,20 @@ public class Devices {
      * GetDeviceCode
      * Retrieves DeviceCode with the associated ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDeviceCodeResponse getDeviceCode(org.openapis.openapi.models.operations.GetDeviceCodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDeviceCodeResponse getDeviceCode(org.openapis.openapi.models.operations.GetDeviceCodeRequest request, org.openapis.openapi.models.operations.GetDeviceCodeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCodePathParams.class, baseUrl, "/v2/devices/codes/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCodeRequest.class, baseUrl, "/v2/devices/codes/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -121,10 +123,11 @@ public class Devices {
      * ListDeviceCodes
      * Lists all DeviceCodes associated with the merchant.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListDeviceCodesResponse listDeviceCodes(org.openapis.openapi.models.operations.ListDeviceCodesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListDeviceCodesResponse listDeviceCodes(org.openapis.openapi.models.operations.ListDeviceCodesRequest request, org.openapis.openapi.models.operations.ListDeviceCodesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/devices/codes");
         
@@ -132,14 +135,14 @@ public class Devices {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDeviceCodesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDeviceCodesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

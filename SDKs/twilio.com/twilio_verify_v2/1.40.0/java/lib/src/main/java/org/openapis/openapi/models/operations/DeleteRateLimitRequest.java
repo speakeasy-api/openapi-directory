@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRateLimitRequest {
-    
-    public DeleteRateLimitPathParams pathParams;
-    public DeleteRateLimitRequest withPathParams(DeleteRateLimitPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteRateLimitRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public DeleteRateLimitSecurity security;
-    public DeleteRateLimitRequest withSecurity(DeleteRateLimitSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteRateLimitRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Rate Limit resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteRateLimitRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

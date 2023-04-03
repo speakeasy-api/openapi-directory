@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ParseNameRequest {
-    
-    public ParseNamePathParams pathParams;
-    public ParseNameRequest withPathParams(ParseNamePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ParseNameSecurity security;
-    public ParseNameRequest withSecurity(ParseNameSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=nameFull")
+    public String nameFull;
+    public ParseNameRequest withNameFull(String nameFull) {
+        this.nameFull = nameFull;
         return this;
     }
     

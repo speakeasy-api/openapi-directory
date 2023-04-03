@@ -7,16 +7,16 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SecurityOption2 {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public SchemeAPIKey apiKey;
-    public SecurityOption2 withApiKey(SchemeAPIKey apiKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=api_key")
+    public String apiKey;
+    public SecurityOption2 withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public SchemeAPISig apiSig;
-    public SecurityOption2 withApiSig(SchemeAPISig apiSig) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=sig")
+    public String apiSig;
+    public SecurityOption2 withApiSig(String apiSig) {
         this.apiSig = apiSig;
         return this;
     }

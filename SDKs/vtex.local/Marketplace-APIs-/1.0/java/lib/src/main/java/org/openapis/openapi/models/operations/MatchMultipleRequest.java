@@ -7,31 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MatchMultipleRequest {
-    
-    public MatchMultiplePathParams pathParams;
-    public MatchMultipleRequest withPathParams(MatchMultiplePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public MatchMultipleRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public MatchMultipleQueryParams queryParams;
-    public MatchMultipleRequest withQueryParams(MatchMultipleQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public MatchMultipleHeaders headers;
-    public MatchMultipleRequest withHeaders(MatchMultipleHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public MatchMultipleRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object[][] request;
-    public MatchMultipleRequest withRequest(Object[][] request) {
-        this.request = request;
+    public Object[][] requestBody;
+    public MatchMultipleRequest withRequestBody(Object[][] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Name of the VTEX account. Used as part of the URL
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public MatchMultipleRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    
+    /**
+     * This field refers to the operation you choose to apply to received SKUs. Values include: newproduct, skuassociation, productassociation or deny.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=actionName")
+    public String actionName;
+    public MatchMultipleRequest withActionName(String actionName) {
+        this.actionName = actionName;
         return this;
     }
     

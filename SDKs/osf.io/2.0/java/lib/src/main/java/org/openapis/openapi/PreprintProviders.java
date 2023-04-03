@@ -80,7 +80,7 @@ public class PreprintProviders {
      */
     public org.openapis.openapi.models.operations.PreprintProviderDetailResponse preprintProviderDetail(org.openapis.openapi.models.operations.PreprintProviderDetailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintProviderDetailPathParams.class, baseUrl, "/preprint_providers/{preprint_provider_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintProviderDetailRequest.class, baseUrl, "/preprint_providers/{preprint_provider_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -127,7 +127,7 @@ public class PreprintProviders {
      */
     public org.openapis.openapi.models.operations.PreprintProviderLicensesListResponse preprintProviderLicensesList(org.openapis.openapi.models.operations.PreprintProviderLicensesListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintProviderLicensesListPathParams.class, baseUrl, "/preprint_providers/{preprint_provider_id}/licenses/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintProviderLicensesListRequest.class, baseUrl, "/preprint_providers/{preprint_provider_id}/licenses/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -224,7 +224,7 @@ public class PreprintProviders {
      */
     public org.openapis.openapi.models.operations.PreprintProviderTaxonomiesListResponse preprintProviderTaxonomiesList(org.openapis.openapi.models.operations.PreprintProviderTaxonomiesListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintProviderTaxonomiesListPathParams.class, baseUrl, "/preprint_providers/{preprint_provider_id}/taxonomies/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintProviderTaxonomiesListRequest.class, baseUrl, "/preprint_providers/{preprint_provider_id}/taxonomies/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -276,7 +276,7 @@ public class PreprintProviders {
      */
     public org.openapis.openapi.models.operations.PreprintProvidersPreprintsListResponse preprintProvidersPreprintsList(org.openapis.openapi.models.operations.PreprintProvidersPreprintsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintProvidersPreprintsListPathParams.class, baseUrl, "/preprint_providers/{preprint_provider_id}/preprints/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintProvidersPreprintsListRequest.class, baseUrl, "/preprint_providers/{preprint_provider_id}/preprints/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

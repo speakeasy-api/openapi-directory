@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateVendorInstructions1Request {
-    
-    public UpdateVendorInstructions1PathParams pathParams;
-    public UpdateVendorInstructions1Request withPathParams(UpdateVendorInstructions1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated instructions for all vendors performing the jobs in a quote.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.StringDTO request;
-    public UpdateVendorInstructions1Request withRequest(org.openapis.openapi.models.shared.StringDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.StringDTO stringDTO;
+    public UpdateVendorInstructions1Request withStringDTO(org.openapis.openapi.models.shared.StringDTO stringDTO) {
+        this.stringDTO = stringDTO;
+        return this;
+    }
+    
+    /**
+     * quote's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
+    public String quoteId;
+    public UpdateVendorInstructions1Request withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
         return this;
     }
     

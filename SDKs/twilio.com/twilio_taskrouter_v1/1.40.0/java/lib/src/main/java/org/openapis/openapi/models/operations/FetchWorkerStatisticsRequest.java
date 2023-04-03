@@ -4,34 +4,87 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchWorkerStatisticsRequest {
-    
-    public FetchWorkerStatisticsPathParams pathParams;
-    public FetchWorkerStatisticsRequest withPathParams(FetchWorkerStatisticsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Only calculate statistics from this date and time and earlier, specified in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date-time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndDate")
+    public OffsetDateTime endDate;
+    public FetchWorkerStatisticsRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
         return this;
     }
     
-    
-    public FetchWorkerStatisticsQueryParams queryParams;
-    public FetchWorkerStatisticsRequest withQueryParams(FetchWorkerStatisticsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only include Workers with `friendly_name` values that match this parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FriendlyName")
+    public String friendlyName;
+    public FetchWorkerStatisticsRequest withFriendlyName(String friendlyName) {
+        this.friendlyName = friendlyName;
         return this;
     }
     
-    
-    public FetchWorkerStatisticsSecurity security;
-    public FetchWorkerStatisticsRequest withSecurity(FetchWorkerStatisticsSecurity security) {
-        this.security = security;
+    /**
+     * Only calculate statistics since this many minutes in the past. The default 15 minutes. This is helpful for displaying statistics for the last 15 minutes, 240 minutes (4 hours), and 480 minutes (8 hours) to see trends.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Minutes")
+    public Long minutes;
+    public FetchWorkerStatisticsRequest withMinutes(Long minutes) {
+        this.minutes = minutes;
         return this;
     }
     
+    /**
+     * Only calculate statistics from this date and time and later, specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartDate")
+    public OffsetDateTime startDate;
+    public FetchWorkerStatisticsRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
+        return this;
+    }
     
-    public String serverURL;
-    public FetchWorkerStatisticsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Only calculate statistics on this TaskChannel. Can be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or `default`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TaskChannel")
+    public String taskChannel;
+    public FetchWorkerStatisticsRequest withTaskChannel(String taskChannel) {
+        this.taskChannel = taskChannel;
+        return this;
+    }
+    
+    /**
+     * The `friendly_name` of the TaskQueue for which to fetch Worker statistics.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TaskQueueName")
+    public String taskQueueName;
+    public FetchWorkerStatisticsRequest withTaskQueueName(String taskQueueName) {
+        this.taskQueueName = taskQueueName;
+        return this;
+    }
+    
+    /**
+     * The SID of the TaskQueue for which to fetch Worker statistics.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TaskQueueSid")
+    public String taskQueueSid;
+    public FetchWorkerStatisticsRequest withTaskQueueSid(String taskQueueSid) {
+        this.taskQueueSid = taskQueueSid;
+        return this;
+    }
+    
+    /**
+     * The SID of the Workspace with the Worker to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public FetchWorkerStatisticsRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

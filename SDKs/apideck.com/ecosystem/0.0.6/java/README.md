@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CategoriesAllPathParams;
-import org.openapis.openapi.models.operations.CategoriesAllQueryParams;
 import org.openapis.openapi.models.operations.CategoriesAllRequest;
 import org.openapis.openapi.models.operations.CategoriesAllResponse;
 
@@ -29,14 +27,10 @@ public class Application {
                 .build();
 
             CategoriesAllRequest req = new CategoriesAllRequest() {{
-                pathParams = new CategoriesAllPathParams() {{
-                    ecosystemId = "corrupti";
-                }};
-                queryParams = new CategoriesAllQueryParams() {{
-                    cursor = "provident";
-                    limit = 715190;
-                }};
-            }};            
+                cursor = "corrupti";
+                ecosystemId = "provident";
+                limit = 715190;
+            }}            
 
             CategoriesAllResponse res = sdk.category.categoriesAll(req);
 
@@ -50,7 +44,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### category

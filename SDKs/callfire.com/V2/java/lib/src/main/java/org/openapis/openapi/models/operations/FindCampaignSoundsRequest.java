@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindCampaignSoundsRequest {
-    
-    public FindCampaignSoundsQueryParams queryParams;
-    public FindCampaignSoundsRequest withQueryParams(FindCampaignSoundsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FindCampaignSoundsRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
+    /**
+     * value to filter file names again; this value is used to check if the filename contains the filter value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public FindCampaignSoundsRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public FindCampaignSoundsSecurity security;
-    public FindCampaignSoundsRequest withSecurity(FindCampaignSoundsSecurity security) {
-        this.security = security;
+    /**
+     * Includes ARCHIVED sounds for "true" value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeArchived")
+    public Boolean includeArchived;
+    public FindCampaignSoundsRequest withIncludeArchived(Boolean includeArchived) {
+        this.includeArchived = includeArchived;
+        return this;
+    }
+    
+    /**
+     * Includes UPLOAD/RECORDING sounds for "true" value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includePending")
+    public Boolean includePending;
+    public FindCampaignSoundsRequest withIncludePending(Boolean includePending) {
+        this.includePending = includePending;
+        return this;
+    }
+    
+    /**
+     * Includes SCRUBBED sounds for "true" value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeScrubbed")
+    public Boolean includeScrubbed;
+    public FindCampaignSoundsRequest withIncludeScrubbed(Boolean includeScrubbed) {
+        this.includeScrubbed = includeScrubbed;
+        return this;
+    }
+    
+    /**
+     * To set the maximum number of records to return in a paged list response. The default is 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public FindCampaignSoundsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset to the start of a given page. The default is 0. Check [pagination](https://developers.callfire.com/docs.html#pagination) page for more information about pagination in CallFire API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public FindCampaignSoundsRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

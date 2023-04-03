@@ -4,20 +4,50 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkClientTrafficHistoryRequest {
-    
-    public GetNetworkClientTrafficHistoryPathParams pathParams;
-    public GetNetworkClientTrafficHistoryRequest withPathParams(GetNetworkClientTrafficHistoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")
+    public String clientId;
+    public GetNetworkClientTrafficHistoryRequest withClientId(String clientId) {
+        this.clientId = clientId;
         return this;
     }
     
+    /**
+     * A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
+    public String endingBefore;
+    public GetNetworkClientTrafficHistoryRequest withEndingBefore(String endingBefore) {
+        this.endingBefore = endingBefore;
+        return this;
+    }
     
-    public GetNetworkClientTrafficHistoryQueryParams queryParams;
-    public GetNetworkClientTrafficHistoryRequest withQueryParams(GetNetworkClientTrafficHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkClientTrafficHistoryRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    /**
+     * The number of entries per page returned. Acceptable range is 3 - 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public Long perPage;
+    public GetNetworkClientTrafficHistoryRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
+    public String startingAfter;
+    public GetNetworkClientTrafficHistoryRequest withStartingAfter(String startingAfter) {
+        this.startingAfter = startingAfter;
         return this;
     }
     

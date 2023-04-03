@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateEvaluationRequest {
-    
-    public CreateEvaluationPathParams pathParams;
-    public CreateEvaluationRequest withPathParams(CreateEvaluationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateEvaluationSecurity security;
-    public CreateEvaluationRequest withSecurity(CreateEvaluationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateEvaluationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that identifies the Bundle resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=BundleSid")
+    public String bundleSid;
+    public CreateEvaluationRequest withBundleSid(String bundleSid) {
+        this.bundleSid = bundleSid;
         return this;
     }
     

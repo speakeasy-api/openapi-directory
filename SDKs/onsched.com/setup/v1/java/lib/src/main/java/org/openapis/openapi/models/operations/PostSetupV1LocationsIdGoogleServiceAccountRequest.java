@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSetupV1LocationsIdGoogleServiceAccountRequest {
-    
-    public PostSetupV1LocationsIdGoogleServiceAccountPathParams pathParams;
-    public PostSetupV1LocationsIdGoogleServiceAccountRequest withPathParams(PostSetupV1LocationsIdGoogleServiceAccountPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Generated Json Key file from Google
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleServiceAccountCreds request;
-    public PostSetupV1LocationsIdGoogleServiceAccountRequest withRequest(org.openapis.openapi.models.shared.GoogleServiceAccountCreds request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleServiceAccountCreds googleServiceAccountCreds;
+    public PostSetupV1LocationsIdGoogleServiceAccountRequest withGoogleServiceAccountCreds(org.openapis.openapi.models.shared.GoogleServiceAccountCreds googleServiceAccountCreds) {
+        this.googleServiceAccountCreds = googleServiceAccountCreds;
+        return this;
+    }
+    
+    /**
+     * id of business location, defaults to primary business location
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSetupV1LocationsIdGoogleServiceAccountRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

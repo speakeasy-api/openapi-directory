@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposGetAllStatusCheckContextsRequest {
+    /**
+     * The name of the branch. Cannot contain wildcard characters. To use wildcard characters in branch names, use [the GraphQL API](https://docs.github.com/graphql).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
+    public String branch;
+    public ReposGetAllStatusCheckContextsRequest withBranch(String branch) {
+        this.branch = branch;
+        return this;
+    }
     
-    public ReposGetAllStatusCheckContextsPathParams pathParams;
-    public ReposGetAllStatusCheckContextsRequest withPathParams(ReposGetAllStatusCheckContextsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposGetAllStatusCheckContextsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposGetAllStatusCheckContextsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

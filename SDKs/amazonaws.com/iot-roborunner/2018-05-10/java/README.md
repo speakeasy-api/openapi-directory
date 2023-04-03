@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateDestinationHeaders;
 import org.openapis.openapi.models.operations.CreateDestinationRequestBodyStateEnum;
 import org.openapis.openapi.models.operations.CreateDestinationRequestBody;
 import org.openapis.openapi.models.operations.CreateDestinationRequest;
@@ -28,30 +27,26 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateDestinationRequest req = new CreateDestinationRequest() {{
-                headers = new CreateDestinationHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateDestinationRequestBody() {{
-                    additionalFixedProperties = "illum";
-                    clientToken = "vel";
-                    name = "error";
-                    site = "deserunt";
+                requestBody = new CreateDestinationRequestBody() {{
+                    additionalFixedProperties = "corrupti";
+                    clientToken = "provident";
+                    name = "distinctio";
+                    site = "quibusdam";
                     state = "DISABLED";
                 }};
-            }};            
+                xAmzAlgorithm = "nulla";
+                xAmzContentSha256 = "corrupti";
+                xAmzCredential = "illum";
+                xAmzDate = "vel";
+                xAmzSecurityToken = "error";
+                xAmzSignature = "deserunt";
+                xAmzSignedHeaders = "suscipit";
+            }}            
 
             CreateDestinationResponse res = sdk.createDestination(req);
 
@@ -65,7 +60,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

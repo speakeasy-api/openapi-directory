@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTrustProductChannelEndpointAssignmentRequest {
-    
-    public CreateTrustProductChannelEndpointAssignmentPathParams pathParams;
-    public CreateTrustProductChannelEndpointAssignmentRequest withPathParams(CreateTrustProductChannelEndpointAssignmentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateTrustProductChannelEndpointAssignmentCreateTrustProductChannelEndpointAssignmentRequest request;
-    public CreateTrustProductChannelEndpointAssignmentRequest withRequest(CreateTrustProductChannelEndpointAssignmentCreateTrustProductChannelEndpointAssignmentRequest request) {
-        this.request = request;
+    public CreateTrustProductChannelEndpointAssignmentCreateTrustProductChannelEndpointAssignmentRequest requestBody;
+    public CreateTrustProductChannelEndpointAssignmentRequest withRequestBody(CreateTrustProductChannelEndpointAssignmentCreateTrustProductChannelEndpointAssignmentRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateTrustProductChannelEndpointAssignmentSecurity security;
-    public CreateTrustProductChannelEndpointAssignmentRequest withSecurity(CreateTrustProductChannelEndpointAssignmentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateTrustProductChannelEndpointAssignmentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that we created to identify the CustomerProfile resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrustProductSid")
+    public String trustProductSid;
+    public CreateTrustProductChannelEndpointAssignmentRequest withTrustProductSid(String trustProductSid) {
+        this.trustProductSid = trustProductSid;
         return this;
     }
     

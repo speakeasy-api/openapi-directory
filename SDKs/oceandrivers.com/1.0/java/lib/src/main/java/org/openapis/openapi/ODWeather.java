@@ -38,7 +38,7 @@ public class ODWeather {
      */
     public org.openapis.openapi.models.operations.CompareStationResponse compareStation(org.openapis.openapi.models.operations.CompareStationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompareStationPathParams.class, baseUrl, "/v1.0/compareStation/{stationName}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompareStationRequest.class, baseUrl, "/v1.0/compareStation/{stationName}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -70,7 +70,7 @@ public class ODWeather {
      */
     public org.openapis.openapi.models.operations.GetAemetStationResponse getAemetStation(org.openapis.openapi.models.operations.GetAemetStationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAemetStationPathParams.class, baseUrl, "/v1.0/getAemetStation/{stationName}/{period}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAemetStationRequest.class, baseUrl, "/v1.0/getAemetStation/{stationName}/{period}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -102,13 +102,13 @@ public class ODWeather {
      */
     public org.openapis.openapi.models.operations.GetEasywindResponse getEasywind(org.openapis.openapi.models.operations.GetEasywindRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEasywindPathParams.class, baseUrl, "/v1.0/getEasyWind/{easywindId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEasywindRequest.class, baseUrl, "/v1.0/getEasyWind/{easywindId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEasywindQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEasywindRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -140,7 +140,7 @@ public class ODWeather {
      */
     public org.openapis.openapi.models.operations.GetEventStationsResponse getEventStations(org.openapis.openapi.models.operations.GetEventStationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventStationsPathParams.class, baseUrl, "/v1.0/getEventStations/{eventId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventStationsRequest.class, baseUrl, "/v1.0/getEventStations/{eventId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -172,7 +172,7 @@ public class ODWeather {
      */
     public org.openapis.openapi.models.operations.GetForecastPointsResponse getForecastPoints(org.openapis.openapi.models.operations.GetForecastPointsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetForecastPointsPathParams.class, baseUrl, "/v1.0/getForecastPoints/{yatchclubid}/language/{language}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetForecastPointsRequest.class, baseUrl, "/v1.0/getForecastPoints/{yatchclubid}/language/{language}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -204,13 +204,13 @@ public class ODWeather {
      */
     public org.openapis.openapi.models.operations.GetForecastTimeSeriesResponse getForecastTimeSeries(org.openapis.openapi.models.operations.GetForecastTimeSeriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetForecastTimeSeriesPathParams.class, baseUrl, "/v1.0/getForecastTimeSeries/{latitude}/{longitude}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetForecastTimeSeriesRequest.class, baseUrl, "/v1.0/getForecastTimeSeries/{latitude}/{longitude}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetForecastTimeSeriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetForecastTimeSeriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -242,13 +242,13 @@ public class ODWeather {
      */
     public org.openapis.openapi.models.operations.GetForecastTimeSeriesWrfResponse getForecastTimeSeriesWrf(org.openapis.openapi.models.operations.GetForecastTimeSeriesWrfRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetForecastTimeSeriesWrfPathParams.class, baseUrl, "/v1.0/getForecastTimeSeriesWrf/{latitude}/{longitude}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetForecastTimeSeriesWrfRequest.class, baseUrl, "/v1.0/getForecastTimeSeriesWrf/{latitude}/{longitude}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetForecastTimeSeriesWrfQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetForecastTimeSeriesWrfRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -280,7 +280,7 @@ public class ODWeather {
      */
     public org.openapis.openapi.models.operations.GetSocibWeatherStationResponse getSocibWeatherStation(org.openapis.openapi.models.operations.GetSocibWeatherStationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSocibWeatherStationPathParams.class, baseUrl, "/v1.0/getSocibWeatherStation/{stationName}/{period}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSocibWeatherStationRequest.class, baseUrl, "/v1.0/getSocibWeatherStation/{stationName}/{period}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -312,13 +312,13 @@ public class ODWeather {
      */
     public org.openapis.openapi.models.operations.GetWeatherDisplayResponse getWeatherDisplay(org.openapis.openapi.models.operations.GetWeatherDisplayRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWeatherDisplayPathParams.class, baseUrl, "/v1.0/getWeatherDisplay/{stationName}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWeatherDisplayRequest.class, baseUrl, "/v1.0/getWeatherDisplay/{stationName}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWeatherDisplayQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWeatherDisplayRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

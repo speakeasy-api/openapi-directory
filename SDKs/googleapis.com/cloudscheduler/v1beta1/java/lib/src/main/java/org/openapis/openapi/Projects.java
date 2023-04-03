@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates a job.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateResponse cloudschedulerProjectsLocationsJobsCreate(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateResponse cloudschedulerProjectsLocationsJobsCreate(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateRequest request, org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/jobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateRequest.class, baseUrl, "/v1beta1/{parent}/jobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "job", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Deletes a job.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsDeleteResponse cloudschedulerProjectsLocationsJobsDelete(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsDeleteResponse cloudschedulerProjectsLocationsJobsDelete(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsDeleteRequest request, org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsDeletePathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsDeleteRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Projects {
     /**
      * Gets a job.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsGetResponse cloudschedulerProjectsLocationsJobsGet(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsGetResponse cloudschedulerProjectsLocationsJobsGet(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsGetRequest request, org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsGetPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsGetRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,25 +175,26 @@ public class Projects {
     /**
      * Lists jobs.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsListResponse cloudschedulerProjectsLocationsJobsList(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsListResponse cloudschedulerProjectsLocationsJobsList(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsListRequest request, org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsListPathParams.class, baseUrl, "/v1beta1/{parent}/jobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsListRequest.class, baseUrl, "/v1beta1/{parent}/jobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -217,27 +221,28 @@ public class Projects {
     /**
      * Updates a job. If successful, the updated Job is returned. If the job does not exist, `NOT_FOUND` is returned. If UpdateJob does not successfully return, it is possible for the job to be in an Job.State.UPDATE_FAILED state. A job in this state may not be executed. If this happens, retry the UpdateJob request until a successful response is received.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPatchResponse cloudschedulerProjectsLocationsJobsPatch(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPatchResponse cloudschedulerProjectsLocationsJobsPatch(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPatchRequest request, org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPatchPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPatchRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "job", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,27 +269,28 @@ public class Projects {
     /**
      * Pauses a job. If a job is paused then the system will stop executing the job until it is re-enabled via ResumeJob. The state of the job is stored in state; if paused it will be set to Job.State.PAUSED. A job must be in Job.State.ENABLED to be paused.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPauseResponse cloudschedulerProjectsLocationsJobsPause(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPauseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPauseResponse cloudschedulerProjectsLocationsJobsPause(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPauseRequest request, org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPauseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPausePathParams.class, baseUrl, "/v1beta1/{name}:pause", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPauseRequest.class, baseUrl, "/v1beta1/{name}:pause", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPauseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsPauseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,27 +317,28 @@ public class Projects {
     /**
      * Resume a job. This method reenables a job after it has been Job.State.PAUSED. The state of a job is stored in Job.state; after calling this method it will be set to Job.State.ENABLED. A job must be in Job.State.PAUSED to be resumed.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsResumeResponse cloudschedulerProjectsLocationsJobsResume(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsResumeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsResumeResponse cloudschedulerProjectsLocationsJobsResume(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsResumeRequest request, org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsResumeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsResumePathParams.class, baseUrl, "/v1beta1/{name}:resume", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsResumeRequest.class, baseUrl, "/v1beta1/{name}:resume", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsResumeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsResumeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,27 +365,28 @@ public class Projects {
     /**
      * Forces a job to run now. When this method is called, Cloud Scheduler will dispatch the job, even if the job is already running.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsRunResponse cloudschedulerProjectsLocationsJobsRun(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsRunRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsRunResponse cloudschedulerProjectsLocationsJobsRun(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsRunRequest request, org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsRunSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsRunPathParams.class, baseUrl, "/v1beta1/{name}:run", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsRunRequest.class, baseUrl, "/v1beta1/{name}:run", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "runJobRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsRunQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsRunRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -405,25 +413,26 @@ public class Projects {
     /**
      * Lists information about the supported locations for this service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsListResponse cloudschedulerProjectsLocationsList(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsListResponse cloudschedulerProjectsLocationsList(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsListRequest request, org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsListPathParams.class, baseUrl, "/v1beta1/{name}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsListRequest.class, baseUrl, "/v1beta1/{name}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

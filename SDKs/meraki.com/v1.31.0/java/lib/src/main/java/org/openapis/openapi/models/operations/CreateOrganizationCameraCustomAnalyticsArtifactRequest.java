@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOrganizationCameraCustomAnalyticsArtifactRequest {
-    
-    public CreateOrganizationCameraCustomAnalyticsArtifactPathParams pathParams;
-    public CreateOrganizationCameraCustomAnalyticsArtifactRequest withPathParams(CreateOrganizationCameraCustomAnalyticsArtifactPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateOrganizationCameraCustomAnalyticsArtifactRequestBody requestBody;
+    public CreateOrganizationCameraCustomAnalyticsArtifactRequest withRequestBody(CreateOrganizationCameraCustomAnalyticsArtifactRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateOrganizationCameraCustomAnalyticsArtifactRequestBody request;
-    public CreateOrganizationCameraCustomAnalyticsArtifactRequest withRequest(CreateOrganizationCameraCustomAnalyticsArtifactRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public CreateOrganizationCameraCustomAnalyticsArtifactRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

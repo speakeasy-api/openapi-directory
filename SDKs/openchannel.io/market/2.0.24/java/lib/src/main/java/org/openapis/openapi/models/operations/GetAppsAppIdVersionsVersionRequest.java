@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAppsAppIdVersionsVersionRequest {
-    
-    public GetAppsAppIdVersionsVersionPathParams pathParams;
-    public GetAppsAppIdVersionsVersionRequest withPathParams(GetAppsAppIdVersionsVersionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the App to be located
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public String appId;
+    public GetAppsAppIdVersionsVersionRequest withAppId(String appId) {
+        this.appId = appId;
         return this;
     }
     
+    /**
+     * The unique id of the developer that is requesting this resource
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developerId")
+    public String developerId;
+    public GetAppsAppIdVersionsVersionRequest withDeveloperId(String developerId) {
+        this.developerId = developerId;
+        return this;
+    }
     
-    public GetAppsAppIdVersionsVersionQueryParams queryParams;
-    public GetAppsAppIdVersionsVersionRequest withQueryParams(GetAppsAppIdVersionsVersionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The version number of the app
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public Long version;
+    public GetAppsAppIdVersionsVersionRequest withVersion(Long version) {
+        this.version = version;
         return this;
     }
     

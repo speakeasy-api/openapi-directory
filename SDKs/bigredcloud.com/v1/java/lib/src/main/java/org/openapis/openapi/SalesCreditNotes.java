@@ -41,13 +41,13 @@ public class SalesCreditNotes {
      */
     public org.openapis.openapi.models.operations.SalesCreditNotesDeleteResponse salesCreditNotesDelete(org.openapis.openapi.models.operations.SalesCreditNotesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SalesCreditNotesDeletePathParams.class, baseUrl, "/v1/salesCreditNotes/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SalesCreditNotesDeleteRequest.class, baseUrl, "/v1/salesCreditNotes/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SalesCreditNotesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SalesCreditNotesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -120,7 +120,7 @@ public class SalesCreditNotes {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SalesCreditNotesPostResponse salesCreditNotesPost(org.openapis.openapi.models.operations.SalesCreditNotesPostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SalesCreditNotesPostResponse salesCreditNotesPost(org.openapis.openapi.models.shared.SalesInvoiceCreditNoteDto request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/salesCreditNotes");
         
@@ -163,7 +163,7 @@ public class SalesCreditNotes {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SalesCreditNotesProcessBatchResponse salesCreditNotesProcessBatch(org.openapis.openapi.models.operations.SalesCreditNotesProcessBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SalesCreditNotesProcessBatchResponse salesCreditNotesProcessBatch(org.openapis.openapi.models.shared.BatchItemSalesInvoiceCreditNoteDto[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/salesCreditNotes/batch");
         
@@ -208,12 +208,12 @@ public class SalesCreditNotes {
      */
     public org.openapis.openapi.models.operations.SalesCreditNotesPutResponse salesCreditNotesPut(org.openapis.openapi.models.operations.SalesCreditNotesPutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SalesCreditNotesPutPathParams.class, baseUrl, "/v1/salesCreditNotes/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SalesCreditNotesPutRequest.class, baseUrl, "/v1/salesCreditNotes/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "salesInvoiceCreditNoteDto", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -251,7 +251,7 @@ public class SalesCreditNotes {
      */
     public org.openapis.openapi.models.operations.GetV1SalesCreditNotesIdResponse getV1SalesCreditNotesId(org.openapis.openapi.models.operations.GetV1SalesCreditNotesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1SalesCreditNotesIdPathParams.class, baseUrl, "/v1/salesCreditNotes/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1SalesCreditNotesIdRequest.class, baseUrl, "/v1/salesCreditNotes/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

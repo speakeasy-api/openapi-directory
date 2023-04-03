@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KeyAvailabilityRequest {
-    
-    public KeyAvailabilityPathParams pathParams;
-    public KeyAvailabilityRequest withPathParams(KeyAvailabilityPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public KeyAvailabilityRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

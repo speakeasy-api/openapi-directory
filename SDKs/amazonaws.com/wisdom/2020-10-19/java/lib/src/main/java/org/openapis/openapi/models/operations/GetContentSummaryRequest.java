@@ -4,20 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContentSummaryRequest {
-    
-    public GetContentSummaryPathParams pathParams;
-    public GetContentSummaryRequest withPathParams(GetContentSummaryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetContentSummaryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetContentSummaryRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public GetContentSummaryHeaders headers;
-    public GetContentSummaryRequest withHeaders(GetContentSummaryHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetContentSummaryRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetContentSummaryRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetContentSummaryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetContentSummaryRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetContentSummaryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The identifier of the content. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contentId")
+    public String contentId;
+    public GetContentSummaryRequest withContentId(String contentId) {
+        this.contentId = contentId;
+        return this;
+    }
+    
+    /**
+     * The identifier of the knowledge base. Can be either the ID or the ARN. URLs cannot contain the ARN.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=knowledgeBaseId")
+    public String knowledgeBaseId;
+    public GetContentSummaryRequest withKnowledgeBaseId(String knowledgeBaseId) {
+        this.knowledgeBaseId = knowledgeBaseId;
         return this;
     }
     

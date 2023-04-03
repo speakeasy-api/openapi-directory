@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActionOrganizationActivityListHtmlRequest {
-    
-    public GetActionOrganizationActivityListHtmlQueryParams queryParams;
-    public GetActionOrganizationActivityListHtmlRequest withQueryParams(GetActionOrganizationActivityListHtmlQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id or name of the organization
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetActionOrganizationActivityListHtmlRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

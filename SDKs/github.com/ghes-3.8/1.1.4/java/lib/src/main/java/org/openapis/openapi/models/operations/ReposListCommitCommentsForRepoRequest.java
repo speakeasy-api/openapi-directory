@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListCommitCommentsForRepoRequest {
-    
-    public ReposListCommitCommentsForRepoPathParams pathParams;
-    public ReposListCommitCommentsForRepoRequest withPathParams(ReposListCommitCommentsForRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposListCommitCommentsForRepoRequest withOwner(String owner) {
+        this.owner = owner;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReposListCommitCommentsForRepoRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ReposListCommitCommentsForRepoQueryParams queryParams;
-    public ReposListCommitCommentsForRepoRequest withQueryParams(ReposListCommitCommentsForRepoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReposListCommitCommentsForRepoRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposListCommitCommentsForRepoRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

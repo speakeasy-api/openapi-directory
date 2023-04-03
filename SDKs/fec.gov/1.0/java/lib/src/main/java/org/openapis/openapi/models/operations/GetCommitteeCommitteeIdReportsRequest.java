@@ -4,20 +4,379 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommitteeCommitteeIdReportsRequest {
-    
-    public GetCommitteeCommitteeIdReportsPathParams pathParams;
-    public GetCommitteeCommitteeIdReportsRequest withPathParams(GetCommitteeCommitteeIdReportsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetCommitteeCommitteeIdReportsRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * Unique identifier for the electronic or paper report. This number is used to construct
+     * PDF URLs to the original document.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=beginning_image_number")
+    public String[] beginningImageNumber;
+    public GetCommitteeCommitteeIdReportsRequest withBeginningImageNumber(String[] beginningImageNumber) {
+        this.beginningImageNumber = beginningImageNumber;
+        return this;
+    }
     
-    public GetCommitteeCommitteeIdReportsQueryParams queryParams;
-    public GetCommitteeCommitteeIdReportsRequest withQueryParams(GetCommitteeCommitteeIdReportsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A unique identifier assigned to each candidate registered with the FEC.
+     * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
+    public String candidateId;
+    public GetCommitteeCommitteeIdReportsRequest withCandidateId(String candidateId) {
+        this.candidateId = candidateId;
+        return this;
+    }
+    
+    /**
+     * A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=committee_id")
+    public String committeeId;
+    public GetCommitteeCommitteeIdReportsRequest withCommitteeId(String committeeId) {
+        this.committeeId = committeeId;
+        return this;
+    }
+    
+    /**
+     * Filter records to only those that were applicable to a given
+     * two-year period.The cycle begins with an odd year and is named
+     * for its ending, even year.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
+    public Integer[] cycle;
+    public GetCommitteeCommitteeIdReportsRequest withCycle(Integer[] cycle) {
+        this.cycle = cycle;
+        return this;
+    }
+    
+    /**
+     * False indicates that a report is the most recent. True indicates that the report has been superseded by an amendment.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_amended")
+    public Boolean isAmended;
+    public GetCommitteeCommitteeIdReportsRequest withIsAmended(Boolean isAmended) {
+        this.isAmended = isAmended;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts less than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_cash_on_hand_end_period_amount")
+    public String maxCashOnHandEndPeriodAmount;
+    public GetCommitteeCommitteeIdReportsRequest withMaxCashOnHandEndPeriodAmount(String maxCashOnHandEndPeriodAmount) {
+        this.maxCashOnHandEndPeriodAmount = maxCashOnHandEndPeriodAmount;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts less than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_debts_owed_expenditures")
+    public String maxDebtsOwedExpenditures;
+    public GetCommitteeCommitteeIdReportsRequest withMaxDebtsOwedExpenditures(String maxDebtsOwedExpenditures) {
+        this.maxDebtsOwedExpenditures = maxDebtsOwedExpenditures;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts less than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_disbursements_amount")
+    public String maxDisbursementsAmount;
+    public GetCommitteeCommitteeIdReportsRequest withMaxDisbursementsAmount(String maxDisbursementsAmount) {
+        this.maxDisbursementsAmount = maxDisbursementsAmount;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts less than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_independent_expenditures")
+    public String maxIndependentExpenditures;
+    public GetCommitteeCommitteeIdReportsRequest withMaxIndependentExpenditures(String maxIndependentExpenditures) {
+        this.maxIndependentExpenditures = maxIndependentExpenditures;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts less than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_party_coordinated_expenditures")
+    public String maxPartyCoordinatedExpenditures;
+    public GetCommitteeCommitteeIdReportsRequest withMaxPartyCoordinatedExpenditures(String maxPartyCoordinatedExpenditures) {
+        this.maxPartyCoordinatedExpenditures = maxPartyCoordinatedExpenditures;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts less than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_receipts_amount")
+    public String maxReceiptsAmount;
+    public GetCommitteeCommitteeIdReportsRequest withMaxReceiptsAmount(String maxReceiptsAmount) {
+        this.maxReceiptsAmount = maxReceiptsAmount;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts less than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_total_contributions")
+    public String maxTotalContributions;
+    public GetCommitteeCommitteeIdReportsRequest withMaxTotalContributions(String maxTotalContributions) {
+        this.maxTotalContributions = maxTotalContributions;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts greater than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_cash_on_hand_end_period_amount")
+    public String minCashOnHandEndPeriodAmount;
+    public GetCommitteeCommitteeIdReportsRequest withMinCashOnHandEndPeriodAmount(String minCashOnHandEndPeriodAmount) {
+        this.minCashOnHandEndPeriodAmount = minCashOnHandEndPeriodAmount;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts greater than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_debts_owed_amount")
+    public String minDebtsOwedAmount;
+    public GetCommitteeCommitteeIdReportsRequest withMinDebtsOwedAmount(String minDebtsOwedAmount) {
+        this.minDebtsOwedAmount = minDebtsOwedAmount;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts greater than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_disbursements_amount")
+    public String minDisbursementsAmount;
+    public GetCommitteeCommitteeIdReportsRequest withMinDisbursementsAmount(String minDisbursementsAmount) {
+        this.minDisbursementsAmount = minDisbursementsAmount;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts greater than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_independent_expenditures")
+    public String minIndependentExpenditures;
+    public GetCommitteeCommitteeIdReportsRequest withMinIndependentExpenditures(String minIndependentExpenditures) {
+        this.minIndependentExpenditures = minIndependentExpenditures;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts greater than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_party_coordinated_expenditures")
+    public String minPartyCoordinatedExpenditures;
+    public GetCommitteeCommitteeIdReportsRequest withMinPartyCoordinatedExpenditures(String minPartyCoordinatedExpenditures) {
+        this.minPartyCoordinatedExpenditures = minPartyCoordinatedExpenditures;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts greater than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_receipts_amount")
+    public String minReceiptsAmount;
+    public GetCommitteeCommitteeIdReportsRequest withMinReceiptsAmount(String minReceiptsAmount) {
+        this.minReceiptsAmount = minReceiptsAmount;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts greater than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_total_contributions")
+    public String minTotalContributions;
+    public GetCommitteeCommitteeIdReportsRequest withMinTotalContributions(String minTotalContributions) {
+        this.minTotalContributions = minTotalContributions;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetCommitteeCommitteeIdReportsRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetCommitteeCommitteeIdReportsRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Report type; prefix with "-" to exclude. Name of report where the underlying data comes from:
+     *     - 10D Pre-Election
+     *     - 10G Pre-General
+     *     - 10P Pre-Primary
+     *     - 10R Pre-Run-Off
+     *     - 10S Pre-Special
+     *     - 12C Pre-Convention
+     *     - 12G Pre-General
+     *     - 12P Pre-Primary
+     *     - 12R Pre-Run-Off
+     *     - 12S Pre-Special
+     *     - 30D Post-Election
+     *     - 30G Post-General
+     *     - 30P Post-Primary
+     *     - 30R Post-Run-Off
+     *     - 30S Post-Special
+     *     - 60D Post-Convention
+     *     - M1  January Monthly
+     *     - M10 October Monthly
+     *     - M11 November Monthly
+     *     - M12 December Monthly
+     *     - M2  February Monthly
+     *     - M3  March Monthly
+     *     - M4  April Monthly
+     *     - M5  May Monthly
+     *     - M6  June Monthly
+     *     - M7  July Monthly
+     *     - M8  August Monthly
+     *     - M9  September Monthly
+     *     - MY  Mid-Year Report
+     *     - Q1  April Quarterly
+     *     - Q2  July Quarterly
+     *     - Q3  October Quarterly
+     *     - TER Termination Report
+     *     - YE  Year-End
+     *     - ADJ COMP ADJUST AMEND
+     *     - CA  COMPREHENSIVE AMEND
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_type")
+    public String[] reportType;
+    public GetCommitteeCommitteeIdReportsRequest withReportType(String[] reportType) {
+        this.reportType = reportType;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order. ex: `-case_no`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String[] sort;
+    public GetCommitteeCommitteeIdReportsRequest withSort(String[] sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetCommitteeCommitteeIdReportsRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetCommitteeCommitteeIdReportsRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetCommitteeCommitteeIdReportsRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
+        return this;
+    }
+    
+    /**
+     * The one-letter type code of the organization:
+     *         - C communication cost
+     *         - D delegate
+     *         - E electioneering communication
+     *         - H House
+     *         - I independent expenditure filer (not a committee)
+     *         - N PAC - nonqualified
+     *         - O independent expenditure-only (super PACs)
+     *         - P presidential
+     *         - Q PAC - qualified
+     *         - S Senate
+     *         - U single candidate independent expenditure
+     *         - V PAC with non-contribution account, nonqualified
+     *         - W PAC with non-contribution account, qualified
+     *         - X party, nonqualified
+     *         - Y party, qualified
+     *         - Z national party non-federal account
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String[] type;
+    public GetCommitteeCommitteeIdReportsRequest withType(String[] type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * Forms with coverage date - 
+     *     year from the coverage ending date.
+     * Forms without coverage date - 
+     *     year from the receipt date.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Integer[] year;
+    public GetCommitteeCommitteeIdReportsRequest withYear(Integer[] year) {
+        this.year = year;
         return this;
     }
     

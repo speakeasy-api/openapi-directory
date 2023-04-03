@@ -4,20 +4,50 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListCommitStatusesForRefRequest {
-    
-    public ReposListCommitStatusesForRefPathParams pathParams;
-    public ReposListCommitStatusesForRefRequest withPathParams(ReposListCommitStatusesForRefPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposListCommitStatusesForRefRequest withOwner(String owner) {
+        this.owner = owner;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReposListCommitStatusesForRefRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ReposListCommitStatusesForRefQueryParams queryParams;
-    public ReposListCommitStatusesForRefRequest withQueryParams(ReposListCommitStatusesForRefQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReposListCommitStatusesForRefRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * ref parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ref")
+    public String ref;
+    public ReposListCommitStatusesForRefRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposListCommitStatusesForRefRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -7,31 +7,110 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsManagementUploadsDeleteUploadDataRequest {
-    
-    public AnalyticsManagementUploadsDeleteUploadDataPathParams pathParams;
-    public AnalyticsManagementUploadsDeleteUploadDataRequest withPathParams(AnalyticsManagementUploadsDeleteUploadDataPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AnalyticsManagementUploadsDeleteUploadDataQueryParams queryParams;
-    public AnalyticsManagementUploadsDeleteUploadDataRequest withQueryParams(AnalyticsManagementUploadsDeleteUploadDataQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AnalyticsDataimportDeleteUploadDataRequest request;
-    public AnalyticsManagementUploadsDeleteUploadDataRequest withRequest(org.openapis.openapi.models.shared.AnalyticsDataimportDeleteUploadDataRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AnalyticsDataimportDeleteUploadDataRequest analyticsDataimportDeleteUploadDataRequest;
+    public AnalyticsManagementUploadsDeleteUploadDataRequest withAnalyticsDataimportDeleteUploadDataRequest(org.openapis.openapi.models.shared.AnalyticsDataimportDeleteUploadDataRequest analyticsDataimportDeleteUploadDataRequest) {
+        this.analyticsDataimportDeleteUploadDataRequest = analyticsDataimportDeleteUploadDataRequest;
         return this;
     }
     
+    /**
+     * Account Id for the uploads to be deleted.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AnalyticsManagementUploadsDeleteUploadDataRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public AnalyticsManagementUploadsDeleteUploadDataSecurity security;
-    public AnalyticsManagementUploadsDeleteUploadDataRequest withSecurity(AnalyticsManagementUploadsDeleteUploadDataSecurity security) {
-        this.security = security;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AnalyticsManagementUploadsDeleteUploadDataRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * Custom data source Id for the uploads to be deleted.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customDataSourceId")
+    public String customDataSourceId;
+    public AnalyticsManagementUploadsDeleteUploadDataRequest withCustomDataSourceId(String customDataSourceId) {
+        this.customDataSourceId = customDataSourceId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AnalyticsManagementUploadsDeleteUploadDataRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AnalyticsManagementUploadsDeleteUploadDataRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AnalyticsManagementUploadsDeleteUploadDataRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AnalyticsManagementUploadsDeleteUploadDataRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AnalyticsManagementUploadsDeleteUploadDataRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AnalyticsManagementUploadsDeleteUploadDataRequest withUserIp(String userIp) {
+        this.userIp = userIp;
+        return this;
+    }
+    
+    /**
+     * Web property Id for the uploads to be deleted.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webPropertyId")
+    public String webPropertyId;
+    public AnalyticsManagementUploadsDeleteUploadDataRequest withWebPropertyId(String webPropertyId) {
+        this.webPropertyId = webPropertyId;
         return this;
     }
     

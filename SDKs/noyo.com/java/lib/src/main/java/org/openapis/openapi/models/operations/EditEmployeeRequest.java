@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditEmployeeRequest {
-    
-    public EditEmployeePathParams pathParams;
-    public EditEmployeeRequest withPathParams(EditEmployeePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EmployeeEditRequest employeeEditRequest;
+    public EditEmployeeRequest withEmployeeEditRequest(org.openapis.openapi.models.shared.EmployeeEditRequest employeeEditRequest) {
+        this.employeeEditRequest = employeeEditRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EmployeeEditRequest request;
-    public EditEmployeeRequest withRequest(org.openapis.openapi.models.shared.EmployeeEditRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the employee in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employee_id")
+    public String employeeId;
+    public EditEmployeeRequest withEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
+        return this;
+    }
+    
+    /**
+     * The current version identifier of the employee
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public EditEmployeeRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

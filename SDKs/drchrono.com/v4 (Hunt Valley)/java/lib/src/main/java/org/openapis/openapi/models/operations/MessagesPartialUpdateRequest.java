@@ -4,27 +4,62 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MessagesPartialUpdateRequest {
-    
-    public MessagesPartialUpdatePathParams pathParams;
-    public MessagesPartialUpdateRequest withPathParams(MessagesPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public MessagesPartialUpdateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public MessagesPartialUpdateQueryParams queryParams;
-    public MessagesPartialUpdateRequest withQueryParams(MessagesPartialUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public MessagesPartialUpdateRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=owner")
+    public Long owner;
+    public MessagesPartialUpdateRequest withOwner(Long owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public MessagesPartialUpdateSecurity security;
-    public MessagesPartialUpdateRequest withSecurity(MessagesPartialUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public MessagesPartialUpdateRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=received_since")
+    public String receivedSince;
+    public MessagesPartialUpdateRequest withReceivedSince(String receivedSince) {
+        this.receivedSince = receivedSince;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=responsible_user")
+    public Long responsibleUser;
+    public MessagesPartialUpdateRequest withResponsibleUser(Long responsibleUser) {
+        this.responsibleUser = responsibleUser;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public MessagesPartialUpdateRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_since")
+    public String updatedSince;
+    public MessagesPartialUpdateRequest withUpdatedSince(String updatedSince) {
+        this.updatedSince = updatedSince;
         return this;
     }
     

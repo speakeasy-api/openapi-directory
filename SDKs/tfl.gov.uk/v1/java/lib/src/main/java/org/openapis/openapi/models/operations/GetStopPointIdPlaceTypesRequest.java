@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStopPointIdPlaceTypesRequest {
-    
-    public GetStopPointIdPlaceTypesPathParams pathParams;
-    public GetStopPointIdPlaceTypesRequest withPathParams(GetStopPointIdPlaceTypesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A naptan id for a stop point (station naptan code e.g. 940GZZLUASL).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetStopPointIdPlaceTypesRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetStopPointIdPlaceTypesQueryParams queryParams;
-    public GetStopPointIdPlaceTypesRequest withQueryParams(GetStopPointIdPlaceTypesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comcomma-separated value representing the place types.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placeTypes")
+    public String[] placeTypes;
+    public GetStopPointIdPlaceTypesRequest withPlaceTypes(String[] placeTypes) {
+        this.placeTypes = placeTypes;
         return this;
     }
     

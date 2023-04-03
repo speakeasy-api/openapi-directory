@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesIdDocumentsDownloadRequest {
-    
-    public PostSpacesIdDocumentsDownloadPathParams pathParams;
-    public PostSpacesIdDocumentsDownloadRequest withPathParams(PostSpacesIdDocumentsDownloadPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Documents to archive
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSpacesIdDocumentsDownloadRequestBody request;
-    public PostSpacesIdDocumentsDownloadRequest withRequest(PostSpacesIdDocumentsDownloadRequestBody request) {
-        this.request = request;
+    public PostSpacesIdDocumentsDownloadRequestBody requestBody;
+    public PostSpacesIdDocumentsDownloadRequest withRequestBody(PostSpacesIdDocumentsDownloadRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostSpacesIdDocumentsDownloadSecurity security;
-    public PostSpacesIdDocumentsDownloadRequest withSecurity(PostSpacesIdDocumentsDownloadSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesIdDocumentsDownloadRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

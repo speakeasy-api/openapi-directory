@@ -7,31 +7,110 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdsensehostAccountsAdunitsPatchRequest {
-    
-    public AdsensehostAccountsAdunitsPatchPathParams pathParams;
-    public AdsensehostAccountsAdunitsPatchRequest withPathParams(AdsensehostAccountsAdunitsPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AdsensehostAccountsAdunitsPatchQueryParams queryParams;
-    public AdsensehostAccountsAdunitsPatchRequest withQueryParams(AdsensehostAccountsAdunitsPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AdUnit request;
-    public AdsensehostAccountsAdunitsPatchRequest withRequest(org.openapis.openapi.models.shared.AdUnit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AdUnit adUnit;
+    public AdsensehostAccountsAdunitsPatchRequest withAdUnit(org.openapis.openapi.models.shared.AdUnit adUnit) {
+        this.adUnit = adUnit;
         return this;
     }
     
+    /**
+     * Account which contains the ad client.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AdsensehostAccountsAdunitsPatchRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public AdsensehostAccountsAdunitsPatchSecurity security;
-    public AdsensehostAccountsAdunitsPatchRequest withSecurity(AdsensehostAccountsAdunitsPatchSecurity security) {
-        this.security = security;
+    /**
+     * Ad client which contains the ad unit.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=adClientId")
+    public String adClientId;
+    public AdsensehostAccountsAdunitsPatchRequest withAdClientId(String adClientId) {
+        this.adClientId = adClientId;
+        return this;
+    }
+    
+    /**
+     * Ad unit to get.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=adUnitId")
+    public String adUnitId;
+    public AdsensehostAccountsAdunitsPatchRequest withAdUnitId(String adUnitId) {
+        this.adUnitId = adUnitId;
+        return this;
+    }
+    
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AdsensehostAccountsAdunitsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AdsensehostAccountsAdunitsPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AdsensehostAccountsAdunitsPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AdsensehostAccountsAdunitsPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AdsensehostAccountsAdunitsPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AdsensehostAccountsAdunitsPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AdsensehostAccountsAdunitsPatchRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConfigIssuesSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAPIKeyHeader apiKeyHeader;
-    public GetConfigIssuesSecurity withApiKeyHeader(org.openapis.openapi.models.shared.SchemeAPIKeyHeader apiKeyHeader) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=x-api-key")
+    public String apiKeyHeader;
+    public GetConfigIssuesSecurity withApiKeyHeader(String apiKeyHeader) {
         this.apiKeyHeader = apiKeyHeader;
         return this;
     }

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAgentContactRequest {
-    
-    public CreateAgentContactPathParams pathParams;
-    public CreateAgentContactRequest withPathParams(CreateAgentContactPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AgentContactCreateRequest agentContactCreateRequest;
+    public CreateAgentContactRequest withAgentContactCreateRequest(org.openapis.openapi.models.shared.AgentContactCreateRequest agentContactCreateRequest) {
+        this.agentContactCreateRequest = agentContactCreateRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AgentContactCreateRequest request;
-    public CreateAgentContactRequest withRequest(org.openapis.openapi.models.shared.AgentContactCreateRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the agent in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agent_id")
+    public String agentId;
+    public CreateAgentContactRequest withAgentId(String agentId) {
+        this.agentId = agentId;
         return this;
     }
     

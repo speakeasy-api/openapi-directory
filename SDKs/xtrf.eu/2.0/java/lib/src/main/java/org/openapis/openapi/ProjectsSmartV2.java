@@ -35,12 +35,12 @@ public class ProjectsSmartV2 {
 
     public org.openapis.openapi.models.operations.AddExternalFileLinksResponse addExternalFileLinks(org.openapis.openapi.models.operations.AddExternalFileLinksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddExternalFileLinksPathParams.class, baseUrl, "/v2/projects/{projectId}/files/addExternalLink", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddExternalFileLinksRequest.class, baseUrl, "/v2/projects/{projectId}/files/addExternalLink", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "externalFileDto", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -74,12 +74,12 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.AddFileLinks1Response addFileLinks1(org.openapis.openapi.models.operations.AddFileLinks1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddFileLinks1PathParams.class, baseUrl, "/v2/projects/{projectId}/files/addLink", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddFileLinks1Request.class, baseUrl, "/v2/projects/{projectId}/files/addLink", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "fileLinkCategorizationsDto", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -119,12 +119,12 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.AddFiles1Response addFiles1(org.openapis.openapi.models.operations.AddFiles1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddFiles1PathParams.class, baseUrl, "/v2/projects/{projectId}/files/add", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddFiles1Request.class, baseUrl, "/v2/projects/{projectId}/files/add", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "fileCategorizationsDto", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -157,7 +157,7 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.AddJobToProcessResponse addJobToProcess(org.openapis.openapi.models.operations.AddJobToProcessRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddJobToProcessPathParams.class, baseUrl, "/v2/projects/{projectId}/addJob", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddJobToProcessRequest.class, baseUrl, "/v2/projects/{projectId}/addJob", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -195,7 +195,7 @@ public class ProjectsSmartV2 {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ArchiveResponse archive(org.openapis.openapi.models.operations.ArchiveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ArchiveResponse archive(org.openapis.openapi.models.shared.FilesDto request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/projects/files/archive");
         
@@ -242,12 +242,12 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.ChangeStatus2Response changeStatus2(org.openapis.openapi.models.operations.ChangeStatus2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangeStatus2PathParams.class, baseUrl, "/v2/projects/{projectId}/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangeStatus2Request.class, baseUrl, "/v2/projects/{projectId}/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "projectStatusDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -281,12 +281,12 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.CreatePayable2Response createPayable2(org.openapis.openapi.models.operations.CreatePayable2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePayable2PathParams.class, baseUrl, "/v2/projects/{projectId}/finance/payables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePayable2Request.class, baseUrl, "/v2/projects/{projectId}/finance/payables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "payableCreateDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -326,12 +326,12 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.CreateReceivable2Response createReceivable2(org.openapis.openapi.models.operations.CreateReceivable2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateReceivable2PathParams.class, baseUrl, "/v2/projects/{projectId}/finance/receivables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateReceivable2Request.class, baseUrl, "/v2/projects/{projectId}/finance/receivables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "receivableCreateDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -369,7 +369,7 @@ public class ProjectsSmartV2 {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Create6Response create6(org.openapis.openapi.models.operations.Create6Request request) throws Exception {
+    public org.openapis.openapi.models.operations.Create6Response create6(org.openapis.openapi.models.shared.ProjectCreateDTO request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/projects");
         
@@ -413,7 +413,7 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.DeletePayable2Response deletePayable2(org.openapis.openapi.models.operations.DeletePayable2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayable2PathParams.class, baseUrl, "/v2/projects/{projectId}/finance/payables/{payableId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayable2Request.class, baseUrl, "/v2/projects/{projectId}/finance/payables/{payableId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -447,7 +447,7 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.DeleteReceivable2Response deleteReceivable2(org.openapis.openapi.models.operations.DeleteReceivable2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteReceivable2PathParams.class, baseUrl, "/v2/projects/{projectId}/finance/receivables/{receivableId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteReceivable2Request.class, baseUrl, "/v2/projects/{projectId}/finance/receivables/{receivableId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -481,7 +481,7 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.GetByExternalId1Response getByExternalId1(org.openapis.openapi.models.operations.GetByExternalId1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetByExternalId1PathParams.class, baseUrl, "/v2/projects/for-external-id/{externalProjectId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetByExternalId1Request.class, baseUrl, "/v2/projects/for-external-id/{externalProjectId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -521,7 +521,7 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.GetById9Response getById9(org.openapis.openapi.models.operations.GetById9Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetById9PathParams.class, baseUrl, "/v2/projects/{projectId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetById9Request.class, baseUrl, "/v2/projects/{projectId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -560,7 +560,7 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.GetCATToolProjectInfoResponse getCATToolProjectInfo(org.openapis.openapi.models.operations.GetCATToolProjectInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCATToolProjectInfoPathParams.class, baseUrl, "/v2/projects/{projectId}/catToolProject", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCATToolProjectInfoRequest.class, baseUrl, "/v2/projects/{projectId}/catToolProject", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -600,7 +600,7 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.GetContacts2Response getContacts2(org.openapis.openapi.models.operations.GetContacts2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContacts2PathParams.class, baseUrl, "/v2/projects/{projectId}/clientContacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContacts2Request.class, baseUrl, "/v2/projects/{projectId}/clientContacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -640,7 +640,7 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.GetCustomFields8Response getCustomFields8(org.openapis.openapi.models.operations.GetCustomFields8Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomFields8PathParams.class, baseUrl, "/v2/projects/{projectId}/customFields", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomFields8Request.class, baseUrl, "/v2/projects/{projectId}/customFields", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -680,7 +680,7 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.GetDeliverableFilesResponse getDeliverableFiles(org.openapis.openapi.models.operations.GetDeliverableFilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeliverableFilesPathParams.class, baseUrl, "/v2/projects/{projectId}/files/deliverable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeliverableFilesRequest.class, baseUrl, "/v2/projects/{projectId}/files/deliverable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -720,7 +720,7 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.GetFileById2Response getFileById2(org.openapis.openapi.models.operations.GetFileById2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFileById2PathParams.class, baseUrl, "/v2/projects/files/{fileId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFileById2Request.class, baseUrl, "/v2/projects/files/{fileId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -760,7 +760,7 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.GetFileContentByIdResponse getFileContentById(org.openapis.openapi.models.operations.GetFileContentByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFileContentByIdPathParams.class, baseUrl, "/v2/projects/files/{fileId}/download/{fileName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFileContentByIdRequest.class, baseUrl, "/v2/projects/files/{fileId}/download/{fileName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -794,7 +794,7 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.GetFilesResponse getFiles(org.openapis.openapi.models.operations.GetFilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFilesPathParams.class, baseUrl, "/v2/projects/{projectId}/files", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFilesRequest.class, baseUrl, "/v2/projects/{projectId}/files", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -834,7 +834,7 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.GetFinance2Response getFinance2(org.openapis.openapi.models.operations.GetFinance2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFinance2PathParams.class, baseUrl, "/v2/projects/{projectId}/finance", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFinance2Request.class, baseUrl, "/v2/projects/{projectId}/finance", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -874,7 +874,7 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.GetJobsResponse getJobs(org.openapis.openapi.models.operations.GetJobsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJobsPathParams.class, baseUrl, "/v2/projects/{projectId}/jobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJobsRequest.class, baseUrl, "/v2/projects/{projectId}/jobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -913,7 +913,7 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.GetProcessIdResponse getProcessId(org.openapis.openapi.models.operations.GetProcessIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProcessIdPathParams.class, baseUrl, "/v2/projects/{projectId}/process", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProcessIdRequest.class, baseUrl, "/v2/projects/{projectId}/process", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -953,12 +953,12 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.UpdateClientDeadlineResponse updateClientDeadline(org.openapis.openapi.models.operations.UpdateClientDeadlineRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateClientDeadlinePathParams.class, baseUrl, "/v2/projects/{projectId}/clientDeadline", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateClientDeadlineRequest.class, baseUrl, "/v2/projects/{projectId}/clientDeadline", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "timeDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -992,12 +992,12 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.UpdateClientNotesResponse updateClientNotes(org.openapis.openapi.models.operations.UpdateClientNotesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateClientNotesPathParams.class, baseUrl, "/v2/projects/{projectId}/clientNotes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateClientNotesRequest.class, baseUrl, "/v2/projects/{projectId}/clientNotes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "stringDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1031,12 +1031,12 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.UpdateClientReferenceNumberResponse updateClientReferenceNumber(org.openapis.openapi.models.operations.UpdateClientReferenceNumberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateClientReferenceNumberPathParams.class, baseUrl, "/v2/projects/{projectId}/clientReferenceNumber", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateClientReferenceNumberRequest.class, baseUrl, "/v2/projects/{projectId}/clientReferenceNumber", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "stringDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1070,12 +1070,12 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.UpdateContacts2Response updateContacts2(org.openapis.openapi.models.operations.UpdateContacts2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateContacts2PathParams.class, baseUrl, "/v2/projects/{projectId}/clientContacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateContacts2Request.class, baseUrl, "/v2/projects/{projectId}/clientContacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "smartContactsDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1115,12 +1115,12 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.UpdateCustomField2Response updateCustomField2(org.openapis.openapi.models.operations.UpdateCustomField2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCustomField2PathParams.class, baseUrl, "/v2/projects/{projectId}/customFields/{key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCustomField2Request.class, baseUrl, "/v2/projects/{projectId}/customFields/{key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "smartCustomFieldDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1154,12 +1154,12 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.UpdateInternalNotesResponse updateInternalNotes(org.openapis.openapi.models.operations.UpdateInternalNotesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInternalNotesPathParams.class, baseUrl, "/v2/projects/{projectId}/internalNotes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInternalNotesRequest.class, baseUrl, "/v2/projects/{projectId}/internalNotes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "stringDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1193,12 +1193,12 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.UpdateOrderedOnResponse updateOrderedOn(org.openapis.openapi.models.operations.UpdateOrderedOnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrderedOnPathParams.class, baseUrl, "/v2/projects/{projectId}/orderDate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrderedOnRequest.class, baseUrl, "/v2/projects/{projectId}/orderDate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "timeDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1232,12 +1232,12 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.UpdatePayable2Response updatePayable2(org.openapis.openapi.models.operations.UpdatePayable2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePayable2PathParams.class, baseUrl, "/v2/projects/{projectId}/finance/payables/{payableId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePayable2Request.class, baseUrl, "/v2/projects/{projectId}/finance/payables/{payableId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "payableDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1277,12 +1277,12 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.UpdateReceivable2Response updateReceivable2(org.openapis.openapi.models.operations.UpdateReceivable2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateReceivable2PathParams.class, baseUrl, "/v2/projects/{projectId}/finance/receivables/{receivableId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateReceivable2Request.class, baseUrl, "/v2/projects/{projectId}/finance/receivables/{receivableId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "receivableDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1322,12 +1322,12 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.UpdateSourceLanguageResponse updateSourceLanguage(org.openapis.openapi.models.operations.UpdateSourceLanguageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSourceLanguagePathParams.class, baseUrl, "/v2/projects/{projectId}/sourceLanguage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSourceLanguageRequest.class, baseUrl, "/v2/projects/{projectId}/sourceLanguage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sourceLanguageDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1361,12 +1361,12 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.UpdateSpecializationResponse updateSpecialization(org.openapis.openapi.models.operations.UpdateSpecializationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSpecializationPathParams.class, baseUrl, "/v2/projects/{projectId}/specialization", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSpecializationRequest.class, baseUrl, "/v2/projects/{projectId}/specialization", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "specializationDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1400,12 +1400,12 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.UpdateTargetLanguagesResponse updateTargetLanguages(org.openapis.openapi.models.operations.UpdateTargetLanguagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateTargetLanguagesPathParams.class, baseUrl, "/v2/projects/{projectId}/targetLanguages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateTargetLanguagesRequest.class, baseUrl, "/v2/projects/{projectId}/targetLanguages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "targetLanguagesDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1439,12 +1439,12 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.UpdateVendorInstructionsResponse updateVendorInstructions(org.openapis.openapi.models.operations.UpdateVendorInstructionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateVendorInstructionsPathParams.class, baseUrl, "/v2/projects/{projectId}/vendorInstructions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateVendorInstructionsRequest.class, baseUrl, "/v2/projects/{projectId}/vendorInstructions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "stringDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1478,12 +1478,12 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.UpdateVolumeResponse updateVolume(org.openapis.openapi.models.operations.UpdateVolumeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateVolumePathParams.class, baseUrl, "/v2/projects/{projectId}/volume", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateVolumeRequest.class, baseUrl, "/v2/projects/{projectId}/volume", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "bigDecimalDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1517,12 +1517,12 @@ public class ProjectsSmartV2 {
      */
     public org.openapis.openapi.models.operations.UploadFile2Response uploadFile2(org.openapis.openapi.models.operations.UploadFile2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadFile2PathParams.class, baseUrl, "/v2/projects/{projectId}/files/upload", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadFile2Request.class, baseUrl, "/v2/projects/{projectId}/files/upload", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "fileToUploadDto", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

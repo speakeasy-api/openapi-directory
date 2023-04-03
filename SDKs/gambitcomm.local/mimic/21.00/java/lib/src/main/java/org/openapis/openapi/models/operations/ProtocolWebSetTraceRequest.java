@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolWebSetTraceRequest {
+    /**
+     * Agent to set the WEB tracing
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolWebSetTraceRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolWebSetTracePathParams pathParams;
-    public ProtocolWebSetTraceRequest withPathParams(ProtocolWebSetTracePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Value to set the WEB tracing
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enableOrNot")
+    public String enableOrNot;
+    public ProtocolWebSetTraceRequest withEnableOrNot(String enableOrNot) {
+        this.enableOrNot = enableOrNot;
         return this;
     }
     

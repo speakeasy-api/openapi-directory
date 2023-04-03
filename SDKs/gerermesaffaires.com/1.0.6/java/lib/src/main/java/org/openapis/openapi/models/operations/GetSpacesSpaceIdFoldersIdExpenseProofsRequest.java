@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdFoldersIdExpenseProofsRequest {
-    
-    public GetSpacesSpaceIdFoldersIdExpenseProofsPathParams pathParams;
-    public GetSpacesSpaceIdFoldersIdExpenseProofsRequest withPathParams(GetSpacesSpaceIdFoldersIdExpenseProofsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * date range of the documents
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Date")
+    public String date;
+    public GetSpacesSpaceIdFoldersIdExpenseProofsRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     
+    /**
+     * date range of attachment
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FolderDate")
+    public String folderDate;
+    public GetSpacesSpaceIdFoldersIdExpenseProofsRequest withFolderDate(String folderDate) {
+        this.folderDate = folderDate;
+        return this;
+    }
     
-    public GetSpacesSpaceIdFoldersIdExpenseProofsQueryParams queryParams;
-    public GetSpacesSpaceIdFoldersIdExpenseProofsRequest withQueryParams(GetSpacesSpaceIdFoldersIdExpenseProofsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * To return expense proofs not attached to an expense report
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NoExpenseReport")
+    public Boolean noExpenseReport;
+    public GetSpacesSpaceIdFoldersIdExpenseProofsRequest withNoExpenseReport(Boolean noExpenseReport) {
+        this.noExpenseReport = noExpenseReport;
+        return this;
+    }
+    
+    /**
+     * index range of the results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Range")
+    public String range;
+    public GetSpacesSpaceIdFoldersIdExpenseProofsRequest withRange(String range) {
+        this.range = range;
+        return this;
+    }
+    
+    /**
+     * Status of the expense proof
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public GetSpacesSpaceIdFoldersIdExpenseProofsStatusEnum status;
+    public GetSpacesSpaceIdFoldersIdExpenseProofsRequest withStatus(GetSpacesSpaceIdFoldersIdExpenseProofsStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesSpaceIdFoldersIdExpenseProofsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdFoldersIdExpenseProofsRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

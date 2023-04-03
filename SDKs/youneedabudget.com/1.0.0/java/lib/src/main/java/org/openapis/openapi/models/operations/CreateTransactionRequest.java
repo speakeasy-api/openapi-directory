@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTransactionRequest {
-    
-    public CreateTransactionPathParams pathParams;
-    public CreateTransactionRequest withPathParams(CreateTransactionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The transaction or transactions to create.  To create a single transaction you can specify a value for the `transaction` object and to create multiple transactions you can specify an array of `transactions`.  It is expected that you will only provide a value for one of these objects.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PostTransactionsWrapper request;
-    public CreateTransactionRequest withRequest(org.openapis.openapi.models.shared.PostTransactionsWrapper request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PostTransactionsWrapper postTransactionsWrapper;
+    public CreateTransactionRequest withPostTransactionsWrapper(org.openapis.openapi.models.shared.PostTransactionsWrapper postTransactionsWrapper) {
+        this.postTransactionsWrapper = postTransactionsWrapper;
+        return this;
+    }
+    
+    /**
+     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=budget_id")
+    public String budgetId;
+    public CreateTransactionRequest withBudgetId(String budgetId) {
+        this.budgetId = budgetId;
         return this;
     }
     

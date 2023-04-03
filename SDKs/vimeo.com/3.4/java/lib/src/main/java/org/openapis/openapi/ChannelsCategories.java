@@ -39,12 +39,12 @@ public class ChannelsCategories {
      */
     public org.openapis.openapi.models.operations.AddChannelCategoriesResponse addChannelCategories(org.openapis.openapi.models.operations.AddChannelCategoriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddChannelCategoriesPathParams.class, baseUrl, "/channels/{channel_id}/categories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddChannelCategoriesRequest.class, baseUrl, "/channels/{channel_id}/categories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -89,19 +89,20 @@ public class ChannelsCategories {
      * Categorize a channel
      * This method adds a channel to a category.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CategorizeChannelResponse categorizeChannel(org.openapis.openapi.models.operations.CategorizeChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CategorizeChannelResponse categorizeChannel(org.openapis.openapi.models.operations.CategorizeChannelRequest request, org.openapis.openapi.models.operations.CategorizeChannelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CategorizeChannelPathParams.class, baseUrl, "/channels/{channel_id}/categories/{category}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CategorizeChannelRequest.class, baseUrl, "/channels/{channel_id}/categories/{category}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -139,19 +140,20 @@ public class ChannelsCategories {
      * Remove a category from a channel
      * This method removes a single category from the specified channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteChannelCategoryResponse deleteChannelCategory(org.openapis.openapi.models.operations.DeleteChannelCategoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteChannelCategoryResponse deleteChannelCategory(org.openapis.openapi.models.operations.DeleteChannelCategoryRequest request, org.openapis.openapi.models.operations.DeleteChannelCategorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteChannelCategoryPathParams.class, baseUrl, "/channels/{channel_id}/categories/{category}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteChannelCategoryRequest.class, baseUrl, "/channels/{channel_id}/categories/{category}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -194,7 +196,7 @@ public class ChannelsCategories {
      */
     public org.openapis.openapi.models.operations.GetChannelCategoriesResponse getChannelCategories(org.openapis.openapi.models.operations.GetChannelCategoriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCategoriesPathParams.class, baseUrl, "/channels/{channel_id}/categories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCategoriesRequest.class, baseUrl, "/channels/{channel_id}/categories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

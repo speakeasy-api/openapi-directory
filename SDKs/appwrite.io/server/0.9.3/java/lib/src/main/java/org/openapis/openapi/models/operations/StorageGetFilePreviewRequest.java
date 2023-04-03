@@ -4,27 +4,126 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageGetFilePreviewRequest {
-    
-    public StorageGetFilePreviewPathParams pathParams;
-    public StorageGetFilePreviewRequest withPathParams(StorageGetFilePreviewPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Preview image background color. Only works with transparent images (png). Use a valid HEX color, no # is needed for prefix.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=background")
+    public String background;
+    public StorageGetFilePreviewRequest withBackground(String background) {
+        this.background = background;
         return this;
     }
     
-    
-    public StorageGetFilePreviewQueryParams queryParams;
-    public StorageGetFilePreviewRequest withQueryParams(StorageGetFilePreviewQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Preview image border color. Use a valid HEX color, no # is needed for prefix.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=borderColor")
+    public String borderColor;
+    public StorageGetFilePreviewRequest withBorderColor(String borderColor) {
+        this.borderColor = borderColor;
         return this;
     }
     
+    /**
+     * Preview image border radius in pixels. Pass an integer between 0 to 4000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=borderRadius")
+    public Integer borderRadius;
+    public StorageGetFilePreviewRequest withBorderRadius(Integer borderRadius) {
+        this.borderRadius = borderRadius;
+        return this;
+    }
     
-    public StorageGetFilePreviewSecurity security;
-    public StorageGetFilePreviewRequest withSecurity(StorageGetFilePreviewSecurity security) {
-        this.security = security;
+    /**
+     * Preview image border in pixels. Pass an integer between 0 to 100. Defaults to 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=borderWidth")
+    public Integer borderWidth;
+    public StorageGetFilePreviewRequest withBorderWidth(Integer borderWidth) {
+        this.borderWidth = borderWidth;
+        return this;
+    }
+    
+    /**
+     * File unique ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
+    public String fileId;
+    public StorageGetFilePreviewRequest withFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    
+    /**
+     * Image crop gravity. Can be one of center,top-left,top,top-right,left,right,bottom-left,bottom,bottom-right
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gravity")
+    public String gravity;
+    public StorageGetFilePreviewRequest withGravity(String gravity) {
+        this.gravity = gravity;
+        return this;
+    }
+    
+    /**
+     * Resize preview image height, Pass an integer between 0 to 4000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
+    public Integer height;
+    public StorageGetFilePreviewRequest withHeight(Integer height) {
+        this.height = height;
+        return this;
+    }
+    
+    /**
+     * Preview image opacity. Only works with images having an alpha channel (like png). Pass a number between 0 to 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opacity")
+    public Float opacity;
+    public StorageGetFilePreviewRequest withOpacity(Float opacity) {
+        this.opacity = opacity;
+        return this;
+    }
+    
+    /**
+     * Output format type (jpeg, jpg, png, gif and webp).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=output")
+    public String output;
+    public StorageGetFilePreviewRequest withOutput(String output) {
+        this.output = output;
+        return this;
+    }
+    
+    /**
+     * Preview image quality. Pass an integer between 0 to 100. Defaults to 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quality")
+    public Integer quality;
+    public StorageGetFilePreviewRequest withQuality(Integer quality) {
+        this.quality = quality;
+        return this;
+    }
+    
+    /**
+     * Preview image rotation in degrees. Pass an integer between 0 and 360.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rotation")
+    public Integer rotation;
+    public StorageGetFilePreviewRequest withRotation(Integer rotation) {
+        this.rotation = rotation;
+        return this;
+    }
+    
+    /**
+     * Resize preview image width, Pass an integer between 0 to 4000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
+    public Integer width;
+    public StorageGetFilePreviewRequest withWidth(Integer width) {
+        this.width = width;
         return this;
     }
     

@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkPortForwardingRulesRequest {
-    
-    public UpdateNetworkPortForwardingRulesPathParams pathParams;
-    public UpdateNetworkPortForwardingRulesRequest withPathParams(UpdateNetworkPortForwardingRulesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkPortForwardingRulesRequestBody requestBody;
+    public UpdateNetworkPortForwardingRulesRequest withRequestBody(UpdateNetworkPortForwardingRulesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkPortForwardingRulesRequestBody request;
-    public UpdateNetworkPortForwardingRulesRequest withRequest(UpdateNetworkPortForwardingRulesRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkPortForwardingRulesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

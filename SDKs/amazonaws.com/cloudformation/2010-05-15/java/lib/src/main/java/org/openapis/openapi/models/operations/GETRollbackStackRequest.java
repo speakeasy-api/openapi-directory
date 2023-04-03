@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRollbackStackRequest {
-    
-    public GETRollbackStackQueryParams queryParams;
-    public GETRollbackStackRequest withQueryParams(GETRollbackStackQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRollbackStackActionEnum action;
+    public GETRollbackStackRequest withAction(GETRollbackStackActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * A unique identifier for this &lt;code&gt;RollbackStack&lt;/code&gt; request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientRequestToken")
+    public String clientRequestToken;
+    public GETRollbackStackRequest withClientRequestToken(String clientRequestToken) {
+        this.clientRequestToken = clientRequestToken;
+        return this;
+    }
     
-    public GETRollbackStackHeaders headers;
-    public GETRollbackStackRequest withHeaders(GETRollbackStackHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Amazon Resource Name (ARN) of an Identity and Access Management role that CloudFormation assumes to rollback the stack.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RoleARN")
+    public String roleARN;
+    public GETRollbackStackRequest withRoleARN(String roleARN) {
+        this.roleARN = roleARN;
+        return this;
+    }
+    
+    /**
+     * The name that's associated with the stack.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackName")
+    public String stackName;
+    public GETRollbackStackRequest withStackName(String stackName) {
+        this.stackName = stackName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRollbackStackVersionEnum version;
+    public GETRollbackStackRequest withVersion(GETRollbackStackVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRollbackStackRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRollbackStackRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRollbackStackRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRollbackStackRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRollbackStackRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRollbackStackRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRollbackStackRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

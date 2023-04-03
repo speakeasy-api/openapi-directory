@@ -35,25 +35,26 @@ public class Projects {
     /**
      * Gets the metadata info for the requested client
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsGetClientmetadataResponse integrationsProjectsGetClientmetadata(org.openapis.openapi.models.operations.IntegrationsProjectsGetClientmetadataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsGetClientmetadataResponse integrationsProjectsGetClientmetadata(org.openapis.openapi.models.operations.IntegrationsProjectsGetClientmetadataRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsGetClientmetadataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsGetClientmetadataPathParams.class, baseUrl, "/v1/{parent}/clientmetadata", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsGetClientmetadataRequest.class, baseUrl, "/v1/{parent}/clientmetadata", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsGetClientmetadataQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsGetClientmetadataRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,27 +81,28 @@ public class Projects {
     /**
      * Creates an Apps Script project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsCreateResponse integrationsProjectsLocationsAppsScriptProjectsCreate(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsCreateResponse integrationsProjectsLocationsAppsScriptProjectsCreate(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsCreateRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsCreatePathParams.class, baseUrl, "/v1/{parent}/appsScriptProjects", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsCreateRequest.class, baseUrl, "/v1/{parent}/appsScriptProjects", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIntegrationsV1alphaCreateAppsScriptProjectRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Projects {
     /**
      * Links a existing Apps Script project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsLinkResponse integrationsProjectsLocationsAppsScriptProjectsLink(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsLinkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsLinkResponse integrationsProjectsLocationsAppsScriptProjectsLink(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsLinkRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsLinkSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsLinkPathParams.class, baseUrl, "/v1/{parent}/appsScriptProjects:link", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsLinkRequest.class, baseUrl, "/v1/{parent}/appsScriptProjects:link", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIntegrationsV1alphaLinkAppsScriptProjectRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsLinkQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsAppsScriptProjectsLinkRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,27 +177,28 @@ public class Projects {
     /**
      * Perform the deprovisioning steps to disable a user GCP project to use IP and purge all related data in a wipeout-compliant way.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsDeprovisionResponse integrationsProjectsLocationsClientsDeprovision(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsDeprovisionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsDeprovisionResponse integrationsProjectsLocationsClientsDeprovision(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsDeprovisionRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsDeprovisionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsDeprovisionPathParams.class, baseUrl, "/v1/{parent}/clients:deprovision", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsDeprovisionRequest.class, baseUrl, "/v1/{parent}/clients:deprovision", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsDeprovisionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsDeprovisionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -221,27 +225,28 @@ public class Projects {
     /**
      * Perform the provisioning steps to enable a user GCP project to use IP. If GCP project already registered on IP end via Apigee Integration, provisioning will fail.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsProvisionResponse integrationsProjectsLocationsClientsProvision(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsProvisionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsProvisionResponse integrationsProjectsLocationsClientsProvision(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsProvisionRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsProvisionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsProvisionPathParams.class, baseUrl, "/v1/{parent}/clients:provision", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsProvisionRequest.class, baseUrl, "/v1/{parent}/clients:provision", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIntegrationsV1alphaProvisionClientRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsProvisionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsProvisionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -268,27 +273,28 @@ public class Projects {
     /**
      * Update client from GMEK to CMEK
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsSwitchResponse integrationsProjectsLocationsClientsSwitch(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsSwitchResponse integrationsProjectsLocationsClientsSwitch(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsSwitchRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsSwitchPathParams.class, baseUrl, "/v1/{parent}/clients:switch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsSwitchRequest.class, baseUrl, "/v1/{parent}/clients:switch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIntegrationsV1alphaSwitchEncryptionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsSwitchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsClientsSwitchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -315,25 +321,26 @@ public class Projects {
     /**
      * Lists Connections in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsListResponse integrationsProjectsLocationsConnectionsList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsListResponse integrationsProjectsLocationsConnectionsList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsListRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsListPathParams.class, baseUrl, "/v1/{parent}/connections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsListRequest.class, baseUrl, "/v1/{parent}/connections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -360,25 +367,26 @@ public class Projects {
     /**
      * Lists the JSON schemas for the inputs and outputs of actions, filtered by action name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeActionSchemasListResponse integrationsProjectsLocationsConnectionsRuntimeActionSchemasList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeActionSchemasListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeActionSchemasListResponse integrationsProjectsLocationsConnectionsRuntimeActionSchemasList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeActionSchemasListRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeActionSchemasListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeActionSchemasListPathParams.class, baseUrl, "/v1/{parent}/runtimeActionSchemas", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeActionSchemasListRequest.class, baseUrl, "/v1/{parent}/runtimeActionSchemas", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeActionSchemasListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeActionSchemasListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -405,25 +413,26 @@ public class Projects {
     /**
      * Lists the JSON schemas for the properties of runtime entities, filtered by entity name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeEntitySchemasListResponse integrationsProjectsLocationsConnectionsRuntimeEntitySchemasList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeEntitySchemasListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeEntitySchemasListResponse integrationsProjectsLocationsConnectionsRuntimeEntitySchemasList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeEntitySchemasListRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeEntitySchemasListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeEntitySchemasListPathParams.class, baseUrl, "/v1/{parent}/runtimeEntitySchemas", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeEntitySchemasListRequest.class, baseUrl, "/v1/{parent}/runtimeEntitySchemas", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeEntitySchemasListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsConnectionsRuntimeEntitySchemasListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -450,25 +459,26 @@ public class Projects {
     /**
      * Gets the client configuration for the given project and location resource name
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsGetClientsResponse integrationsProjectsLocationsGetClients(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsGetClientsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsGetClientsResponse integrationsProjectsLocationsGetClients(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsGetClientsRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsGetClientsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsGetClientsPathParams.class, baseUrl, "/v1/{parent}/clients", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsGetClientsRequest.class, baseUrl, "/v1/{parent}/clients", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsGetClientsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsGetClientsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -495,27 +505,28 @@ public class Projects {
     /**
      * Creates an auth config record. Fetch corresponding credentials for specific auth types, e.g. access token for OAuth 2.0, JWT token for JWT. Encrypt the auth config with Cloud KMS and store the encrypted credentials in Spanner. Returns the encrypted auth config.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsCreateResponse integrationsProjectsLocationsProductsAuthConfigsCreate(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsCreateResponse integrationsProjectsLocationsProductsAuthConfigsCreate(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsCreatePathParams.class, baseUrl, "/v1/{parent}/authConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest.class, baseUrl, "/v1/{parent}/authConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIntegrationsV1alphaAuthConfigInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -542,25 +553,26 @@ public class Projects {
     /**
      * Lists all auth configs that match the filter. Restrict to auth configs belong to the current client only.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsListResponse integrationsProjectsLocationsProductsAuthConfigsList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsListResponse integrationsProjectsLocationsProductsAuthConfigsList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsListRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsListPathParams.class, baseUrl, "/v1/{parent}/authConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsListRequest.class, baseUrl, "/v1/{parent}/authConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsAuthConfigsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -587,27 +599,28 @@ public class Projects {
     /**
      * Creates a new certificate. The certificate will be registered to the trawler service and will be encrypted using cloud KMS and stored in Spanner Returns the certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesCreateResponse integrationsProjectsLocationsProductsCertificatesCreate(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesCreateResponse integrationsProjectsLocationsProductsCertificatesCreate(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesCreateRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesCreatePathParams.class, baseUrl, "/v1/{parent}/certificates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesCreateRequest.class, baseUrl, "/v1/{parent}/certificates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIntegrationsV1alphaCertificateInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -634,25 +647,26 @@ public class Projects {
     /**
      * List all the certificates that match the filter. Restrict to certificate of current client only.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesListResponse integrationsProjectsLocationsProductsCertificatesList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesListResponse integrationsProjectsLocationsProductsCertificatesList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesListRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesListPathParams.class, baseUrl, "/v1/{parent}/certificates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesListRequest.class, baseUrl, "/v1/{parent}/certificates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCertificatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -679,27 +693,28 @@ public class Projects {
     /**
      * Creates an cloud function project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCloudFunctionsCreateResponse integrationsProjectsLocationsProductsCloudFunctionsCreate(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCloudFunctionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCloudFunctionsCreateResponse integrationsProjectsLocationsProductsCloudFunctionsCreate(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCloudFunctionsCreateRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCloudFunctionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCloudFunctionsCreatePathParams.class, baseUrl, "/v1/{parent}/cloudFunctions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCloudFunctionsCreateRequest.class, baseUrl, "/v1/{parent}/cloudFunctions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIntegrationsV1alphaCreateCloudFunctionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCloudFunctionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsCloudFunctionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -726,27 +741,28 @@ public class Projects {
     /**
      * Executes integrations synchronously by passing the trigger id in the request body. The request is not returned until the requested executions are either fulfilled or experienced an error. If the integration name is not specified (passing `-`), all of the associated integration under the given trigger_id will be executed. Otherwise only the specified integration for the given `trigger_id` is executed. This is helpful for execution the integration from UI.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecuteResponse integrationsProjectsLocationsProductsIntegrationsExecute(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecuteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecuteResponse integrationsProjectsLocationsProductsIntegrationsExecute(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecuteRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecuteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutePathParams.class, baseUrl, "/v1/{name}:execute", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecuteRequest.class, baseUrl, "/v1/{name}:execute", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIntegrationsV1alphaExecuteIntegrationsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecuteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecuteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -773,27 +789,28 @@ public class Projects {
     /**
      * Cancellation of an execution
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsCancelResponse integrationsProjectsLocationsProductsIntegrationsExecutionsCancel(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsCancelResponse integrationsProjectsLocationsProductsIntegrationsExecutionsCancel(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsCancelRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsCancelPathParams.class, baseUrl, "/v1/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsCancelRequest.class, baseUrl, "/v1/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -820,25 +837,26 @@ public class Projects {
     /**
      * Lists the results of all the integration executions. The response includes the same information as the [execution log](https://cloud.google.com/application-integration/docs/viewing-logs) in the Integration UI.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsListResponse integrationsProjectsLocationsProductsIntegrationsExecutionsList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsListResponse integrationsProjectsLocationsProductsIntegrationsExecutionsList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsListPathParams.class, baseUrl, "/v1/{parent}/executions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest.class, baseUrl, "/v1/{parent}/executions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -865,27 +883,28 @@ public class Projects {
     /**
      * * Lifts suspension for advanced suspension task. Fetch corresponding suspension with provided suspension Id, resolve suspension, and set up suspension result for the Suspension Task.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsLiftResponse integrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsLift(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsLiftRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsLiftResponse integrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsLift(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsLiftRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsLiftSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsLiftPathParams.class, baseUrl, "/v1/{name}:lift", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsLiftRequest.class, baseUrl, "/v1/{name}:lift", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIntegrationsV1alphaLiftSuspensionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsLiftQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsLiftRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -912,25 +931,26 @@ public class Projects {
     /**
      * * Lists suspensions associated with a specific execution. Only those with permissions to resolve the relevant suspensions will be able to view them.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListResponse integrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListResponse integrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListPathParams.class, baseUrl, "/v1/{parent}/suspensions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListRequest.class, baseUrl, "/v1/{parent}/suspensions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -957,27 +977,28 @@ public class Projects {
     /**
      * * Resolves (lifts/rejects) any number of suspensions. If the integration is already running, only the status of the suspension is updated. Otherwise, the suspended integration will begin execution again.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsResolveResponse integrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsResolve(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsResolveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsResolveResponse integrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsResolve(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsResolveRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsResolveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsResolvePathParams.class, baseUrl, "/v1/{name}:resolve", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsResolveRequest.class, baseUrl, "/v1/{name}:resolve", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIntegrationsV1alphaResolveSuspensionRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsResolveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsExecutionsSuspensionsResolveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1004,25 +1025,26 @@ public class Projects {
     /**
      * Returns the list of all integrations in the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsListResponse integrationsProjectsLocationsProductsIntegrationsList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsListResponse integrationsProjectsLocationsProductsIntegrationsList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsListRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsListPathParams.class, baseUrl, "/v1/{parent}/integrations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsListRequest.class, baseUrl, "/v1/{parent}/integrations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1049,27 +1071,28 @@ public class Projects {
     /**
      * Schedules an integration for execution by passing the trigger id and the scheduled time in the request body.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsScheduleResponse integrationsProjectsLocationsProductsIntegrationsSchedule(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsScheduleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsScheduleResponse integrationsProjectsLocationsProductsIntegrationsSchedule(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsScheduleRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsScheduleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsSchedulePathParams.class, baseUrl, "/v1/{name}:schedule", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsScheduleRequest.class, baseUrl, "/v1/{name}:schedule", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIntegrationsV1alphaScheduleIntegrationsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsScheduleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsScheduleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1096,27 +1119,28 @@ public class Projects {
     /**
      * Execute the integration in draft state
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsTestResponse integrationsProjectsLocationsProductsIntegrationsTest(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsTestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsTestResponse integrationsProjectsLocationsProductsIntegrationsTest(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsTestRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsTestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsTestPathParams.class, baseUrl, "/v1/{name}:test", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsTestRequest.class, baseUrl, "/v1/{name}:test", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIntegrationsV1alphaTestIntegrationsRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsTestQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsTestRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1143,27 +1167,28 @@ public class Projects {
     /**
      * Create a integration with a draft version in the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsCreateResponse integrationsProjectsLocationsProductsIntegrationsVersionsCreate(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsCreateResponse integrationsProjectsLocationsProductsIntegrationsVersionsCreate(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsCreateRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsCreatePathParams.class, baseUrl, "/v1/{parent}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsCreateRequest.class, baseUrl, "/v1/{parent}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIntegrationsV1alphaIntegrationVersionInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1190,25 +1215,26 @@ public class Projects {
     /**
      * Downloads an integration. Retrieves the `IntegrationVersion` for a given `integration_id` and returns the response as a string.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadResponse integrationsProjectsLocationsProductsIntegrationsVersionsDownload(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadResponse integrationsProjectsLocationsProductsIntegrationsVersionsDownload(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadPathParams.class, baseUrl, "/v1/{name}:download", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadRequest.class, baseUrl, "/v1/{name}:download", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsDownloadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1235,25 +1261,26 @@ public class Projects {
     /**
      * Returns the list of all integration versions in the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsListResponse integrationsProjectsLocationsProductsIntegrationsVersionsList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsListResponse integrationsProjectsLocationsProductsIntegrationsVersionsList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsListRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsListPathParams.class, baseUrl, "/v1/{parent}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsListRequest.class, baseUrl, "/v1/{parent}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1280,27 +1307,28 @@ public class Projects {
     /**
      * This RPC throws an exception if the integration is in ARCHIVED or ACTIVE state. This RPC throws an exception if the version being published is DRAFT, and if the `locked_by` user is not the same as the user performing the Publish. Audit fields updated include last_published_timestamp, last_published_by, last_modified_timestamp, last_modified_by. Any existing lock is on this integration is released.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishResponse integrationsProjectsLocationsProductsIntegrationsVersionsPublish(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishResponse integrationsProjectsLocationsProductsIntegrationsVersionsPublish(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishPathParams.class, baseUrl, "/v1/{name}:publish", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishRequest.class, baseUrl, "/v1/{name}:publish", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsPublishRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1327,27 +1355,28 @@ public class Projects {
     /**
      * Clears the `locked_by` and `locked_at_timestamp`in the DRAFT version of this integration. It then performs the same action as the CreateDraftIntegrationVersion (i.e., copies the DRAFT version of the integration as a SNAPSHOT and then creates a new DRAFT version with the `locked_by` set to the `user_taking_over` and the `locked_at_timestamp` set to the current timestamp). Both the `locked_by` and `user_taking_over` are notified via email about the takeover. This RPC throws an exception if the integration is not in DRAFT status or if the `locked_by` and `locked_at_timestamp` fields are not set.The TakeoverEdit lock is treated the same as an edit of the integration, and hence shares ACLs with edit. Audit fields updated include last_modified_timestamp, last_modified_by.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockResponse integrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLock(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockResponse integrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLock(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockPathParams.class, baseUrl, "/v1/{integrationVersion}:takeoverEditLock", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockRequest.class, baseUrl, "/v1/{integrationVersion}:takeoverEditLock", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsTakeoverEditLockRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1374,27 +1403,28 @@ public class Projects {
     /**
      * Sets the status of the ACTIVE integration to SNAPSHOT with a new tag "PREVIOUSLY_PUBLISHED" after validating it. The "HEAD" and "PUBLISH_REQUESTED" tags do not change. This RPC throws an exception if the version being snapshot is not ACTIVE. Audit fields added include action, action_by, action_timestamp.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUnpublishResponse integrationsProjectsLocationsProductsIntegrationsVersionsUnpublish(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUnpublishRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUnpublishResponse integrationsProjectsLocationsProductsIntegrationsVersionsUnpublish(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUnpublishRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUnpublishSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUnpublishPathParams.class, baseUrl, "/v1/{name}:unpublish", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUnpublishRequest.class, baseUrl, "/v1/{name}:unpublish", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUnpublishQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUnpublishRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1421,27 +1451,28 @@ public class Projects {
     /**
      * Uploads an integration. The content can be a previously downloaded integration. Performs the same function as CreateDraftIntegrationVersion, but accepts input in a string format, which holds the complete representation of the IntegrationVersion content.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadResponse integrationsProjectsLocationsProductsIntegrationsVersionsUpload(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadResponse integrationsProjectsLocationsProductsIntegrationsVersionsUpload(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadPathParams.class, baseUrl, "/v1/{parent}/versions:upload", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadRequest.class, baseUrl, "/v1/{parent}/versions:upload", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIntegrationsV1alphaUploadIntegrationVersionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsProductsIntegrationsVersionsUploadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1468,27 +1499,28 @@ public class Projects {
     /**
      * Creates an sfdc instance record. Store the sfdc instance in Spanner. Returns the sfdc instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesCreateResponse integrationsProjectsLocationsSfdcInstancesCreate(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesCreateResponse integrationsProjectsLocationsSfdcInstancesCreate(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesCreateRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesCreatePathParams.class, baseUrl, "/v1/{parent}/sfdcInstances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesCreateRequest.class, baseUrl, "/v1/{parent}/sfdcInstances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIntegrationsV1alphaSfdcInstanceInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1515,25 +1547,26 @@ public class Projects {
     /**
      * Lists all sfdc instances that match the filter. Restrict to sfdc instances belonging to the current client only.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesListResponse integrationsProjectsLocationsSfdcInstancesList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesListResponse integrationsProjectsLocationsSfdcInstancesList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesListRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesListPathParams.class, baseUrl, "/v1/{parent}/sfdcInstances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesListRequest.class, baseUrl, "/v1/{parent}/sfdcInstances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1560,27 +1593,28 @@ public class Projects {
     /**
      * Creates an sfdc channel record. Store the sfdc channel in Spanner. Returns the sfdc channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsCreateResponse integrationsProjectsLocationsSfdcInstancesSfdcChannelsCreate(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsCreateResponse integrationsProjectsLocationsSfdcInstancesSfdcChannelsCreate(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsCreateRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsCreatePathParams.class, baseUrl, "/v1/{parent}/sfdcChannels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsCreateRequest.class, baseUrl, "/v1/{parent}/sfdcChannels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIntegrationsV1alphaSfdcChannelInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1607,25 +1641,26 @@ public class Projects {
     /**
      * Deletes an sfdc channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteResponse integrationsProjectsLocationsSfdcInstancesSfdcChannelsDelete(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteResponse integrationsProjectsLocationsSfdcInstancesSfdcChannelsDelete(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1652,25 +1687,26 @@ public class Projects {
     /**
      * Gets an sfdc channel. If the channel doesn't exist, Code.NOT_FOUND exception will be thrown.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetResponse integrationsProjectsLocationsSfdcInstancesSfdcChannelsGet(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetResponse integrationsProjectsLocationsSfdcInstancesSfdcChannelsGet(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1697,25 +1733,26 @@ public class Projects {
     /**
      * Lists all sfdc channels that match the filter. Restrict to sfdc channels belonging to the current client only.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListResponse integrationsProjectsLocationsSfdcInstancesSfdcChannelsList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListResponse integrationsProjectsLocationsSfdcInstancesSfdcChannelsList(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListPathParams.class, baseUrl, "/v1/{parent}/sfdcChannels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListRequest.class, baseUrl, "/v1/{parent}/sfdcChannels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1742,27 +1779,28 @@ public class Projects {
     /**
      * Updates an sfdc channel. Updates the sfdc channel in spanner. Returns the sfdc channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsPatchResponse integrationsProjectsLocationsSfdcInstancesSfdcChannelsPatch(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsPatchResponse integrationsProjectsLocationsSfdcInstancesSfdcChannelsPatch(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsPatchRequest request, org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIntegrationsV1alphaSfdcChannelInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

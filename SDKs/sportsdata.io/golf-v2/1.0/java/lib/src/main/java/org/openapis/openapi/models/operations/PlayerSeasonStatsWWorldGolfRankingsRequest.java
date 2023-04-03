@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlayerSeasonStatsWWorldGolfRankingsRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public PlayerSeasonStatsWWorldGolfRankingsFormatEnum format;
+    public PlayerSeasonStatsWWorldGolfRankingsRequest withFormat(PlayerSeasonStatsWWorldGolfRankingsFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public PlayerSeasonStatsWWorldGolfRankingsPathParams pathParams;
-    public PlayerSeasonStatsWWorldGolfRankingsRequest withPathParams(PlayerSeasonStatsWWorldGolfRankingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Year of the season.
+     * &lt;br&gt;Examples: &lt;code&gt;2016&lt;/code&gt;, &lt;code&gt;2017&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
+    public String season;
+    public PlayerSeasonStatsWWorldGolfRankingsRequest withSeason(String season) {
+        this.season = season;
         return this;
     }
     

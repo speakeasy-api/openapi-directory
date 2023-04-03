@@ -36,23 +36,24 @@ public class ApplicationCharge {
      * \u203b\u7121\u6599\u304a\u8a66\u3057\u671f\u9593\u4e2d\u306e\u30b7\u30e7\u30c3\u30d7\u306b\u5bfe\u3057\u3066\u306f\u5f93\u91cf\u8ab2\u91d1\u30c7\u30fc\u30bf\u3092\u4f5c\u6210\u3067\u304d\u307e\u305b\u3093\u3002
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateUsageChargeResponse createUsageCharge(org.openapis.openapi.models.operations.CreateUsageChargeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateUsageChargeResponse createUsageCharge(org.openapis.openapi.models.operations.CreateUsageChargeRequest request, org.openapis.openapi.models.operations.CreateUsageChargeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateUsageChargePathParams.class, baseUrl, "/appstore/v1/recurring_application_charges/{recurringApplicationChargeId}/usage_charges.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateUsageChargeRequest.class, baseUrl, "/appstore/v1/recurring_application_charges/{recurringApplicationChargeId}/usage_charges.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -61,7 +62,7 @@ public class ApplicationCharge {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -94,10 +95,11 @@ public class ApplicationCharge {
      * \u305f\u3060\u3057\u3001\u30a2\u30d7\u30ea\u306e\u57fa\u672c\u6a5f\u80fd\u3068\u3057\u3066\u63d0\u4f9b\u3057\u3066\u3044\u308b\u30b5\u30fc\u30d3\u30b9\u3092\u5229\u7528\u3057\u305f\u91cf\u3084\u305d\u306e\u983b\u5ea6\u306a\u3069\u306b\u4f34\u3063\u3066\u6bce\u6708\u7570\u306a\u3063\u305f\u984d\u306e\u8acb\u6c42\u3092\u884c\u3046\u3088\u3046\u306a\u8ab2\u91d1\u306b\u3064\u3044\u3066\u306f\u3001\u30d7\u30e9\u30f3\u8ab2\u91d1\u306e\u300c\u5f93\u91cf\u306b\u3088\u308b\u8ab2\u91d1\u300d\u306e\u6a5f\u80fd\u3092\u4f7f\u3063\u3066\u8acb\u6c42\u3092\u884c\u3046\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059\u3002
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApplicationChargeResponse postApplicationCharge(org.openapis.openapi.models.operations.PostApplicationChargeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApplicationChargeResponse postApplicationCharge(org.openapis.openapi.models.operations.PostApplicationChargeRequestBody request, org.openapis.openapi.models.operations.PostApplicationChargeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/appstore/v1/application_charges.json");
         
@@ -111,7 +113,7 @@ public class ApplicationCharge {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

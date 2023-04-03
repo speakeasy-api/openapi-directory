@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesGetRequest {
+    /**
+     * The number that identifies the issue.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_number")
+    public Long issueNumber;
+    public IssuesGetRequest withIssueNumber(Long issueNumber) {
+        this.issueNumber = issueNumber;
+        return this;
+    }
     
-    public IssuesGetPathParams pathParams;
-    public IssuesGetRequest withPathParams(IssuesGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssuesGetRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssuesGetRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

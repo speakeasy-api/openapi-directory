@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetdocumentRequest {
-    
-    public GetdocumentPathParams pathParams;
-    public GetdocumentRequest withPathParams(GetdocumentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetdocumentRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetdocumentRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetdocumentHeaders headers;
-    public GetdocumentRequest withHeaders(GetdocumentHeaders headers) {
-        this.headers = headers;
+    /**
+     * Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
+    public String dataEntityName;
+    public GetdocumentRequest withDataEntityName(String dataEntityName) {
+        this.dataEntityName = dataEntityName;
+        return this;
+    }
+    
+    /**
+     * ID of the Document.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetdocumentRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAPISecretRequest {
-    
-    public CreateAPISecretPathParams pathParams;
-    public CreateAPISecretRequest withPathParams(CreateAPISecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The API key to manage secrets for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api_key")
+    public String apiKey;
+    public CreateAPISecretRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateSecretRequest request;
-    public CreateAPISecretRequest withRequest(org.openapis.openapi.models.shared.CreateSecretRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateAPISecretSecurity security;
-    public CreateAPISecretRequest withSecurity(CreateAPISecretSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.CreateSecretRequest createSecretRequest;
+    public CreateAPISecretRequest withCreateSecretRequest(org.openapis.openapi.models.shared.CreateSecretRequest createSecretRequest) {
+        this.createSecretRequest = createSecretRequest;
         return this;
     }
     

@@ -4,13 +4,106 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2StepsJsonRequest {
+    /**
+     * Filter by cadence ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cadence_id")
+    public Long cadenceId;
+    public GetV2StepsJsonRequest withCadenceId(Long cadenceId) {
+        this.cadenceId = cadenceId;
+        return this;
+    }
     
-    public GetV2StepsJsonQueryParams queryParams;
-    public GetV2StepsJsonRequest withQueryParams(GetV2StepsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter by whether a step has due actions
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=has_due_actions")
+    public Boolean hasDueActions;
+    public GetV2StepsJsonRequest withHasDueActions(Boolean hasDueActions) {
+        this.hasDueActions = hasDueActions;
+        return this;
+    }
+    
+    /**
+     * IDs of steps to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
+    public Long[] ids;
+    public GetV2StepsJsonRequest withIds(Long[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    /**
+     * Whether to include total_pages and total_count in the metadata. Defaults to false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
+    public Boolean includePagingCounts;
+    public GetV2StepsJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
+        this.includePagingCounts = includePagingCounts;
+        return this;
+    }
+    
+    /**
+     * Specifies whether the max limit of 10k records should be applied to pagination counts. Affects the total_count and total_pages data
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
+    public Boolean limitPagingCounts;
+    public GetV2StepsJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
+        this.limitPagingCounts = limitPagingCounts;
+        return this;
+    }
+    
+    /**
+     * The current page to fetch results from. Defaults to 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetV2StepsJsonRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many records to show per page in the range [1, 100]. Defaults to 25
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetV2StepsJsonRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Key to sort on, must be one of: created_at, updated_at. Defaults to updated_at
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public String sortBy;
+    public GetV2StepsJsonRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
+    public String sortDirection;
+    public GetV2StepsJsonRequest withSortDirection(String sortDirection) {
+        this.sortDirection = sortDirection;
+        return this;
+    }
+    
+    /**
+     * Filter by step type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public GetV2StepsJsonRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

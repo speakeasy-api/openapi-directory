@@ -34,10 +34,11 @@ public class FactOfTheDay {
     /**
      * Get fact of the day for the given category.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetFactFodResponse getFactFod(org.openapis.openapi.models.operations.GetFactFodRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetFactFodResponse getFactFod(org.openapis.openapi.models.operations.GetFactFodRequest request, org.openapis.openapi.models.operations.GetFactFodSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/fact/fod");
         
@@ -45,14 +46,14 @@ public class FactOfTheDay {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFactFodQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFactFodRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -72,11 +73,10 @@ public class FactOfTheDay {
 
     /**
      * Get the list of supported fact of the day categories.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetFactFodCategoriesResponse getFactFodCategories(org.openapis.openapi.models.operations.GetFactFodCategoriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetFactFodCategoriesResponse getFactFodCategories() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/fact/fod/categories");
         
@@ -85,8 +85,7 @@ public class FactOfTheDay {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

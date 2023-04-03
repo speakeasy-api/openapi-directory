@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSipCredentialListRequest {
-    
-    public DeleteSipCredentialListPathParams pathParams;
-    public DeleteSipCredentialListRequest withPathParams(DeleteSipCredentialListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique id of the Account that is responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public DeleteSipCredentialListRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public DeleteSipCredentialListSecurity security;
-    public DeleteSipCredentialListRequest withSecurity(DeleteSipCredentialListSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteSipCredentialListRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The credential list Sid that uniquely identifies this resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteSipCredentialListRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReservationRequest {
-    
-    public GetReservationPathParams pathParams;
-    public GetReservationRequest withPathParams(GetReservationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the reservation that needs to be fetched
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetReservationRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Populate chargestation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_chargestation")
+    public Boolean includeChargestation;
+    public GetReservationRequest withIncludeChargestation(Boolean includeChargestation) {
+        this.includeChargestation = includeChargestation;
+        return this;
+    }
     
-    public GetReservationQueryParams queryParams;
-    public GetReservationRequest withQueryParams(GetReservationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Populate organization
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_organization")
+    public Boolean includeOrganization;
+    public GetReservationRequest withIncludeOrganization(Boolean includeOrganization) {
+        this.includeOrganization = includeOrganization;
         return this;
     }
     

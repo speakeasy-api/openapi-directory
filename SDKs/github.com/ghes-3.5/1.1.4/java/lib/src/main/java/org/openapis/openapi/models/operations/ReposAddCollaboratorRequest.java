@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposAddCollaboratorRequest {
-    
-    public ReposAddCollaboratorPathParams pathParams;
-    public ReposAddCollaboratorRequest withPathParams(ReposAddCollaboratorPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReposAddCollaboratorRequestBody requestBody;
+    public ReposAddCollaboratorRequest withRequestBody(ReposAddCollaboratorRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReposAddCollaboratorRequestBody request;
-    public ReposAddCollaboratorRequest withRequest(ReposAddCollaboratorRequestBody request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposAddCollaboratorRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposAddCollaboratorRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public ReposAddCollaboratorRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

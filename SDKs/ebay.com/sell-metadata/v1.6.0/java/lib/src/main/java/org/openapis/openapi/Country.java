@@ -32,19 +32,20 @@ public class Country {
     /**
      * This method retrieves all the sales tax jurisdictions for the country that you specify in the &lt;b&gt;countryCode&lt;/b&gt; path parameter. Countries with valid sales tax jurisdictions are Canada and the US.  &lt;br/&gt;&lt;br/&gt;The response from this call tells you the jurisdictions for which a seller can configure tax tables. Although setting up tax tables is optional, you can use the &lt;b&gt;createOrReplaceSalesTax&lt;/b&gt; in the &lt;b&gt;Account API&lt;/b&gt; call to configure the tax tables for the jurisdictions you sell to.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSalesTaxJurisdictionsResponse getSalesTaxJurisdictions(org.openapis.openapi.models.operations.GetSalesTaxJurisdictionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSalesTaxJurisdictionsResponse getSalesTaxJurisdictions(org.openapis.openapi.models.operations.GetSalesTaxJurisdictionsRequest request, org.openapis.openapi.models.operations.GetSalesTaxJurisdictionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSalesTaxJurisdictionsPathParams.class, baseUrl, "/country/{countryCode}/sales_tax_jurisdiction", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSalesTaxJurisdictionsRequest.class, baseUrl, "/country/{countryCode}/sales_tax_jurisdiction", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

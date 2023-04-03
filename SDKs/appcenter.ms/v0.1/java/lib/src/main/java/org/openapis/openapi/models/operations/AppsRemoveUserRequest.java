@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsRemoveUserRequest {
-    
-    public AppsRemoveUserPathParams pathParams;
-    public AppsRemoveUserRequest withPathParams(AppsRemoveUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AppsRemoveUserRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AppsRemoveUserRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public AppsRemoveUserSecurity security;
-    public AppsRemoveUserRequest withSecurity(AppsRemoveUserSecurity security) {
-        this.security = security;
+    /**
+     * The user email of the user to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_email")
+    public String userEmail;
+    public AppsRemoveUserRequest withUserEmail(String userEmail) {
+        this.userEmail = userEmail;
         return this;
     }
     

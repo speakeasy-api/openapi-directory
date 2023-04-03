@@ -7,27 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateImagesFromFilesJsonRequest {
-    
-    public CreateImagesFromFilesJsonPathParams pathParams;
-    public CreateImagesFromFilesJsonRequest withPathParams(CreateImagesFromFilesJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateImagesFromFilesJsonHeaders headers;
-    public CreateImagesFromFilesJsonRequest withHeaders(CreateImagesFromFilesJsonHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The batch of image files to add. Limited to 64 images and 20 tags per batch
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ImageFileCreateBatch request;
-    public CreateImagesFromFilesJsonRequest withRequest(org.openapis.openapi.models.shared.ImageFileCreateBatch request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ImageFileCreateBatch imageFileCreateBatch;
+    public CreateImagesFromFilesJsonRequest withImageFileCreateBatch(org.openapis.openapi.models.shared.ImageFileCreateBatch imageFileCreateBatch) {
+        this.imageFileCreateBatch = imageFileCreateBatch;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public CreateImagesFromFilesJsonRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
+        return this;
+    }
+    
+    /**
+     * The project id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public CreateImagesFromFilesJsonRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

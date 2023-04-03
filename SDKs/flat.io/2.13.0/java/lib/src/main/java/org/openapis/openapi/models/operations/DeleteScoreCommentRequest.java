@@ -4,27 +4,39 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteScoreCommentRequest {
-    
-    public DeleteScoreCommentPathParams pathParams;
-    public DeleteScoreCommentRequest withPathParams(DeleteScoreCommentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of a sheet music comment
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment")
+    public String comment;
+    public DeleteScoreCommentRequest withComment(String comment) {
+        this.comment = comment;
         return this;
     }
     
-    
-    public DeleteScoreCommentQueryParams queryParams;
-    public DeleteScoreCommentRequest withQueryParams(DeleteScoreCommentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
+    public String score;
+    public DeleteScoreCommentRequest withScore(String score) {
+        this.score = score;
         return this;
     }
     
-    
-    public DeleteScoreCommentSecurity security;
-    public DeleteScoreCommentRequest withSecurity(DeleteScoreCommentSecurity security) {
-        this.security = security;
+    /**
+     * This sharing key must be specified to access to a score or collection with a `privacy` mode set to `privateLink` and the current user is not a collaborator of the document.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharingKey")
+    public String sharingKey;
+    public DeleteScoreCommentRequest withSharingKey(String sharingKey) {
+        this.sharingKey = sharingKey;
         return this;
     }
     

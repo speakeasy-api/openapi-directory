@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CancelJobHeaders;
 import org.openapis.openapi.models.operations.CancelJobRequestBody;
 import org.openapis.openapi.models.operations.CancelJobRequest;
 import org.openapis.openapi.models.operations.CancelJobResponse;
@@ -14,27 +13,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CancelJobRequest req = new CancelJobRequest() {{
-                headers = new CancelJobHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
+                requestBody = new CancelJobRequestBody() {{
+                    jobId = "corrupti";
+                    reason = "provident";
                 }};
-                request = new CancelJobRequestBody() {{
-                    jobId = "illum";
-                    reason = "vel";
-                }};
-            }};            
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+            }}            
 
             CancelJobResponse res = sdk.cancelJob(req);
 

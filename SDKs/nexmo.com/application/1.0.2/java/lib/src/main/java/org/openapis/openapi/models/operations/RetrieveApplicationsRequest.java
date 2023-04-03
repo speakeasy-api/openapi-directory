@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveApplicationsRequest {
+    /**
+     * You can find your API key in your [account overview](https://dashboard.nexmo.com/account-overview)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public RetrieveApplicationsRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public RetrieveApplicationsQueryParams queryParams;
-    public RetrieveApplicationsRequest withQueryParams(RetrieveApplicationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * You can find your API secret in your [account overview](https://dashboard.nexmo.com/account-overview)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_secret")
+    public String apiSecret;
+    public RetrieveApplicationsRequest withApiSecret(String apiSecret) {
+        this.apiSecret = apiSecret;
+        return this;
+    }
+    
+    /**
+     * Set the offset from the first page. The default value is `0`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_index")
+    public Long pageIndex;
+    public RetrieveApplicationsRequest withPageIndex(Long pageIndex) {
+        this.pageIndex = pageIndex;
+        return this;
+    }
+    
+    /**
+     * Set the number of items returned on each call to this endpoint. The default is 10 records.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public RetrieveApplicationsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAlbumVideoAlt1Request {
-    
-    public GetAlbumVideoAlt1PathParams pathParams;
-    public GetAlbumVideoAlt1Request withPathParams(GetAlbumVideoAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the album.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=album_id")
+    public Double albumId;
+    public GetAlbumVideoAlt1Request withAlbumId(Double albumId) {
+        this.albumId = albumId;
         return this;
     }
     
+    /**
+     * The password of the album.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=password")
+    public String password;
+    public GetAlbumVideoAlt1Request withPassword(String password) {
+        this.password = password;
+        return this;
+    }
     
-    public GetAlbumVideoAlt1QueryParams queryParams;
-    public GetAlbumVideoAlt1Request withQueryParams(GetAlbumVideoAlt1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public GetAlbumVideoAlt1Request withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

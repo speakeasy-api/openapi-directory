@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KeyRevokeRequest {
-    
-    public KeyRevokePathParams pathParams;
-    public KeyRevokeRequest withPathParams(KeyRevokePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Public Signing Key - Authentiq ID (43 chars)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PK")
+    public String pk;
+    public KeyRevokeRequest withPk(String pk) {
+        this.pk = pk;
         return this;
     }
     
-    
-    public KeyRevokeQueryParams queryParams;
-    public KeyRevokeRequest withQueryParams(KeyRevokeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * revokation secret
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secret")
+    public String secret;
+    public KeyRevokeRequest withSecret(String secret) {
+        this.secret = secret;
         return this;
     }
     

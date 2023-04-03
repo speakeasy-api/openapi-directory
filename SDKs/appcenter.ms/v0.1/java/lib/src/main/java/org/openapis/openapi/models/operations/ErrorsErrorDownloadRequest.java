@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsErrorDownloadRequest {
-    
-    public ErrorsErrorDownloadPathParams pathParams;
-    public ErrorsErrorDownloadRequest withPathParams(ErrorsErrorDownloadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ErrorsErrorDownloadRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public ErrorsErrorDownloadQueryParams queryParams;
-    public ErrorsErrorDownloadRequest withQueryParams(ErrorsErrorDownloadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id of the error group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorGroupId")
+    public String errorGroupId;
+    public ErrorsErrorDownloadRequest withErrorGroupId(String errorGroupId) {
+        this.errorGroupId = errorGroupId;
         return this;
     }
     
+    /**
+     * The id of the error
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorId")
+    public String errorId;
+    public ErrorsErrorDownloadRequest withErrorId(String errorId) {
+        this.errorId = errorId;
+        return this;
+    }
     
-    public ErrorsErrorDownloadSecurity security;
-    public ErrorsErrorDownloadRequest withSecurity(ErrorsErrorDownloadSecurity security) {
-        this.security = security;
+    /**
+     * the format of the crash log
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public ErrorsErrorDownloadFormatEnum format;
+    public ErrorsErrorDownloadRequest withFormat(ErrorsErrorDownloadFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ErrorsErrorDownloadRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

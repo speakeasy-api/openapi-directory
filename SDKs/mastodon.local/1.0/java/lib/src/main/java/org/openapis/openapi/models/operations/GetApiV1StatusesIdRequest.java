@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1StatusesIdRequest {
-    
-    public GetApiV1StatusesIdPathParams pathParams;
-    public GetApiV1StatusesIdRequest withPathParams(GetApiV1StatusesIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetApiV1StatusesIdSecurity security;
-    public GetApiV1StatusesIdRequest withSecurity(GetApiV1StatusesIdSecurity security) {
-        this.security = security;
+    /**
+     * Local ID of a status in the database.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetApiV1StatusesIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

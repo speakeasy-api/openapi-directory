@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebhooksDeleteRequest {
-    
-    public WebhooksDeletePathParams pathParams;
-    public WebhooksDeleteRequest withPathParams(WebhooksDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * JWT Webhook token that represents the unifiedApi and applicationId associated to the event source.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public WebhooksDeleteRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public WebhooksDeleteHeaders headers;
-    public WebhooksDeleteRequest withHeaders(WebhooksDeleteHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public WebhooksDeleteSecurity security;
-    public WebhooksDeleteRequest withSecurity(WebhooksDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public WebhooksDeleteRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
         return this;
     }
     

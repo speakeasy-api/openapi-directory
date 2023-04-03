@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRecordLifecycleActionHeartbeatRequest {
-    
-    public GETRecordLifecycleActionHeartbeatQueryParams queryParams;
-    public GETRecordLifecycleActionHeartbeatRequest withQueryParams(GETRecordLifecycleActionHeartbeatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRecordLifecycleActionHeartbeatActionEnum action;
+    public GETRecordLifecycleActionHeartbeatRequest withAction(GETRecordLifecycleActionHeartbeatActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the Auto Scaling group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
+    public String autoScalingGroupName;
+    public GETRecordLifecycleActionHeartbeatRequest withAutoScalingGroupName(String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        return this;
+    }
     
-    public GETRecordLifecycleActionHeartbeatHeaders headers;
-    public GETRecordLifecycleActionHeartbeatRequest withHeaders(GETRecordLifecycleActionHeartbeatHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the instance.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
+    public String instanceId;
+    public GETRecordLifecycleActionHeartbeatRequest withInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    
+    /**
+     * A token that uniquely identifies a specific lifecycle action associated with an instance. Amazon EC2 Auto Scaling sends this token to the notification target that you specified when you created the lifecycle hook.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LifecycleActionToken")
+    public String lifecycleActionToken;
+    public GETRecordLifecycleActionHeartbeatRequest withLifecycleActionToken(String lifecycleActionToken) {
+        this.lifecycleActionToken = lifecycleActionToken;
+        return this;
+    }
+    
+    /**
+     * The name of the lifecycle hook.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LifecycleHookName")
+    public String lifecycleHookName;
+    public GETRecordLifecycleActionHeartbeatRequest withLifecycleHookName(String lifecycleHookName) {
+        this.lifecycleHookName = lifecycleHookName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRecordLifecycleActionHeartbeatVersionEnum version;
+    public GETRecordLifecycleActionHeartbeatRequest withVersion(GETRecordLifecycleActionHeartbeatVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRecordLifecycleActionHeartbeatRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRecordLifecycleActionHeartbeatRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRecordLifecycleActionHeartbeatRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRecordLifecycleActionHeartbeatRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRecordLifecycleActionHeartbeatRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRecordLifecycleActionHeartbeatRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRecordLifecycleActionHeartbeatRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

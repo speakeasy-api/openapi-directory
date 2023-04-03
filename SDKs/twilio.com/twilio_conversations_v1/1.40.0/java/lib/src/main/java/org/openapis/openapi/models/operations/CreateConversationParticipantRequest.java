@@ -7,38 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateConversationParticipantRequest {
-    
-    public CreateConversationParticipantPathParams pathParams;
-    public CreateConversationParticipantRequest withPathParams(CreateConversationParticipantPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateConversationParticipantHeaders headers;
-    public CreateConversationParticipantRequest withHeaders(CreateConversationParticipantHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this participant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConversationSid")
+    public String conversationSid;
+    public CreateConversationParticipantRequest withConversationSid(String conversationSid) {
+        this.conversationSid = conversationSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateConversationParticipantCreateConversationParticipantRequest request;
-    public CreateConversationParticipantRequest withRequest(CreateConversationParticipantCreateConversationParticipantRequest request) {
-        this.request = request;
+    public CreateConversationParticipantCreateConversationParticipantRequest requestBody;
+    public CreateConversationParticipantRequest withRequestBody(CreateConversationParticipantCreateConversationParticipantRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateConversationParticipantSecurity security;
-    public CreateConversationParticipantRequest withSecurity(CreateConversationParticipantSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateConversationParticipantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.ConversationParticipantEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public CreateConversationParticipantRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.ConversationParticipantEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

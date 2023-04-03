@@ -41,7 +41,7 @@ public class Reward {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateRewardResponse createReward(org.openapis.openapi.models.operations.CreateRewardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateRewardResponse createReward(org.openapis.openapi.models.shared.CreateRewardRequestInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/reward");
         
@@ -95,7 +95,7 @@ public class Reward {
      */
     public org.openapis.openapi.models.operations.FetchRewardResponse fetchReward(org.openapis.openapi.models.operations.FetchRewardRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchRewardPathParams.class, baseUrl, "/reward/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchRewardRequest.class, baseUrl, "/reward/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -148,7 +148,7 @@ public class Reward {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchRewardsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchRewardsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

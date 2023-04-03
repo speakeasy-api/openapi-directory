@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActionRelatedListRequest {
+    /**
+     * Dataset dictionary of the dataset (optional)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dataset")
+    public String dataset;
+    public GetActionRelatedListRequest withDataset(String dataset) {
+        this.dataset = dataset;
+        return this;
+    }
     
-    public GetActionRelatedListQueryParams queryParams;
-    public GetActionRelatedListRequest withQueryParams(GetActionRelatedListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * whether or not to restrict the results to only featured items
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featured")
+    public String featured;
+    public GetActionRelatedListRequest withFeatured(String featured) {
+        this.featured = featured;
+        return this;
+    }
+    
+    /**
+     * id or name of the dataset (optional)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetActionRelatedListRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * The order to sort the related items in
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetActionRelatedListRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * The type of related item to show (optional)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type_filter")
+    public String typeFilter;
+    public GetActionRelatedListRequest withTypeFilter(String typeFilter) {
+        this.typeFilter = typeFilter;
         return this;
     }
     

@@ -40,12 +40,12 @@ public class SwitchPortSchedules {
      */
     public org.openapis.openapi.models.operations.CreateNetworkSwitchPortScheduleResponse createNetworkSwitchPortSchedule(org.openapis.openapi.models.operations.CreateNetworkSwitchPortScheduleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchPortSchedulePathParams.class, baseUrl, "/networks/{networkId}/switch/portSchedules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchPortScheduleRequest.class, baseUrl, "/networks/{networkId}/switch/portSchedules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -85,7 +85,7 @@ public class SwitchPortSchedules {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkSwitchPortScheduleResponse deleteNetworkSwitchPortSchedule(org.openapis.openapi.models.operations.DeleteNetworkSwitchPortScheduleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchPortSchedulePathParams.class, baseUrl, "/networks/{networkId}/switch/portSchedules/{portScheduleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchPortScheduleRequest.class, baseUrl, "/networks/{networkId}/switch/portSchedules/{portScheduleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -119,7 +119,7 @@ public class SwitchPortSchedules {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchPortSchedulesResponse getNetworkSwitchPortSchedules(org.openapis.openapi.models.operations.GetNetworkSwitchPortSchedulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchPortSchedulesPathParams.class, baseUrl, "/networks/{networkId}/switch/portSchedules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchPortSchedulesRequest.class, baseUrl, "/networks/{networkId}/switch/portSchedules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -159,12 +159,12 @@ public class SwitchPortSchedules {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchPortScheduleResponse updateNetworkSwitchPortSchedule(org.openapis.openapi.models.operations.UpdateNetworkSwitchPortScheduleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchPortSchedulePathParams.class, baseUrl, "/networks/{networkId}/switch/portSchedules/{portScheduleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchPortScheduleRequest.class, baseUrl, "/networks/{networkId}/switch/portSchedules/{portScheduleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

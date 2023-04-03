@@ -7,17 +7,59 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTGetAttributesRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccessKeyId")
+    public String awsAccessKeyId;
+    public POSTGetAttributesRequest withAWSAccessKeyId(String awsAccessKeyId) {
+        this.awsAccessKeyId = awsAccessKeyId;
+        return this;
+    }
     
-    public POSTGetAttributesQueryParams queryParams;
-    public POSTGetAttributesRequest withQueryParams(POSTGetAttributesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public POSTGetAttributesActionEnum action;
+    public POSTGetAttributesRequest withAction(POSTGetAttributesActionEnum action) {
+        this.action = action;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public POSTGetAttributesRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public POSTGetAttributesRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Signature")
+    public String signature;
+    public POSTGetAttributesRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureMethod")
+    public String signatureMethod;
+    public POSTGetAttributesRequest withSignatureMethod(String signatureMethod) {
+        this.signatureMethod = signatureMethod;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureVersion")
+    public String signatureVersion;
+    public POSTGetAttributesRequest withSignatureVersion(String signatureVersion) {
+        this.signatureVersion = signatureVersion;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timestamp")
+    public String timestamp;
+    public POSTGetAttributesRequest withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public POSTGetAttributesVersionEnum version;
+    public POSTGetAttributesRequest withVersion(POSTGetAttributesVersionEnum version) {
+        this.version = version;
         return this;
     }
     

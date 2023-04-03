@@ -7,17 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutOrganisationsPartyIdElectronicAddressesAddressIdRequest {
-    
-    public PutOrganisationsPartyIdElectronicAddressesAddressIdPathParams pathParams;
-    public PutOrganisationsPartyIdElectronicAddressesAddressIdRequest withPathParams(PutOrganisationsPartyIdElectronicAddressesAddressIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The address identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=addressId")
+    public String addressId;
+    public PutOrganisationsPartyIdElectronicAddressesAddressIdRequest withAddressId(String addressId) {
+        this.addressId = addressId;
         return this;
     }
     
-    
-    public PutOrganisationsPartyIdElectronicAddressesAddressIdHeaders headers;
-    public PutOrganisationsPartyIdElectronicAddressesAddressIdRequest withHeaders(PutOrganisationsPartyIdElectronicAddressesAddressIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public PutOrganisationsPartyIdElectronicAddressesAddressIdRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
@@ -25,9 +31,19 @@ public class PutOrganisationsPartyIdElectronicAddressesAddressIdRequest {
      * Electronic Address resource
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ElectronicAddressInput request;
-    public PutOrganisationsPartyIdElectronicAddressesAddressIdRequest withRequest(org.openapis.openapi.models.shared.ElectronicAddressInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ElectronicAddressInput electronicAddressInput;
+    public PutOrganisationsPartyIdElectronicAddressesAddressIdRequest withElectronicAddressInput(org.openapis.openapi.models.shared.ElectronicAddressInput electronicAddressInput) {
+        this.electronicAddressInput = electronicAddressInput;
+        return this;
+    }
+    
+    /**
+     * The party identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
+    public String partyId;
+    public PutOrganisationsPartyIdElectronicAddressesAddressIdRequest withPartyId(String partyId) {
+        this.partyId = partyId;
         return this;
     }
     

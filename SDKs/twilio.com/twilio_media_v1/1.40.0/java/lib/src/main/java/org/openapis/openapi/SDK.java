@@ -208,10 +208,14 @@ public class SDK {
 		
 	}
 
-    public org.openapis.openapi.models.operations.CreateMediaProcessorResponse createMediaProcessor(org.openapis.openapi.models.operations.CreateMediaProcessorRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateMediaProcessorResponse createMediaProcessor(org.openapis.openapi.models.operations.CreateMediaProcessorCreateMediaProcessorRequest request, org.openapis.openapi.models.operations.CreateMediaProcessorSecurity security) throws Exception {
+        return this.createMediaProcessor(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreateMediaProcessorResponse createMediaProcessor(org.openapis.openapi.models.operations.CreateMediaProcessorCreateMediaProcessorRequest request, org.openapis.openapi.models.operations.CreateMediaProcessorSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_MEDIA_PROCESSOR_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/MediaProcessors");
@@ -223,7 +227,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -247,10 +251,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CreatePlayerStreamerResponse createPlayerStreamer(org.openapis.openapi.models.operations.CreatePlayerStreamerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreatePlayerStreamerResponse createPlayerStreamer(org.openapis.openapi.models.operations.CreatePlayerStreamerCreatePlayerStreamerRequest request, org.openapis.openapi.models.operations.CreatePlayerStreamerSecurity security) throws Exception {
+        return this.createPlayerStreamer(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreatePlayerStreamerResponse createPlayerStreamer(org.openapis.openapi.models.operations.CreatePlayerStreamerCreatePlayerStreamerRequest request, org.openapis.openapi.models.operations.CreatePlayerStreamerSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_PLAYER_STREAMER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/PlayerStreamers");
@@ -262,7 +270,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -286,22 +294,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CreatePlayerStreamerPlaybackGrantResponse createPlayerStreamerPlaybackGrant(org.openapis.openapi.models.operations.CreatePlayerStreamerPlaybackGrantRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreatePlayerStreamerPlaybackGrantResponse createPlayerStreamerPlaybackGrant(org.openapis.openapi.models.operations.CreatePlayerStreamerPlaybackGrantRequest request, org.openapis.openapi.models.operations.CreatePlayerStreamerPlaybackGrantSecurity security) throws Exception {
+        return this.createPlayerStreamerPlaybackGrant(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreatePlayerStreamerPlaybackGrantResponse createPlayerStreamerPlaybackGrant(org.openapis.openapi.models.operations.CreatePlayerStreamerPlaybackGrantRequest request, org.openapis.openapi.models.operations.CreatePlayerStreamerPlaybackGrantSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_PLAYER_STREAMER_PLAYBACK_GRANT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePlayerStreamerPlaybackGrantPathParams.class, baseUrl, "/v1/PlayerStreamers/{Sid}/PlaybackGrant", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePlayerStreamerPlaybackGrantRequest.class, baseUrl, "/v1/PlayerStreamers/{Sid}/PlaybackGrant", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -328,23 +340,36 @@ public class SDK {
     /**
      * Deletes a MediaRecording resource identified by a SID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteMediaRecordingResponse deleteMediaRecording(org.openapis.openapi.models.operations.DeleteMediaRecordingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteMediaRecordingResponse deleteMediaRecording(org.openapis.openapi.models.operations.DeleteMediaRecordingRequest request, org.openapis.openapi.models.operations.DeleteMediaRecordingSecurity security) throws Exception {
+        return this.deleteMediaRecording(request, security, null);
+    }
+
+    /**
+     * Deletes a MediaRecording resource identified by a SID.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteMediaRecordingResponse deleteMediaRecording(org.openapis.openapi.models.operations.DeleteMediaRecordingRequest request, org.openapis.openapi.models.operations.DeleteMediaRecordingSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_MEDIA_RECORDING_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMediaRecordingPathParams.class, baseUrl, "/v1/MediaRecordings/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMediaRecordingRequest.class, baseUrl, "/v1/MediaRecordings/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -365,23 +390,36 @@ public class SDK {
     /**
      * Returns a single MediaProcessor resource identified by a SID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchMediaProcessorResponse fetchMediaProcessor(org.openapis.openapi.models.operations.FetchMediaProcessorRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchMediaProcessorResponse fetchMediaProcessor(org.openapis.openapi.models.operations.FetchMediaProcessorRequest request, org.openapis.openapi.models.operations.FetchMediaProcessorSecurity security) throws Exception {
+        return this.fetchMediaProcessor(request, security, null);
+    }
+
+    /**
+     * Returns a single MediaProcessor resource identified by a SID.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchMediaProcessorResponse fetchMediaProcessor(org.openapis.openapi.models.operations.FetchMediaProcessorRequest request, org.openapis.openapi.models.operations.FetchMediaProcessorSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_MEDIA_PROCESSOR_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchMediaProcessorPathParams.class, baseUrl, "/v1/MediaProcessors/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchMediaProcessorRequest.class, baseUrl, "/v1/MediaProcessors/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -408,23 +446,36 @@ public class SDK {
     /**
      * Returns a single MediaRecording resource identified by a SID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchMediaRecordingResponse fetchMediaRecording(org.openapis.openapi.models.operations.FetchMediaRecordingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchMediaRecordingResponse fetchMediaRecording(org.openapis.openapi.models.operations.FetchMediaRecordingRequest request, org.openapis.openapi.models.operations.FetchMediaRecordingSecurity security) throws Exception {
+        return this.fetchMediaRecording(request, security, null);
+    }
+
+    /**
+     * Returns a single MediaRecording resource identified by a SID.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchMediaRecordingResponse fetchMediaRecording(org.openapis.openapi.models.operations.FetchMediaRecordingRequest request, org.openapis.openapi.models.operations.FetchMediaRecordingSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_MEDIA_RECORDING_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchMediaRecordingPathParams.class, baseUrl, "/v1/MediaRecordings/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchMediaRecordingRequest.class, baseUrl, "/v1/MediaRecordings/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -451,23 +502,36 @@ public class SDK {
     /**
      * Returns a single PlayerStreamer resource identified by a SID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchPlayerStreamerResponse fetchPlayerStreamer(org.openapis.openapi.models.operations.FetchPlayerStreamerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchPlayerStreamerResponse fetchPlayerStreamer(org.openapis.openapi.models.operations.FetchPlayerStreamerRequest request, org.openapis.openapi.models.operations.FetchPlayerStreamerSecurity security) throws Exception {
+        return this.fetchPlayerStreamer(request, security, null);
+    }
+
+    /**
+     * Returns a single PlayerStreamer resource identified by a SID.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchPlayerStreamerResponse fetchPlayerStreamer(org.openapis.openapi.models.operations.FetchPlayerStreamerRequest request, org.openapis.openapi.models.operations.FetchPlayerStreamerSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_PLAYER_STREAMER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchPlayerStreamerPathParams.class, baseUrl, "/v1/PlayerStreamers/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchPlayerStreamerRequest.class, baseUrl, "/v1/PlayerStreamers/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -494,23 +558,36 @@ public class SDK {
     /**
      * **This method is not enabled.** Returns a single PlaybackGrant resource identified by a SID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchPlayerStreamerPlaybackGrantResponse fetchPlayerStreamerPlaybackGrant(org.openapis.openapi.models.operations.FetchPlayerStreamerPlaybackGrantRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchPlayerStreamerPlaybackGrantResponse fetchPlayerStreamerPlaybackGrant(org.openapis.openapi.models.operations.FetchPlayerStreamerPlaybackGrantRequest request, org.openapis.openapi.models.operations.FetchPlayerStreamerPlaybackGrantSecurity security) throws Exception {
+        return this.fetchPlayerStreamerPlaybackGrant(request, security, null);
+    }
+
+    /**
+     * **This method is not enabled.** Returns a single PlaybackGrant resource identified by a SID.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchPlayerStreamerPlaybackGrantResponse fetchPlayerStreamerPlaybackGrant(org.openapis.openapi.models.operations.FetchPlayerStreamerPlaybackGrantRequest request, org.openapis.openapi.models.operations.FetchPlayerStreamerPlaybackGrantSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_PLAYER_STREAMER_PLAYBACK_GRANT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchPlayerStreamerPlaybackGrantPathParams.class, baseUrl, "/v1/PlayerStreamers/{Sid}/PlaybackGrant", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchPlayerStreamerPlaybackGrantRequest.class, baseUrl, "/v1/PlayerStreamers/{Sid}/PlaybackGrant", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -537,13 +614,26 @@ public class SDK {
     /**
      * Returns a list of MediaProcessors.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListMediaProcessorResponse listMediaProcessor(org.openapis.openapi.models.operations.ListMediaProcessorRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListMediaProcessorResponse listMediaProcessor(org.openapis.openapi.models.operations.ListMediaProcessorRequest request, org.openapis.openapi.models.operations.ListMediaProcessorSecurity security) throws Exception {
+        return this.listMediaProcessor(request, security, null);
+    }
+
+    /**
+     * Returns a list of MediaProcessors.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListMediaProcessorResponse listMediaProcessor(org.openapis.openapi.models.operations.ListMediaProcessorRequest request, org.openapis.openapi.models.operations.ListMediaProcessorSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_MEDIA_PROCESSOR_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/MediaProcessors");
@@ -552,14 +642,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListMediaProcessorQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListMediaProcessorRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -586,13 +676,26 @@ public class SDK {
     /**
      * Returns a list of MediaRecordings.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListMediaRecordingResponse listMediaRecording(org.openapis.openapi.models.operations.ListMediaRecordingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListMediaRecordingResponse listMediaRecording(org.openapis.openapi.models.operations.ListMediaRecordingRequest request, org.openapis.openapi.models.operations.ListMediaRecordingSecurity security) throws Exception {
+        return this.listMediaRecording(request, security, null);
+    }
+
+    /**
+     * Returns a list of MediaRecordings.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListMediaRecordingResponse listMediaRecording(org.openapis.openapi.models.operations.ListMediaRecordingRequest request, org.openapis.openapi.models.operations.ListMediaRecordingSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_MEDIA_RECORDING_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/MediaRecordings");
@@ -601,14 +704,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListMediaRecordingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListMediaRecordingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -635,13 +738,26 @@ public class SDK {
     /**
      * Returns a list of PlayerStreamers.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListPlayerStreamerResponse listPlayerStreamer(org.openapis.openapi.models.operations.ListPlayerStreamerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListPlayerStreamerResponse listPlayerStreamer(org.openapis.openapi.models.operations.ListPlayerStreamerRequest request, org.openapis.openapi.models.operations.ListPlayerStreamerSecurity security) throws Exception {
+        return this.listPlayerStreamer(request, security, null);
+    }
+
+    /**
+     * Returns a list of PlayerStreamers.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListPlayerStreamerResponse listPlayerStreamer(org.openapis.openapi.models.operations.ListPlayerStreamerRequest request, org.openapis.openapi.models.operations.ListPlayerStreamerSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_PLAYER_STREAMER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/PlayerStreamers");
@@ -650,14 +766,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPlayerStreamerQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPlayerStreamerRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -684,25 +800,38 @@ public class SDK {
     /**
      * Updates a MediaProcessor resource identified by a SID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateMediaProcessorResponse updateMediaProcessor(org.openapis.openapi.models.operations.UpdateMediaProcessorRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateMediaProcessorResponse updateMediaProcessor(org.openapis.openapi.models.operations.UpdateMediaProcessorRequest request, org.openapis.openapi.models.operations.UpdateMediaProcessorSecurity security) throws Exception {
+        return this.updateMediaProcessor(request, security, null);
+    }
+
+    /**
+     * Updates a MediaProcessor resource identified by a SID.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateMediaProcessorResponse updateMediaProcessor(org.openapis.openapi.models.operations.UpdateMediaProcessorRequest request, org.openapis.openapi.models.operations.UpdateMediaProcessorSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_MEDIA_PROCESSOR_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateMediaProcessorPathParams.class, baseUrl, "/v1/MediaProcessors/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateMediaProcessorRequest.class, baseUrl, "/v1/MediaProcessors/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -729,25 +858,38 @@ public class SDK {
     /**
      * Updates a PlayerStreamer resource identified by a SID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdatePlayerStreamerResponse updatePlayerStreamer(org.openapis.openapi.models.operations.UpdatePlayerStreamerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdatePlayerStreamerResponse updatePlayerStreamer(org.openapis.openapi.models.operations.UpdatePlayerStreamerRequest request, org.openapis.openapi.models.operations.UpdatePlayerStreamerSecurity security) throws Exception {
+        return this.updatePlayerStreamer(request, security, null);
+    }
+
+    /**
+     * Updates a PlayerStreamer resource identified by a SID.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdatePlayerStreamerResponse updatePlayerStreamer(org.openapis.openapi.models.operations.UpdatePlayerStreamerRequest request, org.openapis.openapi.models.operations.UpdatePlayerStreamerSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_PLAYER_STREAMER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePlayerStreamerPathParams.class, baseUrl, "/v1/PlayerStreamers/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePlayerStreamerRequest.class, baseUrl, "/v1/PlayerStreamers/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

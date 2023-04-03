@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListServiceConversationParticipantRequest {
-    
-    public ListServiceConversationParticipantPathParams pathParams;
-    public ListServiceConversationParticipantRequest withPathParams(ListServiceConversationParticipantPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public ListServiceConversationParticipantRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     
-    
-    public ListServiceConversationParticipantQueryParams queryParams;
-    public ListServiceConversationParticipantRequest withQueryParams(ListServiceConversationParticipantQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for participants.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConversationSid")
+    public String conversationSid;
+    public ListServiceConversationParticipantRequest withConversationSid(String conversationSid) {
+        this.conversationSid = conversationSid;
         return this;
     }
     
-    
-    public ListServiceConversationParticipantSecurity security;
-    public ListServiceConversationParticipantRequest withSecurity(ListServiceConversationParticipantSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListServiceConversationParticipantRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListServiceConversationParticipantRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListServiceConversationParticipantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListServiceConversationParticipantRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

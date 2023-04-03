@@ -4,20 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeCustomVocabularyMetadataRequest {
-    
-    public DescribeCustomVocabularyMetadataPathParams pathParams;
-    public DescribeCustomVocabularyMetadataRequest withPathParams(DescribeCustomVocabularyMetadataPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeCustomVocabularyMetadataRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeCustomVocabularyMetadataRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public DescribeCustomVocabularyMetadataHeaders headers;
-    public DescribeCustomVocabularyMetadataRequest withHeaders(DescribeCustomVocabularyMetadataHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeCustomVocabularyMetadataRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeCustomVocabularyMetadataRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeCustomVocabularyMetadataRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeCustomVocabularyMetadataRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeCustomVocabularyMetadataRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the bot that contains the custom vocabulary.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botId")
+    public String botId;
+    public DescribeCustomVocabularyMetadataRequest withBotId(String botId) {
+        this.botId = botId;
+        return this;
+    }
+    
+    /**
+     * The bot version of the bot to return metadata for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botVersion")
+    public String botVersion;
+    public DescribeCustomVocabularyMetadataRequest withBotVersion(String botVersion) {
+        this.botVersion = botVersion;
+        return this;
+    }
+    
+    /**
+     * The locale to return the custom vocabulary information for. The locale must be &lt;code&gt;en_GB&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=localeId")
+    public String localeId;
+    public DescribeCustomVocabularyMetadataRequest withLocaleId(String localeId) {
+        this.localeId = localeId;
         return this;
     }
     

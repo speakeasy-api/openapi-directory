@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposDeleteDeployKeyRequest {
+    /**
+     * The unique identifier of the key.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key_id")
+    public Long keyId;
+    public ReposDeleteDeployKeyRequest withKeyId(Long keyId) {
+        this.keyId = keyId;
+        return this;
+    }
     
-    public ReposDeleteDeployKeyPathParams pathParams;
-    public ReposDeleteDeployKeyRequest withPathParams(ReposDeleteDeployKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposDeleteDeployKeyRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposDeleteDeployKeyRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

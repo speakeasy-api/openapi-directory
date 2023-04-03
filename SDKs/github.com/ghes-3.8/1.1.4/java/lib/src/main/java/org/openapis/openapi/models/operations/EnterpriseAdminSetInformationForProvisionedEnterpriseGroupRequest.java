@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminSetInformationForProvisionedEnterpriseGroupRequest {
-    
-    public EnterpriseAdminSetInformationForProvisionedEnterpriseGroupPathParams pathParams;
-    public EnterpriseAdminSetInformationForProvisionedEnterpriseGroupRequest withPathParams(EnterpriseAdminSetInformationForProvisionedEnterpriseGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Group group;
+    public EnterpriseAdminSetInformationForProvisionedEnterpriseGroupRequest withGroup(org.openapis.openapi.models.shared.Group group) {
+        this.group = group;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Group request;
-    public EnterpriseAdminSetInformationForProvisionedEnterpriseGroupRequest withRequest(org.openapis.openapi.models.shared.Group request) {
-        this.request = request;
+    /**
+     * A unique identifier of the SCIM group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scim_group_id")
+    public String scimGroupId;
+    public EnterpriseAdminSetInformationForProvisionedEnterpriseGroupRequest withScimGroupId(String scimGroupId) {
+        this.scimGroupId = scimGroupId;
         return this;
     }
     

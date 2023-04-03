@@ -48,7 +48,7 @@ public class Neosentry {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrieveSentryRiskDataQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrieveSentryRiskDataRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -89,7 +89,7 @@ public class Neosentry {
      */
     public org.openapis.openapi.models.operations.RetrieveSentryRiskDataByIdResponse retrieveSentryRiskDataById(org.openapis.openapi.models.operations.RetrieveSentryRiskDataByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveSentryRiskDataByIdPathParams.class, baseUrl, "/rest/v1/neo/sentry/{asteroid_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveSentryRiskDataByIdRequest.class, baseUrl, "/rest/v1/neo/sentry/{asteroid_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkNetflowRequest {
-    
-    public GetNetworkNetflowPathParams pathParams;
-    public GetNetworkNetflowRequest withPathParams(GetNetworkNetflowPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkNetflowRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

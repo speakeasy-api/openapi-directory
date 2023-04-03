@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListInteractionChannelInviteRequest {
-    
-    public ListInteractionChannelInvitePathParams pathParams;
-    public ListInteractionChannelInviteRequest withPathParams(ListInteractionChannelInvitePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Channel SID for this Participant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public ListInteractionChannelInviteRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
         return this;
     }
     
-    
-    public ListInteractionChannelInviteQueryParams queryParams;
-    public ListInteractionChannelInviteRequest withQueryParams(ListInteractionChannelInviteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Interaction SID for this Channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=InteractionSid")
+    public String interactionSid;
+    public ListInteractionChannelInviteRequest withInteractionSid(String interactionSid) {
+        this.interactionSid = interactionSid;
         return this;
     }
     
-    
-    public ListInteractionChannelInviteSecurity security;
-    public ListInteractionChannelInviteRequest withSecurity(ListInteractionChannelInviteSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListInteractionChannelInviteRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListInteractionChannelInviteRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListInteractionChannelInviteRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListInteractionChannelInviteRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

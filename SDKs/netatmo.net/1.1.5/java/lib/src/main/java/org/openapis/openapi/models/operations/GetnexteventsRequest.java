@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetnexteventsRequest {
-    
-    public GetnexteventsQueryParams queryParams;
-    public GetnexteventsRequest withQueryParams(GetnexteventsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your request will retrieve events occured before this one
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event_id")
+    public String eventId;
+    public GetnexteventsRequest withEventId(String eventId) {
+        this.eventId = eventId;
         return this;
     }
     
+    /**
+     * ID of the Home you're interested in
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=home_id")
+    public String homeId;
+    public GetnexteventsRequest withHomeId(String homeId) {
+        this.homeId = homeId;
+        return this;
+    }
     
-    public GetnexteventsSecurity security;
-    public GetnexteventsRequest withSecurity(GetnexteventsSecurity security) {
-        this.security = security;
+    /**
+     * Number of events to retrieve. Default is 30.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Long size;
+    public GetnexteventsRequest withSize(Long size) {
+        this.size = size;
         return this;
     }
     

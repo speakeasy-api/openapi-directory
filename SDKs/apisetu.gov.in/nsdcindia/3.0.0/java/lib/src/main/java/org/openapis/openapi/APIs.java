@@ -34,10 +34,11 @@ public class APIs {
      * Executive Skill Enhancement Certificate
      * API to verify Executive Skill Enhancement Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EscerResponse escer(org.openapis.openapi.models.operations.EscerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EscerResponse escer(org.openapis.openapi.models.operations.EscerRequestBody request, org.openapis.openapi.models.operations.EscerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/escer/certificate");
         
@@ -48,7 +49,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,10 +127,11 @@ public class APIs {
      * Skill Certificate
      * API to verify Skill Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SkcerResponse skcer(org.openapis.openapi.models.operations.SkcerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SkcerResponse skcer(org.openapis.openapi.models.operations.SkcerRequestBody request, org.openapis.openapi.models.operations.SkcerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/skcer/certificate");
         
@@ -140,7 +142,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

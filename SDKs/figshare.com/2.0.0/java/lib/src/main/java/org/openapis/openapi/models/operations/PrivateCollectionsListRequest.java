@@ -4,20 +4,63 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateCollectionsListRequest {
-    
-    public PrivateCollectionsListQueryParams queryParams;
-    public PrivateCollectionsListRequest withQueryParams(PrivateCollectionsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of results included on a page. Used for pagination with query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public PrivateCollectionsListRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Where to start the listing(the offset of the first result). Used for pagination with limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public PrivateCollectionsListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
     
-    public PrivateCollectionsListSecurity security;
-    public PrivateCollectionsListRequest withSecurity(PrivateCollectionsListSecurity security) {
-        this.security = security;
+    /**
+     * The field by which to order. Default varies by endpoint/resource.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public PrivateCollectionsListOrderEnum order;
+    public PrivateCollectionsListRequest withOrder(PrivateCollectionsListOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_direction")
+    public PrivateCollectionsListOrderDirectionEnum orderDirection;
+    public PrivateCollectionsListRequest withOrderDirection(PrivateCollectionsListOrderDirectionEnum orderDirection) {
+        this.orderDirection = orderDirection;
+        return this;
+    }
+    
+    /**
+     * Page number. Used for pagination with page_size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public PrivateCollectionsListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results included on a page. Used for pagination with page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public PrivateCollectionsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

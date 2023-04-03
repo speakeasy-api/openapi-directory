@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteApiV1MediasIdRequest {
-    
-    public DeleteApiV1MediasIdPathParams pathParams;
-    public DeleteApiV1MediasIdRequest withPathParams(DeleteApiV1MediasIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteApiV1MediasIdSecurity security;
-    public DeleteApiV1MediasIdRequest withSecurity(DeleteApiV1MediasIdSecurity security) {
-        this.security = security;
+    /**
+     * id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteApiV1MediasIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

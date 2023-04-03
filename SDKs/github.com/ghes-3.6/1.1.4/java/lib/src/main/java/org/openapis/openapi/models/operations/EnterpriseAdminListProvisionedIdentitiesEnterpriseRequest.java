@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminListProvisionedIdentitiesEnterpriseRequest {
+    /**
+     * Used for pagination: the number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Integer count;
+    public EnterpriseAdminListProvisionedIdentitiesEnterpriseRequest withCount(Integer count) {
+        this.count = count;
+        return this;
+    }
     
-    public EnterpriseAdminListProvisionedIdentitiesEnterpriseQueryParams queryParams;
-    public EnterpriseAdminListProvisionedIdentitiesEnterpriseRequest withQueryParams(EnterpriseAdminListProvisionedIdentitiesEnterpriseQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Excludes the specified attribute from being returned in the results. Using this parameter can speed up response time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludedAttributes")
+    public String excludedAttributes;
+    public EnterpriseAdminListProvisionedIdentitiesEnterpriseRequest withExcludedAttributes(String excludedAttributes) {
+        this.excludedAttributes = excludedAttributes;
+        return this;
+    }
+    
+    /**
+     * If specified, only results that match the specified filter will be returned. Multiple filters are not supported. Possible filters are `userName`, `externalId`, `id`, and `displayName`. For example, `?filter="externalId eq '9138790-10932-109120392-12321'"`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public EnterpriseAdminListProvisionedIdentitiesEnterpriseRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * Used for pagination: the starting index of the first result to return when paginating through values.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
+    public Integer startIndex;
+    public EnterpriseAdminListProvisionedIdentitiesEnterpriseRequest withStartIndex(Integer startIndex) {
+        this.startIndex = startIndex;
         return this;
     }
     

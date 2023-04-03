@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNodeCommentRequest {
-    
-    public UpdateNodeCommentPathParams pathParams;
-    public UpdateNodeCommentRequest withPathParams(UpdateNodeCommentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateNodeCommentHeaders headers;
-    public UpdateNodeCommentRequest withHeaders(UpdateNodeCommentHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ChangeNodeCommentRequest request;
-    public UpdateNodeCommentRequest withRequest(org.openapis.openapi.models.shared.ChangeNodeCommentRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ChangeNodeCommentRequest changeNodeCommentRequest;
+    public UpdateNodeCommentRequest withChangeNodeCommentRequest(org.openapis.openapi.models.shared.ChangeNodeCommentRequest changeNodeCommentRequest) {
+        this.changeNodeCommentRequest = changeNodeCommentRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UpdateNodeCommentRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public UpdateNodeCommentXSdsDateFormatEnum xSdsDateFormat;
+    public UpdateNodeCommentRequest withXSdsDateFormat(UpdateNodeCommentXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * Comment ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
+    public Long commentId;
+    public UpdateNodeCommentRequest withCommentId(Long commentId) {
+        this.commentId = commentId;
         return this;
     }
     

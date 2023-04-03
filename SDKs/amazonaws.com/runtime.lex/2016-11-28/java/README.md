@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.DeleteSessionPathParams;
-import org.openapis.openapi.models.operations.DeleteSessionHeaders;
 import org.openapis.openapi.models.operations.DeleteSessionRequest;
 import org.openapis.openapi.models.operations.DeleteSessionResponse;
 
@@ -27,28 +25,22 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             DeleteSessionRequest req = new DeleteSessionRequest() {{
-                pathParams = new DeleteSessionPathParams() {{
-                    botAlias = "corrupti";
-                    botName = "provident";
-                    userId = "distinctio";
-                }};
-                headers = new DeleteSessionHeaders() {{
-                    xAmzAlgorithm = "quibusdam";
-                    xAmzContentSha256 = "unde";
-                    xAmzCredential = "nulla";
-                    xAmzDate = "corrupti";
-                    xAmzSecurityToken = "illum";
-                    xAmzSignature = "vel";
-                    xAmzSignedHeaders = "error";
-                }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "provident";
+                xAmzCredential = "distinctio";
+                xAmzDate = "quibusdam";
+                xAmzSecurityToken = "unde";
+                xAmzSignature = "nulla";
+                xAmzSignedHeaders = "corrupti";
+                botAlias = "illum";
+                botName = "vel";
+                userId = "error";
+            }}            
 
             DeleteSessionResponse res = sdk.deleteSession(req);
 
@@ -62,7 +54,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

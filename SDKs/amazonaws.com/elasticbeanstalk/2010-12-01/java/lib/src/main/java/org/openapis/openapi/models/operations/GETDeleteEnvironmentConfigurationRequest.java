@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteEnvironmentConfigurationRequest {
-    
-    public GETDeleteEnvironmentConfigurationQueryParams queryParams;
-    public GETDeleteEnvironmentConfigurationRequest withQueryParams(GETDeleteEnvironmentConfigurationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteEnvironmentConfigurationActionEnum action;
+    public GETDeleteEnvironmentConfigurationRequest withAction(GETDeleteEnvironmentConfigurationActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the application the environment is associated with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplicationName")
+    public String applicationName;
+    public GETDeleteEnvironmentConfigurationRequest withApplicationName(String applicationName) {
+        this.applicationName = applicationName;
+        return this;
+    }
     
-    public GETDeleteEnvironmentConfigurationHeaders headers;
-    public GETDeleteEnvironmentConfigurationRequest withHeaders(GETDeleteEnvironmentConfigurationHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the environment to delete the draft configuration from.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentName")
+    public String environmentName;
+    public GETDeleteEnvironmentConfigurationRequest withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteEnvironmentConfigurationVersionEnum version;
+    public GETDeleteEnvironmentConfigurationRequest withVersion(GETDeleteEnvironmentConfigurationVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteEnvironmentConfigurationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteEnvironmentConfigurationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteEnvironmentConfigurationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteEnvironmentConfigurationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteEnvironmentConfigurationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteEnvironmentConfigurationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteEnvironmentConfigurationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

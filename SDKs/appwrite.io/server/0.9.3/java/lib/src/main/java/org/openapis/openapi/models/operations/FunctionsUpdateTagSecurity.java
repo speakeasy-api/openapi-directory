@@ -7,16 +7,16 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FunctionsUpdateTagSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeKey key;
-    public FunctionsUpdateTagSecurity withKey(org.openapis.openapi.models.shared.SchemeKey key) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-Key")
+    public String key;
+    public FunctionsUpdateTagSecurity withKey(String key) {
         this.key = key;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeProject project;
-    public FunctionsUpdateTagSecurity withProject(org.openapis.openapi.models.shared.SchemeProject project) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-Project")
+    public String project;
+    public FunctionsUpdateTagSecurity withProject(String project) {
         this.project = project;
         return this;
     }

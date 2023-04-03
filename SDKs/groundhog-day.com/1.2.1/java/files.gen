@@ -32,14 +32,12 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GroundhogPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GroundhogRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Groundhog400ApplicationJSONError.java
 lib/src/main/java/org/openapis/openapi/models/operations/Groundhog400ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/Groundhog200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GroundhogResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GroundhogsIsGroundhogEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GroundhogsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GroundhogsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Groundhogs200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GroundhogsResponse.java
@@ -52,7 +50,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/Root200ApplicationJSONL
 lib/src/main/java/org/openapis/openapi/models/operations/Root200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/RootResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/SpecResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PredictionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PredictionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Predictions400ApplicationJSONError.java
 lib/src/main/java/org/openapis/openapi/models/operations/Predictions400ApplicationJSON.java

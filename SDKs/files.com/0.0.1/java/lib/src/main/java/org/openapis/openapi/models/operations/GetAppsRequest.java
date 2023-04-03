@@ -4,13 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAppsRequest {
+    /**
+     * Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public GetAppsRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public GetAppsQueryParams queryParams;
-    public GetAppsRequest withQueryParams(GetAppsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If set, return records where the specified field is equal to the supplied value. Valid fields are `name` and `app_type`. Valid field combinations are `[ name, app_type ]` and `[ app_type, name ]`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public java.util.Map<String, Object> filter;
+    public GetAppsRequest withFilter(java.util.Map<String, Object> filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is greater than the supplied value. Valid fields are `name` and `app_type`. Valid field combinations are `[ name, app_type ]` and `[ app_type, name ]`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gt")
+    public java.util.Map<String, Object> filterGt;
+    public GetAppsRequest withFilterGt(java.util.Map<String, Object> filterGt) {
+        this.filterGt = filterGt;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `name` and `app_type`. Valid field combinations are `[ name, app_type ]` and `[ app_type, name ]`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gteq")
+    public java.util.Map<String, Object> filterGteq;
+    public GetAppsRequest withFilterGteq(java.util.Map<String, Object> filterGteq) {
+        this.filterGteq = filterGteq;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is equal to the supplied value. Valid fields are `name` and `app_type`. Valid field combinations are `[ name, app_type ]` and `[ app_type, name ]`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_like")
+    public java.util.Map<String, Object> filterLike;
+    public GetAppsRequest withFilterLike(java.util.Map<String, Object> filterLike) {
+        this.filterLike = filterLike;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is less than the supplied value. Valid fields are `name` and `app_type`. Valid field combinations are `[ name, app_type ]` and `[ app_type, name ]`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lt")
+    public java.util.Map<String, Object> filterLt;
+    public GetAppsRequest withFilterLt(java.util.Map<String, Object> filterLt) {
+        this.filterLt = filterLt;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `name` and `app_type`. Valid field combinations are `[ name, app_type ]` and `[ app_type, name ]`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lteq")
+    public java.util.Map<String, Object> filterLteq;
+    public GetAppsRequest withFilterLteq(java.util.Map<String, Object> filterLteq) {
+        this.filterLteq = filterLteq;
+        return this;
+    }
+    
+    /**
+     * Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetAppsRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[name]=desc`). Valid fields are `name` and `app_type`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public java.util.Map<String, Object> sortBy;
+    public GetAppsRequest withSortBy(java.util.Map<String, Object> sortBy) {
+        this.sortBy = sortBy;
         return this;
     }
     

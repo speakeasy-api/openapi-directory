@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.EmailValidationPathParams;
 import org.openapis.openapi.models.operations.EmailValidationRequest;
 import org.openapis.openapi.models.operations.EmailValidationResponse;
 
@@ -28,11 +27,9 @@ public class Application {
                 .build();
 
             EmailValidationRequest req = new EmailValidationRequest() {{
-                pathParams = new EmailValidationPathParams() {{
-                    userEmailHere = "example@example.com";
-                    yourApiKeyHere = "asd24#sdfs322#";
-                }};
-            }};            
+                userEmailHere = "example@example.com";
+                yourApiKeyHere = "asd24#sdfs322#";
+            }}            
 
             EmailValidationResponse res = sdk.emailValidation.emailValidation(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### emailValidation

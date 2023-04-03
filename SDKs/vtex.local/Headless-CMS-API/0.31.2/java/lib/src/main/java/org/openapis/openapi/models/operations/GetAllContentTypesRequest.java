@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllContentTypesRequest {
-    
-    public GetAllContentTypesPathParams pathParams;
-    public GetAllContentTypesRequest withPathParams(GetAllContentTypesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Builder ID specified in the settings of the CMS app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=builderId")
+    public String builderId;
+    public GetAllContentTypesRequest withBuilderId(String builderId) {
+        this.builderId = builderId;
         return this;
     }
     

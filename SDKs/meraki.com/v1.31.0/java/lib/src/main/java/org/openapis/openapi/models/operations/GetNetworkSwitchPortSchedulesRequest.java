@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkSwitchPortSchedulesRequest {
-    
-    public GetNetworkSwitchPortSchedulesPathParams pathParams;
-    public GetNetworkSwitchPortSchedulesRequest withPathParams(GetNetworkSwitchPortSchedulesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkSwitchPortSchedulesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

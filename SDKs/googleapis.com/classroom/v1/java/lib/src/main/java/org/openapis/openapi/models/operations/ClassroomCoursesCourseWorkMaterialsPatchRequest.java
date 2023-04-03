@@ -7,31 +7,150 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClassroomCoursesCourseWorkMaterialsPatchRequest {
-    
-    public ClassroomCoursesCourseWorkMaterialsPatchPathParams pathParams;
-    public ClassroomCoursesCourseWorkMaterialsPatchRequest withPathParams(ClassroomCoursesCourseWorkMaterialsPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ClassroomCoursesCourseWorkMaterialsPatchQueryParams queryParams;
-    public ClassroomCoursesCourseWorkMaterialsPatchRequest withQueryParams(ClassroomCoursesCourseWorkMaterialsPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ClassroomCoursesCourseWorkMaterialsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CourseWorkMaterial request;
-    public ClassroomCoursesCourseWorkMaterialsPatchRequest withRequest(org.openapis.openapi.models.shared.CourseWorkMaterial request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CourseWorkMaterial courseWorkMaterial;
+    public ClassroomCoursesCourseWorkMaterialsPatchRequest withCourseWorkMaterial(org.openapis.openapi.models.shared.CourseWorkMaterial courseWorkMaterial) {
+        this.courseWorkMaterial = courseWorkMaterial;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ClassroomCoursesCourseWorkMaterialsPatchRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public ClassroomCoursesCourseWorkMaterialsPatchSecurity security;
-    public ClassroomCoursesCourseWorkMaterialsPatchRequest withSecurity(ClassroomCoursesCourseWorkMaterialsPatchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ClassroomCoursesCourseWorkMaterialsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ClassroomCoursesCourseWorkMaterialsPatchRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Identifier of the course. This identifier can be either the Classroom-assigned identifier or an alias.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=courseId")
+    public String courseId;
+    public ClassroomCoursesCourseWorkMaterialsPatchRequest withCourseId(String courseId) {
+        this.courseId = courseId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ClassroomCoursesCourseWorkMaterialsPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Identifier of the course work material.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ClassroomCoursesCourseWorkMaterialsPatchRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ClassroomCoursesCourseWorkMaterialsPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ClassroomCoursesCourseWorkMaterialsPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ClassroomCoursesCourseWorkMaterialsPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ClassroomCoursesCourseWorkMaterialsPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Mask that identifies which fields on the course work material to update. This field is required to do an update. The update fails if invalid fields are specified. If a field supports empty values, it can be cleared by specifying it in the update mask and not in the course work material object. If a field that does not support empty values is included in the update mask and not set in the course work material object, an `INVALID_ARGUMENT` error is returned. The following fields may be specified by teachers: * `title` * `description` * `state` * `scheduled_time` * `topic_id`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
+    public String updateMask;
+    public ClassroomCoursesCourseWorkMaterialsPatchRequest withUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ClassroomCoursesCourseWorkMaterialsPatchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ClassroomCoursesCourseWorkMaterialsPatchRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRequest {
-    
-    public UpdatePathParams pathParams;
-    public UpdateRequest withPathParams(UpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated all view's information.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ViewDTO request;
-    public UpdateRequest withRequest(org.openapis.openapi.models.shared.ViewDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ViewDTO viewDTO;
+    public UpdateRequest withViewDTO(org.openapis.openapi.models.shared.ViewDTO viewDTO) {
+        this.viewDTO = viewDTO;
+        return this;
+    }
+    
+    /**
+     * view's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
+    public Long viewId;
+    public UpdateRequest withViewId(Long viewId) {
+        this.viewId = viewId;
         return this;
     }
     

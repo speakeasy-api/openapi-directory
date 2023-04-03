@@ -4,27 +4,67 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspaceSlugReportsRequest {
-    
-    public GetWorkspaceSlugReportsPathParams pathParams;
-    public GetWorkspaceSlugReportsRequest withPathParams(GetWorkspaceSlugReportsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=activity_type")
+    public String activityType;
+    public GetWorkspaceSlugReportsRequest withActivityType(String activityType) {
+        this.activityType = activityType;
         return this;
     }
     
-    
-    public GetWorkspaceSlugReportsQueryParams queryParams;
-    public GetWorkspaceSlugReportsRequest withQueryParams(GetWorkspaceSlugReportsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter activities before this date. Format: YYYY-MM-DD.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public String endDate;
+    public GetWorkspaceSlugReportsRequest withEndDate(String endDate) {
+        this.endDate = endDate;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=properties")
+    public String properties;
+    public GetWorkspaceSlugReportsRequest withProperties(String properties) {
+        this.properties = properties;
+        return this;
+    }
     
-    public GetWorkspaceSlugReportsSecurity security;
-    public GetWorkspaceSlugReportsRequest withSecurity(GetWorkspaceSlugReportsSecurity security) {
-        this.security = security;
+    /**
+     * Relative timeframes. Format: this_&lt;integer&gt;_&lt;period&gt;, with period in [days, weeks, months, years]. For example, this_30_days.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relative")
+    public String relative;
+    public GetWorkspaceSlugReportsRequest withRelative(String relative) {
+        this.relative = relative;
+        return this;
+    }
+    
+    /**
+     * Filter activities after this date. Format: YYYY-MM-DD.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public String startDate;
+    public GetWorkspaceSlugReportsRequest withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * Deprecated in favor of the activity_type parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public GetWorkspaceSlugReportsRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
+    public String workspaceSlug;
+    public GetWorkspaceSlugReportsRequest withWorkspaceSlug(String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
         return this;
     }
     

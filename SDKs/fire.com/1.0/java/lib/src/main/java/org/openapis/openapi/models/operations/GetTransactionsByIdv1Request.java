@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionsByIdv1Request {
-    
-    public GetTransactionsByIdv1PathParams pathParams;
-    public GetTransactionsByIdv1Request withPathParams(GetTransactionsByIdv1PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ican")
+    public Long ican;
+    public GetTransactionsByIdv1Request withIcan(Long ican) {
+        this.ican = ican;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetTransactionsByIdv1Request withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetTransactionsByIdv1QueryParams queryParams;
-    public GetTransactionsByIdv1Request withQueryParams(GetTransactionsByIdv1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetTransactionsByIdv1Request withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

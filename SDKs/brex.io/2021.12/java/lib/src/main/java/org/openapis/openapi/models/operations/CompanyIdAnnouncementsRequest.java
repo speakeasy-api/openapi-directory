@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompanyIdAnnouncementsRequest {
-    
-    public CompanyIdAnnouncementsPathParams pathParams;
-    public CompanyIdAnnouncementsRequest withPathParams(CompanyIdAnnouncementsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If this parameter is set to false, you will only receive ids, and no additional data about announcements and no hits to the metric will be counted. (and potentially minimizing your costs)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=data")
+    public Boolean data;
+    public CompanyIdAnnouncementsRequest withData(Boolean data) {
+        this.data = data;
         return this;
     }
     
-    
-    public CompanyIdAnnouncementsQueryParams queryParams;
-    public CompanyIdAnnouncementsRequest withQueryParams(CompanyIdAnnouncementsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * company hex ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public CompanyIdAnnouncementsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * limit of announcements in response (default 10)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public CompanyIdAnnouncementsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public CompanyIdAnnouncementsSecurity security;
-    public CompanyIdAnnouncementsRequest withSecurity(CompanyIdAnnouncementsSecurity security) {
-        this.security = security;
+    /**
+     * to paginate through results (default 0)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public CompanyIdAnnouncementsRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

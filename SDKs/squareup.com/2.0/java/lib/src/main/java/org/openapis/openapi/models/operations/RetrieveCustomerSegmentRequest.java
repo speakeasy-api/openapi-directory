@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveCustomerSegmentRequest {
-    
-    public RetrieveCustomerSegmentPathParams pathParams;
-    public RetrieveCustomerSegmentRequest withPathParams(RetrieveCustomerSegmentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetrieveCustomerSegmentSecurity security;
-    public RetrieveCustomerSegmentRequest withSecurity(RetrieveCustomerSegmentSecurity security) {
-        this.security = security;
+    /**
+     * The Square-issued ID of the customer segment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=segment_id")
+    public String segmentId;
+    public RetrieveCustomerSegmentRequest withSegmentId(String segmentId) {
+        this.segmentId = segmentId;
         return this;
     }
     

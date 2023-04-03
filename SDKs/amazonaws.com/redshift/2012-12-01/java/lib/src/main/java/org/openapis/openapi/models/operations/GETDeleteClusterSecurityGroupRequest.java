@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteClusterSecurityGroupRequest {
-    
-    public GETDeleteClusterSecurityGroupQueryParams queryParams;
-    public GETDeleteClusterSecurityGroupRequest withQueryParams(GETDeleteClusterSecurityGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteClusterSecurityGroupActionEnum action;
+    public GETDeleteClusterSecurityGroupRequest withAction(GETDeleteClusterSecurityGroupActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the cluster security group to be deleted.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterSecurityGroupName")
+    public String clusterSecurityGroupName;
+    public GETDeleteClusterSecurityGroupRequest withClusterSecurityGroupName(String clusterSecurityGroupName) {
+        this.clusterSecurityGroupName = clusterSecurityGroupName;
+        return this;
+    }
     
-    public GETDeleteClusterSecurityGroupHeaders headers;
-    public GETDeleteClusterSecurityGroupRequest withHeaders(GETDeleteClusterSecurityGroupHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteClusterSecurityGroupVersionEnum version;
+    public GETDeleteClusterSecurityGroupRequest withVersion(GETDeleteClusterSecurityGroupVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteClusterSecurityGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteClusterSecurityGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteClusterSecurityGroupRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteClusterSecurityGroupRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteClusterSecurityGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteClusterSecurityGroupRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteClusterSecurityGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

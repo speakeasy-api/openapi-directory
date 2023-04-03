@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposReplaceAllTopicsRequest {
-    
-    public ReposReplaceAllTopicsPathParams pathParams;
-    public ReposReplaceAllTopicsRequest withPathParams(ReposReplaceAllTopicsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReposReplaceAllTopicsRequestBody requestBody;
+    public ReposReplaceAllTopicsRequest withRequestBody(ReposReplaceAllTopicsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReposReplaceAllTopicsRequestBody request;
-    public ReposReplaceAllTopicsRequest withRequest(ReposReplaceAllTopicsRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposReplaceAllTopicsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposReplaceAllTopicsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

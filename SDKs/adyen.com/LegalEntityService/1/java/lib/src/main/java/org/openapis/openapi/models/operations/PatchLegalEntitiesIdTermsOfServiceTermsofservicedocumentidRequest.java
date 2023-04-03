@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidRequest {
-    
-    public PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidPathParams pathParams;
-    public PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidRequest withPathParams(PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AcceptTermsOfServiceRequest request;
-    public PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidRequest withRequest(org.openapis.openapi.models.shared.AcceptTermsOfServiceRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AcceptTermsOfServiceRequest acceptTermsOfServiceRequest;
+    public PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidRequest withAcceptTermsOfServiceRequest(org.openapis.openapi.models.shared.AcceptTermsOfServiceRequest acceptTermsOfServiceRequest) {
+        this.acceptTermsOfServiceRequest = acceptTermsOfServiceRequest;
         return this;
     }
     
+    /**
+     * The unique identifier of the legal entity.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidSecurity security;
-    public PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidRequest withSecurity(PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the Terms of Service document.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=termsofservicedocumentid")
+    public String termsofservicedocumentid;
+    public PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidRequest withTermsofservicedocumentid(String termsofservicedocumentid) {
+        this.termsofservicedocumentid = termsofservicedocumentid;
         return this;
     }
     

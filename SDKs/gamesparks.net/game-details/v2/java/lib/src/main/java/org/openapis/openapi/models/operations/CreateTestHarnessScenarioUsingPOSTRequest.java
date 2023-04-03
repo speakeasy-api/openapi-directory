@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTestHarnessScenarioUsingPOSTRequest {
-    
-    public CreateTestHarnessScenarioUsingPOSTPathParams pathParams;
-    public CreateTestHarnessScenarioUsingPOSTRequest withPathParams(CreateTestHarnessScenarioUsingPOSTPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * testHarnessScenarioDTO
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TestHarnessScenarioModel request;
-    public CreateTestHarnessScenarioUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.TestHarnessScenarioModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TestHarnessScenarioModel testHarnessScenarioModel;
+    public CreateTestHarnessScenarioUsingPOSTRequest withTestHarnessScenarioModel(org.openapis.openapi.models.shared.TestHarnessScenarioModel testHarnessScenarioModel) {
+        this.testHarnessScenarioModel = testHarnessScenarioModel;
+        return this;
+    }
+    
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public CreateTestHarnessScenarioUsingPOSTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

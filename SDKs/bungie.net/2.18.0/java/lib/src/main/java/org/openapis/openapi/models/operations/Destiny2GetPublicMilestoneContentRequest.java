@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetPublicMilestoneContentRequest {
-    
-    public Destiny2GetPublicMilestoneContentPathParams pathParams;
-    public Destiny2GetPublicMilestoneContentRequest withPathParams(Destiny2GetPublicMilestoneContentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The identifier for the milestone to be returned.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=milestoneHash")
+    public Long milestoneHash;
+    public Destiny2GetPublicMilestoneContentRequest withMilestoneHash(Long milestoneHash) {
+        this.milestoneHash = milestoneHash;
         return this;
     }
     

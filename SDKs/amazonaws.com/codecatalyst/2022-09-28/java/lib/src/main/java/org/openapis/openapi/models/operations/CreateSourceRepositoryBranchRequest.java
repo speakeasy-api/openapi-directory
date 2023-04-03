@@ -7,17 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSourceRepositoryBranchRequest {
-    
-    public CreateSourceRepositoryBranchPathParams pathParams;
-    public CreateSourceRepositoryBranchRequest withPathParams(CreateSourceRepositoryBranchPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateSourceRepositoryBranchRequestBody requestBody;
+    public CreateSourceRepositoryBranchRequest withRequestBody(CreateSourceRepositoryBranchRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateSourceRepositoryBranchRequestBody request;
-    public CreateSourceRepositoryBranchRequest withRequest(CreateSourceRepositoryBranchRequestBody request) {
-        this.request = request;
+    /**
+     * The name for the branch you're creating.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public CreateSourceRepositoryBranchRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The name of the project in the space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectName")
+    public String projectName;
+    public CreateSourceRepositoryBranchRequest withProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    
+    /**
+     * The name of the repository where you want to create a branch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sourceRepositoryName")
+    public String sourceRepositoryName;
+    public CreateSourceRepositoryBranchRequest withSourceRepositoryName(String sourceRepositoryName) {
+        this.sourceRepositoryName = sourceRepositoryName;
+        return this;
+    }
+    
+    /**
+     * The name of the space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceName")
+    public String spaceName;
+    public CreateSourceRepositoryBranchRequest withSpaceName(String spaceName) {
+        this.spaceName = spaceName;
         return this;
     }
     

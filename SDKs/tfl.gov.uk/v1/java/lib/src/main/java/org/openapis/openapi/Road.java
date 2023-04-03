@@ -46,7 +46,7 @@ public class Road {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RoadDisruptedStreetsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RoadDisruptedStreetsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -100,13 +100,13 @@ public class Road {
      */
     public org.openapis.openapi.models.operations.RoadDisruptionResponse roadDisruption(org.openapis.openapi.models.operations.RoadDisruptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RoadDisruptionPathParams.class, baseUrl, "/Road/{ids}/Disruption", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RoadDisruptionRequest.class, baseUrl, "/Road/{ids}/Disruption", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RoadDisruptionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RoadDisruptionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -166,13 +166,13 @@ public class Road {
      */
     public org.openapis.openapi.models.operations.RoadDisruptionByIdResponse roadDisruptionById(org.openapis.openapi.models.operations.RoadDisruptionByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RoadDisruptionByIdPathParams.class, baseUrl, "/Road/all/Disruption/{disruptionIds}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RoadDisruptionByIdRequest.class, baseUrl, "/Road/all/Disruption/{disruptionIds}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RoadDisruptionByIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RoadDisruptionByIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -391,13 +391,13 @@ public class Road {
      */
     public org.openapis.openapi.models.operations.RoadStatusResponse roadStatus(org.openapis.openapi.models.operations.RoadStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RoadStatusPathParams.class, baseUrl, "/Road/{ids}/Status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RoadStatusRequest.class, baseUrl, "/Road/{ids}/Status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RoadStatusQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RoadStatusRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -451,7 +451,7 @@ public class Road {
      */
     public org.openapis.openapi.models.operations.GetRoadIdsResponse getRoadIds(org.openapis.openapi.models.operations.GetRoadIdsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRoadIdsPathParams.class, baseUrl, "/Road/{ids}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRoadIdsRequest.class, baseUrl, "/Road/{ids}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

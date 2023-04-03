@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePublicKeysIdRequest {
-    
-    public DeletePublicKeysIdPathParams pathParams;
-    public DeletePublicKeysIdRequest withPathParams(DeletePublicKeysIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Public Key ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public DeletePublicKeysIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

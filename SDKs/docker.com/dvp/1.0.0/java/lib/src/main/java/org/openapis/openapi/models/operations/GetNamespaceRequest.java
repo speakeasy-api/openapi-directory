@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamespaceRequest {
-    
-    public GetNamespacePathParams pathParams;
-    public GetNamespaceRequest withPathParams(GetNamespacePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Namespace to fetch data for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
+    public String namespace;
+    public GetNamespaceRequest withNamespace(String namespace) {
+        this.namespace = namespace;
         return this;
     }
     

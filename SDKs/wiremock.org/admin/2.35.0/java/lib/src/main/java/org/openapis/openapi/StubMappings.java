@@ -74,7 +74,7 @@ public class StubMappings {
      */
     public org.openapis.openapi.models.operations.DeleteAdminMappingsStubMappingIdResponse deleteAdminMappingsStubMappingId(org.openapis.openapi.models.operations.DeleteAdminMappingsStubMappingIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAdminMappingsStubMappingIdPathParams.class, baseUrl, "/__admin/mappings/{stubMappingId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAdminMappingsStubMappingIdRequest.class, baseUrl, "/__admin/mappings/{stubMappingId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -112,7 +112,7 @@ public class StubMappings {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAdminMappingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAdminMappingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -150,7 +150,7 @@ public class StubMappings {
      */
     public org.openapis.openapi.models.operations.GetAdminMappingsStubMappingIdResponse getAdminMappingsStubMappingId(org.openapis.openapi.models.operations.GetAdminMappingsStubMappingIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAdminMappingsStubMappingIdPathParams.class, baseUrl, "/__admin/mappings/{stubMappingId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAdminMappingsStubMappingIdRequest.class, baseUrl, "/__admin/mappings/{stubMappingId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -188,7 +188,7 @@ public class StubMappings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAdminMappingsResponse postAdminMappings(org.openapis.openapi.models.operations.PostAdminMappingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAdminMappingsResponse postAdminMappings(org.openapis.openapi.models.operations.PostAdminMappingsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/__admin/mappings");
         
@@ -228,7 +228,7 @@ public class StubMappings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAdminMappingsFindByMetadataResponse postAdminMappingsFindByMetadata(org.openapis.openapi.models.operations.PostAdminMappingsFindByMetadataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAdminMappingsFindByMetadataResponse postAdminMappingsFindByMetadata(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/__admin/mappings/find-by-metadata");
         
@@ -303,7 +303,7 @@ public class StubMappings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAdminMappingsRemoveByMetadataResponse postAdminMappingsRemoveByMetadata(org.openapis.openapi.models.operations.PostAdminMappingsRemoveByMetadataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAdminMappingsRemoveByMetadataResponse postAdminMappingsRemoveByMetadata(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/__admin/mappings/remove-by-metadata");
         
@@ -403,12 +403,12 @@ public class StubMappings {
      */
     public org.openapis.openapi.models.operations.PutAdminMappingsStubMappingIdResponse putAdminMappingsStubMappingId(org.openapis.openapi.models.operations.PutAdminMappingsStubMappingIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutAdminMappingsStubMappingIdPathParams.class, baseUrl, "/__admin/mappings/{stubMappingId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutAdminMappingsStubMappingIdRequest.class, baseUrl, "/__admin/mappings/{stubMappingId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRateLimitRequest {
-    
-    public ListRateLimitPathParams pathParams;
-    public ListRateLimitRequest withPathParams(ListRateLimitPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListRateLimitRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListRateLimitQueryParams queryParams;
-    public ListRateLimitRequest withQueryParams(ListRateLimitQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListRateLimitRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public ListRateLimitSecurity security;
-    public ListRateLimitRequest withSecurity(ListRateLimitSecurity security) {
-        this.security = security;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListRateLimitRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     
-    
-    public String serverURL;
-    public ListRateLimitRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public ListRateLimitRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

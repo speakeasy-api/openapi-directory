@@ -39,7 +39,7 @@ public class MyInfo {
      */
     public org.openapis.openapi.models.operations.GetAutomaticInvitationListResponse getAutomaticInvitationList(org.openapis.openapi.models.operations.GetAutomaticInvitationListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAutomaticInvitationListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/automaticInvitations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAutomaticInvitationListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/automaticInvitations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -158,7 +158,7 @@ public class MyInfo {
      */
     public org.openapis.openapi.models.operations.GetTeamTemplateDetailResponse getTeamTemplateDetail(org.openapis.openapi.models.operations.GetTeamTemplateDetailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamTemplateDetailPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/teamTemplates/{team_template_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamTemplateDetailRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/teamTemplates/{team_template_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -277,7 +277,7 @@ public class MyInfo {
      */
     public org.openapis.openapi.models.operations.GetTeamTemplateListResponse getTeamTemplateList(org.openapis.openapi.models.operations.GetTeamTemplateListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamTemplateListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/teamTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamTemplateListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/teamTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -396,12 +396,12 @@ public class MyInfo {
      */
     public org.openapis.openapi.models.operations.UploadProfileImageResponse uploadProfileImage(org.openapis.openapi.models.operations.UploadProfileImageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadProfileImagePathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/profileImage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadProfileImageRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/profileImage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

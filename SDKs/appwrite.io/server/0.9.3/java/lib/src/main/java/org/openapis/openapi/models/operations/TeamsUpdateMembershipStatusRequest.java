@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsUpdateMembershipStatusRequest {
-    
-    public TeamsUpdateMembershipStatusPathParams pathParams;
-    public TeamsUpdateMembershipStatusRequest withPathParams(TeamsUpdateMembershipStatusPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsUpdateMembershipStatusRequestBody request;
-    public TeamsUpdateMembershipStatusRequest withRequest(TeamsUpdateMembershipStatusRequestBody request) {
-        this.request = request;
+    public TeamsUpdateMembershipStatusRequestBody requestBody;
+    public TeamsUpdateMembershipStatusRequest withRequestBody(TeamsUpdateMembershipStatusRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Membership ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
+    public String membershipId;
+    public TeamsUpdateMembershipStatusRequest withMembershipId(String membershipId) {
+        this.membershipId = membershipId;
+        return this;
+    }
     
-    public TeamsUpdateMembershipStatusSecurity security;
-    public TeamsUpdateMembershipStatusRequest withSecurity(TeamsUpdateMembershipStatusSecurity security) {
-        this.security = security;
+    /**
+     * Team unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teamId")
+    public String teamId;
+    public TeamsUpdateMembershipStatusRequest withTeamId(String teamId) {
+        this.teamId = teamId;
         return this;
     }
     

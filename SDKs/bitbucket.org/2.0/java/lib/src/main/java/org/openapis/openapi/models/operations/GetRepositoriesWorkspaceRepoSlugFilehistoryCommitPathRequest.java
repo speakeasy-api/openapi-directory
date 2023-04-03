@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest withPathParams(GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The commit's SHA1.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
+    public String commit;
+    public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest withCommit(String commit) {
+        this.commit = commit;
         return this;
     }
     
-    
-    public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathQueryParams queryParams;
-    public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest withQueryParams(GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Path to the file.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest withPath(String path) {
+        this.path = path;
         return this;
     }
     
+    /**
+     * Query string to narrow down the response as per
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
     
-    public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathSecurity security;
-    public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest withSecurity(GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathSecurity security) {
-        this.security = security;
+    /**
+     * When `true`, Bitbucket will follow the history of the file across
+     * renames (this is the default behavior). This can be turned off by
+     * specifying `false`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=renames")
+    public String renames;
+    public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest withRenames(String renames) {
+        this.renames = renames;
+        return this;
+    }
+    
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * Name of a response property sort the result by as per
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#sorting-query-results).
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

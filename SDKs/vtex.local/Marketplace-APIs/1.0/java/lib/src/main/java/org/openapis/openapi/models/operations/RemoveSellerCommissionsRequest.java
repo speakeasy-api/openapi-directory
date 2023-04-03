@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveSellerCommissionsRequest {
-    
-    public RemoveSellerCommissionsPathParams pathParams;
-    public RemoveSellerCommissionsRequest withPathParams(RemoveSellerCommissionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public RemoveSellerCommissionsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public RemoveSellerCommissionsQueryParams queryParams;
-    public RemoveSellerCommissionsRequest withQueryParams(RemoveSellerCommissionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public RemoveSellerCommissionsRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Name of the VTEX account that belongs to the marketplace. All data extracted, and changes added will be posted into this account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public RemoveSellerCommissionsRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
     
-    public RemoveSellerCommissionsHeaders headers;
-    public RemoveSellerCommissionsRequest withHeaders(RemoveSellerCommissionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID of the category in which the comission was applied
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=categoryId")
+    public String categoryId;
+    public RemoveSellerCommissionsRequest withCategoryId(String categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    
+    /**
+     * Environment to use. Used as part of the URL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
+    public String environment;
+    public RemoveSellerCommissionsRequest withEnvironment(String environment) {
+        this.environment = environment;
+        return this;
+    }
+    
+    /**
+     * A string that identifies the seller in the marketplace. This ID must be created by the marketplace.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
+    public String sellerId;
+    public RemoveSellerCommissionsRequest withSellerId(String sellerId) {
+        this.sellerId = sellerId;
         return this;
     }
     

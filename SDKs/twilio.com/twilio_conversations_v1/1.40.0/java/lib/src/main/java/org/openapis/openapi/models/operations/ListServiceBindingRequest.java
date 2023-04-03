@@ -4,34 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListServiceBindingRequest {
-    
-    public ListServiceBindingPathParams pathParams;
-    public ListServiceBindingRequest withPathParams(ListServiceBindingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The push technology used by the Binding resources to read.  Can be: `apn`, `gcm`, or `fcm`.  See [push notification configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more info.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BindingType")
+    public org.openapis.openapi.models.shared.ServiceBindingEnumBindingTypeEnum[] bindingType;
+    public ListServiceBindingRequest withBindingType(org.openapis.openapi.models.shared.ServiceBindingEnumBindingTypeEnum[] bindingType) {
+        this.bindingType = bindingType;
         return this;
     }
     
-    
-    public ListServiceBindingQueryParams queryParams;
-    public ListServiceBindingRequest withQueryParams(ListServiceBindingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Binding resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public ListServiceBindingRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     
-    
-    public ListServiceBindingSecurity security;
-    public ListServiceBindingRequest withSecurity(ListServiceBindingSecurity security) {
-        this.security = security;
+    /**
+     * The identity of a [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource) this binding belongs to. See [access tokens](https://www.twilio.com/docs/conversations/create-tokens) for more details.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Identity")
+    public String[] identity;
+    public ListServiceBindingRequest withIdentity(String[] identity) {
+        this.identity = identity;
         return this;
     }
     
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListServiceBindingRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public String serverURL;
-    public ListServiceBindingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListServiceBindingRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListServiceBindingRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

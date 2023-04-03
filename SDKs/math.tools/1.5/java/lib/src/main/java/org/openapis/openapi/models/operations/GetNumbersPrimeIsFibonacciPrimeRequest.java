@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersPrimeIsFibonacciPrimeRequest {
-    
-    public GetNumbersPrimeIsFibonacciPrimeQueryParams queryParams;
-    public GetNumbersPrimeIsFibonacciPrimeRequest withQueryParams(GetNumbersPrimeIsFibonacciPrimeQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetNumbersPrimeIsFibonacciPrimeSecurity security;
-    public GetNumbersPrimeIsFibonacciPrimeRequest withSecurity(GetNumbersPrimeIsFibonacciPrimeSecurity security) {
-        this.security = security;
+    /**
+     * Number to check
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public Long number;
+    public GetNumbersPrimeIsFibonacciPrimeRequest withNumber(Long number) {
+        this.number = number;
         return this;
     }
     

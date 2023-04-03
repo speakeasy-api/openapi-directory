@@ -4,20 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BookingPastbookingRequest {
-    
-    public BookingPastbookingQueryParams queryParams;
-    public BookingPastbookingRequest withQueryParams(BookingPastbookingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public BookingPastbookingRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
+    /**
+     * **email address** by which to search for past bookings
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public BookingPastbookingRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
     
-    public BookingPastbookingHeaders headers;
-    public BookingPastbookingRequest withHeaders(BookingPastbookingHeaders headers) {
-        this.headers = headers;
+    /**
+     * Search for a booking with this **unique booking-reference number**. See [Booking references](#section/Key-concepts/Booking-references) for more information.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=itemId")
+    public String itemId;
+    public BookingPastbookingRequest withItemId(String itemId) {
+        this.itemId = itemId;
+        return this;
+    }
+    
+    /**
+     * **specifier** of past booking type (use *one* of: `itemId` (booking reference) *and* `'voucherKey'` *or* `'email'`)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=voucherKey")
+    public String voucherKey;
+    public BookingPastbookingRequest withVoucherKey(String voucherKey) {
+        this.voucherKey = voucherKey;
         return this;
     }
     

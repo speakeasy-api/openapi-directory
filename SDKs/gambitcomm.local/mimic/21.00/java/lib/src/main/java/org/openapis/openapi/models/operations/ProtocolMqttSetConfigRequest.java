@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttSetConfigRequest {
+    /**
+     * Agent to set the MQTT configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolMqttSetConfigRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolMqttSetConfigPathParams pathParams;
-    public ProtocolMqttSetConfigRequest withPathParams(ProtocolMqttSetConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Parameter to set the MQTT configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=argument")
+    public String argument;
+    public ProtocolMqttSetConfigRequest withArgument(String argument) {
+        this.argument = argument;
+        return this;
+    }
+    
+    /**
+     * Value to set the MQTT configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=value")
+    public String value;
+    public ProtocolMqttSetConfigRequest withValue(String value) {
+        this.value = value;
         return this;
     }
     

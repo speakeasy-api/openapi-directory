@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBlobRequest {
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public GetBlobRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public GetBlobPathParams pathParams;
-    public GetBlobRequest withPathParams(GetBlobPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public GetBlobRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * sha of the commit
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sha")
+    public String sha;
+    public GetBlobRequest withSha(String sha) {
+        this.sha = sha;
         return this;
     }
     

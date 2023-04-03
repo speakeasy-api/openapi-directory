@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSshGetConfigRequest {
-    
-    public ProtocolSshGetConfigPathParams pathParams;
-    public ProtocolSshGetConfigRequest withPathParams(ProtocolSshGetConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show the SSH configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSshGetConfigRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

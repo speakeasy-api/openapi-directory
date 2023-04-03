@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetErrorCodesRequest {
-    
-    public GetErrorCodesQueryParams queryParams;
-    public GetErrorCodesRequest withQueryParams(GetErrorCodesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Idioma de la respuesta
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public GetErrorCodesLangEnum lang;
+    public GetErrorCodesRequest withLang(GetErrorCodesLangEnum lang) {
+        this.lang = lang;
         return this;
     }
     

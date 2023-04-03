@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetJurisdictionRequest {
-    
-    public GetJurisdictionQueryParams queryParams;
-    public GetJurisdictionRequest withQueryParams(GetJurisdictionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The format of the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetJurisdictionFormatEnum format;
+    public GetJurisdictionRequest withFormat(GetJurisdictionFormatEnum format) {
+        this.format = format;
         return this;
     }
     

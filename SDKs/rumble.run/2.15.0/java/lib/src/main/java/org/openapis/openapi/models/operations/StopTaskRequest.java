@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopTaskRequest {
-    
-    public StopTaskPathParams pathParams;
-    public StopTaskRequest withPathParams(StopTaskPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public StopTaskSecurity security;
-    public StopTaskRequest withSecurity(StopTaskSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the task to stop
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=task_id")
+    public String taskId;
+    public StopTaskRequest withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

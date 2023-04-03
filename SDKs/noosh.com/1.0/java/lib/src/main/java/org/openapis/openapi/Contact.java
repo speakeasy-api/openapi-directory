@@ -38,7 +38,7 @@ public class Contact {
      */
     public org.openapis.openapi.models.operations.GetBillingRecipientsResponse getBillingRecipients(org.openapis.openapi.models.operations.GetBillingRecipientsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBillingRecipientsPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/billingRecipients", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBillingRecipientsRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/billingRecipients", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -157,7 +157,7 @@ public class Contact {
      */
     public org.openapis.openapi.models.operations.GetContactListResponse getContactList(org.openapis.openapi.models.operations.GetContactListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContactListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/contacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContactListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/contacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -276,7 +276,7 @@ public class Contact {
      */
     public org.openapis.openapi.models.operations.GetContactUserInfoResponse getContactUserInfo(org.openapis.openapi.models.operations.GetContactUserInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContactUserInfoPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/contacts/{user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContactUserInfoRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/contacts/{user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

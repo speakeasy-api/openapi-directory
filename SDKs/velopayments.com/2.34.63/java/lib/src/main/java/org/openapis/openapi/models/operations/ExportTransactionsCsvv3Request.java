@@ -4,13 +4,39 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportTransactionsCsvv3Request {
+    /**
+     * End date, inclusive. Format is YYYY-MM-DD
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public LocalDate endDate;
+    public ExportTransactionsCsvv3Request withEndDate(LocalDate endDate) {
+        this.endDate = endDate;
+        return this;
+    }
     
-    public ExportTransactionsCsvv3QueryParams queryParams;
-    public ExportTransactionsCsvv3Request withQueryParams(ExportTransactionsCsvv3QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Payor ID for whom you wish to run the report.
+     * For a Payor requesting the report, this could be their exact Payor, or it could be a child/descendant Payor.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payorId")
+    public String payorId;
+    public ExportTransactionsCsvv3Request withPayorId(String payorId) {
+        this.payorId = payorId;
+        return this;
+    }
+    
+    /**
+     * Start date, inclusive. Format is YYYY-MM-DD
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public LocalDate startDate;
+    public ExportTransactionsCsvv3Request withStartDate(LocalDate startDate) {
+        this.startDate = startDate;
         return this;
     }
     

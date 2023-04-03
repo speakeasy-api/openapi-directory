@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateFieldTypeRequest {
-    
-    public UpdateFieldTypePathParams pathParams;
-    public UpdateFieldTypeRequest withPathParams(UpdateFieldTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public UpdateFieldTypeRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateFieldTypeUpdateFieldTypeRequest request;
-    public UpdateFieldTypeRequest withRequest(UpdateFieldTypeUpdateFieldTypeRequest request) {
-        this.request = request;
+    public UpdateFieldTypeUpdateFieldTypeRequest requestBody;
+    public UpdateFieldTypeRequest withRequestBody(UpdateFieldTypeUpdateFieldTypeRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateFieldTypeSecurity security;
-    public UpdateFieldTypeRequest withSecurity(UpdateFieldTypeSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateFieldTypeRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the FieldType resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateFieldTypeRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

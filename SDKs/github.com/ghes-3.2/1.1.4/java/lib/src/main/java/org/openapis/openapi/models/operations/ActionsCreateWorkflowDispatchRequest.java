@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsCreateWorkflowDispatchRequest {
-    
-    public ActionsCreateWorkflowDispatchPathParams pathParams;
-    public ActionsCreateWorkflowDispatchRequest withPathParams(ActionsCreateWorkflowDispatchPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsCreateWorkflowDispatchRequestBody requestBody;
+    public ActionsCreateWorkflowDispatchRequest withRequestBody(ActionsCreateWorkflowDispatchRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsCreateWorkflowDispatchRequestBody request;
-    public ActionsCreateWorkflowDispatchRequest withRequest(ActionsCreateWorkflowDispatchRequestBody request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsCreateWorkflowDispatchRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsCreateWorkflowDispatchRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The ID of the workflow. You can also pass the workflow file name as a string.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workflow_id")
+    public Object workflowId;
+    public ActionsCreateWorkflowDispatchRequest withWorkflowId(Object workflowId) {
+        this.workflowId = workflowId;
         return this;
     }
     

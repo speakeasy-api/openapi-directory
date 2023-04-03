@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVehicleChargestateRequest {
-    
-    public GetVehicleChargestatePathParams pathParams;
-    public GetVehicleChargestateRequest withPathParams(GetVehicleChargestatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetVehicleChargestateSecurity security;
-    public GetVehicleChargestateRequest withSecurity(GetVehicleChargestateSecurity security) {
-        this.security = security;
+    /**
+     * ID of the Vehicle
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vehicleId")
+    public String vehicleId;
+    public GetVehicleChargestateRequest withVehicleId(String vehicleId) {
+        this.vehicleId = vehicleId;
         return this;
     }
     

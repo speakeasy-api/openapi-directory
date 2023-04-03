@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSftpHostKeysIdRequest {
-    
-    public GetSftpHostKeysIdPathParams pathParams;
-    public GetSftpHostKeysIdRequest withPathParams(GetSftpHostKeysIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Sftp Host Key ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetSftpHostKeysIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

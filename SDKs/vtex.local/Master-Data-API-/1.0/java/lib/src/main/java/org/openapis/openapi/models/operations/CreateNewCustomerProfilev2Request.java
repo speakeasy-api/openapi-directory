@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateNewCustomerProfilev2Request {
-    
-    public CreateNewCustomerProfilev2QueryParams queryParams;
-    public CreateNewCustomerProfilev2Request withQueryParams(CreateNewCustomerProfilev2QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CreateNewCustomerProfilev2Request withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CreateNewCustomerProfilev2Request withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public CreateNewCustomerProfilev2Headers headers;
-    public CreateNewCustomerProfilev2Request withHeaders(CreateNewCustomerProfilev2Headers headers) {
-        this.headers = headers;
+    /**
+     * Name of the schema the document to be created needs to be compliant with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_schema")
+    public String schema;
+    public CreateNewCustomerProfilev2Request withSchema(String schema) {
+        this.schema = schema;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateUpdateProfileRequests request;
-    public CreateNewCustomerProfilev2Request withRequest(org.openapis.openapi.models.shared.CreateUpdateProfileRequests request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateUpdateProfileRequests createUpdateProfileRequests;
+    public CreateNewCustomerProfilev2Request withCreateUpdateProfileRequests(org.openapis.openapi.models.shared.CreateUpdateProfileRequests createUpdateProfileRequests) {
+        this.createUpdateProfileRequests = createUpdateProfileRequests;
         return this;
     }
     

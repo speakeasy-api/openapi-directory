@@ -4,20 +4,222 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LatestGetV2LatestLocationIdGetRequest {
-    
-    public LatestGetV2LatestLocationIdGetPathParams pathParams;
-    public LatestGetV2LatestLocationIdGetRequest withPathParams(LatestGetV2LatestLocationIdGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     *         Limit results by a certain city or cities.
+     *         (ex. ?city=Chicago or ?city=Chicago&amp;city=Boston)
+     *         
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
+    public String[] city;
+    public LatestGetV2LatestLocationIdGetRequest withCity(String[] city) {
+        this.city = city;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=coordinates")
+    public String coordinates;
+    public LatestGetV2LatestLocationIdGetRequest withCoordinates(String coordinates) {
+        this.coordinates = coordinates;
+        return this;
+    }
     
-    public LatestGetV2LatestLocationIdGetQueryParams queryParams;
-    public LatestGetV2LatestLocationIdGetRequest withQueryParams(LatestGetV2LatestLocationIdGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     *         Limit results by a certain country using two letter country code.
+     *         (ex. ?country=US or ?country=US&amp;country=MX)
+     *         
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String[] country;
+    public LatestGetV2LatestLocationIdGetRequest withCountry(String[] country) {
+        this.country = country;
+        return this;
+    }
+    
+    /**
+     *         Limit results by a certain country using two letter country code.
+     *         (ex. /US)
+     *         
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country_id")
+    public String countryId;
+    public LatestGetV2LatestLocationIdGetRequest withCountryId(String countryId) {
+        this.countryId = countryId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dumpRaw")
+    public Boolean dumpRaw;
+    public LatestGetV2LatestLocationIdGetRequest withDumpRaw(Boolean dumpRaw) {
+        this.dumpRaw = dumpRaw;
+        return this;
+    }
+    
+    /**
+     * Source entity type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity")
+    public org.openapis.openapi.models.shared.EntityTypesEnum entity;
+    public LatestGetV2LatestLocationIdGetRequest withEntity(org.openapis.openapi.models.shared.EntityTypesEnum entity) {
+        this.entity = entity;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=has_geo")
+    public Boolean hasGeo;
+    public LatestGetV2LatestLocationIdGetRequest withHasGeo(Boolean hasGeo) {
+        this.hasGeo = hasGeo;
+        return this;
+    }
+    
+    /**
+     * Data is the product of a previous analysis/aggregation and not raw measurements
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isAnalysis")
+    public Boolean isAnalysis;
+    public LatestGetV2LatestLocationIdGetRequest withIsAnalysis(Boolean isAnalysis) {
+        this.isAnalysis = isAnalysis;
+        return this;
+    }
+    
+    /**
+     * Location is mobile
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isMobile")
+    public Boolean isMobile;
+    public LatestGetV2LatestLocationIdGetRequest withIsMobile(Boolean isMobile) {
+        this.isMobile = isMobile;
+        return this;
+    }
+    
+    /**
+     * Change the number of results returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public LatestGetV2LatestLocationIdGetRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location")
+    public Object[] location;
+    public LatestGetV2LatestLocationIdGetRequest withLocation(Object[] location) {
+        this.location = location;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public Long locationId;
+    public LatestGetV2LatestLocationIdGetRequest withLocationId(Long locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * Manufacturer of Sensor
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=manufacturerName")
+    public String[] manufacturerName;
+    public LatestGetV2LatestLocationIdGetRequest withManufacturerName(String[] manufacturerName) {
+        this.manufacturerName = manufacturerName;
+        return this;
+    }
+    
+    /**
+     * Model Name of Sensor
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modelName")
+    public String[] modelName;
+    public LatestGetV2LatestLocationIdGetRequest withModelName(String[] modelName) {
+        this.modelName = modelName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public LatestGetV2LatestLocationIdGetRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Order by a field
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
+    public LatestGetV2LatestLocationIdGetOrderByLocationsOrderEnum orderBy;
+    public LatestGetV2LatestLocationIdGetRequest withOrderBy(LatestGetV2LatestLocationIdGetOrderByLocationsOrderEnum orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    /**
+     * Paginate through results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public LatestGetV2LatestLocationIdGetRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameter")
+    public Object[] parameter;
+    public LatestGetV2LatestLocationIdGetRequest withParameter(Object[] parameter) {
+        this.parameter = parameter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameter_id")
+    public Long parameterId;
+    public LatestGetV2LatestLocationIdGetRequest withParameterId(Long parameterId) {
+        this.parameterId = parameterId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
+    public Long radius;
+    public LatestGetV2LatestLocationIdGetRequest withRadius(Long radius) {
+        this.radius = radius;
+        return this;
+    }
+    
+    /**
+     * Type of Sensor
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sensorType")
+    public org.openapis.openapi.models.shared.SensorTypesEnum sensorType;
+    public LatestGetV2LatestLocationIdGetRequest withSensorType(org.openapis.openapi.models.shared.SensorTypesEnum sensorType) {
+        this.sensorType = sensorType;
+        return this;
+    }
+    
+    /**
+     * Sort Direction
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public LatestGetV2LatestLocationIdGetSortSortEnum sort;
+    public LatestGetV2LatestLocationIdGetRequest withSort(LatestGetV2LatestLocationIdGetSortSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Name of the data source
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceName")
+    public String[] sourceName;
+    public LatestGetV2LatestLocationIdGetRequest withSourceName(String[] sourceName) {
+        this.sourceName = sourceName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit")
+    public String[] unit;
+    public LatestGetV2LatestLocationIdGetRequest withUnit(String[] unit) {
+        this.unit = unit;
         return this;
     }
     

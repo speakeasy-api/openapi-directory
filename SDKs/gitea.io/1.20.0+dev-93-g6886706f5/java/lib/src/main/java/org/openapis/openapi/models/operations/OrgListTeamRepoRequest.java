@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgListTeamRepoRequest {
+    /**
+     * id of the team
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrgListTeamRepoRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public OrgListTeamRepoPathParams pathParams;
-    public OrgListTeamRepoRequest withPathParams(OrgListTeamRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * organization that owns the repo to list
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgListTeamRepoRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * name of the repo to list
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public OrgListTeamRepoRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

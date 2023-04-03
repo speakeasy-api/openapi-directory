@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolTftpSetConfigRequest {
+    /**
+     * Agent to set the TFTP configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolTftpSetConfigRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolTftpSetConfigPathParams pathParams;
-    public ProtocolTftpSetConfigRequest withPathParams(ProtocolTftpSetConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Parameter to set the TFTP configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=argument")
+    public String argument;
+    public ProtocolTftpSetConfigRequest withArgument(String argument) {
+        this.argument = argument;
+        return this;
+    }
+    
+    /**
+     * Value to set the TFTP configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=value")
+    public String value;
+    public ProtocolTftpSetConfigRequest withValue(String value) {
+        this.value = value;
         return this;
     }
     

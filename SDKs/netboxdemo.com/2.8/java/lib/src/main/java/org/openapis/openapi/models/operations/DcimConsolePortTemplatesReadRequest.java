@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimConsolePortTemplatesReadRequest {
-    
-    public DcimConsolePortTemplatesReadPathParams pathParams;
-    public DcimConsolePortTemplatesReadRequest withPathParams(DcimConsolePortTemplatesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this console port template.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimConsolePortTemplatesReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

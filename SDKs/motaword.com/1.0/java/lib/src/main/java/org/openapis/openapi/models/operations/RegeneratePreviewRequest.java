@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegeneratePreviewRequest {
-    
-    public RegeneratePreviewPathParams pathParams;
-    public RegeneratePreviewRequest withPathParams(RegeneratePreviewPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Document ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public Long documentId;
+    public RegeneratePreviewRequest withDocumentId(Long documentId) {
+        this.documentId = documentId;
         return this;
     }
     

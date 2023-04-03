@@ -37,19 +37,20 @@ public class Infrastructure {
      * Get details of infrastructure nodes. Only admin users can get this information. The proxy id is
      * required for adding a data source for selecting appropriate proxy node to add the data source.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNodeResponse getNode(org.openapis.openapi.models.operations.GetNodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNodeResponse getNode(org.openapis.openapi.models.operations.GetNodeRequest request, org.openapis.openapi.models.operations.GetNodeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNodePathParams.class, baseUrl, "/infra/nodes/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNodeRequest.class, baseUrl, "/infra/nodes/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,11 +79,10 @@ public class Infrastructure {
     /**
      * List nodes
      * Get list of infrastructure nodes. Only admin users can retrieve this information.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListNodesResponse listNodes(org.openapis.openapi.models.operations.ListNodesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListNodesResponse listNodes() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/infra/nodes");
         
@@ -91,8 +91,7 @@ public class Infrastructure {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

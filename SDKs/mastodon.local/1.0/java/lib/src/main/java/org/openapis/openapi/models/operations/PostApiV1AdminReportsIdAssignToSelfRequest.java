@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV1AdminReportsIdAssignToSelfRequest {
-    
-    public PostApiV1AdminReportsIdAssignToSelfPathParams pathParams;
-    public PostApiV1AdminReportsIdAssignToSelfRequest withPathParams(PostApiV1AdminReportsIdAssignToSelfPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostApiV1AdminReportsIdAssignToSelfSecurity security;
-    public PostApiV1AdminReportsIdAssignToSelfRequest withSecurity(PostApiV1AdminReportsIdAssignToSelfSecurity security) {
-        this.security = security;
+    /**
+     * ID of the report
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostApiV1AdminReportsIdAssignToSelfRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

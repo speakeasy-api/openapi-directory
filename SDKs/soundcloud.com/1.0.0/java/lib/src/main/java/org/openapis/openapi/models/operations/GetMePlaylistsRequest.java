@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMePlaylistsRequest {
-    
-    public GetMePlaylistsQueryParams queryParams;
-    public GetMePlaylistsRequest withQueryParams(GetMePlaylistsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetMePlaylistsSecurity security;
-    public GetMePlaylistsRequest withSecurity(GetMePlaylistsSecurity security) {
-        this.security = security;
+    /**
+     * Number of results to return in the collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetMePlaylistsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

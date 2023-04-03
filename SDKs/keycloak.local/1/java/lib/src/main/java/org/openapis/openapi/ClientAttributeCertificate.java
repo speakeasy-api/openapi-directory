@@ -38,7 +38,7 @@ public class ClientAttributeCertificate {
      */
     public org.openapis.openapi.models.operations.GetRealmClientsIdCertificatesAttrResponse getRealmClientsIdCertificatesAttr(org.openapis.openapi.models.operations.GetRealmClientsIdCertificatesAttrRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmClientsIdCertificatesAttrPathParams.class, baseUrl, "/{realm}/clients/{id}/certificates/{attr}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmClientsIdCertificatesAttrRequest.class, baseUrl, "/{realm}/clients/{id}/certificates/{attr}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -77,12 +77,12 @@ public class ClientAttributeCertificate {
      */
     public org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrDownloadResponse postRealmClientsIdCertificatesAttrDownload(org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrDownloadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrDownloadPathParams.class, baseUrl, "/{realm}/clients/{id}/certificates/{attr}/download", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrDownloadRequest.class, baseUrl, "/{realm}/clients/{id}/certificates/{attr}/download", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "keyStoreConfig", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -120,7 +120,7 @@ public class ClientAttributeCertificate {
      */
     public org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrGenerateResponse postRealmClientsIdCertificatesAttrGenerate(org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrGenerateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrGeneratePathParams.class, baseUrl, "/{realm}/clients/{id}/certificates/{attr}/generate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrGenerateRequest.class, baseUrl, "/{realm}/clients/{id}/certificates/{attr}/generate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -159,12 +159,12 @@ public class ClientAttributeCertificate {
      */
     public org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrGenerateAndDownloadResponse postRealmClientsIdCertificatesAttrGenerateAndDownload(org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrGenerateAndDownloadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrGenerateAndDownloadPathParams.class, baseUrl, "/{realm}/clients/{id}/certificates/{attr}/generate-and-download", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrGenerateAndDownloadRequest.class, baseUrl, "/{realm}/clients/{id}/certificates/{attr}/generate-and-download", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "keyStoreConfig", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -202,7 +202,7 @@ public class ClientAttributeCertificate {
      */
     public org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrUploadResponse postRealmClientsIdCertificatesAttrUpload(org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrUploadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrUploadPathParams.class, baseUrl, "/{realm}/clients/{id}/certificates/{attr}/upload", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrUploadRequest.class, baseUrl, "/{realm}/clients/{id}/certificates/{attr}/upload", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -241,7 +241,7 @@ public class ClientAttributeCertificate {
      */
     public org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrUploadCertificateResponse postRealmClientsIdCertificatesAttrUploadCertificate(org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrUploadCertificateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrUploadCertificatePathParams.class, baseUrl, "/{realm}/clients/{id}/certificates/{attr}/upload-certificate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientsIdCertificatesAttrUploadCertificateRequest.class, baseUrl, "/{realm}/clients/{id}/certificates/{attr}/upload-certificate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

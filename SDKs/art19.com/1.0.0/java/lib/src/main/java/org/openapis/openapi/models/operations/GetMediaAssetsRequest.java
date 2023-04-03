@@ -4,20 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMediaAssetsRequest {
-    
-    public GetMediaAssetsQueryParams queryParams;
-    public GetMediaAssetsRequest withQueryParams(GetMediaAssetsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetMediaAssetsSecurity security;
-    public GetMediaAssetsRequest withSecurity(GetMediaAssetsSecurity security) {
-        this.security = security;
+    /**
+     * The list of IDs to filter by. Repeat this parameter for each ID you want to include in the filter.
+     * The brackets *MUST* be percent-encoded, per the requirements in
+     * [RFC 3986 \u00a7 3.4](https://tools.ietf.org/html/rfc3986#section-3.4).
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids[]")
+    public String[] ids;
+    public GetMediaAssetsRequest withIds(String[] ids) {
+        this.ids = ids;
         return this;
     }
     

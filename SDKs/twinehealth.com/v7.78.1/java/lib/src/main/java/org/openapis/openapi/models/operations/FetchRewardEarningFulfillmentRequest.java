@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchRewardEarningFulfillmentRequest {
-    
-    public FetchRewardEarningFulfillmentPathParams pathParams;
-    public FetchRewardEarningFulfillmentRequest withPathParams(FetchRewardEarningFulfillmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Reward earning fulfillment identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public FetchRewardEarningFulfillmentRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

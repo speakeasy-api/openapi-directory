@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2ProgramsIdRequest {
-    
-    public GetApiV2ProgramsIdPathParams pathParams;
-    public GetApiV2ProgramsIdRequest withPathParams(GetApiV2ProgramsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetApiV2ProgramsIdSecurity security;
-    public GetApiV2ProgramsIdRequest withSecurity(GetApiV2ProgramsIdSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the program to operate on.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetApiV2ProgramsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

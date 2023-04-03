@@ -4,27 +4,156 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidenterpriseInstallsDeleteRequest {
-    
-    public AndroidenterpriseInstallsDeletePathParams pathParams;
-    public AndroidenterpriseInstallsDeleteRequest withPathParams(AndroidenterpriseInstallsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AndroidenterpriseInstallsDeleteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public AndroidenterpriseInstallsDeleteQueryParams queryParams;
-    public AndroidenterpriseInstallsDeleteRequest withQueryParams(AndroidenterpriseInstallsDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AndroidenterpriseInstallsDeleteRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AndroidenterpriseInstallsDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public AndroidenterpriseInstallsDeleteSecurity security;
-    public AndroidenterpriseInstallsDeleteRequest withSecurity(AndroidenterpriseInstallsDeleteSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AndroidenterpriseInstallsDeleteRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * The Android ID of the device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
+    public String deviceId;
+    public AndroidenterpriseInstallsDeleteRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    
+    /**
+     * The ID of the enterprise.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterpriseId")
+    public String enterpriseId;
+    public AndroidenterpriseInstallsDeleteRequest withEnterpriseId(String enterpriseId) {
+        this.enterpriseId = enterpriseId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AndroidenterpriseInstallsDeleteRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * The ID of the product represented by the install, e.g. "app:com.google.android.gm".
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=installId")
+    public String installId;
+    public AndroidenterpriseInstallsDeleteRequest withInstallId(String installId) {
+        this.installId = installId;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AndroidenterpriseInstallsDeleteRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AndroidenterpriseInstallsDeleteRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AndroidenterpriseInstallsDeleteRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AndroidenterpriseInstallsDeleteRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AndroidenterpriseInstallsDeleteRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AndroidenterpriseInstallsDeleteRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public AndroidenterpriseInstallsDeleteRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

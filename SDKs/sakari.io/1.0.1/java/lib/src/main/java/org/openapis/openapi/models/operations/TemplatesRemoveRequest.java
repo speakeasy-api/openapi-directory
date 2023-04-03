@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TemplatesRemoveRequest {
-    
-    public TemplatesRemovePathParams pathParams;
-    public TemplatesRemoveRequest withPathParams(TemplatesRemovePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public TemplatesRemoveRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public TemplatesRemoveSecurity security;
-    public TemplatesRemoveRequest withSecurity(TemplatesRemoveSecurity security) {
-        this.security = security;
+    /**
+     * Template id to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=templateId")
+    public String templateId;
+    public TemplatesRemoveRequest withTemplateId(String templateId) {
+        this.templateId = templateId;
         return this;
     }
     

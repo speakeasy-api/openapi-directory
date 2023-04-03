@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1NonprofitsListRequest {
-    
-    public GetApiV1NonprofitsListQueryParams queryParams;
-    public GetApiV1NonprofitsListRequest withQueryParams(GetApiV1NonprofitsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A string to search.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetApiV1NonprofitsListRequest withName(String name) {
+        this.name = name;
         return this;
     }
     
-    
-    public GetApiV1NonprofitsListSecurity security;
-    public GetApiV1NonprofitsListRequest withSecurity(GetApiV1NonprofitsListSecurity security) {
-        this.security = security;
+    /**
+     * The page to return. This endpoint is paginated, and returns up to 30 nonprofits at a time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetApiV1NonprofitsListRequest withPage(Double page) {
+        this.page = page;
         return this;
     }
     

@@ -46,7 +46,7 @@ public class Telephony {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.HLRLookupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.HLRLookupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -92,7 +92,7 @@ public class Telephony {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PhonePlaybackResponse phonePlayback(org.openapis.openapi.models.operations.PhonePlaybackRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PhonePlaybackResponse phonePlayback(org.openapis.openapi.models.operations.PhonePlaybackRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone-playback");
         
@@ -145,7 +145,7 @@ public class Telephony {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PhoneVerifyResponse phoneVerify(org.openapis.openapi.models.operations.PhoneVerifyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PhoneVerifyResponse phoneVerify(org.openapis.openapi.models.operations.PhoneVerifyRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone-verify");
         
@@ -198,7 +198,7 @@ public class Telephony {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SMSVerifyResponse smsVerify(org.openapis.openapi.models.operations.SMSVerifyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SMSVerifyResponse smsVerify(org.openapis.openapi.models.operations.SMSVerifyRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sms-verify");
         
@@ -259,7 +259,7 @@ public class Telephony {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VerifySecurityCodeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VerifySecurityCodeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

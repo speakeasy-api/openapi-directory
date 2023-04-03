@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesSetLabelsRequest {
-    
-    public IssuesSetLabelsPathParams pathParams;
-    public IssuesSetLabelsRequest withPathParams(IssuesSetLabelsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public Object requestBody;
+    public IssuesSetLabelsRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public IssuesSetLabelsRequest withRequest(Object request) {
-        this.request = request;
+    /**
+     * The number that identifies the issue.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_number")
+    public Long issueNumber;
+    public IssuesSetLabelsRequest withIssueNumber(Long issueNumber) {
+        this.issueNumber = issueNumber;
+        return this;
+    }
+    
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssuesSetLabelsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssuesSetLabelsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

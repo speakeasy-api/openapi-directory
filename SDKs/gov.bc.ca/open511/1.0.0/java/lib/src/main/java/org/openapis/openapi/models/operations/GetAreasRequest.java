@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAreasRequest {
-    
-    public GetAreasQueryParams queryParams;
-    public GetAreasRequest withQueryParams(GetAreasQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The format of the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetAreasFormatEnum format;
+    public GetAreasRequest withFormat(GetAreasFormatEnum format) {
+        this.format = format;
         return this;
     }
     

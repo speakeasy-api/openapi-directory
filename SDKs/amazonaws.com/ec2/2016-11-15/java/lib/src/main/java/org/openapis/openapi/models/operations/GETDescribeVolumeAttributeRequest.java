@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeVolumeAttributeRequest {
-    
-    public GETDescribeVolumeAttributeQueryParams queryParams;
-    public GETDescribeVolumeAttributeRequest withQueryParams(GETDescribeVolumeAttributeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeVolumeAttributeActionEnum action;
+    public GETDescribeVolumeAttributeRequest withAction(GETDescribeVolumeAttributeActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The attribute of the volume. This parameter is required.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Attribute")
+    public GETDescribeVolumeAttributeAttributeEnum attribute;
+    public GETDescribeVolumeAttributeRequest withAttribute(GETDescribeVolumeAttributeAttributeEnum attribute) {
+        this.attribute = attribute;
+        return this;
+    }
     
-    public GETDescribeVolumeAttributeHeaders headers;
-    public GETDescribeVolumeAttributeRequest withHeaders(GETDescribeVolumeAttributeHeaders headers) {
-        this.headers = headers;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETDescribeVolumeAttributeRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeVolumeAttributeVersionEnum version;
+    public GETDescribeVolumeAttributeRequest withVersion(GETDescribeVolumeAttributeVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * The ID of the volume.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VolumeId")
+    public String volumeId;
+    public GETDescribeVolumeAttributeRequest withVolumeId(String volumeId) {
+        this.volumeId = volumeId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeVolumeAttributeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeVolumeAttributeRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeVolumeAttributeRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeVolumeAttributeRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeVolumeAttributeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeVolumeAttributeRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeVolumeAttributeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

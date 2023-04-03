@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MigrationsStartImportRequest {
-    
-    public MigrationsStartImportPathParams pathParams;
-    public MigrationsStartImportRequest withPathParams(MigrationsStartImportPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public MigrationsStartImportRequestBody requestBody;
+    public MigrationsStartImportRequest withRequestBody(MigrationsStartImportRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public MigrationsStartImportRequestBody request;
-    public MigrationsStartImportRequest withRequest(MigrationsStartImportRequestBody request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public MigrationsStartImportRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public MigrationsStartImportRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

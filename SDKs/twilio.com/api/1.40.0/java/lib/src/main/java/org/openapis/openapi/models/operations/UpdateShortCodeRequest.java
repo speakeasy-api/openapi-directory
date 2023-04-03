@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateShortCodeRequest {
-    
-    public UpdateShortCodePathParams pathParams;
-    public UpdateShortCodeRequest withPathParams(UpdateShortCodePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the ShortCode resource(s) to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateShortCodeRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateShortCodeUpdateShortCodeRequest request;
-    public UpdateShortCodeRequest withRequest(UpdateShortCodeUpdateShortCodeRequest request) {
-        this.request = request;
+    public UpdateShortCodeUpdateShortCodeRequest requestBody;
+    public UpdateShortCodeRequest withRequestBody(UpdateShortCodeUpdateShortCodeRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateShortCodeSecurity security;
-    public UpdateShortCodeRequest withSecurity(UpdateShortCodeSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateShortCodeRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the ShortCode resource to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateShortCodeRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

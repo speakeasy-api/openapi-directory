@@ -34,19 +34,20 @@ public class PaymentInstruments {
      * Get a payment instrument
      * Returns the details of a payment instrument.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPaymentInstrumentsIdResponse getPaymentInstrumentsId(org.openapis.openapi.models.operations.GetPaymentInstrumentsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPaymentInstrumentsIdResponse getPaymentInstrumentsId(org.openapis.openapi.models.operations.GetPaymentInstrumentsIdRequest request, org.openapis.openapi.models.operations.GetPaymentInstrumentsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInstrumentsIdPathParams.class, baseUrl, "/paymentInstruments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInstrumentsIdRequest.class, baseUrl, "/paymentInstruments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,19 +83,20 @@ public class PaymentInstruments {
      * Get the reveal information of a payment instrument
      * Returns the reveal information of a payment instrument.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPaymentInstrumentsIdRevealResponse getPaymentInstrumentsIdReveal(org.openapis.openapi.models.operations.GetPaymentInstrumentsIdRevealRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPaymentInstrumentsIdRevealResponse getPaymentInstrumentsIdReveal(org.openapis.openapi.models.operations.GetPaymentInstrumentsIdRevealRequest request, org.openapis.openapi.models.operations.GetPaymentInstrumentsIdRevealSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInstrumentsIdRevealPathParams.class, baseUrl, "/paymentInstruments/{id}/reveal", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInstrumentsIdRevealRequest.class, baseUrl, "/paymentInstruments/{id}/reveal", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -130,19 +132,20 @@ public class PaymentInstruments {
      * Get all transaction rules for a payment instrument
      * Returns a list of transaction rules associated with a payment instrument.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPaymentInstrumentsIdTransactionRulesResponse getPaymentInstrumentsIdTransactionRules(org.openapis.openapi.models.operations.GetPaymentInstrumentsIdTransactionRulesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPaymentInstrumentsIdTransactionRulesResponse getPaymentInstrumentsIdTransactionRules(org.openapis.openapi.models.operations.GetPaymentInstrumentsIdTransactionRulesRequest request, org.openapis.openapi.models.operations.GetPaymentInstrumentsIdTransactionRulesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInstrumentsIdTransactionRulesPathParams.class, baseUrl, "/paymentInstruments/{id}/transactionRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInstrumentsIdTransactionRulesRequest.class, baseUrl, "/paymentInstruments/{id}/transactionRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -178,21 +181,22 @@ public class PaymentInstruments {
      * Update a payment instrument
      * Updates a payment instrument. Once a payment instrument is already active, you can only update its status. However, for cards created with **inactive** status, you can still update the balance account associated with the card.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchPaymentInstrumentsIdResponse patchPaymentInstrumentsId(org.openapis.openapi.models.operations.PatchPaymentInstrumentsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchPaymentInstrumentsIdResponse patchPaymentInstrumentsId(org.openapis.openapi.models.operations.PatchPaymentInstrumentsIdRequest request, org.openapis.openapi.models.operations.PatchPaymentInstrumentsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchPaymentInstrumentsIdPathParams.class, baseUrl, "/paymentInstruments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchPaymentInstrumentsIdRequest.class, baseUrl, "/paymentInstruments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "paymentInstrumentUpdateRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -230,10 +234,11 @@ public class PaymentInstruments {
      * 
      *  For more information, refer to [Issue cards](https://docs.adyen.com/issuing/create-cards) or [Issue business accounts](https://docs.adyen.com/marketplaces-and-platforms/business-accounts).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPaymentInstrumentsResponse postPaymentInstruments(org.openapis.openapi.models.operations.PostPaymentInstrumentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPaymentInstrumentsResponse postPaymentInstruments(org.openapis.openapi.models.shared.PaymentInstrumentInfo request, org.openapis.openapi.models.operations.PostPaymentInstrumentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/paymentInstruments");
         
@@ -244,7 +249,7 @@ public class PaymentInstruments {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

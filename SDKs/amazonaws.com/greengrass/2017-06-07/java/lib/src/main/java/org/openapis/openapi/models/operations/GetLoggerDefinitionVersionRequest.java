@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLoggerDefinitionVersionRequest {
-    
-    public GetLoggerDefinitionVersionPathParams pathParams;
-    public GetLoggerDefinitionVersionRequest withPathParams(GetLoggerDefinitionVersionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the logger definition.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=LoggerDefinitionId")
+    public String loggerDefinitionId;
+    public GetLoggerDefinitionVersionRequest withLoggerDefinitionId(String loggerDefinitionId) {
+        this.loggerDefinitionId = loggerDefinitionId;
         return this;
     }
     
-    
-    public GetLoggerDefinitionVersionQueryParams queryParams;
-    public GetLoggerDefinitionVersionRequest withQueryParams(GetLoggerDefinitionVersionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the logger definition version. This value maps to the ''Version'' property of the corresponding ''VersionInformation'' object, which is returned by ''ListLoggerDefinitionVersions'' requests. If the version is the last one that was associated with a logger definition, the value also maps to the ''LatestVersion'' property of the corresponding ''DefinitionInformation'' object.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=LoggerDefinitionVersionId")
+    public String loggerDefinitionVersionId;
+    public GetLoggerDefinitionVersionRequest withLoggerDefinitionVersionId(String loggerDefinitionVersionId) {
+        this.loggerDefinitionVersionId = loggerDefinitionVersionId;
         return this;
     }
     
+    /**
+     * The token for the next set of results, or ''null'' if there are no additional results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GetLoggerDefinitionVersionRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
     
-    public GetLoggerDefinitionVersionHeaders headers;
-    public GetLoggerDefinitionVersionRequest withHeaders(GetLoggerDefinitionVersionHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetLoggerDefinitionVersionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetLoggerDefinitionVersionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetLoggerDefinitionVersionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetLoggerDefinitionVersionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetLoggerDefinitionVersionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetLoggerDefinitionVersionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetLoggerDefinitionVersionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

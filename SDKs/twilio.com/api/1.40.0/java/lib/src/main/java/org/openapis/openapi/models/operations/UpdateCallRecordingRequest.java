@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCallRecordingRequest {
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateCallRecordingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public UpdateCallRecordingPathParams pathParams;
-    public UpdateCallRecordingRequest withPathParams(UpdateCallRecordingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID of the resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public UpdateCallRecordingRequest withCallSid(String callSid) {
+        this.callSid = callSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateCallRecordingUpdateCallRecordingRequest request;
-    public UpdateCallRecordingRequest withRequest(UpdateCallRecordingUpdateCallRecordingRequest request) {
-        this.request = request;
+    public UpdateCallRecordingUpdateCallRecordingRequest requestBody;
+    public UpdateCallRecordingRequest withRequestBody(UpdateCallRecordingUpdateCallRecordingRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateCallRecordingSecurity security;
-    public UpdateCallRecordingRequest withSecurity(UpdateCallRecordingSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateCallRecordingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Recording resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateCallRecordingRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

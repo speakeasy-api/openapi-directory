@@ -4,20 +4,18 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReportWebinarDetailsRequest {
-    
-    public ReportWebinarDetailsPathParams pathParams;
-    public ReportWebinarDetailsRequest withPathParams(ReportWebinarDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ReportWebinarDetailsSecurity security;
-    public ReportWebinarDetailsRequest withSecurity(ReportWebinarDetailsSecurity security) {
-        this.security = security;
+    /**
+     * The webinar ID or the webinar UUID.  If a webinar ID is provided in the request instead of a UUID, the response will be for the latest webinar instance.
+     * 
+     * If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webinarId")
+    public String webinarId;
+    public ReportWebinarDetailsRequest withWebinarId(String webinarId) {
+        this.webinarId = webinarId;
         return this;
     }
     

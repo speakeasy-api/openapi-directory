@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDomainsUpdatesListRequest {
-    
-    public GetDomainsUpdatesListQueryParams queryParams;
-    public GetDomainsUpdatesListRequest withQueryParams(GetDomainsUpdatesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetDomainsUpdatesListRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

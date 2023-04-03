@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetYearMonthJsonRequest {
+    /**
+     * The month number (e.g. 1 for January).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=month")
+    public Integer month;
+    public GetYearMonthJsonRequest withMonth(Integer month) {
+        this.month = month;
+        return this;
+    }
     
-    public GetYearMonthJsonPathParams pathParams;
-    public GetYearMonthJsonRequest withPathParams(GetYearMonthJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The year (e.g. 2016).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=year")
+    public Integer year;
+    public GetYearMonthJsonRequest withYear(Integer year) {
+        this.year = year;
         return this;
     }
     

@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BuildConfigurationsGetRequest {
-    
-    public BuildConfigurationsGetPathParams pathParams;
-    public BuildConfigurationsGetRequest withPathParams(BuildConfigurationsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public BuildConfigurationsGetRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public BuildConfigurationsGetQueryParams queryParams;
-    public BuildConfigurationsGetRequest withQueryParams(BuildConfigurationsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The branch name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
+    public String branch;
+    public BuildConfigurationsGetRequest withBranch(String branch) {
+        this.branch = branch;
         return this;
     }
     
+    /**
+     * Configuration format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public BuildConfigurationsGetFormatEnum format;
+    public BuildConfigurationsGetRequest withFormat(BuildConfigurationsGetFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public BuildConfigurationsGetSecurity security;
-    public BuildConfigurationsGetRequest withSecurity(BuildConfigurationsGetSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public BuildConfigurationsGetRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportationCommitRequest {
+    /**
+     * The execution identifier of you catalog importation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
+    public String executionId;
+    public ImportationCommitRequest withExecutionId(String executionId) {
+        this.executionId = executionId;
+        return this;
+    }
     
-    public ImportationCommitPathParams pathParams;
-    public ImportationCommitRequest withPathParams(ImportationCommitPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public ImportationCommitRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

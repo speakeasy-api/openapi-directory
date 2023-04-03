@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleFilesRequest {
-    
-    public ArticleFilesPathParams pathParams;
-    public ArticleFilesRequest withPathParams(ArticleFilesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Article Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
+    public Long articleId;
+    public ArticleFilesRequest withArticleId(Long articleId) {
+        this.articleId = articleId;
         return this;
     }
     

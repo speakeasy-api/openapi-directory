@@ -40,7 +40,7 @@ public class GenomeFeatures {
      */
     public org.openapis.openapi.models.operations.GetFeaturesWithinResourceResponse getFeaturesWithinResource(org.openapis.openapi.models.operations.GetFeaturesWithinResourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFeaturesWithinResourcePathParams.class, baseUrl, "/genome/features/within/{build}/{reference}/{begin}/{end}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFeaturesWithinResourceRequest.class, baseUrl, "/genome/features/within/{build}/{reference}/{begin}/{end}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

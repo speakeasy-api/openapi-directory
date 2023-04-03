@@ -32,7 +32,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/EmailValidationPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/EmailValidationRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/EmailValidation500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/EmailValidation400ApplicationJSON.java
@@ -42,15 +41,12 @@ lib/src/main/java/org/openapis/openapi/models/operations/EmailValidation200Appli
 lib/src/main/java/org/openapis/openapi/models/operations/EmailValidation200ApplicationJSONFirstSeen.java
 lib/src/main/java/org/openapis/openapi/models/operations/EmailValidation200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/EmailValidationResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/MaliciousUrlScannerPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/MaliciousUrlScannerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/MaliciousUrlScanner500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/MaliciousUrlScanner400ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/MaliciousUrlScanner200ApplicationJSONDomainAge.java
 lib/src/main/java/org/openapis/openapi/models/operations/MaliciousUrlScanner200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/MaliciousUrlScannerResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PhoneValidationPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/PhoneValidationQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PhoneValidationRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PhoneValidation500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PhoneValidation400ApplicationJSON.java

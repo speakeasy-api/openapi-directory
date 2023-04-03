@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoresCreateRequest {
-    
-    public StoresCreatePathParams pathParams;
-    public StoresCreateRequest withPathParams(StoresCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The store request
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public StoresCreateRequestBody request;
-    public StoresCreateRequest withRequest(StoresCreateRequestBody request) {
-        this.request = request;
+    public StoresCreateRequestBody requestBody;
+    public StoresCreateRequest withRequestBody(StoresCreateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public StoresCreateRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public StoresCreateSecurity security;
-    public StoresCreateRequest withSecurity(StoresCreateSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public StoresCreateRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

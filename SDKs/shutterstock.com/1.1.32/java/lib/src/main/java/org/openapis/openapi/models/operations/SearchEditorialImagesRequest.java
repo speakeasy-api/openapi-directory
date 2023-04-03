@@ -4,20 +4,97 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchEditorialImagesRequest {
-    
-    public SearchEditorialImagesQueryParams queryParams;
-    public SearchEditorialImagesRequest withQueryParams(SearchEditorialImagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Show editorial content with each of the specified editorial categories; specify category names in a comma-separated list
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public String category;
+    public SearchEditorialImagesRequest withCategory(String category) {
+        this.category = category;
         return this;
     }
     
+    /**
+     * Show only editorial content that is available for distribution in a certain country
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public SearchEditorialImagesRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
     
-    public SearchEditorialImagesSecurity security;
-    public SearchEditorialImagesRequest withSecurity(SearchEditorialImagesSecurity security) {
-        this.security = security;
+    /**
+     * The cursor of the page with which to start fetching results; this cursor is returned from previous requests
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public SearchEditorialImagesRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    /**
+     * Show only editorial content generated on or before a specific date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_end")
+    public LocalDate dateEnd;
+    public SearchEditorialImagesRequest withDateEnd(LocalDate dateEnd) {
+        this.dateEnd = dateEnd;
+        return this;
+    }
+    
+    /**
+     * Show only editorial content generated on or after a specific date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_start")
+    public LocalDate dateStart;
+    public SearchEditorialImagesRequest withDateStart(LocalDate dateStart) {
+        this.dateStart = dateStart;
+        return this;
+    }
+    
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public SearchEditorialImagesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * One or more search terms separated by spaces
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public SearchEditorialImagesRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * Sort by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public SearchEditorialImagesSortEnum sort;
+    public SearchEditorialImagesRequest withSort(SearchEditorialImagesSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Show only editorial content from certain suppliers
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supplier_code")
+    public String[] supplierCode;
+    public SearchEditorialImagesRequest withSupplierCode(String[] supplierCode) {
+        this.supplierCode = supplierCode;
         return this;
     }
     

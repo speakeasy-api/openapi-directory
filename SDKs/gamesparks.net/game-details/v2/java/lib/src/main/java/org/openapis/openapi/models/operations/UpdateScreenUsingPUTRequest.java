@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateScreenUsingPUTRequest {
-    
-    public UpdateScreenUsingPUTPathParams pathParams;
-    public UpdateScreenUsingPUTRequest withPathParams(UpdateScreenUsingPUTPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * screen
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ManageScreen request;
-    public UpdateScreenUsingPUTRequest withRequest(org.openapis.openapi.models.shared.ManageScreen request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ManageScreen manageScreen;
+    public UpdateScreenUsingPUTRequest withManageScreen(org.openapis.openapi.models.shared.ManageScreen manageScreen) {
+        this.manageScreen = manageScreen;
+        return this;
+    }
+    
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public UpdateScreenUsingPUTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    
+    /**
+     * shortCode
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortCode")
+    public String shortCode;
+    public UpdateScreenUsingPUTRequest withShortCode(String shortCode) {
+        this.shortCode = shortCode;
         return this;
     }
     

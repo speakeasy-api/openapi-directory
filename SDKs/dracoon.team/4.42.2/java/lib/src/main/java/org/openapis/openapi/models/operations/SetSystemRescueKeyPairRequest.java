@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetSystemRescueKeyPairRequest {
-    
-    public SetSystemRescueKeyPairHeaders headers;
-    public SetSystemRescueKeyPairRequest withHeaders(SetSystemRescueKeyPairHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UserKeyPairContainer userKeyPairContainer;
+    public SetSystemRescueKeyPairRequest withUserKeyPairContainer(org.openapis.openapi.models.shared.UserKeyPairContainer userKeyPairContainer) {
+        this.userKeyPairContainer = userKeyPairContainer;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UserKeyPairContainer request;
-    public SetSystemRescueKeyPairRequest withRequest(org.openapis.openapi.models.shared.UserKeyPairContainer request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public SetSystemRescueKeyPairRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

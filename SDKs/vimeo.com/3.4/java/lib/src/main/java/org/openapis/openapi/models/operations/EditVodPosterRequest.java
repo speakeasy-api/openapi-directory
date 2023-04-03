@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditVodPosterRequest {
-    
-    public EditVodPosterPathParams pathParams;
-    public EditVodPosterRequest withPathParams(EditVodPosterPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.picture+json")
-    public EditVodPosterRequestBody request;
-    public EditVodPosterRequest withRequest(EditVodPosterRequestBody request) {
-        this.request = request;
+    public EditVodPosterRequestBody requestBody;
+    public EditVodPosterRequest withRequestBody(EditVodPosterRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public EditVodPosterRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
+        return this;
+    }
     
-    public EditVodPosterSecurity security;
-    public EditVodPosterRequest withSecurity(EditVodPosterSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the picture.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poster_id")
+    public Double posterId;
+    public EditVodPosterRequest withPosterId(Double posterId) {
+        this.posterId = posterId;
         return this;
     }
     

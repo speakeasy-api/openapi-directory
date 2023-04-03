@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.DeleteRealmAttackDetectionBruteForceUsersPathParams;
 import org.openapis.openapi.models.operations.DeleteRealmAttackDetectionBruteForceUsersRequest;
 import org.openapis.openapi.models.operations.DeleteRealmAttackDetectionBruteForceUsersResponse;
 
@@ -26,17 +25,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    accessToken = new SchemeAccessToken() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
-                    }};
+                    accessToken = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             DeleteRealmAttackDetectionBruteForceUsersRequest req = new DeleteRealmAttackDetectionBruteForceUsersRequest() {{
-                pathParams = new DeleteRealmAttackDetectionBruteForceUsersPathParams() {{
-                    realm = "corrupti";
-                }};
-            }};            
+                realm = "corrupti";
+            }}            
 
             DeleteRealmAttackDetectionBruteForceUsersResponse res = sdk.attackDetection.deleteRealmAttackDetectionBruteForceUsers(req);
 
@@ -50,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### attackDetection

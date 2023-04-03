@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditGroupCoverageRequest {
-    
-    public EditGroupCoveragePathParams pathParams;
-    public EditGroupCoverageRequest withPathParams(EditGroupCoveragePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.GroupCoverageEditRequest groupCoverageEditRequest;
+    public EditGroupCoverageRequest withGroupCoverageEditRequest(org.openapis.openapi.models.shared.GroupCoverageEditRequest groupCoverageEditRequest) {
+        this.groupCoverageEditRequest = groupCoverageEditRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GroupCoverageEditRequest request;
-    public EditGroupCoverageRequest withRequest(org.openapis.openapi.models.shared.GroupCoverageEditRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the group coverage in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_coverage_id")
+    public String groupCoverageId;
+    public EditGroupCoverageRequest withGroupCoverageId(String groupCoverageId) {
+        this.groupCoverageId = groupCoverageId;
+        return this;
+    }
+    
+    /**
+     * The current version identifier of the group coverage
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public EditGroupCoverageRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

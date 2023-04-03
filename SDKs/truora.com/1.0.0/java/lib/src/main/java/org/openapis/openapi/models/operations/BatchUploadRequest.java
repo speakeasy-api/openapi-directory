@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BatchUploadRequest {
-    
-    public BatchUploadPathParams pathParams;
-    public BatchUploadRequest withPathParams(BatchUploadPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The params required to batch upload
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public org.openapis.openapi.models.shared.BatchUploadInput request;
-    public BatchUploadRequest withRequest(org.openapis.openapi.models.shared.BatchUploadInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BatchUploadInput batchUploadInput;
+    public BatchUploadRequest withBatchUploadInput(org.openapis.openapi.models.shared.BatchUploadInput batchUploadInput) {
+        this.batchUploadInput = batchUploadInput;
         return this;
     }
     
-    
-    public BatchUploadSecurity security;
-    public BatchUploadRequest withSecurity(BatchUploadSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the Report
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=report_id")
+    public String reportId;
+    public BatchUploadRequest withReportId(String reportId) {
+        this.reportId = reportId;
         return this;
     }
     

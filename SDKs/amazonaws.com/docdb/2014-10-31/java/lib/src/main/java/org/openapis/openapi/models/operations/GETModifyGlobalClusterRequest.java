@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyGlobalClusterRequest {
-    
-    public GETModifyGlobalClusterQueryParams queryParams;
-    public GETModifyGlobalClusterRequest withQueryParams(GETModifyGlobalClusterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyGlobalClusterActionEnum action;
+    public GETModifyGlobalClusterRequest withAction(GETModifyGlobalClusterActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Indicates if the global cluster has deletion protection enabled. The global cluster can't be deleted when deletion protection is enabled. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeletionProtection")
+    public Boolean deletionProtection;
+    public GETModifyGlobalClusterRequest withDeletionProtection(Boolean deletionProtection) {
+        this.deletionProtection = deletionProtection;
+        return this;
+    }
     
-    public GETModifyGlobalClusterHeaders headers;
-    public GETModifyGlobalClusterRequest withHeaders(GETModifyGlobalClusterHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The identifier for the global cluster being modified. This parameter isn't case-sensitive.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must match the identifier of an existing global cluster.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalClusterIdentifier")
+    public String globalClusterIdentifier;
+    public GETModifyGlobalClusterRequest withGlobalClusterIdentifier(String globalClusterIdentifier) {
+        this.globalClusterIdentifier = globalClusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The new identifier for a global cluster when you modify a global cluster. This value is stored as a lowercase string.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must contain from 1 to 63 letters, numbers, or hyphens&lt;/p&gt; &lt;p&gt;The first character must be a letter&lt;/p&gt; &lt;p&gt;Can't end with a hyphen or contain two consecutive hyphens&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Example: &lt;code&gt;my-cluster2&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NewGlobalClusterIdentifier")
+    public String newGlobalClusterIdentifier;
+    public GETModifyGlobalClusterRequest withNewGlobalClusterIdentifier(String newGlobalClusterIdentifier) {
+        this.newGlobalClusterIdentifier = newGlobalClusterIdentifier;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyGlobalClusterVersionEnum version;
+    public GETModifyGlobalClusterRequest withVersion(GETModifyGlobalClusterVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyGlobalClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyGlobalClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyGlobalClusterRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyGlobalClusterRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyGlobalClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyGlobalClusterRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyGlobalClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

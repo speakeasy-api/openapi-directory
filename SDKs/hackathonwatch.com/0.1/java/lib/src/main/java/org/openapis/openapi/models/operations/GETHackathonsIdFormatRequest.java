@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETHackathonsIdFormatRequest {
-    
-    public GETHackathonsIdFormatPathParams pathParams;
-    public GETHackathonsIdFormatRequest withPathParams(GETHackathonsIdFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the hackathon for detail information
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GETHackathonsIdFormatRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

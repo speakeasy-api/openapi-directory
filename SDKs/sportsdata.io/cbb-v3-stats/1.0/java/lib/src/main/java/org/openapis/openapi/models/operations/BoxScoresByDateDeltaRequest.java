@@ -4,13 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BoxScoresByDateDeltaRequest {
+    /**
+     * The date of the game(s).
+     * &lt;br&gt;Examples: &lt;code&gt;2018-FEB-27&lt;/code&gt;, &lt;code&gt;2017-DEC-01&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
+    public String date;
+    public BoxScoresByDateDeltaRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
     
-    public BoxScoresByDateDeltaPathParams pathParams;
-    public BoxScoresByDateDeltaRequest withPathParams(BoxScoresByDateDeltaPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public BoxScoresByDateDeltaFormatEnum format;
+    public BoxScoresByDateDeltaRequest withFormat(BoxScoresByDateDeltaFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * Only returns player statistics that have changed in the last X minutes.  You specify how many minutes in time to go back.  Valid entries are:
+     * &lt;code&gt;1&lt;/code&gt; or &lt;code&gt;2&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=minutes")
+    public String minutes;
+    public BoxScoresByDateDeltaRequest withMinutes(String minutes) {
+        this.minutes = minutes;
         return this;
     }
     

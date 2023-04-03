@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPathwaysWithDiagramsForCategoryUsingGETRequest {
-    
-    public GETPathwaysWithDiagramsForCategoryUsingGETPathParams pathParams;
-    public GETPathwaysWithDiagramsForCategoryUsingGETRequest withPathParams(GETPathwaysWithDiagramsForCategoryUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Pathway Category
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category")
+    public String category;
+    public GETPathwaysWithDiagramsForCategoryUsingGETRequest withCategory(String category) {
+        this.category = category;
         return this;
     }
     

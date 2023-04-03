@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSetupV1CalendarsBlockIdRequest {
-    
-    public DeleteSetupV1CalendarsBlockIdPathParams pathParams;
-    public DeleteSetupV1CalendarsBlockIdRequest withPathParams(DeleteSetupV1CalendarsBlockIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of a calendarBlock object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteSetupV1CalendarsBlockIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

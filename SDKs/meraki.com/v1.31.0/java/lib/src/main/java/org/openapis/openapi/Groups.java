@@ -43,12 +43,12 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesStagedGroupResponse createNetworkFirmwareUpgradesStagedGroup(org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesStagedGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesStagedGroupPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesStagedGroupRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -88,12 +88,12 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationAdaptivePolicyGroupResponse createOrganizationAdaptivePolicyGroup(org.openapis.openapi.models.operations.CreateOrganizationAdaptivePolicyGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationAdaptivePolicyGroupPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationAdaptivePolicyGroupRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -133,12 +133,12 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationPolicyObjectsGroupResponse createOrganizationPolicyObjectsGroup(org.openapis.openapi.models.operations.CreateOrganizationPolicyObjectsGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationPolicyObjectsGroupPathParams.class, baseUrl, "/organizations/{organizationId}/policyObjects/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationPolicyObjectsGroupRequest.class, baseUrl, "/organizations/{organizationId}/policyObjects/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -178,7 +178,7 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkFirmwareUpgradesStagedGroupResponse deleteNetworkFirmwareUpgradesStagedGroup(org.openapis.openapi.models.operations.DeleteNetworkFirmwareUpgradesStagedGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkFirmwareUpgradesStagedGroupPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkFirmwareUpgradesStagedGroupRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -212,7 +212,7 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationAdaptivePolicyGroupResponse deleteOrganizationAdaptivePolicyGroup(org.openapis.openapi.models.operations.DeleteOrganizationAdaptivePolicyGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationAdaptivePolicyGroupPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationAdaptivePolicyGroupRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -246,7 +246,7 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationPolicyObjectsGroupResponse deleteOrganizationPolicyObjectsGroup(org.openapis.openapi.models.operations.DeleteOrganizationPolicyObjectsGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationPolicyObjectsGroupPathParams.class, baseUrl, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationPolicyObjectsGroupRequest.class, baseUrl, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -280,7 +280,7 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedGroupResponse getNetworkFirmwareUpgradesStagedGroup(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedGroupPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedGroupRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -320,7 +320,7 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedGroupsResponse getNetworkFirmwareUpgradesStagedGroups(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedGroupsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedGroupsPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedGroupsRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -360,7 +360,7 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyGroupResponse getOrganizationAdaptivePolicyGroup(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyGroupPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyGroupRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -400,7 +400,7 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyGroupsResponse getOrganizationAdaptivePolicyGroups(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyGroupsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyGroupsPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyGroupsRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -440,7 +440,7 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsGroupResponse getOrganizationPolicyObjectsGroup(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsGroupPathParams.class, baseUrl, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsGroupRequest.class, baseUrl, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -480,13 +480,13 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsGroupsResponse getOrganizationPolicyObjectsGroups(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsGroupsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsGroupsPathParams.class, baseUrl, "/organizations/{organizationId}/policyObjects/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsGroupsRequest.class, baseUrl, "/organizations/{organizationId}/policyObjects/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsGroupsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationPolicyObjectsGroupsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -528,12 +528,12 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedGroupResponse updateNetworkFirmwareUpgradesStagedGroup(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedGroupPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedGroupRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -573,12 +573,12 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicyGroupResponse updateOrganizationAdaptivePolicyGroup(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicyGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicyGroupPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicyGroupRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/groups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -615,12 +615,12 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationPolicyObjectsGroupResponse updateOrganizationPolicyObjectsGroup(org.openapis.openapi.models.operations.UpdateOrganizationPolicyObjectsGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationPolicyObjectsGroupPathParams.class, baseUrl, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationPolicyObjectsGroupRequest.class, baseUrl, "/organizations/{organizationId}/policyObjects/groups/{policyObjectGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

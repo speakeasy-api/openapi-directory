@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRequest {
-    
-    public GetPathParams pathParams;
-    public GetRequest withPathParams(GetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Additional properties to be included in the response shopper object
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=includes")
+    public GetIncludesEnum[] includes;
+    public GetRequest withIncludes(GetIncludesEnum[] includes) {
+        this.includes = includes;
         return this;
     }
     
-    
-    public GetQueryParams queryParams;
-    public GetRequest withQueryParams(GetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Shopper whose details are to be retrieved
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shopperId")
+    public String shopperId;
+    public GetRequest withShopperId(String shopperId) {
+        this.shopperId = shopperId;
         return this;
     }
     

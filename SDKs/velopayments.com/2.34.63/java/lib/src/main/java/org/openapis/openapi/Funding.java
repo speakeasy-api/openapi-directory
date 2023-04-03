@@ -47,12 +47,12 @@ public class Funding {
      */
     public org.openapis.openapi.models.operations.CreateFundingRequestV2Response createFundingRequestV2(org.openapis.openapi.models.operations.CreateFundingRequestV2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateFundingRequestV2PathParams.class, baseUrl, "/v2/sourceAccounts/{sourceAccountId}/fundingRequest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateFundingRequestV2Request.class, baseUrl, "/v2/sourceAccounts/{sourceAccountId}/fundingRequest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "fundingRequestV2", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -119,12 +119,12 @@ public class Funding {
      */
     public org.openapis.openapi.models.operations.CreateFundingRequestV3Response createFundingRequestV3(org.openapis.openapi.models.operations.CreateFundingRequestV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateFundingRequestV3PathParams.class, baseUrl, "/v3/sourceAccounts/{sourceAccountId}/fundingRequest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateFundingRequestV3Request.class, baseUrl, "/v3/sourceAccounts/{sourceAccountId}/fundingRequest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "fundingRequestV3", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -192,13 +192,13 @@ public class Funding {
      */
     public org.openapis.openapi.models.operations.GetFundingAccountV2Response getFundingAccountV2(org.openapis.openapi.models.operations.GetFundingAccountV2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFundingAccountV2PathParams.class, baseUrl, "/v2/fundingAccounts/{fundingAccountId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFundingAccountV2Request.class, baseUrl, "/v2/fundingAccounts/{fundingAccountId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFundingAccountV2QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFundingAccountV2Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -270,7 +270,7 @@ public class Funding {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFundingAccountsV2QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFundingAccountsV2Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -326,7 +326,7 @@ public class Funding {
      */
     public org.openapis.openapi.models.operations.GetFundingByIdV1Response getFundingByIdV1(org.openapis.openapi.models.operations.GetFundingByIdV1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFundingByIdV1PathParams.class, baseUrl, "/v1/fundings/{fundingId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFundingByIdV1Request.class, baseUrl, "/v1/fundings/{fundingId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -404,7 +404,7 @@ public class Funding {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListFundingAuditDeltasQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListFundingAuditDeltasRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

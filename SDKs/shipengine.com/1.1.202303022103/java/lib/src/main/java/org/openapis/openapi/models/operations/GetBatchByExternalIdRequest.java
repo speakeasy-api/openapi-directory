@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBatchByExternalIdRequest {
-    
-    public GetBatchByExternalIdPathParams pathParams;
-    public GetBatchByExternalIdRequest withPathParams(GetBatchByExternalIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=external_batch_id")
+    public String externalBatchId;
+    public GetBatchByExternalIdRequest withExternalBatchId(String externalBatchId) {
+        this.externalBatchId = externalBatchId;
         return this;
     }
     

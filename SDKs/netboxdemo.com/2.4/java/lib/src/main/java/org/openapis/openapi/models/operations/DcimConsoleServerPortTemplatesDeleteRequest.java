@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimConsoleServerPortTemplatesDeleteRequest {
-    
-    public DcimConsoleServerPortTemplatesDeletePathParams pathParams;
-    public DcimConsoleServerPortTemplatesDeleteRequest withPathParams(DcimConsoleServerPortTemplatesDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this console server port template.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimConsoleServerPortTemplatesDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

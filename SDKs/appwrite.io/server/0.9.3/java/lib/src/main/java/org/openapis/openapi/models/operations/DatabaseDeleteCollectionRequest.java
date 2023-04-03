@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatabaseDeleteCollectionRequest {
-    
-    public DatabaseDeleteCollectionPathParams pathParams;
-    public DatabaseDeleteCollectionRequest withPathParams(DatabaseDeleteCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DatabaseDeleteCollectionSecurity security;
-    public DatabaseDeleteCollectionRequest withSecurity(DatabaseDeleteCollectionSecurity security) {
-        this.security = security;
+    /**
+     * Collection unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collectionId")
+    public String collectionId;
+    public DatabaseDeleteCollectionRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
         return this;
     }
     

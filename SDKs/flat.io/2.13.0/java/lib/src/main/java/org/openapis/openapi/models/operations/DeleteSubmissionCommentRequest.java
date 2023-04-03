@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSubmissionCommentRequest {
-    
-    public DeleteSubmissionCommentPathParams pathParams;
-    public DeleteSubmissionCommentRequest withPathParams(DeleteSubmissionCommentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the assignment
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignment")
+    public String assignment;
+    public DeleteSubmissionCommentRequest withAssignment(String assignment) {
+        this.assignment = assignment;
         return this;
     }
     
+    /**
+     * Unique identifier of the class
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
+    public String class_;
+    public DeleteSubmissionCommentRequest withClass(String class_) {
+        this.class_ = class_;
+        return this;
+    }
     
-    public DeleteSubmissionCommentSecurity security;
-    public DeleteSubmissionCommentRequest withSecurity(DeleteSubmissionCommentSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the comment
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment")
+    public String comment;
+    public DeleteSubmissionCommentRequest withComment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the submission
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=submission")
+    public String submission;
+    public DeleteSubmissionCommentRequest withSubmission(String submission) {
+        this.submission = submission;
         return this;
     }
     

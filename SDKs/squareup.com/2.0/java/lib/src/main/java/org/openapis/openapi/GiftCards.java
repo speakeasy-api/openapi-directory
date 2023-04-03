@@ -37,10 +37,11 @@ public class GiftCards {
      * it can be used for payment. For more information, see 
      * [Selling gift cards](https://developer.squareup.com/docs/gift-cards/using-gift-cards-api#selling-square-gift-cards).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateGiftCardResponse createGiftCard(org.openapis.openapi.models.operations.CreateGiftCardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateGiftCardResponse createGiftCard(org.openapis.openapi.models.shared.CreateGiftCardRequest request, org.openapis.openapi.models.operations.CreateGiftCardSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/gift-cards");
         
@@ -54,7 +55,7 @@ public class GiftCards {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,24 +83,25 @@ public class GiftCards {
      * LinkCustomerToGiftCard
      * Links a customer to a gift card
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LinkCustomerToGiftCardResponse linkCustomerToGiftCard(org.openapis.openapi.models.operations.LinkCustomerToGiftCardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LinkCustomerToGiftCardResponse linkCustomerToGiftCard(org.openapis.openapi.models.operations.LinkCustomerToGiftCardRequest request, org.openapis.openapi.models.operations.LinkCustomerToGiftCardSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LinkCustomerToGiftCardPathParams.class, baseUrl, "/v2/gift-cards/{gift_card_id}/link-customer", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LinkCustomerToGiftCardRequest.class, baseUrl, "/v2/gift-cards/{gift_card_id}/link-customer", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "linkCustomerToGiftCardRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,10 +130,11 @@ public class GiftCards {
      * Lists all gift cards. You can specify optional filters to retrieve 
      * a subset of the gift cards.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListGiftCardsResponse listGiftCards(org.openapis.openapi.models.operations.ListGiftCardsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListGiftCardsResponse listGiftCards(org.openapis.openapi.models.operations.ListGiftCardsRequest request, org.openapis.openapi.models.operations.ListGiftCardsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/gift-cards");
         
@@ -139,14 +142,14 @@ public class GiftCards {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListGiftCardsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListGiftCardsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,19 +177,20 @@ public class GiftCards {
      * RetrieveGiftCard
      * Retrieves a gift card using its ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveGiftCardResponse retrieveGiftCard(org.openapis.openapi.models.operations.RetrieveGiftCardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveGiftCardResponse retrieveGiftCard(org.openapis.openapi.models.operations.RetrieveGiftCardRequest request, org.openapis.openapi.models.operations.RetrieveGiftCardSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveGiftCardPathParams.class, baseUrl, "/v2/gift-cards/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveGiftCardRequest.class, baseUrl, "/v2/gift-cards/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -214,10 +218,11 @@ public class GiftCards {
      * RetrieveGiftCardFromGAN
      * Retrieves a gift card using the gift card account number (GAN).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveGiftCardFromGANResponse retrieveGiftCardFromGAN(org.openapis.openapi.models.operations.RetrieveGiftCardFromGANRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveGiftCardFromGANResponse retrieveGiftCardFromGAN(org.openapis.openapi.models.shared.RetrieveGiftCardFromGANRequest request, org.openapis.openapi.models.operations.RetrieveGiftCardFromGANSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/gift-cards/from-gan");
         
@@ -231,7 +236,7 @@ public class GiftCards {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -259,10 +264,11 @@ public class GiftCards {
      * RetrieveGiftCardFromNonce
      * Retrieves a gift card using a nonce (a secure token) that represents the gift card.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveGiftCardFromNonceResponse retrieveGiftCardFromNonce(org.openapis.openapi.models.operations.RetrieveGiftCardFromNonceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveGiftCardFromNonceResponse retrieveGiftCardFromNonce(org.openapis.openapi.models.shared.RetrieveGiftCardFromNonceRequest request, org.openapis.openapi.models.operations.RetrieveGiftCardFromNonceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/gift-cards/from-nonce");
         
@@ -276,7 +282,7 @@ public class GiftCards {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -304,24 +310,25 @@ public class GiftCards {
      * UnlinkCustomerFromGiftCard
      * Unlinks a customer from a gift card
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnlinkCustomerFromGiftCardResponse unlinkCustomerFromGiftCard(org.openapis.openapi.models.operations.UnlinkCustomerFromGiftCardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnlinkCustomerFromGiftCardResponse unlinkCustomerFromGiftCard(org.openapis.openapi.models.operations.UnlinkCustomerFromGiftCardRequest request, org.openapis.openapi.models.operations.UnlinkCustomerFromGiftCardSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnlinkCustomerFromGiftCardPathParams.class, baseUrl, "/v2/gift-cards/{gift_card_id}/unlink-customer", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnlinkCustomerFromGiftCardRequest.class, baseUrl, "/v2/gift-cards/{gift_card_id}/unlink-customer", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "unlinkCustomerFromGiftCardRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

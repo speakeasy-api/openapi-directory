@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsDeleteTokenRequest {
-    
-    public AppsDeleteTokenPathParams pathParams;
-    public AppsDeleteTokenRequest withPathParams(AppsDeleteTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public AppsDeleteTokenRequestBody requestBody;
+    public AppsDeleteTokenRequest withRequestBody(AppsDeleteTokenRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public AppsDeleteTokenRequestBody request;
-    public AppsDeleteTokenRequest withRequest(AppsDeleteTokenRequestBody request) {
-        this.request = request;
+    /**
+     * The client ID of your GitHub app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
+    public String clientId;
+    public AppsDeleteTokenRequest withClientId(String clientId) {
+        this.clientId = clientId;
         return this;
     }
     

@@ -51,13 +51,13 @@ public class ServerStatistics {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminGetServerStatisticsResponse enterpriseAdminGetServerStatistics(org.openapis.openapi.models.operations.EnterpriseAdminGetServerStatisticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminGetServerStatisticsPathParams.class, baseUrl, "/enterprise-installation/{enterprise_or_org}/server-statistics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminGetServerStatisticsRequest.class, baseUrl, "/enterprise-installation/{enterprise_or_org}/server-statistics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminGetServerStatisticsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminGetServerStatisticsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

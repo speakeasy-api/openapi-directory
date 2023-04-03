@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserGetMembershipFromHardLinkedCredentialRequest {
+    /**
+     * The credential type. 'SteamId' is the only valid value at present.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crType")
+    public Long crType;
+    public UserGetMembershipFromHardLinkedCredentialRequest withCrType(Long crType) {
+        this.crType = crType;
+        return this;
+    }
     
-    public UserGetMembershipFromHardLinkedCredentialPathParams pathParams;
-    public UserGetMembershipFromHardLinkedCredentialRequest withPathParams(UserGetMembershipFromHardLinkedCredentialPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The credential to look up. Must be a valid SteamID64.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=credential")
+    public String credential;
+    public UserGetMembershipFromHardLinkedCredentialRequest withCredential(String credential) {
+        this.credential = credential;
         return this;
     }
     

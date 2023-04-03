@@ -4,34 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListUsageTriggerRequest {
-    
-    public ListUsageTriggerPathParams pathParams;
-    public ListUsageTriggerRequest withPathParams(ListUsageTriggerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the UsageTrigger resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListUsageTriggerRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListUsageTriggerQueryParams queryParams;
-    public ListUsageTriggerRequest withQueryParams(ListUsageTriggerQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListUsageTriggerRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListUsageTriggerSecurity security;
-    public ListUsageTriggerRequest withSecurity(ListUsageTriggerSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListUsageTriggerRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListUsageTriggerRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
     
-    public String serverURL;
-    public ListUsageTriggerRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The frequency of recurring UsageTriggers to read. Can be: `daily`, `monthly`, or `yearly` to read recurring UsageTriggers. An empty value or a value of `alltime` reads non-recurring UsageTriggers.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Recurring")
+    public org.openapis.openapi.models.shared.UsageTriggerEnumRecurringEnum recurring;
+    public ListUsageTriggerRequest withRecurring(org.openapis.openapi.models.shared.UsageTriggerEnumRecurringEnum recurring) {
+        this.recurring = recurring;
+        return this;
+    }
+    
+    /**
+     * The trigger field of the UsageTriggers to read.  Can be: `count`, `usage`, or `price` as described in the [UsageRecords documentation](https://www.twilio.com/docs/usage/api/usage-record#usage-count-price).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TriggerBy")
+    public org.openapis.openapi.models.shared.UsageTriggerEnumTriggerFieldEnum triggerBy;
+    public ListUsageTriggerRequest withTriggerBy(org.openapis.openapi.models.shared.UsageTriggerEnumTriggerFieldEnum triggerBy) {
+        this.triggerBy = triggerBy;
+        return this;
+    }
+    
+    /**
+     * The usage category of the UsageTriggers to read. Must be a supported [usage categories](https://www.twilio.com/docs/usage/api/usage-record#usage-categories).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UsageCategory")
+    public org.openapis.openapi.models.shared.UsageTriggerEnumUsageCategoryEnum usageCategory;
+    public ListUsageTriggerRequest withUsageCategory(org.openapis.openapi.models.shared.UsageTriggerEnumUsageCategoryEnum usageCategory) {
+        this.usageCategory = usageCategory;
         return this;
     }
     

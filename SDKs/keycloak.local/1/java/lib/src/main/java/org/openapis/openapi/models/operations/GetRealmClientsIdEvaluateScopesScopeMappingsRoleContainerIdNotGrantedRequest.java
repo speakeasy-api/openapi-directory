@@ -4,20 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmClientsIdEvaluateScopesScopeMappingsRoleContainerIdNotGrantedRequest {
-    
-    public GetRealmClientsIdEvaluateScopesScopeMappingsRoleContainerIdNotGrantedPathParams pathParams;
-    public GetRealmClientsIdEvaluateScopesScopeMappingsRoleContainerIdNotGrantedRequest withPathParams(GetRealmClientsIdEvaluateScopesScopeMappingsRoleContainerIdNotGrantedPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of client (not client-id)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetRealmClientsIdEvaluateScopesScopeMappingsRoleContainerIdNotGrantedRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmClientsIdEvaluateScopesScopeMappingsRoleContainerIdNotGrantedRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
     
-    public GetRealmClientsIdEvaluateScopesScopeMappingsRoleContainerIdNotGrantedQueryParams queryParams;
-    public GetRealmClientsIdEvaluateScopesScopeMappingsRoleContainerIdNotGrantedRequest withQueryParams(GetRealmClientsIdEvaluateScopesScopeMappingsRoleContainerIdNotGrantedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * either realm name OR client UUID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roleContainerId")
+    public String roleContainerId;
+    public GetRealmClientsIdEvaluateScopesScopeMappingsRoleContainerIdNotGrantedRequest withRoleContainerId(String roleContainerId) {
+        this.roleContainerId = roleContainerId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
+    public String scope;
+    public GetRealmClientsIdEvaluateScopesScopeMappingsRoleContainerIdNotGrantedRequest withScope(String scope) {
+        this.scope = scope;
         return this;
     }
     

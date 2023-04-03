@@ -18,11 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.FetchPhoneNumberSecurity;
-import org.openapis.openapi.models.operations.FetchPhoneNumberPathParams;
-import org.openapis.openapi.models.operations.FetchPhoneNumberQueryParams;
 import org.openapis.openapi.models.operations.FetchPhoneNumberRequest;
 import org.openapis.openapi.models.operations.FetchPhoneNumberResponse;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,32 +28,25 @@ public class Application {
                 .build();
 
             FetchPhoneNumberRequest req = new FetchPhoneNumberRequest() {{
-                security = new FetchPhoneNumberSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                pathParams = new FetchPhoneNumberPathParams() {{
-                    phoneNumber = "corrupti";
-                }};
-                queryParams = new FetchPhoneNumberQueryParams() {{
-                    addressCountryCode = "provident";
-                    addressLine1 = "distinctio";
-                    addressLine2 = "quibusdam";
-                    city = "Stiedemannstad";
-                    countryCode = "illum";
-                    dateOfBirth = "vel";
-                    fields = "error";
-                    firstName = "Luna";
-                    lastName = "Hoppe";
-                    nationalId = "iure";
-                    postalCode = "80923";
-                    state = "molestiae";
-                }};
-            }};            
+                addressCountryCode = "corrupti";
+                addressLine1 = "provident";
+                addressLine2 = "distinctio";
+                city = "New Orleans";
+                countryCode = "nulla";
+                dateOfBirth = "corrupti";
+                fields = "illum";
+                firstName = "Henry";
+                lastName = "Mueller";
+                nationalId = "deserunt";
+                phoneNumber = "suscipit";
+                postalCode = "28092";
+                state = "suscipit";
+            }}            
 
-            FetchPhoneNumberResponse res = sdk.fetchPhoneNumber(req);
+            FetchPhoneNumberResponse res = sdk.fetchPhoneNumber(req, new FetchPhoneNumberSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.lookupsV2PhoneNumber.isPresent()) {
                 // handle response
@@ -68,7 +58,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

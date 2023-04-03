@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.ActivateDockPathParams;
-import org.openapis.openapi.models.operations.ActivateDockHeaders;
 import org.openapis.openapi.models.operations.ActivateDockRequest;
 import org.openapis.openapi.models.operations.ActivateDockResponse;
 
@@ -27,24 +25,16 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    appKey = new SchemeAppKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                    appToken = new SchemeAppToken() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    appKey = "YOUR_API_KEY_HERE";
+                    appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             ActivateDockRequest req = new ActivateDockRequest() {{
-                pathParams = new ActivateDockPathParams() {{
-                    dockId = "corrupti";
-                }};
-                headers = new ActivateDockHeaders() {{
-                    accept = "provident";
-                    contentType = "distinctio";
-                }};
-            }};            
+                accept = "corrupti";
+                contentType = "provident";
+                dockId = "distinctio";
+            }}            
 
             ActivateDockResponse res = sdk.docks.activateDock(req);
 
@@ -58,7 +48,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### docks

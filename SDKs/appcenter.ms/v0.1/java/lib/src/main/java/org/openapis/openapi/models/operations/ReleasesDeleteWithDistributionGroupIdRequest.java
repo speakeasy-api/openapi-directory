@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesDeleteWithDistributionGroupIdRequest {
-    
-    public ReleasesDeleteWithDistributionGroupIdPathParams pathParams;
-    public ReleasesDeleteWithDistributionGroupIdRequest withPathParams(ReleasesDeleteWithDistributionGroupIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the app
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ReleasesDeleteWithDistributionGroupIdRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The name of the distribution group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
+    public String distributionGroupName;
+    public ReleasesDeleteWithDistributionGroupIdRequest withDistributionGroupName(String distributionGroupName) {
+        this.distributionGroupName = distributionGroupName;
+        return this;
+    }
     
-    public ReleasesDeleteWithDistributionGroupIdSecurity security;
-    public ReleasesDeleteWithDistributionGroupIdRequest withSecurity(ReleasesDeleteWithDistributionGroupIdSecurity security) {
-        this.security = security;
+    /**
+     * The name of the app owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ReleasesDeleteWithDistributionGroupIdRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * The ID identifying the unique release.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
+    public Long releaseId;
+    public ReleasesDeleteWithDistributionGroupIdRequest withReleaseId(Long releaseId) {
+        this.releaseId = releaseId;
         return this;
     }
     

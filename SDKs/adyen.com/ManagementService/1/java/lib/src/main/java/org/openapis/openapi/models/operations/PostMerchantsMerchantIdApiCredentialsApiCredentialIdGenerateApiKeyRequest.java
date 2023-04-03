@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeyRequest {
-    
-    public PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeyPathParams pathParams;
-    public PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeyRequest withPathParams(PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the API credential.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiCredentialId")
+    public String apiCredentialId;
+    public PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeyRequest withApiCredentialId(String apiCredentialId) {
+        this.apiCredentialId = apiCredentialId;
         return this;
     }
     
-    
-    public PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeySecurity security;
-    public PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeyRequest withSecurity(PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeySecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeyRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     

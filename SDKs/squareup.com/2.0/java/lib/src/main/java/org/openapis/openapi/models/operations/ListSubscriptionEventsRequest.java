@@ -4,27 +4,42 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSubscriptionEventsRequest {
-    
-    public ListSubscriptionEventsPathParams pathParams;
-    public ListSubscriptionEventsRequest withPathParams(ListSubscriptionEventsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A pagination cursor returned by a previous call to this endpoint.
+     * Provide this to retrieve the next set of results for the original query.
+     * 
+     * For more information, see [Pagination](https://developer.squareup.com/docs/working-with-apis/pagination).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListSubscriptionEventsRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
-    
-    public ListSubscriptionEventsQueryParams queryParams;
-    public ListSubscriptionEventsRequest withQueryParams(ListSubscriptionEventsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The upper limit on the number of subscription events to return
+     * in the response.
+     * 
+     * Default: `200`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListSubscriptionEventsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public ListSubscriptionEventsSecurity security;
-    public ListSubscriptionEventsRequest withSecurity(ListSubscriptionEventsSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the subscription to retrieve the events for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscription_id")
+    public String subscriptionId;
+    public ListSubscriptionEventsRequest withSubscriptionId(String subscriptionId) {
+        this.subscriptionId = subscriptionId;
         return this;
     }
     

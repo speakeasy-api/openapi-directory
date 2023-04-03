@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PayorGetBrandingRequest {
-    
-    public PayorGetBrandingPathParams pathParams;
-    public PayorGetBrandingRequest withPathParams(PayorGetBrandingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Payor Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payorId")
+    public String payorId;
+    public PayorGetBrandingRequest withPayorId(String payorId) {
+        this.payorId = payorId;
         return this;
     }
     

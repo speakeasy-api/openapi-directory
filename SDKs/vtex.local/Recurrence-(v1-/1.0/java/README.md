@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AddrecurrenceitemPathParams;
-import org.openapis.openapi.models.operations.AddrecurrenceitemHeaders;
 import org.openapis.openapi.models.operations.AddrecurrenceitemRequest;
 import org.openapis.openapi.models.operations.AddrecurrenceitemResponse;
 import org.openapis.openapi.models.shared.AddrecurrenceitemRequest;
@@ -29,56 +27,48 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    appKey = new SchemeAppKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                    appToken = new SchemeAppToken() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    appKey = "YOUR_API_KEY_HERE";
+                    appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddrecurrenceitemRequest req = new AddrecurrenceitemRequest() {{
-                pathParams = new AddrecurrenceitemPathParams() {{
-                    recurrenceId = "corrupti";
-                }};
-                headers = new AddrecurrenceitemHeaders() {{
-                    accept = "application/json";
-                    contentType = "application/json";
-                }};
-                request = new org.openapis.openapi.models.shared.AddrecurrenceitemRequest[]{{
+                accept = "application/json";
+                contentType = "application/json";
+                requestBody = new org.openapis.openapi.models.shared.AddrecurrenceitemRequest[]{{
                     add(new AddrecurrenceitemRequest() {{
                         frequency = new Frequency() {{
-                            interval = 715190;
-                            periodicity = "quibusdam";
+                            interval = 592845;
+                            periodicity = "distinctio";
                         }};
-                        quantity = 602763;
-                        seller = "nulla";
-                        shippingAddressId = "corrupti";
-                        sku = "illum";
+                        quantity = 844266;
+                        seller = "unde";
+                        shippingAddressId = "nulla";
+                        sku = "corrupti";
                     }}),
                     add(new AddrecurrenceitemRequest() {{
                         frequency = new Frequency() {{
-                            interval = 423655;
-                            periodicity = "error";
+                            interval = 847252;
+                            periodicity = "vel";
                         }};
-                        quantity = 645894;
-                        seller = "suscipit";
-                        shippingAddressId = "iure";
-                        sku = "magnam";
-                    }}),
-                    add(new AddrecurrenceitemRequest() {{
-                        frequency = new Frequency() {{
-                            interval = 891773;
-                            periodicity = "ipsa";
-                        }};
-                        quantity = 963663;
-                        seller = "tempora";
+                        quantity = 623564;
+                        seller = "deserunt";
                         shippingAddressId = "suscipit";
-                        sku = "molestiae";
+                        sku = "iure";
+                    }}),
+                    add(new AddrecurrenceitemRequest() {{
+                        frequency = new Frequency() {{
+                            interval = 297534;
+                            periodicity = "debitis";
+                        }};
+                        quantity = 56713;
+                        seller = "delectus";
+                        shippingAddressId = "tempora";
+                        sku = "suscipit";
                     }}),
                 }};
-            }};            
+                recurrenceId = "molestiae";
+            }}            
 
             AddrecurrenceitemResponse res = sdk.miscellaneous.addrecurrenceitem(req);
 
@@ -92,7 +82,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### miscellaneous

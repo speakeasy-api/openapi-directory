@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddMembersToCallQueueRequest {
-    
-    public AddMembersToCallQueuePathParams pathParams;
-    public AddMembersToCallQueueRequest withPathParams(AddMembersToCallQueuePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AddMembersToCallQueueApplicationJSON request;
-    public AddMembersToCallQueueRequest withRequest(AddMembersToCallQueueApplicationJSON request) {
-        this.request = request;
+    public AddMembersToCallQueueApplicationJSON requestBody;
+    public AddMembersToCallQueueRequest withRequestBody(AddMembersToCallQueueApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public AddMembersToCallQueueSecurity security;
-    public AddMembersToCallQueueRequest withSecurity(AddMembersToCallQueueSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the Call Queue.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=callQueueId")
+    public String callQueueId;
+    public AddMembersToCallQueueRequest withCallQueueId(String callQueueId) {
+        this.callQueueId = callQueueId;
         return this;
     }
     

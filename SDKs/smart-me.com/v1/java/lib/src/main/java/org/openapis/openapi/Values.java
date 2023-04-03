@@ -38,7 +38,7 @@ public class Values {
      */
     public org.openapis.openapi.models.operations.ValuesGetResponse valuesGet(org.openapis.openapi.models.operations.ValuesGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ValuesGetPathParams.class, baseUrl, "/api/Values/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ValuesGetRequest.class, baseUrl, "/api/Values/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

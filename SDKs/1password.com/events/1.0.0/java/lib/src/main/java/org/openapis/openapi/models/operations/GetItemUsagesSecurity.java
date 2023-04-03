@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemUsagesSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer")
-    public org.openapis.openapi.models.shared.SchemeJwtsa jwtsa;
-    public GetItemUsagesSecurity withJwtsa(org.openapis.openapi.models.shared.SchemeJwtsa jwtsa) {
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
+    public String jwtsa;
+    public GetItemUsagesSecurity withJwtsa(String jwtsa) {
         this.jwtsa = jwtsa;
         return this;
     }

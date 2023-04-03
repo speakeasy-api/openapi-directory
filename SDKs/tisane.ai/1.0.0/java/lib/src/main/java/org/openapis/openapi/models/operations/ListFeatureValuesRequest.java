@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListFeatureValuesRequest {
-    
-    public ListFeatureValuesQueryParams queryParams;
-    public ListFeatureValuesRequest withQueryParams(ListFeatureValuesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * {{apiKeyDescription}}
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Ocp-Apim-Subscription-Key")
+    public String ocpApimSubscriptionKey;
+    public ListFeatureValuesRequest withOcpApimSubscriptionKey(String ocpApimSubscriptionKey) {
+        this.ocpApimSubscriptionKey = ocpApimSubscriptionKey;
         return this;
     }
     
+    /**
+     * (Required) Feature list name (localized)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public ListFeatureValuesRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
     
-    public ListFeatureValuesHeaders headers;
-    public ListFeatureValuesRequest withHeaders(ListFeatureValuesHeaders headers) {
-        this.headers = headers;
+    /**
+     * (Required) Language code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public ListFeatureValuesRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * (Required) Feature type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public ListFeatureValuesRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

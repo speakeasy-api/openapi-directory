@@ -31,11 +31,9 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetFlightOffersTravelClassEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetFlightOffersQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFlightOffersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFlightOffersSuccess.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFlightOffersResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/SearchFlightOffersHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchFlightOffersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchFlightOffersSuccess.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchFlightOffersResponse.java

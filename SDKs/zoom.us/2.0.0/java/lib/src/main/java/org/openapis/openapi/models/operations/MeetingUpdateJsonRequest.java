@@ -7,34 +7,35 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MeetingUpdateJsonRequest {
-    
-    public MeetingUpdateJsonPathParams pathParams;
-    public MeetingUpdateJsonRequest withPathParams(MeetingUpdateJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public MeetingUpdateJsonQueryParams queryParams;
-    public MeetingUpdateJsonRequest withQueryParams(MeetingUpdateJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Meeting
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public MeetingUpdateApplicationJSON request;
-    public MeetingUpdateJsonRequest withRequest(MeetingUpdateApplicationJSON request) {
-        this.request = request;
+    public MeetingUpdateApplicationJSON requestBody;
+    public MeetingUpdateJsonRequest withRequestBody(MeetingUpdateApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
+     * 
+     * While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public Long meetingId;
+    public MeetingUpdateJsonRequest withMeetingId(Long meetingId) {
+        this.meetingId = meetingId;
+        return this;
+    }
     
-    public MeetingUpdateJsonSecurity security;
-    public MeetingUpdateJsonRequest withSecurity(MeetingUpdateJsonSecurity security) {
-        this.security = security;
+    /**
+     * Meeting occurrence id. Support change of agenda, start_time, duration, settings: {host_video, participant_video, join_before_host, mute_upon_entry, waiting_room, watermark, auto_recording}
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurrence_id")
+    public String occurrenceId;
+    public MeetingUpdateJsonRequest withOccurrenceId(String occurrenceId) {
+        this.occurrenceId = occurrenceId;
         return this;
     }
     

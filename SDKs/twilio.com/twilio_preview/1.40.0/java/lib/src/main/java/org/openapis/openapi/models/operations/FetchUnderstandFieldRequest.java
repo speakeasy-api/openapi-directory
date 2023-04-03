@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchUnderstandFieldRequest {
-    
-    public FetchUnderstandFieldPathParams pathParams;
-    public FetchUnderstandFieldRequest withPathParams(FetchUnderstandFieldPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the Assistant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public FetchUnderstandFieldRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
-    
-    public FetchUnderstandFieldSecurity security;
-    public FetchUnderstandFieldRequest withSecurity(FetchUnderstandFieldSecurity security) {
-        this.security = security;
+    /**
+     * A 34 character string that uniquely identifies this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchUnderstandFieldRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchUnderstandFieldRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique ID of the Task associated with this Field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TaskSid")
+    public String taskSid;
+    public FetchUnderstandFieldRequest withTaskSid(String taskSid) {
+        this.taskSid = taskSid;
         return this;
     }
     

@@ -7,20 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddBankTransferBatchPaymentRequest {
-    
-    public AddBankTransferBatchPaymentPathParams pathParams;
-    public AddBankTransferBatchPaymentRequest withPathParams(AddBankTransferBatchPaymentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Details of **Mode 1** &amp; **Mode 2**.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public AddBankTransferBatchPaymentRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public AddBankTransferBatchPaymentRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=batchUuid")
+    public String batchUuid;
+    public AddBankTransferBatchPaymentRequest withBatchUuid(String batchUuid) {
+        this.batchUuid = batchUuid;
         return this;
     }
     

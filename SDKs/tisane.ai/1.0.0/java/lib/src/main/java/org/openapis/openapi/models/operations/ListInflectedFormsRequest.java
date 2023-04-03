@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListInflectedFormsRequest {
-    
-    public ListInflectedFormsQueryParams queryParams;
-    public ListInflectedFormsRequest withQueryParams(ListInflectedFormsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * {{apiKeyDescription}}
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Ocp-Apim-Subscription-Key")
+    public String ocpApimSubscriptionKey;
+    public ListInflectedFormsRequest withOcpApimSubscriptionKey(String ocpApimSubscriptionKey) {
+        this.ocpApimSubscriptionKey = ocpApimSubscriptionKey;
         return this;
     }
     
+    /**
+     * (Required) The family to inspect
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=family")
+    public String family;
+    public ListInflectedFormsRequest withFamily(String family) {
+        this.family = family;
+        return this;
+    }
     
-    public ListInflectedFormsHeaders headers;
-    public ListInflectedFormsRequest withHeaders(ListInflectedFormsHeaders headers) {
-        this.headers = headers;
+    /**
+     * (Required) The language code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public ListInflectedFormsRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * (Required) The lexeme to inspect
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lexeme")
+    public String lexeme;
+    public ListInflectedFormsRequest withLexeme(String lexeme) {
+        this.lexeme = lexeme;
         return this;
     }
     

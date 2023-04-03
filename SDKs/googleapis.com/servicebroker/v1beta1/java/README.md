@@ -18,15 +18,11 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersCreateSecurity;
-import org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersCreatePathParams;
-import org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersCreateQueryParams;
 import org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersCreateRequest;
 import org.openapis.openapi.models.operations.ServicebrokerProjectsBrokersCreateResponse;
-import org.openapis.openapi.models.shared.GoogleCloudServicebrokerV1beta1Broker;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.GoogleCloudServicebrokerV1beta1Broker;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -35,39 +31,30 @@ public class Application {
                 .build();
 
             ServicebrokerProjectsBrokersCreateRequest req = new ServicebrokerProjectsBrokersCreateRequest() {{
-                security = new ServicebrokerProjectsBrokersCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                dollarXgafv = "2";
+                googleCloudServicebrokerV1beta1Broker = new GoogleCloudServicebrokerV1beta1Broker() {{
+                    createTime = "provident";
+                    name = "distinctio";
+                    title = "Dr.";
+                    url = "unde";
                 }};
-                pathParams = new ServicebrokerProjectsBrokersCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new ServicebrokerProjectsBrokersCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new GoogleCloudServicebrokerV1beta1Broker() {{
-                    createTime = "suscipit";
-                    name = "iure";
-                    title = "Mrs.";
-                    url = "debitis";
-                }};
-            }};            
+                accessToken = "nulla";
+                alt = "media";
+                callback = "illum";
+                fields = "vel";
+                key = "error";
+                oauthToken = "deserunt";
+                parent = "suscipit";
+                prettyPrint = false;
+                quotaUser = "iure";
+                uploadType = "magnam";
+                uploadProtocol = "debitis";
+            }}            
 
-            ServicebrokerProjectsBrokersCreateResponse res = sdk.projects.servicebrokerProjectsBrokersCreate(req);
+            ServicebrokerProjectsBrokersCreateResponse res = sdk.projects.servicebrokerProjectsBrokersCreate(req, new ServicebrokerProjectsBrokersCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.body.isPresent()) {
                 // handle response
@@ -79,7 +66,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

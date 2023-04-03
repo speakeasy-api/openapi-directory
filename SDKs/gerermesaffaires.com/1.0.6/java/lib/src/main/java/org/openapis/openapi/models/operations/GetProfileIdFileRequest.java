@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProfileIdFileRequest {
-    
-    public GetProfileIdFileQueryParams queryParams;
-    public GetProfileIdFileRequest withQueryParams(GetProfileIdFileQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * to get a contract (if not signed error 404 + html contract)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Contract")
+    public String contract;
+    public GetProfileIdFileRequest withContract(String contract) {
+        this.contract = contract;
         return this;
     }
     

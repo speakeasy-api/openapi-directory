@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WipeNetworkSmDevicesRequest {
-    
-    public WipeNetworkSmDevicesPathParams pathParams;
-    public WipeNetworkSmDevicesRequest withPathParams(WipeNetworkSmDevicesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public WipeNetworkSmDevicesRequestBody requestBody;
+    public WipeNetworkSmDevicesRequest withRequestBody(WipeNetworkSmDevicesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public WipeNetworkSmDevicesRequestBody request;
-    public WipeNetworkSmDevicesRequest withRequest(WipeNetworkSmDevicesRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public WipeNetworkSmDevicesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

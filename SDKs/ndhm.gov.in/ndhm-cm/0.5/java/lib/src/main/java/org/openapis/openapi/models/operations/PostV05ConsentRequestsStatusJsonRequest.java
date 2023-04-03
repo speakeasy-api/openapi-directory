@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05ConsentRequestsStatusJsonRequest {
-    
-    public PostV05ConsentRequestsStatusJsonHeaders headers;
-    public PostV05ConsentRequestsStatusJsonRequest withHeaders(PostV05ConsentRequestsStatusJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05ConsentRequestsStatusJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ConsentRequestStatusRequest request;
-    public PostV05ConsentRequestsStatusJsonRequest withRequest(org.openapis.openapi.models.shared.ConsentRequestStatusRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ConsentRequestStatusRequest consentRequestStatusRequest;
+    public PostV05ConsentRequestsStatusJsonRequest withConsentRequestStatusRequest(org.openapis.openapi.models.shared.ConsentRequestStatusRequest consentRequestStatusRequest) {
+        this.consentRequestStatusRequest = consentRequestStatusRequest;
         return this;
     }
     

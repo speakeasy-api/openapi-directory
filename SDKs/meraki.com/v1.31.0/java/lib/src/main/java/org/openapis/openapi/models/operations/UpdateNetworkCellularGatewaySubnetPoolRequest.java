@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkCellularGatewaySubnetPoolRequest {
-    
-    public UpdateNetworkCellularGatewaySubnetPoolPathParams pathParams;
-    public UpdateNetworkCellularGatewaySubnetPoolRequest withPathParams(UpdateNetworkCellularGatewaySubnetPoolPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkCellularGatewaySubnetPoolRequestBody requestBody;
+    public UpdateNetworkCellularGatewaySubnetPoolRequest withRequestBody(UpdateNetworkCellularGatewaySubnetPoolRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkCellularGatewaySubnetPoolRequestBody request;
-    public UpdateNetworkCellularGatewaySubnetPoolRequest withRequest(UpdateNetworkCellularGatewaySubnetPoolRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkCellularGatewaySubnetPoolRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

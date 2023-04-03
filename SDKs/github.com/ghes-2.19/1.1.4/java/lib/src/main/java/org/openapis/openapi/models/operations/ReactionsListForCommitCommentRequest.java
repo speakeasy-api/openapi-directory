@@ -4,20 +4,60 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsListForCommitCommentRequest {
-    
-    public ReactionsListForCommitCommentPathParams pathParams;
-    public ReactionsListForCommitCommentRequest withPathParams(ReactionsListForCommitCommentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * comment_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
+    public Long commentId;
+    public ReactionsListForCommitCommentRequest withCommentId(Long commentId) {
+        this.commentId = commentId;
         return this;
     }
     
+    /**
+     * Returns a single [reaction type](https://docs.github.com/enterprise-server@2.19/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a commit comment.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content")
+    public ReactionsListForCommitCommentContentEnum content;
+    public ReactionsListForCommitCommentRequest withContent(ReactionsListForCommitCommentContentEnum content) {
+        this.content = content;
+        return this;
+    }
     
-    public ReactionsListForCommitCommentQueryParams queryParams;
-    public ReactionsListForCommitCommentRequest withQueryParams(ReactionsListForCommitCommentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReactionsListForCommitCommentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReactionsListForCommitCommentRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReactionsListForCommitCommentRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReactionsListForCommitCommentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

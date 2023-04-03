@@ -4,13 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVendorProjectsRequest {
+    /**
+     * Return only projects that have been completed. When `true`, this makes `joined` true as well.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completed")
+    public Boolean completed;
+    public GetVendorProjectsRequest withCompleted(Boolean completed) {
+        this.completed = completed;
+        return this;
+    }
     
-    public GetVendorProjectsQueryParams queryParams;
-    public GetVendorProjectsRequest withQueryParams(GetVendorProjectsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return only projects that this user has already joined
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=joined")
+    public Boolean joined;
+    public GetVendorProjectsRequest withJoined(Boolean joined) {
+        this.joined = joined;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetVendorProjectsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetVendorProjectsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

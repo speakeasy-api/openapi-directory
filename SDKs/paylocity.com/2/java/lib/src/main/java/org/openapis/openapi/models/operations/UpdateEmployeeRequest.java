@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateEmployeeRequest {
-    
-    public UpdateEmployeePathParams pathParams;
-    public UpdateEmployeeRequest withPathParams(UpdateEmployeePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Company Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public UpdateEmployeeRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
@@ -18,16 +21,19 @@ public class UpdateEmployeeRequest {
      * Employee Model
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Employee request;
-    public UpdateEmployeeRequest withRequest(org.openapis.openapi.models.shared.Employee request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Employee employee;
+    public UpdateEmployeeRequest withEmployee(org.openapis.openapi.models.shared.Employee employee) {
+        this.employee = employee;
         return this;
     }
     
-    
-    public UpdateEmployeeSecurity security;
-    public UpdateEmployeeRequest withSecurity(UpdateEmployeeSecurity security) {
-        this.security = security;
+    /**
+     * Employee Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
+    public String employeeId;
+    public UpdateEmployeeRequest withEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
         return this;
     }
     

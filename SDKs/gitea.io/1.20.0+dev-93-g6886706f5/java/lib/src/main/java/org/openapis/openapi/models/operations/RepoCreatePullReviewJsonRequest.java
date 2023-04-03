@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoCreatePullReviewJsonRequest {
-    
-    public RepoCreatePullReviewJsonPathParams pathParams;
-    public RepoCreatePullReviewJsonRequest withPathParams(RepoCreatePullReviewJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreatePullReviewOptions createPullReviewOptions;
+    public RepoCreatePullReviewJsonRequest withCreatePullReviewOptions(org.openapis.openapi.models.shared.CreatePullReviewOptions createPullReviewOptions) {
+        this.createPullReviewOptions = createPullReviewOptions;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreatePullReviewOptions request;
-    public RepoCreatePullReviewJsonRequest withRequest(org.openapis.openapi.models.shared.CreatePullReviewOptions request) {
-        this.request = request;
+    /**
+     * index of the pull request
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public RepoCreatePullReviewJsonRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoCreatePullReviewJsonRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoCreatePullReviewJsonRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

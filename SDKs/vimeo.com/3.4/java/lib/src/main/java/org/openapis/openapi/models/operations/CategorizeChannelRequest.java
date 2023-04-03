@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CategorizeChannelRequest {
-    
-    public CategorizeChannelPathParams pathParams;
-    public CategorizeChannelRequest withPathParams(CategorizeChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the category.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category")
+    public String category;
+    public CategorizeChannelRequest withCategory(String category) {
+        this.category = category;
         return this;
     }
     
-    
-    public CategorizeChannelSecurity security;
-    public CategorizeChannelRequest withSecurity(CategorizeChannelSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public CategorizeChannelRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     

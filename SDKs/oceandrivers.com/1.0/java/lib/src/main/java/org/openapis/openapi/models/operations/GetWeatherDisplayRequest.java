@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWeatherDisplayRequest {
-    
-    public GetWeatherDisplayPathParams pathParams;
-    public GetWeatherDisplayRequest withPathParams(GetWeatherDisplayPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Period of time to get the data latestdata|latesthour|latestday|dailylog
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
+    public String period;
+    public GetWeatherDisplayRequest withPeriod(String period) {
+        this.period = period;
         return this;
     }
     
-    
-    public GetWeatherDisplayQueryParams queryParams;
-    public GetWeatherDisplayRequest withQueryParams(GetWeatherDisplayQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * currently: 'cnarenal'|'campastilla' | 'cncg'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stationName")
+    public String stationName;
+    public GetWeatherDisplayRequest withStationName(String stationName) {
+        this.stationName = stationName;
         return this;
     }
     

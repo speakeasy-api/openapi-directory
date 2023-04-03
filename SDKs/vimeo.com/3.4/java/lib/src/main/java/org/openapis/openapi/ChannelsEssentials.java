@@ -35,10 +35,11 @@ public class ChannelsEssentials {
      * Create a channel
      * This method creates a new channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateChannelResponse createChannel(org.openapis.openapi.models.operations.CreateChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateChannelResponse createChannel(org.openapis.openapi.models.operations.CreateChannelRequestBody request, org.openapis.openapi.models.operations.CreateChannelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/channels");
         
@@ -52,7 +53,7 @@ public class ChannelsEssentials {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -87,19 +88,20 @@ public class ChannelsEssentials {
     /**
      * Delete a channel
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteChannelResponse deleteChannel(org.openapis.openapi.models.operations.DeleteChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteChannelResponse deleteChannel(org.openapis.openapi.models.operations.DeleteChannelRequest request, org.openapis.openapi.models.operations.DeleteChannelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteChannelPathParams.class, baseUrl, "/channels/{channel_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteChannelRequest.class, baseUrl, "/channels/{channel_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,21 +131,22 @@ public class ChannelsEssentials {
      * Edit a channel
      * This method edits the specified channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EditChannelResponse editChannel(org.openapis.openapi.models.operations.EditChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EditChannelResponse editChannel(org.openapis.openapi.models.operations.EditChannelRequest request, org.openapis.openapi.models.operations.EditChannelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditChannelPathParams.class, baseUrl, "/channels/{channel_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditChannelRequest.class, baseUrl, "/channels/{channel_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -183,7 +186,7 @@ public class ChannelsEssentials {
      */
     public org.openapis.openapi.models.operations.GetChannelResponse getChannel(org.openapis.openapi.models.operations.GetChannelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelPathParams.class, baseUrl, "/channels/{channel_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelRequest.class, baseUrl, "/channels/{channel_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -222,13 +225,13 @@ public class ChannelsEssentials {
      */
     public org.openapis.openapi.models.operations.GetChannelSubscriptionsResponse getChannelSubscriptions(org.openapis.openapi.models.operations.GetChannelSubscriptionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelSubscriptionsPathParams.class, baseUrl, "/users/{user_id}/channels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelSubscriptionsRequest.class, baseUrl, "/users/{user_id}/channels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChannelSubscriptionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChannelSubscriptionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -275,7 +278,7 @@ public class ChannelsEssentials {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChannelSubscriptionsAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChannelSubscriptionsAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -322,7 +325,7 @@ public class ChannelsEssentials {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChannelsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChannelsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

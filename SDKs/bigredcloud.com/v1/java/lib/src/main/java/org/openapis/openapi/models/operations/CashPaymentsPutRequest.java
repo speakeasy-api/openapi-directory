@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CashPaymentsPutRequest {
-    
-    public CashPaymentsPutPathParams pathParams;
-    public CashPaymentsPutRequest withPathParams(CashPaymentsPutPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Information of Cash Receipt to update.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CashPaymentDto request;
-    public CashPaymentsPutRequest withRequest(org.openapis.openapi.models.shared.CashPaymentDto request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CashPaymentDto cashPaymentDto;
+    public CashPaymentsPutRequest withCashPaymentDto(org.openapis.openapi.models.shared.CashPaymentDto cashPaymentDto) {
+        this.cashPaymentDto = cashPaymentDto;
+        return this;
+    }
+    
+    /**
+     * Id of Cash Receipt to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CashPaymentsPutRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

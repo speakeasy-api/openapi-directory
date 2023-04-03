@@ -46,8 +46,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateBankAccountSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateBankAccountPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateBankAccountHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateBankAccountUpdateRequestBodyForBankAccountAccountStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateBankAccountUpdateRequestBodyForBankAccountDefaultAccountEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateBankAccountUpdateRequestBodyForBankAccount.java
@@ -65,7 +63,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/UpdateBankAccount201App
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateBankAccount201ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateBankAccountResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateBankAccountSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateBankAccountHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateBankAccountRequestBodyAccountStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateBankAccountRequestBodyDefaultAccountEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateBankAccountRequestBodyInput.java
@@ -83,8 +80,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateBankAccount201App
 lib/src/main/java/org/openapis/openapi/models/operations/CreateBankAccount201ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateBankAccountResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllBankAccountsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetAllBankAccountsQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetAllBankAccountsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllBankAccountsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllBankAccounts500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllBankAccounts429ApplicationJSON.java
@@ -100,8 +95,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetAllBankAccounts200Ap
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllBankAccounts200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllBankAccountsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBankAccountSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetBankAccountPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetBankAccountHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBankAccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBankAccount500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBankAccount429ApplicationJSON.java
@@ -116,7 +109,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetBankAccount200Applic
 lib/src/main/java/org/openapis/openapi/models/operations/GetBankAccount200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBankAccountResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateFeeSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateFeeHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateFeeRootTypeForFeeSubTransactionTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateFeeRootTypeForFee.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateFeeRequest.java
@@ -137,8 +129,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateFeeRootTypeForFee
 lib/src/main/java/org/openapis/openapi/models/operations/CreateFeeRootTypeForFeeCreationResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateFeeResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllFinancialProductsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetAllFinancialProductsQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetAllFinancialProductsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllFinancialProductsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllFinancialProducts500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllFinancialProducts429ApplicationJSON.java
@@ -154,7 +144,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetAllFinancialProducts
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllFinancialProducts200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllFinancialProductsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExecuteBuyTrasactionSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/ExecuteBuyTrasactionHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExecuteBuyTrasactionBuyTransactionRequestInstructionBuySell.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExecuteBuyTrasactionBuyTransactionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExecuteBuyTrasactionRequest.java
@@ -178,7 +167,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ExecuteBuyTrasaction200
 lib/src/main/java/org/openapis/openapi/models/operations/ExecuteBuyTrasaction200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExecuteBuyTrasactionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExecuteSellTrasactionSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/ExecuteSellTrasactionHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExecuteSellTrasactionSellTransactionRequestInstructionBuySell.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExecuteSellTrasactionSellTransactionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExecuteSellTrasactionRequest.java
@@ -203,8 +191,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ExecuteSellTrasaction20
 lib/src/main/java/org/openapis/openapi/models/operations/ExecuteSellTrasactionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetConfiguredInvestmentProductPricesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetConfiguredInvestmentProductPricesStatusEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetConfiguredInvestmentProductPricesQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetConfiguredInvestmentProductPricesHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetConfiguredInvestmentProductPricesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetConfiguredInvestmentProductPrices500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetConfiguredInvestmentProductPrices429ApplicationJSON.java
@@ -216,8 +202,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetConfiguredInvestment
 lib/src/main/java/org/openapis/openapi/models/operations/GetConfiguredInvestmentProductPricesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetConfiguredInvestmentProductsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetConfiguredInvestmentProductsStatusEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetConfiguredInvestmentProductsQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetConfiguredInvestmentProductsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetConfiguredInvestmentProductsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetConfiguredInvestmentProducts500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetConfiguredInvestmentProducts429ApplicationJSON.java
@@ -231,8 +215,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetConfiguredInvestment
 lib/src/main/java/org/openapis/openapi/models/operations/GetConfiguredInvestmentProductsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInvestmentProductSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInvestmentProductCategoryIDEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetInvestmentProductPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetInvestmentProductHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInvestmentProductRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInvestmentProduct500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInvestmentProduct429ApplicationJSON.java
@@ -247,8 +229,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetInvestmentProduct200
 lib/src/main/java/org/openapis/openapi/models/operations/GetInvestmentProductResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInvestmentProductPriceSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInvestmentProductPriceCategoryIDEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetInvestmentProductPricePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetInvestmentProductPriceHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInvestmentProductPriceRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInvestmentProductPrice500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInvestmentProductPrice429ApplicationJSON.java
@@ -258,8 +238,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetInvestmentProductPri
 lib/src/main/java/org/openapis/openapi/models/operations/GetInvestmentProductPrice200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInvestmentProductPriceResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllinvestorAccountsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetAllinvestorAccountsQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetAllinvestorAccountsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllinvestorAccountsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllinvestorAccounts500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllinvestorAccounts429ApplicationJSON.java
@@ -275,8 +253,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetAllinvestorAccounts2
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllinvestorAccounts200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllinvestorAccountsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetinvestorAccountSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetinvestorAccountPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetinvestorAccountHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetinvestorAccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetinvestorAccount500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetinvestorAccount429ApplicationJSON.java
@@ -291,7 +267,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetinvestorAccount200Ap
 lib/src/main/java/org/openapis/openapi/models/operations/GetinvestorAccount200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetinvestorAccountResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateInvestorSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateInvestorHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateInvestorRootTypeForInvestorCreationRequestAddress.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateInvestorRootTypeForInvestorCreationRequestBankAccountsAccountStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateInvestorRootTypeForInvestorCreationRequestBankAccountsDefaultAccountEnum.java
@@ -335,8 +310,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateInvestorRootTypeF
 lib/src/main/java/org/openapis/openapi/models/operations/CreateInvestorResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllInvestorsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllInvestorsSortEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetAllInvestorsQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetAllInvestorsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllInvestorsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllInvestors500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllInvestors429ApplicationJSON.java
@@ -360,8 +333,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetAllInvestors200Appli
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllInvestors200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllInvestorsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInvestorSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetInvestorPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetInvestorHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInvestorRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInvestor500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInvestor429ApplicationJSON.java
@@ -385,8 +356,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetInvestorRootTypeForI
 lib/src/main/java/org/openapis/openapi/models/operations/GetInvestorRootTypeForInvestor.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInvestorResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateInvestorSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateInvestorPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateInvestorHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateInvestorUpdateRequestBodyForInvestorAddress.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateInvestorUpdateRequestBodyForInvestorDateOfBirth.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateInvestorUpdateRequestBodyForInvestorDealingStatusEnum.java
@@ -425,7 +394,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/UpdateInvestorRootTypeF
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateInvestorRootTypeForInvestor.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateInvestorResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateSinglePaymentIntentSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateSinglePaymentIntentHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateSinglePaymentIntentRequestBodyInvestmentInstructions.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateSinglePaymentIntentRequestBodyPaymentTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateSinglePaymentIntentRequestBodyPurposeEnum.java
@@ -450,8 +418,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateSinglePaymentInte
 lib/src/main/java/org/openapis/openapi/models/operations/CreateSinglePaymentIntentResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllPaymentsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllPaymentsSortEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetAllPaymentsQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetAllPaymentsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllPaymentsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllPayments500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllPayments429ApplicationJSON.java
@@ -469,8 +435,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetAllPayments200Applic
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllPayments200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllPaymentsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPaymentSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPaymentPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPaymentHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPaymentRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPayment500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPayment429ApplicationJSON.java
@@ -487,9 +451,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetPaymentRootTypeForPa
 lib/src/main/java/org/openapis/openapi/models/operations/GetPaymentRootTypeForPayments.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPaymentResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotPaymentsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPotPaymentsPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPotPaymentsQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPotPaymentsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotPaymentsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotPayments500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotPayments429ApplicationJSON.java
@@ -505,7 +466,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetPotPayments200Applic
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotPayments200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotPaymentsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreatePortfolioTemplateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreatePortfolioTemplateHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreatePortfolioTemplateRequestBodyRatios.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreatePortfolioTemplateRequestBodyInput.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreatePortfolioTemplateRequest.java
@@ -519,7 +479,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreatePortfolioTemplate
 lib/src/main/java/org/openapis/openapi/models/operations/CreatePortfolioTemplate201ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreatePortfolioTemplateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllPortfolioTemplatesSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetAllPortfolioTemplatesHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllPortfolioTemplatesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllPortfolioTemplates500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllPortfolioTemplates429ApplicationJSON.java
@@ -531,8 +490,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetAllPortfolioTemplate
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllPortfolioTemplates200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAllPortfolioTemplatesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPortfolioTemplateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPortfolioTemplatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPortfolioTemplateHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPortfolioTemplateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPortfolioTemplate500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPortfolioTemplate429ApplicationJSON.java
@@ -543,8 +500,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetPortfolioTemplate200
 lib/src/main/java/org/openapis/openapi/models/operations/GetPortfolioTemplate200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPortfolioTemplateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdatePortfolioTemplateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdatePortfolioTemplatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdatePortfolioTemplateHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdatePortfolioTemplateRequestBodyRatios.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdatePortfolioTemplateRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdatePortfolioTemplateRequest.java
@@ -560,8 +515,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/UpdatePortfolioTemplate
 lib/src/main/java/org/openapis/openapi/models/operations/UpdatePortfolioTemplate200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdatePortfolioTemplateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdatePotSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdatePotPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdatePotHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdatePotUpdateRequestBodyForPotStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdatePotUpdateRequestBodyForPot.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdatePotRequest.java
@@ -578,7 +531,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/UpdatePot200Application
 lib/src/main/java/org/openapis/openapi/models/operations/UpdatePot200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdatePotResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreatePotSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreatePotHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreatePotRequestBodyPotCurrencyEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreatePotRequestBodyStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreatePotRequestBodyInput.java
@@ -595,8 +547,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreatePot201Application
 lib/src/main/java/org/openapis/openapi/models/operations/CreatePot201ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreatePotResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPotPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPotHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPot500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPot429ApplicationJSON.java
@@ -608,8 +558,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetPot200ApplicationJSO
 lib/src/main/java/org/openapis/openapi/models/operations/GetPot200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotHoldingsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPotHoldingsPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPotHoldingsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotHoldingsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotHoldings500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotHoldings429ApplicationJSON.java
@@ -621,10 +569,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetPotHoldings200Applic
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotHoldings200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotHoldingsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotTransactionsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPotTransactionsPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotTransactionsSortEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPotTransactionsQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPotTransactionsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotTransactionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotTransactions500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotTransactions429ApplicationJSON.java
@@ -641,8 +586,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetPotTransactions200Ap
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotTransactions200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotTransactionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotValueSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPotValuePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPotValueHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotValueRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotValue500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotValue429ApplicationJSON.java
@@ -653,9 +596,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetPotValue400Applicati
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotValue200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotValueResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPotsPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPotsQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPotsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPots500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPots429ApplicationJSON.java
@@ -669,8 +609,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetPots200ApplicationJS
 lib/src/main/java/org/openapis/openapi/models/operations/GetPots200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPotsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTotalPotHoldingsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetTotalPotHoldingsPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetTotalPotHoldingsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTotalPotHoldingsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTotalPotHoldings500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTotalPotHoldings429ApplicationJSON.java
@@ -682,8 +620,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetTotalPotHoldings200A
 lib/src/main/java/org/openapis/openapi/models/operations/GetTotalPotHoldings200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTotalPotHoldingsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTotalPotValueSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetTotalPotValuePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetTotalPotValueHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTotalPotValueRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTotalPotValue500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTotalPotValue429ApplicationJSON.java
@@ -697,8 +633,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetTotalPotValue200Appl
 lib/src/main/java/org/openapis/openapi/models/operations/GetTotalPotValueResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRatesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRatesRateTypeEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetRatesPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetRatesHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRatesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRates500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRates429ApplicationJSON.java
@@ -710,7 +644,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetRates200ApplicationJ
 lib/src/main/java/org/openapis/openapi/models/operations/GetRates200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRatesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateRebalanceSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateRebalanceHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateRebalanceSwitchInstructionRequestTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateRebalanceSwitchInstructionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateRebalanceRequest.java
@@ -728,7 +661,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateRebalance201Appli
 lib/src/main/java/org/openapis/openapi/models/operations/CreateRebalance201ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateRebalanceResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/EvaluateRebalanceSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/EvaluateRebalanceHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/EvaluateRebalanceSwitchInstructionRequestTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/EvaluateRebalanceSwitchInstructionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/EvaluateRebalanceRequest.java
@@ -745,8 +677,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/EvaluateRebalanceThisIs
 lib/src/main/java/org/openapis/openapi/models/operations/EvaluateRebalanceThisIsTheReturnObjectWithEvaluationPerPot.java
 lib/src/main/java/org/openapis/openapi/models/operations/EvaluateRebalanceResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRebalanceDetailsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetRebalanceDetailsPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetRebalanceDetailsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRebalanceDetailsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRebalanceDetails500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRebalanceDetails429ApplicationJSON.java
@@ -767,7 +697,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetRebalanceDetails200A
 lib/src/main/java/org/openapis/openapi/models/operations/GetRebalanceDetails200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRebalanceDetailsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExecuteSwitchTrasactionSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/ExecuteSwitchTrasactionHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExecuteSwitchTrasactionSwitchInstructionRequestEachBuyOrSellInstructionOfTheSwitchRequestModeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExecuteSwitchTrasactionSwitchInstructionRequestEachBuyOrSellInstructionOfTheSwitchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExecuteSwitchTrasactionSwitchInstructionRequest.java
@@ -787,9 +716,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ExecuteSwitchTrasaction
 lib/src/main/java/org/openapis/openapi/models/operations/ExecuteSwitchTrasaction200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExecuteSwitchTrasactionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSwitchSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetSwitchPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetSwitchQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetSwitchHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSwitchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSwitch500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSwitch429ApplicationJSON.java
@@ -808,15 +734,12 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetSwitch200Application
 lib/src/main/java/org/openapis/openapi/models/operations/GetSwitch200ApplicationJSONTransactions.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSwitch200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSwitchResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetBEGreetingSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetBEGreetingRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBEGreeting500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBEGreeting429ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBEGreeting403ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBEGreeting200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBEGreetingResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CopyFileToS3Security.java
-lib/src/main/java/org/openapis/openapi/models/operations/CopyFileToS3Headers.java
 lib/src/main/java/org/openapis/openapi/models/operations/CopyFileToS3RequestBodyFilePaths.java
 lib/src/main/java/org/openapis/openapi/models/operations/CopyFileToS3RequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/CopyFileToS3Request.java
@@ -829,7 +752,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CopyFileToS3400Applicat
 lib/src/main/java/org/openapis/openapi/models/operations/CopyFileToS3200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CopyFileToS3Response.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateWithdrawalSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateWithdrawalHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateWithdrawalRootTypeForWithdrawalSubTransactionTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateWithdrawalRootTypeForWithdrawal.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateWithdrawalRequest.java
@@ -849,5 +771,4 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateWithdrawalRootTyp
 lib/src/main/java/org/openapis/openapi/models/operations/CreateWithdrawalRootTypeForWithdrawalCreationResponseTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateWithdrawalRootTypeForWithdrawalCreationResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateWithdrawalResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPISecretKey.java
 USAGE.md

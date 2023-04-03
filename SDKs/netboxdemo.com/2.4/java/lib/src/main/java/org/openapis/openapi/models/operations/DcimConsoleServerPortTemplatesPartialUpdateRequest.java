@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimConsoleServerPortTemplatesPartialUpdateRequest {
-    
-    public DcimConsoleServerPortTemplatesPartialUpdatePathParams pathParams;
-    public DcimConsoleServerPortTemplatesPartialUpdateRequest withPathParams(DcimConsoleServerPortTemplatesPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableConsoleServerPortTemplateInput writableConsoleServerPortTemplateInput;
+    public DcimConsoleServerPortTemplatesPartialUpdateRequest withWritableConsoleServerPortTemplateInput(org.openapis.openapi.models.shared.WritableConsoleServerPortTemplateInput writableConsoleServerPortTemplateInput) {
+        this.writableConsoleServerPortTemplateInput = writableConsoleServerPortTemplateInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableConsoleServerPortTemplateInput request;
-    public DcimConsoleServerPortTemplatesPartialUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableConsoleServerPortTemplateInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this console server port template.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimConsoleServerPortTemplatesPartialUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

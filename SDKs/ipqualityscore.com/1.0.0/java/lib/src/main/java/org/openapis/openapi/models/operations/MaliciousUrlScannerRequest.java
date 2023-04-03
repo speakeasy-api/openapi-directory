@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MaliciousUrlScannerRequest {
+    /**
+     * (Required) URL_HERE
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=URL_HERE")
+    public String urlHere;
+    public MaliciousUrlScannerRequest withUrlHere(String urlHere) {
+        this.urlHere = urlHere;
+        return this;
+    }
     
-    public MaliciousUrlScannerPathParams pathParams;
-    public MaliciousUrlScannerRequest withPathParams(MaliciousUrlScannerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * (Required) YOUR_API_KEY_HERE
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=YOUR_API_KEY_HERE")
+    public String yourApiKeyHere;
+    public MaliciousUrlScannerRequest withYourApiKeyHere(String yourApiKeyHere) {
+        this.yourApiKeyHere = yourApiKeyHere;
         return this;
     }
     

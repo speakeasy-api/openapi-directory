@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAssetVersionRequest {
-    
-    public ListAssetVersionPathParams pathParams;
-    public ListAssetVersionRequest withPathParams(ListAssetVersionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Asset resource that is the parent of the Asset Version resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssetSid")
+    public String assetSid;
+    public ListAssetVersionRequest withAssetSid(String assetSid) {
+        this.assetSid = assetSid;
         return this;
     }
     
-    
-    public ListAssetVersionQueryParams queryParams;
-    public ListAssetVersionRequest withQueryParams(ListAssetVersionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListAssetVersionRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListAssetVersionSecurity security;
-    public ListAssetVersionRequest withSecurity(ListAssetVersionSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListAssetVersionRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListAssetVersionRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
     
-    public String serverURL;
-    public ListAssetVersionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Service to read the Asset Version resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public ListAssetVersionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

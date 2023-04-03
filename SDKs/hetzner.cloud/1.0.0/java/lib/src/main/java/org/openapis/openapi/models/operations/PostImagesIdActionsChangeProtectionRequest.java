@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostImagesIdActionsChangeProtectionRequest {
-    
-    public PostImagesIdActionsChangeProtectionPathParams pathParams;
-    public PostImagesIdActionsChangeProtectionRequest withPathParams(PostImagesIdActionsChangeProtectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostImagesIdActionsChangeProtectionRequestBody requestBody;
+    public PostImagesIdActionsChangeProtectionRequest withRequestBody(PostImagesIdActionsChangeProtectionRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostImagesIdActionsChangeProtectionRequestBody request;
-    public PostImagesIdActionsChangeProtectionRequest withRequest(PostImagesIdActionsChangeProtectionRequestBody request) {
-        this.request = request;
+    /**
+     * ID of the Image
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostImagesIdActionsChangeProtectionRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

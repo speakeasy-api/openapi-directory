@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchInteractionChannelRequest {
-    
-    public FetchInteractionChannelPathParams pathParams;
-    public FetchInteractionChannelRequest withPathParams(FetchInteractionChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string created by Twilio to identify an Interaction resource, prefixed with KD.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=InteractionSid")
+    public String interactionSid;
+    public FetchInteractionChannelRequest withInteractionSid(String interactionSid) {
+        this.interactionSid = interactionSid;
         return this;
     }
     
-    
-    public FetchInteractionChannelSecurity security;
-    public FetchInteractionChannelRequest withSecurity(FetchInteractionChannelSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchInteractionChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string created by Twilio to identify an Interaction Channel resource, prefixed with UO.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchInteractionChannelRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

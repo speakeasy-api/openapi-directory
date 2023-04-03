@@ -134,7 +134,7 @@ public class Logs {
      */
     public org.openapis.openapi.models.operations.LogsReadResponse logsRead(org.openapis.openapi.models.operations.LogsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LogsReadPathParams.class, baseUrl, "/logs/{log_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LogsReadRequest.class, baseUrl, "/logs/{log_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

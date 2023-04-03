@@ -4,13 +4,39 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteProjectUsernameProjectEnvvarNameRequest {
+    /**
+     * XXXXXXXXXX
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public DeleteProjectUsernameProjectEnvvarNameRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public DeleteProjectUsernameProjectEnvvarNamePathParams pathParams;
-    public DeleteProjectUsernameProjectEnvvarNameRequest withPathParams(DeleteProjectUsernameProjectEnvvarNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * XXXXXXXXX
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public DeleteProjectUsernameProjectEnvvarNameRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * XXXXXXXXX
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public DeleteProjectUsernameProjectEnvvarNameRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

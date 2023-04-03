@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolTftpSessionSetParameterRequest {
+    /**
+     * Agent to set TFTP parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolTftpSessionSetParameterRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolTftpSessionSetParameterPathParams pathParams;
-    public ProtocolTftpSessionSetParameterRequest withPathParams(ProtocolTftpSessionSetParameterPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Parameter to set
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parameter")
+    public String parameter;
+    public ProtocolTftpSessionSetParameterRequest withParameter(String parameter) {
+        this.parameter = parameter;
+        return this;
+    }
+    
+    /**
+     * SessionID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sessionID")
+    public String sessionID;
+    public ProtocolTftpSessionSetParameterRequest withSessionID(String sessionID) {
+        this.sessionID = sessionID;
+        return this;
+    }
+    
+    /**
+     * Value to set
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=value")
+    public String value;
+    public ProtocolTftpSessionSetParameterRequest withValue(String value) {
+        this.value = value;
         return this;
     }
     

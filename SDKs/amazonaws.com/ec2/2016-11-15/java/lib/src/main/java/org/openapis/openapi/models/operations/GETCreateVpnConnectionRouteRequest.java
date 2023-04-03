@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateVpnConnectionRouteRequest {
-    
-    public GETCreateVpnConnectionRouteQueryParams queryParams;
-    public GETCreateVpnConnectionRouteRequest withQueryParams(GETCreateVpnConnectionRouteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETCreateVpnConnectionRouteActionEnum action;
+    public GETCreateVpnConnectionRouteRequest withAction(GETCreateVpnConnectionRouteActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The CIDR block associated with the local subnet of the customer network.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationCidrBlock")
+    public String destinationCidrBlock;
+    public GETCreateVpnConnectionRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
+        this.destinationCidrBlock = destinationCidrBlock;
+        return this;
+    }
     
-    public GETCreateVpnConnectionRouteHeaders headers;
-    public GETCreateVpnConnectionRouteRequest withHeaders(GETCreateVpnConnectionRouteHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETCreateVpnConnectionRouteVersionEnum version;
+    public GETCreateVpnConnectionRouteRequest withVersion(GETCreateVpnConnectionRouteVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * The ID of the VPN connection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpnConnectionId")
+    public String vpnConnectionId;
+    public GETCreateVpnConnectionRouteRequest withVpnConnectionId(String vpnConnectionId) {
+        this.vpnConnectionId = vpnConnectionId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETCreateVpnConnectionRouteRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETCreateVpnConnectionRouteRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETCreateVpnConnectionRouteRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETCreateVpnConnectionRouteRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETCreateVpnConnectionRouteRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETCreateVpnConnectionRouteRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETCreateVpnConnectionRouteRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

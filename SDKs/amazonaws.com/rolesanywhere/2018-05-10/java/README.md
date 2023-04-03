@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateProfileHeaders;
 import org.openapis.openapi.models.operations.CreateProfileRequestBody;
 import org.openapis.openapi.models.operations.CreateProfileRequest;
 import org.openapis.openapi.models.operations.CreateProfileResponse;
@@ -28,56 +27,46 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateProfileRequest req = new CreateProfileRequest() {{
-                headers = new CreateProfileHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateProfileRequestBody() {{
-                    durationSeconds = 847252;
+                requestBody = new CreateProfileRequestBody() {{
+                    durationSeconds = 548814;
                     enabled = false;
                     managedPolicyArns = new String[]{{
-                        add("error"),
-                        add("deserunt"),
+                        add("distinctio"),
+                        add("quibusdam"),
+                        add("unde"),
                     }};
-                    name = "suscipit";
+                    name = "nulla";
                     requireInstanceProperties = false;
                     roleArns = new String[]{{
-                        add("magnam"),
-                        add("debitis"),
+                        add("illum"),
+                        add("vel"),
+                        add("error"),
                     }};
-                    sessionPolicy = "ipsa";
+                    sessionPolicy = "deserunt";
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "tempora";
-                            value = "suscipit";
+                            key = "iure";
+                            value = "magnam";
                         }}),
                         add(new Tag() {{
-                            key = "molestiae";
-                            value = "minus";
-                        }}),
-                        add(new Tag() {{
-                            key = "placeat";
-                            value = "voluptatum";
-                        }}),
-                        add(new Tag() {{
-                            key = "iusto";
-                            value = "excepturi";
+                            key = "debitis";
+                            value = "ipsa";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "delectus";
+                xAmzContentSha256 = "tempora";
+                xAmzCredential = "suscipit";
+                xAmzDate = "molestiae";
+                xAmzSecurityToken = "minus";
+                xAmzSignature = "placeat";
+                xAmzSignedHeaders = "voluptatum";
+            }}            
 
             CreateProfileResponse res = sdk.createProfile(req);
 
@@ -91,7 +80,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

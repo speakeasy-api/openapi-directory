@@ -4,34 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ModifierGroupsOneRequest {
-    
-    public ModifierGroupsOnePathParams pathParams;
-    public ModifierGroupsOneRequest withPathParams(ModifierGroupsOnePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: `fields=name,email,addresses.city`&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ModifierGroupsOneRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
-    
-    public ModifierGroupsOneQueryParams queryParams;
-    public ModifierGroupsOneRequest withQueryParams(ModifierGroupsOneQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ModifierGroupsOneRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public ModifierGroupsOneHeaders headers;
-    public ModifierGroupsOneRequest withHeaders(ModifierGroupsOneHeaders headers) {
-        this.headers = headers;
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public ModifierGroupsOneRequest withRaw(Boolean raw) {
+        this.raw = raw;
         return this;
     }
     
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public ModifierGroupsOneRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
     
-    public ModifierGroupsOneSecurity security;
-    public ModifierGroupsOneRequest withSecurity(ModifierGroupsOneSecurity security) {
-        this.security = security;
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public ModifierGroupsOneRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public ModifierGroupsOneRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

@@ -4,34 +4,50 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListEventRequest {
-    
-    public ListEventPathParams pathParams;
-    public ListEventRequest withPathParams(ListEventPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public ListEventRequest withCallSid(String callSid) {
+        this.callSid = callSid;
         return this;
     }
     
-    
-    public ListEventQueryParams queryParams;
-    public ListEventRequest withQueryParams(ListEventQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Edge")
+    public org.openapis.openapi.models.shared.EventEnumTwilioEdgeEnum edge;
+    public ListEventRequest withEdge(org.openapis.openapi.models.shared.EventEnumTwilioEdgeEnum edge) {
+        this.edge = edge;
         return this;
     }
     
-    
-    public ListEventSecurity security;
-    public ListEventRequest withSecurity(ListEventSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListEventRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListEventRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListEventRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListEventRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

@@ -38,7 +38,7 @@ public class CustomerAccount {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ActivateUserAccountResponse activateUserAccount(org.openapis.openapi.models.operations.ActivateUserAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ActivateUserAccountResponse activateUserAccount(String request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/customer/account/activate");
         
@@ -83,7 +83,7 @@ public class CustomerAccount {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChangeEmailResponse changeEmail(org.openapis.openapi.models.operations.ChangeEmailRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChangeEmailResponse changeEmail(org.openapis.openapi.models.shared.ChangeEmailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/customer/account/changeEmail");
         
@@ -128,7 +128,7 @@ public class CustomerAccount {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChangePasswordResponse changePassword(org.openapis.openapi.models.operations.ChangePasswordRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChangePasswordResponse changePassword(org.openapis.openapi.models.shared.ChangePasswordRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/customer/account/changePassword");
         
@@ -181,7 +181,7 @@ public class CustomerAccount {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -239,7 +239,7 @@ public class CustomerAccount {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -297,7 +297,7 @@ public class CustomerAccount {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -396,7 +396,7 @@ public class CustomerAccount {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SaveCompanyInfoResponse saveCompanyInfo(org.openapis.openapi.models.operations.SaveCompanyInfoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SaveCompanyInfoResponse saveCompanyInfo(org.openapis.openapi.models.shared.CompanyInfo request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/customer/account/companyInfo");
         
@@ -441,7 +441,7 @@ public class CustomerAccount {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SaveCreditCardInfoResponse saveCreditCardInfo(org.openapis.openapi.models.operations.SaveCreditCardInfoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SaveCreditCardInfoResponse saveCreditCardInfo(org.openapis.openapi.models.shared.CreditCardInfo request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/customer/account/creditCardInfo");
         
@@ -486,7 +486,7 @@ public class CustomerAccount {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SavePersonalInfoResponse savePersonalInfo(org.openapis.openapi.models.operations.SavePersonalInfoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SavePersonalInfoResponse savePersonalInfo(org.openapis.openapi.models.shared.PersonalInfo request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/customer/account/personalInfo");
         
@@ -531,7 +531,7 @@ public class CustomerAccount {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SaveProfilePictureInfoResponse saveProfilePictureInfo(org.openapis.openapi.models.operations.SaveProfilePictureInfoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SaveProfilePictureInfoResponse saveProfilePictureInfo(org.openapis.openapi.models.shared.ProfilePictureInfo request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/customer/account/profilePictureInfo");
         

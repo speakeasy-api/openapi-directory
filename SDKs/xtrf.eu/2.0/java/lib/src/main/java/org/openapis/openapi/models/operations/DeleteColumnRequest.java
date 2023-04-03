@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteColumnRequest {
+    /**
+     * column's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnName")
+    public String columnName;
+    public DeleteColumnRequest withColumnName(String columnName) {
+        this.columnName = columnName;
+        return this;
+    }
     
-    public DeleteColumnPathParams pathParams;
-    public DeleteColumnRequest withPathParams(DeleteColumnPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * view's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
+    public Long viewId;
+    public DeleteColumnRequest withViewId(Long viewId) {
+        this.viewId = viewId;
         return this;
     }
     

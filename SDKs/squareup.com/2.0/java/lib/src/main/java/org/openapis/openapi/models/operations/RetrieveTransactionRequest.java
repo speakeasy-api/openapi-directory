@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveTransactionRequest {
-    
-    public RetrieveTransactionPathParams pathParams;
-    public RetrieveTransactionRequest withPathParams(RetrieveTransactionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the transaction's associated location.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public RetrieveTransactionRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     
-    
-    public RetrieveTransactionSecurity security;
-    public RetrieveTransactionRequest withSecurity(RetrieveTransactionSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the transaction to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transaction_id")
+    public String transactionId;
+    public RetrieveTransactionRequest withTransactionId(String transactionId) {
+        this.transactionId = transactionId;
         return this;
     }
     

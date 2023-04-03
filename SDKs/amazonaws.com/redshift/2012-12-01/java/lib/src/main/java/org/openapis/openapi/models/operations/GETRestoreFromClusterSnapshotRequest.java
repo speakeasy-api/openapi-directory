@@ -4,20 +4,399 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRestoreFromClusterSnapshotRequest {
-    
-    public GETRestoreFromClusterSnapshotQueryParams queryParams;
-    public GETRestoreFromClusterSnapshotRequest withQueryParams(GETRestoreFromClusterSnapshotQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRestoreFromClusterSnapshotActionEnum action;
+    public GETRestoreFromClusterSnapshotRequest withAction(GETRestoreFromClusterSnapshotActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Reserved.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AdditionalInfo")
+    public String additionalInfo;
+    public GETRestoreFromClusterSnapshotRequest withAdditionalInfo(String additionalInfo) {
+        this.additionalInfo = additionalInfo;
+        return this;
+    }
     
-    public GETRestoreFromClusterSnapshotHeaders headers;
-    public GETRestoreFromClusterSnapshotRequest withHeaders(GETRestoreFromClusterSnapshotHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;If &lt;code&gt;true&lt;/code&gt;, major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. &lt;/p&gt; &lt;p&gt;Default: &lt;code&gt;true&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowVersionUpgrade")
+    public Boolean allowVersionUpgrade;
+    public GETRestoreFromClusterSnapshotRequest withAllowVersionUpgrade(Boolean allowVersionUpgrade) {
+        this.allowVersionUpgrade = allowVersionUpgrade;
+        return this;
+    }
+    
+    /**
+     * This parameter is retired. It does not set the AQUA configuration status. Amazon Redshift automatically determines whether to use AQUA (Advanced Query Accelerator).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AquaConfigurationStatus")
+    public GETRestoreFromClusterSnapshotAquaConfigurationStatusEnum aquaConfigurationStatus;
+    public GETRestoreFromClusterSnapshotRequest withAquaConfigurationStatus(GETRestoreFromClusterSnapshotAquaConfigurationStatusEnum aquaConfigurationStatus) {
+        this.aquaConfigurationStatus = aquaConfigurationStatus;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with &lt;a&gt;CreateClusterSnapshot&lt;/a&gt;. &lt;/p&gt; &lt;p&gt;You can't disable automated snapshots for RA3 node types. Set the automated retention period from 1-35 days.&lt;/p&gt; &lt;p&gt;Default: The value selected for the cluster from which the snapshot was taken.&lt;/p&gt; &lt;p&gt;Constraints: Must be a value from 0 to 35.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutomatedSnapshotRetentionPeriod")
+    public Long automatedSnapshotRetentionPeriod;
+    public GETRestoreFromClusterSnapshotRequest withAutomatedSnapshotRetentionPeriod(Long automatedSnapshotRetentionPeriod) {
+        this.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The Amazon EC2 Availability Zone in which to restore the cluster.&lt;/p&gt; &lt;p&gt;Default: A random, system-chosen Availability Zone.&lt;/p&gt; &lt;p&gt;Example: &lt;code&gt;us-east-2a&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AvailabilityZone")
+    public String availabilityZone;
+    public GETRestoreFromClusterSnapshotRequest withAvailabilityZone(String availabilityZone) {
+        this.availabilityZone = availabilityZone;
+        return this;
+    }
+    
+    /**
+     * The option to enable relocation for an Amazon Redshift cluster between Availability Zones after the cluster is restored.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AvailabilityZoneRelocation")
+    public Boolean availabilityZoneRelocation;
+    public GETRestoreFromClusterSnapshotRequest withAvailabilityZoneRelocation(Boolean availabilityZoneRelocation) {
+        this.availabilityZoneRelocation = availabilityZoneRelocation;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The identifier of the cluster that will be created from restoring the snapshot.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must contain from 1 to 63 alphanumeric characters or hyphens.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Alphabetic characters must be lowercase.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;First character must be a letter.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Cannot end with a hyphen or contain two consecutive hyphens.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Must be unique for all clusters within an Amazon Web Services account.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETRestoreFromClusterSnapshotRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the parameter group to be associated with this cluster.&lt;/p&gt; &lt;p&gt;Default: The default Amazon Redshift cluster parameter group. For information about the default parameter group, go to &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html"&gt;Working with Amazon Redshift Parameter Groups&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must be 1 to 255 alphanumeric characters or hyphens.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;First character must be a letter.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Cannot end with a hyphen or contain two consecutive hyphens.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterParameterGroupName")
+    public String clusterParameterGroupName;
+    public GETRestoreFromClusterSnapshotRequest withClusterParameterGroupName(String clusterParameterGroupName) {
+        this.clusterParameterGroupName = clusterParameterGroupName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A list of security groups to be associated with this cluster.&lt;/p&gt; &lt;p&gt;Default: The default cluster security group for Amazon Redshift.&lt;/p&gt; &lt;p&gt;Cluster security groups only apply to clusters outside of VPCs.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterSecurityGroups")
+    public String[] clusterSecurityGroups;
+    public GETRestoreFromClusterSnapshotRequest withClusterSecurityGroups(String[] clusterSecurityGroups) {
+        this.clusterSecurityGroups = clusterSecurityGroups;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the subnet group where you want to cluster restored.&lt;/p&gt; &lt;p&gt;A snapshot of cluster in VPC can be restored only in VPC. Therefore, you must provide subnet group name where you want the cluster restored.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterSubnetGroupName")
+    public String clusterSubnetGroupName;
+    public GETRestoreFromClusterSnapshotRequest withClusterSubnetGroupName(String clusterSubnetGroupName) {
+        this.clusterSubnetGroupName = clusterSubnetGroupName;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) for the IAM role that was set as default for the cluster when the cluster was last modified while it was restored from a snapshot.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DefaultIamRoleArn")
+    public String defaultIamRoleArn;
+    public GETRestoreFromClusterSnapshotRequest withDefaultIamRoleArn(String defaultIamRoleArn) {
+        this.defaultIamRoleArn = defaultIamRoleArn;
+        return this;
+    }
+    
+    /**
+     * The Elastic IP (EIP) address for the cluster. Don't specify the Elastic IP address for a publicly accessible cluster with availability zone relocation turned on.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ElasticIp")
+    public String elasticIp;
+    public GETRestoreFromClusterSnapshotRequest withElasticIp(String elasticIp) {
+        this.elasticIp = elasticIp;
+        return this;
+    }
+    
+    /**
+     * Enables support for restoring an unencrypted snapshot to a cluster encrypted with Key Management Service (KMS) and a customer managed key.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Encrypted")
+    public Boolean encrypted;
+    public GETRestoreFromClusterSnapshotRequest withEncrypted(Boolean encrypted) {
+        this.encrypted = encrypted;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;An option that specifies whether to create the cluster with enhanced VPC routing enabled. To create a cluster that uses enhanced VPC routing, the cluster must be in a VPC. For more information, see &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/enhanced-vpc-routing.html"&gt;Enhanced VPC Routing&lt;/a&gt; in the Amazon Redshift Cluster Management Guide.&lt;/p&gt; &lt;p&gt;If this option is &lt;code&gt;true&lt;/code&gt;, enhanced VPC routing is enabled. &lt;/p&gt; &lt;p&gt;Default: false&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnhancedVpcRouting")
+    public Boolean enhancedVpcRouting;
+    public GETRestoreFromClusterSnapshotRequest withEnhancedVpcRouting(Boolean enhancedVpcRouting) {
+        this.enhancedVpcRouting = enhancedVpcRouting;
+        return this;
+    }
+    
+    /**
+     * Specifies the name of the HSM client certificate the Amazon Redshift cluster uses to retrieve the data encryption keys stored in an HSM.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HsmClientCertificateIdentifier")
+    public String hsmClientCertificateIdentifier;
+    public GETRestoreFromClusterSnapshotRequest withHsmClientCertificateIdentifier(String hsmClientCertificateIdentifier) {
+        this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
+        return this;
+    }
+    
+    /**
+     * Specifies the name of the HSM configuration that contains the information the Amazon Redshift cluster can use to retrieve and store keys in an HSM.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HsmConfigurationIdentifier")
+    public String hsmConfigurationIdentifier;
+    public GETRestoreFromClusterSnapshotRequest withHsmConfigurationIdentifier(String hsmConfigurationIdentifier) {
+        this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A list of Identity and Access Management (IAM) roles that can be used by the cluster to access other Amazon Web Services services. You must supply the IAM roles in their Amazon Resource Name (ARN) format. &lt;/p&gt; &lt;p&gt;The maximum number of IAM roles that you can associate is subject to a quota. For more information, go to &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html"&gt;Quotas and limits&lt;/a&gt; in the &lt;i&gt;Amazon Redshift Cluster Management Guide&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IamRoles")
+    public String[] iamRoles;
+    public GETRestoreFromClusterSnapshotRequest withIamRoles(String[] iamRoles) {
+        this.iamRoles = iamRoles;
+        return this;
+    }
+    
+    /**
+     * The Key Management Service (KMS) key ID of the encryption key that encrypts data in the cluster restored from a shared snapshot. You can also provide the key ID when you restore from an unencrypted snapshot to an encrypted cluster in the same account. Additionally, you can specify a new KMS key ID when you restore from an encrypted snapshot in the same account in order to change it. In that case, the restored cluster is encrypted with the new KMS key ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=KmsKeyId")
+    public String kmsKeyId;
+    public GETRestoreFromClusterSnapshotRequest withKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+        return this;
+    }
+    
+    /**
+     * The name of the maintenance track for the restored cluster. When you take a snapshot, the snapshot inherits the &lt;code&gt;MaintenanceTrack&lt;/code&gt; value from the cluster. The snapshot might be on a different track than the cluster that was the source for the snapshot. For example, suppose that you take a snapshot of a cluster that is on the current track and then change the cluster to be on the trailing track. In this case, the snapshot and the source cluster are on different tracks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaintenanceTrackName")
+    public String maintenanceTrackName;
+    public GETRestoreFromClusterSnapshotRequest withMaintenanceTrackName(String maintenanceTrackName) {
+        this.maintenanceTrackName = maintenanceTrackName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The default number of days to retain a manual snapshot. If the value is -1, the snapshot is retained indefinitely. This setting doesn't change the retention period of existing snapshots.&lt;/p&gt; &lt;p&gt;The value must be either -1 or an integer between 1 and 3,653.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ManualSnapshotRetentionPeriod")
+    public Long manualSnapshotRetentionPeriod;
+    public GETRestoreFromClusterSnapshotRequest withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
+        this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The node type that the restored cluster will be provisioned with.&lt;/p&gt; &lt;p&gt;Default: The node type of the cluster from which the snapshot was taken. You can modify this if you are using any DS node type. In that case, you can choose to restore into another DS node type of the same size. For example, you can restore ds1.8xlarge into ds2.8xlarge, or ds1.xlarge into ds2.xlarge. If you have a DC instance type, you must restore into that same instance type and size. In other words, you can only restore a dc1.large instance type into another dc1.large instance type or dc2.large instance type. You can't restore dc1.8xlarge to dc2.8xlarge. First restore to a dc1.8xlarge cluster, then resize to a dc2.8large cluster. For more information about node types, see &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#rs-about-clusters-and-nodes"&gt; About Clusters and Nodes&lt;/a&gt; in the &lt;i&gt;Amazon Redshift Cluster Management Guide&lt;/i&gt;. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NodeType")
+    public String nodeType;
+    public GETRestoreFromClusterSnapshotRequest withNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    
+    /**
+     * The number of nodes specified when provisioning the restored cluster.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NumberOfNodes")
+    public Long numberOfNodes;
+    public GETRestoreFromClusterSnapshotRequest withNumberOfNodes(Long numberOfNodes) {
+        this.numberOfNodes = numberOfNodes;
+        return this;
+    }
+    
+    /**
+     * The Amazon Web Services account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own, optional if you own the snapshot.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OwnerAccount")
+    public String ownerAccount;
+    public GETRestoreFromClusterSnapshotRequest withOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The port number on which the cluster accepts connections.&lt;/p&gt; &lt;p&gt;Default: The same port as the original cluster.&lt;/p&gt; &lt;p&gt;Constraints: Must be between &lt;code&gt;1115&lt;/code&gt; and &lt;code&gt;65535&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Port")
+    public Long port;
+    public GETRestoreFromClusterSnapshotRequest withPort(Long port) {
+        this.port = port;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The weekly time range (in UTC) during which automated cluster maintenance can occur.&lt;/p&gt; &lt;p&gt; Format: &lt;code&gt;ddd:hh24:mi-ddd:hh24:mi&lt;/code&gt; &lt;/p&gt; &lt;p&gt; Default: The value selected for the cluster from which the snapshot was taken. For more information about the time blocks for each region, see &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#rs-maintenance-windows"&gt;Maintenance Windows&lt;/a&gt; in Amazon Redshift Cluster Management Guide. &lt;/p&gt; &lt;p&gt;Valid Days: Mon | Tue | Wed | Thu | Fri | Sat | Sun&lt;/p&gt; &lt;p&gt;Constraints: Minimum 30-minute window.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PreferredMaintenanceWindow")
+    public String preferredMaintenanceWindow;
+    public GETRestoreFromClusterSnapshotRequest withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
+        this.preferredMaintenanceWindow = preferredMaintenanceWindow;
+        return this;
+    }
+    
+    /**
+     * If &lt;code&gt;true&lt;/code&gt;, the cluster can be accessed from a public network. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PubliclyAccessible")
+    public Boolean publiclyAccessible;
+    public GETRestoreFromClusterSnapshotRequest withPubliclyAccessible(Boolean publiclyAccessible) {
+        this.publiclyAccessible = publiclyAccessible;
+        return this;
+    }
+    
+    /**
+     * The identifier of the target reserved node offering.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReservedNodeId")
+    public String reservedNodeId;
+    public GETRestoreFromClusterSnapshotRequest withReservedNodeId(String reservedNodeId) {
+        this.reservedNodeId = reservedNodeId;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) of the snapshot associated with the message to restore from a cluster. You must specify this parameter or &lt;code&gt;snapshotIdentifier&lt;/code&gt;, but not both.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotArn")
+    public String snapshotArn;
+    public GETRestoreFromClusterSnapshotRequest withSnapshotArn(String snapshotArn) {
+        this.snapshotArn = snapshotArn;
+        return this;
+    }
+    
+    /**
+     * The name of the cluster the source snapshot was created from. This parameter is required if your IAM user or role has a policy containing a snapshot resource element that specifies anything other than * for the cluster name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotClusterIdentifier")
+    public String snapshotClusterIdentifier;
+    public GETRestoreFromClusterSnapshotRequest withSnapshotClusterIdentifier(String snapshotClusterIdentifier) {
+        this.snapshotClusterIdentifier = snapshotClusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the snapshot from which to create the new cluster. This parameter isn't case sensitive. You must specify this parameter or &lt;code&gt;snapshotArn&lt;/code&gt;, but not both.&lt;/p&gt; &lt;p&gt;Example: &lt;code&gt;my-snapshot-id&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotIdentifier")
+    public String snapshotIdentifier;
+    public GETRestoreFromClusterSnapshotRequest withSnapshotIdentifier(String snapshotIdentifier) {
+        this.snapshotIdentifier = snapshotIdentifier;
+        return this;
+    }
+    
+    /**
+     * A unique identifier for the snapshot schedule.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotScheduleIdentifier")
+    public String snapshotScheduleIdentifier;
+    public GETRestoreFromClusterSnapshotRequest withSnapshotScheduleIdentifier(String snapshotScheduleIdentifier) {
+        this.snapshotScheduleIdentifier = snapshotScheduleIdentifier;
+        return this;
+    }
+    
+    /**
+     * The identifier of the target reserved node offering.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetReservedNodeOfferingId")
+    public String targetReservedNodeOfferingId;
+    public GETRestoreFromClusterSnapshotRequest withTargetReservedNodeOfferingId(String targetReservedNodeOfferingId) {
+        this.targetReservedNodeOfferingId = targetReservedNodeOfferingId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRestoreFromClusterSnapshotVersionEnum version;
+    public GETRestoreFromClusterSnapshotRequest withVersion(GETRestoreFromClusterSnapshotVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A list of Virtual Private Cloud (VPC) security groups to be associated with the cluster.&lt;/p&gt; &lt;p&gt;Default: The default VPC security group is associated with the cluster.&lt;/p&gt; &lt;p&gt;VPC security groups only apply to clusters in VPCs.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcSecurityGroupIds")
+    public String[] vpcSecurityGroupIds;
+    public GETRestoreFromClusterSnapshotRequest withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
+        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRestoreFromClusterSnapshotRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRestoreFromClusterSnapshotRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRestoreFromClusterSnapshotRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRestoreFromClusterSnapshotRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRestoreFromClusterSnapshotRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRestoreFromClusterSnapshotRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRestoreFromClusterSnapshotRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

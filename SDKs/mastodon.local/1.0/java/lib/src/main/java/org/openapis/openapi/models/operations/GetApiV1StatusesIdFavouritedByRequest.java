@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1StatusesIdFavouritedByRequest {
-    
-    public GetApiV1StatusesIdFavouritedByPathParams pathParams;
-    public GetApiV1StatusesIdFavouritedByRequest withPathParams(GetApiV1StatusesIdFavouritedByPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Local ID of a status in the database.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetApiV1StatusesIdFavouritedByRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

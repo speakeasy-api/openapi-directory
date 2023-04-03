@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationConfigTemplateSwitchProfilePortsRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=configTemplateId")
+    public String configTemplateId;
+    public GetOrganizationConfigTemplateSwitchProfilePortsRequest withConfigTemplateId(String configTemplateId) {
+        this.configTemplateId = configTemplateId;
+        return this;
+    }
     
-    public GetOrganizationConfigTemplateSwitchProfilePortsPathParams pathParams;
-    public GetOrganizationConfigTemplateSwitchProfilePortsRequest withPathParams(GetOrganizationConfigTemplateSwitchProfilePortsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationConfigTemplateSwitchProfilePortsRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
+    public String profileId;
+    public GetOrganizationConfigTemplateSwitchProfilePortsRequest withProfileId(String profileId) {
+        this.profileId = profileId;
         return this;
     }
     

@@ -39,7 +39,7 @@ public class Payments {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreatePaymentFormResponse createPaymentForm(org.openapis.openapi.models.operations.CreatePaymentFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreatePaymentFormResponse createPaymentForm(org.openapis.openapi.models.shared.PaymentWriteRequest2 request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/payments/");
         
@@ -107,7 +107,7 @@ public class Payments {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreatePaymentJsonResponse createPaymentJson(org.openapis.openapi.models.operations.CreatePaymentJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreatePaymentJsonResponse createPaymentJson(org.openapis.openapi.models.shared.PaymentWriteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/payments/");
         
@@ -175,7 +175,7 @@ public class Payments {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreatePaymentMultipartResponse createPaymentMultipart(org.openapis.openapi.models.operations.CreatePaymentMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreatePaymentMultipartResponse createPaymentMultipart(org.openapis.openapi.models.shared.PaymentWriteRequest2 request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/payments/");
         
@@ -245,7 +245,7 @@ public class Payments {
      */
     public org.openapis.openapi.models.operations.DeletePeriodicPaymentResponse deletePeriodicPayment(org.openapis.openapi.models.operations.DeletePeriodicPaymentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePeriodicPaymentPathParams.class, baseUrl, "/api/v2/payments/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePeriodicPaymentRequest.class, baseUrl, "/api/v2/payments/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -324,7 +324,7 @@ public class Payments {
      */
     public org.openapis.openapi.models.operations.ListMinimumRequiredFieldsForInstitutionResponse listMinimumRequiredFieldsForInstitution(org.openapis.openapi.models.operations.ListMinimumRequiredFieldsForInstitutionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListMinimumRequiredFieldsForInstitutionPathParams.class, baseUrl, "/api/v2/payments/fields/{institution_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListMinimumRequiredFieldsForInstitutionRequest.class, baseUrl, "/api/v2/payments/fields/{institution_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -393,7 +393,7 @@ public class Payments {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPaymentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPaymentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -454,7 +454,7 @@ public class Payments {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PaymentsCreditorsCreateFormResponse paymentsCreditorsCreateForm(org.openapis.openapi.models.operations.PaymentsCreditorsCreateFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PaymentsCreditorsCreateFormResponse paymentsCreditorsCreateForm(org.openapis.openapi.models.shared.CreditorAccountWriteRequest1 request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/payments/creditors/");
         
@@ -498,7 +498,7 @@ public class Payments {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PaymentsCreditorsCreateJsonResponse paymentsCreditorsCreateJson(org.openapis.openapi.models.operations.PaymentsCreditorsCreateJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PaymentsCreditorsCreateJsonResponse paymentsCreditorsCreateJson(org.openapis.openapi.models.shared.CreditorAccountWriteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/payments/creditors/");
         
@@ -542,7 +542,7 @@ public class Payments {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PaymentsCreditorsCreateMultipartResponse paymentsCreditorsCreateMultipart(org.openapis.openapi.models.operations.PaymentsCreditorsCreateMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PaymentsCreditorsCreateMultipartResponse paymentsCreditorsCreateMultipart(org.openapis.openapi.models.shared.CreditorAccountWriteRequest1 request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/payments/creditors/");
         
@@ -588,7 +588,7 @@ public class Payments {
      */
     public org.openapis.openapi.models.operations.PaymentsCreditorsDestroyResponse paymentsCreditorsDestroy(org.openapis.openapi.models.operations.PaymentsCreditorsDestroyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsCreditorsDestroyPathParams.class, baseUrl, "/api/v2/payments/creditors/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsCreditorsDestroyRequest.class, baseUrl, "/api/v2/payments/creditors/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -627,7 +627,7 @@ public class Payments {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsCreditorsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsCreditorsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -666,7 +666,7 @@ public class Payments {
      */
     public org.openapis.openapi.models.operations.PaymentsCreditorsRetrieveResponse paymentsCreditorsRetrieve(org.openapis.openapi.models.operations.PaymentsCreditorsRetrieveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsCreditorsRetrievePathParams.class, baseUrl, "/api/v2/payments/creditors/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsCreditorsRetrieveRequest.class, baseUrl, "/api/v2/payments/creditors/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -767,7 +767,7 @@ public class Payments {
      */
     public org.openapis.openapi.models.operations.RetrievePaymentResponse retrievePayment(org.openapis.openapi.models.operations.RetrievePaymentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrievePaymentPathParams.class, baseUrl, "/api/v2/payments/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrievePaymentRequest.class, baseUrl, "/api/v2/payments/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

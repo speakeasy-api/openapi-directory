@@ -4,13 +4,39 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DependabotGetAlertRequest {
+    /**
+     * The number that identifies a Dependabot alert in its repository.
+     * You can find this at the end of the URL for a Dependabot alert within GitHub,
+     * or in `number` fields in the response from the
+     * `GET /repos/{owner}/{repo}/dependabot/alerts` operation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=alert_number")
+    public Long alertNumber;
+    public DependabotGetAlertRequest withAlertNumber(Long alertNumber) {
+        this.alertNumber = alertNumber;
+        return this;
+    }
     
-    public DependabotGetAlertPathParams pathParams;
-    public DependabotGetAlertRequest withPathParams(DependabotGetAlertPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public DependabotGetAlertRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public DependabotGetAlertRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

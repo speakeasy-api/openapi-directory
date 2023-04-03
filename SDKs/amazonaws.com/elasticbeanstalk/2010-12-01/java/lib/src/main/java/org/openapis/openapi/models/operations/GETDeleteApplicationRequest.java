@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteApplicationRequest {
-    
-    public GETDeleteApplicationQueryParams queryParams;
-    public GETDeleteApplicationRequest withQueryParams(GETDeleteApplicationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteApplicationActionEnum action;
+    public GETDeleteApplicationRequest withAction(GETDeleteApplicationActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the application to delete.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplicationName")
+    public String applicationName;
+    public GETDeleteApplicationRequest withApplicationName(String applicationName) {
+        this.applicationName = applicationName;
+        return this;
+    }
     
-    public GETDeleteApplicationHeaders headers;
-    public GETDeleteApplicationRequest withHeaders(GETDeleteApplicationHeaders headers) {
-        this.headers = headers;
+    /**
+     * When set to true, running environments will be terminated before deleting the application.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TerminateEnvByForce")
+    public Boolean terminateEnvByForce;
+    public GETDeleteApplicationRequest withTerminateEnvByForce(Boolean terminateEnvByForce) {
+        this.terminateEnvByForce = terminateEnvByForce;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteApplicationVersionEnum version;
+    public GETDeleteApplicationRequest withVersion(GETDeleteApplicationVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteApplicationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteApplicationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteApplicationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteApplicationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteApplicationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteApplicationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteApplicationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

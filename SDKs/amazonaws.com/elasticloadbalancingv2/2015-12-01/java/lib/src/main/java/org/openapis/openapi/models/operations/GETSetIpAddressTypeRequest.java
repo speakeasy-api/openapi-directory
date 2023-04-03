@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetIpAddressTypeRequest {
-    
-    public GETSetIpAddressTypeQueryParams queryParams;
-    public GETSetIpAddressTypeRequest withQueryParams(GETSetIpAddressTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETSetIpAddressTypeActionEnum action;
+    public GETSetIpAddressTypeRequest withAction(GETSetIpAddressTypeActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The IP address type. The possible values are &lt;code&gt;ipv4&lt;/code&gt; (for IPv4 addresses) and &lt;code&gt;dualstack&lt;/code&gt; (for IPv4 and IPv6 addresses). You can\u2019t specify &lt;code&gt;dualstack&lt;/code&gt; for a load balancer with a UDP or TCP_UDP listener.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IpAddressType")
+    public GETSetIPAddressTypeIPAddressTypeEnum ipAddressType;
+    public GETSetIpAddressTypeRequest withIpAddressType(GETSetIPAddressTypeIPAddressTypeEnum ipAddressType) {
+        this.ipAddressType = ipAddressType;
+        return this;
+    }
     
-    public GETSetIpAddressTypeHeaders headers;
-    public GETSetIpAddressTypeRequest withHeaders(GETSetIpAddressTypeHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Amazon Resource Name (ARN) of the load balancer.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoadBalancerArn")
+    public String loadBalancerArn;
+    public GETSetIpAddressTypeRequest withLoadBalancerArn(String loadBalancerArn) {
+        this.loadBalancerArn = loadBalancerArn;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETSetIpAddressTypeVersionEnum version;
+    public GETSetIpAddressTypeRequest withVersion(GETSetIpAddressTypeVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETSetIpAddressTypeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETSetIpAddressTypeRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETSetIpAddressTypeRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETSetIpAddressTypeRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETSetIpAddressTypeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETSetIpAddressTypeRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETSetIpAddressTypeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

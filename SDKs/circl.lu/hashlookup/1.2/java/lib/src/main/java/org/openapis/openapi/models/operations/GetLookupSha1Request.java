@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLookupSha1Request {
-    
-    public GetLookupSha1PathParams pathParams;
-    public GetLookupSha1Request withPathParams(GetLookupSha1PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sha1")
+    public String sha1;
+    public GetLookupSha1Request withSha1(String sha1) {
+        this.sha1 = sha1;
         return this;
     }
     

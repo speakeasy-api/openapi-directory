@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchApiKeyFromGroupRequest {
-    
-    public PatchApiKeyFromGroupPathParams pathParams;
-    public PatchApiKeyFromGroupRequest withPathParams(PatchApiKeyFromGroupPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Patch[] request;
-    public PatchApiKeyFromGroupRequest withRequest(org.openapis.openapi.models.shared.Patch[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Patch[] requestBody;
+    public PatchApiKeyFromGroupRequest withRequestBody(org.openapis.openapi.models.shared.Patch[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * the api key id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")
+    public String clientId;
+    public PatchApiKeyFromGroupRequest withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
     
-    public PatchApiKeyFromGroupSecurity security;
-    public PatchApiKeyFromGroupRequest withSecurity(PatchApiKeyFromGroupSecurity security) {
-        this.security = security;
+    /**
+     * The api key group id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public PatchApiKeyFromGroupRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

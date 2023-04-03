@@ -4,34 +4,107 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListTaskQueuesStatisticsRequest {
-    
-    public ListTaskQueuesStatisticsPathParams pathParams;
-    public ListTaskQueuesStatisticsRequest withPathParams(ListTaskQueuesStatisticsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Only calculate statistics from this date and time and earlier, specified in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date-time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndDate")
+    public OffsetDateTime endDate;
+    public ListTaskQueuesStatisticsRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
         return this;
     }
     
-    
-    public ListTaskQueuesStatisticsQueryParams queryParams;
-    public ListTaskQueuesStatisticsRequest withQueryParams(ListTaskQueuesStatisticsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The `friendly_name` of the TaskQueue statistics to read.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FriendlyName")
+    public String friendlyName;
+    public ListTaskQueuesStatisticsRequest withFriendlyName(String friendlyName) {
+        this.friendlyName = friendlyName;
         return this;
     }
     
-    
-    public ListTaskQueuesStatisticsSecurity security;
-    public ListTaskQueuesStatisticsRequest withSecurity(ListTaskQueuesStatisticsSecurity security) {
-        this.security = security;
+    /**
+     * Only calculate statistics since this many minutes in the past. The default is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Minutes")
+    public Long minutes;
+    public ListTaskQueuesStatisticsRequest withMinutes(Long minutes) {
+        this.minutes = minutes;
         return this;
     }
     
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListTaskQueuesStatisticsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public String serverURL;
-    public ListTaskQueuesStatisticsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListTaskQueuesStatisticsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListTaskQueuesStatisticsRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of values that describes the thresholds, in seconds, to calculate statistics on. For each threshold specified, the number of Tasks canceled and reservations accepted above and below the specified thresholds in seconds are computed.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SplitByWaitTime")
+    public String splitByWaitTime;
+    public ListTaskQueuesStatisticsRequest withSplitByWaitTime(String splitByWaitTime) {
+        this.splitByWaitTime = splitByWaitTime;
+        return this;
+    }
+    
+    /**
+     * Only calculate statistics from this date and time and later, specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartDate")
+    public OffsetDateTime startDate;
+    public ListTaskQueuesStatisticsRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * Only calculate statistics on this TaskChannel. Can be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or `default`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TaskChannel")
+    public String taskChannel;
+    public ListTaskQueuesStatisticsRequest withTaskChannel(String taskChannel) {
+        this.taskChannel = taskChannel;
+        return this;
+    }
+    
+    /**
+     * The SID of the Workspace with the TaskQueues to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public ListTaskQueuesStatisticsRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

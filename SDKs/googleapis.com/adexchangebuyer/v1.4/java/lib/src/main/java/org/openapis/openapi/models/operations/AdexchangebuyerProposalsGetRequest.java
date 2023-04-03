@@ -4,27 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdexchangebuyerProposalsGetRequest {
-    
-    public AdexchangebuyerProposalsGetPathParams pathParams;
-    public AdexchangebuyerProposalsGetRequest withPathParams(AdexchangebuyerProposalsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AdexchangebuyerProposalsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public AdexchangebuyerProposalsGetQueryParams queryParams;
-    public AdexchangebuyerProposalsGetRequest withQueryParams(AdexchangebuyerProposalsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AdexchangebuyerProposalsGetRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AdexchangebuyerProposalsGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
     
-    public AdexchangebuyerProposalsGetSecurity security;
-    public AdexchangebuyerProposalsGetRequest withSecurity(AdexchangebuyerProposalsGetSecurity security) {
-        this.security = security;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AdexchangebuyerProposalsGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AdexchangebuyerProposalsGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Id of the proposal to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=proposalId")
+    public String proposalId;
+    public AdexchangebuyerProposalsGetRequest withProposalId(String proposalId) {
+        this.proposalId = proposalId;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AdexchangebuyerProposalsGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AdexchangebuyerProposalsGetRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateReplaceItemsRequest {
-    
-    public CreateReplaceItemsPathParams pathParams;
-    public CreateReplaceItemsRequest withPathParams(CreateReplaceItemsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string that identifies the Bundle where the item assignments are going to be replaced.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=BundleSid")
+    public String bundleSid;
+    public CreateReplaceItemsRequest withBundleSid(String bundleSid) {
+        this.bundleSid = bundleSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateReplaceItemsCreateReplaceItemsRequest request;
-    public CreateReplaceItemsRequest withRequest(CreateReplaceItemsCreateReplaceItemsRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateReplaceItemsSecurity security;
-    public CreateReplaceItemsRequest withSecurity(CreateReplaceItemsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateReplaceItemsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateReplaceItemsCreateReplaceItemsRequest requestBody;
+    public CreateReplaceItemsRequest withRequestBody(CreateReplaceItemsCreateReplaceItemsRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

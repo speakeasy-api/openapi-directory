@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTimesheetRequest {
-    
-    public UpdateTimesheetPathParams pathParams;
-    public UpdateTimesheetRequest withPathParams(UpdateTimesheetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateTimesheetHeaders headers;
-    public UpdateTimesheetRequest withHeaders(UpdateTimesheetHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TimesheetInput[] request;
-    public UpdateTimesheetRequest withRequest(org.openapis.openapi.models.shared.TimesheetInput[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TimesheetInput[] requestBody;
+    public UpdateTimesheetRequest withRequestBody(org.openapis.openapi.models.shared.TimesheetInput[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Timesheet id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TimesheetID")
+    public String timesheetID;
+    public UpdateTimesheetRequest withTimesheetID(String timesheetID) {
+        this.timesheetID = timesheetID;
+        return this;
+    }
     
-    public UpdateTimesheetSecurity security;
-    public UpdateTimesheetRequest withSecurity(UpdateTimesheetSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public UpdateTimesheetRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

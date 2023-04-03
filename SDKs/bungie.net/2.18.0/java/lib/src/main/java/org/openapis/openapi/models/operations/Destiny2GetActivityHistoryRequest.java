@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetActivityHistoryRequest {
-    
-    public Destiny2GetActivityHistoryPathParams pathParams;
-    public Destiny2GetActivityHistoryRequest withPathParams(Destiny2GetActivityHistoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the character to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=characterId")
+    public Long characterId;
+    public Destiny2GetActivityHistoryRequest withCharacterId(Long characterId) {
+        this.characterId = characterId;
         return this;
     }
     
+    /**
+     * Number of rows to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Integer count;
+    public Destiny2GetActivityHistoryRequest withCount(Integer count) {
+        this.count = count;
+        return this;
+    }
     
-    public Destiny2GetActivityHistoryQueryParams queryParams;
-    public Destiny2GetActivityHistoryRequest withQueryParams(Destiny2GetActivityHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Destiny membershipId of the user to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
+    public Long destinyMembershipId;
+    public Destiny2GetActivityHistoryRequest withDestinyMembershipId(Long destinyMembershipId) {
+        this.destinyMembershipId = destinyMembershipId;
+        return this;
+    }
+    
+    /**
+     * A valid non-BungieNet membership type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public Destiny2GetActivityHistoryRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
+        return this;
+    }
+    
+    /**
+     * A filter for the activity mode to be returned. None returns all activities. See the documentation for DestinyActivityModeType for valid values, and pass in string representation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mode")
+    public Integer mode;
+    public Destiny2GetActivityHistoryRequest withMode(Integer mode) {
+        this.mode = mode;
+        return this;
+    }
+    
+    /**
+     * Page number to return, starting with 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public Destiny2GetActivityHistoryRequest withPage(Integer page) {
+        this.page = page;
         return this;
     }
     

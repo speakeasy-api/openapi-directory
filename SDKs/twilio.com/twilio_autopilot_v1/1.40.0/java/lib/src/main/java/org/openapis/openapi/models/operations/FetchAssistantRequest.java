@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchAssistantRequest {
-    
-    public FetchAssistantPathParams pathParams;
-    public FetchAssistantRequest withPathParams(FetchAssistantPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchAssistantSecurity security;
-    public FetchAssistantRequest withSecurity(FetchAssistantSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchAssistantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Assistant resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchAssistantRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -36,10 +36,11 @@ public class Billing {
     /**
      * Retrieve or search billing profiles
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BillingProfilesListResponse billingProfilesList(org.openapis.openapi.models.operations.BillingProfilesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BillingProfilesListResponse billingProfilesList(org.openapis.openapi.models.operations.BillingProfilesListRequest request, org.openapis.openapi.models.operations.BillingProfilesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/billing_profiles");
         
@@ -47,14 +48,14 @@ public class Billing {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingProfilesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingProfilesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -83,25 +84,26 @@ public class Billing {
     /**
      * Retrieve an existing billing profiles
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BillingProfilesReadResponse billingProfilesRead(org.openapis.openapi.models.operations.BillingProfilesReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BillingProfilesReadResponse billingProfilesRead(org.openapis.openapi.models.operations.BillingProfilesReadRequest request, org.openapis.openapi.models.operations.BillingProfilesReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingProfilesReadPathParams.class, baseUrl, "/api/billing_profiles/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingProfilesReadRequest.class, baseUrl, "/api/billing_profiles/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingProfilesReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingProfilesReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -130,10 +132,11 @@ public class Billing {
     /**
      * Create communication (phone call) logs
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CommLogsCreateResponse commLogsCreate(org.openapis.openapi.models.operations.CommLogsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CommLogsCreateResponse commLogsCreate(org.openapis.openapi.models.operations.CommLogsCreateRequest request, org.openapis.openapi.models.operations.CommLogsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/comm_logs");
         
@@ -141,14 +144,14 @@ public class Billing {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CommLogsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CommLogsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -177,10 +180,11 @@ public class Billing {
     /**
      * Retrieve or search communicatioin (phone call) logs
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CommLogsListResponse commLogsList(org.openapis.openapi.models.operations.CommLogsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CommLogsListResponse commLogsList(org.openapis.openapi.models.operations.CommLogsListRequest request, org.openapis.openapi.models.operations.CommLogsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/comm_logs");
         
@@ -188,14 +192,14 @@ public class Billing {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CommLogsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CommLogsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -224,25 +228,26 @@ public class Billing {
     /**
      * Update an existing communication (phone call) logs
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CommLogsPartialUpdateResponse commLogsPartialUpdate(org.openapis.openapi.models.operations.CommLogsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CommLogsPartialUpdateResponse commLogsPartialUpdate(org.openapis.openapi.models.operations.CommLogsPartialUpdateRequest request, org.openapis.openapi.models.operations.CommLogsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CommLogsPartialUpdatePathParams.class, baseUrl, "/api/comm_logs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CommLogsPartialUpdateRequest.class, baseUrl, "/api/comm_logs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CommLogsPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CommLogsPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,25 +268,26 @@ public class Billing {
     /**
      * Retrieve an existing communication (phone call) logs
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CommLogsReadResponse commLogsRead(org.openapis.openapi.models.operations.CommLogsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CommLogsReadResponse commLogsRead(org.openapis.openapi.models.operations.CommLogsReadRequest request, org.openapis.openapi.models.operations.CommLogsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CommLogsReadPathParams.class, baseUrl, "/api/comm_logs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CommLogsReadRequest.class, baseUrl, "/api/comm_logs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CommLogsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CommLogsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -310,25 +316,26 @@ public class Billing {
     /**
      * Update an existing communication (phone call) logs
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CommLogsUpdateResponse commLogsUpdate(org.openapis.openapi.models.operations.CommLogsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CommLogsUpdateResponse commLogsUpdate(org.openapis.openapi.models.operations.CommLogsUpdateRequest request, org.openapis.openapi.models.operations.CommLogsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CommLogsUpdatePathParams.class, baseUrl, "/api/comm_logs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CommLogsUpdateRequest.class, baseUrl, "/api/comm_logs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CommLogsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CommLogsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -349,10 +356,11 @@ public class Billing {
     /**
      * Retrieve or search custom insurance plan names
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomInsurancePlanNamesListResponse customInsurancePlanNamesList(org.openapis.openapi.models.operations.CustomInsurancePlanNamesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomInsurancePlanNamesListResponse customInsurancePlanNamesList(org.openapis.openapi.models.operations.CustomInsurancePlanNamesListRequest request, org.openapis.openapi.models.operations.CustomInsurancePlanNamesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/custom_insurance_plan_names");
         
@@ -360,14 +368,14 @@ public class Billing {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomInsurancePlanNamesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomInsurancePlanNamesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -396,25 +404,26 @@ public class Billing {
     /**
      * Retrieve an existing custom insurance plan name
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomInsurancePlanNamesReadResponse customInsurancePlanNamesRead(org.openapis.openapi.models.operations.CustomInsurancePlanNamesReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomInsurancePlanNamesReadResponse customInsurancePlanNamesRead(org.openapis.openapi.models.operations.CustomInsurancePlanNamesReadRequest request, org.openapis.openapi.models.operations.CustomInsurancePlanNamesReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomInsurancePlanNamesReadPathParams.class, baseUrl, "/api/custom_insurance_plan_names/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomInsurancePlanNamesReadRequest.class, baseUrl, "/api/custom_insurance_plan_names/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomInsurancePlanNamesReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomInsurancePlanNamesReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -443,10 +452,11 @@ public class Billing {
     /**
      * Retrieve or search past eligibility checks for patient
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EligibilityChecksListResponse eligibilityChecksList(org.openapis.openapi.models.operations.EligibilityChecksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EligibilityChecksListResponse eligibilityChecksList(org.openapis.openapi.models.operations.EligibilityChecksListRequest request, org.openapis.openapi.models.operations.EligibilityChecksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/eligibility_checks");
         
@@ -454,14 +464,14 @@ public class Billing {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EligibilityChecksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EligibilityChecksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -490,25 +500,26 @@ public class Billing {
     /**
      * Retrieve an existing past eligibility check
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EligibilityChecksReadResponse eligibilityChecksRead(org.openapis.openapi.models.operations.EligibilityChecksReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EligibilityChecksReadResponse eligibilityChecksRead(org.openapis.openapi.models.operations.EligibilityChecksReadRequest request, org.openapis.openapi.models.operations.EligibilityChecksReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EligibilityChecksReadPathParams.class, baseUrl, "/api/eligibility_checks/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EligibilityChecksReadRequest.class, baseUrl, "/api/eligibility_checks/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EligibilityChecksReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EligibilityChecksReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -537,10 +548,11 @@ public class Billing {
     /**
      * Create billing line item for appointments
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LineItemsCreateResponse lineItemsCreate(org.openapis.openapi.models.operations.LineItemsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LineItemsCreateResponse lineItemsCreate(org.openapis.openapi.models.operations.LineItemsCreateRequest request, org.openapis.openapi.models.operations.LineItemsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/line_items");
         
@@ -548,14 +560,14 @@ public class Billing {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineItemsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineItemsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -581,22 +593,22 @@ public class Billing {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.LineItemsDeleteResponse lineItemsDelete(org.openapis.openapi.models.operations.LineItemsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LineItemsDeleteResponse lineItemsDelete(org.openapis.openapi.models.operations.LineItemsDeleteRequest request, org.openapis.openapi.models.operations.LineItemsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineItemsDeletePathParams.class, baseUrl, "/api/line_items/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineItemsDeleteRequest.class, baseUrl, "/api/line_items/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineItemsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineItemsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -617,10 +629,11 @@ public class Billing {
     /**
      * Retrieve or search billing line items
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LineItemsListResponse lineItemsList(org.openapis.openapi.models.operations.LineItemsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LineItemsListResponse lineItemsList(org.openapis.openapi.models.operations.LineItemsListRequest request, org.openapis.openapi.models.operations.LineItemsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/line_items");
         
@@ -628,14 +641,14 @@ public class Billing {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineItemsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineItemsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -661,22 +674,22 @@ public class Billing {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.LineItemsPartialUpdateResponse lineItemsPartialUpdate(org.openapis.openapi.models.operations.LineItemsPartialUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LineItemsPartialUpdateResponse lineItemsPartialUpdate(org.openapis.openapi.models.operations.LineItemsPartialUpdateRequest request, org.openapis.openapi.models.operations.LineItemsPartialUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineItemsPartialUpdatePathParams.class, baseUrl, "/api/line_items/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineItemsPartialUpdateRequest.class, baseUrl, "/api/line_items/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineItemsPartialUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineItemsPartialUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -697,25 +710,26 @@ public class Billing {
     /**
      * Retrieve an existing billing line item
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LineItemsReadResponse lineItemsRead(org.openapis.openapi.models.operations.LineItemsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LineItemsReadResponse lineItemsRead(org.openapis.openapi.models.operations.LineItemsReadRequest request, org.openapis.openapi.models.operations.LineItemsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineItemsReadPathParams.class, baseUrl, "/api/line_items/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineItemsReadRequest.class, baseUrl, "/api/line_items/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineItemsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineItemsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -741,22 +755,22 @@ public class Billing {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.LineItemsUpdateResponse lineItemsUpdate(org.openapis.openapi.models.operations.LineItemsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LineItemsUpdateResponse lineItemsUpdate(org.openapis.openapi.models.operations.LineItemsUpdateRequest request, org.openapis.openapi.models.operations.LineItemsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineItemsUpdatePathParams.class, baseUrl, "/api/line_items/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineItemsUpdateRequest.class, baseUrl, "/api/line_items/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineItemsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineItemsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -777,10 +791,11 @@ public class Billing {
     /**
      * Retrieve or search patient payment logs
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientPaymentLogListResponse patientPaymentLogList(org.openapis.openapi.models.operations.PatientPaymentLogListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientPaymentLogListResponse patientPaymentLogList(org.openapis.openapi.models.operations.PatientPaymentLogListRequest request, org.openapis.openapi.models.operations.PatientPaymentLogListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patient_payment_log");
         
@@ -788,14 +803,14 @@ public class Billing {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientPaymentLogListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientPaymentLogListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -824,25 +839,26 @@ public class Billing {
     /**
      * Retrieve an existing patient payment log
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientPaymentLogReadResponse patientPaymentLogRead(org.openapis.openapi.models.operations.PatientPaymentLogReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientPaymentLogReadResponse patientPaymentLogRead(org.openapis.openapi.models.operations.PatientPaymentLogReadRequest request, org.openapis.openapi.models.operations.PatientPaymentLogReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientPaymentLogReadPathParams.class, baseUrl, "/api/patient_payment_log/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientPaymentLogReadRequest.class, baseUrl, "/api/patient_payment_log/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientPaymentLogReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientPaymentLogReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -871,10 +887,11 @@ public class Billing {
     /**
      * Create patient payment
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientPaymentsCreateResponse patientPaymentsCreate(org.openapis.openapi.models.operations.PatientPaymentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientPaymentsCreateResponse patientPaymentsCreate(org.openapis.openapi.models.operations.PatientPaymentsCreateRequest request, org.openapis.openapi.models.operations.PatientPaymentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patient_payments");
         
@@ -882,14 +899,14 @@ public class Billing {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientPaymentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientPaymentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -918,10 +935,11 @@ public class Billing {
     /**
      * Retrieve or search patient payments
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientPaymentsListResponse patientPaymentsList(org.openapis.openapi.models.operations.PatientPaymentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientPaymentsListResponse patientPaymentsList(org.openapis.openapi.models.operations.PatientPaymentsListRequest request, org.openapis.openapi.models.operations.PatientPaymentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patient_payments");
         
@@ -929,14 +947,14 @@ public class Billing {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientPaymentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientPaymentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -965,25 +983,26 @@ public class Billing {
     /**
      * Retrieve an existing patient payment
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatientPaymentsReadResponse patientPaymentsRead(org.openapis.openapi.models.operations.PatientPaymentsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatientPaymentsReadResponse patientPaymentsRead(org.openapis.openapi.models.operations.PatientPaymentsReadRequest request, org.openapis.openapi.models.operations.PatientPaymentsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientPaymentsReadPathParams.class, baseUrl, "/api/patient_payments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatientPaymentsReadRequest.class, baseUrl, "/api/patient_payments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientPaymentsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatientPaymentsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1009,7 +1028,7 @@ public class Billing {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ProceduresListResponse proceduresList(org.openapis.openapi.models.operations.ProceduresListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProceduresListResponse proceduresList(org.openapis.openapi.models.operations.ProceduresListRequest request, org.openapis.openapi.models.operations.ProceduresListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/procedures");
         
@@ -1017,14 +1036,14 @@ public class Billing {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProceduresListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProceduresListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1050,22 +1069,22 @@ public class Billing {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ProceduresReadResponse proceduresRead(org.openapis.openapi.models.operations.ProceduresReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProceduresReadResponse proceduresRead(org.openapis.openapi.models.operations.ProceduresReadRequest request, org.openapis.openapi.models.operations.ProceduresReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProceduresReadPathParams.class, baseUrl, "/api/procedures/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProceduresReadRequest.class, baseUrl, "/api/procedures/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProceduresReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProceduresReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1094,10 +1113,11 @@ public class Billing {
     /**
      * Retrieve or search insurance transactions associated with billing line items
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransactionsListResponse transactionsList(org.openapis.openapi.models.operations.TransactionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransactionsListResponse transactionsList(org.openapis.openapi.models.operations.TransactionsListRequest request, org.openapis.openapi.models.operations.TransactionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/transactions");
         
@@ -1105,14 +1125,14 @@ public class Billing {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TransactionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TransactionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1141,25 +1161,26 @@ public class Billing {
     /**
      * Retrieve an existing insurance transaction
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransactionsReadResponse transactionsRead(org.openapis.openapi.models.operations.TransactionsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransactionsReadResponse transactionsRead(org.openapis.openapi.models.operations.TransactionsReadRequest request, org.openapis.openapi.models.operations.TransactionsReadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TransactionsReadPathParams.class, baseUrl, "/api/transactions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TransactionsReadRequest.class, baseUrl, "/api/transactions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TransactionsReadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TransactionsReadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

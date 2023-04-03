@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CopyFileToS3Request {
-    
-    public CopyFileToS3Headers headers;
-    public CopyFileToS3Request withHeaders(CopyFileToS3Headers headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CopyFileToS3RequestBody request;
-    public CopyFileToS3Request withRequest(CopyFileToS3RequestBody request) {
-        this.request = request;
+    public CopyFileToS3RequestBody requestBody;
+    public CopyFileToS3Request withRequestBody(CopyFileToS3RequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CopyFileToS3Security security;
-    public CopyFileToS3Request withSecurity(CopyFileToS3Security security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public CopyFileToS3Request withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

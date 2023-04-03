@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserPictureRequest {
-    
-    public UserPicturePathParams pathParams;
-    public UserPictureRequest withPathParams(UserPicturePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public UserPictureRequestBody requestBody;
+    public UserPictureRequest withRequestBody(UserPictureRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public UserPictureRequestBody request;
-    public UserPictureRequest withRequest(UserPictureRequestBody request) {
-        this.request = request;
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UserPictureRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetPrivdirRequest {
+    /**
+     * Agent to set the directory path
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public SetPrivdirRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public SetPrivdirPathParams pathParams;
-    public SetPrivdirRequest withPathParams(SetPrivdirPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Directory path for the agent
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=privdir")
+    public String privdir;
+    public SetPrivdirRequest withPrivdir(String privdir) {
+        this.privdir = privdir;
         return this;
     }
     

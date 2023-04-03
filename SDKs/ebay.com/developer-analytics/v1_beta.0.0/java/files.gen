@@ -32,16 +32,13 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetRateLimitsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetRateLimitsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRateLimitsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRateLimitsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUserRateLimitsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetUserRateLimitsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUserRateLimitsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUserRateLimitsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/RateLimitsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/RateLimit.java
 lib/src/main/java/org/openapis/openapi/models/shared/Resource.java
 lib/src/main/java/org/openapis/openapi/models/shared/Rate.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIAuth.java
 USAGE.md

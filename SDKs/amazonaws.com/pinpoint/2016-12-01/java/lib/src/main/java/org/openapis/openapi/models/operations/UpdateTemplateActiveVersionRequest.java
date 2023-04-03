@@ -7,24 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTemplateActiveVersionRequest {
-    
-    public UpdateTemplateActiveVersionPathParams pathParams;
-    public UpdateTemplateActiveVersionRequest withPathParams(UpdateTemplateActiveVersionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateTemplateActiveVersionHeaders headers;
-    public UpdateTemplateActiveVersionRequest withHeaders(UpdateTemplateActiveVersionHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateTemplateActiveVersionRequestBody request;
-    public UpdateTemplateActiveVersionRequest withRequest(UpdateTemplateActiveVersionRequestBody request) {
-        this.request = request;
+    public UpdateTemplateActiveVersionRequestBody requestBody;
+    public UpdateTemplateActiveVersionRequest withRequestBody(UpdateTemplateActiveVersionRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateTemplateActiveVersionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateTemplateActiveVersionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateTemplateActiveVersionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateTemplateActiveVersionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateTemplateActiveVersionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateTemplateActiveVersionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateTemplateActiveVersionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=template-name")
+    public String templateName;
+    public UpdateTemplateActiveVersionRequest withTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    
+    /**
+     * The type of channel that the message template is designed for. Valid values are: EMAIL, PUSH, SMS, and VOICE.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=template-type")
+    public String templateType;
+    public UpdateTemplateActiveVersionRequest withTemplateType(String templateType) {
+        this.templateType = templateType;
         return this;
     }
     

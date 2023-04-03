@@ -7,31 +7,99 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateGatewayRouteRequest {
-    
-    public UpdateGatewayRoutePathParams pathParams;
-    public UpdateGatewayRouteRequest withPathParams(UpdateGatewayRoutePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateGatewayRouteQueryParams queryParams;
-    public UpdateGatewayRouteRequest withQueryParams(UpdateGatewayRouteQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public UpdateGatewayRouteHeaders headers;
-    public UpdateGatewayRouteRequest withHeaders(UpdateGatewayRouteHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateGatewayRouteRequestBody request;
-    public UpdateGatewayRouteRequest withRequest(UpdateGatewayRouteRequestBody request) {
-        this.request = request;
+    public UpdateGatewayRouteRequestBody requestBody;
+    public UpdateGatewayRouteRequest withRequestBody(UpdateGatewayRouteRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateGatewayRouteRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateGatewayRouteRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateGatewayRouteRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateGatewayRouteRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateGatewayRouteRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateGatewayRouteRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateGatewayRouteRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The name of the gateway route to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gatewayRouteName")
+    public String gatewayRouteName;
+    public UpdateGatewayRouteRequest withGatewayRouteName(String gatewayRouteName) {
+        this.gatewayRouteName = gatewayRouteName;
+        return this;
+    }
+    
+    /**
+     * The name of the service mesh that the gateway route resides in.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meshName")
+    public String meshName;
+    public UpdateGatewayRouteRequest withMeshName(String meshName) {
+        this.meshName = meshName;
+        return this;
+    }
+    
+    /**
+     * The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account. For more information about mesh sharing, see &lt;a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html"&gt;Working with shared meshes&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=meshOwner")
+    public String meshOwner;
+    public UpdateGatewayRouteRequest withMeshOwner(String meshOwner) {
+        this.meshOwner = meshOwner;
+        return this;
+    }
+    
+    /**
+     * The name of the virtual gateway that the gateway route is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=virtualGatewayName")
+    public String virtualGatewayName;
+    public UpdateGatewayRouteRequest withVirtualGatewayName(String virtualGatewayName) {
+        this.virtualGatewayName = virtualGatewayName;
         return this;
     }
     

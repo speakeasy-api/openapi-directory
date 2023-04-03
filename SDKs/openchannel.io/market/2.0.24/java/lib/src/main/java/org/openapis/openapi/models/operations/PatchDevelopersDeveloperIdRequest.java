@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchDevelopersDeveloperIdRequest {
-    
-    public PatchDevelopersDeveloperIdPathParams pathParams;
-    public PatchDevelopersDeveloperIdRequest withPathParams(PatchDevelopersDeveloperIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A custom JSON object that you can create and attach to this record
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
+    public String customData;
+    public PatchDevelopersDeveloperIdRequest withCustomData(String customData) {
+        this.customData = customData;
         return this;
     }
     
+    /**
+     * The id of the developer to be located
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=developerId")
+    public String developerId;
+    public PatchDevelopersDeveloperIdRequest withDeveloperId(String developerId) {
+        this.developerId = developerId;
+        return this;
+    }
     
-    public PatchDevelopersDeveloperIdQueryParams queryParams;
-    public PatchDevelopersDeveloperIdRequest withQueryParams(PatchDevelopersDeveloperIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The developer's email
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public PatchDevelopersDeveloperIdRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    
+    /**
+     * The developer's name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public PatchDevelopersDeveloperIdRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The type for this developer
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public PatchDevelopersDeveloperIdRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * The developer's username
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public PatchDevelopersDeveloperIdRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

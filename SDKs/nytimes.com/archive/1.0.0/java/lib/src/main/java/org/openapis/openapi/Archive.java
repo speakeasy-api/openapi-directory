@@ -39,7 +39,7 @@ public class Archive {
      */
     public org.openapis.openapi.models.operations.GetYearMonthJsonResponse getYearMonthJson(org.openapis.openapi.models.operations.GetYearMonthJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetYearMonthJsonPathParams.class, baseUrl, "/{year}/{month}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetYearMonthJsonRequest.class, baseUrl, "/{year}/{month}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

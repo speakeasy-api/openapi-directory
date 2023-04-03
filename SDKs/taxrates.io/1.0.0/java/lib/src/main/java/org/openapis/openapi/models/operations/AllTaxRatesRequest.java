@@ -4,13 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AllTaxRatesRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Product_code")
+    public String productCode;
+    public AllTaxRatesRequest withProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
     
-    public AllTaxRatesQueryParams queryParams;
-    public AllTaxRatesRequest withQueryParams(AllTaxRatesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Cursor shows from which record you want to get information. Default value is 0, next value can be retrieved from X-Cursor-Next header.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public AllTaxRatesRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    /**
+     * Domain name: api.taxrates.io
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
+    public String domain;
+    public AllTaxRatesRequest withDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    
+    /**
+     * You can filter your taxes by one of following types: 'standard', 'CombinedRate', 'CountyRate', 'CityRate', 'SPDRate' and 'MTARate'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public AllTaxRatesRequest withFilter(String filter) {
+        this.filter = filter;
         return this;
     }
     

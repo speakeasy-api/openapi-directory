@@ -7,31 +7,160 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatamigrationProjectsLocationsPrivateConnectionsCreateRequest {
-    
-    public DatamigrationProjectsLocationsPrivateConnectionsCreatePathParams pathParams;
-    public DatamigrationProjectsLocationsPrivateConnectionsCreateRequest withPathParams(DatamigrationProjectsLocationsPrivateConnectionsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DatamigrationProjectsLocationsPrivateConnectionsCreateQueryParams queryParams;
-    public DatamigrationProjectsLocationsPrivateConnectionsCreateRequest withQueryParams(DatamigrationProjectsLocationsPrivateConnectionsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DatamigrationProjectsLocationsPrivateConnectionsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PrivateConnectionInput request;
-    public DatamigrationProjectsLocationsPrivateConnectionsCreateRequest withRequest(org.openapis.openapi.models.shared.PrivateConnectionInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PrivateConnectionInput privateConnectionInput;
+    public DatamigrationProjectsLocationsPrivateConnectionsCreateRequest withPrivateConnectionInput(org.openapis.openapi.models.shared.PrivateConnectionInput privateConnectionInput) {
+        this.privateConnectionInput = privateConnectionInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DatamigrationProjectsLocationsPrivateConnectionsCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public DatamigrationProjectsLocationsPrivateConnectionsCreateSecurity security;
-    public DatamigrationProjectsLocationsPrivateConnectionsCreateRequest withSecurity(DatamigrationProjectsLocationsPrivateConnectionsCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DatamigrationProjectsLocationsPrivateConnectionsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DatamigrationProjectsLocationsPrivateConnectionsCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DatamigrationProjectsLocationsPrivateConnectionsCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DatamigrationProjectsLocationsPrivateConnectionsCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DatamigrationProjectsLocationsPrivateConnectionsCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The parent that owns the collection of PrivateConnections.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public DatamigrationProjectsLocationsPrivateConnectionsCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DatamigrationProjectsLocationsPrivateConnectionsCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Required. The private connection identifier.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=privateConnectionId")
+    public String privateConnectionId;
+    public DatamigrationProjectsLocationsPrivateConnectionsCreateRequest withPrivateConnectionId(String privateConnectionId) {
+        this.privateConnectionId = privateConnectionId;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DatamigrationProjectsLocationsPrivateConnectionsCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Optional. A unique ID used to identify the request. If the server receives two requests with the same ID, then the second request is ignored. It is recommended to always set this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
+    public String requestId;
+    public DatamigrationProjectsLocationsPrivateConnectionsCreateRequest withRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    
+    /**
+     * Optional. If set to true, will skip validations.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skipValidation")
+    public Boolean skipValidation;
+    public DatamigrationProjectsLocationsPrivateConnectionsCreateRequest withSkipValidation(Boolean skipValidation) {
+        this.skipValidation = skipValidation;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DatamigrationProjectsLocationsPrivateConnectionsCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DatamigrationProjectsLocationsPrivateConnectionsCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

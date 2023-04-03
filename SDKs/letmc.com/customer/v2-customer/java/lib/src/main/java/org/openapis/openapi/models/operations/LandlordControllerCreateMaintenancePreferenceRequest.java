@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LandlordControllerCreateMaintenancePreferenceRequest {
-    
-    public LandlordControllerCreateMaintenancePreferencePathParams pathParams;
-    public LandlordControllerCreateMaintenancePreferenceRequest withPathParams(LandlordControllerCreateMaintenancePreferencePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Name of the maintenance preference to add
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public LandlordControllerCreateMaintenancePreferenceRequest withName(String name) {
+        this.name = name;
         return this;
     }
     
+    /**
+     * Notes of the maintenance preference to add
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=notes")
+    public String notes;
+    public LandlordControllerCreateMaintenancePreferenceRequest withNotes(String notes) {
+        this.notes = notes;
+        return this;
+    }
     
-    public LandlordControllerCreateMaintenancePreferenceQueryParams queryParams;
-    public LandlordControllerCreateMaintenancePreferenceRequest withQueryParams(LandlordControllerCreateMaintenancePreferenceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public LandlordControllerCreateMaintenancePreferenceRequest withShortName(String shortName) {
+        this.shortName = shortName;
+        return this;
+    }
+    
+    /**
+     * The Tenancy ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenancyID")
+    public String tenancyID;
+    public LandlordControllerCreateMaintenancePreferenceRequest withTenancyID(String tenancyID) {
+        this.tenancyID = tenancyID;
+        return this;
+    }
+    
+    /**
+     * The login token returned from the /session POST call
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public LandlordControllerCreateMaintenancePreferenceRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

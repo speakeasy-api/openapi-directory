@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConvertcurrencyRequest {
+    /**
+     * The amount of currency to be converted
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amount")
+    public String amount;
+    public ConvertcurrencyRequest withAmount(String amount) {
+        this.amount = amount;
+        return this;
+    }
     
-    public ConvertcurrencyQueryParams queryParams;
-    public ConvertcurrencyRequest withQueryParams(ConvertcurrencyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Currency symbol for the converted from amount
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public String from;
+    public ConvertcurrencyRequest withFrom(String from) {
+        this.from = from;
+        return this;
+    }
+    
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public String license;
+    public ConvertcurrencyRequest withLicense(String license) {
+        this.license = license;
+        return this;
+    }
+    
+    /**
+     * Currency symbol for the converted to amount
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public String to;
+    public ConvertcurrencyRequest withTo(String to) {
+        this.to = to;
         return this;
     }
     

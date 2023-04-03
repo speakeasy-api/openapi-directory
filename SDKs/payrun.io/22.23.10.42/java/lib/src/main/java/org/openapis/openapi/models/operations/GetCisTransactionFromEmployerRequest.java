@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCisTransactionFromEmployerRequest {
-    
-    public GetCisTransactionFromEmployerPathParams pathParams;
-    public GetCisTransactionFromEmployerRequest withPathParams(GetCisTransactionFromEmployerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public GetCisTransactionFromEmployerRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetCisTransactionFromEmployerRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public GetCisTransactionFromEmployerHeaders headers;
-    public GetCisTransactionFromEmployerRequest withHeaders(GetCisTransactionFromEmployerHeaders headers) {
-        this.headers = headers;
+    /**
+     * The CIS transaction unique identifier. E.g. CISTRAN001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CisTransactionId")
+    public String cisTransactionId;
+    public GetCisTransactionFromEmployerRequest withCisTransactionId(String cisTransactionId) {
+        this.cisTransactionId = cisTransactionId;
+        return this;
+    }
+    
+    /**
+     * The employers' unique identifier. E.g ER001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmployerId")
+    public String employerId;
+    public GetCisTransactionFromEmployerRequest withEmployerId(String employerId) {
+        this.employerId = employerId;
         return this;
     }
     

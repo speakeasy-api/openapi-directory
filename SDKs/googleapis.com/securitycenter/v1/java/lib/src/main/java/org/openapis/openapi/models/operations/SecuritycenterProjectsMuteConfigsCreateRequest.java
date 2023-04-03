@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SecuritycenterProjectsMuteConfigsCreateRequest {
-    
-    public SecuritycenterProjectsMuteConfigsCreatePathParams pathParams;
-    public SecuritycenterProjectsMuteConfigsCreateRequest withPathParams(SecuritycenterProjectsMuteConfigsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SecuritycenterProjectsMuteConfigsCreateQueryParams queryParams;
-    public SecuritycenterProjectsMuteConfigsCreateRequest withQueryParams(SecuritycenterProjectsMuteConfigsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public SecuritycenterProjectsMuteConfigsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1MuteConfigInput request;
-    public SecuritycenterProjectsMuteConfigsCreateRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1MuteConfigInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1MuteConfigInput googleCloudSecuritycenterV1MuteConfigInput;
+    public SecuritycenterProjectsMuteConfigsCreateRequest withGoogleCloudSecuritycenterV1MuteConfigInput(org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1MuteConfigInput googleCloudSecuritycenterV1MuteConfigInput) {
+        this.googleCloudSecuritycenterV1MuteConfigInput = googleCloudSecuritycenterV1MuteConfigInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public SecuritycenterProjectsMuteConfigsCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public SecuritycenterProjectsMuteConfigsCreateSecurity security;
-    public SecuritycenterProjectsMuteConfigsCreateRequest withSecurity(SecuritycenterProjectsMuteConfigsCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public SecuritycenterProjectsMuteConfigsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public SecuritycenterProjectsMuteConfigsCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public SecuritycenterProjectsMuteConfigsCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public SecuritycenterProjectsMuteConfigsCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Required. Unique identifier provided by the client within the parent scope. It must consist of lower case letters, numbers, and hyphen, with the first character a letter, the last a letter or a number, and a 63 character maximum.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=muteConfigId")
+    public String muteConfigId;
+    public SecuritycenterProjectsMuteConfigsCreateRequest withMuteConfigId(String muteConfigId) {
+        this.muteConfigId = muteConfigId;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public SecuritycenterProjectsMuteConfigsCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. Resource name of the new mute configs's parent. Its format is "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public SecuritycenterProjectsMuteConfigsCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public SecuritycenterProjectsMuteConfigsCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public SecuritycenterProjectsMuteConfigsCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public SecuritycenterProjectsMuteConfigsCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public SecuritycenterProjectsMuteConfigsCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

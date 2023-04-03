@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ModeArrivalsRequest {
-    
-    public ModeArrivalsPathParams pathParams;
-    public ModeArrivalsRequest withPathParams(ModeArrivalsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A number of arrivals to return for each stop, -1 to return all available.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Integer count;
+    public ModeArrivalsRequest withCount(Integer count) {
+        this.count = count;
         return this;
     }
     
-    
-    public ModeArrivalsQueryParams queryParams;
-    public ModeArrivalsRequest withQueryParams(ModeArrivalsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A mode name e.g. tube, dlr
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mode")
+    public String mode;
+    public ModeArrivalsRequest withMode(String mode) {
+        this.mode = mode;
         return this;
     }
     

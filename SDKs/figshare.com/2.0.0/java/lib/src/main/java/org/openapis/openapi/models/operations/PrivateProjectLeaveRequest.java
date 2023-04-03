@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateProjectLeaveRequest {
-    
-    public PrivateProjectLeavePathParams pathParams;
-    public PrivateProjectLeaveRequest withPathParams(PrivateProjectLeavePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PrivateProjectLeaveSecurity security;
-    public PrivateProjectLeaveRequest withSecurity(PrivateProjectLeaveSecurity security) {
-        this.security = security;
+    /**
+     * Project unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Long projectId;
+    public PrivateProjectLeaveRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

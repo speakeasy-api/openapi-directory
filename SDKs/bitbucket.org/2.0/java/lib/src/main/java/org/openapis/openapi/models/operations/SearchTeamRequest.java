@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchTeamRequest {
-    
-    public SearchTeamPathParams pathParams;
-    public SearchTeamRequest withPathParams(SearchTeamPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Which page of the search results to retrieve
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public SearchTeamRequest withPage(Integer page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many search results to retrieve per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagelen")
+    public Integer pagelen;
+    public SearchTeamRequest withPagelen(Integer pagelen) {
+        this.pagelen = pagelen;
+        return this;
+    }
     
-    public SearchTeamQueryParams queryParams;
-    public SearchTeamRequest withQueryParams(SearchTeamQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The search query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_query")
+    public String searchQuery;
+    public SearchTeamRequest withSearchQuery(String searchQuery) {
+        this.searchQuery = searchQuery;
+        return this;
+    }
+    
+    /**
+     * The account to search in; either the username or the UUID in curly braces
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public SearchTeamRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

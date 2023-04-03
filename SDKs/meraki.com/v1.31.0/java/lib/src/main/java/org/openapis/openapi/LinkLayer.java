@@ -39,7 +39,7 @@ public class LinkLayer {
      */
     public org.openapis.openapi.models.operations.GetNetworkTopologyLinkLayerResponse getNetworkTopologyLinkLayer(org.openapis.openapi.models.operations.GetNetworkTopologyLinkLayerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkTopologyLinkLayerPathParams.class, baseUrl, "/networks/{networkId}/topology/linkLayer", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkTopologyLinkLayerRequest.class, baseUrl, "/networks/{networkId}/topology/linkLayer", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

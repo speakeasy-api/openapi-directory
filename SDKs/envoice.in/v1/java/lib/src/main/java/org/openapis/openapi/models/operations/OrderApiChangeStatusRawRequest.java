@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiChangeStatusRawRequest {
-    
-    public OrderApiChangeStatusRawHeaders headers;
-    public OrderApiChangeStatusRawRequest withHeaders(OrderApiChangeStatusRawHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] requestBody;
+    public OrderApiChangeStatusRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public OrderApiChangeStatusRawRequest withRequest(byte[] request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public OrderApiChangeStatusRawRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public OrderApiChangeStatusRawRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

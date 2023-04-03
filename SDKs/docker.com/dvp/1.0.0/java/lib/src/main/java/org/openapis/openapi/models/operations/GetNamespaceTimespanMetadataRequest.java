@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamespaceTimespanMetadataRequest {
+    /**
+     * Namespace to fetch data for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
+    public String namespace;
+    public GetNamespaceTimespanMetadataRequest withNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
     
-    public GetNamespaceTimespanMetadataPathParams pathParams;
-    public GetNamespaceTimespanMetadataRequest withPathParams(GetNamespaceTimespanMetadataPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Timespan to fetch data for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=timespan")
+    public Long timespan;
+    public GetNamespaceTimespanMetadataRequest withTimespan(Long timespan) {
+        this.timespan = timespan;
+        return this;
+    }
+    
+    /**
+     * Type of timespan to fetch data for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=timespantype")
+    public org.openapis.openapi.models.shared.TimespanTypeEnum timespantype;
+    public GetNamespaceTimespanMetadataRequest withTimespantype(org.openapis.openapi.models.shared.TimespanTypeEnum timespantype) {
+        this.timespantype = timespantype;
+        return this;
+    }
+    
+    /**
+     * Year to fetch data for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=year")
+    public Long year;
+    public GetNamespaceTimespanMetadataRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCheckpointFirewallRequest {
-    
-    public DeleteCheckpointFirewallPathParams pathParams;
-    public DeleteCheckpointFirewallRequest withPathParams(DeleteCheckpointFirewallPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteCheckpointFirewallSecurity security;
-    public DeleteCheckpointFirewallRequest withSecurity(DeleteCheckpointFirewallSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteCheckpointFirewallRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

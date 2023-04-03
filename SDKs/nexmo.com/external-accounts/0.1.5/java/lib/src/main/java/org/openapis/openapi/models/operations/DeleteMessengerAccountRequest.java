@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteMessengerAccountRequest {
-    
-    public DeleteMessengerAccountPathParams pathParams;
-    public DeleteMessengerAccountRequest withPathParams(DeleteMessengerAccountPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteMessengerAccountSecurity security;
-    public DeleteMessengerAccountRequest withSecurity(DeleteMessengerAccountSecurity security) {
-        this.security = security;
+    /**
+     * External id of the account you want to delete. In this case it is the Facebook Page ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=external_id")
+    public String externalId;
+    public DeleteMessengerAccountRequest withExternalId(String externalId) {
+        this.externalId = externalId;
         return this;
     }
     

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCategoriesCategoryRequest {
-    
-    public GetCategoriesCategoryPathParams pathParams;
-    public GetCategoriesCategoryRequest withPathParams(GetCategoriesCategoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category")
+    public String category;
+    public GetCategoriesCategoryRequest withCategory(String category) {
+        this.category = category;
         return this;
     }
     

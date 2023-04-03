@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSshGetTraceRequest {
-    
-    public ProtocolSshGetTracePathParams pathParams;
-    public ProtocolSshGetTraceRequest withPathParams(ProtocolSshGetTracePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show whether SSH tracing is enabled
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSshGetTraceRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateWithdrawalRequest {
-    
-    public CreateWithdrawalHeaders headers;
-    public CreateWithdrawalRequest withHeaders(CreateWithdrawalHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateWithdrawalRootTypeForWithdrawal request;
-    public CreateWithdrawalRequest withRequest(CreateWithdrawalRootTypeForWithdrawal request) {
-        this.request = request;
+    public CreateWithdrawalRootTypeForWithdrawal requestBody;
+    public CreateWithdrawalRequest withRequestBody(CreateWithdrawalRootTypeForWithdrawal requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateWithdrawalSecurity security;
-    public CreateWithdrawalRequest withSecurity(CreateWithdrawalSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public CreateWithdrawalRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

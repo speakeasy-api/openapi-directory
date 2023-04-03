@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTaxRateRequest {
-    
-    public DeleteTaxRatePathParams pathParams;
-    public DeleteTaxRateRequest withPathParams(DeleteTaxRatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteTaxRateSecurity security;
-    public DeleteTaxRateRequest withSecurity(DeleteTaxRateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxRateUuid")
+    public String taxRateUuid;
+    public DeleteTaxRateRequest withTaxRateUuid(String taxRateUuid) {
+        this.taxRateUuid = taxRateUuid;
         return this;
     }
     

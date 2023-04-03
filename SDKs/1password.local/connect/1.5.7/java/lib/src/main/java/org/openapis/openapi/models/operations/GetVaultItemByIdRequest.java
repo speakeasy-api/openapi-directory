@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVaultItemByIdRequest {
-    
-    public GetVaultItemByIdPathParams pathParams;
-    public GetVaultItemByIdRequest withPathParams(GetVaultItemByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The UUID of the Item to fetch
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemUuid")
+    public String itemUuid;
+    public GetVaultItemByIdRequest withItemUuid(String itemUuid) {
+        this.itemUuid = itemUuid;
         return this;
     }
     
-    
-    public GetVaultItemByIdSecurity security;
-    public GetVaultItemByIdRequest withSecurity(GetVaultItemByIdSecurity security) {
-        this.security = security;
+    /**
+     * The UUID of the Vault to fetch Item from
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vaultUuid")
+    public String vaultUuid;
+    public GetVaultItemByIdRequest withVaultUuid(String vaultUuid) {
+        this.vaultUuid = vaultUuid;
         return this;
     }
     

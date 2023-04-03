@@ -7,38 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateServiceConversationParticipantRequest {
-    
-    public UpdateServiceConversationParticipantPathParams pathParams;
-    public UpdateServiceConversationParticipantRequest withPathParams(UpdateServiceConversationParticipantPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public UpdateServiceConversationParticipantRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     
-    
-    public UpdateServiceConversationParticipantHeaders headers;
-    public UpdateServiceConversationParticipantRequest withHeaders(UpdateServiceConversationParticipantHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this participant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConversationSid")
+    public String conversationSid;
+    public UpdateServiceConversationParticipantRequest withConversationSid(String conversationSid) {
+        this.conversationSid = conversationSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateServiceConversationParticipantUpdateServiceConversationParticipantRequest request;
-    public UpdateServiceConversationParticipantRequest withRequest(UpdateServiceConversationParticipantUpdateServiceConversationParticipantRequest request) {
-        this.request = request;
+    public UpdateServiceConversationParticipantUpdateServiceConversationParticipantRequest requestBody;
+    public UpdateServiceConversationParticipantRequest withRequestBody(UpdateServiceConversationParticipantUpdateServiceConversationParticipantRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateServiceConversationParticipantSecurity security;
-    public UpdateServiceConversationParticipantRequest withSecurity(UpdateServiceConversationParticipantSecurity security) {
-        this.security = security;
+    /**
+     * A 34 character string that uniquely identifies this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateServiceConversationParticipantRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateServiceConversationParticipantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.ServiceConversationParticipantEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public UpdateServiceConversationParticipantRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.ServiceConversationParticipantEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

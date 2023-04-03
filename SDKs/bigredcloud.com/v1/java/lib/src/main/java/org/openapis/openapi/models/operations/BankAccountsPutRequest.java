@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BankAccountsPutRequest {
-    
-    public BankAccountsPutPathParams pathParams;
-    public BankAccountsPutRequest withPathParams(BankAccountsPutPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Information of Bank Account to update.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BankAccountDto request;
-    public BankAccountsPutRequest withRequest(org.openapis.openapi.models.shared.BankAccountDto request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BankAccountDto bankAccountDto;
+    public BankAccountsPutRequest withBankAccountDto(org.openapis.openapi.models.shared.BankAccountDto bankAccountDto) {
+        this.bankAccountDto = bankAccountDto;
+        return this;
+    }
+    
+    /**
+     * Id of Bank Account to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public BankAccountsPutRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

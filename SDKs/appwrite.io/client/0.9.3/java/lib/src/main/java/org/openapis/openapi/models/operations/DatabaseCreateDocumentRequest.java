@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatabaseCreateDocumentRequest {
-    
-    public DatabaseCreateDocumentPathParams pathParams;
-    public DatabaseCreateDocumentRequest withPathParams(DatabaseCreateDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DatabaseCreateDocumentRequestBody request;
-    public DatabaseCreateDocumentRequest withRequest(DatabaseCreateDocumentRequestBody request) {
-        this.request = request;
+    public DatabaseCreateDocumentRequestBody requestBody;
+    public DatabaseCreateDocumentRequest withRequestBody(DatabaseCreateDocumentRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public DatabaseCreateDocumentSecurity security;
-    public DatabaseCreateDocumentRequest withSecurity(DatabaseCreateDocumentSecurity security) {
-        this.security = security;
+    /**
+     * Collection unique ID. You can create a new collection with validation rules using the Database service [server integration](/docs/server/database#createCollection).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collectionId")
+    public String collectionId;
+    public DatabaseCreateDocumentRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
         return this;
     }
     

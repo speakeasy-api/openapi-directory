@@ -4,13 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NotifyReadListRequest {
+    /**
+     * If true, mark all notifications on this repo. Default value is false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
+    public String all;
+    public NotifyReadListRequest withAll(String all) {
+        this.all = all;
+        return this;
+    }
     
-    public NotifyReadListQueryParams queryParams;
-    public NotifyReadListRequest withQueryParams(NotifyReadListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Describes the last point that notifications were checked. Anything updated since this time will not be updated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_read_at")
+    public OffsetDateTime lastReadAt;
+    public NotifyReadListRequest withLastReadAt(OffsetDateTime lastReadAt) {
+        this.lastReadAt = lastReadAt;
+        return this;
+    }
+    
+    /**
+     * Mark notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status-types")
+    public String[] statusTypes;
+    public NotifyReadListRequest withStatusTypes(String[] statusTypes) {
+        this.statusTypes = statusTypes;
+        return this;
+    }
+    
+    /**
+     * Status to mark notifications as, Defaults to read.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to-status")
+    public String toStatus;
+    public NotifyReadListRequest withToStatus(String toStatus) {
+        this.toStatus = toStatus;
         return this;
     }
     

@@ -4,20 +4,146 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MirrorTimelineListRequest {
-    
-    public MirrorTimelineListQueryParams queryParams;
-    public MirrorTimelineListRequest withQueryParams(MirrorTimelineListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public MirrorTimelineListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
+    /**
+     * If provided, only items with the given bundleId will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bundleId")
+    public String bundleId;
+    public MirrorTimelineListRequest withBundleId(String bundleId) {
+        this.bundleId = bundleId;
+        return this;
+    }
     
-    public MirrorTimelineListSecurity security;
-    public MirrorTimelineListRequest withSecurity(MirrorTimelineListSecurity security) {
-        this.security = security;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public MirrorTimelineListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * If true, tombstone records for deleted items will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeDeleted")
+    public Boolean includeDeleted;
+    public MirrorTimelineListRequest withIncludeDeleted(Boolean includeDeleted) {
+        this.includeDeleted = includeDeleted;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public MirrorTimelineListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The maximum number of items to include in the response, used for paging.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public MirrorTimelineListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public MirrorTimelineListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Controls the order in which timeline items are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
+    public MirrorTimelineListOrderByEnum orderBy;
+    public MirrorTimelineListRequest withOrderBy(MirrorTimelineListOrderByEnum orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    /**
+     * Token for the page of results to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public MirrorTimelineListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * If true, only pinned items will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pinnedOnly")
+    public Boolean pinnedOnly;
+    public MirrorTimelineListRequest withPinnedOnly(Boolean pinnedOnly) {
+        this.pinnedOnly = pinnedOnly;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public MirrorTimelineListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public MirrorTimelineListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * If provided, only items with the given sourceItemId will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceItemId")
+    public String sourceItemId;
+    public MirrorTimelineListRequest withSourceItemId(String sourceItemId) {
+        this.sourceItemId = sourceItemId;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public MirrorTimelineListRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

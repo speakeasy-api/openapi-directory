@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteArchiveRuleRequest {
-    
-    public DeleteArchiveRulePathParams pathParams;
-    public DeleteArchiveRuleRequest withPathParams(DeleteArchiveRulePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DeleteArchiveRuleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public DeleteArchiveRuleQueryParams queryParams;
-    public DeleteArchiveRuleRequest withQueryParams(DeleteArchiveRuleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DeleteArchiveRuleRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DeleteArchiveRuleRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public DeleteArchiveRuleHeaders headers;
-    public DeleteArchiveRuleRequest withHeaders(DeleteArchiveRuleHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DeleteArchiveRuleRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DeleteArchiveRuleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DeleteArchiveRuleRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DeleteArchiveRuleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The name of the analyzer that associated with the archive rule to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analyzerName")
+    public String analyzerName;
+    public DeleteArchiveRuleRequest withAnalyzerName(String analyzerName) {
+        this.analyzerName = analyzerName;
+        return this;
+    }
+    
+    /**
+     * A client token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientToken")
+    public String clientToken;
+    public DeleteArchiveRuleRequest withClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    
+    /**
+     * The name of the rule to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ruleName")
+    public String ruleName;
+    public DeleteArchiveRuleRequest withRuleName(String ruleName) {
+        this.ruleName = ruleName;
         return this;
     }
     

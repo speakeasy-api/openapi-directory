@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReportsTwitterCreateRequest {
+    /**
+     * Filtering options to be used when creating a filtered report. The options must be in JSON form, example: {'gender':['male'],'ages':['18-24'],'countries':['usa']}
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public GetReportsTwitterCreateRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public GetReportsTwitterCreateQueryParams queryParams;
-    public GetReportsTwitterCreateRequest withQueryParams(GetReportsTwitterCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (required if twitter_id is not supplied) twitter_handle must be sent with all client requests. Multiple ids are separated by commas.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=twitter_handle")
+    public String twitterHandle;
+    public GetReportsTwitterCreateRequest withTwitterHandle(String twitterHandle) {
+        this.twitterHandle = twitterHandle;
+        return this;
+    }
+    
+    /**
+     * (required if twitter_handle is not supplied) twitter_id must be sent with all client requests. Multiple handles are separated by commas.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=twitter_id")
+    public Long twitterId;
+    public GetReportsTwitterCreateRequest withTwitterId(Long twitterId) {
+        this.twitterId = twitterId;
         return this;
     }
     

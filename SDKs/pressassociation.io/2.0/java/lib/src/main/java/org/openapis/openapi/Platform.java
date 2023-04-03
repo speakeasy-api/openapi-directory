@@ -35,19 +35,20 @@ public class Platform {
      * Platform Detail
      * Return the content of the selected platform.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPlatformResponse getPlatform(org.openapis.openapi.models.operations.GetPlatformRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPlatformResponse getPlatform(org.openapis.openapi.models.operations.GetPlatformRequest request, org.openapis.openapi.models.operations.GetPlatformSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPlatformPathParams.class, baseUrl, "/platform/{platformId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPlatformRequest.class, baseUrl, "/platform/{platformId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -75,25 +76,26 @@ public class Platform {
      * Platform Region Collection
      * Return a list of regions for a platform.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListPlatformRegionsResponse listPlatformRegions(org.openapis.openapi.models.operations.ListPlatformRegionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListPlatformRegionsResponse listPlatformRegions(org.openapis.openapi.models.operations.ListPlatformRegionsRequest request, org.openapis.openapi.models.operations.ListPlatformRegionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListPlatformRegionsPathParams.class, baseUrl, "/platform/{platformId}/region", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListPlatformRegionsRequest.class, baseUrl, "/platform/{platformId}/region", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPlatformRegionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPlatformRegionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -121,10 +123,11 @@ public class Platform {
      * Platform Collection
      * Return a list of available platforms.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListPlatformsResponse listPlatforms(org.openapis.openapi.models.operations.ListPlatformsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListPlatformsResponse listPlatforms(org.openapis.openapi.models.operations.ListPlatformsRequest request, org.openapis.openapi.models.operations.ListPlatformsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/platform");
         
@@ -132,14 +135,14 @@ public class Platform {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPlatformsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPlatformsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

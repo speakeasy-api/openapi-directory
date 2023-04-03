@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutConversionsConversionIdDatapointsBatchPatchRequest {
-    
-    public PutConversionsConversionIdDatapointsBatchPatchPathParams pathParams;
-    public PutConversionsConversionIdDatapointsBatchPatchRequest withPathParams(PutConversionsConversionIdDatapointsBatchPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Patch requests
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiCoreRequestsPatchBodyBatch request;
-    public PutConversionsConversionIdDatapointsBatchPatchRequest withRequest(org.openapis.openapi.models.shared.ApiCoreRequestsPatchBodyBatch request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiCoreRequestsPatchBodyBatch apiCoreRequestsPatchBodyBatch;
+    public PutConversionsConversionIdDatapointsBatchPatchRequest withApiCoreRequestsPatchBodyBatch(org.openapis.openapi.models.shared.ApiCoreRequestsPatchBodyBatch apiCoreRequestsPatchBodyBatch) {
+        this.apiCoreRequestsPatchBodyBatch = apiCoreRequestsPatchBodyBatch;
+        return this;
+    }
+    
+    /**
+     * Id of the conversion
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
+    public Long conversionId;
+    public PutConversionsConversionIdDatapointsBatchPatchRequest withConversionId(Long conversionId) {
+        this.conversionId = conversionId;
         return this;
     }
     

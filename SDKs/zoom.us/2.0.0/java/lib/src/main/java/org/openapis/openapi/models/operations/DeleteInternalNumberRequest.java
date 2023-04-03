@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteInternalNumberRequest {
+    /**
+     * Unique Identifier of the account. To delete an internal number from a sub account, provide the account ID of the sub account in the `accountId` path parameter. To delete an internal number from a master account, provide `me` as the value of the `accountId` path parameter.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public DeleteInternalNumberRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public DeleteInternalNumberPathParams pathParams;
-    public DeleteInternalNumberRequest withPathParams(DeleteInternalNumberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the phone number. This value can be retrieved by calling the List Internal Numbers API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=numberId")
+    public String numberId;
+    public DeleteInternalNumberRequest withNumberId(String numberId) {
+        this.numberId = numberId;
         return this;
     }
     

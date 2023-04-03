@@ -4,13 +4,106 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CabwiseGetRequest {
+    /**
+     * Force Xml
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forceXml")
+    public Boolean forceXml;
+    public CabwiseGetRequest withForceXml(Boolean forceXml) {
+        this.forceXml = forceXml;
+        return this;
+    }
     
-    public CabwiseGetQueryParams queryParams;
-    public CabwiseGetRequest withQueryParams(CabwiseGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Latitude
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
+    public Double lat;
+    public CabwiseGetRequest withLat(Double lat) {
+        this.lat = lat;
+        return this;
+    }
+    
+    /**
+     * Legacy Format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=legacyFormat")
+    public Boolean legacyFormat;
+    public CabwiseGetRequest withLegacyFormat(Boolean legacyFormat) {
+        this.legacyFormat = legacyFormat;
+        return this;
+    }
+    
+    /**
+     * Longitude
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lon")
+    public Double lon;
+    public CabwiseGetRequest withLon(Double lon) {
+        this.lon = lon;
+        return this;
+    }
+    
+    /**
+     * An optional parameter to limit the number of results return. Default and maximum is 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Integer maxResults;
+    public CabwiseGetRequest withMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Trading name of operating company
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public CabwiseGetRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Operator Type e.g Minicab, Executive, Limousine
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=optype")
+    public String optype;
+    public CabwiseGetRequest withOptype(String optype) {
+        this.optype = optype;
+        return this;
+    }
+    
+    /**
+     * The radius of the bounding circle in metres
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
+    public Double radius;
+    public CabwiseGetRequest withRadius(Double radius) {
+        this.radius = radius;
+        return this;
+    }
+    
+    /**
+     * Twenty Four Seven Only
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=twentyFourSevenOnly")
+    public Boolean twentyFourSevenOnly;
+    public CabwiseGetRequest withTwentyFourSevenOnly(Boolean twentyFourSevenOnly) {
+        this.twentyFourSevenOnly = twentyFourSevenOnly;
+        return this;
+    }
+    
+    /**
+     * Wheelchair accessible
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=wc")
+    public String wc;
+    public CabwiseGetRequest withWc(String wc) {
+        this.wc = wc;
         return this;
     }
     

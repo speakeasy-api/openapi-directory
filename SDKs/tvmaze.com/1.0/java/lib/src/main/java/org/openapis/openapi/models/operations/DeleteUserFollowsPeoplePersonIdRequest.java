@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUserFollowsPeoplePersonIdRequest {
-    
-    public DeleteUserFollowsPeoplePersonIdPathParams pathParams;
-    public DeleteUserFollowsPeoplePersonIdRequest withPathParams(DeleteUserFollowsPeoplePersonIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=person_id")
+    public Long personId;
+    public DeleteUserFollowsPeoplePersonIdRequest withPersonId(Long personId) {
+        this.personId = personId;
         return this;
     }
     

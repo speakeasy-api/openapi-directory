@@ -35,27 +35,28 @@ public class Reports {
     /**
      * Generates and returns a report immediately.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DoubleclicksearchReportsGenerateResponse doubleclicksearchReportsGenerate(org.openapis.openapi.models.operations.DoubleclicksearchReportsGenerateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DoubleclicksearchReportsGenerateResponse doubleclicksearchReportsGenerate(org.openapis.openapi.models.operations.DoubleclicksearchReportsGenerateRequest request, org.openapis.openapi.models.operations.DoubleclicksearchReportsGenerateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/doubleclicksearch/v2/reports/generate");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "reportRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclicksearchReportsGenerateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclicksearchReportsGenerateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Reports {
     /**
      * Polls for the status of a report request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DoubleclicksearchReportsGetResponse doubleclicksearchReportsGet(org.openapis.openapi.models.operations.DoubleclicksearchReportsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DoubleclicksearchReportsGetResponse doubleclicksearchReportsGet(org.openapis.openapi.models.operations.DoubleclicksearchReportsGetRequest request, org.openapis.openapi.models.operations.DoubleclicksearchReportsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoubleclicksearchReportsGetPathParams.class, baseUrl, "/doubleclicksearch/v2/reports/{reportId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoubleclicksearchReportsGetRequest.class, baseUrl, "/doubleclicksearch/v2/reports/{reportId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclicksearchReportsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclicksearchReportsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Reports {
     /**
      * Downloads a report file encoded in UTF-8.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DoubleclicksearchReportsGetFileResponse doubleclicksearchReportsGetFile(org.openapis.openapi.models.operations.DoubleclicksearchReportsGetFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DoubleclicksearchReportsGetFileResponse doubleclicksearchReportsGetFile(org.openapis.openapi.models.operations.DoubleclicksearchReportsGetFileRequest request, org.openapis.openapi.models.operations.DoubleclicksearchReportsGetFileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoubleclicksearchReportsGetFilePathParams.class, baseUrl, "/doubleclicksearch/v2/reports/{reportId}/files/{reportFragment}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoubleclicksearchReportsGetFileRequest.class, baseUrl, "/doubleclicksearch/v2/reports/{reportId}/files/{reportFragment}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclicksearchReportsGetFileQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclicksearchReportsGetFileRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -166,25 +169,26 @@ public class Reports {
     /**
      * Downloads a csv file(encoded in UTF-8) that contains ID mappings between legacy SA360 and new SA360. The file includes all children entities of the given advertiser(e.g. engine accounts, campaigns, ad groups, etc.) that exist in both legacy SA360 and new SA360.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DoubleclicksearchReportsGetIdMappingFileResponse doubleclicksearchReportsGetIdMappingFile(org.openapis.openapi.models.operations.DoubleclicksearchReportsGetIdMappingFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DoubleclicksearchReportsGetIdMappingFileResponse doubleclicksearchReportsGetIdMappingFile(org.openapis.openapi.models.operations.DoubleclicksearchReportsGetIdMappingFileRequest request, org.openapis.openapi.models.operations.DoubleclicksearchReportsGetIdMappingFileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoubleclicksearchReportsGetIdMappingFilePathParams.class, baseUrl, "/doubleclicksearch/v2/agency/{agencyId}/advertiser/{advertiserId}/idmapping", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoubleclicksearchReportsGetIdMappingFileRequest.class, baseUrl, "/doubleclicksearch/v2/agency/{agencyId}/advertiser/{advertiserId}/idmapping", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclicksearchReportsGetIdMappingFileQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclicksearchReportsGetIdMappingFileRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -211,27 +215,28 @@ public class Reports {
     /**
      * Inserts a report request into the reporting system.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DoubleclicksearchReportsRequestResponse doubleclicksearchReportsRequest(org.openapis.openapi.models.operations.DoubleclicksearchReportsRequestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DoubleclicksearchReportsRequestResponse doubleclicksearchReportsRequest(org.openapis.openapi.models.operations.DoubleclicksearchReportsRequestRequest request, org.openapis.openapi.models.operations.DoubleclicksearchReportsRequestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/doubleclicksearch/v2/reports");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "reportRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclicksearchReportsRequestQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclicksearchReportsRequestRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

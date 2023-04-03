@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsCreateOrgVariableRequest {
-    
-    public ActionsCreateOrgVariablePathParams pathParams;
-    public ActionsCreateOrgVariableRequest withPathParams(ActionsCreateOrgVariablePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsCreateOrgVariableRequestBody requestBody;
+    public ActionsCreateOrgVariableRequest withRequestBody(ActionsCreateOrgVariableRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsCreateOrgVariableRequestBody request;
-    public ActionsCreateOrgVariableRequest withRequest(ActionsCreateOrgVariableRequestBody request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsCreateOrgVariableRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

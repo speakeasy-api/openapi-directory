@@ -33,25 +33,26 @@ public class Savedadstyles {
     /**
      * Get a specific saved ad style from the user's account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseSavedadstylesGetResponse adsenseSavedadstylesGet(org.openapis.openapi.models.operations.AdsenseSavedadstylesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseSavedadstylesGetResponse adsenseSavedadstylesGet(org.openapis.openapi.models.operations.AdsenseSavedadstylesGetRequest request, org.openapis.openapi.models.operations.AdsenseSavedadstylesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseSavedadstylesGetPathParams.class, baseUrl, "/savedadstyles/{savedAdStyleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseSavedadstylesGetRequest.class, baseUrl, "/savedadstyles/{savedAdStyleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseSavedadstylesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseSavedadstylesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,10 +79,11 @@ public class Savedadstyles {
     /**
      * List all saved ad styles in the user's account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseSavedadstylesListResponse adsenseSavedadstylesList(org.openapis.openapi.models.operations.AdsenseSavedadstylesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseSavedadstylesListResponse adsenseSavedadstylesList(org.openapis.openapi.models.operations.AdsenseSavedadstylesListRequest request, org.openapis.openapi.models.operations.AdsenseSavedadstylesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/savedadstyles");
         
@@ -89,14 +91,14 @@ public class Savedadstyles {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseSavedadstylesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseSavedadstylesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

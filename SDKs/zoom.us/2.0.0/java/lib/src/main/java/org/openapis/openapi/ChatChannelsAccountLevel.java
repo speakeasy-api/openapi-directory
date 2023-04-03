@@ -49,7 +49,7 @@ public class ChatChannelsAccountLevel {
      */
     public org.openapis.openapi.models.operations.DeleteChannelResponse deleteChannel(org.openapis.openapi.models.operations.DeleteChannelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteChannelPathParams.class, baseUrl, "/chat/users/{userId}/channels/{channelId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteChannelRequest.class, baseUrl, "/chat/users/{userId}/channels/{channelId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -99,19 +99,20 @@ public class ChatChannelsAccountLevel {
      * 
      *  
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetChannelResponse getChannel(org.openapis.openapi.models.operations.GetChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetChannelResponse getChannel(org.openapis.openapi.models.operations.GetChannelRequest request, org.openapis.openapi.models.operations.GetChannelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelPathParams.class, baseUrl, "/chat/users/{userId}/channels/{channelId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelRequest.class, baseUrl, "/chat/users/{userId}/channels/{channelId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -151,21 +152,22 @@ public class ChatChannelsAccountLevel {
      * 
      *  &lt;/b&gt; For an&lt;b&gt; account-level&lt;/b&gt; &lt;a href="https://marketplace.zoom.us/docs/guides/getting-started/app-types/create-oauth-app"&gt;OAuth app&lt;/a&gt;, this API can only be used on behalf of a user who is assigned with a &lt;b&gt;&lt;a href="https://support.zoom.us/hc/en-us/articles/115001078646-Using-role-management#:~:text=Each%20user%20in%20a%20Zoom,owner%2C%20administrator%2C%20or%20member.&amp;text=Role%2Dbased%20access%20control%20enables,needs%20to%20view%20or%20edit."&gt; role&lt;/a&gt; that has Edit permission for Chat Channels&lt;/b&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.InviteChannelMembersResponse inviteChannelMembers(org.openapis.openapi.models.operations.InviteChannelMembersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.InviteChannelMembersResponse inviteChannelMembers(org.openapis.openapi.models.operations.InviteChannelMembersRequest request, org.openapis.openapi.models.operations.InviteChannelMembersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InviteChannelMembersPathParams.class, baseUrl, "/chat/users/{userId}/channels/{channelId}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InviteChannelMembersRequest.class, baseUrl, "/chat/users/{userId}/channels/{channelId}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -205,25 +207,26 @@ public class ChatChannelsAccountLevel {
      * **Scopes:** `chat_channel:read:admin`&lt;br&gt;
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListChannelMembersResponse listChannelMembers(org.openapis.openapi.models.operations.ListChannelMembersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListChannelMembersResponse listChannelMembers(org.openapis.openapi.models.operations.ListChannelMembersRequest request, org.openapis.openapi.models.operations.ListChannelMembersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListChannelMembersPathParams.class, baseUrl, "/chat/users/{userId}/channels/{channelId}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListChannelMembersRequest.class, baseUrl, "/chat/users/{userId}/channels/{channelId}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListChannelMembersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListChannelMembersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,19 +267,20 @@ public class ChatChannelsAccountLevel {
      *  
      * &lt;p style="background-color:#e1f5fe; color:#01579b; padding:8px"&gt; &lt;b&gt;Note: &lt;/b&gt; For an&lt;b&gt; account-level&lt;/b&gt; &lt;a href="https://marketplace.zoom.us/docs/guides/getting-started/app-types/create-oauth-app"&gt;OAuth app&lt;/a&gt;, this API can only be used on behalf of a user who is assigned with a &lt;b&gt;&lt;a href="https://support.zoom.us/hc/en-us/articles/115001078646-Using-role-management#:~:text=Each%20user%20in%20a%20Zoom,owner%2C%20administrator%2C%20or%20member.&amp;text=Role%2Dbased%20access%20control%20enables,needs%20to%20view%20or%20edit."&gt; role&lt;/a&gt; that has Edit permission for Chat Channels&lt;/b&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemoveAChannelMemberResponse removeAChannelMember(org.openapis.openapi.models.operations.RemoveAChannelMemberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RemoveAChannelMemberResponse removeAChannelMember(org.openapis.openapi.models.operations.RemoveAChannelMemberRequest request, org.openapis.openapi.models.operations.RemoveAChannelMemberSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveAChannelMemberPathParams.class, baseUrl, "/chat/users/{userId}/channels/{channelId}/members/{memberId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveAChannelMemberRequest.class, baseUrl, "/chat/users/{userId}/channels/{channelId}/members/{memberId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -315,21 +319,22 @@ public class ChatChannelsAccountLevel {
      * &lt;p style="background-color:#e1f5fe; color:#01579b; padding:8px"&gt; &lt;b&gt;Note: &lt;/b&gt; For an&lt;b&gt; account-level&lt;/b&gt; &lt;a href="https://marketplace.zoom.us/docs/guides/getting-started/app-types/create-oauth-app"&gt;OAuth app&lt;/a&gt;, this API can only be used on behalf of a user who is assigned with a &lt;b&gt; &lt;a href="https://support.zoom.us/hc/en-us/articles/115001078646-Using-role-management#:~:text=Each%20user%20in%20a%20Zoom,owner%2C%20administrator%2C%20or%20member.&amp;text=Role%2Dbased%20access%20control%20enables,needs%20to%20view%20or%20edit."&gt; role&lt;/a&gt;  that has Edit permission for Chat Channel&lt;/b&gt;.&lt;/p&gt;
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateChannelResponse updateChannel(org.openapis.openapi.models.operations.UpdateChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateChannelResponse updateChannel(org.openapis.openapi.models.operations.UpdateChannelRequest request, org.openapis.openapi.models.operations.UpdateChannelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateChannelPathParams.class, baseUrl, "/chat/users/{userId}/channels/{channelId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateChannelRequest.class, baseUrl, "/chat/users/{userId}/channels/{channelId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

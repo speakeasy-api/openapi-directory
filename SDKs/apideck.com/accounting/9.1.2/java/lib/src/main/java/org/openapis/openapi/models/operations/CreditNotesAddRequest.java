@@ -7,31 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreditNotesAddRequest {
-    
-    public CreditNotesAddQueryParams queryParams;
-    public CreditNotesAddRequest withQueryParams(CreditNotesAddQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public CreditNotesAddHeaders headers;
-    public CreditNotesAddRequest withHeaders(CreditNotesAddHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreditNoteInput request;
-    public CreditNotesAddRequest withRequest(org.openapis.openapi.models.shared.CreditNoteInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreditNoteInput creditNoteInput;
+    public CreditNotesAddRequest withCreditNoteInput(org.openapis.openapi.models.shared.CreditNoteInput creditNoteInput) {
+        this.creditNoteInput = creditNoteInput;
         return this;
     }
     
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public CreditNotesAddRequest withRaw(Boolean raw) {
+        this.raw = raw;
+        return this;
+    }
     
-    public CreditNotesAddSecurity security;
-    public CreditNotesAddRequest withSecurity(CreditNotesAddSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public CreditNotesAddRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public CreditNotesAddRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public CreditNotesAddRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

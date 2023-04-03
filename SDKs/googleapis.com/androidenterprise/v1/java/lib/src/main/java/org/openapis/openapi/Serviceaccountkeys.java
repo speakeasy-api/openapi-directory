@@ -34,25 +34,26 @@ public class Serviceaccountkeys {
     /**
      * Removes and invalidates the specified credentials for the service account associated with this enterprise. The calling service account must have been retrieved by calling Enterprises.GetServiceAccount and must have been set as the enterprise service account by calling Enterprises.SetAccount.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysDeleteResponse androidenterpriseServiceaccountkeysDelete(org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysDeleteResponse androidenterpriseServiceaccountkeysDelete(org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysDeleteRequest request, org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysDeletePathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/serviceAccountKeys/{keyId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysDeleteRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/serviceAccountKeys/{keyId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,27 +74,28 @@ public class Serviceaccountkeys {
     /**
      * Generates new credentials for the service account associated with this enterprise. The calling service account must have been retrieved by calling Enterprises.GetServiceAccount and must have been set as the enterprise service account by calling Enterprises.SetAccount. Only the type of the key should be populated in the resource to be inserted.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysInsertResponse androidenterpriseServiceaccountkeysInsert(org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysInsertResponse androidenterpriseServiceaccountkeysInsert(org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysInsertRequest request, org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysInsertPathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/serviceAccountKeys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysInsertRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/serviceAccountKeys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "serviceAccountKey", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -120,25 +122,26 @@ public class Serviceaccountkeys {
     /**
      * Lists all active credentials for the service account associated with this enterprise. Only the ID and key type are returned. The calling service account must have been retrieved by calling Enterprises.GetServiceAccount and must have been set as the enterprise service account by calling Enterprises.SetAccount.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysListResponse androidenterpriseServiceaccountkeysList(org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysListResponse androidenterpriseServiceaccountkeysList(org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysListRequest request, org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysListPathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/serviceAccountKeys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysListRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/serviceAccountKeys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseServiceaccountkeysListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

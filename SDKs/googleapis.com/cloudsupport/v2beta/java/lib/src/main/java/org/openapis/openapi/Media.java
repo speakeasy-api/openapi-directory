@@ -34,25 +34,26 @@ public class Media {
     /**
      * Download a file attachment on a case. Note: HTTP requests must append "?alt=media" to the URL.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsupportMediaDownloadResponse cloudsupportMediaDownload(org.openapis.openapi.models.operations.CloudsupportMediaDownloadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsupportMediaDownloadResponse cloudsupportMediaDownload(org.openapis.openapi.models.operations.CloudsupportMediaDownloadRequest request, org.openapis.openapi.models.operations.CloudsupportMediaDownloadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportMediaDownloadPathParams.class, baseUrl, "/v2beta/{name}:download", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportMediaDownloadRequest.class, baseUrl, "/v2beta/{name}:download", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportMediaDownloadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportMediaDownloadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class Media {
     /**
      * Create a file attachment on a case or Cloud resource. The attachment object must have the following fields set: filename.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsupportMediaUploadResponse cloudsupportMediaUpload(org.openapis.openapi.models.operations.CloudsupportMediaUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsupportMediaUploadResponse cloudsupportMediaUpload(org.openapis.openapi.models.operations.CloudsupportMediaUploadRequest request, org.openapis.openapi.models.operations.CloudsupportMediaUploadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportMediaUploadPathParams.class, baseUrl, "/v2beta/{parent}/attachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsupportMediaUploadRequest.class, baseUrl, "/v2beta/{parent}/attachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportMediaUploadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportMediaUploadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -7,20 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostPostReviewRequest {
-    
-    public PostPostReviewQueryParams queryParams;
-    public PostPostReviewRequest withQueryParams(PostPostReviewQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The request body requires the user_email and rating. The parameter use_name is optional. 
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostPostReviewRequestBody request;
-    public PostPostReviewRequest withRequest(PostPostReviewRequestBody request) {
-        this.request = request;
+    public PostPostReviewRequestBody requestBody;
+    public PostPostReviewRequest withRequestBody(PostPostReviewRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The user's star rating, must be a single integer from [1, 2, 3, 4, 5]
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rating")
+    public PostPostReviewRatingEnum rating;
+    public PostPostReviewRequest withRating(PostPostReviewRatingEnum rating) {
+        this.rating = rating;
+        return this;
+    }
+    
+    /**
+     * User's email to which the review verification will be sent. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_email")
+    public String userEmail;
+    public PostPostReviewRequest withUserEmail(String userEmail) {
+        this.userEmail = userEmail;
+        return this;
+    }
+    
+    /**
+     * The user's name, defaults to empty string "".  Thus, if this is omitted, the email to the user will not use the user's name. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_name")
+    public String userName;
+    public PostPostReviewRequest withUserName(String userName) {
+        this.userName = userName;
         return this;
     }
     

@@ -4,34 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListFaxMediaRequest {
-    
-    public ListFaxMediaPathParams pathParams;
-    public ListFaxMediaRequest withPathParams(ListFaxMediaPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the fax with the FaxMedia resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FaxSid")
+    public String faxSid;
+    public ListFaxMediaRequest withFaxSid(String faxSid) {
+        this.faxSid = faxSid;
         return this;
     }
     
-    
-    public ListFaxMediaQueryParams queryParams;
-    public ListFaxMediaRequest withQueryParams(ListFaxMediaQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListFaxMediaSecurity security;
-    public ListFaxMediaRequest withSecurity(ListFaxMediaSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public ListFaxMediaRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListFaxMediaRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

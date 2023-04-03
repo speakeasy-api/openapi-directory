@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DomainsCountRequest {
+    /**
+     * Filter domains with this anmen
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DomainsCountRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public DomainsCountQueryParams queryParams;
-    public DomainsCountRequest withQueryParams(DomainsCountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of domain ("system"/"go"/"personal"/"dedicated"). If not specified default is "system"
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public DomainsCountTypeEnum type;
+    public DomainsCountRequest withType(DomainsCountTypeEnum type) {
+        this.type = type;
         return this;
     }
     

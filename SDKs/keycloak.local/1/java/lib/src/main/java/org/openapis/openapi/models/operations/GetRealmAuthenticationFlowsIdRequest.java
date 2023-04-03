@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmAuthenticationFlowsIdRequest {
+    /**
+     * Flow id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetRealmAuthenticationFlowsIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetRealmAuthenticationFlowsIdPathParams pathParams;
-    public GetRealmAuthenticationFlowsIdRequest withPathParams(GetRealmAuthenticationFlowsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmAuthenticationFlowsIdRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

@@ -39,7 +39,7 @@ public class Stages {
      */
     public org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedStagesResponse getNetworkFirmwareUpgradesStagedStages(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedStagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedStagesPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/stages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedStagesRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/stages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -79,12 +79,12 @@ public class Stages {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedStagesResponse updateNetworkFirmwareUpgradesStagedStages(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedStagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedStagesPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/stages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedStagesRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/stages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

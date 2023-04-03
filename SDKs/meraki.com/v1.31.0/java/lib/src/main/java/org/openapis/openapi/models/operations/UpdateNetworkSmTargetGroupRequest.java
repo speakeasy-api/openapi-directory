@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkSmTargetGroupRequest {
-    
-    public UpdateNetworkSmTargetGroupPathParams pathParams;
-    public UpdateNetworkSmTargetGroupRequest withPathParams(UpdateNetworkSmTargetGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkSmTargetGroupRequestBody requestBody;
+    public UpdateNetworkSmTargetGroupRequest withRequestBody(UpdateNetworkSmTargetGroupRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkSmTargetGroupRequestBody request;
-    public UpdateNetworkSmTargetGroupRequest withRequest(UpdateNetworkSmTargetGroupRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkSmTargetGroupRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=targetGroupId")
+    public String targetGroupId;
+    public UpdateNetworkSmTargetGroupRequest withTargetGroupId(String targetGroupId) {
+        this.targetGroupId = targetGroupId;
         return this;
     }
     

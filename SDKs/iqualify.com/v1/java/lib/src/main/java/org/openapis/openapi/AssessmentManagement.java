@@ -41,7 +41,7 @@ public class AssessmentManagement {
      */
     public org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdAssessmentsAssessmentIdDocumentsDocumentIdResponse deleteOfferingsOfferingIdAssessmentsAssessmentIdDocumentsDocumentId(org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdAssessmentsAssessmentIdDocumentsDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdAssessmentsAssessmentIdDocumentsDocumentIdPathParams.class, baseUrl, "/offerings/{offeringId}/assessments/{assessmentId}/documents/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdAssessmentsAssessmentIdDocumentsDocumentIdRequest.class, baseUrl, "/offerings/{offeringId}/assessments/{assessmentId}/documents/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -83,7 +83,7 @@ public class AssessmentManagement {
      */
     public org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdUsersUserEmailAssessmentsAssessmentIdResponse deleteOfferingsOfferingIdUsersUserEmailAssessmentsAssessmentId(org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdUsersUserEmailAssessmentsAssessmentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdUsersUserEmailAssessmentsAssessmentIdPathParams.class, baseUrl, "/offerings/{offeringId}/users/{userEmail}/assessments/{assessmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdUsersUserEmailAssessmentsAssessmentIdRequest.class, baseUrl, "/offerings/{offeringId}/users/{userEmail}/assessments/{assessmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -125,7 +125,7 @@ public class AssessmentManagement {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdActivitiesOpenresponseResponse getOfferingsOfferingIdActivitiesOpenresponse(org.openapis.openapi.models.operations.GetOfferingsOfferingIdActivitiesOpenresponseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdActivitiesOpenresponsePathParams.class, baseUrl, "/offerings/{offeringId}/activities/openresponse", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdActivitiesOpenresponseRequest.class, baseUrl, "/offerings/{offeringId}/activities/openresponse", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -173,7 +173,7 @@ public class AssessmentManagement {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdAssessmentsResponse getOfferingsOfferingIdAssessments(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAssessmentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAssessmentsPathParams.class, baseUrl, "/offerings/{offeringId}/assessments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAssessmentsRequest.class, baseUrl, "/offerings/{offeringId}/assessments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -221,13 +221,13 @@ public class AssessmentManagement {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdLearnersPendingSubmissionResponse getOfferingsOfferingIdLearnersPendingSubmission(org.openapis.openapi.models.operations.GetOfferingsOfferingIdLearnersPendingSubmissionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdLearnersPendingSubmissionPathParams.class, baseUrl, "/offerings/{offeringId}/learners/pending-submission", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdLearnersPendingSubmissionRequest.class, baseUrl, "/offerings/{offeringId}/learners/pending-submission", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOfferingsOfferingIdLearnersPendingSubmissionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOfferingsOfferingIdLearnersPendingSubmissionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -275,7 +275,7 @@ public class AssessmentManagement {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseResponse getOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponse(org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponsePathParams.class, baseUrl, "/offerings/{offeringId}/users/{userEmail}/submissions/open-response", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseRequest.class, baseUrl, "/offerings/{offeringId}/users/{userEmail}/submissions/open-response", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -323,12 +323,12 @@ public class AssessmentManagement {
      */
     public org.openapis.openapi.models.operations.PatchOfferingsOfferingIdAssessmentsAssessmentIdResponse patchOfferingsOfferingIdAssessmentsAssessmentId(org.openapis.openapi.models.operations.PatchOfferingsOfferingIdAssessmentsAssessmentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchOfferingsOfferingIdAssessmentsAssessmentIdPathParams.class, baseUrl, "/offerings/{offeringId}/assessments/{assessmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchOfferingsOfferingIdAssessmentsAssessmentIdRequest.class, baseUrl, "/offerings/{offeringId}/assessments/{assessmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "assessment", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -376,12 +376,12 @@ public class AssessmentManagement {
      */
     public org.openapis.openapi.models.operations.PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailResponse patchOfferingsOfferingIdAssessmentsAssessmentIdUserEmail(org.openapis.openapi.models.operations.PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailPathParams.class, baseUrl, "/offerings/{offeringId}/assessments/{assessmentId}/{userEmail}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequest.class, baseUrl, "/offerings/{offeringId}/assessments/{assessmentId}/{userEmail}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

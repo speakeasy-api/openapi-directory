@@ -4,27 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InventoryCategoriesReadRequest {
-    
-    public InventoryCategoriesReadPathParams pathParams;
-    public InventoryCategoriesReadRequest withPathParams(InventoryCategoriesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public InventoryCategoriesReadRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public InventoryCategoriesReadQueryParams queryParams;
-    public InventoryCategoriesReadRequest withQueryParams(InventoryCategoriesReadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public InventoryCategoriesReadRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public InventoryCategoriesReadSecurity security;
-    public InventoryCategoriesReadRequest withSecurity(InventoryCategoriesReadSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public InventoryCategoriesReadRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

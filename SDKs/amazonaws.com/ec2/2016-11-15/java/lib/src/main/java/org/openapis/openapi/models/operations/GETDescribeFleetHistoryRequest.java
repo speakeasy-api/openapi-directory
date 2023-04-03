@@ -4,20 +4,130 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeFleetHistoryRequest {
-    
-    public GETDescribeFleetHistoryQueryParams queryParams;
-    public GETDescribeFleetHistoryRequest withQueryParams(GETDescribeFleetHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeFleetHistoryActionEnum action;
+    public GETDescribeFleetHistoryRequest withAction(GETDescribeFleetHistoryActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETDescribeFleetHistoryRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETDescribeFleetHistoryHeaders headers;
-    public GETDescribeFleetHistoryRequest withHeaders(GETDescribeFleetHistoryHeaders headers) {
-        this.headers = headers;
+    /**
+     * The type of events to describe. By default, all events are described.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EventType")
+    public GETDescribeFleetHistoryEventTypeEnum eventType;
+    public GETDescribeFleetHistoryRequest withEventType(GETDescribeFleetHistoryEventTypeEnum eventType) {
+        this.eventType = eventType;
+        return this;
+    }
+    
+    /**
+     * The ID of the EC2 Fleet.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FleetId")
+    public String fleetId;
+    public GETDescribeFleetHistoryRequest withFleetId(String fleetId) {
+        this.fleetId = fleetId;
+        return this;
+    }
+    
+    /**
+     * The maximum number of items to return for this request. To get the next page of items, make another request with the token returned in the output. For more information, see &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination"&gt;Pagination&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public GETDescribeFleetHistoryRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by the previous request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETDescribeFleetHistoryRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The start date and time for the events, in UTC format (for example, &lt;i&gt;YYYY&lt;/i&gt;-&lt;i&gt;MM&lt;/i&gt;-&lt;i&gt;DD&lt;/i&gt;T&lt;i&gt;HH&lt;/i&gt;:&lt;i&gt;MM&lt;/i&gt;:&lt;i&gt;SS&lt;/i&gt;Z).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartTime")
+    public OffsetDateTime startTime;
+    public GETDescribeFleetHistoryRequest withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeFleetHistoryVersionEnum version;
+    public GETDescribeFleetHistoryRequest withVersion(GETDescribeFleetHistoryVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeFleetHistoryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeFleetHistoryRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeFleetHistoryRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeFleetHistoryRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeFleetHistoryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeFleetHistoryRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeFleetHistoryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListTopTopicsRequest {
-    
-    public ListTopTopicsQueryParams queryParams;
-    public ListTopTopicsRequest withQueryParams(ListTopTopicsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Key")
+    public String apiKey;
+    public ListTopTopicsRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Username")
+    public String apiUsername;
+    public ListTopTopicsRequest withApiUsername(String apiUsername) {
+        this.apiUsername = apiUsername;
+        return this;
+    }
     
-    public ListTopTopicsHeaders headers;
-    public ListTopTopicsRequest withHeaders(ListTopTopicsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Enum: `all`, `yearly`, `quarterly`, `monthly`, `weekly`, `daily`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
+    public String period;
+    public ListTopTopicsRequest withPeriod(String period) {
+        this.period = period;
         return this;
     }
     

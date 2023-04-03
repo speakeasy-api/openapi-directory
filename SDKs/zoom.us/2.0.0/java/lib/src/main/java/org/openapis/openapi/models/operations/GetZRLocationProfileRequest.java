@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetZRLocationProfileRequest {
-    
-    public GetZRLocationProfilePathParams pathParams;
-    public GetZRLocationProfileRequest withPathParams(GetZRLocationProfilePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetZRLocationProfileSecurity security;
-    public GetZRLocationProfileRequest withSecurity(GetZRLocationProfileSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the location type. This can be retrieved using the [List Zoom Room Location API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) (Id property in the response).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=locationId")
+    public String locationId;
+    public GetZRLocationProfileRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     

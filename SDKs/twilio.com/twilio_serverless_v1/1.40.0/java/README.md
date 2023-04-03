@@ -18,11 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateAssetSecurity;
-import org.openapis.openapi.models.operations.CreateAssetPathParams;
 import org.openapis.openapi.models.operations.CreateAssetCreateAssetRequest;
 import org.openapis.openapi.models.operations.CreateAssetRequest;
 import org.openapis.openapi.models.operations.CreateAssetResponse;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,21 +29,16 @@ public class Application {
                 .build();
 
             CreateAssetRequest req = new CreateAssetRequest() {{
-                security = new CreateAssetSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
+                requestBody = new CreateAssetCreateAssetRequest() {{
+                    friendlyName = "corrupti";
                 }};
-                pathParams = new CreateAssetPathParams() {{
-                    serviceSid = "corrupti";
-                }};
-                request = new CreateAssetCreateAssetRequest() {{
-                    friendlyName = "provident";
-                }};
-            }};            
+                serviceSid = "provident";
+            }}            
 
-            CreateAssetResponse res = sdk.createAsset(req);
+            CreateAssetResponse res = sdk.createAsset(req, new CreateAssetSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.serverlessV1ServiceAsset.isPresent()) {
                 // handle response
@@ -57,7 +50,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

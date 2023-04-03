@@ -4,27 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchWirelessSimRequest {
-    
-    public FetchWirelessSimPathParams pathParams;
-    public FetchWirelessSimRequest withPathParams(FetchWirelessSimPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchWirelessSimSecurity security;
-    public FetchWirelessSimRequest withSecurity(FetchWirelessSimSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchWirelessSimRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchWirelessSimRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

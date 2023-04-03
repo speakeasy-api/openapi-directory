@@ -4,12 +4,11 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AcceleratedmobilepageurlAmpUrlsBatchGetQueryParams;
 import org.openapis.openapi.models.operations.AcceleratedmobilepageurlAmpUrlsBatchGetRequest;
 import org.openapis.openapi.models.operations.AcceleratedmobilepageurlAmpUrlsBatchGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.BatchGetAmpUrlsRequestLookupStrategyEnum;
 import org.openapis.openapi.models.shared.BatchGetAmpUrlsRequest;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -19,27 +18,26 @@ public class Application {
                 .build();
 
             AcceleratedmobilepageurlAmpUrlsBatchGetRequest req = new AcceleratedmobilepageurlAmpUrlsBatchGetRequest() {{
-                queryParams = new AcceleratedmobilepageurlAmpUrlsBatchGetQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    key = "nulla";
-                    oauthToken = "corrupti";
-                    prettyPrint = false;
-                    quotaUser = "illum";
-                    uploadType = "vel";
-                    uploadProtocol = "error";
-                }};
-                request = new BatchGetAmpUrlsRequest() {{
+                dollarXgafv = "2";
+                batchGetAmpUrlsRequest = new BatchGetAmpUrlsRequest() {{
                     lookupStrategy = "IN_INDEX_DOC";
                     urls = new String[]{{
-                        add("iure"),
-                        add("magnam"),
+                        add("quibusdam"),
+                        add("unde"),
+                        add("nulla"),
                     }};
                 }};
-            }};            
+                accessToken = "corrupti";
+                alt = "proto";
+                callback = "vel";
+                fields = "error";
+                key = "deserunt";
+                oauthToken = "suscipit";
+                prettyPrint = false;
+                quotaUser = "iure";
+                uploadType = "magnam";
+                uploadProtocol = "debitis";
+            }}            
 
             AcceleratedmobilepageurlAmpUrlsBatchGetResponse res = sdk.ampUrls.acceleratedmobilepageurlAmpUrlsBatchGet(req);
 

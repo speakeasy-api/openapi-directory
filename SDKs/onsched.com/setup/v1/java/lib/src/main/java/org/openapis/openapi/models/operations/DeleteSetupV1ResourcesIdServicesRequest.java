@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSetupV1ResourcesIdServicesRequest {
-    
-    public DeleteSetupV1ResourcesIdServicesPathParams pathParams;
-    public DeleteSetupV1ResourcesIdServicesRequest withPathParams(DeleteSetupV1ResourcesIdServicesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of resource object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteSetupV1ResourcesIdServicesRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

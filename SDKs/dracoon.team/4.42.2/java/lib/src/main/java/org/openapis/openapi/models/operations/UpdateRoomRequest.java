@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRoomRequest {
-    
-    public UpdateRoomPathParams pathParams;
-    public UpdateRoomRequest withPathParams(UpdateRoomPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateRoomHeaders headers;
-    public UpdateRoomRequest withHeaders(UpdateRoomHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateRoomRequest request;
-    public UpdateRoomRequest withRequest(org.openapis.openapi.models.shared.UpdateRoomRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateRoomRequest updateRoomRequest;
+    public UpdateRoomRequest withUpdateRoomRequest(org.openapis.openapi.models.shared.UpdateRoomRequest updateRoomRequest) {
+        this.updateRoomRequest = updateRoomRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UpdateRoomRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public UpdateRoomXSdsDateFormatEnum xSdsDateFormat;
+    public UpdateRoomRequest withXSdsDateFormat(UpdateRoomXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * Room ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=room_id")
+    public Long roomId;
+    public UpdateRoomRequest withRoomId(Long roomId) {
+        this.roomId = roomId;
         return this;
     }
     

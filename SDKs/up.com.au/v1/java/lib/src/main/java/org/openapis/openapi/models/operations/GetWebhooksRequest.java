@@ -4,13 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWebhooksRequest {
-    
-    public GetWebhooksQueryParams queryParams;
-    public GetWebhooksRequest withQueryParams(GetWebhooksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of records to return in each page.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
+    public Long pageSize;
+    public GetWebhooksRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

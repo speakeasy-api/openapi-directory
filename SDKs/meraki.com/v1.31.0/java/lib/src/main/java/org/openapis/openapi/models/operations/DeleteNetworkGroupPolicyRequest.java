@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteNetworkGroupPolicyRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupPolicyId")
+    public String groupPolicyId;
+    public DeleteNetworkGroupPolicyRequest withGroupPolicyId(String groupPolicyId) {
+        this.groupPolicyId = groupPolicyId;
+        return this;
+    }
     
-    public DeleteNetworkGroupPolicyPathParams pathParams;
-    public DeleteNetworkGroupPolicyRequest withPathParams(DeleteNetworkGroupPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public DeleteNetworkGroupPolicyRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

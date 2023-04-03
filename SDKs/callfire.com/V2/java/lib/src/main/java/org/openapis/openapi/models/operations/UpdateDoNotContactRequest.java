@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDoNotContactRequest {
-    
-    public UpdateDoNotContactPathParams pathParams;
-    public UpdateDoNotContactRequest withPathParams(UpdateDoNotContactPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * DoNotContact object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DoNotContactInput request;
-    public UpdateDoNotContactRequest withRequest(org.openapis.openapi.models.shared.DoNotContactInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DoNotContactInput doNotContactInput;
+    public UpdateDoNotContactRequest withDoNotContactInput(org.openapis.openapi.models.shared.DoNotContactInput doNotContactInput) {
+        this.doNotContactInput = doNotContactInput;
         return this;
     }
     
-    
-    public UpdateDoNotContactSecurity security;
-    public UpdateDoNotContactRequest withSecurity(UpdateDoNotContactSecurity security) {
-        this.security = security;
+    /**
+     * ~
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
+    public String number;
+    public UpdateDoNotContactRequest withNumber(String number) {
+        this.number = number;
         return this;
     }
     

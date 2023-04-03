@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyCallerIdRequest {
-    
-    public VerifyCallerIdPathParams pathParams;
-    public VerifyCallerIdRequest withPathParams(VerifyCallerIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * request
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CallerIdVerificationRequest request;
-    public VerifyCallerIdRequest withRequest(org.openapis.openapi.models.shared.CallerIdVerificationRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CallerIdVerificationRequest callerIdVerificationRequest;
+    public VerifyCallerIdRequest withCallerIdVerificationRequest(org.openapis.openapi.models.shared.CallerIdVerificationRequest callerIdVerificationRequest) {
+        this.callerIdVerificationRequest = callerIdVerificationRequest;
         return this;
     }
     
-    
-    public VerifyCallerIdSecurity security;
-    public VerifyCallerIdRequest withSecurity(VerifyCallerIdSecurity security) {
-        this.security = security;
+    /**
+     * A phone number in E.164 format (11-digit) which needs to be verified. Example: 12132000384
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=callerid")
+    public String callerid;
+    public VerifyCallerIdRequest withCallerid(String callerid) {
+        this.callerid = callerid;
         return this;
     }
     

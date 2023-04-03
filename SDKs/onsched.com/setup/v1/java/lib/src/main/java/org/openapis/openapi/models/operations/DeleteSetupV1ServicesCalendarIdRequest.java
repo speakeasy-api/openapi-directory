@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSetupV1ServicesCalendarIdRequest {
-    
-    public DeleteSetupV1ServicesCalendarIdPathParams pathParams;
-    public DeleteSetupV1ServicesCalendarIdRequest withPathParams(DeleteSetupV1ServicesCalendarIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of calender to delete service links from
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteSetupV1ServicesCalendarIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

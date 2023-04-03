@@ -33,10 +33,11 @@ public class Taxes {
     /**
      * Create new tax rates
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateTaxRatesResponse createTaxRates(org.openapis.openapi.models.operations.CreateTaxRatesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateTaxRatesResponse createTaxRates(org.openapis.openapi.models.shared.TaxRatesCreateRequest request, org.openapis.openapi.models.operations.CreateTaxRatesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/taxes");
         
@@ -50,7 +51,7 @@ public class Taxes {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -87,19 +88,20 @@ public class Taxes {
     /**
      * Delete a single tax rate
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteTaxRateResponse deleteTaxRate(org.openapis.openapi.models.operations.DeleteTaxRateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteTaxRateResponse deleteTaxRate(org.openapis.openapi.models.operations.DeleteTaxRateRequest request, org.openapis.openapi.models.operations.DeleteTaxRateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTaxRatePathParams.class, baseUrl, "/v1/taxes/{taxRateUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTaxRateRequest.class, baseUrl, "/v1/taxes/{taxRateUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -119,11 +121,10 @@ public class Taxes {
 
     /**
      * Get all tax rates and a count of products associated with each
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetProductCountForAllTaxesResponse getProductCountForAllTaxes(org.openapis.openapi.models.operations.GetProductCountForAllTaxesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetProductCountForAllTaxesResponse getProductCountForAllTaxes() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/taxes/count");
         
@@ -132,8 +133,7 @@ public class Taxes {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -161,19 +161,20 @@ public class Taxes {
     /**
      * Get a single tax rate
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTaxRateResponse getTaxRate(org.openapis.openapi.models.operations.GetTaxRateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTaxRateResponse getTaxRate(org.openapis.openapi.models.operations.GetTaxRateRequest request, org.openapis.openapi.models.operations.GetTaxRateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTaxRatePathParams.class, baseUrl, "/v1/taxes/{taxRateUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTaxRateRequest.class, baseUrl, "/v1/taxes/{taxRateUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -201,11 +202,10 @@ public class Taxes {
 
     /**
      * Get all available tax rates
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTaxRatesResponse getTaxRates(org.openapis.openapi.models.operations.GetTaxRatesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTaxRatesResponse getTaxRates() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/taxes");
         
@@ -214,8 +214,7 @@ public class Taxes {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -242,11 +241,10 @@ public class Taxes {
 
     /**
      * Get the organization tax settings 
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTaxSettingsResponse getTaxSettings(org.openapis.openapi.models.operations.GetTaxSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTaxSettingsResponse getTaxSettings() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/taxes/settings");
         
@@ -255,8 +253,7 @@ public class Taxes {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -284,10 +281,11 @@ public class Taxes {
     /**
      * Update the organization tax settings
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SetTaxationModeResponse setTaxationMode(org.openapis.openapi.models.operations.SetTaxationModeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SetTaxationModeResponse setTaxationMode(org.openapis.openapi.models.shared.TaxSettingsUpdateRequest request, org.openapis.openapi.models.operations.SetTaxationModeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/taxes/settings");
         
@@ -301,7 +299,7 @@ public class Taxes {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -338,24 +336,25 @@ public class Taxes {
     /**
      * Update a single tax rate
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateTaxRateResponse updateTaxRate(org.openapis.openapi.models.operations.UpdateTaxRateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateTaxRateResponse updateTaxRate(org.openapis.openapi.models.operations.UpdateTaxRateRequest request, org.openapis.openapi.models.operations.UpdateTaxRateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateTaxRatePathParams.class, baseUrl, "/v1/taxes/{taxRateUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateTaxRateRequest.class, baseUrl, "/v1/taxes/{taxRateUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "taxRateUpdateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

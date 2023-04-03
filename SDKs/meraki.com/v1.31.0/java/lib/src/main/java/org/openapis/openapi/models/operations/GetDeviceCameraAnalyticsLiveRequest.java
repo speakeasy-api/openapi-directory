@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceCameraAnalyticsLiveRequest {
-    
-    public GetDeviceCameraAnalyticsLivePathParams pathParams;
-    public GetDeviceCameraAnalyticsLiveRequest withPathParams(GetDeviceCameraAnalyticsLivePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetDeviceCameraAnalyticsLiveRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

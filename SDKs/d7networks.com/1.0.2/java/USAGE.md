@@ -11,10 +11,8 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    auth = new SchemeAuth() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
+                    password = "YOUR_PASSWORD_HERE";
+                    username = "YOUR_USERNAME_HERE";
                 }})
                 .build();
 

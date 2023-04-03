@@ -30,7 +30,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetV1ValidationSingleFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetV1ValidationSingleQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetV1ValidationSingleRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetV1ValidationSingleResponse.java
 USAGE.md

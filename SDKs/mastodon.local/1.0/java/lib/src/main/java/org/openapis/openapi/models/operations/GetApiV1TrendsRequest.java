@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1TrendsRequest {
-    
-    public GetApiV1TrendsQueryParams queryParams;
-    public GetApiV1TrendsRequest withQueryParams(GetApiV1TrendsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Max number of results to return. Defaults to 10.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetApiV1TrendsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

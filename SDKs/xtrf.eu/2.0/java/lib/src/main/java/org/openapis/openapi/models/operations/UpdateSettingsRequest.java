@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSettingsRequest {
-    
-    public UpdateSettingsPathParams pathParams;
-    public UpdateSettingsRequest withPathParams(UpdateSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated view's settings.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SettingsDTO request;
-    public UpdateSettingsRequest withRequest(org.openapis.openapi.models.shared.SettingsDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SettingsDTO settingsDTO;
+    public UpdateSettingsRequest withSettingsDTO(org.openapis.openapi.models.shared.SettingsDTO settingsDTO) {
+        this.settingsDTO = settingsDTO;
+        return this;
+    }
+    
+    /**
+     * view's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
+    public Long viewId;
+    public UpdateSettingsRequest withViewId(Long viewId) {
+        this.viewId = viewId;
         return this;
     }
     

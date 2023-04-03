@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContactsPOSTRequest {
+    /**
+     * Determines the action to execute.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action")
+    public ContactsPOSTActionEnum action;
+    public ContactsPOSTRequest withAction(ContactsPOSTActionEnum action) {
+        this.action = action;
+        return this;
+    }
     
-    public ContactsPOSTQueryParams queryParams;
-    public ContactsPOSTRequest withQueryParams(ContactsPOSTQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The contacts email address.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public ContactsPOSTRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    
+    /**
+     * The contacts phone number.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=empfaenger")
+    public String empfaenger;
+    public ContactsPOSTRequest withEmpfaenger(String empfaenger) {
+        this.empfaenger = empfaenger;
+        return this;
+    }
+    
+    /**
+     * The contact ID for editing/deletion.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public ContactsPOSTRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Defines whether to return the response as JSON or CSV separated by semicolon.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=json")
+    public ContactsPOSTJSONEnum json;
+    public ContactsPOSTRequest withJson(ContactsPOSTJSONEnum json) {
+        this.json = json;
+        return this;
+    }
+    
+    /**
+     * The contacts name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nick")
+    public String nick;
+    public ContactsPOSTRequest withNick(String nick) {
+        this.nick = nick;
         return this;
     }
     

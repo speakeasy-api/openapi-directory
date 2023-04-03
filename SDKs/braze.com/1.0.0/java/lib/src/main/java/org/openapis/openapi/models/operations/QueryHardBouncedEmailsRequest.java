@@ -4,13 +4,73 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QueryHardBouncedEmailsRequest {
+    /**
+     * (Optional*) String
+     * 
+     * If provided, we will return whether or not the user has hard bounced.
+     * 
+     * *You must provide either an `email` or a `start_date`, and an `end_date`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public QueryHardBouncedEmailsRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
     
-    public QueryHardBouncedEmailsQueryParams queryParams;
-    public QueryHardBouncedEmailsRequest withQueryParams(QueryHardBouncedEmailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Optional*) String in YYYY-MM-DD format
+     * 
+     * String in YYYY-MM-DD format. End date of the range to retrieve hard bounces. This is treated as midnight in UTC time by the API.
+     * 
+     * *You must provide either an `email` or a `start_date`, and an `end_date`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public String endDate;
+    public QueryHardBouncedEmailsRequest withEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * (Optional) Integer
+     * 
+     * Optional field to limit the number of results returned. Defaults to 100, maximum is 500.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public QueryHardBouncedEmailsRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * (Optional) Integer
+     * 
+     * Optional beginning point in the list to retrieve from.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public QueryHardBouncedEmailsRequest withOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * (Optional*) String in YYYY-MM-DD format 
+     * 
+     * Start date of the range to retrieve hard bounces, must be earlier than `end_date`. This is treated as midnight in UTC time by the API.
+     * 
+     * *You must provide either an `email` or a `start_date`, and an `end_date`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public String startDate;
+    public QueryHardBouncedEmailsRequest withStartDate(String startDate) {
+        this.startDate = startDate;
         return this;
     }
     

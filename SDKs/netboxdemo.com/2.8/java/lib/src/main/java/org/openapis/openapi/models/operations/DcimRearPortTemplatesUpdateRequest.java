@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimRearPortTemplatesUpdateRequest {
-    
-    public DcimRearPortTemplatesUpdatePathParams pathParams;
-    public DcimRearPortTemplatesUpdateRequest withPathParams(DcimRearPortTemplatesUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableRearPortTemplateInput writableRearPortTemplateInput;
+    public DcimRearPortTemplatesUpdateRequest withWritableRearPortTemplateInput(org.openapis.openapi.models.shared.WritableRearPortTemplateInput writableRearPortTemplateInput) {
+        this.writableRearPortTemplateInput = writableRearPortTemplateInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableRearPortTemplateInput request;
-    public DcimRearPortTemplatesUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableRearPortTemplateInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this rear port template.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimRearPortTemplatesUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

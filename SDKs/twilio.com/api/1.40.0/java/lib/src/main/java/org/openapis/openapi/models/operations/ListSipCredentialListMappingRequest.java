@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSipCredentialListMappingRequest {
-    
-    public ListSipCredentialListMappingPathParams pathParams;
-    public ListSipCredentialListMappingRequest withPathParams(ListSipCredentialListMappingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListSipCredentialListMappingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListSipCredentialListMappingQueryParams queryParams;
-    public ListSipCredentialListMappingRequest withQueryParams(ListSipCredentialListMappingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A 34 character string that uniquely identifies the SIP Domain that includes the resource to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainSid")
+    public String domainSid;
+    public ListSipCredentialListMappingRequest withDomainSid(String domainSid) {
+        this.domainSid = domainSid;
         return this;
     }
     
-    
-    public ListSipCredentialListMappingSecurity security;
-    public ListSipCredentialListMappingRequest withSecurity(ListSipCredentialListMappingSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListSipCredentialListMappingRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListSipCredentialListMappingRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListSipCredentialListMappingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListSipCredentialListMappingRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

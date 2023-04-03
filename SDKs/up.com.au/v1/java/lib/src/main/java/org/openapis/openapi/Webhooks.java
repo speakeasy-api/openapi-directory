@@ -49,7 +49,7 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.DeleteWebhooksIdResponse deleteWebhooksId(org.openapis.openapi.models.operations.DeleteWebhooksIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWebhooksIdPathParams.class, baseUrl, "/webhooks/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWebhooksIdRequest.class, baseUrl, "/webhooks/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -93,7 +93,7 @@ public class Webhooks {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWebhooksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWebhooksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -134,7 +134,7 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.GetWebhooksIdResponse getWebhooksId(org.openapis.openapi.models.operations.GetWebhooksIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWebhooksIdPathParams.class, baseUrl, "/webhooks/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWebhooksIdRequest.class, baseUrl, "/webhooks/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -180,13 +180,13 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.GetWebhooksWebhookIdLogsResponse getWebhooksWebhookIdLogs(org.openapis.openapi.models.operations.GetWebhooksWebhookIdLogsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWebhooksWebhookIdLogsPathParams.class, baseUrl, "/webhooks/{webhookId}/logs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWebhooksWebhookIdLogsRequest.class, baseUrl, "/webhooks/{webhookId}/logs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWebhooksWebhookIdLogsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWebhooksWebhookIdLogsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -244,7 +244,7 @@ public class Webhooks {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostWebhooksResponse postWebhooks(org.openapis.openapi.models.operations.PostWebhooksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostWebhooksResponse postWebhooks(org.openapis.openapi.models.shared.CreateWebhookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/webhooks");
         
@@ -291,7 +291,7 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.PostWebhooksWebhookIdPingResponse postWebhooksWebhookIdPing(org.openapis.openapi.models.operations.PostWebhooksWebhookIdPingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWebhooksWebhookIdPingPathParams.class, baseUrl, "/webhooks/{webhookId}/ping", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWebhooksWebhookIdPingRequest.class, baseUrl, "/webhooks/{webhookId}/ping", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

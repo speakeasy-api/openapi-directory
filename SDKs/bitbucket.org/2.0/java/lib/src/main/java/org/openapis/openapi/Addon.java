@@ -51,11 +51,10 @@ public class Addon {
      * $ curl -X DELETE https://api.bitbucket.org/2.0/addon \
      *   -H "Authorization: JWT &lt;JWT Token&gt;"
      * ```
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteAddonResponse deleteAddon(org.openapis.openapi.models.operations.DeleteAddonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteAddonResponse deleteAddon() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/addon");
         
@@ -64,8 +63,7 @@ public class Addon {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -95,19 +93,20 @@ public class Addon {
      * Delete all [linker](/cloud/bitbucket/modules/linker/) values for the
      * specified linker of the authenticated application.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesResponse deleteAddonLinkersLinkerKeyValues(org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesResponse deleteAddonLinkersLinkerKeyValues(org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesRequest request, org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesPathParams.class, baseUrl, "/addon/linkers/{linker_key}/values", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesRequest.class, baseUrl, "/addon/linkers/{linker_key}/values", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -138,19 +137,20 @@ public class Addon {
      * Delete a single [linker](/cloud/bitbucket/modules/linker/) value
      * of the authenticated application.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesValueIdResponse deleteAddonLinkersLinkerKeyValuesValueId(org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesValueIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesValueIdResponse deleteAddonLinkersLinkerKeyValuesValueId(org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesValueIdRequest request, org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesValueIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesValueIdPathParams.class, baseUrl, "/addon/linkers/{linker_key}/values/{value_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAddonLinkersLinkerKeyValuesValueIdRequest.class, baseUrl, "/addon/linkers/{linker_key}/values/{value_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -180,11 +180,10 @@ public class Addon {
      * List linkers for an app
      * Gets a list of all [linkers](/cloud/bitbucket/modules/linker/)
      * for the authenticated application.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAddonLinkersResponse getAddonLinkers(org.openapis.openapi.models.operations.GetAddonLinkersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAddonLinkersResponse getAddonLinkers() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/addon/linkers");
         
@@ -193,8 +192,7 @@ public class Addon {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -224,19 +222,20 @@ public class Addon {
      * Gets a [linker](/cloud/bitbucket/modules/linker/) specified by `linker_key`
      * for the authenticated application.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyResponse getAddonLinkersLinkerKey(org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyResponse getAddonLinkersLinkerKey(org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyRequest request, org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyPathParams.class, baseUrl, "/addon/linkers/{linker_key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyRequest.class, baseUrl, "/addon/linkers/{linker_key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -274,19 +273,20 @@ public class Addon {
      * 
      * [Read more about linker values](/cloud/bitbucket/modules/linker/#usingthebitbucketapitosupplyvalues)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesResponse getAddonLinkersLinkerKeyValues(org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesResponse getAddonLinkersLinkerKeyValues(org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesRequest request, org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesPathParams.class, baseUrl, "/addon/linkers/{linker_key}/values", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesRequest.class, baseUrl, "/addon/linkers/{linker_key}/values", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -317,19 +317,20 @@ public class Addon {
      * Get a single [linker](/cloud/bitbucket/modules/linker/) value
      * of the authenticated application.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesValueIdResponse getAddonLinkersLinkerKeyValuesValueId(org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesValueIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesValueIdResponse getAddonLinkersLinkerKeyValuesValueId(org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesValueIdRequest request, org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesValueIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesValueIdPathParams.class, baseUrl, "/addon/linkers/{linker_key}/values/{value_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddonLinkersLinkerKeyValuesValueIdRequest.class, baseUrl, "/addon/linkers/{linker_key}/values/{value_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -367,19 +368,20 @@ public class Addon {
      * 
      * [Read more about linker values](/cloud/bitbucket/modules/linker/#usingthebitbucketapitosupplyvalues)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAddonLinkersLinkerKeyValuesResponse postAddonLinkersLinkerKeyValues(org.openapis.openapi.models.operations.PostAddonLinkersLinkerKeyValuesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAddonLinkersLinkerKeyValuesResponse postAddonLinkersLinkerKeyValues(org.openapis.openapi.models.operations.PostAddonLinkersLinkerKeyValuesRequest request, org.openapis.openapi.models.operations.PostAddonLinkersLinkerKeyValuesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAddonLinkersLinkerKeyValuesPathParams.class, baseUrl, "/addon/linkers/{linker_key}/values", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAddonLinkersLinkerKeyValuesRequest.class, baseUrl, "/addon/linkers/{linker_key}/values", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -454,11 +456,10 @@ public class Addon {
      * 
      * Note that the scopes of the application cannot be increased
      * in the new descriptor nor reduced to none.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutAddonResponse putAddon(org.openapis.openapi.models.operations.PutAddonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutAddonResponse putAddon() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/addon");
         
@@ -467,8 +468,7 @@ public class Addon {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -505,19 +505,20 @@ public class Addon {
      * 
      * [Read more about linker values](/cloud/bitbucket/modules/linker/#usingthebitbucketapitosupplyvalues)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutAddonLinkersLinkerKeyValuesResponse putAddonLinkersLinkerKeyValues(org.openapis.openapi.models.operations.PutAddonLinkersLinkerKeyValuesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutAddonLinkersLinkerKeyValuesResponse putAddonLinkersLinkerKeyValues(org.openapis.openapi.models.operations.PutAddonLinkersLinkerKeyValuesRequest request, org.openapis.openapi.models.operations.PutAddonLinkersLinkerKeyValuesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutAddonLinkersLinkerKeyValuesPathParams.class, baseUrl, "/addon/linkers/{linker_key}/values", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutAddonLinkersLinkerKeyValuesRequest.class, baseUrl, "/addon/linkers/{linker_key}/values", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

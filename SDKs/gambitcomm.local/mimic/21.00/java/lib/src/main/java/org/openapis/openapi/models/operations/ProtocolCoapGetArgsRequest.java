@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolCoapGetArgsRequest {
-    
-    public ProtocolCoapGetArgsPathParams pathParams;
-    public ProtocolCoapGetArgsRequest withPathParams(ProtocolCoapGetArgsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show the COAP argument structure
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolCoapGetArgsRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

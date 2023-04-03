@@ -41,13 +41,13 @@ public class Graph {
      */
     public org.openapis.openapi.models.operations.GetEdgeResourceResponse getEdgeResource(org.openapis.openapi.models.operations.GetEdgeResourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEdgeResourcePathParams.class, baseUrl, "/graph/edges/from/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEdgeResourceRequest.class, baseUrl, "/graph/edges/from/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEdgeResourceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEdgeResourceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -87,7 +87,7 @@ public class Graph {
      */
     public org.openapis.openapi.models.operations.GetNodeResourceResponse getNodeResource(org.openapis.openapi.models.operations.GetNodeResourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNodeResourcePathParams.class, baseUrl, "/graph/node/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNodeResourceRequest.class, baseUrl, "/graph/node/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

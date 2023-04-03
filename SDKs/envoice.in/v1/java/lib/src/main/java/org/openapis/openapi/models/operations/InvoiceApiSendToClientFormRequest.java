@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InvoiceApiSendToClientFormRequest {
-    
-    public InvoiceApiSendToClientFormHeaders headers;
-    public InvoiceApiSendToClientFormRequest withHeaders(InvoiceApiSendToClientFormHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public org.openapis.openapi.models.shared.SendInvoiceToClientApiModel sendInvoiceToClientApiModel;
+    public InvoiceApiSendToClientFormRequest withSendInvoiceToClientApiModel(org.openapis.openapi.models.shared.SendInvoiceToClientApiModel sendInvoiceToClientApiModel) {
+        this.sendInvoiceToClientApiModel = sendInvoiceToClientApiModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.SendInvoiceToClientApiModel request;
-    public InvoiceApiSendToClientFormRequest withRequest(org.openapis.openapi.models.shared.SendInvoiceToClientApiModel request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public InvoiceApiSendToClientFormRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public InvoiceApiSendToClientFormRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

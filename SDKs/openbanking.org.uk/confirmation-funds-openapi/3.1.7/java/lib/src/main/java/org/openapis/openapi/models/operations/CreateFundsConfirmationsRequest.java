@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateFundsConfirmationsRequest {
-    
-    public CreateFundsConfirmationsHeaders headers;
-    public CreateFundsConfirmationsRequest withHeaders(CreateFundsConfirmationsHeaders headers) {
-        this.headers = headers;
+    /**
+     * An Authorisation Token as per https://tools.ietf.org/html/rfc6750
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public CreateFundsConfirmationsRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
@@ -18,16 +21,51 @@ public class CreateFundsConfirmationsRequest {
      * Default
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.OBFundsConfirmation1 request;
-    public CreateFundsConfirmationsRequest withRequest(org.openapis.openapi.models.shared.OBFundsConfirmation1 request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.OBFundsConfirmation1 obFundsConfirmation1;
+    public CreateFundsConfirmationsRequest withOBFundsConfirmation1(org.openapis.openapi.models.shared.OBFundsConfirmation1 obFundsConfirmation1) {
+        this.obFundsConfirmation1 = obFundsConfirmation1;
         return this;
     }
     
+    /**
+     * Indicates the user-agent that the PSU is using.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
+    public String xCustomerUserAgent;
+    public CreateFundsConfirmationsRequest withXCustomerUserAgent(String xCustomerUserAgent) {
+        this.xCustomerUserAgent = xCustomerUserAgent;
+        return this;
+    }
     
-    public CreateFundsConfirmationsSecurity security;
-    public CreateFundsConfirmationsRequest withSecurity(CreateFundsConfirmationsSecurity security) {
-        this.security = security;
+    /**
+     * The time when the PSU last logged in with the TPP. 
+     * All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
+     * Sun, 10 Sep 2017 19:43:31 UTC
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
+    public String xFapiAuthDate;
+    public CreateFundsConfirmationsRequest withXFapiAuthDate(String xFapiAuthDate) {
+        this.xFapiAuthDate = xFapiAuthDate;
+        return this;
+    }
+    
+    /**
+     * The PSU's IP address if the PSU is currently logged in with the TPP.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
+    public String xFapiCustomerIpAddress;
+    public CreateFundsConfirmationsRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
+        this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
+        return this;
+    }
+    
+    /**
+     * An RFC4122 UID used as a correlation id.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
+    public String xFapiInteractionId;
+    public CreateFundsConfirmationsRequest withXFapiInteractionId(String xFapiInteractionId) {
+        this.xFapiInteractionId = xFapiInteractionId;
         return this;
     }
     

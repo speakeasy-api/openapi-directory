@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoEditJsonRequest {
-    
-    public RepoEditJsonPathParams pathParams;
-    public RepoEditJsonRequest withPathParams(RepoEditJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Properties of a repo that you can edit
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditRepoOption request;
-    public RepoEditJsonRequest withRequest(org.openapis.openapi.models.shared.EditRepoOption request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.EditRepoOption editRepoOption;
+    public RepoEditJsonRequest withEditRepoOption(org.openapis.openapi.models.shared.EditRepoOption editRepoOption) {
+        this.editRepoOption = editRepoOption;
+        return this;
+    }
+    
+    /**
+     * owner of the repo to edit
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoEditJsonRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo to edit
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoEditJsonRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsSetGithubActionsDefaultWorkflowPermissionsEnterpriseRequest {
-    
-    public ActionsSetGithubActionsDefaultWorkflowPermissionsEnterprisePathParams pathParams;
-    public ActionsSetGithubActionsDefaultWorkflowPermissionsEnterpriseRequest withPathParams(ActionsSetGithubActionsDefaultWorkflowPermissionsEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ActionsSetDefaultWorkflowPermissions actionsSetDefaultWorkflowPermissions;
+    public ActionsSetGithubActionsDefaultWorkflowPermissionsEnterpriseRequest withActionsSetDefaultWorkflowPermissions(org.openapis.openapi.models.shared.ActionsSetDefaultWorkflowPermissions actionsSetDefaultWorkflowPermissions) {
+        this.actionsSetDefaultWorkflowPermissions = actionsSetDefaultWorkflowPermissions;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ActionsSetDefaultWorkflowPermissions request;
-    public ActionsSetGithubActionsDefaultWorkflowPermissionsEnterpriseRequest withRequest(org.openapis.openapi.models.shared.ActionsSetDefaultWorkflowPermissions request) {
-        this.request = request;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public ActionsSetGithubActionsDefaultWorkflowPermissionsEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
         return this;
     }
     

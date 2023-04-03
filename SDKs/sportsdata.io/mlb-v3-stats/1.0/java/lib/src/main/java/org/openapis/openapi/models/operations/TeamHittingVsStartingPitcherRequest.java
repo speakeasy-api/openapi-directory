@@ -4,13 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamHittingVsStartingPitcherRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public TeamHittingVsStartingPitcherFormatEnum format;
+    public TeamHittingVsStartingPitcherRequest withFormat(TeamHittingVsStartingPitcherFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public TeamHittingVsStartingPitcherPathParams pathParams;
-    public TeamHittingVsStartingPitcherRequest withPathParams(TeamHittingVsStartingPitcherPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The GameID of an MLB game.  GameIDs can be found in the Games API.  Valid entries are &lt;code&gt;14620&lt;/code&gt; or &lt;code&gt;16905&lt;/code&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gameid")
+    public String gameid;
+    public TeamHittingVsStartingPitcherRequest withGameid(String gameid) {
+        this.gameid = gameid;
+        return this;
+    }
+    
+    /**
+     * The abbreviation of the requested team.
+     * &lt;br&gt;Examples: &lt;code&gt;SF&lt;/code&gt;, &lt;code&gt;NYY&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team")
+    public String team;
+    public TeamHittingVsStartingPitcherRequest withTeam(String team) {
+        this.team = team;
         return this;
     }
     

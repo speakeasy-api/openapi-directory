@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchChannelRequest {
-    
-    public FetchChannelPathParams pathParams;
-    public FetchChannelRequest withPathParams(FetchChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to fetch the resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchChannelRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public FetchChannelSecurity security;
-    public FetchChannelRequest withSecurity(FetchChannelSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Channel resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchChannelRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

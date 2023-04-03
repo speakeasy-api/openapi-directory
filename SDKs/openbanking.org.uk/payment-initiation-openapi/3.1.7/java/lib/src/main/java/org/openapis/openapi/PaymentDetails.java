@@ -34,18 +34,19 @@ public class PaymentDetails {
     /**
      * Get Payment Details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdPaymentDetailsResponse getDomesticPaymentsDomesticPaymentIdPaymentDetails(org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdPaymentDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdPaymentDetailsResponse getDomesticPaymentsDomesticPaymentIdPaymentDetails(org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdPaymentDetailsRequest request, org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdPaymentDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdPaymentDetailsPathParams.class, baseUrl, "/domestic-payments/{DomesticPaymentId}/payment-details", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomesticPaymentsDomesticPaymentIdPaymentDetailsRequest.class, baseUrl, "/domestic-payments/{DomesticPaymentId}/payment-details", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -54,7 +55,7 @@ public class PaymentDetails {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -117,18 +118,19 @@ public class PaymentDetails {
     /**
      * Get Payment Details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdPaymentDetailsResponse getDomesticScheduledPaymentsDomesticScheduledPaymentIdPaymentDetails(org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdPaymentDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdPaymentDetailsResponse getDomesticScheduledPaymentsDomesticScheduledPaymentIdPaymentDetails(org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdPaymentDetailsRequest request, org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdPaymentDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdPaymentDetailsPathParams.class, baseUrl, "/domestic-scheduled-payments/{DomesticScheduledPaymentId}/payment-details", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdPaymentDetailsRequest.class, baseUrl, "/domestic-scheduled-payments/{DomesticScheduledPaymentId}/payment-details", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -137,7 +139,7 @@ public class PaymentDetails {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -200,18 +202,19 @@ public class PaymentDetails {
     /**
      * Get Payment Details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsResponse getDomesticStandingOrdersDomesticStandingOrderIdPaymentDetails(org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsResponse getDomesticStandingOrdersDomesticStandingOrderIdPaymentDetails(org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsRequest request, org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsPathParams.class, baseUrl, "/domestic-standing-orders/{DomesticStandingOrderId}/payment-details", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetailsRequest.class, baseUrl, "/domestic-standing-orders/{DomesticStandingOrderId}/payment-details", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -220,7 +223,7 @@ public class PaymentDetails {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -283,18 +286,19 @@ public class PaymentDetails {
     /**
      * Get Payment Details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdPaymentDetailsResponse getFilePaymentsFilePaymentIdPaymentDetails(org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdPaymentDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdPaymentDetailsResponse getFilePaymentsFilePaymentIdPaymentDetails(org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdPaymentDetailsRequest request, org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdPaymentDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdPaymentDetailsPathParams.class, baseUrl, "/file-payments/{FilePaymentId}/payment-details", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFilePaymentsFilePaymentIdPaymentDetailsRequest.class, baseUrl, "/file-payments/{FilePaymentId}/payment-details", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -303,7 +307,7 @@ public class PaymentDetails {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -366,18 +370,19 @@ public class PaymentDetails {
     /**
      * Get Payment Details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetInternationalPaymentsInternationalPaymentIdPaymentDetailsResponse getInternationalPaymentsInternationalPaymentIdPaymentDetails(org.openapis.openapi.models.operations.GetInternationalPaymentsInternationalPaymentIdPaymentDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetInternationalPaymentsInternationalPaymentIdPaymentDetailsResponse getInternationalPaymentsInternationalPaymentIdPaymentDetails(org.openapis.openapi.models.operations.GetInternationalPaymentsInternationalPaymentIdPaymentDetailsRequest request, org.openapis.openapi.models.operations.GetInternationalPaymentsInternationalPaymentIdPaymentDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInternationalPaymentsInternationalPaymentIdPaymentDetailsPathParams.class, baseUrl, "/international-payments/{InternationalPaymentId}/payment-details", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInternationalPaymentsInternationalPaymentIdPaymentDetailsRequest.class, baseUrl, "/international-payments/{InternationalPaymentId}/payment-details", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -386,7 +391,7 @@ public class PaymentDetails {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -449,18 +454,19 @@ public class PaymentDetails {
     /**
      * Get Payment Details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetailsResponse getInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetails(org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetailsResponse getInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetails(org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetailsRequest request, org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetailsPathParams.class, baseUrl, "/international-scheduled-payments/{InternationalScheduledPaymentId}/payment-details", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetailsRequest.class, baseUrl, "/international-scheduled-payments/{InternationalScheduledPaymentId}/payment-details", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -469,7 +475,7 @@ public class PaymentDetails {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -532,18 +538,19 @@ public class PaymentDetails {
     /**
      * Get Payment Details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdPaymentDetailsResponse getInternationalStandingOrdersInternationalStandingOrderPaymentIdPaymentDetails(org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdPaymentDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdPaymentDetailsResponse getInternationalStandingOrdersInternationalStandingOrderPaymentIdPaymentDetails(org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdPaymentDetailsRequest request, org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdPaymentDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdPaymentDetailsPathParams.class, baseUrl, "/international-standing-orders/{InternationalStandingOrderPaymentId}/payment-details", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIdPaymentDetailsRequest.class, baseUrl, "/international-standing-orders/{InternationalStandingOrderPaymentId}/payment-details", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -552,7 +559,7 @@ public class PaymentDetails {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

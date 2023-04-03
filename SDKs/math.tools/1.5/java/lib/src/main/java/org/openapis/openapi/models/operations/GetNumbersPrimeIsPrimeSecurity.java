@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersPrimeIsPrimeSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeXMathtoolsAPISecret xMathtoolsApiSecret;
-    public GetNumbersPrimeIsPrimeSecurity withXMathtoolsApiSecret(org.openapis.openapi.models.shared.SchemeXMathtoolsAPISecret xMathtoolsApiSecret) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Mathtools-Api-Secret")
+    public String xMathtoolsApiSecret;
+    public GetNumbersPrimeIsPrimeSecurity withXMathtoolsApiSecret(String xMathtoolsApiSecret) {
         this.xMathtoolsApiSecret = xMathtoolsApiSecret;
         return this;
     }

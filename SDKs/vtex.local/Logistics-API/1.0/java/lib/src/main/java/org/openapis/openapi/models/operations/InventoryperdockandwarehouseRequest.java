@@ -4,20 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InventoryperdockandwarehouseRequest {
-    
-    public InventoryperdockandwarehousePathParams pathParams;
-    public InventoryperdockandwarehouseRequest withPathParams(InventoryperdockandwarehousePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public InventoryperdockandwarehouseRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public InventoryperdockandwarehouseRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public InventoryperdockandwarehouseHeaders headers;
-    public InventoryperdockandwarehouseRequest withHeaders(InventoryperdockandwarehouseHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dockId")
+    public String dockId;
+    public InventoryperdockandwarehouseRequest withDockId(String dockId) {
+        this.dockId = dockId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
+    public String skuId;
+    public InventoryperdockandwarehouseRequest withSkuId(String skuId) {
+        this.skuId = skuId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=warehouseId")
+    public String warehouseId;
+    public InventoryperdockandwarehouseRequest withWarehouseId(String warehouseId) {
+        this.warehouseId = warehouseId;
         return this;
     }
     

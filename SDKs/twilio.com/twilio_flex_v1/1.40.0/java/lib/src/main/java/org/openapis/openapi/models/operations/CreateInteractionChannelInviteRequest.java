@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateInteractionChannelInviteRequest {
+    /**
+     * The Channel SID for this Invite.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public CreateInteractionChannelInviteRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
+        return this;
+    }
     
-    public CreateInteractionChannelInvitePathParams pathParams;
-    public CreateInteractionChannelInviteRequest withPathParams(CreateInteractionChannelInvitePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Interaction SID for this Channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=InteractionSid")
+    public String interactionSid;
+    public CreateInteractionChannelInviteRequest withInteractionSid(String interactionSid) {
+        this.interactionSid = interactionSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateInteractionChannelInviteCreateInteractionChannelInviteRequest request;
-    public CreateInteractionChannelInviteRequest withRequest(CreateInteractionChannelInviteCreateInteractionChannelInviteRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateInteractionChannelInviteSecurity security;
-    public CreateInteractionChannelInviteRequest withSecurity(CreateInteractionChannelInviteSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateInteractionChannelInviteRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateInteractionChannelInviteCreateInteractionChannelInviteRequest requestBody;
+    public CreateInteractionChannelInviteRequest withRequestBody(CreateInteractionChannelInviteCreateInteractionChannelInviteRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

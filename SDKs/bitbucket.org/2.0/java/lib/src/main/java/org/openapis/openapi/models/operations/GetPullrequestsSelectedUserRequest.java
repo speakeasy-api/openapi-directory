@@ -4,27 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPullrequestsSelectedUserRequest {
-    
-    public GetPullrequestsSelectedUserPathParams pathParams;
-    public GetPullrequestsSelectedUserRequest withPathParams(GetPullrequestsSelectedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This can either be the username of the pull request author, the author's UUID
+     * surrounded by curly-braces, for example: `{account UUID}`, or the author's Atlassian ID.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=selected_user")
+    public String selectedUser;
+    public GetPullrequestsSelectedUserRequest withSelectedUser(String selectedUser) {
+        this.selectedUser = selectedUser;
         return this;
     }
     
-    
-    public GetPullrequestsSelectedUserQueryParams queryParams;
-    public GetPullrequestsSelectedUserRequest withQueryParams(GetPullrequestsSelectedUserQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetPullrequestsSelectedUserSecurity security;
-    public GetPullrequestsSelectedUserRequest withSecurity(GetPullrequestsSelectedUserSecurity security) {
-        this.security = security;
+    /**
+     * Only return pull requests that are in this state. This parameter can be repeated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public GetPullrequestsSelectedUserStateEnum state;
+    public GetPullrequestsSelectedUserRequest withState(GetPullrequestsSelectedUserStateEnum state) {
+        this.state = state;
         return this;
     }
     

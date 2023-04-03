@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostStatsIncrementFieldRequest {
-    
-    public PostStatsIncrementFieldPathParams pathParams;
-    public PostStatsIncrementFieldRequest withPathParams(PostStatsIncrementFieldPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the app associated with this statistic value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appId")
+    public String appId;
+    public PostStatsIncrementFieldRequest withAppId(String appId) {
+        this.appId = appId;
         return this;
     }
     
+    /**
+     * The date (in millis) for when this increment occurred. The default is the current date if no value is provided.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public Long date;
+    public PostStatsIncrementFieldRequest withDate(Long date) {
+        this.date = date;
+        return this;
+    }
     
-    public PostStatsIncrementFieldQueryParams queryParams;
-    public PostStatsIncrementFieldRequest withQueryParams(PostStatsIncrementFieldQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The field to be incremented
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=field")
+    public String field;
+    public PostStatsIncrementFieldRequest withField(String field) {
+        this.field = field;
+        return this;
+    }
+    
+    /**
+     * The id of the user that is performing the action
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
+    public String userId;
+    public PostStatsIncrementFieldRequest withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    
+    /**
+     * The increment amount. Default is 1 if no value is provided.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=value")
+    public Long value;
+    public PostStatsIncrementFieldRequest withValue(Long value) {
+        this.value = value;
         return this;
     }
     

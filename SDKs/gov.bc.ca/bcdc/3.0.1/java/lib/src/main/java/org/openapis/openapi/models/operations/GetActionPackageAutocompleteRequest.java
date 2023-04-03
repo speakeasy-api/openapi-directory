@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActionPackageAutocompleteRequest {
+    /**
+     * The maximum number of resource formats to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetActionPackageAutocompleteRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetActionPackageAutocompleteQueryParams queryParams;
-    public GetActionPackageAutocompleteRequest withQueryParams(GetActionPackageAutocompleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The string to query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetActionPackageAutocompleteRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFixedPricesRequest {
-    
-    public GetFixedPricesPathParams pathParams;
-    public GetFixedPricesRequest withPathParams(GetFixedPricesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetFixedPricesRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetFixedPricesRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetFixedPricesHeaders headers;
-    public GetFixedPricesRequest withHeaders(GetFixedPricesHeaders headers) {
-        this.headers = headers;
+    /**
+     * SKU ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
+    public Long itemId;
+    public GetFixedPricesRequest withItemId(Long itemId) {
+        this.itemId = itemId;
         return this;
     }
     

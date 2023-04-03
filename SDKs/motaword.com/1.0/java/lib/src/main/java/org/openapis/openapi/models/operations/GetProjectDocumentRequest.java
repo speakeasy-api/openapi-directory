@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectDocumentRequest {
-    
-    public GetProjectDocumentPathParams pathParams;
-    public GetProjectDocumentRequest withPathParams(GetProjectDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Document ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public Long documentId;
+    public GetProjectDocumentRequest withDocumentId(Long documentId) {
+        this.documentId = documentId;
         return this;
     }
     
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public GetProjectDocumentRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
     
-    public GetProjectDocumentQueryParams queryParams;
-    public GetProjectDocumentRequest withQueryParams(GetProjectDocumentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Attach further information. Possible values 'preview' to fetch temporary preview URLs. This is NOT recommended to be used with list calls. Only use with[]=preview for single document/style guide calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with[]")
+    public GetProjectDocumentWithEnum[] with;
+    public GetProjectDocumentRequest withWith(GetProjectDocumentWithEnum[] with) {
+        this.with = with;
         return this;
     }
     

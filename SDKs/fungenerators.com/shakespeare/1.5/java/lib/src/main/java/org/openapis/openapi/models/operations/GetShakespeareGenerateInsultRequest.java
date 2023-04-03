@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetShakespeareGenerateInsultRequest {
-    
-    public GetShakespeareGenerateInsultQueryParams queryParams;
-    public GetShakespeareGenerateInsultRequest withQueryParams(GetShakespeareGenerateInsultQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetShakespeareGenerateInsultSecurity security;
-    public GetShakespeareGenerateInsultRequest withSecurity(GetShakespeareGenerateInsultSecurity security) {
-        this.security = security;
+    /**
+     * No of insults to generate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetShakespeareGenerateInsultRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

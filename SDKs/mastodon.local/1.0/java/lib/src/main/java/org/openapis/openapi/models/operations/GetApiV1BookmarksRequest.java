@@ -4,20 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1BookmarksRequest {
-    
-    public GetApiV1BookmarksQueryParams queryParams;
-    public GetApiV1BookmarksRequest withQueryParams(GetApiV1BookmarksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetApiV1BookmarksRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_id")
+    public String maxId;
+    public GetApiV1BookmarksRequest withMaxId(String maxId) {
+        this.maxId = maxId;
+        return this;
+    }
     
-    public GetApiV1BookmarksSecurity security;
-    public GetApiV1BookmarksRequest withSecurity(GetApiV1BookmarksSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_id")
+    public String minId;
+    public GetApiV1BookmarksRequest withMinId(String minId) {
+        this.minId = minId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since_id")
+    public String sinceId;
+    public GetApiV1BookmarksRequest withSinceId(String sinceId) {
+        this.sinceId = sinceId;
         return this;
     }
     

@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetRepoSecretRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsGetRepoSecretRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ActionsGetRepoSecretPathParams pathParams;
-    public ActionsGetRepoSecretRequest withPathParams(ActionsGetRepoSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsGetRepoSecretRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * secret_name parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
+    public String secretName;
+    public ActionsGetRepoSecretRequest withSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
     

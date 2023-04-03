@@ -4,20 +4,97 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesListForOrgRequest {
-    
-    public IssuesListForOrgPathParams pathParams;
-    public IssuesListForOrgRequest withPathParams(IssuesListForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The direction to sort the results by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public org.openapis.openapi.models.shared.DirectionEnum direction;
+    public IssuesListForOrgRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * Indicates which sorts of issues to return. `assigned` means issues assigned to you. `created` means issues created by you. `mentioned` means issues mentioning you. `subscribed` means issues you're subscribed to updates for. `all` or `repos` means all issues you can see, regardless of participation or creation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public IssuesListForOrgFilterEnum filter;
+    public IssuesListForOrgRequest withFilter(IssuesListForOrgFilterEnum filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public IssuesListForOrgQueryParams queryParams;
-    public IssuesListForOrgRequest withQueryParams(IssuesListForOrgQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A list of comma separated label names. Example: `bug,ui,@high`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=labels")
+    public String labels;
+    public IssuesListForOrgRequest withLabels(String labels) {
+        this.labels = labels;
+        return this;
+    }
+    
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public IssuesListForOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public IssuesListForOrgRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public IssuesListForOrgRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public OffsetDateTime since;
+    public IssuesListForOrgRequest withSince(OffsetDateTime since) {
+        this.since = since;
+        return this;
+    }
+    
+    /**
+     * What to sort results by. Can be either `created`, `updated`, `comments`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public IssuesListForOrgSortEnum sort;
+    public IssuesListForOrgRequest withSort(IssuesListForOrgSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Indicates the state of the issues to return. Can be either `open`, `closed`, or `all`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public IssuesListForOrgStateEnum state;
+    public IssuesListForOrgRequest withState(IssuesListForOrgStateEnum state) {
+        this.state = state;
         return this;
     }
     

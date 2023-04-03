@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRepositoriesWorkspaceRepoSlugHooksUidRequest {
-    
-    public DeleteRepositoriesWorkspaceRepoSlugHooksUidPathParams pathParams;
-    public DeleteRepositoriesWorkspaceRepoSlugHooksUidRequest withPathParams(DeleteRepositoriesWorkspaceRepoSlugHooksUidPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public DeleteRepositoriesWorkspaceRepoSlugHooksUidRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
         return this;
     }
     
+    /**
+     * Installed webhook's ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uid")
+    public String uid;
+    public DeleteRepositoriesWorkspaceRepoSlugHooksUidRequest withUid(String uid) {
+        this.uid = uid;
+        return this;
+    }
     
-    public DeleteRepositoriesWorkspaceRepoSlugHooksUidSecurity security;
-    public DeleteRepositoriesWorkspaceRepoSlugHooksUidRequest withSecurity(DeleteRepositoriesWorkspaceRepoSlugHooksUidSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public DeleteRepositoriesWorkspaceRepoSlugHooksUidRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

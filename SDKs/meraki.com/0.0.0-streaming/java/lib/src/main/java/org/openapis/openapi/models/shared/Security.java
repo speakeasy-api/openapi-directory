@@ -7,9 +7,9 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeMerakiAPIKey merakiApiKey;
-    public Security withMerakiApiKey(SchemeMerakiAPIKey merakiApiKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Cisco-Meraki-API-Key")
+    public String merakiApiKey;
+    public Security withMerakiApiKey(String merakiApiKey) {
         this.merakiApiKey = merakiApiKey;
         return this;
     }

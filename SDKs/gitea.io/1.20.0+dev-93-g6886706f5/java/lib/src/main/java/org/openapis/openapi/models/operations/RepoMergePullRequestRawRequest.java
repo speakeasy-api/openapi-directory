@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoMergePullRequestRawRequest {
-    
-    public RepoMergePullRequestRawPathParams pathParams;
-    public RepoMergePullRequestRawRequest withPathParams(RepoMergePullRequestRawPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=text/plain")
+    public byte[] requestBody;
+    public RepoMergePullRequestRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=text/plain")
-    public byte[] request;
-    public RepoMergePullRequestRawRequest withRequest(byte[] request) {
-        this.request = request;
+    /**
+     * index of the pull request to merge
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public RepoMergePullRequestRawRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoMergePullRequestRawRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoMergePullRequestRawRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

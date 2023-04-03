@@ -4,20 +4,62 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientsSummaryListRequest {
-    
-    public PatientsSummaryListQueryParams queryParams;
-    public PatientsSummaryListRequest withQueryParams(PatientsSummaryListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public PatientsSummaryListRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_of_birth")
+    public String dateOfBirth;
+    public PatientsSummaryListRequest withDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+        return this;
+    }
     
-    public PatientsSummaryListSecurity security;
-    public PatientsSummaryListRequest withSecurity(PatientsSummaryListSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientsSummaryListRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_name")
+    public String firstName;
+    public PatientsSummaryListRequest withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gender")
+    public String gender;
+    public PatientsSummaryListRequest withGender(String gender) {
+        this.gender = gender;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_name")
+    public String lastName;
+    public PatientsSummaryListRequest withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public PatientsSummaryListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public PatientsSummaryListRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

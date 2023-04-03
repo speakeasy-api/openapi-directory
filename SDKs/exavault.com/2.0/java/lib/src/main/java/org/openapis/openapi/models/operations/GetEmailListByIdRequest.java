@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEmailListByIdRequest {
-    
-    public GetEmailListByIdPathParams pathParams;
-    public GetEmailListByIdRequest withPathParams(GetEmailListByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public GetEmailListByIdRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
         return this;
     }
     
-    
-    public GetEmailListByIdQueryParams queryParams;
-    public GetEmailListByIdRequest withQueryParams(GetEmailListByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API Key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public GetEmailListByIdRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
         return this;
     }
     
+    /**
+     * ID of the email list to return.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetEmailListByIdRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetEmailListByIdHeaders headers;
-    public GetEmailListByIdRequest withHeaders(GetEmailListByIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Related record types to include in the response. Valid option is `ownerUser`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public String include;
+    public GetEmailListByIdRequest withInclude(String include) {
+        this.include = include;
         return this;
     }
     

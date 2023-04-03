@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SublabsDeleteRequest {
-    
-    public SublabsDeletePathParams pathParams;
-    public SublabsDeleteRequest withPathParams(SublabsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SublabsDeleteSecurity security;
-    public SublabsDeleteRequest withSecurity(SublabsDeleteSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public SublabsDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

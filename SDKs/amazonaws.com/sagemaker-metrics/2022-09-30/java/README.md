@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BatchPutMetricsHeaders;
 import org.openapis.openapi.models.operations.BatchPutMetricsRequestBody;
 import org.openapis.openapi.models.operations.BatchPutMetricsRequest;
 import org.openapis.openapi.models.operations.BatchPutMetricsResponse;
@@ -28,52 +27,42 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchPutMetricsRequest req = new BatchPutMetricsRequest() {{
-                headers = new BatchPutMetricsHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new BatchPutMetricsRequestBody() {{
+                requestBody = new BatchPutMetricsRequestBody() {{
                     metricData = new org.openapis.openapi.models.shared.RawMetricData[]{{
                         add(new RawMetricData() {{
-                            metricName = "vel";
-                            step = 623564;
-                            timestamp = "2022-03-26T09:37:56.283Z";
-                            value = 4375.87;
+                            metricName = "provident";
+                            step = 715190;
+                            timestamp = "2021-03-11T23:22:42.658Z";
+                            value = 8579.46;
                         }}),
                         add(new RawMetricData() {{
-                            metricName = "magnam";
-                            step = 891773;
-                            timestamp = "2022-01-14T06:18:51.036Z";
-                            value = 2726.56;
+                            metricName = "corrupti";
+                            step = 847252;
+                            timestamp = "2022-05-18T09:34:54.894Z";
+                            value = 6458.94;
                         }}),
                         add(new RawMetricData() {{
                             metricName = "suscipit";
-                            step = 477665;
-                            timestamp = "2020-07-25T16:12:20.938Z";
-                            value = 5288.95;
-                        }}),
-                        add(new RawMetricData() {{
-                            metricName = "iusto";
-                            step = 568045;
-                            timestamp = "2022-01-28T03:46:24.500Z";
-                            value = 8360.79;
+                            step = 437587;
+                            timestamp = "2022-02-09T12:04:06.508Z";
+                            value = 567.13;
                         }}),
                     }};
-                    trialComponentName = "ab";
+                    trialComponentName = "delectus";
                 }};
-            }};            
+                xAmzAlgorithm = "tempora";
+                xAmzContentSha256 = "suscipit";
+                xAmzCredential = "molestiae";
+                xAmzDate = "minus";
+                xAmzSecurityToken = "placeat";
+                xAmzSignature = "voluptatum";
+                xAmzSignedHeaders = "iusto";
+            }}            
 
             BatchPutMetricsResponse res = sdk.batchPutMetrics(req);
 
@@ -87,7 +76,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

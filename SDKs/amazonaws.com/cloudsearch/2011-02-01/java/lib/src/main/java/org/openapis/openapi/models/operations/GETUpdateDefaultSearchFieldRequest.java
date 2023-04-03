@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateDefaultSearchFieldRequest {
-    
-    public GETUpdateDefaultSearchFieldQueryParams queryParams;
-    public GETUpdateDefaultSearchFieldRequest withQueryParams(GETUpdateDefaultSearchFieldQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETUpdateDefaultSearchFieldActionEnum action;
+    public GETUpdateDefaultSearchFieldRequest withAction(GETUpdateDefaultSearchFieldActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The text field to search if the search request does not specify which field to search. The default search field is used when search terms are specified with the &lt;code&gt;q&lt;/code&gt; parameter, or if a match expression specified with the &lt;code&gt;bq&lt;/code&gt; parameter does not constrain the search to a particular field. The default is an empty string, which automatically searches all text fields.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DefaultSearchField")
+    public String defaultSearchField;
+    public GETUpdateDefaultSearchFieldRequest withDefaultSearchField(String defaultSearchField) {
+        this.defaultSearchField = defaultSearchField;
+        return this;
+    }
     
-    public GETUpdateDefaultSearchFieldHeaders headers;
-    public GETUpdateDefaultSearchFieldRequest withHeaders(GETUpdateDefaultSearchFieldHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
+    public String domainName;
+    public GETUpdateDefaultSearchFieldRequest withDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETUpdateDefaultSearchFieldVersionEnum version;
+    public GETUpdateDefaultSearchFieldRequest withVersion(GETUpdateDefaultSearchFieldVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETUpdateDefaultSearchFieldRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETUpdateDefaultSearchFieldRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETUpdateDefaultSearchFieldRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETUpdateDefaultSearchFieldRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETUpdateDefaultSearchFieldRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETUpdateDefaultSearchFieldRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETUpdateDefaultSearchFieldRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ForumGetCoreTopicsPagedRequest {
-    
-    public ForumGetCoreTopicsPagedPathParams pathParams;
-    public ForumGetCoreTopicsPagedRequest withPathParams(ForumGetCoreTopicsPagedPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The category filter.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=categoryFilter")
+    public Integer categoryFilter;
+    public ForumGetCoreTopicsPagedRequest withCategoryFilter(Integer categoryFilter) {
+        this.categoryFilter = categoryFilter;
         return this;
     }
     
+    /**
+     * Comma seperated list of locales posts must match to return in the result list. Default 'en'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locales")
+    public String locales;
+    public ForumGetCoreTopicsPagedRequest withLocales(String locales) {
+        this.locales = locales;
+        return this;
+    }
     
-    public ForumGetCoreTopicsPagedQueryParams queryParams;
-    public ForumGetCoreTopicsPagedRequest withQueryParams(ForumGetCoreTopicsPagedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Zero base page
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
+    public Integer page;
+    public ForumGetCoreTopicsPagedRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The date filter.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quickDate")
+    public Integer quickDate;
+    public ForumGetCoreTopicsPagedRequest withQuickDate(Integer quickDate) {
+        this.quickDate = quickDate;
+        return this;
+    }
+    
+    /**
+     * The sort mode.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sort")
+    public Long sort;
+    public ForumGetCoreTopicsPagedRequest withSort(Long sort) {
+        this.sort = sort;
         return this;
     }
     

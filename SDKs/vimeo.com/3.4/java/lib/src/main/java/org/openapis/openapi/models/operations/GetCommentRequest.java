@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommentRequest {
+    /**
+     * The ID of the comment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
+    public Double commentId;
+    public GetCommentRequest withCommentId(Double commentId) {
+        this.commentId = commentId;
+        return this;
+    }
     
-    public GetCommentPathParams pathParams;
-    public GetCommentRequest withPathParams(GetCommentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public GetCommentRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

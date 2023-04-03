@@ -43,12 +43,12 @@ public class Policies {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationAdaptivePolicyPolicyResponse createOrganizationAdaptivePolicyPolicy(org.openapis.openapi.models.operations.CreateOrganizationAdaptivePolicyPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationAdaptivePolicyPolicyPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/policies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationAdaptivePolicyPolicyRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/policies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -88,7 +88,7 @@ public class Policies {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationAdaptivePolicyPolicyResponse deleteOrganizationAdaptivePolicyPolicy(org.openapis.openapi.models.operations.DeleteOrganizationAdaptivePolicyPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationAdaptivePolicyPolicyPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationAdaptivePolicyPolicyRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -122,13 +122,13 @@ public class Policies {
      */
     public org.openapis.openapi.models.operations.GetNetworkPoliciesByClientResponse getNetworkPoliciesByClient(org.openapis.openapi.models.operations.GetNetworkPoliciesByClientRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkPoliciesByClientPathParams.class, baseUrl, "/networks/{networkId}/policies/byClient", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkPoliciesByClientRequest.class, baseUrl, "/networks/{networkId}/policies/byClient", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkPoliciesByClientQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkPoliciesByClientRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -170,7 +170,7 @@ public class Policies {
      */
     public org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyPoliciesResponse getOrganizationAdaptivePolicyPolicies(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyPoliciesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyPoliciesPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/policies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyPoliciesRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/policies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -210,7 +210,7 @@ public class Policies {
      */
     public org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyPolicyResponse getOrganizationAdaptivePolicyPolicy(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyPolicyPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdaptivePolicyPolicyRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -250,12 +250,12 @@ public class Policies {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicyPolicyResponse updateOrganizationAdaptivePolicyPolicy(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicyPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicyPolicyPathParams.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationAdaptivePolicyPolicyRequest.class, baseUrl, "/organizations/{organizationId}/adaptivePolicy/policies/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

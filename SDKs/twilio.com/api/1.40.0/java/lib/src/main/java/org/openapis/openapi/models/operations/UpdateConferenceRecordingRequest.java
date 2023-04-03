@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateConferenceRecordingRequest {
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Conference Recording resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateConferenceRecordingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public UpdateConferenceRecordingPathParams pathParams;
-    public UpdateConferenceRecordingRequest withPathParams(UpdateConferenceRecordingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Conference SID that identifies the conference associated with the recording to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConferenceSid")
+    public String conferenceSid;
+    public UpdateConferenceRecordingRequest withConferenceSid(String conferenceSid) {
+        this.conferenceSid = conferenceSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateConferenceRecordingUpdateConferenceRecordingRequest request;
-    public UpdateConferenceRecordingRequest withRequest(UpdateConferenceRecordingUpdateConferenceRecordingRequest request) {
-        this.request = request;
+    public UpdateConferenceRecordingUpdateConferenceRecordingRequest requestBody;
+    public UpdateConferenceRecordingRequest withRequestBody(UpdateConferenceRecordingUpdateConferenceRecordingRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateConferenceRecordingSecurity security;
-    public UpdateConferenceRecordingRequest withSecurity(UpdateConferenceRecordingSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateConferenceRecordingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Conference Recording resource to update. Use `Twilio.CURRENT` to reference the current active recording.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateConferenceRecordingRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

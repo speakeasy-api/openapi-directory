@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposCreateDeploymentStatusRequest {
-    
-    public ReposCreateDeploymentStatusPathParams pathParams;
-    public ReposCreateDeploymentStatusRequest withPathParams(ReposCreateDeploymentStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReposCreateDeploymentStatusRequestBody requestBody;
+    public ReposCreateDeploymentStatusRequest withRequestBody(ReposCreateDeploymentStatusRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReposCreateDeploymentStatusRequestBody request;
-    public ReposCreateDeploymentStatusRequest withRequest(ReposCreateDeploymentStatusRequestBody request) {
-        this.request = request;
+    /**
+     * deployment_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment_id")
+    public Long deploymentId;
+    public ReposCreateDeploymentStatusRequest withDeploymentId(Long deploymentId) {
+        this.deploymentId = deploymentId;
+        return this;
+    }
+    
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposCreateDeploymentStatusRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposCreateDeploymentStatusRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

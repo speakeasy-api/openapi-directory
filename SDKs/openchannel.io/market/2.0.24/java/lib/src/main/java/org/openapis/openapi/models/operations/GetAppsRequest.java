@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAppsRequest {
+    /**
+     * Whether this result should only contain apps that are owned by this user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isOwner")
+    public Boolean isOwner;
+    public GetAppsRequest withIsOwner(Boolean isOwner) {
+        this.isOwner = isOwner;
+        return this;
+    }
     
-    public GetAppsQueryParams queryParams;
-    public GetAppsRequest withQueryParams(GetAppsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum number of results to return per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetAppsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The result set page number to be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Long pageNumber;
+    public GetAppsRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    
+    /**
+     * A query document. Example: {'name':'MyApp'} matches all the apps that have the name 'MyApp'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetAppsRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * A sort document. Example: {'name':1} sorts the results by name in ascending order
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetAppsRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * The unique id of the user requesting this resource
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
+    public String userId;
+    public GetAppsRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

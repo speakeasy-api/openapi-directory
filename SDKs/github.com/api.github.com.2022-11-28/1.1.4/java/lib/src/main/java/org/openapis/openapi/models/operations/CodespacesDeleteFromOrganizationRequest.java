@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodespacesDeleteFromOrganizationRequest {
+    /**
+     * The name of the codespace.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=codespace_name")
+    public String codespaceName;
+    public CodespacesDeleteFromOrganizationRequest withCodespaceName(String codespaceName) {
+        this.codespaceName = codespaceName;
+        return this;
+    }
     
-    public CodespacesDeleteFromOrganizationPathParams pathParams;
-    public CodespacesDeleteFromOrganizationRequest withPathParams(CodespacesDeleteFromOrganizationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public CodespacesDeleteFromOrganizationRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public CodespacesDeleteFromOrganizationRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

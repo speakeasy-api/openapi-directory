@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmClientsIdRolesRoleNameManagementPermissionsRequest {
+    /**
+     * id of client (not client-id)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetRealmClientsIdRolesRoleNameManagementPermissionsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetRealmClientsIdRolesRoleNameManagementPermissionsPathParams pathParams;
-    public GetRealmClientsIdRolesRoleNameManagementPermissionsRequest withPathParams(GetRealmClientsIdRolesRoleNameManagementPermissionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmClientsIdRolesRoleNameManagementPermissionsRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=role-name")
+    public String roleName;
+    public GetRealmClientsIdRolesRoleNameManagementPermissionsRequest withRoleName(String roleName) {
+        this.roleName = roleName;
         return this;
     }
     

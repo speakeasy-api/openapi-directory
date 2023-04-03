@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteAuthorsPopularRequest {
-    
-    public GetQuoteAuthorsPopularQueryParams queryParams;
-    public GetQuoteAuthorsPopularRequest withQueryParams(GetQuoteAuthorsPopularQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Should return detailed author information such as `birthday`, `death date`, `occupation`, `description` etc. Only available at certain subscription levels.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=detailed")
+    public Boolean detailed;
+    public GetQuoteAuthorsPopularRequest withDetailed(Boolean detailed) {
+        this.detailed = detailed;
         return this;
     }
     
+    /**
+     * Language. A same author may have quotes in two or more different languages. So for example 'Mahatma Gandhi' may be returned for language "en"(English), and "\u0bae\u0bb9\u0bbe\u0ba4\u0bcd\u0bae\u0bbe \u0b95\u0bbe\u0ba8\u0bcd\u0ba4\u0bbf" may be returned when the language is "ta" (Tamil).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public GetQuoteAuthorsPopularRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
     
-    public GetQuoteAuthorsPopularSecurity security;
-    public GetQuoteAuthorsPopularRequest withSecurity(GetQuoteAuthorsPopularSecurity security) {
-        this.security = security;
+    /**
+     * Response is paged. This parameter controls how many is returned in the result. The maximum depends on the subscription level.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetQuoteAuthorsPopularRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Response is paged. This parameter controls where response starts the listing at
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Integer start;
+    public GetQuoteAuthorsPopularRequest withStart(Integer start) {
+        this.start = start;
         return this;
     }
     

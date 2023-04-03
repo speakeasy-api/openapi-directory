@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelsRequest {
-    
-    public GetChannelsPathParams pathParams;
-    public GetChannelsRequest withPathParams(GetChannelsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The next page token is used to paginate through large result sets. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public GetChannelsRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
         return this;
     }
     
-    
-    public GetChannelsQueryParams queryParams;
-    public GetChannelsRequest withQueryParams(GetChannelsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of records returned from a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetChannelsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public GetChannelsSecurity security;
-    public GetChannelsRequest withSecurity(GetChannelsSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public GetChannelsRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

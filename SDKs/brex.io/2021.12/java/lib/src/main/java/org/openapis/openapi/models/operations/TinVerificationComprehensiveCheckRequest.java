@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TinVerificationComprehensiveCheckRequest {
-    
-    public TinVerificationComprehensiveCheckQueryParams queryParams;
-    public TinVerificationComprehensiveCheckRequest withQueryParams(TinVerificationComprehensiveCheckQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Company Name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public TinVerificationComprehensiveCheckRequest withName(String name) {
+        this.name = name;
         return this;
     }
     
+    /**
+     * The percentage of minimum similarity threshold for company matching (optional, default: 70%)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=threshold")
+    public Long threshold;
+    public TinVerificationComprehensiveCheckRequest withThreshold(Long threshold) {
+        this.threshold = threshold;
+        return this;
+    }
     
-    public TinVerificationComprehensiveCheckSecurity security;
-    public TinVerificationComprehensiveCheckRequest withSecurity(TinVerificationComprehensiveCheckSecurity security) {
-        this.security = security;
+    /**
+     * Nine letter TIN number with or without hyphens
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tin")
+    public String tin;
+    public TinVerificationComprehensiveCheckRequest withTin(String tin) {
+        this.tin = tin;
         return this;
     }
     

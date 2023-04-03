@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdEventsPostRequest {
-    
-    public StoryIdEventsPostPathParams pathParams;
-    public StoryIdEventsPostRequest withPathParams(StoryIdEventsPostPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * the id from the story object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public StoryIdEventsPostRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
@@ -18,9 +21,9 @@ public class StoryIdEventsPostRequest {
      * Collaborator user id and permission type
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ManageEvent request;
-    public StoryIdEventsPostRequest withRequest(org.openapis.openapi.models.shared.ManageEvent request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ManageEvent manageEvent;
+    public StoryIdEventsPostRequest withManageEvent(org.openapis.openapi.models.shared.ManageEvent manageEvent) {
+        this.manageEvent = manageEvent;
         return this;
     }
     

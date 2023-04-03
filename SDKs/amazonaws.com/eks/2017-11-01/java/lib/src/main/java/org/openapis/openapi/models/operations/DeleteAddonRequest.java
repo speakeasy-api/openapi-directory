@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAddonRequest {
-    
-    public DeleteAddonPathParams pathParams;
-    public DeleteAddonRequest withPathParams(DeleteAddonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DeleteAddonRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public DeleteAddonQueryParams queryParams;
-    public DeleteAddonRequest withQueryParams(DeleteAddonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DeleteAddonRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DeleteAddonRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public DeleteAddonHeaders headers;
-    public DeleteAddonRequest withHeaders(DeleteAddonHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DeleteAddonRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DeleteAddonRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DeleteAddonRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DeleteAddonRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The name of the add-on. The name must match one of the names returned by &lt;a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_ListAddons.html"&gt; &lt;code&gt;ListAddons&lt;/code&gt; &lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=addonName")
+    public String addonName;
+    public DeleteAddonRequest withAddonName(String addonName) {
+        this.addonName = addonName;
+        return this;
+    }
+    
+    /**
+     * The name of the cluster to delete the add-on from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public DeleteAddonRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Specifying this option preserves the add-on software on your cluster but Amazon EKS stops managing any settings for the add-on. If an IAM account is associated with the add-on, it isn't removed.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=preserve")
+    public Boolean preserve;
+    public DeleteAddonRequest withPreserve(Boolean preserve) {
+        this.preserve = preserve;
         return this;
     }
     

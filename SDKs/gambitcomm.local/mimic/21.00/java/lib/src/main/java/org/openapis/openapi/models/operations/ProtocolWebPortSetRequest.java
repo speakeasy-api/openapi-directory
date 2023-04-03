@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolWebPortSetRequest {
+    /**
+     * Agent to set WEB port
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolWebPortSetRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolWebPortSetPathParams pathParams;
-    public ProtocolWebPortSetRequest withPathParams(ProtocolWebPortSetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * TCP port
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
+    public Integer port;
+    public ProtocolWebPortSetRequest withPort(Integer port) {
+        this.port = port;
+        return this;
+    }
+    
+    /**
+     * Encryption or related protocol
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=protocol")
+    public String protocol;
+    public ProtocolWebPortSetRequest withProtocol(String protocol) {
+        this.protocol = protocol;
+        return this;
+    }
+    
+    /**
+     * Encryption or related protocol version
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public ProtocolWebPortSetRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

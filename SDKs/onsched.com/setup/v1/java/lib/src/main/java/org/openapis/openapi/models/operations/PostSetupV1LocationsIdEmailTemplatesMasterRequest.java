@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSetupV1LocationsIdEmailTemplatesMasterRequest {
-    
-    public PostSetupV1LocationsIdEmailTemplatesMasterPathParams pathParams;
-    public PostSetupV1LocationsIdEmailTemplatesMasterRequest withPathParams(PostSetupV1LocationsIdEmailTemplatesMasterPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Input model for master email template settings
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.MasterTemplateSettingsInputModel request;
-    public PostSetupV1LocationsIdEmailTemplatesMasterRequest withRequest(org.openapis.openapi.models.shared.MasterTemplateSettingsInputModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.MasterTemplateSettingsInputModel masterTemplateSettingsInputModel;
+    public PostSetupV1LocationsIdEmailTemplatesMasterRequest withMasterTemplateSettingsInputModel(org.openapis.openapi.models.shared.MasterTemplateSettingsInputModel masterTemplateSettingsInputModel) {
+        this.masterTemplateSettingsInputModel = masterTemplateSettingsInputModel;
+        return this;
+    }
+    
+    /**
+     * id of business location, defaults to primary business location
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSetupV1LocationsIdEmailTemplatesMasterRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

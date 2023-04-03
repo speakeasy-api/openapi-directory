@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetContentAspectIDAspectIDEnum;
-import org.openapis.openapi.models.operations.GetContentAspectIdPathParams;
 import org.openapis.openapi.models.operations.GetContentAspectIdRequest;
 import org.openapis.openapi.models.operations.GetContentAspectIdResponse;
 
@@ -16,10 +15,8 @@ public class Application {
                 .build();
 
             GetContentAspectIdRequest req = new GetContentAspectIdRequest() {{
-                pathParams = new GetContentAspectIdPathParams() {{
-                    aspectId = "oic";
-                }};
-            }};            
+                aspectId = "oic";
+            }}            
 
             GetContentAspectIdResponse res = sdk.content.getContentAspectId(req);
 

@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MembershipsByTeamActiveRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public MembershipsByTeamActiveFormatEnum format;
+    public MembershipsByTeamActiveRequest withFormat(MembershipsByTeamActiveFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public MembershipsByTeamActivePathParams pathParams;
-    public MembershipsByTeamActiveRequest withPathParams(MembershipsByTeamActivePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique FantasyData Team ID. 
+     * Example:&lt;code&gt;516&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teamid")
+    public String teamid;
+    public MembershipsByTeamActiveRequest withTeamid(String teamid) {
+        this.teamid = teamid;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1MediasIdRequest {
-    
-    public GetApiV1MediasIdPathParams pathParams;
-    public GetApiV1MediasIdRequest withPathParams(GetApiV1MediasIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetApiV1MediasIdSecurity security;
-    public GetApiV1MediasIdRequest withSecurity(GetApiV1MediasIdSecurity security) {
-        this.security = security;
+    /**
+     * id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetApiV1MediasIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

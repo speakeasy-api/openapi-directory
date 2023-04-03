@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2Scim20SchemasIdRequest {
-    
-    public GetV2Scim20SchemasIdPathParams pathParams;
-    public GetV2Scim20SchemasIdRequest withPathParams(GetV2Scim20SchemasIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetV2Scim20SchemasIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SnsGetSnsGetRequest {
-    
-    public SnsGetSnsGetQueryParams queryParams;
-    public SnsGetSnsGetRequest withQueryParams(SnsGetSnsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=authorization")
+    public String authorization;
+    public SnsGetSnsGetRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=base64_message")
+    public String base64Message;
+    public SnsGetSnsGetRequest withBase64Message(String base64Message) {
+        this.base64Message = base64Message;
+        return this;
+    }
     
-    public SnsGetSnsGetHeaders headers;
-    public SnsGetSnsGetRequest withHeaders(SnsGetSnsGetHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=message")
+    public String message;
+    public SnsGetSnsGetRequest withMessage(String message) {
+        this.message = message;
         return this;
     }
     

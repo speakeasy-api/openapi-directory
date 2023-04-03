@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductRatingRequest {
-    
-    public GetProductRatingPathParams pathParams;
-    public GetProductRatingRequest withPathParams(GetProductRatingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetProductRatingRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetProductRatingRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetProductRatingHeaders headers;
-    public GetProductRatingRequest withHeaders(GetProductRatingHeaders headers) {
-        this.headers = headers;
+    /**
+     * Product ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public GetProductRatingRequest withProductId(String productId) {
+        this.productId = productId;
         return this;
     }
     

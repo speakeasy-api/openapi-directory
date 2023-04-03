@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClaimBillingNotesCreateRequest {
-    
-    public ClaimBillingNotesCreateQueryParams queryParams;
-    public ClaimBillingNotesCreateRequest withQueryParams(ClaimBillingNotesCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
+    public Long appointment;
+    public ClaimBillingNotesCreateRequest withAppointment(Long appointment) {
+        this.appointment = appointment;
         return this;
     }
     
-    
-    public ClaimBillingNotesCreateSecurity security;
-    public ClaimBillingNotesCreateRequest withSecurity(ClaimBillingNotesCreateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public ClaimBillingNotesCreateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsRemoveSecurityManagerTeamRequest {
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsRemoveSecurityManagerTeamRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public OrgsRemoveSecurityManagerTeamPathParams pathParams;
-    public OrgsRemoveSecurityManagerTeamRequest withPathParams(OrgsRemoveSecurityManagerTeamPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The slug of the team name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
+    public String teamSlug;
+    public OrgsRemoveSecurityManagerTeamRequest withTeamSlug(String teamSlug) {
+        this.teamSlug = teamSlug;
         return this;
     }
     

@@ -42,7 +42,7 @@ public class Quotes {
      */
     public org.openapis.openapi.models.operations.GetQuotesQuoteIdResponse getQuotesQuoteId(org.openapis.openapi.models.operations.GetQuotesQuoteIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetQuotesQuoteIdPathParams.class, baseUrl, "/quotes/{quote_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetQuotesQuoteIdRequest.class, baseUrl, "/quotes/{quote_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserToFolderAssignDeleteRequest {
+    /**
+     * The ID of the user that should be de-assign
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public String source;
+    public UserToFolderAssignDeleteRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
     
-    public UserToFolderAssignDeleteQueryParams queryParams;
-    public UserToFolderAssignDeleteRequest withQueryParams(UserToFolderAssignDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the folder
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target")
+    public String target;
+    public UserToFolderAssignDeleteRequest withTarget(String target) {
+        this.target = target;
         return this;
     }
     

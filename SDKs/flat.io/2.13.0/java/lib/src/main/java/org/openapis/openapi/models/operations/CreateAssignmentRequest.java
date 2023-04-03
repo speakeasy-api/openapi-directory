@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAssignmentRequest {
-    
-    public CreateAssignmentPathParams pathParams;
-    public CreateAssignmentRequest withPathParams(CreateAssignmentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AssignmentCreation request;
-    public CreateAssignmentRequest withRequest(org.openapis.openapi.models.shared.AssignmentCreation request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AssignmentCreation assignmentCreation;
+    public CreateAssignmentRequest withAssignmentCreation(org.openapis.openapi.models.shared.AssignmentCreation assignmentCreation) {
+        this.assignmentCreation = assignmentCreation;
         return this;
     }
     
-    
-    public CreateAssignmentSecurity security;
-    public CreateAssignmentRequest withSecurity(CreateAssignmentSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the class
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
+    public String class_;
+    public CreateAssignmentRequest withClass(String class_) {
+        this.class_ = class_;
         return this;
     }
     

@@ -5,10 +5,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.DatastreamProjectsLocationsConnectionProfilesCreateSecurity;
-import org.openapis.openapi.models.operations.DatastreamProjectsLocationsConnectionProfilesCreatePathParams;
-import org.openapis.openapi.models.operations.DatastreamProjectsLocationsConnectionProfilesCreateQueryParams;
 import org.openapis.openapi.models.operations.DatastreamProjectsLocationsConnectionProfilesCreateRequest;
 import org.openapis.openapi.models.operations.DatastreamProjectsLocationsConnectionProfilesCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.ConnectionProfileInput;
 import org.openapis.openapi.models.shared.PrivateConnectivity;
 import org.openapis.openapi.models.shared.PostgresqlProfile;
@@ -17,10 +16,7 @@ import org.openapis.openapi.models.shared.MysqlProfileInput;
 import org.openapis.openapi.models.shared.MysqlSslConfigInput;
 import org.openapis.openapi.models.shared.GcsProfile;
 import org.openapis.openapi.models.shared.ForwardSshTunnelConnectivity;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -29,97 +25,90 @@ public class Application {
                 .build();
 
             DatastreamProjectsLocationsConnectionProfilesCreateRequest req = new DatastreamProjectsLocationsConnectionProfilesCreateRequest() {{
-                security = new DatastreamProjectsLocationsConnectionProfilesCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new DatastreamProjectsLocationsConnectionProfilesCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new DatastreamProjectsLocationsConnectionProfilesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    connectionProfileId = "nulla";
-                    fields = "corrupti";
-                    force = false;
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    requestId = "deserunt";
-                    uploadType = "suscipit";
-                    uploadProtocol = "iure";
-                    validateOnly = false;
-                }};
-                request = new ConnectionProfileInput() {{
+                dollarXgafv = "2";
+                connectionProfileInput = new ConnectionProfileInput() {{
                     bigqueryProfile = new java.util.HashMap<String, Object>() {{
-                        put("debitis", "ipsa");
-                        put("delectus", "tempora");
+                        put("distinctio", "quibusdam");
+                        put("unde", "nulla");
+                        put("corrupti", "illum");
                     }};
-                    displayName = "suscipit";
+                    displayName = "vel";
                     forwardSshConnectivity = new ForwardSshTunnelConnectivity() {{
-                        hostname = "lasting-sex.net";
-                        password = "voluptatum";
-                        port = 479977;
-                        privateKey = "excepturi";
-                        username = "Glen.Walsh33";
+                        hostname = "physical-pegboard.info";
+                        password = "iure";
+                        port = 297534;
+                        privateKey = "debitis";
+                        username = "Anahi38";
                     }};
                     gcsProfile = new GcsProfile() {{
-                        bucket = "veritatis";
-                        rootPath = "deserunt";
+                        bucket = "molestiae";
+                        rootPath = "minus";
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("ipsam", "repellendus");
+                        put("voluptatum", "iusto");
+                        put("excepturi", "nisi");
+                        put("recusandae", "temporibus");
+                        put("ab", "quis");
                     }};
                     mysqlProfile = new MysqlProfileInput() {{
-                        hostname = "well-informed-screamer.com";
-                        password = "at";
-                        port = 870088;
+                        hostname = "bountiful-pension.com";
+                        password = "ipsam";
+                        port = 832620;
                         sslConfig = new MysqlSslConfigInput() {{
-                            caCertificate = "maiores";
-                            clientCertificate = "molestiae";
-                            clientKey = "quod";
+                            caCertificate = "sapiente";
+                            clientCertificate = "quo";
+                            clientKey = "odit";
                         }};
-                        username = "Presley_Koepp";
+                        username = "Sarah.Strosin79";
                     }};
                     oracleProfile = new OracleProfile() {{
                         connectionAttributes = new java.util.HashMap<String, String>() {{
+                            put("esse", "totam");
+                            put("porro", "dolorum");
                             put("dicta", "nam");
                             put("officia", "occaecati");
-                            put("fugit", "deleniti");
                         }};
-                        databaseService = "hic";
-                        hostname = "sizzling-locust.com";
-                        password = "commodi";
-                        port = 473600;
-                        username = "Diego_Dibbert45";
+                        databaseService = "fugit";
+                        hostname = "miserly-usage.net";
+                        password = "totam";
+                        port = 105907;
+                        username = "Haskell18";
                     }};
                     postgresqlProfile = new PostgresqlProfile() {{
-                        database = "ipsum";
-                        hostname = "nifty-case.com";
-                        password = "ad";
-                        port = 617636;
-                        username = "Camden61";
+                        database = "impedit";
+                        hostname = "several-increase.biz";
+                        password = "excepturi";
+                        port = 135218;
+                        username = "Aiden.Hane";
                     }};
                     privateConnectivity = new PrivateConnectivity() {{
-                        privateConnection = "laboriosam";
+                        privateConnection = "iste";
                     }};
                     staticServiceIpConnectivity = new java.util.HashMap<String, Object>() {{
-                        put("saepe", "fuga");
-                        put("in", "corporis");
-                        put("iste", "iure");
-                        put("saepe", "quidem");
+                        put("natus", "laboriosam");
                     }};
                 }};
-            }};            
+                accessToken = "hic";
+                alt = "proto";
+                callback = "fuga";
+                connectionProfileId = "in";
+                fields = "corporis";
+                force = false;
+                key = "iste";
+                oauthToken = "iure";
+                parent = "saepe";
+                prettyPrint = false;
+                quotaUser = "quidem";
+                requestId = "architecto";
+                uploadType = "ipsa";
+                uploadProtocol = "reiciendis";
+                validateOnly = false;
+            }}            
 
-            DatastreamProjectsLocationsConnectionProfilesCreateResponse res = sdk.projects.datastreamProjectsLocationsConnectionProfilesCreate(req);
+            DatastreamProjectsLocationsConnectionProfilesCreateResponse res = sdk.projects.datastreamProjectsLocationsConnectionProfilesCreate(req, new DatastreamProjectsLocationsConnectionProfilesCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response

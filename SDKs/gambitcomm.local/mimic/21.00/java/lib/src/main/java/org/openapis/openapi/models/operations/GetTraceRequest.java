@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTraceRequest {
-    
-    public GetTracePathParams pathParams;
-    public GetTraceRequest withPathParams(GetTracePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the indicator
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public GetTraceRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFromCollectionRequest {
-    
-    public DeleteFromCollectionPathParams pathParams;
-    public DeleteFromCollectionRequest withPathParams(DeleteFromCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Items to remove from the collection
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RemoveCatalogCollectionItems request;
-    public DeleteFromCollectionRequest withRequest(org.openapis.openapi.models.shared.RemoveCatalogCollectionItems request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RemoveCatalogCollectionItems removeCatalogCollectionItems;
+    public DeleteFromCollectionRequest withRemoveCatalogCollectionItems(org.openapis.openapi.models.shared.RemoveCatalogCollectionItems removeCatalogCollectionItems) {
+        this.removeCatalogCollectionItems = removeCatalogCollectionItems;
         return this;
     }
     
-    
-    public DeleteFromCollectionSecurity security;
-    public DeleteFromCollectionRequest withSecurity(DeleteFromCollectionSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the collection to remove assets from
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
+    public String collectionId;
+    public DeleteFromCollectionRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeviceUpdateRequest {
-    
-    public DeviceUpdatePathParams pathParams;
-    public DeviceUpdateRequest withPathParams(DeviceUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public DeviceUpdateTheH323SIPDeviceObject requestBody;
+    public DeviceUpdateRequest withRequestBody(DeviceUpdateTheH323SIPDeviceObject requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public DeviceUpdateTheH323SIPDeviceObject request;
-    public DeviceUpdateRequest withRequest(DeviceUpdateTheH323SIPDeviceObject request) {
-        this.request = request;
+    /**
+     * The device ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
+    public String deviceId;
+    public DeviceUpdateRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
     

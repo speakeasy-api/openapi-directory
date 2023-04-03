@@ -4,13 +4,121 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchedulesScheduleABySizeRequest {
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetSchedulesScheduleABySizeRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetSchedulesScheduleABySizeQueryParams queryParams;
-    public GetSchedulesScheduleABySizeRequest withQueryParams(GetSchedulesScheduleABySizeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
+    public String[] committeeId;
+    public GetSchedulesScheduleABySizeRequest withCommitteeId(String[] committeeId) {
+        this.committeeId = committeeId;
+        return this;
+    }
+    
+    /**
+     * Filter records to only those that were applicable to a given
+     * two-year period.The cycle begins with an odd year and is named
+     * for its ending, even year.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
+    public Integer[] cycle;
+    public GetSchedulesScheduleABySizeRequest withCycle(Integer[] cycle) {
+        this.cycle = cycle;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetSchedulesScheduleABySizeRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetSchedulesScheduleABySizeRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The total all contributions in the following ranges:
+     * ```
+     *   -0    $200 and under
+     *   -200  $200.01 - $499.99
+     *   -500  $500 - $999.99
+     *   -1000 $1000 - $1999.99
+     *   -2000 $2000 +
+     * ```
+     * Unitemized contributions are included in the `0` category.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public GetSchedulesScheduleABySizeSizeEnum[] size;
+    public GetSchedulesScheduleABySizeRequest withSize(GetSchedulesScheduleABySizeSizeEnum[] size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetSchedulesScheduleABySizeRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetSchedulesScheduleABySizeRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetSchedulesScheduleABySizeRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetSchedulesScheduleABySizeRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
         return this;
     }
     

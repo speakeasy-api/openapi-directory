@@ -33,10 +33,11 @@ public class SuperChatEvents {
     /**
      * Retrieves a list of resources, possibly filtered.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.YoutubeSuperChatEventsListResponse youtubeSuperChatEventsList(org.openapis.openapi.models.operations.YoutubeSuperChatEventsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.YoutubeSuperChatEventsListResponse youtubeSuperChatEventsList(org.openapis.openapi.models.operations.YoutubeSuperChatEventsListRequest request, org.openapis.openapi.models.operations.YoutubeSuperChatEventsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/youtube/v3/superChatEvents");
         
@@ -44,14 +45,14 @@ public class SuperChatEvents {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeSuperChatEventsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeSuperChatEventsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

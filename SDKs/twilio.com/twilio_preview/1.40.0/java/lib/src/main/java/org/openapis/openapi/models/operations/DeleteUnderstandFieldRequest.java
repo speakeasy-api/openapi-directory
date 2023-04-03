@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUnderstandFieldRequest {
-    
-    public DeleteUnderstandFieldPathParams pathParams;
-    public DeleteUnderstandFieldRequest withPathParams(DeleteUnderstandFieldPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the Assistant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public DeleteUnderstandFieldRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
-    
-    public DeleteUnderstandFieldSecurity security;
-    public DeleteUnderstandFieldRequest withSecurity(DeleteUnderstandFieldSecurity security) {
-        this.security = security;
+    /**
+     * A 34 character string that uniquely identifies this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteUnderstandFieldRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteUnderstandFieldRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique ID of the Task associated with this Field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TaskSid")
+    public String taskSid;
+    public DeleteUnderstandFieldRequest withTaskSid(String taskSid) {
+        this.taskSid = taskSid;
         return this;
     }
     

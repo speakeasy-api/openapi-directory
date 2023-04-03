@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSimilarRequest {
+    /**
+     * We'll provide information about related companies based on the site you provide. If a LinkedIn page is sent, we will try to identify the company related to the page. Ex. https://api.byautomata.io/similar?link=ibm.com
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=link")
+    public String link;
+    public GetSimilarRequest withLink(String link) {
+        this.link = link;
+        return this;
+    }
     
-    public GetSimilarQueryParams queryParams;
-    public GetSimilarRequest withQueryParams(GetSimilarQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of search results. Ex. https://api.byautomata.io/similar?link=ibm.com&amp;page=1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetSimilarRequest withPage(String page) {
+        this.page = page;
         return this;
     }
     

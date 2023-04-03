@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlayerRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public PlayerFormatEnum format;
+    public PlayerRequest withFormat(PlayerFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public PlayerPathParams pathParams;
-    public PlayerRequest withPathParams(PlayerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique FantasyData Player ID.
+     * Example:&lt;code&gt;100000576&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playerid")
+    public String playerid;
+    public PlayerRequest withPlayerid(String playerid) {
+        this.playerid = playerid;
         return this;
     }
     

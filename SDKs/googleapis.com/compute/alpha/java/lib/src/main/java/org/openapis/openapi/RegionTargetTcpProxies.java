@@ -34,25 +34,26 @@ public class RegionTargetTcpProxies {
     /**
      * Deletes the specified TargetTcpProxy resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesDeleteResponse computeRegionTargetTcpProxiesDelete(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesDeleteResponse computeRegionTargetTcpProxiesDelete(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesDeleteRequest request, org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesDeletePathParams.class, baseUrl, "/projects/{project}/regions/{region}/targetTcpProxies/{targetTcpProxy}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesDeleteRequest.class, baseUrl, "/projects/{project}/regions/{region}/targetTcpProxies/{targetTcpProxy}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class RegionTargetTcpProxies {
     /**
      * Returns the specified TargetTcpProxy resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesGetResponse computeRegionTargetTcpProxiesGet(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesGetResponse computeRegionTargetTcpProxiesGet(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesGetRequest request, org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesGetPathParams.class, baseUrl, "/projects/{project}/regions/{region}/targetTcpProxies/{targetTcpProxy}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesGetRequest.class, baseUrl, "/projects/{project}/regions/{region}/targetTcpProxies/{targetTcpProxy}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class RegionTargetTcpProxies {
     /**
      * Creates a TargetTcpProxy resource in the specified project and region using the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesInsertResponse computeRegionTargetTcpProxiesInsert(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesInsertResponse computeRegionTargetTcpProxiesInsert(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesInsertRequest request, org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesInsertPathParams.class, baseUrl, "/projects/{project}/regions/{region}/targetTcpProxies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesInsertRequest.class, baseUrl, "/projects/{project}/regions/{region}/targetTcpProxies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "targetTcpProxy", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class RegionTargetTcpProxies {
     /**
      * Retrieves a list of TargetTcpProxy resources available to the specified project in a given region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesListResponse computeRegionTargetTcpProxiesList(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesListResponse computeRegionTargetTcpProxiesList(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesListRequest request, org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesListPathParams.class, baseUrl, "/projects/{project}/regions/{region}/targetTcpProxies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesListRequest.class, baseUrl, "/projects/{project}/regions/{region}/targetTcpProxies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,27 +220,28 @@ public class RegionTargetTcpProxies {
     /**
      * Returns permissions that a caller has on the specified resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesTestIamPermissionsResponse computeRegionTargetTcpProxiesTestIamPermissions(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesTestIamPermissionsResponse computeRegionTargetTcpProxiesTestIamPermissions(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesTestIamPermissionsRequest request, org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesTestIamPermissionsPathParams.class, baseUrl, "/projects/{project}/regions/{region}/targetTcpProxies/{resource}/testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesTestIamPermissionsRequest.class, baseUrl, "/projects/{project}/regions/{region}/targetTcpProxies/{resource}/testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionTargetTcpProxiesTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

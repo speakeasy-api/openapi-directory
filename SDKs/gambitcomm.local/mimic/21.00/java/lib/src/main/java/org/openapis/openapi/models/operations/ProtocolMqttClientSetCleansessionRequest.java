@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientSetCleansessionRequest {
+    /**
+     * Agent to set MQTT config
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolMqttClientSetCleansessionRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolMqttClientSetCleansessionPathParams pathParams;
-    public ProtocolMqttClientSetCleansessionRequest withPathParams(ProtocolMqttClientSetCleansessionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Clean session
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cleanOrNot")
+    public Integer cleanOrNot;
+    public ProtocolMqttClientSetCleansessionRequest withCleanOrNot(Integer cleanOrNot) {
+        this.cleanOrNot = cleanOrNot;
         return this;
     }
     

@@ -4,27 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientVaccineRecordsUpdateRequest {
-    
-    public PatientVaccineRecordsUpdatePathParams pathParams;
-    public PatientVaccineRecordsUpdateRequest withPathParams(PatientVaccineRecordsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cvx_code")
+    public String cvxCode;
+    public PatientVaccineRecordsUpdateRequest withCvxCode(String cvxCode) {
+        this.cvxCode = cvxCode;
         return this;
     }
     
-    
-    public PatientVaccineRecordsUpdateQueryParams queryParams;
-    public PatientVaccineRecordsUpdateRequest withQueryParams(PatientVaccineRecordsUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientVaccineRecordsUpdateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatientVaccineRecordsUpdateRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PatientVaccineRecordsUpdateSecurity security;
-    public PatientVaccineRecordsUpdateRequest withSecurity(PatientVaccineRecordsUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public PatientVaccineRecordsUpdateRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public PatientVaccineRecordsUpdateRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

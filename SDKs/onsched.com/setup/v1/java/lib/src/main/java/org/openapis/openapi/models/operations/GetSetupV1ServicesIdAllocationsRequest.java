@@ -4,20 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1ServicesIdAllocationsRequest {
-    
-    public GetSetupV1ServicesIdAllocationsPathParams pathParams;
-    public GetSetupV1ServicesIdAllocationsRequest withPathParams(GetSetupV1ServicesIdAllocationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Format YYYY-MM-DD. Filter appointments on/before endDate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public OffsetDateTime endDate;
+    public GetSetupV1ServicesIdAllocationsRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
         return this;
     }
     
+    /**
+     * id of  service to list allocations for, 0 for all
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSetupV1ServicesIdAllocationsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetSetupV1ServicesIdAllocationsQueryParams queryParams;
-    public GetSetupV1ServicesIdAllocationsRequest withQueryParams(GetSetupV1ServicesIdAllocationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page limit default 20, max 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetSetupV1ServicesIdAllocationsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The id of the location. Defaults to the primary location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
+    public String locationId;
+    public GetSetupV1ServicesIdAllocationsRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * Starting row of page, default 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetSetupV1ServicesIdAllocationsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The id of the resource to filter on
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceId")
+    public String resourceId;
+    public GetSetupV1ServicesIdAllocationsRequest withResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    
+    /**
+     * Format YYYY-MM-DD. Filter appointments by on/after startDate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public OffsetDateTime startDate;
+    public GetSetupV1ServicesIdAllocationsRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
         return this;
     }
     

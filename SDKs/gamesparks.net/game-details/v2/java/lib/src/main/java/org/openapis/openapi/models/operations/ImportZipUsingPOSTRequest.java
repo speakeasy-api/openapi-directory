@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportZipUsingPOSTRequest {
-    
-    public ImportZipUsingPOSTPathParams pathParams;
-    public ImportZipUsingPOSTRequest withPathParams(ImportZipUsingPOSTPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public ImportZipUsingPOSTRequestBody requestBody;
+    public ImportZipUsingPOSTRequest withRequestBody(ImportZipUsingPOSTRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public ImportZipUsingPOSTRequestBody request;
-    public ImportZipUsingPOSTRequest withRequest(ImportZipUsingPOSTRequestBody request) {
-        this.request = request;
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public ImportZipUsingPOSTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

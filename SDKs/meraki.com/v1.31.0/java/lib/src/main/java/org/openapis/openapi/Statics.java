@@ -41,12 +41,12 @@ public class Statics {
      */
     public org.openapis.openapi.models.operations.CreateNetworkAppliancePrefixesDelegatedStaticResponse createNetworkAppliancePrefixesDelegatedStatic(org.openapis.openapi.models.operations.CreateNetworkAppliancePrefixesDelegatedStaticRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkAppliancePrefixesDelegatedStaticPathParams.class, baseUrl, "/networks/{networkId}/appliance/prefixes/delegated/statics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkAppliancePrefixesDelegatedStaticRequest.class, baseUrl, "/networks/{networkId}/appliance/prefixes/delegated/statics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -86,7 +86,7 @@ public class Statics {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkAppliancePrefixesDelegatedStaticResponse deleteNetworkAppliancePrefixesDelegatedStatic(org.openapis.openapi.models.operations.DeleteNetworkAppliancePrefixesDelegatedStaticRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkAppliancePrefixesDelegatedStaticPathParams.class, baseUrl, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkAppliancePrefixesDelegatedStaticRequest.class, baseUrl, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -120,7 +120,7 @@ public class Statics {
      */
     public org.openapis.openapi.models.operations.GetNetworkAppliancePrefixesDelegatedStaticResponse getNetworkAppliancePrefixesDelegatedStatic(org.openapis.openapi.models.operations.GetNetworkAppliancePrefixesDelegatedStaticRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkAppliancePrefixesDelegatedStaticPathParams.class, baseUrl, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkAppliancePrefixesDelegatedStaticRequest.class, baseUrl, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -160,7 +160,7 @@ public class Statics {
      */
     public org.openapis.openapi.models.operations.GetNetworkAppliancePrefixesDelegatedStaticsResponse getNetworkAppliancePrefixesDelegatedStatics(org.openapis.openapi.models.operations.GetNetworkAppliancePrefixesDelegatedStaticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkAppliancePrefixesDelegatedStaticsPathParams.class, baseUrl, "/networks/{networkId}/appliance/prefixes/delegated/statics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkAppliancePrefixesDelegatedStaticsRequest.class, baseUrl, "/networks/{networkId}/appliance/prefixes/delegated/statics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -200,12 +200,12 @@ public class Statics {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkAppliancePrefixesDelegatedStaticResponse updateNetworkAppliancePrefixesDelegatedStatic(org.openapis.openapi.models.operations.UpdateNetworkAppliancePrefixesDelegatedStaticRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkAppliancePrefixesDelegatedStaticPathParams.class, baseUrl, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkAppliancePrefixesDelegatedStaticRequest.class, baseUrl, "/networks/{networkId}/appliance/prefixes/delegated/statics/{staticDelegatedPrefixId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteListRequest {
-    
-    public GetQuoteListQueryParams queryParams;
-    public GetQuoteListRequest withQueryParams(GetQuoteListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Response is paged. This parameter controls how many is returned in the result.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetQuoteListRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetQuoteListSecurity security;
-    public GetQuoteListRequest withSecurity(GetQuoteListSecurity security) {
-        this.security = security;
+    /**
+     * Response is paged. This parameter controls where response starts the listing at
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Integer start;
+    public GetQuoteListRequest withStart(Integer start) {
+        this.start = start;
         return this;
     }
     

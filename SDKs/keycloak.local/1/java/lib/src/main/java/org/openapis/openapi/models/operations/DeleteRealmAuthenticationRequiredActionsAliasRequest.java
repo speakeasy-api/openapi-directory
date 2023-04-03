@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRealmAuthenticationRequiredActionsAliasRequest {
+    /**
+     * Alias of required action
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=alias")
+    public String alias;
+    public DeleteRealmAuthenticationRequiredActionsAliasRequest withAlias(String alias) {
+        this.alias = alias;
+        return this;
+    }
     
-    public DeleteRealmAuthenticationRequiredActionsAliasPathParams pathParams;
-    public DeleteRealmAuthenticationRequiredActionsAliasRequest withPathParams(DeleteRealmAuthenticationRequiredActionsAliasPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public DeleteRealmAuthenticationRequiredActionsAliasRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

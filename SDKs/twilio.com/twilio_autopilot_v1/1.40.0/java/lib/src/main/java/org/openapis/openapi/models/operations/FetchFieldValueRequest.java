@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchFieldValueRequest {
-    
-    public FetchFieldValuePathParams pathParams;
-    public FetchFieldValueRequest withPathParams(FetchFieldValuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the FieldType associated with the resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public FetchFieldValueRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
-    
-    public FetchFieldValueSecurity security;
-    public FetchFieldValueRequest withSecurity(FetchFieldValueSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Field Type associated with the Field Value to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FieldTypeSid")
+    public String fieldTypeSid;
+    public FetchFieldValueRequest withFieldTypeSid(String fieldTypeSid) {
+        this.fieldTypeSid = fieldTypeSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchFieldValueRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the FieldValue resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchFieldValueRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETScriptDifferencesUsingGETRequest {
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public GETScriptDifferencesUsingGETRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GETScriptDifferencesUsingGETPathParams pathParams;
-    public GETScriptDifferencesUsingGETRequest withPathParams(GETScriptDifferencesUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * snapshotId1
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=snapshotId1")
+    public String snapshotId1;
+    public GETScriptDifferencesUsingGETRequest withSnapshotId1(String snapshotId1) {
+        this.snapshotId1 = snapshotId1;
+        return this;
+    }
+    
+    /**
+     * snapshotId2
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=snapshotId2")
+    public String snapshotId2;
+    public GETScriptDifferencesUsingGETRequest withSnapshotId2(String snapshotId2) {
+        this.snapshotId2 = snapshotId2;
         return this;
     }
     

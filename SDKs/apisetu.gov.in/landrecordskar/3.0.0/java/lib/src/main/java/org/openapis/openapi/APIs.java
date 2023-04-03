@@ -34,10 +34,11 @@ public class APIs {
      * Conversion Certificate
      * API to verify Conversion Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CncerResponse cncer(org.openapis.openapi.models.operations.CncerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CncerResponse cncer(org.openapis.openapi.models.operations.CncerRequestBody request, org.openapis.openapi.models.operations.CncerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/cncer/certificate");
         
@@ -48,7 +49,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -131,10 +132,11 @@ public class APIs {
      * Mutation Report/ePattadar Passbook
      * API to verify Mutation Report/ePattadar Passbook.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MutanResponse mutan(org.openapis.openapi.models.operations.MutanRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MutanResponse mutan(org.openapis.openapi.models.operations.MutanRequestBody request, org.openapis.openapi.models.operations.MutanSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/mutan/certificate");
         
@@ -145,7 +147,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

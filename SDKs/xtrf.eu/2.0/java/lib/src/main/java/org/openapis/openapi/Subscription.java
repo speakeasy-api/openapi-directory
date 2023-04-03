@@ -118,7 +118,7 @@ public class Subscription {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubscribeResponse subscribe(org.openapis.openapi.models.operations.SubscribeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubscribeResponse subscribe(org.openapis.openapi.models.shared.SubscriptionDTO request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/subscription");
         
@@ -171,7 +171,7 @@ public class Subscription {
      */
     public org.openapis.openapi.models.operations.UnsubscribeResponse unsubscribe(org.openapis.openapi.models.operations.UnsubscribeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnsubscribePathParams.class, baseUrl, "/subscription/{subscriptionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnsubscribeRequest.class, baseUrl, "/subscription/{subscriptionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");

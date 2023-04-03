@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeletePolicyRequest {
-    
-    public GETDeletePolicyQueryParams queryParams;
-    public GETDeletePolicyRequest withQueryParams(GETDeletePolicyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeletePolicyActionEnum action;
+    public GETDeletePolicyRequest withAction(GETDeletePolicyActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the Auto Scaling group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
+    public String autoScalingGroupName;
+    public GETDeletePolicyRequest withAutoScalingGroupName(String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        return this;
+    }
     
-    public GETDeletePolicyHeaders headers;
-    public GETDeletePolicyRequest withHeaders(GETDeletePolicyHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name or Amazon Resource Name (ARN) of the policy.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyName")
+    public String policyName;
+    public GETDeletePolicyRequest withPolicyName(String policyName) {
+        this.policyName = policyName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeletePolicyVersionEnum version;
+    public GETDeletePolicyRequest withVersion(GETDeletePolicyVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeletePolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeletePolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeletePolicyRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeletePolicyRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeletePolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeletePolicyRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeletePolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

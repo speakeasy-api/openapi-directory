@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersGetRequest {
-    
-    public UsersGetPathParams pathParams;
-    public UsersGetRequest withPathParams(UsersGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public UsersGetRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public UsersGetRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
+        return this;
+    }
     
-    public UsersGetQueryParams queryParams;
-    public UsersGetRequest withQueryParams(UsersGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The object ID or principal name of the user for which to get information.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=upnOrObjectId")
+    public String upnOrObjectId;
+    public UsersGetRequest withUpnOrObjectId(String upnOrObjectId) {
+        this.upnOrObjectId = upnOrObjectId;
         return this;
     }
     

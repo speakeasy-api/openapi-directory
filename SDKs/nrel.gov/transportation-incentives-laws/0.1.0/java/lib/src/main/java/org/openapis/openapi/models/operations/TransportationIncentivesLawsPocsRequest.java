@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TransportationIncentivesLawsPocsRequest {
-    
-    public TransportationIncentivesLawsPocsPathParams pathParams;
-    public TransportationIncentivesLawsPocsRequest withPathParams(TransportationIncentivesLawsPocsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public TransportationIncentivesLawsPocsRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * Return the points of contact for the given Jurisdiction. Jurisdiction must be given as a two character state code (eg, 'CO' for Colorado). A single jurisdiction, or a comma-separate list of multiple jurisdiction, may be given.  Use the code 'US' for federal laws and the code 'DC' for Washington D.C.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jurisdiction")
+    public String jurisdiction;
+    public TransportationIncentivesLawsPocsRequest withJurisdiction(String jurisdiction) {
+        this.jurisdiction = jurisdiction;
+        return this;
+    }
     
-    public TransportationIncentivesLawsPocsQueryParams queryParams;
-    public TransportationIncentivesLawsPocsRequest withQueryParams(TransportationIncentivesLawsPocsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Response format
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=output_format")
+    public TransportationIncentivesLawsPocsOutputFormatEnum outputFormat;
+    public TransportationIncentivesLawsPocsRequest withOutputFormat(TransportationIncentivesLawsPocsOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
         return this;
     }
     

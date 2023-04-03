@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelsWithPushSubscribersRequest {
-    
-    public GetChannelsWithPushSubscribersQueryParams queryParams;
-    public GetChannelsWithPushSubscribersRequest withQueryParams(GetChannelsWithPushSubscribersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The version of the API you wish to use.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
+    public String xAblyVersion;
+    public GetChannelsWithPushSubscribersRequest withXAblyVersion(String xAblyVersion) {
+        this.xAblyVersion = xAblyVersion;
         return this;
     }
     
-    
-    public GetChannelsWithPushSubscribersHeaders headers;
-    public GetChannelsWithPushSubscribersRequest withHeaders(GetChannelsWithPushSubscribersHeaders headers) {
-        this.headers = headers;
+    /**
+     * The response format you would like
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+    public GetChannelsWithPushSubscribersRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
+        this.format = format;
         return this;
     }
     

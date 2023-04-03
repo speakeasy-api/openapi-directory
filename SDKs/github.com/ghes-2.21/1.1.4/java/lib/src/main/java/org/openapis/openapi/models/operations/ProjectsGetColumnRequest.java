@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsGetColumnRequest {
-    
-    public ProjectsGetColumnPathParams pathParams;
-    public ProjectsGetColumnRequest withPathParams(ProjectsGetColumnPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * column_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=column_id")
+    public Long columnId;
+    public ProjectsGetColumnRequest withColumnId(Long columnId) {
+        this.columnId = columnId;
         return this;
     }
     

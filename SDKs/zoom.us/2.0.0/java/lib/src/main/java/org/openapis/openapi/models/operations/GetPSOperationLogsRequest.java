@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPSOperationLogsRequest {
+    /**
+     * Filter the response by the category of the action performed. By default, the value of this field is "all" and thus, the response will include log of all operations for the defined period.&lt;br&gt;&lt;br&gt;To only include response for a specific category type, provide a value for `category_type` from this [table](http://marketplace.zoom.us/docs/phone-operation-categories ).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category_type")
+    public String categoryType;
+    public GetPSOperationLogsRequest withCategoryType(String categoryType) {
+        this.categoryType = categoryType;
+        return this;
+    }
     
-    public GetPSOperationLogsQueryParams queryParams;
-    public GetPSOperationLogsRequest withQueryParams(GetPSOperationLogsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Start date in 'yyyy-mm-dd' format. The date range defined by the "from" and "to" parameters should only be one month as the report provides only one month worth of data per API request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public String from;
+    public GetPSOperationLogsRequest withFrom(String from) {
+        this.from = from;
+        return this;
+    }
+    
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public GetPSOperationLogsRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
+    
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetPSOperationLogsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * End date in 'yyyy-mm-dd' format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public String to;
+    public GetPSOperationLogsRequest withTo(String to) {
+        this.to = to;
         return this;
     }
     

@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.PostCreateNotificationConfigurationSecurity;
-import org.openapis.openapi.models.operations.PostCreateNotificationConfigurationRequest;
 import org.openapis.openapi.models.operations.PostCreateNotificationConfigurationResponse;
 import org.openapis.openapi.models.shared.CreateNotificationConfigurationRequest;
 import org.openapis.openapi.models.shared.NotificationConfigurationDetailsSslProtocolEnum;
@@ -13,7 +12,6 @@ import org.openapis.openapi.models.shared.NotificationConfigurationDetails;
 import org.openapis.openapi.models.shared.NotificationEventConfigurationEventTypeEnum;
 import org.openapis.openapi.models.shared.NotificationEventConfigurationIncludeModeEnum;
 import org.openapis.openapi.models.shared.NotificationEventConfiguration;
-import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
 import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
@@ -22,42 +20,37 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            PostCreateNotificationConfigurationRequest req = new PostCreateNotificationConfigurationRequest() {{
-                security = new PostCreateNotificationConfigurationSecurity() {{
-                    apiKeyAuth = new SchemeAPIKeyAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
+            org.openapis.openapi.models.shared.CreateNotificationConfigurationRequest req = new CreateNotificationConfigurationRequest() {{
+                configurationDetails = new NotificationConfigurationDetails() {{
+                    active = false;
+                    apiVersion = 548814;
+                    description = "provident";
+                    eventConfigs = new org.openapis.openapi.models.shared.NotificationEventConfiguration[]{{
+                        add(new NotificationEventConfiguration() {{
+                            eventType = "SCHEDULED_REFUNDS";
+                            includeMode = "INCLUDE";
+                        }}),
+                        add(new NotificationEventConfiguration() {{
+                            eventType = "SCHEDULED_REFUNDS";
+                            includeMode = "INCLUDE";
+                        }}),
+                        add(new NotificationEventConfiguration() {{
+                            eventType = "SCHEDULED_REFUNDS";
+                            includeMode = "EXCLUDE";
+                        }}),
                     }};
+                    hmacSignatureKey = "error";
+                    notificationId = 645894;
+                    notifyPassword = "suscipit";
+                    notifyURL = "iure";
+                    notifyUsername = "magnam";
+                    sslProtocol = "TLSv13";
                 }};
-                request = new CreateNotificationConfigurationRequest() {{
-                    configurationDetails = new NotificationConfigurationDetails() {{
-                        active = false;
-                        apiVersion = 548814;
-                        description = "provident";
-                        eventConfigs = new org.openapis.openapi.models.shared.NotificationEventConfiguration[]{{
-                            add(new NotificationEventConfiguration() {{
-                                eventType = "SCHEDULED_REFUNDS";
-                                includeMode = "INCLUDE";
-                            }}),
-                            add(new NotificationEventConfiguration() {{
-                                eventType = "SCHEDULED_REFUNDS";
-                                includeMode = "INCLUDE";
-                            }}),
-                            add(new NotificationEventConfiguration() {{
-                                eventType = "SCHEDULED_REFUNDS";
-                                includeMode = "EXCLUDE";
-                            }}),
-                        }};
-                        hmacSignatureKey = "error";
-                        notificationId = 645894;
-                        notifyPassword = "suscipit";
-                        notifyURL = "iure";
-                        notifyUsername = "magnam";
-                        sslProtocol = "TLSv13";
-                    }};
-                }};
-            }};            
+            }}            
 
-            PostCreateNotificationConfigurationResponse res = sdk.general.postCreateNotificationConfiguration(req);
+            PostCreateNotificationConfigurationResponse res = sdk.general.postCreateNotificationConfiguration(req, new PostCreateNotificationConfigurationSecurity() {{
+                apiKeyAuth = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.getNotificationConfigurationResponse.isPresent()) {
                 // handle response

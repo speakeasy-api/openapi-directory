@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostVehiclesVehicleidWatchRequest {
-    
-    public PostVehiclesVehicleidWatchPathParams pathParams;
-    public PostVehiclesVehicleidWatchRequest withPathParams(PostVehiclesVehicleidWatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostVehiclesVehicleidWatchRequestBody request;
-    public PostVehiclesVehicleidWatchRequest withRequest(PostVehiclesVehicleidWatchRequestBody request) {
-        this.request = request;
+    public PostVehiclesVehicleidWatchRequestBody requestBody;
+    public PostVehiclesVehicleidWatchRequest withRequestBody(PostVehiclesVehicleidWatchRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostVehiclesVehicleidWatchSecurity security;
-    public PostVehiclesVehicleidWatchRequest withSecurity(PostVehiclesVehicleidWatchSecurity security) {
-        this.security = security;
+    /**
+     * ID of the Vehicle
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vehicleId")
+    public String vehicleId;
+    public PostVehiclesVehicleidWatchRequest withVehicleId(String vehicleId) {
+        this.vehicleId = vehicleId;
         return this;
     }
     

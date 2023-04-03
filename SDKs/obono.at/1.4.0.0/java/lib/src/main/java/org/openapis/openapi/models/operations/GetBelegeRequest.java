@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBelegeRequest {
-    
-    public GetBelegePathParams pathParams;
-    public GetBelegeRequest withPathParams(GetBelegePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Only return results that where saved after the specified date-time string (i.e., anything that `Date.parse()` can parse).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
+    public String after;
+    public GetBelegeRequest withAfter(String after) {
+        this.after = after;
         return this;
     }
     
+    /**
+     * Only return results that where saved before the specified date-time string (i.e., anything that `Date.parse()` can parse).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public String before;
+    public GetBelegeRequest withBefore(String before) {
+        this.before = before;
+        return this;
+    }
     
-    public GetBelegeQueryParams queryParams;
-    public GetBelegeRequest withQueryParams(GetBelegeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Determines the format of the `Beleg` collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetBelegeFormatEnum format;
+    public GetBelegeRequest withFormat(GetBelegeFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * Only return results that have at least a particular `Belegnummer`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gte")
+    public Long gte;
+    public GetBelegeRequest withGte(Long gte) {
+        this.gte = gte;
+        return this;
+    }
+    
+    /**
+     * Limits the number of returned results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetBelegeRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Only return results that have at most a particular `Belegnummer`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lte")
+    public Long lte;
+    public GetBelegeRequest withLte(Long lte) {
+        this.lte = lte;
+        return this;
+    }
+    
+    /**
+     * Skips the specified number of results from the result set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetBelegeRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Determines the sorting order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public GetBelegeOrderEnum order;
+    public GetBelegeRequest withOrder(GetBelegeOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * The `_uuid` of the `Registrierkasse` to retrieve the `Beleg` collection.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registrierkasseUuid")
+    public String registrierkasseUuid;
+    public GetBelegeRequest withRegistrierkasseUuid(String registrierkasseUuid) {
+        this.registrierkasseUuid = registrierkasseUuid;
         return this;
     }
     

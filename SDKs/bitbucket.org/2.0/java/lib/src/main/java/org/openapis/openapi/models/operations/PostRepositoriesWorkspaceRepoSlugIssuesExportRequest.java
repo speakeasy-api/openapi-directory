@@ -7,27 +7,37 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRepositoriesWorkspaceRepoSlugIssuesExportRequest {
-    
-    public PostRepositoriesWorkspaceRepoSlugIssuesExportPathParams pathParams;
-    public PostRepositoriesWorkspaceRepoSlugIssuesExportRequest withPathParams(PostRepositoriesWorkspaceRepoSlugIssuesExportPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The options to apply to the export. Available options include `project_key` and `project_name` which, if specified, are used as the project key and name in the exported Jira json format. Option `send_email` specifies whether an email should be sent upon export result. Option `include_attachments` specifies whether attachments are included in the export.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PostRepositoriesWorkspaceRepoSlugIssuesExportRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PostRepositoriesWorkspaceRepoSlugIssuesExportRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public PostRepositoriesWorkspaceRepoSlugIssuesExportRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public PostRepositoriesWorkspaceRepoSlugIssuesExportSecurity security;
-    public PostRepositoriesWorkspaceRepoSlugIssuesExportRequest withSecurity(PostRepositoriesWorkspaceRepoSlugIssuesExportSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public PostRepositoriesWorkspaceRepoSlugIssuesExportRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

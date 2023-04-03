@@ -7,31 +7,154 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest {
-    
-    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreatePathParams pathParams;
-    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withPathParams(ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateQueryParams queryParams;
-    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withQueryParams(ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudServicebrokerV1beta1Binding request;
-    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudServicebrokerV1beta1Binding request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudServicebrokerV1beta1Binding googleCloudServicebrokerV1beta1Binding;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withGoogleCloudServicebrokerV1beta1Binding(org.openapis.openapi.models.shared.GoogleCloudServicebrokerV1beta1Binding googleCloudServicebrokerV1beta1Binding) {
+        this.googleCloudServicebrokerV1beta1Binding = googleCloudServicebrokerV1beta1Binding;
         return this;
     }
     
+    /**
+     * See CreateServiceInstanceRequest for details.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=acceptsIncomplete")
+    public Boolean acceptsIncomplete;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withAcceptsIncomplete(Boolean acceptsIncomplete) {
+        this.acceptsIncomplete = acceptsIncomplete;
+        return this;
+    }
     
-    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateSecurity security;
-    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withSecurity(ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateSecurity security) {
-        this.security = security;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
+    
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * The id of the binding. Must be unique within GCP project.
+     * Maximum length is 64, GUID recommended.
+     * Required.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=binding_id")
+    public String bindingId;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withBindingId(String bindingId) {
+        this.bindingId = bindingId;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The GCP container.
+     * Must match
+     * `projects/[PROJECT_ID]/brokers/[BROKER_ID]/v2/service_instances/[INSTANCE_ID]`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

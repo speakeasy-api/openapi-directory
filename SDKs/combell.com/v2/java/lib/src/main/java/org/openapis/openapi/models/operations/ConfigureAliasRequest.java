@@ -7,27 +7,53 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureAliasRequest {
-    
-    public ConfigureAliasPathParams pathParams;
-    public ConfigureAliasRequest withPathParams(ConfigureAliasPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ConfigureAliasQueryParams queryParams;
-    public ConfigureAliasRequest withQueryParams(ConfigureAliasQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Contains the alias information.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateAliasRequest request;
-    public ConfigureAliasRequest withRequest(org.openapis.openapi.models.shared.UpdateAliasRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateAliasRequest updateAliasRequest;
+    public ConfigureAliasRequest withUpdateAliasRequest(org.openapis.openapi.models.shared.UpdateAliasRequest updateAliasRequest) {
+        this.updateAliasRequest = updateAliasRequest;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public ConfigureAliasRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Mail zone domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public ConfigureAliasRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=emailAddress")
+    public String emailAddressPathParameter;
+    public ConfigureAliasRequest withEmailAddressPathParameter(String emailAddressPathParameter) {
+        this.emailAddressPathParameter = emailAddressPathParameter;
+        return this;
+    }
+    
+    /**
+     * Alias e-mail address.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email_address")
+    public String emailAddressQueryParameter;
+    public ConfigureAliasRequest withEmailAddressQueryParameter(String emailAddressQueryParameter) {
+        this.emailAddressQueryParameter = emailAddressQueryParameter;
         return this;
     }
     

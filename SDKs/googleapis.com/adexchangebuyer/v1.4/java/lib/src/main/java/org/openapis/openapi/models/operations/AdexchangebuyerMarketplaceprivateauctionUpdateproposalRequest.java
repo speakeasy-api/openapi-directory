@@ -7,31 +7,90 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdexchangebuyerMarketplaceprivateauctionUpdateproposalRequest {
-    
-    public AdexchangebuyerMarketplaceprivateauctionUpdateproposalPathParams pathParams;
-    public AdexchangebuyerMarketplaceprivateauctionUpdateproposalRequest withPathParams(AdexchangebuyerMarketplaceprivateauctionUpdateproposalPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AdexchangebuyerMarketplaceprivateauctionUpdateproposalQueryParams queryParams;
-    public AdexchangebuyerMarketplaceprivateauctionUpdateproposalRequest withQueryParams(AdexchangebuyerMarketplaceprivateauctionUpdateproposalQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdatePrivateAuctionProposalRequest request;
-    public AdexchangebuyerMarketplaceprivateauctionUpdateproposalRequest withRequest(org.openapis.openapi.models.shared.UpdatePrivateAuctionProposalRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdatePrivateAuctionProposalRequest updatePrivateAuctionProposalRequest;
+    public AdexchangebuyerMarketplaceprivateauctionUpdateproposalRequest withUpdatePrivateAuctionProposalRequest(org.openapis.openapi.models.shared.UpdatePrivateAuctionProposalRequest updatePrivateAuctionProposalRequest) {
+        this.updatePrivateAuctionProposalRequest = updatePrivateAuctionProposalRequest;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AdexchangebuyerMarketplaceprivateauctionUpdateproposalRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public AdexchangebuyerMarketplaceprivateauctionUpdateproposalSecurity security;
-    public AdexchangebuyerMarketplaceprivateauctionUpdateproposalRequest withSecurity(AdexchangebuyerMarketplaceprivateauctionUpdateproposalSecurity security) {
-        this.security = security;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AdexchangebuyerMarketplaceprivateauctionUpdateproposalRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AdexchangebuyerMarketplaceprivateauctionUpdateproposalRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AdexchangebuyerMarketplaceprivateauctionUpdateproposalRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AdexchangebuyerMarketplaceprivateauctionUpdateproposalRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * The private auction id to be updated.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=privateAuctionId")
+    public String privateAuctionId;
+    public AdexchangebuyerMarketplaceprivateauctionUpdateproposalRequest withPrivateAuctionId(String privateAuctionId) {
+        this.privateAuctionId = privateAuctionId;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AdexchangebuyerMarketplaceprivateauctionUpdateproposalRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AdexchangebuyerMarketplaceprivateauctionUpdateproposalRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

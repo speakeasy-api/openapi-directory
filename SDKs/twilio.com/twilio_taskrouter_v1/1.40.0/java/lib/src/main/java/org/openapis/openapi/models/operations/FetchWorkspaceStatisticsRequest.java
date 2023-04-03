@@ -4,34 +4,67 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchWorkspaceStatisticsRequest {
-    
-    public FetchWorkspaceStatisticsPathParams pathParams;
-    public FetchWorkspaceStatisticsRequest withPathParams(FetchWorkspaceStatisticsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Only calculate statistics from this date and time and earlier, specified in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date-time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndDate")
+    public OffsetDateTime endDate;
+    public FetchWorkspaceStatisticsRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
         return this;
     }
     
-    
-    public FetchWorkspaceStatisticsQueryParams queryParams;
-    public FetchWorkspaceStatisticsRequest withQueryParams(FetchWorkspaceStatisticsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only calculate statistics since this many minutes in the past. The default 15 minutes. This is helpful for displaying statistics for the last 15 minutes, 240 minutes (4 hours), and 480 minutes (8 hours) to see trends.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Minutes")
+    public Long minutes;
+    public FetchWorkspaceStatisticsRequest withMinutes(Long minutes) {
+        this.minutes = minutes;
         return this;
     }
     
-    
-    public FetchWorkspaceStatisticsSecurity security;
-    public FetchWorkspaceStatisticsRequest withSecurity(FetchWorkspaceStatisticsSecurity security) {
-        this.security = security;
+    /**
+     * A comma separated list of values that describes the thresholds, in seconds, to calculate statistics on. For each threshold specified, the number of Tasks canceled and reservations accepted above and below the specified thresholds in seconds are computed. For example, `5,30` would show splits of Tasks that were canceled or accepted before and after 5 seconds and before and after 30 seconds. This can be used to show short abandoned Tasks or Tasks that failed to meet an SLA.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SplitByWaitTime")
+    public String splitByWaitTime;
+    public FetchWorkspaceStatisticsRequest withSplitByWaitTime(String splitByWaitTime) {
+        this.splitByWaitTime = splitByWaitTime;
         return this;
     }
     
+    /**
+     * Only calculate statistics from this date and time and later, specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartDate")
+    public OffsetDateTime startDate;
+    public FetchWorkspaceStatisticsRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
+        return this;
+    }
     
-    public String serverURL;
-    public FetchWorkspaceStatisticsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Only calculate statistics on this TaskChannel. Can be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or `default`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TaskChannel")
+    public String taskChannel;
+    public FetchWorkspaceStatisticsRequest withTaskChannel(String taskChannel) {
+        this.taskChannel = taskChannel;
+        return this;
+    }
+    
+    /**
+     * The SID of the Workspace to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public FetchWorkspaceStatisticsRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

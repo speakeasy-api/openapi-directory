@@ -4,20 +4,275 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListOrdersRequest {
-    
-    public ListOrdersQueryParams queryParams;
-    public ListOrdersRequest withQueryParams(ListOrdersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ListOrdersRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ListOrdersRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public ListOrdersHeaders headers;
-    public ListOrdersRequest withHeaders(ListOrdersHeaders headers) {
-        this.headers = headers;
+    /**
+     * You can filter orders by rates and benefits (promotions).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_RnB")
+    public String fRnB;
+    public ListOrdersRequest withFRnB(String fRnB) {
+        this.fRnB = fRnB;
+        return this;
+    }
+    
+    /**
+     * You can filter orders by using a Universal Transverse Mercator (UTM) source.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_UtmSource")
+    public String fUtmSource;
+    public ListOrdersRequest withFUtmSource(String fUtmSource) {
+        this.fUtmSource = fUtmSource;
+        return this;
+    }
+    
+    /**
+     * You can filter orders by affiliate ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_affiliateId")
+    public String fAffiliateId;
+    public ListOrdersRequest withFAffiliateId(String fAffiliateId) {
+        this.fAffiliateId = fAffiliateId;
+        return this;
+    }
+    
+    /**
+     * You can filter orders by creation date by concatenating the sufix `authorizedDate:` with the range date in Timestamp format. For example: 
+     * - 1 Day: `authorizedDate:[2022-01-01T02:00:00.000Z TO 2022-01-02T01:59:59.999Z]`
+     * - 1 Month: `authorizedDate:[2022-01-01T02:00:00.000Z TO 2022-02-01T01:59:59.999Z]` 
+     * - 1 Year: `authorizedDate:[2022-01-01T02:00:00.000Z TO 2022-01-01T01:59:59.999Z]`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_authorizedDate")
+    public String fAuthorizedDate;
+    public ListOrdersRequest withFAuthorizedDate(String fAuthorizedDate) {
+        this.fAuthorizedDate = fAuthorizedDate;
+        return this;
+    }
+    
+    /**
+     * You can filter orders by using a Call Center Operator's identification.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_callCenterOperatorName")
+    public String fCallCenterOperatorName;
+    public ListOrdersRequest withFCallCenterOperatorName(String fCallCenterOperatorName) {
+        this.fCallCenterOperatorName = fCallCenterOperatorName;
+        return this;
+    }
+    
+    /**
+     * Concatened value sufix `{{creationDate}}` and range date in Timestamp format. To use the `utc` query parameter, to filter orders by time zone, you must also fill the `f_creationDate` date parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_creationDate")
+    public String fCreationDate;
+    public ListOrdersRequest withFCreationDate(String fCreationDate) {
+        this.fCreationDate = fCreationDate;
+        return this;
+    }
+    
+    /**
+     * Filters list to return only orders with non `null` values for the `invoiceInput` field.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_hasInputInvoice")
+    public Boolean fHasInputInvoice;
+    public ListOrdersRequest withFHasInputInvoice(Boolean fHasInputInvoice) {
+        this.fHasInputInvoice = fHasInputInvoice;
+        return this;
+    }
+    
+    /**
+     * You can filter orders by invoiced date by concatenating the sufix `invoicedDate:` with the range date in Timestamp format. For example: 
+     * - 1 Day: `invoicedDate:[2022-01-01T02:00:00.000Z TO 2022-01-02T01:59:59.999Z]`
+     * - 1 Month: `invoicedDate:[2022-01-01T02:00:00.000Z TO 2022-02-01T01:59:59.999Z]` 
+     * - 1 Year: `invoicedDate:[2022-01-01T02:00:00.000Z TO 2022-01-01T01:59:59.999Z]`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_invoicedDate")
+    public String fInvoicedDate;
+    public ListOrdersRequest withFInvoicedDate(String fInvoicedDate) {
+        this.fInvoicedDate = fInvoicedDate;
+        return this;
+    }
+    
+    /**
+     * When set as `true`, this parameter filters orders made via [inStore](https://help.vtex.com/en/tracks/what-is-instore--zav76TFEZlAjnyBVL5tRc), and when set as `false`, it filters orders that were not made via inStore.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_isInstore")
+    public Boolean fIsInstore;
+    public ListOrdersRequest withFIsInstore(Boolean fIsInstore) {
+        this.fIsInstore = fIsInstore;
+        return this;
+    }
+    
+    /**
+     * You can filter orders by payment type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_paymentNames")
+    public String fPaymentNames;
+    public ListOrdersRequest withFPaymentNames(String fPaymentNames) {
+        this.fPaymentNames = fPaymentNames;
+        return this;
+    }
+    
+    /**
+     * You can filter orders by sales channel's ([or trade policy](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV)) name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_salesChannel")
+    public String fSalesChannel;
+    public ListOrdersRequest withFSalesChannel(String fSalesChannel) {
+        this.fSalesChannel = fSalesChannel;
+        return this;
+    }
+    
+    /**
+     * You can filter orders by using a seller's name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_sellerNames")
+    public String fSellerNames;
+    public ListOrdersRequest withFSellerNames(String fSellerNames) {
+        this.fSellerNames = fSellerNames;
+        return this;
+    }
+    
+    /**
+     * You can filter orders by shipping estimate time in days by concatenating the desired number of days with the sufix `.days`. For example: 
+     * - Next 7 days: `7.days` 
+     * - Tomorrow: `1.days` 
+     * - Today: `0.days` 
+     * - Late: `-1.days`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_shippingEstimate")
+    public String fShippingEstimate;
+    public ListOrdersRequest withFShippingEstimate(String fShippingEstimate) {
+        this.fShippingEstimate = fShippingEstimate;
+        return this;
+    }
+    
+    /**
+     * You can filter orders by the following [order status](https://help.vtex.com/en/tutorial/order-flow-and-status--tutorials_196): 
+     * - `waiting-for-sellers-confirmation` 
+     * - `payment-pending` 
+     * - `payment-approved` 
+     * - `ready-for-handling` 
+     * - `handling` 
+     * - `invoiced` 
+     * - `canceled`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_status")
+    public String fStatus;
+    public ListOrdersRequest withFStatus(String fStatus) {
+        this.fStatus = fStatus;
+        return this;
+    }
+    
+    /**
+     * When set as `true`, you retrieve [incomplete orders](https://help.vtex.com/en/tutorial/understanding-incomplete-orders), when set as `false`, you retrieve orders that are not incomplete.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=incompleteOrders")
+    public Boolean incompleteOrders;
+    public ListOrdersRequest withIncompleteOrders(Boolean incompleteOrders) {
+        this.incompleteOrders = incompleteOrders;
+        return this;
+    }
+    
+    /**
+     * You can retrieve orders lists filtering by an `OrderField` combined with an `OrderType`. To do so, you have to concatenate them: `orderBy={{OrderField}},{{OrderType}}`. 
+     * - `OrderField` values accepted: `creationDate`, `orderId`, `items`, `totalValue` and `origin`. 
+     * - `OrderType` values accepted: `asc` and `desc`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
+    public String orderBy;
+    public ListOrdersRequest withOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    /**
+     * Define the number of pages you wish to retrieve, restricted to the limit of 30 pages.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public ListOrdersRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Quantity of orders for each page, the default value is 15 and it goes up to 100 orders per page. Be aware that the limit of retrieval ofthis endpoint is 30 pages.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public ListOrdersRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * This parameter filters using Fulltext and accepts the values below. Be aware that the `+` caracter is not allowed in Fulltext Search. 
+     * - Order Id 
+     * - Client email 
+     * - Client document 
+     * - Client name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public ListOrdersRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * You can filter orders by sales channel's ([or trade policy](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV)) ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=salesChannelId")
+    public String salesChannelId;
+    public ListOrdersRequest withSalesChannelId(String salesChannelId) {
+        this.salesChannelId = salesChannelId;
+        return this;
+    }
+    
+    /**
+     * You can search orders by using one of the following criterias: 
+     * - SKU ID - `sku_Ids&amp;sku_Ids` 
+     * - Gift List ID - `listId&amp;listId` 
+     * - Transaction ID (TID) - `tid&amp;tid` 
+     * - PCI Connector's Transaction ID (TID) - `pci_tid&amp;pci_tid` 
+     * - Payment ID (PID) - `paymentId&amp;paymentId` 
+     * - Connector's NSU - `nsu&amp;nsu`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchField")
+    public String searchField;
+    public ListOrdersRequest withSearchField(String searchField) {
+        this.searchField = searchField;
+        return this;
+    }
+    
+    /**
+     * Converts orders' time zone to the Universal Time Coordinated (UTC) format and shows the amount of orders set for that UTC, up to the limit of 30 pages. For it to work properly, you have to associate it with the `f_creationDate` parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=utc")
+    public Integer utc;
+    public ListOrdersRequest withUtc(Integer utc) {
+        this.utc = utc;
         return this;
     }
     

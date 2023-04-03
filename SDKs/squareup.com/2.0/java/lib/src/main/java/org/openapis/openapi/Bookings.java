@@ -35,24 +35,25 @@ public class Bookings {
      * CancelBooking
      * Cancels an existing booking.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CancelBookingResponse cancelBooking(org.openapis.openapi.models.operations.CancelBookingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CancelBookingResponse cancelBooking(org.openapis.openapi.models.operations.CancelBookingRequest request, org.openapis.openapi.models.operations.CancelBookingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelBookingPathParams.class, baseUrl, "/v2/bookings/{booking_id}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelBookingRequest.class, baseUrl, "/v2/bookings/{booking_id}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "cancelBookingRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,10 +81,11 @@ public class Bookings {
      * CreateBooking
      * Creates a booking.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateBookingResponse createBooking(org.openapis.openapi.models.operations.CreateBookingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateBookingResponse createBooking(org.openapis.openapi.models.shared.CreateBookingRequest request, org.openapis.openapi.models.operations.CreateBookingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/bookings");
         
@@ -97,7 +99,7 @@ public class Bookings {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -125,10 +127,11 @@ public class Bookings {
      * ListTeamMemberBookingProfiles
      * Lists booking profiles for team members.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListTeamMemberBookingProfilesResponse listTeamMemberBookingProfiles(org.openapis.openapi.models.operations.ListTeamMemberBookingProfilesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListTeamMemberBookingProfilesResponse listTeamMemberBookingProfiles(org.openapis.openapi.models.operations.ListTeamMemberBookingProfilesRequest request, org.openapis.openapi.models.operations.ListTeamMemberBookingProfilesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/bookings/team-member-booking-profiles");
         
@@ -136,14 +139,14 @@ public class Bookings {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListTeamMemberBookingProfilesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListTeamMemberBookingProfilesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,19 +174,20 @@ public class Bookings {
      * RetrieveBooking
      * Retrieves a booking.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveBookingResponse retrieveBooking(org.openapis.openapi.models.operations.RetrieveBookingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveBookingResponse retrieveBooking(org.openapis.openapi.models.operations.RetrieveBookingRequest request, org.openapis.openapi.models.operations.RetrieveBookingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveBookingPathParams.class, baseUrl, "/v2/bookings/{booking_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveBookingRequest.class, baseUrl, "/v2/bookings/{booking_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -210,11 +214,10 @@ public class Bookings {
     /**
      * RetrieveBusinessBookingProfile
      * Retrieves a seller's booking profile.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveBusinessBookingProfileResponse retrieveBusinessBookingProfile(org.openapis.openapi.models.operations.RetrieveBusinessBookingProfileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveBusinessBookingProfileResponse retrieveBusinessBookingProfile() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/bookings/business-booking-profile");
         
@@ -223,8 +226,7 @@ public class Bookings {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -251,19 +253,20 @@ public class Bookings {
      * RetrieveTeamMemberBookingProfile
      * Retrieves a team member's booking profile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveTeamMemberBookingProfileResponse retrieveTeamMemberBookingProfile(org.openapis.openapi.models.operations.RetrieveTeamMemberBookingProfileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveTeamMemberBookingProfileResponse retrieveTeamMemberBookingProfile(org.openapis.openapi.models.operations.RetrieveTeamMemberBookingProfileRequest request, org.openapis.openapi.models.operations.RetrieveTeamMemberBookingProfileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveTeamMemberBookingProfilePathParams.class, baseUrl, "/v2/bookings/team-member-booking-profiles/{team_member_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveTeamMemberBookingProfileRequest.class, baseUrl, "/v2/bookings/team-member-booking-profiles/{team_member_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -291,10 +294,11 @@ public class Bookings {
      * SearchAvailability
      * Searches for availabilities for booking.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchAvailabilityResponse searchAvailability(org.openapis.openapi.models.operations.SearchAvailabilityRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchAvailabilityResponse searchAvailability(org.openapis.openapi.models.shared.SearchAvailabilityRequest request, org.openapis.openapi.models.operations.SearchAvailabilitySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/bookings/availability/search");
         
@@ -308,7 +312,7 @@ public class Bookings {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -336,24 +340,25 @@ public class Bookings {
      * UpdateBooking
      * Updates a booking.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateBookingResponse updateBooking(org.openapis.openapi.models.operations.UpdateBookingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateBookingResponse updateBooking(org.openapis.openapi.models.operations.UpdateBookingRequest request, org.openapis.openapi.models.operations.UpdateBookingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateBookingPathParams.class, baseUrl, "/v2/bookings/{booking_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateBookingRequest.class, baseUrl, "/v2/bookings/{booking_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateBookingRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

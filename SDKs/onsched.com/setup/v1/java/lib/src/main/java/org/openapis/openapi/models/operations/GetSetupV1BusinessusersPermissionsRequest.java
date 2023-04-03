@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1BusinessusersPermissionsRequest {
+    /**
+     * Page limit default 20, max 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetSetupV1BusinessusersPermissionsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetSetupV1BusinessusersPermissionsQueryParams queryParams;
-    public GetSetupV1BusinessusersPermissionsRequest withQueryParams(GetSetupV1BusinessusersPermissionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Starting row of page, default 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetSetupV1BusinessusersPermissionsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Filter permissions by role
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
+    public String role;
+    public GetSetupV1BusinessusersPermissionsRequest withRole(String role) {
+        this.role = role;
         return this;
     }
     

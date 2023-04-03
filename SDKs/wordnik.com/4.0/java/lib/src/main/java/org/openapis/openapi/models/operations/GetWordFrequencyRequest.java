@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWordFrequencyRequest {
-    
-    public GetWordFrequencyPathParams pathParams;
-    public GetWordFrequencyRequest withPathParams(GetWordFrequencyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Ending Year
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endYear")
+    public Integer endYear;
+    public GetWordFrequencyRequest withEndYear(Integer endYear) {
+        this.endYear = endYear;
         return this;
     }
     
+    /**
+     * Starting Year
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startYear")
+    public Integer startYear;
+    public GetWordFrequencyRequest withStartYear(Integer startYear) {
+        this.startYear = startYear;
+        return this;
+    }
     
-    public GetWordFrequencyQueryParams queryParams;
-    public GetWordFrequencyRequest withQueryParams(GetWordFrequencyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If true will try to return the correct word root ('cats' -&gt; 'cat'). If false returns exactly what was requested.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useCanonical")
+    public GetWordFrequencyUseCanonicalEnum useCanonical;
+    public GetWordFrequencyRequest withUseCanonical(GetWordFrequencyUseCanonicalEnum useCanonical) {
+        this.useCanonical = useCanonical;
+        return this;
+    }
+    
+    /**
+     * Word to return
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=word")
+    public String word;
+    public GetWordFrequencyRequest withWord(String word) {
+        this.word = word;
         return this;
     }
     

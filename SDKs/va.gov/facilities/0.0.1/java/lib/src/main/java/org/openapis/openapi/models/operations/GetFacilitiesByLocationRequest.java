@@ -4,20 +4,126 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFacilitiesByLocationRequest {
-    
-    public GetFacilitiesByLocationQueryParams queryParams;
-    public GetFacilitiesByLocationRequest withQueryParams(GetFacilitiesByLocationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Bounding box (longitude, latitude, longitude, latitude) within which facilities will be returned. (WGS84 coordinate reference system)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bbox[]")
+    public Float[] bbox;
+    public GetFacilitiesByLocationRequest withBbox(Float[] bbox) {
+        this.bbox = bbox;
         return this;
     }
     
+    /**
+     * List of comma-separated facility IDs to retrieve in a single request. Can be combined with lat and long parameters to retrieve facilities sorted by distance from a location.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
+    public String[] ids;
+    public GetFacilitiesByLocationRequest withIds(String[] ids) {
+        this.ids = ids;
+        return this;
+    }
     
-    public GetFacilitiesByLocationSecurity security;
-    public GetFacilitiesByLocationRequest withSecurity(GetFacilitiesByLocationSecurity security) {
-        this.security = security;
+    /**
+     * Latitude of point to search for facilities, in WGS84 coordinate reference system.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
+    public Float lat;
+    public GetFacilitiesByLocationRequest withLat(Float lat) {
+        this.lat = lat;
+        return this;
+    }
+    
+    /**
+     * Longitude of point to search for facilities, in WGS84 coordinate reference system.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=long")
+    public Float long_;
+    public GetFacilitiesByLocationRequest withLong(Float long_) {
+        this.long_ = long_;
+        return this;
+    }
+    
+    /**
+     * Optional facility mobile search filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mobile")
+    public Boolean mobile;
+    public GetFacilitiesByLocationRequest withMobile(Boolean mobile) {
+        this.mobile = mobile;
+        return this;
+    }
+    
+    /**
+     * Page of results to return per paginated response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetFacilitiesByLocationRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per paginated response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetFacilitiesByLocationRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Optional facility service search filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=services[]")
+    public String[] services;
+    public GetFacilitiesByLocationRequest withServices(String[] services) {
+        this.services = services;
+        return this;
+    }
+    
+    /**
+     * State in which to search for facilities. Except in rare cases, this is two characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public GetFacilitiesByLocationRequest withState(String state) {
+        this.state = state;
+        return this;
+    }
+    
+    /**
+     * Optional facility type search filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GetFacilitiesByLocationTypeEnum type;
+    public GetFacilitiesByLocationRequest withType(GetFacilitiesByLocationTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * VISN search of matching facilities.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=visn")
+    public Double visn;
+    public GetFacilitiesByLocationRequest withVisn(Double visn) {
+        this.visn = visn;
+        return this;
+    }
+    
+    /**
+     * Zip code to search for facilities. More detailed zip codes can be passed in, but only the first five digits are used to determine facilities to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
+    public String zip;
+    public GetFacilitiesByLocationRequest withZip(String zip) {
+        this.zip = zip;
         return this;
     }
     

@@ -4,27 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAttachedPoliciesRequest {
-    
-    public ListAttachedPoliciesPathParams pathParams;
-    public ListAttachedPoliciesRequest withPathParams(ListAttachedPoliciesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListAttachedPoliciesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public ListAttachedPoliciesQueryParams queryParams;
-    public ListAttachedPoliciesRequest withQueryParams(ListAttachedPoliciesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListAttachedPoliciesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListAttachedPoliciesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public ListAttachedPoliciesHeaders headers;
-    public ListAttachedPoliciesRequest withHeaders(ListAttachedPoliciesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListAttachedPoliciesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListAttachedPoliciesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListAttachedPoliciesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListAttachedPoliciesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The token to retrieve the next set of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=marker")
+    public String marker;
+    public ListAttachedPoliciesRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to be returned per request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public ListAttachedPoliciesRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * When true, recursively list attached policies.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
+    public Boolean recursive;
+    public ListAttachedPoliciesRequest withRecursive(Boolean recursive) {
+        this.recursive = recursive;
+        return this;
+    }
+    
+    /**
+     * The group or principal for which the policies will be listed. Valid principals are CertificateArn (arn:aws:iot:&lt;i&gt;region&lt;/i&gt;:&lt;i&gt;accountId&lt;/i&gt;:cert/&lt;i&gt;certificateId&lt;/i&gt;), thingGroupArn (arn:aws:iot:&lt;i&gt;region&lt;/i&gt;:&lt;i&gt;accountId&lt;/i&gt;:thinggroup/&lt;i&gt;groupName&lt;/i&gt;) and CognitoId (&lt;i&gt;region&lt;/i&gt;:&lt;i&gt;id&lt;/i&gt;).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target")
+    public String target;
+    public ListAttachedPoliciesRequest withTarget(String target) {
+        this.target = target;
         return this;
     }
     

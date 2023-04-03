@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AcknowledgeJobXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AcknowledgeJobHeaders;
 import org.openapis.openapi.models.operations.AcknowledgeJobRequest;
 import org.openapis.openapi.models.operations.AcknowledgeJobResponse;
 import org.openapis.openapi.models.shared.AcknowledgeJobInput;
@@ -28,28 +27,24 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AcknowledgeJobRequest req = new AcknowledgeJobRequest() {{
-                headers = new AcknowledgeJobHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "CodePipeline_20150709.AcknowledgeJob";
+                acknowledgeJobInput = new AcknowledgeJobInput() {{
+                    jobId = "corrupti";
+                    nonce = "provident";
                 }};
-                request = new AcknowledgeJobInput() {{
-                    jobId = "illum";
-                    nonce = "vel";
-                }};
-            }};            
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+                xAmzTarget = "CodePipeline_20150709.AcknowledgeJob";
+            }}            
 
             AcknowledgeJobResponse res = sdk.acknowledgeJob(req);
 
@@ -63,7 +58,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

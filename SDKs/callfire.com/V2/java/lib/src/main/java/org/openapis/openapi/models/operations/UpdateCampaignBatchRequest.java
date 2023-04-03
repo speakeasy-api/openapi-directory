@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCampaignBatchRequest {
-    
-    public UpdateCampaignBatchPathParams pathParams;
-    public UpdateCampaignBatchRequest withPathParams(UpdateCampaignBatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A batch instance
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BatchInput request;
-    public UpdateCampaignBatchRequest withRequest(org.openapis.openapi.models.shared.BatchInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BatchInput batchInput;
+    public UpdateCampaignBatchRequest withBatchInput(org.openapis.openapi.models.shared.BatchInput batchInput) {
+        this.batchInput = batchInput;
         return this;
     }
     
-    
-    public UpdateCampaignBatchSecurity security;
-    public UpdateCampaignBatchRequest withSecurity(UpdateCampaignBatchSecurity security) {
-        this.security = security;
+    /**
+     * An id of a batch to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UpdateCampaignBatchRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

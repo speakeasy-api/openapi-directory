@@ -34,27 +34,28 @@ public class Products {
     /**
      *  Approves the specified product and the relevant app permissions, if any. The maximum number of products that you can approve per enterprise customer is 1,000. To learn how to use managed Google Play to design and create a store layout to display approved products to your users, see Store Layout Design. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations. 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseProductsApproveResponse androidenterpriseProductsApprove(org.openapis.openapi.models.operations.AndroidenterpriseProductsApproveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseProductsApproveResponse androidenterpriseProductsApprove(org.openapis.openapi.models.operations.AndroidenterpriseProductsApproveRequest request, org.openapis.openapi.models.operations.AndroidenterpriseProductsApproveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseProductsApprovePathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/approve", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseProductsApproveRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/approve", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "productsApproveRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseProductsApproveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseProductsApproveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -75,25 +76,26 @@ public class Products {
     /**
      * Generates a URL that can be rendered in an iframe to display the permissions (if any) of a product. An enterprise admin must view these permissions and accept them on behalf of their organization in order to approve that product. Admins should accept the displayed permissions by interacting with a separate UI element in the EMM console, which in turn should trigger the use of this URL as the approvalUrlInfo.approvalUrl property in a Products.approve call to approve the product. This URL can only be used to display permissions for up to 1 day. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations. 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseProductsGenerateApprovalUrlResponse androidenterpriseProductsGenerateApprovalUrl(org.openapis.openapi.models.operations.AndroidenterpriseProductsGenerateApprovalUrlRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseProductsGenerateApprovalUrlResponse androidenterpriseProductsGenerateApprovalUrl(org.openapis.openapi.models.operations.AndroidenterpriseProductsGenerateApprovalUrlRequest request, org.openapis.openapi.models.operations.AndroidenterpriseProductsGenerateApprovalUrlSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseProductsGenerateApprovalUrlPathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/generateApprovalUrl", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseProductsGenerateApprovalUrlRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/generateApprovalUrl", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseProductsGenerateApprovalUrlQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseProductsGenerateApprovalUrlRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -120,25 +122,26 @@ public class Products {
     /**
      * Retrieves details of a product for display to an enterprise admin.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseProductsGetResponse androidenterpriseProductsGet(org.openapis.openapi.models.operations.AndroidenterpriseProductsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseProductsGetResponse androidenterpriseProductsGet(org.openapis.openapi.models.operations.AndroidenterpriseProductsGetRequest request, org.openapis.openapi.models.operations.AndroidenterpriseProductsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseProductsGetPathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseProductsGetRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseProductsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseProductsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,25 +168,26 @@ public class Products {
     /**
      * Retrieves the schema that defines the configurable properties for this product. All products have a schema, but this schema may be empty if no managed configurations have been defined. This schema can be used to populate a UI that allows an admin to configure the product. To apply a managed configuration based on the schema obtained using this API, see Managed Configurations through Play.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseProductsGetAppRestrictionsSchemaResponse androidenterpriseProductsGetAppRestrictionsSchema(org.openapis.openapi.models.operations.AndroidenterpriseProductsGetAppRestrictionsSchemaRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseProductsGetAppRestrictionsSchemaResponse androidenterpriseProductsGetAppRestrictionsSchema(org.openapis.openapi.models.operations.AndroidenterpriseProductsGetAppRestrictionsSchemaRequest request, org.openapis.openapi.models.operations.AndroidenterpriseProductsGetAppRestrictionsSchemaSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseProductsGetAppRestrictionsSchemaPathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/appRestrictionsSchema", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseProductsGetAppRestrictionsSchemaRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/appRestrictionsSchema", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseProductsGetAppRestrictionsSchemaQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseProductsGetAppRestrictionsSchemaRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -210,25 +214,26 @@ public class Products {
     /**
      * Retrieves the Android app permissions required by this app.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseProductsGetPermissionsResponse androidenterpriseProductsGetPermissions(org.openapis.openapi.models.operations.AndroidenterpriseProductsGetPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseProductsGetPermissionsResponse androidenterpriseProductsGetPermissions(org.openapis.openapi.models.operations.AndroidenterpriseProductsGetPermissionsRequest request, org.openapis.openapi.models.operations.AndroidenterpriseProductsGetPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseProductsGetPermissionsPathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseProductsGetPermissionsRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseProductsGetPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseProductsGetPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -255,25 +260,26 @@ public class Products {
     /**
      * Finds approved products that match a query, or all approved products if there is no query. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations. 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseProductsListResponse androidenterpriseProductsList(org.openapis.openapi.models.operations.AndroidenterpriseProductsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseProductsListResponse androidenterpriseProductsList(org.openapis.openapi.models.operations.AndroidenterpriseProductsListRequest request, org.openapis.openapi.models.operations.AndroidenterpriseProductsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseProductsListPathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/products", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseProductsListRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/products", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseProductsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseProductsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -300,25 +306,26 @@ public class Products {
     /**
      * Unapproves the specified product (and the relevant app permissions, if any) **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseProductsUnapproveResponse androidenterpriseProductsUnapprove(org.openapis.openapi.models.operations.AndroidenterpriseProductsUnapproveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseProductsUnapproveResponse androidenterpriseProductsUnapprove(org.openapis.openapi.models.operations.AndroidenterpriseProductsUnapproveRequest request, org.openapis.openapi.models.operations.AndroidenterpriseProductsUnapproveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseProductsUnapprovePathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/unapprove", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseProductsUnapproveRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/products/{productId}/unapprove", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseProductsUnapproveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseProductsUnapproveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

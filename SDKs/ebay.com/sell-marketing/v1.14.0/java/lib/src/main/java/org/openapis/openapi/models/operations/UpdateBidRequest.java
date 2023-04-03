@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBidRequest {
-    
-    public UpdateBidPathParams pathParams;
-    public UpdateBidRequest withPathParams(UpdateBidPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * This type defines the fields for the &lt;b&gt;updateBid&lt;/b&gt; request.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateBidPercentageRequest request;
-    public UpdateBidRequest withRequest(org.openapis.openapi.models.shared.UpdateBidPercentageRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateBidPercentageRequest updateBidPercentageRequest;
+    public UpdateBidRequest withUpdateBidPercentageRequest(org.openapis.openapi.models.shared.UpdateBidPercentageRequest updateBidPercentageRequest) {
+        this.updateBidPercentageRequest = updateBidPercentageRequest;
         return this;
     }
     
+    /**
+     * A unique eBay-assigned ID for an ad that's generated when an ad is created.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ad_id")
+    public String adId;
+    public UpdateBidRequest withAdId(String adId) {
+        this.adId = adId;
+        return this;
+    }
     
-    public UpdateBidSecurity security;
-    public UpdateBidRequest withSecurity(UpdateBidSecurity security) {
-        this.security = security;
+    /**
+     * A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; You can retrieve the campaign IDs for a specified seller using the &lt;a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns"&gt;getCampaigns&lt;/a&gt; method.&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaign_id")
+    public String campaignId;
+    public UpdateBidRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
         return this;
     }
     

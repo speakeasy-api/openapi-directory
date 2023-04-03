@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSimilarDocumentsRequest {
-    
-    public GetSimilarDocumentsPathParams pathParams;
-    public GetSimilarDocumentsRequest withPathParams(GetSimilarDocumentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Document ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public Long documentId;
+    public GetSimilarDocumentsRequest withDocumentId(Long documentId) {
+        this.documentId = documentId;
         return this;
     }
     
+    /**
+     * Determines the number of similar documents to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetSimilarDocumentsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public GetSimilarDocumentsQueryParams queryParams;
-    public GetSimilarDocumentsRequest withQueryParams(GetSimilarDocumentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Attach further information. Possible values 'preview' to fetch temporary preview URLs. This is NOT recommended to be used with list calls. Only use with[]=preview for single document/style guide calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with[]")
+    public GetSimilarDocumentsWithEnum[] with;
+    public GetSimilarDocumentsRequest withWith(GetSimilarDocumentsWithEnum[] with) {
+        this.with = with;
         return this;
     }
     

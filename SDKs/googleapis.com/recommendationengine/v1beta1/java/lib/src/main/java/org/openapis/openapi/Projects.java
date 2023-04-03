@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates a catalog item.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateResponse recommendationengineProjectsLocationsCatalogsCatalogItemsCreate(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateResponse recommendationengineProjectsLocationsCatalogsCatalogItemsCreate(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateRequest request, org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/catalogItems", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateRequest.class, baseUrl, "/v1beta1/{parent}/catalogItems", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecommendationengineV1beta1CatalogItem", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Projects {
     /**
      * Bulk import of multiple catalog items. Request processing may be synchronous. No partial updating supported. Non-existing items will be created. Operation.response is of type ImportResponse. Note that it is possible for a subset of the items to be successfully updated.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsImportResponse recommendationengineProjectsLocationsCatalogsCatalogItemsImport(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsImportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsImportResponse recommendationengineProjectsLocationsCatalogsCatalogItemsImport(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsImportRequest request, org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsImportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsImportPathParams.class, baseUrl, "/v1beta1/{parent}/catalogItems:import", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsImportRequest.class, baseUrl, "/v1beta1/{parent}/catalogItems:import", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecommendationengineV1beta1ImportCatalogItemsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsImportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsImportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,25 +131,26 @@ public class Projects {
     /**
      * Gets a list of catalog items.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsListResponse recommendationengineProjectsLocationsCatalogsCatalogItemsList(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsListResponse recommendationengineProjectsLocationsCatalogsCatalogItemsList(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsListRequest request, org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsListPathParams.class, baseUrl, "/v1beta1/{parent}/catalogItems", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsListRequest.class, baseUrl, "/v1beta1/{parent}/catalogItems", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,27 +177,28 @@ public class Projects {
     /**
      * Updates a catalog item. Partial updating is supported. Non-existing items will be created.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsPatchResponse recommendationengineProjectsLocationsCatalogsCatalogItemsPatch(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsPatchResponse recommendationengineProjectsLocationsCatalogsCatalogItemsPatch(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsPatchRequest request, org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsPatchPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsPatchRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecommendationengineV1beta1CatalogItem", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -221,27 +225,28 @@ public class Projects {
     /**
      * Makes a recommendation prediction. If using API Key based authentication, the API Key must be registered using the PredictionApiKeyRegistry service. [Learn more](https://cloud.google.com/recommendations-ai/docs/setting-up#register-key).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredictResponse recommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredict(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredictRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredictResponse recommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredict(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredictRequest request, org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredictSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredictPathParams.class, baseUrl, "/v1beta1/{name}:predict", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredictRequest.class, baseUrl, "/v1beta1/{name}:predict", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecommendationengineV1beta1PredictRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredictQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredictRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -268,27 +273,28 @@ public class Projects {
     /**
      * Register an API key for use with predict method.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreateResponse recommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreate(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreateResponse recommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreate(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreateRequest request, org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/predictionApiKeyRegistrations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreateRequest.class, baseUrl, "/v1beta1/{parent}/predictionApiKeyRegistrations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecommendationengineV1beta1CreatePredictionApiKeyRegistrationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -315,25 +321,26 @@ public class Projects {
     /**
      * Unregister an apiKey from using for predict method.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteResponse recommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDelete(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteResponse recommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDelete(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteRequest request, org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeletePathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -360,25 +367,26 @@ public class Projects {
     /**
      * List the registered apiKeys for use with predict method.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsListResponse recommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsList(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsListResponse recommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsList(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsListRequest request, org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsListPathParams.class, baseUrl, "/v1beta1/{parent}/predictionApiKeyRegistrations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsListRequest.class, baseUrl, "/v1beta1/{parent}/predictionApiKeyRegistrations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -405,25 +413,26 @@ public class Projects {
     /**
      * Writes a single user event from the browser. This uses a GET request to due to browser restriction of POST-ing to a 3rd party domain. This method is used only by the Recommendations AI JavaScript pixel. Users should not call this method directly.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollectResponse recommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollect(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollectResponse recommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollect(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollectRequest request, org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollectSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollectPathParams.class, baseUrl, "/v1beta1/{parent}/userEvents:collect", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollectRequest.class, baseUrl, "/v1beta1/{parent}/userEvents:collect", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollectQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollectRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -450,27 +459,28 @@ public class Projects {
     /**
      * Bulk import of User events. Request processing might be synchronous. Events that already exist are skipped. Use this method for backfilling historical user events. Operation.response is of type ImportResponse. Note that it is possible for a subset of the items to be successfully inserted. Operation.metadata is of type ImportMetadata.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImportResponse recommendationengineProjectsLocationsCatalogsEventStoresUserEventsImport(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImportResponse recommendationengineProjectsLocationsCatalogsEventStoresUserEventsImport(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImportRequest request, org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImportPathParams.class, baseUrl, "/v1beta1/{parent}/userEvents:import", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImportRequest.class, baseUrl, "/v1beta1/{parent}/userEvents:import", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecommendationengineV1beta1ImportUserEventsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,25 +507,26 @@ public class Projects {
     /**
      * Gets a list of user events within a time range, with potential filtering. The method does not list unjoined user events. Unjoined user event definition: when a user event is ingested from Recommendations AI User Event APIs, the catalog item included in the user event is connected with the current catalog. If a catalog item of the ingested event is not in the current catalog, it could lead to degraded model quality. This is called an unjoined event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListResponse recommendationengineProjectsLocationsCatalogsEventStoresUserEventsList(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListResponse recommendationengineProjectsLocationsCatalogsEventStoresUserEventsList(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListRequest request, org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListPathParams.class, baseUrl, "/v1beta1/{parent}/userEvents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListRequest.class, baseUrl, "/v1beta1/{parent}/userEvents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -542,27 +553,28 @@ public class Projects {
     /**
      * Deletes permanently all user events specified by the filter provided. Depending on the number of events specified by the filter, this operation could take hours or days to complete. To test a filter, use the list command first.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurgeResponse recommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurge(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurgeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurgeResponse recommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurge(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurgeRequest request, org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurgeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurgePathParams.class, baseUrl, "/v1beta1/{parent}/userEvents:purge", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurgeRequest.class, baseUrl, "/v1beta1/{parent}/userEvents:purge", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecommendationengineV1beta1PurgeUserEventsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurgeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurgeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -589,27 +601,28 @@ public class Projects {
     /**
      * Triggers a user event rejoin operation with latest catalog data. Events will not be annotated with detailed catalog information if catalog item is missing at the time the user event is ingested, and these events are stored as unjoined events with a limited usage on training and serving. This API can be used to trigger a 'join' operation on specified events with latest version of catalog items. It can also be used to correct events joined with wrong catalog items.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinResponse recommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoin(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinResponse recommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoin(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest request, org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinPathParams.class, baseUrl, "/v1beta1/{parent}/userEvents:rejoin", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest.class, baseUrl, "/v1beta1/{parent}/userEvents:rejoin", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecommendationengineV1beta1RejoinUserEventsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -636,27 +649,28 @@ public class Projects {
     /**
      * Writes a single user event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWriteResponse recommendationengineProjectsLocationsCatalogsEventStoresUserEventsWrite(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWriteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWriteResponse recommendationengineProjectsLocationsCatalogsEventStoresUserEventsWrite(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWriteRequest request, org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWriteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWritePathParams.class, baseUrl, "/v1beta1/{parent}/userEvents:write", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWriteRequest.class, baseUrl, "/v1beta1/{parent}/userEvents:write", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecommendationengineV1beta1UserEvent", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWriteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWriteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -683,25 +697,26 @@ public class Projects {
     /**
      * Lists all the catalog configurations associated with the project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsListResponse recommendationengineProjectsLocationsCatalogsList(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsListResponse recommendationengineProjectsLocationsCatalogsList(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsListRequest request, org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsListPathParams.class, baseUrl, "/v1beta1/{parent}/catalogs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsListRequest.class, baseUrl, "/v1beta1/{parent}/catalogs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -728,25 +743,26 @@ public class Projects {
     /**
      * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsGetResponse recommendationengineProjectsLocationsCatalogsOperationsGet(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsGetResponse recommendationengineProjectsLocationsCatalogsOperationsGet(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsGetRequest request, org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsGetPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsGetRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -773,25 +789,26 @@ public class Projects {
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsListResponse recommendationengineProjectsLocationsCatalogsOperationsList(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsListResponse recommendationengineProjectsLocationsCatalogsOperationsList(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsListRequest request, org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsListPathParams.class, baseUrl, "/v1beta1/{name}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsListRequest.class, baseUrl, "/v1beta1/{name}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

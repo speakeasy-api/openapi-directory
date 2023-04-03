@@ -4,20 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRouteRequest {
-    
-    public DeleteRoutePathParams pathParams;
-    public DeleteRouteRequest withPathParams(DeleteRoutePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DeleteRouteRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DeleteRouteRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public DeleteRouteHeaders headers;
-    public DeleteRouteRequest withHeaders(DeleteRouteHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DeleteRouteRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DeleteRouteRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DeleteRouteRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DeleteRouteRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DeleteRouteRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The name of the service mesh in which to delete the route.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meshName")
+    public String meshName;
+    public DeleteRouteRequest withMeshName(String meshName) {
+        this.meshName = meshName;
+        return this;
+    }
+    
+    /**
+     * The name of the route to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=routeName")
+    public String routeName;
+    public DeleteRouteRequest withRouteName(String routeName) {
+        this.routeName = routeName;
+        return this;
+    }
+    
+    /**
+     * The name of the virtual router in which to delete the route.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=virtualRouterName")
+    public String virtualRouterName;
+    public DeleteRouteRequest withVirtualRouterName(String virtualRouterName) {
+        this.virtualRouterName = virtualRouterName;
         return this;
     }
     

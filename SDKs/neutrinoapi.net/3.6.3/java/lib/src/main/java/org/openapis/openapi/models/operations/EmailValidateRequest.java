@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EmailValidateRequest {
+    /**
+     * An email address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public EmailValidateRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
     
-    public EmailValidateQueryParams queryParams;
-    public EmailValidateRequest withQueryParams(EmailValidateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Automatically attempt to fix typos in the address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fix-typos")
+    public Boolean fixTypos;
+    public EmailValidateRequest withFixTypos(Boolean fixTypos) {
+        this.fixTypos = fixTypos;
         return this;
     }
     

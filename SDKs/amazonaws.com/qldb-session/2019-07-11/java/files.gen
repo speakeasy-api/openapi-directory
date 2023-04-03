@@ -30,7 +30,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/SendCommandXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/SendCommandHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendCommandRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendCommandResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SendCommandResult.java
@@ -50,6 +49,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/StartSessionRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/FetchPageRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExecuteStatementRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/CommitTransactionRequest.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

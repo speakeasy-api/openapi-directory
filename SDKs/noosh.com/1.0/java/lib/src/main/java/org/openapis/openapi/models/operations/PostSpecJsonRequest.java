@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpecJsonRequest {
-    
-    public PostSpecJsonPathParams pathParams;
-    public PostSpecJsonRequest withPathParams(PostSpecJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.SpecPersistVO specPersistVO;
+    public PostSpecJsonRequest withSpecPersistVO(org.openapis.openapi.models.shared.SpecPersistVO specPersistVO) {
+        this.specPersistVO = specPersistVO;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SpecPersistVO request;
-    public PostSpecJsonRequest withRequest(org.openapis.openapi.models.shared.SpecPersistVO request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public PostSpecJsonRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public PostSpecJsonRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

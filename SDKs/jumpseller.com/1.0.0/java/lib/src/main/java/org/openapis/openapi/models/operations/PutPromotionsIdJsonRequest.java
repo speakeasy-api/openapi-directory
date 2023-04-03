@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutPromotionsIdJsonRequest {
-    
-    public PutPromotionsIdJsonPathParams pathParams;
-    public PutPromotionsIdJsonRequest withPathParams(PutPromotionsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutPromotionsIdJsonQueryParams queryParams;
-    public PutPromotionsIdJsonRequest withQueryParams(PutPromotionsIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Promotion parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PromotionEdit request;
-    public PutPromotionsIdJsonRequest withRequest(org.openapis.openapi.models.shared.PromotionEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PromotionEdit promotionEdit;
+    public PutPromotionsIdJsonRequest withPromotionEdit(org.openapis.openapi.models.shared.PromotionEdit promotionEdit) {
+        this.promotionEdit = promotionEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PutPromotionsIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the Promotion
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PutPromotionsIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PutPromotionsIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

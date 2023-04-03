@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListConversationMessageRequest {
-    
-    public ListConversationMessagePathParams pathParams;
-    public ListConversationMessageRequest withPathParams(ListConversationMessagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for messages.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConversationSid")
+    public String conversationSid;
+    public ListConversationMessageRequest withConversationSid(String conversationSid) {
+        this.conversationSid = conversationSid;
         return this;
     }
     
-    
-    public ListConversationMessageQueryParams queryParams;
-    public ListConversationMessageRequest withQueryParams(ListConversationMessageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The sort order of the returned messages. Can be: `asc` (ascending) or `desc` (descending), with `asc` as the default.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Order")
+    public org.openapis.openapi.models.shared.ConversationMessageEnumOrderTypeEnum order;
+    public ListConversationMessageRequest withOrder(org.openapis.openapi.models.shared.ConversationMessageEnumOrderTypeEnum order) {
+        this.order = order;
         return this;
     }
     
-    
-    public ListConversationMessageSecurity security;
-    public ListConversationMessageRequest withSecurity(ListConversationMessageSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListConversationMessageRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListConversationMessageRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListConversationMessageRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListConversationMessageRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

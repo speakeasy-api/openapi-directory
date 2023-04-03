@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchCatalogRequest {
-    
-    public SearchCatalogQueryParams queryParams;
-    public SearchCatalogRequest withQueryParams(SearchCatalogQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter by asset type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_type")
+    public SearchCatalogAssetTypeEnum[] assetType;
+    public SearchCatalogRequest withAssetType(SearchCatalogAssetTypeEnum[] assetType) {
+        this.assetType = assetType;
         return this;
     }
     
+    /**
+     * Filter by collection id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=collection_id")
+    public String[] collectionId;
+    public SearchCatalogRequest withCollectionId(String[] collectionId) {
+        this.collectionId = collectionId;
+        return this;
+    }
     
-    public SearchCatalogSecurity security;
-    public SearchCatalogRequest withSecurity(SearchCatalogSecurity security) {
-        this.security = security;
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public SearchCatalogRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public SearchCatalogRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * One or more search terms separated by spaces
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public SearchCatalogRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * Sort by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public SearchCatalogSortEnum sort;
+    public SearchCatalogRequest withSort(SearchCatalogSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

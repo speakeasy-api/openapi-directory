@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETTerminateClientVpnConnectionsRequest {
-    
-    public GETTerminateClientVpnConnectionsQueryParams queryParams;
-    public GETTerminateClientVpnConnectionsRequest withQueryParams(GETTerminateClientVpnConnectionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETTerminateClientVpnConnectionsActionEnum action;
+    public GETTerminateClientVpnConnectionsRequest withAction(GETTerminateClientVpnConnectionsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The ID of the Client VPN endpoint to which the client is connected.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientVpnEndpointId")
+    public String clientVpnEndpointId;
+    public GETTerminateClientVpnConnectionsRequest withClientVpnEndpointId(String clientVpnEndpointId) {
+        this.clientVpnEndpointId = clientVpnEndpointId;
+        return this;
+    }
     
-    public GETTerminateClientVpnConnectionsHeaders headers;
-    public GETTerminateClientVpnConnectionsRequest withHeaders(GETTerminateClientVpnConnectionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the client connection to be terminated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConnectionId")
+    public String connectionId;
+    public GETTerminateClientVpnConnectionsRequest withConnectionId(String connectionId) {
+        this.connectionId = connectionId;
+        return this;
+    }
+    
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETTerminateClientVpnConnectionsRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The name of the user who initiated the connection. Use this option to terminate all active connections for the specified user. This option can only be used if the user has established up to five connections.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Username")
+    public String username;
+    public GETTerminateClientVpnConnectionsRequest withUsername(String username) {
+        this.username = username;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETTerminateClientVpnConnectionsVersionEnum version;
+    public GETTerminateClientVpnConnectionsRequest withVersion(GETTerminateClientVpnConnectionsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETTerminateClientVpnConnectionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETTerminateClientVpnConnectionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETTerminateClientVpnConnectionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETTerminateClientVpnConnectionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETTerminateClientVpnConnectionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETTerminateClientVpnConnectionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETTerminateClientVpnConnectionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

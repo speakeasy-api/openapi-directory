@@ -43,12 +43,12 @@ public class Carriers {
      */
     public org.openapis.openapi.models.operations.AddFundsToCarrierResponse addFundsToCarrier(org.openapis.openapi.models.operations.AddFundsToCarrierRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddFundsToCarrierPathParams.class, baseUrl, "/v1/carriers/{carrier_id}/add_funds", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddFundsToCarrierRequest.class, baseUrl, "/v1/carriers/{carrier_id}/add_funds", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addFundsToCarrierRequestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -96,7 +96,7 @@ public class Carriers {
      */
     public org.openapis.openapi.models.operations.GetCarrierByIdResponse getCarrierById(org.openapis.openapi.models.operations.GetCarrierByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCarrierByIdPathParams.class, baseUrl, "/v1/carriers/{carrier_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCarrierByIdRequest.class, baseUrl, "/v1/carriers/{carrier_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -144,7 +144,7 @@ public class Carriers {
      */
     public org.openapis.openapi.models.operations.GetCarrierOptionsResponse getCarrierOptions(org.openapis.openapi.models.operations.GetCarrierOptionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCarrierOptionsPathParams.class, baseUrl, "/v1/carriers/{carrier_id}/options", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCarrierOptionsRequest.class, baseUrl, "/v1/carriers/{carrier_id}/options", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -192,7 +192,7 @@ public class Carriers {
      */
     public org.openapis.openapi.models.operations.ListCarrierPackageTypesResponse listCarrierPackageTypes(org.openapis.openapi.models.operations.ListCarrierPackageTypesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListCarrierPackageTypesPathParams.class, baseUrl, "/v1/carriers/{carrier_id}/packages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListCarrierPackageTypesRequest.class, baseUrl, "/v1/carriers/{carrier_id}/packages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -240,7 +240,7 @@ public class Carriers {
      */
     public org.openapis.openapi.models.operations.ListCarrierServicesResponse listCarrierServices(org.openapis.openapi.models.operations.ListCarrierServicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListCarrierServicesPathParams.class, baseUrl, "/v1/carriers/{carrier_id}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListCarrierServicesRequest.class, baseUrl, "/v1/carriers/{carrier_id}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

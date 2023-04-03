@@ -31,8 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/CreateWebChannelSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateWebChannelCreateWebChannelRequest.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateWebChannelRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateWebChannelResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/FlexV2WebChannel.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAccountSidAuthToken.java
 USAGE.md

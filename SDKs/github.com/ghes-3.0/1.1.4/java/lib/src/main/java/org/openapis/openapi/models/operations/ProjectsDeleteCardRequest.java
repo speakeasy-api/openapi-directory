@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsDeleteCardRequest {
-    
-    public ProjectsDeleteCardPathParams pathParams;
-    public ProjectsDeleteCardRequest withPathParams(ProjectsDeleteCardPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * card_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=card_id")
+    public Long cardId;
+    public ProjectsDeleteCardRequest withCardId(Long cardId) {
+        this.cardId = cardId;
         return this;
     }
     

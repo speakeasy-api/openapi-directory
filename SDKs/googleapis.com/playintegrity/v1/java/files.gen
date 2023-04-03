@@ -31,8 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/PlayintegrityDecodeIntegrityTokenSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/PlayintegrityDecodeIntegrityTokenPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/PlayintegrityDecodeIntegrityTokenQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PlayintegrityDecodeIntegrityTokenRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PlayintegrityDecodeIntegrityTokenResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/DecodeIntegrityTokenResponse.java
@@ -47,9 +45,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/AccountDetailsAppLicensingV
 lib/src/main/java/org/openapis/openapi/models/shared/AccountDetails.java
 lib/src/main/java/org/openapis/openapi/models/shared/AccountActivityActivityLevelEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AccountActivity.java
-lib/src/main/java/org/openapis/openapi/models/shared/DecodeIntegrityTokenRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/DecodeIntegrityTokenRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 USAGE.md

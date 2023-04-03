@@ -38,13 +38,13 @@ public class Transactions {
      */
     public org.openapis.openapi.models.operations.GetTransactionResponse getTransaction(org.openapis.openapi.models.operations.GetTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionPathParams.class, baseUrl, "/v1/transactions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionRequest.class, baseUrl, "/v1/transactions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTransactionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTransactionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -77,7 +77,7 @@ public class Transactions {
      */
     public org.openapis.openapi.models.operations.GetTransactionCostResponse getTransactionCost(org.openapis.openapi.models.operations.GetTransactionCostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionCostPathParams.class, baseUrl, "/v1/transactions/{id}/cost", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionCostRequest.class, baseUrl, "/v1/transactions/{id}/cost", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -116,7 +116,7 @@ public class Transactions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTransactionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTransactionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatorsReadRequest {
-    
-    public CreatorsReadPathParams pathParams;
-    public CreatorsReadRequest withPathParams(CreatorsReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public CreatorsReadRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

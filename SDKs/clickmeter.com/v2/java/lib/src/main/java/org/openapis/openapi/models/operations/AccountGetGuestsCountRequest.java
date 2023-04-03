@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountGetGuestsCountRequest {
-    
-    public AccountGetGuestsCountQueryParams queryParams;
-    public AccountGetGuestsCountRequest withQueryParams(AccountGetGuestsCountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter fields by this pattern
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
+    public String textSearch;
+    public AccountGetGuestsCountRequest withTextSearch(String textSearch) {
+        this.textSearch = textSearch;
         return this;
     }
     

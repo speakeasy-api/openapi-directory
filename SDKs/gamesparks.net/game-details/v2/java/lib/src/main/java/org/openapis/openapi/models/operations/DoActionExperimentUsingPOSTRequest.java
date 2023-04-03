@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DoActionExperimentUsingPOSTRequest {
+    /**
+     * action
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=action")
+    public DoActionExperimentUsingPOSTActionEnum action;
+    public DoActionExperimentUsingPOSTRequest withAction(DoActionExperimentUsingPOSTActionEnum action) {
+        this.action = action;
+        return this;
+    }
     
-    public DoActionExperimentUsingPOSTPathParams pathParams;
-    public DoActionExperimentUsingPOSTRequest withPathParams(DoActionExperimentUsingPOSTPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public DoActionExperimentUsingPOSTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    
+    /**
+     * id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DoActionExperimentUsingPOSTRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

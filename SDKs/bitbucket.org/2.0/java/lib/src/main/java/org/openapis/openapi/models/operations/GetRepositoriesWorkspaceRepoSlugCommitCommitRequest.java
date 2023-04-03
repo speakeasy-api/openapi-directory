@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugCommitCommitRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugCommitCommitPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugCommitCommitRequest withPathParams(GetRepositoriesWorkspaceRepoSlugCommitCommitPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The commit's SHA1.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
+    public String commit;
+    public GetRepositoriesWorkspaceRepoSlugCommitCommitRequest withCommit(String commit) {
+        this.commit = commit;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugCommitCommitRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public GetRepositoriesWorkspaceRepoSlugCommitCommitSecurity security;
-    public GetRepositoriesWorkspaceRepoSlugCommitCommitRequest withSecurity(GetRepositoriesWorkspaceRepoSlugCommitCommitSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugCommitCommitRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

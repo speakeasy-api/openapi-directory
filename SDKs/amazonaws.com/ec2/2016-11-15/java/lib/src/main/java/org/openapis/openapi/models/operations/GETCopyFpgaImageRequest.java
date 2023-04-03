@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCopyFpgaImageRequest {
-    
-    public GETCopyFpgaImageQueryParams queryParams;
-    public GETCopyFpgaImageRequest withQueryParams(GETCopyFpgaImageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETCopyFpgaImageActionEnum action;
+    public GETCopyFpgaImageRequest withAction(GETCopyFpgaImageActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more information, see &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html"&gt;Ensuring idempotency&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientToken")
+    public String clientToken;
+    public GETCopyFpgaImageRequest withClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
     
-    public GETCopyFpgaImageHeaders headers;
-    public GETCopyFpgaImageRequest withHeaders(GETCopyFpgaImageHeaders headers) {
-        this.headers = headers;
+    /**
+     * The description for the new AFI.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Description")
+    public String description;
+    public GETCopyFpgaImageRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETCopyFpgaImageRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The name for the new AFI. The default is the name of the source AFI.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Name")
+    public String name;
+    public GETCopyFpgaImageRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The ID of the source AFI.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceFpgaImageId")
+    public String sourceFpgaImageId;
+    public GETCopyFpgaImageRequest withSourceFpgaImageId(String sourceFpgaImageId) {
+        this.sourceFpgaImageId = sourceFpgaImageId;
+        return this;
+    }
+    
+    /**
+     * The Region that contains the source AFI.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceRegion")
+    public String sourceRegion;
+    public GETCopyFpgaImageRequest withSourceRegion(String sourceRegion) {
+        this.sourceRegion = sourceRegion;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETCopyFpgaImageVersionEnum version;
+    public GETCopyFpgaImageRequest withVersion(GETCopyFpgaImageVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETCopyFpgaImageRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETCopyFpgaImageRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETCopyFpgaImageRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETCopyFpgaImageRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETCopyFpgaImageRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETCopyFpgaImageRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETCopyFpgaImageRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

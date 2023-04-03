@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRecordingRequest {
-    
-    public UpdateRecordingPathParams pathParams;
-    public UpdateRecordingRequest withPathParams(UpdateRecordingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateRecordingUpdateRecordingRequest request;
-    public UpdateRecordingRequest withRequest(UpdateRecordingUpdateRecordingRequest request) {
-        this.request = request;
+    public UpdateRecordingUpdateRecordingRequest requestBody;
+    public UpdateRecordingRequest withRequestBody(UpdateRecordingUpdateRecordingRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateRecordingSecurity security;
-    public UpdateRecordingRequest withSecurity(UpdateRecordingSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateRecordingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Trunk that will have its recording settings updated.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrunkSid")
+    public String trunkSid;
+    public UpdateRecordingRequest withTrunkSid(String trunkSid) {
+        this.trunkSid = trunkSid;
         return this;
     }
     

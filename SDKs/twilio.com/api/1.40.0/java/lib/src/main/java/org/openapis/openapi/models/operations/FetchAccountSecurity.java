@@ -7,10 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchAccountSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
-    public org.openapis.openapi.models.shared.SchemeAccountSidAuthToken accountSidAuthToken;
-    public FetchAccountSecurity withAccountSidAuthToken(org.openapis.openapi.models.shared.SchemeAccountSidAuthToken accountSidAuthToken) {
-        this.accountSidAuthToken = accountSidAuthToken;
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=password")
+    public String password;
+    public FetchAccountSecurity withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=username")
+    public String username;
+    public FetchAccountSecurity withUsername(String username) {
+        this.username = username;
         return this;
     }
     

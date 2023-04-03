@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETEnterStandbyRequest {
-    
-    public GETEnterStandbyQueryParams queryParams;
-    public GETEnterStandbyRequest withQueryParams(GETEnterStandbyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETEnterStandbyActionEnum action;
+    public GETEnterStandbyRequest withAction(GETEnterStandbyActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the Auto Scaling group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
+    public String autoScalingGroupName;
+    public GETEnterStandbyRequest withAutoScalingGroupName(String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        return this;
+    }
     
-    public GETEnterStandbyHeaders headers;
-    public GETEnterStandbyRequest withHeaders(GETEnterStandbyHeaders headers) {
-        this.headers = headers;
+    /**
+     * The IDs of the instances. You can specify up to 20 instances.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceIds")
+    public String[] instanceIds;
+    public GETEnterStandbyRequest withInstanceIds(String[] instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    
+    /**
+     * Indicates whether to decrement the desired capacity of the Auto Scaling group by the number of instances moved to &lt;code&gt;Standby&lt;/code&gt; mode.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ShouldDecrementDesiredCapacity")
+    public Boolean shouldDecrementDesiredCapacity;
+    public GETEnterStandbyRequest withShouldDecrementDesiredCapacity(Boolean shouldDecrementDesiredCapacity) {
+        this.shouldDecrementDesiredCapacity = shouldDecrementDesiredCapacity;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETEnterStandbyVersionEnum version;
+    public GETEnterStandbyRequest withVersion(GETEnterStandbyVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETEnterStandbyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETEnterStandbyRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETEnterStandbyRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETEnterStandbyRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETEnterStandbyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETEnterStandbyRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETEnterStandbyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApplicationsListKeyCredentialsRequest {
-    
-    public ApplicationsListKeyCredentialsPathParams pathParams;
-    public ApplicationsListKeyCredentialsRequest withPathParams(ApplicationsListKeyCredentialsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public ApplicationsListKeyCredentialsRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * Application object ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=applicationObjectId")
+    public String applicationObjectId;
+    public ApplicationsListKeyCredentialsRequest withApplicationObjectId(String applicationObjectId) {
+        this.applicationObjectId = applicationObjectId;
+        return this;
+    }
     
-    public ApplicationsListKeyCredentialsQueryParams queryParams;
-    public ApplicationsListKeyCredentialsRequest withQueryParams(ApplicationsListKeyCredentialsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public ApplicationsListKeyCredentialsRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

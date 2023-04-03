@@ -38,18 +38,19 @@ public class Rates {
      * Get Configured Rates
      * Returns rate details of the requested rate type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRatesResponse getRates(org.openapis.openapi.models.operations.GetRatesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRatesResponse getRates(org.openapis.openapi.models.operations.GetRatesRequest request, org.openapis.openapi.models.operations.GetRatesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRatesPathParams.class, baseUrl, "/tenant/rates/v1/{rate_type}/getAll", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRatesRequest.class, baseUrl, "/tenant/rates/v1/{rate_type}/getAll", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -58,7 +59,7 @@ public class Rates {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

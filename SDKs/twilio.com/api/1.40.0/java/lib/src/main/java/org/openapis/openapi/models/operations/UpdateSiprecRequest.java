@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSiprecRequest {
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created this Siprec resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateSiprecRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public UpdateSiprecPathParams pathParams;
-    public UpdateSiprecRequest withPathParams(UpdateSiprecPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) the Siprec resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public UpdateSiprecRequest withCallSid(String callSid) {
+        this.callSid = callSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSiprecUpdateSiprecRequest request;
-    public UpdateSiprecRequest withRequest(UpdateSiprecUpdateSiprecRequest request) {
-        this.request = request;
+    public UpdateSiprecUpdateSiprecRequest requestBody;
+    public UpdateSiprecRequest withRequestBody(UpdateSiprecUpdateSiprecRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSiprecSecurity security;
-    public UpdateSiprecRequest withSecurity(UpdateSiprecSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateSiprecRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Siprec resource, or the `name` used when creating the resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateSiprecRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

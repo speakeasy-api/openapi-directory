@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWellKnownMercureRequest {
-    
-    public GetWellKnownMercureQueryParams queryParams;
-    public GetWellKnownMercureRequest withQueryParams(GetWellKnownMercureQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The last received event id, to retrieve missed events, takes precedence over the query parameter.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Last-Event-ID")
+    public String lastEventID;
+    public GetWellKnownMercureRequest withLastEventID(String lastEventID) {
+        this.lastEventID = lastEventID;
         return this;
     }
     
+    /**
+     * The last received event id, to retrieve missed events.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Last-Event-ID")
+    public String lastEventIDQueryParameter;
+    public GetWellKnownMercureRequest withLastEventIDQueryParameter(String lastEventIDQueryParameter) {
+        this.lastEventIDQueryParameter = lastEventIDQueryParameter;
+        return this;
+    }
     
-    public GetWellKnownMercureHeaders headers;
-    public GetWellKnownMercureRequest withHeaders(GetWellKnownMercureHeaders headers) {
-        this.headers = headers;
+    /**
+     * The topic to get updates from, can be a URI template (RFC6570).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=topic")
+    public String[] topic;
+    public GetWellKnownMercureRequest withTopic(String[] topic) {
+        this.topic = topic;
         return this;
     }
     

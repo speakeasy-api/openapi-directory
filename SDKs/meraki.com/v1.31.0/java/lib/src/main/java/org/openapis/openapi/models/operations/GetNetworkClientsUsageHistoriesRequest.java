@@ -4,20 +4,93 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkClientsUsageHistoriesRequest {
-    
-    public GetNetworkClientsUsageHistoriesPathParams pathParams;
-    public GetNetworkClientsUsageHistoriesRequest withPathParams(GetNetworkClientsUsageHistoriesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A list of client keys, MACs or IPs separated by comma.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clients")
+    public String clients;
+    public GetNetworkClientsUsageHistoriesRequest withClients(String clients) {
+        this.clients = clients;
         return this;
     }
     
+    /**
+     * A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
+    public String endingBefore;
+    public GetNetworkClientsUsageHistoriesRequest withEndingBefore(String endingBefore) {
+        this.endingBefore = endingBefore;
+        return this;
+    }
     
-    public GetNetworkClientsUsageHistoriesQueryParams queryParams;
-    public GetNetworkClientsUsageHistoriesRequest withQueryParams(GetNetworkClientsUsageHistoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkClientsUsageHistoriesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    /**
+     * The number of entries per page returned. Acceptable range is 3 - 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public Long perPage;
+    public GetNetworkClientsUsageHistoriesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * An SSID number to include. If not specified, events for all SSIDs will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ssidNumber")
+    public GetNetworkClientsUsageHistoriesSsidNumberEnum ssidNumber;
+    public GetNetworkClientsUsageHistoriesRequest withSsidNumber(GetNetworkClientsUsageHistoriesSsidNumberEnum ssidNumber) {
+        this.ssidNumber = ssidNumber;
+        return this;
+    }
+    
+    /**
+     * A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
+    public String startingAfter;
+    public GetNetworkClientsUsageHistoriesRequest withStartingAfter(String startingAfter) {
+        this.startingAfter = startingAfter;
+        return this;
+    }
+    
+    /**
+     * The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
+    public String t0;
+    public GetNetworkClientsUsageHistoriesRequest withT0(String t0) {
+        this.t0 = t0;
+        return this;
+    }
+    
+    /**
+     * The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t1")
+    public String t1;
+    public GetNetworkClientsUsageHistoriesRequest withT1(String t1) {
+        this.t1 = t1;
+        return this;
+    }
+    
+    /**
+     * The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
+    public Float timespan;
+    public GetNetworkClientsUsageHistoriesRequest withTimespan(Float timespan) {
+        this.timespan = timespan;
         return this;
     }
     

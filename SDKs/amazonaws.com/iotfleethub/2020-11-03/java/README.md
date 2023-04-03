@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateApplicationHeaders;
 import org.openapis.openapi.models.operations.CreateApplicationRequestBody;
 import org.openapis.openapi.models.operations.CreateApplicationRequest;
 import org.openapis.openapi.models.operations.CreateApplicationResponse;
@@ -27,33 +26,30 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateApplicationRequest req = new CreateApplicationRequest() {{
-                headers = new CreateApplicationHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateApplicationRequestBody() {{
-                    applicationDescription = "illum";
-                    applicationName = "vel";
-                    clientToken = "error";
-                    roleArn = "deserunt";
+                requestBody = new CreateApplicationRequestBody() {{
+                    applicationDescription = "corrupti";
+                    applicationName = "provident";
+                    clientToken = "distinctio";
+                    roleArn = "quibusdam";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("iure", "magnam");
-                        put("debitis", "ipsa");
+                        put("nulla", "corrupti");
+                        put("illum", "vel");
+                        put("error", "deserunt");
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "suscipit";
+                xAmzContentSha256 = "iure";
+                xAmzCredential = "magnam";
+                xAmzDate = "debitis";
+                xAmzSecurityToken = "ipsa";
+                xAmzSignature = "delectus";
+                xAmzSignedHeaders = "tempora";
+            }}            
 
             CreateApplicationResponse res = sdk.createApplication(req);
 
@@ -67,7 +63,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

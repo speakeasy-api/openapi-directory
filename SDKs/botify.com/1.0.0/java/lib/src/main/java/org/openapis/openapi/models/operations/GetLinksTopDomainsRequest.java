@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLinksTopDomainsRequest {
-    
-    public GetLinksTopDomainsPathParams pathParams;
-    public GetLinksTopDomainsRequest withPathParams(GetLinksTopDomainsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Analysis' identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
+    public String analysisSlug;
+    public GetLinksTopDomainsRequest withAnalysisSlug(String analysisSlug) {
+        this.analysisSlug = analysisSlug;
         return this;
     }
     
+    /**
+     * Page Number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetLinksTopDomainsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetLinksTopDomainsQueryParams queryParams;
-    public GetLinksTopDomainsRequest withQueryParams(GetLinksTopDomainsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Project's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
+    public String projectSlug;
+    public GetLinksTopDomainsRequest withProjectSlug(String projectSlug) {
+        this.projectSlug = projectSlug;
+        return this;
+    }
+    
+    /**
+     * Page Size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Long size;
+    public GetLinksTopDomainsRequest withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * User's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetLinksTopDomainsRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

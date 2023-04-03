@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDistrictRequest {
-    
-    public GetDistrictPathParams pathParams;
-    public GetDistrictRequest withPathParams(GetDistrictPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetDistrictRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetDistrictQueryParams queryParams;
-    public GetDistrictRequest withQueryParams(GetDistrictQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public String include;
+    public GetDistrictRequest withInclude(String include) {
+        this.include = include;
         return this;
     }
     

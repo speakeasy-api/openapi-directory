@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConversationRequest {
-    
-    public GetConversationPathParams pathParams;
-    public GetConversationRequest withPathParams(GetConversationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetConversationRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetConversationQueryParams queryParams;
-    public GetConversationRequest withQueryParams(GetConversationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetConversationRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Order ID is a unique code that identifies an order.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public GetConversationRequest withOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
     
-    public GetConversationHeaders headers;
-    public GetConversationRequest withHeaders(GetConversationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Reason for requesting unmasked data. Relevant only for PII platform version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
+    public String reason;
+    public GetConversationRequest withReason(String reason) {
+        this.reason = reason;
         return this;
     }
     

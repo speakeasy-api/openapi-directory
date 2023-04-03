@@ -34,25 +34,26 @@ public class NodeTemplates {
     /**
      * Retrieves an aggregated list of node templates.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNodeTemplatesAggregatedListResponse computeNodeTemplatesAggregatedList(org.openapis.openapi.models.operations.ComputeNodeTemplatesAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNodeTemplatesAggregatedListResponse computeNodeTemplatesAggregatedList(org.openapis.openapi.models.operations.ComputeNodeTemplatesAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeNodeTemplatesAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTemplatesAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/nodeTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTemplatesAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/nodeTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTemplatesAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTemplatesAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class NodeTemplates {
     /**
      * Deletes the specified NodeTemplate resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNodeTemplatesDeleteResponse computeNodeTemplatesDelete(org.openapis.openapi.models.operations.ComputeNodeTemplatesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNodeTemplatesDeleteResponse computeNodeTemplatesDelete(org.openapis.openapi.models.operations.ComputeNodeTemplatesDeleteRequest request, org.openapis.openapi.models.operations.ComputeNodeTemplatesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTemplatesDeletePathParams.class, baseUrl, "/projects/{project}/regions/{region}/nodeTemplates/{nodeTemplate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTemplatesDeleteRequest.class, baseUrl, "/projects/{project}/regions/{region}/nodeTemplates/{nodeTemplate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTemplatesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTemplatesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,25 +126,26 @@ public class NodeTemplates {
     /**
      * Returns the specified node template.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNodeTemplatesGetResponse computeNodeTemplatesGet(org.openapis.openapi.models.operations.ComputeNodeTemplatesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNodeTemplatesGetResponse computeNodeTemplatesGet(org.openapis.openapi.models.operations.ComputeNodeTemplatesGetRequest request, org.openapis.openapi.models.operations.ComputeNodeTemplatesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTemplatesGetPathParams.class, baseUrl, "/projects/{project}/regions/{region}/nodeTemplates/{nodeTemplate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTemplatesGetRequest.class, baseUrl, "/projects/{project}/regions/{region}/nodeTemplates/{nodeTemplate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTemplatesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTemplatesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,25 +172,26 @@ public class NodeTemplates {
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNodeTemplatesGetIamPolicyResponse computeNodeTemplatesGetIamPolicy(org.openapis.openapi.models.operations.ComputeNodeTemplatesGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNodeTemplatesGetIamPolicyResponse computeNodeTemplatesGetIamPolicy(org.openapis.openapi.models.operations.ComputeNodeTemplatesGetIamPolicyRequest request, org.openapis.openapi.models.operations.ComputeNodeTemplatesGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTemplatesGetIamPolicyPathParams.class, baseUrl, "/projects/{project}/regions/{region}/nodeTemplates/{resource}/getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTemplatesGetIamPolicyRequest.class, baseUrl, "/projects/{project}/regions/{region}/nodeTemplates/{resource}/getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTemplatesGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTemplatesGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -214,27 +218,28 @@ public class NodeTemplates {
     /**
      * Creates a NodeTemplate resource in the specified project using the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNodeTemplatesInsertResponse computeNodeTemplatesInsert(org.openapis.openapi.models.operations.ComputeNodeTemplatesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNodeTemplatesInsertResponse computeNodeTemplatesInsert(org.openapis.openapi.models.operations.ComputeNodeTemplatesInsertRequest request, org.openapis.openapi.models.operations.ComputeNodeTemplatesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTemplatesInsertPathParams.class, baseUrl, "/projects/{project}/regions/{region}/nodeTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTemplatesInsertRequest.class, baseUrl, "/projects/{project}/regions/{region}/nodeTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "nodeTemplate", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTemplatesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTemplatesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,25 +266,26 @@ public class NodeTemplates {
     /**
      * Retrieves a list of node templates available to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNodeTemplatesListResponse computeNodeTemplatesList(org.openapis.openapi.models.operations.ComputeNodeTemplatesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNodeTemplatesListResponse computeNodeTemplatesList(org.openapis.openapi.models.operations.ComputeNodeTemplatesListRequest request, org.openapis.openapi.models.operations.ComputeNodeTemplatesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTemplatesListPathParams.class, baseUrl, "/projects/{project}/regions/{region}/nodeTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTemplatesListRequest.class, baseUrl, "/projects/{project}/regions/{region}/nodeTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTemplatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTemplatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -306,27 +312,28 @@ public class NodeTemplates {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNodeTemplatesSetIamPolicyResponse computeNodeTemplatesSetIamPolicy(org.openapis.openapi.models.operations.ComputeNodeTemplatesSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNodeTemplatesSetIamPolicyResponse computeNodeTemplatesSetIamPolicy(org.openapis.openapi.models.operations.ComputeNodeTemplatesSetIamPolicyRequest request, org.openapis.openapi.models.operations.ComputeNodeTemplatesSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTemplatesSetIamPolicyPathParams.class, baseUrl, "/projects/{project}/regions/{region}/nodeTemplates/{resource}/setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTemplatesSetIamPolicyRequest.class, baseUrl, "/projects/{project}/regions/{region}/nodeTemplates/{resource}/setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "regionSetPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTemplatesSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTemplatesSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -353,27 +360,28 @@ public class NodeTemplates {
     /**
      * Returns permissions that a caller has on the specified resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNodeTemplatesTestIamPermissionsResponse computeNodeTemplatesTestIamPermissions(org.openapis.openapi.models.operations.ComputeNodeTemplatesTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNodeTemplatesTestIamPermissionsResponse computeNodeTemplatesTestIamPermissions(org.openapis.openapi.models.operations.ComputeNodeTemplatesTestIamPermissionsRequest request, org.openapis.openapi.models.operations.ComputeNodeTemplatesTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTemplatesTestIamPermissionsPathParams.class, baseUrl, "/projects/{project}/regions/{region}/nodeTemplates/{resource}/testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTemplatesTestIamPermissionsRequest.class, baseUrl, "/projects/{project}/regions/{region}/nodeTemplates/{resource}/testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTemplatesTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTemplatesTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

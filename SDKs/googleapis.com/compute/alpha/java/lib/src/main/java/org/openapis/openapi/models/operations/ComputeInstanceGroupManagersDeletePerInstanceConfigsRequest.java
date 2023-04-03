@@ -7,31 +7,160 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest {
-    
-    public ComputeInstanceGroupManagersDeletePerInstanceConfigsPathParams pathParams;
-    public ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest withPathParams(ComputeInstanceGroupManagersDeletePerInstanceConfigsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ComputeInstanceGroupManagersDeletePerInstanceConfigsQueryParams queryParams;
-    public ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest withQueryParams(ComputeInstanceGroupManagersDeletePerInstanceConfigsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.InstanceGroupManagersDeletePerInstanceConfigsReq request;
-    public ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest withRequest(org.openapis.openapi.models.shared.InstanceGroupManagersDeletePerInstanceConfigsReq request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.InstanceGroupManagersDeletePerInstanceConfigsReq instanceGroupManagersDeletePerInstanceConfigsReq;
+    public ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest withInstanceGroupManagersDeletePerInstanceConfigsReq(org.openapis.openapi.models.shared.InstanceGroupManagersDeletePerInstanceConfigsReq instanceGroupManagersDeletePerInstanceConfigsReq) {
+        this.instanceGroupManagersDeletePerInstanceConfigsReq = instanceGroupManagersDeletePerInstanceConfigsReq;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public ComputeInstanceGroupManagersDeletePerInstanceConfigsSecurity security;
-    public ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest withSecurity(ComputeInstanceGroupManagersDeletePerInstanceConfigsSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * The name of the managed instance group. It should conform to RFC1035.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instanceGroupManager")
+    public String instanceGroupManager;
+    public ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest withInstanceGroupManager(String instanceGroupManager) {
+        this.instanceGroupManager = instanceGroupManager;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Project ID for this request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Legacy name for parameter that has been superseded by `quotaUser`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest withUserIp(String userIp) {
+        this.userIp = userIp;
+        return this;
+    }
+    
+    /**
+     * The name of the zone where the managed instance group is located. It should conform to RFC1035.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone")
+    public String zone;
+    public ComputeInstanceGroupManagersDeletePerInstanceConfigsRequest withZone(String zone) {
+        this.zone = zone;
         return this;
     }
     

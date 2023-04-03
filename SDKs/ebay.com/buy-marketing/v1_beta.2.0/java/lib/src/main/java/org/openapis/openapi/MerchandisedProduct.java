@@ -30,10 +30,11 @@ public class MerchandisedProduct {
     /**
      * This method returns an array of products based on the category and metric specified. This includes details of the product, such as the eBay product ID (EPID), title, and user reviews and ratings for the product. You can use the &lt;code&gt;epid&lt;/code&gt; returned by this method in the Browse API &lt;b&gt;search&lt;/b&gt; method to retrieve items for this product. &lt;h3&gt;&lt;b&gt;Restrictions &lt;/b&gt;&lt;/h3&gt; &lt;ul&gt;&lt;li&gt;To test &lt;b&gt; getMerchandisedProducts&lt;/b&gt; in Sandbox, you must use category ID 9355 and the response will be mock data.  &lt;/li&gt;   &lt;li&gt;For a list of supported sites and other restrictions, see &lt;a href="/api-docs/buy/marketing/overview.html#API"&gt;API Restrictions&lt;/a&gt;.&lt;/li&gt;  &lt;/ul&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMerchandisedProductsResponse getMerchandisedProducts(org.openapis.openapi.models.operations.GetMerchandisedProductsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMerchandisedProductsResponse getMerchandisedProducts(org.openapis.openapi.models.operations.GetMerchandisedProductsRequest request, org.openapis.openapi.models.operations.GetMerchandisedProductsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/merchandised_product");
         
@@ -41,14 +42,14 @@ public class MerchandisedProduct {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMerchandisedProductsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMerchandisedProductsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

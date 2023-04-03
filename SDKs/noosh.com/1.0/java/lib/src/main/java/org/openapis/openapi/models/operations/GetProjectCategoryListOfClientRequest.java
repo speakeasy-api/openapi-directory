@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectCategoryListOfClientRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_workgroup_id")
+    public String clientWorkgroupId;
+    public GetProjectCategoryListOfClientRequest withClientWorkgroupId(String clientWorkgroupId) {
+        this.clientWorkgroupId = clientWorkgroupId;
+        return this;
+    }
     
-    public GetProjectCategoryListOfClientPathParams pathParams;
-    public GetProjectCategoryListOfClientRequest withPathParams(GetProjectCategoryListOfClientPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public GetProjectCategoryListOfClientRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSetupV1LocationsIdRequest {
-    
-    public DeleteSetupV1LocationsIdPathParams pathParams;
-    public DeleteSetupV1LocationsIdRequest withPathParams(DeleteSetupV1LocationsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of business location, defaults to primary business location
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteSetupV1LocationsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

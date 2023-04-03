@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsCreateDiscussionCommentInOrgRequest {
-    
-    public TeamsCreateDiscussionCommentInOrgPathParams pathParams;
-    public TeamsCreateDiscussionCommentInOrgRequest withPathParams(TeamsCreateDiscussionCommentInOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public TeamsCreateDiscussionCommentInOrgRequestBody requestBody;
+    public TeamsCreateDiscussionCommentInOrgRequest withRequestBody(TeamsCreateDiscussionCommentInOrgRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsCreateDiscussionCommentInOrgRequestBody request;
-    public TeamsCreateDiscussionCommentInOrgRequest withRequest(TeamsCreateDiscussionCommentInOrgRequestBody request) {
-        this.request = request;
+    /**
+     * The number that identifies the discussion.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
+    public Long discussionNumber;
+    public TeamsCreateDiscussionCommentInOrgRequest withDiscussionNumber(Long discussionNumber) {
+        this.discussionNumber = discussionNumber;
+        return this;
+    }
+    
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public TeamsCreateDiscussionCommentInOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * The slug of the team name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
+    public String teamSlug;
+    public TeamsCreateDiscussionCommentInOrgRequest withTeamSlug(String teamSlug) {
+        this.teamSlug = teamSlug;
         return this;
     }
     

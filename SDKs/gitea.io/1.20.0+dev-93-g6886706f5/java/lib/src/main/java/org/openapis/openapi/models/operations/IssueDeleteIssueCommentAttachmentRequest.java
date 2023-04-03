@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueDeleteIssueCommentAttachmentRequest {
+    /**
+     * id of the attachment to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attachment_id")
+    public Long attachmentId;
+    public IssueDeleteIssueCommentAttachmentRequest withAttachmentId(Long attachmentId) {
+        this.attachmentId = attachmentId;
+        return this;
+    }
     
-    public IssueDeleteIssueCommentAttachmentPathParams pathParams;
-    public IssueDeleteIssueCommentAttachmentRequest withPathParams(IssueDeleteIssueCommentAttachmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of the comment
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public IssueDeleteIssueCommentAttachmentRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueDeleteIssueCommentAttachmentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueDeleteIssueCommentAttachmentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

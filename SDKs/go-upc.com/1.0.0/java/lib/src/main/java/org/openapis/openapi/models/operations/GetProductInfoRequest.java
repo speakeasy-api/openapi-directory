@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductInfoRequest {
-    
-    public GetProductInfoPathParams pathParams;
-    public GetProductInfoRequest withPathParams(GetProductInfoPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=code")
+    public String code;
+    public GetProductInfoRequest withCode(String code) {
+        this.code = code;
         return this;
     }
     

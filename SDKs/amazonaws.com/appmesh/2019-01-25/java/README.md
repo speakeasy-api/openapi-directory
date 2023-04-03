@@ -17,9 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateGatewayRoutePathParams;
-import org.openapis.openapi.models.operations.CreateGatewayRouteQueryParams;
-import org.openapis.openapi.models.operations.CreateGatewayRouteHeaders;
 import org.openapis.openapi.models.operations.CreateGatewayRouteRequestBodySpec;
 import org.openapis.openapi.models.operations.CreateGatewayRouteRequestBody;
 import org.openapis.openapi.models.operations.CreateGatewayRouteRequest;
@@ -55,84 +52,94 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateGatewayRouteRequest req = new CreateGatewayRouteRequest() {{
-                pathParams = new CreateGatewayRoutePathParams() {{
-                    meshName = "corrupti";
-                    virtualGatewayName = "provident";
-                }};
-                queryParams = new CreateGatewayRouteQueryParams() {{
-                    meshOwner = "distinctio";
-                }};
-                headers = new CreateGatewayRouteHeaders() {{
-                    xAmzAlgorithm = "quibusdam";
-                    xAmzContentSha256 = "unde";
-                    xAmzCredential = "nulla";
-                    xAmzDate = "corrupti";
-                    xAmzSecurityToken = "illum";
-                    xAmzSignature = "vel";
-                    xAmzSignedHeaders = "error";
-                }};
-                request = new CreateGatewayRouteRequestBody() {{
-                    clientToken = "deserunt";
-                    gatewayRouteName = "suscipit";
+                requestBody = new CreateGatewayRouteRequestBody() {{
+                    clientToken = "corrupti";
+                    gatewayRouteName = "provident";
                     spec = new CreateGatewayRouteRequestBodySpec() {{
                         grpcRoute = new GrpcGatewayRoute() {{
                             action = new GrpcGatewayRouteAction() {{
                                 rewrite = new GrpcGatewayRouteRewrite() {{
                                     hostname = new GatewayRouteHostnameRewrite() {{
-                                        defaultTargetHostname = "ENABLED";
+                                        defaultTargetHostname = "DISABLED";
                                     }};
                                 }};
                                 target = new GatewayRouteTarget() {{
-                                    port = 297534;
+                                    port = 844266;
                                     virtualService = new GatewayRouteVirtualService() {{
-                                        virtualServiceName = "debitis";
+                                        virtualServiceName = "unde";
                                     }};
                                 }};
                             }};
                             match = new GrpcGatewayRouteMatch() {{
                                 hostname = new GatewayRouteHostnameMatch() {{
-                                    exact = "ipsa";
-                                    suffix = "delectus";
+                                    exact = "nulla";
+                                    suffix = "corrupti";
                                 }};
                                 metadata = new org.openapis.openapi.models.shared.GrpcGatewayRouteMetadata[]{{
                                     add(new GrpcGatewayRouteMetadata() {{
                                         invert = false;
                                         match = new GrpcMetadataMatchMethod() {{
-                                            exact = "suscipit";
-                                            prefix = "molestiae";
+                                            exact = "vel";
+                                            prefix = "error";
                                             range = new MatchRange() {{
-                                                end = 791725;
-                                                start = 812169;
+                                                end = 645894;
+                                                start = 384382;
                                             }};
-                                            regex = "voluptatum";
-                                            suffix = "iusto";
+                                            regex = "iure";
+                                            suffix = "magnam";
                                         }};
-                                        name = "excepturi";
+                                        name = "debitis";
                                     }}),
                                     add(new GrpcGatewayRouteMetadata() {{
                                         invert = false;
                                         match = new GrpcMetadataMatchMethod() {{
-                                            exact = "nisi";
-                                            prefix = "recusandae";
+                                            exact = "ipsa";
+                                            prefix = "delectus";
                                             range = new MatchRange() {{
-                                                end = 836079;
-                                                start = 71036;
+                                                end = 272656;
+                                                start = 383441;
                                             }};
-                                            regex = "quis";
-                                            suffix = "veritatis";
+                                            regex = "molestiae";
+                                            suffix = "minus";
                                         }};
-                                        name = "deserunt";
+                                        name = "placeat";
+                                    }}),
+                                    add(new GrpcGatewayRouteMetadata() {{
+                                        invert = false;
+                                        match = new GrpcMetadataMatchMethod() {{
+                                            exact = "voluptatum";
+                                            prefix = "iusto";
+                                            range = new MatchRange() {{
+                                                end = 568045;
+                                                start = 392785;
+                                            }};
+                                            regex = "recusandae";
+                                            suffix = "temporibus";
+                                        }};
+                                        name = "ab";
+                                    }}),
+                                    add(new GrpcGatewayRouteMetadata() {{
+                                        invert = false;
+                                        match = new GrpcMetadataMatchMethod() {{
+                                            exact = "quis";
+                                            prefix = "veritatis";
+                                            range = new MatchRange() {{
+                                                end = 648172;
+                                                start = 20218;
+                                            }};
+                                            regex = "ipsam";
+                                            suffix = "repellendus";
+                                        }};
+                                        name = "sapiente";
                                     }}),
                                 }};
-                                port = 20218;
-                                serviceName = "ipsam";
+                                port = 778157;
+                                serviceName = "odit";
                             }};
                         }};
                         http2Route = new HttpGatewayRoute() {{
@@ -142,17 +149,17 @@ public class Application {
                                         defaultTargetHostname = "DISABLED";
                                     }};
                                     path = new HttpGatewayRoutePathRewrite() {{
-                                        exact = "sapiente";
+                                        exact = "at";
                                     }};
                                     prefix = new HttpGatewayRoutePrefixRewrite() {{
                                         defaultPrefix = "DISABLED";
-                                        value = "odit";
+                                        value = "molestiae";
                                     }};
                                 }};
                                 target = new GatewayRouteTarget() {{
-                                    port = 870013;
+                                    port = 799159;
                                     virtualService = new GatewayRouteVirtualService() {{
-                                        virtualServiceName = "at";
+                                        virtualServiceName = "quod";
                                     }};
                                 }};
                             }};
@@ -161,95 +168,61 @@ public class Application {
                                     add(new HttpGatewayRouteHeader() {{
                                         invert = false;
                                         match = new HeaderMatchMethod() {{
-                                            exact = "molestiae";
-                                            prefix = "quod";
+                                            exact = "totam";
+                                            prefix = "porro";
                                             range = new MatchRange() {{
-                                                end = 800911;
-                                                start = 461479;
+                                                end = 678880;
+                                                start = 118274;
+                                            }};
+                                            regex = "nam";
+                                            suffix = "officia";
+                                        }};
+                                        name = "occaecati";
+                                    }}),
+                                    add(new HttpGatewayRouteHeader() {{
+                                        invert = false;
+                                        match = new HeaderMatchMethod() {{
+                                            exact = "fugit";
+                                            prefix = "deleniti";
+                                            range = new MatchRange() {{
+                                                end = 944669;
+                                                start = 758616;
                                             }};
                                             regex = "totam";
-                                            suffix = "porro";
+                                            suffix = "beatae";
                                         }};
-                                        name = "dolorum";
-                                    }}),
-                                    add(new HttpGatewayRouteHeader() {{
-                                        invert = false;
-                                        match = new HeaderMatchMethod() {{
-                                            exact = "dicta";
-                                            prefix = "nam";
-                                            range = new MatchRange() {{
-                                                end = 639921;
-                                                start = 582020;
-                                            }};
-                                            regex = "fugit";
-                                            suffix = "deleniti";
-                                        }};
-                                        name = "hic";
-                                    }}),
-                                    add(new HttpGatewayRouteHeader() {{
-                                        invert = false;
-                                        match = new HeaderMatchMethod() {{
-                                            exact = "optio";
-                                            prefix = "totam";
-                                            range = new MatchRange() {{
-                                                end = 105907;
-                                                start = 414662;
-                                            }};
-                                            regex = "molestiae";
-                                            suffix = "modi";
-                                        }};
-                                        name = "qui";
-                                    }}),
-                                    add(new HttpGatewayRouteHeader() {{
-                                        invert = false;
-                                        match = new HeaderMatchMethod() {{
-                                            exact = "impedit";
-                                            prefix = "cum";
-                                            range = new MatchRange() {{
-                                                end = 456150;
-                                                start = 216550;
-                                            }};
-                                            regex = "excepturi";
-                                            suffix = "aspernatur";
-                                        }};
-                                        name = "perferendis";
+                                        name = "commodi";
                                     }}),
                                 }};
                                 hostname = new GatewayRouteHostnameMatch() {{
-                                    exact = "ad";
-                                    suffix = "natus";
+                                    exact = "molestiae";
+                                    suffix = "modi";
                                 }};
                                 method = "HEAD";
                                 path = new HttpPathMatch() {{
-                                    exact = "iste";
-                                    regex = "dolor";
+                                    exact = "impedit";
+                                    regex = "cum";
                                 }};
-                                port = 616934;
-                                prefix = "laboriosam";
+                                port = 456150;
+                                prefix = "ipsum";
                                 queryParameters = new org.openapis.openapi.models.shared.HttpQueryParameter[]{{
                                     add(new HttpQueryParameter() {{
                                         match = new QueryParameterMatch() {{
-                                            exact = "saepe";
+                                            exact = "aspernatur";
                                         }};
-                                        name = "fuga";
+                                        name = "perferendis";
                                     }}),
                                     add(new HttpQueryParameter() {{
                                         match = new QueryParameterMatch() {{
-                                            exact = "in";
+                                            exact = "ad";
                                         }};
-                                        name = "corporis";
+                                        name = "natus";
                                     }}),
                                     add(new HttpQueryParameter() {{
                                         match = new QueryParameterMatch() {{
-                                            exact = "iste";
+                                            exact = "sed";
                                         }};
-                                        name = "iure";
-                                    }}),
-                                    add(new HttpQueryParameter() {{
-                                        match = new QueryParameterMatch() {{
-                                            exact = "saepe";
-                                        }};
-                                        name = "quidem";
+                                        name = "iste";
                                     }}),
                                 }};
                             }};
@@ -261,17 +234,17 @@ public class Application {
                                         defaultTargetHostname = "ENABLED";
                                     }};
                                     path = new HttpGatewayRoutePathRewrite() {{
-                                        exact = "ipsa";
+                                        exact = "natus";
                                     }};
                                     prefix = new HttpGatewayRoutePrefixRewrite() {{
-                                        defaultPrefix = "DISABLED";
-                                        value = "est";
+                                        defaultPrefix = "ENABLED";
+                                        value = "hic";
                                     }};
                                 }};
                                 target = new GatewayRouteTarget() {{
-                                    port = 653140;
+                                    port = 902599;
                                     virtualService = new GatewayRouteVirtualService() {{
-                                        virtualServiceName = "laborum";
+                                        virtualServiceName = "fuga";
                                     }};
                                 }};
                             }};
@@ -280,49 +253,85 @@ public class Application {
                                     add(new HttpGatewayRouteHeader() {{
                                         invert = false;
                                         match = new HeaderMatchMethod() {{
-                                            exact = "dolorem";
-                                            prefix = "corporis";
+                                            exact = "corporis";
+                                            prefix = "iste";
                                             range = new MatchRange() {{
-                                                end = 128926;
-                                                start = 750686;
+                                                end = 437032;
+                                                start = 902349;
                                             }};
-                                            regex = "enim";
-                                            suffix = "omnis";
+                                            regex = "quidem";
+                                            suffix = "architecto";
                                         }};
-                                        name = "nemo";
+                                        name = "ipsa";
+                                    }}),
+                                    add(new HttpGatewayRouteHeader() {{
+                                        invert = false;
+                                        match = new HeaderMatchMethod() {{
+                                            exact = "reiciendis";
+                                            prefix = "est";
+                                            range = new MatchRange() {{
+                                                end = 653140;
+                                                start = 670638;
+                                            }};
+                                            regex = "dolores";
+                                            suffix = "dolorem";
+                                        }};
+                                        name = "corporis";
                                     }}),
                                 }};
                                 hostname = new GatewayRouteHostnameMatch() {{
-                                    exact = "minima";
-                                    suffix = "excepturi";
+                                    exact = "explicabo";
+                                    suffix = "nobis";
                                 }};
-                                method = "GET";
+                                method = "POST";
                                 path = new HttpPathMatch() {{
-                                    exact = "iure";
-                                    regex = "culpa";
+                                    exact = "omnis";
+                                    regex = "nemo";
                                 }};
-                                port = 988374;
-                                prefix = "sapiente";
+                                port = 325047;
+                                prefix = "excepturi";
                                 queryParameters = new org.openapis.openapi.models.shared.HttpQueryParameter[]{{
                                     add(new HttpQueryParameter() {{
                                         match = new QueryParameterMatch() {{
-                                            exact = "mollitia";
+                                            exact = "iure";
                                         }};
-                                        name = "dolorem";
+                                        name = "culpa";
                                     }}),
                                 }};
                             }};
                         }};
-                        priority = 635059;
+                        priority = 988374;
                     }};
                     tags = new org.openapis.openapi.models.shared.TagRef[]{{
                         add(new TagRef() {{
-                            key = "repellat";
+                            key = "architecto";
                             value = "mollitia";
+                        }}),
+                        add(new TagRef() {{
+                            key = "dolorem";
+                            value = "culpa";
+                        }}),
+                        add(new TagRef() {{
+                            key = "consequuntur";
+                            value = "repellat";
+                        }}),
+                        add(new TagRef() {{
+                            key = "mollitia";
+                            value = "occaecati";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "numquam";
+                xAmzContentSha256 = "commodi";
+                xAmzCredential = "quam";
+                xAmzDate = "molestiae";
+                xAmzSecurityToken = "velit";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "quia";
+                meshName = "quis";
+                meshOwner = "vitae";
+                virtualGatewayName = "laborum";
+            }}            
 
             CreateGatewayRouteResponse res = sdk.createGatewayRoute(req);
 
@@ -336,7 +345,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

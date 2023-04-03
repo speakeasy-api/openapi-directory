@@ -4,20 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteArchiveRequest {
-    
-    public DeleteArchivePathParams pathParams;
-    public DeleteArchiveRequest withPathParams(DeleteArchivePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DeleteArchiveRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DeleteArchiveRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public DeleteArchiveHeaders headers;
-    public DeleteArchiveRequest withHeaders(DeleteArchiveHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DeleteArchiveRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DeleteArchiveRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DeleteArchiveRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DeleteArchiveRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DeleteArchiveRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The &lt;code&gt;AccountId&lt;/code&gt; value is the AWS account ID of the account that owns the vault. You can either specify an AWS account ID or optionally a single '&lt;code&gt;-&lt;/code&gt;' (hyphen), in which case Amazon S3 Glacier uses the AWS account ID associated with the credentials used to sign the request. If you use an account ID, do not include any hyphens ('-') in the ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public DeleteArchiveRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    
+    /**
+     * The ID of the archive to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=archiveId")
+    public String archiveId;
+    public DeleteArchiveRequest withArchiveId(String archiveId) {
+        this.archiveId = archiveId;
+        return this;
+    }
+    
+    /**
+     * The name of the vault.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vaultName")
+    public String vaultName;
+    public DeleteArchiveRequest withVaultName(String vaultName) {
+        this.vaultName = vaultName;
         return this;
     }
     

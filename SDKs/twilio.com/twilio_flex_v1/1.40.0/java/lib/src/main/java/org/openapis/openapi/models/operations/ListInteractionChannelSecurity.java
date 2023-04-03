@@ -7,10 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListInteractionChannelSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
-    public org.openapis.openapi.models.shared.SchemeAccountSidAuthToken accountSidAuthToken;
-    public ListInteractionChannelSecurity withAccountSidAuthToken(org.openapis.openapi.models.shared.SchemeAccountSidAuthToken accountSidAuthToken) {
-        this.accountSidAuthToken = accountSidAuthToken;
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=password")
+    public String password;
+    public ListInteractionChannelSecurity withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=username")
+    public String username;
+    public ListInteractionChannelSecurity withUsername(String username) {
+        this.username = username;
         return this;
     }
     

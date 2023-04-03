@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CinemaSearchReadPathParams;
 import org.openapis.openapi.models.operations.CinemaSearchReadRequest;
 import org.openapis.openapi.models.operations.CinemaSearchReadResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             CinemaSearchReadRequest req = new CinemaSearchReadRequest() {{
-                pathParams = new CinemaSearchReadPathParams() {{
-                    id = "corrupti";
-                }};
-            }};            
+                id = "corrupti";
+            }}            
 
             CinemaSearchReadResponse res = sdk.cinema.cinemaSearchRead(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### cinema

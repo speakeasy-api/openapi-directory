@@ -4,27 +4,196 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdsenseAccountsReportsGenerateRequest {
-    
-    public AdsenseAccountsReportsGeneratePathParams pathParams;
-    public AdsenseAccountsReportsGenerateRequest withPathParams(AdsenseAccountsReportsGeneratePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account upon which to report.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AdsenseAccountsReportsGenerateRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public AdsenseAccountsReportsGenerateQueryParams queryParams;
-    public AdsenseAccountsReportsGenerateRequest withQueryParams(AdsenseAccountsReportsGenerateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AdsenseAccountsReportsGenerateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
+    /**
+     * Optional currency to use when reporting on monetary metrics. Defaults to the account's currency if not set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency")
+    public String currency;
+    public AdsenseAccountsReportsGenerateRequest withCurrency(String currency) {
+        this.currency = currency;
+        return this;
+    }
     
-    public AdsenseAccountsReportsGenerateSecurity security;
-    public AdsenseAccountsReportsGenerateRequest withSecurity(AdsenseAccountsReportsGenerateSecurity security) {
-        this.security = security;
+    /**
+     * Dimensions to base the report on.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dimension")
+    public String[] dimension;
+    public AdsenseAccountsReportsGenerateRequest withDimension(String[] dimension) {
+        this.dimension = dimension;
+        return this;
+    }
+    
+    /**
+     * End of the date range to report on in "YYYY-MM-DD" format, inclusive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public String endDate;
+    public AdsenseAccountsReportsGenerateRequest withEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AdsenseAccountsReportsGenerateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Filters to be run on the report.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String[] filter;
+    public AdsenseAccountsReportsGenerateRequest withFilter(String[] filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AdsenseAccountsReportsGenerateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Optional locale to use for translating report output to a local language. Defaults to "en_US" if not specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public AdsenseAccountsReportsGenerateRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
+    
+    /**
+     * The maximum number of rows of report data to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public AdsenseAccountsReportsGenerateRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Numeric columns to include in the report.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metric")
+    public String[] metric;
+    public AdsenseAccountsReportsGenerateRequest withMetric(String[] metric) {
+        this.metric = metric;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AdsenseAccountsReportsGenerateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AdsenseAccountsReportsGenerateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AdsenseAccountsReportsGenerateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The name of a dimension or metric to sort the resulting report on, optionally prefixed with "+" to sort ascending or "-" to sort descending. If no prefix is specified, the column is sorted ascending.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String[] sort;
+    public AdsenseAccountsReportsGenerateRequest withSort(String[] sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Start of the date range to report on in "YYYY-MM-DD" format, inclusive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public String startDate;
+    public AdsenseAccountsReportsGenerateRequest withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * Index of the first row of report data to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
+    public Long startIndex;
+    public AdsenseAccountsReportsGenerateRequest withStartIndex(Long startIndex) {
+        this.startIndex = startIndex;
+        return this;
+    }
+    
+    /**
+     * Whether the report should be generated in the AdSense account's local timezone. If false default PST/PDT timezone will be used.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useTimezoneReporting")
+    public Boolean useTimezoneReporting;
+    public AdsenseAccountsReportsGenerateRequest withUseTimezoneReporting(Boolean useTimezoneReporting) {
+        this.useTimezoneReporting = useTimezoneReporting;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AdsenseAccountsReportsGenerateRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

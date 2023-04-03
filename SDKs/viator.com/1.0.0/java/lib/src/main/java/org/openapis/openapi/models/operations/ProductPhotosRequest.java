@@ -4,20 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductPhotosRequest {
-    
-    public ProductPhotosQueryParams queryParams;
-    public ProductPhotosRequest withQueryParams(ProductPhotosQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public ProductPhotosRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
+    /**
+     * **unique alphanumeric identifier** of the product
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code")
+    public String code;
+    public ProductPhotosRequest withCode(String code) {
+        this.code = code;
+        return this;
+    }
     
-    public ProductPhotosHeaders headers;
-    public ProductPhotosRequest withHeaders(ProductPhotosHeaders headers) {
-        this.headers = headers;
+    /**
+     * **specifier** as to whether or not to show 'unavailable' products:
+     * 
+     *   - `true`: return *both* available and unavailable products
+     *   - `false`: return *only* available products (default)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showUnavailable")
+    public Boolean showUnavailable;
+    public ProductPhotosRequest withShowUnavailable(Boolean showUnavailable) {
+        this.showUnavailable = showUnavailable;
+        return this;
+    }
+    
+    /**
+     * **start and end rows** to return in the format {start}-{end}
+     * - e.g. `'1-10'`, `'11-20'`
+     * 
+     * **Note**: 
+     * - the maximum number of rows per request is 100; therefore, `'100-400'` will return the same as `'100-200'`
+     * - if `topX` is not specified, the default is `'1-100'`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=topX")
+    public String topX;
+    public ProductPhotosRequest withTopX(String topX) {
+        this.topX = topX;
         return this;
     }
     

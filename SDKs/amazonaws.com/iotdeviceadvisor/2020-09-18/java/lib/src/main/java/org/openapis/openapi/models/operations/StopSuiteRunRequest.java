@@ -4,20 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopSuiteRunRequest {
-    
-    public StopSuiteRunPathParams pathParams;
-    public StopSuiteRunRequest withPathParams(StopSuiteRunPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public StopSuiteRunRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public StopSuiteRunRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public StopSuiteRunHeaders headers;
-    public StopSuiteRunRequest withHeaders(StopSuiteRunHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public StopSuiteRunRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public StopSuiteRunRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public StopSuiteRunRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public StopSuiteRunRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public StopSuiteRunRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * Suite definition ID of the test suite run to be stopped.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=suiteDefinitionId")
+    public String suiteDefinitionId;
+    public StopSuiteRunRequest withSuiteDefinitionId(String suiteDefinitionId) {
+        this.suiteDefinitionId = suiteDefinitionId;
+        return this;
+    }
+    
+    /**
+     * Suite run ID of the test suite run to be stopped.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=suiteRunId")
+    public String suiteRunId;
+    public StopSuiteRunRequest withSuiteRunId(String suiteRunId) {
+        this.suiteRunId = suiteRunId;
         return this;
     }
     

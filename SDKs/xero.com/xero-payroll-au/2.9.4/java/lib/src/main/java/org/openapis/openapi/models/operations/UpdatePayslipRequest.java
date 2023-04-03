@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePayslipRequest {
-    
-    public UpdatePayslipPathParams pathParams;
-    public UpdatePayslipRequest withPathParams(UpdatePayslipPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdatePayslipHeaders headers;
-    public UpdatePayslipRequest withHeaders(UpdatePayslipHeaders headers) {
-        this.headers = headers;
+    /**
+     * Payslip id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PayslipID")
+    public String payslipID;
+    public UpdatePayslipRequest withPayslipID(String payslipID) {
+        this.payslipID = payslipID;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PayslipLines[] request;
-    public UpdatePayslipRequest withRequest(org.openapis.openapi.models.shared.PayslipLines[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PayslipLines[] requestBody;
+    public UpdatePayslipRequest withRequestBody(org.openapis.openapi.models.shared.PayslipLines[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdatePayslipSecurity security;
-    public UpdatePayslipRequest withSecurity(UpdatePayslipSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public UpdatePayslipRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

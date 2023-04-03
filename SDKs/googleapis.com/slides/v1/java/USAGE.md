@@ -11,10 +11,9 @@ import org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdateSecu
 import org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdateSecurityOption5;
 import org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdateSecurityOption6;
 import org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdateSecurity;
-import org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdatePathParams;
-import org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdateQueryParams;
 import org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdateRequest;
 import org.openapis.openapi.models.operations.SlidesPresentationsBatchUpdateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.BatchUpdatePresentationRequest;
 import org.openapis.openapi.models.shared.WriteControl;
 import org.openapis.openapi.models.shared.Request;
@@ -149,10 +148,7 @@ import org.openapis.openapi.models.shared.CreateLineRequestCategoryEnum;
 import org.openapis.openapi.models.shared.CreateLineRequestLineCategoryEnum;
 import org.openapis.openapi.models.shared.CreateLineRequest;
 import org.openapis.openapi.models.shared.CreateImageRequest;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -161,159 +157,152 @@ public class Application {
                 .build();
 
             SlidesPresentationsBatchUpdateRequest req = new SlidesPresentationsBatchUpdateRequest() {{
-                security = new SlidesPresentationsBatchUpdateSecurity() {{
-                    option1 = new SlidesPresentationsBatchUpdateSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new SlidesPresentationsBatchUpdatePathParams() {{
-                    presentationId = "corrupti";
-                }};
-                queryParams = new SlidesPresentationsBatchUpdateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new BatchUpdatePresentationRequest() {{
+                dollarXgafv = "2";
+                batchUpdatePresentationRequest = new BatchUpdatePresentationRequest() {{
                     requests = new org.openapis.openapi.models.shared.Request[]{{
                         add(new Request() {{
                             createImage = new CreateImageRequest() {{
                                 elementProperties = new PageElementProperties() {{
-                                    pageObjectId = "iure";
+                                    pageObjectId = "distinctio";
                                     size = new Size() {{
                                         height = new Dimension() {{
-                                            magnitude = 2975.34;
-                                            unit = "PT";
+                                            magnitude = 8442.66;
+                                            unit = "EMU";
                                         }};
                                         width = new Dimension() {{
-                                            magnitude = 567.13;
-                                            unit = "PT";
+                                            magnitude = 8579.46;
+                                            unit = "EMU";
                                         }};
                                     }};
                                     transform = new AffineTransform() {{
-                                        scaleX = 2726.56;
-                                        scaleY = 3834.41;
-                                        shearX = 4776.65;
-                                        shearY = 7917.25;
-                                        translateX = 8121.69;
-                                        translateY = 5288.95;
-                                        unit = "EMU";
+                                        scaleX = 8472.52;
+                                        scaleY = 4236.55;
+                                        shearX = 6235.64;
+                                        shearY = 6458.94;
+                                        translateX = 3843.82;
+                                        translateY = 4375.87;
+                                        unit = "UNIT_UNSPECIFIED";
                                     }};
                                 }};
-                                objectId = "excepturi";
-                                url = "nisi";
+                                objectId = "debitis";
+                                url = "ipsa";
                             }};
                             createLine = new CreateLineRequest() {{
                                 category = "CURVED";
                                 elementProperties = new PageElementProperties() {{
-                                    pageObjectId = "temporibus";
+                                    pageObjectId = "tempora";
                                     size = new Size() {{
                                         height = new Dimension() {{
-                                            magnitude = 710.36;
+                                            magnitude = 3834.41;
                                             unit = "EMU";
                                         }};
                                         width = new Dimension() {{
-                                            magnitude = 871.29;
-                                            unit = "EMU";
+                                            magnitude = 7917.25;
+                                            unit = "PT";
                                         }};
                                     }};
                                     transform = new AffineTransform() {{
-                                        scaleX = 202.18;
-                                        scaleY = 3682.41;
-                                        shearX = 8326.2;
-                                        shearY = 9571.56;
-                                        translateX = 7781.57;
-                                        translateY = 1403.5;
-                                        unit = "PT";
+                                        scaleX = 5288.95;
+                                        scaleY = 4799.77;
+                                        shearX = 5680.45;
+                                        shearY = 3927.85;
+                                        translateX = 9255.97;
+                                        translateY = 8360.79;
+                                        unit = "UNIT_UNSPECIFIED";
                                     }};
                                 }};
-                                lineCategory = "CURVED";
-                                objectId = "maiores";
+                                lineCategory = "BENT";
+                                objectId = "veritatis";
                             }};
                             createParagraphBullets = new CreateParagraphBulletsRequest() {{
-                                bulletPreset = "BULLET_DIAMONDX_HOLLOWDIAMOND_SQUARE";
+                                bulletPreset = "NUMBERED_DIGIT_ALPHA_ROMAN";
                                 cellLocation = new TableCellLocation() {{
-                                    columnIndex = 799159;
-                                    rowIndex = 800911;
+                                    columnIndex = 20218;
+                                    rowIndex = 368241;
                                 }};
-                                objectId = "esse";
+                                objectId = "repellendus";
                                 textRange = new Range() {{
-                                    endIndex = 520478;
-                                    startIndex = 780529;
-                                    type = "FROM_START_INDEX";
+                                    endIndex = 957156;
+                                    startIndex = 778157;
+                                    type = "RANGE_TYPE_UNSPECIFIED";
                                 }};
                             }};
                             createShape = new CreateShapeRequest() {{
                                 elementProperties = new PageElementProperties() {{
-                                    pageObjectId = "dicta";
+                                    pageObjectId = "at";
                                     size = new Size() {{
                                         height = new Dimension() {{
-                                            magnitude = 7206.33;
-                                            unit = "EMU";
+                                            magnitude = 8700.88;
+                                            unit = "PT";
                                         }};
                                         width = new Dimension() {{
-                                            magnitude = 5820.2;
-                                            unit = "UNIT_UNSPECIFIED";
+                                            magnitude = 4736.08;
+                                            unit = "PT";
                                         }};
                                     }};
                                     transform = new AffineTransform() {{
-                                        scaleX = 5373.73;
-                                        scaleY = 9446.69;
-                                        shearX = 7586.16;
-                                        shearY = 5218.48;
-                                        translateX = 1059.07;
-                                        translateY = 4146.62;
-                                        unit = "EMU";
+                                        scaleX = 8009.11;
+                                        scaleY = 4614.79;
+                                        shearX = 5204.78;
+                                        shearY = 7805.29;
+                                        translateX = 6788.8;
+                                        translateY = 1182.74;
+                                        unit = "PT";
                                     }};
                                 }};
-                                objectId = "modi";
-                                shapeType = "DONUT";
+                                objectId = "officia";
+                                shapeType = "STAR_16";
                             }};
                             createSheetsChart = new CreateSheetsChartRequest() {{
-                                chartId = 774234;
+                                chartId = 143353;
                                 elementProperties = new PageElementProperties() {{
-                                    pageObjectId = "cum";
+                                    pageObjectId = "deleniti";
                                     size = new Size() {{
                                         height = new Dimension() {{
-                                            magnitude = 4561.5;
-                                            unit = "UNIT_UNSPECIFIED";
+                                            magnitude = 9446.69;
+                                            unit = "PT";
                                         }};
                                         width = new Dimension() {{
-                                            magnitude = 5684.34;
+                                            magnitude = 5218.48;
                                             unit = "UNIT_UNSPECIFIED";
                                         }};
                                     }};
                                     transform = new AffineTransform() {{
-                                        scaleX = 187.89;
-                                        scaleY = 3241.41;
-                                        shearX = 6176.36;
-                                        shearY = 1496.75;
-                                        translateX = 6120.96;
-                                        translateY = 2223.21;
+                                        scaleX = 4146.62;
+                                        scaleY = 4736;
+                                        shearX = 2645.55;
+                                        shearY = 1863.32;
+                                        translateX = 7742.34;
+                                        translateY = 7369.18;
                                         unit = "EMU";
                                     }};
                                 }};
                                 linkingMode = "NOT_LINKED_IMAGE";
-                                objectId = "hic";
-                                spreadsheetId = "saepe";
+                                objectId = "excepturi";
+                                spreadsheetId = "aspernatur";
                             }};
                             createSlide = new CreateSlideRequest() {{
-                                insertionIndex = 681820;
-                                objectId = "in";
+                                insertionIndex = 18789;
+                                objectId = "ad";
                                 placeholderIdMappings = new org.openapis.openapi.models.shared.LayoutPlaceholderIdMapping[]{{
+                                    add(new LayoutPlaceholderIdMapping() {{
+                                        layoutPlaceholder = new Placeholder() {{
+                                            index = 149675;
+                                            parentObjectId = "iste";
+                                            type = "CLIP_ART";
+                                        }};
+                                        layoutPlaceholderObjectId = "natus";
+                                        objectId = "laboriosam";
+                                    }}),
+                                    add(new LayoutPlaceholderIdMapping() {{
+                                        layoutPlaceholder = new Placeholder() {{
+                                            index = 943749;
+                                            parentObjectId = "saepe";
+                                            type = "PICTURE";
+                                        }};
+                                        layoutPlaceholderObjectId = "in";
+                                        objectId = "corporis";
+                                    }}),
                                     add(new LayoutPlaceholderIdMapping() {{
                                         layoutPlaceholder = new Placeholder() {{
                                             index = 613064;
@@ -323,264 +312,257 @@ public class Application {
                                         layoutPlaceholderObjectId = "quidem";
                                         objectId = "architecto";
                                     }}),
-                                    add(new LayoutPlaceholderIdMapping() {{
-                                        layoutPlaceholder = new Placeholder() {{
-                                            index = 60225;
-                                            parentObjectId = "reiciendis";
-                                            type = "PICTURE";
-                                        }};
-                                        layoutPlaceholderObjectId = "mollitia";
-                                        objectId = "laborum";
-                                    }}),
                                 }};
                                 slideLayoutReference = new LayoutReference() {{
-                                    layoutId = "dolores";
-                                    predefinedLayout = "CAPTION_ONLY";
+                                    layoutId = "ipsa";
+                                    predefinedLayout = "BIG_NUMBER";
                                 }};
                             }};
                             createTable = new CreateTableRequest() {{
-                                columns = 358152;
+                                columns = 666767;
                                 elementProperties = new PageElementProperties() {{
-                                    pageObjectId = "explicabo";
+                                    pageObjectId = "mollitia";
                                     size = new Size() {{
                                         height = new Dimension() {{
-                                            magnitude = 7506.86;
+                                            magnitude = 6706.38;
                                             unit = "UNIT_UNSPECIFIED";
                                         }};
                                         width = new Dimension() {{
-                                            magnitude = 6078.31;
+                                            magnitude = 2103.82;
                                             unit = "EMU";
                                         }};
                                     }};
                                     transform = new AffineTransform() {{
-                                        scaleX = 3250.47;
-                                        scaleY = 5701.97;
-                                        shearX = 384.25;
-                                        shearY = 4386.01;
-                                        translateX = 6342.74;
-                                        translateY = 9883.74;
-                                        unit = "PT";
-                                    }};
-                                }};
-                                objectId = "architecto";
-                                rows = 652790;
-                            }};
-                            createVideo = new CreateVideoRequest() {{
-                                elementProperties = new PageElementProperties() {{
-                                    pageObjectId = "dolorem";
-                                    size = new Size() {{
-                                        height = new Dimension() {{
-                                            magnitude = 6350.59;
-                                            unit = "UNIT_UNSPECIFIED";
-                                        }};
-                                        width = new Dimension() {{
-                                            magnitude = 9953;
-                                            unit = "EMU";
-                                        }};
-                                    }};
-                                    transform = new AffineTransform() {{
-                                        scaleX = 5818.5;
-                                        scaleY = 2532.91;
-                                        shearX = 4143.69;
-                                        shearY = 4663.11;
-                                        translateX = 4746.97;
-                                        translateY = 2444.25;
+                                        scaleX = 1289.26;
+                                        scaleY = 7506.86;
+                                        shearX = 3154.28;
+                                        shearY = 6078.31;
+                                        translateX = 3637.11;
+                                        translateY = 3250.47;
                                         unit = "EMU";
                                     }};
                                 }};
-                                id = "quia";
-                                objectId = "quis";
-                                source = "SOURCE_UNSPECIFIED";
+                                objectId = "accusantium";
+                                rows = 438601;
+                            }};
+                            createVideo = new CreateVideoRequest() {{
+                                elementProperties = new PageElementProperties() {{
+                                    pageObjectId = "culpa";
+                                    size = new Size() {{
+                                        height = new Dimension() {{
+                                            magnitude = 9883.74;
+                                            unit = "PT";
+                                        }};
+                                        width = new Dimension() {{
+                                            magnitude = 1020.44;
+                                            unit = "EMU";
+                                        }};
+                                    }};
+                                    transform = new AffineTransform() {{
+                                        scaleX = 2088.76;
+                                        scaleY = 6350.59;
+                                        shearX = 1613.09;
+                                        shearY = 9953;
+                                        translateX = 6531.08;
+                                        translateY = 5818.5;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                }};
+                                id = "commodi";
+                                objectId = "quam";
+                                source = "YOUTUBE";
                             }};
                             deleteObject = new DeleteObjectRequest() {{
-                                objectId = "laborum";
+                                objectId = "velit";
                             }};
                             deleteParagraphBullets = new DeleteParagraphBulletsRequest() {{
                                 cellLocation = new TableCellLocation() {{
-                                    columnIndex = 656330;
-                                    rowIndex = 317202;
+                                    columnIndex = 623510;
+                                    rowIndex = 158969;
                                 }};
-                                objectId = "odit";
+                                objectId = "quis";
                                 textRange = new Range() {{
-                                    endIndex = 778346;
-                                    startIndex = 196582;
-                                    type = "ALL";
+                                    endIndex = 110375;
+                                    startIndex = 674752;
+                                    type = "FROM_START_INDEX";
                                 }};
                             }};
                             deleteTableColumn = new DeleteTableColumnRequest() {{
                                 cellLocation = new TableCellLocation() {{
-                                    columnIndex = 368725;
-                                    rowIndex = 662527;
+                                    columnIndex = 317202;
+                                    rowIndex = 138183;
                                 }};
-                                tableObjectId = "possimus";
+                                tableObjectId = "quo";
                             }};
                             deleteTableRow = new DeleteTableRowRequest() {{
                                 cellLocation = new TableCellLocation() {{
-                                    columnIndex = 13571;
-                                    rowIndex = 97101;
+                                    columnIndex = 196582;
+                                    rowIndex = 949572;
                                 }};
-                                tableObjectId = "error";
+                                tableObjectId = "ipsam";
                             }};
                             deleteText = new DeleteTextRequest() {{
                                 cellLocation = new TableCellLocation() {{
-                                    columnIndex = 837945;
-                                    rowIndex = 673660;
+                                    columnIndex = 662527;
+                                    rowIndex = 820994;
                                 }};
-                                objectId = "quasi";
+                                objectId = "aut";
                                 textRange = new Range() {{
-                                    endIndex = 971945;
-                                    startIndex = 976460;
+                                    endIndex = 97101;
+                                    startIndex = 622846;
                                     type = "ALL";
                                 }};
                             }};
                             duplicateObject = new DuplicateObjectRequest() {{
-                                objectId = "nihil";
+                                objectId = "laborum";
                                 objectIds = new java.util.HashMap<String, String>() {{
-                                    put("voluptatibus", "ipsa");
-                                    put("omnis", "voluptate");
-                                    put("cum", "perferendis");
+                                    put("reiciendis", "voluptatibus");
                                 }};
                             }};
                             groupObjects = new GroupObjectsRequest() {{
                                 childrenObjectIds = new String[]{{
-                                    add("reprehenderit"),
+                                    add("nihil"),
+                                    add("praesentium"),
+                                    add("voluptatibus"),
+                                    add("ipsa"),
                                 }};
-                                groupObjectId = "ut";
+                                groupObjectId = "omnis";
                             }};
                             insertTableColumns = new InsertTableColumnsRequest() {{
                                 cellLocation = new TableCellLocation() {{
-                                    columnIndex = 979587;
-                                    rowIndex = 120196;
+                                    columnIndex = 451159;
+                                    rowIndex = 739264;
                                 }};
                                 insertRight = false;
-                                number = 359444;
-                                tableObjectId = "dolore";
+                                number = 19987;
+                                tableObjectId = "doloremque";
                             }};
                             insertTableRows = new InsertTableRowsRequest() {{
                                 cellLocation = new TableCellLocation() {{
-                                    columnIndex = 480894;
-                                    rowIndex = 118727;
+                                    columnIndex = 441711;
+                                    rowIndex = 282807;
                                 }};
                                 insertBelow = false;
-                                number = 688661;
-                                tableObjectId = "enim";
+                                number = 979587;
+                                tableObjectId = "dicta";
                             }};
                             insertText = new InsertTextRequest() {{
                                 cellLocation = new TableCellLocation() {{
-                                    columnIndex = 880476;
-                                    rowIndex = 414263;
+                                    columnIndex = 359444;
+                                    rowIndex = 296140;
                                 }};
-                                insertionIndex = 918236;
-                                objectId = "quae";
-                                text = "ipsum";
+                                insertionIndex = 480894;
+                                objectId = "dicta";
+                                text = "harum";
                             }};
                             mergeTableCells = new MergeTableCellsRequest() {{
-                                objectId = "quidem";
+                                objectId = "enim";
                                 tableRange = new TableRange() {{
-                                    columnSpan = 565189;
+                                    columnSpan = 880476;
                                     location = new TableCellLocation() {{
-                                        columnIndex = 566602;
-                                        rowIndex = 865103;
+                                        columnIndex = 414263;
+                                        rowIndex = 918236;
                                     }};
-                                    rowSpan = 265389;
+                                    rowSpan = 64147;
                                 }};
                             }};
                             refreshSheetsChart = new RefreshSheetsChartRequest() {{
-                                objectId = "praesentium";
+                                objectId = "ipsum";
                             }};
                             replaceAllShapesWithImage = new ReplaceAllShapesWithImageRequest() {{
                                 containsText = new SubstringMatchCriteria() {{
                                     matchCase = false;
-                                    text = "rem";
+                                    text = "quidem";
                                 }};
-                                imageReplaceMethod = "CENTER_CROP";
-                                imageUrl = "quasi";
+                                imageReplaceMethod = "CENTER_INSIDE";
+                                imageUrl = "excepturi";
                                 pageObjectIds = new String[]{{
-                                    add("sint"),
-                                    add("veritatis"),
-                                    add("itaque"),
-                                    add("incidunt"),
+                                    add("modi"),
+                                    add("praesentium"),
+                                    add("rem"),
+                                    add("voluptates"),
                                 }};
                                 replaceMethod = "CENTER_INSIDE";
                             }};
                             replaceAllShapesWithSheetsChart = new ReplaceAllShapesWithSheetsChartRequest() {{
-                                chartId = 9356;
+                                chartId = 921158;
                                 containsText = new SubstringMatchCriteria() {{
                                     matchCase = false;
-                                    text = "est";
+                                    text = "sint";
                                 }};
-                                linkingMode = "LINKED";
+                                linkingMode = "NOT_LINKED_IMAGE";
                                 pageObjectIds = new String[]{{
-                                    add("deserunt"),
+                                    add("incidunt"),
+                                    add("enim"),
+                                    add("consequatur"),
+                                    add("est"),
                                 }};
-                                spreadsheetId = "distinctio";
+                                spreadsheetId = "quibusdam";
                             }};
                             replaceAllText = new ReplaceAllTextRequest() {{
                                 containsText = new SubstringMatchCriteria() {{
                                     matchCase = false;
-                                    text = "quibusdam";
+                                    text = "explicabo";
                                 }};
                                 pageObjectIds = new String[]{{
-                                    add("modi"),
-                                    add("qui"),
+                                    add("distinctio"),
+                                    add("quibusdam"),
+                                    add("labore"),
                                 }};
-                                replaceText = "aliquid";
+                                replaceText = "modi";
                             }};
                             replaceImage = new ReplaceImageRequest() {{
-                                imageObjectId = "cupiditate";
+                                imageObjectId = "qui";
                                 imageReplaceMethod = "CENTER_INSIDE";
-                                url = "perferendis";
+                                url = "cupiditate";
                             }};
                             rerouteLine = new RerouteLineRequest() {{
-                                objectId = "magni";
+                                objectId = "quos";
                             }};
                             ungroupObjects = new UngroupObjectsRequest() {{
                                 objectIds = new String[]{{
-                                    add("ipsam"),
-                                    add("alias"),
-                                    add("fugit"),
-                                    add("dolorum"),
+                                    add("magni"),
                                 }};
                             }};
                             unmergeTableCells = new UnmergeTableCellsRequest() {{
-                                objectId = "excepturi";
+                                objectId = "assumenda";
                                 tableRange = new TableRange() {{
-                                    columnSpan = 270008;
+                                    columnSpan = 369808;
                                     location = new TableCellLocation() {{
-                                        columnIndex = 703737;
-                                        rowIndex = 735194;
+                                        columnIndex = 4695;
+                                        rowIndex = 146441;
                                     }};
-                                    rowSpan = 288476;
+                                    rowSpan = 677817;
                                 }};
                             }};
                             updateImageProperties = new UpdateImagePropertiesRequest() {{
-                                fields = "delectus";
+                                fields = "excepturi";
                                 imageProperties = new ImageProperties() {{
-                                    brightness = 4332.88;
-                                    contrast = 2487.53;
+                                    brightness = 2700.08;
+                                    contrast = 7037.37;
                                     cropProperties = new CropProperties() {{
-                                        angle = 7561.07;
-                                        bottomOffset = 5761.57;
-                                        leftOffset = 3960.98;
-                                        rightOffset = 5920.42;
-                                        topOffset = 8960.39;
+                                        angle = 7351.94;
+                                        bottomOffset = 2884.76;
+                                        leftOffset = 9621.89;
+                                        rightOffset = 4332.88;
+                                        topOffset = 2487.53;
                                     }};
                                     link = new Link() {{
-                                        pageObjectId = "sint";
-                                        relativeLink = "FIRST_SLIDE";
-                                        slideIndex = 223081;
-                                        url = "debitis";
+                                        pageObjectId = "eligendi";
+                                        relativeLink = "PREVIOUS_SLIDE";
+                                        slideIndex = 396098;
+                                        url = "provident";
                                     }};
                                     outline = new Outline() {{
                                         dashStyle = "LONG_DASH_DOT";
                                         outlineFill = new OutlineFill() {{
                                             solidFill = new SolidFill() {{
-                                                alpha = 6800.56;
+                                                alpha = 5722.52;
                                                 color = new OpaqueColor() {{
                                                     rgbColor = new RgbColor() {{
-                                                        blue = 4471.25;
-                                                        green = 4491.98;
-                                                        red = 8464.09;
+                                                        blue = 6389.21;
+                                                        green = 2230.81;
+                                                        red = 8915.55;
                                                     }};
                                                     themeColor = "BACKGROUND2";
                                                 }};
@@ -588,226 +570,229 @@ public class Application {
                                         }};
                                         propertyState = "INHERIT";
                                         weight = new Dimension() {{
-                                            magnitude = 1162.02;
-                                            unit = "UNIT_UNSPECIFIED";
+                                            magnitude = 4471.25;
+                                            unit = "EMU";
                                         }};
                                     }};
                                     recolor = new Recolor() {{
-                                        name = "DARK9";
+                                        name = "GRAYSCALE";
                                         recolorStops = new org.openapis.openapi.models.shared.ColorStop[]{{
                                             add(new ColorStop() {{
-                                                alpha = 4118.2;
+                                                alpha = 6994.79;
                                                 color = new OpaqueColor() {{
                                                     rgbColor = new RgbColor() {{
-                                                        blue = 3965.06;
-                                                        green = 6754.39;
-                                                        red = 8811.04;
+                                                        blue = 1162.02;
+                                                        green = 2974.37;
+                                                        red = 7670.24;
                                                     }};
-                                                    themeColor = "LIGHT2";
+                                                    themeColor = "TEXT1";
                                                 }};
-                                                position = 5812.73;
+                                                position = 4118.2;
                                             }}),
                                             add(new ColorStop() {{
-                                                alpha = 3132.18;
+                                                alpha = 3965.06;
                                                 color = new OpaqueColor() {{
                                                     rgbColor = new RgbColor() {{
-                                                        blue = 8817.36;
-                                                        green = 9654.17;
-                                                        red = 6925.32;
+                                                        blue = 6754.39;
+                                                        green = 8811.04;
+                                                        red = 2497.96;
+                                                    }};
+                                                    themeColor = "ACCENT5";
+                                                }};
+                                                position = 3132.18;
+                                            }}),
+                                            add(new ColorStop() {{
+                                                alpha = 8817.36;
+                                                color = new OpaqueColor() {{
+                                                    rgbColor = new RgbColor() {{
+                                                        blue = 9654.17;
+                                                        green = 6925.32;
+                                                        red = 5884.65;
+                                                    }};
+                                                    themeColor = "FOLLOWED_HYPERLINK";
+                                                }};
+                                                position = 6596.69;
+                                            }}),
+                                            add(new ColorStop() {{
+                                                alpha = 5013.24;
+                                                color = new OpaqueColor() {{
+                                                    rgbColor = new RgbColor() {{
+                                                        blue = 5332.06;
+                                                        green = 9560.84;
+                                                        red = 2305.33;
                                                     }};
                                                     themeColor = "ACCENT6";
                                                 }};
-                                                position = 7252.55;
-                                            }}),
-                                            add(new ColorStop() {{
-                                                alpha = 6596.69;
-                                                color = new OpaqueColor() {{
-                                                    rgbColor = new RgbColor() {{
-                                                        blue = 5013.24;
-                                                        green = 5332.06;
-                                                        red = 9560.84;
-                                                    }};
-                                                    themeColor = "DARK2";
-                                                }};
-                                                position = 6439.9;
-                                            }}),
-                                            add(new ColorStop() {{
-                                                alpha = 3948.69;
-                                                color = new OpaqueColor() {{
-                                                    rgbColor = new RgbColor() {{
-                                                        blue = 4238.55;
-                                                        green = 6188.09;
-                                                        red = 6063.93;
-                                                    }};
-                                                    themeColor = "ACCENT4";
-                                                }};
-                                                position = 191.93;
+                                                position = 3948.69;
                                             }}),
                                         }};
                                     }};
                                     shadow = new Shadow() {{
                                         alignment = "LEFT_CENTER";
-                                        alpha = 3015.75;
+                                        alpha = 6188.09;
                                         blurRadius = new Dimension() {{
-                                            magnitude = 7160.75;
+                                            magnitude = 6063.93;
                                             unit = "EMU";
                                         }};
                                         color = new OpaqueColor() {{
                                             rgbColor = new RgbColor() {{
-                                                blue = 2879.91;
-                                                green = 2900.77;
-                                                red = 3834.62;
+                                                blue = 191.93;
+                                                green = 4701.32;
+                                                red = 3015.75;
                                             }};
-                                            themeColor = "ACCENT6";
+                                            themeColor = "FOLLOWED_HYPERLINK";
                                         }};
-                                        propertyState = "INHERIT";
+                                        propertyState = "NOT_RENDERED";
                                         rotateWithShape = false;
                                         transform = new AffineTransform() {{
-                                            scaleX = 4287.69;
-                                            scaleY = 8784.53;
-                                            shearX = 1354.74;
-                                            shearY = 1028.63;
-                                            translateX = 2982.82;
-                                            translateY = 923.73;
-                                            unit = "EMU";
+                                            scaleX = 2879.91;
+                                            scaleY = 2900.77;
+                                            shearX = 3834.62;
+                                            shearY = 6180.16;
+                                            translateX = 7491.7;
+                                            translateY = 4287.69;
+                                            unit = "PT";
                                         }};
                                         type = "SHADOW_TYPE_UNSPECIFIED";
                                     }};
-                                    transparency = 5908.73;
+                                    transparency = 1028.63;
                                 }};
-                                objectId = "quos";
+                                objectId = "magnam";
                             }};
                             updateLineCategory = new UpdateLineCategoryRequest() {{
-                                lineCategory = "BENT";
-                                objectId = "accusantium";
+                                lineCategory = "LINE_CATEGORY_UNSPECIFIED";
+                                objectId = "excepturi";
                             }};
                             updateLineProperties = new UpdateLinePropertiesRequest() {{
-                                fields = "mollitia";
+                                fields = "ullam";
                                 lineProperties = new LineProperties() {{
-                                    dashStyle = "LONG_DASH_DOT";
-                                    endArrow = "OPEN_ARROW";
+                                    dashStyle = "DASH_DOT";
+                                    endArrow = "FILL_DIAMOND";
                                     endConnection = new LineConnection() {{
-                                        connectedObjectId = "ad";
-                                        connectionSiteIndex = 431418;
+                                        connectedObjectId = "sint";
+                                        connectionSiteIndex = 33625;
                                     }};
                                     lineFill = new LineFill() {{
                                         solidFill = new SolidFill() {{
-                                            alpha = 2212.62;
+                                            alpha = 6532.01;
                                             color = new OpaqueColor() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 8965.47;
-                                                    green = 1412.64;
-                                                    red = 3675.62;
+                                                    blue = 9689.62;
+                                                    green = 6521.03;
+                                                    red = 3209.97;
                                                 }};
-                                                themeColor = "DARK1";
+                                                themeColor = "ACCENT3";
                                             }};
                                         }};
                                     }};
                                     link = new Link() {{
-                                        pageObjectId = "iure";
+                                        pageObjectId = "dolor";
                                         relativeLink = "LAST_SLIDE";
-                                        slideIndex = 891924;
-                                        url = "eius";
+                                        slideIndex = 141264;
+                                        url = "nemo";
                                     }};
-                                    startArrow = "OPEN_CIRCLE";
+                                    startArrow = "NONE";
                                     startConnection = new LineConnection() {{
-                                        connectedObjectId = "deleniti";
-                                        connectionSiteIndex = 703889;
+                                        connectedObjectId = "iure";
+                                        connectionSiteIndex = 984043;
                                     }};
                                     weight = new Dimension() {{
-                                        magnitude = 4479.26;
+                                        magnitude = 8919.24;
                                         unit = "UNIT_UNSPECIFIED";
                                     }};
                                 }};
-                                objectId = "architecto";
+                                objectId = "maxime";
                             }};
                             updatePageElementAltText = new UpdatePageElementAltTextRequest() {{
-                                description = "repudiandae";
-                                objectId = "ullam";
-                                title = "Miss";
+                                description = "deleniti";
+                                objectId = "facilis";
+                                title = "Ms.";
                             }};
                             updatePageElementTransform = new UpdatePageElementTransformRequest() {{
-                                applyMode = "RELATIVE";
-                                objectId = "repellat";
+                                applyMode = "APPLY_MODE_UNSPECIFIED";
+                                objectId = "architecto";
                                 transform = new AffineTransform() {{
-                                    scaleX = 8411.4;
-                                    scaleY = 1494.48;
-                                    shearX = 9046.48;
-                                    shearY = 8681.26;
-                                    translateX = 375.59;
-                                    translateY = 1624.93;
-                                    unit = "EMU";
+                                    scaleX = 9194.83;
+                                    scaleY = 3523.12;
+                                    shearX = 7142.42;
+                                    shearY = 4692.49;
+                                    translateX = 9988.48;
+                                    translateY = 8411.4;
+                                    unit = "UNIT_UNSPECIFIED";
                                 }};
                             }};
                             updatePageElementsZOrder = new UpdatePageElementsZOrderRequest() {{
-                                operation = "SEND_BACKWARD";
+                                operation = "SEND_TO_BACK";
                                 pageElementObjectIds = new String[]{{
-                                    add("sunt"),
+                                    add("accusantium"),
+                                    add("consequuntur"),
+                                    add("praesentium"),
+                                    add("natus"),
                                 }};
                             }};
                             updatePageProperties = new UpdatePagePropertiesRequest() {{
-                                fields = "quo";
-                                objectId = "illum";
+                                fields = "magni";
+                                objectId = "sunt";
                                 pageProperties = new PageProperties() {{
                                     colorScheme = new ColorScheme() {{
                                         colors = new org.openapis.openapi.models.shared.ThemeColorPair[]{{
                                             add(new ThemeColorPair() {{
                                                 color = new RgbColor() {{
-                                                    blue = 8073.19;
-                                                    green = 4113.97;
-                                                    red = 5691.01;
-                                                }};
-                                                type = "LIGHT1";
-                                            }}),
-                                            add(new ThemeColorPair() {{
-                                                color = new RgbColor() {{
-                                                    blue = 4071.83;
-                                                    green = 332.22;
-                                                    red = 691.67;
-                                                }};
-                                                type = "BACKGROUND2";
-                                            }}),
-                                            add(new ThemeColorPair() {{
-                                                color = new RgbColor() {{
-                                                    blue = 6974.29;
-                                                    green = 3732.91;
-                                                    red = 4535.43;
-                                                }};
-                                                type = "ACCENT3";
-                                            }}),
-                                            add(new ThemeColorPair() {{
-                                                color = new RgbColor() {{
-                                                    blue = 7220.56;
-                                                    green = 505.88;
-                                                    red = 8663.83;
+                                                    blue = 8480.09;
+                                                    green = 8649.34;
+                                                    red = 8073.19;
                                                 }};
                                                 type = "ACCENT2";
+                                            }}),
+                                            add(new ThemeColorPair() {{
+                                                color = new RgbColor() {{
+                                                    blue = 5691.01;
+                                                    green = 1399.72;
+                                                    red = 4071.83;
+                                                }};
+                                                type = "THEME_COLOR_TYPE_UNSPECIFIED";
+                                            }}),
+                                            add(new ThemeColorPair() {{
+                                                color = new RgbColor() {{
+                                                    blue = 691.67;
+                                                    green = 9825.75;
+                                                    red = 6974.29;
+                                                }};
+                                                type = "ACCENT2";
+                                            }}),
+                                            add(new ThemeColorPair() {{
+                                                color = new RgbColor() {{
+                                                    blue = 4535.43;
+                                                    green = 4200.75;
+                                                    red = 7220.56;
+                                                }};
+                                                type = "THEME_COLOR_TYPE_UNSPECIFIED";
                                             }}),
                                         }};
                                     }};
                                     pageBackgroundFill = new PageBackgroundFill() {{
                                         propertyState = "INHERIT";
                                         solidFill = new SolidFill() {{
-                                            alpha = 166.27;
+                                            alpha = 3654.96;
                                             color = new OpaqueColor() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 8558.04;
-                                                    green = 2307.42;
-                                                    red = 117.14;
+                                                    blue = 9755.22;
+                                                    green = 166.27;
+                                                    red = 8558.04;
                                                 }};
-                                                themeColor = "TEXT1";
+                                                themeColor = "DARK2";
                                             }};
                                         }};
                                         stretchedPictureFill = new StretchedPictureFill() {{
-                                            contentUrl = "corporis";
+                                            contentUrl = "aut";
                                             size = new Size() {{
                                                 height = new Dimension() {{
-                                                    magnitude = 9441.24;
-                                                    unit = "PT";
+                                                    magnitude = 7649.12;
+                                                    unit = "EMU";
                                                 }};
                                                 width = new Dimension() {{
-                                                    magnitude = 7499.99;
-                                                    unit = "UNIT_UNSPECIFIED";
+                                                    magnitude = 9441.24;
+                                                    unit = "PT";
                                                 }};
                                             }};
                                         }};
@@ -816,547 +801,555 @@ public class Application {
                             }};
                             updateParagraphStyle = new UpdateParagraphStyleRequest() {{
                                 cellLocation = new TableCellLocation() {{
-                                    columnIndex = 339404;
-                                    rowIndex = 521037;
+                                    columnIndex = 749999;
+                                    rowIndex = 171629;
                                 }};
-                                fields = "dignissimos";
-                                objectId = "eaque";
+                                fields = "quis";
+                                objectId = "totam";
                                 style = new ParagraphStyle() {{
-                                    alignment = "START";
+                                    alignment = "CENTER";
                                     direction = "TEXT_DIRECTION_UNSPECIFIED";
                                     indentEnd = new Dimension() {{
-                                        magnitude = 1794.9;
+                                        magnitude = 3389.85;
                                         unit = "UNIT_UNSPECIFIED";
                                     }};
                                     indentFirstLine = new Dimension() {{
+                                        magnitude = 1794.9;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                    indentStart = new Dimension() {{
                                         magnitude = 1709.86;
                                         unit = "PT";
                                     }};
-                                    indentStart = new Dimension() {{
-                                        magnitude = 4634.51;
-                                        unit = "UNIT_UNSPECIFIED";
-                                    }};
-                                    lineSpacing = 8745.73;
+                                    lineSpacing = 4634.51;
                                     spaceAbove = new Dimension() {{
-                                        magnitude = 3453.52;
+                                        magnitude = 2239.24;
                                         unit = "PT";
                                     }};
                                     spaceBelow = new Dimension() {{
-                                        magnitude = 9280.82;
-                                        unit = "EMU";
+                                        magnitude = 3453.52;
+                                        unit = "PT";
                                     }};
                                     spacingMode = "COLLAPSE_LISTS";
                                 }};
                                 textRange = new Range() {{
-                                    endIndex = 596656;
-                                    startIndex = 31838;
-                                    type = "ALL";
+                                    endIndex = 608253;
+                                    startIndex = 704415;
+                                    type = "FROM_START_INDEX";
                                 }};
                             }};
                             updateShapeProperties = new UpdateShapePropertiesRequest() {{
-                                fields = "consequuntur";
-                                objectId = "blanditiis";
+                                fields = "voluptatem";
+                                objectId = "porro";
                                 shapeProperties = new ShapeProperties() {{
                                     autofit = new Autofit() {{
-                                        autofitType = "TEXT_AUTOFIT";
-                                        fontScale = 503.7;
-                                        lineSpacingReduction = 5772.29;
+                                        autofitType = "AUTOFIT_TYPE_UNSPECIFIED";
+                                        fontScale = 5000.26;
+                                        lineSpacingReduction = 6214.79;
                                     }};
-                                    contentAlignment = "MIDDLE";
+                                    contentAlignment = "CONTENT_ALIGNMENT_UNSPECIFIED";
                                     link = new Link() {{
-                                        pageObjectId = "adipisci";
-                                        relativeLink = "LAST_SLIDE";
-                                        slideIndex = 934214;
-                                        url = "modi";
+                                        pageObjectId = "occaecati";
+                                        relativeLink = "FIRST_SLIDE";
+                                        slideIndex = 237893;
+                                        url = "asperiores";
                                     }};
                                     outline = new Outline() {{
-                                        dashStyle = "DASH_DOT";
+                                        dashStyle = "LONG_DASH_DOT";
                                         outlineFill = new OutlineFill() {{
                                             solidFill = new SolidFill() {{
-                                                alpha = 6790.91;
+                                                alpha = 2672.62;
                                                 color = new OpaqueColor() {{
                                                     rgbColor = new RgbColor() {{
-                                                        blue = 5356.33;
-                                                        green = 8642.82;
-                                                        red = 5899.1;
+                                                        blue = 6139.66;
+                                                        green = 6790.91;
+                                                        red = 5356.33;
                                                     }};
-                                                    themeColor = "FOLLOWED_HYPERLINK";
+                                                    themeColor = "BACKGROUND1";
                                                 }};
                                             }};
                                         }};
-                                        propertyState = "INHERIT";
+                                        propertyState = "NOT_RENDERED";
                                         weight = new Dimension() {{
-                                            magnitude = 9644.9;
-                                            unit = "UNIT_UNSPECIFIED";
+                                            magnitude = 7508.44;
+                                            unit = "PT";
                                         }};
                                     }};
                                     shadow = new Shadow() {{
-                                        alignment = "CENTER";
-                                        alpha = 3982.21;
+                                        alignment = "BOTTOM_RIGHT";
+                                        alpha = 3119.45;
                                         blurRadius = new Dimension() {{
-                                            magnitude = 2123.9;
-                                            unit = "UNIT_UNSPECIFIED";
+                                            magnitude = 5542.42;
+                                            unit = "EMU";
                                         }};
                                         color = new OpaqueColor() {{
                                             rgbColor = new RgbColor() {{
-                                                blue = 2224.43;
-                                                green = 1861.93;
-                                                red = 2187.49;
+                                                blue = 2123.9;
+                                                green = 2098.43;
+                                                red = 2224.43;
                                             }};
-                                            themeColor = "BACKGROUND2";
+                                            themeColor = "DARK2";
                                         }};
-                                        propertyState = "NOT_RENDERED";
+                                        propertyState = "RENDERED";
                                         rotateWithShape = false;
                                         transform = new AffineTransform() {{
-                                            scaleX = 7395.51;
-                                            scaleY = 4521.09;
-                                            shearX = 4904.59;
-                                            shearY = 9702.37;
-                                            translateX = 2274.14;
-                                            translateY = 6805.45;
+                                            scaleX = 9443.73;
+                                            scaleY = 5695.74;
+                                            shearX = 7395.51;
+                                            shearY = 4521.09;
+                                            translateX = 4904.59;
+                                            translateY = 9702.37;
                                             unit = "UNIT_UNSPECIFIED";
                                         }};
-                                        type = "SHADOW_TYPE_UNSPECIFIED";
+                                        type = "OUTER";
                                     }};
                                     shapeBackgroundFill = new ShapeBackgroundFill() {{
                                         propertyState = "RENDERED";
                                         solidFill = new SolidFill() {{
-                                            alpha = 564.18;
+                                            alpha = 852.95;
                                             color = new OpaqueColor() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 4344.17;
-                                                    green = 4878.38;
-                                                    red = 3117.96;
+                                                    blue = 580.29;
+                                                    green = 564.18;
+                                                    red = 4344.17;
                                                 }};
-                                                themeColor = "BACKGROUND1";
+                                                themeColor = "ACCENT4";
                                             }};
                                         }};
                                     }};
                                 }};
                             }};
                             updateSlideProperties = new UpdateSlidePropertiesRequest() {{
-                                fields = "quidem";
-                                objectId = "voluptatibus";
+                                fields = "quaerat";
+                                objectId = "accusamus";
                                 slideProperties = new SlideProperties() {{
                                     isSkipped = false;
-                                    layoutObjectId = "voluptas";
-                                    masterObjectId = "natus";
+                                    layoutObjectId = "quidem";
+                                    masterObjectId = "voluptatibus";
                                     notesPage = new Page() {{}};
                                 }};
                             }};
                             updateSlidesPosition = new UpdateSlidesPositionRequest() {{
-                                insertionIndex = 179603;
+                                insertionIndex = 377752;
                                 slideObjectIds = new String[]{{
+                                    add("eos"),
+                                    add("atque"),
                                     add("sit"),
-                                    add("fugiat"),
-                                    add("ab"),
                                 }};
                             }};
                             updateTableBorderProperties = new UpdateTableBorderPropertiesRequest() {{
-                                borderPosition = "OUTER";
-                                fields = "dolorum";
-                                objectId = "iusto";
+                                borderPosition = "RIGHT";
+                                fields = "ab";
+                                objectId = "soluta";
                                 tableBorderProperties = new TableBorderProperties() {{
-                                    dashStyle = "DASH";
+                                    dashStyle = "DASH_DOT";
                                     tableBorderFill = new TableBorderFill() {{
                                         solidFill = new SolidFill() {{
-                                            alpha = 6770.82;
+                                            alpha = 4785.96;
                                             color = new OpaqueColor() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 5365.79;
-                                                    green = 6070.45;
-                                                    red = 8966.72;
+                                                    blue = 4536.97;
+                                                    green = 6770.82;
+                                                    red = 5365.79;
                                                 }};
-                                                themeColor = "FOLLOWED_HYPERLINK";
+                                                themeColor = "ACCENT6";
                                             }};
                                         }};
                                     }};
                                     weight = new Dimension() {{
-                                        magnitude = 9903.39;
-                                        unit = "EMU";
+                                        magnitude = 8966.72;
+                                        unit = "PT";
                                     }};
                                 }};
                                 tableRange = new TableRange() {{
-                                    columnSpan = 216897;
+                                    columnSpan = 990339;
                                     location = new TableCellLocation() {{
-                                        columnIndex = 456015;
-                                        rowIndex = 663078;
+                                        columnIndex = 469497;
+                                        rowIndex = 216897;
                                     }};
-                                    rowSpan = 906418;
+                                    rowSpan = 456015;
                                 }};
                             }};
                             updateTableCellProperties = new UpdateTableCellPropertiesRequest() {{
-                                fields = "eius";
-                                objectId = "aspernatur";
+                                fields = "id";
+                                objectId = "saepe";
                                 tableCellProperties = new TableCellProperties() {{
-                                    contentAlignment = "CONTENT_ALIGNMENT_UNSPECIFIED";
+                                    contentAlignment = "CONTENT_ALIGNMENT_UNSUPPORTED";
                                     tableCellBackgroundFill = new TableCellBackgroundFill() {{
                                         propertyState = "RENDERED";
                                         solidFill = new SolidFill() {{
-                                            alpha = 7583.79;
+                                            alpha = 206.51;
                                             color = new OpaqueColor() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 8815.86;
-                                                    green = 3200.17;
-                                                    red = 9044.25;
+                                                    blue = 2292.19;
+                                                    green = 7583.79;
+                                                    red = 8815.86;
                                                 }};
-                                                themeColor = "ACCENT2";
+                                                themeColor = "ACCENT1";
                                             }};
                                         }};
                                     }};
                                 }};
                                 tableRange = new TableRange() {{
-                                    columnSpan = 645785;
+                                    columnSpan = 904425;
                                     location = new TableCellLocation() {{
-                                        columnIndex = 588317;
-                                        rowIndex = 324683;
+                                        columnIndex = 383464;
+                                        rowIndex = 645785;
                                     }};
-                                    rowSpan = 831049;
+                                    rowSpan = 588317;
                                 }};
                             }};
                             updateTableColumnProperties = new UpdateTableColumnPropertiesRequest() {{
                                 columnIndices = new Integer[]{{
-                                    add(628982),
-                                    add(55),
-                                    add(872651),
+                                    add(831049),
+                                    add(519711),
                                 }};
-                                fields = "quaerat";
-                                objectId = "tempora";
+                                fields = "similique";
+                                objectId = "alias";
                                 tableColumnProperties = new TableColumnProperties() {{
                                     columnWidth = new Dimension() {{
-                                        magnitude = 4254.51;
-                                        unit = "PT";
+                                        magnitude = 8726.51;
+                                        unit = "UNIT_UNSPECIFIED";
                                     }};
                                 }};
                             }};
                             updateTableRowProperties = new UpdateTableRowPropertiesRequest() {{
-                                fields = "officiis";
-                                objectId = "qui";
+                                fields = "tempora";
+                                objectId = "vel";
                                 rowIndices = new Integer[]{{
+                                    add(885338),
+                                    add(185636),
+                                    add(679880),
                                     add(952792),
-                                    add(456130),
-                                    add(687488),
                                 }};
                                 tableRowProperties = new TableRowProperties() {{
                                     minRowHeight = new Dimension() {{
-                                        magnitude = 4834.09;
-                                        unit = "UNIT_UNSPECIFIED";
+                                        magnitude = 4561.3;
+                                        unit = "PT";
                                     }};
                                 }};
                             }};
                             updateTextStyle = new UpdateTextStyleRequest() {{
                                 cellLocation = new TableCellLocation() {{
-                                    columnIndex = 788740;
-                                    rowIndex = 947371;
+                                    columnIndex = 483409;
+                                    rowIndex = 215507;
                                 }};
-                                fields = "amet";
-                                objectId = "tempore";
+                                fields = "quisquam";
+                                objectId = "tenetur";
                                 style = new TextStyle() {{
                                     backgroundColor = new OptionalColor() {{
                                         opaqueColor = new OpaqueColor() {{
                                             rgbColor = new RgbColor() {{
-                                                blue = 8802.98;
-                                                green = 2539.41;
-                                                red = 3136.92;
+                                                blue = 2294.42;
+                                                green = 7308.56;
+                                                red = 8802.98;
                                             }};
-                                            themeColor = "DARK2";
+                                            themeColor = "LIGHT2";
                                         }};
                                     }};
-                                    baselineOffset = "SUBSCRIPT";
+                                    baselineOffset = "NONE";
                                     bold = false;
-                                    fontFamily = "totam";
+                                    fontFamily = "dolorem";
                                     fontSize = new Dimension() {{
-                                        magnitude = 4717.52;
-                                        unit = "UNIT_UNSPECIFIED";
+                                        magnitude = 9574.51;
+                                        unit = "EMU";
                                     }};
                                     foregroundColor = new OptionalColor() {{
                                         opaqueColor = new OpaqueColor() {{
                                             rgbColor = new RgbColor() {{
-                                                blue = 7115.84;
-                                                green = 2074.7;
-                                                red = 1536.94;
+                                                blue = 4717.52;
+                                                green = 256.62;
+                                                red = 7115.84;
                                             }};
-                                            themeColor = "ACCENT3";
+                                            themeColor = "DARK2";
                                         }};
                                     }};
                                     italic = false;
                                     link = new Link() {{
-                                        pageObjectId = "libero";
-                                        relativeLink = "NEXT_SLIDE";
-                                        slideIndex = 646265;
-                                        url = "quam";
+                                        pageObjectId = "sed";
+                                        relativeLink = "PREVIOUS_SLIDE";
+                                        slideIndex = 730442;
+                                        url = "voluptas";
                                     }};
                                     smallCaps = false;
                                     strikethrough = false;
                                     underline = false;
                                     weightedFontFamily = new WeightedFontFamily() {{
-                                        fontFamily = "ipsum";
-                                        weight = 277628;
+                                        fontFamily = "deserunt";
+                                        weight = 463575;
                                     }};
                                 }};
                                 textRange = new Range() {{
-                                    endIndex = 186458;
-                                    startIndex = 586784;
-                                    type = "ALL";
+                                    endIndex = 214880;
+                                    startIndex = 277628;
+                                    type = "RANGE_TYPE_UNSPECIFIED";
                                 }};
                             }};
                             updateVideoProperties = new UpdateVideoPropertiesRequest() {{
-                                fields = "pariatur";
-                                objectId = "soluta";
+                                fields = "cupiditate";
+                                objectId = "maxime";
                                 videoProperties = new VideoProperties() {{
                                     autoPlay = false;
-                                    end = 117531;
+                                    end = 863856;
                                     mute = false;
                                     outline = new Outline() {{
-                                        dashStyle = "DASH_DOT";
+                                        dashStyle = "LONG_DASH";
                                         outlineFill = new OutlineFill() {{
                                             solidFill = new SolidFill() {{
-                                                alpha = 5173.79;
+                                                alpha = 1175.31;
                                                 color = new OpaqueColor() {{
                                                     rgbColor = new RgbColor() {{
-                                                        blue = 2768.94;
-                                                        green = 1320.68;
-                                                        red = 1749.09;
+                                                        blue = 6748.48;
+                                                        green = 5173.79;
+                                                        red = 2768.94;
                                                     }};
-                                                    themeColor = "FOLLOWED_HYPERLINK";
+                                                    themeColor = "LIGHT1";
                                                 }};
                                             }};
                                         }};
-                                        propertyState = "INHERIT";
+                                        propertyState = "RENDERED";
                                         weight = new Dimension() {{
-                                            magnitude = 3960.6;
-                                            unit = "EMU";
+                                            magnitude = 7168.6;
+                                            unit = "PT";
                                         }};
                                     }};
-                                    start = 565421;
+                                    start = 396060;
                                 }};
                             }};
                         }}),
                         add(new Request() {{
                             createImage = new CreateImageRequest() {{
                                 elementProperties = new PageElementProperties() {{
-                                    pageObjectId = "temporibus";
+                                    pageObjectId = "quam";
                                     size = new Size() {{
                                         height = new Dimension() {{
+                                            magnitude = 5654.21;
+                                            unit = "PT";
+                                        }};
+                                        width = new Dimension() {{
                                             magnitude = 1832.8;
                                             unit = "UNIT_UNSPECIFIED";
                                         }};
-                                        width = new Dimension() {{
-                                            magnitude = 1448.47;
-                                            unit = "UNIT_UNSPECIFIED";
-                                        }};
                                     }};
                                     transform = new AffineTransform() {{
-                                        scaleX = 4880.56;
-                                        scaleY = 1248.33;
-                                        shearX = 3556.13;
-                                        shearY = 7220.81;
-                                        translateX = 9404.32;
-                                        translateY = 304.52;
+                                        scaleX = 1448.47;
+                                        scaleY = 1649.59;
+                                        shearX = 4880.56;
+                                        shearY = 1248.33;
+                                        translateX = 3556.13;
+                                        translateY = 7220.81;
                                         unit = "PT";
                                     }};
                                 }};
-                                objectId = "soluta";
-                                url = "nobis";
+                                objectId = "voluptatem";
+                                url = "cumque";
                             }};
                             createLine = new CreateLineRequest() {{
-                                category = "LINE_CATEGORY_UNSPECIFIED";
+                                category = "BENT";
                                 elementProperties = new PageElementProperties() {{
-                                    pageObjectId = "saepe";
+                                    pageObjectId = "nobis";
                                     size = new Size() {{
                                         height = new Dimension() {{
+                                            magnitude = 925.96;
+                                            unit = "PT";
+                                        }};
+                                        width = new Dimension() {{
                                             magnitude = 2174.5;
                                             unit = "UNIT_UNSPECIFIED";
                                         }};
-                                        width = new Dimension() {{
-                                            magnitude = 7492.55;
-                                            unit = "EMU";
-                                        }};
                                     }};
                                     transform = new AffineTransform() {{
-                                        scaleX = 7316.94;
-                                        scaleY = 5844.76;
-                                        shearX = 456.14;
-                                        shearY = 9619.37;
-                                        translateX = 2091.57;
-                                        translateY = 2921.47;
+                                        scaleX = 7492.55;
+                                        scaleY = 5521.93;
+                                        shearX = 7316.94;
+                                        shearY = 5844.76;
+                                        translateX = 456.14;
+                                        translateY = 9619.37;
                                         unit = "UNIT_UNSPECIFIED";
                                     }};
                                 }};
                                 lineCategory = "STRAIGHT";
-                                objectId = "dolorum";
+                                objectId = "labore";
                             }};
                             createParagraphBullets = new CreateParagraphBulletsRequest() {{
-                                bulletPreset = "BULLET_DIAMONDX_ARROW3D_SQUARE";
+                                bulletPreset = "BULLET_ARROW_DIAMOND_DISC";
                                 cellLocation = new TableCellLocation() {{
-                                    columnIndex = 63038;
-                                    rowIndex = 16429;
+                                    columnIndex = 677263;
+                                    rowIndex = 100294;
                                 }};
-                                objectId = "quas";
+                                objectId = "quae";
                                 textRange = new Range() {{
-                                    endIndex = 929530;
-                                    startIndex = 9240;
-                                    type = "FROM_START_INDEX";
+                                    endIndex = 16429;
+                                    startIndex = 555649;
+                                    type = "ALL";
                                 }};
                             }};
                             createShape = new CreateShapeRequest() {{
                                 elementProperties = new PageElementProperties() {{
-                                    pageObjectId = "repellendus";
+                                    pageObjectId = "consequatur";
                                     size = new Size() {{
                                         height = new Dimension() {{
+                                            magnitude = 6699.17;
+                                            unit = "PT";
+                                        }};
+                                        width = new Dimension() {{
                                             magnitude = 7851.53;
                                             unit = "PT";
                                         }};
-                                        width = new Dimension() {{
-                                            magnitude = 2817.3;
-                                            unit = "PT";
-                                        }};
                                     }};
                                     transform = new AffineTransform() {{
-                                        scaleX = 5864.1;
-                                        scaleY = 1816.31;
-                                        shearX = 639.55;
-                                        shearY = 5123.93;
-                                        translateX = 4856.28;
-                                        translateY = 5804.47;
-                                        unit = "PT";
-                                    }};
-                                }};
-                                objectId = "quisquam";
-                                shapeType = "FLOW_CHART_PREDEFINED_PROCESS";
-                            }};
-                            createSheetsChart = new CreateSheetsChartRequest() {{
-                                chartId = 606476;
-                                elementProperties = new PageElementProperties() {{
-                                    pageObjectId = "quis";
-                                    size = new Size() {{
-                                        height = new Dimension() {{
-                                            magnitude = 2184.03;
-                                            unit = "PT";
-                                        }};
-                                        width = new Dimension() {{
-                                            magnitude = 4551.69;
-                                            unit = "UNIT_UNSPECIFIED";
-                                        }};
-                                    }};
-                                    transform = new AffineTransform() {{
-                                        scaleX = 8788.7;
-                                        scaleY = 9493.19;
-                                        shearX = 4922.68;
-                                        shearY = 9413.78;
-                                        translateX = 7155.61;
-                                        translateY = 7992.03;
+                                        scaleX = 2817.3;
+                                        scaleY = 7034.95;
+                                        shearX = 5864.1;
+                                        shearY = 1816.31;
+                                        translateX = 639.55;
+                                        translateY = 5123.93;
                                         unit = "EMU";
                                     }};
                                 }};
-                                linkingMode = "LINKED";
-                                objectId = "facilis";
-                                spreadsheetId = "vero";
+                                objectId = "occaecati";
+                                shapeType = "ELLIPSE_RIBBON";
                             }};
-                            createSlide = new CreateSlideRequest() {{
-                                insertionIndex = 498140;
-                                objectId = "dolore";
-                                placeholderIdMappings = new org.openapis.openapi.models.shared.LayoutPlaceholderIdMapping[]{{
-                                    add(new LayoutPlaceholderIdMapping() {{
-                                        layoutPlaceholder = new Placeholder() {{
-                                            index = 848944;
-                                            parentObjectId = "sequi";
-                                            type = "OBJECT";
-                                        }};
-                                        layoutPlaceholderObjectId = "impedit";
-                                        objectId = "aut";
-                                    }}),
-                                    add(new LayoutPlaceholderIdMapping() {{
-                                        layoutPlaceholder = new Placeholder() {{
-                                            index = 974259;
-                                            parentObjectId = "exercitationem";
-                                            type = "TABLE";
-                                        }};
-                                        layoutPlaceholderObjectId = "fugit";
-                                        objectId = "porro";
-                                    }}),
-                                    add(new LayoutPlaceholderIdMapping() {{
-                                        layoutPlaceholder = new Placeholder() {{
-                                            index = 981830;
-                                            parentObjectId = "doloribus";
-                                            type = "HEADER";
-                                        }};
-                                        layoutPlaceholderObjectId = "eligendi";
-                                        objectId = "ducimus";
-                                    }}),
-                                    add(new LayoutPlaceholderIdMapping() {{
-                                        layoutPlaceholder = new Placeholder() {{
-                                            index = 4048;
-                                            parentObjectId = "officia";
-                                            type = "CENTERED_TITLE";
-                                        }};
-                                        layoutPlaceholderObjectId = "ipsam";
-                                        objectId = "ea";
-                                    }}),
-                                }};
-                                slideLayoutReference = new LayoutReference() {{
-                                    layoutId = "aspernatur";
-                                    predefinedLayout = "TITLE_AND_TWO_COLUMNS";
-                                }};
-                            }};
-                            createTable = new CreateTableRequest() {{
-                                columns = 822118;
+                            createSheetsChart = new CreateSheetsChartRequest() {{
+                                chartId = 787542;
                                 elementProperties = new PageElementProperties() {{
-                                    pageObjectId = "magnam";
+                                    pageObjectId = "vero";
                                     size = new Size() {{
                                         height = new Dimension() {{
-                                            magnitude = 1898.48;
+                                            magnitude = 6064.76;
                                             unit = "EMU";
                                         }};
                                         width = new Dimension() {{
-                                            magnitude = 5113.19;
+                                            magnitude = 2184.03;
+                                            unit = "PT";
+                                        }};
+                                    }};
+                                    transform = new AffineTransform() {{
+                                        scaleX = 4551.69;
+                                        scaleY = 2317.01;
+                                        shearX = 8788.7;
+                                        shearY = 9493.19;
+                                        translateX = 4922.68;
+                                        translateY = 9413.78;
+                                        unit = "PT";
+                                    }};
+                                }};
+                                linkingMode = "LINKED";
+                                objectId = "odio";
+                                spreadsheetId = "similique";
+                            }};
+                            createSlide = new CreateSlideRequest() {{
+                                insertionIndex = 708548;
+                                objectId = "vero";
+                                placeholderIdMappings = new org.openapis.openapi.models.shared.LayoutPlaceholderIdMapping[]{{
+                                    add(new LayoutPlaceholderIdMapping() {{
+                                        layoutPlaceholder = new Placeholder() {{
+                                            index = 293020;
+                                            parentObjectId = "quibusdam";
+                                            type = "TABLE";
+                                        }};
+                                        layoutPlaceholderObjectId = "sequi";
+                                        objectId = "natus";
+                                    }}),
+                                    add(new LayoutPlaceholderIdMapping() {{
+                                        layoutPlaceholder = new Placeholder() {{
+                                            index = 773326;
+                                            parentObjectId = "aut";
+                                            type = "SLIDE_IMAGE";
+                                        }};
+                                        layoutPlaceholderObjectId = "exercitationem";
+                                        objectId = "nulla";
+                                    }}),
+                                }};
+                                slideLayoutReference = new LayoutReference() {{
+                                    layoutId = "fugit";
+                                    predefinedLayout = "ONE_COLUMN_TEXT";
+                                }};
+                            }};
+                            createTable = new CreateTableRequest() {{
+                                columns = 981830;
+                                elementProperties = new PageElementProperties() {{
+                                    pageObjectId = "doloribus";
+                                    size = new Size() {{
+                                        height = new Dimension() {{
+                                            magnitude = 4783.7;
+                                            unit = "PT";
+                                        }};
+                                        width = new Dimension() {{
+                                            magnitude = 4973.91;
                                             unit = "UNIT_UNSPECIFIED";
                                         }};
                                     }};
                                     transform = new AffineTransform() {{
-                                        scaleX = 2243.17;
-                                        scaleY = 9807;
-                                        shearX = 978.44;
-                                        shearY = 4061.2;
-                                        translateX = 8621.92;
-                                        translateY = 5692.11;
+                                        scaleX = 6394.73;
+                                        scaleY = 2694.79;
+                                        shearX = 3685.84;
+                                        shearY = 4104.92;
+                                        translateX = 1369;
+                                        translateY = 4282.24;
                                         unit = "PT";
                                     }};
                                 }};
-                                objectId = "nostrum";
-                                rows = 960835;
+                                objectId = "magnam";
+                                rows = 189848;
                             }};
                             createVideo = new CreateVideoRequest() {{
                                 elementProperties = new PageElementProperties() {{
-                                    pageObjectId = "quisquam";
+                                    pageObjectId = "ex";
                                     size = new Size() {{
                                         height = new Dimension() {{
-                                            magnitude = 9065.56;
-                                            unit = "EMU";
+                                            magnitude = 5113.19;
+                                            unit = "UNIT_UNSPECIFIED";
                                         }};
                                         width = new Dimension() {{
-                                            magnitude = 7740.48;
-                                            unit = "EMU";
+                                            magnitude = 2243.17;
+                                            unit = "PT";
                                         }};
                                     }};
                                     transform = new AffineTransform() {{
-                                        scaleX = 3331.45;
-                                        scaleY = 3994.99;
-                                        shearX = 811.01;
-                                        shearY = 3018.31;
-                                        translateX = 4072.41;
-                                        translateY = 7752.2;
-                                        unit = "UNIT_UNSPECIFIED";
+                                        scaleX = 978.44;
+                                        scaleY = 4061.2;
+                                        shearX = 8621.92;
+                                        shearY = 5692.11;
+                                        translateX = 9729.2;
+                                        translateY = 3436.05;
+                                        unit = "PT";
                                     }};
                                 }};
-                                id = "recusandae";
-                                objectId = "aspernatur";
-                                source = "SOURCE_UNSPECIFIED";
+                                id = "quisquam";
+                                objectId = "saepe";
+                                source = "YOUTUBE";
                             }};
                             deleteObject = new DeleteObjectRequest() {{
-                                objectId = "eaque";
+                                objectId = "impedit";
                             }};
                             deleteParagraphBullets = new DeleteParagraphBulletsRequest() {{
+                                cellLocation = new TableCellLocation() {{
+                                    columnIndex = 359271;
+                                    rowIndex = 333145;
+                                }};
+                                objectId = "aliquid";
+                                textRange = new Range() {{
+                                    endIndex = 81101;
+                                    startIndex = 301831;
+                                    type = "FIXED_RANGE";
+                                }};
+                            }};
+                            deleteTableColumn = new DeleteTableColumnRequest() {{
+                                cellLocation = new TableCellLocation() {{
+                                    columnIndex = 775220;
+                                    rowIndex = 232234;
+                                }};
+                                tableObjectId = "recusandae";
+                            }};
+                            deleteTableRow = new DeleteTableRowRequest() {{
+                                cellLocation = new TableCellLocation() {{
+                                    columnIndex = 132487;
+                                    rowIndex = 325310;
+                                }};
+                                tableObjectId = "eaque";
+                            }};
+                            deleteText = new DeleteTextRequest() {{
                                 cellLocation = new TableCellLocation() {{
                                     columnIndex = 952871;
                                     rowIndex = 725595;
@@ -1368,169 +1361,168 @@ public class Application {
                                     type = "ALL";
                                 }};
                             }};
-                            deleteTableColumn = new DeleteTableColumnRequest() {{
-                                cellLocation = new TableCellLocation() {{
-                                    columnIndex = 304582;
-                                    rowIndex = 146946;
-                                }};
-                                tableObjectId = "accusamus";
-                            }};
-                            deleteTableRow = new DeleteTableRowRequest() {{
-                                cellLocation = new TableCellLocation() {{
-                                    columnIndex = 79522;
-                                    rowIndex = 250622;
-                                }};
-                                tableObjectId = "et";
-                            }};
-                            deleteText = new DeleteTextRequest() {{
-                                cellLocation = new TableCellLocation() {{
-                                    columnIndex = 677412;
-                                    rowIndex = 672048;
-                                }};
-                                objectId = "placeat";
-                                textRange = new Range() {{
-                                    endIndex = 245367;
-                                    startIndex = 432148;
-                                    type = "FIXED_RANGE";
-                                }};
-                            }};
                             duplicateObject = new DuplicateObjectRequest() {{
-                                objectId = "nobis";
+                                objectId = "aliquam";
                                 objectIds = new java.util.HashMap<String, String>() {{
-                                    put("assumenda", "nulla");
-                                    put("voluptas", "libero");
-                                    put("quasi", "tempora");
+                                    put("accusamus", "inventore");
                                 }};
                             }};
                             groupObjects = new GroupObjectsRequest() {{
                                 childrenObjectIds = new String[]{{
-                                    add("explicabo"),
-                                    add("provident"),
+                                    add("et"),
+                                    add("dolorum"),
                                 }};
-                                groupObjectId = "ipsa";
+                                groupObjectId = "laborum";
                             }};
                             insertTableColumns = new InsertTableColumnsRequest() {{
                                 cellLocation = new TableCellLocation() {{
-                                    columnIndex = 476477;
-                                    rowIndex = 301598;
+                                    columnIndex = 810424;
+                                    rowIndex = 245367;
                                 }};
                                 insertRight = false;
-                                number = 487935;
-                                tableObjectId = "eius";
+                                number = 432148;
+                                tableObjectId = "autem";
                             }};
                             insertTableRows = new InsertTableRowsRequest() {{
                                 cellLocation = new TableCellLocation() {{
-                                    columnIndex = 458515;
-                                    rowIndex = 456141;
+                                    columnIndex = 752135;
+                                    rowIndex = 557369;
                                 }};
                                 insertBelow = false;
-                                number = 524593;
-                                tableObjectId = "fuga";
+                                number = 829603;
+                                tableObjectId = "nulla";
                             }};
                             insertText = new InsertTextRequest() {{
                                 cellLocation = new TableCellLocation() {{
-                                    columnIndex = 442015;
-                                    rowIndex = 695626;
+                                    columnIndex = 379034;
+                                    rowIndex = 727044;
                                 }};
-                                insertionIndex = 852635;
-                                objectId = "ut";
-                                text = "eum";
+                                insertionIndex = 96549;
+                                objectId = "tempora";
+                                text = "numquam";
                             }};
                             mergeTableCells = new MergeTableCellsRequest() {{
-                                objectId = "suscipit";
+                                objectId = "explicabo";
                                 tableRange = new TableRange() {{
-                                    columnSpan = 826871;
+                                    columnSpan = 591935;
                                     location = new TableCellLocation() {{
-                                        columnIndex = 181151;
-                                        rowIndex = 509342;
+                                        columnIndex = 55374;
+                                        rowIndex = 476477;
                                     }};
-                                    rowSpan = 788546;
+                                    rowSpan = 301598;
                                 }};
                             }};
                             refreshSheetsChart = new RefreshSheetsChartRequest() {{
-                                objectId = "veritatis";
+                                objectId = "odio";
                             }};
                             replaceAllShapesWithImage = new ReplaceAllShapesWithImageRequest() {{
                                 containsText = new SubstringMatchCriteria() {{
                                     matchCase = false;
-                                    text = "ipsa";
+                                    text = "eius";
                                 }};
                                 imageReplaceMethod = "CENTER_INSIDE";
-                                imageUrl = "quidem";
+                                imageUrl = "esse";
                                 pageObjectIds = new String[]{{
-                                    add("quo"),
+                                    add("fuga"),
+                                    add("reprehenderit"),
+                                    add("quidem"),
                                 }};
                                 replaceMethod = "CENTER_CROP";
                             }};
                             replaceAllShapesWithSheetsChart = new ReplaceAllShapesWithSheetsChartRequest() {{
-                                chartId = 777408;
+                                chartId = 283519;
                                 containsText = new SubstringMatchCriteria() {{
                                     matchCase = false;
-                                    text = "fuga";
+                                    text = "eum";
                                 }};
                                 linkingMode = "NOT_LINKED_IMAGE";
                                 pageObjectIds = new String[]{{
-                                    add("voluptas"),
+                                    add("eos"),
+                                    add("praesentium"),
+                                    add("quisquam"),
+                                    add("veritatis"),
                                 }};
-                                spreadsheetId = "ab";
+                                spreadsheetId = "ipsa";
                             }};
                             replaceAllText = new ReplaceAllTextRequest() {{
                                 containsText = new SubstringMatchCriteria() {{
                                     matchCase = false;
-                                    text = "cupiditate";
+                                    text = "id";
                                 }};
                                 pageObjectIds = new String[]{{
-                                    add("tempora"),
+                                    add("neque"),
+                                    add("quo"),
+                                    add("illum"),
                                 }};
-                                replaceText = "debitis";
+                                replaceText = "quo";
                             }};
                             replaceImage = new ReplaceImageRequest() {{
-                                imageObjectId = "ipsam";
+                                imageObjectId = "fuga";
                                 imageReplaceMethod = "IMAGE_REPLACE_METHOD_UNSPECIFIED";
-                                url = "sequi";
+                                url = "eos";
                             }};
                             rerouteLine = new RerouteLineRequest() {{
-                                objectId = "quo";
+                                objectId = "voluptas";
                             }};
                             ungroupObjects = new UngroupObjectsRequest() {{
                                 objectIds = new String[]{{
-                                    add("recusandae"),
-                                    add("aperiam"),
+                                    add("cupiditate"),
                                 }};
                             }};
                             unmergeTableCells = new UnmergeTableCellsRequest() {{
-                                objectId = "distinctio";
+                                objectId = "consequatur";
                                 tableRange = new TableRange() {{
-                                    columnSpan = 799796;
+                                    columnSpan = 272822;
                                     location = new TableCellLocation() {{
-                                        columnIndex = 490819;
-                                        rowIndex = 76956;
+                                        columnIndex = 892050;
+                                        rowIndex = 370853;
                                     }};
-                                    rowSpan = 469498;
+                                    rowSpan = 133465;
                                 }};
                             }};
                             updateImageProperties = new UpdateImagePropertiesRequest() {{
-                                fields = "totam";
+                                fields = "sequi";
                                 imageProperties = new ImageProperties() {{
-                                    brightness = 8827.1;
-                                    contrast = 3068.1;
+                                    brightness = 7791.92;
+                                    contrast = 4598.56;
                                     cropProperties = new CropProperties() {{
-                                        angle = 4884.1;
-                                        bottomOffset = 5775.43;
-                                        leftOffset = 4145.67;
-                                        rightOffset = 9594.34;
-                                        topOffset = 1741.12;
+                                        angle = 9251.64;
+                                        bottomOffset = 446.12;
+                                        leftOffset = 7151.79;
+                                        rightOffset = 7997.96;
+                                        topOffset = 4908.19;
                                     }};
                                     link = new Link() {{
-                                        pageObjectId = "deserunt";
+                                        pageObjectId = "inventore";
                                         relativeLink = "PREVIOUS_SLIDE";
-                                        slideIndex = 35362;
-                                        url = "porro";
+                                        slideIndex = 518835;
+                                        url = "accusamus";
                                     }};
                                     outline = new Outline() {{
-                                        dashStyle = "DASH";
+                                        dashStyle = "DOT";
                                         outlineFill = new OutlineFill() {{
                                             solidFill = new SolidFill() {{
+                                                alpha = 4884.1;
+                                                color = new OpaqueColor() {{
+                                                    rgbColor = new RgbColor() {{
+                                                        blue = 5775.43;
+                                                        green = 4145.67;
+                                                        red = 9594.34;
+                                                    }};
+                                                    themeColor = "LIGHT1";
+                                                }};
+                                            }};
+                                        }};
+                                        propertyState = "NOT_RENDERED";
+                                        weight = new Dimension() {{
+                                            magnitude = 4752.89;
+                                            unit = "UNIT_UNSPECIFIED";
+                                        }};
+                                    }};
+                                    recolor = new Recolor() {{
+                                        name = "DARK9";
+                                        recolorStops = new org.openapis.openapi.models.shared.ColorStop[]{{
+                                            add(new ColorStop() {{
                                                 alpha = 5564.29;
                                                 color = new OpaqueColor() {{
                                                     rgbColor = new RgbColor() {{
@@ -1540,193 +1532,1087 @@ public class Application {
                                                     }};
                                                     themeColor = "LIGHT1";
                                                 }};
-                                            }};
-                                        }};
-                                        propertyState = "INHERIT";
-                                        weight = new Dimension() {{
-                                            magnitude = 6494.63;
-                                            unit = "UNIT_UNSPECIFIED";
-                                        }};
-                                    }};
-                                    recolor = new Recolor() {{
-                                        name = "DARK3";
-                                        recolorStops = new org.openapis.openapi.models.shared.ColorStop[]{{
+                                                position = 6813.93;
+                                            }}),
                                             add(new ColorStop() {{
-                                                alpha = 3256.85;
+                                                alpha = 6494.63;
                                                 color = new OpaqueColor() {{
                                                     rgbColor = new RgbColor() {{
-                                                        blue = 3926.76;
-                                                        green = 1470.14;
-                                                        red = 9564.06;
+                                                        blue = 2775.96;
+                                                        green = 5392.24;
+                                                        red = 1288.6;
                                                     }};
-                                                    themeColor = "LIGHT1";
+                                                    themeColor = "ACCENT1";
                                                 }};
-                                                position = 1871.31;
+                                                position = 3926.76;
                                             }}),
                                         }};
                                     }};
                                     shadow = new Shadow() {{
                                         alignment = "TOP_LEFT";
-                                        alpha = 9039.84;
+                                        alpha = 9564.06;
                                         blurRadius = new Dimension() {{
-                                            magnitude = 5789.22;
-                                            unit = "EMU";
+                                            magnitude = 1598.7;
+                                            unit = "UNIT_UNSPECIFIED";
                                         }};
                                         color = new OpaqueColor() {{
                                             rgbColor = new RgbColor() {{
-                                                blue = 922.6;
-                                                green = 4569.11;
-                                                red = 9105.45;
+                                                blue = 1294.12;
+                                                green = 9039.84;
+                                                red = 5789.22;
                                             }};
-                                            themeColor = "BACKGROUND1";
+                                            themeColor = "ACCENT5";
                                         }};
                                         propertyState = "RENDERED";
                                         rotateWithShape = false;
                                         transform = new AffineTransform() {{
-                                            scaleX = 4586.04;
-                                            scaleY = 8003.79;
-                                            shearX = 7241.68;
-                                            shearY = 8771.31;
-                                            translateX = 3990.25;
-                                            translateY = 934.59;
+                                            scaleX = 4569.11;
+                                            scaleY = 9105.45;
+                                            shearX = 8820.42;
+                                            shearY = 829.71;
+                                            translateX = 4586.04;
+                                            translateY = 8003.79;
                                             unit = "PT";
                                         }};
-                                        type = "SHADOW_TYPE_UNSPECIFIED";
+                                        type = "OUTER";
                                     }};
-                                    transparency = 6900.25;
+                                    transparency = 3990.25;
                                 }};
-                                objectId = "molestiae";
+                                objectId = "quasi";
                             }};
                             updateLineCategory = new UpdateLineCategoryRequest() {{
-                                lineCategory = "BENT";
-                                objectId = "occaecati";
+                                lineCategory = "CURVED";
+                                objectId = "vel";
                             }};
                             updateLineProperties = new UpdateLinePropertiesRequest() {{
-                                fields = "minima";
+                                fields = "harum";
                                 lineProperties = new LineProperties() {{
-                                    dashStyle = "LONG_DASH";
-                                    endArrow = "OPEN_CIRCLE";
+                                    dashStyle = "DASH";
+                                    endArrow = "OPEN_ARROW";
                                     endConnection = new LineConnection() {{
-                                        connectedObjectId = "sit";
-                                        connectionSiteIndex = 636061;
+                                        connectedObjectId = "occaecati";
+                                        connectionSiteIndex = 327720;
                                     }};
                                     lineFill = new LineFill() {{
                                         solidFill = new SolidFill() {{
-                                            alpha = 7313.98;
+                                            alpha = 7162.44;
                                             color = new OpaqueColor() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 2400.2;
-                                                    green = 7669.64;
-                                                    red = 1605.38;
+                                                    blue = 7567.79;
+                                                    green = 270.69;
+                                                    red = 6360.61;
                                                 }};
-                                                themeColor = "THEME_COLOR_TYPE_UNSPECIFIED";
+                                                themeColor = "FOLLOWED_HYPERLINK";
                                             }};
                                         }};
                                     }};
                                     link = new Link() {{
-                                        pageObjectId = "minus";
-                                        relativeLink = "NEXT_SLIDE";
-                                        slideIndex = 959167;
-                                        url = "consectetur";
+                                        pageObjectId = "adipisci";
+                                        relativeLink = "FIRST_SLIDE";
+                                        slideIndex = 160538;
+                                        url = "consequatur";
                                     }};
-                                    startArrow = "FILL_SQUARE";
+                                    startArrow = "OPEN_CIRCLE";
                                     startConnection = new LineConnection() {{
-                                        connectedObjectId = "blanditiis";
-                                        connectionSiteIndex = 590984;
+                                        connectedObjectId = "quaerat";
+                                        connectionSiteIndex = 959167;
                                     }};
                                     weight = new Dimension() {{
-                                        magnitude = 9537.22;
-                                        unit = "PT";
+                                        magnitude = 2328.65;
+                                        unit = "EMU";
                                     }};
                                 }};
-                                objectId = "quas";
+                                objectId = "blanditiis";
                             }};
                             updatePageElementAltText = new UpdatePageElementAltTextRequest() {{
-                                description = "esse";
-                                objectId = "quasi";
+                                description = "provident";
+                                objectId = "a";
                                 title = "Dr.";
                             }};
                             updatePageElementTransform = new UpdatePageElementTransformRequest() {{
                                 applyMode = "RELATIVE";
-                                objectId = "sint";
+                                objectId = "esse";
                                 transform = new AffineTransform() {{
-                                    scaleX = 8630.23;
-                                    scaleY = 8207.67;
-                                    shearX = 1576.32;
-                                    shearY = 9088.44;
-                                    translateX = 9924.3;
-                                    translateY = 8155.24;
+                                    scaleX = 974.68;
+                                    scaleY = 9518.75;
+                                    shearX = 6216.79;
+                                    shearY = 5757.51;
+                                    translateX = 8630.23;
+                                    translateY = 8207.67;
                                     unit = "UNIT_UNSPECIFIED";
                                 }};
                             }};
                             updatePageElementsZOrder = new UpdatePageElementsZOrderRequest() {{
-                                operation = "Z_ORDER_OPERATION_UNSPECIFIED";
+                                operation = "SEND_TO_BACK";
                                 pageElementObjectIds = new String[]{{
-                                    add("similique"),
+                                    add("facere"),
+                                    add("veritatis"),
+                                    add("consequuntur"),
+                                    add("quasi"),
                                 }};
                             }};
                             updatePageProperties = new UpdatePagePropertiesRequest() {{
-                                fields = "culpa";
-                                objectId = "aliquid";
+                                fields = "similique";
+                                objectId = "culpa";
                                 pageProperties = new PageProperties() {{
                                     colorScheme = new ColorScheme() {{
                                         colors = new org.openapis.openapi.models.shared.ThemeColorPair[]{{
                                             add(new ThemeColorPair() {{
                                                 color = new RgbColor() {{
-                                                    blue = 627.13;
-                                                    green = 9367.47;
-                                                    red = 4240.32;
+                                                    blue = 9492.98;
+                                                    green = 627.13;
+                                                    red = 9367.47;
                                                 }};
                                                 type = "ACCENT3";
                                             }}),
                                             add(new ThemeColorPair() {{
                                                 color = new RgbColor() {{
-                                                    blue = 2586.84;
-                                                    green = 7276.97;
-                                                    red = 8490.39;
+                                                    blue = 4473.78;
+                                                    green = 2586.84;
+                                                    red = 7276.97;
                                                 }};
-                                                type = "FOLLOWED_HYPERLINK";
+                                                type = "BACKGROUND1";
+                                            }}),
+                                        }};
+                                    }};
+                                    pageBackgroundFill = new PageBackgroundFill() {{
+                                        propertyState = "INHERIT";
+                                        solidFill = new SolidFill() {{
+                                            alpha = 333.04;
+                                            color = new OpaqueColor() {{
+                                                rgbColor = new RgbColor() {{
+                                                    blue = 3069.86;
+                                                    green = 9589.83;
+                                                    red = 1197.71;
+                                                }};
+                                                themeColor = "ACCENT2";
+                                            }};
+                                        }};
+                                        stretchedPictureFill = new StretchedPictureFill() {{
+                                            contentUrl = "reprehenderit";
+                                            size = new Size() {{
+                                                height = new Dimension() {{
+                                                    magnitude = 3567.07;
+                                                    unit = "EMU";
+                                                }};
+                                                width = new Dimension() {{
+                                                    magnitude = 163.28;
+                                                    unit = "EMU";
+                                                }};
+                                            }};
+                                        }};
+                                    }};
+                                }};
+                            }};
+                            updateParagraphStyle = new UpdateParagraphStyleRequest() {{
+                                cellLocation = new TableCellLocation() {{
+                                    columnIndex = 185232;
+                                    rowIndex = 845358;
+                                }};
+                                fields = "ex";
+                                objectId = "deleniti";
+                                style = new ParagraphStyle() {{
+                                    alignment = "JUSTIFIED";
+                                    direction = "RIGHT_TO_LEFT";
+                                    indentEnd = new Dimension() {{
+                                        magnitude = 996.15;
+                                        unit = "EMU";
+                                    }};
+                                    indentFirstLine = new Dimension() {{
+                                        magnitude = 9453.02;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                    indentStart = new Dimension() {{
+                                        magnitude = 8694.89;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                    lineSpacing = 4541.62;
+                                    spaceAbove = new Dimension() {{
+                                        magnitude = 559.65;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                    spaceBelow = new Dimension() {{
+                                        magnitude = 865.32;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                    spacingMode = "SPACING_MODE_UNSPECIFIED";
+                                }};
+                                textRange = new Range() {{
+                                    endIndex = 614465;
+                                    startIndex = 839513;
+                                    type = "RANGE_TYPE_UNSPECIFIED";
+                                }};
+                            }};
+                            updateShapeProperties = new UpdateShapePropertiesRequest() {{
+                                fields = "rem";
+                                objectId = "aut";
+                                shapeProperties = new ShapeProperties() {{
+                                    autofit = new Autofit() {{
+                                        autofitType = "TEXT_AUTOFIT";
+                                        fontScale = 4287.96;
+                                        lineSpacingReduction = 6498.32;
+                                    }};
+                                    contentAlignment = "CONTENT_ALIGNMENT_UNSPECIFIED";
+                                    link = new Link() {{
+                                        pageObjectId = "corrupti";
+                                        relativeLink = "NEXT_SLIDE";
+                                        slideIndex = 32465;
+                                        url = "dolor";
+                                    }};
+                                    outline = new Outline() {{
+                                        dashStyle = "DASH_DOT";
+                                        outlineFill = new OutlineFill() {{
+                                            solidFill = new SolidFill() {{
+                                                alpha = 2531.91;
+                                                color = new OpaqueColor() {{
+                                                    rgbColor = new RgbColor() {{
+                                                        blue = 7710.89;
+                                                        green = 1310.55;
+                                                        red = 3762.26;
+                                                    }};
+                                                    themeColor = "THEME_COLOR_TYPE_UNSPECIFIED";
+                                                }};
+                                            }};
+                                        }};
+                                        propertyState = "NOT_RENDERED";
+                                        weight = new Dimension() {{
+                                            magnitude = 1154.84;
+                                            unit = "PT";
+                                        }};
+                                    }};
+                                    shadow = new Shadow() {{
+                                        alignment = "RIGHT_CENTER";
+                                        alpha = 2446.51;
+                                        blurRadius = new Dimension() {{
+                                            magnitude = 9742.57;
+                                            unit = "EMU";
+                                        }};
+                                        color = new OpaqueColor() {{
+                                            rgbColor = new RgbColor() {{
+                                                blue = 9903.45;
+                                                green = 456.59;
+                                                red = 4090.54;
+                                            }};
+                                            themeColor = "ACCENT1";
+                                        }};
+                                        propertyState = "RENDERED";
+                                        rotateWithShape = false;
+                                        transform = new AffineTransform() {{
+                                            scaleX = 8315.2;
+                                            scaleY = 6387.62;
+                                            shearX = 8070.23;
+                                            shearY = 4903.05;
+                                            translateX = 6400.24;
+                                            translateY = 9894.1;
+                                            unit = "EMU";
+                                        }};
+                                        type = "SHADOW_TYPE_UNSPECIFIED";
+                                    }};
+                                    shapeBackgroundFill = new ShapeBackgroundFill() {{
+                                        propertyState = "RENDERED";
+                                        solidFill = new SolidFill() {{
+                                            alpha = 7832.35;
+                                            color = new OpaqueColor() {{
+                                                rgbColor = new RgbColor() {{
+                                                    blue = 8018.36;
+                                                    green = 2883.98;
+                                                    red = 704.47;
+                                                }};
+                                                themeColor = "LIGHT2";
+                                            }};
+                                        }};
+                                    }};
+                                }};
+                            }};
+                            updateSlideProperties = new UpdateSlidePropertiesRequest() {{
+                                fields = "fuga";
+                                objectId = "id";
+                                slideProperties = new SlideProperties() {{
+                                    isSkipped = false;
+                                    layoutObjectId = "suscipit";
+                                    masterObjectId = "velit";
+                                    notesPage = new Page() {{}};
+                                }};
+                            }};
+                            updateSlidesPosition = new UpdateSlidesPositionRequest() {{
+                                insertionIndex = 633931;
+                                slideObjectIds = new String[]{{
+                                    add("recusandae"),
+                                    add("totam"),
+                                    add("fugiat"),
+                                }};
+                            }};
+                            updateTableBorderProperties = new UpdateTableBorderPropertiesRequest() {{
+                                borderPosition = "INNER_HORIZONTAL";
+                                fields = "ducimus";
+                                objectId = "quos";
+                                tableBorderProperties = new TableBorderProperties() {{
+                                    dashStyle = "DOT";
+                                    tableBorderFill = new TableBorderFill() {{
+                                        solidFill = new SolidFill() {{
+                                            alpha = 2870.51;
+                                            color = new OpaqueColor() {{
+                                                rgbColor = new RgbColor() {{
+                                                    blue = 8225.6;
+                                                    green = 7065.75;
+                                                    red = 7382.27;
+                                                }};
+                                                themeColor = "ACCENT3";
+                                            }};
+                                        }};
+                                    }};
+                                    weight = new Dimension() {{
+                                        magnitude = 4471.44;
+                                        unit = "EMU";
+                                    }};
+                                }};
+                                tableRange = new TableRange() {{
+                                    columnSpan = 968904;
+                                    location = new TableCellLocation() {{
+                                        columnIndex = 828657;
+                                        rowIndex = 363161;
+                                    }};
+                                    rowSpan = 924967;
+                                }};
+                            }};
+                            updateTableCellProperties = new UpdateTableCellPropertiesRequest() {{
+                                fields = "aliquid";
+                                objectId = "aperiam";
+                                tableCellProperties = new TableCellProperties() {{
+                                    contentAlignment = "MIDDLE";
+                                    tableCellBackgroundFill = new TableCellBackgroundFill() {{
+                                        propertyState = "RENDERED";
+                                        solidFill = new SolidFill() {{
+                                            alpha = 4490.83;
+                                            color = new OpaqueColor() {{
+                                                rgbColor = new RgbColor() {{
+                                                    blue = 3485.19;
+                                                    green = 9372.85;
+                                                    red = 8149.67;
+                                                }};
+                                                themeColor = "LIGHT2";
+                                            }};
+                                        }};
+                                    }};
+                                }};
+                                tableRange = new TableRange() {{
+                                    columnSpan = 985492;
+                                    location = new TableCellLocation() {{
+                                        columnIndex = 381760;
+                                        rowIndex = 968972;
+                                    }};
+                                    rowSpan = 697142;
+                                }};
+                            }};
+                            updateTableColumnProperties = new UpdateTableColumnPropertiesRequest() {{
+                                columnIndices = new Integer[]{{
+                                    add(897071),
+                                    add(296556),
+                                    add(121059),
+                                    add(992012),
+                                }};
+                                fields = "adipisci";
+                                objectId = "non";
+                                tableColumnProperties = new TableColumnProperties() {{
+                                    columnWidth = new Dimension() {{
+                                        magnitude = 2282.63;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                }};
+                            }};
+                            updateTableRowProperties = new UpdateTableRowPropertiesRequest() {{
+                                fields = "dignissimos";
+                                objectId = "a";
+                                rowIndices = new Integer[]{{
+                                    add(233420),
+                                    add(358107),
+                                    add(689768),
+                                    add(385237),
+                                }};
+                                tableRowProperties = new TableRowProperties() {{
+                                    minRowHeight = new Dimension() {{
+                                        magnitude = 583.56;
+                                        unit = "PT";
+                                    }};
+                                }};
+                            }};
+                            updateTextStyle = new UpdateTextStyleRequest() {{
+                                cellLocation = new TableCellLocation() {{
+                                    columnIndex = 730709;
+                                    rowIndex = 113816;
+                                }};
+                                fields = "accusamus";
+                                objectId = "similique";
+                                style = new TextStyle() {{
+                                    backgroundColor = new OptionalColor() {{
+                                        opaqueColor = new OpaqueColor() {{
+                                            rgbColor = new RgbColor() {{
+                                                blue = 2724.37;
+                                                green = 1328.15;
+                                                red = 3790.57;
+                                            }};
+                                            themeColor = "ACCENT2";
+                                        }};
+                                    }};
+                                    baselineOffset = "NONE";
+                                    bold = false;
+                                    fontFamily = "minima";
+                                    fontSize = new Dimension() {{
+                                        magnitude = 7487.89;
+                                        unit = "PT";
+                                    }};
+                                    foregroundColor = new OptionalColor() {{
+                                        opaqueColor = new OpaqueColor() {{
+                                            rgbColor = new RgbColor() {{
+                                                blue = 2378.07;
+                                                green = 7955.35;
+                                                red = 1718.53;
+                                            }};
+                                            themeColor = "ACCENT4";
+                                        }};
+                                    }};
+                                    italic = false;
+                                    link = new Link() {{
+                                        pageObjectId = "in";
+                                        relativeLink = "NEXT_SLIDE";
+                                        slideIndex = 304468;
+                                        url = "officiis";
+                                    }};
+                                    smallCaps = false;
+                                    strikethrough = false;
+                                    underline = false;
+                                    weightedFontFamily = new WeightedFontFamily() {{
+                                        fontFamily = "temporibus";
+                                        weight = 351870;
+                                    }};
+                                }};
+                                textRange = new Range() {{
+                                    endIndex = 237742;
+                                    startIndex = 738391;
+                                    type = "FROM_START_INDEX";
+                                }};
+                            }};
+                            updateVideoProperties = new UpdateVideoPropertiesRequest() {{
+                                fields = "quas";
+                                objectId = "hic";
+                                videoProperties = new VideoProperties() {{
+                                    autoPlay = false;
+                                    end = 201517;
+                                    mute = false;
+                                    outline = new Outline() {{
+                                        dashStyle = "DASH_DOT";
+                                        outlineFill = new OutlineFill() {{
+                                            solidFill = new SolidFill() {{
+                                                alpha = 5485.19;
+                                                color = new OpaqueColor() {{
+                                                    rgbColor = new RgbColor() {{
+                                                        blue = 8672.9;
+                                                        green = 5196.43;
+                                                        red = 9402.1;
+                                                    }};
+                                                    themeColor = "ACCENT1";
+                                                }};
+                                            }};
+                                        }};
+                                        propertyState = "INHERIT";
+                                        weight = new Dimension() {{
+                                            magnitude = 246.19;
+                                            unit = "PT";
+                                        }};
+                                    }};
+                                    start = 148829;
+                                }};
+                            }};
+                        }}),
+                        add(new Request() {{
+                            createImage = new CreateImageRequest() {{
+                                elementProperties = new PageElementProperties() {{
+                                    pageObjectId = "reiciendis";
+                                    size = new Size() {{
+                                        height = new Dimension() {{
+                                            magnitude = 1318.52;
+                                            unit = "PT";
+                                        }};
+                                        width = new Dimension() {{
+                                            magnitude = 7079.18;
+                                            unit = "EMU";
+                                        }};
+                                    }};
+                                    transform = new AffineTransform() {{
+                                        scaleX = 7090.72;
+                                        scaleY = 708.69;
+                                        shearX = 6117.49;
+                                        shearY = 2927.94;
+                                        translateX = 6719.07;
+                                        translateY = 1523.54;
+                                        unit = "EMU";
+                                    }};
+                                }};
+                                objectId = "commodi";
+                                url = "quidem";
+                            }};
+                            createLine = new CreateLineRequest() {{
+                                category = "LINE_CATEGORY_UNSPECIFIED";
+                                elementProperties = new PageElementProperties() {{
+                                    pageObjectId = "voluptas";
+                                    size = new Size() {{
+                                        height = new Dimension() {{
+                                            magnitude = 6041.18;
+                                            unit = "UNIT_UNSPECIFIED";
+                                        }};
+                                        width = new Dimension() {{
+                                            magnitude = 3828.08;
+                                            unit = "PT";
+                                        }};
+                                    }};
+                                    transform = new AffineTransform() {{
+                                        scaleX = 8953.86;
+                                        scaleY = 724.34;
+                                        shearX = 9677.95;
+                                        shearY = 193;
+                                        translateX = 5468.85;
+                                        translateY = 9795.74;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                }};
+                                lineCategory = "STRAIGHT";
+                                objectId = "provident";
+                            }};
+                            createParagraphBullets = new CreateParagraphBulletsRequest() {{
+                                bulletPreset = "BULLET_ARROW_DIAMOND_DISC";
+                                cellLocation = new TableCellLocation() {{
+                                    columnIndex = 896762;
+                                    rowIndex = 215529;
+                                }};
+                                objectId = "ea";
+                                textRange = new Range() {{
+                                    endIndex = 579912;
+                                    startIndex = 552078;
+                                    type = "ALL";
+                                }};
+                            }};
+                            createShape = new CreateShapeRequest() {{
+                                elementProperties = new PageElementProperties() {{
+                                    pageObjectId = "tempora";
+                                    size = new Size() {{
+                                        height = new Dimension() {{
+                                            magnitude = 2730.09;
+                                            unit = "EMU";
+                                        }};
+                                        width = new Dimension() {{
+                                            magnitude = 9700.76;
+                                            unit = "EMU";
+                                        }};
+                                    }};
+                                    transform = new AffineTransform() {{
+                                        scaleX = 254.97;
+                                        scaleY = 2484.13;
+                                        shearX = 8880.44;
+                                        shearY = 5058.66;
+                                        translateX = 7086.09;
+                                        translateY = 3103.81;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                }};
+                                objectId = "ipsam";
+                                shapeType = "FLOW_CHART_PROCESS";
+                            }};
+                            createSheetsChart = new CreateSheetsChartRequest() {{
+                                chartId = 524970;
+                                elementProperties = new PageElementProperties() {{
+                                    pageObjectId = "sit";
+                                    size = new Size() {{
+                                        height = new Dimension() {{
+                                            magnitude = 7505.95;
+                                            unit = "EMU";
+                                        }};
+                                        width = new Dimension() {{
+                                            magnitude = 3335.07;
+                                            unit = "UNIT_UNSPECIFIED";
+                                        }};
+                                    }};
+                                    transform = new AffineTransform() {{
+                                        scaleX = 9241.59;
+                                        scaleY = 9671.22;
+                                        shearX = 8623.19;
+                                        shearY = 1685.76;
+                                        translateX = 486.9;
+                                        translateY = 9014.83;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                }};
+                                linkingMode = "NOT_LINKED_IMAGE";
+                                objectId = "in";
+                                spreadsheetId = "officiis";
+                            }};
+                            createSlide = new CreateSlideRequest() {{
+                                insertionIndex = 104627;
+                                objectId = "laudantium";
+                                placeholderIdMappings = new org.openapis.openapi.models.shared.LayoutPlaceholderIdMapping[]{{
+                                    add(new LayoutPlaceholderIdMapping() {{
+                                        layoutPlaceholder = new Placeholder() {{
+                                            index = 510629;
+                                            parentObjectId = "cum";
+                                            type = "DATE_AND_TIME";
+                                        }};
+                                        layoutPlaceholderObjectId = "dolorum";
+                                        objectId = "voluptatum";
+                                    }}),
+                                    add(new LayoutPlaceholderIdMapping() {{
+                                        layoutPlaceholder = new Placeholder() {{
+                                            index = 622385;
+                                            parentObjectId = "hic";
+                                            type = "SLIDE_NUMBER";
+                                        }};
+                                        layoutPlaceholderObjectId = "debitis";
+                                        objectId = "neque";
+                                    }}),
+                                }};
+                                slideLayoutReference = new LayoutReference() {{
+                                    layoutId = "dolorum";
+                                    predefinedLayout = "TITLE_AND_BODY";
+                                }};
+                            }};
+                            createTable = new CreateTableRequest() {{
+                                columns = 639028;
+                                elementProperties = new PageElementProperties() {{
+                                    pageObjectId = "dolorum";
+                                    size = new Size() {{
+                                        height = new Dimension() {{
+                                            magnitude = 5483.61;
+                                            unit = "PT";
+                                        }};
+                                        width = new Dimension() {{
+                                            magnitude = 2726.83;
+                                            unit = "EMU";
+                                        }};
+                                    }};
+                                    transform = new AffineTransform() {{
+                                        scaleX = 1482.68;
+                                        scaleY = 2826.99;
+                                        shearX = 8563.03;
+                                        shearY = 302.35;
+                                        translateX = 6350.57;
+                                        translateY = 7103.37;
+                                        unit = "UNIT_UNSPECIFIED";
+                                    }};
+                                }};
+                                objectId = "consequatur";
+                                rows = 460220;
+                            }};
+                            createVideo = new CreateVideoRequest() {{
+                                elementProperties = new PageElementProperties() {{
+                                    pageObjectId = "ipsam";
+                                    size = new Size() {{
+                                        height = new Dimension() {{
+                                            magnitude = 245.27;
+                                            unit = "EMU";
+                                        }};
+                                        width = new Dimension() {{
+                                            magnitude = 5580.65;
+                                            unit = "PT";
+                                        }};
+                                    }};
+                                    transform = new AffineTransform() {{
+                                        scaleX = 3611.51;
+                                        scaleY = 894.94;
+                                        shearX = 5027.1;
+                                        shearY = 4059.42;
+                                        translateX = 1536.27;
+                                        translateY = 243.13;
+                                        unit = "EMU";
+                                    }};
+                                }};
+                                id = "nostrum";
+                                objectId = "saepe";
+                                source = "YOUTUBE";
+                            }};
+                            deleteObject = new DeleteObjectRequest() {{
+                                objectId = "consequatur";
+                            }};
+                            deleteParagraphBullets = new DeleteParagraphBulletsRequest() {{
+                                cellLocation = new TableCellLocation() {{
+                                    columnIndex = 279068;
+                                    rowIndex = 968865;
+                                }};
+                                objectId = "dolorem";
+                                textRange = new Range() {{
+                                    endIndex = 690894;
+                                    startIndex = 115703;
+                                    type = "RANGE_TYPE_UNSPECIFIED";
+                                }};
+                            }};
+                            deleteTableColumn = new DeleteTableColumnRequest() {{
+                                cellLocation = new TableCellLocation() {{
+                                    columnIndex = 577140;
+                                    rowIndex = 289776;
+                                }};
+                                tableObjectId = "quidem";
+                            }};
+                            deleteTableRow = new DeleteTableRowRequest() {{
+                                cellLocation = new TableCellLocation() {{
+                                    columnIndex = 539074;
+                                    rowIndex = 671957;
+                                }};
+                                tableObjectId = "nam";
+                            }};
+                            deleteText = new DeleteTextRequest() {{
+                                cellLocation = new TableCellLocation() {{
+                                    columnIndex = 948861;
+                                    rowIndex = 388867;
+                                }};
+                                objectId = "alias";
+                                textRange = new Range() {{
+                                    endIndex = 227084;
+                                    startIndex = 647197;
+                                    type = "FIXED_RANGE";
+                                }};
+                            }};
+                            duplicateObject = new DuplicateObjectRequest() {{
+                                objectId = "unde";
+                                objectIds = new java.util.HashMap<String, String>() {{
+                                    put("provident", "repellendus");
+                                    put("delectus", "voluptates");
+                                    put("perferendis", "est");
+                                    put("quidem", "reprehenderit");
+                                }};
+                            }};
+                            groupObjects = new GroupObjectsRequest() {{
+                                childrenObjectIds = new String[]{{
+                                    add("fuga"),
+                                    add("praesentium"),
+                                    add("mollitia"),
+                                    add("veniam"),
+                                }};
+                                groupObjectId = "voluptatem";
+                            }};
+                            insertTableColumns = new InsertTableColumnsRequest() {{
+                                cellLocation = new TableCellLocation() {{
+                                    columnIndex = 790840;
+                                    rowIndex = 919532;
+                                }};
+                                insertRight = false;
+                                number = 97243;
+                                tableObjectId = "atque";
+                            }};
+                            insertTableRows = new InsertTableRowsRequest() {{
+                                cellLocation = new TableCellLocation() {{
+                                    columnIndex = 442036;
+                                    rowIndex = 991142;
+                                }};
+                                insertBelow = false;
+                                number = 519952;
+                                tableObjectId = "suscipit";
+                            }};
+                            insertText = new InsertTextRequest() {{
+                                cellLocation = new TableCellLocation() {{
+                                    columnIndex = 693957;
+                                    rowIndex = 806670;
+                                }};
+                                insertionIndex = 90885;
+                                objectId = "esse";
+                                text = "amet";
+                            }};
+                            mergeTableCells = new MergeTableCellsRequest() {{
+                                objectId = "assumenda";
+                                tableRange = new TableRange() {{
+                                    columnSpan = 410301;
+                                    location = new TableCellLocation() {{
+                                        columnIndex = 539118;
+                                        rowIndex = 623295;
+                                    }};
+                                    rowSpan = 887265;
+                                }};
+                            }};
+                            refreshSheetsChart = new RefreshSheetsChartRequest() {{
+                                objectId = "officiis";
+                            }};
+                            replaceAllShapesWithImage = new ReplaceAllShapesWithImageRequest() {{
+                                containsText = new SubstringMatchCriteria() {{
+                                    matchCase = false;
+                                    text = "accusamus";
+                                }};
+                                imageReplaceMethod = "CENTER_INSIDE";
+                                imageUrl = "minima";
+                                pageObjectIds = new String[]{{
+                                    add("ex"),
+                                }};
+                                replaceMethod = "CENTER_CROP";
+                            }};
+                            replaceAllShapesWithSheetsChart = new ReplaceAllShapesWithSheetsChartRequest() {{
+                                chartId = 544647;
+                                containsText = new SubstringMatchCriteria() {{
+                                    matchCase = false;
+                                    text = "at";
+                                }};
+                                linkingMode = "LINKED";
+                                pageObjectIds = new String[]{{
+                                    add("suscipit"),
+                                    add("repudiandae"),
+                                    add("atque"),
+                                }};
+                                spreadsheetId = "atque";
+                            }};
+                            replaceAllText = new ReplaceAllTextRequest() {{
+                                containsText = new SubstringMatchCriteria() {{
+                                    matchCase = false;
+                                    text = "sunt";
+                                }};
+                                pageObjectIds = new String[]{{
+                                    add("dolorum"),
+                                    add("repellendus"),
+                                    add("labore"),
+                                    add("reiciendis"),
+                                }};
+                                replaceText = "doloremque";
+                            }};
+                            replaceImage = new ReplaceImageRequest() {{
+                                imageObjectId = "repudiandae";
+                                imageReplaceMethod = "IMAGE_REPLACE_METHOD_UNSPECIFIED";
+                                url = "accusantium";
+                            }};
+                            rerouteLine = new RerouteLineRequest() {{
+                                objectId = "beatae";
+                            }};
+                            ungroupObjects = new UngroupObjectsRequest() {{
+                                objectIds = new String[]{{
+                                    add("enim"),
+                                }};
+                            }};
+                            unmergeTableCells = new UnmergeTableCellsRequest() {{
+                                objectId = "laboriosam";
+                                tableRange = new TableRange() {{
+                                    columnSpan = 246535;
+                                    location = new TableCellLocation() {{
+                                        columnIndex = 952143;
+                                        rowIndex = 562783;
+                                    }};
+                                    rowSpan = 300029;
+                                }};
+                            }};
+                            updateImageProperties = new UpdateImagePropertiesRequest() {{
+                                fields = "saepe";
+                                imageProperties = new ImageProperties() {{
+                                    brightness = 1604.67;
+                                    contrast = 5801.07;
+                                    cropProperties = new CropProperties() {{
+                                        angle = 8863.05;
+                                        bottomOffset = 5979.37;
+                                        leftOffset = 4463.94;
+                                        rightOffset = 2380.43;
+                                        topOffset = 9078.76;
+                                    }};
+                                    link = new Link() {{
+                                        pageObjectId = "occaecati";
+                                        relativeLink = "RELATIVE_SLIDE_LINK_UNSPECIFIED";
+                                        slideIndex = 145870;
+                                        url = "id";
+                                    }};
+                                    outline = new Outline() {{
+                                        dashStyle = "DOT";
+                                        outlineFill = new OutlineFill() {{
+                                            solidFill = new SolidFill() {{
+                                                alpha = 4402.64;
+                                                color = new OpaqueColor() {{
+                                                    rgbColor = new RgbColor() {{
+                                                        blue = 6255.28;
+                                                        green = 764.86;
+                                                        red = 3613.06;
+                                                    }};
+                                                    themeColor = "HYPERLINK";
+                                                }};
+                                            }};
+                                        }};
+                                        propertyState = "INHERIT";
+                                        weight = new Dimension() {{
+                                            magnitude = 2473.99;
+                                            unit = "PT";
+                                        }};
+                                    }};
+                                    recolor = new Recolor() {{
+                                        name = "NONE";
+                                        recolorStops = new org.openapis.openapi.models.shared.ColorStop[]{{
+                                            add(new ColorStop() {{
+                                                alpha = 599.44;
+                                                color = new OpaqueColor() {{
+                                                    rgbColor = new RgbColor() {{
+                                                        blue = 5176.12;
+                                                        green = 610.78;
+                                                        red = 4746.68;
+                                                    }};
+                                                    themeColor = "TEXT2";
+                                                }};
+                                                position = 1843.62;
+                                            }}),
+                                            add(new ColorStop() {{
+                                                alpha = 7398.84;
+                                                color = new OpaqueColor() {{
+                                                    rgbColor = new RgbColor() {{
+                                                        blue = 4347.61;
+                                                        green = 8980.63;
+                                                        red = 1875.52;
+                                                    }};
+                                                    themeColor = "HYPERLINK";
+                                                }};
+                                                position = 7152.08;
+                                            }}),
+                                        }};
+                                    }};
+                                    shadow = new Shadow() {{
+                                        alignment = "CENTER";
+                                        alpha = 5230.06;
+                                        blurRadius = new Dimension() {{
+                                            magnitude = 3044.46;
+                                            unit = "UNIT_UNSPECIFIED";
+                                        }};
+                                        color = new OpaqueColor() {{
+                                            rgbColor = new RgbColor() {{
+                                                blue = 9979.63;
+                                                green = 30.99;
+                                                red = 3621.89;
+                                            }};
+                                            themeColor = "ACCENT6";
+                                        }};
+                                        propertyState = "NOT_RENDERED";
+                                        rotateWithShape = false;
+                                        transform = new AffineTransform() {{
+                                            scaleX = 6490.78;
+                                            scaleY = 3782.45;
+                                            shearX = 51.89;
+                                            shearY = 9795.27;
+                                            translateX = 9702.22;
+                                            translateY = 1746.58;
+                                            unit = "EMU";
+                                        }};
+                                        type = "SHADOW_TYPE_UNSPECIFIED";
+                                    }};
+                                    transparency = 2931.44;
+                                }};
+                                objectId = "dolorum";
+                            }};
+                            updateLineCategory = new UpdateLineCategoryRequest() {{
+                                lineCategory = "LINE_CATEGORY_UNSPECIFIED";
+                                objectId = "quae";
+                            }};
+                            updateLineProperties = new UpdateLinePropertiesRequest() {{
+                                fields = "recusandae";
+                                lineProperties = new LineProperties() {{
+                                    dashStyle = "DASH_DOT";
+                                    endArrow = "FILL_ARROW";
+                                    endConnection = new LineConnection() {{
+                                        connectedObjectId = "molestiae";
+                                        connectionSiteIndex = 403218;
+                                    }};
+                                    lineFill = new LineFill() {{
+                                        solidFill = new SolidFill() {{
+                                            alpha = 2840;
+                                            color = new OpaqueColor() {{
+                                                rgbColor = new RgbColor() {{
+                                                    blue = 6330.62;
+                                                    green = 2384.13;
+                                                    red = 8906.53;
+                                                }};
+                                                themeColor = "ACCENT4";
+                                            }};
+                                        }};
+                                    }};
+                                    link = new Link() {{
+                                        pageObjectId = "eum";
+                                        relativeLink = "NEXT_SLIDE";
+                                        slideIndex = 928219;
+                                        url = "esse";
+                                    }};
+                                    startArrow = "FILL_DIAMOND";
+                                    startConnection = new LineConnection() {{
+                                        connectedObjectId = "quis";
+                                        connectionSiteIndex = 431785;
+                                    }};
+                                    weight = new Dimension() {{
+                                        magnitude = 9704.94;
+                                        unit = "EMU";
+                                    }};
+                                }};
+                                objectId = "aspernatur";
+                            }};
+                            updatePageElementAltText = new UpdatePageElementAltTextRequest() {{
+                                description = "ullam";
+                                objectId = "quasi";
+                                title = "Miss";
+                            }};
+                            updatePageElementTransform = new UpdatePageElementTransformRequest() {{
+                                applyMode = "RELATIVE";
+                                objectId = "mollitia";
+                                transform = new AffineTransform() {{
+                                    scaleX = 5910.27;
+                                    scaleY = 8217.19;
+                                    shearX = 6591.77;
+                                    shearY = 4027.67;
+                                    translateX = 3972.57;
+                                    translateY = 375.65;
+                                    unit = "PT";
+                                }};
+                            }};
+                            updatePageElementsZOrder = new UpdatePageElementsZOrderRequest() {{
+                                operation = "SEND_TO_BACK";
+                                pageElementObjectIds = new String[]{{
+                                    add("in"),
+                                    add("nam"),
+                                }};
+                            }};
+                            updatePageProperties = new UpdatePagePropertiesRequest() {{
+                                fields = "earum";
+                                objectId = "officia";
+                                pageProperties = new PageProperties() {{
+                                    colorScheme = new ColorScheme() {{
+                                        colors = new org.openapis.openapi.models.shared.ThemeColorPair[]{{
+                                            add(new ThemeColorPair() {{
+                                                color = new RgbColor() {{
+                                                    blue = 8130.54;
+                                                    green = 2666.97;
+                                                    red = 9762.26;
+                                                }};
+                                                type = "ACCENT5";
                                             }}),
                                             add(new ThemeColorPair() {{
                                                 color = new RgbColor() {{
-                                                    blue = 333.04;
-                                                    green = 3069.86;
-                                                    red = 9589.83;
+                                                    blue = 8897.94;
+                                                    green = 9569.33;
+                                                    red = 7645.62;
                                                 }};
-                                                type = "LIGHT1";
+                                                type = "DARK1";
                                             }}),
                                             add(new ThemeColorPair() {{
                                                 color = new RgbColor() {{
-                                                    blue = 3553.69;
-                                                    green = 4438.79;
-                                                    red = 3567.07;
+                                                    blue = 6982.49;
+                                                    green = 2722.29;
+                                                    red = 3354.98;
                                                 }};
-                                                type = "ACCENT2";
+                                                type = "DARK1";
                                             }}),
                                         }};
                                     }};
                                     pageBackgroundFill = new PageBackgroundFill() {{
                                         propertyState = "RENDERED";
                                         solidFill = new SolidFill() {{
-                                            alpha = 5318.49;
+                                            alpha = 7652.71;
                                             color = new OpaqueColor() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 1852.32;
-                                                    green = 8453.58;
-                                                    red = 4012.59;
+                                                    blue = 626.36;
+                                                    green = 216.88;
+                                                    red = 2419.01;
                                                 }};
-                                                themeColor = "ACCENT5";
+                                                themeColor = "LIGHT1";
                                             }};
                                         }};
                                         stretchedPictureFill = new StretchedPictureFill() {{
-                                            contentUrl = "itaque";
+                                            contentUrl = "eum";
                                             size = new Size() {{
                                                 height = new Dimension() {{
-                                                    magnitude = 6802.7;
-                                                    unit = "UNIT_UNSPECIFIED";
+                                                    magnitude = 2606.28;
+                                                    unit = "EMU";
                                                 }};
                                                 width = new Dimension() {{
-                                                    magnitude = 6091.78;
+                                                    magnitude = 8710.83;
                                                     unit = "PT";
                                                 }};
                                             }};
@@ -1736,332 +2622,344 @@ public class Application {
                             }};
                             updateParagraphStyle = new UpdateParagraphStyleRequest() {{
                                 cellLocation = new TableCellLocation() {{
-                                    columnIndex = 98478;
-                                    rowIndex = 869489;
+                                    columnIndex = 179410;
+                                    rowIndex = 958741;
                                 }};
-                                fields = "et";
-                                objectId = "voluptate";
+                                fields = "eum";
+                                objectId = "dicta";
                                 style = new ParagraphStyle() {{
-                                    alignment = "ALIGNMENT_UNSPECIFIED";
+                                    alignment = "START";
                                     direction = "TEXT_DIRECTION_UNSPECIFIED";
                                     indentEnd = new Dimension() {{
-                                        magnitude = 865.32;
-                                        unit = "UNIT_UNSPECIFIED";
-                                    }};
-                                    indentFirstLine = new Dimension() {{
-                                        magnitude = 2371.73;
+                                        magnitude = 5834.04;
                                         unit = "EMU";
                                     }};
-                                    indentStart = new Dimension() {{
-                                        magnitude = 8395.13;
-                                        unit = "UNIT_UNSPECIFIED";
+                                    indentFirstLine = new Dimension() {{
+                                        magnitude = 9364.69;
+                                        unit = "PT";
                                     }};
-                                    lineSpacing = 5223.71;
+                                    indentStart = new Dimension() {{
+                                        magnitude = 9407.82;
+                                        unit = "PT";
+                                    }};
+                                    lineSpacing = 525.08;
                                     spaceAbove = new Dimension() {{
-                                        magnitude = 156.06;
+                                        magnitude = 9358.33;
                                         unit = "EMU";
                                     }};
                                     spaceBelow = new Dimension() {{
-                                        magnitude = 4287.96;
-                                        unit = "EMU";
+                                        magnitude = 9834.27;
+                                        unit = "PT";
                                     }};
-                                    spacingMode = "SPACING_MODE_UNSPECIFIED";
+                                    spacingMode = "NEVER_COLLAPSE";
                                 }};
                                 textRange = new Range() {{
-                                    endIndex = 544591;
-                                    startIndex = 251941;
+                                    endIndex = 780931;
+                                    startIndex = 380335;
                                     type = "RANGE_TYPE_UNSPECIFIED";
                                 }};
                             }};
                             updateShapeProperties = new UpdateShapePropertiesRequest() {{
-                                fields = "dolor";
-                                objectId = "occaecati";
+                                fields = "fugit";
+                                objectId = "cumque";
                                 shapeProperties = new ShapeProperties() {{
                                     autofit = new Autofit() {{
-                                        autofitType = "NONE";
-                                        fontScale = 7710.89;
-                                        lineSpacingReduction = 1310.55;
+                                        autofitType = "TEXT_AUTOFIT";
+                                        fontScale = 1890.62;
+                                        lineSpacingReduction = 6567.62;
                                     }};
-                                    contentAlignment = "CONTENT_ALIGNMENT_UNSUPPORTED";
+                                    contentAlignment = "BOTTOM";
                                     link = new Link() {{
-                                        pageObjectId = "aut";
-                                        relativeLink = "PREVIOUS_SLIDE";
-                                        slideIndex = 115484;
-                                        url = "maiores";
+                                        pageObjectId = "nulla";
+                                        relativeLink = "RELATIVE_SLIDE_LINK_UNSPECIFIED";
+                                        slideIndex = 97258;
+                                        url = "et";
                                     }};
                                     outline = new Outline() {{
-                                        dashStyle = "DASH_DOT";
+                                        dashStyle = "DASH";
                                         outlineFill = new OutlineFill() {{
                                             solidFill = new SolidFill() {{
-                                                alpha = 2446.51;
+                                                alpha = 6191.83;
                                                 color = new OpaqueColor() {{
                                                     rgbColor = new RgbColor() {{
-                                                        blue = 9742.57;
-                                                        green = 3743.23;
-                                                        red = 9903.45;
+                                                        blue = 5810.82;
+                                                        green = 3824.4;
+                                                        red = 2415.57;
                                                     }};
-                                                    themeColor = "THEME_COLOR_TYPE_UNSPECIFIED";
+                                                    themeColor = "DARK1";
                                                 }};
                                             }};
                                         }};
-                                        propertyState = "NOT_RENDERED";
+                                        propertyState = "RENDERED";
                                         weight = new Dimension() {{
-                                            magnitude = 3100.67;
-                                            unit = "UNIT_UNSPECIFIED";
+                                            magnitude = 9849.34;
+                                            unit = "PT";
                                         }};
                                     }};
                                     shadow = new Shadow() {{
                                         alignment = "BOTTOM_CENTER";
-                                        alpha = 6387.62;
+                                        alpha = 585.34;
                                         blurRadius = new Dimension() {{
-                                            magnitude = 8070.23;
+                                            magnitude = 2711.13;
                                             unit = "EMU";
                                         }};
                                         color = new OpaqueColor() {{
                                             rgbColor = new RgbColor() {{
-                                                blue = 6400.24;
-                                                green = 9894.1;
-                                                red = 3681.02;
+                                                blue = 4731.9;
+                                                green = 1158.34;
+                                                red = 4797.54;
                                             }};
-                                            themeColor = "DARK1";
+                                            themeColor = "ACCENT3";
                                         }};
-                                        propertyState = "RENDERED";
+                                        propertyState = "NOT_RENDERED";
                                         rotateWithShape = false;
                                         transform = new AffineTransform() {{
-                                            scaleX = 7832.35;
-                                            scaleY = 8018.36;
-                                            shearX = 2883.98;
-                                            shearY = 704.47;
-                                            translateX = 2414.18;
-                                            translateY = 6835.73;
-                                            unit = "EMU";
+                                            scaleX = 9799.63;
+                                            scaleY = 9672.6;
+                                            shearX = 4237.06;
+                                            shearY = 999.58;
+                                            translateX = 8571.25;
+                                            translateY = 396.5;
+                                            unit = "UNIT_UNSPECIFIED";
                                         }};
                                         type = "SHADOW_TYPE_UNSPECIFIED";
                                     }};
                                     shapeBackgroundFill = new ShapeBackgroundFill() {{
                                         propertyState = "RENDERED";
                                         solidFill = new SolidFill() {{
-                                            alpha = 6339.31;
+                                            alpha = 4582.59;
                                             color = new OpaqueColor() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 6658.59;
-                                                    green = 9268.8;
-                                                    red = 5173.09;
+                                                    blue = 4037.93;
+                                                    green = 2352.63;
+                                                    red = 3998.12;
                                                 }};
-                                                themeColor = "BACKGROUND1";
+                                                themeColor = "DARK1";
                                             }};
                                         }};
                                     }};
                                 }};
                             }};
                             updateSlideProperties = new UpdateSlidePropertiesRequest() {{
-                                fields = "vel";
-                                objectId = "ducimus";
+                                fields = "laborum";
+                                objectId = "sunt";
                                 slideProperties = new SlideProperties() {{
                                     isSkipped = false;
-                                    layoutObjectId = "quos";
-                                    masterObjectId = "vel";
+                                    layoutObjectId = "nostrum";
+                                    masterObjectId = "fugiat";
                                     notesPage = new Page() {{}};
                                 }};
                             }};
                             updateSlidesPosition = new UpdateSlidesPositionRequest() {{
-                                insertionIndex = 287051;
+                                insertionIndex = 713767;
                                 slideObjectIds = new String[]{{
-                                    add("facilis"),
-                                    add("cum"),
-                                    add("commodi"),
-                                    add("in"),
+                                    add("officia"),
+                                    add("suscipit"),
                                 }};
                             }};
                             updateTableBorderProperties = new UpdateTableBorderPropertiesRequest() {{
                                 borderPosition = "INNER_HORIZONTAL";
-                                fields = "reiciendis";
-                                objectId = "assumenda";
+                                fields = "perferendis";
+                                objectId = "eum";
                                 tableBorderProperties = new TableBorderProperties() {{
                                     dashStyle = "DOT";
                                     tableBorderFill = new TableBorderFill() {{
                                         solidFill = new SolidFill() {{
-                                            alpha = 9249.67;
+                                            alpha = 6145.28;
                                             color = new OpaqueColor() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 3975.33;
-                                                    green = 460.07;
-                                                    red = 7386.83;
+                                                    blue = 6616.07;
+                                                    green = 700.42;
+                                                    red = 6253.58;
                                                 }};
-                                                themeColor = "DARK2";
+                                                themeColor = "TEXT1";
                                             }};
                                         }};
                                     }};
                                     weight = new Dimension() {{
-                                        magnitude = 4490.83;
+                                        magnitude = 9139.92;
                                         unit = "EMU";
                                     }};
                                 }};
                                 tableRange = new TableRange() {{
-                                    columnSpan = 937285;
+                                    columnSpan = 671794;
                                     location = new TableCellLocation() {{
-                                        columnIndex = 814967;
-                                        rowIndex = 257233;
+                                        columnIndex = 726343;
+                                        rowIndex = 324083;
                                     }};
-                                    rowSpan = 985492;
+                                    rowSpan = 536923;
                                 }};
                             }};
                             updateTableCellProperties = new UpdateTableCellPropertiesRequest() {{
-                                fields = "suscipit";
-                                objectId = "reiciendis";
+                                fields = "enim";
+                                objectId = "vitae";
                                 tableCellProperties = new TableCellProperties() {{
-                                    contentAlignment = "MIDDLE";
+                                    contentAlignment = "BOTTOM";
                                     tableCellBackgroundFill = new TableCellBackgroundFill() {{
-                                        propertyState = "INHERIT";
+                                        propertyState = "NOT_RENDERED";
                                         solidFill = new SolidFill() {{
-                                            alpha = 8970.71;
+                                            alpha = 7758.03;
                                             color = new OpaqueColor() {{
                                                 rgbColor = new RgbColor() {{
-                                                    blue = 2965.56;
-                                                    green = 1210.59;
-                                                    red = 9920.12;
+                                                    blue = 4053.73;
+                                                    green = 2811.53;
+                                                    red = 3210.43;
                                                 }};
-                                                themeColor = "LIGHT2";
+                                                themeColor = "FOLLOWED_HYPERLINK";
                                             }};
                                         }};
                                     }};
                                 }};
                                 tableRange = new TableRange() {{
-                                    columnSpan = 249420;
+                                    columnSpan = 29950;
                                     location = new TableCellLocation() {{
-                                        columnIndex = 228263;
-                                        rowIndex = 105906;
+                                        columnIndex = 561577;
+                                        rowIndex = 737254;
                                     }};
-                                    rowSpan = 489509;
+                                    rowSpan = 399660;
                                 }};
                             }};
                             updateTableColumnProperties = new UpdateTableColumnPropertiesRequest() {{
                                 columnIndices = new Integer[]{{
-                                    add(891523),
-                                    add(233420),
-                                    add(358107),
-                                    add(689768),
+                                    add(530860),
                                 }};
-                                fields = "laboriosam";
-                                objectId = "ipsa";
+                                fields = "omnis";
+                                objectId = "veritatis";
                                 tableColumnProperties = new TableColumnProperties() {{
                                     columnWidth = new Dimension() {{
-                                        magnitude = 9167.27;
-                                        unit = "PT";
+                                        magnitude = 7032.18;
+                                        unit = "EMU";
                                     }};
                                 }};
                             }};
                             updateTableRowProperties = new UpdateTableRowPropertiesRequest() {{
-                                fields = "vitae";
-                                objectId = "accusamus";
+                                fields = "culpa";
+                                objectId = "voluptatem";
                                 rowIndices = new Integer[]{{
-                                    add(272437),
-                                    add(132815),
-                                    add(379057),
+                                    add(889288),
+                                    add(103298),
+                                    add(682119),
+                                    add(867168),
                                 }};
                                 tableRowProperties = new TableRowProperties() {{
                                     minRowHeight = new Dimension() {{
-                                        magnitude = 3742.44;
-                                        unit = "EMU";
+                                        magnitude = 8913.15;
+                                        unit = "UNIT_UNSPECIFIED";
                                     }};
                                 }};
                             }};
                             updateTextStyle = new UpdateTextStyleRequest() {{
                                 cellLocation = new TableCellLocation() {{
-                                    columnIndex = 324405;
-                                    rowIndex = 748789;
+                                    columnIndex = 1207;
+                                    rowIndex = 534917;
                                 }};
-                                fields = "dolorum";
-                                objectId = "adipisci";
+                                fields = "earum";
+                                objectId = "ex";
                                 style = new TextStyle() {{
                                     backgroundColor = new OptionalColor() {{
                                         opaqueColor = new OpaqueColor() {{
                                             rgbColor = new RgbColor() {{
-                                                blue = 7955.35;
-                                                green = 1718.53;
-                                                red = 5039.34;
+                                                blue = 9583.08;
+                                                green = 5241.84;
+                                                red = 7963.2;
                                             }};
-                                            themeColor = "ACCENT3";
+                                            themeColor = "ACCENT2";
                                         }};
                                     }};
-                                    baselineOffset = "NONE";
+                                    baselineOffset = "SUBSCRIPT";
                                     bold = false;
-                                    fontFamily = "aliquam";
+                                    fontFamily = "ratione";
                                     fontSize = new Dimension() {{
-                                        magnitude = 8859.63;
-                                        unit = "PT";
+                                        magnitude = 3552.25;
+                                        unit = "UNIT_UNSPECIFIED";
                                     }};
                                     foregroundColor = new OptionalColor() {{
                                         opaqueColor = new OpaqueColor() {{
                                             rgbColor = new RgbColor() {{
-                                                blue = 3518.7;
-                                                green = 2377.42;
-                                                red = 7383.91;
+                                                blue = 8483.41;
+                                                green = 5181.5;
+                                                red = 7706.75;
                                             }};
-                                            themeColor = "ACCENT4";
+                                            themeColor = "BACKGROUND1";
                                         }};
                                     }};
                                     italic = false;
                                     link = new Link() {{
-                                        pageObjectId = "quas";
-                                        relativeLink = "LAST_SLIDE";
-                                        slideIndex = 201517;
-                                        url = "culpa";
+                                        pageObjectId = "nam";
+                                        relativeLink = "NEXT_SLIDE";
+                                        slideIndex = 633415;
+                                        url = "dolor";
                                     }};
                                     smallCaps = false;
                                     strikethrough = false;
                                     underline = false;
                                     weightedFontFamily = new WeightedFontFamily() {{
-                                        fontFamily = "corrupti";
-                                        weight = 867290;
+                                        fontFamily = "aliquam";
+                                        weight = 80532;
                                     }};
                                 }};
                                 textRange = new Range() {{
-                                    endIndex = 519643;
-                                    startIndex = 940210;
+                                    endIndex = 537279;
+                                    startIndex = 85311;
                                     type = "FIXED_RANGE";
                                 }};
                             }};
                             updateVideoProperties = new UpdateVideoPropertiesRequest() {{
-                                fields = "nobis";
-                                objectId = "sit";
+                                fields = "dolor";
+                                objectId = "consequatur";
                                 videoProperties = new VideoProperties() {{
                                     autoPlay = false;
-                                    end = 699575;
+                                    end = 100014;
                                     mute = false;
                                     outline = new Outline() {{
-                                        dashStyle = "SOLID";
+                                        dashStyle = "DASH_STYLE_UNSPECIFIED";
                                         outlineFill = new OutlineFill() {{
                                             solidFill = new SolidFill() {{
-                                                alpha = 9679.66;
+                                                alpha = 2650.39;
                                                 color = new OpaqueColor() {{
                                                     rgbColor = new RgbColor() {{
-                                                        blue = 1318.52;
-                                                        green = 9944.01;
-                                                        red = 7079.18;
+                                                        blue = 1442.86;
+                                                        green = 661.49;
+                                                        red = 5137.6;
                                                     }};
-                                                    themeColor = "ACCENT3";
+                                                    themeColor = "DARK1";
                                                 }};
                                             }};
                                         }};
-                                        propertyState = "INHERIT";
+                                        propertyState = "RENDERED";
                                         weight = new Dimension() {{
-                                            magnitude = 708.69;
+                                            magnitude = 8562.77;
                                             unit = "EMU";
                                         }};
                                     }};
-                                    start = 292794;
+                                    start = 162120;
                                 }};
                             }};
                         }}),
                     }};
                     writeControl = new WriteControl() {{
-                        requiredRevisionId = "laborum";
+                        requiredRevisionId = "ipsa";
                     }};
                 }};
-            }};            
+                accessToken = "quas";
+                alt = "proto";
+                callback = "impedit";
+                fields = "officiis";
+                key = "esse";
+                oauthToken = "necessitatibus";
+                presentationId = "sed";
+                prettyPrint = false;
+                quotaUser = "veniam";
+                uploadType = "nesciunt";
+                uploadProtocol = "expedita";
+            }}            
 
-            SlidesPresentationsBatchUpdateResponse res = sdk.presentations.slidesPresentationsBatchUpdate(req);
+            SlidesPresentationsBatchUpdateResponse res = sdk.presentations.slidesPresentationsBatchUpdate(req, new SlidesPresentationsBatchUpdateSecurity() {{
+                option1 = new SlidesPresentationsBatchUpdateSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.batchUpdatePresentationResponse.isPresent()) {
                 // handle response

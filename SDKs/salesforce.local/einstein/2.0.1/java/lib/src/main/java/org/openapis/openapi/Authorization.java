@@ -41,7 +41,7 @@ public class Authorization {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenerateTokenV2Response generateTokenV2(org.openapis.openapi.models.operations.GenerateTokenV2Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GenerateTokenV2Response generateTokenV2(org.openapis.openapi.models.operations.GenerateTokenV2RequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/oauth2/token");
         
@@ -78,19 +78,20 @@ public class Authorization {
     /**
      * Delete a Refresh Token
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RevokeRefreshTokenV2Response revokeRefreshTokenV2(org.openapis.openapi.models.operations.RevokeRefreshTokenV2Request request) throws Exception {
+    public org.openapis.openapi.models.operations.RevokeRefreshTokenV2Response revokeRefreshTokenV2(org.openapis.openapi.models.operations.RevokeRefreshTokenV2Request request, org.openapis.openapi.models.operations.RevokeRefreshTokenV2Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RevokeRefreshTokenV2PathParams.class, baseUrl, "/v2/oauth2/tokens/{token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RevokeRefreshTokenV2Request.class, baseUrl, "/v2/oauth2/tokens/{token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFileMigrationsIdRequest {
-    
-    public GetFileMigrationsIdPathParams pathParams;
-    public GetFileMigrationsIdRequest withPathParams(GetFileMigrationsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * File Migration ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetFileMigrationsIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

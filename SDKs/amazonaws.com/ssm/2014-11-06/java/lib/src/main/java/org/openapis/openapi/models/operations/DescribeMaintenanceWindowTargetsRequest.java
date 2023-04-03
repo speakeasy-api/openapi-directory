@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeMaintenanceWindowTargetsRequest {
-    
-    public DescribeMaintenanceWindowTargetsQueryParams queryParams;
-    public DescribeMaintenanceWindowTargetsRequest withQueryParams(DescribeMaintenanceWindowTargetsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DescribeMaintenanceWindowTargetsHeaders headers;
-    public DescribeMaintenanceWindowTargetsRequest withHeaders(DescribeMaintenanceWindowTargetsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DescribeMaintenanceWindowTargetsRequest request;
-    public DescribeMaintenanceWindowTargetsRequest withRequest(org.openapis.openapi.models.shared.DescribeMaintenanceWindowTargetsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DescribeMaintenanceWindowTargetsRequest describeMaintenanceWindowTargetsRequest;
+    public DescribeMaintenanceWindowTargetsRequest withDescribeMaintenanceWindowTargetsRequest(org.openapis.openapi.models.shared.DescribeMaintenanceWindowTargetsRequest describeMaintenanceWindowTargetsRequest) {
+        this.describeMaintenanceWindowTargetsRequest = describeMaintenanceWindowTargetsRequest;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public String maxResults;
+    public DescribeMaintenanceWindowTargetsRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public DescribeMaintenanceWindowTargetsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeMaintenanceWindowTargetsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeMaintenanceWindowTargetsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeMaintenanceWindowTargetsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeMaintenanceWindowTargetsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeMaintenanceWindowTargetsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeMaintenanceWindowTargetsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeMaintenanceWindowTargetsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public DescribeMaintenanceWindowTargetsXAmzTargetEnum xAmzTarget;
+    public DescribeMaintenanceWindowTargetsRequest withXAmzTarget(DescribeMaintenanceWindowTargetsXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

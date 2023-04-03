@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Update3Request {
-    
-    public Update3PathParams pathParams;
-    public Update3Request withPathParams(Update3PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated existing user.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UserDTO request;
-    public Update3Request withRequest(org.openapis.openapi.models.shared.UserDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UserDTO userDTO;
+    public Update3Request withUserDTO(org.openapis.openapi.models.shared.UserDTO userDTO) {
+        this.userDTO = userDTO;
+        return this;
+    }
+    
+    /**
+     * user's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public Update3Request withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

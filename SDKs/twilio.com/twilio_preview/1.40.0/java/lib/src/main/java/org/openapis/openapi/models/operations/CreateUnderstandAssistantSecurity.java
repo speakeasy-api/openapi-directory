@@ -7,10 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUnderstandAssistantSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
-    public org.openapis.openapi.models.shared.SchemeAccountSidAuthToken accountSidAuthToken;
-    public CreateUnderstandAssistantSecurity withAccountSidAuthToken(org.openapis.openapi.models.shared.SchemeAccountSidAuthToken accountSidAuthToken) {
-        this.accountSidAuthToken = accountSidAuthToken;
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=password")
+    public String password;
+    public CreateUnderstandAssistantSecurity withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=username")
+    public String username;
+    public CreateUnderstandAssistantSecurity withUsername(String username) {
+        this.username = username;
         return this;
     }
     

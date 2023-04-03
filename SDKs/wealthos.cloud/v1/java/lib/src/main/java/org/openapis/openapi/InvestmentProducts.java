@@ -41,10 +41,11 @@ public class InvestmentProducts {
      * Get Current Prices of all Investment Products
      * Returns current prices of all the investment products configured for this tenancy
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetConfiguredInvestmentProductPricesResponse getConfiguredInvestmentProductPrices(org.openapis.openapi.models.operations.GetConfiguredInvestmentProductPricesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetConfiguredInvestmentProductPricesResponse getConfiguredInvestmentProductPrices(org.openapis.openapi.models.operations.GetConfiguredInvestmentProductPricesRequest request, org.openapis.openapi.models.operations.GetConfiguredInvestmentProductPricesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tenant/investment-products/v1/getCurrentPrices");
         
@@ -52,13 +53,13 @@ public class InvestmentProducts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConfiguredInvestmentProductPricesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConfiguredInvestmentProductPricesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -67,7 +68,7 @@ public class InvestmentProducts {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -135,10 +136,11 @@ public class InvestmentProducts {
      * Get Configured Investment Products
      * Returns all the investment products configured for this tenancy. Request can be filtered by status to return all `active` or `inactive` investment products
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetConfiguredInvestmentProductsResponse getConfiguredInvestmentProducts(org.openapis.openapi.models.operations.GetConfiguredInvestmentProductsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetConfiguredInvestmentProductsResponse getConfiguredInvestmentProducts(org.openapis.openapi.models.operations.GetConfiguredInvestmentProductsRequest request, org.openapis.openapi.models.operations.GetConfiguredInvestmentProductsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tenant/investment-products/v1");
         
@@ -146,13 +148,13 @@ public class InvestmentProducts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConfiguredInvestmentProductsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConfiguredInvestmentProductsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -161,7 +163,7 @@ public class InvestmentProducts {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -229,18 +231,19 @@ public class InvestmentProducts {
      * Get details of a given Investment Product
      * Returns the requested investment product
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetInvestmentProductResponse getInvestmentProduct(org.openapis.openapi.models.operations.GetInvestmentProductRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetInvestmentProductResponse getInvestmentProduct(org.openapis.openapi.models.operations.GetInvestmentProductRequest request, org.openapis.openapi.models.operations.GetInvestmentProductSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInvestmentProductPathParams.class, baseUrl, "/tenant/investment-products/v1/{category_id}/{investment_product_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInvestmentProductRequest.class, baseUrl, "/tenant/investment-products/v1/{category_id}/{investment_product_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -249,7 +252,7 @@ public class InvestmentProducts {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -317,18 +320,19 @@ public class InvestmentProducts {
      * Get Current Price of an Investment Product
      * Returns current price of the requested investment product
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetInvestmentProductPriceResponse getInvestmentProductPrice(org.openapis.openapi.models.operations.GetInvestmentProductPriceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetInvestmentProductPriceResponse getInvestmentProductPrice(org.openapis.openapi.models.operations.GetInvestmentProductPriceRequest request, org.openapis.openapi.models.operations.GetInvestmentProductPriceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInvestmentProductPricePathParams.class, baseUrl, "/tenant/investment-products/v1/{category_id}/{investment_product_id}/getCurrentPrice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInvestmentProductPriceRequest.class, baseUrl, "/tenant/investment-products/v1/{category_id}/{investment_product_id}/getCurrentPrice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -337,7 +341,7 @@ public class InvestmentProducts {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

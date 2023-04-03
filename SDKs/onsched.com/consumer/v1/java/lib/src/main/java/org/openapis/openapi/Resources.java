@@ -46,7 +46,7 @@ public class Resources {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1ResourcesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1ResourcesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -88,7 +88,7 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.GetConsumerV1ResourcesIdResponse getConsumerV1ResourcesId(org.openapis.openapi.models.operations.GetConsumerV1ResourcesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConsumerV1ResourcesIdPathParams.class, baseUrl, "/consumer/v1/resources/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConsumerV1ResourcesIdRequest.class, baseUrl, "/consumer/v1/resources/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -129,13 +129,13 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.GetConsumerV1ResourcesIdServicesResponse getConsumerV1ResourcesIdServices(org.openapis.openapi.models.operations.GetConsumerV1ResourcesIdServicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConsumerV1ResourcesIdServicesPathParams.class, baseUrl, "/consumer/v1/resources/{id}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConsumerV1ResourcesIdServicesRequest.class, baseUrl, "/consumer/v1/resources/{id}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1ResourcesIdServicesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1ResourcesIdServicesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventsRequest {
-    
-    public GetEventsPathParams pathParams;
-    public GetEventsRequest withPathParams(GetEventsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the conversation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversation_id")
+    public String conversationId;
+    public GetEventsRequest withConversationId(String conversationId) {
+        this.conversationId = conversationId;
         return this;
     }
     
+    /**
+     * The cursor to start returning results from.
+     * 
+     * You are not expected to provide this manually, but to follow the url provided in `_links.next.href` in the response which contains a `cursor` value
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public GetEventsRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public GetEventsQueryParams queryParams;
-    public GetEventsRequest withQueryParams(GetEventsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID to end returning events at
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_id")
+    public String endId;
+    public GetEventsRequest withEndId(String endId) {
+        this.endId = endId;
+        return this;
+    }
+    
+    /**
+     * The type of event to search for. Does not currently support custom events
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event_type")
+    public String eventType;
+    public GetEventsRequest withEventType(String eventType) {
+        this.eventType = eventType;
+        return this;
+    }
+    
+    /**
+     * Show the most (`desc`) / least (`asc`) recently created entries first
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public org.openapis.openapi.models.shared.OrderEnum order;
+    public GetEventsRequest withOrder(org.openapis.openapi.models.shared.OrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page.   The default value is `10`. The maximum value is `100`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetEventsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The ID to start returning events at
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_id")
+    public String startId;
+    public GetEventsRequest withStartId(String startId) {
+        this.startId = startId;
         return this;
     }
     

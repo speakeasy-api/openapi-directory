@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CompareStationPathParams;
 import org.openapis.openapi.models.operations.CompareStationRequest;
 import org.openapis.openapi.models.operations.CompareStationResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             CompareStationRequest req = new CompareStationRequest() {{
-                pathParams = new CompareStationPathParams() {{
-                    stationName = "corrupti";
-                }};
-            }};            
+                stationName = "corrupti";
+            }}            
 
             CompareStationResponse res = sdk.odWeather.compareStation(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### odWeather

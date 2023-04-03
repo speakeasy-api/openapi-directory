@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchExecutionStepRequest {
-    
-    public FetchExecutionStepPathParams pathParams;
-    public FetchExecutionStepRequest withPathParams(FetchExecutionStepPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Execution resource with the Step to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ExecutionSid")
+    public String executionSid;
+    public FetchExecutionStepRequest withExecutionSid(String executionSid) {
+        this.executionSid = executionSid;
         return this;
     }
     
-    
-    public FetchExecutionStepSecurity security;
-    public FetchExecutionStepRequest withSecurity(FetchExecutionStepSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Flow with the Step to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FlowSid")
+    public String flowSid;
+    public FetchExecutionStepRequest withFlowSid(String flowSid) {
+        this.flowSid = flowSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchExecutionStepRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the ExecutionStep resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchExecutionStepRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

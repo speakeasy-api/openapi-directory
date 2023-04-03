@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAlmawsV1TaskListsPrintoutsRequest {
+    /**
+     * Printout Name. Optional. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=letter")
+    public String letter;
+    public PostAlmawsV1TaskListsPrintoutsRequest withLetter(String letter) {
+        this.letter = letter;
+        return this;
+    }
     
-    public PostAlmawsV1TaskListsPrintoutsQueryParams queryParams;
-    public PostAlmawsV1TaskListsPrintoutsRequest withQueryParams(PostAlmawsV1TaskListsPrintoutsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The operation to perform on the printout. Currently, the options are: 'mark_as_printed','mark_as_canceled'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=op")
+    public String op;
+    public PostAlmawsV1TaskListsPrintoutsRequest withOp(String op) {
+        this.op = op;
+        return this;
+    }
+    
+    /**
+     * Printout Printer
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=printer_id")
+    public String printerId;
+    public PostAlmawsV1TaskListsPrintoutsRequest withPrinterId(String printerId) {
+        this.printerId = printerId;
+        return this;
+    }
+    
+    /**
+     * A list of Printout IDs (for example: 123,456,778) from 1 to the limit of 100 Optional. Use of this option overrides all of the filtering parameters
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=printout_id")
+    public String printoutId;
+    public PostAlmawsV1TaskListsPrintoutsRequest withPrintoutId(String printoutId) {
+        this.printoutId = printoutId;
+        return this;
+    }
+    
+    /**
+     * Printout status. Optional. Valid values are: Printed, Pending, Canceled.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public PostAlmawsV1TaskListsPrintoutsRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

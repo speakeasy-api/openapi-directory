@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWordOfTheDayRequest {
-    
-    public GetWordOfTheDayQueryParams queryParams;
-    public GetWordOfTheDayRequest withQueryParams(GetWordOfTheDayQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Fetches by date in yyyy-MM-dd
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public String date;
+    public GetWordOfTheDayRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     

@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SimulatesAdvancingTheStateOfACardDisputeRequest {
-    
-    public SimulatesAdvancingTheStateOfACardDisputePathParams pathParams;
-    public SimulatesAdvancingTheStateOfACardDisputeRequest withPathParams(SimulatesAdvancingTheStateOfACardDisputePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=card_dispute_id")
+    public String cardDisputeId;
+    public SimulatesAdvancingTheStateOfACardDisputeRequest withCardDisputeId(String cardDisputeId) {
+        this.cardDisputeId = cardDisputeId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SimulatesAdvancingTheStateOfACardDisputeParameters request;
-    public SimulatesAdvancingTheStateOfACardDisputeRequest withRequest(org.openapis.openapi.models.shared.SimulatesAdvancingTheStateOfACardDisputeParameters request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SimulatesAdvancingTheStateOfACardDisputeParameters simulatesAdvancingTheStateOfACardDisputeParameters;
+    public SimulatesAdvancingTheStateOfACardDisputeRequest withSimulatesAdvancingTheStateOfACardDisputeParameters(org.openapis.openapi.models.shared.SimulatesAdvancingTheStateOfACardDisputeParameters simulatesAdvancingTheStateOfACardDisputeParameters) {
+        this.simulatesAdvancingTheStateOfACardDisputeParameters = simulatesAdvancingTheStateOfACardDisputeParameters;
         return this;
     }
     

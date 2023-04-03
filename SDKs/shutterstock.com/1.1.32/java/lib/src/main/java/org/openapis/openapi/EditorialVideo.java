@@ -36,25 +36,26 @@ public class EditorialVideo {
      * Get editorial video content details
      * This endpoint shows information about an editorial image, including a URL to a preview image and the sizes that it is available in.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEditorialVideoResponse getEditorialVideo(org.openapis.openapi.models.operations.GetEditorialVideoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEditorialVideoResponse getEditorialVideo(org.openapis.openapi.models.operations.GetEditorialVideoRequest request, org.openapis.openapi.models.operations.GetEditorialVideoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEditorialVideoPathParams.class, baseUrl, "/v2/editorial/videos/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEditorialVideoRequest.class, baseUrl, "/v2/editorial/videos/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEditorialVideoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEditorialVideoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,10 +85,11 @@ public class EditorialVideo {
      * List editorial video licenses
      * This endpoint lists existing editorial video licenses.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEditorialVideoLicenseListResponse getEditorialVideoLicenseList(org.openapis.openapi.models.operations.GetEditorialVideoLicenseListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEditorialVideoLicenseListResponse getEditorialVideoLicenseList(org.openapis.openapi.models.operations.GetEditorialVideoLicenseListRequest request, org.openapis.openapi.models.operations.GetEditorialVideoLicenseListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/videos/licenses");
         
@@ -95,14 +97,14 @@ public class EditorialVideo {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEditorialVideoLicenseListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEditorialVideoLicenseListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -132,10 +134,11 @@ public class EditorialVideo {
      * License editorial video content
      * This endpoint gets licenses for one or more editorial videos. You must specify the country and one or more editorial videos to license. The download links in the response are valid for 8 hours.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LicenseEditorialVideoResponse licenseEditorialVideo(org.openapis.openapi.models.operations.LicenseEditorialVideoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LicenseEditorialVideoResponse licenseEditorialVideo(org.openapis.openapi.models.shared.LicenseEditorialVideoContentRequest request, org.openapis.openapi.models.operations.LicenseEditorialVideoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/videos/licenses");
         
@@ -149,7 +152,7 @@ public class EditorialVideo {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -178,11 +181,10 @@ public class EditorialVideo {
     /**
      * List editorial video categories
      * This endpoint lists the categories that editorial videos can belong to, which are separate from the categories that other types of assets can belong to.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListEditorialVideoCategoriesResponse listEditorialVideoCategories(org.openapis.openapi.models.operations.ListEditorialVideoCategoriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListEditorialVideoCategoriesResponse listEditorialVideoCategories() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/videos/categories");
         
@@ -191,8 +193,7 @@ public class EditorialVideo {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -221,10 +222,11 @@ public class EditorialVideo {
      * Search editorial video content
      * This endpoint searches for editorial videos. If you specify more than one search parameter, the API uses an AND condition. For example, if you set the `category` parameter to "Alone,Performing" and also specify a `query` parameter, the results include only videos that match the query and are in both the Alone and Performing categories.  You can also filter search terms out in the `query` parameter by prefixing the term with NOT.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchEditorialVideosResponse searchEditorialVideos(org.openapis.openapi.models.operations.SearchEditorialVideosRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchEditorialVideosResponse searchEditorialVideos(org.openapis.openapi.models.operations.SearchEditorialVideosRequest request, org.openapis.openapi.models.operations.SearchEditorialVideosSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/videos/search");
         
@@ -232,14 +234,14 @@ public class EditorialVideo {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchEditorialVideosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchEditorialVideosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -40,13 +40,13 @@ public class Products {
      */
     public org.openapis.openapi.models.operations.ProductsDeleteResponse productsDelete(org.openapis.openapi.models.operations.ProductsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductsDeletePathParams.class, baseUrl, "/v1/products/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductsDeleteRequest.class, baseUrl, "/v1/products/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProductsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProductsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -119,7 +119,7 @@ public class Products {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProductsPostResponse productsPost(org.openapis.openapi.models.operations.ProductsPostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProductsPostResponse productsPost(org.openapis.openapi.models.shared.ProductDto request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/products");
         
@@ -162,7 +162,7 @@ public class Products {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProductsProcessBatchResponse productsProcessBatch(org.openapis.openapi.models.operations.ProductsProcessBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProductsProcessBatchResponse productsProcessBatch(org.openapis.openapi.models.shared.BatchItemProductDto[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/products/batch");
         
@@ -207,12 +207,12 @@ public class Products {
      */
     public org.openapis.openapi.models.operations.ProductsPutResponse productsPut(org.openapis.openapi.models.operations.ProductsPutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductsPutPathParams.class, baseUrl, "/v1/products/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductsPutRequest.class, baseUrl, "/v1/products/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "productDto", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -250,7 +250,7 @@ public class Products {
      */
     public org.openapis.openapi.models.operations.GetV1ProductsIdResponse getV1ProductsId(org.openapis.openapi.models.operations.GetV1ProductsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1ProductsIdPathParams.class, baseUrl, "/v1/products/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1ProductsIdRequest.class, baseUrl, "/v1/products/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

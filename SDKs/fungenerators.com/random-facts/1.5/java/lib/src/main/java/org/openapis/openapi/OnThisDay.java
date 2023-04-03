@@ -34,10 +34,11 @@ public class OnThisDay {
     /**
      * Returns a random ( famous/ relatively famous ) person born on a given day and month
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetFactOnthisdayBornResponse getFactOnthisdayBorn(org.openapis.openapi.models.operations.GetFactOnthisdayBornRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetFactOnthisdayBornResponse getFactOnthisdayBorn(org.openapis.openapi.models.operations.GetFactOnthisdayBornRequest request, org.openapis.openapi.models.operations.GetFactOnthisdayBornSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/fact/onthisday/born");
         
@@ -45,14 +46,14 @@ public class OnThisDay {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFactOnthisdayBornQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFactOnthisdayBornRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,10 +74,11 @@ public class OnThisDay {
     /**
      * Returns a random ( famous/ relatively famous ) person died on a given day and month
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetFactOnthisdayDiedResponse getFactOnthisdayDied(org.openapis.openapi.models.operations.GetFactOnthisdayDiedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetFactOnthisdayDiedResponse getFactOnthisdayDied(org.openapis.openapi.models.operations.GetFactOnthisdayDiedRequest request, org.openapis.openapi.models.operations.GetFactOnthisdayDiedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/fact/onthisday/died");
         
@@ -84,14 +86,14 @@ public class OnThisDay {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFactOnthisdayDiedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFactOnthisdayDiedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -112,10 +114,11 @@ public class OnThisDay {
     /**
      * Returns a random ( famous/ relatively famous ) historic event on a given day and month
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetFactOnthisdayEventResponse getFactOnthisdayEvent(org.openapis.openapi.models.operations.GetFactOnthisdayEventRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetFactOnthisdayEventResponse getFactOnthisdayEvent(org.openapis.openapi.models.operations.GetFactOnthisdayEventRequest request, org.openapis.openapi.models.operations.GetFactOnthisdayEventSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/fact/onthisday/event");
         
@@ -123,14 +126,14 @@ public class OnThisDay {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFactOnthisdayEventQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFactOnthisdayEventRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

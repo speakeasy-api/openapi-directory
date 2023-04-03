@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchLogRequest {
-    
-    public FetchLogPathParams pathParams;
-    public FetchLogRequest withPathParams(FetchLogPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the environment with the Log resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EnvironmentSid")
+    public String environmentSid;
+    public FetchLogRequest withEnvironmentSid(String environmentSid) {
+        this.environmentSid = environmentSid;
         return this;
     }
     
-    
-    public FetchLogSecurity security;
-    public FetchLogRequest withSecurity(FetchLogSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Service to fetch the Log resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchLogRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchLogRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Log resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchLogRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

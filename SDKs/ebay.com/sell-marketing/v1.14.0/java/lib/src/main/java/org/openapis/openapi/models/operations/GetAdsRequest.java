@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAdsRequest {
-    
-    public GetAdsPathParams pathParams;
-    public GetAdsRequest withPathParams(GetAdsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A comma-separated list of ad group IDs. The results will be filtered to only include active ads for these ad groups. Call &lt;a href="/api-docs/sell/marketing/resources/adgroup/methods/getAdGroups"&gt;getAdGroups&lt;/a&gt; to retrieve the ad group ID for the ad group.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; This field only applies to the Cost Per Click (CPC) funding model; it does not apply to the Cost Per Sale (CPS) funding model.&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ad_group_ids")
+    public String adGroupIds;
+    public GetAdsRequest withAdGroupIds(String adGroupIds) {
+        this.adGroupIds = adGroupIds;
         return this;
     }
     
-    
-    public GetAdsQueryParams queryParams;
-    public GetAdsRequest withQueryParams(GetAdsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comma-separated list of ad statuses. The results will be filtered to only include the given statuses of the ad. If none are provided, all ads are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ad_status")
+    public String adStatus;
+    public GetAdsRequest withAdStatus(String adStatus) {
+        this.adStatus = adStatus;
         return this;
     }
     
+    /**
+     * A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; You can retrieve the campaign IDs for a specified seller using the &lt;a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns"&gt;getCampaigns&lt;/a&gt; method.&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaign_id")
+    public String campaignId;
+    public GetAdsRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
+        return this;
+    }
     
-    public GetAdsSecurity security;
-    public GetAdsRequest withSecurity(GetAdsSecurity security) {
-        this.security = security;
+    /**
+     * Specifies the maximum number of ads to return on a page in the paginated response. &lt;p&gt;&lt;b&gt;Default: &lt;/b&gt;10 &lt;br&gt;&lt;b&gt;Maximum:&lt;/b&gt; 500&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public GetAdsRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of listing IDs. The response includes only active ads (ads associated with a RUNNING campaign). The results do not include listing IDs that are excluded by other conditions.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=listing_ids")
+    public String listingIds;
+    public GetAdsRequest withListingIds(String listingIds) {
+        this.listingIds = listingIds;
+        return this;
+    }
+    
+    /**
+     * Specifies the number of ads to skip in the result set before returning the first ad in the paginated response.  &lt;p&gt;Combine &lt;b&gt;offset&lt;/b&gt; with the &lt;b&gt;limit&lt;/b&gt; query parameter to control the items returned in the response. For example, if you supply an &lt;b&gt;offset&lt;/b&gt; of &lt;code&gt;0&lt;/code&gt; and a &lt;b&gt;limit&lt;/b&gt; of &lt;code&gt;10&lt;/code&gt;, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If &lt;b&gt;offset&lt;/b&gt; is &lt;code&gt;10&lt;/code&gt; and &lt;b&gt;limit&lt;/b&gt; is &lt;code&gt;20&lt;/code&gt;, the first page of the response contains items 11-30 from the complete result set.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Default:&lt;/b&gt; 0&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetAdsRequest withOffset(String offset) {
+        this.offset = offset;
         return this;
     }
     

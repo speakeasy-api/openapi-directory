@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyMobileOTPUsingPOSTRequest {
-    
-    public VerifyMobileOTPUsingPOSTHeaders headers;
-    public VerifyMobileOTPUsingPOSTRequest withHeaders(VerifyMobileOTPUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public VerifyMobileOTPUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class VerifyMobileOTPUsingPOSTRequest {
      * verifyOtpRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.VerifyMobileRequest request;
-    public VerifyMobileOTPUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.VerifyMobileRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public VerifyMobileOTPUsingPOSTSecurity security;
-    public VerifyMobileOTPUsingPOSTRequest withSecurity(VerifyMobileOTPUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.VerifyMobileRequest verifyMobileRequest;
+    public VerifyMobileOTPUsingPOSTRequest withVerifyMobileRequest(org.openapis.openapi.models.shared.VerifyMobileRequest verifyMobileRequest) {
+        this.verifyMobileRequest = verifyMobileRequest;
         return this;
     }
     

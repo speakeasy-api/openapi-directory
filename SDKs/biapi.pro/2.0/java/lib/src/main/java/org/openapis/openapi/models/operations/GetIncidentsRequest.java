@@ -4,13 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIncidentsRequest {
+    /**
+     * filter last_update date &lt;= start_date. YYYY-MM-DD format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public String endDate;
+    public GetIncidentsRequest withEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
     
-    public GetIncidentsQueryParams queryParams;
-    public GetIncidentsRequest withQueryParams(GetIncidentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * give only the current state of the particular incidents.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public Long id;
+    public GetIncidentsRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * pagination option. Default to 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetIncidentsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * pagination option. Default to 30.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Long size;
+    public GetIncidentsRequest withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * filter last_update date &gt;= start_date. YYYY-MM-DD format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public String startDate;
+    public GetIncidentsRequest withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * comma separated list, filter incidents in the given states.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public GetIncidentsRequest withState(String state) {
+        this.state = state;
+        return this;
+    }
+    
+    /**
+     * comma_separated list, filter the incidents of the given weboob_id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=weboob_id")
+    public String weboobId;
+    public GetIncidentsRequest withWeboobId(String weboobId) {
+        this.weboobId = weboobId;
         return this;
     }
     

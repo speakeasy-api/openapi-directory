@@ -17,10 +17,8 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.DeparturesGetForStopRouteTypeEnum;
-import org.openapis.openapi.models.operations.DeparturesGetForStopPathParams;
 import org.openapis.openapi.models.operations.DeparturesGetForStopExpandEnum;
-import org.openapis.openapi.models.operations.DeparturesGetForStopQueryParams;
+import org.openapis.openapi.models.operations.DeparturesGetForStopRouteTypeEnum;
 import org.openapis.openapi.models.operations.DeparturesGetForStopRequest;
 import org.openapis.openapi.models.operations.DeparturesGetForStopResponse;
 
@@ -31,32 +29,29 @@ public class Application {
                 .build();
 
             DeparturesGetForStopRequest req = new DeparturesGetForStopRequest() {{
-                pathParams = new DeparturesGetForStopPathParams() {{
-                    routeType = "2";
-                    stopId = 592845;
+                dateUtc = "2021-10-25T05:21:43.948Z";
+                devid = "distinctio";
+                directionId = 844266;
+                expand = new org.openapis.openapi.models.operations.DeparturesGetForStopExpandEnum[]{{
+                    add("VehiclePosition"),
+                    add("Direction"),
+                    add("VehiclePosition"),
                 }};
-                queryParams = new DeparturesGetForStopQueryParams() {{
-                    dateUtc = "2021-04-24T16:27:50.833Z";
-                    devid = "unde";
-                    directionId = 857946;
-                    expand = new org.openapis.openapi.models.operations.DeparturesGetForStopExpandEnum[]{{
-                        add("VehiclePosition"),
-                        add("Run"),
-                        add("Disruption"),
-                    }};
-                    gtfs = false;
-                    includeCancelled = false;
-                    includeGeopath = false;
-                    lookBackwards = false;
-                    maxResults = 645894;
-                    platformNumbers = new Integer[]{{
-                        add(437587),
-                        add(297534),
-                    }};
-                    signature = "debitis";
-                    token = "ipsa";
+                gtfs = false;
+                includeCancelled = false;
+                includeGeopath = false;
+                lookBackwards = false;
+                maxResults = 423655;
+                platformNumbers = new Integer[]{{
+                    add(645894),
+                    add(384382),
+                    add(437587),
                 }};
-            }};            
+                routeType = "1";
+                signature = "debitis";
+                stopId = 56713;
+                token = "delectus";
+            }}            
 
             DeparturesGetForStopResponse res = sdk.departures.departuresGetForStop(req);
 
@@ -70,7 +65,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### departures

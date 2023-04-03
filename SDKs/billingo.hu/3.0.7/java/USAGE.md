@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateBankAccountRequest;
 import org.openapis.openapi.models.operations.CreateBankAccountResponse;
 import org.openapis.openapi.models.shared.BankAccountInput;
 import org.openapis.openapi.models.shared.CurrencyEnum;
@@ -14,22 +13,18 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateBankAccountRequest req = new CreateBankAccountRequest() {{
-                request = new BankAccountInput() {{
-                    accountNumber = "corrupti";
-                    accountNumberIban = "provident";
-                    currency = "PLN";
-                    name = "quibusdam";
-                    needQr = false;
-                    swift = "unde";
-                }};
-            }};            
+            org.openapis.openapi.models.shared.BankAccountInput req = new BankAccountInput() {{
+                accountNumber = "corrupti";
+                accountNumberIban = "provident";
+                currency = "PLN";
+                name = "quibusdam";
+                needQr = false;
+                swift = "unde";
+            }}            
 
             CreateBankAccountResponse res = sdk.bankAccount.createBankAccount(req);
 

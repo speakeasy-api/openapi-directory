@@ -4,27 +4,146 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest {
-    
-    public DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListPathParams pathParams;
-    public DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest withPathParams(DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListQueryParams queryParams;
-    public DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest withQueryParams(DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListSecurity security;
-    public DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest withSecurity(DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The maximum number of items to return in a single page. By default 100 and at most 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The next_page_token value returned from a previous list request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Required. The environment to list results for. Format: `projects//locations//agents// environments/`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

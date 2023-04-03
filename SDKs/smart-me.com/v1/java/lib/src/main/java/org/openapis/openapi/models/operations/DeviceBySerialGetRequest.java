@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeviceBySerialGetRequest {
-    
-    public DeviceBySerialGetQueryParams queryParams;
-    public DeviceBySerialGetRequest withQueryParams(DeviceBySerialGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Serial Number of the device
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serial")
+    public Long serial;
+    public DeviceBySerialGetRequest withSerial(Long serial) {
+        this.serial = serial;
         return this;
     }
     

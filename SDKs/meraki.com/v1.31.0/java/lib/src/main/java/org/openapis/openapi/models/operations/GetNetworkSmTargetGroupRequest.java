@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkSmTargetGroupRequest {
-    
-    public GetNetworkSmTargetGroupPathParams pathParams;
-    public GetNetworkSmTargetGroupRequest withPathParams(GetNetworkSmTargetGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkSmTargetGroupRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=targetGroupId")
+    public String targetGroupId;
+    public GetNetworkSmTargetGroupRequest withTargetGroupId(String targetGroupId) {
+        this.targetGroupId = targetGroupId;
+        return this;
+    }
     
-    public GetNetworkSmTargetGroupQueryParams queryParams;
-    public GetNetworkSmTargetGroupRequest withQueryParams(GetNetworkSmTargetGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Boolean indicating if the the ids of the devices or users scoped by the target group should be included in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=withDetails")
+    public Boolean withDetails;
+    public GetNetworkSmTargetGroupRequest withWithDetails(Boolean withDetails) {
+        this.withDetails = withDetails;
         return this;
     }
     

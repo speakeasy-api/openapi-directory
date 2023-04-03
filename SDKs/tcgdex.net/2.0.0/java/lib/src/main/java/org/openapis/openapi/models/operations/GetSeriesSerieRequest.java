@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSeriesSerieRequest {
-    
-    public GetSeriesSeriePathParams pathParams;
-    public GetSeriesSerieRequest withPathParams(GetSeriesSeriePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * the serie ID or name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serie")
+    public String serie;
+    public GetSeriesSerieRequest withSerie(String serie) {
+        this.serie = serie;
         return this;
     }
     

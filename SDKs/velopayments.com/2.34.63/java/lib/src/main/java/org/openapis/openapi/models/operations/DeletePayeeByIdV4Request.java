@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePayeeByIdV4Request {
-    
-    public DeletePayeeByIdV4PathParams pathParams;
-    public DeletePayeeByIdV4Request withPathParams(DeletePayeeByIdV4PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The UUID of the payee.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payeeId")
+    public String payeeId;
+    public DeletePayeeByIdV4Request withPayeeId(String payeeId) {
+        this.payeeId = payeeId;
         return this;
     }
     

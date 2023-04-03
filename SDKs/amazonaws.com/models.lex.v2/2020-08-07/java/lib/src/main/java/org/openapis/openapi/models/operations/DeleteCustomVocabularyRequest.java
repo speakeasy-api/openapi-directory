@@ -4,20 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCustomVocabularyRequest {
-    
-    public DeleteCustomVocabularyPathParams pathParams;
-    public DeleteCustomVocabularyRequest withPathParams(DeleteCustomVocabularyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DeleteCustomVocabularyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DeleteCustomVocabularyRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public DeleteCustomVocabularyHeaders headers;
-    public DeleteCustomVocabularyRequest withHeaders(DeleteCustomVocabularyHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DeleteCustomVocabularyRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DeleteCustomVocabularyRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DeleteCustomVocabularyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DeleteCustomVocabularyRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DeleteCustomVocabularyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the bot to remove the custom vocabulary from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botId")
+    public String botId;
+    public DeleteCustomVocabularyRequest withBotId(String botId) {
+        this.botId = botId;
+        return this;
+    }
+    
+    /**
+     * The version of the bot to remove the custom vocabulary from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botVersion")
+    public String botVersion;
+    public DeleteCustomVocabularyRequest withBotVersion(String botVersion) {
+        this.botVersion = botVersion;
+        return this;
+    }
+    
+    /**
+     * The locale identifier for the locale that contains the custom vocabulary to remove.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=localeId")
+    public String localeId;
+    public DeleteCustomVocabularyRequest withLocaleId(String localeId) {
+        this.localeId = localeId;
         return this;
     }
     

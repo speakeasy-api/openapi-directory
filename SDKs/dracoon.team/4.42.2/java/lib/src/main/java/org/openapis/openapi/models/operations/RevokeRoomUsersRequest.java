@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RevokeRoomUsersRequest {
-    
-    public RevokeRoomUsersPathParams pathParams;
-    public RevokeRoomUsersRequest withPathParams(RevokeRoomUsersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RevokeRoomUsersHeaders headers;
-    public RevokeRoomUsersRequest withHeaders(RevokeRoomUsersHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RoomUsersDeleteBatchRequest request;
-    public RevokeRoomUsersRequest withRequest(org.openapis.openapi.models.shared.RoomUsersDeleteBatchRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RoomUsersDeleteBatchRequest roomUsersDeleteBatchRequest;
+    public RevokeRoomUsersRequest withRoomUsersDeleteBatchRequest(org.openapis.openapi.models.shared.RoomUsersDeleteBatchRequest roomUsersDeleteBatchRequest) {
+        this.roomUsersDeleteBatchRequest = roomUsersDeleteBatchRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RevokeRoomUsersRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Room ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=room_id")
+    public Long roomId;
+    public RevokeRoomUsersRequest withRoomId(Long roomId) {
+        this.roomId = roomId;
         return this;
     }
     

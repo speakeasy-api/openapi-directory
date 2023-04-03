@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DelGroupVBRequest {
-    
-    public DelGroupVBPathParams pathParams;
-    public DelGroupVBRequest withPathParams(DelGroupVBPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Provide the id of the file that is to be deleted. To delete multiple files, provide comma separated values for this field.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=file_ids")
+    public String fileIds;
+    public DelGroupVBRequest withFileIds(String fileIds) {
+        this.fileIds = fileIds;
         return this;
     }
     
-    
-    public DelGroupVBQueryParams queryParams;
-    public DelGroupVBRequest withQueryParams(DelGroupVBQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Unique identifier of the group. Retrieve the value for this field by calling the [List groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups) API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public DelGroupVBRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateVodPromotionRequest {
-    
-    public CreateVodPromotionPathParams pathParams;
-    public CreateVodPromotionRequest withPathParams(CreateVodPromotionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.ondemand.promotion+json")
-    public CreateVodPromotionRequestBody request;
-    public CreateVodPromotionRequest withRequest(CreateVodPromotionRequestBody request) {
-        this.request = request;
+    public CreateVodPromotionRequestBody requestBody;
+    public CreateVodPromotionRequest withRequestBody(CreateVodPromotionRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateVodPromotionSecurity security;
-    public CreateVodPromotionRequest withSecurity(CreateVodPromotionSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public CreateVodPromotionRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
         return this;
     }
     

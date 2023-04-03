@@ -31,8 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/PolicyanalyzerProjectsLocationsActivityTypesActivitiesQuerySecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/PolicyanalyzerProjectsLocationsActivityTypesActivitiesQueryPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/PolicyanalyzerProjectsLocationsActivityTypesActivitiesQueryQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PolicyanalyzerProjectsLocationsActivityTypesActivitiesQueryRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PolicyanalyzerProjectsLocationsActivityTypesActivitiesQueryResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudPolicyanalyzerV1QueryActivityResponse.java
@@ -40,6 +38,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudPolicyanalyzerV1
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudPolicyanalyzerV1ObservationPeriod.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 USAGE.md

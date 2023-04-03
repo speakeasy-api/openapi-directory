@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolIpmiGetAttrRequest {
+    /**
+     * Agent to set the IPMI tracing
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolIpmiGetAttrRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolIpmiGetAttrPathParams pathParams;
-    public ProtocolIpmiGetAttrRequest withPathParams(ProtocolIpmiGetAttrPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Attribute
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attr")
+    public String attr;
+    public ProtocolIpmiGetAttrRequest withAttr(String attr) {
+        this.attr = attr;
         return this;
     }
     

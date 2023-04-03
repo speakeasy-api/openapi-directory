@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyControlRequest {
-    
-    public VerifyControlPathParams pathParams;
-    public VerifyControlRequest withPathParams(VerifyControlPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public org.openapis.openapi.models.shared.ControlRequest controlRequest;
+    public VerifyControlRequest withControlRequest(org.openapis.openapi.models.shared.ControlRequest controlRequest) {
+        this.controlRequest = controlRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.ControlRequest request;
-    public VerifyControlRequest withRequest(org.openapis.openapi.models.shared.ControlRequest request) {
-        this.request = request;
+    /**
+     * The response format.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public org.openapis.openapi.models.shared.FormatEnum format;
+    public VerifyControlRequest withFormat(org.openapis.openapi.models.shared.FormatEnum format) {
+        this.format = format;
         return this;
     }
     

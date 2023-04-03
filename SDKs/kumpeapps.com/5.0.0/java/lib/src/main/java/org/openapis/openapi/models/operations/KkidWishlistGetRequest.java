@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidWishlistGetRequest {
-    
-    public KkidWishlistGetQueryParams queryParams;
-    public KkidWishlistGetRequest withQueryParams(KkidWishlistGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * userID of the kid
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kidUserId")
+    public Long kidUserId;
+    public KkidWishlistGetRequest withKidUserId(Long kidUserId) {
+        this.kidUserId = kidUserId;
         return this;
     }
     

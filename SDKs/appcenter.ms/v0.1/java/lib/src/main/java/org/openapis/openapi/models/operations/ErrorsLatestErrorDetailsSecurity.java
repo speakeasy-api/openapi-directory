@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsLatestErrorDetailsSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAPIToken apiToken;
-    public ErrorsLatestErrorDetailsSecurity withAPIToken(org.openapis.openapi.models.shared.SchemeAPIToken apiToken) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-API-Token")
+    public String apiToken;
+    public ErrorsLatestErrorDetailsSecurity withAPIToken(String apiToken) {
         this.apiToken = apiToken;
         return this;
     }

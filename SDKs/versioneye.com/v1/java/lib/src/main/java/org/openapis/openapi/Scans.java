@@ -30,10 +30,11 @@ public class Scans {
     /**
      * Retrieves all scans
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1ScansResponse getApiV1Scans(org.openapis.openapi.models.operations.GetApiV1ScansRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1ScansResponse getApiV1Scans(org.openapis.openapi.models.operations.GetApiV1ScansRequest request, org.openapis.openapi.models.operations.GetApiV1ScansSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/scans");
         
@@ -41,14 +42,14 @@ public class Scans {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1ScansQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1ScansRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -69,19 +70,20 @@ public class Scans {
     /**
      * Retrieves a project scan result
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1ScansIdResponse getApiV1ScansId(org.openapis.openapi.models.operations.GetApiV1ScansIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1ScansIdResponse getApiV1ScansId(org.openapis.openapi.models.operations.GetApiV1ScansIdRequest request, org.openapis.openapi.models.operations.GetApiV1ScansIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1ScansIdPathParams.class, baseUrl, "/api/v1/scans/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1ScansIdRequest.class, baseUrl, "/api/v1/scans/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -102,25 +104,26 @@ public class Scans {
     /**
      * Retrieves a file object, containing information about dependencies in the file
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1ScansIdFilesFileIdResponse getApiV1ScansIdFilesFileId(org.openapis.openapi.models.operations.GetApiV1ScansIdFilesFileIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1ScansIdFilesFileIdResponse getApiV1ScansIdFilesFileId(org.openapis.openapi.models.operations.GetApiV1ScansIdFilesFileIdRequest request, org.openapis.openapi.models.operations.GetApiV1ScansIdFilesFileIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1ScansIdFilesFileIdPathParams.class, baseUrl, "/api/v1/scans/{id}/files/{file_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1ScansIdFilesFileIdRequest.class, baseUrl, "/api/v1/scans/{id}/files/{file_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1ScansIdFilesFileIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1ScansIdFilesFileIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

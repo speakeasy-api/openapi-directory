@@ -7,27 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSnippetsWorkspaceRequest {
-    
-    public PostSnippetsWorkspacePathParams pathParams;
-    public PostSnippetsWorkspaceRequest withPathParams(PostSnippetsWorkspacePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The new snippet object.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PostSnippetsWorkspaceRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PostSnippetsWorkspaceRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostSnippetsWorkspaceSecurity security;
-    public PostSnippetsWorkspaceRequest withSecurity(PostSnippetsWorkspaceSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public PostSnippetsWorkspaceRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

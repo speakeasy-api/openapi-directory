@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetZRProfileRequest {
-    
-    public GetZRProfilePathParams pathParams;
-    public GetZRProfileRequest withPathParams(GetZRProfilePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetZRProfileSecurity security;
-    public GetZRProfileRequest withSecurity(GetZRProfileSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the Zoom Room. This can be retrieved from the response of [List Zoom Rooms](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/listzoomrooms) API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roomId")
+    public String roomId;
+    public GetZRProfileRequest withRoomId(String roomId) {
+        this.roomId = roomId;
         return this;
     }
     

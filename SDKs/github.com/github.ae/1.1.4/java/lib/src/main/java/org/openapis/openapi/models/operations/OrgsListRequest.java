@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsListRequest {
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public OrgsListRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public OrgsListQueryParams queryParams;
-    public OrgsListRequest withQueryParams(OrgsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An organization ID. Only return organizations with an ID greater than this ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public Long since;
+    public OrgsListRequest withSince(Long since) {
+        this.since = since;
         return this;
     }
     

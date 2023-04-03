@@ -36,19 +36,20 @@ public class Chinese {
     /**
      * Identify Chinese name candidates, based on the romanized name ex. Wang Xiaoming
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChineseNameCandidatesResponse chineseNameCandidates(org.openapis.openapi.models.operations.ChineseNameCandidatesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChineseNameCandidatesResponse chineseNameCandidates(org.openapis.openapi.models.operations.ChineseNameCandidatesRequest request, org.openapis.openapi.models.operations.ChineseNameCandidatesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChineseNameCandidatesPathParams.class, baseUrl, "/api2/json/chineseNameCandidates/{chineseSurnameLatin}/{chineseGivenNameLatin}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChineseNameCandidatesRequest.class, baseUrl, "/api2/json/chineseNameCandidates/{chineseSurnameLatin}/{chineseGivenNameLatin}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -77,10 +78,11 @@ public class Chinese {
     /**
      * Identify Chinese name candidates, based on the romanized name (firstName = chineseGivenName; lastName=chineseSurname), ex. Wang Xiaoming
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChineseNameCandidatesBatchResponse chineseNameCandidatesBatch(org.openapis.openapi.models.operations.ChineseNameCandidatesBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChineseNameCandidatesBatchResponse chineseNameCandidatesBatch(org.openapis.openapi.models.shared.BatchFirstLastNameIn request, org.openapis.openapi.models.operations.ChineseNameCandidatesBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/chineseNameCandidatesBatch");
         
@@ -91,7 +93,7 @@ public class Chinese {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -120,10 +122,11 @@ public class Chinese {
     /**
      * Identify Chinese name candidates, based on the romanized name (firstName = chineseGivenName; lastName=chineseSurname) ex. Wang Xiaoming.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChineseNameCandidatesGenderBatchResponse chineseNameCandidatesGenderBatch(org.openapis.openapi.models.operations.ChineseNameCandidatesGenderBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChineseNameCandidatesGenderBatchResponse chineseNameCandidatesGenderBatch(org.openapis.openapi.models.shared.BatchFirstLastNameGenderIn request, org.openapis.openapi.models.operations.ChineseNameCandidatesGenderBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/chineseNameCandidatesGenderBatch");
         
@@ -134,7 +137,7 @@ public class Chinese {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -163,19 +166,20 @@ public class Chinese {
     /**
      * Identify Chinese name candidates, based on the romanized name ex. Wang Xiaoming - having a known gender ('male' or 'female')
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChineseNameGenderCandidatesResponse chineseNameGenderCandidates(org.openapis.openapi.models.operations.ChineseNameGenderCandidatesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChineseNameGenderCandidatesResponse chineseNameGenderCandidates(org.openapis.openapi.models.operations.ChineseNameGenderCandidatesRequest request, org.openapis.openapi.models.operations.ChineseNameGenderCandidatesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChineseNameGenderCandidatesPathParams.class, baseUrl, "/api2/json/chineseNameGenderCandidates/{chineseSurnameLatin}/{chineseGivenNameLatin}/{knownGender}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChineseNameGenderCandidatesRequest.class, baseUrl, "/api2/json/chineseNameGenderCandidates/{chineseSurnameLatin}/{chineseGivenNameLatin}/{knownGender}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -204,19 +208,20 @@ public class Chinese {
     /**
      * Return a score for matching Chinese name ex. \u738b\u6653\u660e with a romanized name ex. Wang Xiaoming
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChineseNameMatchResponse chineseNameMatch(org.openapis.openapi.models.operations.ChineseNameMatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChineseNameMatchResponse chineseNameMatch(org.openapis.openapi.models.operations.ChineseNameMatchRequest request, org.openapis.openapi.models.operations.ChineseNameMatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChineseNameMatchPathParams.class, baseUrl, "/api2/json/chineseNameMatch/{chineseSurnameLatin}/{chineseGivenNameLatin}/{chineseName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChineseNameMatchRequest.class, baseUrl, "/api2/json/chineseNameMatch/{chineseSurnameLatin}/{chineseGivenNameLatin}/{chineseName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -245,10 +250,11 @@ public class Chinese {
     /**
      * Identify Chinese name candidates, based on the romanized name (firstName = chineseGivenName; lastName=chineseSurname), ex. Wang Xiaoming
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChineseNameMatchBatchResponse chineseNameMatchBatch(org.openapis.openapi.models.operations.ChineseNameMatchBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChineseNameMatchBatchResponse chineseNameMatchBatch(org.openapis.openapi.models.shared.BatchMatchPersonalFirstLastNameIn request, org.openapis.openapi.models.operations.ChineseNameMatchBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/chineseNameMatchBatch");
         
@@ -259,7 +265,7 @@ public class Chinese {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -288,19 +294,20 @@ public class Chinese {
     /**
      * Infer the likely gender of a Chinese full name ex. \u738b\u6653\u660e
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenderChineseNameResponse genderChineseName(org.openapis.openapi.models.operations.GenderChineseNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenderChineseNameResponse genderChineseName(org.openapis.openapi.models.operations.GenderChineseNameRequest request, org.openapis.openapi.models.operations.GenderChineseNameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenderChineseNamePathParams.class, baseUrl, "/api2/json/genderChineseName/{chineseName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenderChineseNameRequest.class, baseUrl, "/api2/json/genderChineseName/{chineseName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -329,10 +336,11 @@ public class Chinese {
     /**
      * Infer the likely gender of up to 100 full names ex. \u738b\u6653\u660e
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenderChineseNameBatchResponse genderChineseNameBatch(org.openapis.openapi.models.operations.GenderChineseNameBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenderChineseNameBatchResponse genderChineseNameBatch(org.openapis.openapi.models.shared.BatchPersonalNameIn request, org.openapis.openapi.models.operations.GenderChineseNameBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/genderChineseNameBatch");
         
@@ -343,7 +351,7 @@ public class Chinese {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -372,19 +380,20 @@ public class Chinese {
     /**
      * Infer the likely gender of a Chinese name in LATIN (Pinyin).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenderChineseNamePinyinResponse genderChineseNamePinyin(org.openapis.openapi.models.operations.GenderChineseNamePinyinRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenderChineseNamePinyinResponse genderChineseNamePinyin(org.openapis.openapi.models.operations.GenderChineseNamePinyinRequest request, org.openapis.openapi.models.operations.GenderChineseNamePinyinSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenderChineseNamePinyinPathParams.class, baseUrl, "/api2/json/genderChineseNamePinyin/{chineseSurnameLatin}/{chineseGivenNameLatin}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenderChineseNamePinyinRequest.class, baseUrl, "/api2/json/genderChineseNamePinyin/{chineseSurnameLatin}/{chineseGivenNameLatin}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -413,10 +422,11 @@ public class Chinese {
     /**
      * Infer the likely gender of up to 100 Chinese names in LATIN (Pinyin).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenderChineseNamePinyinBatchResponse genderChineseNamePinyinBatch(org.openapis.openapi.models.operations.GenderChineseNamePinyinBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenderChineseNamePinyinBatchResponse genderChineseNamePinyinBatch(org.openapis.openapi.models.shared.BatchFirstLastNameIn request, org.openapis.openapi.models.operations.GenderChineseNamePinyinBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/genderChineseNamePinyinBatch");
         
@@ -427,7 +437,7 @@ public class Chinese {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -456,19 +466,20 @@ public class Chinese {
     /**
      * Infer the likely first/last name structure of a name, ex. \u738b\u6653\u660e -&gt; \u738b(surname) \u6653\u660e(given name)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ParseChineseNameResponse parseChineseName(org.openapis.openapi.models.operations.ParseChineseNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ParseChineseNameResponse parseChineseName(org.openapis.openapi.models.operations.ParseChineseNameRequest request, org.openapis.openapi.models.operations.ParseChineseNameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ParseChineseNamePathParams.class, baseUrl, "/api2/json/parseChineseName/{chineseName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ParseChineseNameRequest.class, baseUrl, "/api2/json/parseChineseName/{chineseName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,10 +508,11 @@ public class Chinese {
     /**
      * Infer the likely first/last name structure of a name, ex. \u738b\u6653\u660e -&gt; \u738b(surname) \u6653\u660e(given name).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ParseChineseNameBatchResponse parseChineseNameBatch(org.openapis.openapi.models.operations.ParseChineseNameBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ParseChineseNameBatchResponse parseChineseNameBatch(org.openapis.openapi.models.shared.BatchPersonalNameIn request, org.openapis.openapi.models.operations.ParseChineseNameBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/parseChineseNameBatch");
         
@@ -511,7 +523,7 @@ public class Chinese {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -540,19 +552,20 @@ public class Chinese {
     /**
      * Romanize the Chinese name to Pinyin, ex. \u738b\u6653\u660e -&gt; Wang (surname) Xiaoming (given name)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PinyinChineseNameResponse pinyinChineseName(org.openapis.openapi.models.operations.PinyinChineseNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PinyinChineseNameResponse pinyinChineseName(org.openapis.openapi.models.operations.PinyinChineseNameRequest request, org.openapis.openapi.models.operations.PinyinChineseNameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PinyinChineseNamePathParams.class, baseUrl, "/api2/json/pinyinChineseName/{chineseName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PinyinChineseNameRequest.class, baseUrl, "/api2/json/pinyinChineseName/{chineseName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -581,10 +594,11 @@ public class Chinese {
     /**
      * Romanize a list of Chinese name to Pinyin, ex. \u738b\u6653\u660e -&gt; Wang (surname) Xiaoming (given name).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PinyinChineseNameBatchResponse pinyinChineseNameBatch(org.openapis.openapi.models.operations.PinyinChineseNameBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PinyinChineseNameBatchResponse pinyinChineseNameBatch(org.openapis.openapi.models.shared.BatchPersonalNameIn request, org.openapis.openapi.models.operations.PinyinChineseNameBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/pinyinChineseNameBatch");
         
@@ -595,7 +609,7 @@ public class Chinese {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

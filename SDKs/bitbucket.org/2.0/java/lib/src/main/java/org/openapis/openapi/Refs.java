@@ -50,19 +50,20 @@ public class Refs {
      * The branch name should not include any prefixes (e.g.
      * refs/heads).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse deleteRepositoriesWorkspaceRepoSlugRefsBranchesName(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse deleteRepositoriesWorkspaceRepoSlugRefsBranchesName(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameRequest request, org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNamePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/refs/branches/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugRefsBranchesNameRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/refs/branches/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -94,19 +95,20 @@ public class Refs {
      * 
      * The tag name should not include any prefixes (e.g. refs/tags).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameResponse deleteRepositoriesWorkspaceRepoSlugRefsTagsName(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameResponse deleteRepositoriesWorkspaceRepoSlugRefsTagsName(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameRequest request, org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNamePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/refs/tags/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/refs/tags/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -147,25 +149,26 @@ public class Refs {
      * Sorting can be changed using the ?sort= query parameter. When using ?sort=name to explicitly sort on ref name,
      * Bitbucket will apply natural sorting and interpret numerical values as numbers instead of strings.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsResponse getRepositoriesWorkspaceRepoSlugRefs(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsResponse getRepositoriesWorkspaceRepoSlugRefs(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/refs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/refs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -336,25 +339,26 @@ public class Refs {
      *         Sorting can be changed using the ?q= query parameter. When using ?q=name to explicitly sort on ref name,
      *         Bitbucket will apply natural sorting and interpret numerical values as numbers instead of strings.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesResponse getRepositoriesWorkspaceRepoSlugRefsBranches(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesResponse getRepositoriesWorkspaceRepoSlugRefsBranches(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/refs/branches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/refs/branches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -509,19 +513,20 @@ public class Refs {
      *         For Git, the branch name should not include any prefixes (e.g.
      *         refs/heads).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse getRepositoriesWorkspaceRepoSlugRefsBranchesName(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesNameResponse getRepositoriesWorkspaceRepoSlugRefsBranchesName(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesNameRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesNameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesNamePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/refs/branches/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsBranchesNameRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/refs/branches/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -567,25 +572,26 @@ public class Refs {
      * Sorting can be changed using the ?sort= query parameter. When using ?sort=name to explicitly sort on ref name,
      * Bitbucket will apply natural sorting and interpret numerical values as numbers instead of strings.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsTagsResponse getRepositoriesWorkspaceRepoSlugRefsTags(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsTagsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsTagsResponse getRepositoriesWorkspaceRepoSlugRefsTags(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsTagsRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsTagsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsTagsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/refs/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsTagsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/refs/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsTagsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsTagsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -746,19 +752,20 @@ public class Refs {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsTagsNameResponse getRepositoriesWorkspaceRepoSlugRefsTagsName(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsTagsNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsTagsNameResponse getRepositoriesWorkspaceRepoSlugRefsTagsName(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsTagsNameRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsTagsNameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsTagsNamePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/refs/tags/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRefsTagsNameRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/refs/tags/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -818,19 +825,20 @@ public class Refs {
      * prefix is ambiguous. Using a full commit hash is the preferred
      * approach.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugRefsBranchesResponse postRepositoriesWorkspaceRepoSlugRefsBranches(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugRefsBranchesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugRefsBranchesResponse postRepositoriesWorkspaceRepoSlugRefsBranches(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugRefsBranchesRequest request, org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugRefsBranchesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugRefsBranchesPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/refs/branches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugRefsBranchesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/refs/branches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -884,24 +892,25 @@ public class Refs {
      * hash, but it may return a 400 response if the provided prefix is
      * ambiguous. Using a full commit hash is the preferred approach.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugRefsTagsResponse postRepositoriesWorkspaceRepoSlugRefsTags(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugRefsTagsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugRefsTagsResponse postRepositoriesWorkspaceRepoSlugRefsTags(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugRefsTagsRequest request, org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugRefsTagsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugRefsTagsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/refs/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugRefsTagsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/refs/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

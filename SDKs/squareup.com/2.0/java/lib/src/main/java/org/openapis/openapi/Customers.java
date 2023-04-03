@@ -38,19 +38,20 @@ public class Customers {
      * The customer is identified by the `customer_id` value
      * and the customer group is identified by the `group_id` value.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddGroupToCustomerResponse addGroupToCustomer(org.openapis.openapi.models.operations.AddGroupToCustomerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddGroupToCustomerResponse addGroupToCustomer(org.openapis.openapi.models.operations.AddGroupToCustomerRequest request, org.openapis.openapi.models.operations.AddGroupToCustomerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddGroupToCustomerPathParams.class, baseUrl, "/v2/customers/{customer_id}/groups/{group_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddGroupToCustomerRequest.class, baseUrl, "/v2/customers/{customer_id}/groups/{group_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -87,10 +88,11 @@ public class Customers {
      * - `email_address`
      * - `phone_number`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCustomerResponse createCustomer(org.openapis.openapi.models.operations.CreateCustomerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCustomerResponse createCustomer(org.openapis.openapi.models.shared.CreateCustomerRequest request, org.openapis.openapi.models.operations.CreateCustomerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/customers");
         
@@ -104,7 +106,7 @@ public class Customers {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -136,24 +138,25 @@ public class Customers {
      * calls with the same card nonce return the same card record that was created
      * with the provided nonce during the _first_ call.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCustomerCardResponse createCustomerCard(org.openapis.openapi.models.operations.CreateCustomerCardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCustomerCardResponse createCustomerCard(org.openapis.openapi.models.operations.CreateCustomerCardRequest request, org.openapis.openapi.models.operations.CreateCustomerCardSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateCustomerCardPathParams.class, baseUrl, "/v2/customers/{customer_id}/cards", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateCustomerCardRequest.class, baseUrl, "/v2/customers/{customer_id}/cards", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createCustomerCardRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -185,25 +188,26 @@ public class Customers {
      * 
      * To delete a customer profile that was created by merging existing profiles, you must use the ID of the newly created profile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteCustomerResponse deleteCustomer(org.openapis.openapi.models.operations.DeleteCustomerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteCustomerResponse deleteCustomer(org.openapis.openapi.models.operations.DeleteCustomerRequest request, org.openapis.openapi.models.operations.DeleteCustomerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCustomerPathParams.class, baseUrl, "/v2/customers/{customer_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCustomerRequest.class, baseUrl, "/v2/customers/{customer_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteCustomerQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteCustomerRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -231,19 +235,20 @@ public class Customers {
      * DeleteCustomerCard
      * Removes a card on file from a customer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteCustomerCardResponse deleteCustomerCard(org.openapis.openapi.models.operations.DeleteCustomerCardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteCustomerCardResponse deleteCustomerCard(org.openapis.openapi.models.operations.DeleteCustomerCardRequest request, org.openapis.openapi.models.operations.DeleteCustomerCardSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCustomerCardPathParams.class, baseUrl, "/v2/customers/{customer_id}/cards/{card_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCustomerCardRequest.class, baseUrl, "/v2/customers/{customer_id}/cards/{card_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -275,10 +280,11 @@ public class Customers {
      * for the listing operation in well under 30 seconds. Occasionally, propagation of the new or updated
      * profiles can take closer to one minute or longer, especially during network incidents and outages.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCustomersResponse listCustomers(org.openapis.openapi.models.operations.ListCustomersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListCustomersResponse listCustomers(org.openapis.openapi.models.operations.ListCustomersRequest request, org.openapis.openapi.models.operations.ListCustomersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/customers");
         
@@ -286,14 +292,14 @@ public class Customers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCustomersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCustomersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -324,19 +330,20 @@ public class Customers {
      * The customer is identified by the `customer_id` value
      * and the customer group is identified by the `group_id` value.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemoveGroupFromCustomerResponse removeGroupFromCustomer(org.openapis.openapi.models.operations.RemoveGroupFromCustomerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RemoveGroupFromCustomerResponse removeGroupFromCustomer(org.openapis.openapi.models.operations.RemoveGroupFromCustomerRequest request, org.openapis.openapi.models.operations.RemoveGroupFromCustomerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveGroupFromCustomerPathParams.class, baseUrl, "/v2/customers/{customer_id}/groups/{group_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveGroupFromCustomerRequest.class, baseUrl, "/v2/customers/{customer_id}/groups/{group_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -364,19 +371,20 @@ public class Customers {
      * RetrieveCustomer
      * Returns details for a single customer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveCustomerResponse retrieveCustomer(org.openapis.openapi.models.operations.RetrieveCustomerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveCustomerResponse retrieveCustomer(org.openapis.openapi.models.operations.RetrieveCustomerRequest request, org.openapis.openapi.models.operations.RetrieveCustomerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveCustomerPathParams.class, baseUrl, "/v2/customers/{customer_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveCustomerRequest.class, baseUrl, "/v2/customers/{customer_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -412,10 +420,11 @@ public class Customers {
      * for the search operation in well under 30 seconds. Occasionally, propagation of the new or updated
      * profiles can take closer to one minute or longer, especially during network incidents and outages.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchCustomersResponse searchCustomers(org.openapis.openapi.models.operations.SearchCustomersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchCustomersResponse searchCustomers(org.openapis.openapi.models.shared.SearchCustomersRequest request, org.openapis.openapi.models.operations.SearchCustomersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/customers/search");
         
@@ -429,7 +438,7 @@ public class Customers {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -463,24 +472,25 @@ public class Customers {
      * 
      * You cannot use this endpoint to change cards on file. To make changes, use the [Cards API](https://developer.squareup.com/reference/square_2021-08-18/cards-api) or [Gift Cards API](https://developer.squareup.com/reference/square_2021-08-18/gift-cards-api).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateCustomerResponse updateCustomer(org.openapis.openapi.models.operations.UpdateCustomerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateCustomerResponse updateCustomer(org.openapis.openapi.models.operations.UpdateCustomerRequest request, org.openapis.openapi.models.operations.UpdateCustomerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCustomerPathParams.class, baseUrl, "/v2/customers/{customer_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCustomerRequest.class, baseUrl, "/v2/customers/{customer_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateCustomerRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

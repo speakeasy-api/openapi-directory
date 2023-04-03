@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleGetMeasureUnitsRequest {
-    
-    public ArticleGetMeasureUnitsQueryParams queryParams;
-    public ArticleGetMeasureUnitsRequest withQueryParams(ArticleGetMeasureUnitsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * type of the measure unit (all, item, service)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public ArticleGetMeasureUnitsRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

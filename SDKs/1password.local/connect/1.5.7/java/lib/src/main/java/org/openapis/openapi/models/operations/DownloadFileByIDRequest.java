@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadFileByIDRequest {
-    
-    public DownloadFileByIDPathParams pathParams;
-    public DownloadFileByIDRequest withPathParams(DownloadFileByIDPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * UUID of the file to get content from
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileUuid")
+    public String fileUuid;
+    public DownloadFileByIDRequest withFileUuid(String fileUuid) {
+        this.fileUuid = fileUuid;
         return this;
     }
     
+    /**
+     * The UUID of the Item the File is in
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemUuid")
+    public String itemUuid;
+    public DownloadFileByIDRequest withItemUuid(String itemUuid) {
+        this.itemUuid = itemUuid;
+        return this;
+    }
     
-    public DownloadFileByIDSecurity security;
-    public DownloadFileByIDRequest withSecurity(DownloadFileByIDSecurity security) {
-        this.security = security;
+    /**
+     * The UUID of the Vault the item is in
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vaultUuid")
+    public String vaultUuid;
+    public DownloadFileByIDRequest withVaultUuid(String vaultUuid) {
+        this.vaultUuid = vaultUuid;
         return this;
     }
     

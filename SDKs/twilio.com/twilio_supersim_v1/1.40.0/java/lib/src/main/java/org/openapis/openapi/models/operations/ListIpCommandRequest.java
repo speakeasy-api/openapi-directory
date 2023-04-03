@@ -4,27 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListIpCommandRequest {
-    
-    public ListIpCommandQueryParams queryParams;
-    public ListIpCommandRequest withQueryParams(ListIpCommandQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The direction of the IP Command. Can be `to_sim` or `from_sim`. The value of `to_sim` is synonymous with the term `mobile terminated`, and `from_sim` is synonymous with the term `mobile originated`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Direction")
+    public org.openapis.openapi.models.shared.IpCommandEnumDirectionEnum direction;
+    public ListIpCommandRequest withDirection(org.openapis.openapi.models.shared.IpCommandEnumDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
-    
-    public ListIpCommandSecurity security;
-    public ListIpCommandRequest withSecurity(ListIpCommandSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListIpCommandRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListIpCommandRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListIpCommandRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListIpCommandRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The SID or unique name of the Sim resource that IP Command was sent to or from.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Sim")
+    public String sim;
+    public ListIpCommandRequest withSim(String sim) {
+        this.sim = sim;
+        return this;
+    }
+    
+    /**
+     * The ICCID of the Sim resource that IP Command was sent to or from.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SimIccid")
+    public String simIccid;
+    public ListIpCommandRequest withSimIccid(String simIccid) {
+        this.simIccid = simIccid;
+        return this;
+    }
+    
+    /**
+     * The status of the IP Command. Can be: `queued`, `sent`, `received` or `failed`. See the [IP Command Status Values](https://www.twilio.com/docs/wireless/api/ipcommand-resource#status-values) for a description of each.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public org.openapis.openapi.models.shared.IpCommandEnumStatusEnum status;
+    public ListIpCommandRequest withStatus(org.openapis.openapi.models.shared.IpCommandEnumStatusEnum status) {
+        this.status = status;
         return this;
     }
     

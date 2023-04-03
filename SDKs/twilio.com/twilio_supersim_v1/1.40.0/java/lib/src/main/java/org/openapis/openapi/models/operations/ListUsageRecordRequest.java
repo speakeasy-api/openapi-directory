@@ -4,27 +4,117 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListUsageRecordRequest {
-    
-    public ListUsageRecordQueryParams queryParams;
-    public ListUsageRecordRequest withQueryParams(ListUsageRecordQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only include usage that occurred before this time (exclusive), specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format. Default is the current time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndTime")
+    public OffsetDateTime endTime;
+    public ListUsageRecordRequest withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
         return this;
     }
     
-    
-    public ListUsageRecordSecurity security;
-    public ListUsageRecordRequest withSecurity(ListUsageRecordSecurity security) {
-        this.security = security;
+    /**
+     * SID or unique name of a Fleet resource. Only show UsageRecords representing usage for Super SIMs belonging to this Fleet resource at the time the usage occurred.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Fleet")
+    public String fleet;
+    public ListUsageRecordRequest withFleet(String fleet) {
+        this.fleet = fleet;
         return this;
     }
     
+    /**
+     * Time-based grouping that UsageRecords should be aggregated by. Can be: `hour`, `day`, or `all`. Default is `all`. `all` returns one UsageRecord that describes the usage for the entire period.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Granularity")
+    public org.openapis.openapi.models.shared.UsageRecordEnumGranularityEnum granularity;
+    public ListUsageRecordRequest withGranularity(org.openapis.openapi.models.shared.UsageRecordEnumGranularityEnum granularity) {
+        this.granularity = granularity;
+        return this;
+    }
     
-    public String serverURL;
-    public ListUsageRecordRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Dimension over which to aggregate usage records. Can be: `sim`, `fleet`, `network`, `isoCountry`. Default is to not aggregate across any of these dimensions, UsageRecords will be aggregated into the time buckets described by the `Granularity` parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Group")
+    public org.openapis.openapi.models.shared.UsageRecordEnumGroupEnum group;
+    public ListUsageRecordRequest withGroup(org.openapis.openapi.models.shared.UsageRecordEnumGroupEnum group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * Alpha-2 ISO Country Code. Only show UsageRecords representing usage in this country.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IsoCountry")
+    public String isoCountry;
+    public ListUsageRecordRequest withIsoCountry(String isoCountry) {
+        this.isoCountry = isoCountry;
+        return this;
+    }
+    
+    /**
+     * SID of a Network resource. Only show UsageRecords representing usage on this network.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Network")
+    public String network;
+    public ListUsageRecordRequest withNetwork(String network) {
+        this.network = network;
+        return this;
+    }
+    
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListUsageRecordRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListUsageRecordRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListUsageRecordRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * SID or unique name of a Sim resource. Only show UsageRecords representing usage incurred by this Super SIM.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Sim")
+    public String sim;
+    public ListUsageRecordRequest withSim(String sim) {
+        this.sim = sim;
+        return this;
+    }
+    
+    /**
+     * Only include usage that occurred at or after this time, specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format. Default is one month before the `end_time`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartTime")
+    public OffsetDateTime startTime;
+    public ListUsageRecordRequest withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
         return this;
     }
     

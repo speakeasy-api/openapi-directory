@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUserVotesEpisodesEpisodeIdRequest {
-    
-    public DeleteUserVotesEpisodesEpisodeIdPathParams pathParams;
-    public DeleteUserVotesEpisodesEpisodeIdRequest withPathParams(DeleteUserVotesEpisodesEpisodeIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=episode_id")
+    public Long episodeId;
+    public DeleteUserVotesEpisodesEpisodeIdRequest withEpisodeId(Long episodeId) {
+        this.episodeId = episodeId;
         return this;
     }
     

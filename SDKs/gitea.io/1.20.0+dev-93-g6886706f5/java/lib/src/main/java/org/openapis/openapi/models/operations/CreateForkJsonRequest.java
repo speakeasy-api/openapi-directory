@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateForkJsonRequest {
-    
-    public CreateForkJsonPathParams pathParams;
-    public CreateForkJsonRequest withPathParams(CreateForkJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateForkOption createForkOption;
+    public CreateForkJsonRequest withCreateForkOption(org.openapis.openapi.models.shared.CreateForkOption createForkOption) {
+        this.createForkOption = createForkOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateForkOption request;
-    public CreateForkJsonRequest withRequest(org.openapis.openapi.models.shared.CreateForkOption request) {
-        this.request = request;
+    /**
+     * owner of the repo to fork
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public CreateForkJsonRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo to fork
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public CreateForkJsonRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

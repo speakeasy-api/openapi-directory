@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2SearchSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer")
-    public org.openapis.openapi.models.shared.SchemeBearerAuth bearerAuth;
-    public GetApiV2SearchSecurity withBearerAuth(org.openapis.openapi.models.shared.SchemeBearerAuth bearerAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
+    public String bearerAuth;
+    public GetApiV2SearchSecurity withBearerAuth(String bearerAuth) {
         this.bearerAuth = bearerAuth;
         return this;
     }

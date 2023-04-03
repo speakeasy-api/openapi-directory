@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateConnectAppRequest {
-    
-    public UpdateConnectAppPathParams pathParams;
-    public UpdateConnectAppRequest withPathParams(UpdateConnectAppPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the ConnectApp resources to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateConnectAppRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateConnectAppUpdateConnectAppRequest request;
-    public UpdateConnectAppRequest withRequest(UpdateConnectAppUpdateConnectAppRequest request) {
-        this.request = request;
+    public UpdateConnectAppUpdateConnectAppRequest requestBody;
+    public UpdateConnectAppRequest withRequestBody(UpdateConnectAppUpdateConnectAppRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateConnectAppSecurity security;
-    public UpdateConnectAppRequest withSecurity(UpdateConnectAppSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateConnectAppRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the ConnectApp resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateConnectAppRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchRequest {
-    
-    public SearchQueryParams queryParams;
-    public SearchRequest withQueryParams(SearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:serialization=json,name=payload")
+    public org.openapis.openapi.models.shared.SearchRequest payload;
+    public SearchRequest withPayload(org.openapis.openapi.models.shared.SearchRequest payload) {
+        this.payload = payload;
         return this;
     }
     

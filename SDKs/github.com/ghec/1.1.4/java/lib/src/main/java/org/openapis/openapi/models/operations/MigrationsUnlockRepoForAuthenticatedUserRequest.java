@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MigrationsUnlockRepoForAuthenticatedUserRequest {
+    /**
+     * The unique identifier of the migration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=migration_id")
+    public Long migrationId;
+    public MigrationsUnlockRepoForAuthenticatedUserRequest withMigrationId(Long migrationId) {
+        this.migrationId = migrationId;
+        return this;
+    }
     
-    public MigrationsUnlockRepoForAuthenticatedUserPathParams pathParams;
-    public MigrationsUnlockRepoForAuthenticatedUserRequest withPathParams(MigrationsUnlockRepoForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * repo_name parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_name")
+    public String repoName;
+    public MigrationsUnlockRepoForAuthenticatedUserRequest withRepoName(String repoName) {
+        this.repoName = repoName;
         return this;
     }
     

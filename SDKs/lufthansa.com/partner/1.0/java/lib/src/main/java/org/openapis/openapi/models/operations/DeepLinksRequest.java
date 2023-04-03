@@ -4,27 +4,206 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeepLinksRequest {
-    
-    public DeepLinksQueryParams queryParams;
-    public DeepLinksRequest withQueryParams(DeepLinksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public DeepLinksRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public DeepLinksHeaders headers;
-    public DeepLinksRequest withHeaders(DeepLinksHeaders headers) {
-        this.headers = headers;
+    /**
+     * Cabin class: 'economy', 'premium_economy', 'business', 'first' (Acceptable values are: "", "economy", "premium_economy", "business", "first")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cabin-class")
+    public String cabinClass;
+    public DeepLinksRequest withCabinClass(String cabinClass) {
+        this.cabinClass = cabinClass;
         return this;
     }
     
+    /**
+     * Carrier for which the deep link will be created (e.g. 'LH')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=catalogues")
+    public String catalogues;
+    public DeepLinksRequest withCatalogues(String catalogues) {
+        this.catalogues = catalogues;
+        return this;
+    }
     
-    public DeepLinksSecurity security;
-    public DeepLinksRequest withSecurity(DeepLinksSecurity security) {
-        this.security = security;
+    /**
+     * 2-letter ISO 3166-1 country code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public DeepLinksRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    
+    /**
+     * Journey destination. 3-letter IATA airport or city code (e.g. 'MAD')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination")
+    public String destination;
+    public DeepLinksRequest withDestination(String destination) {
+        this.destination = destination;
+        return this;
+    }
+    
+    /**
+     * Journey destination airport or city name (e.g. 'madrid')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination-name")
+    public String destinationName;
+    public DeepLinksRequest withDestinationName(String destinationName) {
+        this.destinationName = destinationName;
+        return this;
+    }
+    
+    /**
+     * Deep link encryption-key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=encryption-key")
+    public String encryptionKey;
+    public DeepLinksRequest withEncryptionKey(String encryptionKey) {
+        this.encryptionKey = encryptionKey;
+        return this;
+    }
+    
+    /**
+     * Travel fare (e.g. '1341.45')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fare")
+    public String fare;
+    public DeepLinksRequest withFare(String fare) {
+        this.fare = fare;
+        return this;
+    }
+    
+    /**
+     * Fare currency (e.g. 'EUR')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fare-currency")
+    public String fareCurrency;
+    public DeepLinksRequest withFareCurrency(String fareCurrency) {
+        this.fareCurrency = fareCurrency;
+        return this;
+    }
+    
+    /**
+     * 2-letter ISO 3166-1 language code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public DeepLinksRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    
+    /**
+     * Travel net fare. Total fare less taxes and charges (e.g. '1140')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=net-fare")
+    public String netFare;
+    public DeepLinksRequest withNetFare(String netFare) {
+        this.netFare = netFare;
+        return this;
+    }
+    
+    /**
+     * Journey origin. 3-letter IATA airport or city code (e.g. 'FRA')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=origin")
+    public String origin;
+    public DeepLinksRequest withOrigin(String origin) {
+        this.origin = origin;
+        return this;
+    }
+    
+    /**
+     * Journey origin airport or city name (e.g. 'frankfurt')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=origin-name")
+    public String originName;
+    public DeepLinksRequest withOriginName(String originName) {
+        this.originName = originName;
+        return this;
+    }
+    
+    /**
+     * Outbound flight segments in the sequence of travel (e.g. 'LH096;LH480')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outbound-segments")
+    public String outboundSegments;
+    public DeepLinksRequest withOutboundSegments(String outboundSegments) {
+        this.outboundSegments = outboundSegments;
+        return this;
+    }
+    
+    /**
+     * Deep link partner id (e.g. '1247')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partnerid")
+    public String partnerid;
+    public DeepLinksRequest withPartnerid(String partnerid) {
+        this.partnerid = partnerid;
+        return this;
+    }
+    
+    /**
+     * Journey return-date (YYYY-MM-DD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=return-date")
+    public String returnDate;
+    public DeepLinksRequest withReturnDate(String returnDate) {
+        this.returnDate = returnDate;
+        return this;
+    }
+    
+    /**
+     * Flight segments in the sequence of travel (e.g. 'LH7465;LH431')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=return-segments")
+    public String returnSegments;
+    public DeepLinksRequest withReturnSegments(String returnSegments) {
+        this.returnSegments = returnSegments;
+        return this;
+    }
+    
+    /**
+     * Deep link tracking ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trackingid")
+    public String trackingid;
+    public DeepLinksRequest withTrackingid(String trackingid) {
+        this.trackingid = trackingid;
+        return this;
+    }
+    
+    /**
+     * Journey travel-date (YYYY-MM-DD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travel-date")
+    public String travelDate;
+    public DeepLinksRequest withTravelDate(String travelDate) {
+        this.travelDate = travelDate;
+        return this;
+    }
+    
+    /**
+     * Type and number of travelers (e.g. '(adult=2;child=2;infant=1)')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelers")
+    public String travelers;
+    public DeepLinksRequest withTravelers(String travelers) {
+        this.travelers = travelers;
         return this;
     }
     

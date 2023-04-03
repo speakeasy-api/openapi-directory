@@ -4,27 +4,176 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest {
-    
-    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListPathParams pathParams;
-    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withPathParams(AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListQueryParams queryParams;
-    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withQueryParams(AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListSecurity security;
-    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withSecurity(AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Optional. A custom filter for filtering by the Violations properties.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * The end of the time window.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.endTime")
+    public String intervalEndTime;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withIntervalEndTime(String intervalEndTime) {
+        this.intervalEndTime = intervalEndTime;
+        return this;
+    }
+    
+    /**
+     * The start of the time window.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.startTime")
+    public String intervalStartTime;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withIntervalStartTime(String intervalStartTime) {
+        this.intervalStartTime = intervalStartTime;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Optional. Page size.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Optional. Page token returned from previous request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Required. The Workload name. Format `organizations/{org_id}/locations/{location}/workloads/{workload}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

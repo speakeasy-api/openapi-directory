@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyAadharOTPOnlyUsingPOST1Request {
-    
-    public VerifyAadharOTPOnlyUsingPOST1Headers headers;
-    public VerifyAadharOTPOnlyUsingPOST1Request withHeaders(VerifyAadharOTPOnlyUsingPOST1Headers headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public VerifyAadharOTPOnlyUsingPOST1Request withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,19 @@ public class VerifyAadharOTPOnlyUsingPOST1Request {
      * verifyAadhaarOtp
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.VerifyAadhaarOtp request;
-    public VerifyAadharOTPOnlyUsingPOST1Request withRequest(org.openapis.openapi.models.shared.VerifyAadhaarOtp request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.VerifyAadhaarOtp verifyAadhaarOtp;
+    public VerifyAadharOTPOnlyUsingPOST1Request withVerifyAadhaarOtp(org.openapis.openapi.models.shared.VerifyAadhaarOtp verifyAadhaarOtp) {
+        this.verifyAadhaarOtp = verifyAadhaarOtp;
         return this;
     }
     
-    
-    public VerifyAadharOTPOnlyUsingPOST1Security security;
-    public VerifyAadharOTPOnlyUsingPOST1Request withSecurity(VerifyAadharOTPOnlyUsingPOST1Security security) {
-        this.security = security;
+    /**
+     * Auth Token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Token")
+    public String xToken;
+    public VerifyAadharOTPOnlyUsingPOST1Request withXToken(String xToken) {
+        this.xToken = xToken;
         return this;
     }
     

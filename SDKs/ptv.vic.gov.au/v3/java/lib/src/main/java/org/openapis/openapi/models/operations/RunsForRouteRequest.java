@@ -4,20 +4,67 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RunsForRouteRequest {
-    
-    public RunsForRoutePathParams pathParams;
-    public RunsForRouteRequest withPathParams(RunsForRoutePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Date of the request. (optional - defaults to now)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_utc")
+    public OffsetDateTime dateUtc;
+    public RunsForRouteRequest withDateUtc(OffsetDateTime dateUtc) {
+        this.dateUtc = dateUtc;
         return this;
     }
     
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public RunsForRouteRequest withDevid(String devid) {
+        this.devid = devid;
+        return this;
+    }
     
-    public RunsForRouteQueryParams queryParams;
-    public RunsForRouteRequest withQueryParams(RunsForRouteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * List of objects to be returned in full (i.e. expanded) - options include: All, VehiclePosition, VehicleDescriptor, or None. Default is None.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public RunsForRouteExpandEnum[] expand;
+    public RunsForRouteRequest withExpand(RunsForRouteExpandEnum[] expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    /**
+     * Identifier of route; values returned by Routes API - v3/routes.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_id")
+    public Integer routeId;
+    public RunsForRouteRequest withRouteId(Integer routeId) {
+        this.routeId = routeId;
+        return this;
+    }
+    
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public RunsForRouteRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public RunsForRouteRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

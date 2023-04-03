@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetStackPolicyRequest {
-    
-    public GETSetStackPolicyQueryParams queryParams;
-    public GETSetStackPolicyRequest withQueryParams(GETSetStackPolicyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETSetStackPolicyActionEnum action;
+    public GETSetStackPolicyRequest withAction(GETSetStackPolicyActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name or unique stack ID that you want to associate a policy with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackName")
+    public String stackName;
+    public GETSetStackPolicyRequest withStackName(String stackName) {
+        this.stackName = stackName;
+        return this;
+    }
     
-    public GETSetStackPolicyHeaders headers;
-    public GETSetStackPolicyRequest withHeaders(GETSetStackPolicyHeaders headers) {
-        this.headers = headers;
+    /**
+     * Structure containing the stack policy body. For more information, go to &lt;a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/protect-stack-resources.html"&gt; Prevent updates to stack resources&lt;/a&gt; in the CloudFormation User Guide. You can specify either the &lt;code&gt;StackPolicyBody&lt;/code&gt; or the &lt;code&gt;StackPolicyURL&lt;/code&gt; parameter, but not both.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackPolicyBody")
+    public String stackPolicyBody;
+    public GETSetStackPolicyRequest withStackPolicyBody(String stackPolicyBody) {
+        this.stackPolicyBody = stackPolicyBody;
+        return this;
+    }
+    
+    /**
+     * Location of a file containing the stack policy. The URL must point to a policy (maximum size: 16 KB) located in an Amazon S3 bucket in the same Amazon Web Services Region as the stack. You can specify either the &lt;code&gt;StackPolicyBody&lt;/code&gt; or the &lt;code&gt;StackPolicyURL&lt;/code&gt; parameter, but not both.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackPolicyURL")
+    public String stackPolicyURL;
+    public GETSetStackPolicyRequest withStackPolicyURL(String stackPolicyURL) {
+        this.stackPolicyURL = stackPolicyURL;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETSetStackPolicyVersionEnum version;
+    public GETSetStackPolicyRequest withVersion(GETSetStackPolicyVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETSetStackPolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETSetStackPolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETSetStackPolicyRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETSetStackPolicyRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETSetStackPolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETSetStackPolicyRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETSetStackPolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

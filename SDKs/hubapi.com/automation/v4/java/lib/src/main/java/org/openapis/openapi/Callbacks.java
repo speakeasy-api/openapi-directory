@@ -34,10 +34,11 @@ public class Callbacks {
      * Complete a batch of callbacks
      * Completes the given action callbacks.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchResponse postAutomationV4ActionsCallbacksCompleteCompleteBatch(org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchResponse postAutomationV4ActionsCallbacksCompleteCompleteBatch(org.openapis.openapi.models.shared.BatchInputCallbackCompletionBatchRequest request, org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/automation/v4/actions/callbacks/complete");
         
@@ -51,7 +52,7 @@ public class Callbacks {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,24 +81,25 @@ public class Callbacks {
      * Complete a callback
      * Completes the given action callback.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteResponse postAutomationV4ActionsCallbacksCallbackIdCompleteComplete(org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteResponse postAutomationV4ActionsCallbacksCallbackIdCompleteComplete(org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteRequest request, org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCallbackIdCompleteCompletePathParams.class, baseUrl, "/automation/v4/actions/callbacks/{callbackId}/complete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteRequest.class, baseUrl, "/automation/v4/actions/callbacks/{callbackId}/complete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "callbackCompletionRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -41,19 +41,19 @@ public class MarketplacesChannelCatalogsSettings {
      */
     public org.openapis.openapi.models.operations.GetChannelCatalogMarketplacePropertiesResponse getChannelCatalogMarketplaceProperties(org.openapis.openapi.models.operations.GetChannelCatalogMarketplacePropertiesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogMarketplacePropertiesPathParams.class, baseUrl, "/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/properties", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogMarketplacePropertiesRequest.class, baseUrl, "/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/properties", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChannelCatalogMarketplacePropertiesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChannelCatalogMarketplacePropertiesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -107,7 +107,7 @@ public class MarketplacesChannelCatalogsSettings {
      */
     public org.openapis.openapi.models.operations.GetChannelCatalogMarketplaceSettingsResponse getChannelCatalogMarketplaceSettings(org.openapis.openapi.models.operations.GetChannelCatalogMarketplaceSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogMarketplaceSettingsPathParams.class, baseUrl, "/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogMarketplaceSettingsRequest.class, baseUrl, "/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -162,12 +162,12 @@ public class MarketplacesChannelCatalogsSettings {
      */
     public org.openapis.openapi.models.operations.SetChannelCatalogMarketplaceSettingsResponse setChannelCatalogMarketplaceSettings(org.openapis.openapi.models.operations.SetChannelCatalogMarketplaceSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetChannelCatalogMarketplaceSettingsPathParams.class, baseUrl, "/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetChannelCatalogMarketplaceSettingsRequest.class, baseUrl, "/v2/user/marketplaces/channelcatalogs/{channelCatalogId}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setChannelCatalogMarketplaceSettingsRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

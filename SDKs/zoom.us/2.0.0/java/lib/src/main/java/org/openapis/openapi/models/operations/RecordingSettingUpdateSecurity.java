@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RecordingSettingUpdateSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOAuth oAuth;
-    public RecordingSettingUpdateSecurity withOAuth(org.openapis.openapi.models.shared.SchemeOAuth oAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oAuth;
+    public RecordingSettingUpdateSecurity withOAuth(String oAuth) {
         this.oAuth = oAuth;
         return this;
     }

@@ -45,10 +45,11 @@ public class ClassificationInclusion {
      * - `classification_id` and `classified_type`
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetClassificationInclusionsResponse getClassificationInclusions(org.openapis.openapi.models.operations.GetClassificationInclusionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetClassificationInclusionsResponse getClassificationInclusions(org.openapis.openapi.models.operations.GetClassificationInclusionsRequest request, org.openapis.openapi.models.operations.GetClassificationInclusionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/classification_inclusions");
         
@@ -56,14 +57,14 @@ public class ClassificationInclusion {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetClassificationInclusionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetClassificationInclusionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -104,19 +105,20 @@ public class ClassificationInclusion {
     /**
      * Get a specific classification inclusion
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetClassificationInclusionsIdResponse getClassificationInclusionsId(org.openapis.openapi.models.operations.GetClassificationInclusionsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetClassificationInclusionsIdResponse getClassificationInclusionsId(org.openapis.openapi.models.operations.GetClassificationInclusionsIdRequest request, org.openapis.openapi.models.operations.GetClassificationInclusionsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClassificationInclusionsIdPathParams.class, baseUrl, "/classification_inclusions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClassificationInclusionsIdRequest.class, baseUrl, "/classification_inclusions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

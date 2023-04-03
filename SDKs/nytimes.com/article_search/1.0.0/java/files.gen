@@ -31,7 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetArticlesearchJsonSortEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetArticlesearchJsonQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetArticlesearchJsonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetArticlesearchJSON200ApplicationJSONResponseMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetArticlesearchJSON200ApplicationJSONResponse.java
@@ -42,6 +41,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/DocHeadline.java
 lib/src/main/java/org/openapis/openapi/models/shared/DocKeywords.java
 lib/src/main/java/org/openapis/openapi/models/shared/DocMultimedia.java
 lib/src/main/java/org/openapis/openapi/models/shared/Doc.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeApikey.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

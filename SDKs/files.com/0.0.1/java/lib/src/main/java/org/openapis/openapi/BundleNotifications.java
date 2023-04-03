@@ -43,7 +43,7 @@ public class BundleNotifications {
      */
     public org.openapis.openapi.models.operations.DeleteBundleNotificationsIdResponse deleteBundleNotificationsId(org.openapis.openapi.models.operations.DeleteBundleNotificationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBundleNotificationsIdPathParams.class, baseUrl, "/bundle_notifications/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBundleNotificationsIdRequest.class, baseUrl, "/bundle_notifications/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class BundleNotifications {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBundleNotificationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBundleNotificationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -123,7 +123,7 @@ public class BundleNotifications {
      */
     public org.openapis.openapi.models.operations.GetBundleNotificationsIdResponse getBundleNotificationsId(org.openapis.openapi.models.operations.GetBundleNotificationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBundleNotificationsIdPathParams.class, baseUrl, "/bundle_notifications/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBundleNotificationsIdRequest.class, baseUrl, "/bundle_notifications/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -164,12 +164,12 @@ public class BundleNotifications {
      */
     public org.openapis.openapi.models.operations.PatchBundleNotificationsIdResponse patchBundleNotificationsId(org.openapis.openapi.models.operations.PatchBundleNotificationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchBundleNotificationsIdPathParams.class, baseUrl, "/bundle_notifications/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchBundleNotificationsIdRequest.class, baseUrl, "/bundle_notifications/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
@@ -205,7 +205,7 @@ public class BundleNotifications {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostBundleNotificationsResponse postBundleNotifications(org.openapis.openapi.models.operations.PostBundleNotificationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostBundleNotificationsResponse postBundleNotifications(org.openapis.openapi.models.operations.PostBundleNotificationsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/bundle_notifications");
         

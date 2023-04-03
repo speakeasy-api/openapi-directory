@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkCellularGatewayDhcpRequest {
-    
-    public GetNetworkCellularGatewayDhcpPathParams pathParams;
-    public GetNetworkCellularGatewayDhcpRequest withPathParams(GetNetworkCellularGatewayDhcpPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkCellularGatewayDhcpRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

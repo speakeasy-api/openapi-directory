@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSinkRequest {
-    
-    public DeleteSinkPathParams pathParams;
-    public DeleteSinkRequest withPathParams(DeleteSinkPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteSinkSecurity security;
-    public DeleteSinkRequest withSecurity(DeleteSinkSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteSinkRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies this Sink.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteSinkRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

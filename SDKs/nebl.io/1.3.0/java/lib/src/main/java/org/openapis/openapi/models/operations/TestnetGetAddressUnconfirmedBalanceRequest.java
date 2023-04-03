@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestnetGetAddressUnconfirmedBalanceRequest {
-    
-    public TestnetGetAddressUnconfirmedBalancePathParams pathParams;
-    public TestnetGetAddressUnconfirmedBalanceRequest withPathParams(TestnetGetAddressUnconfirmedBalancePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Address
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=address")
+    public String address;
+    public TestnetGetAddressUnconfirmedBalanceRequest withAddress(String address) {
+        this.address = address;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesGetIosManifestRequest {
-    
-    public ReleasesGetIosManifestPathParams pathParams;
-    public ReleasesGetIosManifestRequest withPathParams(ReleasesGetIosManifestPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_id")
+    public String appId;
+    public ReleasesGetIosManifestRequest withAppId(String appId) {
+        this.appId = appId;
         return this;
     }
     
+    /**
+     * The release_id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
+    public Long releaseId;
+    public ReleasesGetIosManifestRequest withReleaseId(Long releaseId) {
+        this.releaseId = releaseId;
+        return this;
+    }
     
-    public ReleasesGetIosManifestQueryParams queryParams;
-    public ReleasesGetIosManifestRequest withQueryParams(ReleasesGetIosManifestQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A hash that authorizes the download if it matches the release info.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public ReleasesGetIosManifestRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

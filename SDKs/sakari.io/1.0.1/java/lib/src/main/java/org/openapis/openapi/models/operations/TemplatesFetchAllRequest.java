@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TemplatesFetchAllRequest {
-    
-    public TemplatesFetchAllPathParams pathParams;
-    public TemplatesFetchAllRequest withPathParams(TemplatesFetchAllPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public TemplatesFetchAllRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public TemplatesFetchAllQueryParams queryParams;
-    public TemplatesFetchAllRequest withQueryParams(TemplatesFetchAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Maximum number of results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public TemplatesFetchAllRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Filter by name or part of
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public TemplatesFetchAllRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public TemplatesFetchAllSecurity security;
-    public TemplatesFetchAllRequest withSecurity(TemplatesFetchAllSecurity security) {
-        this.security = security;
+    /**
+     * Results to skip when paginating through a result set
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public TemplatesFetchAllRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

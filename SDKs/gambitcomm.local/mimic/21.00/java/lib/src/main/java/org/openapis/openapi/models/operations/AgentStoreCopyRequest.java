@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AgentStoreCopyRequest {
+    /**
+     * Agent of the value space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public AgentStoreCopyRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public AgentStoreCopyPathParams pathParams;
-    public AgentStoreCopyRequest withPathParams(AgentStoreCopyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent of the value space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=otherAgent")
+    public Integer otherAgent;
+    public AgentStoreCopyRequest withOtherAgent(Integer otherAgent) {
+        this.otherAgent = otherAgent;
         return this;
     }
     

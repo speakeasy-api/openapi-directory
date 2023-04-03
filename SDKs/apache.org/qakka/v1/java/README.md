@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AckMessagePathParams;
 import org.openapis.openapi.models.operations.AckMessageRequest;
 import org.openapis.openapi.models.operations.AckMessageResponse;
 
@@ -28,11 +27,9 @@ public class Application {
                 .build();
 
             AckMessageRequest req = new AckMessageRequest() {{
-                pathParams = new AckMessagePathParams() {{
-                    queueMessageId = "corrupti";
-                    queueName = "provident";
-                }};
-            }};            
+                queueMessageId = "corrupti";
+                queueName = "provident";
+            }}            
 
             AckMessageResponse res = sdk.queues.ackMessage(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### queues

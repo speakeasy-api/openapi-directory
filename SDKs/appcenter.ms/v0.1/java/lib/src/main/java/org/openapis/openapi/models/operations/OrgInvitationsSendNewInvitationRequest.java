@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgInvitationsSendNewInvitationRequest {
-    
-    public OrgInvitationsSendNewInvitationPathParams pathParams;
-    public OrgInvitationsSendNewInvitationRequest withPathParams(OrgInvitationsSendNewInvitationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The role of the user to be added
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public OrgInvitationsSendNewInvitationRequestBody request;
-    public OrgInvitationsSendNewInvitationRequest withRequest(OrgInvitationsSendNewInvitationRequestBody request) {
-        this.request = request;
+    public OrgInvitationsSendNewInvitationRequestBody requestBody;
+    public OrgInvitationsSendNewInvitationRequest withRequestBody(OrgInvitationsSendNewInvitationRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The email address of the user to send the password reset mail to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=email")
+    public String email;
+    public OrgInvitationsSendNewInvitationRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
     
-    public OrgInvitationsSendNewInvitationSecurity security;
-    public OrgInvitationsSendNewInvitationRequest withSecurity(OrgInvitationsSendNewInvitationSecurity security) {
-        this.security = security;
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public OrgInvitationsSendNewInvitationRequest withOrgName(String orgName) {
+        this.orgName = orgName;
         return this;
     }
     

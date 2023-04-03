@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnarchivePromotionRequest {
-    
-    public UnarchivePromotionPathParams pathParams;
-    public UnarchivePromotionRequest withPathParams(UnarchivePromotionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public UnarchivePromotionRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public UnarchivePromotionRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public UnarchivePromotionHeaders headers;
-    public UnarchivePromotionRequest withHeaders(UnarchivePromotionHeaders headers) {
-        this.headers = headers;
+    /**
+     * Promotion ID or tax ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=idCalculatorConfiguration")
+    public String idCalculatorConfiguration;
+    public UnarchivePromotionRequest withIdCalculatorConfiguration(String idCalculatorConfiguration) {
+        this.idCalculatorConfiguration = idCalculatorConfiguration;
         return this;
     }
     

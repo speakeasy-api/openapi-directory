@@ -4,20 +4,44 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointDisruptionRequest {
-    
-    public StopPointDisruptionPathParams pathParams;
-    public StopPointDisruptionRequest withPathParams(StopPointDisruptionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Specify true to associate all disruptions with parent stop point. (Only applicable when getFamily is true).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=flattenResponse")
+    public Boolean flattenResponse;
+    public StopPointDisruptionRequest withFlattenResponse(Boolean flattenResponse) {
+        this.flattenResponse = flattenResponse;
         return this;
     }
     
+    /**
+     * Specify true to return disruptions for entire family, or false to return disruptions for just this stop point. Defaults to false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=getFamily")
+    public Boolean getFamily;
+    public StopPointDisruptionRequest withGetFamily(Boolean getFamily) {
+        this.getFamily = getFamily;
+        return this;
+    }
     
-    public StopPointDisruptionQueryParams queryParams;
-    public StopPointDisruptionRequest withQueryParams(StopPointDisruptionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comma-seperated list of stop point ids. Max. approx. 20 ids.
+     *             You can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
+    public String[] ids;
+    public StopPointDisruptionRequest withIds(String[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeRouteBlockedStops")
+    public Boolean includeRouteBlockedStops;
+    public StopPointDisruptionRequest withIncludeRouteBlockedStops(Boolean includeRouteBlockedStops) {
+        this.includeRouteBlockedStops = includeRouteBlockedStops;
         return this;
     }
     

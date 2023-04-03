@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.FetchTrunkingCountrySecurity;
-import org.openapis.openapi.models.operations.FetchTrunkingCountryPathParams;
 import org.openapis.openapi.models.operations.FetchTrunkingCountryRequest;
 import org.openapis.openapi.models.operations.FetchTrunkingCountryResponse;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,18 +28,13 @@ public class Application {
                 .build();
 
             FetchTrunkingCountryRequest req = new FetchTrunkingCountryRequest() {{
-                security = new FetchTrunkingCountrySecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                pathParams = new FetchTrunkingCountryPathParams() {{
-                    isoCountry = "corrupti";
-                }};
-            }};            
+                isoCountry = "corrupti";
+            }}            
 
-            FetchTrunkingCountryResponse res = sdk.fetchTrunkingCountry(req);
+            FetchTrunkingCountryResponse res = sdk.fetchTrunkingCountry(req, new FetchTrunkingCountrySecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.pricingV2TrunkingCountryInstance.isPresent()) {
                 // handle response
@@ -53,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

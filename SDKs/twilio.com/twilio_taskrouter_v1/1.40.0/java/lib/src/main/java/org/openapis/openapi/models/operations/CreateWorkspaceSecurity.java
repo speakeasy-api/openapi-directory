@@ -7,10 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateWorkspaceSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
-    public org.openapis.openapi.models.shared.SchemeAccountSidAuthToken accountSidAuthToken;
-    public CreateWorkspaceSecurity withAccountSidAuthToken(org.openapis.openapi.models.shared.SchemeAccountSidAuthToken accountSidAuthToken) {
-        this.accountSidAuthToken = accountSidAuthToken;
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=password")
+    public String password;
+    public CreateWorkspaceSecurity withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=username")
+    public String username;
+    public CreateWorkspaceSecurity withUsername(String username) {
+        this.username = username;
         return this;
     }
     

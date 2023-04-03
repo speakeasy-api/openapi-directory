@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMapVersionNumberTileLayerStyleZoomXYFormatRequest {
-    
-    public GetMapVersionNumberTileLayerStyleZoomXYFormatPathParams pathParams;
-    public GetMapVersionNumberTileLayerStyleZoomXYFormatRequest withPathParams(GetMapVersionNumberTileLayerStyleZoomXYFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * x coordinate of tile on zoom grid
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=X")
+    public Long x;
+    public GetMapVersionNumberTileLayerStyleZoomXYFormatRequest withX(Long x) {
+        this.x = x;
         return this;
     }
     
+    /**
+     * y coordinate of tile on zoom grid
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Y")
+    public Long y;
+    public GetMapVersionNumberTileLayerStyleZoomXYFormatRequest withY(Long y) {
+        this.y = y;
+        return this;
+    }
     
-    public GetMapVersionNumberTileLayerStyleZoomXYFormatQueryParams queryParams;
-    public GetMapVersionNumberTileLayerStyleZoomXYFormatRequest withQueryParams(GetMapVersionNumberTileLayerStyleZoomXYFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Format of the response.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public GetMapVersionNumberTileLayerStyleZoomXYFormatFormatEnum format;
+    public GetMapVersionNumberTileLayerStyleZoomXYFormatRequest withFormat(GetMapVersionNumberTileLayerStyleZoomXYFormatFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * Layer of tile to be rendered. &lt;em&gt;Hybrid&lt;/em&gt; and &lt;em&gt;labels&lt;/em&gt; are intended for layering with other data and are only available in &lt;em&gt;png&lt;/em&gt; format.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=layer")
+    public GetMapVersionNumberTileLayerStyleZoomXYFormatLayerEnum layer;
+    public GetMapVersionNumberTileLayerStyleZoomXYFormatRequest withLayer(GetMapVersionNumberTileLayerStyleZoomXYFormatLayerEnum layer) {
+        this.layer = layer;
+        return this;
+    }
+    
+    /**
+     * Style of tile to be rendered
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=style")
+    public GetMapVersionNumberTileLayerStyleZoomXYFormatStyleEnum style;
+    public GetMapVersionNumberTileLayerStyleZoomXYFormatRequest withStyle(GetMapVersionNumberTileLayerStyleZoomXYFormatStyleEnum style) {
+        this.style = style;
+        return this;
+    }
+    
+    /**
+     * Tile dimensions in pixels. &lt;em&gt;512&lt;/em&gt; is only available for the &lt;em&gt;main&lt;/em&gt; style and &lt;em&gt;basic&lt;/em&gt; or &lt;em&gt;labels&lt;/em&gt; layers.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tileSize")
+    public GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum tileSize;
+    public GetMapVersionNumberTileLayerStyleZoomXYFormatRequest withTileSize(GetMapVersionNumberTileLayerStyleZoomXYFormatTileSizeEnum tileSize) {
+        this.tileSize = tileSize;
+        return this;
+    }
+    
+    /**
+     * Version of the service to call. The current version is 1.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
+    public GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum versionNumber;
+    public GetMapVersionNumberTileLayerStyleZoomXYFormatRequest withVersionNumber(GetMapVersionNumberTileLayerStyleZoomXYFormatVersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
+        return this;
+    }
+    
+    /**
+     * Geopolitical view. Determines rendering of disputed areas. See the &lt;a href="/maps-sdk-web/functional-examples#geopolitical-views"&gt;documentation&lt;/a&gt; for an explanation of how this works in live services.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
+    public GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum view;
+    public GetMapVersionNumberTileLayerStyleZoomXYFormatRequest withView(GetMapVersionNumberTileLayerStyleZoomXYFormatViewEnum view) {
+        this.view = view;
+        return this;
+    }
+    
+    /**
+     * Zoom level of tile to be rendered
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zoom")
+    public GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum zoom;
+    public GetMapVersionNumberTileLayerStyleZoomXYFormatRequest withZoom(GetMapVersionNumberTileLayerStyleZoomXYFormatZoomEnum zoom) {
+        this.zoom = zoom;
         return this;
     }
     

@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUploadShareRequest {
-    
-    public CreateUploadShareHeaders headers;
-    public CreateUploadShareRequest withHeaders(CreateUploadShareHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateUploadShareRequest createUploadShareRequest;
+    public CreateUploadShareRequest withCreateUploadShareRequest(org.openapis.openapi.models.shared.CreateUploadShareRequest createUploadShareRequest) {
+        this.createUploadShareRequest = createUploadShareRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateUploadShareRequest request;
-    public CreateUploadShareRequest withRequest(org.openapis.openapi.models.shared.CreateUploadShareRequest request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public CreateUploadShareRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public CreateUploadShareXSdsDateFormatEnum xSdsDateFormat;
+    public CreateUploadShareRequest withXSdsDateFormat(CreateUploadShareXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
         return this;
     }
     

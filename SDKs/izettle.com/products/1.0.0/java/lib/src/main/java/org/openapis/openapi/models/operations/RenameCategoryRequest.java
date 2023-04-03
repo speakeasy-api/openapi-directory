@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RenameCategoryRequest {
-    
-    public RenameCategoryPathParams pathParams;
-    public RenameCategoryRequest withPathParams(RenameCategoryPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RenameCategoryRequest request;
-    public RenameCategoryRequest withRequest(org.openapis.openapi.models.shared.RenameCategoryRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RenameCategoryRequest renameCategoryRequest;
+    public RenameCategoryRequest withRenameCategoryRequest(org.openapis.openapi.models.shared.RenameCategoryRequest renameCategoryRequest) {
+        this.renameCategoryRequest = renameCategoryRequest;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=categoryUuid")
+    public String categoryUuid;
+    public RenameCategoryRequest withCategoryUuid(String categoryUuid) {
+        this.categoryUuid = categoryUuid;
+        return this;
+    }
     
-    public RenameCategorySecurity security;
-    public RenameCategoryRequest withSecurity(RenameCategorySecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
+    public String organizationUuid;
+    public RenameCategoryRequest withOrganizationUuid(String organizationUuid) {
+        this.organizationUuid = organizationUuid;
         return this;
     }
     

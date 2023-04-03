@@ -11,9 +11,7 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    oAuth2 = new SchemeOAuth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                    oAuth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }})
                 .build();
 

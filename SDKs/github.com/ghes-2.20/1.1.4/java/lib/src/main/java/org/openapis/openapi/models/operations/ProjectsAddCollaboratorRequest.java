@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsAddCollaboratorRequest {
-    
-    public ProjectsAddCollaboratorPathParams pathParams;
-    public ProjectsAddCollaboratorRequest withPathParams(ProjectsAddCollaboratorPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ProjectsAddCollaboratorRequestBody requestBody;
+    public ProjectsAddCollaboratorRequest withRequestBody(ProjectsAddCollaboratorRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ProjectsAddCollaboratorRequestBody request;
-    public ProjectsAddCollaboratorRequest withRequest(ProjectsAddCollaboratorRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Long projectId;
+    public ProjectsAddCollaboratorRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public ProjectsAddCollaboratorRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

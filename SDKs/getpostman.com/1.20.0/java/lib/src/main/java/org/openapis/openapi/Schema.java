@@ -51,15 +51,15 @@ public class Schema {
      */
     public org.openapis.openapi.models.operations.CreateCollectionFromSchemaResponse createCollectionFromSchema(org.openapis.openapi.models.operations.CreateCollectionFromSchemaRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateCollectionFromSchemaPathParams.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/schemas/{schemaId}/collections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateCollectionFromSchemaRequest.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/schemas/{schemaId}/collections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreateCollectionFromSchemaQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreateCollectionFromSchemaRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -108,12 +108,12 @@ public class Schema {
      */
     public org.openapis.openapi.models.operations.CreateSchemaResponse createSchema(org.openapis.openapi.models.operations.CreateSchemaRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSchemaPathParams.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/schemas", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSchemaRequest.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/schemas", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -153,7 +153,7 @@ public class Schema {
      */
     public org.openapis.openapi.models.operations.GetSchemaResponse getSchema(org.openapis.openapi.models.operations.GetSchemaRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSchemaPathParams.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/schemas/{schemaId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSchemaRequest.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/schemas/{schemaId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -202,12 +202,12 @@ public class Schema {
      */
     public org.openapis.openapi.models.operations.UpdateSchemaResponse updateSchema(org.openapis.openapi.models.operations.UpdateSchemaRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSchemaPathParams.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/schemas/{schemaId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSchemaRequest.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/schemas/{schemaId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

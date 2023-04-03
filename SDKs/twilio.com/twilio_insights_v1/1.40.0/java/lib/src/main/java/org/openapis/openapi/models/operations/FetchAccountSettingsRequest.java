@@ -4,27 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchAccountSettingsRequest {
-    
-    public FetchAccountSettingsQueryParams queryParams;
-    public FetchAccountSettingsRequest withQueryParams(FetchAccountSettingsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public FetchAccountSettingsSecurity security;
-    public FetchAccountSettingsRequest withSecurity(FetchAccountSettingsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchAccountSettingsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SubaccountSid")
+    public String subaccountSid;
+    public FetchAccountSettingsRequest withSubaccountSid(String subaccountSid) {
+        this.subaccountSid = subaccountSid;
         return this;
     }
     

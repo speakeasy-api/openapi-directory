@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAccessTokenRequest {
-    
-    public DeleteAccessTokenPathParams pathParams;
-    public DeleteAccessTokenRequest withPathParams(DeleteAccessTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the personal access token to delete. You can find the IDs of all PATs associated with your user account by calling &lt;a&gt;ListAccessTokens&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteAccessTokenRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

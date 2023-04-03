@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FunctionsUpdateRequest {
-    
-    public FunctionsUpdatePathParams pathParams;
-    public FunctionsUpdateRequest withPathParams(FunctionsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public FunctionsUpdateRequestBody request;
-    public FunctionsUpdateRequest withRequest(FunctionsUpdateRequestBody request) {
-        this.request = request;
+    public FunctionsUpdateRequestBody requestBody;
+    public FunctionsUpdateRequest withRequestBody(FunctionsUpdateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public FunctionsUpdateSecurity security;
-    public FunctionsUpdateRequest withSecurity(FunctionsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Function unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionId")
+    public String functionId;
+    public FunctionsUpdateRequest withFunctionId(String functionId) {
+        this.functionId = functionId;
         return this;
     }
     

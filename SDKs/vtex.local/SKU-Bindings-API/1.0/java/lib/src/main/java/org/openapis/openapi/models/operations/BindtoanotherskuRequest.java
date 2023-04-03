@@ -7,17 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BindtoanotherskuRequest {
-    
-    public BindtoanotherskuPathParams pathParams;
-    public BindtoanotherskuRequest withPathParams(BindtoanotherskuPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public BindtoanotherskuRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public BindtoanotherskuHeaders headers;
-    public BindtoanotherskuRequest withHeaders(BindtoanotherskuHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public BindtoanotherskuRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
@@ -25,9 +31,29 @@ public class BindtoanotherskuRequest {
      * Request body
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public BindtoanotherskuRequestBody request;
-    public BindtoanotherskuRequest withRequest(BindtoanotherskuRequestBody request) {
-        this.request = request;
+    public BindtoanotherskuRequestBody requestBody;
+    public BindtoanotherskuRequest withRequestBody(BindtoanotherskuRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID that identifies the seller in the marketplace. It can be the same as the seller name or a unique number. Check the **Sellers management** section in the Admin to get the correct ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
+    public String sellerId;
+    public BindtoanotherskuRequest withSellerId(String sellerId) {
+        this.sellerId = sellerId;
+        return this;
+    }
+    
+    /**
+     * SKU ID in the seller's store.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerSkuId")
+    public String sellerSkuId;
+    public BindtoanotherskuRequest withSellerSkuId(String sellerSkuId) {
+        this.sellerSkuId = sellerSkuId;
         return this;
     }
     

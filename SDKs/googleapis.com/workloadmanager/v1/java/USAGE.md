@@ -5,19 +5,15 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.WorkloadmanagerProjectsLocationsEvaluationsCreateSecurity;
-import org.openapis.openapi.models.operations.WorkloadmanagerProjectsLocationsEvaluationsCreatePathParams;
-import org.openapis.openapi.models.operations.WorkloadmanagerProjectsLocationsEvaluationsCreateQueryParams;
 import org.openapis.openapi.models.operations.WorkloadmanagerProjectsLocationsEvaluationsCreateRequest;
 import org.openapis.openapi.models.operations.WorkloadmanagerProjectsLocationsEvaluationsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.EvaluationInput;
 import org.openapis.openapi.models.shared.ResourceStatusStateEnum;
 import org.openapis.openapi.models.shared.ResourceStatus;
 import org.openapis.openapi.models.shared.ResourceFilter;
 import org.openapis.openapi.models.shared.GceInstanceFilter;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -26,83 +22,74 @@ public class Application {
                 .build();
 
             WorkloadmanagerProjectsLocationsEvaluationsCreateRequest req = new WorkloadmanagerProjectsLocationsEvaluationsCreateRequest() {{
-                security = new WorkloadmanagerProjectsLocationsEvaluationsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new WorkloadmanagerProjectsLocationsEvaluationsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new WorkloadmanagerProjectsLocationsEvaluationsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    evaluationId = "nulla";
-                    fields = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    requestId = "deserunt";
-                    uploadType = "suscipit";
-                    uploadProtocol = "iure";
-                }};
-                request = new EvaluationInput() {{
-                    description = "magnam";
+                dollarXgafv = "2";
+                evaluationInput = new EvaluationInput() {{
+                    description = "provident";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("ipsa", "delectus");
-                        put("tempora", "suscipit");
-                        put("molestiae", "minus");
-                        put("placeat", "voluptatum");
+                        put("quibusdam", "unde");
+                        put("nulla", "corrupti");
+                        put("illum", "vel");
                     }};
-                    name = "iusto";
+                    name = "error";
                     resourceFilter = new ResourceFilter() {{
                         gceInstanceFilter = new GceInstanceFilter() {{
                             serviceAccounts = new String[]{{
-                                add("nisi"),
-                                add("recusandae"),
-                                add("temporibus"),
+                                add("suscipit"),
+                                add("iure"),
+                                add("magnam"),
                             }};
                         }};
                         inclusionLabels = new java.util.HashMap<String, String>() {{
-                            put("quis", "veritatis");
+                            put("ipsa", "delectus");
+                            put("tempora", "suscipit");
+                            put("molestiae", "minus");
+                            put("placeat", "voluptatum");
                         }};
                         resourceIdPatterns = new String[]{{
-                            add("perferendis"),
-                            add("ipsam"),
-                            add("repellendus"),
+                            add("excepturi"),
+                            add("nisi"),
                         }};
                         scopes = new String[]{{
-                            add("quo"),
-                            add("odit"),
-                            add("at"),
-                            add("at"),
+                            add("temporibus"),
+                            add("ab"),
+                            add("quis"),
+                            add("veritatis"),
                         }};
                     }};
                     resourceStatus = new ResourceStatus() {{
                         rulesNewerVersions = new String[]{{
-                            add("molestiae"),
-                            add("quod"),
-                            add("quod"),
-                            add("esse"),
+                            add("perferendis"),
+                            add("ipsam"),
+                            add("repellendus"),
                         }};
-                        state = "ACTIVE";
+                        state = "DELETING";
                     }};
                     ruleNames = new String[]{{
-                        add("dolorum"),
-                        add("dicta"),
-                        add("nam"),
-                        add("officia"),
+                        add("odit"),
+                        add("at"),
+                        add("at"),
+                        add("maiores"),
                     }};
                 }};
-            }};            
+                accessToken = "molestiae";
+                alt = "proto";
+                callback = "quod";
+                evaluationId = "esse";
+                fields = "totam";
+                key = "porro";
+                oauthToken = "dolorum";
+                parent = "dicta";
+                prettyPrint = false;
+                quotaUser = "nam";
+                requestId = "officia";
+                uploadType = "occaecati";
+                uploadProtocol = "fugit";
+            }}            
 
-            WorkloadmanagerProjectsLocationsEvaluationsCreateResponse res = sdk.projects.workloadmanagerProjectsLocationsEvaluationsCreate(req);
+            WorkloadmanagerProjectsLocationsEvaluationsCreateResponse res = sdk.projects.workloadmanagerProjectsLocationsEvaluationsCreate(req, new WorkloadmanagerProjectsLocationsEvaluationsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response

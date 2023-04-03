@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserGetSanitizedPlatformDisplayNamesRequest {
-    
-    public UserGetSanitizedPlatformDisplayNamesPathParams pathParams;
-    public UserGetSanitizedPlatformDisplayNamesRequest withPathParams(UserGetSanitizedPlatformDisplayNamesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The requested membership id to load.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
+    public Long membershipId;
+    public UserGetSanitizedPlatformDisplayNamesRequest withMembershipId(Long membershipId) {
+        this.membershipId = membershipId;
         return this;
     }
     

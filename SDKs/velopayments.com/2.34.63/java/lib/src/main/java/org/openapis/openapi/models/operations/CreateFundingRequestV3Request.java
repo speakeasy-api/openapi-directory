@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateFundingRequestV3Request {
-    
-    public CreateFundingRequestV3PathParams pathParams;
-    public CreateFundingRequestV3Request withPathParams(CreateFundingRequestV3PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Body to included amount to be funded
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FundingRequestV3 request;
-    public CreateFundingRequestV3Request withRequest(org.openapis.openapi.models.shared.FundingRequestV3 request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FundingRequestV3 fundingRequestV3;
+    public CreateFundingRequestV3Request withFundingRequestV3(org.openapis.openapi.models.shared.FundingRequestV3 fundingRequestV3) {
+        this.fundingRequestV3 = fundingRequestV3;
+        return this;
+    }
+    
+    /**
+     * Source account id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sourceAccountId")
+    public String sourceAccountId;
+    public CreateFundingRequestV3Request withSourceAccountId(String sourceAccountId) {
+        this.sourceAccountId = sourceAccountId;
         return this;
     }
     

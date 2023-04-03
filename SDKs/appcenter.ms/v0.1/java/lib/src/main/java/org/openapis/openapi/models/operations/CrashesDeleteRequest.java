@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CrashesDeleteRequest {
-    
-    public CrashesDeletePathParams pathParams;
-    public CrashesDeleteRequest withPathParams(CrashesDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CrashesDeleteRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public CrashesDeleteQueryParams queryParams;
-    public CrashesDeleteRequest withQueryParams(CrashesDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * id of a specific group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_group_id")
+    public String crashGroupId;
+    public CrashesDeleteRequest withCrashGroupId(String crashGroupId) {
+        this.crashGroupId = crashGroupId;
         return this;
     }
     
+    /**
+     * id of a specific crash
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_id")
+    public String crashId;
+    public CrashesDeleteRequest withCrashId(String crashId) {
+        this.crashId = crashId;
+        return this;
+    }
     
-    public CrashesDeleteSecurity security;
-    public CrashesDeleteRequest withSecurity(CrashesDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CrashesDeleteRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * true in that case if the method should skip update counts
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=retention_delete")
+    public Boolean retentionDelete;
+    public CrashesDeleteRequest withRetentionDelete(Boolean retentionDelete) {
+        this.retentionDelete = retentionDelete;
         return this;
     }
     

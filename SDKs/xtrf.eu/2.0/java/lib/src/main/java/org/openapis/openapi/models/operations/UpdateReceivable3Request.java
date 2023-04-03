@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateReceivable3Request {
-    
-    public UpdateReceivable3PathParams pathParams;
-    public UpdateReceivable3Request withPathParams(UpdateReceivable3PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ReceivableDTO receivableDTO;
+    public UpdateReceivable3Request withReceivableDTO(org.openapis.openapi.models.shared.ReceivableDTO receivableDTO) {
+        this.receivableDTO = receivableDTO;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ReceivableDTO request;
-    public UpdateReceivable3Request withRequest(org.openapis.openapi.models.shared.ReceivableDTO request) {
-        this.request = request;
+    /**
+     * quote's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
+    public String quoteId;
+    public UpdateReceivable3Request withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
+        return this;
+    }
+    
+    /**
+     * receivable's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=receivableId")
+    public Long receivableId;
+    public UpdateReceivable3Request withReceivableId(Long receivableId) {
+        this.receivableId = receivableId;
         return this;
     }
     

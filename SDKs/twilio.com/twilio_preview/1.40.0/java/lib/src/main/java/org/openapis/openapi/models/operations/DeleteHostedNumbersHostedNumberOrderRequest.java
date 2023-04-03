@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteHostedNumbersHostedNumberOrderRequest {
-    
-    public DeleteHostedNumbersHostedNumberOrderPathParams pathParams;
-    public DeleteHostedNumbersHostedNumberOrderRequest withPathParams(DeleteHostedNumbersHostedNumberOrderPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteHostedNumbersHostedNumberOrderSecurity security;
-    public DeleteHostedNumbersHostedNumberOrderRequest withSecurity(DeleteHostedNumbersHostedNumberOrderSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteHostedNumbersHostedNumberOrderRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies this HostedNumberOrder.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteHostedNumbersHostedNumberOrderRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

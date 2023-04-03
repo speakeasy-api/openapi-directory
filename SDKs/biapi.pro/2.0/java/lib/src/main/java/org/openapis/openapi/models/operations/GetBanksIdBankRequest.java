@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBanksIdBankRequest {
-    
-    public GetBanksIdBankPathParams pathParams;
-    public GetBanksIdBankRequest withPathParams(GetBanksIdBankPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetBanksIdBankRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
-    
-    public GetBanksIdBankQueryParams queryParams;
-    public GetBanksIdBankRequest withQueryParams(GetBanksIdBankQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_bank")
+    public Long idBank;
+    public GetBanksIdBankRequest withIdBank(Long idBank) {
+        this.idBank = idBank;
         return this;
     }
     

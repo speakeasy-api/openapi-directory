@@ -4,20 +4,69 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CountriesGetV1CountriesCountryIdGetRequest {
-    
-    public CountriesGetV1CountriesCountryIdGetPathParams pathParams;
-    public CountriesGetV1CountriesCountryIdGetRequest withPathParams(CountriesGetV1CountriesCountryIdGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     *         Limit results by a certain country using two letter country code.
+     *         (ex. ?country=US or ?country=US&amp;country=MX)
+     *         
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String[] country;
+    public CountriesGetV1CountriesCountryIdGetRequest withCountry(String[] country) {
+        this.country = country;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country_id")
+    public String countryId;
+    public CountriesGetV1CountriesCountryIdGetRequest withCountryId(String countryId) {
+        this.countryId = countryId;
+        return this;
+    }
     
-    public CountriesGetV1CountriesCountryIdGetQueryParams queryParams;
-    public CountriesGetV1CountriesCountryIdGetRequest withQueryParams(CountriesGetV1CountriesCountryIdGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public CountriesGetV1CountriesCountryIdGetRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public CountriesGetV1CountriesCountryIdGetRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * An enumeration.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
+    public CountriesGetV1CountriesCountryIdGetOrderByCountriesOrderEnum orderBy;
+    public CountriesGetV1CountriesCountryIdGetRequest withOrderBy(CountriesGetV1CountriesCountryIdGetOrderByCountriesOrderEnum orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    /**
+     * Paginate through results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public CountriesGetV1CountriesCountryIdGetRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Define sort order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public CountriesGetV1CountriesCountryIdGetSortSortEnum sort;
+    public CountriesGetV1CountriesCountryIdGetRequest withSort(CountriesGetV1CountriesCountryIdGetSortSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

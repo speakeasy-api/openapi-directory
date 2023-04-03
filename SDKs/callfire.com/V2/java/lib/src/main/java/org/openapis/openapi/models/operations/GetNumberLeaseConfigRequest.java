@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumberLeaseConfigRequest {
-    
-    public GetNumberLeaseConfigPathParams pathParams;
-    public GetNumberLeaseConfigRequest withPathParams(GetNumberLeaseConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GetNumberLeaseConfigRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
-    
-    public GetNumberLeaseConfigQueryParams queryParams;
-    public GetNumberLeaseConfigRequest withQueryParams(GetNumberLeaseConfigQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetNumberLeaseConfigSecurity security;
-    public GetNumberLeaseConfigRequest withSecurity(GetNumberLeaseConfigSecurity security) {
-        this.security = security;
+    /**
+     * A phone number in E.164 format (11-digit). Example: 12132000384
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
+    public String number;
+    public GetNumberLeaseConfigRequest withNumber(String number) {
+        this.number = number;
         return this;
     }
     

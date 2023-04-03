@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CrashesListAttachmentsRequest {
-    
-    public CrashesListAttachmentsPathParams pathParams;
-    public CrashesListAttachmentsRequest withPathParams(CrashesListAttachmentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CrashesListAttachmentsRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * id of a specific crash
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_id")
+    public String crashId;
+    public CrashesListAttachmentsRequest withCrashId(String crashId) {
+        this.crashId = crashId;
+        return this;
+    }
     
-    public CrashesListAttachmentsSecurity security;
-    public CrashesListAttachmentsRequest withSecurity(CrashesListAttachmentsSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CrashesListAttachmentsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

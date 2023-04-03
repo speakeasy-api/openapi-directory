@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveCardRequest {
-    
-    public RetrieveCardPathParams pathParams;
-    public RetrieveCardRequest withPathParams(RetrieveCardPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetrieveCardSecurity security;
-    public RetrieveCardRequest withSecurity(RetrieveCardSecurity security) {
-        this.security = security;
+    /**
+     * Unique ID for the desired Card.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=card_id")
+    public String cardId;
+    public RetrieveCardRequest withCardId(String cardId) {
+        this.cardId = cardId;
         return this;
     }
     

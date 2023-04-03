@@ -4,27 +4,206 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest {
-    
-    public CloudiotProjectsLocationsRegistriesGroupsDevicesListPathParams pathParams;
-    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withPathParams(CloudiotProjectsLocationsRegistriesGroupsDevicesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams queryParams;
-    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withQueryParams(CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurity security;
-    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withSecurity(CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * A list of device string IDs. For example, `['device0', 'device12']`. If empty, this field is ignored. Maximum IDs: 10,000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceIds")
+    public String[] deviceIds;
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withDeviceIds(String[] deviceIds) {
+        this.deviceIds = deviceIds;
+        return this;
+    }
+    
+    /**
+     * A list of device numeric IDs. If empty, this field is ignored. Maximum IDs: 10,000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceNumIds")
+    public String[] deviceNumIds;
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withDeviceNumIds(String[] deviceNumIds) {
+        this.deviceNumIds = deviceNumIds;
+        return this;
+    }
+    
+    /**
+     * The fields of the `Device` resource to be returned in the response. The fields `id` and `num_id` are always returned, along with any other fields specified in snake_case format, for example: `last_heartbeat_time`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fieldMask")
+    public String fieldMask;
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withFieldMask(String fieldMask) {
+        this.fieldMask = fieldMask;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * If set, returns only the gateways with which the specified device is associated. The device ID can be numeric (`num_id`) or the user-defined string (`id`). For example, if `456` is specified, returns only the gateways to which the device with `num_id` 456 is bound.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gatewayListOptions.associationsDeviceId")
+    public String gatewayListOptionsAssociationsDeviceId;
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withGatewayListOptionsAssociationsDeviceId(String gatewayListOptionsAssociationsDeviceId) {
+        this.gatewayListOptionsAssociationsDeviceId = gatewayListOptionsAssociationsDeviceId;
+        return this;
+    }
+    
+    /**
+     * If set, only devices associated with the specified gateway are returned. The gateway ID can be numeric (`num_id`) or the user-defined string (`id`). For example, if `123` is specified, only devices bound to the gateway with `num_id` 123 are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gatewayListOptions.associationsGatewayId")
+    public String gatewayListOptionsAssociationsGatewayId;
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withGatewayListOptionsAssociationsGatewayId(String gatewayListOptionsAssociationsGatewayId) {
+        this.gatewayListOptionsAssociationsGatewayId = gatewayListOptionsAssociationsGatewayId;
+        return this;
+    }
+    
+    /**
+     * If `GATEWAY` is specified, only gateways are returned. If `NON_GATEWAY` is specified, only non-gateway devices are returned. If `GATEWAY_TYPE_UNSPECIFIED` is specified, all devices are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gatewayListOptions.gatewayType")
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum gatewayListOptionsGatewayType;
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withGatewayListOptionsGatewayType(CloudiotProjectsLocationsRegistriesGroupsDevicesListGatewayListOptionsGatewayTypeEnum gatewayListOptionsGatewayType) {
+        this.gatewayListOptionsGatewayType = gatewayListOptionsGatewayType;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The maximum number of devices to return in the response. If this value is zero, the service will select a default size. A call may return fewer objects than requested. A non-empty `next_page_token` in the response indicates that more data is available.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The value returned by the last `ListDevicesResponse`; indicates that this is a continuation of a prior `ListDevices` call and the system should return the next page of data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Required. The device registry path. Required. For example, `projects/my-project/locations/us-central1/registries/my-registry`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

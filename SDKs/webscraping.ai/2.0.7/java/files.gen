@@ -33,13 +33,10 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/AccountResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetHTMLQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetHTMLRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetHTMLResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetSelectedQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSelectedRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSelectedResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetSelectedMultipleQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSelectedMultipleRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSelectedMultipleResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java
@@ -48,6 +45,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/PageError.java
 lib/src/main/java/org/openapis/openapi/models/shared/ProxyEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DeviceEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/CountryEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

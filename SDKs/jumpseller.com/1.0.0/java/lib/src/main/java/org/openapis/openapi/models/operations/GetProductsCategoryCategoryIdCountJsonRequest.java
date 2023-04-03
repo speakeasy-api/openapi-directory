@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductsCategoryCategoryIdCountJsonRequest {
-    
-    public GetProductsCategoryCategoryIdCountJsonPathParams pathParams;
-    public GetProductsCategoryCategoryIdCountJsonRequest withPathParams(GetProductsCategoryCategoryIdCountJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public GetProductsCategoryCategoryIdCountJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Category ID of the Product used as filter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category_id")
+    public Integer categoryId;
+    public GetProductsCategoryCategoryIdCountJsonRequest withCategoryId(Integer categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
     
-    public GetProductsCategoryCategoryIdCountJsonQueryParams queryParams;
-    public GetProductsCategoryCategoryIdCountJsonRequest withQueryParams(GetProductsCategoryCategoryIdCountJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Locale code of the translation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public GetProductsCategoryCategoryIdCountJsonRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public GetProductsCategoryCategoryIdCountJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

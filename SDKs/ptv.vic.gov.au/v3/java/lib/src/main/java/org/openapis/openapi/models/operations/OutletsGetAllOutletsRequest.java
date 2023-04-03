@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OutletsGetAllOutletsRequest {
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public OutletsGetAllOutletsRequest withDevid(String devid) {
+        this.devid = devid;
+        return this;
+    }
     
-    public OutletsGetAllOutletsQueryParams queryParams;
-    public OutletsGetAllOutletsRequest withQueryParams(OutletsGetAllOutletsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Maximum number of results returned (default = 30)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_results")
+    public Integer maxResults;
+    public OutletsGetAllOutletsRequest withMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public OutletsGetAllOutletsRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public OutletsGetAllOutletsRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

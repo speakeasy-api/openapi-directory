@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestGetDeviceSetOfOwnerRequest {
-    
-    public TestGetDeviceSetOfOwnerPathParams pathParams;
-    public TestGetDeviceSetOfOwnerRequest withPathParams(TestGetDeviceSetOfOwnerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public TestGetDeviceSetOfOwnerRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The UUID of the device set
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public TestGetDeviceSetOfOwnerRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public TestGetDeviceSetOfOwnerSecurity security;
-    public TestGetDeviceSetOfOwnerRequest withSecurity(TestGetDeviceSetOfOwnerSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public TestGetDeviceSetOfOwnerRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveOrganizationInvitationRequest {
-    
-    public RemoveOrganizationInvitationPathParams pathParams;
-    public RemoveOrganizationInvitationRequest withPathParams(RemoveOrganizationInvitationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RemoveOrganizationInvitationSecurity security;
-    public RemoveOrganizationInvitationRequest withSecurity(RemoveOrganizationInvitationSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the invitation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invitation")
+    public String invitation;
+    public RemoveOrganizationInvitationRequest withInvitation(String invitation) {
+        this.invitation = invitation;
         return this;
     }
     

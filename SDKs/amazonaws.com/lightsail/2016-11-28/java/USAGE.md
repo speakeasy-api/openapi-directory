@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AllocateStaticIpXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AllocateStaticIpHeaders;
 import org.openapis.openapi.models.operations.AllocateStaticIpRequest;
 import org.openapis.openapi.models.operations.AllocateStaticIpResponse;
 import org.openapis.openapi.models.shared.AllocateStaticIpRequest;
@@ -15,27 +14,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AllocateStaticIpRequest req = new AllocateStaticIpRequest() {{
-                headers = new AllocateStaticIpHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "Lightsail_20161128.AllocateStaticIp";
+                allocateStaticIpRequest = new AllocateStaticIpRequest() {{
+                    staticIpName = "corrupti";
                 }};
-                request = new AllocateStaticIpRequest() {{
-                    staticIpName = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+                xAmzTarget = "Lightsail_20161128.AllocateStaticIp";
+            }}            
 
             AllocateStaticIpResponse res = sdk.allocateStaticIp(req);
 

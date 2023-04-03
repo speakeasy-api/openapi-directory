@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountKeyRequest {
-    
-    public GetAccountKeyPathParams pathParams;
-    public GetAccountKeyRequest withPathParams(GetAccountKeyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetAccountKeySecurity security;
-    public GetAccountKeyRequest withSecurity(GetAccountKeySecurity security) {
-        this.security = security;
+    /**
+     * UUID of the key to retrieve
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key_id")
+    public String keyId;
+    public GetAccountKeyRequest withKeyId(String keyId) {
+        this.keyId = keyId;
         return this;
     }
     

@@ -46,10 +46,11 @@ public class Dashboards {
      * **Scopes:** `dashboard_crc:read:admin`&lt;br&gt;
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy` 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardCRCResponse dashboardCRC(org.openapis.openapi.models.operations.DashboardCRCRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardCRCResponse dashboardCRC(org.openapis.openapi.models.operations.DashboardCRCRequest request, org.openapis.openapi.models.operations.DashboardCRCSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/metrics/crc");
         
@@ -57,14 +58,14 @@ public class Dashboards {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardCRCQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardCRCRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -105,10 +106,11 @@ public class Dashboards {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardClientFeedbackResponse dashboardClientFeedback(org.openapis.openapi.models.operations.DashboardClientFeedbackRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardClientFeedbackResponse dashboardClientFeedback(org.openapis.openapi.models.operations.DashboardClientFeedbackRequest request, org.openapis.openapi.models.operations.DashboardClientFeedbackSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/metrics/client/feedback");
         
@@ -116,14 +118,14 @@ public class Dashboards {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardClientFeedbackQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardClientFeedbackRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,25 +167,26 @@ public class Dashboards {
      * 
      * `
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardClientFeedbackDetailResponse dashboardClientFeedbackDetail(org.openapis.openapi.models.operations.DashboardClientFeedbackDetailRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardClientFeedbackDetailResponse dashboardClientFeedbackDetail(org.openapis.openapi.models.operations.DashboardClientFeedbackDetailRequest request, org.openapis.openapi.models.operations.DashboardClientFeedbackDetailSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardClientFeedbackDetailPathParams.class, baseUrl, "/metrics/client/feedback/{feedbackId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardClientFeedbackDetailRequest.class, baseUrl, "/metrics/client/feedback/{feedbackId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardClientFeedbackDetailQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardClientFeedbackDetailRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -222,10 +225,11 @@ public class Dashboards {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardIMResponse dashboardIM(org.openapis.openapi.models.operations.DashboardIMRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardIMResponse dashboardIM(org.openapis.openapi.models.operations.DashboardIMRequest request, org.openapis.openapi.models.operations.DashboardIMSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/metrics/im");
         
@@ -233,14 +237,14 @@ public class Dashboards {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardIMQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardIMRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -279,25 +283,26 @@ public class Dashboards {
      * * Business or a higher plan.
      * * Zoom Room must be enabled in the account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardIssueDetailZoomRoomResponse dashboardIssueDetailZoomRoom(org.openapis.openapi.models.operations.DashboardIssueDetailZoomRoomRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardIssueDetailZoomRoomResponse dashboardIssueDetailZoomRoom(org.openapis.openapi.models.operations.DashboardIssueDetailZoomRoomRequest request, org.openapis.openapi.models.operations.DashboardIssueDetailZoomRoomSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardIssueDetailZoomRoomPathParams.class, baseUrl, "/metrics/issues/zoomrooms/{zoomroomId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardIssueDetailZoomRoomRequest.class, baseUrl, "/metrics/issues/zoomrooms/{zoomroomId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardIssueDetailZoomRoomQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardIssueDetailZoomRoomRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -335,10 +340,11 @@ public class Dashboards {
      * * Business or a higher plan.
      * * Zoom Room must be enabled in the account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardIssueZoomRoomResponse dashboardIssueZoomRoom(org.openapis.openapi.models.operations.DashboardIssueZoomRoomRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardIssueZoomRoomResponse dashboardIssueZoomRoom(org.openapis.openapi.models.operations.DashboardIssueZoomRoomRequest request, org.openapis.openapi.models.operations.DashboardIssueZoomRoomSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/metrics/issues/zoomrooms");
         
@@ -346,14 +352,14 @@ public class Dashboards {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardIssueZoomRoomQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardIssueZoomRoomRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -390,25 +396,26 @@ public class Dashboards {
      * **Prerequisites:** &lt;br&gt;
      * * Business or a higher plan.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardMeetingDetailResponse dashboardMeetingDetail(org.openapis.openapi.models.operations.DashboardMeetingDetailRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardMeetingDetailResponse dashboardMeetingDetail(org.openapis.openapi.models.operations.DashboardMeetingDetailRequest request, org.openapis.openapi.models.operations.DashboardMeetingDetailSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardMeetingDetailPathParams.class, baseUrl, "/metrics/meetings/{meetingId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardMeetingDetailRequest.class, baseUrl, "/metrics/meetings/{meetingId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardMeetingDetailQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardMeetingDetailRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -445,25 +452,26 @@ public class Dashboards {
      * **Scopes:** `dashboard_meetings:read:admin`&lt;br&gt;
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardMeetingParticipantQOSResponse dashboardMeetingParticipantQOS(org.openapis.openapi.models.operations.DashboardMeetingParticipantQOSRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardMeetingParticipantQOSResponse dashboardMeetingParticipantQOS(org.openapis.openapi.models.operations.DashboardMeetingParticipantQOSRequest request, org.openapis.openapi.models.operations.DashboardMeetingParticipantQOSSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardMeetingParticipantQOSPathParams.class, baseUrl, "/metrics/meetings/{meetingId}/participants/{participantId}/qos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardMeetingParticipantQOSRequest.class, baseUrl, "/metrics/meetings/{meetingId}/participants/{participantId}/qos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardMeetingParticipantQOSQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardMeetingParticipantQOSRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -502,25 +510,26 @@ public class Dashboards {
      * **Prerequisites:** &lt;br&gt;
      * * Business or a higher plan.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardMeetingParticipantShareResponse dashboardMeetingParticipantShare(org.openapis.openapi.models.operations.DashboardMeetingParticipantShareRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardMeetingParticipantShareResponse dashboardMeetingParticipantShare(org.openapis.openapi.models.operations.DashboardMeetingParticipantShareRequest request, org.openapis.openapi.models.operations.DashboardMeetingParticipantShareSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardMeetingParticipantSharePathParams.class, baseUrl, "/metrics/meetings/{meetingId}/participants/sharing", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardMeetingParticipantShareRequest.class, baseUrl, "/metrics/meetings/{meetingId}/participants/sharing", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardMeetingParticipantShareQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardMeetingParticipantShareRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -560,25 +569,26 @@ public class Dashboards {
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`&lt;br&gt;
      * **Prerequisites:** Business or a higher plan.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardMeetingParticipantsResponse dashboardMeetingParticipants(org.openapis.openapi.models.operations.DashboardMeetingParticipantsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardMeetingParticipantsResponse dashboardMeetingParticipants(org.openapis.openapi.models.operations.DashboardMeetingParticipantsRequest request, org.openapis.openapi.models.operations.DashboardMeetingParticipantsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardMeetingParticipantsPathParams.class, baseUrl, "/metrics/meetings/{meetingId}/participants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardMeetingParticipantsRequest.class, baseUrl, "/metrics/meetings/{meetingId}/participants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardMeetingParticipantsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardMeetingParticipantsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -617,25 +627,26 @@ public class Dashboards {
      * **Prerequisites:** &lt;br&gt;
      * * Business or a higher plan.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardMeetingParticipantsQOSResponse dashboardMeetingParticipantsQOS(org.openapis.openapi.models.operations.DashboardMeetingParticipantsQOSRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardMeetingParticipantsQOSResponse dashboardMeetingParticipantsQOS(org.openapis.openapi.models.operations.DashboardMeetingParticipantsQOSRequest request, org.openapis.openapi.models.operations.DashboardMeetingParticipantsQOSSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardMeetingParticipantsQOSPathParams.class, baseUrl, "/metrics/meetings/{meetingId}/participants/qos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardMeetingParticipantsQOSRequest.class, baseUrl, "/metrics/meetings/{meetingId}/participants/qos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardMeetingParticipantsQOSQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardMeetingParticipantsQOSRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -674,10 +685,11 @@ public class Dashboards {
      * **Prerequisites:** &lt;br&gt;
      * * Business or a higher plan.&lt;br&gt;&lt;br&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardMeetingsResponse dashboardMeetings(org.openapis.openapi.models.operations.DashboardMeetingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardMeetingsResponse dashboardMeetings(org.openapis.openapi.models.operations.DashboardMeetingsRequest request, org.openapis.openapi.models.operations.DashboardMeetingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/metrics/meetings");
         
@@ -685,14 +697,14 @@ public class Dashboards {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardMeetingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardMeetingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -733,25 +745,26 @@ public class Dashboards {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardWebinarDetailResponse dashboardWebinarDetail(org.openapis.openapi.models.operations.DashboardWebinarDetailRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardWebinarDetailResponse dashboardWebinarDetail(org.openapis.openapi.models.operations.DashboardWebinarDetailRequest request, org.openapis.openapi.models.operations.DashboardWebinarDetailSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardWebinarDetailPathParams.class, baseUrl, "/metrics/webinars/{webinarId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardWebinarDetailRequest.class, baseUrl, "/metrics/webinars/{webinarId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardWebinarDetailQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardWebinarDetailRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -791,25 +804,26 @@ public class Dashboards {
      * * Business, Education or API Plan with Zoom Rooms set up.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardWebinarParticipantQOSResponse dashboardWebinarParticipantQOS(org.openapis.openapi.models.operations.DashboardWebinarParticipantQOSRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardWebinarParticipantQOSResponse dashboardWebinarParticipantQOS(org.openapis.openapi.models.operations.DashboardWebinarParticipantQOSRequest request, org.openapis.openapi.models.operations.DashboardWebinarParticipantQOSSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardWebinarParticipantQOSPathParams.class, baseUrl, "/metrics/webinars/{webinarId}/participants/{participantId}/qos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardWebinarParticipantQOSRequest.class, baseUrl, "/metrics/webinars/{webinarId}/participants/{participantId}/qos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardWebinarParticipantQOSQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardWebinarParticipantQOSRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -850,25 +864,26 @@ public class Dashboards {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardWebinarParticipantShareResponse dashboardWebinarParticipantShare(org.openapis.openapi.models.operations.DashboardWebinarParticipantShareRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardWebinarParticipantShareResponse dashboardWebinarParticipantShare(org.openapis.openapi.models.operations.DashboardWebinarParticipantShareRequest request, org.openapis.openapi.models.operations.DashboardWebinarParticipantShareSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardWebinarParticipantSharePathParams.class, baseUrl, "/metrics/webinars/{webinarId}/participants/sharing", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardWebinarParticipantShareRequest.class, baseUrl, "/metrics/webinars/{webinarId}/participants/sharing", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardWebinarParticipantShareQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardWebinarParticipantShareRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -909,25 +924,26 @@ public class Dashboards {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardWebinarParticipantsResponse dashboardWebinarParticipants(org.openapis.openapi.models.operations.DashboardWebinarParticipantsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardWebinarParticipantsResponse dashboardWebinarParticipants(org.openapis.openapi.models.operations.DashboardWebinarParticipantsRequest request, org.openapis.openapi.models.operations.DashboardWebinarParticipantsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardWebinarParticipantsPathParams.class, baseUrl, "/metrics/webinars/{webinarId}/participants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardWebinarParticipantsRequest.class, baseUrl, "/metrics/webinars/{webinarId}/participants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardWebinarParticipantsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardWebinarParticipantsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -968,25 +984,26 @@ public class Dashboards {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardWebinarParticipantsQOSResponse dashboardWebinarParticipantsQOS(org.openapis.openapi.models.operations.DashboardWebinarParticipantsQOSRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardWebinarParticipantsQOSResponse dashboardWebinarParticipantsQOS(org.openapis.openapi.models.operations.DashboardWebinarParticipantsQOSRequest request, org.openapis.openapi.models.operations.DashboardWebinarParticipantsQOSSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardWebinarParticipantsQOSPathParams.class, baseUrl, "/metrics/webinars/{webinarId}/participants/qos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardWebinarParticipantsQOSRequest.class, baseUrl, "/metrics/webinars/{webinarId}/participants/qos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardWebinarParticipantsQOSQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardWebinarParticipantsQOSRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1028,10 +1045,11 @@ public class Dashboards {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardWebinarsResponse dashboardWebinars(org.openapis.openapi.models.operations.DashboardWebinarsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardWebinarsResponse dashboardWebinars(org.openapis.openapi.models.operations.DashboardWebinarsRequest request, org.openapis.openapi.models.operations.DashboardWebinarsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/metrics/webinars");
         
@@ -1039,14 +1057,14 @@ public class Dashboards {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardWebinarsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardWebinarsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1088,25 +1106,26 @@ public class Dashboards {
      * * Business, Education or API Plan with Zoom Rooms set up.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardZoomRoomResponse dashboardZoomRoom(org.openapis.openapi.models.operations.DashboardZoomRoomRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardZoomRoomResponse dashboardZoomRoom(org.openapis.openapi.models.operations.DashboardZoomRoomRequest request, org.openapis.openapi.models.operations.DashboardZoomRoomSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardZoomRoomPathParams.class, baseUrl, "/metrics/zoomrooms/{zoomroomId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DashboardZoomRoomRequest.class, baseUrl, "/metrics/zoomrooms/{zoomroomId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardZoomRoomQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardZoomRoomRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1148,10 +1167,11 @@ public class Dashboards {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardZoomRoomIssueResponse dashboardZoomRoomIssue(org.openapis.openapi.models.operations.DashboardZoomRoomIssueRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardZoomRoomIssueResponse dashboardZoomRoomIssue(org.openapis.openapi.models.operations.DashboardZoomRoomIssueRequest request, org.openapis.openapi.models.operations.DashboardZoomRoomIssueSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/metrics/zoomrooms/issues");
         
@@ -1159,14 +1179,14 @@ public class Dashboards {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardZoomRoomIssueQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardZoomRoomIssueRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1207,10 +1227,11 @@ public class Dashboards {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DashboardZoomRoomsResponse dashboardZoomRooms(org.openapis.openapi.models.operations.DashboardZoomRoomsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DashboardZoomRoomsResponse dashboardZoomRooms(org.openapis.openapi.models.operations.DashboardZoomRoomsRequest request, org.openapis.openapi.models.operations.DashboardZoomRoomsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/metrics/zoomrooms");
         
@@ -1218,14 +1239,14 @@ public class Dashboards {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardZoomRoomsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DashboardZoomRoomsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1273,7 +1294,7 @@ public class Dashboards {
      */
     public org.openapis.openapi.models.operations.GetCallLogMetricsDetailsResponse getCallLogMetricsDetails(org.openapis.openapi.models.operations.GetCallLogMetricsDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallLogMetricsDetailsPathParams.class, baseUrl, "/phone/metrics/call_logs/{call_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallLogMetricsDetailsRequest.class, baseUrl, "/phone/metrics/call_logs/{call_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1324,7 +1345,7 @@ public class Dashboards {
      */
     public org.openapis.openapi.models.operations.GetCallQoSResponse getCallQoS(org.openapis.openapi.models.operations.GetCallQoSRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallQoSPathParams.class, baseUrl, "/phone/metrics/call_logs/{callId}/qos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallQoSRequest.class, baseUrl, "/phone/metrics/call_logs/{callId}/qos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1384,7 +1405,7 @@ public class Dashboards {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCallLogsMetricsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCallLogsMetricsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1428,10 +1449,11 @@ public class Dashboards {
      * **Scopes:** `dashboard:read:admin`&lt;br&gt;
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListMeetingSatisfactionResponse listMeetingSatisfaction(org.openapis.openapi.models.operations.ListMeetingSatisfactionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListMeetingSatisfactionResponse listMeetingSatisfaction(org.openapis.openapi.models.operations.ListMeetingSatisfactionRequest request, org.openapis.openapi.models.operations.ListMeetingSatisfactionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/metrics/client/satisfaction");
         
@@ -1439,14 +1461,14 @@ public class Dashboards {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListMeetingSatisfactionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListMeetingSatisfactionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1492,13 +1514,13 @@ public class Dashboards {
      */
     public org.openapis.openapi.models.operations.ParticipantFeedbackResponse participantFeedback(org.openapis.openapi.models.operations.ParticipantFeedbackRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ParticipantFeedbackPathParams.class, baseUrl, "/metrics/meetings/{meetingId}/participants/satisfaction", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ParticipantFeedbackRequest.class, baseUrl, "/metrics/meetings/{meetingId}/participants/satisfaction", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ParticipantFeedbackQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ParticipantFeedbackRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1554,13 +1576,13 @@ public class Dashboards {
      */
     public org.openapis.openapi.models.operations.ParticipantWebinarFeedbackResponse participantWebinarFeedback(org.openapis.openapi.models.operations.ParticipantWebinarFeedbackRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ParticipantWebinarFeedbackPathParams.class, baseUrl, "/metrics/webinars/{webinarId}/participants/satisfaction", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ParticipantWebinarFeedbackRequest.class, baseUrl, "/metrics/webinars/{webinarId}/participants/satisfaction", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ParticipantWebinarFeedbackQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ParticipantWebinarFeedbackRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

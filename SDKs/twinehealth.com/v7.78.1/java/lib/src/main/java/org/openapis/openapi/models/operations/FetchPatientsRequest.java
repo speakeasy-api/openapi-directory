@@ -4,13 +4,118 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchPatientsRequest {
+    /**
+     * If not specified, return all patients. If set to 'true' return only archived patients, if set to 'false', return only patients who are not archived.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[archived]")
+    public Boolean filterArchived;
+    public FetchPatientsRequest withFilterArchived(Boolean filterArchived) {
+        this.filterArchived = filterArchived;
+        return this;
+    }
     
-    public FetchPatientsQueryParams queryParams;
-    public FetchPatientsRequest withQueryParams(FetchPatientsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for patients created in November 2017 (America/New_York): `filter[created_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[created_at]")
+    public String filterCreatedAt;
+    public FetchPatientsRequest withFilterCreatedAt(String filterCreatedAt) {
+        this.filterCreatedAt = filterCreatedAt;
+        return this;
+    }
+    
+    /**
+     * Comma-separated list of group ids. Note that either `filter[group]` or `filter[organization]` must be specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[groups]")
+    public String filterGroups;
+    public FetchPatientsRequest withFilterGroups(String filterGroups) {
+        this.filterGroups = filterGroups;
+        return this;
+    }
+    
+    /**
+     * Identifier system (example: "MyEHR") - requires a "filter[identifier][value]" parameter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[identifier][system]")
+    public String filterIdentifierSystem;
+    public FetchPatientsRequest withFilterIdentifierSystem(String filterIdentifierSystem) {
+        this.filterIdentifierSystem = filterIdentifierSystem;
+        return this;
+    }
+    
+    /**
+     * Identifier value (example: "12345") - requires a "filter[identifier][system]" parameter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[identifier][value]")
+    public String filterIdentifierValue;
+    public FetchPatientsRequest withFilterIdentifierValue(String filterIdentifierValue) {
+        this.filterIdentifierValue = filterIdentifierValue;
+        return this;
+    }
+    
+    /**
+     * Fitbit Plus organization id. Note that either `filter[group]` or `filter[organization]` must be specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[organization]")
+    public String filterOrganization;
+    public FetchPatientsRequest withFilterOrganization(String filterOrganization) {
+        this.filterOrganization = filterOrganization;
+        return this;
+    }
+    
+    /**
+     * The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for patients updated in November 2017 (America/New_York): `filter[updated_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[updated_at]")
+    public String filterUpdatedAt;
+    public FetchPatientsRequest withFilterUpdatedAt(String filterUpdatedAt) {
+        this.filterUpdatedAt = filterUpdatedAt;
+        return this;
+    }
+    
+    /**
+     * Page cursor
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[cursor]")
+    public String pageCursor;
+    public FetchPatientsRequest withPageCursor(String pageCursor) {
+        this.pageCursor = pageCursor;
+        return this;
+    }
+    
+    /**
+     * Page limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[limit]")
+    public Long pageLimit;
+    public FetchPatientsRequest withPageLimit(Long pageLimit) {
+        this.pageLimit = pageLimit;
+        return this;
+    }
+    
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
+    public Long pageNumber;
+    public FetchPatientsRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    
+    /**
+     * Page size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
+    public Long pageSize;
+    public FetchPatientsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

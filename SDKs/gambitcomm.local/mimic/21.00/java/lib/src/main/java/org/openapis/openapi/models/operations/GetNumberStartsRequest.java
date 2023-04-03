@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumberStartsRequest {
-    
-    public GetNumberStartsPathParams pathParams;
-    public GetNumberStartsRequest withPathParams(GetNumberStartsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the count
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public GetNumberStartsRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

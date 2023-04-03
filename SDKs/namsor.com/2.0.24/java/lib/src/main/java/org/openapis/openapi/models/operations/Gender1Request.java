@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Gender1Request {
-    
-    public Gender1PathParams pathParams;
-    public Gender1Request withPathParams(Gender1PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstName")
+    public String firstName;
+    public Gender1Request withFirstName(String firstName) {
+        this.firstName = firstName;
         return this;
     }
     
-    
-    public Gender1Security security;
-    public Gender1Request withSecurity(Gender1Security security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lastName")
+    public String lastName;
+    public Gender1Request withLastName(String lastName) {
+        this.lastName = lastName;
         return this;
     }
     

@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates a model in Firebase ML. The longrunning operation will eventually return a Model
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateResponse firebasemlProjectsModelsCreate(org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateResponse firebasemlProjectsModelsCreate(org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateRequest request, org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreatePathParams.class, baseUrl, "/v1beta2/{parent}/models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateRequest.class, baseUrl, "/v1beta2/{parent}/models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "modelInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Deletes a model
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasemlProjectsModelsDeleteResponse firebasemlProjectsModelsDelete(org.openapis.openapi.models.operations.FirebasemlProjectsModelsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasemlProjectsModelsDeleteResponse firebasemlProjectsModelsDelete(org.openapis.openapi.models.operations.FirebasemlProjectsModelsDeleteRequest request, org.openapis.openapi.models.operations.FirebasemlProjectsModelsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasemlProjectsModelsDeletePathParams.class, baseUrl, "/v1beta2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasemlProjectsModelsDeleteRequest.class, baseUrl, "/v1beta2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasemlProjectsModelsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasemlProjectsModelsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -132,13 +134,13 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.FirebasemlProjectsModelsDownloadResponse firebasemlProjectsModelsDownload(org.openapis.openapi.models.operations.FirebasemlProjectsModelsDownloadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasemlProjectsModelsDownloadPathParams.class, baseUrl, "/v1beta2/{name}:download", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasemlProjectsModelsDownloadRequest.class, baseUrl, "/v1beta2/{name}:download", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasemlProjectsModelsDownloadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasemlProjectsModelsDownloadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -171,25 +173,26 @@ public class Projects {
     /**
      * Lists the models
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasemlProjectsModelsListResponse firebasemlProjectsModelsList(org.openapis.openapi.models.operations.FirebasemlProjectsModelsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasemlProjectsModelsListResponse firebasemlProjectsModelsList(org.openapis.openapi.models.operations.FirebasemlProjectsModelsListRequest request, org.openapis.openapi.models.operations.FirebasemlProjectsModelsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasemlProjectsModelsListPathParams.class, baseUrl, "/v1beta2/{parent}/models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasemlProjectsModelsListRequest.class, baseUrl, "/v1beta2/{parent}/models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasemlProjectsModelsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasemlProjectsModelsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,27 +219,28 @@ public class Projects {
     /**
      * Updates a model. The longrunning operation will eventually return a Model.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasemlProjectsModelsPatchResponse firebasemlProjectsModelsPatch(org.openapis.openapi.models.operations.FirebasemlProjectsModelsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasemlProjectsModelsPatchResponse firebasemlProjectsModelsPatch(org.openapis.openapi.models.operations.FirebasemlProjectsModelsPatchRequest request, org.openapis.openapi.models.operations.FirebasemlProjectsModelsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasemlProjectsModelsPatchPathParams.class, baseUrl, "/v1beta2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasemlProjectsModelsPatchRequest.class, baseUrl, "/v1beta2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "modelInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasemlProjectsModelsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasemlProjectsModelsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,25 +267,26 @@ public class Projects {
     /**
      * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasemlProjectsOperationsGetResponse firebasemlProjectsOperationsGet(org.openapis.openapi.models.operations.FirebasemlProjectsOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasemlProjectsOperationsGetResponse firebasemlProjectsOperationsGet(org.openapis.openapi.models.operations.FirebasemlProjectsOperationsGetRequest request, org.openapis.openapi.models.operations.FirebasemlProjectsOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasemlProjectsOperationsGetPathParams.class, baseUrl, "/v1beta2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasemlProjectsOperationsGetRequest.class, baseUrl, "/v1beta2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasemlProjectsOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasemlProjectsOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

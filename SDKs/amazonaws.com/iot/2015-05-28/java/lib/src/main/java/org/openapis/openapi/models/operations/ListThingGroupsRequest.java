@@ -4,20 +4,105 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListThingGroupsRequest {
-    
-    public ListThingGroupsQueryParams queryParams;
-    public ListThingGroupsRequest withQueryParams(ListThingGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListThingGroupsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListThingGroupsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public ListThingGroupsHeaders headers;
-    public ListThingGroupsRequest withHeaders(ListThingGroupsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListThingGroupsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListThingGroupsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListThingGroupsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListThingGroupsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListThingGroupsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to return at one time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListThingGroupsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * A filter that limits the results to those with the specified name prefix.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=namePrefixFilter")
+    public String namePrefixFilter;
+    public ListThingGroupsRequest withNamePrefixFilter(String namePrefixFilter) {
+        this.namePrefixFilter = namePrefixFilter;
+        return this;
+    }
+    
+    /**
+     * To retrieve the next set of results, the &lt;code&gt;nextToken&lt;/code&gt; value from a previous response; otherwise &lt;b&gt;null&lt;/b&gt; to receive the first set of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListThingGroupsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * A filter that limits the results to those with the specified parent group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parentGroup")
+    public String parentGroup;
+    public ListThingGroupsRequest withParentGroup(String parentGroup) {
+        this.parentGroup = parentGroup;
+        return this;
+    }
+    
+    /**
+     * If true, return child groups as well.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
+    public Boolean recursive;
+    public ListThingGroupsRequest withRecursive(Boolean recursive) {
+        this.recursive = recursive;
         return this;
     }
     

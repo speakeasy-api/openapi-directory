@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppApiWMMEndpointsWMMMagneticFieldRequest {
+    /**
+     * Geodetic Altitude 0 km to 600 km.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=altitude")
+    public Double altitude;
+    public AppApiWMMEndpointsWMMMagneticFieldRequest withAltitude(Double altitude) {
+        this.altitude = altitude;
+        return this;
+    }
     
-    public AppApiWMMEndpointsWMMMagneticFieldQueryParams queryParams;
-    public AppApiWMMEndpointsWMMMagneticFieldRequest withQueryParams(AppApiWMMEndpointsWMMMagneticFieldQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Geodetic Latitude. -90 deg (S) to 90 deg (N).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latitude")
+    public Double latitude;
+    public AppApiWMMEndpointsWMMMagneticFieldRequest withLatitude(Double latitude) {
+        this.latitude = latitude;
+        return this;
+    }
+    
+    /**
+     * Geodetic Longitude. -180 deg (W) to 180 deg (E).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longitude")
+    public Double longitude;
+    public AppApiWMMEndpointsWMMMagneticFieldRequest withLongitude(Double longitude) {
+        this.longitude = longitude;
+        return this;
+    }
+    
+    /**
+     * Year as a decimal in the range 2015-2025 (2017.5 would be half way through 2017).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Double year;
+    public AppApiWMMEndpointsWMMMagneticFieldRequest withYear(Double year) {
+        this.year = year;
         return this;
     }
     

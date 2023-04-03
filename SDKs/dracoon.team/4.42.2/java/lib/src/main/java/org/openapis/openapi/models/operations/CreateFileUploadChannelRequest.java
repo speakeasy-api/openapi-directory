@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateFileUploadChannelRequest {
-    
-    public CreateFileUploadChannelHeaders headers;
-    public CreateFileUploadChannelRequest withHeaders(CreateFileUploadChannelHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateFileUploadRequest createFileUploadRequest;
+    public CreateFileUploadChannelRequest withCreateFileUploadRequest(org.openapis.openapi.models.shared.CreateFileUploadRequest createFileUploadRequest) {
+        this.createFileUploadRequest = createFileUploadRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateFileUploadRequest request;
-    public CreateFileUploadChannelRequest withRequest(org.openapis.openapi.models.shared.CreateFileUploadRequest request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public CreateFileUploadChannelRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

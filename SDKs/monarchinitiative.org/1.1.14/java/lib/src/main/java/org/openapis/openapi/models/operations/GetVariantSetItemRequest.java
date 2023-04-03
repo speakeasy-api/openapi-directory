@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVariantSetItemRequest {
-    
-    public GetVariantSetItemPathParams pathParams;
-    public GetVariantSetItemRequest withPathParams(GetVariantSetItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetVariantSetItemRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

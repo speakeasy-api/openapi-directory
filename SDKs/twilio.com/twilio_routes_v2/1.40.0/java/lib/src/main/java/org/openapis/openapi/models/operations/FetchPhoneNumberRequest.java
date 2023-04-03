@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchPhoneNumberRequest {
-    
-    public FetchPhoneNumberPathParams pathParams;
-    public FetchPhoneNumberRequest withPathParams(FetchPhoneNumberPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchPhoneNumberSecurity security;
-    public FetchPhoneNumberRequest withSecurity(FetchPhoneNumberSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchPhoneNumberRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The phone number in E.164 format
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PhoneNumber")
+    public String phoneNumber;
+    public FetchPhoneNumberRequest withPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
         return this;
     }
     

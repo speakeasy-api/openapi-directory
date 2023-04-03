@@ -39,7 +39,7 @@ public class ApplicationCategories {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceFirewallL7FirewallRulesApplicationCategoriesResponse getNetworkApplianceFirewallL7FirewallRulesApplicationCategories(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallL7FirewallRulesApplicationCategoriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallL7FirewallRulesApplicationCategoriesPathParams.class, baseUrl, "/networks/{networkId}/appliance/firewall/l7FirewallRules/applicationCategories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallL7FirewallRulesApplicationCategoriesRequest.class, baseUrl, "/networks/{networkId}/appliance/firewall/l7FirewallRules/applicationCategories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -79,7 +79,7 @@ public class ApplicationCategories {
      */
     public org.openapis.openapi.models.operations.GetNetworkTrafficShapingApplicationCategoriesResponse getNetworkTrafficShapingApplicationCategories(org.openapis.openapi.models.operations.GetNetworkTrafficShapingApplicationCategoriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkTrafficShapingApplicationCategoriesPathParams.class, baseUrl, "/networks/{networkId}/trafficShaping/applicationCategories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkTrafficShapingApplicationCategoriesRequest.class, baseUrl, "/networks/{networkId}/trafficShaping/applicationCategories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

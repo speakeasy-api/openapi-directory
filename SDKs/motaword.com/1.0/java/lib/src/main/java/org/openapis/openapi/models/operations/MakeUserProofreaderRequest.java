@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MakeUserProofreaderRequest {
-    
-    public MakeUserProofreaderPathParams pathParams;
-    public MakeUserProofreaderRequest withPathParams(MakeUserProofreaderPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public MakeUserProofreaderSecurity security;
-    public MakeUserProofreaderRequest withSecurity(MakeUserProofreaderSecurity security) {
-        this.security = security;
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public MakeUserProofreaderRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

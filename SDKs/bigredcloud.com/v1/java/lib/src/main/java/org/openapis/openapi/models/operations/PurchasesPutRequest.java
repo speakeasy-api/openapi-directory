@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PurchasesPutRequest {
-    
-    public PurchasesPutPathParams pathParams;
-    public PurchasesPutRequest withPathParams(PurchasesPutPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Information of Purchase to update.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PurchaseDto request;
-    public PurchasesPutRequest withRequest(org.openapis.openapi.models.shared.PurchaseDto request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PurchaseDto purchaseDto;
+    public PurchasesPutRequest withPurchaseDto(org.openapis.openapi.models.shared.PurchaseDto purchaseDto) {
+        this.purchaseDto = purchaseDto;
+        return this;
+    }
+    
+    /**
+     * Id of Purchase to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PurchasesPutRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

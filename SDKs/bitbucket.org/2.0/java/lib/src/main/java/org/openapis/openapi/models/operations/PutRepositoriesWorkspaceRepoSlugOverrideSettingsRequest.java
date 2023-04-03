@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRepositoriesWorkspaceRepoSlugOverrideSettingsRequest {
-    
-    public PutRepositoriesWorkspaceRepoSlugOverrideSettingsPathParams pathParams;
-    public PutRepositoriesWorkspaceRepoSlugOverrideSettingsRequest withPathParams(PutRepositoriesWorkspaceRepoSlugOverrideSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public PutRepositoriesWorkspaceRepoSlugOverrideSettingsRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
         return this;
     }
     
-    
-    public PutRepositoriesWorkspaceRepoSlugOverrideSettingsSecurity security;
-    public PutRepositoriesWorkspaceRepoSlugOverrideSettingsRequest withSecurity(PutRepositoriesWorkspaceRepoSlugOverrideSettingsSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public PutRepositoriesWorkspaceRepoSlugOverrideSettingsRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

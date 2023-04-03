@@ -4,27 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListHostedNumbersHostedNumberOrderRequest {
-    
-    public ListHostedNumbersHostedNumberOrderQueryParams queryParams;
-    public ListHostedNumbersHostedNumberOrderRequest withQueryParams(ListHostedNumbersHostedNumberOrderQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A human readable description of this resource, up to 64 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FriendlyName")
+    public String friendlyName;
+    public ListHostedNumbersHostedNumberOrderRequest withFriendlyName(String friendlyName) {
+        this.friendlyName = friendlyName;
         return this;
     }
     
-    
-    public ListHostedNumbersHostedNumberOrderSecurity security;
-    public ListHostedNumbersHostedNumberOrderRequest withSecurity(ListHostedNumbersHostedNumberOrderSecurity security) {
-        this.security = security;
+    /**
+     * A 34 character string that uniquely identifies the IncomingPhoneNumber resource created by this HostedNumberOrder.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IncomingPhoneNumberSid")
+    public String incomingPhoneNumberSid;
+    public ListHostedNumbersHostedNumberOrderRequest withIncomingPhoneNumberSid(String incomingPhoneNumberSid) {
+        this.incomingPhoneNumberSid = incomingPhoneNumberSid;
         return this;
     }
     
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListHostedNumbersHostedNumberOrderRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public String serverURL;
-    public ListHostedNumbersHostedNumberOrderRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListHostedNumbersHostedNumberOrderRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListHostedNumbersHostedNumberOrderRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * An E164 formatted phone number hosted by this HostedNumberOrder.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PhoneNumber")
+    public String phoneNumber;
+    public ListHostedNumbersHostedNumberOrderRequest withPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+        return this;
+    }
+    
+    /**
+     * The Status of this HostedNumberOrder. One of `received`, `pending-verification`, `verified`, `pending-loa`, `carrier-processing`, `testing`, `completed`, `failed`, or `action-required`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public org.openapis.openapi.models.shared.HostedNumberOrderEnumStatusEnum status;
+    public ListHostedNumbersHostedNumberOrderRequest withStatus(org.openapis.openapi.models.shared.HostedNumberOrderEnumStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Provides a unique and addressable name to be assigned to this HostedNumberOrder, assigned by the developer, to be optionally used in addition to SID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UniqueName")
+    public String uniqueName;
+    public ListHostedNumbersHostedNumberOrderRequest withUniqueName(String uniqueName) {
+        this.uniqueName = uniqueName;
         return this;
     }
     

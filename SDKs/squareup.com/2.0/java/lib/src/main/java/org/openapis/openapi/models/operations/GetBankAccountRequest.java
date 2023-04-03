@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBankAccountRequest {
-    
-    public GetBankAccountPathParams pathParams;
-    public GetBankAccountRequest withPathParams(GetBankAccountPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetBankAccountSecurity security;
-    public GetBankAccountRequest withSecurity(GetBankAccountSecurity security) {
-        this.security = security;
+    /**
+     * Square-issued ID of the desired `BankAccount`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bank_account_id")
+    public String bankAccountId;
+    public GetBankAccountRequest withBankAccountId(String bankAccountId) {
+        this.bankAccountId = bankAccountId;
         return this;
     }
     

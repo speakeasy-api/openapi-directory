@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV1ContinuousChecksContinuousCheckIdHistoryRequest {
-    
-    public GetV1ContinuousChecksContinuousCheckIdHistoryPathParams pathParams;
-    public GetV1ContinuousChecksContinuousCheckIdHistoryRequest withPathParams(GetV1ContinuousChecksContinuousCheckIdHistoryPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetV1ContinuousChecksContinuousCheckIdHistorySecurity security;
-    public GetV1ContinuousChecksContinuousCheckIdHistoryRequest withSecurity(GetV1ContinuousChecksContinuousCheckIdHistorySecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=continuous_check_id")
+    public String continuousCheckId;
+    public GetV1ContinuousChecksContinuousCheckIdHistoryRequest withContinuousCheckId(String continuousCheckId) {
+        this.continuousCheckId = continuousCheckId;
         return this;
     }
     

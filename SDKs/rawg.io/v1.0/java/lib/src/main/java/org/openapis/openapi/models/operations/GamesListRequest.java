@@ -4,13 +4,236 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GamesListRequest {
+    /**
+     * Filter by creators, for example: `78,28` or `cris-velasco,mike-morasky`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=creators")
+    public String creators;
+    public GamesListRequest withCreators(String creators) {
+        this.creators = creators;
+        return this;
+    }
     
-    public GamesListQueryParams queryParams;
-    public GamesListRequest withQueryParams(GamesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter by a release date, for example: `2010-01-01,2018-12-31.1960-01-01,1969-12-31`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dates")
+    public String dates;
+    public GamesListRequest withDates(String dates) {
+        this.dates = dates;
+        return this;
+    }
+    
+    /**
+     * Filter by developers, for example: `1612,18893` or `valve-software,feral-interactive`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developers")
+    public String developers;
+    public GamesListRequest withDevelopers(String developers) {
+        this.developers = developers;
+        return this;
+    }
+    
+    /**
+     * Exclude additions.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_additions")
+    public Boolean excludeAdditions;
+    public GamesListRequest withExcludeAdditions(Boolean excludeAdditions) {
+        this.excludeAdditions = excludeAdditions;
+        return this;
+    }
+    
+    /**
+     * Exclude games from a particular collection, for example: `123`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_collection")
+    public Long excludeCollection;
+    public GamesListRequest withExcludeCollection(Long excludeCollection) {
+        this.excludeCollection = excludeCollection;
+        return this;
+    }
+    
+    /**
+     * Exclude games which included in a game series.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_game_series")
+    public Boolean excludeGameSeries;
+    public GamesListRequest withExcludeGameSeries(Boolean excludeGameSeries) {
+        this.excludeGameSeries = excludeGameSeries;
+        return this;
+    }
+    
+    /**
+     * Exclude games which have additions.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_parents")
+    public Boolean excludeParents;
+    public GamesListRequest withExcludeParents(Boolean excludeParents) {
+        this.excludeParents = excludeParents;
+        return this;
+    }
+    
+    /**
+     * Exclude stores, for example: `5,6`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_stores")
+    public String excludeStores;
+    public GamesListRequest withExcludeStores(String excludeStores) {
+        this.excludeStores = excludeStores;
+        return this;
+    }
+    
+    /**
+     * Filter by genres, for example: `4,51` or `action,indie`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=genres")
+    public String genres;
+    public GamesListRequest withGenres(String genres) {
+        this.genres = genres;
+        return this;
+    }
+    
+    /**
+     * Filter by a metacritic rating, for example: `80,100`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metacritic")
+    public String metacritic;
+    public GamesListRequest withMetacritic(String metacritic) {
+        this.metacritic = metacritic;
+        return this;
+    }
+    
+    /**
+     * Available fields: `name`, `released`, `added`, `created`, `updated`, `rating`, `metacritic`. You can reverse the sort order adding a hyphen, for example: `-released`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering")
+    public String ordering;
+    public GamesListRequest withOrdering(String ordering) {
+        this.ordering = ordering;
+        return this;
+    }
+    
+    /**
+     * A page number within the paginated result set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GamesListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GamesListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Filter by parent platforms, for example: `1,2,3`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_platforms")
+    public String parentPlatforms;
+    public GamesListRequest withParentPlatforms(String parentPlatforms) {
+        this.parentPlatforms = parentPlatforms;
+        return this;
+    }
+    
+    /**
+     * Filter by platforms, for example: `4,5`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=platforms")
+    public String platforms;
+    public GamesListRequest withPlatforms(String platforms) {
+        this.platforms = platforms;
+        return this;
+    }
+    
+    /**
+     * Filter by platforms count, for example: `1`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=platforms_count")
+    public Long platformsCount;
+    public GamesListRequest withPlatformsCount(Long platformsCount) {
+        this.platformsCount = platformsCount;
+        return this;
+    }
+    
+    /**
+     * Filter by publishers, for example: `354,20987` or `electronic-arts,microsoft-studios`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=publishers")
+    public String publishers;
+    public GamesListRequest withPublishers(String publishers) {
+        this.publishers = publishers;
+        return this;
+    }
+    
+    /**
+     * Search query.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GamesListRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * Mark the search query as exact.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_exact")
+    public Boolean searchExact;
+    public GamesListRequest withSearchExact(Boolean searchExact) {
+        this.searchExact = searchExact;
+        return this;
+    }
+    
+    /**
+     * Disable fuzziness for the search query.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_precise")
+    public Boolean searchPrecise;
+    public GamesListRequest withSearchPrecise(Boolean searchPrecise) {
+        this.searchPrecise = searchPrecise;
+        return this;
+    }
+    
+    /**
+     * Filter by stores, for example: `5,6`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stores")
+    public String stores;
+    public GamesListRequest withStores(String stores) {
+        this.stores = stores;
+        return this;
+    }
+    
+    /**
+     * Filter by tags, for example: `31,7` or `singleplayer,multiplayer`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public GamesListRequest withTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    
+    /**
+     * Filter by an update date, for example: `2020-12-01,2020-12-31`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated")
+    public String updated;
+    public GamesListRequest withUpdated(String updated) {
+        this.updated = updated;
         return this;
     }
     

@@ -4,13 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInfoRequest {
-    
-    public GetInfoQueryParams queryParams;
-    public GetInfoRequest withQueryParams(GetInfoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Each of these methods operates on a single site at a time, identified by the site parameter. This parameter can be the full domain name (ie. "stackoverflow.com"), or a short form identified by api_site_parameter on the site object.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
+    public String site;
+    public GetInfoRequest withSite(String site) {
+        this.site = site;
         return this;
     }
     

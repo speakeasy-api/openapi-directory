@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateKeyRequest {
-    
-    public UpdateKeyPathParams pathParams;
-    public UpdateKeyRequest withPathParams(UpdateKeyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A JSON object containing key information
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.KeyInput request;
-    public UpdateKeyRequest withRequest(org.openapis.openapi.models.shared.KeyInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.KeyInput keyInput;
+    public UpdateKeyRequest withKeyInput(org.openapis.openapi.models.shared.KeyInput keyInput) {
+        this.keyInput = keyInput;
         return this;
     }
     
-    
-    public UpdateKeySecurity security;
-    public UpdateKeyRequest withSecurity(UpdateKeySecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateKeyRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

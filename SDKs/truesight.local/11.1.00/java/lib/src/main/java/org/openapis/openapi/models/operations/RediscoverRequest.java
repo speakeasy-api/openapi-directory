@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RediscoverRequest {
-    
-    public RediscoverPathParams pathParams;
-    public RediscoverRequest withPathParams(RediscoverPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
+    public Integer deviceId;
+    public RediscoverRequest withDeviceId(Integer deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
     

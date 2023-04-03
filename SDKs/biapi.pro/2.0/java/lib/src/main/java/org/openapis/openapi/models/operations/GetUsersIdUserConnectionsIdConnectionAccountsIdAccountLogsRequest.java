@@ -4,20 +4,78 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest {
-    
-    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsPathParams pathParams;
-    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest withPathParams(GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account")
+    public Long idAccount;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest withIdAccount(Long idAccount) {
+        this.idAccount = idAccount;
+        return this;
+    }
     
-    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsQueryParams queryParams;
-    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest withQueryParams(GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
+    public Long idConnection;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest withIdConnection(Long idConnection) {
+        this.idConnection = idConnection;
+        return this;
+    }
+    
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest withIdUser(String idUser) {
+        this.idUser = idUser;
+        return this;
+    }
+    
+    /**
+     * limit number of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * maximum (inclusive) date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
+    public LocalDate maxDate;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest withMaxDate(LocalDate maxDate) {
+        this.maxDate = maxDate;
+        return this;
+    }
+    
+    /**
+     * minimal (inclusive) date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
+    public LocalDate minDate;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest withMinDate(LocalDate minDate) {
+        this.minDate = minDate;
+        return this;
+    }
+    
+    /**
+     * offset of first result
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

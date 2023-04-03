@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETMoveByoipCidrToIpamRequest {
-    
-    public GETMoveByoipCidrToIpamQueryParams queryParams;
-    public GETMoveByoipCidrToIpamRequest withQueryParams(GETMoveByoipCidrToIpamQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETMoveByoipCidrToIpamActionEnum action;
+    public GETMoveByoipCidrToIpamRequest withAction(GETMoveByoipCidrToIpamActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The BYOIP CIDR.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Cidr")
+    public String cidr;
+    public GETMoveByoipCidrToIpamRequest withCidr(String cidr) {
+        this.cidr = cidr;
+        return this;
+    }
     
-    public GETMoveByoipCidrToIpamHeaders headers;
-    public GETMoveByoipCidrToIpamRequest withHeaders(GETMoveByoipCidrToIpamHeaders headers) {
-        this.headers = headers;
+    /**
+     * A check for whether you have the required permissions for the action without actually making the request and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETMoveByoipCidrToIpamRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The IPAM pool ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IpamPoolId")
+    public String ipamPoolId;
+    public GETMoveByoipCidrToIpamRequest withIpamPoolId(String ipamPoolId) {
+        this.ipamPoolId = ipamPoolId;
+        return this;
+    }
+    
+    /**
+     * The Amazon Web Services account ID of the owner of the IPAM pool.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IpamPoolOwner")
+    public String ipamPoolOwner;
+    public GETMoveByoipCidrToIpamRequest withIpamPoolOwner(String ipamPoolOwner) {
+        this.ipamPoolOwner = ipamPoolOwner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETMoveByoipCidrToIpamVersionEnum version;
+    public GETMoveByoipCidrToIpamRequest withVersion(GETMoveByoipCidrToIpamVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETMoveByoipCidrToIpamRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETMoveByoipCidrToIpamRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETMoveByoipCidrToIpamRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETMoveByoipCidrToIpamRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETMoveByoipCidrToIpamRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETMoveByoipCidrToIpamRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETMoveByoipCidrToIpamRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

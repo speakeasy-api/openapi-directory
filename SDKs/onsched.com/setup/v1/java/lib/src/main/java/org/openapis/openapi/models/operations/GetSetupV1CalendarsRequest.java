@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1CalendarsRequest {
+    /**
+     * Filter by deleted status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deleted")
+    public Boolean deleted;
+    public GetSetupV1CalendarsRequest withDeleted(Boolean deleted) {
+        this.deleted = deleted;
+        return this;
+    }
     
-    public GetSetupV1CalendarsQueryParams queryParams;
-    public GetSetupV1CalendarsRequest withQueryParams(GetSetupV1CalendarsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page limit default 20, max 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetSetupV1CalendarsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * id of business location, defaults to primary business location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
+    public String locationId;
+    public GetSetupV1CalendarsRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * Starting row of page, default 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetSetupV1CalendarsRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

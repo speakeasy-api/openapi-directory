@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2CrmActivitiesIdJsonRequest {
-    
-    public GetV2CrmActivitiesIdJsonPathParams pathParams;
-    public GetV2CrmActivitiesIdJsonRequest withPathParams(GetV2CrmActivitiesIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Crm activity ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetV2CrmActivitiesIdJsonRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

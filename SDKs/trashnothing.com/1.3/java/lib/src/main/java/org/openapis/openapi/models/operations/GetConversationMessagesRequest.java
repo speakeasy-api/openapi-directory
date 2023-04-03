@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConversationMessagesRequest {
-    
-    public GetConversationMessagesPathParams pathParams;
-    public GetConversationMessagesRequest withPathParams(GetConversationMessagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the conversation to return messages from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversation_id")
+    public String conversationId;
+    public GetConversationMessagesRequest withConversationId(String conversationId) {
+        this.conversationId = conversationId;
         return this;
     }
     
+    /**
+     * Client device pixel ratio used to determine thumbnail size (default 1.0).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_pixel_ratio")
+    public Double devicePixelRatio;
+    public GetConversationMessagesRequest withDevicePixelRatio(Double devicePixelRatio) {
+        this.devicePixelRatio = devicePixelRatio;
+        return this;
+    }
     
-    public GetConversationMessagesQueryParams queryParams;
-    public GetConversationMessagesRequest withQueryParams(GetConversationMessagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If set to 1, the conversation will be returned along with the messages.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_conversation")
+    public Long includeConversation;
+    public GetConversationMessagesRequest withIncludeConversation(Long includeConversation) {
+        this.includeConversation = includeConversation;
+        return this;
+    }
+    
+    /**
+     * The page of messages to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetConversationMessagesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of messages to return per page (must be &gt;= 1 and &lt;= 30).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetConversationMessagesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

@@ -42,9 +42,21 @@ public class WeatherForecast {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.GetVisualCrossingWebServicesRestServicesWeatherdataForecastResponse getVisualCrossingWebServicesRestServicesWeatherdataForecast(org.openapis.openapi.models.operations.GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest request) throws Exception {
+        return this.getVisualCrossingWebServicesRestServicesWeatherdataForecast(request, null);
+    }
+
+    /**
+     * Weather Forecast API
+     * Provides access to weather forecast information. The forecast is available for up to 15 days at the hourly, 12 hour and daily summary level.
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetVisualCrossingWebServicesRestServicesWeatherdataForecastResponse getVisualCrossingWebServicesRestServicesWeatherdataForecast(org.openapis.openapi.models.operations.GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest request, String serverURL) throws Exception {
         String baseUrl = GET_VISUAL_CROSSING_WEB_SERVICES_REST_SERVICES_WEATHERDATA_FORECAST_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/VisualCrossingWebServices/rest/services/weatherdata/forecast");
@@ -53,7 +65,7 @@ public class WeatherForecast {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVisualCrossingWebServicesRestServicesWeatherdataForecastQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVisualCrossingWebServicesRestServicesWeatherdataForecastRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

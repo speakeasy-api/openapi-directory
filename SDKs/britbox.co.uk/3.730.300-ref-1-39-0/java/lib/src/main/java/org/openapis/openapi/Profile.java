@@ -35,25 +35,26 @@ public class Profile {
     /**
      * Bookmark an item under the active profile. -  - Creates one if it doesn't exist, overwrites one if it does. - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BookmarkItemResponse bookmarkItem(org.openapis.openapi.models.operations.BookmarkItemRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BookmarkItemResponse bookmarkItem(org.openapis.openapi.models.operations.BookmarkItemRequest request, org.openapis.openapi.models.operations.BookmarkItemSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BookmarkItemPathParams.class, baseUrl, "/account/profile/bookmarks/{itemId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BookmarkItemRequest.class, baseUrl, "/account/profile/bookmarks/{itemId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BookmarkItemQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BookmarkItemRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -88,25 +89,26 @@ public class Profile {
     /**
      * Unbookmark an item under the active profile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteItemBookmarkResponse deleteItemBookmark(org.openapis.openapi.models.operations.DeleteItemBookmarkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteItemBookmarkResponse deleteItemBookmark(org.openapis.openapi.models.operations.DeleteItemBookmarkRequest request, org.openapis.openapi.models.operations.DeleteItemBookmarkSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteItemBookmarkPathParams.class, baseUrl, "/account/profile/bookmarks/{itemId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteItemBookmarkRequest.class, baseUrl, "/account/profile/bookmarks/{itemId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteItemBookmarkQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteItemBookmarkRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -135,10 +137,11 @@ public class Profile {
     /**
      * Remove the watched status of items under the active profile. Passing in - specific `itemId`s to the `item_ids` query parameter will cause only these - items to be removed. **If this list is missing all watched items will be - removed** - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteWatchedResponse deleteWatched(org.openapis.openapi.models.operations.DeleteWatchedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteWatchedResponse deleteWatched(org.openapis.openapi.models.operations.DeleteWatchedRequest request, org.openapis.openapi.models.operations.DeleteWatchedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/profile/watched");
         
@@ -146,14 +149,14 @@ public class Profile {
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteWatchedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteWatchedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -182,10 +185,11 @@ public class Profile {
     /**
      * Returns the list of bookmarked items under the active profile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBookmarkListResponse getBookmarkList(org.openapis.openapi.models.operations.GetBookmarkListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBookmarkListResponse getBookmarkList(org.openapis.openapi.models.operations.GetBookmarkListRequest request, org.openapis.openapi.models.operations.GetBookmarkListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/profile/bookmarks/list");
         
@@ -193,14 +197,14 @@ public class Profile {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBookmarkListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBookmarkListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -235,10 +239,11 @@ public class Profile {
     /**
      * Get the map of bookmarked item ids (itemId =&gt; creationDate) under the active profile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBookmarksResponse getBookmarks(org.openapis.openapi.models.operations.GetBookmarksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBookmarksResponse getBookmarks(org.openapis.openapi.models.operations.GetBookmarksRequest request, org.openapis.openapi.models.operations.GetBookmarksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/profile/bookmarks");
         
@@ -246,14 +251,14 @@ public class Profile {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBookmarksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBookmarksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -288,10 +293,11 @@ public class Profile {
     /**
      * Returns a list of items which have been watched but not completed under the active - profile. -  - Multiple episodes under the same show may be watched or in progress, however only a - single item belonging to a particular show will be included in the returned list. -  - The next episode to continue watching for a particular show will be the most recent - incompletely watched episode, or the next episode following the most recently - completely watched episode. Based on the specified `show_item_type` type, either the next - episode, the season of the next episode, or the show will be included in the list. - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetContinueWatchingListResponse getContinueWatchingList(org.openapis.openapi.models.operations.GetContinueWatchingListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetContinueWatchingListResponse getContinueWatchingList(org.openapis.openapi.models.operations.GetContinueWatchingListRequest request, org.openapis.openapi.models.operations.GetContinueWatchingListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/profile/continue-watching/list");
         
@@ -299,14 +305,14 @@ public class Profile {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContinueWatchingListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContinueWatchingListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -341,25 +347,26 @@ public class Profile {
     /**
      * Get the bookmark for an item under the active profile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetItemBookmarkResponse getItemBookmark(org.openapis.openapi.models.operations.GetItemBookmarkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetItemBookmarkResponse getItemBookmark(org.openapis.openapi.models.operations.GetItemBookmarkRequest request, org.openapis.openapi.models.operations.GetItemBookmarkSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemBookmarkPathParams.class, baseUrl, "/account/profile/bookmarks/{itemId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemBookmarkRequest.class, baseUrl, "/account/profile/bookmarks/{itemId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemBookmarkQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemBookmarkRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -394,25 +401,26 @@ public class Profile {
     /**
      * Get the rating info for an item under the active profile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetItemRatingResponse getItemRating(org.openapis.openapi.models.operations.GetItemRatingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetItemRatingResponse getItemRating(org.openapis.openapi.models.operations.GetItemRatingRequest request, org.openapis.openapi.models.operations.GetItemRatingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemRatingPathParams.class, baseUrl, "/account/profile/ratings/{itemId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemRatingRequest.class, baseUrl, "/account/profile/ratings/{itemId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemRatingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemRatingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -447,25 +455,26 @@ public class Profile {
     /**
      * Get the watched status info for an item under the active profile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetItemWatchedStatusResponse getItemWatchedStatus(org.openapis.openapi.models.operations.GetItemWatchedStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetItemWatchedStatusResponse getItemWatchedStatus(org.openapis.openapi.models.operations.GetItemWatchedStatusRequest request, org.openapis.openapi.models.operations.GetItemWatchedStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemWatchedStatusPathParams.class, baseUrl, "/account/profile/watched/{itemId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemWatchedStatusRequest.class, baseUrl, "/account/profile/watched/{itemId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemWatchedStatusQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemWatchedStatusRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -500,25 +509,26 @@ public class Profile {
     /**
      * Returns the next item to play given a source item id. -  - For an unwatched show it returns the first episode available to the account. -  - For a watched show it returns the last incompletely watched episode by the profile, - or the episode that immediately follows the last completely watched episode  - or nothing. -  - For an episode it always returns the immediately following episode, if available to - the account, or nothing. -  - If the response does not contain a `next` property then no item was found. - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNextPlaybackItemResponse getNextPlaybackItem(org.openapis.openapi.models.operations.GetNextPlaybackItemRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNextPlaybackItemResponse getNextPlaybackItem(org.openapis.openapi.models.operations.GetNextPlaybackItemRequest request, org.openapis.openapi.models.operations.GetNextPlaybackItemSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNextPlaybackItemPathParams.class, baseUrl, "/account/profile/items/{itemId}/next", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNextPlaybackItemRequest.class, baseUrl, "/account/profile/items/{itemId}/next", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNextPlaybackItemQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNextPlaybackItemRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -553,10 +563,11 @@ public class Profile {
     /**
      * Get the details of the active profile, including watched, bookmarked and rated items.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetProfileResponse getProfile(org.openapis.openapi.models.operations.GetProfileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetProfileResponse getProfile(org.openapis.openapi.models.operations.GetProfileRequest request, org.openapis.openapi.models.operations.GetProfileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/profile");
         
@@ -564,14 +575,14 @@ public class Profile {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProfileQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProfileRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -606,10 +617,11 @@ public class Profile {
     /**
      * Get the map of rated item ids (itemId =&gt; rating out of 10) under the active profile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRatingsResponse getRatings(org.openapis.openapi.models.operations.GetRatingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRatingsResponse getRatings(org.openapis.openapi.models.operations.GetRatingsRequest request, org.openapis.openapi.models.operations.GetRatingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/profile/ratings");
         
@@ -617,14 +629,14 @@ public class Profile {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRatingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRatingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -659,10 +671,11 @@ public class Profile {
     /**
      * Returns the list of rated items under the active profile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRatingsListResponse getRatingsList(org.openapis.openapi.models.operations.GetRatingsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRatingsListResponse getRatingsList(org.openapis.openapi.models.operations.GetRatingsListRequest request, org.openapis.openapi.models.operations.GetRatingsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/profile/ratings/list");
         
@@ -670,14 +683,14 @@ public class Profile {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRatingsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRatingsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -712,10 +725,11 @@ public class Profile {
     /**
      * Get the map of watched item ids (itemId =&gt; last playhead position) under the active profile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWatchedResponse getWatched(org.openapis.openapi.models.operations.GetWatchedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWatchedResponse getWatched(org.openapis.openapi.models.operations.GetWatchedRequest request, org.openapis.openapi.models.operations.GetWatchedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/profile/watched");
         
@@ -723,14 +737,14 @@ public class Profile {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWatchedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWatchedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -765,10 +779,11 @@ public class Profile {
     /**
      * Returns the list of watched items under the active profile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWatchedListResponse getWatchedList(org.openapis.openapi.models.operations.GetWatchedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWatchedListResponse getWatchedList(org.openapis.openapi.models.operations.GetWatchedListRequest request, org.openapis.openapi.models.operations.GetWatchedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/profile/watched/list");
         
@@ -776,14 +791,14 @@ public class Profile {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWatchedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWatchedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -818,25 +833,26 @@ public class Profile {
     /**
      * Rate an item under the active profile. -  - Creates one if it doesn't exist, overwrites one if it does. - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RateItemResponse rateItem(org.openapis.openapi.models.operations.RateItemRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RateItemResponse rateItem(org.openapis.openapi.models.operations.RateItemRequest request, org.openapis.openapi.models.operations.RateItemSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RateItemPathParams.class, baseUrl, "/account/profile/ratings/{itemId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RateItemRequest.class, baseUrl, "/account/profile/ratings/{itemId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RateItemQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RateItemRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -871,25 +887,26 @@ public class Profile {
     /**
      * Record the watched playhead position of a video under the active profile. -  - Can be used later to resume a video from where it was last watched. -  - Creates one if it doesn't exist, overwrites one if it does. - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SetItemWatchedStatusResponse setItemWatchedStatus(org.openapis.openapi.models.operations.SetItemWatchedStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SetItemWatchedStatusResponse setItemWatchedStatus(org.openapis.openapi.models.operations.SetItemWatchedStatusRequest request, org.openapis.openapi.models.operations.SetItemWatchedStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetItemWatchedStatusPathParams.class, baseUrl, "/account/profile/watched/{itemId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetItemWatchedStatusRequest.class, baseUrl, "/account/profile/watched/{itemId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SetItemWatchedStatusQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SetItemWatchedStatusRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

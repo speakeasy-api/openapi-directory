@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateCallbackDeleteRequest {
-    
-    public CertificateCallbackDeletePathParams pathParams;
-    public CertificateCallbackDeleteRequest withPathParams(CertificateCallbackDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Certificate id to unregister callback
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=certificateId")
+    public String certificateId;
+    public CertificateCallbackDeleteRequest withCertificateId(String certificateId) {
+        this.certificateId = certificateId;
         return this;
     }
     

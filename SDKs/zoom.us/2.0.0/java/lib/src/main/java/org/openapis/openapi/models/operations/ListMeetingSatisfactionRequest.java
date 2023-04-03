@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListMeetingSatisfactionRequest {
-    
-    public ListMeetingSatisfactionQueryParams queryParams;
-    public ListMeetingSatisfactionRequest withQueryParams(ListMeetingSatisfactionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The start date for the query in \u201cyyyy-mm-dd\u201d format. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public LocalDate from;
+    public ListMeetingSatisfactionRequest withFrom(LocalDate from) {
+        this.from = from;
         return this;
     }
     
-    
-    public ListMeetingSatisfactionSecurity security;
-    public ListMeetingSatisfactionRequest withSecurity(ListMeetingSatisfactionSecurity security) {
-        this.security = security;
+    /**
+     * The end date for the query in \u201cyyyy-mm-dd\u201d format. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public LocalDate to;
+    public ListMeetingSatisfactionRequest withTo(LocalDate to) {
+        this.to = to;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoryPipelineCachesRequest {
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoryPipelineCachesRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public GetRepositoryPipelineCachesPathParams pathParams;
-    public GetRepositoryPipelineCachesRequest withPathParams(GetRepositoryPipelineCachesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoryPipelineCachesRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

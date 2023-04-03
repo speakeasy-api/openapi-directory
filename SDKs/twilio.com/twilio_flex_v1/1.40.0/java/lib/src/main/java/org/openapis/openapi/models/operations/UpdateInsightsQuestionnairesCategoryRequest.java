@@ -7,38 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateInsightsQuestionnairesCategoryRequest {
-    
-    public UpdateInsightsQuestionnairesCategoryPathParams pathParams;
-    public UpdateInsightsQuestionnairesCategoryRequest withPathParams(UpdateInsightsQuestionnairesCategoryPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateInsightsQuestionnairesCategoryHeaders headers;
-    public UpdateInsightsQuestionnairesCategoryRequest withHeaders(UpdateInsightsQuestionnairesCategoryHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the category to be update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CategoryId")
+    public String categoryId;
+    public UpdateInsightsQuestionnairesCategoryRequest withCategoryId(String categoryId) {
+        this.categoryId = categoryId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateInsightsQuestionnairesCategoryUpdateInsightsQuestionnairesCategoryRequest request;
-    public UpdateInsightsQuestionnairesCategoryRequest withRequest(UpdateInsightsQuestionnairesCategoryUpdateInsightsQuestionnairesCategoryRequest request) {
-        this.request = request;
+    public UpdateInsightsQuestionnairesCategoryUpdateInsightsQuestionnairesCategoryRequest requestBody;
+    public UpdateInsightsQuestionnairesCategoryRequest withRequestBody(UpdateInsightsQuestionnairesCategoryUpdateInsightsQuestionnairesCategoryRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateInsightsQuestionnairesCategorySecurity security;
-    public UpdateInsightsQuestionnairesCategoryRequest withSecurity(UpdateInsightsQuestionnairesCategorySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateInsightsQuestionnairesCategoryRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Token HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Token")
+    public String token;
+    public UpdateInsightsQuestionnairesCategoryRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

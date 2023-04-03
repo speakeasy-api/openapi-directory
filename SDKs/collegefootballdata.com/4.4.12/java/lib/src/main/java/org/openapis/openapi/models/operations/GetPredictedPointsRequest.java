@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPredictedPointsRequest {
+    /**
+     * Distance filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=distance")
+    public Long distance;
+    public GetPredictedPointsRequest withDistance(Long distance) {
+        this.distance = distance;
+        return this;
+    }
     
-    public GetPredictedPointsQueryParams queryParams;
-    public GetPredictedPointsRequest withQueryParams(GetPredictedPointsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Down filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=down")
+    public Long down;
+    public GetPredictedPointsRequest withDown(Long down) {
+        this.down = down;
         return this;
     }
     

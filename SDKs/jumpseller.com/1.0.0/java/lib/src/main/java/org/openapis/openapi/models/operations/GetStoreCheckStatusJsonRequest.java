@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStoreCheckStatusJsonRequest {
+    /**
+     * Partner authentication token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auth_token")
+    public String authToken;
+    public GetStoreCheckStatusJsonRequest withAuthToken(String authToken) {
+        this.authToken = authToken;
+        return this;
+    }
     
-    public GetStoreCheckStatusJsonQueryParams queryParams;
-    public GetStoreCheckStatusJsonRequest withQueryParams(GetStoreCheckStatusJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * ISO 3166-2 code of the language used in the response messages.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public GetStoreCheckStatusJsonRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
+    
+    /**
+     * Partner code.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partner_code")
+    public String partnerCode;
+    public GetStoreCheckStatusJsonRequest withPartnerCode(String partnerCode) {
+        this.partnerCode = partnerCode;
+        return this;
+    }
+    
+    /**
+     * Store Code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=store_code")
+    public String storeCode;
+    public GetStoreCheckStatusJsonRequest withStoreCode(String storeCode) {
+        this.storeCode = storeCode;
         return this;
     }
     

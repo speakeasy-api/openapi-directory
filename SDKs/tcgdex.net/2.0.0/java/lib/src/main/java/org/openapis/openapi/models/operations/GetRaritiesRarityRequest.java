@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRaritiesRarityRequest {
-    
-    public GetRaritiesRarityPathParams pathParams;
-    public GetRaritiesRarityRequest withPathParams(GetRaritiesRarityPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rarity")
+    public String rarity;
+    public GetRaritiesRarityRequest withRarity(String rarity) {
+        this.rarity = rarity;
         return this;
     }
     

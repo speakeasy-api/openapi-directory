@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClassifyImageUrlWithNoStoreJsonRequest {
-    
-    public ClassifyImageUrlWithNoStoreJsonPathParams pathParams;
-    public ClassifyImageUrlWithNoStoreJsonRequest withPathParams(ClassifyImageUrlWithNoStoreJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ClassifyImageUrlWithNoStoreJsonQueryParams queryParams;
-    public ClassifyImageUrlWithNoStoreJsonRequest withQueryParams(ClassifyImageUrlWithNoStoreJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be evaluated.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ImageUrl request;
-    public ClassifyImageUrlWithNoStoreJsonRequest withRequest(org.openapis.openapi.models.shared.ImageUrl request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+    public ClassifyImageUrlWithNoStoreJsonRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
+        this.imageUrl = imageUrl;
+        return this;
+    }
+    
+    /**
+     * Optional. Specifies the name of application using the endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application")
+    public String application;
+    public ClassifyImageUrlWithNoStoreJsonRequest withApplication(String application) {
+        this.application = application;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public ClassifyImageUrlWithNoStoreJsonRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * Specifies the name of the model to evaluate against.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=publishedName")
+    public String publishedName;
+    public ClassifyImageUrlWithNoStoreJsonRequest withPublishedName(String publishedName) {
+        this.publishedName = publishedName;
         return this;
     }
     

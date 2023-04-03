@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateArtifactMetaDataRequest {
-    
-    public UpdateArtifactMetaDataPathParams pathParams;
-    public UpdateArtifactMetaDataRequest withPathParams(UpdateArtifactMetaDataPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated artifact metadata.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditableMetaData request;
-    public UpdateArtifactMetaDataRequest withRequest(org.openapis.openapi.models.shared.EditableMetaData request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.EditableMetaData editableMetaData;
+    public UpdateArtifactMetaDataRequest withEditableMetaData(org.openapis.openapi.models.shared.EditableMetaData editableMetaData) {
+        this.editableMetaData = editableMetaData;
+        return this;
+    }
+    
+    /**
+     * The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public UpdateArtifactMetaDataRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
+        return this;
+    }
+    
+    /**
+     * The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public UpdateArtifactMetaDataRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

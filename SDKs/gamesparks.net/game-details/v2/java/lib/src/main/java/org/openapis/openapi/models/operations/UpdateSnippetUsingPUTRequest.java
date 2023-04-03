@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSnippetUsingPUTRequest {
-    
-    public UpdateSnippetUsingPUTPathParams pathParams;
-    public UpdateSnippetUsingPUTRequest withPathParams(UpdateSnippetUsingPUTPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * snippet
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ManageSnippet request;
-    public UpdateSnippetUsingPUTRequest withRequest(org.openapis.openapi.models.shared.ManageSnippet request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ManageSnippet manageSnippet;
+    public UpdateSnippetUsingPUTRequest withManageSnippet(org.openapis.openapi.models.shared.ManageSnippet manageSnippet) {
+        this.manageSnippet = manageSnippet;
+        return this;
+    }
+    
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public UpdateSnippetUsingPUTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    
+    /**
+     * shortCode
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortCode")
+    public String shortCode;
+    public UpdateSnippetUsingPUTRequest withShortCode(String shortCode) {
+        this.shortCode = shortCode;
         return this;
     }
     

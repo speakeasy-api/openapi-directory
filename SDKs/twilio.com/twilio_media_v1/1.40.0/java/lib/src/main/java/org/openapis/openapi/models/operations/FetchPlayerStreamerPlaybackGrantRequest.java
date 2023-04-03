@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchPlayerStreamerPlaybackGrantRequest {
-    
-    public FetchPlayerStreamerPlaybackGrantPathParams pathParams;
-    public FetchPlayerStreamerPlaybackGrantRequest withPathParams(FetchPlayerStreamerPlaybackGrantPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchPlayerStreamerPlaybackGrantSecurity security;
-    public FetchPlayerStreamerPlaybackGrantRequest withSecurity(FetchPlayerStreamerPlaybackGrantSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchPlayerStreamerPlaybackGrantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the PlayerStreamer resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchPlayerStreamerPlaybackGrantRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

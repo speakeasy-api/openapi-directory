@@ -7,20 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeImageRequest {
-    
-    public DescribeImageQueryParams queryParams;
-    public DescribeImageRequest withQueryParams(DescribeImageQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * A JSON document with a URL pointing to the image that is to be analyzed.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ImageUrl request;
-    public DescribeImageRequest withRequest(org.openapis.openapi.models.shared.ImageUrl request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+    public DescribeImageRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
+        this.imageUrl = imageUrl;
+        return this;
+    }
+    
+    /**
+     * Turn off specified domain models when generating the description.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=descriptionExclude")
+    public org.openapis.openapi.models.shared.DescriptionExcludeEnum[] descriptionExclude;
+    public DescribeImageRequest withDescriptionExclude(org.openapis.openapi.models.shared.DescriptionExcludeEnum[] descriptionExclude) {
+        this.descriptionExclude = descriptionExclude;
+        return this;
+    }
+    
+    /**
+     * The desired language for output generation. If this parameter is not specified, the default value is &amp;quot;en&amp;quot;.Supported languages:en - English, Default. es - Spanish, ja - Japanese, pt - Portuguese, zh - Simplified Chinese.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public org.openapis.openapi.models.shared.ServiceLanguageEnum language;
+    public DescribeImageRequest withLanguage(org.openapis.openapi.models.shared.ServiceLanguageEnum language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * Maximum number of candidate descriptions to be returned.  The default is 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxCandidates")
+    public Integer maxCandidates;
+    public DescribeImageRequest withMaxCandidates(Integer maxCandidates) {
+        this.maxCandidates = maxCandidates;
         return this;
     }
     

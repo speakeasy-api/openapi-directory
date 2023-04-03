@@ -4,13 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1CompaniesTimezonesDateRequest {
-    
-    public GetSetupV1CompaniesTimezonesDatePathParams pathParams;
-    public GetSetupV1CompaniesTimezonesDateRequest withPathParams(GetSetupV1CompaniesTimezonesDatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * "YYYY-MM-DD: Date for timezone info"
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
+    public OffsetDateTime date;
+    public GetSetupV1CompaniesTimezonesDateRequest withDate(OffsetDateTime date) {
+        this.date = date;
         return this;
     }
     

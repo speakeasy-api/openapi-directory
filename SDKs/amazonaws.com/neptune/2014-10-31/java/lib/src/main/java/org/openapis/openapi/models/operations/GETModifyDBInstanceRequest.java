@@ -4,20 +4,439 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyDBInstanceRequest {
-    
-    public GETModifyDBInstanceQueryParams queryParams;
-    public GETModifyDBInstanceRequest withQueryParams(GETModifyDBInstanceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyDBInstanceActionEnum action;
+    public GETModifyDBInstanceRequest withAction(GETModifyDBInstanceActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Not supported by Neptune.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllocatedStorage")
+    public Long allocatedStorage;
+    public GETModifyDBInstanceRequest withAllocatedStorage(Long allocatedStorage) {
+        this.allocatedStorage = allocatedStorage;
+        return this;
+    }
     
-    public GETModifyDBInstanceHeaders headers;
-    public GETModifyDBInstanceRequest withHeaders(GETModifyDBInstanceHeaders headers) {
-        this.headers = headers;
+    /**
+     * Indicates that major version upgrades are allowed. Changing this parameter doesn't result in an outage and the change is asynchronously applied as soon as possible.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowMajorVersionUpgrade")
+    public Boolean allowMajorVersionUpgrade;
+    public GETModifyDBInstanceRequest withAllowMajorVersionUpgrade(Boolean allowMajorVersionUpgrade) {
+        this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Specifies whether the modifications in this request and any pending modifications are asynchronously applied as soon as possible, regardless of the &lt;code&gt;PreferredMaintenanceWindow&lt;/code&gt; setting for the DB instance.&lt;/p&gt; &lt;p&gt; If this parameter is set to &lt;code&gt;false&lt;/code&gt;, changes to the DB instance are applied during the next maintenance window. Some parameter changes can cause an outage and are applied on the next call to &lt;a&gt;RebootDBInstance&lt;/a&gt;, or the next failure reboot.&lt;/p&gt; &lt;p&gt;Default: &lt;code&gt;false&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplyImmediately")
+    public Boolean applyImmediately;
+    public GETModifyDBInstanceRequest withApplyImmediately(Boolean applyImmediately) {
+        this.applyImmediately = applyImmediately;
+        return this;
+    }
+    
+    /**
+     *  Indicates that minor version upgrades are applied automatically to the DB instance during the maintenance window. Changing this parameter doesn't result in an outage except in the following case and the change is asynchronously applied as soon as possible. An outage will result if this parameter is set to &lt;code&gt;true&lt;/code&gt; during the maintenance window, and a newer minor version is available, and Neptune has enabled auto patching for that engine version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoMinorVersionUpgrade")
+    public Boolean autoMinorVersionUpgrade;
+    public GETModifyDBInstanceRequest withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
+        this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Not applicable. The retention period for automated backups is managed by the DB cluster. For more information, see &lt;a&gt;ModifyDBCluster&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Default: Uses existing setting&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BackupRetentionPeriod")
+    public Long backupRetentionPeriod;
+    public GETModifyDBInstanceRequest withBackupRetentionPeriod(Long backupRetentionPeriod) {
+        this.backupRetentionPeriod = backupRetentionPeriod;
+        return this;
+    }
+    
+    /**
+     * Indicates the certificate that needs to be associated with the instance.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CACertificateIdentifier")
+    public String caCertificateIdentifier;
+    public GETModifyDBInstanceRequest withCACertificateIdentifier(String caCertificateIdentifier) {
+        this.caCertificateIdentifier = caCertificateIdentifier;
+        return this;
+    }
+    
+    /**
+     * The configuration setting for the log types to be enabled for export to CloudWatch Logs for a specific DB instance or DB cluster.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CloudwatchLogsExportConfiguration")
+    public GETModifyDBInstanceCloudwatchLogsExportConfiguration cloudwatchLogsExportConfiguration;
+    public GETModifyDBInstanceRequest withCloudwatchLogsExportConfiguration(GETModifyDBInstanceCloudwatchLogsExportConfiguration cloudwatchLogsExportConfiguration) {
+        this.cloudwatchLogsExportConfiguration = cloudwatchLogsExportConfiguration;
+        return this;
+    }
+    
+    /**
+     * True to copy all tags from the DB instance to snapshots of the DB instance, and otherwise false. The default is false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CopyTagsToSnapshot")
+    public Boolean copyTagsToSnapshot;
+    public GETModifyDBInstanceRequest withCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
+        this.copyTagsToSnapshot = copyTagsToSnapshot;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The new compute and memory capacity of the DB instance, for example, &lt;code&gt;db.m4.large&lt;/code&gt;. Not all DB instance classes are available in all Amazon Regions.&lt;/p&gt; &lt;p&gt;If you modify the DB instance class, an outage occurs during the change. The change is applied during the next maintenance window, unless &lt;code&gt;ApplyImmediately&lt;/code&gt; is specified as &lt;code&gt;true&lt;/code&gt; for this request.&lt;/p&gt; &lt;p&gt;Default: Uses existing setting&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceClass")
+    public String dbInstanceClass;
+    public GETModifyDBInstanceRequest withDBInstanceClass(String dbInstanceClass) {
+        this.dbInstanceClass = dbInstanceClass;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The DB instance identifier. This value is stored as a lowercase string.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must match the identifier of an existing DBInstance.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceIdentifier")
+    public String dbInstanceIdentifier;
+    public GETModifyDBInstanceRequest withDBInstanceIdentifier(String dbInstanceIdentifier) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the DB parameter group to apply to the DB instance. Changing this setting doesn't result in an outage. The parameter group name itself is changed immediately, but the actual parameter changes are not applied until you reboot the instance without failover. The db instance will NOT be rebooted automatically and the parameter changes will NOT be applied during the next maintenance window.&lt;/p&gt; &lt;p&gt;Default: Uses existing setting&lt;/p&gt; &lt;p&gt;Constraints: The DB parameter group must be in the same DB parameter group family as this DB instance.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBParameterGroupName")
+    public String dbParameterGroupName;
+    public GETModifyDBInstanceRequest withDBParameterGroupName(String dbParameterGroupName) {
+        this.dbParameterGroupName = dbParameterGroupName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The port number on which the database accepts connections.&lt;/p&gt; &lt;p&gt;The value of the &lt;code&gt;DBPortNumber&lt;/code&gt; parameter must not match any of the port values specified for options in the option group for the DB instance.&lt;/p&gt; &lt;p&gt;Your database will restart when you change the &lt;code&gt;DBPortNumber&lt;/code&gt; value regardless of the value of the &lt;code&gt;ApplyImmediately&lt;/code&gt; parameter.&lt;/p&gt; &lt;p&gt; Default: &lt;code&gt;8182&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBPortNumber")
+    public Long dbPortNumber;
+    public GETModifyDBInstanceRequest withDBPortNumber(Long dbPortNumber) {
+        this.dbPortNumber = dbPortNumber;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A list of DB security groups to authorize on this DB instance. Changing this setting doesn't result in an outage and the change is asynchronously applied as soon as possible.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;If supplied, must match existing DBSecurityGroups.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBSecurityGroups")
+    public String[] dbSecurityGroups;
+    public GETModifyDBInstanceRequest withDBSecurityGroups(String[] dbSecurityGroups) {
+        this.dbSecurityGroups = dbSecurityGroups;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The new DB subnet group for the DB instance. You can use this parameter to move your DB instance to a different VPC.&lt;/p&gt; &lt;p&gt;Changing the subnet group causes an outage during the change. The change is applied during the next maintenance window, unless you specify &lt;code&gt;true&lt;/code&gt; for the &lt;code&gt;ApplyImmediately&lt;/code&gt; parameter.&lt;/p&gt; &lt;p&gt;Constraints: If supplied, must match the name of an existing DBSubnetGroup.&lt;/p&gt; &lt;p&gt;Example: &lt;code&gt;mySubnetGroup&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBSubnetGroupName")
+    public String dbSubnetGroupName;
+    public GETModifyDBInstanceRequest withDBSubnetGroupName(String dbSubnetGroupName) {
+        this.dbSubnetGroupName = dbSubnetGroupName;
+        return this;
+    }
+    
+    /**
+     * A value that indicates whether the DB instance has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled. See &lt;a href="https://docs.aws.amazon.com/neptune/latest/userguide/manage-console-instances-delete.html"&gt;Deleting a DB Instance&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeletionProtection")
+    public Boolean deletionProtection;
+    public GETModifyDBInstanceRequest withDeletionProtection(Boolean deletionProtection) {
+        this.deletionProtection = deletionProtection;
+        return this;
+    }
+    
+    /**
+     * Not supported.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Domain")
+    public String domain;
+    public GETModifyDBInstanceRequest withDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    
+    /**
+     * Not supported
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainIAMRoleName")
+    public String domainIAMRoleName;
+    public GETModifyDBInstanceRequest withDomainIAMRoleName(String domainIAMRoleName) {
+        this.domainIAMRoleName = domainIAMRoleName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;True to enable mapping of Amazon Identity and Access Management (IAM) accounts to database accounts, and otherwise false.&lt;/p&gt; &lt;p&gt;You can enable IAM database authentication for the following database engines&lt;/p&gt; &lt;p&gt;Not applicable. Mapping Amazon IAM accounts to database accounts is managed by the DB cluster. For more information, see &lt;a&gt;ModifyDBCluster&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Default: &lt;code&gt;false&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableIAMDatabaseAuthentication")
+    public Boolean enableIAMDatabaseAuthentication;
+    public GETModifyDBInstanceRequest withEnableIAMDatabaseAuthentication(Boolean enableIAMDatabaseAuthentication) {
+        this.enableIAMDatabaseAuthentication = enableIAMDatabaseAuthentication;
+        return this;
+    }
+    
+    /**
+     *  &lt;i&gt;(Not supported by Neptune)&lt;/i&gt; 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnablePerformanceInsights")
+    public Boolean enablePerformanceInsights;
+    public GETModifyDBInstanceRequest withEnablePerformanceInsights(Boolean enablePerformanceInsights) {
+        this.enablePerformanceInsights = enablePerformanceInsights;
+        return this;
+    }
+    
+    /**
+     * The version number of the database engine to upgrade to. Currently, setting this parameter has no effect. To upgrade your database engine to the most recent release, use the &lt;a&gt;ApplyPendingMaintenanceAction&lt;/a&gt; API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EngineVersion")
+    public String engineVersion;
+    public GETModifyDBInstanceRequest withEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The new Provisioned IOPS (I/O operations per second) value for the instance.&lt;/p&gt; &lt;p&gt;Changing this setting doesn't result in an outage and the change is applied during the next maintenance window unless the &lt;code&gt;ApplyImmediately&lt;/code&gt; parameter is set to &lt;code&gt;true&lt;/code&gt; for this request.&lt;/p&gt; &lt;p&gt;Default: Uses existing setting&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Iops")
+    public Long iops;
+    public GETModifyDBInstanceRequest withIops(Long iops) {
+        this.iops = iops;
+        return this;
+    }
+    
+    /**
+     * Not supported by Neptune.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LicenseModel")
+    public String licenseModel;
+    public GETModifyDBInstanceRequest withLicenseModel(String licenseModel) {
+        this.licenseModel = licenseModel;
+        return this;
+    }
+    
+    /**
+     * Not supported by Neptune.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MasterUserPassword")
+    public String masterUserPassword;
+    public GETModifyDBInstanceRequest withMasterUserPassword(String masterUserPassword) {
+        this.masterUserPassword = masterUserPassword;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0.&lt;/p&gt; &lt;p&gt;If &lt;code&gt;MonitoringRoleArn&lt;/code&gt; is specified, then you must also set &lt;code&gt;MonitoringInterval&lt;/code&gt; to a value other than 0.&lt;/p&gt; &lt;p&gt;Valid Values: &lt;code&gt;0, 1, 5, 10, 15, 30, 60&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MonitoringInterval")
+    public Long monitoringInterval;
+    public GETModifyDBInstanceRequest withMonitoringInterval(Long monitoringInterval) {
+        this.monitoringInterval = monitoringInterval;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The ARN for the IAM role that permits Neptune to send enhanced monitoring metrics to Amazon CloudWatch Logs. For example, &lt;code&gt;arn:aws:iam:123456789012:role/emaccess&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;If &lt;code&gt;MonitoringInterval&lt;/code&gt; is set to a value other than 0, then you must supply a &lt;code&gt;MonitoringRoleArn&lt;/code&gt; value.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MonitoringRoleArn")
+    public String monitoringRoleArn;
+    public GETModifyDBInstanceRequest withMonitoringRoleArn(String monitoringRoleArn) {
+        this.monitoringRoleArn = monitoringRoleArn;
+        return this;
+    }
+    
+    /**
+     * Specifies if the DB instance is a Multi-AZ deployment. Changing this parameter doesn't result in an outage and the change is applied during the next maintenance window unless the &lt;code&gt;ApplyImmediately&lt;/code&gt; parameter is set to &lt;code&gt;true&lt;/code&gt; for this request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MultiAZ")
+    public Boolean multiAZ;
+    public GETModifyDBInstanceRequest withMultiAZ(Boolean multiAZ) {
+        this.multiAZ = multiAZ;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt; The new DB instance identifier for the DB instance when renaming a DB instance. When you change the DB instance identifier, an instance reboot will occur immediately if you set &lt;code&gt;Apply Immediately&lt;/code&gt; to true, or will occur during the next maintenance window if &lt;code&gt;Apply Immediately&lt;/code&gt; to false. This value is stored as a lowercase string.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must contain from 1 to 63 letters, numbers, or hyphens.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;The first character must be a letter.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Cannot end with a hyphen or contain two consecutive hyphens.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Example: &lt;code&gt;mydbinstance&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NewDBInstanceIdentifier")
+    public String newDBInstanceIdentifier;
+    public GETModifyDBInstanceRequest withNewDBInstanceIdentifier(String newDBInstanceIdentifier) {
+        this.newDBInstanceIdentifier = newDBInstanceIdentifier;
+        return this;
+    }
+    
+    /**
+     *  &lt;i&gt;(Not supported by Neptune)&lt;/i&gt; 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OptionGroupName")
+    public String optionGroupName;
+    public GETModifyDBInstanceRequest withOptionGroupName(String optionGroupName) {
+        this.optionGroupName = optionGroupName;
+        return this;
+    }
+    
+    /**
+     *  &lt;i&gt;(Not supported by Neptune)&lt;/i&gt; 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PerformanceInsightsKMSKeyId")
+    public String performanceInsightsKMSKeyId;
+    public GETModifyDBInstanceRequest withPerformanceInsightsKMSKeyId(String performanceInsightsKMSKeyId) {
+        this.performanceInsightsKMSKeyId = performanceInsightsKMSKeyId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt; The daily time range during which automated backups are created if automated backups are enabled.&lt;/p&gt; &lt;p&gt;Not applicable. The daily time range for creating automated backups is managed by the DB cluster. For more information, see &lt;a&gt;ModifyDBCluster&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must be in the format hh24:mi-hh24:mi&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Must be in Universal Time Coordinated (UTC)&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Must not conflict with the preferred maintenance window&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Must be at least 30 minutes&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PreferredBackupWindow")
+    public String preferredBackupWindow;
+    public GETModifyDBInstanceRequest withPreferredBackupWindow(String preferredBackupWindow) {
+        this.preferredBackupWindow = preferredBackupWindow;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The weekly time range (in UTC) during which system maintenance can occur, which might result in an outage. Changing this parameter doesn't result in an outage, except in the following situation, and the change is asynchronously applied as soon as possible. If there are pending actions that cause a reboot, and the maintenance window is changed to include the current time, then changing this parameter will cause a reboot of the DB instance. If moving this window to the current time, there must be at least 30 minutes between the current time and end of the window to ensure pending changes are applied.&lt;/p&gt; &lt;p&gt;Default: Uses existing setting&lt;/p&gt; &lt;p&gt;Format: ddd:hh24:mi-ddd:hh24:mi&lt;/p&gt; &lt;p&gt;Valid Days: Mon | Tue | Wed | Thu | Fri | Sat | Sun&lt;/p&gt; &lt;p&gt;Constraints: Must be at least 30 minutes&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PreferredMaintenanceWindow")
+    public String preferredMaintenanceWindow;
+    public GETModifyDBInstanceRequest withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
+        this.preferredMaintenanceWindow = preferredMaintenanceWindow;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A value that specifies the order in which a Read Replica is promoted to the primary instance after a failure of the existing primary instance.&lt;/p&gt; &lt;p&gt;Default: 1&lt;/p&gt; &lt;p&gt;Valid Values: 0 - 15&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PromotionTier")
+    public Long promotionTier;
+    public GETModifyDBInstanceRequest withPromotionTier(Long promotionTier) {
+        this.promotionTier = promotionTier;
+        return this;
+    }
+    
+    /**
+     * This flag should no longer be used.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PubliclyAccessible")
+    public Boolean publiclyAccessible;
+    public GETModifyDBInstanceRequest withPubliclyAccessible(Boolean publiclyAccessible) {
+        this.publiclyAccessible = publiclyAccessible;
+        return this;
+    }
+    
+    /**
+     * Not supported.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StorageType")
+    public String storageType;
+    public GETModifyDBInstanceRequest withStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    
+    /**
+     * The ARN from the key store with which to associate the instance for TDE encryption.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TdeCredentialArn")
+    public String tdeCredentialArn;
+    public GETModifyDBInstanceRequest withTdeCredentialArn(String tdeCredentialArn) {
+        this.tdeCredentialArn = tdeCredentialArn;
+        return this;
+    }
+    
+    /**
+     * The password for the given ARN from the key store in order to access the device.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TdeCredentialPassword")
+    public String tdeCredentialPassword;
+    public GETModifyDBInstanceRequest withTdeCredentialPassword(String tdeCredentialPassword) {
+        this.tdeCredentialPassword = tdeCredentialPassword;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyDBInstanceVersionEnum version;
+    public GETModifyDBInstanceRequest withVersion(GETModifyDBInstanceVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A list of EC2 VPC security groups to authorize on this DB instance. This change is asynchronously applied as soon as possible.&lt;/p&gt; &lt;p&gt;Not applicable. The associated list of EC2 VPC security groups is managed by the DB cluster. For more information, see &lt;a&gt;ModifyDBCluster&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;If supplied, must match existing VpcSecurityGroupIds.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcSecurityGroupIds")
+    public String[] vpcSecurityGroupIds;
+    public GETModifyDBInstanceRequest withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
+        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyDBInstanceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyDBInstanceRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyDBInstanceRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyDBInstanceRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyDBInstanceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyDBInstanceRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyDBInstanceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUntagResourceRequest {
-    
-    public GETUntagResourceQueryParams queryParams;
-    public GETUntagResourceRequest withQueryParams(GETUntagResourceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETUntagResourceActionEnum action;
+    public GETUntagResourceRequest withAction(GETUntagResourceActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The ARN of the CloudWatch resource that you're removing tags from.&lt;/p&gt; &lt;p&gt;The ARN format of an alarm is &lt;code&gt;arn:aws:cloudwatch:&lt;i&gt;Region&lt;/i&gt;:&lt;i&gt;account-id&lt;/i&gt;:alarm:&lt;i&gt;alarm-name&lt;/i&gt; &lt;/code&gt; &lt;/p&gt; &lt;p&gt;The ARN format of a Contributor Insights rule is &lt;code&gt;arn:aws:cloudwatch:&lt;i&gt;Region&lt;/i&gt;:&lt;i&gt;account-id&lt;/i&gt;:insight-rule:&lt;i&gt;insight-rule-name&lt;/i&gt; &lt;/code&gt; &lt;/p&gt; &lt;p&gt;For more information about ARN format, see &lt;a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncloudwatch.html#amazoncloudwatch-resources-for-iam-policies"&gt; Resource Types Defined by Amazon CloudWatch&lt;/a&gt; in the &lt;i&gt;Amazon Web Services General Reference&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceARN")
+    public String resourceARN;
+    public GETUntagResourceRequest withResourceARN(String resourceARN) {
+        this.resourceARN = resourceARN;
+        return this;
+    }
     
-    public GETUntagResourceHeaders headers;
-    public GETUntagResourceRequest withHeaders(GETUntagResourceHeaders headers) {
-        this.headers = headers;
+    /**
+     * The list of tag keys to remove from the resource.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TagKeys")
+    public String[] tagKeys;
+    public GETUntagResourceRequest withTagKeys(String[] tagKeys) {
+        this.tagKeys = tagKeys;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETUntagResourceVersionEnum version;
+    public GETUntagResourceRequest withVersion(GETUntagResourceVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETUntagResourceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETUntagResourceRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETUntagResourceRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETUntagResourceRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETUntagResourceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETUntagResourceRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETUntagResourceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

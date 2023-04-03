@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateMonitorRequest {
-    
-    public UpdateMonitorPathParams pathParams;
-    public UpdateMonitorRequest withPathParams(UpdateMonitorPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateMonitorRequestBody requestBody;
+    public UpdateMonitorRequest withRequestBody(UpdateMonitorRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateMonitorRequestBody request;
-    public UpdateMonitorRequest withRequest(UpdateMonitorRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=monitor_uid")
+    public String monitorUid;
+    public UpdateMonitorRequest withMonitorUid(String monitorUid) {
+        this.monitorUid = monitorUid;
         return this;
     }
     

@@ -46,7 +46,7 @@ public class Assets {
      */
     public org.openapis.openapi.models.operations.DeleteTargetsTargetIdAssetsIdResponse deleteTargetsTargetIdAssetsId(org.openapis.openapi.models.operations.DeleteTargetsTargetIdAssetsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTargetsTargetIdAssetsIdPathParams.class, baseUrl, "/targets/{target_id}/assets/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTargetsTargetIdAssetsIdRequest.class, baseUrl, "/targets/{target_id}/assets/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -103,13 +103,13 @@ public class Assets {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdAssetsResponse getTargetsTargetIdAssets(org.openapis.openapi.models.operations.GetTargetsTargetIdAssetsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdAssetsPathParams.class, baseUrl, "/targets/{target_id}/assets/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdAssetsRequest.class, baseUrl, "/targets/{target_id}/assets/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsTargetIdAssetsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsTargetIdAssetsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -164,7 +164,7 @@ public class Assets {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdAssetsIdResponse getTargetsTargetIdAssetsId(org.openapis.openapi.models.operations.GetTargetsTargetIdAssetsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdAssetsIdPathParams.class, baseUrl, "/targets/{target_id}/assets/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdAssetsIdRequest.class, baseUrl, "/targets/{target_id}/assets/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -227,12 +227,12 @@ public class Assets {
      */
     public org.openapis.openapi.models.operations.PatchTargetsTargetIdAssetsIdResponse patchTargetsTargetIdAssetsId(org.openapis.openapi.models.operations.PatchTargetsTargetIdAssetsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsTargetIdAssetsIdPathParams.class, baseUrl, "/targets/{target_id}/assets/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsTargetIdAssetsIdRequest.class, baseUrl, "/targets/{target_id}/assets/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "assetInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -303,12 +303,12 @@ public class Assets {
      */
     public org.openapis.openapi.models.operations.PostTargetsTargetIdAssetsResponse postTargetsTargetIdAssets(org.openapis.openapi.models.operations.PostTargetsTargetIdAssetsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTargetsTargetIdAssetsPathParams.class, baseUrl, "/targets/{target_id}/assets/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTargetsTargetIdAssetsRequest.class, baseUrl, "/targets/{target_id}/assets/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "assetInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -379,12 +379,12 @@ public class Assets {
      */
     public org.openapis.openapi.models.operations.PostTargetsTargetIdAssetsIdVerifyResponse postTargetsTargetIdAssetsIdVerify(org.openapis.openapi.models.operations.PostTargetsTargetIdAssetsIdVerifyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTargetsTargetIdAssetsIdVerifyPathParams.class, baseUrl, "/targets/{target_id}/assets/{id}/verify/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTargetsTargetIdAssetsIdVerifyRequest.class, baseUrl, "/targets/{target_id}/assets/{id}/verify/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -455,12 +455,12 @@ public class Assets {
      */
     public org.openapis.openapi.models.operations.PutTargetsTargetIdAssetsIdResponse putTargetsTargetIdAssetsId(org.openapis.openapi.models.operations.PutTargetsTargetIdAssetsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTargetsTargetIdAssetsIdPathParams.class, baseUrl, "/targets/{target_id}/assets/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTargetsTargetIdAssetsIdRequest.class, baseUrl, "/targets/{target_id}/assets/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "assetInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

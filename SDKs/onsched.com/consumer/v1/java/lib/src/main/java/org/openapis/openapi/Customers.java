@@ -40,7 +40,7 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.DeleteConsumerV1CustomersIdResponse deleteConsumerV1CustomersId(org.openapis.openapi.models.operations.DeleteConsumerV1CustomersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConsumerV1CustomersIdPathParams.class, baseUrl, "/consumer/v1/customers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConsumerV1CustomersIdRequest.class, baseUrl, "/consumer/v1/customers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -80,7 +80,7 @@ public class Customers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1CustomersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1CustomersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -126,7 +126,7 @@ public class Customers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1CustomersBookingfieldsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1CustomersBookingfieldsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -211,7 +211,7 @@ public class Customers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1CustomersCustomfieldsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1CustomersCustomfieldsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -257,7 +257,7 @@ public class Customers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1CustomersStatesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1CustomersStatesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -297,7 +297,7 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.GetConsumerV1CustomersIdResponse getConsumerV1CustomersId(org.openapis.openapi.models.operations.GetConsumerV1CustomersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConsumerV1CustomersIdPathParams.class, baseUrl, "/consumer/v1/customers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConsumerV1CustomersIdRequest.class, baseUrl, "/consumer/v1/customers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -336,7 +336,7 @@ public class Customers {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostConsumerV1CustomersResponse postConsumerV1Customers(org.openapis.openapi.models.operations.PostConsumerV1CustomersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostConsumerV1CustomersResponse postConsumerV1Customers(org.openapis.openapi.models.shared.CustomerInputModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/consumer/v1/customers");
         
@@ -380,12 +380,12 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.PutConsumerV1CustomersIdResponse putConsumerV1CustomersId(org.openapis.openapi.models.operations.PutConsumerV1CustomersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConsumerV1CustomersIdPathParams.class, baseUrl, "/consumer/v1/customers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConsumerV1CustomersIdRequest.class, baseUrl, "/consumer/v1/customers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customerUpdateModel", "json");
         req.setBody(serializedRequestBody);
         
         

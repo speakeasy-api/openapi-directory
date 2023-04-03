@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReviewsReviewIdRequest {
-    
-    public GetReviewsReviewIdPathParams pathParams;
-    public GetReviewsReviewIdRequest withPathParams(GetReviewsReviewIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the review to be located
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reviewId")
+    public String reviewId;
+    public GetReviewsReviewIdRequest withReviewId(String reviewId) {
+        this.reviewId = reviewId;
         return this;
     }
     

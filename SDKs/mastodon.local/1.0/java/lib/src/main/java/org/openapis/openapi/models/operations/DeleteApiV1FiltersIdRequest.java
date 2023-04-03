@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteApiV1FiltersIdRequest {
-    
-    public DeleteApiV1FiltersIdPathParams pathParams;
-    public DeleteApiV1FiltersIdRequest withPathParams(DeleteApiV1FiltersIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteApiV1FiltersIdSecurity security;
-    public DeleteApiV1FiltersIdRequest withSecurity(DeleteApiV1FiltersIdSecurity security) {
-        this.security = security;
+    /**
+     * The id of the account in the database
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteApiV1FiltersIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

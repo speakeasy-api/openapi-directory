@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateApiKeyFromGroupRequest {
-    
-    public CreateApiKeyFromGroupPathParams pathParams;
-    public CreateApiKeyFromGroupRequest withPathParams(CreateApiKeyFromGroupPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiKey request;
-    public CreateApiKeyFromGroupRequest withRequest(org.openapis.openapi.models.shared.ApiKey request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiKey apiKey;
+    public CreateApiKeyFromGroupRequest withApiKey(org.openapis.openapi.models.shared.ApiKey apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public CreateApiKeyFromGroupSecurity security;
-    public CreateApiKeyFromGroupRequest withSecurity(CreateApiKeyFromGroupSecurity security) {
-        this.security = security;
+    /**
+     * The api key group id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public CreateApiKeyFromGroupRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

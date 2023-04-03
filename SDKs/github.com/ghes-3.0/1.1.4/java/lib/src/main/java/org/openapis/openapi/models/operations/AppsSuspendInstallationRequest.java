@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsSuspendInstallationRequest {
-    
-    public AppsSuspendInstallationPathParams pathParams;
-    public AppsSuspendInstallationRequest withPathParams(AppsSuspendInstallationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * installation_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=installation_id")
+    public Long installationId;
+    public AppsSuspendInstallationRequest withInstallationId(Long installationId) {
+        this.installationId = installationId;
         return this;
     }
     

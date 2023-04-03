@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PecerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PecerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/PecerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PecerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/PecerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Pecer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Pecer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Pecer504ApplicationJSON.java
@@ -61,7 +60,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PrfndSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PrfndRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/PrfndRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PrfndRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/PrfndRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Prfnd504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Prfnd504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Prfnd504ApplicationJSON.java
@@ -95,6 +93,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 USAGE.md

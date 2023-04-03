@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoGetCombinedStatusByRefRequest {
-    
-    public RepoGetCombinedStatusByRefPathParams pathParams;
-    public RepoGetCombinedStatusByRefRequest withPathParams(RepoGetCombinedStatusByRefPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public RepoGetCombinedStatusByRefRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoGetCombinedStatusByRefRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public RepoGetCombinedStatusByRefQueryParams queryParams;
-    public RepoGetCombinedStatusByRefRequest withQueryParams(RepoGetCombinedStatusByRefQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public RepoGetCombinedStatusByRefRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * name of branch/tag/commit
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ref")
+    public String ref;
+    public RepoGetCombinedStatusByRefRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoGetCombinedStatusByRefRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

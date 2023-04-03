@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectRequest {
+    /**
+     * The name of the project in the space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public GetProjectRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public GetProjectPathParams pathParams;
-    public GetProjectRequest withPathParams(GetProjectPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceName")
+    public String spaceName;
+    public GetProjectRequest withSpaceName(String spaceName) {
+        this.spaceName = spaceName;
         return this;
     }
     

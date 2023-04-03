@@ -39,7 +39,7 @@ public class Restrictions {
      */
     public org.openapis.openapi.models.operations.GetNetworkSmDeviceRestrictionsResponse getNetworkSmDeviceRestrictions(org.openapis.openapi.models.operations.GetNetworkSmDeviceRestrictionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmDeviceRestrictionsPathParams.class, baseUrl, "/networks/{networkId}/sm/devices/{deviceId}/restrictions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmDeviceRestrictionsRequest.class, baseUrl, "/networks/{networkId}/sm/devices/{deviceId}/restrictions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

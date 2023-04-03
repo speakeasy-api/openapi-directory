@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminSuspendUserRequest {
-    
-    public EnterpriseAdminSuspendUserPathParams pathParams;
-    public EnterpriseAdminSuspendUserRequest withPathParams(EnterpriseAdminSuspendUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public EnterpriseAdminSuspendUserRequestBody requestBody;
+    public EnterpriseAdminSuspendUserRequest withRequestBody(EnterpriseAdminSuspendUserRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public EnterpriseAdminSuspendUserRequestBody request;
-    public EnterpriseAdminSuspendUserRequest withRequest(EnterpriseAdminSuspendUserRequestBody request) {
-        this.request = request;
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public EnterpriseAdminSuspendUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

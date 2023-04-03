@@ -35,7 +35,7 @@ public class WardsInADistrict {
      */
     public org.openapis.openapi.models.operations.WardsInADistrictResponse wardsInADistrict(org.openapis.openapi.models.operations.WardsInADistrictRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WardsInADistrictPathParams.class, baseUrl, "/{country}/{region}/{district}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WardsInADistrictRequest.class, baseUrl, "/{country}/{region}/{district}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

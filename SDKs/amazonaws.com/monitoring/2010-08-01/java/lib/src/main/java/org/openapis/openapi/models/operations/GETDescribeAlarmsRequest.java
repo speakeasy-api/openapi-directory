@@ -4,20 +4,159 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeAlarmsRequest {
-    
-    public GETDescribeAlarmsQueryParams queryParams;
-    public GETDescribeAlarmsRequest withQueryParams(GETDescribeAlarmsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeAlarmsActionEnum action;
+    public GETDescribeAlarmsRequest withAction(GETDescribeAlarmsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Use this parameter to filter the results of the operation to only those alarms that use a certain alarm action. For example, you could specify the ARN of an SNS topic to find all alarms that send notifications to that topic.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ActionPrefix")
+    public String actionPrefix;
+    public GETDescribeAlarmsRequest withActionPrefix(String actionPrefix) {
+        this.actionPrefix = actionPrefix;
+        return this;
+    }
     
-    public GETDescribeAlarmsHeaders headers;
-    public GETDescribeAlarmsRequest withHeaders(GETDescribeAlarmsHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;An alarm name prefix. If you specify this parameter, you receive information about all alarms that have names that start with this prefix.&lt;/p&gt; &lt;p&gt;If this parameter is specified, you cannot specify &lt;code&gt;AlarmNames&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AlarmNamePrefix")
+    public String alarmNamePrefix;
+    public GETDescribeAlarmsRequest withAlarmNamePrefix(String alarmNamePrefix) {
+        this.alarmNamePrefix = alarmNamePrefix;
+        return this;
+    }
+    
+    /**
+     * The names of the alarms to retrieve information about.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AlarmNames")
+    public String[] alarmNames;
+    public GETDescribeAlarmsRequest withAlarmNames(String[] alarmNames) {
+        this.alarmNames = alarmNames;
+        return this;
+    }
+    
+    /**
+     * Use this parameter to specify whether you want the operation to return metric alarms or composite alarms. If you omit this parameter, only metric alarms are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AlarmTypes")
+    public org.openapis.openapi.models.shared.AlarmTypeEnum[] alarmTypes;
+    public GETDescribeAlarmsRequest withAlarmTypes(org.openapis.openapi.models.shared.AlarmTypeEnum[] alarmTypes) {
+        this.alarmTypes = alarmTypes;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;If you use this parameter and specify the name of a composite alarm, the operation returns information about the "children" alarms of the alarm you specify. These are the metric alarms and composite alarms referenced in the &lt;code&gt;AlarmRule&lt;/code&gt; field of the composite alarm that you specify in &lt;code&gt;ChildrenOfAlarmName&lt;/code&gt;. Information about the composite alarm that you name in &lt;code&gt;ChildrenOfAlarmName&lt;/code&gt; is not returned.&lt;/p&gt; &lt;p&gt;If you specify &lt;code&gt;ChildrenOfAlarmName&lt;/code&gt;, you cannot specify any other parameters in the request except for &lt;code&gt;MaxRecords&lt;/code&gt; and &lt;code&gt;NextToken&lt;/code&gt;. If you do so, you receive a validation error.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Only the &lt;code&gt;Alarm Name&lt;/code&gt;, &lt;code&gt;ARN&lt;/code&gt;, &lt;code&gt;StateValue&lt;/code&gt; (OK/ALARM/INSUFFICIENT_DATA), and &lt;code&gt;StateUpdatedTimestamp&lt;/code&gt; information are returned by this operation when you use this parameter. To get complete information about these alarms, perform another &lt;code&gt;DescribeAlarms&lt;/code&gt; operation and specify the parent alarm names in the &lt;code&gt;AlarmNames&lt;/code&gt; parameter.&lt;/p&gt; &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ChildrenOfAlarmName")
+    public String childrenOfAlarmName;
+    public GETDescribeAlarmsRequest withChildrenOfAlarmName(String childrenOfAlarmName) {
+        this.childrenOfAlarmName = childrenOfAlarmName;
+        return this;
+    }
+    
+    /**
+     * The maximum number of alarm descriptions to retrieve.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeAlarmsRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    /**
+     * The token returned by a previous call to indicate that there is more data available.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETDescribeAlarmsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;If you use this parameter and specify the name of a metric or composite alarm, the operation returns information about the "parent" alarms of the alarm you specify. These are the composite alarms that have &lt;code&gt;AlarmRule&lt;/code&gt; parameters that reference the alarm named in &lt;code&gt;ParentsOfAlarmName&lt;/code&gt;. Information about the alarm that you specify in &lt;code&gt;ParentsOfAlarmName&lt;/code&gt; is not returned.&lt;/p&gt; &lt;p&gt;If you specify &lt;code&gt;ParentsOfAlarmName&lt;/code&gt;, you cannot specify any other parameters in the request except for &lt;code&gt;MaxRecords&lt;/code&gt; and &lt;code&gt;NextToken&lt;/code&gt;. If you do so, you receive a validation error.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Only the Alarm Name and ARN are returned by this operation when you use this parameter. To get complete information about these alarms, perform another &lt;code&gt;DescribeAlarms&lt;/code&gt; operation and specify the parent alarm names in the &lt;code&gt;AlarmNames&lt;/code&gt; parameter.&lt;/p&gt; &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ParentsOfAlarmName")
+    public String parentsOfAlarmName;
+    public GETDescribeAlarmsRequest withParentsOfAlarmName(String parentsOfAlarmName) {
+        this.parentsOfAlarmName = parentsOfAlarmName;
+        return this;
+    }
+    
+    /**
+     * Specify this parameter to receive information only about alarms that are currently in the state that you specify.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StateValue")
+    public GETDescribeAlarmsStateValueEnum stateValue;
+    public GETDescribeAlarmsRequest withStateValue(GETDescribeAlarmsStateValueEnum stateValue) {
+        this.stateValue = stateValue;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeAlarmsVersionEnum version;
+    public GETDescribeAlarmsRequest withVersion(GETDescribeAlarmsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeAlarmsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeAlarmsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeAlarmsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeAlarmsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeAlarmsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeAlarmsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeAlarmsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

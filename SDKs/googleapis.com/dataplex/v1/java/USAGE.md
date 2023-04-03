@@ -5,16 +5,12 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateSecurity;
-import org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreatePathParams;
-import org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateQueryParams;
 import org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateRequest;
 import org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleCloudDataplexV1DataAttributeBindingInput;
 import org.openapis.openapi.models.shared.GoogleCloudDataplexV1DataAttributeBindingPath;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -23,66 +19,61 @@ public class Application {
                 .build();
 
             DataplexProjectsLocationsDataAttributeBindingsCreateRequest req = new DataplexProjectsLocationsDataAttributeBindingsCreateRequest() {{
-                security = new DataplexProjectsLocationsDataAttributeBindingsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new DataplexProjectsLocationsDataAttributeBindingsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new DataplexProjectsLocationsDataAttributeBindingsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    dataAttributeBindingId = "nulla";
-                    fields = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    uploadType = "deserunt";
-                    uploadProtocol = "suscipit";
-                    validateOnly = false;
-                }};
-                request = new GoogleCloudDataplexV1DataAttributeBindingInput() {{
+                dollarXgafv = "2";
+                googleCloudDataplexV1DataAttributeBindingInput = new GoogleCloudDataplexV1DataAttributeBindingInput() {{
                     attributes = new String[]{{
-                        add("magnam"),
-                        add("debitis"),
+                        add("distinctio"),
+                        add("quibusdam"),
+                        add("unde"),
                     }};
-                    description = "ipsa";
-                    displayName = "delectus";
-                    etag = "tempora";
+                    description = "nulla";
+                    displayName = "corrupti";
+                    etag = "illum";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("molestiae", "minus");
-                        put("placeat", "voluptatum");
+                        put("error", "deserunt");
+                        put("suscipit", "iure");
                     }};
                     paths = new org.openapis.openapi.models.shared.GoogleCloudDataplexV1DataAttributeBindingPath[]{{
                         add(new GoogleCloudDataplexV1DataAttributeBindingPath() {{
                             attributes = new String[]{{
-                                add("nisi"),
-                                add("recusandae"),
-                                add("temporibus"),
+                                add("ipsa"),
+                                add("delectus"),
+                                add("tempora"),
+                                add("suscipit"),
                             }};
-                            name = "ab";
+                            name = "molestiae";
                         }}),
                         add(new GoogleCloudDataplexV1DataAttributeBindingPath() {{
                             attributes = new String[]{{
-                                add("veritatis"),
-                                add("deserunt"),
+                                add("placeat"),
+                                add("voluptatum"),
+                                add("iusto"),
+                                add("excepturi"),
                             }};
-                            name = "perferendis";
+                            name = "nisi";
                         }}),
                     }};
-                    resource = "ipsam";
+                    resource = "recusandae";
                 }};
-            }};            
+                accessToken = "temporibus";
+                alt = "json";
+                callback = "quis";
+                dataAttributeBindingId = "veritatis";
+                fields = "deserunt";
+                key = "perferendis";
+                oauthToken = "ipsam";
+                parent = "repellendus";
+                prettyPrint = false;
+                quotaUser = "sapiente";
+                uploadType = "quo";
+                uploadProtocol = "odit";
+                validateOnly = false;
+            }}            
 
-            DataplexProjectsLocationsDataAttributeBindingsCreateResponse res = sdk.projects.dataplexProjectsLocationsDataAttributeBindingsCreate(req);
+            DataplexProjectsLocationsDataAttributeBindingsCreateResponse res = sdk.projects.dataplexProjectsLocationsDataAttributeBindingsCreate(req, new DataplexProjectsLocationsDataAttributeBindingsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.googleLongrunningOperation.isPresent()) {
                 // handle response

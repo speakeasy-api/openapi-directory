@@ -4,20 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFieldLevelEncryptionProfile20190326Request {
-    
-    public DeleteFieldLevelEncryptionProfile20190326PathParams pathParams;
-    public DeleteFieldLevelEncryptionProfile20190326Request withPathParams(DeleteFieldLevelEncryptionProfile20190326PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Request the ID of the profile you want to delete from CloudFront.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Id")
+    public String id;
+    public DeleteFieldLevelEncryptionProfile20190326Request withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * The value of the &lt;code&gt;ETag&lt;/code&gt; header that you received when retrieving the profile to delete. For example: &lt;code&gt;E2QWRUHAPOMQZL&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public DeleteFieldLevelEncryptionProfile20190326Request withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
+        return this;
+    }
     
-    public DeleteFieldLevelEncryptionProfile20190326Headers headers;
-    public DeleteFieldLevelEncryptionProfile20190326Request withHeaders(DeleteFieldLevelEncryptionProfile20190326Headers headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DeleteFieldLevelEncryptionProfile20190326Request withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DeleteFieldLevelEncryptionProfile20190326Request withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DeleteFieldLevelEncryptionProfile20190326Request withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DeleteFieldLevelEncryptionProfile20190326Request withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DeleteFieldLevelEncryptionProfile20190326Request withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DeleteFieldLevelEncryptionProfile20190326Request withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DeleteFieldLevelEncryptionProfile20190326Request withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

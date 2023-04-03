@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETTerminateEnvironmentRequest {
-    
-    public GETTerminateEnvironmentQueryParams queryParams;
-    public GETTerminateEnvironmentRequest withQueryParams(GETTerminateEnvironmentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETTerminateEnvironmentActionEnum action;
+    public GETTerminateEnvironmentRequest withAction(GETTerminateEnvironmentActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The ID of the environment to terminate.&lt;/p&gt; &lt;p&gt; Condition: You must specify either this or an EnvironmentName, or both. If you do not specify either, AWS Elastic Beanstalk returns &lt;code&gt;MissingRequiredParameter&lt;/code&gt; error. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentId")
+    public String environmentId;
+    public GETTerminateEnvironmentRequest withEnvironmentId(String environmentId) {
+        this.environmentId = environmentId;
+        return this;
+    }
     
-    public GETTerminateEnvironmentHeaders headers;
-    public GETTerminateEnvironmentRequest withHeaders(GETTerminateEnvironmentHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The name of the environment to terminate.&lt;/p&gt; &lt;p&gt; Condition: You must specify either this or an EnvironmentId, or both. If you do not specify either, AWS Elastic Beanstalk returns &lt;code&gt;MissingRequiredParameter&lt;/code&gt; error. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentName")
+    public String environmentName;
+    public GETTerminateEnvironmentRequest withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
+        return this;
+    }
+    
+    /**
+     * Terminates the target environment even if another environment in the same group is dependent on it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ForceTerminate")
+    public Boolean forceTerminate;
+    public GETTerminateEnvironmentRequest withForceTerminate(Boolean forceTerminate) {
+        this.forceTerminate = forceTerminate;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Indicates whether the associated AWS resources should shut down when the environment is terminated:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;true&lt;/code&gt;: The specified environment as well as the associated AWS resources, such as Auto Scaling group and LoadBalancer, are terminated.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;false&lt;/code&gt;: AWS Elastic Beanstalk resource management is removed from the environment, but the AWS resources continue to operate.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; For more information, see the &lt;a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/ug/"&gt; AWS Elastic Beanstalk User Guide. &lt;/a&gt; &lt;/p&gt; &lt;p&gt; Default: &lt;code&gt;true&lt;/code&gt; &lt;/p&gt; &lt;p&gt; Valid Values: &lt;code&gt;true&lt;/code&gt; | &lt;code&gt;false&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TerminateResources")
+    public Boolean terminateResources;
+    public GETTerminateEnvironmentRequest withTerminateResources(Boolean terminateResources) {
+        this.terminateResources = terminateResources;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETTerminateEnvironmentVersionEnum version;
+    public GETTerminateEnvironmentRequest withVersion(GETTerminateEnvironmentVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETTerminateEnvironmentRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETTerminateEnvironmentRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETTerminateEnvironmentRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETTerminateEnvironmentRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETTerminateEnvironmentRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETTerminateEnvironmentRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETTerminateEnvironmentRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

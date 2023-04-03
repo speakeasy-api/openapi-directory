@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVodGenreByOndemandIdRequest {
+    /**
+     * The ID of the genre.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=genre_id")
+    public String genreId;
+    public GetVodGenreByOndemandIdRequest withGenreId(String genreId) {
+        this.genreId = genreId;
+        return this;
+    }
     
-    public GetVodGenreByOndemandIdPathParams pathParams;
-    public GetVodGenreByOndemandIdRequest withPathParams(GetVodGenreByOndemandIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public GetVodGenreByOndemandIdRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
         return this;
     }
     

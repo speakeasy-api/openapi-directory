@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposGetWebhookConfigForRepoRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
+    public Long hookId;
+    public ReposGetWebhookConfigForRepoRequest withHookId(Long hookId) {
+        this.hookId = hookId;
+        return this;
+    }
     
-    public ReposGetWebhookConfigForRepoPathParams pathParams;
-    public ReposGetWebhookConfigForRepoRequest withPathParams(ReposGetWebhookConfigForRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposGetWebhookConfigForRepoRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposGetWebhookConfigForRepoRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest {
-    
-    public DialogflowProjectsLocationsAgentsFlowsVersionsLoadPathParams pathParams;
-    public DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest withPathParams(DialogflowProjectsLocationsAgentsFlowsVersionsLoadPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DialogflowProjectsLocationsAgentsFlowsVersionsLoadQueryParams queryParams;
-    public DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest withQueryParams(DialogflowProjectsLocationsAgentsFlowsVersionsLoadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudDialogflowCxV3LoadVersionRequest request;
-    public DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudDialogflowCxV3LoadVersionRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudDialogflowCxV3LoadVersionRequest googleCloudDialogflowCxV3LoadVersionRequest;
+    public DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest withGoogleCloudDialogflowCxV3LoadVersionRequest(org.openapis.openapi.models.shared.GoogleCloudDialogflowCxV3LoadVersionRequest googleCloudDialogflowCxV3LoadVersionRequest) {
+        this.googleCloudDialogflowCxV3LoadVersionRequest = googleCloudDialogflowCxV3LoadVersionRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public DialogflowProjectsLocationsAgentsFlowsVersionsLoadSecurity security;
-    public DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest withSecurity(DialogflowProjectsLocationsAgentsFlowsVersionsLoadSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Required. The Version to be loaded to draft flow. Format: `projects//locations//agents//flows//versions/`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

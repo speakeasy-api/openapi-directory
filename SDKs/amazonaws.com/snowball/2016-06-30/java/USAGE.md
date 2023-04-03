@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CancelClusterXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CancelClusterHeaders;
 import org.openapis.openapi.models.operations.CancelClusterRequest;
 import org.openapis.openapi.models.operations.CancelClusterResponse;
 import org.openapis.openapi.models.shared.CancelClusterRequest;
@@ -15,27 +14,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CancelClusterRequest req = new CancelClusterRequest() {{
-                headers = new CancelClusterHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AWSIESnowballJobManagementService.CancelCluster";
+                cancelClusterRequest = new CancelClusterRequest() {{
+                    clusterId = "corrupti";
                 }};
-                request = new CancelClusterRequest() {{
-                    clusterId = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+                xAmzTarget = "AWSIESnowballJobManagementService.CancelCluster";
+            }}            
 
             CancelClusterResponse res = sdk.cancelCluster(req);
 

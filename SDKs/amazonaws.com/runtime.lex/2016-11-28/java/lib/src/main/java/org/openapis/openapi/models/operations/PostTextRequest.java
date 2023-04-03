@@ -7,24 +7,89 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostTextRequest {
-    
-    public PostTextPathParams pathParams;
-    public PostTextRequest withPathParams(PostTextPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostTextHeaders headers;
-    public PostTextRequest withHeaders(PostTextHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostTextRequestBody request;
-    public PostTextRequest withRequest(PostTextRequestBody request) {
-        this.request = request;
+    public PostTextRequestBody requestBody;
+    public PostTextRequest withRequestBody(PostTextRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public PostTextRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public PostTextRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public PostTextRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public PostTextRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public PostTextRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public PostTextRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public PostTextRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The alias of the Amazon Lex bot.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botAlias")
+    public String botAlias;
+    public PostTextRequest withBotAlias(String botAlias) {
+        this.botAlias = botAlias;
+        return this;
+    }
+    
+    /**
+     * The name of the Amazon Lex bot.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botName")
+    public String botName;
+    public PostTextRequest withBotName(String botName) {
+        this.botName = botName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The ID of the client application user. Amazon Lex uses this to identify a user's conversation with your bot. At runtime, each request must contain the &lt;code&gt;userID&lt;/code&gt; field.&lt;/p&gt; &lt;p&gt;To decide the user ID to use for your application, consider the following factors.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;The &lt;code&gt;userID&lt;/code&gt; field must not contain any personally identifiable information of the user, for example, name, personal identification numbers, or other end user personal information.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;If you want a user to start a conversation on one device and continue on another device, use a user-specific identifier.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;If you want the same user to be able to have two independent conversations on two different devices, choose a device-specific identifier.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;A user can't have two independent conversations with two different versions of the same bot. For example, a user can't have a conversation with the PROD and BETA versions of the same bot. If you anticipate that a user will need to have conversation with two different versions, for example, while testing, include the bot alias in the user ID to separate the two conversations.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public PostTextRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

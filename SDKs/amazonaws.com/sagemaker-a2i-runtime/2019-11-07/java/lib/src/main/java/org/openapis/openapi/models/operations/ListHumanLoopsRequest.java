@@ -4,20 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListHumanLoopsRequest {
-    
-    public ListHumanLoopsQueryParams queryParams;
-    public ListHumanLoopsRequest withQueryParams(ListHumanLoopsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Optional) The timestamp of the date when you want the human loops to begin in ISO 8601 format. For example, &lt;code&gt;2020-02-24&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CreationTimeAfter")
+    public OffsetDateTime creationTimeAfter;
+    public ListHumanLoopsRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
+        this.creationTimeAfter = creationTimeAfter;
         return this;
     }
     
+    /**
+     * (Optional) The timestamp of the date before which you want the human loops to begin in ISO 8601 format. For example, &lt;code&gt;2020-02-24&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CreationTimeBefore")
+    public OffsetDateTime creationTimeBefore;
+    public ListHumanLoopsRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
+        this.creationTimeBefore = creationTimeBefore;
+        return this;
+    }
     
-    public ListHumanLoopsHeaders headers;
-    public ListHumanLoopsRequest withHeaders(ListHumanLoopsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Amazon Resource Name (ARN) of a flow definition.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FlowDefinitionArn")
+    public String flowDefinitionArn;
+    public ListHumanLoopsRequest withFlowDefinitionArn(String flowDefinitionArn) {
+        this.flowDefinitionArn = flowDefinitionArn;
+        return this;
+    }
+    
+    /**
+     * The total number of items to return. If the total number of available items is more than the value specified in &lt;code&gt;MaxResults&lt;/code&gt;, then a &lt;code&gt;NextToken&lt;/code&gt; is returned in the output. You can use this token to display the next page of results. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public ListHumanLoopsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * A token to display the next page of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListHumanLoopsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * Optional. The order for displaying results. Valid values: &lt;code&gt;Ascending&lt;/code&gt; and &lt;code&gt;Descending&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SortOrder")
+    public ListHumanLoopsSortOrderEnum sortOrder;
+    public ListHumanLoopsRequest withSortOrder(ListHumanLoopsSortOrderEnum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListHumanLoopsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListHumanLoopsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListHumanLoopsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListHumanLoopsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListHumanLoopsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListHumanLoopsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListHumanLoopsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

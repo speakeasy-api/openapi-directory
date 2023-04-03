@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsListAccountsForPlanStubbedRequest {
-    
-    public AppsListAccountsForPlanStubbedPathParams pathParams;
-    public AppsListAccountsForPlanStubbedRequest withPathParams(AppsListAccountsForPlanStubbedPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * To return the oldest accounts first, set to `asc`. Ignored without the `sort` parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public AppsListAccountsForPlanStubbedDirectionEnum direction;
+    public AppsListAccountsForPlanStubbedRequest withDirection(AppsListAccountsForPlanStubbedDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public AppsListAccountsForPlanStubbedRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public AppsListAccountsForPlanStubbedQueryParams queryParams;
-    public AppsListAccountsForPlanStubbedRequest withQueryParams(AppsListAccountsForPlanStubbedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public AppsListAccountsForPlanStubbedRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the plan.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=plan_id")
+    public Long planId;
+    public AppsListAccountsForPlanStubbedRequest withPlanId(Long planId) {
+        this.planId = planId;
+        return this;
+    }
+    
+    /**
+     * The property to sort the results by. `created` means when the repository was starred. `updated` means when the repository was last pushed to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public org.openapis.openapi.models.shared.SortEnum sort;
+    public AppsListAccountsForPlanStubbedRequest withSort(org.openapis.openapi.models.shared.SortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

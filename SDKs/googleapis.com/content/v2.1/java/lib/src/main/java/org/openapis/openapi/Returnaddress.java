@@ -34,27 +34,28 @@ public class Returnaddress {
     /**
      * Batches multiple return address related calls in a single request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentReturnaddressCustombatchResponse contentReturnaddressCustombatch(org.openapis.openapi.models.operations.ContentReturnaddressCustombatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentReturnaddressCustombatchResponse contentReturnaddressCustombatch(org.openapis.openapi.models.operations.ContentReturnaddressCustombatchRequest request, org.openapis.openapi.models.operations.ContentReturnaddressCustombatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/returnaddress/batch");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "returnaddressCustomBatchRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentReturnaddressCustombatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentReturnaddressCustombatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class Returnaddress {
     /**
      * Deletes a return address for the given Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentReturnaddressDeleteResponse contentReturnaddressDelete(org.openapis.openapi.models.operations.ContentReturnaddressDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentReturnaddressDeleteResponse contentReturnaddressDelete(org.openapis.openapi.models.operations.ContentReturnaddressDeleteRequest request, org.openapis.openapi.models.operations.ContentReturnaddressDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentReturnaddressDeletePathParams.class, baseUrl, "/{merchantId}/returnaddress/{returnAddressId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentReturnaddressDeleteRequest.class, baseUrl, "/{merchantId}/returnaddress/{returnAddressId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentReturnaddressDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentReturnaddressDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -120,25 +122,26 @@ public class Returnaddress {
     /**
      * Gets a return address of the Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentReturnaddressGetResponse contentReturnaddressGet(org.openapis.openapi.models.operations.ContentReturnaddressGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentReturnaddressGetResponse contentReturnaddressGet(org.openapis.openapi.models.operations.ContentReturnaddressGetRequest request, org.openapis.openapi.models.operations.ContentReturnaddressGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentReturnaddressGetPathParams.class, baseUrl, "/{merchantId}/returnaddress/{returnAddressId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentReturnaddressGetRequest.class, baseUrl, "/{merchantId}/returnaddress/{returnAddressId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentReturnaddressGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentReturnaddressGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,27 +168,28 @@ public class Returnaddress {
     /**
      * Inserts a return address for the Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentReturnaddressInsertResponse contentReturnaddressInsert(org.openapis.openapi.models.operations.ContentReturnaddressInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentReturnaddressInsertResponse contentReturnaddressInsert(org.openapis.openapi.models.operations.ContentReturnaddressInsertRequest request, org.openapis.openapi.models.operations.ContentReturnaddressInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentReturnaddressInsertPathParams.class, baseUrl, "/{merchantId}/returnaddress", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentReturnaddressInsertRequest.class, baseUrl, "/{merchantId}/returnaddress", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "returnAddress", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentReturnaddressInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentReturnaddressInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -212,25 +216,26 @@ public class Returnaddress {
     /**
      * Lists the return addresses of the Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentReturnaddressListResponse contentReturnaddressList(org.openapis.openapi.models.operations.ContentReturnaddressListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentReturnaddressListResponse contentReturnaddressList(org.openapis.openapi.models.operations.ContentReturnaddressListRequest request, org.openapis.openapi.models.operations.ContentReturnaddressListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentReturnaddressListPathParams.class, baseUrl, "/{merchantId}/returnaddress", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentReturnaddressListRequest.class, baseUrl, "/{merchantId}/returnaddress", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentReturnaddressListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentReturnaddressListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

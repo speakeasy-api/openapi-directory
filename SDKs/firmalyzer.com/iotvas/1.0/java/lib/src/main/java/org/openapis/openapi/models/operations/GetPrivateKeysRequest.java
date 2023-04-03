@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPrivateKeysRequest {
-    
-    public GetPrivateKeysPathParams pathParams;
-    public GetPrivateKeysRequest withPathParams(GetPrivateKeysPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetPrivateKeysSecurity security;
-    public GetPrivateKeysRequest withSecurity(GetPrivateKeysSecurity security) {
-        this.security = security;
+    /**
+     * SHA2 hash of device firmware
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firmware_hash")
+    public String firmwareHash;
+    public GetPrivateKeysRequest withFirmwareHash(String firmwareHash) {
+        this.firmwareHash = firmwareHash;
         return this;
     }
     

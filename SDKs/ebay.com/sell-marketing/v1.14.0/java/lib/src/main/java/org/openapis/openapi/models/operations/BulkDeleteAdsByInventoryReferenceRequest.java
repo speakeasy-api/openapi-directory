@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BulkDeleteAdsByInventoryReferenceRequest {
-    
-    public BulkDeleteAdsByInventoryReferencePathParams pathParams;
-    public BulkDeleteAdsByInventoryReferenceRequest withPathParams(BulkDeleteAdsByInventoryReferencePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * This request works with listings created via the &lt;a href="/api-docs/sell/inventory/resources/methods"&gt;Inventory API&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;The request is to delete a set of ads in bulk, as specified by a list of inventory reference IDs from the specified campaign.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BulkDeleteAdsByInventoryReferenceRequest request;
-    public BulkDeleteAdsByInventoryReferenceRequest withRequest(org.openapis.openapi.models.shared.BulkDeleteAdsByInventoryReferenceRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BulkDeleteAdsByInventoryReferenceRequest bulkDeleteAdsByInventoryReferenceRequest;
+    public BulkDeleteAdsByInventoryReferenceRequest withBulkDeleteAdsByInventoryReferenceRequest(org.openapis.openapi.models.shared.BulkDeleteAdsByInventoryReferenceRequest bulkDeleteAdsByInventoryReferenceRequest) {
+        this.bulkDeleteAdsByInventoryReferenceRequest = bulkDeleteAdsByInventoryReferenceRequest;
         return this;
     }
     
-    
-    public BulkDeleteAdsByInventoryReferenceSecurity security;
-    public BulkDeleteAdsByInventoryReferenceRequest withSecurity(BulkDeleteAdsByInventoryReferenceSecurity security) {
-        this.security = security;
+    /**
+     * A unique eBay-assigned ID for an ad campaign that's generated when a campaign is created. Get a seller's campaign IDs by calling &lt;a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns"&gt;getCampaigns&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaign_id")
+    public String campaignId;
+    public BulkDeleteAdsByInventoryReferenceRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
         return this;
     }
     

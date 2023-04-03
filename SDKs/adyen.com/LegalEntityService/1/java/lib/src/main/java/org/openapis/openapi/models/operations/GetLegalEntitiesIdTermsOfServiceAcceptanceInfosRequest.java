@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLegalEntitiesIdTermsOfServiceAcceptanceInfosRequest {
-    
-    public GetLegalEntitiesIdTermsOfServiceAcceptanceInfosPathParams pathParams;
-    public GetLegalEntitiesIdTermsOfServiceAcceptanceInfosRequest withPathParams(GetLegalEntitiesIdTermsOfServiceAcceptanceInfosPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetLegalEntitiesIdTermsOfServiceAcceptanceInfosSecurity security;
-    public GetLegalEntitiesIdTermsOfServiceAcceptanceInfosRequest withSecurity(GetLegalEntitiesIdTermsOfServiceAcceptanceInfosSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the legal entity.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetLegalEntitiesIdTermsOfServiceAcceptanceInfosRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

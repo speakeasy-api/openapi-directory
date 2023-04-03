@@ -4,27 +4,64 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPresenceHistoryOfChannelRequest {
-    
-    public GetPresenceHistoryOfChannelPathParams pathParams;
-    public GetPresenceHistoryOfChannelRequest withPathParams(GetPresenceHistoryOfChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the API you wish to use.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
+    public String xAblyVersion;
+    public GetPresenceHistoryOfChannelRequest withXAblyVersion(String xAblyVersion) {
+        this.xAblyVersion = xAblyVersion;
         return this;
     }
     
-    
-    public GetPresenceHistoryOfChannelQueryParams queryParams;
-    public GetPresenceHistoryOfChannelRequest withQueryParams(GetPresenceHistoryOfChannelQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The [Channel's ID](https://www.ably.io/documentation/rest/channels).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public String channelId;
+    public GetPresenceHistoryOfChannelRequest withChannelId(String channelId) {
+        this.channelId = channelId;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public org.openapis.openapi.models.shared.FilterDirectionEnum direction;
+    public GetPresenceHistoryOfChannelRequest withDirection(org.openapis.openapi.models.shared.FilterDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public GetPresenceHistoryOfChannelHeaders headers;
-    public GetPresenceHistoryOfChannelRequest withHeaders(GetPresenceHistoryOfChannelHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public String end;
+    public GetPresenceHistoryOfChannelRequest withEnd(String end) {
+        this.end = end;
+        return this;
+    }
+    
+    /**
+     * The response format you would like
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+    public GetPresenceHistoryOfChannelRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetPresenceHistoryOfChannelRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public String start;
+    public GetPresenceHistoryOfChannelRequest withStart(String start) {
+        this.start = start;
         return this;
     }
     

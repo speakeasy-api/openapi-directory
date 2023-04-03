@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveAnAchTransferRequest {
-    
-    public RetrieveAnAchTransferPathParams pathParams;
-    public RetrieveAnAchTransferRequest withPathParams(RetrieveAnAchTransferPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ach_transfer_id")
+    public String achTransferId;
+    public RetrieveAnAchTransferRequest withAchTransferId(String achTransferId) {
+        this.achTransferId = achTransferId;
         return this;
     }
     

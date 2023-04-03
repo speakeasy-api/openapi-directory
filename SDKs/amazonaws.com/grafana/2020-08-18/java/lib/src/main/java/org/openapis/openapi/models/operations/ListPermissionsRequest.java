@@ -4,27 +4,115 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPermissionsRequest {
-    
-    public ListPermissionsPathParams pathParams;
-    public ListPermissionsRequest withPathParams(ListPermissionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListPermissionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public ListPermissionsQueryParams queryParams;
-    public ListPermissionsRequest withQueryParams(ListPermissionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListPermissionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListPermissionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public ListPermissionsHeaders headers;
-    public ListPermissionsRequest withHeaders(ListPermissionsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListPermissionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListPermissionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListPermissionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListPermissionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * (Optional) Limits the results to only the group that matches this ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupId")
+    public String groupId;
+    public ListPermissionsRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to include in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListPermissionsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The token to use when requesting the next set of results. You received this token from a previous &lt;code&gt;ListPermissions&lt;/code&gt; operation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListPermissionsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * (Optional) Limits the results to only the user that matches this ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
+    public String userId;
+    public ListPermissionsRequest withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    
+    /**
+     * (Optional) If you specify &lt;code&gt;SSO_USER&lt;/code&gt;, then only the permissions of IAM Identity Center users are returned. If you specify &lt;code&gt;SSO_GROUP&lt;/code&gt;, only the permissions of IAM Identity Center groups are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userType")
+    public ListPermissionsUserTypeEnum userType;
+    public ListPermissionsRequest withUserType(ListPermissionsUserTypeEnum userType) {
+        this.userType = userType;
+        return this;
+    }
+    
+    /**
+     * The ID of the workspace to list permissions for. This parameter is required.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspaceId")
+    public String workspaceId;
+    public ListPermissionsRequest withWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
         return this;
     }
     

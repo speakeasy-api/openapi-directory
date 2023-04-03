@@ -7,29 +7,35 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrderRequest {
-    
-    public UpdateOrderPathParams pathParams;
-    public UpdateOrderRequest withPathParams(UpdateOrderPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.V1UpdateOrderRequest request;
-    public UpdateOrderRequest withRequest(org.openapis.openapi.models.shared.V1UpdateOrderRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.V1UpdateOrderRequest v1UpdateOrderRequest;
+    public UpdateOrderRequest withV1UpdateOrderRequest(org.openapis.openapi.models.shared.V1UpdateOrderRequest v1UpdateOrderRequest) {
+        this.v1UpdateOrderRequest = v1UpdateOrderRequest;
         return this;
     }
     
+    /**
+     * The ID of the order's associated location.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public UpdateOrderRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
     
-    public UpdateOrderSecurity security;
-    public UpdateOrderRequest withSecurity(UpdateOrderSecurity security) {
-        this.security = security;
+    /**
+     * The order's Square-issued ID. You obtain this value from Order objects returned by the List Orders endpoint
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=order_id")
+    public String orderId;
+    public UpdateOrderRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

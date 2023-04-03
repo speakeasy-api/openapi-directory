@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodespacesRepoMachinesForAuthenticatedUserRequest {
-    
-    public CodespacesRepoMachinesForAuthenticatedUserPathParams pathParams;
-    public CodespacesRepoMachinesForAuthenticatedUserRequest withPathParams(CodespacesRepoMachinesForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * IP for location auto-detection when proxying a request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client_ip")
+    public String clientIp;
+    public CodespacesRepoMachinesForAuthenticatedUserRequest withClientIp(String clientIp) {
+        this.clientIp = clientIp;
         return this;
     }
     
+    /**
+     * The location to check for available machines. Assigned by IP if not provided.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location")
+    public String location;
+    public CodespacesRepoMachinesForAuthenticatedUserRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
     
-    public CodespacesRepoMachinesForAuthenticatedUserQueryParams queryParams;
-    public CodespacesRepoMachinesForAuthenticatedUserRequest withQueryParams(CodespacesRepoMachinesForAuthenticatedUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public CodespacesRepoMachinesForAuthenticatedUserRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public CodespacesRepoMachinesForAuthenticatedUserRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

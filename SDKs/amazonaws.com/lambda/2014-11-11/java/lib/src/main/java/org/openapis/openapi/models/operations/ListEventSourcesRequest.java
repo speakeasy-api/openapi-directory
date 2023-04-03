@@ -4,20 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListEventSourcesRequest {
-    
-    public ListEventSourcesQueryParams queryParams;
-    public ListEventSourcesRequest withQueryParams(ListEventSourcesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon Kinesis stream.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EventSource")
+    public String eventSource;
+    public ListEventSourcesRequest withEventSource(String eventSource) {
+        this.eventSource = eventSource;
         return this;
     }
     
+    /**
+     * The name of the AWS Lambda function.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FunctionName")
+    public String functionName;
+    public ListEventSourcesRequest withFunctionName(String functionName) {
+        this.functionName = functionName;
+        return this;
+    }
     
-    public ListEventSourcesHeaders headers;
-    public ListEventSourcesRequest withHeaders(ListEventSourcesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Optional string. An opaque pagination token returned from a previous &lt;code&gt;ListEventSources&lt;/code&gt; operation. If present, specifies to continue the list from where the returning call left off. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public ListEventSourcesRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * Optional integer. Specifies the maximum number of event sources to return in response. This value must be greater than 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
+    public Long maxItems;
+    public ListEventSourcesRequest withMaxItems(Long maxItems) {
+        this.maxItems = maxItems;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListEventSourcesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListEventSourcesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListEventSourcesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListEventSourcesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListEventSourcesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListEventSourcesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListEventSourcesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

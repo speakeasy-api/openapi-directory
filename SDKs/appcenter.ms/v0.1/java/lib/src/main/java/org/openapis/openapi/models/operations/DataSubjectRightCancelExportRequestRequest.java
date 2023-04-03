@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataSubjectRightCancelExportRequestRequest {
-    
-    public DataSubjectRightCancelExportRequestPathParams pathParams;
-    public DataSubjectRightCancelExportRequestRequest withPathParams(DataSubjectRightCancelExportRequestPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DataSubjectRightCancelExportRequestSecurity security;
-    public DataSubjectRightCancelExportRequestRequest withSecurity(DataSubjectRightCancelExportRequestSecurity security) {
-        this.security = security;
+    /**
+     * Unique request ID (GUID)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
+    public String token;
+    public DataSubjectRightCancelExportRequestRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

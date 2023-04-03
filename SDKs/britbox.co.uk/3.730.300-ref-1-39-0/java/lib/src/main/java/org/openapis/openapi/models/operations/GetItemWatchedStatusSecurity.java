@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemWatchedStatusSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeProfileAuth profileAuth;
-    public GetItemWatchedStatusSecurity withProfileAuth(org.openapis.openapi.models.shared.SchemeProfileAuth profileAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String profileAuth;
+    public GetItemWatchedStatusSecurity withProfileAuth(String profileAuth) {
         this.profileAuth = profileAuth;
         return this;
     }

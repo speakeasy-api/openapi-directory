@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAdGroupRequest {
-    
-    public GetAdGroupPathParams pathParams;
-    public GetAdGroupRequest withPathParams(GetAdGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the ad group that shall be retrieved.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ad_group_id")
+    public String adGroupId;
+    public GetAdGroupRequest withAdGroupId(String adGroupId) {
+        this.adGroupId = adGroupId;
         return this;
     }
     
-    
-    public GetAdGroupSecurity security;
-    public GetAdGroupRequest withSecurity(GetAdGroupSecurity security) {
-        this.security = security;
+    /**
+     * A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; You can retrieve the campaign IDs for a specified seller using the &lt;a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns"&gt;getCampaigns&lt;/a&gt; method.&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaign_id")
+    public String campaignId;
+    public GetAdGroupRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
         return this;
     }
     

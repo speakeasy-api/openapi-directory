@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContactsCreateJsonRequest {
-    
-    public ContactsCreateJsonPathParams pathParams;
-    public ContactsCreateJsonRequest withPathParams(ContactsCreateJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ContactsCreateJsonQueryParams queryParams;
-    public ContactsCreateJsonRequest withQueryParams(ContactsCreateJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ContactRequest request;
-    public ContactsCreateJsonRequest withRequest(org.openapis.openapi.models.shared.ContactRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ContactRequest contactRequest;
+    public ContactsCreateJsonRequest withContactRequest(org.openapis.openapi.models.shared.ContactRequest contactRequest) {
+        this.contactRequest = contactRequest;
         return this;
     }
     
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public ContactsCreateJsonRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public ContactsCreateJsonSecurity security;
-    public ContactsCreateJsonRequest withSecurity(ContactsCreateJsonSecurity security) {
-        this.security = security;
+    /**
+     * Determines how existing contacts with matching mobile numbers are treated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mergeStrategy")
+    public ContactsCreateJsonMergeStrategyEnum mergeStrategy;
+    public ContactsCreateJsonRequest withMergeStrategy(ContactsCreateJsonMergeStrategyEnum mergeStrategy) {
+        this.mergeStrategy = mergeStrategy;
         return this;
     }
     

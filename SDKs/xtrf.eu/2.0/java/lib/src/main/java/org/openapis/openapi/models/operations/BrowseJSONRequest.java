@@ -4,13 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BrowseJSONRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=additionalOrder")
+    public String additionalOrder;
+    public BrowseJSONRequest withAdditionalOrder(String additionalOrder) {
+        this.additionalOrder = additionalOrder;
+        return this;
+    }
     
-    public BrowseJSONQueryParams queryParams;
-    public BrowseJSONRequest withQueryParams(BrowseJSONQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * overrides view's default rows limit, supported values 10 to 1000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxRows")
+    public Integer maxRows;
+    public BrowseJSONRequest withMaxRows(Integer maxRows) {
+        this.maxRows = maxRows;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public BrowseJSONRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useDeferredColumns")
+    public String useDeferredColumns;
+    public BrowseJSONRequest withUseDeferredColumns(String useDeferredColumns) {
+        this.useDeferredColumns = useDeferredColumns;
+        return this;
+    }
+    
+    /**
+     * view's identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=viewId")
+    public Long viewId;
+    public BrowseJSONRequest withViewId(Long viewId) {
+        this.viewId = viewId;
         return this;
     }
     

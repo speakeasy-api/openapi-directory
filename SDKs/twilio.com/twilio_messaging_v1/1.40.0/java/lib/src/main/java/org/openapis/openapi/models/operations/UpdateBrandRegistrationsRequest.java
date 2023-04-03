@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBrandRegistrationsRequest {
-    
-    public UpdateBrandRegistrationsPathParams pathParams;
-    public UpdateBrandRegistrationsRequest withPathParams(UpdateBrandRegistrationsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateBrandRegistrationsSecurity security;
-    public UpdateBrandRegistrationsRequest withSecurity(UpdateBrandRegistrationsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateBrandRegistrationsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Brand Registration resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateBrandRegistrationsRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

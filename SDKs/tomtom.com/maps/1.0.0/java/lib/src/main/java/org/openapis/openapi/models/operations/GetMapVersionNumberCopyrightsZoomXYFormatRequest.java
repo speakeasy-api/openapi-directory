@@ -4,20 +4,69 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMapVersionNumberCopyrightsZoomXYFormatRequest {
-    
-    public GetMapVersionNumberCopyrightsZoomXYFormatPathParams pathParams;
-    public GetMapVersionNumberCopyrightsZoomXYFormatRequest withPathParams(GetMapVersionNumberCopyrightsZoomXYFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * X coordinate of the tile on zoom grid. Only used for tile-level
+     * copyright calls.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=X")
+    public Long x;
+    public GetMapVersionNumberCopyrightsZoomXYFormatRequest withX(Long x) {
+        this.x = x;
         return this;
     }
     
+    /**
+     * Y coordinate of the tile on zoom grid. Only used for tile-level
+     * copyright calls.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Y")
+    public Long y;
+    public GetMapVersionNumberCopyrightsZoomXYFormatRequest withY(Long y) {
+        this.y = y;
+        return this;
+    }
     
-    public GetMapVersionNumberCopyrightsZoomXYFormatQueryParams queryParams;
-    public GetMapVersionNumberCopyrightsZoomXYFormatRequest withQueryParams(GetMapVersionNumberCopyrightsZoomXYFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specifies the jsonp callback method. Only used when format is jsonp.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public GetMapVersionNumberCopyrightsZoomXYFormatRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Format of the response
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum format;
+    public GetMapVersionNumberCopyrightsZoomXYFormatRequest withFormat(GetMapVersionNumberCopyrightsZoomXYFormatFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * Version of the service to call. The current version is 1
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
+    public GetMapVersionNumberCopyrightsZoomXYFormatVersionNumberEnum versionNumber;
+    public GetMapVersionNumberCopyrightsZoomXYFormatRequest withVersionNumber(GetMapVersionNumberCopyrightsZoomXYFormatVersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
+        return this;
+    }
+    
+    /**
+     * Zoom level of tile to be rendered. Only used for tile-level
+     * copyright calls.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zoom")
+    public GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum zoom;
+    public GetMapVersionNumberCopyrightsZoomXYFormatRequest withZoom(GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum zoom) {
+        this.zoom = zoom;
         return this;
     }
     

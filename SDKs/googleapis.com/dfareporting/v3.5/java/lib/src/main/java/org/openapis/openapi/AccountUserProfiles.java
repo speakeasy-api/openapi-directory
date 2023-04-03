@@ -34,25 +34,26 @@ public class AccountUserProfiles {
     /**
      * Gets one account user profile by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingAccountUserProfilesGetResponse dfareportingAccountUserProfilesGet(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingAccountUserProfilesGetResponse dfareportingAccountUserProfilesGet(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesGetRequest request, org.openapis.openapi.models.operations.DfareportingAccountUserProfilesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesGetPathParams.class, baseUrl, "/userprofiles/{profileId}/accountUserProfiles/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesGetRequest.class, baseUrl, "/userprofiles/{profileId}/accountUserProfiles/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class AccountUserProfiles {
     /**
      * Inserts a new account user profile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingAccountUserProfilesInsertResponse dfareportingAccountUserProfilesInsert(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingAccountUserProfilesInsertResponse dfareportingAccountUserProfilesInsert(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesInsertRequest request, org.openapis.openapi.models.operations.DfareportingAccountUserProfilesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesInsertPathParams.class, baseUrl, "/userprofiles/{profileId}/accountUserProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesInsertRequest.class, baseUrl, "/userprofiles/{profileId}/accountUserProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "accountUserProfile", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class AccountUserProfiles {
     /**
      * Retrieves a list of account user profiles, possibly filtered. This method supports paging.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingAccountUserProfilesListResponse dfareportingAccountUserProfilesList(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingAccountUserProfilesListResponse dfareportingAccountUserProfilesList(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesListRequest request, org.openapis.openapi.models.operations.DfareportingAccountUserProfilesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesListPathParams.class, baseUrl, "/userprofiles/{profileId}/accountUserProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesListRequest.class, baseUrl, "/userprofiles/{profileId}/accountUserProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,27 +174,28 @@ public class AccountUserProfiles {
     /**
      * Updates an existing account user profile. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingAccountUserProfilesPatchResponse dfareportingAccountUserProfilesPatch(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingAccountUserProfilesPatchResponse dfareportingAccountUserProfilesPatch(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesPatchRequest request, org.openapis.openapi.models.operations.DfareportingAccountUserProfilesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesPatchPathParams.class, baseUrl, "/userprofiles/{profileId}/accountUserProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesPatchRequest.class, baseUrl, "/userprofiles/{profileId}/accountUserProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "accountUserProfile", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,27 +222,28 @@ public class AccountUserProfiles {
     /**
      * Updates an existing account user profile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingAccountUserProfilesUpdateResponse dfareportingAccountUserProfilesUpdate(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingAccountUserProfilesUpdateResponse dfareportingAccountUserProfilesUpdate(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesUpdateRequest request, org.openapis.openapi.models.operations.DfareportingAccountUserProfilesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesUpdatePathParams.class, baseUrl, "/userprofiles/{profileId}/accountUserProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesUpdateRequest.class, baseUrl, "/userprofiles/{profileId}/accountUserProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "accountUserProfile", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAccountUserProfilesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

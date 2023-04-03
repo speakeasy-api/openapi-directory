@@ -4,13 +4,49 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchHealthProfileQuestionsRequest {
+    /**
+     * Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[groups]")
+    public String filterGroups;
+    public FetchHealthProfileQuestionsRequest withFilterGroups(String filterGroups) {
+        this.filterGroups = filterGroups;
+        return this;
+    }
     
-    public FetchHealthProfileQuestionsQueryParams queryParams;
-    public FetchHealthProfileQuestionsRequest withQueryParams(FetchHealthProfileQuestionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[organization]")
+    public String filterOrganization;
+    public FetchHealthProfileQuestionsRequest withFilterOrganization(String filterOrganization) {
+        this.filterOrganization = filterOrganization;
+        return this;
+    }
+    
+    /**
+     * Patient id to fetch healt profile questions. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[patient]")
+    public String filterPatient;
+    public FetchHealthProfileQuestionsRequest withFilterPatient(String filterPatient) {
+        this.filterPatient = filterPatient;
+        return this;
+    }
+    
+    /**
+     * List of related resources to include in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public FetchHealthProfileQuestionsIncludeEnum include;
+    public FetchHealthProfileQuestionsRequest withInclude(FetchHealthProfileQuestionsIncludeEnum include) {
+        this.include = include;
         return this;
     }
     

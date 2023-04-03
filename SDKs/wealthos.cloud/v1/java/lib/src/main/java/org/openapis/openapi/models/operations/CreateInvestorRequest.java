@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateInvestorRequest {
-    
-    public CreateInvestorHeaders headers;
-    public CreateInvestorRequest withHeaders(CreateInvestorHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateInvestorRootTypeForInvestorCreationRequestInput request;
-    public CreateInvestorRequest withRequest(CreateInvestorRootTypeForInvestorCreationRequestInput request) {
-        this.request = request;
+    public CreateInvestorRootTypeForInvestorCreationRequestInput requestBody;
+    public CreateInvestorRequest withRequestBody(CreateInvestorRootTypeForInvestorCreationRequestInput requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateInvestorSecurity security;
-    public CreateInvestorRequest withSecurity(CreateInvestorSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public CreateInvestorRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

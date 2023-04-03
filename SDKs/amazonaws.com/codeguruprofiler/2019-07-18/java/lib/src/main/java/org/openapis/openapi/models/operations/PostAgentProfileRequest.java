@@ -7,31 +7,89 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAgentProfileRequest {
-    
-    public PostAgentProfilePathParams pathParams;
-    public PostAgentProfileRequest withPathParams(PostAgentProfilePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostAgentProfileQueryParams queryParams;
-    public PostAgentProfileRequest withQueryParams(PostAgentProfileQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public PostAgentProfileHeaders headers;
-    public PostAgentProfileRequest withHeaders(PostAgentProfileHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt; The format of the submitted profiling data. The format maps to the &lt;code&gt;Accept&lt;/code&gt; and &lt;code&gt;Content-Type&lt;/code&gt; headers of the HTTP request. You can specify one of the following: or the default . &lt;/p&gt; &lt;pre&gt;&lt;code&gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt; &amp;lt;p&amp;gt; &amp;lt;code&amp;gt;application/json&amp;lt;/code&amp;gt; \u2014 standard JSON format &amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;p&amp;gt; &amp;lt;code&amp;gt;application/x-amzn-ion&amp;lt;/code&amp;gt; \u2014 the Amazon Ion data format. For more information, see &amp;lt;a href=&amp;quot;http://amzn.github.io/ion-docs/&amp;quot;&amp;gt;Amazon Ion&amp;lt;/a&amp;gt;. &amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &lt;/code&gt;&lt;/pre&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public PostAgentProfileRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostAgentProfileRequestBody request;
-    public PostAgentProfileRequest withRequest(PostAgentProfileRequestBody request) {
-        this.request = request;
+    public PostAgentProfileRequestBody requestBody;
+    public PostAgentProfileRequest withRequestBody(PostAgentProfileRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public PostAgentProfileRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public PostAgentProfileRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public PostAgentProfileRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public PostAgentProfileRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public PostAgentProfileRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public PostAgentProfileRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public PostAgentProfileRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     *  Amazon CodeGuru Profiler uses this universally unique identifier (UUID) to prevent the accidental submission of duplicate profiling data if there are failures and retries. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=profileToken")
+    public String profileToken;
+    public PostAgentProfileRequest withProfileToken(String profileToken) {
+        this.profileToken = profileToken;
+        return this;
+    }
+    
+    /**
+     *  The name of the profiling group with the aggregated profile that receives the submitted profiling data. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profilingGroupName")
+    public String profilingGroupName;
+    public PostAgentProfileRequest withProfilingGroupName(String profilingGroupName) {
+        this.profilingGroupName = profilingGroupName;
         return this;
     }
     

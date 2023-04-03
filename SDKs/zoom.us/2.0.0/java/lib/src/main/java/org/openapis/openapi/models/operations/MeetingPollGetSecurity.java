@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MeetingPollGetSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOAuth oAuth;
-    public MeetingPollGetSecurity withOAuth(org.openapis.openapi.models.shared.SchemeOAuth oAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oAuth;
+    public MeetingPollGetSecurity withOAuth(String oAuth) {
         this.oAuth = oAuth;
         return this;
     }

@@ -152,13 +152,13 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWellKnownMercureQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWellKnownMercureRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -235,7 +235,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetWellKnownMercureSubscriptionsTopicResponse getWellKnownMercureSubscriptionsTopic(org.openapis.openapi.models.operations.GetWellKnownMercureSubscriptionsTopicRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWellKnownMercureSubscriptionsTopicPathParams.class, baseUrl, "/.well-known/mercure/subscriptions/{topic}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWellKnownMercureSubscriptionsTopicRequest.class, baseUrl, "/.well-known/mercure/subscriptions/{topic}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -277,7 +277,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetWellKnownMercureSubscriptionsTopicSubscriberResponse getWellKnownMercureSubscriptionsTopicSubscriber(org.openapis.openapi.models.operations.GetWellKnownMercureSubscriptionsTopicSubscriberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWellKnownMercureSubscriptionsTopicSubscriberPathParams.class, baseUrl, "/.well-known/mercure/subscriptions/{topic}/{subscriber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWellKnownMercureSubscriptionsTopicSubscriberRequest.class, baseUrl, "/.well-known/mercure/subscriptions/{topic}/{subscriber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -317,7 +317,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostWellKnownMercureResponse postWellKnownMercure(org.openapis.openapi.models.operations.PostWellKnownMercureRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostWellKnownMercureResponse postWellKnownMercure(org.openapis.openapi.models.operations.PostWellKnownMercureRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/.well-known/mercure");
         

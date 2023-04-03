@@ -87,7 +87,7 @@ public class Licenses {
      */
     public org.openapis.openapi.models.operations.LicensesReadResponse licensesRead(org.openapis.openapi.models.operations.LicensesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LicensesReadPathParams.class, baseUrl, "/license/{license_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LicensesReadRequest.class, baseUrl, "/license/{license_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

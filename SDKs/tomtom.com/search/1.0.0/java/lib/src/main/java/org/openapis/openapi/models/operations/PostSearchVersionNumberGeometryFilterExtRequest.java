@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSearchVersionNumberGeometryFilterExtRequest {
-    
-    public PostSearchVersionNumberGeometryFilterExtPathParams pathParams;
-    public PostSearchVersionNumberGeometryFilterExtRequest withPathParams(PostSearchVersionNumberGeometryFilterExtPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostSearchVersionNumberGeometryFilterExtRequestBody requestBody;
+    public PostSearchVersionNumberGeometryFilterExtRequest withRequestBody(PostSearchVersionNumberGeometryFilterExtRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSearchVersionNumberGeometryFilterExtRequestBody request;
-    public PostSearchVersionNumberGeometryFilterExtRequest withRequest(PostSearchVersionNumberGeometryFilterExtRequestBody request) {
-        this.request = request;
+    /**
+     * Expected response format.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
+    public org.openapis.openapi.models.shared.ExtEnum ext;
+    public PostSearchVersionNumberGeometryFilterExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
+        this.ext = ext;
+        return this;
+    }
+    
+    /**
+     * Service version number. The current value is 2.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
+    public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+    public PostSearchVersionNumberGeometryFilterExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
         return this;
     }
     

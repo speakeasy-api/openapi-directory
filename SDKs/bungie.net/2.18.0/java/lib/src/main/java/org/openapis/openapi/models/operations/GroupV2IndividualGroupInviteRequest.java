@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2IndividualGroupInviteRequest {
-    
-    public GroupV2IndividualGroupInvitePathParams pathParams;
-    public GroupV2IndividualGroupInviteRequest withPathParams(GroupV2IndividualGroupInvitePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the group you would like to join.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public GroupV2IndividualGroupInviteRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     
+    /**
+     * Membership id of the account being invited.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
+    public Long membershipId;
+    public GroupV2IndividualGroupInviteRequest withMembershipId(Long membershipId) {
+        this.membershipId = membershipId;
+        return this;
+    }
     
-    public GroupV2IndividualGroupInviteSecurity security;
-    public GroupV2IndividualGroupInviteRequest withSecurity(GroupV2IndividualGroupInviteSecurity security) {
-        this.security = security;
+    /**
+     * MembershipType of the account being invited.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public GroupV2IndividualGroupInviteRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

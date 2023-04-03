@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePhoneNumberDetailsRequest {
-    
-    public UpdatePhoneNumberDetailsPathParams pathParams;
-    public UpdatePhoneNumberDetailsRequest withPathParams(UpdatePhoneNumberDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdatePhoneNumberDetailsApplicationJSON request;
-    public UpdatePhoneNumberDetailsRequest withRequest(UpdatePhoneNumberDetailsApplicationJSON request) {
-        this.request = request;
+    public UpdatePhoneNumberDetailsApplicationJSON requestBody;
+    public UpdatePhoneNumberDetailsRequest withRequestBody(UpdatePhoneNumberDetailsApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdatePhoneNumberDetailsSecurity security;
-    public UpdatePhoneNumberDetailsRequest withSecurity(UpdatePhoneNumberDetailsSecurity security) {
-        this.security = security;
+    /**
+     * Phone number ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=numberId")
+    public String numberId;
+    public UpdatePhoneNumberDetailsRequest withNumberId(String numberId) {
+        this.numberId = numberId;
         return this;
     }
     

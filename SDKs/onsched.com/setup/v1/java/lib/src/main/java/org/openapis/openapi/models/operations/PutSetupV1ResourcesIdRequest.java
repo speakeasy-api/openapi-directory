@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1ResourcesIdRequest {
-    
-    public PutSetupV1ResourcesIdPathParams pathParams;
-    public PutSetupV1ResourcesIdRequest withPathParams(PutSetupV1ResourcesIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutSetupV1ResourcesIdQueryParams queryParams;
-    public PutSetupV1ResourcesIdRequest withQueryParams(PutSetupV1ResourcesIdQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Resource Update Model
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ResourceUpdateModel request;
-    public PutSetupV1ResourcesIdRequest withRequest(org.openapis.openapi.models.shared.ResourceUpdateModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ResourceUpdateModel resourceUpdateModel;
+    public PutSetupV1ResourcesIdRequest withResourceUpdateModel(org.openapis.openapi.models.shared.ResourceUpdateModel resourceUpdateModel) {
+        this.resourceUpdateModel = resourceUpdateModel;
+        return this;
+    }
+    
+    /**
+     * Google calendar authorization return url
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=googleAuthReturnUrl")
+    public String googleAuthReturnUrl;
+    public PutSetupV1ResourcesIdRequest withGoogleAuthReturnUrl(String googleAuthReturnUrl) {
+        this.googleAuthReturnUrl = googleAuthReturnUrl;
+        return this;
+    }
+    
+    /**
+     * id of resource object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutSetupV1ResourcesIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Outlook calendar authorization return url
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outlookAuthReturnUrl")
+    public String outlookAuthReturnUrl;
+    public PutSetupV1ResourcesIdRequest withOutlookAuthReturnUrl(String outlookAuthReturnUrl) {
+        this.outlookAuthReturnUrl = outlookAuthReturnUrl;
         return this;
     }
     

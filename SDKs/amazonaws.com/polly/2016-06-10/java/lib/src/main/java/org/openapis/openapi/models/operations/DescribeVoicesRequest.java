@@ -4,20 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeVoicesRequest {
-    
-    public DescribeVoicesQueryParams queryParams;
-    public DescribeVoicesRequest withQueryParams(DescribeVoicesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specifies the engine (&lt;code&gt;standard&lt;/code&gt; or &lt;code&gt;neural&lt;/code&gt;) used by Amazon Polly when processing input text for speech synthesis. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Engine")
+    public DescribeVoicesEngineEnum engine;
+    public DescribeVoicesRequest withEngine(DescribeVoicesEngineEnum engine) {
+        this.engine = engine;
         return this;
     }
     
+    /**
+     * Boolean value indicating whether to return any bilingual voices that use the specified language as an additional language. For instance, if you request all languages that use US English (es-US), and there is an Italian voice that speaks both Italian (it-IT) and US English, that voice will be included if you specify &lt;code&gt;yes&lt;/code&gt; but not if you specify &lt;code&gt;no&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IncludeAdditionalLanguageCodes")
+    public Boolean includeAdditionalLanguageCodes;
+    public DescribeVoicesRequest withIncludeAdditionalLanguageCodes(Boolean includeAdditionalLanguageCodes) {
+        this.includeAdditionalLanguageCodes = includeAdditionalLanguageCodes;
+        return this;
+    }
     
-    public DescribeVoicesHeaders headers;
-    public DescribeVoicesRequest withHeaders(DescribeVoicesHeaders headers) {
-        this.headers = headers;
+    /**
+     *  The language identification tag (ISO 639 code for the language name-ISO 3166 country code) for filtering the list of voices returned. If you don't specify this optional parameter, all available voices are returned. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LanguageCode")
+    public DescribeVoicesLanguageCodeEnum languageCode;
+    public DescribeVoicesRequest withLanguageCode(DescribeVoicesLanguageCodeEnum languageCode) {
+        this.languageCode = languageCode;
+        return this;
+    }
+    
+    /**
+     * An opaque pagination token returned from the previous &lt;code&gt;DescribeVoices&lt;/code&gt; operation. If present, this indicates where to continue the listing.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public DescribeVoicesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeVoicesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeVoicesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeVoicesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeVoicesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeVoicesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeVoicesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeVoicesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

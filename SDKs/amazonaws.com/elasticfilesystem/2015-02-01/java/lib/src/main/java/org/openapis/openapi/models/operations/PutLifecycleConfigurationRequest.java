@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutLifecycleConfigurationRequest {
-    
-    public PutLifecycleConfigurationPathParams pathParams;
-    public PutLifecycleConfigurationRequest withPathParams(PutLifecycleConfigurationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutLifecycleConfigurationHeaders headers;
-    public PutLifecycleConfigurationRequest withHeaders(PutLifecycleConfigurationHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the file system for which you are creating the &lt;code&gt;LifecycleConfiguration&lt;/code&gt; object (String).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FileSystemId")
+    public String fileSystemId;
+    public PutLifecycleConfigurationRequest withFileSystemId(String fileSystemId) {
+        this.fileSystemId = fileSystemId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutLifecycleConfigurationRequestBody request;
-    public PutLifecycleConfigurationRequest withRequest(PutLifecycleConfigurationRequestBody request) {
-        this.request = request;
+    public PutLifecycleConfigurationRequestBody requestBody;
+    public PutLifecycleConfigurationRequest withRequestBody(PutLifecycleConfigurationRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public PutLifecycleConfigurationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public PutLifecycleConfigurationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public PutLifecycleConfigurationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public PutLifecycleConfigurationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public PutLifecycleConfigurationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public PutLifecycleConfigurationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public PutLifecycleConfigurationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListTableColumnsRequest {
-    
-    public ListTableColumnsPathParams pathParams;
-    public ListTableColumnsRequest withPathParams(ListTableColumnsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListTableColumnsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public ListTableColumnsQueryParams queryParams;
-    public ListTableColumnsRequest withQueryParams(ListTableColumnsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListTableColumnsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListTableColumnsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public ListTableColumnsHeaders headers;
-    public ListTableColumnsRequest withHeaders(ListTableColumnsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListTableColumnsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListTableColumnsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListTableColumnsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListTableColumnsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt; This parameter is optional. If a nextToken is not specified, the API returns the first page of data. &lt;/p&gt; &lt;p&gt; Pagination tokens expire after 1 hour. If you use a token that was returned more than an hour back, the API will throw ValidationException. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListTableColumnsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The ID of the table whose columns are being retrieved.&lt;/p&gt; &lt;p&gt; If a table with the specified id could not be found, this API throws ResourceNotFoundException. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tableId")
+    public String tableId;
+    public ListTableColumnsRequest withTableId(String tableId) {
+        this.tableId = tableId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The ID of the workbook that contains the table whose columns are being retrieved.&lt;/p&gt; &lt;p&gt; If a workbook with the specified id could not be found, this API throws ResourceNotFoundException. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workbookId")
+    public String workbookId;
+    public ListTableColumnsRequest withWorkbookId(String workbookId) {
+        this.workbookId = workbookId;
         return this;
     }
     

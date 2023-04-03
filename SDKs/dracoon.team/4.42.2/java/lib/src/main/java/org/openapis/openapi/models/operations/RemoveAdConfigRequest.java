@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveAdConfigRequest {
-    
-    public RemoveAdConfigPathParams pathParams;
-    public RemoveAdConfigRequest withPathParams(RemoveAdConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RemoveAdConfigRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RemoveAdConfigHeaders headers;
-    public RemoveAdConfigRequest withHeaders(RemoveAdConfigHeaders headers) {
-        this.headers = headers;
+    /**
+     * Active Directory ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ad_id")
+    public Integer adId;
+    public RemoveAdConfigRequest withAdId(Integer adId) {
+        this.adId = adId;
         return this;
     }
     

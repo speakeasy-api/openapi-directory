@@ -6,8 +6,6 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GETAuthorizeCacheSecurityGroupIngressActionEnum;
 import org.openapis.openapi.models.operations.GETAuthorizeCacheSecurityGroupIngressVersionEnum;
-import org.openapis.openapi.models.operations.GETAuthorizeCacheSecurityGroupIngressQueryParams;
-import org.openapis.openapi.models.operations.GETAuthorizeCacheSecurityGroupIngressHeaders;
 import org.openapis.openapi.models.operations.GETAuthorizeCacheSecurityGroupIngressRequest;
 import org.openapis.openapi.models.operations.GETAuthorizeCacheSecurityGroupIngressResponse;
 
@@ -16,30 +14,24 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GETAuthorizeCacheSecurityGroupIngressRequest req = new GETAuthorizeCacheSecurityGroupIngressRequest() {{
-                queryParams = new GETAuthorizeCacheSecurityGroupIngressQueryParams() {{
-                    action = "AuthorizeCacheSecurityGroupIngress";
-                    cacheSecurityGroupName = "corrupti";
-                    ec2SecurityGroupName = "provident";
-                    ec2SecurityGroupOwnerId = "distinctio";
-                    version = "2015-02-02";
-                }};
-                headers = new GETAuthorizeCacheSecurityGroupIngressHeaders() {{
-                    xAmzAlgorithm = "quibusdam";
-                    xAmzContentSha256 = "unde";
-                    xAmzCredential = "nulla";
-                    xAmzDate = "corrupti";
-                    xAmzSecurityToken = "illum";
-                    xAmzSignature = "vel";
-                    xAmzSignedHeaders = "error";
-                }};
-            }};            
+                action = "AuthorizeCacheSecurityGroupIngress";
+                cacheSecurityGroupName = "corrupti";
+                ec2SecurityGroupName = "provident";
+                ec2SecurityGroupOwnerId = "distinctio";
+                version = "2015-02-02";
+                xAmzAlgorithm = "quibusdam";
+                xAmzContentSha256 = "unde";
+                xAmzCredential = "nulla";
+                xAmzDate = "corrupti";
+                xAmzSecurityToken = "illum";
+                xAmzSignature = "vel";
+                xAmzSignedHeaders = "error";
+            }}            
 
             GETAuthorizeCacheSecurityGroupIngressResponse res = sdk.getAuthorizeCacheSecurityGroupIngress(req);
 

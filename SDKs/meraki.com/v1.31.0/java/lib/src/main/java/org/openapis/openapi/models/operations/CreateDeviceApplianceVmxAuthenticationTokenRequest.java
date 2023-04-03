@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDeviceApplianceVmxAuthenticationTokenRequest {
-    
-    public CreateDeviceApplianceVmxAuthenticationTokenPathParams pathParams;
-    public CreateDeviceApplianceVmxAuthenticationTokenRequest withPathParams(CreateDeviceApplianceVmxAuthenticationTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public CreateDeviceApplianceVmxAuthenticationTokenRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

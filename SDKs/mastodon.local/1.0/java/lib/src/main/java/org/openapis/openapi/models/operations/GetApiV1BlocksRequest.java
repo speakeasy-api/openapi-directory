@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1BlocksRequest {
-    
-    public GetApiV1BlocksQueryParams queryParams;
-    public GetApiV1BlocksRequest withQueryParams(GetApiV1BlocksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetApiV1BlocksRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_id")
+    public String maxId;
+    public GetApiV1BlocksRequest withMaxId(String maxId) {
+        this.maxId = maxId;
+        return this;
+    }
     
-    public GetApiV1BlocksSecurity security;
-    public GetApiV1BlocksRequest withSecurity(GetApiV1BlocksSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since_id")
+    public String sinceId;
+    public GetApiV1BlocksRequest withSinceId(String sinceId) {
+        this.sinceId = sinceId;
         return this;
     }
     

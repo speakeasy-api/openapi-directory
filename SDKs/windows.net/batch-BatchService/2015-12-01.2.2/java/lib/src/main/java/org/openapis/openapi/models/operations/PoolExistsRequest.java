@@ -4,27 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PoolExistsRequest {
-    
-    public PoolExistsPathParams pathParams;
-    public PoolExistsRequest withPathParams(PoolExistsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Sets an OData $select clause.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$select")
+    public String dollarSelect;
+    public PoolExistsRequest withDollarSelect(String dollarSelect) {
+        this.dollarSelect = dollarSelect;
         return this;
     }
     
-    
-    public PoolExistsQueryParams queryParams;
-    public PoolExistsRequest withQueryParams(PoolExistsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An ETag is specified. Specify this header to perform the operation only if the resource's ETag is an exact match as specified.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public PoolExistsRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
+    /**
+     * Specify this header to perform the operation only if the resource has been modified since the specified date/time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
+    public String ifModifiedSince;
+    public PoolExistsRequest withIfModifiedSince(String ifModifiedSince) {
+        this.ifModifiedSince = ifModifiedSince;
+        return this;
+    }
     
-    public PoolExistsHeaders headers;
-    public PoolExistsRequest withHeaders(PoolExistsHeaders headers) {
-        this.headers = headers;
+    /**
+     * An ETag is specified. Specify this header to perform the operation only if the resource's ETag does not match the specified ETag.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public PoolExistsRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
+        return this;
+    }
+    
+    /**
+     * Specify this header to perform the operation only if the resource has not been modified since the specified date/time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Unmodified-Since")
+    public String ifUnmodifiedSince;
+    public PoolExistsRequest withIfUnmodifiedSince(String ifUnmodifiedSince) {
+        this.ifUnmodifiedSince = ifUnmodifiedSince;
+        return this;
+    }
+    
+    /**
+     * Client API Version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public PoolExistsRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
+    public String clientRequestId;
+    public PoolExistsRequest withClientRequestId(String clientRequestId) {
+        this.clientRequestId = clientRequestId;
+        return this;
+    }
+    
+    /**
+     * The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
+    public String ocpDate;
+    public PoolExistsRequest withOcpDate(String ocpDate) {
+        this.ocpDate = ocpDate;
+        return this;
+    }
+    
+    /**
+     * The id of the pool to get.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolId")
+    public String poolId;
+    public PoolExistsRequest withPoolId(String poolId) {
+        this.poolId = poolId;
+        return this;
+    }
+    
+    /**
+     * Specifies if the server should return the client-request-id identifier in the response.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
+    public Boolean returnClientRequestId;
+    public PoolExistsRequest withReturnClientRequestId(Boolean returnClientRequestId) {
+        this.returnClientRequestId = returnClientRequestId;
+        return this;
+    }
+    
+    /**
+     * Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
+    public Integer timeout;
+    public PoolExistsRequest withTimeout(Integer timeout) {
+        this.timeout = timeout;
         return this;
     }
     

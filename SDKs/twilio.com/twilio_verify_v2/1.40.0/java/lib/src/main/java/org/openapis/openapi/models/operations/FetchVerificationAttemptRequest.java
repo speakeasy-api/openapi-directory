@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchVerificationAttemptRequest {
-    
-    public FetchVerificationAttemptPathParams pathParams;
-    public FetchVerificationAttemptRequest withPathParams(FetchVerificationAttemptPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchVerificationAttemptSecurity security;
-    public FetchVerificationAttemptRequest withSecurity(FetchVerificationAttemptSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchVerificationAttemptRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique SID identifier of a Verification Attempt
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchVerificationAttemptRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

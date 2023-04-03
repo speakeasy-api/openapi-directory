@@ -35,7 +35,7 @@ public class VirtualTariffsStatusForProperty {
      */
     public org.openapis.openapi.models.operations.VirtualTariffsStatusForPropertyGetResponse virtualTariffsStatusForPropertyGet(org.openapis.openapi.models.operations.VirtualTariffsStatusForPropertyGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualTariffsStatusForPropertyGetPathParams.class, baseUrl, "/api/VirtualTariffsStatusForProperty/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VirtualTariffsStatusForPropertyGetRequest.class, baseUrl, "/api/VirtualTariffsStatusForProperty/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetLatestBaseCurrencyPathParams;
 import org.openapis.openapi.models.operations.GetLatestBaseCurrencyRequest;
 import org.openapis.openapi.models.operations.GetLatestBaseCurrencyResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             GetLatestBaseCurrencyRequest req = new GetLatestBaseCurrencyRequest() {{
-                pathParams = new GetLatestBaseCurrencyPathParams() {{
-                    baseCurrency = "corrupti";
-                }};
-            }};            
+                baseCurrency = "corrupti";
+            }}            
 
             GetLatestBaseCurrencyResponse res = sdk.getLatestBaseCurrency(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

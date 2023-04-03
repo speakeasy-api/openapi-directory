@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolCoapSetConfigRequest {
+    /**
+     * Agent to set the COAP configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolCoapSetConfigRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolCoapSetConfigPathParams pathParams;
-    public ProtocolCoapSetConfigRequest withPathParams(ProtocolCoapSetConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Parameter to set the COAP configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=argument")
+    public String argument;
+    public ProtocolCoapSetConfigRequest withArgument(String argument) {
+        this.argument = argument;
+        return this;
+    }
+    
+    /**
+     * Value to set the COAP configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=value")
+    public String value;
+    public ProtocolCoapSetConfigRequest withValue(String value) {
+        this.value = value;
         return this;
     }
     

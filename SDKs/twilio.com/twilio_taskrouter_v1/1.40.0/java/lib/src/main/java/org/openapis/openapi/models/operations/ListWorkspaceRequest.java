@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListWorkspaceRequest {
-    
-    public ListWorkspaceQueryParams queryParams;
-    public ListWorkspaceRequest withQueryParams(ListWorkspaceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The `friendly_name` of the Workspace resources to read. For example `Customer Support` or `2014 Election Campaign`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FriendlyName")
+    public String friendlyName;
+    public ListWorkspaceRequest withFriendlyName(String friendlyName) {
+        this.friendlyName = friendlyName;
         return this;
     }
     
-    
-    public ListWorkspaceSecurity security;
-    public ListWorkspaceRequest withSecurity(ListWorkspaceSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListWorkspaceRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListWorkspaceRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListWorkspaceRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListWorkspaceRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

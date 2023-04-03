@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1DonationsCarbonStatsRequest {
-    
-    public GetApiV1DonationsCarbonStatsQueryParams queryParams;
-    public GetApiV1DonationsCarbonStatsRequest withQueryParams(GetApiV1DonationsCarbonStatsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetApiV1DonationsCarbonStatsSecurity security;
-    public GetApiV1DonationsCarbonStatsRequest withSecurity(GetApiV1DonationsCarbonStatsSecurity security) {
-        this.security = security;
+    /**
+     * The id of a donation to the CarbonFund nonprofit. Ids are returned when a donation is created. If an ID is not provided, the total stats for all donations to CarbonFund are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public Double id;
+    public GetApiV1DonationsCarbonStatsRequest withId(Double id) {
+        this.id = id;
         return this;
     }
     

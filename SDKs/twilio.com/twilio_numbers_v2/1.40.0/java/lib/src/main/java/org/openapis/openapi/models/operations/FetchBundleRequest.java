@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchBundleRequest {
-    
-    public FetchBundlePathParams pathParams;
-    public FetchBundleRequest withPathParams(FetchBundlePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchBundleSecurity security;
-    public FetchBundleRequest withSecurity(FetchBundleSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchBundleRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that we created to identify the Bundle resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchBundleRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

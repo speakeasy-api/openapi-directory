@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserUpdateOAuth2ApplicationRawRequest {
-    
-    public UserUpdateOAuth2ApplicationRawPathParams pathParams;
-    public UserUpdateOAuth2ApplicationRawRequest withPathParams(UserUpdateOAuth2ApplicationRawPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=text/plain")
+    public byte[] requestBody;
+    public UserUpdateOAuth2ApplicationRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=text/plain")
-    public byte[] request;
-    public UserUpdateOAuth2ApplicationRawRequest withRequest(byte[] request) {
-        this.request = request;
+    /**
+     * application to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UserUpdateOAuth2ApplicationRawRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

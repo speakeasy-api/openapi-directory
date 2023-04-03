@@ -47,7 +47,7 @@ public class Gists {
      */
     public org.openapis.openapi.models.operations.GistsCheckIsStarredResponse gistsCheckIsStarred(org.openapis.openapi.models.operations.GistsCheckIsStarredRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsCheckIsStarredPathParams.class, baseUrl, "/gists/{gist_id}/star", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsCheckIsStarredRequest.class, baseUrl, "/gists/{gist_id}/star", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -97,7 +97,7 @@ public class Gists {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GistsCreateResponse gistsCreate(org.openapis.openapi.models.operations.GistsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GistsCreateResponse gistsCreate(org.openapis.openapi.models.operations.GistsCreateRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/gists");
         
@@ -163,12 +163,12 @@ public class Gists {
      */
     public org.openapis.openapi.models.operations.GistsCreateCommentResponse gistsCreateComment(org.openapis.openapi.models.operations.GistsCreateCommentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsCreateCommentPathParams.class, baseUrl, "/gists/{gist_id}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsCreateCommentRequest.class, baseUrl, "/gists/{gist_id}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -219,7 +219,7 @@ public class Gists {
      */
     public org.openapis.openapi.models.operations.GistsDeleteResponse gistsDelete(org.openapis.openapi.models.operations.GistsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsDeletePathParams.class, baseUrl, "/gists/{gist_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsDeleteRequest.class, baseUrl, "/gists/{gist_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -260,7 +260,7 @@ public class Gists {
      */
     public org.openapis.openapi.models.operations.GistsDeleteCommentResponse gistsDeleteComment(org.openapis.openapi.models.operations.GistsDeleteCommentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsDeleteCommentPathParams.class, baseUrl, "/gists/{gist_id}/comments/{comment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsDeleteCommentRequest.class, baseUrl, "/gists/{gist_id}/comments/{comment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -302,7 +302,7 @@ public class Gists {
      */
     public org.openapis.openapi.models.operations.GistsForkResponse gistsFork(org.openapis.openapi.models.operations.GistsForkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsForkPathParams.class, baseUrl, "/gists/{gist_id}/forks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsForkRequest.class, baseUrl, "/gists/{gist_id}/forks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -361,7 +361,7 @@ public class Gists {
      */
     public org.openapis.openapi.models.operations.GistsGetResponse gistsGet(org.openapis.openapi.models.operations.GistsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsGetPathParams.class, baseUrl, "/gists/{gist_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsGetRequest.class, baseUrl, "/gists/{gist_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -418,7 +418,7 @@ public class Gists {
      */
     public org.openapis.openapi.models.operations.GistsGetCommentResponse gistsGetComment(org.openapis.openapi.models.operations.GistsGetCommentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsGetCommentPathParams.class, baseUrl, "/gists/{gist_id}/comments/{comment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsGetCommentRequest.class, baseUrl, "/gists/{gist_id}/comments/{comment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -475,7 +475,7 @@ public class Gists {
      */
     public org.openapis.openapi.models.operations.GistsGetRevisionResponse gistsGetRevision(org.openapis.openapi.models.operations.GistsGetRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsGetRevisionPathParams.class, baseUrl, "/gists/{gist_id}/{sha}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsGetRevisionRequest.class, baseUrl, "/gists/{gist_id}/{sha}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -537,7 +537,7 @@ public class Gists {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GistsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GistsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -588,13 +588,13 @@ public class Gists {
      */
     public org.openapis.openapi.models.operations.GistsListCommentsResponse gistsListComments(org.openapis.openapi.models.operations.GistsListCommentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsListCommentsPathParams.class, baseUrl, "/gists/{gist_id}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsListCommentsRequest.class, baseUrl, "/gists/{gist_id}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GistsListCommentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GistsListCommentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -645,13 +645,13 @@ public class Gists {
      */
     public org.openapis.openapi.models.operations.GistsListCommitsResponse gistsListCommits(org.openapis.openapi.models.operations.GistsListCommitsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsListCommitsPathParams.class, baseUrl, "/gists/{gist_id}/commits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsListCommitsRequest.class, baseUrl, "/gists/{gist_id}/commits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GistsListCommitsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GistsListCommitsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -703,13 +703,13 @@ public class Gists {
      */
     public org.openapis.openapi.models.operations.GistsListForUserResponse gistsListForUser(org.openapis.openapi.models.operations.GistsListForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsListForUserPathParams.class, baseUrl, "/users/{username}/gists", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsListForUserRequest.class, baseUrl, "/users/{username}/gists", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GistsListForUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GistsListForUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -758,13 +758,13 @@ public class Gists {
      */
     public org.openapis.openapi.models.operations.GistsListForksResponse gistsListForks(org.openapis.openapi.models.operations.GistsListForksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsListForksPathParams.class, baseUrl, "/gists/{gist_id}/forks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsListForksRequest.class, baseUrl, "/gists/{gist_id}/forks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GistsListForksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GistsListForksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -824,7 +824,7 @@ public class Gists {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GistsListPublicQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GistsListPublicRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -890,7 +890,7 @@ public class Gists {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GistsListStarredQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GistsListStarredRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -942,7 +942,7 @@ public class Gists {
      */
     public org.openapis.openapi.models.operations.GistsStarResponse gistsStar(org.openapis.openapi.models.operations.GistsStarRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsStarPathParams.class, baseUrl, "/gists/{gist_id}/star", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsStarRequest.class, baseUrl, "/gists/{gist_id}/star", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -983,7 +983,7 @@ public class Gists {
      */
     public org.openapis.openapi.models.operations.GistsUnstarResponse gistsUnstar(org.openapis.openapi.models.operations.GistsUnstarRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsUnstarPathParams.class, baseUrl, "/gists/{gist_id}/star", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsUnstarRequest.class, baseUrl, "/gists/{gist_id}/star", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1025,12 +1025,12 @@ public class Gists {
      */
     public org.openapis.openapi.models.operations.GistsUpdateResponse gistsUpdate(org.openapis.openapi.models.operations.GistsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsUpdatePathParams.class, baseUrl, "/gists/{gist_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsUpdateRequest.class, baseUrl, "/gists/{gist_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1085,12 +1085,12 @@ public class Gists {
      */
     public org.openapis.openapi.models.operations.GistsUpdateCommentResponse gistsUpdateComment(org.openapis.openapi.models.operations.GistsUpdateCommentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsUpdateCommentPathParams.class, baseUrl, "/gists/{gist_id}/comments/{comment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GistsUpdateCommentRequest.class, baseUrl, "/gists/{gist_id}/comments/{comment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

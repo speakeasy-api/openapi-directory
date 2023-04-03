@@ -41,12 +41,12 @@ public class Agents {
      */
     public org.openapis.openapi.models.operations.CreateAgentContactResponse createAgentContact(org.openapis.openapi.models.operations.CreateAgentContactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateAgentContactPathParams.class, baseUrl, "/api/v1/agents/{agent_id}/contacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateAgentContactRequest.class, baseUrl, "/api/v1/agents/{agent_id}/contacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "agentContactCreateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -85,12 +85,12 @@ public class Agents {
      */
     public org.openapis.openapi.models.operations.CreateAgentLocationResponse createAgentLocation(org.openapis.openapi.models.operations.CreateAgentLocationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateAgentLocationPathParams.class, baseUrl, "/api/v1/agents/{agent_id}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateAgentLocationRequest.class, baseUrl, "/api/v1/agents/{agent_id}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "agentLocationCreateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -129,12 +129,12 @@ public class Agents {
      */
     public org.openapis.openapi.models.operations.CreateApplicationAgentResponse createApplicationAgent(org.openapis.openapi.models.operations.CreateApplicationAgentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateApplicationAgentPathParams.class, baseUrl, "/api/v1/applications/{application_id}/agents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateApplicationAgentRequest.class, baseUrl, "/api/v1/applications/{application_id}/agents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "agentCreateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -173,12 +173,12 @@ public class Agents {
      */
     public org.openapis.openapi.models.operations.EditAgentResponse editAgent(org.openapis.openapi.models.operations.EditAgentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditAgentPathParams.class, baseUrl, "/api/v1/agents/{agent_id}/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditAgentRequest.class, baseUrl, "/api/v1/agents/{agent_id}/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "agentEditRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -217,12 +217,12 @@ public class Agents {
      */
     public org.openapis.openapi.models.operations.EditAgentContactResponse editAgentContact(org.openapis.openapi.models.operations.EditAgentContactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditAgentContactPathParams.class, baseUrl, "/api/v1/agents/{agent_id}/contacts/{contact_id}/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditAgentContactRequest.class, baseUrl, "/api/v1/agents/{agent_id}/contacts/{contact_id}/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "agentContactEditRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -261,12 +261,12 @@ public class Agents {
      */
     public org.openapis.openapi.models.operations.EditAgentLocationResponse editAgentLocation(org.openapis.openapi.models.operations.EditAgentLocationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditAgentLocationPathParams.class, baseUrl, "/api/v1/agents/{agent_id}/locations/{location_id}/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditAgentLocationRequest.class, baseUrl, "/api/v1/agents/{agent_id}/locations/{location_id}/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "agentLocationEditRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -305,7 +305,7 @@ public class Agents {
      */
     public org.openapis.openapi.models.operations.GetAgentResponse getAgent(org.openapis.openapi.models.operations.GetAgentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAgentPathParams.class, baseUrl, "/api/v1/agents/{agent_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAgentRequest.class, baseUrl, "/api/v1/agents/{agent_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -344,7 +344,7 @@ public class Agents {
      */
     public org.openapis.openapi.models.operations.GetAgentContactResponse getAgentContact(org.openapis.openapi.models.operations.GetAgentContactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAgentContactPathParams.class, baseUrl, "/api/v1/agents/{agent_id}/contacts/{contact_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAgentContactRequest.class, baseUrl, "/api/v1/agents/{agent_id}/contacts/{contact_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -383,13 +383,13 @@ public class Agents {
      */
     public org.openapis.openapi.models.operations.GetAgentContactsResponse getAgentContacts(org.openapis.openapi.models.operations.GetAgentContactsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAgentContactsPathParams.class, baseUrl, "/api/v1/agents/{agent_id}/contacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAgentContactsRequest.class, baseUrl, "/api/v1/agents/{agent_id}/contacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAgentContactsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAgentContactsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -428,7 +428,7 @@ public class Agents {
      */
     public org.openapis.openapi.models.operations.GetAgentLocationResponse getAgentLocation(org.openapis.openapi.models.operations.GetAgentLocationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAgentLocationPathParams.class, baseUrl, "/api/v1/agents/{agent_id}/locations/{location_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAgentLocationRequest.class, baseUrl, "/api/v1/agents/{agent_id}/locations/{location_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -467,13 +467,13 @@ public class Agents {
      */
     public org.openapis.openapi.models.operations.GetAgentLocationsResponse getAgentLocations(org.openapis.openapi.models.operations.GetAgentLocationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAgentLocationsPathParams.class, baseUrl, "/api/v1/agents/{agent_id}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAgentLocationsRequest.class, baseUrl, "/api/v1/agents/{agent_id}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAgentLocationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAgentLocationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -512,13 +512,13 @@ public class Agents {
      */
     public org.openapis.openapi.models.operations.GetApplicationAgentsResponse getApplicationAgents(org.openapis.openapi.models.operations.GetApplicationAgentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApplicationAgentsPathParams.class, baseUrl, "/api/v1/applications/{application_id}/agents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApplicationAgentsRequest.class, baseUrl, "/api/v1/applications/{application_id}/agents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApplicationAgentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApplicationAgentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

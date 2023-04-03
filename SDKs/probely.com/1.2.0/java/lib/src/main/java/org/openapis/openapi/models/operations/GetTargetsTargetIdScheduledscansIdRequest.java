@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTargetsTargetIdScheduledscansIdRequest {
+    /**
+     * Object Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetTargetsTargetIdScheduledscansIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetTargetsTargetIdScheduledscansIdPathParams pathParams;
-    public GetTargetsTargetIdScheduledscansIdRequest withPathParams(GetTargetsTargetIdScheduledscansIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Target id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_id")
+    public String targetId;
+    public GetTargetsTargetIdScheduledscansIdRequest withTargetId(String targetId) {
+        this.targetId = targetId;
         return this;
     }
     

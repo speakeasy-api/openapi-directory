@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AddApplicationCloudWatchLoggingOptionXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AddApplicationCloudWatchLoggingOptionHeaders;
 import org.openapis.openapi.models.operations.AddApplicationCloudWatchLoggingOptionRequest;
 import org.openapis.openapi.models.operations.AddApplicationCloudWatchLoggingOptionResponse;
 import org.openapis.openapi.models.shared.AddApplicationCloudWatchLoggingOptionRequest;
@@ -29,32 +28,28 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddApplicationCloudWatchLoggingOptionRequest req = new AddApplicationCloudWatchLoggingOptionRequest() {{
-                headers = new AddApplicationCloudWatchLoggingOptionHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "KinesisAnalytics_20180523.AddApplicationCloudWatchLoggingOption";
-                }};
-                request = new AddApplicationCloudWatchLoggingOptionRequest() {{
-                    applicationName = "illum";
+                addApplicationCloudWatchLoggingOptionRequest = new AddApplicationCloudWatchLoggingOptionRequest() {{
+                    applicationName = "corrupti";
                     cloudWatchLoggingOption = new CloudWatchLoggingOption() {{
-                        logStreamARN = "vel";
+                        logStreamARN = "provident";
                     }};
-                    conditionalToken = "error";
-                    currentApplicationVersionId = 645894;
+                    conditionalToken = "distinctio";
+                    currentApplicationVersionId = 844266;
                 }};
-            }};            
+                xAmzAlgorithm = "unde";
+                xAmzContentSha256 = "nulla";
+                xAmzCredential = "corrupti";
+                xAmzDate = "illum";
+                xAmzSecurityToken = "vel";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "deserunt";
+                xAmzTarget = "KinesisAnalytics_20180523.AddApplicationCloudWatchLoggingOption";
+            }}            
 
             AddApplicationCloudWatchLoggingOptionResponse res = sdk.addApplicationCloudWatchLoggingOption(req);
 
@@ -68,7 +63,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

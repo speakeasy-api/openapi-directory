@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveAnOauthConnectionRequest {
-    
-    public RetrieveAnOauthConnectionPathParams pathParams;
-    public RetrieveAnOauthConnectionRequest withPathParams(RetrieveAnOauthConnectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=oauth_connection_id")
+    public String oauthConnectionId;
+    public RetrieveAnOauthConnectionRequest withOauthConnectionId(String oauthConnectionId) {
+        this.oauthConnectionId = oauthConnectionId;
         return this;
     }
     

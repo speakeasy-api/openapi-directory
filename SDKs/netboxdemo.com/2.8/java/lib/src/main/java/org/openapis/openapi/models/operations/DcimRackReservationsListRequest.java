@@ -4,13 +4,271 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimRackReservationsListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created")
+    public String created;
+    public DcimRackReservationsListRequest withCreated(String created) {
+        this.created = created;
+        return this;
+    }
     
-    public DcimRackReservationsListQueryParams queryParams;
-    public DcimRackReservationsListRequest withQueryParams(DcimRackReservationsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created__gt")
+    public String createdGt;
+    public DcimRackReservationsListRequest withCreatedGt(String createdGt) {
+        this.createdGt = createdGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created__gte")
+    public String createdGte;
+    public DcimRackReservationsListRequest withCreatedGte(String createdGte) {
+        this.createdGte = createdGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created__lt")
+    public String createdLt;
+    public DcimRackReservationsListRequest withCreatedLt(String createdLt) {
+        this.createdLt = createdLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created__lte")
+    public String createdLte;
+    public DcimRackReservationsListRequest withCreatedLte(String createdLte) {
+        this.createdLte = createdLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created__n")
+    public String createdN;
+    public DcimRackReservationsListRequest withCreatedN(String createdN) {
+        this.createdN = createdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public String group;
+    public DcimRackReservationsListRequest withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group__n")
+    public String groupN;
+    public DcimRackReservationsListRequest withGroupN(String groupN) {
+        this.groupN = groupN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
+    public String groupId;
+    public DcimRackReservationsListRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id__n")
+    public String groupIdN;
+    public DcimRackReservationsListRequest withGroupIdN(String groupIdN) {
+        this.groupIdN = groupIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public DcimRackReservationsListRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gt")
+    public String idGt;
+    public DcimRackReservationsListRequest withIdGt(String idGt) {
+        this.idGt = idGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gte")
+    public String idGte;
+    public DcimRackReservationsListRequest withIdGte(String idGte) {
+        this.idGte = idGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lt")
+    public String idLt;
+    public DcimRackReservationsListRequest withIdLt(String idLt) {
+        this.idLt = idLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lte")
+    public String idLte;
+    public DcimRackReservationsListRequest withIdLte(String idLte) {
+        this.idLte = idLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__n")
+    public String idN;
+    public DcimRackReservationsListRequest withIdN(String idN) {
+        this.idN = idN;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public DcimRackReservationsListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public DcimRackReservationsListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public DcimRackReservationsListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rack_id")
+    public String rackId;
+    public DcimRackReservationsListRequest withRackId(String rackId) {
+        this.rackId = rackId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rack_id__n")
+    public String rackIdN;
+    public DcimRackReservationsListRequest withRackIdN(String rackIdN) {
+        this.rackIdN = rackIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
+    public String site;
+    public DcimRackReservationsListRequest withSite(String site) {
+        this.site = site;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site__n")
+    public String siteN;
+    public DcimRackReservationsListRequest withSiteN(String siteN) {
+        this.siteN = siteN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site_id")
+    public String siteId;
+    public DcimRackReservationsListRequest withSiteId(String siteId) {
+        this.siteId = siteId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site_id__n")
+    public String siteIdN;
+    public DcimRackReservationsListRequest withSiteIdN(String siteIdN) {
+        this.siteIdN = siteIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant")
+    public String tenant;
+    public DcimRackReservationsListRequest withTenant(String tenant) {
+        this.tenant = tenant;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant__n")
+    public String tenantN;
+    public DcimRackReservationsListRequest withTenantN(String tenantN) {
+        this.tenantN = tenantN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant_group")
+    public String tenantGroup;
+    public DcimRackReservationsListRequest withTenantGroup(String tenantGroup) {
+        this.tenantGroup = tenantGroup;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant_group__n")
+    public String tenantGroupN;
+    public DcimRackReservationsListRequest withTenantGroupN(String tenantGroupN) {
+        this.tenantGroupN = tenantGroupN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant_group_id")
+    public String tenantGroupId;
+    public DcimRackReservationsListRequest withTenantGroupId(String tenantGroupId) {
+        this.tenantGroupId = tenantGroupId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant_group_id__n")
+    public String tenantGroupIdN;
+    public DcimRackReservationsListRequest withTenantGroupIdN(String tenantGroupIdN) {
+        this.tenantGroupIdN = tenantGroupIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant_id")
+    public String tenantId;
+    public DcimRackReservationsListRequest withTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant_id__n")
+    public String tenantIdN;
+    public DcimRackReservationsListRequest withTenantIdN(String tenantIdN) {
+        this.tenantIdN = tenantIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
+    public String user;
+    public DcimRackReservationsListRequest withUser(String user) {
+        this.user = user;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user__n")
+    public String userN;
+    public DcimRackReservationsListRequest withUserN(String userN) {
+        this.userN = userN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
+    public String userId;
+    public DcimRackReservationsListRequest withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id__n")
+    public String userIdN;
+    public DcimRackReservationsListRequest withUserIdN(String userIdN) {
+        this.userIdN = userIdN;
         return this;
     }
     

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPodcastRequest {
-    
-    public GetPodcastPathParams pathParams;
-    public GetPodcastRequest withPathParams(GetPodcastPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=podcastKey")
+    public String podcastKey;
+    public GetPodcastRequest withPodcastKey(String podcastKey) {
+        this.podcastKey = podcastKey;
         return this;
     }
     

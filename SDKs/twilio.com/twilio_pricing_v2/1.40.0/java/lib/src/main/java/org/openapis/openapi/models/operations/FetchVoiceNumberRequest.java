@@ -4,34 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchVoiceNumberRequest {
-    
-    public FetchVoiceNumberPathParams pathParams;
-    public FetchVoiceNumberRequest withPathParams(FetchVoiceNumberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The destination phone number, in [E.164](https://www.twilio.com/docs/glossary/what-e164) format, for which to fetch the origin-based voice pricing information. E.164 format consists of a + followed by the country code and subscriber number.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DestinationNumber")
+    public String destinationNumber;
+    public FetchVoiceNumberRequest withDestinationNumber(String destinationNumber) {
+        this.destinationNumber = destinationNumber;
         return this;
     }
     
-    
-    public FetchVoiceNumberQueryParams queryParams;
-    public FetchVoiceNumberRequest withQueryParams(FetchVoiceNumberQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public FetchVoiceNumberSecurity security;
-    public FetchVoiceNumberRequest withSecurity(FetchVoiceNumberSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchVoiceNumberRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The origination phone number, in [E.164](https://www.twilio.com/docs/glossary/what-e164) format, for which to fetch the origin-based voice pricing information. E.164 format consists of a + followed by the country code and subscriber number.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OriginationNumber")
+    public String originationNumber;
+    public FetchVoiceNumberRequest withOriginationNumber(String originationNumber) {
+        this.originationNumber = originationNumber;
         return this;
     }
     

@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AssociateFirewallRuleGroupXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AssociateFirewallRuleGroupHeaders;
 import org.openapis.openapi.models.operations.AssociateFirewallRuleGroupRequest;
 import org.openapis.openapi.models.operations.AssociateFirewallRuleGroupResponse;
 import org.openapis.openapi.models.shared.AssociateFirewallRuleGroupRequest;
@@ -30,42 +29,46 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateFirewallRuleGroupRequest req = new AssociateFirewallRuleGroupRequest() {{
-                headers = new AssociateFirewallRuleGroupHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "Route53Resolver.AssociateFirewallRuleGroup";
-                }};
-                request = new AssociateFirewallRuleGroupRequest() {{
-                    creatorRequestId = "illum";
-                    firewallRuleGroupId = "vel";
+                associateFirewallRuleGroupRequest = new AssociateFirewallRuleGroupRequest() {{
+                    creatorRequestId = "corrupti";
+                    firewallRuleGroupId = "provident";
                     mutationProtection = "DISABLED";
-                    name = "deserunt";
-                    priority = 384382;
+                    name = "quibusdam";
+                    priority = 602763;
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "magnam";
-                            value = "debitis";
+                            key = "corrupti";
+                            value = "illum";
                         }}),
                         add(new Tag() {{
-                            key = "ipsa";
-                            value = "delectus";
+                            key = "vel";
+                            value = "error";
+                        }}),
+                        add(new Tag() {{
+                            key = "deserunt";
+                            value = "suscipit";
+                        }}),
+                        add(new Tag() {{
+                            key = "iure";
+                            value = "magnam";
                         }}),
                     }};
-                    vpcId = "tempora";
+                    vpcId = "debitis";
                 }};
-            }};            
+                xAmzAlgorithm = "ipsa";
+                xAmzContentSha256 = "delectus";
+                xAmzCredential = "tempora";
+                xAmzDate = "suscipit";
+                xAmzSecurityToken = "molestiae";
+                xAmzSignature = "minus";
+                xAmzSignedHeaders = "placeat";
+                xAmzTarget = "Route53Resolver.AssociateFirewallRuleGroup";
+            }}            
 
             AssociateFirewallRuleGroupResponse res = sdk.associateFirewallRuleGroup(req);
 
@@ -79,7 +82,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

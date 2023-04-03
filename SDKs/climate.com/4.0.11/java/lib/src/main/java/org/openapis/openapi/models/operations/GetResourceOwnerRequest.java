@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourceOwnerRequest {
-    
-    public GetResourceOwnerPathParams pathParams;
-    public GetResourceOwnerRequest withPathParams(GetResourceOwnerPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetResourceOwnerSecurity security;
-    public GetResourceOwnerRequest withSecurity(GetResourceOwnerSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the resource owner.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resourceOwnerId")
+    public String resourceOwnerId;
+    public GetResourceOwnerRequest withResourceOwnerId(String resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     

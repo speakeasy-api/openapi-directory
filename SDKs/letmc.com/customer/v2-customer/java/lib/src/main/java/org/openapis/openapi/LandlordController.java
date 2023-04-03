@@ -40,13 +40,13 @@ public class LandlordController {
      */
     public org.openapis.openapi.models.operations.LandlordControllerCreateMaintenancePreferenceResponse landlordControllerCreateMaintenancePreference(org.openapis.openapi.models.operations.LandlordControllerCreateMaintenancePreferenceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerCreateMaintenancePreferencePathParams.class, baseUrl, "/v2/customer/{shortName}/landlord/tenancy/maintenance/preference", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerCreateMaintenancePreferenceRequest.class, baseUrl, "/v2/customer/{shortName}/landlord/tenancy/maintenance/preference", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerCreateMaintenancePreferenceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerCreateMaintenancePreferenceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -98,13 +98,13 @@ public class LandlordController {
      */
     public org.openapis.openapi.models.operations.LandlordControllerGetAccountsResponse landlordControllerGetAccounts(org.openapis.openapi.models.operations.LandlordControllerGetAccountsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetAccountsPathParams.class, baseUrl, "/v2/customer/{shortName}/landlord/accounting", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetAccountsRequest.class, baseUrl, "/v2/customer/{shortName}/landlord/accounting", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetAccountsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetAccountsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -148,13 +148,13 @@ public class LandlordController {
      */
     public org.openapis.openapi.models.operations.LandlordControllerGetDocumentResponse landlordControllerGetDocument(org.openapis.openapi.models.operations.LandlordControllerGetDocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetDocumentPathParams.class, baseUrl, "/v2/customer/{shortName}/landlord/document", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetDocumentRequest.class, baseUrl, "/v2/customer/{shortName}/landlord/document", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetDocumentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetDocumentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -208,13 +208,13 @@ public class LandlordController {
      */
     public org.openapis.openapi.models.operations.LandlordControllerGetInvetoryReportResponse landlordControllerGetInvetoryReport(org.openapis.openapi.models.operations.LandlordControllerGetInvetoryReportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetInvetoryReportPathParams.class, baseUrl, "/v2/customer/{shortName}/landlord/inventory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetInvetoryReportRequest.class, baseUrl, "/v2/customer/{shortName}/landlord/inventory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetInvetoryReportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetInvetoryReportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -268,13 +268,13 @@ public class LandlordController {
      */
     public org.openapis.openapi.models.operations.LandlordControllerGetInvoiceResponse landlordControllerGetInvoice(org.openapis.openapi.models.operations.LandlordControllerGetInvoiceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetInvoicePathParams.class, baseUrl, "/v2/customer/{shortName}/landlord/invoice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetInvoiceRequest.class, baseUrl, "/v2/customer/{shortName}/landlord/invoice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetInvoiceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetInvoiceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -328,13 +328,13 @@ public class LandlordController {
      */
     public org.openapis.openapi.models.operations.LandlordControllerGetLandlordCrmEntriesResponse landlordControllerGetLandlordCrmEntries(org.openapis.openapi.models.operations.LandlordControllerGetLandlordCrmEntriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetLandlordCrmEntriesPathParams.class, baseUrl, "/v2/customer/{shortName}/landlord/landlordcrmentries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetLandlordCrmEntriesRequest.class, baseUrl, "/v2/customer/{shortName}/landlord/landlordcrmentries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetLandlordCrmEntriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetLandlordCrmEntriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -388,13 +388,13 @@ public class LandlordController {
      */
     public org.openapis.openapi.models.operations.LandlordControllerGetMaintenanceJobsResponse landlordControllerGetMaintenanceJobs(org.openapis.openapi.models.operations.LandlordControllerGetMaintenanceJobsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetMaintenanceJobsPathParams.class, baseUrl, "/v2/customer/{shortName}/landlord/maintenance", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetMaintenanceJobsRequest.class, baseUrl, "/v2/customer/{shortName}/landlord/maintenance", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetMaintenanceJobsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetMaintenanceJobsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -438,13 +438,13 @@ public class LandlordController {
      */
     public org.openapis.openapi.models.operations.LandlordControllerGetProfitLossReportResponse landlordControllerGetProfitLossReport(org.openapis.openapi.models.operations.LandlordControllerGetProfitLossReportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetProfitLossReportPathParams.class, baseUrl, "/v2/customer/{shortName}/landlord/profitloss", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetProfitLossReportRequest.class, baseUrl, "/v2/customer/{shortName}/landlord/profitloss", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetProfitLossReportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetProfitLossReportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -488,13 +488,13 @@ public class LandlordController {
      */
     public org.openapis.openapi.models.operations.LandlordControllerGetRentArrearsResponse landlordControllerGetRentArrears(org.openapis.openapi.models.operations.LandlordControllerGetRentArrearsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetRentArrearsPathParams.class, baseUrl, "/v2/customer/{shortName}/landlord/rentarrears", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetRentArrearsRequest.class, baseUrl, "/v2/customer/{shortName}/landlord/rentarrears", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetRentArrearsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetRentArrearsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -538,13 +538,13 @@ public class LandlordController {
      */
     public org.openapis.openapi.models.operations.LandlordControllerGetSASReportResponse landlordControllerGetSASReport(org.openapis.openapi.models.operations.LandlordControllerGetSASReportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetSASReportPathParams.class, baseUrl, "/v2/customer/{shortName}/landlord/sas", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetSASReportRequest.class, baseUrl, "/v2/customer/{shortName}/landlord/sas", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetSASReportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetSASReportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -598,13 +598,13 @@ public class LandlordController {
      */
     public org.openapis.openapi.models.operations.LandlordControllerGetSettingsResponse landlordControllerGetSettings(org.openapis.openapi.models.operations.LandlordControllerGetSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetSettingsPathParams.class, baseUrl, "/v2/customer/{shortName}/landlord/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetSettingsRequest.class, baseUrl, "/v2/customer/{shortName}/landlord/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -648,13 +648,13 @@ public class LandlordController {
      */
     public org.openapis.openapi.models.operations.LandlordControllerGetSummaryDetailsResponse landlordControllerGetSummaryDetails(org.openapis.openapi.models.operations.LandlordControllerGetSummaryDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetSummaryDetailsPathParams.class, baseUrl, "/v2/customer/{shortName}/landlord/summary", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetSummaryDetailsRequest.class, baseUrl, "/v2/customer/{shortName}/landlord/summary", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetSummaryDetailsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetSummaryDetailsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -698,13 +698,13 @@ public class LandlordController {
      */
     public org.openapis.openapi.models.operations.LandlordControllerGetTenancyResponse landlordControllerGetTenancy(org.openapis.openapi.models.operations.LandlordControllerGetTenancyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetTenancyPathParams.class, baseUrl, "/v2/customer/{shortName}/landlord/tenancy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetTenancyRequest.class, baseUrl, "/v2/customer/{shortName}/landlord/tenancy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetTenancyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetTenancyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -748,13 +748,13 @@ public class LandlordController {
      */
     public org.openapis.openapi.models.operations.LandlordControllerGetTenancyAgreementReportResponse landlordControllerGetTenancyAgreementReport(org.openapis.openapi.models.operations.LandlordControllerGetTenancyAgreementReportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetTenancyAgreementReportPathParams.class, baseUrl, "/v2/customer/{shortName}/landlord/tenancyagreement", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LandlordControllerGetTenancyAgreementReportRequest.class, baseUrl, "/v2/customer/{shortName}/landlord/tenancyagreement", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetTenancyAgreementReportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LandlordControllerGetTenancyAgreementReportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

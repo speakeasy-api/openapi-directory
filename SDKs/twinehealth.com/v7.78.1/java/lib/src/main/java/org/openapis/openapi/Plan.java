@@ -49,7 +49,7 @@ public class Plan {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchPatientPlanSummariesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchPatientPlanSummariesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -96,13 +96,13 @@ public class Plan {
      */
     public org.openapis.openapi.models.operations.FetchPatientPlanSummaryResponse fetchPatientPlanSummary(org.openapis.openapi.models.operations.FetchPatientPlanSummaryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchPatientPlanSummaryPathParams.class, baseUrl, "/patient_plan_summary/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchPatientPlanSummaryRequest.class, baseUrl, "/patient_plan_summary/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchPatientPlanSummaryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchPatientPlanSummaryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -149,12 +149,12 @@ public class Plan {
      */
     public org.openapis.openapi.models.operations.UpdatePatientPlanSummaryResponse updatePatientPlanSummary(org.openapis.openapi.models.operations.UpdatePatientPlanSummaryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePatientPlanSummaryPathParams.class, baseUrl, "/patient_plan_summary/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePatientPlanSummaryRequest.class, baseUrl, "/patient_plan_summary/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updatePatientPlanSummaryRequestInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

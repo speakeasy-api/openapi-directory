@@ -7,27 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MeetingLiveStreamStatusUpdateRequest {
-    
-    public MeetingLiveStreamStatusUpdatePathParams pathParams;
-    public MeetingLiveStreamStatusUpdateRequest withPathParams(MeetingLiveStreamStatusUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Meeting
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public MeetingLiveStreamStatusUpdateApplicationJSON request;
-    public MeetingLiveStreamStatusUpdateRequest withRequest(MeetingLiveStreamStatusUpdateApplicationJSON request) {
-        this.request = request;
+    public MeetingLiveStreamStatusUpdateApplicationJSON requestBody;
+    public MeetingLiveStreamStatusUpdateRequest withRequestBody(MeetingLiveStreamStatusUpdateApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public MeetingLiveStreamStatusUpdateSecurity security;
-    public MeetingLiveStreamStatusUpdateRequest withSecurity(MeetingLiveStreamStatusUpdateSecurity security) {
-        this.security = security;
+    /**
+     * The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
+     * 
+     * While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public Long meetingId;
+    public MeetingLiveStreamStatusUpdateRequest withMeetingId(Long meetingId) {
+        this.meetingId = meetingId;
         return this;
     }
     

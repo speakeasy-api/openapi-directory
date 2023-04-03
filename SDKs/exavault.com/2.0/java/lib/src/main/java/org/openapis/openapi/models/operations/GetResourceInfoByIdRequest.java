@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourceInfoByIdRequest {
-    
-    public GetResourceInfoByIdPathParams pathParams;
-    public GetResourceInfoByIdRequest withPathParams(GetResourceInfoByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public GetResourceInfoByIdRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
         return this;
     }
     
-    
-    public GetResourceInfoByIdQueryParams queryParams;
-    public GetResourceInfoByIdRequest withQueryParams(GetResourceInfoByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API Key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public GetResourceInfoByIdRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
         return this;
     }
     
+    /**
+     * ID number of the resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetResourceInfoByIdRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetResourceInfoByIdHeaders headers;
-    public GetResourceInfoByIdRequest withHeaders(GetResourceInfoByIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Comma separated list of relationships to include in response. Possible values are **share**, **notifications**, **directFile**, **parentResource**, **ownerUser**, **ownerAccount**.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public String include;
+    public GetResourceInfoByIdRequest withInclude(String include) {
+        this.include = include;
         return this;
     }
     

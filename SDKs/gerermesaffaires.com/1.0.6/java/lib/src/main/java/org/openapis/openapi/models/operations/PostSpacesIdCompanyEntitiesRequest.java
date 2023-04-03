@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesIdCompanyEntitiesRequest {
-    
-    public PostSpacesIdCompanyEntitiesPathParams pathParams;
-    public PostSpacesIdCompanyEntitiesRequest withPathParams(PostSpacesIdCompanyEntitiesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Company to add Name or LegalName are mandatory
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSpacesIdCompanyEntitiesRequestBody request;
-    public PostSpacesIdCompanyEntitiesRequest withRequest(PostSpacesIdCompanyEntitiesRequestBody request) {
-        this.request = request;
+    public PostSpacesIdCompanyEntitiesRequestBody requestBody;
+    public PostSpacesIdCompanyEntitiesRequest withRequestBody(PostSpacesIdCompanyEntitiesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostSpacesIdCompanyEntitiesSecurity security;
-    public PostSpacesIdCompanyEntitiesRequest withSecurity(PostSpacesIdCompanyEntitiesSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesIdCompanyEntitiesRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

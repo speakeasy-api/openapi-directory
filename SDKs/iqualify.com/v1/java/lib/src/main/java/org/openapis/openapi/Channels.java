@@ -39,12 +39,12 @@ public class Channels {
      */
     public org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdChannelsChannelIdLearnersResponse deleteOfferingsOfferingIdChannelsChannelIdLearners(org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdChannelsChannelIdLearnersPathParams.class, baseUrl, "/offerings/{offeringId}/channels/{channelId}/learners", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequest.class, baseUrl, "/offerings/{offeringId}/channels/{channelId}/learners", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -86,7 +86,7 @@ public class Channels {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsResponse getOfferingsOfferingIdAnalyticsChannelsChannelIdComments(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsPathParams.class, baseUrl, "/offerings/{offeringId}/analytics/channels/{channelId}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdCommentsRequest.class, baseUrl, "/offerings/{offeringId}/analytics/channels/{channelId}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -134,7 +134,7 @@ public class Channels {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdPostsResponse getOfferingsOfferingIdAnalyticsChannelsChannelIdPosts(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdPostsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdPostsPathParams.class, baseUrl, "/offerings/{offeringId}/analytics/channels/{channelId}/posts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdPostsRequest.class, baseUrl, "/offerings/{offeringId}/analytics/channels/{channelId}/posts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -182,7 +182,7 @@ public class Channels {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesResponse getOfferingsOfferingIdAnalyticsChannelsChannelIdReplies(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesPathParams.class, baseUrl, "/offerings/{offeringId}/analytics/channels/{channelId}/replies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsChannelsChannelIdRepliesRequest.class, baseUrl, "/offerings/{offeringId}/analytics/channels/{channelId}/replies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -230,7 +230,7 @@ public class Channels {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdChannelsResponse getOfferingsOfferingIdChannels(org.openapis.openapi.models.operations.GetOfferingsOfferingIdChannelsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdChannelsPathParams.class, baseUrl, "/offerings/{offeringId}/channels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdChannelsRequest.class, baseUrl, "/offerings/{offeringId}/channels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -278,7 +278,7 @@ public class Channels {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdChannelsChannelIdLearnersResponse getOfferingsOfferingIdChannelsChannelIdLearners(org.openapis.openapi.models.operations.GetOfferingsOfferingIdChannelsChannelIdLearnersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdChannelsChannelIdLearnersPathParams.class, baseUrl, "/offerings/{offeringId}/channels/{channelId}/learners", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdChannelsChannelIdLearnersRequest.class, baseUrl, "/offerings/{offeringId}/channels/{channelId}/learners", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -326,12 +326,12 @@ public class Channels {
      */
     public org.openapis.openapi.models.operations.PatchOfferingsOfferingIdChannelsChannelIdResponse patchOfferingsOfferingIdChannelsChannelId(org.openapis.openapi.models.operations.PatchOfferingsOfferingIdChannelsChannelIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchOfferingsOfferingIdChannelsChannelIdPathParams.class, baseUrl, "/offerings/{offeringId}/channels/{channelId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchOfferingsOfferingIdChannelsChannelIdRequest.class, baseUrl, "/offerings/{offeringId}/channels/{channelId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "channel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -379,12 +379,12 @@ public class Channels {
      */
     public org.openapis.openapi.models.operations.PostOfferingsOfferingIdChannelsResponse postOfferingsOfferingIdChannels(org.openapis.openapi.models.operations.PostOfferingsOfferingIdChannelsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOfferingsOfferingIdChannelsPathParams.class, baseUrl, "/offerings/{offeringId}/channels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOfferingsOfferingIdChannelsRequest.class, baseUrl, "/offerings/{offeringId}/channels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "channelRequired", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -432,12 +432,12 @@ public class Channels {
      */
     public org.openapis.openapi.models.operations.PostOfferingsOfferingIdChannelsChannelIdLearnersResponse postOfferingsOfferingIdChannelsChannelIdLearners(org.openapis.openapi.models.operations.PostOfferingsOfferingIdChannelsChannelIdLearnersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOfferingsOfferingIdChannelsChannelIdLearnersPathParams.class, baseUrl, "/offerings/{offeringId}/channels/{channelId}/learners", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOfferingsOfferingIdChannelsChannelIdLearnersRequest.class, baseUrl, "/offerings/{offeringId}/channels/{channelId}/learners", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

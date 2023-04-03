@@ -40,7 +40,7 @@ public class Radio {
      */
     public org.openapis.openapi.models.operations.GetDeviceWirelessRadioSettingsResponse getDeviceWirelessRadioSettings(org.openapis.openapi.models.operations.GetDeviceWirelessRadioSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceWirelessRadioSettingsPathParams.class, baseUrl, "/devices/{serial}/wireless/radio/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceWirelessRadioSettingsRequest.class, baseUrl, "/devices/{serial}/wireless/radio/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class Radio {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceWirelessRadioSettingsResponse updateDeviceWirelessRadioSettings(org.openapis.openapi.models.operations.UpdateDeviceWirelessRadioSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceWirelessRadioSettingsPathParams.class, baseUrl, "/devices/{serial}/wireless/radio/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceWirelessRadioSettingsRequest.class, baseUrl, "/devices/{serial}/wireless/radio/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

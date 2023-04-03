@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VenByRouteUsV1VenuesRouteQueryPostRequest {
-    
-    public VenByRouteUsV1VenuesRouteQueryPostHeaders headers;
-    public VenByRouteUsV1VenuesRouteQueryPostRequest withHeaders(VenByRouteUsV1VenuesRouteQueryPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.VenuesByRoute venuesByRoute;
+    public VenByRouteUsV1VenuesRouteQueryPostRequest withVenuesByRoute(org.openapis.openapi.models.shared.VenuesByRoute venuesByRoute) {
+        this.venuesByRoute = venuesByRoute;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.VenuesByRoute request;
-    public VenByRouteUsV1VenuesRouteQueryPostRequest withRequest(org.openapis.openapi.models.shared.VenuesByRoute request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public VenByRouteUsV1VenuesRouteQueryPostRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

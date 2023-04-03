@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWageSettingRequest {
-    
-    public UpdateWageSettingPathParams pathParams;
-    public UpdateWageSettingRequest withPathParams(UpdateWageSettingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateWageSettingRequest request;
-    public UpdateWageSettingRequest withRequest(org.openapis.openapi.models.shared.UpdateWageSettingRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateWageSettingRequest updateWageSettingRequest;
+    public UpdateWageSettingRequest withUpdateWageSettingRequest(org.openapis.openapi.models.shared.UpdateWageSettingRequest updateWageSettingRequest) {
+        this.updateWageSettingRequest = updateWageSettingRequest;
         return this;
     }
     
-    
-    public UpdateWageSettingSecurity security;
-    public UpdateWageSettingRequest withSecurity(UpdateWageSettingSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the team member for which to update the `WageSetting` object.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_member_id")
+    public String teamMemberId;
+    public UpdateWageSettingRequest withTeamMemberId(String teamMemberId) {
+        this.teamMemberId = teamMemberId;
         return this;
     }
     

@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchMediaRecordingRequest {
-    
-    public FetchMediaRecordingPathParams pathParams;
-    public FetchMediaRecordingRequest withPathParams(FetchMediaRecordingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchMediaRecordingSecurity security;
-    public FetchMediaRecordingRequest withSecurity(FetchMediaRecordingSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchMediaRecordingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the MediaRecording resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchMediaRecordingRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

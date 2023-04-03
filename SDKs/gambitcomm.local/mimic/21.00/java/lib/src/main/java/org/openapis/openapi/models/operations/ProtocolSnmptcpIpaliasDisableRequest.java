@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmptcpIpaliasDisableRequest {
+    /**
+     * Agent to manipulate SNMPTCP IP alias
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSnmptcpIpaliasDisableRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolSnmptcpIpaliasDisablePathParams pathParams;
-    public ProtocolSnmptcpIpaliasDisableRequest withPathParams(ProtocolSnmptcpIpaliasDisablePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ipaddress")
+    public String ipaddress;
+    public ProtocolSnmptcpIpaliasDisableRequest withIpaddress(String ipaddress) {
+        this.ipaddress = ipaddress;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
+    public Integer port;
+    public ProtocolSnmptcpIpaliasDisableRequest withPort(Integer port) {
+        this.port = port;
         return this;
     }
     

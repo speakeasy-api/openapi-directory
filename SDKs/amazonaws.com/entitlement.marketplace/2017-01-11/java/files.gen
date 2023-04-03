@@ -30,7 +30,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetEntitlementsXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetEntitlementsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEntitlementsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEntitlementsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ThrottlingException.java
@@ -40,6 +39,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/GetEntitlementsResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/Entitlement.java
 lib/src/main/java/org/openapis/openapi/models/shared/EntitlementValue.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetEntitlementsRequest.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

@@ -4,13 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataPointsCountRequest {
+    /**
+     * Exclude datapoints created before this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
+    public String createdAfter;
+    public DataPointsCountRequest withCreatedAfter(String createdAfter) {
+        this.createdAfter = createdAfter;
+        return this;
+    }
     
-    public DataPointsCountQueryParams queryParams;
-    public DataPointsCountRequest withQueryParams(DataPointsCountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Exclude datapoints created after this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
+    public String createdBefore;
+    public DataPointsCountRequest withCreatedBefore(String createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
+    
+    /**
+     * Filter fields by favourite status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlyFavorites")
+    public Boolean onlyFavorites;
+    public DataPointsCountRequest withOnlyFavorites(Boolean onlyFavorites) {
+        this.onlyFavorites = onlyFavorites;
+        return this;
+    }
+    
+    /**
+     * Status of the datapoint
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public DataPointsCountStatusEnum status;
+    public DataPointsCountRequest withStatus(DataPointsCountStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of tags you want to filter with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public DataPointsCountRequest withTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    
+    /**
+     * Filter fields by this pattern
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
+    public String textSearch;
+    public DataPointsCountRequest withTextSearch(String textSearch) {
+        this.textSearch = textSearch;
+        return this;
+    }
+    
+    /**
+     * Type of the datapoint ("tp"/"tl")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public DataPointsCountTypeEnum type;
+    public DataPointsCountRequest withType(DataPointsCountTypeEnum type) {
+        this.type = type;
         return this;
     }
     

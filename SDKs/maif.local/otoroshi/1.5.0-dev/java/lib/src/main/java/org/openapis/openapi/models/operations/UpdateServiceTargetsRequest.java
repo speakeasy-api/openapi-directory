@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateServiceTargetsRequest {
-    
-    public UpdateServiceTargetsPathParams pathParams;
-    public UpdateServiceTargetsRequest withPathParams(UpdateServiceTargetsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Patch[] request;
-    public UpdateServiceTargetsRequest withRequest(org.openapis.openapi.models.shared.Patch[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Patch[] requestBody;
+    public UpdateServiceTargetsRequest withRequestBody(org.openapis.openapi.models.shared.Patch[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateServiceTargetsSecurity security;
-    public UpdateServiceTargetsRequest withSecurity(UpdateServiceTargetsSecurity security) {
-        this.security = security;
+    /**
+     * The service id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceId")
+    public String serviceId;
+    public UpdateServiceTargetsRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
         return this;
     }
     

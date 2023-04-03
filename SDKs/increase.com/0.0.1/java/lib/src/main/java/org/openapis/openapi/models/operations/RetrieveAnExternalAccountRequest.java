@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveAnExternalAccountRequest {
-    
-    public RetrieveAnExternalAccountPathParams pathParams;
-    public RetrieveAnExternalAccountRequest withPathParams(RetrieveAnExternalAccountPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=external_account_id")
+    public String externalAccountId;
+    public RetrieveAnExternalAccountRequest withExternalAccountId(String externalAccountId) {
+        this.externalAccountId = externalAccountId;
         return this;
     }
     

@@ -21,14 +21,10 @@ import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteSecurityOpti
 import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteSecurityOption2;
 import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteSecurityOption3;
 import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteSecurity;
-import org.openapis.openapi.models.operations.ReplicapoolPoolsDeletePathParams;
-import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteQueryParams;
 import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteRequest;
 import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteResponse;
-import org.openapis.openapi.models.shared.PoolsDeleteRequest;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
+import org.openapis.openapi.models.shared.PoolsDeleteRequest;
 
 public class Application {
     public static void main(String[] args) {
@@ -37,39 +33,31 @@ public class Application {
                 .build();
 
             ReplicapoolPoolsDeleteRequest req = new ReplicapoolPoolsDeleteRequest() {{
-                security = new ReplicapoolPoolsDeleteSecurity() {{
-                    option1 = new ReplicapoolPoolsDeleteSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new ReplicapoolPoolsDeletePathParams() {{
-                    poolName = "corrupti";
-                    projectName = "provident";
-                    zone = "distinctio";
-                }};
-                queryParams = new ReplicapoolPoolsDeleteQueryParams() {{
-                    alt = "json";
-                    fields = "quibusdam";
-                    key = "unde";
-                    oauthToken = "nulla";
-                    prettyPrint = false;
-                    quotaUser = "corrupti";
-                    userIp = "illum";
-                }};
-                request = new PoolsDeleteRequest() {{
+                poolsDeleteRequest = new PoolsDeleteRequest() {{
                     abandonInstances = new String[]{{
-                        add("error"),
-                        add("deserunt"),
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
                 }};
-            }};            
+                alt = "json";
+                fields = "unde";
+                key = "nulla";
+                oauthToken = "corrupti";
+                poolName = "illum";
+                prettyPrint = false;
+                projectName = "vel";
+                quotaUser = "error";
+                userIp = "deserunt";
+                zone = "suscipit";
+            }}            
 
-            ReplicapoolPoolsDeleteResponse res = sdk.pools.replicapoolPoolsDelete(req);
+            ReplicapoolPoolsDeleteResponse res = sdk.pools.replicapoolPoolsDelete(req, new ReplicapoolPoolsDeleteSecurity() {{
+                option1 = new ReplicapoolPoolsDeleteSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -81,7 +69,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### pools

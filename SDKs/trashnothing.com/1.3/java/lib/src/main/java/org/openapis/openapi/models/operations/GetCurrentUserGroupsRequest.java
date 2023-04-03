@@ -4,13 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCurrentUserGroupsRequest {
-    
-    public GetCurrentUserGroupsQueryParams queryParams;
-    public GetCurrentUserGroupsRequest withQueryParams(GetCurrentUserGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Set the membership parameter to only return certain groups. The options are: &lt;br /&gt;&lt;br /&gt; - **subscribed**: Only return groups the user is a member of.&lt;br /&gt; - **pending-questions**: Only return groups where the user needs to respond to a new member questionnaire.&lt;br /&gt; - **pending**: Only return groups where the user is waiting for their membership request to be approved (excludes groups which are pending-questions). &lt;br /&gt;&lt;br /&gt; If unset, all groups the user is a member of and pending membership on will be returned.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=membership")
+    public String membership;
+    public GetCurrentUserGroupsRequest withMembership(String membership) {
+        this.membership = membership;
         return this;
     }
     

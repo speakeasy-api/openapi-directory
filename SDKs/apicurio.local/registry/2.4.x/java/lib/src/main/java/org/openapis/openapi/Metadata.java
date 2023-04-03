@@ -54,7 +54,7 @@ public class Metadata {
      */
     public org.openapis.openapi.models.operations.DeleteArtifactVersionMetaDataResponse deleteArtifactVersionMetaData(org.openapis.openapi.models.operations.DeleteArtifactVersionMetaDataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteArtifactVersionMetaDataPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/meta", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteArtifactVersionMetaDataRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/meta", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -101,7 +101,7 @@ public class Metadata {
      */
     public org.openapis.openapi.models.operations.GetArtifactMetaDataResponse getArtifactMetaData(org.openapis.openapi.models.operations.GetArtifactMetaDataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetArtifactMetaDataPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/meta", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetArtifactMetaDataRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/meta", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -153,7 +153,7 @@ public class Metadata {
      */
     public org.openapis.openapi.models.operations.GetArtifactOwnerResponse getArtifactOwner(org.openapis.openapi.models.operations.GetArtifactOwnerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetArtifactOwnerPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/owner", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetArtifactOwnerRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/owner", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -209,7 +209,7 @@ public class Metadata {
      */
     public org.openapis.openapi.models.operations.GetArtifactVersionMetaDataResponse getArtifactVersionMetaData(org.openapis.openapi.models.operations.GetArtifactVersionMetaDataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetArtifactVersionMetaDataPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/meta", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetArtifactVersionMetaDataRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/meta", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -266,18 +266,18 @@ public class Metadata {
      */
     public org.openapis.openapi.models.operations.GetArtifactVersionMetaDataByContentResponse getArtifactVersionMetaDataByContent(org.openapis.openapi.models.operations.GetArtifactVersionMetaDataByContentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetArtifactVersionMetaDataByContentPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/meta", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetArtifactVersionMetaDataByContentRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/meta", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetArtifactVersionMetaDataByContentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetArtifactVersionMetaDataByContentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -330,12 +330,12 @@ public class Metadata {
      */
     public org.openapis.openapi.models.operations.UpdateArtifactMetaDataResponse updateArtifactMetaData(org.openapis.openapi.models.operations.UpdateArtifactMetaDataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateArtifactMetaDataPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/meta", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateArtifactMetaDataRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/meta", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "editableMetaData", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -381,12 +381,12 @@ public class Metadata {
      */
     public org.openapis.openapi.models.operations.UpdateArtifactOwnerResponse updateArtifactOwner(org.openapis.openapi.models.operations.UpdateArtifactOwnerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateArtifactOwnerPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/owner", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateArtifactOwnerRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/owner", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "artifactOwner", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -436,12 +436,12 @@ public class Metadata {
      */
     public org.openapis.openapi.models.operations.UpdateArtifactVersionMetaDataResponse updateArtifactVersionMetaData(org.openapis.openapi.models.operations.UpdateArtifactVersionMetaDataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateArtifactVersionMetaDataPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/meta", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateArtifactVersionMetaDataRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/meta", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "editableMetaData", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

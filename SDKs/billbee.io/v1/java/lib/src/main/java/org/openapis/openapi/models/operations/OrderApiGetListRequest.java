@@ -4,13 +4,127 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiGetListRequest {
+    /**
+     * The source field for the article title. 0 = Order Position (default), 1 = Article Title, 2 = Article Invoice Text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=articleTitleSource")
+    public OrderApiGetListArticleTitleSourceEnum articleTitleSource;
+    public OrderApiGetListRequest withArticleTitleSource(OrderApiGetListArticleTitleSourceEnum articleTitleSource) {
+        this.articleTitleSource = articleTitleSource;
+        return this;
+    }
     
-    public OrderApiGetListQueryParams queryParams;
-    public OrderApiGetListRequest withQueryParams(OrderApiGetListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If true the list of tags passed to the call are used to filter orders to not include these tags
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeTags")
+    public Boolean excludeTags;
+    public OrderApiGetListRequest withExcludeTags(Boolean excludeTags) {
+        this.excludeTags = excludeTags;
+        return this;
+    }
+    
+    /**
+     * Specifies the newest order date to include in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxOrderDate")
+    public OffsetDateTime maxOrderDate;
+    public OrderApiGetListRequest withMaxOrderDate(OffsetDateTime maxOrderDate) {
+        this.maxOrderDate = maxOrderDate;
+        return this;
+    }
+    
+    /**
+     * Specifies the oldest order date to include in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minOrderDate")
+    public OffsetDateTime minOrderDate;
+    public OrderApiGetListRequest withMinOrderDate(OffsetDateTime minOrderDate) {
+        this.minOrderDate = minOrderDate;
+        return this;
+    }
+    
+    /**
+     * If given, all delivered orders have an Id greater than or equal to the given minimumOrderId
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minimumBillBeeOrderId")
+    public Long minimumBillBeeOrderId;
+    public OrderApiGetListRequest withMinimumBillBeeOrderId(Long minimumBillBeeOrderId) {
+        this.minimumBillBeeOrderId = minimumBillBeeOrderId;
+        return this;
+    }
+    
+    /**
+     * If given, the last modification has to be older or equal than the given date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modifiedAtMax")
+    public OffsetDateTime modifiedAtMax;
+    public OrderApiGetListRequest withModifiedAtMax(OffsetDateTime modifiedAtMax) {
+        this.modifiedAtMax = modifiedAtMax;
+        return this;
+    }
+    
+    /**
+     * If given, the last modification has to be newer than the given date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modifiedAtMin")
+    public OffsetDateTime modifiedAtMin;
+    public OrderApiGetListRequest withModifiedAtMin(OffsetDateTime modifiedAtMin) {
+        this.modifiedAtMin = modifiedAtMin;
+        return this;
+    }
+    
+    /**
+     * Specifies a list of state ids to include in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderStateId")
+    public Integer[] orderStateId;
+    public OrderApiGetListRequest withOrderStateId(Integer[] orderStateId) {
+        this.orderStateId = orderStateId;
+        return this;
+    }
+    
+    /**
+     * Specifies the page to request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public OrderApiGetListRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Specifies the pagesize. Defaults to 50, max value is 250
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public OrderApiGetListRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Specifies a list of shop ids for which invoices should be included
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=shopId")
+    public Long[] shopId;
+    public OrderApiGetListRequest withShopId(Long[] shopId) {
+        this.shopId = shopId;
+        return this;
+    }
+    
+    /**
+     * Specifies a list of tags the order must have attached to be included in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String[] tag;
+    public OrderApiGetListRequest withTag(String[] tag) {
+        this.tag = tag;
         return this;
     }
     

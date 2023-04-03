@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConsentFormsListRequest {
-    
-    public ConsentFormsListQueryParams queryParams;
-    public ConsentFormsListRequest withQueryParams(ConsentFormsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ConsentFormsListRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public ConsentFormsListRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
     
-    public ConsentFormsListSecurity security;
-    public ConsentFormsListRequest withSecurity(ConsentFormsListSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public ConsentFormsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

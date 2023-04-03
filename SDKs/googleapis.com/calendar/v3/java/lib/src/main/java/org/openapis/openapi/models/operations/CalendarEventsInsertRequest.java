@@ -7,31 +7,142 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalendarEventsInsertRequest {
-    
-    public CalendarEventsInsertPathParams pathParams;
-    public CalendarEventsInsertRequest withPathParams(CalendarEventsInsertPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CalendarEventsInsertQueryParams queryParams;
-    public CalendarEventsInsertRequest withQueryParams(CalendarEventsInsertQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Event request;
-    public CalendarEventsInsertRequest withRequest(org.openapis.openapi.models.shared.Event request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Event event;
+    public CalendarEventsInsertRequest withEvent(org.openapis.openapi.models.shared.Event event) {
+        this.event = event;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public CalendarEventsInsertRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public CalendarEventsInsertSecurity security;
-    public CalendarEventsInsertRequest withSecurity(CalendarEventsInsertSecurity security) {
-        this.security = security;
+    /**
+     * Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=calendarId")
+    public String calendarId;
+    public CalendarEventsInsertRequest withCalendarId(String calendarId) {
+        this.calendarId = calendarId;
+        return this;
+    }
+    
+    /**
+     * Version number of conference data supported by the API client. Version 0 assumes no conference data support and ignores conference data in the event's body. Version 1 enables support for copying of ConferenceData as well as for creating new conferences using the createRequest field of conferenceData. The default is 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conferenceDataVersion")
+    public Long conferenceDataVersion;
+    public CalendarEventsInsertRequest withConferenceDataVersion(Long conferenceDataVersion) {
+        this.conferenceDataVersion = conferenceDataVersion;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public CalendarEventsInsertRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public CalendarEventsInsertRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The maximum number of attendees to include in the response. If there are more than the specified number of attendees, only the participant is returned. Optional.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxAttendees")
+    public Long maxAttendees;
+    public CalendarEventsInsertRequest withMaxAttendees(Long maxAttendees) {
+        this.maxAttendees = maxAttendees;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public CalendarEventsInsertRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public CalendarEventsInsertRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public CalendarEventsInsertRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use sendUpdates instead.
+     * 
+     * Whether to send notifications about the creation of the new event. Note that some emails might still be sent even if you set the value to false. The default is false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sendNotifications")
+    public Boolean sendNotifications;
+    public CalendarEventsInsertRequest withSendNotifications(Boolean sendNotifications) {
+        this.sendNotifications = sendNotifications;
+        return this;
+    }
+    
+    /**
+     * Whether to send notifications about the creation of the new event. Note that some emails might still be sent. The default is false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sendUpdates")
+    public CalendarEventsInsertSendUpdatesEnum sendUpdates;
+    public CalendarEventsInsertRequest withSendUpdates(CalendarEventsInsertSendUpdatesEnum sendUpdates) {
+        this.sendUpdates = sendUpdates;
+        return this;
+    }
+    
+    /**
+     * Whether API client performing operation supports event attachments. Optional. The default is False.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsAttachments")
+    public Boolean supportsAttachments;
+    public CalendarEventsInsertRequest withSupportsAttachments(Boolean supportsAttachments) {
+        this.supportsAttachments = supportsAttachments;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public CalendarEventsInsertRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

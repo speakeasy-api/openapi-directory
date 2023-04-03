@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BookingAvailabilityHeaders;
 import org.openapis.openapi.models.operations.BookingAvailabilityRequestBodyAgeBands;
 import org.openapis.openapi.models.operations.BookingAvailabilityRequestBody;
 import org.openapis.openapi.models.operations.BookingAvailabilityRequest;
@@ -28,17 +27,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BookingAvailabilityRequest req = new BookingAvailabilityRequest() {{
-                headers = new BookingAvailabilityHeaders() {{
-                    acceptLanguage = "en-US";
-                }};
-                request = new BookingAvailabilityRequestBody() {{
+                acceptLanguage = "en-US";
+                requestBody = new BookingAvailabilityRequestBody() {{
                     ageBands = new org.openapis.openapi.models.operations.BookingAvailabilityRequestBodyAgeBands[]{{
                         add(new BookingAvailabilityRequestBodyAgeBands() {{
                             bandId = 592845;
@@ -58,7 +53,7 @@ public class Application {
                     productCode = "error";
                     year = "deserunt";
                 }};
-            }};            
+            }}            
 
             BookingAvailabilityResponse res = sdk.bookingServices.bookingAvailability(req);
 
@@ -72,7 +67,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### bookingServices

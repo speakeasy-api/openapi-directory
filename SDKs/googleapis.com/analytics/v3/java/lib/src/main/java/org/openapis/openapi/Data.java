@@ -33,10 +33,11 @@ public class Data {
     /**
      * Returns Analytics data for a view (profile).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsDataGaGetResponse analyticsDataGaGet(org.openapis.openapi.models.operations.AnalyticsDataGaGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsDataGaGetResponse analyticsDataGaGet(org.openapis.openapi.models.operations.AnalyticsDataGaGetRequest request, org.openapis.openapi.models.operations.AnalyticsDataGaGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data/ga");
         
@@ -44,14 +45,14 @@ public class Data {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsDataGaGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsDataGaGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,10 +79,11 @@ public class Data {
     /**
      * Returns Analytics Multi-Channel Funnels data for a view (profile).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsDataMcfGetResponse analyticsDataMcfGet(org.openapis.openapi.models.operations.AnalyticsDataMcfGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsDataMcfGetResponse analyticsDataMcfGet(org.openapis.openapi.models.operations.AnalyticsDataMcfGetRequest request, org.openapis.openapi.models.operations.AnalyticsDataMcfGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data/mcf");
         
@@ -89,14 +91,14 @@ public class Data {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsDataMcfGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsDataMcfGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,10 +125,11 @@ public class Data {
     /**
      * Returns real time data for a view (profile).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsDataRealtimeGetResponse analyticsDataRealtimeGet(org.openapis.openapi.models.operations.AnalyticsDataRealtimeGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsDataRealtimeGetResponse analyticsDataRealtimeGet(org.openapis.openapi.models.operations.AnalyticsDataRealtimeGetRequest request, org.openapis.openapi.models.operations.AnalyticsDataRealtimeGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data/realtime");
         
@@ -134,14 +137,14 @@ public class Data {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsDataRealtimeGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsDataRealtimeGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

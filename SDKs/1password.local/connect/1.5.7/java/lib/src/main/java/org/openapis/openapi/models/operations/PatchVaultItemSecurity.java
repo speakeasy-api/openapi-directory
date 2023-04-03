@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchVaultItemSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer")
-    public org.openapis.openapi.models.shared.SchemeConnectToken connectToken;
-    public PatchVaultItemSecurity withConnectToken(org.openapis.openapi.models.shared.SchemeConnectToken connectToken) {
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
+    public String connectToken;
+    public PatchVaultItemSecurity withConnectToken(String connectToken) {
         this.connectToken = connectToken;
         return this;
     }

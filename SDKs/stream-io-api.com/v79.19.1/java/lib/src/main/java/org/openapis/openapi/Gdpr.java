@@ -39,7 +39,7 @@ public class Gdpr {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeactivateUsersResponse deactivateUsers(org.openapis.openapi.models.operations.DeactivateUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeactivateUsersResponse deactivateUsers(org.openapis.openapi.models.shared.DeactivateUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users/deactivate");
         
@@ -102,7 +102,7 @@ public class Gdpr {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteChannelsResponse deleteChannels(org.openapis.openapi.models.operations.DeleteChannelsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteChannelsResponse deleteChannels(org.openapis.openapi.models.shared.DeleteChannelsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/channels/delete");
         
@@ -165,7 +165,7 @@ public class Gdpr {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteUsersResponse deleteUsers(org.openapis.openapi.models.operations.DeleteUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteUsersResponse deleteUsers(org.openapis.openapi.models.shared.DeleteUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users/delete");
         
@@ -228,7 +228,7 @@ public class Gdpr {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReactivateUsersResponse reactivateUsers(org.openapis.openapi.models.operations.ReactivateUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReactivateUsersResponse reactivateUsers(org.openapis.openapi.models.shared.ReactivateUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users/reactivate");
         

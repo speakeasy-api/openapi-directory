@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HideTaskRequest {
-    
-    public HideTaskPathParams pathParams;
-    public HideTaskRequest withPathParams(HideTaskPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public HideTaskSecurity security;
-    public HideTaskRequest withSecurity(HideTaskSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the task to hide
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=task_id")
+    public String taskId;
+    public HideTaskRequest withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

@@ -29,16 +29,12 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetLatestConfigurationQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetLatestConfigurationHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLatestConfigurationRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLatestConfigurationResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/StartConfigurationSessionHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/StartConfigurationSessionRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/StartConfigurationSessionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/StartConfigurationSessionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetLatestConfigurationResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartConfigurationSessionResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

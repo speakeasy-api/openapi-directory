@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClassifyImageUrlFormRequest {
-    
-    public ClassifyImageUrlFormPathParams pathParams;
-    public ClassifyImageUrlFormRequest withPathParams(ClassifyImageUrlFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ClassifyImageUrlFormQueryParams queryParams;
-    public ClassifyImageUrlFormRequest withQueryParams(ClassifyImageUrlFormQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * An ImageUrl that contains the url of the image to be evaluated.
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.ImageUrl request;
-    public ClassifyImageUrlFormRequest withRequest(org.openapis.openapi.models.shared.ImageUrl request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+    public ClassifyImageUrlFormRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
+        this.imageUrl = imageUrl;
+        return this;
+    }
+    
+    /**
+     * Optional. Specifies the name of application using the endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application")
+    public String application;
+    public ClassifyImageUrlFormRequest withApplication(String application) {
+        this.application = application;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public ClassifyImageUrlFormRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * Specifies the name of the model to evaluate against.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=publishedName")
+    public String publishedName;
+    public ClassifyImageUrlFormRequest withPublishedName(String publishedName) {
+        this.publishedName = publishedName;
         return this;
     }
     

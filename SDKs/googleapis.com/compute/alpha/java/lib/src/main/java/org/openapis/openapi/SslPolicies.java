@@ -34,25 +34,26 @@ public class SslPolicies {
     /**
      * Retrieves the list of all SslPolicy resources, regional and global, available to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeSslPoliciesAggregatedListResponse computeSslPoliciesAggregatedList(org.openapis.openapi.models.operations.ComputeSslPoliciesAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeSslPoliciesAggregatedListResponse computeSslPoliciesAggregatedList(org.openapis.openapi.models.operations.ComputeSslPoliciesAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeSslPoliciesAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSslPoliciesAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/sslPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSslPoliciesAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/sslPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSslPoliciesAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSslPoliciesAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class SslPolicies {
     /**
      * Deletes the specified SSL policy. The SSL policy resource can be deleted only if it is not in use by any TargetHttpsProxy or TargetSslProxy resources.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeSslPoliciesDeleteResponse computeSslPoliciesDelete(org.openapis.openapi.models.operations.ComputeSslPoliciesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeSslPoliciesDeleteResponse computeSslPoliciesDelete(org.openapis.openapi.models.operations.ComputeSslPoliciesDeleteRequest request, org.openapis.openapi.models.operations.ComputeSslPoliciesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSslPoliciesDeletePathParams.class, baseUrl, "/projects/{project}/global/sslPolicies/{sslPolicy}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSslPoliciesDeleteRequest.class, baseUrl, "/projects/{project}/global/sslPolicies/{sslPolicy}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSslPoliciesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSslPoliciesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,25 +126,26 @@ public class SslPolicies {
     /**
      * Lists all of the ordered rules present in a single specified policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeSslPoliciesGetResponse computeSslPoliciesGet(org.openapis.openapi.models.operations.ComputeSslPoliciesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeSslPoliciesGetResponse computeSslPoliciesGet(org.openapis.openapi.models.operations.ComputeSslPoliciesGetRequest request, org.openapis.openapi.models.operations.ComputeSslPoliciesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSslPoliciesGetPathParams.class, baseUrl, "/projects/{project}/global/sslPolicies/{sslPolicy}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSslPoliciesGetRequest.class, baseUrl, "/projects/{project}/global/sslPolicies/{sslPolicy}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSslPoliciesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSslPoliciesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,27 +172,28 @@ public class SslPolicies {
     /**
      * Returns the specified SSL policy resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeSslPoliciesInsertResponse computeSslPoliciesInsert(org.openapis.openapi.models.operations.ComputeSslPoliciesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeSslPoliciesInsertResponse computeSslPoliciesInsert(org.openapis.openapi.models.operations.ComputeSslPoliciesInsertRequest request, org.openapis.openapi.models.operations.ComputeSslPoliciesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSslPoliciesInsertPathParams.class, baseUrl, "/projects/{project}/global/sslPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSslPoliciesInsertRequest.class, baseUrl, "/projects/{project}/global/sslPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sslPolicy", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSslPoliciesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSslPoliciesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,25 +220,26 @@ public class SslPolicies {
     /**
      * Lists all the SSL policies that have been configured for the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeSslPoliciesListResponse computeSslPoliciesList(org.openapis.openapi.models.operations.ComputeSslPoliciesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeSslPoliciesListResponse computeSslPoliciesList(org.openapis.openapi.models.operations.ComputeSslPoliciesListRequest request, org.openapis.openapi.models.operations.ComputeSslPoliciesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSslPoliciesListPathParams.class, baseUrl, "/projects/{project}/global/sslPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSslPoliciesListRequest.class, baseUrl, "/projects/{project}/global/sslPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSslPoliciesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSslPoliciesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,25 +266,26 @@ public class SslPolicies {
     /**
      * Lists all features that can be specified in the SSL policy when using custom profile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeSslPoliciesListAvailableFeaturesResponse computeSslPoliciesListAvailableFeatures(org.openapis.openapi.models.operations.ComputeSslPoliciesListAvailableFeaturesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeSslPoliciesListAvailableFeaturesResponse computeSslPoliciesListAvailableFeatures(org.openapis.openapi.models.operations.ComputeSslPoliciesListAvailableFeaturesRequest request, org.openapis.openapi.models.operations.ComputeSslPoliciesListAvailableFeaturesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSslPoliciesListAvailableFeaturesPathParams.class, baseUrl, "/projects/{project}/global/sslPolicies/listAvailableFeatures", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSslPoliciesListAvailableFeaturesRequest.class, baseUrl, "/projects/{project}/global/sslPolicies/listAvailableFeatures", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSslPoliciesListAvailableFeaturesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSslPoliciesListAvailableFeaturesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -306,27 +312,28 @@ public class SslPolicies {
     /**
      * Patches the specified SSL policy with the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeSslPoliciesPatchResponse computeSslPoliciesPatch(org.openapis.openapi.models.operations.ComputeSslPoliciesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeSslPoliciesPatchResponse computeSslPoliciesPatch(org.openapis.openapi.models.operations.ComputeSslPoliciesPatchRequest request, org.openapis.openapi.models.operations.ComputeSslPoliciesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSslPoliciesPatchPathParams.class, baseUrl, "/projects/{project}/global/sslPolicies/{sslPolicy}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSslPoliciesPatchRequest.class, baseUrl, "/projects/{project}/global/sslPolicies/{sslPolicy}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sslPolicy1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSslPoliciesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSslPoliciesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -353,27 +360,28 @@ public class SslPolicies {
     /**
      * Returns permissions that a caller has on the specified resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeSslPoliciesTestIamPermissionsResponse computeSslPoliciesTestIamPermissions(org.openapis.openapi.models.operations.ComputeSslPoliciesTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeSslPoliciesTestIamPermissionsResponse computeSslPoliciesTestIamPermissions(org.openapis.openapi.models.operations.ComputeSslPoliciesTestIamPermissionsRequest request, org.openapis.openapi.models.operations.ComputeSslPoliciesTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSslPoliciesTestIamPermissionsPathParams.class, baseUrl, "/projects/{project}/global/sslPolicies/{resource}/testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSslPoliciesTestIamPermissionsRequest.class, baseUrl, "/projects/{project}/global/sslPolicies/{resource}/testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSslPoliciesTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSslPoliciesTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

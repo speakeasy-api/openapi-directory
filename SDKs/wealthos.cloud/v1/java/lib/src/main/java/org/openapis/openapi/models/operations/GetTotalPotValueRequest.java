@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTotalPotValueRequest {
-    
-    public GetTotalPotValuePathParams pathParams;
-    public GetTotalPotValueRequest withPathParams(GetTotalPotValuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the investor
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=investor_id")
+    public String investorId;
+    public GetTotalPotValueRequest withInvestorId(String investorId) {
+        this.investorId = investorId;
         return this;
     }
     
-    
-    public GetTotalPotValueHeaders headers;
-    public GetTotalPotValueRequest withHeaders(GetTotalPotValueHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetTotalPotValueSecurity security;
-    public GetTotalPotValueRequest withSecurity(GetTotalPotValueSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetTotalPotValueRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

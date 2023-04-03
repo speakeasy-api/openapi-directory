@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddTagsToChannelRequest {
-    
-    public AddTagsToChannelPathParams pathParams;
-    public AddTagsToChannelRequest withPathParams(AddTagsToChannelPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.tag+json")
-    public AddTagsToChannelRequestBody request;
-    public AddTagsToChannelRequest withRequest(AddTagsToChannelRequestBody request) {
-        this.request = request;
+    public AddTagsToChannelRequestBody requestBody;
+    public AddTagsToChannelRequest withRequestBody(AddTagsToChannelRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public AddTagsToChannelSecurity security;
-    public AddTagsToChannelRequest withSecurity(AddTagsToChannelSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public AddTagsToChannelRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     

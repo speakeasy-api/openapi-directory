@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RotatePhotoRequest {
-    
-    public RotatePhotoPathParams pathParams;
-    public RotatePhotoRequest withPathParams(RotatePhotoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Rotation in degrees - currently only 90, 180 and 270 are supported which correspond to rotate left, rotate upside down and rotate right.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=degrees")
+    public Long degrees;
+    public RotatePhotoRequest withDegrees(Long degrees) {
+        this.degrees = degrees;
         return this;
     }
     
+    /**
+     * Client device pixel ratio used to determine thumbnail size (default 1.0).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_pixel_ratio")
+    public Double devicePixelRatio;
+    public RotatePhotoRequest withDevicePixelRatio(Double devicePixelRatio) {
+        this.devicePixelRatio = devicePixelRatio;
+        return this;
+    }
     
-    public RotatePhotoQueryParams queryParams;
-    public RotatePhotoRequest withQueryParams(RotatePhotoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=photo_id")
+    public String photoId;
+    public RotatePhotoRequest withPhotoId(String photoId) {
+        this.photoId = photoId;
         return this;
     }
     

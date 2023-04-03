@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteLocalGatewayRouteRequest {
-    
-    public GETDeleteLocalGatewayRouteQueryParams queryParams;
-    public GETDeleteLocalGatewayRouteRequest withQueryParams(GETDeleteLocalGatewayRouteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteLocalGatewayRouteActionEnum action;
+    public GETDeleteLocalGatewayRouteRequest withAction(GETDeleteLocalGatewayRouteActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The CIDR range for the route. This must match the CIDR for the route exactly.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationCidrBlock")
+    public String destinationCidrBlock;
+    public GETDeleteLocalGatewayRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
+        this.destinationCidrBlock = destinationCidrBlock;
+        return this;
+    }
     
-    public GETDeleteLocalGatewayRouteHeaders headers;
-    public GETDeleteLocalGatewayRouteRequest withHeaders(GETDeleteLocalGatewayRouteHeaders headers) {
-        this.headers = headers;
+    /**
+     *  Use a prefix list in place of &lt;code&gt;DestinationCidrBlock&lt;/code&gt;. You cannot use &lt;code&gt;DestinationPrefixListId&lt;/code&gt; and &lt;code&gt;DestinationCidrBlock&lt;/code&gt; in the same request. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationPrefixListId")
+    public String destinationPrefixListId;
+    public GETDeleteLocalGatewayRouteRequest withDestinationPrefixListId(String destinationPrefixListId) {
+        this.destinationPrefixListId = destinationPrefixListId;
+        return this;
+    }
+    
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETDeleteLocalGatewayRouteRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The ID of the local gateway route table.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LocalGatewayRouteTableId")
+    public String localGatewayRouteTableId;
+    public GETDeleteLocalGatewayRouteRequest withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
+        this.localGatewayRouteTableId = localGatewayRouteTableId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteLocalGatewayRouteVersionEnum version;
+    public GETDeleteLocalGatewayRouteRequest withVersion(GETDeleteLocalGatewayRouteVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteLocalGatewayRouteRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteLocalGatewayRouteRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteLocalGatewayRouteRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteLocalGatewayRouteRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteLocalGatewayRouteRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteLocalGatewayRouteRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteLocalGatewayRouteRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

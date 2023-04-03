@@ -4,13 +4,97 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConfigurationsRequest {
+    /**
+     * Date as ISO String
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAt[$gte]")
+    public OffsetDateTime createdAtDollarGte;
+    public GetConfigurationsRequest withCreatedAtDollarGte(OffsetDateTime createdAtDollarGte) {
+        this.createdAtDollarGte = createdAtDollarGte;
+        return this;
+    }
     
-    public GetConfigurationsQueryParams queryParams;
-    public GetConfigurationsRequest withQueryParams(GetConfigurationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Date as ISO String
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAt[$lte]")
+    public OffsetDateTime createdAtDollarLte;
+    public GetConfigurationsRequest withCreatedAtDollarLte(OffsetDateTime createdAtDollarLte) {
+        this.createdAtDollarLte = createdAtDollarLte;
+        return this;
+    }
+    
+    /**
+     * Enable pagination
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_enabled")
+    public Boolean paginateEnabled;
+    public GetConfigurationsRequest withPaginateEnabled(Boolean paginateEnabled) {
+        this.paginateEnabled = paginateEnabled;
+        return this;
+    }
+    
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_limit")
+    public Long paginateLimit;
+    public GetConfigurationsRequest withPaginateLimit(Long paginateLimit) {
+        this.paginateLimit = paginateLimit;
+        return this;
+    }
+    
+    /**
+     * The queried page index
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_page")
+    public String paginatePage;
+    public GetConfigurationsRequest withPaginatePage(String paginatePage) {
+        this.paginatePage = paginatePage;
+        return this;
+    }
+    
+    /**
+     * Sort data by this key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public String sortBy;
+    public GetConfigurationsRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * asc to sort ascending (default is desc - descending)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
+    public org.openapis.openapi.models.shared.SortOrder1Enum sortOrder;
+    public GetConfigurationsRequest withSortOrder(org.openapis.openapi.models.shared.SortOrder1Enum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * Date as ISO String
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAt[$gte]")
+    public OffsetDateTime updatedAtDollarGte;
+    public GetConfigurationsRequest withUpdatedAtDollarGte(OffsetDateTime updatedAtDollarGte) {
+        this.updatedAtDollarGte = updatedAtDollarGte;
+        return this;
+    }
+    
+    /**
+     * Date as ISO String
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAt[$lte]")
+    public OffsetDateTime updatedAtDollarLte;
+    public GetConfigurationsRequest withUpdatedAtDollarLte(OffsetDateTime updatedAtDollarLte) {
+        this.updatedAtDollarLte = updatedAtDollarLte;
         return this;
     }
     

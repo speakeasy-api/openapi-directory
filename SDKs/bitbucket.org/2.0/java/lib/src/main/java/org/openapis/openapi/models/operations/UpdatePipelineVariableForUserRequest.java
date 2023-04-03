@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePipelineVariableForUserRequest {
-    
-    public UpdatePipelineVariableForUserPathParams pathParams;
-    public UpdatePipelineVariableForUserRequest withPathParams(UpdatePipelineVariableForUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The updated variable.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public UpdatePipelineVariableForUserRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public UpdatePipelineVariableForUserRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Either the UUID of the account surrounded by curly-braces, for example `{account UUID}`, OR an Atlassian Account ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=selected_user")
+    public String selectedUser;
+    public UpdatePipelineVariableForUserRequest withSelectedUser(String selectedUser) {
+        this.selectedUser = selectedUser;
+        return this;
+    }
+    
+    /**
+     * The UUID of the variable.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=variable_uuid")
+    public String variableUuid;
+    public UpdatePipelineVariableForUserRequest withVariableUuid(String variableUuid) {
+        this.variableUuid = variableUuid;
         return this;
     }
     

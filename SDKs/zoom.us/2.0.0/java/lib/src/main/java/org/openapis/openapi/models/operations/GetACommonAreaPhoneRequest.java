@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetACommonAreaPhoneRequest {
-    
-    public GetACommonAreaPhonePathParams pathParams;
-    public GetACommonAreaPhoneRequest withPathParams(GetACommonAreaPhonePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetACommonAreaPhoneSecurity security;
-    public GetACommonAreaPhoneRequest withSecurity(GetACommonAreaPhoneSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the Common Area Phone. Use the unique identifier or the Mac address of the common area phone. The Mac address can be hyphenated (00-04-f2-5e-ec-3c) or not hyphenated (0004f25eec3c). You can retrieved this from the [List Common Area Phones API](https://marketplace.zoom.us/docs/api-reference/zoom-api/common-area-phones/listcommonareaphones).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commonAreaPhoneId")
+    public String commonAreaPhoneId;
+    public GetACommonAreaPhoneRequest withCommonAreaPhoneId(String commonAreaPhoneId) {
+        this.commonAreaPhoneId = commonAreaPhoneId;
         return this;
     }
     

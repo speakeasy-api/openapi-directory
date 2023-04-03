@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomLogosRequest {
-    
-    public GetCustomLogosPathParams pathParams;
-    public GetCustomLogosRequest withPathParams(GetCustomLogosPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public GetCustomLogosRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

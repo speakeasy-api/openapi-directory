@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateCorpusHeaders;
 import org.openapis.openapi.models.operations.CreateCorpusRequest;
 import org.openapis.openapi.models.operations.CreateCorpusResponse;
 import org.openapis.openapi.models.shared.AdminCreateCorpusRequest;
@@ -32,68 +31,78 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    oAuth = new SchemeOAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                    oAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }})
                 .build();
 
             CreateCorpusRequest req = new CreateCorpusRequest() {{
-                headers = new CreateCorpusHeaders() {{
-                    customerId = 548814;
-                }};
-                request = new AdminCreateCorpusRequest() {{
+                adminCreateCorpusRequest = new AdminCreateCorpusRequest() {{
                     corpus = new AdminCorpus() {{
                         customDimensions = new org.openapis.openapi.models.shared.AdminDimension[]{{
                             add(new AdminDimension() {{
-                                description = "distinctio";
-                                indexingDefault = 8442.66;
-                                name = "unde";
-                                servingDefault = 8579.46;
+                                description = "provident";
+                                indexingDefault = 7151.9;
+                                name = "quibusdam";
+                                servingDefault = 6027.63;
                             }}),
                             add(new AdminDimension() {{
-                                description = "corrupti";
-                                indexingDefault = 8472.52;
-                                name = "vel";
-                                servingDefault = 6235.64;
+                                description = "nulla";
+                                indexingDefault = 5448.83;
+                                name = "illum";
+                                servingDefault = 4236.55;
                             }}),
                             add(new AdminDimension() {{
-                                description = "deserunt";
-                                indexingDefault = 3843.82;
-                                name = "iure";
-                                servingDefault = 2975.34;
+                                description = "error";
+                                indexingDefault = 6458.94;
+                                name = "suscipit";
+                                servingDefault = 4375.87;
                             }}),
                         }};
-                        description = "debitis";
-                        dtProvision = "ipsa";
+                        description = "magnam";
+                        dtProvision = "debitis";
                         enabled = false;
-                        encoderId = "delectus";
+                        encoderId = "ipsa";
                         encrypted = false;
                         filterAttributes = new org.openapis.openapi.models.shared.AdminFilterAttribute[]{{
                             add(new AdminFilterAttribute() {{
-                                description = "suscipit";
+                                description = "tempora";
                                 indexed = false;
                                 level = "FILTER_ATTRIBUTE_LEVEL__DOCUMENT";
-                                name = "minus";
+                                name = "molestiae";
                                 type = "FILTER_ATTRIBUTE_TYPE__TEXT";
                             }}),
                             add(new AdminFilterAttribute() {{
-                                description = "voluptatum";
+                                description = "placeat";
                                 indexed = false;
                                 level = "FILTER_ATTRIBUTE_LEVEL__DOCUMENT";
-                                name = "excepturi";
-                                type = "FILTER_ATTRIBUTE_TYPE__INTEGER_LIST";
+                                name = "iusto";
+                                type = "FILTER_ATTRIBUTE_TYPE__REAL";
+                            }}),
+                            add(new AdminFilterAttribute() {{
+                                description = "nisi";
+                                indexed = false;
+                                level = "FILTER_ATTRIBUTE_LEVEL__DOCUMENT_PART";
+                                name = "temporibus";
+                                type = "FILTER_ATTRIBUTE_TYPE__UNDEFINED";
+                            }}),
+                            add(new AdminFilterAttribute() {{
+                                description = "quis";
+                                indexed = false;
+                                level = "FILTER_ATTRIBUTE_LEVEL__UNDEFINED";
+                                name = "deserunt";
+                                type = "FILTER_ATTRIBUTE_TYPE__UNDEFINED";
                             }}),
                         }};
-                        id = 925597;
-                        metadataMaxBytes = 836079;
-                        name = "ab";
+                        id = 368241;
+                        metadataMaxBytes = 832620;
+                        name = "sapiente";
                         swapIenc = false;
                         swapQenc = false;
                         textless = false;
                     }};
                 }};
-            }};            
+                customerId = 778157;
+            }}            
 
             CreateCorpusResponse res = sdk.adminService.createCorpus(req);
 
@@ -107,7 +116,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### adminService

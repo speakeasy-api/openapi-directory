@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateNetworkAccessProfileNetworkRequest {
-    
-    public CreateNetworkAccessProfileNetworkPathParams pathParams;
-    public CreateNetworkAccessProfileNetworkRequest withPathParams(CreateNetworkAccessProfileNetworkPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string that identifies the Network Access Profile resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=NetworkAccessProfileSid")
+    public String networkAccessProfileSid;
+    public CreateNetworkAccessProfileNetworkRequest withNetworkAccessProfileSid(String networkAccessProfileSid) {
+        this.networkAccessProfileSid = networkAccessProfileSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateNetworkAccessProfileNetworkCreateNetworkAccessProfileNetworkRequest request;
-    public CreateNetworkAccessProfileNetworkRequest withRequest(CreateNetworkAccessProfileNetworkCreateNetworkAccessProfileNetworkRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateNetworkAccessProfileNetworkSecurity security;
-    public CreateNetworkAccessProfileNetworkRequest withSecurity(CreateNetworkAccessProfileNetworkSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateNetworkAccessProfileNetworkRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateNetworkAccessProfileNetworkCreateNetworkAccessProfileNetworkRequest requestBody;
+    public CreateNetworkAccessProfileNetworkRequest withRequestBody(CreateNetworkAccessProfileNetworkCreateNetworkAccessProfileNetworkRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

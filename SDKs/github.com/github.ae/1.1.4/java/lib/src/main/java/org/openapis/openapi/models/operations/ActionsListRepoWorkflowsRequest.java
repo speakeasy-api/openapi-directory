@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsListRepoWorkflowsRequest {
-    
-    public ActionsListRepoWorkflowsPathParams pathParams;
-    public ActionsListRepoWorkflowsRequest withPathParams(ActionsListRepoWorkflowsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsListRepoWorkflowsRequest withOwner(String owner) {
+        this.owner = owner;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ActionsListRepoWorkflowsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ActionsListRepoWorkflowsQueryParams queryParams;
-    public ActionsListRepoWorkflowsRequest withQueryParams(ActionsListRepoWorkflowsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ActionsListRepoWorkflowsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsListRepoWorkflowsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

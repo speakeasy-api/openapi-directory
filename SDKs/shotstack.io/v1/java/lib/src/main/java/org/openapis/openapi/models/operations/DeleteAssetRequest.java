@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAssetRequest {
-    
-    public DeleteAssetPathParams pathParams;
-    public DeleteAssetRequest withPathParams(DeleteAssetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteAssetSecurity security;
-    public DeleteAssetRequest withSecurity(DeleteAssetSecurity security) {
-        this.security = security;
+    /**
+     * The id of the asset in UUID format
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteAssetRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

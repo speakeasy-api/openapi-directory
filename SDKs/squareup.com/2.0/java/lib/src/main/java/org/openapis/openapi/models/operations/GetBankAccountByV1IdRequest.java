@@ -4,20 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBankAccountByV1IdRequest {
-    
-    public GetBankAccountByV1IdPathParams pathParams;
-    public GetBankAccountByV1IdRequest withPathParams(GetBankAccountByV1IdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetBankAccountByV1IdSecurity security;
-    public GetBankAccountByV1IdRequest withSecurity(GetBankAccountByV1IdSecurity security) {
-        this.security = security;
+    /**
+     * Connect V1 ID of the desired `BankAccount`. For more information, see 
+     * [Retrieve a bank account by using an ID issued by V1 Bank Accounts API](https://developer.squareup.com/docs/bank-accounts-api#retrieve-a-bank-account-by-using-an-id-issued-by-v1-bank-accounts-api).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=v1_bank_account_id")
+    public String v1BankAccountId;
+    public GetBankAccountByV1IdRequest withV1BankAccountId(String v1BankAccountId) {
+        this.v1BankAccountId = v1BankAccountId;
         return this;
     }
     

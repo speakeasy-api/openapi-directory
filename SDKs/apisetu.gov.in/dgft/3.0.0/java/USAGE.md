@@ -5,11 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.ImporterExporterCodeVerificationAPISecurity;
-import org.openapis.openapi.models.operations.ImporterExporterCodeVerificationAPIPathParams;
 import org.openapis.openapi.models.operations.ImporterExporterCodeVerificationAPIRequest;
 import org.openapis.openapi.models.operations.ImporterExporterCodeVerificationAPIResponse;
-import org.openapis.openapi.models.shared.SchemeAPIKey;
-import org.openapis.openapi.models.shared.SchemeClientID;
 
 public class Application {
     public static void main(String[] args) {
@@ -18,17 +15,12 @@ public class Application {
                 .build();
 
             ImporterExporterCodeVerificationAPIRequest req = new ImporterExporterCodeVerificationAPIRequest() {{
-                security = new ImporterExporterCodeVerificationAPISecurity() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                pathParams = new ImporterExporterCodeVerificationAPIPathParams() {{
-                    iec = "corrupti";
-                }};
-            }};            
+                iec = "corrupti";
+            }}            
 
-            ImporterExporterCodeVerificationAPIResponse res = sdk.apIs.importerExporterCodeVerificationAPI(req);
+            ImporterExporterCodeVerificationAPIResponse res = sdk.apIs.importerExporterCodeVerificationAPI(req, new ImporterExporterCodeVerificationAPISecurity() {{
+                apiKey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.importerExporterCodeVerificationAPI200ApplicationJSONObject.isPresent()) {
                 // handle response

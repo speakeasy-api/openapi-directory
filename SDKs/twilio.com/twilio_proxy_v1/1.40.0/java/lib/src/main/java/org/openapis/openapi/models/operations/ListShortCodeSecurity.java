@@ -7,10 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListShortCodeSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
-    public org.openapis.openapi.models.shared.SchemeAccountSidAuthToken accountSidAuthToken;
-    public ListShortCodeSecurity withAccountSidAuthToken(org.openapis.openapi.models.shared.SchemeAccountSidAuthToken accountSidAuthToken) {
-        this.accountSidAuthToken = accountSidAuthToken;
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=password")
+    public String password;
+    public ListShortCodeSecurity withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=username")
+    public String username;
+    public ListShortCodeSecurity withUsername(String username) {
+        this.username = username;
         return this;
     }
     

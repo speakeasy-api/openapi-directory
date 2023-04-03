@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CleanScanPagePathParams;
 import org.openapis.openapi.models.operations.CleanScanPageRequest;
 import org.openapis.openapi.models.operations.CleanScanPageResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             CleanScanPageRequest req = new CleanScanPageRequest() {{
-                pathParams = new CleanScanPagePathParams() {{
-                    scanId = 548814;
-                }};
-            }};            
+                scanId = 548814;
+            }}            
 
             CleanScanPageResponse res = sdk.patrowlEngine.cleanScanPage(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### patrowlEngine

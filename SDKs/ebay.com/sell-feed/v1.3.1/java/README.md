@@ -18,12 +18,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateCustomerServiceMetricTaskSecurity;
-import org.openapis.openapi.models.operations.CreateCustomerServiceMetricTaskHeaders;
 import org.openapis.openapi.models.operations.CreateCustomerServiceMetricTaskRequest;
 import org.openapis.openapi.models.operations.CreateCustomerServiceMetricTaskResponse;
 import org.openapis.openapi.models.shared.CreateServiceMetricsTaskRequest;
 import org.openapis.openapi.models.shared.CustomerServiceMetricsFilterCriteria;
-import org.openapis.openapi.models.shared.SchemeAPIAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -32,20 +30,13 @@ public class Application {
                 .build();
 
             CreateCustomerServiceMetricTaskRequest req = new CreateCustomerServiceMetricTaskRequest() {{
-                security = new CreateCustomerServiceMetricTaskSecurity() {{
-                    apiAuth = new SchemeAPIAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                headers = new CreateCustomerServiceMetricTaskHeaders() {{
-                    acceptLanguage = "corrupti";
-                }};
-                request = new CreateServiceMetricsTaskRequest() {{
-                    feedType = "provident";
+                createServiceMetricsTaskRequest = new CreateServiceMetricsTaskRequest() {{
+                    feedType = "corrupti";
                     filterCriteria = new CustomerServiceMetricsFilterCriteria() {{
-                        customerServiceMetricType = "distinctio";
-                        evaluationMarketplaceId = "quibusdam";
+                        customerServiceMetricType = "provident";
+                        evaluationMarketplaceId = "distinctio";
                         listingCategories = new String[]{{
+                            add("unde"),
                             add("nulla"),
                             add("corrupti"),
                             add("illum"),
@@ -57,9 +48,12 @@ public class Application {
                     }};
                     schemaVersion = "suscipit";
                 }};
-            }};            
+                acceptLanguage = "iure";
+            }}            
 
-            CreateCustomerServiceMetricTaskResponse res = sdk.customerServiceMetricTask.createCustomerServiceMetricTask(req);
+            CreateCustomerServiceMetricTaskResponse res = sdk.customerServiceMetricTask.createCustomerServiceMetricTask(req, new CreateCustomerServiceMetricTaskSecurity() {{
+                apiAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -71,7 +65,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### customerServiceMetricTask

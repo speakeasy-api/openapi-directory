@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlacementGroupsIdRequest {
-    
-    public GetPlacementGroupsIdPathParams pathParams;
-    public GetPlacementGroupsIdRequest withPathParams(GetPlacementGroupsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetPlacementGroupsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

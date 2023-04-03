@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateBrandVettingRequest {
-    
-    public CreateBrandVettingPathParams pathParams;
-    public CreateBrandVettingRequest withPathParams(CreateBrandVettingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Brand Registration resource of the vettings to create .
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=BrandSid")
+    public String brandSid;
+    public CreateBrandVettingRequest withBrandSid(String brandSid) {
+        this.brandSid = brandSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateBrandVettingCreateBrandVettingRequest request;
-    public CreateBrandVettingRequest withRequest(CreateBrandVettingCreateBrandVettingRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateBrandVettingSecurity security;
-    public CreateBrandVettingRequest withSecurity(CreateBrandVettingSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateBrandVettingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateBrandVettingCreateBrandVettingRequest requestBody;
+    public CreateBrandVettingRequest withRequestBody(CreateBrandVettingCreateBrandVettingRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

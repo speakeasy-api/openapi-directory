@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentRequest {
-    
-    public GetPaymentPathParams pathParams;
-    public GetPaymentRequest withPathParams(GetPaymentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetPaymentSecurity security;
-    public GetPaymentRequest withSecurity(GetPaymentSecurity security) {
-        this.security = security;
+    /**
+     * A unique ID for the desired payment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment_id")
+    public String paymentId;
+    public GetPaymentRequest withPaymentId(String paymentId) {
+        this.paymentId = paymentId;
         return this;
     }
     

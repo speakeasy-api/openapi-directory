@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETReorderReceiptRuleSetRequest {
-    
-    public GETReorderReceiptRuleSetQueryParams queryParams;
-    public GETReorderReceiptRuleSetRequest withQueryParams(GETReorderReceiptRuleSetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETReorderReceiptRuleSetActionEnum action;
+    public GETReorderReceiptRuleSetRequest withAction(GETReorderReceiptRuleSetActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * A list of the specified receipt rule set's receipt rules in the order that you want to put them.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleNames")
+    public String[] ruleNames;
+    public GETReorderReceiptRuleSetRequest withRuleNames(String[] ruleNames) {
+        this.ruleNames = ruleNames;
+        return this;
+    }
     
-    public GETReorderReceiptRuleSetHeaders headers;
-    public GETReorderReceiptRuleSetRequest withHeaders(GETReorderReceiptRuleSetHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the receipt rule set to reorder.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleSetName")
+    public String ruleSetName;
+    public GETReorderReceiptRuleSetRequest withRuleSetName(String ruleSetName) {
+        this.ruleSetName = ruleSetName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETReorderReceiptRuleSetVersionEnum version;
+    public GETReorderReceiptRuleSetRequest withVersion(GETReorderReceiptRuleSetVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETReorderReceiptRuleSetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETReorderReceiptRuleSetRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETReorderReceiptRuleSetRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETReorderReceiptRuleSetRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETReorderReceiptRuleSetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETReorderReceiptRuleSetRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETReorderReceiptRuleSetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

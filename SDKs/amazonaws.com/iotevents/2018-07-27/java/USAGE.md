@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateAlarmModelHeaders;
 import org.openapis.openapi.models.operations.CreateAlarmModelRequestBodyAlarmCapabilities;
 import org.openapis.openapi.models.operations.CreateAlarmModelRequestBodyAlarmEventActions;
 import org.openapis.openapi.models.operations.CreateAlarmModelRequestBodyAlarmNotification;
@@ -46,23 +45,12 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateAlarmModelRequest req = new CreateAlarmModelRequest() {{
-                headers = new CreateAlarmModelHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateAlarmModelRequestBody() {{
+                requestBody = new CreateAlarmModelRequestBody() {{
                     alarmCapabilities = new CreateAlarmModelRequestBodyAlarmCapabilities() {{
                         acknowledgeFlow = new AcknowledgeFlow() {{
                             enabled = false;
@@ -75,364 +63,277 @@ public class Application {
                         alarmActions = new org.openapis.openapi.models.shared.AlarmAction[]{{
                             add(new AlarmAction() {{
                                 dynamoDB = new DynamoDBAction() {{
-                                    hashKeyField = "vel";
-                                    hashKeyType = "error";
-                                    hashKeyValue = "deserunt";
-                                    operation = "suscipit";
+                                    hashKeyField = "provident";
+                                    hashKeyType = "distinctio";
+                                    hashKeyValue = "quibusdam";
+                                    operation = "unde";
                                     payload = new Payload() {{
-                                        contentExpression = "iure";
-                                        type = "STRING";
+                                        contentExpression = "nulla";
+                                        type = "JSON";
                                     }};
-                                    payloadField = "debitis";
-                                    rangeKeyField = "ipsa";
-                                    rangeKeyType = "delectus";
-                                    rangeKeyValue = "tempora";
+                                    payloadField = "illum";
+                                    rangeKeyField = "vel";
+                                    rangeKeyType = "error";
+                                    rangeKeyValue = "deserunt";
                                     tableName = "suscipit";
                                 }};
                                 dynamoDBv2 = new DynamoDBv2Action() {{
                                     payload = new Payload() {{
-                                        contentExpression = "molestiae";
-                                        type = "JSON";
+                                        contentExpression = "iure";
+                                        type = "STRING";
                                     }};
-                                    tableName = "placeat";
+                                    tableName = "debitis";
                                 }};
                                 firehose = new FirehoseAction() {{
-                                    deliveryStreamName = "voluptatum";
+                                    deliveryStreamName = "ipsa";
                                     payload = new Payload() {{
-                                        contentExpression = "iusto";
-                                        type = "JSON";
+                                        contentExpression = "delectus";
+                                        type = "STRING";
                                     }};
-                                    separator = "nisi";
+                                    separator = "suscipit";
                                 }};
                                 iotEvents = new IotEventsAction() {{
-                                    inputName = "recusandae";
+                                    inputName = "molestiae";
                                     payload = new Payload() {{
-                                        contentExpression = "temporibus";
-                                        type = "STRING";
+                                        contentExpression = "minus";
+                                        type = "JSON";
                                     }};
                                 }};
                                 iotSiteWise = new IotSiteWiseAction() {{
-                                    assetId = "quis";
-                                    entryId = "veritatis";
-                                    propertyAlias = "deserunt";
-                                    propertyId = "perferendis";
+                                    assetId = "voluptatum";
+                                    entryId = "iusto";
+                                    propertyAlias = "excepturi";
+                                    propertyId = "nisi";
                                     propertyValue = new AssetPropertyValue() {{
-                                        quality = "ipsam";
+                                        quality = "recusandae";
                                         timestamp = new AssetPropertyTimestamp() {{
-                                            offsetInNanos = "repellendus";
-                                            timeInSeconds = "sapiente";
+                                            offsetInNanos = "temporibus";
+                                            timeInSeconds = "ab";
                                         }};
                                         value = new AssetPropertyVariant() {{
-                                            booleanValue = "quo";
-                                            doubleValue = "odit";
-                                            integerValue = "at";
-                                            stringValue = "at";
+                                            booleanValue = "quis";
+                                            doubleValue = "veritatis";
+                                            integerValue = "deserunt";
+                                            stringValue = "perferendis";
                                         }};
                                     }};
                                 }};
                                 iotTopicPublish = new IotTopicPublishAction() {{
-                                    mqttTopic = "maiores";
+                                    mqttTopic = "ipsam";
                                     payload = new Payload() {{
-                                        contentExpression = "molestiae";
+                                        contentExpression = "repellendus";
                                         type = "JSON";
                                     }};
                                 }};
                                 lambda = new LambdaAction() {{
-                                    functionArn = "quod";
+                                    functionArn = "quo";
                                     payload = new Payload() {{
-                                        contentExpression = "esse";
+                                        contentExpression = "odit";
                                         type = "JSON";
                                     }};
                                 }};
                                 sns = new SNSTopicPublishAction() {{
                                     payload = new Payload() {{
-                                        contentExpression = "porro";
+                                        contentExpression = "at";
                                         type = "JSON";
                                     }};
-                                    targetArn = "dicta";
+                                    targetArn = "molestiae";
                                 }};
                                 sqs = new SqsAction() {{
+                                    payload = new Payload() {{
+                                        contentExpression = "quod";
+                                        type = "JSON";
+                                    }};
+                                    queueUrl = "esse";
+                                    useBase64 = false;
+                                }};
+                            }}),
+                            add(new AlarmAction() {{
+                                dynamoDB = new DynamoDBAction() {{
+                                    hashKeyField = "totam";
+                                    hashKeyType = "porro";
+                                    hashKeyValue = "dolorum";
+                                    operation = "dicta";
                                     payload = new Payload() {{
                                         contentExpression = "nam";
                                         type = "JSON";
                                     }};
-                                    queueUrl = "occaecati";
-                                    useBase64 = false;
+                                    payloadField = "occaecati";
+                                    rangeKeyField = "fugit";
+                                    rangeKeyType = "deleniti";
+                                    rangeKeyValue = "hic";
+                                    tableName = "optio";
                                 }};
-                            }}),
-                            add(new AlarmAction() {{
-                                dynamoDB = new DynamoDBAction() {{
-                                    hashKeyField = "fugit";
-                                    hashKeyType = "deleniti";
-                                    hashKeyValue = "hic";
-                                    operation = "optio";
+                                dynamoDBv2 = new DynamoDBv2Action() {{
                                     payload = new Payload() {{
                                         contentExpression = "totam";
                                         type = "STRING";
                                     }};
-                                    payloadField = "commodi";
-                                    rangeKeyField = "molestiae";
-                                    rangeKeyType = "modi";
-                                    rangeKeyValue = "qui";
-                                    tableName = "impedit";
-                                }};
-                                dynamoDBv2 = new DynamoDBv2Action() {{
-                                    payload = new Payload() {{
-                                        contentExpression = "cum";
-                                        type = "STRING";
-                                    }};
-                                    tableName = "ipsum";
+                                    tableName = "commodi";
                                 }};
                                 firehose = new FirehoseAction() {{
-                                    deliveryStreamName = "excepturi";
+                                    deliveryStreamName = "molestiae";
                                     payload = new Payload() {{
-                                        contentExpression = "aspernatur";
+                                        contentExpression = "modi";
                                         type = "STRING";
                                     }};
-                                    separator = "ad";
+                                    separator = "impedit";
                                 }};
                                 iotEvents = new IotEventsAction() {{
-                                    inputName = "natus";
+                                    inputName = "cum";
                                     payload = new Payload() {{
-                                        contentExpression = "sed";
-                                        type = "JSON";
+                                        contentExpression = "esse";
+                                        type = "STRING";
                                     }};
                                 }};
                                 iotSiteWise = new IotSiteWiseAction() {{
-                                    assetId = "dolor";
-                                    entryId = "natus";
-                                    propertyAlias = "laboriosam";
-                                    propertyId = "hic";
+                                    assetId = "excepturi";
+                                    entryId = "aspernatur";
+                                    propertyAlias = "perferendis";
+                                    propertyId = "ad";
                                     propertyValue = new AssetPropertyValue() {{
-                                        quality = "saepe";
+                                        quality = "natus";
                                         timestamp = new AssetPropertyTimestamp() {{
-                                            offsetInNanos = "fuga";
-                                            timeInSeconds = "in";
+                                            offsetInNanos = "sed";
+                                            timeInSeconds = "iste";
                                         }};
                                         value = new AssetPropertyVariant() {{
-                                            booleanValue = "corporis";
-                                            doubleValue = "iste";
-                                            integerValue = "iure";
-                                            stringValue = "saepe";
+                                            booleanValue = "dolor";
+                                            doubleValue = "natus";
+                                            integerValue = "laboriosam";
+                                            stringValue = "hic";
                                         }};
                                     }};
                                 }};
                                 iotTopicPublish = new IotTopicPublishAction() {{
-                                    mqttTopic = "quidem";
+                                    mqttTopic = "saepe";
                                     payload = new Payload() {{
-                                        contentExpression = "architecto";
+                                        contentExpression = "fuga";
                                         type = "STRING";
                                     }};
                                 }};
                                 lambda = new LambdaAction() {{
-                                    functionArn = "reiciendis";
+                                    functionArn = "corporis";
                                     payload = new Payload() {{
-                                        contentExpression = "est";
-                                        type = "JSON";
+                                        contentExpression = "iste";
+                                        type = "STRING";
                                     }};
                                 }};
                                 sns = new SNSTopicPublishAction() {{
                                     payload = new Payload() {{
-                                        contentExpression = "laborum";
-                                        type = "STRING";
+                                        contentExpression = "saepe";
+                                        type = "JSON";
                                     }};
-                                    targetArn = "dolorem";
+                                    targetArn = "architecto";
                                 }};
                                 sqs = new SqsAction() {{
                                     payload = new Payload() {{
-                                        contentExpression = "corporis";
-                                        type = "STRING";
+                                        contentExpression = "ipsa";
+                                        type = "JSON";
                                     }};
-                                    queueUrl = "nobis";
+                                    queueUrl = "est";
                                     useBase64 = false;
                                 }};
                             }}),
                             add(new AlarmAction() {{
                                 dynamoDB = new DynamoDBAction() {{
-                                    hashKeyField = "enim";
-                                    hashKeyType = "omnis";
-                                    hashKeyValue = "nemo";
-                                    operation = "minima";
+                                    hashKeyField = "mollitia";
+                                    hashKeyType = "laborum";
+                                    hashKeyValue = "dolores";
+                                    operation = "dolorem";
+                                    payload = new Payload() {{
+                                        contentExpression = "corporis";
+                                        type = "STRING";
+                                    }};
+                                    payloadField = "nobis";
+                                    rangeKeyField = "enim";
+                                    rangeKeyType = "omnis";
+                                    rangeKeyValue = "nemo";
+                                    tableName = "minima";
+                                }};
+                                dynamoDBv2 = new DynamoDBv2Action() {{
                                     payload = new Payload() {{
                                         contentExpression = "excepturi";
                                         type = "STRING";
                                     }};
-                                    payloadField = "iure";
-                                    rangeKeyField = "culpa";
-                                    rangeKeyType = "doloribus";
-                                    rangeKeyValue = "sapiente";
-                                    tableName = "architecto";
-                                }};
-                                dynamoDBv2 = new DynamoDBv2Action() {{
-                                    payload = new Payload() {{
-                                        contentExpression = "mollitia";
-                                        type = "STRING";
-                                    }};
-                                    tableName = "culpa";
+                                    tableName = "iure";
                                 }};
                                 firehose = new FirehoseAction() {{
-                                    deliveryStreamName = "consequuntur";
+                                    deliveryStreamName = "culpa";
                                     payload = new Payload() {{
-                                        contentExpression = "repellat";
+                                        contentExpression = "doloribus";
                                         type = "JSON";
                                     }};
-                                    separator = "occaecati";
+                                    separator = "architecto";
                                 }};
                                 iotEvents = new IotEventsAction() {{
-                                    inputName = "numquam";
+                                    inputName = "mollitia";
                                     payload = new Payload() {{
-                                        contentExpression = "commodi";
-                                        type = "STRING";
+                                        contentExpression = "dolorem";
+                                        type = "JSON";
                                     }};
                                 }};
                                 iotSiteWise = new IotSiteWiseAction() {{
-                                    assetId = "molestiae";
-                                    entryId = "velit";
-                                    propertyAlias = "error";
-                                    propertyId = "quia";
+                                    assetId = "consequuntur";
+                                    entryId = "repellat";
+                                    propertyAlias = "mollitia";
+                                    propertyId = "occaecati";
                                     propertyValue = new AssetPropertyValue() {{
-                                        quality = "quis";
+                                        quality = "numquam";
                                         timestamp = new AssetPropertyTimestamp() {{
-                                            offsetInNanos = "vitae";
-                                            timeInSeconds = "laborum";
+                                            offsetInNanos = "commodi";
+                                            timeInSeconds = "quam";
                                         }};
                                         value = new AssetPropertyVariant() {{
-                                            booleanValue = "animi";
-                                            doubleValue = "enim";
-                                            integerValue = "odit";
-                                            stringValue = "quo";
+                                            booleanValue = "molestiae";
+                                            doubleValue = "velit";
+                                            integerValue = "error";
+                                            stringValue = "quia";
                                         }};
                                     }};
                                 }};
                                 iotTopicPublish = new IotTopicPublishAction() {{
-                                    mqttTopic = "sequi";
+                                    mqttTopic = "quis";
                                     payload = new Payload() {{
-                                        contentExpression = "tenetur";
-                                        type = "STRING";
+                                        contentExpression = "vitae";
+                                        type = "JSON";
                                     }};
                                 }};
                                 lambda = new LambdaAction() {{
-                                    functionArn = "id";
+                                    functionArn = "animi";
                                     payload = new Payload() {{
-                                        contentExpression = "possimus";
+                                        contentExpression = "enim";
                                         type = "STRING";
                                     }};
                                 }};
                                 sns = new SNSTopicPublishAction() {{
                                     payload = new Payload() {{
-                                        contentExpression = "quasi";
-                                        type = "JSON";
+                                        contentExpression = "quo";
+                                        type = "STRING";
                                     }};
-                                    targetArn = "temporibus";
+                                    targetArn = "tenetur";
                                 }};
                                 sqs = new SqsAction() {{
                                     payload = new Payload() {{
-                                        contentExpression = "laborum";
-                                        type = "STRING";
-                                    }};
-                                    queueUrl = "reiciendis";
-                                    useBase64 = false;
-                                }};
-                            }}),
-                            add(new AlarmAction() {{
-                                dynamoDB = new DynamoDBAction() {{
-                                    hashKeyField = "voluptatibus";
-                                    hashKeyType = "vero";
-                                    hashKeyValue = "nihil";
-                                    operation = "praesentium";
-                                    payload = new Payload() {{
-                                        contentExpression = "voluptatibus";
-                                        type = "STRING";
-                                    }};
-                                    payloadField = "omnis";
-                                    rangeKeyField = "voluptate";
-                                    rangeKeyType = "cum";
-                                    rangeKeyValue = "perferendis";
-                                    tableName = "doloremque";
-                                }};
-                                dynamoDBv2 = new DynamoDBv2Action() {{
-                                    payload = new Payload() {{
-                                        contentExpression = "reprehenderit";
-                                        type = "STRING";
-                                    }};
-                                    tableName = "maiores";
-                                }};
-                                firehose = new FirehoseAction() {{
-                                    deliveryStreamName = "dicta";
-                                    payload = new Payload() {{
-                                        contentExpression = "corporis";
-                                        type = "STRING";
-                                    }};
-                                    separator = "iusto";
-                                }};
-                                iotEvents = new IotEventsAction() {{
-                                    inputName = "dicta";
-                                    payload = new Payload() {{
-                                        contentExpression = "harum";
-                                        type = "STRING";
-                                    }};
-                                }};
-                                iotSiteWise = new IotSiteWiseAction() {{
-                                    assetId = "accusamus";
-                                    entryId = "commodi";
-                                    propertyAlias = "repudiandae";
-                                    propertyId = "quae";
-                                    propertyValue = new AssetPropertyValue() {{
-                                        quality = "ipsum";
-                                        timestamp = new AssetPropertyTimestamp() {{
-                                            offsetInNanos = "quidem";
-                                            timeInSeconds = "molestias";
-                                        }};
-                                        value = new AssetPropertyVariant() {{
-                                            booleanValue = "excepturi";
-                                            doubleValue = "pariatur";
-                                            integerValue = "modi";
-                                            stringValue = "praesentium";
-                                        }};
-                                    }};
-                                }};
-                                iotTopicPublish = new IotTopicPublishAction() {{
-                                    mqttTopic = "rem";
-                                    payload = new Payload() {{
-                                        contentExpression = "voluptates";
-                                        type = "STRING";
-                                    }};
-                                }};
-                                lambda = new LambdaAction() {{
-                                    functionArn = "repudiandae";
-                                    payload = new Payload() {{
-                                        contentExpression = "sint";
-                                        type = "STRING";
-                                    }};
-                                }};
-                                sns = new SNSTopicPublishAction() {{
-                                    payload = new Payload() {{
-                                        contentExpression = "itaque";
-                                        type = "STRING";
-                                    }};
-                                    targetArn = "enim";
-                                }};
-                                sqs = new SqsAction() {{
-                                    payload = new Payload() {{
-                                        contentExpression = "consequatur";
+                                        contentExpression = "ipsam";
                                         type = "JSON";
                                     }};
-                                    queueUrl = "quibusdam";
+                                    queueUrl = "possimus";
                                     useBase64 = false;
                                 }};
                             }}),
                         }};
                     }};
-                    alarmModelDescription = "explicabo";
-                    alarmModelName = "deserunt";
+                    alarmModelDescription = "aut";
+                    alarmModelName = "quasi";
                     alarmNotification = new CreateAlarmModelRequestBodyAlarmNotification() {{
                         notificationActions = new org.openapis.openapi.models.shared.NotificationAction[]{{
                             add(new NotificationAction() {{
                                 action = new NotificationTargetActions() {{
                                     lambdaAction = new LambdaAction() {{
-                                        functionArn = "quibusdam";
+                                        functionArn = "temporibus";
                                         payload = new Payload() {{
-                                            contentExpression = "labore";
+                                            contentExpression = "laborum";
                                             type = "STRING";
                                         }};
                                     }};
@@ -440,96 +341,28 @@ public class Application {
                                 emailConfigurations = new org.openapis.openapi.models.shared.EmailConfiguration[]{{
                                     add(new EmailConfiguration() {{
                                         content = new EmailContent() {{
-                                            additionalMessage = "aliquid";
-                                            subject = "cupiditate";
+                                            additionalMessage = "voluptatibus";
+                                            subject = "vero";
                                         }};
-                                        from = "quos";
+                                        from = "nihil";
                                         recipients = new EmailRecipients() {{
                                             to = new org.openapis.openapi.models.shared.RecipientDetail[]{{
                                                 add(new RecipientDetail() {{
                                                     ssoIdentity = new SSOIdentity() {{
-                                                        identityStoreId = "magni";
-                                                        userId = "assumenda";
-                                                    }};
-                                                }}),
-                                            }};
-                                        }};
-                                    }}),
-                                }};
-                                smsConfigurations = new org.openapis.openapi.models.shared.SMSConfiguration[]{{
-                                    add(new SMSConfiguration() {{
-                                        additionalMessage = "alias";
-                                        recipients = new org.openapis.openapi.models.shared.RecipientDetail[]{{
-                                            add(new RecipientDetail() {{
-                                                ssoIdentity = new SSOIdentity() {{
-                                                    identityStoreId = "dolorum";
-                                                    userId = "excepturi";
-                                                }};
-                                            }}),
-                                        }};
-                                        senderId = "tempora";
-                                    }}),
-                                    add(new SMSConfiguration() {{
-                                        additionalMessage = "facilis";
-                                        recipients = new org.openapis.openapi.models.shared.RecipientDetail[]{{
-                                            add(new RecipientDetail() {{
-                                                ssoIdentity = new SSOIdentity() {{
-                                                    identityStoreId = "labore";
-                                                    userId = "delectus";
-                                                }};
-                                            }}),
-                                            add(new RecipientDetail() {{
-                                                ssoIdentity = new SSOIdentity() {{
-                                                    identityStoreId = "eum";
-                                                    userId = "non";
-                                                }};
-                                            }}),
-                                            add(new RecipientDetail() {{
-                                                ssoIdentity = new SSOIdentity() {{
-                                                    identityStoreId = "eligendi";
-                                                    userId = "sint";
-                                                }};
-                                            }}),
-                                        }};
-                                        senderId = "aliquid";
-                                    }}),
-                                }};
-                            }}),
-                            add(new NotificationAction() {{
-                                action = new NotificationTargetActions() {{
-                                    lambdaAction = new LambdaAction() {{
-                                        functionArn = "provident";
-                                        payload = new Payload() {{
-                                            contentExpression = "necessitatibus";
-                                            type = "JSON";
-                                        }};
-                                    }};
-                                }};
-                                emailConfigurations = new org.openapis.openapi.models.shared.EmailConfiguration[]{{
-                                    add(new EmailConfiguration() {{
-                                        content = new EmailContent() {{
-                                            additionalMessage = "dolor";
-                                            subject = "debitis";
-                                        }};
-                                        from = "a";
-                                        recipients = new EmailRecipients() {{
-                                            to = new org.openapis.openapi.models.shared.RecipientDetail[]{{
-                                                add(new RecipientDetail() {{
-                                                    ssoIdentity = new SSOIdentity() {{
-                                                        identityStoreId = "in";
-                                                        userId = "in";
+                                                        identityStoreId = "voluptatibus";
+                                                        userId = "ipsa";
                                                     }};
                                                 }}),
                                                 add(new RecipientDetail() {{
                                                     ssoIdentity = new SSOIdentity() {{
-                                                        identityStoreId = "illum";
-                                                        userId = "maiores";
+                                                        identityStoreId = "omnis";
+                                                        userId = "voluptate";
                                                     }};
                                                 }}),
                                                 add(new RecipientDetail() {{
                                                     ssoIdentity = new SSOIdentity() {{
-                                                        identityStoreId = "rerum";
-                                                        userId = "dicta";
+                                                        identityStoreId = "cum";
+                                                        userId = "perferendis";
                                                     }};
                                                 }}),
                                             }};
@@ -537,22 +370,34 @@ public class Application {
                                     }}),
                                     add(new EmailConfiguration() {{
                                         content = new EmailContent() {{
-                                            additionalMessage = "magnam";
-                                            subject = "cumque";
+                                            additionalMessage = "doloremque";
+                                            subject = "reprehenderit";
                                         }};
-                                        from = "facere";
+                                        from = "ut";
                                         recipients = new EmailRecipients() {{
                                             to = new org.openapis.openapi.models.shared.RecipientDetail[]{{
                                                 add(new RecipientDetail() {{
                                                     ssoIdentity = new SSOIdentity() {{
-                                                        identityStoreId = "aliquid";
-                                                        userId = "laborum";
+                                                        identityStoreId = "dicta";
+                                                        userId = "corporis";
                                                     }};
                                                 }}),
                                                 add(new RecipientDetail() {{
                                                     ssoIdentity = new SSOIdentity() {{
-                                                        identityStoreId = "accusamus";
-                                                        userId = "non";
+                                                        identityStoreId = "dolore";
+                                                        userId = "iusto";
+                                                    }};
+                                                }}),
+                                                add(new RecipientDetail() {{
+                                                    ssoIdentity = new SSOIdentity() {{
+                                                        identityStoreId = "dicta";
+                                                        userId = "harum";
+                                                    }};
+                                                }}),
+                                                add(new RecipientDetail() {{
+                                                    ssoIdentity = new SSOIdentity() {{
+                                                        identityStoreId = "enim";
+                                                        userId = "accusamus";
                                                     }};
                                                 }}),
                                             }};
@@ -560,34 +405,45 @@ public class Application {
                                     }}),
                                     add(new EmailConfiguration() {{
                                         content = new EmailContent() {{
-                                            additionalMessage = "occaecati";
-                                            subject = "enim";
+                                            additionalMessage = "commodi";
+                                            subject = "repudiandae";
                                         }};
-                                        from = "accusamus";
+                                        from = "quae";
                                         recipients = new EmailRecipients() {{
                                             to = new org.openapis.openapi.models.shared.RecipientDetail[]{{
                                                 add(new RecipientDetail() {{
                                                     ssoIdentity = new SSOIdentity() {{
                                                         identityStoreId = "quidem";
-                                                        userId = "provident";
+                                                        userId = "molestias";
+                                                    }};
+                                                }}),
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new EmailConfiguration() {{
+                                        content = new EmailContent() {{
+                                            additionalMessage = "excepturi";
+                                            subject = "pariatur";
+                                        }};
+                                        from = "modi";
+                                        recipients = new EmailRecipients() {{
+                                            to = new org.openapis.openapi.models.shared.RecipientDetail[]{{
+                                                add(new RecipientDetail() {{
+                                                    ssoIdentity = new SSOIdentity() {{
+                                                        identityStoreId = "rem";
+                                                        userId = "voluptates";
                                                     }};
                                                 }}),
                                                 add(new RecipientDetail() {{
                                                     ssoIdentity = new SSOIdentity() {{
-                                                        identityStoreId = "nam";
-                                                        userId = "id";
+                                                        identityStoreId = "quasi";
+                                                        userId = "repudiandae";
                                                     }};
                                                 }}),
                                                 add(new RecipientDetail() {{
                                                     ssoIdentity = new SSOIdentity() {{
-                                                        identityStoreId = "blanditiis";
-                                                        userId = "deleniti";
-                                                    }};
-                                                }}),
-                                                add(new RecipientDetail() {{
-                                                    ssoIdentity = new SSOIdentity() {{
-                                                        identityStoreId = "sapiente";
-                                                        userId = "amet";
+                                                        identityStoreId = "sint";
+                                                        userId = "veritatis";
                                                     }};
                                                 }}),
                                             }};
@@ -596,67 +452,97 @@ public class Application {
                                 }};
                                 smsConfigurations = new org.openapis.openapi.models.shared.SMSConfiguration[]{{
                                     add(new SMSConfiguration() {{
-                                        additionalMessage = "nisi";
+                                        additionalMessage = "incidunt";
                                         recipients = new org.openapis.openapi.models.shared.RecipientDetail[]{{
                                             add(new RecipientDetail() {{
                                                 ssoIdentity = new SSOIdentity() {{
-                                                    identityStoreId = "natus";
-                                                    userId = "omnis";
+                                                    identityStoreId = "consequatur";
+                                                    userId = "est";
                                                 }};
                                             }}),
                                             add(new RecipientDetail() {{
                                                 ssoIdentity = new SSOIdentity() {{
-                                                    identityStoreId = "molestiae";
-                                                    userId = "perferendis";
+                                                    identityStoreId = "quibusdam";
+                                                    userId = "explicabo";
                                                 }};
                                             }}),
                                         }};
-                                        senderId = "nihil";
+                                        senderId = "deserunt";
                                     }}),
                                     add(new SMSConfiguration() {{
-                                        additionalMessage = "magnam";
+                                        additionalMessage = "distinctio";
                                         recipients = new org.openapis.openapi.models.shared.RecipientDetail[]{{
                                             add(new RecipientDetail() {{
                                                 ssoIdentity = new SSOIdentity() {{
-                                                    identityStoreId = "id";
+                                                    identityStoreId = "labore";
+                                                    userId = "modi";
+                                                }};
+                                            }}),
+                                            add(new RecipientDetail() {{
+                                                ssoIdentity = new SSOIdentity() {{
+                                                    identityStoreId = "qui";
+                                                    userId = "aliquid";
+                                                }};
+                                            }}),
+                                            add(new RecipientDetail() {{
+                                                ssoIdentity = new SSOIdentity() {{
+                                                    identityStoreId = "cupiditate";
+                                                    userId = "quos";
+                                                }};
+                                            }}),
+                                            add(new RecipientDetail() {{
+                                                ssoIdentity = new SSOIdentity() {{
+                                                    identityStoreId = "perferendis";
+                                                    userId = "magni";
+                                                }};
+                                            }}),
+                                        }};
+                                        senderId = "assumenda";
+                                    }}),
+                                    add(new SMSConfiguration() {{
+                                        additionalMessage = "ipsam";
+                                        recipients = new org.openapis.openapi.models.shared.RecipientDetail[]{{
+                                            add(new RecipientDetail() {{
+                                                ssoIdentity = new SSOIdentity() {{
+                                                    identityStoreId = "fugit";
+                                                    userId = "dolorum";
+                                                }};
+                                            }}),
+                                        }};
+                                        senderId = "excepturi";
+                                    }}),
+                                    add(new SMSConfiguration() {{
+                                        additionalMessage = "tempora";
+                                        recipients = new org.openapis.openapi.models.shared.RecipientDetail[]{{
+                                            add(new RecipientDetail() {{
+                                                ssoIdentity = new SSOIdentity() {{
+                                                    identityStoreId = "tempore";
                                                     userId = "labore";
                                                 }};
                                             }}),
                                             add(new RecipientDetail() {{
                                                 ssoIdentity = new SSOIdentity() {{
-                                                    identityStoreId = "labore";
-                                                    userId = "suscipit";
+                                                    identityStoreId = "delectus";
+                                                    userId = "eum";
                                                 }};
                                             }}),
                                             add(new RecipientDetail() {{
                                                 ssoIdentity = new SSOIdentity() {{
-                                                    identityStoreId = "natus";
-                                                    userId = "nobis";
+                                                    identityStoreId = "non";
+                                                    userId = "eligendi";
                                                 }};
                                             }}),
                                         }};
-                                        senderId = "eum";
-                                    }}),
-                                    add(new SMSConfiguration() {{
-                                        additionalMessage = "vero";
-                                        recipients = new org.openapis.openapi.models.shared.RecipientDetail[]{{
-                                            add(new RecipientDetail() {{
-                                                ssoIdentity = new SSOIdentity() {{
-                                                    identityStoreId = "architecto";
-                                                    userId = "magnam";
-                                                }};
-                                            }}),
-                                        }};
-                                        senderId = "et";
+                                        senderId = "sint";
                                     }}),
                                 }};
                             }}),
                             add(new NotificationAction() {{
                                 action = new NotificationTargetActions() {{
                                     lambdaAction = new LambdaAction() {{
-                                        functionArn = "excepturi";
+                                        functionArn = "aliquid";
                                         payload = new Payload() {{
-                                            contentExpression = "ullam";
+                                            contentExpression = "provident";
                                             type = "JSON";
                                         }};
                                     }};
@@ -664,57 +550,34 @@ public class Application {
                                 emailConfigurations = new org.openapis.openapi.models.shared.EmailConfiguration[]{{
                                     add(new EmailConfiguration() {{
                                         content = new EmailContent() {{
-                                            additionalMessage = "sint";
-                                            subject = "accusantium";
-                                        }};
-                                        from = "mollitia";
-                                        recipients = new EmailRecipients() {{
-                                            to = new org.openapis.openapi.models.shared.RecipientDetail[]{{
-                                                add(new RecipientDetail() {{
-                                                    ssoIdentity = new SSOIdentity() {{
-                                                        identityStoreId = "mollitia";
-                                                        userId = "ad";
-                                                    }};
-                                                }}),
-                                                add(new RecipientDetail() {{
-                                                    ssoIdentity = new SSOIdentity() {{
-                                                        identityStoreId = "eum";
-                                                        userId = "dolor";
-                                                    }};
-                                                }}),
-                                                add(new RecipientDetail() {{
-                                                    ssoIdentity = new SSOIdentity() {{
-                                                        identityStoreId = "necessitatibus";
-                                                        userId = "odit";
-                                                    }};
-                                                }}),
-                                                add(new RecipientDetail() {{
-                                                    ssoIdentity = new SSOIdentity() {{
-                                                        identityStoreId = "nemo";
-                                                        userId = "quasi";
-                                                    }};
-                                                }}),
-                                            }};
-                                        }};
-                                    }}),
-                                    add(new EmailConfiguration() {{
-                                        content = new EmailContent() {{
-                                            additionalMessage = "iure";
-                                            subject = "doloribus";
+                                            additionalMessage = "officia";
+                                            subject = "dolor";
                                         }};
                                         from = "debitis";
                                         recipients = new EmailRecipients() {{
                                             to = new org.openapis.openapi.models.shared.RecipientDetail[]{{
                                                 add(new RecipientDetail() {{
                                                     ssoIdentity = new SSOIdentity() {{
-                                                        identityStoreId = "maxime";
-                                                        userId = "deleniti";
+                                                        identityStoreId = "dolorum";
+                                                        userId = "in";
                                                     }};
                                                 }}),
                                                 add(new RecipientDetail() {{
                                                     ssoIdentity = new SSOIdentity() {{
-                                                        identityStoreId = "facilis";
-                                                        userId = "in";
+                                                        identityStoreId = "in";
+                                                        userId = "illum";
+                                                    }};
+                                                }}),
+                                                add(new RecipientDetail() {{
+                                                    ssoIdentity = new SSOIdentity() {{
+                                                        identityStoreId = "maiores";
+                                                        userId = "rerum";
+                                                    }};
+                                                }}),
+                                                add(new RecipientDetail() {{
+                                                    ssoIdentity = new SSOIdentity() {{
+                                                        identityStoreId = "dicta";
+                                                        userId = "magnam";
                                                     }};
                                                 }}),
                                             }};
@@ -722,22 +585,51 @@ public class Application {
                                     }}),
                                     add(new EmailConfiguration() {{
                                         content = new EmailContent() {{
-                                            additionalMessage = "architecto";
-                                            subject = "architecto";
+                                            additionalMessage = "cumque";
+                                            subject = "facere";
                                         }};
-                                        from = "repudiandae";
+                                        from = "ea";
                                         recipients = new EmailRecipients() {{
                                             to = new org.openapis.openapi.models.shared.RecipientDetail[]{{
                                                 add(new RecipientDetail() {{
                                                     ssoIdentity = new SSOIdentity() {{
-                                                        identityStoreId = "expedita";
-                                                        userId = "nihil";
+                                                        identityStoreId = "laborum";
+                                                        userId = "accusamus";
                                                     }};
                                                 }}),
                                                 add(new RecipientDetail() {{
                                                     ssoIdentity = new SSOIdentity() {{
-                                                        identityStoreId = "repellat";
-                                                        userId = "quibusdam";
+                                                        identityStoreId = "non";
+                                                        userId = "occaecati";
+                                                    }};
+                                                }}),
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new EmailConfiguration() {{
+                                        content = new EmailContent() {{
+                                            additionalMessage = "enim";
+                                            subject = "accusamus";
+                                        }};
+                                        from = "delectus";
+                                        recipients = new EmailRecipients() {{
+                                            to = new org.openapis.openapi.models.shared.RecipientDetail[]{{
+                                                add(new RecipientDetail() {{
+                                                    ssoIdentity = new SSOIdentity() {{
+                                                        identityStoreId = "provident";
+                                                        userId = "nam";
+                                                    }};
+                                                }}),
+                                                add(new RecipientDetail() {{
+                                                    ssoIdentity = new SSOIdentity() {{
+                                                        identityStoreId = "id";
+                                                        userId = "blanditiis";
+                                                    }};
+                                                }}),
+                                                add(new RecipientDetail() {{
+                                                    ssoIdentity = new SSOIdentity() {{
+                                                        identityStoreId = "deleniti";
+                                                        userId = "sapiente";
                                                     }};
                                                 }}),
                                             }};
@@ -746,8 +638,164 @@ public class Application {
                                 }};
                                 smsConfigurations = new org.openapis.openapi.models.shared.SMSConfiguration[]{{
                                     add(new SMSConfiguration() {{
-                                        additionalMessage = "saepe";
+                                        additionalMessage = "deserunt";
                                         recipients = new org.openapis.openapi.models.shared.RecipientDetail[]{{
+                                            add(new RecipientDetail() {{
+                                                ssoIdentity = new SSOIdentity() {{
+                                                    identityStoreId = "vel";
+                                                    userId = "natus";
+                                                }};
+                                            }}),
+                                            add(new RecipientDetail() {{
+                                                ssoIdentity = new SSOIdentity() {{
+                                                    identityStoreId = "omnis";
+                                                    userId = "molestiae";
+                                                }};
+                                            }}),
+                                        }};
+                                        senderId = "perferendis";
+                                    }}),
+                                }};
+                            }}),
+                            add(new NotificationAction() {{
+                                action = new NotificationTargetActions() {{
+                                    lambdaAction = new LambdaAction() {{
+                                        functionArn = "nihil";
+                                        payload = new Payload() {{
+                                            contentExpression = "magnam";
+                                            type = "JSON";
+                                        }};
+                                    }};
+                                }};
+                                emailConfigurations = new org.openapis.openapi.models.shared.EmailConfiguration[]{{
+                                    add(new EmailConfiguration() {{
+                                        content = new EmailContent() {{
+                                            additionalMessage = "labore";
+                                            subject = "labore";
+                                        }};
+                                        from = "suscipit";
+                                        recipients = new EmailRecipients() {{
+                                            to = new org.openapis.openapi.models.shared.RecipientDetail[]{{
+                                                add(new RecipientDetail() {{
+                                                    ssoIdentity = new SSOIdentity() {{
+                                                        identityStoreId = "nobis";
+                                                        userId = "eum";
+                                                    }};
+                                                }}),
+                                                add(new RecipientDetail() {{
+                                                    ssoIdentity = new SSOIdentity() {{
+                                                        identityStoreId = "vero";
+                                                        userId = "aspernatur";
+                                                    }};
+                                                }}),
+                                                add(new RecipientDetail() {{
+                                                    ssoIdentity = new SSOIdentity() {{
+                                                        identityStoreId = "architecto";
+                                                        userId = "magnam";
+                                                    }};
+                                                }}),
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new EmailConfiguration() {{
+                                        content = new EmailContent() {{
+                                            additionalMessage = "et";
+                                            subject = "excepturi";
+                                        }};
+                                        from = "ullam";
+                                        recipients = new EmailRecipients() {{
+                                            to = new org.openapis.openapi.models.shared.RecipientDetail[]{{
+                                                add(new RecipientDetail() {{
+                                                    ssoIdentity = new SSOIdentity() {{
+                                                        identityStoreId = "quos";
+                                                        userId = "sint";
+                                                    }};
+                                                }}),
+                                                add(new RecipientDetail() {{
+                                                    ssoIdentity = new SSOIdentity() {{
+                                                        identityStoreId = "accusantium";
+                                                        userId = "mollitia";
+                                                    }};
+                                                }}),
+                                                add(new RecipientDetail() {{
+                                                    ssoIdentity = new SSOIdentity() {{
+                                                        identityStoreId = "reiciendis";
+                                                        userId = "mollitia";
+                                                    }};
+                                                }}),
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new EmailConfiguration() {{
+                                        content = new EmailContent() {{
+                                            additionalMessage = "ad";
+                                            subject = "eum";
+                                        }};
+                                        from = "dolor";
+                                        recipients = new EmailRecipients() {{
+                                            to = new org.openapis.openapi.models.shared.RecipientDetail[]{{
+                                                add(new RecipientDetail() {{
+                                                    ssoIdentity = new SSOIdentity() {{
+                                                        identityStoreId = "odit";
+                                                        userId = "nemo";
+                                                    }};
+                                                }}),
+                                                add(new RecipientDetail() {{
+                                                    ssoIdentity = new SSOIdentity() {{
+                                                        identityStoreId = "quasi";
+                                                        userId = "iure";
+                                                    }};
+                                                }}),
+                                                add(new RecipientDetail() {{
+                                                    ssoIdentity = new SSOIdentity() {{
+                                                        identityStoreId = "doloribus";
+                                                        userId = "debitis";
+                                                    }};
+                                                }}),
+                                                add(new RecipientDetail() {{
+                                                    ssoIdentity = new SSOIdentity() {{
+                                                        identityStoreId = "eius";
+                                                        userId = "maxime";
+                                                    }};
+                                                }}),
+                                            }};
+                                        }};
+                                    }}),
+                                }};
+                                smsConfigurations = new org.openapis.openapi.models.shared.SMSConfiguration[]{{
+                                    add(new SMSConfiguration() {{
+                                        additionalMessage = "facilis";
+                                        recipients = new org.openapis.openapi.models.shared.RecipientDetail[]{{
+                                            add(new RecipientDetail() {{
+                                                ssoIdentity = new SSOIdentity() {{
+                                                    identityStoreId = "architecto";
+                                                    userId = "architecto";
+                                                }};
+                                            }}),
+                                            add(new RecipientDetail() {{
+                                                ssoIdentity = new SSOIdentity() {{
+                                                    identityStoreId = "repudiandae";
+                                                    userId = "ullam";
+                                                }};
+                                            }}),
+                                        }};
+                                        senderId = "expedita";
+                                    }}),
+                                    add(new SMSConfiguration() {{
+                                        additionalMessage = "nihil";
+                                        recipients = new org.openapis.openapi.models.shared.RecipientDetail[]{{
+                                            add(new RecipientDetail() {{
+                                                ssoIdentity = new SSOIdentity() {{
+                                                    identityStoreId = "quibusdam";
+                                                    userId = "sed";
+                                                }};
+                                            }}),
+                                            add(new RecipientDetail() {{
+                                                ssoIdentity = new SSOIdentity() {{
+                                                    identityStoreId = "saepe";
+                                                    userId = "pariatur";
+                                                }};
+                                            }}),
                                             add(new RecipientDetail() {{
                                                 ssoIdentity = new SSOIdentity() {{
                                                     identityStoreId = "accusantium";
@@ -760,20 +808,38 @@ public class Application {
                                                     userId = "natus";
                                                 }};
                                             }}),
+                                        }};
+                                        senderId = "magni";
+                                    }}),
+                                    add(new SMSConfiguration() {{
+                                        additionalMessage = "sunt";
+                                        recipients = new org.openapis.openapi.models.shared.RecipientDetail[]{{
                                             add(new RecipientDetail() {{
                                                 ssoIdentity = new SSOIdentity() {{
-                                                    identityStoreId = "magni";
-                                                    userId = "sunt";
+                                                    identityStoreId = "illum";
+                                                    userId = "pariatur";
                                                 }};
                                             }}),
                                             add(new RecipientDetail() {{
                                                 ssoIdentity = new SSOIdentity() {{
-                                                    identityStoreId = "quo";
-                                                    userId = "illum";
+                                                    identityStoreId = "maxime";
+                                                    userId = "ea";
+                                                }};
+                                            }}),
+                                            add(new RecipientDetail() {{
+                                                ssoIdentity = new SSOIdentity() {{
+                                                    identityStoreId = "excepturi";
+                                                    userId = "odit";
+                                                }};
+                                            }}),
+                                            add(new RecipientDetail() {{
+                                                ssoIdentity = new SSOIdentity() {{
+                                                    identityStoreId = "ea";
+                                                    userId = "accusantium";
                                                 }};
                                             }}),
                                         }};
-                                        senderId = "pariatur";
+                                        senderId = "ab";
                                     }}),
                                 }};
                             }}),
@@ -781,22 +847,29 @@ public class Application {
                     }};
                     alarmRule = new CreateAlarmModelRequestBodyAlarmRule() {{
                         simpleRule = new SimpleRule() {{
-                            comparisonOperator = "EQUAL";
-                            inputProperty = "ea";
-                            threshold = "excepturi";
+                            comparisonOperator = "NOT_EQUAL";
+                            inputProperty = "quidem";
+                            threshold = "ipsam";
                         }};
                     }};
-                    key = "odit";
-                    roleArn = "ea";
-                    severity = 33222;
+                    key = "voluptate";
+                    roleArn = "autem";
+                    severity = 722056;
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "maiores";
-                            value = "quidem";
+                            key = "pariatur";
+                            value = "nemo";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "voluptatibus";
+                xAmzContentSha256 = "perferendis";
+                xAmzCredential = "fugiat";
+                xAmzDate = "amet";
+                xAmzSecurityToken = "aut";
+                xAmzSignature = "cumque";
+                xAmzSignedHeaders = "corporis";
+            }}            
 
             CreateAlarmModelResponse res = sdk.createAlarmModel(req);
 

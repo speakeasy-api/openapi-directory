@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubmitCommentJsonRequest {
-    
-    public SubmitCommentJsonPathParams pathParams;
-    public SubmitCommentJsonRequest withPathParams(SubmitCommentJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Comment comment;
+    public SubmitCommentJsonRequest withComment(org.openapis.openapi.models.shared.Comment comment) {
+        this.comment = comment;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Comment request;
-    public SubmitCommentJsonRequest withRequest(org.openapis.openapi.models.shared.Comment request) {
-        this.request = request;
+    /**
+     * Activity ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=activityId")
+    public Long activityId;
+    public SubmitCommentJsonRequest withActivityId(Long activityId) {
+        this.activityId = activityId;
+        return this;
+    }
+    
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public SubmitCommentJsonRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

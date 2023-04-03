@@ -7,24 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveSupplyLotRequest {
-    
-    public SaveSupplyLotPathParams pathParams;
-    public SaveSupplyLotRequest withPathParams(SaveSupplyLotPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public SaveSupplyLotRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public SaveSupplyLotHeaders headers;
-    public SaveSupplyLotRequest withHeaders(SaveSupplyLotHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public SaveSupplyLotRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public SaveSupplyLotSaveSupplyLot request;
-    public SaveSupplyLotRequest withRequest(SaveSupplyLotSaveSupplyLot request) {
-        this.request = request;
+    public SaveSupplyLotSaveSupplyLot requestBody;
+    public SaveSupplyLotRequest withRequestBody(SaveSupplyLotSaveSupplyLot requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID of the SKU whose availability is being scheduled.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
+    public String skuId;
+    public SaveSupplyLotRequest withSkuId(String skuId) {
+        this.skuId = skuId;
+        return this;
+    }
+    
+    /**
+     * ID of the Supply Lot in which the SKU's scheduling should be considered.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=supplyLotId")
+    public String supplyLotId;
+    public SaveSupplyLotRequest withSupplyLotId(String supplyLotId) {
+        this.supplyLotId = supplyLotId;
+        return this;
+    }
+    
+    /**
+     * ID of the warehouse where the SKU will arrive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=warehouseId")
+    public String warehouseId;
+    public SaveSupplyLotRequest withWarehouseId(String warehouseId) {
+        this.warehouseId = warehouseId;
         return this;
     }
     

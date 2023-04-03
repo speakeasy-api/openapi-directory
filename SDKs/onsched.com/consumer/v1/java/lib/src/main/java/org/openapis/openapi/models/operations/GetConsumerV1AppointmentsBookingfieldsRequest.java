@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConsumerV1AppointmentsBookingfieldsRequest {
-    
-    public GetConsumerV1AppointmentsBookingfieldsQueryParams queryParams;
-    public GetConsumerV1AppointmentsBookingfieldsRequest withQueryParams(GetConsumerV1AppointmentsBookingfieldsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * id of business location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
+    public String locationId;
+    public GetConsumerV1AppointmentsBookingfieldsRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     

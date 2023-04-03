@@ -138,7 +138,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteCompanyAttendancesIdResponse deleteCompanyAttendancesId(org.openapis.openapi.models.operations.DeleteCompanyAttendancesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCompanyAttendancesIdPathParams.class, baseUrl, "/company/attendances/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCompanyAttendancesIdRequest.class, baseUrl, "/company/attendances/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -184,7 +184,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteCompanyTimeOffsIdResponse deleteCompanyTimeOffsId(org.openapis.openapi.models.operations.DeleteCompanyTimeOffsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCompanyTimeOffsIdPathParams.class, baseUrl, "/company/time-offs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCompanyTimeOffsIdRequest.class, baseUrl, "/company/time-offs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -236,7 +236,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCompanyAttendancesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCompanyAttendancesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -311,7 +311,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetCompanyEmployeesEmployeeIdResponse getCompanyEmployeesEmployeeId(org.openapis.openapi.models.operations.GetCompanyEmployeesEmployeeIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompanyEmployeesEmployeeIdPathParams.class, baseUrl, "/company/employees/{employee_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompanyEmployeesEmployeeIdRequest.class, baseUrl, "/company/employees/{employee_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -349,7 +349,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetCompanyEmployeesEmployeeIdProfilePictureWidthResponse getCompanyEmployeesEmployeeIdProfilePictureWidth(org.openapis.openapi.models.operations.GetCompanyEmployeesEmployeeIdProfilePictureWidthRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompanyEmployeesEmployeeIdProfilePictureWidthPathParams.class, baseUrl, "/company/employees/{employee_id}/profile-picture/{width}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompanyEmployeesEmployeeIdProfilePictureWidthRequest.class, baseUrl, "/company/employees/{employee_id}/profile-picture/{width}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -392,7 +392,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCompanyTimeOffTypesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCompanyTimeOffTypesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -436,7 +436,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCompanyTimeOffsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCompanyTimeOffsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -474,7 +474,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetCompanyTimeOffsIdResponse getCompanyTimeOffsId(org.openapis.openapi.models.operations.GetCompanyTimeOffsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompanyTimeOffsIdPathParams.class, baseUrl, "/company/time-offs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompanyTimeOffsIdRequest.class, baseUrl, "/company/time-offs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -512,12 +512,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchCompanyAttendancesIdResponse patchCompanyAttendancesId(org.openapis.openapi.models.operations.PatchCompanyAttendancesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchCompanyAttendancesIdPathParams.class, baseUrl, "/company/attendances/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchCompanyAttendancesIdRequest.class, baseUrl, "/company/attendances/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateAttendancePeriodRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -561,7 +561,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCompanyAttendancesResponse postCompanyAttendances(org.openapis.openapi.models.operations.PostCompanyAttendancesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCompanyAttendancesResponse postCompanyAttendances(org.openapis.openapi.models.shared.NewAttendancePeriodRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/company/attendances");
         
@@ -614,7 +614,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCompanyEmployeesResponse postCompanyEmployees(org.openapis.openapi.models.operations.PostCompanyEmployeesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCompanyEmployeesResponse postCompanyEmployees(org.openapis.openapi.models.operations.PostCompanyEmployeesRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/company/employees");
         
@@ -657,7 +657,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCompanyTimeOffsResponse postCompanyTimeOffs(org.openapis.openapi.models.operations.PostCompanyTimeOffsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCompanyTimeOffsResponse postCompanyTimeOffs(org.openapis.openapi.models.shared.CreateTimeOffPeriodRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/company/time-offs");
         

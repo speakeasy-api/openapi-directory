@@ -37,7 +37,7 @@ public class Agr {
      */
     public org.openapis.openapi.models.operations.GETAffectedGenomicModelsUsingGETResponse getAffectedGenomicModelsUsingGET(org.openapis.openapi.models.operations.GETAffectedGenomicModelsUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAffectedGenomicModelsUsingGETPathParams.class, baseUrl, "/agr/affectedGenomicModels/{taxonId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAffectedGenomicModelsUsingGETRequest.class, baseUrl, "/agr/affectedGenomicModels/{taxonId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -76,7 +76,7 @@ public class Agr {
      */
     public org.openapis.openapi.models.operations.GETAllelesForTaxonUsingGETResponse getAllelesForTaxonUsingGET(org.openapis.openapi.models.operations.GETAllelesForTaxonUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAllelesForTaxonUsingGETPathParams.class, baseUrl, "/agr/alleles/{taxonId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAllelesForTaxonUsingGETRequest.class, baseUrl, "/agr/alleles/{taxonId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -115,7 +115,7 @@ public class Agr {
      */
     public org.openapis.openapi.models.operations.GETExpressionForTaxonUsingGETResponse getExpressionForTaxonUsingGET(org.openapis.openapi.models.operations.GETExpressionForTaxonUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETExpressionForTaxonUsingGETPathParams.class, baseUrl, "/agr/expression/{taxonId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETExpressionForTaxonUsingGETRequest.class, baseUrl, "/agr/expression/{taxonId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -154,7 +154,7 @@ public class Agr {
      */
     public org.openapis.openapi.models.operations.GETGenesForLatestAssemblyUsingGETResponse getGenesForLatestAssemblyUsingGET(org.openapis.openapi.models.operations.GETGenesForLatestAssemblyUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGenesForLatestAssemblyUsingGETPathParams.class, baseUrl, "/agr/{taxonId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGenesForLatestAssemblyUsingGETRequest.class, baseUrl, "/agr/{taxonId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -193,7 +193,7 @@ public class Agr {
      */
     public org.openapis.openapi.models.operations.GETPhenotypesForTaxonUsingGETResponse getPhenotypesForTaxonUsingGET(org.openapis.openapi.models.operations.GETPhenotypesForTaxonUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETPhenotypesForTaxonUsingGETPathParams.class, baseUrl, "/agr/phenotypes/{taxonId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETPhenotypesForTaxonUsingGETRequest.class, baseUrl, "/agr/phenotypes/{taxonId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -232,7 +232,7 @@ public class Agr {
      */
     public org.openapis.openapi.models.operations.GETVariantsForTaxonUsingGETResponse getVariantsForTaxonUsingGET(org.openapis.openapi.models.operations.GETVariantsForTaxonUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETVariantsForTaxonUsingGETPathParams.class, baseUrl, "/agr/variants/{taxonId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETVariantsForTaxonUsingGETRequest.class, baseUrl, "/agr/variants/{taxonId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

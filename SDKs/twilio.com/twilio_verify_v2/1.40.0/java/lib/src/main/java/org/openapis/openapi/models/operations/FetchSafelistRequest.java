@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSafelistRequest {
-    
-    public FetchSafelistPathParams pathParams;
-    public FetchSafelistRequest withPathParams(FetchSafelistPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchSafelistSecurity security;
-    public FetchSafelistRequest withSecurity(FetchSafelistSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchSafelistRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The phone number to be fetched from SafeList. Phone numbers must be in [E.164 format](https://www.twilio.com/docs/glossary/what-e164).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PhoneNumber")
+    public String phoneNumber;
+    public FetchSafelistRequest withPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
         return this;
     }
     

@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AddEventSourceHeaders;
 import org.openapis.openapi.models.operations.AddEventSourceRequestBody;
 import org.openapis.openapi.models.operations.AddEventSourceRequest;
 import org.openapis.openapi.models.operations.AddEventSourceResponse;
@@ -27,34 +26,31 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddEventSourceRequest req = new AddEventSourceRequest() {{
-                headers = new AddEventSourceHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new AddEventSourceRequestBody() {{
-                    batchSize = 847252;
-                    eventSource = "vel";
-                    functionName = "error";
+                requestBody = new AddEventSourceRequestBody() {{
+                    batchSize = 548814;
+                    eventSource = "provident";
+                    functionName = "distinctio";
                     parameters = new java.util.HashMap<String, String>() {{
-                        put("suscipit", "iure");
-                        put("magnam", "debitis");
-                        put("ipsa", "delectus");
+                        put("unde", "nulla");
+                        put("corrupti", "illum");
+                        put("vel", "error");
+                        put("deserunt", "suscipit");
                     }};
-                    role = "tempora";
+                    role = "iure";
                 }};
-            }};            
+                xAmzAlgorithm = "magnam";
+                xAmzContentSha256 = "debitis";
+                xAmzCredential = "ipsa";
+                xAmzDate = "delectus";
+                xAmzSecurityToken = "tempora";
+                xAmzSignature = "suscipit";
+                xAmzSignedHeaders = "molestiae";
+            }}            
 
             AddEventSourceResponse res = sdk.addEventSource(req);
 
@@ -68,7 +64,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

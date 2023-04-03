@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveSubaccountRequest {
-    
-    public RetrieveSubaccountPathParams pathParams;
-    public RetrieveSubaccountRequest withPathParams(RetrieveSubaccountPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the primary account
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api_key")
+    public String apiKey;
+    public RetrieveSubaccountRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public RetrieveSubaccountSecurity security;
-    public RetrieveSubaccountRequest withSecurity(RetrieveSubaccountSecurity security) {
-        this.security = security;
+    /**
+     * ID of the subaccount
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subaccount_key")
+    public String subaccountKey;
+    public RetrieveSubaccountRequest withSubaccountKey(String subaccountKey) {
+        this.subaccountKey = subaccountKey;
         return this;
     }
     

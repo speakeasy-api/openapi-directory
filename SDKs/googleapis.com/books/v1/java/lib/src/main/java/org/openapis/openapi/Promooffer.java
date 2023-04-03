@@ -34,10 +34,11 @@ public class Promooffer {
     /**
      * Accepts the promo offer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksPromoofferAcceptResponse booksPromoofferAccept(org.openapis.openapi.models.operations.BooksPromoofferAcceptRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksPromoofferAcceptResponse booksPromoofferAccept(org.openapis.openapi.models.operations.BooksPromoofferAcceptRequest request, org.openapis.openapi.models.operations.BooksPromoofferAcceptSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/books/v1/promooffer/accept");
         
@@ -45,14 +46,14 @@ public class Promooffer {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksPromoofferAcceptQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksPromoofferAcceptRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,10 +80,11 @@ public class Promooffer {
     /**
      * Marks the promo offer as dismissed.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksPromoofferDismissResponse booksPromoofferDismiss(org.openapis.openapi.models.operations.BooksPromoofferDismissRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksPromoofferDismissResponse booksPromoofferDismiss(org.openapis.openapi.models.operations.BooksPromoofferDismissRequest request, org.openapis.openapi.models.operations.BooksPromoofferDismissSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/books/v1/promooffer/dismiss");
         
@@ -90,14 +92,14 @@ public class Promooffer {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksPromoofferDismissQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksPromoofferDismissRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,10 +126,11 @@ public class Promooffer {
     /**
      * Returns a list of promo offers available to the user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksPromoofferGetResponse booksPromoofferGet(org.openapis.openapi.models.operations.BooksPromoofferGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksPromoofferGetResponse booksPromoofferGet(org.openapis.openapi.models.operations.BooksPromoofferGetRequest request, org.openapis.openapi.models.operations.BooksPromoofferGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/books/v1/promooffer/get");
         
@@ -135,14 +138,14 @@ public class Promooffer {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksPromoofferGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksPromoofferGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

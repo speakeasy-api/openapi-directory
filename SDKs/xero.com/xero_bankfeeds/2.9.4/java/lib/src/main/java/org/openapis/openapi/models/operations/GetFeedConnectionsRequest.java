@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFeedConnectionsRequest {
-    
-    public GetFeedConnectionsQueryParams queryParams;
-    public GetFeedConnectionsRequest withQueryParams(GetFeedConnectionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public GetFeedConnectionsRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     
-    
-    public GetFeedConnectionsHeaders headers;
-    public GetFeedConnectionsRequest withHeaders(GetFeedConnectionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Page number which specifies the set of records to retrieve. By default the number of the records per set is 10. Example - https://api.xero.com/bankfeeds.xro/1.0/FeedConnections?page=1 to get the second set of the records. When page value is not a number or a negative number, by default, the first set of records is returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetFeedConnectionsRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public GetFeedConnectionsSecurity security;
-    public GetFeedConnectionsRequest withSecurity(GetFeedConnectionsSecurity security) {
-        this.security = security;
+    /**
+     * Page size which specifies how many records per page will be returned (default 10). Example - https://api.xero.com/bankfeeds.xro/1.0/FeedConnections?pageSize=100 to specify page size of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public GetFeedConnectionsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

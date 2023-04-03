@@ -4,27 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchdocumentsRequest {
-    
-    public SearchdocumentsPathParams pathParams;
-    public SearchdocumentsRequest withPathParams(SearchdocumentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public SearchdocumentsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public SearchdocumentsQueryParams queryParams;
-    public SearchdocumentsRequest withQueryParams(SearchdocumentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public SearchdocumentsRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Defines the collection of documents to be returned. A range within the collection limited by 100 documents per query.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=REST-Range")
+    public String restRange;
+    public SearchdocumentsRequest withRESTRange(String restRange) {
+        this.restRange = restRange;
+        return this;
+    }
     
-    public SearchdocumentsHeaders headers;
-    public SearchdocumentsRequest withHeaders(SearchdocumentsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Fields that should be returned by document. Separate fields' names with commas. For example `_fields=email,firstName,document`. You can also use `_all` to fetch all fields.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_fields")
+    public String fields;
+    public SearchdocumentsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * String to search. Use quotes for a partial query. For example, `_keyword=Maria` or `_keyword="Maria"`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_keyword")
+    public String keyword;
+    public SearchdocumentsRequest withKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    
+    /**
+     * Name of the schema the document to be created needs to be compliant with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_schema")
+    public String schema;
+    public SearchdocumentsRequest withSchema(String schema) {
+        this.schema = schema;
+        return this;
+    }
+    
+    /**
+     * Sets sorting mode in two parts. The first part is the name of the field you want to sort by. In the second part, use `ASC` for ascending or `DESC` for descending.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_sort")
+    public String sort;
+    public SearchdocumentsRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Filter specification.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_where")
+    public String where;
+    public SearchdocumentsRequest withWhere(String where) {
+        this.where = where;
+        return this;
+    }
+    
+    /**
+     * Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
+    public String dataEntityName;
+    public SearchdocumentsRequest withDataEntityName(String dataEntityName) {
+        this.dataEntityName = dataEntityName;
         return this;
     }
     

@@ -43,13 +43,13 @@ public class Behaviors {
      */
     public org.openapis.openapi.models.operations.BehaviorListForPathResponse behaviorListForPath(org.openapis.openapi.models.operations.BehaviorListForPathRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BehaviorListForPathPathParams.class, baseUrl, "/behaviors/folders/{path}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BehaviorListForPathRequest.class, baseUrl, "/behaviors/folders/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BehaviorListForPathQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BehaviorListForPathRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -90,7 +90,7 @@ public class Behaviors {
      */
     public org.openapis.openapi.models.operations.DeleteBehaviorsIdResponse deleteBehaviorsId(org.openapis.openapi.models.operations.DeleteBehaviorsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBehaviorsIdPathParams.class, baseUrl, "/behaviors/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBehaviorsIdRequest.class, baseUrl, "/behaviors/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -129,7 +129,7 @@ public class Behaviors {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBehaviorsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBehaviorsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -170,7 +170,7 @@ public class Behaviors {
      */
     public org.openapis.openapi.models.operations.GetBehaviorsIdResponse getBehaviorsId(org.openapis.openapi.models.operations.GetBehaviorsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBehaviorsIdPathParams.class, baseUrl, "/behaviors/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBehaviorsIdRequest.class, baseUrl, "/behaviors/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -211,12 +211,12 @@ public class Behaviors {
      */
     public org.openapis.openapi.models.operations.PatchBehaviorsIdResponse patchBehaviorsId(org.openapis.openapi.models.operations.PatchBehaviorsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchBehaviorsIdPathParams.class, baseUrl, "/behaviors/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchBehaviorsIdRequest.class, baseUrl, "/behaviors/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
@@ -252,7 +252,7 @@ public class Behaviors {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostBehaviorsResponse postBehaviors(org.openapis.openapi.models.operations.PostBehaviorsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostBehaviorsResponse postBehaviors(org.openapis.openapi.models.operations.PostBehaviorsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/behaviors");
         
@@ -295,7 +295,7 @@ public class Behaviors {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostBehaviorsWebhookTestResponse postBehaviorsWebhookTest(org.openapis.openapi.models.operations.PostBehaviorsWebhookTestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostBehaviorsWebhookTestResponse postBehaviorsWebhookTest(org.openapis.openapi.models.operations.PostBehaviorsWebhookTestRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/behaviors/webhook/test");
         

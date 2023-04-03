@@ -40,7 +40,7 @@ public class MXPortForwardingRules {
      */
     public org.openapis.openapi.models.operations.GetNetworkPortForwardingRulesResponse getNetworkPortForwardingRules(org.openapis.openapi.models.operations.GetNetworkPortForwardingRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkPortForwardingRulesPathParams.class, baseUrl, "/networks/{networkId}/portForwardingRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkPortForwardingRulesRequest.class, baseUrl, "/networks/{networkId}/portForwardingRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class MXPortForwardingRules {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkPortForwardingRulesResponse updateNetworkPortForwardingRules(org.openapis.openapi.models.operations.UpdateNetworkPortForwardingRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkPortForwardingRulesPathParams.class, baseUrl, "/networks/{networkId}/portForwardingRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkPortForwardingRulesRequest.class, baseUrl, "/networks/{networkId}/portForwardingRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

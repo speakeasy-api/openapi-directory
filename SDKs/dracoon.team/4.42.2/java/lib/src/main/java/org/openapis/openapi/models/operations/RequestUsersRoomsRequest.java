@@ -4,27 +4,70 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestUsersRoomsRequest {
-    
-    public RequestUsersRoomsPathParams pathParams;
-    public RequestUsersRoomsRequest withPathParams(RequestUsersRoomsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestUsersRoomsRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestUsersRoomsQueryParams queryParams;
-    public RequestUsersRoomsRequest withQueryParams(RequestUsersRoomsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestUsersRoomsXSdsDateFormatEnum xSdsDateFormat;
+    public RequestUsersRoomsRequest withXSdsDateFormat(RequestUsersRoomsXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
         return this;
     }
     
+    /**
+     * Filter string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public RequestUsersRoomsRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public RequestUsersRoomsHeaders headers;
-    public RequestUsersRoomsRequest withHeaders(RequestUsersRoomsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Range limit.
+     * 
+     * Maximum 500.
+     * 
+     *  For more results please use paging (`offset` + `limit`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public RequestUsersRoomsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Range offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public RequestUsersRoomsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Long userId;
+    public RequestUsersRoomsRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

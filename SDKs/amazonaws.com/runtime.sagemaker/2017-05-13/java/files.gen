@@ -29,17 +29,12 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/InvokeEndpointPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/InvokeEndpointHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/InvokeEndpointRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/InvokeEndpointRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/InvokeEndpointResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/InvokeEndpointAsyncPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/InvokeEndpointAsyncHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/InvokeEndpointAsyncRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/InvokeEndpointAsyncResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/InvokeEndpointOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/InvokeEndpointAsyncOutput.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQodCategoriesRequest {
-    
-    public GetQodCategoriesQueryParams queryParams;
-    public GetQodCategoriesRequest withQueryParams(GetQodCategoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return detailed information of the categories. Note the data format changes between the two values of this switch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=detailed")
+    public Boolean detailed;
+    public GetQodCategoriesRequest withDetailed(Boolean detailed) {
+        this.detailed = detailed;
         return this;
     }
     
-    
-    public GetQodCategoriesSecurity security;
-    public GetQodCategoriesRequest withSecurity(GetQodCategoriesSecurity security) {
-        this.security = security;
+    /**
+     * Language of the QOD category. The language must be supported in our QOD system.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public GetQodCategoriesRequest withLanguage(String language) {
+        this.language = language;
         return this;
     }
     

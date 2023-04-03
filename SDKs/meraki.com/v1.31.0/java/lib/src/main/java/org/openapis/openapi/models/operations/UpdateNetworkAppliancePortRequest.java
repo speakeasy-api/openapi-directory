@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkAppliancePortRequest {
-    
-    public UpdateNetworkAppliancePortPathParams pathParams;
-    public UpdateNetworkAppliancePortRequest withPathParams(UpdateNetworkAppliancePortPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkAppliancePortRequestBody requestBody;
+    public UpdateNetworkAppliancePortRequest withRequestBody(UpdateNetworkAppliancePortRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkAppliancePortRequestBody request;
-    public UpdateNetworkAppliancePortRequest withRequest(UpdateNetworkAppliancePortRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkAppliancePortRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portId")
+    public String portId;
+    public UpdateNetworkAppliancePortRequest withPortId(String portId) {
+        this.portId = portId;
         return this;
     }
     

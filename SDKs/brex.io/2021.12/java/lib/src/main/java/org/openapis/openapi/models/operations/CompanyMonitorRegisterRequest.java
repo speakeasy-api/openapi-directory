@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompanyMonitorRegisterRequest {
-    
-    public CompanyMonitorRegisterPathParams pathParams;
-    public CompanyMonitorRegisterRequest withPathParams(CompanyMonitorRegisterPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Callback URL where the notifications will be sent to
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CompanyMonitorRegisterRequestBody request;
-    public CompanyMonitorRegisterRequest withRequest(CompanyMonitorRegisterRequestBody request) {
-        this.request = request;
+    public CompanyMonitorRegisterRequestBody requestBody;
+    public CompanyMonitorRegisterRequest withRequestBody(CompanyMonitorRegisterRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CompanyMonitorRegisterSecurity security;
-    public CompanyMonitorRegisterRequest withSecurity(CompanyMonitorRegisterSecurity security) {
-        this.security = security;
+    /**
+     * Company Hex ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public CompanyMonitorRegisterRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

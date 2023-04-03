@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JoinChannelRequest {
-    
-    public JoinChannelPathParams pathParams;
-    public JoinChannelRequest withPathParams(JoinChannelPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public JoinChannelSecurity security;
-    public JoinChannelRequest withSecurity(JoinChannelSecurity security) {
-        this.security = security;
+    /**
+     * Channel Id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
+    public String channelId;
+    public JoinChannelRequest withChannelId(String channelId) {
+        this.channelId = channelId;
         return this;
     }
     

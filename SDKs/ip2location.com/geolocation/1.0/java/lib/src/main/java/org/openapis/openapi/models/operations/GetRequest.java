@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRequest {
+    /**
+     * Extra information in addition to the above selected package.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=addon")
+    public GetAddonEnum[] addon;
+    public GetRequest withAddon(GetAddonEnum[] addon) {
+        this.addon = addon;
+        return this;
+    }
     
-    public GetQueryParams queryParams;
-    public GetRequest withQueryParams(GetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Format of the response message.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetFormatEnum format;
+    public GetRequest withFormat(GetFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * IP address (IPv4 or IPv6) for reverse IP location lookup purpose. If not present, the server IP address will be used for the location lookup.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
+    public String ip;
+    public GetRequest withIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
+    
+    /**
+     * API Key. Please sign up free trial license key at ip2location.com
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Translation information. The translation only applicable for continent, country, region and city name for the addon package.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public GetLangEnum lang;
+    public GetRequest withLang(GetLangEnum lang) {
+        this.lang = lang;
+        return this;
+    }
+    
+    /**
+     * Web service package of different granularity of return information.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=package")
+    public GetPackageEnum package_;
+    public GetRequest withPackage(GetPackageEnum package_) {
+        this.package_ = package_;
         return this;
     }
     

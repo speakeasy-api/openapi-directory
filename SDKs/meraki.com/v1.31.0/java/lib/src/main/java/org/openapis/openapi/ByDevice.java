@@ -41,13 +41,13 @@ public class ByDevice {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResponse getNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevicePathParams.class, baseUrl, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/warnings/byDevice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDeviceRequest.class, baseUrl, "/networks/{networkId}/switch/dhcpServerPolicy/arpInspection/warnings/byDevice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDeviceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDeviceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -89,13 +89,13 @@ public class ByDevice {
      */
     public org.openapis.openapi.models.operations.GetOrganizationDevicesPowerModulesStatusesByDeviceResponse getOrganizationDevicesPowerModulesStatusesByDevice(org.openapis.openapi.models.operations.GetOrganizationDevicesPowerModulesStatusesByDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesPowerModulesStatusesByDevicePathParams.class, baseUrl, "/organizations/{organizationId}/devices/powerModules/statuses/byDevice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesPowerModulesStatusesByDeviceRequest.class, baseUrl, "/organizations/{organizationId}/devices/powerModules/statuses/byDevice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesPowerModulesStatusesByDeviceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesPowerModulesStatusesByDeviceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -137,13 +137,13 @@ public class ByDevice {
      */
     public org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDeviceResponse getOrganizationDevicesUplinksAddressesByDevice(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDevicePathParams.class, baseUrl, "/organizations/{organizationId}/devices/uplinks/addresses/byDevice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDeviceRequest.class, baseUrl, "/organizations/{organizationId}/devices/uplinks/addresses/byDevice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDeviceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDeviceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -185,13 +185,13 @@ public class ByDevice {
      */
     public org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesByDeviceResponse getOrganizationFirmwareUpgradesByDevice(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesByDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesByDevicePathParams.class, baseUrl, "/organizations/{organizationId}/firmware/upgrades/byDevice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesByDeviceRequest.class, baseUrl, "/organizations/{organizationId}/firmware/upgrades/byDevice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesByDeviceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesByDeviceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

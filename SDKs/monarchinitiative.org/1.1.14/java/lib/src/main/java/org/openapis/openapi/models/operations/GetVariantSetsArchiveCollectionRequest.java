@@ -4,20 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVariantSetsArchiveCollectionRequest {
-    
-    public GetVariantSetsArchiveCollectionPathParams pathParams;
-    public GetVariantSetsArchiveCollectionRequest withPathParams(GetVariantSetsArchiveCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=day")
+    public Long day;
+    public GetVariantSetsArchiveCollectionRequest withDay(Long day) {
+        this.day = day;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=month")
+    public Long month;
+    public GetVariantSetsArchiveCollectionRequest withMonth(Long month) {
+        this.month = month;
+        return this;
+    }
     
-    public GetVariantSetsArchiveCollectionQueryParams queryParams;
-    public GetVariantSetsArchiveCollectionRequest withQueryParams(GetVariantSetsArchiveCollectionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetVariantSetsArchiveCollectionRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page {error_msg}
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public GetVariantSetsArchiveCollectionPerPageEnum perPage;
+    public GetVariantSetsArchiveCollectionRequest withPerPage(GetVariantSetsArchiveCollectionPerPageEnum perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=year")
+    public Long year;
+    public GetVariantSetsArchiveCollectionRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

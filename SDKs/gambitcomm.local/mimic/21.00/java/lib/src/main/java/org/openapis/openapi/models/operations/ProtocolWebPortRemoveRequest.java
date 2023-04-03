@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolWebPortRemoveRequest {
+    /**
+     * Agent to remove WEB port
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolWebPortRemoveRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolWebPortRemovePathParams pathParams;
-    public ProtocolWebPortRemoveRequest withPathParams(ProtocolWebPortRemovePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * TCP port
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
+    public Integer port;
+    public ProtocolWebPortRemoveRequest withPort(Integer port) {
+        this.port = port;
         return this;
     }
     

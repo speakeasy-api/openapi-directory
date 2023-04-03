@@ -34,27 +34,28 @@ public class Ordertrackingsignals {
     /**
      * Creates new order tracking signal.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentOrdertrackingsignalsCreateResponse contentOrdertrackingsignalsCreate(org.openapis.openapi.models.operations.ContentOrdertrackingsignalsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentOrdertrackingsignalsCreateResponse contentOrdertrackingsignalsCreate(org.openapis.openapi.models.operations.ContentOrdertrackingsignalsCreateRequest request, org.openapis.openapi.models.operations.ContentOrdertrackingsignalsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrdertrackingsignalsCreatePathParams.class, baseUrl, "/{merchantId}/ordertrackingsignals", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrdertrackingsignalsCreateRequest.class, baseUrl, "/{merchantId}/ordertrackingsignals", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "orderTrackingSignalInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrdertrackingsignalsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrdertrackingsignalsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

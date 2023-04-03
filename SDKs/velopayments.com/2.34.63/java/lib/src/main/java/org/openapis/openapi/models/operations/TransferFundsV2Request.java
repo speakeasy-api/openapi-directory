@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TransferFundsV2Request {
-    
-    public TransferFundsV2PathParams pathParams;
-    public TransferFundsV2Request withPathParams(TransferFundsV2PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Body
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TransferRequestV2 request;
-    public TransferFundsV2Request withRequest(org.openapis.openapi.models.shared.TransferRequestV2 request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TransferRequestV2 transferRequestV2;
+    public TransferFundsV2Request withTransferRequestV2(org.openapis.openapi.models.shared.TransferRequestV2 transferRequestV2) {
+        this.transferRequestV2 = transferRequestV2;
+        return this;
+    }
+    
+    /**
+     * The 'from' source account id, which will be debited
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sourceAccountId")
+    public String sourceAccountId;
+    public TransferFundsV2Request withSourceAccountId(String sourceAccountId) {
+        this.sourceAccountId = sourceAccountId;
         return this;
     }
     

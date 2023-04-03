@@ -7,17 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchPayInstructionRequest {
-    
-    public PatchPayInstructionPathParams pathParams;
-    public PatchPayInstructionRequest withPathParams(PatchPayInstructionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public PatchPayInstructionRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PatchPayInstructionRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public PatchPayInstructionHeaders headers;
-    public PatchPayInstructionRequest withHeaders(PatchPayInstructionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The employees' unique identifier. E.g EE001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmployeeId")
+    public String employeeId;
+    public PatchPayInstructionRequest withEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
+        return this;
+    }
+    
+    /**
+     * The employers' unique identifier. E.g ER001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmployerId")
+    public String employerId;
+    public PatchPayInstructionRequest withEmployerId(String employerId) {
+        this.employerId = employerId;
         return this;
     }
     
@@ -25,9 +51,19 @@ public class PatchPayInstructionRequest {
      * The pay instruction object.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PayInstruction request;
-    public PatchPayInstructionRequest withRequest(org.openapis.openapi.models.shared.PayInstruction request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PayInstruction payInstruction;
+    public PatchPayInstructionRequest withPayInstruction(org.openapis.openapi.models.shared.PayInstruction payInstruction) {
+        this.payInstruction = payInstruction;
+        return this;
+    }
+    
+    /**
+     * The pay instruction unique identifier. E.g. SAL001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PayInstructionId")
+    public String payInstructionId;
+    public PatchPayInstructionRequest withPayInstructionId(String payInstructionId) {
+        this.payInstructionId = payInstructionId;
         return this;
     }
     

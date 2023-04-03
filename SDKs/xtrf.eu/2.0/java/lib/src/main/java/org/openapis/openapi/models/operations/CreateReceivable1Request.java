@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateReceivable1Request {
-    
-    public CreateReceivable1PathParams pathParams;
-    public CreateReceivable1Request withPathParams(CreateReceivable1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Adds a receivable.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ReceivableCreateDTO request;
-    public CreateReceivable1Request withRequest(org.openapis.openapi.models.shared.ReceivableCreateDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ReceivableCreateDTO receivableCreateDTO;
+    public CreateReceivable1Request withReceivableCreateDTO(org.openapis.openapi.models.shared.ReceivableCreateDTO receivableCreateDTO) {
+        this.receivableCreateDTO = receivableCreateDTO;
+        return this;
+    }
+    
+    /**
+     * quote's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
+    public String quoteId;
+    public CreateReceivable1Request withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
         return this;
     }
     

@@ -7,24 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePostRequest {
-    
-    public UpdatePostPathParams pathParams;
-    public UpdatePostRequest withPathParams(UpdatePostPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Key")
+    public String apiKey;
+    public UpdatePostRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public UpdatePostHeaders headers;
-    public UpdatePostRequest withHeaders(UpdatePostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Username")
+    public String apiUsername;
+    public UpdatePostRequest withApiUsername(String apiUsername) {
+        this.apiUsername = apiUsername;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdatePostRequestBody request;
-    public UpdatePostRequest withRequest(UpdatePostRequestBody request) {
-        this.request = request;
+    public UpdatePostRequestBody requestBody;
+    public UpdatePostRequest withRequestBody(UpdatePostRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdatePostRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

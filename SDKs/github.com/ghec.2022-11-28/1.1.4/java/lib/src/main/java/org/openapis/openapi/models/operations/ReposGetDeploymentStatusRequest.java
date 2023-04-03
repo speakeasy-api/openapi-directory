@@ -4,13 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposGetDeploymentStatusRequest {
+    /**
+     * deployment_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment_id")
+    public Long deploymentId;
+    public ReposGetDeploymentStatusRequest withDeploymentId(Long deploymentId) {
+        this.deploymentId = deploymentId;
+        return this;
+    }
     
-    public ReposGetDeploymentStatusPathParams pathParams;
-    public ReposGetDeploymentStatusRequest withPathParams(ReposGetDeploymentStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposGetDeploymentStatusRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposGetDeploymentStatusRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=status_id")
+    public Long statusId;
+    public ReposGetDeploymentStatusRequest withStatusId(Long statusId) {
+        this.statusId = statusId;
         return this;
     }
     

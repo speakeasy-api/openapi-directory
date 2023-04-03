@@ -30,15 +30,12 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/FetchUserSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FetchUserPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FetchUserRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FetchUserResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateUserSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateUserPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateUserUpdateUserRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateUserRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateUserResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/FrontlineV1User.java
 lib/src/main/java/org/openapis/openapi/models/shared/UserEnumStateTypeEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAccountSidAuthToken.java
 USAGE.md

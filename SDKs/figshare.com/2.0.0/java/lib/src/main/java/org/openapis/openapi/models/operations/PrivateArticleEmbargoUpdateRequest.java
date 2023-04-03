@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateArticleEmbargoUpdateRequest {
-    
-    public PrivateArticleEmbargoUpdatePathParams pathParams;
-    public PrivateArticleEmbargoUpdateRequest withPathParams(PrivateArticleEmbargoUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Embargo description
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ArticleEmbargoUpdater request;
-    public PrivateArticleEmbargoUpdateRequest withRequest(org.openapis.openapi.models.shared.ArticleEmbargoUpdater request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ArticleEmbargoUpdater articleEmbargoUpdater;
+    public PrivateArticleEmbargoUpdateRequest withArticleEmbargoUpdater(org.openapis.openapi.models.shared.ArticleEmbargoUpdater articleEmbargoUpdater) {
+        this.articleEmbargoUpdater = articleEmbargoUpdater;
         return this;
     }
     
-    
-    public PrivateArticleEmbargoUpdateSecurity security;
-    public PrivateArticleEmbargoUpdateRequest withSecurity(PrivateArticleEmbargoUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Article unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
+    public Long articleId;
+    public PrivateArticleEmbargoUpdateRequest withArticleId(Long articleId) {
+        this.articleId = articleId;
         return this;
     }
     

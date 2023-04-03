@@ -4,34 +4,136 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchPhoneNumberRequest {
-    
-    public FetchPhoneNumberPathParams pathParams;
-    public FetchPhoneNumberRequest withPathParams(FetchPhoneNumberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * User\u2019s country, up to two characters. This query parameter is only used (optionally) for identity_match package requests.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AddressCountryCode")
+    public String addressCountryCode;
+    public FetchPhoneNumberRequest withAddressCountryCode(String addressCountryCode) {
+        this.addressCountryCode = addressCountryCode;
         return this;
     }
     
-    
-    public FetchPhoneNumberQueryParams queryParams;
-    public FetchPhoneNumberRequest withQueryParams(FetchPhoneNumberQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * User\u2019s first address line. This query parameter is only used (optionally) for identity_match package requests.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AddressLine1")
+    public String addressLine1;
+    public FetchPhoneNumberRequest withAddressLine1(String addressLine1) {
+        this.addressLine1 = addressLine1;
         return this;
     }
     
-    
-    public FetchPhoneNumberSecurity security;
-    public FetchPhoneNumberRequest withSecurity(FetchPhoneNumberSecurity security) {
-        this.security = security;
+    /**
+     * User\u2019s second address line. This query parameter is only used (optionally) for identity_match package requests.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AddressLine2")
+    public String addressLine2;
+    public FetchPhoneNumberRequest withAddressLine2(String addressLine2) {
+        this.addressLine2 = addressLine2;
         return this;
     }
     
+    /**
+     * User\u2019s city. This query parameter is only used (optionally) for identity_match package requests.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=City")
+    public String city;
+    public FetchPhoneNumberRequest withCity(String city) {
+        this.city = city;
+        return this;
+    }
     
-    public String serverURL;
-    public FetchPhoneNumberRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The [country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) used if the phone number provided is in national format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CountryCode")
+    public String countryCode;
+    public FetchPhoneNumberRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+        return this;
+    }
+    
+    /**
+     * User\u2019s date of birth, in YYYYMMDD format. This query parameter is only used (optionally) for identity_match package requests.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateOfBirth")
+    public String dateOfBirth;
+    public FetchPhoneNumberRequest withDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of fields to return. Possible values are caller_name, sim_swap, call_forwarding, live_activity, line_type_intelligence, identity_match.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Fields")
+    public String fields;
+    public FetchPhoneNumberRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * User\u2019s first name. This query parameter is only used (optionally) for identity_match package requests.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FirstName")
+    public String firstName;
+    public FetchPhoneNumberRequest withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+    
+    /**
+     * User\u2019s last name. This query parameter is only used (optionally) for identity_match package requests.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LastName")
+    public String lastName;
+    public FetchPhoneNumberRequest withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    
+    /**
+     * User\u2019s national ID, such as SSN or Passport ID. This query parameter is only used (optionally) for identity_match package requests.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NationalId")
+    public String nationalId;
+    public FetchPhoneNumberRequest withNationalId(String nationalId) {
+        this.nationalId = nationalId;
+        return this;
+    }
+    
+    /**
+     * The phone number to lookup in E.164 or national format. Default country code is +1 (North America).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PhoneNumber")
+    public String phoneNumber;
+    public FetchPhoneNumberRequest withPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+        return this;
+    }
+    
+    /**
+     * User\u2019s postal zip code. This query parameter is only used (optionally) for identity_match package requests.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PostalCode")
+    public String postalCode;
+    public FetchPhoneNumberRequest withPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+        return this;
+    }
+    
+    /**
+     * User\u2019s country subdivision, such as state, province, or locality. This query parameter is only used (optionally) for identity_match package requests.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=State")
+    public String state;
+    public FetchPhoneNumberRequest withState(String state) {
+        this.state = state;
         return this;
     }
     

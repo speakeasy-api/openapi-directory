@@ -4,27 +4,276 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingSitesListRequest {
-    
-    public DfareportingSitesListPathParams pathParams;
-    public DfareportingSitesListRequest withPathParams(DfareportingSitesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DfareportingSitesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public DfareportingSitesListQueryParams queryParams;
-    public DfareportingSitesListRequest withQueryParams(DfareportingSitesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * This search filter is no longer supported and will have no effect on the results returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=acceptsInStreamVideoPlacements")
+    public Boolean acceptsInStreamVideoPlacements;
+    public DfareportingSitesListRequest withAcceptsInStreamVideoPlacements(Boolean acceptsInStreamVideoPlacements) {
+        this.acceptsInStreamVideoPlacements = acceptsInStreamVideoPlacements;
         return this;
     }
     
+    /**
+     * This search filter is no longer supported and will have no effect on the results returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=acceptsInterstitialPlacements")
+    public Boolean acceptsInterstitialPlacements;
+    public DfareportingSitesListRequest withAcceptsInterstitialPlacements(Boolean acceptsInterstitialPlacements) {
+        this.acceptsInterstitialPlacements = acceptsInterstitialPlacements;
+        return this;
+    }
     
-    public DfareportingSitesListSecurity security;
-    public DfareportingSitesListRequest withSecurity(DfareportingSitesListSecurity security) {
-        this.security = security;
+    /**
+     * Select only sites that accept publisher paid placements.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=acceptsPublisherPaidPlacements")
+    public Boolean acceptsPublisherPaidPlacements;
+    public DfareportingSitesListRequest withAcceptsPublisherPaidPlacements(Boolean acceptsPublisherPaidPlacements) {
+        this.acceptsPublisherPaidPlacements = acceptsPublisherPaidPlacements;
+        return this;
+    }
+    
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DfareportingSitesListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
+    
+    /**
+     * Select only AdWords sites.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=adWordsSite")
+    public Boolean adWordsSite;
+    public DfareportingSitesListRequest withAdWordsSite(Boolean adWordsSite) {
+        this.adWordsSite = adWordsSite;
+        return this;
+    }
+    
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DfareportingSitesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * Select only approved sites.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=approved")
+    public Boolean approved;
+    public DfareportingSitesListRequest withApproved(Boolean approved) {
+        this.approved = approved;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DfareportingSitesListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Select only sites with these campaign IDs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaignIds")
+    public String[] campaignIds;
+    public DfareportingSitesListRequest withCampaignIds(String[] campaignIds) {
+        this.campaignIds = campaignIds;
+        return this;
+    }
+    
+    /**
+     * Select only sites with these directory site IDs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=directorySiteIds")
+    public String[] directorySiteIds;
+    public DfareportingSitesListRequest withDirectorySiteIds(String[] directorySiteIds) {
+        this.directorySiteIds = directorySiteIds;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DfareportingSitesListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Select only sites with these IDs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
+    public String[] ids;
+    public DfareportingSitesListRequest withIds(String[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DfareportingSitesListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public DfareportingSitesListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DfareportingSitesListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Value of the nextPageToken from the previous result page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public DfareportingSitesListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DfareportingSitesListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * User profile ID associated with this request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
+    public String profileId;
+    public DfareportingSitesListRequest withProfileId(String profileId) {
+        this.profileId = profileId;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DfareportingSitesListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Allows searching for objects by name, ID or keyName. Wildcards (*) are allowed. For example, "site*2015" will return objects with names like "site June 2015", "site April 2015", or simply "site 2015". Most of the searches also add wildcards implicitly at the start and the end of the search string. For example, a search string of "site" will match objects with name "my site", "site 2015", or simply "site".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchString")
+    public String searchString;
+    public DfareportingSitesListRequest withSearchString(String searchString) {
+        this.searchString = searchString;
+        return this;
+    }
+    
+    /**
+     * Field by which to sort the list.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
+    public DfareportingSitesListSortFieldEnum sortField;
+    public DfareportingSitesListRequest withSortField(DfareportingSitesListSortFieldEnum sortField) {
+        this.sortField = sortField;
+        return this;
+    }
+    
+    /**
+     * Order of sorted results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
+    public DfareportingSitesListSortOrderEnum sortOrder;
+    public DfareportingSitesListRequest withSortOrder(DfareportingSitesListSortOrderEnum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * Select only sites with this subaccount ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subaccountId")
+    public String subaccountId;
+    public DfareportingSitesListRequest withSubaccountId(String subaccountId) {
+        this.subaccountId = subaccountId;
+        return this;
+    }
+    
+    /**
+     * Select only sites that have not been mapped to a directory site.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unmappedSite")
+    public Boolean unmappedSite;
+    public DfareportingSitesListRequest withUnmappedSite(Boolean unmappedSite) {
+        this.unmappedSite = unmappedSite;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DfareportingSitesListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DfareportingSitesListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

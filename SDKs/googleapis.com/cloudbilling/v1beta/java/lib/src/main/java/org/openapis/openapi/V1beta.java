@@ -34,27 +34,28 @@ public class V1beta {
     /**
      * Estimate list prices using a `CostScenario` without a defined `billingAccount`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudbillingEstimateCostScenarioResponse cloudbillingEstimateCostScenario(org.openapis.openapi.models.operations.CloudbillingEstimateCostScenarioRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudbillingEstimateCostScenarioResponse cloudbillingEstimateCostScenario(org.openapis.openapi.models.operations.CloudbillingEstimateCostScenarioRequest request, org.openapis.openapi.models.operations.CloudbillingEstimateCostScenarioSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1beta:estimateCostScenario");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "estimateCostScenarioWithListPriceRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudbillingEstimateCostScenarioQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudbillingEstimateCostScenarioRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

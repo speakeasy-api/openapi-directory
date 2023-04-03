@@ -33,18 +33,19 @@ public class Parties {
      * Get Parties
      * Get Parties by Account ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAccountsAccountIdPartiesResponse getAccountsAccountIdParties(org.openapis.openapi.models.operations.GetAccountsAccountIdPartiesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAccountsAccountIdPartiesResponse getAccountsAccountIdParties(org.openapis.openapi.models.operations.GetAccountsAccountIdPartiesRequest request, org.openapis.openapi.models.operations.GetAccountsAccountIdPartiesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountsAccountIdPartiesPathParams.class, baseUrl, "/accounts/{accountId}/parties", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountsAccountIdPartiesRequest.class, baseUrl, "/accounts/{accountId}/parties", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -53,7 +54,7 @@ public class Parties {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -103,18 +104,19 @@ public class Parties {
      * Get Party
      * Get Party by Account ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAccountsAccountIdPartyResponse getAccountsAccountIdParty(org.openapis.openapi.models.operations.GetAccountsAccountIdPartyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAccountsAccountIdPartyResponse getAccountsAccountIdParty(org.openapis.openapi.models.operations.GetAccountsAccountIdPartyRequest request, org.openapis.openapi.models.operations.GetAccountsAccountIdPartySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountsAccountIdPartyPathParams.class, baseUrl, "/accounts/{accountId}/party", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountsAccountIdPartyRequest.class, baseUrl, "/accounts/{accountId}/party", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -123,7 +125,7 @@ public class Parties {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,10 +175,11 @@ public class Parties {
      * Get Party
      * Get Party
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPartyResponse getParty(org.openapis.openapi.models.operations.GetPartyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPartyResponse getParty(org.openapis.openapi.models.operations.GetPartyRequest request, org.openapis.openapi.models.operations.GetPartySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/party");
         
@@ -184,7 +187,7 @@ public class Parties {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -193,7 +196,7 @@ public class Parties {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

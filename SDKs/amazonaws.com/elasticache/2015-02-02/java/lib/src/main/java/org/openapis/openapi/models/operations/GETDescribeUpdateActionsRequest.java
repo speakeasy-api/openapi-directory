@@ -4,20 +4,169 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeUpdateActionsRequest {
-    
-    public GETDescribeUpdateActionsQueryParams queryParams;
-    public GETDescribeUpdateActionsRequest withQueryParams(GETDescribeUpdateActionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeUpdateActionsActionEnum action;
+    public GETDescribeUpdateActionsRequest withAction(GETDescribeUpdateActionsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The cache cluster IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheClusterIds")
+    public String[] cacheClusterIds;
+    public GETDescribeUpdateActionsRequest withCacheClusterIds(String[] cacheClusterIds) {
+        this.cacheClusterIds = cacheClusterIds;
+        return this;
+    }
     
-    public GETDescribeUpdateActionsHeaders headers;
-    public GETDescribeUpdateActionsRequest withHeaders(GETDescribeUpdateActionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Elasticache engine to which the update applies. Either Redis or Memcached 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Engine")
+    public String engine;
+    public GETDescribeUpdateActionsRequest withEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    
+    /**
+     * An optional marker returned from a prior request. Use this marker for pagination of results from this operation. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by &lt;code&gt;MaxRecords&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDescribeUpdateActionsRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * The maximum number of records to include in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeUpdateActionsRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    /**
+     * The replication group IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReplicationGroupIds")
+    public String[] replicationGroupIds;
+    public GETDescribeUpdateActionsRequest withReplicationGroupIds(String[] replicationGroupIds) {
+        this.replicationGroupIds = replicationGroupIds;
+        return this;
+    }
+    
+    /**
+     * The unique ID of the service update
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServiceUpdateName")
+    public String serviceUpdateName;
+    public GETDescribeUpdateActionsRequest withServiceUpdateName(String serviceUpdateName) {
+        this.serviceUpdateName = serviceUpdateName;
+        return this;
+    }
+    
+    /**
+     * The status of the service update
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServiceUpdateStatus")
+    public org.openapis.openapi.models.shared.ServiceUpdateStatusEnum[] serviceUpdateStatus;
+    public GETDescribeUpdateActionsRequest withServiceUpdateStatus(org.openapis.openapi.models.shared.ServiceUpdateStatusEnum[] serviceUpdateStatus) {
+        this.serviceUpdateStatus = serviceUpdateStatus;
+        return this;
+    }
+    
+    /**
+     * The range of time specified to search for service updates that are in available status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServiceUpdateTimeRange")
+    public GETDescribeUpdateActionsServiceUpdateTimeRange serviceUpdateTimeRange;
+    public GETDescribeUpdateActionsRequest withServiceUpdateTimeRange(GETDescribeUpdateActionsServiceUpdateTimeRange serviceUpdateTimeRange) {
+        this.serviceUpdateTimeRange = serviceUpdateTimeRange;
+        return this;
+    }
+    
+    /**
+     * Dictates whether to include node level update status in the response 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ShowNodeLevelUpdateStatus")
+    public Boolean showNodeLevelUpdateStatus;
+    public GETDescribeUpdateActionsRequest withShowNodeLevelUpdateStatus(Boolean showNodeLevelUpdateStatus) {
+        this.showNodeLevelUpdateStatus = showNodeLevelUpdateStatus;
+        return this;
+    }
+    
+    /**
+     * The status of the update action.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UpdateActionStatus")
+    public org.openapis.openapi.models.shared.UpdateActionStatusEnum[] updateActionStatus;
+    public GETDescribeUpdateActionsRequest withUpdateActionStatus(org.openapis.openapi.models.shared.UpdateActionStatusEnum[] updateActionStatus) {
+        this.updateActionStatus = updateActionStatus;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeUpdateActionsVersionEnum version;
+    public GETDescribeUpdateActionsRequest withVersion(GETDescribeUpdateActionsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeUpdateActionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeUpdateActionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeUpdateActionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeUpdateActionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeUpdateActionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeUpdateActionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeUpdateActionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

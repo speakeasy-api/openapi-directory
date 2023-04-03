@@ -4,20 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GistsListForUserRequest {
-    
-    public GistsListForUserPathParams pathParams;
-    public GistsListForUserRequest withPathParams(GistsListForUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GistsListForUserRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GistsListForUserRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public GistsListForUserQueryParams queryParams;
-    public GistsListForUserRequest withQueryParams(GistsListForUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public OffsetDateTime since;
+    public GistsListForUserRequest withSince(OffsetDateTime since) {
+        this.since = since;
+        return this;
+    }
+    
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GistsListForUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

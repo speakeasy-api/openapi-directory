@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListUsersRequest {
-    
-    public GetListUsersQueryParams queryParams;
-    public GetListUsersRequest withQueryParams(GetListUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The media type of the body of the request. Default value for license manager protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetListUsersRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Number of items in the returned page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=numItems")
+    public Long numItems;
+    public GetListUsersRequest withNumItems(Long numItems) {
+        this.numItems = numItems;
+        return this;
+    }
     
-    public GetListUsersHeaders headers;
-    public GetListUsersRequest withHeaders(GetListUsersHeaders headers) {
-        this.headers = headers;
+    /**
+     * Which page from the whole list will be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Long pageNumber;
+    public GetListUsersRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    
+    /**
+     * Chooses the field that the list will be sorted by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetListUsersRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Defines the sorting order. `ASC` is used for ascendant order. `DSC` is used for descendant order
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortType")
+    public String sortType;
+    public GetListUsersRequest withSortType(String sortType) {
+        this.sortType = sortType;
         return this;
     }
     

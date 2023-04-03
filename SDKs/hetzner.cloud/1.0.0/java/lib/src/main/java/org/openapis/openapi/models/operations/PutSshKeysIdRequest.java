@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSshKeysIdRequest {
-    
-    public PutSshKeysIdPathParams pathParams;
-    public PutSshKeysIdRequest withPathParams(PutSshKeysIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PutSshKeysIdRequestBody requestBody;
+    public PutSshKeysIdRequest withRequestBody(PutSshKeysIdRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutSshKeysIdRequestBody request;
-    public PutSshKeysIdRequest withRequest(PutSshKeysIdRequestBody request) {
-        this.request = request;
+    /**
+     * ID of the SSH key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutSshKeysIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

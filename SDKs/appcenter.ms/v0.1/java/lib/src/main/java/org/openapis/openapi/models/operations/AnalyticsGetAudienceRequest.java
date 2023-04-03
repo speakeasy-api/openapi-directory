@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsGetAudienceRequest {
-    
-    public AnalyticsGetAudiencePathParams pathParams;
-    public AnalyticsGetAudienceRequest withPathParams(AnalyticsGetAudiencePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AnalyticsGetAudienceRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The name of the audience
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=audience_name")
+    public String audienceName;
+    public AnalyticsGetAudienceRequest withAudienceName(String audienceName) {
+        this.audienceName = audienceName;
+        return this;
+    }
     
-    public AnalyticsGetAudienceSecurity security;
-    public AnalyticsGetAudienceRequest withSecurity(AnalyticsGetAudienceSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AnalyticsGetAudienceRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

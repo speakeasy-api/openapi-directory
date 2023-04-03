@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MaintenanceControllerCreateMaintenanceJobFormRequest {
-    
-    public MaintenanceControllerCreateMaintenanceJobFormPathParams pathParams;
-    public MaintenanceControllerCreateMaintenanceJobFormRequest withPathParams(MaintenanceControllerCreateMaintenanceJobFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A JSON object containing details of the maintenance job
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.MaintenanceIssueModel request;
-    public MaintenanceControllerCreateMaintenanceJobFormRequest withRequest(org.openapis.openapi.models.shared.MaintenanceIssueModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.MaintenanceIssueModel maintenanceIssueModel;
+    public MaintenanceControllerCreateMaintenanceJobFormRequest withMaintenanceIssueModel(org.openapis.openapi.models.shared.MaintenanceIssueModel maintenanceIssueModel) {
+        this.maintenanceIssueModel = maintenanceIssueModel;
+        return this;
+    }
+    
+    /**
+     * The unique ID of the Branch
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branchID")
+    public String branchID;
+    public MaintenanceControllerCreateMaintenanceJobFormRequest withBranchID(String branchID) {
+        this.branchID = branchID;
+        return this;
+    }
+    
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public MaintenanceControllerCreateMaintenanceJobFormRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     

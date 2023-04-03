@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AcceptHandshakeXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AcceptHandshakeHeaders;
 import org.openapis.openapi.models.operations.AcceptHandshakeRequest;
 import org.openapis.openapi.models.operations.AcceptHandshakeResponse;
 import org.openapis.openapi.models.shared.AcceptHandshakeRequest;
@@ -15,27 +14,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AcceptHandshakeRequest req = new AcceptHandshakeRequest() {{
-                headers = new AcceptHandshakeHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AWSOrganizationsV20161128.AcceptHandshake";
+                acceptHandshakeRequest = new AcceptHandshakeRequest() {{
+                    handshakeId = "corrupti";
                 }};
-                request = new AcceptHandshakeRequest() {{
-                    handshakeId = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+                xAmzTarget = "AWSOrganizationsV20161128.AcceptHandshake";
+            }}            
 
             AcceptHandshakeResponse res = sdk.acceptHandshake(req);
 

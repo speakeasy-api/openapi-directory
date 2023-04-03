@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProtocolsRequest {
-    
-    public GetProtocolsPathParams pathParams;
-    public GetProtocolsRequest withPathParams(GetProtocolsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the protocols arrary
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public GetProtocolsRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

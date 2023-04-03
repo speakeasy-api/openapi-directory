@@ -4,13 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtrasGraphsListRequest {
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ExtrasGraphsListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public ExtrasGraphsListQueryParams queryParams;
-    public ExtrasGraphsListRequest withQueryParams(ExtrasGraphsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public ExtrasGraphsListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ExtrasGraphsListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public ExtrasGraphsListRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

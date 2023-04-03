@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MediaTabularExtractsheetRequest {
+    /**
+     * Sheets
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=arg1")
+    public String arg1;
+    public MediaTabularExtractsheetRequest withArg1(String arg1) {
+        this.arg1 = arg1;
+        return this;
+    }
     
-    public MediaTabularExtractsheetQueryParams queryParams;
-    public MediaTabularExtractsheetRequest withQueryParams(MediaTabularExtractsheetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Entry ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entryid")
+    public String entryid;
+    public MediaTabularExtractsheetRequest withEntryid(String entryid) {
+        this.entryid = entryid;
+        return this;
+    }
+    
+    /**
+     * Output type  -don't change
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=output")
+    public String output;
+    public MediaTabularExtractsheetRequest withOutput(String output) {
+        this.output = output;
         return this;
     }
     

@@ -4,13 +4,150 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2UsersJsonRequest {
+    /**
+     * Filters users based on active attribute. Defaults to not applied
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=active")
+    public Boolean active;
+    public GetV2UsersJsonRequest withActive(Boolean active) {
+        this.active = active;
+        return this;
+    }
     
-    public GetV2UsersJsonQueryParams queryParams;
-    public GetV2UsersJsonRequest withQueryParams(GetV2UsersJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filters users by group_id.  An additional value of "_is_null" can be passed to filter users that are not in a group
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=group_id")
+    public String[] groupId;
+    public GetV2UsersJsonRequest withGroupId(String[] groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * Filters list to only include guids
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=guid")
+    public String[] guid;
+    public GetV2UsersJsonRequest withGuid(String[] guid) {
+        this.guid = guid;
+        return this;
+    }
+    
+    /**
+     * Filters users based on if they have a crm user mapped or not.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=has_crm_user")
+    public Boolean hasCrmUser;
+    public GetV2UsersJsonRequest withHasCrmUser(Boolean hasCrmUser) {
+        this.hasCrmUser = hasCrmUser;
+        return this;
+    }
+    
+    /**
+     * IDs of users to fetch. If a record can't be found, that record won't be returned and your request will be successful
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
+    public Long[] ids;
+    public GetV2UsersJsonRequest withIds(Long[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    /**
+     * Whether to include total_pages and total_count in the metadata. Defaults to false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
+    public Boolean includePagingCounts;
+    public GetV2UsersJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
+        this.includePagingCounts = includePagingCounts;
+        return this;
+    }
+    
+    /**
+     * The current page to fetch users from. Defaults to returning all users
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetV2UsersJsonRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many users to show per page in the range [1, 100]. Defaults to 25.  Results are only paginated if the page parameter is defined
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetV2UsersJsonRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Filters users by role_id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=role_id")
+    public String[] roleId;
+    public GetV2UsersJsonRequest withRoleId(String[] roleId) {
+        this.roleId = roleId;
+        return this;
+    }
+    
+    /**
+     * Space-separated list of keywords used to find case-insensitive substring matches against First Name, Last Name, or Email
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetV2UsersJsonRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * Key to sort on, must be one of: id, email, name, group, role. Defaults to id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public String sortBy;
+    public GetV2UsersJsonRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
+    public String sortDirection;
+    public GetV2UsersJsonRequest withSortDirection(String sortDirection) {
+        this.sortDirection = sortDirection;
+        return this;
+    }
+    
+    /**
+     * Defaults to true.
+     * 
+     * When true, only shows users that are actionable based on the team's privacy settings.
+     * When false, shows all users on the team, even if you can't take action on that user. Deactivated users are also included when false.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=visible_only")
+    public Boolean visibleOnly;
+    public GetV2UsersJsonRequest withVisibleOnly(Boolean visibleOnly) {
+        this.visibleOnly = visibleOnly;
+        return this;
+    }
+    
+    /**
+     * Filters users based on assigned work_country.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=work_country")
+    public String[] workCountry;
+    public GetV2UsersJsonRequest withWorkCountry(String[] workCountry) {
+        this.workCountry = workCountry;
         return this;
     }
     

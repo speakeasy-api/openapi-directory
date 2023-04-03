@@ -29,7 +29,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetV1QueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetV1Request.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetV1Response.java
 lib/src/main/java/org/openapis/openapi/models/shared/InlineResponse200Connection.java

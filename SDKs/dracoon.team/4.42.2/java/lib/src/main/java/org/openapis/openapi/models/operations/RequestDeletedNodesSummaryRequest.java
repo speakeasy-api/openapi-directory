@@ -4,27 +4,80 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestDeletedNodesSummaryRequest {
-    
-    public RequestDeletedNodesSummaryPathParams pathParams;
-    public RequestDeletedNodesSummaryRequest withPathParams(RequestDeletedNodesSummaryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestDeletedNodesSummaryRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestDeletedNodesSummaryQueryParams queryParams;
-    public RequestDeletedNodesSummaryRequest withQueryParams(RequestDeletedNodesSummaryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestDeletedNodesSummaryXSdsDateFormatEnum xSdsDateFormat;
+    public RequestDeletedNodesSummaryRequest withXSdsDateFormat(RequestDeletedNodesSummaryXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
         return this;
     }
     
+    /**
+     * Filter string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public RequestDeletedNodesSummaryRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public RequestDeletedNodesSummaryHeaders headers;
-    public RequestDeletedNodesSummaryRequest withHeaders(RequestDeletedNodesSummaryHeaders headers) {
-        this.headers = headers;
+    /**
+     * Range limit.
+     * 
+     * Maximum 500.
+     * 
+     *  For more results please use paging (`offset` + `limit`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public RequestDeletedNodesSummaryRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Parent ID (can only be a room ID)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public Long nodeId;
+    public RequestDeletedNodesSummaryRequest withNodeId(Long nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    
+    /**
+     * Range offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public RequestDeletedNodesSummaryRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Sort string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public RequestDeletedNodesSummaryRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

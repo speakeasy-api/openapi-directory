@@ -39,7 +39,7 @@ public class RegisterForRealtimeApi {
      */
     public org.openapis.openapi.models.operations.RegisterForRealtimeApiDeleteResponse registerForRealtimeApiDelete(org.openapis.openapi.models.operations.RegisterForRealtimeApiDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegisterForRealtimeApiDeletePathParams.class, baseUrl, "/api/RegisterForRealtimeApi/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegisterForRealtimeApiDeleteRequest.class, baseUrl, "/api/RegisterForRealtimeApi/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -124,7 +124,7 @@ public class RegisterForRealtimeApi {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RegisterForRealtimeApiPostFormResponse registerForRealtimeApiPostForm(org.openapis.openapi.models.operations.RegisterForRealtimeApiPostFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RegisterForRealtimeApiPostFormResponse registerForRealtimeApiPostForm(org.openapis.openapi.models.shared.RegisterRealtimeApiData request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/RegisterForRealtimeApi");
         
@@ -162,7 +162,7 @@ public class RegisterForRealtimeApi {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RegisterForRealtimeApiPostJsonResponse registerForRealtimeApiPostJson(org.openapis.openapi.models.operations.RegisterForRealtimeApiPostJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RegisterForRealtimeApiPostJsonResponse registerForRealtimeApiPostJson(org.openapis.openapi.models.shared.RegisterRealtimeApiData request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/RegisterForRealtimeApi");
         
@@ -200,7 +200,7 @@ public class RegisterForRealtimeApi {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RegisterForRealtimeApiPostRawResponse registerForRealtimeApiPostRaw(org.openapis.openapi.models.operations.RegisterForRealtimeApiPostRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RegisterForRealtimeApiPostRawResponse registerForRealtimeApiPostRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/RegisterForRealtimeApi");
         

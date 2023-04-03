@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRegionRequest {
-    
-    public GetRegionPathParams pathParams;
-    public GetRegionRequest withPathParams(GetRegionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The country code.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country")
+    public String country;
+    public GetRegionRequest withCountry(String country) {
+        this.country = country;
         return this;
     }
     

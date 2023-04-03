@@ -30,17 +30,14 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/SendSSHPublicKeyXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/SendSSHPublicKeyHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendSSHPublicKeyRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendSSHPublicKeyResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendSerialConsoleSSHPublicKeyXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/SendSerialConsoleSSHPublicKeyHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendSerialConsoleSSHPublicKeyRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendSerialConsoleSSHPublicKeyResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SendSSHPublicKeyResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SendSSHPublicKeyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/SendSerialConsoleSSHPublicKeyResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SendSerialConsoleSSHPublicKeyRequest.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

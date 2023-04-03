@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersIdUserTransactionsclustersRequest {
-    
-    public PostUsersIdUserTransactionsclustersPathParams pathParams;
-    public PostUsersIdUserTransactionsclustersRequest withPathParams(PostUsersIdUserTransactionsclustersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PostUsersIdUserTransactionsclustersRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
-    
-    public PostUsersIdUserTransactionsclustersQueryParams queryParams;
-    public PostUsersIdUserTransactionsclustersRequest withQueryParams(PostUsersIdUserTransactionsclustersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public PostUsersIdUserTransactionsclustersRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

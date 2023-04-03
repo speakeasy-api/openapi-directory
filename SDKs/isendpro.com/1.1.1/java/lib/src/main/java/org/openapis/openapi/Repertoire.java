@@ -37,7 +37,7 @@ public class Repertoire {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RepertoireResponse repertoire(org.openapis.openapi.models.operations.RepertoireRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RepertoireResponse repertoire(org.openapis.openapi.models.shared.REPERTOIREmodifrequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/repertoire");
         
@@ -89,7 +89,7 @@ public class Repertoire {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RepertoireCreaResponse repertoireCrea(org.openapis.openapi.models.operations.RepertoireCreaRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RepertoireCreaResponse repertoireCrea(org.openapis.openapi.models.shared.REPERTOIREcreaterequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/repertoire");
         

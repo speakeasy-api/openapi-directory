@@ -7,20 +7,6 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateArtifactRequest {
-    
-    public CreateArtifactQueryParams queryParams;
-    public CreateArtifactRequest withQueryParams(CreateArtifactQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public CreateArtifactHeaders headers;
-    public CreateArtifactRequest withHeaders(CreateArtifactHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The content of the artifact being created. This is often, but not always, JSON data
      * representing one of the supported artifact types:
@@ -38,9 +24,50 @@ public class CreateArtifactRequest {
      * 
      */
     @SpeakeasyMetadata("request:mediaType=*/*")
-    public byte[] request;
-    public CreateArtifactRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public CreateArtifactRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * A client-provided, globally unique identifier for the new artifact.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-ArtifactId")
+    public String xRegistryArtifactId;
+    public CreateArtifactRequest withXRegistryArtifactId(String xRegistryArtifactId) {
+        this.xRegistryArtifactId = xRegistryArtifactId;
+        return this;
+    }
+    
+    /**
+     * Specifies the type of the artifact being added. Possible values include:
+     * 
+     * * Avro (`AVRO`)
+     * * Protobuf (`PROTOBUF`)
+     * * Protobuf File Descriptor (`PROTOBUF_FD`)
+     * * JSON Schema (`JSON`)
+     * * Kafka Connect (`KCONNECT`)
+     * * OpenAPI (`OPENAPI`)
+     * * AsyncAPI (`ASYNCAPI`)
+     * * GraphQL (`GRAPHQL`)
+     * * Web Services Description Language (`WSDL`)
+     * * XML Schema (`XSD`)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-ArtifactType")
+    public CreateArtifactXRegistryArtifactTypeEnum xRegistryArtifactType;
+    public CreateArtifactRequest withXRegistryArtifactType(CreateArtifactXRegistryArtifactTypeEnum xRegistryArtifactType) {
+        this.xRegistryArtifactType = xRegistryArtifactType;
+        return this;
+    }
+    
+    /**
+     * Set this option to instruct the server on what to do if the artifact already exists.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifExists")
+    public CreateArtifactIfExistsEnum ifExists;
+    public CreateArtifactRequest withIfExists(CreateArtifactIfExistsEnum ifExists) {
+        this.ifExists = ifExists;
         return this;
     }
     

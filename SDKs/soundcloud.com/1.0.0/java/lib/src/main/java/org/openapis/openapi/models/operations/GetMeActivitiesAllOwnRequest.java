@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMeActivitiesAllOwnRequest {
-    
-    public GetMeActivitiesAllOwnQueryParams queryParams;
-    public GetMeActivitiesAllOwnRequest withQueryParams(GetMeActivitiesAllOwnQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filters content by level of access the user (logged in or anonymous) has to the track. The result list will include only tracks with the specified access. Include all options if you'd like to see all possible tracks. See `Track#access` schema for more details.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=access")
+    public org.openapis.openapi.models.shared.AccessEnum[] access;
+    public GetMeActivitiesAllOwnRequest withAccess(org.openapis.openapi.models.shared.AccessEnum[] access) {
+        this.access = access;
         return this;
     }
     
-    
-    public GetMeActivitiesAllOwnSecurity security;
-    public GetMeActivitiesAllOwnRequest withSecurity(GetMeActivitiesAllOwnSecurity security) {
-        this.security = security;
+    /**
+     * Number of results to return in the collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetMeActivitiesAllOwnRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

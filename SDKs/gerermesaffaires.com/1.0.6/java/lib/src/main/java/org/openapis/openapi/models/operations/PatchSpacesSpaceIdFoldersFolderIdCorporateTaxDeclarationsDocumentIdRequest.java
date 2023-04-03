@@ -7,20 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdRequest {
-    
-    public PatchSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdPathParams pathParams;
-    public PatchSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdRequest withPathParams(PatchSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A Corporate Tax Declaration to modify
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdRequestBody request;
-    public PatchSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdRequest withRequest(PatchSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdRequestBody request) {
-        this.request = request;
+    public PatchSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdRequestBody requestBody;
+    public PatchSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdRequest withRequestBody(PatchSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public String documentId;
+    public PatchSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdRequest withDocumentId(String documentId) {
+        this.documentId = documentId;
+        return this;
+    }
+    
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=folderId")
+    public String folderId;
+    public PatchSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdRequest withFolderId(String folderId) {
+        this.folderId = folderId;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PatchSpacesSpaceIdFoldersFolderIdCorporateTaxDeclarationsDocumentIdRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

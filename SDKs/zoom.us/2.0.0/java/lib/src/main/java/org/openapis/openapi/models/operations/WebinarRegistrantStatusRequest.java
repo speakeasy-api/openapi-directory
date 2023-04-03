@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebinarRegistrantStatusRequest {
-    
-    public WebinarRegistrantStatusPathParams pathParams;
-    public WebinarRegistrantStatusRequest withPathParams(WebinarRegistrantStatusPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public WebinarRegistrantStatusQueryParams queryParams;
-    public WebinarRegistrantStatusRequest withQueryParams(WebinarRegistrantStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public WebinarRegistrantStatusApplicationJSON request;
-    public WebinarRegistrantStatusRequest withRequest(WebinarRegistrantStatusApplicationJSON request) {
-        this.request = request;
+    public WebinarRegistrantStatusApplicationJSON requestBody;
+    public WebinarRegistrantStatusRequest withRequestBody(WebinarRegistrantStatusApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The meeting occurrence ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurrence_id")
+    public String occurrenceId;
+    public WebinarRegistrantStatusRequest withOccurrenceId(String occurrenceId) {
+        this.occurrenceId = occurrenceId;
+        return this;
+    }
     
-    public WebinarRegistrantStatusSecurity security;
-    public WebinarRegistrantStatusRequest withSecurity(WebinarRegistrantStatusSecurity security) {
-        this.security = security;
+    /**
+     * The webinar ID in "**long**" format(represented as int64 data type in JSON). 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webinarId")
+    public Long webinarId;
+    public WebinarRegistrantStatusRequest withWebinarId(Long webinarId) {
+        this.webinarId = webinarId;
         return this;
     }
     

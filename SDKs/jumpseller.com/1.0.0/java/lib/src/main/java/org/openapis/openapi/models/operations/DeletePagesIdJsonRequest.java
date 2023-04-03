@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePagesIdJsonRequest {
-    
-    public DeletePagesIdJsonPathParams pathParams;
-    public DeletePagesIdJsonRequest withPathParams(DeletePagesIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public DeletePagesIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Id of the Page
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public DeletePagesIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
     
-    public DeletePagesIdJsonQueryParams queryParams;
-    public DeletePagesIdJsonRequest withQueryParams(DeletePagesIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public DeletePagesIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

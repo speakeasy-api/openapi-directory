@@ -4,13 +4,247 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchTasksRequest {
+    /**
+     * Archive change date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
+    public OffsetDateTime changedateFrom;
+    public SearchTasksRequest withChangedateFrom(OffsetDateTime changedateFrom) {
+        this.changedateFrom = changedateFrom;
+        return this;
+    }
     
-    public SearchTasksQueryParams queryParams;
-    public SearchTasksRequest withQueryParams(SearchTasksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Archive change date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
+    public OffsetDateTime changedateTo;
+    public SearchTasksRequest withChangedateTo(OffsetDateTime changedateTo) {
+        this.changedateTo = changedateTo;
+        return this;
+    }
+    
+    /**
+     * Archive create date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
+    public OffsetDateTime createdateFrom;
+    public SearchTasksRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
+        this.createdateFrom = createdateFrom;
+        return this;
+    }
+    
+    /**
+     * Archive create date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
+    public OffsetDateTime createdateTo;
+    public SearchTasksRequest withCreatedateTo(OffsetDateTime createdateTo) {
+        this.createdateTo = createdateTo;
+        return this;
+    }
+    
+    /**
+     * Search description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public SearchTasksRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    /**
+     * File suffix
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
+    public String filesuffix;
+    public SearchTasksRequest withFilesuffix(String filesuffix) {
+        this.filesuffix = filesuffix;
+        return this;
+    }
+    
+    /**
+     * From date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
+    public OffsetDateTime fromdate;
+    public SearchTasksRequest withFromdate(OffsetDateTime fromdate) {
+        this.fromdate = fromdate;
+        return this;
+    }
+    
+    /**
+     * Parent entry
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public String group;
+    public SearchTasksRequest withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * Max number of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Long max;
+    public SearchTasksRequest withMax(Long max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * Northern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
+    public Float maxlatitude;
+    public SearchTasksRequest withMaxlatitude(Float maxlatitude) {
+        this.maxlatitude = maxlatitude;
+        return this;
+    }
+    
+    /**
+     * Eastern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
+    public Float maxlongitude;
+    public SearchTasksRequest withMaxlongitude(Float maxlongitude) {
+        this.maxlongitude = maxlongitude;
+        return this;
+    }
+    
+    /**
+     * Southern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
+    public Float minlatitude;
+    public SearchTasksRequest withMinlatitude(Float minlatitude) {
+        this.minlatitude = minlatitude;
+        return this;
+    }
+    
+    /**
+     * Western bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
+    public Float minlongitude;
+    public SearchTasksRequest withMinlongitude(Float minlongitude) {
+        this.minlongitude = minlongitude;
+        return this;
+    }
+    
+    /**
+     * Search name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public SearchTasksRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Assigned To
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_tasks.assignedto")
+    public String searchDbTasksAssignedto;
+    public SearchTasksRequest withSearchDbTasksAssignedto(String searchDbTasksAssignedto) {
+        this.searchDbTasksAssignedto = searchDbTasksAssignedto;
+        return this;
+    }
+    
+    /**
+     * % Complete
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_tasks.complete")
+    public Double searchDbTasksComplete;
+    public SearchTasksRequest withSearchDbTasksComplete(Double searchDbTasksComplete) {
+        this.searchDbTasksComplete = searchDbTasksComplete;
+        return this;
+    }
+    
+    /**
+     * End Date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_tasks.enddate")
+    public String searchDbTasksEnddate;
+    public SearchTasksRequest withSearchDbTasksEnddate(String searchDbTasksEnddate) {
+        this.searchDbTasksEnddate = searchDbTasksEnddate;
+        return this;
+    }
+    
+    /**
+     * Priority
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_tasks.priority")
+    public String searchDbTasksPriority;
+    public SearchTasksRequest withSearchDbTasksPriority(String searchDbTasksPriority) {
+        this.searchDbTasksPriority = searchDbTasksPriority;
+        return this;
+    }
+    
+    /**
+     * Start Date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_tasks.startdate")
+    public String searchDbTasksStartdate;
+    public SearchTasksRequest withSearchDbTasksStartdate(String searchDbTasksStartdate) {
+        this.searchDbTasksStartdate = searchDbTasksStartdate;
+        return this;
+    }
+    
+    /**
+     * Status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_tasks.status")
+    public String searchDbTasksStatus;
+    public SearchTasksRequest withSearchDbTasksStatus(String searchDbTasksStatus) {
+        this.searchDbTasksStatus = searchDbTasksStatus;
+        return this;
+    }
+    
+    /**
+     * Title
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_tasks.title")
+    public String searchDbTasksTitle;
+    public SearchTasksRequest withSearchDbTasksTitle(String searchDbTasksTitle) {
+        this.searchDbTasksTitle = searchDbTasksTitle;
+        return this;
+    }
+    
+    /**
+     * Number to skip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Long skip;
+    public SearchTasksRequest withSkip(Long skip) {
+        this.skip = skip;
+        return this;
+    }
+    
+    /**
+     * Search text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public SearchTasksRequest withText(String text) {
+        this.text = text;
+        return this;
+    }
+    
+    /**
+     * To date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
+    public OffsetDateTime todate;
+    public SearchTasksRequest withTodate(OffsetDateTime todate) {
+        this.todate = todate;
         return this;
     }
     

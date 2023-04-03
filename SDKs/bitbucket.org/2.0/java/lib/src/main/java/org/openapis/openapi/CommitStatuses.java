@@ -41,25 +41,26 @@ public class CommitStatuses {
      * List commit statuses for a commit
      * Returns all statuses (e.g. build results) for a specific commit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesResponse getRepositoriesWorkspaceRepoSlugCommitCommitStatuses(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesResponse getRepositoriesWorkspaceRepoSlugCommitCommitStatuses(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -97,19 +98,20 @@ public class CommitStatuses {
      * Get a build status for a commit
      * Returns the specified build status for a commit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse getRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse getRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build/{key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build/{key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -148,25 +150,26 @@ public class CommitStatuses {
      * Returns all statuses (e.g. build results) for the given pull
      * request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesResponse getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatuses(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesResponse getRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatuses(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/statuses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/statuses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -227,21 +230,22 @@ public class CommitStatuses {
      * which Bitbucket will turn into `https://foo.com/builds/foo/bar` at render time.
      * The context variables available are `repository` and `commit`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildResponse postRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuild(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildResponse postRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuild(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildRequest request, org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -291,21 +295,22 @@ public class CommitStatuses {
      * 
      * The `key` cannot be changed.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse putRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse putRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest request, org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build/{key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build/{key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

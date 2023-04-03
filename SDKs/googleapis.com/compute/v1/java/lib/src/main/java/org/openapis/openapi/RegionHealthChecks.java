@@ -34,25 +34,26 @@ public class RegionHealthChecks {
     /**
      * Deletes the specified HealthCheck resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionHealthChecksDeleteResponse computeRegionHealthChecksDelete(org.openapis.openapi.models.operations.ComputeRegionHealthChecksDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionHealthChecksDeleteResponse computeRegionHealthChecksDelete(org.openapis.openapi.models.operations.ComputeRegionHealthChecksDeleteRequest request, org.openapis.openapi.models.operations.ComputeRegionHealthChecksDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionHealthChecksDeletePathParams.class, baseUrl, "/projects/{project}/regions/{region}/healthChecks/{healthCheck}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionHealthChecksDeleteRequest.class, baseUrl, "/projects/{project}/regions/{region}/healthChecks/{healthCheck}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionHealthChecksDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionHealthChecksDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class RegionHealthChecks {
     /**
      * Returns the specified HealthCheck resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionHealthChecksGetResponse computeRegionHealthChecksGet(org.openapis.openapi.models.operations.ComputeRegionHealthChecksGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionHealthChecksGetResponse computeRegionHealthChecksGet(org.openapis.openapi.models.operations.ComputeRegionHealthChecksGetRequest request, org.openapis.openapi.models.operations.ComputeRegionHealthChecksGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionHealthChecksGetPathParams.class, baseUrl, "/projects/{project}/regions/{region}/healthChecks/{healthCheck}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionHealthChecksGetRequest.class, baseUrl, "/projects/{project}/regions/{region}/healthChecks/{healthCheck}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionHealthChecksGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionHealthChecksGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class RegionHealthChecks {
     /**
      * Creates a HealthCheck resource in the specified project using the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionHealthChecksInsertResponse computeRegionHealthChecksInsert(org.openapis.openapi.models.operations.ComputeRegionHealthChecksInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionHealthChecksInsertResponse computeRegionHealthChecksInsert(org.openapis.openapi.models.operations.ComputeRegionHealthChecksInsertRequest request, org.openapis.openapi.models.operations.ComputeRegionHealthChecksInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionHealthChecksInsertPathParams.class, baseUrl, "/projects/{project}/regions/{region}/healthChecks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionHealthChecksInsertRequest.class, baseUrl, "/projects/{project}/regions/{region}/healthChecks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "healthCheck", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionHealthChecksInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionHealthChecksInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class RegionHealthChecks {
     /**
      * Retrieves the list of HealthCheck resources available to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionHealthChecksListResponse computeRegionHealthChecksList(org.openapis.openapi.models.operations.ComputeRegionHealthChecksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionHealthChecksListResponse computeRegionHealthChecksList(org.openapis.openapi.models.operations.ComputeRegionHealthChecksListRequest request, org.openapis.openapi.models.operations.ComputeRegionHealthChecksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionHealthChecksListPathParams.class, baseUrl, "/projects/{project}/regions/{region}/healthChecks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionHealthChecksListRequest.class, baseUrl, "/projects/{project}/regions/{region}/healthChecks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionHealthChecksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionHealthChecksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,27 +220,28 @@ public class RegionHealthChecks {
     /**
      * Updates a HealthCheck resource in the specified project using the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionHealthChecksPatchResponse computeRegionHealthChecksPatch(org.openapis.openapi.models.operations.ComputeRegionHealthChecksPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionHealthChecksPatchResponse computeRegionHealthChecksPatch(org.openapis.openapi.models.operations.ComputeRegionHealthChecksPatchRequest request, org.openapis.openapi.models.operations.ComputeRegionHealthChecksPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionHealthChecksPatchPathParams.class, baseUrl, "/projects/{project}/regions/{region}/healthChecks/{healthCheck}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionHealthChecksPatchRequest.class, baseUrl, "/projects/{project}/regions/{region}/healthChecks/{healthCheck}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "healthCheck1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionHealthChecksPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionHealthChecksPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,27 +268,28 @@ public class RegionHealthChecks {
     /**
      * Updates a HealthCheck resource in the specified project using the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionHealthChecksUpdateResponse computeRegionHealthChecksUpdate(org.openapis.openapi.models.operations.ComputeRegionHealthChecksUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionHealthChecksUpdateResponse computeRegionHealthChecksUpdate(org.openapis.openapi.models.operations.ComputeRegionHealthChecksUpdateRequest request, org.openapis.openapi.models.operations.ComputeRegionHealthChecksUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionHealthChecksUpdatePathParams.class, baseUrl, "/projects/{project}/regions/{region}/healthChecks/{healthCheck}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionHealthChecksUpdateRequest.class, baseUrl, "/projects/{project}/regions/{region}/healthChecks/{healthCheck}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "healthCheck1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionHealthChecksUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionHealthChecksUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

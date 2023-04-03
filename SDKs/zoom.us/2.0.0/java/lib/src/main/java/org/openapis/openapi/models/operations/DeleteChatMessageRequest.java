@@ -4,27 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteChatMessageRequest {
-    
-    public DeleteChatMessagePathParams pathParams;
-    public DeleteChatMessageRequest withPathParams(DeleteChatMessagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Message ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=messageId")
+    public String messageId;
+    public DeleteChatMessageRequest withMessageId(String messageId) {
+        this.messageId = messageId;
         return this;
     }
     
-    
-    public DeleteChatMessageQueryParams queryParams;
-    public DeleteChatMessageRequest withQueryParams(DeleteChatMessageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The channel Id of the channel where you would like to send the message.
+     * 
+     * You must provide either `to_contact` or `to_channel` as a query parameter to delete a message that was previously sent to either an individual or a chat channel 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to_channel")
+    public String toChannel;
+    public DeleteChatMessageRequest withToChannel(String toChannel) {
+        this.toChannel = toChannel;
         return this;
     }
     
+    /**
+     * The userId or email address of a chat contact to whom you previously sent the message.
+     * 
+     * Note: You must provide either `to_contact` or `to_channel` as a query parameter to delete a message that was previously sent to either an individual or a chat channel respectively. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to_contact")
+    public String toContact;
+    public DeleteChatMessageRequest withToContact(String toContact) {
+        this.toContact = toContact;
+        return this;
+    }
     
-    public DeleteChatMessageSecurity security;
-    public DeleteChatMessageRequest withSecurity(DeleteChatMessageSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public DeleteChatMessageRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

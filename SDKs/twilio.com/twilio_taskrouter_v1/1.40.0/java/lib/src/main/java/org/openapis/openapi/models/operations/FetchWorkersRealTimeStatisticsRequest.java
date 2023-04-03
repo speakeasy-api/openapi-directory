@@ -4,34 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchWorkersRealTimeStatisticsRequest {
-    
-    public FetchWorkersRealTimeStatisticsPathParams pathParams;
-    public FetchWorkersRealTimeStatisticsRequest withPathParams(FetchWorkersRealTimeStatisticsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Only calculate real-time statistics on this TaskChannel. Can be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or `default`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TaskChannel")
+    public String taskChannel;
+    public FetchWorkersRealTimeStatisticsRequest withTaskChannel(String taskChannel) {
+        this.taskChannel = taskChannel;
         return this;
     }
     
-    
-    public FetchWorkersRealTimeStatisticsQueryParams queryParams;
-    public FetchWorkersRealTimeStatisticsRequest withQueryParams(FetchWorkersRealTimeStatisticsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public FetchWorkersRealTimeStatisticsSecurity security;
-    public FetchWorkersRealTimeStatisticsRequest withSecurity(FetchWorkersRealTimeStatisticsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchWorkersRealTimeStatisticsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public FetchWorkersRealTimeStatisticsRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

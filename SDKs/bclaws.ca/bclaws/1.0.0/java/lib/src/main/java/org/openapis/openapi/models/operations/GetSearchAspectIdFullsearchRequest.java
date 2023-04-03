@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchAspectIdFullsearchRequest {
-    
-    public GetSearchAspectIdFullsearchPathParams pathParams;
-    public GetSearchAspectIdFullsearchRequest withPathParams(GetSearchAspectIdFullsearchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The identifier of the 'aspect' (content group) to search
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aspectId")
+    public GetSearchAspectIDFullsearchAspectIDEnum aspectId;
+    public GetSearchAspectIdFullsearchRequest withAspectId(GetSearchAspectIDFullsearchAspectIDEnum aspectId) {
+        this.aspectId = aspectId;
         return this;
     }
     
+    /**
+     * last hit (end index)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=e")
+    public Long e;
+    public GetSearchAspectIdFullsearchRequest withE(Long e) {
+        this.e = e;
+        return this;
+    }
     
-    public GetSearchAspectIdFullsearchQueryParams queryParams;
-    public GetSearchAspectIdFullsearchRequest withQueryParams(GetSearchAspectIdFullsearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * length of fragment snippets (&lt; 200)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lFrag")
+    public Long lFrag;
+    public GetSearchAspectIdFullsearchRequest withLFrag(Long lFrag) {
+        this.lFrag = lFrag;
+        return this;
+    }
+    
+    /**
+     * number of fragment snippets to return (&lt; 10)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nFrag")
+    public Long nFrag;
+    public GetSearchAspectIdFullsearchRequest withNFrag(Long nFrag) {
+        this.nFrag = nFrag;
+        return this;
+    }
+    
+    /**
+     * query term
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetSearchAspectIdFullsearchRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * first hit (start index)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=s")
+    public String s;
+    public GetSearchAspectIdFullsearchRequest withS(String s) {
+        this.s = s;
         return this;
     }
     

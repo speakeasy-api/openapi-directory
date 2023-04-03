@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeSnapshotSchedulesRequest {
-    
-    public GETDescribeSnapshotSchedulesQueryParams queryParams;
-    public GETDescribeSnapshotSchedulesRequest withQueryParams(GETDescribeSnapshotSchedulesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeSnapshotSchedulesActionEnum action;
+    public GETDescribeSnapshotSchedulesRequest withAction(GETDescribeSnapshotSchedulesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The unique identifier for the cluster whose snapshot schedules you want to view.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETDescribeSnapshotSchedulesRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
     
-    public GETDescribeSnapshotSchedulesHeaders headers;
-    public GETDescribeSnapshotSchedulesRequest withHeaders(GETDescribeSnapshotSchedulesHeaders headers) {
-        this.headers = headers;
+    /**
+     * A value that indicates the starting point for the next set of response records in a subsequent request. If a value is returned in a response, you can retrieve the next set of records by providing this returned marker value in the &lt;code&gt;marker&lt;/code&gt; parameter and retrying the command. If the &lt;code&gt;marker&lt;/code&gt; field is empty, all response records have been retrieved for the request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDescribeSnapshotSchedulesRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * The maximum number or response records to return in each call. If the number of remaining response records exceeds the specified &lt;code&gt;MaxRecords&lt;/code&gt; value, a value is returned in a &lt;code&gt;marker&lt;/code&gt; field of the response. You can retrieve the next set of records by retrying the command with the returned &lt;code&gt;marker&lt;/code&gt; value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeSnapshotSchedulesRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    /**
+     * A unique identifier for a snapshot schedule.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ScheduleIdentifier")
+    public String scheduleIdentifier;
+    public GETDescribeSnapshotSchedulesRequest withScheduleIdentifier(String scheduleIdentifier) {
+        this.scheduleIdentifier = scheduleIdentifier;
+        return this;
+    }
+    
+    /**
+     * The key value for a snapshot schedule tag.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TagKeys")
+    public String[] tagKeys;
+    public GETDescribeSnapshotSchedulesRequest withTagKeys(String[] tagKeys) {
+        this.tagKeys = tagKeys;
+        return this;
+    }
+    
+    /**
+     * The value corresponding to the key of the snapshot schedule tag.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TagValues")
+    public String[] tagValues;
+    public GETDescribeSnapshotSchedulesRequest withTagValues(String[] tagValues) {
+        this.tagValues = tagValues;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeSnapshotSchedulesVersionEnum version;
+    public GETDescribeSnapshotSchedulesRequest withVersion(GETDescribeSnapshotSchedulesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeSnapshotSchedulesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeSnapshotSchedulesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeSnapshotSchedulesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeSnapshotSchedulesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeSnapshotSchedulesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeSnapshotSchedulesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeSnapshotSchedulesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

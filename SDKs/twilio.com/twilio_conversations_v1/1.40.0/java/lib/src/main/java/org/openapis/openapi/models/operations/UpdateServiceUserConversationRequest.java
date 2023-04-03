@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateServiceUserConversationRequest {
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Conversation resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public UpdateServiceUserConversationRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
+        return this;
+    }
     
-    public UpdateServiceUserConversationPathParams pathParams;
-    public UpdateServiceUserConversationRequest withPathParams(UpdateServiceUserConversationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique SID identifier of the Conversation. This value can be either the `sid` or the `unique_name` of the [Conversation resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConversationSid")
+    public String conversationSid;
+    public UpdateServiceUserConversationRequest withConversationSid(String conversationSid) {
+        this.conversationSid = conversationSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateServiceUserConversationUpdateServiceUserConversationRequest request;
-    public UpdateServiceUserConversationRequest withRequest(UpdateServiceUserConversationUpdateServiceUserConversationRequest request) {
-        this.request = request;
+    public UpdateServiceUserConversationUpdateServiceUserConversationRequest requestBody;
+    public UpdateServiceUserConversationRequest withRequestBody(UpdateServiceUserConversationUpdateServiceUserConversationRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateServiceUserConversationSecurity security;
-    public UpdateServiceUserConversationRequest withSecurity(UpdateServiceUserConversationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateServiceUserConversationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource). This value can be either the `sid` or the `identity` of the User resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=UserSid")
+    public String userSid;
+    public UpdateServiceUserConversationRequest withUserSid(String userSid) {
+        this.userSid = userSid;
         return this;
     }
     

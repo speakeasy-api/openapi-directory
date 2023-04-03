@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBucketRequest {
-    
-    public UpdateBucketPathParams pathParams;
-    public UpdateBucketRequest withPathParams(UpdateBucketPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Twilio-provided string that uniquely identifies the Rate Limit resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=RateLimitSid")
+    public String rateLimitSid;
+    public UpdateBucketRequest withRateLimitSid(String rateLimitSid) {
+        this.rateLimitSid = rateLimitSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateBucketUpdateBucketRequest request;
-    public UpdateBucketRequest withRequest(UpdateBucketUpdateBucketRequest request) {
-        this.request = request;
+    public UpdateBucketUpdateBucketRequest requestBody;
+    public UpdateBucketRequest withRequestBody(UpdateBucketUpdateBucketRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateBucketSecurity security;
-    public UpdateBucketRequest withSecurity(UpdateBucketSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateBucketRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateBucketRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies this Bucket.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateBucketRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

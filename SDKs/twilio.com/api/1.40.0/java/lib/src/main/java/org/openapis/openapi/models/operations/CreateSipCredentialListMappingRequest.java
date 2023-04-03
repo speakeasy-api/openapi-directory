@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSipCredentialListMappingRequest {
+    /**
+     * The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreateSipCredentialListMappingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public CreateSipCredentialListMappingPathParams pathParams;
-    public CreateSipCredentialListMappingRequest withPathParams(CreateSipCredentialListMappingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A 34 character string that uniquely identifies the SIP Domain for which the CredentialList resource will be mapped.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainSid")
+    public String domainSid;
+    public CreateSipCredentialListMappingRequest withDomainSid(String domainSid) {
+        this.domainSid = domainSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateSipCredentialListMappingCreateSipCredentialListMappingRequest request;
-    public CreateSipCredentialListMappingRequest withRequest(CreateSipCredentialListMappingCreateSipCredentialListMappingRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateSipCredentialListMappingSecurity security;
-    public CreateSipCredentialListMappingRequest withSecurity(CreateSipCredentialListMappingSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateSipCredentialListMappingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateSipCredentialListMappingCreateSipCredentialListMappingRequest requestBody;
+    public CreateSipCredentialListMappingRequest withRequestBody(CreateSipCredentialListMappingCreateSipCredentialListMappingRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

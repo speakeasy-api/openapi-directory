@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyAquaConfigurationRequest {
-    
-    public GETModifyAquaConfigurationQueryParams queryParams;
-    public GETModifyAquaConfigurationRequest withQueryParams(GETModifyAquaConfigurationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyAquaConfigurationActionEnum action;
+    public GETModifyAquaConfigurationRequest withAction(GETModifyAquaConfigurationActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * This parameter is retired. Amazon Redshift automatically determines whether to use AQUA (Advanced Query Accelerator).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AquaConfigurationStatus")
+    public GETModifyAquaConfigurationAquaConfigurationStatusEnum aquaConfigurationStatus;
+    public GETModifyAquaConfigurationRequest withAquaConfigurationStatus(GETModifyAquaConfigurationAquaConfigurationStatusEnum aquaConfigurationStatus) {
+        this.aquaConfigurationStatus = aquaConfigurationStatus;
+        return this;
+    }
     
-    public GETModifyAquaConfigurationHeaders headers;
-    public GETModifyAquaConfigurationRequest withHeaders(GETModifyAquaConfigurationHeaders headers) {
-        this.headers = headers;
+    /**
+     * The identifier of the cluster to be modified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETModifyAquaConfigurationRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyAquaConfigurationVersionEnum version;
+    public GETModifyAquaConfigurationRequest withVersion(GETModifyAquaConfigurationVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyAquaConfigurationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyAquaConfigurationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyAquaConfigurationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyAquaConfigurationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyAquaConfigurationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyAquaConfigurationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyAquaConfigurationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

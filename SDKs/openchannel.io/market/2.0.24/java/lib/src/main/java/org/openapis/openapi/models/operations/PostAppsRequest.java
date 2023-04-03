@@ -4,13 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAppsRequest {
+    /**
+     * JSON array of data access requirements
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access")
+    public String access;
+    public PostAppsRequest withAccess(String access) {
+        this.access = access;
+        return this;
+    }
     
-    public PostAppsQueryParams queryParams;
-    public PostAppsRequest withQueryParams(PostAppsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * JSON object to restrict users from owning or viewing this app. Example: {'view':{'country':['Canada','Mexico']},'own':{'country':['Canada','Mexico']}} restricts users from canada and mexico from viewing or owning this app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allow")
+    public String allow;
+    public PostAppsRequest withAllow(String allow) {
+        this.allow = allow;
+        return this;
+    }
+    
+    /**
+     * A custom set of app attributes defined by the administrator and attached to this app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=attributes")
+    public String attributes;
+    public PostAppsRequest withAttributes(String attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    
+    /**
+     * A custom JSON object that you can create and attach to this record
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
+    public String customData;
+    public PostAppsRequest withCustomData(String customData) {
+        this.customData = customData;
+        return this;
+    }
+    
+    /**
+     * The unique id of the developer that is adding this app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developerId")
+    public String developerId;
+    public PostAppsRequest withDeveloperId(String developerId) {
+        this.developerId = developerId;
+        return this;
+    }
+    
+    /**
+     * A JSON object representing the pricing model type for this app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
+    public String model;
+    public PostAppsRequest withModel(String model) {
+        this.model = model;
+        return this;
+    }
+    
+    /**
+     * The name of the app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public PostAppsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * JSON object to restrict users from owning or viewing this app. Example: {'view':{'country':['Canada','Mexico']},'own':{'country':['Canada','Mexico']}} restricts users from canada and mexico from viewing or owning this app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=restrict")
+    public String restrict;
+    public PostAppsRequest withRestrict(String restrict) {
+        this.restrict = restrict;
+        return this;
+    }
+    
+    /**
+     * The type for this app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public PostAppsRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

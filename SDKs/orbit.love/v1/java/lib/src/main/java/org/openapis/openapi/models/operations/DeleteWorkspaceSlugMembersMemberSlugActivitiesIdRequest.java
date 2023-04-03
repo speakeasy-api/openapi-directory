@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest {
-    
-    public DeleteWorkspaceSlugMembersMemberSlugActivitiesIdPathParams pathParams;
-    public DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest withPathParams(DeleteWorkspaceSlugMembersMemberSlugActivitiesIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=member_slug")
+    public String memberSlug;
+    public DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest withMemberSlug(String memberSlug) {
+        this.memberSlug = memberSlug;
+        return this;
+    }
     
-    public DeleteWorkspaceSlugMembersMemberSlugActivitiesIdSecurity security;
-    public DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest withSecurity(DeleteWorkspaceSlugMembersMemberSlugActivitiesIdSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
+    public String workspaceSlug;
+    public DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest withWorkspaceSlug(String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
         return this;
     }
     

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateEnergyCostRequest {
-    
-    public UpdateEnergyCostPathParams pathParams;
-    public UpdateEnergyCostRequest withPathParams(UpdateEnergyCostPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The values you wish to assign.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GroupConfiguration request;
-    public UpdateEnergyCostRequest withRequest(org.openapis.openapi.models.shared.GroupConfiguration request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GroupConfiguration groupConfiguration;
+    public UpdateEnergyCostRequest withGroupConfiguration(org.openapis.openapi.models.shared.GroupConfiguration groupConfiguration) {
+        this.groupConfiguration = groupConfiguration;
+        return this;
+    }
+    
+    /**
+     * The ID of the group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public UpdateEnergyCostRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

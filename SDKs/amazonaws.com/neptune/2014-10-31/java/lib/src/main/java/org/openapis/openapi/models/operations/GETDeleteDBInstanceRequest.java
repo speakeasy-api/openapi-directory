@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteDBInstanceRequest {
-    
-    public GETDeleteDBInstanceQueryParams queryParams;
-    public GETDeleteDBInstanceRequest withQueryParams(GETDeleteDBInstanceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteDBInstanceActionEnum action;
+    public GETDeleteDBInstanceRequest withAction(GETDeleteDBInstanceActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The DB instance identifier for the DB instance to be deleted. This parameter isn't case-sensitive.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must match the name of an existing DB instance.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceIdentifier")
+    public String dbInstanceIdentifier;
+    public GETDeleteDBInstanceRequest withDBInstanceIdentifier(String dbInstanceIdentifier) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+        return this;
+    }
     
-    public GETDeleteDBInstanceHeaders headers;
-    public GETDeleteDBInstanceRequest withHeaders(GETDeleteDBInstanceHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt; The DBSnapshotIdentifier of the new DBSnapshot created when SkipFinalSnapshot is set to &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Specifying this parameter and also setting the SkipFinalShapshot parameter to true results in an error.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must be 1 to 255 letters or numbers.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;First character must be a letter&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Cannot end with a hyphen or contain two consecutive hyphens&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Cannot be specified when deleting a Read Replica.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FinalDBSnapshotIdentifier")
+    public String finalDBSnapshotIdentifier;
+    public GETDeleteDBInstanceRequest withFinalDBSnapshotIdentifier(String finalDBSnapshotIdentifier) {
+        this.finalDBSnapshotIdentifier = finalDBSnapshotIdentifier;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt; Determines whether a final DB snapshot is created before the DB instance is deleted. If &lt;code&gt;true&lt;/code&gt; is specified, no DBSnapshot is created. If &lt;code&gt;false&lt;/code&gt; is specified, a DB snapshot is created before the DB instance is deleted.&lt;/p&gt; &lt;p&gt;Note that when a DB instance is in a failure state and has a status of 'failed', 'incompatible-restore', or 'incompatible-network', it can only be deleted when the SkipFinalSnapshot parameter is set to "true".&lt;/p&gt; &lt;p&gt;Specify &lt;code&gt;true&lt;/code&gt; when deleting a Read Replica.&lt;/p&gt; &lt;note&gt; &lt;p&gt;The FinalDBSnapshotIdentifier parameter must be specified if SkipFinalSnapshot is &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Default: &lt;code&gt;false&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SkipFinalSnapshot")
+    public Boolean skipFinalSnapshot;
+    public GETDeleteDBInstanceRequest withSkipFinalSnapshot(Boolean skipFinalSnapshot) {
+        this.skipFinalSnapshot = skipFinalSnapshot;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteDBInstanceVersionEnum version;
+    public GETDeleteDBInstanceRequest withVersion(GETDeleteDBInstanceVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteDBInstanceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteDBInstanceRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteDBInstanceRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteDBInstanceRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteDBInstanceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteDBInstanceRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteDBInstanceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -7,17 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryRollbackApiDeploymentRequest {
-    
-    public RegistryRollbackApiDeploymentPathParams pathParams;
-    public RegistryRollbackApiDeploymentRequest withPathParams(RegistryRollbackApiDeploymentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.RollbackApiDeploymentRequest rollbackApiDeploymentRequest;
+    public RegistryRollbackApiDeploymentRequest withRollbackApiDeploymentRequest(org.openapis.openapi.models.shared.RollbackApiDeploymentRequest rollbackApiDeploymentRequest) {
+        this.rollbackApiDeploymentRequest = rollbackApiDeploymentRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RollbackApiDeploymentRequest request;
-    public RegistryRollbackApiDeploymentRequest withRequest(org.openapis.openapi.models.shared.RollbackApiDeploymentRequest request) {
-        this.request = request;
+    /**
+     * The api id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
+    public String api;
+    public RegistryRollbackApiDeploymentRequest withApi(String api) {
+        this.api = api;
+        return this;
+    }
+    
+    /**
+     * The deployment id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment")
+    public String deployment;
+    public RegistryRollbackApiDeploymentRequest withDeployment(String deployment) {
+        this.deployment = deployment;
+        return this;
+    }
+    
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryRollbackApiDeploymentRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryRollbackApiDeploymentRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

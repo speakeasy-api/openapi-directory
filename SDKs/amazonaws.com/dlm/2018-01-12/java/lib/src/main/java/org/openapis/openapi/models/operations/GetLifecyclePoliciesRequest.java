@@ -4,20 +4,105 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLifecyclePoliciesRequest {
-    
-    public GetLifecyclePoliciesQueryParams queryParams;
-    public GetLifecyclePoliciesRequest withQueryParams(GetLifecyclePoliciesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetLifecyclePoliciesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetLifecyclePoliciesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public GetLifecyclePoliciesHeaders headers;
-    public GetLifecyclePoliciesRequest withHeaders(GetLifecyclePoliciesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetLifecyclePoliciesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetLifecyclePoliciesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetLifecyclePoliciesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetLifecyclePoliciesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetLifecyclePoliciesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The identifiers of the data lifecycle policies.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=policyIds")
+    public String[] policyIds;
+    public GetLifecyclePoliciesRequest withPolicyIds(String[] policyIds) {
+        this.policyIds = policyIds;
+        return this;
+    }
+    
+    /**
+     * The resource type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceTypes")
+    public org.openapis.openapi.models.shared.ResourceTypeValuesEnum[] resourceTypes;
+    public GetLifecyclePoliciesRequest withResourceTypes(org.openapis.openapi.models.shared.ResourceTypeValuesEnum[] resourceTypes) {
+        this.resourceTypes = resourceTypes;
+        return this;
+    }
+    
+    /**
+     * The activation state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public GetLifecyclePoliciesStateEnum state;
+    public GetLifecyclePoliciesRequest withState(GetLifecyclePoliciesStateEnum state) {
+        this.state = state;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The tags to add to objects created by the policy.&lt;/p&gt; &lt;p&gt;Tags are strings in the format &lt;code&gt;key=value&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;These user-defined tags are added in addition to the Amazon Web Services-added lifecycle tags.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagsToAdd")
+    public String[] tagsToAdd;
+    public GetLifecyclePoliciesRequest withTagsToAdd(String[] tagsToAdd) {
+        this.tagsToAdd = tagsToAdd;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The target tag for a policy.&lt;/p&gt; &lt;p&gt;Tags are strings in the format &lt;code&gt;key=value&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=targetTags")
+    public String[] targetTags;
+    public GetLifecyclePoliciesRequest withTargetTags(String[] targetTags) {
+        this.targetTags = targetTags;
         return this;
     }
     

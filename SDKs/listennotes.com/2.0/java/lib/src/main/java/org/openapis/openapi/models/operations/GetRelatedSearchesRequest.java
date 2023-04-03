@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRelatedSearchesRequest {
-    
-    public GetRelatedSearchesQueryParams queryParams;
-    public GetRelatedSearchesRequest withQueryParams(GetRelatedSearchesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Get API Key on listennotes.com/api
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
+    public String xListenAPIKey;
+    public GetRelatedSearchesRequest withXListenAPIKey(String xListenAPIKey) {
+        this.xListenAPIKey = xListenAPIKey;
         return this;
     }
     
-    
-    public GetRelatedSearchesHeaders headers;
-    public GetRelatedSearchesRequest withHeaders(GetRelatedSearchesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Search term, e.g., person, place, topic...
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetRelatedSearchesRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     

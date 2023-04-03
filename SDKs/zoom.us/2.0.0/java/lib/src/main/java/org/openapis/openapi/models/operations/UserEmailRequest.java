@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserEmailRequest {
-    
-    public UserEmailQueryParams queryParams;
-    public UserEmailRequest withQueryParams(UserEmailQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public UserEmailSecurity security;
-    public UserEmailRequest withSecurity(UserEmailSecurity security) {
-        this.security = security;
+    /**
+     * The email address to be verified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public UserEmailRequest withEmail(String email) {
+        this.email = email;
         return this;
     }
     

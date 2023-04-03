@@ -36,13 +36,13 @@ public class Parts {
      */
     public org.openapis.openapi.models.operations.GetGeomarksGeomarkIdPartsFileFormatExtensionResponse getGeomarksGeomarkIdPartsFileFormatExtension(org.openapis.openapi.models.operations.GetGeomarksGeomarkIdPartsFileFormatExtensionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeomarksGeomarkIdPartsFileFormatExtensionPathParams.class, baseUrl, "/geomarks/{geomarkId}/parts.{fileFormatExtension}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeomarksGeomarkIdPartsFileFormatExtensionRequest.class, baseUrl, "/geomarks/{geomarkId}/parts.{fileFormatExtension}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeomarksGeomarkIdPartsFileFormatExtensionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeomarksGeomarkIdPartsFileFormatExtensionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

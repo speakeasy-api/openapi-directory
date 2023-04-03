@@ -40,12 +40,12 @@ public class Admins {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationAdminResponse createOrganizationAdmin(org.openapis.openapi.models.operations.CreateOrganizationAdminRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationAdminPathParams.class, baseUrl, "/organizations/{organizationId}/admins", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationAdminRequest.class, baseUrl, "/organizations/{organizationId}/admins", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -85,7 +85,7 @@ public class Admins {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationAdminResponse deleteOrganizationAdmin(org.openapis.openapi.models.operations.DeleteOrganizationAdminRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationAdminPathParams.class, baseUrl, "/organizations/{organizationId}/admins/{adminId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationAdminRequest.class, baseUrl, "/organizations/{organizationId}/admins/{adminId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -119,7 +119,7 @@ public class Admins {
      */
     public org.openapis.openapi.models.operations.GetOrganizationAdminsResponse getOrganizationAdmins(org.openapis.openapi.models.operations.GetOrganizationAdminsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdminsPathParams.class, baseUrl, "/organizations/{organizationId}/admins", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAdminsRequest.class, baseUrl, "/organizations/{organizationId}/admins", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -159,12 +159,12 @@ public class Admins {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationAdminResponse updateOrganizationAdmin(org.openapis.openapi.models.operations.UpdateOrganizationAdminRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationAdminPathParams.class, baseUrl, "/organizations/{organizationId}/admins/{adminId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationAdminRequest.class, baseUrl, "/organizations/{organizationId}/admins/{adminId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

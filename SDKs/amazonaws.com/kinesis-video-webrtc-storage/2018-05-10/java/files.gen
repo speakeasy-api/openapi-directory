@@ -29,10 +29,8 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/JoinStorageSessionHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/JoinStorageSessionRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/JoinStorageSessionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/JoinStorageSessionResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

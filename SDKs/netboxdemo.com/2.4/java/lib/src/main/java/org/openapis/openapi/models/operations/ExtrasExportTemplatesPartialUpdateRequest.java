@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtrasExportTemplatesPartialUpdateRequest {
-    
-    public ExtrasExportTemplatesPartialUpdatePathParams pathParams;
-    public ExtrasExportTemplatesPartialUpdateRequest withPathParams(ExtrasExportTemplatesPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ExportTemplateInput exportTemplateInput;
+    public ExtrasExportTemplatesPartialUpdateRequest withExportTemplateInput(org.openapis.openapi.models.shared.ExportTemplateInput exportTemplateInput) {
+        this.exportTemplateInput = exportTemplateInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ExportTemplateInput request;
-    public ExtrasExportTemplatesPartialUpdateRequest withRequest(org.openapis.openapi.models.shared.ExportTemplateInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this export template.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ExtrasExportTemplatesPartialUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

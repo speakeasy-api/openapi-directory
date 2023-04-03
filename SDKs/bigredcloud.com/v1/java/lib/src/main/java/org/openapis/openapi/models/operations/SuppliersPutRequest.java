@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SuppliersPutRequest {
-    
-    public SuppliersPutPathParams pathParams;
-    public SuppliersPutRequest withPathParams(SuppliersPutPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Information of Supplier to update.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SupplierDto request;
-    public SuppliersPutRequest withRequest(org.openapis.openapi.models.shared.SupplierDto request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SupplierDto supplierDto;
+    public SuppliersPutRequest withSupplierDto(org.openapis.openapi.models.shared.SupplierDto supplierDto) {
+        this.supplierDto = supplierDto;
+        return this;
+    }
+    
+    /**
+     * Id of Supplier to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public SuppliersPutRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -40,7 +40,7 @@ public class Authentication {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostLoginResponse postLogin(org.openapis.openapi.models.operations.PostLoginRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostLoginResponse postLogin(org.openapis.openapi.models.operations.PostLoginSample request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/login");
         

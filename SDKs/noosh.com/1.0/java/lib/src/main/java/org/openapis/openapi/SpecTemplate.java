@@ -38,7 +38,7 @@ public class SpecTemplate {
      */
     public org.openapis.openapi.models.operations.GetSpecTemplateResponse getSpecTemplate(org.openapis.openapi.models.operations.GetSpecTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpecTemplatePathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/specTemplates/{spec_template_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpecTemplateRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/specTemplates/{spec_template_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -157,7 +157,7 @@ public class SpecTemplate {
      */
     public org.openapis.openapi.models.operations.GetSpecTemplateListResponse getSpecTemplateList(org.openapis.openapi.models.operations.GetSpecTemplateListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpecTemplateListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/specTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpecTemplateListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/specTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoTransferRawRequest {
-    
-    public RepoTransferRawPathParams pathParams;
-    public RepoTransferRawRequest withPathParams(RepoTransferRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Transfer Options
      */
     @SpeakeasyMetadata("request:mediaType=text/plain")
-    public byte[] request;
-    public RepoTransferRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public RepoTransferRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * owner of the repo to transfer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoTransferRawRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo to transfer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoTransferRawRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

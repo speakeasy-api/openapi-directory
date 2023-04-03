@@ -18,15 +18,11 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadSecurity;
-import org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadPathParams;
-import org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadQueryParams;
 import org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadRequest;
 import org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadResponse;
-import org.openapis.openapi.models.shared.CreateAssetRequest;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.CreateAssetRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -35,34 +31,25 @@ public class Application {
                 .build();
 
             DisplayvideoAdvertisersAssetsUploadRequest req = new DisplayvideoAdvertisersAssetsUploadRequest() {{
-                security = new DisplayvideoAdvertisersAssetsUploadSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new DisplayvideoAdvertisersAssetsUploadPathParams() {{
-                    advertiserId = "corrupti";
-                }};
-                queryParams = new DisplayvideoAdvertisersAssetsUploadQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = "suscipit".getBytes();
-            }};            
+                dollarXgafv = "2";
+                requestBody = "provident".getBytes();
+                accessToken = "distinctio";
+                advertiserId = "quibusdam";
+                alt = "media";
+                callback = "nulla";
+                fields = "corrupti";
+                key = "illum";
+                oauthToken = "vel";
+                prettyPrint = false;
+                quotaUser = "error";
+                uploadType = "deserunt";
+                uploadProtocol = "suscipit";
+            }}            
 
-            DisplayvideoAdvertisersAssetsUploadResponse res = sdk.advertisers.displayvideoAdvertisersAssetsUpload(req);
+            DisplayvideoAdvertisersAssetsUploadResponse res = sdk.advertisers.displayvideoAdvertisersAssetsUpload(req, new DisplayvideoAdvertisersAssetsUploadSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.createAssetResponse.isPresent()) {
                 // handle response
@@ -74,7 +61,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### advertisers

@@ -30,11 +30,9 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GenerateDataSetXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GenerateDataSetHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GenerateDataSetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GenerateDataSetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/StartSupportDataExportXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/StartSupportDataExportHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/StartSupportDataExportRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/StartSupportDataExportResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GenerateDataSetResult.java
@@ -43,6 +41,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/DataSetTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartSupportDataExportResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartSupportDataExportRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/SupportDataSetTypeEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

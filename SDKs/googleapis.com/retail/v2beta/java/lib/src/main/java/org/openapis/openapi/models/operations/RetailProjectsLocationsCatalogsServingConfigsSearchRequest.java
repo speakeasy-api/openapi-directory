@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetailProjectsLocationsCatalogsServingConfigsSearchRequest {
-    
-    public RetailProjectsLocationsCatalogsServingConfigsSearchPathParams pathParams;
-    public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withPathParams(RetailProjectsLocationsCatalogsServingConfigsSearchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetailProjectsLocationsCatalogsServingConfigsSearchQueryParams queryParams;
-    public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withQueryParams(RetailProjectsLocationsCatalogsServingConfigsSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudRetailV2betaSearchRequest request;
-    public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudRetailV2betaSearchRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudRetailV2betaSearchRequest googleCloudRetailV2betaSearchRequest;
+    public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withGoogleCloudRetailV2betaSearchRequest(org.openapis.openapi.models.shared.GoogleCloudRetailV2betaSearchRequest googleCloudRetailV2betaSearchRequest) {
+        this.googleCloudRetailV2betaSearchRequest = googleCloudRetailV2betaSearchRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public RetailProjectsLocationsCatalogsServingConfigsSearchSecurity security;
-    public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withSecurity(RetailProjectsLocationsCatalogsServingConfigsSearchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The resource name of the Retail Search serving config, such as `projects/* /locations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the name of the legacy placement resource, such as `projects/* /locations/global/catalogs/default_catalog/placements/default_search`. This field is used to identify the serving config name and the set of models that will be used to make the search.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=placement")
+    public String placement;
+    public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withPlacement(String placement) {
+        this.placement = placement;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

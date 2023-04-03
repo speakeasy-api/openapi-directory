@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConvertAPIRequest {
-    
-    public ConvertAPIQueryParams queryParams;
-    public ConvertAPIRequest withQueryParams(ConvertAPIQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public ConvertAPIRequestBody requestBody;
+    public ConvertAPIRequest withRequestBody(ConvertAPIRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public ConvertAPIRequestBody request;
-    public ConvertAPIRequest withRequest(ConvertAPIRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public ConvertAPIFormatEnum format;
+    public ConvertAPIRequest withFormat(ConvertAPIFormatEnum format) {
+        this.format = format;
         return this;
     }
     

@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AssociateRepositoryHeaders;
 import org.openapis.openapi.models.operations.AssociateRepositoryRequestBodyKMSKeyDetails;
 import org.openapis.openapi.models.operations.AssociateRepositoryRequestBodyRepository;
 import org.openapis.openapi.models.operations.AssociateRepositoryRequestBody;
@@ -20,53 +19,49 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateRepositoryRequest req = new AssociateRepositoryRequest() {{
-                headers = new AssociateRepositoryHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new AssociateRepositoryRequestBody() {{
-                    clientRequestToken = "illum";
+                requestBody = new AssociateRepositoryRequestBody() {{
+                    clientRequestToken = "corrupti";
                     kmsKeyDetails = new AssociateRepositoryRequestBodyKMSKeyDetails() {{
-                        encryptionOption = "AWS_OWNED_CMK";
-                        kmsKeyId = "error";
+                        encryptionOption = "CUSTOMER_MANAGED_CMK";
+                        kmsKeyId = "distinctio";
                     }};
                     repository = new AssociateRepositoryRequestBodyRepository() {{
                         bitbucket = new ThirdPartySourceRepository() {{
-                            connectionArn = "deserunt";
-                            name = "suscipit";
-                            owner = "iure";
+                            connectionArn = "quibusdam";
+                            name = "unde";
+                            owner = "nulla";
                         }};
                         codeCommit = new CodeCommitRepository() {{
-                            name = "magnam";
+                            name = "corrupti";
                         }};
                         gitHubEnterpriseServer = new ThirdPartySourceRepository() {{
-                            connectionArn = "debitis";
-                            name = "ipsa";
-                            owner = "delectus";
+                            connectionArn = "illum";
+                            name = "vel";
+                            owner = "error";
                         }};
                         s3Bucket = new S3Repository() {{
-                            bucketName = "tempora";
+                            bucketName = "deserunt";
                             name = "suscipit";
                         }};
                     }};
                     tags = new java.util.HashMap<String, String>() {{
-                        put("minus", "placeat");
-                        put("voluptatum", "iusto");
+                        put("magnam", "debitis");
+                        put("ipsa", "delectus");
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "tempora";
+                xAmzContentSha256 = "suscipit";
+                xAmzCredential = "molestiae";
+                xAmzDate = "minus";
+                xAmzSecurityToken = "placeat";
+                xAmzSignature = "voluptatum";
+                xAmzSignedHeaders = "iusto";
+            }}            
 
             AssociateRepositoryResponse res = sdk.associateRepository(req);
 

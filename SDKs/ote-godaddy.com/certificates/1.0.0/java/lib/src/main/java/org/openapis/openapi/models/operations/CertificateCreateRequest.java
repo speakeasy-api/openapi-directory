@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateCreateRequest {
-    
-    public CertificateCreateHeaders headers;
-    public CertificateCreateRequest withHeaders(CertificateCreateHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The certificate order information
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CertificateCreate request;
-    public CertificateCreateRequest withRequest(org.openapis.openapi.models.shared.CertificateCreate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CertificateCreate certificateCreate;
+    public CertificateCreateRequest withCertificateCreate(org.openapis.openapi.models.shared.CertificateCreate certificateCreate) {
+        this.certificateCreate = certificateCreate;
+        return this;
+    }
+    
+    /**
+     * Setting locale for communications such as emails and error messages
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Market-Id")
+    public String xMarketId;
+    public CertificateCreateRequest withXMarketId(String xMarketId) {
+        this.xMarketId = xMarketId;
         return this;
     }
     

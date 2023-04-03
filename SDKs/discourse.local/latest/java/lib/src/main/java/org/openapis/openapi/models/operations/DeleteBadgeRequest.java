@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteBadgeRequest {
-    
-    public DeleteBadgePathParams pathParams;
-    public DeleteBadgeRequest withPathParams(DeleteBadgePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DeleteBadgeRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

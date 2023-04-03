@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdPasswordsRequest {
-    
-    public PostSpacesSpaceIdFoldersIdPasswordsPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdPasswordsRequest withPathParams(PostSpacesSpaceIdFoldersIdPasswordsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Password to write
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSpacesSpaceIdFoldersIdPasswordsRequestBody request;
-    public PostSpacesSpaceIdFoldersIdPasswordsRequest withRequest(PostSpacesSpaceIdFoldersIdPasswordsRequestBody request) {
-        this.request = request;
+    public PostSpacesSpaceIdFoldersIdPasswordsRequestBody requestBody;
+    public PostSpacesSpaceIdFoldersIdPasswordsRequest withRequestBody(PostSpacesSpaceIdFoldersIdPasswordsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdPasswordsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdPasswordsSecurity security;
-    public PostSpacesSpaceIdFoldersIdPasswordsRequest withSecurity(PostSpacesSpaceIdFoldersIdPasswordsSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdPasswordsRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

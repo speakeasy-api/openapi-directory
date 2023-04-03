@@ -50,7 +50,7 @@ public class Addresses {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ParseAddressResponse parseAddress(org.openapis.openapi.models.operations.ParseAddressRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ParseAddressResponse parseAddress(org.openapis.openapi.models.shared.ParseAddressRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/addresses/recognize");
         
@@ -105,7 +105,7 @@ public class Addresses {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ValidateAddressResponse validateAddress(org.openapis.openapi.models.operations.ValidateAddressRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ValidateAddressResponse validateAddress(org.openapis.openapi.models.shared.AddressToValidate[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/addresses/validate");
         

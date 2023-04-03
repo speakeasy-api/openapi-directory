@@ -4,13 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRecommendedLocationRequest {
+    /**
+     * City used by the algorythm to recommend new destination. Several cities can be specified using comma.
+     * 
+     * City codes follow [IATA standard](http://www.iata.org/publications/Pages/code-search.aspx)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cityCodes")
+    public String cityCodes;
+    public GetRecommendedLocationRequest withCityCodes(String cityCodes) {
+        this.cityCodes = cityCodes;
+        return this;
+    }
     
-    public GetRecommendedLocationQueryParams queryParams;
-    public GetRecommendedLocationRequest withQueryParams(GetRecommendedLocationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * List of country the traveler want to visit, separated with comma.
+     * 
+     * Country codes follow [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code format (e.g. US)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationCountryCodes")
+    public String destinationCountryCodes;
+    public GetRecommendedLocationRequest withDestinationCountryCodes(String destinationCountryCodes) {
+        this.destinationCountryCodes = destinationCountryCodes;
+        return this;
+    }
+    
+    /**
+     * Origin country of the traveler following [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code format (e.g. US)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelerCountryCode")
+    public String travelerCountryCode;
+    public GetRecommendedLocationRequest withTravelerCountryCode(String travelerCountryCode) {
+        this.travelerCountryCode = travelerCountryCode;
         return this;
     }
     

@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAssociateEnclaveCertificateIamRoleRequest {
-    
-    public GETAssociateEnclaveCertificateIamRoleQueryParams queryParams;
-    public GETAssociateEnclaveCertificateIamRoleRequest withQueryParams(GETAssociateEnclaveCertificateIamRoleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETAssociateEnclaveCertificateIamRoleActionEnum action;
+    public GETAssociateEnclaveCertificateIamRoleRequest withAction(GETAssociateEnclaveCertificateIamRoleActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The ARN of the ACM certificate with which to associate the IAM role.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CertificateArn")
+    public String certificateArn;
+    public GETAssociateEnclaveCertificateIamRoleRequest withCertificateArn(String certificateArn) {
+        this.certificateArn = certificateArn;
+        return this;
+    }
     
-    public GETAssociateEnclaveCertificateIamRoleHeaders headers;
-    public GETAssociateEnclaveCertificateIamRoleRequest withHeaders(GETAssociateEnclaveCertificateIamRoleHeaders headers) {
-        this.headers = headers;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETAssociateEnclaveCertificateIamRoleRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The ARN of the IAM role to associate with the ACM certificate. You can associate up to 16 IAM roles with an ACM certificate.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RoleArn")
+    public String roleArn;
+    public GETAssociateEnclaveCertificateIamRoleRequest withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETAssociateEnclaveCertificateIamRoleVersionEnum version;
+    public GETAssociateEnclaveCertificateIamRoleRequest withVersion(GETAssociateEnclaveCertificateIamRoleVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETAssociateEnclaveCertificateIamRoleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETAssociateEnclaveCertificateIamRoleRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETAssociateEnclaveCertificateIamRoleRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETAssociateEnclaveCertificateIamRoleRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETAssociateEnclaveCertificateIamRoleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETAssociateEnclaveCertificateIamRoleRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETAssociateEnclaveCertificateIamRoleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

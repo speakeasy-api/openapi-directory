@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodespacesGetSecretForAuthenticatedUserRequest {
-    
-    public CodespacesGetSecretForAuthenticatedUserPathParams pathParams;
-    public CodespacesGetSecretForAuthenticatedUserRequest withPathParams(CodespacesGetSecretForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the secret.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
+    public String secretName;
+    public CodespacesGetSecretForAuthenticatedUserRequest withSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
     

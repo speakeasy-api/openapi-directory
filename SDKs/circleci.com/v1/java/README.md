@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.DeleteProjectUsernameProjectBuildCachePathParams;
 import org.openapis.openapi.models.operations.DeleteProjectUsernameProjectBuildCacheRequest;
 import org.openapis.openapi.models.operations.DeleteProjectUsernameProjectBuildCacheResponse;
 
@@ -26,18 +25,14 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apikey = new SchemeApikey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apikey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             DeleteProjectUsernameProjectBuildCacheRequest req = new DeleteProjectUsernameProjectBuildCacheRequest() {{
-                pathParams = new DeleteProjectUsernameProjectBuildCachePathParams() {{
-                    project = "corrupti";
-                    username = "Larue_Rau85";
-                }};
-            }};            
+                project = "corrupti";
+                username = "Larue_Rau85";
+            }}            
 
             DeleteProjectUsernameProjectBuildCacheResponse res = sdk.deleteProjectUsernameProjectBuildCache(req);
 
@@ -51,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

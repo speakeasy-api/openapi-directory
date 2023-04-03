@@ -4,20 +4,136 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesMediaIdSyndicateFormatRequest {
-    
-    public GetResourcesMediaIdSyndicateFormatPathParams pathParams;
-    public GetResourcesMediaIdSyndicateFormatRequest withPathParams(GetResourcesMediaIdSyndicateFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If content is a video, the embeded video will auto play when loaded.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=autoplay")
+    public Boolean autoplay;
+    public GetResourcesMediaIdSyndicateFormatRequest withAutoplay(Boolean autoplay) {
+        this.autoplay = autoplay;
         return this;
     }
     
+    /**
+     * The css class to target for extraction.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=cssClass")
+    public String cssClass;
+    public GetResourcesMediaIdSyndicateFormatRequest withCssClass(String cssClass) {
+        this.cssClass = cssClass;
+        return this;
+    }
     
-    public GetResourcesMediaIdSyndicateFormatQueryParams queryParams;
-    public GetResourcesMediaIdSyndicateFormatRequest withQueryParams(GetResourcesMediaIdSyndicateFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Set font size (in points) of p, div, and span tags.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=font-size")
+    public Integer fontSize;
+    public GetResourcesMediaIdSyndicateFormatRequest withFontSize(Integer fontSize) {
+        this.fontSize = fontSize;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public String format;
+    public GetResourcesMediaIdSyndicateFormatRequest withFormat(String format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * The id of the media to show embed code for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetResourcesMediaIdSyndicateFormatRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Accepts valid CSS float options, such as 'left' or 'right'. Will inject a style into the content before rendering.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=imageFloat")
+    public String imageFloat;
+    public GetResourcesMediaIdSyndicateFormatRequest withImageFloat(String imageFloat) {
+        this.imageFloat = imageFloat;
+        return this;
+    }
+    
+    /**
+     * Accepts 4 CSV values representing pixel sizes of margin similar to CSS. Default format is 'north,east,south,west' - for example '0,10,10,0' would put a 10 pixel margin on the right and bottom sides of an image. Will inject a style into the content before rendering.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=imageMargin")
+    public String imageMargin;
+    public GetResourcesMediaIdSyndicateFormatRequest withImageMargin(String imageMargin) {
+        this.imageMargin = imageMargin;
+        return this;
+    }
+    
+    /**
+     * If content is a video, related items will be shown at the end of playback.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=rel")
+    public Boolean rel;
+    public GetResourcesMediaIdSyndicateFormatRequest withRel(Boolean rel) {
+        this.rel = rel;
+        return this;
+    }
+    
+    /**
+     * Remove break tags from content.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=stripBreaks")
+    public Boolean stripBreaks;
+    public GetResourcesMediaIdSyndicateFormatRequest withStripBreaks(Boolean stripBreaks) {
+        this.stripBreaks = stripBreaks;
+        return this;
+    }
+    
+    /**
+     * Remove class attributes from content (except 'syndicate').
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=stripClasses")
+    public Boolean stripClasses;
+    public GetResourcesMediaIdSyndicateFormatRequest withStripClasses(Boolean stripClasses) {
+        this.stripClasses = stripClasses;
+        return this;
+    }
+    
+    /**
+     * Remove image tags from content.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=stripImages")
+    public Boolean stripImages;
+    public GetResourcesMediaIdSyndicateFormatRequest withStripImages(Boolean stripImages) {
+        this.stripImages = stripImages;
+        return this;
+    }
+    
+    /**
+     * Remove script tags from content.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=stripScripts")
+    public Boolean stripScripts;
+    public GetResourcesMediaIdSyndicateFormatRequest withStripScripts(Boolean stripScripts) {
+        this.stripScripts = stripScripts;
+        return this;
+    }
+    
+    /**
+     * Remove in-line styles from content.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=stripStyles")
+    public Boolean stripStyles;
+    public GetResourcesMediaIdSyndicateFormatRequest withStripStyles(Boolean stripStyles) {
+        this.stripStyles = stripStyles;
         return this;
     }
     

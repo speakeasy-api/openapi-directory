@@ -4,27 +4,156 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest {
-    
-    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListPathParams pathParams;
-    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest withPathParams(BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListQueryParams queryParams;
-    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest withQueryParams(BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListSecurity security;
-    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest withSecurity(BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Message types to return. If not populated - INFO, WARNING and ERROR messages are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=messageTypes")
+    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListMessageTypesEnum[] messageTypes;
+    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest withMessageTypes(BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListMessageTypesEnum[] messageTypes) {
+        this.messageTypes = messageTypes;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Page size. The default page size is the maximum value of 1000 results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Pagination token, which can be used to request a specific page of `ListTransferLogsRequest` list results. For multiple-page results, `ListTransferLogsResponse` outputs a `next_page` token, which can be used as the `page_token` value to request the next page of list results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Required. Transfer run name in the form: `projects/{project_id}/transferConfigs/{config_id}/runs/{run_id}` or `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}/runs/{run_id}`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

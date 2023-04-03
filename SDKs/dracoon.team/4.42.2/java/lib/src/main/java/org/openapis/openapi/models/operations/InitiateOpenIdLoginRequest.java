@@ -4,13 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InitiateOpenIdLoginRequest {
+    /**
+     * Issuer identifier of the OpenID Connect identity provider
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=issuer")
+    public String issuer;
+    public InitiateOpenIdLoginRequest withIssuer(String issuer) {
+        this.issuer = issuer;
+        return this;
+    }
     
-    public InitiateOpenIdLoginQueryParams queryParams;
-    public InitiateOpenIdLoginRequest withQueryParams(InitiateOpenIdLoginQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Language ID or ISO 639-1 code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public InitiateOpenIdLoginRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * Redirect URI to complete the OpenID Connect authentication
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirect_uri")
+    public String redirectUri;
+    public InitiateOpenIdLoginRequest withRedirectUri(String redirectUri) {
+        this.redirectUri = redirectUri;
+        return this;
+    }
+    
+    /**
+     * Flag to test the authentication parameters.
+     * 
+     * If the request is valid, the API will respond with `204 No Content`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=test")
+    public Boolean test;
+    public InitiateOpenIdLoginRequest withTest(Boolean test) {
+        this.test = test;
         return this;
     }
     

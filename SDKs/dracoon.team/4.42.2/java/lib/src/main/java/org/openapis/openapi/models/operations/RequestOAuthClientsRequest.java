@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestOAuthClientsRequest {
-    
-    public RequestOAuthClientsQueryParams queryParams;
-    public RequestOAuthClientsRequest withQueryParams(RequestOAuthClientsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestOAuthClientsRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
+    /**
+     * Filter string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public RequestOAuthClientsRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public RequestOAuthClientsHeaders headers;
-    public RequestOAuthClientsRequest withHeaders(RequestOAuthClientsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Sort string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public RequestOAuthClientsRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

@@ -5,15 +5,11 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsExecuteSecurity;
-import org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsExecutePathParams;
-import org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsExecuteQueryParams;
 import org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsExecuteRequest;
 import org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsExecuteResponse;
-import org.openapis.openapi.models.shared.ExecuteActionRequest;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.ExecuteActionRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -22,39 +18,31 @@ public class Application {
                 .build();
 
             ConnectorsProjectsLocationsConnectionsActionsExecuteRequest req = new ConnectorsProjectsLocationsConnectionsActionsExecuteRequest() {{
-                security = new ConnectorsProjectsLocationsConnectionsActionsExecuteSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new ConnectorsProjectsLocationsConnectionsActionsExecutePathParams() {{
-                    name = "corrupti";
-                }};
-                queryParams = new ConnectorsProjectsLocationsConnectionsActionsExecuteQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new ExecuteActionRequest() {{
+                dollarXgafv = "2";
+                executeActionRequest = new ExecuteActionRequest() {{
                     parameters = new java.util.HashMap<String, Object>() {{
-                        put("iure", "magnam");
-                        put("debitis", "ipsa");
+                        put("distinctio", "quibusdam");
+                        put("unde", "nulla");
+                        put("corrupti", "illum");
                     }};
                 }};
-            }};            
+                accessToken = "vel";
+                alt = "media";
+                callback = "deserunt";
+                fields = "suscipit";
+                key = "iure";
+                name = "magnam";
+                oauthToken = "debitis";
+                prettyPrint = false;
+                quotaUser = "ipsa";
+                uploadType = "delectus";
+                uploadProtocol = "tempora";
+            }}            
 
-            ConnectorsProjectsLocationsConnectionsActionsExecuteResponse res = sdk.projects.connectorsProjectsLocationsConnectionsActionsExecute(req);
+            ConnectorsProjectsLocationsConnectionsActionsExecuteResponse res = sdk.projects.connectorsProjectsLocationsConnectionsActionsExecute(req, new ConnectorsProjectsLocationsConnectionsActionsExecuteSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.executeActionResponse.isPresent()) {
                 // handle response

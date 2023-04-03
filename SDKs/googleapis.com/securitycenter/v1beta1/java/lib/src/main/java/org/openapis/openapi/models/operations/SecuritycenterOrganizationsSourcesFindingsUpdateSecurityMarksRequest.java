@@ -7,31 +7,150 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest {
-    
-    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksPathParams pathParams;
-    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest withPathParams(SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksQueryParams queryParams;
-    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest withQueryParams(SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1beta1SecurityMarks request;
-    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1beta1SecurityMarks request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1beta1SecurityMarks googleCloudSecuritycenterV1beta1SecurityMarks;
+    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest withGoogleCloudSecuritycenterV1beta1SecurityMarks(org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1beta1SecurityMarks googleCloudSecuritycenterV1beta1SecurityMarks) {
+        this.googleCloudSecuritycenterV1beta1SecurityMarks = googleCloudSecuritycenterV1beta1SecurityMarks;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksSecurity security;
-    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest withSecurity(SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The relative resource name of the SecurityMarks. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Examples: "organizations/{organization_id}/assets/{asset_id}/securityMarks" "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}/securityMarks".
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The time at which the updated SecurityMarks take effect.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTime")
+    public String startTime;
+    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest withStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    
+    /**
+     * The FieldMask to use when updating the security marks resource.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
+    public String updateMask;
+    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest withUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

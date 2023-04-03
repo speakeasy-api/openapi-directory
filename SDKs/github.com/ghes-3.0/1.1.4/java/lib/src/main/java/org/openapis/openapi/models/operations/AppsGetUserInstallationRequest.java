@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsGetUserInstallationRequest {
-    
-    public AppsGetUserInstallationPathParams pathParams;
-    public AppsGetUserInstallationRequest withPathParams(AppsGetUserInstallationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public AppsGetUserInstallationRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

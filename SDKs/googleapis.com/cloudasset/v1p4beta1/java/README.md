@@ -18,14 +18,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicySecurity;
-import org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyPathParams;
-import org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyQueryParams;
 import org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyRequest;
 import org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -34,51 +30,43 @@ public class Application {
                 .build();
 
             CloudassetAnalyzeIamPolicyRequest req = new CloudassetAnalyzeIamPolicyRequest() {{
-                security = new CloudassetAnalyzeIamPolicySecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                analysisQueryAccessSelectorPermissions = new String[]{{
+                    add("unde"),
+                    add("nulla"),
+                    add("corrupti"),
+                    add("illum"),
                 }};
-                pathParams = new CloudassetAnalyzeIamPolicyPathParams() {{
-                    parent = "corrupti";
+                analysisQueryAccessSelectorRoles = new String[]{{
+                    add("error"),
+                    add("deserunt"),
                 }};
-                queryParams = new CloudassetAnalyzeIamPolicyQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    analysisQueryAccessSelectorPermissions = new String[]{{
-                        add("nulla"),
-                        add("corrupti"),
-                        add("illum"),
-                    }};
-                    analysisQueryAccessSelectorRoles = new String[]{{
-                        add("error"),
-                        add("deserunt"),
-                    }};
-                    analysisQueryIdentitySelectorIdentity = "suscipit";
-                    analysisQueryResourceSelectorFullResourceName = "iure";
-                    callback = "magnam";
-                    fields = "debitis";
-                    key = "ipsa";
-                    oauthToken = "delectus";
-                    optionsAnalyzeServiceAccountImpersonation = false;
-                    optionsExecutionTimeout = "tempora";
-                    optionsExpandGroups = false;
-                    optionsExpandResources = false;
-                    optionsExpandRoles = false;
-                    optionsOutputGroupEdges = false;
-                    optionsOutputResourceEdges = false;
-                    prettyPrint = false;
-                    quotaUser = "suscipit";
-                    uploadType = "molestiae";
-                    uploadProtocol = "minus";
-                }};
-            }};            
+                analysisQueryIdentitySelectorIdentity = "suscipit";
+                analysisQueryResourceSelectorFullResourceName = "iure";
+                callback = "magnam";
+                fields = "debitis";
+                key = "ipsa";
+                oauthToken = "delectus";
+                optionsAnalyzeServiceAccountImpersonation = false;
+                optionsExecutionTimeout = "tempora";
+                optionsExpandGroups = false;
+                optionsExpandResources = false;
+                optionsExpandRoles = false;
+                optionsOutputGroupEdges = false;
+                optionsOutputResourceEdges = false;
+                parent = "suscipit";
+                prettyPrint = false;
+                quotaUser = "molestiae";
+                uploadType = "minus";
+                uploadProtocol = "placeat";
+            }}            
 
-            CloudassetAnalyzeIamPolicyResponse res = sdk.v1p4beta1.cloudassetAnalyzeIamPolicy(req);
+            CloudassetAnalyzeIamPolicyResponse res = sdk.v1p4beta1.cloudassetAnalyzeIamPolicy(req, new CloudassetAnalyzeIamPolicySecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.analyzeIamPolicyResponse.isPresent()) {
                 // handle response
@@ -90,7 +78,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### v1p4beta1

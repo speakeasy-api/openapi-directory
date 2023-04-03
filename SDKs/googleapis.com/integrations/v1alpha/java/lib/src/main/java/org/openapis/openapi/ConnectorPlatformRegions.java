@@ -33,10 +33,11 @@ public class ConnectorPlatformRegions {
     /**
      * Enumerates the regions for which Connector Platform is provisioned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntegrationsConnectorPlatformRegionsEnumerateResponse integrationsConnectorPlatformRegionsEnumerate(org.openapis.openapi.models.operations.IntegrationsConnectorPlatformRegionsEnumerateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntegrationsConnectorPlatformRegionsEnumerateResponse integrationsConnectorPlatformRegionsEnumerate(org.openapis.openapi.models.operations.IntegrationsConnectorPlatformRegionsEnumerateRequest request, org.openapis.openapi.models.operations.IntegrationsConnectorPlatformRegionsEnumerateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1alpha/connectorPlatformRegions:enumerate");
         
@@ -44,14 +45,14 @@ public class ConnectorPlatformRegions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsConnectorPlatformRegionsEnumerateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IntegrationsConnectorPlatformRegionsEnumerateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

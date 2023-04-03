@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdApiCredentialsRequest {
-    
-    public GetMerchantsMerchantIdApiCredentialsPathParams pathParams;
-    public GetMerchantsMerchantIdApiCredentialsRequest withPathParams(GetMerchantsMerchantIdApiCredentialsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public GetMerchantsMerchantIdApiCredentialsRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     
-    
-    public GetMerchantsMerchantIdApiCredentialsQueryParams queryParams;
-    public GetMerchantsMerchantIdApiCredentialsRequest withQueryParams(GetMerchantsMerchantIdApiCredentialsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of the page to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Integer pageNumber;
+    public GetMerchantsMerchantIdApiCredentialsRequest withPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
     
-    
-    public GetMerchantsMerchantIdApiCredentialsSecurity security;
-    public GetMerchantsMerchantIdApiCredentialsRequest withSecurity(GetMerchantsMerchantIdApiCredentialsSecurity security) {
-        this.security = security;
+    /**
+     * The number of items to have on a page, maximum 100. The default is 10 items on a page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetMerchantsMerchantIdApiCredentialsRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

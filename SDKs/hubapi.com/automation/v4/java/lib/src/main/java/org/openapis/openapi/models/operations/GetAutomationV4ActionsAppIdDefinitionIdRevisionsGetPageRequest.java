@@ -4,27 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageRequest {
-    
-    public GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPagePathParams pathParams;
-    public GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageRequest withPathParams(GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
+    public String after;
+    public GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageRequest withAfter(String after) {
+        this.after = after;
         return this;
     }
     
-    
-    public GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageQueryParams queryParams;
-    public GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageRequest withQueryParams(GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageRequest withAppId(Integer appId) {
+        this.appId = appId;
         return this;
     }
     
+    /**
+     * The ID of the custom workflow action
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=definitionId")
+    public String definitionId;
+    public GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageRequest withDefinitionId(String definitionId) {
+        this.definitionId = definitionId;
+        return this;
+    }
     
-    public GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageSecurity security;
-    public GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageRequest withSecurity(GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageSecurity security) {
-        this.security = security;
+    /**
+     * Maximum number of results per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     

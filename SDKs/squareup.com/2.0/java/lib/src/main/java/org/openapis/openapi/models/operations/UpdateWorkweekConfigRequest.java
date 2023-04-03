@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWorkweekConfigRequest {
-    
-    public UpdateWorkweekConfigPathParams pathParams;
-    public UpdateWorkweekConfigRequest withPathParams(UpdateWorkweekConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateWorkweekConfigRequest request;
-    public UpdateWorkweekConfigRequest withRequest(org.openapis.openapi.models.shared.UpdateWorkweekConfigRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateWorkweekConfigRequest updateWorkweekConfigRequest;
+    public UpdateWorkweekConfigRequest withUpdateWorkweekConfigRequest(org.openapis.openapi.models.shared.UpdateWorkweekConfigRequest updateWorkweekConfigRequest) {
+        this.updateWorkweekConfigRequest = updateWorkweekConfigRequest;
         return this;
     }
     
-    
-    public UpdateWorkweekConfigSecurity security;
-    public UpdateWorkweekConfigRequest withSecurity(UpdateWorkweekConfigSecurity security) {
-        this.security = security;
+    /**
+     * The UUID for the `WorkweekConfig` object being updated.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateWorkweekConfigRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

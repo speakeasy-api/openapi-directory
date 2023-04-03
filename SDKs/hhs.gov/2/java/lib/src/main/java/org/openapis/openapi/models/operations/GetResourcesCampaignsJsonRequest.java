@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesCampaignsJsonRequest {
+    /**
+     * The maximum number of records to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=max")
+    public Integer max;
+    public GetResourcesCampaignsJsonRequest withMax(Integer max) {
+        this.max = max;
+        return this;
+    }
     
-    public GetResourcesCampaignsJsonQueryParams queryParams;
-    public GetResourcesCampaignsJsonRequest withQueryParams(GetResourcesCampaignsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The offset of the records set to return for pagination
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=offset")
+    public Integer offset;
+    public GetResourcesCampaignsJsonRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * * Set of fields to sort the records by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
+    public String sort;
+    public GetResourcesCampaignsJsonRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

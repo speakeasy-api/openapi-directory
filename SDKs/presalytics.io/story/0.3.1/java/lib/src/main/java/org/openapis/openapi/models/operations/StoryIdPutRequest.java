@@ -7,17 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdPutRequest {
-    
-    public StoryIdPutPathParams pathParams;
-    public StoryIdPutRequest withPathParams(StoryIdPutPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * the id from the story object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public StoryIdPutRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public StoryIdPutQueryParams queryParams;
-    public StoryIdPutRequest withQueryParams(StoryIdPutQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Determines whether a repsonse including story objects should include the story outline.  Defaults to true. Useful for speeding up processing times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_outline")
+    public Boolean includeOutline;
+    public StoryIdPutRequest withIncludeOutline(Boolean includeOutline) {
+        this.includeOutline = includeOutline;
         return this;
     }
     
@@ -25,9 +31,9 @@ public class StoryIdPutRequest {
      * The updated story object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Story request;
-    public StoryIdPutRequest withRequest(org.openapis.openapi.models.shared.Story request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Story story;
+    public StoryIdPutRequest withStory(org.openapis.openapi.models.shared.Story story) {
+        this.story = story;
         return this;
     }
     

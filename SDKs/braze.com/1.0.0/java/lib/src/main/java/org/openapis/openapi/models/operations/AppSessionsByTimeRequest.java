@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppSessionsByTimeRequest {
+    /**
+     * (Optional) String
+     * 
+     * App API identifier retrieved from the Developer Console to limit analytics to a specific app.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_id")
+    public String appId;
+    public AppSessionsByTimeRequest withAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
     
-    public AppSessionsByTimeQueryParams queryParams;
-    public AppSessionsByTimeRequest withQueryParams(AppSessionsByTimeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Optional) DateTime (ISO 8601 string)
+     * 
+     * Point in time when the data series should end - defaults to time of the request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_at")
+    public String endingAt;
+    public AppSessionsByTimeRequest withEndingAt(String endingAt) {
+        this.endingAt = endingAt;
+        return this;
+    }
+    
+    /**
+     * (Required) Integer
+     * 
+     * Max number of units (days or hours) before ending_at to include in the returned series - must be between 1 and 100 inclusive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
+    public String length;
+    public AppSessionsByTimeRequest withLength(String length) {
+        this.length = length;
+        return this;
+    }
+    
+    /**
+     * (Optional) String
+     * 
+     * Segment API identifier indicating the analytics enabled segment for which sessions should be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=segment_id")
+    public String segmentId;
+    public AppSessionsByTimeRequest withSegmentId(String segmentId) {
+        this.segmentId = segmentId;
+        return this;
+    }
+    
+    /**
+     * (Optional) String
+     * 
+     * Unit of time between data points - can be "day" or "hour" (defaults to "day"). 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit")
+    public String unit;
+    public AppSessionsByTimeRequest withUnit(String unit) {
+        this.unit = unit;
         return this;
     }
     

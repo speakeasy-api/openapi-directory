@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsAddCustomLabelsToSelfHostedRunnerForRepoRequest {
-    
-    public ActionsAddCustomLabelsToSelfHostedRunnerForRepoPathParams pathParams;
-    public ActionsAddCustomLabelsToSelfHostedRunnerForRepoRequest withPathParams(ActionsAddCustomLabelsToSelfHostedRunnerForRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsAddCustomLabelsToSelfHostedRunnerForRepoRequestBody requestBody;
+    public ActionsAddCustomLabelsToSelfHostedRunnerForRepoRequest withRequestBody(ActionsAddCustomLabelsToSelfHostedRunnerForRepoRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsAddCustomLabelsToSelfHostedRunnerForRepoRequestBody request;
-    public ActionsAddCustomLabelsToSelfHostedRunnerForRepoRequest withRequest(ActionsAddCustomLabelsToSelfHostedRunnerForRepoRequestBody request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsAddCustomLabelsToSelfHostedRunnerForRepoRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsAddCustomLabelsToSelfHostedRunnerForRepoRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the self-hosted runner.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_id")
+    public Long runnerId;
+    public ActionsAddCustomLabelsToSelfHostedRunnerForRepoRequest withRunnerId(Long runnerId) {
+        this.runnerId = runnerId;
         return this;
     }
     

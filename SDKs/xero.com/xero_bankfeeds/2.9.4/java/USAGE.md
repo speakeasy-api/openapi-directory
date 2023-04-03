@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateFeedConnectionsSecurity;
-import org.openapis.openapi.models.operations.CreateFeedConnectionsHeaders;
 import org.openapis.openapi.models.operations.CreateFeedConnectionsRequest;
 import org.openapis.openapi.models.operations.CreateFeedConnectionsResponse;
 import org.openapis.openapi.models.shared.FeedConnections;
@@ -17,7 +16,6 @@ import org.openapis.openapi.models.shared.ErrorTypeEnum;
 import org.openapis.openapi.models.shared.Error;
 import org.openapis.openapi.models.shared.CurrencyCodeEnum;
 import org.openapis.openapi.models.shared.CountryCodeEnum;
-import org.openapis.openapi.models.shared.SchemeOAuth2;
 
 public class Application {
     public static void main(String[] args) {
@@ -26,15 +24,7 @@ public class Application {
                 .build();
 
             CreateFeedConnectionsRequest req = new CreateFeedConnectionsRequest() {{
-                security = new CreateFeedConnectionsSecurity() {{
-                    oAuth2 = new SchemeOAuth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                headers = new CreateFeedConnectionsHeaders() {{
-                    xeroTenantId = "corrupti";
-                }};
-                request = new FeedConnections() {{
+                feedConnections = new FeedConnections() {{
                     items = new org.openapis.openapi.models.shared.FeedConnection[]{{
                         add(new FeedConnection() {{
                             accountId = "079a88ea-276d-41fb-a1f1-366ef3e22921";
@@ -95,9 +85,12 @@ public class Application {
                         pageSize = 10;
                     }};
                 }};
-            }};            
+                xeroTenantId = "provident";
+            }}            
 
-            CreateFeedConnectionsResponse res = sdk.bankFeeds.createFeedConnections(req);
+            CreateFeedConnectionsResponse res = sdk.bankFeeds.createFeedConnections(req, new CreateFeedConnectionsSecurity() {{
+                oAuth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.feedConnections.isPresent()) {
                 // handle response

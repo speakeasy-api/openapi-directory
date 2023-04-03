@@ -4,27 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientLabResultsPartialUpdateRequest {
-    
-    public PatientLabResultsPartialUpdatePathParams pathParams;
-    public PatientLabResultsPartialUpdateRequest withPathParams(PatientLabResultsPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientLabResultsPartialUpdateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public PatientLabResultsPartialUpdateQueryParams queryParams;
-    public PatientLabResultsPartialUpdateRequest withQueryParams(PatientLabResultsPartialUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatientLabResultsPartialUpdateRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering_doctor")
+    public Long orderingDoctor;
+    public PatientLabResultsPartialUpdateRequest withOrderingDoctor(Long orderingDoctor) {
+        this.orderingDoctor = orderingDoctor;
+        return this;
+    }
     
-    public PatientLabResultsPartialUpdateSecurity security;
-    public PatientLabResultsPartialUpdateRequest withSecurity(PatientLabResultsPartialUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public PatientLabResultsPartialUpdateRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public PatientLabResultsPartialUpdateRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

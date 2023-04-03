@@ -36,19 +36,20 @@ public class Personal {
     /**
      * [USES 20 UNITS PER NAME COUPLE] Infer several classifications for a cross border interaction between names (ex. remit, travel, intl com)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CorridorResponse corridor(org.openapis.openapi.models.operations.CorridorRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CorridorResponse corridor(org.openapis.openapi.models.operations.CorridorRequest request, org.openapis.openapi.models.operations.CorridorSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CorridorPathParams.class, baseUrl, "/api2/json/corridor/{countryIso2From}/{firstNameFrom}/{lastNameFrom}/{countryIso2To}/{firstNameTo}/{lastNameTo}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CorridorRequest.class, baseUrl, "/api2/json/corridor/{countryIso2From}/{firstNameFrom}/{lastNameFrom}/{countryIso2To}/{firstNameTo}/{lastNameTo}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -77,10 +78,11 @@ public class Personal {
     /**
      * [USES 20 UNITS PER NAME PAIR] Infer several classifications for up to 100 cross border interaction between names (ex. remit, travel, intl com)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CorridorBatchResponse corridorBatch(org.openapis.openapi.models.operations.CorridorBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CorridorBatchResponse corridorBatch(org.openapis.openapi.models.shared.BatchCorridorIn request, org.openapis.openapi.models.operations.CorridorBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/corridorBatch");
         
@@ -91,7 +93,7 @@ public class Personal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -120,19 +122,20 @@ public class Personal {
     /**
      * [USES 10 UNITS PER NAME] Infer the likely country of residence of a personal full name, or one surname. Assumes names as they are in the country of residence OR the country of origin.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CountryResponse country(org.openapis.openapi.models.operations.CountryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CountryResponse country(org.openapis.openapi.models.operations.CountryRequest request, org.openapis.openapi.models.operations.CountrySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CountryPathParams.class, baseUrl, "/api2/json/country/{personalNameFull}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CountryRequest.class, baseUrl, "/api2/json/country/{personalNameFull}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -161,10 +164,11 @@ public class Personal {
     /**
      * [USES 10 UNITS PER NAME] Infer the likely country of residence of up to 100 personal full names, or surnames. Assumes names as they are in the country of residence OR the country of origin.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CountryBatchResponse countryBatch(org.openapis.openapi.models.operations.CountryBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CountryBatchResponse countryBatch(org.openapis.openapi.models.shared.BatchPersonalNameIn request, org.openapis.openapi.models.operations.CountryBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/countryBatch");
         
@@ -175,7 +179,7 @@ public class Personal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -204,19 +208,20 @@ public class Personal {
     /**
      * [USES 20 UNITS PER NAME] Infer the likely ethnicity/diaspora of a personal name, given a country of residence ISO2 code (ex. US, CA, AU, NZ etc.)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DiasporaResponse diaspora(org.openapis.openapi.models.operations.DiasporaRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DiasporaResponse diaspora(org.openapis.openapi.models.operations.DiasporaRequest request, org.openapis.openapi.models.operations.DiasporaSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiasporaPathParams.class, baseUrl, "/api2/json/diaspora/{countryIso2}/{firstName}/{lastName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiasporaRequest.class, baseUrl, "/api2/json/diaspora/{countryIso2}/{firstName}/{lastName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -245,10 +250,11 @@ public class Personal {
     /**
      * [USES 20 UNITS PER NAME] Infer the likely ethnicity/diaspora of up to 100 personal names, given a country of residence ISO2 code (ex. US, CA, AU, NZ etc.)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DiasporaBatchResponse diasporaBatch(org.openapis.openapi.models.operations.DiasporaBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DiasporaBatchResponse diasporaBatch(org.openapis.openapi.models.shared.BatchFirstLastNameGeoIn request, org.openapis.openapi.models.operations.DiasporaBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/diasporaBatch");
         
@@ -259,7 +265,7 @@ public class Personal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -288,19 +294,20 @@ public class Personal {
     /**
      * Infer the likely gender of a just a fiven name, assuming default 'US' local context. Please use preferably full names and local geographic context for better accuracy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenderResponse gender(org.openapis.openapi.models.operations.GenderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenderResponse gender(org.openapis.openapi.models.operations.GenderRequest request, org.openapis.openapi.models.operations.GenderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenderPathParams.class, baseUrl, "/api2/json/gender/{firstName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenderRequest.class, baseUrl, "/api2/json/gender/{firstName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -329,10 +336,11 @@ public class Personal {
     /**
      * Infer the likely gender of up to 100 names, detecting automatically the cultural context.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenderBatchResponse genderBatch(org.openapis.openapi.models.operations.GenderBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenderBatchResponse genderBatch(org.openapis.openapi.models.shared.BatchFirstLastNameIn request, org.openapis.openapi.models.operations.GenderBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/genderBatch");
         
@@ -343,7 +351,7 @@ public class Personal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -372,19 +380,20 @@ public class Personal {
     /**
      * Infer the likely gender of a full name, ex. John H. Smith
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenderFullResponse genderFull(org.openapis.openapi.models.operations.GenderFullRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenderFullResponse genderFull(org.openapis.openapi.models.operations.GenderFullRequest request, org.openapis.openapi.models.operations.GenderFullSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenderFullPathParams.class, baseUrl, "/api2/json/genderFull/{fullName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenderFullRequest.class, baseUrl, "/api2/json/genderFull/{fullName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -413,10 +422,11 @@ public class Personal {
     /**
      * Infer the likely gender of up to 100 full names, detecting automatically the cultural context.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenderFullBatchResponse genderFullBatch(org.openapis.openapi.models.operations.GenderFullBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenderFullBatchResponse genderFullBatch(org.openapis.openapi.models.shared.BatchPersonalNameIn request, org.openapis.openapi.models.operations.GenderFullBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/genderFullBatch");
         
@@ -427,7 +437,7 @@ public class Personal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -456,19 +466,20 @@ public class Personal {
     /**
      * Infer the likely gender of a full name, given a local context (ISO2 country code).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenderFullGeoResponse genderFullGeo(org.openapis.openapi.models.operations.GenderFullGeoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenderFullGeoResponse genderFullGeo(org.openapis.openapi.models.operations.GenderFullGeoRequest request, org.openapis.openapi.models.operations.GenderFullGeoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenderFullGeoPathParams.class, baseUrl, "/api2/json/genderFullGeo/{fullName}/{countryIso2}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenderFullGeoRequest.class, baseUrl, "/api2/json/genderFullGeo/{fullName}/{countryIso2}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,10 +508,11 @@ public class Personal {
     /**
      * Infer the likely gender of up to 100 full names, with a given cultural context (country ISO2 code).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenderFullGeoBatchResponse genderFullGeoBatch(org.openapis.openapi.models.operations.GenderFullGeoBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenderFullGeoBatchResponse genderFullGeoBatch(org.openapis.openapi.models.shared.BatchPersonalNameGeoIn request, org.openapis.openapi.models.operations.GenderFullGeoBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/genderFullGeoBatch");
         
@@ -511,7 +523,7 @@ public class Personal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -540,19 +552,20 @@ public class Personal {
     /**
      * Infer the likely gender of a name, given a local context (ISO2 country code).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenderGeoResponse genderGeo(org.openapis.openapi.models.operations.GenderGeoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenderGeoResponse genderGeo(org.openapis.openapi.models.operations.GenderGeoRequest request, org.openapis.openapi.models.operations.GenderGeoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenderGeoPathParams.class, baseUrl, "/api2/json/genderGeo/{firstName}/{lastName}/{countryIso2}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenderGeoRequest.class, baseUrl, "/api2/json/genderGeo/{firstName}/{lastName}/{countryIso2}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -581,10 +594,11 @@ public class Personal {
     /**
      * Infer the likely gender of up to 100 names, each given a local context (ISO2 country code).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenderGeoBatchResponse genderGeoBatch(org.openapis.openapi.models.operations.GenderGeoBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenderGeoBatchResponse genderGeoBatch(org.openapis.openapi.models.shared.BatchFirstLastNameGeoIn request, org.openapis.openapi.models.operations.GenderGeoBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/genderGeoBatch");
         
@@ -595,7 +609,7 @@ public class Personal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -624,19 +638,20 @@ public class Personal {
     /**
      * Infer the likely gender of a name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Gender1Response gender1(org.openapis.openapi.models.operations.Gender1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.Gender1Response gender1(org.openapis.openapi.models.operations.Gender1Request request, org.openapis.openapi.models.operations.Gender1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Gender1PathParams.class, baseUrl, "/api2/json/gender/{firstName}/{lastName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Gender1Request.class, baseUrl, "/api2/json/gender/{firstName}/{lastName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -665,19 +680,20 @@ public class Personal {
     /**
      * [USES 10 UNITS PER NAME] Infer the likely country of origin of a personal name. Assumes names as they are in the country of origin. For US, CA, AU, NZ and other melting-pots : use 'diaspora' instead.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OriginResponse origin(org.openapis.openapi.models.operations.OriginRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OriginResponse origin(org.openapis.openapi.models.operations.OriginRequest request, org.openapis.openapi.models.operations.OriginSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OriginPathParams.class, baseUrl, "/api2/json/origin/{firstName}/{lastName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OriginRequest.class, baseUrl, "/api2/json/origin/{firstName}/{lastName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -706,10 +722,11 @@ public class Personal {
     /**
      * [USES 10 UNITS PER NAME] Infer the likely country of origin of up to 100 names, detecting automatically the cultural context.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OriginBatchResponse originBatch(org.openapis.openapi.models.operations.OriginBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OriginBatchResponse originBatch(org.openapis.openapi.models.shared.BatchFirstLastNameIn request, org.openapis.openapi.models.operations.OriginBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/originBatch");
         
@@ -720,7 +737,7 @@ public class Personal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -749,19 +766,20 @@ public class Personal {
     /**
      * Infer the likely first/last name structure of a name, ex. John Smith or SMITH, John or SMITH; John. 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ParseNameResponse parseName(org.openapis.openapi.models.operations.ParseNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ParseNameResponse parseName(org.openapis.openapi.models.operations.ParseNameRequest request, org.openapis.openapi.models.operations.ParseNameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ParseNamePathParams.class, baseUrl, "/api2/json/parseName/{nameFull}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ParseNameRequest.class, baseUrl, "/api2/json/parseName/{nameFull}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -790,10 +808,11 @@ public class Personal {
     /**
      * Infer the likely first/last name structure of a name, ex. John Smith or SMITH, John or SMITH; John.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ParseNameBatchResponse parseNameBatch(org.openapis.openapi.models.operations.ParseNameBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ParseNameBatchResponse parseNameBatch(org.openapis.openapi.models.shared.BatchPersonalNameIn request, org.openapis.openapi.models.operations.ParseNameBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/parseNameBatch");
         
@@ -804,7 +823,7 @@ public class Personal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -833,19 +852,20 @@ public class Personal {
     /**
      * Infer the likely first/last name structure of a name, ex. John Smith or SMITH, John or SMITH; John. For better accuracy, provide a geographic context.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ParseNameGeoResponse parseNameGeo(org.openapis.openapi.models.operations.ParseNameGeoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ParseNameGeoResponse parseNameGeo(org.openapis.openapi.models.operations.ParseNameGeoRequest request, org.openapis.openapi.models.operations.ParseNameGeoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ParseNameGeoPathParams.class, baseUrl, "/api2/json/parseName/{nameFull}/{countryIso2}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ParseNameGeoRequest.class, baseUrl, "/api2/json/parseName/{nameFull}/{countryIso2}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -874,10 +894,11 @@ public class Personal {
     /**
      * Infer the likely first/last name structure of a name, ex. John Smith or SMITH, John or SMITH; John. Giving a local context improves precision. 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ParseNameGeoBatchResponse parseNameGeoBatch(org.openapis.openapi.models.operations.ParseNameGeoBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ParseNameGeoBatchResponse parseNameGeoBatch(org.openapis.openapi.models.shared.BatchPersonalNameGeoIn request, org.openapis.openapi.models.operations.ParseNameGeoBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/parseNameGeoBatch");
         
@@ -888,7 +909,7 @@ public class Personal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -917,19 +938,20 @@ public class Personal {
     /**
      * [USES 10 UNITS PER NAME] Infer the likely religion of a personal full name. NB: only for INDIA (as of current version).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReligionFullResponse religionFull(org.openapis.openapi.models.operations.ReligionFullRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReligionFullResponse religionFull(org.openapis.openapi.models.operations.ReligionFullRequest request, org.openapis.openapi.models.operations.ReligionFullSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReligionFullPathParams.class, baseUrl, "/api2/json/religionFull/{countryIso2}/{subDivisionIso31662}/{personalNameFull}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReligionFullRequest.class, baseUrl, "/api2/json/religionFull/{countryIso2}/{subDivisionIso31662}/{personalNameFull}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -958,10 +980,11 @@ public class Personal {
     /**
      * [USES 10 UNITS PER NAME] Infer the likely religion of up to 100 personal full names. NB: only for India as of currently.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReligionFullBatchResponse religionFullBatch(org.openapis.openapi.models.operations.ReligionFullBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReligionFullBatchResponse religionFullBatch(org.openapis.openapi.models.shared.BatchPersonalNameGeoSubdivisionIn request, org.openapis.openapi.models.operations.ReligionFullBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/religionFullBatch");
         
@@ -972,7 +995,7 @@ public class Personal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1001,19 +1024,20 @@ public class Personal {
     /**
      * [USES 10 UNITS PER NAME] Infer the likely origin of a name at a country subclassification level (state or regeion). Initially, this is only supported for India (ISO2 code 'IN').
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubclassificationResponse subclassification(org.openapis.openapi.models.operations.SubclassificationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubclassificationResponse subclassification(org.openapis.openapi.models.operations.SubclassificationRequest request, org.openapis.openapi.models.operations.SubclassificationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubclassificationPathParams.class, baseUrl, "/api2/json/subclassification/{countryIso2}/{firstName}/{lastName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubclassificationRequest.class, baseUrl, "/api2/json/subclassification/{countryIso2}/{firstName}/{lastName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1042,10 +1066,11 @@ public class Personal {
     /**
      * [USES 10 UNITS PER NAME] Infer the likely origin of a list of up to 100 names at a country subclassification level (state or regeion). Initially, this is only supported for India (ISO2 code 'IN').
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubclassificationBatchResponse subclassificationBatch(org.openapis.openapi.models.operations.SubclassificationBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubclassificationBatchResponse subclassificationBatch(org.openapis.openapi.models.shared.BatchFirstLastNameGeoIn request, org.openapis.openapi.models.operations.SubclassificationBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/subclassificationBatch");
         
@@ -1056,7 +1081,7 @@ public class Personal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1085,19 +1110,20 @@ public class Personal {
     /**
      * [USES 10 UNITS PER NAME] Infer a US resident's likely race/ethnicity according to US Census taxonomy W_NL (white, non latino), HL (hispano latino),  A (asian, non latino), B_NL (black, non latino). Optionally add header X-OPTION-USRACEETHNICITY-TAXONOMY: USRACEETHNICITY-6CLASSES for two additional classes, AI_AN (American Indian or Alaskan Native) and PI (Pacific Islander).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UsRaceEthnicityResponse usRaceEthnicity(org.openapis.openapi.models.operations.UsRaceEthnicityRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UsRaceEthnicityResponse usRaceEthnicity(org.openapis.openapi.models.operations.UsRaceEthnicityRequest request, org.openapis.openapi.models.operations.UsRaceEthnicitySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsRaceEthnicityPathParams.class, baseUrl, "/api2/json/usRaceEthnicity/{firstName}/{lastName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsRaceEthnicityRequest.class, baseUrl, "/api2/json/usRaceEthnicity/{firstName}/{lastName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1126,10 +1152,11 @@ public class Personal {
     /**
      * [USES 10 UNITS PER NAME] Infer up-to 100 US resident's likely race/ethnicity according to US Census taxonomy. Output is W_NL (white, non latino), HL (hispano latino),  A (asian, non latino), B_NL (black, non latino). Optionally add header X-OPTION-USRACEETHNICITY-TAXONOMY: USRACEETHNICITY-6CLASSES for two additional classes, AI_AN (American Indian or Alaskan Native) and PI (Pacific Islander).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UsRaceEthnicityBatchResponse usRaceEthnicityBatch(org.openapis.openapi.models.operations.UsRaceEthnicityBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UsRaceEthnicityBatchResponse usRaceEthnicityBatch(org.openapis.openapi.models.shared.BatchFirstLastNameGeoIn request, org.openapis.openapi.models.operations.UsRaceEthnicityBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/usRaceEthnicityBatch");
         
@@ -1140,7 +1167,7 @@ public class Personal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1169,19 +1196,20 @@ public class Personal {
     /**
      * [USES 10 UNITS PER NAME] Infer a US resident's likely race/ethnicity according to US Census taxonomy, using (optional) ZIP5 code info. Output is W_NL (white, non latino), HL (hispano latino),  A (asian, non latino), B_NL (black, non latino). Optionally add header X-OPTION-USRACEETHNICITY-TAXONOMY: USRACEETHNICITY-6CLASSES for two additional classes, AI_AN (American Indian or Alaskan Native) and PI (Pacific Islander).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UsRaceEthnicityZip5Response usRaceEthnicityZip5(org.openapis.openapi.models.operations.UsRaceEthnicityZip5Request request) throws Exception {
+    public org.openapis.openapi.models.operations.UsRaceEthnicityZip5Response usRaceEthnicityZip5(org.openapis.openapi.models.operations.UsRaceEthnicityZip5Request request, org.openapis.openapi.models.operations.UsRaceEthnicityZip5Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsRaceEthnicityZip5PathParams.class, baseUrl, "/api2/json/usRaceEthnicityZIP5/{firstName}/{lastName}/{zip5Code}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsRaceEthnicityZip5Request.class, baseUrl, "/api2/json/usRaceEthnicityZIP5/{firstName}/{lastName}/{zip5Code}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1210,10 +1238,11 @@ public class Personal {
     /**
      * [USES 10 UNITS PER NAME] Infer up-to 100 US resident's likely race/ethnicity according to US Census taxonomy, with (optional) ZIP code. Output is W_NL (white, non latino), HL (hispano latino),  A (asian, non latino), B_NL (black, non latino). Optionally add header X-OPTION-USRACEETHNICITY-TAXONOMY: USRACEETHNICITY-6CLASSES for two additional classes, AI_AN (American Indian or Alaskan Native) and PI (Pacific Islander).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UsZipRaceEthnicityBatchResponse usZipRaceEthnicityBatch(org.openapis.openapi.models.operations.UsZipRaceEthnicityBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UsZipRaceEthnicityBatchResponse usZipRaceEthnicityBatch(org.openapis.openapi.models.shared.BatchFirstLastNameGeoZippedIn request, org.openapis.openapi.models.operations.UsZipRaceEthnicityBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/usZipRaceEthnicityBatch");
         
@@ -1224,7 +1253,7 @@ public class Personal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

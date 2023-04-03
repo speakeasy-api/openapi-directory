@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLoadBalancersIdRequest {
-    
-    public GetLoadBalancersIdPathParams pathParams;
-    public GetLoadBalancersIdRequest withPathParams(GetLoadBalancersIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Load Balancer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetLoadBalancersIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

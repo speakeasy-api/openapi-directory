@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestProductRequest {
+    /**
+     * Size parameter if available.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public String size;
+    public RequestProductRequest withSize(String size) {
+        this.size = size;
+        return this;
+    }
     
-    public RequestProductQueryParams queryParams;
-    public RequestProductRequest withQueryParams(RequestProductQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The url of the requested product.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public String url;
+    public RequestProductRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

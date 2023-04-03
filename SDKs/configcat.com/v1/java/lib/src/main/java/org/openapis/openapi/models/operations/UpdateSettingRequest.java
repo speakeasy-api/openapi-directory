@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSettingRequest {
-    
-    public UpdateSettingPathParams pathParams;
-    public UpdateSettingRequest withPathParams(UpdateSettingPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.JsonPatchInput jsonPatchInput;
+    public UpdateSettingRequest withJsonPatchInput(org.openapis.openapi.models.shared.JsonPatchInput jsonPatchInput) {
+        this.jsonPatchInput = jsonPatchInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.JsonPatchInput request;
-    public UpdateSettingRequest withRequest(org.openapis.openapi.models.shared.JsonPatchInput request) {
-        this.request = request;
+    /**
+     * The identifier of the Setting.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingId")
+    public Integer settingId;
+    public UpdateSettingRequest withSettingId(Integer settingId) {
+        this.settingId = settingId;
         return this;
     }
     

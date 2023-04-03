@@ -7,24 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRepositoriesWorkspaceRepoSlugRefsTagsRequest {
-    
-    public PostRepositoriesWorkspaceRepoSlugRefsTagsPathParams pathParams;
-    public PostRepositoriesWorkspaceRepoSlugRefsTagsRequest withPathParams(PostRepositoriesWorkspaceRepoSlugRefsTagsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PostRepositoriesWorkspaceRepoSlugRefsTagsRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PostRepositoriesWorkspaceRepoSlugRefsTagsRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public PostRepositoriesWorkspaceRepoSlugRefsTagsRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public PostRepositoriesWorkspaceRepoSlugRefsTagsSecurity security;
-    public PostRepositoriesWorkspaceRepoSlugRefsTagsRequest withSecurity(PostRepositoriesWorkspaceRepoSlugRefsTagsSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public PostRepositoriesWorkspaceRepoSlugRefsTagsRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

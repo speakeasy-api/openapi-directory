@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProvidersRequest {
-    
-    public GetProvidersQueryParams queryParams;
-    public GetProvidersRequest withQueryParams(GetProvidersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetProvidersRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     

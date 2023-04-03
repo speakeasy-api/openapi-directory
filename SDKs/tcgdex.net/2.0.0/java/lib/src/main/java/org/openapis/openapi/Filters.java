@@ -66,7 +66,7 @@ public class Filters {
 
     public org.openapis.openapi.models.operations.GetCategoriesCategoryResponse getCategoriesCategory(org.openapis.openapi.models.operations.GetCategoriesCategoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCategoriesCategoryPathParams.class, baseUrl, "/categories/{category}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCategoriesCategoryRequest.class, baseUrl, "/categories/{category}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -132,7 +132,7 @@ public class Filters {
 
     public org.openapis.openapi.models.operations.GetDexIdsDexIdResponse getDexIdsDexId(org.openapis.openapi.models.operations.GetDexIdsDexIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDexIdsDexIdPathParams.class, baseUrl, "/dex-ids/{dexId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDexIdsDexIdRequest.class, baseUrl, "/dex-ids/{dexId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -198,7 +198,7 @@ public class Filters {
 
     public org.openapis.openapi.models.operations.GetEnergyTypesEnergyTypeResponse getEnergyTypesEnergyType(org.openapis.openapi.models.operations.GetEnergyTypesEnergyTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEnergyTypesEnergyTypePathParams.class, baseUrl, "/energy-types/{energy-type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEnergyTypesEnergyTypeRequest.class, baseUrl, "/energy-types/{energy-type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -264,7 +264,7 @@ public class Filters {
 
     public org.openapis.openapi.models.operations.GetHpHpResponse getHpHp(org.openapis.openapi.models.operations.GetHpHpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHpHpPathParams.class, baseUrl, "/hp/{hp}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHpHpRequest.class, baseUrl, "/hp/{hp}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -330,7 +330,7 @@ public class Filters {
 
     public org.openapis.openapi.models.operations.GetIllustratorsIllustratorResponse getIllustratorsIllustrator(org.openapis.openapi.models.operations.GetIllustratorsIllustratorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIllustratorsIllustratorPathParams.class, baseUrl, "/illustrators/{illustrator}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIllustratorsIllustratorRequest.class, baseUrl, "/illustrators/{illustrator}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -396,7 +396,7 @@ public class Filters {
 
     public org.openapis.openapi.models.operations.GetRaritiesRarityResponse getRaritiesRarity(org.openapis.openapi.models.operations.GetRaritiesRarityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRaritiesRarityPathParams.class, baseUrl, "/rarities/{rarity}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRaritiesRarityRequest.class, baseUrl, "/rarities/{rarity}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -462,7 +462,7 @@ public class Filters {
 
     public org.openapis.openapi.models.operations.GetRegulationMarksRegulationMarkResponse getRegulationMarksRegulationMark(org.openapis.openapi.models.operations.GetRegulationMarksRegulationMarkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRegulationMarksRegulationMarkPathParams.class, baseUrl, "/regulation-marks/{regulation-mark}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRegulationMarksRegulationMarkRequest.class, baseUrl, "/regulation-marks/{regulation-mark}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -528,7 +528,7 @@ public class Filters {
 
     public org.openapis.openapi.models.operations.GetRetreatsRetreatResponse getRetreatsRetreat(org.openapis.openapi.models.operations.GetRetreatsRetreatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRetreatsRetreatPathParams.class, baseUrl, "/retreats/{retreat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRetreatsRetreatRequest.class, baseUrl, "/retreats/{retreat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -594,7 +594,7 @@ public class Filters {
 
     public org.openapis.openapi.models.operations.GetSeriesSerieResponse getSeriesSerie(org.openapis.openapi.models.operations.GetSeriesSerieRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSeriesSeriePathParams.class, baseUrl, "/series/{serie}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSeriesSerieRequest.class, baseUrl, "/series/{serie}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -660,7 +660,7 @@ public class Filters {
 
     public org.openapis.openapi.models.operations.GetSetsSetResponse getSetsSet(org.openapis.openapi.models.operations.GetSetsSetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetsSetPathParams.class, baseUrl, "/sets/{set}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetsSetRequest.class, baseUrl, "/sets/{set}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -726,7 +726,7 @@ public class Filters {
 
     public org.openapis.openapi.models.operations.GetStagesStageResponse getStagesStage(org.openapis.openapi.models.operations.GetStagesStageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStagesStagePathParams.class, baseUrl, "/stages/{stage}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStagesStageRequest.class, baseUrl, "/stages/{stage}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -792,7 +792,7 @@ public class Filters {
 
     public org.openapis.openapi.models.operations.GetSuffixesSuffixResponse getSuffixesSuffix(org.openapis.openapi.models.operations.GetSuffixesSuffixRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSuffixesSuffixPathParams.class, baseUrl, "/suffixes/{suffix}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSuffixesSuffixRequest.class, baseUrl, "/suffixes/{suffix}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -858,7 +858,7 @@ public class Filters {
 
     public org.openapis.openapi.models.operations.GetTrainerTypesTrainerTypeResponse getTrainerTypesTrainerType(org.openapis.openapi.models.operations.GetTrainerTypesTrainerTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTrainerTypesTrainerTypePathParams.class, baseUrl, "/trainer-types/{trainer-type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTrainerTypesTrainerTypeRequest.class, baseUrl, "/trainer-types/{trainer-type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -924,7 +924,7 @@ public class Filters {
 
     public org.openapis.openapi.models.operations.GetTypesTypeResponse getTypesType(org.openapis.openapi.models.operations.GetTypesTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTypesTypePathParams.class, baseUrl, "/types/{type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTypesTypeRequest.class, baseUrl, "/types/{type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -990,7 +990,7 @@ public class Filters {
 
     public org.openapis.openapi.models.operations.GetVariantsVariantResponse getVariantsVariant(org.openapis.openapi.models.operations.GetVariantsVariantRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantsVariantPathParams.class, baseUrl, "/variants/{variant}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantsVariantRequest.class, baseUrl, "/variants/{variant}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

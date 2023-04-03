@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListResourceDefinitionVersionsRequest {
-    
-    public ListResourceDefinitionVersionsPathParams pathParams;
-    public ListResourceDefinitionVersionsRequest withPathParams(ListResourceDefinitionVersionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The maximum number of results to be returned per request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public String maxResults;
+    public ListResourceDefinitionVersionsRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
     
-    
-    public ListResourceDefinitionVersionsQueryParams queryParams;
-    public ListResourceDefinitionVersionsRequest withQueryParams(ListResourceDefinitionVersionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The token for the next set of results, or ''null'' if there are no additional results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListResourceDefinitionVersionsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     
+    /**
+     * The ID of the resource definition.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ResourceDefinitionId")
+    public String resourceDefinitionId;
+    public ListResourceDefinitionVersionsRequest withResourceDefinitionId(String resourceDefinitionId) {
+        this.resourceDefinitionId = resourceDefinitionId;
+        return this;
+    }
     
-    public ListResourceDefinitionVersionsHeaders headers;
-    public ListResourceDefinitionVersionsRequest withHeaders(ListResourceDefinitionVersionsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListResourceDefinitionVersionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListResourceDefinitionVersionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListResourceDefinitionVersionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListResourceDefinitionVersionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListResourceDefinitionVersionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListResourceDefinitionVersionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListResourceDefinitionVersionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

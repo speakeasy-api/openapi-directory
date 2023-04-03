@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OptionsTransactionHashReceiptRequest {
-    
-    public OptionsTransactionHashReceiptPathParams pathParams;
-    public OptionsTransactionHashReceiptRequest withPathParams(OptionsTransactionHashReceiptPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hash")
+    public String hash;
+    public OptionsTransactionHashReceiptRequest withHash(String hash) {
+        this.hash = hash;
         return this;
     }
     

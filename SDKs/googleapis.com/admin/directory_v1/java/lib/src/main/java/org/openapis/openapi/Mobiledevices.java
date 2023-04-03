@@ -35,27 +35,28 @@ public class Mobiledevices {
     /**
      * Takes an action that affects a mobile device. For example, remotely wiping a device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryMobiledevicesActionResponse directoryMobiledevicesAction(org.openapis.openapi.models.operations.DirectoryMobiledevicesActionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryMobiledevicesActionResponse directoryMobiledevicesAction(org.openapis.openapi.models.operations.DirectoryMobiledevicesActionRequest request, org.openapis.openapi.models.operations.DirectoryMobiledevicesActionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryMobiledevicesActionPathParams.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/mobile/{resourceId}/action", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryMobiledevicesActionRequest.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/mobile/{resourceId}/action", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "mobileDeviceAction", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryMobiledevicesActionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryMobiledevicesActionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -76,25 +77,26 @@ public class Mobiledevices {
     /**
      * Removes a mobile device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryMobiledevicesDeleteResponse directoryMobiledevicesDelete(org.openapis.openapi.models.operations.DirectoryMobiledevicesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryMobiledevicesDeleteResponse directoryMobiledevicesDelete(org.openapis.openapi.models.operations.DirectoryMobiledevicesDeleteRequest request, org.openapis.openapi.models.operations.DirectoryMobiledevicesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryMobiledevicesDeletePathParams.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/mobile/{resourceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryMobiledevicesDeleteRequest.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/mobile/{resourceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryMobiledevicesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryMobiledevicesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -115,25 +117,26 @@ public class Mobiledevices {
     /**
      * Retrieves a mobile device's properties.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryMobiledevicesGetResponse directoryMobiledevicesGet(org.openapis.openapi.models.operations.DirectoryMobiledevicesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryMobiledevicesGetResponse directoryMobiledevicesGet(org.openapis.openapi.models.operations.DirectoryMobiledevicesGetRequest request, org.openapis.openapi.models.operations.DirectoryMobiledevicesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryMobiledevicesGetPathParams.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/mobile/{resourceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryMobiledevicesGetRequest.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/mobile/{resourceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryMobiledevicesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryMobiledevicesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -160,25 +163,26 @@ public class Mobiledevices {
     /**
      * Retrieves a paginated list of all user-owned mobile devices for an account. To retrieve a list that includes company-owned devices, use the Cloud Identity [Devices API](https://cloud.google.com/identity/docs/concepts/overview-devices) instead. This method times out after 60 minutes. For more information, see [Troubleshoot error codes](https://developers.google.com/admin-sdk/directory/v1/guides/troubleshoot-error-codes).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryMobiledevicesListResponse directoryMobiledevicesList(org.openapis.openapi.models.operations.DirectoryMobiledevicesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryMobiledevicesListResponse directoryMobiledevicesList(org.openapis.openapi.models.operations.DirectoryMobiledevicesListRequest request, org.openapis.openapi.models.operations.DirectoryMobiledevicesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryMobiledevicesListPathParams.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/mobile", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryMobiledevicesListRequest.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/mobile", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryMobiledevicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryMobiledevicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

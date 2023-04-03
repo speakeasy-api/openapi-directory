@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdRequest {
-    
-    public PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdPathParams pathParams;
-    public PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdRequest withPathParams(PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdatePaymentMethodInfo request;
-    public PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdRequest withRequest(org.openapis.openapi.models.shared.UpdatePaymentMethodInfo request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdatePaymentMethodInfo updatePaymentMethodInfo;
+    public PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdRequest withUpdatePaymentMethodInfo(org.openapis.openapi.models.shared.UpdatePaymentMethodInfo updatePaymentMethodInfo) {
+        this.updatePaymentMethodInfo = updatePaymentMethodInfo;
         return this;
     }
     
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
+        return this;
+    }
     
-    public PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdSecurity security;
-    public PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdRequest withSecurity(PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the payment method.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentMethodId")
+    public String paymentMethodId;
+    public PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdRequest withPaymentMethodId(String paymentMethodId) {
+        this.paymentMethodId = paymentMethodId;
         return this;
     }
     

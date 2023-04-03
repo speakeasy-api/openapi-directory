@@ -34,25 +34,26 @@ public class Achievements {
     /**
      * Resets the achievement with the given ID for the currently authenticated player. This method is only accessible to whitelisted tester accounts for your application.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesManagementAchievementsResetResponse gamesManagementAchievementsReset(org.openapis.openapi.models.operations.GamesManagementAchievementsResetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesManagementAchievementsResetResponse gamesManagementAchievementsReset(org.openapis.openapi.models.operations.GamesManagementAchievementsResetRequest request, org.openapis.openapi.models.operations.GamesManagementAchievementsResetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesManagementAchievementsResetPathParams.class, baseUrl, "/games/v1management/achievements/{achievementId}/reset", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesManagementAchievementsResetRequest.class, baseUrl, "/games/v1management/achievements/{achievementId}/reset", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementAchievementsResetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementAchievementsResetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,10 +80,11 @@ public class Achievements {
     /**
      * Resets all achievements for the currently authenticated player for your application. This method is only accessible to whitelisted tester accounts for your application.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllResponse gamesManagementAchievementsResetAll(org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllResponse gamesManagementAchievementsResetAll(org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllRequest request, org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/games/v1management/achievements/reset");
         
@@ -90,14 +92,14 @@ public class Achievements {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,10 +126,11 @@ public class Achievements {
     /**
      * Resets all draft achievements for all players. This method is only available to user accounts for your developer console.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllForAllPlayersResponse gamesManagementAchievementsResetAllForAllPlayers(org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllForAllPlayersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllForAllPlayersResponse gamesManagementAchievementsResetAllForAllPlayers(org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllForAllPlayersRequest request, org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllForAllPlayersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/games/v1management/achievements/resetAllForAllPlayers");
         
@@ -135,14 +138,14 @@ public class Achievements {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllForAllPlayersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementAchievementsResetAllForAllPlayersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -163,25 +166,26 @@ public class Achievements {
     /**
      * Resets the achievement with the given ID for all players. This method is only available to user accounts for your developer console. Only draft achievements can be reset.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesManagementAchievementsResetForAllPlayersResponse gamesManagementAchievementsResetForAllPlayers(org.openapis.openapi.models.operations.GamesManagementAchievementsResetForAllPlayersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesManagementAchievementsResetForAllPlayersResponse gamesManagementAchievementsResetForAllPlayers(org.openapis.openapi.models.operations.GamesManagementAchievementsResetForAllPlayersRequest request, org.openapis.openapi.models.operations.GamesManagementAchievementsResetForAllPlayersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesManagementAchievementsResetForAllPlayersPathParams.class, baseUrl, "/games/v1management/achievements/{achievementId}/resetForAllPlayers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesManagementAchievementsResetForAllPlayersRequest.class, baseUrl, "/games/v1management/achievements/{achievementId}/resetForAllPlayers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementAchievementsResetForAllPlayersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementAchievementsResetForAllPlayersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -202,27 +206,28 @@ public class Achievements {
     /**
      * Resets achievements with the given IDs for all players. This method is only available to user accounts for your developer console. Only draft achievements may be reset.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesManagementAchievementsResetMultipleForAllPlayersResponse gamesManagementAchievementsResetMultipleForAllPlayers(org.openapis.openapi.models.operations.GamesManagementAchievementsResetMultipleForAllPlayersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesManagementAchievementsResetMultipleForAllPlayersResponse gamesManagementAchievementsResetMultipleForAllPlayers(org.openapis.openapi.models.operations.GamesManagementAchievementsResetMultipleForAllPlayersRequest request, org.openapis.openapi.models.operations.GamesManagementAchievementsResetMultipleForAllPlayersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/games/v1management/achievements/resetMultipleForAllPlayers");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "achievementResetMultipleForAllRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementAchievementsResetMultipleForAllPlayersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementAchievementsResetMultipleForAllPlayersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

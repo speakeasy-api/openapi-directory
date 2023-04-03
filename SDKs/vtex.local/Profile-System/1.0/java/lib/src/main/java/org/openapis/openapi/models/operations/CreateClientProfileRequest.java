@@ -7,24 +7,42 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateClientProfileRequest {
-    
-    public CreateClientProfileQueryParams queryParams;
-    public CreateClientProfileRequest withQueryParams(CreateClientProfileQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CreateClientProfileRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public CreateClientProfileHeaders headers;
-    public CreateClientProfileRequest withHeaders(CreateClientProfileHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CreateClientProfileRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Profile request;
-    public CreateClientProfileRequest withRequest(org.openapis.openapi.models.shared.Profile request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Profile profile;
+    public CreateClientProfileRequest withProfile(org.openapis.openapi.models.shared.Profile profile) {
+        this.profile = profile;
+        return this;
+    }
+    
+    /**
+     * This parameter sets the the Time To Live (TTL), in days, of the specific document being created or updated with this request. After this period of time from the moment of the request, the document is deleted. By sending this parameter you override the TTL set for the schema.
+     * 
+     * &gt; Currently, the available default document schemas have no TTL. This means that documents are stored indefinitely, unless a TTL is sent when creating or updating.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ttl")
+    public Long ttl;
+    public CreateClientProfileRequest withTtl(Long ttl) {
+        this.ttl = ttl;
         return this;
     }
     

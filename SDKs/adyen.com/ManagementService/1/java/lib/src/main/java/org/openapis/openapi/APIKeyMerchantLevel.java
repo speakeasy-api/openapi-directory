@@ -36,19 +36,20 @@ public class APIKeyMerchantLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014API credentials read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeyResponse postMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKey(org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeyResponse postMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKey(org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeyRequest request, org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeyPathParams.class, baseUrl, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/generateApiKey", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdApiCredentialsApiCredentialIdGenerateApiKeyRequest.class, baseUrl, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/generateApiKey", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

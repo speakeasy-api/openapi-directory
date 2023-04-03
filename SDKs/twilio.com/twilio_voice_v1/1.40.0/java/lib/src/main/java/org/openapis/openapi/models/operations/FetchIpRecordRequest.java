@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchIpRecordRequest {
-    
-    public FetchIpRecordPathParams pathParams;
-    public FetchIpRecordRequest withPathParams(FetchIpRecordPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchIpRecordSecurity security;
-    public FetchIpRecordRequest withSecurity(FetchIpRecordSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchIpRecordRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the IP Record resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchIpRecordRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

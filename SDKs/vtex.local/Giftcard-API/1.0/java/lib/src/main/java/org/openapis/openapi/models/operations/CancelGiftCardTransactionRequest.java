@@ -7,24 +7,44 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelGiftCardTransactionRequest {
-    
-    public CancelGiftCardTransactionPathParams pathParams;
-    public CancelGiftCardTransactionRequest withPathParams(CancelGiftCardTransactionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CancelGiftCardTransactionHeaders headers;
-    public CancelGiftCardTransactionRequest withHeaders(CancelGiftCardTransactionHeaders headers) {
-        this.headers = headers;
+    /**
+     * Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CancelGiftCardTransactionRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CancelGiftCardTransactionRequest request;
-    public CancelGiftCardTransactionRequest withRequest(org.openapis.openapi.models.shared.CancelGiftCardTransactionRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CancelGiftCardTransactionRequest cancelGiftCardTransactionRequest;
+    public CancelGiftCardTransactionRequest withCancelGiftCardTransactionRequest(org.openapis.openapi.models.shared.CancelGiftCardTransactionRequest cancelGiftCardTransactionRequest) {
+        this.cancelGiftCardTransactionRequest = cancelGiftCardTransactionRequest;
+        return this;
+    }
+    
+    /**
+     * The Media type of the body of the request. Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CancelGiftCardTransactionRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=giftCardID")
+    public String giftCardID;
+    public CancelGiftCardTransactionRequest withGiftCardID(String giftCardID) {
+        this.giftCardID = giftCardID;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionID")
+    public String transactionID;
+    public CancelGiftCardTransactionRequest withTransactionID(String transactionID) {
+        this.transactionID = transactionID;
         return this;
     }
     

@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeEndpointAuthorizationRequest {
-    
-    public GETDescribeEndpointAuthorizationQueryParams queryParams;
-    public GETDescribeEndpointAuthorizationRequest withQueryParams(GETDescribeEndpointAuthorizationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Amazon Web Services account ID of either the cluster owner (grantor) or grantee. If &lt;code&gt;Grantee&lt;/code&gt; parameter is true, then the &lt;code&gt;Account&lt;/code&gt; value is of the grantor.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Account")
+    public String account;
+    public GETDescribeEndpointAuthorizationRequest withAccount(String account) {
+        this.account = account;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeEndpointAuthorizationActionEnum action;
+    public GETDescribeEndpointAuthorizationRequest withAction(GETDescribeEndpointAuthorizationActionEnum action) {
+        this.action = action;
+        return this;
+    }
     
-    public GETDescribeEndpointAuthorizationHeaders headers;
-    public GETDescribeEndpointAuthorizationRequest withHeaders(GETDescribeEndpointAuthorizationHeaders headers) {
-        this.headers = headers;
+    /**
+     * The cluster identifier of the cluster to access.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETDescribeEndpointAuthorizationRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * Indicates whether to check authorization from a grantor or grantee point of view. If true, Amazon Redshift returns endpoint authorizations that you've been granted. If false (default), checks authorization from a grantor point of view.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Grantee")
+    public Boolean grantee;
+    public GETDescribeEndpointAuthorizationRequest withGrantee(Boolean grantee) {
+        this.grantee = grantee;
+        return this;
+    }
+    
+    /**
+     * An optional pagination token provided by a previous &lt;code&gt;DescribeEndpointAuthorization&lt;/code&gt; request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by the &lt;code&gt;MaxRecords&lt;/code&gt; parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDescribeEndpointAuthorizationRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * The maximum number of records to include in the response. If more records exist than the specified &lt;code&gt;MaxRecords&lt;/code&gt; value, a pagination token called a &lt;code&gt;Marker&lt;/code&gt; is included in the response so that the remaining results can be retrieved.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeEndpointAuthorizationRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeEndpointAuthorizationVersionEnum version;
+    public GETDescribeEndpointAuthorizationRequest withVersion(GETDescribeEndpointAuthorizationVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeEndpointAuthorizationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeEndpointAuthorizationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeEndpointAuthorizationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeEndpointAuthorizationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeEndpointAuthorizationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeEndpointAuthorizationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeEndpointAuthorizationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

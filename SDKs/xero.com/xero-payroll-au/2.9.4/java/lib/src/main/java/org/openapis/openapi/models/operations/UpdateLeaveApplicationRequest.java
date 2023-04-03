@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateLeaveApplicationRequest {
-    
-    public UpdateLeaveApplicationPathParams pathParams;
-    public UpdateLeaveApplicationRequest withPathParams(UpdateLeaveApplicationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateLeaveApplicationHeaders headers;
-    public UpdateLeaveApplicationRequest withHeaders(UpdateLeaveApplicationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Leave Application id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=LeaveApplicationID")
+    public String leaveApplicationID;
+    public UpdateLeaveApplicationRequest withLeaveApplicationID(String leaveApplicationID) {
+        this.leaveApplicationID = leaveApplicationID;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LeaveApplicationInput[] request;
-    public UpdateLeaveApplicationRequest withRequest(org.openapis.openapi.models.shared.LeaveApplicationInput[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.LeaveApplicationInput[] requestBody;
+    public UpdateLeaveApplicationRequest withRequestBody(org.openapis.openapi.models.shared.LeaveApplicationInput[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateLeaveApplicationSecurity security;
-    public UpdateLeaveApplicationRequest withSecurity(UpdateLeaveApplicationSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public UpdateLeaveApplicationRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

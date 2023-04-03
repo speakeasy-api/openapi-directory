@@ -4,20 +4,150 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETIpamAddressHistoryRequest {
-    
-    public GETGETIpamAddressHistoryQueryParams queryParams;
-    public GETGETIpamAddressHistoryRequest withQueryParams(GETGETIpamAddressHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETIpamAddressHistoryActionEnum action;
+    public GETGETIpamAddressHistoryRequest withAction(GETGETIpamAddressHistoryActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The CIDR you want the history of. The CIDR can be an IPv4 or IPv6 IP address range. If you enter a /16 IPv4 CIDR, you will get records that match it exactly. You will not get records for any subnets within the /16 CIDR.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Cidr")
+    public String cidr;
+    public GETGETIpamAddressHistoryRequest withCidr(String cidr) {
+        this.cidr = cidr;
+        return this;
+    }
     
-    public GETGETIpamAddressHistoryHeaders headers;
-    public GETGETIpamAddressHistoryRequest withHeaders(GETGETIpamAddressHistoryHeaders headers) {
-        this.headers = headers;
+    /**
+     * A check for whether you have the required permissions for the action without actually making the request and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETGETIpamAddressHistoryRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The end of the time period for which you are looking for history. If you omit this option, it will default to the current time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndTime")
+    public OffsetDateTime endTime;
+    public GETGETIpamAddressHistoryRequest withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    /**
+     * The ID of the IPAM scope that the CIDR is in.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IpamScopeId")
+    public String ipamScopeId;
+    public GETGETIpamAddressHistoryRequest withIpamScopeId(String ipamScopeId) {
+        this.ipamScopeId = ipamScopeId;
+        return this;
+    }
+    
+    /**
+     * The maximum number of historical results you would like returned per page. Defaults to 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public GETGETIpamAddressHistoryRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The token for the next page of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETGETIpamAddressHistoryRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The start of the time period for which you are looking for history. If you omit this option, it will default to the value of EndTime.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartTime")
+    public OffsetDateTime startTime;
+    public GETGETIpamAddressHistoryRequest withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETIpamAddressHistoryVersionEnum version;
+    public GETGETIpamAddressHistoryRequest withVersion(GETGETIpamAddressHistoryVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * The ID of the VPC you want your history records filtered by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcId")
+    public String vpcId;
+    public GETGETIpamAddressHistoryRequest withVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGETIpamAddressHistoryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGETIpamAddressHistoryRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGETIpamAddressHistoryRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGETIpamAddressHistoryRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGETIpamAddressHistoryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGETIpamAddressHistoryRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGETIpamAddressHistoryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RevokeRoleGroupsRequest {
-    
-    public RevokeRoleGroupsPathParams pathParams;
-    public RevokeRoleGroupsRequest withPathParams(RevokeRoleGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RevokeRoleGroupsHeaders headers;
-    public RevokeRoleGroupsRequest withHeaders(RevokeRoleGroupsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GroupIds request;
-    public RevokeRoleGroupsRequest withRequest(org.openapis.openapi.models.shared.GroupIds request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GroupIds groupIds;
+    public RevokeRoleGroupsRequest withGroupIds(org.openapis.openapi.models.shared.GroupIds groupIds) {
+        this.groupIds = groupIds;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RevokeRoleGroupsRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Role ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=role_id")
+    public Integer roleId;
+    public RevokeRoleGroupsRequest withRoleId(Integer roleId) {
+        this.roleId = roleId;
         return this;
     }
     

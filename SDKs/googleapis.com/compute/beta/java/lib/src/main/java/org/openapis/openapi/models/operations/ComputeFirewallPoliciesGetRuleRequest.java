@@ -4,27 +4,146 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeFirewallPoliciesGetRuleRequest {
-    
-    public ComputeFirewallPoliciesGetRulePathParams pathParams;
-    public ComputeFirewallPoliciesGetRuleRequest withPathParams(ComputeFirewallPoliciesGetRulePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ComputeFirewallPoliciesGetRuleRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public ComputeFirewallPoliciesGetRuleQueryParams queryParams;
-    public ComputeFirewallPoliciesGetRuleRequest withQueryParams(ComputeFirewallPoliciesGetRuleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ComputeFirewallPoliciesGetRuleRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ComputeFirewallPoliciesGetRuleRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public ComputeFirewallPoliciesGetRuleSecurity security;
-    public ComputeFirewallPoliciesGetRuleRequest withSecurity(ComputeFirewallPoliciesGetRuleSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ComputeFirewallPoliciesGetRuleRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ComputeFirewallPoliciesGetRuleRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Name of the firewall policy to which the queried rule belongs.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firewallPolicy")
+    public String firewallPolicy;
+    public ComputeFirewallPoliciesGetRuleRequest withFirewallPolicy(String firewallPolicy) {
+        this.firewallPolicy = firewallPolicy;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ComputeFirewallPoliciesGetRuleRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ComputeFirewallPoliciesGetRuleRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ComputeFirewallPoliciesGetRuleRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * The priority of the rule to get from the firewall policy.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=priority")
+    public Long priority;
+    public ComputeFirewallPoliciesGetRuleRequest withPriority(Long priority) {
+        this.priority = priority;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ComputeFirewallPoliciesGetRuleRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ComputeFirewallPoliciesGetRuleRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ComputeFirewallPoliciesGetRuleRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Legacy name for parameter that has been superseded by `quotaUser`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public ComputeFirewallPoliciesGetRuleRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

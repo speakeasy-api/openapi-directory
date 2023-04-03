@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaxApiDeleteJsonRequest {
-    
-    public TaxApiDeleteJsonHeaders headers;
-    public TaxApiDeleteJsonRequest withHeaders(TaxApiDeleteJsonHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.TaxDeleteApiModel taxDeleteApiModel;
+    public TaxApiDeleteJsonRequest withTaxDeleteApiModel(org.openapis.openapi.models.shared.TaxDeleteApiModel taxDeleteApiModel) {
+        this.taxDeleteApiModel = taxDeleteApiModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TaxDeleteApiModel request;
-    public TaxApiDeleteJsonRequest withRequest(org.openapis.openapi.models.shared.TaxDeleteApiModel request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public TaxApiDeleteJsonRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public TaxApiDeleteJsonRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

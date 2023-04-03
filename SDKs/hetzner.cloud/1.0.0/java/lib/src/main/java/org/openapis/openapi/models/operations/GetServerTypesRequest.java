@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetServerTypesRequest {
-    
-    public GetServerTypesQueryParams queryParams;
-    public GetServerTypesRequest withQueryParams(GetServerTypesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used to filter Server types by their name. The response will only contain the Server type matching the specified name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetServerTypesRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

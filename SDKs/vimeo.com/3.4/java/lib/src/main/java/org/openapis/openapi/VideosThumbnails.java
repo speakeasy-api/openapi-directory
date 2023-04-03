@@ -34,21 +34,22 @@ public class VideosThumbnails {
     /**
      * Add a video thumbnail
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateVideoThumbnailResponse createVideoThumbnail(org.openapis.openapi.models.operations.CreateVideoThumbnailRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateVideoThumbnailResponse createVideoThumbnail(org.openapis.openapi.models.operations.CreateVideoThumbnailRequest request, org.openapis.openapi.models.operations.CreateVideoThumbnailSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateVideoThumbnailPathParams.class, baseUrl, "/videos/{video_id}/pictures", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateVideoThumbnailRequest.class, baseUrl, "/videos/{video_id}/pictures", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -75,21 +76,22 @@ public class VideosThumbnails {
     /**
      * Add a video thumbnail
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateVideoThumbnailAlt1Response createVideoThumbnailAlt1(org.openapis.openapi.models.operations.CreateVideoThumbnailAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateVideoThumbnailAlt1Response createVideoThumbnailAlt1(org.openapis.openapi.models.operations.CreateVideoThumbnailAlt1Request request, org.openapis.openapi.models.operations.CreateVideoThumbnailAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateVideoThumbnailAlt1PathParams.class, baseUrl, "/channels/{channel_id}/videos/{video_id}/pictures", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateVideoThumbnailAlt1Request.class, baseUrl, "/channels/{channel_id}/videos/{video_id}/pictures", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -116,19 +118,20 @@ public class VideosThumbnails {
     /**
      * Delete a video thumbnail
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVideoThumbnailResponse deleteVideoThumbnail(org.openapis.openapi.models.operations.DeleteVideoThumbnailRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVideoThumbnailResponse deleteVideoThumbnail(org.openapis.openapi.models.operations.DeleteVideoThumbnailRequest request, org.openapis.openapi.models.operations.DeleteVideoThumbnailSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoThumbnailPathParams.class, baseUrl, "/videos/{video_id}/pictures/{picture_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoThumbnailRequest.class, baseUrl, "/videos/{video_id}/pictures/{picture_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -149,21 +152,22 @@ public class VideosThumbnails {
     /**
      * Edit a video thumbnail
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EditVideoThumbnailResponse editVideoThumbnail(org.openapis.openapi.models.operations.EditVideoThumbnailRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EditVideoThumbnailResponse editVideoThumbnail(org.openapis.openapi.models.operations.EditVideoThumbnailRequest request, org.openapis.openapi.models.operations.EditVideoThumbnailSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditVideoThumbnailPathParams.class, baseUrl, "/videos/{video_id}/pictures/{picture_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditVideoThumbnailRequest.class, baseUrl, "/videos/{video_id}/pictures/{picture_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -195,7 +199,7 @@ public class VideosThumbnails {
      */
     public org.openapis.openapi.models.operations.GetVideoThumbnailResponse getVideoThumbnail(org.openapis.openapi.models.operations.GetVideoThumbnailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoThumbnailPathParams.class, baseUrl, "/videos/{video_id}/pictures/{picture_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoThumbnailRequest.class, baseUrl, "/videos/{video_id}/pictures/{picture_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -234,13 +238,13 @@ public class VideosThumbnails {
      */
     public org.openapis.openapi.models.operations.GetVideoThumbnailsResponse getVideoThumbnails(org.openapis.openapi.models.operations.GetVideoThumbnailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoThumbnailsPathParams.class, baseUrl, "/videos/{video_id}/pictures", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoThumbnailsRequest.class, baseUrl, "/videos/{video_id}/pictures", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVideoThumbnailsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVideoThumbnailsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -279,13 +283,13 @@ public class VideosThumbnails {
      */
     public org.openapis.openapi.models.operations.GetVideoThumbnailsAlt1Response getVideoThumbnailsAlt1(org.openapis.openapi.models.operations.GetVideoThumbnailsAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoThumbnailsAlt1PathParams.class, baseUrl, "/channels/{channel_id}/videos/{video_id}/pictures", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoThumbnailsAlt1Request.class, baseUrl, "/channels/{channel_id}/videos/{video_id}/pictures", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVideoThumbnailsAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVideoThumbnailsAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

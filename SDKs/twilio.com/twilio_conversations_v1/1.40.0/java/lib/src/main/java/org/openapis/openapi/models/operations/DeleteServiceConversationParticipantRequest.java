@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteServiceConversationParticipantRequest {
-    
-    public DeleteServiceConversationParticipantPathParams pathParams;
-    public DeleteServiceConversationParticipantRequest withPathParams(DeleteServiceConversationParticipantPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public DeleteServiceConversationParticipantRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     
-    
-    public DeleteServiceConversationParticipantHeaders headers;
-    public DeleteServiceConversationParticipantRequest withHeaders(DeleteServiceConversationParticipantHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this participant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConversationSid")
+    public String conversationSid;
+    public DeleteServiceConversationParticipantRequest withConversationSid(String conversationSid) {
+        this.conversationSid = conversationSid;
         return this;
     }
     
-    
-    public DeleteServiceConversationParticipantSecurity security;
-    public DeleteServiceConversationParticipantRequest withSecurity(DeleteServiceConversationParticipantSecurity security) {
-        this.security = security;
+    /**
+     * A 34 character string that uniquely identifies this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteServiceConversationParticipantRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteServiceConversationParticipantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.ServiceConversationParticipantEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public DeleteServiceConversationParticipantRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.ServiceConversationParticipantEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

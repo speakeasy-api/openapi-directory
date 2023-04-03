@@ -7,24 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateFunction20200531Request {
-    
-    public UpdateFunction20200531PathParams pathParams;
-    public UpdateFunction20200531Request withPathParams(UpdateFunction20200531PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The current version (&lt;code&gt;ETag&lt;/code&gt; value) of the function that you are updating, which you can get using &lt;code&gt;DescribeFunction&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public UpdateFunction20200531Request withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
-    
-    public UpdateFunction20200531Headers headers;
-    public UpdateFunction20200531Request withHeaders(UpdateFunction20200531Headers headers) {
-        this.headers = headers;
+    /**
+     * The name of the function that you are updating.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Name")
+    public String name;
+    public UpdateFunction20200531Request withName(String name) {
+        this.name = name;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public UpdateFunction20200531Request withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public UpdateFunction20200531Request withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateFunction20200531Request withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateFunction20200531Request withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateFunction20200531Request withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateFunction20200531Request withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateFunction20200531Request withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateFunction20200531Request withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateFunction20200531Request withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

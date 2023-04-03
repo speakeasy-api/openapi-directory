@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LicensesGetRequest {
-    
-    public LicensesGetPathParams pathParams;
-    public LicensesGetRequest withPathParams(LicensesGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=license")
+    public String license;
+    public LicensesGetRequest withLicense(String license) {
+        this.license = license;
         return this;
     }
     

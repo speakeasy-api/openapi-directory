@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateClientVpnRouteRequest {
-    
-    public GETCreateClientVpnRouteQueryParams queryParams;
-    public GETCreateClientVpnRouteRequest withQueryParams(GETCreateClientVpnRouteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETCreateClientVpnRouteActionEnum action;
+    public GETCreateClientVpnRouteRequest withAction(GETCreateClientVpnRouteActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more information, see &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html"&gt;How to ensure idempotency&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientToken")
+    public String clientToken;
+    public GETCreateClientVpnRouteRequest withClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
     
-    public GETCreateClientVpnRouteHeaders headers;
-    public GETCreateClientVpnRouteRequest withHeaders(GETCreateClientVpnRouteHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the Client VPN endpoint to which to add the route.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientVpnEndpointId")
+    public String clientVpnEndpointId;
+    public GETCreateClientVpnRouteRequest withClientVpnEndpointId(String clientVpnEndpointId) {
+        this.clientVpnEndpointId = clientVpnEndpointId;
+        return this;
+    }
+    
+    /**
+     * A brief description of the route.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Description")
+    public String description;
+    public GETCreateClientVpnRouteRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The IPv4 address range, in CIDR notation, of the route destination. For example:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To add a route for Internet access, enter &lt;code&gt;0.0.0.0/0&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To add a route for a peered VPC, enter the peered VPC's IPv4 CIDR range&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To add a route for an on-premises network, enter the Amazon Web Services Site-to-Site VPN connection's IPv4 CIDR range&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To add a route for the local network, enter the client CIDR range&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationCidrBlock")
+    public String destinationCidrBlock;
+    public GETCreateClientVpnRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
+        this.destinationCidrBlock = destinationCidrBlock;
+        return this;
+    }
+    
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETCreateClientVpnRouteRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The ID of the subnet through which you want to route traffic. The specified subnet must be an existing target network of the Client VPN endpoint.&lt;/p&gt; &lt;p&gt;Alternatively, if you're adding a route for the local network, specify &lt;code&gt;local&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetVpcSubnetId")
+    public String targetVpcSubnetId;
+    public GETCreateClientVpnRouteRequest withTargetVpcSubnetId(String targetVpcSubnetId) {
+        this.targetVpcSubnetId = targetVpcSubnetId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETCreateClientVpnRouteVersionEnum version;
+    public GETCreateClientVpnRouteRequest withVersion(GETCreateClientVpnRouteVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETCreateClientVpnRouteRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETCreateClientVpnRouteRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETCreateClientVpnRouteRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETCreateClientVpnRouteRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETCreateClientVpnRouteRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETCreateClientVpnRouteRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETCreateClientVpnRouteRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

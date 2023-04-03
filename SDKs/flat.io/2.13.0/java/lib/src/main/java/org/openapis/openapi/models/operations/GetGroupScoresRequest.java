@@ -4,27 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupScoresRequest {
-    
-    public GetGroupScoresPathParams pathParams;
-    public GetGroupScoresRequest withPathParams(GetGroupScoresPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of a Flat group
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group")
+    public String group;
+    public GetGroupScoresRequest withGroup(String group) {
+        this.group = group;
         return this;
     }
     
-    
-    public GetGroupScoresQueryParams queryParams;
-    public GetGroupScoresRequest withQueryParams(GetGroupScoresQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetGroupScoresSecurity security;
-    public GetGroupScoresRequest withSecurity(GetGroupScoresSecurity security) {
-        this.security = security;
+    /**
+     * Filter the score forked from the score id `parent`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent")
+    public String parent;
+    public GetGroupScoresRequest withParent(String parent) {
+        this.parent = parent;
         return this;
     }
     

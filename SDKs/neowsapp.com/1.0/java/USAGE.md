@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.RetrieveNEOFeedTodayQueryParams;
 import org.openapis.openapi.models.operations.RetrieveNEOFeedTodayRequest;
 import org.openapis.openapi.models.operations.RetrieveNEOFeedTodayResponse;
 
@@ -15,10 +14,8 @@ public class Application {
                 .build();
 
             RetrieveNEOFeedTodayRequest req = new RetrieveNEOFeedTodayRequest() {{
-                queryParams = new RetrieveNEOFeedTodayQueryParams() {{
-                    detailed = false;
-                }};
-            }};            
+                detailed = false;
+            }}            
 
             RetrieveNEOFeedTodayResponse res = sdk.feed.retrieveNEOFeedToday(req);
 

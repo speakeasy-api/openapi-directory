@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFactFodRequest {
-    
-    public GetFactFodQueryParams queryParams;
-    public GetFactFodRequest withQueryParams(GetFactFodQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetFactFodSecurity security;
-    public GetFactFodRequest withSecurity(GetFactFodSecurity security) {
-        this.security = security;
+    /**
+     * Category to get the fact of the day from. Must be one from the list returned from /fact/fod/categories
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public String category;
+    public GetFactFodRequest withCategory(String category) {
+        this.category = category;
         return this;
     }
     

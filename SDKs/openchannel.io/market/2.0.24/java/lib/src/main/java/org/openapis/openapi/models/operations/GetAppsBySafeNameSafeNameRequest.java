@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAppsBySafeNameSafeNameRequest {
-    
-    public GetAppsBySafeNameSafeNamePathParams pathParams;
-    public GetAppsBySafeNameSafeNameRequest withPathParams(GetAppsBySafeNameSafeNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The safeName of the App to be located
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=safeName")
+    public String safeName;
+    public GetAppsBySafeNameSafeNameRequest withSafeName(String safeName) {
+        this.safeName = safeName;
         return this;
     }
     
+    /**
+     * Whether this call should be tracked as a 'view' for this app. Default is false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trackViews")
+    public Boolean trackViews;
+    public GetAppsBySafeNameSafeNameRequest withTrackViews(Boolean trackViews) {
+        this.trackViews = trackViews;
+        return this;
+    }
     
-    public GetAppsBySafeNameSafeNameQueryParams queryParams;
-    public GetAppsBySafeNameSafeNameRequest withQueryParams(GetAppsBySafeNameSafeNameQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique id of the user that is requesting this resource
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
+    public String userId;
+    public GetAppsBySafeNameSafeNameRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

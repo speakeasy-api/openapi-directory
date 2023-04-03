@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimInventoryItemsReadRequest {
-    
-    public DcimInventoryItemsReadPathParams pathParams;
-    public DcimInventoryItemsReadRequest withPathParams(DcimInventoryItemsReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this inventory item.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimInventoryItemsReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

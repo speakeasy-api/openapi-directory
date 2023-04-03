@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETChatHistoryUsingGETRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public String end;
+    public GETChatHistoryUsingGETRequest withEnd(String end) {
+        this.end = end;
+        return this;
+    }
     
-    public GETChatHistoryUsingGETQueryParams queryParams;
-    public GETChatHistoryUsingGETRequest withQueryParams(GETChatHistoryUsingGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
+    public String padID;
+    public GETChatHistoryUsingGETRequest withPadID(String padID) {
+        this.padID = padID;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public String start;
+    public GETChatHistoryUsingGETRequest withStart(String start) {
+        this.start = start;
         return this;
     }
     

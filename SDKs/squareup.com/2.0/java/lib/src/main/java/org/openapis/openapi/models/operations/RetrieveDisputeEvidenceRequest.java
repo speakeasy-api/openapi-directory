@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveDisputeEvidenceRequest {
-    
-    public RetrieveDisputeEvidencePathParams pathParams;
-    public RetrieveDisputeEvidenceRequest withPathParams(RetrieveDisputeEvidencePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the dispute that you want to retrieve evidence from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dispute_id")
+    public String disputeId;
+    public RetrieveDisputeEvidenceRequest withDisputeId(String disputeId) {
+        this.disputeId = disputeId;
         return this;
     }
     
-    
-    public RetrieveDisputeEvidenceSecurity security;
-    public RetrieveDisputeEvidenceRequest withSecurity(RetrieveDisputeEvidenceSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the evidence to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=evidence_id")
+    public String evidenceId;
+    public RetrieveDisputeEvidenceRequest withEvidenceId(String evidenceId) {
+        this.evidenceId = evidenceId;
         return this;
     }
     

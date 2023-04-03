@@ -80,7 +80,7 @@ public class Other {
      */
     public org.openapis.openapi.models.operations.FileDownloadResponse fileDownload(org.openapis.openapi.models.operations.FileDownloadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FileDownloadPathParams.class, baseUrl, "/file/download/{file_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FileDownloadRequest.class, baseUrl, "/file/download/{file_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -108,10 +108,11 @@ public class Other {
      * Item Types
      * Returns the list of Item Types of the requested group. If no user is authenticated, returns the item types available for Figshare.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ItemTypesListResponse itemTypesList(org.openapis.openapi.models.operations.ItemTypesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ItemTypesListResponse itemTypesList(org.openapis.openapi.models.operations.ItemTypesListRequest request, org.openapis.openapi.models.operations.ItemTypesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/item_types");
         
@@ -119,14 +120,14 @@ public class Other {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ItemTypesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ItemTypesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -203,11 +204,10 @@ public class Other {
     /**
      * Private Account information
      * Account information for token/personal token
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateAccountResponse privateAccount(org.openapis.openapi.models.operations.PrivateAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateAccountResponse privateAccount() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account");
         
@@ -216,8 +216,7 @@ public class Other {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -254,10 +253,11 @@ public class Other {
      * Search Funding
      * Search for fundings
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateFundingSearchResponse privateFundingSearch(org.openapis.openapi.models.operations.PrivateFundingSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateFundingSearchResponse privateFundingSearch(org.openapis.openapi.models.shared.FundingSearch request, org.openapis.openapi.models.operations.PrivateFundingSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/funding/search");
         
@@ -268,7 +268,7 @@ public class Other {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -305,11 +305,10 @@ public class Other {
     /**
      * Private Account Licenses
      * This is a private endpoint that requires OAuth. It will return a list with figshare public licenses AND licenses defined for account's institution.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateLicensesListResponse privateLicensesList(org.openapis.openapi.models.operations.PrivateLicensesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateLicensesListResponse privateLicensesList() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/licenses");
         
@@ -318,8 +317,7 @@ public class Other {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

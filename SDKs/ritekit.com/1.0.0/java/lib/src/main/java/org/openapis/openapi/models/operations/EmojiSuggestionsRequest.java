@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EmojiSuggestionsRequest {
-    
-    public EmojiSuggestionsQueryParams queryParams;
-    public EmojiSuggestionsRequest withQueryParams(EmojiSuggestionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Text of the post
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public EmojiSuggestionsRequest withText(String text) {
+        this.text = text;
         return this;
     }
     

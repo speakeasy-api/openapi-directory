@@ -78,7 +78,7 @@ public class NearMisses {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAdminNearMissesRequestResponse postAdminNearMissesRequest(org.openapis.openapi.models.operations.PostAdminNearMissesRequestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAdminNearMissesRequestResponse postAdminNearMissesRequest(org.openapis.openapi.models.operations.PostAdminNearMissesRequestRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/__admin/near-misses/request");
         
@@ -122,7 +122,7 @@ public class NearMisses {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAdminNearMissesRequestPatternResponse postAdminNearMissesRequestPattern(org.openapis.openapi.models.operations.PostAdminNearMissesRequestPatternRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAdminNearMissesRequestPatternResponse postAdminNearMissesRequestPattern(org.openapis.openapi.models.operations.PostAdminNearMissesRequestPatternRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/__admin/near-misses/request-pattern");
         

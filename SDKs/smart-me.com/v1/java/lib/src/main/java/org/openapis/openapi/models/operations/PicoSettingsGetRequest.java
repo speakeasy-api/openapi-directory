@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PicoSettingsGetRequest {
-    
-    public PicoSettingsGetPathParams pathParams;
-    public PicoSettingsGetRequest withPathParams(PicoSettingsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PicoSettingsGetRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

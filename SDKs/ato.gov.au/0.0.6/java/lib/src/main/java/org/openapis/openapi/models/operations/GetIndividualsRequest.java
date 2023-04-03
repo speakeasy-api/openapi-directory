@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIndividualsRequest {
-    
-    public GetIndividualsQueryParams queryParams;
-    public GetIndividualsRequest withQueryParams(GetIndividualsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public GetIndividualsRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * The individual's date of birth, for example, `1979-01-13` (in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateOfBirth")
+    public String dateOfBirth;
+    public GetIndividualsRequest withDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+        return this;
+    }
     
-    public GetIndividualsHeaders headers;
-    public GetIndividualsRequest withHeaders(GetIndividualsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The individual's place of birth, for example, `Tamworth`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placeOfBirth")
+    public String placeOfBirth;
+    public GetIndividualsRequest withPlaceOfBirth(String placeOfBirth) {
+        this.placeOfBirth = placeOfBirth;
         return this;
     }
     

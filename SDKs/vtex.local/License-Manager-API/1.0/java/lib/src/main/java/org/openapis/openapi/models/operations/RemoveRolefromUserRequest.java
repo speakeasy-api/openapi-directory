@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveRolefromUserRequest {
-    
-    public RemoveRolefromUserPathParams pathParams;
-    public RemoveRolefromUserRequest withPathParams(RemoveRolefromUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The media type of the body of the request. Default value for license manager protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public RemoveRolefromUserRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * ID of the role which will be removed from the user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roleId")
+    public String roleId;
+    public RemoveRolefromUserRequest withRoleId(String roleId) {
+        this.roleId = roleId;
+        return this;
+    }
     
-    public RemoveRolefromUserHeaders headers;
-    public RemoveRolefromUserRequest withHeaders(RemoveRolefromUserHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID corresponding to the user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public RemoveRolefromUserRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

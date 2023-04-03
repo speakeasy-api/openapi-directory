@@ -40,7 +40,7 @@ public class Region {
      */
     public org.openapis.openapi.models.operations.GETGameRegionOptionsUsingGETResponse getGameRegionOptionsUsingGET(org.openapis.openapi.models.operations.GETGameRegionOptionsUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGameRegionOptionsUsingGETPathParams.class, baseUrl, "/restv2/game/{gameApiKey}/regions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGameRegionOptionsUsingGETRequest.class, baseUrl, "/restv2/game/{gameApiKey}/regions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -135,7 +135,7 @@ public class Region {
      */
     public org.openapis.openapi.models.operations.SetGameRegionUsingPOSTResponse setGameRegionUsingPOST(org.openapis.openapi.models.operations.SetGameRegionUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetGameRegionUsingPOSTPathParams.class, baseUrl, "/restv2/game/{gameApiKey}/region/{regionCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetGameRegionUsingPOSTRequest.class, baseUrl, "/restv2/game/{gameApiKey}/region/{regionCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

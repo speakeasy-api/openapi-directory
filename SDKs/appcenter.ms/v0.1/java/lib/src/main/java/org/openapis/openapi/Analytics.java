@@ -35,19 +35,20 @@ public class Analytics {
     /**
      * Returns whether audience definition exists.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsAudienceNameExistsResponse analyticsAudienceNameExists(org.openapis.openapi.models.operations.AnalyticsAudienceNameExistsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsAudienceNameExistsResponse analyticsAudienceNameExists(org.openapis.openapi.models.operations.AnalyticsAudienceNameExistsRequest request, org.openapis.openapi.models.operations.AnalyticsAudienceNameExistsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsAudienceNameExistsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsAudienceNameExistsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("HEAD");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -76,25 +77,26 @@ public class Analytics {
     /**
      * Percentage of crash-free device by day in the time range based on the selected versions. Api will return -1 if crash devices is greater than active devices.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsCrashFreeDevicePercentagesResponse analyticsCrashFreeDevicePercentages(org.openapis.openapi.models.operations.AnalyticsCrashFreeDevicePercentagesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsCrashFreeDevicePercentagesResponse analyticsCrashFreeDevicePercentages(org.openapis.openapi.models.operations.AnalyticsCrashFreeDevicePercentagesRequest request, org.openapis.openapi.models.operations.AnalyticsCrashFreeDevicePercentagesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsCrashFreeDevicePercentagesPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/crashfree_device_percentages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsCrashFreeDevicePercentagesRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/crashfree_device_percentages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsCrashFreeDevicePercentagesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsCrashFreeDevicePercentagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -130,25 +132,26 @@ public class Analytics {
      * Available for UWP apps only.
      * Count of crashes by day in the time range of the selected crash group with selected version. Available for UWP apps only.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsCrashGroupCountsResponse analyticsCrashGroupCounts(org.openapis.openapi.models.operations.AnalyticsCrashGroupCountsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsCrashGroupCountsResponse analyticsCrashGroupCounts(org.openapis.openapi.models.operations.AnalyticsCrashGroupCountsRequest request, org.openapis.openapi.models.operations.AnalyticsCrashGroupCountsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsCrashGroupCountsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/crash_counts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsCrashGroupCountsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/crash_counts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsCrashGroupCountsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsCrashGroupCountsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -184,25 +187,26 @@ public class Analytics {
      * Available for UWP apps only.
      * Top models of the selected crash group with selected version. Available for UWP apps only.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsCrashGroupModelCountsResponse analyticsCrashGroupModelCounts(org.openapis.openapi.models.operations.AnalyticsCrashGroupModelCountsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsCrashGroupModelCountsResponse analyticsCrashGroupModelCounts(org.openapis.openapi.models.operations.AnalyticsCrashGroupModelCountsRequest request, org.openapis.openapi.models.operations.AnalyticsCrashGroupModelCountsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsCrashGroupModelCountsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsCrashGroupModelCountsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsCrashGroupModelCountsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsCrashGroupModelCountsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -238,25 +242,26 @@ public class Analytics {
      * Available for UWP apps only.
      * Top OSes of the selected crash group with selected version. Available for UWP apps only.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsCrashGroupOperatingSystemCountsResponse analyticsCrashGroupOperatingSystemCounts(org.openapis.openapi.models.operations.AnalyticsCrashGroupOperatingSystemCountsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsCrashGroupOperatingSystemCountsResponse analyticsCrashGroupOperatingSystemCounts(org.openapis.openapi.models.operations.AnalyticsCrashGroupOperatingSystemCountsRequest request, org.openapis.openapi.models.operations.AnalyticsCrashGroupOperatingSystemCountsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsCrashGroupOperatingSystemCountsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/operating_systems", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsCrashGroupOperatingSystemCountsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/operating_systems", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsCrashGroupOperatingSystemCountsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsCrashGroupOperatingSystemCountsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -292,25 +297,26 @@ public class Analytics {
      * Available for UWP apps only.
      * Overall crashes and affected users count of the selected crash group with selected version. Available for UWP apps only.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsCrashGroupTotalsResponse analyticsCrashGroupTotals(org.openapis.openapi.models.operations.AnalyticsCrashGroupTotalsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsCrashGroupTotalsResponse analyticsCrashGroupTotals(org.openapis.openapi.models.operations.AnalyticsCrashGroupTotalsRequest request, org.openapis.openapi.models.operations.AnalyticsCrashGroupTotalsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsCrashGroupTotalsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/overall", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsCrashGroupTotalsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/overall", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsCrashGroupTotalsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsCrashGroupTotalsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -345,24 +351,25 @@ public class Analytics {
     /**
      * Overall crashes and affected users count of the selected crash groups with selected versions.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsCrashGroupsTotalsResponse analyticsCrashGroupsTotals(org.openapis.openapi.models.operations.AnalyticsCrashGroupsTotalsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsCrashGroupsTotalsResponse analyticsCrashGroupsTotals(org.openapis.openapi.models.operations.AnalyticsCrashGroupsTotalsRequest request, org.openapis.openapi.models.operations.AnalyticsCrashGroupsTotalsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsCrashGroupsTotalsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsCrashGroupsTotalsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -397,24 +404,25 @@ public class Analytics {
     /**
      * Creates or updates audience definition.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsCreateOrUpdateAudienceResponse analyticsCreateOrUpdateAudience(org.openapis.openapi.models.operations.AnalyticsCreateOrUpdateAudienceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsCreateOrUpdateAudienceResponse analyticsCreateOrUpdateAudience(org.openapis.openapi.models.operations.AnalyticsCreateOrUpdateAudienceRequest request, org.openapis.openapi.models.operations.AnalyticsCreateOrUpdateAudienceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsCreateOrUpdateAudiencePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsCreateOrUpdateAudienceRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -449,19 +457,20 @@ public class Analytics {
     /**
      * Deletes audience definition.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsDeleteAudienceResponse analyticsDeleteAudience(org.openapis.openapi.models.operations.AnalyticsDeleteAudienceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsDeleteAudienceResponse analyticsDeleteAudience(org.openapis.openapi.models.operations.AnalyticsDeleteAudienceRequest request, org.openapis.openapi.models.operations.AnalyticsDeleteAudienceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsDeleteAudiencePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsDeleteAudienceRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -490,24 +499,25 @@ public class Analytics {
     /**
      * Count of total downloads for the provided distribution releases.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsDistributionReleaseCountsResponse analyticsDistributionReleaseCounts(org.openapis.openapi.models.operations.AnalyticsDistributionReleaseCountsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsDistributionReleaseCountsResponse analyticsDistributionReleaseCounts(org.openapis.openapi.models.operations.AnalyticsDistributionReleaseCountsRequest request, org.openapis.openapi.models.operations.AnalyticsDistributionReleaseCountsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsDistributionReleaseCountsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/distribution/release_counts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsDistributionReleaseCountsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/distribution/release_counts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -542,19 +552,20 @@ public class Analytics {
     /**
      * Event properties.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsEventPropertiesResponse analyticsEventProperties(org.openapis.openapi.models.operations.AnalyticsEventPropertiesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsEventPropertiesResponse analyticsEventProperties(org.openapis.openapi.models.operations.AnalyticsEventPropertiesRequest request, org.openapis.openapi.models.operations.AnalyticsEventPropertiesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsEventPropertiesPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/properties", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsEventPropertiesRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/properties", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -589,19 +600,20 @@ public class Analytics {
     /**
      * Delete the set of Events with the specified event names.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsEventsDeleteResponse analyticsEventsDelete(org.openapis.openapi.models.operations.AnalyticsEventsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsEventsDeleteResponse analyticsEventsDelete(org.openapis.openapi.models.operations.AnalyticsEventsDeleteRequest request, org.openapis.openapi.models.operations.AnalyticsEventsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsEventsDeletePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsEventsDeleteRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -630,19 +642,20 @@ public class Analytics {
     /**
      * Delete the set of Events with the specified event names.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsEventsDeleteLogsResponse analyticsEventsDeleteLogs(org.openapis.openapi.models.operations.AnalyticsEventsDeleteLogsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsEventsDeleteLogsResponse analyticsEventsDeleteLogs(org.openapis.openapi.models.operations.AnalyticsEventsDeleteLogsRequest request, org.openapis.openapi.models.operations.AnalyticsEventsDeleteLogsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsEventsDeleteLogsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/event_logs/{event_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsEventsDeleteLogsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/event_logs/{event_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -671,25 +684,26 @@ public class Analytics {
     /**
      * Logs received between the specified start time and the current time. The API will return a maximum of 100 logs per call.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsGenericLogFlowResponse analyticsGenericLogFlow(org.openapis.openapi.models.operations.AnalyticsGenericLogFlowRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsGenericLogFlowResponse analyticsGenericLogFlow(org.openapis.openapi.models.operations.AnalyticsGenericLogFlowRequest request, org.openapis.openapi.models.operations.AnalyticsGenericLogFlowSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsGenericLogFlowPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/generic_log_flow", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsGenericLogFlowRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/generic_log_flow", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsGenericLogFlowQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsGenericLogFlowRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -724,19 +738,20 @@ public class Analytics {
     /**
      * Gets audience definition.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsGetAudienceResponse analyticsGetAudience(org.openapis.openapi.models.operations.AnalyticsGetAudienceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsGetAudienceResponse analyticsGetAudience(org.openapis.openapi.models.operations.AnalyticsGetAudienceRequest request, org.openapis.openapi.models.operations.AnalyticsGetAudienceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsGetAudiencePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsGetAudienceRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/{audience_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -771,25 +786,26 @@ public class Analytics {
     /**
      * Get list of audiences.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsListAudiencesResponse analyticsListAudiences(org.openapis.openapi.models.operations.AnalyticsListAudiencesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsListAudiencesResponse analyticsListAudiences(org.openapis.openapi.models.operations.AnalyticsListAudiencesRequest request, org.openapis.openapi.models.operations.AnalyticsListAudiencesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsListAudiencesPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsListAudiencesRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsListAudiencesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsListAudiencesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -824,19 +840,20 @@ public class Analytics {
     /**
      * Get list of custom properties.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsListCustomPropertiesResponse analyticsListCustomProperties(org.openapis.openapi.models.operations.AnalyticsListCustomPropertiesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsListCustomPropertiesResponse analyticsListCustomProperties(org.openapis.openapi.models.operations.AnalyticsListCustomPropertiesRequest request, org.openapis.openapi.models.operations.AnalyticsListCustomPropertiesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsListCustomPropertiesPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/metadata/custom_properties", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsListCustomPropertiesRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/metadata/custom_properties", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -871,19 +888,20 @@ public class Analytics {
     /**
      * Get list of device properties.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsListDevicePropertiesResponse analyticsListDeviceProperties(org.openapis.openapi.models.operations.AnalyticsListDevicePropertiesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsListDevicePropertiesResponse analyticsListDeviceProperties(org.openapis.openapi.models.operations.AnalyticsListDevicePropertiesRequest request, org.openapis.openapi.models.operations.AnalyticsListDevicePropertiesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsListDevicePropertiesPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/metadata/device_properties", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsListDevicePropertiesRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/metadata/device_properties", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -918,25 +936,26 @@ public class Analytics {
     /**
      * Get list of device property values.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsListDevicePropertyValuesResponse analyticsListDevicePropertyValues(org.openapis.openapi.models.operations.AnalyticsListDevicePropertyValuesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsListDevicePropertyValuesResponse analyticsListDevicePropertyValues(org.openapis.openapi.models.operations.AnalyticsListDevicePropertyValuesRequest request, org.openapis.openapi.models.operations.AnalyticsListDevicePropertyValuesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsListDevicePropertyValuesPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/metadata/device_properties/{property_name}/values", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsListDevicePropertyValuesRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/metadata/device_properties/{property_name}/values", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsListDevicePropertyValuesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsListDevicePropertyValuesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -971,25 +990,26 @@ public class Analytics {
     /**
      * Logs received between the specified start time and the current time. The API will return a maximum of 100 logs per call.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsLogFlowResponse analyticsLogFlow(org.openapis.openapi.models.operations.AnalyticsLogFlowRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsLogFlowResponse analyticsLogFlow(org.openapis.openapi.models.operations.AnalyticsLogFlowRequest request, org.openapis.openapi.models.operations.AnalyticsLogFlowSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsLogFlowPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/log_flow", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsLogFlowRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/log_flow", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsLogFlowQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsLogFlowRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1024,24 +1044,25 @@ public class Analytics {
     /**
      * Tests audience definition.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsTestAudienceResponse analyticsTestAudience(org.openapis.openapi.models.operations.AnalyticsTestAudienceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsTestAudienceResponse analyticsTestAudience(org.openapis.openapi.models.operations.AnalyticsTestAudienceRequest request, org.openapis.openapi.models.operations.AnalyticsTestAudienceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsTestAudiencePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/definition/test", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsTestAudienceRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/audiences/definition/test", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1076,19 +1097,20 @@ public class Analytics {
     /**
      * **Warning, this operation is not reversible.**  -  - A successful call to this API will permanently stop ingesting any logs received via SDK by app_id, and cannot be restored. We advise caution when using this API, it is designed to permanently disable an app_id. - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppBlockLogsResponse appBlockLogs(org.openapis.openapi.models.operations.AppBlockLogsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppBlockLogsResponse appBlockLogs(org.openapis.openapi.models.operations.AppBlockLogsRequest request, org.openapis.openapi.models.operations.AppBlockLogsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppBlockLogsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/devices/block_logs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppBlockLogsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/devices/block_logs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1114,25 +1136,26 @@ public class Analytics {
     /**
      * Get session logs by crash ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CrashesListSessionLogsResponse crashesListSessionLogs(org.openapis.openapi.models.operations.CrashesListSessionLogsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CrashesListSessionLogsResponse crashesListSessionLogs(org.openapis.openapi.models.operations.CrashesListSessionLogsRequest request, org.openapis.openapi.models.operations.CrashesListSessionLogsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CrashesListSessionLogsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/crashes/{crash_id}/session_logs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CrashesListSessionLogsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/crashes/{crash_id}/session_logs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CrashesListSessionLogsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CrashesListSessionLogsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1167,19 +1190,20 @@ public class Analytics {
     /**
      * **Warning, this operation is not reversible.** -  -  A successful call to this API will permanently stop ingesting any logs received via SDK for the given installation ID, and cannot be restored. We advise caution when using this API, it is designed to permanently disable collection from a specific installation of the app on a device, usually following the request from a user. - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DevicesBlockLogsResponse devicesBlockLogs(org.openapis.openapi.models.operations.DevicesBlockLogsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DevicesBlockLogsResponse devicesBlockLogs(org.openapis.openapi.models.operations.DevicesBlockLogsRequest request, org.openapis.openapi.models.operations.DevicesBlockLogsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DevicesBlockLogsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/devices/block_logs/{install_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DevicesBlockLogsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/devices/block_logs/{install_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

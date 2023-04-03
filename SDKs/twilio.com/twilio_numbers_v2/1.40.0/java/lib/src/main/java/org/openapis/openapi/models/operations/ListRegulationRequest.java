@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRegulationRequest {
-    
-    public ListRegulationQueryParams queryParams;
-    public ListRegulationRequest withQueryParams(ListRegulationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The type of End User the regulation requires - can be `individual` or `business`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndUserType")
+    public org.openapis.openapi.models.shared.RegulationEnumEndUserTypeEnum endUserType;
+    public ListRegulationRequest withEndUserType(org.openapis.openapi.models.shared.RegulationEnumEndUserTypeEnum endUserType) {
+        this.endUserType = endUserType;
         return this;
     }
     
-    
-    public ListRegulationSecurity security;
-    public ListRegulationRequest withSecurity(ListRegulationSecurity security) {
-        this.security = security;
+    /**
+     * The ISO country code of the phone number's country.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IsoCountry")
+    public String isoCountry;
+    public ListRegulationRequest withIsoCountry(String isoCountry) {
+        this.isoCountry = isoCountry;
         return this;
     }
     
+    /**
+     * The type of phone number that the regulatory requiremnt is restricting.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NumberType")
+    public String numberType;
+    public ListRegulationRequest withNumberType(String numberType) {
+        this.numberType = numberType;
+        return this;
+    }
     
-    public String serverURL;
-    public ListRegulationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListRegulationRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListRegulationRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListRegulationRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

@@ -7,24 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegisterCACertificateRequest {
-    
-    public RegisterCACertificateQueryParams queryParams;
-    public RegisterCACertificateRequest withQueryParams(RegisterCACertificateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public RegisterCACertificateHeaders headers;
-    public RegisterCACertificateRequest withHeaders(RegisterCACertificateHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public RegisterCACertificateRequestBody request;
-    public RegisterCACertificateRequest withRequest(RegisterCACertificateRequestBody request) {
-        this.request = request;
+    public RegisterCACertificateRequestBody requestBody;
+    public RegisterCACertificateRequest withRequestBody(RegisterCACertificateRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public RegisterCACertificateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public RegisterCACertificateRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public RegisterCACertificateRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public RegisterCACertificateRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public RegisterCACertificateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public RegisterCACertificateRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public RegisterCACertificateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * Allows this CA certificate to be used for auto registration of device certificates.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allowAutoRegistration")
+    public Boolean allowAutoRegistration;
+    public RegisterCACertificateRequest withAllowAutoRegistration(Boolean allowAutoRegistration) {
+        this.allowAutoRegistration = allowAutoRegistration;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A boolean value that specifies if the CA certificate is set to active.&lt;/p&gt; &lt;p&gt;Valid values: &lt;code&gt;ACTIVE | INACTIVE&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setAsActive")
+    public Boolean setAsActive;
+    public RegisterCACertificateRequest withSetAsActive(Boolean setAsActive) {
+        this.setAsActive = setAsActive;
         return this;
     }
     

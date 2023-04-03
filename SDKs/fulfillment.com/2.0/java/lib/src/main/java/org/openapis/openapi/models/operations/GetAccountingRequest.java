@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountingRequest {
-    
-    public GetAccountingQueryParams queryParams;
-    public GetAccountingRequest withQueryParams(GetAccountingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Orders invoice date. Date-time in ISO 8601 format for selecting orders after, or at, the specified time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDate")
+    public String fromDate;
+    public GetAccountingRequest withFromDate(String fromDate) {
+        this.fromDate = fromDate;
         return this;
     }
     
+    /**
+     * Adds additional information to the response, uses a CSV format for multiple values.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hydrate")
+    public GetAccountingHydrateEnum[] hydrate;
+    public GetAccountingRequest withHydrate(GetAccountingHydrateEnum[] hydrate) {
+        this.hydrate = hydrate;
+        return this;
+    }
     
-    public GetAccountingSecurity security;
-    public GetAccountingRequest withSecurity(GetAccountingSecurity security) {
-        this.security = security;
+    /**
+     * The numbers of items to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetAccountingRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * A CSV of FDC order id, '123' or '1,2,3'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderIds")
+    public Long[] orderIds;
+    public GetAccountingRequest withOrderIds(Long[] orderIds) {
+        this.orderIds = orderIds;
+        return this;
+    }
+    
+    /**
+     * A multiplier of the number of items (limit parameter) to skip before returning results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetAccountingRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Orders invoice date. Date-time in ISO 8601 format for selecting orders before, or at, the specified time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDate")
+    public String toDate;
+    public GetAccountingRequest withToDate(String toDate) {
+        this.toDate = toDate;
+        return this;
+    }
+    
+    /**
+     * A CSV of warehouse id, '123' or '1,2,3'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=warehouseIds")
+    public Long[] warehouseIds;
+    public GetAccountingRequest withWarehouseIds(Long[] warehouseIds) {
+        this.warehouseIds = warehouseIds;
         return this;
     }
     

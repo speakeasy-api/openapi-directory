@@ -37,7 +37,7 @@ public class Head {
      */
     public org.openapis.openapi.models.operations.HeadKeyPKResponse headKeyPK(org.openapis.openapi.models.operations.HeadKeyPKRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.HeadKeyPKPathParams.class, baseUrl, "/key/{PK}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.HeadKeyPKRequest.class, baseUrl, "/key/{PK}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("HEAD");
@@ -76,7 +76,7 @@ public class Head {
      */
     public org.openapis.openapi.models.operations.SignRetrieveHeadResponse signRetrieveHead(org.openapis.openapi.models.operations.SignRetrieveHeadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SignRetrieveHeadPathParams.class, baseUrl, "/scope/{job}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SignRetrieveHeadRequest.class, baseUrl, "/scope/{job}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("HEAD");

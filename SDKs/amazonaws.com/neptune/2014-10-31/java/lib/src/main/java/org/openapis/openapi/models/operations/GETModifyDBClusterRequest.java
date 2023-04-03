@@ -4,20 +4,259 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyDBClusterRequest {
-    
-    public GETModifyDBClusterQueryParams queryParams;
-    public GETModifyDBClusterRequest withQueryParams(GETModifyDBClusterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyDBClusterActionEnum action;
+    public GETModifyDBClusterRequest withAction(GETModifyDBClusterActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;A value that indicates whether upgrades between different major versions are allowed.&lt;/p&gt; &lt;p&gt;Constraints: You must set the allow-major-version-upgrade flag when providing an &lt;code&gt;EngineVersion&lt;/code&gt; parameter that uses a different major version than the DB cluster's current version.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowMajorVersionUpgrade")
+    public Boolean allowMajorVersionUpgrade;
+    public GETModifyDBClusterRequest withAllowMajorVersionUpgrade(Boolean allowMajorVersionUpgrade) {
+        this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
+        return this;
+    }
     
-    public GETModifyDBClusterHeaders headers;
-    public GETModifyDBClusterRequest withHeaders(GETModifyDBClusterHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;A value that specifies whether the modifications in this request and any pending modifications are asynchronously applied as soon as possible, regardless of the &lt;code&gt;PreferredMaintenanceWindow&lt;/code&gt; setting for the DB cluster. If this parameter is set to &lt;code&gt;false&lt;/code&gt;, changes to the DB cluster are applied during the next maintenance window.&lt;/p&gt; &lt;p&gt;The &lt;code&gt;ApplyImmediately&lt;/code&gt; parameter only affects &lt;code&gt;NewDBClusterIdentifier&lt;/code&gt; values. If you set the &lt;code&gt;ApplyImmediately&lt;/code&gt; parameter value to false, then changes to &lt;code&gt;NewDBClusterIdentifier&lt;/code&gt; values are applied during the next maintenance window. All other changes are applied immediately, regardless of the value of the &lt;code&gt;ApplyImmediately&lt;/code&gt; parameter.&lt;/p&gt; &lt;p&gt;Default: &lt;code&gt;false&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplyImmediately")
+    public Boolean applyImmediately;
+    public GETModifyDBClusterRequest withApplyImmediately(Boolean applyImmediately) {
+        this.applyImmediately = applyImmediately;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The number of days for which automated backups are retained. You must specify a minimum value of 1.&lt;/p&gt; &lt;p&gt;Default: 1&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must be a value from 1 to 35&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BackupRetentionPeriod")
+    public Long backupRetentionPeriod;
+    public GETModifyDBClusterRequest withBackupRetentionPeriod(Long backupRetentionPeriod) {
+        this.backupRetentionPeriod = backupRetentionPeriod;
+        return this;
+    }
+    
+    /**
+     * The configuration setting for the log types to be enabled for export to CloudWatch Logs for a specific DB cluster.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CloudwatchLogsExportConfiguration")
+    public GETModifyDBClusterCloudwatchLogsExportConfiguration cloudwatchLogsExportConfiguration;
+    public GETModifyDBClusterRequest withCloudwatchLogsExportConfiguration(GETModifyDBClusterCloudwatchLogsExportConfiguration cloudwatchLogsExportConfiguration) {
+        this.cloudwatchLogsExportConfiguration = cloudwatchLogsExportConfiguration;
+        return this;
+    }
+    
+    /**
+     *  &lt;i&gt;If set to &lt;code&gt;true&lt;/code&gt;, tags are copied to any snapshot of the DB cluster that is created.&lt;/i&gt; 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CopyTagsToSnapshot")
+    public Boolean copyTagsToSnapshot;
+    public GETModifyDBClusterRequest withCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
+        this.copyTagsToSnapshot = copyTagsToSnapshot;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The DB cluster identifier for the cluster being modified. This parameter is not case-sensitive.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must match the identifier of an existing DBCluster.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterIdentifier")
+    public String dbClusterIdentifier;
+    public GETModifyDBClusterRequest withDBClusterIdentifier(String dbClusterIdentifier) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * The name of the DB cluster parameter group to use for the DB cluster.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterParameterGroupName")
+    public String dbClusterParameterGroupName;
+    public GETModifyDBClusterRequest withDBClusterParameterGroupName(String dbClusterParameterGroupName) {
+        this.dbClusterParameterGroupName = dbClusterParameterGroupName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the DB parameter group to apply to all instances of the DB cluster. &lt;/p&gt; &lt;note&gt; &lt;p&gt;When you apply a parameter group using &lt;code&gt;DBInstanceParameterGroupName&lt;/code&gt;, parameter changes aren't applied during the next maintenance window but instead are applied immediately.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Default: The existing name setting&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;The DB parameter group must be in the same DB parameter group family as the target DB cluster version.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;The &lt;code&gt;DBInstanceParameterGroupName&lt;/code&gt; parameter is only valid in combination with the &lt;code&gt;AllowMajorVersionUpgrade&lt;/code&gt; parameter.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceParameterGroupName")
+    public String dbInstanceParameterGroupName;
+    public GETModifyDBClusterRequest withDBInstanceParameterGroupName(String dbInstanceParameterGroupName) {
+        this.dbInstanceParameterGroupName = dbInstanceParameterGroupName;
+        return this;
+    }
+    
+    /**
+     * A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeletionProtection")
+    public Boolean deletionProtection;
+    public GETModifyDBClusterRequest withDeletionProtection(Boolean deletionProtection) {
+        this.deletionProtection = deletionProtection;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;True to enable mapping of Amazon Identity and Access Management (IAM) accounts to database accounts, and otherwise false.&lt;/p&gt; &lt;p&gt;Default: &lt;code&gt;false&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableIAMDatabaseAuthentication")
+    public Boolean enableIAMDatabaseAuthentication;
+    public GETModifyDBClusterRequest withEnableIAMDatabaseAuthentication(Boolean enableIAMDatabaseAuthentication) {
+        this.enableIAMDatabaseAuthentication = enableIAMDatabaseAuthentication;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The version number of the database engine to which you want to upgrade. Changing this parameter results in an outage. The change is applied during the next maintenance window unless the &lt;code&gt;ApplyImmediately&lt;/code&gt; parameter is set to true.&lt;/p&gt; &lt;p&gt;For a list of valid engine versions, see &lt;a href="https://docs.aws.amazon.com/neptune/latest/userguide/engine-releases.html"&gt;Engine Releases for Amazon Neptune&lt;/a&gt;, or call &lt;a href="https://docs.aws.amazon.com/neptune/latest/userguide/api-other-apis.html#DescribeDBEngineVersions"&gt;DescribeDBEngineVersions&lt;/a&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EngineVersion")
+    public String engineVersion;
+    public GETModifyDBClusterRequest withEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    
+    /**
+     * Not supported by Neptune.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MasterUserPassword")
+    public String masterUserPassword;
+    public GETModifyDBClusterRequest withMasterUserPassword(String masterUserPassword) {
+        this.masterUserPassword = masterUserPassword;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The new DB cluster identifier for the DB cluster when renaming a DB cluster. This value is stored as a lowercase string.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must contain from 1 to 63 letters, numbers, or hyphens&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;The first character must be a letter&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Cannot end with a hyphen or contain two consecutive hyphens&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Example: &lt;code&gt;my-cluster2&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NewDBClusterIdentifier")
+    public String newDBClusterIdentifier;
+    public GETModifyDBClusterRequest withNewDBClusterIdentifier(String newDBClusterIdentifier) {
+        this.newDBClusterIdentifier = newDBClusterIdentifier;
+        return this;
+    }
+    
+    /**
+     *  &lt;i&gt;Not supported by Neptune.&lt;/i&gt; 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OptionGroupName")
+    public String optionGroupName;
+    public GETModifyDBClusterRequest withOptionGroupName(String optionGroupName) {
+        this.optionGroupName = optionGroupName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The port number on which the DB cluster accepts connections.&lt;/p&gt; &lt;p&gt;Constraints: Value must be &lt;code&gt;1150-65535&lt;/code&gt; &lt;/p&gt; &lt;p&gt;Default: The same port as the original DB cluster.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Port")
+    public Long port;
+    public GETModifyDBClusterRequest withPort(Long port) {
+        this.port = port;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The daily time range during which automated backups are created if automated backups are enabled, using the &lt;code&gt;BackupRetentionPeriod&lt;/code&gt; parameter.&lt;/p&gt; &lt;p&gt;The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Region.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must be in the format &lt;code&gt;hh24:mi-hh24:mi&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Must be in Universal Coordinated Time (UTC).&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Must not conflict with the preferred maintenance window.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Must be at least 30 minutes.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PreferredBackupWindow")
+    public String preferredBackupWindow;
+    public GETModifyDBClusterRequest withPreferredBackupWindow(String preferredBackupWindow) {
+        this.preferredBackupWindow = preferredBackupWindow;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).&lt;/p&gt; &lt;p&gt;Format: &lt;code&gt;ddd:hh24:mi-ddd:hh24:mi&lt;/code&gt; &lt;/p&gt; &lt;p&gt;The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Region, occurring on a random day of the week.&lt;/p&gt; &lt;p&gt;Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.&lt;/p&gt; &lt;p&gt;Constraints: Minimum 30-minute window.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PreferredMaintenanceWindow")
+    public String preferredMaintenanceWindow;
+    public GETModifyDBClusterRequest withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
+        this.preferredMaintenanceWindow = preferredMaintenanceWindow;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Contains the scaling configuration of a Neptune Serverless DB cluster.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/neptune/latest/userguide/neptune-serverless-using.html"&gt;Using Amazon Neptune Serverless&lt;/a&gt; in the &lt;i&gt;Amazon Neptune User Guide&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServerlessV2ScalingConfiguration")
+    public GETModifyDBClusterServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration;
+    public GETModifyDBClusterRequest withServerlessV2ScalingConfiguration(GETModifyDBClusterServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration) {
+        this.serverlessV2ScalingConfiguration = serverlessV2ScalingConfiguration;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyDBClusterVersionEnum version;
+    public GETModifyDBClusterRequest withVersion(GETModifyDBClusterVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * A list of VPC security groups that the DB cluster will belong to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcSecurityGroupIds")
+    public String[] vpcSecurityGroupIds;
+    public GETModifyDBClusterRequest withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
+        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyDBClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyDBClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyDBClusterRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyDBClusterRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyDBClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyDBClusterRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyDBClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

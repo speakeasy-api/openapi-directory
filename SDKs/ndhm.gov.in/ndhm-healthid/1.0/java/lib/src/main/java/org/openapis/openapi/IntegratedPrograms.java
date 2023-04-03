@@ -34,23 +34,24 @@ public class IntegratedPrograms {
      * Create health id using Aadhaar Demo Auth.
      * Create health id using Aadhaar Demo Auth.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateHealthIdByDemoAuthUsingPOSTResponse createHealthIdByDemoAuthUsingPOST(org.openapis.openapi.models.operations.CreateHealthIdByDemoAuthUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateHealthIdByDemoAuthUsingPOSTResponse createHealthIdByDemoAuthUsingPOST(org.openapis.openapi.models.operations.CreateHealthIdByDemoAuthUsingPOSTRequest request, org.openapis.openapi.models.operations.CreateHealthIdByDemoAuthUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/hid/benefit/createHealthId/demo/auth");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createHIdDemoAuthRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -59,7 +60,7 @@ public class IntegratedPrograms {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -88,23 +89,24 @@ public class IntegratedPrograms {
      * Create health id using mobile Authentication.
      * Create health id using mobile Authentication.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateHealthIdByMobileUsingPOSTResponse createHealthIdByMobileUsingPOST(org.openapis.openapi.models.operations.CreateHealthIdByMobileUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateHealthIdByMobileUsingPOSTResponse createHealthIdByMobileUsingPOST(org.openapis.openapi.models.operations.CreateHealthIdByMobileUsingPOSTRequest request, org.openapis.openapi.models.operations.CreateHealthIdByMobileUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/hid/benefit/mobile/createHealthId");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createHidMobileRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -113,7 +115,7 @@ public class IntegratedPrograms {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -142,23 +144,24 @@ public class IntegratedPrograms {
      * De-Linked with hid.
      * De-Linked with hid.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DelinkHidBenefitUsingPOSTResponse delinkHidBenefitUsingPOST(org.openapis.openapi.models.operations.DelinkHidBenefitUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DelinkHidBenefitUsingPOSTResponse delinkHidBenefitUsingPOST(org.openapis.openapi.models.operations.DelinkHidBenefitUsingPOSTRequest request, org.openapis.openapi.models.operations.DelinkHidBenefitUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/hid/benefit/delink");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "hidBenefitDelinkRequestPayload", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -167,7 +170,7 @@ public class IntegratedPrograms {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -196,23 +199,24 @@ public class IntegratedPrograms {
      * Search health id number using aadhar or aadhar token.
      * Search health id number using aadhar or aadhar token.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindByAadharUsingPOSTResponse findByAadharUsingPOST(org.openapis.openapi.models.operations.FindByAadharUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindByAadharUsingPOSTResponse findByAadharUsingPOST(org.openapis.openapi.models.operations.FindByAadharUsingPOSTRequest request, org.openapis.openapi.models.operations.FindByAadharUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/hid/benefit/search/aadhaar");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "aadharNumberRequestPayload", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -221,7 +225,7 @@ public class IntegratedPrograms {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -250,23 +254,24 @@ public class IntegratedPrograms {
      * Search benefit using health id number.
      * Search benefit using health id number
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindByHealthIdUsingPOSTResponse findByHealthIdUsingPOST(org.openapis.openapi.models.operations.FindByHealthIdUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindByHealthIdUsingPOSTResponse findByHealthIdUsingPOST(org.openapis.openapi.models.operations.FindByHealthIdUsingPOSTRequest request, org.openapis.openapi.models.operations.FindByHealthIdUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/hid/benefit/search/healthIdNumber");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "hidBenefitNameSearchRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -275,7 +280,7 @@ public class IntegratedPrograms {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -304,23 +309,24 @@ public class IntegratedPrograms {
      * Generate Aadhaar OTP on registrered mobile number
      * Generate Aadhaar OTP on registrered mobile number
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOST2Response generateAadharOTPUsingPOST2(org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOST2Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOST2Response generateAadharOTPUsingPOST2(org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOST2Request request, org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOST2Security security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/hid/benefit/aadhaar/generateOtp");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "aadharOtpGenerateRequestPayLoad", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -329,7 +335,7 @@ public class IntegratedPrograms {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,23 +364,24 @@ public class IntegratedPrograms {
      * Generate mobile OTP on registrered mobile number
      * Generate mobile OTP on registrered mobile number
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenerateMobileOTPUsingPOSTResponse generateMobileOtpUsingPOST(org.openapis.openapi.models.operations.GenerateMobileOtpUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenerateMobileOTPUsingPOSTResponse generateMobileOtpUsingPOST(org.openapis.openapi.models.operations.GenerateMobileOtpUsingPOSTRequest request, org.openapis.openapi.models.operations.GenerateMobileOtpUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/hid/benefit/mobile/generateOtp");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "generateMobileOTPRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -383,7 +390,7 @@ public class IntegratedPrograms {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -412,23 +419,24 @@ public class IntegratedPrograms {
      * Linked with hid.
      * Linked with hid.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LinkHidBenefitUsingPOSTResponse linkHidBenefitUsingPOST(org.openapis.openapi.models.operations.LinkHidBenefitUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LinkHidBenefitUsingPOSTResponse linkHidBenefitUsingPOST(org.openapis.openapi.models.operations.LinkHidBenefitUsingPOSTRequest request, org.openapis.openapi.models.operations.LinkHidBenefitUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/hid/benefit/link");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "hidBenefitLinkedRequestPayload", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -437,7 +445,7 @@ public class IntegratedPrograms {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -466,23 +474,24 @@ public class IntegratedPrograms {
      * Create health id using notify Benefit.
      * Create health id using notify Benefit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.NotifyBenefitUsingPOSTResponse notifyBenefitUsingPOST(org.openapis.openapi.models.operations.NotifyBenefitUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.NotifyBenefitUsingPOSTResponse notifyBenefitUsingPOST(org.openapis.openapi.models.operations.NotifyBenefitUsingPOSTRequest request, org.openapis.openapi.models.operations.NotifyBenefitUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/hid/benefit/notify/benefit");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createHidNotifyBenefitRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -491,7 +500,7 @@ public class IntegratedPrograms {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -519,23 +528,24 @@ public class IntegratedPrograms {
     /**
      * Update account information
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateAccountInformationUsingPOST1Response updateAccountInformationUsingPOST1(org.openapis.openapi.models.operations.UpdateAccountInformationUsingPOST1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateAccountInformationUsingPOST1Response updateAccountInformationUsingPOST1(org.openapis.openapi.models.operations.UpdateAccountInformationUsingPOST1Request request, org.openapis.openapi.models.operations.UpdateAccountInformationUsingPOST1Security security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/hid/benefit/update/profile");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "hidUpdateAccountRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -544,7 +554,7 @@ public class IntegratedPrograms {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -572,23 +582,24 @@ public class IntegratedPrograms {
     /**
      * Update mobile number for account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateMobileInformationUsingPOSTResponse updateMobileInformationUsingPOST(org.openapis.openapi.models.operations.UpdateMobileInformationUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateMobileInformationUsingPOSTResponse updateMobileInformationUsingPOST(org.openapis.openapi.models.operations.UpdateMobileInformationUsingPOSTRequest request, org.openapis.openapi.models.operations.UpdateMobileInformationUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/hid/benefit/update/mobile");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "hidUpdateMobiletRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -597,7 +608,7 @@ public class IntegratedPrograms {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -626,23 +637,24 @@ public class IntegratedPrograms {
      * Update health id status .
      * Update health id status.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateStatusUsingPOSTResponse updateStatusUsingPOST(org.openapis.openapi.models.operations.UpdateStatusUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateStatusUsingPOSTResponse updateStatusUsingPOST(org.openapis.openapi.models.operations.UpdateStatusUsingPOSTRequest request, org.openapis.openapi.models.operations.UpdateStatusUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/hid/benefit/update/status");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "hidStatusRequestPayload", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -651,7 +663,7 @@ public class IntegratedPrograms {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -680,23 +692,24 @@ public class IntegratedPrograms {
      * Create health id using Aadhaar Number Otp.
      * Create health id using Aadhaar number opt
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VerifyAadharOtpUsingPOSTResponse verifyAadharOtpUsingPOST(org.openapis.openapi.models.operations.VerifyAadharOtpUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VerifyAadharOtpUsingPOSTResponse verifyAadharOtpUsingPOST(org.openapis.openapi.models.operations.VerifyAadharOtpUsingPOSTRequest request, org.openapis.openapi.models.operations.VerifyAadharOtpUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/hid/benefit/aadhaar/verifyAadharOtp");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createHealthIdOptRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -705,7 +718,7 @@ public class IntegratedPrograms {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -734,23 +747,24 @@ public class IntegratedPrograms {
      * Create health id using Biometric Authentication.
      * Create health id using Biometric Authentication.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VerifyBioUsingPOSTResponse verifyBioUsingPOST(org.openapis.openapi.models.operations.VerifyBioUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VerifyBioUsingPOSTResponse verifyBioUsingPOST(org.openapis.openapi.models.operations.VerifyBioUsingPOSTRequest request, org.openapis.openapi.models.operations.VerifyBioUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/hid/benefit/aadhaar/verifyBio");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createHidBiometricRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -759,7 +773,7 @@ public class IntegratedPrograms {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

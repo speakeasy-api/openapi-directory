@@ -39,7 +39,7 @@ public class Sflow {
      */
     public org.openapis.openapi.models.operations.ProtocolSflowGetArgsResponse protocolSflowGetArgs(org.openapis.openapi.models.operations.ProtocolSflowGetArgsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSflowGetArgsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/sflow/get/args", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSflowGetArgsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/sflow/get/args", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -81,7 +81,7 @@ public class Sflow {
      */
     public org.openapis.openapi.models.operations.ProtocolSflowGetConfigResponse protocolSflowGetConfig(org.openapis.openapi.models.operations.ProtocolSflowGetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSflowGetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/sflow/get/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSflowGetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/sflow/get/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -123,7 +123,7 @@ public class Sflow {
      */
     public org.openapis.openapi.models.operations.ProtocolSflowGetStatisticsResponse protocolSflowGetStatistics(org.openapis.openapi.models.operations.ProtocolSflowGetStatisticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSflowGetStatisticsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/sflow/get/statistics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSflowGetStatisticsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/sflow/get/statistics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -206,7 +206,7 @@ public class Sflow {
      */
     public org.openapis.openapi.models.operations.ProtocolSflowGetTraceResponse protocolSflowGetTrace(org.openapis.openapi.models.operations.ProtocolSflowGetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSflowGetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/sflow/get/trace", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSflowGetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/sflow/get/trace", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -248,7 +248,7 @@ public class Sflow {
      */
     public org.openapis.openapi.models.operations.ProtocolSflowHaltResponse protocolSflowHalt(org.openapis.openapi.models.operations.ProtocolSflowHaltRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSflowHaltPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/sflow/halt", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSflowHaltRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/sflow/halt", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -289,7 +289,7 @@ public class Sflow {
      */
     public org.openapis.openapi.models.operations.ProtocolSflowReloadResponse protocolSflowReload(org.openapis.openapi.models.operations.ProtocolSflowReloadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSflowReloadPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/sflow/reload", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSflowReloadRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/sflow/reload", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -330,7 +330,7 @@ public class Sflow {
      */
     public org.openapis.openapi.models.operations.ProtocolSflowResumeResponse protocolSflowResume(org.openapis.openapi.models.operations.ProtocolSflowResumeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSflowResumePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/sflow/resume", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSflowResumeRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/sflow/resume", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -371,7 +371,7 @@ public class Sflow {
      */
     public org.openapis.openapi.models.operations.ProtocolSflowSetConfigResponse protocolSflowSetConfig(org.openapis.openapi.models.operations.ProtocolSflowSetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSflowSetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/sflow/set/config/{argument}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSflowSetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/sflow/set/config/{argument}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -412,7 +412,7 @@ public class Sflow {
      */
     public org.openapis.openapi.models.operations.ProtocolSflowSetTraceResponse protocolSflowSetTrace(org.openapis.openapi.models.operations.ProtocolSflowSetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSflowSetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/sflow/set/trace/{enableOrNot}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSflowSetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/sflow/set/trace/{enableOrNot}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

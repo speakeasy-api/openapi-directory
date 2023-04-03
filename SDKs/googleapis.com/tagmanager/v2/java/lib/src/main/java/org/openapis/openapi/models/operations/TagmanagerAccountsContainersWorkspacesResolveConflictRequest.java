@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagmanagerAccountsContainersWorkspacesResolveConflictRequest {
-    
-    public TagmanagerAccountsContainersWorkspacesResolveConflictPathParams pathParams;
-    public TagmanagerAccountsContainersWorkspacesResolveConflictRequest withPathParams(TagmanagerAccountsContainersWorkspacesResolveConflictPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public TagmanagerAccountsContainersWorkspacesResolveConflictQueryParams queryParams;
-    public TagmanagerAccountsContainersWorkspacesResolveConflictRequest withQueryParams(TagmanagerAccountsContainersWorkspacesResolveConflictQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public TagmanagerAccountsContainersWorkspacesResolveConflictRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Entity request;
-    public TagmanagerAccountsContainersWorkspacesResolveConflictRequest withRequest(org.openapis.openapi.models.shared.Entity request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Entity entity;
+    public TagmanagerAccountsContainersWorkspacesResolveConflictRequest withEntity(org.openapis.openapi.models.shared.Entity entity) {
+        this.entity = entity;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public TagmanagerAccountsContainersWorkspacesResolveConflictRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public TagmanagerAccountsContainersWorkspacesResolveConflictSecurity security;
-    public TagmanagerAccountsContainersWorkspacesResolveConflictRequest withSecurity(TagmanagerAccountsContainersWorkspacesResolveConflictSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public TagmanagerAccountsContainersWorkspacesResolveConflictRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public TagmanagerAccountsContainersWorkspacesResolveConflictRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public TagmanagerAccountsContainersWorkspacesResolveConflictRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * When provided, this fingerprint must match the fingerprint of the entity_in_workspace in the merge conflict.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fingerprint")
+    public String fingerprint;
+    public TagmanagerAccountsContainersWorkspacesResolveConflictRequest withFingerprint(String fingerprint) {
+        this.fingerprint = fingerprint;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public TagmanagerAccountsContainersWorkspacesResolveConflictRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public TagmanagerAccountsContainersWorkspacesResolveConflictRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * GTM Workspace's API relative path. Example: accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public TagmanagerAccountsContainersWorkspacesResolveConflictRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public TagmanagerAccountsContainersWorkspacesResolveConflictRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public TagmanagerAccountsContainersWorkspacesResolveConflictRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public TagmanagerAccountsContainersWorkspacesResolveConflictRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public TagmanagerAccountsContainersWorkspacesResolveConflictRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllImageUrlsRequest {
-    
-    public GetAllImageUrlsPathParams pathParams;
-    public GetAllImageUrlsRequest withPathParams(GetAllImageUrlsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetAllImageUrlsSecurity security;
-    public GetAllImageUrlsRequest withSecurity(GetAllImageUrlsSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
+    public String organizationUuid;
+    public GetAllImageUrlsRequest withOrganizationUuid(String organizationUuid) {
+        this.organizationUuid = organizationUuid;
         return this;
     }
     

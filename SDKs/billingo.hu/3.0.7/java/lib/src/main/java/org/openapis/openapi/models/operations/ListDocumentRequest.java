@@ -4,13 +4,121 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDocumentRequest {
+    /**
+     * Filter documents by the identifier of your DocumentBlock.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=block_id")
+    public Long blockId;
+    public ListDocumentRequest withBlockId(Long blockId) {
+        this.blockId = blockId;
+        return this;
+    }
     
-    public ListDocumentQueryParams queryParams;
-    public ListDocumentRequest withQueryParams(ListDocumentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter documents by date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public LocalDate endDate;
+    public ListDocumentRequest withEndDate(LocalDate endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * Ending number of the document, should not contain year or any other formatting. Required if `end_year` given
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_number")
+    public Long endNumber;
+    public ListDocumentRequest withEndNumber(Long endNumber) {
+        this.endNumber = endNumber;
+        return this;
+    }
+    
+    /**
+     * Year for `end_number` parameter. Required if `end_number` given.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_year")
+    public Long endYear;
+    public ListDocumentRequest withEndYear(Long endYear) {
+        this.endYear = endYear;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ListDocumentRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Filter documents by the identifier of your Partner.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partner_id")
+    public Long partnerId;
+    public ListDocumentRequest withPartnerId(Long partnerId) {
+        this.partnerId = partnerId;
+        return this;
+    }
+    
+    /**
+     * Filter documents by PaymentMethod value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payment_method")
+    public org.openapis.openapi.models.shared.PaymentMethodEnum paymentMethod;
+    public ListDocumentRequest withPaymentMethod(org.openapis.openapi.models.shared.PaymentMethodEnum paymentMethod) {
+        this.paymentMethod = paymentMethod;
+        return this;
+    }
+    
+    /**
+     * Filter documents by PaymentStatus value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payment_status")
+    public org.openapis.openapi.models.shared.PaymentStatusEnum paymentStatus;
+    public ListDocumentRequest withPaymentStatus(org.openapis.openapi.models.shared.PaymentStatusEnum paymentStatus) {
+        this.paymentStatus = paymentStatus;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ListDocumentRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Filter documents by date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public LocalDate startDate;
+    public ListDocumentRequest withStartDate(LocalDate startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * Starting number of the document, should not contain year or any other formatting. Required if `start_year` given
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_number")
+    public Long startNumber;
+    public ListDocumentRequest withStartNumber(Long startNumber) {
+        this.startNumber = startNumber;
+        return this;
+    }
+    
+    /**
+     * Year for `start_number` parameter. Required if `start_number` given.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_year")
+    public Long startYear;
+    public ListDocumentRequest withStartYear(Long startYear) {
+        this.startYear = startYear;
         return this;
     }
     

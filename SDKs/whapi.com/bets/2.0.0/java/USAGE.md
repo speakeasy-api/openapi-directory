@@ -4,9 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CashinPathParams;
-import org.openapis.openapi.models.operations.CashinQueryParams;
-import org.openapis.openapi.models.operations.CashinHeaders;
 import org.openapis.openapi.models.operations.CashinRequest;
 import org.openapis.openapi.models.operations.CashinResponse;
 
@@ -17,19 +14,13 @@ public class Application {
                 .build();
 
             CashinRequest req = new CashinRequest() {{
-                pathParams = new CashinPathParams() {{
-                    betId = "corrupti";
-                }};
-                queryParams = new CashinQueryParams() {{
-                    cashInValue = 5928.45;
-                    cashinBetDelayId = "distinctio";
-                }};
-                headers = new CashinHeaders() {{
-                    apiKey = "quibusdam";
-                    apiSecret = "unde";
-                    apiTicket = "nulla";
-                }};
-            }};            
+                apiKey = "corrupti";
+                apiSecret = "provident";
+                apiTicket = "distinctio";
+                betId = "quibusdam";
+                cashInValue = 6027.63;
+                cashinBetDelayId = "nulla";
+            }}            
 
             CashinResponse res = sdk.bets.cashin(req);
 

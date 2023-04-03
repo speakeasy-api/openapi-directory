@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFirewallsRequest {
+    /**
+     * Can be used to filter resources by labels. The response will only contain resources matching the label selector.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label_selector")
+    public String labelSelector;
+    public GetFirewallsRequest withLabelSelector(String labelSelector) {
+        this.labelSelector = labelSelector;
+        return this;
+    }
     
-    public GetFirewallsQueryParams queryParams;
-    public GetFirewallsRequest withQueryParams(GetFirewallsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used to filter resources by their name. The response will only contain the resources matching the specified name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetFirewallsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Can be used multiple times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetFirewallsSortEnum sort;
+    public GetFirewallsRequest withSort(GetFirewallsSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

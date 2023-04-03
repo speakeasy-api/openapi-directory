@@ -4,20 +4,67 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueGetRepoCommentsRequest {
-    
-    public IssueGetRepoCommentsPathParams pathParams;
-    public IssueGetRepoCommentsRequest withPathParams(IssueGetRepoCommentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * if provided, only comments updated before the provided time are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public OffsetDateTime before;
+    public IssueGetRepoCommentsRequest withBefore(OffsetDateTime before) {
+        this.before = before;
         return this;
     }
     
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public IssueGetRepoCommentsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public IssueGetRepoCommentsQueryParams queryParams;
-    public IssueGetRepoCommentsRequest withQueryParams(IssueGetRepoCommentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueGetRepoCommentsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public IssueGetRepoCommentsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueGetRepoCommentsRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * if provided, only comments updated since the provided time are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public OffsetDateTime since;
+    public IssueGetRepoCommentsRequest withSince(OffsetDateTime since) {
+        this.since = since;
         return this;
     }
     

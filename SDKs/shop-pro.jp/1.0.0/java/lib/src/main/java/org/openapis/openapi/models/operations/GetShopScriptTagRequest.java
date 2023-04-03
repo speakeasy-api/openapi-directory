@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetShopScriptTagRequest {
-    
-    public GetShopScriptTagPathParams pathParams;
-    public GetShopScriptTagRequest withPathParams(GetShopScriptTagPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetShopScriptTagSecurity security;
-    public GetShopScriptTagRequest withSecurity(GetShopScriptTagSecurity security) {
-        this.security = security;
+    /**
+     * \u30b9\u30af\u30ea\u30d7\u30c8\u30bf\u30b0ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scriptTagId")
+    public Long scriptTagId;
+    public GetShopScriptTagRequest withScriptTagId(Long scriptTagId) {
+        this.scriptTagId = scriptTagId;
         return this;
     }
     

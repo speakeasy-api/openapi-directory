@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSimpleQueryRequest {
-    
-    public PostSimpleQueryQueryParams queryParams;
-    public PostSimpleQueryRequest withQueryParams(PostSimpleQueryQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The text of the input document (in JSON format)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PostSimpleQueryRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PostSimpleQueryRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * If true, response will be in a human-readable format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
+    public Boolean pretty;
+    public PostSimpleQueryRequest withPretty(Boolean pretty) {
+        this.pretty = pretty;
         return this;
     }
     

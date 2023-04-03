@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAnnotationsByAccIdAndRgdIdUsingGETRequest {
+    /**
+     * Ontology Term Accession ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accId")
+    public String accId;
+    public GETAnnotationsByAccIdAndRgdIdUsingGETRequest withAccId(String accId) {
+        this.accId = accId;
+        return this;
+    }
     
-    public GETAnnotationsByAccIdAndRgdIdUsingGETPathParams pathParams;
-    public GETAnnotationsByAccIdAndRgdIdUsingGETRequest withPathParams(GETAnnotationsByAccIdAndRgdIdUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * RGD ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rgdId")
+    public Integer rgdId;
+    public GETAnnotationsByAccIdAndRgdIdUsingGETRequest withRgdId(Integer rgdId) {
+        this.rgdId = rgdId;
         return this;
     }
     

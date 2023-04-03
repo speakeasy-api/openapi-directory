@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWorkspaceRequest {
-    
-    public DeleteWorkspacePathParams pathParams;
-    public DeleteWorkspaceRequest withPathParams(DeleteWorkspacePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_id")
+    public String workspaceId;
+    public DeleteWorkspaceRequest withWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
         return this;
     }
     

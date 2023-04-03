@@ -31,7 +31,7 @@ public class Account {
 		this._genVersion = genVersion;
 	}
 
-    public org.openapis.openapi.models.operations.UsersGetUserMetadataResponse usersGetUserMetadata(org.openapis.openapi.models.operations.UsersGetUserMetadataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UsersGetUserMetadataResponse usersGetUserMetadata() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/user/metadata/optimizely");
         
@@ -40,8 +40,7 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -75,19 +74,20 @@ public class Account {
     /**
      * Delete the App Api Token object with the specific ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppApiTokensDeleteResponse appApiTokensDelete(org.openapis.openapi.models.operations.AppApiTokensDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppApiTokensDeleteResponse appApiTokensDelete(org.openapis.openapi.models.operations.AppApiTokensDeleteRequest request, org.openapis.openapi.models.operations.AppApiTokensDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppApiTokensDeletePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/api_tokens/{api_token_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppApiTokensDeleteRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/api_tokens/{api_token_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -132,19 +132,20 @@ public class Account {
     /**
      * Returns App API tokens for the app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppApiTokensListResponse appApiTokensList(org.openapis.openapi.models.operations.AppApiTokensListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppApiTokensListResponse appApiTokensList(org.openapis.openapi.models.operations.AppApiTokensListRequest request, org.openapis.openapi.models.operations.AppApiTokensListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppApiTokensListPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/api_tokens", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppApiTokensListRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/api_tokens", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -187,21 +188,22 @@ public class Account {
     /**
      * Creates a new App API token
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppApiTokensNewResponse appApiTokensNew(org.openapis.openapi.models.operations.AppApiTokensNewRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppApiTokensNewResponse appApiTokensNew(org.openapis.openapi.models.operations.AppApiTokensNewRequest request, org.openapis.openapi.models.operations.AppApiTokensNewSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppApiTokensNewPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/api_tokens", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppApiTokensNewRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/api_tokens", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -244,21 +246,22 @@ public class Account {
     /**
      * Accepts a pending invitation for the specified user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppInvitationsAcceptResponse appInvitationsAccept(org.openapis.openapi.models.operations.AppInvitationsAcceptRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppInvitationsAcceptResponse appInvitationsAccept(org.openapis.openapi.models.operations.AppInvitationsAcceptRequest request, org.openapis.openapi.models.operations.AppInvitationsAcceptSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppInvitationsAcceptPathParams.class, baseUrl, "/v0.1/user/invitations/apps/{invitation_token}/accept", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppInvitationsAcceptRequest.class, baseUrl, "/v0.1/user/invitations/apps/{invitation_token}/accept", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -287,21 +290,22 @@ public class Account {
     /**
      * Invites a new or existing user to an app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppInvitationsCreateResponse appInvitationsCreate(org.openapis.openapi.models.operations.AppInvitationsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppInvitationsCreateResponse appInvitationsCreate(org.openapis.openapi.models.operations.AppInvitationsCreateRequest request, org.openapis.openapi.models.operations.AppInvitationsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppInvitationsCreatePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/invitations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppInvitationsCreateRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/invitations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -330,21 +334,22 @@ public class Account {
     /**
      * Invites a new or existing user to an app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppInvitationsCreateByEmailResponse appInvitationsCreateByEmail(org.openapis.openapi.models.operations.AppInvitationsCreateByEmailRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppInvitationsCreateByEmailResponse appInvitationsCreateByEmail(org.openapis.openapi.models.operations.AppInvitationsCreateByEmailRequest request, org.openapis.openapi.models.operations.AppInvitationsCreateByEmailSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppInvitationsCreateByEmailPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/invitations/{user_email}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppInvitationsCreateByEmailRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/invitations/{user_email}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -373,19 +378,20 @@ public class Account {
     /**
      * Removes a user's invitation to an app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppInvitationsDeleteResponse appInvitationsDelete(org.openapis.openapi.models.operations.AppInvitationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppInvitationsDeleteResponse appInvitationsDelete(org.openapis.openapi.models.operations.AppInvitationsDeleteRequest request, org.openapis.openapi.models.operations.AppInvitationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppInvitationsDeletePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/invitations/{user_email}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppInvitationsDeleteRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/invitations/{user_email}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -414,19 +420,20 @@ public class Account {
     /**
      * Gets the pending invitations for the app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppInvitationsListResponse appInvitationsList(org.openapis.openapi.models.operations.AppInvitationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppInvitationsListResponse appInvitationsList(org.openapis.openapi.models.operations.AppInvitationsListRequest request, org.openapis.openapi.models.operations.AppInvitationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppInvitationsListPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/invitations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppInvitationsListRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/invitations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -461,21 +468,22 @@ public class Account {
     /**
      * Rejects a pending invitation for the specified user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppInvitationsRejectResponse appInvitationsReject(org.openapis.openapi.models.operations.AppInvitationsRejectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppInvitationsRejectResponse appInvitationsReject(org.openapis.openapi.models.operations.AppInvitationsRejectRequest request, org.openapis.openapi.models.operations.AppInvitationsRejectSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppInvitationsRejectPathParams.class, baseUrl, "/v0.1/user/invitations/apps/{invitation_token}/reject", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppInvitationsRejectRequest.class, baseUrl, "/v0.1/user/invitations/apps/{invitation_token}/reject", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -504,24 +512,25 @@ public class Account {
     /**
      * Update pending invitation permission
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppInvitationsUpdatePermissionsResponse appInvitationsUpdatePermissions(org.openapis.openapi.models.operations.AppInvitationsUpdatePermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppInvitationsUpdatePermissionsResponse appInvitationsUpdatePermissions(org.openapis.openapi.models.operations.AppInvitationsUpdatePermissionsRequest request, org.openapis.openapi.models.operations.AppInvitationsUpdatePermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppInvitationsUpdatePermissionsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/invitations/{user_email}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppInvitationsUpdatePermissionsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/invitations/{user_email}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -550,10 +559,11 @@ public class Account {
     /**
      * Creates a new app and returns it to the caller
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppsCreateResponse appsCreate(org.openapis.openapi.models.operations.AppsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppsCreateResponse appsCreate(org.openapis.openapi.models.operations.AppsCreateRequestBody request, org.openapis.openapi.models.operations.AppsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/apps");
         
@@ -567,7 +577,7 @@ public class Account {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -602,24 +612,25 @@ public class Account {
     /**
      * Creates a new app for the organization and returns it to the caller
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppsCreateForOrgResponse appsCreateForOrg(org.openapis.openapi.models.operations.AppsCreateForOrgRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppsCreateForOrgResponse appsCreateForOrg(org.openapis.openapi.models.operations.AppsCreateForOrgRequest request, org.openapis.openapi.models.operations.AppsCreateForOrgSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsCreateForOrgPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/apps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsCreateForOrgRequest.class, baseUrl, "/v0.1/orgs/{org_name}/apps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -662,19 +673,20 @@ public class Account {
     /**
      * Delete an app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppsDeleteResponse appsDelete(org.openapis.openapi.models.operations.AppsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppsDeleteResponse appsDelete(org.openapis.openapi.models.operations.AppsDeleteRequest request, org.openapis.openapi.models.operations.AppsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsDeletePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsDeleteRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -703,19 +715,20 @@ public class Account {
     /**
      * Deletes the uploaded app avatar
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppsDeleteAvatarResponse appsDeleteAvatar(org.openapis.openapi.models.operations.AppsDeleteAvatarRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppsDeleteAvatarResponse appsDeleteAvatar(org.openapis.openapi.models.operations.AppsDeleteAvatarRequest request, org.openapis.openapi.models.operations.AppsDeleteAvatarSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsDeleteAvatarPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/avatar", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsDeleteAvatarRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/avatar", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -750,19 +763,20 @@ public class Account {
     /**
      * Return a specific app with the given app name which belongs to the given owner.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppsGetResponse appsGet(org.openapis.openapi.models.operations.AppsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppsGetResponse appsGet(org.openapis.openapi.models.operations.AppsGetRequest request, org.openapis.openapi.models.operations.AppsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsGetPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsGetRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -797,19 +811,20 @@ public class Account {
     /**
      * Get a user apps information from an organization by name
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppsGetForOrgUserResponse appsGetForOrgUser(org.openapis.openapi.models.operations.AppsGetForOrgUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppsGetForOrgUserResponse appsGetForOrgUser(org.openapis.openapi.models.operations.AppsGetForOrgUserRequest request, org.openapis.openapi.models.operations.AppsGetForOrgUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsGetForOrgUserPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/users/{user_name}/apps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsGetForOrgUserRequest.class, baseUrl, "/v0.1/orgs/{org_name}/users/{user_name}/apps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -844,19 +859,20 @@ public class Account {
     /**
      * Returns the details of all teams that have access to the app.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppsGetTeamsResponse appsGetTeams(org.openapis.openapi.models.operations.AppsGetTeamsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppsGetTeamsResponse appsGetTeams(org.openapis.openapi.models.operations.AppsGetTeamsRequest request, org.openapis.openapi.models.operations.AppsGetTeamsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsGetTeamsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/teams", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsGetTeamsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/teams", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -891,10 +907,11 @@ public class Account {
     /**
      * Returns a list of apps
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppsListResponse appsList(org.openapis.openapi.models.operations.AppsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppsListResponse appsList(org.openapis.openapi.models.operations.AppsListRequest request, org.openapis.openapi.models.operations.AppsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/apps");
         
@@ -902,14 +919,14 @@ public class Account {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -944,19 +961,20 @@ public class Account {
     /**
      * Returns a list of apps for the organization
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppsListForOrgResponse appsListForOrg(org.openapis.openapi.models.operations.AppsListForOrgRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppsListForOrgResponse appsListForOrg(org.openapis.openapi.models.operations.AppsListForOrgRequest request, org.openapis.openapi.models.operations.AppsListForOrgSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsListForOrgPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/apps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsListForOrgRequest.class, baseUrl, "/v0.1/orgs/{org_name}/apps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -991,19 +1009,20 @@ public class Account {
     /**
      * Returns the testers associated with the app specified with the given app name which belongs to the given owner.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppsListTestersResponse appsListTesters(org.openapis.openapi.models.operations.AppsListTestersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppsListTestersResponse appsListTesters(org.openapis.openapi.models.operations.AppsListTestersRequest request, org.openapis.openapi.models.operations.AppsListTestersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsListTestersPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/testers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsListTestersRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/testers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1038,19 +1057,20 @@ public class Account {
     /**
      * Removes the user from the app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppsRemoveUserResponse appsRemoveUser(org.openapis.openapi.models.operations.AppsRemoveUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppsRemoveUserResponse appsRemoveUser(org.openapis.openapi.models.operations.AppsRemoveUserRequest request, org.openapis.openapi.models.operations.AppsRemoveUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsRemoveUserPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/users/{user_email}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsRemoveUserRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/users/{user_email}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1079,21 +1099,22 @@ public class Account {
     /**
      * Transfers ownership of an app to a different user or organization
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppsTransferOwnershipJsonResponse appsTransferOwnershipJson(org.openapis.openapi.models.operations.AppsTransferOwnershipJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppsTransferOwnershipJsonResponse appsTransferOwnershipJson(org.openapis.openapi.models.operations.AppsTransferOwnershipJsonRequest request, org.openapis.openapi.models.operations.AppsTransferOwnershipJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsTransferOwnershipJsonPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/transfer/{destination_owner_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsTransferOwnershipJsonRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/transfer/{destination_owner_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1128,21 +1149,22 @@ public class Account {
     /**
      * Transfers ownership of an app to a different user or organization
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppsTransferOwnershipRawResponse appsTransferOwnershipRaw(org.openapis.openapi.models.operations.AppsTransferOwnershipRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppsTransferOwnershipRawResponse appsTransferOwnershipRaw(org.openapis.openapi.models.operations.AppsTransferOwnershipRawRequest request, org.openapis.openapi.models.operations.AppsTransferOwnershipRawSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsTransferOwnershipRawPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/transfer/{destination_owner_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsTransferOwnershipRawRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/transfer/{destination_owner_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1177,21 +1199,22 @@ public class Account {
     /**
      * Transfers ownership of an app to a new organization
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppsTransferToOrgResponse appsTransferToOrg(org.openapis.openapi.models.operations.AppsTransferToOrgRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppsTransferToOrgResponse appsTransferToOrg(org.openapis.openapi.models.operations.AppsTransferToOrgRequest request, org.openapis.openapi.models.operations.AppsTransferToOrgSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsTransferToOrgPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/transfer_to_org", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsTransferToOrgRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/transfer_to_org", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1226,21 +1249,22 @@ public class Account {
     /**
      * Partially updates a single app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppsUpdateResponse appsUpdate(org.openapis.openapi.models.operations.AppsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppsUpdateResponse appsUpdate(org.openapis.openapi.models.operations.AppsUpdateRequest request, org.openapis.openapi.models.operations.AppsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsUpdatePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsUpdateRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1275,21 +1299,22 @@ public class Account {
     /**
      * Sets the app avatar
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppsUpdateAvatarResponse appsUpdateAvatar(org.openapis.openapi.models.operations.AppsUpdateAvatarRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppsUpdateAvatarResponse appsUpdateAvatar(org.openapis.openapi.models.operations.AppsUpdateAvatarRequest request, org.openapis.openapi.models.operations.AppsUpdateAvatarSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsUpdateAvatarPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/avatar", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsUpdateAvatarRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/avatar", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1324,24 +1349,25 @@ public class Account {
     /**
      * Update user permission for the app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppsUpdateUserPermissionsResponse appsUpdateUserPermissions(org.openapis.openapi.models.operations.AppsUpdateUserPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppsUpdateUserPermissionsResponse appsUpdateUserPermissions(org.openapis.openapi.models.operations.AppsUpdateUserPermissionsRequest request, org.openapis.openapi.models.operations.AppsUpdateUserPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsUpdateUserPermissionsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/users/{user_email}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppsUpdateUserPermissionsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/users/{user_email}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1370,19 +1396,20 @@ public class Account {
     /**
      * Delete the azure subscriptions for the app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AzureSubscriptionDeleteForAppResponse azureSubscriptionDeleteForApp(org.openapis.openapi.models.operations.AzureSubscriptionDeleteForAppRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AzureSubscriptionDeleteForAppResponse azureSubscriptionDeleteForApp(org.openapis.openapi.models.operations.AzureSubscriptionDeleteForAppRequest request, org.openapis.openapi.models.operations.AzureSubscriptionDeleteForAppSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AzureSubscriptionDeleteForAppPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/azure_subscriptions/{azure_subscription_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AzureSubscriptionDeleteForAppRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/azure_subscriptions/{azure_subscription_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1411,24 +1438,25 @@ public class Account {
     /**
      * Link azure subscription to an app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AzureSubscriptionLinkForAppResponse azureSubscriptionLinkForApp(org.openapis.openapi.models.operations.AzureSubscriptionLinkForAppRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AzureSubscriptionLinkForAppResponse azureSubscriptionLinkForApp(org.openapis.openapi.models.operations.AzureSubscriptionLinkForAppRequest request, org.openapis.openapi.models.operations.AzureSubscriptionLinkForAppSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AzureSubscriptionLinkForAppPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/azure_subscriptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AzureSubscriptionLinkForAppRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/azure_subscriptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1457,19 +1485,20 @@ public class Account {
     /**
      * Returns a list of azure subscriptions for the app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AzureSubscriptionListForAppResponse azureSubscriptionListForApp(org.openapis.openapi.models.operations.AzureSubscriptionListForAppRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AzureSubscriptionListForAppResponse azureSubscriptionListForApp(org.openapis.openapi.models.operations.AzureSubscriptionListForAppRequest request, org.openapis.openapi.models.operations.AzureSubscriptionListForAppSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AzureSubscriptionListForAppPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/azure_subscriptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AzureSubscriptionListForAppRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/azure_subscriptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1504,19 +1533,20 @@ public class Account {
     /**
      * Returns a list of azure subscriptions for the organization
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AzureSubscriptionListForOrgResponse azureSubscriptionListForOrg(org.openapis.openapi.models.operations.AzureSubscriptionListForOrgRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AzureSubscriptionListForOrgResponse azureSubscriptionListForOrg(org.openapis.openapi.models.operations.AzureSubscriptionListForOrgRequest request, org.openapis.openapi.models.operations.AzureSubscriptionListForOrgSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AzureSubscriptionListForOrgPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/azure_subscriptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AzureSubscriptionListForOrgRequest.class, baseUrl, "/v0.1/orgs/{org_name}/azure_subscriptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1550,11 +1580,10 @@ public class Account {
 
     /**
      * Returns a list of azure subscriptions for the user
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AzureSubscriptionListForUserResponse azureSubscriptionListForUser(org.openapis.openapi.models.operations.AzureSubscriptionListForUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AzureSubscriptionListForUserResponse azureSubscriptionListForUser() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/azure_subscriptions");
         
@@ -1563,8 +1592,7 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -1598,10 +1626,11 @@ public class Account {
     /**
      * Accepts all pending invitations to distribution groups for the specified user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupInvitationsAcceptAllResponse distributionGroupInvitationsAcceptAll(org.openapis.openapi.models.operations.DistributionGroupInvitationsAcceptAllRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupInvitationsAcceptAllResponse distributionGroupInvitationsAcceptAll(java.util.Map<String, Object> request, org.openapis.openapi.models.operations.DistributionGroupInvitationsAcceptAllSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/user/invitations/distribution_groups/accept");
         
@@ -1612,7 +1641,7 @@ public class Account {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1641,24 +1670,25 @@ public class Account {
     /**
      * Add apps to distribution group in an org
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsAddAppsResponse distributionGroupsAddApps(org.openapis.openapi.models.operations.DistributionGroupsAddAppsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsAddAppsResponse distributionGroupsAddApps(org.openapis.openapi.models.operations.DistributionGroupsAddAppsRequest request, org.openapis.openapi.models.operations.DistributionGroupsAddAppsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsAddAppsPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/apps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsAddAppsRequest.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/apps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1679,24 +1709,25 @@ public class Account {
     /**
      * Adds the members to the specified distribution group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsAddUserResponse distributionGroupsAddUser(org.openapis.openapi.models.operations.DistributionGroupsAddUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsAddUserResponse distributionGroupsAddUser(org.openapis.openapi.models.operations.DistributionGroupsAddUserRequest request, org.openapis.openapi.models.operations.DistributionGroupsAddUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsAddUserPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsAddUserRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1731,24 +1762,25 @@ public class Account {
     /**
      * Accepts an array of user email addresses to get added to the specified group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsAddUsersForOrgResponse distributionGroupsAddUsersForOrg(org.openapis.openapi.models.operations.DistributionGroupsAddUsersForOrgRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsAddUsersForOrgResponse distributionGroupsAddUsersForOrg(org.openapis.openapi.models.operations.DistributionGroupsAddUsersForOrgRequest request, org.openapis.openapi.models.operations.DistributionGroupsAddUsersForOrgSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsAddUsersForOrgPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsAddUsersForOrgRequest.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1783,24 +1815,25 @@ public class Account {
     /**
      * Delete apps from distribution group in an org
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsBulkDeleteAppsResponse distributionGroupsBulkDeleteApps(org.openapis.openapi.models.operations.DistributionGroupsBulkDeleteAppsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsBulkDeleteAppsResponse distributionGroupsBulkDeleteApps(org.openapis.openapi.models.operations.DistributionGroupsBulkDeleteAppsRequest request, org.openapis.openapi.models.operations.DistributionGroupsBulkDeleteAppsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsBulkDeleteAppsPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/apps/bulk_delete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsBulkDeleteAppsRequest.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/apps/bulk_delete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1821,24 +1854,25 @@ public class Account {
     /**
      * Delete testers from distribution group in an org
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsBulkDeleteUsersResponse distributionGroupsBulkDeleteUsers(org.openapis.openapi.models.operations.DistributionGroupsBulkDeleteUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsBulkDeleteUsersResponse distributionGroupsBulkDeleteUsers(org.openapis.openapi.models.operations.DistributionGroupsBulkDeleteUsersRequest request, org.openapis.openapi.models.operations.DistributionGroupsBulkDeleteUsersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsBulkDeleteUsersPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/members/bulk_delete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsBulkDeleteUsersRequest.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/members/bulk_delete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1859,24 +1893,25 @@ public class Account {
     /**
      * Creates a new distribution group and returns it to the caller
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsCreateResponse distributionGroupsCreate(org.openapis.openapi.models.operations.DistributionGroupsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsCreateResponse distributionGroupsCreate(org.openapis.openapi.models.operations.DistributionGroupsCreateRequest request, org.openapis.openapi.models.operations.DistributionGroupsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsCreatePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsCreateRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1911,24 +1946,25 @@ public class Account {
     /**
      * Creates a disribution goup which can be shared across apps under an organization
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsCreateForOrgResponse distributionGroupsCreateForOrg(org.openapis.openapi.models.operations.DistributionGroupsCreateForOrgRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsCreateForOrgResponse distributionGroupsCreateForOrg(org.openapis.openapi.models.operations.DistributionGroupsCreateForOrgRequest request, org.openapis.openapi.models.operations.DistributionGroupsCreateForOrgSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsCreateForOrgPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsCreateForOrgRequest.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1963,19 +1999,20 @@ public class Account {
     /**
      * Deletes a distribution group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsDeleteResponse distributionGroupsDelete(org.openapis.openapi.models.operations.DistributionGroupsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsDeleteResponse distributionGroupsDelete(org.openapis.openapi.models.operations.DistributionGroupsDeleteRequest request, org.openapis.openapi.models.operations.DistributionGroupsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsDeletePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsDeleteRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2004,19 +2041,20 @@ public class Account {
     /**
      * Deletes a single distribution group from an org with a given distribution group name
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsDeleteForOrgResponse distributionGroupsDeleteForOrg(org.openapis.openapi.models.operations.DistributionGroupsDeleteForOrgRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsDeleteForOrgResponse distributionGroupsDeleteForOrg(org.openapis.openapi.models.operations.DistributionGroupsDeleteForOrgRequest request, org.openapis.openapi.models.operations.DistributionGroupsDeleteForOrgSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsDeleteForOrgPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsDeleteForOrgRequest.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2045,25 +2083,26 @@ public class Account {
     /**
      * Returns a list of distribution groups with details for an organization
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsDetailsForOrgResponse distributionGroupsDetailsForOrg(org.openapis.openapi.models.operations.DistributionGroupsDetailsForOrgRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsDetailsForOrgResponse distributionGroupsDetailsForOrg(org.openapis.openapi.models.operations.DistributionGroupsDetailsForOrgRequest request, org.openapis.openapi.models.operations.DistributionGroupsDetailsForOrgSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsDetailsForOrgPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups_details", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsDetailsForOrgRequest.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups_details", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DistributionGroupsDetailsForOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DistributionGroupsDetailsForOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2098,19 +2137,20 @@ public class Account {
     /**
      * Returns a single distribution group for a given distribution group name
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsGetResponse distributionGroupsGet(org.openapis.openapi.models.operations.DistributionGroupsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsGetResponse distributionGroupsGet(org.openapis.openapi.models.operations.DistributionGroupsGetRequest request, org.openapis.openapi.models.operations.DistributionGroupsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsGetPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsGetRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2145,19 +2185,20 @@ public class Account {
     /**
      * Get apps from a distribution group in an org
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsGetAppsResponse distributionGroupsGetApps(org.openapis.openapi.models.operations.DistributionGroupsGetAppsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsGetAppsResponse distributionGroupsGetApps(org.openapis.openapi.models.operations.DistributionGroupsGetAppsRequest request, org.openapis.openapi.models.operations.DistributionGroupsGetAppsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsGetAppsPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/apps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsGetAppsRequest.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/apps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2184,19 +2225,20 @@ public class Account {
     /**
      * Returns a single distribution group in org for a given distribution group name
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsGetForOrgResponse distributionGroupsGetForOrg(org.openapis.openapi.models.operations.DistributionGroupsGetForOrgRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsGetForOrgResponse distributionGroupsGetForOrg(org.openapis.openapi.models.operations.DistributionGroupsGetForOrgRequest request, org.openapis.openapi.models.operations.DistributionGroupsGetForOrgSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsGetForOrgPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsGetForOrgRequest.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2231,19 +2273,20 @@ public class Account {
     /**
      * Returns a list of distribution groups in the app specified
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsListResponse distributionGroupsList(org.openapis.openapi.models.operations.DistributionGroupsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsListResponse distributionGroupsList(org.openapis.openapi.models.operations.DistributionGroupsListRequest request, org.openapis.openapi.models.operations.DistributionGroupsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsListPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsListRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2278,19 +2321,20 @@ public class Account {
     /**
      * Returns a unique list of users including the whole organization members plus testers in any shared group of that org
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsListAllTestersForOrgResponse distributionGroupsListAllTestersForOrg(org.openapis.openapi.models.operations.DistributionGroupsListAllTestersForOrgRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsListAllTestersForOrgResponse distributionGroupsListAllTestersForOrg(org.openapis.openapi.models.operations.DistributionGroupsListAllTestersForOrgRequest request, org.openapis.openapi.models.operations.DistributionGroupsListAllTestersForOrgSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsListAllTestersForOrgPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/testers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsListAllTestersForOrgRequest.class, baseUrl, "/v0.1/orgs/{org_name}/testers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2325,19 +2369,20 @@ public class Account {
     /**
      * Returns a list of distribution groups in the org specified
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsListForOrgResponse distributionGroupsListForOrg(org.openapis.openapi.models.operations.DistributionGroupsListForOrgRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsListForOrgResponse distributionGroupsListForOrg(org.openapis.openapi.models.operations.DistributionGroupsListForOrgRequest request, org.openapis.openapi.models.operations.DistributionGroupsListForOrgSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsListForOrgPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsListForOrgRequest.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2372,25 +2417,26 @@ public class Account {
     /**
      * Returns a list of member details in the distribution group specified
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsListUsersResponse distributionGroupsListUsers(org.openapis.openapi.models.operations.DistributionGroupsListUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsListUsersResponse distributionGroupsListUsers(org.openapis.openapi.models.operations.DistributionGroupsListUsersRequest request, org.openapis.openapi.models.operations.DistributionGroupsListUsersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsListUsersPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsListUsersRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DistributionGroupsListUsersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DistributionGroupsListUsersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2425,19 +2471,20 @@ public class Account {
     /**
      * Returns a list of member in the distribution group specified
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsListUsersForOrgResponse distributionGroupsListUsersForOrg(org.openapis.openapi.models.operations.DistributionGroupsListUsersForOrgRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsListUsersForOrgResponse distributionGroupsListUsersForOrg(org.openapis.openapi.models.operations.DistributionGroupsListUsersForOrgRequest request, org.openapis.openapi.models.operations.DistributionGroupsListUsersForOrgSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsListUsersForOrgPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsListUsersForOrgRequest.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2472,21 +2519,22 @@ public class Account {
     /**
      * Update one given distribution group name in an org
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsPatchForOrgResponse distributionGroupsPatchForOrg(org.openapis.openapi.models.operations.DistributionGroupsPatchForOrgRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsPatchForOrgResponse distributionGroupsPatchForOrg(org.openapis.openapi.models.operations.DistributionGroupsPatchForOrgRequest request, org.openapis.openapi.models.operations.DistributionGroupsPatchForOrgSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsPatchForOrgPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsPatchForOrgRequest.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2521,24 +2569,25 @@ public class Account {
     /**
      * Remove the users from the distribution group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsRemoveUserResponse distributionGroupsRemoveUser(org.openapis.openapi.models.operations.DistributionGroupsRemoveUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsRemoveUserResponse distributionGroupsRemoveUser(org.openapis.openapi.models.operations.DistributionGroupsRemoveUserRequest request, org.openapis.openapi.models.operations.DistributionGroupsRemoveUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsRemoveUserPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/members/bulk_delete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsRemoveUserRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/members/bulk_delete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2573,24 +2622,25 @@ public class Account {
     /**
      * Resend distribution group app invite notification to previously invited testers
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsResendInviteResponse distributionGroupsResendInvite(org.openapis.openapi.models.operations.DistributionGroupsResendInviteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsResendInviteResponse distributionGroupsResendInvite(org.openapis.openapi.models.operations.DistributionGroupsResendInviteRequest request, org.openapis.openapi.models.operations.DistributionGroupsResendInviteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsResendInvitePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/resend_invite", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsResendInviteRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/resend_invite", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2619,24 +2669,25 @@ public class Account {
     /**
      * Resend shared distribution group invite notification to previously invited testers
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsResendSharedInviteResponse distributionGroupsResendSharedInvite(org.openapis.openapi.models.operations.DistributionGroupsResendSharedInviteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsResendSharedInviteResponse distributionGroupsResendSharedInvite(org.openapis.openapi.models.operations.DistributionGroupsResendSharedInviteRequest request, org.openapis.openapi.models.operations.DistributionGroupsResendSharedInviteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsResendSharedInvitePathParams.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/resend_invite", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsResendSharedInviteRequest.class, baseUrl, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/resend_invite", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2665,24 +2716,25 @@ public class Account {
     /**
      * Updates the attributes of distribution group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DistributionGroupsUpdateResponse distributionGroupsUpdate(org.openapis.openapi.models.operations.DistributionGroupsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DistributionGroupsUpdateResponse distributionGroupsUpdate(org.openapis.openapi.models.operations.DistributionGroupsUpdateRequest request, org.openapis.openapi.models.operations.DistributionGroupsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsUpdatePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistributionGroupsUpdateRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2716,11 +2768,10 @@ public class Account {
 
     /**
      * Returns all invitations sent by the caller
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.InvitationsSentResponse invitationsSent(org.openapis.openapi.models.operations.InvitationsSentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.InvitationsSentResponse invitationsSent() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/invitations/sent");
         
@@ -2729,8 +2780,7 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -2764,21 +2814,22 @@ public class Account {
     /**
      * Removes a user's invitation to an organization
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OrgInvitationsResponse orgInvitations(org.openapis.openapi.models.operations.OrgInvitationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OrgInvitationsResponse orgInvitations(org.openapis.openapi.models.operations.OrgInvitationsRequest request, org.openapis.openapi.models.operations.OrgInvitationsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrgInvitationsPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/invitations/{email}/revoke", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrgInvitationsRequest.class, baseUrl, "/v0.1/orgs/{org_name}/invitations/{email}/revoke", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2807,21 +2858,22 @@ public class Account {
     /**
      * Accepts a pending organization invitation for the specified user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OrgInvitationsAcceptResponse orgInvitationsAccept(org.openapis.openapi.models.operations.OrgInvitationsAcceptRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OrgInvitationsAcceptResponse orgInvitationsAccept(org.openapis.openapi.models.operations.OrgInvitationsAcceptRequest request, org.openapis.openapi.models.operations.OrgInvitationsAcceptSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrgInvitationsAcceptPathParams.class, baseUrl, "/v0.1/user/invitations/orgs/{invitation_token}/accept", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrgInvitationsAcceptRequest.class, baseUrl, "/v0.1/user/invitations/orgs/{invitation_token}/accept", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2850,24 +2902,25 @@ public class Account {
     /**
      * Invites a new or existing user to an organization
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OrgInvitationsCreateResponse orgInvitationsCreate(org.openapis.openapi.models.operations.OrgInvitationsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OrgInvitationsCreateResponse orgInvitationsCreate(org.openapis.openapi.models.operations.OrgInvitationsCreateRequest request, org.openapis.openapi.models.operations.OrgInvitationsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrgInvitationsCreatePathParams.class, baseUrl, "/v0.1/orgs/{org_name}/invitations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrgInvitationsCreateRequest.class, baseUrl, "/v0.1/orgs/{org_name}/invitations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2896,24 +2949,25 @@ public class Account {
     /**
      * Removes a user's invitation to an organization
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OrgInvitationsDeleteResponse orgInvitationsDelete(org.openapis.openapi.models.operations.OrgInvitationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OrgInvitationsDeleteResponse orgInvitationsDelete(org.openapis.openapi.models.operations.OrgInvitationsDeleteRequest request, org.openapis.openapi.models.operations.OrgInvitationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrgInvitationsDeletePathParams.class, baseUrl, "/v0.1/orgs/{org_name}/invitations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrgInvitationsDeleteRequest.class, baseUrl, "/v0.1/orgs/{org_name}/invitations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2942,19 +2996,20 @@ public class Account {
     /**
      * Gets the pending invitations for the organization
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OrgInvitationsListPendingResponse orgInvitationsListPending(org.openapis.openapi.models.operations.OrgInvitationsListPendingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OrgInvitationsListPendingResponse orgInvitationsListPending(org.openapis.openapi.models.operations.OrgInvitationsListPendingRequest request, org.openapis.openapi.models.operations.OrgInvitationsListPendingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrgInvitationsListPendingPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/invitations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrgInvitationsListPendingRequest.class, baseUrl, "/v0.1/orgs/{org_name}/invitations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2989,21 +3044,22 @@ public class Account {
     /**
      * Rejects a pending organization invitation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OrgInvitationsRejectResponse orgInvitationsReject(org.openapis.openapi.models.operations.OrgInvitationsRejectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OrgInvitationsRejectResponse orgInvitationsReject(org.openapis.openapi.models.operations.OrgInvitationsRejectRequest request, org.openapis.openapi.models.operations.OrgInvitationsRejectSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrgInvitationsRejectPathParams.class, baseUrl, "/v0.1/user/invitations/orgs/{invitation_token}/reject", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrgInvitationsRejectRequest.class, baseUrl, "/v0.1/user/invitations/orgs/{invitation_token}/reject", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3032,21 +3088,22 @@ public class Account {
     /**
      * Cancels an existing organization invitation for the user and sends a new one
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OrgInvitationsSendNewInvitationResponse orgInvitationsSendNewInvitation(org.openapis.openapi.models.operations.OrgInvitationsSendNewInvitationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OrgInvitationsSendNewInvitationResponse orgInvitationsSendNewInvitation(org.openapis.openapi.models.operations.OrgInvitationsSendNewInvitationRequest request, org.openapis.openapi.models.operations.OrgInvitationsSendNewInvitationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrgInvitationsSendNewInvitationPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/invitations/{email}/resend", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrgInvitationsSendNewInvitationRequest.class, baseUrl, "/v0.1/orgs/{org_name}/invitations/{email}/resend", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3075,24 +3132,25 @@ public class Account {
     /**
      * Allows the role of an invited user to be changed
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OrgInvitationsUpdateResponse orgInvitationsUpdate(org.openapis.openapi.models.operations.OrgInvitationsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OrgInvitationsUpdateResponse orgInvitationsUpdate(org.openapis.openapi.models.operations.OrgInvitationsUpdateRequest request, org.openapis.openapi.models.operations.OrgInvitationsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrgInvitationsUpdatePathParams.class, baseUrl, "/v0.1/orgs/{org_name}/invitations/{email}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrgInvitationsUpdateRequest.class, baseUrl, "/v0.1/orgs/{org_name}/invitations/{email}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3121,19 +3179,20 @@ public class Account {
     /**
      * Deletes the uploaded organization avatar
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OrganizationDeleteAvatarResponse organizationDeleteAvatar(org.openapis.openapi.models.operations.OrganizationDeleteAvatarRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OrganizationDeleteAvatarResponse organizationDeleteAvatar(org.openapis.openapi.models.operations.OrganizationDeleteAvatarRequest request, org.openapis.openapi.models.operations.OrganizationDeleteAvatarSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrganizationDeleteAvatarPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/avatar", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrganizationDeleteAvatarRequest.class, baseUrl, "/v0.1/orgs/{org_name}/avatar", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3168,21 +3227,22 @@ public class Account {
     /**
      * Sets the organization avatar
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OrganizationUpdateAvatarResponse organizationUpdateAvatar(org.openapis.openapi.models.operations.OrganizationUpdateAvatarRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OrganizationUpdateAvatarResponse organizationUpdateAvatar(org.openapis.openapi.models.operations.OrganizationUpdateAvatarRequest request, org.openapis.openapi.models.operations.OrganizationUpdateAvatarSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrganizationUpdateAvatarPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/avatar", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrganizationUpdateAvatarRequest.class, baseUrl, "/v0.1/orgs/{org_name}/avatar", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3217,10 +3277,11 @@ public class Account {
     /**
      * Creates a new organization and returns it to the caller
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OrganizationsCreateOrUpdateResponse organizationsCreateOrUpdate(org.openapis.openapi.models.operations.OrganizationsCreateOrUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OrganizationsCreateOrUpdateResponse organizationsCreateOrUpdate(org.openapis.openapi.models.operations.OrganizationsCreateOrUpdateRequestBody request, org.openapis.openapi.models.operations.OrganizationsCreateOrUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/orgs");
         
@@ -3234,7 +3295,7 @@ public class Account {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3269,19 +3330,20 @@ public class Account {
     /**
      * Deletes a single organization
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OrganizationsDeleteResponse organizationsDelete(org.openapis.openapi.models.operations.OrganizationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OrganizationsDeleteResponse organizationsDelete(org.openapis.openapi.models.operations.OrganizationsDeleteRequest request, org.openapis.openapi.models.operations.OrganizationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrganizationsDeletePathParams.class, baseUrl, "/v0.1/orgs/{org_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrganizationsDeleteRequest.class, baseUrl, "/v0.1/orgs/{org_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3310,19 +3372,20 @@ public class Account {
     /**
      * Returns the details of a single organization
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OrganizationsGetResponse organizationsGet(org.openapis.openapi.models.operations.OrganizationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OrganizationsGetResponse organizationsGet(org.openapis.openapi.models.operations.OrganizationsGetRequest request, org.openapis.openapi.models.operations.OrganizationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrganizationsGetPathParams.class, baseUrl, "/v0.1/orgs/{org_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrganizationsGetRequest.class, baseUrl, "/v0.1/orgs/{org_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3356,11 +3419,10 @@ public class Account {
 
     /**
      * Returns a list of organizations the requesting user has access to
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OrganizationsListResponse organizationsList(org.openapis.openapi.models.operations.OrganizationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OrganizationsListResponse organizationsList() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/orgs");
         
@@ -3369,8 +3431,7 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -3403,11 +3464,10 @@ public class Account {
 
     /**
      * Returns a list organizations in which the requesting user is an admin
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OrganizationsListAdministeredResponse organizationsListAdministered(org.openapis.openapi.models.operations.OrganizationsListAdministeredRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OrganizationsListAdministeredResponse organizationsListAdministered() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/administeredOrgs");
         
@@ -3416,8 +3476,7 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -3451,24 +3510,25 @@ public class Account {
     /**
      * Returns a list of organizations the requesting user has access to
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OrganizationsUpdateResponse organizationsUpdate(org.openapis.openapi.models.operations.OrganizationsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OrganizationsUpdateResponse organizationsUpdate(org.openapis.openapi.models.operations.OrganizationsUpdateRequest request, org.openapis.openapi.models.operations.OrganizationsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrganizationsUpdatePathParams.class, baseUrl, "/v0.1/orgs/{org_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrganizationsUpdateRequest.class, baseUrl, "/v0.1/orgs/{org_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3502,11 +3562,10 @@ public class Account {
 
     /**
      * Gets all service connections of the service type for GDPR export.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SharedconnectionConnectionsResponse sharedconnectionConnections(org.openapis.openapi.models.operations.SharedconnectionConnectionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SharedconnectionConnectionsResponse sharedconnectionConnections() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/user/export/serviceConnections");
         
@@ -3515,8 +3574,7 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -3550,24 +3608,25 @@ public class Account {
     /**
      * Adds an app to a team
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsAddAppResponse teamsAddApp(org.openapis.openapi.models.operations.TeamsAddAppRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsAddAppResponse teamsAddApp(org.openapis.openapi.models.operations.TeamsAddAppRequest request, org.openapis.openapi.models.operations.TeamsAddAppSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddAppPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/teams/{team_name}/apps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddAppRequest.class, baseUrl, "/v0.1/orgs/{org_name}/teams/{team_name}/apps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3602,24 +3661,25 @@ public class Account {
     /**
      * Adds a new user to a team that is owned by an organization
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsAddUserResponse teamsAddUser(org.openapis.openapi.models.operations.TeamsAddUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsAddUserResponse teamsAddUser(org.openapis.openapi.models.operations.TeamsAddUserRequest request, org.openapis.openapi.models.operations.TeamsAddUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddUserPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/teams/{team_name}/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddUserRequest.class, baseUrl, "/v0.1/orgs/{org_name}/teams/{team_name}/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3654,24 +3714,25 @@ public class Account {
     /**
      * Creates a team and returns it
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsCreateTeamResponse teamsCreateTeam(org.openapis.openapi.models.operations.TeamsCreateTeamRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsCreateTeamResponse teamsCreateTeam(org.openapis.openapi.models.operations.TeamsCreateTeamRequest request, org.openapis.openapi.models.operations.TeamsCreateTeamSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCreateTeamPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/teams", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCreateTeamRequest.class, baseUrl, "/v0.1/orgs/{org_name}/teams", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3706,19 +3767,20 @@ public class Account {
     /**
      * Deletes a single team
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsDeleteResponse teamsDelete(org.openapis.openapi.models.operations.TeamsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsDeleteResponse teamsDelete(org.openapis.openapi.models.operations.TeamsDeleteRequest request, org.openapis.openapi.models.operations.TeamsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeletePathParams.class, baseUrl, "/v0.1/orgs/{org_name}/teams/{team_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeleteRequest.class, baseUrl, "/v0.1/orgs/{org_name}/teams/{team_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3747,19 +3809,20 @@ public class Account {
     /**
      * Returns the details of a single team
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsGetTeamResponse teamsGetTeam(org.openapis.openapi.models.operations.TeamsGetTeamRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsGetTeamResponse teamsGetTeam(org.openapis.openapi.models.operations.TeamsGetTeamRequest request, org.openapis.openapi.models.operations.TeamsGetTeamSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetTeamPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/teams/{team_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetTeamRequest.class, baseUrl, "/v0.1/orgs/{org_name}/teams/{team_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3794,19 +3857,20 @@ public class Account {
     /**
      * Returns the users of a team which is owned by an organization
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsGetUsersResponse teamsGetUsers(org.openapis.openapi.models.operations.TeamsGetUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsGetUsersResponse teamsGetUsers(org.openapis.openapi.models.operations.TeamsGetUsersRequest request, org.openapis.openapi.models.operations.TeamsGetUsersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetUsersPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/teams/{team_name}/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetUsersRequest.class, baseUrl, "/v0.1/orgs/{org_name}/teams/{team_name}/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3841,19 +3905,20 @@ public class Account {
     /**
      * Returns the list of all teams in this org
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsListAllResponse teamsListAll(org.openapis.openapi.models.operations.TeamsListAllRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsListAllResponse teamsListAll(org.openapis.openapi.models.operations.TeamsListAllRequest request, org.openapis.openapi.models.operations.TeamsListAllSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListAllPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/teams", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListAllRequest.class, baseUrl, "/v0.1/orgs/{org_name}/teams", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3888,19 +3953,20 @@ public class Account {
     /**
      * Returns the apps a team has access to
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsListAppsResponse teamsListApps(org.openapis.openapi.models.operations.TeamsListAppsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsListAppsResponse teamsListApps(org.openapis.openapi.models.operations.TeamsListAppsRequest request, org.openapis.openapi.models.operations.TeamsListAppsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListAppsPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/teams/{team_name}/apps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListAppsRequest.class, baseUrl, "/v0.1/orgs/{org_name}/teams/{team_name}/apps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3935,19 +4001,20 @@ public class Account {
     /**
      * Removes an app from a team
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsRemoveAppResponse teamsRemoveApp(org.openapis.openapi.models.operations.TeamsRemoveAppRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsRemoveAppResponse teamsRemoveApp(org.openapis.openapi.models.operations.TeamsRemoveAppRequest request, org.openapis.openapi.models.operations.TeamsRemoveAppSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveAppPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/teams/{team_name}/apps/{app_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveAppRequest.class, baseUrl, "/v0.1/orgs/{org_name}/teams/{team_name}/apps/{app_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3976,19 +4043,20 @@ public class Account {
     /**
      * Removes a user from a team that is owned by an organization
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsRemoveUserResponse teamsRemoveUser(org.openapis.openapi.models.operations.TeamsRemoveUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsRemoveUserResponse teamsRemoveUser(org.openapis.openapi.models.operations.TeamsRemoveUserRequest request, org.openapis.openapi.models.operations.TeamsRemoveUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveUserPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/teams/{team_name}/users/{user_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveUserRequest.class, baseUrl, "/v0.1/orgs/{org_name}/teams/{team_name}/users/{user_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4017,24 +4085,25 @@ public class Account {
     /**
      * Updates a single team
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsUpdateResponse teamsUpdate(org.openapis.openapi.models.operations.TeamsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsUpdateResponse teamsUpdate(org.openapis.openapi.models.operations.TeamsUpdateRequest request, org.openapis.openapi.models.operations.TeamsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdatePathParams.class, baseUrl, "/v0.1/orgs/{org_name}/teams/{team_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateRequest.class, baseUrl, "/v0.1/orgs/{org_name}/teams/{team_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4069,24 +4138,25 @@ public class Account {
     /**
      * Updates the permissions the team has to the app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsUpdatePermissionsResponse teamsUpdatePermissions(org.openapis.openapi.models.operations.TeamsUpdatePermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsUpdatePermissionsResponse teamsUpdatePermissions(org.openapis.openapi.models.operations.TeamsUpdatePermissionsRequest request, org.openapis.openapi.models.operations.TeamsUpdatePermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdatePermissionsPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/teams/{team_name}/apps/{app_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdatePermissionsRequest.class, baseUrl, "/v0.1/orgs/{org_name}/teams/{team_name}/apps/{app_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4121,19 +4191,20 @@ public class Account {
     /**
      * Delete the user api_token object with the specific id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UserApiTokensDeleteResponse userApiTokensDelete(org.openapis.openapi.models.operations.UserApiTokensDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UserApiTokensDeleteResponse userApiTokensDelete(org.openapis.openapi.models.operations.UserApiTokensDeleteRequest request, org.openapis.openapi.models.operations.UserApiTokensDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserApiTokensDeletePathParams.class, baseUrl, "/v0.1/api_tokens/{api_token_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserApiTokensDeleteRequest.class, baseUrl, "/v0.1/api_tokens/{api_token_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4177,11 +4248,10 @@ public class Account {
 
     /**
      * Returns api tokens for the authenticated user
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UserApiTokensListResponse userApiTokensList(org.openapis.openapi.models.operations.UserApiTokensListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UserApiTokensListResponse userApiTokensList() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/api_tokens");
         
@@ -4190,8 +4260,7 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -4233,10 +4302,11 @@ public class Account {
     /**
      * Creates a new User API token
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UserApiTokensNewResponse userApiTokensNew(org.openapis.openapi.models.operations.UserApiTokensNewRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UserApiTokensNewResponse userApiTokensNew(org.openapis.openapi.models.operations.UserApiTokensNewRequestBody request, org.openapis.openapi.models.operations.UserApiTokensNewSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/api_tokens");
         
@@ -4247,7 +4317,7 @@ public class Account {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4289,11 +4359,10 @@ public class Account {
 
     /**
      * Returns the user profile data
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UsersGetResponse usersGet(org.openapis.openapi.models.operations.UsersGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UsersGetResponse usersGet() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/user");
         
@@ -4302,8 +4371,7 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -4337,19 +4405,20 @@ public class Account {
     /**
      * Get a user information from an organization by name - if there is explicit permission return it, if not if not return highest implicit permission
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UsersGetForOrgResponse usersGetForOrg(org.openapis.openapi.models.operations.UsersGetForOrgRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UsersGetForOrgResponse usersGetForOrg(org.openapis.openapi.models.operations.UsersGetForOrgRequest request, org.openapis.openapi.models.operations.UsersGetForOrgSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersGetForOrgPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/users/{user_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersGetForOrgRequest.class, baseUrl, "/v0.1/orgs/{org_name}/users/{user_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4384,19 +4453,20 @@ public class Account {
     /**
      * Returns the users associated with the app specified with the given app name which belongs to the given owner.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UsersListResponse usersList(org.openapis.openapi.models.operations.UsersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UsersListResponse usersList(org.openapis.openapi.models.operations.UsersListRequest request, org.openapis.openapi.models.operations.UsersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersListPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersListRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4431,19 +4501,20 @@ public class Account {
     /**
      * Returns a list of users that belong to an organization
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UsersListForOrgResponse usersListForOrg(org.openapis.openapi.models.operations.UsersListForOrgRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UsersListForOrgResponse usersListForOrg(org.openapis.openapi.models.operations.UsersListForOrgRequest request, org.openapis.openapi.models.operations.UsersListForOrgSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersListForOrgPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersListForOrgRequest.class, baseUrl, "/v0.1/orgs/{org_name}/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4478,19 +4549,20 @@ public class Account {
     /**
      * Removes a user from an organization.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UsersRemoveFromOrgResponse usersRemoveFromOrg(org.openapis.openapi.models.operations.UsersRemoveFromOrgRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UsersRemoveFromOrgResponse usersRemoveFromOrg(org.openapis.openapi.models.operations.UsersRemoveFromOrgRequest request, org.openapis.openapi.models.operations.UsersRemoveFromOrgSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersRemoveFromOrgPathParams.class, baseUrl, "/v0.1/orgs/{org_name}/users/{user_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersRemoveFromOrgRequest.class, baseUrl, "/v0.1/orgs/{org_name}/users/{user_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4519,10 +4591,11 @@ public class Account {
     /**
      * Updates the user profile and returns the updated user data
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UsersUpdateResponse usersUpdate(org.openapis.openapi.models.operations.UsersUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UsersUpdateResponse usersUpdate(org.openapis.openapi.models.operations.UsersUpdateRequestBody request, org.openapis.openapi.models.operations.UsersUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/user");
         
@@ -4536,7 +4609,7 @@ public class Account {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4571,24 +4644,25 @@ public class Account {
     /**
      * Updates the given organization user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UsersUpdateOrgRoleResponse usersUpdateOrgRole(org.openapis.openapi.models.operations.UsersUpdateOrgRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UsersUpdateOrgRoleResponse usersUpdateOrgRole(org.openapis.openapi.models.operations.UsersUpdateOrgRoleRequest request, org.openapis.openapi.models.operations.UsersUpdateOrgRoleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersUpdateOrgRolePathParams.class, baseUrl, "/v0.1/orgs/{org_name}/users/{user_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersUpdateOrgRoleRequest.class, baseUrl, "/v0.1/orgs/{org_name}/users/{user_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BatchGetChannelHeaders;
 import org.openapis.openapi.models.operations.BatchGetChannelRequestBody;
 import org.openapis.openapi.models.operations.BatchGetChannelRequest;
 import org.openapis.openapi.models.operations.BatchGetChannelResponse;
@@ -27,31 +26,26 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchGetChannelRequest req = new BatchGetChannelRequest() {{
-                headers = new BatchGetChannelHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new BatchGetChannelRequestBody() {{
+                requestBody = new BatchGetChannelRequestBody() {{
                     arns = new String[]{{
-                        add("vel"),
-                        add("error"),
-                        add("deserunt"),
-                        add("suscipit"),
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "unde";
+                xAmzContentSha256 = "nulla";
+                xAmzCredential = "corrupti";
+                xAmzDate = "illum";
+                xAmzSecurityToken = "vel";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "deserunt";
+            }}            
 
             BatchGetChannelResponse res = sdk.batchGetChannel(req);
 
@@ -65,7 +59,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

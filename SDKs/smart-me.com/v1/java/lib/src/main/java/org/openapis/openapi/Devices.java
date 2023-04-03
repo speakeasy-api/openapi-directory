@@ -96,7 +96,7 @@ public class Devices {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DevicesPostFormResponse devicesPostForm(org.openapis.openapi.models.operations.DevicesPostFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DevicesPostFormResponse devicesPostForm(org.openapis.openapi.models.shared.DeviceToPost request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/Devices");
         
@@ -160,7 +160,7 @@ public class Devices {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DevicesPostJsonResponse devicesPostJson(org.openapis.openapi.models.operations.DevicesPostJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DevicesPostJsonResponse devicesPostJson(org.openapis.openapi.models.shared.DeviceToPost request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/Devices");
         
@@ -224,7 +224,7 @@ public class Devices {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DevicesPostRawResponse devicesPostRaw(org.openapis.openapi.models.operations.DevicesPostRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DevicesPostRawResponse devicesPostRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/Devices");
         
@@ -289,13 +289,13 @@ public class Devices {
      */
     public org.openapis.openapi.models.operations.DevicesPutResponse devicesPut(org.openapis.openapi.models.operations.DevicesPutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DevicesPutPathParams.class, baseUrl, "/api/Devices/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DevicesPutRequest.class, baseUrl, "/api/Devices/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DevicesPutQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DevicesPutRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -352,7 +352,7 @@ public class Devices {
      */
     public org.openapis.openapi.models.operations.GetApiDevicesIdResponse getApiDevicesId(org.openapis.openapi.models.operations.GetApiDevicesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiDevicesIdPathParams.class, baseUrl, "/api/Devices/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiDevicesIdRequest.class, baseUrl, "/api/Devices/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -7,31 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCustomerAddressRequest {
-    
-    public UpdateCustomerAddressPathParams pathParams;
-    public UpdateCustomerAddressRequest withPathParams(UpdateCustomerAddressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public UpdateCustomerAddressRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public UpdateCustomerAddressQueryParams queryParams;
-    public UpdateCustomerAddressRequest withQueryParams(UpdateCustomerAddressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public UpdateCustomerAddressRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
-    
-    public UpdateCustomerAddressHeaders headers;
-    public UpdateCustomerAddressRequest withHeaders(UpdateCustomerAddressHeaders headers) {
-        this.headers = headers;
+    /**
+     * Name of the schema the document to be created needs to be compliant with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_schema")
+    public String schema;
+    public UpdateCustomerAddressRequest withSchema(String schema) {
+        this.schema = schema;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateUpdateAddressRequests request;
-    public UpdateCustomerAddressRequest withRequest(org.openapis.openapi.models.shared.CreateUpdateAddressRequests request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateUpdateAddressRequests createUpdateAddressRequests;
+    public UpdateCustomerAddressRequest withCreateUpdateAddressRequests(org.openapis.openapi.models.shared.CreateUpdateAddressRequests createUpdateAddressRequests) {
+        this.createUpdateAddressRequests = createUpdateAddressRequests;
+        return this;
+    }
+    
+    /**
+     * ID of the Document.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateCustomerAddressRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

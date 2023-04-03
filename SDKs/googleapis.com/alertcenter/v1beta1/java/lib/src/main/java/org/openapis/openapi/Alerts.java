@@ -35,27 +35,28 @@ public class Alerts {
     /**
      * Performs batch delete operation on alerts.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteResponse alertcenterAlertsBatchDelete(org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteResponse alertcenterAlertsBatchDelete(org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteRequest request, org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1beta1/alerts:batchDelete");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchDeleteAlertsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Alerts {
     /**
      * Performs batch undelete operation on alerts.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AlertcenterAlertsBatchUndeleteResponse alertcenterAlertsBatchUndelete(org.openapis.openapi.models.operations.AlertcenterAlertsBatchUndeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AlertcenterAlertsBatchUndeleteResponse alertcenterAlertsBatchUndelete(org.openapis.openapi.models.operations.AlertcenterAlertsBatchUndeleteRequest request, org.openapis.openapi.models.operations.AlertcenterAlertsBatchUndeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1beta1/alerts:batchUndelete");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchUndeleteAlertsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterAlertsBatchUndeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterAlertsBatchUndeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,25 +131,26 @@ public class Alerts {
     /**
      * Marks the specified alert for deletion. An alert that has been marked for deletion is removed from Alert Center after 30 days. Marking an alert for deletion has no effect on an alert which has already been marked for deletion. Attempting to mark a nonexistent alert for deletion results in a `NOT_FOUND` error.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AlertcenterAlertsDeleteResponse alertcenterAlertsDelete(org.openapis.openapi.models.operations.AlertcenterAlertsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AlertcenterAlertsDeleteResponse alertcenterAlertsDelete(org.openapis.openapi.models.operations.AlertcenterAlertsDeleteRequest request, org.openapis.openapi.models.operations.AlertcenterAlertsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AlertcenterAlertsDeletePathParams.class, baseUrl, "/v1beta1/alerts/{alertId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AlertcenterAlertsDeleteRequest.class, baseUrl, "/v1beta1/alerts/{alertId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterAlertsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterAlertsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,27 +177,28 @@ public class Alerts {
     /**
      * Creates new feedback for an alert. Attempting to create a feedback for a non-existent alert returns `NOT_FOUND` error. Attempting to create a feedback for an alert that is marked for deletion returns `FAILED_PRECONDITION' error.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackCreateResponse alertcenterAlertsFeedbackCreate(org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackCreateResponse alertcenterAlertsFeedbackCreate(org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackCreateRequest request, org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackCreatePathParams.class, baseUrl, "/v1beta1/alerts/{alertId}/feedback", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackCreateRequest.class, baseUrl, "/v1beta1/alerts/{alertId}/feedback", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "alertFeedback", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -221,25 +225,26 @@ public class Alerts {
     /**
      * Lists all the feedback for an alert. Attempting to list feedbacks for a non-existent alert returns `NOT_FOUND` error.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackListResponse alertcenterAlertsFeedbackList(org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackListResponse alertcenterAlertsFeedbackList(org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackListRequest request, org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackListPathParams.class, baseUrl, "/v1beta1/alerts/{alertId}/feedback", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackListRequest.class, baseUrl, "/v1beta1/alerts/{alertId}/feedback", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterAlertsFeedbackListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,25 +271,26 @@ public class Alerts {
     /**
      * Gets the specified alert. Attempting to get a nonexistent alert returns `NOT_FOUND` error.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AlertcenterAlertsGetResponse alertcenterAlertsGet(org.openapis.openapi.models.operations.AlertcenterAlertsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AlertcenterAlertsGetResponse alertcenterAlertsGet(org.openapis.openapi.models.operations.AlertcenterAlertsGetRequest request, org.openapis.openapi.models.operations.AlertcenterAlertsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AlertcenterAlertsGetPathParams.class, baseUrl, "/v1beta1/alerts/{alertId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AlertcenterAlertsGetRequest.class, baseUrl, "/v1beta1/alerts/{alertId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterAlertsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterAlertsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,25 +317,26 @@ public class Alerts {
     /**
      * Returns the metadata of an alert. Attempting to get metadata for a non-existent alert returns `NOT_FOUND` error.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AlertcenterAlertsGetMetadataResponse alertcenterAlertsGetMetadata(org.openapis.openapi.models.operations.AlertcenterAlertsGetMetadataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AlertcenterAlertsGetMetadataResponse alertcenterAlertsGetMetadata(org.openapis.openapi.models.operations.AlertcenterAlertsGetMetadataRequest request, org.openapis.openapi.models.operations.AlertcenterAlertsGetMetadataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AlertcenterAlertsGetMetadataPathParams.class, baseUrl, "/v1beta1/alerts/{alertId}/metadata", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AlertcenterAlertsGetMetadataRequest.class, baseUrl, "/v1beta1/alerts/{alertId}/metadata", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterAlertsGetMetadataQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterAlertsGetMetadataRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -356,10 +363,11 @@ public class Alerts {
     /**
      * Lists the alerts.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AlertcenterAlertsListResponse alertcenterAlertsList(org.openapis.openapi.models.operations.AlertcenterAlertsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AlertcenterAlertsListResponse alertcenterAlertsList(org.openapis.openapi.models.operations.AlertcenterAlertsListRequest request, org.openapis.openapi.models.operations.AlertcenterAlertsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1beta1/alerts");
         
@@ -367,14 +375,14 @@ public class Alerts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterAlertsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterAlertsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -401,27 +409,28 @@ public class Alerts {
     /**
      * Restores, or "undeletes", an alert that was marked for deletion within the past 30 days. Attempting to undelete an alert which was marked for deletion over 30 days ago (which has been removed from the Alert Center database) or a nonexistent alert returns a `NOT_FOUND` error. Attempting to undelete an alert which has not been marked for deletion has no effect.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AlertcenterAlertsUndeleteResponse alertcenterAlertsUndelete(org.openapis.openapi.models.operations.AlertcenterAlertsUndeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AlertcenterAlertsUndeleteResponse alertcenterAlertsUndelete(org.openapis.openapi.models.operations.AlertcenterAlertsUndeleteRequest request, org.openapis.openapi.models.operations.AlertcenterAlertsUndeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AlertcenterAlertsUndeletePathParams.class, baseUrl, "/v1beta1/alerts/{alertId}:undelete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AlertcenterAlertsUndeleteRequest.class, baseUrl, "/v1beta1/alerts/{alertId}:undelete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "undeleteAlertRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterAlertsUndeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AlertcenterAlertsUndeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

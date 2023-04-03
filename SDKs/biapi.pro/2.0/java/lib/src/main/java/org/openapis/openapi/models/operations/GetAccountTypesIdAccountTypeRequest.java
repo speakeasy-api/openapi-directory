@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountTypesIdAccountTypeRequest {
-    
-    public GetAccountTypesIdAccountTypePathParams pathParams;
-    public GetAccountTypesIdAccountTypeRequest withPathParams(GetAccountTypesIdAccountTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetAccountTypesIdAccountTypeRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
-    
-    public GetAccountTypesIdAccountTypeQueryParams queryParams;
-    public GetAccountTypesIdAccountTypeRequest withQueryParams(GetAccountTypesIdAccountTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account_type")
+    public Long idAccountType;
+    public GetAccountTypesIdAccountTypeRequest withIdAccountType(Long idAccountType) {
+        this.idAccountType = idAccountType;
         return this;
     }
     

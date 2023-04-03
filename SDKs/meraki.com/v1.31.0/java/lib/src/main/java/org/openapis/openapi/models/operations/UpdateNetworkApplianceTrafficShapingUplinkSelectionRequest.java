@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest {
-    
-    public UpdateNetworkApplianceTrafficShapingUplinkSelectionPathParams pathParams;
-    public UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest withPathParams(UpdateNetworkApplianceTrafficShapingUplinkSelectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody requestBody;
+    public UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest withRequestBody(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody request;
-    public UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest withRequest(UpdateNetworkApplianceTrafficShapingUplinkSelectionRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

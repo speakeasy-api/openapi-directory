@@ -45,12 +45,12 @@ public class Git {
      */
     public org.openapis.openapi.models.operations.GitCreateBlobResponse gitCreateBlob(org.openapis.openapi.models.operations.GitCreateBlobRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitCreateBlobPathParams.class, baseUrl, "/repos/{owner}/{repo}/git/blobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitCreateBlobRequest.class, baseUrl, "/repos/{owner}/{repo}/git/blobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -137,12 +137,12 @@ public class Git {
      */
     public org.openapis.openapi.models.operations.GitCreateCommitResponse gitCreateCommit(org.openapis.openapi.models.operations.GitCreateCommitRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitCreateCommitPathParams.class, baseUrl, "/repos/{owner}/{repo}/git/commits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitCreateCommitRequest.class, baseUrl, "/repos/{owner}/{repo}/git/commits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -200,12 +200,12 @@ public class Git {
      */
     public org.openapis.openapi.models.operations.GitCreateRefResponse gitCreateRef(org.openapis.openapi.models.operations.GitCreateRefRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitCreateRefPathParams.class, baseUrl, "/repos/{owner}/{repo}/git/refs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitCreateRefRequest.class, baseUrl, "/repos/{owner}/{repo}/git/refs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -284,12 +284,12 @@ public class Git {
      */
     public org.openapis.openapi.models.operations.GitCreateTagResponse gitCreateTag(org.openapis.openapi.models.operations.GitCreateTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitCreateTagPathParams.class, baseUrl, "/repos/{owner}/{repo}/git/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitCreateTagRequest.class, baseUrl, "/repos/{owner}/{repo}/git/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -343,12 +343,12 @@ public class Git {
      */
     public org.openapis.openapi.models.operations.GitCreateTreeResponse gitCreateTree(org.openapis.openapi.models.operations.GitCreateTreeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitCreateTreePathParams.class, baseUrl, "/repos/{owner}/{repo}/git/trees", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitCreateTreeRequest.class, baseUrl, "/repos/{owner}/{repo}/git/trees", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -405,7 +405,7 @@ public class Git {
      */
     public org.openapis.openapi.models.operations.GitDeleteRefResponse gitDeleteRef(org.openapis.openapi.models.operations.GitDeleteRefRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitDeleteRefPathParams.class, baseUrl, "/repos/{owner}/{repo}/git/refs/{ref}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitDeleteRefRequest.class, baseUrl, "/repos/{owner}/{repo}/git/refs/{ref}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -449,7 +449,7 @@ public class Git {
      */
     public org.openapis.openapi.models.operations.GitGetBlobResponse gitGetBlob(org.openapis.openapi.models.operations.GitGetBlobRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitGetBlobPathParams.class, baseUrl, "/repos/{owner}/{repo}/git/blobs/{file_sha}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitGetBlobRequest.class, baseUrl, "/repos/{owner}/{repo}/git/blobs/{file_sha}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -534,7 +534,7 @@ public class Git {
      */
     public org.openapis.openapi.models.operations.GitGetCommitResponse gitGetCommit(org.openapis.openapi.models.operations.GitGetCommitRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitGetCommitPathParams.class, baseUrl, "/repos/{owner}/{repo}/git/commits/{commit_sha}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitGetCommitRequest.class, baseUrl, "/repos/{owner}/{repo}/git/commits/{commit_sha}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -584,7 +584,7 @@ public class Git {
      */
     public org.openapis.openapi.models.operations.GitGetRefResponse gitGetRef(org.openapis.openapi.models.operations.GitGetRefRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitGetRefPathParams.class, baseUrl, "/repos/{owner}/{repo}/git/ref/{ref}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitGetRefRequest.class, baseUrl, "/repos/{owner}/{repo}/git/ref/{ref}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -659,7 +659,7 @@ public class Git {
      */
     public org.openapis.openapi.models.operations.GitGetTagResponse gitGetTag(org.openapis.openapi.models.operations.GitGetTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitGetTagPathParams.class, baseUrl, "/repos/{owner}/{repo}/git/tags/{tag_sha}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitGetTagRequest.class, baseUrl, "/repos/{owner}/{repo}/git/tags/{tag_sha}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -712,13 +712,13 @@ public class Git {
      */
     public org.openapis.openapi.models.operations.GitGetTreeResponse gitGetTree(org.openapis.openapi.models.operations.GitGetTreeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitGetTreePathParams.class, baseUrl, "/repos/{owner}/{repo}/git/trees/{tree_sha}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitGetTreeRequest.class, baseUrl, "/repos/{owner}/{repo}/git/trees/{tree_sha}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GitGetTreeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GitGetTreeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -780,7 +780,7 @@ public class Git {
      */
     public org.openapis.openapi.models.operations.GitListMatchingRefsResponse gitListMatchingRefs(org.openapis.openapi.models.operations.GitListMatchingRefsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitListMatchingRefsPathParams.class, baseUrl, "/repos/{owner}/{repo}/git/matching-refs/{ref}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitListMatchingRefsRequest.class, baseUrl, "/repos/{owner}/{repo}/git/matching-refs/{ref}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -821,12 +821,12 @@ public class Git {
      */
     public org.openapis.openapi.models.operations.GitUpdateRefResponse gitUpdateRef(org.openapis.openapi.models.operations.GitUpdateRefRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitUpdateRefPathParams.class, baseUrl, "/repos/{owner}/{repo}/git/refs/{ref}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitUpdateRefRequest.class, baseUrl, "/repos/{owner}/{repo}/git/refs/{ref}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

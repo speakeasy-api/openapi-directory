@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebinarRegistrantCreateRequest {
-    
-    public WebinarRegistrantCreatePathParams pathParams;
-    public WebinarRegistrantCreateRequest withPathParams(WebinarRegistrantCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public WebinarRegistrantCreateQueryParams queryParams;
-    public WebinarRegistrantCreateRequest withQueryParams(WebinarRegistrantCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public WebinarRegistrantCreateApplicationJSON request;
-    public WebinarRegistrantCreateRequest withRequest(WebinarRegistrantCreateApplicationJSON request) {
-        this.request = request;
+    public WebinarRegistrantCreateApplicationJSON requestBody;
+    public WebinarRegistrantCreateRequest withRequestBody(WebinarRegistrantCreateApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Occurrence ID. Get this value from the webinar get API. Multiple values separated by a comma.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurrence_ids")
+    public String occurrenceIds;
+    public WebinarRegistrantCreateRequest withOccurrenceIds(String occurrenceIds) {
+        this.occurrenceIds = occurrenceIds;
+        return this;
+    }
     
-    public WebinarRegistrantCreateSecurity security;
-    public WebinarRegistrantCreateRequest withSecurity(WebinarRegistrantCreateSecurity security) {
-        this.security = security;
+    /**
+     * The webinar ID in "**long**" format(represented as int64 data type in JSON). 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webinarId")
+    public Long webinarId;
+    public WebinarRegistrantCreateRequest withWebinarId(Long webinarId) {
+        this.webinarId = webinarId;
         return this;
     }
     

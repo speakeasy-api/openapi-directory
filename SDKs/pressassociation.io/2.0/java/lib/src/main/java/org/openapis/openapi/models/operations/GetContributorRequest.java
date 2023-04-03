@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContributorRequest {
-    
-    public GetContributorPathParams pathParams;
-    public GetContributorRequest withPathParams(GetContributorPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Flag to display Legacy and Provider Ids.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliases")
+    public Boolean aliases;
+    public GetContributorRequest withAliases(Boolean aliases) {
+        this.aliases = aliases;
         return this;
     }
     
-    
-    public GetContributorQueryParams queryParams;
-    public GetContributorRequest withQueryParams(GetContributorQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetContributorSecurity security;
-    public GetContributorRequest withSecurity(GetContributorSecurity security) {
-        this.security = security;
+    /**
+     * Filter the schedule items by contributor ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contributorId")
+    public String contributorId;
+    public GetContributorRequest withContributorId(String contributorId) {
+        this.contributorId = contributorId;
         return this;
     }
     

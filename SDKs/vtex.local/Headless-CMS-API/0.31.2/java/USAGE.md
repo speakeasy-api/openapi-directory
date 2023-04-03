@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetAllContentTypesPathParams;
 import org.openapis.openapi.models.operations.GetAllContentTypesRequest;
 import org.openapis.openapi.models.operations.GetAllContentTypesResponse;
 
@@ -15,10 +14,8 @@ public class Application {
                 .build();
 
             GetAllContentTypesRequest req = new GetAllContentTypesRequest() {{
-                pathParams = new GetAllContentTypesPathParams() {{
-                    builderId = "faststore";
-                }};
-            }};            
+                builderId = "faststore";
+            }}            
 
             GetAllContentTypesResponse res = sdk.pages.getAllContentTypes(req);
 

@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetContainersMessagesHeaders;
 import org.openapis.openapi.models.operations.GetContainersMessagesRequest;
 import org.openapis.openapi.models.operations.GetContainersMessagesResponse;
 
@@ -28,11 +27,9 @@ public class Application {
                 .build();
 
             GetContainersMessagesRequest req = new GetContainersMessagesRequest() {{
-                headers = new GetContainersMessagesHeaders() {{
-                    xAuthProjectId = "corrupti";
-                    xAuthToken = "provident";
-                }};
-            }};            
+                xAuthProjectId = "corrupti";
+                xAuthToken = "provident";
+            }}            
 
             GetContainersMessagesResponse res = sdk.apiInfo.getContainersMessages(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### apiInfo

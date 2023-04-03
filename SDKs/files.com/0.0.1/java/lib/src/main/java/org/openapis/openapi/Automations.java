@@ -44,7 +44,7 @@ public class Automations {
      */
     public org.openapis.openapi.models.operations.DeleteAutomationsIdResponse deleteAutomationsId(org.openapis.openapi.models.operations.DeleteAutomationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAutomationsIdPathParams.class, baseUrl, "/automations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAutomationsIdRequest.class, baseUrl, "/automations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -83,7 +83,7 @@ public class Automations {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAutomationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAutomationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -124,7 +124,7 @@ public class Automations {
      */
     public org.openapis.openapi.models.operations.GetAutomationsIdResponse getAutomationsId(org.openapis.openapi.models.operations.GetAutomationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAutomationsIdPathParams.class, baseUrl, "/automations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAutomationsIdRequest.class, baseUrl, "/automations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -165,12 +165,12 @@ public class Automations {
      */
     public org.openapis.openapi.models.operations.PatchAutomationsIdResponse patchAutomationsId(org.openapis.openapi.models.operations.PatchAutomationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchAutomationsIdPathParams.class, baseUrl, "/automations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchAutomationsIdRequest.class, baseUrl, "/automations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
@@ -206,7 +206,7 @@ public class Automations {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAutomationsResponse postAutomations(org.openapis.openapi.models.operations.PostAutomationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAutomationsResponse postAutomations(org.openapis.openapi.models.operations.PostAutomationsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/automations");
         

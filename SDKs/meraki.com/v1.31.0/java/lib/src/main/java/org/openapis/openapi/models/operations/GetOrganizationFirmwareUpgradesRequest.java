@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationFirmwareUpgradesRequest {
-    
-    public GetOrganizationFirmwareUpgradesPathParams pathParams;
-    public GetOrganizationFirmwareUpgradesRequest withPathParams(GetOrganizationFirmwareUpgradesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationFirmwareUpgradesRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     
+    /**
+     * The product type in a given upgrade ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=productType")
+    public String[] productType;
+    public GetOrganizationFirmwareUpgradesRequest withProductType(String[] productType) {
+        this.productType = productType;
+        return this;
+    }
     
-    public GetOrganizationFirmwareUpgradesQueryParams queryParams;
-    public GetOrganizationFirmwareUpgradesRequest withQueryParams(GetOrganizationFirmwareUpgradesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The status of an upgrade 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=status")
+    public String[] status;
+    public GetOrganizationFirmwareUpgradesRequest withStatus(String[] status) {
+        this.status = status;
         return this;
     }
     

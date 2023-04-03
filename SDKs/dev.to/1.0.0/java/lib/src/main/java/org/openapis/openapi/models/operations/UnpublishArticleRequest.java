@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnpublishArticleRequest {
-    
-    public UnpublishArticlePathParams pathParams;
-    public UnpublishArticleRequest withPathParams(UnpublishArticlePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the article to unpublish.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public UnpublishArticleRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     
-    
-    public UnpublishArticleQueryParams queryParams;
-    public UnpublishArticleRequest withQueryParams(UnpublishArticleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Content for the note that's created along with unpublishing
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=note")
+    public String note;
+    public UnpublishArticleRequest withNote(String note) {
+        this.note = note;
         return this;
     }
     

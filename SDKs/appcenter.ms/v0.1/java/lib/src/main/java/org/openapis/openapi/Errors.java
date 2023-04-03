@@ -36,25 +36,26 @@ public class Errors {
     /**
      * List of app builds
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsAppBuildsListResponse errorsAppBuildsList(org.openapis.openapi.models.operations.ErrorsAppBuildsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsAppBuildsListResponse errorsAppBuildsList(org.openapis.openapi.models.operations.ErrorsAppBuildsListRequest request, org.openapis.openapi.models.operations.ErrorsAppBuildsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsAppBuildsListPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/availableAppBuilds", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsAppBuildsListRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/availableAppBuilds", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsAppBuildsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsAppBuildsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -89,25 +90,26 @@ public class Errors {
     /**
      * Get all available versions in the time range.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsAvailableVersionsResponse errorsAvailableVersions(org.openapis.openapi.models.operations.ErrorsAvailableVersionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsAvailableVersionsResponse errorsAvailableVersions(org.openapis.openapi.models.operations.ErrorsAvailableVersionsRequest request, org.openapis.openapi.models.operations.ErrorsAvailableVersionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsAvailableVersionsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/available_versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsAvailableVersionsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/available_versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsAvailableVersionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsAvailableVersionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -142,25 +144,26 @@ public class Errors {
     /**
      * Count of crashes or errors by day in the time range based the selected versions. If SingleErrorTypeParameter is not provided, defaults to handlederror.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsCountsPerDayResponse errorsCountsPerDay(org.openapis.openapi.models.operations.ErrorsCountsPerDayRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsCountsPerDayResponse errorsCountsPerDay(org.openapis.openapi.models.operations.ErrorsCountsPerDayRequest request, org.openapis.openapi.models.operations.ErrorsCountsPerDaySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsCountsPerDayPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorCountsPerDay", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsCountsPerDayRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorCountsPerDay", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsCountsPerDayQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsCountsPerDayRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -195,19 +198,20 @@ public class Errors {
     /**
      * Delete a specific error and related attachments and blobs for an app. Searchable data will not be deleted immediately and may take up to 30 days.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsDeleteErrorResponse errorsDeleteError(org.openapis.openapi.models.operations.ErrorsDeleteErrorRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsDeleteErrorResponse errorsDeleteError(org.openapis.openapi.models.operations.ErrorsDeleteErrorRequest request, org.openapis.openapi.models.operations.ErrorsDeleteErrorSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsDeleteErrorPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsDeleteErrorRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -242,19 +246,20 @@ public class Errors {
     /**
      * Error attachment location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsErrorAttachmentLocationResponse errorsErrorAttachmentLocation(org.openapis.openapi.models.operations.ErrorsErrorAttachmentLocationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsErrorAttachmentLocationResponse errorsErrorAttachmentLocation(org.openapis.openapi.models.operations.ErrorsErrorAttachmentLocationRequest request, org.openapis.openapi.models.operations.ErrorsErrorAttachmentLocationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsErrorAttachmentLocationPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments/{attachmentId}/location", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsErrorAttachmentLocationRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments/{attachmentId}/location", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -289,19 +294,20 @@ public class Errors {
     /**
      * Error attachment text.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsErrorAttachmentTextResponse errorsErrorAttachmentText(org.openapis.openapi.models.operations.ErrorsErrorAttachmentTextRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsErrorAttachmentTextResponse errorsErrorAttachmentText(org.openapis.openapi.models.operations.ErrorsErrorAttachmentTextRequest request, org.openapis.openapi.models.operations.ErrorsErrorAttachmentTextSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsErrorAttachmentTextPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments/{attachmentId}/text", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsErrorAttachmentTextRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments/{attachmentId}/text", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -336,19 +342,20 @@ public class Errors {
     /**
      * List error attachments.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsErrorAttachmentsResponse errorsErrorAttachments(org.openapis.openapi.models.operations.ErrorsErrorAttachmentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsErrorAttachmentsResponse errorsErrorAttachments(org.openapis.openapi.models.operations.ErrorsErrorAttachmentsRequest request, org.openapis.openapi.models.operations.ErrorsErrorAttachmentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsErrorAttachmentsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsErrorAttachmentsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/attachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -383,25 +390,26 @@ public class Errors {
     /**
      * Download details for a specific error.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsErrorDownloadResponse errorsErrorDownload(org.openapis.openapi.models.operations.ErrorsErrorDownloadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsErrorDownloadResponse errorsErrorDownload(org.openapis.openapi.models.operations.ErrorsErrorDownloadRequest request, org.openapis.openapi.models.operations.ErrorsErrorDownloadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsErrorDownloadPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/download", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsErrorDownloadRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/download", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsErrorDownloadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsErrorDownloadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -436,25 +444,26 @@ public class Errors {
     /**
      * Error groups list based on search parameters
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsErrorGroupsSearchResponse errorsErrorGroupsSearch(org.openapis.openapi.models.operations.ErrorsErrorGroupsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsErrorGroupsSearchResponse errorsErrorGroupsSearch(org.openapis.openapi.models.operations.ErrorsErrorGroupsSearchRequest request, org.openapis.openapi.models.operations.ErrorsErrorGroupsSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsErrorGroupsSearchPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/search", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsErrorGroupsSearchRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/search", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsErrorGroupsSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsErrorGroupsSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -489,19 +498,20 @@ public class Errors {
     /**
      * Error location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsErrorLocationResponse errorsErrorLocation(org.openapis.openapi.models.operations.ErrorsErrorLocationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsErrorLocationResponse errorsErrorLocation(org.openapis.openapi.models.operations.ErrorsErrorLocationRequest request, org.openapis.openapi.models.operations.ErrorsErrorLocationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsErrorLocationPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/location", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsErrorLocationRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/location", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -536,25 +546,26 @@ public class Errors {
     /**
      * Errors list based on search parameters
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsErrorSearchResponse errorsErrorSearch(org.openapis.openapi.models.operations.ErrorsErrorSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsErrorSearchResponse errorsErrorSearch(org.openapis.openapi.models.operations.ErrorsErrorSearchRequest request, org.openapis.openapi.models.operations.ErrorsErrorSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsErrorSearchPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/search", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsErrorSearchRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/search", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsErrorSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsErrorSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -589,19 +600,20 @@ public class Errors {
     /**
      * Error Stacktrace details.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsErrorStackTraceResponse errorsErrorStackTrace(org.openapis.openapi.models.operations.ErrorsErrorStackTraceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsErrorStackTraceResponse errorsErrorStackTrace(org.openapis.openapi.models.operations.ErrorsErrorStackTraceRequest request, org.openapis.openapi.models.operations.ErrorsErrorStackTraceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsErrorStackTracePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/stacktrace", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsErrorStackTraceRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}/stacktrace", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -636,19 +648,20 @@ public class Errors {
     /**
      * Error details.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsGetErrorDetailsResponse errorsGetErrorDetails(org.openapis.openapi.models.operations.ErrorsGetErrorDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsGetErrorDetailsResponse errorsGetErrorDetails(org.openapis.openapi.models.operations.ErrorsGetErrorDetailsRequest request, org.openapis.openapi.models.operations.ErrorsGetErrorDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsGetErrorDetailsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsGetErrorDetailsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/{errorId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -683,25 +696,26 @@ public class Errors {
     /**
      * Count of errors by day in the time range of the selected error group with selected version
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsGroupCountsPerDayResponse errorsGroupCountsPerDay(org.openapis.openapi.models.operations.ErrorsGroupCountsPerDayRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsGroupCountsPerDayResponse errorsGroupCountsPerDay(org.openapis.openapi.models.operations.ErrorsGroupCountsPerDayRequest request, org.openapis.openapi.models.operations.ErrorsGroupCountsPerDaySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsGroupCountsPerDayPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errorCountsPerDay", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsGroupCountsPerDayRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errorCountsPerDay", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsGroupCountsPerDayQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsGroupCountsPerDayRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -736,19 +750,20 @@ public class Errors {
     /**
      * Error group details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsGroupDetailsResponse errorsGroupDetails(org.openapis.openapi.models.operations.ErrorsGroupDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsGroupDetailsResponse errorsGroupDetails(org.openapis.openapi.models.operations.ErrorsGroupDetailsRequest request, org.openapis.openapi.models.operations.ErrorsGroupDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsGroupDetailsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsGroupDetailsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -783,25 +798,26 @@ public class Errors {
     /**
      * Percentage of error-free devices by day in the time range. Api will return -1 if crash devices is greater than active devices
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsGroupErrorFreeDevicePercentagesResponse errorsGroupErrorFreeDevicePercentages(org.openapis.openapi.models.operations.ErrorsGroupErrorFreeDevicePercentagesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsGroupErrorFreeDevicePercentagesResponse errorsGroupErrorFreeDevicePercentages(org.openapis.openapi.models.operations.ErrorsGroupErrorFreeDevicePercentagesRequest request, org.openapis.openapi.models.operations.ErrorsGroupErrorFreeDevicePercentagesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsGroupErrorFreeDevicePercentagesPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errorfreeDevicePercentages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsGroupErrorFreeDevicePercentagesRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errorfreeDevicePercentages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsGroupErrorFreeDevicePercentagesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsGroupErrorFreeDevicePercentagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -836,19 +852,20 @@ public class Errors {
     /**
      * Gets the stack trace for the error group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsGroupErrorStackTraceResponse errorsGroupErrorStackTrace(org.openapis.openapi.models.operations.ErrorsGroupErrorStackTraceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsGroupErrorStackTraceResponse errorsGroupErrorStackTrace(org.openapis.openapi.models.operations.ErrorsGroupErrorStackTraceRequest request, org.openapis.openapi.models.operations.ErrorsGroupErrorStackTraceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsGroupErrorStackTracePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/stacktrace", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsGroupErrorStackTraceRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/stacktrace", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -883,25 +900,26 @@ public class Errors {
     /**
      * List of error groups
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsGroupListResponse errorsGroupList(org.openapis.openapi.models.operations.ErrorsGroupListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsGroupListResponse errorsGroupList(org.openapis.openapi.models.operations.ErrorsGroupListRequest request, org.openapis.openapi.models.operations.ErrorsGroupListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsGroupListPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsGroupListRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsGroupListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsGroupListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -936,25 +954,26 @@ public class Errors {
     /**
      * Top models of the selected error group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsGroupModelCountsResponse errorsGroupModelCounts(org.openapis.openapi.models.operations.ErrorsGroupModelCountsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsGroupModelCountsResponse errorsGroupModelCounts(org.openapis.openapi.models.operations.ErrorsGroupModelCountsRequest request, org.openapis.openapi.models.operations.ErrorsGroupModelCountsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsGroupModelCountsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsGroupModelCountsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsGroupModelCountsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsGroupModelCountsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -989,25 +1008,26 @@ public class Errors {
     /**
      * Top OSes of the selected error group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsGroupOperatingSystemCountsResponse errorsGroupOperatingSystemCounts(org.openapis.openapi.models.operations.ErrorsGroupOperatingSystemCountsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsGroupOperatingSystemCountsResponse errorsGroupOperatingSystemCounts(org.openapis.openapi.models.operations.ErrorsGroupOperatingSystemCountsRequest request, org.openapis.openapi.models.operations.ErrorsGroupOperatingSystemCountsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsGroupOperatingSystemCountsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/operatingSystems", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsGroupOperatingSystemCountsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/operatingSystems", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsGroupOperatingSystemCountsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsGroupOperatingSystemCountsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1042,19 +1062,20 @@ public class Errors {
     /**
      * Latest error details.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsLatestErrorDetailsResponse errorsLatestErrorDetails(org.openapis.openapi.models.operations.ErrorsLatestErrorDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsLatestErrorDetailsResponse errorsLatestErrorDetails(org.openapis.openapi.models.operations.ErrorsLatestErrorDetailsRequest request, org.openapis.openapi.models.operations.ErrorsLatestErrorDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsLatestErrorDetailsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/latest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsLatestErrorDetailsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors/latest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1089,25 +1110,26 @@ public class Errors {
     /**
      * Get all errors for group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsListForGroupResponse errorsListForGroup(org.openapis.openapi.models.operations.ErrorsListForGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsListForGroupResponse errorsListForGroup(org.openapis.openapi.models.operations.ErrorsListForGroupRequest request, org.openapis.openapi.models.operations.ErrorsListForGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsListForGroupPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsListForGroupRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}/errors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsListForGroupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsListForGroupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1142,25 +1164,26 @@ public class Errors {
     /**
      * Get session logs by error ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsListSessionLogsResponse errorsListSessionLogs(org.openapis.openapi.models.operations.ErrorsListSessionLogsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsListSessionLogsResponse errorsListSessionLogs(org.openapis.openapi.models.operations.ErrorsListSessionLogsRequest request, org.openapis.openapi.models.operations.ErrorsListSessionLogsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsListSessionLogsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/sessionLogs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsListSessionLogsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/{errorId}/sessionLogs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsListSessionLogsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErrorsListSessionLogsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1195,24 +1218,25 @@ public class Errors {
     /**
      * Update error group state
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsUpdateStateResponse errorsUpdateState(org.openapis.openapi.models.operations.ErrorsUpdateStateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsUpdateStateResponse errorsUpdateState(org.openapis.openapi.models.operations.ErrorsUpdateStateRequest request, org.openapis.openapi.models.operations.ErrorsUpdateStateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsUpdateStatePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsUpdateStateRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/errorGroups/{errorGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1248,19 +1272,20 @@ public class Errors {
      * gets the retention settings in days
      * gets the retention settings in days
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErrorsGetRetentionSettingsResponse errorsGetRetentionSettings(org.openapis.openapi.models.operations.ErrorsGetRetentionSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErrorsGetRetentionSettingsResponse errorsGetRetentionSettings(org.openapis.openapi.models.operations.ErrorsGetRetentionSettingsRequest request, org.openapis.openapi.models.operations.ErrorsGetRetentionSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsGetRetentionSettingsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/retention_settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErrorsGetRetentionSettingsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/errors/retention_settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

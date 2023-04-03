@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOfferingsOfferingIdChannelsChannelIdLearnersRequest {
-    
-    public PostOfferingsOfferingIdChannelsChannelIdLearnersPathParams pathParams;
-    public PostOfferingsOfferingIdChannelsChannelIdLearnersRequest withPathParams(PostOfferingsOfferingIdChannelsChannelIdLearnersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostOfferingsOfferingIdChannelsChannelIdLearnersRequestBody requestBody;
+    public PostOfferingsOfferingIdChannelsChannelIdLearnersRequest withRequestBody(PostOfferingsOfferingIdChannelsChannelIdLearnersRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostOfferingsOfferingIdChannelsChannelIdLearnersRequestBody request;
-    public PostOfferingsOfferingIdChannelsChannelIdLearnersRequest withRequest(PostOfferingsOfferingIdChannelsChannelIdLearnersRequestBody request) {
-        this.request = request;
+    /**
+     * channel's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
+    public String channelId;
+    public PostOfferingsOfferingIdChannelsChannelIdLearnersRequest withChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+    
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public PostOfferingsOfferingIdChannelsChannelIdLearnersRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
         return this;
     }
     

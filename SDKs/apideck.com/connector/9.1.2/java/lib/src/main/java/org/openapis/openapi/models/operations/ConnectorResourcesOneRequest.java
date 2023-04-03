@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConnectorResourcesOneRequest {
-    
-    public ConnectorResourcesOnePathParams pathParams;
-    public ConnectorResourcesOneRequest withPathParams(ConnectorResourcesOnePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ConnectorResourcesOneRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public ConnectorResourcesOneQueryParams queryParams;
-    public ConnectorResourcesOneRequest withQueryParams(ConnectorResourcesOneQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * ID of the resource you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource_id")
+    public String resourceId;
+    public ConnectorResourcesOneRequest withResourceId(String resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
     
-    
-    public ConnectorResourcesOneHeaders headers;
-    public ConnectorResourcesOneRequest withHeaders(ConnectorResourcesOneHeaders headers) {
-        this.headers = headers;
+    /**
+     * Specify unified API for the connector resource. This is useful when a resource appears in multiple APIs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unified_api")
+    public org.openapis.openapi.models.shared.UnifiedApiIdEnum unifiedApi;
+    public ConnectorResourcesOneRequest withUnifiedApi(org.openapis.openapi.models.shared.UnifiedApiIdEnum unifiedApi) {
+        this.unifiedApi = unifiedApi;
         return this;
     }
     
-    
-    public ConnectorResourcesOneSecurity security;
-    public ConnectorResourcesOneRequest withSecurity(ConnectorResourcesOneSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public ConnectorResourcesOneRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
         return this;
     }
     

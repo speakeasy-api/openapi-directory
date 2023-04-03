@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoDownloadPullDiffOrPatchRequest {
-    
-    public RepoDownloadPullDiffOrPatchPathParams pathParams;
-    public RepoDownloadPullDiffOrPatchRequest withPathParams(RepoDownloadPullDiffOrPatchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * whether to include binary file changes. if true, the diff is applicable with `git apply`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=binary")
+    public Boolean binary;
+    public RepoDownloadPullDiffOrPatchRequest withBinary(Boolean binary) {
+        this.binary = binary;
         return this;
     }
     
+    /**
+     * whether the output is diff or patch
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=diffType")
+    public RepoDownloadPullDiffOrPatchDiffTypeEnum diffType;
+    public RepoDownloadPullDiffOrPatchRequest withDiffType(RepoDownloadPullDiffOrPatchDiffTypeEnum diffType) {
+        this.diffType = diffType;
+        return this;
+    }
     
-    public RepoDownloadPullDiffOrPatchQueryParams queryParams;
-    public RepoDownloadPullDiffOrPatchRequest withQueryParams(RepoDownloadPullDiffOrPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * index of the pull request to get
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public RepoDownloadPullDiffOrPatchRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoDownloadPullDiffOrPatchRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoDownloadPullDiffOrPatchRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -7,24 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PATCHUpdateWorkflowRequest {
-    
-    public PATCHUpdateWorkflowPathParams pathParams;
-    public PATCHUpdateWorkflowRequest withPathParams(PATCHUpdateWorkflowPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PATCHUpdateWorkflowHeaders headers;
-    public PATCHUpdateWorkflowRequest withHeaders(PATCHUpdateWorkflowHeaders headers) {
-        this.headers = headers;
+    /**
+     * `Bearer {token}` for a valid OAuth token.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PATCHUpdateWorkflowRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PATCHUpdateWorkflowRequestBody request;
-    public PATCHUpdateWorkflowRequest withRequest(PATCHUpdateWorkflowRequestBody request) {
-        this.request = request;
+    public PATCHUpdateWorkflowRequestBody requestBody;
+    public PATCHUpdateWorkflowRequest withRequestBody(PATCHUpdateWorkflowRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public PATCHUpdateWorkflowRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
+        return this;
+    }
+    
+    /**
+     * The unique ID of a workflow. For example, 19080.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workflow_id")
+    public String workflowId;
+    public PATCHUpdateWorkflowRequest withWorkflowId(String workflowId) {
+        this.workflowId = workflowId;
         return this;
     }
     

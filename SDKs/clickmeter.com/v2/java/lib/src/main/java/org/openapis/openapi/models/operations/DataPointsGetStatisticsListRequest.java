@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataPointsGetStatisticsListRequest {
-    
-    public DataPointsGetStatisticsListPathParams pathParams;
-    public DataPointsGetStatisticsListRequest withPathParams(DataPointsGetStatisticsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
+    public String fromDay;
+    public DataPointsGetStatisticsListRequest withFromDay(String fromDay) {
+        this.fromDay = fromDay;
         return this;
     }
     
+    /**
+     * The temporal entity you want to group by ("week"/"month"). If unspecified is "day".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupBy")
+    public DataPointsGetStatisticsListGroupByEnum groupBy;
+    public DataPointsGetStatisticsListRequest withGroupBy(DataPointsGetStatisticsListGroupByEnum groupBy) {
+        this.groupBy = groupBy;
+        return this;
+    }
     
-    public DataPointsGetStatisticsListQueryParams queryParams;
-    public DataPointsGetStatisticsListRequest withQueryParams(DataPointsGetStatisticsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the datapoint
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DataPointsGetStatisticsListRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Timeframe of the request. See list at $timeframeList
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
+    public DataPointsGetStatisticsListTimeFrameEnum timeFrame;
+    public DataPointsGetStatisticsListRequest withTimeFrame(DataPointsGetStatisticsListTimeFrameEnum timeFrame) {
+        this.timeFrame = timeFrame;
+        return this;
+    }
+    
+    /**
+     * If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
+    public String toDay;
+    public DataPointsGetStatisticsListRequest withToDay(String toDay) {
+        this.toDay = toDay;
         return this;
     }
     

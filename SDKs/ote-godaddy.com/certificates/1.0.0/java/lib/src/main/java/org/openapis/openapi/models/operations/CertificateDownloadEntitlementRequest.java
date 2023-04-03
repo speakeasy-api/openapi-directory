@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateDownloadEntitlementRequest {
-    
-    public CertificateDownloadEntitlementQueryParams queryParams;
-    public CertificateDownloadEntitlementRequest withQueryParams(CertificateDownloadEntitlementQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Entitlement id to download
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entitlementId")
+    public String entitlementId;
+    public CertificateDownloadEntitlementRequest withEntitlementId(String entitlementId) {
+        this.entitlementId = entitlementId;
         return this;
     }
     

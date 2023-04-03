@@ -36,13 +36,13 @@ public class Directions {
      */
     public org.openapis.openapi.models.operations.GetDirectionsOutputFormatResponse getDirectionsOutputFormat(org.openapis.openapi.models.operations.GetDirectionsOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDirectionsOutputFormatPathParams.class, baseUrl, "/directions.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDirectionsOutputFormatRequest.class, baseUrl, "/directions.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDirectionsOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDirectionsOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -76,13 +76,13 @@ public class Directions {
      */
     public org.openapis.openapi.models.operations.GetOptimalDirectionsOutputFormatResponse getOptimalDirectionsOutputFormat(org.openapis.openapi.models.operations.GetOptimalDirectionsOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOptimalDirectionsOutputFormatPathParams.class, baseUrl, "/optimalDirections.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOptimalDirectionsOutputFormatRequest.class, baseUrl, "/optimalDirections.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOptimalDirectionsOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOptimalDirectionsOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -116,13 +116,13 @@ public class Directions {
      */
     public org.openapis.openapi.models.operations.GetTruckDirectionsOutputFormatResponse getTruckDirectionsOutputFormat(org.openapis.openapi.models.operations.GetTruckDirectionsOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTruckDirectionsOutputFormatPathParams.class, baseUrl, "/truck/directions.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTruckDirectionsOutputFormatRequest.class, baseUrl, "/truck/directions.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTruckDirectionsOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTruckDirectionsOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -156,13 +156,13 @@ public class Directions {
      */
     public org.openapis.openapi.models.operations.GetTruckOptimalDirectionsOutputFormatResponse getTruckOptimalDirectionsOutputFormat(org.openapis.openapi.models.operations.GetTruckOptimalDirectionsOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTruckOptimalDirectionsOutputFormatPathParams.class, baseUrl, "/truck/optimalDirections.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTruckOptimalDirectionsOutputFormatRequest.class, baseUrl, "/truck/optimalDirections.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTruckOptimalDirectionsOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTruckOptimalDirectionsOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -196,13 +196,13 @@ public class Directions {
      */
     public org.openapis.openapi.models.operations.PostDirectionsOutputFormatResponse postDirectionsOutputFormat(org.openapis.openapi.models.operations.PostDirectionsOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostDirectionsOutputFormatPathParams.class, baseUrl, "/directions.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostDirectionsOutputFormatRequest.class, baseUrl, "/directions.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostDirectionsOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostDirectionsOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -236,13 +236,13 @@ public class Directions {
      */
     public org.openapis.openapi.models.operations.PostOptimalDirectionsOutputFormatResponse postOptimalDirectionsOutputFormat(org.openapis.openapi.models.operations.PostOptimalDirectionsOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOptimalDirectionsOutputFormatPathParams.class, baseUrl, "/optimalDirections.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOptimalDirectionsOutputFormatRequest.class, baseUrl, "/optimalDirections.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostOptimalDirectionsOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostOptimalDirectionsOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -276,13 +276,13 @@ public class Directions {
      */
     public org.openapis.openapi.models.operations.PostTruckDirectionsOutputFormatResponse postTruckDirectionsOutputFormat(org.openapis.openapi.models.operations.PostTruckDirectionsOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTruckDirectionsOutputFormatPathParams.class, baseUrl, "/truck/directions.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTruckDirectionsOutputFormatRequest.class, baseUrl, "/truck/directions.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostTruckDirectionsOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostTruckDirectionsOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -316,13 +316,13 @@ public class Directions {
      */
     public org.openapis.openapi.models.operations.PostTruckOptimalDirectionsOutputFormatResponse postTruckOptimalDirectionsOutputFormat(org.openapis.openapi.models.operations.PostTruckOptimalDirectionsOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTruckOptimalDirectionsOutputFormatPathParams.class, baseUrl, "/truck/optimalDirections.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTruckOptimalDirectionsOutputFormatRequest.class, baseUrl, "/truck/optimalDirections.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostTruckOptimalDirectionsOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostTruckOptimalDirectionsOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

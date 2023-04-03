@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoRequest {
+    /**
+     * The name of a self-hosted runner's custom label.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoPathParams pathParams;
-    public ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoRequest withPathParams(ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the self-hosted runner.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_id")
+    public Long runnerId;
+    public ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoRequest withRunnerId(Long runnerId) {
+        this.runnerId = runnerId;
         return this;
     }
     

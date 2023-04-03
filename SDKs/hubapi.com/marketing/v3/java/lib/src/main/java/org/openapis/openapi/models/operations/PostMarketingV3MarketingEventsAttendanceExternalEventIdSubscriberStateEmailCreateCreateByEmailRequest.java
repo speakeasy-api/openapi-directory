@@ -7,34 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailRequest {
-    
-    public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailPathParams pathParams;
-    public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailRequest withPathParams(PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailQueryParams queryParams;
-    public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailRequest withQueryParams(PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The details of the contacts to subscribe to the event. Parameters of join and left time if state is Attended.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BatchInputMarketingEventEmailSubscriber request;
-    public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailRequest withRequest(org.openapis.openapi.models.shared.BatchInputMarketingEventEmailSubscriber request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BatchInputMarketingEventEmailSubscriber batchInputMarketingEventEmailSubscriber;
+    public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailRequest withBatchInputMarketingEventEmailSubscriber(org.openapis.openapi.models.shared.BatchInputMarketingEventEmailSubscriber batchInputMarketingEventEmailSubscriber) {
+        this.batchInputMarketingEventEmailSubscriber = batchInputMarketingEventEmailSubscriber;
         return this;
     }
     
+    /**
+     * The account id associated with the marketing event
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=externalAccountId")
+    public String externalAccountId;
+    public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailRequest withExternalAccountId(String externalAccountId) {
+        this.externalAccountId = externalAccountId;
+        return this;
+    }
     
-    public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailSecurity security;
-    public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailRequest withSecurity(PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailSecurity security) {
-        this.security = security;
+    /**
+     * The id of the marketing event
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalEventId")
+    public String externalEventId;
+    public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailRequest withExternalEventId(String externalEventId) {
+        this.externalEventId = externalEventId;
+        return this;
+    }
+    
+    /**
+     * The new subscriber state for the HubSpot contacts and the specified marketing event. For example: 'register', 'attend' or 'cancel'.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriberState")
+    public String subscriberState;
+    public PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateEmailCreateCreateByEmailRequest withSubscriberState(String subscriberState) {
+        this.subscriberState = subscriberState;
         return this;
     }
     

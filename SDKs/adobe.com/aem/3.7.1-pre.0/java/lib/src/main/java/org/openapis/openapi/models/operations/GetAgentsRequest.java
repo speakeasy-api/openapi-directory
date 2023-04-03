@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAgentsRequest {
-    
-    public GetAgentsPathParams pathParams;
-    public GetAgentsRequest withPathParams(GetAgentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runmode")
+    public String runmode;
+    public GetAgentsRequest withRunmode(String runmode) {
+        this.runmode = runmode;
         return this;
     }
     

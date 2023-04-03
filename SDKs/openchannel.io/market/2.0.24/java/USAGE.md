@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.DeleteAppsAppIdPathParams;
-import org.openapis.openapi.models.operations.DeleteAppsAppIdQueryParams;
 import org.openapis.openapi.models.operations.DeleteAppsAppIdRequest;
 import org.openapis.openapi.models.operations.DeleteAppsAppIdResponse;
 
@@ -14,21 +12,15 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    basicAuth = new SchemeBasicAuth() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
+                    password = "YOUR_PASSWORD_HERE";
+                    username = "YOUR_USERNAME_HERE";
                 }})
                 .build();
 
             DeleteAppsAppIdRequest req = new DeleteAppsAppIdRequest() {{
-                pathParams = new DeleteAppsAppIdPathParams() {{
-                    appId = "corrupti";
-                }};
-                queryParams = new DeleteAppsAppIdQueryParams() {{
-                    developerId = "provident";
-                }};
-            }};            
+                appId = "corrupti";
+                developerId = "provident";
+            }}            
 
             DeleteAppsAppIdResponse res = sdk.appsFindAndModifyApps.deleteAppsAppId(req);
 

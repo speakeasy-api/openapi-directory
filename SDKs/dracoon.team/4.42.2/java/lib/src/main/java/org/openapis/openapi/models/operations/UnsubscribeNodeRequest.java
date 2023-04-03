@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnsubscribeNodeRequest {
-    
-    public UnsubscribeNodePathParams pathParams;
-    public UnsubscribeNodeRequest withPathParams(UnsubscribeNodePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UnsubscribeNodeRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public UnsubscribeNodeHeaders headers;
-    public UnsubscribeNodeRequest withHeaders(UnsubscribeNodeHeaders headers) {
-        this.headers = headers;
+    /**
+     * Node ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public Long nodeId;
+    public UnsubscribeNodeRequest withNodeId(Long nodeId) {
+        this.nodeId = nodeId;
         return this;
     }
     

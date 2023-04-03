@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmpv3ViewAddRequest {
+    /**
+     * Agent to add the SNMPv3 view
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSnmpv3ViewAddRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolSnmpv3ViewAddPathParams pathParams;
-    public ProtocolSnmpv3ViewAddRequest withPathParams(ProtocolSnmpv3ViewAddPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * SNMPv3 view mask
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mask")
+    public String mask;
+    public ProtocolSnmpv3ViewAddRequest withMask(String mask) {
+        this.mask = mask;
+        return this;
+    }
+    
+    /**
+     * SNMPv3 view subtree
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subtree")
+    public String subtree;
+    public ProtocolSnmpv3ViewAddRequest withSubtree(String subtree) {
+        this.subtree = subtree;
+        return this;
+    }
+    
+    /**
+     * SNMPv3 view name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewName")
+    public String viewName;
+    public ProtocolSnmpv3ViewAddRequest withViewName(String viewName) {
+        this.viewName = viewName;
+        return this;
+    }
+    
+    /**
+     * SNMPv3 view type
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewType")
+    public String viewType;
+    public ProtocolSnmpv3ViewAddRequest withViewType(String viewType) {
+        this.viewType = viewType;
         return this;
     }
     

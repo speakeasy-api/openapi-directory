@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetProtocolsRequest {
-    
-    public SetProtocolsPathParams pathParams;
-    public SetProtocolsRequest withPathParams(SetProtocolsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Created agent object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String[] request;
-    public SetProtocolsRequest withRequest(String[] request) {
-        this.request = request;
+    public String[] requestBody;
+    public SetProtocolsRequest withRequestBody(String[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Agent to return the protocols arrary
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public SetProtocolsRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

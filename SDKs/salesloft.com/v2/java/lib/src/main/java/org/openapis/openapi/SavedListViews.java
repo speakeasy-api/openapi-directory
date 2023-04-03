@@ -42,7 +42,7 @@ public class SavedListViews {
      */
     public org.openapis.openapi.models.operations.DeleteV2SavedListViewsIdJsonResponse deleteV2SavedListViewsIdJson(org.openapis.openapi.models.operations.DeleteV2SavedListViewsIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteV2SavedListViewsIdJsonPathParams.class, baseUrl, "/v2/saved_list_views/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteV2SavedListViewsIdJsonRequest.class, baseUrl, "/v2/saved_list_views/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -83,7 +83,7 @@ public class SavedListViews {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2SavedListViewsJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2SavedListViewsJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -122,7 +122,7 @@ public class SavedListViews {
      */
     public org.openapis.openapi.models.operations.GetV2SavedListViewsIdJsonResponse getV2SavedListViewsIdJson(org.openapis.openapi.models.operations.GetV2SavedListViewsIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2SavedListViewsIdJsonPathParams.class, baseUrl, "/v2/saved_list_views/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2SavedListViewsIdJsonRequest.class, baseUrl, "/v2/saved_list_views/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -159,7 +159,7 @@ public class SavedListViews {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV2SavedListViewsJsonResponse postV2SavedListViewsJson(org.openapis.openapi.models.operations.PostV2SavedListViewsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV2SavedListViewsJsonResponse postV2SavedListViewsJson(org.openapis.openapi.models.operations.PostV2SavedListViewsJsonRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/saved_list_views.json");
         
@@ -205,12 +205,12 @@ public class SavedListViews {
      */
     public org.openapis.openapi.models.operations.PutV2SavedListViewsIdJsonResponse putV2SavedListViewsIdJson(org.openapis.openapi.models.operations.PutV2SavedListViewsIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV2SavedListViewsIdJsonPathParams.class, baseUrl, "/v2/saved_list_views/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV2SavedListViewsIdJsonRequest.class, baseUrl, "/v2/saved_list_views/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         

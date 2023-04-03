@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSegmentRequest {
-    
-    public DeleteSegmentPathParams pathParams;
-    public DeleteSegmentRequest withPathParams(DeleteSegmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The identifier of the Segment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=segmentId")
+    public String segmentId;
+    public DeleteSegmentRequest withSegmentId(String segmentId) {
+        this.segmentId = segmentId;
         return this;
     }
     

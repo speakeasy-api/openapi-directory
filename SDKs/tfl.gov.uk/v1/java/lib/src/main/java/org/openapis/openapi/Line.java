@@ -38,13 +38,13 @@ public class Line {
      */
     public org.openapis.openapi.models.operations.LineArrivalsResponse lineArrivals(org.openapis.openapi.models.operations.LineArrivalsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineArrivalsPathParams.class, baseUrl, "/Line/{ids}/Arrivals/{stopPointId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineArrivalsRequest.class, baseUrl, "/Line/{ids}/Arrivals/{stopPointId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineArrivalsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineArrivalsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -98,7 +98,7 @@ public class Line {
      */
     public org.openapis.openapi.models.operations.LineDisruptionResponse lineDisruption(org.openapis.openapi.models.operations.LineDisruptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineDisruptionPathParams.class, baseUrl, "/Line/{ids}/Disruption", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineDisruptionRequest.class, baseUrl, "/Line/{ids}/Disruption", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -152,7 +152,7 @@ public class Line {
      */
     public org.openapis.openapi.models.operations.LineDisruptionByModeResponse lineDisruptionByMode(org.openapis.openapi.models.operations.LineDisruptionByModeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineDisruptionByModePathParams.class, baseUrl, "/Line/Mode/{modes}/Disruption", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineDisruptionByModeRequest.class, baseUrl, "/Line/Mode/{modes}/Disruption", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -206,7 +206,7 @@ public class Line {
      */
     public org.openapis.openapi.models.operations.LineGetResponse lineGet(org.openapis.openapi.models.operations.LineGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineGetPathParams.class, baseUrl, "/Line/{ids}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineGetRequest.class, baseUrl, "/Line/{ids}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -260,7 +260,7 @@ public class Line {
      */
     public org.openapis.openapi.models.operations.LineGetByModeResponse lineGetByMode(org.openapis.openapi.models.operations.LineGetByModeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineGetByModePathParams.class, baseUrl, "/Line/Mode/{modes}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineGetByModeRequest.class, baseUrl, "/Line/Mode/{modes}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -314,13 +314,13 @@ public class Line {
      */
     public org.openapis.openapi.models.operations.LineLineRoutesByIdsResponse lineLineRoutesByIds(org.openapis.openapi.models.operations.LineLineRoutesByIdsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineLineRoutesByIdsPathParams.class, baseUrl, "/Line/{ids}/Route", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineLineRoutesByIdsRequest.class, baseUrl, "/Line/{ids}/Route", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineLineRoutesByIdsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineLineRoutesByIdsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -592,7 +592,7 @@ public class Line {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineRouteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineRouteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -646,13 +646,13 @@ public class Line {
      */
     public org.openapis.openapi.models.operations.LineRouteByModeResponse lineRouteByMode(org.openapis.openapi.models.operations.LineRouteByModeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineRouteByModePathParams.class, baseUrl, "/Line/Mode/{modes}/Route", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineRouteByModeRequest.class, baseUrl, "/Line/Mode/{modes}/Route", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineRouteByModeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineRouteByModeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -706,13 +706,13 @@ public class Line {
      */
     public org.openapis.openapi.models.operations.LineRouteSequenceResponse lineRouteSequence(org.openapis.openapi.models.operations.LineRouteSequenceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineRouteSequencePathParams.class, baseUrl, "/Line/{id}/Route/Sequence/{direction}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineRouteSequenceRequest.class, baseUrl, "/Line/{id}/Route/Sequence/{direction}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineRouteSequenceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineRouteSequenceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -766,13 +766,13 @@ public class Line {
      */
     public org.openapis.openapi.models.operations.LineSearchResponse lineSearch(org.openapis.openapi.models.operations.LineSearchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineSearchPathParams.class, baseUrl, "/Line/Search/{query}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineSearchRequest.class, baseUrl, "/Line/Search/{query}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -826,13 +826,13 @@ public class Line {
      */
     public org.openapis.openapi.models.operations.LineStatusResponse lineStatus(org.openapis.openapi.models.operations.LineStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineStatusPathParams.class, baseUrl, "/Line/{ids}/Status/{StartDate}/to/{EndDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineStatusRequest.class, baseUrl, "/Line/{ids}/Status/{StartDate}/to/{EndDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineStatusQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineStatusRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -886,13 +886,13 @@ public class Line {
      */
     public org.openapis.openapi.models.operations.LineStatusByIdsResponse lineStatusByIds(org.openapis.openapi.models.operations.LineStatusByIdsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineStatusByIdsPathParams.class, baseUrl, "/Line/{ids}/Status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineStatusByIdsRequest.class, baseUrl, "/Line/{ids}/Status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineStatusByIdsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineStatusByIdsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -946,13 +946,13 @@ public class Line {
      */
     public org.openapis.openapi.models.operations.LineStatusByModeResponse lineStatusByMode(org.openapis.openapi.models.operations.LineStatusByModeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineStatusByModePathParams.class, baseUrl, "/Line/Mode/{modes}/Status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineStatusByModeRequest.class, baseUrl, "/Line/Mode/{modes}/Status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineStatusByModeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineStatusByModeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1006,7 +1006,7 @@ public class Line {
      */
     public org.openapis.openapi.models.operations.LineStatusBySeverityResponse lineStatusBySeverity(org.openapis.openapi.models.operations.LineStatusBySeverityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineStatusBySeverityPathParams.class, baseUrl, "/Line/Status/{severity}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineStatusBySeverityRequest.class, baseUrl, "/Line/Status/{severity}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1060,13 +1060,13 @@ public class Line {
      */
     public org.openapis.openapi.models.operations.LineStopPointsResponse lineStopPoints(org.openapis.openapi.models.operations.LineStopPointsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineStopPointsPathParams.class, baseUrl, "/Line/{id}/StopPoints", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineStopPointsRequest.class, baseUrl, "/Line/{id}/StopPoints", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineStopPointsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LineStopPointsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1120,7 +1120,7 @@ public class Line {
      */
     public org.openapis.openapi.models.operations.LineTimetableResponse lineTimetable(org.openapis.openapi.models.operations.LineTimetableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineTimetablePathParams.class, baseUrl, "/Line/{id}/Timetable/{fromStopPointId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineTimetableRequest.class, baseUrl, "/Line/{id}/Timetable/{fromStopPointId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1174,7 +1174,7 @@ public class Line {
      */
     public org.openapis.openapi.models.operations.LineTimetableToResponse lineTimetableTo(org.openapis.openapi.models.operations.LineTimetableToRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineTimetableToPathParams.class, baseUrl, "/Line/{id}/Timetable/{fromStopPointId}/to/{toStopPointId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LineTimetableToRequest.class, baseUrl, "/Line/{id}/Timetable/{fromStopPointId}/to/{toStopPointId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

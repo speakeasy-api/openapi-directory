@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FirebaseappdistributionProjectsGroupsCreateRequest {
-    
-    public FirebaseappdistributionProjectsGroupsCreatePathParams pathParams;
-    public FirebaseappdistributionProjectsGroupsCreateRequest withPathParams(FirebaseappdistributionProjectsGroupsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FirebaseappdistributionProjectsGroupsCreateQueryParams queryParams;
-    public FirebaseappdistributionProjectsGroupsCreateRequest withQueryParams(FirebaseappdistributionProjectsGroupsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public FirebaseappdistributionProjectsGroupsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleFirebaseAppdistroV1GroupInput request;
-    public FirebaseappdistributionProjectsGroupsCreateRequest withRequest(org.openapis.openapi.models.shared.GoogleFirebaseAppdistroV1GroupInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleFirebaseAppdistroV1GroupInput googleFirebaseAppdistroV1GroupInput;
+    public FirebaseappdistributionProjectsGroupsCreateRequest withGoogleFirebaseAppdistroV1GroupInput(org.openapis.openapi.models.shared.GoogleFirebaseAppdistroV1GroupInput googleFirebaseAppdistroV1GroupInput) {
+        this.googleFirebaseAppdistroV1GroupInput = googleFirebaseAppdistroV1GroupInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public FirebaseappdistributionProjectsGroupsCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public FirebaseappdistributionProjectsGroupsCreateSecurity security;
-    public FirebaseappdistributionProjectsGroupsCreateRequest withSecurity(FirebaseappdistributionProjectsGroupsCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public FirebaseappdistributionProjectsGroupsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public FirebaseappdistributionProjectsGroupsCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FirebaseappdistributionProjectsGroupsCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Optional. The "alias" to use for the group, which will become the final component of the group's resource name. This value must be unique per project. The field is named `groupId` to comply with AIP guidance for user-specified IDs. This value should be 4-63 characters, and valid characters are `/a-z-/`. If not set, it will be generated based on the display name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupId")
+    public String groupId;
+    public FirebaseappdistributionProjectsGroupsCreateRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public FirebaseappdistributionProjectsGroupsCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public FirebaseappdistributionProjectsGroupsCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The name of the project resource, which is the parent of the group resource. Format: `projects/{project_number}`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public FirebaseappdistributionProjectsGroupsCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public FirebaseappdistributionProjectsGroupsCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public FirebaseappdistributionProjectsGroupsCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public FirebaseappdistributionProjectsGroupsCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public FirebaseappdistributionProjectsGroupsCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomerServiceMetricTaskRequest {
-    
-    public GetCustomerServiceMetricTaskPathParams pathParams;
-    public GetCustomerServiceMetricTaskRequest withPathParams(GetCustomerServiceMetricTaskPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetCustomerServiceMetricTaskSecurity security;
-    public GetCustomerServiceMetricTaskRequest withSecurity(GetCustomerServiceMetricTaskSecurity security) {
-        this.security = security;
+    /**
+     * Use this path parameter to specify the task ID value for the customer service metric task to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=task_id")
+    public String taskId;
+    public GetCustomerServiceMetricTaskRequest withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

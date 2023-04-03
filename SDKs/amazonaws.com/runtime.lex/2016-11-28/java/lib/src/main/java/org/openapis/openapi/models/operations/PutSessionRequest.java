@@ -7,24 +7,99 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSessionRequest {
-    
-    public PutSessionPathParams pathParams;
-    public PutSessionRequest withPathParams(PutSessionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutSessionHeaders headers;
-    public PutSessionRequest withHeaders(PutSessionHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The message that Amazon Lex returns in the response can be either text or speech based depending on the value of this field.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;If the value is &lt;code&gt;text/plain; charset=utf-8&lt;/code&gt;, Amazon Lex returns text in the response.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;If the value begins with &lt;code&gt;audio/&lt;/code&gt;, Amazon Lex returns speech in the response. Amazon Lex uses Amazon Polly to generate the speech in the configuration that you specify. For example, if you specify &lt;code&gt;audio/mpeg&lt;/code&gt; as the value, Amazon Lex returns speech in the MPEG format.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;If the value is &lt;code&gt;audio/pcm&lt;/code&gt;, the speech is returned as &lt;code&gt;audio/pcm&lt;/code&gt; in 16-bit, little endian format.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;The following are the accepted values:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;audio/mpeg&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;audio/ogg&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;audio/pcm&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;audio/*&lt;/code&gt; (defaults to mpeg)&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;text/plain; charset=utf-8&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PutSessionRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutSessionRequestBody request;
-    public PutSessionRequest withRequest(PutSessionRequestBody request) {
-        this.request = request;
+    public PutSessionRequestBody requestBody;
+    public PutSessionRequest withRequestBody(PutSessionRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public PutSessionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public PutSessionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public PutSessionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public PutSessionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public PutSessionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public PutSessionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public PutSessionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The alias in use for the bot that contains the session data.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botAlias")
+    public String botAlias;
+    public PutSessionRequest withBotAlias(String botAlias) {
+        this.botAlias = botAlias;
+        return this;
+    }
+    
+    /**
+     * The name of the bot that contains the session data.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botName")
+    public String botName;
+    public PutSessionRequest withBotName(String botName) {
+        this.botName = botName;
+        return this;
+    }
+    
+    /**
+     * The ID of the client application user. Amazon Lex uses this to identify a user's conversation with your bot. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public PutSessionRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

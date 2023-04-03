@@ -31,7 +31,7 @@ public class KeysApi {
 
     public org.openapis.openapi.models.operations.KeysApiCurrentResponse keysApiCurrent(org.openapis.openapi.models.operations.KeysApiCurrentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.KeysApiCurrentPathParams.class, baseUrl, "/v1/KeysApi/Current/{serial}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.KeysApiCurrentRequest.class, baseUrl, "/v1/KeysApi/Current/{serial}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -63,7 +63,7 @@ public class KeysApi {
 
     public org.openapis.openapi.models.operations.KeysApiCustomResponse keysApiCustom(org.openapis.openapi.models.operations.KeysApiCustomRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.KeysApiCustomPathParams.class, baseUrl, "/v1/KeysApi/Custom/{serial}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.KeysApiCustomRequest.class, baseUrl, "/v1/KeysApi/Custom/{serial}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -94,7 +94,7 @@ public class KeysApi {
 
     public org.openapis.openapi.models.operations.KeysApiExpiryResponse keysApiExpiry(org.openapis.openapi.models.operations.KeysApiExpiryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.KeysApiExpiryPathParams.class, baseUrl, "/v1/KeysApi/Expiry/{serial}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.KeysApiExpiryRequest.class, baseUrl, "/v1/KeysApi/Expiry/{serial}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -126,7 +126,7 @@ public class KeysApi {
 
     public org.openapis.openapi.models.operations.KeysApiFindResponse keysApiFind(org.openapis.openapi.models.operations.KeysApiFindRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.KeysApiFindPathParams.class, baseUrl, "/v1/KeysApi/Find/{serial}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.KeysApiFindRequest.class, baseUrl, "/v1/KeysApi/Find/{serial}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

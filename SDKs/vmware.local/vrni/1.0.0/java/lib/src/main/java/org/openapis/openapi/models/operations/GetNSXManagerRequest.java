@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNSXManagerRequest {
-    
-    public GetNSXManagerPathParams pathParams;
-    public GetNSXManagerRequest withPathParams(GetNSXManagerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetNSXManagerRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetNSXManagerQueryParams queryParams;
-    public GetNSXManagerRequest withQueryParams(GetNSXManagerQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetNSXManagerSecurity security;
-    public GetNSXManagerRequest withSecurity(GetNSXManagerSecurity security) {
-        this.security = security;
+    /**
+     * time in epoch seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time")
+    public Long time;
+    public GetNSXManagerRequest withTime(Long time) {
+        this.time = time;
         return this;
     }
     

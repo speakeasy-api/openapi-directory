@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTargetsAllScheduledscansExpandedRequest {
-    
-    public GetTargetsAllScheduledscansExpandedQueryParams queryParams;
-    public GetTargetsAllScheduledscansExpandedRequest withQueryParams(GetTargetsAllScheduledscansExpandedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of results to return per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
+    public Long length;
+    public GetTargetsAllScheduledscansExpandedRequest withLength(Long length) {
+        this.length = length;
         return this;
     }
     

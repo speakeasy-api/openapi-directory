@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdLegalEntitiesIdSocialRegimesRequest {
-    
-    public PostSpacesSpaceIdLegalEntitiesIdSocialRegimesPathParams pathParams;
-    public PostSpacesSpaceIdLegalEntitiesIdSocialRegimesRequest withPathParams(PostSpacesSpaceIdLegalEntitiesIdSocialRegimesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * SocialRegime to add (except name, class and archivaldate)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSpacesSpaceIdLegalEntitiesIdSocialRegimesRequestBody request;
-    public PostSpacesSpaceIdLegalEntitiesIdSocialRegimesRequest withRequest(PostSpacesSpaceIdLegalEntitiesIdSocialRegimesRequestBody request) {
-        this.request = request;
+    public PostSpacesSpaceIdLegalEntitiesIdSocialRegimesRequestBody requestBody;
+    public PostSpacesSpaceIdLegalEntitiesIdSocialRegimesRequest withRequestBody(PostSpacesSpaceIdLegalEntitiesIdSocialRegimesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the legal entity or memberId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdLegalEntitiesIdSocialRegimesRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdLegalEntitiesIdSocialRegimesSecurity security;
-    public PostSpacesSpaceIdLegalEntitiesIdSocialRegimesRequest withSecurity(PostSpacesSpaceIdLegalEntitiesIdSocialRegimesSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdLegalEntitiesIdSocialRegimesRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

@@ -33,10 +33,11 @@ public class Reports {
     /**
      * Generate an AdSense report based on the report request sent in the query parameters. Returns the result as JSON; to retrieve output in CSV format specify "alt=csv" as a query parameter.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsensehostReportsGenerateResponse adsensehostReportsGenerate(org.openapis.openapi.models.operations.AdsensehostReportsGenerateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsensehostReportsGenerateResponse adsensehostReportsGenerate(org.openapis.openapi.models.operations.AdsensehostReportsGenerateRequest request, org.openapis.openapi.models.operations.AdsensehostReportsGenerateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/reports");
         
@@ -44,14 +45,14 @@ public class Reports {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostReportsGenerateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostReportsGenerateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

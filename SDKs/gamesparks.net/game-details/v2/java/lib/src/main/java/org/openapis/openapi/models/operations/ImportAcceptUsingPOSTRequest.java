@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportAcceptUsingPOSTRequest {
-    
-    public ImportAcceptUsingPOSTPathParams pathParams;
-    public ImportAcceptUsingPOSTRequest withPathParams(ImportAcceptUsingPOSTPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ImportAcceptUsingPOSTQueryParams queryParams;
-    public ImportAcceptUsingPOSTRequest withQueryParams(ImportAcceptUsingPOSTQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public ImportAcceptUsingPOSTRequestBody request;
-    public ImportAcceptUsingPOSTRequest withRequest(ImportAcceptUsingPOSTRequestBody request) {
-        this.request = request;
+    public ImportAcceptUsingPOSTRequestBody requestBody;
+    public ImportAcceptUsingPOSTRequest withRequestBody(ImportAcceptUsingPOSTRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public ImportAcceptUsingPOSTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    
+    /**
+     * body
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=body")
+    public String body;
+    public ImportAcceptUsingPOSTRequest withBody(String body) {
+        this.body = body;
         return this;
     }
     

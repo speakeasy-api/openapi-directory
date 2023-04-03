@@ -41,7 +41,7 @@ public class SDKKeys {
      */
     public org.openapis.openapi.models.operations.GetSDKKeysResponse getSDKKeys(org.openapis.openapi.models.operations.GetSDKKeysRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSDKKeysPathParams.class, baseUrl, "/v1/configs/{configId}/environments/{environmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSDKKeysRequest.class, baseUrl, "/v1/configs/{configId}/environments/{environmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOpenIdIdpConfigRequest {
-    
-    public UpdateOpenIdIdpConfigPathParams pathParams;
-    public UpdateOpenIdIdpConfigRequest withPathParams(UpdateOpenIdIdpConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateOpenIdIdpConfigHeaders headers;
-    public UpdateOpenIdIdpConfigRequest withHeaders(UpdateOpenIdIdpConfigHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateOpenIdIdpConfigRequest request;
-    public UpdateOpenIdIdpConfigRequest withRequest(org.openapis.openapi.models.shared.UpdateOpenIdIdpConfigRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateOpenIdIdpConfigRequest updateOpenIdIdpConfigRequest;
+    public UpdateOpenIdIdpConfigRequest withUpdateOpenIdIdpConfigRequest(org.openapis.openapi.models.shared.UpdateOpenIdIdpConfigRequest updateOpenIdIdpConfigRequest) {
+        this.updateOpenIdIdpConfigRequest = updateOpenIdIdpConfigRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UpdateOpenIdIdpConfigRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * OpenID Connect IDP configuration ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=idp_id")
+    public Integer idpId;
+    public UpdateOpenIdIdpConfigRequest withIdpId(Integer idpId) {
+        this.idpId = idpId;
         return this;
     }
     

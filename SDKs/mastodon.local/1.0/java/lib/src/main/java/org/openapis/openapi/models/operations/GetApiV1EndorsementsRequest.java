@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1EndorsementsRequest {
-    
-    public GetApiV1EndorsementsQueryParams queryParams;
-    public GetApiV1EndorsementsRequest withQueryParams(GetApiV1EndorsementsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Maximum number of results to return. Defaults to 40. Paginate using the HTTP Link header.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetApiV1EndorsementsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Internal parameter. Use HTTP Link header from response for pagination
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_id")
+    public String maxId;
+    public GetApiV1EndorsementsRequest withMaxId(String maxId) {
+        this.maxId = maxId;
+        return this;
+    }
     
-    public GetApiV1EndorsementsSecurity security;
-    public GetApiV1EndorsementsRequest withSecurity(GetApiV1EndorsementsSecurity security) {
-        this.security = security;
+    /**
+     * Internal parameter. Use HTTP Link header from response for pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since_id")
+    public String sinceId;
+    public GetApiV1EndorsementsRequest withSinceId(String sinceId) {
+        this.sinceId = sinceId;
         return this;
     }
     

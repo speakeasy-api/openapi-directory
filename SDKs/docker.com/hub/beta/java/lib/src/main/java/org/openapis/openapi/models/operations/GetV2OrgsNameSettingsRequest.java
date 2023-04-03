@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2OrgsNameSettingsRequest {
-    
-    public GetV2OrgsNameSettingsPathParams pathParams;
-    public GetV2OrgsNameSettingsRequest withPathParams(GetV2OrgsNameSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Name of the organization.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public GetV2OrgsNameSettingsRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

@@ -4,13 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFollowersRequest {
+    /**
+     * Pagination page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetFollowersRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetFollowersQueryParams queryParams;
-    public GetFollowersRequest withQueryParams(GetFollowersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page size (the number of items to return per page). The default maximum value can be overridden by "API_PER_PAGE_MAX" environment variable.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetFollowersRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Default is 'created_at'. Specifies the sort order for the created_at param of the follow
+     *                                 relationship. To sort by newest followers first (descending order) specify
+     *                                 ?sort=-created_at.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetFollowersRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostPhoneSIPTrunkRequest {
-    
-    public PostPhoneSIPTrunkPathParams pathParams;
-    public PostPhoneSIPTrunkRequest withPathParams(PostPhoneSIPTrunkPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostPhoneSIPTrunkApplicationJSON request;
-    public PostPhoneSIPTrunkRequest withRequest(PostPhoneSIPTrunkApplicationJSON request) {
-        this.request = request;
+    public PostPhoneSIPTrunkApplicationJSON requestBody;
+    public PostPhoneSIPTrunkRequest withRequestBody(PostPhoneSIPTrunkApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostPhoneSIPTrunkSecurity security;
-    public PostPhoneSIPTrunkRequest withSecurity(PostPhoneSIPTrunkSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public PostPhoneSIPTrunkRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

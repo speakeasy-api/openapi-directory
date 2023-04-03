@@ -20,16 +20,12 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesCreateSecurityOption1;
 import org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesCreateSecurityOption2;
 import org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesCreateSecurity;
-import org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesCreatePathParams;
-import org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesCreateQueryParams;
 import org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesCreateRequest;
 import org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.DatabaseInstanceTypeEnum;
 import org.openapis.openapi.models.shared.DatabaseInstanceInput;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -38,41 +34,32 @@ public class Application {
                 .build();
 
             FirebasedatabaseProjectsLocationsInstancesCreateRequest req = new FirebasedatabaseProjectsLocationsInstancesCreateRequest() {{
-                security = new FirebasedatabaseProjectsLocationsInstancesCreateSecurity() {{
-                    option1 = new FirebasedatabaseProjectsLocationsInstancesCreateSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
+                dollarXgafv = "2";
+                databaseInstanceInput = new DatabaseInstanceInput() {{
+                    name = "provident";
+                    type = "USER_DATABASE";
                 }};
-                pathParams = new FirebasedatabaseProjectsLocationsInstancesCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new FirebasedatabaseProjectsLocationsInstancesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    databaseId = "nulla";
-                    fields = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    uploadType = "deserunt";
-                    uploadProtocol = "suscipit";
-                    validateOnly = false;
-                }};
-                request = new DatabaseInstanceInput() {{
-                    name = "iure";
-                    type = "DATABASE_INSTANCE_TYPE_UNSPECIFIED";
-                }};
-            }};            
+                accessToken = "quibusdam";
+                alt = "media";
+                callback = "nulla";
+                databaseId = "corrupti";
+                fields = "illum";
+                key = "vel";
+                oauthToken = "error";
+                parent = "deserunt";
+                prettyPrint = false;
+                quotaUser = "suscipit";
+                uploadType = "iure";
+                uploadProtocol = "magnam";
+                validateOnly = false;
+            }}            
 
-            FirebasedatabaseProjectsLocationsInstancesCreateResponse res = sdk.projects.firebasedatabaseProjectsLocationsInstancesCreate(req);
+            FirebasedatabaseProjectsLocationsInstancesCreateResponse res = sdk.projects.firebasedatabaseProjectsLocationsInstancesCreate(req, new FirebasedatabaseProjectsLocationsInstancesCreateSecurity() {{
+                option1 = new FirebasedatabaseProjectsLocationsInstancesCreateSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.databaseInstance.isPresent()) {
                 // handle response
@@ -84,7 +71,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

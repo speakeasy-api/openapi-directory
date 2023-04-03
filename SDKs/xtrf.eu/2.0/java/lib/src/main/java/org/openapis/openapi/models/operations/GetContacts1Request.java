@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContacts1Request {
-    
-    public GetContacts1PathParams pathParams;
-    public GetContacts1Request withPathParams(GetContacts1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * task's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
+    public String taskId;
+    public GetContacts1Request withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

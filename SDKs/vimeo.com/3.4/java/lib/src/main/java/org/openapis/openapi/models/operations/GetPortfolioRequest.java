@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPortfolioRequest {
+    /**
+     * The ID of the portfolio.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portfolio_id")
+    public Double portfolioId;
+    public GetPortfolioRequest withPortfolioId(Double portfolioId) {
+        this.portfolioId = portfolioId;
+        return this;
+    }
     
-    public GetPortfolioPathParams pathParams;
-    public GetPortfolioRequest withPathParams(GetPortfolioPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public GetPortfolioRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AspByPolyUsV1AirspacePolygonQueryPostRequest {
-    
-    public AspByPolyUsV1AirspacePolygonQueryPostHeaders headers;
-    public AspByPolyUsV1AirspacePolygonQueryPostRequest withHeaders(AspByPolyUsV1AirspacePolygonQueryPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AirspaceByPolygon airspaceByPolygon;
+    public AspByPolyUsV1AirspacePolygonQueryPostRequest withAirspaceByPolygon(org.openapis.openapi.models.shared.AirspaceByPolygon airspaceByPolygon) {
+        this.airspaceByPolygon = airspaceByPolygon;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AirspaceByPolygon request;
-    public AspByPolyUsV1AirspacePolygonQueryPostRequest withRequest(org.openapis.openapi.models.shared.AirspaceByPolygon request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public AspByPolyUsV1AirspacePolygonQueryPostRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

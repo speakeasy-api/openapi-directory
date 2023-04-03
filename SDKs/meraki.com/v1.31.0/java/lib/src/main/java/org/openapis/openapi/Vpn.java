@@ -43,7 +43,7 @@ public class Vpn {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceVpnBgpResponse getNetworkApplianceVpnBgp(org.openapis.openapi.models.operations.GetNetworkApplianceVpnBgpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceVpnBgpPathParams.class, baseUrl, "/networks/{networkId}/appliance/vpn/bgp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceVpnBgpRequest.class, baseUrl, "/networks/{networkId}/appliance/vpn/bgp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -83,7 +83,7 @@ public class Vpn {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceVpnSiteToSiteVpnResponse getNetworkApplianceVpnSiteToSiteVpn(org.openapis.openapi.models.operations.GetNetworkApplianceVpnSiteToSiteVpnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceVpnSiteToSiteVpnPathParams.class, baseUrl, "/networks/{networkId}/appliance/vpn/siteToSiteVpn", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceVpnSiteToSiteVpnRequest.class, baseUrl, "/networks/{networkId}/appliance/vpn/siteToSiteVpn", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -123,7 +123,7 @@ public class Vpn {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidVpnResponse getNetworkWirelessSsidVpn(org.openapis.openapi.models.operations.GetNetworkWirelessSsidVpnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidVpnPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/vpn", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidVpnRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/vpn", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -163,13 +163,13 @@ public class Vpn {
      */
     public org.openapis.openapi.models.operations.GetOrganizationApplianceVpnStatsResponse getOrganizationApplianceVpnStats(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnStatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnStatsPathParams.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/stats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnStatsRequest.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/stats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnStatsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnStatsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -211,13 +211,13 @@ public class Vpn {
      */
     public org.openapis.openapi.models.operations.GetOrganizationApplianceVpnStatusesResponse getOrganizationApplianceVpnStatuses(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnStatusesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnStatusesPathParams.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/statuses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnStatusesRequest.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/statuses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnStatusesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnStatusesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -259,7 +259,7 @@ public class Vpn {
      */
     public org.openapis.openapi.models.operations.GetOrganizationApplianceVPNThirdPartyVPNPeersResponse getOrganizationApplianceVPNThirdPartyVPNPeers(org.openapis.openapi.models.operations.GetOrganizationApplianceVPNThirdPartyVPNPeersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApplianceVPNThirdPartyVPNPeersPathParams.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApplianceVPNThirdPartyVPNPeersRequest.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -299,7 +299,7 @@ public class Vpn {
      */
     public org.openapis.openapi.models.operations.GetOrganizationApplianceVpnVpnFirewallRulesResponse getOrganizationApplianceVpnVpnFirewallRules(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnVpnFirewallRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnVpnFirewallRulesPathParams.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/vpnFirewallRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnVpnFirewallRulesRequest.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/vpnFirewallRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -339,12 +339,12 @@ public class Vpn {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceVpnBgpResponse updateNetworkApplianceVpnBgp(org.openapis.openapi.models.operations.UpdateNetworkApplianceVpnBgpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceVpnBgpPathParams.class, baseUrl, "/networks/{networkId}/appliance/vpn/bgp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceVpnBgpRequest.class, baseUrl, "/networks/{networkId}/appliance/vpn/bgp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -384,12 +384,12 @@ public class Vpn {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceVpnSiteToSiteVpnResponse updateNetworkApplianceVpnSiteToSiteVpn(org.openapis.openapi.models.operations.UpdateNetworkApplianceVpnSiteToSiteVpnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceVpnSiteToSiteVpnPathParams.class, baseUrl, "/networks/{networkId}/appliance/vpn/siteToSiteVpn", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceVpnSiteToSiteVpnRequest.class, baseUrl, "/networks/{networkId}/appliance/vpn/siteToSiteVpn", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -429,12 +429,12 @@ public class Vpn {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidVpnResponse updateNetworkWirelessSsidVpn(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidVpnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidVpnPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/vpn", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidVpnRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/vpn", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -471,12 +471,12 @@ public class Vpn {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationApplianceVPNThirdPartyVPNPeersResponse updateOrganizationApplianceVPNThirdPartyVPNPeers(org.openapis.openapi.models.operations.UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationApplianceVPNThirdPartyVPNPeersPathParams.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequest.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -516,12 +516,12 @@ public class Vpn {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationApplianceVpnVpnFirewallRulesResponse updateOrganizationApplianceVpnVpnFirewallRules(org.openapis.openapi.models.operations.UpdateOrganizationApplianceVpnVpnFirewallRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationApplianceVpnVpnFirewallRulesPathParams.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/vpnFirewallRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationApplianceVpnVpnFirewallRulesRequest.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/vpnFirewallRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

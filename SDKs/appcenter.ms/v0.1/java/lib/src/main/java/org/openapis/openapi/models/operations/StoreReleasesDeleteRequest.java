@@ -7,24 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoreReleasesDeleteRequest {
-    
-    public StoreReleasesDeletePathParams pathParams;
-    public StoreReleasesDeleteRequest withPathParams(StoreReleasesDeletePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String request;
-    public StoreReleasesDeleteRequest withRequest(String request) {
-        this.request = request;
+    public String requestBody;
+    public StoreReleasesDeleteRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public StoreReleasesDeleteRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public StoreReleasesDeleteSecurity security;
-    public StoreReleasesDeleteRequest withSecurity(StoreReleasesDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public StoreReleasesDeleteRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * The id of the release
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
+    public String releaseId;
+    public StoreReleasesDeleteRequest withReleaseId(String releaseId) {
+        this.releaseId = releaseId;
+        return this;
+    }
+    
+    /**
+     * The name of the store
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=store_name")
+    public String storeName;
+    public StoreReleasesDeleteRequest withStoreName(String storeName) {
+        this.storeName = storeName;
         return this;
     }
     

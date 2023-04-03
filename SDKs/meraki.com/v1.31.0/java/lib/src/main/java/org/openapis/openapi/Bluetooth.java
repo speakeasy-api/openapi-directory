@@ -39,7 +39,7 @@ public class Bluetooth {
      */
     public org.openapis.openapi.models.operations.GetDeviceWirelessBluetoothSettingsResponse getDeviceWirelessBluetoothSettings(org.openapis.openapi.models.operations.GetDeviceWirelessBluetoothSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceWirelessBluetoothSettingsPathParams.class, baseUrl, "/devices/{serial}/wireless/bluetooth/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceWirelessBluetoothSettingsRequest.class, baseUrl, "/devices/{serial}/wireless/bluetooth/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -79,7 +79,7 @@ public class Bluetooth {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessBluetoothSettingsResponse getNetworkWirelessBluetoothSettings(org.openapis.openapi.models.operations.GetNetworkWirelessBluetoothSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessBluetoothSettingsPathParams.class, baseUrl, "/networks/{networkId}/wireless/bluetooth/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessBluetoothSettingsRequest.class, baseUrl, "/networks/{networkId}/wireless/bluetooth/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -119,12 +119,12 @@ public class Bluetooth {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceWirelessBluetoothSettingsResponse updateDeviceWirelessBluetoothSettings(org.openapis.openapi.models.operations.UpdateDeviceWirelessBluetoothSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceWirelessBluetoothSettingsPathParams.class, baseUrl, "/devices/{serial}/wireless/bluetooth/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceWirelessBluetoothSettingsRequest.class, baseUrl, "/devices/{serial}/wireless/bluetooth/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -161,12 +161,12 @@ public class Bluetooth {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessBluetoothSettingsResponse updateNetworkWirelessBluetoothSettings(org.openapis.openapi.models.operations.UpdateNetworkWirelessBluetoothSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessBluetoothSettingsPathParams.class, baseUrl, "/networks/{networkId}/wireless/bluetooth/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessBluetoothSettingsRequest.class, baseUrl, "/networks/{networkId}/wireless/bluetooth/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

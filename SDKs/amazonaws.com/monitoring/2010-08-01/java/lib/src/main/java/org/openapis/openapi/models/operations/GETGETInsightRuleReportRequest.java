@@ -4,20 +4,140 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETInsightRuleReportRequest {
-    
-    public GETGETInsightRuleReportQueryParams queryParams;
-    public GETGETInsightRuleReportRequest withQueryParams(GETGETInsightRuleReportQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETInsightRuleReportActionEnum action;
+    public GETGETInsightRuleReportRequest withAction(GETGETInsightRuleReportActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The end time of the data to use in the report. When used in a raw HTTP Query API, it is formatted as &lt;code&gt;yyyy-MM-dd'T'HH:mm:ss&lt;/code&gt;. For example, &lt;code&gt;2019-07-01T23:59:59&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndTime")
+    public OffsetDateTime endTime;
+    public GETGETInsightRuleReportRequest withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
     
-    public GETGETInsightRuleReportHeaders headers;
-    public GETGETInsightRuleReportRequest withHeaders(GETGETInsightRuleReportHeaders headers) {
-        this.headers = headers;
+    /**
+     * The maximum number of contributors to include in the report. The range is 1 to 100. If you omit this, the default of 10 is used.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxContributorCount")
+    public Long maxContributorCount;
+    public GETGETInsightRuleReportRequest withMaxContributorCount(Long maxContributorCount) {
+        this.maxContributorCount = maxContributorCount;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Specifies which metrics to use for aggregation of contributor values for the report. You can specify one or more of the following metrics:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;UniqueContributors&lt;/code&gt; -- the number of unique contributors for each data point.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;MaxContributorValue&lt;/code&gt; -- the value of the top contributor for each data point. The identity of the contributor might change for each data point in the graph.&lt;/p&gt; &lt;p&gt;If this rule aggregates by COUNT, the top contributor for each data point is the contributor with the most occurrences in that period. If the rule aggregates by SUM, the top contributor is the contributor with the highest sum in the log field specified by the rule's &lt;code&gt;Value&lt;/code&gt;, during that period.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;SampleCount&lt;/code&gt; -- the number of data points matched by the rule.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;Sum&lt;/code&gt; -- the sum of the values from all contributors during the time period represented by that data point.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;Minimum&lt;/code&gt; -- the minimum value from a single observation during the time period represented by that data point.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;Maximum&lt;/code&gt; -- the maximum value from a single observation during the time period represented by that data point.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;Average&lt;/code&gt; -- the average value from all contributors during the time period represented by that data point.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Metrics")
+    public String[] metrics;
+    public GETGETInsightRuleReportRequest withMetrics(String[] metrics) {
+        this.metrics = metrics;
+        return this;
+    }
+    
+    /**
+     * Determines what statistic to use to rank the contributors. Valid values are SUM and MAXIMUM.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OrderBy")
+    public String orderBy;
+    public GETGETInsightRuleReportRequest withOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    /**
+     * The period, in seconds, to use for the statistics in the &lt;code&gt;InsightRuleMetricDatapoint&lt;/code&gt; results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Period")
+    public Long period;
+    public GETGETInsightRuleReportRequest withPeriod(Long period) {
+        this.period = period;
+        return this;
+    }
+    
+    /**
+     * The name of the rule that you want to see data from.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleName")
+    public String ruleName;
+    public GETGETInsightRuleReportRequest withRuleName(String ruleName) {
+        this.ruleName = ruleName;
+        return this;
+    }
+    
+    /**
+     * The start time of the data to use in the report. When used in a raw HTTP Query API, it is formatted as &lt;code&gt;yyyy-MM-dd'T'HH:mm:ss&lt;/code&gt;. For example, &lt;code&gt;2019-07-01T23:59:59&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartTime")
+    public OffsetDateTime startTime;
+    public GETGETInsightRuleReportRequest withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETInsightRuleReportVersionEnum version;
+    public GETGETInsightRuleReportRequest withVersion(GETGETInsightRuleReportVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGETInsightRuleReportRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGETInsightRuleReportRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGETInsightRuleReportRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGETInsightRuleReportRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGETInsightRuleReportRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGETInsightRuleReportRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGETInsightRuleReportRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

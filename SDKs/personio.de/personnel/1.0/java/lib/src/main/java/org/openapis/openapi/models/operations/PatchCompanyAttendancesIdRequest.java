@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchCompanyAttendancesIdRequest {
-    
-    public PatchCompanyAttendancesIdPathParams pathParams;
-    public PatchCompanyAttendancesIdRequest withPathParams(PatchCompanyAttendancesIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * attendance period data to update
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateAttendancePeriodRequest request;
-    public PatchCompanyAttendancesIdRequest withRequest(org.openapis.openapi.models.shared.UpdateAttendancePeriodRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateAttendancePeriodRequest updateAttendancePeriodRequest;
+    public PatchCompanyAttendancesIdRequest withUpdateAttendancePeriodRequest(org.openapis.openapi.models.shared.UpdateAttendancePeriodRequest updateAttendancePeriodRequest) {
+        this.updateAttendancePeriodRequest = updateAttendancePeriodRequest;
+        return this;
+    }
+    
+    /**
+     * ID of the attendance period to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PatchCompanyAttendancesIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

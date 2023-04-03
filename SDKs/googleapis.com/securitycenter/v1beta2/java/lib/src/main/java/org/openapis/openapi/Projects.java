@@ -34,25 +34,26 @@ public class Projects {
     /**
      * Get the ContainerThreatDetectionSettings resource. In the returned settings response, a missing field only indicates that it was not explicitly set, so no assumption should be made about these fields. In other words, GetContainerThreatDetectionSettings does not calculate the effective service settings for the resource, which accounts for inherited settings and defaults. Instead, use CalculateContainerThreatDetectionSettings for this purpose.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsResponse securitycenterProjectsLocationsClustersGetContainerThreatDetectionSettings(org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsResponse securitycenterProjectsLocationsClustersGetContainerThreatDetectionSettings(org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsRequest request, org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsPathParams.class, baseUrl, "/v1beta2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsRequest.class, baseUrl, "/v1beta2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class Projects {
     /**
      * Update the ContainerThreatDetectionSettings resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsResponse securitycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettings(org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsResponse securitycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettings(org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsRequest request, org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsPathParams.class, baseUrl, "/v1beta2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsRequest.class, baseUrl, "/v1beta2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "containerThreatDetectionSettingsInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class Projects {
     /**
      * Calculates the effective WebSecurityScannerSettings based on its level in the resource hierarchy and its settings. Settings provided closer to the target resource take precedence over those further away (e.g. folder will override organization level settings). The default SCC setting for the detector service defaults can be overridden at organization, folder and project levels. No assumptions should be made about the SCC defaults as it is considered an internal implementation detail.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecuritycenterProjectsWebSecurityScannerSettingsCalculateResponse securitycenterProjectsWebSecurityScannerSettingsCalculate(org.openapis.openapi.models.operations.SecuritycenterProjectsWebSecurityScannerSettingsCalculateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecuritycenterProjectsWebSecurityScannerSettingsCalculateResponse securitycenterProjectsWebSecurityScannerSettingsCalculate(org.openapis.openapi.models.operations.SecuritycenterProjectsWebSecurityScannerSettingsCalculateRequest request, org.openapis.openapi.models.operations.SecuritycenterProjectsWebSecurityScannerSettingsCalculateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterProjectsWebSecurityScannerSettingsCalculatePathParams.class, baseUrl, "/v1beta2/{name}:calculate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterProjectsWebSecurityScannerSettingsCalculateRequest.class, baseUrl, "/v1beta2/{name}:calculate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterProjectsWebSecurityScannerSettingsCalculateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterProjectsWebSecurityScannerSettingsCalculateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

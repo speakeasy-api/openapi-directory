@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActionPackageRevisionListRequest {
-    
-    public GetActionPackageRevisionListQueryParams queryParams;
-    public GetActionPackageRevisionListRequest withQueryParams(GetActionPackageRevisionListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id or name of the dataset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetActionPackageRevisionListRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

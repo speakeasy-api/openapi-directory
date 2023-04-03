@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.PolicyCreateOrUpdatePathParams;
-import org.openapis.openapi.models.operations.PolicyCreateOrUpdateHeaders;
 import org.openapis.openapi.models.operations.PolicyCreateOrUpdateRequest;
 import org.openapis.openapi.models.operations.PolicyCreateOrUpdateResponse;
 import org.openapis.openapi.models.shared.PolicySaveRequest;
@@ -20,19 +18,15 @@ public class Application {
                 .build();
 
             PolicyCreateOrUpdateRequest req = new PolicyCreateOrUpdateRequest() {{
-                pathParams = new PolicyCreateOrUpdatePathParams() {{
-                    id = "corrupti";
-                }};
-                headers = new PolicyCreateOrUpdateHeaders() {{
-                    accept = "provident";
-                    contentType = "distinctio";
-                }};
-                request = new PolicySaveRequest() {{
-                    description = "quibusdam";
-                    name = "unde";
+                accept = "corrupti";
+                contentType = "provident";
+                policySaveRequest = new PolicySaveRequest() {{
+                    description = "distinctio";
+                    name = "quibusdam";
                     statements = new org.openapis.openapi.models.shared.StatementGetResponse[]{{
                         add(new StatementGetResponse() {{
                             actions = new Object[]{{
+                                add("corrupti"),
                                 add("illum"),
                                 add("vel"),
                                 add("error"),
@@ -185,34 +179,10 @@ public class Application {
                             operation = "doloribus";
                             resource = "sapiente";
                         }}),
-                        add(new StatementGetResponse() {{
-                            actions = new Object[]{{
-                                add("mollitia"),
-                            }};
-                            condition = new StatementGetResponseCondition() {{
-                                conditions = new org.openapis.openapi.models.shared.StatementGetResponseConditionConditions[]{{
-                                    add(new StatementGetResponseConditionConditions() {{
-                                        conditions = new String[]{{
-                                            add("consequuntur"),
-                                            add("repellat"),
-                                            add("mollitia"),
-                                        }};
-                                        key = "occaecati";
-                                        operation = "numquam";
-                                        values = new String[]{{
-                                            add("quam"),
-                                            add("molestiae"),
-                                        }};
-                                    }}),
-                                }};
-                            }};
-                            effect = "velit";
-                            operation = "error";
-                            resource = "quia";
-                        }}),
                     }};
                 }};
-            }};            
+                id = "architecto";
+            }}            
 
             PolicyCreateOrUpdateResponse res = sdk.policy.policyCreateOrUpdate(req);
 

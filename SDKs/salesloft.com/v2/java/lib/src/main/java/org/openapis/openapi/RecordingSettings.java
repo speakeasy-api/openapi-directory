@@ -40,7 +40,7 @@ public class RecordingSettings {
      */
     public org.openapis.openapi.models.operations.GetV2PhoneNumbersRecordingSettingsIdJsonResponse getV2PhoneNumbersRecordingSettingsIdJson(org.openapis.openapi.models.operations.GetV2PhoneNumbersRecordingSettingsIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2PhoneNumbersRecordingSettingsIdJsonPathParams.class, baseUrl, "/v2/phone_numbers/recording_settings/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2PhoneNumbersRecordingSettingsIdJsonRequest.class, baseUrl, "/v2/phone_numbers/recording_settings/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

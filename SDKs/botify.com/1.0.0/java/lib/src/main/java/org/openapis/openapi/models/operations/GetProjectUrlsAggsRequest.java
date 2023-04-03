@@ -7,24 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectUrlsAggsRequest {
-    
-    public GetProjectUrlsAggsPathParams pathParams;
-    public GetProjectUrlsAggsRequest withPathParams(GetProjectUrlsAggsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetProjectUrlsAggsQueryParams queryParams;
-    public GetProjectUrlsAggsRequest withQueryParams(GetProjectUrlsAggsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UrlsAggsQuery[] request;
-    public GetProjectUrlsAggsRequest withRequest(org.openapis.openapi.models.shared.UrlsAggsQuery[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UrlsAggsQuery[] requestBody;
+    public GetProjectUrlsAggsRequest withRequestBody(org.openapis.openapi.models.shared.UrlsAggsQuery[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Analysis context to execute the queries
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=area")
+    public GetProjectUrlsAggsAreaEnum area;
+    public GetProjectUrlsAggsRequest withArea(GetProjectUrlsAggsAreaEnum area) {
+        this.area = area;
+        return this;
+    }
+    
+    /**
+     * Last analysis on the trend
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_analysis_slug")
+    public String lastAnalysisSlug;
+    public GetProjectUrlsAggsRequest withLastAnalysisSlug(String lastAnalysisSlug) {
+        this.lastAnalysisSlug = lastAnalysisSlug;
+        return this;
+    }
+    
+    /**
+     * Max number of analysis to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nb_analyses")
+    public Integer nbAnalyses;
+    public GetProjectUrlsAggsRequest withNbAnalyses(Integer nbAnalyses) {
+        this.nbAnalyses = nbAnalyses;
+        return this;
+    }
+    
+    /**
+     * Project's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
+    public String projectSlug;
+    public GetProjectUrlsAggsRequest withProjectSlug(String projectSlug) {
+        this.projectSlug = projectSlug;
+        return this;
+    }
+    
+    /**
+     * User's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetProjectUrlsAggsRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

@@ -49,7 +49,7 @@ public class Invoices {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetInvoicesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetInvoicesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -90,7 +90,7 @@ public class Invoices {
      */
     public org.openapis.openapi.models.operations.GetInvoicesIdResponse getInvoicesId(org.openapis.openapi.models.operations.GetInvoicesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInvoicesIdPathParams.class, baseUrl, "/invoices/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInvoicesIdRequest.class, baseUrl, "/invoices/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

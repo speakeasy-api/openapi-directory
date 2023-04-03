@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseRequest {
-    
-    public EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterprisePathParams pathParams;
-    public EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseRequest withPathParams(EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseRequestBody requestBody;
+    public EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseRequest withRequestBody(EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseRequestBody request;
-    public EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseRequest withRequest(EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseRequestBody request) {
-        this.request = request;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the self-hosted runner.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_id")
+    public Long runnerId;
+    public EnterpriseAdminSetCustomLabelsForSelfHostedRunnerForEnterpriseRequest withRunnerId(Long runnerId) {
+        this.runnerId = runnerId;
         return this;
     }
     

@@ -4,27 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListWorkloadSharesRequest {
-    
-    public ListWorkloadSharesPathParams pathParams;
-    public ListWorkloadSharesRequest withPathParams(ListWorkloadSharesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The maximum number of results to return for this request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public ListWorkloadSharesRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
     
-    
-    public ListWorkloadSharesQueryParams queryParams;
-    public ListWorkloadSharesRequest withQueryParams(ListWorkloadSharesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListWorkloadSharesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     
+    /**
+     * The Amazon Web Services account ID, IAM role, organization ID, or organizational unit (OU) ID with which the workload is shared.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SharedWithPrefix")
+    public String sharedWithPrefix;
+    public ListWorkloadSharesRequest withSharedWithPrefix(String sharedWithPrefix) {
+        this.sharedWithPrefix = sharedWithPrefix;
+        return this;
+    }
     
-    public ListWorkloadSharesHeaders headers;
-    public ListWorkloadSharesRequest withHeaders(ListWorkloadSharesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The status of a workload share.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public ListWorkloadSharesStatusEnum status;
+    public ListWorkloadSharesRequest withStatus(ListWorkloadSharesStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkloadId")
+    public String workloadId;
+    public ListWorkloadSharesRequest withWorkloadId(String workloadId) {
+        this.workloadId = workloadId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListWorkloadSharesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListWorkloadSharesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListWorkloadSharesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListWorkloadSharesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListWorkloadSharesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListWorkloadSharesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListWorkloadSharesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

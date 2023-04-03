@@ -4,20 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSnippetsWorkspaceEncodedIdCommitsRevisionRequest {
-    
-    public GetSnippetsWorkspaceEncodedIdCommitsRevisionPathParams pathParams;
-    public GetSnippetsWorkspaceEncodedIdCommitsRevisionRequest withPathParams(GetSnippetsWorkspaceEncodedIdCommitsRevisionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The snippet id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=encoded_id")
+    public String encodedId;
+    public GetSnippetsWorkspaceEncodedIdCommitsRevisionRequest withEncodedId(String encodedId) {
+        this.encodedId = encodedId;
         return this;
     }
     
+    /**
+     * The commit's SHA1.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=revision")
+    public String revision;
+    public GetSnippetsWorkspaceEncodedIdCommitsRevisionRequest withRevision(String revision) {
+        this.revision = revision;
+        return this;
+    }
     
-    public GetSnippetsWorkspaceEncodedIdCommitsRevisionSecurity security;
-    public GetSnippetsWorkspaceEncodedIdCommitsRevisionRequest withSecurity(GetSnippetsWorkspaceEncodedIdCommitsRevisionSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetSnippetsWorkspaceEncodedIdCommitsRevisionRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

@@ -18,16 +18,12 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.IapGetIamPolicySecurity;
-import org.openapis.openapi.models.operations.IapGetIamPolicyPathParams;
-import org.openapis.openapi.models.operations.IapGetIamPolicyQueryParams;
 import org.openapis.openapi.models.operations.IapGetIamPolicyRequest;
 import org.openapis.openapi.models.operations.IapGetIamPolicyResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GetIamPolicyRequest;
 import org.openapis.openapi.models.shared.GetPolicyOptions;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -36,38 +32,29 @@ public class Application {
                 .build();
 
             IapGetIamPolicyRequest req = new IapGetIamPolicyRequest() {{
-                security = new IapGetIamPolicySecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new IapGetIamPolicyPathParams() {{
-                    resource = "corrupti";
-                }};
-                queryParams = new IapGetIamPolicyQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new GetIamPolicyRequest() {{
+                dollarXgafv = "2";
+                getIamPolicyRequest = new GetIamPolicyRequest() {{
                     options = new GetPolicyOptions() {{
-                        requestedPolicyVersion = 384382;
+                        requestedPolicyVersion = 592845;
                     }};
                 }};
-            }};            
+                accessToken = "distinctio";
+                alt = "proto";
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
+                oauthToken = "illum";
+                prettyPrint = false;
+                quotaUser = "vel";
+                resource = "error";
+                uploadType = "deserunt";
+                uploadProtocol = "suscipit";
+            }}            
 
-            IapGetIamPolicyResponse res = sdk.v1beta1.iapGetIamPolicy(req);
+            IapGetIamPolicyResponse res = sdk.v1beta1.iapGetIamPolicy(req, new IapGetIamPolicySecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.policy.isPresent()) {
                 // handle response
@@ -79,7 +66,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### v1beta1

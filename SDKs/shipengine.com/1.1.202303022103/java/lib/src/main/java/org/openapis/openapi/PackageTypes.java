@@ -41,7 +41,7 @@ public class PackageTypes {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreatePackageTypeResponse createPackageType(org.openapis.openapi.models.operations.CreatePackageTypeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreatePackageTypeResponse createPackageType(org.openapis.openapi.models.shared.CreatePackageTypeRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/packages");
         
@@ -96,7 +96,7 @@ public class PackageTypes {
      */
     public org.openapis.openapi.models.operations.DeletePackageTypeResponse deletePackageType(org.openapis.openapi.models.operations.DeletePackageTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePackageTypePathParams.class, baseUrl, "/v1/packages/{package_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePackageTypeRequest.class, baseUrl, "/v1/packages/{package_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -148,7 +148,7 @@ public class PackageTypes {
      */
     public org.openapis.openapi.models.operations.GetPackageTypeByIdResponse getPackageTypeById(org.openapis.openapi.models.operations.GetPackageTypeByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPackageTypeByIdPathParams.class, baseUrl, "/v1/packages/{package_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPackageTypeByIdRequest.class, baseUrl, "/v1/packages/{package_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -243,12 +243,12 @@ public class PackageTypes {
      */
     public org.openapis.openapi.models.operations.UpdatePackageTypeResponse updatePackageType(org.openapis.openapi.models.operations.UpdatePackageTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePackageTypePathParams.class, baseUrl, "/v1/packages/{package_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePackageTypeRequest.class, baseUrl, "/v1/packages/{package_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updatePackageTypeRequestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -4,27 +4,65 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesRequest withPathParams(GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The commit's SHA1.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
+    public String commit;
+    public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesRequest withCommit(String commit) {
+        this.commit = commit;
         return this;
     }
     
-    
-    public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesQueryParams queryParams;
-    public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesRequest withQueryParams(GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Query string to narrow down the response as per
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesSecurity security;
-    public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesRequest withSecurity(GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesSecurity security) {
-        this.security = security;
+    /**
+     * Field by which the results should be sorted as per
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+     * Defaults to `created_on`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

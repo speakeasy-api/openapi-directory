@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BulkCreateTransactionsRequest {
-    
-    public BulkCreateTransactionsPathParams pathParams;
-    public BulkCreateTransactionsRequest withPathParams(BulkCreateTransactionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The list of transactions to create
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BulkTransactions request;
-    public BulkCreateTransactionsRequest withRequest(org.openapis.openapi.models.shared.BulkTransactions request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BulkTransactions bulkTransactions;
+    public BulkCreateTransactionsRequest withBulkTransactions(org.openapis.openapi.models.shared.BulkTransactions bulkTransactions) {
+        this.bulkTransactions = bulkTransactions;
+        return this;
+    }
+    
+    /**
+     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=budget_id")
+    public String budgetId;
+    public BulkCreateTransactionsRequest withBudgetId(String budgetId) {
+        this.budgetId = budgetId;
         return this;
     }
     

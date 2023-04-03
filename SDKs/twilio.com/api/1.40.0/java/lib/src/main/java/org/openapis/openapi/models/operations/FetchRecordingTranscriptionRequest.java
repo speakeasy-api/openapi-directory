@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchRecordingTranscriptionRequest {
-    
-    public FetchRecordingTranscriptionPathParams pathParams;
-    public FetchRecordingTranscriptionRequest withPathParams(FetchRecordingTranscriptionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Transcription resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public FetchRecordingTranscriptionRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public FetchRecordingTranscriptionSecurity security;
-    public FetchRecordingTranscriptionRequest withSecurity(FetchRecordingTranscriptionSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Recording](https://www.twilio.com/docs/voice/api/recording) that created the transcription to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=RecordingSid")
+    public String recordingSid;
+    public FetchRecordingTranscriptionRequest withRecordingSid(String recordingSid) {
+        this.recordingSid = recordingSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchRecordingTranscriptionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Transcription resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchRecordingTranscriptionRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

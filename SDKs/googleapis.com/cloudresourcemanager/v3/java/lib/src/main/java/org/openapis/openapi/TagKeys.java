@@ -34,27 +34,28 @@ public class TagKeys {
     /**
      * Creates a new TagKey. If another request with the same parameters is sent while the original request is in process, the second request will receive an error. A maximum of 1000 TagKeys can exist under a parent at any given time.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysCreateResponse cloudresourcemanagerTagKeysCreate(org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysCreateResponse cloudresourcemanagerTagKeysCreate(org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysCreateRequest request, org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v3/tagKeys");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "tagKeyInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,10 +82,11 @@ public class TagKeys {
     /**
      * Lists all TagKeys for a parent resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysListResponse cloudresourcemanagerTagKeysList(org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysListResponse cloudresourcemanagerTagKeysList(org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysListRequest request, org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v3/tagKeys");
         
@@ -92,14 +94,14 @@ public class TagKeys {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagKeysListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

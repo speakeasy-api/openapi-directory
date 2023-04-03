@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFoodBrandedBarcodePhpRequest {
-    
-    public GetFoodBrandedBarcodePhpQueryParams queryParams;
-    public GetFoodBrandedBarcodePhpRequest withQueryParams(GetFoodBrandedBarcodePhpQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetFoodBrandedBarcodePhpSecurity security;
-    public GetFoodBrandedBarcodePhpRequest withSecurity(GetFoodBrandedBarcodePhpSecurity security) {
-        this.security = security;
+    /**
+     * #### UPC/EAN barcode
+     * 
+     * **Example**
+     * &gt; ```&amp;code=0842234000988```
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code")
+    public String code;
+    public GetFoodBrandedBarcodePhpRequest withCode(String code) {
+        this.code = code;
         return this;
     }
     

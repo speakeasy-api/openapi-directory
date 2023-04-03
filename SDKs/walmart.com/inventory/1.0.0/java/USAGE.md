@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetInventoryQueryParams;
-import org.openapis.openapi.models.operations.GetInventoryHeaders;
 import org.openapis.openapi.models.operations.GetInventoryRequest;
 import org.openapis.openapi.models.operations.GetInventoryResponse;
 
@@ -16,17 +14,13 @@ public class Application {
                 .build();
 
             GetInventoryRequest req = new GetInventoryRequest() {{
-                queryParams = new GetInventoryQueryParams() {{
-                    shipNode = "corrupti";
-                    sku = "provident";
-                }};
-                headers = new GetInventoryHeaders() {{
-                    wmConsumerChannelType = "distinctio";
-                    wmQosCorrelationId = "quibusdam";
-                    wmSecAccessToken = "unde";
-                    wmSvcName = "nulla";
-                }};
-            }};            
+                wmConsumerChannelType = "corrupti";
+                wmQosCorrelationId = "provident";
+                wmSecAccessToken = "distinctio";
+                wmSvcName = "quibusdam";
+                shipNode = "unde";
+                sku = "nulla";
+            }}            
 
             GetInventoryResponse res = sdk.inventory.getInventory(req);
 

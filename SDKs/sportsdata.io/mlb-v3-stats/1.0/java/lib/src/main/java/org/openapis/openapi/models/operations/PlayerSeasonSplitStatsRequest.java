@@ -4,13 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlayerSeasonSplitStatsRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public PlayerSeasonSplitStatsFormatEnum format;
+    public PlayerSeasonSplitStatsRequest withFormat(PlayerSeasonSplitStatsFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public PlayerSeasonSplitStatsPathParams pathParams;
-    public PlayerSeasonSplitStatsRequest withPathParams(PlayerSeasonSplitStatsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Year of the season.
+     * &lt;br&gt;Examples: &lt;code&gt;2017&lt;/code&gt;, &lt;code&gt;2018&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
+    public String season;
+    public PlayerSeasonSplitStatsRequest withSeason(String season) {
+        this.season = season;
+        return this;
+    }
+    
+    /**
+     * The desired split of stats. Currently, we support vs. Left/Right/Switch handed pitchers/hitters. Possible values are: &lt;code&gt;L&lt;/code&gt;, &lt;code&gt;R&lt;/code&gt; and &lt;code&gt;S&lt;/code&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=split")
+    public PlayerSeasonSplitStatsSplitEnum split;
+    public PlayerSeasonSplitStatsRequest withSplit(PlayerSeasonSplitStatsSplitEnum split) {
+        this.split = split;
         return this;
     }
     

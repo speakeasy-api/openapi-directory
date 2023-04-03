@@ -29,8 +29,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/ListRealtimeContactAnalysisSegmentsQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListRealtimeContactAnalysisSegmentsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListRealtimeContactAnalysisSegmentsRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListRealtimeContactAnalysisSegmentsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListRealtimeContactAnalysisSegmentsResponse.java
@@ -43,6 +41,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/CharacterOffsets.java
 lib/src/main/java/org/openapis/openapi/models/shared/Categories.java
 lib/src/main/java/org/openapis/openapi/models/shared/CategoryDetails.java
 lib/src/main/java/org/openapis/openapi/models/shared/PointOfInterest.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

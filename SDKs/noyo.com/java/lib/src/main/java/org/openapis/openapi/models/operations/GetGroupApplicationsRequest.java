@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupApplicationsRequest {
-    
-    public GetGroupApplicationsPathParams pathParams;
-    public GetGroupApplicationsRequest withPathParams(GetGroupApplicationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The application type used to filter results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application_type")
+    public String applicationType;
+    public GetGroupApplicationsRequest withApplicationType(String applicationType) {
+        this.applicationType = applicationType;
         return this;
     }
     
+    /**
+     * The associated carrier group ID used to filter results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=carrier_group_id")
+    public String carrierGroupId;
+    public GetGroupApplicationsRequest withCarrierGroupId(String carrierGroupId) {
+        this.carrierGroupId = carrierGroupId;
+        return this;
+    }
     
-    public GetGroupApplicationsQueryParams queryParams;
-    public GetGroupApplicationsRequest withQueryParams(GetGroupApplicationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The associated carrier ID used to filter results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=carrier_id")
+    public String carrierId;
+    public GetGroupApplicationsRequest withCarrierId(String carrierId) {
+        this.carrierId = carrierId;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the group in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public GetGroupApplicationsRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * The integer offset at which to start the page. Possible values are 0 to total_records - 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetGroupApplicationsRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The max size of each page of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetGroupApplicationsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The attribute on which to sort the group applications
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public String sortBy;
+    public GetGroupApplicationsRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Either asc or desc, to denote the data's direction
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
+    public String sortDirection;
+    public GetGroupApplicationsRequest withSortDirection(String sortDirection) {
+        this.sortDirection = sortDirection;
+        return this;
+    }
+    
+    /**
+     * The application status used to filter results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public GetGroupApplicationsRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

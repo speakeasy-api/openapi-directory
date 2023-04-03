@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchDocumentsIdRequest {
-    
-    public PatchDocumentsIdPathParams pathParams;
-    public PatchDocumentsIdRequest withPathParams(PatchDocumentsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DocumentInput request;
-    public PatchDocumentsIdRequest withRequest(org.openapis.openapi.models.shared.DocumentInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DocumentInput documentInput;
+    public PatchDocumentsIdRequest withDocumentInput(org.openapis.openapi.models.shared.DocumentInput documentInput) {
+        this.documentInput = documentInput;
         return this;
     }
     
-    
-    public PatchDocumentsIdSecurity security;
-    public PatchDocumentsIdRequest withSecurity(PatchDocumentsIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the document to be updated.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchDocumentsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetProductRatingPathParams;
-import org.openapis.openapi.models.operations.GetProductRatingHeaders;
 import org.openapis.openapi.models.operations.GetProductRatingRequest;
 import org.openapis.openapi.models.operations.GetProductRatingResponse;
 
@@ -27,24 +25,16 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    appKey = new SchemeAppKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                    appToken = new SchemeAppToken() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    appKey = "YOUR_API_KEY_HERE";
+                    appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetProductRatingRequest req = new GetProductRatingRequest() {{
-                pathParams = new GetProductRatingPathParams() {{
-                    productId = "1";
-                }};
-                headers = new GetProductRatingHeaders() {{
-                    accept = "corrupti";
-                    contentType = "provident";
-                }};
-            }};            
+                accept = "corrupti";
+                contentType = "provident";
+                productId = "1";
+            }}            
 
             GetProductRatingResponse res = sdk.rating.getProductRating(req);
 
@@ -58,7 +48,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### rating

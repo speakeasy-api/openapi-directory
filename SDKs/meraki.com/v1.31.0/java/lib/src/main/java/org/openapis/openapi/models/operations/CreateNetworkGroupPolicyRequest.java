@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateNetworkGroupPolicyRequest {
-    
-    public CreateNetworkGroupPolicyPathParams pathParams;
-    public CreateNetworkGroupPolicyRequest withPathParams(CreateNetworkGroupPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateNetworkGroupPolicyRequestBody requestBody;
+    public CreateNetworkGroupPolicyRequest withRequestBody(CreateNetworkGroupPolicyRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateNetworkGroupPolicyRequestBody request;
-    public CreateNetworkGroupPolicyRequest withRequest(CreateNetworkGroupPolicyRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public CreateNetworkGroupPolicyRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

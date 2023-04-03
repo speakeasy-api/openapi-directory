@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNsxvControllerClusterRequest {
-    
-    public UpdateNsxvControllerClusterPathParams pathParams;
-    public UpdateNsxvControllerClusterRequest withPathParams(UpdateNsxvControllerClusterPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.NSXControllerDataCollection request;
-    public UpdateNsxvControllerClusterRequest withRequest(org.openapis.openapi.models.shared.NSXControllerDataCollection request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.NSXControllerDataCollection nsxControllerDataCollection;
+    public UpdateNsxvControllerClusterRequest withNSXControllerDataCollection(org.openapis.openapi.models.shared.NSXControllerDataCollection nsxControllerDataCollection) {
+        this.nsxControllerDataCollection = nsxControllerDataCollection;
         return this;
     }
     
-    
-    public UpdateNsxvControllerClusterSecurity security;
-    public UpdateNsxvControllerClusterRequest withSecurity(UpdateNsxvControllerClusterSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateNsxvControllerClusterRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

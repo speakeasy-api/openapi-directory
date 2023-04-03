@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyHostsRequest {
-    
-    public GETModifyHostsQueryParams queryParams;
-    public GETModifyHostsRequest withQueryParams(GETModifyHostsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyHostsActionEnum action;
+    public GETModifyHostsRequest withAction(GETModifyHostsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Specify whether to enable or disable auto-placement.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoPlacement")
+    public GETModifyHostsAutoPlacementEnum autoPlacement;
+    public GETModifyHostsRequest withAutoPlacement(GETModifyHostsAutoPlacementEnum autoPlacement) {
+        this.autoPlacement = autoPlacement;
+        return this;
+    }
     
-    public GETModifyHostsHeaders headers;
-    public GETModifyHostsRequest withHeaders(GETModifyHostsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The IDs of the Dedicated Hosts to modify.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HostId")
+    public String[] hostId;
+    public GETModifyHostsRequest withHostId(String[] hostId) {
+        this.hostId = hostId;
+        return this;
+    }
+    
+    /**
+     * Indicates whether to enable or disable host maintenance for the Dedicated Host. For more information, see &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-maintenance.html"&gt; Host maintenance&lt;/a&gt; in the &lt;i&gt;Amazon EC2 User Guide&lt;/i&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HostMaintenance")
+    public GETModifyHostsHostMaintenanceEnum hostMaintenance;
+    public GETModifyHostsRequest withHostMaintenance(GETModifyHostsHostMaintenanceEnum hostMaintenance) {
+        this.hostMaintenance = hostMaintenance;
+        return this;
+    }
+    
+    /**
+     * Indicates whether to enable or disable host recovery for the Dedicated Host. For more information, see &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-recovery.html"&gt; Host recovery&lt;/a&gt; in the &lt;i&gt;Amazon EC2 User Guide&lt;/i&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HostRecovery")
+    public GETModifyHostsHostRecoveryEnum hostRecovery;
+    public GETModifyHostsRequest withHostRecovery(GETModifyHostsHostRecoveryEnum hostRecovery) {
+        this.hostRecovery = hostRecovery;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Specifies the instance family to be supported by the Dedicated Host. Specify this parameter to modify a Dedicated Host to support multiple instance types within its current instance family.&lt;/p&gt; &lt;p&gt;If you want to modify a Dedicated Host to support a specific instance type only, omit this parameter and specify &lt;b&gt;InstanceType&lt;/b&gt; instead. You cannot specify &lt;b&gt;InstanceFamily&lt;/b&gt; and &lt;b&gt;InstanceType&lt;/b&gt; in the same request.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceFamily")
+    public String instanceFamily;
+    public GETModifyHostsRequest withInstanceFamily(String instanceFamily) {
+        this.instanceFamily = instanceFamily;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Specifies the instance type to be supported by the Dedicated Host. Specify this parameter to modify a Dedicated Host to support only a specific instance type.&lt;/p&gt; &lt;p&gt;If you want to modify a Dedicated Host to support multiple instance types in its current instance family, omit this parameter and specify &lt;b&gt;InstanceFamily&lt;/b&gt; instead. You cannot specify &lt;b&gt;InstanceType&lt;/b&gt; and &lt;b&gt;InstanceFamily&lt;/b&gt; in the same request.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceType")
+    public String instanceType;
+    public GETModifyHostsRequest withInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyHostsVersionEnum version;
+    public GETModifyHostsRequest withVersion(GETModifyHostsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyHostsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyHostsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyHostsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyHostsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyHostsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyHostsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyHostsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

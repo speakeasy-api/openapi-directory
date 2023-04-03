@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchDocumentRequest {
-    
-    public PatchDocumentPathParams pathParams;
-    public PatchDocumentRequest withPathParams(PatchDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The list of JSON patch operations.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PatchesSchema[] request;
-    public PatchDocumentRequest withRequest(org.openapis.openapi.models.shared.PatchesSchema[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PatchesSchema[] requestBody;
+    public PatchDocumentRequest withRequestBody(org.openapis.openapi.models.shared.PatchesSchema[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * A backslash (/) delimited path to access values inside object and array documents. If the path points to an array, the server will attempt to convert the array index to an integer. If the path element cannot be converted to an integer, the server will respond with 404.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public PatchDocumentRequest withPath(String path) {
+        this.path = path;
         return this;
     }
     

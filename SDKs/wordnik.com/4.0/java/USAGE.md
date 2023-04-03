@@ -4,9 +4,7 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetAudioPathParams;
 import org.openapis.openapi.models.operations.GetAudioUseCanonicalEnum;
-import org.openapis.openapi.models.operations.GetAudioQueryParams;
 import org.openapis.openapi.models.operations.GetAudioRequest;
 import org.openapis.openapi.models.operations.GetAudioResponse;
 
@@ -17,14 +15,10 @@ public class Application {
                 .build();
 
             GetAudioRequest req = new GetAudioRequest() {{
-                pathParams = new GetAudioPathParams() {{
-                    word = "corrupti";
-                }};
-                queryParams = new GetAudioQueryParams() {{
-                    limit = 592845;
-                    useCanonical = "true";
-                }};
-            }};            
+                limit = 548814;
+                useCanonical = "true";
+                word = "distinctio";
+            }}            
 
             GetAudioResponse res = sdk.word.getAudio(req);
 

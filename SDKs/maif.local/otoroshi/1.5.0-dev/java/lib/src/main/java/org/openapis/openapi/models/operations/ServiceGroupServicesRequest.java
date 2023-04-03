@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServiceGroupServicesRequest {
-    
-    public ServiceGroupServicesPathParams pathParams;
-    public ServiceGroupServicesRequest withPathParams(ServiceGroupServicesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ServiceGroupServicesSecurity security;
-    public ServiceGroupServicesRequest withSecurity(ServiceGroupServicesSecurity security) {
-        this.security = security;
+    /**
+     * The service group id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceGroupId")
+    public String serviceGroupId;
+    public ServiceGroupServicesRequest withServiceGroupId(String serviceGroupId) {
+        this.serviceGroupId = serviceGroupId;
         return this;
     }
     

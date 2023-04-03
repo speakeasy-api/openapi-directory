@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchVerificationRequest {
-    
-    public FetchVerificationPathParams pathParams;
-    public FetchVerificationRequest withPathParams(FetchVerificationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the verification [Service](https://www.twilio.com/docs/verify/api/service) to fetch the resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchVerificationRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public FetchVerificationSecurity security;
-    public FetchVerificationRequest withSecurity(FetchVerificationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchVerificationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Verification resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchVerificationRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -4,27 +4,186 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BooksMylibraryReadingpositionsSetPositionRequest {
-    
-    public BooksMylibraryReadingpositionsSetPositionPathParams pathParams;
-    public BooksMylibraryReadingpositionsSetPositionRequest withPathParams(BooksMylibraryReadingpositionsSetPositionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public BooksMylibraryReadingpositionsSetPositionRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public BooksMylibraryReadingpositionsSetPositionQueryParams queryParams;
-    public BooksMylibraryReadingpositionsSetPositionRequest withQueryParams(BooksMylibraryReadingpositionsSetPositionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public BooksMylibraryReadingpositionsSetPositionRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Action that caused this reading position to be set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action")
+    public BooksMylibraryReadingpositionsSetPositionActionEnum action;
+    public BooksMylibraryReadingpositionsSetPositionRequest withAction(BooksMylibraryReadingpositionsSetPositionActionEnum action) {
+        this.action = action;
+        return this;
+    }
     
-    public BooksMylibraryReadingpositionsSetPositionSecurity security;
-    public BooksMylibraryReadingpositionsSetPositionRequest withSecurity(BooksMylibraryReadingpositionsSetPositionSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public BooksMylibraryReadingpositionsSetPositionRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public BooksMylibraryReadingpositionsSetPositionRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Volume content version for which this reading position applies.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentVersion")
+    public String contentVersion;
+    public BooksMylibraryReadingpositionsSetPositionRequest withContentVersion(String contentVersion) {
+        this.contentVersion = contentVersion;
+        return this;
+    }
+    
+    /**
+     * Random persistent device cookie optional on set position.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceCookie")
+    public String deviceCookie;
+    public BooksMylibraryReadingpositionsSetPositionRequest withDeviceCookie(String deviceCookie) {
+        this.deviceCookie = deviceCookie;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public BooksMylibraryReadingpositionsSetPositionRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public BooksMylibraryReadingpositionsSetPositionRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public BooksMylibraryReadingpositionsSetPositionRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Position string for the new volume reading position.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=position")
+    public String position;
+    public BooksMylibraryReadingpositionsSetPositionRequest withPosition(String position) {
+        this.position = position;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public BooksMylibraryReadingpositionsSetPositionRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public BooksMylibraryReadingpositionsSetPositionRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * String to identify the originator of this request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public String source;
+    public BooksMylibraryReadingpositionsSetPositionRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * RFC 3339 UTC format timestamp associated with this reading position.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timestamp")
+    public String timestamp;
+    public BooksMylibraryReadingpositionsSetPositionRequest withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public BooksMylibraryReadingpositionsSetPositionRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public BooksMylibraryReadingpositionsSetPositionRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * ID of volume for which to update the reading position.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=volumeId")
+    public String volumeId;
+    public BooksMylibraryReadingpositionsSetPositionRequest withVolumeId(String volumeId) {
+        this.volumeId = volumeId;
         return this;
     }
     

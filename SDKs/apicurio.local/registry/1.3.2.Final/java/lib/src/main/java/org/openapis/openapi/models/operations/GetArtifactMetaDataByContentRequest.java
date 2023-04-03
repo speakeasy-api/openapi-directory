@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetArtifactMetaDataByContentRequest {
-    
-    public GetArtifactMetaDataByContentPathParams pathParams;
-    public GetArtifactMetaDataByContentRequest withPathParams(GetArtifactMetaDataByContentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The content of an artifact version.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public byte[] request;
-    public GetArtifactMetaDataByContentRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public GetArtifactMetaDataByContentRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public GetArtifactMetaDataByContentRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
         return this;
     }
     

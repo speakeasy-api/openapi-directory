@@ -35,10 +35,11 @@ public class Tables {
     /**
      * Lists tables for the user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Area120tablesTablesListResponse area120tablesTablesList(org.openapis.openapi.models.operations.Area120tablesTablesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Area120tablesTablesListResponse area120tablesTablesList(org.openapis.openapi.models.operations.Area120tablesTablesListRequest request, org.openapis.openapi.models.operations.Area120tablesTablesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1alpha1/tables");
         
@@ -46,14 +47,14 @@ public class Tables {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Area120tablesTablesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Area120tablesTablesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,27 +81,28 @@ public class Tables {
     /**
      * Creates multiple rows.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchCreateResponse area120tablesTablesRowsBatchCreate(org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchCreateResponse area120tablesTablesRowsBatchCreate(org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchCreateRequest request, org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchCreatePathParams.class, baseUrl, "/v1alpha1/{parent}/rows:batchCreate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchCreateRequest.class, baseUrl, "/v1alpha1/{parent}/rows:batchCreate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchCreateRowsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Tables {
     /**
      * Deletes multiple rows.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchDeleteResponse area120tablesTablesRowsBatchDelete(org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchDeleteResponse area120tablesTablesRowsBatchDelete(org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchDeleteRequest request, org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchDeletePathParams.class, baseUrl, "/v1alpha1/{parent}/rows:batchDelete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchDeleteRequest.class, baseUrl, "/v1alpha1/{parent}/rows:batchDelete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchDeleteRowsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,27 +177,28 @@ public class Tables {
     /**
      * Updates multiple rows.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchUpdateResponse area120tablesTablesRowsBatchUpdate(org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchUpdateResponse area120tablesTablesRowsBatchUpdate(org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchUpdateRequest request, org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchUpdatePathParams.class, baseUrl, "/v1alpha1/{parent}/rows:batchUpdate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchUpdateRequest.class, baseUrl, "/v1alpha1/{parent}/rows:batchUpdate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchUpdateRowsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Area120tablesTablesRowsBatchUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -221,27 +225,28 @@ public class Tables {
     /**
      * Creates a row.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Area120tablesTablesRowsCreateResponse area120tablesTablesRowsCreate(org.openapis.openapi.models.operations.Area120tablesTablesRowsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Area120tablesTablesRowsCreateResponse area120tablesTablesRowsCreate(org.openapis.openapi.models.operations.Area120tablesTablesRowsCreateRequest request, org.openapis.openapi.models.operations.Area120tablesTablesRowsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Area120tablesTablesRowsCreatePathParams.class, baseUrl, "/v1alpha1/{parent}/rows", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Area120tablesTablesRowsCreateRequest.class, baseUrl, "/v1alpha1/{parent}/rows", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "row", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Area120tablesTablesRowsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Area120tablesTablesRowsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -268,25 +273,26 @@ public class Tables {
     /**
      * Deletes a row.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Area120tablesTablesRowsDeleteResponse area120tablesTablesRowsDelete(org.openapis.openapi.models.operations.Area120tablesTablesRowsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Area120tablesTablesRowsDeleteResponse area120tablesTablesRowsDelete(org.openapis.openapi.models.operations.Area120tablesTablesRowsDeleteRequest request, org.openapis.openapi.models.operations.Area120tablesTablesRowsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Area120tablesTablesRowsDeletePathParams.class, baseUrl, "/v1alpha1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Area120tablesTablesRowsDeleteRequest.class, baseUrl, "/v1alpha1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Area120tablesTablesRowsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Area120tablesTablesRowsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -313,25 +319,26 @@ public class Tables {
     /**
      * Lists rows in a table. Returns NOT_FOUND if the table does not exist.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Area120tablesTablesRowsListResponse area120tablesTablesRowsList(org.openapis.openapi.models.operations.Area120tablesTablesRowsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Area120tablesTablesRowsListResponse area120tablesTablesRowsList(org.openapis.openapi.models.operations.Area120tablesTablesRowsListRequest request, org.openapis.openapi.models.operations.Area120tablesTablesRowsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Area120tablesTablesRowsListPathParams.class, baseUrl, "/v1alpha1/{parent}/rows", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Area120tablesTablesRowsListRequest.class, baseUrl, "/v1alpha1/{parent}/rows", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Area120tablesTablesRowsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Area120tablesTablesRowsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,27 +365,28 @@ public class Tables {
     /**
      * Updates a row.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Area120tablesTablesRowsPatchResponse area120tablesTablesRowsPatch(org.openapis.openapi.models.operations.Area120tablesTablesRowsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Area120tablesTablesRowsPatchResponse area120tablesTablesRowsPatch(org.openapis.openapi.models.operations.Area120tablesTablesRowsPatchRequest request, org.openapis.openapi.models.operations.Area120tablesTablesRowsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Area120tablesTablesRowsPatchPathParams.class, baseUrl, "/v1alpha1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Area120tablesTablesRowsPatchRequest.class, baseUrl, "/v1alpha1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "row", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Area120tablesTablesRowsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Area120tablesTablesRowsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

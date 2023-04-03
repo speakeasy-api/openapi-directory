@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1ResourcegroupsIdRecoverRequest {
-    
-    public PutSetupV1ResourcegroupsIdRecoverPathParams pathParams;
-    public PutSetupV1ResourcegroupsIdRecoverRequest withPathParams(PutSetupV1ResourcegroupsIdRecoverPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of resourceGroup object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutSetupV1ResourcegroupsIdRecoverRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

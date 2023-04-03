@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListFunctionVersionRequest {
-    
-    public ListFunctionVersionPathParams pathParams;
-    public ListFunctionVersionRequest withPathParams(ListFunctionVersionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the function that is the parent of the Function Version resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FunctionSid")
+    public String functionSid;
+    public ListFunctionVersionRequest withFunctionSid(String functionSid) {
+        this.functionSid = functionSid;
         return this;
     }
     
-    
-    public ListFunctionVersionQueryParams queryParams;
-    public ListFunctionVersionRequest withQueryParams(ListFunctionVersionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListFunctionVersionRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListFunctionVersionSecurity security;
-    public ListFunctionVersionRequest withSecurity(ListFunctionVersionSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListFunctionVersionRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListFunctionVersionRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
     
-    public String serverURL;
-    public ListFunctionVersionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Service to read the Function Version resources from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public ListFunctionVersionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

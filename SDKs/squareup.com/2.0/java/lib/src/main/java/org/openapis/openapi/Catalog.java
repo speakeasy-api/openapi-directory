@@ -44,10 +44,11 @@ public class Catalog {
      * IDs can be deleted. The response will only include IDs that were
      * actually deleted.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BatchDeleteCatalogObjectsResponse batchDeleteCatalogObjects(org.openapis.openapi.models.operations.BatchDeleteCatalogObjectsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BatchDeleteCatalogObjectsResponse batchDeleteCatalogObjects(org.openapis.openapi.models.shared.BatchDeleteCatalogObjectsRequest request, org.openapis.openapi.models.operations.BatchDeleteCatalogObjectsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/catalog/batch-delete");
         
@@ -61,7 +62,7 @@ public class Catalog {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -94,10 +95,11 @@ public class Catalog {
      * its [CatalogModifierList](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogModifierList) objects, and the ids of
      * any [CatalogTax](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogTax) objects that apply to it.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BatchRetrieveCatalogObjectsResponse batchRetrieveCatalogObjects(org.openapis.openapi.models.operations.BatchRetrieveCatalogObjectsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BatchRetrieveCatalogObjectsResponse batchRetrieveCatalogObjects(org.openapis.openapi.models.shared.BatchRetrieveCatalogObjectsRequest request, org.openapis.openapi.models.operations.BatchRetrieveCatalogObjectsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/catalog/batch-retrieve");
         
@@ -111,7 +113,7 @@ public class Catalog {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -147,10 +149,11 @@ public class Catalog {
      * request (items, variations, modifier lists, discounts, and taxes) is no more
      * than 10,000.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BatchUpsertCatalogObjectsResponse batchUpsertCatalogObjects(org.openapis.openapi.models.operations.BatchUpsertCatalogObjectsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BatchUpsertCatalogObjectsResponse batchUpsertCatalogObjects(org.openapis.openapi.models.shared.BatchUpsertCatalogObjectsRequest request, org.openapis.openapi.models.operations.BatchUpsertCatalogObjectsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/catalog/batch-upsert");
         
@@ -164,7 +167,7 @@ public class Catalog {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -192,11 +195,10 @@ public class Catalog {
      * CatalogInfo
      * Retrieves information about the Square Catalog API, such as batch size
      * limits that can be used by the `BatchUpsertCatalogObjects` endpoint.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CatalogInfoResponse catalogInfo(org.openapis.openapi.models.operations.CatalogInfoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CatalogInfoResponse catalogInfo() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/catalog/info");
         
@@ -205,8 +207,7 @@ public class Catalog {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -238,19 +239,20 @@ public class Catalog {
      * will also delete all of its
      * [CatalogItemVariation](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogItemVariation) children.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteCatalogObjectResponse deleteCatalogObject(org.openapis.openapi.models.operations.DeleteCatalogObjectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteCatalogObjectResponse deleteCatalogObject(org.openapis.openapi.models.operations.DeleteCatalogObjectRequest request, org.openapis.openapi.models.operations.DeleteCatalogObjectSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCatalogObjectPathParams.class, baseUrl, "/v2/catalog/object/{object_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCatalogObjectRequest.class, baseUrl, "/v2/catalog/object/{object_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -286,10 +288,11 @@ public class Catalog {
      * deleted catalog items, use [SearchCatalogObjects](https://developer.squareup.com/reference/square_2021-08-18/catalog-api/search-catalog-objects)
      * and set the `include_deleted_objects` attribute value to `true`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCatalogResponse listCatalog(org.openapis.openapi.models.operations.ListCatalogRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListCatalogResponse listCatalog(org.openapis.openapi.models.operations.ListCatalogRequest request, org.openapis.openapi.models.operations.ListCatalogSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/catalog/list");
         
@@ -297,14 +300,14 @@ public class Catalog {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCatalogQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCatalogRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -338,25 +341,26 @@ public class Catalog {
      * [CatalogModifierList](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogModifierList) objects, and the ids of
      * any [CatalogTax](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogTax) objects that apply to it.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveCatalogObjectResponse retrieveCatalogObject(org.openapis.openapi.models.operations.RetrieveCatalogObjectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveCatalogObjectResponse retrieveCatalogObject(org.openapis.openapi.models.operations.RetrieveCatalogObjectRequest request, org.openapis.openapi.models.operations.RetrieveCatalogObjectSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveCatalogObjectPathParams.class, baseUrl, "/v2/catalog/object/{object_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveCatalogObjectRequest.class, baseUrl, "/v2/catalog/object/{object_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrieveCatalogObjectQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrieveCatalogObjectRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -393,10 +397,11 @@ public class Catalog {
      * - `SearchCatalogItems` does not support the `include_deleted_objects` filter to search for deleted items or item variations, whereas `SearchCatalogObjects` does.
      * - The both endpoints use different call conventions, including the query filter formats.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchCatalogItemsResponse searchCatalogItems(org.openapis.openapi.models.operations.SearchCatalogItemsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchCatalogItemsResponse searchCatalogItems(org.openapis.openapi.models.shared.SearchCatalogItemsRequest request, org.openapis.openapi.models.operations.SearchCatalogItemsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/catalog/search-catalog-items");
         
@@ -410,7 +415,7 @@ public class Catalog {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -447,10 +452,11 @@ public class Catalog {
      * - `SearchCatalogItems` does not support the `include_deleted_objects` filter to search for deleted items or item variations, whereas `SearchCatalogObjects` does.
      * - The both endpoints have different call conventions, including the query filter formats.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchCatalogObjectsResponse searchCatalogObjects(org.openapis.openapi.models.operations.SearchCatalogObjectsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchCatalogObjectsResponse searchCatalogObjects(org.openapis.openapi.models.shared.SearchCatalogObjectsRequest request, org.openapis.openapi.models.operations.SearchCatalogObjectsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/catalog/search");
         
@@ -464,7 +470,7 @@ public class Catalog {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -494,10 +500,11 @@ public class Catalog {
      * that apply to the targeted [CatalogItem](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogItem) without having
      * to perform an upsert on the entire item.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateItemModifierListsResponse updateItemModifierLists(org.openapis.openapi.models.operations.UpdateItemModifierListsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateItemModifierListsResponse updateItemModifierLists(org.openapis.openapi.models.shared.UpdateItemModifierListsRequest request, org.openapis.openapi.models.operations.UpdateItemModifierListsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/catalog/update-item-modifier-lists");
         
@@ -511,7 +518,7 @@ public class Catalog {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -541,10 +548,11 @@ public class Catalog {
      * targeted [CatalogItem](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogItem) without having to perform an
      * upsert on the entire item.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateItemTaxesResponse updateItemTaxes(org.openapis.openapi.models.operations.UpdateItemTaxesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateItemTaxesResponse updateItemTaxes(org.openapis.openapi.models.shared.UpdateItemTaxesRequest request, org.openapis.openapi.models.operations.UpdateItemTaxesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/catalog/update-item-taxes");
         
@@ -558,7 +566,7 @@ public class Catalog {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -586,10 +594,11 @@ public class Catalog {
      * UpsertCatalogObject
      * Creates or updates the target [CatalogObject](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogObject).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpsertCatalogObjectResponse upsertCatalogObject(org.openapis.openapi.models.operations.UpsertCatalogObjectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpsertCatalogObjectResponse upsertCatalogObject(org.openapis.openapi.models.shared.UpsertCatalogObjectRequest request, org.openapis.openapi.models.operations.UpsertCatalogObjectSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/catalog/object");
         
@@ -603,7 +612,7 @@ public class Catalog {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

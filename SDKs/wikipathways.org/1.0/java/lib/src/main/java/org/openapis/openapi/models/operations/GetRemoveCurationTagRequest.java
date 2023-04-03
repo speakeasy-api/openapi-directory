@@ -4,13 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRemoveCurationTagRequest {
+    /**
+     * The authentication data
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auth")
+    public String auth;
+    public GetRemoveCurationTagRequest withAuth(String auth) {
+        this.auth = auth;
+        return this;
+    }
     
-    public GetRemoveCurationTagQueryParams queryParams;
-    public GetRemoveCurationTagRequest withQueryParams(GetRemoveCurationTagQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetRemoveCurationTagFormatEnum format;
+    public GetRemoveCurationTagRequest withFormat(GetRemoveCurationTagFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * The pathway identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pwId")
+    public String pwId;
+    public GetRemoveCurationTagRequest withPwId(String pwId) {
+        this.pwId = pwId;
+        return this;
+    }
+    
+    /**
+     * The name of the tag to apply
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagName")
+    public String tagName;
+    public GetRemoveCurationTagRequest withTagName(String tagName) {
+        this.tagName = tagName;
+        return this;
+    }
+    
+    /**
+     * The user name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public GetRemoveCurationTagRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

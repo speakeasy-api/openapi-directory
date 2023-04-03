@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPastWebinarFilesRequest {
-    
-    public ListPastWebinarFilesPathParams pathParams;
-    public ListPastWebinarFilesRequest withPathParams(ListPastWebinarFilesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ListPastWebinarFilesSecurity security;
-    public ListPastWebinarFilesRequest withSecurity(ListPastWebinarFilesSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webinarId")
+    public String webinarId;
+    public ListPastWebinarFilesRequest withWebinarId(String webinarId) {
+        this.webinarId = webinarId;
         return this;
     }
     

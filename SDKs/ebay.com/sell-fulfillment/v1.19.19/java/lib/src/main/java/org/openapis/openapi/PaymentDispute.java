@@ -125,25 +125,39 @@ public class PaymentDispute {
      * Accept Payment Dispute
      * This method is used if the seller wishes to accept a payment dispute. The unique identifier of the payment dispute is passed in as a path parameter, and unique identifiers for payment disputes can be retrieved with the &lt;strong&gt;getPaymentDisputeSummaries&lt;/strong&gt; method.&lt;br&gt;&lt;br&gt;The &lt;strong&gt;revision&lt;/strong&gt; field in the request payload is required, and the &lt;strong&gt;returnAddress&lt;/strong&gt; field should be supplied if the seller is expecting the buyer to return the item. See the Request Payload section for more information on theste fields.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AcceptPaymentDisputeResponse acceptPaymentDispute(org.openapis.openapi.models.operations.AcceptPaymentDisputeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AcceptPaymentDisputeResponse acceptPaymentDispute(org.openapis.openapi.models.operations.AcceptPaymentDisputeRequest request, org.openapis.openapi.models.operations.AcceptPaymentDisputeSecurity security) throws Exception {
+        return this.acceptPaymentDispute(request, security, null);
+    }
+
+    /**
+     * Accept Payment Dispute
+     * This method is used if the seller wishes to accept a payment dispute. The unique identifier of the payment dispute is passed in as a path parameter, and unique identifiers for payment disputes can be retrieved with the &lt;strong&gt;getPaymentDisputeSummaries&lt;/strong&gt; method.&lt;br&gt;&lt;br&gt;The &lt;strong&gt;revision&lt;/strong&gt; field in the request payload is required, and the &lt;strong&gt;returnAddress&lt;/strong&gt; field should be supplied if the seller is expecting the buyer to return the item. See the Request Payload section for more information on theste fields.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AcceptPaymentDisputeResponse acceptPaymentDispute(org.openapis.openapi.models.operations.AcceptPaymentDisputeRequest request, org.openapis.openapi.models.operations.AcceptPaymentDisputeSecurity security, String serverURL) throws Exception {
         String baseUrl = ACCEPT_PAYMENT_DISPUTE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AcceptPaymentDisputePathParams.class, baseUrl, "/payment_dispute/{payment_dispute_id}/accept", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AcceptPaymentDisputeRequest.class, baseUrl, "/payment_dispute/{payment_dispute_id}/accept", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "acceptPaymentDisputeRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,25 +179,39 @@ public class PaymentDispute {
      * Add an Evidence File
      * This method is used by the seller to add one or more evidence files to address a payment dispute initiated by the buyer. The unique identifier of the payment dispute is passed in as a path parameter, and unique identifiers for payment disputes can be retrieved with the &lt;strong&gt;getPaymentDisputeSummaries&lt;/strong&gt; method.&lt;br&gt;&lt;br&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; All evidence files should be uploaded using &lt;strong&gt;addEvidence&lt;/strong&gt; and &lt;strong&gt;updateEvidence&lt;/strong&gt;  before the seller decides to contest the payment dispute. Once the seller has officially contested the dispute (using &lt;strong&gt;contestPaymentDispute&lt;/strong&gt; or through My eBay), the &lt;strong&gt;addEvidence&lt;/strong&gt; and &lt;strong&gt;updateEvidence&lt;/strong&gt; methods can no longer be used. In the &lt;strong&gt;evidenceRequests&lt;/strong&gt; array of the &lt;strong&gt;getPaymentDispute&lt;/strong&gt; response, eBay prompts the seller with the type of evidence file(s) that will be needed to contest the payment dispute.&lt;/span&gt;&lt;br&gt;&lt;br&gt;The file(s) to add are identified through the &lt;strong&gt;files&lt;/strong&gt; array in the request payload.  Adding one or more new evidence files for a payment dispute triggers the creation of an evidence file, and the unique identifier for the new evidence file is automatically generated and returned in the &lt;strong&gt;evidenceId&lt;/strong&gt; field of the &lt;strong&gt;addEvidence&lt;/strong&gt; response payload upon a successful call.&lt;br&gt;&lt;br&gt;The type of evidence being added should be specified in the &lt;strong&gt;evidenceType&lt;/strong&gt; field. All files being added (if more than one) should correspond to this evidence type.&lt;br&gt;&lt;br&gt;Upon a successful call, an &lt;strong&gt;evidenceId&lt;/strong&gt; value is returned in the response. This indicates that a new evidence set has been created for the payment dispute, and this evidence set includes the evidence file(s) that were passed in to the &lt;strong&gt;fileId&lt;/strong&gt; array. The &lt;strong&gt;evidenceId&lt;/strong&gt; value will be needed if the seller wishes to add to the evidence set by using the &lt;strong&gt;updateEvidence&lt;/strong&gt; method, or if they want to retrieve a specific evidence file within the evidence set by using the &lt;strong&gt;fetchEvidenceContent&lt;/strong&gt; method.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddEvidenceResponse addEvidence(org.openapis.openapi.models.operations.AddEvidenceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddEvidenceResponse addEvidence(org.openapis.openapi.models.operations.AddEvidenceRequest request, org.openapis.openapi.models.operations.AddEvidenceSecurity security) throws Exception {
+        return this.addEvidence(request, security, null);
+    }
+
+    /**
+     * Add an Evidence File
+     * This method is used by the seller to add one or more evidence files to address a payment dispute initiated by the buyer. The unique identifier of the payment dispute is passed in as a path parameter, and unique identifiers for payment disputes can be retrieved with the &lt;strong&gt;getPaymentDisputeSummaries&lt;/strong&gt; method.&lt;br&gt;&lt;br&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; All evidence files should be uploaded using &lt;strong&gt;addEvidence&lt;/strong&gt; and &lt;strong&gt;updateEvidence&lt;/strong&gt;  before the seller decides to contest the payment dispute. Once the seller has officially contested the dispute (using &lt;strong&gt;contestPaymentDispute&lt;/strong&gt; or through My eBay), the &lt;strong&gt;addEvidence&lt;/strong&gt; and &lt;strong&gt;updateEvidence&lt;/strong&gt; methods can no longer be used. In the &lt;strong&gt;evidenceRequests&lt;/strong&gt; array of the &lt;strong&gt;getPaymentDispute&lt;/strong&gt; response, eBay prompts the seller with the type of evidence file(s) that will be needed to contest the payment dispute.&lt;/span&gt;&lt;br&gt;&lt;br&gt;The file(s) to add are identified through the &lt;strong&gt;files&lt;/strong&gt; array in the request payload.  Adding one or more new evidence files for a payment dispute triggers the creation of an evidence file, and the unique identifier for the new evidence file is automatically generated and returned in the &lt;strong&gt;evidenceId&lt;/strong&gt; field of the &lt;strong&gt;addEvidence&lt;/strong&gt; response payload upon a successful call.&lt;br&gt;&lt;br&gt;The type of evidence being added should be specified in the &lt;strong&gt;evidenceType&lt;/strong&gt; field. All files being added (if more than one) should correspond to this evidence type.&lt;br&gt;&lt;br&gt;Upon a successful call, an &lt;strong&gt;evidenceId&lt;/strong&gt; value is returned in the response. This indicates that a new evidence set has been created for the payment dispute, and this evidence set includes the evidence file(s) that were passed in to the &lt;strong&gt;fileId&lt;/strong&gt; array. The &lt;strong&gt;evidenceId&lt;/strong&gt; value will be needed if the seller wishes to add to the evidence set by using the &lt;strong&gt;updateEvidence&lt;/strong&gt; method, or if they want to retrieve a specific evidence file within the evidence set by using the &lt;strong&gt;fetchEvidenceContent&lt;/strong&gt; method.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AddEvidenceResponse addEvidence(org.openapis.openapi.models.operations.AddEvidenceRequest request, org.openapis.openapi.models.operations.AddEvidenceSecurity security, String serverURL) throws Exception {
         String baseUrl = ADD_EVIDENCE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddEvidencePathParams.class, baseUrl, "/payment_dispute/{payment_dispute_id}/add_evidence", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddEvidenceRequest.class, baseUrl, "/payment_dispute/{payment_dispute_id}/add_evidence", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addEvidencePaymentDisputeRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -213,25 +241,39 @@ public class PaymentDispute {
      * Contest Payment Dispute
      * This method is used if the seller wishes to contest a payment dispute initiated by the buyer. The unique identifier of the payment dispute is passed in as a path parameter, and unique identifiers for payment disputes can be retrieved with the &lt;strong&gt;getPaymentDisputeSummaries&lt;/strong&gt; method.&lt;br&gt;&lt;br&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; Before contesting a payment dispute, the seller must upload all supporting files using the &lt;strong&gt;addEvidence&lt;/strong&gt; and &lt;strong&gt;updateEvidence&lt;/strong&gt; methods. Once the seller has officially contested the dispute (using &lt;strong&gt;contestPaymentDispute&lt;/strong&gt;), the &lt;strong&gt;addEvidence&lt;/strong&gt; and &lt;strong&gt;updateEvidence&lt;/strong&gt; methods can no longer be used. In the &lt;strong&gt;evidenceRequests&lt;/strong&gt; array of the &lt;strong&gt;getPaymentDispute&lt;/strong&gt; response, eBay prompts the seller with the type of supporting file(s) that will be needed to contest the payment dispute.&lt;/span&gt;&lt;br&gt;&lt;br&gt;If a seller decides to contest a payment dispute, that seller should be prepared to provide supporting documents such as proof of delivery, proof of authentication, or other documents. The type of supporting documents that the seller will provide will depend on why the buyer filed the payment dispute.&lt;br&gt;&lt;br&gt;The &lt;strong&gt;revision&lt;/strong&gt; field in the request payload is required, and the &lt;strong&gt;returnAddress&lt;/strong&gt; field should be supplied if the seller is expecting the buyer to return the item. See the Request Payload section for more information on these fields.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContestPaymentDisputeResponse contestPaymentDispute(org.openapis.openapi.models.operations.ContestPaymentDisputeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContestPaymentDisputeResponse contestPaymentDispute(org.openapis.openapi.models.operations.ContestPaymentDisputeRequest request, org.openapis.openapi.models.operations.ContestPaymentDisputeSecurity security) throws Exception {
+        return this.contestPaymentDispute(request, security, null);
+    }
+
+    /**
+     * Contest Payment Dispute
+     * This method is used if the seller wishes to contest a payment dispute initiated by the buyer. The unique identifier of the payment dispute is passed in as a path parameter, and unique identifiers for payment disputes can be retrieved with the &lt;strong&gt;getPaymentDisputeSummaries&lt;/strong&gt; method.&lt;br&gt;&lt;br&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; Before contesting a payment dispute, the seller must upload all supporting files using the &lt;strong&gt;addEvidence&lt;/strong&gt; and &lt;strong&gt;updateEvidence&lt;/strong&gt; methods. Once the seller has officially contested the dispute (using &lt;strong&gt;contestPaymentDispute&lt;/strong&gt;), the &lt;strong&gt;addEvidence&lt;/strong&gt; and &lt;strong&gt;updateEvidence&lt;/strong&gt; methods can no longer be used. In the &lt;strong&gt;evidenceRequests&lt;/strong&gt; array of the &lt;strong&gt;getPaymentDispute&lt;/strong&gt; response, eBay prompts the seller with the type of supporting file(s) that will be needed to contest the payment dispute.&lt;/span&gt;&lt;br&gt;&lt;br&gt;If a seller decides to contest a payment dispute, that seller should be prepared to provide supporting documents such as proof of delivery, proof of authentication, or other documents. The type of supporting documents that the seller will provide will depend on why the buyer filed the payment dispute.&lt;br&gt;&lt;br&gt;The &lt;strong&gt;revision&lt;/strong&gt; field in the request payload is required, and the &lt;strong&gt;returnAddress&lt;/strong&gt; field should be supplied if the seller is expecting the buyer to return the item. See the Request Payload section for more information on these fields.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ContestPaymentDisputeResponse contestPaymentDispute(org.openapis.openapi.models.operations.ContestPaymentDisputeRequest request, org.openapis.openapi.models.operations.ContestPaymentDisputeSecurity security, String serverURL) throws Exception {
         String baseUrl = CONTEST_PAYMENT_DISPUTE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContestPaymentDisputePathParams.class, baseUrl, "/payment_dispute/{payment_dispute_id}/contest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContestPaymentDisputeRequest.class, baseUrl, "/payment_dispute/{payment_dispute_id}/contest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "contestPaymentDisputeRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -253,29 +295,43 @@ public class PaymentDispute {
      * Get Payment Dispute Evidence File
      * This call retrieves a specific evidence file for a payment dispute. The following three identifying parameters are needed in the call URI:&lt;ul&gt;&lt;li&gt;&lt;strong&gt;payment_dispute_id&lt;/strong&gt;: the identifier of the payment dispute. The identifier of each payment dispute is returned in the &lt;strong&gt;getPaymentDisputeSummaries&lt;/strong&gt; response.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;evidence_id&lt;/strong&gt;: the identifier of the evidential file set. The identifier of an evidential file set for a payment dispute is returned under the &lt;strong&gt;evidence&lt;/strong&gt; array in the &lt;strong&gt;getPaymentDispute&lt;/strong&gt; response.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;file_id&lt;/strong&gt;: the identifier of an evidential file. This file must belong to the evidential file set identified through the &lt;strong&gt;evidence_id&lt;/strong&gt; query parameter. The identifier of each evidential file is returned under the &lt;strong&gt;evidence.files&lt;/strong&gt; array in the &lt;strong&gt;getPaymentDispute&lt;/strong&gt; response.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;An actual binary file is returned if the call is successful. An error will occur if any of three identifiers are invalid.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchEvidenceContentResponse fetchEvidenceContent(org.openapis.openapi.models.operations.FetchEvidenceContentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchEvidenceContentResponse fetchEvidenceContent(org.openapis.openapi.models.operations.FetchEvidenceContentRequest request, org.openapis.openapi.models.operations.FetchEvidenceContentSecurity security) throws Exception {
+        return this.fetchEvidenceContent(request, security, null);
+    }
+
+    /**
+     * Get Payment Dispute Evidence File
+     * This call retrieves a specific evidence file for a payment dispute. The following three identifying parameters are needed in the call URI:&lt;ul&gt;&lt;li&gt;&lt;strong&gt;payment_dispute_id&lt;/strong&gt;: the identifier of the payment dispute. The identifier of each payment dispute is returned in the &lt;strong&gt;getPaymentDisputeSummaries&lt;/strong&gt; response.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;evidence_id&lt;/strong&gt;: the identifier of the evidential file set. The identifier of an evidential file set for a payment dispute is returned under the &lt;strong&gt;evidence&lt;/strong&gt; array in the &lt;strong&gt;getPaymentDispute&lt;/strong&gt; response.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;file_id&lt;/strong&gt;: the identifier of an evidential file. This file must belong to the evidential file set identified through the &lt;strong&gt;evidence_id&lt;/strong&gt; query parameter. The identifier of each evidential file is returned under the &lt;strong&gt;evidence.files&lt;/strong&gt; array in the &lt;strong&gt;getPaymentDispute&lt;/strong&gt; response.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;An actual binary file is returned if the call is successful. An error will occur if any of three identifiers are invalid.&lt;/p&gt;
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchEvidenceContentResponse fetchEvidenceContent(org.openapis.openapi.models.operations.FetchEvidenceContentRequest request, org.openapis.openapi.models.operations.FetchEvidenceContentSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_EVIDENCE_CONTENT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchEvidenceContentPathParams.class, baseUrl, "/payment_dispute/{payment_dispute_id}/fetch_evidence_content", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchEvidenceContentRequest.class, baseUrl, "/payment_dispute/{payment_dispute_id}/fetch_evidence_content", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchEvidenceContentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchEvidenceContentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -304,23 +360,37 @@ public class PaymentDispute {
      * Get Payment Dispute Activity
      * This method retrieve a log of activity for a payment dispute. The identifier of the payment dispute is passed in as a path parameter. The output includes a timestamp for each action of the payment dispute, from creation to resolution, and all steps in between.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetActivitiesResponse getActivities(org.openapis.openapi.models.operations.GetActivitiesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetActivitiesResponse getActivities(org.openapis.openapi.models.operations.GetActivitiesRequest request, org.openapis.openapi.models.operations.GetActivitiesSecurity security) throws Exception {
+        return this.getActivities(request, security, null);
+    }
+
+    /**
+     * Get Payment Dispute Activity
+     * This method retrieve a log of activity for a payment dispute. The identifier of the payment dispute is passed in as a path parameter. The output includes a timestamp for each action of the payment dispute, from creation to resolution, and all steps in between.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetActivitiesResponse getActivities(org.openapis.openapi.models.operations.GetActivitiesRequest request, org.openapis.openapi.models.operations.GetActivitiesSecurity security, String serverURL) throws Exception {
         String baseUrl = GET_ACTIVITIES_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetActivitiesPathParams.class, baseUrl, "/payment_dispute/{payment_dispute_id}/activity", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetActivitiesRequest.class, baseUrl, "/payment_dispute/{payment_dispute_id}/activity", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -350,23 +420,37 @@ public class PaymentDispute {
      * Get Payment Dispute Details
      * This method retrieves detailed information on a specific payment dispute. The payment dispute identifier is passed in as path parameter at the end of the call URI.&lt;br&gt;&lt;br&gt;Below is a summary of the information that is retrieved:&lt;ul&gt;&lt;li&gt;Current status of payment dispute&lt;/li&gt;&lt;li&gt;Amount of the payment dispute&lt;/li&gt;&lt;li&gt;Reason the payment dispute was opened&lt;/li&gt;&lt;li&gt;Order and line items associated with the payment dispute&lt;/li&gt;&lt;li&gt;Seller response options if an action is currently required on the payment dispute&lt;/li&gt;&lt;li&gt;Details on the results of the payment dispute if it has been closed&lt;/li&gt;&lt;li&gt;Details on any evidence that was provided by the seller to fight the payment dispute&lt;/li&gt;&lt;/ul&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPaymentDisputeResponse getPaymentDispute(org.openapis.openapi.models.operations.GetPaymentDisputeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPaymentDisputeResponse getPaymentDispute(org.openapis.openapi.models.operations.GetPaymentDisputeRequest request, org.openapis.openapi.models.operations.GetPaymentDisputeSecurity security) throws Exception {
+        return this.getPaymentDispute(request, security, null);
+    }
+
+    /**
+     * Get Payment Dispute Details
+     * This method retrieves detailed information on a specific payment dispute. The payment dispute identifier is passed in as path parameter at the end of the call URI.&lt;br&gt;&lt;br&gt;Below is a summary of the information that is retrieved:&lt;ul&gt;&lt;li&gt;Current status of payment dispute&lt;/li&gt;&lt;li&gt;Amount of the payment dispute&lt;/li&gt;&lt;li&gt;Reason the payment dispute was opened&lt;/li&gt;&lt;li&gt;Order and line items associated with the payment dispute&lt;/li&gt;&lt;li&gt;Seller response options if an action is currently required on the payment dispute&lt;/li&gt;&lt;li&gt;Details on the results of the payment dispute if it has been closed&lt;/li&gt;&lt;li&gt;Details on any evidence that was provided by the seller to fight the payment dispute&lt;/li&gt;&lt;/ul&gt;
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetPaymentDisputeResponse getPaymentDispute(org.openapis.openapi.models.operations.GetPaymentDisputeRequest request, org.openapis.openapi.models.operations.GetPaymentDisputeSecurity security, String serverURL) throws Exception {
         String baseUrl = GET_PAYMENT_DISPUTE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentDisputePathParams.class, baseUrl, "/payment_dispute/{payment_dispute_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentDisputeRequest.class, baseUrl, "/payment_dispute/{payment_dispute_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -396,13 +480,27 @@ public class PaymentDispute {
      * Search Payment Dispute by Filters
      * This method is used retrieve one or more payment disputes filed against the seller. These payment disputes can be open or recently closed. The following filter types are available in the request payload to control the payment disputes that are returned:&lt;ul&gt;&lt;li&gt;Dispute filed against a specific order (&lt;b&gt;order_id&lt;/b&gt; parameter is used)&lt;/li&gt;&lt;li&gt;Dispute(s) filed by a specific buyer (&lt;b&gt;buyer_username&lt;/b&gt; parameter is used)&lt;/li&gt;&lt;li&gt;Dispute(s) filed within a specific date range (&lt;b&gt;open_date_from&lt;/b&gt; and/or &lt;b&gt;open_date_to&lt;/b&gt; parameters are used)&lt;/li&gt;&lt;li&gt;Disputes in a specific state (&lt;b&gt;payment_dispute_status&lt;/b&gt; parameter is used)&lt;/li&gt;&lt;/ul&gt;More than one of these filter types can be used together. See the request payload request fields for more information about how each filter is used.&lt;br&gt;&lt;br&gt;If none of the filters are used, all open and recently closed payment disputes are returned.&lt;br&gt;&lt;br&gt;Pagination is also available. See the &lt;b&gt;limit&lt;/b&gt; and &lt;b&gt;offset&lt;/b&gt; fields for more information on how pagination is used for this method.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPaymentDisputeSummariesResponse getPaymentDisputeSummaries(org.openapis.openapi.models.operations.GetPaymentDisputeSummariesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPaymentDisputeSummariesResponse getPaymentDisputeSummaries(org.openapis.openapi.models.operations.GetPaymentDisputeSummariesRequest request, org.openapis.openapi.models.operations.GetPaymentDisputeSummariesSecurity security) throws Exception {
+        return this.getPaymentDisputeSummaries(request, security, null);
+    }
+
+    /**
+     * Search Payment Dispute by Filters
+     * This method is used retrieve one or more payment disputes filed against the seller. These payment disputes can be open or recently closed. The following filter types are available in the request payload to control the payment disputes that are returned:&lt;ul&gt;&lt;li&gt;Dispute filed against a specific order (&lt;b&gt;order_id&lt;/b&gt; parameter is used)&lt;/li&gt;&lt;li&gt;Dispute(s) filed by a specific buyer (&lt;b&gt;buyer_username&lt;/b&gt; parameter is used)&lt;/li&gt;&lt;li&gt;Dispute(s) filed within a specific date range (&lt;b&gt;open_date_from&lt;/b&gt; and/or &lt;b&gt;open_date_to&lt;/b&gt; parameters are used)&lt;/li&gt;&lt;li&gt;Disputes in a specific state (&lt;b&gt;payment_dispute_status&lt;/b&gt; parameter is used)&lt;/li&gt;&lt;/ul&gt;More than one of these filter types can be used together. See the request payload request fields for more information about how each filter is used.&lt;br&gt;&lt;br&gt;If none of the filters are used, all open and recently closed payment disputes are returned.&lt;br&gt;&lt;br&gt;Pagination is also available. See the &lt;b&gt;limit&lt;/b&gt; and &lt;b&gt;offset&lt;/b&gt; fields for more information on how pagination is used for this method.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetPaymentDisputeSummariesResponse getPaymentDisputeSummaries(org.openapis.openapi.models.operations.GetPaymentDisputeSummariesRequest request, org.openapis.openapi.models.operations.GetPaymentDisputeSummariesSecurity security, String serverURL) throws Exception {
         String baseUrl = GET_PAYMENT_DISPUTE_SUMMARIES_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payment_dispute_summary");
@@ -411,14 +509,14 @@ public class PaymentDispute {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPaymentDisputeSummariesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPaymentDisputeSummariesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -448,25 +546,39 @@ public class PaymentDispute {
      * Update evidence
      * This method is used by the seller to update an existing evidence set for a payment dispute with one or more evidence files. The unique identifier of the payment dispute is passed in as a path parameter, and unique identifiers for payment disputes can be retrieved with the &lt;strong&gt;getPaymentDisputeSummaries&lt;/strong&gt; method.&lt;br&gt;&lt;br&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; All evidence files should be uploaded using &lt;strong&gt;addEvidence&lt;/strong&gt; and &lt;strong&gt;updateEvidence&lt;/strong&gt;  before the seller decides to contest the payment dispute. Once the seller has officially contested the dispute (using &lt;strong&gt;contestPaymentDispute&lt;/strong&gt; or through My eBay), the &lt;strong&gt;addEvidence&lt;/strong&gt; and &lt;strong&gt;updateEvidence&lt;/strong&gt; methods can no longer be used. In the &lt;strong&gt;evidenceRequests&lt;/strong&gt; array of the &lt;strong&gt;getPaymentDispute&lt;/strong&gt; response, eBay prompts the seller with the type of evidence file(s) that will be needed to contest the payment dispute.&lt;/span&gt;&lt;br&gt;&lt;br&gt;The unique identifier of the evidence set to update is specified through the &lt;strong&gt;evidenceId&lt;/strong&gt; field, and the file(s) to add are identified through the &lt;strong&gt;files&lt;/strong&gt; array in the request payload. The unique identifier for an evidence file is automatically generated and returned in the &lt;strong&gt;fileId&lt;/strong&gt; field of the &lt;strong&gt;uploadEvidence&lt;/strong&gt; response payload upon a successful call. Sellers must make sure to capture the &lt;strong&gt;fileId&lt;/strong&gt; value for each evidence file that is uploaded with the &lt;strong&gt;uploadEvidence&lt;/strong&gt; method.&lt;br&gt;&lt;br&gt;The type of evidence being added should be specified in the &lt;strong&gt;evidenceType&lt;/strong&gt; field.  All files being added (if more than one) should correspond to this evidence type.&lt;br&gt;&lt;br&gt;Upon a successful call, an http status code of &lt;code&gt;204 Success&lt;/code&gt; is returned. There is no response payload unless an error occurs. To verify that a new file is a part of the evidence set, the seller can use the &lt;strong&gt;fetchEvidenceContent&lt;/strong&gt; method, passing in the proper &lt;strong&gt;evidenceId&lt;/strong&gt; and &lt;strong&gt;fileId&lt;/strong&gt; values.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateEvidenceResponse updateEvidence(org.openapis.openapi.models.operations.UpdateEvidenceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateEvidenceResponse updateEvidence(org.openapis.openapi.models.operations.UpdateEvidenceRequest request, org.openapis.openapi.models.operations.UpdateEvidenceSecurity security) throws Exception {
+        return this.updateEvidence(request, security, null);
+    }
+
+    /**
+     * Update evidence
+     * This method is used by the seller to update an existing evidence set for a payment dispute with one or more evidence files. The unique identifier of the payment dispute is passed in as a path parameter, and unique identifiers for payment disputes can be retrieved with the &lt;strong&gt;getPaymentDisputeSummaries&lt;/strong&gt; method.&lt;br&gt;&lt;br&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; All evidence files should be uploaded using &lt;strong&gt;addEvidence&lt;/strong&gt; and &lt;strong&gt;updateEvidence&lt;/strong&gt;  before the seller decides to contest the payment dispute. Once the seller has officially contested the dispute (using &lt;strong&gt;contestPaymentDispute&lt;/strong&gt; or through My eBay), the &lt;strong&gt;addEvidence&lt;/strong&gt; and &lt;strong&gt;updateEvidence&lt;/strong&gt; methods can no longer be used. In the &lt;strong&gt;evidenceRequests&lt;/strong&gt; array of the &lt;strong&gt;getPaymentDispute&lt;/strong&gt; response, eBay prompts the seller with the type of evidence file(s) that will be needed to contest the payment dispute.&lt;/span&gt;&lt;br&gt;&lt;br&gt;The unique identifier of the evidence set to update is specified through the &lt;strong&gt;evidenceId&lt;/strong&gt; field, and the file(s) to add are identified through the &lt;strong&gt;files&lt;/strong&gt; array in the request payload. The unique identifier for an evidence file is automatically generated and returned in the &lt;strong&gt;fileId&lt;/strong&gt; field of the &lt;strong&gt;uploadEvidence&lt;/strong&gt; response payload upon a successful call. Sellers must make sure to capture the &lt;strong&gt;fileId&lt;/strong&gt; value for each evidence file that is uploaded with the &lt;strong&gt;uploadEvidence&lt;/strong&gt; method.&lt;br&gt;&lt;br&gt;The type of evidence being added should be specified in the &lt;strong&gt;evidenceType&lt;/strong&gt; field.  All files being added (if more than one) should correspond to this evidence type.&lt;br&gt;&lt;br&gt;Upon a successful call, an http status code of &lt;code&gt;204 Success&lt;/code&gt; is returned. There is no response payload unless an error occurs. To verify that a new file is a part of the evidence set, the seller can use the &lt;strong&gt;fetchEvidenceContent&lt;/strong&gt; method, passing in the proper &lt;strong&gt;evidenceId&lt;/strong&gt; and &lt;strong&gt;fileId&lt;/strong&gt; values.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateEvidenceResponse updateEvidence(org.openapis.openapi.models.operations.UpdateEvidenceRequest request, org.openapis.openapi.models.operations.UpdateEvidenceSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_EVIDENCE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateEvidencePathParams.class, baseUrl, "/payment_dispute/{payment_dispute_id}/update_evidence", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateEvidenceRequest.class, baseUrl, "/payment_dispute/{payment_dispute_id}/update_evidence", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateEvidencePaymentDisputeRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -488,23 +600,37 @@ public class PaymentDispute {
      * Upload an Evidence File
      * This method is used to upload an evidence file for a contested payment dispute. The unique identifier of the payment dispute is passed in as a path parameter, and unique identifiers for payment disputes can be retrieved with the &lt;strong&gt;getPaymentDisputeSummaries&lt;/strong&gt; method.&lt;br&gt;&lt;br&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; The &lt;strong&gt;uploadEvidenceFile&lt;/strong&gt; only uploads an encrypted, binary image file (using &lt;strong&gt;multipart/form-data&lt;/strong&gt; HTTP request header), and does not have a JSON-based request payload.&lt;br&gt;&lt;br&gt;Use 'file' as the name of the key that you use to upload the image file. The upload will not be successful if a different key name is used.&lt;br&gt;&lt;br&gt;The three image formats supported at this time are &lt;strong&gt;.JPEG&lt;/strong&gt;, &lt;strong&gt;.JPG&lt;/strong&gt;, and &lt;strong&gt;.PNG&lt;/strong&gt;.&lt;/span&gt;&lt;br&gt;&lt;br&gt;After the file is successfully uploaded, the seller will need to grab the &lt;strong&gt;fileId&lt;/strong&gt; value in the response payload to add this file to a new evidence set using the &lt;strong&gt;addEvidence&lt;/strong&gt; method, or to add this file to an existing evidence set using the &lt;strong&gt;updateEvidence&lt;/strong&gt; method.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UploadEvidenceFileResponse uploadEvidenceFile(org.openapis.openapi.models.operations.UploadEvidenceFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UploadEvidenceFileResponse uploadEvidenceFile(org.openapis.openapi.models.operations.UploadEvidenceFileRequest request, org.openapis.openapi.models.operations.UploadEvidenceFileSecurity security) throws Exception {
+        return this.uploadEvidenceFile(request, security, null);
+    }
+
+    /**
+     * Upload an Evidence File
+     * This method is used to upload an evidence file for a contested payment dispute. The unique identifier of the payment dispute is passed in as a path parameter, and unique identifiers for payment disputes can be retrieved with the &lt;strong&gt;getPaymentDisputeSummaries&lt;/strong&gt; method.&lt;br&gt;&lt;br&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; The &lt;strong&gt;uploadEvidenceFile&lt;/strong&gt; only uploads an encrypted, binary image file (using &lt;strong&gt;multipart/form-data&lt;/strong&gt; HTTP request header), and does not have a JSON-based request payload.&lt;br&gt;&lt;br&gt;Use 'file' as the name of the key that you use to upload the image file. The upload will not be successful if a different key name is used.&lt;br&gt;&lt;br&gt;The three image formats supported at this time are &lt;strong&gt;.JPEG&lt;/strong&gt;, &lt;strong&gt;.JPG&lt;/strong&gt;, and &lt;strong&gt;.PNG&lt;/strong&gt;.&lt;/span&gt;&lt;br&gt;&lt;br&gt;After the file is successfully uploaded, the seller will need to grab the &lt;strong&gt;fileId&lt;/strong&gt; value in the response payload to add this file to a new evidence set using the &lt;strong&gt;addEvidence&lt;/strong&gt; method, or to add this file to an existing evidence set using the &lt;strong&gt;updateEvidence&lt;/strong&gt; method.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UploadEvidenceFileResponse uploadEvidenceFile(org.openapis.openapi.models.operations.UploadEvidenceFileRequest request, org.openapis.openapi.models.operations.UploadEvidenceFileSecurity security, String serverURL) throws Exception {
         String baseUrl = UPLOAD_EVIDENCE_FILE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadEvidenceFilePathParams.class, baseUrl, "/payment_dispute/{payment_dispute_id}/upload_evidence_file", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadEvidenceFileRequest.class, baseUrl, "/payment_dispute/{payment_dispute_id}/upload_evidence_file", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

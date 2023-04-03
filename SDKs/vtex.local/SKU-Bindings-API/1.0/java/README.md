@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.ActivateSKUBindingPathParams;
-import org.openapis.openapi.models.operations.ActivateSKUBindingHeaders;
 import org.openapis.openapi.models.operations.ActivateSKUBindingRequest;
 import org.openapis.openapi.models.operations.ActivateSKUBindingResponse;
 
@@ -27,25 +25,17 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    appKey = new SchemeAppKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                    appToken = new SchemeAppToken() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    appKey = "YOUR_API_KEY_HERE";
+                    appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             ActivateSKUBindingRequest req = new ActivateSKUBindingRequest() {{
-                pathParams = new ActivateSKUBindingPathParams() {{
-                    sellerId = "vtxkfj7352";
-                    skuSellerId = "71";
-                }};
-                headers = new ActivateSKUBindingHeaders() {{
-                    accept = "corrupti";
-                    contentType = "provident";
-                }};
-            }};            
+                accept = "corrupti";
+                contentType = "provident";
+                sellerId = "vtxkfj7352";
+                skuSellerId = "71";
+            }}            
 
             ActivateSKUBindingResponse res = sdk.skuBindings.activateSKUBinding(req);
 
@@ -59,7 +49,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### skuBindings

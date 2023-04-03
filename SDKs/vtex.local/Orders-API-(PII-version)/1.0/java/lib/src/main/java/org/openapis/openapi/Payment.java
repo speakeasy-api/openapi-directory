@@ -47,13 +47,13 @@ public class Payment {
      */
     public org.openapis.openapi.models.operations.SendPaymentNotification2Response sendPaymentNotification2(org.openapis.openapi.models.operations.SendPaymentNotification2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendPaymentNotification2PathParams.class, baseUrl, "/api/orders/pvt/document/{orderId}/payment/{paymentId}/notify-payment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendPaymentNotification2Request.class, baseUrl, "/api/orders/pvt/document/{orderId}/payment/{paymentId}/notify-payment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

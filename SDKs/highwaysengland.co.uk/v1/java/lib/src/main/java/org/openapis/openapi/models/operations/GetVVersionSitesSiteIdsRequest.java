@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVVersionSitesSiteIdsRequest {
+    /**
+     * site id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=site_Ids")
+    public String siteIds;
+    public GetVVersionSitesSiteIdsRequest withSiteIds(String siteIds) {
+        this.siteIds = siteIds;
+        return this;
+    }
     
-    public GetVVersionSitesSiteIdsPathParams pathParams;
-    public GetVVersionSitesSiteIdsRequest withPathParams(GetVVersionSitesSiteIdsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public GetVVersionSitesSiteIdsRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

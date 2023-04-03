@@ -34,7 +34,7 @@ public class APIV2 {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreatePodcastResponse createPodcast(org.openapis.openapi.models.operations.CreatePodcastRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreatePodcastResponse createPodcast(org.openapis.openapi.models.operations.CreatePodcastRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/podcasts/create");
         
@@ -76,12 +76,12 @@ public class APIV2 {
      */
     public org.openapis.openapi.models.operations.CreatePodcastEpisodeResponse createPodcastEpisode(org.openapis.openapi.models.operations.CreatePodcastEpisodeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePodcastEpisodePathParams.class, baseUrl, "/api/v2/podcasts/{podcastKey}/episodes/create", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePodcastEpisodeRequest.class, baseUrl, "/api/v2/podcasts/{podcastKey}/episodes/create", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
@@ -116,7 +116,7 @@ public class APIV2 {
      */
     public org.openapis.openapi.models.operations.DeletePodcastResponse deletePodcast(org.openapis.openapi.models.operations.DeletePodcastRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePodcastPathParams.class, baseUrl, "/api/v2/podcasts/{podcastKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePodcastRequest.class, baseUrl, "/api/v2/podcasts/{podcastKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -149,7 +149,7 @@ public class APIV2 {
      */
     public org.openapis.openapi.models.operations.DeletePodcast1Response deletePodcast1(org.openapis.openapi.models.operations.DeletePodcast1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePodcast1PathParams.class, baseUrl, "/api/v2/podcasts/{podcastKey}/episodes/{episodeKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePodcast1Request.class, baseUrl, "/api/v2/podcasts/{podcastKey}/episodes/{episodeKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -188,7 +188,7 @@ public class APIV2 {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPartnerAggregatorStationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPartnerAggregatorStationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -226,7 +226,7 @@ public class APIV2 {
      */
     public org.openapis.openapi.models.operations.GetPodcastResponse getPodcast(org.openapis.openapi.models.operations.GetPodcastRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPodcastPathParams.class, baseUrl, "/api/v2/podcasts/{podcastKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPodcastRequest.class, baseUrl, "/api/v2/podcasts/{podcastKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -338,7 +338,7 @@ public class APIV2 {
      */
     public org.openapis.openapi.models.operations.GetPodcastEpisodeResponse getPodcastEpisode(org.openapis.openapi.models.operations.GetPodcastEpisodeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPodcastEpisodePathParams.class, baseUrl, "/api/v2/podcasts/{podcastKey}/episodes/{episodeKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPodcastEpisodeRequest.class, baseUrl, "/api/v2/podcasts/{podcastKey}/episodes/{episodeKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -376,13 +376,13 @@ public class APIV2 {
      */
     public org.openapis.openapi.models.operations.GetPodcastEpisodesResponse getPodcastEpisodes(org.openapis.openapi.models.operations.GetPodcastEpisodesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPodcastEpisodesPathParams.class, baseUrl, "/api/v2/podcasts/{podcastKey}/episodes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPodcastEpisodesRequest.class, baseUrl, "/api/v2/podcasts/{podcastKey}/episodes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPodcastEpisodesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPodcastEpisodesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -566,7 +566,7 @@ public class APIV2 {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchPodcastsResponse searchPodcasts(org.openapis.openapi.models.operations.SearchPodcastsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchPodcastsResponse searchPodcasts(org.openapis.openapi.models.shared.PodcastSearchParams request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/podcasts/search");
         
@@ -609,7 +609,7 @@ public class APIV2 {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchStationsResponse searchStations(org.openapis.openapi.models.operations.SearchStationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchStationsResponse searchStations(org.openapis.openapi.models.shared.StationSearchParams request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/stations/search");
         
@@ -654,12 +654,12 @@ public class APIV2 {
      */
     public org.openapis.openapi.models.operations.UpdatePodcastResponse updatePodcast(org.openapis.openapi.models.operations.UpdatePodcastRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePodcastPathParams.class, baseUrl, "/api/v2/podcasts/{podcastKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePodcastRequest.class, baseUrl, "/api/v2/podcasts/{podcastKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
@@ -694,12 +694,12 @@ public class APIV2 {
      */
     public org.openapis.openapi.models.operations.UpdatePodcastEpisodeResponse updatePodcastEpisode(org.openapis.openapi.models.operations.UpdatePodcastEpisodeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePodcastEpisodePathParams.class, baseUrl, "/api/v2/podcasts/{podcastKey}/episodes/{episodeKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePodcastEpisodeRequest.class, baseUrl, "/api/v2/podcasts/{podcastKey}/episodes/{episodeKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         

@@ -37,15 +37,15 @@ public class LifecycleOperations {
      */
     public org.openapis.openapi.models.operations.ActivateUserResponse activateUser(org.openapis.openapi.models.operations.ActivateUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivateUserPathParams.class, baseUrl, "/api/v1/users/{userId}/lifecycle/activate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivateUserRequest.class, baseUrl, "/api/v1/users/{userId}/lifecycle/activate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivateUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActivateUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -78,12 +78,12 @@ public class LifecycleOperations {
      */
     public org.openapis.openapi.models.operations.DeactivateUserResponse deactivateUser(org.openapis.openapi.models.operations.DeactivateUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeactivateUserPathParams.class, baseUrl, "/api/v1/users/{userId}/lifecycle/deactivate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeactivateUserRequest.class, baseUrl, "/api/v1/users/{userId}/lifecycle/deactivate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         
@@ -113,15 +113,15 @@ public class LifecycleOperations {
      */
     public org.openapis.openapi.models.operations.ResetPasswordResponse resetPassword(org.openapis.openapi.models.operations.ResetPasswordRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResetPasswordPathParams.class, baseUrl, "/api/v1/users/{userId}/lifecycle/reset_password", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResetPasswordRequest.class, baseUrl, "/api/v1/users/{userId}/lifecycle/reset_password", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ResetPasswordQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ResetPasswordRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -154,15 +154,15 @@ public class LifecycleOperations {
      */
     public org.openapis.openapi.models.operations.SetTempPasswordResponse setTempPassword(org.openapis.openapi.models.operations.SetTempPasswordRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetTempPasswordPathParams.class, baseUrl, "/api/v1/users/{userId}/lifecycle/expire_password", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetTempPasswordRequest.class, baseUrl, "/api/v1/users/{userId}/lifecycle/expire_password", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SetTempPasswordQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SetTempPasswordRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -195,12 +195,12 @@ public class LifecycleOperations {
      */
     public org.openapis.openapi.models.operations.SuspendUserResponse suspendUser(org.openapis.openapi.models.operations.SuspendUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SuspendUserPathParams.class, baseUrl, "/api/v1/users/{userId}/lifecycle/suspend", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SuspendUserRequest.class, baseUrl, "/api/v1/users/{userId}/lifecycle/suspend", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         
@@ -230,12 +230,12 @@ public class LifecycleOperations {
      */
     public org.openapis.openapi.models.operations.UnlockUserResponse unlockUser(org.openapis.openapi.models.operations.UnlockUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnlockUserPathParams.class, baseUrl, "/api/v1/users/{userId}/lifecycle/unlock", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnlockUserRequest.class, baseUrl, "/api/v1/users/{userId}/lifecycle/unlock", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         
@@ -265,12 +265,12 @@ public class LifecycleOperations {
      */
     public org.openapis.openapi.models.operations.UnsuspendUserResponse unsuspendUser(org.openapis.openapi.models.operations.UnsuspendUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnsuspendUserPathParams.class, baseUrl, "/api/v1/users/{userId}/lifecycle/unsuspend", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnsuspendUserRequest.class, baseUrl, "/api/v1/users/{userId}/lifecycle/unsuspend", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         

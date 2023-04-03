@@ -4,13 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETAttributesRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccessKeyId")
+    public String awsAccessKeyId;
+    public GETGETAttributesRequest withAWSAccessKeyId(String awsAccessKeyId) {
+        this.awsAccessKeyId = awsAccessKeyId;
+        return this;
+    }
     
-    public GETGETAttributesQueryParams queryParams;
-    public GETGETAttributesRequest withQueryParams(GETGETAttributesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETAttributesActionEnum action;
+    public GETGETAttributesRequest withAction(GETGETAttributesActionEnum action) {
+        this.action = action;
+        return this;
+    }
+    
+    /**
+     * The names of the attributes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AttributeNames")
+    public String[] attributeNames;
+    public GETGETAttributesRequest withAttributeNames(String[] attributeNames) {
+        this.attributeNames = attributeNames;
+        return this;
+    }
+    
+    /**
+     * Determines whether or not strong consistency should be enforced when data is read from SimpleDB. If &lt;code&gt;true&lt;/code&gt;, any data previously written to SimpleDB will be returned. Otherwise, results will be consistent eventually, and the client may not see data that was written immediately before your read.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConsistentRead")
+    public Boolean consistentRead;
+    public GETGETAttributesRequest withConsistentRead(Boolean consistentRead) {
+        this.consistentRead = consistentRead;
+        return this;
+    }
+    
+    /**
+     * The name of the domain in which to perform the operation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
+    public String domainName;
+    public GETGETAttributesRequest withDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    
+    /**
+     * The name of the item.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ItemName")
+    public String itemName;
+    public GETGETAttributesRequest withItemName(String itemName) {
+        this.itemName = itemName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Signature")
+    public String signature;
+    public GETGETAttributesRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureMethod")
+    public String signatureMethod;
+    public GETGETAttributesRequest withSignatureMethod(String signatureMethod) {
+        this.signatureMethod = signatureMethod;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureVersion")
+    public String signatureVersion;
+    public GETGETAttributesRequest withSignatureVersion(String signatureVersion) {
+        this.signatureVersion = signatureVersion;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timestamp")
+    public String timestamp;
+    public GETGETAttributesRequest withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETAttributesVersionEnum version;
+    public GETGETAttributesRequest withVersion(GETGETAttributesVersionEnum version) {
+        this.version = version;
         return this;
     }
     

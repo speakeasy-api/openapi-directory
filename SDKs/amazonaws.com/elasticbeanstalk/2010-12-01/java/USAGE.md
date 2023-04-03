@@ -6,8 +6,6 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GETAbortEnvironmentUpdateActionEnum;
 import org.openapis.openapi.models.operations.GETAbortEnvironmentUpdateVersionEnum;
-import org.openapis.openapi.models.operations.GETAbortEnvironmentUpdateQueryParams;
-import org.openapis.openapi.models.operations.GETAbortEnvironmentUpdateHeaders;
 import org.openapis.openapi.models.operations.GETAbortEnvironmentUpdateRequest;
 import org.openapis.openapi.models.operations.GETAbortEnvironmentUpdateResponse;
 
@@ -16,29 +14,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GETAbortEnvironmentUpdateRequest req = new GETAbortEnvironmentUpdateRequest() {{
-                queryParams = new GETAbortEnvironmentUpdateQueryParams() {{
-                    action = "AbortEnvironmentUpdate";
-                    environmentId = "corrupti";
-                    environmentName = "provident";
-                    version = "2010-12-01";
-                }};
-                headers = new GETAbortEnvironmentUpdateHeaders() {{
-                    xAmzAlgorithm = "distinctio";
-                    xAmzContentSha256 = "quibusdam";
-                    xAmzCredential = "unde";
-                    xAmzDate = "nulla";
-                    xAmzSecurityToken = "corrupti";
-                    xAmzSignature = "illum";
-                    xAmzSignedHeaders = "vel";
-                }};
-            }};            
+                action = "AbortEnvironmentUpdate";
+                environmentId = "corrupti";
+                environmentName = "provident";
+                version = "2010-12-01";
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+            }}            
 
             GETAbortEnvironmentUpdateResponse res = sdk.getAbortEnvironmentUpdate(req);
 

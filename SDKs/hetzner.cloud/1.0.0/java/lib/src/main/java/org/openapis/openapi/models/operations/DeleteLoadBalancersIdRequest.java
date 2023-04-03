@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteLoadBalancersIdRequest {
-    
-    public DeleteLoadBalancersIdPathParams pathParams;
-    public DeleteLoadBalancersIdRequest withPathParams(DeleteLoadBalancersIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Load Balancer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DeleteLoadBalancersIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupsRequest {
+    /**
+     * Can only be used by admins or managers to fetch all entities
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
+    public Boolean all;
+    public GetGroupsRequest withAll(Boolean all) {
+        this.all = all;
+        return this;
+    }
     
-    public GetGroupsQueryParams queryParams;
-    public GetGroupsRequest withQueryParams(GetGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Standard users can use this only with their own _userId_
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
+    public Long userId;
+    public GetGroupsRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RenewOrganizationLicensesSeatsRequest {
-    
-    public RenewOrganizationLicensesSeatsPathParams pathParams;
-    public RenewOrganizationLicensesSeatsRequest withPathParams(RenewOrganizationLicensesSeatsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public RenewOrganizationLicensesSeatsRequestBody requestBody;
+    public RenewOrganizationLicensesSeatsRequest withRequestBody(RenewOrganizationLicensesSeatsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public RenewOrganizationLicensesSeatsRequestBody request;
-    public RenewOrganizationLicensesSeatsRequest withRequest(RenewOrganizationLicensesSeatsRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public RenewOrganizationLicensesSeatsRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

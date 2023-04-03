@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReadAccountDetailsSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer")
-    public org.openapis.openapi.models.shared.SchemeBearerAuthOAuth bearerAuthOAuth;
-    public ReadAccountDetailsSecurity withBearerAuthOAuth(org.openapis.openapi.models.shared.SchemeBearerAuthOAuth bearerAuthOAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
+    public String bearerAuthOAuth;
+    public ReadAccountDetailsSecurity withBearerAuthOAuth(String bearerAuthOAuth) {
         this.bearerAuthOAuth = bearerAuthOAuth;
         return this;
     }

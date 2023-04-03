@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VatLevelTwoSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeUserKey userKey;
-    public VatLevelTwoSecurity withUserKey(org.openapis.openapi.models.shared.SchemeUserKey userKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=user_key")
+    public String userKey;
+    public VatLevelTwoSecurity withUserKey(String userKey) {
         this.userKey = userKey;
         return this;
     }

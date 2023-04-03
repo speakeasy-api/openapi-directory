@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConnectRequest {
-    
-    public ConnectQueryParams queryParams;
-    public ConnectRequest withQueryParams(ConnectQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:serialization=json,name=json")
+    public org.openapis.openapi.models.shared.ConnectRequest json;
+    public ConnectRequest withJson(org.openapis.openapi.models.shared.ConnectRequest json) {
+        this.json = json;
         return this;
     }
     

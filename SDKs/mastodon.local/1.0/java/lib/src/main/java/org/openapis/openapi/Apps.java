@@ -32,11 +32,10 @@ public class Apps {
 
     /**
      * Confirm that the app's OAuth2 credentials work.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1AppsVerifyCredentialsResponse getApiV1AppsVerifyCredentials(org.openapis.openapi.models.operations.GetApiV1AppsVerifyCredentialsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1AppsVerifyCredentialsResponse getApiV1AppsVerifyCredentials() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/apps/verify_credentials");
         
@@ -45,8 +44,7 @@ public class Apps {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -83,7 +81,7 @@ public class Apps {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV1AppsResponse postApiV1Apps(org.openapis.openapi.models.operations.PostApiV1AppsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiV1AppsResponse postApiV1Apps(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/apps");
         

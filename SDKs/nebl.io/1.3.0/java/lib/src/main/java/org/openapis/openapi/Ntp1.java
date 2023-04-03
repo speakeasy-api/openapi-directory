@@ -39,7 +39,7 @@ public class Ntp1 {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BroadcastTxResponse broadcastTx(org.openapis.openapi.models.operations.BroadcastTxRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BroadcastTxResponse broadcastTx(org.openapis.openapi.models.shared.BroadcastTxRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ntp1/broadcast");
         
@@ -92,7 +92,7 @@ public class Ntp1 {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BurnTokenResponse burnToken(org.openapis.openapi.models.operations.BurnTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BurnTokenResponse burnToken(org.openapis.openapi.models.shared.BurnTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ntp1/burntoken");
         
@@ -147,7 +147,7 @@ public class Ntp1 {
      */
     public org.openapis.openapi.models.operations.GetAddressInfoResponse getAddressInfo(org.openapis.openapi.models.operations.GetAddressInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddressInfoPathParams.class, baseUrl, "/ntp1/addressinfo/{address}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddressInfoRequest.class, baseUrl, "/ntp1/addressinfo/{address}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -195,7 +195,7 @@ public class Ntp1 {
      */
     public org.openapis.openapi.models.operations.GetTokenHoldersResponse getTokenHolders(org.openapis.openapi.models.operations.GetTokenHoldersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTokenHoldersPathParams.class, baseUrl, "/ntp1/stakeholders/{tokenid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTokenHoldersRequest.class, baseUrl, "/ntp1/stakeholders/{tokenid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -243,7 +243,7 @@ public class Ntp1 {
      */
     public org.openapis.openapi.models.operations.GetTokenIdResponse getTokenId(org.openapis.openapi.models.operations.GetTokenIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTokenIdPathParams.class, baseUrl, "/ntp1/tokenid/{tokensymbol}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTokenIdRequest.class, baseUrl, "/ntp1/tokenid/{tokensymbol}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -283,13 +283,13 @@ public class Ntp1 {
      */
     public org.openapis.openapi.models.operations.GetTokenMetadataResponse getTokenMetadata(org.openapis.openapi.models.operations.GetTokenMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTokenMetadataPathParams.class, baseUrl, "/ntp1/tokenmetadata/{tokenid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTokenMetadataRequest.class, baseUrl, "/ntp1/tokenmetadata/{tokenid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTokenMetadataQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTokenMetadataRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -337,13 +337,13 @@ public class Ntp1 {
      */
     public org.openapis.openapi.models.operations.GetTokenMetadataOfUtxoResponse getTokenMetadataOfUtxo(org.openapis.openapi.models.operations.GetTokenMetadataOfUtxoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTokenMetadataOfUtxoPathParams.class, baseUrl, "/ntp1/tokenmetadata/{tokenid}/{utxo}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTokenMetadataOfUtxoRequest.class, baseUrl, "/ntp1/tokenmetadata/{tokenid}/{utxo}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTokenMetadataOfUtxoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTokenMetadataOfUtxoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -391,7 +391,7 @@ public class Ntp1 {
      */
     public org.openapis.openapi.models.operations.GetTransactionInfoResponse getTransactionInfo(org.openapis.openapi.models.operations.GetTransactionInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionInfoPathParams.class, baseUrl, "/ntp1/transactioninfo/{txid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionInfoRequest.class, baseUrl, "/ntp1/transactioninfo/{txid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -437,7 +437,7 @@ public class Ntp1 {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IssueTokenResponse issueToken(org.openapis.openapi.models.operations.IssueTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IssueTokenResponse issueToken(org.openapis.openapi.models.shared.IssueTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ntp1/issue");
         
@@ -490,7 +490,7 @@ public class Ntp1 {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SendTokenResponse sendToken(org.openapis.openapi.models.operations.SendTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SendTokenResponse sendToken(org.openapis.openapi.models.shared.SendTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ntp1/sendtoken");
         

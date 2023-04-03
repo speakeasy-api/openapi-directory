@@ -43,13 +43,13 @@ public class Downloads {
      */
     public org.openapis.openapi.models.operations.DownloadFileResponse downloadFile(org.openapis.openapi.models.operations.DownloadFileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadFilePathParams.class, baseUrl, "/v1/downloads/{dir}/{subdir}/{filename}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadFileRequest.class, baseUrl, "/v1/downloads/{dir}/{subdir}/{filename}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DownloadFileQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DownloadFileRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchDomainConfigMessagingServiceRequest {
-    
-    public FetchDomainConfigMessagingServicePathParams pathParams;
-    public FetchDomainConfigMessagingServiceRequest withPathParams(FetchDomainConfigMessagingServicePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchDomainConfigMessagingServiceSecurity security;
-    public FetchDomainConfigMessagingServiceRequest withSecurity(FetchDomainConfigMessagingServiceSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchDomainConfigMessagingServiceRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Unique string used to identify the Messaging service that this domain should be associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MessagingServiceSid")
+    public String messagingServiceSid;
+    public FetchDomainConfigMessagingServiceRequest withMessagingServiceSid(String messagingServiceSid) {
+        this.messagingServiceSid = messagingServiceSid;
         return this;
     }
     

@@ -4,27 +4,136 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest {
-    
-    public WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetPathParams pathParams;
-    public WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest withPathParams(WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetQueryParams queryParams;
-    public WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest withQueryParams(WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetSecurity security;
-    public WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest withSecurity(WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Required. Name of the execution to be retrieved. Format: projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Optional. A view defining which fields should be filled in the returned execution. The API will default to the FULL view.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
+    public WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetViewEnum view;
+    public WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetRequest withView(WorkflowexecutionsProjectsLocationsWorkflowsExecutionsGetViewEnum view) {
+        this.view = view;
         return this;
     }
     

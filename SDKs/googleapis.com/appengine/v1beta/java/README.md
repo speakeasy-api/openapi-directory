@@ -18,18 +18,14 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateSecurity;
-import org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreatePathParams;
-import org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateQueryParams;
 import org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateRequest;
 import org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.AuthorizedCertificate;
 import org.openapis.openapi.models.shared.ManagedCertificateStatusEnum;
 import org.openapis.openapi.models.shared.ManagedCertificate;
 import org.openapis.openapi.models.shared.CertificateRawData;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -38,56 +34,48 @@ public class Application {
                 .build();
 
             AppengineAppsAuthorizedCertificatesCreateRequest req = new AppengineAppsAuthorizedCertificatesCreateRequest() {{
-                security = new AppengineAppsAuthorizedCertificatesCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new AppengineAppsAuthorizedCertificatesCreatePathParams() {{
-                    appsId = "corrupti";
-                }};
-                queryParams = new AppengineAppsAuthorizedCertificatesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new AuthorizedCertificate() {{
+                dollarXgafv = "2";
+                authorizedCertificate = new AuthorizedCertificate() {{
                     certificateRawData = new CertificateRawData() {{
-                        privateKey = "suscipit";
-                        publicCertificate = "iure";
+                        privateKey = "provident";
+                        publicCertificate = "distinctio";
                     }};
-                    displayName = "magnam";
-                    domainMappingsCount = 891773;
+                    displayName = "quibusdam";
+                    domainMappingsCount = 602763;
                     domainNames = new String[]{{
-                        add("delectus"),
+                        add("corrupti"),
+                        add("illum"),
+                        add("vel"),
+                        add("error"),
                     }};
-                    expireTime = "tempora";
+                    expireTime = "deserunt";
                     id = "suscipit";
                     managedCertificate = new ManagedCertificate() {{
-                        lastRenewalTime = "molestiae";
-                        status = "FAILED_RETRYING_CAA_FORBIDDEN";
+                        lastRenewalTime = "iure";
+                        status = "PENDING";
                     }};
-                    name = "placeat";
+                    name = "debitis";
                     visibleDomainMappings = new String[]{{
-                        add("iusto"),
-                        add("excepturi"),
-                        add("nisi"),
+                        add("delectus"),
                     }};
                 }};
-            }};            
+                accessToken = "tempora";
+                alt = "media";
+                appsId = "molestiae";
+                callback = "minus";
+                fields = "placeat";
+                key = "voluptatum";
+                oauthToken = "iusto";
+                prettyPrint = false;
+                quotaUser = "excepturi";
+                uploadType = "nisi";
+                uploadProtocol = "recusandae";
+            }}            
 
-            AppengineAppsAuthorizedCertificatesCreateResponse res = sdk.apps.appengineAppsAuthorizedCertificatesCreate(req);
+            AppengineAppsAuthorizedCertificatesCreateResponse res = sdk.apps.appengineAppsAuthorizedCertificatesCreate(req, new AppengineAppsAuthorizedCertificatesCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.authorizedCertificate.isPresent()) {
                 // handle response
@@ -99,7 +87,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### apps

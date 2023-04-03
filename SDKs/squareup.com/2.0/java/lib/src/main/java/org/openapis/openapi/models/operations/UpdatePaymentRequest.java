@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePaymentRequest {
-    
-    public UpdatePaymentPathParams pathParams;
-    public UpdatePaymentRequest withPathParams(UpdatePaymentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdatePaymentRequest request;
-    public UpdatePaymentRequest withRequest(org.openapis.openapi.models.shared.UpdatePaymentRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdatePaymentRequest updatePaymentRequest;
+    public UpdatePaymentRequest withUpdatePaymentRequest(org.openapis.openapi.models.shared.UpdatePaymentRequest updatePaymentRequest) {
+        this.updatePaymentRequest = updatePaymentRequest;
         return this;
     }
     
-    
-    public UpdatePaymentSecurity security;
-    public UpdatePaymentRequest withSecurity(UpdatePaymentSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the payment to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment_id")
+    public String paymentId;
+    public UpdatePaymentRequest withPaymentId(String paymentId) {
+        this.paymentId = paymentId;
         return this;
     }
     

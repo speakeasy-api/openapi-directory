@@ -4,34 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSigningKeyRequest {
-    
-    public ListSigningKeyPathParams pathParams;
-    public ListSigningKeyRequest withPathParams(ListSigningKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListSigningKeyRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListSigningKeyQueryParams queryParams;
-    public ListSigningKeyRequest withQueryParams(ListSigningKeyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListSigningKeyRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListSigningKeySecurity security;
-    public ListSigningKeyRequest withSecurity(ListSigningKeySecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListSigningKeyRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public String serverURL;
-    public ListSigningKeyRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListSigningKeyRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

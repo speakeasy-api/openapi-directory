@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodespacesGetOrgSecretRequest {
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public CodespacesGetOrgSecretRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public CodespacesGetOrgSecretPathParams pathParams;
-    public CodespacesGetOrgSecretRequest withPathParams(CodespacesGetOrgSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the secret.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
+    public String secretName;
+    public CodespacesGetOrgSecretRequest withSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
     

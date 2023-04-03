@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MigrationsGetArchiveForAuthenticatedUserRequest {
-    
-    public MigrationsGetArchiveForAuthenticatedUserPathParams pathParams;
-    public MigrationsGetArchiveForAuthenticatedUserRequest withPathParams(MigrationsGetArchiveForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the migration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=migration_id")
+    public Long migrationId;
+    public MigrationsGetArchiveForAuthenticatedUserRequest withMigrationId(Long migrationId) {
+        this.migrationId = migrationId;
         return this;
     }
     

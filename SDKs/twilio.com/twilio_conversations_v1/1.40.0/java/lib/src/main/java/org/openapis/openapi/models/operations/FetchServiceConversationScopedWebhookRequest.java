@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchServiceConversationScopedWebhookRequest {
-    
-    public FetchServiceConversationScopedWebhookPathParams pathParams;
-    public FetchServiceConversationScopedWebhookRequest withPathParams(FetchServiceConversationScopedWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public FetchServiceConversationScopedWebhookRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     
-    
-    public FetchServiceConversationScopedWebhookSecurity security;
-    public FetchServiceConversationScopedWebhookRequest withSecurity(FetchServiceConversationScopedWebhookSecurity security) {
-        this.security = security;
+    /**
+     * The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConversationSid")
+    public String conversationSid;
+    public FetchServiceConversationScopedWebhookRequest withConversationSid(String conversationSid) {
+        this.conversationSid = conversationSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchServiceConversationScopedWebhookRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchServiceConversationScopedWebhookRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

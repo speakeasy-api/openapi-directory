@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAnExternalAccountRequest {
-    
-    public UpdateAnExternalAccountPathParams pathParams;
-    public UpdateAnExternalAccountRequest withPathParams(UpdateAnExternalAccountPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=external_account_id")
+    public String externalAccountId;
+    public UpdateAnExternalAccountRequest withExternalAccountId(String externalAccountId) {
+        this.externalAccountId = externalAccountId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateAnExternalAccountParameters request;
-    public UpdateAnExternalAccountRequest withRequest(org.openapis.openapi.models.shared.UpdateAnExternalAccountParameters request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateAnExternalAccountParameters updateAnExternalAccountParameters;
+    public UpdateAnExternalAccountRequest withUpdateAnExternalAccountParameters(org.openapis.openapi.models.shared.UpdateAnExternalAccountParameters updateAnExternalAccountParameters) {
+        this.updateAnExternalAccountParameters = updateAnExternalAccountParameters;
         return this;
     }
     

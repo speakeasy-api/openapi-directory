@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05HealthInformationTransferJsonRequest {
-    
-    public PostV05HealthInformationTransferJsonHeaders headers;
-    public PostV05HealthInformationTransferJsonRequest withHeaders(PostV05HealthInformationTransferJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05HealthInformationTransferJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DataNotification request;
-    public PostV05HealthInformationTransferJsonRequest withRequest(org.openapis.openapi.models.shared.DataNotification request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public PostV05HealthInformationTransferJsonRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public org.openapis.openapi.models.shared.DataNotification dataNotification;
+    public PostV05HealthInformationTransferJsonRequest withDataNotification(org.openapis.openapi.models.shared.DataNotification dataNotification) {
+        this.dataNotification = dataNotification;
         return this;
     }
     

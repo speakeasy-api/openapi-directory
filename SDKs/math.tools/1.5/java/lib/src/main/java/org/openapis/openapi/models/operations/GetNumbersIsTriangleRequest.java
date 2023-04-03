@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersIsTriangleRequest {
-    
-    public GetNumbersIsTriangleQueryParams queryParams;
-    public GetNumbersIsTriangleRequest withQueryParams(GetNumbersIsTriangleQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetNumbersIsTriangleSecurity security;
-    public GetNumbersIsTriangleRequest withSecurity(GetNumbersIsTriangleSecurity security) {
-        this.security = security;
+    /**
+     * Number to check
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public Long number;
+    public GetNumbersIsTriangleRequest withNumber(Long number) {
+        this.number = number;
         return this;
     }
     

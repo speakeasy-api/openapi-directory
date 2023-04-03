@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.ConnectRequestBody;
-import org.openapis.openapi.models.operations.ConnectRequest;
 import org.openapis.openapi.models.operations.ConnectResponse;
 
 public class Application {
@@ -27,11 +26,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ConnectRequest req = new ConnectRequest() {{
-                request = new ConnectRequestBody() {{
-                    endpoint = "corrupti";
-                }};
-            }};            
+            ConnectRequestBody req = new ConnectRequestBody() {{
+                endpoint = "corrupti";
+            }}            
 
             ConnectResponse res = sdk.connect(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

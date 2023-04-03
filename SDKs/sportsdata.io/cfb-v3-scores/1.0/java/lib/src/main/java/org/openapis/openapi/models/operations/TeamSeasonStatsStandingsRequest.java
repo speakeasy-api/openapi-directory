@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamSeasonStatsStandingsRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;xml&lt;/code&gt; or &lt;code&gt;json&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public TeamSeasonStatsStandingsFormatEnum format;
+    public TeamSeasonStatsStandingsRequest withFormat(TeamSeasonStatsStandingsFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public TeamSeasonStatsStandingsPathParams pathParams;
-    public TeamSeasonStatsStandingsRequest withPathParams(TeamSeasonStatsStandingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Year of the season (with optional season type).&lt;br&gt;Examples: &lt;code&gt;2017&lt;/code&gt;, &lt;code&gt;2017POST&lt;/code&gt;, &lt;code&gt;2018&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
+    public String season;
+    public TeamSeasonStatsStandingsRequest withSeason(String season) {
+        this.season = season;
         return this;
     }
     

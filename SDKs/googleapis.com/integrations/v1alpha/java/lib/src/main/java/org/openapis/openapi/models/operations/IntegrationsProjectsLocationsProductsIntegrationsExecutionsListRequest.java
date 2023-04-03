@@ -4,27 +4,316 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest {
-    
-    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListPathParams pathParams;
-    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withPathParams(IntegrationsProjectsLocationsProductsIntegrationsExecutionsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListQueryParams queryParams;
-    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withQueryParams(IntegrationsProjectsLocationsProductsIntegrationsExecutionsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListSecurity security;
-    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withSecurity(IntegrationsProjectsLocationsProductsIntegrationsExecutionsListSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Optional. Standard filter field, we support filtering on following fields: workflow_name: the name of the integration. CreateTimestamp: the execution created time. event_execution_state: the state of the executions. execution_id: the id of the execution. trigger_id: the id of the trigger. parameter_type: the type of the parameters involved in the execution. All fields support for EQUALS, in additional: CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterType support for HAS For example: "parameter_type" HAS \"string\" Also supports operators like AND, OR, NOT For example, trigger_id=\"id1\" AND workflow_name=\"testWorkflow\"
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * Optional user-provided custom filter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.customFilter")
+    public String filterParamsCustomFilter;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsCustomFilter(String filterParamsCustomFilter) {
+        this.filterParamsCustomFilter = filterParamsCustomFilter;
+        return this;
+    }
+    
+    /**
+     * End timestamp.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.endTime")
+    public String filterParamsEndTime;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsEndTime(String filterParamsEndTime) {
+        this.filterParamsEndTime = filterParamsEndTime;
+        return this;
+    }
+    
+    /**
+     * List of possible event statuses.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.eventStatuses")
+    public String[] filterParamsEventStatuses;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsEventStatuses(String[] filterParamsEventStatuses) {
+        this.filterParamsEventStatuses = filterParamsEventStatuses;
+        return this;
+    }
+    
+    /**
+     * Execution id.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.executionId")
+    public String filterParamsExecutionId;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsExecutionId(String filterParamsExecutionId) {
+        this.filterParamsExecutionId = filterParamsExecutionId;
+        return this;
+    }
+    
+    /**
+     * Param key. DEPRECATED. User parameter_pair_key instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.parameterKey")
+    public String filterParamsParameterKey;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsParameterKey(String filterParamsParameterKey) {
+        this.filterParamsParameterKey = filterParamsParameterKey;
+        return this;
+    }
+    
+    /**
+     * Param key in the key value pair filter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.parameterPairKey")
+    public String filterParamsParameterPairKey;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsParameterPairKey(String filterParamsParameterPairKey) {
+        this.filterParamsParameterPairKey = filterParamsParameterPairKey;
+        return this;
+    }
+    
+    /**
+     * Param value in the key value pair filter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.parameterPairValue")
+    public String filterParamsParameterPairValue;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsParameterPairValue(String filterParamsParameterPairValue) {
+        this.filterParamsParameterPairValue = filterParamsParameterPairValue;
+        return this;
+    }
+    
+    /**
+     * Param type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.parameterType")
+    public String filterParamsParameterType;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsParameterType(String filterParamsParameterType) {
+        this.filterParamsParameterType = filterParamsParameterType;
+        return this;
+    }
+    
+    /**
+     * Param value. DEPRECATED. User parameter_pair_value instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.parameterValue")
+    public String filterParamsParameterValue;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsParameterValue(String filterParamsParameterValue) {
+        this.filterParamsParameterValue = filterParamsParameterValue;
+        return this;
+    }
+    
+    /**
+     * Start timestamp.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.startTime")
+    public String filterParamsStartTime;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsStartTime(String filterParamsStartTime) {
+        this.filterParamsStartTime = filterParamsStartTime;
+        return this;
+    }
+    
+    /**
+     * List of possible task statuses.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.taskStatuses")
+    public String[] filterParamsTaskStatuses;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsTaskStatuses(String[] filterParamsTaskStatuses) {
+        this.filterParamsTaskStatuses = filterParamsTaskStatuses;
+        return this;
+    }
+    
+    /**
+     * Workflow name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterParams.workflowName")
+    public String filterParamsWorkflowName;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withFilterParamsWorkflowName(String filterParamsWorkflowName) {
+        this.filterParamsWorkflowName = filterParamsWorkflowName;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Optional. The results would be returned in order you specified here. Currently supporting "last_modified_time" and "create_time".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
+    public String orderBy;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    /**
+     * Optional. The size of entries in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Optional. The token returned in the previous response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Required. The parent resource name of the integration execution.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Optional. View mask for the response data. If set, only the field specified will be returned as part of the result. If not set, all fields in event execution info will be filled and returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=readMask")
+    public String readMask;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withReadMask(String readMask) {
+        this.readMask = readMask;
+        return this;
+    }
+    
+    /**
+     * Optional. If true, the service will use the most recent acl information to list event execution infos and renew the acl cache. Note that fetching the most recent acl is synchronous, so it will increase RPC call latency.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=refreshAcl")
+    public Boolean refreshAcl;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withRefreshAcl(Boolean refreshAcl) {
+        this.refreshAcl = refreshAcl;
+        return this;
+    }
+    
+    /**
+     * Optional. If true, the service will truncate the params to only keep the first 1000 characters of string params and empty the executions in order to make response smaller. Only works for UI and when the params fields are not filtered out.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=truncateParams")
+    public Boolean truncateParams;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withTruncateParams(Boolean truncateParams) {
+        this.truncateParams = truncateParams;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public IntegrationsProjectsLocationsProductsIntegrationsExecutionsListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

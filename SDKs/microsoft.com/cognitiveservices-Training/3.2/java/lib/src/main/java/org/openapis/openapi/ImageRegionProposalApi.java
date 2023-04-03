@@ -38,7 +38,7 @@ public class ImageRegionProposalApi {
      */
     public org.openapis.openapi.models.operations.GetImageRegionProposalsResponse getImageRegionProposals(org.openapis.openapi.models.operations.GetImageRegionProposalsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetImageRegionProposalsPathParams.class, baseUrl, "/projects/{projectId}/images/{imageId}/regionproposals", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetImageRegionProposalsRequest.class, baseUrl, "/projects/{projectId}/images/{imageId}/regionproposals", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

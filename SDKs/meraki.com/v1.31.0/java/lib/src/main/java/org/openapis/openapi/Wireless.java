@@ -43,12 +43,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.CreateNetworkWirelessRfProfileResponse createNetworkWirelessRfProfile(org.openapis.openapi.models.operations.CreateNetworkWirelessRfProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkWirelessRfProfilePathParams.class, baseUrl, "/networks/{networkId}/wireless/rfProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkWirelessRfProfileRequest.class, baseUrl, "/networks/{networkId}/wireless/rfProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -88,12 +88,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.CreateNetworkWirelessSsidIdentityPskResponse createNetworkWirelessSsidIdentityPsk(org.openapis.openapi.models.operations.CreateNetworkWirelessSsidIdentityPskRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkWirelessSsidIdentityPskPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/identityPsks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkWirelessSsidIdentityPskRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/identityPsks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -133,7 +133,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkWirelessRfProfileResponse deleteNetworkWirelessRfProfile(org.openapis.openapi.models.operations.DeleteNetworkWirelessRfProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkWirelessRfProfilePathParams.class, baseUrl, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkWirelessRfProfileRequest.class, baseUrl, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -167,7 +167,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkWirelessSsidIdentityPskResponse deleteNetworkWirelessSsidIdentityPsk(org.openapis.openapi.models.operations.DeleteNetworkWirelessSsidIdentityPskRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkWirelessSsidIdentityPskPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/identityPsks/{identityPskId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkWirelessSsidIdentityPskRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/identityPsks/{identityPskId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -201,7 +201,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetDeviceWirelessBluetoothSettingsResponse getDeviceWirelessBluetoothSettings(org.openapis.openapi.models.operations.GetDeviceWirelessBluetoothSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceWirelessBluetoothSettingsPathParams.class, baseUrl, "/devices/{serial}/wireless/bluetooth/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceWirelessBluetoothSettingsRequest.class, baseUrl, "/devices/{serial}/wireless/bluetooth/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -241,13 +241,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetDeviceWirelessConnectionStatsResponse getDeviceWirelessConnectionStats(org.openapis.openapi.models.operations.GetDeviceWirelessConnectionStatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceWirelessConnectionStatsPathParams.class, baseUrl, "/devices/{serial}/wireless/connectionStats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceWirelessConnectionStatsRequest.class, baseUrl, "/devices/{serial}/wireless/connectionStats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceWirelessConnectionStatsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceWirelessConnectionStatsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -287,13 +287,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetDeviceWirelessLatencyStatsResponse getDeviceWirelessLatencyStats(org.openapis.openapi.models.operations.GetDeviceWirelessLatencyStatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceWirelessLatencyStatsPathParams.class, baseUrl, "/devices/{serial}/wireless/latencyStats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceWirelessLatencyStatsRequest.class, baseUrl, "/devices/{serial}/wireless/latencyStats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceWirelessLatencyStatsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceWirelessLatencyStatsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -333,7 +333,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetDeviceWirelessRadioSettingsResponse getDeviceWirelessRadioSettings(org.openapis.openapi.models.operations.GetDeviceWirelessRadioSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceWirelessRadioSettingsPathParams.class, baseUrl, "/devices/{serial}/wireless/radio/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceWirelessRadioSettingsRequest.class, baseUrl, "/devices/{serial}/wireless/radio/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -373,7 +373,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetDeviceWirelessStatusResponse getDeviceWirelessStatus(org.openapis.openapi.models.operations.GetDeviceWirelessStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceWirelessStatusPathParams.class, baseUrl, "/devices/{serial}/wireless/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceWirelessStatusRequest.class, baseUrl, "/devices/{serial}/wireless/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -413,13 +413,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessAirMarshalResponse getNetworkWirelessAirMarshal(org.openapis.openapi.models.operations.GetNetworkWirelessAirMarshalRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessAirMarshalPathParams.class, baseUrl, "/networks/{networkId}/wireless/airMarshal", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessAirMarshalRequest.class, baseUrl, "/networks/{networkId}/wireless/airMarshal", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessAirMarshalQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessAirMarshalRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -459,7 +459,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessAlternateManagementInterfaceResponse getNetworkWirelessAlternateManagementInterface(org.openapis.openapi.models.operations.GetNetworkWirelessAlternateManagementInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessAlternateManagementInterfacePathParams.class, baseUrl, "/networks/{networkId}/wireless/alternateManagementInterface", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessAlternateManagementInterfaceRequest.class, baseUrl, "/networks/{networkId}/wireless/alternateManagementInterface", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -499,7 +499,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessBillingResponse getNetworkWirelessBilling(org.openapis.openapi.models.operations.GetNetworkWirelessBillingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessBillingPathParams.class, baseUrl, "/networks/{networkId}/wireless/billing", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessBillingRequest.class, baseUrl, "/networks/{networkId}/wireless/billing", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -539,7 +539,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessBluetoothSettingsResponse getNetworkWirelessBluetoothSettings(org.openapis.openapi.models.operations.GetNetworkWirelessBluetoothSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessBluetoothSettingsPathParams.class, baseUrl, "/networks/{networkId}/wireless/bluetooth/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessBluetoothSettingsRequest.class, baseUrl, "/networks/{networkId}/wireless/bluetooth/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -579,13 +579,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessChannelUtilizationHistoryResponse getNetworkWirelessChannelUtilizationHistory(org.openapis.openapi.models.operations.GetNetworkWirelessChannelUtilizationHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessChannelUtilizationHistoryPathParams.class, baseUrl, "/networks/{networkId}/wireless/channelUtilizationHistory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessChannelUtilizationHistoryRequest.class, baseUrl, "/networks/{networkId}/wireless/channelUtilizationHistory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessChannelUtilizationHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessChannelUtilizationHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -625,13 +625,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessClientConnectionStatsResponse getNetworkWirelessClientConnectionStats(org.openapis.openapi.models.operations.GetNetworkWirelessClientConnectionStatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessClientConnectionStatsPathParams.class, baseUrl, "/networks/{networkId}/wireless/clients/{clientId}/connectionStats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessClientConnectionStatsRequest.class, baseUrl, "/networks/{networkId}/wireless/clients/{clientId}/connectionStats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessClientConnectionStatsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessClientConnectionStatsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -671,13 +671,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessClientConnectivityEventsResponse getNetworkWirelessClientConnectivityEvents(org.openapis.openapi.models.operations.GetNetworkWirelessClientConnectivityEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessClientConnectivityEventsPathParams.class, baseUrl, "/networks/{networkId}/wireless/clients/{clientId}/connectivityEvents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessClientConnectivityEventsRequest.class, baseUrl, "/networks/{networkId}/wireless/clients/{clientId}/connectivityEvents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessClientConnectivityEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessClientConnectivityEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -719,13 +719,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessClientCountHistoryResponse getNetworkWirelessClientCountHistory(org.openapis.openapi.models.operations.GetNetworkWirelessClientCountHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessClientCountHistoryPathParams.class, baseUrl, "/networks/{networkId}/wireless/clientCountHistory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessClientCountHistoryRequest.class, baseUrl, "/networks/{networkId}/wireless/clientCountHistory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessClientCountHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessClientCountHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -765,13 +765,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessClientLatencyHistoryResponse getNetworkWirelessClientLatencyHistory(org.openapis.openapi.models.operations.GetNetworkWirelessClientLatencyHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessClientLatencyHistoryPathParams.class, baseUrl, "/networks/{networkId}/wireless/clients/{clientId}/latencyHistory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessClientLatencyHistoryRequest.class, baseUrl, "/networks/{networkId}/wireless/clients/{clientId}/latencyHistory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessClientLatencyHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessClientLatencyHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -811,13 +811,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessClientLatencyStatsResponse getNetworkWirelessClientLatencyStats(org.openapis.openapi.models.operations.GetNetworkWirelessClientLatencyStatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessClientLatencyStatsPathParams.class, baseUrl, "/networks/{networkId}/wireless/clients/{clientId}/latencyStats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessClientLatencyStatsRequest.class, baseUrl, "/networks/{networkId}/wireless/clients/{clientId}/latencyStats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessClientLatencyStatsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessClientLatencyStatsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -857,13 +857,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessClientsConnectionStatsResponse getNetworkWirelessClientsConnectionStats(org.openapis.openapi.models.operations.GetNetworkWirelessClientsConnectionStatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessClientsConnectionStatsPathParams.class, baseUrl, "/networks/{networkId}/wireless/clients/connectionStats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessClientsConnectionStatsRequest.class, baseUrl, "/networks/{networkId}/wireless/clients/connectionStats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessClientsConnectionStatsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessClientsConnectionStatsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -903,13 +903,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessClientsLatencyStatsResponse getNetworkWirelessClientsLatencyStats(org.openapis.openapi.models.operations.GetNetworkWirelessClientsLatencyStatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessClientsLatencyStatsPathParams.class, baseUrl, "/networks/{networkId}/wireless/clients/latencyStats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessClientsLatencyStatsRequest.class, baseUrl, "/networks/{networkId}/wireless/clients/latencyStats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessClientsLatencyStatsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessClientsLatencyStatsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -949,13 +949,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessConnectionStatsResponse getNetworkWirelessConnectionStats(org.openapis.openapi.models.operations.GetNetworkWirelessConnectionStatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessConnectionStatsPathParams.class, baseUrl, "/networks/{networkId}/wireless/connectionStats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessConnectionStatsRequest.class, baseUrl, "/networks/{networkId}/wireless/connectionStats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessConnectionStatsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessConnectionStatsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -995,13 +995,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessDataRateHistoryResponse getNetworkWirelessDataRateHistory(org.openapis.openapi.models.operations.GetNetworkWirelessDataRateHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessDataRateHistoryPathParams.class, baseUrl, "/networks/{networkId}/wireless/dataRateHistory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessDataRateHistoryRequest.class, baseUrl, "/networks/{networkId}/wireless/dataRateHistory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessDataRateHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessDataRateHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1041,13 +1041,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessDevicesConnectionStatsResponse getNetworkWirelessDevicesConnectionStats(org.openapis.openapi.models.operations.GetNetworkWirelessDevicesConnectionStatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessDevicesConnectionStatsPathParams.class, baseUrl, "/networks/{networkId}/wireless/devices/connectionStats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessDevicesConnectionStatsRequest.class, baseUrl, "/networks/{networkId}/wireless/devices/connectionStats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessDevicesConnectionStatsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessDevicesConnectionStatsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1087,13 +1087,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessDevicesLatencyStatsResponse getNetworkWirelessDevicesLatencyStats(org.openapis.openapi.models.operations.GetNetworkWirelessDevicesLatencyStatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessDevicesLatencyStatsPathParams.class, baseUrl, "/networks/{networkId}/wireless/devices/latencyStats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessDevicesLatencyStatsRequest.class, baseUrl, "/networks/{networkId}/wireless/devices/latencyStats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessDevicesLatencyStatsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessDevicesLatencyStatsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1133,13 +1133,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessFailedConnectionsResponse getNetworkWirelessFailedConnections(org.openapis.openapi.models.operations.GetNetworkWirelessFailedConnectionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessFailedConnectionsPathParams.class, baseUrl, "/networks/{networkId}/wireless/failedConnections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessFailedConnectionsRequest.class, baseUrl, "/networks/{networkId}/wireless/failedConnections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessFailedConnectionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessFailedConnectionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1179,13 +1179,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessLatencyHistoryResponse getNetworkWirelessLatencyHistory(org.openapis.openapi.models.operations.GetNetworkWirelessLatencyHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessLatencyHistoryPathParams.class, baseUrl, "/networks/{networkId}/wireless/latencyHistory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessLatencyHistoryRequest.class, baseUrl, "/networks/{networkId}/wireless/latencyHistory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessLatencyHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessLatencyHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1225,13 +1225,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessLatencyStatsResponse getNetworkWirelessLatencyStats(org.openapis.openapi.models.operations.GetNetworkWirelessLatencyStatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessLatencyStatsPathParams.class, baseUrl, "/networks/{networkId}/wireless/latencyStats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessLatencyStatsRequest.class, baseUrl, "/networks/{networkId}/wireless/latencyStats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessLatencyStatsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessLatencyStatsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1271,13 +1271,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessMeshStatusesResponse getNetworkWirelessMeshStatuses(org.openapis.openapi.models.operations.GetNetworkWirelessMeshStatusesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessMeshStatusesPathParams.class, baseUrl, "/networks/{networkId}/wireless/meshStatuses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessMeshStatusesRequest.class, baseUrl, "/networks/{networkId}/wireless/meshStatuses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessMeshStatusesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessMeshStatusesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1319,7 +1319,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessRfProfileResponse getNetworkWirelessRfProfile(org.openapis.openapi.models.operations.GetNetworkWirelessRfProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessRfProfilePathParams.class, baseUrl, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessRfProfileRequest.class, baseUrl, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1359,13 +1359,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessRfProfilesResponse getNetworkWirelessRfProfiles(org.openapis.openapi.models.operations.GetNetworkWirelessRfProfilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessRfProfilesPathParams.class, baseUrl, "/networks/{networkId}/wireless/rfProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessRfProfilesRequest.class, baseUrl, "/networks/{networkId}/wireless/rfProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessRfProfilesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessRfProfilesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1405,7 +1405,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSettingsResponse getNetworkWirelessSettings(org.openapis.openapi.models.operations.GetNetworkWirelessSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSettingsPathParams.class, baseUrl, "/networks/{networkId}/wireless/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSettingsRequest.class, baseUrl, "/networks/{networkId}/wireless/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1445,13 +1445,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSignalQualityHistoryResponse getNetworkWirelessSignalQualityHistory(org.openapis.openapi.models.operations.GetNetworkWirelessSignalQualityHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSignalQualityHistoryPathParams.class, baseUrl, "/networks/{networkId}/wireless/signalQualityHistory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSignalQualityHistoryRequest.class, baseUrl, "/networks/{networkId}/wireless/signalQualityHistory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessSignalQualityHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessSignalQualityHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1491,7 +1491,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidResponse getNetworkWirelessSsid(org.openapis.openapi.models.operations.GetNetworkWirelessSsidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1531,7 +1531,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidBonjourForwardingResponse getNetworkWirelessSsidBonjourForwarding(org.openapis.openapi.models.operations.GetNetworkWirelessSsidBonjourForwardingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidBonjourForwardingPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/bonjourForwarding", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidBonjourForwardingRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/bonjourForwarding", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1571,7 +1571,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidDeviceTypeGroupPoliciesResponse getNetworkWirelessSsidDeviceTypeGroupPolicies(org.openapis.openapi.models.operations.GetNetworkWirelessSsidDeviceTypeGroupPoliciesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidDeviceTypeGroupPoliciesPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/deviceTypeGroupPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidDeviceTypeGroupPoliciesRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/deviceTypeGroupPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1611,7 +1611,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidEapOverrideResponse getNetworkWirelessSsidEapOverride(org.openapis.openapi.models.operations.GetNetworkWirelessSsidEapOverrideRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidEapOverridePathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/eapOverride", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidEapOverrideRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/eapOverride", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1651,7 +1651,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidFirewallL3FirewallRulesResponse getNetworkWirelessSsidFirewallL3FirewallRules(org.openapis.openapi.models.operations.GetNetworkWirelessSsidFirewallL3FirewallRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidFirewallL3FirewallRulesPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/firewall/l3FirewallRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidFirewallL3FirewallRulesRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/firewall/l3FirewallRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1691,7 +1691,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidFirewallL7FirewallRulesResponse getNetworkWirelessSsidFirewallL7FirewallRules(org.openapis.openapi.models.operations.GetNetworkWirelessSsidFirewallL7FirewallRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidFirewallL7FirewallRulesPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/firewall/l7FirewallRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidFirewallL7FirewallRulesRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/firewall/l7FirewallRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1731,7 +1731,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidHotspot20Response getNetworkWirelessSsidHotspot20(org.openapis.openapi.models.operations.GetNetworkWirelessSsidHotspot20Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidHotspot20PathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/hotspot20", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidHotspot20Request.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/hotspot20", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1771,7 +1771,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidIdentityPskResponse getNetworkWirelessSsidIdentityPsk(org.openapis.openapi.models.operations.GetNetworkWirelessSsidIdentityPskRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidIdentityPskPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/identityPsks/{identityPskId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidIdentityPskRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/identityPsks/{identityPskId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1811,7 +1811,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidIdentityPsksResponse getNetworkWirelessSsidIdentityPsks(org.openapis.openapi.models.operations.GetNetworkWirelessSsidIdentityPsksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidIdentityPsksPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/identityPsks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidIdentityPsksRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/identityPsks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1851,7 +1851,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidSchedulesResponse getNetworkWirelessSsidSchedules(org.openapis.openapi.models.operations.GetNetworkWirelessSsidSchedulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidSchedulesPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/schedules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidSchedulesRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/schedules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1891,7 +1891,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidSplashSettingsResponse getNetworkWirelessSsidSplashSettings(org.openapis.openapi.models.operations.GetNetworkWirelessSsidSplashSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidSplashSettingsPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/splash/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidSplashSettingsRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/splash/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1931,7 +1931,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidTrafficShapingRulesResponse getNetworkWirelessSsidTrafficShapingRules(org.openapis.openapi.models.operations.GetNetworkWirelessSsidTrafficShapingRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidTrafficShapingRulesPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/trafficShaping/rules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidTrafficShapingRulesRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/trafficShaping/rules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1971,7 +1971,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidVpnResponse getNetworkWirelessSsidVpn(org.openapis.openapi.models.operations.GetNetworkWirelessSsidVpnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidVpnPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/vpn", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidVpnRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/vpn", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2011,7 +2011,7 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidsResponse getNetworkWirelessSsids(org.openapis.openapi.models.operations.GetNetworkWirelessSsidsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidsPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidsRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2051,13 +2051,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessUsageHistoryResponse getNetworkWirelessUsageHistory(org.openapis.openapi.models.operations.GetNetworkWirelessUsageHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessUsageHistoryPathParams.class, baseUrl, "/networks/{networkId}/wireless/usageHistory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessUsageHistoryRequest.class, baseUrl, "/networks/{networkId}/wireless/usageHistory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessUsageHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessUsageHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2097,13 +2097,13 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.GetOrganizationWirelessDevicesEthernetStatusesResponse getOrganizationWirelessDevicesEthernetStatuses(org.openapis.openapi.models.operations.GetOrganizationWirelessDevicesEthernetStatusesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationWirelessDevicesEthernetStatusesPathParams.class, baseUrl, "/organizations/{organizationId}/wireless/devices/ethernet/statuses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationWirelessDevicesEthernetStatusesRequest.class, baseUrl, "/organizations/{organizationId}/wireless/devices/ethernet/statuses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationWirelessDevicesEthernetStatusesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationWirelessDevicesEthernetStatusesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2145,12 +2145,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceWirelessBluetoothSettingsResponse updateDeviceWirelessBluetoothSettings(org.openapis.openapi.models.operations.UpdateDeviceWirelessBluetoothSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceWirelessBluetoothSettingsPathParams.class, baseUrl, "/devices/{serial}/wireless/bluetooth/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceWirelessBluetoothSettingsRequest.class, baseUrl, "/devices/{serial}/wireless/bluetooth/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2187,12 +2187,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceWirelessRadioSettingsResponse updateDeviceWirelessRadioSettings(org.openapis.openapi.models.operations.UpdateDeviceWirelessRadioSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceWirelessRadioSettingsPathParams.class, baseUrl, "/devices/{serial}/wireless/radio/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceWirelessRadioSettingsRequest.class, baseUrl, "/devices/{serial}/wireless/radio/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2229,12 +2229,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessAlternateManagementInterfaceResponse updateNetworkWirelessAlternateManagementInterface(org.openapis.openapi.models.operations.UpdateNetworkWirelessAlternateManagementInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessAlternateManagementInterfacePathParams.class, baseUrl, "/networks/{networkId}/wireless/alternateManagementInterface", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessAlternateManagementInterfaceRequest.class, baseUrl, "/networks/{networkId}/wireless/alternateManagementInterface", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2271,12 +2271,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessBillingResponse updateNetworkWirelessBilling(org.openapis.openapi.models.operations.UpdateNetworkWirelessBillingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessBillingPathParams.class, baseUrl, "/networks/{networkId}/wireless/billing", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessBillingRequest.class, baseUrl, "/networks/{networkId}/wireless/billing", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2313,12 +2313,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessBluetoothSettingsResponse updateNetworkWirelessBluetoothSettings(org.openapis.openapi.models.operations.UpdateNetworkWirelessBluetoothSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessBluetoothSettingsPathParams.class, baseUrl, "/networks/{networkId}/wireless/bluetooth/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessBluetoothSettingsRequest.class, baseUrl, "/networks/{networkId}/wireless/bluetooth/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2355,12 +2355,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessRfProfileResponse updateNetworkWirelessRfProfile(org.openapis.openapi.models.operations.UpdateNetworkWirelessRfProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessRfProfilePathParams.class, baseUrl, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessRfProfileRequest.class, baseUrl, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2397,12 +2397,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSettingsResponse updateNetworkWirelessSettings(org.openapis.openapi.models.operations.UpdateNetworkWirelessSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSettingsPathParams.class, baseUrl, "/networks/{networkId}/wireless/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSettingsRequest.class, baseUrl, "/networks/{networkId}/wireless/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2439,12 +2439,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidResponse updateNetworkWirelessSsid(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2481,12 +2481,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidBonjourForwardingResponse updateNetworkWirelessSsidBonjourForwarding(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidBonjourForwardingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidBonjourForwardingPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/bonjourForwarding", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidBonjourForwardingRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/bonjourForwarding", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2523,12 +2523,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesResponse updateNetworkWirelessSsidDeviceTypeGroupPolicies(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/deviceTypeGroupPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidDeviceTypeGroupPoliciesRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/deviceTypeGroupPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2565,12 +2565,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidEapOverrideResponse updateNetworkWirelessSsidEapOverride(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidEapOverrideRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidEapOverridePathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/eapOverride", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidEapOverrideRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/eapOverride", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2607,12 +2607,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidFirewallL3FirewallRulesResponse updateNetworkWirelessSsidFirewallL3FirewallRules(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidFirewallL3FirewallRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidFirewallL3FirewallRulesPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/firewall/l3FirewallRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidFirewallL3FirewallRulesRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/firewall/l3FirewallRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2649,12 +2649,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidFirewallL7FirewallRulesResponse updateNetworkWirelessSsidFirewallL7FirewallRules(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidFirewallL7FirewallRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidFirewallL7FirewallRulesPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/firewall/l7FirewallRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidFirewallL7FirewallRulesRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/firewall/l7FirewallRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2691,12 +2691,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidHotspot20Response updateNetworkWirelessSsidHotspot20(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidHotspot20Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidHotspot20PathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/hotspot20", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidHotspot20Request.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/hotspot20", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2733,12 +2733,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidIdentityPskResponse updateNetworkWirelessSsidIdentityPsk(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidIdentityPskRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidIdentityPskPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/identityPsks/{identityPskId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidIdentityPskRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/identityPsks/{identityPskId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2775,12 +2775,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidSchedulesResponse updateNetworkWirelessSsidSchedules(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidSchedulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidSchedulesPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/schedules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidSchedulesRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/schedules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2817,12 +2817,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidSplashSettingsResponse updateNetworkWirelessSsidSplashSettings(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidSplashSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidSplashSettingsPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/splash/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidSplashSettingsRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/splash/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2859,12 +2859,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidTrafficShapingRulesResponse updateNetworkWirelessSsidTrafficShapingRules(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidTrafficShapingRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidTrafficShapingRulesPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/trafficShaping/rules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidTrafficShapingRulesRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/trafficShaping/rules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2901,12 +2901,12 @@ public class Wireless {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidVpnResponse updateNetworkWirelessSsidVpn(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidVpnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidVpnPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/vpn", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidVpnRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/vpn", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

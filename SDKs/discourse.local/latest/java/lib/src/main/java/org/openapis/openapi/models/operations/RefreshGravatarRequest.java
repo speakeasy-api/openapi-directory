@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RefreshGravatarRequest {
-    
-    public RefreshGravatarPathParams pathParams;
-    public RefreshGravatarRequest withPathParams(RefreshGravatarPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public RefreshGravatarRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

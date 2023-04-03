@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchFileCommentsIdRequest {
-    
-    public PatchFileCommentsIdPathParams pathParams;
-    public PatchFileCommentsIdRequest withPathParams(PatchFileCommentsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public PatchFileCommentsIdRequestBody requestBody;
+    public PatchFileCommentsIdRequest withRequestBody(PatchFileCommentsIdRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PatchFileCommentsIdRequestBody request;
-    public PatchFileCommentsIdRequest withRequest(PatchFileCommentsIdRequestBody request) {
-        this.request = request;
+    /**
+     * File Comment ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PatchFileCommentsIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

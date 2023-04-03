@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConnectCarrierRequest {
-    
-    public ConnectCarrierPathParams pathParams;
-    public ConnectCarrierRequest withPathParams(ConnectCarrierPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public Object requestBody;
+    public ConnectCarrierRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public ConnectCarrierRequest withRequest(Object request) {
-        this.request = request;
+    /**
+     * The carrier name, such as `stamps_com`, `ups`, `fedex`, or `dhl_express`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=carrier_name")
+    public org.openapis.openapi.models.shared.CarrierNameEnum carrierName;
+    public ConnectCarrierRequest withCarrierName(org.openapis.openapi.models.shared.CarrierNameEnum carrierName) {
+        this.carrierName = carrierName;
         return this;
     }
     

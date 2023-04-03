@@ -4,20 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListTeamMemberWagesRequest {
-    
-    public ListTeamMemberWagesQueryParams queryParams;
-    public ListTeamMemberWagesRequest withQueryParams(ListTeamMemberWagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A pointer to the next page of `EmployeeWage` results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListTeamMemberWagesRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * The maximum number of `TeamMemberWage` results to return per page. The number can range between
+     * 1 and 200. The default is 200.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListTeamMemberWagesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public ListTeamMemberWagesSecurity security;
-    public ListTeamMemberWagesRequest withSecurity(ListTeamMemberWagesSecurity security) {
-        this.security = security;
+    /**
+     * Filter the returned wages to only those that are associated with the
+     * specified team member.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team_member_id")
+    public String teamMemberId;
+    public ListTeamMemberWagesRequest withTeamMemberId(String teamMemberId) {
+        this.teamMemberId = teamMemberId;
         return this;
     }
     

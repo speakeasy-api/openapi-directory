@@ -46,7 +46,7 @@ public class Tags {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagsCountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagsCountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -93,7 +93,7 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.TagsDeleteResponse tagsDelete(org.openapis.openapi.models.operations.TagsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsDeletePathParams.class, baseUrl, "/tags/{tagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsDeleteRequest.class, baseUrl, "/tags/{tagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -140,7 +140,7 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.TagsDeleteRelatedDatapointsResponse tagsDeleteRelatedDatapoints(org.openapis.openapi.models.operations.TagsDeleteRelatedDatapointsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsDeleteRelatedDatapointsPathParams.class, baseUrl, "/tags/{tagId}/datapoints", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsDeleteRelatedDatapointsRequest.class, baseUrl, "/tags/{tagId}/datapoints", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -197,7 +197,7 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.TagsDeleteRelatedGroupsResponse tagsDeleteRelatedGroups(org.openapis.openapi.models.operations.TagsDeleteRelatedGroupsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsDeleteRelatedGroupsPathParams.class, baseUrl, "/tags/{tagId}/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsDeleteRelatedGroupsRequest.class, baseUrl, "/tags/{tagId}/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -260,7 +260,7 @@ public class Tags {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -307,13 +307,13 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.TagsGetDatapointsResponse tagsGetDatapoints(org.openapis.openapi.models.operations.TagsGetDatapointsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsGetDatapointsPathParams.class, baseUrl, "/tags/{tagId}/datapoints", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsGetDatapointsRequest.class, baseUrl, "/tags/{tagId}/datapoints", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagsGetDatapointsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagsGetDatapointsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -360,13 +360,13 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.TagsGetDatapointsCountResponse tagsGetDatapointsCount(org.openapis.openapi.models.operations.TagsGetDatapointsCountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsGetDatapointsCountPathParams.class, baseUrl, "/tags/{tagId}/datapoints/count", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsGetDatapointsCountRequest.class, baseUrl, "/tags/{tagId}/datapoints/count", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagsGetDatapointsCountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagsGetDatapointsCountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -423,13 +423,13 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.TagsGetGroupsResponse tagsGetGroups(org.openapis.openapi.models.operations.TagsGetGroupsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsGetGroupsPathParams.class, baseUrl, "/tags/{tagId}/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsGetGroupsRequest.class, baseUrl, "/tags/{tagId}/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagsGetGroupsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagsGetGroupsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -476,13 +476,13 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.TagsGetGroupsCountResponse tagsGetGroupsCount(org.openapis.openapi.models.operations.TagsGetGroupsCountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsGetGroupsCountPathParams.class, baseUrl, "/tags/{tagId}/groups/count", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsGetGroupsCountRequest.class, baseUrl, "/tags/{tagId}/groups/count", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagsGetGroupsCountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagsGetGroupsCountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -539,12 +539,12 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.TagsPatchDataPointFormResponse tagsPatchDataPointForm(org.openapis.openapi.models.operations.TagsPatchDataPointFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsPatchDataPointFormPathParams.class, baseUrl, "/tags/{tagId}/datapoints/patch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsPatchDataPointFormRequest.class, baseUrl, "/tags/{tagId}/datapoints/patch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreRequestsPatchBody", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -601,12 +601,12 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.TagsPatchDataPointJsonResponse tagsPatchDataPointJson(org.openapis.openapi.models.operations.TagsPatchDataPointJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsPatchDataPointJsonPathParams.class, baseUrl, "/tags/{tagId}/datapoints/patch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsPatchDataPointJsonRequest.class, baseUrl, "/tags/{tagId}/datapoints/patch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreRequestsPatchBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -663,12 +663,12 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.TagsPatchDataPointRawResponse tagsPatchDataPointRaw(org.openapis.openapi.models.operations.TagsPatchDataPointRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsPatchDataPointRawPathParams.class, baseUrl, "/tags/{tagId}/datapoints/patch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsPatchDataPointRawRequest.class, baseUrl, "/tags/{tagId}/datapoints/patch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -725,12 +725,12 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.TagsPatchGroupFormResponse tagsPatchGroupForm(org.openapis.openapi.models.operations.TagsPatchGroupFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsPatchGroupFormPathParams.class, baseUrl, "/tags/{tagId}/groups/patch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsPatchGroupFormRequest.class, baseUrl, "/tags/{tagId}/groups/patch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreRequestsPatchBody", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -787,12 +787,12 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.TagsPatchGroupJsonResponse tagsPatchGroupJson(org.openapis.openapi.models.operations.TagsPatchGroupJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsPatchGroupJsonPathParams.class, baseUrl, "/tags/{tagId}/groups/patch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsPatchGroupJsonRequest.class, baseUrl, "/tags/{tagId}/groups/patch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreRequestsPatchBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -849,12 +849,12 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.TagsPatchGroupRawResponse tagsPatchGroupRaw(org.openapis.openapi.models.operations.TagsPatchGroupRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsPatchGroupRawPathParams.class, baseUrl, "/tags/{tagId}/groups/patch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsPatchGroupRawRequest.class, baseUrl, "/tags/{tagId}/groups/patch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -911,12 +911,12 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.TagsPatchTagNameFormResponse tagsPatchTagNameForm(org.openapis.openapi.models.operations.TagsPatchTagNameFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsPatchTagNameFormPathParams.class, baseUrl, "/tags/{tagId}/name", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsPatchTagNameFormRequest.class, baseUrl, "/tags/{tagId}/name", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreRequestsGenericTextPatch", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -973,12 +973,12 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.TagsPatchTagNameJsonResponse tagsPatchTagNameJson(org.openapis.openapi.models.operations.TagsPatchTagNameJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsPatchTagNameJsonPathParams.class, baseUrl, "/tags/{tagId}/name", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsPatchTagNameJsonRequest.class, baseUrl, "/tags/{tagId}/name", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreRequestsGenericTextPatch", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1035,12 +1035,12 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.TagsPatchTagNameRawResponse tagsPatchTagNameRaw(org.openapis.openapi.models.operations.TagsPatchTagNameRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsPatchTagNameRawPathParams.class, baseUrl, "/tags/{tagId}/name", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagsPatchTagNameRawRequest.class, baseUrl, "/tags/{tagId}/name", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1095,7 +1095,7 @@ public class Tags {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagsPutResponse tagsPut(org.openapis.openapi.models.operations.TagsPutRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagsPutResponse tagsPut(org.openapis.openapi.models.shared.ApiCoreDtoTagsTag request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tags");
         
@@ -1159,7 +1159,7 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.GetTagsTagIdResponse getTagsTagId(org.openapis.openapi.models.operations.GetTagsTagIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsTagIdPathParams.class, baseUrl, "/tags/{tagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsTagIdRequest.class, baseUrl, "/tags/{tagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

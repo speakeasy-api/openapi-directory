@@ -31,13 +31,10 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteConnectionSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DeleteConnectionPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteConnectionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteConnectionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetConnectionsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetConnectionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetConnectionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetConnectionsResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOAuth2.java
 lib/src/main/java/org/openapis/openapi/models/shared/Connection.java
 USAGE.md

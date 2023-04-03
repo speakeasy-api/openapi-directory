@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpsertSnippetRequest {
-    
-    public UpsertSnippetPathParams pathParams;
-    public UpsertSnippetRequest withPathParams(UpsertSnippetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpsertSnippetRequest request;
-    public UpsertSnippetRequest withRequest(org.openapis.openapi.models.shared.UpsertSnippetRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpsertSnippetRequest upsertSnippetRequest;
+    public UpsertSnippetRequest withUpsertSnippetRequest(org.openapis.openapi.models.shared.UpsertSnippetRequest upsertSnippetRequest) {
+        this.upsertSnippetRequest = upsertSnippetRequest;
         return this;
     }
     
-    
-    public UpsertSnippetSecurity security;
-    public UpsertSnippetRequest withSecurity(UpsertSnippetSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the site where you want to add or update the snippet.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=site_id")
+    public String siteId;
+    public UpsertSnippetRequest withSiteId(String siteId) {
+        this.siteId = siteId;
         return this;
     }
     

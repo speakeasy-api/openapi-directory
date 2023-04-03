@@ -4,27 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteQueueRequest {
-    
-    public GETDeleteQueuePathParams pathParams;
-    public GETDeleteQueueRequest withPathParams(GETDeleteQueuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The AWS account number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountNumber")
+    public Long accountNumber;
+    public GETDeleteQueueRequest withAccountNumber(Long accountNumber) {
+        this.accountNumber = accountNumber;
         return this;
     }
     
-    
-    public GETDeleteQueueQueryParams queryParams;
-    public GETDeleteQueueRequest withQueryParams(GETDeleteQueueQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteQueueActionEnum action;
+    public GETDeleteQueueRequest withAction(GETDeleteQueueActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the queue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=QueueName")
+    public String queueName;
+    public GETDeleteQueueRequest withQueueName(String queueName) {
+        this.queueName = queueName;
+        return this;
+    }
     
-    public GETDeleteQueueHeaders headers;
-    public GETDeleteQueueRequest withHeaders(GETDeleteQueueHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteQueueVersionEnum version;
+    public GETDeleteQueueRequest withVersion(GETDeleteQueueVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteQueueRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteQueueRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteQueueRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteQueueRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteQueueRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteQueueRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteQueueRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

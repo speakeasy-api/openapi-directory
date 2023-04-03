@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmComponentsRequest {
-    
-    public GetRealmComponentsPathParams pathParams;
-    public GetRealmComponentsRequest withPathParams(GetRealmComponentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetRealmComponentsRequest withName(String name) {
+        this.name = name;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent")
+    public String parent;
+    public GetRealmComponentsRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
     
-    public GetRealmComponentsQueryParams queryParams;
-    public GetRealmComponentsRequest withQueryParams(GetRealmComponentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmComponentsRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public GetRealmComponentsRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolTftpSetTraceRequest {
+    /**
+     * Agent to set the TFTP tracing
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolTftpSetTraceRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolTftpSetTracePathParams pathParams;
-    public ProtocolTftpSetTraceRequest withPathParams(ProtocolTftpSetTracePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Value to set the TFTP tracing
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enableOrNot")
+    public String enableOrNot;
+    public ProtocolTftpSetTraceRequest withEnableOrNot(String enableOrNot) {
+        this.enableOrNot = enableOrNot;
         return this;
     }
     

@@ -7,24 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateConfigurationSetEventDestinationRequest {
-    
-    public UpdateConfigurationSetEventDestinationPathParams pathParams;
-    public UpdateConfigurationSetEventDestinationRequest withPathParams(UpdateConfigurationSetEventDestinationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the configuration set that contains the event destination to modify.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConfigurationSetName")
+    public String configurationSetName;
+    public UpdateConfigurationSetEventDestinationRequest withConfigurationSetName(String configurationSetName) {
+        this.configurationSetName = configurationSetName;
         return this;
     }
     
-    
-    public UpdateConfigurationSetEventDestinationHeaders headers;
-    public UpdateConfigurationSetEventDestinationRequest withHeaders(UpdateConfigurationSetEventDestinationHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the event destination.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EventDestinationName")
+    public String eventDestinationName;
+    public UpdateConfigurationSetEventDestinationRequest withEventDestinationName(String eventDestinationName) {
+        this.eventDestinationName = eventDestinationName;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateConfigurationSetEventDestinationRequestBody request;
-    public UpdateConfigurationSetEventDestinationRequest withRequest(UpdateConfigurationSetEventDestinationRequestBody request) {
-        this.request = request;
+    public UpdateConfigurationSetEventDestinationRequestBody requestBody;
+    public UpdateConfigurationSetEventDestinationRequest withRequestBody(UpdateConfigurationSetEventDestinationRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateConfigurationSetEventDestinationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateConfigurationSetEventDestinationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateConfigurationSetEventDestinationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateConfigurationSetEventDestinationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateConfigurationSetEventDestinationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateConfigurationSetEventDestinationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateConfigurationSetEventDestinationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

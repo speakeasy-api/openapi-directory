@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSettingsOrganizationsOrganizationNameSendersSenderNameRequest {
-    
-    public GetSettingsOrganizationsOrganizationNameSendersSenderNamePathParams pathParams;
-    public GetSettingsOrganizationsOrganizationNameSendersSenderNameRequest withPathParams(GetSettingsOrganizationsOrganizationNameSendersSenderNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Fetch senders with this organization name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationName")
+    public String organizationName;
+    public GetSettingsOrganizationsOrganizationNameSendersSenderNameRequest withOrganizationName(String organizationName) {
+        this.organizationName = organizationName;
         return this;
     }
     
-    
-    public GetSettingsOrganizationsOrganizationNameSendersSenderNameSecurity security;
-    public GetSettingsOrganizationsOrganizationNameSendersSenderNameRequest withSecurity(GetSettingsOrganizationsOrganizationNameSendersSenderNameSecurity security) {
-        this.security = security;
+    /**
+     * The name of a sender to the data hub
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=senderName")
+    public String senderName;
+    public GetSettingsOrganizationsOrganizationNameSendersSenderNameRequest withSenderName(String senderName) {
+        this.senderName = senderName;
         return this;
     }
     

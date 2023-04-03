@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.BatchUpdateClusterXAmzTargetEnum;
-import org.openapis.openapi.models.operations.BatchUpdateClusterHeaders;
 import org.openapis.openapi.models.operations.BatchUpdateClusterRequest;
 import org.openapis.openapi.models.operations.BatchUpdateClusterResponse;
 import org.openapis.openapi.models.shared.BatchUpdateClusterRequest;
@@ -29,35 +28,30 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchUpdateClusterRequest req = new BatchUpdateClusterRequest() {{
-                headers = new BatchUpdateClusterHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AmazonMemoryDB.BatchUpdateCluster";
-                }};
-                request = new BatchUpdateClusterRequest() {{
+                batchUpdateClusterRequest = new BatchUpdateClusterRequest() {{
                     clusterNames = new String[]{{
-                        add("vel"),
-                        add("error"),
-                        add("deserunt"),
-                        add("suscipit"),
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
                     serviceUpdate = new ServiceUpdateRequest() {{
-                        serviceUpdateNameToApply = "iure";
+                        serviceUpdateNameToApply = "unde";
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "nulla";
+                xAmzContentSha256 = "corrupti";
+                xAmzCredential = "illum";
+                xAmzDate = "vel";
+                xAmzSecurityToken = "error";
+                xAmzSignature = "deserunt";
+                xAmzSignedHeaders = "suscipit";
+                xAmzTarget = "AmazonMemoryDB.BatchUpdateCluster";
+            }}            
 
             BatchUpdateClusterResponse res = sdk.batchUpdateCluster(req);
 
@@ -71,7 +65,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

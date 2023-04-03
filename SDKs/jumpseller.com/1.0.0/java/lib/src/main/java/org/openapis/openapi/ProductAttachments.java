@@ -39,13 +39,13 @@ public class ProductAttachments {
      */
     public org.openapis.openapi.models.operations.DeleteProductsIdAttachmentsAttachmentIdJsonResponse deleteProductsIdAttachmentsAttachmentIdJson(org.openapis.openapi.models.operations.DeleteProductsIdAttachmentsAttachmentIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProductsIdAttachmentsAttachmentIdJsonPathParams.class, baseUrl, "/products/{id}/attachments/{attachment_id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProductsIdAttachmentsAttachmentIdJsonRequest.class, baseUrl, "/products/{id}/attachments/{attachment_id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteProductsIdAttachmentsAttachmentIdJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteProductsIdAttachmentsAttachmentIdJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -90,13 +90,13 @@ public class ProductAttachments {
      */
     public org.openapis.openapi.models.operations.GetProductsIdAttachmentsJsonResponse getProductsIdAttachmentsJson(org.openapis.openapi.models.operations.GetProductsIdAttachmentsJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdAttachmentsJsonPathParams.class, baseUrl, "/products/{id}/attachments.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdAttachmentsJsonRequest.class, baseUrl, "/products/{id}/attachments.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdAttachmentsJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdAttachmentsJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -142,13 +142,13 @@ public class ProductAttachments {
      */
     public org.openapis.openapi.models.operations.GetProductsIdAttachmentsCountJsonResponse getProductsIdAttachmentsCountJson(org.openapis.openapi.models.operations.GetProductsIdAttachmentsCountJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdAttachmentsCountJsonPathParams.class, baseUrl, "/products/{id}/attachments/count.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdAttachmentsCountJsonRequest.class, baseUrl, "/products/{id}/attachments/count.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdAttachmentsCountJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdAttachmentsCountJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -194,13 +194,13 @@ public class ProductAttachments {
      */
     public org.openapis.openapi.models.operations.GetProductsIdAttachmentsAttachmentIdJsonResponse getProductsIdAttachmentsAttachmentIdJson(org.openapis.openapi.models.operations.GetProductsIdAttachmentsAttachmentIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdAttachmentsAttachmentIdJsonPathParams.class, baseUrl, "/products/{id}/attachments/{attachment_id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdAttachmentsAttachmentIdJsonRequest.class, baseUrl, "/products/{id}/attachments/{attachment_id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdAttachmentsAttachmentIdJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdAttachmentsAttachmentIdJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -246,18 +246,18 @@ public class ProductAttachments {
      */
     public org.openapis.openapi.models.operations.PostProductsIdAttachmentsJsonResponse postProductsIdAttachmentsJson(org.openapis.openapi.models.operations.PostProductsIdAttachmentsJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProductsIdAttachmentsJsonPathParams.class, baseUrl, "/products/{id}/attachments.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProductsIdAttachmentsJsonRequest.class, baseUrl, "/products/{id}/attachments.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "attachmentEdit", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostProductsIdAttachmentsJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostProductsIdAttachmentsJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

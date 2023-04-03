@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTemplateRequest {
-    
-    public UpdateTemplateQueryParams queryParams;
-    public UpdateTemplateRequest withQueryParams(UpdateTemplateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Template configuration as JSON string
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TemplateDefinitionNew request;
-    public UpdateTemplateRequest withRequest(org.openapis.openapi.models.shared.TemplateDefinitionNew request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TemplateDefinitionNew templateDefinitionNew;
+    public UpdateTemplateRequest withTemplateDefinitionNew(org.openapis.openapi.models.shared.TemplateDefinitionNew templateDefinitionNew) {
+        this.templateDefinitionNew = templateDefinitionNew;
+        return this;
+    }
+    
+    /**
+     * Template unique identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=templateId")
+    public Long templateId;
+    public UpdateTemplateRequest withTemplateId(Long templateId) {
+        this.templateId = templateId;
         return this;
     }
     

@@ -59,9 +59,28 @@ public class DataTransfer {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05HealthInformationTransferJsonResponse postV05HealthInformationTransferJson(org.openapis.openapi.models.operations.PostV05HealthInformationTransferJsonRequest request) throws Exception {
+        return this.postV05HealthInformationTransferJson(request, null);
+    }
+
+    /**
+     * health information transfer API
+     * **NOTE**: This API is actually the callback URL that is passed as **dataPushUrl** in the data request API - /v0.5/health-information/hip/request. This API is directly called by HIP Data Bridge and is not mediated via CM, and hence not routed through the Gateway. 
+     *   1. This API should be implemented at HIU side. It maybe implemented by the Data Bridge representing the HIU. 
+     *   2. Entry elements maybe ***content*** or ***link***, although for version 1, entry ***content*** is preferred. 
+     *   3. Entry ***content*** (or even link reference content) must be encrypted by means of Elliptic-curve Diffie\u2013Hellman Key Exchange, utilizing the HIU keymaterials that are passed through the data request API - /v0.5/health-information/hip/request. 
+     *   4. Media contains the mimetype of content, and for v1, it is "application/fhir+json"
+     *   5. checksum is Md5 checksum of the data conent, before encryption
+     *   6. Please refer to the NDHM Sandbox Documentation for the format of FHIR bundle that is passed through content 
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05HealthInformationTransferJsonResponse postV05HealthInformationTransferJson(org.openapis.openapi.models.operations.PostV05HealthInformationTransferJsonRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_HEALTH_INFORMATION_TRANSFER_JSON_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/health-information/transfer");
@@ -69,13 +88,13 @@ public class DataTransfer {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "dataNotification", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -129,9 +148,28 @@ public class DataTransfer {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05HealthInformationTransferRawResponse postV05HealthInformationTransferRaw(org.openapis.openapi.models.operations.PostV05HealthInformationTransferRawRequest request) throws Exception {
+        return this.postV05HealthInformationTransferRaw(request, null);
+    }
+
+    /**
+     * health information transfer API
+     * **NOTE**: This API is actually the callback URL that is passed as **dataPushUrl** in the data request API - /v0.5/health-information/hip/request. This API is directly called by HIP Data Bridge and is not mediated via CM, and hence not routed through the Gateway. 
+     *   1. This API should be implemented at HIU side. It maybe implemented by the Data Bridge representing the HIU. 
+     *   2. Entry elements maybe ***content*** or ***link***, although for version 1, entry ***content*** is preferred. 
+     *   3. Entry ***content*** (or even link reference content) must be encrypted by means of Elliptic-curve Diffie\u2013Hellman Key Exchange, utilizing the HIU keymaterials that are passed through the data request API - /v0.5/health-information/hip/request. 
+     *   4. Media contains the mimetype of content, and for v1, it is "application/fhir+json"
+     *   5. checksum is Md5 checksum of the data conent, before encryption
+     *   6. Please refer to the NDHM Sandbox Documentation for the format of FHIR bundle that is passed through content 
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05HealthInformationTransferRawResponse postV05HealthInformationTransferRaw(org.openapis.openapi.models.operations.PostV05HealthInformationTransferRawRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_HEALTH_INFORMATION_TRANSFER_RAW_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/health-information/transfer");
@@ -139,13 +177,13 @@ public class DataTransfer {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

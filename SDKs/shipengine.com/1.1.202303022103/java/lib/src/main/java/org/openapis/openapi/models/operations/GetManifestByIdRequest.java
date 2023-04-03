@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetManifestByIdRequest {
-    
-    public GetManifestByIdPathParams pathParams;
-    public GetManifestByIdRequest withPathParams(GetManifestByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Manifest Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=manifest_id")
+    public String manifestId;
+    public GetManifestByIdRequest withManifestId(String manifestId) {
+        this.manifestId = manifestId;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GistsCreateCommentRequest {
-    
-    public GistsCreateCommentPathParams pathParams;
-    public GistsCreateCommentRequest withPathParams(GistsCreateCommentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public GistsCreateCommentRequestBody requestBody;
+    public GistsCreateCommentRequest withRequestBody(GistsCreateCommentRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public GistsCreateCommentRequestBody request;
-    public GistsCreateCommentRequest withRequest(GistsCreateCommentRequestBody request) {
-        this.request = request;
+    /**
+     * gist_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gist_id")
+    public String gistId;
+    public GistsCreateCommentRequest withGistId(String gistId) {
+        this.gistId = gistId;
         return this;
     }
     

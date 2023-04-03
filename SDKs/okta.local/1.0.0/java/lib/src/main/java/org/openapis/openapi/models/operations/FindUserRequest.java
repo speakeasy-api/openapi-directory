@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindUserRequest {
-    
-    public FindUserQueryParams queryParams;
-    public FindUserRequest withQueryParams(FindUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=application/octet-stream")
+    public byte[] requestBody;
+    public FindUserRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/octet-stream")
-    public byte[] request;
-    public FindUserRequest withRequest(byte[] request) {
-        this.request = request;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public FindUserRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     

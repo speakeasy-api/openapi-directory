@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchRequest {
+    /**
+     * Page number of search results. Ex. https://api.byautomata.io/search?page=0&amp;link=cloud+computing,enterprise,security
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetSearchRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetSearchQueryParams queryParams;
-    public GetSearchRequest withQueryParams(GetSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * We provide information about related companies based on the search terms you provide. Separate search terms with commas. Ex. https://api.byautomata.io/search?link=cloud+computing,enterprise,security
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=terms")
+    public String terms;
+    public GetSearchRequest withTerms(String terms) {
+        this.terms = terms;
         return this;
     }
     

@@ -4,20 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGeneratedCodeJobRequest {
-    
-    public GetGeneratedCodeJobPathParams pathParams;
-    public GetGeneratedCodeJobRequest withPathParams(GetGeneratedCodeJobPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the game.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=GameName")
+    public String gameName;
+    public GetGeneratedCodeJobRequest withGameName(String gameName) {
+        this.gameName = gameName;
         return this;
     }
     
+    /**
+     * The identifier of the code generation job.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=JobId")
+    public String jobId;
+    public GetGeneratedCodeJobRequest withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
     
-    public GetGeneratedCodeJobHeaders headers;
-    public GetGeneratedCodeJobRequest withHeaders(GetGeneratedCodeJobHeaders headers) {
-        this.headers = headers;
+    /**
+     * The identifier of the snapshot for the code generation job.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SnapshotId")
+    public String snapshotId;
+    public GetGeneratedCodeJobRequest withSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetGeneratedCodeJobRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetGeneratedCodeJobRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetGeneratedCodeJobRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetGeneratedCodeJobRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetGeneratedCodeJobRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetGeneratedCodeJobRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetGeneratedCodeJobRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

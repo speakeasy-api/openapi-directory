@@ -32,7 +32,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/MergeTemplateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/MergeTemplateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/MergeTemplate500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/MergeTemplate422ApplicationJSONErrorEnum.java
@@ -46,7 +45,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/MergeTemplate401Applica
 lib/src/main/java/org/openapis/openapi/models/operations/MergeTemplate200ApplicationJSONMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/MergeTemplate200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/MergeTemplateResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/MergeTemplatesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/MergeTemplatesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/MergeTemplates500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/MergeTemplates422ApplicationJSONErrorEnum.java
@@ -60,7 +58,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/MergeTemplates401Applic
 lib/src/main/java/org/openapis/openapi/models/operations/MergeTemplates200ApplicationJSONMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/MergeTemplates200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/MergeTemplatesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CopyTemplateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/CopyTemplateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CopyTemplate500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CopyTemplate422ApplicationJSONErrorEnum.java
@@ -73,7 +70,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CopyTemplate401Applicat
 lib/src/main/java/org/openapis/openapi/models/operations/CopyTemplate401ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CopyTemplate200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CopyTemplateResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateTemplateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateTemplate500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateTemplate422ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateTemplate422ApplicationJSON.java
@@ -85,7 +81,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateTemplate401Applic
 lib/src/main/java/org/openapis/openapi/models/operations/CreateTemplate401ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateTemplate200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateTemplateResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/DeleteTemplateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteTemplateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteTemplate500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteTemplate422ApplicationJSONErrorEnum.java
@@ -100,7 +95,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DeleteTemplate200Applic
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteTemplate200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteTemplateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEditorUrlLanguageEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetEditorUrlQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEditorUrlRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEditorUrl500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEditorUrl422ApplicationJSONErrorEnum.java
@@ -113,7 +107,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetEditorUrl401Applicat
 lib/src/main/java/org/openapis/openapi/models/operations/GetEditorUrl401ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEditorUrl200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEditorUrlResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetTemplateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTemplateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTemplate500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTemplate422ApplicationJSONErrorEnum.java
@@ -137,7 +130,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetTemplates401Applicat
 lib/src/main/java/org/openapis/openapi/models/operations/GetTemplates401ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTemplates200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTemplatesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateTemplateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateTemplateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateTemplate500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateTemplate422ApplicationJSONErrorEnum.java
@@ -150,7 +142,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/UpdateTemplate401Applic
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateTemplate401ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateTemplate200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateTemplateResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/DeleteWorkspaceQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteWorkspaceRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteWorkspace500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteWorkspace422ApplicationJSONErrorEnum.java
@@ -164,7 +155,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DeleteWorkspace401Appli
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteWorkspace200ApplicationJSONResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteWorkspace200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteWorkspaceResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetWorkspaceQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWorkspaceRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWorkspace500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWorkspace422ApplicationJSONErrorEnum.java
@@ -177,9 +167,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetWorkspace401Applicat
 lib/src/main/java/org/openapis/openapi/models/operations/GetWorkspace401ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWorkspace200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWorkspaceResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/Data.java
 lib/src/main/java/org/openapis/openapi/models/shared/OutputEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/FormatEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/Data.java
 lib/src/main/java/org/openapis/openapi/models/shared/BatchData.java
 lib/src/main/java/org/openapis/openapi/models/shared/TemplateDefinitionDataSettings.java
 lib/src/main/java/org/openapis/openapi/models/shared/TemplateDefinitionEditor.java
@@ -209,6 +199,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/TemplateDefinitionNewPages.
 lib/src/main/java/org/openapis/openapi/models/shared/TemplateDefinitionNew.java
 lib/src/main/java/org/openapis/openapi/models/shared/Template.java
 lib/src/main/java/org/openapis/openapi/models/shared/Workspace.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeJSONWebTokenAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddImageCollectionItemsRequest {
-    
-    public AddImageCollectionItemsPathParams pathParams;
-    public AddImageCollectionItemsRequest withPathParams(AddImageCollectionItemsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Array of image IDs to add to the collection
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CollectionItemRequest request;
-    public AddImageCollectionItemsRequest withRequest(org.openapis.openapi.models.shared.CollectionItemRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CollectionItemRequest collectionItemRequest;
+    public AddImageCollectionItemsRequest withCollectionItemRequest(org.openapis.openapi.models.shared.CollectionItemRequest collectionItemRequest) {
+        this.collectionItemRequest = collectionItemRequest;
         return this;
     }
     
-    
-    public AddImageCollectionItemsSecurity security;
-    public AddImageCollectionItemsRequest withSecurity(AddImageCollectionItemsSecurity security) {
-        this.security = security;
+    /**
+     * Collection ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public AddImageCollectionItemsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspaceSlugMembersMemberSlugRequest {
-    
-    public GetWorkspaceSlugMembersMemberSlugPathParams pathParams;
-    public GetWorkspaceSlugMembersMemberSlugRequest withPathParams(GetWorkspaceSlugMembersMemberSlugPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=member_slug")
+    public String memberSlug;
+    public GetWorkspaceSlugMembersMemberSlugRequest withMemberSlug(String memberSlug) {
+        this.memberSlug = memberSlug;
         return this;
     }
     
-    
-    public GetWorkspaceSlugMembersMemberSlugSecurity security;
-    public GetWorkspaceSlugMembersMemberSlugRequest withSecurity(GetWorkspaceSlugMembersMemberSlugSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
+    public String workspaceSlug;
+    public GetWorkspaceSlugMembersMemberSlugRequest withWorkspaceSlug(String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
         return this;
     }
     

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchCredentialListRequest {
-    
-    public FetchCredentialListPathParams pathParams;
-    public FetchCredentialListRequest withPathParams(FetchCredentialListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string that we created to identify the CredentialList resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchCredentialListRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public FetchCredentialListSecurity security;
-    public FetchCredentialListRequest withSecurity(FetchCredentialListSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchCredentialListRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Trunk from which to fetch the credential list.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrunkSid")
+    public String trunkSid;
+    public FetchCredentialListRequest withTrunkSid(String trunkSid) {
+        this.trunkSid = trunkSid;
         return this;
     }
     

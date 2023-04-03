@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserRequest {
-    
-    public GetUserPathParams pathParams;
-    public GetUserRequest withPathParams(GetUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Key")
+    public String apiKey;
+    public GetUserRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Username")
+    public String apiUsername;
+    public GetUserRequest withApiUsername(String apiUsername) {
+        this.apiUsername = apiUsername;
+        return this;
+    }
     
-    public GetUserHeaders headers;
-    public GetUserRequest withHeaders(GetUserHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

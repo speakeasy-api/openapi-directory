@@ -43,7 +43,7 @@ public class ActionNotificationExports {
      */
     public org.openapis.openapi.models.operations.GetActionNotificationExportsIdResponse getActionNotificationExportsId(org.openapis.openapi.models.operations.GetActionNotificationExportsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetActionNotificationExportsIdPathParams.class, baseUrl, "/action_notification_exports/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetActionNotificationExportsIdRequest.class, baseUrl, "/action_notification_exports/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -82,7 +82,7 @@ public class ActionNotificationExports {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostActionNotificationExportsResponse postActionNotificationExports(org.openapis.openapi.models.operations.PostActionNotificationExportsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostActionNotificationExportsResponse postActionNotificationExports(org.openapis.openapi.models.operations.PostActionNotificationExportsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/action_notification_exports");
         

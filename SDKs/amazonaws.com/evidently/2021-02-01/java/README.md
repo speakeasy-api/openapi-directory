@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BatchEvaluateFeaturePathParams;
-import org.openapis.openapi.models.operations.BatchEvaluateFeatureHeaders;
 import org.openapis.openapi.models.operations.BatchEvaluateFeatureRequestBody;
 import org.openapis.openapi.models.operations.BatchEvaluateFeatureRequest;
 import org.openapis.openapi.models.operations.BatchEvaluateFeatureResponse;
@@ -29,40 +27,39 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchEvaluateFeatureRequest req = new BatchEvaluateFeatureRequest() {{
-                pathParams = new BatchEvaluateFeaturePathParams() {{
-                    project = "corrupti";
-                }};
-                headers = new BatchEvaluateFeatureHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-                request = new BatchEvaluateFeatureRequestBody() {{
+                requestBody = new BatchEvaluateFeatureRequestBody() {{
                     requests = new org.openapis.openapi.models.shared.EvaluationRequest[]{{
                         add(new EvaluationRequest() {{
-                            entityId = "error";
-                            evaluationContext = "deserunt";
-                            feature = "suscipit";
+                            entityId = "provident";
+                            evaluationContext = "distinctio";
+                            feature = "quibusdam";
                         }}),
                         add(new EvaluationRequest() {{
-                            entityId = "iure";
-                            evaluationContext = "magnam";
-                            feature = "debitis";
+                            entityId = "unde";
+                            evaluationContext = "nulla";
+                            feature = "corrupti";
+                        }}),
+                        add(new EvaluationRequest() {{
+                            entityId = "illum";
+                            evaluationContext = "vel";
+                            feature = "error";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "deserunt";
+                xAmzContentSha256 = "suscipit";
+                xAmzCredential = "iure";
+                xAmzDate = "magnam";
+                xAmzSecurityToken = "debitis";
+                xAmzSignature = "ipsa";
+                xAmzSignedHeaders = "delectus";
+                project = "tempora";
+            }}            
 
             BatchEvaluateFeatureResponse res = sdk.batchEvaluateFeature(req);
 
@@ -76,7 +73,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

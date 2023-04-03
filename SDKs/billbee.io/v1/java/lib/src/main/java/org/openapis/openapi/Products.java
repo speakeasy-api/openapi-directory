@@ -38,7 +38,7 @@ public class Products {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ArticleCreateArticleResponse articleCreateArticle(org.openapis.openapi.models.operations.ArticleCreateArticleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ArticleCreateArticleResponse articleCreateArticle(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/products");
         
@@ -89,7 +89,7 @@ public class Products {
      */
     public org.openapis.openapi.models.operations.ArticleDeleteArticleResponse articleDeleteArticle(org.openapis.openapi.models.operations.ArticleDeleteArticleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleDeleteArticlePathParams.class, baseUrl, "/api/v1/products/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleDeleteArticleRequest.class, baseUrl, "/api/v1/products/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -133,7 +133,7 @@ public class Products {
      */
     public org.openapis.openapi.models.operations.ArticleDeleteImageResponse articleDeleteImage(org.openapis.openapi.models.operations.ArticleDeleteImageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleDeleteImagePathParams.class, baseUrl, "/api/v1/products/images/{imageId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleDeleteImageRequest.class, baseUrl, "/api/v1/products/images/{imageId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -177,7 +177,7 @@ public class Products {
      */
     public org.openapis.openapi.models.operations.ArticleDeleteImageFromProductResponse articleDeleteImageFromProduct(org.openapis.openapi.models.operations.ArticleDeleteImageFromProductRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleDeleteImageFromProductPathParams.class, baseUrl, "/api/v1/products/{productId}/images/{imageId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleDeleteImageFromProductRequest.class, baseUrl, "/api/v1/products/{productId}/images/{imageId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -221,13 +221,13 @@ public class Products {
      */
     public org.openapis.openapi.models.operations.ArticleGetArticleResponse articleGetArticle(org.openapis.openapi.models.operations.ArticleGetArticleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleGetArticlePathParams.class, baseUrl, "/api/v1/products/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleGetArticleRequest.class, baseUrl, "/api/v1/products/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArticleGetArticleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArticleGetArticleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -314,7 +314,7 @@ public class Products {
      */
     public org.openapis.openapi.models.operations.ArticleGetCustomFieldResponse articleGetCustomField(org.openapis.openapi.models.operations.ArticleGetCustomFieldRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleGetCustomFieldPathParams.class, baseUrl, "/api/v1/products/custom-fields/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleGetCustomFieldRequest.class, baseUrl, "/api/v1/products/custom-fields/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -374,7 +374,7 @@ public class Products {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArticleGetCustomFieldsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArticleGetCustomFieldsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -428,7 +428,7 @@ public class Products {
      */
     public org.openapis.openapi.models.operations.ArticleGetImageResponse articleGetImage(org.openapis.openapi.models.operations.ArticleGetImageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleGetImagePathParams.class, baseUrl, "/api/v1/products/images/{imageId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleGetImageRequest.class, baseUrl, "/api/v1/products/images/{imageId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -482,7 +482,7 @@ public class Products {
      */
     public org.openapis.openapi.models.operations.ArticleGetImageFromProductResponse articleGetImageFromProduct(org.openapis.openapi.models.operations.ArticleGetImageFromProductRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleGetImageFromProductPathParams.class, baseUrl, "/api/v1/products/{productId}/images/{imageId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleGetImageFromProductRequest.class, baseUrl, "/api/v1/products/{productId}/images/{imageId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -536,7 +536,7 @@ public class Products {
      */
     public org.openapis.openapi.models.operations.ArticleGetImagesResponse articleGetImages(org.openapis.openapi.models.operations.ArticleGetImagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleGetImagesPathParams.class, baseUrl, "/api/v1/products/{productId}/images", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleGetImagesRequest.class, baseUrl, "/api/v1/products/{productId}/images", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -596,7 +596,7 @@ public class Products {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArticleGetListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArticleGetListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -689,7 +689,7 @@ public class Products {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArticleGetReservedAmountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArticleGetReservedAmountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -796,12 +796,12 @@ public class Products {
      */
     public org.openapis.openapi.models.operations.ArticlePatchArticleResponse articlePatchArticle(org.openapis.openapi.models.operations.ArticlePatchArticleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticlePatchArticlePathParams.class, baseUrl, "/api/v1/products/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticlePatchArticleRequest.class, baseUrl, "/api/v1/products/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -845,12 +845,12 @@ public class Products {
      */
     public org.openapis.openapi.models.operations.ArticlePutImageFormResponse articlePutImageForm(org.openapis.openapi.models.operations.ArticlePutImageFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticlePutImageFormPathParams.class, baseUrl, "/api/v1/products/{productId}/images/{imageId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticlePutImageFormRequest.class, baseUrl, "/api/v1/products/{productId}/images/{imageId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "billbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -904,12 +904,12 @@ public class Products {
      */
     public org.openapis.openapi.models.operations.ArticlePutImageJsonResponse articlePutImageJson(org.openapis.openapi.models.operations.ArticlePutImageJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticlePutImageJsonPathParams.class, baseUrl, "/api/v1/products/{productId}/images/{imageId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticlePutImageJsonRequest.class, baseUrl, "/api/v1/products/{productId}/images/{imageId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "billbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -963,12 +963,12 @@ public class Products {
      */
     public org.openapis.openapi.models.operations.ArticlePutImageRawResponse articlePutImageRaw(org.openapis.openapi.models.operations.ArticlePutImageRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticlePutImageRawPathParams.class, baseUrl, "/api/v1/products/{productId}/images/{imageId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticlePutImageRawRequest.class, baseUrl, "/api/v1/products/{productId}/images/{imageId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1020,7 +1020,7 @@ public class Products {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ArticleUpdateStockCodeFormResponse articleUpdateStockCodeForm(org.openapis.openapi.models.operations.ArticleUpdateStockCodeFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ArticleUpdateStockCodeFormResponse articleUpdateStockCodeForm(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelUpdateStockCodeAPIModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/products/updatestockcode");
         
@@ -1079,7 +1079,7 @@ public class Products {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ArticleUpdateStockCodeJsonResponse articleUpdateStockCodeJson(org.openapis.openapi.models.operations.ArticleUpdateStockCodeJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ArticleUpdateStockCodeJsonResponse articleUpdateStockCodeJson(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelUpdateStockCodeAPIModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/products/updatestockcode");
         
@@ -1138,7 +1138,7 @@ public class Products {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ArticleUpdateStockCodeRawResponse articleUpdateStockCodeRaw(org.openapis.openapi.models.operations.ArticleUpdateStockCodeRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ArticleUpdateStockCodeRawResponse articleUpdateStockCodeRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/products/updatestockcode");
         
@@ -1198,7 +1198,7 @@ public class Products {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ArticleUpdateStockFormResponse articleUpdateStockForm(org.openapis.openapi.models.operations.ArticleUpdateStockFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ArticleUpdateStockFormResponse articleUpdateStockForm(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/products/updatestock");
         
@@ -1258,7 +1258,7 @@ public class Products {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ArticleUpdateStockJsonResponse articleUpdateStockJson(org.openapis.openapi.models.operations.ArticleUpdateStockJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ArticleUpdateStockJsonResponse articleUpdateStockJson(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelUpdateStockAPIModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/products/updatestock");
         
@@ -1318,7 +1318,7 @@ public class Products {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ArticleUpdateStockRawResponse articleUpdateStockRaw(org.openapis.openapi.models.operations.ArticleUpdateStockRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ArticleUpdateStockRawResponse articleUpdateStockRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/products/updatestock");
         
@@ -1377,7 +1377,7 @@ public class Products {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchSearchFormResponse searchSearchForm(org.openapis.openapi.models.operations.SearchSearchFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchSearchFormResponse searchSearchForm(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiSearchControllerSearchModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/search");
         
@@ -1436,7 +1436,7 @@ public class Products {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchSearchJsonResponse searchSearchJson(org.openapis.openapi.models.operations.SearchSearchJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchSearchJsonResponse searchSearchJson(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiSearchControllerSearchModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/search");
         
@@ -1495,7 +1495,7 @@ public class Products {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchSearchRawResponse searchSearchRaw(org.openapis.openapi.models.operations.SearchSearchRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchSearchRawResponse searchSearchRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/search");
         

@@ -7,31 +7,110 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsManagementProfilesUpdateRequest {
-    
-    public AnalyticsManagementProfilesUpdatePathParams pathParams;
-    public AnalyticsManagementProfilesUpdateRequest withPathParams(AnalyticsManagementProfilesUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AnalyticsManagementProfilesUpdateQueryParams queryParams;
-    public AnalyticsManagementProfilesUpdateRequest withQueryParams(AnalyticsManagementProfilesUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProfileInput request;
-    public AnalyticsManagementProfilesUpdateRequest withRequest(org.openapis.openapi.models.shared.ProfileInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ProfileInput profileInput;
+    public AnalyticsManagementProfilesUpdateRequest withProfileInput(org.openapis.openapi.models.shared.ProfileInput profileInput) {
+        this.profileInput = profileInput;
         return this;
     }
     
+    /**
+     * Account ID to which the view (profile) belongs
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AnalyticsManagementProfilesUpdateRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public AnalyticsManagementProfilesUpdateSecurity security;
-    public AnalyticsManagementProfilesUpdateRequest withSecurity(AnalyticsManagementProfilesUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AnalyticsManagementProfilesUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AnalyticsManagementProfilesUpdateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AnalyticsManagementProfilesUpdateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AnalyticsManagementProfilesUpdateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AnalyticsManagementProfilesUpdateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * ID of the view (profile) to be updated.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
+    public String profileId;
+    public AnalyticsManagementProfilesUpdateRequest withProfileId(String profileId) {
+        this.profileId = profileId;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AnalyticsManagementProfilesUpdateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AnalyticsManagementProfilesUpdateRequest withUserIp(String userIp) {
+        this.userIp = userIp;
+        return this;
+    }
+    
+    /**
+     * Web property ID to which the view (profile) belongs
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webPropertyId")
+    public String webPropertyId;
+    public AnalyticsManagementProfilesUpdateRequest withWebPropertyId(String webPropertyId) {
+        this.webPropertyId = webPropertyId;
         return this;
     }
     

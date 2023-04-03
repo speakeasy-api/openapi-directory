@@ -7,38 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveGroupsUpdateRequest {
-    
-    public DriveGroupsUpdatePathParams pathParams;
-    public DriveGroupsUpdateRequest withPathParams(DriveGroupsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DriveGroupsUpdateQueryParams queryParams;
-    public DriveGroupsUpdateRequest withQueryParams(DriveGroupsUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DriveGroupsUpdateHeaders headers;
-    public DriveGroupsUpdateRequest withHeaders(DriveGroupsUpdateHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DriveGroupInput request;
-    public DriveGroupsUpdateRequest withRequest(org.openapis.openapi.models.shared.DriveGroupInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DriveGroupInput driveGroupInput;
+    public DriveGroupsUpdateRequest withDriveGroupInput(org.openapis.openapi.models.shared.DriveGroupInput driveGroupInput) {
+        this.driveGroupInput = driveGroupInput;
         return this;
     }
     
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DriveGroupsUpdateRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public DriveGroupsUpdateSecurity security;
-    public DriveGroupsUpdateRequest withSecurity(DriveGroupsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public DriveGroupsUpdateRequest withRaw(Boolean raw) {
+        this.raw = raw;
+        return this;
+    }
+    
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public DriveGroupsUpdateRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public DriveGroupsUpdateRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public DriveGroupsUpdateRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

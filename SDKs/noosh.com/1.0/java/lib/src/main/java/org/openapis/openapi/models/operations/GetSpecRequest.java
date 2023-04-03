@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpecRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public GetSpecRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
     
-    public GetSpecPathParams pathParams;
-    public GetSpecRequest withPathParams(GetSpecPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spec_id")
+    public String specId;
+    public GetSpecRequest withSpecId(String specId) {
+        this.specId = specId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public GetSpecRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

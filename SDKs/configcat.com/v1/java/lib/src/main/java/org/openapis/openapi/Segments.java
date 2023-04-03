@@ -45,12 +45,12 @@ public class Segments {
      */
     public org.openapis.openapi.models.operations.CreateSegmentResponse createSegment(org.openapis.openapi.models.operations.CreateSegmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSegmentPathParams.class, baseUrl, "/v1/products/{productId}/segments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSegmentRequest.class, baseUrl, "/v1/products/{productId}/segments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createSegmentModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -98,7 +98,7 @@ public class Segments {
      */
     public org.openapis.openapi.models.operations.DeleteSegmentResponse deleteSegment(org.openapis.openapi.models.operations.DeleteSegmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSegmentPathParams.class, baseUrl, "/v1/segments/{segmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSegmentRequest.class, baseUrl, "/v1/segments/{segmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -133,7 +133,7 @@ public class Segments {
      */
     public org.openapis.openapi.models.operations.GetSegmentResponse getSegment(org.openapis.openapi.models.operations.GetSegmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSegmentPathParams.class, baseUrl, "/v1/segments/{segmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSegmentRequest.class, baseUrl, "/v1/segments/{segmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -182,7 +182,7 @@ public class Segments {
      */
     public org.openapis.openapi.models.operations.GetSegmentsResponse getSegments(org.openapis.openapi.models.operations.GetSegmentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSegmentsPathParams.class, baseUrl, "/v1/products/{productId}/segments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSegmentsRequest.class, baseUrl, "/v1/products/{productId}/segments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -230,12 +230,12 @@ public class Segments {
      */
     public org.openapis.openapi.models.operations.UpdateSegmentResponse updateSegment(org.openapis.openapi.models.operations.UpdateSegmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSegmentPathParams.class, baseUrl, "/v1/segments/{segmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSegmentRequest.class, baseUrl, "/v1/segments/{segmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateSegmentModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

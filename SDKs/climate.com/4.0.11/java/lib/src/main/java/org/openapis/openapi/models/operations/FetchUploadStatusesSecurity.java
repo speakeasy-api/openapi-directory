@@ -7,16 +7,16 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchUploadStatusesSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAPIKey apiKey;
-    public FetchUploadStatusesSecurity withApiKey(org.openapis.openapi.models.shared.SchemeAPIKey apiKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Api-Key")
+    public String apiKey;
+    public FetchUploadStatusesSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOauth2AuthorizationCode oauth2AuthorizationCode;
-    public FetchUploadStatusesSecurity withOauth2AuthorizationCode(org.openapis.openapi.models.shared.SchemeOauth2AuthorizationCode oauth2AuthorizationCode) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oauth2AuthorizationCode;
+    public FetchUploadStatusesSecurity withOauth2AuthorizationCode(String oauth2AuthorizationCode) {
         this.oauth2AuthorizationCode = oauth2AuthorizationCode;
         return this;
     }

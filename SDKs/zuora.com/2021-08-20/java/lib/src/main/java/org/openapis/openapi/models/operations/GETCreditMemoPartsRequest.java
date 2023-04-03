@@ -4,27 +4,52 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreditMemoPartsRequest {
-    
-    public GETCreditMemoPartsPathParams pathParams;
-    public GETCreditMemoPartsRequest withPathParams(GETCreditMemoPartsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public GETCreditMemoPartsRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
         return this;
     }
     
-    
-    public GETCreditMemoPartsQueryParams queryParams;
-    public GETCreditMemoPartsRequest withQueryParams(GETCreditMemoPartsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public GETCreditMemoPartsRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
         return this;
     }
     
+    /**
+     * The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=creditMemoId")
+    public String creditMemoId;
+    public GETCreditMemoPartsRequest withCreditMemoId(String creditMemoId) {
+        this.creditMemoId = creditMemoId;
+        return this;
+    }
     
-    public GETCreditMemoPartsHeaders headers;
-    public GETCreditMemoPartsRequest withHeaders(GETCreditMemoPartsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Number of rows returned per page.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public GETCreditMemoPartsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadVideosSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeCustomerAccessCode customerAccessCode;
-    public DownloadVideosSecurity withCustomerAccessCode(org.openapis.openapi.models.shared.SchemeCustomerAccessCode customerAccessCode) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String customerAccessCode;
+    public DownloadVideosSecurity withCustomerAccessCode(String customerAccessCode) {
         this.customerAccessCode = customerAccessCode;
         return this;
     }

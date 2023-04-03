@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCampaignBudgetRequest {
-    
-    public UpdateCampaignBudgetPathParams pathParams;
-    public UpdateCampaignBudgetRequest withPathParams(UpdateCampaignBudgetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * This type defines the request fields for the budget details that shall be updated.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateCampaignBudgetRequest request;
-    public UpdateCampaignBudgetRequest withRequest(org.openapis.openapi.models.shared.UpdateCampaignBudgetRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateCampaignBudgetRequest updateCampaignBudgetRequest;
+    public UpdateCampaignBudgetRequest withUpdateCampaignBudgetRequest(org.openapis.openapi.models.shared.UpdateCampaignBudgetRequest updateCampaignBudgetRequest) {
+        this.updateCampaignBudgetRequest = updateCampaignBudgetRequest;
         return this;
     }
     
-    
-    public UpdateCampaignBudgetSecurity security;
-    public UpdateCampaignBudgetRequest withSecurity(UpdateCampaignBudgetSecurity security) {
-        this.security = security;
+    /**
+     * A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; You can retrieve the campaign IDs for a specified seller using the &lt;a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns"&gt;getCampaigns&lt;/a&gt; method.&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaign_id")
+    public String campaignId;
+    public UpdateCampaignBudgetRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
         return this;
     }
     

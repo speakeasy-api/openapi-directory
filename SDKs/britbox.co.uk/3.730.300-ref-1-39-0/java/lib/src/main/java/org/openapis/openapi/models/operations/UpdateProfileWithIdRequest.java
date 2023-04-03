@@ -7,34 +7,73 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateProfileWithIdRequest {
-    
-    public UpdateProfileWithIdPathParams pathParams;
-    public UpdateProfileWithIdRequest withPathParams(UpdateProfileWithIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateProfileWithIdQueryParams queryParams;
-    public UpdateProfileWithIdRequest withQueryParams(UpdateProfileWithIdQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Updated profile details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProfileUpdateRequest request;
-    public UpdateProfileWithIdRequest withRequest(org.openapis.openapi.models.shared.ProfileUpdateRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ProfileUpdateRequest profileUpdateRequest;
+    public UpdateProfileWithIdRequest withProfileUpdateRequest(org.openapis.openapi.models.shared.ProfileUpdateRequest profileUpdateRequest) {
+        this.profileUpdateRequest = profileUpdateRequest;
         return this;
     }
     
+    /**
+     * The set of opt in feature flags which cause breaking changes to responses.
+     * 
+     * While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
+     * may need to evolve over this time.
+     * 
+     * These feature flags allow clients to select which response formats they expect and avoid breaking
+     * clients as these formats evolve under the current major version.
+     * 
+     * ### Flags
+     * 
+     * - `all` - Enable all flags. Useful for testing. _Don't use in production_.
+     * - `idp` - Dynamic item detail pages with schedulable rows.
+     * - `ldp` - Dynamic list detail pages with schedulable rows.
+     * - `hb` - Hubble formatted image urls.
+     * - `rpt` - Updated resume point threshold logic.
+     * - `cas` - "Custom Asset Search", inlcude `customAssets` in search results.
+     * - `lrl` - Do not pre-populate related list if more than `max_list_prefetch` down the page.
+     * - `cd` - Custom Destination support.
+     * 
+     * See the `feature-flags.md` for available flag details.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
+    public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+    public UpdateProfileWithIdRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
+        this.ff = ff;
+        return this;
+    }
     
-    public UpdateProfileWithIdSecurity security;
-    public UpdateProfileWithIdRequest withSecurity(UpdateProfileWithIdSecurity security) {
-        this.security = security;
+    /**
+     * The identifier of the profile to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateProfileWithIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Language code for the preferred language to be returned in the response.
+     * 
+     * Parameter value is case-insensitive and should be
+     *   - a valid 2 letter language code without region such as en, de
+     *   - or with region such as en_us, en_au
+     * 
+     * If undefined then defaults to 'en', unless the server has been configured
+     * with a custom default.
+     * 
+     * See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public UpdateProfileWithIdRequest withLang(String lang) {
+        this.lang = lang;
         return this;
     }
     

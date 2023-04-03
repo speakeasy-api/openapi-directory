@@ -7,31 +7,160 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageObjectsUpdateRequest {
-    
-    public StorageObjectsUpdatePathParams pathParams;
-    public StorageObjectsUpdateRequest withPathParams(StorageObjectsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public StorageObjectsUpdateQueryParams queryParams;
-    public StorageObjectsUpdateRequest withQueryParams(StorageObjectsUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Object request;
-    public StorageObjectsUpdateRequest withRequest(org.openapis.openapi.models.shared.Object request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Object object1;
+    public StorageObjectsUpdateRequest withObject1(org.openapis.openapi.models.shared.Object object1) {
+        this.object1 = object1;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public StorageObjectsUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public StorageObjectsUpdateSecurity security;
-    public StorageObjectsUpdateRequest withSecurity(StorageObjectsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Name of the bucket in which the object resides.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket")
+    public String bucket;
+    public StorageObjectsUpdateRequest withBucket(String bucket) {
+        this.bucket = bucket;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public StorageObjectsUpdateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * If present, selects a specific revision of this object (as opposed to the latest version, the default).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=generation")
+    public String generation;
+    public StorageObjectsUpdateRequest withGeneration(String generation) {
+        this.generation = generation;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the object's current generation matches the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifGenerationMatch")
+    public String ifGenerationMatch;
+    public StorageObjectsUpdateRequest withIfGenerationMatch(String ifGenerationMatch) {
+        this.ifGenerationMatch = ifGenerationMatch;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the object's current generation does not match the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifGenerationNotMatch")
+    public String ifGenerationNotMatch;
+    public StorageObjectsUpdateRequest withIfGenerationNotMatch(String ifGenerationNotMatch) {
+        this.ifGenerationNotMatch = ifGenerationNotMatch;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the object's current metageneration matches the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationMatch")
+    public String ifMetagenerationMatch;
+    public StorageObjectsUpdateRequest withIfMetagenerationMatch(String ifMetagenerationMatch) {
+        this.ifMetagenerationMatch = ifMetagenerationMatch;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the object's current metageneration does not match the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationNotMatch")
+    public String ifMetagenerationNotMatch;
+    public StorageObjectsUpdateRequest withIfMetagenerationNotMatch(String ifMetagenerationNotMatch) {
+        this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public StorageObjectsUpdateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public StorageObjectsUpdateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Name of the object.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object")
+    public String objectPathParameter;
+    public StorageObjectsUpdateRequest withObjectPathParameter(String objectPathParameter) {
+        this.objectPathParameter = objectPathParameter;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public StorageObjectsUpdateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Set of properties to return. Defaults to full.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
+    public StorageObjectsUpdateProjectionEnum projection;
+    public StorageObjectsUpdateRequest withProjection(StorageObjectsUpdateProjectionEnum projection) {
+        this.projection = projection;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public StorageObjectsUpdateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public StorageObjectsUpdateRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountsRequest {
-    
-    public GetAccountsPathParams pathParams;
-    public GetAccountsRequest withPathParams(GetAccountsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetAccountsSecurity security;
-    public GetAccountsRequest withSecurity(GetAccountsSecurity security) {
-        this.security = security;
+    /**
+     * SHA2 hash of device firmware
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firmware_hash")
+    public String firmwareHash;
+    public GetAccountsRequest withFirmwareHash(String firmwareHash) {
+        this.firmwareHash = firmwareHash;
         return this;
     }
     

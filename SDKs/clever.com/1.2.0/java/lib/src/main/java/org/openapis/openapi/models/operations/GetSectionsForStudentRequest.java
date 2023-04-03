@@ -4,20 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSectionsForStudentRequest {
-    
-    public GetSectionsForStudentPathParams pathParams;
-    public GetSectionsForStudentRequest withPathParams(GetSectionsForStudentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_before")
+    public String endingBefore;
+    public GetSectionsForStudentRequest withEndingBefore(String endingBefore) {
+        this.endingBefore = endingBefore;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSectionsForStudentRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetSectionsForStudentQueryParams queryParams;
-    public GetSectionsForStudentRequest withQueryParams(GetSectionsForStudentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetSectionsForStudentRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=starting_after")
+    public String startingAfter;
+    public GetSectionsForStudentRequest withStartingAfter(String startingAfter) {
+        this.startingAfter = startingAfter;
         return this;
     }
     

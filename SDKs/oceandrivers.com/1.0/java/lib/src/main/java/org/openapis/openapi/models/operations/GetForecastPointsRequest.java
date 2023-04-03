@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetForecastPointsRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=language")
+    public String language;
+    public GetForecastPointsRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
     
-    public GetForecastPointsPathParams pathParams;
-    public GetForecastPointsRequest withPathParams(GetForecastPointsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * base URL for the the
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=yatchclubid")
+    public String yatchclubid;
+    public GetForecastPointsRequest withYatchclubid(String yatchclubid) {
+        this.yatchclubid = yatchclubid;
         return this;
     }
     

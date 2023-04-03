@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDrugByIDRequest {
-    
-    public GetDrugByIDPathParams pathParams;
-    public GetDrugByIDRequest withPathParams(GetDrugByIDPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DRUG_ID")
+    public String drugIDPathParameter;
+    public GetDrugByIDRequest withDRUGIDPathParameter(String drugIDPathParameter) {
+        this.drugIDPathParameter = drugIDPathParameter;
         return this;
     }
     
-    
-    public GetDrugByIDQueryParams queryParams;
-    public GetDrugByIDRequest withQueryParams(GetDrugByIDQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An ID in the drug index.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=drug_id")
+    public String drugIdQueryParameter;
+    public GetDrugByIDRequest withDrugIdQueryParameter(String drugIdQueryParameter) {
+        this.drugIdQueryParameter = drugIdQueryParameter;
         return this;
     }
     

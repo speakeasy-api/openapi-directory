@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAdsByInventoryReferenceRequest {
-    
-    public GetAdsByInventoryReferencePathParams pathParams;
-    public GetAdsByInventoryReferenceRequest withPathParams(GetAdsByInventoryReferencePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; You can retrieve the campaign IDs for a specified seller using the &lt;a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns"&gt;getCampaigns&lt;/a&gt; method.&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaign_id")
+    public String campaignId;
+    public GetAdsByInventoryReferenceRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
         return this;
     }
     
-    
-    public GetAdsByInventoryReferenceQueryParams queryParams;
-    public GetAdsByInventoryReferenceRequest withQueryParams(GetAdsByInventoryReferenceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The inventory reference ID associated with the ad you want returned. A seller's inventory reference ID is the ID of either a listing or the ID of an inventory item group (the parent of a multi-variation listing, such as a shirt that is available in multiple sizes and colors). You must always supply in both an &lt;b&gt;inventory_reference_id&lt;/b&gt; and an &lt;b&gt;inventory_reference_type&lt;/b&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inventory_reference_id")
+    public String inventoryReferenceId;
+    public GetAdsByInventoryReferenceRequest withInventoryReferenceId(String inventoryReferenceId) {
+        this.inventoryReferenceId = inventoryReferenceId;
         return this;
     }
     
-    
-    public GetAdsByInventoryReferenceSecurity security;
-    public GetAdsByInventoryReferenceRequest withSecurity(GetAdsByInventoryReferenceSecurity security) {
-        this.security = security;
+    /**
+     * The type of the inventory reference ID. Set this value to either &lt;code&gt;INVENTORY_ITEM&lt;/CODE&gt; (a single listing) or &lt;code&gt;INVENTORY_ITEM_GROUP&lt;/CODE&gt; (a multi-variation listing). You must always pass in both an &lt;b&gt;inventory_reference_id&lt;/b&gt; and an &lt;b&gt;inventory_reference_type&lt;/b&gt;. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inventory_reference_type")
+    public String inventoryReferenceType;
+    public GetAdsByInventoryReferenceRequest withInventoryReferenceType(String inventoryReferenceType) {
+        this.inventoryReferenceType = inventoryReferenceType;
         return this;
     }
     

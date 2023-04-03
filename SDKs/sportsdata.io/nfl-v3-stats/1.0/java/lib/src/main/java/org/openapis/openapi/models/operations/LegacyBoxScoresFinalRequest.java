@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LegacyBoxScoresFinalRequest {
-    
-    public LegacyBoxScoresFinalPathParams pathParams;
-    public LegacyBoxScoresFinalRequest withPathParams(LegacyBoxScoresFinalPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public LegacyBoxScoresFinalFormatEnum format;
+    public LegacyBoxScoresFinalRequest withFormat(LegacyBoxScoresFinalFormatEnum format) {
+        this.format = format;
         return this;
     }
     

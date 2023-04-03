@@ -28,7 +28,7 @@ public class Attachment {
 
     public org.openapis.openapi.models.operations.CreateAttachmentResponse createAttachment(org.openapis.openapi.models.operations.CreateAttachmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateAttachmentPathParams.class, baseUrl, "/buckets/{bucket_id}/collections/{collection_id}/records/{id}/attachment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateAttachmentRequest.class, baseUrl, "/buckets/{bucket_id}/collections/{collection_id}/records/{id}/attachment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -54,7 +54,7 @@ public class Attachment {
 
     public org.openapis.openapi.models.operations.DeleteAttachmentResponse deleteAttachment(org.openapis.openapi.models.operations.DeleteAttachmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAttachmentPathParams.class, baseUrl, "/buckets/{bucket_id}/collections/{collection_id}/records/{id}/attachment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAttachmentRequest.class, baseUrl, "/buckets/{bucket_id}/collections/{collection_id}/records/{id}/attachment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");

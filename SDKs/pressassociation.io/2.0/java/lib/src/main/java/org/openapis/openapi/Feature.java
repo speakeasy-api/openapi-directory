@@ -35,19 +35,20 @@ public class Feature {
      * Feature Detail
      * Return the content of the selected feature.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetFeatureResponse getFeature(org.openapis.openapi.models.operations.GetFeatureRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetFeatureResponse getFeature(org.openapis.openapi.models.operations.GetFeatureRequest request, org.openapis.openapi.models.operations.GetFeatureSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFeaturePathParams.class, baseUrl, "/feature/{featureId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFeatureRequest.class, baseUrl, "/feature/{featureId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -74,11 +75,10 @@ public class Feature {
     /**
      * Feature Type Collection
      * Return a collection of Feature Types.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListFeatureTypesResponse listFeatureTypes(org.openapis.openapi.models.operations.ListFeatureTypesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListFeatureTypesResponse listFeatureTypes() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/feature-type");
         
@@ -87,8 +87,7 @@ public class Feature {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -115,10 +114,11 @@ public class Feature {
      * Feature Collection
      * Return a collection of Feature.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListFeaturesResponse listFeatures(org.openapis.openapi.models.operations.ListFeaturesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListFeaturesResponse listFeatures(org.openapis.openapi.models.operations.ListFeaturesRequest request, org.openapis.openapi.models.operations.ListFeaturesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/feature");
         
@@ -126,14 +126,14 @@ public class Feature {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListFeaturesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListFeaturesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

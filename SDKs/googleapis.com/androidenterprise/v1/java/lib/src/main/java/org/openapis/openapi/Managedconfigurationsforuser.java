@@ -34,25 +34,26 @@ public class Managedconfigurationsforuser {
     /**
      * Removes a per-user managed configuration for an app for the specified user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserDeleteResponse androidenterpriseManagedconfigurationsforuserDelete(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserDeleteResponse androidenterpriseManagedconfigurationsforuserDelete(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserDeleteRequest request, org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserDeletePathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser/{managedConfigurationForUserId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserDeleteRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser/{managedConfigurationForUserId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,25 +74,26 @@ public class Managedconfigurationsforuser {
     /**
      * Retrieves details of a per-user managed configuration for an app for the specified user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserGetResponse androidenterpriseManagedconfigurationsforuserGet(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserGetResponse androidenterpriseManagedconfigurationsforuserGet(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserGetRequest request, org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserGetPathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser/{managedConfigurationForUserId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserGetRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser/{managedConfigurationForUserId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,25 +120,26 @@ public class Managedconfigurationsforuser {
     /**
      * Lists all the per-user managed configurations for the specified user. Only the ID is set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserListResponse androidenterpriseManagedconfigurationsforuserList(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserListResponse androidenterpriseManagedconfigurationsforuserList(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserListRequest request, org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserListPathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserListRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -163,27 +166,28 @@ public class Managedconfigurationsforuser {
     /**
      * Adds or updates the managed configuration settings for an app for the specified user. If you support the Managed configurations iframe, you can apply managed configurations to a user by specifying an mcmId and its associated configuration variables (if any) in the request. Alternatively, all EMMs can apply managed configurations by passing a list of managed properties.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserUpdateResponse androidenterpriseManagedconfigurationsforuserUpdate(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserUpdateResponse androidenterpriseManagedconfigurationsforuserUpdate(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserUpdateRequest request, org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserUpdatePathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser/{managedConfigurationForUserId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserUpdateRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/users/{userId}/managedConfigurationsForUser/{managedConfigurationForUserId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "managedConfiguration", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseManagedconfigurationsforuserUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

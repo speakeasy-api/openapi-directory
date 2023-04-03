@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveRequest {
-    
-    public SavePathParams pathParams;
-    public SaveRequest withPathParams(SavePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to save
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public SaveRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdCollaboratorsUseridPutRequest {
-    
-    public StoryIdCollaboratorsUseridPutPathParams pathParams;
-    public StoryIdCollaboratorsUseridPutRequest withPathParams(StoryIdCollaboratorsUseridPutPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * the id from the story object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public StoryIdCollaboratorsUseridPutRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
@@ -18,9 +21,19 @@ public class StoryIdCollaboratorsUseridPutRequest {
      * Collaborator user id (presalytics userid) and permission type
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.StoryCollaborator request;
-    public StoryIdCollaboratorsUseridPutRequest withRequest(org.openapis.openapi.models.shared.StoryCollaborator request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.StoryCollaborator storyCollaborator;
+    public StoryIdCollaboratorsUseridPutRequest withStoryCollaborator(org.openapis.openapi.models.shared.StoryCollaborator storyCollaborator) {
+        this.storyCollaborator = storyCollaborator;
+        return this;
+    }
+    
+    /**
+     * The presalytics userid (NOT the Id of the story_collaborator object)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=story_collaborator_userid")
+    public String storyCollaboratorUserid;
+    public StoryIdCollaboratorsUseridPutRequest withStoryCollaboratorUserid(String storyCollaboratorUserid) {
+        this.storyCollaboratorUserid = storyCollaboratorUserid;
         return this;
     }
     

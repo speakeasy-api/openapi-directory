@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostReportsCustomCreateRequest {
+    /**
+     * Filtering options to be used when creating a filtered report. The options must be in JSON form, example: {'gender':['male'],'ages':['18-24'],'countries':['usa']}
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public PostReportsCustomCreateRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public PostReportsCustomCreateQueryParams queryParams;
-    public PostReportsCustomCreateRequest withQueryParams(PostReportsCustomCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Upload hash to be used for inserting handles
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_hash")
+    public String uploadHash;
+    public PostReportsCustomCreateRequest withUploadHash(String uploadHash) {
+        this.uploadHash = uploadHash;
         return this;
     }
     

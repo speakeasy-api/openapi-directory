@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditNameServersRequest {
-    
-    public EditNameServersPathParams pathParams;
-    public EditNameServersRequest withPathParams(EditNameServersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public EditNameServersQueryParams queryParams;
-    public EditNameServersRequest withQueryParams(EditNameServersQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditNameServers request;
-    public EditNameServersRequest withRequest(org.openapis.openapi.models.shared.EditNameServers request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.EditNameServers editNameServers;
+    public EditNameServersRequest withEditNameServers(org.openapis.openapi.models.shared.EditNameServers editNameServers) {
+        this.editNameServers = editNameServers;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public EditNameServersRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * The domain name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public EditNameServersRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     

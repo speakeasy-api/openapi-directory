@@ -7,24 +7,57 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SettlethetransactionRequest {
-    
-    public SettlethetransactionPathParams pathParams;
-    public SettlethetransactionRequest withPathParams(SettlethetransactionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public SettlethetransactionRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public SettlethetransactionHeaders headers;
-    public SettlethetransactionRequest withHeaders(SettlethetransactionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Media type of the body of the request.  Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public SettlethetransactionRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SettlethetransactionRequest request;
-    public SettlethetransactionRequest withRequest(org.openapis.openapi.models.shared.SettlethetransactionRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SettlethetransactionRequest settlethetransactionRequest;
+    public SettlethetransactionRequest withSettlethetransactionRequest(org.openapis.openapi.models.shared.SettlethetransactionRequest settlethetransactionRequest) {
+        this.settlethetransactionRequest = settlethetransactionRequest;
+        return this;
+    }
+    
+    /**
+     * The AppKey configured by the merchant (optional configuration)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppKey")
+    public String xPROVIDERAPIAppKey;
+    public SettlethetransactionRequest withXPROVIDERAPIAppKey(String xPROVIDERAPIAppKey) {
+        this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
+        return this;
+    }
+    
+    /**
+     * The AppToken configured by the merchant (optional configuration)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppToken")
+    public String xPROVIDERAPIAppToken;
+    public SettlethetransactionRequest withXPROVIDERAPIAppToken(String xPROVIDERAPIAppToken) {
+        this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionId")
+    public String transactionId;
+    public SettlethetransactionRequest withTransactionId(String transactionId) {
+        this.transactionId = transactionId;
         return this;
     }
     

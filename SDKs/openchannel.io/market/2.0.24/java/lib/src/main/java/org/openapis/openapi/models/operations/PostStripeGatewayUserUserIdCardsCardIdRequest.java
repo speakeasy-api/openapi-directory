@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostStripeGatewayUserUserIdCardsCardIdRequest {
-    
-    public PostStripeGatewayUserUserIdCardsCardIdPathParams pathParams;
-    public PostStripeGatewayUserUserIdCardsCardIdRequest withPathParams(PostStripeGatewayUserUserIdCardsCardIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The card holder's city
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address_city")
+    public String addressCity;
+    public PostStripeGatewayUserUserIdCardsCardIdRequest withAddressCity(String addressCity) {
+        this.addressCity = addressCity;
         return this;
     }
     
+    /**
+     * The card holder's country
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address_country")
+    public String addressCountry;
+    public PostStripeGatewayUserUserIdCardsCardIdRequest withAddressCountry(String addressCountry) {
+        this.addressCountry = addressCountry;
+        return this;
+    }
     
-    public PostStripeGatewayUserUserIdCardsCardIdQueryParams queryParams;
-    public PostStripeGatewayUserUserIdCardsCardIdRequest withQueryParams(PostStripeGatewayUserUserIdCardsCardIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The card holder's street address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address_line1")
+    public String addressLine1;
+    public PostStripeGatewayUserUserIdCardsCardIdRequest withAddressLine1(String addressLine1) {
+        this.addressLine1 = addressLine1;
+        return this;
+    }
+    
+    /**
+     * The card holder's street address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address_line2")
+    public String addressLine2;
+    public PostStripeGatewayUserUserIdCardsCardIdRequest withAddressLine2(String addressLine2) {
+        this.addressLine2 = addressLine2;
+        return this;
+    }
+    
+    /**
+     * The card holder's city state/province
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address_state")
+    public String addressState;
+    public PostStripeGatewayUserUserIdCardsCardIdRequest withAddressState(String addressState) {
+        this.addressState = addressState;
+        return this;
+    }
+    
+    /**
+     * The card holder's zip/postal code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address_zip")
+    public String addressZip;
+    public PostStripeGatewayUserUserIdCardsCardIdRequest withAddressZip(String addressZip) {
+        this.addressZip = addressZip;
+        return this;
+    }
+    
+    /**
+     * The id of the card to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cardId")
+    public String cardId;
+    public PostStripeGatewayUserUserIdCardsCardIdRequest withCardId(String cardId) {
+        this.cardId = cardId;
+        return this;
+    }
+    
+    /**
+     * Set to true if this should be set to be the default credit card
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isDefault")
+    public Boolean isDefault;
+    public PostStripeGatewayUserUserIdCardsCardIdRequest withIsDefault(Boolean isDefault) {
+        this.isDefault = isDefault;
+        return this;
+    }
+    
+    /**
+     * The id of the user adding their credit card
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public PostStripeGatewayUserUserIdCardsCardIdRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

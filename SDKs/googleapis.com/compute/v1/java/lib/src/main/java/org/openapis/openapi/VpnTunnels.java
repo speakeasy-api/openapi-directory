@@ -34,25 +34,26 @@ public class VpnTunnels {
     /**
      * Retrieves an aggregated list of VPN tunnels.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeVpnTunnelsAggregatedListResponse computeVpnTunnelsAggregatedList(org.openapis.openapi.models.operations.ComputeVpnTunnelsAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeVpnTunnelsAggregatedListResponse computeVpnTunnelsAggregatedList(org.openapis.openapi.models.operations.ComputeVpnTunnelsAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeVpnTunnelsAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeVpnTunnelsAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/vpnTunnels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeVpnTunnelsAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/vpnTunnels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeVpnTunnelsAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeVpnTunnelsAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class VpnTunnels {
     /**
      * Deletes the specified VpnTunnel resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeVpnTunnelsDeleteResponse computeVpnTunnelsDelete(org.openapis.openapi.models.operations.ComputeVpnTunnelsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeVpnTunnelsDeleteResponse computeVpnTunnelsDelete(org.openapis.openapi.models.operations.ComputeVpnTunnelsDeleteRequest request, org.openapis.openapi.models.operations.ComputeVpnTunnelsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeVpnTunnelsDeletePathParams.class, baseUrl, "/projects/{project}/regions/{region}/vpnTunnels/{vpnTunnel}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeVpnTunnelsDeleteRequest.class, baseUrl, "/projects/{project}/regions/{region}/vpnTunnels/{vpnTunnel}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeVpnTunnelsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeVpnTunnelsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,25 +126,26 @@ public class VpnTunnels {
     /**
      * Returns the specified VpnTunnel resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeVpnTunnelsGetResponse computeVpnTunnelsGet(org.openapis.openapi.models.operations.ComputeVpnTunnelsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeVpnTunnelsGetResponse computeVpnTunnelsGet(org.openapis.openapi.models.operations.ComputeVpnTunnelsGetRequest request, org.openapis.openapi.models.operations.ComputeVpnTunnelsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeVpnTunnelsGetPathParams.class, baseUrl, "/projects/{project}/regions/{region}/vpnTunnels/{vpnTunnel}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeVpnTunnelsGetRequest.class, baseUrl, "/projects/{project}/regions/{region}/vpnTunnels/{vpnTunnel}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeVpnTunnelsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeVpnTunnelsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,27 +172,28 @@ public class VpnTunnels {
     /**
      * Creates a VpnTunnel resource in the specified project and region using the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeVpnTunnelsInsertResponse computeVpnTunnelsInsert(org.openapis.openapi.models.operations.ComputeVpnTunnelsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeVpnTunnelsInsertResponse computeVpnTunnelsInsert(org.openapis.openapi.models.operations.ComputeVpnTunnelsInsertRequest request, org.openapis.openapi.models.operations.ComputeVpnTunnelsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeVpnTunnelsInsertPathParams.class, baseUrl, "/projects/{project}/regions/{region}/vpnTunnels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeVpnTunnelsInsertRequest.class, baseUrl, "/projects/{project}/regions/{region}/vpnTunnels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "vpnTunnel", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeVpnTunnelsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeVpnTunnelsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,25 +220,26 @@ public class VpnTunnels {
     /**
      * Retrieves a list of VpnTunnel resources contained in the specified project and region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeVpnTunnelsListResponse computeVpnTunnelsList(org.openapis.openapi.models.operations.ComputeVpnTunnelsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeVpnTunnelsListResponse computeVpnTunnelsList(org.openapis.openapi.models.operations.ComputeVpnTunnelsListRequest request, org.openapis.openapi.models.operations.ComputeVpnTunnelsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeVpnTunnelsListPathParams.class, baseUrl, "/projects/{project}/regions/{region}/vpnTunnels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeVpnTunnelsListRequest.class, baseUrl, "/projects/{project}/regions/{region}/vpnTunnels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeVpnTunnelsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeVpnTunnelsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,27 +266,28 @@ public class VpnTunnels {
     /**
      * Sets the labels on a VpnTunnel. To learn more about labels, read the Labeling Resources documentation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeVpnTunnelsSetLabelsResponse computeVpnTunnelsSetLabels(org.openapis.openapi.models.operations.ComputeVpnTunnelsSetLabelsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeVpnTunnelsSetLabelsResponse computeVpnTunnelsSetLabels(org.openapis.openapi.models.operations.ComputeVpnTunnelsSetLabelsRequest request, org.openapis.openapi.models.operations.ComputeVpnTunnelsSetLabelsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeVpnTunnelsSetLabelsPathParams.class, baseUrl, "/projects/{project}/regions/{region}/vpnTunnels/{resource}/setLabels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeVpnTunnelsSetLabelsRequest.class, baseUrl, "/projects/{project}/regions/{region}/vpnTunnels/{resource}/setLabels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "regionSetLabelsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeVpnTunnelsSetLabelsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeVpnTunnelsSetLabelsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

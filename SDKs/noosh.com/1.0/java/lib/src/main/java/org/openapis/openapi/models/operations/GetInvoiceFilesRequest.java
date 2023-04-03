@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInvoiceFilesRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoice_id")
+    public String invoiceId;
+    public GetInvoiceFilesRequest withInvoiceId(String invoiceId) {
+        this.invoiceId = invoiceId;
+        return this;
+    }
     
-    public GetInvoiceFilesPathParams pathParams;
-    public GetInvoiceFilesRequest withPathParams(GetInvoiceFilesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public GetInvoiceFilesRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public GetInvoiceFilesRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

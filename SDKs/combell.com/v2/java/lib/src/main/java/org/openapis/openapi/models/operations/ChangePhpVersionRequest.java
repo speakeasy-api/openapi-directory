@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangePhpVersionRequest {
-    
-    public ChangePhpVersionPathParams pathParams;
-    public ChangePhpVersionRequest withPathParams(ChangePhpVersionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ChangePhpVersionQueryParams queryParams;
-    public ChangePhpVersionRequest withQueryParams(ChangePhpVersionQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The new PHP version.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PhpVersion request;
-    public ChangePhpVersionRequest withRequest(org.openapis.openapi.models.shared.PhpVersion request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PhpVersion phpVersion;
+    public ChangePhpVersionRequest withPhpVersion(org.openapis.openapi.models.shared.PhpVersion phpVersion) {
+        this.phpVersion = phpVersion;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public ChangePhpVersionRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Linux hosting domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public ChangePhpVersionRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     

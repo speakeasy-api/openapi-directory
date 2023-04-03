@@ -4,20 +4,136 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidChorelistPutRequest {
-    
-    public KkidChorelistPutQueryParams queryParams;
-    public KkidChorelistPutRequest withQueryParams(KkidChorelistPutQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * GPS altitude of where the chore was marked
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=altitude")
+    public Long altitude;
+    public KkidChorelistPutRequest withAltitude(Long altitude) {
+        this.altitude = altitude;
         return this;
     }
     
+    /**
+     * id number of chore you wish to update
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idChoreList")
+    public Long idChoreList;
+    public KkidChorelistPutRequest withIdChoreList(Long idChoreList) {
+        this.idChoreList = idChoreList;
+        return this;
+    }
     
-    public KkidChorelistPutSecurity security;
-    public KkidChorelistPutRequest withSecurity(KkidChorelistPutSecurity security) {
-        this.security = security;
+    /**
+     * GPS latitude of where the chore was marked
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latitude")
+    public Long latitude;
+    public KkidChorelistPutRequest withLatitude(Long latitude) {
+        this.latitude = latitude;
+        return this;
+    }
+    
+    /**
+     * GPS longitude of where the chore was marked
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longitude")
+    public Long longitude;
+    public KkidChorelistPutRequest withLongitude(Long longitude) {
+        this.longitude = longitude;
+        return this;
+    }
+    
+    /**
+     * text field of NFC tag that is required to be scanned to check off this chore (normally null)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nfcTag")
+    public String nfcTag;
+    public KkidChorelistPutRequest withNfcTag(String nfcTag) {
+        this.nfcTag = nfcTag;
+        return this;
+    }
+    
+    /**
+     * notes field for chore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=notes")
+    public String notes;
+    public KkidChorelistPutRequest withNotes(String notes) {
+        this.notes = notes;
+        return this;
+    }
+    
+    /**
+     * new status of chore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public KkidChorelistPutRequest withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * mark chore as stolen by sibling
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stolen")
+    public Boolean stolen;
+    public KkidChorelistPutRequest withStolen(Boolean stolen) {
+        this.stolen = stolen;
+        return this;
+    }
+    
+    /**
+     * username of sibling that stole the chore (required if stolen is true)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stolenBy")
+    public String stolenBy;
+    public KkidChorelistPutRequest withStolenBy(String stolenBy) {
+        this.stolenBy = stolenBy;
+        return this;
+    }
+    
+    /**
+     * true if updated via API by automation system
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedByAutomation")
+    public Boolean updatedByAutomation;
+    public KkidChorelistPutRequest withUpdatedByAutomation(Boolean updatedByAutomation) {
+        this.updatedByAutomation = updatedByAutomation;
+        return this;
+    }
+    
+    /**
+     * Where day equals...
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=whereDay")
+    public KkidChorelistPutWhereDayEnum whereDay;
+    public KkidChorelistPutRequest withWhereDay(KkidChorelistPutWhereDayEnum whereDay) {
+        this.whereDay = whereDay;
+        return this;
+    }
+    
+    /**
+     * Where chore name equals...
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=whereName")
+    public String whereName;
+    public KkidChorelistPutRequest withWhereName(String whereName) {
+        this.whereName = whereName;
+        return this;
+    }
+    
+    /**
+     * Where status equals...
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=whereStatus")
+    public String whereStatus;
+    public KkidChorelistPutRequest withWhereStatus(String whereStatus) {
+        this.whereStatus = whereStatus;
         return this;
     }
     

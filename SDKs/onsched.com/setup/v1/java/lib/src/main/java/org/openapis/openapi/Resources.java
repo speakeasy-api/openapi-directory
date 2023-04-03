@@ -41,7 +41,7 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1ResourcesAllocationsIdResponse deleteSetupV1ResourcesAllocationsId(org.openapis.openapi.models.operations.DeleteSetupV1ResourcesAllocationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1ResourcesAllocationsIdPathParams.class, baseUrl, "/setup/v1/resources/allocations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1ResourcesAllocationsIdRequest.class, baseUrl, "/setup/v1/resources/allocations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -81,7 +81,7 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1ResourcesBlockIdResponse deleteSetupV1ResourcesBlockId(org.openapis.openapi.models.operations.DeleteSetupV1ResourcesBlockIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1ResourcesBlockIdPathParams.class, baseUrl, "/setup/v1/resources/block/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1ResourcesBlockIdRequest.class, baseUrl, "/setup/v1/resources/block/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -121,7 +121,7 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1ResourcesIdResponse deleteSetupV1ResourcesId(org.openapis.openapi.models.operations.DeleteSetupV1ResourcesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1ResourcesIdPathParams.class, baseUrl, "/setup/v1/resources/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1ResourcesIdRequest.class, baseUrl, "/setup/v1/resources/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -161,7 +161,7 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1ResourcesIdDeleteimageResponse deleteSetupV1ResourcesIdDeleteimage(org.openapis.openapi.models.operations.DeleteSetupV1ResourcesIdDeleteimageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1ResourcesIdDeleteimagePathParams.class, baseUrl, "/setup/v1/resources/{id}/deleteimage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1ResourcesIdDeleteimageRequest.class, baseUrl, "/setup/v1/resources/{id}/deleteimage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -201,7 +201,7 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1ResourcesIdServicesResponse deleteSetupV1ResourcesIdServices(org.openapis.openapi.models.operations.DeleteSetupV1ResourcesIdServicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1ResourcesIdServicesPathParams.class, baseUrl, "/setup/v1/resources/{id}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1ResourcesIdServicesRequest.class, baseUrl, "/setup/v1/resources/{id}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -247,7 +247,7 @@ public class Resources {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ResourcesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ResourcesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -289,7 +289,7 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.GetSetupV1ResourcesAllocationsIdResponse getSetupV1ResourcesAllocationsId(org.openapis.openapi.models.operations.GetSetupV1ResourcesAllocationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ResourcesAllocationsIdPathParams.class, baseUrl, "/setup/v1/resources/allocations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ResourcesAllocationsIdRequest.class, baseUrl, "/setup/v1/resources/allocations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -329,7 +329,7 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.GetSetupV1ResourcesBlocksIdResponse getSetupV1ResourcesBlocksId(org.openapis.openapi.models.operations.GetSetupV1ResourcesBlocksIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ResourcesBlocksIdPathParams.class, baseUrl, "/setup/v1/resources/blocks/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ResourcesBlocksIdRequest.class, baseUrl, "/setup/v1/resources/blocks/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -408,13 +408,13 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.GetSetupV1ResourcesIdResponse getSetupV1ResourcesId(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdPathParams.class, baseUrl, "/setup/v1/resources/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdRequest.class, baseUrl, "/setup/v1/resources/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -454,13 +454,13 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.GetSetupV1ResourcesIdAllocationsResponse getSetupV1ResourcesIdAllocations(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdAllocationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdAllocationsPathParams.class, baseUrl, "/setup/v1/resources/{id}/allocations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdAllocationsRequest.class, baseUrl, "/setup/v1/resources/{id}/allocations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdAllocationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdAllocationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -502,7 +502,7 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.GetSetupV1ResourcesIdAvailabilityResponse getSetupV1ResourcesIdAvailability(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdAvailabilityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdAvailabilityPathParams.class, baseUrl, "/setup/v1/resources/{id}/availability", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdAvailabilityRequest.class, baseUrl, "/setup/v1/resources/{id}/availability", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -542,13 +542,13 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.GetSetupV1ResourcesIdBlocksResponse getSetupV1ResourcesIdBlocks(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdBlocksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdBlocksPathParams.class, baseUrl, "/setup/v1/resources/{id}/blocks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdBlocksRequest.class, baseUrl, "/setup/v1/resources/{id}/blocks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdBlocksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdBlocksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -590,13 +590,13 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressResponse getSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddress(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressPathParams.class, baseUrl, "/setup/v1/resources/{id}/calendar/auth/google/{googleEmailAddress}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressRequest.class, baseUrl, "/setup/v1/resources/{id}/calendar/auth/google/{googleEmailAddress}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -636,13 +636,13 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressResponse getSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddress(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressPathParams.class, baseUrl, "/setup/v1/resources/{id}/calendar/auth/outlook/{outlookEmailAddress}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressRequest.class, baseUrl, "/setup/v1/resources/{id}/calendar/auth/outlook/{outlookEmailAddress}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -690,10 +690,10 @@ public class Resources {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resourceInputModel", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostSetupV1ResourcesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostSetupV1ResourcesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -741,10 +741,10 @@ public class Resources {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resourcesInputModel", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostSetupV1ResourcesBulkQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostSetupV1ResourcesBulkRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -799,12 +799,12 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.PostSetupV1ResourcesIdAllocationsResponse postSetupV1ResourcesIdAllocations(org.openapis.openapi.models.operations.PostSetupV1ResourcesIdAllocationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1ResourcesIdAllocationsPathParams.class, baseUrl, "/setup/v1/resources/{id}/allocations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1ResourcesIdAllocationsRequest.class, baseUrl, "/setup/v1/resources/{id}/allocations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resourceAllocationInputModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -858,12 +858,12 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.PostSetupV1ResourcesIdBlockResponse postSetupV1ResourcesIdBlock(org.openapis.openapi.models.operations.PostSetupV1ResourcesIdBlockRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1ResourcesIdBlockPathParams.class, baseUrl, "/setup/v1/resources/{id}/block", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1ResourcesIdBlockRequest.class, baseUrl, "/setup/v1/resources/{id}/block", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resourceBlockInputModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -903,12 +903,12 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.PostSetupV1ResourcesIdServicesResponse postSetupV1ResourcesIdServices(org.openapis.openapi.models.operations.PostSetupV1ResourcesIdServicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1ResourcesIdServicesPathParams.class, baseUrl, "/setup/v1/resources/{id}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1ResourcesIdServicesRequest.class, baseUrl, "/setup/v1/resources/{id}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -945,12 +945,12 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.PostSetupV1ResourcesIdUploadimageResponse postSetupV1ResourcesIdUploadimage(org.openapis.openapi.models.operations.PostSetupV1ResourcesIdUploadimageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1ResourcesIdUploadimagePathParams.class, baseUrl, "/setup/v1/resources/{id}/uploadimage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1ResourcesIdUploadimageRequest.class, baseUrl, "/setup/v1/resources/{id}/uploadimage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resourceImageInputModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -987,12 +987,12 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.PutSetupV1ResourcesAllocationsIdResponse putSetupV1ResourcesAllocationsId(org.openapis.openapi.models.operations.PutSetupV1ResourcesAllocationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ResourcesAllocationsIdPathParams.class, baseUrl, "/setup/v1/resources/allocations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ResourcesAllocationsIdRequest.class, baseUrl, "/setup/v1/resources/allocations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resourceAllocationUpdateModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1029,12 +1029,12 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.PutSetupV1ResourcesBlockIdResponse putSetupV1ResourcesBlockId(org.openapis.openapi.models.operations.PutSetupV1ResourcesBlockIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ResourcesBlockIdPathParams.class, baseUrl, "/setup/v1/resources/block/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ResourcesBlockIdRequest.class, baseUrl, "/setup/v1/resources/block/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resourceBlockUpdateModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1079,10 +1079,10 @@ public class Resources {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resourcesUpdateModel", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutSetupV1ResourcesBulkQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutSetupV1ResourcesBulkRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1125,15 +1125,15 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.PutSetupV1ResourcesIdResponse putSetupV1ResourcesId(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdPathParams.class, baseUrl, "/setup/v1/resources/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdRequest.class, baseUrl, "/setup/v1/resources/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resourceUpdateModel", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1175,12 +1175,12 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.PutSetupV1ResourcesIdAvailabilityResponse putSetupV1ResourcesIdAvailability(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdAvailabilityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdAvailabilityPathParams.class, baseUrl, "/setup/v1/resources/{id}/availability", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdAvailabilityRequest.class, baseUrl, "/setup/v1/resources/{id}/availability", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "availabilityInputModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1217,13 +1217,13 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.PutSetupV1ResourcesIdReassignAppointmentsResourceIdResponse putSetupV1ResourcesIdReassignAppointmentsResourceId(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdReassignAppointmentsResourceIdPathParams.class, baseUrl, "/setup/v1/resources/{id}/reassign/appointments/{resourceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest.class, baseUrl, "/setup/v1/resources/{id}/reassign/appointments/{resourceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdReassignAppointmentsResourceIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1263,13 +1263,13 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.PutSetupV1ResourcesIdRecoverResponse putSetupV1ResourcesIdRecover(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdRecoverRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdRecoverPathParams.class, baseUrl, "/setup/v1/resources/{id}/recover", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdRecoverRequest.class, baseUrl, "/setup/v1/resources/{id}/recover", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdRecoverQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdRecoverRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1312,12 +1312,12 @@ public class Resources {
      */
     public org.openapis.openapi.models.operations.PutSetupV1ResourcesIdServicesResponse putSetupV1ResourcesIdServices(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdServicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdServicesPathParams.class, baseUrl, "/setup/v1/resources/{id}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ResourcesIdServicesRequest.class, baseUrl, "/setup/v1/resources/{id}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

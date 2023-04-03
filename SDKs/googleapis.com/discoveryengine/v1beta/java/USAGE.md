@@ -5,15 +5,11 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateSecurity;
-import org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreatePathParams;
-import org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateQueryParams;
 import org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest;
 import org.openapis.openapi.models.operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateResponse;
-import org.openapis.openapi.models.shared.GoogleCloudDiscoveryengineV1betaDocument;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.GoogleCloudDiscoveryengineV1betaDocument;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -22,45 +18,37 @@ public class Application {
                 .build();
 
             DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest req = new DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest() {{
-                security = new DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    documentId = "nulla";
-                    fields = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    uploadType = "deserunt";
-                    uploadProtocol = "suscipit";
-                }};
-                request = new GoogleCloudDiscoveryengineV1betaDocument() {{
-                    id = "iure";
-                    jsonData = "magnam";
-                    name = "debitis";
-                    parentDocumentId = "ipsa";
-                    schemaId = "delectus";
+                dollarXgafv = "2";
+                googleCloudDiscoveryengineV1betaDocument = new GoogleCloudDiscoveryengineV1betaDocument() {{
+                    id = "provident";
+                    jsonData = "distinctio";
+                    name = "quibusdam";
+                    parentDocumentId = "unde";
+                    schemaId = "nulla";
                     structData = new java.util.HashMap<String, Object>() {{
-                        put("suscipit", "molestiae");
-                        put("minus", "placeat");
+                        put("illum", "vel");
+                        put("error", "deserunt");
+                        put("suscipit", "iure");
                     }};
                 }};
-            }};            
+                accessToken = "magnam";
+                alt = "proto";
+                callback = "ipsa";
+                documentId = "delectus";
+                fields = "tempora";
+                key = "suscipit";
+                oauthToken = "molestiae";
+                parent = "minus";
+                prettyPrint = false;
+                quotaUser = "placeat";
+                uploadType = "voluptatum";
+                uploadProtocol = "iusto";
+            }}            
 
-            DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateResponse res = sdk.projects.discoveryengineProjectsLocationsDataStoresBranchesDocumentsCreate(req);
+            DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateResponse res = sdk.projects.discoveryengineProjectsLocationsDataStoresBranchesDocumentsCreate(req, new DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.googleCloudDiscoveryengineV1betaDocument.isPresent()) {
                 // handle response

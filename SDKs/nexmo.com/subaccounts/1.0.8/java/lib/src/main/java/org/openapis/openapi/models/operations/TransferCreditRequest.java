@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TransferCreditRequest {
-    
-    public TransferCreditPathParams pathParams;
-    public TransferCreditRequest withPathParams(TransferCreditPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TransferBalanceOrCreditRequest request;
-    public TransferCreditRequest withRequest(org.openapis.openapi.models.shared.TransferBalanceOrCreditRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TransferBalanceOrCreditRequest transferBalanceOrCreditRequest;
+    public TransferCreditRequest withTransferBalanceOrCreditRequest(org.openapis.openapi.models.shared.TransferBalanceOrCreditRequest transferBalanceOrCreditRequest) {
+        this.transferBalanceOrCreditRequest = transferBalanceOrCreditRequest;
         return this;
     }
     
-    
-    public TransferCreditSecurity security;
-    public TransferCreditRequest withSecurity(TransferCreditSecurity security) {
-        this.security = security;
+    /**
+     * ID of the primary account
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api_key")
+    public String apiKey;
+    public TransferCreditRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

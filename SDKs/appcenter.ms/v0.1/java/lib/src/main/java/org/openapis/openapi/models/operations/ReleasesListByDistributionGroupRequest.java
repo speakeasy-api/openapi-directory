@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesListByDistributionGroupRequest {
-    
-    public ReleasesListByDistributionGroupPathParams pathParams;
-    public ReleasesListByDistributionGroupRequest withPathParams(ReleasesListByDistributionGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ReleasesListByDistributionGroupRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The name of the distribution group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
+    public String distributionGroupName;
+    public ReleasesListByDistributionGroupRequest withDistributionGroupName(String distributionGroupName) {
+        this.distributionGroupName = distributionGroupName;
+        return this;
+    }
     
-    public ReleasesListByDistributionGroupSecurity security;
-    public ReleasesListByDistributionGroupRequest withSecurity(ReleasesListByDistributionGroupSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ReleasesListByDistributionGroupRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTracksTrackIdCommentsSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public org.openapis.openapi.models.shared.SchemeClientID clientId;
-    public GetTracksTrackIdCommentsSecurity withClientId(org.openapis.openapi.models.shared.SchemeClientID clientId) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=client_id")
+    public String clientId;
+    public GetTracksTrackIdCommentsSecurity withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }

@@ -41,7 +41,7 @@ public class ObservationHeadingController {
      */
     public org.openapis.openapi.models.operations.GetAvailableObservationHeadingsResponse getAvailableObservationHeadings(org.openapis.openapi.models.operations.GetAvailableObservationHeadingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAvailableObservationHeadingsPathParams.class, baseUrl, "/user/{userId}/availableobservationheadings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAvailableObservationHeadingsRequest.class, baseUrl, "/user/{userId}/availableobservationheadings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -82,7 +82,7 @@ public class ObservationHeadingController {
      */
     public org.openapis.openapi.models.operations.GetPatientEnteredObservationHeadingsResponse getPatientEnteredObservationHeadings(org.openapis.openapi.models.operations.GetPatientEnteredObservationHeadingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPatientEnteredObservationHeadingsPathParams.class, baseUrl, "/user/{userId}/patiententeredobservationheadings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPatientEnteredObservationHeadingsRequest.class, baseUrl, "/user/{userId}/patiententeredobservationheadings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

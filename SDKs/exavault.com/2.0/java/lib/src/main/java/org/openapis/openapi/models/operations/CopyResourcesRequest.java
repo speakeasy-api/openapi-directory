@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CopyResourcesRequest {
-    
-    public CopyResourcesHeaders headers;
-    public CopyResourcesRequest withHeaders(CopyResourcesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CopyResourcesCopyResourcesRequestBody requestBody;
+    public CopyResourcesRequest withRequestBody(CopyResourcesCopyResourcesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CopyResourcesCopyResourcesRequestBody request;
-    public CopyResourcesRequest withRequest(CopyResourcesCopyResourcesRequestBody request) {
-        this.request = request;
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public CopyResourcesRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
+        return this;
+    }
+    
+    /**
+     * API Key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public CopyResourcesRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
         return this;
     }
     

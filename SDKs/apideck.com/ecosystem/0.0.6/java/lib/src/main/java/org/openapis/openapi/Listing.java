@@ -39,13 +39,13 @@ public class Listing {
      */
     public org.openapis.openapi.models.operations.ListingsAllResponse listingsAll(org.openapis.openapi.models.operations.ListingsAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListingsAllPathParams.class, baseUrl, "/ecosystems/{ecosystem_id}/listings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListingsAllRequest.class, baseUrl, "/ecosystems/{ecosystem_id}/listings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListingsAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListingsAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -84,7 +84,7 @@ public class Listing {
      */
     public org.openapis.openapi.models.operations.ListingsOneResponse listingsOne(org.openapis.openapi.models.operations.ListingsOneRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListingsOnePathParams.class, baseUrl, "/ecosystems/{ecosystem_id}/listings/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListingsOneRequest.class, baseUrl, "/ecosystems/{ecosystem_id}/listings/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

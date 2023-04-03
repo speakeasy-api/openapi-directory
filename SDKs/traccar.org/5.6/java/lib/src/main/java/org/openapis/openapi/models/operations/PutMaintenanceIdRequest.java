@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutMaintenanceIdRequest {
-    
-    public PutMaintenanceIdPathParams pathParams;
-    public PutMaintenanceIdRequest withPathParams(PutMaintenanceIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Maintenance maintenance;
+    public PutMaintenanceIdRequest withMaintenance(org.openapis.openapi.models.shared.Maintenance maintenance) {
+        this.maintenance = maintenance;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Maintenance request;
-    public PutMaintenanceIdRequest withRequest(org.openapis.openapi.models.shared.Maintenance request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PutMaintenanceIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

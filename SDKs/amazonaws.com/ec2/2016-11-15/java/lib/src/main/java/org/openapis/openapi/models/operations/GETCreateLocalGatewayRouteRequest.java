@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateLocalGatewayRouteRequest {
-    
-    public GETCreateLocalGatewayRouteQueryParams queryParams;
-    public GETCreateLocalGatewayRouteRequest withQueryParams(GETCreateLocalGatewayRouteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETCreateLocalGatewayRouteActionEnum action;
+    public GETCreateLocalGatewayRouteRequest withAction(GETCreateLocalGatewayRouteActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The CIDR range used for destination matches. Routing decisions are based on the most specific match.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationCidrBlock")
+    public String destinationCidrBlock;
+    public GETCreateLocalGatewayRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
+        this.destinationCidrBlock = destinationCidrBlock;
+        return this;
+    }
     
-    public GETCreateLocalGatewayRouteHeaders headers;
-    public GETCreateLocalGatewayRouteRequest withHeaders(GETCreateLocalGatewayRouteHeaders headers) {
-        this.headers = headers;
+    /**
+     *  The ID of the prefix list. Use a prefix list in place of &lt;code&gt;DestinationCidrBlock&lt;/code&gt;. You cannot use &lt;code&gt;DestinationPrefixListId&lt;/code&gt; and &lt;code&gt;DestinationCidrBlock&lt;/code&gt; in the same request. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationPrefixListId")
+    public String destinationPrefixListId;
+    public GETCreateLocalGatewayRouteRequest withDestinationPrefixListId(String destinationPrefixListId) {
+        this.destinationPrefixListId = destinationPrefixListId;
+        return this;
+    }
+    
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETCreateLocalGatewayRouteRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The ID of the local gateway route table.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LocalGatewayRouteTableId")
+    public String localGatewayRouteTableId;
+    public GETCreateLocalGatewayRouteRequest withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
+        this.localGatewayRouteTableId = localGatewayRouteTableId;
+        return this;
+    }
+    
+    /**
+     * The ID of the virtual interface group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LocalGatewayVirtualInterfaceGroupId")
+    public String localGatewayVirtualInterfaceGroupId;
+    public GETCreateLocalGatewayRouteRequest withLocalGatewayVirtualInterfaceGroupId(String localGatewayVirtualInterfaceGroupId) {
+        this.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
+        return this;
+    }
+    
+    /**
+     * The ID of the network interface.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInterfaceId")
+    public String networkInterfaceId;
+    public GETCreateLocalGatewayRouteRequest withNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETCreateLocalGatewayRouteVersionEnum version;
+    public GETCreateLocalGatewayRouteRequest withVersion(GETCreateLocalGatewayRouteVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETCreateLocalGatewayRouteRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETCreateLocalGatewayRouteRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETCreateLocalGatewayRouteRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETCreateLocalGatewayRouteRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETCreateLocalGatewayRouteRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETCreateLocalGatewayRouteRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETCreateLocalGatewayRouteRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

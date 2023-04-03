@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserCurrentDeleteFollowRequest {
-    
-    public UserCurrentDeleteFollowPathParams pathParams;
-    public UserCurrentDeleteFollowRequest withPathParams(UserCurrentDeleteFollowPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * username of user to unfollow
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public UserCurrentDeleteFollowRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

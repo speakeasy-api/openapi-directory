@@ -4,20 +4,60 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVodPurchasesRequest {
-    
-    public GetVodPurchasesQueryParams queryParams;
-    public GetVodPurchasesRequest withQueryParams(GetVodPurchasesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetVodPurchasesDirectionEnum direction;
+    public GetVodPurchasesRequest withDirection(GetVodPurchasesDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * The type of On Demand videos to show.
+     * 
+     * Option descriptions:
+     *  * `important` - Will show all pages which are about to expire.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public GetVodPurchasesFilterEnum filter;
+    public GetVodPurchasesRequest withFilter(GetVodPurchasesFilterEnum filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public GetVodPurchasesSecurity security;
-    public GetVodPurchasesRequest withSecurity(GetVodPurchasesSecurity security) {
-        this.security = security;
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetVodPurchasesRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetVodPurchasesRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetVodPurchasesSortEnum sort;
+    public GetVodPurchasesRequest withSort(GetVodPurchasesSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

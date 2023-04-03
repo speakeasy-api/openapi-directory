@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductUpdateActionRequest {
-    
-    public ProductUpdateActionPathParams pathParams;
-    public ProductUpdateActionRequest withPathParams(ProductUpdateActionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Parameters for the update order endpoint
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public ProductUpdateActionRequestBody request;
-    public ProductUpdateActionRequest withRequest(ProductUpdateActionRequestBody request) {
-        this.request = request;
+    public ProductUpdateActionRequestBody requestBody;
+    public ProductUpdateActionRequest withRequestBody(ProductUpdateActionRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The action you want to perform for the order
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=action")
+    public String action;
+    public ProductUpdateActionRequest withAction(String action) {
+        this.action = action;
+        return this;
+    }
     
-    public ProductUpdateActionSecurity security;
-    public ProductUpdateActionRequest withSecurity(ProductUpdateActionSecurity security) {
-        this.security = security;
+    /**
+     * ID of the ProductOrder as returned from a /product/buy call - 32 character hex value
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public ProductUpdateActionRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

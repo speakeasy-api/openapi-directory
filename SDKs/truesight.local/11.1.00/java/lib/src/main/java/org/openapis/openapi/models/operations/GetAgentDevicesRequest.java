@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAgentDevicesRequest {
-    
-    public GetAgentDevicesPathParams pathParams;
-    public GetAgentDevicesRequest withPathParams(GetAgentDevicesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
+    public Integer deviceId;
+    public GetAgentDevicesRequest withDeviceId(Integer deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
     

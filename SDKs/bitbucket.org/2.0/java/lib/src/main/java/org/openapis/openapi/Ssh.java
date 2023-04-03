@@ -44,19 +44,20 @@ public class Ssh {
      * $ curl -X DELETE https://api.bitbucket.org/2.0/users/{ed08f5e1-605b-4f4a-aee4-6c97628a673e}/ssh-keys/{b15b6026-9c02-4626-b4ad-b905f99f763a}
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteUsersSelectedUserSshKeysKeyIdResponse deleteUsersSelectedUserSshKeysKeyId(org.openapis.openapi.models.operations.DeleteUsersSelectedUserSshKeysKeyIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteUsersSelectedUserSshKeysKeyIdResponse deleteUsersSelectedUserSshKeysKeyId(org.openapis.openapi.models.operations.DeleteUsersSelectedUserSshKeysKeyIdRequest request, org.openapis.openapi.models.operations.DeleteUsersSelectedUserSshKeysKeyIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersSelectedUserSshKeysKeyIdPathParams.class, baseUrl, "/users/{selected_user}/ssh-keys/{key_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersSelectedUserSshKeysKeyIdRequest.class, baseUrl, "/users/{selected_user}/ssh-keys/{key_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -131,19 +132,20 @@ public class Ssh {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUsersSelectedUserSshKeysResponse getUsersSelectedUserSshKeys(org.openapis.openapi.models.operations.GetUsersSelectedUserSshKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUsersSelectedUserSshKeysResponse getUsersSelectedUserSshKeys(org.openapis.openapi.models.operations.GetUsersSelectedUserSshKeysRequest request, org.openapis.openapi.models.operations.GetUsersSelectedUserSshKeysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersSelectedUserSshKeysPathParams.class, baseUrl, "/users/{selected_user}/ssh-keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersSelectedUserSshKeysRequest.class, baseUrl, "/users/{selected_user}/ssh-keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,19 +221,20 @@ public class Ssh {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUsersSelectedUserSshKeysKeyIdResponse getUsersSelectedUserSshKeysKeyId(org.openapis.openapi.models.operations.GetUsersSelectedUserSshKeysKeyIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUsersSelectedUserSshKeysKeyIdResponse getUsersSelectedUserSshKeysKeyId(org.openapis.openapi.models.operations.GetUsersSelectedUserSshKeysKeyIdRequest request, org.openapis.openapi.models.operations.GetUsersSelectedUserSshKeysKeyIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersSelectedUserSshKeysKeyIdPathParams.class, baseUrl, "/users/{selected_user}/ssh-keys/{key_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersSelectedUserSshKeysKeyIdRequest.class, baseUrl, "/users/{selected_user}/ssh-keys/{key_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -307,21 +310,22 @@ public class Ssh {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUsersSelectedUserSshKeysResponse postUsersSelectedUserSshKeys(org.openapis.openapi.models.operations.PostUsersSelectedUserSshKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUsersSelectedUserSshKeysResponse postUsersSelectedUserSshKeys(org.openapis.openapi.models.operations.PostUsersSelectedUserSshKeysRequest request, org.openapis.openapi.models.operations.PostUsersSelectedUserSshKeysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersSelectedUserSshKeysPathParams.class, baseUrl, "/users/{selected_user}/ssh-keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersSelectedUserSshKeysRequest.class, baseUrl, "/users/{selected_user}/ssh-keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -399,21 +403,22 @@ public class Ssh {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutUsersSelectedUserSshKeysKeyIdResponse putUsersSelectedUserSshKeysKeyId(org.openapis.openapi.models.operations.PutUsersSelectedUserSshKeysKeyIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutUsersSelectedUserSshKeysKeyIdResponse putUsersSelectedUserSshKeysKeyId(org.openapis.openapi.models.operations.PutUsersSelectedUserSshKeysKeyIdRequest request, org.openapis.openapi.models.operations.PutUsersSelectedUserSshKeysKeyIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUsersSelectedUserSshKeysKeyIdPathParams.class, baseUrl, "/users/{selected_user}/ssh-keys/{key_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUsersSelectedUserSshKeysKeyIdRequest.class, baseUrl, "/users/{selected_user}/ssh-keys/{key_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

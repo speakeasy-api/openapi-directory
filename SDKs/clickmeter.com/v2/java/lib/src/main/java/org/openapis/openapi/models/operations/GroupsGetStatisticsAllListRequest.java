@@ -4,13 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsGetStatisticsAllListRequest {
+    /**
+     * Is the group is marked as favourite
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=favourite")
+    public Boolean favourite;
+    public GroupsGetStatisticsAllListRequest withFavourite(Boolean favourite) {
+        this.favourite = favourite;
+        return this;
+    }
     
-    public GroupsGetStatisticsAllListQueryParams queryParams;
-    public GroupsGetStatisticsAllListRequest withQueryParams(GroupsGetStatisticsAllListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
+    public String fromDay;
+    public GroupsGetStatisticsAllListRequest withFromDay(String fromDay) {
+        this.fromDay = fromDay;
+        return this;
+    }
+    
+    /**
+     * The temporal entity you want to group by ("week"/"month"). If unspecified is "day".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupBy")
+    public GroupsGetStatisticsAllListGroupByEnum groupBy;
+    public GroupsGetStatisticsAllListRequest withGroupBy(GroupsGetStatisticsAllListGroupByEnum groupBy) {
+        this.groupBy = groupBy;
+        return this;
+    }
+    
+    /**
+     * Status of group ("deleted"/"active")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public GroupsGetStatisticsAllListRequest withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of tags you want to filter with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public GroupsGetStatisticsAllListRequest withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    
+    /**
+     * Timeframe of the request. See list at $timeframeList
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
+    public GroupsGetStatisticsAllListTimeFrameEnum timeFrame;
+    public GroupsGetStatisticsAllListRequest withTimeFrame(GroupsGetStatisticsAllListTimeFrameEnum timeFrame) {
+        this.timeFrame = timeFrame;
+        return this;
+    }
+    
+    /**
+     * If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
+    public String toDay;
+    public GroupsGetStatisticsAllListRequest withToDay(String toDay) {
+        this.toDay = toDay;
         return this;
     }
     

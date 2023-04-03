@@ -11,12 +11,8 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    appKey = new SchemeAppKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                    appToken = new SchemeAppToken() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    appKey = "YOUR_API_KEY_HERE";
+                    appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 

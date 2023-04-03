@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest {
-    
-    public ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationPathParams pathParams;
-    public ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest withPathParams(ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody requestBody;
+    public ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest withRequestBody(ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody request;
-    public ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest withRequest(ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequestBody request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

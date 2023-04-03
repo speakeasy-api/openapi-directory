@@ -38,19 +38,20 @@ public class VisionTraining {
      * Get Training Status
      * Returns the status of a model's training process. Use the progress field to determine how far the training has progressed. When training completes successfully, the status is SUCCEEDED and the progress is 1.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTrainStatusAndProgress1Response getTrainStatusAndProgress1(org.openapis.openapi.models.operations.GetTrainStatusAndProgress1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTrainStatusAndProgress1Response getTrainStatusAndProgress1(org.openapis.openapi.models.operations.GetTrainStatusAndProgress1Request request, org.openapis.openapi.models.operations.GetTrainStatusAndProgress1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTrainStatusAndProgress1PathParams.class, baseUrl, "/v2/vision/train/{modelId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTrainStatusAndProgress1Request.class, baseUrl, "/v2/vision/train/{modelId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,10 +79,11 @@ public class VisionTraining {
      * Retrain a Dataset
      * Retrains a dataset and updates a model. Use this API call when you want to update a model and keep the model ID instead of creating a new model.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Retrain1Response retrain1(org.openapis.openapi.models.operations.Retrain1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.Retrain1Response retrain1(org.openapis.openapi.models.operations.Retrain1RequestBody request, org.openapis.openapi.models.operations.Retrain1Security security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/vision/retrain");
         
@@ -92,7 +94,7 @@ public class VisionTraining {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -120,10 +122,11 @@ public class VisionTraining {
      * Train a Dataset
      * Trains a dataset and creates a model.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Train1Response train1(org.openapis.openapi.models.operations.Train1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.Train1Response train1(org.openapis.openapi.models.operations.Train1RequestBody request, org.openapis.openapi.models.operations.Train1Security security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/vision/train");
         
@@ -134,7 +137,7 @@ public class VisionTraining {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

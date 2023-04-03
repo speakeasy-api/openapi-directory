@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GenerateDataSetXAmzTargetEnum;
-import org.openapis.openapi.models.operations.GenerateDataSetHeaders;
 import org.openapis.openapi.models.operations.GenerateDataSetRequest;
 import org.openapis.openapi.models.operations.GenerateDataSetResponse;
 import org.openapis.openapi.models.shared.GenerateDataSetRequest;
@@ -16,38 +15,33 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GenerateDataSetRequest req = new GenerateDataSetRequest() {{
-                headers = new GenerateDataSetHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "MarketplaceCommerceAnalytics20150701.GenerateDataSet";
-                }};
-                request = new GenerateDataSetRequest() {{
+                generateDataSetRequest = new GenerateDataSetRequest() {{
                     customerDefinedValues = new java.util.HashMap<String, String>() {{
-                        put("vel", "error");
-                        put("deserunt", "suscipit");
-                        put("iure", "magnam");
-                        put("debitis", "ipsa");
+                        put("provident", "distinctio");
+                        put("quibusdam", "unde");
+                        put("nulla", "corrupti");
                     }};
-                    dataSetPublicationDate = "2022-03-08T10:35:32.561Z";
-                    dataSetType = "monthly_revenue_annual_subscriptions";
-                    destinationS3BucketName = "molestiae";
-                    destinationS3Prefix = "minus";
-                    roleNameArn = "placeat";
-                    snsTopicArn = "voluptatum";
+                    dataSetPublicationDate = "2021-09-24T02:21:06.409Z";
+                    dataSetType = "disbursed_amount_by_customer_geo";
+                    destinationS3BucketName = "deserunt";
+                    destinationS3Prefix = "suscipit";
+                    roleNameArn = "iure";
+                    snsTopicArn = "magnam";
                 }};
-            }};            
+                xAmzAlgorithm = "debitis";
+                xAmzContentSha256 = "ipsa";
+                xAmzCredential = "delectus";
+                xAmzDate = "tempora";
+                xAmzSecurityToken = "suscipit";
+                xAmzSignature = "molestiae";
+                xAmzSignedHeaders = "minus";
+                xAmzTarget = "MarketplaceCommerceAnalytics20150701.GenerateDataSet";
+            }}            
 
             GenerateDataSetResponse res = sdk.generateDataSet(req);
 

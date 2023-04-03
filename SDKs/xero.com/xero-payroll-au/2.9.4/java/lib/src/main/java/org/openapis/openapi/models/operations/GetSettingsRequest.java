@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSettingsRequest {
-    
-    public GetSettingsHeaders headers;
-    public GetSettingsRequest withHeaders(GetSettingsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetSettingsSecurity security;
-    public GetSettingsRequest withSecurity(GetSettingsSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public GetSettingsRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

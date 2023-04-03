@@ -35,25 +35,26 @@ public class Projects {
     /**
      * List OS policies compliance data for all Compute Engine VM instances in the specified zone.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListResponse osconfigProjectsLocationsInstanceOSPoliciesCompliancesList(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListResponse osconfigProjectsLocationsInstanceOSPoliciesCompliancesList(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListRequest request, org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListPathParams.class, baseUrl, "/v1alpha/{parent}/instanceOSPoliciesCompliances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListRequest.class, baseUrl, "/v1alpha/{parent}/instanceOSPoliciesCompliances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,25 +81,26 @@ public class Projects {
     /**
      * List inventory data for all VM instances in the specified zone.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesInventoriesListResponse osconfigProjectsLocationsInstancesInventoriesList(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesInventoriesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesInventoriesListResponse osconfigProjectsLocationsInstancesInventoriesList(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesInventoriesListRequest request, org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesInventoriesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesInventoriesListPathParams.class, baseUrl, "/v1alpha/{parent}/inventories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesInventoriesListRequest.class, baseUrl, "/v1alpha/{parent}/inventories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesInventoriesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesInventoriesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -125,25 +127,26 @@ public class Projects {
     /**
      * List OS policy asssignment reports for all Compute Engine VM instances in the specified zone.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListResponse osconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsList(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListResponse osconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsList(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListRequest request, org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListPathParams.class, baseUrl, "/v1alpha/{parent}/reports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListRequest.class, baseUrl, "/v1alpha/{parent}/reports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -170,25 +173,26 @@ public class Projects {
     /**
      * List vulnerability reports for all VM instances in the specified zone.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListResponse osconfigProjectsLocationsInstancesVulnerabilityReportsList(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListResponse osconfigProjectsLocationsInstancesVulnerabilityReportsList(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListRequest request, org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListPathParams.class, baseUrl, "/v1alpha/{parent}/vulnerabilityReports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListRequest.class, baseUrl, "/v1alpha/{parent}/vulnerabilityReports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -215,27 +219,28 @@ public class Projects {
     /**
      * Create an OS policy assignment. This method also creates the first revision of the OS policy assignment. This method returns a long running operation (LRO) that contains the rollout details. The rollout can be cancelled by cancelling the LRO. For more information, see [Method: projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1alpha/projects.locations.osPolicyAssignments.operations/cancel).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateResponse osconfigProjectsLocationsOsPolicyAssignmentsCreate(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateResponse osconfigProjectsLocationsOsPolicyAssignmentsCreate(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateRequest request, org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreatePathParams.class, baseUrl, "/v1alpha/{parent}/osPolicyAssignments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateRequest.class, baseUrl, "/v1alpha/{parent}/osPolicyAssignments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "osPolicyAssignmentInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -262,25 +267,26 @@ public class Projects {
     /**
      * Delete the OS policy assignment. This method creates a new revision of the OS policy assignment. This method returns a long running operation (LRO) that contains the rollout details. The rollout can be cancelled by cancelling the LRO. If the LRO completes and is not cancelled, all revisions associated with the OS policy assignment are deleted. For more information, see [Method: projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1alpha/projects.locations.osPolicyAssignments.operations/cancel).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeleteResponse osconfigProjectsLocationsOsPolicyAssignmentsDelete(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeleteResponse osconfigProjectsLocationsOsPolicyAssignmentsDelete(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeleteRequest request, org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeletePathParams.class, baseUrl, "/v1alpha/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeleteRequest.class, baseUrl, "/v1alpha/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -307,25 +313,26 @@ public class Projects {
     /**
      * List the OS policy assignments under the parent resource. For each OS policy assignment, the latest revision is returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListResponse osconfigProjectsLocationsOsPolicyAssignmentsList(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListResponse osconfigProjectsLocationsOsPolicyAssignmentsList(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRequest request, org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListPathParams.class, baseUrl, "/v1alpha/{parent}/osPolicyAssignments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRequest.class, baseUrl, "/v1alpha/{parent}/osPolicyAssignments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -352,25 +359,26 @@ public class Projects {
     /**
      * List the OS policy assignment revisions for a given OS policy assignment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsResponse osconfigProjectsLocationsOsPolicyAssignmentsListRevisions(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsResponse osconfigProjectsLocationsOsPolicyAssignmentsListRevisions(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsRequest request, org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsPathParams.class, baseUrl, "/v1alpha/{name}:listRevisions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsRequest.class, baseUrl, "/v1alpha/{name}:listRevisions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -397,27 +405,28 @@ public class Projects {
     /**
      * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelResponse osconfigProjectsLocationsOsPolicyAssignmentsOperationsCancel(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelResponse osconfigProjectsLocationsOsPolicyAssignmentsOperationsCancel(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelRequest request, org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelPathParams.class, baseUrl, "/v1alpha/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelRequest.class, baseUrl, "/v1alpha/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -444,25 +453,26 @@ public class Projects {
     /**
      * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetResponse osconfigProjectsLocationsOsPolicyAssignmentsOperationsGet(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetResponse osconfigProjectsLocationsOsPolicyAssignmentsOperationsGet(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetRequest request, org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetPathParams.class, baseUrl, "/v1alpha/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetRequest.class, baseUrl, "/v1alpha/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -489,27 +499,28 @@ public class Projects {
     /**
      * Update an existing OS policy assignment. This method creates a new revision of the OS policy assignment. This method returns a long running operation (LRO) that contains the rollout details. The rollout can be cancelled by cancelling the LRO. For more information, see [Method: projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1alpha/projects.locations.osPolicyAssignments.operations/cancel).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchResponse osconfigProjectsLocationsOsPolicyAssignmentsPatch(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchResponse osconfigProjectsLocationsOsPolicyAssignmentsPatch(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchRequest request, org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchPathParams.class, baseUrl, "/v1alpha/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchRequest.class, baseUrl, "/v1alpha/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "osPolicyAssignmentInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

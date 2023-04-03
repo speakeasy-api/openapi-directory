@@ -29,15 +29,13 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/PostPostReviewRatingEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostPostReviewQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPostReviewRequestBody.java
+lib/src/main/java/org/openapis/openapi/models/operations/PostPostReviewRatingEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPostReviewRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPostReview403ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPostReview401ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPostReview400ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPostReview200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostPostReviewResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeBasicAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

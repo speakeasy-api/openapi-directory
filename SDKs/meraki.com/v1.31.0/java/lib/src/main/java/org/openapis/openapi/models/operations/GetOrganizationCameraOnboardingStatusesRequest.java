@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationCameraOnboardingStatusesRequest {
-    
-    public GetOrganizationCameraOnboardingStatusesPathParams pathParams;
-    public GetOrganizationCameraOnboardingStatusesRequest withPathParams(GetOrganizationCameraOnboardingStatusesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A list of network IDs. The returned cameras will be filtered to only include these networks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=networkIds")
+    public String[] networkIds;
+    public GetOrganizationCameraOnboardingStatusesRequest withNetworkIds(String[] networkIds) {
+        this.networkIds = networkIds;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationCameraOnboardingStatusesRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
     
-    public GetOrganizationCameraOnboardingStatusesQueryParams queryParams;
-    public GetOrganizationCameraOnboardingStatusesRequest withQueryParams(GetOrganizationCameraOnboardingStatusesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A list of serial numbers. The returned cameras will be filtered to only include these serials.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=serials")
+    public String[] serials;
+    public GetOrganizationCameraOnboardingStatusesRequest withSerials(String[] serials) {
+        this.serials = serials;
         return this;
     }
     

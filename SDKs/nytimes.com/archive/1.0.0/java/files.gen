@@ -30,7 +30,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetYearMonthJsonPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetYearMonthJsonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetYearMonthJSON200ApplicationJSONResponseMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetYearMonthJSON200ApplicationJSONResponse.java
@@ -41,6 +40,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/DocHeadline.java
 lib/src/main/java/org/openapis/openapi/models/shared/DocKeywords.java
 lib/src/main/java/org/openapis/openapi/models/shared/DocMultimedia.java
 lib/src/main/java/org/openapis/openapi/models/shared/Doc.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeApikey.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

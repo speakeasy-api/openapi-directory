@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateInvestorRequest {
-    
-    public UpdateInvestorPathParams pathParams;
-    public UpdateInvestorRequest withPathParams(UpdateInvestorPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateInvestorHeaders headers;
-    public UpdateInvestorRequest withHeaders(UpdateInvestorHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateInvestorUpdateRequestBodyForInvestorInput request;
-    public UpdateInvestorRequest withRequest(UpdateInvestorUpdateRequestBodyForInvestorInput request) {
-        this.request = request;
+    public UpdateInvestorUpdateRequestBodyForInvestorInput requestBody;
+    public UpdateInvestorRequest withRequestBody(UpdateInvestorUpdateRequestBodyForInvestorInput requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Investor Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=investor_id")
+    public String investorId;
+    public UpdateInvestorRequest withInvestorId(String investorId) {
+        this.investorId = investorId;
+        return this;
+    }
     
-    public UpdateInvestorSecurity security;
-    public UpdateInvestorRequest withSecurity(UpdateInvestorSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public UpdateInvestorRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

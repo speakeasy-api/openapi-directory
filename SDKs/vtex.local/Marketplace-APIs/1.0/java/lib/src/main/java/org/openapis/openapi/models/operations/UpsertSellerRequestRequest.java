@@ -7,24 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpsertSellerRequestRequest {
-    
-    public UpsertSellerRequestQueryParams queryParams;
-    public UpsertSellerRequestRequest withQueryParams(UpsertSellerRequestQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public UpsertSellerRequestRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public UpsertSellerRequestHeaders headers;
-    public UpsertSellerRequestRequest withHeaders(UpsertSellerRequestHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public UpsertSellerRequestRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpsertSellerRequest request;
-    public UpsertSellerRequestRequest withRequest(org.openapis.openapi.models.shared.UpsertSellerRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpsertSellerRequest upsertSellerRequest;
+    public UpsertSellerRequestRequest withUpsertSellerRequest(org.openapis.openapi.models.shared.UpsertSellerRequest upsertSellerRequest) {
+        this.upsertSellerRequest = upsertSellerRequest;
+        return this;
+    }
+    
+    /**
+     * Marketplace's account name, the same one inputted on the endpoint's path.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public UpsertSellerRequestRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    
+    /**
+     * Environment to use. Used as part of the URL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
+    public String environment;
+    public UpsertSellerRequestRequest withEnvironment(String environment) {
+        this.environment = environment;
         return this;
     }
     

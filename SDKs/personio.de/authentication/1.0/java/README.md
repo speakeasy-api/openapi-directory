@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.PostAuthQueryParams;
 import org.openapis.openapi.models.operations.PostAuthRequest;
 import org.openapis.openapi.models.operations.PostAuthResponse;
 
@@ -28,11 +27,9 @@ public class Application {
                 .build();
 
             PostAuthRequest req = new PostAuthRequest() {{
-                queryParams = new PostAuthQueryParams() {{
-                    clientId = "corrupti";
-                    clientSecret = "provident";
-                }};
-            }};            
+                clientId = "corrupti";
+                clientSecret = "provident";
+            }}            
 
             PostAuthResponse res = sdk.postAuth(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestUserFileKeyRequest {
-    
-    public RequestUserFileKeyPathParams pathParams;
-    public RequestUserFileKeyRequest withPathParams(RequestUserFileKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestUserFileKeyRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestUserFileKeyQueryParams queryParams;
-    public RequestUserFileKeyRequest withQueryParams(RequestUserFileKeyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * File ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=file_id")
+    public Long fileId;
+    public RequestUserFileKeyRequest withFileId(Long fileId) {
+        this.fileId = fileId;
         return this;
     }
     
-    
-    public RequestUserFileKeyHeaders headers;
-    public RequestUserFileKeyRequest withHeaders(RequestUserFileKeyHeaders headers) {
-        this.headers = headers;
+    /**
+     * Version (NEW)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public RequestUserFileKeyRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

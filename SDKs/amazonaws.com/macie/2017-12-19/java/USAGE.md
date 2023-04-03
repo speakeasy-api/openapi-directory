@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AssociateMemberAccountXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AssociateMemberAccountHeaders;
 import org.openapis.openapi.models.operations.AssociateMemberAccountRequest;
 import org.openapis.openapi.models.operations.AssociateMemberAccountResponse;
 import org.openapis.openapi.models.shared.AssociateMemberAccountRequest;
@@ -15,27 +14,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateMemberAccountRequest req = new AssociateMemberAccountRequest() {{
-                headers = new AssociateMemberAccountHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "MacieService.AssociateMemberAccount";
+                associateMemberAccountRequest = new AssociateMemberAccountRequest() {{
+                    memberAccountId = "corrupti";
                 }};
-                request = new AssociateMemberAccountRequest() {{
-                    memberAccountId = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+                xAmzTarget = "MacieService.AssociateMemberAccount";
+            }}            
 
             AssociateMemberAccountResponse res = sdk.associateMemberAccount(req);
 

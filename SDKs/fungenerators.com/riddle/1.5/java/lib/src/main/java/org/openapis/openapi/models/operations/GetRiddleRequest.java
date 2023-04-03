@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRiddleRequest {
-    
-    public GetRiddleQueryParams queryParams;
-    public GetRiddleRequest withQueryParams(GetRiddleQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetRiddleSecurity security;
-    public GetRiddleRequest withSecurity(GetRiddleSecurity security) {
-        this.security = security;
+    /**
+     * ID of the riddle to fetch
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetRiddleRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

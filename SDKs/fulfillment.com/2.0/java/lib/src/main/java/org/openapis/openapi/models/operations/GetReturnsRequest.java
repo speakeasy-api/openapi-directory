@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReturnsRequest {
-    
-    public GetReturnsQueryParams queryParams;
-    public GetReturnsRequest withQueryParams(GetReturnsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Date-time in ISO 8601 format for selecting orders after, or at, the specified time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDate")
+    public String fromDate;
+    public GetReturnsRequest withFromDate(String fromDate) {
+        this.fromDate = fromDate;
         return this;
     }
     
+    /**
+     * The numbers of items to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetReturnsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetReturnsSecurity security;
-    public GetReturnsRequest withSecurity(GetReturnsSecurity security) {
-        this.security = security;
+    /**
+     * A multiplier of the number of items (limit parameter) to skip before returning results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetReturnsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Date-time in ISO 8601 format for selecting orders before, or at, the specified time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDate")
+    public String toDate;
+    public GetReturnsRequest withToDate(String toDate) {
+        this.toDate = toDate;
         return this;
     }
     

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchChargeStationVariableRequest {
-    
-    public PatchChargeStationVariablePathParams pathParams;
-    public PatchChargeStationVariableRequest withPathParams(PatchChargeStationVariablePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Charge Station Variable to set
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchChargeStationVariableRequestBody request;
-    public PatchChargeStationVariableRequest withRequest(PatchChargeStationVariableRequestBody request) {
-        this.request = request;
+    public PatchChargeStationVariableRequestBody requestBody;
+    public PatchChargeStationVariableRequest withRequestBody(PatchChargeStationVariableRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID of charge station
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchChargeStationVariableRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

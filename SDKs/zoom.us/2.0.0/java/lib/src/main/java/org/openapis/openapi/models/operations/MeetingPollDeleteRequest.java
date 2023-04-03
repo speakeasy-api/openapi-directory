@@ -4,20 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MeetingPollDeleteRequest {
-    
-    public MeetingPollDeletePathParams pathParams;
-    public MeetingPollDeleteRequest withPathParams(MeetingPollDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
+     * 
+     * While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public Long meetingId;
+    public MeetingPollDeleteRequest withMeetingId(Long meetingId) {
+        this.meetingId = meetingId;
         return this;
     }
     
-    
-    public MeetingPollDeleteSecurity security;
-    public MeetingPollDeleteRequest withSecurity(MeetingPollDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The poll ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pollId")
+    public String pollId;
+    public MeetingPollDeleteRequest withPollId(String pollId) {
+        this.pollId = pollId;
         return this;
     }
     

@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsCreateFromManifestRequest {
-    
-    public AppsCreateFromManifestPathParams pathParams;
-    public AppsCreateFromManifestRequest withPathParams(AppsCreateFromManifestPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> requestBody;
+    public AppsCreateFromManifestRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public AppsCreateFromManifestRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=code")
+    public String code;
+    public AppsCreateFromManifestRequest withCode(String code) {
+        this.code = code;
         return this;
     }
     

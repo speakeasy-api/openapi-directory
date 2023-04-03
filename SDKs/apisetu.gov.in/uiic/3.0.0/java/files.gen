@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CripcSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/CripcRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/CripcRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CripcRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/CripcRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Cripc504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Cripc504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Cripc504ApplicationJSON.java
@@ -61,7 +60,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/TwipcSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/TwipcRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/TwipcRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/TwipcRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/TwipcRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Twipc504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Twipc504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Twipc504ApplicationJSON.java
@@ -95,6 +93,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 USAGE.md

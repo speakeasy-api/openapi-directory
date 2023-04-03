@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IpamIpAddressesPartialUpdateRequest {
-    
-    public IpamIpAddressesPartialUpdatePathParams pathParams;
-    public IpamIpAddressesPartialUpdateRequest withPathParams(IpamIpAddressesPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableIPAddressInput writableIPAddressInput;
+    public IpamIpAddressesPartialUpdateRequest withWritableIPAddressInput(org.openapis.openapi.models.shared.WritableIPAddressInput writableIPAddressInput) {
+        this.writableIPAddressInput = writableIPAddressInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableIPAddressInput request;
-    public IpamIpAddressesPartialUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableIPAddressInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this IP address.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public IpamIpAddressesPartialUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

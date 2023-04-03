@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReturnPolicyByNameRequest {
-    
-    public GetReturnPolicyByNameQueryParams queryParams;
-    public GetReturnPolicyByNameRequest withQueryParams(GetReturnPolicyByNameQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * This query parameter specifies the ID of the eBay marketplace of the policy you want to retrieve. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/account/types/ba:MarketplaceIdEnum
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=marketplace_id")
+    public String marketplaceId;
+    public GetReturnPolicyByNameRequest withMarketplaceId(String marketplaceId) {
+        this.marketplaceId = marketplaceId;
         return this;
     }
     
-    
-    public GetReturnPolicyByNameSecurity security;
-    public GetReturnPolicyByNameRequest withSecurity(GetReturnPolicyByNameSecurity security) {
-        this.security = security;
+    /**
+     * This query parameter specifies the seller-defined name of the return policy you want to retrieve.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetReturnPolicyByNameRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

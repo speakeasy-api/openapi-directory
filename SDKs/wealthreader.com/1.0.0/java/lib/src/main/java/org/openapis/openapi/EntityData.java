@@ -98,7 +98,7 @@ public class EntityData {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetErrorCodesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetErrorCodesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -144,7 +144,7 @@ public class EntityData {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostEntitiesResponse postEntities(org.openapis.openapi.models.operations.PostEntitiesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostEntitiesResponse postEntities(org.openapis.openapi.models.operations.PostEntitiesRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/entities");
         

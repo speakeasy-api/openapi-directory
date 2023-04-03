@@ -236,10 +236,14 @@ public class SDK {
 		
 	}
 
-    public org.openapis.openapi.models.operations.FetchAccountSettingsResponse fetchAccountSettings(org.openapis.openapi.models.operations.FetchAccountSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchAccountSettingsResponse fetchAccountSettings(org.openapis.openapi.models.operations.FetchAccountSettingsRequest request, org.openapis.openapi.models.operations.FetchAccountSettingsSecurity security) throws Exception {
+        return this.fetchAccountSettings(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchAccountSettingsResponse fetchAccountSettings(org.openapis.openapi.models.operations.FetchAccountSettingsRequest request, org.openapis.openapi.models.operations.FetchAccountSettingsSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_ACCOUNT_SETTINGS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Voice/Settings");
@@ -248,14 +252,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchAccountSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchAccountSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -282,23 +286,36 @@ public class SDK {
     /**
      * Fetch a specific Annotation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchAnnotationResponse fetchAnnotation(org.openapis.openapi.models.operations.FetchAnnotationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchAnnotationResponse fetchAnnotation(org.openapis.openapi.models.operations.FetchAnnotationRequest request, org.openapis.openapi.models.operations.FetchAnnotationSecurity security) throws Exception {
+        return this.fetchAnnotation(request, security, null);
+    }
+
+    /**
+     * Fetch a specific Annotation.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchAnnotationResponse fetchAnnotation(org.openapis.openapi.models.operations.FetchAnnotationRequest request, org.openapis.openapi.models.operations.FetchAnnotationSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_ANNOTATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchAnnotationPathParams.class, baseUrl, "/v1/Voice/{CallSid}/Annotation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchAnnotationRequest.class, baseUrl, "/v1/Voice/{CallSid}/Annotation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -322,20 +339,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchCallResponse fetchCall(org.openapis.openapi.models.operations.FetchCallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchCallResponse fetchCall(org.openapis.openapi.models.operations.FetchCallRequest request, org.openapis.openapi.models.operations.FetchCallSecurity security) throws Exception {
+        return this.fetchCall(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchCallResponse fetchCall(org.openapis.openapi.models.operations.FetchCallRequest request, org.openapis.openapi.models.operations.FetchCallSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_CALL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchCallPathParams.class, baseUrl, "/v1/Voice/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchCallRequest.class, baseUrl, "/v1/Voice/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -362,23 +383,36 @@ public class SDK {
     /**
      * Fetch a specific Conference.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchConferenceResponse fetchConference(org.openapis.openapi.models.operations.FetchConferenceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchConferenceResponse fetchConference(org.openapis.openapi.models.operations.FetchConferenceRequest request, org.openapis.openapi.models.operations.FetchConferenceSecurity security) throws Exception {
+        return this.fetchConference(request, security, null);
+    }
+
+    /**
+     * Fetch a specific Conference.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchConferenceResponse fetchConference(org.openapis.openapi.models.operations.FetchConferenceRequest request, org.openapis.openapi.models.operations.FetchConferenceSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_CONFERENCE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchConferencePathParams.class, baseUrl, "/v1/Conferences/{ConferenceSid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchConferenceRequest.class, baseUrl, "/v1/Conferences/{ConferenceSid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -405,29 +439,42 @@ public class SDK {
     /**
      * Fetch a specific Conference Participant Summary.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchConferenceParticipantResponse fetchConferenceParticipant(org.openapis.openapi.models.operations.FetchConferenceParticipantRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchConferenceParticipantResponse fetchConferenceParticipant(org.openapis.openapi.models.operations.FetchConferenceParticipantRequest request, org.openapis.openapi.models.operations.FetchConferenceParticipantSecurity security) throws Exception {
+        return this.fetchConferenceParticipant(request, security, null);
+    }
+
+    /**
+     * Fetch a specific Conference Participant Summary.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchConferenceParticipantResponse fetchConferenceParticipant(org.openapis.openapi.models.operations.FetchConferenceParticipantRequest request, org.openapis.openapi.models.operations.FetchConferenceParticipantSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_CONFERENCE_PARTICIPANT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchConferenceParticipantPathParams.class, baseUrl, "/v1/Conferences/{ConferenceSid}/Participants/{ParticipantSid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchConferenceParticipantRequest.class, baseUrl, "/v1/Conferences/{ConferenceSid}/Participants/{ParticipantSid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchConferenceParticipantQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchConferenceParticipantRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -451,26 +498,30 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchSummaryResponse fetchSummary(org.openapis.openapi.models.operations.FetchSummaryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchSummaryResponse fetchSummary(org.openapis.openapi.models.operations.FetchSummaryRequest request, org.openapis.openapi.models.operations.FetchSummarySecurity security) throws Exception {
+        return this.fetchSummary(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchSummaryResponse fetchSummary(org.openapis.openapi.models.operations.FetchSummaryRequest request, org.openapis.openapi.models.operations.FetchSummarySecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_SUMMARY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchSummaryPathParams.class, baseUrl, "/v1/Voice/{CallSid}/Summary", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchSummaryRequest.class, baseUrl, "/v1/Voice/{CallSid}/Summary", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchSummaryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchSummaryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,23 +548,36 @@ public class SDK {
     /**
      * Get Video Log Analyzer data for a Room Participant.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchVideoParticipantSummaryResponse fetchVideoParticipantSummary(org.openapis.openapi.models.operations.FetchVideoParticipantSummaryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchVideoParticipantSummaryResponse fetchVideoParticipantSummary(org.openapis.openapi.models.operations.FetchVideoParticipantSummaryRequest request, org.openapis.openapi.models.operations.FetchVideoParticipantSummarySecurity security) throws Exception {
+        return this.fetchVideoParticipantSummary(request, security, null);
+    }
+
+    /**
+     * Get Video Log Analyzer data for a Room Participant.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchVideoParticipantSummaryResponse fetchVideoParticipantSummary(org.openapis.openapi.models.operations.FetchVideoParticipantSummaryRequest request, org.openapis.openapi.models.operations.FetchVideoParticipantSummarySecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_VIDEO_PARTICIPANT_SUMMARY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchVideoParticipantSummaryPathParams.class, baseUrl, "/v1/Video/Rooms/{RoomSid}/Participants/{ParticipantSid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchVideoParticipantSummaryRequest.class, baseUrl, "/v1/Video/Rooms/{RoomSid}/Participants/{ParticipantSid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -540,23 +604,36 @@ public class SDK {
     /**
      * Get Video Log Analyzer data for a Room.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchVideoRoomSummaryResponse fetchVideoRoomSummary(org.openapis.openapi.models.operations.FetchVideoRoomSummaryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchVideoRoomSummaryResponse fetchVideoRoomSummary(org.openapis.openapi.models.operations.FetchVideoRoomSummaryRequest request, org.openapis.openapi.models.operations.FetchVideoRoomSummarySecurity security) throws Exception {
+        return this.fetchVideoRoomSummary(request, security, null);
+    }
+
+    /**
+     * Get Video Log Analyzer data for a Room.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchVideoRoomSummaryResponse fetchVideoRoomSummary(org.openapis.openapi.models.operations.FetchVideoRoomSummaryRequest request, org.openapis.openapi.models.operations.FetchVideoRoomSummarySecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_VIDEO_ROOM_SUMMARY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchVideoRoomSummaryPathParams.class, baseUrl, "/v1/Video/Rooms/{RoomSid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchVideoRoomSummaryRequest.class, baseUrl, "/v1/Video/Rooms/{RoomSid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -580,10 +657,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListCallSummariesResponse listCallSummaries(org.openapis.openapi.models.operations.ListCallSummariesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListCallSummariesResponse listCallSummaries(org.openapis.openapi.models.operations.ListCallSummariesRequest request, org.openapis.openapi.models.operations.ListCallSummariesSecurity security) throws Exception {
+        return this.listCallSummaries(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListCallSummariesResponse listCallSummaries(org.openapis.openapi.models.operations.ListCallSummariesRequest request, org.openapis.openapi.models.operations.ListCallSummariesSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_CALL_SUMMARIES_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Voice/Summaries");
@@ -592,14 +673,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCallSummariesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCallSummariesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -626,13 +707,26 @@ public class SDK {
     /**
      * Retrieve a list of Conferences.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListConferenceResponse listConference(org.openapis.openapi.models.operations.ListConferenceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListConferenceResponse listConference(org.openapis.openapi.models.operations.ListConferenceRequest request, org.openapis.openapi.models.operations.ListConferenceSecurity security) throws Exception {
+        return this.listConference(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of Conferences.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListConferenceResponse listConference(org.openapis.openapi.models.operations.ListConferenceRequest request, org.openapis.openapi.models.operations.ListConferenceSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_CONFERENCE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Conferences");
@@ -641,14 +735,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConferenceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConferenceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -675,29 +769,42 @@ public class SDK {
     /**
      * List Conference Participants.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListConferenceParticipantResponse listConferenceParticipant(org.openapis.openapi.models.operations.ListConferenceParticipantRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListConferenceParticipantResponse listConferenceParticipant(org.openapis.openapi.models.operations.ListConferenceParticipantRequest request, org.openapis.openapi.models.operations.ListConferenceParticipantSecurity security) throws Exception {
+        return this.listConferenceParticipant(request, security, null);
+    }
+
+    /**
+     * List Conference Participants.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListConferenceParticipantResponse listConferenceParticipant(org.openapis.openapi.models.operations.ListConferenceParticipantRequest request, org.openapis.openapi.models.operations.ListConferenceParticipantSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_CONFERENCE_PARTICIPANT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListConferenceParticipantPathParams.class, baseUrl, "/v1/Conferences/{ConferenceSid}/Participants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListConferenceParticipantRequest.class, baseUrl, "/v1/Conferences/{ConferenceSid}/Participants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConferenceParticipantQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConferenceParticipantRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -721,26 +828,30 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListEventResponse listEvent(org.openapis.openapi.models.operations.ListEventRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListEventResponse listEvent(org.openapis.openapi.models.operations.ListEventRequest request, org.openapis.openapi.models.operations.ListEventSecurity security) throws Exception {
+        return this.listEvent(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListEventResponse listEvent(org.openapis.openapi.models.operations.ListEventRequest request, org.openapis.openapi.models.operations.ListEventSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_EVENT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListEventPathParams.class, baseUrl, "/v1/Voice/{CallSid}/Events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListEventRequest.class, baseUrl, "/v1/Voice/{CallSid}/Events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListEventQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListEventRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -764,26 +875,30 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListMetricResponse listMetric(org.openapis.openapi.models.operations.ListMetricRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListMetricResponse listMetric(org.openapis.openapi.models.operations.ListMetricRequest request, org.openapis.openapi.models.operations.ListMetricSecurity security) throws Exception {
+        return this.listMetric(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListMetricResponse listMetric(org.openapis.openapi.models.operations.ListMetricRequest request, org.openapis.openapi.models.operations.ListMetricSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_METRIC_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListMetricPathParams.class, baseUrl, "/v1/Voice/{CallSid}/Metrics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListMetricRequest.class, baseUrl, "/v1/Voice/{CallSid}/Metrics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListMetricQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListMetricRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -810,29 +925,42 @@ public class SDK {
     /**
      * Get a list of room participants.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListVideoParticipantSummaryResponse listVideoParticipantSummary(org.openapis.openapi.models.operations.ListVideoParticipantSummaryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListVideoParticipantSummaryResponse listVideoParticipantSummary(org.openapis.openapi.models.operations.ListVideoParticipantSummaryRequest request, org.openapis.openapi.models.operations.ListVideoParticipantSummarySecurity security) throws Exception {
+        return this.listVideoParticipantSummary(request, security, null);
+    }
+
+    /**
+     * Get a list of room participants.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListVideoParticipantSummaryResponse listVideoParticipantSummary(org.openapis.openapi.models.operations.ListVideoParticipantSummaryRequest request, org.openapis.openapi.models.operations.ListVideoParticipantSummarySecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_VIDEO_PARTICIPANT_SUMMARY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListVideoParticipantSummaryPathParams.class, baseUrl, "/v1/Video/Rooms/{RoomSid}/Participants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListVideoParticipantSummaryRequest.class, baseUrl, "/v1/Video/Rooms/{RoomSid}/Participants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListVideoParticipantSummaryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListVideoParticipantSummaryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -859,13 +987,26 @@ public class SDK {
     /**
      * Get a list of Programmable Video Rooms.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListVideoRoomSummaryResponse listVideoRoomSummary(org.openapis.openapi.models.operations.ListVideoRoomSummaryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListVideoRoomSummaryResponse listVideoRoomSummary(org.openapis.openapi.models.operations.ListVideoRoomSummaryRequest request, org.openapis.openapi.models.operations.ListVideoRoomSummarySecurity security) throws Exception {
+        return this.listVideoRoomSummary(request, security, null);
+    }
+
+    /**
+     * Get a list of Programmable Video Rooms.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListVideoRoomSummaryResponse listVideoRoomSummary(org.openapis.openapi.models.operations.ListVideoRoomSummaryRequest request, org.openapis.openapi.models.operations.ListVideoRoomSummarySecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_VIDEO_ROOM_SUMMARY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Video/Rooms");
@@ -874,14 +1015,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListVideoRoomSummaryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListVideoRoomSummaryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -905,10 +1046,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UpdateAccountSettingsResponse updateAccountSettings(org.openapis.openapi.models.operations.UpdateAccountSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateAccountSettingsResponse updateAccountSettings(org.openapis.openapi.models.operations.UpdateAccountSettingsUpdateAccountSettingsRequest request, org.openapis.openapi.models.operations.UpdateAccountSettingsSecurity security) throws Exception {
+        return this.updateAccountSettings(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.UpdateAccountSettingsResponse updateAccountSettings(org.openapis.openapi.models.operations.UpdateAccountSettingsUpdateAccountSettingsRequest request, org.openapis.openapi.models.operations.UpdateAccountSettingsSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_ACCOUNT_SETTINGS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Voice/Settings");
@@ -920,7 +1065,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -947,25 +1092,38 @@ public class SDK {
     /**
      * Create/Update the annotation for the call
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateAnnotationResponse updateAnnotation(org.openapis.openapi.models.operations.UpdateAnnotationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateAnnotationResponse updateAnnotation(org.openapis.openapi.models.operations.UpdateAnnotationRequest request, org.openapis.openapi.models.operations.UpdateAnnotationSecurity security) throws Exception {
+        return this.updateAnnotation(request, security, null);
+    }
+
+    /**
+     * Create/Update the annotation for the call
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateAnnotationResponse updateAnnotation(org.openapis.openapi.models.operations.UpdateAnnotationRequest request, org.openapis.openapi.models.operations.UpdateAnnotationSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_ANNOTATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAnnotationPathParams.class, baseUrl, "/v1/Voice/{CallSid}/Annotation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAnnotationRequest.class, baseUrl, "/v1/Voice/{CallSid}/Annotation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

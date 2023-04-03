@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHubSpacesSpaceIdMenusRequest {
-    
-    public GetHubSpacesSpaceIdMenusPathParams pathParams;
-    public GetHubSpacesSpaceIdMenusRequest withPathParams(GetHubSpacesSpaceIdMenusPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetHubSpacesSpaceIdMenusRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

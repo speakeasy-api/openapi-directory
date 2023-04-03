@@ -7,24 +7,67 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeOrderV3Request {
-    
-    public ChangeOrderV3PathParams pathParams;
-    public ChangeOrderV3Request withPathParams(ChangeOrderV3PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ChangeOrderV3QueryParams queryParams;
-    public ChangeOrderV3Request withQueryParams(ChangeOrderV3QueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, String> request;
-    public ChangeOrderV3Request withRequest(java.util.Map<String, String> request) {
-        this.request = request;
+    public java.util.Map<String, String> requestBody;
+    public ChangeOrderV3Request withRequestBody(java.util.Map<String, String> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public Integer accountId;
+    public ChangeOrderV3Request withAccountId(Integer accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    
+    /**
+     * The BeezUP Order identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=beezUPOrderId")
+    public String beezUPOrderId;
+    public ChangeOrderV3Request withBeezUPOrderId(String beezUPOrderId) {
+        this.beezUPOrderId = beezUPOrderId;
+        return this;
+    }
+    
+    /**
+     * The Order change type
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=changeOrderType")
+    public String changeOrderType;
+    public ChangeOrderV3Request withChangeOrderType(String changeOrderType) {
+        this.changeOrderType = changeOrderType;
+        return this;
+    }
+    
+    /**
+     * The marketplace technical code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
+    public String marketplaceTechnicalCode;
+    public ChangeOrderV3Request withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+        return this;
+    }
+    
+    /**
+     * If true, the operation will be not be sent to marketplace. But the validation will be taken in account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=testMode")
+    public Boolean testMode;
+    public ChangeOrderV3Request withTestMode(Boolean testMode) {
+        this.testMode = testMode;
+        return this;
+    }
+    
+    /**
+     * Sometimes the user in the e-commerce application is not the same as user associated with the current subscription key. We recommend providing your application's user login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userName")
+    public String userName;
+    public ChangeOrderV3Request withUserName(String userName) {
+        this.userName = userName;
         return this;
     }
     

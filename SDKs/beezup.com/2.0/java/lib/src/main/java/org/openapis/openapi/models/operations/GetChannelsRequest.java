@@ -4,20 +4,42 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelsRequest {
-    
-    public GetChannelsPathParams pathParams;
-    public GetChannelsRequest withPathParams(GetChannelsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Allows the client to indicate whether it accepts a compressed encoding to reduce traffic size.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Encoding")
+    public String[] acceptEncoding;
+    public GetChannelsRequest withAcceptEncoding(String[] acceptEncoding) {
+        this.acceptEncoding = acceptEncoding;
         return this;
     }
     
+    /**
+     * ETag value to identify the last known version of requested resource.\
+     * To avoid useless exchange, we recommend you to indicate the ETag you previously got from this operation.\
+     * If the ETag value does not match the response will be 200 to give you a new content, otherwise the response will be: 304 Not Modified, without any content.\
+     * For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetChannelsRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
+        return this;
+    }
     
-    public GetChannelsHeaders headers;
-    public GetChannelsRequest withHeaders(GetChannelsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The country iso code alpha 3 based on this: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3#Decoding_table \
+     * To know which country are available you have to use the operation: GetChannelsByCountry
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryIsoCode")
+    public String countryIsoCode;
+    public GetChannelsRequest withCountryIsoCode(String countryIsoCode) {
+        this.countryIsoCode = countryIsoCode;
         return this;
     }
     

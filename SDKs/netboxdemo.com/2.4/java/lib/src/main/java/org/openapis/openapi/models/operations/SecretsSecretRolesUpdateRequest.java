@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SecretsSecretRolesUpdateRequest {
-    
-    public SecretsSecretRolesUpdatePathParams pathParams;
-    public SecretsSecretRolesUpdateRequest withPathParams(SecretsSecretRolesUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.SecretRoleInput secretRoleInput;
+    public SecretsSecretRolesUpdateRequest withSecretRoleInput(org.openapis.openapi.models.shared.SecretRoleInput secretRoleInput) {
+        this.secretRoleInput = secretRoleInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SecretRoleInput request;
-    public SecretsSecretRolesUpdateRequest withRequest(org.openapis.openapi.models.shared.SecretRoleInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this secret role.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public SecretsSecretRolesUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

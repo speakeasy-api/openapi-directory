@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRealmDefaultGroupsGroupIdRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public PutRealmDefaultGroupsGroupIdRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
     
-    public PutRealmDefaultGroupsGroupIdPathParams pathParams;
-    public PutRealmDefaultGroupsGroupIdRequest withPathParams(PutRealmDefaultGroupsGroupIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PutRealmDefaultGroupsGroupIdRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

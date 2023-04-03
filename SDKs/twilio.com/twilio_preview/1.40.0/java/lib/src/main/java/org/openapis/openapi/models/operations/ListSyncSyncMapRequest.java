@@ -4,34 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSyncSyncMapRequest {
-    
-    public ListSyncSyncMapPathParams pathParams;
-    public ListSyncSyncMapRequest withPathParams(ListSyncSyncMapPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListSyncSyncMapRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListSyncSyncMapQueryParams queryParams;
-    public ListSyncSyncMapRequest withQueryParams(ListSyncSyncMapQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListSyncSyncMapRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public ListSyncSyncMapSecurity security;
-    public ListSyncSyncMapRequest withSecurity(ListSyncSyncMapSecurity security) {
-        this.security = security;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListSyncSyncMapRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     
-    
-    public String serverURL;
-    public ListSyncSyncMapRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public ListSyncSyncMapRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAgentContactsRequest {
-    
-    public GetAgentContactsPathParams pathParams;
-    public GetAgentContactsRequest withPathParams(GetAgentContactsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the agent in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agent_id")
+    public String agentId;
+    public GetAgentContactsRequest withAgentId(String agentId) {
+        this.agentId = agentId;
         return this;
     }
     
+    /**
+     * The integer offset at which to start the page. Possible values are 0 to total_records - 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetAgentContactsRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
     
-    public GetAgentContactsQueryParams queryParams;
-    public GetAgentContactsRequest withQueryParams(GetAgentContactsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The max size of each page of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetAgentContactsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

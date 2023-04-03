@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetForecastTimeSeriesWrfRequest {
-    
-    public GetForecastTimeSeriesWrfPathParams pathParams;
-    public GetForecastTimeSeriesWrfRequest withPathParams(GetForecastTimeSeriesWrfPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * optional number of days in string. Will be added to init forecast date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=days")
+    public Integer days;
+    public GetForecastTimeSeriesWrfRequest withDays(Integer days) {
+        this.days = days;
         return this;
     }
     
+    /**
+     * end date for the forecast ISO string YYYY-MM-DDTHH:mm:SS.SZ
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endtime")
+    public String endtime;
+    public GetForecastTimeSeriesWrfRequest withEndtime(String endtime) {
+        this.endtime = endtime;
+        return this;
+    }
     
-    public GetForecastTimeSeriesWrfQueryParams queryParams;
-    public GetForecastTimeSeriesWrfRequest withQueryParams(GetForecastTimeSeriesWrfQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Direct file I want to extract
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entryid")
+    public String entryid;
+    public GetForecastTimeSeriesWrfRequest withEntryid(String entryid) {
+        this.entryid = entryid;
+        return this;
+    }
+    
+    /**
+     * optional number of hours in string. Will be added to init forecast date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hours")
+    public Integer hours;
+    public GetForecastTimeSeriesWrfRequest withHours(Integer hours) {
+        this.hours = hours;
+        return this;
+    }
+    
+    /**
+     * initial date for the forecast ISO string YYYY-MM-DDTHH:mm:SS.SZ
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inittime")
+    public String inittime;
+    public GetForecastTimeSeriesWrfRequest withInittime(String inittime) {
+        this.inittime = inittime;
+        return this;
+    }
+    
+    /**
+     * latitude for the forecast
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=latitude")
+    public Float latitude;
+    public GetForecastTimeSeriesWrfRequest withLatitude(Float latitude) {
+        this.latitude = latitude;
+        return this;
+    }
+    
+    /**
+     * longitude for the forecast
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=longitude")
+    public Float longitude;
+    public GetForecastTimeSeriesWrfRequest withLongitude(Float longitude) {
+        this.longitude = longitude;
+        return this;
+    }
+    
+    /**
+     *  Comma separated values for the wave parameteres height,direction,period
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=wave")
+    public String wave;
+    public GetForecastTimeSeriesWrfRequest withWave(String wave) {
+        this.wave = wave;
+        return this;
+    }
+    
+    /**
+     *  Comma separated values for the weather parameteres temperature,rain,wind_u,wind_v,gust,pressure,cloud,humidity&amp;wave=height,direction,period
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=weather")
+    public String weather;
+    public GetForecastTimeSeriesWrfRequest withWeather(String weather) {
+        this.weather = weather;
         return this;
     }
     

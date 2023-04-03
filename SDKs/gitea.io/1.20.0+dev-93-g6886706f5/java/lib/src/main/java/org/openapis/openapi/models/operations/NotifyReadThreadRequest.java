@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NotifyReadThreadRequest {
-    
-    public NotifyReadThreadPathParams pathParams;
-    public NotifyReadThreadRequest withPathParams(NotifyReadThreadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of notification thread
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public NotifyReadThreadRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public NotifyReadThreadQueryParams queryParams;
-    public NotifyReadThreadRequest withQueryParams(NotifyReadThreadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Status to mark notifications as
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to-status")
+    public String toStatus;
+    public NotifyReadThreadRequest withToStatus(String toStatus) {
+        this.toStatus = toStatus;
         return this;
     }
     

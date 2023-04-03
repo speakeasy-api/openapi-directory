@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserCurrentListKeysRequest {
+    /**
+     * fingerprint of the key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fingerprint")
+    public String fingerprint;
+    public UserCurrentListKeysRequest withFingerprint(String fingerprint) {
+        this.fingerprint = fingerprint;
+        return this;
+    }
     
-    public UserCurrentListKeysQueryParams queryParams;
-    public UserCurrentListKeysRequest withQueryParams(UserCurrentListKeysQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public UserCurrentListKeysRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public UserCurrentListKeysRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     

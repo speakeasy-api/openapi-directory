@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AttachCustomerManagedPolicyReferenceToPermissionSetXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AttachCustomerManagedPolicyReferenceToPermissionSetHeaders;
 import org.openapis.openapi.models.operations.AttachCustomerManagedPolicyReferenceToPermissionSetRequest;
 import org.openapis.openapi.models.operations.AttachCustomerManagedPolicyReferenceToPermissionSetResponse;
 import org.openapis.openapi.models.shared.AttachCustomerManagedPolicyReferenceToPermissionSetRequest;
@@ -29,32 +28,28 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AttachCustomerManagedPolicyReferenceToPermissionSetRequest req = new AttachCustomerManagedPolicyReferenceToPermissionSetRequest() {{
-                headers = new AttachCustomerManagedPolicyReferenceToPermissionSetHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "SWBExternalService.AttachCustomerManagedPolicyReferenceToPermissionSet";
-                }};
-                request = new AttachCustomerManagedPolicyReferenceToPermissionSetRequest() {{
+                attachCustomerManagedPolicyReferenceToPermissionSetRequest = new AttachCustomerManagedPolicyReferenceToPermissionSetRequest() {{
                     customerManagedPolicyReference = new CustomerManagedPolicyReference() {{
-                        name = "illum";
-                        path = "vel";
+                        name = "corrupti";
+                        path = "provident";
                     }};
-                    instanceArn = "error";
-                    permissionSetArn = "deserunt";
+                    instanceArn = "distinctio";
+                    permissionSetArn = "quibusdam";
                 }};
-            }};            
+                xAmzAlgorithm = "unde";
+                xAmzContentSha256 = "nulla";
+                xAmzCredential = "corrupti";
+                xAmzDate = "illum";
+                xAmzSecurityToken = "vel";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "deserunt";
+                xAmzTarget = "SWBExternalService.AttachCustomerManagedPolicyReferenceToPermissionSet";
+            }}            
 
             AttachCustomerManagedPolicyReferenceToPermissionSetResponse res = sdk.attachCustomerManagedPolicyReferenceToPermissionSet(req);
 
@@ -68,7 +63,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

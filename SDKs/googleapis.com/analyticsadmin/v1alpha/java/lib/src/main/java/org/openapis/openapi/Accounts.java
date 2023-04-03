@@ -34,10 +34,11 @@ public class Accounts {
     /**
      * Returns all accounts accessible by the caller. Note that these accounts might not currently have GA4 properties. Soft-deleted (ie: "trashed") accounts are excluded by default. Returns an empty list if no relevant accounts are found.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminAccountsListResponse analyticsadminAccountsList(org.openapis.openapi.models.operations.AnalyticsadminAccountsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminAccountsListResponse analyticsadminAccountsList(org.openapis.openapi.models.operations.AnalyticsadminAccountsListRequest request, org.openapis.openapi.models.operations.AnalyticsadminAccountsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1alpha/accounts");
         
@@ -45,14 +46,14 @@ public class Accounts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminAccountsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminAccountsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class Accounts {
     /**
      * Requests a ticket for creating an account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminAccountsProvisionAccountTicketResponse analyticsadminAccountsProvisionAccountTicket(org.openapis.openapi.models.operations.AnalyticsadminAccountsProvisionAccountTicketRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminAccountsProvisionAccountTicketResponse analyticsadminAccountsProvisionAccountTicket(org.openapis.openapi.models.operations.AnalyticsadminAccountsProvisionAccountTicketRequest request, org.openapis.openapi.models.operations.AnalyticsadminAccountsProvisionAccountTicketSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1alpha/accounts:provisionAccountTicket");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaProvisionAccountTicketRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminAccountsProvisionAccountTicketQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminAccountsProvisionAccountTicketRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,27 +128,28 @@ public class Accounts {
     /**
      * Searches through all changes to an account or its children given the specified set of filters.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsadminAccountsSearchChangeHistoryEventsResponse analyticsadminAccountsSearchChangeHistoryEvents(org.openapis.openapi.models.operations.AnalyticsadminAccountsSearchChangeHistoryEventsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsadminAccountsSearchChangeHistoryEventsResponse analyticsadminAccountsSearchChangeHistoryEvents(org.openapis.openapi.models.operations.AnalyticsadminAccountsSearchChangeHistoryEventsRequest request, org.openapis.openapi.models.operations.AnalyticsadminAccountsSearchChangeHistoryEventsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminAccountsSearchChangeHistoryEventsPathParams.class, baseUrl, "/v1alpha/{account}:searchChangeHistoryEvents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsadminAccountsSearchChangeHistoryEventsRequest.class, baseUrl, "/v1alpha/{account}:searchChangeHistoryEvents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminAccountsSearchChangeHistoryEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsadminAccountsSearchChangeHistoryEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

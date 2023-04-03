@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateActionRetrieveRequest {
-    
-    public CertificateActionRetrievePathParams pathParams;
-    public CertificateActionRetrieveRequest withPathParams(CertificateActionRetrievePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Certificate id to register for callback
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=certificateId")
+    public String certificateId;
+    public CertificateActionRetrieveRequest withCertificateId(String certificateId) {
+        this.certificateId = certificateId;
         return this;
     }
     

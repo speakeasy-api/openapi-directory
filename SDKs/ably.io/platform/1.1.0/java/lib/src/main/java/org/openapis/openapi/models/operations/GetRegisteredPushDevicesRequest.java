@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRegisteredPushDevicesRequest {
-    
-    public GetRegisteredPushDevicesQueryParams queryParams;
-    public GetRegisteredPushDevicesRequest withQueryParams(GetRegisteredPushDevicesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The version of the API you wish to use.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
+    public String xAblyVersion;
+    public GetRegisteredPushDevicesRequest withXAblyVersion(String xAblyVersion) {
+        this.xAblyVersion = xAblyVersion;
         return this;
     }
     
+    /**
+     * Optional filter to restrict to devices associated with that clientId.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientId")
+    public String clientId;
+    public GetRegisteredPushDevicesRequest withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
     
-    public GetRegisteredPushDevicesHeaders headers;
-    public GetRegisteredPushDevicesRequest withHeaders(GetRegisteredPushDevicesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Optional filter to restrict to devices associated with that deviceId.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceId")
+    public String deviceId;
+    public GetRegisteredPushDevicesRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    
+    /**
+     * The response format you would like
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+    public GetRegisteredPushDevicesRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * The maximum number of records to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetRegisteredPushDevicesRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

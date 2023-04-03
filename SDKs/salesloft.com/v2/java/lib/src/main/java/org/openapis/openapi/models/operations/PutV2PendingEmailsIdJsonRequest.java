@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutV2PendingEmailsIdJsonRequest {
-    
-    public PutV2PendingEmailsIdJsonPathParams pathParams;
-    public PutV2PendingEmailsIdJsonRequest withPathParams(PutV2PendingEmailsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public PutV2PendingEmailsIdJsonRequestBody requestBody;
+    public PutV2PendingEmailsIdJsonRequest withRequestBody(PutV2PendingEmailsIdJsonRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public PutV2PendingEmailsIdJsonRequestBody request;
-    public PutV2PendingEmailsIdJsonRequest withRequest(PutV2PendingEmailsIdJsonRequestBody request) {
-        this.request = request;
+    /**
+     * Email ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutV2PendingEmailsIdJsonRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -7,27 +7,53 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutProductsIdVariantsVariantIdJsonRequest {
-    
-    public PutProductsIdVariantsVariantIdJsonPathParams pathParams;
-    public PutProductsIdVariantsVariantIdJsonRequest withPathParams(PutProductsIdVariantsVariantIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutProductsIdVariantsVariantIdJsonQueryParams queryParams;
-    public PutProductsIdVariantsVariantIdJsonRequest withQueryParams(PutProductsIdVariantsVariantIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Product Variant parameters to change
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.VariantEdit request;
-    public PutProductsIdVariantsVariantIdJsonRequest withRequest(org.openapis.openapi.models.shared.VariantEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.VariantEdit variantEdit;
+    public PutProductsIdVariantsVariantIdJsonRequest withVariantEdit(org.openapis.openapi.models.shared.VariantEdit variantEdit) {
+        this.variantEdit = variantEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PutProductsIdVariantsVariantIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the Product
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PutProductsIdVariantsVariantIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PutProductsIdVariantsVariantIdJsonRequest withLogin(String login) {
+        this.login = login;
+        return this;
+    }
+    
+    /**
+     * Id of the Product Variant
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=variant_id")
+    public Integer variantId;
+    public PutProductsIdVariantsVariantIdJsonRequest withVariantId(Integer variantId) {
+        this.variantId = variantId;
         return this;
     }
     

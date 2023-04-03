@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetClassificationsNamePrefixesRequest {
-    
-    public GetClassificationsNamePrefixesHeaders headers;
-    public GetClassificationsNamePrefixesRequest withHeaders(GetClassificationsNamePrefixesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public GetClassificationsNamePrefixesRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

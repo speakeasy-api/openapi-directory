@@ -38,13 +38,13 @@ public class CompanyController {
      */
     public org.openapis.openapi.models.operations.CompanyControllerGetBranchesResponse companyControllerGetBranches(org.openapis.openapi.models.operations.CompanyControllerGetBranchesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyControllerGetBranchesPathParams.class, baseUrl, "/v3/diary/{shortName}/company/branches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyControllerGetBranchesRequest.class, baseUrl, "/v3/diary/{shortName}/company/branches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CompanyControllerGetBranchesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CompanyControllerGetBranchesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -98,7 +98,7 @@ public class CompanyController {
      */
     public org.openapis.openapi.models.operations.GetV3DiaryShortNameCompanyBranchesBranchIDResponse getV3DiaryShortNameCompanyBranchesBranchID(org.openapis.openapi.models.operations.GetV3DiaryShortNameCompanyBranchesBranchIDRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV3DiaryShortNameCompanyBranchesBranchIDPathParams.class, baseUrl, "/v3/diary/{shortName}/company/branches/{branchID}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV3DiaryShortNameCompanyBranchesBranchIDRequest.class, baseUrl, "/v3/diary/{shortName}/company/branches/{branchID}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

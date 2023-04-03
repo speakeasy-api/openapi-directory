@@ -4,13 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAuthorizablesRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authorizableId")
+    public String authorizableId;
+    public PostAuthorizablesRequest withAuthorizableId(String authorizableId) {
+        this.authorizableId = authorizableId;
+        return this;
+    }
     
-    public PostAuthorizablesQueryParams queryParams;
-    public PostAuthorizablesRequest withQueryParams(PostAuthorizablesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createGroup")
+    public String createGroup;
+    public PostAuthorizablesRequest withCreateGroup(String createGroup) {
+        this.createGroup = createGroup;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createUser")
+    public String createUser;
+    public PostAuthorizablesRequest withCreateUser(String createUser) {
+        this.createUser = createUser;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intermediatePath")
+    public String intermediatePath;
+    public PostAuthorizablesRequest withIntermediatePath(String intermediatePath) {
+        this.intermediatePath = intermediatePath;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=profile/givenName")
+    public String profileGivenName;
+    public PostAuthorizablesRequest withProfileGivenName(String profileGivenName) {
+        this.profileGivenName = profileGivenName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rep:password")
+    public String repPassword;
+    public PostAuthorizablesRequest withRepPassword(String repPassword) {
+        this.repPassword = repPassword;
         return this;
     }
     

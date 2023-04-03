@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteEnvironmentRequest {
-    
-    public DeleteEnvironmentPathParams pathParams;
-    public DeleteEnvironmentRequest withPathParams(DeleteEnvironmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Service to delete the Environment resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteEnvironmentRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public DeleteEnvironmentSecurity security;
-    public DeleteEnvironmentRequest withSecurity(DeleteEnvironmentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteEnvironmentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Environment resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteEnvironmentRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

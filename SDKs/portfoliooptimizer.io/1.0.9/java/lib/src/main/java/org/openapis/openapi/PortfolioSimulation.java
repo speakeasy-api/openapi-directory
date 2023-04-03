@@ -41,7 +41,7 @@ public class PortfolioSimulation {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingDriftWeightResponse postPortfolioSimulationRebalancingDriftWeight(org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingDriftWeightRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingDriftWeightResponse postPortfolioSimulationRebalancingDriftWeight(org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingDriftWeightRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/simulation/rebalancing/drift-weight");
         
@@ -90,7 +90,7 @@ public class PortfolioSimulation {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingFixedWeightResponse postPortfolioSimulationRebalancingFixedWeight(org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingFixedWeightRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingFixedWeightResponse postPortfolioSimulationRebalancingFixedWeight(org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingFixedWeightRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/simulation/rebalancing/fixed-weight");
         
@@ -139,7 +139,7 @@ public class PortfolioSimulation {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingRandomWeightResponse postPortfolioSimulationRebalancingRandomWeight(org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingRandomWeightRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingRandomWeightResponse postPortfolioSimulationRebalancingRandomWeight(org.openapis.openapi.models.operations.PostPortfolioSimulationRebalancingRandomWeightRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/simulation/rebalancing/random-weight");
         

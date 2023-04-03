@@ -4,13 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPayeeChangesV4Request {
+    /**
+     * Page number. Default is 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public ListPayeeChangesV4Request withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public ListPayeeChangesV4QueryParams queryParams;
-    public ListPayeeChangesV4Request withQueryParams(ListPayeeChangesV4QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page size. Default is 100. Max allowable is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public ListPayeeChangesV4Request withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The Payor ID to find associated Payees
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payorId")
+    public String payorId;
+    public ListPayeeChangesV4Request withPayorId(String payorId) {
+        this.payorId = payorId;
+        return this;
+    }
+    
+    /**
+     * The updatedSince filter in the format YYYY-MM-DDThh:mm:ss+hh:mm
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedSince")
+    public OffsetDateTime updatedSince;
+    public ListPayeeChangesV4Request withUpdatedSince(OffsetDateTime updatedSince) {
+        this.updatedSince = updatedSince;
         return this;
     }
     

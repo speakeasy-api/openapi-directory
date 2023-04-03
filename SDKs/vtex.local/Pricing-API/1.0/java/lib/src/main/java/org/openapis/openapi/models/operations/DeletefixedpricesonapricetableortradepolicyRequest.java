@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletefixedpricesonapricetableortradepolicyRequest {
-    
-    public DeletefixedpricesonapricetableortradepolicyPathParams pathParams;
-    public DeletefixedpricesonapricetableortradepolicyRequest withPathParams(DeletefixedpricesonapricetableortradepolicyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public DeletefixedpricesonapricetableortradepolicyRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public DeletefixedpricesonapricetableortradepolicyRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public DeletefixedpricesonapricetableortradepolicyHeaders headers;
-    public DeletefixedpricesonapricetableortradepolicyRequest withHeaders(DeletefixedpricesonapricetableortradepolicyHeaders headers) {
-        this.headers = headers;
+    /**
+     * SKU ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
+    public Long itemId;
+    public DeletefixedpricesonapricetableortradepolicyRequest withItemId(Long itemId) {
+        this.itemId = itemId;
+        return this;
+    }
+    
+    /**
+     * Price Table or Trade Policy Name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=priceTableId")
+    public String priceTableId;
+    public DeletefixedpricesonapricetableortradepolicyRequest withPriceTableId(String priceTableId) {
+        this.priceTableId = priceTableId;
         return this;
     }
     

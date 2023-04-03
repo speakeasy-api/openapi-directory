@@ -41,12 +41,12 @@ public class TestHarness {
      */
     public org.openapis.openapi.models.operations.CreateTestHarnessScenarioUsingPOSTResponse createTestHarnessScenarioUsingPOST(org.openapis.openapi.models.operations.CreateTestHarnessScenarioUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateTestHarnessScenarioUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/testHarness/scenarios", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateTestHarnessScenarioUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/testHarness/scenarios", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testHarnessScenarioModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -94,7 +94,7 @@ public class TestHarness {
      */
     public org.openapis.openapi.models.operations.DELETETestHarnessScenarioUsingDELETEResponse deleteTestHarnessScenarioUsingDELETE(org.openapis.openapi.models.operations.DELETETestHarnessScenarioUsingDELETERequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DELETETestHarnessScenarioUsingDELETEPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/testHarness/scenarios/{scenarioName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DELETETestHarnessScenarioUsingDELETERequest.class, baseUrl, "/restv2/game/{apiKey}/admin/testHarness/scenarios/{scenarioName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -134,7 +134,7 @@ public class TestHarness {
      */
     public org.openapis.openapi.models.operations.GETTestHarnessScenarioUsingGETResponse getTestHarnessScenarioUsingGET(org.openapis.openapi.models.operations.GETTestHarnessScenarioUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETTestHarnessScenarioUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/testHarness/scenarios/{scenarioName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETTestHarnessScenarioUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/testHarness/scenarios/{scenarioName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -182,7 +182,7 @@ public class TestHarness {
      */
     public org.openapis.openapi.models.operations.GETTestHarnessScenariosUsingGETResponse getTestHarnessScenariosUsingGET(org.openapis.openapi.models.operations.GETTestHarnessScenariosUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETTestHarnessScenariosUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/testHarness/scenarios", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETTestHarnessScenariosUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/testHarness/scenarios", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -230,12 +230,12 @@ public class TestHarness {
      */
     public org.openapis.openapi.models.operations.UpdateTestHarnessScenarioUsingPUTResponse updateTestHarnessScenarioUsingPUT(org.openapis.openapi.models.operations.UpdateTestHarnessScenarioUsingPUTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateTestHarnessScenarioUsingPUTPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/testHarness/scenarios/{scenarioName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateTestHarnessScenarioUsingPUTRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/testHarness/scenarios/{scenarioName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testHarnessScenarioModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

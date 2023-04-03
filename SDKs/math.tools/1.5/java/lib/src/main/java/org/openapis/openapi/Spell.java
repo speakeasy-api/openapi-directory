@@ -33,10 +33,11 @@ public class Spell {
     /**
      * Get the cardinal of the given number
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersCardinalResponse getNumbersCardinal(org.openapis.openapi.models.operations.GetNumbersCardinalRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersCardinalResponse getNumbersCardinal(org.openapis.openapi.models.operations.GetNumbersCardinalRequest request, org.openapis.openapi.models.operations.GetNumbersCardinalSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/cardinal");
         
@@ -44,14 +45,14 @@ public class Spell {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersCardinalQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersCardinalRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -72,10 +73,11 @@ public class Spell {
     /**
      * Spells out the number as a currency
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersCurrencyResponse getNumbersCurrency(org.openapis.openapi.models.operations.GetNumbersCurrencyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersCurrencyResponse getNumbersCurrency(org.openapis.openapi.models.operations.GetNumbersCurrencyRequest request, org.openapis.openapi.models.operations.GetNumbersCurrencySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/currency");
         
@@ -83,14 +85,14 @@ public class Spell {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersCurrencyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersCurrencyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -111,10 +113,11 @@ public class Spell {
     /**
      * Get the ordinal of the given number
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersOrdinalResponse getNumbersOrdinal(org.openapis.openapi.models.operations.GetNumbersOrdinalRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersOrdinalResponse getNumbersOrdinal(org.openapis.openapi.models.operations.GetNumbersOrdinalRequest request, org.openapis.openapi.models.operations.GetNumbersOrdinalSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/ordinal");
         
@@ -122,14 +125,14 @@ public class Spell {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersOrdinalQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersOrdinalRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

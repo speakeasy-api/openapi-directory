@@ -38,10 +38,11 @@ public class Schedule {
      *  - The date range supplied must be no larger than 21 days.
      *  - If no end data is passed the API will default to start date + 24 hours.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListScheduleResponse listSchedule(org.openapis.openapi.models.operations.ListScheduleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListScheduleResponse listSchedule(org.openapis.openapi.models.operations.ListScheduleRequest request, org.openapis.openapi.models.operations.ListScheduleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/schedule");
         
@@ -49,14 +50,14 @@ public class Schedule {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListScheduleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListScheduleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

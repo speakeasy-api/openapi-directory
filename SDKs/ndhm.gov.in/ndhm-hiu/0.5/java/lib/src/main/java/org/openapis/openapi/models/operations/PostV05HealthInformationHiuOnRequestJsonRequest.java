@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05HealthInformationHiuOnRequestJsonRequest {
-    
-    public PostV05HealthInformationHiuOnRequestJsonHeaders headers;
-    public PostV05HealthInformationHiuOnRequestJsonRequest withHeaders(PostV05HealthInformationHiuOnRequestJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05HealthInformationHiuOnRequestJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.HIUHealthInformationRequestResponse request;
-    public PostV05HealthInformationHiuOnRequestJsonRequest withRequest(org.openapis.openapi.models.shared.HIUHealthInformationRequestResponse request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.HIUHealthInformationRequestResponse hiuHealthInformationRequestResponse;
+    public PostV05HealthInformationHiuOnRequestJsonRequest withHIUHealthInformationRequestResponse(org.openapis.openapi.models.shared.HIUHealthInformationRequestResponse hiuHealthInformationRequestResponse) {
+        this.hiuHealthInformationRequestResponse = hiuHealthInformationRequestResponse;
         return this;
     }
     
-    
-    public String serverURL;
-    public PostV05HealthInformationHiuOnRequestJsonRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Identifier of the health information user to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIU-ID")
+    public String xHiuId;
+    public PostV05HealthInformationHiuOnRequestJsonRequest withXHiuId(String xHiuId) {
+        this.xHiuId = xHiuId;
         return this;
     }
     

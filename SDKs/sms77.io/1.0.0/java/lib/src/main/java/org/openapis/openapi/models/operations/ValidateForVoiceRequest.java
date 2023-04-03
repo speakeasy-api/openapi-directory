@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ValidateForVoiceRequest {
+    /**
+     * The callback URL which gets queried right after validation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ValidateForVoiceRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
     
-    public ValidateForVoiceQueryParams queryParams;
-    public ValidateForVoiceRequest withQueryParams(ValidateForVoiceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Determines the recipient. Can only be a number, not a contact from your address book.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public String number;
+    public ValidateForVoiceRequest withNumber(String number) {
+        this.number = number;
         return this;
     }
     

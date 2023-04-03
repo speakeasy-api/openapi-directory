@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PredictionsRequest {
-    
-    public PredictionsQueryParams queryParams;
-    public PredictionsRequest withQueryParams(PredictionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A calendar year
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public PredictionsRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

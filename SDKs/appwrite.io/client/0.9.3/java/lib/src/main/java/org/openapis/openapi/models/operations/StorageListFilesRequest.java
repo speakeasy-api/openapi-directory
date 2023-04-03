@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageListFilesRequest {
-    
-    public StorageListFilesQueryParams queryParams;
-    public StorageListFilesRequest withQueryParams(StorageListFilesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results limit value. By default will return maximum 25 results. Maximum of 100 results allowed per request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public StorageListFilesRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Results offset. The default value is 0. Use this param to manage pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public StorageListFilesRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
     
-    public StorageListFilesSecurity security;
-    public StorageListFilesRequest withSecurity(StorageListFilesSecurity security) {
-        this.security = security;
+    /**
+     * Order result by ASC or DESC order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderType")
+    public String orderType;
+    public StorageListFilesRequest withOrderType(String orderType) {
+        this.orderType = orderType;
+        return this;
+    }
+    
+    /**
+     * Search term to filter your list results. Max length: 256 chars.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public StorageListFilesRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

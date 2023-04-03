@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisruptionsGetDisruptionByIdRequest {
-    
-    public DisruptionsGetDisruptionByIdPathParams pathParams;
-    public DisruptionsGetDisruptionByIdRequest withPathParams(DisruptionsGetDisruptionByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public DisruptionsGetDisruptionByIdRequest withDevid(String devid) {
+        this.devid = devid;
         return this;
     }
     
+    /**
+     * Identifier of disruption; values returned by Disruptions API - /v3/disruptions OR /v3/disruptions/route/{route_id}
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=disruption_id")
+    public Long disruptionId;
+    public DisruptionsGetDisruptionByIdRequest withDisruptionId(Long disruptionId) {
+        this.disruptionId = disruptionId;
+        return this;
+    }
     
-    public DisruptionsGetDisruptionByIdQueryParams queryParams;
-    public DisruptionsGetDisruptionByIdRequest withQueryParams(DisruptionsGetDisruptionByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public DisruptionsGetDisruptionByIdRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public DisruptionsGetDisruptionByIdRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

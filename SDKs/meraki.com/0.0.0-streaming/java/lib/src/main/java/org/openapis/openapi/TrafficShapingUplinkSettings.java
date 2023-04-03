@@ -40,7 +40,7 @@ public class TrafficShapingUplinkSettings {
      */
     public org.openapis.openapi.models.operations.GetNetworkUplinkSettingsResponse getNetworkUplinkSettings(org.openapis.openapi.models.operations.GetNetworkUplinkSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkUplinkSettingsPathParams.class, baseUrl, "/networks/{networkId}/uplinkSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkUplinkSettingsRequest.class, baseUrl, "/networks/{networkId}/uplinkSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class TrafficShapingUplinkSettings {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkUplinkSettingsResponse updateNetworkUplinkSettings(org.openapis.openapi.models.operations.UpdateNetworkUplinkSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkUplinkSettingsPathParams.class, baseUrl, "/networks/{networkId}/uplinkSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkUplinkSettingsRequest.class, baseUrl, "/networks/{networkId}/uplinkSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

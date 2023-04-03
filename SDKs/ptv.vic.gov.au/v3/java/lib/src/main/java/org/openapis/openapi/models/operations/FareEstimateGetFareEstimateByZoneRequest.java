@@ -4,20 +4,91 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FareEstimateGetFareEstimateByZoneRequest {
-    
-    public FareEstimateGetFareEstimateByZonePathParams pathParams;
-    public FareEstimateGetFareEstimateByZoneRequest withPathParams(FareEstimateGetFareEstimateByZonePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public FareEstimateGetFareEstimateByZoneRequest withDevid(String devid) {
+        this.devid = devid;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_journey_in_free_tram_zone")
+    public Boolean isJourneyInFreeTramZone;
+    public FareEstimateGetFareEstimateByZoneRequest withIsJourneyInFreeTramZone(Boolean isJourneyInFreeTramZone) {
+        this.isJourneyInFreeTramZone = isJourneyInFreeTramZone;
+        return this;
+    }
     
-    public FareEstimateGetFareEstimateByZoneQueryParams queryParams;
-    public FareEstimateGetFareEstimateByZoneRequest withQueryParams(FareEstimateGetFareEstimateByZoneQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * JourneyTouchOffUtc in format yyyy-M-d h:m (e.g 2016-5-31 16:53).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=journey_touch_off_utc")
+    public OffsetDateTime journeyTouchOffUtc;
+    public FareEstimateGetFareEstimateByZoneRequest withJourneyTouchOffUtc(OffsetDateTime journeyTouchOffUtc) {
+        this.journeyTouchOffUtc = journeyTouchOffUtc;
+        return this;
+    }
+    
+    /**
+     * JourneyTouchOnUtc in format yyyy-M-d h:m (e.g 2016-5-31 16:53).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=journey_touch_on_utc")
+    public OffsetDateTime journeyTouchOnUtc;
+    public FareEstimateGetFareEstimateByZoneRequest withJourneyTouchOnUtc(OffsetDateTime journeyTouchOnUtc) {
+        this.journeyTouchOnUtc = journeyTouchOnUtc;
+        return this;
+    }
+    
+    /**
+     * Maximum Zone travelled through id. 6
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=maxZone")
+    public Integer maxZone;
+    public FareEstimateGetFareEstimateByZoneRequest withMaxZone(Integer maxZone) {
+        this.maxZone = maxZone;
+        return this;
+    }
+    
+    /**
+     * Minimum Zone travelled through ie. 1
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=minZone")
+    public Integer minZone;
+    public FareEstimateGetFareEstimateByZoneRequest withMinZone(Integer minZone) {
+        this.minZone = minZone;
+        return this;
+    }
+    
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public FareEstimateGetFareEstimateByZoneRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public FareEstimateGetFareEstimateByZoneRequest withToken(String token) {
+        this.token = token;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelled_route_types")
+    public FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum[] travelledRouteTypes;
+    public FareEstimateGetFareEstimateByZoneRequest withTravelledRouteTypes(FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum[] travelledRouteTypes) {
+        this.travelledRouteTypes = travelledRouteTypes;
         return this;
     }
     

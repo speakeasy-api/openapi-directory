@@ -39,7 +39,7 @@ public class LoginSecurity {
      */
     public org.openapis.openapi.models.operations.GetOrganizationLoginSecurityResponse getOrganizationLoginSecurity(org.openapis.openapi.models.operations.GetOrganizationLoginSecurityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLoginSecurityPathParams.class, baseUrl, "/organizations/{organizationId}/loginSecurity", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLoginSecurityRequest.class, baseUrl, "/organizations/{organizationId}/loginSecurity", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -79,12 +79,12 @@ public class LoginSecurity {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationLoginSecurityResponse updateOrganizationLoginSecurity(org.openapis.openapi.models.operations.UpdateOrganizationLoginSecurityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationLoginSecurityPathParams.class, baseUrl, "/organizations/{organizationId}/loginSecurity", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationLoginSecurityRequest.class, baseUrl, "/organizations/{organizationId}/loginSecurity", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

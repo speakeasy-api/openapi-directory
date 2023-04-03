@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GeneratePrinterFriendlyRequest {
-    
-    public GeneratePrinterFriendlyPathParams pathParams;
-    public GeneratePrinterFriendlyRequest withPathParams(GeneratePrinterFriendlyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * report's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reportId")
+    public Long reportId;
+    public GeneratePrinterFriendlyRequest withReportId(Long reportId) {
+        this.reportId = reportId;
         return this;
     }
     

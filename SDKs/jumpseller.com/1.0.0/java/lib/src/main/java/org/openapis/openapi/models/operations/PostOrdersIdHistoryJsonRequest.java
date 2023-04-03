@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOrdersIdHistoryJsonRequest {
-    
-    public PostOrdersIdHistoryJsonPathParams pathParams;
-    public PostOrdersIdHistoryJsonRequest withPathParams(PostOrdersIdHistoryJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostOrdersIdHistoryJsonQueryParams queryParams;
-    public PostOrdersIdHistoryJsonRequest withQueryParams(PostOrdersIdHistoryJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Order History parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.OrderHistoryEdit request;
-    public PostOrdersIdHistoryJsonRequest withRequest(org.openapis.openapi.models.shared.OrderHistoryEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.OrderHistoryEdit orderHistoryEdit;
+    public PostOrdersIdHistoryJsonRequest withOrderHistoryEdit(org.openapis.openapi.models.shared.OrderHistoryEdit orderHistoryEdit) {
+        this.orderHistoryEdit = orderHistoryEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PostOrdersIdHistoryJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the OrderHistory
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PostOrdersIdHistoryJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PostOrdersIdHistoryJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

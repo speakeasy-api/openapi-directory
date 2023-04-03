@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AquifersReadRequest {
-    
-    public AquifersReadPathParams pathParams;
-    public AquifersReadRequest withPathParams(AquifersReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this aquifer.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aquifer_id")
+    public Long aquiferId;
+    public AquifersReadRequest withAquiferId(Long aquiferId) {
+        this.aquiferId = aquiferId;
         return this;
     }
     

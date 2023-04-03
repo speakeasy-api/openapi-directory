@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSinkRequest {
-    
-    public FetchSinkPathParams pathParams;
-    public FetchSinkRequest withPathParams(FetchSinkPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchSinkSecurity security;
-    public FetchSinkRequest withSecurity(FetchSinkSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchSinkRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies this Sink.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchSinkRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

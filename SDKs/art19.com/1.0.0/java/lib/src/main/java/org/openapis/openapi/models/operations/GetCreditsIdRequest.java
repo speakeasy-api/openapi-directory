@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCreditsIdRequest {
-    
-    public GetCreditsIdPathParams pathParams;
-    public GetCreditsIdRequest withPathParams(GetCreditsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetCreditsIdSecurity security;
-    public GetCreditsIdRequest withSecurity(GetCreditsIdSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the credit resource to load.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetCreditsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

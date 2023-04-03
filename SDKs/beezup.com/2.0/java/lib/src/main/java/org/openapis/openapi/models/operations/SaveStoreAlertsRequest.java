@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveStoreAlertsRequest {
-    
-    public SaveStoreAlertsPathParams pathParams;
-    public SaveStoreAlertsRequest withPathParams(SaveStoreAlertsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, org.openapis.openapi.models.shared.SaveStoreAlertRequest> requestBody;
+    public SaveStoreAlertsRequest withRequestBody(java.util.Map<String, org.openapis.openapi.models.shared.SaveStoreAlertRequest> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, org.openapis.openapi.models.shared.SaveStoreAlertRequest> request;
-    public SaveStoreAlertsRequest withRequest(java.util.Map<String, org.openapis.openapi.models.shared.SaveStoreAlertRequest> request) {
-        this.request = request;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public SaveStoreAlertsRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

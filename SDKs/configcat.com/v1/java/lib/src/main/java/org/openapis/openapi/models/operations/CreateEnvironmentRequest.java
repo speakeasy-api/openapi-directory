@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateEnvironmentRequest {
-    
-    public CreateEnvironmentPathParams pathParams;
-    public CreateEnvironmentRequest withPathParams(CreateEnvironmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateEnvironmentModel createEnvironmentModel;
+    public CreateEnvironmentRequest withCreateEnvironmentModel(org.openapis.openapi.models.shared.CreateEnvironmentModel createEnvironmentModel) {
+        this.createEnvironmentModel = createEnvironmentModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateEnvironmentModel request;
-    public CreateEnvironmentRequest withRequest(org.openapis.openapi.models.shared.CreateEnvironmentModel request) {
-        this.request = request;
+    /**
+     * The identifier of the Product.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public CreateEnvironmentRequest withProductId(String productId) {
+        this.productId = productId;
         return this;
     }
     

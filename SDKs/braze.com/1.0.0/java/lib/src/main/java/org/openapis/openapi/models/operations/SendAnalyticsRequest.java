@@ -4,13 +4,54 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendAnalyticsRequest {
+    /**
+     * (Required) String
+     * 
+     * Campaign API identifier.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaign_id")
+    public String campaignId;
+    public SendAnalyticsRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
+        return this;
+    }
     
-    public SendAnalyticsQueryParams queryParams;
-    public SendAnalyticsRequest withQueryParams(SendAnalyticsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Optional) Datetime ISO 8601 string
+     * 
+     * Date on which the data series should end. Defaults to time of the request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_at")
+    public String endingAt;
+    public SendAnalyticsRequest withEndingAt(String endingAt) {
+        this.endingAt = endingAt;
+        return this;
+    }
+    
+    /**
+     * (Required) Integer
+     * 
+     * Maximum number of days before `ending_at` to include in the returned series. Must be between 1 and 100 inclusive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
+    public String length;
+    public SendAnalyticsRequest withLength(String length) {
+        this.length = length;
+        return this;
+    }
+    
+    /**
+     * (Required) String
+     * 
+     * Send API identifier.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=send_id")
+    public String sendId;
+    public SendAnalyticsRequest withSendId(String sendId) {
+        this.sendId = sendId;
         return this;
     }
     

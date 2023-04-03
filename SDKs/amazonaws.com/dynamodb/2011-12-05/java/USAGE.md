@@ -4,9 +4,7 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BatchGetItemQueryParams;
 import org.openapis.openapi.models.operations.BatchGetItemXAmzTargetEnum;
-import org.openapis.openapi.models.operations.BatchGetItemHeaders;
 import org.openapis.openapi.models.operations.BatchGetItemRequest;
 import org.openapis.openapi.models.operations.BatchGetItemResponse;
 import org.openapis.openapi.models.shared.BatchGetItemInput;
@@ -19,180 +17,177 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchGetItemRequest req = new BatchGetItemRequest() {{
-                queryParams = new BatchGetItemQueryParams() {{
-                    requestItems = "corrupti";
-                }};
-                headers = new BatchGetItemHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                    xAmzTarget = "DynamoDB_20111205.BatchGetItem";
-                }};
-                request = new BatchGetItemInput() {{
+                batchGetItemInput = new BatchGetItemInput() {{
                     requestItems = new java.util.HashMap<String, org.openapis.openapi.models.shared.KeysAndAttributes>() {{
-                        put("error", new KeysAndAttributes() {{
+                        put("provident", new KeysAndAttributes() {{
                             attributesToGet = new String[]{{
-                                add("suscipit"),
-                                add("iure"),
-                                add("magnam"),
+                                add("quibusdam"),
+                                add("unde"),
+                                add("nulla"),
                             }};
                             consistentRead = false;
                             keys = new org.openapis.openapi.models.shared.Key[]{{
                                 add(new Key() {{
                                     hashKeyElement = new AttributeValue() {{
-                                        b = "ipsa";
+                                        b = "illum";
                                         bs = new String[]{{
+                                            add("error"),
+                                            add("deserunt"),
+                                        }};
+                                        n = "suscipit";
+                                        ns = new String[]{{
+                                            add("magnam"),
+                                            add("debitis"),
+                                        }};
+                                        s = "ipsa";
+                                        ss = new String[]{{
                                             add("tempora"),
                                             add("suscipit"),
                                             add("molestiae"),
                                             add("minus"),
                                         }};
-                                        n = "placeat";
-                                        ns = new String[]{{
+                                    }};
+                                    rangeKeyElement = new AttributeValue() {{
+                                        b = "placeat";
+                                        bs = new String[]{{
                                             add("iusto"),
                                             add("excepturi"),
                                             add("nisi"),
                                         }};
-                                        s = "recusandae";
-                                        ss = new String[]{{
+                                        n = "recusandae";
+                                        ns = new String[]{{
                                             add("ab"),
                                             add("quis"),
                                             add("veritatis"),
                                             add("deserunt"),
                                         }};
-                                    }};
-                                    rangeKeyElement = new AttributeValue() {{
-                                        b = "perferendis";
-                                        bs = new String[]{{
+                                        s = "perferendis";
+                                        ss = new String[]{{
                                             add("repellendus"),
                                             add("sapiente"),
                                         }};
-                                        n = "quo";
-                                        ns = new String[]{{
+                                    }};
+                                }}),
+                                add(new Key() {{
+                                    hashKeyElement = new AttributeValue() {{
+                                        b = "quo";
+                                        bs = new String[]{{
                                             add("at"),
                                         }};
-                                        s = "at";
-                                        ss = new String[]{{
+                                        n = "at";
+                                        ns = new String[]{{
                                             add("molestiae"),
                                             add("quod"),
                                             add("quod"),
                                             add("esse"),
                                         }};
-                                    }};
-                                }}),
-                                add(new Key() {{
-                                    hashKeyElement = new AttributeValue() {{
-                                        b = "totam";
-                                        bs = new String[]{{
+                                        s = "totam";
+                                        ss = new String[]{{
                                             add("dolorum"),
                                             add("dicta"),
                                             add("nam"),
                                             add("officia"),
                                         }};
-                                        n = "occaecati";
-                                        ns = new String[]{{
+                                    }};
+                                    rangeKeyElement = new AttributeValue() {{
+                                        b = "occaecati";
+                                        bs = new String[]{{
                                             add("deleniti"),
                                         }};
-                                        s = "hic";
-                                        ss = new String[]{{
+                                        n = "hic";
+                                        ns = new String[]{{
                                             add("totam"),
                                             add("beatae"),
                                             add("commodi"),
                                             add("molestiae"),
                                         }};
-                                    }};
-                                    rangeKeyElement = new AttributeValue() {{
-                                        b = "modi";
-                                        bs = new String[]{{
-                                            add("impedit"),
-                                        }};
-                                        n = "cum";
-                                        ns = new String[]{{
-                                            add("ipsum"),
-                                            add("excepturi"),
-                                        }};
-                                        s = "aspernatur";
+                                        s = "modi";
                                         ss = new String[]{{
-                                            add("ad"),
+                                            add("impedit"),
                                         }};
                                     }};
                                 }}),
                                 add(new Key() {{
                                     hashKeyElement = new AttributeValue() {{
-                                        b = "natus";
+                                        b = "cum";
                                         bs = new String[]{{
-                                            add("iste"),
+                                            add("ipsum"),
+                                            add("excepturi"),
                                         }};
-                                        n = "dolor";
+                                        n = "aspernatur";
                                         ns = new String[]{{
-                                            add("laboriosam"),
-                                            add("hic"),
-                                            add("saepe"),
+                                            add("ad"),
                                         }};
-                                        s = "fuga";
+                                        s = "natus";
                                         ss = new String[]{{
-                                            add("corporis"),
                                             add("iste"),
                                         }};
                                     }};
                                     rangeKeyElement = new AttributeValue() {{
-                                        b = "iure";
+                                        b = "dolor";
                                         bs = new String[]{{
+                                            add("laboriosam"),
+                                            add("hic"),
+                                            add("saepe"),
+                                        }};
+                                        n = "fuga";
+                                        ns = new String[]{{
+                                            add("corporis"),
+                                            add("iste"),
+                                        }};
+                                        s = "iure";
+                                        ss = new String[]{{
                                             add("quidem"),
                                             add("architecto"),
                                             add("ipsa"),
                                             add("reiciendis"),
                                         }};
-                                        n = "est";
-                                        ns = new String[]{{
-                                            add("laborum"),
-                                            add("dolores"),
-                                            add("dolorem"),
-                                        }};
-                                        s = "corporis";
-                                        ss = new String[]{{
-                                            add("nobis"),
-                                        }};
                                     }};
                                 }}),
+                            }};
+                        }});
+                        put("est", new KeysAndAttributes() {{
+                            attributesToGet = new String[]{{
+                                add("laborum"),
+                                add("dolores"),
+                                add("dolorem"),
+                            }};
+                            consistentRead = false;
+                            keys = new org.openapis.openapi.models.shared.Key[]{{
                                 add(new Key() {{
                                     hashKeyElement = new AttributeValue() {{
-                                        b = "enim";
+                                        b = "explicabo";
                                         bs = new String[]{{
+                                            add("enim"),
+                                            add("omnis"),
                                             add("nemo"),
                                             add("minima"),
-                                            add("excepturi"),
                                         }};
-                                        n = "accusantium";
+                                        n = "excepturi";
                                         ns = new String[]{{
-                                            add("culpa"),
-                                            add("doloribus"),
+                                            add("iure"),
                                         }};
-                                        s = "sapiente";
+                                        s = "culpa";
                                         ss = new String[]{{
+                                            add("sapiente"),
+                                            add("architecto"),
                                             add("mollitia"),
+                                            add("dolorem"),
                                         }};
                                     }};
                                     rangeKeyElement = new AttributeValue() {{
-                                        b = "dolorem";
+                                        b = "culpa";
                                         bs = new String[]{{
-                                            add("consequuntur"),
                                             add("repellat"),
-                                            add("mollitia"),
                                         }};
-                                        n = "occaecati";
+                                        n = "mollitia";
                                         ns = new String[]{{
+                                            add("numquam"),
                                             add("commodi"),
                                             add("quam"),
                                         }};
@@ -202,66 +197,66 @@ public class Application {
                                         }};
                                     }};
                                 }}),
-                            }};
-                        }});
-                        put("quia", new KeysAndAttributes() {{
-                            attributesToGet = new String[]{{
-                                add("vitae"),
-                                add("laborum"),
-                            }};
-                            consistentRead = false;
-                            keys = new org.openapis.openapi.models.shared.Key[]{{
                                 add(new Key() {{
                                     hashKeyElement = new AttributeValue() {{
-                                        b = "enim";
+                                        b = "quia";
                                         bs = new String[]{{
+                                            add("vitae"),
+                                            add("laborum"),
+                                        }};
+                                        n = "animi";
+                                        ns = new String[]{{
+                                            add("odit"),
                                             add("quo"),
                                         }};
-                                        n = "sequi";
-                                        ns = new String[]{{
+                                        s = "sequi";
+                                        ss = new String[]{{
                                             add("ipsam"),
                                             add("id"),
                                             add("possimus"),
                                             add("aut"),
                                         }};
-                                        s = "quasi";
-                                        ss = new String[]{{
+                                    }};
+                                    rangeKeyElement = new AttributeValue() {{
+                                        b = "quasi";
+                                        bs = new String[]{{
                                             add("temporibus"),
                                             add("laborum"),
                                             add("quasi"),
                                         }};
-                                    }};
-                                    rangeKeyElement = new AttributeValue() {{
-                                        b = "reiciendis";
-                                        bs = new String[]{{
+                                        n = "reiciendis";
+                                        ns = new String[]{{
                                             add("vero"),
                                             add("nihil"),
                                             add("praesentium"),
                                             add("voluptatibus"),
                                         }};
-                                        n = "ipsa";
-                                        ns = new String[]{{
+                                        s = "ipsa";
+                                        ss = new String[]{{
                                             add("voluptate"),
                                             add("cum"),
                                             add("perferendis"),
                                         }};
-                                        s = "doloremque";
-                                        ss = new String[]{{
-                                            add("ut"),
-                                            add("maiores"),
-                                        }};
                                     }};
                                 }}),
+                            }};
+                        }});
+                        put("doloremque", new KeysAndAttributes() {{
+                            attributesToGet = new String[]{{
+                                add("ut"),
+                                add("maiores"),
+                            }};
+                            consistentRead = false;
+                            keys = new org.openapis.openapi.models.shared.Key[]{{
                                 add(new Key() {{
                                     hashKeyElement = new AttributeValue() {{
-                                        b = "dicta";
+                                        b = "corporis";
                                         bs = new String[]{{
-                                            add("dolore"),
                                             add("iusto"),
+                                            add("dicta"),
                                         }};
-                                        n = "dicta";
+                                        n = "harum";
                                         ns = new String[]{{
-                                            add("enim"),
                                             add("accusamus"),
                                             add("commodi"),
                                         }};
@@ -289,49 +284,20 @@ public class Application {
                                         }};
                                     }};
                                 }}),
-                                add(new Key() {{
-                                    hashKeyElement = new AttributeValue() {{
-                                        b = "incidunt";
-                                        bs = new String[]{{
-                                            add("consequatur"),
-                                            add("est"),
-                                        }};
-                                        n = "quibusdam";
-                                        ns = new String[]{{
-                                            add("deserunt"),
-                                        }};
-                                        s = "distinctio";
-                                        ss = new String[]{{
-                                            add("labore"),
-                                            add("modi"),
-                                            add("qui"),
-                                            add("aliquid"),
-                                        }};
-                                    }};
-                                    rangeKeyElement = new AttributeValue() {{
-                                        b = "cupiditate";
-                                        bs = new String[]{{
-                                            add("perferendis"),
-                                            add("magni"),
-                                            add("assumenda"),
-                                        }};
-                                        n = "ipsam";
-                                        ns = new String[]{{
-                                            add("fugit"),
-                                        }};
-                                        s = "dolorum";
-                                        ss = new String[]{{
-                                            add("tempora"),
-                                            add("facilis"),
-                                            add("tempore"),
-                                        }};
-                                    }};
-                                }}),
                             }};
                         }});
                     }};
                 }};
-            }};            
+                requestItems = "incidunt";
+                xAmzAlgorithm = "enim";
+                xAmzContentSha256 = "consequatur";
+                xAmzCredential = "est";
+                xAmzDate = "quibusdam";
+                xAmzSecurityToken = "explicabo";
+                xAmzSignature = "deserunt";
+                xAmzSignedHeaders = "distinctio";
+                xAmzTarget = "DynamoDB_20111205.BatchGetItem";
+            }}            
 
             BatchGetItemResponse res = sdk.batchGetItem(req);
 

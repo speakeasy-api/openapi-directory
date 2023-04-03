@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchCredentialPublicKeyRequest {
-    
-    public FetchCredentialPublicKeyPathParams pathParams;
-    public FetchCredentialPublicKeyRequest withPathParams(FetchCredentialPublicKeyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchCredentialPublicKeySecurity security;
-    public FetchCredentialPublicKeyRequest withSecurity(FetchCredentialPublicKeySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchCredentialPublicKeyRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the PublicKey resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchCredentialPublicKeyRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

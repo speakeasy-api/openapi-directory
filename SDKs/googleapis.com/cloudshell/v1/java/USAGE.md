@@ -5,14 +5,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CloudshellOperationsCancelSecurity;
-import org.openapis.openapi.models.operations.CloudshellOperationsCancelPathParams;
-import org.openapis.openapi.models.operations.CloudshellOperationsCancelQueryParams;
 import org.openapis.openapi.models.operations.CloudshellOperationsCancelRequest;
 import org.openapis.openapi.models.operations.CloudshellOperationsCancelResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -21,37 +17,29 @@ public class Application {
                 .build();
 
             CloudshellOperationsCancelRequest req = new CloudshellOperationsCancelRequest() {{
-                security = new CloudshellOperationsCancelSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                dollarXgafv = "2";
+                requestBody = new java.util.HashMap<String, Object>() {{
+                    put("distinctio", "quibusdam");
+                    put("unde", "nulla");
+                    put("corrupti", "illum");
                 }};
-                pathParams = new CloudshellOperationsCancelPathParams() {{
-                    name = "corrupti";
-                }};
-                queryParams = new CloudshellOperationsCancelQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new java.util.HashMap<String, Object>() {{
-                    put("iure", "magnam");
-                    put("debitis", "ipsa");
-                }};
-            }};            
+                accessToken = "vel";
+                alt = "media";
+                callback = "deserunt";
+                fields = "suscipit";
+                key = "iure";
+                name = "magnam";
+                oauthToken = "debitis";
+                prettyPrint = false;
+                quotaUser = "ipsa";
+                uploadType = "delectus";
+                uploadProtocol = "tempora";
+            }}            
 
-            CloudshellOperationsCancelResponse res = sdk.operations.cloudshellOperationsCancel(req);
+            CloudshellOperationsCancelResponse res = sdk.operations.cloudshellOperationsCancel(req, new CloudshellOperationsCancelSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.empty.isPresent()) {
                 // handle response

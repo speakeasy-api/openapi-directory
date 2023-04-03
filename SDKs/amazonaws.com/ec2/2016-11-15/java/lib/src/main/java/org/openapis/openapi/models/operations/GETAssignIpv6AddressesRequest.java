@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAssignIpv6AddressesRequest {
-    
-    public GETAssignIpv6AddressesQueryParams queryParams;
-    public GETAssignIpv6AddressesRequest withQueryParams(GETAssignIpv6AddressesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETAssignIpv6AddressesActionEnum action;
+    public GETAssignIpv6AddressesRequest withAction(GETAssignIpv6AddressesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The number of additional IPv6 addresses to assign to the network interface. The specified number of IPv6 addresses are assigned in addition to the existing IPv6 addresses that are already assigned to the network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. You can't use this option if specifying specific IPv6 addresses.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv6AddressCount")
+    public Long ipv6AddressCount;
+    public GETAssignIpv6AddressesRequest withIpv6AddressCount(Long ipv6AddressCount) {
+        this.ipv6AddressCount = ipv6AddressCount;
+        return this;
+    }
     
-    public GETAssignIpv6AddressesHeaders headers;
-    public GETAssignIpv6AddressesRequest withHeaders(GETAssignIpv6AddressesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The IPv6 addresses to be assigned to the network interface. You can't use this option if you're specifying a number of IPv6 addresses.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv6Addresses")
+    public String[] ipv6Addresses;
+    public GETAssignIpv6AddressesRequest withIpv6Addresses(String[] ipv6Addresses) {
+        this.ipv6Addresses = ipv6Addresses;
+        return this;
+    }
+    
+    /**
+     * One or more IPv6 prefixes assigned to the network interface. You cannot use this option if you use the &lt;code&gt;Ipv6PrefixCount&lt;/code&gt; option.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv6Prefix")
+    public String[] ipv6Prefix;
+    public GETAssignIpv6AddressesRequest withIpv6Prefix(String[] ipv6Prefix) {
+        this.ipv6Prefix = ipv6Prefix;
+        return this;
+    }
+    
+    /**
+     * The number of IPv6 prefixes that Amazon Web Services automatically assigns to the network interface. You cannot use this option if you use the &lt;code&gt;Ipv6Prefixes&lt;/code&gt; option.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv6PrefixCount")
+    public Long ipv6PrefixCount;
+    public GETAssignIpv6AddressesRequest withIpv6PrefixCount(Long ipv6PrefixCount) {
+        this.ipv6PrefixCount = ipv6PrefixCount;
+        return this;
+    }
+    
+    /**
+     * The ID of the network interface.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInterfaceId")
+    public String networkInterfaceId;
+    public GETAssignIpv6AddressesRequest withNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETAssignIpv6AddressesVersionEnum version;
+    public GETAssignIpv6AddressesRequest withVersion(GETAssignIpv6AddressesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETAssignIpv6AddressesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETAssignIpv6AddressesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETAssignIpv6AddressesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETAssignIpv6AddressesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETAssignIpv6AddressesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETAssignIpv6AddressesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETAssignIpv6AddressesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

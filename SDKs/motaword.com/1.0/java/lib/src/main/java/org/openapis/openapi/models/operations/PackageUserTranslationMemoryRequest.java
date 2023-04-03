@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackageUserTranslationMemoryRequest {
-    
-    public PackageUserTranslationMemoryPathParams pathParams;
-    public PackageUserTranslationMemoryRequest withPathParams(PackageUserTranslationMemoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If you want to package and download the translation memory synchronously, mark this parameter as '0'. It will package the translation memory and then return the packaged file in the response, identical to async/download call after an asynchronous /package call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=async")
+    public Long async;
+    public PackageUserTranslationMemoryRequest withAsync(Long async) {
+        this.async = async;
         return this;
     }
     
+    /**
+     * If you don't need us to email the TMX, set this to '0'. Default is 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public Long email;
+    public PackageUserTranslationMemoryRequest withEmail(Long email) {
+        this.email = email;
+        return this;
+    }
     
-    public PackageUserTranslationMemoryQueryParams queryParams;
-    public PackageUserTranslationMemoryRequest withQueryParams(PackageUserTranslationMemoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Source Language Code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=languageCode")
+    public String languageCode;
+    public PackageUserTranslationMemoryRequest withLanguageCode(String languageCode) {
+        this.languageCode = languageCode;
         return this;
     }
     

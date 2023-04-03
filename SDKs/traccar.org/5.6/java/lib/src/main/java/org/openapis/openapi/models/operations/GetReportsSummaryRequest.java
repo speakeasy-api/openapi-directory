@@ -4,13 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReportsSummaryRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceId")
+    public Long[] deviceId;
+    public GetReportsSummaryRequest withDeviceId(Long[] deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
     
-    public GetReportsSummaryQueryParams queryParams;
-    public GetReportsSummaryRequest withQueryParams(GetReportsSummaryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * in IS0 8601 format. eg. `1963-11-22T18:30:00Z`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public OffsetDateTime from;
+    public GetReportsSummaryRequest withFrom(OffsetDateTime from) {
+        this.from = from;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupId")
+    public Long[] groupId;
+    public GetReportsSummaryRequest withGroupId(Long[] groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * in IS0 8601 format. eg. `1963-11-22T18:30:00Z`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public OffsetDateTime to;
+    public GetReportsSummaryRequest withTo(OffsetDateTime to) {
+        this.to = to;
         return this;
     }
     

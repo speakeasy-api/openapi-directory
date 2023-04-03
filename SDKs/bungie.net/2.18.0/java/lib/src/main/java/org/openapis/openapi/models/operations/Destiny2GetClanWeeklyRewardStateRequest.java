@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetClanWeeklyRewardStateRequest {
-    
-    public Destiny2GetClanWeeklyRewardStatePathParams pathParams;
-    public Destiny2GetClanWeeklyRewardStateRequest withPathParams(Destiny2GetClanWeeklyRewardStatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A valid group id of clan.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public Destiny2GetClanWeeklyRewardStateRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

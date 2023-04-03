@@ -34,25 +34,26 @@ public class GlobalAddresses {
     /**
      * Deletes the specified address resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeGlobalAddressesDeleteResponse computeGlobalAddressesDelete(org.openapis.openapi.models.operations.ComputeGlobalAddressesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeGlobalAddressesDeleteResponse computeGlobalAddressesDelete(org.openapis.openapi.models.operations.ComputeGlobalAddressesDeleteRequest request, org.openapis.openapi.models.operations.ComputeGlobalAddressesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalAddressesDeletePathParams.class, baseUrl, "/projects/{project}/global/addresses/{address}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalAddressesDeleteRequest.class, baseUrl, "/projects/{project}/global/addresses/{address}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalAddressesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalAddressesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class GlobalAddresses {
     /**
      * Returns the specified address resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeGlobalAddressesGetResponse computeGlobalAddressesGet(org.openapis.openapi.models.operations.ComputeGlobalAddressesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeGlobalAddressesGetResponse computeGlobalAddressesGet(org.openapis.openapi.models.operations.ComputeGlobalAddressesGetRequest request, org.openapis.openapi.models.operations.ComputeGlobalAddressesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalAddressesGetPathParams.class, baseUrl, "/projects/{project}/global/addresses/{address}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalAddressesGetRequest.class, baseUrl, "/projects/{project}/global/addresses/{address}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalAddressesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalAddressesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class GlobalAddresses {
     /**
      * Creates an address resource in the specified project by using the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeGlobalAddressesInsertResponse computeGlobalAddressesInsert(org.openapis.openapi.models.operations.ComputeGlobalAddressesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeGlobalAddressesInsertResponse computeGlobalAddressesInsert(org.openapis.openapi.models.operations.ComputeGlobalAddressesInsertRequest request, org.openapis.openapi.models.operations.ComputeGlobalAddressesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalAddressesInsertPathParams.class, baseUrl, "/projects/{project}/global/addresses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalAddressesInsertRequest.class, baseUrl, "/projects/{project}/global/addresses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "address", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalAddressesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalAddressesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class GlobalAddresses {
     /**
      * Retrieves a list of global addresses.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeGlobalAddressesListResponse computeGlobalAddressesList(org.openapis.openapi.models.operations.ComputeGlobalAddressesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeGlobalAddressesListResponse computeGlobalAddressesList(org.openapis.openapi.models.operations.ComputeGlobalAddressesListRequest request, org.openapis.openapi.models.operations.ComputeGlobalAddressesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalAddressesListPathParams.class, baseUrl, "/projects/{project}/global/addresses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalAddressesListRequest.class, baseUrl, "/projects/{project}/global/addresses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalAddressesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalAddressesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,27 +220,28 @@ public class GlobalAddresses {
     /**
      * Sets the labels on a GlobalAddress. To learn more about labels, read the Labeling Resources documentation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeGlobalAddressesSetLabelsResponse computeGlobalAddressesSetLabels(org.openapis.openapi.models.operations.ComputeGlobalAddressesSetLabelsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeGlobalAddressesSetLabelsResponse computeGlobalAddressesSetLabels(org.openapis.openapi.models.operations.ComputeGlobalAddressesSetLabelsRequest request, org.openapis.openapi.models.operations.ComputeGlobalAddressesSetLabelsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalAddressesSetLabelsPathParams.class, baseUrl, "/projects/{project}/global/addresses/{resource}/setLabels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalAddressesSetLabelsRequest.class, baseUrl, "/projects/{project}/global/addresses/{resource}/setLabels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "globalSetLabelsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalAddressesSetLabelsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalAddressesSetLabelsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

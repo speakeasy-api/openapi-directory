@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETVpnConnectionDeviceTypesRequest {
-    
-    public GETGETVpnConnectionDeviceTypesQueryParams queryParams;
-    public GETGETVpnConnectionDeviceTypesRequest withQueryParams(GETGETVpnConnectionDeviceTypesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETVpnConnectionDeviceTypesActionEnum action;
+    public GETGETVpnConnectionDeviceTypesRequest withAction(GETGETVpnConnectionDeviceTypesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETGETVpnConnectionDeviceTypesRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETGETVpnConnectionDeviceTypesHeaders headers;
-    public GETGETVpnConnectionDeviceTypesRequest withHeaders(GETGETVpnConnectionDeviceTypesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The maximum number of results returned by &lt;code&gt;GetVpnConnectionDeviceTypes&lt;/code&gt; in paginated output. When this parameter is used, &lt;code&gt;GetVpnConnectionDeviceTypes&lt;/code&gt; only returns &lt;code&gt;MaxResults&lt;/code&gt; results in a single page along with a &lt;code&gt;NextToken&lt;/code&gt; response element. The remaining results of the initial request can be seen by sending another &lt;code&gt;GetVpnConnectionDeviceTypes&lt;/code&gt; request with the returned &lt;code&gt;NextToken&lt;/code&gt; value. This value can be between 200 and 1000. If this parameter is not used, then &lt;code&gt;GetVpnConnectionDeviceTypes&lt;/code&gt; returns all results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public GETGETVpnConnectionDeviceTypesRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The &lt;code&gt;NextToken&lt;/code&gt; value returned from a previous paginated &lt;code&gt;GetVpnConnectionDeviceTypes&lt;/code&gt; request where &lt;code&gt;MaxResults&lt;/code&gt; was used and the results exceeded the value of that parameter. Pagination continues from the end of the previous results that returned the &lt;code&gt;NextToken&lt;/code&gt; value. This value is null when there are no more results to return. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETGETVpnConnectionDeviceTypesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETVpnConnectionDeviceTypesVersionEnum version;
+    public GETGETVpnConnectionDeviceTypesRequest withVersion(GETGETVpnConnectionDeviceTypesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGETVpnConnectionDeviceTypesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGETVpnConnectionDeviceTypesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGETVpnConnectionDeviceTypesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGETVpnConnectionDeviceTypesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGETVpnConnectionDeviceTypesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGETVpnConnectionDeviceTypesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGETVpnConnectionDeviceTypesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

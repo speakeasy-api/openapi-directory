@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetCityFormatEnum;
-import org.openapis.openapi.models.operations.GetCityQueryParams;
 import org.openapis.openapi.models.operations.GetCityRequest;
 import org.openapis.openapi.models.operations.GetCityResponse;
 
@@ -29,13 +28,11 @@ public class Application {
                 .build();
 
             GetCityRequest req = new GetCityRequest() {{
-                queryParams = new GetCityQueryParams() {{
-                    format = "xml";
-                    key = "provident";
-                    lat = 7151.9;
-                    lng = 8442.66;
-                }};
-            }};            
+                format = "xml";
+                key = "provident";
+                lat = 7151.9;
+                lng = 8442.66;
+            }}            
 
             GetCityResponse res = sdk.getCity(req);
 
@@ -49,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

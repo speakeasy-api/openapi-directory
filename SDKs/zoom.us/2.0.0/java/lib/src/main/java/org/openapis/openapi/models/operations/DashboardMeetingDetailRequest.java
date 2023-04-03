@@ -4,27 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DashboardMeetingDetailRequest {
-    
-    public DashboardMeetingDetailPathParams pathParams;
-    public DashboardMeetingDetailRequest withPathParams(DashboardMeetingDetailPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The meeting ID or the meeting UUID.  If a meeting ID is provided in the request instead of a UUID, the response will be for the latest meeting instance.
+     * 
+     * If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public String meetingId;
+    public DashboardMeetingDetailRequest withMeetingId(String meetingId) {
+        this.meetingId = meetingId;
         return this;
     }
     
-    
-    public DashboardMeetingDetailQueryParams queryParams;
-    public DashboardMeetingDetailRequest withQueryParams(DashboardMeetingDetailQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DashboardMeetingDetailSecurity security;
-    public DashboardMeetingDetailRequest withSecurity(DashboardMeetingDetailSecurity security) {
-        this.security = security;
+    /**
+     * The meeting types: &lt;br&gt;`past` - Past meetings.&lt;br&gt;`pastOne` - Past one user meetings.&lt;br&gt;`live` - Live meetings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public DashboardMeetingDetailTypeEnum type;
+    public DashboardMeetingDetailRequest withType(DashboardMeetingDetailTypeEnum type) {
+        this.type = type;
         return this;
     }
     

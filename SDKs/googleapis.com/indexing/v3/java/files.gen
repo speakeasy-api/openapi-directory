@@ -31,11 +31,9 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/IndexingUrlNotificationsGetMetadataSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/IndexingUrlNotificationsGetMetadataQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/IndexingUrlNotificationsGetMetadataRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/IndexingUrlNotificationsGetMetadataResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/IndexingUrlNotificationsPublishSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/IndexingUrlNotificationsPublishQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/IndexingUrlNotificationsPublishRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/IndexingUrlNotificationsPublishResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UrlNotificationMetadata.java
@@ -43,7 +41,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UrlNotificationTypeEnum.jav
 lib/src/main/java/org/openapis/openapi/models/shared/UrlNotification.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 lib/src/main/java/org/openapis/openapi/models/shared/PublishUrlNotificationResponse.java
 USAGE.md

@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InteractionsSetRestrictionsForRepoRequest {
-    
-    public InteractionsSetRestrictionsForRepoPathParams pathParams;
-    public InteractionsSetRestrictionsForRepoRequest withPathParams(InteractionsSetRestrictionsForRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.InteractionLimit interactionLimit;
+    public InteractionsSetRestrictionsForRepoRequest withInteractionLimit(org.openapis.openapi.models.shared.InteractionLimit interactionLimit) {
+        this.interactionLimit = interactionLimit;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.InteractionLimit request;
-    public InteractionsSetRestrictionsForRepoRequest withRequest(org.openapis.openapi.models.shared.InteractionLimit request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public InteractionsSetRestrictionsForRepoRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public InteractionsSetRestrictionsForRepoRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

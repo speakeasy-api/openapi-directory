@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCommentReplyRequest {
-    
-    public CreateCommentReplyPathParams pathParams;
-    public CreateCommentReplyRequest withPathParams(CreateCommentReplyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.comment+json")
-    public CreateCommentReplyRequestBody request;
-    public CreateCommentReplyRequest withRequest(CreateCommentReplyRequestBody request) {
-        this.request = request;
+    public CreateCommentReplyRequestBody requestBody;
+    public CreateCommentReplyRequest withRequestBody(CreateCommentReplyRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The ID of the comment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
+    public Double commentId;
+    public CreateCommentReplyRequest withCommentId(Double commentId) {
+        this.commentId = commentId;
+        return this;
+    }
     
-    public CreateCommentReplySecurity security;
-    public CreateCommentReplyRequest withSecurity(CreateCommentReplySecurity security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public CreateCommentReplyRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestOpenIdAuthInfoRequest {
-    
-    public RequestOpenIdAuthInfoQueryParams queryParams;
-    public RequestOpenIdAuthInfoRequest withQueryParams(RequestOpenIdAuthInfoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Show only global available items
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_global_available")
+    public Boolean isGlobalAvailable;
+    public RequestOpenIdAuthInfoRequest withIsGlobalAvailable(Boolean isGlobalAvailable) {
+        this.isGlobalAvailable = isGlobalAvailable;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDisputeEvidenceRequest {
-    
-    public DeleteDisputeEvidencePathParams pathParams;
-    public DeleteDisputeEvidenceRequest withPathParams(DeleteDisputeEvidencePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the dispute you want to remove evidence from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dispute_id")
+    public String disputeId;
+    public DeleteDisputeEvidenceRequest withDisputeId(String disputeId) {
+        this.disputeId = disputeId;
         return this;
     }
     
-    
-    public DeleteDisputeEvidenceSecurity security;
-    public DeleteDisputeEvidenceRequest withSecurity(DeleteDisputeEvidenceSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the evidence you want to remove.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=evidence_id")
+    public String evidenceId;
+    public DeleteDisputeEvidenceRequest withEvidenceId(String evidenceId) {
+        this.evidenceId = evidenceId;
         return this;
     }
     

@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFilePaymentsFilePaymentIdReportFileSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeTppoAuth2Security tppoAuth2Security;
-    public GetFilePaymentsFilePaymentIdReportFileSecurity withTPPOAuth2Security(org.openapis.openapi.models.shared.SchemeTppoAuth2Security tppoAuth2Security) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String tppoAuth2Security;
+    public GetFilePaymentsFilePaymentIdReportFileSecurity withTPPOAuth2Security(String tppoAuth2Security) {
         this.tppoAuth2Security = tppoAuth2Security;
         return this;
     }

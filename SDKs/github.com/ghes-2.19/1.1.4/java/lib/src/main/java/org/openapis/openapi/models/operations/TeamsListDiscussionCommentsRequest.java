@@ -4,20 +4,50 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsListDiscussionCommentsRequest {
-    
-    public TeamsListDiscussionCommentsPathParams pathParams;
-    public TeamsListDiscussionCommentsRequest withPathParams(TeamsListDiscussionCommentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Sorts the discussion comments by the date they were created. To return the oldest comments first, set to `asc`. Can be one of `asc` or `desc`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public TeamsListDiscussionCommentsDirectionEnum direction;
+    public TeamsListDiscussionCommentsRequest withDirection(TeamsListDiscussionCommentsDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
+    public Long discussionNumber;
+    public TeamsListDiscussionCommentsRequest withDiscussionNumber(Long discussionNumber) {
+        this.discussionNumber = discussionNumber;
+        return this;
+    }
     
-    public TeamsListDiscussionCommentsQueryParams queryParams;
-    public TeamsListDiscussionCommentsRequest withQueryParams(TeamsListDiscussionCommentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public TeamsListDiscussionCommentsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public TeamsListDiscussionCommentsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsListDiscussionCommentsRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

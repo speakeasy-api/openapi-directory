@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBranchesRequest {
+    /**
+     * Used for conditional request, to retrieve data only if modified since a given date
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
+    public String ifModifiedSince;
+    public GetBranchesRequest withIfModifiedSince(String ifModifiedSince) {
+        this.ifModifiedSince = ifModifiedSince;
+        return this;
+    }
     
-    public GetBranchesHeaders headers;
-    public GetBranchesRequest withHeaders(GetBranchesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Used for conditional request, to retrieve data only if the given Etag value does not match
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetBranchesRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     

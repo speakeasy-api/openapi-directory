@@ -42,7 +42,7 @@ public class GenreType {
      */
     public org.openapis.openapi.models.operations.GenreTypeSearchReadResponse genreTypeSearchRead(org.openapis.openapi.models.operations.GenreTypeSearchReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenreTypeSearchReadPathParams.class, baseUrl, "/api/v1/genre-type/search/{genre_description}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenreTypeSearchReadRequest.class, baseUrl, "/api/v1/genre-type/search/{genre_description}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

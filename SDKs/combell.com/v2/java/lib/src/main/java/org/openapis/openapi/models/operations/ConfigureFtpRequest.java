@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureFtpRequest {
-    
-    public ConfigureFtpPathParams pathParams;
-    public ConfigureFtpRequest withPathParams(ConfigureFtpPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ConfigureFtpQueryParams queryParams;
-    public ConfigureFtpRequest withQueryParams(ConfigureFtpQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FtpConfiguration request;
-    public ConfigureFtpRequest withRequest(org.openapis.openapi.models.shared.FtpConfiguration request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FtpConfiguration ftpConfiguration;
+    public ConfigureFtpRequest withFtpConfiguration(org.openapis.openapi.models.shared.FtpConfiguration ftpConfiguration) {
+        this.ftpConfiguration = ftpConfiguration;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public ConfigureFtpRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Linux hosting domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public ConfigureFtpRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     

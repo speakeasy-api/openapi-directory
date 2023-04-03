@@ -4,13 +4,54 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MetalsBenchmarkSummaryGETRequest {
+    /**
+     * comma separated list of conversion currencies, defaults to USD
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency")
+    public String currency;
+    public MetalsBenchmarkSummaryGETRequest withCurrency(String currency) {
+        this.currency = currency;
+        return this;
+    }
     
-    public MetalsBenchmarkSummaryGETQueryParams queryParams;
-    public MetalsBenchmarkSummaryGETRequest withQueryParams(MetalsBenchmarkSummaryGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * to override content negotiation specify a value of json or xml
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public MetalsBenchmarkSummaryGETFormatEnum format;
+    public MetalsBenchmarkSummaryGETRequest withFormat(MetalsBenchmarkSummaryGETFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * comma separated list of metals
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metals")
+    public String metals;
+    public MetalsBenchmarkSummaryGETRequest withMetals(String metals) {
+        this.metals = metals;
+        return this;
+    }
+    
+    /**
+     * unit of meaure, defaults to troy ounces. allowed values are:
+     * mg=milligram
+     * g=gram
+     * kg=kilogram
+     * gr=grain
+     * oz=ounce
+     * toz=troy ounce
+     * ct=carat
+     * dwt=pennyweight
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unitofmeasure")
+    public MetalsBenchmarkSummaryGETUnitofmeasureEnum unitofmeasure;
+    public MetalsBenchmarkSummaryGETRequest withUnitofmeasure(MetalsBenchmarkSummaryGETUnitofmeasureEnum unitofmeasure) {
+        this.unitofmeasure = unitofmeasure;
         return this;
     }
     

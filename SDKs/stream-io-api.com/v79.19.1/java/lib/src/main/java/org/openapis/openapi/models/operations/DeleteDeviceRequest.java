@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDeviceRequest {
+    @SpeakeasyMetadata("queryParam:serialization=json,name=id")
+    public String id;
+    public DeleteDeviceRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public DeleteDeviceQueryParams queryParams;
-    public DeleteDeviceRequest withQueryParams(DeleteDeviceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:serialization=json,name=user_id")
+    public String userId;
+    public DeleteDeviceRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

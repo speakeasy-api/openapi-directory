@@ -39,7 +39,7 @@ public class MerakiAuthUsers {
      */
     public org.openapis.openapi.models.operations.GetNetworkMerakiAuthUserResponse getNetworkMerakiAuthUser(org.openapis.openapi.models.operations.GetNetworkMerakiAuthUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkMerakiAuthUserPathParams.class, baseUrl, "/networks/{networkId}/merakiAuthUsers/{merakiAuthUserId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkMerakiAuthUserRequest.class, baseUrl, "/networks/{networkId}/merakiAuthUsers/{merakiAuthUserId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -79,7 +79,7 @@ public class MerakiAuthUsers {
      */
     public org.openapis.openapi.models.operations.GetNetworkMerakiAuthUsersResponse getNetworkMerakiAuthUsers(org.openapis.openapi.models.operations.GetNetworkMerakiAuthUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkMerakiAuthUsersPathParams.class, baseUrl, "/networks/{networkId}/merakiAuthUsers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkMerakiAuthUsersRequest.class, baseUrl, "/networks/{networkId}/merakiAuthUsers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegisterOrganizationDelegatedAdminRequest {
-    
-    public RegisterOrganizationDelegatedAdminHeaders headers;
-    public RegisterOrganizationDelegatedAdminRequest withHeaders(RegisterOrganizationDelegatedAdminHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.RegisterOrganizationDelegatedAdminRequest registerOrganizationDelegatedAdminRequest;
+    public RegisterOrganizationDelegatedAdminRequest withRegisterOrganizationDelegatedAdminRequest(org.openapis.openapi.models.shared.RegisterOrganizationDelegatedAdminRequest registerOrganizationDelegatedAdminRequest) {
+        this.registerOrganizationDelegatedAdminRequest = registerOrganizationDelegatedAdminRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RegisterOrganizationDelegatedAdminRequest request;
-    public RegisterOrganizationDelegatedAdminRequest withRequest(org.openapis.openapi.models.shared.RegisterOrganizationDelegatedAdminRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public RegisterOrganizationDelegatedAdminRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public RegisterOrganizationDelegatedAdminRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public RegisterOrganizationDelegatedAdminRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public RegisterOrganizationDelegatedAdminRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public RegisterOrganizationDelegatedAdminRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public RegisterOrganizationDelegatedAdminRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public RegisterOrganizationDelegatedAdminRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public RegisterOrganizationDelegatedAdminXAmzTargetEnum xAmzTarget;
+    public RegisterOrganizationDelegatedAdminRequest withXAmzTarget(RegisterOrganizationDelegatedAdminXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

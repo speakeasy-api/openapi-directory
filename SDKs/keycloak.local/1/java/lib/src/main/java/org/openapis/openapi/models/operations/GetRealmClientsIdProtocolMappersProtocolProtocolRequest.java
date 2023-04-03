@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmClientsIdProtocolMappersProtocolProtocolRequest {
+    /**
+     * id of client (not client-id)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetRealmClientsIdProtocolMappersProtocolProtocolRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetRealmClientsIdProtocolMappersProtocolProtocolPathParams pathParams;
-    public GetRealmClientsIdProtocolMappersProtocolProtocolRequest withPathParams(GetRealmClientsIdProtocolMappersProtocolProtocolPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=protocol")
+    public String protocol;
+    public GetRealmClientsIdProtocolMappersProtocolProtocolRequest withProtocol(String protocol) {
+        this.protocol = protocol;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmClientsIdProtocolMappersProtocolProtocolRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

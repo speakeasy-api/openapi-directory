@@ -4,13 +4,68 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTargetsAllScansRequest {
+    /**
+     * Number of results to return per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
+    public Long length;
+    public GetTargetsAllScansRequest withLength(Long length) {
+        this.length = length;
+        return this;
+    }
     
-    public GetTargetsAllScansQueryParams queryParams;
-    public GetTargetsAllScansRequest withQueryParams(GetTargetsAllScansQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Which field to use when ordering the results, prefix with `-` to invert ordering.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering")
+    public String ordering;
+    public GetTargetsAllScansRequest withOrdering(String ordering) {
+        this.ordering = ordering;
+        return this;
+    }
+    
+    /**
+     * Page number within the paginated result set
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetTargetsAllScansRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Search term
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetTargetsAllScansRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * Filter by scan start dates
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=started")
+    public LocalDate[] started;
+    public GetTargetsAllScansRequest withStarted(LocalDate[] started) {
+        this.started = started;
+        return this;
+    }
+    
+    /**
+     * Filter by scan statuses
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public org.openapis.openapi.models.shared.ScanStatusEnum status;
+    public GetTargetsAllScansRequest withStatus(org.openapis.openapi.models.shared.ScanStatusEnum status) {
+        this.status = status;
         return this;
     }
     

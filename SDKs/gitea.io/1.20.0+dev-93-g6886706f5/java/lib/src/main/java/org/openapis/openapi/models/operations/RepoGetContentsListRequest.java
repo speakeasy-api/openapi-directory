@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoGetContentsListRequest {
-    
-    public RepoGetContentsListPathParams pathParams;
-    public RepoGetContentsListRequest withPathParams(RepoGetContentsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoGetContentsListRequest withOwner(String owner) {
+        this.owner = owner;
         return this;
     }
     
+    /**
+     * The name of the commit/branch/tag. Default the repository\u2019s default branch (usually master)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
+    public String ref;
+    public RepoGetContentsListRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
     
-    public RepoGetContentsListQueryParams queryParams;
-    public RepoGetContentsListRequest withQueryParams(RepoGetContentsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoGetContentsListRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -4,13 +4,166 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SmsRequest {
+    /**
+     * Disable message sending.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=debug")
+    public SmsDebugEnum debug;
+    public SmsRequest withDebug(SmsDebugEnum debug) {
+        this.debug = debug;
+        return this;
+    }
     
-    public SmsQueryParams queryParams;
-    public SmsRequest withQueryParams(SmsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Date/Time for delayed dispatch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=delay")
+    public String delay;
+    public SmsRequest withDelay(String delay) {
+        this.delay = delay;
+        return this;
+    }
+    
+    /**
+     * Attach message details to response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=details")
+    public SmsDetailsEnum details;
+    public SmsRequest withDetails(SmsDetailsEnum details) {
+        this.details = details;
+        return this;
+    }
+    
+    /**
+     * Send as flash.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=flash")
+    public SmsFlashEnum flash;
+    public SmsRequest withFlash(SmsFlashEnum flash) {
+        this.flash = flash;
+        return this;
+    }
+    
+    /**
+     * Identifier to return in callbacks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=foreign_id")
+    public String foreignId;
+    public SmsRequest withForeignId(String foreignId) {
+        this.foreignId = foreignId;
+        return this;
+    }
+    
+    /**
+     * Set a custom sender name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public String from;
+    public SmsRequest withFrom(String from) {
+        this.from = from;
+        return this;
+    }
+    
+    /**
+     * Return a detailed JSON response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=json")
+    public SmsJSONEnum json;
+    public SmsRequest withJson(SmsJSONEnum json) {
+        this.json = json;
+        return this;
+    }
+    
+    /**
+     * A custom label.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label")
+    public String label;
+    public SmsRequest withLabel(String label) {
+        this.label = label;
+        return this;
+    }
+    
+    /**
+     * Enable sending of duplicated messages within 180 seconds.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=no_reload")
+    public SmsNoReloadEnum noReload;
+    public SmsRequest withNoReload(SmsNoReloadEnum noReload) {
+        this.noReload = noReload;
+        return this;
+    }
+    
+    /**
+     * Enable performance tracking for found URLs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=performance_tracking")
+    public SmsPerformanceTrackingEnum performanceTracking;
+    public SmsRequest withPerformanceTracking(SmsPerformanceTrackingEnum performanceTracking) {
+        this.performanceTracking = performanceTracking;
+        return this;
+    }
+    
+    /**
+     * Attach message ID to second row in a text response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=return_msg_id")
+    public SmsReturnMsgIDEnum returnMsgId;
+    public SmsRequest withReturnMsgId(SmsReturnMsgIDEnum returnMsgId) {
+        this.returnMsgId = returnMsgId;
+        return this;
+    }
+    
+    /**
+     * The actual text message to send.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public SmsRequest withText(String text) {
+        this.text = text;
+        return this;
+    }
+    
+    /**
+     * The recipient number or group name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public String to;
+    public SmsRequest withTo(String to) {
+        this.to = to;
+        return this;
+    }
+    
+    /**
+     * A custom User Data Header.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=udh")
+    public String udh;
+    public SmsRequest withUdh(String udh) {
+        this.udh = udh;
+        return this;
+    }
+    
+    /**
+     * Force unicode encoding. Reduces sms length to 70 chars.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unicode")
+    public SmsUnicodeEnum unicode;
+    public SmsRequest withUnicode(SmsUnicodeEnum unicode) {
+        this.unicode = unicode;
+        return this;
+    }
+    
+    /**
+     * Force UTF8 encoding.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=utf8")
+    public SmsUtf8Enum utf8;
+    public SmsRequest withUtf8(SmsUtf8Enum utf8) {
+        this.utf8 = utf8;
         return this;
     }
     

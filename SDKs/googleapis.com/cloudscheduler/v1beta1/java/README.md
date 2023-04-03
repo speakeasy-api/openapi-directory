@@ -18,10 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateSecurity;
-import org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreatePathParams;
-import org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateQueryParams;
 import org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateRequest;
 import org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.JobStateEnum;
 import org.openapis.openapi.models.shared.Job;
 import org.openapis.openapi.models.shared.Status;
@@ -34,10 +33,7 @@ import org.openapis.openapi.models.shared.OAuthToken;
 import org.openapis.openapi.models.shared.AppEngineHttpTargetHttpMethodEnum;
 import org.openapis.openapi.models.shared.AppEngineHttpTarget;
 import org.openapis.openapi.models.shared.AppEngineRouting;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -46,106 +42,111 @@ public class Application {
                 .build();
 
             CloudschedulerProjectsLocationsJobsCreateRequest req = new CloudschedulerProjectsLocationsJobsCreateRequest() {{
-                security = new CloudschedulerProjectsLocationsJobsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new CloudschedulerProjectsLocationsJobsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new CloudschedulerProjectsLocationsJobsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new Job() {{
+                dollarXgafv = "2";
+                job = new Job() {{
                     appEngineHttpTarget = new AppEngineHttpTarget() {{
                         appEngineRouting = new AppEngineRouting() {{
-                            host = "suscipit";
-                            instance = "iure";
-                            service = "magnam";
-                            version = "debitis";
+                            host = "provident";
+                            instance = "distinctio";
+                            service = "quibusdam";
+                            version = "unde";
                         }};
-                        body = "ipsa";
+                        body = "nulla";
                         headers = new java.util.HashMap<String, String>() {{
-                            put("tempora", "suscipit");
-                            put("molestiae", "minus");
-                            put("placeat", "voluptatum");
-                            put("iusto", "excepturi");
-                        }};
-                        httpMethod = "HEAD";
-                        relativeUri = "recusandae";
-                    }};
-                    attemptDeadline = "temporibus";
-                    description = "ab";
-                    httpTarget = new HttpTarget() {{
-                        body = "quis";
-                        headers = new java.util.HashMap<String, String>() {{
-                            put("deserunt", "perferendis");
+                            put("illum", "vel");
+                            put("error", "deserunt");
+                            put("suscipit", "iure");
                         }};
                         httpMethod = "GET";
+                        relativeUri = "debitis";
+                    }};
+                    attemptDeadline = "ipsa";
+                    description = "delectus";
+                    httpTarget = new HttpTarget() {{
+                        body = "tempora";
+                        headers = new java.util.HashMap<String, String>() {{
+                            put("molestiae", "minus");
+                            put("placeat", "voluptatum");
+                        }};
+                        httpMethod = "HEAD";
                         oauthToken = new OAuthToken() {{
-                            scope = "repellendus";
-                            serviceAccountEmail = "sapiente";
+                            scope = "excepturi";
+                            serviceAccountEmail = "nisi";
                         }};
                         oidcToken = new OidcToken() {{
-                            audience = "quo";
-                            serviceAccountEmail = "odit";
+                            audience = "recusandae";
+                            serviceAccountEmail = "temporibus";
                         }};
-                        uri = "https://trim-wheat.info";
+                        uri = "http://gloomy-blanket.name";
                     }};
-                    lastAttemptTime = "quod";
+                    lastAttemptTime = "perferendis";
                     legacyAppEngineCron = false;
-                    name = "quod";
+                    name = "ipsam";
                     pubsubTarget = new PubsubTarget() {{
                         attributes = new java.util.HashMap<String, String>() {{
-                            put("totam", "porro");
-                            put("dolorum", "dicta");
+                            put("sapiente", "quo");
+                            put("odit", "at");
+                            put("at", "maiores");
+                            put("molestiae", "quod");
                         }};
-                        data = "nam";
-                        topicName = "officia";
+                        data = "quod";
+                        topicName = "esse";
                     }};
                     retryConfig = new RetryConfig() {{
-                        maxBackoffDuration = "occaecati";
-                        maxDoublings = 143353;
-                        maxRetryDuration = "deleniti";
-                        minBackoffDuration = "hic";
-                        retryCount = 758616;
+                        maxBackoffDuration = "totam";
+                        maxDoublings = 780529;
+                        maxRetryDuration = "dolorum";
+                        minBackoffDuration = "dicta";
+                        retryCount = 720633;
                     }};
-                    schedule = "totam";
-                    scheduleTime = "beatae";
-                    state = "PAUSED";
+                    schedule = "officia";
+                    scheduleTime = "occaecati";
+                    state = "STATE_UNSPECIFIED";
                     status = new Status() {{
-                        code = 473600;
+                        code = 537373;
                         details = new java.util.HashMap<String, Object>[]{{
                             add(new java.util.HashMap<String, Object>() {{
+                                put("totam", "beatae");
+                                put("commodi", "molestiae");
+                                put("modi", "qui");
                                 put("impedit", "cum");
                             }}),
                             add(new java.util.HashMap<String, Object>() {{
                                 put("ipsum", "excepturi");
                                 put("aspernatur", "perferendis");
                             }}),
+                            add(new java.util.HashMap<String, Object>() {{
+                                put("natus", "sed");
+                                put("iste", "dolor");
+                            }}),
+                            add(new java.util.HashMap<String, Object>() {{
+                                put("laboriosam", "hic");
+                                put("saepe", "fuga");
+                                put("in", "corporis");
+                            }}),
                         }};
-                        message = "ad";
+                        message = "iste";
                     }};
-                    timeZone = "natus";
-                    userUpdateTime = "sed";
+                    timeZone = "iure";
+                    userUpdateTime = "saepe";
                 }};
-            }};            
+                accessToken = "quidem";
+                alt = "json";
+                callback = "ipsa";
+                fields = "reiciendis";
+                key = "est";
+                oauthToken = "mollitia";
+                parent = "laborum";
+                prettyPrint = false;
+                quotaUser = "dolores";
+                uploadType = "dolorem";
+                uploadProtocol = "corporis";
+            }}            
 
-            CloudschedulerProjectsLocationsJobsCreateResponse res = sdk.projects.cloudschedulerProjectsLocationsJobsCreate(req);
+            CloudschedulerProjectsLocationsJobsCreateResponse res = sdk.projects.cloudschedulerProjectsLocationsJobsCreate(req, new CloudschedulerProjectsLocationsJobsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.job.isPresent()) {
                 // handle response
@@ -157,7 +158,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

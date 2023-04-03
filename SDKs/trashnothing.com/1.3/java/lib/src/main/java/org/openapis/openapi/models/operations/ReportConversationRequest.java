@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReportConversationRequest {
-    
-    public ReportConversationPathParams pathParams;
-    public ReportConversationRequest withPathParams(ReportConversationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public ReportConversationRequestBody requestBody;
+    public ReportConversationRequest withRequestBody(ReportConversationRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public ReportConversationRequestBody request;
-    public ReportConversationRequest withRequest(ReportConversationRequestBody request) {
-        this.request = request;
+    /**
+     * The ID of the conversation to report.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversation_id")
+    public String conversationId;
+    public ReportConversationRequest withConversationId(String conversationId) {
+        this.conversationId = conversationId;
         return this;
     }
     

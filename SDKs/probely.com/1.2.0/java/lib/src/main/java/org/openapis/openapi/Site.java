@@ -45,7 +45,7 @@ public class Site {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdSiteResponse getTargetsTargetIdSite(org.openapis.openapi.models.operations.GetTargetsTargetIdSiteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdSitePathParams.class, baseUrl, "/targets/{target_id}/site/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdSiteRequest.class, baseUrl, "/targets/{target_id}/site/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -101,12 +101,12 @@ public class Site {
      */
     public org.openapis.openapi.models.operations.PatchTargetsTargetIdSiteResponse patchTargetsTargetIdSite(org.openapis.openapi.models.operations.PatchTargetsTargetIdSiteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsTargetIdSitePathParams.class, baseUrl, "/targets/{target_id}/site/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsTargetIdSiteRequest.class, baseUrl, "/targets/{target_id}/site/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "siteInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -177,12 +177,12 @@ public class Site {
      */
     public org.openapis.openapi.models.operations.PostTargetsTargetIdSiteVerifyResponse postTargetsTargetIdSiteVerify(org.openapis.openapi.models.operations.PostTargetsTargetIdSiteVerifyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTargetsTargetIdSiteVerifyPathParams.class, baseUrl, "/targets/{target_id}/site/verify/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTargetsTargetIdSiteVerifyRequest.class, baseUrl, "/targets/{target_id}/site/verify/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -254,12 +254,12 @@ public class Site {
      */
     public org.openapis.openapi.models.operations.PutTargetsTargetIdSiteResponse putTargetsTargetIdSite(org.openapis.openapi.models.operations.PutTargetsTargetIdSiteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTargetsTargetIdSitePathParams.class, baseUrl, "/targets/{target_id}/site/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTargetsTargetIdSiteRequest.class, baseUrl, "/targets/{target_id}/site/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "siteInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

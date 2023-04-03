@@ -4,27 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteMessageRequest {
-    
-    public GETDeleteMessagePathParams pathParams;
-    public GETDeleteMessageRequest withPathParams(GETDeleteMessagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The AWS account number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountNumber")
+    public Long accountNumber;
+    public GETDeleteMessageRequest withAccountNumber(Long accountNumber) {
+        this.accountNumber = accountNumber;
         return this;
     }
     
-    
-    public GETDeleteMessageQueryParams queryParams;
-    public GETDeleteMessageRequest withQueryParams(GETDeleteMessageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteMessageActionEnum action;
+    public GETDeleteMessageRequest withAction(GETDeleteMessageActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the queue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=QueueName")
+    public String queueName;
+    public GETDeleteMessageRequest withQueueName(String queueName) {
+        this.queueName = queueName;
+        return this;
+    }
     
-    public GETDeleteMessageHeaders headers;
-    public GETDeleteMessageRequest withHeaders(GETDeleteMessageHeaders headers) {
-        this.headers = headers;
+    /**
+     * The receipt handle associated with the message to delete.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReceiptHandle")
+    public String receiptHandle;
+    public GETDeleteMessageRequest withReceiptHandle(String receiptHandle) {
+        this.receiptHandle = receiptHandle;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteMessageVersionEnum version;
+    public GETDeleteMessageRequest withVersion(GETDeleteMessageVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteMessageRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteMessageRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteMessageRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteMessageRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteMessageRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteMessageRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteMessageRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -33,25 +33,26 @@ public class MobileCarriers {
     /**
      * Gets one mobile carrier by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingMobileCarriersGetResponse dfareportingMobileCarriersGet(org.openapis.openapi.models.operations.DfareportingMobileCarriersGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingMobileCarriersGetResponse dfareportingMobileCarriersGet(org.openapis.openapi.models.operations.DfareportingMobileCarriersGetRequest request, org.openapis.openapi.models.operations.DfareportingMobileCarriersGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingMobileCarriersGetPathParams.class, baseUrl, "/userprofiles/{profileId}/mobileCarriers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingMobileCarriersGetRequest.class, baseUrl, "/userprofiles/{profileId}/mobileCarriers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingMobileCarriersGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingMobileCarriersGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class MobileCarriers {
     /**
      * Retrieves a list of mobile carriers.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingMobileCarriersListResponse dfareportingMobileCarriersList(org.openapis.openapi.models.operations.DfareportingMobileCarriersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingMobileCarriersListResponse dfareportingMobileCarriersList(org.openapis.openapi.models.operations.DfareportingMobileCarriersListRequest request, org.openapis.openapi.models.operations.DfareportingMobileCarriersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingMobileCarriersListPathParams.class, baseUrl, "/userprofiles/{profileId}/mobileCarriers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingMobileCarriersListRequest.class, baseUrl, "/userprofiles/{profileId}/mobileCarriers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingMobileCarriersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingMobileCarriersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

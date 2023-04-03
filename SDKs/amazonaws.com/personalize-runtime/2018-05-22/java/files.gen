@@ -29,11 +29,9 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetPersonalizedRankingHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPersonalizedRankingRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPersonalizedRankingRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPersonalizedRankingResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetRecommendationsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecommendationsRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecommendationsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecommendationsResponse.java
@@ -41,6 +39,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/GetPersonalizedRankingRespo
 lib/src/main/java/org/openapis/openapi/models/shared/PredictedItem.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetRecommendationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Promotion.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

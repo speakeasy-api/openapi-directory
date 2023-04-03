@@ -4,13 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtrasRecentActivityListRequest {
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ExtrasRecentActivityListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public ExtrasRecentActivityListQueryParams queryParams;
-    public ExtrasRecentActivityListRequest withQueryParams(ExtrasRecentActivityListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ExtrasRecentActivityListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
+    public String user;
+    public ExtrasRecentActivityListRequest withUser(String user) {
+        this.user = user;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public ExtrasRecentActivityListRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

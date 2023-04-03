@@ -42,7 +42,7 @@ public class RegistrationSchemaBlocks {
      */
     public org.openapis.openapi.models.operations.GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdResponse getSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockId(org.openapis.openapi.models.operations.GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdPathParams.class, baseUrl, "/schema_responses/{schema_response_id}/schema_blocks/{schema_response_block_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRequest.class, baseUrl, "/schema_responses/{schema_response_id}/schema_blocks/{schema_response_block_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -84,7 +84,7 @@ public class RegistrationSchemaBlocks {
      */
     public org.openapis.openapi.models.operations.SchemaResponseBlocksReadResponse schemaResponseBlocksRead(org.openapis.openapi.models.operations.SchemaResponseBlocksReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SchemaResponseBlocksReadPathParams.class, baseUrl, "/schema_responses/{schema_response_id}/schema_blocks/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SchemaResponseBlocksReadRequest.class, baseUrl, "/schema_responses/{schema_response_id}/schema_blocks/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,27 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchUserChannelRequest {
-    
-    public FetchUserChannelPathParams pathParams;
-    public FetchUserChannelRequest withPathParams(FetchUserChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public FetchUserChannelRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
         return this;
     }
     
-    
-    public FetchUserChannelSecurity security;
-    public FetchUserChannelRequest withSecurity(FetchUserChannelSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchUserChannelRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchUserChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=UserSid")
+    public String userSid;
+    public FetchUserChannelRequest withUserSid(String userSid) {
+        this.userSid = userSid;
         return this;
     }
     

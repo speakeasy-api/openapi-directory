@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiParsePlaceholdersJsonRequest {
-    
-    public OrderApiParsePlaceholdersJsonPathParams pathParams;
-    public OrderApiParsePlaceholdersJsonRequest withPathParams(OrderApiParsePlaceholdersJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer rechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer;
+    public OrderApiParsePlaceholdersJsonRequest withRechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer rechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer) {
+        this.rechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer = rechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer request;
-    public OrderApiParsePlaceholdersJsonRequest withRequest(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer request) {
-        this.request = request;
+    /**
+     * The id of the order
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrderApiParsePlaceholdersJsonRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

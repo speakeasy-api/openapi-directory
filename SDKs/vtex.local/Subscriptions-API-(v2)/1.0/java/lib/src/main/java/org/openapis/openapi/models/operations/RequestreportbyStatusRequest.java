@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestreportbyStatusRequest {
-    
-    public RequestreportbyStatusQueryParams queryParams;
-    public RequestreportbyStatusRequest withQueryParams(RequestreportbyStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public RequestreportbyStatusRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public RequestreportbyStatusRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public RequestreportbyStatusHeaders headers;
-    public RequestreportbyStatusRequest withHeaders(RequestreportbyStatusHeaders headers) {
-        this.headers = headers;
+    /**
+     * Email that the report will be sent to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requesterEmail")
+    public String requesterEmail;
+    public RequestreportbyStatusRequest withRequesterEmail(String requesterEmail) {
+        this.requesterEmail = requesterEmail;
+        return this;
+    }
+    
+    /**
+     * Binary OR of the following status: 1 - ACTIVE; 2 - PAUSED; 4 - CANCELED; 8 - EXPIRED
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public Integer status;
+    public RequestreportbyStatusRequest withStatus(Integer status) {
+        this.status = status;
         return this;
     }
     

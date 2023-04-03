@@ -35,23 +35,24 @@ public class FundsConfirmations {
     /**
      * Create Funds Confirmation Consent
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateFundsConfirmationConsentsResponse createFundsConfirmationConsents(org.openapis.openapi.models.operations.CreateFundsConfirmationConsentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateFundsConfirmationConsentsResponse createFundsConfirmationConsents(org.openapis.openapi.models.operations.CreateFundsConfirmationConsentsRequest request, org.openapis.openapi.models.operations.CreateFundsConfirmationConsentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/funds-confirmation-consents");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "obFundsConfirmationConsent1", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -60,7 +61,7 @@ public class FundsConfirmations {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -101,23 +102,24 @@ public class FundsConfirmations {
     /**
      * Create Funds Confirmation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateFundsConfirmationsResponse createFundsConfirmations(org.openapis.openapi.models.operations.CreateFundsConfirmationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateFundsConfirmationsResponse createFundsConfirmations(org.openapis.openapi.models.operations.CreateFundsConfirmationsRequest request, org.openapis.openapi.models.operations.CreateFundsConfirmationsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/funds-confirmations");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "obFundsConfirmation1", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -126,7 +128,7 @@ public class FundsConfirmations {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -167,18 +169,19 @@ public class FundsConfirmations {
     /**
      * Delete Funds Confirmation Consent
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteFundsConfirmationConsentsConsentIdResponse deleteFundsConfirmationConsentsConsentId(org.openapis.openapi.models.operations.DeleteFundsConfirmationConsentsConsentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteFundsConfirmationConsentsConsentIdResponse deleteFundsConfirmationConsentsConsentId(org.openapis.openapi.models.operations.DeleteFundsConfirmationConsentsConsentIdRequest request, org.openapis.openapi.models.operations.DeleteFundsConfirmationConsentsConsentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFundsConfirmationConsentsConsentIdPathParams.class, baseUrl, "/funds-confirmation-consents/{ConsentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFundsConfirmationConsentsConsentIdRequest.class, baseUrl, "/funds-confirmation-consents/{ConsentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -187,7 +190,7 @@ public class FundsConfirmations {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -220,18 +223,19 @@ public class FundsConfirmations {
     /**
      * Get Funds Confirmation Consent
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetFundsConfirmationConsentsConsentIdResponse getFundsConfirmationConsentsConsentId(org.openapis.openapi.models.operations.GetFundsConfirmationConsentsConsentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetFundsConfirmationConsentsConsentIdResponse getFundsConfirmationConsentsConsentId(org.openapis.openapi.models.operations.GetFundsConfirmationConsentsConsentIdRequest request, org.openapis.openapi.models.operations.GetFundsConfirmationConsentsConsentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFundsConfirmationConsentsConsentIdPathParams.class, baseUrl, "/funds-confirmation-consents/{ConsentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFundsConfirmationConsentsConsentIdRequest.class, baseUrl, "/funds-confirmation-consents/{ConsentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -240,7 +244,7 @@ public class FundsConfirmations {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

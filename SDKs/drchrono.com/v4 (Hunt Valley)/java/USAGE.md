@@ -5,10 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.DoctorsListSecurity;
-import org.openapis.openapi.models.operations.DoctorsListQueryParams;
 import org.openapis.openapi.models.operations.DoctorsListRequest;
 import org.openapis.openapi.models.operations.DoctorsListResponse;
-import org.openapis.openapi.models.shared.SchemeDrchronoOauth2;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,19 +15,14 @@ public class Application {
                 .build();
 
             DoctorsListRequest req = new DoctorsListRequest() {{
-                security = new DoctorsListSecurity() {{
-                    drchronoOauth2 = new SchemeDrchronoOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                queryParams = new DoctorsListQueryParams() {{
-                    cursor = "corrupti";
-                    doctor = 592845;
-                    pageSize = 715190;
-                }};
-            }};            
+                cursor = "corrupti";
+                doctor = 592845;
+                pageSize = 715190;
+            }}            
 
-            DoctorsListResponse res = sdk.administrative.doctorsList(req);
+            DoctorsListResponse res = sdk.administrative.doctorsList(req, new DoctorsListSecurity() {{
+                drchronoOauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.doctorsList200ApplicationJSONObject.isPresent()) {
                 // handle response

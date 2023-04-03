@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveMappingRequest {
-    
-    public RetrieveMappingPathParams pathParams;
-    public RetrieveMappingRequest withPathParams(RetrieveMappingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public RetrieveMappingRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public RetrieveMappingQueryParams queryParams;
-    public RetrieveMappingRequest withQueryParams(RetrieveMappingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public RetrieveMappingRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Name of the VTEX account that belongs to the marketplace. Used as part of the URL
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public RetrieveMappingRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
     
-    public RetrieveMappingHeaders headers;
-    public RetrieveMappingRequest withHeaders(RetrieveMappingHeaders headers) {
-        this.headers = headers;
+    /**
+     * Marketplace's account name, the same one inputted on the endpoint's path.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=an")
+    public String an;
+    public RetrieveMappingRequest withAn(String an) {
+        this.an = an;
+        return this;
+    }
+    
+    /**
+     * Environment to use. Used as part of the URL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
+    public String environment;
+    public RetrieveMappingRequest withEnvironment(String environment) {
+        this.environment = environment;
+        return this;
+    }
+    
+    /**
+     * A string that identifies the seller in the marketplace. This ID must be created by the marketplace.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
+    public String sellerId;
+    public RetrieveMappingRequest withSellerId(String sellerId) {
+        this.sellerId = sellerId;
         return this;
     }
     

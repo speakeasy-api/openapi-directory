@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDocumentProgressRequest {
-    
-    public GetDocumentProgressPathParams pathParams;
-    public GetDocumentProgressRequest withPathParams(GetDocumentProgressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Document ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public Double documentId;
+    public GetDocumentProgressRequest withDocumentId(Double documentId) {
+        this.documentId = documentId;
         return this;
     }
     

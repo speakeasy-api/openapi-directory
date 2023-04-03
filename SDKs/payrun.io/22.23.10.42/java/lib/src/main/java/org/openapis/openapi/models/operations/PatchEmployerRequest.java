@@ -7,17 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchEmployerRequest {
-    
-    public PatchEmployerPathParams pathParams;
-    public PatchEmployerRequest withPathParams(PatchEmployerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public PatchEmployerRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
-    
-    public PatchEmployerHeaders headers;
-    public PatchEmployerRequest withHeaders(PatchEmployerHeaders headers) {
-        this.headers = headers;
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PatchEmployerRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
@@ -25,9 +31,19 @@ public class PatchEmployerRequest {
      * The employer object.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Employer request;
-    public PatchEmployerRequest withRequest(org.openapis.openapi.models.shared.Employer request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Employer employer;
+    public PatchEmployerRequest withEmployer(org.openapis.openapi.models.shared.Employer employer) {
+        this.employer = employer;
+        return this;
+    }
+    
+    /**
+     * The employers' unique identifier. E.g ER001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmployerId")
+    public String employerId;
+    public PatchEmployerRequest withEmployerId(String employerId) {
+        this.employerId = employerId;
         return this;
     }
     

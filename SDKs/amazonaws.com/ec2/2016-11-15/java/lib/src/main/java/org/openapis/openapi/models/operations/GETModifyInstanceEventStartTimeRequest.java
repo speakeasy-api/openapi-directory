@@ -4,20 +4,110 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyInstanceEventStartTimeRequest {
-    
-    public GETModifyInstanceEventStartTimeQueryParams queryParams;
-    public GETModifyInstanceEventStartTimeRequest withQueryParams(GETModifyInstanceEventStartTimeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyInstanceEventStartTimeActionEnum action;
+    public GETModifyInstanceEventStartTimeRequest withAction(GETModifyInstanceEventStartTimeActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETModifyInstanceEventStartTimeRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETModifyInstanceEventStartTimeHeaders headers;
-    public GETModifyInstanceEventStartTimeRequest withHeaders(GETModifyInstanceEventStartTimeHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the event whose date and time you are modifying.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceEventId")
+    public String instanceEventId;
+    public GETModifyInstanceEventStartTimeRequest withInstanceEventId(String instanceEventId) {
+        this.instanceEventId = instanceEventId;
+        return this;
+    }
+    
+    /**
+     * The ID of the instance with the scheduled event.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
+    public String instanceId;
+    public GETModifyInstanceEventStartTimeRequest withInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    
+    /**
+     * The new date and time when the event will take place.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NotBefore")
+    public OffsetDateTime notBefore;
+    public GETModifyInstanceEventStartTimeRequest withNotBefore(OffsetDateTime notBefore) {
+        this.notBefore = notBefore;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyInstanceEventStartTimeVersionEnum version;
+    public GETModifyInstanceEventStartTimeRequest withVersion(GETModifyInstanceEventStartTimeVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyInstanceEventStartTimeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyInstanceEventStartTimeRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyInstanceEventStartTimeRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyInstanceEventStartTimeRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyInstanceEventStartTimeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyInstanceEventStartTimeRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyInstanceEventStartTimeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

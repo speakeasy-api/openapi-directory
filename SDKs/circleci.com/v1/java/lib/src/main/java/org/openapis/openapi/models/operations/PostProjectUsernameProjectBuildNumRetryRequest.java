@@ -4,13 +4,39 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProjectUsernameProjectBuildNumRetryRequest {
+    /**
+     * XXXXXXXXXX
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=build_num")
+    public Long buildNum;
+    public PostProjectUsernameProjectBuildNumRetryRequest withBuildNum(Long buildNum) {
+        this.buildNum = buildNum;
+        return this;
+    }
     
-    public PostProjectUsernameProjectBuildNumRetryPathParams pathParams;
-    public PostProjectUsernameProjectBuildNumRetryRequest withPathParams(PostProjectUsernameProjectBuildNumRetryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * XXXXXXXXX
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public PostProjectUsernameProjectBuildNumRetryRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * XXXXXXXXX
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public PostProjectUsernameProjectBuildNumRetryRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

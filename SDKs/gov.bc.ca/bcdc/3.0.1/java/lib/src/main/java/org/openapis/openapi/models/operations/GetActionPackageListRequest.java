@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActionPackageListRequest {
+    /**
+     * The number of packages to be returned per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetActionPackageListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetActionPackageListQueryParams queryParams;
-    public GetActionPackageListRequest withQueryParams(GetActionPackageListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The offset (index) of the first package to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetActionPackageListRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

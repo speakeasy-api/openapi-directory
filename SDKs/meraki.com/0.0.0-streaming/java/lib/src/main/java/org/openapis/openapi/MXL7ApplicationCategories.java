@@ -39,7 +39,7 @@ public class MXL7ApplicationCategories {
      */
     public org.openapis.openapi.models.operations.GetNetworkL7FirewallRulesApplicationCategoriesResponse getNetworkL7FirewallRulesApplicationCategories(org.openapis.openapi.models.operations.GetNetworkL7FirewallRulesApplicationCategoriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkL7FirewallRulesApplicationCategoriesPathParams.class, baseUrl, "/networks/{networkId}/l7FirewallRules/applicationCategories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkL7FirewallRulesApplicationCategoriesRequest.class, baseUrl, "/networks/{networkId}/l7FirewallRules/applicationCategories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -7,9 +7,9 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer")
-    public SchemeJwtAuth jwtAuth;
-    public Security withJwtAuth(SchemeJwtAuth jwtAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
+    public String jwtAuth;
+    public Security withJwtAuth(String jwtAuth) {
         this.jwtAuth = jwtAuth;
         return this;
     }

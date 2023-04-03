@@ -33,6 +33,5 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetUtilityV1HealthHeartbeatResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUtilityV1HealthThreadinfoResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ThreadPoolInfo.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

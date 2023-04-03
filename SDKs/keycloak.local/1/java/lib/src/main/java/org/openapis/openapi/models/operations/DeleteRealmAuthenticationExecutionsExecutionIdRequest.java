@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRealmAuthenticationExecutionsExecutionIdRequest {
+    /**
+     * Execution id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
+    public String executionId;
+    public DeleteRealmAuthenticationExecutionsExecutionIdRequest withExecutionId(String executionId) {
+        this.executionId = executionId;
+        return this;
+    }
     
-    public DeleteRealmAuthenticationExecutionsExecutionIdPathParams pathParams;
-    public DeleteRealmAuthenticationExecutionsExecutionIdRequest withPathParams(DeleteRealmAuthenticationExecutionsExecutionIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public DeleteRealmAuthenticationExecutionsExecutionIdRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

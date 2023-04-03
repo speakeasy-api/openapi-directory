@@ -35,27 +35,28 @@ public class Chromeosdevices {
     /**
      * Takes an action that affects a Chrome OS Device. This includes deprovisioning, disabling, and re-enabling devices. *Warning:* * Deprovisioning a device will stop device policy syncing and remove device-level printers. After a device is deprovisioned, it must be wiped before it can be re-enrolled. * Lost or stolen devices should use the disable action. * Re-enabling a disabled device will consume a device license. If you do not have sufficient licenses available when completing the re-enable action, you will receive an error. For more information about deprovisioning and disabling devices, visit the [help center](https://support.google.com/chrome/a/answer/3523633).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryChromeosdevicesActionResponse directoryChromeosdevicesAction(org.openapis.openapi.models.operations.DirectoryChromeosdevicesActionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryChromeosdevicesActionResponse directoryChromeosdevicesAction(org.openapis.openapi.models.operations.DirectoryChromeosdevicesActionRequest request, org.openapis.openapi.models.operations.DirectoryChromeosdevicesActionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryChromeosdevicesActionPathParams.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{resourceId}/action", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryChromeosdevicesActionRequest.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{resourceId}/action", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "chromeOsDeviceAction", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryChromeosdevicesActionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryChromeosdevicesActionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -76,25 +77,26 @@ public class Chromeosdevices {
     /**
      * Retrieves a Chrome OS device's properties.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryChromeosdevicesGetResponse directoryChromeosdevicesGet(org.openapis.openapi.models.operations.DirectoryChromeosdevicesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryChromeosdevicesGetResponse directoryChromeosdevicesGet(org.openapis.openapi.models.operations.DirectoryChromeosdevicesGetRequest request, org.openapis.openapi.models.operations.DirectoryChromeosdevicesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryChromeosdevicesGetPathParams.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryChromeosdevicesGetRequest.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryChromeosdevicesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryChromeosdevicesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -121,25 +123,26 @@ public class Chromeosdevices {
     /**
      * Retrieves a paginated list of Chrome OS devices within an account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryChromeosdevicesListResponse directoryChromeosdevicesList(org.openapis.openapi.models.operations.DirectoryChromeosdevicesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryChromeosdevicesListResponse directoryChromeosdevicesList(org.openapis.openapi.models.operations.DirectoryChromeosdevicesListRequest request, org.openapis.openapi.models.operations.DirectoryChromeosdevicesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryChromeosdevicesListPathParams.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/chromeos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryChromeosdevicesListRequest.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/chromeos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryChromeosdevicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryChromeosdevicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -166,27 +169,28 @@ public class Chromeosdevices {
     /**
      * Moves or inserts multiple Chrome OS devices to an organizational unit. You can move up to 50 devices at once.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryChromeosdevicesMoveDevicesToOuResponse directoryChromeosdevicesMoveDevicesToOu(org.openapis.openapi.models.operations.DirectoryChromeosdevicesMoveDevicesToOuRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryChromeosdevicesMoveDevicesToOuResponse directoryChromeosdevicesMoveDevicesToOu(org.openapis.openapi.models.operations.DirectoryChromeosdevicesMoveDevicesToOuRequest request, org.openapis.openapi.models.operations.DirectoryChromeosdevicesMoveDevicesToOuSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryChromeosdevicesMoveDevicesToOuPathParams.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/chromeos/moveDevicesToOu", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryChromeosdevicesMoveDevicesToOuRequest.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/chromeos/moveDevicesToOu", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "chromeOsMoveDevicesToOu", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryChromeosdevicesMoveDevicesToOuQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryChromeosdevicesMoveDevicesToOuRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -207,27 +211,28 @@ public class Chromeosdevices {
     /**
      * Updates a device's updatable properties, such as `annotatedUser`, `annotatedLocation`, `notes`, `orgUnitPath`, or `annotatedAssetId`. This method supports [patch semantics](/admin-sdk/directory/v1/guides/performance#patch).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryChromeosdevicesPatchResponse directoryChromeosdevicesPatch(org.openapis.openapi.models.operations.DirectoryChromeosdevicesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryChromeosdevicesPatchResponse directoryChromeosdevicesPatch(org.openapis.openapi.models.operations.DirectoryChromeosdevicesPatchRequest request, org.openapis.openapi.models.operations.DirectoryChromeosdevicesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryChromeosdevicesPatchPathParams.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryChromeosdevicesPatchRequest.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "chromeOsDevice", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryChromeosdevicesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryChromeosdevicesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -254,27 +259,28 @@ public class Chromeosdevices {
     /**
      * Updates a device's updatable properties, such as `annotatedUser`, `annotatedLocation`, `notes`, `orgUnitPath`, or `annotatedAssetId`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryChromeosdevicesUpdateResponse directoryChromeosdevicesUpdate(org.openapis.openapi.models.operations.DirectoryChromeosdevicesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryChromeosdevicesUpdateResponse directoryChromeosdevicesUpdate(org.openapis.openapi.models.operations.DirectoryChromeosdevicesUpdateRequest request, org.openapis.openapi.models.operations.DirectoryChromeosdevicesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryChromeosdevicesUpdatePathParams.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryChromeosdevicesUpdateRequest.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "chromeOsDevice", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryChromeosdevicesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryChromeosdevicesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

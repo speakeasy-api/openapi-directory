@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtrasConfigContextsDeleteRequest {
-    
-    public ExtrasConfigContextsDeletePathParams pathParams;
-    public ExtrasConfigContextsDeleteRequest withPathParams(ExtrasConfigContextsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this config context.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ExtrasConfigContextsDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

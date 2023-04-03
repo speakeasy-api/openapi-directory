@@ -4,27 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsCrashGroupTotalsRequest {
-    
-    public AnalyticsCrashGroupTotalsPathParams pathParams;
-    public AnalyticsCrashGroupTotalsRequest withPathParams(AnalyticsCrashGroupTotalsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AnalyticsCrashGroupTotalsRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public AnalyticsCrashGroupTotalsQueryParams queryParams;
-    public AnalyticsCrashGroupTotalsRequest withQueryParams(AnalyticsCrashGroupTotalsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id of the crash group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_group_id")
+    public String crashGroupId;
+    public AnalyticsCrashGroupTotalsRequest withCrashGroupId(String crashGroupId) {
+        this.crashGroupId = crashGroupId;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AnalyticsCrashGroupTotalsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public AnalyticsCrashGroupTotalsSecurity security;
-    public AnalyticsCrashGroupTotalsRequest withSecurity(AnalyticsCrashGroupTotalsSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public AnalyticsCrashGroupTotalsRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestAdConfigRequest {
-    
-    public RequestAdConfigPathParams pathParams;
-    public RequestAdConfigRequest withPathParams(RequestAdConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestAdConfigRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestAdConfigHeaders headers;
-    public RequestAdConfigRequest withHeaders(RequestAdConfigHeaders headers) {
-        this.headers = headers;
+    /**
+     * Active Directory ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ad_id")
+    public Integer adId;
+    public RequestAdConfigRequest withAdId(Integer adId) {
+        this.adId = adId;
         return this;
     }
     

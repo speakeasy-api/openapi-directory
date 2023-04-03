@@ -7,27 +7,57 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendMessageBinaryRequest {
-    
-    public SendMessageBinaryPathParams pathParams;
-    public SendMessageBinaryRequest withPathParams(SendMessageBinaryPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SendMessageBinaryQueryParams queryParams;
-    public SendMessageBinaryRequest withQueryParams(SendMessageBinaryQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Data to be send with Queue Message
      */
     @SpeakeasyMetadata("request:mediaType=application/octet-stream")
-    public byte[] request;
-    public SendMessageBinaryRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public SendMessageBinaryRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Content type of the data to be sent with Queue Message
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentType")
+    public String contentType;
+    public SendMessageBinaryRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=delay")
+    public String delay;
+    public SendMessageBinaryRequest withDelay(String delay) {
+        this.delay = delay;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expiration")
+    public String expiration;
+    public SendMessageBinaryRequest withExpiration(String expiration) {
+        this.expiration = expiration;
+        return this;
+    }
+    
+    /**
+     * Name of Queue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=queueName")
+    public String queueName;
+    public SendMessageBinaryRequest withQueueName(String queueName) {
+        this.queueName = queueName;
+        return this;
+    }
+    
+    /**
+     * Regions to which message is to be sent
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regions")
+    public String regions;
+    public SendMessageBinaryRequest withRegions(String regions) {
+        this.regions = regions;
         return this;
     }
     

@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrdersRequest {
+    /**
+     * The maximum number of items to return. If the value exceeds the maximum, then the maximum value will be used.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public GetOrdersRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetOrdersQueryParams queryParams;
-    public GetOrdersRequest withQueryParams(GetOrdersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of items to skip before starting to collect the result set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetOrdersRequest withOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Filter by status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderStatus")
+    public GetOrdersOrderStatusEnum orderStatus;
+    public GetOrdersRequest withOrderStatus(GetOrdersOrderStatusEnum orderStatus) {
+        this.orderStatus = orderStatus;
         return this;
     }
     

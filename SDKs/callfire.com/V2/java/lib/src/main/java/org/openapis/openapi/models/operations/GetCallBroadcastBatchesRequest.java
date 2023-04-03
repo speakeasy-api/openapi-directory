@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCallBroadcastBatchesRequest {
-    
-    public GetCallBroadcastBatchesPathParams pathParams;
-    public GetCallBroadcastBatchesRequest withPathParams(GetCallBroadcastBatchesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GetCallBroadcastBatchesRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
-    
-    public GetCallBroadcastBatchesQueryParams queryParams;
-    public GetCallBroadcastBatchesRequest withQueryParams(GetCallBroadcastBatchesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An id of a call broadcast
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetCallBroadcastBatchesRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * To set the maximum number of records to return in a paged list response. The default is 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetCallBroadcastBatchesRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetCallBroadcastBatchesSecurity security;
-    public GetCallBroadcastBatchesRequest withSecurity(GetCallBroadcastBatchesSecurity security) {
-        this.security = security;
+    /**
+     * Offset to the start of a given page. The default is 0. Check [pagination](https://developers.callfire.com/docs.html#pagination) page for more information about pagination in CallFire API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetCallBroadcastBatchesRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

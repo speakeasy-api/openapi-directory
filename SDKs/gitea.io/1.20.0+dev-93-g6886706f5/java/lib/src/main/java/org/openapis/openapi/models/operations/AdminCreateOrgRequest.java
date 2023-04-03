@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdminCreateOrgRequest {
-    
-    public AdminCreateOrgPathParams pathParams;
-    public AdminCreateOrgRequest withPathParams(AdminCreateOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateOrgOption createOrgOption;
+    public AdminCreateOrgRequest withCreateOrgOption(org.openapis.openapi.models.shared.CreateOrgOption createOrgOption) {
+        this.createOrgOption = createOrgOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateOrgOption request;
-    public AdminCreateOrgRequest withRequest(org.openapis.openapi.models.shared.CreateOrgOption request) {
-        this.request = request;
+    /**
+     * username of the user that will own the created organization
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public AdminCreateOrgRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

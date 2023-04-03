@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGetCurationTagHistoryRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetGetCurationTagHistoryFormatEnum format;
+    public GetGetCurationTagHistoryRequest withFormat(GetGetCurationTagHistoryFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetGetCurationTagHistoryQueryParams queryParams;
-    public GetGetCurationTagHistoryRequest withQueryParams(GetGetCurationTagHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The pathway identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pwId")
+    public String pwId;
+    public GetGetCurationTagHistoryRequest withPwId(String pwId) {
+        this.pwId = pwId;
+        return this;
+    }
+    
+    /**
+     * Only include history from after the given date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timestamp")
+    public String timestamp;
+    public GetGetCurationTagHistoryRequest withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
         return this;
     }
     

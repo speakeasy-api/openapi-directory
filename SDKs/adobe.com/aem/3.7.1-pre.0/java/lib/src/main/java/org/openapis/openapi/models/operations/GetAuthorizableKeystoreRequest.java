@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAuthorizableKeystoreRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=authorizableId")
+    public String authorizableId;
+    public GetAuthorizableKeystoreRequest withAuthorizableId(String authorizableId) {
+        this.authorizableId = authorizableId;
+        return this;
+    }
     
-    public GetAuthorizableKeystorePathParams pathParams;
-    public GetAuthorizableKeystoreRequest withPathParams(GetAuthorizableKeystorePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=intermediatePath")
+    public String intermediatePath;
+    public GetAuthorizableKeystoreRequest withIntermediatePath(String intermediatePath) {
+        this.intermediatePath = intermediatePath;
         return this;
     }
     

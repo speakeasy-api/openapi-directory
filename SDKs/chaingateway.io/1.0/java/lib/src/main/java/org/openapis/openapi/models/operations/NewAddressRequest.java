@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NewAddressRequest {
-    
-    public NewAddressHeaders headers;
-    public NewAddressRequest withHeaders(NewAddressHeaders headers) {
-        this.headers = headers;
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public NewAddressRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.NewAddressRequest request;
-    public NewAddressRequest withRequest(org.openapis.openapi.models.shared.NewAddressRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.NewAddressRequest newAddressRequest;
+    public NewAddressRequest withNewAddressRequest(org.openapis.openapi.models.shared.NewAddressRequest newAddressRequest) {
+        this.newAddressRequest = newAddressRequest;
         return this;
     }
     

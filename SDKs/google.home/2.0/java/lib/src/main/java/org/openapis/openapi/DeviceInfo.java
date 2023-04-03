@@ -46,7 +46,7 @@ public class DeviceInfo {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppDeviceIDResponse appDeviceID(org.openapis.openapi.models.operations.AppDeviceIDRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppDeviceIDResponse appDeviceID(org.openapis.openapi.models.shared.AppDeviceIDRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/get_app_device_id");
         
@@ -95,7 +95,7 @@ public class DeviceInfo {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CheckReadyStatusResponse checkReadyStatus(org.openapis.openapi.models.operations.CheckReadyStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CheckReadyStatusResponse checkReadyStatus(org.openapis.openapi.models.shared.CheckReadyStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assistant/check_ready_status");
         
@@ -154,7 +154,7 @@ public class DeviceInfo {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EurekaInfoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EurekaInfoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -273,7 +273,7 @@ public class DeviceInfo {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestInternetDownloadSpeedResponse testInternetDownloadSpeed(org.openapis.openapi.models.operations.TestInternetDownloadSpeedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestInternetDownloadSpeedResponse testInternetDownloadSpeed(org.openapis.openapi.models.shared.TestInternetDownloadSpeedRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/test_internet_download_speed");
         

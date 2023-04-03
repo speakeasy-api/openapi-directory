@@ -33,25 +33,26 @@ public class Layers {
     /**
      * Gets the annotation data.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksLayersAnnotationDataGetResponse booksLayersAnnotationDataGet(org.openapis.openapi.models.operations.BooksLayersAnnotationDataGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksLayersAnnotationDataGetResponse booksLayersAnnotationDataGet(org.openapis.openapi.models.operations.BooksLayersAnnotationDataGetRequest request, org.openapis.openapi.models.operations.BooksLayersAnnotationDataGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksLayersAnnotationDataGetPathParams.class, baseUrl, "/books/v1/volumes/{volumeId}/layers/{layerId}/data/{annotationDataId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksLayersAnnotationDataGetRequest.class, baseUrl, "/books/v1/volumes/{volumeId}/layers/{layerId}/data/{annotationDataId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksLayersAnnotationDataGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksLayersAnnotationDataGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class Layers {
     /**
      * Gets the annotation data for a volume and layer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksLayersAnnotationDataListResponse booksLayersAnnotationDataList(org.openapis.openapi.models.operations.BooksLayersAnnotationDataListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksLayersAnnotationDataListResponse booksLayersAnnotationDataList(org.openapis.openapi.models.operations.BooksLayersAnnotationDataListRequest request, org.openapis.openapi.models.operations.BooksLayersAnnotationDataListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksLayersAnnotationDataListPathParams.class, baseUrl, "/books/v1/volumes/{volumeId}/layers/{layerId}/data", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksLayersAnnotationDataListRequest.class, baseUrl, "/books/v1/volumes/{volumeId}/layers/{layerId}/data", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksLayersAnnotationDataListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksLayersAnnotationDataListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,25 +125,26 @@ public class Layers {
     /**
      * Gets the layer summary for a volume.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksLayersGetResponse booksLayersGet(org.openapis.openapi.models.operations.BooksLayersGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksLayersGetResponse booksLayersGet(org.openapis.openapi.models.operations.BooksLayersGetRequest request, org.openapis.openapi.models.operations.BooksLayersGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksLayersGetPathParams.class, baseUrl, "/books/v1/volumes/{volumeId}/layersummary/{summaryId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksLayersGetRequest.class, baseUrl, "/books/v1/volumes/{volumeId}/layersummary/{summaryId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksLayersGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksLayersGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -168,25 +171,26 @@ public class Layers {
     /**
      * List the layer summaries for a volume.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksLayersListResponse booksLayersList(org.openapis.openapi.models.operations.BooksLayersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksLayersListResponse booksLayersList(org.openapis.openapi.models.operations.BooksLayersListRequest request, org.openapis.openapi.models.operations.BooksLayersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksLayersListPathParams.class, baseUrl, "/books/v1/volumes/{volumeId}/layersummary", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksLayersListRequest.class, baseUrl, "/books/v1/volumes/{volumeId}/layersummary", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksLayersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksLayersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -213,25 +217,26 @@ public class Layers {
     /**
      * Gets the volume annotation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsGetResponse booksLayersVolumeAnnotationsGet(org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsGetResponse booksLayersVolumeAnnotationsGet(org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsGetRequest request, org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsGetPathParams.class, baseUrl, "/books/v1/volumes/{volumeId}/layers/{layerId}/annotations/{annotationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsGetRequest.class, baseUrl, "/books/v1/volumes/{volumeId}/layers/{layerId}/annotations/{annotationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -258,25 +263,26 @@ public class Layers {
     /**
      * Gets the volume annotations for a volume and layer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsListResponse booksLayersVolumeAnnotationsList(org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsListResponse booksLayersVolumeAnnotationsList(org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsListRequest request, org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsListPathParams.class, baseUrl, "/books/v1/volumes/{volumeId}/layers/{layerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsListRequest.class, baseUrl, "/books/v1/volumes/{volumeId}/layers/{layerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksLayersVolumeAnnotationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

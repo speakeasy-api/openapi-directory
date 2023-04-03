@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionARealTimeDecisionRequest {
-    
-    public ActionARealTimeDecisionPathParams pathParams;
-    public ActionARealTimeDecisionRequest withPathParams(ActionARealTimeDecisionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ActionARealTimeDecisionParameters actionARealTimeDecisionParameters;
+    public ActionARealTimeDecisionRequest withActionARealTimeDecisionParameters(org.openapis.openapi.models.shared.ActionARealTimeDecisionParameters actionARealTimeDecisionParameters) {
+        this.actionARealTimeDecisionParameters = actionARealTimeDecisionParameters;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ActionARealTimeDecisionParameters request;
-    public ActionARealTimeDecisionRequest withRequest(org.openapis.openapi.models.shared.ActionARealTimeDecisionParameters request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=real_time_decision_id")
+    public String realTimeDecisionId;
+    public ActionARealTimeDecisionRequest withRealTimeDecisionId(String realTimeDecisionId) {
+        this.realTimeDecisionId = realTimeDecisionId;
         return this;
     }
     

@@ -4,13 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProgrammesPopularRequest {
+    /**
+     * Whether to return all, or available programmes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=availability")
+    public org.openapis.openapi.models.shared.AvailabilityEnum availability;
+    public GetProgrammesPopularRequest withAvailability(org.openapis.openapi.models.shared.AvailabilityEnum availability) {
+        this.availability = availability;
+        return this;
+    }
     
-    public GetProgrammesPopularQueryParams queryParams;
-    public GetProgrammesPopularRequest withQueryParams(GetProgrammesPopularQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The depth to return child entities.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=initial_child_count")
+    public Long initialChildCount;
+    public GetProgrammesPopularRequest withInitialChildCount(Long initialChildCount) {
+        this.initialChildCount = initialChildCount;
+        return this;
+    }
+    
+    /**
+     * Request additional data in the output
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mixin")
+    public org.openapis.openapi.models.shared.MixinEnum mixin;
+    public GetProgrammesPopularRequest withMixin(org.openapis.openapi.models.shared.MixinEnum mixin) {
+        this.mixin = mixin;
+        return this;
+    }
+    
+    /**
+     * The page index.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetProgrammesPopularRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetProgrammesPopularRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The rights group to limit results to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rights")
+    public org.openapis.openapi.models.shared.RightsEnum rights;
+    public GetProgrammesPopularRequest withRights(org.openapis.openapi.models.shared.RightsEnum rights) {
+        this.rights = rights;
+        return this;
+    }
+    
+    /**
+     * The sort order of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetProgrammesPopularRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Whether to sort ascending or descending
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
+    public org.openapis.openapi.models.shared.SortDirectionEnum sortDirection;
+    public GetProgrammesPopularRequest withSortDirection(org.openapis.openapi.models.shared.SortDirectionEnum sortDirection) {
+        this.sortDirection = sortDirection;
         return this;
     }
     

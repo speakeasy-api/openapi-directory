@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchTrunkingCountryRequest {
-    
-    public FetchTrunkingCountryPathParams pathParams;
-    public FetchTrunkingCountryRequest withPathParams(FetchTrunkingCountryPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchTrunkingCountrySecurity security;
-    public FetchTrunkingCountryRequest withSecurity(FetchTrunkingCountrySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchTrunkingCountryRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the origin-based voice pricing information to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IsoCountry")
+    public String isoCountry;
+    public FetchTrunkingCountryRequest withIsoCountry(String isoCountry) {
+        this.isoCountry = isoCountry;
         return this;
     }
     

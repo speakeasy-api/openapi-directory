@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CrashesGetNativeCrashDownloadRequest {
-    
-    public CrashesGetNativeCrashDownloadPathParams pathParams;
-    public CrashesGetNativeCrashDownloadRequest withPathParams(CrashesGetNativeCrashDownloadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CrashesGetNativeCrashDownloadRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * id of a specific group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_group_id")
+    public String crashGroupId;
+    public CrashesGetNativeCrashDownloadRequest withCrashGroupId(String crashGroupId) {
+        this.crashGroupId = crashGroupId;
+        return this;
+    }
     
-    public CrashesGetNativeCrashDownloadSecurity security;
-    public CrashesGetNativeCrashDownloadRequest withSecurity(CrashesGetNativeCrashDownloadSecurity security) {
-        this.security = security;
+    /**
+     * id of a specific crash
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_id")
+    public String crashId;
+    public CrashesGetNativeCrashDownloadRequest withCrashId(String crashId) {
+        this.crashId = crashId;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CrashesGetNativeCrashDownloadRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

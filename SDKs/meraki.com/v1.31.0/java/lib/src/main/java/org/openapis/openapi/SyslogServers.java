@@ -39,7 +39,7 @@ public class SyslogServers {
      */
     public org.openapis.openapi.models.operations.GetNetworkSyslogServersResponse getNetworkSyslogServers(org.openapis.openapi.models.operations.GetNetworkSyslogServersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSyslogServersPathParams.class, baseUrl, "/networks/{networkId}/syslogServers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSyslogServersRequest.class, baseUrl, "/networks/{networkId}/syslogServers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -79,12 +79,12 @@ public class SyslogServers {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSyslogServersResponse updateNetworkSyslogServers(org.openapis.openapi.models.operations.UpdateNetworkSyslogServersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSyslogServersPathParams.class, baseUrl, "/networks/{networkId}/syslogServers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSyslogServersRequest.class, baseUrl, "/networks/{networkId}/syslogServers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

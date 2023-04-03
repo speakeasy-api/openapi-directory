@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSipAuthCallsIpAccessControlListMappingRequest {
-    
-    public DeleteSipAuthCallsIpAccessControlListMappingPathParams pathParams;
-    public DeleteSipAuthCallsIpAccessControlListMappingRequest withPathParams(DeleteSipAuthCallsIpAccessControlListMappingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the IpAccessControlListMapping resources to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public DeleteSipAuthCallsIpAccessControlListMappingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public DeleteSipAuthCallsIpAccessControlListMappingSecurity security;
-    public DeleteSipAuthCallsIpAccessControlListMappingRequest withSecurity(DeleteSipAuthCallsIpAccessControlListMappingSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the SIP domain that contains the resources to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainSid")
+    public String domainSid;
+    public DeleteSipAuthCallsIpAccessControlListMappingRequest withDomainSid(String domainSid) {
+        this.domainSid = domainSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteSipAuthCallsIpAccessControlListMappingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the IpAccessControlListMapping resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteSipAuthCallsIpAccessControlListMappingRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

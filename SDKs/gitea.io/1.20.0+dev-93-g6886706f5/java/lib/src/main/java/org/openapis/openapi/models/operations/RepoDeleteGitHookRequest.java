@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoDeleteGitHookRequest {
+    /**
+     * id of the hook to get
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public RepoDeleteGitHookRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public RepoDeleteGitHookPathParams pathParams;
-    public RepoDeleteGitHookRequest withPathParams(RepoDeleteGitHookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoDeleteGitHookRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoDeleteGitHookRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

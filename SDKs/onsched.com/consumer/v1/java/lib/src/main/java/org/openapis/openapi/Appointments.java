@@ -41,7 +41,7 @@ public class Appointments {
      */
     public org.openapis.openapi.models.operations.DeleteConsumerV1AppointmentsIdResponse deleteConsumerV1AppointmentsId(org.openapis.openapi.models.operations.DeleteConsumerV1AppointmentsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConsumerV1AppointmentsIdPathParams.class, baseUrl, "/consumer/v1/appointments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConsumerV1AppointmentsIdRequest.class, baseUrl, "/consumer/v1/appointments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -87,7 +87,7 @@ public class Appointments {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1AppointmentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1AppointmentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -133,7 +133,7 @@ public class Appointments {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1AppointmentsBookingfieldsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1AppointmentsBookingfieldsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -179,7 +179,7 @@ public class Appointments {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1AppointmentsCustomfieldsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1AppointmentsCustomfieldsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -219,7 +219,7 @@ public class Appointments {
      */
     public org.openapis.openapi.models.operations.GetConsumerV1AppointmentsIdResponse getConsumerV1AppointmentsId(org.openapis.openapi.models.operations.GetConsumerV1AppointmentsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConsumerV1AppointmentsIdPathParams.class, baseUrl, "/consumer/v1/appointments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConsumerV1AppointmentsIdRequest.class, baseUrl, "/consumer/v1/appointments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -283,10 +283,10 @@ public class Appointments {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "appointmentInitialModel", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostConsumerV1AppointmentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostConsumerV1AppointmentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -327,12 +327,12 @@ public class Appointments {
      */
     public org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdBookResponse putConsumerV1AppointmentsIdBook(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdBookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdBookPathParams.class, baseUrl, "/consumer/v1/appointments/{id}/book", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdBookRequest.class, baseUrl, "/consumer/v1/appointments/{id}/book", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "appointmentBookModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -369,7 +369,7 @@ public class Appointments {
      */
     public org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdCancelResponse putConsumerV1AppointmentsIdCancel(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdCancelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdCancelPathParams.class, baseUrl, "/consumer/v1/appointments/{id}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdCancelRequest.class, baseUrl, "/consumer/v1/appointments/{id}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -410,13 +410,13 @@ public class Appointments {
      */
     public org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdConfirmResponse putConsumerV1AppointmentsIdConfirm(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdConfirmRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdConfirmPathParams.class, baseUrl, "/consumer/v1/appointments/{id}/confirm", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdConfirmRequest.class, baseUrl, "/consumer/v1/appointments/{id}/confirm", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdConfirmQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdConfirmRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -451,12 +451,12 @@ public class Appointments {
      */
     public org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdNoshowResponse putConsumerV1AppointmentsIdNoshow(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdNoshowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdNoshowPathParams.class, baseUrl, "/consumer/v1/appointments/{id}/noshow", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdNoshowRequest.class, baseUrl, "/consumer/v1/appointments/{id}/noshow", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -493,12 +493,12 @@ public class Appointments {
      */
     public org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdRescheduleResponse putConsumerV1AppointmentsIdReschedule(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdRescheduleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdReschedulePathParams.class, baseUrl, "/consumer/v1/appointments/{id}/reschedule", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdRescheduleRequest.class, baseUrl, "/consumer/v1/appointments/{id}/reschedule", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "appointmentRescheduleModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -542,15 +542,15 @@ public class Appointments {
      */
     public org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdReserveResponse putConsumerV1AppointmentsIdReserve(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdReserveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdReservePathParams.class, baseUrl, "/consumer/v1/appointments/{id}/reserve", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdReserveRequest.class, baseUrl, "/consumer/v1/appointments/{id}/reserve", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "appointmentReserveModel", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdReserveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutConsumerV1AppointmentsIdReserveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -7,20 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostQueryRequest {
-    
-    public PostQueryQueryParams queryParams;
-    public PostQueryRequest withQueryParams(PostQueryQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The test of the query (in JSON format)
      */
     @SpeakeasyMetadata("request:mediaType=application/x-yaml")
-    public byte[] request;
-    public PostQueryRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public PostQueryRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * If set to *full*, response will include query explanations in addition to the result.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=explain")
+    public String explain;
+    public PostQueryRequest withExplain(String explain) {
+        this.explain = explain;
+        return this;
+    }
+    
+    /**
+     * If true, compiler performance metrics will be returned in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metrics")
+    public Boolean metrics;
+    public PostQueryRequest withMetrics(Boolean metrics) {
+        this.metrics = metrics;
+        return this;
+    }
+    
+    /**
+     * If true, response will be in a human-readable format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
+    public Boolean pretty;
+    public PostQueryRequest withPretty(Boolean pretty) {
+        this.pretty = pretty;
         return this;
     }
     

@@ -61,9 +61,30 @@ public class Discovery {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05CareContextsDiscoverJsonResponse postV05CareContextsDiscoverJson(org.openapis.openapi.models.operations.PostV05CareContextsDiscoverJsonRequest request) throws Exception {
+        return this.postV05CareContextsDiscoverJson(request, null);
+    }
+
+    /**
+     * Discover patient's accounts
+     * Request for patient care context discover, made by Gateway intended for a specific HIP. It is expected that HIP will subsequently return either zero or one patient record with (potentially masked) associated care contexts
+     *   1. **At least one of the verified identifier matches**
+     *   2. **Name (fuzzy), gender matches**
+     *   3. **If YoB was given, age band(+-2) matches**
+     *   4. **If unverified identifiers were given, one of them matches**
+     *   5. **If more than one patient records would be found after aforementioned steps, then patient who matches most verified and unverified identifiers would be returned.**
+     *   6. **If there would be still more than one patients (after ranking) error would be returned**
+     *   7. **Intended HIP should be able to resolve and identify results returned in the subsequent link confirmation request via the specified transactionId**
+     *   8. **Intended HIP should store the discovery results with transactionId and care contexts discovered for subsequent link initiation**
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05CareContextsDiscoverJsonResponse postV05CareContextsDiscoverJson(org.openapis.openapi.models.operations.PostV05CareContextsDiscoverJsonRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_CARE_CONTEXTS_DISCOVER_JSON_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/care-contexts/discover");
@@ -71,13 +92,13 @@ public class Discovery {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "patientDiscoveryRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -141,9 +162,30 @@ public class Discovery {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05CareContextsDiscoverRawResponse postV05CareContextsDiscoverRaw(org.openapis.openapi.models.operations.PostV05CareContextsDiscoverRawRequest request) throws Exception {
+        return this.postV05CareContextsDiscoverRaw(request, null);
+    }
+
+    /**
+     * Discover patient's accounts
+     * Request for patient care context discover, made by Gateway intended for a specific HIP. It is expected that HIP will subsequently return either zero or one patient record with (potentially masked) associated care contexts
+     *   1. **At least one of the verified identifier matches**
+     *   2. **Name (fuzzy), gender matches**
+     *   3. **If YoB was given, age band(+-2) matches**
+     *   4. **If unverified identifiers were given, one of them matches**
+     *   5. **If more than one patient records would be found after aforementioned steps, then patient who matches most verified and unverified identifiers would be returned.**
+     *   6. **If there would be still more than one patients (after ranking) error would be returned**
+     *   7. **Intended HIP should be able to resolve and identify results returned in the subsequent link confirmation request via the specified transactionId**
+     *   8. **Intended HIP should store the discovery results with transactionId and care contexts discovered for subsequent link initiation**
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05CareContextsDiscoverRawResponse postV05CareContextsDiscoverRaw(org.openapis.openapi.models.operations.PostV05CareContextsDiscoverRawRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_CARE_CONTEXTS_DISCOVER_RAW_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/care-contexts/discover");
@@ -151,13 +193,13 @@ public class Discovery {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

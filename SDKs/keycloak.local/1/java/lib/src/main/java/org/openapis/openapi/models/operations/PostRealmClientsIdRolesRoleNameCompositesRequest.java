@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmClientsIdRolesRoleNameCompositesRequest {
-    
-    public PostRealmClientsIdRolesRoleNameCompositesPathParams pathParams;
-    public PostRealmClientsIdRolesRoleNameCompositesRequest withPathParams(PostRealmClientsIdRolesRoleNameCompositesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.RoleRepresentation[] requestBody;
+    public PostRealmClientsIdRolesRoleNameCompositesRequest withRequestBody(org.openapis.openapi.models.shared.RoleRepresentation[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RoleRepresentation[] request;
-    public PostRealmClientsIdRolesRoleNameCompositesRequest withRequest(org.openapis.openapi.models.shared.RoleRepresentation[] request) {
-        this.request = request;
+    /**
+     * id of client (not client-id)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostRealmClientsIdRolesRoleNameCompositesRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmClientsIdRolesRoleNameCompositesRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
+    
+    /**
+     * role\u2019s name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=role-name")
+    public String roleName;
+    public PostRealmClientsIdRolesRoleNameCompositesRequest withRoleName(String roleName) {
+        this.roleName = roleName;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVodGenreRequest {
-    
-    public GetVodGenrePathParams pathParams;
-    public GetVodGenreRequest withPathParams(GetVodGenrePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the genre.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=genre_id")
+    public String genreId;
+    public GetVodGenreRequest withGenreId(String genreId) {
+        this.genreId = genreId;
         return this;
     }
     

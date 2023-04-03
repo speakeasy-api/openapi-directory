@@ -19,8 +19,6 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GETAddClientIDToOpenIDConnectProviderActionEnum;
 import org.openapis.openapi.models.operations.GETAddClientIDToOpenIDConnectProviderVersionEnum;
-import org.openapis.openapi.models.operations.GETAddClientIDToOpenIDConnectProviderQueryParams;
-import org.openapis.openapi.models.operations.GETAddClientIDToOpenIDConnectProviderHeaders;
 import org.openapis.openapi.models.operations.GETAddClientIDToOpenIDConnectProviderRequest;
 import org.openapis.openapi.models.operations.GETAddClientIDToOpenIDConnectProviderResponse;
 
@@ -29,29 +27,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GETAddClientIDToOpenIDConnectProviderRequest req = new GETAddClientIDToOpenIDConnectProviderRequest() {{
-                queryParams = new GETAddClientIDToOpenIDConnectProviderQueryParams() {{
-                    action = "AddClientIDToOpenIDConnectProvider";
-                    clientID = "corrupti";
-                    openIDConnectProviderArn = "provident";
-                    version = "2010-05-08";
-                }};
-                headers = new GETAddClientIDToOpenIDConnectProviderHeaders() {{
-                    xAmzAlgorithm = "distinctio";
-                    xAmzContentSha256 = "quibusdam";
-                    xAmzCredential = "unde";
-                    xAmzDate = "nulla";
-                    xAmzSecurityToken = "corrupti";
-                    xAmzSignature = "illum";
-                    xAmzSignedHeaders = "vel";
-                }};
-            }};            
+                action = "AddClientIDToOpenIDConnectProvider";
+                clientID = "corrupti";
+                openIDConnectProviderArn = "provident";
+                version = "2010-05-08";
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+            }}            
 
             GETAddClientIDToOpenIDConnectProviderResponse res = sdk.getAddClientIDToOpenIDConnectProvider(req);
 
@@ -65,7 +57,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

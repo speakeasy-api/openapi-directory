@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsadminPropertiesRunAccessReportRequest {
-    
-    public AnalyticsadminPropertiesRunAccessReportPathParams pathParams;
-    public AnalyticsadminPropertiesRunAccessReportRequest withPathParams(AnalyticsadminPropertiesRunAccessReportPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AnalyticsadminPropertiesRunAccessReportQueryParams queryParams;
-    public AnalyticsadminPropertiesRunAccessReportRequest withQueryParams(AnalyticsadminPropertiesRunAccessReportQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AnalyticsadminPropertiesRunAccessReportRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaRunAccessReportRequest request;
-    public AnalyticsadminPropertiesRunAccessReportRequest withRequest(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaRunAccessReportRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaRunAccessReportRequest googleAnalyticsAdminV1alphaRunAccessReportRequest;
+    public AnalyticsadminPropertiesRunAccessReportRequest withGoogleAnalyticsAdminV1alphaRunAccessReportRequest(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaRunAccessReportRequest googleAnalyticsAdminV1alphaRunAccessReportRequest) {
+        this.googleAnalyticsAdminV1alphaRunAccessReportRequest = googleAnalyticsAdminV1alphaRunAccessReportRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AnalyticsadminPropertiesRunAccessReportRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public AnalyticsadminPropertiesRunAccessReportSecurity security;
-    public AnalyticsadminPropertiesRunAccessReportRequest withSecurity(AnalyticsadminPropertiesRunAccessReportSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AnalyticsadminPropertiesRunAccessReportRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AnalyticsadminPropertiesRunAccessReportRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * The Data Access Report supports requesting at the property level or account level. If requested at the account level, Data Access Reports include all access for all properties under that account. To request at the property level, entity should be for example 'properties/123' if "123" is your GA4 property ID. To request at the account level, entity should be for example 'accounts/1234' if "1234" is your GA4 Account ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=entity")
+    public String entity;
+    public AnalyticsadminPropertiesRunAccessReportRequest withEntity(String entity) {
+        this.entity = entity;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AnalyticsadminPropertiesRunAccessReportRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AnalyticsadminPropertiesRunAccessReportRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AnalyticsadminPropertiesRunAccessReportRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AnalyticsadminPropertiesRunAccessReportRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AnalyticsadminPropertiesRunAccessReportRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AnalyticsadminPropertiesRunAccessReportRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AnalyticsadminPropertiesRunAccessReportRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

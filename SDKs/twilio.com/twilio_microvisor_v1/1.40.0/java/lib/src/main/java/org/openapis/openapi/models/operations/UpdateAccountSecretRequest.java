@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAccountSecretRequest {
-    
-    public UpdateAccountSecretPathParams pathParams;
-    public UpdateAccountSecretRequest withPathParams(UpdateAccountSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The secret key; up to 100 characters.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Key")
+    public String key;
+    public UpdateAccountSecretRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateAccountSecretUpdateAccountSecretRequest request;
-    public UpdateAccountSecretRequest withRequest(UpdateAccountSecretUpdateAccountSecretRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public UpdateAccountSecretSecurity security;
-    public UpdateAccountSecretRequest withSecurity(UpdateAccountSecretSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateAccountSecretRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public UpdateAccountSecretUpdateAccountSecretRequest requestBody;
+    public UpdateAccountSecretRequest withRequestBody(UpdateAccountSecretUpdateAccountSecretRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

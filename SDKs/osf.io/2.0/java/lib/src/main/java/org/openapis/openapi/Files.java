@@ -75,7 +75,7 @@ public class Files {
      */
     public org.openapis.openapi.models.operations.FilesDetailResponse filesDetail(org.openapis.openapi.models.operations.FilesDetailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FilesDetailPathParams.class, baseUrl, "/files/{file_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FilesDetailRequest.class, baseUrl, "/files/{file_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -117,12 +117,12 @@ public class Files {
      */
     public org.openapis.openapi.models.operations.FilesPatchResponse filesPatch(org.openapis.openapi.models.operations.FilesPatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FilesPatchPathParams.class, baseUrl, "/files/{file_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FilesPatchRequest.class, baseUrl, "/files/{file_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -160,7 +160,7 @@ public class Files {
      */
     public org.openapis.openapi.models.operations.FilesVersionDetailResponse filesVersionDetail(org.openapis.openapi.models.operations.FilesVersionDetailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FilesVersionDetailPathParams.class, baseUrl, "/files/{file_id}/versions/{version_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FilesVersionDetailRequest.class, baseUrl, "/files/{file_id}/versions/{version_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -207,7 +207,7 @@ public class Files {
      */
     public org.openapis.openapi.models.operations.FilesVersionsResponse filesVersions(org.openapis.openapi.models.operations.FilesVersionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FilesVersionsPathParams.class, baseUrl, "/files/{file_id}/versions/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FilesVersionsRequest.class, baseUrl, "/files/{file_id}/versions/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

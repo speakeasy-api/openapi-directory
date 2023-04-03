@@ -32,10 +32,8 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/PostGetOnboardingUrlSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostGetOnboardingUrlRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostGetOnboardingUrlResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostGetPciQuestionnaireUrlSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostGetPciQuestionnaireUrlRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostGetPciQuestionnaireUrlResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ServiceError.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetOnboardingUrlResponse.java
@@ -45,7 +43,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/FieldType.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetOnboardingUrlRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ShowPages.java
 lib/src/main/java/org/openapis/openapi/models/shared/CollectInformation.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKeyAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/SchemeBasicAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetPciUrlResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetPciUrlRequest.java

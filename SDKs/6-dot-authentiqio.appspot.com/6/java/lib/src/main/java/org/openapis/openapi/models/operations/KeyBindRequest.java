@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KeyBindRequest {
-    
-    public KeyBindPathParams pathParams;
-    public KeyBindRequest withPathParams(KeyBindPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Public Signing Key - Authentiq ID (43 chars)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PK")
+    public String pk;
+    public KeyBindRequest withPk(String pk) {
+        this.pk = pk;
         return this;
     }
     
@@ -18,9 +21,9 @@ public class KeyBindRequest {
      * Authentiq ID to register
      */
     @SpeakeasyMetadata("request:mediaType=application/jwt")
-    public byte[] request;
-    public KeyBindRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public KeyBindRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

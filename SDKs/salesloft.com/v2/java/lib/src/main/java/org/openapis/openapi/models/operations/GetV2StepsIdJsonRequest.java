@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2StepsIdJsonRequest {
-    
-    public GetV2StepsIdJsonPathParams pathParams;
-    public GetV2StepsIdJsonRequest withPathParams(GetV2StepsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Step ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetV2StepsIdJsonRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

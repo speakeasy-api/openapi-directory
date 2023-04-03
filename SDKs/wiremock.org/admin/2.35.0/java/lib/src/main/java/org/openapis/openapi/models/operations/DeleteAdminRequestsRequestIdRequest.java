@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAdminRequestsRequestIdRequest {
-    
-    public DeleteAdminRequestsRequestIdPathParams pathParams;
-    public DeleteAdminRequestsRequestIdRequest withPathParams(DeleteAdminRequestsRequestIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The UUID of the logged request
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=requestId")
+    public String requestId;
+    public DeleteAdminRequestsRequestIdRequest withRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
     

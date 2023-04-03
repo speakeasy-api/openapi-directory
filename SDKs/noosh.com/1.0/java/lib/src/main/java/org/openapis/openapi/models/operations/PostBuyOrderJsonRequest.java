@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostBuyOrderJsonRequest {
-    
-    public PostBuyOrderJsonPathParams pathParams;
-    public PostBuyOrderJsonRequest withPathParams(PostBuyOrderJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.OrderPO orderPO;
+    public PostBuyOrderJsonRequest withOrderPO(org.openapis.openapi.models.shared.OrderPO orderPO) {
+        this.orderPO = orderPO;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.OrderPO request;
-    public PostBuyOrderJsonRequest withRequest(org.openapis.openapi.models.shared.OrderPO request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public PostBuyOrderJsonRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public PostBuyOrderJsonRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

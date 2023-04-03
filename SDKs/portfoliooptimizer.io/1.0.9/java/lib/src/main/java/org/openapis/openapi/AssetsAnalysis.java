@@ -41,7 +41,7 @@ public class AssetsAnalysis {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsAnalysisAbsorptionRatioResponse postAssetsAnalysisAbsorptionRatio(org.openapis.openapi.models.operations.PostAssetsAnalysisAbsorptionRatioRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsAnalysisAbsorptionRatioResponse postAssetsAnalysisAbsorptionRatio(org.openapis.openapi.models.operations.PostAssetsAnalysisAbsorptionRatioRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/analysis/absorption-ratio");
         
@@ -91,7 +91,7 @@ public class AssetsAnalysis {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsAnalysisTurbulenceIndexResponse postAssetsAnalysisTurbulenceIndex(org.openapis.openapi.models.operations.PostAssetsAnalysisTurbulenceIndexRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsAnalysisTurbulenceIndexResponse postAssetsAnalysisTurbulenceIndex(org.openapis.openapi.models.operations.PostAssetsAnalysisTurbulenceIndexRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/analysis/turbulence-index");
         

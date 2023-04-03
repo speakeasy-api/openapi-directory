@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRegistrationRequest {
-    
-    public GetRegistrationQueryParams queryParams;
-    public GetRegistrationRequest withQueryParams(GetRegistrationQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetRegistrationSecurity security;
-    public GetRegistrationRequest withSecurity(GetRegistrationSecurity security) {
-        this.security = security;
+    /**
+     * Code of the invitation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Code")
+    public String code;
+    public GetRegistrationRequest withCode(String code) {
+        this.code = code;
         return this;
     }
     

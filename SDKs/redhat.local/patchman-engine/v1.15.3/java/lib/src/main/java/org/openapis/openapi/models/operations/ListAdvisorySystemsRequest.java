@@ -4,27 +4,226 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAdvisorySystemsRequest {
-    
-    public ListAdvisorySystemsPathParams pathParams;
-    public ListAdvisorySystemsRequest withPathParams(ListAdvisorySystemsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Advisory ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=advisory_id")
+    public String advisoryId;
+    public ListAdvisorySystemsRequest withAdvisoryId(String advisoryId) {
+        this.advisoryId = advisoryId;
         return this;
     }
     
-    
-    public ListAdvisorySystemsQueryParams queryParams;
-    public ListAdvisorySystemsRequest withQueryParams(ListAdvisorySystemsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[created]")
+    public String filterCreated;
+    public ListAdvisorySystemsRequest withFilterCreated(String filterCreated) {
+        this.filterCreated = filterCreated;
         return this;
     }
     
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[culled_timestamp]")
+    public String filterCulledTimestamp;
+    public ListAdvisorySystemsRequest withFilterCulledTimestamp(String filterCulledTimestamp) {
+        this.filterCulledTimestamp = filterCulledTimestamp;
+        return this;
+    }
     
-    public ListAdvisorySystemsSecurity security;
-    public ListAdvisorySystemsRequest withSecurity(ListAdvisorySystemsSecurity security) {
-        this.security = security;
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[display_name]")
+    public String filterDisplayName;
+    public ListAdvisorySystemsRequest withFilterDisplayName(String filterDisplayName) {
+        this.filterDisplayName = filterDisplayName;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[id]")
+    public String filterId;
+    public ListAdvisorySystemsRequest withFilterId(String filterId) {
+        this.filterId = filterId;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[insights_id]")
+    public String filterInsightsId;
+    public ListAdvisorySystemsRequest withFilterInsightsId(String filterInsightsId) {
+        this.filterInsightsId = filterInsightsId;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[last_evaluation]")
+    public String filterLastEvaluation;
+    public ListAdvisorySystemsRequest withFilterLastEvaluation(String filterLastEvaluation) {
+        this.filterLastEvaluation = filterLastEvaluation;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[last_upload]")
+    public String filterLastUpload;
+    public ListAdvisorySystemsRequest withFilterLastUpload(String filterLastUpload) {
+        this.filterLastUpload = filterLastUpload;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[other_count]")
+    public String filterOtherCount;
+    public ListAdvisorySystemsRequest withFilterOtherCount(String filterOtherCount) {
+        this.filterOtherCount = filterOtherCount;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[rhba_count]")
+    public String filterRhbaCount;
+    public ListAdvisorySystemsRequest withFilterRhbaCount(String filterRhbaCount) {
+        this.filterRhbaCount = filterRhbaCount;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[rhea_count]")
+    public String filterRheaCount;
+    public ListAdvisorySystemsRequest withFilterRheaCount(String filterRheaCount) {
+        this.filterRheaCount = filterRheaCount;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[rhsa_count]")
+    public String filterRhsaCount;
+    public ListAdvisorySystemsRequest withFilterRhsaCount(String filterRhsaCount) {
+        this.filterRhsaCount = filterRhsaCount;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[stale]")
+    public String filterStale;
+    public ListAdvisorySystemsRequest withFilterStale(String filterStale) {
+        this.filterStale = filterStale;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[stale_timestamp]")
+    public String filterStaleTimestamp;
+    public ListAdvisorySystemsRequest withFilterStaleTimestamp(String filterStaleTimestamp) {
+        this.filterStaleTimestamp = filterStaleTimestamp;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[stale_warning_timestamp]")
+    public String filterStaleWarningTimestamp;
+    public ListAdvisorySystemsRequest withFilterStaleWarningTimestamp(String filterStaleWarningTimestamp) {
+        this.filterStaleWarningTimestamp = filterStaleWarningTimestamp;
+        return this;
+    }
+    
+    /**
+     * Filter systems by their SAP SIDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_sids][in]")
+    public String[] filterSystemProfileSapSidsIn;
+    public ListAdvisorySystemsRequest withFilterSystemProfileSapSidsIn(String[] filterSystemProfileSapSidsIn) {
+        this.filterSystemProfileSapSidsIn = filterSystemProfileSapSidsIn;
+        return this;
+    }
+    
+    /**
+     * Filter only SAP systems
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_system]")
+    public String filterSystemProfileSapSystem;
+    public ListAdvisorySystemsRequest withFilterSystemProfileSapSystem(String filterSystemProfileSapSystem) {
+        this.filterSystemProfileSapSystem = filterSystemProfileSapSystem;
+        return this;
+    }
+    
+    /**
+     * Limit for paging, set -1 to return all
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListAdvisorySystemsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset for paging
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ListAdvisorySystemsRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Find matching text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public ListAdvisorySystemsRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * Sort field
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public ListAdvisorySystemsSortEnum sort;
+    public ListAdvisorySystemsRequest withSort(ListAdvisorySystemsSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Tag filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String[] tags;
+    public ListAdvisorySystemsRequest withTags(String[] tags) {
+        this.tags = tags;
         return this;
     }
     

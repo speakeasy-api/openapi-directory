@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContributionsIdLikesRequest {
-    
-    public GetContributionsIdLikesPathParams pathParams;
-    public GetContributionsIdLikesRequest withPathParams(GetContributionsIdLikesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the contribution
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetContributionsIdLikesRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

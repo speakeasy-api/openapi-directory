@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateLoginProfileRequest {
-    
-    public GETCreateLoginProfileQueryParams queryParams;
-    public GETCreateLoginProfileRequest withQueryParams(GETCreateLoginProfileQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETCreateLoginProfileActionEnum action;
+    public GETCreateLoginProfileRequest withAction(GETCreateLoginProfileActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The new password for the user.&lt;/p&gt; &lt;p&gt;The &lt;a href="http://wikipedia.org/wiki/regex"&gt;regex pattern&lt;/a&gt; that is used to validate this parameter is a string of characters. That string can include almost any printable ASCII character from the space (&lt;code&gt;\ u0020&lt;/code&gt;) through the end of the ASCII character range (&lt;code&gt;\ u00FF&lt;/code&gt;). You can also include the tab (&lt;code&gt;\ u0009&lt;/code&gt;), line feed (&lt;code&gt;\ u000A&lt;/code&gt;), and carriage return (&lt;code&gt;\ u000D&lt;/code&gt;) characters. Any of these characters are valid in a password. However, many tools, such as the Amazon Web Services Management Console, might restrict the ability to type certain characters because they have special meaning within that tool.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Password")
+    public String password;
+    public GETCreateLoginProfileRequest withPassword(String password) {
+        this.password = password;
+        return this;
+    }
     
-    public GETCreateLoginProfileHeaders headers;
-    public GETCreateLoginProfileRequest withHeaders(GETCreateLoginProfileHeaders headers) {
-        this.headers = headers;
+    /**
+     * Specifies whether the user is required to set a new password on next sign-in.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PasswordResetRequired")
+    public Boolean passwordResetRequired;
+    public GETCreateLoginProfileRequest withPasswordResetRequired(Boolean passwordResetRequired) {
+        this.passwordResetRequired = passwordResetRequired;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the IAM user to create a password for. The user must already exist.&lt;/p&gt; &lt;p&gt;This parameter allows (through its &lt;a href="http://wikipedia.org/wiki/regex"&gt;regex pattern&lt;/a&gt;) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserName")
+    public String userName;
+    public GETCreateLoginProfileRequest withUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETCreateLoginProfileVersionEnum version;
+    public GETCreateLoginProfileRequest withVersion(GETCreateLoginProfileVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETCreateLoginProfileRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETCreateLoginProfileRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETCreateLoginProfileRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETCreateLoginProfileRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETCreateLoginProfileRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETCreateLoginProfileRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETCreateLoginProfileRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

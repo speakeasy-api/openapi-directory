@@ -4,20 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveAccountTransactionsV2Request {
-    
-    public RetrieveAccountTransactionsV2PathParams pathParams;
-    public RetrieveAccountTransactionsV2Request withPathParams(RetrieveAccountTransactionsV2PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ISO 3166 two-character country code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public RetrieveAccountTransactionsV2Request withCountry(String country) {
+        this.country = country;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_from")
+    public LocalDate dateFrom;
+    public RetrieveAccountTransactionsV2Request withDateFrom(LocalDate dateFrom) {
+        this.dateFrom = dateFrom;
+        return this;
+    }
     
-    public RetrieveAccountTransactionsV2QueryParams queryParams;
-    public RetrieveAccountTransactionsV2Request withQueryParams(RetrieveAccountTransactionsV2QueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_to")
+    public LocalDate dateTo;
+    public RetrieveAccountTransactionsV2Request withDateTo(LocalDate dateTo) {
+        this.dateTo = dateTo;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public RetrieveAccountTransactionsV2Request withId(String id) {
+        this.id = id;
         return this;
     }
     

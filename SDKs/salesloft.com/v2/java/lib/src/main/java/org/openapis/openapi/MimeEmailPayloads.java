@@ -39,7 +39,7 @@ public class MimeEmailPayloads {
      */
     public org.openapis.openapi.models.operations.GetV2MimeEmailPayloadsIdJsonResponse getV2MimeEmailPayloadsIdJson(org.openapis.openapi.models.operations.GetV2MimeEmailPayloadsIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2MimeEmailPayloadsIdJsonPathParams.class, baseUrl, "/v2/mime_email_payloads/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2MimeEmailPayloadsIdJsonRequest.class, baseUrl, "/v2/mime_email_payloads/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

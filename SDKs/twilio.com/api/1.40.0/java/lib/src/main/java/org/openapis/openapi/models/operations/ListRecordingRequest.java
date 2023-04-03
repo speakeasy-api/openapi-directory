@@ -4,34 +4,107 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRecordingRequest {
-    
-    public ListRecordingPathParams pathParams;
-    public ListRecordingRequest withPathParams(ListRecordingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListRecordingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListRecordingQueryParams queryParams;
-    public ListRecordingRequest withQueryParams(ListRecordingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID of the resources to read.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CallSid")
+    public String callSid;
+    public ListRecordingRequest withCallSid(String callSid) {
+        this.callSid = callSid;
         return this;
     }
     
-    
-    public ListRecordingSecurity security;
-    public ListRecordingRequest withSecurity(ListRecordingSecurity security) {
-        this.security = security;
+    /**
+     * The Conference SID that identifies the conference associated with the recording to read.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConferenceSid")
+    public String conferenceSid;
+    public ListRecordingRequest withConferenceSid(String conferenceSid) {
+        this.conferenceSid = conferenceSid;
         return this;
     }
     
+    /**
+     * Only include recordings that were created on this date. Specify a date as `YYYY-MM-DD` in GMT, for example: `2009-07-06`, to read recordings that were created on this date. You can also specify an inequality, such as `DateCreated&lt;=YYYY-MM-DD`, to read recordings that were created on or before midnight of this date, and `DateCreated&gt;=YYYY-MM-DD` to read recordings that were created on or after midnight of this date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreated")
+    public OffsetDateTime dateCreated;
+    public ListRecordingRequest withDateCreated(OffsetDateTime dateCreated) {
+        this.dateCreated = dateCreated;
+        return this;
+    }
     
-    public String serverURL;
-    public ListRecordingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Only include recordings that were created on this date. Specify a date as `YYYY-MM-DD` in GMT, for example: `2009-07-06`, to read recordings that were created on this date. You can also specify an inequality, such as `DateCreated&lt;=YYYY-MM-DD`, to read recordings that were created on or before midnight of this date, and `DateCreated&gt;=YYYY-MM-DD` to read recordings that were created on or after midnight of this date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreated<")
+    public OffsetDateTime dateCreatedLessThan;
+    public ListRecordingRequest withDateCreatedLessThan(OffsetDateTime dateCreatedLessThan) {
+        this.dateCreatedLessThan = dateCreatedLessThan;
+        return this;
+    }
+    
+    /**
+     * Only include recordings that were created on this date. Specify a date as `YYYY-MM-DD` in GMT, for example: `2009-07-06`, to read recordings that were created on this date. You can also specify an inequality, such as `DateCreated&lt;=YYYY-MM-DD`, to read recordings that were created on or before midnight of this date, and `DateCreated&gt;=YYYY-MM-DD` to read recordings that were created on or after midnight of this date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreated>")
+    public OffsetDateTime dateCreatedGreaterThan;
+    public ListRecordingRequest withDateCreatedGreaterThan(OffsetDateTime dateCreatedGreaterThan) {
+        this.dateCreatedGreaterThan = dateCreatedGreaterThan;
+        return this;
+    }
+    
+    /**
+     * A boolean parameter indicating whether to retrieve soft deleted recordings or not. Recordings metadata are kept after deletion for a retention period of 40 days.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IncludeSoftDeleted")
+    public Boolean includeSoftDeleted;
+    public ListRecordingRequest withIncludeSoftDeleted(Boolean includeSoftDeleted) {
+        this.includeSoftDeleted = includeSoftDeleted;
+        return this;
+    }
+    
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListRecordingRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListRecordingRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListRecordingRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

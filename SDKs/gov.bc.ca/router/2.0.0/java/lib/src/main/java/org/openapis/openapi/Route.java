@@ -36,13 +36,13 @@ public class Route {
      */
     public org.openapis.openapi.models.operations.GetOptimalRouteOutputFormatResponse getOptimalRouteOutputFormat(org.openapis.openapi.models.operations.GetOptimalRouteOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOptimalRouteOutputFormatPathParams.class, baseUrl, "/optimalRoute.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOptimalRouteOutputFormatRequest.class, baseUrl, "/optimalRoute.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOptimalRouteOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOptimalRouteOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -76,13 +76,13 @@ public class Route {
      */
     public org.openapis.openapi.models.operations.GetRouteOutputFormatResponse getRouteOutputFormat(org.openapis.openapi.models.operations.GetRouteOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRouteOutputFormatPathParams.class, baseUrl, "/route.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRouteOutputFormatRequest.class, baseUrl, "/route.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRouteOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRouteOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -116,13 +116,13 @@ public class Route {
      */
     public org.openapis.openapi.models.operations.GetTruckOptimalRouteOutputFormatResponse getTruckOptimalRouteOutputFormat(org.openapis.openapi.models.operations.GetTruckOptimalRouteOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTruckOptimalRouteOutputFormatPathParams.class, baseUrl, "/truck/optimalRoute.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTruckOptimalRouteOutputFormatRequest.class, baseUrl, "/truck/optimalRoute.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTruckOptimalRouteOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTruckOptimalRouteOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -156,13 +156,13 @@ public class Route {
      */
     public org.openapis.openapi.models.operations.GetTruckRouteOutputFormatResponse getTruckRouteOutputFormat(org.openapis.openapi.models.operations.GetTruckRouteOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTruckRouteOutputFormatPathParams.class, baseUrl, "/truck/route.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTruckRouteOutputFormatRequest.class, baseUrl, "/truck/route.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTruckRouteOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTruckRouteOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -196,13 +196,13 @@ public class Route {
      */
     public org.openapis.openapi.models.operations.PostOptimalRouteOutputFormatResponse postOptimalRouteOutputFormat(org.openapis.openapi.models.operations.PostOptimalRouteOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOptimalRouteOutputFormatPathParams.class, baseUrl, "/optimalRoute.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOptimalRouteOutputFormatRequest.class, baseUrl, "/optimalRoute.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostOptimalRouteOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostOptimalRouteOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -236,13 +236,13 @@ public class Route {
      */
     public org.openapis.openapi.models.operations.PostRouteOutputFormatResponse postRouteOutputFormat(org.openapis.openapi.models.operations.PostRouteOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRouteOutputFormatPathParams.class, baseUrl, "/route.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRouteOutputFormatRequest.class, baseUrl, "/route.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRouteOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRouteOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -276,13 +276,13 @@ public class Route {
      */
     public org.openapis.openapi.models.operations.PostTruckOptimalRouteOutputFormatResponse postTruckOptimalRouteOutputFormat(org.openapis.openapi.models.operations.PostTruckOptimalRouteOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTruckOptimalRouteOutputFormatPathParams.class, baseUrl, "/truck/optimalRoute.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTruckOptimalRouteOutputFormatRequest.class, baseUrl, "/truck/optimalRoute.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostTruckOptimalRouteOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostTruckOptimalRouteOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -316,13 +316,13 @@ public class Route {
      */
     public org.openapis.openapi.models.operations.PostTruckRouteOutputFormatResponse postTruckRouteOutputFormat(org.openapis.openapi.models.operations.PostTruckRouteOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTruckRouteOutputFormatPathParams.class, baseUrl, "/truck/route.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTruckRouteOutputFormatRequest.class, baseUrl, "/truck/route.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostTruckRouteOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostTruckRouteOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

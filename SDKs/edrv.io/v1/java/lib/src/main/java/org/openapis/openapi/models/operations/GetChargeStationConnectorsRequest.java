@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChargeStationConnectorsRequest {
-    
-    public GetChargeStationConnectorsPathParams pathParams;
-    public GetChargeStationConnectorsRequest withPathParams(GetChargeStationConnectorsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * chargeStation id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetChargeStationConnectorsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Populate evse
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_evse")
+    public Boolean includeEvse;
+    public GetChargeStationConnectorsRequest withIncludeEvse(Boolean includeEvse) {
+        this.includeEvse = includeEvse;
+        return this;
+    }
     
-    public GetChargeStationConnectorsQueryParams queryParams;
-    public GetChargeStationConnectorsRequest withQueryParams(GetChargeStationConnectorsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Populate organization
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_organization")
+    public Boolean includeOrganization;
+    public GetChargeStationConnectorsRequest withIncludeOrganization(Boolean includeOrganization) {
+        this.includeOrganization = includeOrganization;
         return this;
     }
     

@@ -4,34 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSummaryRequest {
-    
-    public FetchSummaryPathParams pathParams;
-    public FetchSummaryRequest withPathParams(FetchSummaryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public FetchSummaryRequest withCallSid(String callSid) {
+        this.callSid = callSid;
         return this;
     }
     
-    
-    public FetchSummaryQueryParams queryParams;
-    public FetchSummaryRequest withQueryParams(FetchSummaryQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public FetchSummarySecurity security;
-    public FetchSummaryRequest withSecurity(FetchSummarySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchSummaryRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ProcessingState")
+    public org.openapis.openapi.models.shared.SummaryEnumProcessingStateEnum processingState;
+    public FetchSummaryRequest withProcessingState(org.openapis.openapi.models.shared.SummaryEnumProcessingStateEnum processingState) {
+        this.processingState = processingState;
         return this;
     }
     

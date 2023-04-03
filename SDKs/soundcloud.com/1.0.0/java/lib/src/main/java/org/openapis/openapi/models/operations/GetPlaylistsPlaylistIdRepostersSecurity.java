@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlaylistsPlaylistIdRepostersSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public org.openapis.openapi.models.shared.SchemeClientID clientId;
-    public GetPlaylistsPlaylistIdRepostersSecurity withClientId(org.openapis.openapi.models.shared.SchemeClientID clientId) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=client_id")
+    public String clientId;
+    public GetPlaylistsPlaylistIdRepostersSecurity withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetById7Request {
-    
-    public GetById7PathParams pathParams;
-    public GetById7Request withPathParams(GetById7PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * list of additional fields which should be embedded in the response (available options: tasks)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
+    public String embed;
+    public GetById7Request withEmbed(String embed) {
+        this.embed = embed;
         return this;
     }
     
-    
-    public GetById7QueryParams queryParams;
-    public GetById7Request withQueryParams(GetById7QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * project's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public GetById7Request withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

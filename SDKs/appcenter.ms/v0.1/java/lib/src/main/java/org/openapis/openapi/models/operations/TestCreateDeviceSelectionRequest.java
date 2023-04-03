@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestCreateDeviceSelectionRequest {
-    
-    public TestCreateDeviceSelectionPathParams pathParams;
-    public TestCreateDeviceSelectionRequest withPathParams(TestCreateDeviceSelectionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public TestCreateDeviceSelectionDeviceList request;
-    public TestCreateDeviceSelectionRequest withRequest(TestCreateDeviceSelectionDeviceList request) {
-        this.request = request;
+    public TestCreateDeviceSelectionDeviceList requestBody;
+    public TestCreateDeviceSelectionRequest withRequestBody(TestCreateDeviceSelectionDeviceList requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public TestCreateDeviceSelectionRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public TestCreateDeviceSelectionSecurity security;
-    public TestCreateDeviceSelectionRequest withSecurity(TestCreateDeviceSelectionSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public TestCreateDeviceSelectionRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

@@ -4,20 +4,107 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPayslip3ReportOutputRequest {
-    
-    public GetPayslip3ReportOutputQueryParams queryParams;
-    public GetPayslip3ReportOutputRequest withQueryParams(GetPayslip3ReportOutputQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public GetPayslip3ReportOutputRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetPayslip3ReportOutputRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public GetPayslip3ReportOutputHeaders headers;
-    public GetPayslip3ReportOutputRequest withHeaders(GetPayslip3ReportOutputHeaders headers) {
-        this.headers = headers;
+    /**
+     * A comma separated list of the employee codes. E.g. EMP001,EMP002
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EmployeeCodes")
+    public String employeeCodes;
+    public GetPayslip3ReportOutputRequest withEmployeeCodes(String employeeCodes) {
+        this.employeeCodes = employeeCodes;
+        return this;
+    }
+    
+    /**
+     * The employer unique key. E.g. ER001
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EmployerKey")
+    public String employerKey;
+    public GetPayslip3ReportOutputRequest withEmployerKey(String employerKey) {
+        this.employerKey = employerKey;
+        return this;
+    }
+    
+    /**
+     * The highest element index to return from the report. Used to control paging within large data sets. E.g. 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxIndex")
+    public String maxIndex;
+    public GetPayslip3ReportOutputRequest withMaxIndex(String maxIndex) {
+        this.maxIndex = maxIndex;
+        return this;
+    }
+    
+    /**
+     * The pay schedule unique key. E.g. SCH001
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PayScheduleKey")
+    public String payScheduleKey;
+    public GetPayslip3ReportOutputRequest withPayScheduleKey(String payScheduleKey) {
+        this.payScheduleKey = payScheduleKey;
+        return this;
+    }
+    
+    /**
+     * The payment date context for the report. E.g. 2018-04-30
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PaymentDate")
+    public LocalDate paymentDate;
+    public GetPayslip3ReportOutputRequest withPaymentDate(LocalDate paymentDate) {
+        this.paymentDate = paymentDate;
+        return this;
+    }
+    
+    /**
+     * The element index to begin the report. Used to control paging within large data sets. E.g. 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartIndex")
+    public String startIndex;
+    public GetPayslip3ReportOutputRequest withStartIndex(String startIndex) {
+        this.startIndex = startIndex;
+        return this;
+    }
+    
+    /**
+     * The tax year. E.g. 2017 = 2017/18 year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TaxYear")
+    public String taxYear;
+    public GetPayslip3ReportOutputRequest withTaxYear(String taxYear) {
+        this.taxYear = taxYear;
+        return this;
+    }
+    
+    /**
+     * The transform definition unique key. E.g. P45-Pdf
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransformDefinitionKey")
+    public String transformDefinitionKey;
+    public GetPayslip3ReportOutputRequest withTransformDefinitionKey(String transformDefinitionKey) {
+        this.transformDefinitionKey = transformDefinitionKey;
         return this;
     }
     

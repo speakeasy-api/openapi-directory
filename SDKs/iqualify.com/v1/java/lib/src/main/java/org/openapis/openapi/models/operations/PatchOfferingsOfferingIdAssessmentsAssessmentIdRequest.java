@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchOfferingsOfferingIdAssessmentsAssessmentIdRequest {
-    
-    public PatchOfferingsOfferingIdAssessmentsAssessmentIdPathParams pathParams;
-    public PatchOfferingsOfferingIdAssessmentsAssessmentIdRequest withPathParams(PatchOfferingsOfferingIdAssessmentsAssessmentIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Assessment assessment;
+    public PatchOfferingsOfferingIdAssessmentsAssessmentIdRequest withAssessment(org.openapis.openapi.models.shared.Assessment assessment) {
+        this.assessment = assessment;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Assessment request;
-    public PatchOfferingsOfferingIdAssessmentsAssessmentIdRequest withRequest(org.openapis.openapi.models.shared.Assessment request) {
-        this.request = request;
+    /**
+     * assessment's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assessmentId")
+    public String assessmentId;
+    public PatchOfferingsOfferingIdAssessmentsAssessmentIdRequest withAssessmentId(String assessmentId) {
+        this.assessmentId = assessmentId;
+        return this;
+    }
+    
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public PatchOfferingsOfferingIdAssessmentsAssessmentIdRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
         return this;
     }
     

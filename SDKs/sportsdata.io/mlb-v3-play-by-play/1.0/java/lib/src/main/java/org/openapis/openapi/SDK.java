@@ -140,7 +140,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PlayByPlayResponse playByPlay(org.openapis.openapi.models.operations.PlayByPlayRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlayByPlayPathParams.class, baseUrl, "/{format}/PlayByPlay/{gameid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlayByPlayRequest.class, baseUrl, "/{format}/PlayByPlay/{gameid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -179,7 +179,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PlayByPlayDeltaResponse playByPlayDelta(org.openapis.openapi.models.operations.PlayByPlayDeltaRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlayByPlayDeltaPathParams.class, baseUrl, "/{format}/PlayByPlayDelta/{date}/{minutes}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlayByPlayDeltaRequest.class, baseUrl, "/{format}/PlayByPlayDelta/{date}/{minutes}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

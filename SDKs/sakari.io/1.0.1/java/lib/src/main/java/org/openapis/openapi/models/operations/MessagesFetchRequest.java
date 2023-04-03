@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MessagesFetchRequest {
-    
-    public MessagesFetchPathParams pathParams;
-    public MessagesFetchRequest withPathParams(MessagesFetchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public MessagesFetchRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public MessagesFetchSecurity security;
-    public MessagesFetchRequest withSecurity(MessagesFetchSecurity security) {
-        this.security = security;
+    /**
+     * ID of message to return
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=messageId")
+    public String messageId;
+    public MessagesFetchRequest withMessageId(String messageId) {
+        this.messageId = messageId;
         return this;
     }
     

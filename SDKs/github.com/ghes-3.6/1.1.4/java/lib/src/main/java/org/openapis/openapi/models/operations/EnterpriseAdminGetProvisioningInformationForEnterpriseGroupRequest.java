@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminGetProvisioningInformationForEnterpriseGroupRequest {
-    
-    public EnterpriseAdminGetProvisioningInformationForEnterpriseGroupPathParams pathParams;
-    public EnterpriseAdminGetProvisioningInformationForEnterpriseGroupRequest withPathParams(EnterpriseAdminGetProvisioningInformationForEnterpriseGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Excludes the specified attribute from being returned in the results. Using this parameter can speed up response time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludedAttributes")
+    public String excludedAttributes;
+    public EnterpriseAdminGetProvisioningInformationForEnterpriseGroupRequest withExcludedAttributes(String excludedAttributes) {
+        this.excludedAttributes = excludedAttributes;
         return this;
     }
     
-    
-    public EnterpriseAdminGetProvisioningInformationForEnterpriseGroupQueryParams queryParams;
-    public EnterpriseAdminGetProvisioningInformationForEnterpriseGroupRequest withQueryParams(EnterpriseAdminGetProvisioningInformationForEnterpriseGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A unique identifier of the SCIM group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scim_group_id")
+    public String scimGroupId;
+    public EnterpriseAdminGetProvisioningInformationForEnterpriseGroupRequest withScimGroupId(String scimGroupId) {
+        this.scimGroupId = scimGroupId;
         return this;
     }
     

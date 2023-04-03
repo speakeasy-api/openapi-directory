@@ -4,27 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveTeamdrivesGetRequest {
-    
-    public DriveTeamdrivesGetPathParams pathParams;
-    public DriveTeamdrivesGetRequest withPathParams(DriveTeamdrivesGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DriveTeamdrivesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public DriveTeamdrivesGetQueryParams queryParams;
-    public DriveTeamdrivesGetRequest withQueryParams(DriveTeamdrivesGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DriveTeamdrivesGetRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DriveTeamdrivesGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
     
-    public DriveTeamdrivesGetSecurity security;
-    public DriveTeamdrivesGetRequest withSecurity(DriveTeamdrivesGetSecurity security) {
-        this.security = security;
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DriveTeamdrivesGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DriveTeamdrivesGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DriveTeamdrivesGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The ID of the Team Drive
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teamDriveId")
+    public String teamDriveId;
+    public DriveTeamdrivesGetRequest withTeamDriveId(String teamDriveId) {
+        this.teamDriveId = teamDriveId;
+        return this;
+    }
+    
+    /**
+     * Issue the request as a domain administrator; if set to true, then the requester will be granted access if they are an administrator of the domain to which the Team Drive belongs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useDomainAdminAccess")
+    public Boolean useDomainAdminAccess;
+    public DriveTeamdrivesGetRequest withUseDomainAdminAccess(Boolean useDomainAdminAccess) {
+        this.useDomainAdminAccess = useDomainAdminAccess;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public DriveTeamdrivesGetRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

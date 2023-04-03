@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MigrationsStartForOrgRequest {
-    
-    public MigrationsStartForOrgPathParams pathParams;
-    public MigrationsStartForOrgRequest withPathParams(MigrationsStartForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public MigrationsStartForOrgRequestBody requestBody;
+    public MigrationsStartForOrgRequest withRequestBody(MigrationsStartForOrgRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public MigrationsStartForOrgRequestBody request;
-    public MigrationsStartForOrgRequest withRequest(MigrationsStartForOrgRequestBody request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public MigrationsStartForOrgRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

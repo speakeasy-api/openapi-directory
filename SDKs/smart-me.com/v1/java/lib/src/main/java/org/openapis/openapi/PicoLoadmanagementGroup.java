@@ -37,7 +37,7 @@ public class PicoLoadmanagementGroup {
      */
     public org.openapis.openapi.models.operations.PicoLoadmanagementGroupGetResponse picoLoadmanagementGroupGet(org.openapis.openapi.models.operations.PicoLoadmanagementGroupGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PicoLoadmanagementGroupGetPathParams.class, baseUrl, "/api/pico/loadmanagementgroup/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PicoLoadmanagementGroupGetRequest.class, baseUrl, "/api/pico/loadmanagementgroup/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

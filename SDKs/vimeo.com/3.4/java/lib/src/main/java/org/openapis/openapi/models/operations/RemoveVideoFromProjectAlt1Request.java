@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveVideoFromProjectAlt1Request {
-    
-    public RemoveVideoFromProjectAlt1PathParams pathParams;
-    public RemoveVideoFromProjectAlt1Request withPathParams(RemoveVideoFromProjectAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the project.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Double projectId;
+    public RemoveVideoFromProjectAlt1Request withProjectId(Double projectId) {
+        this.projectId = projectId;
         return this;
     }
     
-    
-    public RemoveVideoFromProjectAlt1Security security;
-    public RemoveVideoFromProjectAlt1Request withSecurity(RemoveVideoFromProjectAlt1Security security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public RemoveVideoFromProjectAlt1Request withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

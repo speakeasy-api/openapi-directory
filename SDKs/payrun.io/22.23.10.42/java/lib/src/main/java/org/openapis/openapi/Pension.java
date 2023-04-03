@@ -39,13 +39,13 @@ public class Pension {
      */
     public org.openapis.openapi.models.operations.DeletePensionResponse deletePension(org.openapis.openapi.models.operations.DeletePensionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePensionPathParams.class, baseUrl, "/Employer/{EmployerId}/Pension/{PensionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePensionRequest.class, baseUrl, "/Employer/{EmployerId}/Pension/{PensionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -88,13 +88,13 @@ public class Pension {
      */
     public org.openapis.openapi.models.operations.DeletePensionRevisionResponse deletePensionRevision(org.openapis.openapi.models.operations.DeletePensionRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePensionRevisionPathParams.class, baseUrl, "/Employer/{EmployerId}/Pension/{PensionId}/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePensionRevisionRequest.class, baseUrl, "/Employer/{EmployerId}/Pension/{PensionId}/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -137,13 +137,13 @@ public class Pension {
      */
     public org.openapis.openapi.models.operations.DeletePensionRevisionByNumberResponse deletePensionRevisionByNumber(org.openapis.openapi.models.operations.DeletePensionRevisionByNumberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePensionRevisionByNumberPathParams.class, baseUrl, "/Employer/{EmployerId}/Pension/{PensionId}/Revision/{RevisionNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePensionRevisionByNumberRequest.class, baseUrl, "/Employer/{EmployerId}/Pension/{PensionId}/Revision/{RevisionNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -186,13 +186,13 @@ public class Pension {
      */
     public org.openapis.openapi.models.operations.GetPensionByEffectiveDateResponse getPensionByEffectiveDate(org.openapis.openapi.models.operations.GetPensionByEffectiveDateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPensionByEffectiveDatePathParams.class, baseUrl, "/Employer/{EmployerId}/Pension/{PensionId}/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPensionByEffectiveDateRequest.class, baseUrl, "/Employer/{EmployerId}/Pension/{PensionId}/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -241,13 +241,13 @@ public class Pension {
      */
     public org.openapis.openapi.models.operations.GetPensionFromEmployerResponse getPensionFromEmployer(org.openapis.openapi.models.operations.GetPensionFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPensionFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/Pension/{PensionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPensionFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/Pension/{PensionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -296,13 +296,13 @@ public class Pension {
      */
     public org.openapis.openapi.models.operations.GetPensionRevisionByNumberResponse getPensionRevisionByNumber(org.openapis.openapi.models.operations.GetPensionRevisionByNumberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPensionRevisionByNumberPathParams.class, baseUrl, "/Employer/{EmployerId}/Pension/{PensionId}/Revision/{RevisionNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPensionRevisionByNumberRequest.class, baseUrl, "/Employer/{EmployerId}/Pension/{PensionId}/Revision/{RevisionNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -351,13 +351,13 @@ public class Pension {
      */
     public org.openapis.openapi.models.operations.GetPensionRevisionsResponse getPensionRevisions(org.openapis.openapi.models.operations.GetPensionRevisionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPensionRevisionsPathParams.class, baseUrl, "/Employer/{EmployerId}/Pension/{PensionId}/Revisions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPensionRevisionsRequest.class, baseUrl, "/Employer/{EmployerId}/Pension/{PensionId}/Revisions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -406,13 +406,13 @@ public class Pension {
      */
     public org.openapis.openapi.models.operations.GetPensionsByEffectiveDateResponse getPensionsByEffectiveDate(org.openapis.openapi.models.operations.GetPensionsByEffectiveDateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPensionsByEffectiveDatePathParams.class, baseUrl, "/Employer/{EmployerId}/Pensions/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPensionsByEffectiveDateRequest.class, baseUrl, "/Employer/{EmployerId}/Pensions/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -461,13 +461,13 @@ public class Pension {
      */
     public org.openapis.openapi.models.operations.GetPensionsFromEmployerResponse getPensionsFromEmployer(org.openapis.openapi.models.operations.GetPensionsFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPensionsFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/Pensions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPensionsFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/Pensions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -516,18 +516,18 @@ public class Pension {
      */
     public org.openapis.openapi.models.operations.PatchPensionResponse patchPension(org.openapis.openapi.models.operations.PatchPensionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchPensionPathParams.class, baseUrl, "/Employer/{EmployerId}/Pension/{PensionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchPensionRequest.class, baseUrl, "/Employer/{EmployerId}/Pension/{PensionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pension", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -576,18 +576,18 @@ public class Pension {
      */
     public org.openapis.openapi.models.operations.PostPensionIntoEmployerResponse postPensionIntoEmployer(org.openapis.openapi.models.operations.PostPensionIntoEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostPensionIntoEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/Pensions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostPensionIntoEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/Pensions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pension", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -636,18 +636,18 @@ public class Pension {
      */
     public org.openapis.openapi.models.operations.PutPensionIntoEmployerResponse putPensionIntoEmployer(org.openapis.openapi.models.operations.PutPensionIntoEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPensionIntoEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/Pension/{PensionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPensionIntoEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/Pension/{PensionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pension", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

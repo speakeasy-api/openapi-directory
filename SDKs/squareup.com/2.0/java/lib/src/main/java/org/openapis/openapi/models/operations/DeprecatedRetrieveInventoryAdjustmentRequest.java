@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeprecatedRetrieveInventoryAdjustmentRequest {
-    
-    public DeprecatedRetrieveInventoryAdjustmentPathParams pathParams;
-    public DeprecatedRetrieveInventoryAdjustmentRequest withPathParams(DeprecatedRetrieveInventoryAdjustmentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeprecatedRetrieveInventoryAdjustmentSecurity security;
-    public DeprecatedRetrieveInventoryAdjustmentRequest withSecurity(DeprecatedRetrieveInventoryAdjustmentSecurity security) {
-        this.security = security;
+    /**
+     * ID of the [InventoryAdjustment](https://developer.squareup.com/reference/square_2021-08-18/objects/InventoryAdjustment) to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=adjustment_id")
+    public String adjustmentId;
+    public DeprecatedRetrieveInventoryAdjustmentRequest withAdjustmentId(String adjustmentId) {
+        this.adjustmentId = adjustmentId;
         return this;
     }
     

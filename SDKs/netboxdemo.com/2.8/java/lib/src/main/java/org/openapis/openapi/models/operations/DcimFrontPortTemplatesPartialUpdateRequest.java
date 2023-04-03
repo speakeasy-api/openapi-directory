@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimFrontPortTemplatesPartialUpdateRequest {
-    
-    public DcimFrontPortTemplatesPartialUpdatePathParams pathParams;
-    public DcimFrontPortTemplatesPartialUpdateRequest withPathParams(DcimFrontPortTemplatesPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableFrontPortTemplateInput writableFrontPortTemplateInput;
+    public DcimFrontPortTemplatesPartialUpdateRequest withWritableFrontPortTemplateInput(org.openapis.openapi.models.shared.WritableFrontPortTemplateInput writableFrontPortTemplateInput) {
+        this.writableFrontPortTemplateInput = writableFrontPortTemplateInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableFrontPortTemplateInput request;
-    public DcimFrontPortTemplatesPartialUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableFrontPortTemplateInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this front port template.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimFrontPortTemplatesPartialUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

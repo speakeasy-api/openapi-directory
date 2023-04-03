@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAccessTokenRequest {
-    
-    public CreateAccessTokenPathParams pathParams;
-    public CreateAccessTokenRequest withPathParams(CreateAccessTokenPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateAccessTokenCreateAccessTokenRequest request;
-    public CreateAccessTokenRequest withRequest(CreateAccessTokenCreateAccessTokenRequest request) {
-        this.request = request;
+    public CreateAccessTokenCreateAccessTokenRequest requestBody;
+    public CreateAccessTokenRequest withRequestBody(CreateAccessTokenCreateAccessTokenRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateAccessTokenSecurity security;
-    public CreateAccessTokenRequest withSecurity(CreateAccessTokenSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateAccessTokenRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique SID identifier of the Service.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateAccessTokenRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

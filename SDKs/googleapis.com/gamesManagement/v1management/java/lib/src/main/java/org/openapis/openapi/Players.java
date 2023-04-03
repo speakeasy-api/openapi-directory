@@ -30,25 +30,26 @@ public class Players {
     /**
      * Hide the given player's leaderboard scores from the given application. This method is only available to user accounts for your developer console.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesManagementPlayersHideResponse gamesManagementPlayersHide(org.openapis.openapi.models.operations.GamesManagementPlayersHideRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesManagementPlayersHideResponse gamesManagementPlayersHide(org.openapis.openapi.models.operations.GamesManagementPlayersHideRequest request, org.openapis.openapi.models.operations.GamesManagementPlayersHideSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesManagementPlayersHidePathParams.class, baseUrl, "/games/v1management/applications/{applicationId}/players/hidden/{playerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesManagementPlayersHideRequest.class, baseUrl, "/games/v1management/applications/{applicationId}/players/hidden/{playerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementPlayersHideQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementPlayersHideRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -69,25 +70,26 @@ public class Players {
     /**
      * Unhide the given player's leaderboard scores from the given application. This method is only available to user accounts for your developer console.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesManagementPlayersUnhideResponse gamesManagementPlayersUnhide(org.openapis.openapi.models.operations.GamesManagementPlayersUnhideRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesManagementPlayersUnhideResponse gamesManagementPlayersUnhide(org.openapis.openapi.models.operations.GamesManagementPlayersUnhideRequest request, org.openapis.openapi.models.operations.GamesManagementPlayersUnhideSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesManagementPlayersUnhidePathParams.class, baseUrl, "/games/v1management/applications/{applicationId}/players/hidden/{playerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesManagementPlayersUnhideRequest.class, baseUrl, "/games/v1management/applications/{applicationId}/players/hidden/{playerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementPlayersUnhideQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementPlayersUnhideRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

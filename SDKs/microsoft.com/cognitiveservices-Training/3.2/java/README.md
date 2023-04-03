@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetDomainPathParams;
 import org.openapis.openapi.models.operations.GetDomainRequest;
 import org.openapis.openapi.models.operations.GetDomainResponse;
 
@@ -26,17 +25,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apimKey = new SchemeApimKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apimKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetDomainRequest req = new GetDomainRequest() {{
-                pathParams = new GetDomainPathParams() {{
-                    domainId = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
-                }};
-            }};            
+                domainId = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
+            }}            
 
             GetDomainResponse res = sdk.domainsApi.getDomain(req);
 
@@ -50,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### domainsApi

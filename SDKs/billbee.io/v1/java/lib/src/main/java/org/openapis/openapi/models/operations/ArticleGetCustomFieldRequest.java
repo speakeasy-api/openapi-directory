@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleGetCustomFieldRequest {
-    
-    public ArticleGetCustomFieldPathParams pathParams;
-    public ArticleGetCustomFieldRequest withPathParams(ArticleGetCustomFieldPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the custom field to query
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ArticleGetCustomFieldRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

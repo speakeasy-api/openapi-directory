@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostEmailEnrichRequest {
-    
-    public PostEmailEnrichHeaders headers;
-    public PostEmailEnrichRequest withHeaders(PostEmailEnrichHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostEmailEnrichRequestBody requestBody;
+    public PostEmailEnrichRequest withRequestBody(PostEmailEnrichRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostEmailEnrichRequestBody request;
-    public PostEmailEnrichRequest withRequest(PostEmailEnrichRequestBody request) {
-        this.request = request;
+    /**
+     * e.g. Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=galaxy-ap-name")
+    public String galaxyApName;
+    public PostEmailEnrichRequest withGalaxyApName(String galaxyApName) {
+        this.galaxyApName = galaxyApName;
+        return this;
+    }
+    
+    /**
+     * e.g. Secret
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=galaxy-ap-password")
+    public String galaxyApPassword;
+    public PostEmailEnrichRequest withGalaxyApPassword(String galaxyApPassword) {
+        this.galaxyApPassword = galaxyApPassword;
+        return this;
+    }
+    
+    /**
+     * e.g. DevAPIEmailID
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=galaxy-search-type")
+    public String galaxySearchType;
+    public PostEmailEnrichRequest withGalaxySearchType(String galaxySearchType) {
+        this.galaxySearchType = galaxySearchType;
         return this;
     }
     

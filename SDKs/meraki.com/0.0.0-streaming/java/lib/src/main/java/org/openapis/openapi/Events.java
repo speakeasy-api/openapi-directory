@@ -42,13 +42,13 @@ public class Events {
      */
     public org.openapis.openapi.models.operations.GetNetworkEventsResponse getNetworkEvents(org.openapis.openapi.models.operations.GetNetworkEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkEventsPathParams.class, baseUrl, "/networks/{networkId}/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkEventsRequest.class, baseUrl, "/networks/{networkId}/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -90,7 +90,7 @@ public class Events {
      */
     public org.openapis.openapi.models.operations.GetNetworkEventsEventTypesResponse getNetworkEventsEventTypes(org.openapis.openapi.models.operations.GetNetworkEventsEventTypesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkEventsEventTypesPathParams.class, baseUrl, "/networks/{networkId}/events/eventTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkEventsEventTypesRequest.class, baseUrl, "/networks/{networkId}/events/eventTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

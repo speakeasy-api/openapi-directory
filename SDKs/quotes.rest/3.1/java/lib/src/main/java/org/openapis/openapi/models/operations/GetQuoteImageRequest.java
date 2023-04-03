@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteImageRequest {
-    
-    public GetQuoteImageQueryParams queryParams;
-    public GetQuoteImageRequest withQueryParams(GetQuoteImageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Should the response be a direct file download of the image or a base64 encoded image file wrapped in json?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=binary")
+    public Boolean binary;
+    public GetQuoteImageRequest withBinary(Boolean binary) {
+        this.binary = binary;
         return this;
     }
     
-    
-    public GetQuoteImageSecurity security;
-    public GetQuoteImageRequest withSecurity(GetQuoteImageSecurity security) {
-        this.security = security;
+    /**
+     * Quote Image id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetQuoteImageRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

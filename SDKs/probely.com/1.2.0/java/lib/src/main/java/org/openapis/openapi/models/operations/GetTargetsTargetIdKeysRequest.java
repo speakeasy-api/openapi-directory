@@ -4,20 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTargetsTargetIdKeysRequest {
-    
-    public GetTargetsTargetIdKeysPathParams pathParams;
-    public GetTargetsTargetIdKeysRequest withPathParams(GetTargetsTargetIdKeysPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Number of results to return per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
+    public Long length;
+    public GetTargetsTargetIdKeysRequest withLength(Long length) {
+        this.length = length;
         return this;
     }
     
+    /**
+     * Which field to use when ordering the results, prefix with `-` to invert ordering.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering")
+    public String ordering;
+    public GetTargetsTargetIdKeysRequest withOrdering(String ordering) {
+        this.ordering = ordering;
+        return this;
+    }
     
-    public GetTargetsTargetIdKeysQueryParams queryParams;
-    public GetTargetsTargetIdKeysRequest withQueryParams(GetTargetsTargetIdKeysQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number within the paginated result set
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetTargetsTargetIdKeysRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Search term
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetTargetsTargetIdKeysRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * Target id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_id")
+    public String targetId;
+    public GetTargetsTargetIdKeysRequest withTargetId(String targetId) {
+        this.targetId = targetId;
         return this;
     }
     

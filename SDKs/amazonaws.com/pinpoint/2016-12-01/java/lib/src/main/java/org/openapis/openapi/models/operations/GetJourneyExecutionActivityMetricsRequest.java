@@ -4,27 +4,105 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetJourneyExecutionActivityMetricsRequest {
-    
-    public GetJourneyExecutionActivityMetricsPathParams pathParams;
-    public GetJourneyExecutionActivityMetricsRequest withPathParams(GetJourneyExecutionActivityMetricsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetJourneyExecutionActivityMetricsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public GetJourneyExecutionActivityMetricsQueryParams queryParams;
-    public GetJourneyExecutionActivityMetricsRequest withQueryParams(GetJourneyExecutionActivityMetricsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetJourneyExecutionActivityMetricsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetJourneyExecutionActivityMetricsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public GetJourneyExecutionActivityMetricsHeaders headers;
-    public GetJourneyExecutionActivityMetricsRequest withHeaders(GetJourneyExecutionActivityMetricsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetJourneyExecutionActivityMetricsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetJourneyExecutionActivityMetricsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetJourneyExecutionActivityMetricsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetJourneyExecutionActivityMetricsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The unique identifier for the application. This identifier is displayed as the &lt;b&gt;Project ID&lt;/b&gt; on the Amazon Pinpoint console.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application-id")
+    public String applicationId;
+    public GetJourneyExecutionActivityMetricsRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
+    
+    /**
+     * The unique identifier for the journey activity.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=journey-activity-id")
+    public String journeyActivityId;
+    public GetJourneyExecutionActivityMetricsRequest withJourneyActivityId(String journeyActivityId) {
+        this.journeyActivityId = journeyActivityId;
+        return this;
+    }
+    
+    /**
+     * The unique identifier for the journey.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=journey-id")
+    public String journeyId;
+    public GetJourneyExecutionActivityMetricsRequest withJourneyId(String journeyId) {
+        this.journeyId = journeyId;
+        return this;
+    }
+    
+    /**
+     * The  string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next-token")
+    public String nextToken;
+    public GetJourneyExecutionActivityMetricsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The maximum number of items to include in each page of a paginated response. This parameter is not supported for application, campaign, and journey metrics.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page-size")
+    public String pageSize;
+    public GetJourneyExecutionActivityMetricsRequest withPageSize(String pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

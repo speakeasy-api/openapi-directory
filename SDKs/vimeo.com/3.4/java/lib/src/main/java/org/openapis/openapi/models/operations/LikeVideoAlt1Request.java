@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LikeVideoAlt1Request {
-    
-    public LikeVideoAlt1PathParams pathParams;
-    public LikeVideoAlt1Request withPathParams(LikeVideoAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public LikeVideoAlt1Security security;
-    public LikeVideoAlt1Request withSecurity(LikeVideoAlt1Security security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public LikeVideoAlt1Request withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

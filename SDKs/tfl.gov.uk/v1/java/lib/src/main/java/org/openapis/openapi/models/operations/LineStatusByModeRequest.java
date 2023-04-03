@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineStatusByModeRequest {
-    
-    public LineStatusByModePathParams pathParams;
-    public LineStatusByModeRequest withPathParams(LineStatusByModePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Include details of the disruptions that are causing the line status including the affected stops and routes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=detail")
+    public Boolean detail;
+    public LineStatusByModeRequest withDetail(Boolean detail) {
+        this.detail = detail;
         return this;
     }
     
+    /**
+     * A comma-separated list of modes to filter by. e.g. tube,dlr
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modes")
+    public String[] modes;
+    public LineStatusByModeRequest withModes(String[] modes) {
+        this.modes = modes;
+        return this;
+    }
     
-    public LineStatusByModeQueryParams queryParams;
-    public LineStatusByModeRequest withQueryParams(LineStatusByModeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If specified, ensures that only those line status(es) are returned within the lines that have disruptions with the matching severity level.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=severityLevel")
+    public String severityLevel;
+    public LineStatusByModeRequest withSeverityLevel(String severityLevel) {
+        this.severityLevel = severityLevel;
         return this;
     }
     

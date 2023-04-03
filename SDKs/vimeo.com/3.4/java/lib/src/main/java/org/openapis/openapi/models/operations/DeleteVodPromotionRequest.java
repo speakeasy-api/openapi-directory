@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteVodPromotionRequest {
-    
-    public DeleteVodPromotionPathParams pathParams;
-    public DeleteVodPromotionRequest withPathParams(DeleteVodPromotionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public DeleteVodPromotionRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
         return this;
     }
     
-    
-    public DeleteVodPromotionSecurity security;
-    public DeleteVodPromotionRequest withSecurity(DeleteVodPromotionSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the promotion.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=promotion_id")
+    public Double promotionId;
+    public DeleteVodPromotionRequest withPromotionId(Double promotionId) {
+        this.promotionId = promotionId;
         return this;
     }
     

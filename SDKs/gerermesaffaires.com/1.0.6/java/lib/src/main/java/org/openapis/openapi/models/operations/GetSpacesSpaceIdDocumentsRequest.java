@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdDocumentsRequest {
-    
-    public GetSpacesSpaceIdDocumentsPathParams pathParams;
-    public GetSpacesSpaceIdDocumentsRequest withPathParams(GetSpacesSpaceIdDocumentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * class of the document to find
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Class")
+    public String class_;
+    public GetSpacesSpaceIdDocumentsRequest withClass(String class_) {
+        this.class_ = class_;
         return this;
     }
     
+    /**
+     * Text to find
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FullText")
+    public String fullText;
+    public GetSpacesSpaceIdDocumentsRequest withFullText(String fullText) {
+        this.fullText = fullText;
+        return this;
+    }
     
-    public GetSpacesSpaceIdDocumentsQueryParams queryParams;
-    public GetSpacesSpaceIdDocumentsRequest withQueryParams(GetSpacesSpaceIdDocumentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * index range of the results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Range")
+    public String range;
+    public GetSpacesSpaceIdDocumentsRequest withRange(String range) {
+        this.range = range;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdDocumentsRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

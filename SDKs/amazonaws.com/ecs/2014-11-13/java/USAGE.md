@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateCapacityProviderXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CreateCapacityProviderHeaders;
 import org.openapis.openapi.models.operations.CreateCapacityProviderRequest;
 import org.openapis.openapi.models.operations.CreateCapacityProviderResponse;
 import org.openapis.openapi.models.shared.CreateCapacityProviderRequest;
@@ -20,44 +19,44 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateCapacityProviderRequest req = new CreateCapacityProviderRequest() {{
-                headers = new CreateCapacityProviderHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AmazonEC2ContainerServiceV20141113.CreateCapacityProvider";
-                }};
-                request = new CreateCapacityProviderRequest() {{
+                createCapacityProviderRequest = new CreateCapacityProviderRequest() {{
                     autoScalingGroupProvider = new AutoScalingGroupProvider() {{
-                        autoScalingGroupArn = "illum";
+                        autoScalingGroupArn = "corrupti";
                         managedScaling = new ManagedScaling() {{
-                            instanceWarmupPeriod = 423655;
-                            maximumScalingStepSize = 623564;
-                            minimumScalingStepSize = 645894;
-                            status = "ENABLED";
-                            targetCapacity = 437587;
+                            instanceWarmupPeriod = 592845;
+                            maximumScalingStepSize = 715190;
+                            minimumScalingStepSize = 844266;
+                            status = "DISABLED";
+                            targetCapacity = 857946;
                         }};
-                        managedTerminationProtection = "ENABLED";
+                        managedTerminationProtection = "DISABLED";
                     }};
-                    name = "debitis";
+                    name = "illum";
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "delectus";
-                            value = "tempora";
+                            key = "error";
+                            value = "deserunt";
+                        }}),
+                        add(new Tag() {{
+                            key = "suscipit";
+                            value = "iure";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "magnam";
+                xAmzContentSha256 = "debitis";
+                xAmzCredential = "ipsa";
+                xAmzDate = "delectus";
+                xAmzSecurityToken = "tempora";
+                xAmzSignature = "suscipit";
+                xAmzSignedHeaders = "molestiae";
+                xAmzTarget = "AmazonEC2ContainerServiceV20141113.CreateCapacityProvider";
+            }}            
 
             CreateCapacityProviderResponse res = sdk.createCapacityProvider(req);
 

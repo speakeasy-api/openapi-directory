@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupCoverageRequest {
-    
-    public GetGroupCoveragePathParams pathParams;
-    public GetGroupCoverageRequest withPathParams(GetGroupCoveragePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the group coverage in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_coverage_id")
+    public String groupCoverageId;
+    public GetGroupCoverageRequest withGroupCoverageId(String groupCoverageId) {
+        this.groupCoverageId = groupCoverageId;
         return this;
     }
     

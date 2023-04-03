@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodeScanningGetCodeqlDatabaseRequest {
+    /**
+     * The language of the CodeQL database.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=language")
+    public String language;
+    public CodeScanningGetCodeqlDatabaseRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
     
-    public CodeScanningGetCodeqlDatabasePathParams pathParams;
-    public CodeScanningGetCodeqlDatabaseRequest withPathParams(CodeScanningGetCodeqlDatabasePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public CodeScanningGetCodeqlDatabaseRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public CodeScanningGetCodeqlDatabaseRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

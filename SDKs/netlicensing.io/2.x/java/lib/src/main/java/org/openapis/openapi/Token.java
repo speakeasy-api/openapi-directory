@@ -38,10 +38,11 @@ public class Token {
      * Create token
      * Create token by 'tokenType' and additional token parameters
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateTokenResponse createToken(org.openapis.openapi.models.operations.CreateTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateTokenResponse createToken(org.openapis.openapi.models.operations.CreateTokenRequestBody request, org.openapis.openapi.models.operations.CreateTokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/token");
         
@@ -55,7 +56,7 @@ public class Token {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -90,19 +91,20 @@ public class Token {
      * Delete token
      * Delete a token by 'number'
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteTokenResponse deleteToken(org.openapis.openapi.models.operations.DeleteTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteTokenResponse deleteToken(org.openapis.openapi.models.operations.DeleteTokenRequest request, org.openapis.openapi.models.operations.DeleteTokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTokenPathParams.class, baseUrl, "/token/{tokenNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTokenRequest.class, baseUrl, "/token/{tokenNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -137,19 +139,20 @@ public class Token {
      * Get token
      * Return a token by 'tokenNumber'
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTokenResponse getToken(org.openapis.openapi.models.operations.GetTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTokenResponse getToken(org.openapis.openapi.models.operations.GetTokenRequest request, org.openapis.openapi.models.operations.GetTokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTokenPathParams.class, baseUrl, "/token/{tokenNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTokenRequest.class, baseUrl, "/token/{tokenNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -183,11 +186,10 @@ public class Token {
     /**
      * List Tokens
      * Return a list of all tokens for the current Vendor
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListTokensResponse listTokens(org.openapis.openapi.models.operations.ListTokensRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListTokensResponse listTokens() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/token");
         
@@ -196,8 +198,7 @@ public class Token {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

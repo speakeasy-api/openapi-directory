@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgGetTeamRequest {
-    
-    public OrgGetTeamPathParams pathParams;
-    public OrgGetTeamRequest withPathParams(OrgGetTeamPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of the team to get
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrgGetTeamRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateProjectNoteUpdateRequest {
-    
-    public PrivateProjectNoteUpdatePathParams pathParams;
-    public PrivateProjectNoteUpdateRequest withPathParams(PrivateProjectNoteUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Note message
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProjectNoteCreate request;
-    public PrivateProjectNoteUpdateRequest withRequest(org.openapis.openapi.models.shared.ProjectNoteCreate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ProjectNoteCreate projectNoteCreate;
+    public PrivateProjectNoteUpdateRequest withProjectNoteCreate(org.openapis.openapi.models.shared.ProjectNoteCreate projectNoteCreate) {
+        this.projectNoteCreate = projectNoteCreate;
         return this;
     }
     
+    /**
+     * Note unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=note_id")
+    public Long noteId;
+    public PrivateProjectNoteUpdateRequest withNoteId(Long noteId) {
+        this.noteId = noteId;
+        return this;
+    }
     
-    public PrivateProjectNoteUpdateSecurity security;
-    public PrivateProjectNoteUpdateRequest withSecurity(PrivateProjectNoteUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Project unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Long projectId;
+    public PrivateProjectNoteUpdateRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

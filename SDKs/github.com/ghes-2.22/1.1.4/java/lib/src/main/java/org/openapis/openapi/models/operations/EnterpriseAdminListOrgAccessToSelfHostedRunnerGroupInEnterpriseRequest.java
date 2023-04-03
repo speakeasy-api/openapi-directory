@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest {
-    
-    public EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams pathParams;
-    public EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withPathParams(EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseQueryParams queryParams;
-    public EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withQueryParams(EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the self-hosted runner group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_group_id")
+    public Long runnerGroupId;
+    public EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withRunnerGroupId(Long runnerGroupId) {
+        this.runnerGroupId = runnerGroupId;
         return this;
     }
     

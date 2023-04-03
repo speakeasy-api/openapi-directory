@@ -4,27 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDomainStatisticsReportRequest {
-    
-    public GetDomainStatisticsReportPathParams pathParams;
-    public GetDomainStatisticsReportRequest withPathParams(GetDomainStatisticsReportPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The domain that you want to obtain deliverability metrics for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Domain")
+    public String domain;
+    public GetDomainStatisticsReportRequest withDomain(String domain) {
+        this.domain = domain;
         return this;
     }
     
-    
-    public GetDomainStatisticsReportQueryParams queryParams;
-    public GetDomainStatisticsReportRequest withQueryParams(GetDomainStatisticsReportQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The last day (in Unix time) that you want to obtain domain deliverability metrics for. The &lt;code&gt;EndDate&lt;/code&gt; that you specify has to be less than or equal to 30 days after the &lt;code&gt;StartDate&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndDate")
+    public OffsetDateTime endDate;
+    public GetDomainStatisticsReportRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
         return this;
     }
     
+    /**
+     * The first day (in Unix time) that you want to obtain domain deliverability metrics for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartDate")
+    public OffsetDateTime startDate;
+    public GetDomainStatisticsReportRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
+        return this;
+    }
     
-    public GetDomainStatisticsReportHeaders headers;
-    public GetDomainStatisticsReportRequest withHeaders(GetDomainStatisticsReportHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetDomainStatisticsReportRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetDomainStatisticsReportRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetDomainStatisticsReportRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetDomainStatisticsReportRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetDomainStatisticsReportRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetDomainStatisticsReportRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetDomainStatisticsReportRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

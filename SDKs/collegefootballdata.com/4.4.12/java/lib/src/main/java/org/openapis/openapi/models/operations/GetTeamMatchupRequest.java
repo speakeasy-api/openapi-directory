@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamMatchupRequest {
+    /**
+     * Maximum year
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxYear")
+    public Long maxYear;
+    public GetTeamMatchupRequest withMaxYear(Long maxYear) {
+        this.maxYear = maxYear;
+        return this;
+    }
     
-    public GetTeamMatchupQueryParams queryParams;
-    public GetTeamMatchupRequest withQueryParams(GetTeamMatchupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Minimum year
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minYear")
+    public Long minYear;
+    public GetTeamMatchupRequest withMinYear(Long minYear) {
+        this.minYear = minYear;
+        return this;
+    }
+    
+    /**
+     * First team
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team1")
+    public String team1;
+    public GetTeamMatchupRequest withTeam1(String team1) {
+        this.team1 = team1;
+        return this;
+    }
+    
+    /**
+     * Second team
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team2")
+    public String team2;
+    public GetTeamMatchupRequest withTeam2(String team2) {
+        this.team2 = team2;
         return this;
     }
     

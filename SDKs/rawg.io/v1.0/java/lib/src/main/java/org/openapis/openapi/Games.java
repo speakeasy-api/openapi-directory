@@ -40,7 +40,7 @@ public class Games {
      */
     public org.openapis.openapi.models.operations.GamesAchievementsReadResponse gamesAchievementsRead(org.openapis.openapi.models.operations.GamesAchievementsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesAchievementsReadPathParams.class, baseUrl, "/games/{id}/achievements", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesAchievementsReadRequest.class, baseUrl, "/games/{id}/achievements", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -78,13 +78,13 @@ public class Games {
      */
     public org.openapis.openapi.models.operations.GamesAdditionsListResponse gamesAdditionsList(org.openapis.openapi.models.operations.GamesAdditionsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesAdditionsListPathParams.class, baseUrl, "/games/{game_pk}/additions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesAdditionsListRequest.class, baseUrl, "/games/{game_pk}/additions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesAdditionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesAdditionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -122,13 +122,13 @@ public class Games {
      */
     public org.openapis.openapi.models.operations.GamesDevelopmentTeamListResponse gamesDevelopmentTeamList(org.openapis.openapi.models.operations.GamesDevelopmentTeamListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesDevelopmentTeamListPathParams.class, baseUrl, "/games/{game_pk}/development-team", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesDevelopmentTeamListRequest.class, baseUrl, "/games/{game_pk}/development-team", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesDevelopmentTeamListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesDevelopmentTeamListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -166,13 +166,13 @@ public class Games {
      */
     public org.openapis.openapi.models.operations.GamesGameSeriesListResponse gamesGameSeriesList(org.openapis.openapi.models.operations.GamesGameSeriesListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesGameSeriesListPathParams.class, baseUrl, "/games/{game_pk}/game-series", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesGameSeriesListRequest.class, baseUrl, "/games/{game_pk}/game-series", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesGameSeriesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesGameSeriesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -216,7 +216,7 @@ public class Games {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -254,7 +254,7 @@ public class Games {
      */
     public org.openapis.openapi.models.operations.GamesMoviesReadResponse gamesMoviesRead(org.openapis.openapi.models.operations.GamesMoviesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesMoviesReadPathParams.class, baseUrl, "/games/{id}/movies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesMoviesReadRequest.class, baseUrl, "/games/{id}/movies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -292,13 +292,13 @@ public class Games {
      */
     public org.openapis.openapi.models.operations.GamesParentGamesListResponse gamesParentGamesList(org.openapis.openapi.models.operations.GamesParentGamesListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesParentGamesListPathParams.class, baseUrl, "/games/{game_pk}/parent-games", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesParentGamesListRequest.class, baseUrl, "/games/{game_pk}/parent-games", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesParentGamesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesParentGamesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -336,7 +336,7 @@ public class Games {
      */
     public org.openapis.openapi.models.operations.GamesReadResponse gamesRead(org.openapis.openapi.models.operations.GamesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesReadPathParams.class, baseUrl, "/games/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesReadRequest.class, baseUrl, "/games/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -374,7 +374,7 @@ public class Games {
      */
     public org.openapis.openapi.models.operations.GamesRedditReadResponse gamesRedditRead(org.openapis.openapi.models.operations.GamesRedditReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesRedditReadPathParams.class, baseUrl, "/games/{id}/reddit", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesRedditReadRequest.class, baseUrl, "/games/{id}/reddit", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -412,13 +412,13 @@ public class Games {
      */
     public org.openapis.openapi.models.operations.GamesScreenshotsListResponse gamesScreenshotsList(org.openapis.openapi.models.operations.GamesScreenshotsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesScreenshotsListPathParams.class, baseUrl, "/games/{game_pk}/screenshots", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesScreenshotsListRequest.class, baseUrl, "/games/{game_pk}/screenshots", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesScreenshotsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesScreenshotsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -456,13 +456,13 @@ public class Games {
      */
     public org.openapis.openapi.models.operations.GamesStoresListResponse gamesStoresList(org.openapis.openapi.models.operations.GamesStoresListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesStoresListPathParams.class, baseUrl, "/games/{game_pk}/stores", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesStoresListRequest.class, baseUrl, "/games/{game_pk}/stores", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesStoresListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesStoresListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -500,7 +500,7 @@ public class Games {
      */
     public org.openapis.openapi.models.operations.GamesSuggestedReadResponse gamesSuggestedRead(org.openapis.openapi.models.operations.GamesSuggestedReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesSuggestedReadPathParams.class, baseUrl, "/games/{id}/suggested", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesSuggestedReadRequest.class, baseUrl, "/games/{id}/suggested", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -538,7 +538,7 @@ public class Games {
      */
     public org.openapis.openapi.models.operations.GamesTwitchReadResponse gamesTwitchRead(org.openapis.openapi.models.operations.GamesTwitchReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesTwitchReadPathParams.class, baseUrl, "/games/{id}/twitch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesTwitchReadRequest.class, baseUrl, "/games/{id}/twitch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -576,7 +576,7 @@ public class Games {
      */
     public org.openapis.openapi.models.operations.GamesYoutubeReadResponse gamesYoutubeRead(org.openapis.openapi.models.operations.GamesYoutubeReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesYoutubeReadPathParams.class, baseUrl, "/games/{id}/youtube", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesYoutubeReadRequest.class, baseUrl, "/games/{id}/youtube", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

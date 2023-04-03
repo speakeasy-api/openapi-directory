@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SocialDeclineFriendRequestRequest {
-    
-    public SocialDeclineFriendRequestPathParams pathParams;
-    public SocialDeclineFriendRequestRequest withPathParams(SocialDeclineFriendRequestPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SocialDeclineFriendRequestSecurity security;
-    public SocialDeclineFriendRequestRequest withSecurity(SocialDeclineFriendRequestSecurity security) {
-        this.security = security;
+    /**
+     * The membership id of the user you wish to decline.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
+    public String membershipId;
+    public SocialDeclineFriendRequestRequest withMembershipId(String membershipId) {
+        this.membershipId = membershipId;
         return this;
     }
     

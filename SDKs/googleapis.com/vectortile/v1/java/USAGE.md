@@ -4,10 +4,8 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.VectortileTerraintilesGetPathParams;
 import org.openapis.openapi.models.operations.VectortileTerraintilesGetClientInfoPlatformEnum;
 import org.openapis.openapi.models.operations.VectortileTerraintilesGetTerrainFormatsEnum;
-import org.openapis.openapi.models.operations.VectortileTerraintilesGetQueryParams;
 import org.openapis.openapi.models.operations.VectortileTerraintilesGetRequest;
 import org.openapis.openapi.models.operations.VectortileTerraintilesGetResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -20,45 +18,41 @@ public class Application {
                 .build();
 
             VectortileTerraintilesGetRequest req = new VectortileTerraintilesGetRequest() {{
-                pathParams = new VectortileTerraintilesGetPathParams() {{
-                    name = "corrupti";
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                altitudePrecisionCentimeters = 844266;
+                callback = "unde";
+                clientInfoApiClient = "nulla";
+                clientInfoApplicationId = "corrupti";
+                clientInfoApplicationVersion = "illum";
+                clientInfoDeviceModel = "vel";
+                clientInfoOperatingSystem = "error";
+                clientInfoPlatform = "ANDROID";
+                clientInfoUserId = "suscipit";
+                enableModeledVolumes = false;
+                enablePoliticalFeatures = false;
+                enablePrivateRoads = false;
+                enableUnclippedBuildings = false;
+                fields = "iure";
+                key = "magnam";
+                languageCode = "debitis";
+                maxElevationResolutionCells = 56713;
+                minElevationResolutionCells = 963663;
+                name = "tempora";
+                oauthToken = "suscipit";
+                prettyPrint = false;
+                quotaUser = "molestiae";
+                regionCode = "minus";
+                terrainFormats = new org.openapis.openapi.models.operations.VectortileTerraintilesGetTerrainFormatsEnum[]{{
+                    add("FIRST_DERIVATIVE"),
+                    add("FIRST_DERIVATIVE"),
+                    add("FIRST_DERIVATIVE"),
+                    add("FIRST_DERIVATIVE"),
                 }};
-                queryParams = new VectortileTerraintilesGetQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    altitudePrecisionCentimeters = 602763;
-                    callback = "nulla";
-                    clientInfoApiClient = "corrupti";
-                    clientInfoApplicationId = "illum";
-                    clientInfoApplicationVersion = "vel";
-                    clientInfoDeviceModel = "error";
-                    clientInfoOperatingSystem = "deserunt";
-                    clientInfoPlatform = "WINDOWS";
-                    clientInfoUserId = "iure";
-                    enableModeledVolumes = false;
-                    enablePoliticalFeatures = false;
-                    enablePrivateRoads = false;
-                    enableUnclippedBuildings = false;
-                    fields = "magnam";
-                    key = "debitis";
-                    languageCode = "ipsa";
-                    maxElevationResolutionCells = 963663;
-                    minElevationResolutionCells = 272656;
-                    oauthToken = "suscipit";
-                    prettyPrint = false;
-                    quotaUser = "molestiae";
-                    regionCode = "minus";
-                    terrainFormats = new org.openapis.openapi.models.operations.VectortileTerraintilesGetTerrainFormatsEnum[]{{
-                        add("FIRST_DERIVATIVE"),
-                        add("FIRST_DERIVATIVE"),
-                        add("FIRST_DERIVATIVE"),
-                        add("FIRST_DERIVATIVE"),
-                    }};
-                    uploadType = "recusandae";
-                    uploadProtocol = "temporibus";
-                }};
-            }};            
+                uploadType = "recusandae";
+                uploadProtocol = "temporibus";
+            }}            
 
             VectortileTerraintilesGetResponse res = sdk.terraintiles.vectortileTerraintilesGet(req);
 

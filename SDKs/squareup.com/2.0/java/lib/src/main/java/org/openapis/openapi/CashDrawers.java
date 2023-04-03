@@ -34,25 +34,26 @@ public class CashDrawers {
      * ListCashDrawerShiftEvents
      * Provides a paginated list of events for a single cash drawer shift.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCashDrawerShiftEventsResponse listCashDrawerShiftEvents(org.openapis.openapi.models.operations.ListCashDrawerShiftEventsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListCashDrawerShiftEventsResponse listCashDrawerShiftEvents(org.openapis.openapi.models.operations.ListCashDrawerShiftEventsRequest request, org.openapis.openapi.models.operations.ListCashDrawerShiftEventsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListCashDrawerShiftEventsPathParams.class, baseUrl, "/v2/cash-drawers/shifts/{shift_id}/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListCashDrawerShiftEventsRequest.class, baseUrl, "/v2/cash-drawers/shifts/{shift_id}/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCashDrawerShiftEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCashDrawerShiftEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,10 +82,11 @@ public class CashDrawers {
      * Provides the details for all of the cash drawer shifts for a location
      * in a date range.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCashDrawerShiftsResponse listCashDrawerShifts(org.openapis.openapi.models.operations.ListCashDrawerShiftsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListCashDrawerShiftsResponse listCashDrawerShifts(org.openapis.openapi.models.operations.ListCashDrawerShiftsRequest request, org.openapis.openapi.models.operations.ListCashDrawerShiftsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/cash-drawers/shifts");
         
@@ -92,14 +94,14 @@ public class CashDrawers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCashDrawerShiftsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCashDrawerShiftsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,25 +130,26 @@ public class CashDrawers {
      * Provides the summary details for a single cash drawer shift. See
      * [ListCashDrawerShiftEvents](https://developer.squareup.com/reference/square_2021-08-18/cash-drawers-api/list-cash-drawer-shift-events) for a list of cash drawer shift events.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveCashDrawerShiftResponse retrieveCashDrawerShift(org.openapis.openapi.models.operations.RetrieveCashDrawerShiftRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveCashDrawerShiftResponse retrieveCashDrawerShift(org.openapis.openapi.models.operations.RetrieveCashDrawerShiftRequest request, org.openapis.openapi.models.operations.RetrieveCashDrawerShiftSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveCashDrawerShiftPathParams.class, baseUrl, "/v2/cash-drawers/shifts/{shift_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveCashDrawerShiftRequest.class, baseUrl, "/v2/cash-drawers/shifts/{shift_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrieveCashDrawerShiftQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrieveCashDrawerShiftRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/HvcerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/HvcerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/HvcerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/HvcerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/HvcerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Hvcer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Hvcer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Hvcer504ApplicationJSON.java
@@ -61,7 +60,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SvcerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/SvcerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/SvcerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SvcerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/SvcerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Svcer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Svcer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Svcer504ApplicationJSON.java
@@ -95,6 +93,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 USAGE.md

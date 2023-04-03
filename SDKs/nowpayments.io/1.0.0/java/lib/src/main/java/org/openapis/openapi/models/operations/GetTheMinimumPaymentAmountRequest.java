@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTheMinimumPaymentAmountRequest {
-    
-    public GetTheMinimumPaymentAmountQueryParams queryParams;
-    public GetTheMinimumPaymentAmountRequest withQueryParams(GetTheMinimumPaymentAmountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency_from")
+    public String currencyFrom;
+    public GetTheMinimumPaymentAmountRequest withCurrencyFrom(String currencyFrom) {
+        this.currencyFrom = currencyFrom;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency_to")
+    public String currencyTo;
+    public GetTheMinimumPaymentAmountRequest withCurrencyTo(String currencyTo) {
+        this.currencyTo = currencyTo;
+        return this;
+    }
     
-    public GetTheMinimumPaymentAmountHeaders headers;
-    public GetTheMinimumPaymentAmountRequest withHeaders(GetTheMinimumPaymentAmountHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetTheMinimumPaymentAmountRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

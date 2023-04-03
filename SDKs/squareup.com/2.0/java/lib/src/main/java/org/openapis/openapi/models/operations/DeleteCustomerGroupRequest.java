@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCustomerGroupRequest {
-    
-    public DeleteCustomerGroupPathParams pathParams;
-    public DeleteCustomerGroupRequest withPathParams(DeleteCustomerGroupPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteCustomerGroupSecurity security;
-    public DeleteCustomerGroupRequest withSecurity(DeleteCustomerGroupSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the customer group to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public DeleteCustomerGroupRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

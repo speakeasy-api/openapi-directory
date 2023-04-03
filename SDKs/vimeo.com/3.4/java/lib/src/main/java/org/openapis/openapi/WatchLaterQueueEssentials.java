@@ -33,19 +33,20 @@ public class WatchLaterQueueEssentials {
     /**
      * Add a video to a user's Watch Later queue
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideoToWatchLaterResponse addVideoToWatchLater(org.openapis.openapi.models.operations.AddVideoToWatchLaterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideoToWatchLaterResponse addVideoToWatchLater(org.openapis.openapi.models.operations.AddVideoToWatchLaterRequest request, org.openapis.openapi.models.operations.AddVideoToWatchLaterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToWatchLaterPathParams.class, baseUrl, "/users/{user_id}/watchlater/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToWatchLaterRequest.class, baseUrl, "/users/{user_id}/watchlater/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -66,19 +67,20 @@ public class WatchLaterQueueEssentials {
     /**
      * Add a video to a user's Watch Later queue
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideoToWatchLaterAlt1Response addVideoToWatchLaterAlt1(org.openapis.openapi.models.operations.AddVideoToWatchLaterAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideoToWatchLaterAlt1Response addVideoToWatchLaterAlt1(org.openapis.openapi.models.operations.AddVideoToWatchLaterAlt1Request request, org.openapis.openapi.models.operations.AddVideoToWatchLaterAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToWatchLaterAlt1PathParams.class, baseUrl, "/me/watchlater/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToWatchLaterAlt1Request.class, baseUrl, "/me/watchlater/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -99,19 +101,20 @@ public class WatchLaterQueueEssentials {
     /**
      * Check if a user has added a specific video to their Watch Later queue
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CheckWatchLaterQueueResponse checkWatchLaterQueue(org.openapis.openapi.models.operations.CheckWatchLaterQueueRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CheckWatchLaterQueueResponse checkWatchLaterQueue(org.openapis.openapi.models.operations.CheckWatchLaterQueueRequest request, org.openapis.openapi.models.operations.CheckWatchLaterQueueSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckWatchLaterQueuePathParams.class, baseUrl, "/users/{user_id}/watchlater/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckWatchLaterQueueRequest.class, baseUrl, "/users/{user_id}/watchlater/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -146,19 +149,20 @@ public class WatchLaterQueueEssentials {
     /**
      * Check if a user has added a specific video to their Watch Later queue
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CheckWatchLaterQueueAlt1Response checkWatchLaterQueueAlt1(org.openapis.openapi.models.operations.CheckWatchLaterQueueAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.CheckWatchLaterQueueAlt1Response checkWatchLaterQueueAlt1(org.openapis.openapi.models.operations.CheckWatchLaterQueueAlt1Request request, org.openapis.openapi.models.operations.CheckWatchLaterQueueAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckWatchLaterQueueAlt1PathParams.class, baseUrl, "/me/watchlater/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckWatchLaterQueueAlt1Request.class, baseUrl, "/me/watchlater/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -193,19 +197,20 @@ public class WatchLaterQueueEssentials {
     /**
      * Remove a video from a user's Watch Later queue
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVideoFromWatchLaterResponse deleteVideoFromWatchLater(org.openapis.openapi.models.operations.DeleteVideoFromWatchLaterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVideoFromWatchLaterResponse deleteVideoFromWatchLater(org.openapis.openapi.models.operations.DeleteVideoFromWatchLaterRequest request, org.openapis.openapi.models.operations.DeleteVideoFromWatchLaterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoFromWatchLaterPathParams.class, baseUrl, "/users/{user_id}/watchlater/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoFromWatchLaterRequest.class, baseUrl, "/users/{user_id}/watchlater/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -226,19 +231,20 @@ public class WatchLaterQueueEssentials {
     /**
      * Remove a video from a user's Watch Later queue
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVideoFromWatchLaterAlt1Response deleteVideoFromWatchLaterAlt1(org.openapis.openapi.models.operations.DeleteVideoFromWatchLaterAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVideoFromWatchLaterAlt1Response deleteVideoFromWatchLaterAlt1(org.openapis.openapi.models.operations.DeleteVideoFromWatchLaterAlt1Request request, org.openapis.openapi.models.operations.DeleteVideoFromWatchLaterAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoFromWatchLaterAlt1PathParams.class, baseUrl, "/me/watchlater/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoFromWatchLaterAlt1Request.class, baseUrl, "/me/watchlater/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -259,25 +265,26 @@ public class WatchLaterQueueEssentials {
     /**
      * Get all the videos in a user's Watch Later queue
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWatchLaterQueueResponse getWatchLaterQueue(org.openapis.openapi.models.operations.GetWatchLaterQueueRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWatchLaterQueueResponse getWatchLaterQueue(org.openapis.openapi.models.operations.GetWatchLaterQueueRequest request, org.openapis.openapi.models.operations.GetWatchLaterQueueSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWatchLaterQueuePathParams.class, baseUrl, "/users/{user_id}/watchlater", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWatchLaterQueueRequest.class, baseUrl, "/users/{user_id}/watchlater", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWatchLaterQueueQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWatchLaterQueueRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -306,10 +313,11 @@ public class WatchLaterQueueEssentials {
     /**
      * Get all the videos in a user's Watch Later queue
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWatchLaterQueueAlt1Response getWatchLaterQueueAlt1(org.openapis.openapi.models.operations.GetWatchLaterQueueAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWatchLaterQueueAlt1Response getWatchLaterQueueAlt1(org.openapis.openapi.models.operations.GetWatchLaterQueueAlt1Request request, org.openapis.openapi.models.operations.GetWatchLaterQueueAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/watchlater");
         
@@ -317,14 +325,14 @@ public class WatchLaterQueueEssentials {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWatchLaterQueueAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWatchLaterQueueAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

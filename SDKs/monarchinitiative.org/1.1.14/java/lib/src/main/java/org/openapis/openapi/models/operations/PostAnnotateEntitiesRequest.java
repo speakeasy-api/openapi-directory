@@ -4,13 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAnnotateEntitiesRequest {
+    /**
+     * The text content to annotate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content")
+    public String content;
+    public PostAnnotateEntitiesRequest withContent(String content) {
+        this.content = content;
+        return this;
+    }
     
-    public PostAnnotateEntitiesQueryParams queryParams;
-    public PostAnnotateEntitiesRequest withQueryParams(PostAnnotateEntitiesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Categories to exclude for annotation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_category")
+    public String[] excludeCategory;
+    public PostAnnotateEntitiesRequest withExcludeCategory(String[] excludeCategory) {
+        this.excludeCategory = excludeCategory;
+        return this;
+    }
+    
+    /**
+     * Should abbreviations be included
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_abbreviation")
+    public Boolean includeAbbreviation;
+    public PostAnnotateEntitiesRequest withIncludeAbbreviation(Boolean includeAbbreviation) {
+        this.includeAbbreviation = includeAbbreviation;
+        return this;
+    }
+    
+    /**
+     * Should acronyms be included
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_acronym")
+    public Boolean includeAcronym;
+    public PostAnnotateEntitiesRequest withIncludeAcronym(Boolean includeAcronym) {
+        this.includeAcronym = includeAcronym;
+        return this;
+    }
+    
+    /**
+     * Categories to include for annotation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_category")
+    public String[] includeCategory;
+    public PostAnnotateEntitiesRequest withIncludeCategory(String[] includeCategory) {
+        this.includeCategory = includeCategory;
+        return this;
+    }
+    
+    /**
+     * Should numbers be included
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_numbers")
+    public Boolean includeNumbers;
+    public PostAnnotateEntitiesRequest withIncludeNumbers(Boolean includeNumbers) {
+        this.includeNumbers = includeNumbers;
+        return this;
+    }
+    
+    /**
+     * Should only the longest entity be returned for an overlapping group
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longest_only")
+    public Boolean longestOnly;
+    public PostAnnotateEntitiesRequest withLongestOnly(Boolean longestOnly) {
+        this.longestOnly = longestOnly;
+        return this;
+    }
+    
+    /**
+     * The minimum number of characters in the annotated entity
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_length")
+    public String minLength;
+    public PostAnnotateEntitiesRequest withMinLength(String minLength) {
+        this.minLength = minLength;
         return this;
     }
     

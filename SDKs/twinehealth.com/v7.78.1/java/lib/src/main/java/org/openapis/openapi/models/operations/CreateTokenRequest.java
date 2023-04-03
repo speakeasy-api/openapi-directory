@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTokenRequest {
-    
-    public CreateTokenQueryParams queryParams;
-    public CreateTokenRequest withQueryParams(CreateTokenQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateTokenRequest request;
-    public CreateTokenRequest withRequest(org.openapis.openapi.models.shared.CreateTokenRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateTokenRequest createTokenRequest;
+    public CreateTokenRequest withCreateTokenRequest(org.openapis.openapi.models.shared.CreateTokenRequest createTokenRequest) {
+        this.createTokenRequest = createTokenRequest;
         return this;
     }
     
-    
-    public CreateTokenSecurity security;
-    public CreateTokenRequest withSecurity(CreateTokenSecurity security) {
-        this.security = security;
+    /**
+     * List of related resources to include in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public CreateTokenIncludeEnum include;
+    public CreateTokenRequest withInclude(CreateTokenIncludeEnum include) {
+        this.include = include;
         return this;
     }
     

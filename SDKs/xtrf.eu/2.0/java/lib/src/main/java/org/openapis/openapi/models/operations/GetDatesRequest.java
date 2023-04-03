@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDatesRequest {
-    
-    public GetDatesPathParams pathParams;
-    public GetDatesRequest withPathParams(GetDatesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * client invoice's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoiceId")
+    public Long invoiceId;
+    public GetDatesRequest withInvoiceId(Long invoiceId) {
+        this.invoiceId = invoiceId;
         return this;
     }
     

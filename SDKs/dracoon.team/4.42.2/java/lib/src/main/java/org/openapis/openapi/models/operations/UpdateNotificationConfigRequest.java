@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNotificationConfigRequest {
-    
-    public UpdateNotificationConfigPathParams pathParams;
-    public UpdateNotificationConfigRequest withPathParams(UpdateNotificationConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateNotificationConfigHeaders headers;
-    public UpdateNotificationConfigRequest withHeaders(UpdateNotificationConfigHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.NotificationConfigChangeRequest request;
-    public UpdateNotificationConfigRequest withRequest(org.openapis.openapi.models.shared.NotificationConfigChangeRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.NotificationConfigChangeRequest notificationConfigChangeRequest;
+    public UpdateNotificationConfigRequest withNotificationConfigChangeRequest(org.openapis.openapi.models.shared.NotificationConfigChangeRequest notificationConfigChangeRequest) {
+        this.notificationConfigChangeRequest = notificationConfigChangeRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UpdateNotificationConfigRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Unique identifier for a notification configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UpdateNotificationConfigRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

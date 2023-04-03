@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETStopActivityStreamRequest {
-    
-    public GETStopActivityStreamQueryParams queryParams;
-    public GETStopActivityStreamRequest withQueryParams(GETStopActivityStreamQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETStopActivityStreamActionEnum action;
+    public GETStopActivityStreamRequest withAction(GETStopActivityStreamActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Specifies whether or not the database activity stream is to stop as soon as possible, regardless of the maintenance window for the database.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplyImmediately")
+    public Boolean applyImmediately;
+    public GETStopActivityStreamRequest withApplyImmediately(Boolean applyImmediately) {
+        this.applyImmediately = applyImmediately;
+        return this;
+    }
     
-    public GETStopActivityStreamHeaders headers;
-    public GETStopActivityStreamRequest withHeaders(GETStopActivityStreamHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Amazon Resource Name (ARN) of the DB cluster for the database activity stream. For example, &lt;code&gt;arn:aws:rds:us-east-1:12345667890:cluster:das-cluster&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceArn")
+    public String resourceArn;
+    public GETStopActivityStreamRequest withResourceArn(String resourceArn) {
+        this.resourceArn = resourceArn;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETStopActivityStreamVersionEnum version;
+    public GETStopActivityStreamRequest withVersion(GETStopActivityStreamVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETStopActivityStreamRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETStopActivityStreamRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETStopActivityStreamRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETStopActivityStreamRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETStopActivityStreamRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETStopActivityStreamRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETStopActivityStreamRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

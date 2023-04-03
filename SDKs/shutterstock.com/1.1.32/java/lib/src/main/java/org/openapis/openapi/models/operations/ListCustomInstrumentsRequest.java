@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCustomInstrumentsRequest {
-    
-    public ListCustomInstrumentsQueryParams queryParams;
-    public ListCustomInstrumentsRequest withQueryParams(ListCustomInstrumentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Show instruments with the specified ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String[] id;
+    public ListCustomInstrumentsRequest withId(String[] id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Show instruments with the specified name (case-sensitive)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public ListCustomInstrumentsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public ListCustomInstrumentsSecurity security;
-    public ListCustomInstrumentsRequest withSecurity(ListCustomInstrumentsSecurity security) {
-        this.security = security;
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ListCustomInstrumentsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ListCustomInstrumentsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Show instruments with the specified tag, such as Percussion or Strings (case-sensitive)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public ListCustomInstrumentsRequest withTag(String tag) {
+        this.tag = tag;
         return this;
     }
     

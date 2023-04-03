@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetIdentityMailFromDomainRequest {
-    
-    public GETSetIdentityMailFromDomainQueryParams queryParams;
-    public GETSetIdentityMailFromDomainRequest withQueryParams(GETSetIdentityMailFromDomainQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETSetIdentityMailFromDomainActionEnum action;
+    public GETSetIdentityMailFromDomainRequest withAction(GETSetIdentityMailFromDomainActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The action that you want Amazon SES to take if it cannot successfully read the required MX record when you send an email. If you choose &lt;code&gt;UseDefaultValue&lt;/code&gt;, Amazon SES will use amazonses.com (or a subdomain of that) as the MAIL FROM domain. If you choose &lt;code&gt;RejectMessage&lt;/code&gt;, Amazon SES will return a &lt;code&gt;MailFromDomainNotVerified&lt;/code&gt; error and not send the email.&lt;/p&gt; &lt;p&gt;The action specified in &lt;code&gt;BehaviorOnMXFailure&lt;/code&gt; is taken when the custom MAIL FROM domain setup is in the &lt;code&gt;Pending&lt;/code&gt;, &lt;code&gt;Failed&lt;/code&gt;, and &lt;code&gt;TemporaryFailure&lt;/code&gt; states.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BehaviorOnMXFailure")
+    public GETSetIdentityMailFromDomainBehaviorOnMxFailureEnum behaviorOnMXFailure;
+    public GETSetIdentityMailFromDomainRequest withBehaviorOnMXFailure(GETSetIdentityMailFromDomainBehaviorOnMxFailureEnum behaviorOnMXFailure) {
+        this.behaviorOnMXFailure = behaviorOnMXFailure;
+        return this;
+    }
     
-    public GETSetIdentityMailFromDomainHeaders headers;
-    public GETSetIdentityMailFromDomainRequest withHeaders(GETSetIdentityMailFromDomainHeaders headers) {
-        this.headers = headers;
+    /**
+     * The verified identity for which you want to enable or disable the specified custom MAIL FROM domain.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Identity")
+    public String identity;
+    public GETSetIdentityMailFromDomainRequest withIdentity(String identity) {
+        this.identity = identity;
+        return this;
+    }
+    
+    /**
+     * The custom MAIL FROM domain that you want the verified identity to use. The MAIL FROM domain must 1) be a subdomain of the verified identity, 2) not be used in a "From" address if the MAIL FROM domain is the destination of email feedback forwarding (for more information, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/mail-from.html"&gt;Amazon SES Developer Guide&lt;/a&gt;), and 3) not be used to receive emails. A value of &lt;code&gt;null&lt;/code&gt; disables the custom MAIL FROM setting for the identity.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MailFromDomain")
+    public String mailFromDomain;
+    public GETSetIdentityMailFromDomainRequest withMailFromDomain(String mailFromDomain) {
+        this.mailFromDomain = mailFromDomain;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETSetIdentityMailFromDomainVersionEnum version;
+    public GETSetIdentityMailFromDomainRequest withVersion(GETSetIdentityMailFromDomainVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETSetIdentityMailFromDomainRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETSetIdentityMailFromDomainRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETSetIdentityMailFromDomainRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETSetIdentityMailFromDomainRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETSetIdentityMailFromDomainRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETSetIdentityMailFromDomainRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETSetIdentityMailFromDomainRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

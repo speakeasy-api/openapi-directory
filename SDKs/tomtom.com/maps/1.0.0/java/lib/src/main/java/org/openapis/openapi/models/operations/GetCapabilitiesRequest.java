@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCapabilitiesRequest {
-    
-    public GetCapabilitiesPathParams pathParams;
-    public GetCapabilitiesRequest withPathParams(GetCapabilitiesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=request")
+    public GetCapabilitiesRequestEnum request;
+    public GetCapabilitiesRequest withRequest(GetCapabilitiesRequestEnum request) {
+        this.request = request;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service")
+    public GetCapabilitiesServiceEnum service;
+    public GetCapabilitiesRequest withService(GetCapabilitiesServiceEnum service) {
+        this.service = service;
+        return this;
+    }
     
-    public GetCapabilitiesQueryParams queryParams;
-    public GetCapabilitiesRequest withQueryParams(GetCapabilitiesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * WMS service version
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public GetCapabilitiesVersionEnum version;
+    public GetCapabilitiesRequest withVersion(GetCapabilitiesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
+    public GetCapabilitiesVersionNumberEnum versionNumber;
+    public GetCapabilitiesRequest withVersionNumber(GetCapabilitiesVersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
         return this;
     }
     

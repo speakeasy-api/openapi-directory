@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PaymentLinkApiDeleteFormRequest {
-    
-    public PaymentLinkApiDeleteFormHeaders headers;
-    public PaymentLinkApiDeleteFormRequest withHeaders(PaymentLinkApiDeleteFormHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public org.openapis.openapi.models.shared.PaymentLink paymentLink;
+    public PaymentLinkApiDeleteFormRequest withPaymentLink(org.openapis.openapi.models.shared.PaymentLink paymentLink) {
+        this.paymentLink = paymentLink;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.PaymentLink request;
-    public PaymentLinkApiDeleteFormRequest withRequest(org.openapis.openapi.models.shared.PaymentLink request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public PaymentLinkApiDeleteFormRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public PaymentLinkApiDeleteFormRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

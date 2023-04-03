@@ -4,27 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchUserBindingRequest {
-    
-    public FetchUserBindingPathParams pathParams;
-    public FetchUserBindingRequest withPathParams(FetchUserBindingPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchUserBindingRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public FetchUserBindingSecurity security;
-    public FetchUserBindingRequest withSecurity(FetchUserBindingSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchUserBindingRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchUserBindingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=UserSid")
+    public String userSid;
+    public FetchUserBindingRequest withUserSid(String userSid) {
+        this.userSid = userSid;
         return this;
     }
     

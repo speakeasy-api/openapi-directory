@@ -53,7 +53,7 @@ public class Payouts {
      */
     public org.openapis.openapi.models.operations.CreateQuoteForPayoutV3Response createQuoteForPayoutV3(org.openapis.openapi.models.operations.CreateQuoteForPayoutV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateQuoteForPayoutV3PathParams.class, baseUrl, "/v3/payouts/{payoutId}/quote", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateQuoteForPayoutV3Request.class, baseUrl, "/v3/payouts/{payoutId}/quote", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -109,7 +109,7 @@ public class Payouts {
      */
     public org.openapis.openapi.models.operations.DeschedulePayoutResponse deschedulePayout(org.openapis.openapi.models.operations.DeschedulePayoutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeschedulePayoutPathParams.class, baseUrl, "/v3/payouts/{payoutId}/schedule", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeschedulePayoutRequest.class, baseUrl, "/v3/payouts/{payoutId}/schedule", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -175,13 +175,13 @@ public class Payouts {
      */
     public org.openapis.openapi.models.operations.GetPaymentsForPayoutV3Response getPaymentsForPayoutV3(org.openapis.openapi.models.operations.GetPaymentsForPayoutV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentsForPayoutV3PathParams.class, baseUrl, "/v3/payouts/{payoutId}/payments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentsForPayoutV3Request.class, baseUrl, "/v3/payouts/{payoutId}/payments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPaymentsForPayoutV3QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPaymentsForPayoutV3Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -229,7 +229,7 @@ public class Payouts {
      */
     public org.openapis.openapi.models.operations.GetPayoutSummaryV3Response getPayoutSummaryV3(org.openapis.openapi.models.operations.GetPayoutSummaryV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayoutSummaryV3PathParams.class, baseUrl, "/v3/payouts/{payoutId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayoutSummaryV3Request.class, baseUrl, "/v3/payouts/{payoutId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -293,12 +293,12 @@ public class Payouts {
      */
     public org.openapis.openapi.models.operations.InstructPayoutV3Response instructPayoutV3(org.openapis.openapi.models.operations.InstructPayoutV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InstructPayoutV3PathParams.class, baseUrl, "/v3/payouts/{payoutId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InstructPayoutV3Request.class, baseUrl, "/v3/payouts/{payoutId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instructPayoutRequestV3", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -371,12 +371,12 @@ public class Payouts {
      */
     public org.openapis.openapi.models.operations.ScheduleForPayoutResponse scheduleForPayout(org.openapis.openapi.models.operations.ScheduleForPayoutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScheduleForPayoutPathParams.class, baseUrl, "/v3/payouts/{payoutId}/schedule", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScheduleForPayoutRequest.class, baseUrl, "/v3/payouts/{payoutId}/schedule", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "schedulePayoutRequestV3", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -449,7 +449,7 @@ public class Payouts {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubmitPayoutV3JsonResponse submitPayoutV3Json(org.openapis.openapi.models.operations.SubmitPayoutV3JsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubmitPayoutV3JsonResponse submitPayoutV3Json(org.openapis.openapi.models.shared.CreatePayoutRequestV3 request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v3/payouts");
         
@@ -518,7 +518,7 @@ public class Payouts {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubmitPayoutV3MultipartResponse submitPayoutV3Multipart(org.openapis.openapi.models.operations.SubmitPayoutV3MultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubmitPayoutV3MultipartResponse submitPayoutV3Multipart(org.openapis.openapi.models.operations.SubmitPayoutV3MultipartFormData request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v3/payouts");
         
@@ -591,12 +591,12 @@ public class Payouts {
      */
     public org.openapis.openapi.models.operations.WithdrawPaymentResponse withdrawPayment(org.openapis.openapi.models.operations.WithdrawPaymentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WithdrawPaymentPathParams.class, baseUrl, "/v1/payments/{paymentId}/withdraw", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WithdrawPaymentRequest.class, baseUrl, "/v1/payments/{paymentId}/withdraw", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "withdrawPaymentRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -662,7 +662,7 @@ public class Payouts {
      */
     public org.openapis.openapi.models.operations.WithdrawPayoutV3Response withdrawPayoutV3(org.openapis.openapi.models.operations.WithdrawPayoutV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WithdrawPayoutV3PathParams.class, baseUrl, "/v3/payouts/{payoutId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WithdrawPayoutV3Request.class, baseUrl, "/v3/payouts/{payoutId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");

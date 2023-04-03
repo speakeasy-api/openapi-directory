@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OfficesUpdateSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeDrchronoOauth2 drchronoOauth2;
-    public OfficesUpdateSecurity withDrchronoOauth2(org.openapis.openapi.models.shared.SchemeDrchronoOauth2 drchronoOauth2) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String drchronoOauth2;
+    public OfficesUpdateSecurity withDrchronoOauth2(String drchronoOauth2) {
         this.drchronoOauth2 = drchronoOauth2;
         return this;
     }

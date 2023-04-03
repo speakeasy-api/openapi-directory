@@ -4,27 +4,106 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsManagementRemarketingAudienceDeleteRequest {
-    
-    public AnalyticsManagementRemarketingAudienceDeletePathParams pathParams;
-    public AnalyticsManagementRemarketingAudienceDeleteRequest withPathParams(AnalyticsManagementRemarketingAudienceDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account ID to which the remarketing audience belongs.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AnalyticsManagementRemarketingAudienceDeleteRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public AnalyticsManagementRemarketingAudienceDeleteQueryParams queryParams;
-    public AnalyticsManagementRemarketingAudienceDeleteRequest withQueryParams(AnalyticsManagementRemarketingAudienceDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AnalyticsManagementRemarketingAudienceDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AnalyticsManagementRemarketingAudienceDeleteRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public AnalyticsManagementRemarketingAudienceDeleteSecurity security;
-    public AnalyticsManagementRemarketingAudienceDeleteRequest withSecurity(AnalyticsManagementRemarketingAudienceDeleteSecurity security) {
-        this.security = security;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AnalyticsManagementRemarketingAudienceDeleteRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AnalyticsManagementRemarketingAudienceDeleteRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AnalyticsManagementRemarketingAudienceDeleteRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AnalyticsManagementRemarketingAudienceDeleteRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The ID of the remarketing audience to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=remarketingAudienceId")
+    public String remarketingAudienceId;
+    public AnalyticsManagementRemarketingAudienceDeleteRequest withRemarketingAudienceId(String remarketingAudienceId) {
+        this.remarketingAudienceId = remarketingAudienceId;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AnalyticsManagementRemarketingAudienceDeleteRequest withUserIp(String userIp) {
+        this.userIp = userIp;
+        return this;
+    }
+    
+    /**
+     * Web property ID to which the remarketing audience belongs.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webPropertyId")
+    public String webPropertyId;
+    public AnalyticsManagementRemarketingAudienceDeleteRequest withWebPropertyId(String webPropertyId) {
+        this.webPropertyId = webPropertyId;
         return this;
     }
     

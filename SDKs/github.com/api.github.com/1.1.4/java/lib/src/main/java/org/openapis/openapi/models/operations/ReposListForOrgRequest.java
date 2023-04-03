@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListForOrgRequest {
-    
-    public ReposListForOrgPathParams pathParams;
-    public ReposListForOrgRequest withPathParams(ReposListForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The order to sort by. Default: `asc` when using `full_name`, otherwise `desc`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public ReposListForOrgDirectionEnum direction;
+    public ReposListForOrgRequest withDirection(ReposListForOrgDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ReposListForOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public ReposListForOrgQueryParams queryParams;
-    public ReposListForOrgRequest withQueryParams(ReposListForOrgQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReposListForOrgRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReposListForOrgRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The property to sort the results by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public ReposListForOrgSortEnum sort;
+    public ReposListForOrgRequest withSort(ReposListForOrgSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Specifies the types of repositories you want returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public ReposListForOrgTypeEnum type;
+    public ReposListForOrgRequest withType(ReposListForOrgTypeEnum type) {
+        this.type = type;
         return this;
     }
     

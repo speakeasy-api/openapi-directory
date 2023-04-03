@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspaceSlugWebhooksIdSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer")
-    public org.openapis.openapi.models.shared.SchemeBearer bearer;
-    public GetWorkspaceSlugWebhooksIdSecurity withBearer(org.openapis.openapi.models.shared.SchemeBearer bearer) {
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
+    public String bearer;
+    public GetWorkspaceSlugWebhooksIdSecurity withBearer(String bearer) {
         this.bearer = bearer;
         return this;
     }

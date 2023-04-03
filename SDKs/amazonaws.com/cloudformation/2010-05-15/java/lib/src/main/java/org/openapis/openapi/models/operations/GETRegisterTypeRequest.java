@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRegisterTypeRequest {
-    
-    public GETRegisterTypeQueryParams queryParams;
-    public GETRegisterTypeRequest withQueryParams(GETRegisterTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRegisterTypeActionEnum action;
+    public GETRegisterTypeRequest withAction(GETRegisterTypeActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * A unique identifier that acts as an idempotency key for this registration request. Specifying a client request token prevents CloudFormation from generating more than one version of an extension from the same registration request, even if the request is submitted multiple times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientRequestToken")
+    public String clientRequestToken;
+    public GETRegisterTypeRequest withClientRequestToken(String clientRequestToken) {
+        this.clientRequestToken = clientRequestToken;
+        return this;
+    }
     
-    public GETRegisterTypeHeaders headers;
-    public GETRegisterTypeRequest withHeaders(GETRegisterTypeHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the IAM role for CloudFormation to assume when invoking the extension.&lt;/p&gt; &lt;p&gt;For CloudFormation to assume the specified execution role, the role must contain a trust relationship with the CloudFormation service principle (&lt;code&gt;resources.cloudformation.amazonaws.com&lt;/code&gt;). For more information about adding trust relationships, see &lt;a href="IAM/latest/UserGuide/roles-managingrole-editing-console.html#roles-managingrole_edit-trust-policy"&gt;Modifying a role trust policy&lt;/a&gt; in the &lt;i&gt;Identity and Access Management User Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;If your extension calls Amazon Web Services APIs in any of its handlers, you must create an &lt;i&gt; &lt;a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html"&gt;IAM execution role&lt;/a&gt; &lt;/i&gt; that includes the necessary permissions to call those Amazon Web Services APIs, and provision that execution role in your account. When CloudFormation needs to invoke the resource type handler, CloudFormation assumes this execution role to create a temporary session token, which it then passes to the resource type handler, thereby supplying your resource type with the appropriate credentials.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ExecutionRoleArn")
+    public String executionRoleArn;
+    public GETRegisterTypeRequest withExecutionRoleArn(String executionRoleArn) {
+        this.executionRoleArn = executionRoleArn;
+        return this;
+    }
+    
+    /**
+     * Specifies logging configuration information for an extension.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoggingConfig")
+    public GETRegisterTypeLoggingConfig loggingConfig;
+    public GETRegisterTypeRequest withLoggingConfig(GETRegisterTypeLoggingConfig loggingConfig) {
+        this.loggingConfig = loggingConfig;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A URL to the S3 bucket containing the extension project package that contains the necessary files for the extension you want to register.&lt;/p&gt; &lt;p&gt;For information about generating a schema handler package for the extension you want to register, see &lt;a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html"&gt;submit&lt;/a&gt; in the &lt;i&gt;CloudFormation CLI User Guide&lt;/i&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;The user registering the extension must be able to access the package in the S3 bucket. That's, the user needs to have &lt;a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html"&gt;GetObject&lt;/a&gt; permissions for the schema handler package. For more information, see &lt;a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html"&gt;Actions, Resources, and Condition Keys for Amazon S3&lt;/a&gt; in the &lt;i&gt;Identity and Access Management User Guide&lt;/i&gt;.&lt;/p&gt; &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SchemaHandlerPackage")
+    public String schemaHandlerPackage;
+    public GETRegisterTypeRequest withSchemaHandlerPackage(String schemaHandlerPackage) {
+        this.schemaHandlerPackage = schemaHandlerPackage;
+        return this;
+    }
+    
+    /**
+     * The kind of extension.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
+    public GETRegisterTypeTypeEnum type;
+    public GETRegisterTypeRequest withType(GETRegisterTypeTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the extension being registered.&lt;/p&gt; &lt;p&gt;We suggest that extension names adhere to the following patterns:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;For resource types, &lt;i&gt;company_or_organization&lt;/i&gt;::&lt;i&gt;service&lt;/i&gt;::&lt;i&gt;type&lt;/i&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;For modules, &lt;i&gt;company_or_organization&lt;/i&gt;::&lt;i&gt;service&lt;/i&gt;::&lt;i&gt;type&lt;/i&gt;::MODULE.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;For hooks, &lt;i&gt;MyCompany&lt;/i&gt;::&lt;i&gt;Testing&lt;/i&gt;::&lt;i&gt;MyTestHook&lt;/i&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;note&gt; &lt;p&gt;The following organization namespaces are reserved and can't be used in your extension names:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;Alexa&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AMZN&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;Amazon&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;AWS&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;Custom&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;Dev&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeName")
+    public String typeName;
+    public GETRegisterTypeRequest withTypeName(String typeName) {
+        this.typeName = typeName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRegisterTypeVersionEnum version;
+    public GETRegisterTypeRequest withVersion(GETRegisterTypeVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRegisterTypeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRegisterTypeRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRegisterTypeRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRegisterTypeRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRegisterTypeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRegisterTypeRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRegisterTypeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

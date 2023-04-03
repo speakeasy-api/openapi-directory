@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsListForOrgRequest {
-    
-    public ProjectsListForOrgPathParams pathParams;
-    public ProjectsListForOrgRequest withPathParams(ProjectsListForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ProjectsListForOrgRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ProjectsListForOrgRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ProjectsListForOrgQueryParams queryParams;
-    public ProjectsListForOrgRequest withQueryParams(ProjectsListForOrgQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ProjectsListForOrgRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Indicates the state of the projects to return. Can be either `open`, `closed`, or `all`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public ProjectsListForOrgStateEnum state;
+    public ProjectsListForOrgRequest withState(ProjectsListForOrgStateEnum state) {
+        this.state = state;
         return this;
     }
     

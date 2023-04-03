@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDexIdsDexIdRequest {
-    
-    public GetDexIdsDexIdPathParams pathParams;
-    public GetDexIdsDexIdRequest withPathParams(GetDexIdsDexIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dexId")
+    public String dexId;
+    public GetDexIdsDexIdRequest withDexId(String dexId) {
+        this.dexId = dexId;
         return this;
     }
     

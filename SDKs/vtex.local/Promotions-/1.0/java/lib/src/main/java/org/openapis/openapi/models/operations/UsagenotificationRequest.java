@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsagenotificationRequest {
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public UsagenotificationRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public UsagenotificationHeaders headers;
-    public UsagenotificationRequest withHeaders(UsagenotificationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public UsagenotificationRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UsagenotificationRequest request;
-    public UsagenotificationRequest withRequest(org.openapis.openapi.models.shared.UsagenotificationRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UsagenotificationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public org.openapis.openapi.models.shared.UsagenotificationRequest usagenotificationRequest;
+    public UsagenotificationRequest withUsagenotificationRequest(org.openapis.openapi.models.shared.UsagenotificationRequest usagenotificationRequest) {
+        this.usagenotificationRequest = usagenotificationRequest;
         return this;
     }
     

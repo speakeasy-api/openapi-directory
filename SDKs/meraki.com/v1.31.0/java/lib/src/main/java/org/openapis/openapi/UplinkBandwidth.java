@@ -40,7 +40,7 @@ public class UplinkBandwidth {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingUplinkBandwidthResponse getNetworkApplianceTrafficShapingUplinkBandwidth(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingUplinkBandwidthRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingUplinkBandwidthPathParams.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/uplinkBandwidth", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingUplinkBandwidthRequest.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/uplinkBandwidth", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class UplinkBandwidth {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingUplinkBandwidthResponse updateNetworkApplianceTrafficShapingUplinkBandwidth(org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingUplinkBandwidthPathParams.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/uplinkBandwidth", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequest.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/uplinkBandwidth", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

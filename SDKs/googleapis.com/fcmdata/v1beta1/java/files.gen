@@ -31,8 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/FcmdataProjectsAndroidAppsDeliveryDataListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FcmdataProjectsAndroidAppsDeliveryDataListPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/FcmdataProjectsAndroidAppsDeliveryDataListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FcmdataProjectsAndroidAppsDeliveryDataListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FcmdataProjectsAndroidAppsDeliveryDataListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse.java
@@ -44,6 +42,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirebaseFcmDataV1beta
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirebaseFcmDataV1beta1DeliveryPerformancePercents.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 USAGE.md

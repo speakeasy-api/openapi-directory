@@ -4,20 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadFileRequest {
-    
-    public DownloadFilePathParams pathParams;
-    public DownloadFileRequest withPathParams(DownloadFilePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dir")
+    public String dir;
+    public DownloadFileRequest withDir(String dir) {
+        this.dir = dir;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=download")
+    public String download;
+    public DownloadFileRequest withDownload(String download) {
+        this.download = download;
+        return this;
+    }
     
-    public DownloadFileQueryParams queryParams;
-    public DownloadFileRequest withQueryParams(DownloadFileQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filename")
+    public String filename;
+    public DownloadFileRequest withFilename(String filename) {
+        this.filename = filename;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rotation")
+    public Integer rotation;
+    public DownloadFileRequest withRotation(Integer rotation) {
+        this.rotation = rotation;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subdir")
+    public String subdir;
+    public DownloadFileRequest withSubdir(String subdir) {
+        this.subdir = subdir;
         return this;
     }
     

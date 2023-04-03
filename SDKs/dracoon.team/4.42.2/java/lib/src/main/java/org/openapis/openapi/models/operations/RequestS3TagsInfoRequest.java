@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestS3TagsInfoRequest {
-    
-    public RequestS3TagsInfoHeaders headers;
-    public RequestS3TagsInfoRequest withHeaders(RequestS3TagsInfoHeaders headers) {
-        this.headers = headers;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestS3TagsInfoRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

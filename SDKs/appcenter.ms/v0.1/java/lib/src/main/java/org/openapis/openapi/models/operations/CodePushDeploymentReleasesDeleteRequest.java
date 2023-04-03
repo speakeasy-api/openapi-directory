@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodePushDeploymentReleasesDeleteRequest {
-    
-    public CodePushDeploymentReleasesDeletePathParams pathParams;
-    public CodePushDeploymentReleasesDeleteRequest withPathParams(CodePushDeploymentReleasesDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CodePushDeploymentReleasesDeleteRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * deployment name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment_name")
+    public String deploymentName;
+    public CodePushDeploymentReleasesDeleteRequest withDeploymentName(String deploymentName) {
+        this.deploymentName = deploymentName;
+        return this;
+    }
     
-    public CodePushDeploymentReleasesDeleteSecurity security;
-    public CodePushDeploymentReleasesDeleteRequest withSecurity(CodePushDeploymentReleasesDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CodePushDeploymentReleasesDeleteRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

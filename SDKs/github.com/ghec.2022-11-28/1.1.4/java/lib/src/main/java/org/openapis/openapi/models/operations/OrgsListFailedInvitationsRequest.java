@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsListFailedInvitationsRequest {
-    
-    public OrgsListFailedInvitationsPathParams pathParams;
-    public OrgsListFailedInvitationsRequest withPathParams(OrgsListFailedInvitationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsListFailedInvitationsRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public OrgsListFailedInvitationsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public OrgsListFailedInvitationsQueryParams queryParams;
-    public OrgsListFailedInvitationsRequest withQueryParams(OrgsListFailedInvitationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public OrgsListFailedInvitationsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

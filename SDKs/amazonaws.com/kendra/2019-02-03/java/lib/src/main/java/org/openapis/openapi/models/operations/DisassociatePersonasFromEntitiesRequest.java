@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisassociatePersonasFromEntitiesRequest {
-    
-    public DisassociatePersonasFromEntitiesHeaders headers;
-    public DisassociatePersonasFromEntitiesRequest withHeaders(DisassociatePersonasFromEntitiesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.DisassociatePersonasFromEntitiesRequest disassociatePersonasFromEntitiesRequest;
+    public DisassociatePersonasFromEntitiesRequest withDisassociatePersonasFromEntitiesRequest(org.openapis.openapi.models.shared.DisassociatePersonasFromEntitiesRequest disassociatePersonasFromEntitiesRequest) {
+        this.disassociatePersonasFromEntitiesRequest = disassociatePersonasFromEntitiesRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DisassociatePersonasFromEntitiesRequest request;
-    public DisassociatePersonasFromEntitiesRequest withRequest(org.openapis.openapi.models.shared.DisassociatePersonasFromEntitiesRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DisassociatePersonasFromEntitiesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DisassociatePersonasFromEntitiesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DisassociatePersonasFromEntitiesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DisassociatePersonasFromEntitiesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DisassociatePersonasFromEntitiesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DisassociatePersonasFromEntitiesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DisassociatePersonasFromEntitiesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public DisassociatePersonasFromEntitiesXAmzTargetEnum xAmzTarget;
+    public DisassociatePersonasFromEntitiesRequest withXAmzTarget(DisassociatePersonasFromEntitiesXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

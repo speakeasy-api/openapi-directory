@@ -40,7 +40,7 @@ public class Bundle {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateBundleResponse createBundle(org.openapis.openapi.models.operations.CreateBundleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateBundleResponse createBundle(org.openapis.openapi.models.shared.CreateBundleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/bundle");
         
@@ -94,7 +94,7 @@ public class Bundle {
      */
     public org.openapis.openapi.models.operations.FetchBundleResponse fetchBundle(org.openapis.openapi.models.operations.FetchBundleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchBundlePathParams.class, baseUrl, "/bundle/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchBundleRequest.class, baseUrl, "/bundle/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -141,12 +141,12 @@ public class Bundle {
      */
     public org.openapis.openapi.models.operations.UpdateBundleResponse updateBundle(org.openapis.openapi.models.operations.UpdateBundleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateBundlePathParams.class, baseUrl, "/bundle/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateBundleRequest.class, baseUrl, "/bundle/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateBundleRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

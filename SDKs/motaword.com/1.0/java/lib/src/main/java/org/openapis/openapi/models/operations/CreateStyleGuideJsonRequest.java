@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateStyleGuideJsonRequest {
-    
-    public CreateStyleGuideJsonPathParams pathParams;
-    public CreateStyleGuideJsonRequest withPathParams(CreateStyleGuideJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.StyleGuideUploadRequest styleGuideUploadRequest;
+    public CreateStyleGuideJsonRequest withStyleGuideUploadRequest(org.openapis.openapi.models.shared.StyleGuideUploadRequest styleGuideUploadRequest) {
+        this.styleGuideUploadRequest = styleGuideUploadRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.StyleGuideUploadRequest request;
-    public CreateStyleGuideJsonRequest withRequest(org.openapis.openapi.models.shared.StyleGuideUploadRequest request) {
-        this.request = request;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public CreateStyleGuideJsonRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

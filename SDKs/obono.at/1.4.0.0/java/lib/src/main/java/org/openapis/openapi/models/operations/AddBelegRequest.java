@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddBelegRequest {
-    
-    public AddBelegPathParams pathParams;
-    public AddBelegRequest withPathParams(AddBelegPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object that contains all data for a particular `Beleg` and is formatted according to RKSV "Signaturformat".
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Belegdaten request;
-    public AddBelegRequest withRequest(org.openapis.openapi.models.shared.Belegdaten request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Belegdaten belegdaten;
+    public AddBelegRequest withBelegdaten(org.openapis.openapi.models.shared.Belegdaten belegdaten) {
+        this.belegdaten = belegdaten;
+        return this;
+    }
+    
+    /**
+     * The `_uuid` of the `Beleg` to store.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=belegUuid")
+    public String belegUuid;
+    public AddBelegRequest withBelegUuid(String belegUuid) {
+        this.belegUuid = belegUuid;
+        return this;
+    }
+    
+    /**
+     * The `_uuid` of the `Registrierkasse` to use for signing data.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registrierkasseUuid")
+    public String registrierkasseUuid;
+    public AddBelegRequest withRegistrierkasseUuid(String registrierkasseUuid) {
+        this.registrierkasseUuid = registrierkasseUuid;
         return this;
     }
     

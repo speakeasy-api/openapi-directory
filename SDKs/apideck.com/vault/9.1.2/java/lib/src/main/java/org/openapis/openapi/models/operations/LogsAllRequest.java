@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LogsAllRequest {
-    
-    public LogsAllQueryParams queryParams;
-    public LogsAllRequest withQueryParams(LogsAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public LogsAllRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
-    
-    public LogsAllHeaders headers;
-    public LogsAllRequest withHeaders(LogsAllHeaders headers) {
-        this.headers = headers;
+    /**
+     * Filter results
+     */
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=filter")
+    public org.openapis.openapi.models.shared.LogsFilter filter;
+    public LogsAllRequest withFilter(org.openapis.openapi.models.shared.LogsFilter filter) {
+        this.filter = filter;
         return this;
     }
     
+    /**
+     * Number of records to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public LogsAllRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public LogsAllSecurity security;
-    public LogsAllRequest withSecurity(LogsAllSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public LogsAllRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public LogsAllRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
         return this;
     }
     

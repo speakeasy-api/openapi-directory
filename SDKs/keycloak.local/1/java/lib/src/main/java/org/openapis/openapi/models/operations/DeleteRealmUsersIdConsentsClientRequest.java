@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRealmUsersIdConsentsClientRequest {
+    /**
+     * Client id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client")
+    public String client;
+    public DeleteRealmUsersIdConsentsClientRequest withClient(String client) {
+        this.client = client;
+        return this;
+    }
     
-    public DeleteRealmUsersIdConsentsClientPathParams pathParams;
-    public DeleteRealmUsersIdConsentsClientRequest withPathParams(DeleteRealmUsersIdConsentsClientPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * User id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteRealmUsersIdConsentsClientRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public DeleteRealmUsersIdConsentsClientRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

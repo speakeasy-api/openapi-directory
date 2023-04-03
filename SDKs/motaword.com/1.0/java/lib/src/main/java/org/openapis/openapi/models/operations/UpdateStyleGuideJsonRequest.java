@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateStyleGuideJsonRequest {
-    
-    public UpdateStyleGuideJsonPathParams pathParams;
-    public UpdateStyleGuideJsonRequest withPathParams(UpdateStyleGuideJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.StyleGuideUploadRequest styleGuideUploadRequest;
+    public UpdateStyleGuideJsonRequest withStyleGuideUploadRequest(org.openapis.openapi.models.shared.StyleGuideUploadRequest styleGuideUploadRequest) {
+        this.styleGuideUploadRequest = styleGuideUploadRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.StyleGuideUploadRequest request;
-    public UpdateStyleGuideJsonRequest withRequest(org.openapis.openapi.models.shared.StyleGuideUploadRequest request) {
-        this.request = request;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public UpdateStyleGuideJsonRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * Style guide ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=styleGuideId")
+    public Long styleGuideId;
+    public UpdateStyleGuideJsonRequest withStyleGuideId(Long styleGuideId) {
+        this.styleGuideId = styleGuideId;
         return this;
     }
     

@@ -44,10 +44,11 @@ public class TimeMachineHistoricalWeather {
      * *Note: For mountains, it is usually better to specify the `place_id` rather than the `lat` and `lon`. When you use `place_id`, you are guaranteed to receive data for the precise elevation of the peak. When you specify the coordinates, the elevation can be less precise.*
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TimeMachineTimeMachineGetResponse timeMachineTimeMachineGet(org.openapis.openapi.models.operations.TimeMachineTimeMachineGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TimeMachineTimeMachineGetResponse timeMachineTimeMachineGet(org.openapis.openapi.models.operations.TimeMachineTimeMachineGetRequest request, org.openapis.openapi.models.operations.TimeMachineTimeMachineGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/time_machine");
         
@@ -55,14 +56,14 @@ public class TimeMachineHistoricalWeather {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TimeMachineTimeMachineGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TimeMachineTimeMachineGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -7,27 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateProjectFormRequest {
-    
-    public UpdateProjectFormPathParams pathParams;
-    public UpdateProjectFormRequest withPathParams(UpdateProjectFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateProjectFormHeaders headers;
-    public UpdateProjectFormRequest withHeaders(UpdateProjectFormHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The updated project model
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.ProjectInput request;
-    public UpdateProjectFormRequest withRequest(org.openapis.openapi.models.shared.ProjectInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ProjectInput projectInput;
+    public UpdateProjectFormRequest withProjectInput(org.openapis.openapi.models.shared.ProjectInput projectInput) {
+        this.projectInput = projectInput;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public UpdateProjectFormRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
+        return this;
+    }
+    
+    /**
+     * The id of the project to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public UpdateProjectFormRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

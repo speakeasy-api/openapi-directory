@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMapVersionNumberCopyrightsFormatRequest {
-    
-    public GetMapVersionNumberCopyrightsFormatPathParams pathParams;
-    public GetMapVersionNumberCopyrightsFormatRequest withPathParams(GetMapVersionNumberCopyrightsFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Specifies the jsonp callback method. Only used when format is jsonp
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public GetMapVersionNumberCopyrightsFormatRequest withCallback(String callback) {
+        this.callback = callback;
         return this;
     }
     
+    /**
+     * Format of the response
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public GetMapVersionNumberCopyrightsFormatFormatEnum format;
+    public GetMapVersionNumberCopyrightsFormatRequest withFormat(GetMapVersionNumberCopyrightsFormatFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetMapVersionNumberCopyrightsFormatQueryParams queryParams;
-    public GetMapVersionNumberCopyrightsFormatRequest withQueryParams(GetMapVersionNumberCopyrightsFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Version of the service to call. The current version is 1
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
+    public GetMapVersionNumberCopyrightsFormatVersionNumberEnum versionNumber;
+    public GetMapVersionNumberCopyrightsFormatRequest withVersionNumber(GetMapVersionNumberCopyrightsFormatVersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
         return this;
     }
     

@@ -45,10 +45,10 @@ public class Labels {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAppsDriveLabelsV2betaLabelInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -86,15 +86,15 @@ public class Labels {
      */
     public org.openapis.openapi.models.operations.DrivelabelsLabelsDeltaResponse drivelabelsLabelsDelta(org.openapis.openapi.models.operations.DrivelabelsLabelsDeltaRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsDeltaPathParams.class, baseUrl, "/v2beta/{name}:delta", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsDeltaRequest.class, baseUrl, "/v2beta/{name}:delta", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAppsDriveLabelsV2betaDeltaUpdateLabelRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsDeltaQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsDeltaRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -132,15 +132,15 @@ public class Labels {
      */
     public org.openapis.openapi.models.operations.DrivelabelsLabelsDisableResponse drivelabelsLabelsDisable(org.openapis.openapi.models.operations.DrivelabelsLabelsDisableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsDisablePathParams.class, baseUrl, "/v2beta/{name}:disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsDisableRequest.class, baseUrl, "/v2beta/{name}:disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAppsDriveLabelsV2betaDisableLabelRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsDisableQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsDisableRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -178,15 +178,15 @@ public class Labels {
      */
     public org.openapis.openapi.models.operations.DrivelabelsLabelsEnableResponse drivelabelsLabelsEnable(org.openapis.openapi.models.operations.DrivelabelsLabelsEnableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsEnablePathParams.class, baseUrl, "/v2beta/{name}:enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsEnableRequest.class, baseUrl, "/v2beta/{name}:enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAppsDriveLabelsV2betaEnableLabelRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsEnableQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsEnableRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -230,7 +230,7 @@ public class Labels {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -268,15 +268,15 @@ public class Labels {
      */
     public org.openapis.openapi.models.operations.DrivelabelsLabelsPublishResponse drivelabelsLabelsPublish(org.openapis.openapi.models.operations.DrivelabelsLabelsPublishRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsPublishPathParams.class, baseUrl, "/v2beta/{name}:publish", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsPublishRequest.class, baseUrl, "/v2beta/{name}:publish", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAppsDriveLabelsV2betaPublishLabelRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsPublishQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsPublishRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -314,13 +314,13 @@ public class Labels {
      */
     public org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsLocksListResponse drivelabelsLabelsRevisionsLocksList(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsLocksListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsLocksListPathParams.class, baseUrl, "/v2beta/{parent}/locks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsLocksListRequest.class, baseUrl, "/v2beta/{parent}/locks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsLocksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsLocksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -358,15 +358,15 @@ public class Labels {
      */
     public org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsBatchDeleteResponse drivelabelsLabelsRevisionsPermissionsBatchDelete(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsBatchDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsBatchDeletePathParams.class, baseUrl, "/v2beta/{parent}/permissions:batchDelete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsBatchDeleteRequest.class, baseUrl, "/v2beta/{parent}/permissions:batchDelete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAppsDriveLabelsV2betaBatchDeleteLabelPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsBatchDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsBatchDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -404,15 +404,15 @@ public class Labels {
      */
     public org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsBatchUpdateResponse drivelabelsLabelsRevisionsPermissionsBatchUpdate(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsBatchUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsBatchUpdatePathParams.class, baseUrl, "/v2beta/{parent}/permissions:batchUpdate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsBatchUpdateRequest.class, baseUrl, "/v2beta/{parent}/permissions:batchUpdate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAppsDriveLabelsV2betaBatchUpdateLabelPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsBatchUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsBatchUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -450,15 +450,15 @@ public class Labels {
      */
     public org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsCreateResponse drivelabelsLabelsRevisionsPermissionsCreate(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsCreatePathParams.class, baseUrl, "/v2beta/{parent}/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsCreateRequest.class, baseUrl, "/v2beta/{parent}/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAppsDriveLabelsV2betaLabelPermission", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -496,13 +496,13 @@ public class Labels {
      */
     public org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsDeleteResponse drivelabelsLabelsRevisionsPermissionsDelete(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsDeletePathParams.class, baseUrl, "/v2beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsDeleteRequest.class, baseUrl, "/v2beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -540,13 +540,13 @@ public class Labels {
      */
     public org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsListResponse drivelabelsLabelsRevisionsPermissionsList(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsListPathParams.class, baseUrl, "/v2beta/{parent}/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsListRequest.class, baseUrl, "/v2beta/{parent}/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsPermissionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -584,15 +584,15 @@ public class Labels {
      */
     public org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsUpdatePermissionsResponse drivelabelsLabelsRevisionsUpdatePermissions(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsUpdatePermissionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsUpdatePermissionsPathParams.class, baseUrl, "/v2beta/{parent}/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsUpdatePermissionsRequest.class, baseUrl, "/v2beta/{parent}/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAppsDriveLabelsV2betaLabelPermission", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsUpdatePermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsRevisionsUpdatePermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -630,15 +630,15 @@ public class Labels {
      */
     public org.openapis.openapi.models.operations.DrivelabelsLabelsUpdateLabelCopyModeResponse drivelabelsLabelsUpdateLabelCopyMode(org.openapis.openapi.models.operations.DrivelabelsLabelsUpdateLabelCopyModeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsUpdateLabelCopyModePathParams.class, baseUrl, "/v2beta/{name}:updateLabelCopyMode", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DrivelabelsLabelsUpdateLabelCopyModeRequest.class, baseUrl, "/v2beta/{name}:updateLabelCopyMode", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAppsDriveLabelsV2betaUpdateLabelCopyModeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsUpdateLabelCopyModeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DrivelabelsLabelsUpdateLabelCopyModeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

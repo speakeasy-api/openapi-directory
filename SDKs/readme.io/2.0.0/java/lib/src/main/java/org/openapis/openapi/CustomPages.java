@@ -34,10 +34,11 @@ public class CustomPages {
      * Create custom page
      * Create a new custom page inside of this project
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCustomPageResponse createCustomPage(org.openapis.openapi.models.operations.CreateCustomPageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCustomPageResponse createCustomPage(org.openapis.openapi.models.shared.CustomPage request, org.openapis.openapi.models.operations.CreateCustomPageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/custompages");
         
@@ -51,7 +52,7 @@ public class CustomPages {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,19 +74,20 @@ public class CustomPages {
      * Delete custom page
      * Delete the custom page with this slug
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteCustomPageResponse deleteCustomPage(org.openapis.openapi.models.operations.DeleteCustomPageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteCustomPageResponse deleteCustomPage(org.openapis.openapi.models.operations.DeleteCustomPageRequest request, org.openapis.openapi.models.operations.DeleteCustomPageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCustomPagePathParams.class, baseUrl, "/custompages/{slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCustomPageRequest.class, baseUrl, "/custompages/{slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -107,19 +109,20 @@ public class CustomPages {
      * Get custom page
      * Returns the custom page with this slug
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCustomPageResponse getCustomPage(org.openapis.openapi.models.operations.GetCustomPageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCustomPageResponse getCustomPage(org.openapis.openapi.models.operations.GetCustomPageRequest request, org.openapis.openapi.models.operations.GetCustomPageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomPagePathParams.class, baseUrl, "/custompages/{slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomPageRequest.class, baseUrl, "/custompages/{slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -141,10 +144,11 @@ public class CustomPages {
      * Get custom pages
      * Returns a list of custom pages associated with the project API key
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCustomPagesResponse getCustomPages(org.openapis.openapi.models.operations.GetCustomPagesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCustomPagesResponse getCustomPages(org.openapis.openapi.models.operations.GetCustomPagesRequest request, org.openapis.openapi.models.operations.GetCustomPagesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/custompages");
         
@@ -152,14 +156,14 @@ public class CustomPages {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCustomPagesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCustomPagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -183,24 +187,25 @@ public class CustomPages {
      * Update custom page
      * Update a custom page with this slug
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateCustomPageResponse updateCustomPage(org.openapis.openapi.models.operations.UpdateCustomPageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateCustomPageResponse updateCustomPage(org.openapis.openapi.models.operations.UpdateCustomPageRequest request, org.openapis.openapi.models.operations.UpdateCustomPageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCustomPagePathParams.class, baseUrl, "/custompages/{slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCustomPageRequest.class, baseUrl, "/custompages/{slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customPage", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

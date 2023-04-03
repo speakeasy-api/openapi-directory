@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetautoApprovevaluefromconfigRequest {
-    
-    public GetautoApprovevaluefromconfigQueryParams queryParams;
-    public GetautoApprovevaluefromconfigRequest withQueryParams(GetautoApprovevaluefromconfigQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetautoApprovevaluefromconfigRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetautoApprovevaluefromconfigRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetautoApprovevaluefromconfigHeaders headers;
-    public GetautoApprovevaluefromconfigRequest withHeaders(GetautoApprovevaluefromconfigHeaders headers) {
-        this.headers = headers;
+    /**
+     * Name of the VTEX account that belongs to the marketplace. All data extracted, and changes added will be posted into this account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public GetautoApprovevaluefromconfigRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    
+    /**
+     * A string that identifies the seller in the marketplace. This ID must be created by the marketplace.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sellerId")
+    public String sellerId;
+    public GetautoApprovevaluefromconfigRequest withSellerId(String sellerId) {
+        this.sellerId = sellerId;
         return this;
     }
     

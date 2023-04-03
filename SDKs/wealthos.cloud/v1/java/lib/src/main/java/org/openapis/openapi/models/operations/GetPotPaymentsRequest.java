@@ -4,34 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPotPaymentsRequest {
-    
-    public GetPotPaymentsPathParams pathParams;
-    public GetPotPaymentsRequest withPathParams(GetPotPaymentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Page number for the query. This end-point has paginations capabilities. This value should be a positive integer value. If this is not provided, both page_size and page_number will be defaulted to 1000 and 1. Results are sorted decending order of the created date &amp; time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_number")
+    public String pageNumber;
+    public GetPotPaymentsRequest withPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
     
-    
-    public GetPotPaymentsQueryParams queryParams;
-    public GetPotPaymentsRequest withQueryParams(GetPotPaymentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page size for the query. This end-point has paginations capabilities. This value should be a positive integer value. If this is not provided, both page_size and page_number will be defaulted to 1000 and 1. Results are sorted decending order of the created date &amp; time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public String pageSize;
+    public GetPotPaymentsRequest withPageSize(String pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public GetPotPaymentsHeaders headers;
-    public GetPotPaymentsRequest withHeaders(GetPotPaymentsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Payment type of the payment to be retrieved from the API (electronic_fund_transfer, card)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payment_type")
+    public String paymentType;
+    public GetPotPaymentsRequest withPaymentType(String paymentType) {
+        this.paymentType = paymentType;
         return this;
     }
     
+    /**
+     * Pot Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pot_id")
+    public String potId;
+    public GetPotPaymentsRequest withPotId(String potId) {
+        this.potId = potId;
+        return this;
+    }
     
-    public GetPotPaymentsSecurity security;
-    public GetPotPaymentsRequest withSecurity(GetPotPaymentsSecurity security) {
-        this.security = security;
+    /**
+     * Purpose of the payment to be retrieved from the API (cash, invest)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=purpose")
+    public String purpose;
+    public GetPotPaymentsRequest withPurpose(String purpose) {
+        this.purpose = purpose;
+        return this;
+    }
+    
+    /**
+     * Service provider of the payment to be retrieved from the API (truelayer, stripe, none)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service_provider")
+    public String serviceProvider;
+    public GetPotPaymentsRequest withServiceProvider(String serviceProvider) {
+        this.serviceProvider = serviceProvider;
+        return this;
+    }
+    
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetPotPaymentsRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

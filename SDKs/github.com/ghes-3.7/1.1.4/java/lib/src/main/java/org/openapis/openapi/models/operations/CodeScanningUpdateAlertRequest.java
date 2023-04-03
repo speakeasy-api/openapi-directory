@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodeScanningUpdateAlertRequest {
-    
-    public CodeScanningUpdateAlertPathParams pathParams;
-    public CodeScanningUpdateAlertRequest withPathParams(CodeScanningUpdateAlertPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CodeScanningUpdateAlertRequestBody requestBody;
+    public CodeScanningUpdateAlertRequest withRequestBody(CodeScanningUpdateAlertRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CodeScanningUpdateAlertRequestBody request;
-    public CodeScanningUpdateAlertRequest withRequest(CodeScanningUpdateAlertRequestBody request) {
-        this.request = request;
+    /**
+     * The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=alert_number")
+    public Long alertNumber;
+    public CodeScanningUpdateAlertRequest withAlertNumber(Long alertNumber) {
+        this.alertNumber = alertNumber;
+        return this;
+    }
+    
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public CodeScanningUpdateAlertRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public CodeScanningUpdateAlertRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

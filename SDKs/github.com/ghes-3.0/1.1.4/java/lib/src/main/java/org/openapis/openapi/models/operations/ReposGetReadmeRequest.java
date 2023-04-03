@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposGetReadmeRequest {
-    
-    public ReposGetReadmePathParams pathParams;
-    public ReposGetReadmeRequest withPathParams(ReposGetReadmePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposGetReadmeRequest withOwner(String owner) {
+        this.owner = owner;
         return this;
     }
     
+    /**
+     * The name of the commit/branch/tag. Default: the repository\u2019s default branch (usually `master`)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
+    public String ref;
+    public ReposGetReadmeRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
     
-    public ReposGetReadmeQueryParams queryParams;
-    public ReposGetReadmeRequest withQueryParams(ReposGetReadmeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposGetReadmeRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

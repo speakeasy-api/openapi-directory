@@ -285,7 +285,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGraphQLResponse postGraphQL(org.openapis.openapi.models.operations.PostGraphQLRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGraphQLResponse postGraphQL(org.openapis.openapi.models.shared.GraphQLRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/graphql");
         

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBehaviorsIdRequest {
-    
-    public GetBehaviorsIdPathParams pathParams;
-    public GetBehaviorsIdRequest withPathParams(GetBehaviorsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Behavior ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetBehaviorsIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

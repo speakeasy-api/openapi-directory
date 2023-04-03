@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOrUpdateProfileSchemaRequest {
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CreateOrUpdateProfileSchemaRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public CreateOrUpdateProfileSchemaHeaders headers;
-    public CreateOrUpdateProfileSchemaRequest withHeaders(CreateOrUpdateProfileSchemaHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CreateOrUpdateProfileSchemaRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Schema request;
-    public CreateOrUpdateProfileSchemaRequest withRequest(org.openapis.openapi.models.shared.Schema request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Schema schema;
+    public CreateOrUpdateProfileSchemaRequest withSchema(org.openapis.openapi.models.shared.Schema schema) {
+        this.schema = schema;
         return this;
     }
     

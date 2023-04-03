@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReisezentrenLocLatLonRequest {
+    /**
+     * Latitude
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lat")
+    public Float lat;
+    public GetReisezentrenLocLatLonRequest withLat(Float lat) {
+        this.lat = lat;
+        return this;
+    }
     
-    public GetReisezentrenLocLatLonPathParams pathParams;
-    public GetReisezentrenLocLatLonRequest withPathParams(GetReisezentrenLocLatLonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Longitude
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lon")
+    public Float lon;
+    public GetReisezentrenLocLatLonRequest withLon(Float lon) {
+        this.lon = lon;
         return this;
     }
     

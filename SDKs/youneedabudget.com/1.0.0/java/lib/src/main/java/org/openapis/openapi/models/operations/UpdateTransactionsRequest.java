@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTransactionsRequest {
-    
-    public UpdateTransactionsPathParams pathParams;
-    public UpdateTransactionsRequest withPathParams(UpdateTransactionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The transactions to update. Each transaction must have either an `id` or `import_id` specified. If `id` is specified as null an `import_id` value can be provided which will allow transaction(s) to be updated by their `import_id`. If an `id` is specified, it will always be used for lookup.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PatchTransactionsWrapper request;
-    public UpdateTransactionsRequest withRequest(org.openapis.openapi.models.shared.PatchTransactionsWrapper request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PatchTransactionsWrapper patchTransactionsWrapper;
+    public UpdateTransactionsRequest withPatchTransactionsWrapper(org.openapis.openapi.models.shared.PatchTransactionsWrapper patchTransactionsWrapper) {
+        this.patchTransactionsWrapper = patchTransactionsWrapper;
+        return this;
+    }
+    
+    /**
+     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=budget_id")
+    public String budgetId;
+    public UpdateTransactionsRequest withBudgetId(String budgetId) {
+        this.budgetId = budgetId;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVodPromotionRequest {
-    
-    public GetVodPromotionPathParams pathParams;
-    public GetVodPromotionRequest withPathParams(GetVodPromotionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public GetVodPromotionRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
         return this;
     }
     
-    
-    public GetVodPromotionSecurity security;
-    public GetVodPromotionRequest withSecurity(GetVodPromotionSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the promotion.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=promotion_id")
+    public Double promotionId;
+    public GetVodPromotionRequest withPromotionId(Double promotionId) {
+        this.promotionId = promotionId;
         return this;
     }
     

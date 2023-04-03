@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2BroadcastservicesIdRequest {
-    
-    public GetApiV2BroadcastservicesIdPathParams pathParams;
-    public GetApiV2BroadcastservicesIdRequest withPathParams(GetApiV2BroadcastservicesIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetApiV2BroadcastservicesIdSecurity security;
-    public GetApiV2BroadcastservicesIdRequest withSecurity(GetApiV2BroadcastservicesIdSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the broadcast service to find.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetApiV2BroadcastservicesIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

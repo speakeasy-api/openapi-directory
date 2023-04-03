@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListPublicRequest {
+    /**
+     * A repository ID. Only return repositories with an ID greater than this ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public Long since;
+    public ReposListPublicRequest withSince(Long since) {
+        this.since = since;
+        return this;
+    }
     
-    public ReposListPublicQueryParams queryParams;
-    public ReposListPublicRequest withQueryParams(ReposListPublicQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specifies the types of repositories to return. Can be one of `all` or `public`. Default: `public`. Note: For GitHub Enterprise Server and GitHub AE, this endpoint will only list repositories available to all users on the enterprise.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=visibility")
+    public ReposListPublicVisibilityEnum visibility;
+    public ReposListPublicRequest withVisibility(ReposListPublicVisibilityEnum visibility) {
+        this.visibility = visibility;
         return this;
     }
     

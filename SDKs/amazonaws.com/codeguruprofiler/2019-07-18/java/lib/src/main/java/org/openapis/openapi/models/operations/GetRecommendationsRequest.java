@@ -4,27 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRecommendationsRequest {
-    
-    public GetRecommendationsPathParams pathParams;
-    public GetRecommendationsRequest withPathParams(GetRecommendationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetRecommendationsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public GetRecommendationsQueryParams queryParams;
-    public GetRecommendationsRequest withQueryParams(GetRecommendationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetRecommendationsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetRecommendationsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public GetRecommendationsHeaders headers;
-    public GetRecommendationsRequest withHeaders(GetRecommendationsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetRecommendationsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetRecommendationsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetRecommendationsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetRecommendationsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     *  The start time of the profile to get analysis data about. You must specify &lt;code&gt;startTime&lt;/code&gt; and &lt;code&gt;endTime&lt;/code&gt;. This is specified using the ISO 8601 format. For example, 2020-06-01T13:15:02.001Z represents 1 millisecond past June 1, 2020 1:15:02 PM UTC. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTime")
+    public OffsetDateTime endTime;
+    public GetRecommendationsRequest withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt; The language used to provide analysis. Specify using a string that is one of the following &lt;code&gt;BCP 47&lt;/code&gt; language codes. &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;de-DE&lt;/code&gt; - German, Germany &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;en-GB&lt;/code&gt; - English, United Kingdom &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;en-US&lt;/code&gt; - English, United States &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;es-ES&lt;/code&gt; - Spanish, Spain &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;fr-FR&lt;/code&gt; - French, France &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;it-IT&lt;/code&gt; - Italian, Italy &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ja-JP&lt;/code&gt; - Japanese, Japan &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ko-KR&lt;/code&gt; - Korean, Republic of Korea &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;pt-BR&lt;/code&gt; - Portugese, Brazil &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;zh-CN&lt;/code&gt; - Chinese, China &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;zh-TW&lt;/code&gt; - Chinese, Taiwan &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public GetRecommendationsRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
+    
+    /**
+     *  The name of the profiling group to get analysis data about. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profilingGroupName")
+    public String profilingGroupName;
+    public GetRecommendationsRequest withProfilingGroupName(String profilingGroupName) {
+        this.profilingGroupName = profilingGroupName;
+        return this;
+    }
+    
+    /**
+     *  The end time of the profile to get analysis data about. You must specify &lt;code&gt;startTime&lt;/code&gt; and &lt;code&gt;endTime&lt;/code&gt;. This is specified using the ISO 8601 format. For example, 2020-06-01T13:15:02.001Z represents 1 millisecond past June 1, 2020 1:15:02 PM UTC. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTime")
+    public OffsetDateTime startTime;
+    public GetRecommendationsRequest withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
         return this;
     }
     

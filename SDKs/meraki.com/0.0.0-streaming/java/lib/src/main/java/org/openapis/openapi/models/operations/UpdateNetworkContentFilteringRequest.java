@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkContentFilteringRequest {
-    
-    public UpdateNetworkContentFilteringPathParams pathParams;
-    public UpdateNetworkContentFilteringRequest withPathParams(UpdateNetworkContentFilteringPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkContentFilteringRequestBody requestBody;
+    public UpdateNetworkContentFilteringRequest withRequestBody(UpdateNetworkContentFilteringRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkContentFilteringRequestBody request;
-    public UpdateNetworkContentFilteringRequest withRequest(UpdateNetworkContentFilteringRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkContentFilteringRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

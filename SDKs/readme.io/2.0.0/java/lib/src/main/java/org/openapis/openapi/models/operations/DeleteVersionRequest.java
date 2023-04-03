@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteVersionRequest {
-    
-    public DeleteVersionPathParams pathParams;
-    public DeleteVersionRequest withPathParams(DeleteVersionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteVersionSecurity security;
-    public DeleteVersionRequest withSecurity(DeleteVersionSecurity security) {
-        this.security = security;
+    /**
+     * Semver version indentifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionId")
+    public String versionId;
+    public DeleteVersionRequest withVersionId(String versionId) {
+        this.versionId = versionId;
         return this;
     }
     

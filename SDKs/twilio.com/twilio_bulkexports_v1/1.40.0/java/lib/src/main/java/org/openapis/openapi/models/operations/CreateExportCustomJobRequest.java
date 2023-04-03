@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateExportCustomJobRequest {
-    
-    public CreateExportCustomJobPathParams pathParams;
-    public CreateExportCustomJobRequest withPathParams(CreateExportCustomJobPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateExportCustomJobCreateExportCustomJobRequest request;
-    public CreateExportCustomJobRequest withRequest(CreateExportCustomJobCreateExportCustomJobRequest request) {
-        this.request = request;
+    public CreateExportCustomJobCreateExportCustomJobRequest requestBody;
+    public CreateExportCustomJobRequest withRequestBody(CreateExportCustomJobCreateExportCustomJobRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateExportCustomJobSecurity security;
-    public CreateExportCustomJobRequest withSecurity(CreateExportCustomJobSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateExportCustomJobRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The type of communication \u2013 Messages or Calls, Conferences, and Participants
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ResourceType")
+    public String resourceType;
+    public CreateExportCustomJobRequest withResourceType(String resourceType) {
+        this.resourceType = resourceType;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutCategoriesIdRequest {
-    
-    public PutCategoriesIdPathParams pathParams;
-    public PutCategoriesIdRequest withPathParams(PutCategoriesIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PutCategoriesIdRequestBody requestBody;
+    public PutCategoriesIdRequest withRequestBody(PutCategoriesIdRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutCategoriesIdRequestBody request;
-    public PutCategoriesIdRequest withRequest(PutCategoriesIdRequestBody request) {
-        this.request = request;
+    /**
+     * The unique identifier of the category.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PutCategoriesIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

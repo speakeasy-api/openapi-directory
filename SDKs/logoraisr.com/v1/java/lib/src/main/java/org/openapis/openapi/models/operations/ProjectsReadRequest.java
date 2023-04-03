@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsReadRequest {
-    
-    public ProjectsReadPathParams pathParams;
-    public ProjectsReadRequest withPathParams(ProjectsReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Number of the project.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_number")
+    public String projectNumber;
+    public ProjectsReadRequest withProjectNumber(String projectNumber) {
+        this.projectNumber = projectNumber;
         return this;
     }
     

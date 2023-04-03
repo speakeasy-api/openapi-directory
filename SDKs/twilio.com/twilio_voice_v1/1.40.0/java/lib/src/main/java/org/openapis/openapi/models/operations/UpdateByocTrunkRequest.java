@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateByocTrunkRequest {
-    
-    public UpdateByocTrunkPathParams pathParams;
-    public UpdateByocTrunkRequest withPathParams(UpdateByocTrunkPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateByocTrunkUpdateByocTrunkRequest request;
-    public UpdateByocTrunkRequest withRequest(UpdateByocTrunkUpdateByocTrunkRequest request) {
-        this.request = request;
+    public UpdateByocTrunkUpdateByocTrunkRequest requestBody;
+    public UpdateByocTrunkRequest withRequestBody(UpdateByocTrunkUpdateByocTrunkRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateByocTrunkSecurity security;
-    public UpdateByocTrunkRequest withSecurity(UpdateByocTrunkSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateByocTrunkRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the BYOC Trunk resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateByocTrunkRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

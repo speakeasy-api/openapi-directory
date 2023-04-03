@@ -33,10 +33,11 @@ public class Thumbnails {
     /**
      * As this is not an insert in a strict sense (it supports uploading/setting of a thumbnail for multiple videos, which doesn't result in creation of a single resource), I use a custom verb here.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.YoutubeThumbnailsSetResponse youtubeThumbnailsSet(org.openapis.openapi.models.operations.YoutubeThumbnailsSetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.YoutubeThumbnailsSetResponse youtubeThumbnailsSet(org.openapis.openapi.models.operations.YoutubeThumbnailsSetRequest request, org.openapis.openapi.models.operations.YoutubeThumbnailsSetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/youtube/v3/thumbnails/set");
         
@@ -44,14 +45,14 @@ public class Thumbnails {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeThumbnailsSetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeThumbnailsSetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

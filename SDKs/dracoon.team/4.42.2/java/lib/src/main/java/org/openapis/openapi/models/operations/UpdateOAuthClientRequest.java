@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOAuthClientRequest {
-    
-    public UpdateOAuthClientPathParams pathParams;
-    public UpdateOAuthClientRequest withPathParams(UpdateOAuthClientPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateOAuthClientHeaders headers;
-    public UpdateOAuthClientRequest withHeaders(UpdateOAuthClientHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateOAuthClientRequest request;
-    public UpdateOAuthClientRequest withRequest(org.openapis.openapi.models.shared.UpdateOAuthClientRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateOAuthClientRequest updateOAuthClientRequest;
+    public UpdateOAuthClientRequest withUpdateOAuthClientRequest(org.openapis.openapi.models.shared.UpdateOAuthClientRequest updateOAuthClientRequest) {
+        this.updateOAuthClientRequest = updateOAuthClientRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UpdateOAuthClientRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * OAuth client ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
+    public String clientId;
+    public UpdateOAuthClientRequest withClientId(String clientId) {
+        this.clientId = clientId;
         return this;
     }
     

@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStatisticsRequest {
+    /**
+     * in IS0 8601 format. eg. `1963-11-22T18:30:00Z`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public OffsetDateTime from;
+    public GetStatisticsRequest withFrom(OffsetDateTime from) {
+        this.from = from;
+        return this;
+    }
     
-    public GetStatisticsQueryParams queryParams;
-    public GetStatisticsRequest withQueryParams(GetStatisticsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * in IS0 8601 format. eg. `1963-11-22T18:30:00Z`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public OffsetDateTime to;
+    public GetStatisticsRequest withTo(OffsetDateTime to) {
+        this.to = to;
         return this;
     }
     

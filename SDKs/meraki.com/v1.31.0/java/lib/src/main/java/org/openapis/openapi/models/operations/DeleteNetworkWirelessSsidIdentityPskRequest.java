@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteNetworkWirelessSsidIdentityPskRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=identityPskId")
+    public String identityPskId;
+    public DeleteNetworkWirelessSsidIdentityPskRequest withIdentityPskId(String identityPskId) {
+        this.identityPskId = identityPskId;
+        return this;
+    }
     
-    public DeleteNetworkWirelessSsidIdentityPskPathParams pathParams;
-    public DeleteNetworkWirelessSsidIdentityPskRequest withPathParams(DeleteNetworkWirelessSsidIdentityPskPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public DeleteNetworkWirelessSsidIdentityPskRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
+    public String number;
+    public DeleteNetworkWirelessSsidIdentityPskRequest withNumber(String number) {
+        this.number = number;
         return this;
     }
     

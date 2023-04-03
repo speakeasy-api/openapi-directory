@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserTSPCreateRequest {
-    
-    public UserTSPCreatePathParams pathParams;
-    public UserTSPCreateRequest withPathParams(UserTSPCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * TSP account.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UserTSPCreateTSPAccountsList request;
-    public UserTSPCreateRequest withRequest(UserTSPCreateTSPAccountsList request) {
-        this.request = request;
+    public UserTSPCreateTSPAccountsList requestBody;
+    public UserTSPCreateRequest withRequestBody(UserTSPCreateTSPAccountsList requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UserTSPCreateRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContactcenterinsightsProjectsLocationsConversationsCreateRequest {
-    
-    public ContactcenterinsightsProjectsLocationsConversationsCreatePathParams pathParams;
-    public ContactcenterinsightsProjectsLocationsConversationsCreateRequest withPathParams(ContactcenterinsightsProjectsLocationsConversationsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ContactcenterinsightsProjectsLocationsConversationsCreateQueryParams queryParams;
-    public ContactcenterinsightsProjectsLocationsConversationsCreateRequest withQueryParams(ContactcenterinsightsProjectsLocationsConversationsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ContactcenterinsightsProjectsLocationsConversationsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1ConversationInput request;
-    public ContactcenterinsightsProjectsLocationsConversationsCreateRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1ConversationInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1ConversationInput googleCloudContactcenterinsightsV1ConversationInput;
+    public ContactcenterinsightsProjectsLocationsConversationsCreateRequest withGoogleCloudContactcenterinsightsV1ConversationInput(org.openapis.openapi.models.shared.GoogleCloudContactcenterinsightsV1ConversationInput googleCloudContactcenterinsightsV1ConversationInput) {
+        this.googleCloudContactcenterinsightsV1ConversationInput = googleCloudContactcenterinsightsV1ConversationInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ContactcenterinsightsProjectsLocationsConversationsCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public ContactcenterinsightsProjectsLocationsConversationsCreateSecurity security;
-    public ContactcenterinsightsProjectsLocationsConversationsCreateRequest withSecurity(ContactcenterinsightsProjectsLocationsConversationsCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ContactcenterinsightsProjectsLocationsConversationsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ContactcenterinsightsProjectsLocationsConversationsCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * A unique ID for the new conversation. This ID will become the final component of the conversation's resource name. If no ID is specified, a server-generated ID will be used. This value should be 4-64 characters and must match the regular expression `^[a-z0-9-]{4,64}$`. Valid characters are `a-z-`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conversationId")
+    public String conversationId;
+    public ContactcenterinsightsProjectsLocationsConversationsCreateRequest withConversationId(String conversationId) {
+        this.conversationId = conversationId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ContactcenterinsightsProjectsLocationsConversationsCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ContactcenterinsightsProjectsLocationsConversationsCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ContactcenterinsightsProjectsLocationsConversationsCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The parent resource of the conversation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public ContactcenterinsightsProjectsLocationsConversationsCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ContactcenterinsightsProjectsLocationsConversationsCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ContactcenterinsightsProjectsLocationsConversationsCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ContactcenterinsightsProjectsLocationsConversationsCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ContactcenterinsightsProjectsLocationsConversationsCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

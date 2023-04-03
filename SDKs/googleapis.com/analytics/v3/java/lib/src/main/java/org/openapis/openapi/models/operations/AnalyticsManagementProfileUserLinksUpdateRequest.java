@@ -7,31 +7,120 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsManagementProfileUserLinksUpdateRequest {
-    
-    public AnalyticsManagementProfileUserLinksUpdatePathParams pathParams;
-    public AnalyticsManagementProfileUserLinksUpdateRequest withPathParams(AnalyticsManagementProfileUserLinksUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AnalyticsManagementProfileUserLinksUpdateQueryParams queryParams;
-    public AnalyticsManagementProfileUserLinksUpdateRequest withQueryParams(AnalyticsManagementProfileUserLinksUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EntityUserLinkInput request;
-    public AnalyticsManagementProfileUserLinksUpdateRequest withRequest(org.openapis.openapi.models.shared.EntityUserLinkInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.EntityUserLinkInput entityUserLinkInput;
+    public AnalyticsManagementProfileUserLinksUpdateRequest withEntityUserLinkInput(org.openapis.openapi.models.shared.EntityUserLinkInput entityUserLinkInput) {
+        this.entityUserLinkInput = entityUserLinkInput;
         return this;
     }
     
+    /**
+     * Account ID to update the user link for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AnalyticsManagementProfileUserLinksUpdateRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public AnalyticsManagementProfileUserLinksUpdateSecurity security;
-    public AnalyticsManagementProfileUserLinksUpdateRequest withSecurity(AnalyticsManagementProfileUserLinksUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AnalyticsManagementProfileUserLinksUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AnalyticsManagementProfileUserLinksUpdateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AnalyticsManagementProfileUserLinksUpdateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Link ID to update the user link for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=linkId")
+    public String linkId;
+    public AnalyticsManagementProfileUserLinksUpdateRequest withLinkId(String linkId) {
+        this.linkId = linkId;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AnalyticsManagementProfileUserLinksUpdateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AnalyticsManagementProfileUserLinksUpdateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * View (Profile ID) to update the user link for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
+    public String profileId;
+    public AnalyticsManagementProfileUserLinksUpdateRequest withProfileId(String profileId) {
+        this.profileId = profileId;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AnalyticsManagementProfileUserLinksUpdateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AnalyticsManagementProfileUserLinksUpdateRequest withUserIp(String userIp) {
+        this.userIp = userIp;
+        return this;
+    }
+    
+    /**
+     * Web Property ID to update the user link for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webPropertyId")
+    public String webPropertyId;
+    public AnalyticsManagementProfileUserLinksUpdateRequest withWebPropertyId(String webPropertyId) {
+        this.webPropertyId = webPropertyId;
         return this;
     }
     

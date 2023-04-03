@@ -43,7 +43,7 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.DeleteProjectsIdResponse deleteProjectsId(org.openapis.openapi.models.operations.DeleteProjectsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProjectsIdPathParams.class, baseUrl, "/projects/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProjectsIdRequest.class, baseUrl, "/projects/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class Projects {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProjectsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProjectsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -123,7 +123,7 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.GetProjectsIdResponse getProjectsId(org.openapis.openapi.models.operations.GetProjectsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectsIdPathParams.class, baseUrl, "/projects/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectsIdRequest.class, baseUrl, "/projects/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -164,12 +164,12 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.PatchProjectsIdResponse patchProjectsId(org.openapis.openapi.models.operations.PatchProjectsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchProjectsIdPathParams.class, baseUrl, "/projects/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchProjectsIdRequest.class, baseUrl, "/projects/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -208,7 +208,7 @@ public class Projects {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostProjectsResponse postProjects(org.openapis.openapi.models.operations.PostProjectsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostProjectsResponse postProjects(org.openapis.openapi.models.operations.PostProjectsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/projects");
         

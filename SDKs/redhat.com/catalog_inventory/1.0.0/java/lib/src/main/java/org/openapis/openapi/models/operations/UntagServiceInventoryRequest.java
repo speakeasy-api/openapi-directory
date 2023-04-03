@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UntagServiceInventoryRequest {
-    
-    public UntagServiceInventoryPathParams pathParams;
-    public UntagServiceInventoryRequest withPathParams(UntagServiceInventoryPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Tag attributes to removed
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Tag[] request;
-    public UntagServiceInventoryRequest withRequest(org.openapis.openapi.models.shared.Tag[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Tag[] requestBody;
+    public UntagServiceInventoryRequest withRequestBody(org.openapis.openapi.models.shared.Tag[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID of the resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UntagServiceInventoryRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

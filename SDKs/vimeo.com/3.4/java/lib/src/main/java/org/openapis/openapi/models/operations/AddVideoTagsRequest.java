@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddVideoTagsRequest {
-    
-    public AddVideoTagsPathParams pathParams;
-    public AddVideoTagsRequest withPathParams(AddVideoTagsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.tag+json")
-    public AddVideoTagsRequestBody request;
-    public AddVideoTagsRequest withRequest(AddVideoTagsRequestBody request) {
-        this.request = request;
+    public AddVideoTagsRequestBody requestBody;
+    public AddVideoTagsRequest withRequestBody(AddVideoTagsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public AddVideoTagsSecurity security;
-    public AddVideoTagsRequest withSecurity(AddVideoTagsSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public AddVideoTagsRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

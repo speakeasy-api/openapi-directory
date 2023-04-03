@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReplaceAlbumCustomThumbRequest {
-    
-    public ReplaceAlbumCustomThumbPathParams pathParams;
-    public ReplaceAlbumCustomThumbRequest withPathParams(ReplaceAlbumCustomThumbPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.picture+json")
-    public ReplaceAlbumCustomThumbRequestBody request;
-    public ReplaceAlbumCustomThumbRequest withRequest(ReplaceAlbumCustomThumbRequestBody request) {
-        this.request = request;
+    public ReplaceAlbumCustomThumbRequestBody requestBody;
+    public ReplaceAlbumCustomThumbRequest withRequestBody(ReplaceAlbumCustomThumbRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The ID of the album.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=album_id")
+    public Double albumId;
+    public ReplaceAlbumCustomThumbRequest withAlbumId(Double albumId) {
+        this.albumId = albumId;
+        return this;
+    }
     
-    public ReplaceAlbumCustomThumbSecurity security;
-    public ReplaceAlbumCustomThumbRequest withSecurity(ReplaceAlbumCustomThumbSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the custom thumbnail.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=thumbnail_id")
+    public Double thumbnailId;
+    public ReplaceAlbumCustomThumbRequest withThumbnailId(Double thumbnailId) {
+        this.thumbnailId = thumbnailId;
+        return this;
+    }
+    
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public ReplaceAlbumCustomThumbRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

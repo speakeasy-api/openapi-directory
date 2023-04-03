@@ -34,27 +34,28 @@ public class Tabledata {
     /**
      * Streams data into BigQuery one record at a time without needing to run a load job. Requires the WRITER dataset role.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryTabledataInsertAllResponse bigqueryTabledataInsertAll(org.openapis.openapi.models.operations.BigqueryTabledataInsertAllRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryTabledataInsertAllResponse bigqueryTabledataInsertAll(org.openapis.openapi.models.operations.BigqueryTabledataInsertAllRequest request, org.openapis.openapi.models.operations.BigqueryTabledataInsertAllSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryTabledataInsertAllPathParams.class, baseUrl, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}/insertAll", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryTabledataInsertAllRequest.class, baseUrl, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}/insertAll", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "tableDataInsertAllRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryTabledataInsertAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryTabledataInsertAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class Tabledata {
     /**
      * Retrieves table data from a specified set of rows. Requires the READER dataset role.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryTabledataListResponse bigqueryTabledataList(org.openapis.openapi.models.operations.BigqueryTabledataListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryTabledataListResponse bigqueryTabledataList(org.openapis.openapi.models.operations.BigqueryTabledataListRequest request, org.openapis.openapi.models.operations.BigqueryTabledataListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryTabledataListPathParams.class, baseUrl, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}/data", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryTabledataListRequest.class, baseUrl, "/projects/{projectId}/datasets/{datasetId}/tables/{tableId}/data", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryTabledataListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryTabledataListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

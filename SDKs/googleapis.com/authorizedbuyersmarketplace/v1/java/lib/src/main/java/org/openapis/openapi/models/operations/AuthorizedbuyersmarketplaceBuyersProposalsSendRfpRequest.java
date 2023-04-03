@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest {
-    
-    public AuthorizedbuyersmarketplaceBuyersProposalsSendRfpPathParams pathParams;
-    public AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest withPathParams(AuthorizedbuyersmarketplaceBuyersProposalsSendRfpPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AuthorizedbuyersmarketplaceBuyersProposalsSendRfpQueryParams queryParams;
-    public AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest withQueryParams(AuthorizedbuyersmarketplaceBuyersProposalsSendRfpQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SendRfpRequest request;
-    public AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest withRequest(org.openapis.openapi.models.shared.SendRfpRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SendRfpRequest sendRfpRequest;
+    public AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest withSendRfpRequest(org.openapis.openapi.models.shared.SendRfpRequest sendRfpRequest) {
+        this.sendRfpRequest = sendRfpRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public AuthorizedbuyersmarketplaceBuyersProposalsSendRfpSecurity security;
-    public AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest withSecurity(AuthorizedbuyersmarketplaceBuyersProposalsSendRfpSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * Required. The current buyer who is sending the RFP in the format: `buyers/{accountId}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=buyer")
+    public String buyer;
+    public AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest withBuyer(String buyer) {
+        this.buyer = buyer;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

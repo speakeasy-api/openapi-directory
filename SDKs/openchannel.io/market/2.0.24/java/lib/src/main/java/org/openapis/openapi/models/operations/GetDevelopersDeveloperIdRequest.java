@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDevelopersDeveloperIdRequest {
-    
-    public GetDevelopersDeveloperIdPathParams pathParams;
-    public GetDevelopersDeveloperIdRequest withPathParams(GetDevelopersDeveloperIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the developer to be located
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=developerId")
+    public String developerId;
+    public GetDevelopersDeveloperIdRequest withDeveloperId(String developerId) {
+        this.developerId = developerId;
         return this;
     }
     

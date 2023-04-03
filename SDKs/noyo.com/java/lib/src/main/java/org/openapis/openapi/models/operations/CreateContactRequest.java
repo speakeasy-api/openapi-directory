@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateContactRequest {
-    
-    public CreateContactPathParams pathParams;
-    public CreateContactRequest withPathParams(CreateContactPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ContactCreateRequest contactCreateRequest;
+    public CreateContactRequest withContactCreateRequest(org.openapis.openapi.models.shared.ContactCreateRequest contactCreateRequest) {
+        this.contactCreateRequest = contactCreateRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ContactCreateRequest request;
-    public CreateContactRequest withRequest(org.openapis.openapi.models.shared.ContactCreateRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the group in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public CreateContactRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

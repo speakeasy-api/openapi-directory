@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeprovisionIpamPoolCidrRequest {
-    
-    public GETDeprovisionIpamPoolCidrQueryParams queryParams;
-    public GETDeprovisionIpamPoolCidrRequest withQueryParams(GETDeprovisionIpamPoolCidrQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeprovisionIpamPoolCidrActionEnum action;
+    public GETDeprovisionIpamPoolCidrRequest withAction(GETDeprovisionIpamPoolCidrActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The CIDR which you want to deprovision from the pool.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Cidr")
+    public String cidr;
+    public GETDeprovisionIpamPoolCidrRequest withCidr(String cidr) {
+        this.cidr = cidr;
+        return this;
+    }
     
-    public GETDeprovisionIpamPoolCidrHeaders headers;
-    public GETDeprovisionIpamPoolCidrRequest withHeaders(GETDeprovisionIpamPoolCidrHeaders headers) {
-        this.headers = headers;
+    /**
+     * A check for whether you have the required permissions for the action without actually making the request and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETDeprovisionIpamPoolCidrRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The ID of the pool that has the CIDR you want to deprovision.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IpamPoolId")
+    public String ipamPoolId;
+    public GETDeprovisionIpamPoolCidrRequest withIpamPoolId(String ipamPoolId) {
+        this.ipamPoolId = ipamPoolId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeprovisionIpamPoolCidrVersionEnum version;
+    public GETDeprovisionIpamPoolCidrRequest withVersion(GETDeprovisionIpamPoolCidrVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeprovisionIpamPoolCidrRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeprovisionIpamPoolCidrRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeprovisionIpamPoolCidrRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeprovisionIpamPoolCidrRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeprovisionIpamPoolCidrRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeprovisionIpamPoolCidrRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeprovisionIpamPoolCidrRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

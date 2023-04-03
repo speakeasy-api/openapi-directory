@@ -34,10 +34,11 @@ public class General {
      * Subscribe to notifications
      * Creates a subscription to notifications informing you of events on your platform. After the subscription is created, the events specified in the configuration will be sent to the URL specified in the configuration. Subscriptions must be configured on a per-event basis (as opposed to, for example, a per-account holder basis), so all event notifications of a marketplace and of a given type will be sent to the same endpoint(s). A marketplace may have multiple endpoints if desired; an event notification may be sent to as many or as few different endpoints as configured.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCreateNotificationConfigurationResponse postCreateNotificationConfiguration(org.openapis.openapi.models.operations.PostCreateNotificationConfigurationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCreateNotificationConfigurationResponse postCreateNotificationConfiguration(org.openapis.openapi.models.shared.CreateNotificationConfigurationRequest request, org.openapis.openapi.models.operations.PostCreateNotificationConfigurationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/createNotificationConfiguration");
         
@@ -48,7 +49,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,10 +85,11 @@ public class General {
      * Delete a notification subscription configuration
      * Deletes an existing notification subscription configuration. After the subscription is deleted, no further event notifications will be sent to the URL defined in the subscription.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostDeleteNotificationConfigurationsResponse postDeleteNotificationConfigurations(org.openapis.openapi.models.operations.PostDeleteNotificationConfigurationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostDeleteNotificationConfigurationsResponse postDeleteNotificationConfigurations(org.openapis.openapi.models.shared.DeleteNotificationConfigurationRequest request, org.openapis.openapi.models.operations.PostDeleteNotificationConfigurationsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/deleteNotificationConfigurations");
         
@@ -98,7 +100,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -134,10 +136,11 @@ public class General {
      * Get a notification subscription configuration
      * Returns the details of the configuration of a notification subscription.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetNotificationConfigurationResponse postGetNotificationConfiguration(org.openapis.openapi.models.operations.PostGetNotificationConfigurationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetNotificationConfigurationResponse postGetNotificationConfiguration(org.openapis.openapi.models.shared.GetNotificationConfigurationRequest request, org.openapis.openapi.models.operations.PostGetNotificationConfigurationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/getNotificationConfiguration");
         
@@ -148,7 +151,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -184,10 +187,11 @@ public class General {
      * Get a list of notification subscription configurations
      * Returns the details of the configurations of all of the notification subscriptions in the platform of the executing user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetNotificationConfigurationListResponse postGetNotificationConfigurationList(org.openapis.openapi.models.operations.PostGetNotificationConfigurationListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetNotificationConfigurationListResponse postGetNotificationConfigurationList(java.util.Map<String, Object> request, org.openapis.openapi.models.operations.PostGetNotificationConfigurationListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/getNotificationConfigurationList");
         
@@ -198,7 +202,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -234,10 +238,11 @@ public class General {
      * Test a notification configuration
      * Tests an existing notification subscription configuration. For each event type specified, a test notification will be generated and sent to the URL configured in the subscription specified.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostTestNotificationConfigurationResponse postTestNotificationConfiguration(org.openapis.openapi.models.operations.PostTestNotificationConfigurationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostTestNotificationConfigurationResponse postTestNotificationConfiguration(org.openapis.openapi.models.shared.TestNotificationConfigurationRequest request, org.openapis.openapi.models.operations.PostTestNotificationConfigurationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/testNotificationConfiguration");
         
@@ -248,7 +253,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -284,10 +289,11 @@ public class General {
      * Update a notification subscription configuration
      * Updates an existing notification subscription configuration. If you are updating the event types, you must provide all event types, otherwise the previous event type configuration will be overwritten.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUpdateNotificationConfigurationResponse postUpdateNotificationConfiguration(org.openapis.openapi.models.operations.PostUpdateNotificationConfigurationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUpdateNotificationConfigurationResponse postUpdateNotificationConfiguration(org.openapis.openapi.models.shared.UpdateNotificationConfigurationRequest request, org.openapis.openapi.models.operations.PostUpdateNotificationConfigurationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/updateNotificationConfiguration");
         
@@ -298,7 +304,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

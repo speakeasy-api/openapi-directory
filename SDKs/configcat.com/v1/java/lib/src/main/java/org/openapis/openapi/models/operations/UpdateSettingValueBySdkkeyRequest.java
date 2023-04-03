@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSettingValueBySdkkeyRequest {
-    
-    public UpdateSettingValueBySdkkeyPathParams pathParams;
-    public UpdateSettingValueBySdkkeyRequest withPathParams(UpdateSettingValueBySdkkeyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateSettingValueBySdkkeyQueryParams queryParams;
-    public UpdateSettingValueBySdkkeyRequest withQueryParams(UpdateSettingValueBySdkkeyQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public UpdateSettingValueBySdkkeyHeaders headers;
-    public UpdateSettingValueBySdkkeyRequest withHeaders(UpdateSettingValueBySdkkeyHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.JsonPatchInput request;
-    public UpdateSettingValueBySdkkeyRequest withRequest(org.openapis.openapi.models.shared.JsonPatchInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.JsonPatchInput jsonPatchInput;
+    public UpdateSettingValueBySdkkeyRequest withJsonPatchInput(org.openapis.openapi.models.shared.JsonPatchInput jsonPatchInput) {
+        this.jsonPatchInput = jsonPatchInput;
+        return this;
+    }
+    
+    /**
+     * The ConfigCat SDK Key. (https://app.configcat.com/sdkkey)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CONFIGCAT-SDKKEY")
+    public String xConfigcatSdkkey;
+    public UpdateSettingValueBySdkkeyRequest withXConfigcatSdkkey(String xConfigcatSdkkey) {
+        this.xConfigcatSdkkey = xConfigcatSdkkey;
+        return this;
+    }
+    
+    /**
+     * The reason note for the Audit Log if the Product's "Config changes require a reason" preference is turned on.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
+    public String reason;
+    public UpdateSettingValueBySdkkeyRequest withReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    
+    /**
+     * The key or id of the Setting.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingKeyOrId")
+    public String settingKeyOrId;
+    public UpdateSettingValueBySdkkeyRequest withSettingKeyOrId(String settingKeyOrId) {
+        this.settingKeyOrId = settingKeyOrId;
         return this;
     }
     

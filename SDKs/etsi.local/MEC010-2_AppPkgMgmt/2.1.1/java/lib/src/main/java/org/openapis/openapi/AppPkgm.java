@@ -43,13 +43,13 @@ public class AppPkgm {
      */
     public org.openapis.openapi.models.operations.AppDGETResponse appDGET(org.openapis.openapi.models.operations.AppDGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppDGETPathParams.class, baseUrl, "/onboarded_app_packages/{appDId}/appd", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppDGETRequest.class, baseUrl, "/onboarded_app_packages/{appDId}/appd", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppDGETQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppDGETRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -100,7 +100,7 @@ public class AppPkgm {
      */
     public org.openapis.openapi.models.operations.AppDIdGETResponse appDIdGET(org.openapis.openapi.models.operations.AppDIdGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppDIdGETPathParams.class, baseUrl, "/onboarded_app_packages/{appDId}/package_content", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppDIdGETRequest.class, baseUrl, "/onboarded_app_packages/{appDId}/package_content", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -141,12 +141,12 @@ public class AppPkgm {
      */
     public org.openapis.openapi.models.operations.AppDIdPUTResponse appDIdPUT(org.openapis.openapi.models.operations.AppDIdPUTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppDIdPUTPathParams.class, baseUrl, "/onboarded_app_packages/{appDId}/package_content", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppDIdPUTRequest.class, baseUrl, "/onboarded_app_packages/{appDId}/package_content", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         
@@ -184,7 +184,7 @@ public class AppPkgm {
      */
     public org.openapis.openapi.models.operations.AppPkgGETResponse appPkgGET(org.openapis.openapi.models.operations.AppPkgGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppPkgGETPathParams.class, baseUrl, "/app_packages/{appPkgId}/package_content", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppPkgGETRequest.class, baseUrl, "/app_packages/{appPkgId}/package_content", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -225,13 +225,13 @@ public class AppPkgm {
      */
     public org.openapis.openapi.models.operations.AppPkgIdGETResponse appPkgIdGET(org.openapis.openapi.models.operations.AppPkgIdGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppPkgIdGETPathParams.class, baseUrl, "/app_packages/{appPkgId}/appd", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppPkgIdGETRequest.class, baseUrl, "/app_packages/{appPkgId}/appd", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppPkgIdGETQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppPkgIdGETRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -282,12 +282,12 @@ public class AppPkgm {
      */
     public org.openapis.openapi.models.operations.AppPkgPUTResponse appPkgPUT(org.openapis.openapi.models.operations.AppPkgPUTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppPkgPUTPathParams.class, baseUrl, "/app_packages/{appPkgId}/package_content", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppPkgPUTRequest.class, baseUrl, "/app_packages/{appPkgId}/package_content", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         
@@ -325,7 +325,7 @@ public class AppPkgm {
      */
     public org.openapis.openapi.models.operations.AppPackageDELETEResponse appPackageDELETE(org.openapis.openapi.models.operations.AppPackageDELETERequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppPackageDELETEPathParams.class, baseUrl, "/app_packages/{appPkgId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppPackageDELETERequest.class, baseUrl, "/app_packages/{appPkgId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -366,7 +366,7 @@ public class AppPkgm {
      */
     public org.openapis.openapi.models.operations.AppPackageGETResponse appPackageGET(org.openapis.openapi.models.operations.AppPackageGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppPackageGETPathParams.class, baseUrl, "/app_packages/{appPkgId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppPackageGETRequest.class, baseUrl, "/app_packages/{appPkgId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -413,12 +413,12 @@ public class AppPkgm {
      */
     public org.openapis.openapi.models.operations.AppPackagePATCHResponse appPackagePATCH(org.openapis.openapi.models.operations.AppPackagePATCHRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppPackagePATCHPathParams.class, baseUrl, "/app_packages/{appPkgId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppPackagePATCHRequest.class, baseUrl, "/app_packages/{appPkgId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "appPkgInfoModifications", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -471,7 +471,7 @@ public class AppPkgm {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppPackagesGETQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AppPackagesGETRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -516,7 +516,7 @@ public class AppPkgm {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppPackagesPOSTResponse appPackagesPOST(org.openapis.openapi.models.operations.AppPackagesPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppPackagesPOSTResponse appPackagesPOST(org.openapis.openapi.models.shared.CreateAppPkg request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/app_packages");
         
@@ -570,7 +570,7 @@ public class AppPkgm {
      */
     public org.openapis.openapi.models.operations.IndividualSubscriptionDELETEResponse individualSubscriptionDELETE(org.openapis.openapi.models.operations.IndividualSubscriptionDELETERequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IndividualSubscriptionDELETEPathParams.class, baseUrl, "/subscriptions/{subscriptionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IndividualSubscriptionDELETERequest.class, baseUrl, "/subscriptions/{subscriptionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -611,7 +611,7 @@ public class AppPkgm {
      */
     public org.openapis.openapi.models.operations.IndividualSubscriptionGETResponse individualSubscriptionGET(org.openapis.openapi.models.operations.IndividualSubscriptionGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IndividualSubscriptionGETPathParams.class, baseUrl, "/subscriptions/{subscriptionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IndividualSubscriptionGETRequest.class, baseUrl, "/subscriptions/{subscriptionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -702,7 +702,7 @@ public class AppPkgm {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubscriptionsPOSTResponse subscriptionsPOST(org.openapis.openapi.models.operations.SubscriptionsPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubscriptionsPOSTResponse subscriptionsPOST(org.openapis.openapi.models.shared.AppPkgSubscription request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/subscriptions");
         

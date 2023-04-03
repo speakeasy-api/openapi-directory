@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchDialingPermissionsCountryRequest {
-    
-    public FetchDialingPermissionsCountryPathParams pathParams;
-    public FetchDialingPermissionsCountryRequest withPathParams(FetchDialingPermissionsCountryPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchDialingPermissionsCountrySecurity security;
-    public FetchDialingPermissionsCountryRequest withSecurity(FetchDialingPermissionsCountrySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchDialingPermissionsCountryRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the DialingPermissions Country resource to fetch
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IsoCode")
+    public String isoCode;
+    public FetchDialingPermissionsCountryRequest withIsoCode(String isoCode) {
+        this.isoCode = isoCode;
         return this;
     }
     

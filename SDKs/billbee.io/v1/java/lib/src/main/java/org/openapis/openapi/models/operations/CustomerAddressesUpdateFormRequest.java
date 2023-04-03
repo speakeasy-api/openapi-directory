@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomerAddressesUpdateFormRequest {
-    
-    public CustomerAddressesUpdateFormPathParams pathParams;
-    public CustomerAddressesUpdateFormRequest withPathParams(CustomerAddressesUpdateFormPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel;
+    public CustomerAddressesUpdateFormRequest withBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel) {
+        this.billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel request;
-    public CustomerAddressesUpdateFormRequest withRequest(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel request) {
-        this.request = request;
+    /**
+     * The id of the address
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CustomerAddressesUpdateFormRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

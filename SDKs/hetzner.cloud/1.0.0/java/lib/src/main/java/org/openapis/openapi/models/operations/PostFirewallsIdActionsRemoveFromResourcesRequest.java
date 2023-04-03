@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostFirewallsIdActionsRemoveFromResourcesRequest {
-    
-    public PostFirewallsIdActionsRemoveFromResourcesPathParams pathParams;
-    public PostFirewallsIdActionsRemoveFromResourcesRequest withPathParams(PostFirewallsIdActionsRemoveFromResourcesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequest requestBody;
+    public PostFirewallsIdActionsRemoveFromResourcesRequest withRequestBody(PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequest request;
-    public PostFirewallsIdActionsRemoveFromResourcesRequest withRequest(PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequest request) {
-        this.request = request;
+    /**
+     * ID of the Firewall
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostFirewallsIdActionsRemoveFromResourcesRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

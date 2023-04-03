@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TemplatesCreateRequest {
-    
-    public TemplatesCreatePathParams pathParams;
-    public TemplatesCreateRequest withPathParams(TemplatesCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TemplateRequest request;
-    public TemplatesCreateRequest withRequest(org.openapis.openapi.models.shared.TemplateRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TemplateRequest templateRequest;
+    public TemplatesCreateRequest withTemplateRequest(org.openapis.openapi.models.shared.TemplateRequest templateRequest) {
+        this.templateRequest = templateRequest;
         return this;
     }
     
-    
-    public TemplatesCreateSecurity security;
-    public TemplatesCreateRequest withSecurity(TemplatesCreateSecurity security) {
-        this.security = security;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public TemplatesCreateRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

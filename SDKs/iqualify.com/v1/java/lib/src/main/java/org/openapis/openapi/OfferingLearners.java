@@ -40,12 +40,12 @@ public class OfferingLearners {
      */
     public org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdUsersMarkerEmailMarksResponse deleteOfferingsOfferingIdUsersMarkerEmailMarks(org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdUsersMarkerEmailMarksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdUsersMarkerEmailMarksPathParams.class, baseUrl, "/offerings/{offeringId}/users/{markerEmail}/marks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdUsersMarkerEmailMarksRequest.class, baseUrl, "/offerings/{offeringId}/users/{markerEmail}/marks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -93,7 +93,7 @@ public class OfferingLearners {
      */
     public org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdUsersUserEmailResponse deleteOfferingsOfferingIdUsersUserEmail(org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdUsersUserEmailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdUsersUserEmailPathParams.class, baseUrl, "/offerings/{offeringId}/users/{userEmail}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdUsersUserEmailRequest.class, baseUrl, "/offerings/{offeringId}/users/{userEmail}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -135,13 +135,13 @@ public class OfferingLearners {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersResponse getOfferingsOfferingIdUsers(org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersPathParams.class, baseUrl, "/offerings/{offeringId}/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersRequest.class, baseUrl, "/offerings/{offeringId}/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -189,7 +189,7 @@ public class OfferingLearners {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersMarkerEmailMarksResponse getOfferingsOfferingIdUsersMarkerEmailMarks(org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersMarkerEmailMarksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersMarkerEmailMarksPathParams.class, baseUrl, "/offerings/{offeringId}/users/{markerEmail}/marks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdUsersMarkerEmailMarksRequest.class, baseUrl, "/offerings/{offeringId}/users/{markerEmail}/marks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -237,12 +237,12 @@ public class OfferingLearners {
      */
     public org.openapis.openapi.models.operations.PatchUsersUserEmailTransferResponse patchUsersUserEmailTransfer(org.openapis.openapi.models.operations.PatchUsersUserEmailTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchUsersUserEmailTransferPathParams.class, baseUrl, "/users/{userEmail}/transfer", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchUsersUserEmailTransferRequest.class, baseUrl, "/users/{userEmail}/transfer", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "transferRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -284,12 +284,12 @@ public class OfferingLearners {
      */
     public org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersResponse postOfferingsOfferingIdUsers(org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersPathParams.class, baseUrl, "/offerings/{offeringId}/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersRequest.class, baseUrl, "/offerings/{offeringId}/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -345,12 +345,12 @@ public class OfferingLearners {
      */
     public org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersMarkerEmailMarksResponse postOfferingsOfferingIdUsersMarkerEmailMarks(org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersMarkerEmailMarksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersMarkerEmailMarksPathParams.class, baseUrl, "/offerings/{offeringId}/users/{markerEmail}/marks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersMarkerEmailMarksRequest.class, baseUrl, "/offerings/{offeringId}/users/{markerEmail}/marks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

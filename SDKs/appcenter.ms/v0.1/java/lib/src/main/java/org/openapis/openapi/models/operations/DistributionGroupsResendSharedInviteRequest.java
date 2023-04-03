@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsResendSharedInviteRequest {
-    
-    public DistributionGroupsResendSharedInvitePathParams pathParams;
-    public DistributionGroupsResendSharedInviteRequest withPathParams(DistributionGroupsResendSharedInvitePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The list of members to add
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DistributionGroupsResendSharedInviteRequestBody request;
-    public DistributionGroupsResendSharedInviteRequest withRequest(DistributionGroupsResendSharedInviteRequestBody request) {
-        this.request = request;
+    public DistributionGroupsResendSharedInviteRequestBody requestBody;
+    public DistributionGroupsResendSharedInviteRequest withRequestBody(DistributionGroupsResendSharedInviteRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the distribution group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
+    public String distributionGroupName;
+    public DistributionGroupsResendSharedInviteRequest withDistributionGroupName(String distributionGroupName) {
+        this.distributionGroupName = distributionGroupName;
+        return this;
+    }
     
-    public DistributionGroupsResendSharedInviteSecurity security;
-    public DistributionGroupsResendSharedInviteRequest withSecurity(DistributionGroupsResendSharedInviteSecurity security) {
-        this.security = security;
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public DistributionGroupsResendSharedInviteRequest withOrgName(String orgName) {
+        this.orgName = orgName;
         return this;
     }
     

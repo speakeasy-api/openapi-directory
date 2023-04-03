@@ -18,15 +18,12 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.PolicytroubleshooterIamTroubleshootSecurity;
-import org.openapis.openapi.models.operations.PolicytroubleshooterIamTroubleshootQueryParams;
 import org.openapis.openapi.models.operations.PolicytroubleshooterIamTroubleshootRequest;
 import org.openapis.openapi.models.operations.PolicytroubleshooterIamTroubleshootResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest;
 import org.openapis.openapi.models.shared.GoogleCloudPolicytroubleshooterV1AccessTuple;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -35,37 +32,30 @@ public class Application {
                 .build();
 
             PolicytroubleshooterIamTroubleshootRequest req = new PolicytroubleshooterIamTroubleshootRequest() {{
-                security = new PolicytroubleshooterIamTroubleshootSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                queryParams = new PolicytroubleshooterIamTroubleshootQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    key = "nulla";
-                    oauthToken = "corrupti";
-                    prettyPrint = false;
-                    quotaUser = "illum";
-                    uploadType = "vel";
-                    uploadProtocol = "error";
-                }};
-                request = new GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest() {{
+                dollarXgafv = "2";
+                googleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest = new GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest() {{
                     accessTuple = new GoogleCloudPolicytroubleshooterV1AccessTuple() {{
-                        fullResourceName = "deserunt";
-                        permission = "suscipit";
-                        principal = "iure";
+                        fullResourceName = "provident";
+                        permission = "distinctio";
+                        principal = "quibusdam";
                     }};
                 }};
-            }};            
+                accessToken = "unde";
+                alt = "proto";
+                callback = "corrupti";
+                fields = "illum";
+                key = "vel";
+                oauthToken = "error";
+                prettyPrint = false;
+                quotaUser = "deserunt";
+                uploadType = "suscipit";
+                uploadProtocol = "iure";
+            }}            
 
-            PolicytroubleshooterIamTroubleshootResponse res = sdk.iam.policytroubleshooterIamTroubleshoot(req);
+            PolicytroubleshooterIamTroubleshootResponse res = sdk.iam.policytroubleshooterIamTroubleshoot(req, new PolicytroubleshooterIamTroubleshootSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.googleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponse.isPresent()) {
                 // handle response
@@ -77,7 +67,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### iam

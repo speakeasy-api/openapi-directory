@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendAnSmsRequest {
-    
-    public SendAnSmsPathParams pathParams;
-    public SendAnSmsRequest withPathParams(SendAnSmsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public org.openapis.openapi.models.shared.NewMessage newMessage;
+    public SendAnSmsRequest withNewMessage(org.openapis.openapi.models.shared.NewMessage newMessage) {
+        this.newMessage = newMessage;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.NewMessage request;
-    public SendAnSmsRequest withRequest(org.openapis.openapi.models.shared.NewMessage request) {
-        this.request = request;
+    /**
+     * The format of the response
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public SendAnSmsFormatEnum format;
+    public SendAnSmsRequest withFormat(SendAnSmsFormatEnum format) {
+        this.format = format;
         return this;
     }
     

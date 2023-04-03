@@ -4,13 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IndicesRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public String endDate;
+    public IndicesRequest withEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
     
-    public IndicesQueryParams queryParams;
-    public IndicesRequest withQueryParams(IndicesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exchanges")
+    public String exchanges;
+    public IndicesRequest withExchanges(String exchanges) {
+        this.exchanges = exchanges;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public IndicesRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lowCap")
+    public String lowCap;
+    public IndicesRequest withLowCap(String lowCap) {
+        this.lowCap = lowCap;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public String startDate;
+    public IndicesRequest withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeHorizon")
+    public String timeHorizon;
+    public IndicesRequest withTimeHorizon(String timeHorizon) {
+        this.timeHorizon = timeHorizon;
         return this;
     }
     

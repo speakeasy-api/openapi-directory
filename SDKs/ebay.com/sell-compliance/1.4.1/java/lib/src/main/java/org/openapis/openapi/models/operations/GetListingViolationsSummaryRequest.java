@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListingViolationsSummaryRequest {
-    
-    public GetListingViolationsSummaryQueryParams queryParams;
-    public GetListingViolationsSummaryRequest withQueryParams(GetListingViolationsSummaryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Use this header to specify the eBay marketplace identifier. Supported values for this header can be found in the MarketplaceIdEnum type definition. Note that Version 1.4.0 of the Compliance API is only supported on the US, UK, Australia, Canada {English), and Germany sites.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public GetListingViolationsSummaryRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     
-    
-    public GetListingViolationsSummaryHeaders headers;
-    public GetListingViolationsSummaryRequest withHeaders(GetListingViolationsSummaryHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetListingViolationsSummarySecurity security;
-    public GetListingViolationsSummaryRequest withSecurity(GetListingViolationsSummarySecurity security) {
-        this.security = security;
+    /**
+     * A user passes in one or more compliance type values through this query parameter. See ComplianceTypeEnum for more information on the supported compliance types that can be passed in here. If more than one compliance type value is used, delimit these values with a comma. If no compliance type values are passed in, the listing count for all compliance types will be returned. Note: Only a canned response, with counts for all listing compliance types, is returned in the Sandbox environment. Due to this limitation, the compliance_type query parameter (if used) will not have an effect on the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=compliance_type")
+    public String complianceType;
+    public GetListingViolationsSummaryRequest withComplianceType(String complianceType) {
+        this.complianceType = complianceType;
         return this;
     }
     

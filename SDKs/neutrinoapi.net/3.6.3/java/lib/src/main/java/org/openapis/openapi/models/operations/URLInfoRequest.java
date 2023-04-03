@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class URLInfoRequest {
+    /**
+     * If this URL responds with html, text, json or xml then return the response. This option is useful if you want to perform further processing on the URL content (e.g. with the HTML Extract or HTML Clean APIs)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fetch-content")
+    public Boolean fetchContent;
+    public URLInfoRequest withFetchContent(Boolean fetchContent) {
+        this.fetchContent = fetchContent;
+        return this;
+    }
     
-    public URLInfoQueryParams queryParams;
-    public URLInfoRequest withQueryParams(URLInfoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Ignore any TLS/SSL certificate errors and load the URL anyway
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ignore-certificate-errors")
+    public Boolean ignoreCertificateErrors;
+    public URLInfoRequest withIgnoreCertificateErrors(Boolean ignoreCertificateErrors) {
+        this.ignoreCertificateErrors = ignoreCertificateErrors;
+        return this;
+    }
+    
+    /**
+     * If the request fails for any reason try again this many times
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=retry")
+    public Integer retry;
+    public URLInfoRequest withRetry(Integer retry) {
+        this.retry = retry;
+        return this;
+    }
+    
+    /**
+     * Timeout in seconds. Give up if still trying to load the URL after this number of seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
+    public Integer timeout;
+    public URLInfoRequest withTimeout(Integer timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    
+    /**
+     * The URL to probe
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public String url;
+    public URLInfoRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

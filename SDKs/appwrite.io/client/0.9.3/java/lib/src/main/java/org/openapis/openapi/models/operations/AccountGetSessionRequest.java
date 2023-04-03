@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountGetSessionRequest {
-    
-    public AccountGetSessionPathParams pathParams;
-    public AccountGetSessionRequest withPathParams(AccountGetSessionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AccountGetSessionSecurity security;
-    public AccountGetSessionRequest withSecurity(AccountGetSessionSecurity security) {
-        this.security = security;
+    /**
+     * Session unique ID. Use the string 'current' to get the current device session.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sessionId")
+    public String sessionId;
+    public AccountGetSessionRequest withSessionId(String sessionId) {
+        this.sessionId = sessionId;
         return this;
     }
     

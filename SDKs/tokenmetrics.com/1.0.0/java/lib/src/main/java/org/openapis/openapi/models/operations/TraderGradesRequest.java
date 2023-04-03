@@ -4,13 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TraderGradesRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public String endDate;
+    public TraderGradesRequest withEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
     
-    public TraderGradesQueryParams queryParams;
-    public TraderGradesRequest withQueryParams(TraderGradesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public TraderGradesRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public String startDate;
+    public TraderGradesRequest withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tokens")
+    public String tokens;
+    public TraderGradesRequest withTokens(String tokens) {
+        this.tokens = tokens;
         return this;
     }
     

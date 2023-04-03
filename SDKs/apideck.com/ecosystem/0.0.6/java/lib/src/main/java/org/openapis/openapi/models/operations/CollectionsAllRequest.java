@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectionsAllRequest {
-    
-    public CollectionsAllPathParams pathParams;
-    public CollectionsAllRequest withPathParams(CollectionsAllPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public CollectionsAllRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ecosystem_id")
+    public String ecosystemId;
+    public CollectionsAllRequest withEcosystemId(String ecosystemId) {
+        this.ecosystemId = ecosystemId;
+        return this;
+    }
     
-    public CollectionsAllQueryParams queryParams;
-    public CollectionsAllRequest withQueryParams(CollectionsAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of records to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public CollectionsAllRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

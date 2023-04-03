@@ -42,25 +42,26 @@ public class TerminalSettingsCompanyLevel {
      * * Management API\u2014Terminal settings read
      * * Management API\u2014Terminal settings read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalLogosResponse getCompaniesCompanyIdTerminalLogos(org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalLogosRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalLogosResponse getCompaniesCompanyIdTerminalLogos(org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalLogosRequest request, org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalLogosSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalLogosPathParams.class, baseUrl, "/companies/{companyId}/terminalLogos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalLogosRequest.class, baseUrl, "/companies/{companyId}/terminalLogos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalLogosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalLogosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -103,19 +104,20 @@ public class TerminalSettingsCompanyLevel {
      * For [sensitive terminal settings](https://docs.adyen.com/point-of-sale/automating-terminal-management/configure-terminals-api#sensitive-terminal-settings), your API credential must have the following role:
      * * Management API\u2014Terminal settings Advanced read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalSettingsResponse getCompaniesCompanyIdTerminalSettings(org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalSettingsResponse getCompaniesCompanyIdTerminalSettings(org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalSettingsRequest request, org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalSettingsPathParams.class, baseUrl, "/companies/{companyId}/terminalSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalSettingsRequest.class, baseUrl, "/companies/{companyId}/terminalSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -157,27 +159,28 @@ public class TerminalSettingsCompanyLevel {
      * To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Terminal settings read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchCompaniesCompanyIdTerminalLogosResponse patchCompaniesCompanyIdTerminalLogos(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdTerminalLogosRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchCompaniesCompanyIdTerminalLogosResponse patchCompaniesCompanyIdTerminalLogos(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdTerminalLogosRequest request, org.openapis.openapi.models.operations.PatchCompaniesCompanyIdTerminalLogosSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdTerminalLogosPathParams.class, baseUrl, "/companies/{companyId}/terminalLogos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdTerminalLogosRequest.class, baseUrl, "/companies/{companyId}/terminalLogos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "logo", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdTerminalLogosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdTerminalLogosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -220,21 +223,22 @@ public class TerminalSettingsCompanyLevel {
      * To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Terminal settings read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchCompaniesCompanyIdTerminalSettingsResponse patchCompaniesCompanyIdTerminalSettings(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdTerminalSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchCompaniesCompanyIdTerminalSettingsResponse patchCompaniesCompanyIdTerminalSettings(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdTerminalSettingsRequest request, org.openapis.openapi.models.operations.PatchCompaniesCompanyIdTerminalSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdTerminalSettingsPathParams.class, baseUrl, "/companies/{companyId}/terminalSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdTerminalSettingsRequest.class, baseUrl, "/companies/{companyId}/terminalSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "terminalSettings", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

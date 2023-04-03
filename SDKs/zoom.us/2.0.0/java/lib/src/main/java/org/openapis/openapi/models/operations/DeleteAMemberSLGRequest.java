@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAMemberSLGRequest {
+    /**
+     * Unique identifier of the member who is to be removed.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=memberId")
+    public String memberId;
+    public DeleteAMemberSLGRequest withMemberId(String memberId) {
+        this.memberId = memberId;
+        return this;
+    }
     
-    public DeleteAMemberSLGPathParams pathParams;
-    public DeleteAMemberSLGRequest withPathParams(DeleteAMemberSLGPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique Identifier of the shared line group from which you would like to remove a member.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sharedLineGroupId")
+    public String sharedLineGroupId;
+    public DeleteAMemberSLGRequest withSharedLineGroupId(String sharedLineGroupId) {
+        this.sharedLineGroupId = sharedLineGroupId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GistsGetRequest {
-    
-    public GistsGetPathParams pathParams;
-    public GistsGetRequest withPathParams(GistsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the gist.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gist_id")
+    public String gistId;
+    public GistsGetRequest withGistId(String gistId) {
+        this.gistId = gistId;
         return this;
     }
     

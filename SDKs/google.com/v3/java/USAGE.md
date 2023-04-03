@@ -4,15 +4,13 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksCreatePathParams;
-import org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksCreateQueryParams;
 import org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksCreateRequest;
 import org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.AccountLinkStatusEnum;
 import org.openapis.openapi.models.shared.AccountLink;
 import org.openapis.openapi.models.shared.AccountLinkTarget;
 import org.openapis.openapi.models.shared.HotelList;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -22,37 +20,34 @@ public class Application {
                 .build();
 
             TravelpartnerAccountsAccountLinksCreateRequest req = new TravelpartnerAccountsAccountLinksCreateRequest() {{
-                pathParams = new TravelpartnerAccountsAccountLinksCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new TravelpartnerAccountsAccountLinksCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new AccountLink() {{
+                dollarXgafv = "2";
+                accountLink = new AccountLink() {{
                     accountLinkTarget = new AccountLinkTarget() {{
                         allHotels = false;
                         hotelList = new HotelList() {{
                             partnerHotelIds = new String[]{{
-                                add("iure"),
-                                add("magnam"),
+                                add("distinctio"),
+                                add("quibusdam"),
+                                add("unde"),
                             }};
                         }};
                     }};
-                    googleAdsCustomerName = "debitis";
-                    name = "ipsa";
+                    googleAdsCustomerName = "nulla";
+                    name = "corrupti";
                     status = "APPROVED";
                 }};
-            }};            
+                accessToken = "vel";
+                alt = "media";
+                callback = "deserunt";
+                fields = "suscipit";
+                key = "iure";
+                oauthToken = "magnam";
+                parent = "debitis";
+                prettyPrint = false;
+                quotaUser = "ipsa";
+                uploadType = "delectus";
+                uploadProtocol = "tempora";
+            }}            
 
             TravelpartnerAccountsAccountLinksCreateResponse res = sdk.accounts.travelpartnerAccountsAccountLinksCreate(req);
 

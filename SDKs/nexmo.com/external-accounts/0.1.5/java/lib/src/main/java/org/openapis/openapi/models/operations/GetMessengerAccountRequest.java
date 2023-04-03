@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMessengerAccountRequest {
-    
-    public GetMessengerAccountPathParams pathParams;
-    public GetMessengerAccountRequest withPathParams(GetMessengerAccountPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetMessengerAccountSecurity security;
-    public GetMessengerAccountRequest withSecurity(GetMessengerAccountSecurity security) {
-        this.security = security;
+    /**
+     * External id of the account you want to retrieve. In this case it is the Facebook Page ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=external_id")
+    public String externalId;
+    public GetMessengerAccountRequest withExternalId(String externalId) {
+        this.externalId = externalId;
         return this;
     }
     

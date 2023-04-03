@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchOfferingsOfferingIdChannelsChannelIdRequest {
-    
-    public PatchOfferingsOfferingIdChannelsChannelIdPathParams pathParams;
-    public PatchOfferingsOfferingIdChannelsChannelIdRequest withPathParams(PatchOfferingsOfferingIdChannelsChannelIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Channel channel;
+    public PatchOfferingsOfferingIdChannelsChannelIdRequest withChannel(org.openapis.openapi.models.shared.Channel channel) {
+        this.channel = channel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Channel request;
-    public PatchOfferingsOfferingIdChannelsChannelIdRequest withRequest(org.openapis.openapi.models.shared.Channel request) {
-        this.request = request;
+    /**
+     * channel's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
+    public String channelId;
+    public PatchOfferingsOfferingIdChannelsChannelIdRequest withChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+    
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public PatchOfferingsOfferingIdChannelsChannelIdRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
         return this;
     }
     

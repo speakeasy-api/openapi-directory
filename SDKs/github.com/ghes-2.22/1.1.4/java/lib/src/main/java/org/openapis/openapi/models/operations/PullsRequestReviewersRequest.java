@@ -7,17 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsRequestReviewersRequest {
-    
-    public PullsRequestReviewersPathParams pathParams;
-    public PullsRequestReviewersRequest withPathParams(PullsRequestReviewersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public Object requestBody;
+    public PullsRequestReviewersRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public PullsRequestReviewersRequest withRequest(Object request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public PullsRequestReviewersRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_number")
+    public Long pullNumber;
+    public PullsRequestReviewersRequest withPullNumber(Long pullNumber) {
+        this.pullNumber = pullNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public PullsRequestReviewersRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

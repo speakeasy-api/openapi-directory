@@ -4,20 +4,63 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsListDiscussionsInOrgRequest {
-    
-    public TeamsListDiscussionsInOrgPathParams pathParams;
-    public TeamsListDiscussionsInOrgRequest withPathParams(TeamsListDiscussionsInOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * One of `asc` (ascending) or `desc` (descending).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public org.openapis.openapi.models.shared.DirectionEnum direction;
+    public TeamsListDiscussionsInOrgRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public TeamsListDiscussionsInOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public TeamsListDiscussionsInOrgQueryParams queryParams;
-    public TeamsListDiscussionsInOrgRequest withQueryParams(TeamsListDiscussionsInOrgQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public TeamsListDiscussionsInOrgRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public TeamsListDiscussionsInOrgRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Pinned discussions only filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pinned")
+    public String pinned;
+    public TeamsListDiscussionsInOrgRequest withPinned(String pinned) {
+        this.pinned = pinned;
+        return this;
+    }
+    
+    /**
+     * team_slug parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
+    public String teamSlug;
+    public TeamsListDiscussionsInOrgRequest withTeamSlug(String teamSlug) {
+        this.teamSlug = teamSlug;
         return this;
     }
     

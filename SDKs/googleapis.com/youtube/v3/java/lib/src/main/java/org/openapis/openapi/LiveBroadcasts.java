@@ -34,10 +34,11 @@ public class LiveBroadcasts {
     /**
      * Bind a broadcast to a stream.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.YoutubeLiveBroadcastsBindResponse youtubeLiveBroadcastsBind(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsBindRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.YoutubeLiveBroadcastsBindResponse youtubeLiveBroadcastsBind(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsBindRequest request, org.openapis.openapi.models.operations.YoutubeLiveBroadcastsBindSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/youtube/v3/liveBroadcasts/bind");
         
@@ -45,14 +46,14 @@ public class LiveBroadcasts {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsBindQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsBindRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,10 +80,11 @@ public class LiveBroadcasts {
     /**
      * Delete a given broadcast.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.YoutubeLiveBroadcastsDeleteResponse youtubeLiveBroadcastsDelete(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.YoutubeLiveBroadcastsDeleteResponse youtubeLiveBroadcastsDelete(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsDeleteRequest request, org.openapis.openapi.models.operations.YoutubeLiveBroadcastsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/youtube/v3/liveBroadcasts");
         
@@ -90,14 +92,14 @@ public class LiveBroadcasts {
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,27 +120,28 @@ public class LiveBroadcasts {
     /**
      * Inserts a new stream for the authenticated user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertResponse youtubeLiveBroadcastsInsert(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertResponse youtubeLiveBroadcastsInsert(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertRequest request, org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/youtube/v3/liveBroadcasts");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "liveBroadcast", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,27 +168,28 @@ public class LiveBroadcasts {
     /**
      * Insert cuepoints in a broadcast
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertCuepointResponse youtubeLiveBroadcastsInsertCuepoint(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertCuepointRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertCuepointResponse youtubeLiveBroadcastsInsertCuepoint(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertCuepointRequest request, org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertCuepointSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/youtube/v3/liveBroadcasts/cuepoint");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "cuepoint", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertCuepointQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsInsertCuepointRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -212,10 +216,11 @@ public class LiveBroadcasts {
     /**
      * Retrieve the list of broadcasts associated with the given channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.YoutubeLiveBroadcastsListResponse youtubeLiveBroadcastsList(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.YoutubeLiveBroadcastsListResponse youtubeLiveBroadcastsList(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsListRequest request, org.openapis.openapi.models.operations.YoutubeLiveBroadcastsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/youtube/v3/liveBroadcasts");
         
@@ -223,14 +228,14 @@ public class LiveBroadcasts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -257,10 +262,11 @@ public class LiveBroadcasts {
     /**
      * Transition a broadcast to a given status.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.YoutubeLiveBroadcastsTransitionResponse youtubeLiveBroadcastsTransition(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsTransitionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.YoutubeLiveBroadcastsTransitionResponse youtubeLiveBroadcastsTransition(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsTransitionRequest request, org.openapis.openapi.models.operations.YoutubeLiveBroadcastsTransitionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/youtube/v3/liveBroadcasts/transition");
         
@@ -268,14 +274,14 @@ public class LiveBroadcasts {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsTransitionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsTransitionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -302,27 +308,28 @@ public class LiveBroadcasts {
     /**
      * Updates an existing broadcast for the authenticated user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.YoutubeLiveBroadcastsUpdateResponse youtubeLiveBroadcastsUpdate(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.YoutubeLiveBroadcastsUpdateResponse youtubeLiveBroadcastsUpdate(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsUpdateRequest request, org.openapis.openapi.models.operations.YoutubeLiveBroadcastsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/youtube/v3/liveBroadcasts");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "liveBroadcast", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeLiveBroadcastsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

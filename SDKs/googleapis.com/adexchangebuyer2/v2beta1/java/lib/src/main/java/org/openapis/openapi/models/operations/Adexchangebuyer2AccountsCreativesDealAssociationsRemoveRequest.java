@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest {
-    
-    public Adexchangebuyer2AccountsCreativesDealAssociationsRemovePathParams pathParams;
-    public Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest withPathParams(Adexchangebuyer2AccountsCreativesDealAssociationsRemovePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public Adexchangebuyer2AccountsCreativesDealAssociationsRemoveQueryParams queryParams;
-    public Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest withQueryParams(Adexchangebuyer2AccountsCreativesDealAssociationsRemoveQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RemoveDealAssociationRequest request;
-    public Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest withRequest(org.openapis.openapi.models.shared.RemoveDealAssociationRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RemoveDealAssociationRequest removeDealAssociationRequest;
+    public Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest withRemoveDealAssociationRequest(org.openapis.openapi.models.shared.RemoveDealAssociationRequest removeDealAssociationRequest) {
+        this.removeDealAssociationRequest = removeDealAssociationRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public Adexchangebuyer2AccountsCreativesDealAssociationsRemoveSecurity security;
-    public Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest withSecurity(Adexchangebuyer2AccountsCreativesDealAssociationsRemoveSecurity security) {
-        this.security = security;
+    /**
+     * The account the creative belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * The ID of the creative associated with the deal.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=creativeId")
+    public String creativeId;
+    public Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest withCreativeId(String creativeId) {
+        this.creativeId = creativeId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

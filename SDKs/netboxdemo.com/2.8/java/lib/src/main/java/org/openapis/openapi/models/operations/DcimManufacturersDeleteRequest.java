@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimManufacturersDeleteRequest {
-    
-    public DcimManufacturersDeletePathParams pathParams;
-    public DcimManufacturersDeleteRequest withPathParams(DcimManufacturersDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this manufacturer.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimManufacturersDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUnmaskedProspectRequest {
-    
-    public GetUnmaskedProspectPathParams pathParams;
-    public GetUnmaskedProspectRequest withPathParams(GetUnmaskedProspectPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetUnmaskedProspectRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetUnmaskedProspectQueryParams queryParams;
-    public GetUnmaskedProspectRequest withQueryParams(GetUnmaskedProspectQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetUnmaskedProspectRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * ID of the prospect as returned by the Create prospect endpoint's response, in the `id` field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=prospectId")
+    public String prospectId;
+    public GetUnmaskedProspectRequest withProspectId(String prospectId) {
+        this.prospectId = prospectId;
+        return this;
+    }
     
-    public GetUnmaskedProspectHeaders headers;
-    public GetUnmaskedProspectRequest withHeaders(GetUnmaskedProspectHeaders headers) {
-        this.headers = headers;
+    /**
+     * Reason for requesting unmasked data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
+    public String reason;
+    public GetUnmaskedProspectRequest withReason(String reason) {
+        this.reason = reason;
         return this;
     }
     

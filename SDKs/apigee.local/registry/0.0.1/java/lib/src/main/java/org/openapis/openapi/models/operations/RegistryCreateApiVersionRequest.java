@@ -7,24 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryCreateApiVersionRequest {
-    
-    public RegistryCreateApiVersionPathParams pathParams;
-    public RegistryCreateApiVersionRequest withPathParams(RegistryCreateApiVersionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RegistryCreateApiVersionQueryParams queryParams;
-    public RegistryCreateApiVersionRequest withQueryParams(RegistryCreateApiVersionQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiVersionInput request;
-    public RegistryCreateApiVersionRequest withRequest(org.openapis.openapi.models.shared.ApiVersionInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiVersionInput apiVersionInput;
+    public RegistryCreateApiVersionRequest withApiVersionInput(org.openapis.openapi.models.shared.ApiVersionInput apiVersionInput) {
+        this.apiVersionInput = apiVersionInput;
+        return this;
+    }
+    
+    /**
+     * The api id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
+    public String api;
+    public RegistryCreateApiVersionRequest withApi(String api) {
+        this.api = api;
+        return this;
+    }
+    
+    /**
+     * Required. The ID to use for the version, which will become the final component of the version's resource name. This value should be 4-63 characters, and valid characters are /[a-z][0-9]-/. Following AIP-162, IDs must not have the form of a UUID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apiVersionId")
+    public String apiVersionId;
+    public RegistryCreateApiVersionRequest withApiVersionId(String apiVersionId) {
+        this.apiVersionId = apiVersionId;
+        return this;
+    }
+    
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryCreateApiVersionRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryCreateApiVersionRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

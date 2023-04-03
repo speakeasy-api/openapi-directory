@@ -46,12 +46,12 @@ public class Requests {
      */
     public org.openapis.openapi.models.operations.CreateNetworkPiiRequestResponse createNetworkPiiRequest(org.openapis.openapi.models.operations.CreateNetworkPiiRequestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkPiiRequestPathParams.class, baseUrl, "/networks/{networkId}/pii/requests", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkPiiRequestRequest.class, baseUrl, "/networks/{networkId}/pii/requests", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -94,7 +94,7 @@ public class Requests {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkPiiRequestResponse deleteNetworkPiiRequest(org.openapis.openapi.models.operations.DeleteNetworkPiiRequestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkPiiRequestPathParams.class, baseUrl, "/networks/{networkId}/pii/requests/{requestId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkPiiRequestRequest.class, baseUrl, "/networks/{networkId}/pii/requests/{requestId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -134,7 +134,7 @@ public class Requests {
      */
     public org.openapis.openapi.models.operations.GetNetworkPiiRequestResponse getNetworkPiiRequest(org.openapis.openapi.models.operations.GetNetworkPiiRequestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkPiiRequestPathParams.class, baseUrl, "/networks/{networkId}/pii/requests/{requestId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkPiiRequestRequest.class, baseUrl, "/networks/{networkId}/pii/requests/{requestId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -180,7 +180,7 @@ public class Requests {
      */
     public org.openapis.openapi.models.operations.GetNetworkPiiRequestsResponse getNetworkPiiRequests(org.openapis.openapi.models.operations.GetNetworkPiiRequestsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkPiiRequestsPathParams.class, baseUrl, "/networks/{networkId}/pii/requests", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkPiiRequestsRequest.class, baseUrl, "/networks/{networkId}/pii/requests", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

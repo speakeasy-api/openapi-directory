@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteKeyKeyRequest {
-    
-    public DeleteKeyKeyPathParams pathParams;
-    public DeleteKeyKeyRequest withPathParams(DeleteKeyKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public DeleteKeyKeyRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

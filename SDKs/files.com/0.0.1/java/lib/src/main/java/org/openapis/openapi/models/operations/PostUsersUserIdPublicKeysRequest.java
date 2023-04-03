@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersUserIdPublicKeysRequest {
-    
-    public PostUsersUserIdPublicKeysPathParams pathParams;
-    public PostUsersUserIdPublicKeysRequest withPathParams(PostUsersUserIdPublicKeysPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public PostUsersUserIdPublicKeysRequestBody requestBody;
+    public PostUsersUserIdPublicKeysRequest withRequestBody(PostUsersUserIdPublicKeysRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostUsersUserIdPublicKeysRequestBody request;
-    public PostUsersUserIdPublicKeysRequest withRequest(PostUsersUserIdPublicKeysRequestBody request) {
-        this.request = request;
+    /**
+     * User ID.  Provide a value of `0` to operate the current session's user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Integer userId;
+    public PostUsersUserIdPublicKeysRequest withUserId(Integer userId) {
+        this.userId = userId;
         return this;
     }
     

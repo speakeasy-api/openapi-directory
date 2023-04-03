@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETReleaseAddressRequest {
-    
-    public GETReleaseAddressQueryParams queryParams;
-    public GETReleaseAddressRequest withQueryParams(GETReleaseAddressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETReleaseAddressActionEnum action;
+    public GETReleaseAddressRequest withAction(GETReleaseAddressActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * [EC2-VPC] The allocation ID. Required for EC2-VPC.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllocationId")
+    public String allocationId;
+    public GETReleaseAddressRequest withAllocationId(String allocationId) {
+        this.allocationId = allocationId;
+        return this;
+    }
     
-    public GETReleaseAddressHeaders headers;
-    public GETReleaseAddressRequest withHeaders(GETReleaseAddressHeaders headers) {
-        this.headers = headers;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETReleaseAddressRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The set of Availability Zones, Local Zones, or Wavelength Zones from which Amazon Web Services advertises IP addresses.&lt;/p&gt; &lt;p&gt;If you provide an incorrect network border group, you receive an &lt;code&gt;InvalidAddress.NotFound&lt;/code&gt; error.&lt;/p&gt; &lt;p&gt;You cannot use a network border group with EC2 Classic. If you attempt this operation on EC2 classic, you receive an &lt;code&gt;InvalidParameterCombination&lt;/code&gt; error.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkBorderGroup")
+    public String networkBorderGroup;
+    public GETReleaseAddressRequest withNetworkBorderGroup(String networkBorderGroup) {
+        this.networkBorderGroup = networkBorderGroup;
+        return this;
+    }
+    
+    /**
+     * [EC2-Classic] The Elastic IP address. Required for EC2-Classic.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PublicIp")
+    public String publicIp;
+    public GETReleaseAddressRequest withPublicIp(String publicIp) {
+        this.publicIp = publicIp;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETReleaseAddressVersionEnum version;
+    public GETReleaseAddressRequest withVersion(GETReleaseAddressVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETReleaseAddressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETReleaseAddressRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETReleaseAddressRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETReleaseAddressRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETReleaseAddressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETReleaseAddressRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETReleaseAddressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

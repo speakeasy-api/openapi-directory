@@ -38,13 +38,13 @@ public class Runs {
      */
     public org.openapis.openapi.models.operations.RunsForRouteResponse runsForRoute(org.openapis.openapi.models.operations.RunsForRouteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunsForRoutePathParams.class, baseUrl, "/v3/runs/route/{route_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunsForRouteRequest.class, baseUrl, "/v3/runs/route/{route_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunsForRouteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunsForRouteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -112,13 +112,13 @@ public class Runs {
      */
     public org.openapis.openapi.models.operations.RunsForRouteAndRouteTypeResponse runsForRouteAndRouteType(org.openapis.openapi.models.operations.RunsForRouteAndRouteTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunsForRouteAndRouteTypePathParams.class, baseUrl, "/v3/runs/route/{route_id}/route_type/{route_type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunsForRouteAndRouteTypeRequest.class, baseUrl, "/v3/runs/route/{route_id}/route_type/{route_type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunsForRouteAndRouteTypeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunsForRouteAndRouteTypeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -186,13 +186,13 @@ public class Runs {
      */
     public org.openapis.openapi.models.operations.RunsForRunResponse runsForRun(org.openapis.openapi.models.operations.RunsForRunRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunsForRunPathParams.class, baseUrl, "/v3/runs/{run_ref}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunsForRunRequest.class, baseUrl, "/v3/runs/{run_ref}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunsForRunQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunsForRunRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -260,13 +260,13 @@ public class Runs {
      */
     public org.openapis.openapi.models.operations.RunsForRunAndRouteTypeResponse runsForRunAndRouteType(org.openapis.openapi.models.operations.RunsForRunAndRouteTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunsForRunAndRouteTypePathParams.class, baseUrl, "/v3/runs/{run_ref}/route_type/{route_type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunsForRunAndRouteTypeRequest.class, baseUrl, "/v3/runs/{run_ref}/route_type/{route_type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunsForRunAndRouteTypeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunsForRunAndRouteTypeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

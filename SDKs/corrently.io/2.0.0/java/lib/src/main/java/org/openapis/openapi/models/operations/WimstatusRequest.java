@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WimstatusRequest {
-    
-    public WimstatusQueryParams queryParams;
-    public WimstatusRequest withQueryParams(WimstatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * VID key of the process.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vid")
+    public String vid;
+    public WimstatusRequest withVid(String vid) {
+        this.vid = vid;
         return this;
     }
     

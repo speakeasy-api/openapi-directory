@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsGetOrgInstallationRequest {
-    
-    public AppsGetOrgInstallationPathParams pathParams;
-    public AppsGetOrgInstallationRequest withPathParams(AppsGetOrgInstallationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This API is under preview and subject to change.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
+    public String accept;
+    public AppsGetOrgInstallationRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public AppsGetOrgInstallationHeaders headers;
-    public AppsGetOrgInstallationRequest withHeaders(AppsGetOrgInstallationHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public AppsGetOrgInstallationRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

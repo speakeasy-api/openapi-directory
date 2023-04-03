@@ -7,8 +7,6 @@ import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.SearchFormatEnum;
 import org.openapis.openapi.models.operations.SearchPrettyEnum;
 import org.openapis.openapi.models.operations.SearchQParserEnum;
-import org.openapis.openapi.models.operations.SearchQueryParams;
-import org.openapis.openapi.models.operations.SearchHeaders;
 import org.openapis.openapi.models.operations.SearchRequest;
 import org.openapis.openapi.models.operations.SearchResponse;
 
@@ -17,41 +15,35 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             SearchRequest req = new SearchRequest() {{
-                queryParams = new SearchQueryParams() {{
-                    cursor = "corrupti";
-                    expr = "provident";
-                    facet = "distinctio";
-                    format = "sdk";
-                    fq = "quibusdam";
-                    highlight = "unde";
-                    partial = false;
-                    pretty = "true";
-                    q = "nulla";
-                    qOptions = "corrupti";
-                    qParser = "dismax";
-                    return_ = "vel";
-                    size = 623564;
-                    sort = "deserunt";
-                    start = 384382;
-                    stats = "iure";
-                }};
-                headers = new SearchHeaders() {{
-                    xAmzAlgorithm = "magnam";
-                    xAmzContentSha256 = "debitis";
-                    xAmzCredential = "ipsa";
-                    xAmzDate = "delectus";
-                    xAmzSecurityToken = "tempora";
-                    xAmzSignature = "suscipit";
-                    xAmzSignedHeaders = "molestiae";
-                }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "provident";
+                xAmzCredential = "distinctio";
+                xAmzDate = "quibusdam";
+                xAmzSecurityToken = "unde";
+                xAmzSignature = "nulla";
+                xAmzSignedHeaders = "corrupti";
+                cursor = "illum";
+                expr = "vel";
+                facet = "error";
+                format = "sdk";
+                fq = "deserunt";
+                highlight = "suscipit";
+                partial = false;
+                pretty = "true";
+                q = "iure";
+                qOptions = "magnam";
+                qParser = "dismax";
+                return_ = "ipsa";
+                size = 963663;
+                sort = "tempora";
+                start = 383441;
+                stats = "molestiae";
+            }}            
 
             SearchResponse res = sdk.search(req);
 

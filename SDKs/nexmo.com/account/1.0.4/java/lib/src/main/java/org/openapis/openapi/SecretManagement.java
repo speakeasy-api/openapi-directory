@@ -37,24 +37,25 @@ public class SecretManagement {
     /**
      * Create API Secret
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAPISecretResponse createAPISecret(org.openapis.openapi.models.operations.CreateAPISecretRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAPISecretResponse createAPISecret(org.openapis.openapi.models.operations.CreateAPISecretRequest request, org.openapis.openapi.models.operations.CreateAPISecretSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateAPISecretPathParams.class, baseUrl, "/accounts/{api_key}/secrets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateAPISecretRequest.class, baseUrl, "/accounts/{api_key}/secrets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createSecretRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -105,19 +106,20 @@ public class SecretManagement {
     /**
      * Retrieve one API Secret
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveAPISecretResponse retrieveAPISecret(org.openapis.openapi.models.operations.RetrieveAPISecretRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveAPISecretResponse retrieveAPISecret(org.openapis.openapi.models.operations.RetrieveAPISecretRequest request, org.openapis.openapi.models.operations.RetrieveAPISecretSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAPISecretPathParams.class, baseUrl, "/accounts/{api_key}/secrets/{secret_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAPISecretRequest.class, baseUrl, "/accounts/{api_key}/secrets/{secret_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -160,19 +162,20 @@ public class SecretManagement {
     /**
      * Retrieve API Secrets
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveAPISecretsResponse retrieveAPISecrets(org.openapis.openapi.models.operations.RetrieveAPISecretsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveAPISecretsResponse retrieveAPISecrets(org.openapis.openapi.models.operations.RetrieveAPISecretsRequest request, org.openapis.openapi.models.operations.RetrieveAPISecretsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAPISecretsPathParams.class, baseUrl, "/accounts/{api_key}/secrets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAPISecretsRequest.class, baseUrl, "/accounts/{api_key}/secrets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -215,19 +218,20 @@ public class SecretManagement {
     /**
      * Revoke an API Secret
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RevokeAPISecretResponse revokeAPISecret(org.openapis.openapi.models.operations.RevokeAPISecretRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RevokeAPISecretResponse revokeAPISecret(org.openapis.openapi.models.operations.RevokeAPISecretRequest request, org.openapis.openapi.models.operations.RevokeAPISecretSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RevokeAPISecretPathParams.class, baseUrl, "/accounts/{api_key}/secrets/{secret_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RevokeAPISecretRequest.class, baseUrl, "/accounts/{api_key}/secrets/{secret_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

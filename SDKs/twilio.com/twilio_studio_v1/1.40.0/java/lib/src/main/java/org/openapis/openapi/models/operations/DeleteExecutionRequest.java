@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteExecutionRequest {
-    
-    public DeleteExecutionPathParams pathParams;
-    public DeleteExecutionRequest withPathParams(DeleteExecutionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Flow with the Execution resources to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FlowSid")
+    public String flowSid;
+    public DeleteExecutionRequest withFlowSid(String flowSid) {
+        this.flowSid = flowSid;
         return this;
     }
     
-    
-    public DeleteExecutionSecurity security;
-    public DeleteExecutionRequest withSecurity(DeleteExecutionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteExecutionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Execution resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteExecutionRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

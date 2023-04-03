@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TranslateRequest {
-    
-    public TranslatePathParams pathParams;
-    public TranslateRequest withPathParams(TranslatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.InstantTranslationRequest instantTranslationRequest;
+    public TranslateRequest withInstantTranslationRequest(org.openapis.openapi.models.shared.InstantTranslationRequest instantTranslationRequest) {
+        this.instantTranslationRequest = instantTranslationRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.InstantTranslationRequest request;
-    public TranslateRequest withRequest(org.openapis.openapi.models.shared.InstantTranslationRequest request) {
-        this.request = request;
+    /**
+     * Continuous project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public TranslateRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Target language that you want to instantly translate your file into.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=targetLanguage")
+    public String targetLanguage;
+    public TranslateRequest withTargetLanguage(String targetLanguage) {
+        this.targetLanguage = targetLanguage;
         return this;
     }
     

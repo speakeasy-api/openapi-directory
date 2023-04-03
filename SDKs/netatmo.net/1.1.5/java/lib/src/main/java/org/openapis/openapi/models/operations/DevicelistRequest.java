@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DevicelistRequest {
-    
-    public DevicelistQueryParams queryParams;
-    public DevicelistRequest withQueryParams(DevicelistQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Defines which device type will be returned by devicelist. It could be app_thermostat or app_station (by default if not provided)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_type")
+    public DevicelistAppTypeEnum appType;
+    public DevicelistRequest withAppType(DevicelistAppTypeEnum appType) {
+        this.appType = appType;
         return this;
     }
     
+    /**
+     * Specify a device_id if you want to retrieve only this device informations.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
+    public String deviceId;
+    public DevicelistRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
     
-    public DevicelistSecurity security;
-    public DevicelistRequest withSecurity(DevicelistSecurity security) {
-        this.security = security;
+    /**
+     * When set to "true", the favorite devices of the user are returned. This flag is available only if the devices requested are Weather Stations.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=get_favorites")
+    public Boolean getFavorites;
+    public DevicelistRequest withGetFavorites(Boolean getFavorites) {
+        this.getFavorites = getFavorites;
         return this;
     }
     

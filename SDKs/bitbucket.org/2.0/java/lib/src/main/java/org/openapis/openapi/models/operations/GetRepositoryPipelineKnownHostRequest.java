@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoryPipelineKnownHostRequest {
+    /**
+     * The UUID of the known host to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=known_host_uuid")
+    public String knownHostUuid;
+    public GetRepositoryPipelineKnownHostRequest withKnownHostUuid(String knownHostUuid) {
+        this.knownHostUuid = knownHostUuid;
+        return this;
+    }
     
-    public GetRepositoryPipelineKnownHostPathParams pathParams;
-    public GetRepositoryPipelineKnownHostRequest withPathParams(GetRepositoryPipelineKnownHostPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoryPipelineKnownHostRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoryPipelineKnownHostRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

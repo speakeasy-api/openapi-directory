@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLocationsRequest {
-    
-    public GetLocationsQueryParams queryParams;
-    public GetLocationsRequest withQueryParams(GetLocationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used to filter Locations by their name. The response will only contain the Location matching the specified name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetLocationsRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

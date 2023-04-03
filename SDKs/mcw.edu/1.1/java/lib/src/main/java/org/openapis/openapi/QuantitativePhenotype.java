@@ -37,7 +37,7 @@ public class QuantitativePhenotype {
      */
     public org.openapis.openapi.models.operations.GETChartInfoUsingGETResponse getChartInfoUsingGET(org.openapis.openapi.models.operations.GETChartInfoUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETChartInfoUsingGETPathParams.class, baseUrl, "/phenotype/phenominer/chart/{speciesTypeKey}/{refRgdId}/{termString}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETChartInfoUsingGETRequest.class, baseUrl, "/phenotype/phenominer/chart/{speciesTypeKey}/{refRgdId}/{termString}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -76,7 +76,7 @@ public class QuantitativePhenotype {
      */
     public org.openapis.openapi.models.operations.GETChartInfoUsingGET1Response getChartInfoUsingGET1(org.openapis.openapi.models.operations.GETChartInfoUsingGET1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETChartInfoUsingGET1PathParams.class, baseUrl, "/phenotype/phenominer/chart/{speciesTypeKey}/{termString}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETChartInfoUsingGET1Request.class, baseUrl, "/phenotype/phenominer/chart/{speciesTypeKey}/{termString}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

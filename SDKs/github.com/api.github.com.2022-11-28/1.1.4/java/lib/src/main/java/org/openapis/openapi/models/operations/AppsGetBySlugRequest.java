@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsGetBySlugRequest {
-    
-    public AppsGetBySlugPathParams pathParams;
-    public AppsGetBySlugRequest withPathParams(AppsGetBySlugPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_slug")
+    public String appSlug;
+    public AppsGetBySlugRequest withAppSlug(String appSlug) {
+        this.appSlug = appSlug;
         return this;
     }
     

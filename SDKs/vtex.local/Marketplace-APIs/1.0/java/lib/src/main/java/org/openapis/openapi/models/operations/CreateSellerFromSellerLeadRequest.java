@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSellerFromSellerLeadRequest {
-    
-    public CreateSellerFromSellerLeadPathParams pathParams;
-    public CreateSellerFromSellerLeadRequest withPathParams(CreateSellerFromSellerLeadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CreateSellerFromSellerLeadRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public CreateSellerFromSellerLeadQueryParams queryParams;
-    public CreateSellerFromSellerLeadRequest withQueryParams(CreateSellerFromSellerLeadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CreateSellerFromSellerLeadRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Marketplace's account name, the same one inputted on the endpoint's path.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public CreateSellerFromSellerLeadRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
     
-    public CreateSellerFromSellerLeadHeaders headers;
-    public CreateSellerFromSellerLeadRequest withHeaders(CreateSellerFromSellerLeadHeaders headers) {
-        this.headers = headers;
+    /**
+     * Environment to use. Used as part of the URL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
+    public String environment;
+    public CreateSellerFromSellerLeadRequest withEnvironment(String environment) {
+        this.environment = environment;
+        return this;
+    }
+    
+    /**
+     * Whether the Seller Lead is `active` or not in Seller Portal. This request only supports the value `false` in this field. If that\u00b4s not the case, the request will respond with an internal error.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isActive")
+    public Boolean isActive;
+    public CreateSellerFromSellerLeadRequest withIsActive(Boolean isActive) {
+        this.isActive = isActive;
+        return this;
+    }
+    
+    /**
+     * ID of the Seller Lead invited to the marketplace.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerLeadId")
+    public String sellerLeadId;
+    public CreateSellerFromSellerLeadRequest withSellerLeadId(String sellerLeadId) {
+        this.sellerLeadId = sellerLeadId;
         return this;
     }
     

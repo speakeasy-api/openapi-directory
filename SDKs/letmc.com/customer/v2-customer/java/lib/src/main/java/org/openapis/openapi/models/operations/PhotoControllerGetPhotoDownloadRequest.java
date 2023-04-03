@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PhotoControllerGetPhotoDownloadRequest {
-    
-    public PhotoControllerGetPhotoDownloadPathParams pathParams;
-    public PhotoControllerGetPhotoDownloadRequest withPathParams(PhotoControllerGetPhotoDownloadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An optional parameter specifying the image height
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
+    public Integer height;
+    public PhotoControllerGetPhotoDownloadRequest withHeight(Integer height) {
+        this.height = height;
         return this;
     }
     
+    /**
+     * The unique ID of the photo on the property
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=photoID")
+    public String photoID;
+    public PhotoControllerGetPhotoDownloadRequest withPhotoID(String photoID) {
+        this.photoID = photoID;
+        return this;
+    }
     
-    public PhotoControllerGetPhotoDownloadQueryParams queryParams;
-    public PhotoControllerGetPhotoDownloadRequest withQueryParams(PhotoControllerGetPhotoDownloadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public PhotoControllerGetPhotoDownloadRequest withShortName(String shortName) {
+        this.shortName = shortName;
+        return this;
+    }
+    
+    /**
+     * The login token returned from the /session POST call
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public PhotoControllerGetPhotoDownloadRequest withToken(String token) {
+        this.token = token;
+        return this;
+    }
+    
+    /**
+     * An optional parameter specifying the image width
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
+    public Integer width;
+    public PhotoControllerGetPhotoDownloadRequest withWidth(Integer width) {
+        this.width = width;
         return this;
     }
     

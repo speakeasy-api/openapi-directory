@@ -4,20 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClearMerchantOrderInfoV3Request {
-    
-    public ClearMerchantOrderInfoV3PathParams pathParams;
-    public ClearMerchantOrderInfoV3Request withPathParams(ClearMerchantOrderInfoV3PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public Integer accountId;
+    public ClearMerchantOrderInfoV3Request withAccountId(Integer accountId) {
+        this.accountId = accountId;
         return this;
     }
     
+    /**
+     * The BeezUP Order identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=beezUPOrderId")
+    public String beezUPOrderId;
+    public ClearMerchantOrderInfoV3Request withBeezUPOrderId(String beezUPOrderId) {
+        this.beezUPOrderId = beezUPOrderId;
+        return this;
+    }
     
-    public ClearMerchantOrderInfoV3QueryParams queryParams;
-    public ClearMerchantOrderInfoV3Request withQueryParams(ClearMerchantOrderInfoV3QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The marketplace technical code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
+    public String marketplaceTechnicalCode;
+    public ClearMerchantOrderInfoV3Request withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+        return this;
+    }
+    
+    /**
+     * If true, the operation will be not be sent to marketplace. But the validation will be taken in account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=testMode")
+    public Boolean testMode;
+    public ClearMerchantOrderInfoV3Request withTestMode(Boolean testMode) {
+        this.testMode = testMode;
         return this;
     }
     

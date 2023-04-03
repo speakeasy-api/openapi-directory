@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AssociateEncryptionConfigPathParams;
-import org.openapis.openapi.models.operations.AssociateEncryptionConfigHeaders;
 import org.openapis.openapi.models.operations.AssociateEncryptionConfigRequestBody;
 import org.openapis.openapi.models.operations.AssociateEncryptionConfigRequest;
 import org.openapis.openapi.models.operations.AssociateEncryptionConfigResponse;
@@ -17,57 +15,57 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateEncryptionConfigRequest req = new AssociateEncryptionConfigRequest() {{
-                pathParams = new AssociateEncryptionConfigPathParams() {{
-                    name = "corrupti";
-                }};
-                headers = new AssociateEncryptionConfigHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-                request = new AssociateEncryptionConfigRequestBody() {{
-                    clientRequestToken = "vel";
+                requestBody = new AssociateEncryptionConfigRequestBody() {{
+                    clientRequestToken = "corrupti";
                     encryptionConfig = new org.openapis.openapi.models.shared.EncryptionConfig[]{{
                         add(new EncryptionConfig() {{
                             provider = new Provider() {{
-                                keyArn = "deserunt";
+                                keyArn = "distinctio";
                             }};
                             resources = new String[]{{
+                                add("unde"),
+                                add("nulla"),
+                                add("corrupti"),
+                                add("illum"),
+                            }};
+                        }}),
+                        add(new EncryptionConfig() {{
+                            provider = new Provider() {{
+                                keyArn = "vel";
+                            }};
+                            resources = new String[]{{
+                                add("deserunt"),
+                                add("suscipit"),
                                 add("iure"),
-                                add("magnam"),
                             }};
                         }}),
                         add(new EncryptionConfig() {{
                             provider = new Provider() {{
-                                keyArn = "debitis";
+                                keyArn = "magnam";
                             }};
                             resources = new String[]{{
+                                add("ipsa"),
                                 add("delectus"),
-                            }};
-                        }}),
-                        add(new EncryptionConfig() {{
-                            provider = new Provider() {{
-                                keyArn = "tempora";
-                            }};
-                            resources = new String[]{{
-                                add("molestiae"),
-                                add("minus"),
+                                add("tempora"),
+                                add("suscipit"),
                             }};
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "molestiae";
+                xAmzContentSha256 = "minus";
+                xAmzCredential = "placeat";
+                xAmzDate = "voluptatum";
+                xAmzSecurityToken = "iusto";
+                xAmzSignature = "excepturi";
+                xAmzSignedHeaders = "nisi";
+                name = "recusandae";
+            }}            
 
             AssociateEncryptionConfigResponse res = sdk.associateEncryptionConfig(req);
 

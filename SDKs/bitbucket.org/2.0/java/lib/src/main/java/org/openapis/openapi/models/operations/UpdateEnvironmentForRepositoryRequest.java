@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateEnvironmentForRepositoryRequest {
+    /**
+     * The environment UUID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_uuid")
+    public String environmentUuid;
+    public UpdateEnvironmentForRepositoryRequest withEnvironmentUuid(String environmentUuid) {
+        this.environmentUuid = environmentUuid;
+        return this;
+    }
     
-    public UpdateEnvironmentForRepositoryPathParams pathParams;
-    public UpdateEnvironmentForRepositoryRequest withPathParams(UpdateEnvironmentForRepositoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public UpdateEnvironmentForRepositoryRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public UpdateEnvironmentForRepositoryRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

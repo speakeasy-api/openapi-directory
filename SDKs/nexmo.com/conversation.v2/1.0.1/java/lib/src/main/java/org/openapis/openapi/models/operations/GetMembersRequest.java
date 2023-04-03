@@ -4,20 +4,49 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMembersRequest {
-    
-    public GetMembersPathParams pathParams;
-    public GetMembersRequest withPathParams(GetMembersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the conversation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversation_id")
+    public String conversationId;
+    public GetMembersRequest withConversationId(String conversationId) {
+        this.conversationId = conversationId;
         return this;
     }
     
+    /**
+     * The cursor to start returning results from.
+     * 
+     * You are not expected to provide this manually, but to follow the url provided in `_links.next.href` in the response which contains a `cursor` value
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public GetMembersRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public GetMembersQueryParams queryParams;
-    public GetMembersRequest withQueryParams(GetMembersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Show the most (`desc`) / least (`asc`) recently created entries first
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public org.openapis.openapi.models.shared.OrderEnum order;
+    public GetMembersRequest withOrder(org.openapis.openapi.models.shared.OrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page.   The default value is `10`. The maximum value is `100`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetMembersRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTargetsTargetIdIntegrationsJiraCloudRequest {
-    
-    public GetTargetsTargetIdIntegrationsJiraCloudPathParams pathParams;
-    public GetTargetsTargetIdIntegrationsJiraCloudRequest withPathParams(GetTargetsTargetIdIntegrationsJiraCloudPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Target id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_id")
+    public String targetId;
+    public GetTargetsTargetIdIntegrationsJiraCloudRequest withTargetId(String targetId) {
+        this.targetId = targetId;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BillingAggregatedInformationGetAllRequest {
-    
-    public BillingAggregatedInformationGetAllQueryParams queryParams;
-    public BillingAggregatedInformationGetAllRequest withQueryParams(BillingAggregatedInformationGetAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of period that should be included in the Billing Information
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
+    public BillingAggregatedInformationGetAllPeriodEnum period;
+    public BillingAggregatedInformationGetAllRequest withPeriod(BillingAggregatedInformationGetAllPeriodEnum period) {
+        this.period = period;
         return this;
     }
     
+    /**
+     * Type of service that should be included in the Billing Information
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service")
+    public BillingAggregatedInformationGetAllServiceEnum service;
+    public BillingAggregatedInformationGetAllRequest withService(BillingAggregatedInformationGetAllServiceEnum service) {
+        this.service = service;
+        return this;
+    }
     
-    public BillingAggregatedInformationGetAllSecurity security;
-    public BillingAggregatedInformationGetAllRequest withSecurity(BillingAggregatedInformationGetAllSecurity security) {
-        this.security = security;
+    /**
+     * Controls whether the API should show the original plan when Azure Subscription is not enabled
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showOriginalPlans")
+    public Boolean showOriginalPlans;
+    public BillingAggregatedInformationGetAllRequest withShowOriginalPlans(Boolean showOriginalPlans) {
+        this.showOriginalPlans = showOriginalPlans;
         return this;
     }
     

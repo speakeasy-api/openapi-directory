@@ -33,25 +33,26 @@ public class Customers {
     /**
      * Generate summary of app installation requests.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromemanagementCustomersAppsCountChromeAppRequestsResponse chromemanagementCustomersAppsCountChromeAppRequests(org.openapis.openapi.models.operations.ChromemanagementCustomersAppsCountChromeAppRequestsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromemanagementCustomersAppsCountChromeAppRequestsResponse chromemanagementCustomersAppsCountChromeAppRequests(org.openapis.openapi.models.operations.ChromemanagementCustomersAppsCountChromeAppRequestsRequest request, org.openapis.openapi.models.operations.ChromemanagementCustomersAppsCountChromeAppRequestsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersAppsCountChromeAppRequestsPathParams.class, baseUrl, "/v1/{customer}/apps:countChromeAppRequests", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersAppsCountChromeAppRequestsRequest.class, baseUrl, "/v1/{customer}/apps:countChromeAppRequests", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersAppsCountChromeAppRequestsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersAppsCountChromeAppRequestsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class Customers {
     /**
      * Count of Chrome Browsers that have been recently enrolled, have new policy to be synced, or have no recent activity.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttentionResponse chromemanagementCustomersReportsCountChromeBrowsersNeedingAttention(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttentionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttentionResponse chromemanagementCustomersReportsCountChromeBrowsersNeedingAttention(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttentionRequest request, org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttentionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttentionPathParams.class, baseUrl, "/v1/{customer}/reports:countChromeBrowsersNeedingAttention", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttentionRequest.class, baseUrl, "/v1/{customer}/reports:countChromeBrowsersNeedingAttention", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttentionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttentionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,25 +125,26 @@ public class Customers {
     /**
      * Generate report of the number of devices expiring in each month of the selected time frame. Devices are grouped by auto update expiration date and model. Further information can be found [here](https://support.google.com/chrome/a/answer/10564947).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateResponse chromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDate(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateResponse chromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDate(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateRequest request, org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDatePathParams.class, baseUrl, "/v1/{customer}/reports:countChromeDevicesReachingAutoExpirationDate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateRequest.class, baseUrl, "/v1/{customer}/reports:countChromeDevicesReachingAutoExpirationDate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -168,25 +171,26 @@ public class Customers {
     /**
      * Counts of ChromeOS devices that have not synced policies or have lacked user activity in the past 28 days, are out of date, or are not complaint. Further information can be found here https://support.google.com/chrome/a/answer/10564947
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionResponse chromemanagementCustomersReportsCountChromeDevicesThatNeedAttention(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionResponse chromemanagementCustomersReportsCountChromeDevicesThatNeedAttention(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionRequest request, org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionPathParams.class, baseUrl, "/v1/{customer}/reports:countChromeDevicesThatNeedAttention", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionRequest.class, baseUrl, "/v1/{customer}/reports:countChromeDevicesThatNeedAttention", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttentionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -213,25 +217,26 @@ public class Customers {
     /**
      * Counts of devices with a specific hardware specification from the requested hardware type (for example model name, processor type). Further information can be found here https://support.google.com/chrome/a/answer/10564947
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesResponse chromemanagementCustomersReportsCountChromeHardwareFleetDevices(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesResponse chromemanagementCustomersReportsCountChromeHardwareFleetDevices(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest request, org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesPathParams.class, baseUrl, "/v1/{customer}/reports:countChromeHardwareFleetDevices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest.class, baseUrl, "/v1/{customer}/reports:countChromeHardwareFleetDevices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeHardwareFleetDevicesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -258,25 +263,26 @@ public class Customers {
     /**
      * Generate report of installed Chrome versions.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeVersionsResponse chromemanagementCustomersReportsCountChromeVersions(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeVersionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeVersionsResponse chromemanagementCustomersReportsCountChromeVersions(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeVersionsRequest request, org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeVersionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeVersionsPathParams.class, baseUrl, "/v1/{customer}/reports:countChromeVersions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeVersionsRequest.class, baseUrl, "/v1/{customer}/reports:countChromeVersions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeVersionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountChromeVersionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -303,25 +309,26 @@ public class Customers {
     /**
      * Generate report of app installations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountInstalledAppsResponse chromemanagementCustomersReportsCountInstalledApps(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountInstalledAppsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountInstalledAppsResponse chromemanagementCustomersReportsCountInstalledApps(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountInstalledAppsRequest request, org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountInstalledAppsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountInstalledAppsPathParams.class, baseUrl, "/v1/{customer}/reports:countInstalledApps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountInstalledAppsRequest.class, baseUrl, "/v1/{customer}/reports:countInstalledApps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountInstalledAppsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountInstalledAppsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -348,25 +355,26 @@ public class Customers {
     /**
      * Get a summary of printing done by each printer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterResponse chromemanagementCustomersReportsCountPrintJobsByPrinter(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterResponse chromemanagementCustomersReportsCountPrintJobsByPrinter(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterRequest request, org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterPathParams.class, baseUrl, "/v1/{customer}/reports:countPrintJobsByPrinter", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterRequest.class, baseUrl, "/v1/{customer}/reports:countPrintJobsByPrinter", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByPrinterRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -393,25 +401,26 @@ public class Customers {
     /**
      * Get a summary of printing done by each user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByUserResponse chromemanagementCustomersReportsCountPrintJobsByUser(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByUserResponse chromemanagementCustomersReportsCountPrintJobsByUser(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByUserRequest request, org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByUserPathParams.class, baseUrl, "/v1/{customer}/reports:countPrintJobsByUser", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByUserRequest.class, baseUrl, "/v1/{customer}/reports:countPrintJobsByUser", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsCountPrintJobsByUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -438,25 +447,26 @@ public class Customers {
     /**
      * Generate report of managed Chrome browser devices that have a specified app installed.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromemanagementCustomersReportsFindInstalledAppDevicesResponse chromemanagementCustomersReportsFindInstalledAppDevices(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsFindInstalledAppDevicesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromemanagementCustomersReportsFindInstalledAppDevicesResponse chromemanagementCustomersReportsFindInstalledAppDevices(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsFindInstalledAppDevicesRequest request, org.openapis.openapi.models.operations.ChromemanagementCustomersReportsFindInstalledAppDevicesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsFindInstalledAppDevicesPathParams.class, baseUrl, "/v1/{customer}/reports:findInstalledAppDevices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsFindInstalledAppDevicesRequest.class, baseUrl, "/v1/{customer}/reports:findInstalledAppDevices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsFindInstalledAppDevicesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersReportsFindInstalledAppDevicesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -483,25 +493,26 @@ public class Customers {
     /**
      * List all telemetry devices.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryDevicesListResponse chromemanagementCustomersTelemetryDevicesList(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryDevicesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryDevicesListResponse chromemanagementCustomersTelemetryDevicesList(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryDevicesListRequest request, org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryDevicesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryDevicesListPathParams.class, baseUrl, "/v1/{parent}/telemetry/devices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryDevicesListRequest.class, baseUrl, "/v1/{parent}/telemetry/devices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryDevicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryDevicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -528,25 +539,26 @@ public class Customers {
     /**
      * List telemetry events.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryEventsListResponse chromemanagementCustomersTelemetryEventsList(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryEventsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryEventsListResponse chromemanagementCustomersTelemetryEventsList(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryEventsListRequest request, org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryEventsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryEventsListPathParams.class, baseUrl, "/v1/{parent}/telemetry/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryEventsListRequest.class, baseUrl, "/v1/{parent}/telemetry/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryEventsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryEventsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -573,25 +585,26 @@ public class Customers {
     /**
      * Get telemetry user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersGetResponse chromemanagementCustomersTelemetryUsersGet(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersGetResponse chromemanagementCustomersTelemetryUsersGet(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersGetRequest request, org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -618,25 +631,26 @@ public class Customers {
     /**
      * List all telemetry users.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersListResponse chromemanagementCustomersTelemetryUsersList(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersListResponse chromemanagementCustomersTelemetryUsersList(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersListRequest request, org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersListPathParams.class, baseUrl, "/v1/{parent}/telemetry/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersListRequest.class, baseUrl, "/v1/{parent}/telemetry/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromemanagementCustomersTelemetryUsersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

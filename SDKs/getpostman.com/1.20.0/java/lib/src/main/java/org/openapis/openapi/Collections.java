@@ -88,15 +88,15 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CreateAForkResponse createAFork(org.openapis.openapi.models.operations.CreateAForkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateAForkPathParams.class, baseUrl, "/collections/fork/{collection_uid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateAForkRequest.class, baseUrl, "/collections/fork/{collection_uid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreateAForkQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreateAForkRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -133,7 +133,7 @@ public class Collections {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCollectionResponse createCollection(org.openapis.openapi.models.operations.CreateCollectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCollectionResponse createCollection(org.openapis.openapi.models.operations.CreateCollectionRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/collections");
         
@@ -188,7 +188,7 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.DeleteCollectionResponse deleteCollection(org.openapis.openapi.models.operations.DeleteCollectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCollectionPathParams.class, baseUrl, "/collections/{collection_uid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCollectionRequest.class, baseUrl, "/collections/{collection_uid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -249,7 +249,7 @@ public class Collections {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MergeAForkResponse mergeAFork(org.openapis.openapi.models.operations.MergeAForkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MergeAForkResponse mergeAFork(org.openapis.openapi.models.operations.MergeAForkRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/collections/merge");
         
@@ -288,7 +288,7 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.SingleCollectionResponse singleCollection(org.openapis.openapi.models.operations.SingleCollectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SingleCollectionPathParams.class, baseUrl, "/collections/{collection_uid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SingleCollectionRequest.class, baseUrl, "/collections/{collection_uid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -333,12 +333,12 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.UpdateCollectionResponse updateCollection(org.openapis.openapi.models.operations.UpdateCollectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCollectionPathParams.class, baseUrl, "/collections/{collection_uid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCollectionRequest.class, baseUrl, "/collections/{collection_uid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

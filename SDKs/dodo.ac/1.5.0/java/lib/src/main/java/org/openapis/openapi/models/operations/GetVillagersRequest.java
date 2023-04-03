@@ -4,20 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVillagersRequest {
-    
-    public GetVillagersQueryParams queryParams;
-    public GetVillagersRequest withQueryParams(GetVillagersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The version of the API you are calling, written as `1.0.0`. This is specified as required as good practice, but it is not actually enforced by the API. If you do not specify a version, you will be served the latest version, which may eventually result in breaking changes.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Version")
+    public String acceptVersion;
+    public GetVillagersRequest withAcceptVersion(String acceptVersion) {
+        this.acceptVersion = acceptVersion;
         return this;
     }
     
+    /**
+     * Your UUID secret key, granted to you by the Nookipedia team. Required for accessing the API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-API-KEY")
+    public String xApiKey;
+    public GetVillagersRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
+        return this;
+    }
     
-    public GetVillagersHeaders headers;
-    public GetVillagersRequest withHeaders(GetVillagersHeaders headers) {
-        this.headers = headers;
+    /**
+     * Use with `birthmonth` to get villager(s) born on a specific day. Value should be an int, 1 through 31.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=birthday")
+    public String birthday;
+    public GetVillagersRequest withBirthday(String birthday) {
+        this.birthday = birthday;
+        return this;
+    }
+    
+    /**
+     * Retrieve villagers born in a specific month. Value may be the month's name (`jan`, `january`) or the integer representing the month (`01`, `1`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=birthmonth")
+    public String birthmonth;
+    public GetVillagersRequest withBirthmonth(String birthmonth) {
+        this.birthmonth = birthmonth;
+        return this;
+    }
+    
+    /**
+     * When set to `true`, only villager names are returned. Instead of an array of objects with all details, the return will be an array of strings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludedetails")
+    public String excludedetails;
+    public GetVillagersRequest withExcludedetails(String excludedetails) {
+        this.excludedetails = excludedetails;
+        return this;
+    }
+    
+    /**
+     * Retrieve villagers that appear in all listed games. For example, if you want only villagers that appear in both *New Horizons* and *Pocket Camp*, you would send in `?game=nh&amp;game=pc`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=game")
+    public GetVillagersGameEnum[] game;
+    public GetVillagersRequest withGame(GetVillagersGameEnum[] game) {
+        this.game = game;
+        return this;
+    }
+    
+    /**
+     * Villager name. For most names you will get back an array with one object, but note that names are not a unique identifier across the series, as there are 3 names that are shared by multiple villagers (Lulu, Petunia, Carmen). For those 3 names you will get back an array with 2 objects. How you disambiguate between these villagers is up to you.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetVillagersRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * When set to `true`, an `nh_details` object will be included that contains *New Horizons* details about the villager. If the villager does not appear in *New Horizons*, the returned `nh_details` field will be set to null.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nhdetails")
+    public String nhdetails;
+    public GetVillagersRequest withNhdetails(String nhdetails) {
+        this.nhdetails = nhdetails;
+        return this;
+    }
+    
+    /**
+     * Retrieve villagers with a certain personality. For 'sisterly', note that the community often also calls it 'uchi' or 'big sister'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=personality")
+    public GetVillagersPersonalityEnum personality;
+    public GetVillagersRequest withPersonality(GetVillagersPersonalityEnum personality) {
+        this.personality = personality;
+        return this;
+    }
+    
+    /**
+     * Retrieve villagers of a certain species.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=species")
+    public GetVillagersSpeciesEnum species;
+    public GetVillagersRequest withSpecies(GetVillagersSpeciesEnum species) {
+        this.species = species;
+        return this;
+    }
+    
+    /**
+     * Specify the desired width of returned image URLs. When unspecified, the linked image(s) returned by the API will be full-resolution. Note that images can only be reduced in size; specifying a width greater than than the maximum size will return the default full-size image URL. Note that requesting specific image sizes for long lists may result in a very long response time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=thumbsize")
+    public Long thumbsize;
+    public GetVillagersRequest withThumbsize(Long thumbsize) {
+        this.thumbsize = thumbsize;
         return this;
     }
     

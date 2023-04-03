@@ -7,17 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkWirelessSsidIdentityPskRequest {
-    
-    public UpdateNetworkWirelessSsidIdentityPskPathParams pathParams;
-    public UpdateNetworkWirelessSsidIdentityPskRequest withPathParams(UpdateNetworkWirelessSsidIdentityPskPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkWirelessSsidIdentityPskRequestBody requestBody;
+    public UpdateNetworkWirelessSsidIdentityPskRequest withRequestBody(UpdateNetworkWirelessSsidIdentityPskRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkWirelessSsidIdentityPskRequestBody request;
-    public UpdateNetworkWirelessSsidIdentityPskRequest withRequest(UpdateNetworkWirelessSsidIdentityPskRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=identityPskId")
+    public String identityPskId;
+    public UpdateNetworkWirelessSsidIdentityPskRequest withIdentityPskId(String identityPskId) {
+        this.identityPskId = identityPskId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkWirelessSsidIdentityPskRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
+    public String number;
+    public UpdateNetworkWirelessSsidIdentityPskRequest withNumber(String number) {
+        this.number = number;
         return this;
     }
     

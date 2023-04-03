@@ -4,20 +4,97 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest {
-    
-    public GetVisualCrossingWebServicesRestServicesWeatherdataHistoryQueryParams queryParams;
-    public GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest withQueryParams(GetVisualCrossingWebServicesRestServicesWeatherdataHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aggregateHours")
+    public String aggregateHours;
+    public GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest withAggregateHours(String aggregateHours) {
+        this.aggregateHours = aggregateHours;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allowAsynch")
+    public Boolean allowAsynch;
+    public GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest withAllowAsynch(Boolean allowAsynch) {
+        this.allowAsynch = allowAsynch;
+        return this;
+    }
     
-    public String serverURL;
-    public GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=collectStationContributions")
+    public Boolean collectStationContributions;
+    public GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest withCollectStationContributions(Boolean collectStationContributions) {
+        this.collectStationContributions = collectStationContributions;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentType")
+    public String contentType;
+    public GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDateTime")
+    public String endDateTime;
+    public GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest withEndDateTime(String endDateTime) {
+        this.endDateTime = endDateTime;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeNormals")
+    public Boolean includeNormals;
+    public GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest withIncludeNormals(Boolean includeNormals) {
+        this.includeNormals = includeNormals;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locations")
+    public String locations;
+    public GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest withLocations(String locations) {
+        this.locations = locations;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDistance")
+    public String maxDistance;
+    public GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest withMaxDistance(String maxDistance) {
+        this.maxDistance = maxDistance;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxStations")
+    public String maxStations;
+    public GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest withMaxStations(String maxStations) {
+        this.maxStations = maxStations;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=shortColumnNames")
+    public Boolean shortColumnNames;
+    public GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest withShortColumnNames(Boolean shortColumnNames) {
+        this.shortColumnNames = shortColumnNames;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDateTime")
+    public String startDateTime;
+    public GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest withStartDateTime(String startDateTime) {
+        this.startDateTime = startDateTime;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unitGroup")
+    public String unitGroup;
+    public GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest withUnitGroup(String unitGroup) {
+        this.unitGroup = unitGroup;
         return this;
     }
     

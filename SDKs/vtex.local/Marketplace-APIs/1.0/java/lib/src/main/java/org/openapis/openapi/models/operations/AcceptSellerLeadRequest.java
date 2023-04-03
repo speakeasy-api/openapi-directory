@@ -7,31 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AcceptSellerLeadRequest {
-    
-    public AcceptSellerLeadPathParams pathParams;
-    public AcceptSellerLeadRequest withPathParams(AcceptSellerLeadPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AcceptSellerLeadQueryParams queryParams;
-    public AcceptSellerLeadRequest withQueryParams(AcceptSellerLeadQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public AcceptSellerLeadHeaders headers;
-    public AcceptSellerLeadRequest withHeaders(AcceptSellerLeadHeaders headers) {
-        this.headers = headers;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public AcceptSellerLeadRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AcceptSellerLeadRequest request;
-    public AcceptSellerLeadRequest withRequest(org.openapis.openapi.models.shared.AcceptSellerLeadRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AcceptSellerLeadRequest acceptSellerLeadRequest;
+    public AcceptSellerLeadRequest withAcceptSellerLeadRequest(org.openapis.openapi.models.shared.AcceptSellerLeadRequest acceptSellerLeadRequest) {
+        this.acceptSellerLeadRequest = acceptSellerLeadRequest;
+        return this;
+    }
+    
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public AcceptSellerLeadRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    
+    /**
+     * Name of the VTEX account that belongs to the marketplace. All data extracted, and changes added will be posted into this account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public AcceptSellerLeadRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    
+    /**
+     * Environment to use. Used as part of the URL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
+    public String environment;
+    public AcceptSellerLeadRequest withEnvironment(String environment) {
+        this.environment = environment;
+        return this;
+    }
+    
+    /**
+     * ID of the Seller Lead invited to the marketplace.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerLeadId")
+    public String sellerLeadId;
+    public AcceptSellerLeadRequest withSellerLeadId(String sellerLeadId) {
+        this.sellerLeadId = sellerLeadId;
         return this;
     }
     

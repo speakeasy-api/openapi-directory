@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposUpdateCommitCommentRequest {
-    
-    public ReposUpdateCommitCommentPathParams pathParams;
-    public ReposUpdateCommitCommentRequest withPathParams(ReposUpdateCommitCommentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReposUpdateCommitCommentRequestBody requestBody;
+    public ReposUpdateCommitCommentRequest withRequestBody(ReposUpdateCommitCommentRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReposUpdateCommitCommentRequestBody request;
-    public ReposUpdateCommitCommentRequest withRequest(ReposUpdateCommitCommentRequestBody request) {
-        this.request = request;
+    /**
+     * The unique identifier of the comment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
+    public Long commentId;
+    public ReposUpdateCommitCommentRequest withCommentId(Long commentId) {
+        this.commentId = commentId;
+        return this;
+    }
+    
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposUpdateCommitCommentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposUpdateCommitCommentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

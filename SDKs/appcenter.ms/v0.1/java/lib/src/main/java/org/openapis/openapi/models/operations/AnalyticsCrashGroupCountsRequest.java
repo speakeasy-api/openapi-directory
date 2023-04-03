@@ -4,27 +4,64 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsCrashGroupCountsRequest {
-    
-    public AnalyticsCrashGroupCountsPathParams pathParams;
-    public AnalyticsCrashGroupCountsRequest withPathParams(AnalyticsCrashGroupCountsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AnalyticsCrashGroupCountsRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public AnalyticsCrashGroupCountsQueryParams queryParams;
-    public AnalyticsCrashGroupCountsRequest withQueryParams(AnalyticsCrashGroupCountsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id of the crash group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_group_id")
+    public String crashGroupId;
+    public AnalyticsCrashGroupCountsRequest withCrashGroupId(String crashGroupId) {
+        this.crashGroupId = crashGroupId;
         return this;
     }
     
+    /**
+     * Last date time in data in ISO 8601 date time format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public OffsetDateTime end;
+    public AnalyticsCrashGroupCountsRequest withEnd(OffsetDateTime end) {
+        this.end = end;
+        return this;
+    }
     
-    public AnalyticsCrashGroupCountsSecurity security;
-    public AnalyticsCrashGroupCountsRequest withSecurity(AnalyticsCrashGroupCountsSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AnalyticsCrashGroupCountsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * Start date time in data in ISO 8601 date time format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public OffsetDateTime start;
+    public AnalyticsCrashGroupCountsRequest withStart(OffsetDateTime start) {
+        this.start = start;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public AnalyticsCrashGroupCountsRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

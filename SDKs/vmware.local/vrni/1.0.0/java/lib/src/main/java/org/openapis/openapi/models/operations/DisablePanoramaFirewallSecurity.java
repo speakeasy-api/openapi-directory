@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisablePanoramaFirewallSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAPIKeyAuth apiKeyAuth;
-    public DisablePanoramaFirewallSecurity withApiKeyAuth(org.openapis.openapi.models.shared.SchemeAPIKeyAuth apiKeyAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
+    public String apiKeyAuth;
+    public DisablePanoramaFirewallSecurity withApiKeyAuth(String apiKeyAuth) {
         this.apiKeyAuth = apiKeyAuth;
         return this;
     }

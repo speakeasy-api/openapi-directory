@@ -4,27 +4,62 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppointmentsUpdateRequest {
-    
-    public AppointmentsUpdatePathParams pathParams;
-    public AppointmentsUpdateRequest withPathParams(AppointmentsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public String date;
+    public AppointmentsUpdateRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     
-    
-    public AppointmentsUpdateQueryParams queryParams;
-    public AppointmentsUpdateRequest withQueryParams(AppointmentsUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_range")
+    public String dateRange;
+    public AppointmentsUpdateRequest withDateRange(String dateRange) {
+        this.dateRange = dateRange;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public AppointmentsUpdateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
     
-    public AppointmentsUpdateSecurity security;
-    public AppointmentsUpdateRequest withSecurity(AppointmentsUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public AppointmentsUpdateRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
+    public Long office;
+    public AppointmentsUpdateRequest withOffice(Long office) {
+        this.office = office;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public AppointmentsUpdateRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public AppointmentsUpdateRequest withSince(String since) {
+        this.since = since;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public AppointmentsUpdateRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

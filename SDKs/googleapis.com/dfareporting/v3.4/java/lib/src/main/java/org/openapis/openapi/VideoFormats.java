@@ -33,25 +33,26 @@ public class VideoFormats {
     /**
      * Gets one video format by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingVideoFormatsGetResponse dfareportingVideoFormatsGet(org.openapis.openapi.models.operations.DfareportingVideoFormatsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingVideoFormatsGetResponse dfareportingVideoFormatsGet(org.openapis.openapi.models.operations.DfareportingVideoFormatsGetRequest request, org.openapis.openapi.models.operations.DfareportingVideoFormatsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingVideoFormatsGetPathParams.class, baseUrl, "/userprofiles/{profileId}/videoFormats/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingVideoFormatsGetRequest.class, baseUrl, "/userprofiles/{profileId}/videoFormats/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingVideoFormatsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingVideoFormatsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class VideoFormats {
     /**
      * Lists available video formats.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingVideoFormatsListResponse dfareportingVideoFormatsList(org.openapis.openapi.models.operations.DfareportingVideoFormatsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingVideoFormatsListResponse dfareportingVideoFormatsList(org.openapis.openapi.models.operations.DfareportingVideoFormatsListRequest request, org.openapis.openapi.models.operations.DfareportingVideoFormatsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingVideoFormatsListPathParams.class, baseUrl, "/userprofiles/{profileId}/videoFormats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingVideoFormatsListRequest.class, baseUrl, "/userprofiles/{profileId}/videoFormats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingVideoFormatsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingVideoFormatsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

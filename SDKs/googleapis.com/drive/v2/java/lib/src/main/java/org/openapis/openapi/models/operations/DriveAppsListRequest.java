@@ -4,20 +4,106 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveAppsListRequest {
-    
-    public DriveAppsListQueryParams queryParams;
-    public DriveAppsListRequest withQueryParams(DriveAppsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DriveAppsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
+    /**
+     * A comma-separated list of file extensions for open with filtering. All apps within the given app query scope which can open any of the given file extensions will be included in the response. If appFilterMimeTypes are provided as well, the result is a union of the two resulting app lists.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appFilterExtensions")
+    public String appFilterExtensions;
+    public DriveAppsListRequest withAppFilterExtensions(String appFilterExtensions) {
+        this.appFilterExtensions = appFilterExtensions;
+        return this;
+    }
     
-    public DriveAppsListSecurity security;
-    public DriveAppsListRequest withSecurity(DriveAppsListSecurity security) {
-        this.security = security;
+    /**
+     * A comma-separated list of MIME types for open with filtering. All apps within the given app query scope which can open any of the given MIME types will be included in the response. If appFilterExtensions are provided as well, the result is a union of the two resulting app lists.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appFilterMimeTypes")
+    public String appFilterMimeTypes;
+    public DriveAppsListRequest withAppFilterMimeTypes(String appFilterMimeTypes) {
+        this.appFilterMimeTypes = appFilterMimeTypes;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DriveAppsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DriveAppsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * A language or locale code, as defined by BCP 47, with some extensions from Unicode's LDML format (http://www.unicode.org/reports/tr35/).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=languageCode")
+    public String languageCode;
+    public DriveAppsListRequest withLanguageCode(String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DriveAppsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DriveAppsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DriveAppsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public DriveAppsListRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

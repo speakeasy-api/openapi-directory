@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AssociateOriginationIdentityXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AssociateOriginationIdentityHeaders;
 import org.openapis.openapi.models.operations.AssociateOriginationIdentityRequest;
 import org.openapis.openapi.models.operations.AssociateOriginationIdentityResponse;
 import org.openapis.openapi.models.shared.AssociateOriginationIdentityRequest;
@@ -28,30 +27,26 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateOriginationIdentityRequest req = new AssociateOriginationIdentityRequest() {{
-                headers = new AssociateOriginationIdentityHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "PinpointSMSVoiceV2.AssociateOriginationIdentity";
+                associateOriginationIdentityRequest = new AssociateOriginationIdentityRequest() {{
+                    clientToken = "corrupti";
+                    isoCountryCode = "provident";
+                    originationIdentity = "distinctio";
+                    poolId = "quibusdam";
                 }};
-                request = new AssociateOriginationIdentityRequest() {{
-                    clientToken = "illum";
-                    isoCountryCode = "vel";
-                    originationIdentity = "error";
-                    poolId = "deserunt";
-                }};
-            }};            
+                xAmzAlgorithm = "unde";
+                xAmzContentSha256 = "nulla";
+                xAmzCredential = "corrupti";
+                xAmzDate = "illum";
+                xAmzSecurityToken = "vel";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "deserunt";
+                xAmzTarget = "PinpointSMSVoiceV2.AssociateOriginationIdentity";
+            }}            
 
             AssociateOriginationIdentityResponse res = sdk.associateOriginationIdentity(req);
 
@@ -65,7 +60,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

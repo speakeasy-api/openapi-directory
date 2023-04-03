@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAccountRequest {
-    
-    public UpdateAccountPathParams pathParams;
-    public UpdateAccountRequest withPathParams(UpdateAccountPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateAccountUpdateAccountRequest request;
-    public UpdateAccountRequest withRequest(UpdateAccountUpdateAccountRequest request) {
-        this.request = request;
+    public UpdateAccountUpdateAccountRequest requestBody;
+    public UpdateAccountRequest withRequestBody(UpdateAccountUpdateAccountRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateAccountSecurity security;
-    public UpdateAccountRequest withSecurity(UpdateAccountSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateAccountRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Account Sid that uniquely identifies the account to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateAccountRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

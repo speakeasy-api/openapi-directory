@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePayItemRequest {
-    
-    public CreatePayItemHeaders headers;
-    public CreatePayItemRequest withHeaders(CreatePayItemHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PayItemInput request;
-    public CreatePayItemRequest withRequest(org.openapis.openapi.models.shared.PayItemInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PayItemInput payItemInput;
+    public CreatePayItemRequest withPayItemInput(org.openapis.openapi.models.shared.PayItemInput payItemInput) {
+        this.payItemInput = payItemInput;
         return this;
     }
     
-    
-    public CreatePayItemSecurity security;
-    public CreatePayItemRequest withSecurity(CreatePayItemSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public CreatePayItemRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateentiredocumentRequest {
-    
-    public UpdateentiredocumentPathParams pathParams;
-    public UpdateentiredocumentRequest withPathParams(UpdateentiredocumentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateentiredocumentHeaders headers;
-    public UpdateentiredocumentRequest withHeaders(UpdateentiredocumentHeaders headers) {
-        this.headers = headers;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public UpdateentiredocumentRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public UpdateentiredocumentRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public UpdateentiredocumentRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Two letter word that identifies the data structure
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=acronym")
+    public String acronym;
+    public UpdateentiredocumentRequest withAcronym(String acronym) {
+        this.acronym = acronym;
+        return this;
+    }
+    
+    /**
+     * Id of the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateentiredocumentRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

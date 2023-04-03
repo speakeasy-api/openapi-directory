@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolTelnetConnectionRequestRequest {
+    /**
+     * Agent to manipulate TELNET connection
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolTelnetConnectionRequestRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolTelnetConnectionRequestPathParams pathParams;
-    public ProtocolTelnetConnectionRequestRequest withPathParams(ProtocolTelnetConnectionRequestPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=command")
+    public String command;
+    public ProtocolTelnetConnectionRequestRequest withCommand(String command) {
+        this.command = command;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connectionID")
+    public Integer connectionID;
+    public ProtocolTelnetConnectionRequestRequest withConnectionID(Integer connectionID) {
+        this.connectionID = connectionID;
         return this;
     }
     

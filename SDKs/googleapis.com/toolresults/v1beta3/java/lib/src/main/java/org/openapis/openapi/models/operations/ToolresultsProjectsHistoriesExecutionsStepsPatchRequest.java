@@ -7,31 +7,170 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ToolresultsProjectsHistoriesExecutionsStepsPatchRequest {
-    
-    public ToolresultsProjectsHistoriesExecutionsStepsPatchPathParams pathParams;
-    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withPathParams(ToolresultsProjectsHistoriesExecutionsStepsPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ToolresultsProjectsHistoriesExecutionsStepsPatchQueryParams queryParams;
-    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withQueryParams(ToolresultsProjectsHistoriesExecutionsStepsPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Step request;
-    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withRequest(org.openapis.openapi.models.shared.Step request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Step step;
+    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withStep(org.openapis.openapi.models.shared.Step step) {
+        this.step = step;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public ToolresultsProjectsHistoriesExecutionsStepsPatchSecurity security;
-    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withSecurity(ToolresultsProjectsHistoriesExecutionsStepsPatchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * A Execution id. Required.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
+    public String executionId;
+    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withExecutionId(String executionId) {
+        this.executionId = executionId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * A History id. Required.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=historyId")
+    public String historyId;
+    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withHistoryId(String historyId) {
+        this.historyId = historyId;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * A Project id. Required.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * A unique request ID for server to detect duplicated requests. For example, a UUID. Optional, but strongly recommended.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
+    public String requestId;
+    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    
+    /**
+     * A Step id. Required.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stepId")
+    public String stepId;
+    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withStepId(String stepId) {
+        this.stepId = stepId;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ToolresultsProjectsHistoriesExecutionsStepsPatchRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

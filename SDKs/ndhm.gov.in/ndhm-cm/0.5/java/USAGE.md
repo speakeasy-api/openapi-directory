@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.PostV05ConsentRequestsInitJsonHeaders;
 import org.openapis.openapi.models.operations.PostV05ConsentRequestsInitJsonRequest;
 import org.openapis.openapi.models.operations.PostV05ConsentRequestsInitJsonResponse;
 import org.openapis.openapi.models.shared.ConsentRequestConsentHip;
@@ -30,10 +29,8 @@ public class Application {
                 .build();
 
             PostV05ConsentRequestsInitJsonRequest req = new PostV05ConsentRequestsInitJsonRequest() {{
-                headers = new PostV05ConsentRequestsInitJsonHeaders() {{
-                    authorization = "corrupti";
-                }};
-                request = new ConsentRequest() {{
+                authorization = "corrupti";
+                consentRequest = new ConsentRequest() {{
                     consent = new ConsentRequestConsent() {{
                         careContexts = new org.openapis.openapi.models.shared.CareContextDefinition[]{{
                             add(new CareContextDefinition() {{
@@ -93,7 +90,7 @@ public class Application {
                     requestId = "499a5a4a-7dda-4f20-9b67-e24589627061";
                     timestamp = "2022-03-20T06:24:36.919Z";
                 }};
-            }};            
+            }}            
 
             PostV05ConsentRequestsInitJsonResponse res = sdk.consent.postV05ConsentRequestsInitJson(req);
 

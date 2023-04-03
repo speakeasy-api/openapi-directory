@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateCampaignHeaders;
 import org.openapis.openapi.models.operations.CreateCampaignRequestBodyDialerConfig;
 import org.openapis.openapi.models.operations.CreateCampaignRequestBodyOutboundCallConfig;
 import org.openapis.openapi.models.operations.CreateCampaignRequestBody;
@@ -19,49 +18,45 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateCampaignRequest req = new CreateCampaignRequest() {{
-                headers = new CreateCampaignHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateCampaignRequestBody() {{
-                    connectInstanceId = "illum";
+                requestBody = new CreateCampaignRequestBody() {{
+                    connectInstanceId = "corrupti";
                     dialerConfig = new CreateCampaignRequestBodyDialerConfig() {{
                         predictiveDialerConfig = new PredictiveDialerConfig() {{
-                            bandwidthAllocation = 4236.55;
+                            bandwidthAllocation = 5928.45;
                         }};
                         progressiveDialerConfig = new ProgressiveDialerConfig() {{
-                            bandwidthAllocation = 6235.64;
+                            bandwidthAllocation = 7151.9;
                         }};
                     }};
-                    name = "deserunt";
+                    name = "quibusdam";
                     outboundCallConfig = new CreateCampaignRequestBodyOutboundCallConfig() {{
                         answerMachineDetectionConfig = new AnswerMachineDetectionConfig() {{
                             enableAnswerMachineDetection = false;
                         }};
-                        connectContactFlowId = "suscipit";
-                        connectQueueId = "iure";
-                        connectSourcePhoneNumber = "magnam";
+                        connectContactFlowId = "unde";
+                        connectQueueId = "nulla";
+                        connectSourcePhoneNumber = "corrupti";
                     }};
                     tags = new java.util.HashMap<String, String>() {{
-                        put("ipsa", "delectus");
-                        put("tempora", "suscipit");
-                        put("molestiae", "minus");
-                        put("placeat", "voluptatum");
+                        put("vel", "error");
+                        put("deserunt", "suscipit");
+                        put("iure", "magnam");
+                        put("debitis", "ipsa");
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "delectus";
+                xAmzContentSha256 = "tempora";
+                xAmzCredential = "suscipit";
+                xAmzDate = "molestiae";
+                xAmzSecurityToken = "minus";
+                xAmzSignature = "placeat";
+                xAmzSignedHeaders = "voluptatum";
+            }}            
 
             CreateCampaignResponse res = sdk.createCampaign(req);
 

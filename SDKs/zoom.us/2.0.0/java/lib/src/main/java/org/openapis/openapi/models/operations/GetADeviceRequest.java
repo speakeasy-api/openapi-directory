@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetADeviceRequest {
-    
-    public GetADevicePathParams pathParams;
-    public GetADeviceRequest withPathParams(GetADevicePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetADeviceSecurity security;
-    public GetADeviceRequest withSecurity(GetADeviceSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
+    public String deviceId;
+    public GetADeviceRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
     

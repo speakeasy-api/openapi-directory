@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteApiV1SuggestionsIdRequest {
-    
-    public DeleteApiV1SuggestionsIdPathParams pathParams;
-    public DeleteApiV1SuggestionsIdRequest withPathParams(DeleteApiV1SuggestionsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteApiV1SuggestionsIdSecurity security;
-    public DeleteApiV1SuggestionsIdRequest withSecurity(DeleteApiV1SuggestionsIdSecurity security) {
-        this.security = security;
+    /**
+     * id of the account in the database to be removed from suggestions
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteApiV1SuggestionsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

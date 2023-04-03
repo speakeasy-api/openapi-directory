@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAbschlussRequest {
-    
-    public CreateAbschlussPathParams pathParams;
-    public CreateAbschlussRequest withPathParams(CreateAbschlussPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object that contains all data for a particular `Abschlussbeleg`.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Abschlussbelegdaten request;
-    public CreateAbschlussRequest withRequest(org.openapis.openapi.models.shared.Abschlussbelegdaten request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Abschlussbelegdaten abschlussbelegdaten;
+    public CreateAbschlussRequest withAbschlussbelegdaten(org.openapis.openapi.models.shared.Abschlussbelegdaten abschlussbelegdaten) {
+        this.abschlussbelegdaten = abschlussbelegdaten;
+        return this;
+    }
+    
+    /**
+     * The `_uuid` of the `Registrierkasse` to retrieve the `Beleg` collection.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registrierkasseUuid")
+    public String registrierkasseUuid;
+    public CreateAbschlussRequest withRegistrierkasseUuid(String registrierkasseUuid) {
+        this.registrierkasseUuid = registrierkasseUuid;
         return this;
     }
     

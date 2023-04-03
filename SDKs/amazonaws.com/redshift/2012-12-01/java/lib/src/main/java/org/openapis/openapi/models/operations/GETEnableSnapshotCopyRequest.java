@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETEnableSnapshotCopyRequest {
-    
-    public GETEnableSnapshotCopyQueryParams queryParams;
-    public GETEnableSnapshotCopyRequest withQueryParams(GETEnableSnapshotCopyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETEnableSnapshotCopyActionEnum action;
+    public GETEnableSnapshotCopyRequest withAction(GETEnableSnapshotCopyActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The unique identifier of the source cluster to copy snapshots from.&lt;/p&gt; &lt;p&gt;Constraints: Must be the valid name of an existing cluster that does not already have cross-region snapshot copy enabled.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETEnableSnapshotCopyRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
     
-    public GETEnableSnapshotCopyHeaders headers;
-    public GETEnableSnapshotCopyRequest withHeaders(GETEnableSnapshotCopyHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The destination Amazon Web Services Region that you want to copy snapshots to.&lt;/p&gt; &lt;p&gt;Constraints: Must be the name of a valid Amazon Web Services Region. For more information, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region"&gt;Regions and Endpoints&lt;/a&gt; in the Amazon Web Services General Reference. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationRegion")
+    public String destinationRegion;
+    public GETEnableSnapshotCopyRequest withDestinationRegion(String destinationRegion) {
+        this.destinationRegion = destinationRegion;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The number of days to retain newly copied snapshots in the destination Amazon Web Services Region after they are copied from the source Amazon Web Services Region. If the value is -1, the manual snapshot is retained indefinitely. &lt;/p&gt; &lt;p&gt;The value must be either -1 or an integer between 1 and 3,653.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ManualSnapshotRetentionPeriod")
+    public Long manualSnapshotRetentionPeriod;
+    public GETEnableSnapshotCopyRequest withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
+        this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The number of days to retain automated snapshots in the destination region after they are copied from the source region.&lt;/p&gt; &lt;p&gt;Default: 7.&lt;/p&gt; &lt;p&gt;Constraints: Must be at least 1 and no more than 35.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RetentionPeriod")
+    public Long retentionPeriod;
+    public GETEnableSnapshotCopyRequest withRetentionPeriod(Long retentionPeriod) {
+        this.retentionPeriod = retentionPeriod;
+        return this;
+    }
+    
+    /**
+     * The name of the snapshot copy grant to use when snapshots of an Amazon Web Services KMS-encrypted cluster are copied to the destination region.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotCopyGrantName")
+    public String snapshotCopyGrantName;
+    public GETEnableSnapshotCopyRequest withSnapshotCopyGrantName(String snapshotCopyGrantName) {
+        this.snapshotCopyGrantName = snapshotCopyGrantName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETEnableSnapshotCopyVersionEnum version;
+    public GETEnableSnapshotCopyRequest withVersion(GETEnableSnapshotCopyVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETEnableSnapshotCopyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETEnableSnapshotCopyRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETEnableSnapshotCopyRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETEnableSnapshotCopyRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETEnableSnapshotCopyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETEnableSnapshotCopyRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETEnableSnapshotCopyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

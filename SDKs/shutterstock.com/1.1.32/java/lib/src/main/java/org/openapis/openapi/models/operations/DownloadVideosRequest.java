@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadVideosRequest {
-    
-    public DownloadVideosPathParams pathParams;
-    public DownloadVideosRequest withPathParams(DownloadVideosPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Information about the videos to redownload
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RedownloadVideo request;
-    public DownloadVideosRequest withRequest(org.openapis.openapi.models.shared.RedownloadVideo request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RedownloadVideo redownloadVideo;
+    public DownloadVideosRequest withRedownloadVideo(org.openapis.openapi.models.shared.RedownloadVideo redownloadVideo) {
+        this.redownloadVideo = redownloadVideo;
         return this;
     }
     
-    
-    public DownloadVideosSecurity security;
-    public DownloadVideosRequest withSecurity(DownloadVideosSecurity security) {
-        this.security = security;
+    /**
+     * The license ID of the item to (re)download. The download links in the response are valid for 8 hours.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DownloadVideosRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

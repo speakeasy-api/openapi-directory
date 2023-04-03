@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsSetGithubActionsPermissionsOrganizationRequest {
-    
-    public ActionsSetGithubActionsPermissionsOrganizationPathParams pathParams;
-    public ActionsSetGithubActionsPermissionsOrganizationRequest withPathParams(ActionsSetGithubActionsPermissionsOrganizationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsSetGithubActionsPermissionsOrganizationRequestBody requestBody;
+    public ActionsSetGithubActionsPermissionsOrganizationRequest withRequestBody(ActionsSetGithubActionsPermissionsOrganizationRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsSetGithubActionsPermissionsOrganizationRequestBody request;
-    public ActionsSetGithubActionsPermissionsOrganizationRequest withRequest(ActionsSetGithubActionsPermissionsOrganizationRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsSetGithubActionsPermissionsOrganizationRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

@@ -39,7 +39,7 @@ public class ChargeStations {
      */
     public org.openapis.openapi.models.operations.DeleteChargeStationResponse deleteChargeStation(org.openapis.openapi.models.operations.DeleteChargeStationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteChargeStationPathParams.class, baseUrl, "/v1/chargestations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteChargeStationRequest.class, baseUrl, "/v1/chargestations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -72,13 +72,13 @@ public class ChargeStations {
      */
     public org.openapis.openapi.models.operations.GetChargeStationResponse getChargeStation(org.openapis.openapi.models.operations.GetChargeStationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChargeStationPathParams.class, baseUrl, "/v1/chargestations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChargeStationRequest.class, baseUrl, "/v1/chargestations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChargeStationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChargeStationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -111,13 +111,13 @@ public class ChargeStations {
      */
     public org.openapis.openapi.models.operations.GetChargeStationConnectorsResponse getChargeStationConnectors(org.openapis.openapi.models.operations.GetChargeStationConnectorsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChargeStationConnectorsPathParams.class, baseUrl, "/v1/chargestations/{id}/connectors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChargeStationConnectorsRequest.class, baseUrl, "/v1/chargestations/{id}/connectors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChargeStationConnectorsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChargeStationConnectorsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -156,7 +156,7 @@ public class ChargeStations {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChargeStationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChargeStationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -189,12 +189,12 @@ public class ChargeStations {
      */
     public org.openapis.openapi.models.operations.PatchChargeStationResponse patchChargeStation(org.openapis.openapi.models.operations.PatchChargeStationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchChargeStationPathParams.class, baseUrl, "/v1/chargestations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchChargeStationRequest.class, baseUrl, "/v1/chargestations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "schema1", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -233,7 +233,7 @@ public class ChargeStations {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostChargeStationsResponse postChargeStations(org.openapis.openapi.models.operations.PostChargeStationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostChargeStationsResponse postChargeStations(org.openapis.openapi.models.shared.Schema1 request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/chargestations");
         

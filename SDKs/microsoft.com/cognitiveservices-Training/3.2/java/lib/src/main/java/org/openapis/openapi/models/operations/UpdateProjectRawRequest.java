@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateProjectRawRequest {
-    
-    public UpdateProjectRawPathParams pathParams;
-    public UpdateProjectRawRequest withPathParams(UpdateProjectRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The updated project model.
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public UpdateProjectRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public UpdateProjectRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The id of the project to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public UpdateProjectRawRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

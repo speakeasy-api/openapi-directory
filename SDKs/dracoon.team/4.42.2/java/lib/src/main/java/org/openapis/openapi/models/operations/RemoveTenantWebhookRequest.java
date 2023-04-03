@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveTenantWebhookRequest {
-    
-    public RemoveTenantWebhookPathParams pathParams;
-    public RemoveTenantWebhookRequest withPathParams(RemoveTenantWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Service Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Service-Token")
+    public String xSdsServiceToken;
+    public RemoveTenantWebhookRequest withXSdsServiceToken(String xSdsServiceToken) {
+        this.xSdsServiceToken = xSdsServiceToken;
         return this;
     }
     
-    
-    public RemoveTenantWebhookHeaders headers;
-    public RemoveTenantWebhookRequest withHeaders(RemoveTenantWebhookHeaders headers) {
-        this.headers = headers;
+    /**
+     * Webhook ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhook_id")
+    public Long webhookId;
+    public RemoveTenantWebhookRequest withWebhookId(Long webhookId) {
+        this.webhookId = webhookId;
         return this;
     }
     

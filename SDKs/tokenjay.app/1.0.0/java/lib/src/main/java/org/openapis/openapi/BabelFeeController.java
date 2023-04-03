@@ -88,7 +88,7 @@ public class BabelFeeController {
 
     public org.openapis.openapi.models.operations.ErgoPayCreateBabelBox1Response ergoPayCreateBabelBox1(org.openapis.openapi.models.operations.ErgoPayCreateBabelBox1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErgoPayCreateBabelBox1PathParams.class, baseUrl, "/cancelbabel/{boxId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErgoPayCreateBabelBox1Request.class, baseUrl, "/cancelbabel/{boxId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

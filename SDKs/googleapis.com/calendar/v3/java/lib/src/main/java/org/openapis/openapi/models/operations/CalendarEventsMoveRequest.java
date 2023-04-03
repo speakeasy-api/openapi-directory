@@ -4,27 +4,128 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalendarEventsMoveRequest {
-    
-    public CalendarEventsMovePathParams pathParams;
-    public CalendarEventsMoveRequest withPathParams(CalendarEventsMovePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public CalendarEventsMoveRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public CalendarEventsMoveQueryParams queryParams;
-    public CalendarEventsMoveRequest withQueryParams(CalendarEventsMoveQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Calendar identifier of the source calendar where the event currently is on.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=calendarId")
+    public String calendarId;
+    public CalendarEventsMoveRequest withCalendarId(String calendarId) {
+        this.calendarId = calendarId;
         return this;
     }
     
+    /**
+     * Calendar identifier of the target calendar where the event is to be moved to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination")
+    public String destination;
+    public CalendarEventsMoveRequest withDestination(String destination) {
+        this.destination = destination;
+        return this;
+    }
     
-    public CalendarEventsMoveSecurity security;
-    public CalendarEventsMoveRequest withSecurity(CalendarEventsMoveSecurity security) {
-        this.security = security;
+    /**
+     * Event identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=eventId")
+    public String eventId;
+    public CalendarEventsMoveRequest withEventId(String eventId) {
+        this.eventId = eventId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public CalendarEventsMoveRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public CalendarEventsMoveRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public CalendarEventsMoveRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public CalendarEventsMoveRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public CalendarEventsMoveRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use sendUpdates instead.
+     * 
+     * Whether to send notifications about the change of the event's organizer. Note that some emails might still be sent even if you set the value to false. The default is false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sendNotifications")
+    public Boolean sendNotifications;
+    public CalendarEventsMoveRequest withSendNotifications(Boolean sendNotifications) {
+        this.sendNotifications = sendNotifications;
+        return this;
+    }
+    
+    /**
+     * Guests who should receive notifications about the change of the event's organizer.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sendUpdates")
+    public CalendarEventsMoveSendUpdatesEnum sendUpdates;
+    public CalendarEventsMoveRequest withSendUpdates(CalendarEventsMoveSendUpdatesEnum sendUpdates) {
+        this.sendUpdates = sendUpdates;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public CalendarEventsMoveRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

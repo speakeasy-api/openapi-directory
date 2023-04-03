@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteQuoteSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeXTheySaidSoAPISecret xTheySaidSoApiSecret;
-    public DeleteQuoteSecurity withXTheySaidSoApiSecret(org.openapis.openapi.models.shared.SchemeXTheySaidSoAPISecret xTheySaidSoApiSecret) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret")
+    public String xTheySaidSoApiSecret;
+    public DeleteQuoteSecurity withXTheySaidSoApiSecret(String xTheySaidSoApiSecret) {
         this.xTheySaidSoApiSecret = xTheySaidSoApiSecret;
         return this;
     }

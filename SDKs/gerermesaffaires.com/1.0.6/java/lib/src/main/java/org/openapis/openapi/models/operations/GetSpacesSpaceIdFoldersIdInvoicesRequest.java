@@ -4,20 +4,176 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdFoldersIdInvoicesRequest {
-    
-    public GetSpacesSpaceIdFoldersIdInvoicesPathParams pathParams;
-    public GetSpacesSpaceIdFoldersIdInvoicesRequest withPathParams(GetSpacesSpaceIdFoldersIdInvoicesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * value of AccountedOn (boolean available but not range)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccountedOn")
+    public String accountedOn;
+    public GetSpacesSpaceIdFoldersIdInvoicesRequest withAccountedOn(String accountedOn) {
+        this.accountedOn = accountedOn;
         return this;
     }
     
+    /**
+     * amount before VAT
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BeforeVAT")
+    public Double beforeVAT;
+    public GetSpacesSpaceIdFoldersIdInvoicesRequest withBeforeVAT(Double beforeVAT) {
+        this.beforeVAT = beforeVAT;
+        return this;
+    }
     
-    public GetSpacesSpaceIdFoldersIdInvoicesQueryParams queryParams;
-    public GetSpacesSpaceIdFoldersIdInvoicesRequest withQueryParams(GetSpacesSpaceIdFoldersIdInvoicesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * date range of the documents
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Date")
+    public String date;
+    public GetSpacesSpaceIdFoldersIdInvoicesRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
+    
+    /**
+     * date due payment
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DueDate")
+    public String dueDate;
+    public GetSpacesSpaceIdFoldersIdInvoicesRequest withDueDate(String dueDate) {
+        this.dueDate = dueDate;
+        return this;
+    }
+    
+    /**
+     * json object to filter extend data
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Extend")
+    public String extend;
+    public GetSpacesSpaceIdFoldersIdInvoicesRequest withExtend(String extend) {
+        this.extend = extend;
+        return this;
+    }
+    
+    /**
+     * date range of attachment
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FolderDate")
+    public String folderDate;
+    public GetSpacesSpaceIdFoldersIdInvoicesRequest withFolderDate(String folderDate) {
+        this.folderDate = folderDate;
+        return this;
+    }
+    
+    /**
+     * amount incl. VAT
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InclVAT")
+    public Double inclVAT;
+    public GetSpacesSpaceIdFoldersIdInvoicesRequest withInclVAT(Double inclVAT) {
+        this.inclVAT = inclVAT;
+        return this;
+    }
+    
+    /**
+     * range date of invoice
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InvoiceDate")
+    public String invoiceDate;
+    public GetSpacesSpaceIdFoldersIdInvoicesRequest withInvoiceDate(String invoiceDate) {
+        this.invoiceDate = invoiceDate;
+        return this;
+    }
+    
+    /**
+     * Number of the invoice
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Number")
+    public String number;
+    public GetSpacesSpaceIdFoldersIdInvoicesRequest withNumber(String number) {
+        this.number = number;
+        return this;
+    }
+    
+    /**
+     * date of payment (boolean and valid available)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PaymentDate")
+    public String paymentDate;
+    public GetSpacesSpaceIdFoldersIdInvoicesRequest withPaymentDate(String paymentDate) {
+        this.paymentDate = paymentDate;
+        return this;
+    }
+    
+    /**
+     * index range of the results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Range")
+    public String range;
+    public GetSpacesSpaceIdFoldersIdInvoicesRequest withRange(String range) {
+        this.range = range;
+        return this;
+    }
+    
+    /**
+     * name of value for sort
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SortName")
+    public GetSpacesSpaceIdFoldersIdInvoicesSortNameEnum sortName;
+    public GetSpacesSpaceIdFoldersIdInvoicesRequest withSortName(GetSpacesSpaceIdFoldersIdInvoicesSortNameEnum sortName) {
+        this.sortName = sortName;
+        return this;
+    }
+    
+    /**
+     * order of sort (if absent default is asc)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SortOrder")
+    public GetSpacesSpaceIdFoldersIdInvoicesSortOrderEnum sortOrder;
+    public GetSpacesSpaceIdFoldersIdInvoicesRequest withSortOrder(GetSpacesSpaceIdFoldersIdInvoicesSortOrderEnum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * Title of the documents
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Title")
+    public String title;
+    public GetSpacesSpaceIdFoldersIdInvoicesRequest withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    
+    /**
+     * If present returns also the data extend
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=WithExtend")
+    public String withExtend;
+    public GetSpacesSpaceIdFoldersIdInvoicesRequest withWithExtend(String withExtend) {
+        this.withExtend = withExtend;
+        return this;
+    }
+    
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesSpaceIdFoldersIdInvoicesRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdFoldersIdInvoicesRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

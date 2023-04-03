@@ -35,10 +35,11 @@ public class ItemPriority {
     /**
      * &lt;p&gt;Using this method, you can download a TSV_GZIP (tab separated value gzip) &lt;b&gt;Item Priority&lt;/b&gt; feed file, which allows you to track changes (deltas) in the status of your priority items, such as when an item is added or removed from a campaign.  The delta feed tracks the changes to the status of items within a category you specify in the input URI. You can also specify a specific date for the feed you want returned.&lt;/p&gt;&lt;p&gt;&lt;span class="tablenote"&gt;&lt;span style="color:#FF0000"&gt; &lt;b&gt; Important:&lt;/b&gt; &lt;/span&gt; You must consume the daily feeds (&lt;b&gt;Item&lt;/b&gt;, &lt;b&gt;Item Group&lt;/b&gt;) before consuming the &lt;b&gt;Item Priority&lt;/b&gt; feed. This ensures that your inventory is up to date.&lt;/span&gt;&lt;/p&gt;&lt;h3&gt;&lt;b&gt;Downloading feed files &lt;/b&gt;&lt;/h3&gt;             &lt;p&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note: &lt;/b&gt; Filters are applied to the feed files. For details, see &lt;a href="/api-docs/buy/static/api-feed.html#feed-filters"&gt;Feed File Filters&lt;/a&gt;. When curating the items returned, be sure to code as if these filters are not applied as they can be changed or removed in the future.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Priority Item feed files are binary gzip files. If the file is larger than 100 MB, the download must be streamed in chunks. You specify the size of the chunks in bytes using the &lt;a href="#range-header"&gt;Range&lt;/a&gt; request header. The &lt;a href="#content-range"&gt;Content-range&lt;/a&gt; response header indicates where in the full resource this partial chunk of data belongs  and the total number of bytes in the file.       For more information about using these headers, see &lt;a href="/api-docs/buy/static/api-feed_beta.html#retrv-gzip"&gt;Retrieving a gzip feed file&lt;/a&gt;.    &lt;/p&gt;    &lt;p&gt;In addition to the API, there is an open source &lt;a href="https://github.com/eBay/FeedSDK" target="_blank"&gt;Feed SDK&lt;/a&gt; written in Java that downloads, combines files into a single file when needed, and unzips the entire feed file. It also lets you specify field filters to curate the items in the file.&lt;/p&gt;              &lt;p&gt;&lt;span class="tablenote"&gt;  &lt;b&gt; Note:&lt;/b&gt;  A successful call will always return a TSV.GZIP file; however, unsuccessful calls generate errors that are returned in JSON format. For documentation purposes, the successful call response is shown below as JSON fields so that the value returned in each column can be explained. The order of the response fields shows the order of the columns in the feed file.&lt;/span&gt;  &lt;/p&gt;                &lt;h3&gt;&lt;b&gt;Restrictions &lt;/b&gt;&lt;/h3&gt;                &lt;p&gt;For a list of supported sites and other restrictions, see &lt;a href="/api-docs/buy/feed/overview.html#API"&gt;API Restrictions&lt;/a&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetItemPriorityFeedResponse getItemPriorityFeed(org.openapis.openapi.models.operations.GetItemPriorityFeedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetItemPriorityFeedResponse getItemPriorityFeed(org.openapis.openapi.models.operations.GetItemPriorityFeedRequest request, org.openapis.openapi.models.operations.GetItemPriorityFeedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/item_priority");
         
@@ -46,13 +47,13 @@ public class ItemPriority {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemPriorityFeedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemPriorityFeedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -61,7 +62,7 @@ public class ItemPriority {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

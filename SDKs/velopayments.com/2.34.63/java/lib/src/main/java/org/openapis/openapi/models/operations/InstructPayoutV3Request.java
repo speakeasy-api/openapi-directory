@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InstructPayoutV3Request {
-    
-    public InstructPayoutV3PathParams pathParams;
-    public InstructPayoutV3Request withPathParams(InstructPayoutV3PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Additional instruct payout parameters
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.InstructPayoutRequestV3 request;
-    public InstructPayoutV3Request withRequest(org.openapis.openapi.models.shared.InstructPayoutRequestV3 request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.InstructPayoutRequestV3 instructPayoutRequestV3;
+    public InstructPayoutV3Request withInstructPayoutRequestV3(org.openapis.openapi.models.shared.InstructPayoutRequestV3 instructPayoutRequestV3) {
+        this.instructPayoutRequestV3 = instructPayoutRequestV3;
+        return this;
+    }
+    
+    /**
+     * Id of the payout
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payoutId")
+    public String payoutId;
+    public InstructPayoutV3Request withPayoutId(String payoutId) {
+        this.payoutId = payoutId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReportsCustomGenerateRequest {
-    
-    public GetReportsCustomGenerateQueryParams queryParams;
-    public GetReportsCustomGenerateRequest withQueryParams(GetReportsCustomGenerateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Name of the report
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_name")
+    public String reportName;
+    public GetReportsCustomGenerateRequest withReportName(String reportName) {
+        this.reportName = reportName;
         return this;
     }
     

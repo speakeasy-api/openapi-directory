@@ -4,27 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchRequest {
-    
-    public SearchQueryParams queryParams;
-    public SearchRequest withQueryParams(SearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * This method also uses the &lt;code&gt;X-EBAY-C-MARKETPLACE-ID&lt;/code&gt; header to identify the seller's eBay marketplace. It is required for all marketplaces except EBAY_US, which is the default. &lt;b&gt;Note:&lt;/b&gt; This method is limited to &lt;code&gt;EBAY_US&lt;/code&gt;, &lt;code&gt;EBAY_AU&lt;/code&gt;, &lt;code&gt;EBAY_CA&lt;/code&gt;, and &lt;code&gt;EBAY_GB&lt;/code&gt; values.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public SearchRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     
-    
-    public SearchHeaders headers;
-    public SearchRequest withHeaders(SearchHeaders headers) {
-        this.headers = headers;
+    /**
+     * An eBay category and one or more aspects of that category, with the values that can be used to narrow down the collection of products returned by this call. &lt;br /&gt;&lt;br /&gt; Aspects are product attributes that can represent different types of information for different products. Every product has aspects, but different products have different sets of aspects. &lt;br /&gt;&lt;br /&gt; You can determine appropriate values for the aspects by first submitting this method without this parameter. It will return either the &lt;b&gt;productSummaries.aspects&lt;/b&gt; container, the &lt;b&gt;refinement.aspectDistributions&lt;/b&gt; container, or both, depending on the value of the &lt;b&gt;fieldgroups&lt;/b&gt; parameter in the request. The &lt;b&gt;productSummaries.aspects&lt;/b&gt; container provides the category aspects and their values that are associated with each returned product. The &lt;b&gt;refinement.aspectDistributions&lt;/b&gt; container provides information about the distribution of values of the set of category aspects associated with the specified categories. In both cases sellers can select from among the returned aspects to use with this parameter. &lt;br /&gt;&lt;br /&gt; &lt;span class="tablenote"&gt; &lt;strong&gt;Note:&lt;/strong&gt; You can also use the Taxonomy API's &lt;b&gt;getItemAspectsForCategory&lt;/b&gt; method to retrieve detailed information about aspects and their values that are appropriate for your selected category. &lt;/span&gt; &lt;br /&gt;&lt;br /&gt; The syntax for the &lt;b&gt;aspect_filter&lt;/b&gt; parameter is as follows (on several lines for readability; &lt;b&gt;categoryId&lt;/b&gt; is required): &lt;br /&gt;&lt;br /&gt; &lt;code&gt;aspect_filter=categoryId:&lt;i&gt;category_id&lt;/i&gt;,&lt;br /&gt; &lt;i&gt;aspect1&lt;/i&gt;:{&lt;i&gt;valueA&lt;/i&gt;|&lt;i&gt;valueB&lt;/i&gt;|...},&lt;br /&gt; &lt;i&gt;aspect2&lt;/i&gt;:{&lt;i&gt;valueC&lt;/i&gt;|&lt;i&gt;valueD&lt;/i&gt;|...},.&lt;/code&gt; &lt;br /&gt;&lt;br /&gt; A matching product must be within the specified category, and it must have least one of the values identified for every specified aspect. &lt;br /&gt;&lt;br /&gt; &lt;span class="tablenote"&gt; &lt;strong&gt;Note:&lt;/strong&gt; Aspect names and values are case sensitive. &lt;/span&gt; &lt;br /&gt;&lt;br /&gt; Here is an example of an &lt;b&gt;aspect_filter&lt;/b&gt; parameter in which &lt;code&gt;9355&lt;/code&gt; is the category ID, &lt;code&gt;Color&lt;/code&gt; is an aspect of that category, and &lt;code&gt;Black&lt;/code&gt; and &lt;code&gt;White&lt;/code&gt; are possible values of that aspect (on several lines for readability): &lt;br /&gt;&lt;br /&gt; &lt;code&gt;GET https://api.ebay.com/commerce/catalog/v1_beta/product_summary/search?&lt;br /&gt; aspect_filter=categoryId:9355,Color:{White|Black}&lt;/code&gt;    &lt;br /&gt;&lt;br /&gt; Here is the &lt;b&gt;aspect_filter&lt;/b&gt; with required URL encoding and a second aspect (on several lines for readability): &lt;br /&gt;&lt;br /&gt; &lt;code&gt;GET https://api.ebay.com/commerce/catalog/v1_beta/product_summary/search?&lt;br /&gt; aspect_filter=categoryId:9355,Color:%7BWhite%7CBlack%7D,&lt;br /&gt; Storage%20Capacity:%128GB%7C256GB%7D&lt;/code&gt; &lt;br /&gt;&lt;br /&gt; &lt;span class="tablenote"&gt; &lt;strong&gt;Note:&lt;/strong&gt; You cannot use the &lt;b&gt;aspect_filter&lt;/b&gt; parameter in the same method with either the &lt;b&gt;gtin&lt;/b&gt; parameter or the &lt;b&gt;mpn&lt;/b&gt; parameter. &lt;/span&gt; For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/commerce/catalog/types/catal:AspectFilter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aspect_filter")
+    public String aspectFilter;
+    public SearchRequest withAspectFilter(String aspectFilter) {
+        this.aspectFilter = aspectFilter;
         return this;
     }
     
+    /**
+     * &lt;span class="tablenote"&gt; &lt;strong&gt;Important:&lt;/strong&gt; Currently, only the first &lt;b&gt;category_id&lt;/b&gt; value is accepted. &lt;/span&gt; &lt;br /&gt;&lt;br /&gt; One or more comma-separated category identifiers for narrowing down the collection of products returned by this call. &lt;br /&gt;&lt;br /&gt; &lt;span class="tablenote"&gt; &lt;strong&gt;Note:&lt;/strong&gt; This parameter requires a valid category ID value. You can use the Taxonomy API's &lt;b&gt;getCategorySuggestions&lt;/b&gt; method to retrieve appropriate category IDs for your product based on keywords. &lt;/span&gt; &lt;br /&gt;&lt;br /&gt; The syntax for this parameter is as follows: &lt;br /&gt;&lt;br /&gt; &lt;code&gt;category_ids=&lt;i&gt;category_id1&lt;/i&gt;,&lt;i&gt;category_id2&lt;/i&gt;,.&lt;/code&gt; &lt;br /&gt;&lt;br /&gt; Here is an example of a method with the &lt;b&gt;category_ids&lt;/b&gt; parameter: br /&gt;&lt;br /&gt; &lt;code&gt;GET https://api.ebay.com/commerce/catalog/v1_beta/product_summary/search?&lt;br /&gt; category_ids=178893&lt;/code&gt; &lt;br /&gt;&lt;br /&gt; &lt;span class="tablenote"&gt; &lt;strong&gt;Note:&lt;/strong&gt; Although all query parameters are optional, this method must include at least the &lt;b&gt;q&lt;/b&gt; parameter, or the &lt;b&gt;category_ids&lt;/b&gt;, &lt;b&gt;gtin&lt;/b&gt;, or &lt;b&gt;mpn&lt;/b&gt; parameter with a valid value. &lt;br /&gt;&lt;br /&gt; If you provide only the &lt;b&gt;category_ids&lt;/b&gt; parameter, you cannot specify a top-level (L1) category. &lt;/span&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category_ids")
+    public String categoryIds;
+    public SearchRequest withCategoryIds(String categoryIds) {
+        this.categoryIds = categoryIds;
+        return this;
+    }
     
-    public SearchSecurity security;
-    public SearchRequest withSecurity(SearchSecurity security) {
-        this.security = security;
+    /**
+     * The type of information to return in the response. &lt;br /&gt;&lt;br /&gt; &lt;span class="tablenote"&gt; &lt;strong&gt;Important:&lt;/strong&gt; This parameter may not produce valid results if you also provide more than one value for the &lt;b&gt;category_ids&lt;/b&gt; parameter. It is recommended that you avoid using this combination. &lt;/span&gt; &lt;br /&gt;&lt;br /&gt; &lt;b&gt; Valid Values: &lt;/b&gt; &lt;ul&gt; &lt;li&gt;&lt;code&gt;ASPECT_REFINEMENTS&lt;/code&gt; &amp;mdash; This returns the &lt;b&gt;refinement&lt;/b&gt; container, which includes the category aspect and aspect value distributions that apply to the returned products. For example, if you searched for &lt;code&gt;Ford Mustang&lt;/code&gt;, some of the category aspects might be &lt;b&gt;Model Year&lt;/b&gt;, &lt;b&gt;Exterior Color&lt;/b&gt;, &lt;b&gt;Vehicle Mileage&lt;/b&gt;, and so on. &lt;br /&gt; &lt;br /&gt; &lt;span class="tablenote"&gt; &lt;b&gt;Note: &lt;/b&gt;Aspects are category specific.&lt;/span&gt; &lt;/li&gt; &lt;li&gt;&lt;code&gt;FULL&lt;/code&gt; &amp;mdash; This returns all the refinement containers and all the matching products. This value overrides the other values, which will be ignored.&lt;/li&gt; &lt;li&gt;&lt;code&gt;MATCHING_PRODUCTS&lt;/code&gt; &amp;mdash; This returns summaries for all products that match the values you provide for the &lt;b&gt;q&lt;/b&gt; and &lt;b&gt;category_ids&lt;/b&gt; parameters. This does not affect your use of the &lt;code&gt;ASPECT_REFINEMENTS&lt;/code&gt; value, which you can use in the same call.&lt;/li&gt; &lt;/ul&gt; Code so that your app gracefully handles any future changes to this list. &lt;br /&gt;&lt;br /&gt;&lt;b&gt;Default: &lt;/b&gt; &lt;code&gt;MATCHING_PRODUCTS&lt;/code&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fieldgroups")
+    public String fieldgroups;
+    public SearchRequest withFieldgroups(String fieldgroups) {
+        this.fieldgroups = fieldgroups;
+        return this;
+    }
+    
+    /**
+     * A string consisting of one or more comma-separated Global Trade Item Numbers (GTINs) that identify products to search for. Currently the GTIN values can include EAN, ISBN, and UPC identifier types. &lt;br /&gt;&lt;br /&gt; &lt;span class="tablenote"&gt; &lt;strong&gt;Note:&lt;/strong&gt; Although all query parameters are optional, this method must include at least the &lt;b&gt;q&lt;/b&gt; parameter, or the &lt;b&gt;category_ids&lt;/b&gt;, &lt;b&gt;gtin&lt;/b&gt;, or &lt;b&gt;mpn&lt;/b&gt; parameter with a valid value.  &lt;br /&gt;&lt;br /&gt; You cannot use the &lt;b&gt;gtin&lt;/b&gt; parameter in the same method with either the &lt;b&gt;q&lt;/b&gt; parameter or the &lt;b&gt;aspect_filter&lt;/b&gt; parameter. &lt;/span&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gtin")
+    public String gtin;
+    public SearchRequest withGtin(String gtin) {
+        this.gtin = gtin;
+        return this;
+    }
+    
+    /**
+     * The number of product summaries to return. This is the &lt;i&gt;result set&lt;/i&gt;, a subset of the full collection of products that match the search or filter criteria of this call. &lt;br /&gt;&lt;br /&gt; &lt;b&gt;Maximum:&lt;/b&gt; &lt;code&gt;200&lt;/code&gt; &lt;br /&gt; &lt;b&gt;Default:&lt;/b&gt; &lt;code&gt;50&lt;/code&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public SearchRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * A string consisting of one or more comma-separated Manufacturer Part Numbers (MPNs) that identify products to search for. This method will return all products that have one of the specified MPNs. &lt;br /&gt;&lt;br /&gt; MPNs are defined by manufacturers for their own products, and are therefore certain to be unique only within a given brand. However, many MPNs do turn out to be globally unique. &lt;br /&gt;&lt;br /&gt; &lt;span class="tablenote"&gt; &lt;strong&gt;Note:&lt;/strong&gt; Although all query parameters are optional, this method must include at least the &lt;b&gt;q&lt;/b&gt; parameter, or the &lt;b&gt;category_ids&lt;/b&gt;, &lt;b&gt;gtin&lt;/b&gt;, or &lt;b&gt;mpn&lt;/b&gt; parameter with a valid value. &lt;br /&gt;&lt;br /&gt; You cannot use the &lt;b&gt;mpn&lt;/b&gt; parameter in the same method with either the &lt;b&gt;q&lt;/b&gt; parameter or the &lt;b&gt;aspect_filter&lt;/b&gt; parameter. &lt;/span&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mpn")
+    public String mpn;
+    public SearchRequest withMpn(String mpn) {
+        this.mpn = mpn;
+        return this;
+    }
+    
+    /**
+     * This parameter is reserved for internal or future use.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public SearchRequest withOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * A string consisting of one or more keywords to use to search for products in the eBay catalog. &lt;br /&gt;&lt;br /&gt; &lt;span class="tablenote"&gt; &lt;strong&gt;Note:&lt;/strong&gt; This method searches the following product record fields: &lt;b&gt;title&lt;/b&gt;, &lt;b&gt;description&lt;/b&gt;, &lt;b&gt;brand&lt;/b&gt;, and &lt;b&gt;aspects.localizedName&lt;/b&gt;, which do not include product IDs. Wildcard characters (e.g. &lt;code&gt;*&lt;/code&gt;) are not allowed. &lt;/span&gt; &lt;br /&gt;&lt;br /&gt; The keywords are handled as follows: &lt;ul&gt; &lt;li&gt;If the keywords are separated by a comma (e.g. &lt;code&gt;iPhone,256GB&lt;/code&gt;), the query returns products that have &lt;code&gt;iPhone&lt;/code&gt; &lt;b&gt;AND&lt;/b&gt; &lt;code&gt;256GB&lt;/code&gt;.&lt;/li&gt; &lt;li&gt;If the keywords are separated by a space (e.g. &lt;code&gt;"iPhone&amp;nbsp;ipad"&lt;/code&gt; or &lt;code&gt;"iPhone,&amp;nbsp;ipad"&lt;/code&gt;), the query ignores any commas and returns products that have &lt;code&gt;iPhone&lt;/code&gt; &lt;b&gt;OR&lt;/b&gt; &lt;code&gt;iPad&lt;/code&gt;.&lt;/li&gt; &lt;/ul&gt; &lt;span class="tablenote"&gt; &lt;strong&gt;Note:&lt;/strong&gt; Although all query parameters are optional, this method must include at least the &lt;b&gt;q&lt;/b&gt; parameter, or the &lt;b&gt;category_ids&lt;/b&gt;, &lt;b&gt;gtin&lt;/b&gt;, or &lt;b&gt;mpn&lt;/b&gt; parameter with a valid value.  &lt;br /&gt;&lt;br /&gt; You cannot use the &lt;b&gt;q&lt;/b&gt; parameter in the same method with either the &lt;b&gt;gtin&lt;/b&gt; parameter or the &lt;b&gt;mpn&lt;/b&gt; parameter. &lt;/span&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public SearchRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     

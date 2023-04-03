@@ -4,13 +4,207 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchTypePointAmerifluxLevel2Request {
+    /**
+     * Archive change date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
+    public OffsetDateTime changedateFrom;
+    public SearchTypePointAmerifluxLevel2Request withChangedateFrom(OffsetDateTime changedateFrom) {
+        this.changedateFrom = changedateFrom;
+        return this;
+    }
     
-    public SearchTypePointAmerifluxLevel2QueryParams queryParams;
-    public SearchTypePointAmerifluxLevel2Request withQueryParams(SearchTypePointAmerifluxLevel2QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Archive change date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
+    public OffsetDateTime changedateTo;
+    public SearchTypePointAmerifluxLevel2Request withChangedateTo(OffsetDateTime changedateTo) {
+        this.changedateTo = changedateTo;
+        return this;
+    }
+    
+    /**
+     * Archive create date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
+    public OffsetDateTime createdateFrom;
+    public SearchTypePointAmerifluxLevel2Request withCreatedateFrom(OffsetDateTime createdateFrom) {
+        this.createdateFrom = createdateFrom;
+        return this;
+    }
+    
+    /**
+     * Archive create date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
+    public OffsetDateTime createdateTo;
+    public SearchTypePointAmerifluxLevel2Request withCreatedateTo(OffsetDateTime createdateTo) {
+        this.createdateTo = createdateTo;
+        return this;
+    }
+    
+    /**
+     * Search description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public SearchTypePointAmerifluxLevel2Request withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    /**
+     * File suffix
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
+    public String filesuffix;
+    public SearchTypePointAmerifluxLevel2Request withFilesuffix(String filesuffix) {
+        this.filesuffix = filesuffix;
+        return this;
+    }
+    
+    /**
+     * From date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
+    public OffsetDateTime fromdate;
+    public SearchTypePointAmerifluxLevel2Request withFromdate(OffsetDateTime fromdate) {
+        this.fromdate = fromdate;
+        return this;
+    }
+    
+    /**
+     * Parent entry
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public String group;
+    public SearchTypePointAmerifluxLevel2Request withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * Max number of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Long max;
+    public SearchTypePointAmerifluxLevel2Request withMax(Long max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * Northern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
+    public Float maxlatitude;
+    public SearchTypePointAmerifluxLevel2Request withMaxlatitude(Float maxlatitude) {
+        this.maxlatitude = maxlatitude;
+        return this;
+    }
+    
+    /**
+     * Eastern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
+    public Float maxlongitude;
+    public SearchTypePointAmerifluxLevel2Request withMaxlongitude(Float maxlongitude) {
+        this.maxlongitude = maxlongitude;
+        return this;
+    }
+    
+    /**
+     * Southern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
+    public Float minlatitude;
+    public SearchTypePointAmerifluxLevel2Request withMinlatitude(Float minlatitude) {
+        this.minlatitude = minlatitude;
+        return this;
+    }
+    
+    /**
+     * Western bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
+    public Float minlongitude;
+    public SearchTypePointAmerifluxLevel2Request withMinlongitude(Float minlongitude) {
+        this.minlongitude = minlongitude;
+        return this;
+    }
+    
+    /**
+     * Search name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public SearchTypePointAmerifluxLevel2Request withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Contact
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_ameriflux_level2.contact")
+    public String searchTypePointAmerifluxLevel2Contact;
+    public SearchTypePointAmerifluxLevel2Request withSearchTypePointAmerifluxLevel2Contact(String searchTypePointAmerifluxLevel2Contact) {
+        this.searchTypePointAmerifluxLevel2Contact = searchTypePointAmerifluxLevel2Contact;
+        return this;
+    }
+    
+    /**
+     * Ecosystem Type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_ameriflux_level2.ecosystem_type")
+    public String searchTypePointAmerifluxLevel2EcosystemType;
+    public SearchTypePointAmerifluxLevel2Request withSearchTypePointAmerifluxLevel2EcosystemType(String searchTypePointAmerifluxLevel2EcosystemType) {
+        this.searchTypePointAmerifluxLevel2EcosystemType = searchTypePointAmerifluxLevel2EcosystemType;
+        return this;
+    }
+    
+    /**
+     * Site ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_ameriflux_level2.site_id")
+    public String searchTypePointAmerifluxLevel2SiteId;
+    public SearchTypePointAmerifluxLevel2Request withSearchTypePointAmerifluxLevel2SiteId(String searchTypePointAmerifluxLevel2SiteId) {
+        this.searchTypePointAmerifluxLevel2SiteId = searchTypePointAmerifluxLevel2SiteId;
+        return this;
+    }
+    
+    /**
+     * Number to skip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Long skip;
+    public SearchTypePointAmerifluxLevel2Request withSkip(Long skip) {
+        this.skip = skip;
+        return this;
+    }
+    
+    /**
+     * Search text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public SearchTypePointAmerifluxLevel2Request withText(String text) {
+        this.text = text;
+        return this;
+    }
+    
+    /**
+     * To date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
+    public OffsetDateTime todate;
+    public SearchTypePointAmerifluxLevel2Request withTodate(OffsetDateTime todate) {
+        this.todate = todate;
         return this;
     }
     

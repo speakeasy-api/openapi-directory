@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateASharedLineGroupRequest {
-    
-    public UpdateASharedLineGroupPathParams pathParams;
-    public UpdateASharedLineGroupRequest withPathParams(UpdateASharedLineGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateASharedLineGroupApplicationJSON requestBody;
+    public UpdateASharedLineGroupRequest withRequestBody(UpdateASharedLineGroupApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateASharedLineGroupApplicationJSON request;
-    public UpdateASharedLineGroupRequest withRequest(UpdateASharedLineGroupApplicationJSON request) {
-        this.request = request;
+    /**
+     * Unique identifier of the shared line group that is to be updated.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sharedLineGroupId")
+    public String sharedLineGroupId;
+    public UpdateASharedLineGroupRequest withSharedLineGroupId(String sharedLineGroupId) {
+        this.sharedLineGroupId = sharedLineGroupId;
         return this;
     }
     

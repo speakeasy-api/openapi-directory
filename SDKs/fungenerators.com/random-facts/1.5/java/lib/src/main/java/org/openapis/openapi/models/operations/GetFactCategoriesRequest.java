@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFactCategoriesRequest {
-    
-    public GetFactCategoriesQueryParams queryParams;
-    public GetFactCategoriesRequest withQueryParams(GetFactCategoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetFactCategoriesSecurity security;
-    public GetFactCategoriesRequest withSecurity(GetFactCategoriesSecurity security) {
-        this.security = security;
+    /**
+     * start
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Long start;
+    public GetFactCategoriesRequest withStart(Long start) {
+        this.start = start;
         return this;
     }
     

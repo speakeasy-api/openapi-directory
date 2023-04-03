@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserDeleteAccessTokenRequest {
+    /**
+     * token to be deleted, identified by ID and if not available by name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
+    public String token;
+    public UserDeleteAccessTokenRequest withToken(String token) {
+        this.token = token;
+        return this;
+    }
     
-    public UserDeleteAccessTokenPathParams pathParams;
-    public UserDeleteAccessTokenRequest withPathParams(UserDeleteAccessTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * username of user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public UserDeleteAccessTokenRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

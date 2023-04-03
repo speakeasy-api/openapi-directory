@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteDBClusterRequest {
-    
-    public GETDeleteDBClusterQueryParams queryParams;
-    public GETDeleteDBClusterRequest withQueryParams(GETDeleteDBClusterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteDBClusterActionEnum action;
+    public GETDeleteDBClusterRequest withAction(GETDeleteDBClusterActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The cluster identifier for the cluster to be deleted. This parameter isn't case sensitive.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must match an existing &lt;code&gt;DBClusterIdentifier&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterIdentifier")
+    public String dbClusterIdentifier;
+    public GETDeleteDBClusterRequest withDBClusterIdentifier(String dbClusterIdentifier) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        return this;
+    }
     
-    public GETDeleteDBClusterHeaders headers;
-    public GETDeleteDBClusterRequest withHeaders(GETDeleteDBClusterHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt; The cluster snapshot identifier of the new cluster snapshot created when &lt;code&gt;SkipFinalSnapshot&lt;/code&gt; is set to &lt;code&gt;false&lt;/code&gt;. &lt;/p&gt; &lt;note&gt; &lt;p&gt; Specifying this parameter and also setting the &lt;code&gt;SkipFinalShapshot&lt;/code&gt; parameter to &lt;code&gt;true&lt;/code&gt; results in an error. &lt;/p&gt; &lt;/note&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must be from 1 to 255 letters, numbers, or hyphens.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;The first character must be a letter.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Cannot end with a hyphen or contain two consecutive hyphens.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FinalDBSnapshotIdentifier")
+    public String finalDBSnapshotIdentifier;
+    public GETDeleteDBClusterRequest withFinalDBSnapshotIdentifier(String finalDBSnapshotIdentifier) {
+        this.finalDBSnapshotIdentifier = finalDBSnapshotIdentifier;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt; Determines whether a final cluster snapshot is created before the cluster is deleted. If &lt;code&gt;true&lt;/code&gt; is specified, no cluster snapshot is created. If &lt;code&gt;false&lt;/code&gt; is specified, a cluster snapshot is created before the DB cluster is deleted. &lt;/p&gt; &lt;note&gt; &lt;p&gt;If &lt;code&gt;SkipFinalSnapshot&lt;/code&gt; is &lt;code&gt;false&lt;/code&gt;, you must specify a &lt;code&gt;FinalDBSnapshotIdentifier&lt;/code&gt; parameter.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Default: &lt;code&gt;false&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SkipFinalSnapshot")
+    public Boolean skipFinalSnapshot;
+    public GETDeleteDBClusterRequest withSkipFinalSnapshot(Boolean skipFinalSnapshot) {
+        this.skipFinalSnapshot = skipFinalSnapshot;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteDBClusterVersionEnum version;
+    public GETDeleteDBClusterRequest withVersion(GETDeleteDBClusterVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteDBClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteDBClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteDBClusterRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteDBClusterRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteDBClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteDBClusterRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteDBClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

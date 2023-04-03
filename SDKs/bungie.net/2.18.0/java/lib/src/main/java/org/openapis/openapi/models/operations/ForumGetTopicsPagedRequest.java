@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ForumGetTopicsPagedRequest {
-    
-    public ForumGetTopicsPagedPathParams pathParams;
-    public ForumGetTopicsPagedRequest withPathParams(ForumGetTopicsPagedPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A category filter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=categoryFilter")
+    public Integer categoryFilter;
+    public ForumGetTopicsPagedRequest withCategoryFilter(Integer categoryFilter) {
+        this.categoryFilter = categoryFilter;
         return this;
     }
     
+    /**
+     * The group, if any.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group")
+    public Long group;
+    public ForumGetTopicsPagedRequest withGroup(Long group) {
+        this.group = group;
+        return this;
+    }
     
-    public ForumGetTopicsPagedQueryParams queryParams;
-    public ForumGetTopicsPagedRequest withQueryParams(ForumGetTopicsPagedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Comma seperated list of locales posts must match to return in the result list. Default 'en'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locales")
+    public String locales;
+    public ForumGetTopicsPagedRequest withLocales(String locales) {
+        this.locales = locales;
+        return this;
+    }
+    
+    /**
+     * Zero paged page number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
+    public Integer page;
+    public ForumGetTopicsPagedRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Unused
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pageSize")
+    public Integer pageSize;
+    public ForumGetTopicsPagedRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * A date filter.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quickDate")
+    public Integer quickDate;
+    public ForumGetTopicsPagedRequest withQuickDate(Integer quickDate) {
+        this.quickDate = quickDate;
+        return this;
+    }
+    
+    /**
+     * The sort mode.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sort")
+    public Long sort;
+    public ForumGetTopicsPagedRequest withSort(Long sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * The tags to search, if any.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagstring")
+    public String tagstring;
+    public ForumGetTopicsPagedRequest withTagstring(String tagstring) {
+        this.tagstring = tagstring;
         return this;
     }
     

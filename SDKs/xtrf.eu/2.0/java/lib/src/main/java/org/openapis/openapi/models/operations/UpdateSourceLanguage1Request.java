@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSourceLanguage1Request {
-    
-    public UpdateSourceLanguage1PathParams pathParams;
-    public UpdateSourceLanguage1Request withPathParams(UpdateSourceLanguage1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated source language for a quote.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SourceLanguageDTO request;
-    public UpdateSourceLanguage1Request withRequest(org.openapis.openapi.models.shared.SourceLanguageDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SourceLanguageDTO sourceLanguageDTO;
+    public UpdateSourceLanguage1Request withSourceLanguageDTO(org.openapis.openapi.models.shared.SourceLanguageDTO sourceLanguageDTO) {
+        this.sourceLanguageDTO = sourceLanguageDTO;
+        return this;
+    }
+    
+    /**
+     * quote's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
+    public String quoteId;
+    public UpdateSourceLanguage1Request withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
         return this;
     }
     

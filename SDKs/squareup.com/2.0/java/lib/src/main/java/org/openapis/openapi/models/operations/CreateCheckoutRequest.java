@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCheckoutRequest {
-    
-    public CreateCheckoutPathParams pathParams;
-    public CreateCheckoutRequest withPathParams(CreateCheckoutPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateCheckoutRequest request;
-    public CreateCheckoutRequest withRequest(org.openapis.openapi.models.shared.CreateCheckoutRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateCheckoutRequest createCheckoutRequest;
+    public CreateCheckoutRequest withCreateCheckoutRequest(org.openapis.openapi.models.shared.CreateCheckoutRequest createCheckoutRequest) {
+        this.createCheckoutRequest = createCheckoutRequest;
         return this;
     }
     
-    
-    public CreateCheckoutSecurity security;
-    public CreateCheckoutRequest withSecurity(CreateCheckoutSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the business location to associate the checkout with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public CreateCheckoutRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     

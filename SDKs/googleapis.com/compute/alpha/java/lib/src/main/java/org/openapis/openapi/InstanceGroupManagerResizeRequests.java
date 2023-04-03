@@ -34,25 +34,26 @@ public class InstanceGroupManagerResizeRequests {
     /**
      * Cancels the specified resize request and removes it from the queue. Cancelled resize request does no longer wait for the resources to be provisioned. Cancel is only possible for requests that are accepted in the queue.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsCancelResponse computeInstanceGroupManagerResizeRequestsCancel(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsCancelResponse computeInstanceGroupManagerResizeRequestsCancel(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsCancelRequest request, org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsCancelPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resizeRequests/{resizeRequest}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsCancelRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resizeRequests/{resizeRequest}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class InstanceGroupManagerResizeRequests {
     /**
      * Deletes the specified, inactive resize request. Requests that are still active cannot be deleted. Deleting request does not delete instances that were provisioned previously.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsDeleteResponse computeInstanceGroupManagerResizeRequestsDelete(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsDeleteResponse computeInstanceGroupManagerResizeRequestsDelete(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsDeleteRequest request, org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsDeletePathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resizeRequests/{resizeRequest}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsDeleteRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resizeRequests/{resizeRequest}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,25 +126,26 @@ public class InstanceGroupManagerResizeRequests {
     /**
      * Returns all of the details about the specified resize request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsGetResponse computeInstanceGroupManagerResizeRequestsGet(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsGetResponse computeInstanceGroupManagerResizeRequestsGet(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsGetRequest request, org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsGetPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resizeRequests/{resizeRequest}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsGetRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resizeRequests/{resizeRequest}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,27 +172,28 @@ public class InstanceGroupManagerResizeRequests {
     /**
      * Creates a new resize request that starts provisioning VMs immediately or queues VM creation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsInsertResponse computeInstanceGroupManagerResizeRequestsInsert(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsInsertResponse computeInstanceGroupManagerResizeRequestsInsert(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsInsertRequest request, org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsInsertPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resizeRequests", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsInsertRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resizeRequests", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instanceGroupManagerResizeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,25 +220,26 @@ public class InstanceGroupManagerResizeRequests {
     /**
      * Retrieves a list of resize requests that are contained in the managed instance group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsListResponse computeInstanceGroupManagerResizeRequestsList(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsListResponse computeInstanceGroupManagerResizeRequestsList(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsListRequest request, org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsListPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resizeRequests", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsListRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resizeRequests", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupManagerResizeRequestsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1ResourcesIdAvailabilityRequest {
-    
-    public PutSetupV1ResourcesIdAvailabilityPathParams pathParams;
-    public PutSetupV1ResourcesIdAvailabilityRequest withPathParams(PutSetupV1ResourcesIdAvailabilityPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Resource Availability Input Model
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AvailabilityInputModel request;
-    public PutSetupV1ResourcesIdAvailabilityRequest withRequest(org.openapis.openapi.models.shared.AvailabilityInputModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AvailabilityInputModel availabilityInputModel;
+    public PutSetupV1ResourcesIdAvailabilityRequest withAvailabilityInputModel(org.openapis.openapi.models.shared.AvailabilityInputModel availabilityInputModel) {
+        this.availabilityInputModel = availabilityInputModel;
+        return this;
+    }
+    
+    /**
+     * id of resource object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutSetupV1ResourcesIdAvailabilityRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

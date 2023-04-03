@@ -4,13 +4,536 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchRvActiveRequest {
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetSearchRvActiveRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetSearchRvActiveQueryParams queryParams;
-    public GetSearchRvActiveRequest withQueryParams(GetSearchRvActiveQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Base exterior color to match. Valid filter values are those that our Search facets API returns for unique base exterior colors. You can pass in multiple base interior color values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=base_exterior_color")
+    public String baseExteriorColor;
+    public GetSearchRvActiveRequest withBaseExteriorColor(String baseExteriorColor) {
+        this.baseExteriorColor = baseExteriorColor;
+        return this;
+    }
+    
+    /**
+     * Base interior color to match. Valid filter values are those that our Search facets API returns for unique base interior colors. You can pass in multiple base interior color values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=base_interior_color")
+    public String baseInteriorColor;
+    public GetSearchRvActiveRequest withBaseInteriorColor(String baseInteriorColor) {
+        this.baseInteriorColor = baseInteriorColor;
+        return this;
+    }
+    
+    /**
+     * To filter listing on City in which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
+    public String city;
+    public GetSearchRvActiveRequest withCity(String city) {
+        this.city = city;
+        return this;
+    }
+    
+    /**
+     * Filter RV listings on class
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=class")
+    public String class_;
+    public GetSearchRvActiveRequest withClass(String class_) {
+        this.class_ = class_;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their cylinders
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cylinders")
+    public String cylinders;
+    public GetSearchRvActiveRequest withCylinders(String cylinders) {
+        this.cylinders = cylinders;
+        return this;
+    }
+    
+    /**
+     * Dealer id to filter the listings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dealer_id")
+    public String dealerId;
+    public GetSearchRvActiveRequest withDealerId(String dealerId) {
+        this.dealerId = dealerId;
+        return this;
+    }
+    
+    /**
+     * Filter listings on dealer_name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dealer_name")
+    public String dealerName;
+    public GetSearchRvActiveRequest withDealerName(String dealerName) {
+        this.dealerName = dealerName;
+        return this;
+    }
+    
+    /**
+     * Doors to filter the cars on. Valid filter values are those that our Search facets API returns for unique doors. You can pass in multiple doors values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doors")
+    public String doors;
+    public GetSearchRvActiveRequest withDoors(String doors) {
+        this.doors = doors;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their engine
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=engine")
+    public String engine;
+    public GetSearchRvActiveRequest withEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    
+    /**
+     * Exterior color to match. Valid filter values are those that our Search facets API returns for unique exterior colors. You can pass in multiple exterior color values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exterior_color")
+    public String exteriorColor;
+    public GetSearchRvActiveRequest withExteriorColor(String exteriorColor) {
+        this.exteriorColor = exteriorColor;
+        return this;
+    }
+    
+    /**
+     * Control sort order of facets with this parameter with default sort being on count, Other available sort is alphabetical sort, which can be obtained by using index as value for this param
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facet_sort")
+    public org.openapis.openapi.models.shared.FacetSortEnum facetSort;
+    public GetSearchRvActiveRequest withFacetSort(org.openapis.openapi.models.shared.FacetSortEnum facetSort) {
+        this.facetSort = facetSort;
+        return this;
+    }
+    
+    /**
+     * The comma separated list of fields for which facets are requested. Facets could be requested in addition to the listings for the search. Please note - The API calls with lots of facet fields may take longer to respond.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facets")
+    public String facets;
+    public GetSearchRvActiveRequest withFacets(String facets) {
+        this.facets = facets;
+        return this;
+    }
+    
+    /**
+     * First seen days range to filter listings with the first seen in the range given. Range to be given in the format - min-max e.g. 25-12
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_seen_days")
+    public String firstSeenDays;
+    public GetSearchRvActiveRequest withFirstSeenDays(String firstSeenDays) {
+        this.firstSeenDays = firstSeenDays;
+        return this;
+    }
+    
+    /**
+     * First seen date range to filter listings with the first seen in the range given. Range to be given in the format [YYYYMMDD] - min-max e.g. 20190523-20190623
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_seen_range")
+    public String firstSeenRange;
+    public GetSearchRvActiveRequest withFirstSeenRange(String firstSeenRange) {
+        this.firstSeenRange = firstSeenRange;
+        return this;
+    }
+    
+    /**
+     * To filter on fresh water capacity of vehicle
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fresh_water_capacity")
+    public String freshWaterCapacity;
+    public GetSearchRvActiveRequest withFreshWaterCapacity(String freshWaterCapacity) {
+        this.freshWaterCapacity = freshWaterCapacity;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their fuel type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fuel_type")
+    public String fuelType;
+    public GetSearchRvActiveRequest withFuelType(String fuelType) {
+        this.fuelType = fuelType;
+        return this;
+    }
+    
+    /**
+     * To filter on the maximum total weight of your vehicle
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gvwr")
+    public String gvwr;
+    public GetSearchRvActiveRequest withGvwr(String gvwr) {
+        this.gvwr = gvwr;
+        return this;
+    }
+    
+    /**
+     * Interior color to match. Valid filter values are those that our Search facets API returns for unique interior colors. You can pass in multiple interior color values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interior_color")
+    public String interiorColor;
+    public GetSearchRvActiveRequest withInteriorColor(String interiorColor) {
+        this.interiorColor = interiorColor;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their condition. Either used or new
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inventory_type")
+    public org.openapis.openapi.models.shared.InventoryTypeEnum inventoryType;
+    public GetSearchRvActiveRequest withInventoryType(org.openapis.openapi.models.shared.InventoryTypeEnum inventoryType) {
+        this.inventoryType = inventoryType;
+        return this;
+    }
+    
+    /**
+     * Last seen days range to filter listings with the last seen in the range given. Range to be given in the format - min-max e.g. 25-12
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_seen_days")
+    public String lastSeenDays;
+    public GetSearchRvActiveRequest withLastSeenDays(String lastSeenDays) {
+        this.lastSeenDays = lastSeenDays;
+        return this;
+    }
+    
+    /**
+     * Last seen date range to filter listings with the last seen in the range given. Range to be given in the format [YYYYMMDD] - min-max e.g. 20190523-20190623
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_seen_range")
+    public String lastSeenRange;
+    public GetSearchRvActiveRequest withLastSeenRange(String lastSeenRange) {
+        this.lastSeenRange = lastSeenRange;
+        return this;
+    }
+    
+    /**
+     * Latitude component of location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latitude")
+    public Double latitude;
+    public GetSearchRvActiveRequest withLatitude(Double latitude) {
+        this.latitude = latitude;
+        return this;
+    }
+    
+    /**
+     * Filter RV listings on length
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
+    public String length;
+    public GetSearchRvActiveRequest withLength(String length) {
+        this.length = length;
+        return this;
+    }
+    
+    /**
+     * length range to filter listings with the length in the range given. Range to be given in the format - min-max e.g. 50-200
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length_range")
+    public String lengthRange;
+    public GetSearchRvActiveRequest withLengthRange(String lengthRange) {
+        this.lengthRange = lengthRange;
+        return this;
+    }
+    
+    /**
+     * Longitude component of location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longitude")
+    public Double longitude;
+    public GetSearchRvActiveRequest withLongitude(Double longitude) {
+        this.longitude = longitude;
+        return this;
+    }
+    
+    /**
+     * To filter listings on their make
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=make")
+    public String make;
+    public GetSearchRvActiveRequest withMake(String make) {
+        this.make = make;
+        return this;
+    }
+    
+    /**
+     * Miles range to filter listings with miles in the given range. Range to be given in the format - min-max e.g. 1000-5000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=miles_range")
+    public String milesRange;
+    public GetSearchRvActiveRequest withMilesRange(String milesRange) {
+        this.milesRange = milesRange;
+        return this;
+    }
+    
+    /**
+     * To filter listings on their model
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
+    public String model;
+    public GetSearchRvActiveRequest withModel(String model) {
+        this.model = model;
+        return this;
+    }
+    
+    /**
+     * To filter listings on their model orig (as described on the webpage)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model_o")
+    public String modelO;
+    public GetSearchRvActiveRequest withModelO(String modelO) {
+        this.modelO = modelO;
+        return this;
+    }
+    
+    /**
+     * To filter listing on msa code in which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=msa_code")
+    public String msaCode;
+    public GetSearchRvActiveRequest withMsaCode(String msaCode) {
+        this.msaCode = msaCode;
+        return this;
+    }
+    
+    /**
+     * MSRP range to filter listings with the msrp in the range given. Range to be given in the format - min-max e.g. 1000-5000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=msrp_range")
+    public String msrpRange;
+    public GetSearchRvActiveRequest withMsrpRange(String msrpRange) {
+        this.msrpRange = msrpRange;
+        return this;
+    }
+    
+    /**
+     * To filter on number_of_awnings
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number_of_awnings")
+    public String numberOfAwnings;
+    public GetSearchRvActiveRequest withNumberOfAwnings(String numberOfAwnings) {
+        this.numberOfAwnings = numberOfAwnings;
+        return this;
+    }
+    
+    /**
+     * Price range to filter listings with the price in the range given. Range to be given in the format - min-max e.g. 1000-5000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=price_range")
+    public String priceRange;
+    public GetSearchRvActiveRequest withPriceRange(String priceRange) {
+        this.priceRange = priceRange;
+        return this;
+    }
+    
+    /**
+     * Radius around the search location (Unit - Miles)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
+    public Integer radius;
+    public GetSearchRvActiveRequest withRadius(Integer radius) {
+        this.radius = radius;
+        return this;
+    }
+    
+    /**
+     * The comma separated list of numeric fields for which range facets are requested. Range facets could be requested in addition to the listings for the search. Please note - The API calls with lots of range facet fields may take longer to respond.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=range_facets")
+    public String rangeFacets;
+    public GetSearchRvActiveRequest withRangeFacets(String rangeFacets) {
+        this.rangeFacets = rangeFacets;
+        return this;
+    }
+    
+    /**
+     * Number of results to return. Default is 10. Max is 50
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
+    public Integer rows;
+    public GetSearchRvActiveRequest withRows(Integer rows) {
+        this.rows = rows;
+        return this;
+    }
+    
+    /**
+     * To search a substring across entire document
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_text")
+    public String searchText;
+    public GetSearchRvActiveRequest withSearchText(String searchText) {
+        this.searchText = searchText;
+        return this;
+    }
+    
+    /**
+     * To filter on vehicle seating capacity
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=seating_capacity")
+    public String seatingCapacity;
+    public GetSearchRvActiveRequest withSeatingCapacity(String seatingCapacity) {
+        this.seatingCapacity = seatingCapacity;
+        return this;
+    }
+    
+    /**
+     * To filter data based on sleeps
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sleeps")
+    public String sleeps;
+    public GetSearchRvActiveRequest withSleeps(String sleeps) {
+        this.sleeps = sleeps;
+        return this;
+    }
+    
+    /**
+     * Filter RV listings on slideouts
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slideouts")
+    public String slideouts;
+    public GetSearchRvActiveRequest withSlideouts(String slideouts) {
+        this.slideouts = slideouts;
+        return this;
+    }
+    
+    /**
+     * Sort by field. Default sort field is distance from the given point
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public String sortBy;
+    public GetSearchRvActiveRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Sort order - asc or desc. Default sort order is asc
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
+    public org.openapis.openapi.models.shared.SortOrderEnum sortOrder;
+    public GetSearchRvActiveRequest withSortOrder(org.openapis.openapi.models.shared.SortOrderEnum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their source
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public String source;
+    public GetSearchRvActiveRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * Page number to fetch the results for the given criteria. Default is 0. Pagination is allowed only till first 10000 results for the search and sort criteria. The page value can be only between 1 to 10000/rows
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Integer start;
+    public GetSearchRvActiveRequest withStart(Integer start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * To filter listing on State in which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public GetSearchRvActiveRequest withState(String state) {
+        this.state = state;
+        return this;
+    }
+    
+    /**
+     * The list of fields for which stats need to be generated based on the matching listings for the search criteria. The stats consists of mean, max, average and count of listings based on which the stats are calculated for the field. Stats could be requested in addition to the listings for the search. Please note - The API calls with the stats fields may take longer to respond.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stats")
+    public String stats;
+    public GetSearchRvActiveRequest withStats(String stats) {
+        this.stats = stats;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their stock number on lot
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stock_no")
+    public String stockNo;
+    public GetSearchRvActiveRequest withStockNo(String stockNo) {
+        this.stockNo = stockNo;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their transmission
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transmission")
+    public String transmission;
+    public GetSearchRvActiveRequest withTransmission(String transmission) {
+        this.transmission = transmission;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their VIN
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vin")
+    public String vin;
+    public GetSearchRvActiveRequest withVin(String vin) {
+        this.vin = vin;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their year
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public String year;
+    public GetSearchRvActiveRequest withYear(String year) {
+        this.year = year;
+        return this;
+    }
+    
+    /**
+     * Year range to filter listings with the year in the range given. Range to be given in the format - min-max e.g. 2019-2021
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year_range")
+    public String yearRange;
+    public GetSearchRvActiveRequest withYearRange(String yearRange) {
+        this.yearRange = yearRange;
+        return this;
+    }
+    
+    /**
+     * To filter listing on ZIP around which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
+    public String zip;
+    public GetSearchRvActiveRequest withZip(String zip) {
+        this.zip = zip;
         return this;
     }
     

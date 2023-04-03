@@ -4,27 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppGetApplicationApiUsageRequest {
-    
-    public AppGetApplicationApiUsagePathParams pathParams;
-    public AppGetApplicationApiUsageRequest withPathParams(AppGetApplicationApiUsagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the application to get usage statistics.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=applicationId")
+    public Integer applicationId;
+    public AppGetApplicationApiUsageRequest withApplicationId(Integer applicationId) {
+        this.applicationId = applicationId;
         return this;
     }
     
-    
-    public AppGetApplicationApiUsageQueryParams queryParams;
-    public AppGetApplicationApiUsageRequest withQueryParams(AppGetApplicationApiUsageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * End time for query. Goes to now if not specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public OffsetDateTime end;
+    public AppGetApplicationApiUsageRequest withEnd(OffsetDateTime end) {
+        this.end = end;
         return this;
     }
     
-    
-    public AppGetApplicationApiUsageSecurity security;
-    public AppGetApplicationApiUsageRequest withSecurity(AppGetApplicationApiUsageSecurity security) {
-        this.security = security;
+    /**
+     * Start time for query. Goes to 24 hours ago if not specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public OffsetDateTime start;
+    public AppGetApplicationApiUsageRequest withStart(OffsetDateTime start) {
+        this.start = start;
         return this;
     }
     

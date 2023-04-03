@@ -18,15 +18,11 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationSecurity;
-import org.openapis.openapi.models.operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationPathParams;
-import org.openapis.openapi.models.operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationQueryParams;
 import org.openapis.openapi.models.operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationRequest;
 import org.openapis.openapi.models.operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationResponse;
-import org.openapis.openapi.models.shared.AddGroupMigrationRequest;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.AddGroupMigrationRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -35,36 +31,27 @@ public class Application {
                 .build();
 
             VmmigrationProjectsLocationsGroupsAddGroupMigrationRequest req = new VmmigrationProjectsLocationsGroupsAddGroupMigrationRequest() {{
-                security = new VmmigrationProjectsLocationsGroupsAddGroupMigrationSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                dollarXgafv = "2";
+                addGroupMigrationRequest = new AddGroupMigrationRequest() {{
+                    migratingVm = "provident";
                 }};
-                pathParams = new VmmigrationProjectsLocationsGroupsAddGroupMigrationPathParams() {{
-                    group = "corrupti";
-                }};
-                queryParams = new VmmigrationProjectsLocationsGroupsAddGroupMigrationQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new AddGroupMigrationRequest() {{
-                    migratingVm = "suscipit";
-                }};
-            }};            
+                accessToken = "distinctio";
+                alt = "proto";
+                callback = "unde";
+                fields = "nulla";
+                group = "corrupti";
+                key = "illum";
+                oauthToken = "vel";
+                prettyPrint = false;
+                quotaUser = "error";
+                uploadType = "deserunt";
+                uploadProtocol = "suscipit";
+            }}            
 
-            VmmigrationProjectsLocationsGroupsAddGroupMigrationResponse res = sdk.projects.vmmigrationProjectsLocationsGroupsAddGroupMigration(req);
+            VmmigrationProjectsLocationsGroupsAddGroupMigrationResponse res = sdk.projects.vmmigrationProjectsLocationsGroupsAddGroupMigration(req, new VmmigrationProjectsLocationsGroupsAddGroupMigrationSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response
@@ -76,7 +63,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

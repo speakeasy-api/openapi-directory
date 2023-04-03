@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IPBlocklistRequest {
+    /**
+     * An IPv4 or IPv6 address. Accepts standard IP notation (with or without port number), CIDR notation and IPv6 compressed notation. If multiple IPs are passed using comma-separated values the first non-bogon address on the list will be checked
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
+    public String ip;
+    public IPBlocklistRequest withIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
     
-    public IPBlocklistQueryParams queryParams;
-    public IPBlocklistRequest withQueryParams(IPBlocklistQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Include public VPN provider IP addresses. &lt;br&gt;&lt;b&gt;NOTE&lt;/b&gt;: For more advanced VPN detection including the ability to identify private and stealth VPNs use the &lt;a href="https://www.neutrinoapi.com/api/ip-probe/"&gt;IP Probe API&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vpn-lookup")
+    public Boolean vpnLookup;
+    public IPBlocklistRequest withVpnLookup(Boolean vpnLookup) {
+        this.vpnLookup = vpnLookup;
         return this;
     }
     

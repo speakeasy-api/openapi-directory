@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetDestinyEntityDefinitionRequest {
+    /**
+     * The type of entity for whom you would like results. These correspond to the entity's definition contract name. For instance, if you are looking for items, this property should be 'DestinyInventoryItemDefinition'. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is tentatively in final form, but there may be bugs that prevent desirable operation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=entityType")
+    public String entityType;
+    public Destiny2GetDestinyEntityDefinitionRequest withEntityType(String entityType) {
+        this.entityType = entityType;
+        return this;
+    }
     
-    public Destiny2GetDestinyEntityDefinitionPathParams pathParams;
-    public Destiny2GetDestinyEntityDefinitionRequest withPathParams(Destiny2GetDestinyEntityDefinitionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The hash identifier for the specific Entity you want returned.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hashIdentifier")
+    public Long hashIdentifier;
+    public Destiny2GetDestinyEntityDefinitionRequest withHashIdentifier(Long hashIdentifier) {
+        this.hashIdentifier = hashIdentifier;
         return this;
     }
     

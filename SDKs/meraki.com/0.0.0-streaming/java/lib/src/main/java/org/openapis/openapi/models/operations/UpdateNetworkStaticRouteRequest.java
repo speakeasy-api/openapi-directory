@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkStaticRouteRequest {
-    
-    public UpdateNetworkStaticRoutePathParams pathParams;
-    public UpdateNetworkStaticRouteRequest withPathParams(UpdateNetworkStaticRoutePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkStaticRouteRequestBody requestBody;
+    public UpdateNetworkStaticRouteRequest withRequestBody(UpdateNetworkStaticRouteRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkStaticRouteRequestBody request;
-    public UpdateNetworkStaticRouteRequest withRequest(UpdateNetworkStaticRouteRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkStaticRouteRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=staticRouteId")
+    public String staticRouteId;
+    public UpdateNetworkStaticRouteRequest withStaticRouteId(String staticRouteId) {
+        this.staticRouteId = staticRouteId;
         return this;
     }
     

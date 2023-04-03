@@ -37,10 +37,11 @@ public class VisionPrediction {
      * Detection with Image File
      * Returns labels, probabilities, and bounding box coordinates for items detected in the specified local image file.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DetectMultipartResponse detectMultipart(org.openapis.openapi.models.operations.DetectMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DetectMultipartResponse detectMultipart(org.openapis.openapi.models.shared.ObjectDetectionRequest request, org.openapis.openapi.models.operations.DetectMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/vision/detect");
         
@@ -51,7 +52,7 @@ public class VisionPrediction {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,10 +80,11 @@ public class VisionPrediction {
      * Detect Text
      * Returns a prediction from an OCR model for the specified image URL or local image file.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OcrMultipartResponse ocrMultipart(org.openapis.openapi.models.operations.OcrMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OcrMultipartResponse ocrMultipart(org.openapis.openapi.models.operations.OcrMultipartRequestBody request, org.openapis.openapi.models.operations.OcrMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/vision/ocr");
         
@@ -93,7 +95,7 @@ public class VisionPrediction {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -121,10 +123,11 @@ public class VisionPrediction {
      * Make Prediction
      * Returns a prediction from an image or multi-label model for the specified image.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PredictMultipartResponse predictMultipart(org.openapis.openapi.models.operations.PredictMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PredictMultipartResponse predictMultipart(org.openapis.openapi.models.shared.ImageClassificationRequest request, org.openapis.openapi.models.operations.PredictMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/vision/predict");
         
@@ -135,7 +138,7 @@ public class VisionPrediction {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -42,7 +42,7 @@ public class BillingDetails {
      */
     public org.openapis.openapi.models.operations.GetBillingDetailsResponse getBillingDetails(org.openapis.openapi.models.operations.GetBillingDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBillingDetailsPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/billingDetails", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBillingDetailsRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/billingDetails", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -91,12 +91,12 @@ public class BillingDetails {
      */
     public org.openapis.openapi.models.operations.PutBillingDetailsResponse putBillingDetails(org.openapis.openapi.models.operations.PutBillingDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutBillingDetailsPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/billingDetails", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutBillingDetailsRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/billingDetails", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "billingDetailsModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

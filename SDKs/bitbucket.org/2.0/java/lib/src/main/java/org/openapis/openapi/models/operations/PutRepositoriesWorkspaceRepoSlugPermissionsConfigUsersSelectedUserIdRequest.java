@@ -4,20 +4,42 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest {
-    
-    public PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdPathParams pathParams;
-    public PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest withPathParams(PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
         return this;
     }
     
+    /**
+     * This can either be the UUID of the account, surrounded by curly-braces, for
+     * example: `{account UUID}`, OR an Atlassian Account ID.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=selected_user_id")
+    public String selectedUserId;
+    public PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest withSelectedUserId(String selectedUserId) {
+        this.selectedUserId = selectedUserId;
+        return this;
+    }
     
-    public PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdSecurity security;
-    public PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest withSecurity(PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

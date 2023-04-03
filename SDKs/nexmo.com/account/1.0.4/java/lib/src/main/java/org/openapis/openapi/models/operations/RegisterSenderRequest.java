@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegisterSenderRequest {
+    /**
+     * Your Vonage API key. You can find this in the [dashboard](https://dashboard.nexmo.com)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public RegisterSenderRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public RegisterSenderQueryParams queryParams;
-    public RegisterSenderRequest withQueryParams(RegisterSenderQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your Vonage API secret. You can find this in the [dashboard](https://dashboard.nexmo.com)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_secret")
+    public String apiSecret;
+    public RegisterSenderRequest withApiSecret(String apiSecret) {
+        this.apiSecret = apiSecret;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RegisterEmailRequest request;
-    public RegisterSenderRequest withRequest(org.openapis.openapi.models.shared.RegisterEmailRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public RegisterSenderRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public org.openapis.openapi.models.shared.RegisterEmailRequest registerEmailRequest;
+    public RegisterSenderRequest withRegisterEmailRequest(org.openapis.openapi.models.shared.RegisterEmailRequest registerEmailRequest) {
+        this.registerEmailRequest = registerEmailRequest;
         return this;
     }
     

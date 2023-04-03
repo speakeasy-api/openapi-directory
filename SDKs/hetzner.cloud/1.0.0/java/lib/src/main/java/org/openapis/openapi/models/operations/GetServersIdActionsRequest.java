@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetServersIdActionsRequest {
-    
-    public GetServersIdActionsPathParams pathParams;
-    public GetServersIdActionsRequest withPathParams(GetServersIdActionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetServersIdActionsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Can be used multiple times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetServersIdActionsSortParameterSortEnum sort;
+    public GetServersIdActionsRequest withSort(GetServersIdActionsSortParameterSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
     
-    public GetServersIdActionsQueryParams queryParams;
-    public GetServersIdActionsRequest withQueryParams(GetServersIdActionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used multiple times, the response will contain only Actions with specified statuses
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GetServersIdActionsStatusParameterStatusEnum status;
+    public GetServersIdActionsRequest withStatus(GetServersIdActionsStatusParameterStatusEnum status) {
+        this.status = status;
         return this;
     }
     

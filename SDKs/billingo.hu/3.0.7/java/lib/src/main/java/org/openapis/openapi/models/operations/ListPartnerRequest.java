@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPartnerRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ListPartnerRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ListPartnerQueryParams queryParams;
-    public ListPartnerRequest withQueryParams(ListPartnerQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ListPartnerRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

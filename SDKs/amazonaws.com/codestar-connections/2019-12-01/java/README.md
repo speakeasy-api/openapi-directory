@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateConnectionXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CreateConnectionHeaders;
 import org.openapis.openapi.models.operations.CreateConnectionRequest;
 import org.openapis.openapi.models.operations.CreateConnectionResponse;
 import org.openapis.openapi.models.shared.CreateConnectionInput;
@@ -30,43 +29,43 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateConnectionRequest req = new CreateConnectionRequest() {{
-                headers = new CreateConnectionHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "com.amazonaws.codestar.connections.CodeStar_connections_20191201.CreateConnection";
-                }};
-                request = new CreateConnectionInput() {{
-                    connectionName = "illum";
-                    hostArn = "vel";
-                    providerType = "GitHub";
+                createConnectionInput = new CreateConnectionInput() {{
+                    connectionName = "corrupti";
+                    hostArn = "provident";
+                    providerType = "GitHubEnterpriseServer";
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "suscipit";
-                            value = "iure";
+                            key = "unde";
+                            value = "nulla";
                         }}),
                         add(new Tag() {{
-                            key = "magnam";
-                            value = "debitis";
+                            key = "corrupti";
+                            value = "illum";
                         }}),
                         add(new Tag() {{
-                            key = "ipsa";
-                            value = "delectus";
+                            key = "vel";
+                            value = "error";
+                        }}),
+                        add(new Tag() {{
+                            key = "deserunt";
+                            value = "suscipit";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "iure";
+                xAmzContentSha256 = "magnam";
+                xAmzCredential = "debitis";
+                xAmzDate = "ipsa";
+                xAmzSecurityToken = "delectus";
+                xAmzSignature = "tempora";
+                xAmzSignedHeaders = "suscipit";
+                xAmzTarget = "com.amazonaws.codestar.connections.CodeStar_connections_20191201.CreateConnection";
+            }}            
 
             CreateConnectionResponse res = sdk.createConnection(req);
 
@@ -80,7 +79,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

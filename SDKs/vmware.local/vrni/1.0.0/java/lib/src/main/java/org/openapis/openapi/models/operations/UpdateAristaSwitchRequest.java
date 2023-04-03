@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAristaSwitchRequest {
-    
-    public UpdateAristaSwitchPathParams pathParams;
-    public UpdateAristaSwitchRequest withPathParams(UpdateAristaSwitchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SwitchDataSource request;
-    public UpdateAristaSwitchRequest withRequest(org.openapis.openapi.models.shared.SwitchDataSource request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SwitchDataSource switchDataSource;
+    public UpdateAristaSwitchRequest withSwitchDataSource(org.openapis.openapi.models.shared.SwitchDataSource switchDataSource) {
+        this.switchDataSource = switchDataSource;
         return this;
     }
     
-    
-    public UpdateAristaSwitchSecurity security;
-    public UpdateAristaSwitchRequest withSecurity(UpdateAristaSwitchSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateAristaSwitchRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

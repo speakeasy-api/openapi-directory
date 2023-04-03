@@ -4,13 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSelectRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccessKeyId")
+    public String awsAccessKeyId;
+    public GETSelectRequest withAWSAccessKeyId(String awsAccessKeyId) {
+        this.awsAccessKeyId = awsAccessKeyId;
+        return this;
+    }
     
-    public GETSelectQueryParams queryParams;
-    public GETSelectRequest withQueryParams(GETSelectQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETSelectActionEnum action;
+    public GETSelectRequest withAction(GETSelectActionEnum action) {
+        this.action = action;
+        return this;
+    }
+    
+    /**
+     * Determines whether or not strong consistency should be enforced when data is read from SimpleDB. If &lt;code&gt;true&lt;/code&gt;, any data previously written to SimpleDB will be returned. Otherwise, results will be consistent eventually, and the client may not see data that was written immediately before your read.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConsistentRead")
+    public Boolean consistentRead;
+    public GETSelectRequest withConsistentRead(Boolean consistentRead) {
+        this.consistentRead = consistentRead;
+        return this;
+    }
+    
+    /**
+     * A string informing Amazon SimpleDB where to start the next list of &lt;code&gt;ItemNames&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETSelectRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The expression used to query the domain.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SelectExpression")
+    public String selectExpression;
+    public GETSelectRequest withSelectExpression(String selectExpression) {
+        this.selectExpression = selectExpression;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Signature")
+    public String signature;
+    public GETSelectRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureMethod")
+    public String signatureMethod;
+    public GETSelectRequest withSignatureMethod(String signatureMethod) {
+        this.signatureMethod = signatureMethod;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureVersion")
+    public String signatureVersion;
+    public GETSelectRequest withSignatureVersion(String signatureVersion) {
+        this.signatureVersion = signatureVersion;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timestamp")
+    public String timestamp;
+    public GETSelectRequest withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETSelectVersionEnum version;
+    public GETSelectRequest withVersion(GETSelectVersionEnum version) {
+        this.version = version;
         return this;
     }
     

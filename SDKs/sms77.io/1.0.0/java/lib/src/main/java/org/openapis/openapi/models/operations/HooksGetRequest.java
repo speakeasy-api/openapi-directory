@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HooksGetRequest {
-    
-    public HooksGetQueryParams queryParams;
-    public HooksGetRequest withQueryParams(HooksGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Determines the action to execute.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action")
+    public HooksGetActionEnum action;
+    public HooksGetRequest withAction(HooksGetActionEnum action) {
+        this.action = action;
         return this;
     }
     

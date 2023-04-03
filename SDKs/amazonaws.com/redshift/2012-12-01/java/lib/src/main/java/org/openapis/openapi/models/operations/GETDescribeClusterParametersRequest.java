@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeClusterParametersRequest {
-    
-    public GETDescribeClusterParametersQueryParams queryParams;
-    public GETDescribeClusterParametersRequest withQueryParams(GETDescribeClusterParametersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeClusterParametersActionEnum action;
+    public GETDescribeClusterParametersRequest withAction(GETDescribeClusterParametersActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * An optional parameter that specifies the starting point to return a set of response records. When the results of a &lt;a&gt;DescribeClusterParameters&lt;/a&gt; request exceed the value specified in &lt;code&gt;MaxRecords&lt;/code&gt;, Amazon Web Services returns a value in the &lt;code&gt;Marker&lt;/code&gt; field of the response. You can retrieve the next set of response records by providing the returned marker value in the &lt;code&gt;Marker&lt;/code&gt; parameter and retrying the request. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDescribeClusterParametersRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
     
-    public GETDescribeClusterParametersHeaders headers;
-    public GETDescribeClusterParametersRequest withHeaders(GETDescribeClusterParametersHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The maximum number of response records to return in each call. If the number of remaining response records exceeds the specified &lt;code&gt;MaxRecords&lt;/code&gt; value, a value is returned in a &lt;code&gt;marker&lt;/code&gt; field of the response. You can retrieve the next set of records by retrying the command with the returned marker value. &lt;/p&gt; &lt;p&gt;Default: &lt;code&gt;100&lt;/code&gt; &lt;/p&gt; &lt;p&gt;Constraints: minimum 20, maximum 100.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeClusterParametersRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    /**
+     * The name of a cluster parameter group for which to return details.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ParameterGroupName")
+    public String parameterGroupName;
+    public GETDescribeClusterParametersRequest withParameterGroupName(String parameterGroupName) {
+        this.parameterGroupName = parameterGroupName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The parameter types to return. Specify &lt;code&gt;user&lt;/code&gt; to show parameters that are different form the default. Similarly, specify &lt;code&gt;engine-default&lt;/code&gt; to show parameters that are the same as the default parameter group. &lt;/p&gt; &lt;p&gt;Default: All parameter types returned.&lt;/p&gt; &lt;p&gt;Valid Values: &lt;code&gt;user&lt;/code&gt; | &lt;code&gt;engine-default&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Source")
+    public String source;
+    public GETDescribeClusterParametersRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeClusterParametersVersionEnum version;
+    public GETDescribeClusterParametersRequest withVersion(GETDescribeClusterParametersVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeClusterParametersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeClusterParametersRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeClusterParametersRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeClusterParametersRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeClusterParametersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeClusterParametersRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeClusterParametersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

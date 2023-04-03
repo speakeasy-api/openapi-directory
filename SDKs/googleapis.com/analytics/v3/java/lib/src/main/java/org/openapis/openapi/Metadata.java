@@ -33,25 +33,26 @@ public class Metadata {
     /**
      * Lists all columns for a report type
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AnalyticsMetadataColumnsListResponse analyticsMetadataColumnsList(org.openapis.openapi.models.operations.AnalyticsMetadataColumnsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AnalyticsMetadataColumnsListResponse analyticsMetadataColumnsList(org.openapis.openapi.models.operations.AnalyticsMetadataColumnsListRequest request, org.openapis.openapi.models.operations.AnalyticsMetadataColumnsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsMetadataColumnsListPathParams.class, baseUrl, "/metadata/{reportType}/columns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsMetadataColumnsListRequest.class, baseUrl, "/metadata/{reportType}/columns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsMetadataColumnsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsMetadataColumnsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

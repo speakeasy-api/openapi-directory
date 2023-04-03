@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateVideoVersionRequest {
-    
-    public CreateVideoVersionPathParams pathParams;
-    public CreateVideoVersionRequest withPathParams(CreateVideoVersionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.video.version+json")
+    public CreateVideoVersionRequestBody requestBody;
+    public CreateVideoVersionRequest withRequestBody(CreateVideoVersionRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.video.version+json")
-    public CreateVideoVersionRequestBody request;
-    public CreateVideoVersionRequest withRequest(CreateVideoVersionRequestBody request) {
-        this.request = request;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public CreateVideoVersionRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

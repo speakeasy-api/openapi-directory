@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchUnderstandDialogueRequest {
-    
-    public FetchUnderstandDialoguePathParams pathParams;
-    public FetchUnderstandDialogueRequest withPathParams(FetchUnderstandDialoguePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public FetchUnderstandDialogueRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
-    
-    public FetchUnderstandDialogueSecurity security;
-    public FetchUnderstandDialogueRequest withSecurity(FetchUnderstandDialogueSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchUnderstandDialogueRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchUnderstandDialogueRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

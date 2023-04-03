@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgEditHookRequest {
-    
-    public OrgEditHookPathParams pathParams;
-    public OrgEditHookRequest withPathParams(OrgEditHookPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EditHookOption editHookOption;
+    public OrgEditHookRequest withEditHookOption(org.openapis.openapi.models.shared.EditHookOption editHookOption) {
+        this.editHookOption = editHookOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditHookOption request;
-    public OrgEditHookRequest withRequest(org.openapis.openapi.models.shared.EditHookOption request) {
-        this.request = request;
+    /**
+     * id of the hook to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrgEditHookRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * name of the organization
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgEditHookRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

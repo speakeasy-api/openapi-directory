@@ -4,13 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmClientsIdRolesRoleNameCompositesClientsClientRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client")
+    public String client;
+    public GetRealmClientsIdRolesRoleNameCompositesClientsClientRequest withClient(String client) {
+        this.client = client;
+        return this;
+    }
     
-    public GetRealmClientsIdRolesRoleNameCompositesClientsClientPathParams pathParams;
-    public GetRealmClientsIdRolesRoleNameCompositesClientsClientRequest withPathParams(GetRealmClientsIdRolesRoleNameCompositesClientsClientPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of client (not client-id)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetRealmClientsIdRolesRoleNameCompositesClientsClientRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmClientsIdRolesRoleNameCompositesClientsClientRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
+    
+    /**
+     * role\u2019s name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=role-name")
+    public String roleName;
+    public GetRealmClientsIdRolesRoleNameCompositesClientsClientRequest withRoleName(String roleName) {
+        this.roleName = roleName;
         return this;
     }
     

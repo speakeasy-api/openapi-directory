@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CircuitsCircuitTypesReadRequest {
-    
-    public CircuitsCircuitTypesReadPathParams pathParams;
-    public CircuitsCircuitTypesReadRequest withPathParams(CircuitsCircuitTypesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this circuit type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CircuitsCircuitTypesReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

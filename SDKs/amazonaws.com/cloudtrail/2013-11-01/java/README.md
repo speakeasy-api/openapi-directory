@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AddTagsXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AddTagsHeaders;
 import org.openapis.openapi.models.operations.AddTagsRequest;
 import org.openapis.openapi.models.operations.AddTagsResponse;
 import org.openapis.openapi.models.shared.AddTagsRequest;
@@ -29,37 +28,37 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddTagsRequest req = new AddTagsRequest() {{
-                headers = new AddTagsHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.AddTags";
-                }};
-                request = new AddTagsRequest() {{
-                    resourceId = "illum";
+                addTagsRequest = new AddTagsRequest() {{
+                    resourceId = "corrupti";
                     tagsList = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "error";
-                            value = "deserunt";
+                            key = "distinctio";
+                            value = "quibusdam";
                         }}),
                         add(new Tag() {{
-                            key = "suscipit";
-                            value = "iure";
+                            key = "unde";
+                            value = "nulla";
+                        }}),
+                        add(new Tag() {{
+                            key = "corrupti";
+                            value = "illum";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "vel";
+                xAmzContentSha256 = "error";
+                xAmzCredential = "deserunt";
+                xAmzDate = "suscipit";
+                xAmzSecurityToken = "iure";
+                xAmzSignature = "magnam";
+                xAmzSignedHeaders = "debitis";
+                xAmzTarget = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.AddTags";
+            }}            
 
             AddTagsResponse res = sdk.addTags(req);
 
@@ -73,7 +72,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

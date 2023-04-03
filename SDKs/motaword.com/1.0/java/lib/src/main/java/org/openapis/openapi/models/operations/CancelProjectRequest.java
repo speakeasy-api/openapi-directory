@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelProjectRequest {
-    
-    public CancelProjectPathParams pathParams;
-    public CancelProjectRequest withPathParams(CancelProjectPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CancelProjectRequest cancelProjectRequest;
+    public CancelProjectRequest withCancelProjectRequest(org.openapis.openapi.models.shared.CancelProjectRequest cancelProjectRequest) {
+        this.cancelProjectRequest = cancelProjectRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CancelProjectRequest request;
-    public CancelProjectRequest withRequest(org.openapis.openapi.models.shared.CancelProjectRequest request) {
-        this.request = request;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CancelProjectRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

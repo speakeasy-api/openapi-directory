@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiPostNewOrderRawRequest {
-    
-    public OrderApiPostNewOrderRawQueryParams queryParams;
-    public OrderApiPostNewOrderRawRequest withQueryParams(OrderApiPostNewOrderRawQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] requestBody;
+    public OrderApiPostNewOrderRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public OrderApiPostNewOrderRawRequest withRequest(byte[] request) {
-        this.request = request;
+    /**
+     * Deprecated, if orderData.ApiAccountId is set, it will be used instead of 'shopId'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=shopId")
+    public Long shopId;
+    public OrderApiPostNewOrderRawRequest withShopId(Long shopId) {
+        this.shopId = shopId;
         return this;
     }
     

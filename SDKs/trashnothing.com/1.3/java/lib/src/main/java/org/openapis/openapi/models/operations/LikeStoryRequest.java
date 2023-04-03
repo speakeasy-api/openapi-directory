@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LikeStoryRequest {
-    
-    public LikeStoryPathParams pathParams;
-    public LikeStoryRequest withPathParams(LikeStoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client device pixel ratio used to determine thumbnail size (default 1.0).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_pixel_ratio")
+    public Double devicePixelRatio;
+    public LikeStoryRequest withDevicePixelRatio(Double devicePixelRatio) {
+        this.devicePixelRatio = devicePixelRatio;
         return this;
     }
     
-    
-    public LikeStoryQueryParams queryParams;
-    public LikeStoryRequest withQueryParams(LikeStoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the story to like.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=story_id")
+    public String storyId;
+    public LikeStoryRequest withStoryId(String storyId) {
+        this.storyId = storyId;
         return this;
     }
     

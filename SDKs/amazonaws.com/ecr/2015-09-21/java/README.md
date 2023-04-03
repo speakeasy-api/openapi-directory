@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.BatchCheckLayerAvailabilityXAmzTargetEnum;
-import org.openapis.openapi.models.operations.BatchCheckLayerAvailabilityHeaders;
 import org.openapis.openapi.models.operations.BatchCheckLayerAvailabilityRequest;
 import org.openapis.openapi.models.operations.BatchCheckLayerAvailabilityResponse;
 import org.openapis.openapi.models.shared.BatchCheckLayerAvailabilityRequest;
@@ -28,34 +27,29 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchCheckLayerAvailabilityRequest req = new BatchCheckLayerAvailabilityRequest() {{
-                headers = new BatchCheckLayerAvailabilityHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AmazonEC2ContainerRegistry_V20150921.BatchCheckLayerAvailability";
-                }};
-                request = new BatchCheckLayerAvailabilityRequest() {{
+                batchCheckLayerAvailabilityRequest = new BatchCheckLayerAvailabilityRequest() {{
                     layerDigests = new String[]{{
-                        add("vel"),
-                        add("error"),
-                        add("deserunt"),
-                        add("suscipit"),
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
-                    registryId = "iure";
-                    repositoryName = "magnam";
+                    registryId = "unde";
+                    repositoryName = "nulla";
                 }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "illum";
+                xAmzCredential = "vel";
+                xAmzDate = "error";
+                xAmzSecurityToken = "deserunt";
+                xAmzSignature = "suscipit";
+                xAmzSignedHeaders = "iure";
+                xAmzTarget = "AmazonEC2ContainerRegistry_V20150921.BatchCheckLayerAvailability";
+            }}            
 
             BatchCheckLayerAvailabilityResponse res = sdk.batchCheckLayerAvailability(req);
 
@@ -69,7 +63,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

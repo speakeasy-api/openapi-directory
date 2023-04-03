@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateMemberRequest {
-    
-    public UpdateMemberPathParams pathParams;
-    public UpdateMemberRequest withPathParams(UpdateMemberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) the member to update belongs to. Can be the Channel resource's `sid` or `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public UpdateMemberRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateMemberUpdateMemberRequest request;
-    public UpdateMemberRequest withRequest(UpdateMemberUpdateMemberRequest request) {
-        this.request = request;
+    public UpdateMemberUpdateMemberRequest requestBody;
+    public UpdateMemberRequest withRequestBody(UpdateMemberUpdateMemberRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateMemberSecurity security;
-    public UpdateMemberRequest withSecurity(UpdateMemberSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to update the resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateMemberRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateMemberRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Member resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateMemberRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

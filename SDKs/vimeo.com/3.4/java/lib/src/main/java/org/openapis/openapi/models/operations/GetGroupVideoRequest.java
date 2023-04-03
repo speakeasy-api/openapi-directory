@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupVideoRequest {
+    /**
+     * The ID of the group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Double groupId;
+    public GetGroupVideoRequest withGroupId(Double groupId) {
+        this.groupId = groupId;
+        return this;
+    }
     
-    public GetGroupVideoPathParams pathParams;
-    public GetGroupVideoRequest withPathParams(GetGroupVideoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public GetGroupVideoRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

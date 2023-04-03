@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChargeRequest {
-    
-    public ChargePathParams pathParams;
-    public ChargeRequest withPathParams(ChargePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ChargeRequest request;
-    public ChargeRequest withRequest(org.openapis.openapi.models.shared.ChargeRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ChargeRequest chargeRequest;
+    public ChargeRequest withChargeRequest(org.openapis.openapi.models.shared.ChargeRequest chargeRequest) {
+        this.chargeRequest = chargeRequest;
         return this;
     }
     
-    
-    public ChargeSecurity security;
-    public ChargeRequest withSecurity(ChargeSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the location to associate the created transaction with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public ChargeRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     

@@ -7,20 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SavePatientManagementRequest {
-    
-    public SavePatientManagementPathParams pathParams;
-    public SavePatientManagementRequest withPathParams(SavePatientManagementPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * patientManagement
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PatientManagement request;
-    public SavePatientManagementRequest withRequest(org.openapis.openapi.models.shared.PatientManagement request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PatientManagement patientManagement;
+    public SavePatientManagementRequest withPatientManagement(org.openapis.openapi.models.shared.PatientManagement patientManagement) {
+        this.patientManagement = patientManagement;
+        return this;
+    }
+    
+    /**
+     * groupId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public SavePatientManagementRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * identifierId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=identifierId")
+    public Long identifierId;
+    public SavePatientManagementRequest withIdentifierId(Long identifierId) {
+        this.identifierId = identifierId;
+        return this;
+    }
+    
+    /**
+     * userId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public SavePatientManagementRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

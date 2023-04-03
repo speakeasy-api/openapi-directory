@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReinitializeRequest {
-    
-    public ReinitializePathParams pathParams;
-    public ReinitializeRequest withPathParams(ReinitializePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The request body as a JSON payload.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ReinitializeActionConfiguration request;
-    public ReinitializeRequest withRequest(org.openapis.openapi.models.shared.ReinitializeActionConfiguration request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ReinitializeActionConfiguration reinitializeActionConfiguration;
+    public ReinitializeRequest withReinitializeActionConfiguration(org.openapis.openapi.models.shared.ReinitializeActionConfiguration reinitializeActionConfiguration) {
+        this.reinitializeActionConfiguration = reinitializeActionConfiguration;
+        return this;
+    }
+    
+    /**
+     * The ID of the device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
+    public Integer deviceId;
+    public ReinitializeRequest withDeviceId(Integer deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
     

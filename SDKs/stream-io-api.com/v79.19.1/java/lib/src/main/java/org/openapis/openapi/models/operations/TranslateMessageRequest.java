@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TranslateMessageRequest {
-    
-    public TranslateMessagePathParams pathParams;
-    public TranslateMessageRequest withPathParams(TranslateMessagePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.TranslateMessageRequest translateMessageRequest;
+    public TranslateMessageRequest withTranslateMessageRequest(org.openapis.openapi.models.shared.TranslateMessageRequest translateMessageRequest) {
+        this.translateMessageRequest = translateMessageRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TranslateMessageRequest request;
-    public TranslateMessageRequest withRequest(org.openapis.openapi.models.shared.TranslateMessageRequest request) {
-        this.request = request;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public TranslateMessageRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

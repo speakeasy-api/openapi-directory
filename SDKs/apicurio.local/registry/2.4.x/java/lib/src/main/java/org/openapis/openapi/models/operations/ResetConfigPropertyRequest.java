@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResetConfigPropertyRequest {
-    
-    public ResetConfigPropertyPathParams pathParams;
-    public ResetConfigPropertyRequest withPathParams(ResetConfigPropertyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of a configuration property.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=propertyName")
+    public String propertyName;
+    public ResetConfigPropertyRequest withPropertyName(String propertyName) {
+        this.propertyName = propertyName;
         return this;
     }
     

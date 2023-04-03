@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceCameraQualityAndRetentionSettingsRequest {
-    
-    public GetDeviceCameraQualityAndRetentionSettingsPathParams pathParams;
-    public GetDeviceCameraQualityAndRetentionSettingsRequest withPathParams(GetDeviceCameraQualityAndRetentionSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetDeviceCameraQualityAndRetentionSettingsRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

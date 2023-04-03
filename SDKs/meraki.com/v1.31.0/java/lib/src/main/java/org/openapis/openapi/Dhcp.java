@@ -43,7 +43,7 @@ public class Dhcp {
      */
     public org.openapis.openapi.models.operations.GetDeviceApplianceDhcpSubnetsResponse getDeviceApplianceDhcpSubnets(org.openapis.openapi.models.operations.GetDeviceApplianceDhcpSubnetsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceApplianceDhcpSubnetsPathParams.class, baseUrl, "/devices/{serial}/appliance/dhcp/subnets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceApplianceDhcpSubnetsRequest.class, baseUrl, "/devices/{serial}/appliance/dhcp/subnets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -83,7 +83,7 @@ public class Dhcp {
      */
     public org.openapis.openapi.models.operations.GetDeviceSwitchRoutingInterfaceDhcpResponse getDeviceSwitchRoutingInterfaceDhcp(org.openapis.openapi.models.operations.GetDeviceSwitchRoutingInterfaceDhcpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchRoutingInterfaceDhcpPathParams.class, baseUrl, "/devices/{serial}/switch/routing/interfaces/{interfaceId}/dhcp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchRoutingInterfaceDhcpRequest.class, baseUrl, "/devices/{serial}/switch/routing/interfaces/{interfaceId}/dhcp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -123,7 +123,7 @@ public class Dhcp {
      */
     public org.openapis.openapi.models.operations.GetNetworkCellularGatewayDhcpResponse getNetworkCellularGatewayDhcp(org.openapis.openapi.models.operations.GetNetworkCellularGatewayDhcpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCellularGatewayDhcpPathParams.class, baseUrl, "/networks/{networkId}/cellularGateway/dhcp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCellularGatewayDhcpRequest.class, baseUrl, "/networks/{networkId}/cellularGateway/dhcp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -163,13 +163,13 @@ public class Dhcp {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchDhcpV4ServersSeenResponse getNetworkSwitchDhcpV4ServersSeen(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpV4ServersSeenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpV4ServersSeenPathParams.class, baseUrl, "/networks/{networkId}/switch/dhcp/v4/servers/seen", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpV4ServersSeenRequest.class, baseUrl, "/networks/{networkId}/switch/dhcp/v4/servers/seen", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpV4ServersSeenQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSwitchDhcpV4ServersSeenRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -211,7 +211,7 @@ public class Dhcp {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingInterfaceDhcpResponse getNetworkSwitchStackRoutingInterfaceDhcp(org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingInterfaceDhcpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingInterfaceDhcpPathParams.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStackRoutingInterfaceDhcpRequest.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -251,12 +251,12 @@ public class Dhcp {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceSwitchRoutingInterfaceDhcpResponse updateDeviceSwitchRoutingInterfaceDhcp(org.openapis.openapi.models.operations.UpdateDeviceSwitchRoutingInterfaceDhcpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceSwitchRoutingInterfaceDhcpPathParams.class, baseUrl, "/devices/{serial}/switch/routing/interfaces/{interfaceId}/dhcp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceSwitchRoutingInterfaceDhcpRequest.class, baseUrl, "/devices/{serial}/switch/routing/interfaces/{interfaceId}/dhcp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -293,12 +293,12 @@ public class Dhcp {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayDhcpResponse updateNetworkCellularGatewayDhcp(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayDhcpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayDhcpPathParams.class, baseUrl, "/networks/{networkId}/cellularGateway/dhcp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayDhcpRequest.class, baseUrl, "/networks/{networkId}/cellularGateway/dhcp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -335,12 +335,12 @@ public class Dhcp {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchStackRoutingInterfaceDhcpResponse updateNetworkSwitchStackRoutingInterfaceDhcp(org.openapis.openapi.models.operations.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchStackRoutingInterfaceDhcpPathParams.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchStackRoutingInterfaceDhcpRequest.class, baseUrl, "/networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

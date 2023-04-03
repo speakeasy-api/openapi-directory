@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPortfolioVideoAlt1Request {
+    /**
+     * The ID of the portfolio.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portfolio_id")
+    public Double portfolioId;
+    public GetPortfolioVideoAlt1Request withPortfolioId(Double portfolioId) {
+        this.portfolioId = portfolioId;
+        return this;
+    }
     
-    public GetPortfolioVideoAlt1PathParams pathParams;
-    public GetPortfolioVideoAlt1Request withPathParams(GetPortfolioVideoAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public GetPortfolioVideoAlt1Request withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

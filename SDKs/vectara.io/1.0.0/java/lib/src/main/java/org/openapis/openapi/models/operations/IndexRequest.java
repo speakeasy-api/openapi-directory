@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IndexRequest {
-    
-    public IndexHeaders headers;
-    public IndexRequest withHeaders(IndexHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Customer ID to use for the request.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=customer-id")
+    public Long customerId;
+    public IndexRequest withCustomerId(Long customerId) {
+        this.customerId = customerId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.VectaraIndexDocumentRequest request;
-    public IndexRequest withRequest(org.openapis.openapi.models.shared.VectaraIndexDocumentRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public IndexSecurity security;
-    public IndexRequest withSecurity(IndexSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.VectaraIndexDocumentRequest vectaraIndexDocumentRequest;
+    public IndexRequest withVectaraIndexDocumentRequest(org.openapis.openapi.models.shared.VectaraIndexDocumentRequest vectaraIndexDocumentRequest) {
+        this.vectaraIndexDocumentRequest = vectaraIndexDocumentRequest;
         return this;
     }
     

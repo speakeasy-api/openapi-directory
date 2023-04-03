@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TrapConfigListRequest {
-    
-    public TrapConfigListPathParams pathParams;
-    public TrapConfigListRequest withPathParams(TrapConfigListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show the IP alias list
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public TrapConfigListRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

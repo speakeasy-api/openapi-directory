@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchTargetsTargetIdIntegrationsSlackRequest {
-    
-    public PatchTargetsTargetIdIntegrationsSlackPathParams pathParams;
-    public PatchTargetsTargetIdIntegrationsSlackRequest withPathParams(PatchTargetsTargetIdIntegrationsSlackPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Slack slack;
+    public PatchTargetsTargetIdIntegrationsSlackRequest withSlack(org.openapis.openapi.models.shared.Slack slack) {
+        this.slack = slack;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Slack request;
-    public PatchTargetsTargetIdIntegrationsSlackRequest withRequest(org.openapis.openapi.models.shared.Slack request) {
-        this.request = request;
+    /**
+     * Target id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_id")
+    public String targetId;
+    public PatchTargetsTargetIdIntegrationsSlackRequest withTargetId(String targetId) {
+        this.targetId = targetId;
         return this;
     }
     

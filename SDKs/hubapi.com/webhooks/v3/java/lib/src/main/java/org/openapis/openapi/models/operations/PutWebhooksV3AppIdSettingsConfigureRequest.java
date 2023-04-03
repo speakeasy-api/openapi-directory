@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutWebhooksV3AppIdSettingsConfigureRequest {
-    
-    public PutWebhooksV3AppIdSettingsConfigurePathParams pathParams;
-    public PutWebhooksV3AppIdSettingsConfigureRequest withPathParams(PutWebhooksV3AppIdSettingsConfigurePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SettingsChangeRequest request;
-    public PutWebhooksV3AppIdSettingsConfigureRequest withRequest(org.openapis.openapi.models.shared.SettingsChangeRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SettingsChangeRequest settingsChangeRequest;
+    public PutWebhooksV3AppIdSettingsConfigureRequest withSettingsChangeRequest(org.openapis.openapi.models.shared.SettingsChangeRequest settingsChangeRequest) {
+        this.settingsChangeRequest = settingsChangeRequest;
         return this;
     }
     
-    
-    public PutWebhooksV3AppIdSettingsConfigureSecurity security;
-    public PutWebhooksV3AppIdSettingsConfigureRequest withSecurity(PutWebhooksV3AppIdSettingsConfigureSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public PutWebhooksV3AppIdSettingsConfigureRequest withAppId(Integer appId) {
+        this.appId = appId;
         return this;
     }
     

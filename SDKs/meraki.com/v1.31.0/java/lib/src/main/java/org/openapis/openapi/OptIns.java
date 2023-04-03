@@ -40,12 +40,12 @@ public class OptIns {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationEarlyAccessFeaturesOptInResponse createOrganizationEarlyAccessFeaturesOptIn(org.openapis.openapi.models.operations.CreateOrganizationEarlyAccessFeaturesOptInRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationEarlyAccessFeaturesOptInPathParams.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features/optIns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationEarlyAccessFeaturesOptInRequest.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features/optIns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -85,7 +85,7 @@ public class OptIns {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationEarlyAccessFeaturesOptInResponse deleteOrganizationEarlyAccessFeaturesOptIn(org.openapis.openapi.models.operations.DeleteOrganizationEarlyAccessFeaturesOptInRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationEarlyAccessFeaturesOptInPathParams.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationEarlyAccessFeaturesOptInRequest.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -119,7 +119,7 @@ public class OptIns {
      */
     public org.openapis.openapi.models.operations.GetOrganizationEarlyAccessFeaturesOptInResponse getOrganizationEarlyAccessFeaturesOptIn(org.openapis.openapi.models.operations.GetOrganizationEarlyAccessFeaturesOptInRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationEarlyAccessFeaturesOptInPathParams.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationEarlyAccessFeaturesOptInRequest.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -159,7 +159,7 @@ public class OptIns {
      */
     public org.openapis.openapi.models.operations.GetOrganizationEarlyAccessFeaturesOptInsResponse getOrganizationEarlyAccessFeaturesOptIns(org.openapis.openapi.models.operations.GetOrganizationEarlyAccessFeaturesOptInsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationEarlyAccessFeaturesOptInsPathParams.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features/optIns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationEarlyAccessFeaturesOptInsRequest.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features/optIns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -199,12 +199,12 @@ public class OptIns {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationEarlyAccessFeaturesOptInResponse updateOrganizationEarlyAccessFeaturesOptIn(org.openapis.openapi.models.operations.UpdateOrganizationEarlyAccessFeaturesOptInRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationEarlyAccessFeaturesOptInPathParams.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationEarlyAccessFeaturesOptInRequest.class, baseUrl, "/organizations/{organizationId}/earlyAccess/features/optIns/{optInId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

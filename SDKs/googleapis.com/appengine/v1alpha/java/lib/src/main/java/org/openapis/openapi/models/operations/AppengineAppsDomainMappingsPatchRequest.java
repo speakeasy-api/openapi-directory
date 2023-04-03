@@ -7,31 +7,160 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppengineAppsDomainMappingsPatchRequest {
-    
-    public AppengineAppsDomainMappingsPatchPathParams pathParams;
-    public AppengineAppsDomainMappingsPatchRequest withPathParams(AppengineAppsDomainMappingsPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AppengineAppsDomainMappingsPatchQueryParams queryParams;
-    public AppengineAppsDomainMappingsPatchRequest withQueryParams(AppengineAppsDomainMappingsPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AppengineAppsDomainMappingsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DomainMapping request;
-    public AppengineAppsDomainMappingsPatchRequest withRequest(org.openapis.openapi.models.shared.DomainMapping request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DomainMapping domainMapping;
+    public AppengineAppsDomainMappingsPatchRequest withDomainMapping(org.openapis.openapi.models.shared.DomainMapping domainMapping) {
+        this.domainMapping = domainMapping;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AppengineAppsDomainMappingsPatchRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public AppengineAppsDomainMappingsPatchSecurity security;
-    public AppengineAppsDomainMappingsPatchRequest withSecurity(AppengineAppsDomainMappingsPatchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AppengineAppsDomainMappingsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * Part of `name`. Name of the resource to update. Example: apps/myapp/domainMappings/example.com.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appsId")
+    public String appsId;
+    public AppengineAppsDomainMappingsPatchRequest withAppsId(String appsId) {
+        this.appsId = appsId;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AppengineAppsDomainMappingsPatchRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Part of `name`. See documentation of `appsId`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainMappingsId")
+    public String domainMappingsId;
+    public AppengineAppsDomainMappingsPatchRequest withDomainMappingsId(String domainMappingsId) {
+        this.domainMappingsId = domainMappingsId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AppengineAppsDomainMappingsPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AppengineAppsDomainMappingsPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Whether a managed certificate should be provided by App Engine. If true, a certificate ID must be manually set in the DomainMapping resource to configure SSL for this domain. If false, a managed certificate will be provisioned and a certificate ID will be automatically populated. Only applicable if ssl_settings.certificate_id is specified in the update mask.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=noManagedCertificate")
+    public Boolean noManagedCertificate;
+    public AppengineAppsDomainMappingsPatchRequest withNoManagedCertificate(Boolean noManagedCertificate) {
+        this.noManagedCertificate = noManagedCertificate;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AppengineAppsDomainMappingsPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AppengineAppsDomainMappingsPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AppengineAppsDomainMappingsPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Required. Standard field mask for the set of fields to be updated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
+    public String updateMask;
+    public AppengineAppsDomainMappingsPatchRequest withUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AppengineAppsDomainMappingsPatchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AppengineAppsDomainMappingsPatchRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

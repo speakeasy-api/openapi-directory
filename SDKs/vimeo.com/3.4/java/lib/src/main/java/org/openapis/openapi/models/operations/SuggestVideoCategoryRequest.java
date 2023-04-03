@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SuggestVideoCategoryRequest {
-    
-    public SuggestVideoCategoryPathParams pathParams;
-    public SuggestVideoCategoryRequest withPathParams(SuggestVideoCategoryPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.category+json")
-    public SuggestVideoCategoryRequestBody request;
-    public SuggestVideoCategoryRequest withRequest(SuggestVideoCategoryRequestBody request) {
-        this.request = request;
+    public SuggestVideoCategoryRequestBody requestBody;
+    public SuggestVideoCategoryRequest withRequestBody(SuggestVideoCategoryRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public SuggestVideoCategorySecurity security;
-    public SuggestVideoCategoryRequest withSecurity(SuggestVideoCategorySecurity security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public SuggestVideoCategoryRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

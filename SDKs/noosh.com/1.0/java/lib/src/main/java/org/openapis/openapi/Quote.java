@@ -41,7 +41,7 @@ public class Quote {
      */
     public org.openapis.openapi.models.operations.GetQuoteResponse getQuote(org.openapis.openapi.models.operations.GetQuoteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetQuotePathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/quotes/{quote_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetQuoteRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/quotes/{quote_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -160,13 +160,13 @@ public class Quote {
      */
     public org.openapis.openapi.models.operations.GetQuoteListResponse getQuoteList(org.openapis.openapi.models.operations.GetQuoteListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetQuoteListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/quotes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetQuoteListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/quotes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetQuoteListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetQuoteListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -285,7 +285,7 @@ public class Quote {
      */
     public org.openapis.openapi.models.operations.GetQuoteStateListResponse getQuoteStateList(org.openapis.openapi.models.operations.GetQuoteStateListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetQuoteStateListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/quoteStates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetQuoteStateListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/quoteStates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -404,13 +404,13 @@ public class Quote {
      */
     public org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdQuotesResponse getV1WorkgroupsWorkgroupIdQuotes(org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdQuotesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdQuotesPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/quotes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdQuotesRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/quotes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdQuotesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdQuotesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -529,12 +529,12 @@ public class Quote {
      */
     public org.openapis.openapi.models.operations.PutQuoteJsonResponse putQuoteJson(org.openapis.openapi.models.operations.PutQuoteJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutQuoteJsonPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/quotes/{quote_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutQuoteJsonRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/quotes/{quote_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "quotePutPersistVO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -606,12 +606,12 @@ public class Quote {
      */
     public org.openapis.openapi.models.operations.PutQuoteRawResponse putQuoteRaw(org.openapis.openapi.models.operations.PutQuoteRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutQuoteRawPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/quotes/{quote_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutQuoteRawRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/quotes/{quote_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         

@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppInvitationsCreateByEmailRequest {
-    
-    public AppInvitationsCreateByEmailPathParams pathParams;
-    public AppInvitationsCreateByEmailRequest withPathParams(AppInvitationsCreateByEmailPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The role of the user to be added
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AppInvitationsCreateByEmailRequestBody request;
-    public AppInvitationsCreateByEmailRequest withRequest(AppInvitationsCreateByEmailRequestBody request) {
-        this.request = request;
+    public AppInvitationsCreateByEmailRequestBody requestBody;
+    public AppInvitationsCreateByEmailRequest withRequestBody(AppInvitationsCreateByEmailRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AppInvitationsCreateByEmailRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public AppInvitationsCreateByEmailSecurity security;
-    public AppInvitationsCreateByEmailRequest withSecurity(AppInvitationsCreateByEmailSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AppInvitationsCreateByEmailRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * The email of the user to invite
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_email")
+    public String userEmail;
+    public AppInvitationsCreateByEmailRequest withUserEmail(String userEmail) {
+        this.userEmail = userEmail;
         return this;
     }
     

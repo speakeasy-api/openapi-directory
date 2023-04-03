@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutApiV1ClipsIdRequest {
-    
-    public PutApiV1ClipsIdPathParams pathParams;
-    public PutApiV1ClipsIdRequest withPathParams(PutApiV1ClipsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutApiV1ClipsIdRequestBody request;
-    public PutApiV1ClipsIdRequest withRequest(PutApiV1ClipsIdRequestBody request) {
-        this.request = request;
+    public PutApiV1ClipsIdRequestBody requestBody;
+    public PutApiV1ClipsIdRequest withRequestBody(PutApiV1ClipsIdRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PutApiV1ClipsIdSecurity security;
-    public PutApiV1ClipsIdRequest withSecurity(PutApiV1ClipsIdSecurity security) {
-        this.security = security;
+    /**
+     * The id of the clip to be retrieved
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutApiV1ClipsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

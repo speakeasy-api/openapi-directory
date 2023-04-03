@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteHpvcManagerRequest {
-    
-    public DeleteHpvcManagerPathParams pathParams;
-    public DeleteHpvcManagerRequest withPathParams(DeleteHpvcManagerPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteHpvcManagerSecurity security;
-    public DeleteHpvcManagerRequest withSecurity(DeleteHpvcManagerSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteHpvcManagerRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

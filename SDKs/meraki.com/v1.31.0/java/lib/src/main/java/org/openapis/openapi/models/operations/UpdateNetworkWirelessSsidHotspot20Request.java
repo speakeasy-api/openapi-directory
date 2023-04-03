@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkWirelessSsidHotspot20Request {
-    
-    public UpdateNetworkWirelessSsidHotspot20PathParams pathParams;
-    public UpdateNetworkWirelessSsidHotspot20Request withPathParams(UpdateNetworkWirelessSsidHotspot20PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkWirelessSsidHotspot20RequestBody requestBody;
+    public UpdateNetworkWirelessSsidHotspot20Request withRequestBody(UpdateNetworkWirelessSsidHotspot20RequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkWirelessSsidHotspot20RequestBody request;
-    public UpdateNetworkWirelessSsidHotspot20Request withRequest(UpdateNetworkWirelessSsidHotspot20RequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkWirelessSsidHotspot20Request withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
+    public String number;
+    public UpdateNetworkWirelessSsidHotspot20Request withNumber(String number) {
+        this.number = number;
         return this;
     }
     

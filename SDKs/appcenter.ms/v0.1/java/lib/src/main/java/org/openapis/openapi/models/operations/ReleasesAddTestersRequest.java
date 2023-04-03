@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesAddTestersRequest {
-    
-    public ReleasesAddTestersPathParams pathParams;
-    public ReleasesAddTestersRequest withPathParams(ReleasesAddTestersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The release information.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReleasesAddTestersRequestBody request;
-    public ReleasesAddTestersRequest withRequest(ReleasesAddTestersRequestBody request) {
-        this.request = request;
+    public ReleasesAddTestersRequestBody requestBody;
+    public ReleasesAddTestersRequest withRequestBody(ReleasesAddTestersRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ReleasesAddTestersRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public ReleasesAddTestersSecurity security;
-    public ReleasesAddTestersRequest withSecurity(ReleasesAddTestersSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ReleasesAddTestersRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * The ID of the release
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
+    public Long releaseId;
+    public ReleasesAddTestersRequest withReleaseId(Long releaseId) {
+        this.releaseId = releaseId;
         return this;
     }
     

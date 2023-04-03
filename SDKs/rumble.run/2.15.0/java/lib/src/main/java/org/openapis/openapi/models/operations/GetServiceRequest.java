@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetServiceRequest {
-    
-    public GetServicePathParams pathParams;
-    public GetServiceRequest withPathParams(GetServicePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetServiceSecurity security;
-    public GetServiceRequest withSecurity(GetServiceSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the service to retrieve
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=service_id")
+    public String serviceId;
+    public GetServiceRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
         return this;
     }
     

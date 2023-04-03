@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArchiveVoiceBroadcastRequest {
-    
-    public ArchiveVoiceBroadcastPathParams pathParams;
-    public ArchiveVoiceBroadcastRequest withPathParams(ArchiveVoiceBroadcastPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ArchiveVoiceBroadcastSecurity security;
-    public ArchiveVoiceBroadcastRequest withSecurity(ArchiveVoiceBroadcastSecurity security) {
-        this.security = security;
+    /**
+     * An id of a voice broadcast to archive
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ArchiveVoiceBroadcastRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

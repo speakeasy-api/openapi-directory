@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteChannelRequest {
+    /**
+     * Channel ID: Unique Identifier of a channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
+    public String channelId;
+    public DeleteChannelRequest withChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
     
-    public DeleteChannelPathParams pathParams;
-    public DeleteChannelRequest withPathParams(DeleteChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public DeleteChannelRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -7,31 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSyncSyncMapItemRequest {
-    
-    public CreateSyncSyncMapItemPathParams pathParams;
-    public CreateSyncSyncMapItemRequest withPathParams(CreateSyncSyncMapItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MapSid")
+    public String mapSid;
+    public CreateSyncSyncMapItemRequest withMapSid(String mapSid) {
+        this.mapSid = mapSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateSyncSyncMapItemCreateSyncSyncMapItemRequest request;
-    public CreateSyncSyncMapItemRequest withRequest(CreateSyncSyncMapItemCreateSyncSyncMapItemRequest request) {
-        this.request = request;
+    public CreateSyncSyncMapItemCreateSyncSyncMapItemRequest requestBody;
+    public CreateSyncSyncMapItemRequest withRequestBody(CreateSyncSyncMapItemCreateSyncSyncMapItemRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateSyncSyncMapItemSecurity security;
-    public CreateSyncSyncMapItemRequest withSecurity(CreateSyncSyncMapItemSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateSyncSyncMapItemRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateSyncSyncMapItemRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

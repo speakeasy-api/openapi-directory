@@ -7,20 +7,53 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BulkCreateOrUpdateAnnotationsRequest {
-    
-    public BulkCreateOrUpdateAnnotationsPathParams pathParams;
-    public BulkCreateOrUpdateAnnotationsRequest withPathParams(BulkCreateOrUpdateAnnotationsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The annotations to create or update
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object>[] request;
-    public BulkCreateOrUpdateAnnotationsRequest withRequest(java.util.Map<String, Object>[] request) {
-        this.request = request;
+    public java.util.Map<String, Object>[] requestBody;
+    public BulkCreateOrUpdateAnnotationsRequest withRequestBody(java.util.Map<String, Object>[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The commit for which to retrieve reports.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
+    public String commit;
+    public BulkCreateOrUpdateAnnotationsRequest withCommit(String commit) {
+        this.commit = commit;
+        return this;
+    }
+    
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public BulkCreateOrUpdateAnnotationsRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * Uuid or external-if of the report for which to get annotations for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reportId")
+    public String reportId;
+    public BulkCreateOrUpdateAnnotationsRequest withReportId(String reportId) {
+        this.reportId = reportId;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public BulkCreateOrUpdateAnnotationsRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

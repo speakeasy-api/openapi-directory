@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest {
-    
-    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimePathParams pathParams;
-    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest withPathParams(GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeHeaders headers;
-    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest withHeaders(GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeHeaders headers) {
-        this.headers = headers;
+    /**
+     * How the delivery capacity is measured as defined in the shipping policy. Capacity can be measured by maximum number of orders (`"orders_quantity"`) or SKUs (`"skus_quantity"`).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=capacityType")
+    public String capacityType;
+    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest withCapacityType(String capacityType) {
+        this.capacityType = capacityType;
+        return this;
+    }
+    
+    /**
+     * ID of shipping policy to search.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shippingPolicyId")
+    public String shippingPolicyId;
+    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest withShippingPolicyId(String shippingPolicyId) {
+        this.shippingPolicyId = shippingPolicyId;
+        return this;
+    }
+    
+    /**
+     * Day of the specific scheduled delivery window to be consulted for reservations.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=windowDay")
+    public String windowDay;
+    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest withWindowDay(String windowDay) {
+        this.windowDay = windowDay;
+        return this;
+    }
+    
+    /**
+     * End time of specific scheduled delivery window to be consulted for reservations.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=windowEndTime")
+    public String windowEndTime;
+    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest withWindowEndTime(String windowEndTime) {
+        this.windowEndTime = windowEndTime;
+        return this;
+    }
+    
+    /**
+     * Start time of specific scheduled delivery window to be consulted for reservations.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=windowStartTime")
+    public String windowStartTime;
+    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesWindowDayFWindowStartTimeTWindowEndTimeRequest withWindowStartTime(String windowStartTime) {
+        this.windowStartTime = windowStartTime;
         return this;
     }
     

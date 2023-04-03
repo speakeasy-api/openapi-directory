@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceCameraAnalyticsRecentRequest {
-    
-    public GetDeviceCameraAnalyticsRecentPathParams pathParams;
-    public GetDeviceCameraAnalyticsRecentRequest withPathParams(GetDeviceCameraAnalyticsRecentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle].
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=objectType")
+    public GetDeviceCameraAnalyticsRecentObjectTypeEnum objectType;
+    public GetDeviceCameraAnalyticsRecentRequest withObjectType(GetDeviceCameraAnalyticsRecentObjectTypeEnum objectType) {
+        this.objectType = objectType;
         return this;
     }
     
-    
-    public GetDeviceCameraAnalyticsRecentQueryParams queryParams;
-    public GetDeviceCameraAnalyticsRecentRequest withQueryParams(GetDeviceCameraAnalyticsRecentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetDeviceCameraAnalyticsRecentRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

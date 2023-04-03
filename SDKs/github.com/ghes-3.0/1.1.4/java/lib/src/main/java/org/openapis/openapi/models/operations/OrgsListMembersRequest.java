@@ -4,20 +4,58 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsListMembersRequest {
-    
-    public OrgsListMembersPathParams pathParams;
-    public OrgsListMembersRequest withPathParams(OrgsListMembersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter members returned in the list. Can be one of:  
+     * \* `2fa_disabled` - Members without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled. Available for organization owners.  
+     * \* `all` - All members the authenticated user can see.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public OrgsListMembersFilterEnum filter;
+    public OrgsListMembersRequest withFilter(OrgsListMembersFilterEnum filter) {
+        this.filter = filter;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsListMembersRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public OrgsListMembersQueryParams queryParams;
-    public OrgsListMembersRequest withQueryParams(OrgsListMembersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public OrgsListMembersRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public OrgsListMembersRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Filter members returned by their role. Can be one of:  
+     * \* `all` - All members of the organization, regardless of role.  
+     * \* `admin` - Organization owners.  
+     * \* `member` - Non-owner organization members.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
+    public OrgsListMembersRoleEnum role;
+    public OrgsListMembersRequest withRole(OrgsListMembersRoleEnum role) {
+        this.role = role;
         return this;
     }
     

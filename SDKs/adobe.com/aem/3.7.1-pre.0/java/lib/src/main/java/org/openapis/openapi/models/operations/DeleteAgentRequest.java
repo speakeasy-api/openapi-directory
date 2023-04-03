@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAgentRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public DeleteAgentRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public DeleteAgentPathParams pathParams;
-    public DeleteAgentRequest withPathParams(DeleteAgentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runmode")
+    public String runmode;
+    public DeleteAgentRequest withRunmode(String runmode) {
+        this.runmode = runmode;
         return this;
     }
     

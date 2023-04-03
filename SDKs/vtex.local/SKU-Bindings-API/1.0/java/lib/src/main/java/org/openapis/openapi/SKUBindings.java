@@ -42,13 +42,13 @@ public class SKUBindings {
      */
     public org.openapis.openapi.models.operations.ActivateSKUBindingResponse activateSKUBinding(org.openapis.openapi.models.operations.ActivateSKUBindingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivateSKUBindingPathParams.class, baseUrl, "/sku-binding/pvt/skuseller/activate/{sellerId}/{skuSellerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivateSKUBindingRequest.class, baseUrl, "/sku-binding/pvt/skuseller/activate/{sellerId}/{skuSellerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -94,15 +94,15 @@ public class SKUBindings {
      */
     public org.openapis.openapi.models.operations.BindtoanotherskuResponse bindtoanothersku(org.openapis.openapi.models.operations.BindtoanotherskuRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BindtoanotherskuPathParams.class, baseUrl, "/sku-binding/pvt/skuseller/{sellerId}/{sellerSkuId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BindtoanotherskuRequest.class, baseUrl, "/sku-binding/pvt/skuseller/{sellerId}/{sellerSkuId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -144,13 +144,13 @@ public class SKUBindings {
      */
     public org.openapis.openapi.models.operations.ChangeNotificationResponse changeNotification(org.openapis.openapi.models.operations.ChangeNotificationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangeNotificationPathParams.class, baseUrl, "/sku-binding/pvt/skuseller/changenotification/{skuId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangeNotificationRequest.class, baseUrl, "/sku-binding/pvt/skuseller/changenotification/{skuId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -188,13 +188,13 @@ public class SKUBindings {
      */
     public org.openapis.openapi.models.operations.DeactivateSKUBindingResponse deactivateSKUBinding(org.openapis.openapi.models.operations.DeactivateSKUBindingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeactivateSKUBindingPathParams.class, baseUrl, "/sku-binding/pvt/skuseller/inactivate/{sellerId}/{skuSellerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeactivateSKUBindingRequest.class, baseUrl, "/sku-binding/pvt/skuseller/inactivate/{sellerId}/{skuSellerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -232,13 +232,13 @@ public class SKUBindings {
      */
     public org.openapis.openapi.models.operations.DeleteSKUsellerassociationResponse deleteSKUsellerassociation(org.openapis.openapi.models.operations.DeleteSKUsellerassociationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSKUsellerassociationPathParams.class, baseUrl, "/sku-binding/pvt/skuseller/remove/{sellerId}/{sellerSkuId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSKUsellerassociationRequest.class, baseUrl, "/sku-binding/pvt/skuseller/remove/{sellerId}/{sellerSkuId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -292,13 +292,13 @@ public class SKUBindings {
      */
     public org.openapis.openapi.models.operations.GetSKUsellerResponse getSKUseller(org.openapis.openapi.models.operations.GetSKUsellerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSKUsellerPathParams.class, baseUrl, "/sku-binding/pvt/skuseller/{sellerId}/{sellerSkuId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSKUsellerRequest.class, baseUrl, "/sku-binding/pvt/skuseller/{sellerId}/{sellerSkuId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -357,13 +357,13 @@ public class SKUBindings {
      */
     public org.openapis.openapi.models.operations.GetallbySellerIdResponse getallbySellerId(org.openapis.openapi.models.operations.GetallbySellerIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetallbySellerIdPathParams.class, baseUrl, "/sku-binding/pvt/skuseller/list/bysellerId/{sellerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetallbySellerIdRequest.class, baseUrl, "/sku-binding/pvt/skuseller/list/bysellerId/{sellerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -421,13 +421,13 @@ public class SKUBindings {
      */
     public org.openapis.openapi.models.operations.GetbySkuIdResponse getbySkuId(org.openapis.openapi.models.operations.GetbySkuIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetbySkuIdPathParams.class, baseUrl, "/catalog/pvt/skusellers/{skuId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetbySkuIdRequest.class, baseUrl, "/catalog/pvt/skusellers/{skuId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -495,13 +495,13 @@ public class SKUBindings {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetpagedadminQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetpagedadminRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -568,19 +568,19 @@ public class SKUBindings {
      */
     public org.openapis.openapi.models.operations.GetpagedbySellerIdResponse getpagedbySellerId(org.openapis.openapi.models.operations.GetpagedbySellerIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetpagedbySellerIdPathParams.class, baseUrl, "/sku-binding/pvt/skuseller/paged/sellerid/{sellerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetpagedbySellerIdRequest.class, baseUrl, "/sku-binding/pvt/skuseller/paged/sellerid/{sellerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetpagedbySellerIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetpagedbySellerIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -629,13 +629,13 @@ public class SKUBindings {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -696,13 +696,13 @@ public class SKUBindings {
      */
     public org.openapis.openapi.models.operations.PostSkuBindingPvtSkusellerChangenotificationSellerIdSellerSkuIdResponse postSkuBindingPvtSkusellerChangenotificationSellerIdSellerSkuId(org.openapis.openapi.models.operations.PostSkuBindingPvtSkusellerChangenotificationSellerIdSellerSkuIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSkuBindingPvtSkusellerChangenotificationSellerIdSellerSkuIdPathParams.class, baseUrl, "/sku-binding/pvt/skuseller/changenotification/{sellerId}/{sellerSkuId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSkuBindingPvtSkusellerChangenotificationSellerIdSellerSkuIdRequest.class, baseUrl, "/sku-binding/pvt/skuseller/changenotification/{sellerId}/{sellerSkuId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

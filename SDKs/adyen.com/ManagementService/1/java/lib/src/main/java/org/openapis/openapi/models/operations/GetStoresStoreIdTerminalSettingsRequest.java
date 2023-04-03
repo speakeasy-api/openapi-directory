@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStoresStoreIdTerminalSettingsRequest {
-    
-    public GetStoresStoreIdTerminalSettingsPathParams pathParams;
-    public GetStoresStoreIdTerminalSettingsRequest withPathParams(GetStoresStoreIdTerminalSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetStoresStoreIdTerminalSettingsSecurity security;
-    public GetStoresStoreIdTerminalSettingsRequest withSecurity(GetStoresStoreIdTerminalSettingsSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the store.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public GetStoresStoreIdTerminalSettingsRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

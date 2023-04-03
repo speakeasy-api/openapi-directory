@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfirmReservationRequest {
-    
-    public ConfirmReservationPathParams pathParams;
-    public ConfirmReservationRequest withPathParams(ConfirmReservationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ConfirmReservationRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ConfirmReservationRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public ConfirmReservationHeaders headers;
-    public ConfirmReservationRequest withHeaders(ConfirmReservationHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reservationId")
+    public String reservationId;
+    public ConfirmReservationRequest withReservationId(String reservationId) {
+        this.reservationId = reservationId;
         return this;
     }
     

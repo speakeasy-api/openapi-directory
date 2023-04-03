@@ -4,13 +4,63 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGetColoredPathwayRequest {
+    /**
+     * string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=color")
+    public Object[] color;
+    public GetGetColoredPathwayRequest withColor(Object[] color) {
+        this.color = color;
+        return this;
+    }
     
-    public GetGetColoredPathwayQueryParams queryParams;
-    public GetGetColoredPathwayRequest withQueryParams(GetGetColoredPathwayQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The image type (One of 'svg', 'pdf' or 'png').
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fileType")
+    public String fileType;
+    public GetGetColoredPathwayRequest withFileType(String fileType) {
+        this.fileType = fileType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetGetColoredPathwayFormatEnum format;
+    public GetGetColoredPathwayRequest withFormat(GetGetColoredPathwayFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=graphId")
+    public Object[] graphId;
+    public GetGetColoredPathwayRequest withGraphId(Object[] graphId) {
+        this.graphId = graphId;
+        return this;
+    }
+    
+    /**
+     * The pathway identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pwId")
+    public String pwId;
+    public GetGetColoredPathwayRequest withPwId(String pwId) {
+        this.pwId = pwId;
+        return this;
+    }
+    
+    /**
+     * The revision of the pathway (use '0' for most recent)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=revision")
+    public String revision;
+    public GetGetColoredPathwayRequest withRevision(String revision) {
+        this.revision = revision;
         return this;
     }
     

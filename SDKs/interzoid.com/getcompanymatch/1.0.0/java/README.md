@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetcompanymatchQueryParams;
 import org.openapis.openapi.models.operations.GetcompanymatchRequest;
 import org.openapis.openapi.models.operations.GetcompanymatchResponse;
 
@@ -28,11 +27,9 @@ public class Application {
                 .build();
 
             GetcompanymatchRequest req = new GetcompanymatchRequest() {{
-                queryParams = new GetcompanymatchQueryParams() {{
-                    company = "Medhurst - Rau";
-                    license = "quibusdam";
-                }};
-            }};            
+                company = "Medhurst - Rau";
+                license = "quibusdam";
+            }}            
 
             GetcompanymatchResponse res = sdk.companyNameSimilarityKey.getcompanymatch(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### companyNameSimilarityKey

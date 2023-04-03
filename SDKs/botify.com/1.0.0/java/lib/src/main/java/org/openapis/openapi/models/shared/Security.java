@@ -7,9 +7,9 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeDjangoRestToken djangoRestToken;
-    public Security withDjangoRestToken(SchemeDjangoRestToken djangoRestToken) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
+    public String djangoRestToken;
+    public Security withDjangoRestToken(String djangoRestToken) {
         this.djangoRestToken = djangoRestToken;
         return this;
     }

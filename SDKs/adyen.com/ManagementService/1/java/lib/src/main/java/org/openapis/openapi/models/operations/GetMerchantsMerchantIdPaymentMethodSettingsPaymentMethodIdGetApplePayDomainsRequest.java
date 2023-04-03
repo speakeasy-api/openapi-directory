@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsRequest {
-    
-    public GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsPathParams pathParams;
-    public GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsRequest withPathParams(GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     
-    
-    public GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsSecurity security;
-    public GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsRequest withSecurity(GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the payment method.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentMethodId")
+    public String paymentMethodId;
+    public GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsRequest withPaymentMethodId(String paymentMethodId) {
+        this.paymentMethodId = paymentMethodId;
         return this;
     }
     

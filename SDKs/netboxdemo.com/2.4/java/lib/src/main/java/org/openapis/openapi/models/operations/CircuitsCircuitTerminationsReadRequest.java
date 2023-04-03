@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CircuitsCircuitTerminationsReadRequest {
-    
-    public CircuitsCircuitTerminationsReadPathParams pathParams;
-    public CircuitsCircuitTerminationsReadRequest withPathParams(CircuitsCircuitTerminationsReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this circuit termination.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CircuitsCircuitTerminationsReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

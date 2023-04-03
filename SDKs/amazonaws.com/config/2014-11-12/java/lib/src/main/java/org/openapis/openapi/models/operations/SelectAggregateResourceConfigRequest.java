@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SelectAggregateResourceConfigRequest {
-    
-    public SelectAggregateResourceConfigQueryParams queryParams;
-    public SelectAggregateResourceConfigRequest withQueryParams(SelectAggregateResourceConfigQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Limit")
+    public String limit;
+    public SelectAggregateResourceConfigRequest withLimit(String limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public SelectAggregateResourceConfigHeaders headers;
-    public SelectAggregateResourceConfigRequest withHeaders(SelectAggregateResourceConfigHeaders headers) {
-        this.headers = headers;
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public SelectAggregateResourceConfigRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SelectAggregateResourceConfigRequest request;
-    public SelectAggregateResourceConfigRequest withRequest(org.openapis.openapi.models.shared.SelectAggregateResourceConfigRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SelectAggregateResourceConfigRequest selectAggregateResourceConfigRequest;
+    public SelectAggregateResourceConfigRequest withSelectAggregateResourceConfigRequest(org.openapis.openapi.models.shared.SelectAggregateResourceConfigRequest selectAggregateResourceConfigRequest) {
+        this.selectAggregateResourceConfigRequest = selectAggregateResourceConfigRequest;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public SelectAggregateResourceConfigRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public SelectAggregateResourceConfigRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public SelectAggregateResourceConfigRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public SelectAggregateResourceConfigRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public SelectAggregateResourceConfigRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public SelectAggregateResourceConfigRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public SelectAggregateResourceConfigRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public SelectAggregateResourceConfigXAmzTargetEnum xAmzTarget;
+    public SelectAggregateResourceConfigRequest withXAmzTarget(SelectAggregateResourceConfigXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

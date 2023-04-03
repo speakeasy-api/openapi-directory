@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1ScheduledStatusesRequest {
-    
-    public GetApiV1ScheduledStatusesQueryParams queryParams;
-    public GetApiV1ScheduledStatusesRequest withQueryParams(GetApiV1ScheduledStatusesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Max number of results to return. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetApiV1ScheduledStatusesRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Return results older than ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_id")
+    public String maxId;
+    public GetApiV1ScheduledStatusesRequest withMaxId(String maxId) {
+        this.maxId = maxId;
+        return this;
+    }
     
-    public GetApiV1ScheduledStatusesSecurity security;
-    public GetApiV1ScheduledStatusesRequest withSecurity(GetApiV1ScheduledStatusesSecurity security) {
-        this.security = security;
+    /**
+     * Return results immediately newer than ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_id")
+    public String minId;
+    public GetApiV1ScheduledStatusesRequest withMinId(String minId) {
+        this.minId = minId;
+        return this;
+    }
+    
+    /**
+     * Return results newer than ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since_id")
+    public String sinceId;
+    public GetApiV1ScheduledStatusesRequest withSinceId(String sinceId) {
+        this.sinceId = sinceId;
         return this;
     }
     

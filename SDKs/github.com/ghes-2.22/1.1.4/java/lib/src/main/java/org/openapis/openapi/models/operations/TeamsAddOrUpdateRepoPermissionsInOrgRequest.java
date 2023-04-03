@@ -7,17 +7,41 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsAddOrUpdateRepoPermissionsInOrgRequest {
-    
-    public TeamsAddOrUpdateRepoPermissionsInOrgPathParams pathParams;
-    public TeamsAddOrUpdateRepoPermissionsInOrgRequest withPathParams(TeamsAddOrUpdateRepoPermissionsInOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public TeamsAddOrUpdateRepoPermissionsInOrgRequestBody requestBody;
+    public TeamsAddOrUpdateRepoPermissionsInOrgRequest withRequestBody(TeamsAddOrUpdateRepoPermissionsInOrgRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsAddOrUpdateRepoPermissionsInOrgRequestBody request;
-    public TeamsAddOrUpdateRepoPermissionsInOrgRequest withRequest(TeamsAddOrUpdateRepoPermissionsInOrgRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public TeamsAddOrUpdateRepoPermissionsInOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public TeamsAddOrUpdateRepoPermissionsInOrgRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public TeamsAddOrUpdateRepoPermissionsInOrgRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * team_slug parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
+    public String teamSlug;
+    public TeamsAddOrUpdateRepoPermissionsInOrgRequest withTeamSlug(String teamSlug) {
+        this.teamSlug = teamSlug;
         return this;
     }
     

@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCategoriesKeywordsIdKeywordRequest {
-    
-    public DeleteCategoriesKeywordsIdKeywordPathParams pathParams;
-    public DeleteCategoriesKeywordsIdKeywordRequest withPathParams(DeleteCategoriesKeywordsIdKeywordPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public DeleteCategoriesKeywordsIdKeywordRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
-    
-    public DeleteCategoriesKeywordsIdKeywordQueryParams queryParams;
-    public DeleteCategoriesKeywordsIdKeywordRequest withQueryParams(DeleteCategoriesKeywordsIdKeywordQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_keyword")
+    public Long idKeyword;
+    public DeleteCategoriesKeywordsIdKeywordRequest withIdKeyword(Long idKeyword) {
+        this.idKeyword = idKeyword;
         return this;
     }
     

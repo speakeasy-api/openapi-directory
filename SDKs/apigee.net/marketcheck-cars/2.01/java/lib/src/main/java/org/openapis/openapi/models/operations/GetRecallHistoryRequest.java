@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRecallHistoryRequest {
-    
-    public GetRecallHistoryPathParams pathParams;
-    public GetRecallHistoryRequest withPathParams(GetRecallHistoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetRecallHistoryRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * Page number to fetch the results for the given criteria. Default is 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetRecallHistoryRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetRecallHistoryQueryParams queryParams;
-    public GetRecallHistoryRequest withQueryParams(GetRecallHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The VIN to identify the car. Must be a valid 17 char VIN
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vin")
+    public String vin;
+    public GetRecallHistoryRequest withVin(String vin) {
+        this.vin = vin;
         return this;
     }
     

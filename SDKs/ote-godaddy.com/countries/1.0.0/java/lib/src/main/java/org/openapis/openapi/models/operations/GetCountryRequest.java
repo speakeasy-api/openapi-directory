@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCountryRequest {
-    
-    public GetCountryPathParams pathParams;
-    public GetCountryRequest withPathParams(GetCountryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The country key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryKey")
+    public String countryKey;
+    public GetCountryRequest withCountryKey(String countryKey) {
+        this.countryKey = countryKey;
         return this;
     }
     
+    /**
+     * MarketId in which the request is being made, and for which responses should be localized
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=marketId")
+    public String marketId;
+    public GetCountryRequest withMarketId(String marketId) {
+        this.marketId = marketId;
+        return this;
+    }
     
-    public GetCountryQueryParams queryParams;
-    public GetCountryRequest withQueryParams(GetCountryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The direction to sort the result country states by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public GetCountryOrderEnum order;
+    public GetCountryRequest withOrder(GetCountryOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * The term to sort the result country states by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetCountrySortEnum sort;
+    public GetCountryRequest withSort(GetCountrySortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

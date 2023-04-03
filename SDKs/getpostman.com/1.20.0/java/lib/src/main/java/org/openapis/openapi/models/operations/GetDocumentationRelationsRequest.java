@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDocumentationRelationsRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
+    public String apiId;
+    public GetDocumentationRelationsRequest withApiId(String apiId) {
+        this.apiId = apiId;
+        return this;
+    }
     
-    public GetDocumentationRelationsPathParams pathParams;
-    public GetDocumentationRelationsRequest withPathParams(GetDocumentationRelationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiVersionId")
+    public String apiVersionId;
+    public GetDocumentationRelationsRequest withApiVersionId(String apiVersionId) {
+        this.apiVersionId = apiVersionId;
         return this;
     }
     

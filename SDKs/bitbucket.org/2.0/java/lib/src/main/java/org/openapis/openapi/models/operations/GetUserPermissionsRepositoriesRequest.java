@@ -4,20 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserPermissionsRepositoriesRequest {
-    
-    public GetUserPermissionsRepositoriesQueryParams queryParams;
-    public GetUserPermissionsRepositoriesRequest withQueryParams(GetUserPermissionsRepositoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Query string to narrow down the response as per
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetUserPermissionsRepositoriesRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     
-    
-    public GetUserPermissionsRepositoriesSecurity security;
-    public GetUserPermissionsRepositoriesRequest withSecurity(GetUserPermissionsRepositoriesSecurity security) {
-        this.security = security;
+    /**
+     * Name of a response property sort the result by as per
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetUserPermissionsRepositoriesRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

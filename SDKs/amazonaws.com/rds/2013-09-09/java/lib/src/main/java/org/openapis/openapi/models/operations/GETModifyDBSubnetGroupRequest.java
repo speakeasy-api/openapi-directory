@@ -4,20 +4,90 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyDBSubnetGroupRequest {
-    
-    public GETModifyDBSubnetGroupQueryParams queryParams;
-    public GETModifyDBSubnetGroupRequest withQueryParams(GETModifyDBSubnetGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyDBSubnetGroupActionEnum action;
+    public GETModifyDBSubnetGroupRequest withAction(GETModifyDBSubnetGroupActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBSubnetGroupDescription")
+    public String dbSubnetGroupDescription;
+    public GETModifyDBSubnetGroupRequest withDBSubnetGroupDescription(String dbSubnetGroupDescription) {
+        this.dbSubnetGroupDescription = dbSubnetGroupDescription;
+        return this;
+    }
     
-    public GETModifyDBSubnetGroupHeaders headers;
-    public GETModifyDBSubnetGroupRequest withHeaders(GETModifyDBSubnetGroupHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBSubnetGroupName")
+    public String dbSubnetGroupName;
+    public GETModifyDBSubnetGroupRequest withDBSubnetGroupName(String dbSubnetGroupName) {
+        this.dbSubnetGroupName = dbSubnetGroupName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SubnetIds")
+    public String[] subnetIds;
+    public GETModifyDBSubnetGroupRequest withSubnetIds(String[] subnetIds) {
+        this.subnetIds = subnetIds;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyDBSubnetGroupVersionEnum version;
+    public GETModifyDBSubnetGroupRequest withVersion(GETModifyDBSubnetGroupVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyDBSubnetGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyDBSubnetGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyDBSubnetGroupRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyDBSubnetGroupRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyDBSubnetGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyDBSubnetGroupRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyDBSubnetGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

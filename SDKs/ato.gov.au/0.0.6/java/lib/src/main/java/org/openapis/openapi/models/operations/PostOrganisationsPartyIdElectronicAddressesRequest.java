@@ -7,17 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOrganisationsPartyIdElectronicAddressesRequest {
-    
-    public PostOrganisationsPartyIdElectronicAddressesPathParams pathParams;
-    public PostOrganisationsPartyIdElectronicAddressesRequest withPathParams(PostOrganisationsPartyIdElectronicAddressesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostOrganisationsPartyIdElectronicAddressesHeaders headers;
-    public PostOrganisationsPartyIdElectronicAddressesRequest withHeaders(PostOrganisationsPartyIdElectronicAddressesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public PostOrganisationsPartyIdElectronicAddressesRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
@@ -25,9 +21,19 @@ public class PostOrganisationsPartyIdElectronicAddressesRequest {
      * Electronic Address resource
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ElectronicAddressInput request;
-    public PostOrganisationsPartyIdElectronicAddressesRequest withRequest(org.openapis.openapi.models.shared.ElectronicAddressInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ElectronicAddressInput electronicAddressInput;
+    public PostOrganisationsPartyIdElectronicAddressesRequest withElectronicAddressInput(org.openapis.openapi.models.shared.ElectronicAddressInput electronicAddressInput) {
+        this.electronicAddressInput = electronicAddressInput;
+        return this;
+    }
+    
+    /**
+     * The party identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
+    public String partyId;
+    public PostOrganisationsPartyIdElectronicAddressesRequest withPartyId(String partyId) {
+        this.partyId = partyId;
         return this;
     }
     

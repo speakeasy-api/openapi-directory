@@ -7,27 +7,37 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRepositoriesWorkspaceRepoSlugForksRequest {
-    
-    public PostRepositoriesWorkspaceRepoSlugForksPathParams pathParams;
-    public PostRepositoriesWorkspaceRepoSlugForksRequest withPathParams(PostRepositoriesWorkspaceRepoSlugForksPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A repository object. This can be left blank.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PostRepositoriesWorkspaceRepoSlugForksRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PostRepositoriesWorkspaceRepoSlugForksRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public PostRepositoriesWorkspaceRepoSlugForksRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public PostRepositoriesWorkspaceRepoSlugForksSecurity security;
-    public PostRepositoriesWorkspaceRepoSlugForksRequest withSecurity(PostRepositoriesWorkspaceRepoSlugForksSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public PostRepositoriesWorkspaceRepoSlugForksRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

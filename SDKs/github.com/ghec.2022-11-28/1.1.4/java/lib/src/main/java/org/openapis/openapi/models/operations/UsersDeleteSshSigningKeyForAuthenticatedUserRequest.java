@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersDeleteSshSigningKeyForAuthenticatedUserRequest {
-    
-    public UsersDeleteSshSigningKeyForAuthenticatedUserPathParams pathParams;
-    public UsersDeleteSshSigningKeyForAuthenticatedUserRequest withPathParams(UsersDeleteSshSigningKeyForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the SSH signing key.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ssh_signing_key_id")
+    public Long sshSigningKeyId;
+    public UsersDeleteSshSigningKeyForAuthenticatedUserRequest withSshSigningKeyId(Long sshSigningKeyId) {
+        this.sshSigningKeyId = sshSigningKeyId;
         return this;
     }
     

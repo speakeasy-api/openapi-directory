@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesUpdateMilestoneRequest {
-    
-    public IssuesUpdateMilestonePathParams pathParams;
-    public IssuesUpdateMilestoneRequest withPathParams(IssuesUpdateMilestonePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public IssuesUpdateMilestoneRequestBody requestBody;
+    public IssuesUpdateMilestoneRequest withRequestBody(IssuesUpdateMilestoneRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public IssuesUpdateMilestoneRequestBody request;
-    public IssuesUpdateMilestoneRequest withRequest(IssuesUpdateMilestoneRequestBody request) {
-        this.request = request;
+    /**
+     * The number that identifies the milestone.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=milestone_number")
+    public Long milestoneNumber;
+    public IssuesUpdateMilestoneRequest withMilestoneNumber(Long milestoneNumber) {
+        this.milestoneNumber = milestoneNumber;
+        return this;
+    }
+    
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssuesUpdateMilestoneRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssuesUpdateMilestoneRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

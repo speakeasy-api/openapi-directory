@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutV2WebhookSubscriptionsIdRequest {
-    
-    public PutV2WebhookSubscriptionsIdPathParams pathParams;
-    public PutV2WebhookSubscriptionsIdRequest withPathParams(PutV2WebhookSubscriptionsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public PutV2WebhookSubscriptionsIdRequestBody requestBody;
+    public PutV2WebhookSubscriptionsIdRequest withRequestBody(PutV2WebhookSubscriptionsIdRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public PutV2WebhookSubscriptionsIdRequestBody request;
-    public PutV2WebhookSubscriptionsIdRequest withRequest(PutV2WebhookSubscriptionsIdRequestBody request) {
-        this.request = request;
+    /**
+     * The Webhook Suscription id to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PutV2WebhookSubscriptionsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

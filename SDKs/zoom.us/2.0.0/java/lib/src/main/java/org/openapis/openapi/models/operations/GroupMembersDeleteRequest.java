@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupMembersDeleteRequest {
-    
-    public GroupMembersDeletePathParams pathParams;
-    public GroupMembersDeleteRequest withPathParams(GroupMembersDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The group ID.&lt;br&gt;
+     * Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public GroupMembersDeleteRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     
-    
-    public GroupMembersDeleteSecurity security;
-    public GroupMembersDeleteRequest withSecurity(GroupMembersDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The member ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=memberId")
+    public String memberId;
+    public GroupMembersDeleteRequest withMemberId(String memberId) {
+        this.memberId = memberId;
         return this;
     }
     

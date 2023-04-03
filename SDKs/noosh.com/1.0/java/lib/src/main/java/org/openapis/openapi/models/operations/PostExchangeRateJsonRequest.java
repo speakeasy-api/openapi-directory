@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostExchangeRateJsonRequest {
-    
-    public PostExchangeRateJsonPathParams pathParams;
-    public PostExchangeRateJsonRequest withPathParams(PostExchangeRateJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.MultiExchangeRatePersistListVO multiExchangeRatePersistListVO;
+    public PostExchangeRateJsonRequest withMultiExchangeRatePersistListVO(org.openapis.openapi.models.shared.MultiExchangeRatePersistListVO multiExchangeRatePersistListVO) {
+        this.multiExchangeRatePersistListVO = multiExchangeRatePersistListVO;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.MultiExchangeRatePersistListVO request;
-    public PostExchangeRateJsonRequest withRequest(org.openapis.openapi.models.shared.MultiExchangeRatePersistListVO request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public PostExchangeRateJsonRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

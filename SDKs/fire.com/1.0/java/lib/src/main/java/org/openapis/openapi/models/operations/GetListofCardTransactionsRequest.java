@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListofCardTransactionsRequest {
-    
-    public GetListofCardTransactionsPathParams pathParams;
-    public GetListofCardTransactionsRequest withPathParams(GetListofCardTransactionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cardId")
+    public Long cardId;
+    public GetListofCardTransactionsRequest withCardId(Long cardId) {
+        this.cardId = cardId;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetListofCardTransactionsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetListofCardTransactionsQueryParams queryParams;
-    public GetListofCardTransactionsRequest withQueryParams(GetListofCardTransactionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetListofCardTransactionsRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

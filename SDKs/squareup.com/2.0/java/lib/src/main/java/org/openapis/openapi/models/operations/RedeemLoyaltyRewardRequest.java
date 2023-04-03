@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RedeemLoyaltyRewardRequest {
-    
-    public RedeemLoyaltyRewardPathParams pathParams;
-    public RedeemLoyaltyRewardRequest withPathParams(RedeemLoyaltyRewardPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RedeemLoyaltyRewardRequest request;
-    public RedeemLoyaltyRewardRequest withRequest(org.openapis.openapi.models.shared.RedeemLoyaltyRewardRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RedeemLoyaltyRewardRequest redeemLoyaltyRewardRequest;
+    public RedeemLoyaltyRewardRequest withRedeemLoyaltyRewardRequest(org.openapis.openapi.models.shared.RedeemLoyaltyRewardRequest redeemLoyaltyRewardRequest) {
+        this.redeemLoyaltyRewardRequest = redeemLoyaltyRewardRequest;
         return this;
     }
     
-    
-    public RedeemLoyaltyRewardSecurity security;
-    public RedeemLoyaltyRewardRequest withSecurity(RedeemLoyaltyRewardSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the [loyalty reward](https://developer.squareup.com/reference/square_2021-08-18/objects/LoyaltyReward) to redeem.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reward_id")
+    public String rewardId;
+    public RedeemLoyaltyRewardRequest withRewardId(String rewardId) {
+        this.rewardId = rewardId;
         return this;
     }
     

@@ -7,38 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateInsightsAssessmentsRequest {
-    
-    public UpdateInsightsAssessmentsPathParams pathParams;
-    public UpdateInsightsAssessmentsRequest withPathParams(UpdateInsightsAssessmentsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateInsightsAssessmentsHeaders headers;
-    public UpdateInsightsAssessmentsRequest withHeaders(UpdateInsightsAssessmentsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The id of the assessment to be modified
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssessmentId")
+    public String assessmentId;
+    public UpdateInsightsAssessmentsRequest withAssessmentId(String assessmentId) {
+        this.assessmentId = assessmentId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateInsightsAssessmentsUpdateInsightsAssessmentsRequest request;
-    public UpdateInsightsAssessmentsRequest withRequest(UpdateInsightsAssessmentsUpdateInsightsAssessmentsRequest request) {
-        this.request = request;
+    public UpdateInsightsAssessmentsUpdateInsightsAssessmentsRequest requestBody;
+    public UpdateInsightsAssessmentsRequest withRequestBody(UpdateInsightsAssessmentsUpdateInsightsAssessmentsRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateInsightsAssessmentsSecurity security;
-    public UpdateInsightsAssessmentsRequest withSecurity(UpdateInsightsAssessmentsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateInsightsAssessmentsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Token HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Token")
+    public String token;
+    public UpdateInsightsAssessmentsRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BuildsCreateRequest {
-    
-    public BuildsCreatePathParams pathParams;
-    public BuildsCreateRequest withPathParams(BuildsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Parameters of the build
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public BuildsCreateRequestBody request;
-    public BuildsCreateRequest withRequest(BuildsCreateRequestBody request) {
-        this.request = request;
+    public BuildsCreateRequestBody requestBody;
+    public BuildsCreateRequest withRequestBody(BuildsCreateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public BuildsCreateRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public BuildsCreateSecurity security;
-    public BuildsCreateRequest withSecurity(BuildsCreateSecurity security) {
-        this.security = security;
+    /**
+     * The branch name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
+    public String branch;
+    public BuildsCreateRequest withBranch(String branch) {
+        this.branch = branch;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public BuildsCreateRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

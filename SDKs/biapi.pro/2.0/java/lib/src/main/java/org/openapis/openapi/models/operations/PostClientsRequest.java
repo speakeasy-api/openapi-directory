@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostClientsRequest {
-    
-    public PostClientsQueryParams queryParams;
-    public PostClientsRequest withQueryParams(PostClientsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public PostClientsRequestBody requestBody;
+    public PostClientsRequest withRequestBody(PostClientsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostClientsRequestBody request;
-    public PostClientsRequest withRequest(PostClientsRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PostClientsRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     

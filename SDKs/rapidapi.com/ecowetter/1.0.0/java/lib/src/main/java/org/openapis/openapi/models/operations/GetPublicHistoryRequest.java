@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPublicHistoryRequest {
+    /**
+     * Startdatum der Abfrage im Format (JJJJ-MM-DD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public String from;
+    public GetPublicHistoryRequest withFrom(String from) {
+        this.from = from;
+        return this;
+    }
     
-    public GetPublicHistoryQueryParams queryParams;
-    public GetPublicHistoryRequest withQueryParams(GetPublicHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Ortssuche mit Freitext
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetPublicHistoryRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * Enddatum der Abfrage im Format (JJJJ-MM-DD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public String to;
+    public GetPublicHistoryRequest withTo(String to) {
+        this.to = to;
         return this;
     }
     

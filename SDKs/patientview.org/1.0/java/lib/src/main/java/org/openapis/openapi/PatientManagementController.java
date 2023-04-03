@@ -42,7 +42,7 @@ public class PatientManagementController {
      */
     public org.openapis.openapi.models.operations.GetPatientManagementResponse getPatientManagement(org.openapis.openapi.models.operations.GetPatientManagementRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPatientManagementPathParams.class, baseUrl, "/patientmanagement/{userId}/group/{groupId}/identifier/{identifierId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPatientManagementRequest.class, baseUrl, "/patientmanagement/{userId}/group/{groupId}/identifier/{identifierId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -163,12 +163,12 @@ public class PatientManagementController {
      */
     public org.openapis.openapi.models.operations.SavePatientManagementResponse savePatientManagement(org.openapis.openapi.models.operations.SavePatientManagementRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SavePatientManagementPathParams.class, baseUrl, "/patientmanagement/{userId}/group/{groupId}/identifier/{identifierId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SavePatientManagementRequest.class, baseUrl, "/patientmanagement/{userId}/group/{groupId}/identifier/{identifierId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "patientManagement", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -198,12 +198,12 @@ public class PatientManagementController {
      */
     public org.openapis.openapi.models.operations.SavePatientManagementSurgeriesResponse savePatientManagementSurgeries(org.openapis.openapi.models.operations.SavePatientManagementSurgeriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SavePatientManagementSurgeriesPathParams.class, baseUrl, "/patientmanagement/{userId}/group/{groupId}/identifier/{identifierId}/surgeries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SavePatientManagementSurgeriesRequest.class, baseUrl, "/patientmanagement/{userId}/group/{groupId}/identifier/{identifierId}/surgeries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "patientManagement", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -231,7 +231,7 @@ public class PatientManagementController {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ValidatePatientManagementResponse validatePatientManagement(org.openapis.openapi.models.operations.ValidatePatientManagementRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ValidatePatientManagementResponse validatePatientManagement(org.openapis.openapi.models.shared.PatientManagement request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/patientmanagement/validate");
         

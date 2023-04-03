@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteImagesIdRequest {
-    
-    public DeleteImagesIdPathParams pathParams;
-    public DeleteImagesIdRequest withPathParams(DeleteImagesIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space &lt;space_name&gt; --guid`, where `&lt;space_name&gt;` is the name of your space, to retrieve your space ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public DeleteImagesIdRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
         return this;
     }
     
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public DeleteImagesIdRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
+        return this;
+    }
     
-    public DeleteImagesIdHeaders headers;
-    public DeleteImagesIdRequest withHeaders(DeleteImagesIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique identifier representing a Docker image. Run `cf ic images`, or call the `GET /images/json` endpoint to review the Docker images that are available in your private Bluemix registry.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteImagesIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

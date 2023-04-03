@@ -7,24 +7,47 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUrlsSuggestedFiltersRequest {
-    
-    public GetUrlsSuggestedFiltersPathParams pathParams;
-    public GetUrlsSuggestedFiltersRequest withPathParams(GetUrlsSuggestedFiltersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetUrlsSuggestedFiltersQueryParams queryParams;
-    public GetUrlsSuggestedFiltersRequest withQueryParams(GetUrlsSuggestedFiltersQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UrlsAggsQuery request;
-    public GetUrlsSuggestedFiltersRequest withRequest(org.openapis.openapi.models.shared.UrlsAggsQuery request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UrlsAggsQuery urlsAggsQuery;
+    public GetUrlsSuggestedFiltersRequest withUrlsAggsQuery(org.openapis.openapi.models.shared.UrlsAggsQuery urlsAggsQuery) {
+        this.urlsAggsQuery = urlsAggsQuery;
+        return this;
+    }
+    
+    /**
+     * Analysis' identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
+    public String analysisSlug;
+    public GetUrlsSuggestedFiltersRequest withAnalysisSlug(String analysisSlug) {
+        this.analysisSlug = analysisSlug;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=area")
+    public GetUrlsSuggestedFiltersAreaEnum area;
+    public GetUrlsSuggestedFiltersRequest withArea(GetUrlsSuggestedFiltersAreaEnum area) {
+        this.area = area;
+        return this;
+    }
+    
+    /**
+     * Project's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
+    public String projectSlug;
+    public GetUrlsSuggestedFiltersRequest withProjectSlug(String projectSlug) {
+        this.projectSlug = projectSlug;
+        return this;
+    }
+    
+    /**
+     * User's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetUrlsSuggestedFiltersRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

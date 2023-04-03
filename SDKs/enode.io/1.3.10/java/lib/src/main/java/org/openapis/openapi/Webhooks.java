@@ -31,11 +31,10 @@ public class Webhooks {
     /**
      * Test Firehose Webhook
      * Trigger a test payload to be sent to your configured Firehose Webhook url.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostWebhooksFirehoseTestResponse postWebhooksFirehoseTest(org.openapis.openapi.models.operations.PostWebhooksFirehoseTestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostWebhooksFirehoseTestResponse postWebhooksFirehoseTest() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/webhooks/firehose/test");
         
@@ -44,8 +43,7 @@ public class Webhooks {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -70,10 +68,11 @@ public class Webhooks {
     /**
      * Update Firehose Webhook
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutWebhooksFirehoseResponse putWebhooksFirehose(org.openapis.openapi.models.operations.PutWebhooksFirehoseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutWebhooksFirehoseResponse putWebhooksFirehose(org.openapis.openapi.models.operations.PutWebhooksFirehoseRequestBody request, org.openapis.openapi.models.operations.PutWebhooksFirehoseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/webhooks/firehose");
         
@@ -84,7 +83,7 @@ public class Webhooks {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

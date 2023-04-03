@@ -41,7 +41,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/AddUserToAccountRequest
 lib/src/main/java/org/openapis/openapi/models/operations/AddUserToAccountRequestBodyUsersIdentification.java
 lib/src/main/java/org/openapis/openapi/models/operations/AddUserToAccountRequestBodyUsers.java
 lib/src/main/java/org/openapis/openapi/models/operations/AddUserToAccountRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/AddUserToAccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AddUserToAccount500ApplicationJSONMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/AddUserToAccount500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/AddUserToAccount429ApplicationJSONMeta.java
@@ -57,7 +56,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/AddUserToAccount201Appl
 lib/src/main/java/org/openapis/openapi/models/operations/AddUserToAccountResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteAccountRequestBodyIdentification.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteAccountRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/DeleteAccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteAccount500ApplicationJSONMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteAccount500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteAccount429ApplicationJSONMeta.java
@@ -77,7 +75,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RemoveUserFromAccountRe
 lib/src/main/java/org/openapis/openapi/models/operations/RemoveUserFromAccountRequestBodyUsersIdentification.java
 lib/src/main/java/org/openapis/openapi/models/operations/RemoveUserFromAccountRequestBodyUsers.java
 lib/src/main/java/org/openapis/openapi/models/operations/RemoveUserFromAccountRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/RemoveUserFromAccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RemoveUserFromAccount500ApplicationJSONMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/RemoveUserFromAccount500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/RemoveUserFromAccount429ApplicationJSONMeta.java
@@ -93,7 +90,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RemoveUserFromAccount20
 lib/src/main/java/org/openapis/openapi/models/operations/RemoveUserFromAccountResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpsertAccountRequestBodyIdentification.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpsertAccountRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpsertAccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpsertAccount500ApplicationJSONMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpsertAccount500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpsertAccount429ApplicationJSONMeta.java
@@ -130,7 +126,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/TrackJourneyEventReques
 lib/src/main/java/org/openapis/openapi/models/operations/TrackJourneyEventRequestBodyIdentificationUser.java
 lib/src/main/java/org/openapis/openapi/models/operations/TrackJourneyEventRequestBodyIdentification.java
 lib/src/main/java/org/openapis/openapi/models/operations/TrackJourneyEventRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/TrackJourneyEventRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/TrackJourneyEvent500ApplicationJSONMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/TrackJourneyEvent500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/TrackJourneyEvent429ApplicationJSONMeta.java
@@ -216,7 +211,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/TrackEventRequestBodyId
 lib/src/main/java/org/openapis/openapi/models/operations/TrackEventRequestBodyIdentificationUser.java
 lib/src/main/java/org/openapis/openapi/models/operations/TrackEventRequestBodyIdentification.java
 lib/src/main/java/org/openapis/openapi/models/operations/TrackEventRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/TrackEventRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/TrackEvent500ApplicationJSONMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/TrackEvent500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/TrackEvent429ApplicationJSONMeta.java
@@ -234,7 +228,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/TrackEvent201Applicatio
 lib/src/main/java/org/openapis/openapi/models/operations/TrackEventResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteUserRequestBodyIdentification.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteUserRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/DeleteUserRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteUser500ApplicationJSONMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteUser500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteUser429ApplicationJSONMeta.java
@@ -252,7 +245,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DeleteUser202Applicatio
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteUserResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/LinkRequestBodyIdentification.java
 lib/src/main/java/org/openapis/openapi/models/operations/LinkRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/LinkRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Link500ApplicationJSONMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/Link500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/Link429ApplicationJSONMeta.java
@@ -270,7 +262,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/Link201ApplicationJSON.
 lib/src/main/java/org/openapis/openapi/models/operations/LinkResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpsertUserRequestBodyIdentification.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpsertUserRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpsertUserRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpsertUser500ApplicationJSONMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpsertUser500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpsertUser429ApplicationJSONMeta.java
@@ -298,7 +289,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetValidity200Applicati
 lib/src/main/java/org/openapis/openapi/models/operations/GetValidity200ApplicationJSONMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetValidity200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetValidityResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetTrackingSnippetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTrackingSnippetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTrackingSnippet500ApplicationJSONMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTrackingSnippet500ApplicationJSON.java

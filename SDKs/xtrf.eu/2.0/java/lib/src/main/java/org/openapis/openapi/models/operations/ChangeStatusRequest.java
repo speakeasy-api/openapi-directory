@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeStatusRequest {
-    
-    public ChangeStatusPathParams pathParams;
-    public ChangeStatusRequest withPathParams(ChangeStatusPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Changed job status.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.JobStatusDTO request;
-    public ChangeStatusRequest withRequest(org.openapis.openapi.models.shared.JobStatusDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.JobStatusDTO jobStatusDTO;
+    public ChangeStatusRequest withJobStatusDTO(org.openapis.openapi.models.shared.JobStatusDTO jobStatusDTO) {
+        this.jobStatusDTO = jobStatusDTO;
+        return this;
+    }
+    
+    /**
+     * job's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public ChangeStatusRequest withJobId(String jobId) {
+        this.jobId = jobId;
         return this;
     }
     

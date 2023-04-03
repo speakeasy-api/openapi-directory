@@ -38,7 +38,7 @@ public class NetworkAdapters {
      */
     public org.openapis.openapi.models.operations.GetNetworkSmDeviceNetworkAdaptersResponse getNetworkSmDeviceNetworkAdapters(org.openapis.openapi.models.operations.GetNetworkSmDeviceNetworkAdaptersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmDeviceNetworkAdaptersPathParams.class, baseUrl, "/networks/{networkId}/sm/devices/{deviceId}/networkAdapters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmDeviceNetworkAdaptersRequest.class, baseUrl, "/networks/{networkId}/sm/devices/{deviceId}/networkAdapters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

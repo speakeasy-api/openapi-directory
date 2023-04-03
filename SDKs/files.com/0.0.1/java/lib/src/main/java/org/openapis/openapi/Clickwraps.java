@@ -43,7 +43,7 @@ public class Clickwraps {
      */
     public org.openapis.openapi.models.operations.DeleteClickwrapsIdResponse deleteClickwrapsId(org.openapis.openapi.models.operations.DeleteClickwrapsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteClickwrapsIdPathParams.class, baseUrl, "/clickwraps/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteClickwrapsIdRequest.class, baseUrl, "/clickwraps/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class Clickwraps {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetClickwrapsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetClickwrapsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -123,7 +123,7 @@ public class Clickwraps {
      */
     public org.openapis.openapi.models.operations.GetClickwrapsIdResponse getClickwrapsId(org.openapis.openapi.models.operations.GetClickwrapsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClickwrapsIdPathParams.class, baseUrl, "/clickwraps/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClickwrapsIdRequest.class, baseUrl, "/clickwraps/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -164,12 +164,12 @@ public class Clickwraps {
      */
     public org.openapis.openapi.models.operations.PatchClickwrapsIdResponse patchClickwrapsId(org.openapis.openapi.models.operations.PatchClickwrapsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchClickwrapsIdPathParams.class, baseUrl, "/clickwraps/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchClickwrapsIdRequest.class, baseUrl, "/clickwraps/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
@@ -205,7 +205,7 @@ public class Clickwraps {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostClickwrapsResponse postClickwraps(org.openapis.openapi.models.operations.PostClickwrapsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostClickwrapsResponse postClickwraps(org.openapis.openapi.models.operations.PostClickwrapsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/clickwraps");
         

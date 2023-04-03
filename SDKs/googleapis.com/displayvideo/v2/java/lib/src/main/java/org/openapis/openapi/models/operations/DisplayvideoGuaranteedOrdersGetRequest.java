@@ -4,27 +4,146 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisplayvideoGuaranteedOrdersGetRequest {
-    
-    public DisplayvideoGuaranteedOrdersGetPathParams pathParams;
-    public DisplayvideoGuaranteedOrdersGetRequest withPathParams(DisplayvideoGuaranteedOrdersGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DisplayvideoGuaranteedOrdersGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public DisplayvideoGuaranteedOrdersGetQueryParams queryParams;
-    public DisplayvideoGuaranteedOrdersGetRequest withQueryParams(DisplayvideoGuaranteedOrdersGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DisplayvideoGuaranteedOrdersGetRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * The ID of the advertiser that has access to the guaranteed order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=advertiserId")
+    public String advertiserId;
+    public DisplayvideoGuaranteedOrdersGetRequest withAdvertiserId(String advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+    }
     
-    public DisplayvideoGuaranteedOrdersGetSecurity security;
-    public DisplayvideoGuaranteedOrdersGetRequest withSecurity(DisplayvideoGuaranteedOrdersGetSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DisplayvideoGuaranteedOrdersGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DisplayvideoGuaranteedOrdersGetRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DisplayvideoGuaranteedOrdersGetRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Required. The ID of the guaranteed order to fetch. The ID is of the format `{exchange}-{legacy_guaranteed_order_id}`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=guaranteedOrderId")
+    public String guaranteedOrderId;
+    public DisplayvideoGuaranteedOrdersGetRequest withGuaranteedOrderId(String guaranteedOrderId) {
+        this.guaranteedOrderId = guaranteedOrderId;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DisplayvideoGuaranteedOrdersGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DisplayvideoGuaranteedOrdersGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The ID of the partner that has access to the guaranteed order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partnerId")
+    public String partnerId;
+    public DisplayvideoGuaranteedOrdersGetRequest withPartnerId(String partnerId) {
+        this.partnerId = partnerId;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DisplayvideoGuaranteedOrdersGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DisplayvideoGuaranteedOrdersGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DisplayvideoGuaranteedOrdersGetRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DisplayvideoGuaranteedOrdersGetRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

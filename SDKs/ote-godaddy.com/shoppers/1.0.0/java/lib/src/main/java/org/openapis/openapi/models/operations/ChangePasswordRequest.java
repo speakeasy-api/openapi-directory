@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangePasswordRequest {
-    
-    public ChangePasswordPathParams pathParams;
-    public ChangePasswordRequest withPathParams(ChangePasswordPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The value to set the subaccount's password to
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Secret request;
-    public ChangePasswordRequest withRequest(org.openapis.openapi.models.shared.Secret request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Secret secret;
+    public ChangePasswordRequest withSecret(org.openapis.openapi.models.shared.Secret secret) {
+        this.secret = secret;
+        return this;
+    }
+    
+    /**
+     * Shopper whose password will be set
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shopperId")
+    public String shopperId;
+    public ChangePasswordRequest withShopperId(String shopperId) {
+        this.shopperId = shopperId;
         return this;
     }
     

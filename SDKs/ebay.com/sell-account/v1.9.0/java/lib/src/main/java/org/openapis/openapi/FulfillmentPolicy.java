@@ -36,10 +36,11 @@ public class FulfillmentPolicy {
     /**
      * This method creates a new fulfillment policy where the policy encapsulates seller's terms for fulfilling item purchases. Fulfillment policies include the shipment options that the seller offers to buyers.  &lt;br/&gt;&lt;br/&gt;Each policy targets a specific eBay marketplace and a category group type, and you can create multiple policies for each combination. &lt;br/&gt;&lt;br/&gt;A successful request returns the &lt;b&gt;getFulfillmentPolicy&lt;/b&gt; URI to the new policy in the &lt;b&gt;Location&lt;/b&gt; response header and the ID for the new policy is returned in the response payload.  &lt;p class="tablenote"&gt;&lt;b&gt;Tip:&lt;/b&gt; For details on creating and using the business policies supported by the Account API, see &lt;a href="/api-docs/sell/static/seller-accounts/business-policies.html"&gt;eBay business policies&lt;/a&gt;.&lt;/p&gt;  &lt;p&gt;&lt;b&gt;Using the eBay standard envelope service (eSE)&lt;/b&gt;&lt;/p&gt;  &lt;p&gt;The eBay standard envelope service (eSE) is a domestic envelope service with tracking through eBay. This service applies to specific Trading Cards categories (not all categories are supported), and to Coins &amp; Paper Money, Postcards, and Stamps. See &lt;a href="/api-docs/sell/static/seller-accounts/using-the-ebay-standard-envelope-service.html" target="_blank"&gt;Using the eBay standard envelope (eSE) service&lt;/a&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateFulfillmentPolicyResponse createFulfillmentPolicy(org.openapis.openapi.models.operations.CreateFulfillmentPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateFulfillmentPolicyResponse createFulfillmentPolicy(org.openapis.openapi.models.shared.FulfillmentPolicyRequest request, org.openapis.openapi.models.operations.CreateFulfillmentPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/fulfillment_policy/");
         
@@ -53,7 +54,7 @@ public class FulfillmentPolicy {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,19 +85,20 @@ public class FulfillmentPolicy {
     /**
      * This method deletes a fulfillment policy. Supply the ID of the policy you want to delete in the &lt;b&gt;fulfillmentPolicyId&lt;/b&gt; path parameter.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteFulfillmentPolicyResponse deleteFulfillmentPolicy(org.openapis.openapi.models.operations.DeleteFulfillmentPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteFulfillmentPolicyResponse deleteFulfillmentPolicy(org.openapis.openapi.models.operations.DeleteFulfillmentPolicyRequest request, org.openapis.openapi.models.operations.DeleteFulfillmentPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFulfillmentPolicyPathParams.class, baseUrl, "/fulfillment_policy/{fulfillmentPolicyId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFulfillmentPolicyRequest.class, baseUrl, "/fulfillment_policy/{fulfillmentPolicyId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -117,10 +119,11 @@ public class FulfillmentPolicy {
     /**
      * This method retrieves all the fulfillment policies configured for the marketplace you specify using the &lt;code&gt;marketplace_id&lt;/code&gt; query parameter.  &lt;br/&gt;&lt;br/&gt;&lt;b&gt;Marketplaces and locales&lt;/b&gt;  &lt;br/&gt;&lt;br/&gt;Get the correct policies for a marketplace that supports multiple locales using the &lt;code&gt;Content-Language&lt;/code&gt; request header. For example, get the policies for the French locale of the Canadian marketplace by specifying &lt;code&gt;fr-CA&lt;/code&gt; for the &lt;code&gt;Content-Language&lt;/code&gt; header. Likewise, target the Dutch locale of the Belgium marketplace by setting &lt;code&gt;Content-Language: nl-BE&lt;/code&gt;. For details on header values, see &lt;a href="/api-docs/static/rest-request-components.html#HTTP" target="_blank"&gt;HTTP request headers&lt;/a&gt;.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetFulfillmentPoliciesResponse getFulfillmentPolicies(org.openapis.openapi.models.operations.GetFulfillmentPoliciesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetFulfillmentPoliciesResponse getFulfillmentPolicies(org.openapis.openapi.models.operations.GetFulfillmentPoliciesRequest request, org.openapis.openapi.models.operations.GetFulfillmentPoliciesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/fulfillment_policy");
         
@@ -128,14 +131,14 @@ public class FulfillmentPolicy {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFulfillmentPoliciesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFulfillmentPoliciesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -164,19 +167,20 @@ public class FulfillmentPolicy {
     /**
      * This method retrieves the complete details of a fulfillment policy. Supply the ID of the policy you want to retrieve using the &lt;b&gt;fulfillmentPolicyId&lt;/b&gt; path parameter.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetFulfillmentPolicyResponse getFulfillmentPolicy(org.openapis.openapi.models.operations.GetFulfillmentPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetFulfillmentPolicyResponse getFulfillmentPolicy(org.openapis.openapi.models.operations.GetFulfillmentPolicyRequest request, org.openapis.openapi.models.operations.GetFulfillmentPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFulfillmentPolicyPathParams.class, baseUrl, "/fulfillment_policy/{fulfillmentPolicyId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFulfillmentPolicyRequest.class, baseUrl, "/fulfillment_policy/{fulfillmentPolicyId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -205,10 +209,11 @@ public class FulfillmentPolicy {
     /**
      * This method retrieves the details for a specific fulfillment policy. In the request, supply both the policy &lt;code&gt;name&lt;/code&gt; and its associated &lt;code&gt;marketplace_id&lt;/code&gt; as query parameters.   &lt;br/&gt;&lt;br/&gt;&lt;b&gt;Marketplaces and locales&lt;/b&gt;  &lt;br/&gt;&lt;br/&gt;Get the correct policy for a marketplace that supports multiple locales using the &lt;code&gt;Content-Language&lt;/code&gt; request header. For example, get a policy for the French locale of the Canadian marketplace by specifying &lt;code&gt;fr-CA&lt;/code&gt; for the &lt;code&gt;Content-Language&lt;/code&gt; header. Likewise, target the Dutch locale of the Belgium marketplace by setting &lt;code&gt;Content-Language: nl-BE&lt;/code&gt;. For details on header values, see &lt;a href="/api-docs/static/rest-request-components.html#HTTP"&gt;HTTP request headers&lt;/a&gt;.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetFulfillmentPolicyByNameResponse getFulfillmentPolicyByName(org.openapis.openapi.models.operations.GetFulfillmentPolicyByNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetFulfillmentPolicyByNameResponse getFulfillmentPolicyByName(org.openapis.openapi.models.operations.GetFulfillmentPolicyByNameRequest request, org.openapis.openapi.models.operations.GetFulfillmentPolicyByNameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/fulfillment_policy/get_by_policy_name");
         
@@ -216,14 +221,14 @@ public class FulfillmentPolicy {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFulfillmentPolicyByNameQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFulfillmentPolicyByNameRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -252,24 +257,25 @@ public class FulfillmentPolicy {
     /**
      * This method updates an existing fulfillment policy. Specify the policy you want to update using the &lt;b&gt;fulfillment_policy_id&lt;/b&gt; path parameter. Supply a complete policy payload with the updates you want to make; this call overwrites the existing policy with the new details specified in the payload.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateFulfillmentPolicyResponse updateFulfillmentPolicy(org.openapis.openapi.models.operations.UpdateFulfillmentPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateFulfillmentPolicyResponse updateFulfillmentPolicy(org.openapis.openapi.models.operations.UpdateFulfillmentPolicyRequest request, org.openapis.openapi.models.operations.UpdateFulfillmentPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateFulfillmentPolicyPathParams.class, baseUrl, "/fulfillment_policy/{fulfillmentPolicyId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateFulfillmentPolicyRequest.class, baseUrl, "/fulfillment_policy/{fulfillmentPolicyId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "fulfillmentPolicyRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUserContentUrlJsonRequest {
-    
-    public GETUserContentUrlJsonQueryParams queryParams;
-    public GETUserContentUrlJsonRequest withQueryParams(GETUserContentUrlJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GETUserContentUrlJsonSecurity security;
-    public GETUserContentUrlJsonRequest withSecurity(GETUserContentUrlJsonSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public String url;
+    public GETUserContentUrlJsonRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

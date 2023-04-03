@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchRatePlanRequest {
-    
-    public FetchRatePlanPathParams pathParams;
-    public FetchRatePlanRequest withPathParams(FetchRatePlanPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchRatePlanSecurity security;
-    public FetchRatePlanRequest withSecurity(FetchRatePlanSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchRatePlanRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the RatePlan resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchRatePlanRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CrashesGetCrashTextAttachmentContentRequest {
-    
-    public CrashesGetCrashTextAttachmentContentPathParams pathParams;
-    public CrashesGetCrashTextAttachmentContentRequest withPathParams(CrashesGetCrashTextAttachmentContentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CrashesGetCrashTextAttachmentContentRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * attachment id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attachment_id")
+    public String attachmentId;
+    public CrashesGetCrashTextAttachmentContentRequest withAttachmentId(String attachmentId) {
+        this.attachmentId = attachmentId;
+        return this;
+    }
     
-    public CrashesGetCrashTextAttachmentContentSecurity security;
-    public CrashesGetCrashTextAttachmentContentRequest withSecurity(CrashesGetCrashTextAttachmentContentSecurity security) {
-        this.security = security;
+    /**
+     * id of a specific crash
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_id")
+    public String crashId;
+    public CrashesGetCrashTextAttachmentContentRequest withCrashId(String crashId) {
+        this.crashId = crashId;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CrashesGetCrashTextAttachmentContentRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

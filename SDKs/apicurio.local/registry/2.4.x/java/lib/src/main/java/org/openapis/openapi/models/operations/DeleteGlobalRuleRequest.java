@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteGlobalRuleRequest {
-    
-    public DeleteGlobalRulePathParams pathParams;
-    public DeleteGlobalRuleRequest withPathParams(DeleteGlobalRulePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique name/type of a rule.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rule")
+    public org.openapis.openapi.models.shared.RuleTypeEnum rule;
+    public DeleteGlobalRuleRequest withRule(org.openapis.openapi.models.shared.RuleTypeEnum rule) {
+        this.rule = rule;
         return this;
     }
     

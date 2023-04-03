@@ -4,20 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientsSummaryCreateRequest {
-    
-    public PatientsSummaryCreateQueryParams queryParams;
-    public PatientsSummaryCreateRequest withQueryParams(PatientsSummaryCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_of_birth")
+    public String dateOfBirth;
+    public PatientsSummaryCreateRequest withDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientsSummaryCreateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
     
-    public PatientsSummaryCreateSecurity security;
-    public PatientsSummaryCreateRequest withSecurity(PatientsSummaryCreateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_name")
+    public String firstName;
+    public PatientsSummaryCreateRequest withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gender")
+    public String gender;
+    public PatientsSummaryCreateRequest withGender(String gender) {
+        this.gender = gender;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_name")
+    public String lastName;
+    public PatientsSummaryCreateRequest withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public PatientsSummaryCreateRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

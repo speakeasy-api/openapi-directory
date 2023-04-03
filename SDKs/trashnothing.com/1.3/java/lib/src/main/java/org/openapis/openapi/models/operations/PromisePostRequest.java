@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PromisePostRequest {
-    
-    public PromisePostPathParams pathParams;
-    public PromisePostRequest withPathParams(PromisePostPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the post to promise.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=post_id")
+    public String postId;
+    public PromisePostRequest withPostId(String postId) {
+        this.postId = postId;
         return this;
     }
     

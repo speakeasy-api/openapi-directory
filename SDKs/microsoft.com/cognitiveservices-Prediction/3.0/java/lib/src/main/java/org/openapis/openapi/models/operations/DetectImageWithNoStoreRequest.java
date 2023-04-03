@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DetectImageWithNoStoreRequest {
-    
-    public DetectImageWithNoStorePathParams pathParams;
-    public DetectImageWithNoStoreRequest withPathParams(DetectImageWithNoStorePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DetectImageWithNoStoreQueryParams queryParams;
-    public DetectImageWithNoStoreRequest withQueryParams(DetectImageWithNoStoreQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public DetectImageWithNoStoreRequestBody request;
-    public DetectImageWithNoStoreRequest withRequest(DetectImageWithNoStoreRequestBody request) {
-        this.request = request;
+    public DetectImageWithNoStoreRequestBody requestBody;
+    public DetectImageWithNoStoreRequest withRequestBody(DetectImageWithNoStoreRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Optional. Specifies the name of application using the endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application")
+    public String application;
+    public DetectImageWithNoStoreRequest withApplication(String application) {
+        this.application = application;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public DetectImageWithNoStoreRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * Specifies the name of the model to evaluate against.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=publishedName")
+    public String publishedName;
+    public DetectImageWithNoStoreRequest withPublishedName(String publishedName) {
+        this.publishedName = publishedName;
         return this;
     }
     

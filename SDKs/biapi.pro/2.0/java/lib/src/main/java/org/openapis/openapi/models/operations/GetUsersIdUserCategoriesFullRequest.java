@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdUserCategoriesFullRequest {
-    
-    public GetUsersIdUserCategoriesFullPathParams pathParams;
-    public GetUsersIdUserCategoriesFullRequest withPathParams(GetUsersIdUserCategoriesFullPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetUsersIdUserCategoriesFullRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
-    
-    public GetUsersIdUserCategoriesFullQueryParams queryParams;
-    public GetUsersIdUserCategoriesFullRequest withQueryParams(GetUsersIdUserCategoriesFullQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public GetUsersIdUserCategoriesFullRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

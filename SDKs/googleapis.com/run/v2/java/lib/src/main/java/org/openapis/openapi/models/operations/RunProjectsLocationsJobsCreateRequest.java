@@ -7,31 +7,150 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RunProjectsLocationsJobsCreateRequest {
-    
-    public RunProjectsLocationsJobsCreatePathParams pathParams;
-    public RunProjectsLocationsJobsCreateRequest withPathParams(RunProjectsLocationsJobsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RunProjectsLocationsJobsCreateQueryParams queryParams;
-    public RunProjectsLocationsJobsCreateRequest withQueryParams(RunProjectsLocationsJobsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public RunProjectsLocationsJobsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudRunV2JobInput request;
-    public RunProjectsLocationsJobsCreateRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudRunV2JobInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudRunV2JobInput googleCloudRunV2JobInput;
+    public RunProjectsLocationsJobsCreateRequest withGoogleCloudRunV2JobInput(org.openapis.openapi.models.shared.GoogleCloudRunV2JobInput googleCloudRunV2JobInput) {
+        this.googleCloudRunV2JobInput = googleCloudRunV2JobInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public RunProjectsLocationsJobsCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public RunProjectsLocationsJobsCreateSecurity security;
-    public RunProjectsLocationsJobsCreateRequest withSecurity(RunProjectsLocationsJobsCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public RunProjectsLocationsJobsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public RunProjectsLocationsJobsCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public RunProjectsLocationsJobsCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Required. The unique identifier for the Job. The name of the job becomes {parent}/jobs/{job_id}.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jobId")
+    public String jobId;
+    public RunProjectsLocationsJobsCreateRequest withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public RunProjectsLocationsJobsCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public RunProjectsLocationsJobsCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The location and project in which this Job should be created. Format: projects/{project}/locations/{location}, where {project} can be project id or number.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public RunProjectsLocationsJobsCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public RunProjectsLocationsJobsCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public RunProjectsLocationsJobsCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public RunProjectsLocationsJobsCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public RunProjectsLocationsJobsCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Indicates that the request should be validated and default values populated, without persisting the request or creating any resources.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=validateOnly")
+    public Boolean validateOnly;
+    public RunProjectsLocationsJobsCreateRequest withValidateOnly(Boolean validateOnly) {
+        this.validateOnly = validateOnly;
         return this;
     }
     

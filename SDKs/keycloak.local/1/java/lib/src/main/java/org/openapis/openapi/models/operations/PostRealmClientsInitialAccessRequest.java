@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmClientsInitialAccessRequest {
-    
-    public PostRealmClientsInitialAccessPathParams pathParams;
-    public PostRealmClientsInitialAccessRequest withPathParams(PostRealmClientsInitialAccessPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ClientInitialAccessCreatePresentation clientInitialAccessCreatePresentation;
+    public PostRealmClientsInitialAccessRequest withClientInitialAccessCreatePresentation(org.openapis.openapi.models.shared.ClientInitialAccessCreatePresentation clientInitialAccessCreatePresentation) {
+        this.clientInitialAccessCreatePresentation = clientInitialAccessCreatePresentation;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ClientInitialAccessCreatePresentation request;
-    public PostRealmClientsInitialAccessRequest withRequest(org.openapis.openapi.models.shared.ClientInitialAccessCreatePresentation request) {
-        this.request = request;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmClientsInitialAccessRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

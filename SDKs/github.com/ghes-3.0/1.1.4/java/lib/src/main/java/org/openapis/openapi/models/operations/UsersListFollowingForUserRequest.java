@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersListFollowingForUserRequest {
-    
-    public UsersListFollowingForUserPathParams pathParams;
-    public UsersListFollowingForUserRequest withPathParams(UsersListFollowingForUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public UsersListFollowingForUserRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public UsersListFollowingForUserRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public UsersListFollowingForUserQueryParams queryParams;
-    public UsersListFollowingForUserRequest withQueryParams(UsersListFollowingForUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public UsersListFollowingForUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

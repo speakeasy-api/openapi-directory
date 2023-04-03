@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestGetDeviceConfigurationsRequest {
-    
-    public TestGetDeviceConfigurationsPathParams pathParams;
-    public TestGetDeviceConfigurationsRequest withPathParams(TestGetDeviceConfigurationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public TestGetDeviceConfigurationsRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public TestGetDeviceConfigurationsQueryParams queryParams;
-    public TestGetDeviceConfigurationsRequest withQueryParams(TestGetDeviceConfigurationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the test run
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_upload_id")
+    public String appUploadId;
+    public TestGetDeviceConfigurationsRequest withAppUploadId(String appUploadId) {
+        this.appUploadId = appUploadId;
         return this;
     }
     
-    
-    public TestGetDeviceConfigurationsSecurity security;
-    public TestGetDeviceConfigurationsRequest withSecurity(TestGetDeviceConfigurationsSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public TestGetDeviceConfigurationsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

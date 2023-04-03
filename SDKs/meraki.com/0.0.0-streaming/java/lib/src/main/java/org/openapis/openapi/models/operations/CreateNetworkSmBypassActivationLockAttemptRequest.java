@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateNetworkSmBypassActivationLockAttemptRequest {
-    
-    public CreateNetworkSmBypassActivationLockAttemptPathParams pathParams;
-    public CreateNetworkSmBypassActivationLockAttemptRequest withPathParams(CreateNetworkSmBypassActivationLockAttemptPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateNetworkSmBypassActivationLockAttemptRequestBody requestBody;
+    public CreateNetworkSmBypassActivationLockAttemptRequest withRequestBody(CreateNetworkSmBypassActivationLockAttemptRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateNetworkSmBypassActivationLockAttemptRequestBody request;
-    public CreateNetworkSmBypassActivationLockAttemptRequest withRequest(CreateNetworkSmBypassActivationLockAttemptRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public CreateNetworkSmBypassActivationLockAttemptRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

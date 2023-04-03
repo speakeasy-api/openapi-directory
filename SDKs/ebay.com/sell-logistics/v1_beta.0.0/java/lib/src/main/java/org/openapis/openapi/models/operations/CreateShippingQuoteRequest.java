@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateShippingQuoteRequest {
-    
-    public CreateShippingQuoteHeaders headers;
-    public CreateShippingQuoteRequest withHeaders(CreateShippingQuoteHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The request object for &lt;b&gt;createShippingQuote&lt;/b&gt;.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ShippingQuoteRequest request;
-    public CreateShippingQuoteRequest withRequest(org.openapis.openapi.models.shared.ShippingQuoteRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ShippingQuoteRequest shippingQuoteRequest;
+    public CreateShippingQuoteRequest withShippingQuoteRequest(org.openapis.openapi.models.shared.ShippingQuoteRequest shippingQuoteRequest) {
+        this.shippingQuoteRequest = shippingQuoteRequest;
         return this;
     }
     
-    
-    public CreateShippingQuoteSecurity security;
-    public CreateShippingQuoteRequest withSecurity(CreateShippingQuoteSecurity security) {
-        this.security = security;
+    /**
+     * This header parameter specifies the eBay marketplace for the shipping quote that is being created. For a list of valid values, refer to the section &lt;a href="/api-docs/static/rest-request-components.html#marketpl" target="_blank"&gt;Marketplace ID Values&lt;/a&gt; in the &lt;b&gt;Using eBay RESTful APIs&lt;/b&gt; guide.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public CreateShippingQuoteRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     

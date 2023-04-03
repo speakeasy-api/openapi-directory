@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectionVersionDetailsRequest {
+    /**
+     * Collection Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
+    public Long collectionId;
+    public CollectionVersionDetailsRequest withCollectionId(Long collectionId) {
+        this.collectionId = collectionId;
+        return this;
+    }
     
-    public CollectionVersionDetailsPathParams pathParams;
-    public CollectionVersionDetailsRequest withPathParams(CollectionVersionDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Version Number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version_id")
+    public Long versionId;
+    public CollectionVersionDetailsRequest withVersionId(Long versionId) {
+        this.versionId = versionId;
         return this;
     }
     

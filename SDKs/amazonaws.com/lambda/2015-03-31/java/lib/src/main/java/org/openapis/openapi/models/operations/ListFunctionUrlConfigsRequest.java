@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListFunctionUrlConfigsRequest {
-    
-    public ListFunctionUrlConfigsPathParams pathParams;
-    public ListFunctionUrlConfigsRequest withPathParams(ListFunctionUrlConfigsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * &lt;p&gt;The name of the Lambda function.&lt;/p&gt; &lt;p class="title"&gt; &lt;b&gt;Name formats&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Function name&lt;/b&gt; \u2013 &lt;code&gt;my-function&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Function ARN&lt;/b&gt; \u2013 &lt;code&gt;arn:aws:lambda:us-west-2:123456789012:function:my-function&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Partial ARN&lt;/b&gt; \u2013 &lt;code&gt;123456789012:function:my-function&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FunctionName")
+    public String functionName;
+    public ListFunctionUrlConfigsRequest withFunctionName(String functionName) {
+        this.functionName = functionName;
         return this;
     }
     
-    
-    public ListFunctionUrlConfigsQueryParams queryParams;
-    public ListFunctionUrlConfigsRequest withQueryParams(ListFunctionUrlConfigsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specify the pagination token that's returned by a previous request to retrieve the next page of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public ListFunctionUrlConfigsRequest withMarker(String marker) {
+        this.marker = marker;
         return this;
     }
     
+    /**
+     * The maximum number of function URLs to return in the response. Note that &lt;code&gt;ListFunctionUrlConfigs&lt;/code&gt; returns a maximum of 50 items in each response, even if you set the number higher.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
+    public Long maxItems;
+    public ListFunctionUrlConfigsRequest withMaxItems(Long maxItems) {
+        this.maxItems = maxItems;
+        return this;
+    }
     
-    public ListFunctionUrlConfigsHeaders headers;
-    public ListFunctionUrlConfigsRequest withHeaders(ListFunctionUrlConfigsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListFunctionUrlConfigsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListFunctionUrlConfigsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListFunctionUrlConfigsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListFunctionUrlConfigsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListFunctionUrlConfigsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListFunctionUrlConfigsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListFunctionUrlConfigsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -30,20 +30,15 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteReportDefinitionXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/DeleteReportDefinitionHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteReportDefinitionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteReportDefinitionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/DescribeReportDefinitionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeReportDefinitionsXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/DescribeReportDefinitionsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeReportDefinitionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeReportDefinitionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ModifyReportDefinitionXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/ModifyReportDefinitionHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/ModifyReportDefinitionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ModifyReportDefinitionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutReportDefinitionXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/PutReportDefinitionHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutReportDefinitionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutReportDefinitionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/DeleteReportDefinitionResponse.java
@@ -60,6 +55,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/AdditionalArtifactEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DescribeReportDefinitionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ModifyReportDefinitionRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/PutReportDefinitionRequest.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

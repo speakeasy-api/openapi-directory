@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListResolverQueryLogConfigAssociationsRequest {
-    
-    public ListResolverQueryLogConfigAssociationsQueryParams queryParams;
-    public ListResolverQueryLogConfigAssociationsRequest withQueryParams(ListResolverQueryLogConfigAssociationsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListResolverQueryLogConfigAssociationsHeaders headers;
-    public ListResolverQueryLogConfigAssociationsRequest withHeaders(ListResolverQueryLogConfigAssociationsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ListResolverQueryLogConfigAssociationsRequest request;
-    public ListResolverQueryLogConfigAssociationsRequest withRequest(org.openapis.openapi.models.shared.ListResolverQueryLogConfigAssociationsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ListResolverQueryLogConfigAssociationsRequest listResolverQueryLogConfigAssociationsRequest;
+    public ListResolverQueryLogConfigAssociationsRequest withListResolverQueryLogConfigAssociationsRequest(org.openapis.openapi.models.shared.ListResolverQueryLogConfigAssociationsRequest listResolverQueryLogConfigAssociationsRequest) {
+        this.listResolverQueryLogConfigAssociationsRequest = listResolverQueryLogConfigAssociationsRequest;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public String maxResults;
+    public ListResolverQueryLogConfigAssociationsRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListResolverQueryLogConfigAssociationsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListResolverQueryLogConfigAssociationsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListResolverQueryLogConfigAssociationsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListResolverQueryLogConfigAssociationsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListResolverQueryLogConfigAssociationsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListResolverQueryLogConfigAssociationsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListResolverQueryLogConfigAssociationsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListResolverQueryLogConfigAssociationsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public ListResolverQueryLogConfigAssociationsXAmzTargetEnum xAmzTarget;
+    public ListResolverQueryLogConfigAssociationsRequest withXAmzTarget(ListResolverQueryLogConfigAssociationsXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

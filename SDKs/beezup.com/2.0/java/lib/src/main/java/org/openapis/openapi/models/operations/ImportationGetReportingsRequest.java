@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportationGetReportingsRequest {
-    
-    public ImportationGetReportingsPathParams pathParams;
-    public ImportationGetReportingsRequest withPathParams(ImportationGetReportingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public ImportationGetReportingsRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

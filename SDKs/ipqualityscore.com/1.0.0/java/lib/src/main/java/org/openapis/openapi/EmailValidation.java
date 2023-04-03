@@ -38,7 +38,7 @@ public class EmailValidation {
      */
     public org.openapis.openapi.models.operations.EmailValidationResponse emailValidation(org.openapis.openapi.models.operations.EmailValidationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EmailValidationPathParams.class, baseUrl, "/json/email/{YOUR_API_KEY_HERE}/{USER_EMAIL_HERE}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EmailValidationRequest.class, baseUrl, "/json/email/{YOUR_API_KEY_HERE}/{USER_EMAIL_HERE}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

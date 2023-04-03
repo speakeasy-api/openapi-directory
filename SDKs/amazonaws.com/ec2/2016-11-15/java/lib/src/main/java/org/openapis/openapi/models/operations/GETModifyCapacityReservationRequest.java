@@ -4,20 +4,140 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyCapacityReservationRequest {
-    
-    public GETModifyCapacityReservationQueryParams queryParams;
-    public GETModifyCapacityReservationRequest withQueryParams(GETModifyCapacityReservationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Reserved. Capacity Reservations you have created are accepted by default.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Accept")
+    public Boolean accept;
+    public GETModifyCapacityReservationRequest withAccept(Boolean accept) {
+        this.accept = accept;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyCapacityReservationActionEnum action;
+    public GETModifyCapacityReservationRequest withAction(GETModifyCapacityReservationActionEnum action) {
+        this.action = action;
+        return this;
+    }
     
-    public GETModifyCapacityReservationHeaders headers;
-    public GETModifyCapacityReservationRequest withHeaders(GETModifyCapacityReservationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Reserved for future use.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AdditionalInfo")
+    public String additionalInfo;
+    public GETModifyCapacityReservationRequest withAdditionalInfo(String additionalInfo) {
+        this.additionalInfo = additionalInfo;
+        return this;
+    }
+    
+    /**
+     * The ID of the Capacity Reservation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CapacityReservationId")
+    public String capacityReservationId;
+    public GETModifyCapacityReservationRequest withCapacityReservationId(String capacityReservationId) {
+        this.capacityReservationId = capacityReservationId;
+        return this;
+    }
+    
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETModifyCapacityReservationRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. The Capacity Reservation's state changes to &lt;code&gt;expired&lt;/code&gt; when it reaches its end date and time.&lt;/p&gt; &lt;p&gt;The Capacity Reservation is cancelled within an hour from the specified time. For example, if you specify 5/31/2019, 13:30:55, the Capacity Reservation is guaranteed to end between 13:30:55 and 14:30:55 on 5/31/2019.&lt;/p&gt; &lt;p&gt;You must provide an &lt;code&gt;EndDate&lt;/code&gt; value if &lt;code&gt;EndDateType&lt;/code&gt; is &lt;code&gt;limited&lt;/code&gt;. Omit &lt;code&gt;EndDate&lt;/code&gt; if &lt;code&gt;EndDateType&lt;/code&gt; is &lt;code&gt;unlimited&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndDate")
+    public OffsetDateTime endDate;
+    public GETModifyCapacityReservationRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Indicates the way in which the Capacity Reservation ends. A Capacity Reservation can have one of the following end types:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;unlimited&lt;/code&gt; - The Capacity Reservation remains active until you explicitly cancel it. Do not provide an &lt;code&gt;EndDate&lt;/code&gt; value if &lt;code&gt;EndDateType&lt;/code&gt; is &lt;code&gt;unlimited&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;limited&lt;/code&gt; - The Capacity Reservation expires automatically at a specified date and time. You must provide an &lt;code&gt;EndDate&lt;/code&gt; value if &lt;code&gt;EndDateType&lt;/code&gt; is &lt;code&gt;limited&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndDateType")
+    public GETModifyCapacityReservationEndDateTypeEnum endDateType;
+    public GETModifyCapacityReservationRequest withEndDateType(GETModifyCapacityReservationEndDateTypeEnum endDateType) {
+        this.endDateType = endDateType;
+        return this;
+    }
+    
+    /**
+     * The number of instances for which to reserve capacity. The number of instances can't be increased or decreased by more than &lt;code&gt;1000&lt;/code&gt; in a single request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceCount")
+    public Long instanceCount;
+    public GETModifyCapacityReservationRequest withInstanceCount(Long instanceCount) {
+        this.instanceCount = instanceCount;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyCapacityReservationVersionEnum version;
+    public GETModifyCapacityReservationRequest withVersion(GETModifyCapacityReservationVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyCapacityReservationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyCapacityReservationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyCapacityReservationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyCapacityReservationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyCapacityReservationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyCapacityReservationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyCapacityReservationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchUsersUserIdRequest {
-    
-    public PatchUsersUserIdPathParams pathParams;
-    public PatchUsersUserIdRequest withPathParams(PatchUsersUserIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A custom JSON object that you can create and attach to this record
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
+    public String customData;
+    public PatchUsersUserIdRequest withCustomData(String customData) {
+        this.customData = customData;
         return this;
     }
     
+    /**
+     * The user's email
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public PatchUsersUserIdRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
     
-    public PatchUsersUserIdQueryParams queryParams;
-    public PatchUsersUserIdRequest withQueryParams(PatchUsersUserIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The user's name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public PatchUsersUserIdRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The type for this user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public PatchUsersUserIdRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * The id of the user to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public PatchUsersUserIdRequest withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    
+    /**
+     * The user's username
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public PatchUsersUserIdRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

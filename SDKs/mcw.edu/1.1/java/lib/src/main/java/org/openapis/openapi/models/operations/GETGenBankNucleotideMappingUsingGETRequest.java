@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGenBankNucleotideMappingUsingGETRequest {
-    
-    public GETGenBankNucleotideMappingUsingGETPathParams pathParams;
-    public GETGenBankNucleotideMappingUsingGETRequest withPathParams(GETGenBankNucleotideMappingUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * RGD ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rgdId")
+    public Integer rgdId;
+    public GETGenBankNucleotideMappingUsingGETRequest withRgdId(Integer rgdId) {
+        this.rgdId = rgdId;
         return this;
     }
     

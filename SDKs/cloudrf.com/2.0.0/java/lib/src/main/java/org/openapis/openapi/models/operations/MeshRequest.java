@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MeshRequest {
-    
-    public MeshQueryParams queryParams;
-    public MeshRequest withQueryParams(MeshQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Super layer name eg. National_map
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public MeshRequest withName(String name) {
+        this.name = name;
         return this;
     }
     
-    
-    public MeshSecurity security;
-    public MeshRequest withSecurity(MeshSecurity security) {
-        this.security = security;
+    /**
+     * Network name eg. 100_BLUE_repeaters_nationwide
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=network")
+    public String network;
+    public MeshRequest withNetwork(String network) {
+        this.network = network;
         return this;
     }
     

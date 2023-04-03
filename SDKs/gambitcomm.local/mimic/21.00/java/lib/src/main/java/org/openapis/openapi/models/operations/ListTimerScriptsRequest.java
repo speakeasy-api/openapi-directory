@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListTimerScriptsRequest {
-    
-    public ListTimerScriptsPathParams pathParams;
-    public ListTimerScriptsRequest withPathParams(ListTimerScriptsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the timer script list
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ListTimerScriptsRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

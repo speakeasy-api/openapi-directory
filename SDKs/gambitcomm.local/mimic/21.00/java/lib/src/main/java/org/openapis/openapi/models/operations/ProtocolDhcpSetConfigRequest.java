@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolDhcpSetConfigRequest {
+    /**
+     * Agent to set the DHCP configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolDhcpSetConfigRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolDhcpSetConfigPathParams pathParams;
-    public ProtocolDhcpSetConfigRequest withPathParams(ProtocolDhcpSetConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Parameter to set the DHCP configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=argument")
+    public String argument;
+    public ProtocolDhcpSetConfigRequest withArgument(String argument) {
+        this.argument = argument;
+        return this;
+    }
+    
+    /**
+     * Value to set the DHCP configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=value")
+    public String value;
+    public ProtocolDhcpSetConfigRequest withValue(String value) {
+        this.value = value;
         return this;
     }
     

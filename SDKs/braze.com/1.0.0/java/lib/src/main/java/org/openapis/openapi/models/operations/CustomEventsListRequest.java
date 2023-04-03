@@ -4,13 +4,18 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomEventsListRequest {
-    
-    public CustomEventsListQueryParams queryParams;
-    public CustomEventsListRequest withQueryParams(CustomEventsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Optional) Integer
+     * 
+     * The page of event names to return, defaults to 0 (returns the first set of up to 250)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public CustomEventsListRequest withPage(String page) {
+        this.page = page;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomFields3Request {
-    
-    public GetCustomFields3PathParams pathParams;
-    public GetCustomFields3Request withPathParams(GetCustomFields3PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * provider's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=providerId")
+    public Long providerId;
+    public GetCustomFields3Request withProviderId(Long providerId) {
+        this.providerId = providerId;
         return this;
     }
     

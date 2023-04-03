@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetItineraryPriceMetricsQueryParams;
 import org.openapis.openapi.models.operations.GetItineraryPriceMetricsRequest;
 import org.openapis.openapi.models.operations.GetItineraryPriceMetricsResponse;
 
@@ -15,14 +14,12 @@ public class Application {
                 .build();
 
             GetItineraryPriceMetricsRequest req = new GetItineraryPriceMetricsRequest() {{
-                queryParams = new GetItineraryPriceMetricsQueryParams() {{
-                    currencyCode = "corrupti";
-                    departureDate = "provident";
-                    destinationIataCode = "distinctio";
-                    oneWay = false;
-                    originIataCode = "quibusdam";
-                }};
-            }};            
+                currencyCode = "corrupti";
+                departureDate = "provident";
+                destinationIataCode = "distinctio";
+                oneWay = false;
+                originIataCode = "quibusdam";
+            }}            
 
             GetItineraryPriceMetricsResponse res = sdk.priceMetrics.getItineraryPriceMetrics(req);
 

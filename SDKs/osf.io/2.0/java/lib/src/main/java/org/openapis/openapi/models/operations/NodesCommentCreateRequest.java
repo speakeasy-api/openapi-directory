@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesCommentCreateRequest {
-    
-    public NodesCommentCreatePathParams pathParams;
-    public NodesCommentCreateRequest withPathParams(NodesCommentCreatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public NodesCommentCreateCommentInput requestBody;
+    public NodesCommentCreateRequest withRequestBody(NodesCommentCreateCommentInput requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public NodesCommentCreateCommentInput request;
-    public NodesCommentCreateRequest withRequest(NodesCommentCreateCommentInput request) {
-        this.request = request;
+    /**
+     * The unique identifier of the node you want to comment on.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public String nodeId;
+    public NodesCommentCreateRequest withNodeId(String nodeId) {
+        this.nodeId = nodeId;
         return this;
     }
     

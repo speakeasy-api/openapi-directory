@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEmployeeRequest {
-    
-    public GetEmployeePathParams pathParams;
-    public GetEmployeeRequest withPathParams(GetEmployeePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the employee in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employee_id")
+    public String employeeId;
+    public GetEmployeeRequest withEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
         return this;
     }
     

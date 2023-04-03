@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AvatarsGetCreditCardRequest {
-    
-    public AvatarsGetCreditCardPathParams pathParams;
-    public AvatarsGetCreditCardRequest withPathParams(AvatarsGetCreditCardPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Credit Card Code. Possible values: amex, argencard, cabal, censosud, diners, discover, elo, hipercard, jcb, mastercard, naranja, targeta-shopping, union-china-pay, visa, mir, maestro.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=code")
+    public String code;
+    public AvatarsGetCreditCardRequest withCode(String code) {
+        this.code = code;
         return this;
     }
     
-    
-    public AvatarsGetCreditCardQueryParams queryParams;
-    public AvatarsGetCreditCardRequest withQueryParams(AvatarsGetCreditCardQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Image height. Pass an integer between 0 to 2000. Defaults to 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
+    public Integer height;
+    public AvatarsGetCreditCardRequest withHeight(Integer height) {
+        this.height = height;
         return this;
     }
     
+    /**
+     * Image quality. Pass an integer between 0 to 100. Defaults to 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quality")
+    public Integer quality;
+    public AvatarsGetCreditCardRequest withQuality(Integer quality) {
+        this.quality = quality;
+        return this;
+    }
     
-    public AvatarsGetCreditCardSecurity security;
-    public AvatarsGetCreditCardRequest withSecurity(AvatarsGetCreditCardSecurity security) {
-        this.security = security;
+    /**
+     * Image width. Pass an integer between 0 to 2000. Defaults to 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
+    public Integer width;
+    public AvatarsGetCreditCardRequest withWidth(Integer width) {
+        this.width = width;
         return this;
     }
     

@@ -42,7 +42,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteUserResponse deleteUser(org.openapis.openapi.models.operations.DeleteUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteUserResponse deleteUser(org.openapis.openapi.models.operations.DeleteUserRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users");
         
@@ -156,7 +156,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LinkResponse link(org.openapis.openapi.models.operations.LinkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LinkResponse link(org.openapis.openapi.models.operations.LinkRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/link");
         
@@ -252,7 +252,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpsertUserResponse upsertUser(org.openapis.openapi.models.operations.UpsertUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpsertUserResponse upsertUser(org.openapis.openapi.models.operations.UpsertUserRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users/upsert");
         

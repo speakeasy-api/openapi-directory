@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetFoodBrandedBarcodePhpSecurity;
-import org.openapis.openapi.models.operations.GetFoodBrandedBarcodePhpQueryParams;
 import org.openapis.openapi.models.operations.GetFoodBrandedBarcodePhpRequest;
 import org.openapis.openapi.models.operations.GetFoodBrandedBarcodePhpResponse;
-import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,17 +28,12 @@ public class Application {
                 .build();
 
             GetFoodBrandedBarcodePhpRequest req = new GetFoodBrandedBarcodePhpRequest() {{
-                security = new GetFoodBrandedBarcodePhpSecurity() {{
-                    apiKeyAuth = new SchemeAPIKeyAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                queryParams = new GetFoodBrandedBarcodePhpQueryParams() {{
-                    code = "corrupti";
-                }};
-            }};            
+                code = "corrupti";
+            }}            
 
-            GetFoodBrandedBarcodePhpResponse res = sdk.getFoodBrandedBarcodePhp(req);
+            GetFoodBrandedBarcodePhpResponse res = sdk.getFoodBrandedBarcodePhp(req, new GetFoodBrandedBarcodePhpSecurity() {{
+                apiKeyAuth = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.brandedFoodObject.isPresent()) {
                 // handle response
@@ -52,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

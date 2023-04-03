@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NeighborhoodInAStreetRequest {
+    /**
+     * Country name in lowercase eg( tanzania)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country")
+    public String country;
+    public NeighborhoodInAStreetRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
     
-    public NeighborhoodInAStreetPathParams pathParams;
-    public NeighborhoodInAStreetRequest withPathParams(NeighborhoodInAStreetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Name of the District eg (Rungwe)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=district")
+    public String district;
+    public NeighborhoodInAStreetRequest withDistrict(String district) {
+        this.district = district;
+        return this;
+    }
+    
+    /**
+     * Name of the region eg (Mbeya)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region")
+    public String region;
+    public NeighborhoodInAStreetRequest withRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    
+    /**
+     * Name of the Street eg (Ilundo)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=street")
+    public String street;
+    public NeighborhoodInAStreetRequest withStreet(String street) {
+        this.street = street;
+        return this;
+    }
+    
+    /**
+     * Name of the Ward eg (Kiwira)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ward")
+    public String ward;
+    public NeighborhoodInAStreetRequest withWard(String ward) {
+        this.ward = ward;
         return this;
     }
     

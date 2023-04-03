@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchAppRequest {
-    
-    public FetchAppPathParams pathParams;
-    public FetchAppRequest withPathParams(FetchAppPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchAppSecurity security;
-    public FetchAppRequest withSecurity(FetchAppSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchAppRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34-character string that uniquely identifies this App.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchAppRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

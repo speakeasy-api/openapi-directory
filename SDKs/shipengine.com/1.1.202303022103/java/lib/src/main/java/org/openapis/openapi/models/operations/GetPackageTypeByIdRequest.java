@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPackageTypeByIdRequest {
-    
-    public GetPackageTypeByIdPathParams pathParams;
-    public GetPackageTypeByIdRequest withPathParams(GetPackageTypeByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Package ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=package_id")
+    public String packageId;
+    public GetPackageTypeByIdRequest withPackageId(String packageId) {
+        this.packageId = packageId;
         return this;
     }
     

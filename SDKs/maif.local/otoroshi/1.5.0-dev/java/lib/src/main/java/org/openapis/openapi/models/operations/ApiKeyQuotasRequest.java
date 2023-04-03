@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApiKeyQuotasRequest {
-    
-    public ApiKeyQuotasPathParams pathParams;
-    public ApiKeyQuotasRequest withPathParams(ApiKeyQuotasPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * the api key id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")
+    public String clientId;
+    public ApiKeyQuotasRequest withClientId(String clientId) {
+        this.clientId = clientId;
         return this;
     }
     
-    
-    public ApiKeyQuotasSecurity security;
-    public ApiKeyQuotasRequest withSecurity(ApiKeyQuotasSecurity security) {
-        this.security = security;
+    /**
+     * The api key service id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceId")
+    public String serviceId;
+    public ApiKeyQuotasRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
         return this;
     }
     

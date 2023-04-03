@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIpIpv4TxtRequest {
-    
-    public GetIpIpv4TxtPathParams pathParams;
-    public GetIpIpv4TxtRequest withPathParams(GetIpIpv4TxtPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ipv4")
+    public String ipv4;
+    public GetIpIpv4TxtRequest withIpv4(String ipv4) {
+        this.ipv4 = ipv4;
         return this;
     }
     

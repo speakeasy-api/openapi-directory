@@ -40,7 +40,7 @@ public class Individual {
      */
     public org.openapis.openapi.models.operations.GetIndividualResponse getIndividual(org.openapis.openapi.models.operations.GetIndividualRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIndividualPathParams.class, baseUrl, "/individual/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIndividualRequest.class, baseUrl, "/individual/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -78,7 +78,7 @@ public class Individual {
      */
     public org.openapis.openapi.models.operations.GetPedigreeResponse getPedigree(org.openapis.openapi.models.operations.GetPedigreeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPedigreePathParams.class, baseUrl, "/individual/pedigree/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPedigreeRequest.class, baseUrl, "/individual/pedigree/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

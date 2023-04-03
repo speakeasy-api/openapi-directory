@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryDeleteApiSpecRevisionRequest {
+    /**
+     * The api id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
+    public String api;
+    public RegistryDeleteApiSpecRevisionRequest withApi(String api) {
+        this.api = api;
+        return this;
+    }
     
-    public RegistryDeleteApiSpecRevisionPathParams pathParams;
-    public RegistryDeleteApiSpecRevisionRequest withPathParams(RegistryDeleteApiSpecRevisionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryDeleteApiSpecRevisionRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryDeleteApiSpecRevisionRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * The spec id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spec")
+    public String spec;
+    public RegistryDeleteApiSpecRevisionRequest withSpec(String spec) {
+        this.spec = spec;
+        return this;
+    }
+    
+    /**
+     * The version id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public RegistryDeleteApiSpecRevisionRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

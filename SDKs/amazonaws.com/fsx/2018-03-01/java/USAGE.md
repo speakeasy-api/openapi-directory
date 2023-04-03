@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AssociateFileSystemAliasesXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AssociateFileSystemAliasesHeaders;
 import org.openapis.openapi.models.operations.AssociateFileSystemAliasesRequest;
 import org.openapis.openapi.models.operations.AssociateFileSystemAliasesResponse;
 import org.openapis.openapi.models.shared.AssociateFileSystemAliasesRequest;
@@ -15,34 +14,29 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateFileSystemAliasesRequest req = new AssociateFileSystemAliasesRequest() {{
-                headers = new AssociateFileSystemAliasesHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AWSSimbaAPIService_v20180301.AssociateFileSystemAliases";
-                }};
-                request = new AssociateFileSystemAliasesRequest() {{
+                associateFileSystemAliasesRequest = new AssociateFileSystemAliasesRequest() {{
                     aliases = new String[]{{
-                        add("vel"),
-                        add("error"),
-                        add("deserunt"),
-                        add("suscipit"),
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
-                    clientRequestToken = "iure";
-                    fileSystemId = "magnam";
+                    clientRequestToken = "unde";
+                    fileSystemId = "nulla";
                 }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "illum";
+                xAmzCredential = "vel";
+                xAmzDate = "error";
+                xAmzSecurityToken = "deserunt";
+                xAmzSignature = "suscipit";
+                xAmzSignedHeaders = "iure";
+                xAmzTarget = "AWSSimbaAPIService_v20180301.AssociateFileSystemAliases";
+            }}            
 
             AssociateFileSystemAliasesResponse res = sdk.associateFileSystemAliases(req);
 

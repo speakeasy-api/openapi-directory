@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestnetGetTxsRequest {
+    /**
+     * Address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address")
+    public String address;
+    public TestnetGetTxsRequest withAddress(String address) {
+        this.address = address;
+        return this;
+    }
     
-    public TestnetGetTxsQueryParams queryParams;
-    public TestnetGetTxsRequest withQueryParams(TestnetGetTxsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Block Hash
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=block")
+    public String block;
+    public TestnetGetTxsRequest withBlock(String block) {
+        this.block = block;
+        return this;
+    }
+    
+    /**
+     * Page number to display
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNum")
+    public Double pageNum;
+    public TestnetGetTxsRequest withPageNum(Double pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
     

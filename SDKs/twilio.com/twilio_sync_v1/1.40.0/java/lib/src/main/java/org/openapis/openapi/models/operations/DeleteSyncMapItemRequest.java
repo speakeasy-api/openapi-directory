@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSyncMapItemRequest {
-    
-    public DeleteSyncMapItemPathParams pathParams;
-    public DeleteSyncMapItemRequest withPathParams(DeleteSyncMapItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If provided, applies this mutation if (and only if) the \u201crevision\u201d field of this [map item] matches the provided value. This matches the semantics of (and is implemented with) the HTTP [If-Match header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match).
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public DeleteSyncMapItemRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
-    
-    public DeleteSyncMapItemHeaders headers;
-    public DeleteSyncMapItemRequest withHeaders(DeleteSyncMapItemHeaders headers) {
-        this.headers = headers;
+    /**
+     * The `key` value of the Sync Map Item resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Key")
+    public String key;
+    public DeleteSyncMapItemRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     
-    
-    public DeleteSyncMapItemSecurity security;
-    public DeleteSyncMapItemRequest withSecurity(DeleteSyncMapItemSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Sync Map with the Sync Map Item resource to delete. Can be the Sync Map resource's `sid` or its `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MapSid")
+    public String mapSid;
+    public DeleteSyncMapItemRequest withMapSid(String mapSid) {
+        this.mapSid = mapSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteSyncMapItemRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map Item resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteSyncMapItemRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

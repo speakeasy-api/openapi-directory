@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateMediaProcessorRequest {
-    
-    public UpdateMediaProcessorPathParams pathParams;
-    public UpdateMediaProcessorRequest withPathParams(UpdateMediaProcessorPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateMediaProcessorUpdateMediaProcessorRequest request;
-    public UpdateMediaProcessorRequest withRequest(UpdateMediaProcessorUpdateMediaProcessorRequest request) {
-        this.request = request;
+    public UpdateMediaProcessorUpdateMediaProcessorRequest requestBody;
+    public UpdateMediaProcessorRequest withRequestBody(UpdateMediaProcessorUpdateMediaProcessorRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateMediaProcessorSecurity security;
-    public UpdateMediaProcessorRequest withSecurity(UpdateMediaProcessorSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateMediaProcessorRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the MediaProcessor resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateMediaProcessorRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

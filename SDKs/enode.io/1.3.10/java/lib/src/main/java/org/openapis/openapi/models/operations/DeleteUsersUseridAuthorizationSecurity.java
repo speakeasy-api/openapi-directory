@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUsersUseridAuthorizationSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeClientAccessToken clientAccessToken;
-    public DeleteUsersUseridAuthorizationSecurity withClientAccessToken(org.openapis.openapi.models.shared.SchemeClientAccessToken clientAccessToken) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String clientAccessToken;
+    public DeleteUsersUseridAuthorizationSecurity withClientAccessToken(String clientAccessToken) {
         this.clientAccessToken = clientAccessToken;
         return this;
     }

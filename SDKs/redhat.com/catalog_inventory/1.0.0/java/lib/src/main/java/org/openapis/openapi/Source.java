@@ -40,7 +40,7 @@ public class Source {
      */
     public org.openapis.openapi.models.operations.IncrementalRefreshSourceResponse incrementalRefreshSource(org.openapis.openapi.models.operations.IncrementalRefreshSourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IncrementalRefreshSourcePathParams.class, baseUrl, "/sources/{id}/incremental_refresh", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IncrementalRefreshSourceRequest.class, baseUrl, "/sources/{id}/incremental_refresh", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
@@ -74,13 +74,13 @@ public class Source {
      */
     public org.openapis.openapi.models.operations.ListSourceServiceInstancesResponse listSourceServiceInstances(org.openapis.openapi.models.operations.ListSourceServiceInstancesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSourceServiceInstancesPathParams.class, baseUrl, "/sources/{id}/service_instances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSourceServiceInstancesRequest.class, baseUrl, "/sources/{id}/service_instances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSourceServiceInstancesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSourceServiceInstancesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -128,13 +128,13 @@ public class Source {
      */
     public org.openapis.openapi.models.operations.ListSourceServiceInventoriesResponse listSourceServiceInventories(org.openapis.openapi.models.operations.ListSourceServiceInventoriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSourceServiceInventoriesPathParams.class, baseUrl, "/sources/{id}/service_inventories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSourceServiceInventoriesRequest.class, baseUrl, "/sources/{id}/service_inventories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSourceServiceInventoriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSourceServiceInventoriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -182,13 +182,13 @@ public class Source {
      */
     public org.openapis.openapi.models.operations.ListSourceServiceOfferingNodesResponse listSourceServiceOfferingNodes(org.openapis.openapi.models.operations.ListSourceServiceOfferingNodesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSourceServiceOfferingNodesPathParams.class, baseUrl, "/sources/{id}/service_offering_nodes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSourceServiceOfferingNodesRequest.class, baseUrl, "/sources/{id}/service_offering_nodes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSourceServiceOfferingNodesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSourceServiceOfferingNodesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -236,13 +236,13 @@ public class Source {
      */
     public org.openapis.openapi.models.operations.ListSourceServiceOfferingsResponse listSourceServiceOfferings(org.openapis.openapi.models.operations.ListSourceServiceOfferingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSourceServiceOfferingsPathParams.class, baseUrl, "/sources/{id}/service_offerings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSourceServiceOfferingsRequest.class, baseUrl, "/sources/{id}/service_offerings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSourceServiceOfferingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSourceServiceOfferingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -290,13 +290,13 @@ public class Source {
      */
     public org.openapis.openapi.models.operations.ListSourceServicePlansResponse listSourceServicePlans(org.openapis.openapi.models.operations.ListSourceServicePlansRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSourceServicePlansPathParams.class, baseUrl, "/sources/{id}/service_plans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSourceServicePlansRequest.class, baseUrl, "/sources/{id}/service_plans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSourceServicePlansQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSourceServicePlansRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -344,13 +344,13 @@ public class Source {
      */
     public org.openapis.openapi.models.operations.ListSourceTasksResponse listSourceTasks(org.openapis.openapi.models.operations.ListSourceTasksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSourceTasksPathParams.class, baseUrl, "/sources/{id}/tasks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSourceTasksRequest.class, baseUrl, "/sources/{id}/tasks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSourceTasksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSourceTasksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -404,7 +404,7 @@ public class Source {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSourcesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSourcesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -444,7 +444,7 @@ public class Source {
      */
     public org.openapis.openapi.models.operations.RefreshSourceResponse refreshSource(org.openapis.openapi.models.operations.RefreshSourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RefreshSourcePathParams.class, baseUrl, "/sources/{id}/refresh", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RefreshSourceRequest.class, baseUrl, "/sources/{id}/refresh", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
@@ -478,7 +478,7 @@ public class Source {
      */
     public org.openapis.openapi.models.operations.ShowSourceResponse showSource(org.openapis.openapi.models.operations.ShowSourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ShowSourcePathParams.class, baseUrl, "/sources/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ShowSourceRequest.class, baseUrl, "/sources/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

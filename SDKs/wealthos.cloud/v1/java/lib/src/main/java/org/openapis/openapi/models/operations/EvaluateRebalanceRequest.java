@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EvaluateRebalanceRequest {
-    
-    public EvaluateRebalanceHeaders headers;
-    public EvaluateRebalanceRequest withHeaders(EvaluateRebalanceHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public EvaluateRebalanceSwitchInstructionRequest request;
-    public EvaluateRebalanceRequest withRequest(EvaluateRebalanceSwitchInstructionRequest request) {
-        this.request = request;
+    public EvaluateRebalanceSwitchInstructionRequest requestBody;
+    public EvaluateRebalanceRequest withRequestBody(EvaluateRebalanceSwitchInstructionRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public EvaluateRebalanceSecurity security;
-    public EvaluateRebalanceRequest withSecurity(EvaluateRebalanceSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public EvaluateRebalanceRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

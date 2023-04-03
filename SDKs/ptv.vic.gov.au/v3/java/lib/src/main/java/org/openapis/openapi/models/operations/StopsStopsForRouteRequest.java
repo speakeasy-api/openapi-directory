@@ -4,20 +4,97 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopsStopsForRouteRequest {
-    
-    public StopsStopsForRoutePathParams pathParams;
-    public StopsStopsForRouteRequest withPathParams(StopsStopsForRoutePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public StopsStopsForRouteRequest withDevid(String devid) {
+        this.devid = devid;
         return this;
     }
     
+    /**
+     * An optional direction; values returned by Directions API. When this is set, stop sequence information is returned in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction_id")
+    public Integer directionId;
+    public StopsStopsForRouteRequest withDirectionId(Integer directionId) {
+        this.directionId = directionId;
+        return this;
+    }
     
-    public StopsStopsForRouteQueryParams queryParams;
-    public StopsStopsForRouteRequest withQueryParams(StopsStopsForRouteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter geopaths by date (ISO 8601 UTC format) (default = current date)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geopath_utc")
+    public OffsetDateTime geopathUtc;
+    public StopsStopsForRouteRequest withGeopathUtc(OffsetDateTime geopathUtc) {
+        this.geopathUtc = geopathUtc;
+        return this;
+    }
+    
+    /**
+     * Indicates if geopath data will be returned (default = false)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_geopath")
+    public Boolean includeGeopath;
+    public StopsStopsForRouteRequest withIncludeGeopath(Boolean includeGeopath) {
+        this.includeGeopath = includeGeopath;
+        return this;
+    }
+    
+    /**
+     * Identifier of route; values returned by Routes API - v3/routes
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_id")
+    public Integer routeId;
+    public StopsStopsForRouteRequest withRouteId(Integer routeId) {
+        this.routeId = routeId;
+        return this;
+    }
+    
+    /**
+     * Number identifying transport mode; values returned via RouteTypes API
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_type")
+    public StopsStopsForRouteRouteTypeEnum routeType;
+    public StopsStopsForRouteRequest withRouteType(StopsStopsForRouteRouteTypeEnum routeType) {
+        this.routeType = routeType;
+        return this;
+    }
+    
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public StopsStopsForRouteRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Indicates if stop disruption information will be returned (default = false)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stop_disruptions")
+    public Boolean stopDisruptions;
+    public StopsStopsForRouteRequest withStopDisruptions(Boolean stopDisruptions) {
+        this.stopDisruptions = stopDisruptions;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public StopsStopsForRouteRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

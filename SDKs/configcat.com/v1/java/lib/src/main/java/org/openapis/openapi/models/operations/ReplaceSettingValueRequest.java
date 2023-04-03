@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReplaceSettingValueRequest {
-    
-    public ReplaceSettingValuePathParams pathParams;
-    public ReplaceSettingValueRequest withPathParams(ReplaceSettingValuePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ReplaceSettingValueQueryParams queryParams;
-    public ReplaceSettingValueRequest withQueryParams(ReplaceSettingValueQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateSettingValueModel request;
-    public ReplaceSettingValueRequest withRequest(org.openapis.openapi.models.shared.UpdateSettingValueModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateSettingValueModel updateSettingValueModel;
+    public ReplaceSettingValueRequest withUpdateSettingValueModel(org.openapis.openapi.models.shared.UpdateSettingValueModel updateSettingValueModel) {
+        this.updateSettingValueModel = updateSettingValueModel;
+        return this;
+    }
+    
+    /**
+     * The identifier of the Environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environmentId")
+    public String environmentId;
+    public ReplaceSettingValueRequest withEnvironmentId(String environmentId) {
+        this.environmentId = environmentId;
+        return this;
+    }
+    
+    /**
+     * The reason note for the Audit Log if the Product's "Config changes require a reason" preference is turned on.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
+    public String reason;
+    public ReplaceSettingValueRequest withReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    
+    /**
+     * The id of the Setting.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingId")
+    public Integer settingId;
+    public ReplaceSettingValueRequest withSettingId(Integer settingId) {
+        this.settingId = settingId;
         return this;
     }
     

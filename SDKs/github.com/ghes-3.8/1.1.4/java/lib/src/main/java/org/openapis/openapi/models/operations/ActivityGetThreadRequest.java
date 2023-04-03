@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivityGetThreadRequest {
-    
-    public ActivityGetThreadPathParams pathParams;
-    public ActivityGetThreadRequest withPathParams(ActivityGetThreadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the notification thread. This corresponds to the value returned in the `id` field when you retrieve notifications (for example with the [`GET /notifications` operation](https://docs.github.com/enterprise-server@3.8/rest/reference/activity#list-notifications-for-the-authenticated-user)).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=thread_id")
+    public Long threadId;
+    public ActivityGetThreadRequest withThreadId(Long threadId) {
+        this.threadId = threadId;
         return this;
     }
     

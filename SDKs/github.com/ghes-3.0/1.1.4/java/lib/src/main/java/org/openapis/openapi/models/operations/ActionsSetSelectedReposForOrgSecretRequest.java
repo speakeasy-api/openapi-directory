@@ -7,17 +7,27 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsSetSelectedReposForOrgSecretRequest {
-    
-    public ActionsSetSelectedReposForOrgSecretPathParams pathParams;
-    public ActionsSetSelectedReposForOrgSecretRequest withPathParams(ActionsSetSelectedReposForOrgSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsSetSelectedReposForOrgSecretRequestBody requestBody;
+    public ActionsSetSelectedReposForOrgSecretRequest withRequestBody(ActionsSetSelectedReposForOrgSecretRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsSetSelectedReposForOrgSecretRequestBody request;
-    public ActionsSetSelectedReposForOrgSecretRequest withRequest(ActionsSetSelectedReposForOrgSecretRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsSetSelectedReposForOrgSecretRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * secret_name parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
+    public String secretName;
+    public ActionsSetSelectedReposForOrgSecretRequest withSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
     

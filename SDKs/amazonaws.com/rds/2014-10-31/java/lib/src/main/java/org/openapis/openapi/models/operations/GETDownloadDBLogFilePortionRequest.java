@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDownloadDBLogFilePortionRequest {
-    
-    public GETDownloadDBLogFilePortionQueryParams queryParams;
-    public GETDownloadDBLogFilePortionRequest withQueryParams(GETDownloadDBLogFilePortionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDownloadDBLogFilePortionActionEnum action;
+    public GETDownloadDBLogFilePortionRequest withAction(GETDownloadDBLogFilePortionActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The customer-assigned name of the DB instance that contains the log files you want to list.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must match the identifier of an existing DBInstance.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceIdentifier")
+    public String dbInstanceIdentifier;
+    public GETDownloadDBLogFilePortionRequest withDBInstanceIdentifier(String dbInstanceIdentifier) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+        return this;
+    }
     
-    public GETDownloadDBLogFilePortionHeaders headers;
-    public GETDownloadDBLogFilePortionRequest withHeaders(GETDownloadDBLogFilePortionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the log file to be downloaded.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LogFileName")
+    public String logFileName;
+    public GETDownloadDBLogFilePortionRequest withLogFileName(String logFileName) {
+        this.logFileName = logFileName;
+        return this;
+    }
+    
+    /**
+     * The pagination token provided in the previous request or "0". If the Marker parameter is specified the response includes only records beyond the marker until the end of the file or up to NumberOfLines.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDownloadDBLogFilePortionRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The number of lines to download. If the number of lines specified results in a file over 1 MB in size, the file is truncated at 1 MB in size.&lt;/p&gt; &lt;p&gt;If the NumberOfLines parameter is specified, then the block of lines returned can be from the beginning or the end of the log file, depending on the value of the Marker parameter.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;If neither Marker or NumberOfLines are specified, the entire log file is returned up to a maximum of 10000 lines, starting with the most recent log entries first.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;If NumberOfLines is specified and Marker isn't specified, then the most recent lines from the end of the log file are returned.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;If Marker is specified as "0", then the specified number of lines from the beginning of the log file are returned.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;You can download the log file in blocks of lines by specifying the size of the block using the NumberOfLines parameter, and by specifying a value of "0" for the Marker parameter in your first request. Include the Marker value returned in the response as the Marker value for the next request, continuing until the AdditionalDataPending response element returns false.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NumberOfLines")
+    public Long numberOfLines;
+    public GETDownloadDBLogFilePortionRequest withNumberOfLines(Long numberOfLines) {
+        this.numberOfLines = numberOfLines;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDownloadDBLogFilePortionVersionEnum version;
+    public GETDownloadDBLogFilePortionRequest withVersion(GETDownloadDBLogFilePortionVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDownloadDBLogFilePortionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDownloadDBLogFilePortionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDownloadDBLogFilePortionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDownloadDBLogFilePortionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDownloadDBLogFilePortionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDownloadDBLogFilePortionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDownloadDBLogFilePortionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AccessibilityRequest;
 import org.openapis.openapi.models.operations.AccessibilityResponse;
 import org.openapis.openapi.models.shared.AccessibilityRequest;
 
@@ -26,18 +25,14 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    castLocalAuthorizationToken = new SchemeCastLocalAuthorizationToken() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    castLocalAuthorizationToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            AccessibilityRequest req = new AccessibilityRequest() {{
-                request = new AccessibilityRequest() {{
-                    endpointEnabled = false;
-                    hotwordEnabled = false;
-                }};
-            }};            
+            org.openapis.openapi.models.shared.AccessibilityRequest req = new AccessibilityRequest() {{
+                endpointEnabled = false;
+                hotwordEnabled = false;
+            }}            
 
             AccessibilityResponse res = sdk.assistant.accessibility(req);
 
@@ -51,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### assistant

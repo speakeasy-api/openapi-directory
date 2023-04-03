@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.ActionsAddSelectedRepoToOrgSecretPathParams;
 import org.openapis.openapi.models.operations.ActionsAddSelectedRepoToOrgSecretRequest;
 import org.openapis.openapi.models.operations.ActionsAddSelectedRepoToOrgSecretResponse;
 
@@ -28,12 +27,10 @@ public class Application {
                 .build();
 
             ActionsAddSelectedRepoToOrgSecretRequest req = new ActionsAddSelectedRepoToOrgSecretRequest() {{
-                pathParams = new ActionsAddSelectedRepoToOrgSecretPathParams() {{
-                    org = "corrupti";
-                    repositoryId = 592845;
-                    secretName = "distinctio";
-                }};
-            }};            
+                org = "corrupti";
+                repositoryId = 592845;
+                secretName = "distinctio";
+            }}            
 
             ActionsAddSelectedRepoToOrgSecretResponse res = sdk.actions.actionsAddSelectedRepoToOrgSecret(req);
 
@@ -47,7 +44,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### actions

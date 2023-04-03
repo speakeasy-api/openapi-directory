@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLatestBaseCurrencyRequest {
-    
-    public GetLatestBaseCurrencyPathParams pathParams;
-    public GetLatestBaseCurrencyRequest withPathParams(GetLatestBaseCurrencyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * **Base Currency**. *Example: USD*. You an use any of the ISO 4217 currency codes we support. See https://www.exchangerate-api.com/docs/supported-currencies
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=base_currency")
+    public String baseCurrency;
+    public GetLatestBaseCurrencyRequest withBaseCurrency(String baseCurrency) {
+        this.baseCurrency = baseCurrency;
         return this;
     }
     

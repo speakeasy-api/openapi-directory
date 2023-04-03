@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteOrganizationInsightMonitoredMediaServerRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=monitoredMediaServerId")
+    public String monitoredMediaServerId;
+    public DeleteOrganizationInsightMonitoredMediaServerRequest withMonitoredMediaServerId(String monitoredMediaServerId) {
+        this.monitoredMediaServerId = monitoredMediaServerId;
+        return this;
+    }
     
-    public DeleteOrganizationInsightMonitoredMediaServerPathParams pathParams;
-    public DeleteOrganizationInsightMonitoredMediaServerRequest withPathParams(DeleteOrganizationInsightMonitoredMediaServerPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public DeleteOrganizationInsightMonitoredMediaServerRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeDeviceEc2InstancesRequest {
-    
-    public DescribeDeviceEc2InstancesPathParams pathParams;
-    public DescribeDeviceEc2InstancesRequest withPathParams(DescribeDeviceEc2InstancesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DescribeDeviceEc2InstancesHeaders headers;
-    public DescribeDeviceEc2InstancesRequest withHeaders(DescribeDeviceEc2InstancesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DescribeDeviceEc2InstancesRequestBody request;
-    public DescribeDeviceEc2InstancesRequest withRequest(DescribeDeviceEc2InstancesRequestBody request) {
-        this.request = request;
+    public DescribeDeviceEc2InstancesRequestBody requestBody;
+    public DescribeDeviceEc2InstancesRequest withRequestBody(DescribeDeviceEc2InstancesRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeDeviceEc2InstancesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeDeviceEc2InstancesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeDeviceEc2InstancesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeDeviceEc2InstancesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeDeviceEc2InstancesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeDeviceEc2InstancesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeDeviceEc2InstancesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The ID of the managed device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=managedDeviceId")
+    public String managedDeviceId;
+    public DescribeDeviceEc2InstancesRequest withManagedDeviceId(String managedDeviceId) {
+        this.managedDeviceId = managedDeviceId;
         return this;
     }
     

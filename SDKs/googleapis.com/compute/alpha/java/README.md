@@ -21,14 +21,10 @@ import org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedL
 import org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedListSecurityOption2;
 import org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedListSecurityOption3;
 import org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedListSecurity;
-import org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedListPathParams;
-import org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedListQueryParams;
 import org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedListRequest;
 import org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedListResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -37,42 +33,33 @@ public class Application {
                 .build();
 
             ComputeAcceleratorTypesAggregatedListRequest req = new ComputeAcceleratorTypesAggregatedListRequest() {{
-                security = new ComputeAcceleratorTypesAggregatedListSecurity() {{
-                    option1 = new ComputeAcceleratorTypesAggregatedListSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new ComputeAcceleratorTypesAggregatedListPathParams() {{
-                    project = "corrupti";
-                }};
-                queryParams = new ComputeAcceleratorTypesAggregatedListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    filter = "corrupti";
-                    includeAllScopes = false;
-                    key = "illum";
-                    maxResults = 423655;
-                    oauthToken = "error";
-                    orderBy = "deserunt";
-                    pageToken = "suscipit";
-                    prettyPrint = false;
-                    quotaUser = "iure";
-                    returnPartialSuccess = false;
-                    uploadType = "magnam";
-                    uploadProtocol = "debitis";
-                    userIp = "ipsa";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                filter = "nulla";
+                includeAllScopes = false;
+                key = "corrupti";
+                maxResults = 847252;
+                oauthToken = "vel";
+                orderBy = "error";
+                pageToken = "deserunt";
+                prettyPrint = false;
+                project = "suscipit";
+                quotaUser = "iure";
+                returnPartialSuccess = false;
+                uploadType = "magnam";
+                uploadProtocol = "debitis";
+                userIp = "ipsa";
+            }}            
 
-            ComputeAcceleratorTypesAggregatedListResponse res = sdk.acceleratorTypes.computeAcceleratorTypesAggregatedList(req);
+            ComputeAcceleratorTypesAggregatedListResponse res = sdk.acceleratorTypes.computeAcceleratorTypesAggregatedList(req, new ComputeAcceleratorTypesAggregatedListSecurity() {{
+                option1 = new ComputeAcceleratorTypesAggregatedListSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.acceleratorTypeAggregatedList.isPresent()) {
                 // handle response
@@ -84,7 +71,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### acceleratorTypes

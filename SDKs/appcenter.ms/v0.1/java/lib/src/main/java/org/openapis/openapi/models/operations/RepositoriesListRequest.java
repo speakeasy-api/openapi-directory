@@ -4,27 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepositoriesListRequest {
-    
-    public RepositoriesListPathParams pathParams;
-    public RepositoriesListRequest withPathParams(RepositoriesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public RepositoriesListRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public RepositoriesListQueryParams queryParams;
-    public RepositoriesListRequest withQueryParams(RepositoriesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The selected form of the object
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=form")
+    public RepositoriesListFormEnum form;
+    public RepositoriesListRequest withForm(RepositoriesListFormEnum form) {
+        this.form = form;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public RepositoriesListRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public RepositoriesListSecurity security;
-    public RepositoriesListRequest withSecurity(RepositoriesListSecurity security) {
-        this.security = security;
+    /**
+     * The id of the service connection (private). Required for GitLab self-hosted repositories
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service_connection_id")
+    public String serviceConnectionId;
+    public RepositoriesListRequest withServiceConnectionId(String serviceConnectionId) {
+        this.serviceConnectionId = serviceConnectionId;
+        return this;
+    }
+    
+    /**
+     * The source host
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=source_host")
+    public RepositoriesListSourceHostEnum sourceHost;
+    public RepositoriesListRequest withSourceHost(RepositoriesListSourceHostEnum sourceHost) {
+        this.sourceHost = sourceHost;
+        return this;
+    }
+    
+    /**
+     * Filter repositories only for specified account and project, "vstsProjectId" is required
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vstsAccountName")
+    public String vstsAccountName;
+    public RepositoriesListRequest withVstsAccountName(String vstsAccountName) {
+        this.vstsAccountName = vstsAccountName;
+        return this;
+    }
+    
+    /**
+     * Filter repositories only for specified account and project, "vstsAccountName" is required
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vstsProjectId")
+    public String vstsProjectId;
+    public RepositoriesListRequest withVstsProjectId(String vstsProjectId) {
+        this.vstsProjectId = vstsProjectId;
         return this;
     }
     

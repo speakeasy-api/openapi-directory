@@ -38,12 +38,12 @@ public class ChannelCatalogsCategories {
      */
     public org.openapis.openapi.models.operations.ConfigureChannelCatalogCategoryResponse configureChannelCatalogCategory(org.openapis.openapi.models.operations.ConfigureChannelCatalogCategoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConfigureChannelCatalogCategoryPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/categories/configure", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConfigureChannelCatalogCategoryRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/categories/configure", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "configureCategoryRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -83,7 +83,7 @@ public class ChannelCatalogsCategories {
      */
     public org.openapis.openapi.models.operations.DisableChannelCatalogCategoryMappingResponse disableChannelCatalogCategoryMapping(org.openapis.openapi.models.operations.DisableChannelCatalogCategoryMappingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableChannelCatalogCategoryMappingPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/categories/disableMapping", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableChannelCatalogCategoryMappingRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/categories/disableMapping", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -123,7 +123,7 @@ public class ChannelCatalogsCategories {
      */
     public org.openapis.openapi.models.operations.GetChannelCatalogCategoriesResponse getChannelCatalogCategories(org.openapis.openapi.models.operations.GetChannelCatalogCategoriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogCategoriesPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/categories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogCategoriesRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/categories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -169,7 +169,7 @@ public class ChannelCatalogsCategories {
      */
     public org.openapis.openapi.models.operations.ReenableChannelCatalogCategoryMappingResponse reenableChannelCatalogCategoryMapping(org.openapis.openapi.models.operations.ReenableChannelCatalogCategoryMappingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReenableChannelCatalogCategoryMappingPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/categories/reenableMapping", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReenableChannelCatalogCategoryMappingRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/categories/reenableMapping", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditProjectRequest {
-    
-    public EditProjectPathParams pathParams;
-    public EditProjectRequest withPathParams(EditProjectPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public EditProjectRequestBody request;
-    public EditProjectRequest withRequest(EditProjectRequestBody request) {
-        this.request = request;
+    public EditProjectRequestBody requestBody;
+    public EditProjectRequest withRequestBody(EditProjectRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The ID of the project.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Double projectId;
+    public EditProjectRequest withProjectId(Double projectId) {
+        this.projectId = projectId;
+        return this;
+    }
     
-    public EditProjectSecurity security;
-    public EditProjectRequest withSecurity(EditProjectSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public EditProjectRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

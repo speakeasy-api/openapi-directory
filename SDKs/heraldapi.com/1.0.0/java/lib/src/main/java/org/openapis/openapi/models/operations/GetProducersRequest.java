@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProducersRequest {
-    
-    public GetProducersQueryParams queryParams;
-    public GetProducersRequest withQueryParams(GetProducersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The external_id that is associated with a specific producer
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=external_id")
+    public String externalId;
+    public GetProducersRequest withExternalId(String externalId) {
+        this.externalId = externalId;
         return this;
     }
     

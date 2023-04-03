@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateVodRequest {
-    
-    public CreateVodPathParams pathParams;
-    public CreateVodRequest withPathParams(CreateVodPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateVodRequestBody requestBody;
+    public CreateVodRequest withRequestBody(CreateVodRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateVodRequestBody request;
-    public CreateVodRequest withRequest(CreateVodRequestBody request) {
-        this.request = request;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public CreateVodRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

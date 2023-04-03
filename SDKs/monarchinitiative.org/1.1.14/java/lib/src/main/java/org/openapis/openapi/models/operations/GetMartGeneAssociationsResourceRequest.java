@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMartGeneAssociationsResourceRequest {
-    
-    public GetMartGeneAssociationsResourcePathParams pathParams;
-    public GetMartGeneAssociationsResourceRequest withPathParams(GetMartGeneAssociationsResourcePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Category of entity at link Object (target), e.g. phenotype, disease
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object_category")
+    public String objectCategory;
+    public GetMartGeneAssociationsResourceRequest withObjectCategory(String objectCategory) {
+        this.objectCategory = objectCategory;
         return this;
     }
     
+    /**
+     * Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slim")
+    public String[] slim;
+    public GetMartGeneAssociationsResourceRequest withSlim(String[] slim) {
+        this.slim = slim;
+        return this;
+    }
     
-    public GetMartGeneAssociationsResourceQueryParams queryParams;
-    public GetMartGeneAssociationsResourceRequest withQueryParams(GetMartGeneAssociationsResourceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * taxon of gene, must be of form NCBITaxon:9606
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxon")
+    public String taxon;
+    public GetMartGeneAssociationsResourceRequest withTaxon(String taxon) {
+        this.taxon = taxon;
         return this;
     }
     

@@ -4,20 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RunsForRouteAndRouteTypeRequest {
-    
-    public RunsForRouteAndRouteTypePathParams pathParams;
-    public RunsForRouteAndRouteTypeRequest withPathParams(RunsForRouteAndRouteTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Date of the request. (optional - defaults to now)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_utc")
+    public OffsetDateTime dateUtc;
+    public RunsForRouteAndRouteTypeRequest withDateUtc(OffsetDateTime dateUtc) {
+        this.dateUtc = dateUtc;
         return this;
     }
     
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public RunsForRouteAndRouteTypeRequest withDevid(String devid) {
+        this.devid = devid;
+        return this;
+    }
     
-    public RunsForRouteAndRouteTypeQueryParams queryParams;
-    public RunsForRouteAndRouteTypeRequest withQueryParams(RunsForRouteAndRouteTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * List of objects to be returned in full (i.e. expanded) - options include: All, VehiclePosition, VehicleDescriptor, or None. Default is All.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public RunsForRouteAndRouteTypeExpandEnum[] expand;
+    public RunsForRouteAndRouteTypeRequest withExpand(RunsForRouteAndRouteTypeExpandEnum[] expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    /**
+     * Identifier of route; values returned by Routes API - v3/routes.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_id")
+    public Integer routeId;
+    public RunsForRouteAndRouteTypeRequest withRouteId(Integer routeId) {
+        this.routeId = routeId;
+        return this;
+    }
+    
+    /**
+     * Number identifying transport mode; values returned via RouteTypes API
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_type")
+    public RunsForRouteAndRouteTypeRouteTypeEnum routeType;
+    public RunsForRouteAndRouteTypeRequest withRouteType(RunsForRouteAndRouteTypeRouteTypeEnum routeType) {
+        this.routeType = routeType;
+        return this;
+    }
+    
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public RunsForRouteAndRouteTypeRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public RunsForRouteAndRouteTypeRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

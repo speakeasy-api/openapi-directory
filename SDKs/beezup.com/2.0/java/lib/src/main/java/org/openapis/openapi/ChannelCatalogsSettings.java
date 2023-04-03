@@ -38,12 +38,12 @@ public class ChannelCatalogsSettings {
      */
     public org.openapis.openapi.models.operations.ConfigureChannelCatalogCostSettingsResponse configureChannelCatalogCostSettings(org.openapis.openapi.models.operations.ConfigureChannelCatalogCostSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConfigureChannelCatalogCostSettingsPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/settings/cost", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConfigureChannelCatalogCostSettingsRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/settings/cost", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "costSettings", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -83,12 +83,12 @@ public class ChannelCatalogsSettings {
      */
     public org.openapis.openapi.models.operations.ConfigureChannelCatalogGeneralSettingsResponse configureChannelCatalogGeneralSettings(org.openapis.openapi.models.operations.ConfigureChannelCatalogGeneralSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConfigureChannelCatalogGeneralSettingsPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/settings/general", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConfigureChannelCatalogGeneralSettingsRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/settings/general", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "generalSettings", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -128,7 +128,7 @@ public class ChannelCatalogsSettings {
      */
     public org.openapis.openapi.models.operations.DisableChannelCatalogResponse disableChannelCatalog(org.openapis.openapi.models.operations.DisableChannelCatalogRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableChannelCatalogPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableChannelCatalogRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -168,7 +168,7 @@ public class ChannelCatalogsSettings {
      */
     public org.openapis.openapi.models.operations.EnableChannelCatalogResponse enableChannelCatalog(org.openapis.openapi.models.operations.EnableChannelCatalogRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableChannelCatalogPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableChannelCatalogRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

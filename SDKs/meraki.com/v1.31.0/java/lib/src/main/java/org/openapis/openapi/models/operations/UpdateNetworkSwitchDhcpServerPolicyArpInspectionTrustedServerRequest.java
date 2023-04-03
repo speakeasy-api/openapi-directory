@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest {
-    
-    public UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerPathParams pathParams;
-    public UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest withPathParams(UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequestBody requestBody;
+    public UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest withRequestBody(UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequestBody request;
-    public UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest withRequest(UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=trustedServerId")
+    public String trustedServerId;
+    public UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest withTrustedServerId(String trustedServerId) {
+        this.trustedServerId = trustedServerId;
         return this;
     }
     

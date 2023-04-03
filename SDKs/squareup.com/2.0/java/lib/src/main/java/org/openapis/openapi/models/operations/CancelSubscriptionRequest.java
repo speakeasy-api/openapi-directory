@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelSubscriptionRequest {
-    
-    public CancelSubscriptionPathParams pathParams;
-    public CancelSubscriptionRequest withPathParams(CancelSubscriptionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CancelSubscriptionSecurity security;
-    public CancelSubscriptionRequest withSecurity(CancelSubscriptionSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the subscription to cancel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscription_id")
+    public String subscriptionId;
+    public CancelSubscriptionRequest withSubscriptionId(String subscriptionId) {
+        this.subscriptionId = subscriptionId;
         return this;
     }
     

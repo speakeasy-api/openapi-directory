@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateSlackChannelConfigurationHeaders;
 import org.openapis.openapi.models.operations.CreateSlackChannelConfigurationRequestBodyNotifyOnCaseSeverityEnum;
 import org.openapis.openapi.models.operations.CreateSlackChannelConfigurationRequestBody;
 import org.openapis.openapi.models.operations.CreateSlackChannelConfigurationRequest;
@@ -28,33 +27,29 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateSlackChannelConfigurationRequest req = new CreateSlackChannelConfigurationRequest() {{
-                headers = new CreateSlackChannelConfigurationHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateSlackChannelConfigurationRequestBody() {{
-                    channelId = "illum";
-                    channelName = "vel";
-                    channelRoleArn = "error";
+                requestBody = new CreateSlackChannelConfigurationRequestBody() {{
+                    channelId = "corrupti";
+                    channelName = "provident";
+                    channelRoleArn = "distinctio";
                     notifyOnAddCorrespondenceToCase = false;
-                    notifyOnCaseSeverity = "all";
+                    notifyOnCaseSeverity = "high";
                     notifyOnCreateOrReopenCase = false;
                     notifyOnResolveCase = false;
-                    teamId = "suscipit";
+                    teamId = "unde";
                 }};
-            }};            
+                xAmzAlgorithm = "nulla";
+                xAmzContentSha256 = "corrupti";
+                xAmzCredential = "illum";
+                xAmzDate = "vel";
+                xAmzSecurityToken = "error";
+                xAmzSignature = "deserunt";
+                xAmzSignedHeaders = "suscipit";
+            }}            
 
             CreateSlackChannelConfigurationResponse res = sdk.createSlackChannelConfiguration(req);
 
@@ -68,7 +63,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

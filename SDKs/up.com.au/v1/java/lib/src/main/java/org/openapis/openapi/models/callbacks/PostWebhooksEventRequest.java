@@ -7,24 +7,32 @@ package org.openapis.openapi.models.callbacks;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostWebhooksEventRequest {
-    
-    public PostWebhooksEventPathParams pathParams;
-    public PostWebhooksEventRequest withPathParams(PostWebhooksEventPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostWebhooksEventHeaders headers;
-    public PostWebhooksEventRequest withHeaders(PostWebhooksEventHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WebhookEventCallback request;
-    public PostWebhooksEventRequest withRequest(org.openapis.openapi.models.shared.WebhookEventCallback request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.WebhookEventCallback webhookEventCallback;
+    public PostWebhooksEventRequest withWebhookEventCallback(org.openapis.openapi.models.shared.WebhookEventCallback webhookEventCallback) {
+        this.webhookEventCallback = webhookEventCallback;
+        return this;
+    }
+    
+    /**
+     * The SHA-256 HMAC signature of the raw request body, signed using
+     * the `secretKey` of the webhook.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Up-Authenticity-Signature")
+    public String xUpAuthenticitySignature;
+    public PostWebhooksEventRequest withXUpAuthenticitySignature(String xUpAuthenticitySignature) {
+        this.xUpAuthenticitySignature = xUpAuthenticitySignature;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhookURL")
+    public String webhookURL;
+    public PostWebhooksEventRequest withWebhookURL(String webhookURL) {
+        this.webhookURL = webhookURL;
         return this;
     }
     

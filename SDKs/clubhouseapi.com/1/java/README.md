@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetCheckForUpdateQueryParams;
 import org.openapis.openapi.models.operations.GetCheckForUpdateRequest;
 import org.openapis.openapi.models.operations.GetCheckForUpdateResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             GetCheckForUpdateRequest req = new GetCheckForUpdateRequest() {{
-                queryParams = new GetCheckForUpdateQueryParams() {{
-                    isTestflight = 548814;
-                }};
-            }};            
+                isTestflight = 548814;
+            }}            
 
             GetCheckForUpdateResponse res = sdk.getCheckForUpdate(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

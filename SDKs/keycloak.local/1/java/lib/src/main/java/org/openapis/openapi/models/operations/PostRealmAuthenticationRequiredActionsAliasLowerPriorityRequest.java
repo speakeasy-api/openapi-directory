@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmAuthenticationRequiredActionsAliasLowerPriorityRequest {
+    /**
+     * Alias of required action
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=alias")
+    public String alias;
+    public PostRealmAuthenticationRequiredActionsAliasLowerPriorityRequest withAlias(String alias) {
+        this.alias = alias;
+        return this;
+    }
     
-    public PostRealmAuthenticationRequiredActionsAliasLowerPriorityPathParams pathParams;
-    public PostRealmAuthenticationRequiredActionsAliasLowerPriorityRequest withPathParams(PostRealmAuthenticationRequiredActionsAliasLowerPriorityPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmAuthenticationRequiredActionsAliasLowerPriorityRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

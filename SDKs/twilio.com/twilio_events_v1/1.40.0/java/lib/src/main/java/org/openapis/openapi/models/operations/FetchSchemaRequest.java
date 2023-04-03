@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSchemaRequest {
-    
-    public FetchSchemaPathParams pathParams;
-    public FetchSchemaRequest withPathParams(FetchSchemaPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchSchemaSecurity security;
-    public FetchSchemaRequest withSecurity(FetchSchemaSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchSchemaRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique identifier of the schema. Each schema can have multiple versions, that share the same id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Id")
+    public String id;
+    public FetchSchemaRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

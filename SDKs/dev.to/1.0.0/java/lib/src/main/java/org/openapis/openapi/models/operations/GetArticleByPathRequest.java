@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetArticleByPathRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slug")
+    public String slug;
+    public GetArticleByPathRequest withSlug(String slug) {
+        this.slug = slug;
+        return this;
+    }
     
-    public GetArticleByPathPathParams pathParams;
-    public GetArticleByPathRequest withPathParams(GetArticleByPathPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetArticleByPathRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

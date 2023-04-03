@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SrcSearchlyApiV1ControllersSimilarityBySongRequest {
-    
-    public SrcSearchlyApiV1ControllersSimilarityBySongQueryParams queryParams;
-    public SrcSearchlyApiV1ControllersSimilarityBySongRequest withQueryParams(SrcSearchlyApiV1ControllersSimilarityBySongQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Song identifier.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=song_id")
+    public Long songId;
+    public SrcSearchlyApiV1ControllersSimilarityBySongRequest withSongId(Long songId) {
+        this.songId = songId;
         return this;
     }
     

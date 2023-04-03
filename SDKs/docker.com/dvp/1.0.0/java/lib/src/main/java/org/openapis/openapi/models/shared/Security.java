@@ -7,9 +7,9 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer")
-    public SchemeHubAuth hubAuth;
-    public Security withHubAuth(SchemeHubAuth hubAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
+    public String hubAuth;
+    public Security withHubAuth(String hubAuth) {
         this.hubAuth = hubAuth;
         return this;
     }

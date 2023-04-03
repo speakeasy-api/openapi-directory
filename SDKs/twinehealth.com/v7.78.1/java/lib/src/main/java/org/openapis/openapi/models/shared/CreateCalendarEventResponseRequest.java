@@ -6,9 +6,6 @@ package org.openapis.openapi.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * CreateCalendarEventResponseRequest - OK
- */
 public class CreateCalendarEventResponseRequest {
     @JsonProperty("data")
     public CreateCalendarEventResponseRequestData data;

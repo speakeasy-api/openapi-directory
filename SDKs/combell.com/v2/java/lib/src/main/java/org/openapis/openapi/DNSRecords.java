@@ -44,13 +44,13 @@ public class DNSRecords {
      */
     public org.openapis.openapi.models.operations.DeleteDnsDomainNameRecordsRecordIdResponse deleteDnsDomainNameRecordsRecordId(org.openapis.openapi.models.operations.DeleteDnsDomainNameRecordsRecordIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDnsDomainNameRecordsRecordIdPathParams.class, baseUrl, "/dns/{domainName}/records/{recordId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDnsDomainNameRecordsRecordIdRequest.class, baseUrl, "/dns/{domainName}/records/{recordId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteDnsDomainNameRecordsRecordIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteDnsDomainNameRecordsRecordIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -82,13 +82,13 @@ public class DNSRecords {
      */
     public org.openapis.openapi.models.operations.GetDnsDomainNameRecordsResponse getDnsDomainNameRecords(org.openapis.openapi.models.operations.GetDnsDomainNameRecordsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDnsDomainNameRecordsPathParams.class, baseUrl, "/dns/{domainName}/records", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDnsDomainNameRecordsRequest.class, baseUrl, "/dns/{domainName}/records", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDnsDomainNameRecordsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDnsDomainNameRecordsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -128,13 +128,13 @@ public class DNSRecords {
      */
     public org.openapis.openapi.models.operations.GetDnsDomainNameRecordsRecordIdResponse getDnsDomainNameRecordsRecordId(org.openapis.openapi.models.operations.GetDnsDomainNameRecordsRecordIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDnsDomainNameRecordsRecordIdPathParams.class, baseUrl, "/dns/{domainName}/records/{recordId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDnsDomainNameRecordsRecordIdRequest.class, baseUrl, "/dns/{domainName}/records/{recordId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDnsDomainNameRecordsRecordIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDnsDomainNameRecordsRecordIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -172,15 +172,15 @@ public class DNSRecords {
      */
     public org.openapis.openapi.models.operations.PostDnsDomainNameRecordsResponse postDnsDomainNameRecords(org.openapis.openapi.models.operations.PostDnsDomainNameRecordsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostDnsDomainNameRecordsPathParams.class, baseUrl, "/dns/{domainName}/records", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostDnsDomainNameRecordsRequest.class, baseUrl, "/dns/{domainName}/records", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "dnsRecord", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostDnsDomainNameRecordsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostDnsDomainNameRecordsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -214,15 +214,15 @@ public class DNSRecords {
      */
     public org.openapis.openapi.models.operations.PutDnsDomainNameRecordsRecordIdResponse putDnsDomainNameRecordsRecordId(org.openapis.openapi.models.operations.PutDnsDomainNameRecordsRecordIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutDnsDomainNameRecordsRecordIdPathParams.class, baseUrl, "/dns/{domainName}/records/{recordId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutDnsDomainNameRecordsRecordIdRequest.class, baseUrl, "/dns/{domainName}/records/{recordId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "dnsRecord", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutDnsDomainNameRecordsRecordIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutDnsDomainNameRecordsRecordIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

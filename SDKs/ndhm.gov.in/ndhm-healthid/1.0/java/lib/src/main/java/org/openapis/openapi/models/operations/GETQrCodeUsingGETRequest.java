@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETQrCodeUsingGETRequest {
-    
-    public GETQrCodeUsingGETHeaders headers;
-    public GETQrCodeUsingGETRequest withHeaders(GETQrCodeUsingGETHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public GETQrCodeUsingGETRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
-    
-    public GETQrCodeUsingGETSecurity security;
-    public GETQrCodeUsingGETRequest withSecurity(GETQrCodeUsingGETSecurity security) {
-        this.security = security;
+    /**
+     * Auth Token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Token")
+    public String xToken;
+    public GETQrCodeUsingGETRequest withXToken(String xToken) {
+        this.xToken = xToken;
         return this;
     }
     

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTaskRequest {
-    
-    public CreateTaskPathParams pathParams;
-    public CreateTaskRequest withPathParams(CreateTaskPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Created new task for a given project.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TaskCreateDTO request;
-    public CreateTaskRequest withRequest(org.openapis.openapi.models.shared.TaskCreateDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TaskCreateDTO taskCreateDTO;
+    public CreateTaskRequest withTaskCreateDTO(org.openapis.openapi.models.shared.TaskCreateDTO taskCreateDTO) {
+        this.taskCreateDTO = taskCreateDTO;
+        return this;
+    }
+    
+    /**
+     * project's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public CreateTaskRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

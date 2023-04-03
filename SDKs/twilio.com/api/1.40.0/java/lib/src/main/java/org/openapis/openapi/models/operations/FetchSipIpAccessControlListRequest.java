@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSipIpAccessControlListRequest {
-    
-    public FetchSipIpAccessControlListPathParams pathParams;
-    public FetchSipIpAccessControlListRequest withPathParams(FetchSipIpAccessControlListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public FetchSipIpAccessControlListRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public FetchSipIpAccessControlListSecurity security;
-    public FetchSipIpAccessControlListRequest withSecurity(FetchSipIpAccessControlListSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchSipIpAccessControlListRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies the resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchSipIpAccessControlListRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

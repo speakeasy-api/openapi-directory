@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersCardinalRequest {
-    
-    public GetNumbersCardinalQueryParams queryParams;
-    public GetNumbersCardinalRequest withQueryParams(GetNumbersCardinalQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Language to use
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public GetNumbersCardinalRequest withLanguage(String language) {
+        this.language = language;
         return this;
     }
     
-    
-    public GetNumbersCardinalSecurity security;
-    public GetNumbersCardinalRequest withSecurity(GetNumbersCardinalSecurity security) {
-        this.security = security;
+    /**
+     * Number value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public Long number;
+    public GetNumbersCardinalRequest withNumber(Long number) {
+        this.number = number;
         return this;
     }
     

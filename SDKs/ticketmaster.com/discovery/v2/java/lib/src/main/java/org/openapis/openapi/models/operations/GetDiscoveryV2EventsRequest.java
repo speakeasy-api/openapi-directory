@@ -4,13 +4,366 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDiscoveryV2EventsRequest {
+    /**
+     * Filter events by attraction id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=attractionId")
+    public String attractionId;
+    public GetDiscoveryV2EventsRequest withAttractionId(String attractionId) {
+        this.attractionId = attractionId;
+        return this;
+    }
     
-    public GetDiscoveryV2EventsQueryParams queryParams;
-    public GetDiscoveryV2EventsRequest withQueryParams(GetDiscoveryV2EventsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter events by city
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
+    public String city;
+    public GetDiscoveryV2EventsRequest withCity(String city) {
+        this.city = city;
+        return this;
+    }
+    
+    /**
+     * Filter events by classification id: id of any segment, genre, sub-genre, type, sub-type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classificationId")
+    public Object[] classificationId;
+    public GetDiscoveryV2EventsRequest withClassificationId(Object[] classificationId) {
+        this.classificationId = classificationId;
+        return this;
+    }
+    
+    /**
+     * Filter events by classification name: name of any segment, genre, sub-genre, type, sub-type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classificationName")
+    public Object[] classificationName;
+    public GetDiscoveryV2EventsRequest withClassificationName(Object[] classificationName) {
+        this.classificationName = classificationName;
+        return this;
+    }
+    
+    /**
+     * Filter events by clientName
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientVisibility")
+    public String clientVisibility;
+    public GetDiscoveryV2EventsRequest withClientVisibility(String clientVisibility) {
+        this.clientVisibility = clientVisibility;
+        return this;
+    }
+    
+    /**
+     * Filter events by country code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=countryCode")
+    public String countryCode;
+    public GetDiscoveryV2EventsRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+        return this;
+    }
+    
+    /**
+     * Filter events by dma id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dmaId")
+    public String dmaId;
+    public GetDiscoveryV2EventsRequest withDmaId(String dmaId) {
+        this.dmaId = dmaId;
+        return this;
+    }
+    
+    /**
+     * Filter events with a start date before this date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDateTime")
+    public String endDateTime;
+    public GetDiscoveryV2EventsRequest withEndDateTime(String endDateTime) {
+        this.endDateTime = endDateTime;
+        return this;
+    }
+    
+    /**
+     * filter events by geoHash
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geoPoint")
+    public String geoPoint;
+    public GetDiscoveryV2EventsRequest withGeoPoint(String geoPoint) {
+        this.geoPoint = geoPoint;
+        return this;
+    }
+    
+    /**
+     * Filter entities by its id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetDiscoveryV2EventsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Yes if you want to display licensed content
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLicensedContent")
+    public GetDiscoveryV2EventsIncludeLicensedContentEnum includeLicensedContent;
+    public GetDiscoveryV2EventsRequest withIncludeLicensedContent(GetDiscoveryV2EventsIncludeLicensedContentEnum includeLicensedContent) {
+        this.includeLicensedContent = includeLicensedContent;
+        return this;
+    }
+    
+    /**
+     * yes, to include spell check suggestions in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeSpellcheck")
+    public GetDiscoveryV2EventsIncludeSpellcheckEnum includeSpellcheck;
+    public GetDiscoveryV2EventsRequest withIncludeSpellcheck(GetDiscoveryV2EventsIncludeSpellcheckEnum includeSpellcheck) {
+        this.includeSpellcheck = includeSpellcheck;
+        return this;
+    }
+    
+    /**
+     * True, to include events with date to be announce (TBA)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeTBA")
+    public GetDiscoveryV2EventsIncludeTbaEnum includeTBA;
+    public GetDiscoveryV2EventsRequest withIncludeTBA(GetDiscoveryV2EventsIncludeTbaEnum includeTBA) {
+        this.includeTBA = includeTBA;
+        return this;
+    }
+    
+    /**
+     * True, to include event with a date to be defined (TBD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeTBD")
+    public GetDiscoveryV2EventsIncludeTbdEnum includeTBD;
+    public GetDiscoveryV2EventsRequest withIncludeTBD(GetDiscoveryV2EventsIncludeTbdEnum includeTBD) {
+        this.includeTBD = includeTBD;
+        return this;
+    }
+    
+    /**
+     * True if you want to have entities flag as test in the response. Only, if you only wanted test entities
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeTest")
+    public GetDiscoveryV2EventsIncludeTestEnum includeTest;
+    public GetDiscoveryV2EventsRequest withIncludeTest(GetDiscoveryV2EventsIncludeTestEnum includeTest) {
+        this.includeTest = includeTest;
+        return this;
+    }
+    
+    /**
+     * Keyword to search on
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword")
+    public String keyword;
+    public GetDiscoveryV2EventsRequest withKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    
+    /**
+     * Filter events by latitude and longitude, this filter is deprecated and maybe removed in a future release, please use geoPoint instead
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latlong")
+    public String latlong;
+    public GetDiscoveryV2EventsRequest withLatlong(String latlong) {
+        this.latlong = latlong;
+        return this;
+    }
+    
+    /**
+     * The locale in ISO code format. Multiple comma-separated values can be provided. When omitting the country part of the code (e.g. only 'en' or 'fr') then the first matching locale is used. When using a '*' it matches all locales. '*' can only be used at the end (e.g. 'en-us,en,*') 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public GetDiscoveryV2EventsRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
+    
+    /**
+     * Filter events by market id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=marketId")
+    public String marketId;
+    public GetDiscoveryV2EventsRequest withMarketId(String marketId) {
+        this.marketId = marketId;
+        return this;
+    }
+    
+    /**
+     * Filter events with onsale end date before this date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onsaleEndDateTime")
+    public String onsaleEndDateTime;
+    public GetDiscoveryV2EventsRequest withOnsaleEndDateTime(String onsaleEndDateTime) {
+        this.onsaleEndDateTime = onsaleEndDateTime;
+        return this;
+    }
+    
+    /**
+     * Filter events with onsale range within this date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onsaleOnAfterStartDate")
+    public String onsaleOnAfterStartDate;
+    public GetDiscoveryV2EventsRequest withOnsaleOnAfterStartDate(String onsaleOnAfterStartDate) {
+        this.onsaleOnAfterStartDate = onsaleOnAfterStartDate;
+        return this;
+    }
+    
+    /**
+     * Filter events with onsale start date on this date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onsaleOnStartDate")
+    public String onsaleOnStartDate;
+    public GetDiscoveryV2EventsRequest withOnsaleOnStartDate(String onsaleOnStartDate) {
+        this.onsaleOnStartDate = onsaleOnStartDate;
+        return this;
+    }
+    
+    /**
+     * Filter events with onsale start date after this date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onsaleStartDateTime")
+    public String onsaleStartDateTime;
+    public GetDiscoveryV2EventsRequest withOnsaleStartDateTime(String onsaleStartDateTime) {
+        this.onsaleStartDateTime = onsaleStartDateTime;
+        return this;
+    }
+    
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetDiscoveryV2EventsRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Filter events by postal code / zipcode
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=postalCode")
+    public String postalCode;
+    public GetDiscoveryV2EventsRequest withPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+        return this;
+    }
+    
+    /**
+     * Filter events by promoter id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=promoterId")
+    public String promoterId;
+    public GetDiscoveryV2EventsRequest withPromoterId(String promoterId) {
+        this.promoterId = promoterId;
+        return this;
+    }
+    
+    /**
+     * Radius of the area in which we want to search for events.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
+    public String radius;
+    public GetDiscoveryV2EventsRequest withRadius(String radius) {
+        this.radius = radius;
+        return this;
+    }
+    
+    /**
+     * Filter events by segment id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=segmentId")
+    public String segmentId;
+    public GetDiscoveryV2EventsRequest withSegmentId(String segmentId) {
+        this.segmentId = segmentId;
+        return this;
+    }
+    
+    /**
+     * Filter events by segment name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=segmentName")
+    public String segmentName;
+    public GetDiscoveryV2EventsRequest withSegmentName(String segmentName) {
+        this.segmentName = segmentName;
+        return this;
+    }
+    
+    /**
+     * Page size of the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public String size;
+    public GetDiscoveryV2EventsRequest withSize(String size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * Sorting order of the search result. Allowable values : 'name,asc', 'name,desc', 'date,asc', 'date,desc', 'relevance,asc', 'relevance,desc', 'distance,asc', 'name,date,asc', 'name,date,desc', 'date,name,asc', 'date,name,desc','onsaleStartDate,asc', 'id,asc'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetDiscoveryV2EventsRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Filter entities by its source name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public GetDiscoveryV2EventsSourceEnum source;
+    public GetDiscoveryV2EventsRequest withSource(GetDiscoveryV2EventsSourceEnum source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * Filter events with a start date after this date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDateTime")
+    public String startDateTime;
+    public GetDiscoveryV2EventsRequest withStartDateTime(String startDateTime) {
+        this.startDateTime = startDateTime;
+        return this;
+    }
+    
+    /**
+     * Filter events by state code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stateCode")
+    public String stateCode;
+    public GetDiscoveryV2EventsRequest withStateCode(String stateCode) {
+        this.stateCode = stateCode;
+        return this;
+    }
+    
+    /**
+     * Unit of the radius
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit")
+    public GetDiscoveryV2EventsUnitEnum unit;
+    public GetDiscoveryV2EventsRequest withUnit(GetDiscoveryV2EventsUnitEnum unit) {
+        this.unit = unit;
+        return this;
+    }
+    
+    /**
+     * Filter events by venue id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=venueId")
+    public String venueId;
+    public GetDiscoveryV2EventsRequest withVenueId(String venueId) {
+        this.venueId = venueId;
         return this;
     }
     

@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSimRequest {
-    
-    public UpdateSimPathParams pathParams;
-    public UpdateSimRequest withPathParams(UpdateSimPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSimUpdateSimRequest request;
-    public UpdateSimRequest withRequest(UpdateSimUpdateSimRequest request) {
-        this.request = request;
+    public UpdateSimUpdateSimRequest requestBody;
+    public UpdateSimRequest withRequestBody(UpdateSimUpdateSimRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSimSecurity security;
-    public UpdateSimRequest withSecurity(UpdateSimSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateSimRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID or the `unique_name` of the Sim resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateSimRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

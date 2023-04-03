@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCustomerCardRequest {
-    
-    public DeleteCustomerCardPathParams pathParams;
-    public DeleteCustomerCardRequest withPathParams(DeleteCustomerCardPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the card on file to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=card_id")
+    public String cardId;
+    public DeleteCustomerCardRequest withCardId(String cardId) {
+        this.cardId = cardId;
         return this;
     }
     
-    
-    public DeleteCustomerCardSecurity security;
-    public DeleteCustomerCardRequest withSecurity(DeleteCustomerCardSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the customer that the card on file belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer_id")
+    public String customerId;
+    public DeleteCustomerCardRequest withCustomerId(String customerId) {
+        this.customerId = customerId;
         return this;
     }
     

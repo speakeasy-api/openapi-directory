@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkMerakiAuthUserRequest {
-    
-    public UpdateNetworkMerakiAuthUserPathParams pathParams;
-    public UpdateNetworkMerakiAuthUserRequest withPathParams(UpdateNetworkMerakiAuthUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkMerakiAuthUserRequestBody requestBody;
+    public UpdateNetworkMerakiAuthUserRequest withRequestBody(UpdateNetworkMerakiAuthUserRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkMerakiAuthUserRequestBody request;
-    public UpdateNetworkMerakiAuthUserRequest withRequest(UpdateNetworkMerakiAuthUserRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merakiAuthUserId")
+    public String merakiAuthUserId;
+    public UpdateNetworkMerakiAuthUserRequest withMerakiAuthUserId(String merakiAuthUserId) {
+        this.merakiAuthUserId = merakiAuthUserId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkMerakiAuthUserRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

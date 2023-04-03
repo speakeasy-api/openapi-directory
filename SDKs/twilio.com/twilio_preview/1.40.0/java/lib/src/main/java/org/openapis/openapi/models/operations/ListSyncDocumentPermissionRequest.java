@@ -4,34 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSyncDocumentPermissionRequest {
-    
-    public ListSyncDocumentPermissionPathParams pathParams;
-    public ListSyncDocumentPermissionRequest withPathParams(ListSyncDocumentPermissionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Identifier of the Sync Document. Either a SID or a unique name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DocumentSid")
+    public String documentSid;
+    public ListSyncDocumentPermissionRequest withDocumentSid(String documentSid) {
+        this.documentSid = documentSid;
         return this;
     }
     
-    
-    public ListSyncDocumentPermissionQueryParams queryParams;
-    public ListSyncDocumentPermissionRequest withQueryParams(ListSyncDocumentPermissionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListSyncDocumentPermissionRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListSyncDocumentPermissionSecurity security;
-    public ListSyncDocumentPermissionRequest withSecurity(ListSyncDocumentPermissionSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListSyncDocumentPermissionRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListSyncDocumentPermissionRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
     
-    public String serverURL;
-    public ListSyncDocumentPermissionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public ListSyncDocumentPermissionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

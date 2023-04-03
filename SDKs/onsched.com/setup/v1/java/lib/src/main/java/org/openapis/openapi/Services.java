@@ -40,7 +40,7 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1ServicesAllocationsIdResponse deleteSetupV1ServicesAllocationsId(org.openapis.openapi.models.operations.DeleteSetupV1ServicesAllocationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1ServicesAllocationsIdPathParams.class, baseUrl, "/setup/v1/services/allocations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1ServicesAllocationsIdRequest.class, baseUrl, "/setup/v1/services/allocations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -80,7 +80,7 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1ServicesBlockIdResponse deleteSetupV1ServicesBlockId(org.openapis.openapi.models.operations.DeleteSetupV1ServicesBlockIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1ServicesBlockIdPathParams.class, baseUrl, "/setup/v1/services/block/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1ServicesBlockIdRequest.class, baseUrl, "/setup/v1/services/block/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -120,7 +120,7 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1ServicesCalendarIdResponse deleteSetupV1ServicesCalendarId(org.openapis.openapi.models.operations.DeleteSetupV1ServicesCalendarIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1ServicesCalendarIdPathParams.class, baseUrl, "/setup/v1/services/calendar/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1ServicesCalendarIdRequest.class, baseUrl, "/setup/v1/services/calendar/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -160,7 +160,7 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1ServicesIdResponse deleteSetupV1ServicesId(org.openapis.openapi.models.operations.DeleteSetupV1ServicesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1ServicesIdPathParams.class, baseUrl, "/setup/v1/services/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1ServicesIdRequest.class, baseUrl, "/setup/v1/services/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -200,7 +200,7 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1ServicesIdDeleteimageResponse deleteSetupV1ServicesIdDeleteimage(org.openapis.openapi.models.operations.DeleteSetupV1ServicesIdDeleteimageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1ServicesIdDeleteimagePathParams.class, baseUrl, "/setup/v1/services/{id}/deleteimage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1ServicesIdDeleteimageRequest.class, baseUrl, "/setup/v1/services/{id}/deleteimage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -246,7 +246,7 @@ public class Services {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ServicesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ServicesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -286,7 +286,7 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.GetSetupV1ServicesAllocationsIdResponse getSetupV1ServicesAllocationsId(org.openapis.openapi.models.operations.GetSetupV1ServicesAllocationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ServicesAllocationsIdPathParams.class, baseUrl, "/setup/v1/services/allocations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ServicesAllocationsIdRequest.class, baseUrl, "/setup/v1/services/allocations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -326,7 +326,7 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.GetSetupV1ServicesBlocksIdResponse getSetupV1ServicesBlocksId(org.openapis.openapi.models.operations.GetSetupV1ServicesBlocksIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ServicesBlocksIdPathParams.class, baseUrl, "/setup/v1/services/blocks/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ServicesBlocksIdRequest.class, baseUrl, "/setup/v1/services/blocks/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -366,7 +366,7 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.GetSetupV1ServicesIdResponse getSetupV1ServicesId(org.openapis.openapi.models.operations.GetSetupV1ServicesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ServicesIdPathParams.class, baseUrl, "/setup/v1/services/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ServicesIdRequest.class, baseUrl, "/setup/v1/services/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -407,13 +407,13 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.GetSetupV1ServicesIdAllocationsResponse getSetupV1ServicesIdAllocations(org.openapis.openapi.models.operations.GetSetupV1ServicesIdAllocationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ServicesIdAllocationsPathParams.class, baseUrl, "/setup/v1/services/{id}/allocations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ServicesIdAllocationsRequest.class, baseUrl, "/setup/v1/services/{id}/allocations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ServicesIdAllocationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ServicesIdAllocationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -455,7 +455,7 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.GetSetupV1ServicesIdAvailabilityResponse getSetupV1ServicesIdAvailability(org.openapis.openapi.models.operations.GetSetupV1ServicesIdAvailabilityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ServicesIdAvailabilityPathParams.class, baseUrl, "/setup/v1/services/{id}/availability", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ServicesIdAvailabilityRequest.class, baseUrl, "/setup/v1/services/{id}/availability", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -495,13 +495,13 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.GetSetupV1ServicesIdBlocksResponse getSetupV1ServicesIdBlocks(org.openapis.openapi.models.operations.GetSetupV1ServicesIdBlocksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ServicesIdBlocksPathParams.class, baseUrl, "/setup/v1/services/{id}/blocks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ServicesIdBlocksRequest.class, baseUrl, "/setup/v1/services/{id}/blocks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ServicesIdBlocksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ServicesIdBlocksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -543,13 +543,13 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.GetSetupV1ServicesIdCalendarResponse getSetupV1ServicesIdCalendar(org.openapis.openapi.models.operations.GetSetupV1ServicesIdCalendarRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ServicesIdCalendarPathParams.class, baseUrl, "/setup/v1/services/{id}/calendar", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ServicesIdCalendarRequest.class, baseUrl, "/setup/v1/services/{id}/calendar", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ServicesIdCalendarQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ServicesIdCalendarRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -589,13 +589,13 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.GetSetupV1ServicesIdResourcesResponse getSetupV1ServicesIdResources(org.openapis.openapi.models.operations.GetSetupV1ServicesIdResourcesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ServicesIdResourcesPathParams.class, baseUrl, "/setup/v1/services/{id}/resources", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1ServicesIdResourcesRequest.class, baseUrl, "/setup/v1/services/{id}/resources", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ServicesIdResourcesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1ServicesIdResourcesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -640,7 +640,7 @@ public class Services {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSetupV1ServicesResponse postSetupV1Services(org.openapis.openapi.models.operations.PostSetupV1ServicesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSetupV1ServicesResponse postSetupV1Services(org.openapis.openapi.models.shared.ServiceInputModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setup/v1/services");
         
@@ -682,7 +682,7 @@ public class Services {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSetupV1ServicesCalendarResponse postSetupV1ServicesCalendar(org.openapis.openapi.models.operations.PostSetupV1ServicesCalendarRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSetupV1ServicesCalendarResponse postSetupV1ServicesCalendar(org.openapis.openapi.models.shared.ServiceCalendarInputModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setup/v1/services/calendar");
         
@@ -741,12 +741,12 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.PostSetupV1ServicesIdAllocationsResponse postSetupV1ServicesIdAllocations(org.openapis.openapi.models.operations.PostSetupV1ServicesIdAllocationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1ServicesIdAllocationsPathParams.class, baseUrl, "/setup/v1/services/{id}/allocations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1ServicesIdAllocationsRequest.class, baseUrl, "/setup/v1/services/{id}/allocations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "serviceAllocationInputModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -783,12 +783,12 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.PostSetupV1ServicesIdAllocationsBulkResponse postSetupV1ServicesIdAllocationsBulk(org.openapis.openapi.models.operations.PostSetupV1ServicesIdAllocationsBulkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1ServicesIdAllocationsBulkPathParams.class, baseUrl, "/setup/v1/services/{id}/allocations/bulk", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1ServicesIdAllocationsBulkRequest.class, baseUrl, "/setup/v1/services/{id}/allocations/bulk", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "serviceAllocationsInputModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -842,12 +842,12 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.PostSetupV1ServicesIdBlockResponse postSetupV1ServicesIdBlock(org.openapis.openapi.models.operations.PostSetupV1ServicesIdBlockRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1ServicesIdBlockPathParams.class, baseUrl, "/setup/v1/services/{id}/block", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1ServicesIdBlockRequest.class, baseUrl, "/setup/v1/services/{id}/block", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "serviceBlockInputModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -884,12 +884,12 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.PostSetupV1ServicesIdUploadimageResponse postSetupV1ServicesIdUploadimage(org.openapis.openapi.models.operations.PostSetupV1ServicesIdUploadimageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1ServicesIdUploadimagePathParams.class, baseUrl, "/setup/v1/services/{id}/uploadimage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1ServicesIdUploadimageRequest.class, baseUrl, "/setup/v1/services/{id}/uploadimage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "serviceImageInputModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -926,12 +926,12 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.PutSetupV1ServicesAllocationsIdResponse putSetupV1ServicesAllocationsId(org.openapis.openapi.models.operations.PutSetupV1ServicesAllocationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ServicesAllocationsIdPathParams.class, baseUrl, "/setup/v1/services/allocations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ServicesAllocationsIdRequest.class, baseUrl, "/setup/v1/services/allocations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "serviceAllocationUpdateModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -968,12 +968,12 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.PutSetupV1ServicesBlockIdResponse putSetupV1ServicesBlockId(org.openapis.openapi.models.operations.PutSetupV1ServicesBlockIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ServicesBlockIdPathParams.class, baseUrl, "/setup/v1/services/block/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ServicesBlockIdRequest.class, baseUrl, "/setup/v1/services/block/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "serviceBlockUpdateModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1010,12 +1010,12 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.PutSetupV1ServicesIdResponse putSetupV1ServicesId(org.openapis.openapi.models.operations.PutSetupV1ServicesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ServicesIdPathParams.class, baseUrl, "/setup/v1/services/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ServicesIdRequest.class, baseUrl, "/setup/v1/services/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "serviceUpdateModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1054,12 +1054,12 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.PutSetupV1ServicesIdAvailabilityResponse putSetupV1ServicesIdAvailability(org.openapis.openapi.models.operations.PutSetupV1ServicesIdAvailabilityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ServicesIdAvailabilityPathParams.class, baseUrl, "/setup/v1/services/{id}/availability", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ServicesIdAvailabilityRequest.class, baseUrl, "/setup/v1/services/{id}/availability", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "availabilityInputModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1096,7 +1096,7 @@ public class Services {
      */
     public org.openapis.openapi.models.operations.PutSetupV1ServicesIdRecoverResponse putSetupV1ServicesIdRecover(org.openapis.openapi.models.operations.PutSetupV1ServicesIdRecoverRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ServicesIdRecoverPathParams.class, baseUrl, "/setup/v1/services/{id}/recover", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1ServicesIdRecoverRequest.class, baseUrl, "/setup/v1/services/{id}/recover", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCustomerServiceMetricTaskRequest {
-    
-    public CreateCustomerServiceMetricTaskHeaders headers;
-    public CreateCustomerServiceMetricTaskRequest withHeaders(CreateCustomerServiceMetricTaskHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Request payload containing version, feedType, and optional filterCriteria.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateServiceMetricsTaskRequest request;
-    public CreateCustomerServiceMetricTaskRequest withRequest(org.openapis.openapi.models.shared.CreateServiceMetricsTaskRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateServiceMetricsTaskRequest createServiceMetricsTaskRequest;
+    public CreateCustomerServiceMetricTaskRequest withCreateServiceMetricsTaskRequest(org.openapis.openapi.models.shared.CreateServiceMetricsTaskRequest createServiceMetricsTaskRequest) {
+        this.createServiceMetricsTaskRequest = createServiceMetricsTaskRequest;
         return this;
     }
     
-    
-    public CreateCustomerServiceMetricTaskSecurity security;
-    public CreateCustomerServiceMetricTaskRequest withSecurity(CreateCustomerServiceMetricTaskSecurity security) {
-        this.security = security;
+    /**
+     * Use this header to specify the natural language in which the authenticated user desires the response.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=accept-language")
+    public String acceptLanguage;
+    public CreateCustomerServiceMetricTaskRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     

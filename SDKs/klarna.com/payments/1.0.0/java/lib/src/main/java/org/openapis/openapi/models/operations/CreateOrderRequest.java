@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOrderRequest {
-    
-    public CreateOrderPathParams pathParams;
-    public CreateOrderRequest withPathParams(CreateOrderPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=authorizationToken")
+    public String authorizationToken;
+    public CreateOrderRequest withAuthorizationToken(String authorizationToken) {
+        this.authorizationToken = authorizationToken;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateOrderRequestInput request;
-    public CreateOrderRequest withRequest(org.openapis.openapi.models.shared.CreateOrderRequestInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateOrderRequestInput createOrderRequestInput;
+    public CreateOrderRequest withCreateOrderRequestInput(org.openapis.openapi.models.shared.CreateOrderRequestInput createOrderRequestInput) {
+        this.createOrderRequestInput = createOrderRequestInput;
         return this;
     }
     

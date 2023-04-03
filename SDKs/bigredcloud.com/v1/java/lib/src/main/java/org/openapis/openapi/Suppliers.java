@@ -40,13 +40,13 @@ public class Suppliers {
      */
     public org.openapis.openapi.models.operations.SuppliersDeleteResponse suppliersDelete(org.openapis.openapi.models.operations.SuppliersDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SuppliersDeletePathParams.class, baseUrl, "/v1/suppliers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SuppliersDeleteRequest.class, baseUrl, "/v1/suppliers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SuppliersDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SuppliersDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -121,7 +121,7 @@ public class Suppliers {
      */
     public org.openapis.openapi.models.operations.SuppliersGetAccountTransResponse suppliersGetAccountTrans(org.openapis.openapi.models.operations.SuppliersGetAccountTransRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SuppliersGetAccountTransPathParams.class, baseUrl, "/v1/suppliers/{itemId}/accountTrans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SuppliersGetAccountTransRequest.class, baseUrl, "/v1/suppliers/{itemId}/accountTrans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -159,7 +159,7 @@ public class Suppliers {
      */
     public org.openapis.openapi.models.operations.SuppliersGetOpeningBalanceResponse suppliersGetOpeningBalance(org.openapis.openapi.models.operations.SuppliersGetOpeningBalanceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SuppliersGetOpeningBalancePathParams.class, baseUrl, "/v1/suppliers/{itemId}/openingBalance", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SuppliersGetOpeningBalanceRequest.class, baseUrl, "/v1/suppliers/{itemId}/openingBalance", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -197,7 +197,7 @@ public class Suppliers {
      */
     public org.openapis.openapi.models.operations.SuppliersGetOpeningBalanceListResponse suppliersGetOpeningBalanceList(org.openapis.openapi.models.operations.SuppliersGetOpeningBalanceListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SuppliersGetOpeningBalanceListPathParams.class, baseUrl, "/v1/suppliers/{itemId}/openingBalanceList", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SuppliersGetOpeningBalanceListRequest.class, baseUrl, "/v1/suppliers/{itemId}/openingBalanceList", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -233,7 +233,7 @@ public class Suppliers {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SuppliersPostResponse suppliersPost(org.openapis.openapi.models.operations.SuppliersPostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SuppliersPostResponse suppliersPost(org.openapis.openapi.models.shared.SupplierDto request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/suppliers");
         
@@ -276,7 +276,7 @@ public class Suppliers {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SuppliersProcessBatchResponse suppliersProcessBatch(org.openapis.openapi.models.operations.SuppliersProcessBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SuppliersProcessBatchResponse suppliersProcessBatch(org.openapis.openapi.models.shared.BatchItemSupplierDto[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/suppliers/batch");
         
@@ -321,12 +321,12 @@ public class Suppliers {
      */
     public org.openapis.openapi.models.operations.SuppliersPutResponse suppliersPut(org.openapis.openapi.models.operations.SuppliersPutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SuppliersPutPathParams.class, baseUrl, "/v1/suppliers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SuppliersPutRequest.class, baseUrl, "/v1/suppliers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "supplierDto", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -364,13 +364,13 @@ public class Suppliers {
      */
     public org.openapis.openapi.models.operations.GetV1SuppliersIdResponse getV1SuppliersId(org.openapis.openapi.models.operations.GetV1SuppliersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1SuppliersIdPathParams.class, baseUrl, "/v1/suppliers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1SuppliersIdRequest.class, baseUrl, "/v1/suppliers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV1SuppliersIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV1SuppliersIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

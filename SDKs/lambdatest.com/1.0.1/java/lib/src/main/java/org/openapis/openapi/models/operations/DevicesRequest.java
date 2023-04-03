@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DevicesRequest {
-    
-    public DevicesQueryParams queryParams;
-    public DevicesRequest withQueryParams(DevicesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DevicesSecurity security;
-    public DevicesRequest withSecurity(DevicesSecurity security) {
-        this.security = security;
+    /**
+     * Fetch details for a particular OS
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=os")
+    public String os;
+    public DevicesRequest withOs(String os) {
+        this.os = os;
         return this;
     }
     

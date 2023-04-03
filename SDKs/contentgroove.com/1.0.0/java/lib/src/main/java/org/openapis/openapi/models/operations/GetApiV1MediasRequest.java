@@ -4,20 +4,44 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1MediasRequest {
-    
-    public GetApiV1MediasQueryParams queryParams;
-    public GetApiV1MediasRequest withQueryParams(GetApiV1MediasQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filters to be applied to the query.
+     * 
+     * Query params in the url must look like this: "filter[attributeName_*matcher*]"
+     * 
+     * (i.e. filter[name_eq]=chimp%20into%20space)
+     * 
+     * Available matchers can be found here: https://activerecord-hackery.github.io/ransack/getting-started/search-matches/
+     * 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=filter")
+    public java.util.Map<String, Object> filter;
+    public GetApiV1MediasRequest withFilter(java.util.Map<String, Object> filter) {
+        this.filter = filter;
         return this;
     }
     
+    /**
+     * Specify page number and page size for the query
+     */
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=page")
+    public java.util.Map<String, Object> page;
+    public GetApiV1MediasRequest withPage(java.util.Map<String, Object> page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetApiV1MediasSecurity security;
-    public GetApiV1MediasRequest withSecurity(GetApiV1MediasSecurity security) {
-        this.security = security;
+    /**
+     * Sorting to be applied to the query. For more info: https://jsonapi.org/format/#fetching-sorting
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetApiV1MediasSortEnum sort;
+    public GetApiV1MediasRequest withSort(GetApiV1MediasSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

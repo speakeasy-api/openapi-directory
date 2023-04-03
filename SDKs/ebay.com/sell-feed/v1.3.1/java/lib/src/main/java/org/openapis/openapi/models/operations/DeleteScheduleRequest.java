@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteScheduleRequest {
-    
-    public DeleteSchedulePathParams pathParams;
-    public DeleteScheduleRequest withPathParams(DeleteSchedulePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteScheduleSecurity security;
-    public DeleteScheduleRequest withSecurity(DeleteScheduleSecurity security) {
-        this.security = security;
+    /**
+     * The &lt;strong&gt;schedule_id&lt;/strong&gt; of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the &lt;strong&gt;getSchedules&lt;/strong&gt; method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schedule_id")
+    public String scheduleId;
+    public DeleteScheduleRequest withScheduleId(String scheduleId) {
+        this.scheduleId = scheduleId;
         return this;
     }
     

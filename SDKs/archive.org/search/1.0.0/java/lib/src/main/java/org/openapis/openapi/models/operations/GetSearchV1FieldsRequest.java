@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchV1FieldsRequest {
-    
-    public GetSearchV1FieldsQueryParams queryParams;
-    public GetSearchV1FieldsRequest withQueryParams(GetSearchV1FieldsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specifies a JavaScript function func, for a JSON-P response. When provided, results are wrapped as `callback(data)`, and the returned MIME type is application/javascript. This causes the caller to automatically run the func with the JSON results as its argument.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public GetSearchV1FieldsRequest withCallback(String callback) {
+        this.callback = callback;
         return this;
     }
     

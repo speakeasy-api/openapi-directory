@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatorsListRequest {
+    /**
+     * A page number within the paginated result set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public CreatorsListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public CreatorsListQueryParams queryParams;
-    public CreatorsListRequest withQueryParams(CreatorsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public CreatorsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

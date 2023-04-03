@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPairSimJaccardResourceRequest {
-    
-    public GetPairSimJaccardResourcePathParams pathParams;
-    public GetPairSimJaccardResourceRequest withPathParams(GetPairSimJaccardResourcePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id, e.g. NCBIGene:10891; ZFIN:ZDB-GENE-980526-166; UniProtKB:Q15465
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id1")
+    public String id1;
+    public GetPairSimJaccardResourceRequest withId1(String id1) {
+        this.id1 = id1;
         return this;
     }
     
+    /**
+     * id, e.g. NCBIGene:1200; ZFIN:ZDB-GENE-980528-2059; UniProtKB:P12644
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id2")
+    public String id2;
+    public GetPairSimJaccardResourceRequest withId2(String id2) {
+        this.id2 = id2;
+        return this;
+    }
     
-    public GetPairSimJaccardResourceQueryParams queryParams;
-    public GetPairSimJaccardResourceRequest withQueryParams(GetPairSimJaccardResourceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * e.g. disease, phenotype, gene. Two subjects will be compared based on overlap between associations to objects in this category
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object_category")
+    public String objectCategory;
+    public GetPairSimJaccardResourceRequest withObjectCategory(String objectCategory) {
+        this.objectCategory = objectCategory;
         return this;
     }
     

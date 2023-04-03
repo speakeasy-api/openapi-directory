@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkApplianceVpnBgpRequest {
-    
-    public UpdateNetworkApplianceVpnBgpPathParams pathParams;
-    public UpdateNetworkApplianceVpnBgpRequest withPathParams(UpdateNetworkApplianceVpnBgpPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkApplianceVpnBgpRequestBody requestBody;
+    public UpdateNetworkApplianceVpnBgpRequest withRequestBody(UpdateNetworkApplianceVpnBgpRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkApplianceVpnBgpRequestBody request;
-    public UpdateNetworkApplianceVpnBgpRequest withRequest(UpdateNetworkApplianceVpnBgpRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkApplianceVpnBgpRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

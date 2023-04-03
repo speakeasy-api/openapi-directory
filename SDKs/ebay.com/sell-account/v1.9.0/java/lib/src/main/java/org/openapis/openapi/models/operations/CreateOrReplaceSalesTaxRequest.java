@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOrReplaceSalesTaxRequest {
-    
-    public CreateOrReplaceSalesTaxPathParams pathParams;
-    public CreateOrReplaceSalesTaxRequest withPathParams(CreateOrReplaceSalesTaxPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A container that describes the how the sales tax is calculated.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SalesTaxBase request;
-    public CreateOrReplaceSalesTaxRequest withRequest(org.openapis.openapi.models.shared.SalesTaxBase request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SalesTaxBase salesTaxBase;
+    public CreateOrReplaceSalesTaxRequest withSalesTaxBase(org.openapis.openapi.models.shared.SalesTaxBase salesTaxBase) {
+        this.salesTaxBase = salesTaxBase;
         return this;
     }
     
+    /**
+     * This path parameter specifies the two-letter &lt;a href="https://www.iso.org/iso-3166-country-codes.html " title="https://www.iso.org " target="_blank"&gt;ISO 3166&lt;/a&gt; code for the country for which you want to create a sales tax table entry.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryCode")
+    public String countryCode;
+    public CreateOrReplaceSalesTaxRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+        return this;
+    }
     
-    public CreateOrReplaceSalesTaxSecurity security;
-    public CreateOrReplaceSalesTaxRequest withSecurity(CreateOrReplaceSalesTaxSecurity security) {
-        this.security = security;
+    /**
+     * This path parameter specifies the ID of the tax jurisdiction for the table entry you want to create. Retrieve valid jurisdiction IDs using &lt;b&gt;getSalesTaxJurisdictions&lt;/b&gt; in the Metadata API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jurisdictionId")
+    public String jurisdictionId;
+    public CreateOrReplaceSalesTaxRequest withJurisdictionId(String jurisdictionId) {
+        this.jurisdictionId = jurisdictionId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OauthAuthorizationsGetGrantRequest {
-    
-    public OauthAuthorizationsGetGrantPathParams pathParams;
-    public OauthAuthorizationsGetGrantRequest withPathParams(OauthAuthorizationsGetGrantPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the grant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=grant_id")
+    public Long grantId;
+    public OauthAuthorizationsGetGrantRequest withGrantId(Long grantId) {
+        this.grantId = grantId;
         return this;
     }
     

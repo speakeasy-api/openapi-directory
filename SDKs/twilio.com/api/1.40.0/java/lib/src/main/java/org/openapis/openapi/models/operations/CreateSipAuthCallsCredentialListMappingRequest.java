@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSipAuthCallsCredentialListMappingRequest {
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreateSipAuthCallsCredentialListMappingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public CreateSipAuthCallsCredentialListMappingPathParams pathParams;
-    public CreateSipAuthCallsCredentialListMappingRequest withPathParams(CreateSipAuthCallsCredentialListMappingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the SIP domain that will contain the new resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainSid")
+    public String domainSid;
+    public CreateSipAuthCallsCredentialListMappingRequest withDomainSid(String domainSid) {
+        this.domainSid = domainSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateSipAuthCallsCredentialListMappingCreateSipAuthCallsCredentialListMappingRequest request;
-    public CreateSipAuthCallsCredentialListMappingRequest withRequest(CreateSipAuthCallsCredentialListMappingCreateSipAuthCallsCredentialListMappingRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateSipAuthCallsCredentialListMappingSecurity security;
-    public CreateSipAuthCallsCredentialListMappingRequest withSecurity(CreateSipAuthCallsCredentialListMappingSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateSipAuthCallsCredentialListMappingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateSipAuthCallsCredentialListMappingCreateSipAuthCallsCredentialListMappingRequest requestBody;
+    public CreateSipAuthCallsCredentialListMappingRequest withRequestBody(CreateSipAuthCallsCredentialListMappingCreateSipAuthCallsCredentialListMappingRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

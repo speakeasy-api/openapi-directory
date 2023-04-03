@@ -18,12 +18,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateAccessTokenSecurity;
-import org.openapis.openapi.models.operations.CreateAccessTokenPathParams;
 import org.openapis.openapi.models.operations.CreateAccessTokenCreateAccessTokenRequest;
 import org.openapis.openapi.models.operations.CreateAccessTokenRequest;
 import org.openapis.openapi.models.operations.CreateAccessTokenResponse;
 import org.openapis.openapi.models.shared.AccessTokenEnumFactorTypesEnum;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -32,24 +30,19 @@ public class Application {
                 .build();
 
             CreateAccessTokenRequest req = new CreateAccessTokenRequest() {{
-                security = new CreateAccessTokenSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                pathParams = new CreateAccessTokenPathParams() {{
-                    serviceSid = "corrupti";
-                }};
-                request = new CreateAccessTokenCreateAccessTokenRequest() {{
-                    factorFriendlyName = "provident";
+                requestBody = new CreateAccessTokenCreateAccessTokenRequest() {{
+                    factorFriendlyName = "corrupti";
                     factorType = "push";
-                    identity = "distinctio";
-                    ttl = 844266;
+                    identity = "provident";
+                    ttl = 715190;
                 }};
-            }};            
+                serviceSid = "quibusdam";
+            }}            
 
-            CreateAccessTokenResponse res = sdk.createAccessToken(req);
+            CreateAccessTokenResponse res = sdk.createAccessToken(req, new CreateAccessTokenSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.verifyV2ServiceAccessToken.isPresent()) {
                 // handle response
@@ -61,7 +54,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

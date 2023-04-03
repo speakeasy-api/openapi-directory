@@ -35,27 +35,28 @@ public class Projects {
     /**
      * A maximum of 10,000 entry groups may be created per organization across all locations. Users should enable the Data Catalog API in the project identified by the `parent` parameter (see [Data Catalog Resource Project] (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more information).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsCreateResponse datacatalogProjectsLocationsEntryGroupsCreate(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsCreateResponse datacatalogProjectsLocationsEntryGroupsCreate(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsCreateRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/entryGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsCreateRequest.class, baseUrl, "/v1beta1/{parent}/entryGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatacatalogV1beta1EntryGroupInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Projects {
     /**
      * Creates an entry. Only entries of 'FILESET' type or user-specified type can be created. Users should enable the Data Catalog API in the project identified by the `parent` parameter (see [Data Catalog Resource Project] (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more information). A maximum of 100,000 entries may be created per entry group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesCreateResponse datacatalogProjectsLocationsEntryGroupsEntriesCreate(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesCreateResponse datacatalogProjectsLocationsEntryGroupsEntriesCreate(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesCreateRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesCreatePathParams.class, baseUrl, "/v1beta1/{parent}/entries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesCreateRequest.class, baseUrl, "/v1beta1/{parent}/entries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatacatalogV1beta1EntryInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,25 +131,26 @@ public class Projects {
     /**
      * Lists entries.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesListResponse datacatalogProjectsLocationsEntryGroupsEntriesList(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesListResponse datacatalogProjectsLocationsEntryGroupsEntriesList(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesListRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesListPathParams.class, baseUrl, "/v1beta1/{parent}/entries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesListRequest.class, baseUrl, "/v1beta1/{parent}/entries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsEntriesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Projects {
     /**
      * Lists entry groups.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsListResponse datacatalogProjectsLocationsEntryGroupsList(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsListResponse datacatalogProjectsLocationsEntryGroupsList(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsListRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsListPathParams.class, baseUrl, "/v1beta1/{parent}/entryGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsListRequest.class, baseUrl, "/v1beta1/{parent}/entryGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,27 +223,28 @@ public class Projects {
     /**
      * Creates a tag on an Entry. Note: The project identified by the `parent` parameter for the [tag](https://cloud.google.com/data-catalog/docs/reference/rest/v1beta1/projects.locations.entryGroups.entries.tags/create#path-parameters) and the [tag template](https://cloud.google.com/data-catalog/docs/reference/rest/v1beta1/projects.locations.tagTemplates/create#path-parameters) used to create the tag must be from the same organization.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsCreateResponse datacatalogProjectsLocationsEntryGroupsTagsCreate(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsCreateResponse datacatalogProjectsLocationsEntryGroupsTagsCreate(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsCreateRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsCreateRequest.class, baseUrl, "/v1beta1/{parent}/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatacatalogV1beta1TagInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,25 +271,26 @@ public class Projects {
     /**
      * Lists tags assigned to an Entry. The columns in the response are lowercased.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsListResponse datacatalogProjectsLocationsEntryGroupsTagsList(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsListResponse datacatalogProjectsLocationsEntryGroupsTagsList(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsListRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsListPathParams.class, baseUrl, "/v1beta1/{parent}/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsListRequest.class, baseUrl, "/v1beta1/{parent}/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsEntryGroupsTagsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,27 +317,28 @@ public class Projects {
     /**
      * Creates a tag template. The user should enable the Data Catalog API in the project identified by the `parent` parameter (see [Data Catalog Resource Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more information).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesCreateResponse datacatalogProjectsLocationsTagTemplatesCreate(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesCreateResponse datacatalogProjectsLocationsTagTemplatesCreate(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesCreateRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesCreatePathParams.class, baseUrl, "/v1beta1/{parent}/tagTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesCreateRequest.class, baseUrl, "/v1beta1/{parent}/tagTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatacatalogV1beta1TagTemplateInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,27 +365,28 @@ public class Projects {
     /**
      * Creates a field in a tag template. The user should enable the Data Catalog API in the project identified by the `parent` parameter (see [Data Catalog Resource Project](https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more information).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsCreateResponse datacatalogProjectsLocationsTagTemplatesFieldsCreate(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsCreateResponse datacatalogProjectsLocationsTagTemplatesFieldsCreate(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/fields", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest.class, baseUrl, "/v1beta1/{parent}/fields", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatacatalogV1beta1TagTemplateFieldInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -405,27 +413,28 @@ public class Projects {
     /**
      * Renames an enum value in a tag template. The enum values have to be unique within one enum field. Thus, an enum value cannot be renamed with a name used in any other enum value within the same enum field.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRenameResponse datacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRename(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRenameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRenameResponse datacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRename(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRenameRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRenameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRenamePathParams.class, baseUrl, "/v1beta1/{name}:rename", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRenameRequest.class, baseUrl, "/v1beta1/{name}:rename", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatacatalogV1beta1RenameTagTemplateFieldEnumValueRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRenameQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTagTemplatesFieldsEnumValuesRenameRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -452,27 +461,28 @@ public class Projects {
     /**
      * Creates a taxonomy in the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesCreateResponse datacatalogProjectsLocationsTaxonomiesCreate(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesCreateResponse datacatalogProjectsLocationsTaxonomiesCreate(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesCreateRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesCreatePathParams.class, baseUrl, "/v1beta1/{parent}/taxonomies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesCreateRequest.class, baseUrl, "/v1beta1/{parent}/taxonomies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatacatalogV1beta1TaxonomyInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -499,25 +509,26 @@ public class Projects {
     /**
      * Exports all taxonomies and their policy tags in a project. This method generates SerializedTaxonomy protos with nested policy tags that can be used as an input for future ImportTaxonomies calls.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesExportResponse datacatalogProjectsLocationsTaxonomiesExport(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesExportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesExportResponse datacatalogProjectsLocationsTaxonomiesExport(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesExportRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesExportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesExportPathParams.class, baseUrl, "/v1beta1/{parent}/taxonomies:export", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesExportRequest.class, baseUrl, "/v1beta1/{parent}/taxonomies:export", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesExportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesExportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -544,27 +555,28 @@ public class Projects {
     /**
      * Imports all taxonomies and their policy tags to a project as new taxonomies. This method provides a bulk taxonomy / policy tag creation using nested proto structure.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesImportResponse datacatalogProjectsLocationsTaxonomiesImport(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesImportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesImportResponse datacatalogProjectsLocationsTaxonomiesImport(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesImportRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesImportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesImportPathParams.class, baseUrl, "/v1beta1/{parent}/taxonomies:import", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesImportRequest.class, baseUrl, "/v1beta1/{parent}/taxonomies:import", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatacatalogV1beta1ImportTaxonomiesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesImportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesImportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -591,25 +603,26 @@ public class Projects {
     /**
      * Lists all taxonomies in a project in a particular location that the caller has permission to view.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesListResponse datacatalogProjectsLocationsTaxonomiesList(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesListResponse datacatalogProjectsLocationsTaxonomiesList(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesListRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesListPathParams.class, baseUrl, "/v1beta1/{parent}/taxonomies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesListRequest.class, baseUrl, "/v1beta1/{parent}/taxonomies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -636,27 +649,28 @@ public class Projects {
     /**
      * Creates a policy tag in the specified taxonomy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsCreateResponse datacatalogProjectsLocationsTaxonomiesPolicyTagsCreate(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsCreateResponse datacatalogProjectsLocationsTaxonomiesPolicyTagsCreate(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsCreateRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/policyTags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsCreateRequest.class, baseUrl, "/v1beta1/{parent}/policyTags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatacatalogV1beta1PolicyTagInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -683,25 +697,26 @@ public class Projects {
     /**
      * Deletes a policy tag. Also deletes all of its descendant policy tags.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsDeleteResponse datacatalogProjectsLocationsTaxonomiesPolicyTagsDelete(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsDeleteResponse datacatalogProjectsLocationsTaxonomiesPolicyTagsDelete(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsDeleteRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsDeletePathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsDeleteRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -728,25 +743,26 @@ public class Projects {
     /**
      * Gets a policy tag.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetResponse datacatalogProjectsLocationsTaxonomiesPolicyTagsGet(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetResponse datacatalogProjectsLocationsTaxonomiesPolicyTagsGet(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -773,27 +789,28 @@ public class Projects {
     /**
      * Gets the IAM policy for a taxonomy or a policy tag.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicyResponse datacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicy(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicyResponse datacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicy(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicyRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicyPathParams.class, baseUrl, "/v1beta1/{resource}:getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicyRequest.class, baseUrl, "/v1beta1/{resource}:getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "getIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -820,25 +837,26 @@ public class Projects {
     /**
      * Lists all policy tags in a taxonomy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsListResponse datacatalogProjectsLocationsTaxonomiesPolicyTagsList(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsListResponse datacatalogProjectsLocationsTaxonomiesPolicyTagsList(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsListRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsListPathParams.class, baseUrl, "/v1beta1/{parent}/policyTags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsListRequest.class, baseUrl, "/v1beta1/{parent}/policyTags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -865,27 +883,28 @@ public class Projects {
     /**
      * Updates a policy tag.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchResponse datacatalogProjectsLocationsTaxonomiesPolicyTagsPatch(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchResponse datacatalogProjectsLocationsTaxonomiesPolicyTagsPatch(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatacatalogV1beta1PolicyTagInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -912,27 +931,28 @@ public class Projects {
     /**
      * Sets the IAM policy for a taxonomy or a policy tag.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicyResponse datacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicy(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicyResponse datacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicy(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicyRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicyPathParams.class, baseUrl, "/v1beta1/{resource}:setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicyRequest.class, baseUrl, "/v1beta1/{resource}:setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -959,27 +979,28 @@ public class Projects {
     /**
      * Returns the permissions that a caller has on the specified taxonomy or policy tag.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissionsResponse datacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissions(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissionsResponse datacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissions(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissionsRequest request, org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissionsPathParams.class, baseUrl, "/v1beta1/{resource}:testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissionsRequest.class, baseUrl, "/v1beta1/{resource}:testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testIamPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

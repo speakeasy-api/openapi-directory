@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSettingTemplateRequest {
-    
-    public GetSettingTemplatePathParams pathParams;
-    public GetSettingTemplateRequest withPathParams(GetSettingTemplatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Provide the name of the field to use to filter the response. For example, if you provide "description" as the value of the field, you will get a response similar to the following: {\u201cdescription\u201d: \u201ctemplate description\u201d}.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=custom_query_fields")
+    public String customQueryFields;
+    public GetSettingTemplateRequest withCustomQueryFields(String customQueryFields) {
+        this.customQueryFields = customQueryFields;
         return this;
     }
     
-    
-    public GetSettingTemplateQueryParams queryParams;
-    public GetSettingTemplateRequest withQueryParams(GetSettingTemplateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetSettingTemplateSecurity security;
-    public GetSettingTemplateRequest withSecurity(GetSettingTemplateSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the template.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=templateId")
+    public String templateId;
+    public GetSettingTemplateRequest withTemplateId(String templateId) {
+        this.templateId = templateId;
         return this;
     }
     

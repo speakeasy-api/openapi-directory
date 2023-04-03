@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUcsSnmpConfigRequest {
-    
-    public UpdateUcsSnmpConfigPathParams pathParams;
-    public UpdateUcsSnmpConfigRequest withPathParams(UpdateUcsSnmpConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SNMPConfig request;
-    public UpdateUcsSnmpConfigRequest withRequest(org.openapis.openapi.models.shared.SNMPConfig request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SNMPConfig snmpConfig;
+    public UpdateUcsSnmpConfigRequest withSNMPConfig(org.openapis.openapi.models.shared.SNMPConfig snmpConfig) {
+        this.snmpConfig = snmpConfig;
         return this;
     }
     
-    
-    public UpdateUcsSnmpConfigSecurity security;
-    public UpdateUcsSnmpConfigRequest withSecurity(UpdateUcsSnmpConfigSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateUcsSnmpConfigRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

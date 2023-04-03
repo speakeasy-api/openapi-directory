@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PreprintsCitationListRequest {
-    
-    public PreprintsCitationListPathParams pathParams;
-    public PreprintsCitationListRequest withPathParams(PreprintsCitationListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the preprint whose citation you wish to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=preprint_id")
+    public String preprintId;
+    public PreprintsCitationListRequest withPreprintId(String preprintId) {
+        this.preprintId = preprintId;
         return this;
     }
     

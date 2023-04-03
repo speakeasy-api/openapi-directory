@@ -39,13 +39,13 @@ public class ProductDigitalProducts {
      */
     public org.openapis.openapi.models.operations.DeleteProductsIdDigitalProductsDigitalProductIdJsonResponse deleteProductsIdDigitalProductsDigitalProductIdJson(org.openapis.openapi.models.operations.DeleteProductsIdDigitalProductsDigitalProductIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProductsIdDigitalProductsDigitalProductIdJsonPathParams.class, baseUrl, "/products/{id}/digital_products/{digital_product_id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProductsIdDigitalProductsDigitalProductIdJsonRequest.class, baseUrl, "/products/{id}/digital_products/{digital_product_id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteProductsIdDigitalProductsDigitalProductIdJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteProductsIdDigitalProductsDigitalProductIdJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -90,13 +90,13 @@ public class ProductDigitalProducts {
      */
     public org.openapis.openapi.models.operations.GetProductsIdDigitalProductsJsonResponse getProductsIdDigitalProductsJson(org.openapis.openapi.models.operations.GetProductsIdDigitalProductsJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdDigitalProductsJsonPathParams.class, baseUrl, "/products/{id}/digital_products.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdDigitalProductsJsonRequest.class, baseUrl, "/products/{id}/digital_products.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdDigitalProductsJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdDigitalProductsJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -142,13 +142,13 @@ public class ProductDigitalProducts {
      */
     public org.openapis.openapi.models.operations.GetProductsIdDigitalProductsCountJsonResponse getProductsIdDigitalProductsCountJson(org.openapis.openapi.models.operations.GetProductsIdDigitalProductsCountJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdDigitalProductsCountJsonPathParams.class, baseUrl, "/products/{id}/digital_products/count.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdDigitalProductsCountJsonRequest.class, baseUrl, "/products/{id}/digital_products/count.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdDigitalProductsCountJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdDigitalProductsCountJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -194,13 +194,13 @@ public class ProductDigitalProducts {
      */
     public org.openapis.openapi.models.operations.GetProductsIdDigitalProductsDigitalProductIdJsonResponse getProductsIdDigitalProductsDigitalProductIdJson(org.openapis.openapi.models.operations.GetProductsIdDigitalProductsDigitalProductIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdDigitalProductsDigitalProductIdJsonPathParams.class, baseUrl, "/products/{id}/digital_products/{digital_product_id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdDigitalProductsDigitalProductIdJsonRequest.class, baseUrl, "/products/{id}/digital_products/{digital_product_id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdDigitalProductsDigitalProductIdJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdDigitalProductsDigitalProductIdJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -246,18 +246,18 @@ public class ProductDigitalProducts {
      */
     public org.openapis.openapi.models.operations.PostProductsIdDigitalProductsJsonResponse postProductsIdDigitalProductsJson(org.openapis.openapi.models.operations.PostProductsIdDigitalProductsJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProductsIdDigitalProductsJsonPathParams.class, baseUrl, "/products/{id}/digital_products.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProductsIdDigitalProductsJsonRequest.class, baseUrl, "/products/{id}/digital_products.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "digitalProductEdit", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostProductsIdDigitalProductsJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostProductsIdDigitalProductsJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LandlordControllerGetTenancyRequest {
-    
-    public LandlordControllerGetTenancyPathParams pathParams;
-    public LandlordControllerGetTenancyRequest withPathParams(LandlordControllerGetTenancyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public LandlordControllerGetTenancyRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     
+    /**
+     * The Tenancy ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenancyID")
+    public String tenancyID;
+    public LandlordControllerGetTenancyRequest withTenancyID(String tenancyID) {
+        this.tenancyID = tenancyID;
+        return this;
+    }
     
-    public LandlordControllerGetTenancyQueryParams queryParams;
-    public LandlordControllerGetTenancyRequest withQueryParams(LandlordControllerGetTenancyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The login token returned from the /session POST call
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public LandlordControllerGetTenancyRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

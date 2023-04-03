@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSettingsOrganizationsOrganizationNameSendersSenderNameRequest {
-    
-    public DeleteSettingsOrganizationsOrganizationNameSendersSenderNamePathParams pathParams;
-    public DeleteSettingsOrganizationsOrganizationNameSendersSenderNameRequest withPathParams(DeleteSettingsOrganizationsOrganizationNameSendersSenderNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * the organization name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationName")
+    public String organizationName;
+    public DeleteSettingsOrganizationsOrganizationNameSendersSenderNameRequest withOrganizationName(String organizationName) {
+        this.organizationName = organizationName;
         return this;
     }
     
-    
-    public DeleteSettingsOrganizationsOrganizationNameSendersSenderNameSecurity security;
-    public DeleteSettingsOrganizationsOrganizationNameSendersSenderNameRequest withSecurity(DeleteSettingsOrganizationsOrganizationNameSendersSenderNameSecurity security) {
-        this.security = security;
+    /**
+     * The name of a sender to the data hub
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=senderName")
+    public String senderName;
+    public DeleteSettingsOrganizationsOrganizationNameSendersSenderNameRequest withSenderName(String senderName) {
+        this.senderName = senderName;
         return this;
     }
     

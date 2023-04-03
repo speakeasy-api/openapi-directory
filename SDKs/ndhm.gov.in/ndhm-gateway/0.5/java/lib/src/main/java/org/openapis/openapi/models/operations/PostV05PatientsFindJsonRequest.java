@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05PatientsFindJsonRequest {
-    
-    public PostV05PatientsFindJsonHeaders headers;
-    public PostV05PatientsFindJsonRequest withHeaders(PostV05PatientsFindJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05PatientsFindJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PatientIdentificationRequest request;
-    public PostV05PatientsFindJsonRequest withRequest(org.openapis.openapi.models.shared.PatientIdentificationRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PatientIdentificationRequest patientIdentificationRequest;
+    public PostV05PatientsFindJsonRequest withPatientIdentificationRequest(org.openapis.openapi.models.shared.PatientIdentificationRequest patientIdentificationRequest) {
+        this.patientIdentificationRequest = patientIdentificationRequest;
+        return this;
+    }
+    
+    /**
+     * Suffix of the consent manager to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CM-ID")
+    public String xCmId;
+    public PostV05PatientsFindJsonRequest withXCmId(String xCmId) {
+        this.xCmId = xCmId;
         return this;
     }
     

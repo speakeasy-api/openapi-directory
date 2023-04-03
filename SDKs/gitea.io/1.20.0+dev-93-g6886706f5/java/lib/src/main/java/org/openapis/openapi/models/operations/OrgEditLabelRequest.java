@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgEditLabelRequest {
-    
-    public OrgEditLabelPathParams pathParams;
-    public OrgEditLabelRequest withPathParams(OrgEditLabelPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EditLabelOption editLabelOption;
+    public OrgEditLabelRequest withEditLabelOption(org.openapis.openapi.models.shared.EditLabelOption editLabelOption) {
+        this.editLabelOption = editLabelOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditLabelOption request;
-    public OrgEditLabelRequest withRequest(org.openapis.openapi.models.shared.EditLabelOption request) {
-        this.request = request;
+    /**
+     * id of the label to edit
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrgEditLabelRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * name of the organization
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgEditLabelRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

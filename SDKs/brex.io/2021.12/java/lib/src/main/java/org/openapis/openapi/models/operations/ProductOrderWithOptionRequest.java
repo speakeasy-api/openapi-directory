@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductOrderWithOptionRequest {
-    
-    public ProductOrderWithOptionPathParams pathParams;
-    public ProductOrderWithOptionRequest withPathParams(ProductOrderWithOptionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Product option (e.g. Accounts year) from a previous Availability call
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=option")
+    public String option;
+    public ProductOrderWithOptionRequest withOption(String option) {
+        this.option = option;
         return this;
     }
     
+    /**
+     * SKU - 9 character value from a Product object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sku")
+    public String sku;
+    public ProductOrderWithOptionRequest withSku(String sku) {
+        this.sku = sku;
+        return this;
+    }
     
-    public ProductOrderWithOptionSecurity security;
-    public ProductOrderWithOptionRequest withSecurity(ProductOrderWithOptionSecurity security) {
-        this.security = security;
+    /**
+     * Subject (e.g. Company) ID - 32 character hex value
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subjectId")
+    public String subjectId;
+    public ProductOrderWithOptionRequest withSubjectId(String subjectId) {
+        this.subjectId = subjectId;
         return this;
     }
     

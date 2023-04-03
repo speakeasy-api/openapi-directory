@@ -4,27 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLibraryRequest {
-    
-    public GetLibraryPathParams pathParams;
-    public GetLibraryRequest withPathParams(GetLibraryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
+    public Boolean all;
+    public GetLibraryRequest withAll(Boolean all) {
+        this.all = all;
         return this;
     }
     
-    
-    public GetLibraryQueryParams queryParams;
-    public GetLibraryRequest withQueryParams(GetLibraryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=eventLogUuid")
+    public String eventLogUuid;
+    public GetLibraryRequest withEventLogUuid(String eventLogUuid) {
+        this.eventLogUuid = eventLogUuid;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetLibraryRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetLibrarySecurity security;
-    public GetLibraryRequest withSecurity(GetLibrarySecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetLibraryRequest withOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
+    public String organizationUuid;
+    public GetLibraryRequest withOrganizationUuid(String organizationUuid) {
+        this.organizationUuid = organizationUuid;
         return this;
     }
     

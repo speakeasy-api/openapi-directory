@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveADigitalWalletTokenRequest {
-    
-    public RetrieveADigitalWalletTokenPathParams pathParams;
-    public RetrieveADigitalWalletTokenRequest withPathParams(RetrieveADigitalWalletTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=digital_wallet_token_id")
+    public String digitalWalletTokenId;
+    public RetrieveADigitalWalletTokenRequest withDigitalWalletTokenId(String digitalWalletTokenId) {
+        this.digitalWalletTokenId = digitalWalletTokenId;
         return this;
     }
     

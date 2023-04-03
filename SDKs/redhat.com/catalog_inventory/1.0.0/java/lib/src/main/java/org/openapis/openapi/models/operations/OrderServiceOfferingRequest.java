@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderServiceOfferingRequest {
-    
-    public OrderServiceOfferingPathParams pathParams;
-    public OrderServiceOfferingRequest withPathParams(OrderServiceOfferingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Order parameters defining the service and provider control
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.OrderParametersServiceOfferingInput request;
-    public OrderServiceOfferingRequest withRequest(org.openapis.openapi.models.shared.OrderParametersServiceOfferingInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.OrderParametersServiceOfferingInput orderParametersServiceOfferingInput;
+    public OrderServiceOfferingRequest withOrderParametersServiceOfferingInput(org.openapis.openapi.models.shared.OrderParametersServiceOfferingInput orderParametersServiceOfferingInput) {
+        this.orderParametersServiceOfferingInput = orderParametersServiceOfferingInput;
+        return this;
+    }
+    
+    /**
+     * ID of the resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public OrderServiceOfferingRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

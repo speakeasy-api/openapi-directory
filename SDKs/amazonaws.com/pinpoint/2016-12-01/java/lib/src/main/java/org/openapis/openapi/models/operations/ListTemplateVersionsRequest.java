@@ -4,27 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListTemplateVersionsRequest {
-    
-    public ListTemplateVersionsPathParams pathParams;
-    public ListTemplateVersionsRequest withPathParams(ListTemplateVersionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListTemplateVersionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public ListTemplateVersionsQueryParams queryParams;
-    public ListTemplateVersionsRequest withQueryParams(ListTemplateVersionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListTemplateVersionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListTemplateVersionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public ListTemplateVersionsHeaders headers;
-    public ListTemplateVersionsRequest withHeaders(ListTemplateVersionsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListTemplateVersionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListTemplateVersionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListTemplateVersionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListTemplateVersionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The  string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next-token")
+    public String nextToken;
+    public ListTemplateVersionsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The maximum number of items to include in each page of a paginated response. This parameter is not supported for application, campaign, and journey metrics.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page-size")
+    public String pageSize;
+    public ListTemplateVersionsRequest withPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=template-name")
+    public String templateName;
+    public ListTemplateVersionsRequest withTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    
+    /**
+     * The type of channel that the message template is designed for. Valid values are: EMAIL, PUSH, SMS, and VOICE.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=template-type")
+    public String templateType;
+    public ListTemplateVersionsRequest withTemplateType(String templateType) {
+        this.templateType = templateType;
         return this;
     }
     

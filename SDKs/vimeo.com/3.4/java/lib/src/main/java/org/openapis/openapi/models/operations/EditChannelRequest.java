@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditChannelRequest {
-    
-    public EditChannelPathParams pathParams;
-    public EditChannelRequest withPathParams(EditChannelPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.channel+json")
-    public EditChannelRequestBody request;
-    public EditChannelRequest withRequest(EditChannelRequestBody request) {
-        this.request = request;
+    public EditChannelRequestBody requestBody;
+    public EditChannelRequest withRequestBody(EditChannelRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public EditChannelSecurity security;
-    public EditChannelRequest withSecurity(EditChannelSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public EditChannelRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     

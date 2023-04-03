@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpaceRequest {
-    
-    public PostSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpacePathParams pathParams;
-    public PostSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpaceRequest withPathParams(PostSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpacePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * PersonId (if exist)of the person in the customer space
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.InvitationPerson request;
-    public PostSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpaceRequest withRequest(org.openapis.openapi.models.shared.InvitationPerson request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.InvitationPerson invitationPerson;
+    public PostSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpaceRequest withInvitationPerson(org.openapis.openapi.models.shared.InvitationPerson invitationPerson) {
+        this.invitationPerson = invitationPerson;
         return this;
     }
     
+    /**
+     * Id of the folder customer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=folderId")
+    public String folderId;
+    public PostSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpaceRequest withFolderId(String folderId) {
+        this.folderId = folderId;
+        return this;
+    }
     
-    public PostSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpaceSecurity security;
-    public PostSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpaceRequest withSecurity(PostSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpaceSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpaceRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the person to invite to his space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=personId")
+    public String personId;
+    public PostSpacesIdFoldersFolderIdPersonsPersonIdGuestInSpaceRequest withPersonId(String personId) {
+        this.personId = personId;
         return this;
     }
     

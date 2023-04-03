@@ -4,27 +4,74 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsCountsPerDayRequest {
-    
-    public ErrorsCountsPerDayPathParams pathParams;
-    public ErrorsCountsPerDayRequest withPathParams(ErrorsCountsPerDayPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * app build
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_build")
+    public String appBuild;
+    public ErrorsCountsPerDayRequest withAppBuild(String appBuild) {
+        this.appBuild = appBuild;
         return this;
     }
     
-    
-    public ErrorsCountsPerDayQueryParams queryParams;
-    public ErrorsCountsPerDayRequest withQueryParams(ErrorsCountsPerDayQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ErrorsCountsPerDayRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * Last date time in data in ISO 8601 date time format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public OffsetDateTime end;
+    public ErrorsCountsPerDayRequest withEnd(OffsetDateTime end) {
+        this.end = end;
+        return this;
+    }
     
-    public ErrorsCountsPerDaySecurity security;
-    public ErrorsCountsPerDayRequest withSecurity(ErrorsCountsPerDaySecurity security) {
-        this.security = security;
+    /**
+     * Type of error (handled vs unhandled), excluding All
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=errorType")
+    public ErrorsCountsPerDayErrorTypeEnum errorType;
+    public ErrorsCountsPerDayRequest withErrorType(ErrorsCountsPerDayErrorTypeEnum errorType) {
+        this.errorType = errorType;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ErrorsCountsPerDayRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * Start date time in data in ISO 8601 date time format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public OffsetDateTime start;
+    public ErrorsCountsPerDayRequest withStart(OffsetDateTime start) {
+        this.start = start;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public ErrorsCountsPerDayRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

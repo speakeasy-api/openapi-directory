@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePhoneSiteRequest {
-    
-    public DeletePhoneSitePathParams pathParams;
-    public DeletePhoneSiteRequest withPathParams(DeletePhoneSitePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique Identifier of the Site.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=siteId")
+    public String siteId;
+    public DeletePhoneSiteRequest withSiteId(String siteId) {
+        this.siteId = siteId;
         return this;
     }
     
-    
-    public DeletePhoneSiteQueryParams queryParams;
-    public DeletePhoneSiteRequest withQueryParams(DeletePhoneSiteQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeletePhoneSiteSecurity security;
-    public DeletePhoneSiteRequest withSecurity(DeletePhoneSiteSecurity security) {
-        this.security = security;
+    /**
+     * The Site ID of another site where the assets of the current site (users, numbers and phones) can be transferred to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transfer_site_id")
+    public String transferSiteId;
+    public DeletePhoneSiteRequest withTransferSiteId(String transferSiteId) {
+        this.transferSiteId = transferSiteId;
         return this;
     }
     

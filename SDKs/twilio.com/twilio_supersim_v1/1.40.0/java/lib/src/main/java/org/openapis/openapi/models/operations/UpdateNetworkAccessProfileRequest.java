@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkAccessProfileRequest {
-    
-    public UpdateNetworkAccessProfilePathParams pathParams;
-    public UpdateNetworkAccessProfileRequest withPathParams(UpdateNetworkAccessProfilePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateNetworkAccessProfileUpdateNetworkAccessProfileRequest request;
-    public UpdateNetworkAccessProfileRequest withRequest(UpdateNetworkAccessProfileUpdateNetworkAccessProfileRequest request) {
-        this.request = request;
+    public UpdateNetworkAccessProfileUpdateNetworkAccessProfileRequest requestBody;
+    public UpdateNetworkAccessProfileRequest withRequestBody(UpdateNetworkAccessProfileUpdateNetworkAccessProfileRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateNetworkAccessProfileSecurity security;
-    public UpdateNetworkAccessProfileRequest withSecurity(UpdateNetworkAccessProfileSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateNetworkAccessProfileRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Network Access Profile to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateNetworkAccessProfileRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

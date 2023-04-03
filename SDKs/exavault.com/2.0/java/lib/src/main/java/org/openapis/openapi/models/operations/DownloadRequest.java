@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadRequest {
-    
-    public DownloadQueryParams queryParams;
-    public DownloadRequest withQueryParams(DownloadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * When downloading multiple files, this will be used as the name of the zip file that is created.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=downloadArchiveName")
+    public String downloadArchiveName;
+    public DownloadRequest withDownloadArchiveName(String downloadArchiveName) {
+        this.downloadArchiveName = downloadArchiveName;
         return this;
     }
     
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public DownloadRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
+        return this;
+    }
     
-    public DownloadHeaders headers;
-    public DownloadRequest withHeaders(DownloadHeaders headers) {
-        this.headers = headers;
+    /**
+     * API Key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public DownloadRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
+    
+    /**
+     * Path of file or folder to be downloaded, starting from the root. Can also be an array of paths.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resources[]")
+    public String[] resources;
+    public DownloadRequest withResources(String[] resources) {
+        this.resources = resources;
         return this;
     }
     

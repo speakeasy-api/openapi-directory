@@ -29,13 +29,13 @@ public class Export {
 
     public org.openapis.openapi.models.operations.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeResponse getExportCsvRegistrierkassenRegistrierkasseUuidBelege(org.openapis.openapi.models.operations.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegePathParams.class, baseUrl, "/export/csv/registrierkassen/{registrierkasseUuid}/belege", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest.class, baseUrl, "/export/csv/registrierkassen/{registrierkasseUuid}/belege", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -62,13 +62,13 @@ public class Export {
 
     public org.openapis.openapi.models.operations.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeResponse getExportDep131RegistrierkassenRegistrierkasseUuidBelege(org.openapis.openapi.models.operations.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegePathParams.class, baseUrl, "/export/dep131/registrierkassen/{registrierkasseUuid}/belege", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeRequest.class, baseUrl, "/export/dep131/registrierkassen/{registrierkasseUuid}/belege", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExportDep131RegistrierkassenRegistrierkasseUuidBelegeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -95,13 +95,13 @@ public class Export {
 
     public org.openapis.openapi.models.operations.GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeResponse getExportDep7RegistrierkassenRegistrierkasseUuidBelege(org.openapis.openapi.models.operations.GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExportDep7RegistrierkassenRegistrierkasseUuidBelegePathParams.class, baseUrl, "/export/dep7/registrierkassen/{registrierkasseUuid}/belege", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeRequest.class, baseUrl, "/export/dep7/registrierkassen/{registrierkasseUuid}/belege", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExportDep7RegistrierkassenRegistrierkasseUuidBelegeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -128,13 +128,13 @@ public class Export {
 
     public org.openapis.openapi.models.operations.GetExportGobdRegistrierkassenRegistrierkasseUuidResponse getExportGobdRegistrierkassenRegistrierkasseUuid(org.openapis.openapi.models.operations.GetExportGobdRegistrierkassenRegistrierkasseUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExportGobdRegistrierkassenRegistrierkasseUuidPathParams.class, baseUrl, "/export/gobd/registrierkassen/{registrierkasseUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExportGobdRegistrierkassenRegistrierkasseUuidRequest.class, baseUrl, "/export/gobd/registrierkassen/{registrierkasseUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExportGobdRegistrierkassenRegistrierkasseUuidQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExportGobdRegistrierkassenRegistrierkasseUuidRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -161,7 +161,7 @@ public class Export {
 
     public org.openapis.openapi.models.operations.GetExportHtmlBelegeBelegUuidResponse getExportHtmlBelegeBelegUuid(org.openapis.openapi.models.operations.GetExportHtmlBelegeBelegUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExportHtmlBelegeBelegUuidPathParams.class, baseUrl, "/export/html/belege/{belegUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExportHtmlBelegeBelegUuidRequest.class, baseUrl, "/export/html/belege/{belegUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -188,7 +188,7 @@ public class Export {
 
     public org.openapis.openapi.models.operations.GetExportPdfBelegeBelegUuidResponse getExportPdfBelegeBelegUuid(org.openapis.openapi.models.operations.GetExportPdfBelegeBelegUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExportPdfBelegeBelegUuidPathParams.class, baseUrl, "/export/pdf/belege/{belegUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExportPdfBelegeBelegUuidRequest.class, baseUrl, "/export/pdf/belege/{belegUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -215,7 +215,7 @@ public class Export {
 
     public org.openapis.openapi.models.operations.GetExportQrBelegeBelegUuidResponse getExportQrBelegeBelegUuid(org.openapis.openapi.models.operations.GetExportQrBelegeBelegUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExportQrBelegeBelegUuidPathParams.class, baseUrl, "/export/qr/belege/{belegUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExportQrBelegeBelegUuidRequest.class, baseUrl, "/export/qr/belege/{belegUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -242,13 +242,13 @@ public class Export {
 
     public org.openapis.openapi.models.operations.GetExportThermalPrintBelegeBelegUuidResponse getExportThermalPrintBelegeBelegUuid(org.openapis.openapi.models.operations.GetExportThermalPrintBelegeBelegUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExportThermalPrintBelegeBelegUuidPathParams.class, baseUrl, "/export/thermal-print/belege/{belegUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExportThermalPrintBelegeBelegUuidRequest.class, baseUrl, "/export/thermal-print/belege/{belegUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExportThermalPrintBelegeBelegUuidQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExportThermalPrintBelegeBelegUuidRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -275,13 +275,13 @@ public class Export {
 
     public org.openapis.openapi.models.operations.GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeResponse getExportXlsRegistrierkassenRegistrierkasseUuidBelege(org.openapis.openapi.models.operations.GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExportXlsRegistrierkassenRegistrierkasseUuidBelegePathParams.class, baseUrl, "/export/xls/registrierkassen/{registrierkasseUuid}/belege", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeRequest.class, baseUrl, "/export/xls/registrierkassen/{registrierkasseUuid}/belege", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

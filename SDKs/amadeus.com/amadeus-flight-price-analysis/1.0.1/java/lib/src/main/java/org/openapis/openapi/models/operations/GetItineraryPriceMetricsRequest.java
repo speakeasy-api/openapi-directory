@@ -4,13 +4,60 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItineraryPriceMetricsRequest {
+    /**
+     * the preferred currency for display. Currency is specified in the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) format, e.g. EUR for Euro
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currencyCode")
+    public String currencyCode;
+    public GetItineraryPriceMetricsRequest withCurrencyCode(String currencyCode) {
+        this.currencyCode = currencyCode;
+        return this;
+    }
     
-    public GetItineraryPriceMetricsQueryParams queryParams;
-    public GetItineraryPriceMetricsRequest withQueryParams(GetItineraryPriceMetricsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The date on which the traveler will depart from the origin to go to the destination. 
+     * 
+     * Dates are specified in the[ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) YYYY-MM-DD format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=departureDate")
+    public String departureDate;
+    public GetItineraryPriceMetricsRequest withDepartureDate(String departureDate) {
+        this.departureDate = departureDate;
+        return this;
+    }
+    
+    /**
+     * airport code, following [IATA standard](http://www.iata.org/publications/Pages/code-search.aspx), to which the traveler is going.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationIataCode")
+    public String destinationIataCode;
+    public GetItineraryPriceMetricsRequest withDestinationIataCode(String destinationIataCode) {
+        this.destinationIataCode = destinationIataCode;
+        return this;
+    }
+    
+    /**
+     * true to get price metrics for a one way trip,
+     * false to get price metrics for a round trip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oneWay")
+    public Boolean oneWay;
+    public GetItineraryPriceMetricsRequest withOneWay(Boolean oneWay) {
+        this.oneWay = oneWay;
+        return this;
+    }
+    
+    /**
+     * airport code, following [IATA standard](http://www.iata.org/publications/Pages/code-search.aspx), from which the traveler will depart
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=originIataCode")
+    public String originIataCode;
+    public GetItineraryPriceMetricsRequest withOriginIataCode(String originIataCode) {
+        this.originIataCode = originIataCode;
         return this;
     }
     

@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchemaRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
+    public String apiId;
+    public GetSchemaRequest withApiId(String apiId) {
+        this.apiId = apiId;
+        return this;
+    }
     
-    public GetSchemaPathParams pathParams;
-    public GetSchemaRequest withPathParams(GetSchemaPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiVersionId")
+    public String apiVersionId;
+    public GetSchemaRequest withApiVersionId(String apiVersionId) {
+        this.apiVersionId = apiVersionId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schemaId")
+    public String schemaId;
+    public GetSchemaRequest withSchemaId(String schemaId) {
+        this.schemaId = schemaId;
         return this;
     }
     

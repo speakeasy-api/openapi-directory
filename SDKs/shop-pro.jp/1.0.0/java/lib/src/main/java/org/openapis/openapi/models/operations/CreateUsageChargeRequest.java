@@ -7,34 +7,36 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUsageChargeRequest {
-    
-    public CreateUsageChargePathParams pathParams;
-    public CreateUsageChargeRequest withPathParams(CreateUsageChargePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateUsageChargeHeaders headers;
-    public CreateUsageChargeRequest withHeaders(CreateUsageChargeHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * \u5f93\u91cf\u8ab2\u91d1\u30c7\u30fc\u30bf
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateUsageChargeRequestBody request;
-    public CreateUsageChargeRequest withRequest(CreateUsageChargeRequestBody request) {
-        this.request = request;
+    public CreateUsageChargeRequestBody requestBody;
+    public CreateUsageChargeRequest withRequestBody(CreateUsageChargeRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * \u30a2\u30f3\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u5f8c\u306e\u5f93\u91cf\u8ab2\u91d1\u306e\u7cbe\u7b97\u3092\u3059\u308b\u969b\u306b\u3001 `Authorization` \u30d8\u30c3\u30c0\u3078\u30a2\u30af\u30bb\u30b9\u30c8\u30fc\u30af\u30f3\u3092\u6307\u5b9a\u3059\u308b\u4ee3\u308f\u308a\u306b\u3053\u306e\u30d8\u30c3\u30c0\u3092\u6307\u5b9a\u3059\u308b\u3053\u3068\u3067\u3001\u3053\u306eAPI\u3092\u5b9f\u884c\u3059\u308b\u3053\u3068\u304c\u3067\u304d\u307e\u3059\u3002
+     * \u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u4e2d\u306f\u6307\u5b9a\u4e0d\u8981\u3067\u3001\u30a2\u30f3\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u5f8c\u306e\u307f\u5fc5\u9808\u3068\u306a\u308a\u307e\u3059\u3002
+     * \u30a2\u30f3\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u30d5\u30c3\u30af\u3067\u901a\u77e5\u3055\u308c\u308b `usage_charge.api_token` \u306e\u5024\u3092\u6307\u5b9a\u3057\u3066\u304f\u3060\u3055\u3044\u3002
+     * \u3053\u306e\u30d8\u30c3\u30c0\u306f\u3001\u30a2\u30f3\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u30d5\u30c3\u30af\u3067\u901a\u77e5\u3055\u308c\u308b `usage_charge.closing_on` \u307e\u3067\u6709\u52b9\u3067\u3059\u3002\u3053\u306e\u671f\u9593\u3092\u904e\u304e\u308b\u3068\u5f93\u91cf\u8ab2\u91d1\u3092\u7cbe\u7b97\u3067\u304d\u306a\u304f\u306a\u308a\u307e\u3059\u306e\u3067\u3054\u6ce8\u610f\u304f\u3060\u3055\u3044\u3002\u8a73\u3057\u304f\u306f [\u30a2\u30d7\u30ea\u306e\u30a2\u30f3\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb](#section/API/\u30a2\u30d7\u30ea\u306e\u30a2\u30f3\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb) \u3092\u3054\u78ba\u8a8d\u304f\u3060\u3055\u3044\u3002
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Appstore-Usage-Charge-Token")
+    public String xAppstoreUsageChargeToken;
+    public CreateUsageChargeRequest withXAppstoreUsageChargeToken(String xAppstoreUsageChargeToken) {
+        this.xAppstoreUsageChargeToken = xAppstoreUsageChargeToken;
+        return this;
+    }
     
-    public CreateUsageChargeSecurity security;
-    public CreateUsageChargeRequest withSecurity(CreateUsageChargeSecurity security) {
-        this.security = security;
+    /**
+     * \u8ab2\u91d1\u5951\u7d04ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=recurringApplicationChargeId")
+    public String recurringApplicationChargeId;
+    public CreateUsageChargeRequest withRecurringApplicationChargeId(String recurringApplicationChargeId) {
+        this.recurringApplicationChargeId = recurringApplicationChargeId;
         return this;
     }
     

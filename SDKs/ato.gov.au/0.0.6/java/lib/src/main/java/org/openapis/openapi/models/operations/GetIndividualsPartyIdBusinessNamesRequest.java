@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIndividualsPartyIdBusinessNamesRequest {
-    
-    public GetIndividualsPartyIdBusinessNamesPathParams pathParams;
-    public GetIndividualsPartyIdBusinessNamesRequest withPathParams(GetIndividualsPartyIdBusinessNamesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public GetIndividualsPartyIdBusinessNamesRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public GetIndividualsPartyIdBusinessNamesHeaders headers;
-    public GetIndividualsPartyIdBusinessNamesRequest withHeaders(GetIndividualsPartyIdBusinessNamesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The party identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
+    public String partyId;
+    public GetIndividualsPartyIdBusinessNamesRequest withPartyId(String partyId) {
+        this.partyId = partyId;
         return this;
     }
     

@@ -39,25 +39,26 @@ public class UsersMerchantLevel {
      * * Management API\u2014Users read and write
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersResponse getMerchantsMerchantIdUsers(org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersResponse getMerchantsMerchantIdUsers(org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersRequest request, org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersPathParams.class, baseUrl, "/merchants/{merchantId}/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersRequest.class, baseUrl, "/merchants/{merchantId}/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -99,19 +100,20 @@ public class UsersMerchantLevel {
      * * Management API\u2014Users read and write
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersUserIdResponse getMerchantsMerchantIdUsersUserId(org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersUserIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersUserIdResponse getMerchantsMerchantIdUsersUserId(org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersUserIdRequest request, org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersUserIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersUserIdPathParams.class, baseUrl, "/merchants/{merchantId}/users/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdUsersUserIdRequest.class, baseUrl, "/merchants/{merchantId}/users/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -153,21 +155,22 @@ public class UsersMerchantLevel {
      * * Management API\u2014Users read and write
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchMerchantsMerchantIdUsersUserIdResponse patchMerchantsMerchantIdUsersUserId(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdUsersUserIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchMerchantsMerchantIdUsersUserIdResponse patchMerchantsMerchantIdUsersUserId(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdUsersUserIdRequest request, org.openapis.openapi.models.operations.PatchMerchantsMerchantIdUsersUserIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdUsersUserIdPathParams.class, baseUrl, "/merchants/{merchantId}/users/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdUsersUserIdRequest.class, baseUrl, "/merchants/{merchantId}/users/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateMerchantUserRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -209,21 +212,22 @@ public class UsersMerchantLevel {
      * * Management API\u2014Users read and write
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdUsersResponse postMerchantsMerchantIdUsers(org.openapis.openapi.models.operations.PostMerchantsMerchantIdUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdUsersResponse postMerchantsMerchantIdUsers(org.openapis.openapi.models.operations.PostMerchantsMerchantIdUsersRequest request, org.openapis.openapi.models.operations.PostMerchantsMerchantIdUsersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdUsersPathParams.class, baseUrl, "/merchants/{merchantId}/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdUsersRequest.class, baseUrl, "/merchants/{merchantId}/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createMerchantUserRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

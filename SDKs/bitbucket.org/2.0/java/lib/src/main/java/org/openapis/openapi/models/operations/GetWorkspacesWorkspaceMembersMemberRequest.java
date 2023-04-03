@@ -4,20 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspacesWorkspaceMembersMemberRequest {
-    
-    public GetWorkspacesWorkspaceMembersMemberPathParams pathParams;
-    public GetWorkspacesWorkspaceMembersMemberRequest withPathParams(GetWorkspacesWorkspaceMembersMemberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Member's UUID or Atlassian ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=member")
+    public String member;
+    public GetWorkspacesWorkspaceMembersMemberRequest withMember(String member) {
+        this.member = member;
         return this;
     }
     
-    
-    public GetWorkspacesWorkspaceMembersMemberSecurity security;
-    public GetWorkspacesWorkspaceMembersMemberRequest withSecurity(GetWorkspacesWorkspaceMembersMemberSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetWorkspacesWorkspaceMembersMemberRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

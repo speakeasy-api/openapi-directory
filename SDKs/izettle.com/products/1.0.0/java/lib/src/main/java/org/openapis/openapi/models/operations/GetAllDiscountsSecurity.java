@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllDiscountsSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeZettleOauth zettleOauth;
-    public GetAllDiscountsSecurity withZettleOauth(org.openapis.openapi.models.shared.SchemeZettleOauth zettleOauth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String zettleOauth;
+    public GetAllDiscountsSecurity withZettleOauth(String zettleOauth) {
         this.zettleOauth = zettleOauth;
         return this;
     }

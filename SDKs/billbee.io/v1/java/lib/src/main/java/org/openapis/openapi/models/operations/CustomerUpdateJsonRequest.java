@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomerUpdateJsonRequest {
-    
-    public CustomerUpdateJsonPathParams pathParams;
-    public CustomerUpdateJsonRequest withPathParams(CustomerUpdateJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAPIModelInput billbeeInterfacesBillbeeAPIModelCustomerAPIModelInput;
+    public CustomerUpdateJsonRequest withBillbeeInterfacesBillbeeAPIModelCustomerAPIModelInput(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAPIModelInput billbeeInterfacesBillbeeAPIModelCustomerAPIModelInput) {
+        this.billbeeInterfacesBillbeeAPIModelCustomerAPIModelInput = billbeeInterfacesBillbeeAPIModelCustomerAPIModelInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAPIModelInput request;
-    public CustomerUpdateJsonRequest withRequest(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAPIModelInput request) {
-        this.request = request;
+    /**
+     * The id of the customer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CustomerUpdateJsonRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

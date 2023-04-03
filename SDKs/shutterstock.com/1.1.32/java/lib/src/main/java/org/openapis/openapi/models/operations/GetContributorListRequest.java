@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContributorListRequest {
-    
-    public GetContributorListQueryParams queryParams;
-    public GetContributorListRequest withQueryParams(GetContributorListQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetContributorListSecurity security;
-    public GetContributorListRequest withSecurity(GetContributorListSecurity security) {
-        this.security = security;
+    /**
+     * One or more contributor IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String[] id;
+    public GetContributorListRequest withId(String[] id) {
+        this.id = id;
         return this;
     }
     

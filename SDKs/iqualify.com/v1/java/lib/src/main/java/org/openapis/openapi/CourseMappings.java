@@ -39,7 +39,7 @@ public class CourseMappings {
      */
     public org.openapis.openapi.models.operations.DeleteCourseMappingsOfferingIdExternalCourseIdResponse deleteCourseMappingsOfferingIdExternalCourseId(org.openapis.openapi.models.operations.DeleteCourseMappingsOfferingIdExternalCourseIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCourseMappingsOfferingIdExternalCourseIdPathParams.class, baseUrl, "/course-mappings/{offeringId}/{externalCourseId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCourseMappingsOfferingIdExternalCourseIdRequest.class, baseUrl, "/course-mappings/{offeringId}/{externalCourseId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -134,7 +134,7 @@ public class CourseMappings {
      */
     public org.openapis.openapi.models.operations.GetCourseMappingsExternalcourseExternalCourseIdResponse getCourseMappingsExternalcourseExternalCourseId(org.openapis.openapi.models.operations.GetCourseMappingsExternalcourseExternalCourseIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCourseMappingsExternalcourseExternalCourseIdPathParams.class, baseUrl, "/course-mappings/externalcourse/{externalCourseId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCourseMappingsExternalcourseExternalCourseIdRequest.class, baseUrl, "/course-mappings/externalcourse/{externalCourseId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -182,7 +182,7 @@ public class CourseMappings {
      */
     public org.openapis.openapi.models.operations.GetCourseMappingsOfferingIdResponse getCourseMappingsOfferingId(org.openapis.openapi.models.operations.GetCourseMappingsOfferingIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCourseMappingsOfferingIdPathParams.class, baseUrl, "/course-mappings/{offeringId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCourseMappingsOfferingIdRequest.class, baseUrl, "/course-mappings/{offeringId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -230,7 +230,7 @@ public class CourseMappings {
      */
     public org.openapis.openapi.models.operations.PutCourseMappingsOfferingIdExternalCourseIdResponse putCourseMappingsOfferingIdExternalCourseId(org.openapis.openapi.models.operations.PutCourseMappingsOfferingIdExternalCourseIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCourseMappingsOfferingIdExternalCourseIdPathParams.class, baseUrl, "/course-mappings/{offeringId}/{externalCourseId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCourseMappingsOfferingIdExternalCourseIdRequest.class, baseUrl, "/course-mappings/{offeringId}/{externalCourseId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

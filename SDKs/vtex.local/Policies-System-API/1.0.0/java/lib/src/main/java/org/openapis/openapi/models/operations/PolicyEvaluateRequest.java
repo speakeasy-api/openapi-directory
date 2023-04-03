@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PolicyEvaluateRequest {
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PolicyEvaluateRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public PolicyEvaluateHeaders headers;
-    public PolicyEvaluateRequest withHeaders(PolicyEvaluateHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public PolicyEvaluateRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EvaluatePolicyRequest request;
-    public PolicyEvaluateRequest withRequest(org.openapis.openapi.models.shared.EvaluatePolicyRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.EvaluatePolicyRequest evaluatePolicyRequest;
+    public PolicyEvaluateRequest withEvaluatePolicyRequest(org.openapis.openapi.models.shared.EvaluatePolicyRequest evaluatePolicyRequest) {
+        this.evaluatePolicyRequest = evaluatePolicyRequest;
         return this;
     }
     

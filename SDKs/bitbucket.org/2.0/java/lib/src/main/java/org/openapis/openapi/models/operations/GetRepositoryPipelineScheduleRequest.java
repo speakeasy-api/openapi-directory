@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoryPipelineScheduleRequest {
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoryPipelineScheduleRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public GetRepositoryPipelineSchedulePathParams pathParams;
-    public GetRepositoryPipelineScheduleRequest withPathParams(GetRepositoryPipelineSchedulePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The uuid of the schedule.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schedule_uuid")
+    public String scheduleUuid;
+    public GetRepositoryPipelineScheduleRequest withScheduleUuid(String scheduleUuid) {
+        this.scheduleUuid = scheduleUuid;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoryPipelineScheduleRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

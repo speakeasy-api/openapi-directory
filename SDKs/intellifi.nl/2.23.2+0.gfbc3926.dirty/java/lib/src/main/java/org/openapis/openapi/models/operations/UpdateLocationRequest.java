@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateLocationRequest {
-    
-    public UpdateLocationPathParams pathParams;
-    public UpdateLocationRequest withPathParams(UpdateLocationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A JSON object containing location information
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LocationInput request;
-    public UpdateLocationRequest withRequest(org.openapis.openapi.models.shared.LocationInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.LocationInput locationInput;
+    public UpdateLocationRequest withLocationInput(org.openapis.openapi.models.shared.LocationInput locationInput) {
+        this.locationInput = locationInput;
+        return this;
+    }
+    
+    /**
+     * Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateLocationRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

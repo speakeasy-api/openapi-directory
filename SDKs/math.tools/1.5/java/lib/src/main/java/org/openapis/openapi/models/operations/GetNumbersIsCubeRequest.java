@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersIsCubeRequest {
-    
-    public GetNumbersIsCubeQueryParams queryParams;
-    public GetNumbersIsCubeRequest withQueryParams(GetNumbersIsCubeQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetNumbersIsCubeSecurity security;
-    public GetNumbersIsCubeRequest withSecurity(GetNumbersIsCubeSecurity security) {
-        this.security = security;
+    /**
+     * Number to check
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public Long number;
+    public GetNumbersIsCubeRequest withNumber(Long number) {
+        this.number = number;
         return this;
     }
     

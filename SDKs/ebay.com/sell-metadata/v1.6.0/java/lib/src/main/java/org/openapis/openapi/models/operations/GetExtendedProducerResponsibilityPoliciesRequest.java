@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetExtendedProducerResponsibilityPoliciesRequest {
-    
-    public GetExtendedProducerResponsibilityPoliciesPathParams pathParams;
-    public GetExtendedProducerResponsibilityPoliciesRequest withPathParams(GetExtendedProducerResponsibilityPoliciesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A query parameter that can be used to limit the response by returning policy information for only the selected sections of the category tree. Supply &lt;b&gt;categoryId&lt;/b&gt; values for the sections of the tree that should be returned.&lt;br /&gt;&lt;br /&gt;When a &lt;b&gt;categoryId&lt;/b&gt; value is specified, the returned category tree includes the policies for that parent node, as well as the policies for any child nodes below that parent node.&lt;br /&gt;&lt;br /&gt;Pass in the &lt;b&gt;categoryId&lt;/b&gt; values using a URL-encoded, pipe-separated ('|') list. For example:&lt;br /&gt;&lt;br /&gt;&lt;code&gt;filter=categoryIds%3A%7B100%7C101%7C102%7D&lt;/code&gt;&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Maximum:&lt;/b&gt; 50
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public GetExtendedProducerResponsibilityPoliciesRequest withFilter(String filter) {
+        this.filter = filter;
         return this;
     }
     
-    
-    public GetExtendedProducerResponsibilityPoliciesQueryParams queryParams;
-    public GetExtendedProducerResponsibilityPoliciesRequest withQueryParams(GetExtendedProducerResponsibilityPoliciesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetExtendedProducerResponsibilityPoliciesSecurity security;
-    public GetExtendedProducerResponsibilityPoliciesRequest withSecurity(GetExtendedProducerResponsibilityPoliciesSecurity security) {
-        this.security = security;
+    /**
+     * A path parameter that specifies the eBay marketplace for which policy information shall be retrieved.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;span style="color:#478415"&gt;&lt;strong&gt;Tip:&lt;/strong&gt;&lt;/span&gt; See &lt;a href="/api-docs/static/rest-request-components.html#marketpl" target="_blank"&gt;Request components&lt;/a&gt; for a list of valid eBay marketplace IDs.&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplace_id")
+    public String marketplaceId;
+    public GetExtendedProducerResponsibilityPoliciesRequest withMarketplaceId(String marketplaceId) {
+        this.marketplaceId = marketplaceId;
         return this;
     }
     

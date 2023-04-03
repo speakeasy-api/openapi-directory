@@ -7,9 +7,9 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.GenomicsPipelinesRunSecurityOption1;
 import org.openapis.openapi.models.operations.GenomicsPipelinesRunSecurityOption2;
 import org.openapis.openapi.models.operations.GenomicsPipelinesRunSecurity;
-import org.openapis.openapi.models.operations.GenomicsPipelinesRunQueryParams;
 import org.openapis.openapi.models.operations.GenomicsPipelinesRunRequest;
 import org.openapis.openapi.models.operations.GenomicsPipelinesRunResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.RunPipelineRequest;
 import org.openapis.openapi.models.shared.Pipeline;
 import org.openapis.openapi.models.shared.Resources;
@@ -26,10 +26,7 @@ import org.openapis.openapi.models.shared.Secret;
 import org.openapis.openapi.models.shared.ActionFlagsEnum;
 import org.openapis.openapi.models.shared.Action;
 import org.openapis.openapi.models.shared.Mount;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -38,161 +35,146 @@ public class Application {
                 .build();
 
             GenomicsPipelinesRunRequest req = new GenomicsPipelinesRunRequest() {{
-                security = new GenomicsPipelinesRunSecurity() {{
-                    option1 = new GenomicsPipelinesRunSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                queryParams = new GenomicsPipelinesRunQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    key = "nulla";
-                    oauthToken = "corrupti";
-                    prettyPrint = false;
-                    quotaUser = "illum";
-                    uploadType = "vel";
-                    uploadProtocol = "error";
-                }};
-                request = new RunPipelineRequest() {{
+                dollarXgafv = "2";
+                runPipelineRequest = new RunPipelineRequest() {{
                     labels = new java.util.HashMap<String, String>() {{
-                        put("suscipit", "iure");
-                        put("magnam", "debitis");
-                        put("ipsa", "delectus");
+                        put("distinctio", "quibusdam");
+                        put("unde", "nulla");
+                        put("corrupti", "illum");
                     }};
                     pipeline = new Pipeline() {{
                         actions = new org.openapis.openapi.models.shared.Action[]{{
                             add(new Action() {{
                                 commands = new String[]{{
-                                    add("molestiae"),
-                                    add("minus"),
+                                    add("deserunt"),
+                                    add("suscipit"),
+                                    add("iure"),
                                 }};
                                 credentials = new Secret() {{
-                                    cipherText = "placeat";
-                                    keyName = "voluptatum";
+                                    cipherText = "magnam";
+                                    keyName = "debitis";
                                 }};
                                 encryptedEnvironment = new Secret() {{
-                                    cipherText = "iusto";
-                                    keyName = "excepturi";
+                                    cipherText = "ipsa";
+                                    keyName = "delectus";
                                 }};
-                                entrypoint = "nisi";
+                                entrypoint = "tempora";
                                 environment = new java.util.HashMap<String, String>() {{
-                                    put("temporibus", "ab");
-                                    put("quis", "veritatis");
-                                    put("deserunt", "perferendis");
-                                    put("ipsam", "repellendus");
-                                }};
-                                flags = new org.openapis.openapi.models.shared.ActionFlagsEnum[]{{
-                                    add("DISABLE_STANDARD_ERROR_CAPTURE"),
-                                    add("IGNORE_EXIT_STATUS"),
-                                    add("DISABLE_STANDARD_ERROR_CAPTURE"),
-                                    add("DISABLE_STANDARD_ERROR_CAPTURE"),
-                                }};
-                                imageUri = "maiores";
-                                labels = new java.util.HashMap<String, String>() {{
-                                    put("quod", "quod");
-                                    put("esse", "totam");
-                                }};
-                                mounts = new org.openapis.openapi.models.shared.Mount[]{{
-                                    add(new Mount() {{
-                                        disk = "dolorum";
-                                        path = "dicta";
-                                        readOnly = false;
-                                    }}),
-                                    add(new Mount() {{
-                                        disk = "nam";
-                                        path = "officia";
-                                        readOnly = false;
-                                    }}),
-                                    add(new Mount() {{
-                                        disk = "occaecati";
-                                        path = "fugit";
-                                        readOnly = false;
-                                    }}),
-                                    add(new Mount() {{
-                                        disk = "deleniti";
-                                        path = "hic";
-                                        readOnly = false;
-                                    }}),
-                                }};
-                                name = "optio";
-                                pidNamespace = "totam";
-                                portMappings = new java.util.HashMap<String, Integer>() {{
-                                    put("commodi", 473600);
-                                }};
-                                timeout = "modi";
-                            }}),
-                            add(new Action() {{
-                                commands = new String[]{{
-                                    add("impedit"),
-                                }};
-                                credentials = new Secret() {{
-                                    cipherText = "cum";
-                                    keyName = "esse";
-                                }};
-                                encryptedEnvironment = new Secret() {{
-                                    cipherText = "ipsum";
-                                    keyName = "excepturi";
-                                }};
-                                entrypoint = "aspernatur";
-                                environment = new java.util.HashMap<String, String>() {{
-                                    put("ad", "natus");
+                                    put("molestiae", "minus");
+                                    put("placeat", "voluptatum");
                                 }};
                                 flags = new org.openapis.openapi.models.shared.ActionFlagsEnum[]{{
                                     add("PUBLISH_EXPOSED_PORTS"),
+                                    add("ALWAYS_RUN"),
                                 }};
-                                imageUri = "dolor";
+                                imageUri = "recusandae";
                                 labels = new java.util.HashMap<String, String>() {{
-                                    put("laboriosam", "hic");
-                                    put("saepe", "fuga");
-                                    put("in", "corporis");
+                                    put("ab", "quis");
+                                    put("veritatis", "deserunt");
+                                    put("perferendis", "ipsam");
+                                    put("repellendus", "sapiente");
                                 }};
                                 mounts = new org.openapis.openapi.models.shared.Mount[]{{
                                     add(new Mount() {{
-                                        disk = "iure";
-                                        path = "saepe";
+                                        disk = "odit";
+                                        path = "at";
                                         readOnly = false;
                                     }}),
                                     add(new Mount() {{
-                                        disk = "quidem";
-                                        path = "architecto";
+                                        disk = "at";
+                                        path = "maiores";
                                         readOnly = false;
                                     }}),
                                     add(new Mount() {{
-                                        disk = "ipsa";
-                                        path = "reiciendis";
+                                        disk = "molestiae";
+                                        path = "quod";
+                                        readOnly = false;
+                                    }}),
+                                    add(new Mount() {{
+                                        disk = "quod";
+                                        path = "esse";
                                         readOnly = false;
                                     }}),
                                 }};
-                                name = "est";
-                                pidNamespace = "mollitia";
+                                name = "totam";
+                                pidNamespace = "porro";
                                 portMappings = new java.util.HashMap<String, Integer>() {{
-                                    put("dolores", 210382);
-                                    put("corporis", 128926);
-                                    put("nobis", 315428);
+                                    put("dicta", 720633);
+                                    put("officia", 582020);
+                                    put("fugit", 537373);
                                 }};
-                                timeout = "omnis";
+                                timeout = "hic";
+                            }}),
+                            add(new Action() {{
+                                commands = new String[]{{
+                                    add("totam"),
+                                    add("beatae"),
+                                    add("commodi"),
+                                    add("molestiae"),
+                                }};
+                                credentials = new Secret() {{
+                                    cipherText = "modi";
+                                    keyName = "qui";
+                                }};
+                                encryptedEnvironment = new Secret() {{
+                                    cipherText = "impedit";
+                                    keyName = "cum";
+                                }};
+                                entrypoint = "esse";
+                                environment = new java.util.HashMap<String, String>() {{
+                                    put("excepturi", "aspernatur");
+                                }};
+                                flags = new org.openapis.openapi.models.shared.ActionFlagsEnum[]{{
+                                    add("RUN_IN_BACKGROUND"),
+                                }};
+                                imageUri = "natus";
+                                labels = new java.util.HashMap<String, String>() {{
+                                    put("iste", "dolor");
+                                }};
+                                mounts = new org.openapis.openapi.models.shared.Mount[]{{
+                                    add(new Mount() {{
+                                        disk = "laboriosam";
+                                        path = "hic";
+                                        readOnly = false;
+                                    }}),
+                                    add(new Mount() {{
+                                        disk = "saepe";
+                                        path = "fuga";
+                                        readOnly = false;
+                                    }}),
+                                    add(new Mount() {{
+                                        disk = "in";
+                                        path = "corporis";
+                                        readOnly = false;
+                                    }}),
+                                }};
+                                name = "iste";
+                                pidNamespace = "iure";
+                                portMappings = new java.util.HashMap<String, Integer>() {{
+                                    put("quidem", 99280);
+                                    put("ipsa", 969810);
+                                    put("est", 653140);
+                                    put("laborum", 170909);
+                                }};
+                                timeout = "dolorem";
                             }}),
                         }};
                         encryptedEnvironment = new Secret() {{
-                            cipherText = "nemo";
-                            keyName = "minima";
+                            cipherText = "corporis";
+                            keyName = "explicabo";
                         }};
                         environment = new java.util.HashMap<String, String>() {{
-                            put("accusantium", "iure");
-                            put("culpa", "doloribus");
-                            put("sapiente", "architecto");
+                            put("enim", "omnis");
+                            put("nemo", "minima");
+                            put("excepturi", "accusantium");
+                            put("iure", "culpa");
                         }};
                         resources = new Resources() {{
-                            projectId = "mollitia";
+                            projectId = "doloribus";
                             regions = new String[]{{
+                                add("architecto"),
+                                add("mollitia"),
+                                add("dolorem"),
                                 add("culpa"),
                             }};
                             virtualMachine = new VirtualMachine() {{
@@ -269,9 +251,24 @@ public class Application {
                     }};
                     pubSubTopic = "dolore";
                 }};
-            }};            
+                accessToken = "iusto";
+                alt = "json";
+                callback = "harum";
+                fields = "enim";
+                key = "accusamus";
+                oauthToken = "commodi";
+                prettyPrint = false;
+                quotaUser = "repudiandae";
+                uploadType = "quae";
+                uploadProtocol = "ipsum";
+            }}            
 
-            GenomicsPipelinesRunResponse res = sdk.pipelines.genomicsPipelinesRun(req);
+            GenomicsPipelinesRunResponse res = sdk.pipelines.genomicsPipelinesRun(req, new GenomicsPipelinesRunSecurity() {{
+                option1 = new GenomicsPipelinesRunSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response

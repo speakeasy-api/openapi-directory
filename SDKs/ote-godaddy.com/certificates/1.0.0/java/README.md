@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CertificateActionRetrievePathParams;
 import org.openapis.openapi.models.operations.CertificateActionRetrieveRequest;
 import org.openapis.openapi.models.operations.CertificateActionRetrieveResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             CertificateActionRetrieveRequest req = new CertificateActionRetrieveRequest() {{
-                pathParams = new CertificateActionRetrievePathParams() {{
-                    certificateId = "corrupti";
-                }};
-            }};            
+                certificateId = "corrupti";
+            }}            
 
             CertificateActionRetrieveResponse res = sdk.v1.certificateActionRetrieve(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### v1

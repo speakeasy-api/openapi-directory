@@ -111,7 +111,7 @@ public class Private {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAutocompleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAutocompleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -145,7 +145,7 @@ public class Private {
      */
     public org.openapis.openapi.models.operations.GetDiseaseByIdResponse getDiseaseById(org.openapis.openapi.models.operations.GetDiseaseByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseaseByIdPathParams.class, baseUrl, "/platform/private/disease/{disease}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseaseByIdRequest.class, baseUrl, "/platform/private/disease/{disease}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -179,13 +179,13 @@ public class Private {
      */
     public org.openapis.openapi.models.operations.GetDrugByIDResponse getDrugByID(org.openapis.openapi.models.operations.GetDrugByIDRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDrugByIDPathParams.class, baseUrl, "/platform/private/drug/{DRUG_ID}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDrugByIDRequest.class, baseUrl, "/platform/private/drug/{DRUG_ID}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDrugByIDQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDrugByIDRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -219,7 +219,7 @@ public class Private {
      */
     public org.openapis.openapi.models.operations.GetECObyIDResponse getECObyID(org.openapis.openapi.models.operations.GetECObyIDRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetECObyIDPathParams.class, baseUrl, "/platform/private/eco/{ECO_ID}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetECObyIDRequest.class, baseUrl, "/platform/private/eco/{ECO_ID}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -259,7 +259,7 @@ public class Private {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetQuickSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetQuickSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -293,7 +293,7 @@ public class Private {
      */
     public org.openapis.openapi.models.operations.GetRelationByEFOIDResponse getRelationByEFOID(org.openapis.openapi.models.operations.GetRelationByEFOIDRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRelationByEFOIDPathParams.class, baseUrl, "/platform/private/relation/disease/{disease}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRelationByEFOIDRequest.class, baseUrl, "/platform/private/relation/disease/{disease}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -327,7 +327,7 @@ public class Private {
      */
     public org.openapis.openapi.models.operations.GetRelationByENSGIDResponse getRelationByENSGID(org.openapis.openapi.models.operations.GetRelationByENSGIDRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRelationByENSGIDPathParams.class, baseUrl, "/platform/private/relation/target/{target}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRelationByENSGIDRequest.class, baseUrl, "/platform/private/relation/target/{target}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -393,7 +393,7 @@ public class Private {
      */
     public org.openapis.openapi.models.operations.GetTargetByENSGIDResponse getTargetByENSGID(org.openapis.openapi.models.operations.GetTargetByENSGIDRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetByENSGIDPathParams.class, baseUrl, "/platform/private/target/{target}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetByENSGIDRequest.class, baseUrl, "/platform/private/target/{target}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -433,7 +433,7 @@ public class Private {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetExpressionByENSGIDQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetExpressionByENSGIDRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -465,7 +465,7 @@ public class Private {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostBestHitSearchResponse postBestHitSearch(org.openapis.openapi.models.operations.PostBestHitSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostBestHitSearchResponse postBestHitSearch(String request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/platform/private/besthitsearch");
         
@@ -504,7 +504,7 @@ public class Private {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostDiseaseByIdResponse postDiseaseById(org.openapis.openapi.models.operations.PostDiseaseByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostDiseaseByIdResponse postDiseaseById(String request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/platform/private/disease");
         
@@ -543,7 +543,7 @@ public class Private {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostEnrichmentTargetResponse postEnrichmentTarget(org.openapis.openapi.models.operations.PostEnrichmentTargetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostEnrichmentTargetResponse postEnrichmentTarget(String request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/platform/private/enrichment/targets");
         
@@ -582,7 +582,7 @@ public class Private {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRelationResponse postRelation(org.openapis.openapi.models.operations.PostRelationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRelationResponse postRelation(String request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/platform/private/relation");
         
@@ -621,7 +621,7 @@ public class Private {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostTargetByENSGIDResponse postTargetByENSGID(org.openapis.openapi.models.operations.PostTargetByENSGIDRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostTargetByENSGIDResponse postTargetByENSGID(String request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/platform/private/target");
         
@@ -660,7 +660,7 @@ public class Private {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostTargetExpressionByENSGIDResponse postTargetExpressionByENSGID(org.openapis.openapi.models.operations.PostTargetExpressionByENSGIDRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostTargetExpressionByENSGIDResponse postTargetExpressionByENSGID(String request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/platform/private/target/expression");
         

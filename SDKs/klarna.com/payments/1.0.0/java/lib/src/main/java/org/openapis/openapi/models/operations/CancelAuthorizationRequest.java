@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelAuthorizationRequest {
-    
-    public CancelAuthorizationPathParams pathParams;
-    public CancelAuthorizationRequest withPathParams(CancelAuthorizationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=authorizationToken")
+    public String authorizationToken;
+    public CancelAuthorizationRequest withAuthorizationToken(String authorizationToken) {
+        this.authorizationToken = authorizationToken;
         return this;
     }
     

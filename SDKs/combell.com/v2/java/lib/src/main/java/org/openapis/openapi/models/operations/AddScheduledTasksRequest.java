@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddScheduledTasksRequest {
-    
-    public AddScheduledTasksPathParams pathParams;
-    public AddScheduledTasksRequest withPathParams(AddScheduledTasksPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AddScheduledTasksQueryParams queryParams;
-    public AddScheduledTasksRequest withQueryParams(AddScheduledTasksQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ScheduledTask request;
-    public AddScheduledTasksRequest withRequest(org.openapis.openapi.models.shared.ScheduledTask request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ScheduledTask scheduledTask;
+    public AddScheduledTasksRequest withScheduledTask(org.openapis.openapi.models.shared.ScheduledTask scheduledTask) {
+        this.scheduledTask = scheduledTask;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public AddScheduledTasksRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Linux hosting domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public AddScheduledTasksRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     

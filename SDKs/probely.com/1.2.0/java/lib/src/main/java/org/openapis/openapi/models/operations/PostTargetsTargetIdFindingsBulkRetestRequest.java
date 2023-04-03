@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostTargetsTargetIdFindingsBulkRetestRequest {
-    
-    public PostTargetsTargetIdFindingsBulkRetestPathParams pathParams;
-    public PostTargetsTargetIdFindingsBulkRetestRequest withPathParams(PostTargetsTargetIdFindingsBulkRetestPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.FindingBulkRetest findingBulkRetest;
+    public PostTargetsTargetIdFindingsBulkRetestRequest withFindingBulkRetest(org.openapis.openapi.models.shared.FindingBulkRetest findingBulkRetest) {
+        this.findingBulkRetest = findingBulkRetest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FindingBulkRetest request;
-    public PostTargetsTargetIdFindingsBulkRetestRequest withRequest(org.openapis.openapi.models.shared.FindingBulkRetest request) {
-        this.request = request;
+    /**
+     * Target id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_id")
+    public String targetId;
+    public PostTargetsTargetIdFindingsBulkRetestRequest withTargetId(String targetId) {
+        this.targetId = targetId;
         return this;
     }
     

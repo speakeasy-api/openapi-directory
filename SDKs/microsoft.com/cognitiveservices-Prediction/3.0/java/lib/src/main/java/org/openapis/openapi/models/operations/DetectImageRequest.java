@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DetectImageRequest {
-    
-    public DetectImagePathParams pathParams;
-    public DetectImageRequest withPathParams(DetectImagePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DetectImageQueryParams queryParams;
-    public DetectImageRequest withQueryParams(DetectImageQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public DetectImageRequestBody request;
-    public DetectImageRequest withRequest(DetectImageRequestBody request) {
-        this.request = request;
+    public DetectImageRequestBody requestBody;
+    public DetectImageRequest withRequestBody(DetectImageRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Optional. Specifies the name of application using the endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application")
+    public String application;
+    public DetectImageRequest withApplication(String application) {
+        this.application = application;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public DetectImageRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * Specifies the name of the model to evaluate against.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=publishedName")
+    public String publishedName;
+    public DetectImageRequest withPublishedName(String publishedName) {
+        this.publishedName = publishedName;
         return this;
     }
     

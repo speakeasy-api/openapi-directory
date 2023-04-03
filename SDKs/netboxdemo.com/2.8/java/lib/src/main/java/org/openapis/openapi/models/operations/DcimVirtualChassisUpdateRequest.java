@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimVirtualChassisUpdateRequest {
-    
-    public DcimVirtualChassisUpdatePathParams pathParams;
-    public DcimVirtualChassisUpdateRequest withPathParams(DcimVirtualChassisUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableVirtualChassisInput writableVirtualChassisInput;
+    public DcimVirtualChassisUpdateRequest withWritableVirtualChassisInput(org.openapis.openapi.models.shared.WritableVirtualChassisInput writableVirtualChassisInput) {
+        this.writableVirtualChassisInput = writableVirtualChassisInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableVirtualChassisInput request;
-    public DcimVirtualChassisUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableVirtualChassisInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this virtual chassis.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimVirtualChassisUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

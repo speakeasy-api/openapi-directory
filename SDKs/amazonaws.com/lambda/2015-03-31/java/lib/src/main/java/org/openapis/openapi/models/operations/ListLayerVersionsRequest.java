@@ -4,27 +4,105 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListLayerVersionsRequest {
-    
-    public ListLayerVersionsPathParams pathParams;
-    public ListLayerVersionsRequest withPathParams(ListLayerVersionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The compatible &lt;a href="https://docs.aws.amazon.com/lambda/latest/dg/foundation-arch.html"&gt;instruction set architecture&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CompatibleArchitecture")
+    public ListLayerVersionsCompatibleArchitectureEnum compatibleArchitecture;
+    public ListLayerVersionsRequest withCompatibleArchitecture(ListLayerVersionsCompatibleArchitectureEnum compatibleArchitecture) {
+        this.compatibleArchitecture = compatibleArchitecture;
         return this;
     }
     
-    
-    public ListLayerVersionsQueryParams queryParams;
-    public ListLayerVersionsRequest withQueryParams(ListLayerVersionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A runtime identifier. For example, &lt;code&gt;go1.x&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CompatibleRuntime")
+    public ListLayerVersionsCompatibleRuntimeEnum compatibleRuntime;
+    public ListLayerVersionsRequest withCompatibleRuntime(ListLayerVersionsCompatibleRuntimeEnum compatibleRuntime) {
+        this.compatibleRuntime = compatibleRuntime;
         return this;
     }
     
+    /**
+     * The name or Amazon Resource Name (ARN) of the layer.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=LayerName")
+    public String layerName;
+    public ListLayerVersionsRequest withLayerName(String layerName) {
+        this.layerName = layerName;
+        return this;
+    }
     
-    public ListLayerVersionsHeaders headers;
-    public ListLayerVersionsRequest withHeaders(ListLayerVersionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * A pagination token returned by a previous call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public ListLayerVersionsRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * The maximum number of versions to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
+    public Long maxItems;
+    public ListLayerVersionsRequest withMaxItems(Long maxItems) {
+        this.maxItems = maxItems;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListLayerVersionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListLayerVersionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListLayerVersionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListLayerVersionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListLayerVersionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListLayerVersionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListLayerVersionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

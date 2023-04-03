@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CatalogGetProductBySkuRequest {
-    
-    public CatalogGetProductBySkuPathParams pathParams;
-    public CatalogGetProductBySkuRequest withPathParams(CatalogGetProductBySkuPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The product sku you want to get
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sku")
+    public String sku;
+    public CatalogGetProductBySkuRequest withSku(String sku) {
+        this.sku = sku;
         return this;
     }
     
-    
-    public CatalogGetProductBySkuQueryParams queryParams;
-    public CatalogGetProductBySkuRequest withQueryParams(CatalogGetProductBySkuQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public CatalogGetProductBySkuRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

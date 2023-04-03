@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BlockConversationRequest {
-    
-    public BlockConversationPathParams pathParams;
-    public BlockConversationRequest withPathParams(BlockConversationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the conversation to block.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversation_id")
+    public String conversationId;
+    public BlockConversationRequest withConversationId(String conversationId) {
+        this.conversationId = conversationId;
         return this;
     }
     

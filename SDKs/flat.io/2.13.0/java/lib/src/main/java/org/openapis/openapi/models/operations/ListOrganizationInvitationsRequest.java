@@ -4,20 +4,50 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListOrganizationInvitationsRequest {
-    
-    public ListOrganizationInvitationsQueryParams queryParams;
-    public ListOrganizationInvitationsRequest withQueryParams(ListOrganizationInvitationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * This is the maximum number of objects that may be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListOrganizationInvitationsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * An opaque string cursor to fetch the next page of data.
+     * The paginated API URLs are returned in the `Link` header when requesting the API. These URLs will contain a `next` and `previous` cursor based on the available data.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next")
+    public String next;
+    public ListOrganizationInvitationsRequest withNext(String next) {
+        this.next = next;
+        return this;
+    }
     
-    public ListOrganizationInvitationsSecurity security;
-    public ListOrganizationInvitationsRequest withSecurity(ListOrganizationInvitationsSecurity security) {
-        this.security = security;
+    /**
+     * An opaque string cursor to fetch the previous page of data.
+     * The paginated API URLs are returned in the `Link` header when requesting the API. These URLs will contain a `next` and `previous` cursor based on the available data.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=previous")
+    public String previous;
+    public ListOrganizationInvitationsRequest withPrevious(String previous) {
+        this.previous = previous;
+        return this;
+    }
+    
+    /**
+     * Filter users by role
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
+    public ListOrganizationInvitationsRoleEnum role;
+    public ListOrganizationInvitationsRequest withRole(ListOrganizationInvitationsRoleEnum role) {
+        this.role = role;
         return this;
     }
     

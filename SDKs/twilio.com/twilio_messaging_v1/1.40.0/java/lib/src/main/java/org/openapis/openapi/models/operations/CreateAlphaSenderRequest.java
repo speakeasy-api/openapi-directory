@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAlphaSenderRequest {
-    
-    public CreateAlphaSenderPathParams pathParams;
-    public CreateAlphaSenderRequest withPathParams(CreateAlphaSenderPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateAlphaSenderCreateAlphaSenderRequest request;
-    public CreateAlphaSenderRequest withRequest(CreateAlphaSenderCreateAlphaSenderRequest request) {
-        this.request = request;
+    public CreateAlphaSenderCreateAlphaSenderRequest requestBody;
+    public CreateAlphaSenderRequest withRequestBody(CreateAlphaSenderCreateAlphaSenderRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateAlphaSenderSecurity security;
-    public CreateAlphaSenderRequest withSecurity(CreateAlphaSenderSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateAlphaSenderRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the resource under.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateAlphaSenderRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

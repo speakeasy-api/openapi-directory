@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VirtualizationClustersUpdateRequest {
-    
-    public VirtualizationClustersUpdatePathParams pathParams;
-    public VirtualizationClustersUpdateRequest withPathParams(VirtualizationClustersUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableClusterInput writableClusterInput;
+    public VirtualizationClustersUpdateRequest withWritableClusterInput(org.openapis.openapi.models.shared.WritableClusterInput writableClusterInput) {
+        this.writableClusterInput = writableClusterInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableClusterInput request;
-    public VirtualizationClustersUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableClusterInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this cluster.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public VirtualizationClustersUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

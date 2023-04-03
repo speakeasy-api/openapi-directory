@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.FindFormByFormNameSecurity;
-import org.openapis.openapi.models.operations.FindFormByFormNamePathParams;
 import org.openapis.openapi.models.operations.FindFormByFormNameRequest;
 import org.openapis.openapi.models.operations.FindFormByFormNameResponse;
-import org.openapis.openapi.models.shared.SchemeApikey;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,17 +28,12 @@ public class Application {
                 .build();
 
             FindFormByFormNameRequest req = new FindFormByFormNameRequest() {{
-                security = new FindFormByFormNameSecurity() {{
-                    apikey = new SchemeApikey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                pathParams = new FindFormByFormNamePathParams() {{
-                    formName = "corrupti";
-                }};
-            }};            
+                formName = "corrupti";
+            }}            
 
-            FindFormByFormNameResponse res = sdk.forms.findFormByFormName(req);
+            FindFormByFormNameResponse res = sdk.forms.findFormByFormName(req, new FindFormByFormNameSecurity() {{
+                apikey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.findFormByFormName200ApplicationJSONObject.isPresent()) {
                 // handle response
@@ -52,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### forms

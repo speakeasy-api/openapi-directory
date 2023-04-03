@@ -7,31 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUnderstandFieldTypeRequest {
-    
-    public UpdateUnderstandFieldTypePathParams pathParams;
-    public UpdateUnderstandFieldTypeRequest withPathParams(UpdateUnderstandFieldTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public UpdateUnderstandFieldTypeRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateUnderstandFieldTypeUpdateUnderstandFieldTypeRequest request;
-    public UpdateUnderstandFieldTypeRequest withRequest(UpdateUnderstandFieldTypeUpdateUnderstandFieldTypeRequest request) {
-        this.request = request;
+    public UpdateUnderstandFieldTypeUpdateUnderstandFieldTypeRequest requestBody;
+    public UpdateUnderstandFieldTypeRequest withRequestBody(UpdateUnderstandFieldTypeUpdateUnderstandFieldTypeRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateUnderstandFieldTypeSecurity security;
-    public UpdateUnderstandFieldTypeRequest withSecurity(UpdateUnderstandFieldTypeSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateUnderstandFieldTypeRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateUnderstandFieldTypeRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

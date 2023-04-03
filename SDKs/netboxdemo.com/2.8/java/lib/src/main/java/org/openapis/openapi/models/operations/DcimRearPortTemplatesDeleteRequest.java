@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimRearPortTemplatesDeleteRequest {
-    
-    public DcimRearPortTemplatesDeletePathParams pathParams;
-    public DcimRearPortTemplatesDeleteRequest withPathParams(DcimRearPortTemplatesDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this rear port template.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimRearPortTemplatesDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

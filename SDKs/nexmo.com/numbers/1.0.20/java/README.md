@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BuyANumberRequest;
 import org.openapis.openapi.models.operations.BuyANumberResponse;
 import org.openapis.openapi.models.shared.NumberDetails;
 
@@ -26,22 +25,16 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                    apiSecret = new SchemeAPISecret() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKey = "YOUR_API_KEY_HERE";
+                    apiSecret = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            BuyANumberRequest req = new BuyANumberRequest() {{
-                request = new NumberDetails() {{
-                    country = "GB";
-                    msisdn = "447700900000";
-                    targetApiKey = "1a2345b7";
-                }};
-            }};            
+            org.openapis.openapi.models.shared.NumberDetails req = new NumberDetails() {{
+                country = "GB";
+                msisdn = "447700900000";
+                targetApiKey = "1a2345b7";
+            }}            
 
             BuyANumberResponse res = sdk.buyANumber(req);
 
@@ -55,7 +48,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

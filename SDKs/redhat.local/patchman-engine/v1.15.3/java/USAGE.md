@@ -5,10 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.LatestPackageSecurity;
-import org.openapis.openapi.models.operations.LatestPackagePathParams;
 import org.openapis.openapi.models.operations.LatestPackageRequest;
 import org.openapis.openapi.models.operations.LatestPackageResponse;
-import org.openapis.openapi.models.shared.SchemeRhIdentity;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,17 +15,12 @@ public class Application {
                 .build();
 
             LatestPackageRequest req = new LatestPackageRequest() {{
-                security = new LatestPackageSecurity() {{
-                    rhIdentity = new SchemeRhIdentity() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                pathParams = new LatestPackagePathParams() {{
-                    packageName = "corrupti";
-                }};
-            }};            
+                packageName = "corrupti";
+            }}            
 
-            LatestPackageResponse res = sdk.latestPackage(req);
+            LatestPackageResponse res = sdk.latestPackage(req, new LatestPackageSecurity() {{
+                rhIdentity = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.controllersPackageDetailResponse.isPresent()) {
                 // handle response

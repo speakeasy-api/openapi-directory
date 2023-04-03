@@ -7,34 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCustomPolicyRequest {
-    
-    public UpdateCustomPolicyPathParams pathParams;
-    public UpdateCustomPolicyRequest withPathParams(UpdateCustomPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateCustomPolicyHeaders headers;
-    public UpdateCustomPolicyRequest withHeaders(UpdateCustomPolicyHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Request to update a current custom policy.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CustomPolicyRequest request;
-    public UpdateCustomPolicyRequest withRequest(org.openapis.openapi.models.shared.CustomPolicyRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CustomPolicyRequest customPolicyRequest;
+    public UpdateCustomPolicyRequest withCustomPolicyRequest(org.openapis.openapi.models.shared.CustomPolicyRequest customPolicyRequest) {
+        this.customPolicyRequest = customPolicyRequest;
         return this;
     }
     
+    /**
+     * This header parameter specifies the eBay marketplace for the custom policy that is being created. Supported values for this header can be found in the &lt;a href="/api-docs/sell/account/types/ba:MarketplaceIdEnum" target="_blank"&gt;MarketplaceIdEnum&lt;/a&gt; type definition.&lt;br/&gt; &lt;br/&gt; &lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; The following eBay marketplaces support Custom Policies: &lt;ul&gt;&lt;li&gt;Germany (EBAY_DE)&lt;/li&gt; &lt;li&gt;Canada (EBAY_CA)&lt;/li&gt; &lt;li&gt;Australia (EBAY_AU)&lt;/li&gt; &lt;li&gt;United States (EBAY_US)&lt;/li&gt; &lt;li&gt;France (EBAY_FR)&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public UpdateCustomPolicyRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
+        return this;
+    }
     
-    public UpdateCustomPolicySecurity security;
-    public UpdateCustomPolicyRequest withSecurity(UpdateCustomPolicySecurity security) {
-        this.security = security;
+    /**
+     * This path parameter is the unique custom policy identifier for the policy to be returned.&lt;br/&gt;&lt;br/&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; This value is automatically assigned by the system when the policy is created.&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=custom_policy_id")
+    public String customPolicyId;
+    public UpdateCustomPolicyRequest withCustomPolicyId(String customPolicyId) {
+        this.customPolicyId = customPolicyId;
         return this;
     }
     

@@ -35,10 +35,11 @@ public class PCIComplianceQuestionnairePage {
      * Returns a link to a PCI compliance questionnaire that you can send to your account holder.
      *  &gt; You should only use this endpoint if you have a [partner platform setup](https://docs.adyen.com/marketplaces-and-platforms/classic/platforms-for-partners).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetPciQuestionnaireUrlResponse postGetPciQuestionnaireUrl(org.openapis.openapi.models.operations.PostGetPciQuestionnaireUrlRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetPciQuestionnaireUrlResponse postGetPciQuestionnaireUrl(org.openapis.openapi.models.shared.GetPciUrlRequest request, org.openapis.openapi.models.operations.PostGetPciQuestionnaireUrlSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/getPciQuestionnaireUrl");
         
@@ -49,7 +50,7 @@ public class PCIComplianceQuestionnairePage {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

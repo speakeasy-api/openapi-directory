@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteReceivable2Request {
+    /**
+     * project's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public DeleteReceivable2Request withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
     
-    public DeleteReceivable2PathParams pathParams;
-    public DeleteReceivable2Request withPathParams(DeleteReceivable2PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * receivable's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=receivableId")
+    public Long receivableId;
+    public DeleteReceivable2Request withReceivableId(Long receivableId) {
+        this.receivableId = receivableId;
         return this;
     }
     

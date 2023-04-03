@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppPackageDELETERequest {
-    
-    public AppPackageDELETEPathParams pathParams;
-    public AppPackageDELETERequest withPathParams(AppPackageDELETEPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Identifier of an individual application package resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appPkgId")
+    public String appPkgId;
+    public AppPackageDELETERequest withAppPkgId(String appPkgId) {
+        this.appPkgId = appPkgId;
         return this;
     }
     

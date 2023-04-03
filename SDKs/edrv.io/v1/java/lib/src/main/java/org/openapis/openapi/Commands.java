@@ -37,7 +37,7 @@ public class Commands {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CancelreservationResponse cancelreservation(org.openapis.openapi.models.operations.CancelreservationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CancelreservationResponse cancelreservation(org.openapis.openapi.models.operations.CancelreservationRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/commands/cancelreservation");
         
@@ -91,7 +91,7 @@ public class Commands {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCommandsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCommandsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -124,7 +124,7 @@ public class Commands {
      */
     public org.openapis.openapi.models.operations.GetVariablesResponse getVariables(org.openapis.openapi.models.operations.GetVariablesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariablesPathParams.class, baseUrl, "/v1/commands/{id}/variables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariablesRequest.class, baseUrl, "/v1/commands/{id}/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -157,12 +157,12 @@ public class Commands {
      */
     public org.openapis.openapi.models.operations.PatchChargeStationVariableResponse patchChargeStationVariable(org.openapis.openapi.models.operations.PatchChargeStationVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchChargeStationVariablePathParams.class, baseUrl, "/v1/commands/{id}/variables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchChargeStationVariableRequest.class, baseUrl, "/v1/commands/{id}/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -201,7 +201,7 @@ public class Commands {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemotestartResponse remotestart(org.openapis.openapi.models.operations.RemotestartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RemotestartResponse remotestart(org.openapis.openapi.models.operations.RemotestartRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/commands/remotestart");
         
@@ -247,7 +247,7 @@ public class Commands {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemotestopResponse remotestop(org.openapis.openapi.models.operations.RemotestopRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RemotestopResponse remotestop(org.openapis.openapi.models.operations.RemotestopRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/commands/remotestop");
         
@@ -285,7 +285,7 @@ public class Commands {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReserveResponse reserve(org.openapis.openapi.models.operations.ReserveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReserveResponse reserve(org.openapis.openapi.models.operations.ReserveRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/commands/reserve");
         
@@ -331,7 +331,7 @@ public class Commands {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ResetResponse reset(org.openapis.openapi.models.operations.ResetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ResetResponse reset(org.openapis.openapi.models.operations.ResetRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/commands/reset");
         
@@ -377,7 +377,7 @@ public class Commands {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnlockconnectorResponse unlockconnector(org.openapis.openapi.models.operations.UnlockconnectorRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnlockconnectorResponse unlockconnector(org.openapis.openapi.models.operations.UnlockconnectorRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/commands/unlockconnector");
         

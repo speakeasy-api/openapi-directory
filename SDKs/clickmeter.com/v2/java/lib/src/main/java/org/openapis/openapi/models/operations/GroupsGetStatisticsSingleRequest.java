@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsGetStatisticsSingleRequest {
-    
-    public GroupsGetStatisticsSinglePathParams pathParams;
-    public GroupsGetStatisticsSingleRequest withPathParams(GroupsGetStatisticsSinglePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
+    public String fromDay;
+    public GroupsGetStatisticsSingleRequest withFromDay(String fromDay) {
+        this.fromDay = fromDay;
         return this;
     }
     
+    /**
+     * If using "yesterday" or "today" timeframe you can ask for the hourly detail
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hourly")
+    public Boolean hourly;
+    public GroupsGetStatisticsSingleRequest withHourly(Boolean hourly) {
+        this.hourly = hourly;
+        return this;
+    }
     
-    public GroupsGetStatisticsSingleQueryParams queryParams;
-    public GroupsGetStatisticsSingleRequest withQueryParams(GroupsGetStatisticsSingleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GroupsGetStatisticsSingleRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Timeframe of the request. See list at $timeframeList
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
+    public GroupsGetStatisticsSingleTimeFrameEnum timeFrame;
+    public GroupsGetStatisticsSingleRequest withTimeFrame(GroupsGetStatisticsSingleTimeFrameEnum timeFrame) {
+        this.timeFrame = timeFrame;
+        return this;
+    }
+    
+    /**
+     * If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
+    public String toDay;
+    public GroupsGetStatisticsSingleRequest withToDay(String toDay) {
+        this.toDay = toDay;
         return this;
     }
     

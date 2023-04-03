@@ -33,19 +33,20 @@ public class VideosViewingPrivacy {
     /**
      * Permit a specific user to view a private video
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideoPrivacyUserResponse addVideoPrivacyUser(org.openapis.openapi.models.operations.AddVideoPrivacyUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideoPrivacyUserResponse addVideoPrivacyUser(org.openapis.openapi.models.operations.AddVideoPrivacyUserRequest request, org.openapis.openapi.models.operations.AddVideoPrivacyUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoPrivacyUserPathParams.class, baseUrl, "/videos/{video_id}/privacy/users/{user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoPrivacyUserRequest.class, baseUrl, "/videos/{video_id}/privacy/users/{user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -85,19 +86,20 @@ public class VideosViewingPrivacy {
      * [batch request format](https://developer.vimeo.com/api/common-formats#batch-requests). Each object must contain
      * a single `URI` field, and the value of this field must be the URI of the user who can view this video.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideoPrivacyUsersResponse addVideoPrivacyUsers(org.openapis.openapi.models.operations.AddVideoPrivacyUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideoPrivacyUsersResponse addVideoPrivacyUsers(org.openapis.openapi.models.operations.AddVideoPrivacyUsersRequest request, org.openapis.openapi.models.operations.AddVideoPrivacyUsersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoPrivacyUsersPathParams.class, baseUrl, "/videos/{video_id}/privacy/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoPrivacyUsersRequest.class, baseUrl, "/videos/{video_id}/privacy/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,19 +129,20 @@ public class VideosViewingPrivacy {
      * [batch request format](https://developer.vimeo.com/api/common-formats#batch-requests). Each object must contain
      * a single `URI` field, and the value of this field must be the URI of the user who can view this video.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideoPrivacyUsersAlt1Response addVideoPrivacyUsersAlt1(org.openapis.openapi.models.operations.AddVideoPrivacyUsersAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideoPrivacyUsersAlt1Response addVideoPrivacyUsersAlt1(org.openapis.openapi.models.operations.AddVideoPrivacyUsersAlt1Request request, org.openapis.openapi.models.operations.AddVideoPrivacyUsersAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoPrivacyUsersAlt1PathParams.class, baseUrl, "/channels/{channel_id}/videos/{video_id}/privacy/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoPrivacyUsersAlt1Request.class, baseUrl, "/channels/{channel_id}/videos/{video_id}/privacy/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -166,19 +169,20 @@ public class VideosViewingPrivacy {
     /**
      * Restrict a user from viewing a private video
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVideoPrivacyUserResponse deleteVideoPrivacyUser(org.openapis.openapi.models.operations.DeleteVideoPrivacyUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVideoPrivacyUserResponse deleteVideoPrivacyUser(org.openapis.openapi.models.operations.DeleteVideoPrivacyUserRequest request, org.openapis.openapi.models.operations.DeleteVideoPrivacyUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoPrivacyUserPathParams.class, baseUrl, "/videos/{video_id}/privacy/users/{user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoPrivacyUserRequest.class, baseUrl, "/videos/{video_id}/privacy/users/{user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -212,13 +216,13 @@ public class VideosViewingPrivacy {
      */
     public org.openapis.openapi.models.operations.GetVideoPrivacyUsersResponse getVideoPrivacyUsers(org.openapis.openapi.models.operations.GetVideoPrivacyUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoPrivacyUsersPathParams.class, baseUrl, "/videos/{video_id}/privacy/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoPrivacyUsersRequest.class, baseUrl, "/videos/{video_id}/privacy/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVideoPrivacyUsersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVideoPrivacyUsersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -265,13 +269,13 @@ public class VideosViewingPrivacy {
      */
     public org.openapis.openapi.models.operations.GetVideoPrivacyUsersAlt1Response getVideoPrivacyUsersAlt1(org.openapis.openapi.models.operations.GetVideoPrivacyUsersAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoPrivacyUsersAlt1PathParams.class, baseUrl, "/channels/{channel_id}/videos/{video_id}/privacy/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoPrivacyUsersAlt1Request.class, baseUrl, "/channels/{channel_id}/videos/{video_id}/privacy/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVideoPrivacyUsersAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVideoPrivacyUsersAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

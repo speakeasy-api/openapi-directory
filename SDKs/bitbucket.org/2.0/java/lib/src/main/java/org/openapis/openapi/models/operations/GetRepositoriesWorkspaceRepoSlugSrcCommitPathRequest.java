@@ -4,27 +4,90 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugSrcCommitPathPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest withPathParams(GetRepositoriesWorkspaceRepoSlugSrcCommitPathPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The commit's SHA1.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
+    public String commit;
+    public GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest withCommit(String commit) {
+        this.commit = commit;
         return this;
     }
     
-    
-    public GetRepositoriesWorkspaceRepoSlugSrcCommitPathQueryParams queryParams;
-    public GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest withQueryParams(GetRepositoriesWorkspaceRepoSlugSrcCommitPathQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If 'meta' is provided, returns the (json) meta data for the contents of the file.  If 'rendered' is provided, returns the contents of a non-binary file in HTML-formatted rendered markup. Since Git does not generally track what text encoding scheme is used, this endpoint attempts to detect the most appropriate character encoding. While usually correct, determining the character encoding can be ambiguous which in exceptional cases can lead to misinterpretation of the characters. As such, the raw element in the response object should not be treated as equivalent to the file's actual contents.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetRepositoriesWorkspaceRepoSlugSrcCommitPathFormatEnum format;
+    public GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest withFormat(GetRepositoriesWorkspaceRepoSlugSrcCommitPathFormatEnum format) {
+        this.format = format;
         return this;
     }
     
+    /**
+     * If provided, returns the contents of the repository and its subdirectories recursively until the specified max_depth of nested directories. When omitted, this defaults to 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_depth")
+    public Long maxDepth;
+    public GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest withMaxDepth(Long maxDepth) {
+        this.maxDepth = maxDepth;
+        return this;
+    }
     
-    public GetRepositoriesWorkspaceRepoSlugSrcCommitPathSecurity security;
-    public GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest withSecurity(GetRepositoriesWorkspaceRepoSlugSrcCommitPathSecurity security) {
-        this.security = security;
+    /**
+     * Path to the file.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    
+    /**
+     * Optional filter expression as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * Optional sorting parameter as per [filtering and sorting](/cloud/bitbucket/rest/intro/#sorting-query-results).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

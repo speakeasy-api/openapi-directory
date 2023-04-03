@@ -53,9 +53,22 @@ public class Profile {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05PatientsProfileShareJsonResponse postV05PatientsProfileShareJson(org.openapis.openapi.models.operations.PostV05PatientsProfileShareJsonRequest request) throws Exception {
+        return this.postV05PatientsProfileShareJson(request, null);
+    }
+
+    /**
+     * Share patient profile details
+     * Request for sharing patient's profile details to HIP
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05PatientsProfileShareJsonResponse postV05PatientsProfileShareJson(org.openapis.openapi.models.operations.PostV05PatientsProfileShareJsonRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_PATIENTS_PROFILE_SHARE_JSON_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/patients/profile/share");
@@ -63,13 +76,13 @@ public class Profile {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "shareProfileRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -125,9 +138,22 @@ public class Profile {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05PatientsProfileShareRawResponse postV05PatientsProfileShareRaw(org.openapis.openapi.models.operations.PostV05PatientsProfileShareRawRequest request) throws Exception {
+        return this.postV05PatientsProfileShareRaw(request, null);
+    }
+
+    /**
+     * Share patient profile details
+     * Request for sharing patient's profile details to HIP
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05PatientsProfileShareRawResponse postV05PatientsProfileShareRaw(org.openapis.openapi.models.operations.PostV05PatientsProfileShareRawRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_PATIENTS_PROFILE_SHARE_RAW_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/patients/profile/share");
@@ -135,13 +161,13 @@ public class Profile {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

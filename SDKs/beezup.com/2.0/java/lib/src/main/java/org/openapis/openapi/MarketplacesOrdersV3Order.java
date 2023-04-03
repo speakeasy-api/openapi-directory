@@ -42,15 +42,15 @@ public class MarketplacesOrdersV3Order {
      */
     public org.openapis.openapi.models.operations.ChangeOrderV3Response changeOrderV3(org.openapis.openapi.models.operations.ChangeOrderV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangeOrderV3PathParams.class, baseUrl, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/{changeOrderType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangeOrderV3Request.class, baseUrl, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/{changeOrderType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChangeOrderV3QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChangeOrderV3Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -110,13 +110,13 @@ public class MarketplacesOrdersV3Order {
      */
     public org.openapis.openapi.models.operations.ClearMerchantOrderInfoV3Response clearMerchantOrderInfoV3(org.openapis.openapi.models.operations.ClearMerchantOrderInfoV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClearMerchantOrderInfoV3PathParams.class, baseUrl, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/clearMerchantOrderInfo", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClearMerchantOrderInfoV3Request.class, baseUrl, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/clearMerchantOrderInfo", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClearMerchantOrderInfoV3QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClearMerchantOrderInfoV3Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -165,7 +165,7 @@ public class MarketplacesOrdersV3Order {
      */
     public org.openapis.openapi.models.operations.GetOrderChangeReportingV3Response getOrderChangeReportingV3(org.openapis.openapi.models.operations.GetOrderChangeReportingV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrderChangeReportingV3PathParams.class, baseUrl, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/history/{orderChangeExecutionUUID}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrderChangeReportingV3Request.class, baseUrl, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/history/{orderChangeExecutionUUID}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -223,7 +223,7 @@ public class MarketplacesOrdersV3Order {
      */
     public org.openapis.openapi.models.operations.GetOrderHistoryV3Response getOrderHistoryV3(org.openapis.openapi.models.operations.GetOrderHistoryV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrderHistoryV3PathParams.class, baseUrl, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/history", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrderHistoryV3Request.class, baseUrl, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/history", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -281,13 +281,13 @@ public class MarketplacesOrdersV3Order {
      */
     public org.openapis.openapi.models.operations.GetOrderV3Response getOrderV3(org.openapis.openapi.models.operations.GetOrderV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrderV3PathParams.class, baseUrl, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrderV3Request.class, baseUrl, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -349,13 +349,13 @@ public class MarketplacesOrdersV3Order {
      */
     public org.openapis.openapi.models.operations.HarvestAccountResponse harvestAccount(org.openapis.openapi.models.operations.HarvestAccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.HarvestAccountPathParams.class, baseUrl, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/harvest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.HarvestAccountRequest.class, baseUrl, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/harvest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.HarvestAccountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.HarvestAccountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -415,7 +415,7 @@ public class MarketplacesOrdersV3Order {
      */
     public org.openapis.openapi.models.operations.HarvestOrderV3Response harvestOrderV3(org.openapis.openapi.models.operations.HarvestOrderV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.HarvestOrderV3PathParams.class, baseUrl, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/harvest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.HarvestOrderV3Request.class, baseUrl, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/harvest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -478,13 +478,13 @@ public class MarketplacesOrdersV3Order {
      */
     public org.openapis.openapi.models.operations.HeadOrderV3Response headOrderV3(org.openapis.openapi.models.operations.HeadOrderV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.HeadOrderV3PathParams.class, baseUrl, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.HeadOrderV3Request.class, baseUrl, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("HEAD");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -536,18 +536,18 @@ public class MarketplacesOrdersV3Order {
      */
     public org.openapis.openapi.models.operations.SetMerchantOrderInfoV3Response setMerchantOrderInfoV3(org.openapis.openapi.models.operations.SetMerchantOrderInfoV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetMerchantOrderInfoV3PathParams.class, baseUrl, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/setMerchantOrderInfo", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetMerchantOrderInfoV3Request.class, baseUrl, "/orders/v3/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/setMerchantOrderInfo", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setMerchantOrderInfoRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SetMerchantOrderInfoV3QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SetMerchantOrderInfoV3Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

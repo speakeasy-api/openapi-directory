@@ -4,27 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DashboardZoomRoomRequest {
-    
-    public DashboardZoomRoomPathParams pathParams;
-    public DashboardZoomRoomRequest withPathParams(DashboardZoomRoomPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Start date in 'yyyy-mm-dd' format. The date range defined by the "from" and "to" parameters should only be one month as the report includes only one month worth of data at once.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public LocalDate from;
+    public DashboardZoomRoomRequest withFrom(LocalDate from) {
+        this.from = from;
         return this;
     }
     
-    
-    public DashboardZoomRoomQueryParams queryParams;
-    public DashboardZoomRoomRequest withQueryParams(DashboardZoomRoomQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public DashboardZoomRoomRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
         return this;
     }
     
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public DashboardZoomRoomRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public DashboardZoomRoomSecurity security;
-    public DashboardZoomRoomRequest withSecurity(DashboardZoomRoomSecurity security) {
-        this.security = security;
+    /**
+     * End date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public LocalDate to;
+    public DashboardZoomRoomRequest withTo(LocalDate to) {
+        this.to = to;
+        return this;
+    }
+    
+    /**
+     * The Zoom room ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zoomroomId")
+    public String zoomroomId;
+    public DashboardZoomRoomRequest withZoomroomId(String zoomroomId) {
+        this.zoomroomId = zoomroomId;
         return this;
     }
     

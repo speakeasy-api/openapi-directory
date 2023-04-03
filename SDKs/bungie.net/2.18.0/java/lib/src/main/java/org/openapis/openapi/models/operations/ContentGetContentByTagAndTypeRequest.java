@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentGetContentByTagAndTypeRequest {
-    
-    public ContentGetContentByTagAndTypePathParams pathParams;
-    public ContentGetContentByTagAndTypeRequest withPathParams(ContentGetContentByTagAndTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Not used.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=head")
+    public Boolean head;
+    public ContentGetContentByTagAndTypeRequest withHead(Boolean head) {
+        this.head = head;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=locale")
+    public String locale;
+    public ContentGetContentByTagAndTypeRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
     
-    public ContentGetContentByTagAndTypeQueryParams queryParams;
-    public ContentGetContentByTagAndTypeRequest withQueryParams(ContentGetContentByTagAndTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag")
+    public String tag;
+    public ContentGetContentByTagAndTypeRequest withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public String type;
+    public ContentGetContentByTagAndTypeRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

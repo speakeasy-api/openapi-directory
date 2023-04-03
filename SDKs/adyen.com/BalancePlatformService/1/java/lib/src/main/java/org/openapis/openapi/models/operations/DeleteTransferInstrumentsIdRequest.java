@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTransferInstrumentsIdRequest {
-    
-    public DeleteTransferInstrumentsIdPathParams pathParams;
-    public DeleteTransferInstrumentsIdRequest withPathParams(DeleteTransferInstrumentsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteTransferInstrumentsIdSecurity security;
-    public DeleteTransferInstrumentsIdRequest withSecurity(DeleteTransferInstrumentsIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the transfer instrument to be deleted.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteTransferInstrumentsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

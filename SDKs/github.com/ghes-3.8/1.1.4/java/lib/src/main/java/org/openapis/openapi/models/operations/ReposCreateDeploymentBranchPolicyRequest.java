@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposCreateDeploymentBranchPolicyRequest {
-    
-    public ReposCreateDeploymentBranchPolicyPathParams pathParams;
-    public ReposCreateDeploymentBranchPolicyRequest withPathParams(ReposCreateDeploymentBranchPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.DeploymentBranchPolicyNamePattern deploymentBranchPolicyNamePattern;
+    public ReposCreateDeploymentBranchPolicyRequest withDeploymentBranchPolicyNamePattern(org.openapis.openapi.models.shared.DeploymentBranchPolicyNamePattern deploymentBranchPolicyNamePattern) {
+        this.deploymentBranchPolicyNamePattern = deploymentBranchPolicyNamePattern;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DeploymentBranchPolicyNamePattern request;
-    public ReposCreateDeploymentBranchPolicyRequest withRequest(org.openapis.openapi.models.shared.DeploymentBranchPolicyNamePattern request) {
-        this.request = request;
+    /**
+     * The name of the environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_name")
+    public String environmentName;
+    public ReposCreateDeploymentBranchPolicyRequest withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
+        return this;
+    }
+    
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposCreateDeploymentBranchPolicyRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposCreateDeploymentBranchPolicyRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

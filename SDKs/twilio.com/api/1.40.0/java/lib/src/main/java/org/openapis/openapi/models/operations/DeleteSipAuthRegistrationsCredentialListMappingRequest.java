@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSipAuthRegistrationsCredentialListMappingRequest {
-    
-    public DeleteSipAuthRegistrationsCredentialListMappingPathParams pathParams;
-    public DeleteSipAuthRegistrationsCredentialListMappingRequest withPathParams(DeleteSipAuthRegistrationsCredentialListMappingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the CredentialListMapping resources to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public DeleteSipAuthRegistrationsCredentialListMappingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public DeleteSipAuthRegistrationsCredentialListMappingSecurity security;
-    public DeleteSipAuthRegistrationsCredentialListMappingRequest withSecurity(DeleteSipAuthRegistrationsCredentialListMappingSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the SIP domain that contains the resources to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainSid")
+    public String domainSid;
+    public DeleteSipAuthRegistrationsCredentialListMappingRequest withDomainSid(String domainSid) {
+        this.domainSid = domainSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteSipAuthRegistrationsCredentialListMappingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the CredentialListMapping resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteSipAuthRegistrationsCredentialListMappingRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

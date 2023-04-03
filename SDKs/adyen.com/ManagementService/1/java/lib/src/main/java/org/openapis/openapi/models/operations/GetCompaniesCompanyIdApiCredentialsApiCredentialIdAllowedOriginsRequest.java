@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsRequest {
-    
-    public GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsPathParams pathParams;
-    public GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsRequest withPathParams(GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the API credential.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiCredentialId")
+    public String apiCredentialId;
+    public GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsRequest withApiCredentialId(String apiCredentialId) {
+        this.apiCredentialId = apiCredentialId;
         return this;
     }
     
-    
-    public GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsSecurity security;
-    public GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsRequest withSecurity(GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     

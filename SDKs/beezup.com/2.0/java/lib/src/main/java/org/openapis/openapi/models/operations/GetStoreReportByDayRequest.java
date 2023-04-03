@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStoreReportByDayRequest {
-    
-    public GetStoreReportByDayPathParams pathParams;
-    public GetStoreReportByDayRequest withPathParams(GetStoreReportByDayPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ReportByDayRequest reportByDayRequest;
+    public GetStoreReportByDayRequest withReportByDayRequest(org.openapis.openapi.models.shared.ReportByDayRequest reportByDayRequest) {
+        this.reportByDayRequest = reportByDayRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ReportByDayRequest request;
-    public GetStoreReportByDayRequest withRequest(org.openapis.openapi.models.shared.ReportByDayRequest request) {
-        this.request = request;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public GetStoreReportByDayRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

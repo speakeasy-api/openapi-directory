@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LicenseVideosRequest {
-    
-    public LicenseVideosQueryParams queryParams;
-    public LicenseVideosRequest withQueryParams(LicenseVideosQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * List of videos to request licenses for and information about each license transaction; these values override the defaults in the query parameters
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LicenseVideoRequest request;
-    public LicenseVideosRequest withRequest(org.openapis.openapi.models.shared.LicenseVideoRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.LicenseVideoRequest licenseVideoRequest;
+    public LicenseVideosRequest withLicenseVideoRequest(org.openapis.openapi.models.shared.LicenseVideoRequest licenseVideoRequest) {
+        this.licenseVideoRequest = licenseVideoRequest;
         return this;
     }
     
+    /**
+     * The Search ID that led to this licensing event
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_id")
+    public String searchId;
+    public LicenseVideosRequest withSearchId(String searchId) {
+        this.searchId = searchId;
+        return this;
+    }
     
-    public LicenseVideosSecurity security;
-    public LicenseVideosRequest withSecurity(LicenseVideosSecurity security) {
-        this.security = security;
+    /**
+     * The size of the video to license
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public LicenseVideosSizeEnum size;
+    public LicenseVideosRequest withSize(LicenseVideosSizeEnum size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * The subscription ID to use for licensing
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subscription_id")
+    public String subscriptionId;
+    public LicenseVideosRequest withSubscriptionId(String subscriptionId) {
+        this.subscriptionId = subscriptionId;
         return this;
     }
     

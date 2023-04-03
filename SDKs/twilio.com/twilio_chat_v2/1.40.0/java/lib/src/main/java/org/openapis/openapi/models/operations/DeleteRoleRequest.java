@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRoleRequest {
-    
-    public DeleteRolePathParams pathParams;
-    public DeleteRoleRequest withPathParams(DeleteRolePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the Role resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteRoleRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public DeleteRoleSecurity security;
-    public DeleteRoleRequest withSecurity(DeleteRoleSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteRoleRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Role resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteRoleRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

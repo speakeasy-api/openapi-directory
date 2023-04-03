@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImagesIdRequest {
-    
-    public GetImagesIdPathParams pathParams;
-    public GetImagesIdRequest withPathParams(GetImagesIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetImagesIdSecurity security;
-    public GetImagesIdRequest withSecurity(GetImagesIdSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the image resource to load.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetImagesIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

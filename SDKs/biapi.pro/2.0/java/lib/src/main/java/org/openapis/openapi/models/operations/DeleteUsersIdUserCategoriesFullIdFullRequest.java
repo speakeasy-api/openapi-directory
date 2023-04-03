@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUsersIdUserCategoriesFullIdFullRequest {
-    
-    public DeleteUsersIdUserCategoriesFullIdFullPathParams pathParams;
-    public DeleteUsersIdUserCategoriesFullIdFullRequest withPathParams(DeleteUsersIdUserCategoriesFullIdFullPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public DeleteUsersIdUserCategoriesFullIdFullRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_full")
+    public Long idFull;
+    public DeleteUsersIdUserCategoriesFullIdFullRequest withIdFull(Long idFull) {
+        this.idFull = idFull;
+        return this;
+    }
     
-    public DeleteUsersIdUserCategoriesFullIdFullQueryParams queryParams;
-    public DeleteUsersIdUserCategoriesFullIdFullRequest withQueryParams(DeleteUsersIdUserCategoriesFullIdFullQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public DeleteUsersIdUserCategoriesFullIdFullRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

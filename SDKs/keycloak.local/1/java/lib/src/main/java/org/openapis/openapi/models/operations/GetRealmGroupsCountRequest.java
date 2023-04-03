@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmGroupsCountRequest {
-    
-    public GetRealmGroupsCountPathParams pathParams;
-    public GetRealmGroupsCountRequest withPathParams(GetRealmGroupsCountPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmGroupsCountRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetRealmGroupsCountRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
     
-    public GetRealmGroupsCountQueryParams queryParams;
-    public GetRealmGroupsCountRequest withQueryParams(GetRealmGroupsCountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=top")
+    public Boolean top;
+    public GetRealmGroupsCountRequest withTop(Boolean top) {
+        this.top = top;
         return this;
     }
     

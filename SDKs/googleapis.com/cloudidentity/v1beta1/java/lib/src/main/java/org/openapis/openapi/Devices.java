@@ -34,27 +34,28 @@ public class Devices {
     /**
      * Creates a device. Only company-owned device may be created. **Note**: This method is available only to customers who have one of the following SKUs: Enterprise Standard, Enterprise Plus, Enterprise for Education, and Cloud Identity Premium
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityDevicesCreateResponse cloudidentityDevicesCreate(org.openapis.openapi.models.operations.CloudidentityDevicesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityDevicesCreateResponse cloudidentityDevicesCreate(org.openapis.openapi.models.operations.CloudidentityDevicesCreateRequest request, org.openapis.openapi.models.operations.CloudidentityDevicesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1beta1/devices");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createDeviceRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityDevicesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityDevicesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class Devices {
     /**
      * Approves device to access user data.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersApproveResponse cloudidentityDevicesDeviceUsersApprove(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersApproveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersApproveResponse cloudidentityDevicesDeviceUsersApprove(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersApproveRequest request, org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersApproveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersApprovePathParams.class, baseUrl, "/v1beta1/{name}:approve", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersApproveRequest.class, baseUrl, "/v1beta1/{name}:approve", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "approveDeviceUserRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersApproveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersApproveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,27 +130,28 @@ public class Devices {
     /**
      * Blocks device from accessing user data
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersBlockResponse cloudidentityDevicesDeviceUsersBlock(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersBlockRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersBlockResponse cloudidentityDevicesDeviceUsersBlock(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersBlockRequest request, org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersBlockSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersBlockPathParams.class, baseUrl, "/v1beta1/{name}:block", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersBlockRequest.class, baseUrl, "/v1beta1/{name}:block", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "blockDeviceUserRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersBlockQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersBlockRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -175,27 +178,28 @@ public class Devices {
     /**
      * Cancels an unfinished user account wipe. This operation can be used to cancel device wipe in the gap between the wipe operation returning success and the device being wiped.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersCancelWipeResponse cloudidentityDevicesDeviceUsersCancelWipe(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersCancelWipeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersCancelWipeResponse cloudidentityDevicesDeviceUsersCancelWipe(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersCancelWipeRequest request, org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersCancelWipeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersCancelWipePathParams.class, baseUrl, "/v1beta1/{name}:cancelWipe", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersCancelWipeRequest.class, baseUrl, "/v1beta1/{name}:cancelWipe", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "cancelWipeDeviceUserRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersCancelWipeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersCancelWipeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -222,25 +226,26 @@ public class Devices {
     /**
      * Lists/Searches DeviceUsers.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersListResponse cloudidentityDevicesDeviceUsersList(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersListResponse cloudidentityDevicesDeviceUsersList(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersListRequest request, org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersListPathParams.class, baseUrl, "/v1beta1/{parent}/deviceUsers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersListRequest.class, baseUrl, "/v1beta1/{parent}/deviceUsers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -267,25 +272,26 @@ public class Devices {
     /**
      * Looks up resource names of the DeviceUsers associated with the caller's credentials, as well as the properties provided in the request. This method must be called with end-user credentials with the scope: https://www.googleapis.com/auth/cloud-identity.devices.lookup If multiple properties are provided, only DeviceUsers having all of these properties are considered as matches - i.e. the query behaves like an AND. Different platforms require different amounts of information from the caller to ensure that the DeviceUser is uniquely identified. - iOS: No properties need to be passed, the caller's credentials are sufficient to identify the corresponding DeviceUser. - Android: Specifying the 'android_id' field is required. - Desktop: Specifying the 'raw_resource_id' field is required.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersLookupResponse cloudidentityDevicesDeviceUsersLookup(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersLookupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersLookupResponse cloudidentityDevicesDeviceUsersLookup(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersLookupRequest request, org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersLookupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersLookupPathParams.class, baseUrl, "/v1beta1/{parent}:lookup", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersLookupRequest.class, baseUrl, "/v1beta1/{parent}:lookup", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersLookupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersLookupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -312,27 +318,28 @@ public class Devices {
     /**
      * Wipes the user's account on a device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersWipeResponse cloudidentityDevicesDeviceUsersWipe(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersWipeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersWipeResponse cloudidentityDevicesDeviceUsersWipe(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersWipeRequest request, org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersWipeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersWipePathParams.class, baseUrl, "/v1beta1/{name}:wipe", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersWipeRequest.class, baseUrl, "/v1beta1/{name}:wipe", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "wipeDeviceUserRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersWipeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityDevicesDeviceUsersWipeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -359,10 +366,11 @@ public class Devices {
     /**
      * Lists/Searches devices.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityDevicesListResponse cloudidentityDevicesList(org.openapis.openapi.models.operations.CloudidentityDevicesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityDevicesListResponse cloudidentityDevicesList(org.openapis.openapi.models.operations.CloudidentityDevicesListRequest request, org.openapis.openapi.models.operations.CloudidentityDevicesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1beta1/devices");
         
@@ -370,14 +378,14 @@ public class Devices {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityDevicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityDevicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

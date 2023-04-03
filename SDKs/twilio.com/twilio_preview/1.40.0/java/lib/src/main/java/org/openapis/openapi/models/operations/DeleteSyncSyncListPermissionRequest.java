@@ -4,27 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSyncSyncListPermissionRequest {
-    
-    public DeleteSyncSyncListPermissionPathParams pathParams;
-    public DeleteSyncSyncListPermissionRequest withPathParams(DeleteSyncSyncListPermissionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Arbitrary string identifier representing a user associated with an FPA token, assigned by the developer.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Identity")
+    public String identity;
+    public DeleteSyncSyncListPermissionRequest withIdentity(String identity) {
+        this.identity = identity;
         return this;
     }
     
-    
-    public DeleteSyncSyncListPermissionSecurity security;
-    public DeleteSyncSyncListPermissionRequest withSecurity(DeleteSyncSyncListPermissionSecurity security) {
-        this.security = security;
+    /**
+     * Identifier of the Sync List. Either a SID or a unique name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ListSid")
+    public String listSid;
+    public DeleteSyncSyncListPermissionRequest withListSid(String listSid) {
+        this.listSid = listSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteSyncSyncListPermissionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteSyncSyncListPermissionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

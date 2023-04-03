@@ -18,11 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsSecurity;
-import org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsPathParams;
-import org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsQueryParams;
 import org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsRequest;
 import org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsResponse;
-import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
 import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
@@ -32,21 +29,14 @@ public class Application {
                 .build();
 
             GetCompaniesCompanyIdApiCredentialsRequest req = new GetCompaniesCompanyIdApiCredentialsRequest() {{
-                security = new GetCompaniesCompanyIdApiCredentialsSecurity() {{
-                    apiKeyAuth = new SchemeAPIKeyAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                pathParams = new GetCompaniesCompanyIdApiCredentialsPathParams() {{
-                    companyId = "corrupti";
-                }};
-                queryParams = new GetCompaniesCompanyIdApiCredentialsQueryParams() {{
-                    pageNumber = 592845;
-                    pageSize = 715190;
-                }};
-            }};            
+                companyId = "corrupti";
+                pageNumber = 592845;
+                pageSize = 715190;
+            }}            
 
-            GetCompaniesCompanyIdApiCredentialsResponse res = sdk.apiCredentialsCompanyLevel.getCompaniesCompanyIdApiCredentials(req);
+            GetCompaniesCompanyIdApiCredentialsResponse res = sdk.apiCredentialsCompanyLevel.getCompaniesCompanyIdApiCredentials(req, new GetCompaniesCompanyIdApiCredentialsSecurity() {{
+                apiKeyAuth = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.listCompanyApiCredentialsResponse.isPresent()) {
                 // handle response
@@ -58,7 +48,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### apiCredentialsCompanyLevel

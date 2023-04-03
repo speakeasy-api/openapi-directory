@@ -7,34 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfirmPurchaseRequest {
-    
-    public ConfirmPurchasePathParams pathParams;
-    public ConfirmPurchaseRequest withPathParams(ConfirmPurchasePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ConfirmPurchaseQueryParams queryParams;
-    public ConfirmPurchaseRequest withQueryParams(ConfirmPurchaseQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Details of a purchase request.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ItvPurchaseRequest request;
-    public ConfirmPurchaseRequest withRequest(org.openapis.openapi.models.shared.ItvPurchaseRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ItvPurchaseRequest itvPurchaseRequest;
+    public ConfirmPurchaseRequest withItvPurchaseRequest(org.openapis.openapi.models.shared.ItvPurchaseRequest itvPurchaseRequest) {
+        this.itvPurchaseRequest = itvPurchaseRequest;
         return this;
     }
     
+    /**
+     * Language code for the preferred language to be returned in the response.
+     * 
+     * Parameter value is case-insensitive and should be
+     *   - a valid 2 letter language code without region such as en, de
+     *   - or with region such as en_us, en_au
+     * 
+     * If undefined then defaults to 'en', unless the server has been configured
+     * with a custom default.
+     * 
+     * See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public ConfirmPurchaseRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
     
-    public ConfirmPurchaseSecurity security;
-    public ConfirmPurchaseRequest withSecurity(ConfirmPurchaseSecurity security) {
-        this.security = security;
+    /**
+     * The identifier of the payment platform (stripe/itunes).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platform")
+    public String platform;
+    public ConfirmPurchaseRequest withPlatform(String platform) {
+        this.platform = platform;
         return this;
     }
     

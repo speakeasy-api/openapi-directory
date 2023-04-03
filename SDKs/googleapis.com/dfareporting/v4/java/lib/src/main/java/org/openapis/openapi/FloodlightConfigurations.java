@@ -34,25 +34,26 @@ public class FloodlightConfigurations {
     /**
      * Gets one floodlight configuration by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsGetResponse dfareportingFloodlightConfigurationsGet(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsGetResponse dfareportingFloodlightConfigurationsGet(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsGetRequest request, org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsGetPathParams.class, baseUrl, "/userprofiles/{profileId}/floodlightConfigurations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsGetRequest.class, baseUrl, "/userprofiles/{profileId}/floodlightConfigurations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class FloodlightConfigurations {
     /**
      * Retrieves a list of floodlight configurations, possibly filtered.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsListResponse dfareportingFloodlightConfigurationsList(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsListResponse dfareportingFloodlightConfigurationsList(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsListRequest request, org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsListPathParams.class, baseUrl, "/userprofiles/{profileId}/floodlightConfigurations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsListRequest.class, baseUrl, "/userprofiles/{profileId}/floodlightConfigurations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class FloodlightConfigurations {
     /**
      * Updates an existing floodlight configuration. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsPatchResponse dfareportingFloodlightConfigurationsPatch(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsPatchResponse dfareportingFloodlightConfigurationsPatch(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsPatchRequest request, org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsPatchPathParams.class, baseUrl, "/userprofiles/{profileId}/floodlightConfigurations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsPatchRequest.class, baseUrl, "/userprofiles/{profileId}/floodlightConfigurations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "floodlightConfiguration", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,27 +174,28 @@ public class FloodlightConfigurations {
     /**
      * Updates an existing floodlight configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsUpdateResponse dfareportingFloodlightConfigurationsUpdate(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsUpdateResponse dfareportingFloodlightConfigurationsUpdate(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsUpdateRequest request, org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsUpdatePathParams.class, baseUrl, "/userprofiles/{profileId}/floodlightConfigurations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsUpdateRequest.class, baseUrl, "/userprofiles/{profileId}/floodlightConfigurations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "floodlightConfiguration", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -34,25 +34,26 @@ public class InterconnectAttachments {
     /**
      * Retrieves an aggregated list of interconnect attachments.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsAggregatedListResponse computeInterconnectAttachmentsAggregatedList(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsAggregatedListResponse computeInterconnectAttachmentsAggregatedList(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/interconnectAttachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/interconnectAttachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class InterconnectAttachments {
     /**
      * Deletes the specified interconnect attachment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsDeleteResponse computeInterconnectAttachmentsDelete(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsDeleteResponse computeInterconnectAttachmentsDelete(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsDeleteRequest request, org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsDeletePathParams.class, baseUrl, "/projects/{project}/regions/{region}/interconnectAttachments/{interconnectAttachment}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsDeleteRequest.class, baseUrl, "/projects/{project}/regions/{region}/interconnectAttachments/{interconnectAttachment}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,25 +126,26 @@ public class InterconnectAttachments {
     /**
      * Returns the specified interconnect attachment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsGetResponse computeInterconnectAttachmentsGet(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsGetResponse computeInterconnectAttachmentsGet(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsGetRequest request, org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsGetPathParams.class, baseUrl, "/projects/{project}/regions/{region}/interconnectAttachments/{interconnectAttachment}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsGetRequest.class, baseUrl, "/projects/{project}/regions/{region}/interconnectAttachments/{interconnectAttachment}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,25 +172,26 @@ public class InterconnectAttachments {
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsGetIamPolicyResponse computeInterconnectAttachmentsGetIamPolicy(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsGetIamPolicyResponse computeInterconnectAttachmentsGetIamPolicy(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsGetIamPolicyRequest request, org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsGetIamPolicyPathParams.class, baseUrl, "/projects/{project}/regions/{region}/interconnectAttachments/{resource}/getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsGetIamPolicyRequest.class, baseUrl, "/projects/{project}/regions/{region}/interconnectAttachments/{resource}/getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -214,27 +218,28 @@ public class InterconnectAttachments {
     /**
      * Creates an InterconnectAttachment in the specified project using the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsInsertResponse computeInterconnectAttachmentsInsert(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsInsertResponse computeInterconnectAttachmentsInsert(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsInsertRequest request, org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsInsertPathParams.class, baseUrl, "/projects/{project}/regions/{region}/interconnectAttachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsInsertRequest.class, baseUrl, "/projects/{project}/regions/{region}/interconnectAttachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "interconnectAttachment", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,25 +266,26 @@ public class InterconnectAttachments {
     /**
      * Retrieves the list of interconnect attachments contained within the specified region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsListResponse computeInterconnectAttachmentsList(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsListResponse computeInterconnectAttachmentsList(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsListRequest request, org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsListPathParams.class, baseUrl, "/projects/{project}/regions/{region}/interconnectAttachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsListRequest.class, baseUrl, "/projects/{project}/regions/{region}/interconnectAttachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -306,27 +312,28 @@ public class InterconnectAttachments {
     /**
      * Updates the specified interconnect attachment with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsPatchResponse computeInterconnectAttachmentsPatch(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsPatchResponse computeInterconnectAttachmentsPatch(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsPatchRequest request, org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsPatchPathParams.class, baseUrl, "/projects/{project}/regions/{region}/interconnectAttachments/{interconnectAttachment}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsPatchRequest.class, baseUrl, "/projects/{project}/regions/{region}/interconnectAttachments/{interconnectAttachment}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "interconnectAttachment1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -353,27 +360,28 @@ public class InterconnectAttachments {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsSetIamPolicyResponse computeInterconnectAttachmentsSetIamPolicy(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsSetIamPolicyResponse computeInterconnectAttachmentsSetIamPolicy(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsSetIamPolicyRequest request, org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsSetIamPolicyPathParams.class, baseUrl, "/projects/{project}/regions/{region}/interconnectAttachments/{resource}/setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsSetIamPolicyRequest.class, baseUrl, "/projects/{project}/regions/{region}/interconnectAttachments/{resource}/setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "regionSetPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -400,27 +408,28 @@ public class InterconnectAttachments {
     /**
      * Sets the labels on an InterconnectAttachment. To learn more about labels, read the Labeling Resources documentation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsSetLabelsResponse computeInterconnectAttachmentsSetLabels(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsSetLabelsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsSetLabelsResponse computeInterconnectAttachmentsSetLabels(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsSetLabelsRequest request, org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsSetLabelsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsSetLabelsPathParams.class, baseUrl, "/projects/{project}/regions/{region}/interconnectAttachments/{resource}/setLabels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsSetLabelsRequest.class, baseUrl, "/projects/{project}/regions/{region}/interconnectAttachments/{resource}/setLabels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "regionSetLabelsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsSetLabelsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsSetLabelsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -447,27 +456,28 @@ public class InterconnectAttachments {
     /**
      * Returns permissions that a caller has on the specified resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsTestIamPermissionsResponse computeInterconnectAttachmentsTestIamPermissions(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsTestIamPermissionsResponse computeInterconnectAttachmentsTestIamPermissions(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsTestIamPermissionsRequest request, org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsTestIamPermissionsPathParams.class, baseUrl, "/projects/{project}/regions/{region}/interconnectAttachments/{resource}/testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsTestIamPermissionsRequest.class, baseUrl, "/projects/{project}/regions/{region}/interconnectAttachments/{resource}/testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectAttachmentsTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

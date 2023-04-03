@@ -30,15 +30,12 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/AccountCtrlGetAccountServicesByAccountIDSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/AccountCtrlGetAccountServicesByAccountIDPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/AccountCtrlGetAccountServicesByAccountIDRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AccountCtrlGetAccountServicesByAccountIDResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/AccountCtrlGetLocationByIDSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/AccountCtrlGetLocationByIDPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/AccountCtrlGetLocationByIDRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AccountCtrlGetLocationByIDResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/AccountCtrlGetLocationsByAccountIDSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/AccountCtrlGetLocationsByAccountIDPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/AccountCtrlGetLocationsByAccountIDRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AccountCtrlGetLocationsByAccountIDResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AccountHalResponse.java
@@ -51,7 +48,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/FirstHref.java
 lib/src/main/java/org/openapis/openapi/models/shared/AccountEmbeddedObject.java
 lib/src/main/java/org/openapis/openapi/models/shared/Account.java
 lib/src/main/java/org/openapis/openapi/models/shared/Address.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeBearerAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/LocationHalResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/LocationEmbeddedObject.java
 lib/src/main/java/org/openapis/openapi/models/shared/Location.java

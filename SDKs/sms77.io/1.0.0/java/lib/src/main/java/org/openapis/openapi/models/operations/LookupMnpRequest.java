@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LookupMnpRequest {
+    /**
+     * Determines whether the response shall be returned in JSON format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=json")
+    public String json;
+    public LookupMnpRequest withJson(String json) {
+        this.json = json;
+        return this;
+    }
     
-    public LookupMnpQueryParams queryParams;
-    public LookupMnpRequest withQueryParams(LookupMnpQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The phone number to look up.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=number")
+    public String[] number;
+    public LookupMnpRequest withNumber(String[] number) {
+        this.number = number;
         return this;
     }
     

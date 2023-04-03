@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePipelineVariableForTeamRequest {
-    
-    public CreatePipelineVariableForTeamPathParams pathParams;
-    public CreatePipelineVariableForTeamRequest withPathParams(CreatePipelineVariableForTeamPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The variable to create.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public CreatePipelineVariableForTeamRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public CreatePipelineVariableForTeamRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public CreatePipelineVariableForTeamRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

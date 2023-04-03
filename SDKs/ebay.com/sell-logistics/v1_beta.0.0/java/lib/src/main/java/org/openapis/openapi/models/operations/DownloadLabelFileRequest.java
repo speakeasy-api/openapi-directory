@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadLabelFileRequest {
-    
-    public DownloadLabelFilePathParams pathParams;
-    public DownloadLabelFileRequest withPathParams(DownloadLabelFilePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DownloadLabelFileSecurity security;
-    public DownloadLabelFileRequest withSecurity(DownloadLabelFileSecurity security) {
-        this.security = security;
+    /**
+     * This path parameter specifies the unique eBay-assigned ID of the shipment associated with the shipping label you want to download. The &lt;b&gt;shipmentId&lt;/b&gt; value is generated and returned by a call to &lt;b&gt;createFromShippingQuote&lt;/b&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shipmentId")
+    public String shipmentId;
+    public DownloadLabelFileRequest withShipmentId(String shipmentId) {
+        this.shipmentId = shipmentId;
         return this;
     }
     

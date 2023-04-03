@@ -17,9 +17,8 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.PostPostReviewRatingEnum;
-import org.openapis.openapi.models.operations.PostPostReviewQueryParams;
 import org.openapis.openapi.models.operations.PostPostReviewRequestBody;
+import org.openapis.openapi.models.operations.PostPostReviewRatingEnum;
 import org.openapis.openapi.models.operations.PostPostReviewRequest;
 import org.openapis.openapi.models.operations.PostPostReviewResponse;
 
@@ -28,25 +27,21 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    basicAuth = new SchemeBasicAuth() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
+                    password = "YOUR_PASSWORD_HERE";
+                    username = "YOUR_USERNAME_HERE";
                 }})
                 .build();
 
             PostPostReviewRequest req = new PostPostReviewRequest() {{
-                queryParams = new PostPostReviewQueryParams() {{
-                    rating = "3";
-                    userEmail = "provident";
-                    userName = "Micheal_Sporer";
-                }};
-                request = new PostPostReviewRequestBody() {{
+                requestBody = new PostPostReviewRequestBody() {{
                     rating = 5;
                     userEmail = "johnsmith@usercompanyxyz.com";
                     userName = "John";
                 }};
-            }};            
+                rating = "3";
+                userEmail = "provident";
+                userName = "Micheal_Sporer";
+            }}            
 
             PostPostReviewResponse res = sdk.postPostReview(req);
 
@@ -60,7 +55,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

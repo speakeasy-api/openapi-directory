@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AddTagsToCertificateXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AddTagsToCertificateHeaders;
 import org.openapis.openapi.models.operations.AddTagsToCertificateRequest;
 import org.openapis.openapi.models.operations.AddTagsToCertificateResponse;
 import org.openapis.openapi.models.shared.AddTagsToCertificateRequest;
@@ -16,37 +15,37 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddTagsToCertificateRequest req = new AddTagsToCertificateRequest() {{
-                headers = new AddTagsToCertificateHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "CertificateManager.AddTagsToCertificate";
-                }};
-                request = new AddTagsToCertificateRequest() {{
-                    certificateArn = "illum";
+                addTagsToCertificateRequest = new AddTagsToCertificateRequest() {{
+                    certificateArn = "corrupti";
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "error";
-                            value = "deserunt";
+                            key = "distinctio";
+                            value = "quibusdam";
                         }}),
                         add(new Tag() {{
-                            key = "suscipit";
-                            value = "iure";
+                            key = "unde";
+                            value = "nulla";
+                        }}),
+                        add(new Tag() {{
+                            key = "corrupti";
+                            value = "illum";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "vel";
+                xAmzContentSha256 = "error";
+                xAmzCredential = "deserunt";
+                xAmzDate = "suscipit";
+                xAmzSecurityToken = "iure";
+                xAmzSignature = "magnam";
+                xAmzSignedHeaders = "debitis";
+                xAmzTarget = "CertificateManager.AddTagsToCertificate";
+            }}            
 
             AddTagsToCertificateResponse res = sdk.addTagsToCertificate(req);
 

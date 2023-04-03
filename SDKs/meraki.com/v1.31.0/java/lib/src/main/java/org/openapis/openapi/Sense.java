@@ -40,7 +40,7 @@ public class Sense {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraSenseResponse getDeviceCameraSense(org.openapis.openapi.models.operations.GetDeviceCameraSenseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraSensePathParams.class, baseUrl, "/devices/{serial}/camera/sense", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraSenseRequest.class, baseUrl, "/devices/{serial}/camera/sense", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,7 +80,7 @@ public class Sense {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraSenseObjectDetectionModelsResponse getDeviceCameraSenseObjectDetectionModels(org.openapis.openapi.models.operations.GetDeviceCameraSenseObjectDetectionModelsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraSenseObjectDetectionModelsPathParams.class, baseUrl, "/devices/{serial}/camera/sense/objectDetectionModels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraSenseObjectDetectionModelsRequest.class, baseUrl, "/devices/{serial}/camera/sense/objectDetectionModels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,12 +120,12 @@ public class Sense {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceCameraSenseResponse updateDeviceCameraSense(org.openapis.openapi.models.operations.UpdateDeviceCameraSenseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCameraSensePathParams.class, baseUrl, "/devices/{serial}/camera/sense", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCameraSenseRequest.class, baseUrl, "/devices/{serial}/camera/sense", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

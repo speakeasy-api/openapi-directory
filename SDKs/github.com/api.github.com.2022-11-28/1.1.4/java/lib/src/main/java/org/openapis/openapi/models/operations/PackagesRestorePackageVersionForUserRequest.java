@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackagesRestorePackageVersionForUserRequest {
+    /**
+     * The name of the package.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=package_name")
+    public String packageName;
+    public PackagesRestorePackageVersionForUserRequest withPackageName(String packageName) {
+        this.packageName = packageName;
+        return this;
+    }
     
-    public PackagesRestorePackageVersionForUserPathParams pathParams;
-    public PackagesRestorePackageVersionForUserRequest withPathParams(PackagesRestorePackageVersionForUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=package_type")
+    public org.openapis.openapi.models.shared.PackageTypeEnum packageType;
+    public PackagesRestorePackageVersionForUserRequest withPackageType(org.openapis.openapi.models.shared.PackageTypeEnum packageType) {
+        this.packageType = packageType;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the package version.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=package_version_id")
+    public Long packageVersionId;
+    public PackagesRestorePackageVersionForUserRequest withPackageVersionId(Long packageVersionId) {
+        this.packageVersionId = packageVersionId;
+        return this;
+    }
+    
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public PackagesRestorePackageVersionForUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

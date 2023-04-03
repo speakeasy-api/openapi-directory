@@ -37,7 +37,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SearchCseListImgTypeEnu
 lib/src/main/java/org/openapis/openapi/models/operations/SearchCseListSafeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchCseListSearchTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchCseListSiteSearchFilterEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/SearchCseListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchCseListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchCseListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchCseSiterestrictListImgColorTypeEnum.java
@@ -47,7 +46,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SearchCseSiterestrictLi
 lib/src/main/java/org/openapis/openapi/models/operations/SearchCseSiterestrictListSafeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchCseSiterestrictListSearchTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchCseSiterestrictListSiteSearchFilterEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/SearchCseSiterestrictListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchCseSiterestrictListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchCseSiterestrictListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SearchQueriesNextPage.java

@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTerminalsRequest {
-    
-    public GetTerminalsQueryParams queryParams;
-    public GetTerminalsRequest withQueryParams(GetTerminalsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Returns terminals of the [models](https://docs.adyen.com/api-explorer/#/ManagementService/latest/get/companies/{companyId}/terminalModels) specified in the format *brand.model*.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=brandModels")
+    public String brandModels;
+    public GetTerminalsRequest withBrandModels(String brandModels) {
+        this.brandModels = brandModels;
         return this;
     }
     
+    /**
+     * Returns terminals located in the countries specified by their [two-letter country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=countries")
+    public String countries;
+    public GetTerminalsRequest withCountries(String countries) {
+        this.countries = countries;
+        return this;
+    }
     
-    public GetTerminalsSecurity security;
-    public GetTerminalsRequest withSecurity(GetTerminalsSecurity security) {
-        this.security = security;
+    /**
+     * Returns terminals that belong to the merchant accounts specified by their unique merchant account ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=merchantIds")
+    public String merchantIds;
+    public GetTerminalsRequest withMerchantIds(String merchantIds) {
+        this.merchantIds = merchantIds;
+        return this;
+    }
+    
+    /**
+     * The number of the page to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Integer pageNumber;
+    public GetTerminalsRequest withPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    
+    /**
+     * The number of items to have on a page, maximum 100. The default is 20 items on a page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetTerminalsRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Returns terminals with an ID that contains the specified string. If present, other query parameters are ignored.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchQuery")
+    public String searchQuery;
+    public GetTerminalsRequest withSearchQuery(String searchQuery) {
+        this.searchQuery = searchQuery;
+        return this;
+    }
+    
+    /**
+     * Returns terminals that are assigned to the [stores](https://docs.adyen.com/api-explorer/#/ManagementService/latest/get/stores) specified by their unique store ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=storeIds")
+    public String storeIds;
+    public GetTerminalsRequest withStoreIds(String storeIds) {
+        this.storeIds = storeIds;
         return this;
     }
     

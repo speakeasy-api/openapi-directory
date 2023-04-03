@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceWirelessBluetoothSettingsRequest {
-    
-    public GetDeviceWirelessBluetoothSettingsPathParams pathParams;
-    public GetDeviceWirelessBluetoothSettingsRequest withPathParams(GetDeviceWirelessBluetoothSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetDeviceWirelessBluetoothSettingsRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

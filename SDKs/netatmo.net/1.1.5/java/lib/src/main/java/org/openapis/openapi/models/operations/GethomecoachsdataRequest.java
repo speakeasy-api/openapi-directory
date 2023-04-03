@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GethomecoachsdataRequest {
-    
-    public GethomecoachsdataQueryParams queryParams;
-    public GethomecoachsdataRequest withQueryParams(GethomecoachsdataQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GethomecoachsdataSecurity security;
-    public GethomecoachsdataRequest withSecurity(GethomecoachsdataSecurity security) {
-        this.security = security;
+    /**
+     * Id of the device you want to retrieve information of
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
+    public String deviceId;
+    public GethomecoachsdataRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
     

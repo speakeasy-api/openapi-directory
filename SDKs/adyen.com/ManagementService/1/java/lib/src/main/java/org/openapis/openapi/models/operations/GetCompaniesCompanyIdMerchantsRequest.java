@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdMerchantsRequest {
-    
-    public GetCompaniesCompanyIdMerchantsPathParams pathParams;
-    public GetCompaniesCompanyIdMerchantsRequest withPathParams(GetCompaniesCompanyIdMerchantsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetCompaniesCompanyIdMerchantsRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
-    
-    public GetCompaniesCompanyIdMerchantsQueryParams queryParams;
-    public GetCompaniesCompanyIdMerchantsRequest withQueryParams(GetCompaniesCompanyIdMerchantsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of the page to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Integer pageNumber;
+    public GetCompaniesCompanyIdMerchantsRequest withPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
     
-    
-    public GetCompaniesCompanyIdMerchantsSecurity security;
-    public GetCompaniesCompanyIdMerchantsRequest withSecurity(GetCompaniesCompanyIdMerchantsSecurity security) {
-        this.security = security;
+    /**
+     * The number of items to have on a page, maximum 100. The default is 10 items on a page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetCompaniesCompanyIdMerchantsRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

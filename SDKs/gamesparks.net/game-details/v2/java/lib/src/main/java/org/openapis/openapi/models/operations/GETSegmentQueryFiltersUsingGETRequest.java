@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSegmentQueryFiltersUsingGETRequest {
-    
-    public GETSegmentQueryFiltersUsingGETPathParams pathParams;
-    public GETSegmentQueryFiltersUsingGETRequest withPathParams(GETSegmentQueryFiltersUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public GETSegmentQueryFiltersUsingGETRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

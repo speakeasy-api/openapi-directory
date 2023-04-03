@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserCurrentDeleteKeyRequest {
-    
-    public UserCurrentDeleteKeyPathParams pathParams;
-    public UserCurrentDeleteKeyRequest withPathParams(UserCurrentDeleteKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of key to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UserCurrentDeleteKeyRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

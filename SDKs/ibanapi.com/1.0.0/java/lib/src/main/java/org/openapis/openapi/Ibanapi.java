@@ -36,11 +36,10 @@ public class Ibanapi {
     /**
      * Get Account Balance
      * Returns the account balance and expiry
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBalanceResponse getBalance(org.openapis.openapi.models.operations.GetBalanceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBalanceResponse getBalance() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/balance");
         
@@ -49,8 +48,7 @@ public class Ibanapi {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -109,10 +107,11 @@ public class Ibanapi {
      * Validate IBAN
      * Returns the validation results
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ValidateIBANResponse validateIBAN(org.openapis.openapi.models.operations.ValidateIBANRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ValidateIBANResponse validateIBAN(org.openapis.openapi.models.operations.ValidateIBANRequest request, org.openapis.openapi.models.operations.ValidateIBANSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/validate");
         
@@ -120,14 +119,14 @@ public class Ibanapi {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ValidateIBANQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ValidateIBANRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -187,10 +186,11 @@ public class Ibanapi {
      * Validate IBAN Basic
      * Returns the basic validation results
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ValidateIBANBasicResponse validateIBANBasic(org.openapis.openapi.models.operations.ValidateIBANBasicRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ValidateIBANBasicResponse validateIBANBasic(org.openapis.openapi.models.operations.ValidateIBANBasicRequest request, org.openapis.openapi.models.operations.ValidateIBANBasicSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/validate-basic");
         
@@ -198,14 +198,14 @@ public class Ibanapi {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ValidateIBANBasicQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ValidateIBANBasicRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,34 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteInsightsQuestionnairesRequest {
-    
-    public DeleteInsightsQuestionnairesPathParams pathParams;
-    public DeleteInsightsQuestionnairesRequest withPathParams(DeleteInsightsQuestionnairesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the questionnaire
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Id")
+    public String id;
+    public DeleteInsightsQuestionnairesRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public DeleteInsightsQuestionnairesHeaders headers;
-    public DeleteInsightsQuestionnairesRequest withHeaders(DeleteInsightsQuestionnairesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public DeleteInsightsQuestionnairesSecurity security;
-    public DeleteInsightsQuestionnairesRequest withSecurity(DeleteInsightsQuestionnairesSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteInsightsQuestionnairesRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Token HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Token")
+    public String token;
+    public DeleteInsightsQuestionnairesRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

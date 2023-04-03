@@ -4,20 +4,87 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivityListRepoNotificationsForAuthenticatedUserRequest {
-    
-    public ActivityListRepoNotificationsForAuthenticatedUserPathParams pathParams;
-    public ActivityListRepoNotificationsForAuthenticatedUserRequest withPathParams(ActivityListRepoNotificationsForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If `true`, show notifications marked as read.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
+    public Boolean all;
+    public ActivityListRepoNotificationsForAuthenticatedUserRequest withAll(Boolean all) {
+        this.all = all;
         return this;
     }
     
+    /**
+     * Only show notifications updated before the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public OffsetDateTime before;
+    public ActivityListRepoNotificationsForAuthenticatedUserRequest withBefore(OffsetDateTime before) {
+        this.before = before;
+        return this;
+    }
     
-    public ActivityListRepoNotificationsForAuthenticatedUserQueryParams queryParams;
-    public ActivityListRepoNotificationsForAuthenticatedUserRequest withQueryParams(ActivityListRepoNotificationsForAuthenticatedUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActivityListRepoNotificationsForAuthenticatedUserRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ActivityListRepoNotificationsForAuthenticatedUserRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * If `true`, only shows notifications in which the user is directly participating or mentioned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=participating")
+    public Boolean participating;
+    public ActivityListRepoNotificationsForAuthenticatedUserRequest withParticipating(Boolean participating) {
+        this.participating = participating;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ActivityListRepoNotificationsForAuthenticatedUserRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActivityListRepoNotificationsForAuthenticatedUserRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public OffsetDateTime since;
+    public ActivityListRepoNotificationsForAuthenticatedUserRequest withSince(OffsetDateTime since) {
+        this.since = since;
         return this;
     }
     

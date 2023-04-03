@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAttachmentRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket_id")
+    public String bucketId;
+    public CreateAttachmentRequest withBucketId(String bucketId) {
+        this.bucketId = bucketId;
+        return this;
+    }
     
-    public CreateAttachmentPathParams pathParams;
-    public CreateAttachmentRequest withPathParams(CreateAttachmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
+    public String collectionId;
+    public CreateAttachmentRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public CreateAttachmentRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

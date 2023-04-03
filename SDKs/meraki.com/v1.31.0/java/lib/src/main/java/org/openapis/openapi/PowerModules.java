@@ -41,13 +41,13 @@ public class PowerModules {
      */
     public org.openapis.openapi.models.operations.GetOrganizationDevicesPowerModulesStatusesByDeviceResponse getOrganizationDevicesPowerModulesStatusesByDevice(org.openapis.openapi.models.operations.GetOrganizationDevicesPowerModulesStatusesByDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesPowerModulesStatusesByDevicePathParams.class, baseUrl, "/organizations/{organizationId}/devices/powerModules/statuses/byDevice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesPowerModulesStatusesByDeviceRequest.class, baseUrl, "/organizations/{organizationId}/devices/powerModules/statuses/byDevice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesPowerModulesStatusesByDeviceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesPowerModulesStatusesByDeviceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

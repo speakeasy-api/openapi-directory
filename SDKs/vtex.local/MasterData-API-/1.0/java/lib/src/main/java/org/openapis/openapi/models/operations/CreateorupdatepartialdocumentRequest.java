@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateorupdatepartialdocumentRequest {
-    
-    public CreateorupdatepartialdocumentPathParams pathParams;
-    public CreateorupdatepartialdocumentRequest withPathParams(CreateorupdatepartialdocumentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateorupdatepartialdocumentHeaders headers;
-    public CreateorupdatepartialdocumentRequest withHeaders(CreateorupdatepartialdocumentHeaders headers) {
-        this.headers = headers;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CreateorupdatepartialdocumentRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public CreateorupdatepartialdocumentRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public CreateorupdatepartialdocumentRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Identifies the kind of data
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=acronym")
+    public String acronym;
+    public CreateorupdatepartialdocumentRequest withAcronym(String acronym) {
+        this.acronym = acronym;
         return this;
     }
     

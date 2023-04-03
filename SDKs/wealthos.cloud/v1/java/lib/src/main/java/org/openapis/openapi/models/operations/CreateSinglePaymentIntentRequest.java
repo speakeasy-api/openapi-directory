@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSinglePaymentIntentRequest {
-    
-    public CreateSinglePaymentIntentHeaders headers;
-    public CreateSinglePaymentIntentRequest withHeaders(CreateSinglePaymentIntentHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateSinglePaymentIntentRequestBody request;
-    public CreateSinglePaymentIntentRequest withRequest(CreateSinglePaymentIntentRequestBody request) {
-        this.request = request;
+    public CreateSinglePaymentIntentRequestBody requestBody;
+    public CreateSinglePaymentIntentRequest withRequestBody(CreateSinglePaymentIntentRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateSinglePaymentIntentSecurity security;
-    public CreateSinglePaymentIntentRequest withSecurity(CreateSinglePaymentIntentSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public CreateSinglePaymentIntentRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

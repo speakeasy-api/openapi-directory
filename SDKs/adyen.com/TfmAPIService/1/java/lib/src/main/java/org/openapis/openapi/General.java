@@ -35,10 +35,11 @@ public class General {
      * Assign terminals
      * Assigns one or more payment terminals to a merchant account or a store. You can also use this endpoint to reassign terminals between merchant accounts or stores, and to unassign a terminal and return it to company inventory.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssignTerminalsResponse postAssignTerminals(org.openapis.openapi.models.operations.PostAssignTerminalsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssignTerminalsResponse postAssignTerminals(org.openapis.openapi.models.shared.AssignTerminalsRequest request, org.openapis.openapi.models.operations.PostAssignTerminalsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assignTerminals");
         
@@ -49,7 +50,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -85,10 +86,11 @@ public class General {
      * Get the account or store of a terminal
      * Returns the company account, merchant account, or store that a payment terminal is assigned to.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostFindTerminalResponse postFindTerminal(org.openapis.openapi.models.operations.PostFindTerminalRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostFindTerminalResponse postFindTerminal(org.openapis.openapi.models.shared.FindTerminalRequest request, org.openapis.openapi.models.operations.PostFindTerminalSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/findTerminal");
         
@@ -99,7 +101,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -135,10 +137,11 @@ public class General {
      * Get the stores of an account
      * Returns a list of stores associated with a company account or a merchant account, including the status of each store.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetStoresUnderAccountResponse postGetStoresUnderAccount(org.openapis.openapi.models.operations.PostGetStoresUnderAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetStoresUnderAccountResponse postGetStoresUnderAccount(org.openapis.openapi.models.shared.GetStoresUnderAccountRequest request, org.openapis.openapi.models.operations.PostGetStoresUnderAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/getStoresUnderAccount");
         
@@ -149,7 +152,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -185,10 +188,11 @@ public class General {
      * Get the details of a terminal
      * Returns the details of a payment terminal, including where the terminal is assigned to. The response returns the same details that are provided in the terminal list in your Customer Area and in the Terminal Fleet report.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetTerminalDetailsResponse postGetTerminalDetails(org.openapis.openapi.models.operations.PostGetTerminalDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetTerminalDetailsResponse postGetTerminalDetails(org.openapis.openapi.models.shared.GetTerminalDetailsRequest request, org.openapis.openapi.models.operations.PostGetTerminalDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/getTerminalDetails");
         
@@ -199,7 +203,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -235,10 +239,11 @@ public class General {
      * Get the list of terminals
      * Returns a list of payment terminals associated with a company account, merchant account, or store. The response shows whether the terminals are in the inventory, or in-store (ready for boarding or already boarded).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetTerminalsUnderAccountResponse postGetTerminalsUnderAccount(org.openapis.openapi.models.operations.PostGetTerminalsUnderAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetTerminalsUnderAccountResponse postGetTerminalsUnderAccount(org.openapis.openapi.models.shared.GetTerminalsUnderAccountRequest request, org.openapis.openapi.models.operations.PostGetTerminalsUnderAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/getTerminalsUnderAccount");
         
@@ -249,7 +254,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmClientsIdInstallationProvidersProviderIdRequest {
+    /**
+     * id of client (not client-id)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetRealmClientsIdInstallationProvidersProviderIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetRealmClientsIdInstallationProvidersProviderIdPathParams pathParams;
-    public GetRealmClientsIdInstallationProvidersProviderIdRequest withPathParams(GetRealmClientsIdInstallationProvidersProviderIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=providerId")
+    public String providerId;
+    public GetRealmClientsIdInstallationProvidersProviderIdRequest withProviderId(String providerId) {
+        this.providerId = providerId;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmClientsIdInstallationProvidersProviderIdRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

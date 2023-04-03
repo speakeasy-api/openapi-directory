@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateNetworkCameraSnapshotRequest {
-    
-    public GenerateNetworkCameraSnapshotPathParams pathParams;
-    public GenerateNetworkCameraSnapshotRequest withPathParams(GenerateNetworkCameraSnapshotPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public GenerateNetworkCameraSnapshotRequestBody requestBody;
+    public GenerateNetworkCameraSnapshotRequest withRequestBody(GenerateNetworkCameraSnapshotRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public GenerateNetworkCameraSnapshotRequestBody request;
-    public GenerateNetworkCameraSnapshotRequest withRequest(GenerateNetworkCameraSnapshotRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GenerateNetworkCameraSnapshotRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GenerateNetworkCameraSnapshotRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

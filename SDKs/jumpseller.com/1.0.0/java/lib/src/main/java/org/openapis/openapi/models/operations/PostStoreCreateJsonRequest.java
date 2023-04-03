@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostStoreCreateJsonRequest {
-    
-    public PostStoreCreateJsonQueryParams queryParams;
-    public PostStoreCreateJsonRequest withQueryParams(PostStoreCreateJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * New partnered Store parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PartnerStoreCreate request;
-    public PostStoreCreateJsonRequest withRequest(org.openapis.openapi.models.shared.PartnerStoreCreate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PartnerStoreCreate partnerStoreCreate;
+    public PostStoreCreateJsonRequest withPartnerStoreCreate(org.openapis.openapi.models.shared.PartnerStoreCreate partnerStoreCreate) {
+        this.partnerStoreCreate = partnerStoreCreate;
+        return this;
+    }
+    
+    /**
+     * Partner authentication token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auth_token")
+    public String authToken;
+    public PostStoreCreateJsonRequest withAuthToken(String authToken) {
+        this.authToken = authToken;
+        return this;
+    }
+    
+    /**
+     * Partner code.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partner_code")
+    public String partnerCode;
+    public PostStoreCreateJsonRequest withPartnerCode(String partnerCode) {
+        this.partnerCode = partnerCode;
         return this;
     }
     

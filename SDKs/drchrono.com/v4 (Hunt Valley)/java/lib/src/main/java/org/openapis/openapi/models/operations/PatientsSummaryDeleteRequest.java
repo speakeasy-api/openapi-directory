@@ -4,27 +4,55 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientsSummaryDeleteRequest {
-    
-    public PatientsSummaryDeletePathParams pathParams;
-    public PatientsSummaryDeleteRequest withPathParams(PatientsSummaryDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_of_birth")
+    public String dateOfBirth;
+    public PatientsSummaryDeleteRequest withDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
         return this;
     }
     
-    
-    public PatientsSummaryDeleteQueryParams queryParams;
-    public PatientsSummaryDeleteRequest withQueryParams(PatientsSummaryDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientsSummaryDeleteRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_name")
+    public String firstName;
+    public PatientsSummaryDeleteRequest withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
     
-    public PatientsSummaryDeleteSecurity security;
-    public PatientsSummaryDeleteRequest withSecurity(PatientsSummaryDeleteSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gender")
+    public String gender;
+    public PatientsSummaryDeleteRequest withGender(String gender) {
+        this.gender = gender;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatientsSummaryDeleteRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_name")
+    public String lastName;
+    public PatientsSummaryDeleteRequest withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public PatientsSummaryDeleteRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

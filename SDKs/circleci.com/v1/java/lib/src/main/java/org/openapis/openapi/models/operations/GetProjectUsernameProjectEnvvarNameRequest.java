@@ -4,13 +4,39 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectUsernameProjectEnvvarNameRequest {
+    /**
+     * XXXXXXXXXX
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public GetProjectUsernameProjectEnvvarNameRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public GetProjectUsernameProjectEnvvarNamePathParams pathParams;
-    public GetProjectUsernameProjectEnvvarNameRequest withPathParams(GetProjectUsernameProjectEnvvarNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * XXXXXXXXX
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public GetProjectUsernameProjectEnvvarNameRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * XXXXXXXXX
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetProjectUsernameProjectEnvvarNameRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

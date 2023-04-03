@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteBrocadeSwitchRequest {
-    
-    public DeleteBrocadeSwitchPathParams pathParams;
-    public DeleteBrocadeSwitchRequest withPathParams(DeleteBrocadeSwitchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteBrocadeSwitchSecurity security;
-    public DeleteBrocadeSwitchRequest withSecurity(DeleteBrocadeSwitchSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteBrocadeSwitchRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

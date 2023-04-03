@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEntitySetAnatomySlimmerRequest {
+    /**
+     * If set, excludes associations that involve IEAs (ECO:0000501)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_automatic_assertions")
+    public Boolean excludeAutomaticAssertions;
+    public GetEntitySetAnatomySlimmerRequest withExcludeAutomaticAssertions(Boolean excludeAutomaticAssertions) {
+        this.excludeAutomaticAssertions = excludeAutomaticAssertions;
+        return this;
+    }
     
-    public GetEntitySetAnatomySlimmerQueryParams queryParams;
-    public GetEntitySetAnatomySlimmerRequest withQueryParams(GetEntitySetAnatomySlimmerQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * number of rows
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
+    public Long rows;
+    public GetEntitySetAnatomySlimmerRequest withRows(Long rows) {
+        this.rows = rows;
+        return this;
+    }
+    
+    /**
+     * Map objects up (slim) to a higher level category. Value can be ontology class ID (IMPLEMENTED) or subset ID (TODO)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slim")
+    public String[] slim;
+    public GetEntitySetAnatomySlimmerRequest withSlim(String[] slim) {
+        this.slim = slim;
+        return this;
+    }
+    
+    /**
+     * beginning row
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Long start;
+    public GetEntitySetAnatomySlimmerRequest withStart(Long start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject")
+    public String[] subject;
+    public GetEntitySetAnatomySlimmerRequest withSubject(String[] subject) {
+        this.subject = subject;
         return this;
     }
     

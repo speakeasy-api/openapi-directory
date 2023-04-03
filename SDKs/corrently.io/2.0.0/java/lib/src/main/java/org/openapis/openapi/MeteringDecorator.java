@@ -51,7 +51,7 @@ public class MeteringDecorator {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeteringGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeteringGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -89,7 +89,7 @@ public class MeteringDecorator {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeteringPostResponse meteringPost(org.openapis.openapi.models.operations.MeteringPostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeteringPostResponse meteringPost(org.openapis.openapi.models.operations.MeteringPostRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/metering/reading");
         

@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetDomainsTldZoneIdDownloadPathParams;
-import org.openapis.openapi.models.operations.GetDomainsTldZoneIdDownloadQueryParams;
 import org.openapis.openapi.models.operations.GetDomainsTldZoneIdDownloadRequest;
 import org.openapis.openapi.models.operations.GetDomainsTldZoneIdDownloadResponse;
 
@@ -16,14 +14,10 @@ public class Application {
                 .build();
 
             GetDomainsTldZoneIdDownloadRequest req = new GetDomainsTldZoneIdDownloadRequest() {{
-                pathParams = new GetDomainsTldZoneIdDownloadPathParams() {{
-                    zoneId = "corrupti";
-                }};
-                queryParams = new GetDomainsTldZoneIdDownloadQueryParams() {{
-                    apiKey = "provident";
-                    date = "distinctio";
-                }};
-            }};            
+                apiKey = "corrupti";
+                date = "provident";
+                zoneId = "distinctio";
+            }}            
 
             GetDomainsTldZoneIdDownloadResponse res = sdk.domains.getDomainsTldZoneIdDownload(req);
 

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListLayer2NetworksRequest {
-    
-    public ListLayer2NetworksQueryParams queryParams;
-    public ListLayer2NetworksRequest withQueryParams(ListLayer2NetworksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * cursor from previous response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListLayer2NetworksRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * end time for query in epoch seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
+    public Double endTime;
+    public ListLayer2NetworksRequest withEndTime(Double endTime) {
+        this.endTime = endTime;
+        return this;
+    }
     
-    public ListLayer2NetworksSecurity security;
-    public ListLayer2NetworksRequest withSecurity(ListLayer2NetworksSecurity security) {
-        this.security = security;
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Double size;
+    public ListLayer2NetworksRequest withSize(Double size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * start time for query in epoch seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_time")
+    public Double startTime;
+    public ListLayer2NetworksRequest withStartTime(Double startTime) {
+        this.startTime = startTime;
         return this;
     }
     

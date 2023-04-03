@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspaceRequest {
-    
-    public GetWorkspaceQueryParams queryParams;
-    public GetWorkspaceRequest withQueryParams(GetWorkspaceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Workspace identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workspaceId")
+    public String workspaceId;
+    public GetWorkspaceRequest withWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
         return this;
     }
     

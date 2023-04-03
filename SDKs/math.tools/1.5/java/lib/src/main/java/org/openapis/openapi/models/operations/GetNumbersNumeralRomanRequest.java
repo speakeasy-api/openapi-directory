@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersNumeralRomanRequest {
-    
-    public GetNumbersNumeralRomanQueryParams queryParams;
-    public GetNumbersNumeralRomanRequest withQueryParams(GetNumbersNumeralRomanQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetNumbersNumeralRomanSecurity security;
-    public GetNumbersNumeralRomanRequest withSecurity(GetNumbersNumeralRomanSecurity security) {
-        this.security = security;
+    /**
+     * Number to convert
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public Long number;
+    public GetNumbersNumeralRomanRequest withNumber(Long number) {
+        this.number = number;
         return this;
     }
     

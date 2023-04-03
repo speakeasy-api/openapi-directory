@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmAuthenticationExecutionsExecutionIdConfigRequest {
-    
-    public PostRealmAuthenticationExecutionsExecutionIdConfigPathParams pathParams;
-    public PostRealmAuthenticationExecutionsExecutionIdConfigRequest withPathParams(PostRealmAuthenticationExecutionsExecutionIdConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * JSON with new configuration
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AuthenticatorConfigRepresentation request;
-    public PostRealmAuthenticationExecutionsExecutionIdConfigRequest withRequest(org.openapis.openapi.models.shared.AuthenticatorConfigRepresentation request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AuthenticatorConfigRepresentation authenticatorConfigRepresentation;
+    public PostRealmAuthenticationExecutionsExecutionIdConfigRequest withAuthenticatorConfigRepresentation(org.openapis.openapi.models.shared.AuthenticatorConfigRepresentation authenticatorConfigRepresentation) {
+        this.authenticatorConfigRepresentation = authenticatorConfigRepresentation;
+        return this;
+    }
+    
+    /**
+     * Execution id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
+    public String executionId;
+    public PostRealmAuthenticationExecutionsExecutionIdConfigRequest withExecutionId(String executionId) {
+        this.executionId = executionId;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmAuthenticationExecutionsExecutionIdConfigRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

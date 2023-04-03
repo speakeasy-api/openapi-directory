@@ -38,7 +38,7 @@ public class ChannelCatalogsExportations {
      */
     public org.openapis.openapi.models.operations.ClearChannelCatalogExportationCacheResponse clearChannelCatalogExportationCache(org.openapis.openapi.models.operations.ClearChannelCatalogExportationCacheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClearChannelCatalogExportationCachePathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/exportations/cache/clear", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClearChannelCatalogExportationCacheRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/exportations/cache/clear", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -78,7 +78,7 @@ public class ChannelCatalogsExportations {
      */
     public org.openapis.openapi.models.operations.GetChannelCatalogExportationCacheInfoResponse getChannelCatalogExportationCacheInfo(org.openapis.openapi.models.operations.GetChannelCatalogExportationCacheInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogExportationCacheInfoPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/exportations/cache", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogExportationCacheInfoRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/exportations/cache", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -124,13 +124,13 @@ public class ChannelCatalogsExportations {
      */
     public org.openapis.openapi.models.operations.GetChannelCatalogExportationHistoryResponse getChannelCatalogExportationHistory(org.openapis.openapi.models.operations.GetChannelCatalogExportationHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogExportationHistoryPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/exportations/history", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogExportationHistoryRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/exportations/history", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChannelCatalogExportationHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChannelCatalogExportationHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

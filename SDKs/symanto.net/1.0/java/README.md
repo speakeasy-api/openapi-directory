@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CommunicationQueryParams;
 import org.openapis.openapi.models.operations.CommunicationRequest;
 import org.openapis.openapi.models.operations.CommunicationResponse;
 import org.openapis.openapi.models.shared.Post;
@@ -27,17 +26,12 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKeyHeader = new SchemeAPIKeyHeader() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKeyHeader = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CommunicationRequest req = new CommunicationRequest() {{
-                queryParams = new CommunicationQueryParams() {{
-                    all = false;
-                }};
-                request = new org.openapis.openapi.models.shared.Post[]{{
+                requestBody = new org.openapis.openapi.models.shared.Post[]{{
                     add(new Post() {{
                         id = "1";
                         language = "en";
@@ -54,7 +48,8 @@ public class Application {
                         text = "I love the service";
                     }}),
                 }};
-            }};            
+                all = false;
+            }}            
 
             CommunicationResponse res = sdk.textAnalysis.communication(req);
 
@@ -68,7 +63,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### textAnalysis

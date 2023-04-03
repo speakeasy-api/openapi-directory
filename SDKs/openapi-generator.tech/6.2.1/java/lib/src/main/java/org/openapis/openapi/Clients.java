@@ -78,7 +78,7 @@ public class Clients {
      */
     public org.openapis.openapi.models.operations.DownloadFileResponse downloadFile(org.openapis.openapi.models.operations.DownloadFileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadFilePathParams.class, baseUrl, "/api/gen/download/{fileId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadFileRequest.class, baseUrl, "/api/gen/download/{fileId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -118,12 +118,12 @@ public class Clients {
      */
     public org.openapis.openapi.models.operations.GenerateClientResponse generateClient(org.openapis.openapi.models.operations.GenerateClientRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenerateClientPathParams.class, baseUrl, "/api/gen/clients/{language}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenerateClientRequest.class, baseUrl, "/api/gen/clients/{language}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "generatorInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -162,7 +162,7 @@ public class Clients {
      */
     public org.openapis.openapi.models.operations.GetClientOptionsResponse getClientOptions(org.openapis.openapi.models.operations.GetClientOptionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClientOptionsPathParams.class, baseUrl, "/api/gen/clients/{language}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClientOptionsRequest.class, baseUrl, "/api/gen/clients/{language}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

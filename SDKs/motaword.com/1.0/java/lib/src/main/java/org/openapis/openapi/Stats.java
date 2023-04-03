@@ -82,7 +82,7 @@ public class Stats {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCommissionStatsByFilterResponse getCommissionStatsByFilter(org.openapis.openapi.models.operations.GetCommissionStatsByFilterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCommissionStatsByFilterResponse getCommissionStatsByFilter(org.openapis.openapi.models.shared.ReportFilter request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/stats/commissions");
         

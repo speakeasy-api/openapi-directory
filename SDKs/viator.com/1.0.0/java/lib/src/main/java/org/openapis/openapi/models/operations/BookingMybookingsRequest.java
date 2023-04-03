@@ -4,20 +4,49 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BookingMybookingsRequest {
-    
-    public BookingMybookingsQueryParams queryParams;
-    public BookingMybookingsRequest withQueryParams(BookingMybookingsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public BookingMybookingsRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
+    /**
+     * **email address** of the booker for the booking
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public BookingMybookingsRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
     
-    public BookingMybookingsHeaders headers;
-    public BookingMybookingsRequest withHeaders(BookingMybookingsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The booking reference number of the item
+     * - **Note**: For more information, see [Booking references](#section/Key-concepts/Booking-references)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=itineraryOrItemId")
+    public String itineraryOrItemId;
+    public BookingMybookingsRequest withItineraryOrItemId(String itineraryOrItemId) {
+        this.itineraryOrItemId = itineraryOrItemId;
+        return this;
+    }
+    
+    /**
+     * **voucher key** for the booking
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=voucherKey")
+    public String voucherKey;
+    public BookingMybookingsRequest withVoucherKey(String voucherKey) {
+        this.voucherKey = voucherKey;
         return this;
     }
     

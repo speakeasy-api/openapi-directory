@@ -4,20 +4,74 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestAuditNodeInfoRequest {
-    
-    public RequestAuditNodeInfoQueryParams queryParams;
-    public RequestAuditNodeInfoRequest withQueryParams(RequestAuditNodeInfoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestAuditNodeInfoRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
+    /**
+     * Filter string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public RequestAuditNodeInfoRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public RequestAuditNodeInfoHeaders headers;
-    public RequestAuditNodeInfoRequest withHeaders(RequestAuditNodeInfoHeaders headers) {
-        this.headers = headers;
+    /**
+     * Range limit.
+     * 
+     * Maximum 500.
+     * 
+     *  For more results please use paging (`offset` + `limit`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public RequestAuditNodeInfoRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Range offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public RequestAuditNodeInfoRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Parent node ID.
+     * 
+     * Only rooms can be parents.
+     * 
+     * Parent ID `0` or empty is the root node.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_id")
+    public Long parentId;
+    public RequestAuditNodeInfoRequest withParentId(Long parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+    
+    /**
+     * Sort string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public RequestAuditNodeInfoRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

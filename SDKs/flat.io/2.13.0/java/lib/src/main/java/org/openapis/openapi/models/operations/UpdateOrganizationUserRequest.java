@@ -7,24 +7,21 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrganizationUserRequest {
-    
-    public UpdateOrganizationUserPathParams pathParams;
-    public UpdateOrganizationUserRequest withPathParams(UpdateOrganizationUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UserAdminUpdate request;
-    public UpdateOrganizationUserRequest withRequest(org.openapis.openapi.models.shared.UserAdminUpdate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UserAdminUpdate userAdminUpdate;
+    public UpdateOrganizationUserRequest withUserAdminUpdate(org.openapis.openapi.models.shared.UserAdminUpdate userAdminUpdate) {
+        this.userAdminUpdate = userAdminUpdate;
         return this;
     }
     
-    
-    public UpdateOrganizationUserSecurity security;
-    public UpdateOrganizationUserRequest withSecurity(UpdateOrganizationUserSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the Flat account
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user")
+    public String user;
+    public UpdateOrganizationUserRequest withUser(String user) {
+        this.user = user;
         return this;
     }
     

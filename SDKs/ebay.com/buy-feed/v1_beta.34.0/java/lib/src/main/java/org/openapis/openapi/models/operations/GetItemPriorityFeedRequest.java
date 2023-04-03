@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemPriorityFeedRequest {
-    
-    public GetItemPriorityFeedQueryParams queryParams;
-    public GetItemPriorityFeedRequest withQueryParams(GetItemPriorityFeedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The formats that the client accepts for the response.&lt;br&gt;&lt;br&gt;A successful call will always return a TSV.GZIP file; however, unsuccessful calls generate error codes that are returned in JSON format.&lt;br&gt;&lt;br&gt;&lt;b&gt;Default:&lt;/b&gt; &lt;code&gt;application/json,text/tab-separated-values&lt;/code&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetItemPriorityFeedRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetItemPriorityFeedHeaders headers;
-    public GetItemPriorityFeedRequest withHeaders(GetItemPriorityFeedHeaders headers) {
-        this.headers = headers;
+    /**
+     * Header specifying content range to be retrieved. Only supported range is bytes.&lt;br&gt; &lt;br&gt;&lt;b&gt;Example&lt;/b&gt; : &lt;code&gt;bytes = 0-102400&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Range")
+    public String range;
+    public GetItemPriorityFeedRequest withRange(String range) {
+        this.range = range;
         return this;
     }
     
+    /**
+     * The ID of the eBay marketplace where the item is hosted. &lt;b&gt;Note: &lt;/b&gt; This value is case sensitive.&lt;br&gt;&lt;br&gt;For example: &lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;code&gt;X-EBAY-C-MARKETPLACE-ID = EBAY_US&lt;/code&gt;  &lt;br&gt;&lt;br&gt; For a list of supported sites see, &lt;a href="/api-docs/buy/static/ref-marketplace-supported.html"&gt;Buy API Support by Marketplace&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public GetItemPriorityFeedRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
+        return this;
+    }
     
-    public GetItemPriorityFeedSecurity security;
-    public GetItemPriorityFeedRequest withSecurity(GetItemPriorityFeedSecurity security) {
-        this.security = security;
+    /**
+     * An eBay top-level category ID of the items to be returned in the feed file.&lt;br&gt; &lt;br&gt;The list of eBay category IDs changes over time and category IDs are not the same across all the eBay marketplaces. To get a list of the top-level categories for a marketplaces, you can use the Taxonomy API &lt;a href="/api-docs/commerce/taxonomy/resources/category_tree/methods/getCategoryTree"&gt;getCategoryTree&lt;/a&gt; method. This method retrieves the complete category tree for the marketplace. The top-level categories are identified by the &lt;b&gt;categoryTreeNodeLevel&lt;/b&gt; field.&lt;br&gt;&lt;br&gt;&lt;b&gt;For example:&lt;/b&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;code&gt;"categoryTreeNodeLevel": 1&lt;/code&gt; &lt;br&gt;&lt;br&gt;For details see &lt;a href="/api-docs/buy/api-feed.html#Getcat"&gt;Get the eBay categories of a marketplace&lt;/a&gt;.&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Restriction:&lt;/b&gt; Must be a top-level category other than Real Estate. Items listed under Real Estate L1 categories are excluded from all feeds in all marketplaces.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category_id")
+    public String categoryId;
+    public GetItemPriorityFeedRequest withCategoryId(String categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    
+    /**
+     * The date of the feed you want returned. This can be up to 14 days in the past but cannot be set to a date in the future.&lt;br&gt; &lt;br&gt;&lt;b&gt;Format:&lt;/b&gt; &lt;code&gt;yyyyMMdd&lt;/code&gt;&lt;br &gt;&lt;br&gt;&lt;span class="tablenote"&gt; &lt;b&gt;Note: &lt;/b&gt;&lt;ul&gt;  &lt;li&gt;The daily &lt;b&gt;Item&lt;/b&gt; feed files are available each day after 9AM MST (US Mountain Standard Time), which is -7 hours UTC time.&lt;/li&gt;    &lt;li&gt;There is a 48 hour latency when generating the &lt;b&gt; Item&lt;/b&gt; feed files. This means you can download the file for July 10th on July 12 after 9AM MST. &lt;br&gt;&lt;br&gt;&lt;b&gt;Note: &lt;/b&gt; For categories with a large number of items, the latency can be up to 72 hours.&lt;/li&gt; &lt;/ul&gt;&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public String date;
+    public GetItemPriorityFeedRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     

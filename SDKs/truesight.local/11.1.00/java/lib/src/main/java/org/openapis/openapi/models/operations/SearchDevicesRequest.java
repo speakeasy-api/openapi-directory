@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchDevicesRequest {
+    /**
+     * The ID of the application.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=applicationId")
+    public String applicationId;
+    public SearchDevicesRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
     
-    public SearchDevicesQueryParams queryParams;
-    public SearchDevicesRequest withQueryParams(SearchDevicesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupId")
+    public String groupId;
+    public SearchDevicesRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * The maximum number of entries per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public SearchDevicesRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The page number to retrieve (first page is 0).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public SearchDevicesRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Space-separated search criteria.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchTerms")
+    public String searchTerms;
+    public SearchDevicesRequest withSearchTerms(String searchTerms) {
+        this.searchTerms = searchTerms;
+        return this;
+    }
+    
+    /**
+     * The ID of the service.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceId")
+    public String serviceId;
+    public SearchDevicesRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
         return this;
     }
     

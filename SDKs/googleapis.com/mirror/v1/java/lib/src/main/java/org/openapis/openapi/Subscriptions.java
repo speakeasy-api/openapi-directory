@@ -31,25 +31,26 @@ public class Subscriptions {
     /**
      * Deletes a subscription.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MirrorSubscriptionsDeleteResponse mirrorSubscriptionsDelete(org.openapis.openapi.models.operations.MirrorSubscriptionsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MirrorSubscriptionsDeleteResponse mirrorSubscriptionsDelete(org.openapis.openapi.models.operations.MirrorSubscriptionsDeleteRequest request, org.openapis.openapi.models.operations.MirrorSubscriptionsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MirrorSubscriptionsDeletePathParams.class, baseUrl, "/subscriptions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MirrorSubscriptionsDeleteRequest.class, baseUrl, "/subscriptions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorSubscriptionsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorSubscriptionsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -70,27 +71,28 @@ public class Subscriptions {
     /**
      * Creates a new subscription.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MirrorSubscriptionsInsertResponse mirrorSubscriptionsInsert(org.openapis.openapi.models.operations.MirrorSubscriptionsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MirrorSubscriptionsInsertResponse mirrorSubscriptionsInsert(org.openapis.openapi.models.operations.MirrorSubscriptionsInsertRequest request, org.openapis.openapi.models.operations.MirrorSubscriptionsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/subscriptions");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "subscription", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorSubscriptionsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorSubscriptionsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -116,10 +118,11 @@ public class Subscriptions {
     /**
      * Retrieves a list of subscriptions for the authenticated user and service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MirrorSubscriptionsListResponse mirrorSubscriptionsList(org.openapis.openapi.models.operations.MirrorSubscriptionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MirrorSubscriptionsListResponse mirrorSubscriptionsList(org.openapis.openapi.models.operations.MirrorSubscriptionsListRequest request, org.openapis.openapi.models.operations.MirrorSubscriptionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/subscriptions");
         
@@ -127,14 +130,14 @@ public class Subscriptions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorSubscriptionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorSubscriptionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -160,27 +163,28 @@ public class Subscriptions {
     /**
      * Updates an existing subscription in place.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MirrorSubscriptionsUpdateResponse mirrorSubscriptionsUpdate(org.openapis.openapi.models.operations.MirrorSubscriptionsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MirrorSubscriptionsUpdateResponse mirrorSubscriptionsUpdate(org.openapis.openapi.models.operations.MirrorSubscriptionsUpdateRequest request, org.openapis.openapi.models.operations.MirrorSubscriptionsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MirrorSubscriptionsUpdatePathParams.class, baseUrl, "/subscriptions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MirrorSubscriptionsUpdateRequest.class, baseUrl, "/subscriptions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "subscription", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorSubscriptionsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorSubscriptionsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

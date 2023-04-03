@@ -4,20 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsListChildInOrgRequest {
-    
-    public TeamsListChildInOrgPathParams pathParams;
-    public TeamsListChildInOrgRequest withPathParams(TeamsListChildInOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public TeamsListChildInOrgRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public TeamsListChildInOrgRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public TeamsListChildInOrgQueryParams queryParams;
-    public TeamsListChildInOrgRequest withQueryParams(TeamsListChildInOrgQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public TeamsListChildInOrgRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * team_slug parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
+    public String teamSlug;
+    public TeamsListChildInOrgRequest withTeamSlug(String teamSlug) {
+        this.teamSlug = teamSlug;
         return this;
     }
     

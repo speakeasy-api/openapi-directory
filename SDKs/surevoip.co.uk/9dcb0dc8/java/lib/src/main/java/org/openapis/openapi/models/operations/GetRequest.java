@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRequest {
+    /**
+     * Content Type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content-type")
+    public GetContentTypeEnum contentType;
+    public GetRequest withContentType(GetContentTypeEnum contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetQueryParams queryParams;
-    public GetRequest withQueryParams(GetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Disable Hypermedia
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hypermedia")
+    public GetHypermediaEnum hypermedia;
+    public GetRequest withHypermedia(GetHypermediaEnum hypermedia) {
+        this.hypermedia = hypermedia;
         return this;
     }
     

@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamPPARequest {
+    /**
+     * Conference filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
+    public String conference;
+    public GetTeamPPARequest withConference(String conference) {
+        this.conference = conference;
+        return this;
+    }
     
-    public GetTeamPPAQueryParams queryParams;
-    public GetTeamPPARequest withQueryParams(GetTeamPPAQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter to remove garbage time plays from calculations
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeGarbageTime")
+    public Boolean excludeGarbageTime;
+    public GetTeamPPARequest withExcludeGarbageTime(Boolean excludeGarbageTime) {
+        this.excludeGarbageTime = excludeGarbageTime;
+        return this;
+    }
+    
+    /**
+     * Team filter (required if year not specified)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public GetTeamPPARequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
+    
+    /**
+     * Year filter (required if team not specified)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetTeamPPARequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

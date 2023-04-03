@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyLocalGatewayRouteRequest {
-    
-    public GETModifyLocalGatewayRouteQueryParams queryParams;
-    public GETModifyLocalGatewayRouteRequest withQueryParams(GETModifyLocalGatewayRouteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyLocalGatewayRouteActionEnum action;
+    public GETModifyLocalGatewayRouteRequest withAction(GETModifyLocalGatewayRouteActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The CIDR block used for destination matches. The value that you provide must match the CIDR of an existing route in the table.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationCidrBlock")
+    public String destinationCidrBlock;
+    public GETModifyLocalGatewayRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
+        this.destinationCidrBlock = destinationCidrBlock;
+        return this;
+    }
     
-    public GETModifyLocalGatewayRouteHeaders headers;
-    public GETModifyLocalGatewayRouteRequest withHeaders(GETModifyLocalGatewayRouteHeaders headers) {
-        this.headers = headers;
+    /**
+     *  The ID of the prefix list. Use a prefix list in place of &lt;code&gt;DestinationCidrBlock&lt;/code&gt;. You cannot use &lt;code&gt;DestinationPrefixListId&lt;/code&gt; and &lt;code&gt;DestinationCidrBlock&lt;/code&gt; in the same request. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationPrefixListId")
+    public String destinationPrefixListId;
+    public GETModifyLocalGatewayRouteRequest withDestinationPrefixListId(String destinationPrefixListId) {
+        this.destinationPrefixListId = destinationPrefixListId;
+        return this;
+    }
+    
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETModifyLocalGatewayRouteRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The ID of the local gateway route table.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LocalGatewayRouteTableId")
+    public String localGatewayRouteTableId;
+    public GETModifyLocalGatewayRouteRequest withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
+        this.localGatewayRouteTableId = localGatewayRouteTableId;
+        return this;
+    }
+    
+    /**
+     *  The ID of the virtual interface group. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LocalGatewayVirtualInterfaceGroupId")
+    public String localGatewayVirtualInterfaceGroupId;
+    public GETModifyLocalGatewayRouteRequest withLocalGatewayVirtualInterfaceGroupId(String localGatewayVirtualInterfaceGroupId) {
+        this.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
+        return this;
+    }
+    
+    /**
+     * The ID of the network interface.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInterfaceId")
+    public String networkInterfaceId;
+    public GETModifyLocalGatewayRouteRequest withNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyLocalGatewayRouteVersionEnum version;
+    public GETModifyLocalGatewayRouteRequest withVersion(GETModifyLocalGatewayRouteVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyLocalGatewayRouteRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyLocalGatewayRouteRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyLocalGatewayRouteRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyLocalGatewayRouteRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyLocalGatewayRouteRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyLocalGatewayRouteRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyLocalGatewayRouteRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCustomersIdJsonRequest {
-    
-    public DeleteCustomersIdJsonPathParams pathParams;
-    public DeleteCustomersIdJsonRequest withPathParams(DeleteCustomersIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public DeleteCustomersIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Id of the Customer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public DeleteCustomersIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
     
-    public DeleteCustomersIdJsonQueryParams queryParams;
-    public DeleteCustomersIdJsonRequest withQueryParams(DeleteCustomersIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public DeleteCustomersIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

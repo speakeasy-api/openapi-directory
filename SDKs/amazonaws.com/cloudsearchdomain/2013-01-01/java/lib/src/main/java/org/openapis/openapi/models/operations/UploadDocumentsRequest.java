@@ -7,24 +7,76 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadDocumentsRequest {
-    
-    public UploadDocumentsQueryParams queryParams;
-    public UploadDocumentsRequest withQueryParams(UploadDocumentsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public UploadDocumentsHeaders headers;
-    public UploadDocumentsRequest withHeaders(UploadDocumentsHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The format of the batch you are uploading. Amazon CloudSearch supports two document batch formats:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;application/json&lt;/li&gt; &lt;li&gt;application/xml&lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public UploadDocumentsContentTypeEnum contentType;
+    public UploadDocumentsRequest withContentType(UploadDocumentsContentTypeEnum contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UploadDocumentsRequestBody request;
-    public UploadDocumentsRequest withRequest(UploadDocumentsRequestBody request) {
-        this.request = request;
+    public UploadDocumentsRequestBody requestBody;
+    public UploadDocumentsRequest withRequestBody(UploadDocumentsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UploadDocumentsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UploadDocumentsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UploadDocumentsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UploadDocumentsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UploadDocumentsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UploadDocumentsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UploadDocumentsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public UploadDocumentsFormatEnum format;
+    public UploadDocumentsRequest withFormat(UploadDocumentsFormatEnum format) {
+        this.format = format;
         return this;
     }
     

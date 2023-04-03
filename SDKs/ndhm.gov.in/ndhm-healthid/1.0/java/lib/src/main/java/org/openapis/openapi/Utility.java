@@ -33,10 +33,11 @@ public class Utility {
     /**
      * Get a list of districts in a given  State as per LGD.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GETDistrictsInStateUsingGETResponse getDistrictsInStateUsingGET(org.openapis.openapi.models.operations.GETDistrictsInStateUsingGETRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GETDistrictsInStateUsingGETResponse getDistrictsInStateUsingGET(org.openapis.openapi.models.operations.GETDistrictsInStateUsingGETRequest request, org.openapis.openapi.models.operations.GETDistrictsInStateUsingGETSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/ha/lgd/districts");
         
@@ -44,13 +45,13 @@ public class Utility {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETDistrictsInStateUsingGETQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETDistrictsInStateUsingGETRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -59,7 +60,7 @@ public class Utility {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -87,10 +88,11 @@ public class Utility {
     /**
      * Get a list of states as per LGD.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GETStatesUsingGETResponse getStatesUsingGET(org.openapis.openapi.models.operations.GETStatesUsingGETRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GETStatesUsingGETResponse getStatesUsingGET(org.openapis.openapi.models.operations.GETStatesUsingGETRequest request, org.openapis.openapi.models.operations.GETStatesUsingGETSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/ha/lgd/states");
         
@@ -98,7 +100,7 @@ public class Utility {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -107,7 +109,7 @@ public class Utility {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

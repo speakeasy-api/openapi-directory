@@ -37,7 +37,7 @@ public class Sites {
      */
     public org.openapis.openapi.models.operations.SitesIndexResponse sitesIndex(org.openapis.openapi.models.operations.SitesIndexRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SitesIndexPathParams.class, baseUrl, "/v{version}/sites", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SitesIndexRequest.class, baseUrl, "/v{version}/sites", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -77,7 +77,7 @@ public class Sites {
      */
     public org.openapis.openapi.models.operations.GetVVersionSitesSiteIdsResponse getVVersionSitesSiteIds(org.openapis.openapi.models.operations.GetVVersionSitesSiteIdsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVVersionSitesSiteIdsPathParams.class, baseUrl, "/v{version}/sites/{site_Ids}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVVersionSitesSiteIdsRequest.class, baseUrl, "/v{version}/sites/{site_Ids}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

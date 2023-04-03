@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatabaseUpdateCollectionRequest {
-    
-    public DatabaseUpdateCollectionPathParams pathParams;
-    public DatabaseUpdateCollectionRequest withPathParams(DatabaseUpdateCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DatabaseUpdateCollectionRequestBody request;
-    public DatabaseUpdateCollectionRequest withRequest(DatabaseUpdateCollectionRequestBody request) {
-        this.request = request;
+    public DatabaseUpdateCollectionRequestBody requestBody;
+    public DatabaseUpdateCollectionRequest withRequestBody(DatabaseUpdateCollectionRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public DatabaseUpdateCollectionSecurity security;
-    public DatabaseUpdateCollectionRequest withSecurity(DatabaseUpdateCollectionSecurity security) {
-        this.security = security;
+    /**
+     * Collection unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collectionId")
+    public String collectionId;
+    public DatabaseUpdateCollectionRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
         return this;
     }
     

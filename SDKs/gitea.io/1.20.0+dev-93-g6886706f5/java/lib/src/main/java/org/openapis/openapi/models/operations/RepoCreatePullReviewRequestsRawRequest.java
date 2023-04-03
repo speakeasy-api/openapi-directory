@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoCreatePullReviewRequestsRawRequest {
-    
-    public RepoCreatePullReviewRequestsRawPathParams pathParams;
-    public RepoCreatePullReviewRequestsRawRequest withPathParams(RepoCreatePullReviewRequestsRawPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=text/plain")
+    public byte[] requestBody;
+    public RepoCreatePullReviewRequestsRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=text/plain")
-    public byte[] request;
-    public RepoCreatePullReviewRequestsRawRequest withRequest(byte[] request) {
-        this.request = request;
+    /**
+     * index of the pull request
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public RepoCreatePullReviewRequestsRawRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoCreatePullReviewRequestsRawRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoCreatePullReviewRequestsRawRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

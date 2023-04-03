@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisablePanoramaFirewallRequest {
-    
-    public DisablePanoramaFirewallPathParams pathParams;
-    public DisablePanoramaFirewallRequest withPathParams(DisablePanoramaFirewallPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DisablePanoramaFirewallSecurity security;
-    public DisablePanoramaFirewallRequest withSecurity(DisablePanoramaFirewallSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DisablePanoramaFirewallRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

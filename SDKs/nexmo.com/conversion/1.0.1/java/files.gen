@@ -31,17 +31,12 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/SmsConversionQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/SmsConversionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SmsConversionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/VoiceConversionQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/VoiceConversionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/VoiceConversionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/DeliveredEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPISecret.java
 lib/src/main/java/org/openapis/openapi/models/shared/SecurityOption1.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPISig.java
 lib/src/main/java/org/openapis/openapi/models/shared/SecurityOption2.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

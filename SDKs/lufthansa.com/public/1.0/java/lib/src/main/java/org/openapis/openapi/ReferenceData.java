@@ -35,24 +35,25 @@ public class ReferenceData {
      * Aircraft
      * List all aircraft types or one specific aircraft type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReferencesAircraftByAircraftCodeGetResponse referencesAircraftByAircraftCodeGet(org.openapis.openapi.models.operations.ReferencesAircraftByAircraftCodeGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReferencesAircraftByAircraftCodeGetResponse referencesAircraftByAircraftCodeGet(org.openapis.openapi.models.operations.ReferencesAircraftByAircraftCodeGetRequest request, org.openapis.openapi.models.operations.ReferencesAircraftByAircraftCodeGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReferencesAircraftByAircraftCodeGetPathParams.class, baseUrl, "/references/aircraft/{aircraftCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReferencesAircraftByAircraftCodeGetRequest.class, baseUrl, "/references/aircraft/{aircraftCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReferencesAircraftByAircraftCodeGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReferencesAircraftByAircraftCodeGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -61,7 +62,7 @@ public class ReferenceData {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -89,24 +90,25 @@ public class ReferenceData {
      * Airlines
      * List all airlines or one specific airline.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReferencesAirlinesByAirlineCodeGetResponse referencesAirlinesByAirlineCodeGet(org.openapis.openapi.models.operations.ReferencesAirlinesByAirlineCodeGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReferencesAirlinesByAirlineCodeGetResponse referencesAirlinesByAirlineCodeGet(org.openapis.openapi.models.operations.ReferencesAirlinesByAirlineCodeGetRequest request, org.openapis.openapi.models.operations.ReferencesAirlinesByAirlineCodeGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReferencesAirlinesByAirlineCodeGetPathParams.class, baseUrl, "/references/airlines/{airlineCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReferencesAirlinesByAirlineCodeGetRequest.class, baseUrl, "/references/airlines/{airlineCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReferencesAirlinesByAirlineCodeGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReferencesAirlinesByAirlineCodeGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -115,7 +117,7 @@ public class ReferenceData {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -143,24 +145,25 @@ public class ReferenceData {
      * Airports
      * List all airports or one specific airport. All airports response is very large. It is possible to request the response in a specific language.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReferencesAirportsByAirportCodeGetResponse referencesAirportsByAirportCodeGet(org.openapis.openapi.models.operations.ReferencesAirportsByAirportCodeGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReferencesAirportsByAirportCodeGetResponse referencesAirportsByAirportCodeGet(org.openapis.openapi.models.operations.ReferencesAirportsByAirportCodeGetRequest request, org.openapis.openapi.models.operations.ReferencesAirportsByAirportCodeGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReferencesAirportsByAirportCodeGetPathParams.class, baseUrl, "/references/airports/{airportCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReferencesAirportsByAirportCodeGetRequest.class, baseUrl, "/references/airports/{airportCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReferencesAirportsByAirportCodeGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReferencesAirportsByAirportCodeGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -169,7 +172,7 @@ public class ReferenceData {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,24 +200,25 @@ public class ReferenceData {
      * Nearest Airports
      * List the 5 closest airports to the given latitude and longitude, irrespective of the radius of the reference point.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse referencesAirportsNearestByLatitudeAndLongitudeGet(org.openapis.openapi.models.operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetResponse referencesAirportsNearestByLatitudeAndLongitudeGet(org.openapis.openapi.models.operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest request, org.openapis.openapi.models.operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetPathParams.class, baseUrl, "/references/airports/nearest/{latitude},{longitude}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest.class, baseUrl, "/references/airports/nearest/{latitude},{longitude}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -223,7 +227,7 @@ public class ReferenceData {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -251,24 +255,25 @@ public class ReferenceData {
      * Cities
      * List all cities or one specific city. It is possible to request the response in a specific language.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReferencesCitiesByCityCodeGetResponse referencesCitiesByCityCodeGet(org.openapis.openapi.models.operations.ReferencesCitiesByCityCodeGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReferencesCitiesByCityCodeGetResponse referencesCitiesByCityCodeGet(org.openapis.openapi.models.operations.ReferencesCitiesByCityCodeGetRequest request, org.openapis.openapi.models.operations.ReferencesCitiesByCityCodeGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReferencesCitiesByCityCodeGetPathParams.class, baseUrl, "/references/cities/{cityCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReferencesCitiesByCityCodeGetRequest.class, baseUrl, "/references/cities/{cityCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReferencesCitiesByCityCodeGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReferencesCitiesByCityCodeGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -277,7 +282,7 @@ public class ReferenceData {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -305,24 +310,25 @@ public class ReferenceData {
      * Countries
      * List all countries or one specific country. It is possible to request the response in a specific language.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReferencesCountriesByCountryCodeGetResponse referencesCountriesByCountryCodeGet(org.openapis.openapi.models.operations.ReferencesCountriesByCountryCodeGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReferencesCountriesByCountryCodeGetResponse referencesCountriesByCountryCodeGet(org.openapis.openapi.models.operations.ReferencesCountriesByCountryCodeGetRequest request, org.openapis.openapi.models.operations.ReferencesCountriesByCountryCodeGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReferencesCountriesByCountryCodeGetPathParams.class, baseUrl, "/references/countries/{countryCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReferencesCountriesByCountryCodeGetRequest.class, baseUrl, "/references/countries/{countryCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReferencesCountriesByCountryCodeGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReferencesCountriesByCountryCodeGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -331,7 +337,7 @@ public class ReferenceData {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchFlightOffersRequest {
-    
-    public SearchFlightOffersHeaders headers;
-    public SearchFlightOffersRequest withHeaders(SearchFlightOffersHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * list of criteria to retrieve a list of flight offers
      */
     @SpeakeasyMetadata("request:mediaType=application/vnd.amadeus+json")
-    public org.openapis.openapi.models.shared.GetFlightOffersQuery request;
-    public SearchFlightOffersRequest withRequest(org.openapis.openapi.models.shared.GetFlightOffersQuery request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GetFlightOffersQuery getFlightOffersQuery;
+    public SearchFlightOffersRequest withGetFlightOffersQuery(org.openapis.openapi.models.shared.GetFlightOffersQuery getFlightOffersQuery) {
+        this.getFlightOffersQuery = getFlightOffersQuery;
+        return this;
+    }
+    
+    /**
+     * the HTTP method to apply
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HTTP-Method-Override")
+    public String xHTTPMethodOverride;
+    public SearchFlightOffersRequest withXHTTPMethodOverride(String xHTTPMethodOverride) {
+        this.xHTTPMethodOverride = xHTTPMethodOverride;
         return this;
     }
     

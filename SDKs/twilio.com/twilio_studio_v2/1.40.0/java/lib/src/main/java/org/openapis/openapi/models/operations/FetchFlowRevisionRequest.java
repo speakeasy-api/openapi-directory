@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchFlowRevisionRequest {
-    
-    public FetchFlowRevisionPathParams pathParams;
-    public FetchFlowRevisionRequest withPathParams(FetchFlowRevisionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Specific Revision number or can be `LatestPublished` and `LatestRevision`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Revision")
+    public String revision;
+    public FetchFlowRevisionRequest withRevision(String revision) {
+        this.revision = revision;
         return this;
     }
     
-    
-    public FetchFlowRevisionSecurity security;
-    public FetchFlowRevisionRequest withSecurity(FetchFlowRevisionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchFlowRevisionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Flow resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchFlowRevisionRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesDraftRegistrationsListRequest {
-    
-    public NodesDraftRegistrationsListPathParams pathParams;
-    public NodesDraftRegistrationsListRequest withPathParams(NodesDraftRegistrationsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the node.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public String nodeId;
+    public NodesDraftRegistrationsListRequest withNodeId(String nodeId) {
+        this.nodeId = nodeId;
         return this;
     }
     

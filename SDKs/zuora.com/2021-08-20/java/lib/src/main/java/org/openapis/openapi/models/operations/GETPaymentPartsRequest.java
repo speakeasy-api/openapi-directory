@@ -4,27 +4,52 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPaymentPartsRequest {
-    
-    public GETPaymentPartsPathParams pathParams;
-    public GETPaymentPartsRequest withPathParams(GETPaymentPartsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public GETPaymentPartsRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
         return this;
     }
     
-    
-    public GETPaymentPartsQueryParams queryParams;
-    public GETPaymentPartsRequest withQueryParams(GETPaymentPartsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public GETPaymentPartsRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
         return this;
     }
     
+    /**
+     * Number of rows returned per page.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public GETPaymentPartsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public GETPaymentPartsHeaders headers;
-    public GETPaymentPartsRequest withHeaders(GETPaymentPartsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique ID of a payment. For example, 8a8082e65b27f6c3015b89e4344c16b1.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentId")
+    public String paymentId;
+    public GETPaymentPartsRequest withPaymentId(String paymentId) {
+        this.paymentId = paymentId;
         return this;
     }
     

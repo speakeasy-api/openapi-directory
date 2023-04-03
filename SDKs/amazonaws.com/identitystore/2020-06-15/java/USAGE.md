@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateGroupXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CreateGroupHeaders;
 import org.openapis.openapi.models.operations.CreateGroupRequest;
 import org.openapis.openapi.models.operations.CreateGroupResponse;
 import org.openapis.openapi.models.shared.CreateGroupRequest;
@@ -15,29 +14,25 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateGroupRequest req = new CreateGroupRequest() {{
-                headers = new CreateGroupHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AWSIdentityStore.CreateGroup";
+                createGroupRequest = new CreateGroupRequest() {{
+                    description = "corrupti";
+                    displayName = "provident";
+                    identityStoreId = "distinctio";
                 }};
-                request = new CreateGroupRequest() {{
-                    description = "illum";
-                    displayName = "vel";
-                    identityStoreId = "error";
-                }};
-            }};            
+                xAmzAlgorithm = "quibusdam";
+                xAmzContentSha256 = "unde";
+                xAmzCredential = "nulla";
+                xAmzDate = "corrupti";
+                xAmzSecurityToken = "illum";
+                xAmzSignature = "vel";
+                xAmzSignedHeaders = "error";
+                xAmzTarget = "AWSIdentityStore.CreateGroup";
+            }}            
 
             CreateGroupResponse res = sdk.createGroup(req);
 

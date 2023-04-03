@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkGroupPolicyRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupPolicyId")
+    public String groupPolicyId;
+    public GetNetworkGroupPolicyRequest withGroupPolicyId(String groupPolicyId) {
+        this.groupPolicyId = groupPolicyId;
+        return this;
+    }
     
-    public GetNetworkGroupPolicyPathParams pathParams;
-    public GetNetworkGroupPolicyRequest withPathParams(GetNetworkGroupPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkGroupPolicyRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

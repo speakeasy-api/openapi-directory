@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSubsiteRequest {
-    
-    public DeleteSubsitePathParams pathParams;
-    public DeleteSubsiteRequest withPathParams(DeleteSubsitePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public DeleteSubsiteRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
         return this;
     }
     
+    /**
+     * Linux hosting domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public DeleteSubsiteRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        return this;
+    }
     
-    public DeleteSubsiteQueryParams queryParams;
-    public DeleteSubsiteRequest withQueryParams(DeleteSubsiteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=siteName")
+    public String siteNamePathParameter;
+    public DeleteSubsiteRequest withSiteNamePathParameter(String siteNamePathParameter) {
+        this.siteNamePathParameter = siteNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Name of the site on the linux hosting.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site_name")
+    public String siteNameQueryParameter;
+    public DeleteSubsiteRequest withSiteNameQueryParameter(String siteNameQueryParameter) {
+        this.siteNameQueryParameter = siteNameQueryParameter;
         return this;
     }
     

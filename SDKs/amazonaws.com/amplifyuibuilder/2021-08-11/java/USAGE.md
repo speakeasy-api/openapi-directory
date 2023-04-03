@@ -4,9 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateComponentPathParams;
-import org.openapis.openapi.models.operations.CreateComponentQueryParams;
-import org.openapis.openapi.models.operations.CreateComponentHeaders;
 import org.openapis.openapi.models.operations.CreateComponentRequestBodyComponentToCreate;
 import org.openapis.openapi.models.operations.CreateComponentRequestBody;
 import org.openapis.openapi.models.operations.CreateComponentRequest;
@@ -32,40 +29,48 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateComponentRequest req = new CreateComponentRequest() {{
-                pathParams = new CreateComponentPathParams() {{
-                    appId = "corrupti";
-                    environmentName = "provident";
-                }};
-                queryParams = new CreateComponentQueryParams() {{
-                    clientToken = "distinctio";
-                }};
-                headers = new CreateComponentHeaders() {{
-                    xAmzAlgorithm = "quibusdam";
-                    xAmzContentSha256 = "unde";
-                    xAmzCredential = "nulla";
-                    xAmzDate = "corrupti";
-                    xAmzSecurityToken = "illum";
-                    xAmzSignature = "vel";
-                    xAmzSignedHeaders = "error";
-                }};
-                request = new CreateComponentRequestBody() {{
+                requestBody = new CreateComponentRequestBody() {{
                     componentToCreate = new CreateComponentRequestBodyComponentToCreate() {{
                         bindingProperties = new java.util.HashMap<String, org.openapis.openapi.models.shared.ComponentBindingPropertiesValue>() {{
-                            put("suscipit", new ComponentBindingPropertiesValue() {{
+                            put("provident", new ComponentBindingPropertiesValue() {{
                                 bindingProperties = new ComponentBindingPropertiesValueProperties() {{
-                                    bucket = "iure";
-                                    defaultValue = "magnam";
-                                    field = "debitis";
-                                    key = "ipsa";
-                                    model = "delectus";
+                                    bucket = "distinctio";
+                                    defaultValue = "quibusdam";
+                                    field = "unde";
+                                    key = "nulla";
+                                    model = "corrupti";
                                     predicates = new org.openapis.openapi.models.shared.Predicate[]{{
+                                        add(new Predicate() {{
+                                            and = new org.openapis.openapi.models.shared.Predicate[]{{
+                                                add(new Predicate() {{}}),
+                                                add(new Predicate() {{}}),
+                                            }};
+                                            field = "error";
+                                            operand = "deserunt";
+                                            operator = "suscipit";
+                                            or = new org.openapis.openapi.models.shared.Predicate[]{{
+                                                add(new Predicate() {{}}),
+                                                add(new Predicate() {{}}),
+                                            }};
+                                        }}),
+                                        add(new Predicate() {{
+                                            and = new org.openapis.openapi.models.shared.Predicate[]{{
+                                                add(new Predicate() {{}}),
+                                                add(new Predicate() {{}}),
+                                            }};
+                                            field = "debitis";
+                                            operand = "ipsa";
+                                            operator = "delectus";
+                                            or = new org.openapis.openapi.models.shared.Predicate[]{{
+                                                add(new Predicate() {{}}),
+                                                add(new Predicate() {{}}),
+                                            }};
+                                        }}),
                                         add(new Predicate() {{
                                             and = new org.openapis.openapi.models.shared.Predicate[]{{
                                                 add(new Predicate() {{}}),
@@ -4360,7 +4365,17 @@ public class Application {
                         }};
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "dolore";
+                xAmzContentSha256 = "voluptatibus";
+                xAmzCredential = "iure";
+                xAmzDate = "explicabo";
+                xAmzSecurityToken = "minus";
+                xAmzSignature = "soluta";
+                xAmzSignedHeaders = "dolorum";
+                appId = "velit";
+                clientToken = "earum";
+                environmentName = "praesentium";
+            }}            
 
             CreateComponentResponse res = sdk.createComponent(req);
 

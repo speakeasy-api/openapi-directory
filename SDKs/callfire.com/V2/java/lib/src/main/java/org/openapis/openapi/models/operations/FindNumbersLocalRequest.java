@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindNumbersLocalRequest {
-    
-    public FindNumbersLocalQueryParams queryParams;
-    public FindNumbersLocalRequest withQueryParams(FindNumbersLocalQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A city name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
+    public String city;
+    public FindNumbersLocalRequest withCity(String city) {
+        this.city = city;
         return this;
     }
     
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FindNumbersLocalRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public FindNumbersLocalSecurity security;
-    public FindNumbersLocalRequest withSecurity(FindNumbersLocalSecurity security) {
-        this.security = security;
+    /**
+     * To set the maximum number of records to return in a paged list response. The default is 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public FindNumbersLocalRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * A 4-7 digit prefix
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prefix")
+    public String prefix;
+    public FindNumbersLocalRequest withPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+    
+    /**
+     * A two-letter state code. Example: CA, IL, etc.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public FindNumbersLocalRequest withState(String state) {
+        this.state = state;
+        return this;
+    }
+    
+    /**
+     * A five-digit Zipcode
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zipcode")
+    public String zipcode;
+    public FindNumbersLocalRequest withZipcode(String zipcode) {
+        this.zipcode = zipcode;
         return this;
     }
     

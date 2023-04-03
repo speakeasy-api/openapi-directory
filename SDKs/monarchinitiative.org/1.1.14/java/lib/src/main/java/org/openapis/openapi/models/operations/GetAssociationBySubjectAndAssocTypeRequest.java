@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssociationBySubjectAndAssocTypeRequest {
-    
-    public GetAssociationBySubjectAndAssocTypePathParams pathParams;
-    public GetAssociationBySubjectAndAssocTypeRequest withPathParams(GetAssociationBySubjectAndAssocTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Association type, eg gene_phenotype
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=association_type")
+    public String associationType;
+    public GetAssociationBySubjectAndAssocTypeRequest withAssociationType(String associationType) {
+        this.associationType = associationType;
         return this;
     }
     
+    /**
+     * Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default) or a specific publication or other supporting object, e.g. ZFIN:ZDB-PUB-060503-2
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
+    public String evidence;
+    public GetAssociationBySubjectAndAssocTypeRequest withEvidence(String evidence) {
+        this.evidence = evidence;
+        return this;
+    }
     
-    public GetAssociationBySubjectAndAssocTypeQueryParams queryParams;
-    public GetAssociationBySubjectAndAssocTypeRequest withQueryParams(GetAssociationBySubjectAndAssocTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If true, excludes associations that involve IEAs (ECO:0000501)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_automatic_assertions")
+    public Boolean excludeAutomaticAssertions;
+    public GetAssociationBySubjectAndAssocTypeRequest withExcludeAutomaticAssertions(Boolean excludeAutomaticAssertions) {
+        this.excludeAutomaticAssertions = excludeAutomaticAssertions;
+        return this;
+    }
+    
+    /**
+     * Object CURIE
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object")
+    public String object;
+    public GetAssociationBySubjectAndAssocTypeRequest withObject(String object) {
+        this.object = object;
+        return this;
+    }
+    
+    /**
+     * number of rows
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
+    public Long rows;
+    public GetAssociationBySubjectAndAssocTypeRequest withRows(Long rows) {
+        this.rows = rows;
+        return this;
+    }
+    
+    /**
+     * beginning row
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Long start;
+    public GetAssociationBySubjectAndAssocTypeRequest withStart(Long start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * Subject CURIE
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject")
+    public String subject;
+    public GetAssociationBySubjectAndAssocTypeRequest withSubject(String subject) {
+        this.subject = subject;
+        return this;
+    }
+    
+    /**
+     * If true, excludes evidence objects in response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unselect_evidence")
+    public Boolean unselectEvidence;
+    public GetAssociationBySubjectAndAssocTypeRequest withUnselectEvidence(Boolean unselectEvidence) {
+        this.unselectEvidence = unselectEvidence;
+        return this;
+    }
+    
+    /**
+     * If true, returns results in compact associations format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=use_compact_associations")
+    public Boolean useCompactAssociations;
+    public GetAssociationBySubjectAndAssocTypeRequest withUseCompactAssociations(Boolean useCompactAssociations) {
+        this.useCompactAssociations = useCompactAssociations;
         return this;
     }
     

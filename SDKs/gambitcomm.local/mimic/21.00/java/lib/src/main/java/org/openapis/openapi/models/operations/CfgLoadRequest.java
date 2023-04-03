@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CfgLoadRequest {
+    /**
+     * MIMIC agent configuration file to load
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cfgFile")
+    public String cfgFile;
+    public CfgLoadRequest withCfgFile(String cfgFile) {
+        this.cfgFile = cfgFile;
+        return this;
+    }
     
-    public CfgLoadPathParams pathParams;
-    public CfgLoadRequest withPathParams(CfgLoadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent number in cfgFile to start the loading
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstAgentNum")
+    public Integer firstAgentNum;
+    public CfgLoadRequest withFirstAgentNum(Integer firstAgentNum) {
+        this.firstAgentNum = firstAgentNum;
+        return this;
+    }
+    
+    /**
+     * Agent number in cfgFile to end the loading
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lastAgentNum")
+    public Integer lastAgentNum;
+    public CfgLoadRequest withLastAgentNum(Integer lastAgentNum) {
+        this.lastAgentNum = lastAgentNum;
+        return this;
+    }
+    
+    /**
+     * Agent number in current configuration to start placing the new agents
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=startAgentNum")
+    public Integer startAgentNum;
+    public CfgLoadRequest withStartAgentNum(Integer startAgentNum) {
+        this.startAgentNum = startAgentNum;
         return this;
     }
     

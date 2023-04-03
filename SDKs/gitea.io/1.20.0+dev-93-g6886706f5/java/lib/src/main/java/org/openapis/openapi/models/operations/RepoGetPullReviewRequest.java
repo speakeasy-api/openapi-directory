@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoGetPullReviewRequest {
+    /**
+     * id of the review
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public RepoGetPullReviewRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public RepoGetPullReviewPathParams pathParams;
-    public RepoGetPullReviewRequest withPathParams(RepoGetPullReviewPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * index of the pull request
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public RepoGetPullReviewRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoGetPullReviewRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoGetPullReviewRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

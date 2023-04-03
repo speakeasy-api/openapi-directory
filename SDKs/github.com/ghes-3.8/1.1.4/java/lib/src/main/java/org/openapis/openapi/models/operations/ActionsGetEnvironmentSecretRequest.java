@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetEnvironmentSecretRequest {
+    /**
+     * The name of the environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_name")
+    public String environmentName;
+    public ActionsGetEnvironmentSecretRequest withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
+        return this;
+    }
     
-    public ActionsGetEnvironmentSecretPathParams pathParams;
-    public ActionsGetEnvironmentSecretRequest withPathParams(ActionsGetEnvironmentSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository_id")
+    public Long repositoryId;
+    public ActionsGetEnvironmentSecretRequest withRepositoryId(Long repositoryId) {
+        this.repositoryId = repositoryId;
+        return this;
+    }
+    
+    /**
+     * The name of the secret.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
+    public String secretName;
+    public ActionsGetEnvironmentSecretRequest withSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
     

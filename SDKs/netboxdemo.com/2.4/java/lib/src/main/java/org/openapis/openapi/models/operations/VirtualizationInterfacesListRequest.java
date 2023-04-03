@@ -4,13 +4,68 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VirtualizationInterfacesListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enabled")
+    public String enabled;
+    public VirtualizationInterfacesListRequest withEnabled(String enabled) {
+        this.enabled = enabled;
+        return this;
+    }
     
-    public VirtualizationInterfacesListQueryParams queryParams;
-    public VirtualizationInterfacesListRequest withQueryParams(VirtualizationInterfacesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public VirtualizationInterfacesListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mac_address")
+    public String macAddress;
+    public VirtualizationInterfacesListRequest withMacAddress(String macAddress) {
+        this.macAddress = macAddress;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mtu")
+    public Double mtu;
+    public VirtualizationInterfacesListRequest withMtu(Double mtu) {
+        this.mtu = mtu;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public VirtualizationInterfacesListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public VirtualizationInterfacesListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=virtual_machine")
+    public String virtualMachine;
+    public VirtualizationInterfacesListRequest withVirtualMachine(String virtualMachine) {
+        this.virtualMachine = virtualMachine;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=virtual_machine_id")
+    public String virtualMachineId;
+    public VirtualizationInterfacesListRequest withVirtualMachineId(String virtualMachineId) {
+        this.virtualMachineId = virtualMachineId;
         return this;
     }
     

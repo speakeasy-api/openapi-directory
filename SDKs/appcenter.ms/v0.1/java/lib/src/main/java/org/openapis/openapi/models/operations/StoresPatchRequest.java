@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoresPatchRequest {
-    
-    public StoresPatchPathParams pathParams;
-    public StoresPatchRequest withPathParams(StoresPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Store update request
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public StoresPatchRequestBody request;
-    public StoresPatchRequest withRequest(StoresPatchRequestBody request) {
-        this.request = request;
+    public StoresPatchRequestBody requestBody;
+    public StoresPatchRequest withRequestBody(StoresPatchRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public StoresPatchRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public StoresPatchSecurity security;
-    public StoresPatchRequest withSecurity(StoresPatchSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public StoresPatchRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * The name of the store
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=store_name")
+    public String storeName;
+    public StoresPatchRequest withStoreName(String storeName) {
+        this.storeName = storeName;
         return this;
     }
     

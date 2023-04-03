@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductNumberRequest {
-    
-    public ProductNumberPathParams pathParams;
-    public ProductNumberRequest withPathParams(ProductNumberPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ProductNumberSecurity security;
-    public ProductNumberRequest withSecurity(ProductNumberSecurity security) {
-        this.security = security;
+    /**
+     * Unique number that identifies the Product.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productNumber")
+    public String productNumber;
+    public ProductNumberRequest withProductNumber(String productNumber) {
+        this.productNumber = productNumber;
         return this;
     }
     

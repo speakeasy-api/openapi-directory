@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateappkeyRequest {
-    
-    public UpdateappkeyPathParams pathParams;
-    public UpdateappkeyRequest withPathParams(UpdateappkeyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Request body for updating AppKeys
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateappkeyRequest request;
-    public UpdateappkeyRequest withRequest(org.openapis.openapi.models.shared.UpdateappkeyRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateappkeyRequest updateappkeyRequest;
+    public UpdateappkeyRequest withUpdateappkeyRequest(org.openapis.openapi.models.shared.UpdateappkeyRequest updateappkeyRequest) {
+        this.updateappkeyRequest = updateappkeyRequest;
+        return this;
+    }
+    
+    /**
+     * ID from the appKey which will be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateappkeyRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWorkspaceSlugMembersMemberSlugSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer")
-    public org.openapis.openapi.models.shared.SchemeBearer bearer;
-    public DeleteWorkspaceSlugMembersMemberSlugSecurity withBearer(org.openapis.openapi.models.shared.SchemeBearer bearer) {
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
+    public String bearer;
+    public DeleteWorkspaceSlugMembersMemberSlugSecurity withBearer(String bearer) {
         this.bearer = bearer;
         return this;
     }

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestPublicDownloadShareInfoRequest {
-    
-    public RequestPublicDownloadShareInfoPathParams pathParams;
-    public RequestPublicDownloadShareInfoRequest withPathParams(RequestPublicDownloadShareInfoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestPublicDownloadShareInfoXSdsDateFormatEnum xSdsDateFormat;
+    public RequestPublicDownloadShareInfoRequest withXSdsDateFormat(RequestPublicDownloadShareInfoXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
         return this;
     }
     
-    
-    public RequestPublicDownloadShareInfoHeaders headers;
-    public RequestPublicDownloadShareInfoRequest withHeaders(RequestPublicDownloadShareInfoHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=access_key")
+    public String accessKey;
+    public RequestPublicDownloadShareInfoRequest withAccessKey(String accessKey) {
+        this.accessKey = accessKey;
         return this;
     }
     

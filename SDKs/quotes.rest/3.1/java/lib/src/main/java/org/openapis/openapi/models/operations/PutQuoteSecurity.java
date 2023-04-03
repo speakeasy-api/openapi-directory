@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutQuoteSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeXTheySaidSoAPISecret xTheySaidSoApiSecret;
-    public PutQuoteSecurity withXTheySaidSoApiSecret(org.openapis.openapi.models.shared.SchemeXTheySaidSoAPISecret xTheySaidSoApiSecret) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-TheySaidSo-Api-Secret")
+    public String xTheySaidSoApiSecret;
+    public PutQuoteSecurity withXTheySaidSoApiSecret(String xTheySaidSoApiSecret) {
         this.xTheySaidSoApiSecret = xTheySaidSoApiSecret;
         return this;
     }

@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveNetworkSwitchStackRequest {
-    
-    public RemoveNetworkSwitchStackPathParams pathParams;
-    public RemoveNetworkSwitchStackRequest withPathParams(RemoveNetworkSwitchStackPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public RemoveNetworkSwitchStackRequestBody requestBody;
+    public RemoveNetworkSwitchStackRequest withRequestBody(RemoveNetworkSwitchStackRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public RemoveNetworkSwitchStackRequestBody request;
-    public RemoveNetworkSwitchStackRequest withRequest(RemoveNetworkSwitchStackRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public RemoveNetworkSwitchStackRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=switchStackId")
+    public String switchStackId;
+    public RemoveNetworkSwitchStackRequest withSwitchStackId(String switchStackId) {
+        this.switchStackId = switchStackId;
         return this;
     }
     

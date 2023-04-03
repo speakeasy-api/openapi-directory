@@ -40,7 +40,7 @@ public class Companies {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1CompaniesDomainsIdResponse deleteSetupV1CompaniesDomainsId(org.openapis.openapi.models.operations.DeleteSetupV1CompaniesDomainsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1CompaniesDomainsIdPathParams.class, baseUrl, "/setup/v1/companies/domains/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1CompaniesDomainsIdRequest.class, baseUrl, "/setup/v1/companies/domains/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -119,7 +119,7 @@ public class Companies {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1CompaniesRegionsIdResponse deleteSetupV1CompaniesRegionsId(org.openapis.openapi.models.operations.DeleteSetupV1CompaniesRegionsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1CompaniesRegionsIdPathParams.class, baseUrl, "/setup/v1/companies/regions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1CompaniesRegionsIdRequest.class, baseUrl, "/setup/v1/companies/regions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -238,7 +238,7 @@ public class Companies {
      */
     public org.openapis.openapi.models.operations.GetSetupV1CompaniesDomainsIdResponse getSetupV1CompaniesDomainsId(org.openapis.openapi.models.operations.GetSetupV1CompaniesDomainsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1CompaniesDomainsIdPathParams.class, baseUrl, "/setup/v1/companies/domains/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1CompaniesDomainsIdRequest.class, baseUrl, "/setup/v1/companies/domains/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -357,7 +357,7 @@ public class Companies {
      */
     public org.openapis.openapi.models.operations.GetSetupV1CompaniesEmailTemplatesTemplateNameResponse getSetupV1CompaniesEmailTemplatesTemplateName(org.openapis.openapi.models.operations.GetSetupV1CompaniesEmailTemplatesTemplateNameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1CompaniesEmailTemplatesTemplateNamePathParams.class, baseUrl, "/setup/v1/companies/email/templates/{templateName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1CompaniesEmailTemplatesTemplateNameRequest.class, baseUrl, "/setup/v1/companies/email/templates/{templateName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -403,7 +403,7 @@ public class Companies {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1CompaniesRegionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1CompaniesRegionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -445,7 +445,7 @@ public class Companies {
      */
     public org.openapis.openapi.models.operations.GetSetupV1CompaniesRegionsIdResponse getSetupV1CompaniesRegionsId(org.openapis.openapi.models.operations.GetSetupV1CompaniesRegionsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1CompaniesRegionsIdPathParams.class, baseUrl, "/setup/v1/companies/regions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1CompaniesRegionsIdRequest.class, baseUrl, "/setup/v1/companies/regions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -485,7 +485,7 @@ public class Companies {
      */
     public org.openapis.openapi.models.operations.GetSetupV1CompaniesTimezonesDateResponse getSetupV1CompaniesTimezonesDate(org.openapis.openapi.models.operations.GetSetupV1CompaniesTimezonesDateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1CompaniesTimezonesDatePathParams.class, baseUrl, "/setup/v1/companies/timezones/{date}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1CompaniesTimezonesDateRequest.class, baseUrl, "/setup/v1/companies/timezones/{date}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -529,7 +529,7 @@ public class Companies {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSetupV1CompaniesResponse postSetupV1Companies(org.openapis.openapi.models.operations.PostSetupV1CompaniesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSetupV1CompaniesResponse postSetupV1Companies(org.openapis.openapi.models.shared.CompanyInputModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setup/v1/companies");
         
@@ -571,7 +571,7 @@ public class Companies {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSetupV1CompaniesDomainsResponse postSetupV1CompaniesDomains(org.openapis.openapi.models.operations.PostSetupV1CompaniesDomainsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSetupV1CompaniesDomainsResponse postSetupV1CompaniesDomains(org.openapis.openapi.models.shared.CompanyDomainInputModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setup/v1/companies/domains");
         
@@ -614,7 +614,7 @@ public class Companies {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSetupV1CompaniesEmailTemplatesMasterResponse postSetupV1CompaniesEmailTemplatesMaster(org.openapis.openapi.models.operations.PostSetupV1CompaniesEmailTemplatesMasterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSetupV1CompaniesEmailTemplatesMasterResponse postSetupV1CompaniesEmailTemplatesMaster(org.openapis.openapi.models.shared.MasterTemplateSettingsInputModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setup/v1/companies/email/templates/master");
         
@@ -656,7 +656,7 @@ public class Companies {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSetupV1CompaniesRegionsResponse postSetupV1CompaniesRegions(org.openapis.openapi.models.operations.PostSetupV1CompaniesRegionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSetupV1CompaniesRegionsResponse postSetupV1CompaniesRegions(org.openapis.openapi.models.shared.RegionInputModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setup/v1/companies/regions");
         
@@ -699,7 +699,7 @@ public class Companies {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutSetupV1CompaniesResponse putSetupV1Companies(org.openapis.openapi.models.operations.PutSetupV1CompaniesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutSetupV1CompaniesResponse putSetupV1Companies(org.openapis.openapi.models.shared.CompanyUpdateModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setup/v1/companies");
         
@@ -743,12 +743,12 @@ public class Companies {
      */
     public org.openapis.openapi.models.operations.PutSetupV1CompaniesDomainsIdResponse putSetupV1CompaniesDomainsId(org.openapis.openapi.models.operations.PutSetupV1CompaniesDomainsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1CompaniesDomainsIdPathParams.class, baseUrl, "/setup/v1/companies/domains/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1CompaniesDomainsIdRequest.class, baseUrl, "/setup/v1/companies/domains/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "companyDomainUpdateModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -785,12 +785,12 @@ public class Companies {
      */
     public org.openapis.openapi.models.operations.PutSetupV1CompaniesRegionsIdResponse putSetupV1CompaniesRegionsId(org.openapis.openapi.models.operations.PutSetupV1CompaniesRegionsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1CompaniesRegionsIdPathParams.class, baseUrl, "/setup/v1/companies/regions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1CompaniesRegionsIdRequest.class, baseUrl, "/setup/v1/companies/regions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "regionUpdateModel", "json");
         req.setBody(serializedRequestBody);
         
         

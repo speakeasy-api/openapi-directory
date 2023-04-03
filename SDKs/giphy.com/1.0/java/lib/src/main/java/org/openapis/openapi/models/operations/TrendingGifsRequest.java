@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TrendingGifsRequest {
+    /**
+     * The maximum number of records to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public TrendingGifsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public TrendingGifsQueryParams queryParams;
-    public TrendingGifsRequest withQueryParams(TrendingGifsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An optional results offset.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public TrendingGifsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Filters results by specified rating.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rating")
+    public String rating;
+    public TrendingGifsRequest withRating(String rating) {
+        this.rating = rating;
         return this;
     }
     

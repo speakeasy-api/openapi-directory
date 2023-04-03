@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDataSessionRequest {
-    
-    public ListDataSessionPathParams pathParams;
-    public ListDataSessionRequest withPathParams(ListDataSessionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListDataSessionRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListDataSessionQueryParams queryParams;
-    public ListDataSessionRequest withQueryParams(ListDataSessionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListDataSessionRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public ListDataSessionSecurity security;
-    public ListDataSessionRequest withSecurity(ListDataSessionSecurity security) {
-        this.security = security;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListDataSessionRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     
-    
-    public String serverURL;
-    public ListDataSessionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Sim resource](https://www.twilio.com/docs/wireless/api/sim-resource) with the Data Sessions to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SimSid")
+    public String simSid;
+    public ListDataSessionRequest withSimSid(String simSid) {
+        this.simSid = simSid;
         return this;
     }
     

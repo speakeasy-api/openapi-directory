@@ -4,13 +4,426 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchMotorcycleActiveRequest {
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetSearchMotorcycleActiveRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetSearchMotorcycleActiveQueryParams queryParams;
-    public GetSearchMotorcycleActiveRequest withQueryParams(GetSearchMotorcycleActiveQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * To filter listing on their body type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=body_type")
+    public String bodyType;
+    public GetSearchMotorcycleActiveRequest withBodyType(String bodyType) {
+        this.bodyType = bodyType;
+        return this;
+    }
+    
+    /**
+     * To filter listing on City in which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
+    public String city;
+    public GetSearchMotorcycleActiveRequest withCity(String city) {
+        this.city = city;
+        return this;
+    }
+    
+    /**
+     * Color of the vehicle
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color")
+    public String color;
+    public GetSearchMotorcycleActiveRequest withColor(String color) {
+        this.color = color;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their cylinders
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cylinders")
+    public String cylinders;
+    public GetSearchMotorcycleActiveRequest withCylinders(String cylinders) {
+        this.cylinders = cylinders;
+        return this;
+    }
+    
+    /**
+     * Dealer id to filter the listings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dealer_id")
+    public String dealerId;
+    public GetSearchMotorcycleActiveRequest withDealerId(String dealerId) {
+        this.dealerId = dealerId;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their drivetrain
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=drivetrain")
+    public String drivetrain;
+    public GetSearchMotorcycleActiveRequest withDrivetrain(String drivetrain) {
+        this.drivetrain = drivetrain;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their engine
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=engine")
+    public String engine;
+    public GetSearchMotorcycleActiveRequest withEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    
+    /**
+     * Control sort order of facets with this parameter with default sort being on count, Other available sort is alphabetical sort, which can be obtained by using index as value for this param
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facet_sort")
+    public org.openapis.openapi.models.shared.FacetSortEnum facetSort;
+    public GetSearchMotorcycleActiveRequest withFacetSort(org.openapis.openapi.models.shared.FacetSortEnum facetSort) {
+        this.facetSort = facetSort;
+        return this;
+    }
+    
+    /**
+     * The comma separated list of fields for which facets are requested. Facets could be requested in addition to the listings for the search. Please note - The API calls with lots of facet fields may take longer to respond.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facets")
+    public String facets;
+    public GetSearchMotorcycleActiveRequest withFacets(String facets) {
+        this.facets = facets;
+        return this;
+    }
+    
+    /**
+     * First seen days range to filter listings with the first seen in the range given. Range to be given in the format - min-max e.g. 25-12
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_seen_days")
+    public String firstSeenDays;
+    public GetSearchMotorcycleActiveRequest withFirstSeenDays(String firstSeenDays) {
+        this.firstSeenDays = firstSeenDays;
+        return this;
+    }
+    
+    /**
+     * First seen date range to filter listings with the first seen in the range given. Range to be given in the format [YYYYMMDD] - min-max e.g. 20190523-20190623
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_seen_range")
+    public String firstSeenRange;
+    public GetSearchMotorcycleActiveRequest withFirstSeenRange(String firstSeenRange) {
+        this.firstSeenRange = firstSeenRange;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their fuel type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fuel_type")
+    public String fuelType;
+    public GetSearchMotorcycleActiveRequest withFuelType(String fuelType) {
+        this.fuelType = fuelType;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their condition. Either used or new
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inventory_type")
+    public org.openapis.openapi.models.shared.InventoryTypeEnum inventoryType;
+    public GetSearchMotorcycleActiveRequest withInventoryType(org.openapis.openapi.models.shared.InventoryTypeEnum inventoryType) {
+        this.inventoryType = inventoryType;
+        return this;
+    }
+    
+    /**
+     * Last seen days range to filter listings with the last seen in the range given. Range to be given in the format - min-max e.g. 25-12
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_seen_days")
+    public String lastSeenDays;
+    public GetSearchMotorcycleActiveRequest withLastSeenDays(String lastSeenDays) {
+        this.lastSeenDays = lastSeenDays;
+        return this;
+    }
+    
+    /**
+     * Last seen date range to filter listings with the last seen in the range given. Range to be given in the format [YYYYMMDD] - min-max e.g. 20190523-20190623
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_seen_range")
+    public String lastSeenRange;
+    public GetSearchMotorcycleActiveRequest withLastSeenRange(String lastSeenRange) {
+        this.lastSeenRange = lastSeenRange;
+        return this;
+    }
+    
+    /**
+     * Latitude component of location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latitude")
+    public Double latitude;
+    public GetSearchMotorcycleActiveRequest withLatitude(Double latitude) {
+        this.latitude = latitude;
+        return this;
+    }
+    
+    /**
+     * Longitude component of location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longitude")
+    public Double longitude;
+    public GetSearchMotorcycleActiveRequest withLongitude(Double longitude) {
+        this.longitude = longitude;
+        return this;
+    }
+    
+    /**
+     * To filter listings on their make
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=make")
+    public String make;
+    public GetSearchMotorcycleActiveRequest withMake(String make) {
+        this.make = make;
+        return this;
+    }
+    
+    /**
+     * Miles range to filter listings with miles in the given range. Range to be given in the format - min-max e.g. 1000-5000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=miles_range")
+    public String milesRange;
+    public GetSearchMotorcycleActiveRequest withMilesRange(String milesRange) {
+        this.milesRange = milesRange;
+        return this;
+    }
+    
+    /**
+     * To filter listings on their model
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
+    public String model;
+    public GetSearchMotorcycleActiveRequest withModel(String model) {
+        this.model = model;
+        return this;
+    }
+    
+    /**
+     * To filter listing on msa code in which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=msa_code")
+    public String msaCode;
+    public GetSearchMotorcycleActiveRequest withMsaCode(String msaCode) {
+        this.msaCode = msaCode;
+        return this;
+    }
+    
+    /**
+     * MSRP range to filter listings with the msrp in the range given. Range to be given in the format - min-max e.g. 1000-5000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=msrp_range")
+    public String msrpRange;
+    public GetSearchMotorcycleActiveRequest withMsrpRange(String msrpRange) {
+        this.msrpRange = msrpRange;
+        return this;
+    }
+    
+    /**
+     * Price range to filter listings with the price in the range given. Range to be given in the format - min-max e.g. 1000-5000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=price_range")
+    public String priceRange;
+    public GetSearchMotorcycleActiveRequest withPriceRange(String priceRange) {
+        this.priceRange = priceRange;
+        return this;
+    }
+    
+    /**
+     * Radius around the search location (Unit - Miles)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
+    public Integer radius;
+    public GetSearchMotorcycleActiveRequest withRadius(Integer radius) {
+        this.radius = radius;
+        return this;
+    }
+    
+    /**
+     * The comma separated list of numeric fields for which range facets are requested. Range facets could be requested in addition to the listings for the search. Please note - The API calls with lots of range facet fields may take longer to respond.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=range_facets")
+    public String rangeFacets;
+    public GetSearchMotorcycleActiveRequest withRangeFacets(String rangeFacets) {
+        this.rangeFacets = rangeFacets;
+        return this;
+    }
+    
+    /**
+     * Number of results to return. Default is 10. Max is 50
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
+    public Integer rows;
+    public GetSearchMotorcycleActiveRequest withRows(Integer rows) {
+        this.rows = rows;
+        return this;
+    }
+    
+    /**
+     * To search a substring across entire document
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_text")
+    public String searchText;
+    public GetSearchMotorcycleActiveRequest withSearchText(String searchText) {
+        this.searchText = searchText;
+        return this;
+    }
+    
+    /**
+     * Sort by field. Default sort field is distance from the given point
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public String sortBy;
+    public GetSearchMotorcycleActiveRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Sort order - asc or desc. Default sort order is asc
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
+    public org.openapis.openapi.models.shared.SortOrderEnum sortOrder;
+    public GetSearchMotorcycleActiveRequest withSortOrder(org.openapis.openapi.models.shared.SortOrderEnum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their source
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public String source;
+    public GetSearchMotorcycleActiveRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * Page number to fetch the results for the given criteria. Default is 0. Pagination is allowed only till first 10000 results for the search and sort criteria. The page value can be only between 1 to 10000/rows
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Integer start;
+    public GetSearchMotorcycleActiveRequest withStart(Integer start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * To filter listing on State in which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public GetSearchMotorcycleActiveRequest withState(String state) {
+        this.state = state;
+        return this;
+    }
+    
+    /**
+     * The list of fields for which stats need to be generated based on the matching listings for the search criteria. The stats consists of mean, max, average and count of listings based on which the stats are calculated for the field. Stats could be requested in addition to the listings for the search. Please note - The API calls with the stats fields may take longer to respond.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stats")
+    public String stats;
+    public GetSearchMotorcycleActiveRequest withStats(String stats) {
+        this.stats = stats;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their stock number on lot
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stock_no")
+    public String stockNo;
+    public GetSearchMotorcycleActiveRequest withStockNo(String stockNo) {
+        this.stockNo = stockNo;
+        return this;
+    }
+    
+    /**
+     * Taxonomy VIN of the motorcycle
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taxonomy_vin")
+    public String taxonomyVin;
+    public GetSearchMotorcycleActiveRequest withTaxonomyVin(String taxonomyVin) {
+        this.taxonomyVin = taxonomyVin;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their transmission
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transmission")
+    public String transmission;
+    public GetSearchMotorcycleActiveRequest withTransmission(String transmission) {
+        this.transmission = transmission;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their trim
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trim")
+    public String trim;
+    public GetSearchMotorcycleActiveRequest withTrim(String trim) {
+        this.trim = trim;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their vehicle type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicle_type")
+    public String vehicleType;
+    public GetSearchMotorcycleActiveRequest withVehicleType(String vehicleType) {
+        this.vehicleType = vehicleType;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their VIN
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vin")
+    public String vin;
+    public GetSearchMotorcycleActiveRequest withVin(String vin) {
+        this.vin = vin;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their year
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public String year;
+    public GetSearchMotorcycleActiveRequest withYear(String year) {
+        this.year = year;
+        return this;
+    }
+    
+    /**
+     * To filter listing on ZIP around which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
+    public String zip;
+    public GetSearchMotorcycleActiveRequest withZip(String zip) {
+        this.zip = zip;
         return this;
     }
     

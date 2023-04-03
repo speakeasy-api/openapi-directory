@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSettingTemplateRequest {
-    
-    public UpdateSettingTemplatePathParams pathParams;
-    public UpdateSettingTemplateRequest withPathParams(UpdateSettingTemplatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateSettingTemplateApplicationJSON request;
-    public UpdateSettingTemplateRequest withRequest(UpdateSettingTemplateApplicationJSON request) {
-        this.request = request;
+    public UpdateSettingTemplateApplicationJSON requestBody;
+    public UpdateSettingTemplateRequest withRequestBody(UpdateSettingTemplateApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSettingTemplateSecurity security;
-    public UpdateSettingTemplateRequest withSecurity(UpdateSettingTemplateSecurity security) {
-        this.security = security;
+    /**
+     * The Template ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=templateId")
+    public String templateId;
+    public UpdateSettingTemplateRequest withTemplateId(String templateId) {
+        this.templateId = templateId;
         return this;
     }
     

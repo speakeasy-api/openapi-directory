@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoCancelScheduledAutoMergeRequest {
+    /**
+     * index of the pull request to merge
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public RepoCancelScheduledAutoMergeRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
     
-    public RepoCancelScheduledAutoMergePathParams pathParams;
-    public RepoCancelScheduledAutoMergeRequest withPathParams(RepoCancelScheduledAutoMergePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoCancelScheduledAutoMergeRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoCancelScheduledAutoMergeRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

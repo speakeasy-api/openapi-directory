@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsGetWebhookConfigForOrgRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
+    public Long hookId;
+    public OrgsGetWebhookConfigForOrgRequest withHookId(Long hookId) {
+        this.hookId = hookId;
+        return this;
+    }
     
-    public OrgsGetWebhookConfigForOrgPathParams pathParams;
-    public OrgsGetWebhookConfigForOrgRequest withPathParams(OrgsGetWebhookConfigForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsGetWebhookConfigForOrgRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

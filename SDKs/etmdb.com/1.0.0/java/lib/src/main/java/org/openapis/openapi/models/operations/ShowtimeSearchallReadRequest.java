@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ShowtimeSearchallReadRequest {
-    
-    public ShowtimeSearchallReadPathParams pathParams;
-    public ShowtimeSearchallReadRequest withPathParams(ShowtimeSearchallReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=param")
+    public String param;
+    public ShowtimeSearchallReadRequest withParam(String param) {
+        this.param = param;
         return this;
     }
     

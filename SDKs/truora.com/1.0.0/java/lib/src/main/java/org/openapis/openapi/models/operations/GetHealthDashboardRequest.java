@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHealthDashboardRequest {
-    
-    public GetHealthDashboardQueryParams queryParams;
-    public GetHealthDashboardRequest withQueryParams(GetHealthDashboardQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Country in ISO 3166, uppercase
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public GetHealthDashboardRequest withCountry(String country) {
+        this.country = country;
         return this;
     }
     
+    /**
+     * Unix timestamp in seconds. Send a day timestamp to view the database hourly status for that day or send the current time to know the current database status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unixTimestampSeconds")
+    public String unixTimestampSeconds;
+    public GetHealthDashboardRequest withUnixTimestampSeconds(String unixTimestampSeconds) {
+        this.unixTimestampSeconds = unixTimestampSeconds;
+        return this;
+    }
     
-    public GetHealthDashboardSecurity security;
-    public GetHealthDashboardRequest withSecurity(GetHealthDashboardSecurity security) {
-        this.security = security;
+    /**
+     * Offset between the local time and the UTC time in seconds. (e.g., Colombia is at UTC -18000 seconds)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unixtimezoneOffsetSeconds")
+    public String unixtimezoneOffsetSeconds;
+    public GetHealthDashboardRequest withUnixtimezoneOffsetSeconds(String unixtimezoneOffsetSeconds) {
+        this.unixtimezoneOffsetSeconds = unixtimezoneOffsetSeconds;
         return this;
     }
     

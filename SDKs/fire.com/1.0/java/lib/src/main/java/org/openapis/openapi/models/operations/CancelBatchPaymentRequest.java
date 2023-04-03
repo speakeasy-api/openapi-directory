@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelBatchPaymentRequest {
-    
-    public CancelBatchPaymentPathParams pathParams;
-    public CancelBatchPaymentRequest withPathParams(CancelBatchPaymentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=batchUuid")
+    public String batchUuid;
+    public CancelBatchPaymentRequest withBatchUuid(String batchUuid) {
+        this.batchUuid = batchUuid;
         return this;
     }
     

@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateBatchInferenceJobXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CreateBatchInferenceJobHeaders;
 import org.openapis.openapi.models.operations.CreateBatchInferenceJobRequest;
 import org.openapis.openapi.models.operations.CreateBatchInferenceJobResponse;
 import org.openapis.openapi.models.shared.CreateBatchInferenceJobRequest;
@@ -33,61 +32,64 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateBatchInferenceJobRequest req = new CreateBatchInferenceJobRequest() {{
-                headers = new CreateBatchInferenceJobHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AmazonPersonalize.CreateBatchInferenceJob";
-                }};
-                request = new CreateBatchInferenceJobRequest() {{
+                createBatchInferenceJobRequest = new CreateBatchInferenceJobRequest() {{
                     batchInferenceJobConfig = new BatchInferenceJobConfig() {{
                         itemExplorationConfig = new java.util.HashMap<String, String>() {{
-                            put("vel", "error");
-                            put("deserunt", "suscipit");
-                            put("iure", "magnam");
-                            put("debitis", "ipsa");
+                            put("provident", "distinctio");
+                            put("quibusdam", "unde");
+                            put("nulla", "corrupti");
                         }};
                     }};
-                    filterArn = "delectus";
+                    filterArn = "illum";
                     jobInput = new BatchInferenceJobInput() {{
                         s3DataSource = new S3DataConfig() {{
-                            kmsKeyArn = "tempora";
-                            path = "suscipit";
+                            kmsKeyArn = "vel";
+                            path = "error";
                         }};
                     }};
-                    jobName = "molestiae";
+                    jobName = "deserunt";
                     jobOutput = new BatchInferenceJobOutput() {{
                         s3DataDestination = new S3DataConfig() {{
-                            kmsKeyArn = "minus";
-                            path = "placeat";
+                            kmsKeyArn = "suscipit";
+                            path = "iure";
                         }};
                     }};
-                    numResults = 528895;
-                    roleArn = "iusto";
-                    solutionVersionArn = "excepturi";
+                    numResults = 297534;
+                    roleArn = "debitis";
+                    solutionVersionArn = "ipsa";
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            tagKey = "recusandae";
-                            tagValue = "temporibus";
+                            tagKey = "tempora";
+                            tagValue = "suscipit";
                         }}),
                         add(new Tag() {{
-                            tagKey = "ab";
-                            tagValue = "quis";
+                            tagKey = "molestiae";
+                            tagValue = "minus";
+                        }}),
+                        add(new Tag() {{
+                            tagKey = "placeat";
+                            tagValue = "voluptatum";
+                        }}),
+                        add(new Tag() {{
+                            tagKey = "iusto";
+                            tagValue = "excepturi";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "nisi";
+                xAmzContentSha256 = "recusandae";
+                xAmzCredential = "temporibus";
+                xAmzDate = "ab";
+                xAmzSecurityToken = "quis";
+                xAmzSignature = "veritatis";
+                xAmzSignedHeaders = "deserunt";
+                xAmzTarget = "AmazonPersonalize.CreateBatchInferenceJob";
+            }}            
 
             CreateBatchInferenceJobResponse res = sdk.createBatchInferenceJob(req);
 
@@ -101,7 +103,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

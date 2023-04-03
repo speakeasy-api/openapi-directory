@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsDeleteInstallationRequest {
-    
-    public AppsDeleteInstallationPathParams pathParams;
-    public AppsDeleteInstallationRequest withPathParams(AppsDeleteInstallationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * installation_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=installation_id")
+    public Long installationId;
+    public AppsDeleteInstallationRequest withInstallationId(Long installationId) {
+        this.installationId = installationId;
         return this;
     }
     

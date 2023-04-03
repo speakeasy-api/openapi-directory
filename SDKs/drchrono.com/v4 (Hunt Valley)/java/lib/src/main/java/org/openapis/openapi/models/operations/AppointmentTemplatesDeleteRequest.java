@@ -4,27 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppointmentTemplatesDeleteRequest {
-    
-    public AppointmentTemplatesDeletePathParams pathParams;
-    public AppointmentTemplatesDeleteRequest withPathParams(AppointmentTemplatesDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public AppointmentTemplatesDeleteRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public AppointmentTemplatesDeleteQueryParams queryParams;
-    public AppointmentTemplatesDeleteRequest withQueryParams(AppointmentTemplatesDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public AppointmentTemplatesDeleteRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
+    public Long office;
+    public AppointmentTemplatesDeleteRequest withOffice(Long office) {
+        this.office = office;
+        return this;
+    }
     
-    public AppointmentTemplatesDeleteSecurity security;
-    public AppointmentTemplatesDeleteRequest withSecurity(AppointmentTemplatesDeleteSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=profile")
+    public Long profile;
+    public AppointmentTemplatesDeleteRequest withProfile(Long profile) {
+        this.profile = profile;
         return this;
     }
     

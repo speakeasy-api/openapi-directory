@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAgentRequest {
-    
-    public GetAgentPathParams pathParams;
-    public GetAgentRequest withPathParams(GetAgentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetAgentSecurity security;
-    public GetAgentRequest withSecurity(GetAgentSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the agent
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agent_id")
+    public String agentId;
+    public GetAgentRequest withAgentId(String agentId) {
+        this.agentId = agentId;
         return this;
     }
     

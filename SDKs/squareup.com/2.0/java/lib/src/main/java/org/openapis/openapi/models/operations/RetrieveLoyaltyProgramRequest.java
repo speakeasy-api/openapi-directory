@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveLoyaltyProgramRequest {
-    
-    public RetrieveLoyaltyProgramPathParams pathParams;
-    public RetrieveLoyaltyProgramRequest withPathParams(RetrieveLoyaltyProgramPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetrieveLoyaltyProgramSecurity security;
-    public RetrieveLoyaltyProgramRequest withSecurity(RetrieveLoyaltyProgramSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the loyalty program or the keyword `main`. Either value can be used to retrieve the single loyalty program that belongs to the seller.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=program_id")
+    public String programId;
+    public RetrieveLoyaltyProgramRequest withProgramId(String programId) {
+        this.programId = programId;
         return this;
     }
     

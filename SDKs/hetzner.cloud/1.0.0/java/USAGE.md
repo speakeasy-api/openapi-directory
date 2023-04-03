@@ -6,7 +6,6 @@ import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetActionsSortParameterSortEnum;
 import org.openapis.openapi.models.operations.GetActionsStatusParameterStatusEnum;
-import org.openapis.openapi.models.operations.GetActionsQueryParams;
 import org.openapis.openapi.models.operations.GetActionsRequest;
 import org.openapis.openapi.models.operations.GetActionsResponse;
 
@@ -17,12 +16,10 @@ public class Application {
                 .build();
 
             GetActionsRequest req = new GetActionsRequest() {{
-                queryParams = new GetActionsQueryParams() {{
-                    id = 548814;
-                    sort = "progress:asc";
-                    status = "error";
-                }};
-            }};            
+                id = 548814;
+                sort = "progress:asc";
+                status = "error";
+            }}            
 
             GetActionsResponse res = sdk.actions.getActions(req);
 

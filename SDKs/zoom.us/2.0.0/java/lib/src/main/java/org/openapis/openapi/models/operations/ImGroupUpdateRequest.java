@@ -7,17 +7,21 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImGroupUpdateRequest {
-    
-    public ImGroupUpdatePathParams pathParams;
-    public ImGroupUpdateRequest withPathParams(ImGroupUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ImGroupUpdateApplicationJSON requestBody;
+    public ImGroupUpdateRequest withRequestBody(ImGroupUpdateApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ImGroupUpdateApplicationJSON request;
-    public ImGroupUpdateRequest withRequest(ImGroupUpdateApplicationJSON request) {
-        this.request = request;
+    /**
+     * The group ID.&lt;br&gt;
+     * Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public ImGroupUpdateRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

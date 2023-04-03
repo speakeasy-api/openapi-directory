@@ -38,12 +38,12 @@ public class Exude {
      */
     public org.openapis.openapi.models.operations.FilterFileDataStoppingsResponse filterFileDataStoppings(org.openapis.openapi.models.operations.FilterFileDataStoppingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FilterFileDataStoppingsPathParams.class, baseUrl, "/exude/{type}/file", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FilterFileDataStoppingsRequest.class, baseUrl, "/exude/{type}/file", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -81,12 +81,12 @@ public class Exude {
      */
     public org.openapis.openapi.models.operations.FilterStoppingsResponse filterStoppings(org.openapis.openapi.models.operations.FilterStoppingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FilterStoppingsPathParams.class, baseUrl, "/exude/{type}/data", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FilterStoppingsRequest.class, baseUrl, "/exude/{type}/data", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "exudeBean", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

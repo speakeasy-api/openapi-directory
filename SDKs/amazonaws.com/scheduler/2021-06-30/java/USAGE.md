@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateSchedulePathParams;
-import org.openapis.openapi.models.operations.CreateScheduleHeaders;
 import org.openapis.openapi.models.operations.CreateScheduleRequestBodyFlexibleTimeWindow;
 import org.openapis.openapi.models.operations.CreateScheduleRequestBodyStateEnum;
 import org.openapis.openapi.models.operations.CreateScheduleRequestBodyTarget;
@@ -37,77 +35,77 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateScheduleRequest req = new CreateScheduleRequest() {{
-                pathParams = new CreateSchedulePathParams() {{
-                    name = "corrupti";
-                }};
-                headers = new CreateScheduleHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-                request = new CreateScheduleRequestBody() {{
-                    clientToken = "vel";
-                    description = "error";
-                    endDate = "2022-03-26T09:37:56.283Z";
+                name = "corrupti";
+                requestBody = new CreateScheduleRequestBody() {{
+                    clientToken = "provident";
+                    description = "distinctio";
+                    endDate = "2021-03-11T23:22:42.658Z";
                     flexibleTimeWindow = new CreateScheduleRequestBodyFlexibleTimeWindow() {{
-                        maximumWindowInMinutes = 437587;
-                        mode = "OFF";
+                        maximumWindowInMinutes = 857946;
+                        mode = "FLEXIBLE";
                     }};
-                    groupName = "debitis";
-                    kmsKeyArn = "ipsa";
-                    scheduleExpression = "delectus";
-                    scheduleExpressionTimezone = "tempora";
-                    startDate = "2022-07-10T15:39:12.517Z";
-                    state = "DISABLED";
+                    groupName = "illum";
+                    kmsKeyArn = "vel";
+                    scheduleExpression = "error";
+                    scheduleExpressionTimezone = "deserunt";
+                    startDate = "2022-07-25T06:44:09.184Z";
+                    state = "ENABLED";
                     target = new CreateScheduleRequestBodyTarget() {{
-                        arn = "placeat";
+                        arn = "debitis";
                         deadLetterConfig = new DeadLetterConfig() {{
-                            arn = "voluptatum";
+                            arn = "ipsa";
                         }};
                         ecsParameters = new EcsParameters() {{
                             capacityProviderStrategy = new org.openapis.openapi.models.shared.CapacityProviderStrategyItem[]{{
                                 add(new CapacityProviderStrategyItem() {{
-                                    base = 568045;
-                                    capacityProvider = "nisi";
-                                    weight = 925597;
+                                    base = 272656;
+                                    capacityProvider = "suscipit";
+                                    weight = 477665;
                                 }}),
                                 add(new CapacityProviderStrategyItem() {{
-                                    base = 836079;
-                                    capacityProvider = "ab";
-                                    weight = 337396;
+                                    base = 791725;
+                                    capacityProvider = "placeat";
+                                    weight = 528895;
+                                }}),
+                                add(new CapacityProviderStrategyItem() {{
+                                    base = 479977;
+                                    capacityProvider = "excepturi";
+                                    weight = 392785;
+                                }}),
+                                add(new CapacityProviderStrategyItem() {{
+                                    base = 925597;
+                                    capacityProvider = "temporibus";
+                                    weight = 71036;
                                 }}),
                             }};
                             enableECSManagedTags = false;
                             enableExecuteCommand = false;
-                            group = "veritatis";
-                            launchType = "FARGATE";
+                            group = "quis";
+                            launchType = "EC2";
                             networkConfiguration = new NetworkConfiguration() {{
                                 awsvpcConfiguration = new AwsVpcConfiguration() {{
-                                    assignPublicIp = "ENABLED";
+                                    assignPublicIp = "DISABLED";
                                     securityGroups = new String[]{{
-                                        add("repellendus"),
-                                        add("sapiente"),
+                                        add("ipsam"),
                                     }};
                                     subnets = new String[]{{
+                                        add("sapiente"),
+                                        add("quo"),
                                         add("odit"),
                                         add("at"),
-                                        add("at"),
-                                        add("maiores"),
                                     }};
                                 }};
                             }};
                             placementConstraints = new org.openapis.openapi.models.shared.PlacementConstraint[]{{
+                                add(new PlacementConstraint() {{
+                                    expression = "maiores";
+                                    type = "distinctInstance";
+                                }}),
                                 add(new PlacementConstraint() {{
                                     expression = "quod";
                                     type = "memberOf";
@@ -116,72 +114,75 @@ public class Application {
                                     expression = "esse";
                                     type = "memberOf";
                                 }}),
+                                add(new PlacementConstraint() {{
+                                    expression = "porro";
+                                    type = "memberOf";
+                                }}),
                             }};
                             placementStrategy = new org.openapis.openapi.models.shared.PlacementStrategy[]{{
-                                add(new PlacementStrategy() {{
-                                    field = "dolorum";
-                                    type = "random";
-                                }}),
                                 add(new PlacementStrategy() {{
                                     field = "nam";
                                     type = "spread";
                                 }}),
-                                add(new PlacementStrategy() {{
-                                    field = "occaecati";
-                                    type = "random";
-                                }}),
-                                add(new PlacementStrategy() {{
-                                    field = "deleniti";
-                                    type = "binpack";
-                                }}),
                             }};
-                            platformVersion = "optio";
+                            platformVersion = "occaecati";
                             propagateTags = "TASK_DEFINITION";
-                            referenceId = "totam";
+                            referenceId = "fugit";
                             tags = new java.util.HashMap<String, String>[]{{
                                 add(new java.util.HashMap<String, String>() {{
+                                    put("optio", "totam");
+                                    put("beatae", "commodi");
                                     put("molestiae", "modi");
                                     put("qui", "impedit");
                                 }}),
+                                add(new java.util.HashMap<String, String>() {{
+                                    put("esse", "ipsum");
+                                    put("excepturi", "aspernatur");
+                                    put("perferendis", "ad");
+                                }}),
+                                add(new java.util.HashMap<String, String>() {{
+                                    put("sed", "iste");
+                                    put("dolor", "natus");
+                                    put("laboriosam", "hic");
+                                }}),
                             }};
-                            taskCount = 736918;
-                            taskDefinitionArn = "esse";
+                            taskCount = 902599;
+                            taskDefinitionArn = "fuga";
                         }};
                         eventBridgeParameters = new EventBridgeParameters() {{
-                            detailType = "ipsum";
-                            source = "excepturi";
+                            detailType = "in";
+                            source = "corporis";
                         }};
-                        input = "aspernatur";
+                        input = "iste";
                         kinesisParameters = new KinesisParameters() {{
-                            partitionKey = "perferendis";
+                            partitionKey = "iure";
                         }};
                         retryPolicy = new RetryPolicy() {{
-                            maximumEventAgeInSeconds = 324141;
-                            maximumRetryAttempts = 617636;
+                            maximumEventAgeInSeconds = 902349;
+                            maximumRetryAttempts = 697631;
                         }};
-                        roleArn = "sed";
+                        roleArn = "architecto";
                         sageMakerPipelineParameters = new SageMakerPipelineParameters() {{
                             pipelineParameterList = new org.openapis.openapi.models.shared.SageMakerPipelineParameter[]{{
                                 add(new SageMakerPipelineParameter() {{
-                                    name = "dolor";
-                                    value = "natus";
-                                }}),
-                                add(new SageMakerPipelineParameter() {{
-                                    name = "laboriosam";
-                                    value = "hic";
-                                }}),
-                                add(new SageMakerPipelineParameter() {{
-                                    name = "saepe";
-                                    value = "fuga";
+                                    name = "reiciendis";
+                                    value = "est";
                                 }}),
                             }};
                         }};
                         sqsParameters = new SqsParameters() {{
-                            messageGroupId = "in";
+                            messageGroupId = "mollitia";
                         }};
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "laborum";
+                xAmzContentSha256 = "dolores";
+                xAmzCredential = "dolorem";
+                xAmzDate = "corporis";
+                xAmzSecurityToken = "explicabo";
+                xAmzSignature = "nobis";
+                xAmzSignedHeaders = "enim";
+            }}            
 
             CreateScheduleResponse res = sdk.createSchedule(req);
 

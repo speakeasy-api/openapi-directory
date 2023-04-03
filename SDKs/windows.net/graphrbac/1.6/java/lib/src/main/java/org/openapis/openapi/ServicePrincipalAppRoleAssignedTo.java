@@ -38,13 +38,13 @@ public class ServicePrincipalAppRoleAssignedTo {
      */
     public org.openapis.openapi.models.operations.ServicePrincipalsListAppRoleAssignedToResponse servicePrincipalsListAppRoleAssignedTo(org.openapis.openapi.models.operations.ServicePrincipalsListAppRoleAssignedToRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicePrincipalsListAppRoleAssignedToPathParams.class, baseUrl, "/{tenantID}/servicePrincipals/{objectId}/appRoleAssignedTo", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicePrincipalsListAppRoleAssignedToRequest.class, baseUrl, "/{tenantID}/servicePrincipals/{objectId}/appRoleAssignedTo", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicePrincipalsListAppRoleAssignedToQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicePrincipalsListAppRoleAssignedToRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

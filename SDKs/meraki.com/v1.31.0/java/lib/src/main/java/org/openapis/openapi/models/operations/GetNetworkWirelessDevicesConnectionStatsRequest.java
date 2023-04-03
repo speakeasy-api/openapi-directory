@@ -4,20 +4,83 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkWirelessDevicesConnectionStatsRequest {
-    
-    public GetNetworkWirelessDevicesConnectionStatsPathParams pathParams;
-    public GetNetworkWirelessDevicesConnectionStatsRequest withPathParams(GetNetworkWirelessDevicesConnectionStatsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter results by AP Tag
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apTag")
+    public String apTag;
+    public GetNetworkWirelessDevicesConnectionStatsRequest withApTag(String apTag) {
+        this.apTag = apTag;
         return this;
     }
     
+    /**
+     * Filter results by band (either '2.4', '5' or '6'). Note that data prior to February 2020 will not have band information.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=band")
+    public GetNetworkWirelessDevicesConnectionStatsBandEnum band;
+    public GetNetworkWirelessDevicesConnectionStatsRequest withBand(GetNetworkWirelessDevicesConnectionStatsBandEnum band) {
+        this.band = band;
+        return this;
+    }
     
-    public GetNetworkWirelessDevicesConnectionStatsQueryParams queryParams;
-    public GetNetworkWirelessDevicesConnectionStatsRequest withQueryParams(GetNetworkWirelessDevicesConnectionStatsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkWirelessDevicesConnectionStatsRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    /**
+     * Filter results by SSID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ssid")
+    public Long ssid;
+    public GetNetworkWirelessDevicesConnectionStatsRequest withSsid(Long ssid) {
+        this.ssid = ssid;
+        return this;
+    }
+    
+    /**
+     * The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
+    public String t0;
+    public GetNetworkWirelessDevicesConnectionStatsRequest withT0(String t0) {
+        this.t0 = t0;
+        return this;
+    }
+    
+    /**
+     * The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t1")
+    public String t1;
+    public GetNetworkWirelessDevicesConnectionStatsRequest withT1(String t1) {
+        this.t1 = t1;
+        return this;
+    }
+    
+    /**
+     * The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
+    public Float timespan;
+    public GetNetworkWirelessDevicesConnectionStatsRequest withTimespan(Float timespan) {
+        this.timespan = timespan;
+        return this;
+    }
+    
+    /**
+     * Filter results by VLAN
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vlan")
+    public Long vlan;
+    public GetNetworkWirelessDevicesConnectionStatsRequest withVlan(Long vlan) {
+        this.vlan = vlan;
         return this;
     }
     

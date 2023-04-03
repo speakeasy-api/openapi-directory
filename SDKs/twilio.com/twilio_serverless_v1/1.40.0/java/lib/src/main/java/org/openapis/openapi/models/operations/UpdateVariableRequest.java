@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateVariableRequest {
-    
-    public UpdateVariablePathParams pathParams;
-    public UpdateVariableRequest withPathParams(UpdateVariablePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Environment with the Variable resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EnvironmentSid")
+    public String environmentSid;
+    public UpdateVariableRequest withEnvironmentSid(String environmentSid) {
+        this.environmentSid = environmentSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateVariableUpdateVariableRequest request;
-    public UpdateVariableRequest withRequest(UpdateVariableUpdateVariableRequest request) {
-        this.request = request;
+    public UpdateVariableUpdateVariableRequest requestBody;
+    public UpdateVariableRequest withRequestBody(UpdateVariableUpdateVariableRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateVariableSecurity security;
-    public UpdateVariableRequest withSecurity(UpdateVariableSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Service to update the Variable resource under.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateVariableRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateVariableRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Variable resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateVariableRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

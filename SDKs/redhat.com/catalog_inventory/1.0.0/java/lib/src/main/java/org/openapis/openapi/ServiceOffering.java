@@ -41,12 +41,12 @@ public class ServiceOffering {
      */
     public org.openapis.openapi.models.operations.AppliedInventoriesTagsForServiceOfferingResponse appliedInventoriesTagsForServiceOffering(org.openapis.openapi.models.operations.AppliedInventoriesTagsForServiceOfferingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppliedInventoriesTagsForServiceOfferingPathParams.class, baseUrl, "/service_offerings/{id}/applied_inventories_tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppliedInventoriesTagsForServiceOfferingRequest.class, baseUrl, "/service_offerings/{id}/applied_inventories_tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "appliedInventoriesParametersServicePlan", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -88,13 +88,13 @@ public class ServiceOffering {
      */
     public org.openapis.openapi.models.operations.ListServiceOfferingServiceInstancesResponse listServiceOfferingServiceInstances(org.openapis.openapi.models.operations.ListServiceOfferingServiceInstancesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceOfferingServiceInstancesPathParams.class, baseUrl, "/service_offerings/{id}/service_instances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceOfferingServiceInstancesRequest.class, baseUrl, "/service_offerings/{id}/service_instances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceOfferingServiceInstancesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceOfferingServiceInstancesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -142,13 +142,13 @@ public class ServiceOffering {
      */
     public org.openapis.openapi.models.operations.ListServiceOfferingServiceOfferingNodesResponse listServiceOfferingServiceOfferingNodes(org.openapis.openapi.models.operations.ListServiceOfferingServiceOfferingNodesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceOfferingServiceOfferingNodesPathParams.class, baseUrl, "/service_offerings/{id}/service_offering_nodes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceOfferingServiceOfferingNodesRequest.class, baseUrl, "/service_offerings/{id}/service_offering_nodes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceOfferingServiceOfferingNodesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceOfferingServiceOfferingNodesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -196,13 +196,13 @@ public class ServiceOffering {
      */
     public org.openapis.openapi.models.operations.ListServiceOfferingServicePlansResponse listServiceOfferingServicePlans(org.openapis.openapi.models.operations.ListServiceOfferingServicePlansRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceOfferingServicePlansPathParams.class, baseUrl, "/service_offerings/{id}/service_plans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceOfferingServicePlansRequest.class, baseUrl, "/service_offerings/{id}/service_plans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceOfferingServicePlansQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceOfferingServicePlansRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -256,7 +256,7 @@ public class ServiceOffering {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceOfferingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceOfferingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -296,12 +296,12 @@ public class ServiceOffering {
      */
     public org.openapis.openapi.models.operations.OrderServiceOfferingResponse orderServiceOffering(org.openapis.openapi.models.operations.OrderServiceOfferingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderServiceOfferingPathParams.class, baseUrl, "/service_offerings/{id}/order", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderServiceOfferingRequest.class, baseUrl, "/service_offerings/{id}/order", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "orderParametersServiceOfferingInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -343,7 +343,7 @@ public class ServiceOffering {
      */
     public org.openapis.openapi.models.operations.ShowServiceOfferingResponse showServiceOffering(org.openapis.openapi.models.operations.ShowServiceOfferingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ShowServiceOfferingPathParams.class, baseUrl, "/service_offerings/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ShowServiceOfferingRequest.class, baseUrl, "/service_offerings/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

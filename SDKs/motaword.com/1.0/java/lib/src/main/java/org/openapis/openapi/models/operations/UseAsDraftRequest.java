@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UseAsDraftRequest {
-    
-    public UseAsDraftPathParams pathParams;
-    public UseAsDraftRequest withPathParams(UseAsDraftPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UseAsDraftPayload useAsDraftPayload;
+    public UseAsDraftRequest withUseAsDraftPayload(org.openapis.openapi.models.shared.UseAsDraftPayload useAsDraftPayload) {
+        this.useAsDraftPayload = useAsDraftPayload;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UseAsDraftPayload request;
-    public UseAsDraftRequest withRequest(org.openapis.openapi.models.shared.UseAsDraftPayload request) {
-        this.request = request;
+    /**
+     * Document ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public Long documentId;
+    public UseAsDraftRequest withDocumentId(Long documentId) {
+        this.documentId = documentId;
         return this;
     }
     

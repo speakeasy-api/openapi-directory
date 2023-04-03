@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResetWebhookLifetimeRequest {
-    
-    public ResetWebhookLifetimePathParams pathParams;
-    public ResetWebhookLifetimeRequest withPathParams(ResetWebhookLifetimePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public ResetWebhookLifetimeRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public ResetWebhookLifetimeXSdsDateFormatEnum xSdsDateFormat;
+    public ResetWebhookLifetimeRequest withXSdsDateFormat(ResetWebhookLifetimeXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
     
-    public ResetWebhookLifetimeHeaders headers;
-    public ResetWebhookLifetimeRequest withHeaders(ResetWebhookLifetimeHeaders headers) {
-        this.headers = headers;
+    /**
+     * Webhook ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhook_id")
+    public Long webhookId;
+    public ResetWebhookLifetimeRequest withWebhookId(Long webhookId) {
+        this.webhookId = webhookId;
         return this;
     }
     

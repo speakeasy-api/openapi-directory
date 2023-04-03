@@ -4,20 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveLocationRequest {
-    
-    public RetrieveLocationPathParams pathParams;
-    public RetrieveLocationRequest withPathParams(RetrieveLocationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetrieveLocationSecurity security;
-    public RetrieveLocationRequest withSecurity(RetrieveLocationSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the location to retrieve. If you specify the string "main",
+     * then the endpoint returns the main location.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public RetrieveLocationRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     

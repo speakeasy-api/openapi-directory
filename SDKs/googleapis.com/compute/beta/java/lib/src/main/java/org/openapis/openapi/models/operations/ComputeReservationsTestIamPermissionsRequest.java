@@ -7,31 +7,160 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeReservationsTestIamPermissionsRequest {
-    
-    public ComputeReservationsTestIamPermissionsPathParams pathParams;
-    public ComputeReservationsTestIamPermissionsRequest withPathParams(ComputeReservationsTestIamPermissionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ComputeReservationsTestIamPermissionsQueryParams queryParams;
-    public ComputeReservationsTestIamPermissionsRequest withQueryParams(ComputeReservationsTestIamPermissionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ComputeReservationsTestIamPermissionsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TestPermissionsRequest request;
-    public ComputeReservationsTestIamPermissionsRequest withRequest(org.openapis.openapi.models.shared.TestPermissionsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TestPermissionsRequest testPermissionsRequest;
+    public ComputeReservationsTestIamPermissionsRequest withTestPermissionsRequest(org.openapis.openapi.models.shared.TestPermissionsRequest testPermissionsRequest) {
+        this.testPermissionsRequest = testPermissionsRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ComputeReservationsTestIamPermissionsRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public ComputeReservationsTestIamPermissionsSecurity security;
-    public ComputeReservationsTestIamPermissionsRequest withSecurity(ComputeReservationsTestIamPermissionsSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ComputeReservationsTestIamPermissionsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ComputeReservationsTestIamPermissionsRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ComputeReservationsTestIamPermissionsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ComputeReservationsTestIamPermissionsRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ComputeReservationsTestIamPermissionsRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ComputeReservationsTestIamPermissionsRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Project ID for this request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public ComputeReservationsTestIamPermissionsRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ComputeReservationsTestIamPermissionsRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Name or id of the resource for this request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource")
+    public String resource;
+    public ComputeReservationsTestIamPermissionsRequest withResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ComputeReservationsTestIamPermissionsRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ComputeReservationsTestIamPermissionsRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Legacy name for parameter that has been superseded by `quotaUser`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public ComputeReservationsTestIamPermissionsRequest withUserIp(String userIp) {
+        this.userIp = userIp;
+        return this;
+    }
+    
+    /**
+     * The name of the zone for this request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone")
+    public String zone;
+    public ComputeReservationsTestIamPermissionsRequest withZone(String zone) {
+        this.zone = zone;
         return this;
     }
     

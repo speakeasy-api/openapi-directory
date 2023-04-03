@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListMoodsRequest {
-    
-    public ListMoodsQueryParams queryParams;
-    public ListMoodsRequest withQueryParams(ListMoodsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListMoodsSecurity security;
-    public ListMoodsRequest withSecurity(ListMoodsSecurity security) {
-        this.security = security;
+    /**
+     * Which language the moods will be returned in
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public ListMoodsRequest withLanguage(String language) {
+        this.language = language;
         return this;
     }
     

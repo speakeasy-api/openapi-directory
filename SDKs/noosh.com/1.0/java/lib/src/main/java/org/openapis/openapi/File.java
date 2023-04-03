@@ -39,7 +39,7 @@ public class File {
      */
     public org.openapis.openapi.models.operations.GetFileResponse getFile(org.openapis.openapi.models.operations.GetFileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFilePathParams.class, baseUrl, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/files/{file_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFileRequest.class, baseUrl, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/files/{file_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -158,7 +158,7 @@ public class File {
      */
     public org.openapis.openapi.models.operations.GetFileTagsResponse getFileTags(org.openapis.openapi.models.operations.GetFileTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFileTagsPathParams.class, baseUrl, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/fileTags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFileTagsRequest.class, baseUrl, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/fileTags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -277,7 +277,7 @@ public class File {
      */
     public org.openapis.openapi.models.operations.GetFilesResponse getFiles(org.openapis.openapi.models.operations.GetFilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFilesPathParams.class, baseUrl, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/files", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFilesRequest.class, baseUrl, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/files", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -396,12 +396,12 @@ public class File {
      */
     public org.openapis.openapi.models.operations.UploadFileResponse uploadFile(org.openapis.openapi.models.operations.UploadFileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadFilePathParams.class, baseUrl, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/files", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadFileRequest.class, baseUrl, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/files", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         

@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserToFolderAssignPostRequest {
+    /**
+     * The ID of the old folder (in case of a drag and drop to a new folder)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oldFolder")
+    public String oldFolder;
+    public UserToFolderAssignPostRequest withOldFolder(String oldFolder) {
+        this.oldFolder = oldFolder;
+        return this;
+    }
     
-    public UserToFolderAssignPostQueryParams queryParams;
-    public UserToFolderAssignPostRequest withQueryParams(UserToFolderAssignPostQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the user that should be assign
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public String source;
+    public UserToFolderAssignPostRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * The ID of the folder that should be the parent
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target")
+    public String target;
+    public UserToFolderAssignPostRequest withTarget(String target) {
+        this.target = target;
         return this;
     }
     

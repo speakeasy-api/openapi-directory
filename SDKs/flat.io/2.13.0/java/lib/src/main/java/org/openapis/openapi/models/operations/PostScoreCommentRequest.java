@@ -7,31 +7,32 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostScoreCommentRequest {
-    
-    public PostScoreCommentPathParams pathParams;
-    public PostScoreCommentRequest withPathParams(PostScoreCommentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostScoreCommentQueryParams queryParams;
-    public PostScoreCommentRequest withQueryParams(PostScoreCommentQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ScoreCommentCreation request;
-    public PostScoreCommentRequest withRequest(org.openapis.openapi.models.shared.ScoreCommentCreation request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ScoreCommentCreation scoreCommentCreation;
+    public PostScoreCommentRequest withScoreCommentCreation(org.openapis.openapi.models.shared.ScoreCommentCreation scoreCommentCreation) {
+        this.scoreCommentCreation = scoreCommentCreation;
         return this;
     }
     
+    /**
+     * Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
+    public String score;
+    public PostScoreCommentRequest withScore(String score) {
+        this.score = score;
+        return this;
+    }
     
-    public PostScoreCommentSecurity security;
-    public PostScoreCommentRequest withSecurity(PostScoreCommentSecurity security) {
-        this.security = security;
+    /**
+     * This sharing key must be specified to access to a score or collection with a `privacy` mode set to `privateLink` and the current user is not a collaborator of the document.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharingKey")
+    public String sharingKey;
+    public PostScoreCommentRequest withSharingKey(String sharingKey) {
+        this.sharingKey = sharingKey;
         return this;
     }
     

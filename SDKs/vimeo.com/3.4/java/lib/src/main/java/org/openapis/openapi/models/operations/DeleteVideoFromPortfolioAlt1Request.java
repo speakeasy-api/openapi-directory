@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteVideoFromPortfolioAlt1Request {
-    
-    public DeleteVideoFromPortfolioAlt1PathParams pathParams;
-    public DeleteVideoFromPortfolioAlt1Request withPathParams(DeleteVideoFromPortfolioAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the portfolio.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portfolio_id")
+    public Double portfolioId;
+    public DeleteVideoFromPortfolioAlt1Request withPortfolioId(Double portfolioId) {
+        this.portfolioId = portfolioId;
         return this;
     }
     
-    
-    public DeleteVideoFromPortfolioAlt1Security security;
-    public DeleteVideoFromPortfolioAlt1Request withSecurity(DeleteVideoFromPortfolioAlt1Security security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public DeleteVideoFromPortfolioAlt1Request withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

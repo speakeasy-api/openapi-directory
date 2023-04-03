@@ -45,7 +45,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UsersAddEmailForAuthenticatedUserResponse usersAddEmailForAuthenticatedUser(org.openapis.openapi.models.operations.UsersAddEmailForAuthenticatedUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UsersAddEmailForAuthenticatedUserResponse usersAddEmailForAuthenticatedUser(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user/emails");
         
@@ -106,7 +106,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersBlockResponse usersBlock(org.openapis.openapi.models.operations.UsersBlockRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersBlockPathParams.class, baseUrl, "/user/blocks/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersBlockRequest.class, baseUrl, "/user/blocks/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -155,7 +155,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersCheckBlockedResponse usersCheckBlocked(org.openapis.openapi.models.operations.UsersCheckBlockedRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersCheckBlockedPathParams.class, baseUrl, "/user/blocks/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersCheckBlockedRequest.class, baseUrl, "/user/blocks/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -196,7 +196,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersCheckFollowingForUserResponse usersCheckFollowingForUser(org.openapis.openapi.models.operations.UsersCheckFollowingForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersCheckFollowingForUserPathParams.class, baseUrl, "/users/{username}/following/{target_user}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersCheckFollowingForUserRequest.class, baseUrl, "/users/{username}/following/{target_user}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -229,7 +229,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersCheckPersonIsFollowedByAuthenticatedResponse usersCheckPersonIsFollowedByAuthenticated(org.openapis.openapi.models.operations.UsersCheckPersonIsFollowedByAuthenticatedRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersCheckPersonIsFollowedByAuthenticatedPathParams.class, baseUrl, "/user/following/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersCheckPersonIsFollowedByAuthenticatedRequest.class, baseUrl, "/user/following/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -269,7 +269,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UsersCreateGpgKeyForAuthenticatedUserResponse usersCreateGpgKeyForAuthenticatedUser(org.openapis.openapi.models.operations.UsersCreateGpgKeyForAuthenticatedUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UsersCreateGpgKeyForAuthenticatedUserResponse usersCreateGpgKeyForAuthenticatedUser(org.openapis.openapi.models.operations.UsersCreateGpgKeyForAuthenticatedUserRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user/gpg_keys");
         
@@ -332,7 +332,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UsersCreatePublicSshKeyForAuthenticatedUserResponse usersCreatePublicSshKeyForAuthenticatedUser(org.openapis.openapi.models.operations.UsersCreatePublicSshKeyForAuthenticatedUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UsersCreatePublicSshKeyForAuthenticatedUserResponse usersCreatePublicSshKeyForAuthenticatedUser(org.openapis.openapi.models.operations.UsersCreatePublicSshKeyForAuthenticatedUserRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user/keys");
         
@@ -395,7 +395,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UsersCreateSshSigningKeyForAuthenticatedUserResponse usersCreateSshSigningKeyForAuthenticatedUser(org.openapis.openapi.models.operations.UsersCreateSshSigningKeyForAuthenticatedUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UsersCreateSshSigningKeyForAuthenticatedUserResponse usersCreateSshSigningKeyForAuthenticatedUser(org.openapis.openapi.models.operations.UsersCreateSshSigningKeyForAuthenticatedUserRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user/ssh_signing_keys");
         
@@ -458,7 +458,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UsersDeleteEmailForAuthenticatedUserResponse usersDeleteEmailForAuthenticatedUser(org.openapis.openapi.models.operations.UsersDeleteEmailForAuthenticatedUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UsersDeleteEmailForAuthenticatedUserResponse usersDeleteEmailForAuthenticatedUser(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user/emails");
         
@@ -512,7 +512,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersDeleteGpgKeyForAuthenticatedUserResponse usersDeleteGpgKeyForAuthenticatedUser(org.openapis.openapi.models.operations.UsersDeleteGpgKeyForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersDeleteGpgKeyForAuthenticatedUserPathParams.class, baseUrl, "/user/gpg_keys/{gpg_key_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersDeleteGpgKeyForAuthenticatedUserRequest.class, baseUrl, "/user/gpg_keys/{gpg_key_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -562,7 +562,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersDeletePublicSshKeyForAuthenticatedUserResponse usersDeletePublicSshKeyForAuthenticatedUser(org.openapis.openapi.models.operations.UsersDeletePublicSshKeyForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersDeletePublicSshKeyForAuthenticatedUserPathParams.class, baseUrl, "/user/keys/{key_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersDeletePublicSshKeyForAuthenticatedUserRequest.class, baseUrl, "/user/keys/{key_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -604,7 +604,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersDeleteSshSigningKeyForAuthenticatedUserResponse usersDeleteSshSigningKeyForAuthenticatedUser(org.openapis.openapi.models.operations.UsersDeleteSshSigningKeyForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersDeleteSshSigningKeyForAuthenticatedUserPathParams.class, baseUrl, "/user/ssh_signing_keys/{ssh_signing_key_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersDeleteSshSigningKeyForAuthenticatedUserRequest.class, baseUrl, "/user/ssh_signing_keys/{ssh_signing_key_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -648,7 +648,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersFollowResponse usersFollow(org.openapis.openapi.models.operations.UsersFollowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersFollowPathParams.class, baseUrl, "/user/following/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersFollowRequest.class, baseUrl, "/user/following/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -747,7 +747,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersGetByUsernameResponse usersGetByUsername(org.openapis.openapi.models.operations.UsersGetByUsernameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersGetByUsernamePathParams.class, baseUrl, "/users/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersGetByUsernameRequest.class, baseUrl, "/users/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -802,13 +802,13 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersGetContextForUserResponse usersGetContextForUser(org.openapis.openapi.models.operations.UsersGetContextForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersGetContextForUserPathParams.class, baseUrl, "/users/{username}/hovercard", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersGetContextForUserRequest.class, baseUrl, "/users/{username}/hovercard", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersGetContextForUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersGetContextForUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -864,7 +864,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersGetGpgKeyForAuthenticatedUserResponse usersGetGpgKeyForAuthenticatedUser(org.openapis.openapi.models.operations.UsersGetGpgKeyForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersGetGpgKeyForAuthenticatedUserPathParams.class, baseUrl, "/user/gpg_keys/{gpg_key_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersGetGpgKeyForAuthenticatedUserRequest.class, baseUrl, "/user/gpg_keys/{gpg_key_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -914,7 +914,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersGetPublicSshKeyForAuthenticatedUserResponse usersGetPublicSshKeyForAuthenticatedUser(org.openapis.openapi.models.operations.UsersGetPublicSshKeyForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersGetPublicSshKeyForAuthenticatedUserPathParams.class, baseUrl, "/user/keys/{key_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersGetPublicSshKeyForAuthenticatedUserRequest.class, baseUrl, "/user/keys/{key_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -964,7 +964,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersGetSshSigningKeyForAuthenticatedUserResponse usersGetSshSigningKeyForAuthenticatedUser(org.openapis.openapi.models.operations.UsersGetSshSigningKeyForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersGetSshSigningKeyForAuthenticatedUserPathParams.class, baseUrl, "/user/ssh_signing_keys/{ssh_signing_key_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersGetSshSigningKeyForAuthenticatedUserRequest.class, baseUrl, "/user/ssh_signing_keys/{ssh_signing_key_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1022,7 +1022,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1072,7 +1072,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListBlockedByAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListBlockedByAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1128,7 +1128,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListEmailsForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListEmailsForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1186,7 +1186,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListFollowedByAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListFollowedByAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1244,7 +1244,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListFollowersForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListFollowersForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1296,13 +1296,13 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersListFollowersForUserResponse usersListFollowersForUser(org.openapis.openapi.models.operations.UsersListFollowersForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersListFollowersForUserPathParams.class, baseUrl, "/users/{username}/followers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersListFollowersForUserRequest.class, baseUrl, "/users/{username}/followers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListFollowersForUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListFollowersForUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1344,13 +1344,13 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersListFollowingForUserResponse usersListFollowingForUser(org.openapis.openapi.models.operations.UsersListFollowingForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersListFollowingForUserPathParams.class, baseUrl, "/users/{username}/following", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersListFollowingForUserRequest.class, baseUrl, "/users/{username}/following", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListFollowingForUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListFollowingForUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1398,7 +1398,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListGpgKeysForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListGpgKeysForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1450,13 +1450,13 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersListGpgKeysForUserResponse usersListGpgKeysForUser(org.openapis.openapi.models.operations.UsersListGpgKeysForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersListGpgKeysForUserPathParams.class, baseUrl, "/users/{username}/gpg_keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersListGpgKeysForUserRequest.class, baseUrl, "/users/{username}/gpg_keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListGpgKeysForUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListGpgKeysForUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1504,7 +1504,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListPublicEmailsForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListPublicEmailsForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1556,13 +1556,13 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersListPublicKeysForUserResponse usersListPublicKeysForUser(org.openapis.openapi.models.operations.UsersListPublicKeysForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersListPublicKeysForUserPathParams.class, baseUrl, "/users/{username}/keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersListPublicKeysForUserRequest.class, baseUrl, "/users/{username}/keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListPublicKeysForUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListPublicKeysForUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1610,7 +1610,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListPublicSshKeysForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListPublicSshKeysForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1668,7 +1668,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListSshSigningKeysForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListSshSigningKeysForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1720,13 +1720,13 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersListSshSigningKeysForUserResponse usersListSshSigningKeysForUser(org.openapis.openapi.models.operations.UsersListSshSigningKeysForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersListSshSigningKeysForUserPathParams.class, baseUrl, "/users/{username}/ssh_signing_keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersListSshSigningKeysForUserRequest.class, baseUrl, "/users/{username}/ssh_signing_keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListSshSigningKeysForUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UsersListSshSigningKeysForUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1766,7 +1766,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUserResponse usersSetPrimaryEmailVisibilityForAuthenticatedUser(org.openapis.openapi.models.operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUserResponse usersSetPrimaryEmailVisibilityForAuthenticatedUser(org.openapis.openapi.models.operations.UsersSetPrimaryEmailVisibilityForAuthenticatedUserRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user/email/visibility");
         
@@ -1830,7 +1830,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersUnblockResponse usersUnblock(org.openapis.openapi.models.operations.UsersUnblockRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersUnblockPathParams.class, baseUrl, "/user/blocks/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersUnblockRequest.class, baseUrl, "/user/blocks/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1872,7 +1872,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersUnfollowResponse usersUnfollow(org.openapis.openapi.models.operations.UsersUnfollowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersUnfollowPathParams.class, baseUrl, "/user/following/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersUnfollowRequest.class, baseUrl, "/user/following/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1912,7 +1912,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UsersUpdateAuthenticatedResponse usersUpdateAuthenticated(org.openapis.openapi.models.operations.UsersUpdateAuthenticatedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UsersUpdateAuthenticatedResponse usersUpdateAuthenticated(org.openapis.openapi.models.operations.UsersUpdateAuthenticatedRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user");
         

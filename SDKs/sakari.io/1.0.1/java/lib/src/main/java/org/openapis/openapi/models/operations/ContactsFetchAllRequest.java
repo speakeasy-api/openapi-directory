@@ -4,27 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContactsFetchAllRequest {
-    
-    public ContactsFetchAllPathParams pathParams;
-    public ContactsFetchAllRequest withPathParams(ContactsFetchAllPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public ContactsFetchAllRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public ContactsFetchAllQueryParams queryParams;
-    public ContactsFetchAllRequest withQueryParams(ContactsFetchAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter by email or part of
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public ContactsFetchAllRequest withEmail(String email) {
+        this.email = email;
         return this;
     }
     
+    /**
+     * Filter by first name or part of
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=firstName")
+    public String firstName;
+    public ContactsFetchAllRequest withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
     
-    public ContactsFetchAllSecurity security;
-    public ContactsFetchAllRequest withSecurity(ContactsFetchAllSecurity security) {
-        this.security = security;
+    /**
+     * Filter by last name or part of
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastName")
+    public String lastName;
+    public ContactsFetchAllRequest withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ContactsFetchAllRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Filter by mobile or part of
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mobile")
+    public String mobile;
+    public ContactsFetchAllRequest withMobile(String mobile) {
+        this.mobile = mobile;
+        return this;
+    }
+    
+    /**
+     * Results to skip when paginating through a result set
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ContactsFetchAllRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Filter by tag(s)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public ContactsFetchAllRequest withTags(String tags) {
+        this.tags = tags;
         return this;
     }
     

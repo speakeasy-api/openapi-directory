@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectionsOneRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ecosystem_id")
+    public String ecosystemId;
+    public CollectionsOneRequest withEcosystemId(String ecosystemId) {
+        this.ecosystemId = ecosystemId;
+        return this;
+    }
     
-    public CollectionsOnePathParams pathParams;
-    public CollectionsOneRequest withPathParams(CollectionsOnePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public CollectionsOneRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

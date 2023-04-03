@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AcceptMatchXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AcceptMatchHeaders;
 import org.openapis.openapi.models.operations.AcceptMatchRequest;
 import org.openapis.openapi.models.operations.AcceptMatchResponse;
 import org.openapis.openapi.models.shared.AcceptMatchInput;
@@ -16,32 +15,29 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AcceptMatchRequest req = new AcceptMatchRequest() {{
-                headers = new AcceptMatchHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "GameLift.AcceptMatch";
-                }};
-                request = new AcceptMatchInput() {{
+                acceptMatchInput = new AcceptMatchInput() {{
                     acceptanceType = "REJECT";
                     playerIds = new String[]{{
-                        add("error"),
-                        add("deserunt"),
+                        add("distinctio"),
+                        add("quibusdam"),
+                        add("unde"),
                     }};
-                    ticketId = "suscipit";
+                    ticketId = "nulla";
                 }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "illum";
+                xAmzCredential = "vel";
+                xAmzDate = "error";
+                xAmzSecurityToken = "deserunt";
+                xAmzSignature = "suscipit";
+                xAmzSignedHeaders = "iure";
+                xAmzTarget = "GameLift.AcceptMatch";
+            }}            
 
             AcceptMatchResponse res = sdk.acceptMatch(req);
 

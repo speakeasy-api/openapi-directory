@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOfferingsOfferingIdChannelsRequest {
-    
-    public PostOfferingsOfferingIdChannelsPathParams pathParams;
-    public PostOfferingsOfferingIdChannelsRequest withPathParams(PostOfferingsOfferingIdChannelsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ChannelRequired channelRequired;
+    public PostOfferingsOfferingIdChannelsRequest withChannelRequired(org.openapis.openapi.models.shared.ChannelRequired channelRequired) {
+        this.channelRequired = channelRequired;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ChannelRequired request;
-    public PostOfferingsOfferingIdChannelsRequest withRequest(org.openapis.openapi.models.shared.ChannelRequired request) {
-        this.request = request;
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public PostOfferingsOfferingIdChannelsRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
         return this;
     }
     

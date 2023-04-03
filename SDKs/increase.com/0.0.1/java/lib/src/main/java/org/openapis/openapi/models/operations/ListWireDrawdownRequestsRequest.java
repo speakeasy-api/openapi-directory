@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListWireDrawdownRequestsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListWireDrawdownRequestsRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public ListWireDrawdownRequestsQueryParams queryParams;
-    public ListWireDrawdownRequestsRequest withQueryParams(ListWireDrawdownRequestsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListWireDrawdownRequestsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

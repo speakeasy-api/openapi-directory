@@ -4,20 +4,459 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyDBClusterRequest {
-    
-    public GETModifyDBClusterQueryParams queryParams;
-    public GETModifyDBClusterRequest withQueryParams(GETModifyDBClusterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyDBClusterActionEnum action;
+    public GETModifyDBClusterRequest withAction(GETModifyDBClusterActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The amount of storage in gibibytes (GiB) to allocate to each DB instance in the Multi-AZ DB cluster.&lt;/p&gt; &lt;p&gt;Type: Integer&lt;/p&gt; &lt;p&gt;Valid for: Multi-AZ DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllocatedStorage")
+    public Long allocatedStorage;
+    public GETModifyDBClusterRequest withAllocatedStorage(Long allocatedStorage) {
+        this.allocatedStorage = allocatedStorage;
+        return this;
+    }
     
-    public GETModifyDBClusterHeaders headers;
-    public GETModifyDBClusterRequest withHeaders(GETModifyDBClusterHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;A value that indicates whether major version upgrades are allowed.&lt;/p&gt; &lt;p&gt;Constraints: You must allow major version upgrades when specifying a value for the &lt;code&gt;EngineVersion&lt;/code&gt; parameter that is a different major version than the DB cluster's current version.&lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowMajorVersionUpgrade")
+    public Boolean allowMajorVersionUpgrade;
+    public GETModifyDBClusterRequest withAllowMajorVersionUpgrade(Boolean allowMajorVersionUpgrade) {
+        this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A value that indicates whether the modifications in this request and any pending modifications are asynchronously applied as soon as possible, regardless of the &lt;code&gt;PreferredMaintenanceWindow&lt;/code&gt; setting for the DB cluster. If this parameter is disabled, changes to the DB cluster are applied during the next maintenance window.&lt;/p&gt; &lt;p&gt;The &lt;code&gt;ApplyImmediately&lt;/code&gt; parameter only affects the &lt;code&gt;EnableIAMDatabaseAuthentication&lt;/code&gt;, &lt;code&gt;MasterUserPassword&lt;/code&gt;, and &lt;code&gt;NewDBClusterIdentifier&lt;/code&gt; values. If the &lt;code&gt;ApplyImmediately&lt;/code&gt; parameter is disabled, then changes to the &lt;code&gt;EnableIAMDatabaseAuthentication&lt;/code&gt;, &lt;code&gt;MasterUserPassword&lt;/code&gt;, and &lt;code&gt;NewDBClusterIdentifier&lt;/code&gt; values are applied during the next maintenance window. All other changes are applied immediately, regardless of the value of the &lt;code&gt;ApplyImmediately&lt;/code&gt; parameter.&lt;/p&gt; &lt;p&gt;By default, this parameter is disabled.&lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters and Multi-AZ DB clusters&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplyImmediately")
+    public Boolean applyImmediately;
+    public GETModifyDBClusterRequest withApplyImmediately(Boolean applyImmediately) {
+        this.applyImmediately = applyImmediately;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A value that indicates whether minor engine upgrades are applied automatically to the DB cluster during the maintenance window. By default, minor engine upgrades are applied automatically.&lt;/p&gt; &lt;p&gt;Valid for: Multi-AZ DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoMinorVersionUpgrade")
+    public Boolean autoMinorVersionUpgrade;
+    public GETModifyDBClusterRequest withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
+        this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The target backtrack window, in seconds. To disable backtracking, set this value to 0.&lt;/p&gt; &lt;p&gt;Default: 0&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;If specified, this value must be set to a number from 0 to 259,200 (72 hours).&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Valid for: Aurora MySQL DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BacktrackWindow")
+    public Long backtrackWindow;
+    public GETModifyDBClusterRequest withBacktrackWindow(Long backtrackWindow) {
+        this.backtrackWindow = backtrackWindow;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The number of days for which automated backups are retained. Specify a minimum value of 1.&lt;/p&gt; &lt;p&gt;Default: 1&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must be a value from 1 to 35&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Valid for: Aurora DB clusters and Multi-AZ DB clusters&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BackupRetentionPeriod")
+    public Long backupRetentionPeriod;
+    public GETModifyDBClusterRequest withBackupRetentionPeriod(Long backupRetentionPeriod) {
+        this.backupRetentionPeriod = backupRetentionPeriod;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The configuration setting for the log types to be enabled for export to CloudWatch Logs for a specific DB cluster. The values in the list depend on the DB engine being used.&lt;/p&gt; &lt;p&gt; &lt;b&gt;RDS for MySQL&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Possible values are &lt;code&gt;error&lt;/code&gt;, &lt;code&gt;general&lt;/code&gt;, and &lt;code&gt;slowquery&lt;/code&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;RDS for PostgreSQL&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Possible values are &lt;code&gt;postgresql&lt;/code&gt; and &lt;code&gt;upgrade&lt;/code&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Aurora MySQL&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Possible values are &lt;code&gt;audit&lt;/code&gt;, &lt;code&gt;error&lt;/code&gt;, &lt;code&gt;general&lt;/code&gt;, and &lt;code&gt;slowquery&lt;/code&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Aurora PostgreSQL&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Possible value is &lt;code&gt;postgresql&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;For more information about exporting CloudWatch Logs for Amazon RDS, see &lt;a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"&gt; Publishing Database Logs to Amazon CloudWatch Logs&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;For more information about exporting CloudWatch Logs for Amazon Aurora, see &lt;a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"&gt;Publishing Database Logs to Amazon CloudWatch Logs&lt;/a&gt; in the &lt;i&gt;Amazon Aurora User Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters and Multi-AZ DB clusters&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CloudwatchLogsExportConfiguration")
+    public GETModifyDBClusterCloudwatchLogsExportConfiguration cloudwatchLogsExportConfiguration;
+    public GETModifyDBClusterRequest withCloudwatchLogsExportConfiguration(GETModifyDBClusterCloudwatchLogsExportConfiguration cloudwatchLogsExportConfiguration) {
+        this.cloudwatchLogsExportConfiguration = cloudwatchLogsExportConfiguration;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A value that indicates whether to copy all tags from the DB cluster to snapshots of the DB cluster. The default is not to copy them.&lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters and Multi-AZ DB clusters&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CopyTagsToSnapshot")
+    public Boolean copyTagsToSnapshot;
+    public GETModifyDBClusterRequest withCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
+        this.copyTagsToSnapshot = copyTagsToSnapshot;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The DB cluster identifier for the cluster being modified. This parameter isn't case-sensitive.&lt;/p&gt; &lt;p&gt;Constraints: This identifier must match the identifier of an existing DB cluster.&lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters and Multi-AZ DB clusters&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterIdentifier")
+    public String dbClusterIdentifier;
+    public GETModifyDBClusterRequest withDBClusterIdentifier(String dbClusterIdentifier) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The compute and memory capacity of each DB instance in the Multi-AZ DB cluster, for example db.m6gd.xlarge. Not all DB instance classes are available in all Amazon Web Services Regions, or for all database engines.&lt;/p&gt; &lt;p&gt;For the full list of DB instance classes and availability for your engine, see &lt;a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html"&gt; DB Instance Class&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;Valid for: Multi-AZ DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterInstanceClass")
+    public String dbClusterInstanceClass;
+    public GETModifyDBClusterRequest withDBClusterInstanceClass(String dbClusterInstanceClass) {
+        this.dbClusterInstanceClass = dbClusterInstanceClass;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the DB cluster parameter group to use for the DB cluster.&lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters and Multi-AZ DB clusters&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterParameterGroupName")
+    public String dbClusterParameterGroupName;
+    public GETModifyDBClusterRequest withDBClusterParameterGroupName(String dbClusterParameterGroupName) {
+        this.dbClusterParameterGroupName = dbClusterParameterGroupName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the DB parameter group to apply to all instances of the DB cluster.&lt;/p&gt; &lt;note&gt; &lt;p&gt;When you apply a parameter group using the &lt;code&gt;DBInstanceParameterGroupName&lt;/code&gt; parameter, the DB cluster isn't rebooted automatically. Also, parameter changes are applied immediately rather than during the next maintenance window.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Default: The existing name setting&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;The DB parameter group must be in the same DB parameter group family as this DB cluster.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;The &lt;code&gt;DBInstanceParameterGroupName&lt;/code&gt; parameter is valid in combination with the &lt;code&gt;AllowMajorVersionUpgrade&lt;/code&gt; parameter for a major version upgrade only.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Valid for: Aurora DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceParameterGroupName")
+    public String dbInstanceParameterGroupName;
+    public GETModifyDBClusterRequest withDBInstanceParameterGroupName(String dbInstanceParameterGroupName) {
+        this.dbInstanceParameterGroupName = dbInstanceParameterGroupName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection isn't enabled.&lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters and Multi-AZ DB clusters&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeletionProtection")
+    public Boolean deletionProtection;
+    public GETModifyDBClusterRequest withDeletionProtection(Boolean deletionProtection) {
+        this.deletionProtection = deletionProtection;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The Active Directory directory ID to move the DB cluster to. Specify &lt;code&gt;none&lt;/code&gt; to remove the cluster from its current domain. The domain must be created prior to this operation.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/kerberos-authentication.html"&gt;Kerberos Authentication&lt;/a&gt; in the &lt;i&gt;Amazon Aurora User Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Domain")
+    public String domain;
+    public GETModifyDBClusterRequest withDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Specify the name of the IAM role to be used when making API calls to the Directory Service.&lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainIAMRoleName")
+    public String domainIAMRoleName;
+    public GETModifyDBClusterRequest withDomainIAMRoleName(String domainIAMRoleName) {
+        this.domainIAMRoleName = domainIAMRoleName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A value that indicates whether to enable this DB cluster to forward write operations to the primary cluster of an Aurora global database (&lt;a&gt;GlobalCluster&lt;/a&gt;). By default, write operations are not allowed on Aurora DB clusters that are secondary clusters in an Aurora global database.&lt;/p&gt; &lt;p&gt;You can set this value only on Aurora DB clusters that are members of an Aurora global database. With this parameter enabled, a secondary cluster can forward writes to the current primary cluster and the resulting changes are replicated back to this cluster. For the primary DB cluster of an Aurora global database, this value is used immediately if the primary is demoted by the &lt;a&gt;FailoverGlobalCluster&lt;/a&gt; API operation, but it does nothing until then.&lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableGlobalWriteForwarding")
+    public Boolean enableGlobalWriteForwarding;
+    public GETModifyDBClusterRequest withEnableGlobalWriteForwarding(Boolean enableGlobalWriteForwarding) {
+        this.enableGlobalWriteForwarding = enableGlobalWriteForwarding;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless v1 DB cluster. By default, the HTTP endpoint is disabled.&lt;/p&gt; &lt;p&gt;When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS console with the query editor.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html"&gt;Using the Data API for Aurora Serverless v1&lt;/a&gt; in the &lt;i&gt;Amazon Aurora User Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableHttpEndpoint")
+    public Boolean enableHttpEndpoint;
+    public GETModifyDBClusterRequest withEnableHttpEndpoint(Boolean enableHttpEndpoint) {
+        this.enableHttpEndpoint = enableHttpEndpoint;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM) accounts to database accounts. By default, mapping isn't enabled.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"&gt; IAM Database Authentication&lt;/a&gt; in the &lt;i&gt;Amazon Aurora User Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableIAMDatabaseAuthentication")
+    public Boolean enableIAMDatabaseAuthentication;
+    public GETModifyDBClusterRequest withEnableIAMDatabaseAuthentication(Boolean enableIAMDatabaseAuthentication) {
+        this.enableIAMDatabaseAuthentication = enableIAMDatabaseAuthentication;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A value that indicates whether to turn on Performance Insights for the DB cluster.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html"&gt; Using Amazon Performance Insights&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;Valid for: Multi-AZ DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnablePerformanceInsights")
+    public Boolean enablePerformanceInsights;
+    public GETModifyDBClusterRequest withEnablePerformanceInsights(Boolean enablePerformanceInsights) {
+        this.enablePerformanceInsights = enablePerformanceInsights;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The version number of the database engine to which you want to upgrade. Changing this parameter results in an outage. The change is applied during the next maintenance window unless &lt;code&gt;ApplyImmediately&lt;/code&gt; is enabled. &lt;/p&gt; &lt;p&gt;If the cluster that you're modifying has one or more read replicas, all replicas must be running an engine version that's the same or later than the version you specify.&lt;/p&gt; &lt;p&gt;To list all of the available engine versions for Aurora MySQL version 2 (5.7-compatible) and version 3 (MySQL 8.0-compatible), use the following command:&lt;/p&gt; &lt;p&gt; &lt;code&gt;aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"&lt;/code&gt; &lt;/p&gt; &lt;p&gt;To list all of the available engine versions for MySQL 5.6-compatible Aurora, use the following command:&lt;/p&gt; &lt;p&gt; &lt;code&gt;aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"&lt;/code&gt; &lt;/p&gt; &lt;p&gt;To list all of the available engine versions for Aurora PostgreSQL, use the following command:&lt;/p&gt; &lt;p&gt; &lt;code&gt;aws rds describe-db-engine-versions --engine aurora-postgresql --query "DBEngineVersions[].EngineVersion"&lt;/code&gt; &lt;/p&gt; &lt;p&gt;To list all of the available engine versions for RDS for MySQL, use the following command:&lt;/p&gt; &lt;p&gt; &lt;code&gt;aws rds describe-db-engine-versions --engine mysql --query "DBEngineVersions[].EngineVersion"&lt;/code&gt; &lt;/p&gt; &lt;p&gt;To list all of the available engine versions for RDS for PostgreSQL, use the following command:&lt;/p&gt; &lt;p&gt; &lt;code&gt;aws rds describe-db-engine-versions --engine postgres --query "DBEngineVersions[].EngineVersion"&lt;/code&gt; &lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters and Multi-AZ DB clusters&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EngineVersion")
+    public String engineVersion;
+    public GETModifyDBClusterRequest withEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for each DB instance in the Multi-AZ DB cluster.&lt;/p&gt; &lt;p&gt;For information about valid IOPS values, see &lt;a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS"&gt;Amazon RDS Provisioned IOPS storage&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;Constraints: Must be a multiple between .5 and 50 of the storage amount for the DB cluster.&lt;/p&gt; &lt;p&gt;Valid for: Multi-AZ DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Iops")
+    public Long iops;
+    public GETModifyDBClusterRequest withIops(Long iops) {
+        this.iops = iops;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A value that indicates whether to manage the master user password with Amazon Web Services Secrets Manager.&lt;/p&gt; &lt;p&gt;If the DB cluster doesn't manage the master user password with Amazon Web Services Secrets Manager, you can turn on this management. In this case, you can't specify &lt;code&gt;MasterUserPassword&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;If the DB cluster already manages the master user password with Amazon Web Services Secrets Manager, and you specify that the master user password is not managed with Amazon Web Services Secrets Manager, then you must specify &lt;code&gt;MasterUserPassword&lt;/code&gt;. In this case, RDS deletes the secret and uses the new password for the master user specified by &lt;code&gt;MasterUserPassword&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html"&gt;Password management with Amazon Web Services Secrets Manager&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide&lt;/i&gt; and &lt;a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/rds-secrets-manager.html"&gt;Password management with Amazon Web Services Secrets Manager&lt;/a&gt; in the &lt;i&gt;Amazon Aurora User Guide.&lt;/i&gt; &lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters and Multi-AZ DB clusters&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ManageMasterUserPassword")
+    public Boolean manageMasterUserPassword;
+    public GETModifyDBClusterRequest withManageMasterUserPassword(Boolean manageMasterUserPassword) {
+        this.manageMasterUserPassword = manageMasterUserPassword;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The new password for the master database user. This password can contain any printable ASCII character except "/", """, or "@".&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must contain from 8 to 41 characters.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Can't be specified if &lt;code&gt;ManageMasterUserPassword&lt;/code&gt; is turned on.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Valid for: Aurora DB clusters and Multi-AZ DB clusters&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MasterUserPassword")
+    public String masterUserPassword;
+    public GETModifyDBClusterRequest withMasterUserPassword(String masterUserPassword) {
+        this.masterUserPassword = masterUserPassword;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The Amazon Web Services KMS key identifier to encrypt a secret that is automatically generated and managed in Amazon Web Services Secrets Manager.&lt;/p&gt; &lt;p&gt;This setting is valid only if both of the following conditions are met:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;The DB cluster doesn't manage the master user password in Amazon Web Services Secrets Manager.&lt;/p&gt; &lt;p&gt;If the DB cluster already manages the master user password in Amazon Web Services Secrets Manager, you can't change the KMS key that is used to encrypt the secret.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;You are turning on &lt;code&gt;ManageMasterUserPassword&lt;/code&gt; to manage the master user password in Amazon Web Services Secrets Manager.&lt;/p&gt; &lt;p&gt;If you are turning on &lt;code&gt;ManageMasterUserPassword&lt;/code&gt; and don't specify &lt;code&gt;MasterUserSecretKmsKeyId&lt;/code&gt;, then the &lt;code&gt;aws/secretsmanager&lt;/code&gt; KMS key is used to encrypt the secret. If the secret is in a different Amazon Web Services account, then you can't use the &lt;code&gt;aws/secretsmanager&lt;/code&gt; KMS key to encrypt the secret, and you must use a customer managed KMS key.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.&lt;/p&gt; &lt;p&gt;There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a different default KMS key for each Amazon Web Services Region.&lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters and Multi-AZ DB clusters&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MasterUserSecretKmsKeyId")
+    public String masterUserSecretKmsKeyId;
+    public GETModifyDBClusterRequest withMasterUserSecretKmsKeyId(String masterUserSecretKmsKeyId) {
+        this.masterUserSecretKmsKeyId = masterUserSecretKmsKeyId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB cluster. To turn off collecting Enhanced Monitoring metrics, specify 0. The default is 0.&lt;/p&gt; &lt;p&gt;If &lt;code&gt;MonitoringRoleArn&lt;/code&gt; is specified, also set &lt;code&gt;MonitoringInterval&lt;/code&gt; to a value other than 0.&lt;/p&gt; &lt;p&gt;Valid Values: &lt;code&gt;0, 1, 5, 10, 15, 30, 60&lt;/code&gt; &lt;/p&gt; &lt;p&gt;Valid for: Multi-AZ DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MonitoringInterval")
+    public Long monitoringInterval;
+    public GETModifyDBClusterRequest withMonitoringInterval(Long monitoringInterval) {
+        this.monitoringInterval = monitoringInterval;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The Amazon Resource Name (ARN) for the IAM role that permits RDS to send Enhanced Monitoring metrics to Amazon CloudWatch Logs. An example is &lt;code&gt;arn:aws:iam:123456789012:role/emaccess&lt;/code&gt;. For information on creating a monitoring role, see &lt;a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html#USER_Monitoring.OS.IAMRole"&gt;To create an IAM role for Amazon RDS Enhanced Monitoring&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide.&lt;/i&gt; &lt;/p&gt; &lt;p&gt;If &lt;code&gt;MonitoringInterval&lt;/code&gt; is set to a value other than 0, supply a &lt;code&gt;MonitoringRoleArn&lt;/code&gt; value.&lt;/p&gt; &lt;p&gt;Valid for: Multi-AZ DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MonitoringRoleArn")
+    public String monitoringRoleArn;
+    public GETModifyDBClusterRequest withMonitoringRoleArn(String monitoringRoleArn) {
+        this.monitoringRoleArn = monitoringRoleArn;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The network type of the DB cluster.&lt;/p&gt; &lt;p&gt;Valid values:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;IPV4&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DUAL&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;The network type is determined by the &lt;code&gt;DBSubnetGroup&lt;/code&gt; specified for the DB cluster. A &lt;code&gt;DBSubnetGroup&lt;/code&gt; can support only the IPv4 protocol or the IPv4 and the IPv6 protocols (&lt;code&gt;DUAL&lt;/code&gt;).&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html"&gt; Working with a DB instance in a VPC&lt;/a&gt; in the &lt;i&gt;Amazon Aurora User Guide.&lt;/i&gt; &lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkType")
+    public String networkType;
+    public GETModifyDBClusterRequest withNetworkType(String networkType) {
+        this.networkType = networkType;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The new DB cluster identifier for the DB cluster when renaming a DB cluster. This value is stored as a lowercase string.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must contain from 1 to 63 letters, numbers, or hyphens&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;The first character must be a letter&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Can't end with a hyphen or contain two consecutive hyphens&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Example: &lt;code&gt;my-cluster2&lt;/code&gt; &lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters and Multi-AZ DB clusters&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NewDBClusterIdentifier")
+    public String newDBClusterIdentifier;
+    public GETModifyDBClusterRequest withNewDBClusterIdentifier(String newDBClusterIdentifier) {
+        this.newDBClusterIdentifier = newDBClusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A value that indicates that the DB cluster should be associated with the specified option group.&lt;/p&gt; &lt;p&gt;DB clusters are associated with a default option group that can't be modified.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OptionGroupName")
+    public String optionGroupName;
+    public GETModifyDBClusterRequest withOptionGroupName(String optionGroupName) {
+        this.optionGroupName = optionGroupName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The Amazon Web Services KMS key identifier for encryption of Performance Insights data.&lt;/p&gt; &lt;p&gt;The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.&lt;/p&gt; &lt;p&gt;If you don't specify a value for &lt;code&gt;PerformanceInsightsKMSKeyId&lt;/code&gt;, then Amazon RDS uses your default KMS key. There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a different default KMS key for each Amazon Web Services Region.&lt;/p&gt; &lt;p&gt;Valid for: Multi-AZ DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PerformanceInsightsKMSKeyId")
+    public String performanceInsightsKMSKeyId;
+    public GETModifyDBClusterRequest withPerformanceInsightsKMSKeyId(String performanceInsightsKMSKeyId) {
+        this.performanceInsightsKMSKeyId = performanceInsightsKMSKeyId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The number of days to retain Performance Insights data. The default is 7 days. The following values are valid:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;7&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;i&gt;month&lt;/i&gt; * 31, where &lt;i&gt;month&lt;/i&gt; is a number of months from 1-23&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;731&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For example, the following values are valid:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;93 (3 months * 31)&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;341 (11 months * 31)&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;589 (19 months * 31)&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;731&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If you specify a retention period such as 94, which isn't a valid value, RDS issues an error.&lt;/p&gt; &lt;p&gt;Valid for: Multi-AZ DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PerformanceInsightsRetentionPeriod")
+    public Long performanceInsightsRetentionPeriod;
+    public GETModifyDBClusterRequest withPerformanceInsightsRetentionPeriod(Long performanceInsightsRetentionPeriod) {
+        this.performanceInsightsRetentionPeriod = performanceInsightsRetentionPeriod;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The port number on which the DB cluster accepts connections.&lt;/p&gt; &lt;p&gt;Constraints: Value must be &lt;code&gt;1150-65535&lt;/code&gt; &lt;/p&gt; &lt;p&gt;Default: The same port as the original DB cluster.&lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Port")
+    public Long port;
+    public GETModifyDBClusterRequest withPort(Long port) {
+        this.port = port;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The daily time range during which automated backups are created if automated backups are enabled, using the &lt;code&gt;BackupRetentionPeriod&lt;/code&gt; parameter.&lt;/p&gt; &lt;p&gt;The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services Region. To view the time blocks available, see &lt;a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.Backups.BackupWindow"&gt; Backup window&lt;/a&gt; in the &lt;i&gt;Amazon Aurora User Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must be in the format &lt;code&gt;hh24:mi-hh24:mi&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Must be in Universal Coordinated Time (UTC).&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Must not conflict with the preferred maintenance window.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Must be at least 30 minutes.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Valid for: Aurora DB clusters and Multi-AZ DB clusters&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PreferredBackupWindow")
+    public String preferredBackupWindow;
+    public GETModifyDBClusterRequest withPreferredBackupWindow(String preferredBackupWindow) {
+        this.preferredBackupWindow = preferredBackupWindow;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).&lt;/p&gt; &lt;p&gt;Format: &lt;code&gt;ddd:hh24:mi-ddd:hh24:mi&lt;/code&gt; &lt;/p&gt; &lt;p&gt;The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services Region, occurring on a random day of the week. To see the time blocks available, see &lt;a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora"&gt; Adjusting the Preferred DB Cluster Maintenance Window&lt;/a&gt; in the &lt;i&gt;Amazon Aurora User Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.&lt;/p&gt; &lt;p&gt;Constraints: Minimum 30-minute window.&lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters and Multi-AZ DB clusters&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PreferredMaintenanceWindow")
+    public String preferredMaintenanceWindow;
+    public GETModifyDBClusterRequest withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
+        this.preferredMaintenanceWindow = preferredMaintenanceWindow;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A value that indicates whether to rotate the secret managed by Amazon Web Services Secrets Manager for the master user password.&lt;/p&gt; &lt;p&gt;This setting is valid only if the master user password is managed by RDS in Amazon Web Services Secrets Manager for the DB cluster. The secret value contains the updated password.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html"&gt;Password management with Amazon Web Services Secrets Manager&lt;/a&gt; in the &lt;i&gt;Amazon RDS User Guide&lt;/i&gt; and &lt;a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/rds-secrets-manager.html"&gt;Password management with Amazon Web Services Secrets Manager&lt;/a&gt; in the &lt;i&gt;Amazon Aurora User Guide.&lt;/i&gt; &lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;You must apply the change immediately when rotating the master user password.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Valid for: Aurora DB clusters and Multi-AZ DB clusters&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RotateMasterUserPassword")
+    public Boolean rotateMasterUserPassword;
+    public GETModifyDBClusterRequest withRotateMasterUserPassword(Boolean rotateMasterUserPassword) {
+        this.rotateMasterUserPassword = rotateMasterUserPassword;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The scaling properties of the DB cluster. You can only modify scaling properties for DB clusters in &lt;code&gt;serverless&lt;/code&gt; DB engine mode.&lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ScalingConfiguration")
+    public GETModifyDBClusterScalingConfiguration scalingConfiguration;
+    public GETModifyDBClusterRequest withScalingConfiguration(GETModifyDBClusterScalingConfiguration scalingConfiguration) {
+        this.scalingConfiguration = scalingConfiguration;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Contains the scaling configuration of an Aurora Serverless v2 DB cluster.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.html"&gt;Using Amazon Aurora Serverless v2&lt;/a&gt; in the &lt;i&gt;Amazon Aurora User Guide&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServerlessV2ScalingConfiguration")
+    public GETModifyDBClusterServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration;
+    public GETModifyDBClusterRequest withServerlessV2ScalingConfiguration(GETModifyDBClusterServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration) {
+        this.serverlessV2ScalingConfiguration = serverlessV2ScalingConfiguration;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Specifies the storage type to be associated with the DB cluster.&lt;/p&gt; &lt;p&gt;Valid values: &lt;code&gt;io1&lt;/code&gt; &lt;/p&gt; &lt;p&gt;When specified, a value for the &lt;code&gt;Iops&lt;/code&gt; parameter is required.&lt;/p&gt; &lt;p&gt;Default: &lt;code&gt;io1&lt;/code&gt; &lt;/p&gt; &lt;p&gt;Valid for: Multi-AZ DB clusters only&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StorageType")
+    public String storageType;
+    public GETModifyDBClusterRequest withStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyDBClusterVersionEnum version;
+    public GETModifyDBClusterRequest withVersion(GETModifyDBClusterVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A list of VPC security groups that the DB cluster will belong to.&lt;/p&gt; &lt;p&gt;Valid for: Aurora DB clusters and Multi-AZ DB clusters&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcSecurityGroupIds")
+    public String[] vpcSecurityGroupIds;
+    public GETModifyDBClusterRequest withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
+        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyDBClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyDBClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyDBClusterRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyDBClusterRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyDBClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyDBClusterRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyDBClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

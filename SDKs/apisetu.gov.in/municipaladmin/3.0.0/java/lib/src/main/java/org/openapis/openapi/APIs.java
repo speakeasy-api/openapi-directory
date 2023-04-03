@@ -34,10 +34,11 @@ public class APIs {
      * Khatha Extract / Certificate
      * API to verify Khatha Extract / Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.KecerResponse kecer(org.openapis.openapi.models.operations.KecerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.KecerResponse kecer(org.openapis.openapi.models.operations.KecerRequestBody request, org.openapis.openapi.models.operations.KecerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/kecer/certificate");
         
@@ -48,7 +49,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,10 +127,11 @@ public class APIs {
      * New Tap Connection
      * API to verify New Tap Connection.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TapcnResponse tapcn(org.openapis.openapi.models.operations.TapcnRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TapcnResponse tapcn(org.openapis.openapi.models.operations.TapcnRequestBody request, org.openapis.openapi.models.operations.TapcnSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tapcn/certificate");
         
@@ -140,7 +142,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,10 +220,11 @@ public class APIs {
      * Trade License/ Certificate
      * API to verify Trade License/ Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TdlcsResponse tdlcs(org.openapis.openapi.models.operations.TdlcsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TdlcsResponse tdlcs(org.openapis.openapi.models.operations.TdlcsRequestBody request, org.openapis.openapi.models.operations.TdlcsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tdlcs/certificate");
         
@@ -232,7 +235,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -310,10 +313,11 @@ public class APIs {
      * Jalanidhi - New UGD Connection
      * API to verify Jalanidhi - New UGD Connection.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UgdcnResponse ugdcn(org.openapis.openapi.models.operations.UgdcnRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UgdcnResponse ugdcn(org.openapis.openapi.models.operations.UgdcnRequestBody request, org.openapis.openapi.models.operations.UgdcnSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ugdcn/certificate");
         
@@ -324,7 +328,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

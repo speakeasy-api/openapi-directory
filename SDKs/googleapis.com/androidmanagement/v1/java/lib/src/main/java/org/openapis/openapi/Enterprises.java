@@ -35,27 +35,28 @@ public class Enterprises {
     /**
      * Creates an enterprise. This is the last step in the enterprise signup flow. See also: SigninDetail
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesCreateResponse androidmanagementEnterprisesCreate(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesCreateResponse androidmanagementEnterprisesCreate(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesCreateRequest request, org.openapis.openapi.models.operations.AndroidmanagementEnterprisesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/enterprises");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "enterprise", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Enterprises {
     /**
      * Issues a command to a device. The Operation resource returned contains a Command in its metadata field. Use the get operation method to get the status of the command.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesIssueCommandResponse androidmanagementEnterprisesDevicesIssueCommand(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesIssueCommandRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesIssueCommandResponse androidmanagementEnterprisesDevicesIssueCommand(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesIssueCommandRequest request, org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesIssueCommandSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesIssueCommandPathParams.class, baseUrl, "/v1/{name}:issueCommand", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesIssueCommandRequest.class, baseUrl, "/v1/{name}:issueCommand", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "command", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesIssueCommandQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesIssueCommandRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,25 +131,26 @@ public class Enterprises {
     /**
      * Lists devices for a given enterprise. Deleted devices are not returned in the response.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesListResponse androidmanagementEnterprisesDevicesList(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesListResponse androidmanagementEnterprisesDevicesList(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesListRequest request, org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesListPathParams.class, baseUrl, "/v1/{parent}/devices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesListRequest.class, baseUrl, "/v1/{parent}/devices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Enterprises {
     /**
      * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to Code.CANCELLED.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesOperationsCancelResponse androidmanagementEnterprisesDevicesOperationsCancel(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesOperationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesOperationsCancelResponse androidmanagementEnterprisesDevicesOperationsCancel(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesOperationsCancelRequest request, org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesOperationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesOperationsCancelPathParams.class, baseUrl, "/v1/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesOperationsCancelRequest.class, baseUrl, "/v1/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesOperationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesOperationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,27 +223,28 @@ public class Enterprises {
     /**
      * Creates an enrollment token for a given enterprise. It's up to the caller's responsibility to manage the lifecycle of newly created tokens and deleting them when they're not intended to be used anymore. Once an enrollment token has been created, it's not possible to retrieve the token's content anymore using AM API. It is recommended for EMMs to securely store the token if it's intended to be reused.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensCreateResponse androidmanagementEnterprisesEnrollmentTokensCreate(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensCreateResponse androidmanagementEnterprisesEnrollmentTokensCreate(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensCreateRequest request, org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensCreatePathParams.class, baseUrl, "/v1/{parent}/enrollmentTokens", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensCreateRequest.class, baseUrl, "/v1/{parent}/enrollmentTokens", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "enrollmentToken", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,25 +271,26 @@ public class Enterprises {
     /**
      * Lists active, unexpired enrollment tokens for a given enterprise. The list items contain only a partial view of EnrollmentToken: all the fields but name and expiration_timestamp are empty. This method is meant to help manage active enrollment tokens lifecycle. For security reasons, it's recommended to delete active enrollment tokens as soon as they're not intended to be used anymore.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensListResponse androidmanagementEnterprisesEnrollmentTokensList(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensListResponse androidmanagementEnterprisesEnrollmentTokensList(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensListRequest request, org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensListPathParams.class, baseUrl, "/v1/{parent}/enrollmentTokens", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensListRequest.class, baseUrl, "/v1/{parent}/enrollmentTokens", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,10 +317,11 @@ public class Enterprises {
     /**
      * Lists EMM-managed enterprises. Only BASIC fields are returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesListResponse androidmanagementEnterprisesList(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesListResponse androidmanagementEnterprisesList(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesListRequest request, org.openapis.openapi.models.operations.AndroidmanagementEnterprisesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/enterprises");
         
@@ -322,14 +329,14 @@ public class Enterprises {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -356,25 +363,26 @@ public class Enterprises {
     /**
      * Lists policies for a given enterprise.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesPoliciesListResponse androidmanagementEnterprisesPoliciesList(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesPoliciesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesPoliciesListResponse androidmanagementEnterprisesPoliciesList(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesPoliciesListRequest request, org.openapis.openapi.models.operations.AndroidmanagementEnterprisesPoliciesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesPoliciesListPathParams.class, baseUrl, "/v1/{parent}/policies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesPoliciesListRequest.class, baseUrl, "/v1/{parent}/policies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesPoliciesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesPoliciesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -401,27 +409,28 @@ public class Enterprises {
     /**
      * Creates a web app.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsCreateResponse androidmanagementEnterprisesWebAppsCreate(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsCreateResponse androidmanagementEnterprisesWebAppsCreate(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsCreateRequest request, org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsCreatePathParams.class, baseUrl, "/v1/{parent}/webApps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsCreateRequest.class, baseUrl, "/v1/{parent}/webApps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "webApp", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -448,25 +457,26 @@ public class Enterprises {
     /**
      * Deletes a web app.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsDeleteResponse androidmanagementEnterprisesWebAppsDelete(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsDeleteResponse androidmanagementEnterprisesWebAppsDelete(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsDeleteRequest request, org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -493,25 +503,26 @@ public class Enterprises {
     /**
      * Gets a web app.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsGetResponse androidmanagementEnterprisesWebAppsGet(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsGetResponse androidmanagementEnterprisesWebAppsGet(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsGetRequest request, org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -538,25 +549,26 @@ public class Enterprises {
     /**
      * Lists web apps for a given enterprise.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsListResponse androidmanagementEnterprisesWebAppsList(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsListResponse androidmanagementEnterprisesWebAppsList(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsListRequest request, org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsListPathParams.class, baseUrl, "/v1/{parent}/webApps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsListRequest.class, baseUrl, "/v1/{parent}/webApps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -583,27 +595,28 @@ public class Enterprises {
     /**
      * Updates a web app.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsPatchResponse androidmanagementEnterprisesWebAppsPatch(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsPatchResponse androidmanagementEnterprisesWebAppsPatch(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsPatchRequest request, org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "webApp", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -630,27 +643,28 @@ public class Enterprises {
     /**
      * Creates a web token to access an embeddable managed Google Play web UI for a given enterprise.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebTokensCreateResponse androidmanagementEnterprisesWebTokensCreate(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebTokensCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebTokensCreateResponse androidmanagementEnterprisesWebTokensCreate(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebTokensCreateRequest request, org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebTokensCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebTokensCreatePathParams.class, baseUrl, "/v1/{parent}/webTokens", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebTokensCreateRequest.class, baseUrl, "/v1/{parent}/webTokens", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "webToken", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebTokensCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebTokensCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

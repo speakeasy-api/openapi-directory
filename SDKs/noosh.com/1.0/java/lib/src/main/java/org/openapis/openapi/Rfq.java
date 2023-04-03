@@ -38,7 +38,7 @@ public class Rfq {
      */
     public org.openapis.openapi.models.operations.GetRfqResponse getRfq(org.openapis.openapi.models.operations.GetRfqRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRfqPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfqs/{rfq_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRfqRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfqs/{rfq_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -157,7 +157,7 @@ public class Rfq {
      */
     public org.openapis.openapi.models.operations.GetRfqListResponse getRfqList(org.openapis.openapi.models.operations.GetRfqListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRfqListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfqs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRfqListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfqs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

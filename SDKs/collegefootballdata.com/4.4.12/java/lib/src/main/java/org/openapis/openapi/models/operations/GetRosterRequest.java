@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRosterRequest {
+    /**
+     * Team name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public GetRosterRequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
     
-    public GetRosterQueryParams queryParams;
-    public GetRosterRequest withQueryParams(GetRosterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Season year
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetRosterRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AzureSubscriptionListForOrgRequest {
-    
-    public AzureSubscriptionListForOrgPathParams pathParams;
-    public AzureSubscriptionListForOrgRequest withPathParams(AzureSubscriptionListForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AzureSubscriptionListForOrgSecurity security;
-    public AzureSubscriptionListForOrgRequest withSecurity(AzureSubscriptionListForOrgSecurity security) {
-        this.security = security;
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public AzureSubscriptionListForOrgRequest withOrgName(String orgName) {
+        this.orgName = orgName;
         return this;
     }
     

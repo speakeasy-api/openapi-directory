@@ -33,10 +33,11 @@ public class Onboarding {
     /**
      * List categories for onboarding experience.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksOnboardingListCategoriesResponse booksOnboardingListCategories(org.openapis.openapi.models.operations.BooksOnboardingListCategoriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksOnboardingListCategoriesResponse booksOnboardingListCategories(org.openapis.openapi.models.operations.BooksOnboardingListCategoriesRequest request, org.openapis.openapi.models.operations.BooksOnboardingListCategoriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/books/v1/onboarding/listCategories");
         
@@ -44,14 +45,14 @@ public class Onboarding {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksOnboardingListCategoriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksOnboardingListCategoriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,10 +79,11 @@ public class Onboarding {
     /**
      * List available volumes under categories for onboarding experience.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksOnboardingListCategoryVolumesResponse booksOnboardingListCategoryVolumes(org.openapis.openapi.models.operations.BooksOnboardingListCategoryVolumesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksOnboardingListCategoryVolumesResponse booksOnboardingListCategoryVolumes(org.openapis.openapi.models.operations.BooksOnboardingListCategoryVolumesRequest request, org.openapis.openapi.models.operations.BooksOnboardingListCategoryVolumesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/books/v1/onboarding/listCategoryVolumes");
         
@@ -89,14 +91,14 @@ public class Onboarding {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksOnboardingListCategoryVolumesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksOnboardingListCategoryVolumesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

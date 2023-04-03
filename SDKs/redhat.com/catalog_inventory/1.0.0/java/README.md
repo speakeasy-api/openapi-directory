@@ -24,10 +24,8 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    userSecurity = new SchemeUserSecurity() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
+                    password = "YOUR_PASSWORD_HERE";
+                    username = "YOUR_USERNAME_HERE";
                 }})
                 .build();
 
@@ -43,7 +41,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

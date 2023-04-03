@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdWebhooksRequest {
-    
-    public GetCompaniesCompanyIdWebhooksPathParams pathParams;
-    public GetCompaniesCompanyIdWebhooksRequest withPathParams(GetCompaniesCompanyIdWebhooksPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the [company account](https://docs.adyen.com/account/account-structure#company-account).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetCompaniesCompanyIdWebhooksRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
-    
-    public GetCompaniesCompanyIdWebhooksQueryParams queryParams;
-    public GetCompaniesCompanyIdWebhooksRequest withQueryParams(GetCompaniesCompanyIdWebhooksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of the page to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Integer pageNumber;
+    public GetCompaniesCompanyIdWebhooksRequest withPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
     
-    
-    public GetCompaniesCompanyIdWebhooksSecurity security;
-    public GetCompaniesCompanyIdWebhooksRequest withSecurity(GetCompaniesCompanyIdWebhooksSecurity security) {
-        this.security = security;
+    /**
+     * The number of items to have on a page, maximum 100. The default is 10 items on a page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetCompaniesCompanyIdWebhooksRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

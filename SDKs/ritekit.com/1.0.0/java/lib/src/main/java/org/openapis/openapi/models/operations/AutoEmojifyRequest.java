@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AutoEmojifyRequest {
-    
-    public AutoEmojifyQueryParams queryParams;
-    public AutoEmojifyRequest withQueryParams(AutoEmojifyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Text of the post
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public AutoEmojifyRequest withText(String text) {
+        this.text = text;
         return this;
     }
     

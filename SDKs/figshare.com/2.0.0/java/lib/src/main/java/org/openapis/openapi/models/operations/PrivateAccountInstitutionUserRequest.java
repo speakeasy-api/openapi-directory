@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateAccountInstitutionUserRequest {
-    
-    public PrivateAccountInstitutionUserPathParams pathParams;
-    public PrivateAccountInstitutionUserRequest withPathParams(PrivateAccountInstitutionUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PrivateAccountInstitutionUserSecurity security;
-    public PrivateAccountInstitutionUserRequest withSecurity(PrivateAccountInstitutionUserSecurity security) {
-        this.security = security;
+    /**
+     * Account identifier the user is associated to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
+    public Long accountId;
+    public PrivateAccountInstitutionUserRequest withAccountId(Long accountId) {
+        this.accountId = accountId;
         return this;
     }
     

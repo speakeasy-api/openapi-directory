@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRequest {
-    
-    public DeletePathParams pathParams;
-    public DeleteRequest withPathParams(DeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The client IP of the user who originated the request leading to this call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auditClientIp")
+    public String auditClientIp;
+    public DeleteRequest withAuditClientIp(String auditClientIp) {
+        this.auditClientIp = auditClientIp;
         return this;
     }
     
-    
-    public DeleteQueryParams queryParams;
-    public DeleteRequest withQueryParams(DeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the shopper to delete. Must agree with the shopper id on the token or header, if present. *Note*: **shopperId** is **not the same** as **customerId**.  **shopperId** is a number of max length 10 digits (*ex:* 1234567890) whereas **customerId** is a UUIDv4 (*ex:* 295e3bc3-b3b9-4d95-aae5-ede41a994d13)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shopperId")
+    public String shopperId;
+    public DeleteRequest withShopperId(String shopperId) {
+        this.shopperId = shopperId;
         return this;
     }
     

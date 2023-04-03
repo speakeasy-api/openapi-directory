@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.PredictJsonSecurity;
-import org.openapis.openapi.models.operations.PredictJsonPathParams;
 import org.openapis.openapi.models.operations.PredictJsonRequest;
 import org.openapis.openapi.models.operations.PredictJsonResponse;
 import org.openapis.openapi.models.shared.SeldonMessage;
@@ -22,7 +21,6 @@ import org.openapis.openapi.models.shared.TensorShapeProtoDim;
 import org.openapis.openapi.models.shared.TensorflowResourceHandleProto;
 import org.openapis.openapi.models.shared.TensorflowDataTypeEnum;
 import org.openapis.openapi.models.shared.Tensor;
-import org.openapis.openapi.models.shared.SchemeHTTPBearer;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,30 +29,23 @@ public class Application {
                 .build();
 
             PredictJsonRequest req = new PredictJsonRequest() {{
-                security = new PredictJsonSecurity() {{
-                    httpBearer = new SchemeHTTPBearer() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new PredictJsonPathParams() {{
-                    deployment = "corrupti";
-                    namespace = "provident";
-                }};
-                request = new SeldonMessage() {{
-                    binData = "distinctio";
+                seldonMessage = new SeldonMessage() {{
+                    binData = "corrupti";
                     data = new DefaultData() {{
                         names = new String[]{{
+                            add("distinctio"),
+                            add("quibusdam"),
                             add("unde"),
-                            add("nulla"),
-                            add("corrupti"),
-                            add("illum"),
                         }};
                         ndarray = new Object[]{{
+                            add("corrupti"),
+                            add("illum"),
+                            add("vel"),
                             add("error"),
-                            add("deserunt"),
                         }};
                         tensor = new Tensor() {{
                             shape = new Integer[]{{
+                                add(384382),
                                 add(437587),
                                 add(297534),
                             }};
@@ -233,9 +224,13 @@ public class Application {
                     }};
                     strData = "animi";
                 }};
-            }};            
+                deployment = "enim";
+                namespace = "odit";
+            }}            
 
-            PredictJsonResponse res = sdk.externalAmbassadorAPI.predictJson(req);
+            PredictJsonResponse res = sdk.externalAmbassadorAPI.predictJson(req, new PredictJsonSecurity() {{
+                httpBearer = "Bearer YOUR_BEARER_TOKEN_HERE";
+            }});
 
             if (res.seldonMessage.isPresent()) {
                 // handle response

@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OperationsFlightstatusByFlightNumberAndDateGetRequest {
-    
-    public OperationsFlightstatusByFlightNumberAndDateGetPathParams pathParams;
-    public OperationsFlightstatusByFlightNumberAndDateGetRequest withPathParams(OperationsFlightstatusByFlightNumberAndDateGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public OperationsFlightstatusByFlightNumberAndDateGetRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public OperationsFlightstatusByFlightNumberAndDateGetQueryParams queryParams;
-    public OperationsFlightstatusByFlightNumberAndDateGetRequest withQueryParams(OperationsFlightstatusByFlightNumberAndDateGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The departure date (YYYY-MM-DD) in the local time of the departure airport
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
+    public String date;
+    public OperationsFlightstatusByFlightNumberAndDateGetRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     
-    
-    public OperationsFlightstatusByFlightNumberAndDateGetHeaders headers;
-    public OperationsFlightstatusByFlightNumberAndDateGetRequest withHeaders(OperationsFlightstatusByFlightNumberAndDateGetHeaders headers) {
-        this.headers = headers;
+    /**
+     * Flight number including carrier code and any suffix (e.g. 'LH400')
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=flightNumber")
+    public String flightNumber;
+    public OperationsFlightstatusByFlightNumberAndDateGetRequest withFlightNumber(String flightNumber) {
+        this.flightNumber = flightNumber;
         return this;
     }
     
+    /**
+     * Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public OperationsFlightstatusByFlightNumberAndDateGetRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public OperationsFlightstatusByFlightNumberAndDateGetSecurity security;
-    public OperationsFlightstatusByFlightNumberAndDateGetRequest withSecurity(OperationsFlightstatusByFlightNumberAndDateGetSecurity security) {
-        this.security = security;
+    /**
+     * Number of records skipped. Defaults to 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public OperationsFlightstatusByFlightNumberAndDateGetRequest withOffset(String offset) {
+        this.offset = offset;
         return this;
     }
     

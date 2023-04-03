@@ -41,13 +41,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetAnatomyGeneAssociationsResponse getAnatomyGeneAssociations(org.openapis.openapi.models.operations.GetAnatomyGeneAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAnatomyGeneAssociationsPathParams.class, baseUrl, "/bioentity/anatomy/{id}/genes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAnatomyGeneAssociationsRequest.class, baseUrl, "/bioentity/anatomy/{id}/genes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAnatomyGeneAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAnatomyGeneAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -86,13 +86,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetAnatomyGeneByTaxonAssociationsResponse getAnatomyGeneByTaxonAssociations(org.openapis.openapi.models.operations.GetAnatomyGeneByTaxonAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAnatomyGeneByTaxonAssociationsPathParams.class, baseUrl, "/bioentity/anatomy/{id}/genes/{taxid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAnatomyGeneByTaxonAssociationsRequest.class, baseUrl, "/bioentity/anatomy/{id}/genes/{taxid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAnatomyGeneByTaxonAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAnatomyGeneByTaxonAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -124,13 +124,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetCaseDiseaseAssociationsResponse getCaseDiseaseAssociations(org.openapis.openapi.models.operations.GetCaseDiseaseAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCaseDiseaseAssociationsPathParams.class, baseUrl, "/bioentity/case/{id}/diseases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCaseDiseaseAssociationsRequest.class, baseUrl, "/bioentity/case/{id}/diseases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCaseDiseaseAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCaseDiseaseAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -168,13 +168,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetCaseGenotypeAssociationsResponse getCaseGenotypeAssociations(org.openapis.openapi.models.operations.GetCaseGenotypeAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCaseGenotypeAssociationsPathParams.class, baseUrl, "/bioentity/case/{id}/genotypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCaseGenotypeAssociationsRequest.class, baseUrl, "/bioentity/case/{id}/genotypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCaseGenotypeAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCaseGenotypeAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -212,13 +212,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetCaseModelAssociationsResponse getCaseModelAssociations(org.openapis.openapi.models.operations.GetCaseModelAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCaseModelAssociationsPathParams.class, baseUrl, "/bioentity/case/{id}/models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCaseModelAssociationsRequest.class, baseUrl, "/bioentity/case/{id}/models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCaseModelAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCaseModelAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -256,13 +256,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetCasePhenotypeAssociationsResponse getCasePhenotypeAssociations(org.openapis.openapi.models.operations.GetCasePhenotypeAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCasePhenotypeAssociationsPathParams.class, baseUrl, "/bioentity/case/{id}/phenotypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCasePhenotypeAssociationsRequest.class, baseUrl, "/bioentity/case/{id}/phenotypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCasePhenotypeAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCasePhenotypeAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -300,13 +300,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetCaseVariantAssociationsResponse getCaseVariantAssociations(org.openapis.openapi.models.operations.GetCaseVariantAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCaseVariantAssociationsPathParams.class, baseUrl, "/bioentity/case/{id}/variants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCaseVariantAssociationsRequest.class, baseUrl, "/bioentity/case/{id}/variants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCaseVariantAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCaseVariantAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -344,13 +344,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetDiseaseCaseAssociationsResponse getDiseaseCaseAssociations(org.openapis.openapi.models.operations.GetDiseaseCaseAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseaseCaseAssociationsPathParams.class, baseUrl, "/bioentity/disease/{id}/cases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseaseCaseAssociationsRequest.class, baseUrl, "/bioentity/disease/{id}/cases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDiseaseCaseAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDiseaseCaseAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -388,13 +388,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetDiseaseGeneAssociationsResponse getDiseaseGeneAssociations(org.openapis.openapi.models.operations.GetDiseaseGeneAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseaseGeneAssociationsPathParams.class, baseUrl, "/bioentity/disease/{id}/genes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseaseGeneAssociationsRequest.class, baseUrl, "/bioentity/disease/{id}/genes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDiseaseGeneAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDiseaseGeneAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -432,13 +432,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetDiseaseGenotypeAssociationsResponse getDiseaseGenotypeAssociations(org.openapis.openapi.models.operations.GetDiseaseGenotypeAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseaseGenotypeAssociationsPathParams.class, baseUrl, "/bioentity/disease/{id}/genotypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseaseGenotypeAssociationsRequest.class, baseUrl, "/bioentity/disease/{id}/genotypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDiseaseGenotypeAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDiseaseGenotypeAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -488,13 +488,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetDiseaseModelAssociationsResponse getDiseaseModelAssociations(org.openapis.openapi.models.operations.GetDiseaseModelAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseaseModelAssociationsPathParams.class, baseUrl, "/bioentity/disease/{id}/models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseaseModelAssociationsRequest.class, baseUrl, "/bioentity/disease/{id}/models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDiseaseModelAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDiseaseModelAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -533,13 +533,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetDiseaseModelTaxonAssociationsResponse getDiseaseModelTaxonAssociations(org.openapis.openapi.models.operations.GetDiseaseModelTaxonAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseaseModelTaxonAssociationsPathParams.class, baseUrl, "/bioentity/disease/{id}/models/{taxon}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseaseModelTaxonAssociationsRequest.class, baseUrl, "/bioentity/disease/{id}/models/{taxon}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDiseaseModelTaxonAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDiseaseModelTaxonAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -577,13 +577,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetDiseasePathwayAssociationsResponse getDiseasePathwayAssociations(org.openapis.openapi.models.operations.GetDiseasePathwayAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseasePathwayAssociationsPathParams.class, baseUrl, "/bioentity/disease/{id}/pathways", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseasePathwayAssociationsRequest.class, baseUrl, "/bioentity/disease/{id}/pathways", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDiseasePathwayAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDiseasePathwayAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -621,13 +621,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetDiseasePhenotypeAssociationsResponse getDiseasePhenotypeAssociations(org.openapis.openapi.models.operations.GetDiseasePhenotypeAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseasePhenotypeAssociationsPathParams.class, baseUrl, "/bioentity/disease/{id}/phenotypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseasePhenotypeAssociationsRequest.class, baseUrl, "/bioentity/disease/{id}/phenotypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDiseasePhenotypeAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDiseasePhenotypeAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -665,13 +665,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetDiseasePublicationAssociationsResponse getDiseasePublicationAssociations(org.openapis.openapi.models.operations.GetDiseasePublicationAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseasePublicationAssociationsPathParams.class, baseUrl, "/bioentity/disease/{id}/publications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseasePublicationAssociationsRequest.class, baseUrl, "/bioentity/disease/{id}/publications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDiseasePublicationAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDiseasePublicationAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -710,13 +710,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetDiseaseSubstanceAssociationsResponse getDiseaseSubstanceAssociations(org.openapis.openapi.models.operations.GetDiseaseSubstanceAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseaseSubstanceAssociationsPathParams.class, baseUrl, "/bioentity/disease/{id}/treatment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseaseSubstanceAssociationsRequest.class, baseUrl, "/bioentity/disease/{id}/treatment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDiseaseSubstanceAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDiseaseSubstanceAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -748,13 +748,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetDiseaseVariantAssociationsResponse getDiseaseVariantAssociations(org.openapis.openapi.models.operations.GetDiseaseVariantAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseaseVariantAssociationsPathParams.class, baseUrl, "/bioentity/disease/{id}/variants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseaseVariantAssociationsRequest.class, baseUrl, "/bioentity/disease/{id}/variants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDiseaseVariantAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDiseaseVariantAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -792,13 +792,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetFunctionAssociationsResponse getFunctionAssociations(org.openapis.openapi.models.operations.GetFunctionAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFunctionAssociationsPathParams.class, baseUrl, "/bioentity/function/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFunctionAssociationsRequest.class, baseUrl, "/bioentity/function/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFunctionAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFunctionAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -830,13 +830,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetFunctionGeneAssociationsResponse getFunctionGeneAssociations(org.openapis.openapi.models.operations.GetFunctionGeneAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFunctionGeneAssociationsPathParams.class, baseUrl, "/bioentity/function/{id}/genes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFunctionGeneAssociationsRequest.class, baseUrl, "/bioentity/function/{id}/genes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFunctionGeneAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFunctionGeneAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -874,13 +874,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetFunctionPublicationAssociationsResponse getFunctionPublicationAssociations(org.openapis.openapi.models.operations.GetFunctionPublicationAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFunctionPublicationAssociationsPathParams.class, baseUrl, "/bioentity/function/{id}/publications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFunctionPublicationAssociationsRequest.class, baseUrl, "/bioentity/function/{id}/publications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFunctionPublicationAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFunctionPublicationAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -912,13 +912,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetFunctionTaxonAssociationsResponse getFunctionTaxonAssociations(org.openapis.openapi.models.operations.GetFunctionTaxonAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFunctionTaxonAssociationsPathParams.class, baseUrl, "/bioentity/function/{id}/taxons", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFunctionTaxonAssociationsRequest.class, baseUrl, "/bioentity/function/{id}/taxons", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFunctionTaxonAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFunctionTaxonAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -950,13 +950,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGeneAnatomyAssociationsResponse getGeneAnatomyAssociations(org.openapis.openapi.models.operations.GetGeneAnatomyAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneAnatomyAssociationsPathParams.class, baseUrl, "/bioentity/gene/{id}/anatomy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneAnatomyAssociationsRequest.class, baseUrl, "/bioentity/gene/{id}/anatomy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneAnatomyAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneAnatomyAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -994,13 +994,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGeneCaseAssociationsResponse getGeneCaseAssociations(org.openapis.openapi.models.operations.GetGeneCaseAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneCaseAssociationsPathParams.class, baseUrl, "/bioentity/gene/{id}/cases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneCaseAssociationsRequest.class, baseUrl, "/bioentity/gene/{id}/cases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneCaseAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneCaseAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1038,13 +1038,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGeneDiseaseAssociationsResponse getGeneDiseaseAssociations(org.openapis.openapi.models.operations.GetGeneDiseaseAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneDiseaseAssociationsPathParams.class, baseUrl, "/bioentity/gene/{id}/diseases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneDiseaseAssociationsRequest.class, baseUrl, "/bioentity/gene/{id}/diseases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneDiseaseAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneDiseaseAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1082,13 +1082,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGeneExpressionAssociationsResponse getGeneExpressionAssociations(org.openapis.openapi.models.operations.GetGeneExpressionAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneExpressionAssociationsPathParams.class, baseUrl, "/bioentity/gene/{id}/expression/anatomy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneExpressionAssociationsRequest.class, baseUrl, "/bioentity/gene/{id}/expression/anatomy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneExpressionAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneExpressionAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1141,13 +1141,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGeneFunctionAssociationsResponse getGeneFunctionAssociations(org.openapis.openapi.models.operations.GetGeneFunctionAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneFunctionAssociationsPathParams.class, baseUrl, "/bioentity/gene/{id}/function", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneFunctionAssociationsRequest.class, baseUrl, "/bioentity/gene/{id}/function", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneFunctionAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneFunctionAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1185,13 +1185,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGeneGenotypeAssociationsResponse getGeneGenotypeAssociations(org.openapis.openapi.models.operations.GetGeneGenotypeAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneGenotypeAssociationsPathParams.class, baseUrl, "/bioentity/gene/{id}/genotypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneGenotypeAssociationsRequest.class, baseUrl, "/bioentity/gene/{id}/genotypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneGenotypeAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneGenotypeAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1229,13 +1229,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGeneHomologAssociationsResponse getGeneHomologAssociations(org.openapis.openapi.models.operations.GetGeneHomologAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneHomologAssociationsPathParams.class, baseUrl, "/bioentity/gene/{id}/homologs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneHomologAssociationsRequest.class, baseUrl, "/bioentity/gene/{id}/homologs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneHomologAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneHomologAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1273,13 +1273,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGeneInteractionsResponse getGeneInteractions(org.openapis.openapi.models.operations.GetGeneInteractionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneInteractionsPathParams.class, baseUrl, "/bioentity/gene/{id}/interactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneInteractionsRequest.class, baseUrl, "/bioentity/gene/{id}/interactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneInteractionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneInteractionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1317,13 +1317,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGeneModelAssociationsResponse getGeneModelAssociations(org.openapis.openapi.models.operations.GetGeneModelAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneModelAssociationsPathParams.class, baseUrl, "/bioentity/gene/{id}/models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneModelAssociationsRequest.class, baseUrl, "/bioentity/gene/{id}/models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneModelAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneModelAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1361,13 +1361,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGeneOrthologDiseaseAssociationsResponse getGeneOrthologDiseaseAssociations(org.openapis.openapi.models.operations.GetGeneOrthologDiseaseAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneOrthologDiseaseAssociationsPathParams.class, baseUrl, "/bioentity/gene/{id}/ortholog/diseases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneOrthologDiseaseAssociationsRequest.class, baseUrl, "/bioentity/gene/{id}/ortholog/diseases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneOrthologDiseaseAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneOrthologDiseaseAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1405,13 +1405,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGeneOrthologPhenotypeAssociationsResponse getGeneOrthologPhenotypeAssociations(org.openapis.openapi.models.operations.GetGeneOrthologPhenotypeAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneOrthologPhenotypeAssociationsPathParams.class, baseUrl, "/bioentity/gene/{id}/ortholog/phenotypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneOrthologPhenotypeAssociationsRequest.class, baseUrl, "/bioentity/gene/{id}/ortholog/phenotypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneOrthologPhenotypeAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneOrthologPhenotypeAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1449,13 +1449,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGenePathwayAssociationsResponse getGenePathwayAssociations(org.openapis.openapi.models.operations.GetGenePathwayAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenePathwayAssociationsPathParams.class, baseUrl, "/bioentity/gene/{id}/pathways", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenePathwayAssociationsRequest.class, baseUrl, "/bioentity/gene/{id}/pathways", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenePathwayAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenePathwayAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1493,13 +1493,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGenePhenotypeAssociationsResponse getGenePhenotypeAssociations(org.openapis.openapi.models.operations.GetGenePhenotypeAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenePhenotypeAssociationsPathParams.class, baseUrl, "/bioentity/gene/{id}/phenotypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenePhenotypeAssociationsRequest.class, baseUrl, "/bioentity/gene/{id}/phenotypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenePhenotypeAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenePhenotypeAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1537,13 +1537,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGenePublicationAssociationsResponse getGenePublicationAssociations(org.openapis.openapi.models.operations.GetGenePublicationAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenePublicationAssociationsPathParams.class, baseUrl, "/bioentity/gene/{id}/publications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenePublicationAssociationsRequest.class, baseUrl, "/bioentity/gene/{id}/publications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenePublicationAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenePublicationAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1581,13 +1581,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGeneVariantAssociationsResponse getGeneVariantAssociations(org.openapis.openapi.models.operations.GetGeneVariantAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneVariantAssociationsPathParams.class, baseUrl, "/bioentity/gene/{id}/variants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGeneVariantAssociationsRequest.class, baseUrl, "/bioentity/gene/{id}/variants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneVariantAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGeneVariantAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1625,13 +1625,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGenericAssociationsResponse getGenericAssociations(org.openapis.openapi.models.operations.GetGenericAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenericAssociationsPathParams.class, baseUrl, "/bioentity/{id}/associations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenericAssociationsRequest.class, baseUrl, "/bioentity/{id}/associations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenericAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenericAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1669,13 +1669,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGenericObjectResponse getGenericObject(org.openapis.openapi.models.operations.GetGenericObjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenericObjectPathParams.class, baseUrl, "/bioentity/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenericObjectRequest.class, baseUrl, "/bioentity/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenericObjectQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenericObjectRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1713,13 +1713,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGenericObjectByTypeResponse getGenericObjectByType(org.openapis.openapi.models.operations.GetGenericObjectByTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenericObjectByTypePathParams.class, baseUrl, "/bioentity/{type}/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenericObjectByTypeRequest.class, baseUrl, "/bioentity/{type}/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenericObjectByTypeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenericObjectByTypeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1751,13 +1751,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGenotypeCaseAssociationsResponse getGenotypeCaseAssociations(org.openapis.openapi.models.operations.GetGenotypeCaseAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenotypeCaseAssociationsPathParams.class, baseUrl, "/bioentity/genotype/{id}/cases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenotypeCaseAssociationsRequest.class, baseUrl, "/bioentity/genotype/{id}/cases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenotypeCaseAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenotypeCaseAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1795,13 +1795,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGenotypeDiseaseAssociationsResponse getGenotypeDiseaseAssociations(org.openapis.openapi.models.operations.GetGenotypeDiseaseAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenotypeDiseaseAssociationsPathParams.class, baseUrl, "/bioentity/genotype/{id}/diseases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenotypeDiseaseAssociationsRequest.class, baseUrl, "/bioentity/genotype/{id}/diseases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenotypeDiseaseAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenotypeDiseaseAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1839,13 +1839,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGenotypeGeneAssociationsResponse getGenotypeGeneAssociations(org.openapis.openapi.models.operations.GetGenotypeGeneAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenotypeGeneAssociationsPathParams.class, baseUrl, "/bioentity/genotype/{id}/genes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenotypeGeneAssociationsRequest.class, baseUrl, "/bioentity/genotype/{id}/genes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenotypeGeneAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenotypeGeneAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1884,13 +1884,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGenotypeGenotypeAssociationsResponse getGenotypeGenotypeAssociations(org.openapis.openapi.models.operations.GetGenotypeGenotypeAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenotypeGenotypeAssociationsPathParams.class, baseUrl, "/bioentity/genotype/{id}/genotypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenotypeGenotypeAssociationsRequest.class, baseUrl, "/bioentity/genotype/{id}/genotypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenotypeGenotypeAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenotypeGenotypeAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1928,13 +1928,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGenotypeModelAssociationsResponse getGenotypeModelAssociations(org.openapis.openapi.models.operations.GetGenotypeModelAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenotypeModelAssociationsPathParams.class, baseUrl, "/bioentity/genotype/{id}/models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenotypeModelAssociationsRequest.class, baseUrl, "/bioentity/genotype/{id}/models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenotypeModelAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenotypeModelAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1972,13 +1972,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGenotypePhenotypeAssociationsResponse getGenotypePhenotypeAssociations(org.openapis.openapi.models.operations.GetGenotypePhenotypeAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenotypePhenotypeAssociationsPathParams.class, baseUrl, "/bioentity/genotype/{id}/phenotypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenotypePhenotypeAssociationsRequest.class, baseUrl, "/bioentity/genotype/{id}/phenotypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenotypePhenotypeAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenotypePhenotypeAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2016,13 +2016,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGenotypePublicationAssociationsResponse getGenotypePublicationAssociations(org.openapis.openapi.models.operations.GetGenotypePublicationAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenotypePublicationAssociationsPathParams.class, baseUrl, "/bioentity/genotype/{id}/publications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenotypePublicationAssociationsRequest.class, baseUrl, "/bioentity/genotype/{id}/publications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenotypePublicationAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenotypePublicationAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2060,13 +2060,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGenotypeVariantAssociationsResponse getGenotypeVariantAssociations(org.openapis.openapi.models.operations.GetGenotypeVariantAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenotypeVariantAssociationsPathParams.class, baseUrl, "/bioentity/genotype/{id}/variants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenotypeVariantAssociationsRequest.class, baseUrl, "/bioentity/genotype/{id}/variants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenotypeVariantAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenotypeVariantAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2104,13 +2104,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetGotermGeneAssociationsResponse getGotermGeneAssociations(org.openapis.openapi.models.operations.GetGotermGeneAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGotermGeneAssociationsPathParams.class, baseUrl, "/bioentity/goterm/{id}/genes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGotermGeneAssociationsRequest.class, baseUrl, "/bioentity/goterm/{id}/genes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGotermGeneAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGotermGeneAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2148,13 +2148,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetModelCaseAssociationsResponse getModelCaseAssociations(org.openapis.openapi.models.operations.GetModelCaseAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetModelCaseAssociationsPathParams.class, baseUrl, "/bioentity/model/{id}/cases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetModelCaseAssociationsRequest.class, baseUrl, "/bioentity/model/{id}/cases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetModelCaseAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetModelCaseAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2192,13 +2192,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetModelDiseaseAssociationsResponse getModelDiseaseAssociations(org.openapis.openapi.models.operations.GetModelDiseaseAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetModelDiseaseAssociationsPathParams.class, baseUrl, "/bioentity/model/{id}/diseases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetModelDiseaseAssociationsRequest.class, baseUrl, "/bioentity/model/{id}/diseases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetModelDiseaseAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetModelDiseaseAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2236,13 +2236,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetModelGeneAssociationsResponse getModelGeneAssociations(org.openapis.openapi.models.operations.GetModelGeneAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetModelGeneAssociationsPathParams.class, baseUrl, "/bioentity/model/{id}/genes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetModelGeneAssociationsRequest.class, baseUrl, "/bioentity/model/{id}/genes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetModelGeneAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetModelGeneAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2280,13 +2280,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetModelGenotypeAssociationsResponse getModelGenotypeAssociations(org.openapis.openapi.models.operations.GetModelGenotypeAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetModelGenotypeAssociationsPathParams.class, baseUrl, "/bioentity/model/{id}/genotypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetModelGenotypeAssociationsRequest.class, baseUrl, "/bioentity/model/{id}/genotypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetModelGenotypeAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetModelGenotypeAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2324,13 +2324,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetModelPhenotypeAssociationsResponse getModelPhenotypeAssociations(org.openapis.openapi.models.operations.GetModelPhenotypeAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetModelPhenotypeAssociationsPathParams.class, baseUrl, "/bioentity/model/{id}/phenotypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetModelPhenotypeAssociationsRequest.class, baseUrl, "/bioentity/model/{id}/phenotypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetModelPhenotypeAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetModelPhenotypeAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2368,13 +2368,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetModelPublicationAssociationsResponse getModelPublicationAssociations(org.openapis.openapi.models.operations.GetModelPublicationAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetModelPublicationAssociationsPathParams.class, baseUrl, "/bioentity/model/{id}/publications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetModelPublicationAssociationsRequest.class, baseUrl, "/bioentity/model/{id}/publications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetModelPublicationAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetModelPublicationAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2412,13 +2412,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetModelVariantAssociationsResponse getModelVariantAssociations(org.openapis.openapi.models.operations.GetModelVariantAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetModelVariantAssociationsPathParams.class, baseUrl, "/bioentity/model/{id}/variants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetModelVariantAssociationsRequest.class, baseUrl, "/bioentity/model/{id}/variants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetModelVariantAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetModelVariantAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2456,13 +2456,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetPathwayDiseaseAssociationsResponse getPathwayDiseaseAssociations(org.openapis.openapi.models.operations.GetPathwayDiseaseAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPathwayDiseaseAssociationsPathParams.class, baseUrl, "/bioentity/pathway/{id}/diseases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPathwayDiseaseAssociationsRequest.class, baseUrl, "/bioentity/pathway/{id}/diseases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPathwayDiseaseAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPathwayDiseaseAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2500,13 +2500,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetPathwayGeneAssociationsResponse getPathwayGeneAssociations(org.openapis.openapi.models.operations.GetPathwayGeneAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPathwayGeneAssociationsPathParams.class, baseUrl, "/bioentity/pathway/{id}/genes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPathwayGeneAssociationsRequest.class, baseUrl, "/bioentity/pathway/{id}/genes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPathwayGeneAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPathwayGeneAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2544,13 +2544,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetPathwayPhenotypeAssociationsResponse getPathwayPhenotypeAssociations(org.openapis.openapi.models.operations.GetPathwayPhenotypeAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPathwayPhenotypeAssociationsPathParams.class, baseUrl, "/bioentity/pathway/{id}/phenotypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPathwayPhenotypeAssociationsRequest.class, baseUrl, "/bioentity/pathway/{id}/phenotypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPathwayPhenotypeAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPathwayPhenotypeAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2591,13 +2591,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetPhenotypeAnatomyAssociationsResponse getPhenotypeAnatomyAssociations(org.openapis.openapi.models.operations.GetPhenotypeAnatomyAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhenotypeAnatomyAssociationsPathParams.class, baseUrl, "/bioentity/phenotype/{id}/anatomy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhenotypeAnatomyAssociationsRequest.class, baseUrl, "/bioentity/phenotype/{id}/anatomy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhenotypeAnatomyAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhenotypeAnatomyAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2635,13 +2635,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetPhenotypeCaseAssociationsResponse getPhenotypeCaseAssociations(org.openapis.openapi.models.operations.GetPhenotypeCaseAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhenotypeCaseAssociationsPathParams.class, baseUrl, "/bioentity/phenotype/{id}/cases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhenotypeCaseAssociationsRequest.class, baseUrl, "/bioentity/phenotype/{id}/cases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhenotypeCaseAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhenotypeCaseAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2679,13 +2679,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetPhenotypeDiseaseAssociationsResponse getPhenotypeDiseaseAssociations(org.openapis.openapi.models.operations.GetPhenotypeDiseaseAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhenotypeDiseaseAssociationsPathParams.class, baseUrl, "/bioentity/phenotype/{id}/diseases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhenotypeDiseaseAssociationsRequest.class, baseUrl, "/bioentity/phenotype/{id}/diseases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhenotypeDiseaseAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhenotypeDiseaseAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2723,13 +2723,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetPhenotypeGeneAssociationsResponse getPhenotypeGeneAssociations(org.openapis.openapi.models.operations.GetPhenotypeGeneAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhenotypeGeneAssociationsPathParams.class, baseUrl, "/bioentity/phenotype/{id}/genes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhenotypeGeneAssociationsRequest.class, baseUrl, "/bioentity/phenotype/{id}/genes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhenotypeGeneAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhenotypeGeneAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2768,13 +2768,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetPhenotypeGeneByTaxonAssociationsResponse getPhenotypeGeneByTaxonAssociations(org.openapis.openapi.models.operations.GetPhenotypeGeneByTaxonAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhenotypeGeneByTaxonAssociationsPathParams.class, baseUrl, "/bioentity/phenotype/{id}/gene/{taxid}/ids", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhenotypeGeneByTaxonAssociationsRequest.class, baseUrl, "/bioentity/phenotype/{id}/gene/{taxid}/ids", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhenotypeGeneByTaxonAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhenotypeGeneByTaxonAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2806,13 +2806,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetPhenotypeGenotypeAssociationsResponse getPhenotypeGenotypeAssociations(org.openapis.openapi.models.operations.GetPhenotypeGenotypeAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhenotypeGenotypeAssociationsPathParams.class, baseUrl, "/bioentity/phenotype/{id}/genotypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhenotypeGenotypeAssociationsRequest.class, baseUrl, "/bioentity/phenotype/{id}/genotypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhenotypeGenotypeAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhenotypeGenotypeAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2850,13 +2850,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetPhenotypePathwayAssociationsResponse getPhenotypePathwayAssociations(org.openapis.openapi.models.operations.GetPhenotypePathwayAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhenotypePathwayAssociationsPathParams.class, baseUrl, "/bioentity/phenotype/{id}/pathways", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhenotypePathwayAssociationsRequest.class, baseUrl, "/bioentity/phenotype/{id}/pathways", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhenotypePathwayAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhenotypePathwayAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2894,13 +2894,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetPhenotypePublicationAssociationsResponse getPhenotypePublicationAssociations(org.openapis.openapi.models.operations.GetPhenotypePublicationAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhenotypePublicationAssociationsPathParams.class, baseUrl, "/bioentity/phenotype/{id}/publications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhenotypePublicationAssociationsRequest.class, baseUrl, "/bioentity/phenotype/{id}/publications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhenotypePublicationAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhenotypePublicationAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2938,13 +2938,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetPhenotypeVariantAssociationsResponse getPhenotypeVariantAssociations(org.openapis.openapi.models.operations.GetPhenotypeVariantAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhenotypeVariantAssociationsPathParams.class, baseUrl, "/bioentity/phenotype/{id}/variants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhenotypeVariantAssociationsRequest.class, baseUrl, "/bioentity/phenotype/{id}/variants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhenotypeVariantAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhenotypeVariantAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2982,13 +2982,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetPublicationDiseaseAssociationsResponse getPublicationDiseaseAssociations(org.openapis.openapi.models.operations.GetPublicationDiseaseAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPublicationDiseaseAssociationsPathParams.class, baseUrl, "/bioentity/publication/{id}/diseases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPublicationDiseaseAssociationsRequest.class, baseUrl, "/bioentity/publication/{id}/diseases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPublicationDiseaseAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPublicationDiseaseAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3026,13 +3026,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetPublicationGeneAssociationsResponse getPublicationGeneAssociations(org.openapis.openapi.models.operations.GetPublicationGeneAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPublicationGeneAssociationsPathParams.class, baseUrl, "/bioentity/publication/{id}/genes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPublicationGeneAssociationsRequest.class, baseUrl, "/bioentity/publication/{id}/genes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPublicationGeneAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPublicationGeneAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3070,13 +3070,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetPublicationGenotypeAssociationsResponse getPublicationGenotypeAssociations(org.openapis.openapi.models.operations.GetPublicationGenotypeAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPublicationGenotypeAssociationsPathParams.class, baseUrl, "/bioentity/publication/{id}/genotypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPublicationGenotypeAssociationsRequest.class, baseUrl, "/bioentity/publication/{id}/genotypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPublicationGenotypeAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPublicationGenotypeAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3114,13 +3114,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetPublicationModelAssociationsResponse getPublicationModelAssociations(org.openapis.openapi.models.operations.GetPublicationModelAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPublicationModelAssociationsPathParams.class, baseUrl, "/bioentity/publication/{id}/models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPublicationModelAssociationsRequest.class, baseUrl, "/bioentity/publication/{id}/models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPublicationModelAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPublicationModelAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3158,13 +3158,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetPublicationPhenotypeAssociationsResponse getPublicationPhenotypeAssociations(org.openapis.openapi.models.operations.GetPublicationPhenotypeAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPublicationPhenotypeAssociationsPathParams.class, baseUrl, "/bioentity/publication/{id}/phenotypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPublicationPhenotypeAssociationsRequest.class, baseUrl, "/bioentity/publication/{id}/phenotypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPublicationPhenotypeAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPublicationPhenotypeAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3202,13 +3202,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetPublicationVariantAssociationsResponse getPublicationVariantAssociations(org.openapis.openapi.models.operations.GetPublicationVariantAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPublicationVariantAssociationsPathParams.class, baseUrl, "/bioentity/publication/{id}/variants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPublicationVariantAssociationsRequest.class, baseUrl, "/bioentity/publication/{id}/variants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPublicationVariantAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPublicationVariantAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3255,13 +3255,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetSubstanceParticipantInAssociationsResponse getSubstanceParticipantInAssociations(org.openapis.openapi.models.operations.GetSubstanceParticipantInAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubstanceParticipantInAssociationsPathParams.class, baseUrl, "/bioentity/substance/{id}/participant_in", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubstanceParticipantInAssociationsRequest.class, baseUrl, "/bioentity/substance/{id}/participant_in", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSubstanceParticipantInAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSubstanceParticipantInAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3300,13 +3300,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetSubstanceRoleAssociationsResponse getSubstanceRoleAssociations(org.openapis.openapi.models.operations.GetSubstanceRoleAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubstanceRoleAssociationsPathParams.class, baseUrl, "/bioentity/substance/{id}/roles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubstanceRoleAssociationsRequest.class, baseUrl, "/bioentity/substance/{id}/roles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSubstanceRoleAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSubstanceRoleAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3345,13 +3345,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetSubstanceTreatsAssociationsResponse getSubstanceTreatsAssociations(org.openapis.openapi.models.operations.GetSubstanceTreatsAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubstanceTreatsAssociationsPathParams.class, baseUrl, "/bioentity/substance/{id}/treats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubstanceTreatsAssociationsRequest.class, baseUrl, "/bioentity/substance/{id}/treats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSubstanceTreatsAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSubstanceTreatsAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3383,13 +3383,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetVariantCaseAssociationsResponse getVariantCaseAssociations(org.openapis.openapi.models.operations.GetVariantCaseAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantCaseAssociationsPathParams.class, baseUrl, "/bioentity/variant/{id}/cases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantCaseAssociationsRequest.class, baseUrl, "/bioentity/variant/{id}/cases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVariantCaseAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVariantCaseAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3427,13 +3427,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetVariantDiseaseAssociationsResponse getVariantDiseaseAssociations(org.openapis.openapi.models.operations.GetVariantDiseaseAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantDiseaseAssociationsPathParams.class, baseUrl, "/bioentity/variant/{id}/diseases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantDiseaseAssociationsRequest.class, baseUrl, "/bioentity/variant/{id}/diseases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVariantDiseaseAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVariantDiseaseAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3471,13 +3471,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetVariantGeneAssociationsResponse getVariantGeneAssociations(org.openapis.openapi.models.operations.GetVariantGeneAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantGeneAssociationsPathParams.class, baseUrl, "/bioentity/variant/{id}/genes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantGeneAssociationsRequest.class, baseUrl, "/bioentity/variant/{id}/genes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVariantGeneAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVariantGeneAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3515,13 +3515,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetVariantGenotypeAssociationsResponse getVariantGenotypeAssociations(org.openapis.openapi.models.operations.GetVariantGenotypeAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantGenotypeAssociationsPathParams.class, baseUrl, "/bioentity/variant/{id}/genotypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantGenotypeAssociationsRequest.class, baseUrl, "/bioentity/variant/{id}/genotypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVariantGenotypeAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVariantGenotypeAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3559,13 +3559,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetVariantModelAssociationsResponse getVariantModelAssociations(org.openapis.openapi.models.operations.GetVariantModelAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantModelAssociationsPathParams.class, baseUrl, "/bioentity/variant/{id}/models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantModelAssociationsRequest.class, baseUrl, "/bioentity/variant/{id}/models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVariantModelAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVariantModelAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3603,13 +3603,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetVariantPhenotypeAssociationsResponse getVariantPhenotypeAssociations(org.openapis.openapi.models.operations.GetVariantPhenotypeAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantPhenotypeAssociationsPathParams.class, baseUrl, "/bioentity/variant/{id}/phenotypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantPhenotypeAssociationsRequest.class, baseUrl, "/bioentity/variant/{id}/phenotypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVariantPhenotypeAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVariantPhenotypeAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3647,13 +3647,13 @@ public class Bioentity {
      */
     public org.openapis.openapi.models.operations.GetVariantPublicationAssociationsResponse getVariantPublicationAssociations(org.openapis.openapi.models.operations.GetVariantPublicationAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantPublicationAssociationsPathParams.class, baseUrl, "/bioentity/variant/{id}/publications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantPublicationAssociationsRequest.class, baseUrl, "/bioentity/variant/{id}/publications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVariantPublicationAssociationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVariantPublicationAssociationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

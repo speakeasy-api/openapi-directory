@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDataExporterConfigRequest {
-    
-    public UpdateDataExporterConfigPathParams pathParams;
-    public UpdateDataExporterConfigRequest withPathParams(UpdateDataExporterConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DataExporterConfig request;
-    public UpdateDataExporterConfigRequest withRequest(org.openapis.openapi.models.shared.DataExporterConfig request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DataExporterConfig dataExporterConfig;
+    public UpdateDataExporterConfigRequest withDataExporterConfig(org.openapis.openapi.models.shared.DataExporterConfig dataExporterConfig) {
+        this.dataExporterConfig = dataExporterConfig;
         return this;
     }
     
-    
-    public UpdateDataExporterConfigSecurity security;
-    public UpdateDataExporterConfigRequest withSecurity(UpdateDataExporterConfigSecurity security) {
-        this.security = security;
+    /**
+     * The data exporter config id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataExporterConfigId")
+    public String dataExporterConfigId;
+    public UpdateDataExporterConfigRequest withDataExporterConfigId(String dataExporterConfigId) {
+        this.dataExporterConfigId = dataExporterConfigId;
         return this;
     }
     

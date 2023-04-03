@@ -47,7 +47,7 @@ public class ServiceInventory {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceInventoriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceInventoriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -87,13 +87,13 @@ public class ServiceInventory {
      */
     public org.openapis.openapi.models.operations.ListServiceInventoryTagsResponse listServiceInventoryTags(org.openapis.openapi.models.operations.ListServiceInventoryTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceInventoryTagsPathParams.class, baseUrl, "/service_inventories/{id}/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceInventoryTagsRequest.class, baseUrl, "/service_inventories/{id}/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceInventoryTagsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceInventoryTagsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -141,7 +141,7 @@ public class ServiceInventory {
      */
     public org.openapis.openapi.models.operations.ShowServiceInventoryResponse showServiceInventory(org.openapis.openapi.models.operations.ShowServiceInventoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ShowServiceInventoryPathParams.class, baseUrl, "/service_inventories/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ShowServiceInventoryRequest.class, baseUrl, "/service_inventories/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -189,12 +189,12 @@ public class ServiceInventory {
      */
     public org.openapis.openapi.models.operations.TagServiceInventoryResponse tagServiceInventory(org.openapis.openapi.models.operations.TagServiceInventoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagServiceInventoryPathParams.class, baseUrl, "/service_inventories/{id}/tag", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagServiceInventoryRequest.class, baseUrl, "/service_inventories/{id}/tag", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -236,12 +236,12 @@ public class ServiceInventory {
      */
     public org.openapis.openapi.models.operations.UntagServiceInventoryResponse untagServiceInventory(org.openapis.openapi.models.operations.UntagServiceInventoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UntagServiceInventoryPathParams.class, baseUrl, "/service_inventories/{id}/untag", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UntagServiceInventoryRequest.class, baseUrl, "/service_inventories/{id}/untag", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

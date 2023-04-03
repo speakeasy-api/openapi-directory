@@ -7,17 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoSubmitPullReviewJsonRequest {
-    
-    public RepoSubmitPullReviewJsonPathParams pathParams;
-    public RepoSubmitPullReviewJsonRequest withPathParams(RepoSubmitPullReviewJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.SubmitPullReviewOptions submitPullReviewOptions;
+    public RepoSubmitPullReviewJsonRequest withSubmitPullReviewOptions(org.openapis.openapi.models.shared.SubmitPullReviewOptions submitPullReviewOptions) {
+        this.submitPullReviewOptions = submitPullReviewOptions;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SubmitPullReviewOptions request;
-    public RepoSubmitPullReviewJsonRequest withRequest(org.openapis.openapi.models.shared.SubmitPullReviewOptions request) {
-        this.request = request;
+    /**
+     * id of the review
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public RepoSubmitPullReviewJsonRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * index of the pull request
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public RepoSubmitPullReviewJsonRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoSubmitPullReviewJsonRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoSubmitPullReviewJsonRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

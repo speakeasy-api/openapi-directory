@@ -33,10 +33,11 @@ public class NumberChecks {
     /**
      * Checks whether a given number is a cube number or not.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersIsCubeResponse getNumbersIsCube(org.openapis.openapi.models.operations.GetNumbersIsCubeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersIsCubeResponse getNumbersIsCube(org.openapis.openapi.models.operations.GetNumbersIsCubeRequest request, org.openapis.openapi.models.operations.GetNumbersIsCubeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/is-cube");
         
@@ -44,14 +45,14 @@ public class NumberChecks {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersIsCubeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersIsCubeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -72,10 +73,11 @@ public class NumberChecks {
     /**
      * Checks whether a given number is a palindrome number or not.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersIsPalindromeResponse getNumbersIsPalindrome(org.openapis.openapi.models.operations.GetNumbersIsPalindromeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersIsPalindromeResponse getNumbersIsPalindrome(org.openapis.openapi.models.operations.GetNumbersIsPalindromeRequest request, org.openapis.openapi.models.operations.GetNumbersIsPalindromeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/is-palindrome");
         
@@ -83,14 +85,14 @@ public class NumberChecks {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersIsPalindromeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersIsPalindromeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -111,10 +113,11 @@ public class NumberChecks {
     /**
      * Checks whether a given number is a square number or not.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersIsSquareResponse getNumbersIsSquare(org.openapis.openapi.models.operations.GetNumbersIsSquareRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersIsSquareResponse getNumbersIsSquare(org.openapis.openapi.models.operations.GetNumbersIsSquareRequest request, org.openapis.openapi.models.operations.GetNumbersIsSquareSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/is-square");
         
@@ -122,14 +125,14 @@ public class NumberChecks {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersIsSquareQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersIsSquareRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -150,10 +153,11 @@ public class NumberChecks {
     /**
      * Checks whether a given number is a triangle number or not.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersIsTriangleResponse getNumbersIsTriangle(org.openapis.openapi.models.operations.GetNumbersIsTriangleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersIsTriangleResponse getNumbersIsTriangle(org.openapis.openapi.models.operations.GetNumbersIsTriangleRequest request, org.openapis.openapi.models.operations.GetNumbersIsTriangleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/is-triangle");
         
@@ -161,14 +165,14 @@ public class NumberChecks {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersIsTriangleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersIsTriangleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -189,10 +193,11 @@ public class NumberChecks {
     /**
      * Checks whether a given number is a known fermat prime number or not.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersPrimeIsFermatPrimeResponse getNumbersPrimeIsFermatPrime(org.openapis.openapi.models.operations.GetNumbersPrimeIsFermatPrimeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersPrimeIsFermatPrimeResponse getNumbersPrimeIsFermatPrime(org.openapis.openapi.models.operations.GetNumbersPrimeIsFermatPrimeRequest request, org.openapis.openapi.models.operations.GetNumbersPrimeIsFermatPrimeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/prime/is-fermat-prime");
         
@@ -200,14 +205,14 @@ public class NumberChecks {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersPrimeIsFermatPrimeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersPrimeIsFermatPrimeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -228,10 +233,11 @@ public class NumberChecks {
     /**
      * Checks whether a given number is a known fibonacci prime number or not.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersPrimeIsFibonacciPrimeResponse getNumbersPrimeIsFibonacciPrime(org.openapis.openapi.models.operations.GetNumbersPrimeIsFibonacciPrimeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersPrimeIsFibonacciPrimeResponse getNumbersPrimeIsFibonacciPrime(org.openapis.openapi.models.operations.GetNumbersPrimeIsFibonacciPrimeRequest request, org.openapis.openapi.models.operations.GetNumbersPrimeIsFibonacciPrimeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/prime/is-fibonacci-prime");
         
@@ -239,14 +245,14 @@ public class NumberChecks {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersPrimeIsFibonacciPrimeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersPrimeIsFibonacciPrimeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -267,10 +273,11 @@ public class NumberChecks {
     /**
      * Checks whether a given number is a known mersenne prime number or not.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersPrimeIsMersennePrimeResponse getNumbersPrimeIsMersennePrime(org.openapis.openapi.models.operations.GetNumbersPrimeIsMersennePrimeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersPrimeIsMersennePrimeResponse getNumbersPrimeIsMersennePrime(org.openapis.openapi.models.operations.GetNumbersPrimeIsMersennePrimeRequest request, org.openapis.openapi.models.operations.GetNumbersPrimeIsMersennePrimeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/prime/is-mersenne-prime");
         
@@ -278,14 +285,14 @@ public class NumberChecks {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersPrimeIsMersennePrimeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersPrimeIsMersennePrimeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -306,10 +313,11 @@ public class NumberChecks {
     /**
      * Checks whether a given number is a known partition prime number or not.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersPrimeIsPartitionPrimeResponse getNumbersPrimeIsPartitionPrime(org.openapis.openapi.models.operations.GetNumbersPrimeIsPartitionPrimeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersPrimeIsPartitionPrimeResponse getNumbersPrimeIsPartitionPrime(org.openapis.openapi.models.operations.GetNumbersPrimeIsPartitionPrimeRequest request, org.openapis.openapi.models.operations.GetNumbersPrimeIsPartitionPrimeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/prime/is-partition-prime");
         
@@ -317,14 +325,14 @@ public class NumberChecks {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersPrimeIsPartitionPrimeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersPrimeIsPartitionPrimeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -345,10 +353,11 @@ public class NumberChecks {
     /**
      * Checks whether a given number is a known pell prime number or not.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersPrimeIsPellPrimeResponse getNumbersPrimeIsPellPrime(org.openapis.openapi.models.operations.GetNumbersPrimeIsPellPrimeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersPrimeIsPellPrimeResponse getNumbersPrimeIsPellPrime(org.openapis.openapi.models.operations.GetNumbersPrimeIsPellPrimeRequest request, org.openapis.openapi.models.operations.GetNumbersPrimeIsPellPrimeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/prime/is-pell-prime");
         
@@ -356,14 +365,14 @@ public class NumberChecks {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersPrimeIsPellPrimeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersPrimeIsPellPrimeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -384,10 +393,11 @@ public class NumberChecks {
     /**
      * Checks whether a given number is a perfect number or not.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersPrimeIsPerfectResponse getNumbersPrimeIsPerfect(org.openapis.openapi.models.operations.GetNumbersPrimeIsPerfectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersPrimeIsPerfectResponse getNumbersPrimeIsPerfect(org.openapis.openapi.models.operations.GetNumbersPrimeIsPerfectRequest request, org.openapis.openapi.models.operations.GetNumbersPrimeIsPerfectSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/prime/is-perfect");
         
@@ -395,14 +405,14 @@ public class NumberChecks {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersPrimeIsPerfectQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersPrimeIsPerfectRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -423,10 +433,11 @@ public class NumberChecks {
     /**
      * Checks whether a given number is a known prime number or not.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumbersPrimeIsPrimeResponse getNumbersPrimeIsPrime(org.openapis.openapi.models.operations.GetNumbersPrimeIsPrimeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumbersPrimeIsPrimeResponse getNumbersPrimeIsPrime(org.openapis.openapi.models.operations.GetNumbersPrimeIsPrimeRequest request, org.openapis.openapi.models.operations.GetNumbersPrimeIsPrimeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/prime/is-prime");
         
@@ -434,14 +445,14 @@ public class NumberChecks {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersPrimeIsPrimeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumbersPrimeIsPrimeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateAlertManagerDefinitionPathParams;
-import org.openapis.openapi.models.operations.CreateAlertManagerDefinitionHeaders;
 import org.openapis.openapi.models.operations.CreateAlertManagerDefinitionRequestBody;
 import org.openapis.openapi.models.operations.CreateAlertManagerDefinitionRequest;
 import org.openapis.openapi.models.operations.CreateAlertManagerDefinitionResponse;
@@ -28,30 +26,24 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateAlertManagerDefinitionRequest req = new CreateAlertManagerDefinitionRequest() {{
-                pathParams = new CreateAlertManagerDefinitionPathParams() {{
-                    workspaceId = "corrupti";
+                requestBody = new CreateAlertManagerDefinitionRequestBody() {{
+                    clientToken = "corrupti";
+                    data = "provident";
                 }};
-                headers = new CreateAlertManagerDefinitionHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-                request = new CreateAlertManagerDefinitionRequestBody() {{
-                    clientToken = "vel";
-                    data = "error";
-                }};
-            }};            
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+                workspaceId = "error";
+            }}            
 
             CreateAlertManagerDefinitionResponse res = sdk.createAlertManagerDefinition(req);
 
@@ -65,7 +57,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

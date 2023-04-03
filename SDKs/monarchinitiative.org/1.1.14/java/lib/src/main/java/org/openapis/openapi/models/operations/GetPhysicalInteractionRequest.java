@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPhysicalInteractionRequest {
+    /**
+     * string to search for in contributor of model
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor")
+    public String contributor;
+    public GetPhysicalInteractionRequest withContributor(String contributor) {
+        this.contributor = contributor;
+        return this;
+    }
     
-    public GetPhysicalInteractionQueryParams queryParams;
-    public GetPhysicalInteractionRequest withQueryParams(GetPhysicalInteractionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * string to search for in title of model
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
+    public String title;
+    public GetPhysicalInteractionRequest withTitle(String title) {
+        this.title = title;
         return this;
     }
     

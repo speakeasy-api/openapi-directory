@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteRandomRequest {
-    
-    public GetQuoteRandomQueryParams queryParams;
-    public GetQuoteRandomRequest withQueryParams(GetQuoteRandomQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Language of the Quote. The language must be supported in our system.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public GetQuoteRandomRequest withLanguage(String language) {
+        this.language = language;
         return this;
     }
     
-    
-    public GetQuoteRandomSecurity security;
-    public GetQuoteRandomRequest withSecurity(GetQuoteRandomSecurity security) {
-        this.security = security;
+    /**
+     * No of quotes to return. The max limit depends on the subscription level.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetQuoteRandomRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

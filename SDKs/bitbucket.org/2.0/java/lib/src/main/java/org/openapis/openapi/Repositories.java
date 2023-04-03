@@ -47,25 +47,26 @@ public class Repositories {
      * 
      * This does not affect its forks.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugResponse deleteRepositoriesWorkspaceRepoSlug(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugResponse deleteRepositoriesWorkspaceRepoSlug(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugRequest request, org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -96,19 +97,20 @@ public class Repositories {
      * Deletes the specified webhook subscription from the given
      * repository.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugHooksUidResponse deleteRepositoriesWorkspaceRepoSlugHooksUid(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugHooksUidRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugHooksUidResponse deleteRepositoriesWorkspaceRepoSlugHooksUid(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugHooksUidRequest request, org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugHooksUidSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugHooksUidPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugHooksUidRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -148,19 +150,20 @@ public class Repositories {
      * 
      * HTTP/1.1 204
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse deleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse deleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest request, org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -202,19 +205,20 @@ public class Repositories {
      * HTTP/1.1 204
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdResponse deleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserId(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdResponse deleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserId(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest request, org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -247,10 +251,11 @@ public class Repositories {
      * This endpoint also supports filtering and sorting of the results. See
      * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more details.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesResponse getRepositories(org.openapis.openapi.models.operations.GetRepositoriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesResponse getRepositories(org.openapis.openapi.models.operations.GetRepositoriesRequest request, org.openapis.openapi.models.operations.GetRepositoriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/repositories");
         
@@ -258,14 +263,14 @@ public class Repositories {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -303,25 +308,26 @@ public class Repositories {
      * This endpoint also supports filtering and sorting of the results. See
      * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more details.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceResponse getRepositoriesWorkspace(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceResponse getRepositoriesWorkspace(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspacePathParams.class, baseUrl, "/repositories/{workspace}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRequest.class, baseUrl, "/repositories/{workspace}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -357,19 +363,20 @@ public class Repositories {
      * Get a repository
      * Returns the object describing this repository.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugResponse getRepositoriesWorkspaceRepoSlug(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugResponse getRepositoriesWorkspaceRepoSlug(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -453,25 +460,26 @@ public class Repositories {
      * In the response you can see that the file was renamed to `README.rst`
      * by the commit made on 2011-05-16, and was previously named `README.txt`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathResponse getRepositoriesWorkspaceRepoSlugFilehistoryCommitPath(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathResponse getRepositoriesWorkspaceRepoSlugFilehistoryCommitPath(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/filehistory/{commit}/{path}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/filehistory/{commit}/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -508,25 +516,26 @@ public class Repositories {
      * Returns a paginated list of all the forks of the specified
      * repository.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugForksResponse getRepositoriesWorkspaceRepoSlugForks(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugForksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugForksResponse getRepositoriesWorkspaceRepoSlugForks(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugForksRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugForksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugForksPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/forks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugForksRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/forks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugForksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugForksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -554,19 +563,20 @@ public class Repositories {
      * List webhooks for a repository
      * Returns a paginated list of webhooks installed on this repository.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugHooksResponse getRepositoriesWorkspaceRepoSlugHooks(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugHooksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugHooksResponse getRepositoriesWorkspaceRepoSlugHooks(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugHooksRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugHooksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugHooksPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/hooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugHooksRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/hooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -603,19 +613,20 @@ public class Repositories {
      * Returns the webhook with the specified id installed on the specified
      * repository.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugHooksUidResponse getRepositoriesWorkspaceRepoSlugHooksUid(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugHooksUidRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugHooksUidResponse getRepositoriesWorkspaceRepoSlugHooksUid(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugHooksUidRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugHooksUidSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugHooksUidPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugHooksUidRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -650,19 +661,20 @@ public class Repositories {
     /**
      * Retrieve the inheritance state for repository settings
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsResponse getRepositoriesWorkspaceRepoSlugOverrideSettings(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsResponse getRepositoriesWorkspaceRepoSlugOverrideSettings(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/override-settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/override-settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -746,19 +758,20 @@ public class Repositories {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsResponse getRepositoriesWorkspaceRepoSlugPermissionsConfigGroups(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsResponse getRepositoriesWorkspaceRepoSlugPermissionsConfigGroups(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/permissions-config/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/permissions-config/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -835,19 +848,20 @@ public class Repositories {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse getRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse getRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -930,19 +944,20 @@ public class Repositories {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersResponse getRepositoriesWorkspaceRepoSlugPermissionsConfigUsers(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersResponse getRepositoriesWorkspaceRepoSlugPermissionsConfigUsers(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/permissions-config/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/permissions-config/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1021,19 +1036,20 @@ public class Repositories {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdResponse getRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserId(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdResponse getRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserId(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1076,25 +1092,26 @@ public class Repositories {
      * 
      * To create new commits, [POST to this endpoint](#post)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcResponse getRepositoriesWorkspaceRepoSlugSrc(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcResponse getRepositoriesWorkspaceRepoSlugSrc(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/src", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/src", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1332,25 +1349,26 @@ public class Repositories {
      * See [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more
      * details.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse getRepositoriesWorkspaceRepoSlugSrcCommitPath(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse getRepositoriesWorkspaceRepoSlugSrcCommitPath(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/src/{commit}/{path}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/src/{commit}/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1387,19 +1405,20 @@ public class Repositories {
      * Returns a paginated list of all the watchers on the specified
      * repository.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugWatchersResponse getRepositoriesWorkspaceRepoSlugWatchers(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugWatchersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugWatchersResponse getRepositoriesWorkspaceRepoSlugWatchers(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugWatchersRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugWatchersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugWatchersPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/watchers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugWatchersRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/watchers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1477,10 +1496,11 @@ public class Repositories {
      * Note that the query parameter values need to be URL escaped so that `=`
      * would become `%3D`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserPermissionsRepositoriesResponse getUserPermissionsRepositories(org.openapis.openapi.models.operations.GetUserPermissionsRepositoriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUserPermissionsRepositoriesResponse getUserPermissionsRepositories(org.openapis.openapi.models.operations.GetUserPermissionsRepositoriesRequest request, org.openapis.openapi.models.operations.GetUserPermissionsRepositoriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user/permissions/repositories");
         
@@ -1488,14 +1508,14 @@ public class Repositories {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserPermissionsRepositoriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserPermissionsRepositoriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1553,21 +1573,22 @@ public class Repositories {
      * Note: In the examples above, the workspace ID `teamsinspace`,
      * and/or the repository name `hablanding` can be replaced by UUIDs.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugResponse postRepositoriesWorkspaceRepoSlug(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugResponse postRepositoriesWorkspaceRepoSlug(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugRequest request, org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1659,21 +1680,22 @@ public class Repositories {
      * * parent
      * * full_name
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugForksResponse postRepositoriesWorkspaceRepoSlugForks(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugForksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugForksResponse postRepositoriesWorkspaceRepoSlugForks(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugForksRequest request, org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugForksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugForksPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/forks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugForksRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/forks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1728,19 +1750,20 @@ public class Repositories {
      * Also note that the `url` must properly resolve and cannot be an
      * internal, non-routed address.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugHooksResponse postRepositoriesWorkspaceRepoSlugHooks(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugHooksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugHooksResponse postRepositoriesWorkspaceRepoSlugHooks(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugHooksRequest request, org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugHooksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugHooksPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/hooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugHooksRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/hooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1898,25 +1921,26 @@ public class Repositories {
      * Note that this API does not support the creation or manipulation of
      * subrepos / submodules.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcResponse postRepositoriesWorkspaceRepoSlugSrc(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcResponse postRepositoriesWorkspaceRepoSlugSrc(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcRequest request, org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/src", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/src", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1962,21 +1986,22 @@ public class Repositories {
      * the new location will be returned in the `Location` header of the
      * response.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugResponse putRepositoriesWorkspaceRepoSlug(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugResponse putRepositoriesWorkspaceRepoSlug(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugRequest request, org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2021,19 +2046,20 @@ public class Repositories {
      * * `active`
      * * `events`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugHooksUidResponse putRepositoriesWorkspaceRepoSlugHooksUid(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugHooksUidRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugHooksUidResponse putRepositoriesWorkspaceRepoSlugHooksUid(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugHooksUidRequest request, org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugHooksUidSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugHooksUidPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugHooksUidRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2068,19 +2094,20 @@ public class Repositories {
     /**
      * Set the inheritance state for repository settings -                 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsResponse putRepositoriesWorkspaceRepoSlugOverrideSettings(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsResponse putRepositoriesWorkspaceRepoSlugOverrideSettings(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsRequest request, org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/override-settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/override-settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2156,19 +2183,20 @@ public class Repositories {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse putRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse putRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest request, org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2252,19 +2280,20 @@ public class Repositories {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdResponse putRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserId(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdResponse putRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserId(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest request, org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIdRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

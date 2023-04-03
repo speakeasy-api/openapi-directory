@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateRequest {
-    
-    public PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdatePathParams pathParams;
-    public PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateRequest withPathParams(PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SubscriptionPatchRequest request;
-    public PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateRequest withRequest(org.openapis.openapi.models.shared.SubscriptionPatchRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SubscriptionPatchRequest subscriptionPatchRequest;
+    public PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateRequest withSubscriptionPatchRequest(org.openapis.openapi.models.shared.SubscriptionPatchRequest subscriptionPatchRequest) {
+        this.subscriptionPatchRequest = subscriptionPatchRequest;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateRequest withAppId(Integer appId) {
+        this.appId = appId;
+        return this;
+    }
     
-    public PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateSecurity security;
-    public PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateRequest withSecurity(PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriptionId")
+    public Integer subscriptionId;
+    public PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateRequest withSubscriptionId(Integer subscriptionId) {
+        this.subscriptionId = subscriptionId;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetPortRequest {
+    /**
+     * Agent to set the primary SNMP port
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public SetPortRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public SetPortPathParams pathParams;
-    public SetPortRequest withPathParams(SetPortPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Primary SNMP port of the agent
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
+    public Integer port;
+    public SetPortRequest withPort(Integer port) {
+        this.port = port;
         return this;
     }
     

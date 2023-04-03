@@ -39,13 +39,13 @@ public class Models {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesModelsByUsageResponse getOrganizationSummaryTopDevicesModelsByUsage(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesModelsByUsageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesModelsByUsagePathParams.class, baseUrl, "/organizations/{organizationId}/summary/top/devices/models/byUsage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesModelsByUsageRequest.class, baseUrl, "/organizations/{organizationId}/summary/top/devices/models/byUsage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesModelsByUsageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesModelsByUsageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

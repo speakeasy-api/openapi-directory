@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCheckDNSAvailabilityRequest {
-    
-    public GETCheckDNSAvailabilityQueryParams queryParams;
-    public GETCheckDNSAvailabilityRequest withQueryParams(GETCheckDNSAvailabilityQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETCheckDNSAvailabilityActionEnum action;
+    public GETCheckDNSAvailabilityRequest withAction(GETCheckDNSAvailabilityActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The prefix used when this CNAME is reserved.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CNAMEPrefix")
+    public String cnamePrefix;
+    public GETCheckDNSAvailabilityRequest withCNAMEPrefix(String cnamePrefix) {
+        this.cnamePrefix = cnamePrefix;
+        return this;
+    }
     
-    public GETCheckDNSAvailabilityHeaders headers;
-    public GETCheckDNSAvailabilityRequest withHeaders(GETCheckDNSAvailabilityHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETCheckDNSAvailabilityVersionEnum version;
+    public GETCheckDNSAvailabilityRequest withVersion(GETCheckDNSAvailabilityVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETCheckDNSAvailabilityRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETCheckDNSAvailabilityRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETCheckDNSAvailabilityRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETCheckDNSAvailabilityRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETCheckDNSAvailabilityRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETCheckDNSAvailabilityRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETCheckDNSAvailabilityRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

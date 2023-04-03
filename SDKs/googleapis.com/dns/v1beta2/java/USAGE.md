@@ -7,10 +7,9 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.DnsChangesCreateSecurityOption1;
 import org.openapis.openapi.models.operations.DnsChangesCreateSecurityOption2;
 import org.openapis.openapi.models.operations.DnsChangesCreateSecurity;
-import org.openapis.openapi.models.operations.DnsChangesCreatePathParams;
-import org.openapis.openapi.models.operations.DnsChangesCreateQueryParams;
 import org.openapis.openapi.models.operations.DnsChangesCreateRequest;
 import org.openapis.openapi.models.operations.DnsChangesCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.ChangeStatusEnum;
 import org.openapis.openapi.models.shared.Change;
 import org.openapis.openapi.models.shared.ResourceRecordSet;
@@ -24,10 +23,7 @@ import org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget;
 import org.openapis.openapi.models.shared.RRSetRoutingPolicyPrimaryBackupPolicy;
 import org.openapis.openapi.models.shared.RRSetRoutingPolicyGeoPolicy;
 import org.openapis.openapi.models.shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -36,39 +32,12 @@ public class Application {
                 .build();
 
             DnsChangesCreateRequest req = new DnsChangesCreateRequest() {{
-                security = new DnsChangesCreateSecurity() {{
-                    option1 = new DnsChangesCreateSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new DnsChangesCreatePathParams() {{
-                    managedZone = "corrupti";
-                    project = "provident";
-                }};
-                queryParams = new DnsChangesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "quibusdam";
-                    alt = "media";
-                    callback = "nulla";
-                    clientOperationId = "corrupti";
-                    fields = "illum";
-                    key = "vel";
-                    oauthToken = "error";
-                    prettyPrint = false;
-                    quotaUser = "deserunt";
-                    uploadType = "suscipit";
-                    uploadProtocol = "iure";
-                }};
-                request = new Change() {{
+                dollarXgafv = "2";
+                change = new Change() {{
                     additions = new org.openapis.openapi.models.shared.ResourceRecordSet[]{{
                         add(new ResourceRecordSet() {{
-                            kind = "debitis";
-                            name = "ipsa";
+                            kind = "distinctio";
+                            name = "quibusdam";
                             routingPolicy = new RRSetRoutingPolicy() {{
                                 geo = new RRSetRoutingPolicyGeoPolicy() {{
                                     enableFencing = false;
@@ -77,141 +46,138 @@ public class Application {
                                             healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
                                                 internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "suscipit";
-                                                        ipProtocol = "tcp";
-                                                        kind = "minus";
+                                                        ipAddress = "corrupti";
+                                                        ipProtocol = "udp";
+                                                        kind = "vel";
                                                         loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "voluptatum";
-                                                        port = "iusto";
-                                                        project = "excepturi";
-                                                        region = "nisi";
+                                                        networkUrl = "deserunt";
+                                                        port = "suscipit";
+                                                        project = "iure";
+                                                        region = "magnam";
                                                     }}),
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "recusandae";
-                                                        ipProtocol = "udp";
-                                                        kind = "ab";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "veritatis";
-                                                        port = "deserunt";
-                                                        project = "perferendis";
-                                                        region = "ipsam";
-                                                    }}),
-                                                }};
-                                            }};
-                                            kind = "repellendus";
-                                            location = "sapiente";
-                                            rrdatas = new String[]{{
-                                                add("odit"),
-                                                add("at"),
-                                                add("at"),
-                                                add("maiores"),
-                                            }};
-                                            signatureRrdatas = new String[]{{
-                                                add("quod"),
-                                                add("quod"),
-                                            }};
-                                        }}),
-                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
-                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "totam";
-                                                        ipProtocol = "udp";
-                                                        kind = "dolorum";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "nam";
-                                                        port = "officia";
-                                                        project = "occaecati";
-                                                        region = "fugit";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "deleniti";
-                                                        ipProtocol = "udp";
-                                                        kind = "optio";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "beatae";
-                                                        port = "commodi";
-                                                        project = "molestiae";
-                                                        region = "modi";
-                                                    }}),
-                                                }};
-                                            }};
-                                            kind = "qui";
-                                            location = "impedit";
-                                            rrdatas = new String[]{{
-                                                add("esse"),
-                                                add("ipsum"),
-                                                add("excepturi"),
-                                            }};
-                                            signatureRrdatas = new String[]{{
-                                                add("perferendis"),
-                                            }};
-                                        }}),
-                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
-                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "natus";
+                                                        ipAddress = "debitis";
                                                         ipProtocol = "undefined";
-                                                        kind = "iste";
+                                                        kind = "delectus";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "suscipit";
+                                                        port = "molestiae";
+                                                        project = "minus";
+                                                        region = "placeat";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "voluptatum";
+                                                        ipProtocol = "tcp";
+                                                        kind = "excepturi";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "recusandae";
+                                                        port = "temporibus";
+                                                        project = "ab";
+                                                        region = "quis";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "veritatis";
+                                                        ipProtocol = "tcp";
+                                                        kind = "perferendis";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "repellendus";
+                                                        port = "sapiente";
+                                                        project = "quo";
+                                                        region = "odit";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "at";
+                                            location = "at";
+                                            rrdatas = new String[]{{
+                                                add("molestiae"),
+                                                add("quod"),
+                                                add("quod"),
+                                                add("esse"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("porro"),
+                                                add("dolorum"),
+                                                add("dicta"),
+                                            }};
+                                        }}),
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "officia";
+                                                        ipProtocol = "tcp";
+                                                        kind = "fugit";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "hic";
+                                                        port = "optio";
+                                                        project = "totam";
+                                                        region = "beatae";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "commodi";
+                                                        ipProtocol = "tcp";
+                                                        kind = "modi";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "impedit";
+                                                        port = "cum";
+                                                        project = "esse";
+                                                        region = "ipsum";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "excepturi";
+                                                        ipProtocol = "undefined";
+                                                        kind = "perferendis";
                                                         loadBalancerType = "none";
                                                         networkUrl = "natus";
-                                                        port = "laboriosam";
-                                                        project = "hic";
-                                                        region = "saepe";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "fuga";
-                                                        ipProtocol = "tcp";
-                                                        kind = "corporis";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "iure";
-                                                        port = "saepe";
-                                                        project = "quidem";
-                                                        region = "architecto";
+                                                        port = "sed";
+                                                        project = "iste";
+                                                        region = "dolor";
                                                     }}),
                                                 }};
                                             }};
-                                            kind = "ipsa";
-                                            location = "reiciendis";
+                                            kind = "natus";
+                                            location = "laboriosam";
                                             rrdatas = new String[]{{
-                                                add("mollitia"),
-                                                add("laborum"),
-                                                add("dolores"),
+                                                add("saepe"),
+                                                add("fuga"),
+                                                add("in"),
+                                                add("corporis"),
                                             }};
                                             signatureRrdatas = new String[]{{
-                                                add("corporis"),
+                                                add("iure"),
+                                                add("saepe"),
+                                                add("quidem"),
                                             }};
                                         }}),
                                         add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
                                             healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
                                                 internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "nobis";
-                                                        ipProtocol = "undefined";
-                                                        kind = "omnis";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "minima";
-                                                        port = "excepturi";
-                                                        project = "accusantium";
-                                                        region = "iure";
+                                                        ipAddress = "ipsa";
+                                                        ipProtocol = "udp";
+                                                        kind = "est";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "laborum";
+                                                        port = "dolores";
+                                                        project = "dolorem";
+                                                        region = "corporis";
                                                     }}),
                                                 }};
                                             }};
-                                            kind = "culpa";
-                                            location = "doloribus";
+                                            kind = "explicabo";
+                                            location = "nobis";
                                             rrdatas = new String[]{{
-                                                add("architecto"),
-                                                add("mollitia"),
-                                                add("dolorem"),
-                                                add("culpa"),
+                                                add("omnis"),
+                                                add("nemo"),
                                             }};
                                             signatureRrdatas = new String[]{{
-                                                add("repellat"),
+                                                add("excepturi"),
+                                                add("accusantium"),
                                             }};
                                         }}),
                                     }};
-                                    kind = "mollitia";
+                                    kind = "iure";
                                 }};
                                 geoPolicy = new RRSetRoutingPolicyGeoPolicy() {{
                                     enableFencing = false;
@@ -220,134 +186,139 @@ public class Application {
                                             healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
                                                 internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "commodi";
-                                                        ipProtocol = "tcp";
-                                                        kind = "molestiae";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "error";
-                                                        port = "quia";
-                                                        project = "quis";
-                                                        region = "vitae";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "laborum";
-                                                        ipProtocol = "tcp";
-                                                        kind = "enim";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "quo";
-                                                        port = "sequi";
-                                                        project = "tenetur";
-                                                        region = "ipsam";
-                                                    }}),
-                                                }};
-                                            }};
-                                            kind = "id";
-                                            location = "possimus";
-                                            rrdatas = new String[]{{
-                                                add("quasi"),
-                                            }};
-                                            signatureRrdatas = new String[]{{
-                                                add("temporibus"),
-                                                add("laborum"),
-                                                add("quasi"),
-                                            }};
-                                        }}),
-                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
-                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "voluptatibus";
-                                                        ipProtocol = "udp";
-                                                        kind = "nihil";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "voluptatibus";
-                                                        port = "ipsa";
-                                                        project = "omnis";
-                                                        region = "voluptate";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "cum";
+                                                        ipAddress = "sapiente";
                                                         ipProtocol = "undefined";
-                                                        kind = "doloremque";
+                                                        kind = "mollitia";
                                                         loadBalancerType = "none";
-                                                        networkUrl = "ut";
-                                                        port = "maiores";
-                                                        project = "dicta";
-                                                        region = "corporis";
+                                                        networkUrl = "culpa";
+                                                        port = "consequuntur";
+                                                        project = "repellat";
+                                                        region = "mollitia";
                                                     }}),
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "dolore";
-                                                        ipProtocol = "tcp";
-                                                        kind = "dicta";
+                                                        ipAddress = "occaecati";
+                                                        ipProtocol = "undefined";
+                                                        kind = "commodi";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "molestiae";
+                                                        port = "velit";
+                                                        project = "error";
+                                                        region = "quia";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "quis";
+                                                        ipProtocol = "undefined";
+                                                        kind = "laborum";
                                                         loadBalancerType = "regionalL4ilb";
                                                         networkUrl = "enim";
-                                                        port = "accusamus";
-                                                        project = "commodi";
-                                                        region = "repudiandae";
+                                                        port = "odit";
+                                                        project = "quo";
+                                                        region = "sequi";
                                                     }}),
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "quae";
-                                                        ipProtocol = "undefined";
-                                                        kind = "quidem";
+                                                        ipAddress = "tenetur";
+                                                        ipProtocol = "tcp";
+                                                        kind = "id";
                                                         loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "excepturi";
-                                                        port = "pariatur";
-                                                        project = "modi";
-                                                        region = "praesentium";
+                                                        networkUrl = "aut";
+                                                        port = "quasi";
+                                                        project = "error";
+                                                        region = "temporibus";
                                                     }}),
                                                 }};
                                             }};
-                                            kind = "rem";
-                                            location = "voluptates";
+                                            kind = "laborum";
+                                            location = "quasi";
                                             rrdatas = new String[]{{
-                                                add("repudiandae"),
+                                                add("voluptatibus"),
+                                                add("vero"),
+                                                add("nihil"),
+                                                add("praesentium"),
                                             }};
                                             signatureRrdatas = new String[]{{
-                                                add("veritatis"),
-                                                add("itaque"),
-                                                add("incidunt"),
+                                                add("ipsa"),
+                                                add("omnis"),
+                                                add("voluptate"),
+                                                add("cum"),
                                             }};
                                         }}),
                                         add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
                                             healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
                                                 internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "consequatur";
+                                                        ipAddress = "doloremque";
+                                                        ipProtocol = "tcp";
+                                                        kind = "ut";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "dicta";
+                                                        port = "corporis";
+                                                        project = "dolore";
+                                                        region = "iusto";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "dicta";
+                                            location = "harum";
+                                            rrdatas = new String[]{{
+                                                add("accusamus"),
+                                                add("commodi"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("quae"),
+                                                add("ipsum"),
+                                                add("quidem"),
+                                                add("molestias"),
+                                            }};
+                                        }}),
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "pariatur";
+                                                        ipProtocol = "undefined";
+                                                        kind = "praesentium";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "voluptates";
+                                                        port = "quasi";
+                                                        project = "repudiandae";
+                                                        region = "sint";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "veritatis";
+                                                        ipProtocol = "udp";
+                                                        kind = "incidunt";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "consequatur";
+                                                        port = "est";
+                                                        project = "quibusdam";
+                                                        region = "explicabo";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "deserunt";
                                                         ipProtocol = "udp";
                                                         kind = "quibusdam";
                                                         loadBalancerType = "none";
-                                                        networkUrl = "deserunt";
-                                                        port = "distinctio";
-                                                        project = "quibusdam";
-                                                        region = "labore";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "modi";
-                                                        ipProtocol = "undefined";
-                                                        kind = "aliquid";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "quos";
-                                                        port = "perferendis";
-                                                        project = "magni";
-                                                        region = "assumenda";
+                                                        networkUrl = "modi";
+                                                        port = "qui";
+                                                        project = "aliquid";
+                                                        region = "cupiditate";
                                                     }}),
                                                 }};
                                             }};
-                                            kind = "ipsam";
-                                            location = "alias";
+                                            kind = "quos";
+                                            location = "perferendis";
                                             rrdatas = new String[]{{
-                                                add("dolorum"),
+                                                add("assumenda"),
                                             }};
                                             signatureRrdatas = new String[]{{
-                                                add("tempora"),
-                                                add("facilis"),
-                                                add("tempore"),
+                                                add("alias"),
+                                                add("fugit"),
                                             }};
                                         }}),
                                     }};
-                                    kind = "labore";
+                                    kind = "dolorum";
                                 }};
-                                kind = "delectus";
+                                kind = "excepturi";
                                 primaryBackup = new RRSetRoutingPolicyPrimaryBackupPolicy() {{
                                     backupGeoTargets = new RRSetRoutingPolicyGeoPolicy() {{
                                         enableFencing = false;
@@ -356,129 +327,112 @@ public class Application {
                                                 healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
                                                     internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                         add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                            ipAddress = "eligendi";
-                                                            ipProtocol = "tcp";
-                                                            kind = "aliquid";
+                                                            ipAddress = "tempore";
+                                                            ipProtocol = "undefined";
+                                                            kind = "delectus";
+                                                            loadBalancerType = "none";
+                                                            networkUrl = "non";
+                                                            port = "eligendi";
+                                                            project = "sint";
+                                                            region = "aliquid";
+                                                        }}),
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "provident";
+                                                            ipProtocol = "udp";
+                                                            kind = "sint";
                                                             loadBalancerType = "regionalL4ilb";
-                                                            networkUrl = "necessitatibus";
-                                                            port = "sint";
-                                                            project = "officia";
-                                                            region = "dolor";
+                                                            networkUrl = "dolor";
+                                                            port = "debitis";
+                                                            project = "a";
+                                                            region = "dolorum";
+                                                        }}),
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "in";
+                                                            ipProtocol = "tcp";
+                                                            kind = "illum";
+                                                            loadBalancerType = "regionalL4ilb";
+                                                            networkUrl = "rerum";
+                                                            port = "dicta";
+                                                            project = "magnam";
+                                                            region = "cumque";
                                                         }}),
                                                     }};
                                                 }};
-                                                kind = "debitis";
-                                                location = "a";
+                                                kind = "facere";
+                                                location = "ea";
                                                 rrdatas = new String[]{{
-                                                    add("in"),
-                                                    add("in"),
-                                                    add("illum"),
+                                                    add("laborum"),
+                                                    add("accusamus"),
                                                 }};
                                                 signatureRrdatas = new String[]{{
-                                                    add("rerum"),
-                                                    add("dicta"),
-                                                    add("magnam"),
-                                                    add("cumque"),
+                                                    add("occaecati"),
                                                 }};
                                             }}),
                                             add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
                                                 healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
                                                     internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                         add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                            ipAddress = "ea";
-                                                            ipProtocol = "tcp";
-                                                            kind = "laborum";
-                                                            loadBalancerType = "regionalL4ilb";
-                                                            networkUrl = "non";
-                                                            port = "occaecati";
-                                                            project = "enim";
-                                                            region = "accusamus";
-                                                        }}),
-                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                            ipAddress = "delectus";
+                                                            ipAddress = "accusamus";
                                                             ipProtocol = "udp";
-                                                            kind = "provident";
+                                                            kind = "quidem";
                                                             loadBalancerType = "regionalL4ilb";
-                                                            networkUrl = "id";
-                                                            port = "blanditiis";
-                                                            project = "deleniti";
-                                                            region = "sapiente";
+                                                            networkUrl = "nam";
+                                                            port = "id";
+                                                            project = "blanditiis";
+                                                            region = "deleniti";
                                                         }}),
                                                         add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                            ipAddress = "amet";
-                                                            ipProtocol = "tcp";
-                                                            kind = "nisi";
-                                                            loadBalancerType = "none";
-                                                            networkUrl = "natus";
-                                                            port = "omnis";
-                                                            project = "molestiae";
-                                                            region = "perferendis";
-                                                        }}),
-                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                            ipAddress = "nihil";
+                                                            ipAddress = "sapiente";
                                                             ipProtocol = "undefined";
-                                                            kind = "distinctio";
-                                                            loadBalancerType = "regionalL4ilb";
-                                                            networkUrl = "labore";
-                                                            port = "labore";
-                                                            project = "suscipit";
-                                                            region = "natus";
+                                                            kind = "deserunt";
+                                                            loadBalancerType = "none";
+                                                            networkUrl = "vel";
+                                                            port = "natus";
+                                                            project = "omnis";
+                                                            region = "molestiae";
                                                         }}),
                                                     }};
                                                 }};
-                                                kind = "nobis";
-                                                location = "eum";
+                                                kind = "perferendis";
+                                                location = "nihil";
                                                 rrdatas = new String[]{{
-                                                    add("aspernatur"),
-                                                    add("architecto"),
-                                                    add("magnam"),
-                                                    add("et"),
+                                                    add("distinctio"),
+                                                    add("id"),
                                                 }};
                                                 signatureRrdatas = new String[]{{
-                                                    add("ullam"),
-                                                    add("provident"),
-                                                    add("quos"),
+                                                    add("labore"),
+                                                    add("suscipit"),
                                                 }};
                                             }}),
                                         }};
-                                        kind = "sint";
+                                        kind = "natus";
                                     }};
-                                    kind = "accusantium";
+                                    kind = "nobis";
                                     primaryTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
                                         internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                             add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                ipAddress = "reiciendis";
-                                                ipProtocol = "tcp";
-                                                kind = "ad";
-                                                loadBalancerType = "none";
-                                                networkUrl = "dolor";
-                                                port = "necessitatibus";
-                                                project = "odit";
-                                                region = "nemo";
-                                            }}),
-                                            add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                ipAddress = "quasi";
-                                                ipProtocol = "tcp";
-                                                kind = "doloribus";
-                                                loadBalancerType = "regionalL4ilb";
-                                                networkUrl = "eius";
-                                                port = "maxime";
-                                                project = "deleniti";
-                                                region = "facilis";
-                                            }}),
-                                            add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                ipAddress = "in";
+                                                ipAddress = "vero";
                                                 ipProtocol = "undefined";
                                                 kind = "architecto";
+                                                loadBalancerType = "none";
+                                                networkUrl = "et";
+                                                port = "excepturi";
+                                                project = "ullam";
+                                                region = "provident";
+                                            }}),
+                                            add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                ipAddress = "quos";
+                                                ipProtocol = "tcp";
+                                                kind = "accusantium";
                                                 loadBalancerType = "regionalL4ilb";
-                                                networkUrl = "ullam";
-                                                port = "expedita";
-                                                project = "nihil";
-                                                region = "repellat";
+                                                networkUrl = "reiciendis";
+                                                port = "mollitia";
+                                                project = "ad";
+                                                region = "eum";
                                             }}),
                                         }};
                                     }};
-                                    trickleTraffic = 8411.4;
+                                    trickleTraffic = 2212.62;
                                 }};
                                 wrr = new RRSetRoutingPolicyWrrPolicy() {{
                                     items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem[]{{
@@ -486,69 +440,100 @@ public class Application {
                                             healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
                                                 internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "pariatur";
+                                                        ipAddress = "nemo";
                                                         ipProtocol = "undefined";
-                                                        kind = "consequuntur";
+                                                        kind = "iure";
                                                         loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "natus";
-                                                        port = "magni";
-                                                        project = "sunt";
-                                                        region = "quo";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "illum";
-                                                        ipProtocol = "udp";
-                                                        kind = "maxime";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "excepturi";
-                                                        port = "odit";
-                                                        project = "ea";
-                                                        region = "accusantium";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "ab";
-                                                        ipProtocol = "udp";
-                                                        kind = "quidem";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "voluptate";
-                                                        port = "autem";
-                                                        project = "nam";
-                                                        region = "eaque";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "pariatur";
-                                                        ipProtocol = "tcp";
-                                                        kind = "voluptatibus";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "fugiat";
-                                                        port = "amet";
-                                                        project = "aut";
-                                                        region = "cumque";
+                                                        networkUrl = "debitis";
+                                                        port = "eius";
+                                                        project = "maxime";
+                                                        region = "deleniti";
                                                     }}),
                                                 }};
                                             }};
-                                            kind = "corporis";
+                                            kind = "facilis";
                                             rrdatas = new String[]{{
-                                                add("libero"),
-                                                add("nobis"),
-                                                add("dolores"),
-                                                add("quis"),
+                                                add("architecto"),
+                                                add("architecto"),
                                             }};
                                             signatureRrdatas = new String[]{{
-                                                add("dignissimos"),
-                                                add("eaque"),
-                                                add("quis"),
+                                                add("ullam"),
+                                                add("expedita"),
+                                                add("nihil"),
+                                                add("repellat"),
                                             }};
-                                            weight = 1999.96;
+                                            weight = 8411.4;
                                         }}),
-                                    }};
-                                    kind = "eos";
-                                }};
-                                wrrPolicy = new RRSetRoutingPolicyWrrPolicy() {{
-                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem[]{{
                                         add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
                                             healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
                                                 internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "saepe";
+                                                        ipProtocol = "udp";
+                                                        kind = "accusantium";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "praesentium";
+                                                        port = "natus";
+                                                        project = "magni";
+                                                        region = "sunt";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "quo";
+                                            rrdatas = new String[]{{
+                                                add("pariatur"),
+                                                add("maxime"),
+                                                add("ea"),
+                                                add("excepturi"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("ea"),
+                                            }};
+                                            weight = 332.22;
+                                        }}),
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "maiores";
+                                                        ipProtocol = "udp";
+                                                        kind = "ipsam";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "autem";
+                                                        port = "nam";
+                                                        project = "eaque";
+                                                        region = "pariatur";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "nemo";
+                                            rrdatas = new String[]{{
+                                                add("perferendis"),
+                                                add("fugiat"),
+                                                add("amet"),
+                                                add("aut"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("corporis"),
+                                                add("hic"),
+                                                add("libero"),
+                                                add("nobis"),
+                                            }};
+                                            weight = 1716.29;
+                                        }}),
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "totam";
+                                                        ipProtocol = "tcp";
+                                                        kind = "eaque";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "nesciunt";
+                                                        port = "eos";
+                                                        project = "perferendis";
+                                                        region = "dolores";
+                                                    }}),
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
                                                         ipAddress = "minus";
                                                         ipProtocol = "tcp";
@@ -577,24 +562,222 @@ public class Application {
                                     }};
                                     kind = "adipisci";
                                 }};
+                                wrrPolicy = new RRSetRoutingPolicyWrrPolicy() {{
+                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem[]{{
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "modi";
+                                                        ipProtocol = "tcp";
+                                                        kind = "dolorum";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "pariatur";
+                                                        port = "provident";
+                                                        project = "nobis";
+                                                        region = "libero";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "delectus";
+                                                        ipProtocol = "undefined";
+                                                        kind = "quos";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "dolorem";
+                                                        port = "dolorem";
+                                                        project = "dolor";
+                                                        region = "qui";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "ipsum";
+                                                        ipProtocol = "udp";
+                                                        kind = "excepturi";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "voluptate";
+                                                        port = "dignissimos";
+                                                        project = "reiciendis";
+                                                        region = "amet";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "dolorum";
+                                                        ipProtocol = "undefined";
+                                                        kind = "veritatis";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "ipsa";
+                                                        port = "iure";
+                                                        project = "odio";
+                                                        region = "quaerat";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "accusamus";
+                                            rrdatas = new String[]{{
+                                                add("voluptatibus"),
+                                                add("voluptas"),
+                                                add("natus"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("atque"),
+                                            }};
+                                            weight = 246.78;
+                                        }}),
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "ab";
+                                                        ipProtocol = "udp";
+                                                        kind = "dolorum";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "voluptate";
+                                                        port = "dolorum";
+                                                        project = "deleniti";
+                                                        region = "omnis";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "necessitatibus";
+                                                        ipProtocol = "udp";
+                                                        kind = "asperiores";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "ipsum";
+                                                        port = "voluptate";
+                                                        project = "id";
+                                                        region = "saepe";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "eius";
+                                                        ipProtocol = "undefined";
+                                                        kind = "perferendis";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "optio";
+                                                        port = "accusamus";
+                                                        project = "ad";
+                                                        region = "saepe";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "suscipit";
+                                                        ipProtocol = "tcp";
+                                                        kind = "provident";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "repellendus";
+                                                        port = "totam";
+                                                        project = "similique";
+                                                        region = "alias";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "at";
+                                            rrdatas = new String[]{{
+                                                add("tempora"),
+                                                add("vel"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("officiis"),
+                                                add("qui"),
+                                                add("dolorum"),
+                                                add("a"),
+                                            }};
+                                            weight = 4561.3;
+                                        }}),
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "iusto";
+                                                        ipProtocol = "undefined";
+                                                        kind = "quisquam";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "amet";
+                                                        port = "tempore";
+                                                        project = "accusamus";
+                                                        region = "numquam";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "enim";
+                                                        ipProtocol = "undefined";
+                                                        kind = "sapiente";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "nihil";
+                                                        port = "sit";
+                                                        project = "expedita";
+                                                        region = "neque";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "sed";
+                                                        ipProtocol = "tcp";
+                                                        kind = "libero";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "deserunt";
+                                                        port = "quam";
+                                                        project = "ipsum";
+                                                        region = "incidunt";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "qui";
+                                            rrdatas = new String[]{{
+                                                add("maxime"),
+                                                add("pariatur"),
+                                                add("soluta"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("laborum"),
+                                            }};
+                                            weight = 5173.79;
+                                        }}),
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "aspernatur";
+                                                        ipProtocol = "undefined";
+                                                        kind = "distinctio";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "aliquid";
+                                                        port = "quam";
+                                                        project = "molestias";
+                                                        region = "temporibus";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "qui";
+                                                        ipProtocol = "undefined";
+                                                        kind = "fugit";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "odio";
+                                                        port = "sunt";
+                                                        project = "ullam";
+                                                        region = "nam";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "hic";
+                                            rrdatas = new String[]{{
+                                                add("cumque"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("nobis"),
+                                                add("et"),
+                                                add("saepe"),
+                                            }};
+                                            weight = 2174.5;
+                                        }}),
+                                    }};
+                                    kind = "veritatis";
+                                }};
                             }};
                             rrdatas = new String[]{{
-                                add("earum"),
-                                add("modi"),
-                                add("iste"),
-                                add("dolorum"),
+                                add("quos"),
+                                add("tempore"),
+                                add("cupiditate"),
                             }};
                             signatureRrdatas = new String[]{{
-                                add("pariatur"),
-                                add("provident"),
-                                add("nobis"),
+                                add("delectus"),
                             }};
-                            ttl = 730122;
-                            type = "delectus";
+                            ttl = 209157;
+                            type = "dolore";
                         }}),
                         add(new ResourceRecordSet() {{
-                            kind = "quaerat";
-                            name = "quos";
+                            kind = "labore";
+                            name = "adipisci";
                             routingPolicy = new RRSetRoutingPolicy() {{
                                 geo = new RRSetRoutingPolicyGeoPolicy() {{
                                     enableFencing = false;
@@ -603,291 +786,77 @@ public class Application {
                                             healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
                                                 internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "dolorem";
+                                                        ipAddress = "quae";
                                                         ipProtocol = "undefined";
-                                                        kind = "qui";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "hic";
-                                                        port = "excepturi";
-                                                        project = "cum";
-                                                        region = "voluptate";
+                                                        kind = "quas";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "consequatur";
+                                                        port = "est";
+                                                        project = "repellendus";
+                                                        region = "porro";
                                                     }}),
                                                 }};
                                             }};
-                                            kind = "dignissimos";
-                                            location = "reiciendis";
+                                            kind = "doloribus";
+                                            location = "ut";
                                             rrdatas = new String[]{{
-                                                add("dolorum"),
+                                                add("cupiditate"),
+                                                add("qui"),
+                                                add("quae"),
                                             }};
                                             signatureRrdatas = new String[]{{
-                                                add("veritatis"),
-                                                add("ipsa"),
+                                                add("odio"),
+                                                add("occaecati"),
+                                                add("voluptatibus"),
                                             }};
                                         }}),
                                         add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
                                             healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
                                                 internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "iure";
+                                                        ipAddress = "vero";
                                                         ipProtocol = "tcp";
-                                                        kind = "quaerat";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "quidem";
-                                                        port = "voluptatibus";
-                                                        project = "voluptas";
-                                                        region = "natus";
-                                                    }}),
-                                                }};
-                                            }};
-                                            kind = "eos";
-                                            location = "atque";
-                                            rrdatas = new String[]{{
-                                                add("fugiat"),
-                                            }};
-                                            signatureRrdatas = new String[]{{
-                                                add("soluta"),
-                                            }};
-                                        }}),
-                                    }};
-                                    kind = "dolorum";
-                                }};
-                                geoPolicy = new RRSetRoutingPolicyGeoPolicy() {{
-                                    enableFencing = false;
-                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem[]{{
-                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
-                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "dolorum";
-                                                        ipProtocol = "tcp";
-                                                        kind = "omnis";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "distinctio";
-                                                        port = "asperiores";
-                                                        project = "nihil";
-                                                        region = "ipsum";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "voluptate";
-                                                        ipProtocol = "tcp";
-                                                        kind = "saepe";
+                                                        kind = "quis";
                                                         loadBalancerType = "none";
-                                                        networkUrl = "aspernatur";
-                                                        port = "perferendis";
-                                                        project = "amet";
-                                                        region = "optio";
+                                                        networkUrl = "delectus";
+                                                        port = "voluptate";
+                                                        project = "consectetur";
+                                                        region = "vero";
                                                     }}),
-                                                }};
-                                            }};
-                                            kind = "accusamus";
-                                            location = "ad";
-                                            rrdatas = new String[]{{
-                                                add("suscipit"),
-                                                add("deserunt"),
-                                                add("provident"),
-                                                add("minima"),
-                                            }};
-                                            signatureRrdatas = new String[]{{
-                                                add("totam"),
-                                                add("similique"),
-                                                add("alias"),
-                                                add("at"),
-                                            }};
-                                        }}),
-                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
-                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "tempora";
+                                                        ipAddress = "tenetur";
                                                         ipProtocol = "tcp";
-                                                        kind = "quod";
+                                                        kind = "hic";
                                                         loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "qui";
-                                                        port = "dolorum";
-                                                        project = "a";
-                                                        region = "esse";
+                                                        networkUrl = "quod";
+                                                        port = "odio";
+                                                        project = "similique";
+                                                        region = "facilis";
                                                     }}),
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "harum";
+                                                        ipAddress = "vero";
                                                         ipProtocol = "tcp";
-                                                        kind = "ipsum";
+                                                        kind = "dolore";
                                                         loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "tenetur";
-                                                        port = "amet";
-                                                        project = "tempore";
-                                                        region = "accusamus";
+                                                        networkUrl = "illum";
+                                                        port = "sequi";
+                                                        project = "natus";
+                                                        region = "impedit";
                                                     }}),
-                                                }};
-                                            }};
-                                            kind = "numquam";
-                                            location = "enim";
-                                            rrdatas = new String[]{{
-                                                add("sapiente"),
-                                            }};
-                                            signatureRrdatas = new String[]{{
-                                                add("nihil"),
-                                                add("sit"),
-                                                add("expedita"),
-                                            }};
-                                        }}),
-                                    }};
-                                    kind = "neque";
-                                }};
-                                kind = "sed";
-                                primaryBackup = new RRSetRoutingPolicyPrimaryBackupPolicy() {{
-                                    backupGeoTargets = new RRSetRoutingPolicyGeoPolicy() {{
-                                        enableFencing = false;
-                                        items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem[]{{
-                                            add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
-                                                healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                    internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
-                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                            ipAddress = "voluptas";
-                                                            ipProtocol = "tcp";
-                                                            kind = "quam";
-                                                            loadBalancerType = "none";
-                                                            networkUrl = "incidunt";
-                                                            port = "qui";
-                                                            project = "cupiditate";
-                                                            region = "maxime";
-                                                        }}),
-                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                            ipAddress = "pariatur";
-                                                            ipProtocol = "udp";
-                                                            kind = "dicta";
-                                                            loadBalancerType = "regionalL4ilb";
-                                                            networkUrl = "totam";
-                                                            port = "incidunt";
-                                                            project = "aspernatur";
-                                                            region = "dolores";
-                                                        }}),
-                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                            ipAddress = "distinctio";
-                                                            ipProtocol = "udp";
-                                                            kind = "aliquid";
-                                                            loadBalancerType = "none";
-                                                            networkUrl = "molestias";
-                                                            port = "temporibus";
-                                                            project = "qui";
-                                                            region = "neque";
-                                                        }}),
-                                                    }};
-                                                }};
-                                                kind = "fugit";
-                                                location = "magni";
-                                                rrdatas = new String[]{{
-                                                    add("sunt"),
-                                                    add("ullam"),
-                                                }};
-                                                signatureRrdatas = new String[]{{
-                                                    add("hic"),
-                                                    add("voluptatem"),
-                                                    add("cumque"),
-                                                }};
-                                            }}),
-                                            add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
-                                                healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                    internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
-                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                            ipAddress = "nobis";
-                                                            ipProtocol = "undefined";
-                                                            kind = "saepe";
-                                                            loadBalancerType = "none";
-                                                            networkUrl = "veritatis";
-                                                            port = "nobis";
-                                                            project = "quos";
-                                                            region = "tempore";
-                                                        }}),
-                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                            ipAddress = "cupiditate";
-                                                            ipProtocol = "undefined";
-                                                            kind = "delectus";
-                                                            loadBalancerType = "none";
-                                                            networkUrl = "dolore";
-                                                            port = "labore";
-                                                            project = "adipisci";
-                                                            region = "dolorum";
-                                                        }}),
-                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                            ipAddress = "architecto";
-                                                            ipProtocol = "undefined";
-                                                            kind = "aut";
-                                                            loadBalancerType = "regionalL4ilb";
-                                                            networkUrl = "itaque";
-                                                            port = "consequatur";
-                                                            project = "est";
-                                                            region = "repellendus";
-                                                        }}),
-                                                    }};
-                                                }};
-                                                kind = "porro";
-                                                location = "doloribus";
-                                                rrdatas = new String[]{{
-                                                    add("facilis"),
-                                                    add("cupiditate"),
-                                                }};
-                                                signatureRrdatas = new String[]{{
-                                                    add("quae"),
-                                                }};
-                                            }}),
-                                        }};
-                                        kind = "laudantium";
-                                    }};
-                                    kind = "odio";
-                                    primaryTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                        internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
-                                            add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                ipAddress = "voluptatibus";
-                                                ipProtocol = "udp";
-                                                kind = "vero";
-                                                loadBalancerType = "regionalL4ilb";
-                                                networkUrl = "quis";
-                                                port = "ipsum";
-                                                project = "delectus";
-                                                region = "voluptate";
-                                            }}),
-                                            add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                ipAddress = "consectetur";
-                                                ipProtocol = "udp";
-                                                kind = "tenetur";
-                                                loadBalancerType = "none";
-                                                networkUrl = "hic";
-                                                port = "distinctio";
-                                                project = "quod";
-                                                region = "odio";
-                                            }}),
-                                            add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                ipAddress = "similique";
-                                                ipProtocol = "udp";
-                                                kind = "vero";
-                                                loadBalancerType = "none";
-                                                networkUrl = "dolore";
-                                                port = "quibusdam";
-                                                project = "illum";
-                                                region = "sequi";
-                                            }}),
-                                        }};
-                                    }};
-                                    trickleTraffic = 6178.77;
-                                }};
-                                wrr = new RRSetRoutingPolicyWrrPolicy() {{
-                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem[]{{
-                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
-                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "voluptatibus";
-                                                        ipProtocol = "tcp";
-                                                        kind = "nulla";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "porro";
-                                                        port = "maiores";
-                                                        project = "doloribus";
-                                                        region = "iusto";
+                                                        ipAddress = "aut";
+                                                        ipProtocol = "udp";
+                                                        kind = "exercitationem";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "fugit";
+                                                        port = "porro";
+                                                        project = "maiores";
+                                                        region = "doloribus";
                                                     }}),
                                                 }};
                                             }};
-                                            kind = "eligendi";
+                                            kind = "iusto";
+                                            location = "eligendi";
                                             rrdatas = new String[]{{
                                                 add("alias"),
                                                 add("officia"),
@@ -896,143 +865,149 @@ public class Application {
                                                 add("ipsam"),
                                                 add("ea"),
                                             }};
-                                            weight = 1369;
                                         }}),
-                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
                                             healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
                                                 internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "possimus";
-                                                        ipProtocol = "undefined";
-                                                        kind = "ratione";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "laudantium";
-                                                        port = "dicta";
-                                                        project = "dolor";
-                                                        region = "maiores";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "quasi";
-                                                        ipProtocol = "tcp";
-                                                        kind = "nulla";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "voluptatibus";
-                                                        port = "nostrum";
-                                                        project = "sapiente";
-                                                        region = "quisquam";
-                                                    }}),
-                                                }};
-                                            }};
-                                            kind = "saepe";
-                                            rrdatas = new String[]{{
-                                                add("impedit"),
-                                                add("corporis"),
-                                            }};
-                                            signatureRrdatas = new String[]{{
-                                                add("aliquid"),
-                                                add("inventore"),
-                                            }};
-                                            weight = 3018.31;
-                                        }}),
-                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
-                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "quo";
-                                                        ipProtocol = "undefined";
-                                                        kind = "recusandae";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "minima";
-                                                        port = "eaque";
-                                                        project = "a";
-                                                        region = "libero";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "aut";
-                                                        ipProtocol = "undefined";
-                                                        kind = "deleniti";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "aliquam";
-                                                        port = "fugit";
-                                                        project = "accusamus";
-                                                        region = "inventore";
-                                                    }}),
-                                                }};
-                                            }};
-                                            kind = "non";
-                                            rrdatas = new String[]{{
-                                                add("dolorum"),
-                                            }};
-                                            signatureRrdatas = new String[]{{
-                                                add("placeat"),
-                                                add("velit"),
-                                                add("eum"),
-                                            }};
-                                            weight = 4205.39;
-                                        }}),
-                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
-                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "quas";
+                                                        ipAddress = "vel";
                                                         ipProtocol = "udp";
-                                                        kind = "nulla";
+                                                        kind = "magnam";
                                                         loadBalancerType = "none";
+                                                        networkUrl = "ex";
+                                                        port = "laudantium";
+                                                        project = "dicta";
+                                                        region = "dolor";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "maiores";
+                                            location = "quasi";
+                                            rrdatas = new String[]{{
+                                                add("nulla"),
+                                                add("excepturi"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("nostrum"),
+                                                add("sapiente"),
+                                                add("quisquam"),
+                                                add("saepe"),
+                                            }};
+                                        }}),
+                                    }};
+                                    kind = "ea";
+                                }};
+                                geoPolicy = new RRSetRoutingPolicyGeoPolicy() {{
+                                    enableFencing = false;
+                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem[]{{
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "veniam";
+                                                        ipProtocol = "tcp";
+                                                        kind = "inventore";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "ea";
+                                                        port = "quo";
+                                                        project = "consectetur";
+                                                        region = "recusandae";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "aspernatur";
+                                                        ipProtocol = "undefined";
+                                                        kind = "eaque";
+                                                        loadBalancerType = "regionalL4ilb";
                                                         networkUrl = "libero";
-                                                        port = "quasi";
-                                                        project = "tempora";
-                                                        region = "numquam";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "explicabo";
-                                                        ipProtocol = "tcp";
-                                                        kind = "ipsa";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "magnam";
-                                                        port = "odio";
-                                                        project = "eius";
-                                                        region = "esse";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "esse";
-                                                        ipProtocol = "tcp";
-                                                        kind = "fuga";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "quidem";
-                                                        port = "fugiat";
-                                                        project = "ut";
-                                                        region = "eum";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "suscipit";
-                                                        ipProtocol = "udp";
-                                                        kind = "eos";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "quisquam";
-                                                        port = "veritatis";
-                                                        project = "ipsa";
-                                                        region = "id";
+                                                        port = "aut";
+                                                        project = "aut";
+                                                        region = "deleniti";
                                                     }}),
                                                 }};
                                             }};
-                                            kind = "quidem";
+                                            kind = "impedit";
+                                            location = "aliquam";
                                             rrdatas = new String[]{{
-                                                add("quo"),
+                                                add("accusamus"),
                                             }};
                                             signatureRrdatas = new String[]{{
-                                                add("quo"),
+                                                add("non"),
+                                            }};
+                                        }}),
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "dolorum";
+                                                        ipProtocol = "udp";
+                                                        kind = "placeat";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "eum";
+                                                        port = "autem";
+                                                        project = "nobis";
+                                                        region = "quas";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "assumenda";
+                                            location = "nulla";
+                                            rrdatas = new String[]{{
+                                                add("libero"),
+                                                add("quasi"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("numquam"),
+                                                add("explicabo"),
+                                            }};
+                                        }}),
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "ipsa";
+                                                        ipProtocol = "tcp";
+                                                        kind = "magnam";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "eius";
+                                                        port = "esse";
+                                                        project = "esse";
+                                                        region = "rem";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "fuga";
+                                                        ipProtocol = "tcp";
+                                                        kind = "quidem";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "ut";
+                                                        port = "eum";
+                                                        project = "suscipit";
+                                                        region = "assumenda";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "eos";
+                                                        ipProtocol = "tcp";
+                                                        kind = "quisquam";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "ipsa";
+                                                        port = "id";
+                                                        project = "quidem";
+                                                        region = "neque";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "quo";
+                                            location = "illum";
+                                            rrdatas = new String[]{{
                                                 add("fuga"),
                                                 add("eius"),
                                                 add("eos"),
+                                                add("voluptas"),
                                             }};
-                                            weight = 3738.13;
+                                            signatureRrdatas = new String[]{{
+                                                add("cupiditate"),
+                                            }};
                                         }}),
-                                    }};
-                                    kind = "ab";
-                                }};
-                                wrrPolicy = new RRSetRoutingPolicyWrrPolicy() {{
-                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem[]{{
-                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
                                             healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
                                                 internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
@@ -1048,335 +1023,24 @@ public class Application {
                                                 }};
                                             }};
                                             kind = "aperiam";
+                                            location = "distinctio";
                                             rrdatas = new String[]{{
-                                                add("quod"),
                                                 add("dignissimos"),
                                                 add("inventore"),
-                                            }};
-                                            signatureRrdatas = new String[]{{
+                                                add("nihil"),
                                                 add("totam"),
-                                                add("accusamus"),
-                                            }};
-                                            weight = 3068.1;
-                                        }}),
-                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
-                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "occaecati";
-                                                        ipProtocol = "tcp";
-                                                        kind = "sapiente";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "deserunt";
-                                                        port = "molestiae";
-                                                        project = "accusantium";
-                                                        region = "porro";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "eum";
-                                                        ipProtocol = "tcp";
-                                                        kind = "praesentium";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "deleniti";
-                                                        port = "fugit";
-                                                        project = "fuga";
-                                                        region = "mollitia";
-                                                    }}),
-                                                }};
-                                            }};
-                                            kind = "incidunt";
-                                            rrdatas = new String[]{{
-                                                add("explicabo"),
-                                                add("minima"),
-                                                add("nisi"),
                                             }};
                                             signatureRrdatas = new String[]{{
-                                                add("sapiente"),
-                                            }};
-                                            weight = 1598.7;
-                                        }}),
-                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
-                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "explicabo";
-                                                        ipProtocol = "udp";
-                                                        kind = "occaecati";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "et";
-                                                        port = "esse";
-                                                        project = "eveniet";
-                                                        region = "accusamus";
-                                                    }}),
-                                                }};
-                                            }};
-                                            kind = "veritatis";
-                                            rrdatas = new String[]{{
-                                                add("quod"),
-                                                add("nam"),
-                                            }};
-                                            signatureRrdatas = new String[]{{
-                                                add("aliquid"),
-                                                add("quasi"),
-                                                add("saepe"),
-                                                add("vel"),
-                                            }};
-                                            weight = 6900.25;
-                                        }}),
-                                    }};
-                                    kind = "molestiae";
-                                }};
-                            }};
-                            rrdatas = new String[]{{
-                                add("occaecati"),
-                                add("minima"),
-                                add("distinctio"),
-                            }};
-                            signatureRrdatas = new String[]{{
-                                add("sit"),
-                                add("culpa"),
-                                add("tempore"),
-                                add("adipisci"),
-                            }};
-                            ttl = 766964;
-                            type = "consequuntur";
-                        }}),
-                    }};
-                    deletions = new org.openapis.openapi.models.shared.ResourceRecordSet[]{{
-                        add(new ResourceRecordSet() {{
-                            kind = "minus";
-                            name = "quaerat";
-                            routingPolicy = new RRSetRoutingPolicy() {{
-                                geo = new RRSetRoutingPolicyGeoPolicy() {{
-                                    enableFencing = false;
-                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem[]{{
-                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
-                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "esse";
-                                                        ipProtocol = "tcp";
-                                                        kind = "provident";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "nulla";
-                                                        port = "quas";
-                                                        project = "esse";
-                                                        region = "quasi";
-                                                    }}),
-                                                }};
-                                            }};
-                                            kind = "a";
-                                            location = "error";
-                                            rrdatas = new String[]{{
-                                                add("pariatur"),
-                                                add("possimus"),
-                                                add("quia"),
-                                            }};
-                                            signatureRrdatas = new String[]{{
-                                                add("asperiores"),
-                                                add("facere"),
-                                                add("veritatis"),
-                                                add("consequuntur"),
-                                            }};
-                                        }}),
-                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
-                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "similique";
-                                                        ipProtocol = "tcp";
-                                                        kind = "aliquid";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "quae";
-                                                        port = "earum";
-                                                        project = "vel";
-                                                        region = "in";
-                                                    }}),
-                                                }};
-                                            }};
-                                            kind = "eius";
-                                            location = "libero";
-                                            rrdatas = new String[]{{
-                                                add("soluta"),
-                                                add("accusantium"),
                                                 add("aliquam"),
-                                                add("sapiente"),
-                                            }};
-                                            signatureRrdatas = new String[]{{
-                                                add("ullam"),
-                                            }};
-                                        }}),
-                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
-                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "ullam";
-                                                        ipProtocol = "tcp";
-                                                        kind = "aut";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "qui";
-                                                        port = "quibusdam";
-                                                        project = "ex";
-                                                        region = "deleniti";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "itaque";
-                                                        ipProtocol = "udp";
-                                                        kind = "architecto";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "tenetur";
-                                                        port = "quasi";
-                                                        project = "at";
-                                                        region = "et";
-                                                    }}),
-                                                }};
-                                            }};
-                                            kind = "voluptate";
-                                            location = "ipsa";
-                                            rrdatas = new String[]{{
-                                                add("veritatis"),
-                                                add("consectetur"),
-                                            }};
-                                            signatureRrdatas = new String[]{{
-                                                add("iste"),
-                                            }};
-                                        }}),
-                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
-                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "accusantium";
-                                                        ipProtocol = "tcp";
-                                                        kind = "aut";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "eum";
-                                                        port = "mollitia";
-                                                        project = "ab";
-                                                        region = "corrupti";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "non";
-                                                        ipProtocol = "undefined";
-                                                        kind = "dolor";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "numquam";
-                                                        port = "impedit";
-                                                        project = "explicabo";
-                                                        region = "voluptas";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "aut";
-                                                        ipProtocol = "tcp";
-                                                        kind = "dicta";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "natus";
-                                                        port = "velit";
-                                                        project = "voluptatibus";
-                                                        region = "voluptas";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "asperiores";
-                                                        ipProtocol = "undefined";
-                                                        kind = "ea";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "consequuntur";
-                                                        port = "repellendus";
-                                                        project = "officia";
-                                                        region = "maxime";
-                                                    }}),
-                                                }};
-                                            }};
-                                            kind = "dignissimos";
-                                            location = "officia";
-                                            rrdatas = new String[]{{
-                                                add("nemo"),
-                                                add("quae"),
-                                                add("quaerat"),
-                                                add("porro"),
-                                            }};
-                                            signatureRrdatas = new String[]{{
-                                                add("labore"),
-                                                add("ab"),
-                                                add("adipisci"),
-                                                add("fuga"),
-                                            }};
-                                        }}),
-                                    }};
-                                    kind = "id";
-                                }};
-                                geoPolicy = new RRSetRoutingPolicyGeoPolicy() {{
-                                    enableFencing = false;
-                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem[]{{
-                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
-                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "culpa";
-                                                        ipProtocol = "tcp";
-                                                        kind = "recusandae";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "fugiat";
-                                                        port = "vel";
-                                                        project = "ducimus";
-                                                        region = "quos";
-                                                    }}),
-                                                }};
-                                            }};
-                                            kind = "vel";
-                                            location = "labore";
-                                            rrdatas = new String[]{{
-                                                add("facilis"),
-                                                add("cum"),
+                                                add("odio"),
+                                                add("occaecati"),
                                                 add("commodi"),
-                                                add("in"),
-                                            }};
-                                            signatureRrdatas = new String[]{{
-                                                add("reiciendis"),
-                                                add("assumenda"),
-                                            }};
-                                        }}),
-                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
-                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "recusandae";
-                                                        ipProtocol = "tcp";
-                                                        kind = "aperiam";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "consectetur";
-                                                        port = "in";
-                                                        project = "exercitationem";
-                                                        region = "earum";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "facere";
-                                                        ipProtocol = "undefined";
-                                                        kind = "doloribus";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "reiciendis";
-                                                        port = "quidem";
-                                                        project = "saepe";
-                                                        region = "necessitatibus";
-                                                    }}),
-                                                }};
-                                            }};
-                                            kind = "dolore";
-                                            location = "sunt";
-                                            rrdatas = new String[]{{
-                                                add("adipisci"),
-                                                add("non"),
-                                                add("amet"),
-                                                add("beatae"),
-                                            }};
-                                            signatureRrdatas = new String[]{{
-                                                add("a"),
-                                                add("debitis"),
                                             }};
                                         }}),
                                     }};
-                                    kind = "consectetur";
+                                    kind = "sapiente";
                                 }};
-                                kind = "corporis";
+                                kind = "dolores";
                                 primaryBackup = new RRSetRoutingPolicyPrimaryBackupPolicy() {{
                                     backupGeoTargets = new RRSetRoutingPolicyGeoPolicy() {{
                                         enableFencing = false;
@@ -1385,173 +1049,160 @@ public class Application {
                                                 healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
                                                     internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                         add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                            ipAddress = "ipsa";
+                                                            ipAddress = "accusantium";
                                                             ipProtocol = "udp";
-                                                            kind = "libero";
-                                                            loadBalancerType = "none";
-                                                            networkUrl = "accusamus";
-                                                            port = "similique";
-                                                            project = "tempora";
-                                                            region = "aspernatur";
+                                                            kind = "eum";
+                                                            loadBalancerType = "regionalL4ilb";
+                                                            networkUrl = "praesentium";
+                                                            port = "consequuntur";
+                                                            project = "deleniti";
+                                                            region = "fugit";
                                                         }}),
                                                         add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                            ipAddress = "voluptas";
+                                                            ipAddress = "fuga";
                                                             ipProtocol = "tcp";
-                                                            kind = "voluptas";
-                                                            loadBalancerType = "none";
-                                                            networkUrl = "nobis";
-                                                            port = "dolorum";
-                                                            project = "adipisci";
-                                                            region = "minus";
+                                                            kind = "incidunt";
+                                                            loadBalancerType = "regionalL4ilb";
+                                                            networkUrl = "explicabo";
+                                                            port = "minima";
+                                                            project = "nisi";
+                                                            region = "fugit";
                                                         }}),
                                                     }};
                                                 }};
-                                                kind = "dolores";
-                                                location = "blanditiis";
-                                                rrdatas = new String[]{{
-                                                    add("dolore"),
-                                                    add("aliquam"),
-                                                }};
-                                                signatureRrdatas = new String[]{{
-                                                    add("temporibus"),
-                                                    add("ullam"),
-                                                    add("adipisci"),
-                                                    add("cum"),
-                                                }};
-                                            }}),
-                                            add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
-                                                healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                    internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
-                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                            ipAddress = "quas";
-                                                            ipProtocol = "udp";
-                                                            kind = "nesciunt";
-                                                            loadBalancerType = "regionalL4ilb";
-                                                            networkUrl = "corrupti";
-                                                            port = "pariatur";
-                                                            project = "totam";
-                                                            region = "hic";
-                                                        }}),
-                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                            ipAddress = "exercitationem";
-                                                            ipProtocol = "udp";
-                                                            kind = "sit";
-                                                            loadBalancerType = "regionalL4ilb";
-                                                            networkUrl = "sed";
-                                                            port = "reiciendis";
-                                                            project = "explicabo";
-                                                            region = "asperiores";
-                                                        }}),
-                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                            ipAddress = "facilis";
-                                                            ipProtocol = "tcp";
-                                                            kind = "expedita";
-                                                            loadBalancerType = "none";
-                                                            networkUrl = "iste";
-                                                            port = "dolore";
-                                                            project = "laborum";
-                                                            region = "sed";
-                                                        }}),
-                                                    }};
-                                                }};
-                                                kind = "in";
-                                                location = "commodi";
+                                                kind = "sapiente";
+                                                location = "consequuntur";
                                                 rrdatas = new String[]{{
                                                     add("explicabo"),
-                                                    add("voluptas"),
-                                                    add("unde"),
                                                 }};
                                                 signatureRrdatas = new String[]{{
-                                                    add("suscipit"),
+                                                    add("occaecati"),
+                                                    add("atque"),
+                                                    add("et"),
+                                                    add("esse"),
                                                 }};
                                             }}),
                                             add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
                                                 healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
                                                     internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                         add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                            ipAddress = "debitis";
+                                                            ipAddress = "accusamus";
                                                             ipProtocol = "undefined";
-                                                            kind = "reiciendis";
-                                                            loadBalancerType = "none";
-                                                            networkUrl = "corrupti";
-                                                            port = "maiores";
-                                                            project = "incidunt";
-                                                            region = "sed";
-                                                        }}),
-                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                            ipAddress = "provident";
-                                                            ipProtocol = "undefined";
-                                                            kind = "necessitatibus";
-                                                            loadBalancerType = "none";
-                                                            networkUrl = "ea";
-                                                            port = "occaecati";
-                                                            project = "quos";
-                                                            region = "voluptatibus";
-                                                        }}),
-                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                            ipAddress = "tempora";
-                                                            ipProtocol = "undefined";
-                                                            kind = "voluptate";
+                                                            kind = "esse";
                                                             loadBalancerType = "regionalL4ilb";
-                                                            networkUrl = "ex";
-                                                            port = "sit";
-                                                            project = "non";
-                                                            region = "officiis";
+                                                            networkUrl = "nam";
+                                                            port = "vero";
+                                                            project = "aliquid";
+                                                            region = "quasi";
                                                         }}),
                                                         add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                            ipAddress = "praesentium";
-                                                            ipProtocol = "udp";
-                                                            kind = "quaerat";
+                                                            ipAddress = "saepe";
+                                                            ipProtocol = "tcp";
+                                                            kind = "harum";
                                                             loadBalancerType = "none";
-                                                            networkUrl = "ipsam";
-                                                            port = "debitis";
-                                                            project = "rem";
-                                                            region = "sit";
+                                                            networkUrl = "rerum";
+                                                            port = "occaecati";
+                                                            project = "minima";
+                                                            region = "distinctio";
+                                                        }}),
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "eligendi";
+                                                            ipProtocol = "undefined";
+                                                            kind = "culpa";
+                                                            loadBalancerType = "regionalL4ilb";
+                                                            networkUrl = "adipisci";
+                                                            port = "cumque";
+                                                            project = "consequuntur";
+                                                            region = "consequatur";
+                                                        }}),
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "minus";
+                                                            ipProtocol = "undefined";
+                                                            kind = "sapiente";
+                                                            loadBalancerType = "none";
+                                                            networkUrl = "esse";
+                                                            port = "blanditiis";
+                                                            project = "provident";
+                                                            region = "a";
                                                         }}),
                                                     }};
                                                 }};
-                                                kind = "nobis";
-                                                location = "error";
+                                                kind = "nulla";
+                                                location = "quas";
                                                 rrdatas = new String[]{{
-                                                    add("minima"),
-                                                    add("recusandae"),
+                                                    add("quasi"),
+                                                    add("a"),
                                                 }};
                                                 signatureRrdatas = new String[]{{
-                                                    add("nulla"),
-                                                    add("magni"),
-                                                    add("aperiam"),
-                                                    add("saepe"),
+                                                    add("sint"),
+                                                    add("pariatur"),
+                                                    add("possimus"),
+                                                }};
+                                            }}),
+                                            add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                                healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                    internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "eveniet";
+                                                            ipProtocol = "udp";
+                                                            kind = "facere";
+                                                            loadBalancerType = "none";
+                                                            networkUrl = "consequuntur";
+                                                            port = "quasi";
+                                                            project = "similique";
+                                                            region = "culpa";
+                                                        }}),
+                                                    }};
+                                                }};
+                                                kind = "aliquid";
+                                                location = "tenetur";
+                                                rrdatas = new String[]{{
+                                                    add("earum"),
+                                                }};
+                                                signatureRrdatas = new String[]{{
+                                                    add("in"),
+                                                    add("eius"),
                                                 }};
                                             }}),
                                         }};
-                                        kind = "numquam";
+                                        kind = "libero";
                                     }};
-                                    kind = "veniam";
+                                    kind = "illum";
                                     primaryTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
                                         internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                             add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                ipAddress = "officiis";
+                                                ipAddress = "accusantium";
                                                 ipProtocol = "undefined";
-                                                kind = "laudantium";
+                                                kind = "sapiente";
                                                 loadBalancerType = "none";
-                                                networkUrl = "praesentium";
-                                                port = "cum";
-                                                project = "laboriosam";
+                                                networkUrl = "ullam";
+                                                port = "reprehenderit";
+                                                project = "ullam";
+                                                region = "nisi";
+                                            }}),
+                                            add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                ipAddress = "aut";
+                                                ipProtocol = "tcp";
+                                                kind = "qui";
+                                                loadBalancerType = "regionalL4ilb";
+                                                networkUrl = "ex";
+                                                port = "deleniti";
+                                                project = "itaque";
                                                 region = "dolorum";
                                             }}),
                                             add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                ipAddress = "voluptatum";
+                                                ipAddress = "architecto";
                                                 ipProtocol = "tcp";
-                                                kind = "hic";
-                                                loadBalancerType = "regionalL4ilb";
-                                                networkUrl = "debitis";
-                                                port = "neque";
-                                                project = "dolorum";
-                                                region = "nostrum";
+                                                kind = "tenetur";
+                                                loadBalancerType = "none";
+                                                networkUrl = "at";
+                                                port = "et";
+                                                project = "voluptate";
+                                                region = "ipsa";
                                             }}),
                                         }};
                                     }};
-                                    trickleTraffic = 6390.28;
+                                    trickleTraffic = 3267.01;
                                 }};
                                 wrr = new RRSetRoutingPolicyWrrPolicy() {{
                                     items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem[]{{
@@ -1559,134 +1210,29 @@ public class Application {
                                             healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
                                                 internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "accusamus";
-                                                        ipProtocol = "undefined";
-                                                        kind = "atque";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "ut";
-                                                        port = "fugiat";
-                                                        project = "voluptatem";
-                                                        region = "culpa";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "expedita";
-                                                        ipProtocol = "undefined";
-                                                        kind = "consequatur";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "ipsam";
-                                                        port = "sit";
-                                                        project = "voluptatum";
-                                                        region = "quas";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "repudiandae";
+                                                        ipAddress = "adipisci";
                                                         ipProtocol = "tcp";
-                                                        kind = "et";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "ex";
-                                                        port = "sed";
-                                                        project = "sit";
-                                                        region = "vel";
-                                                    }}),
-                                                }};
-                                            }};
-                                            kind = "nostrum";
-                                            rrdatas = new String[]{{
-                                                add("error"),
-                                                add("consequatur"),
-                                                add("incidunt"),
-                                                add("reiciendis"),
-                                            }};
-                                            signatureRrdatas = new String[]{{
-                                                add("harum"),
-                                            }};
-                                            weight = 1157.03;
-                                        }}),
-                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
-                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "occaecati";
-                                                        ipProtocol = "undefined";
-                                                        kind = "quidem";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "laborum";
-                                                        port = "nam";
-                                                        project = "tenetur";
-                                                        region = "laboriosam";
-                                                    }}),
-                                                }};
-                                            }};
-                                            kind = "alias";
-                                            rrdatas = new String[]{{
-                                                add("deserunt"),
-                                            }};
-                                            signatureRrdatas = new String[]{{
-                                                add("unde"),
-                                                add("reiciendis"),
-                                            }};
-                                            weight = 5887.4;
-                                        }}),
-                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
-                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
-                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "delectus";
-                                                        ipProtocol = "udp";
-                                                        kind = "perferendis";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "quidem";
-                                                        port = "reprehenderit";
-                                                        project = "facere";
-                                                        region = "fuga";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "praesentium";
-                                                        ipProtocol = "tcp";
-                                                        kind = "veniam";
+                                                        kind = "temporibus";
                                                         loadBalancerType = "none";
-                                                        networkUrl = "quisquam";
-                                                        port = "repudiandae";
-                                                        project = "quasi";
-                                                        region = "atque";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "reprehenderit";
-                                                        ipProtocol = "udp";
-                                                        kind = "totam";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "quidem";
-                                                        port = "maxime";
-                                                        project = "et";
-                                                        region = "esse";
-                                                    }}),
-                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "amet";
-                                                        ipProtocol = "udp";
-                                                        kind = "ea";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "error";
-                                                        port = "officiis";
-                                                        project = "officiis";
-                                                        region = "accusamus";
+                                                        networkUrl = "rem";
+                                                        port = "aut";
+                                                        project = "laudantium";
+                                                        region = "eum";
                                                     }}),
                                                 }};
                                             }};
-                                            kind = "natus";
+                                            kind = "mollitia";
                                             rrdatas = new String[]{{
-                                                add("aspernatur"),
-                                                add("ex"),
-                                            }};
-                                            signatureRrdatas = new String[]{{
                                                 add("corrupti"),
-                                                add("at"),
-                                                add("error"),
-                                                add("blanditiis"),
                                             }};
-                                            weight = 3793.56;
+                                            signatureRrdatas = new String[]{{
+                                                add("voluptatem"),
+                                                add("dolor"),
+                                            }};
+                                            weight = 5801.52;
                                         }}),
                                     }};
-                                    kind = "repudiandae";
+                                    kind = "numquam";
                                 }};
                                 wrrPolicy = new RRSetRoutingPolicyWrrPolicy() {{
                                     items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem[]{{
@@ -1694,25 +1240,468 @@ public class Application {
                                             healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
                                                 internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "sunt";
-                                                        ipProtocol = "udp";
-                                                        kind = "dolorum";
+                                                        ipAddress = "voluptas";
+                                                        ipProtocol = "undefined";
+                                                        kind = "dignissimos";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "maiores";
+                                                        port = "natus";
+                                                        project = "velit";
+                                                        region = "voluptatibus";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "voluptas";
+                                            rrdatas = new String[]{{
+                                                add("aperiam"),
+                                                add("ea"),
+                                                add("quaerat"),
+                                                add("consequuntur"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("officia"),
+                                                add("maxime"),
+                                                add("dignissimos"),
+                                                add("officia"),
+                                            }};
+                                            weight = 9894.1;
+                                        }}),
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "quae";
+                                                        ipProtocol = "undefined";
+                                                        kind = "porro";
                                                         loadBalancerType = "regionalL4ilb";
                                                         networkUrl = "labore";
-                                                        port = "reiciendis";
-                                                        project = "doloremque";
-                                                        region = "repudiandae";
+                                                        port = "ab";
+                                                        project = "adipisci";
+                                                        region = "fuga";
                                                     }}),
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "dicta";
-                                                        ipProtocol = "undefined";
-                                                        kind = "beatae";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "enim";
-                                                        port = "laboriosam";
-                                                        project = "velit";
-                                                        region = "a";
+                                                        ipAddress = "id";
+                                                        ipProtocol = "tcp";
+                                                        kind = "velit";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "est";
+                                                        port = "recusandae";
+                                                        project = "totam";
+                                                        region = "fugiat";
                                                     }}),
+                                                }};
+                                            }};
+                                            kind = "vel";
+                                            rrdatas = new String[]{{
+                                                add("quos"),
+                                                add("vel"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("possimus"),
+                                                add("facilis"),
+                                            }};
+                                            weight = 7382.27;
+                                        }}),
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "in";
+                                                        ipProtocol = "tcp";
+                                                        kind = "reiciendis";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "nemo";
+                                                        port = "recusandae";
+                                                        project = "aliquid";
+                                                        region = "aperiam";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "cum";
+                                                        ipProtocol = "undefined";
+                                                        kind = "in";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "earum";
+                                                        port = "facere";
+                                                        project = "numquam";
+                                                        region = "doloribus";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "suscipit";
+                                            rrdatas = new String[]{{
+                                                add("quidem"),
+                                                add("saepe"),
+                                                add("necessitatibus"),
+                                                add("dolore"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("asperiores"),
+                                            }};
+                                            weight = 2415.45;
+                                        }}),
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "amet";
+                                                        ipProtocol = "undefined";
+                                                        kind = "dignissimos";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "debitis";
+                                                        port = "consectetur";
+                                                        project = "corporis";
+                                                        region = "harum";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "laboriosam";
+                                            rrdatas = new String[]{{
+                                                add("voluptates"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("vitae"),
+                                                add("accusamus"),
+                                                add("similique"),
+                                            }};
+                                            weight = 2724.37;
+                                        }}),
+                                    }};
+                                    kind = "aspernatur";
+                                }};
+                            }};
+                            rrdatas = new String[]{{
+                                add("voluptas"),
+                                add("voluptas"),
+                            }};
+                            signatureRrdatas = new String[]{{
+                                add("nobis"),
+                                add("dolorum"),
+                            }};
+                            ttl = 237807;
+                            type = "minus";
+                        }}),
+                        add(new ResourceRecordSet() {{
+                            kind = "dolores";
+                            name = "blanditiis";
+                            routingPolicy = new RRSetRoutingPolicy() {{
+                                geo = new RRSetRoutingPolicyGeoPolicy() {{
+                                    enableFencing = false;
+                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem[]{{
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "aliquam";
+                                                        ipProtocol = "udp";
+                                                        kind = "temporibus";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "adipisci";
+                                                        port = "cum";
+                                                        project = "blanditiis";
+                                                        region = "quas";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "hic";
+                                                        ipProtocol = "undefined";
+                                                        kind = "culpa";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "pariatur";
+                                                        port = "totam";
+                                                        project = "hic";
+                                                        region = "exercitationem";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "nobis";
+                                            location = "sit";
+                                            rrdatas = new String[]{{
+                                                add("sed"),
+                                                add("reiciendis"),
+                                                add("explicabo"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("facilis"),
+                                                add("voluptate"),
+                                                add("expedita"),
+                                                add("ab"),
+                                            }};
+                                        }}),
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "dolore";
+                                                        ipProtocol = "udp";
+                                                        kind = "sed";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "commodi";
+                                                        port = "quidem";
+                                                        project = "explicabo";
+                                                        region = "voluptas";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "unde";
+                                                        ipProtocol = "undefined";
+                                                        kind = "suscipit";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "debitis";
+                                                        port = "illo";
+                                                        project = "reiciendis";
+                                                        region = "perferendis";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "corrupti";
+                                                        ipProtocol = "udp";
+                                                        kind = "incidunt";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "provident";
+                                                        port = "eius";
+                                                        project = "necessitatibus";
+                                                        region = "ipsum";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "ea";
+                                            location = "occaecati";
+                                            rrdatas = new String[]{{
+                                                add("voluptatibus"),
+                                                add("tempora"),
+                                                add("tempora"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("reiciendis"),
+                                                add("ex"),
+                                            }};
+                                        }}),
+                                    }};
+                                    kind = "sit";
+                                }};
+                                geoPolicy = new RRSetRoutingPolicyGeoPolicy() {{
+                                    enableFencing = false;
+                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem[]{{
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "praesentium";
+                                                        ipProtocol = "udp";
+                                                        kind = "quaerat";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "ipsam";
+                                                        port = "debitis";
+                                                        project = "rem";
+                                                        region = "sit";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "nobis";
+                                                        ipProtocol = "tcp";
+                                                        kind = "veniam";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "recusandae";
+                                                        port = "reiciendis";
+                                                        project = "nulla";
+                                                        region = "magni";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "aperiam";
+                                                        ipProtocol = "udp";
+                                                        kind = "numquam";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "in";
+                                                        port = "officiis";
+                                                        project = "beatae";
+                                                        region = "laudantium";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "exercitationem";
+                                                        ipProtocol = "tcp";
+                                                        kind = "cum";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "dolorum";
+                                                        port = "voluptatum";
+                                                        project = "error";
+                                                        region = "hic";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "expedita";
+                                            location = "debitis";
+                                            rrdatas = new String[]{{
+                                                add("dolorum"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("officia"),
+                                                add("dolorum"),
+                                            }};
+                                        }}),
+                                    }};
+                                    kind = "corrupti";
+                                }};
+                                kind = "accusamus";
+                                primaryBackup = new RRSetRoutingPolicyPrimaryBackupPolicy() {{
+                                    backupGeoTargets = new RRSetRoutingPolicyGeoPolicy() {{
+                                        enableFencing = false;
+                                        items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem[]{{
+                                            add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                                healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                    internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "fugit";
+                                                            ipProtocol = "undefined";
+                                                            kind = "fugiat";
+                                                            loadBalancerType = "none";
+                                                            networkUrl = "culpa";
+                                                            port = "expedita";
+                                                            project = "magnam";
+                                                            region = "consequatur";
+                                                        }}),
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "esse";
+                                                            ipProtocol = "tcp";
+                                                            kind = "sit";
+                                                            loadBalancerType = "regionalL4ilb";
+                                                            networkUrl = "quas";
+                                                            port = "repudiandae";
+                                                            project = "corporis";
+                                                            region = "et";
+                                                        }}),
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "blanditiis";
+                                                            ipProtocol = "tcp";
+                                                            kind = "sed";
+                                                            loadBalancerType = "none";
+                                                            networkUrl = "vel";
+                                                            port = "nostrum";
+                                                            project = "saepe";
+                                                            region = "error";
+                                                        }}),
+                                                    }};
+                                                }};
+                                                kind = "consequatur";
+                                                location = "incidunt";
+                                                rrdatas = new String[]{{
+                                                    add("dolorem"),
+                                                    add("harum"),
+                                                    add("dicta"),
+                                                    add("architecto"),
+                                                }};
+                                                signatureRrdatas = new String[]{{
+                                                    add("labore"),
+                                                    add("quidem"),
+                                                    add("atque"),
+                                                }};
+                                            }}),
+                                            add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                                healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                    internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "nam";
+                                                            ipProtocol = "udp";
+                                                            kind = "laboriosam";
+                                                            loadBalancerType = "none";
+                                                            networkUrl = "amet";
+                                                            port = "deserunt";
+                                                            project = "voluptate";
+                                                            region = "unde";
+                                                        }}),
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "reiciendis";
+                                                            ipProtocol = "tcp";
+                                                            kind = "repellendus";
+                                                            loadBalancerType = "regionalL4ilb";
+                                                            networkUrl = "voluptates";
+                                                            port = "perferendis";
+                                                            project = "est";
+                                                            region = "quidem";
+                                                        }}),
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "reprehenderit";
+                                                            ipProtocol = "udp";
+                                                            kind = "fuga";
+                                                            loadBalancerType = "regionalL4ilb";
+                                                            networkUrl = "mollitia";
+                                                            port = "veniam";
+                                                            project = "voluptatem";
+                                                            region = "quisquam";
+                                                        }}),
+                                                    }};
+                                                }};
+                                                kind = "repudiandae";
+                                                location = "quasi";
+                                                rrdatas = new String[]{{
+                                                    add("reprehenderit"),
+                                                    add("asperiores"),
+                                                    add("totam"),
+                                                }};
+                                                signatureRrdatas = new String[]{{
+                                                    add("quidem"),
+                                                    add("maxime"),
+                                                }};
+                                            }}),
+                                        }};
+                                        kind = "et";
+                                    }};
+                                    kind = "esse";
+                                    primaryTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                        internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                            add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                ipAddress = "assumenda";
+                                                ipProtocol = "tcp";
+                                                kind = "atque";
+                                                loadBalancerType = "regionalL4ilb";
+                                                networkUrl = "officiis";
+                                                port = "officiis";
+                                                project = "accusamus";
+                                                region = "natus";
+                                            }}),
+                                        }};
+                                    }};
+                                    trickleTraffic = 3283.03;
+                                }};
+                                wrr = new RRSetRoutingPolicyWrrPolicy() {{
+                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem[]{{
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "maiores";
+                                                        ipProtocol = "tcp";
+                                                        kind = "at";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "blanditiis";
+                                                        port = "suscipit";
+                                                        project = "repudiandae";
+                                                        region = "atque";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "atque";
+                                                        ipProtocol = "undefined";
+                                                        kind = "recusandae";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "repellendus";
+                                                        port = "labore";
+                                                        project = "reiciendis";
+                                                        region = "doloremque";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "repudiandae";
+                                            rrdatas = new String[]{{
+                                                add("accusantium"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("dolores"),
+                                            }};
+                                            weight = 3164.88;
+                                        }}),
+                                    }};
+                                    kind = "laboriosam";
+                                }};
+                                wrrPolicy = new RRSetRoutingPolicyWrrPolicy() {{
+                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem[]{{
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
                                                         ipAddress = "molestias";
                                                         ipProtocol = "undefined";
@@ -1723,134 +1712,1922 @@ public class Application {
                                                         project = "perspiciatis";
                                                         region = "in";
                                                     }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "adipisci";
+                                                        ipProtocol = "udp";
+                                                        kind = "occaecati";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "fugit";
+                                                        port = "id";
+                                                        project = "quis";
+                                                        region = "reprehenderit";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "error";
+                                                        ipProtocol = "undefined";
+                                                        kind = "corporis";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "eveniet";
+                                                        port = "non";
+                                                        project = "vero";
+                                                        region = "doloremque";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "iure";
+                                                        ipProtocol = "undefined";
+                                                        kind = "totam";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "molestiae";
+                                                        port = "eveniet";
+                                                        project = "qui";
+                                                        region = "cum";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "iure";
+                                            rrdatas = new String[]{{
+                                                add("ratione"),
+                                                add("laborum"),
+                                                add("distinctio"),
+                                                add("voluptatum"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("aliquam"),
+                                                add("ad"),
+                                                add("repellat"),
+                                            }};
+                                            weight = 30.99;
+                                        }}),
+                                    }};
+                                    kind = "corporis";
+                                }};
+                            }};
+                            rrdatas = new String[]{{
+                                add("nihil"),
+                                add("mollitia"),
+                                add("voluptas"),
+                            }};
+                            signatureRrdatas = new String[]{{
+                                add("maiores"),
+                            }};
+                            ttl = 970222;
+                            type = "dolores";
+                        }}),
+                    }};
+                    deletions = new org.openapis.openapi.models.shared.ResourceRecordSet[]{{
+                        add(new ResourceRecordSet() {{
+                            kind = "minima";
+                            name = "dolore";
+                            routingPolicy = new RRSetRoutingPolicy() {{
+                                geo = new RRSetRoutingPolicyGeoPolicy() {{
+                                    enableFencing = false;
+                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem[]{{
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "quae";
+                                                        ipProtocol = "udp";
+                                                        kind = "omnis";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "molestiae";
+                                                        port = "ex";
+                                                        project = "ut";
+                                                        region = "culpa";
+                                                    }}),
                                                 }};
                                             }};
                                             kind = "adipisci";
+                                            location = "debitis";
                                             rrdatas = new String[]{{
-                                                add("occaecati"),
-                                                add("consequuntur"),
-                                                add("fugit"),
-                                                add("id"),
+                                                add("eum"),
+                                                add("nemo"),
+                                                add("recusandae"),
                                             }};
                                             signatureRrdatas = new String[]{{
-                                                add("reprehenderit"),
-                                                add("error"),
+                                                add("provident"),
+                                                add("quis"),
                                             }};
-                                            weight = 764.86;
                                         }}),
-                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
                                             healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
                                                 internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "quidem";
-                                                        ipProtocol = "udp";
-                                                        kind = "non";
-                                                        loadBalancerType = "regionalL4ilb";
-                                                        networkUrl = "doloremque";
-                                                        port = "iure";
-                                                        project = "ipsa";
-                                                        region = "totam";
+                                                        ipAddress = "reiciendis";
+                                                        ipProtocol = "tcp";
+                                                        kind = "aspernatur";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "quasi";
+                                                        port = "animi";
+                                                        project = "nostrum";
+                                                        region = "mollitia";
                                                     }}),
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "quae";
-                                                        ipProtocol = "tcp";
-                                                        kind = "eveniet";
+                                                        ipAddress = "provident";
+                                                        ipProtocol = "udp";
+                                                        kind = "animi";
                                                         loadBalancerType = "none";
-                                                        networkUrl = "cum";
-                                                        port = "iure";
-                                                        project = "necessitatibus";
-                                                        region = "ratione";
+                                                        networkUrl = "aliquid";
+                                                        port = "accusantium";
+                                                        project = "repellat";
+                                                        region = "doloribus";
                                                     }}),
                                                 }};
                                             }};
-                                            kind = "laborum";
+                                            kind = "ullam";
+                                            location = "in";
                                             rrdatas = new String[]{{
-                                                add("voluptatum"),
-                                                add("rem"),
-                                                add("aliquam"),
+                                                add("earum"),
+                                                add("officia"),
+                                                add("laborum"),
                                             }};
                                             signatureRrdatas = new String[]{{
-                                                add("repellat"),
-                                                add("alias"),
+                                                add("modi"),
+                                                add("voluptatibus"),
+                                                add("molestias"),
+                                                add("officiis"),
                                             }};
-                                            weight = 3621.89;
+                                        }}),
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "cumque";
+                                                        ipProtocol = "undefined";
+                                                        kind = "rerum";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "quis";
+                                                        port = "inventore";
+                                                        project = "fugit";
+                                                        region = "cumque";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "quae";
+                                                        ipProtocol = "undefined";
+                                                        kind = "velit";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "eum";
+                                                        port = "eius";
+                                                        project = "rem";
+                                                        region = "at";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "impedit";
+                                                        ipProtocol = "undefined";
+                                                        kind = "sapiente";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "dicta";
+                                                        port = "minima";
+                                                        project = "beatae";
+                                                        region = "cupiditate";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "provident";
+                                                        ipProtocol = "udp";
+                                                        kind = "soluta";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "illum";
+                                                        port = "eaque";
+                                                        project = "earum";
+                                                        region = "perspiciatis";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "maiores";
+                                            location = "debitis";
+                                            rrdatas = new String[]{{
+                                                add("porro"),
+                                                add("suscipit"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("fugit"),
+                                            }};
+                                        }}),
+                                    }};
+                                    kind = "cumque";
+                                }};
+                                geoPolicy = new RRSetRoutingPolicyGeoPolicy() {{
+                                    enableFencing = false;
+                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem[]{{
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "animi";
+                                                        ipProtocol = "udp";
+                                                        kind = "nulla";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "quasi";
+                                                        port = "et";
+                                                        project = "ducimus";
+                                                        region = "natus";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "occaecati";
+                                            location = "suscipit";
+                                            rrdatas = new String[]{{
+                                                add("quasi"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("doloribus"),
+                                            }};
+                                        }}),
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "necessitatibus";
+                                                        ipProtocol = "undefined";
+                                                        kind = "tempora";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "molestiae";
+                                                        port = "dicta";
+                                                        project = "iusto";
+                                                        region = "esse";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "praesentium";
+                                                        ipProtocol = "udp";
+                                                        kind = "reiciendis";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "architecto";
+                                                        port = "fugiat";
+                                                        project = "doloremque";
+                                                        region = "dicta";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "odio";
+                                                        ipProtocol = "undefined";
+                                                        kind = "esse";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "consectetur";
+                                                        port = "aliquid";
+                                                        project = "ipsa";
+                                                        region = "laborum";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "sunt";
+                                                        ipProtocol = "tcp";
+                                                        kind = "fugiat";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "aliquid";
+                                                        port = "officia";
+                                                        project = "suscipit";
+                                                        region = "aliquid";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "perferendis";
+                                            location = "eum";
+                                            rrdatas = new String[]{{
+                                                add("iste"),
+                                                add("id"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("error"),
+                                            }};
+                                        }}),
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "voluptates";
+                                                        ipProtocol = "tcp";
+                                                        kind = "laborum";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "ad";
+                                                        port = "deleniti";
+                                                        project = "enim";
+                                                        region = "vitae";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "repellendus";
+                                                        ipProtocol = "tcp";
+                                                        kind = "quo";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "ut";
+                                                        port = "ad";
+                                                        project = "expedita";
+                                                        region = "voluptatem";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "molestias";
+                                                        ipProtocol = "udp";
+                                                        kind = "aliquid";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "voluptatum";
+                                                        port = "omnis";
+                                                        project = "veritatis";
+                                                        region = "rerum";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "est";
+                                                        ipProtocol = "tcp";
+                                                        kind = "voluptatem";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "officiis";
+                                                        port = "architecto";
+                                                        project = "fuga";
+                                                        region = "pariatur";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "debitis";
+                                            location = "voluptatem";
+                                            rrdatas = new String[]{{
+                                                add("deleniti"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("ex"),
+                                                add("sapiente"),
+                                                add("rem"),
+                                                add("minus"),
+                                            }};
+                                        }}),
+                                    }};
+                                    kind = "nemo";
+                                }};
+                                kind = "asperiores";
+                                primaryBackup = new RRSetRoutingPolicyPrimaryBackupPolicy() {{
+                                    backupGeoTargets = new RRSetRoutingPolicyGeoPolicy() {{
+                                        enableFencing = false;
+                                        items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem[]{{
+                                            add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                                healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                    internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "perferendis";
+                                                            ipProtocol = "udp";
+                                                            kind = "totam";
+                                                            loadBalancerType = "regionalL4ilb";
+                                                            networkUrl = "quibusdam";
+                                                            port = "nam";
+                                                            project = "ipsam";
+                                                            region = "culpa";
+                                                        }}),
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "dolor";
+                                                            ipProtocol = "undefined";
+                                                            kind = "inventore";
+                                                            loadBalancerType = "regionalL4ilb";
+                                                            networkUrl = "veritatis";
+                                                            port = "tempora";
+                                                            project = "dolor";
+                                                            region = "consequatur";
+                                                        }}),
+                                                    }};
+                                                }};
+                                                kind = "architecto";
+                                                location = "sit";
+                                                rrdatas = new String[]{{
+                                                    add("fugit"),
+                                                    add("ab"),
+                                                }};
+                                                signatureRrdatas = new String[]{{
+                                                    add("quae"),
+                                                    add("dolor"),
+                                                    add("fugiat"),
+                                                }};
+                                            }}),
+                                        }};
+                                        kind = "ipsam";
+                                    }};
+                                    kind = "consequuntur";
+                                    primaryTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                        internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                            add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                ipAddress = "quas";
+                                                ipProtocol = "udp";
+                                                kind = "impedit";
+                                                loadBalancerType = "regionalL4ilb";
+                                                networkUrl = "esse";
+                                                port = "necessitatibus";
+                                                project = "sed";
+                                                region = "veniam";
+                                            }}),
+                                        }};
+                                    }};
+                                    trickleTraffic = 1995.96;
+                                }};
+                                wrr = new RRSetRoutingPolicyWrrPolicy() {{
+                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem[]{{
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "vel";
+                                                        ipProtocol = "tcp";
+                                                        kind = "magnam";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "ab";
+                                                        port = "porro";
+                                                        project = "autem";
+                                                        region = "nobis";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "laboriosam";
+                                                        ipProtocol = "udp";
+                                                        kind = "consequuntur";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "exercitationem";
+                                                        port = "necessitatibus";
+                                                        project = "quasi";
+                                                        region = "nisi";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "at";
+                                            rrdatas = new String[]{{
+                                                add("est"),
+                                                add("harum"),
+                                                add("sequi"),
+                                                add("doloribus"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("optio"),
+                                                add("occaecati"),
+                                                add("nemo"),
+                                                add("voluptate"),
+                                            }};
+                                            weight = 5010.63;
                                         }}),
                                         add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
                                             healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
                                                 internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "nihil";
-                                                        ipProtocol = "tcp";
-                                                        kind = "voluptas";
-                                                        loadBalancerType = "none";
-                                                        networkUrl = "maiores";
-                                                        port = "reiciendis";
-                                                        project = "dolores";
-                                                        region = "id";
+                                                        ipAddress = "voluptas";
+                                                        ipProtocol = "undefined";
+                                                        kind = "nemo";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "eius";
+                                                        port = "aspernatur";
+                                                        project = "ducimus";
+                                                        region = "nesciunt";
                                                     }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "fuga";
+                                                        ipProtocol = "tcp";
+                                                        kind = "incidunt";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "rem";
+                                                        port = "fugiat";
+                                                        project = "dicta";
+                                                        region = "nisi";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "consequuntur";
+                                                        ipProtocol = "undefined";
+                                                        kind = "aperiam";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "reiciendis";
+                                                        port = "soluta";
+                                                        project = "alias";
+                                                        region = "omnis";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "eos";
+                                            rrdatas = new String[]{{
+                                                add("iste"),
+                                                add("magni"),
+                                                add("inventore"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("accusamus"),
+                                                add("voluptatibus"),
+                                                add("distinctio"),
+                                            }};
+                                            weight = 6085.93;
+                                        }}),
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
                                                         ipAddress = "minima";
-                                                        ipProtocol = "undefined";
-                                                        kind = "dolorum";
+                                                        ipProtocol = "tcp";
+                                                        kind = "maxime";
                                                         loadBalancerType = "none";
-                                                        networkUrl = "quae";
-                                                        port = "recusandae";
-                                                        project = "omnis";
-                                                        region = "quaerat";
+                                                        networkUrl = "temporibus";
+                                                        port = "quos";
+                                                        project = "commodi";
+                                                        region = "itaque";
                                                     }}),
                                                     add(new RRSetRoutingPolicyLoadBalancerTarget() {{
-                                                        ipAddress = "molestiae";
+                                                        ipAddress = "commodi";
                                                         ipProtocol = "tcp";
-                                                        kind = "ut";
+                                                        kind = "earum";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "nam";
+                                                        port = "vero";
+                                                        project = "voluptatem";
+                                                        region = "ipsam";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "vel";
+                                                        ipProtocol = "undefined";
+                                                        kind = "quasi";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "maiores";
+                                                        port = "enim";
+                                                        project = "sint";
+                                                        region = "nulla";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "deserunt";
+                                                        ipProtocol = "tcp";
+                                                        kind = "nemo";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "est";
+                                                        port = "quis";
+                                                        project = "sint";
+                                                        region = "accusamus";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "impedit";
+                                            rrdatas = new String[]{{
+                                                add("necessitatibus"),
+                                                add("asperiores"),
+                                                add("ex"),
+                                                add("voluptas"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("delectus"),
+                                                add("quae"),
+                                                add("minus"),
+                                                add("fuga"),
+                                            }};
+                                            weight = 6756.89;
+                                        }}),
+                                    }};
+                                    kind = "consectetur";
+                                }};
+                                wrrPolicy = new RRSetRoutingPolicyWrrPolicy() {{
+                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem[]{{
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "ipsum";
+                                                        ipProtocol = "udp";
+                                                        kind = "magni";
                                                         loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "repudiandae";
+                                                        port = "nam";
+                                                        project = "dolore";
+                                                        region = "iusto";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "voluptate";
+                                                        ipProtocol = "undefined";
+                                                        kind = "dignissimos";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "quo";
+                                                        port = "deleniti";
+                                                        project = "quibusdam";
+                                                        region = "iure";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "odit";
+                                                        ipProtocol = "udp";
+                                                        kind = "vel";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "quibusdam";
+                                                        port = "inventore";
+                                                        project = "facere";
+                                                        region = "libero";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "architecto";
+                                            rrdatas = new String[]{{
+                                                add("quia"),
+                                                add("porro"),
+                                                add("aliquam"),
+                                                add("velit"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("accusantium"),
+                                            }};
+                                            weight = 4246.63;
+                                        }}),
+                                    }};
+                                    kind = "ea";
+                                }};
+                            }};
+                            rrdatas = new String[]{{
+                                add("vero"),
+                            }};
+                            signatureRrdatas = new String[]{{
+                                add("eum"),
+                                add("velit"),
+                                add("ut"),
+                            }};
+                            ttl = 596433;
+                            type = "earum";
+                        }}),
+                        add(new ResourceRecordSet() {{
+                            kind = "dicta";
+                            name = "impedit";
+                            routingPolicy = new RRSetRoutingPolicy() {{
+                                geo = new RRSetRoutingPolicyGeoPolicy() {{
+                                    enableFencing = false;
+                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem[]{{
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "itaque";
+                                                        ipProtocol = "undefined";
+                                                        kind = "nisi";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "velit";
+                                                        port = "laborum";
+                                                        project = "non";
+                                                        region = "dolor";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "iusto";
+                                                        ipProtocol = "undefined";
+                                                        kind = "doloremque";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "officia";
+                                                        port = "recusandae";
+                                                        project = "ea";
+                                                        region = "quidem";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "voluptas";
+                                                        ipProtocol = "udp";
+                                                        kind = "placeat";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "expedita";
+                                                        port = "deleniti";
+                                                        project = "a";
+                                                        region = "voluptate";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "ullam";
+                                            location = "unde";
+                                            rrdatas = new String[]{{
+                                                add("animi"),
+                                                add("impedit"),
+                                                add("ipsam"),
+                                                add("corporis"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("error"),
+                                                add("esse"),
+                                                add("labore"),
+                                            }};
+                                        }}),
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "vero";
+                                                        ipProtocol = "undefined";
+                                                        kind = "vitae";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "dolorem";
+                                                        port = "ad";
+                                                        project = "qui";
+                                                        region = "iste";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "ex";
+                                            location = "nemo";
+                                            rrdatas = new String[]{{
+                                                add("libero"),
+                                                add("rem"),
+                                                add("dolorum"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("fugit"),
+                                                add("alias"),
+                                            }};
+                                        }}),
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "vel";
+                                                        ipProtocol = "undefined";
+                                                        kind = "quae";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "neque";
+                                                        port = "exercitationem";
+                                                        project = "itaque";
+                                                        region = "et";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "ipsum";
+                                            location = "unde";
+                                            rrdatas = new String[]{{
+                                                add("distinctio"),
+                                                add("maxime"),
+                                                add("quia"),
+                                                add("quia"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("omnis"),
+                                                add("libero"),
+                                            }};
+                                        }}),
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "id";
+                                                        ipProtocol = "udp";
+                                                        kind = "fugiat";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "quos";
+                                                        port = "placeat";
+                                                        project = "sit";
+                                                        region = "iusto";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "ipsa";
+                                            location = "voluptates";
+                                            rrdatas = new String[]{{
+                                                add("aperiam"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("dolore"),
+                                                add("eligendi"),
+                                                add("distinctio"),
+                                            }};
+                                        }}),
+                                    }};
+                                    kind = "voluptatem";
+                                }};
+                                geoPolicy = new RRSetRoutingPolicyGeoPolicy() {{
+                                    enableFencing = false;
+                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem[]{{
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "dolores";
+                                                        ipProtocol = "udp";
+                                                        kind = "beatae";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "facere";
+                                                        port = "corrupti";
+                                                        project = "molestiae";
+                                                        region = "provident";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "accusamus";
+                                                        ipProtocol = "udp";
+                                                        kind = "tempore";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "ea";
+                                                        port = "autem";
+                                                        project = "ipsam";
+                                                        region = "rerum";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "laudantium";
+                                            location = "corporis";
+                                            rrdatas = new String[]{{
+                                                add("voluptatibus"),
+                                                add("cum"),
+                                                add("at"),
+                                                add("alias"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("quidem"),
+                                            }};
+                                        }}),
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "repudiandae";
+                                                        ipProtocol = "undefined";
+                                                        kind = "expedita";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "eos";
+                                                        port = "quibusdam";
+                                                        project = "odio";
+                                                        region = "praesentium";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "odit";
+                                                        ipProtocol = "undefined";
+                                                        kind = "corporis";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "earum";
+                                                        port = "adipisci";
+                                                        project = "recusandae";
+                                                        region = "similique";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "ut";
+                                                        ipProtocol = "udp";
+                                                        kind = "quis";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "unde";
+                                                        port = "molestiae";
+                                                        project = "delectus";
+                                                        region = "cupiditate";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "fugit";
+                                            location = "numquam";
+                                            rrdatas = new String[]{{
+                                                add("nesciunt"),
+                                                add("at"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("dignissimos"),
+                                                add("optio"),
+                                                add("necessitatibus"),
+                                            }};
+                                        }}),
+                                    }};
+                                    kind = "corporis";
+                                }};
+                                kind = "qui";
+                                primaryBackup = new RRSetRoutingPolicyPrimaryBackupPolicy() {{
+                                    backupGeoTargets = new RRSetRoutingPolicyGeoPolicy() {{
+                                        enableFencing = false;
+                                        items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem[]{{
+                                            add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                                healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                    internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "cupiditate";
+                                                            ipProtocol = "undefined";
+                                                            kind = "placeat";
+                                                            loadBalancerType = "none";
+                                                            networkUrl = "neque";
+                                                            port = "in";
+                                                            project = "minus";
+                                                            region = "eum";
+                                                        }}),
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "modi";
+                                                            ipProtocol = "tcp";
+                                                            kind = "magnam";
+                                                            loadBalancerType = "regionalL4ilb";
+                                                            networkUrl = "maiores";
+                                                            port = "tempore";
+                                                            project = "aperiam";
+                                                            region = "libero";
+                                                        }}),
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "ratione";
+                                                            ipProtocol = "undefined";
+                                                            kind = "totam";
+                                                            loadBalancerType = "regionalL4ilb";
+                                                            networkUrl = "voluptas";
+                                                            port = "quo";
+                                                            project = "velit";
+                                                            region = "minus";
+                                                        }}),
+                                                    }};
+                                                }};
+                                                kind = "fuga";
+                                                location = "nostrum";
+                                                rrdatas = new String[]{{
+                                                    add("impedit"),
+                                                    add("delectus"),
+                                                    add("tempore"),
+                                                }};
+                                                signatureRrdatas = new String[]{{
+                                                    add("odit"),
+                                                    add("repellat"),
+                                                    add("pariatur"),
+                                                    add("nemo"),
+                                                }};
+                                            }}),
+                                            add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                                healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                    internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "aperiam";
+                                                            ipProtocol = "tcp";
+                                                            kind = "minima";
+                                                            loadBalancerType = "none";
+                                                            networkUrl = "ducimus";
+                                                            port = "excepturi";
+                                                            project = "dolores";
+                                                            region = "error";
+                                                        }}),
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "veritatis";
+                                                            ipProtocol = "tcp";
+                                                            kind = "voluptate";
+                                                            loadBalancerType = "regionalL4ilb";
+                                                            networkUrl = "itaque";
+                                                            port = "similique";
+                                                            project = "optio";
+                                                            region = "ex";
+                                                        }}),
+                                                    }};
+                                                }};
+                                                kind = "quaerat";
+                                                location = "commodi";
+                                                rrdatas = new String[]{{
+                                                    add("placeat"),
+                                                    add("quidem"),
+                                                    add("exercitationem"),
+                                                    add("quam"),
+                                                }};
+                                                signatureRrdatas = new String[]{{
+                                                    add("modi"),
+                                                }};
+                                            }}),
+                                            add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                                healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                    internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "sint";
+                                                            ipProtocol = "udp";
+                                                            kind = "sequi";
+                                                            loadBalancerType = "regionalL4ilb";
+                                                            networkUrl = "cum";
+                                                            port = "dicta";
+                                                            project = "earum";
+                                                            region = "veniam";
+                                                        }}),
+                                                    }};
+                                                }};
+                                                kind = "animi";
+                                                location = "dolores";
+                                                rrdatas = new String[]{{
+                                                    add("dicta"),
+                                                    add("consequuntur"),
+                                                    add("necessitatibus"),
+                                                }};
+                                                signatureRrdatas = new String[]{{
+                                                    add("ipsa"),
+                                                    add("ducimus"),
+                                                    add("maiores"),
+                                                }};
+                                            }}),
+                                        }};
+                                        kind = "veritatis";
+                                    }};
+                                    kind = "quasi";
+                                    primaryTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                        internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                            add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                ipAddress = "pariatur";
+                                                ipProtocol = "udp";
+                                                kind = "excepturi";
+                                                loadBalancerType = "regionalL4ilb";
+                                                networkUrl = "nemo";
+                                                port = "aliquam";
+                                                project = "nostrum";
+                                                region = "doloribus";
+                                            }}),
+                                            add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                ipAddress = "eligendi";
+                                                ipProtocol = "tcp";
+                                                kind = "enim";
+                                                loadBalancerType = "regionalL4ilb";
+                                                networkUrl = "animi";
+                                                port = "quas";
+                                                project = "totam";
+                                                region = "molestias";
+                                            }}),
+                                        }};
+                                    }};
+                                    trickleTraffic = 4849.66;
+                                }};
+                                wrr = new RRSetRoutingPolicyWrrPolicy() {{
+                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem[]{{
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "architecto";
+                                                        ipProtocol = "tcp";
+                                                        kind = "iste";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "tempore";
+                                                        port = "libero";
+                                                        project = "velit";
+                                                        region = "doloremque";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "delectus";
+                                                        ipProtocol = "udp";
+                                                        kind = "cum";
+                                                        loadBalancerType = "none";
                                                         networkUrl = "adipisci";
-                                                        port = "debitis";
-                                                        project = "laudantium";
-                                                        region = "eum";
+                                                        port = "saepe";
+                                                        project = "deserunt";
+                                                        region = "doloremque";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "quis";
+                                                        ipProtocol = "undefined";
+                                                        kind = "libero";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "cupiditate";
+                                                        port = "molestiae";
+                                                        project = "eligendi";
+                                                        region = "possimus";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "non";
+                                                        ipProtocol = "undefined";
+                                                        kind = "itaque";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "asperiores";
+                                                        port = "veniam";
+                                                        project = "consequuntur";
+                                                        region = "facere";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "laudantium";
+                                            rrdatas = new String[]{{
+                                                add("pariatur"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("exercitationem"),
+                                            }};
+                                            weight = 688.52;
+                                        }}),
+                                    }};
+                                    kind = "velit";
+                                }};
+                                wrrPolicy = new RRSetRoutingPolicyWrrPolicy() {{
+                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem[]{{
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "nisi";
+                                                        ipProtocol = "udp";
+                                                        kind = "quaerat";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "distinctio";
+                                                        port = "nisi";
+                                                        project = "quis";
+                                                        region = "nisi";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "libero";
+                                                        ipProtocol = "udp";
+                                                        kind = "facere";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "ipsum";
+                                                        port = "ad";
+                                                        project = "voluptatibus";
+                                                        region = "voluptatibus";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "consequuntur";
+                                                        ipProtocol = "udp";
+                                                        kind = "labore";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "eos";
+                                                        port = "reprehenderit";
+                                                        project = "nostrum";
+                                                        region = "neque";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "iusto";
+                                            rrdatas = new String[]{{
+                                                add("rem"),
+                                                add("eligendi"),
+                                                add("fugiat"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("officiis"),
+                                                add("ducimus"),
+                                                add("dolor"),
+                                            }};
+                                            weight = 1180.41;
+                                        }}),
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "porro";
+                                                        ipProtocol = "undefined";
+                                                        kind = "dignissimos";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "fugiat";
+                                                        port = "ad";
+                                                        project = "aspernatur";
+                                                        region = "enim";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "delectus";
+                                                        ipProtocol = "tcp";
+                                                        kind = "dignissimos";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "illo";
+                                                        port = "ab";
+                                                        project = "incidunt";
+                                                        region = "accusamus";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "saepe";
+                                                        ipProtocol = "udp";
+                                                        kind = "veniam";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "reiciendis";
+                                                        port = "earum";
+                                                        project = "reprehenderit";
+                                                        region = "praesentium";
                                                     }}),
                                                 }};
                                             }};
                                             kind = "nemo";
                                             rrdatas = new String[]{{
-                                                add("esse"),
-                                                add("provident"),
-                                                add("quis"),
-                                                add("eum"),
+                                                add("quisquam"),
+                                                add("sequi"),
+                                                add("nihil"),
+                                                add("deleniti"),
                                             }};
                                             signatureRrdatas = new String[]{{
-                                                add("provident"),
-                                                add("aspernatur"),
-                                                add("ullam"),
-                                                add("quasi"),
+                                                add("labore"),
                                             }};
-                                            weight = 6570.2;
+                                            weight = 8288.41;
+                                        }}),
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "quisquam";
+                                                        ipProtocol = "tcp";
+                                                        kind = "laudantium";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "consequatur";
+                                                        port = "maxime";
+                                                        project = "aspernatur";
+                                                        region = "nam";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "expedita";
+                                                        ipProtocol = "tcp";
+                                                        kind = "provident";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "rerum";
+                                                        port = "dignissimos";
+                                                        project = "corporis";
+                                                        region = "vero";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "similique";
+                                            rrdatas = new String[]{{
+                                                add("iure"),
+                                                add("dolorem"),
+                                                add("commodi"),
+                                                add("impedit"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("aut"),
+                                                add("voluptatem"),
+                                            }};
+                                            weight = 3228.29;
                                         }}),
                                     }};
-                                    kind = "nostrum";
+                                    kind = "quae";
                                 }};
                             }};
                             rrdatas = new String[]{{
-                                add("provident"),
-                                add("possimus"),
-                                add("animi"),
+                                add("illum"),
                             }};
                             signatureRrdatas = new String[]{{
-                                add("aliquid"),
-                                add("accusantium"),
+                                add("quidem"),
+                                add("cum"),
+                                add("amet"),
                             }};
-                            ttl = 999278;
-                            type = "doloribus";
+                            ttl = 97676;
+                            type = "dicta";
+                        }}),
+                        add(new ResourceRecordSet() {{
+                            kind = "laudantium";
+                            name = "doloremque";
+                            routingPolicy = new RRSetRoutingPolicy() {{
+                                geo = new RRSetRoutingPolicyGeoPolicy() {{
+                                    enableFencing = false;
+                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem[]{{
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "amet";
+                                                        ipProtocol = "tcp";
+                                                        kind = "dolorum";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "provident";
+                                                        port = "repudiandae";
+                                                        project = "consequatur";
+                                                        region = "nemo";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "molestiae";
+                                                        ipProtocol = "udp";
+                                                        kind = "facilis";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "aperiam";
+                                                        port = "sint";
+                                                        project = "accusamus";
+                                                        region = "eos";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "totam";
+                                            location = "dicta";
+                                            rrdatas = new String[]{{
+                                                add("velit"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("sunt"),
+                                            }};
+                                        }}),
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "dolor";
+                                                        ipProtocol = "tcp";
+                                                        kind = "atque";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "at";
+                                                        port = "labore";
+                                                        project = "minus";
+                                                        region = "esse";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "voluptatem";
+                                                        ipProtocol = "undefined";
+                                                        kind = "rerum";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "aperiam";
+                                                        port = "dignissimos";
+                                                        project = "repellat";
+                                                        region = "velit";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "porro";
+                                                        ipProtocol = "tcp";
+                                                        kind = "consectetur";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "dignissimos";
+                                                        port = "consectetur";
+                                                        project = "soluta";
+                                                        region = "natus";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "temporibus";
+                                                        ipProtocol = "tcp";
+                                                        kind = "amet";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "aspernatur";
+                                                        port = "quo";
+                                                        project = "itaque";
+                                                        region = "illum";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "laborum";
+                                            location = "dignissimos";
+                                            rrdatas = new String[]{{
+                                                add("qui"),
+                                                add("consectetur"),
+                                                add("repellat"),
+                                                add("explicabo"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("exercitationem"),
+                                            }};
+                                        }}),
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "non";
+                                                        ipProtocol = "undefined";
+                                                        kind = "illo";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "deserunt";
+                                                        port = "delectus";
+                                                        project = "non";
+                                                        region = "distinctio";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "in";
+                                                        ipProtocol = "tcp";
+                                                        kind = "labore";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "repudiandae";
+                                                        port = "modi";
+                                                        project = "in";
+                                                        region = "explicabo";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "accusamus";
+                                            location = "rem";
+                                            rrdatas = new String[]{{
+                                                add("odit"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("enim"),
+                                                add("voluptate"),
+                                                add("similique"),
+                                            }};
+                                        }}),
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "libero";
+                                                        ipProtocol = "undefined";
+                                                        kind = "sit";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "eum";
+                                                        port = "nesciunt";
+                                                        project = "mollitia";
+                                                        region = "dignissimos";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "fugiat";
+                                                        ipProtocol = "tcp";
+                                                        kind = "molestiae";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "reiciendis";
+                                                        port = "ab";
+                                                        project = "modi";
+                                                        region = "aut";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "aut";
+                                            location = "eveniet";
+                                            rrdatas = new String[]{{
+                                                add("commodi"),
+                                                add("numquam"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("possimus"),
+                                                add("voluptate"),
+                                                add("consectetur"),
+                                            }};
+                                        }}),
+                                    }};
+                                    kind = "nesciunt";
+                                }};
+                                geoPolicy = new RRSetRoutingPolicyGeoPolicy() {{
+                                    enableFencing = false;
+                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem[]{{
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "minus";
+                                                        ipProtocol = "undefined";
+                                                        kind = "distinctio";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "quas";
+                                                        port = "et";
+                                                        project = "facilis";
+                                                        region = "amet";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "autem";
+                                                        ipProtocol = "udp";
+                                                        kind = "alias";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "aut";
+                                                        port = "quos";
+                                                        project = "laudantium";
+                                                        region = "repellendus";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "veritatis";
+                                                        ipProtocol = "undefined";
+                                                        kind = "eaque";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "delectus";
+                                                        port = "mollitia";
+                                                        project = "nulla";
+                                                        region = "officia";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "sed";
+                                                        ipProtocol = "undefined";
+                                                        kind = "alias";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "hic";
+                                                        port = "voluptatem";
+                                                        project = "incidunt";
+                                                        region = "qui";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "qui";
+                                            location = "necessitatibus";
+                                            rrdatas = new String[]{{
+                                                add("explicabo"),
+                                                add("beatae"),
+                                                add("aliquid"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("optio"),
+                                                add("voluptatibus"),
+                                            }};
+                                        }}),
+                                        add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "officia";
+                                                        ipProtocol = "udp";
+                                                        kind = "totam";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "aliquid";
+                                                        port = "ea";
+                                                        project = "impedit";
+                                                        region = "ducimus";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "odit";
+                                                        ipProtocol = "undefined";
+                                                        kind = "reiciendis";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "nulla";
+                                                        port = "laborum";
+                                                        project = "natus";
+                                                        region = "accusamus";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "doloremque";
+                                                        ipProtocol = "tcp";
+                                                        kind = "rerum";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "voluptates";
+                                                        port = "non";
+                                                        project = "rem";
+                                                        region = "quia";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "ullam";
+                                            location = "quisquam";
+                                            rrdatas = new String[]{{
+                                                add("voluptatibus"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("quae"),
+                                                add("officiis"),
+                                                add("architecto"),
+                                                add("architecto"),
+                                            }};
+                                        }}),
+                                    }};
+                                    kind = "enim";
+                                }};
+                                kind = "optio";
+                                primaryBackup = new RRSetRoutingPolicyPrimaryBackupPolicy() {{
+                                    backupGeoTargets = new RRSetRoutingPolicyGeoPolicy() {{
+                                        enableFencing = false;
+                                        items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyGeoPolicyGeoPolicyItem[]{{
+                                            add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                                healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                    internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "facilis";
+                                                            ipProtocol = "udp";
+                                                            kind = "a";
+                                                            loadBalancerType = "regionalL4ilb";
+                                                            networkUrl = "dicta";
+                                                            port = "quos";
+                                                            project = "ullam";
+                                                            region = "dolore";
+                                                        }}),
+                                                    }};
+                                                }};
+                                                kind = "modi";
+                                                location = "itaque";
+                                                rrdatas = new String[]{{
+                                                    add("modi"),
+                                                    add("consequuntur"),
+                                                    add("assumenda"),
+                                                    add("vero"),
+                                                }};
+                                                signatureRrdatas = new String[]{{
+                                                    add("impedit"),
+                                                    add("porro"),
+                                                    add("accusamus"),
+                                                    add("totam"),
+                                                }};
+                                            }}),
+                                            add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                                healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                    internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "ab";
+                                                            ipProtocol = "tcp";
+                                                            kind = "nihil";
+                                                            loadBalancerType = "none";
+                                                            networkUrl = "iure";
+                                                            port = "odio";
+                                                            project = "nesciunt";
+                                                            region = "debitis";
+                                                        }}),
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "vel";
+                                                            ipProtocol = "undefined";
+                                                            kind = "corporis";
+                                                            loadBalancerType = "none";
+                                                            networkUrl = "consequuntur";
+                                                            port = "officia";
+                                                            project = "reprehenderit";
+                                                            region = "distinctio";
+                                                        }}),
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "eius";
+                                                            ipProtocol = "undefined";
+                                                            kind = "rem";
+                                                            loadBalancerType = "regionalL4ilb";
+                                                            networkUrl = "accusantium";
+                                                            port = "veniam";
+                                                            project = "saepe";
+                                                            region = "neque";
+                                                        }}),
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "facere";
+                                                            ipProtocol = "undefined";
+                                                            kind = "quos";
+                                                            loadBalancerType = "regionalL4ilb";
+                                                            networkUrl = "fugiat";
+                                                            port = "est";
+                                                            project = "delectus";
+                                                            region = "velit";
+                                                        }}),
+                                                    }};
+                                                }};
+                                                kind = "vitae";
+                                                location = "nesciunt";
+                                                rrdatas = new String[]{{
+                                                    add("illo"),
+                                                    add("repellat"),
+                                                    add("nemo"),
+                                                }};
+                                                signatureRrdatas = new String[]{{
+                                                    add("possimus"),
+                                                    add("unde"),
+                                                    add("incidunt"),
+                                                    add("explicabo"),
+                                                }};
+                                            }}),
+                                            add(new RRSetRoutingPolicyGeoPolicyGeoPolicyItem() {{
+                                                healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                    internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "cupiditate";
+                                                            ipProtocol = "udp";
+                                                            kind = "alias";
+                                                            loadBalancerType = "regionalL4ilb";
+                                                            networkUrl = "nesciunt";
+                                                            port = "commodi";
+                                                            project = "sapiente";
+                                                            region = "consequuntur";
+                                                        }}),
+                                                        add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                            ipAddress = "veniam";
+                                                            ipProtocol = "udp";
+                                                            kind = "officia";
+                                                            loadBalancerType = "regionalL4ilb";
+                                                            networkUrl = "ut";
+                                                            port = "numquam";
+                                                            project = "tenetur";
+                                                            region = "adipisci";
+                                                        }}),
+                                                    }};
+                                                }};
+                                                kind = "libero";
+                                                location = "in";
+                                                rrdatas = new String[]{{
+                                                    add("ex"),
+                                                    add("minus"),
+                                                }};
+                                                signatureRrdatas = new String[]{{
+                                                    add("beatae"),
+                                                }};
+                                            }}),
+                                        }};
+                                        kind = "hic";
+                                    }};
+                                    kind = "nisi";
+                                    primaryTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                        internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                            add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                ipAddress = "dolor";
+                                                ipProtocol = "tcp";
+                                                kind = "fuga";
+                                                loadBalancerType = "none";
+                                                networkUrl = "architecto";
+                                                port = "qui";
+                                                project = "aliquid";
+                                                region = "magni";
+                                            }}),
+                                            add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                ipAddress = "incidunt";
+                                                ipProtocol = "undefined";
+                                                kind = "praesentium";
+                                                loadBalancerType = "none";
+                                                networkUrl = "exercitationem";
+                                                port = "expedita";
+                                                project = "facilis";
+                                                region = "impedit";
+                                            }}),
+                                            add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                ipAddress = "sit";
+                                                ipProtocol = "tcp";
+                                                kind = "culpa";
+                                                loadBalancerType = "none";
+                                                networkUrl = "amet";
+                                                port = "deserunt";
+                                                project = "modi";
+                                                region = "veniam";
+                                            }}),
+                                            add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                ipAddress = "quod";
+                                                ipProtocol = "udp";
+                                                kind = "a";
+                                                loadBalancerType = "regionalL4ilb";
+                                                networkUrl = "enim";
+                                                port = "doloribus";
+                                                project = "assumenda";
+                                                region = "officiis";
+                                            }}),
+                                        }};
+                                    }};
+                                    trickleTraffic = 1039.9;
+                                }};
+                                wrr = new RRSetRoutingPolicyWrrPolicy() {{
+                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem[]{{
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "ipsa";
+                                                        ipProtocol = "udp";
+                                                        kind = "necessitatibus";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "dicta";
+                                                        port = "vel";
+                                                        project = "perspiciatis";
+                                                        region = "debitis";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "ullam";
+                                                        ipProtocol = "undefined";
+                                                        kind = "accusantium";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "veritatis";
+                                                        port = "provident";
+                                                        project = "cumque";
+                                                        region = "iure";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "quibusdam";
+                                                        ipProtocol = "udp";
+                                                        kind = "nemo";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "velit";
+                                                        port = "magnam";
+                                                        project = "dignissimos";
+                                                        region = "laboriosam";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "sed";
+                                            rrdatas = new String[]{{
+                                                add("natus"),
+                                                add("provident"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("doloribus"),
+                                                add("facilis"),
+                                                add("quidem"),
+                                            }};
+                                            weight = 9320.8;
+                                        }}),
+                                    }};
+                                    kind = "laboriosam";
+                                }};
+                                wrrPolicy = new RRSetRoutingPolicyWrrPolicy() {{
+                                    items = new org.openapis.openapi.models.shared.RRSetRoutingPolicyWrrPolicyWrrPolicyItem[]{{
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "perspiciatis";
+                                                        ipProtocol = "udp";
+                                                        kind = "cum";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "libero";
+                                                        port = "nam";
+                                                        project = "incidunt";
+                                                        region = "recusandae";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "quod";
+                                                        ipProtocol = "tcp";
+                                                        kind = "saepe";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "quo";
+                                                        port = "nesciunt";
+                                                        project = "illum";
+                                                        region = "nemo";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "illum";
+                                            rrdatas = new String[]{{
+                                                add("non"),
+                                                add("mollitia"),
+                                                add("assumenda"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("distinctio"),
+                                                add("pariatur"),
+                                                add("ad"),
+                                                add("facere"),
+                                            }};
+                                            weight = 6746.83;
+                                        }}),
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "laborum";
+                                                        ipProtocol = "undefined";
+                                                        kind = "maxime";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "alias";
+                                                        port = "suscipit";
+                                                        project = "deserunt";
+                                                        region = "molestias";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "laborum";
+                                                        ipProtocol = "udp";
+                                                        kind = "occaecati";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "quo";
+                                                        port = "perferendis";
+                                                        project = "fugit";
+                                                        region = "aliquid";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "magnam";
+                                                        ipProtocol = "undefined";
+                                                        kind = "eligendi";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "nostrum";
+                                                        port = "officiis";
+                                                        project = "unde";
+                                                        region = "nulla";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "error";
+                                                        ipProtocol = "tcp";
+                                                        kind = "magnam";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "esse";
+                                                        port = "corrupti";
+                                                        project = "fuga";
+                                                        region = "facere";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "impedit";
+                                            rrdatas = new String[]{{
+                                                add("deserunt"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("laboriosam"),
+                                                add("doloremque"),
+                                                add("voluptatem"),
+                                                add("facere"),
+                                            }};
+                                            weight = 9010.08;
+                                        }}),
+                                        add(new RRSetRoutingPolicyWrrPolicyWrrPolicyItem() {{
+                                            healthCheckedTargets = new RRSetRoutingPolicyHealthCheckTargets() {{
+                                                internalLoadBalancers = new org.openapis.openapi.models.shared.RRSetRoutingPolicyLoadBalancerTarget[]{{
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "consequatur";
+                                                        ipProtocol = "undefined";
+                                                        kind = "architecto";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "porro";
+                                                        port = "blanditiis";
+                                                        project = "quae";
+                                                        region = "magni";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "officiis";
+                                                        ipProtocol = "undefined";
+                                                        kind = "necessitatibus";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "ipsa";
+                                                        port = "excepturi";
+                                                        project = "a";
+                                                        region = "maiores";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "laudantium";
+                                                        ipProtocol = "udp";
+                                                        kind = "alias";
+                                                        loadBalancerType = "regionalL4ilb";
+                                                        networkUrl = "rem";
+                                                        port = "dicta";
+                                                        project = "suscipit";
+                                                        region = "earum";
+                                                    }}),
+                                                    add(new RRSetRoutingPolicyLoadBalancerTarget() {{
+                                                        ipAddress = "doloribus";
+                                                        ipProtocol = "undefined";
+                                                        kind = "eius";
+                                                        loadBalancerType = "none";
+                                                        networkUrl = "in";
+                                                        port = "eligendi";
+                                                        project = "quasi";
+                                                        region = "neque";
+                                                    }}),
+                                                }};
+                                            }};
+                                            kind = "vero";
+                                            rrdatas = new String[]{{
+                                                add("accusantium"),
+                                                add("qui"),
+                                                add("impedit"),
+                                            }};
+                                            signatureRrdatas = new String[]{{
+                                                add("incidunt"),
+                                            }};
+                                            weight = 1165.58;
+                                        }}),
+                                    }};
+                                    kind = "odit";
+                                }};
+                            }};
+                            rrdatas = new String[]{{
+                                add("rerum"),
+                                add("alias"),
+                            }};
+                            signatureRrdatas = new String[]{{
+                                add("vel"),
+                                add("accusantium"),
+                                add("id"),
+                            }};
+                            ttl = 388169;
+                            type = "ex";
                         }}),
                     }};
-                    id = "ullam";
+                    id = "quas";
                     isServing = false;
-                    kind = "in";
-                    startTime = "nam";
-                    status = "done";
+                    kind = "veritatis";
+                    startTime = "ullam";
+                    status = "pending";
                 }};
-            }};            
+                accessToken = "similique";
+                alt = "json";
+                callback = "quam";
+                clientOperationId = "magni";
+                fields = "deserunt";
+                key = "delectus";
+                managedZone = "omnis";
+                oauthToken = "sed";
+                prettyPrint = false;
+                project = "nesciunt";
+                quotaUser = "maxime";
+                uploadType = "quis";
+                uploadProtocol = "cupiditate";
+            }}            
 
-            DnsChangesCreateResponse res = sdk.changes.dnsChangesCreate(req);
+            DnsChangesCreateResponse res = sdk.changes.dnsChangesCreate(req, new DnsChangesCreateSecurity() {{
+                option1 = new DnsChangesCreateSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.change.isPresent()) {
                 // handle response

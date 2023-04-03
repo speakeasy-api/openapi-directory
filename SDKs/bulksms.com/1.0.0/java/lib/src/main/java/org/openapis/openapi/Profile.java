@@ -33,11 +33,10 @@ public class Profile {
     /**
      * Get profile
      * Returns information about your user profile
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetProfileResponse getProfile(org.openapis.openapi.models.operations.GetProfileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetProfileResponse getProfile() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/profile");
         
@@ -46,7 +45,7 @@ public class Profile {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -73,7 +73,7 @@ public class Badges {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateBadgeResponse createBadge(org.openapis.openapi.models.operations.CreateBadgeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateBadgeResponse createBadge(org.openapis.openapi.models.operations.CreateBadgeRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/admin/badges.json");
         
@@ -115,7 +115,7 @@ public class Badges {
      */
     public org.openapis.openapi.models.operations.DeleteBadgeResponse deleteBadge(org.openapis.openapi.models.operations.DeleteBadgeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBadgePathParams.class, baseUrl, "/admin/badges/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBadgeRequest.class, baseUrl, "/admin/badges/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -147,7 +147,7 @@ public class Badges {
      */
     public org.openapis.openapi.models.operations.ListUserBadgesResponse listUserBadges(org.openapis.openapi.models.operations.ListUserBadgesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListUserBadgesPathParams.class, baseUrl, "/user-badges/{username}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListUserBadgesRequest.class, baseUrl, "/user-badges/{username}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -185,12 +185,12 @@ public class Badges {
      */
     public org.openapis.openapi.models.operations.UpdateBadgeResponse updateBadge(org.openapis.openapi.models.operations.UpdateBadgeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateBadgePathParams.class, baseUrl, "/admin/badges/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateBadgeRequest.class, baseUrl, "/admin/badges/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

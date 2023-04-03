@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SessionControllerResetPasswordRequest {
-    
-    public SessionControllerResetPasswordPathParams pathParams;
-    public SessionControllerResetPasswordRequest withPathParams(SessionControllerResetPasswordPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The login Email Address.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public SessionControllerResetPasswordRequest withEmail(String email) {
+        this.email = email;
         return this;
     }
     
-    
-    public SessionControllerResetPasswordQueryParams queryParams;
-    public SessionControllerResetPasswordRequest withQueryParams(SessionControllerResetPasswordQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public SessionControllerResetPasswordRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     

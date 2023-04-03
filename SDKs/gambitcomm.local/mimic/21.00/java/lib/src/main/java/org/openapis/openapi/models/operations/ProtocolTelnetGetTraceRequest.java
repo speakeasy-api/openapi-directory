@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolTelnetGetTraceRequest {
-    
-    public ProtocolTelnetGetTracePathParams pathParams;
-    public ProtocolTelnetGetTraceRequest withPathParams(ProtocolTelnetGetTracePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show whether TELNET tracing is enabled
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolTelnetGetTraceRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

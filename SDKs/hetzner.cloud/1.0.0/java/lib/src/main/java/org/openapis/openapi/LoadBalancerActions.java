@@ -40,13 +40,13 @@ public class LoadBalancerActions {
      */
     public org.openapis.openapi.models.operations.GetLoadBalancersIdActionsResponse getLoadBalancersIdActions(org.openapis.openapi.models.operations.GetLoadBalancersIdActionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLoadBalancersIdActionsPathParams.class, baseUrl, "/load_balancers/{id}/actions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLoadBalancersIdActionsRequest.class, baseUrl, "/load_balancers/{id}/actions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLoadBalancersIdActionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLoadBalancersIdActionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -85,7 +85,7 @@ public class LoadBalancerActions {
      */
     public org.openapis.openapi.models.operations.GetLoadBalancersIdActionsActionIdResponse getLoadBalancersIdActionsActionId(org.openapis.openapi.models.operations.GetLoadBalancersIdActionsActionIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLoadBalancersIdActionsActionIdPathParams.class, baseUrl, "/load_balancers/{id}/actions/{action_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLoadBalancersIdActionsActionIdRequest.class, baseUrl, "/load_balancers/{id}/actions/{action_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -131,12 +131,12 @@ public class LoadBalancerActions {
      */
     public org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAddServiceResponse postLoadBalancersIdActionsAddService(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAddServiceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAddServicePathParams.class, baseUrl, "/load_balancers/{id}/actions/add_service", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAddServiceRequest.class, baseUrl, "/load_balancers/{id}/actions/add_service", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -184,12 +184,12 @@ public class LoadBalancerActions {
      */
     public org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAddTargetResponse postLoadBalancersIdActionsAddTarget(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAddTargetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAddTargetPathParams.class, baseUrl, "/load_balancers/{id}/actions/add_target", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAddTargetRequest.class, baseUrl, "/load_balancers/{id}/actions/add_target", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -234,12 +234,12 @@ public class LoadBalancerActions {
      */
     public org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAttachToNetworkResponse postLoadBalancersIdActionsAttachToNetwork(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAttachToNetworkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAttachToNetworkPathParams.class, baseUrl, "/load_balancers/{id}/actions/attach_to_network", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsAttachToNetworkRequest.class, baseUrl, "/load_balancers/{id}/actions/attach_to_network", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -275,12 +275,12 @@ public class LoadBalancerActions {
      */
     public org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeAlgorithmResponse postLoadBalancersIdActionsChangeAlgorithm(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeAlgorithmRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeAlgorithmPathParams.class, baseUrl, "/load_balancers/{id}/actions/change_algorithm", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeAlgorithmRequest.class, baseUrl, "/load_balancers/{id}/actions/change_algorithm", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -319,12 +319,12 @@ public class LoadBalancerActions {
      */
     public org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeDnsPtrResponse postLoadBalancersIdActionsChangeDnsPtr(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeDnsPtrRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeDnsPtrPathParams.class, baseUrl, "/load_balancers/{id}/actions/change_dns_ptr", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeDnsPtrRequest.class, baseUrl, "/load_balancers/{id}/actions/change_dns_ptr", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -360,12 +360,12 @@ public class LoadBalancerActions {
      */
     public org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeProtectionResponse postLoadBalancersIdActionsChangeProtection(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeProtectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeProtectionPathParams.class, baseUrl, "/load_balancers/{id}/actions/change_protection", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeProtectionRequest.class, baseUrl, "/load_balancers/{id}/actions/change_protection", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -408,12 +408,12 @@ public class LoadBalancerActions {
      */
     public org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeTypeResponse postLoadBalancersIdActionsChangeType(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeTypePathParams.class, baseUrl, "/load_balancers/{id}/actions/change_type", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsChangeTypeRequest.class, baseUrl, "/load_balancers/{id}/actions/change_type", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -449,12 +449,12 @@ public class LoadBalancerActions {
      */
     public org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDeleteServiceResponse postLoadBalancersIdActionsDeleteService(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDeleteServiceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDeleteServicePathParams.class, baseUrl, "/load_balancers/{id}/actions/delete_service", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDeleteServiceRequest.class, baseUrl, "/load_balancers/{id}/actions/delete_service", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -490,12 +490,12 @@ public class LoadBalancerActions {
      */
     public org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDetachFromNetworkResponse postLoadBalancersIdActionsDetachFromNetwork(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDetachFromNetworkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDetachFromNetworkPathParams.class, baseUrl, "/load_balancers/{id}/actions/detach_from_network", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDetachFromNetworkRequest.class, baseUrl, "/load_balancers/{id}/actions/detach_from_network", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -539,7 +539,7 @@ public class LoadBalancerActions {
      */
     public org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDisablePublicInterfaceResponse postLoadBalancersIdActionsDisablePublicInterface(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDisablePublicInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDisablePublicInterfacePathParams.class, baseUrl, "/load_balancers/{id}/actions/disable_public_interface", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsDisablePublicInterfaceRequest.class, baseUrl, "/load_balancers/{id}/actions/disable_public_interface", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -578,7 +578,7 @@ public class LoadBalancerActions {
      */
     public org.openapis.openapi.models.operations.PostLoadBalancersIdActionsEnablePublicInterfaceResponse postLoadBalancersIdActionsEnablePublicInterface(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsEnablePublicInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsEnablePublicInterfacePathParams.class, baseUrl, "/load_balancers/{id}/actions/enable_public_interface", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsEnablePublicInterfaceRequest.class, baseUrl, "/load_balancers/{id}/actions/enable_public_interface", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -617,12 +617,12 @@ public class LoadBalancerActions {
      */
     public org.openapis.openapi.models.operations.PostLoadBalancersIdActionsRemoveTargetResponse postLoadBalancersIdActionsRemoveTarget(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsRemoveTargetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsRemoveTargetPathParams.class, baseUrl, "/load_balancers/{id}/actions/remove_target", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsRemoveTargetRequest.class, baseUrl, "/load_balancers/{id}/actions/remove_target", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -665,12 +665,12 @@ public class LoadBalancerActions {
      */
     public org.openapis.openapi.models.operations.PostLoadBalancersIdActionsUpdateServiceResponse postLoadBalancersIdActionsUpdateService(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsUpdateServiceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsUpdateServicePathParams.class, baseUrl, "/load_balancers/{id}/actions/update_service", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLoadBalancersIdActionsUpdateServiceRequest.class, baseUrl, "/load_balancers/{id}/actions/update_service", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmIdentityProviderInstancesAliasExportRequest {
-    
-    public GetRealmIdentityProviderInstancesAliasExportPathParams pathParams;
-    public GetRealmIdentityProviderInstancesAliasExportRequest withPathParams(GetRealmIdentityProviderInstancesAliasExportPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=alias")
+    public String alias;
+    public GetRealmIdentityProviderInstancesAliasExportRequest withAlias(String alias) {
+        this.alias = alias;
         return this;
     }
     
+    /**
+     * Format to use
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public String format;
+    public GetRealmIdentityProviderInstancesAliasExportRequest withFormat(String format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetRealmIdentityProviderInstancesAliasExportQueryParams queryParams;
-    public GetRealmIdentityProviderInstancesAliasExportRequest withQueryParams(GetRealmIdentityProviderInstancesAliasExportQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmIdentityProviderInstancesAliasExportRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

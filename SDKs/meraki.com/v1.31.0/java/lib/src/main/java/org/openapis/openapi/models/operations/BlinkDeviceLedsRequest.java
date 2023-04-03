@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BlinkDeviceLedsRequest {
-    
-    public BlinkDeviceLedsPathParams pathParams;
-    public BlinkDeviceLedsRequest withPathParams(BlinkDeviceLedsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public BlinkDeviceLedsRequestBody requestBody;
+    public BlinkDeviceLedsRequest withRequestBody(BlinkDeviceLedsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public BlinkDeviceLedsRequestBody request;
-    public BlinkDeviceLedsRequest withRequest(BlinkDeviceLedsRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public BlinkDeviceLedsRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

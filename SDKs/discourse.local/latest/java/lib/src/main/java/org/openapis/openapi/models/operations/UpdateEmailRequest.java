@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateEmailRequest {
-    
-    public UpdateEmailPathParams pathParams;
-    public UpdateEmailRequest withPathParams(UpdateEmailPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateEmailRequestBody requestBody;
+    public UpdateEmailRequest withRequestBody(UpdateEmailRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateEmailRequestBody request;
-    public UpdateEmailRequest withRequest(UpdateEmailRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public UpdateEmailRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

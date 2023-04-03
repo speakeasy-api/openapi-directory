@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServicePrincipalsCreateRequest {
-    
-    public ServicePrincipalsCreatePathParams pathParams;
-    public ServicePrincipalsCreateRequest withPathParams(ServicePrincipalsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ServicePrincipalsCreateQueryParams queryParams;
-    public ServicePrincipalsCreateRequest withQueryParams(ServicePrincipalsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Parameters to create a service principal.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ServicePrincipalCreateParameters request;
-    public ServicePrincipalsCreateRequest withRequest(org.openapis.openapi.models.shared.ServicePrincipalCreateParameters request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ServicePrincipalCreateParameters servicePrincipalCreateParameters;
+    public ServicePrincipalsCreateRequest withServicePrincipalCreateParameters(org.openapis.openapi.models.shared.ServicePrincipalCreateParameters servicePrincipalCreateParameters) {
+        this.servicePrincipalCreateParameters = servicePrincipalCreateParameters;
+        return this;
+    }
+    
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public ServicePrincipalsCreateRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public ServicePrincipalsCreateRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

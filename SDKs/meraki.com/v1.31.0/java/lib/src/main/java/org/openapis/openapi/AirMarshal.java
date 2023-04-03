@@ -40,13 +40,13 @@ public class AirMarshal {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessAirMarshalResponse getNetworkWirelessAirMarshal(org.openapis.openapi.models.operations.GetNetworkWirelessAirMarshalRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessAirMarshalPathParams.class, baseUrl, "/networks/{networkId}/wireless/airMarshal", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessAirMarshalRequest.class, baseUrl, "/networks/{networkId}/wireless/airMarshal", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessAirMarshalQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessAirMarshalRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

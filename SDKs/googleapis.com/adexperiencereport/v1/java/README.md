@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AdexperiencereportSitesGetPathParams;
-import org.openapis.openapi.models.operations.AdexperiencereportSitesGetQueryParams;
 import org.openapis.openapi.models.operations.AdexperiencereportSitesGetRequest;
 import org.openapis.openapi.models.operations.AdexperiencereportSitesGetResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -31,23 +29,19 @@ public class Application {
                 .build();
 
             AdexperiencereportSitesGetRequest req = new AdexperiencereportSitesGetRequest() {{
-                pathParams = new AdexperiencereportSitesGetPathParams() {{
-                    name = "corrupti";
-                }};
-                queryParams = new AdexperiencereportSitesGetQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                key = "nulla";
+                name = "corrupti";
+                oauthToken = "illum";
+                prettyPrint = false;
+                quotaUser = "vel";
+                uploadType = "error";
+                uploadProtocol = "deserunt";
+            }}            
 
             AdexperiencereportSitesGetResponse res = sdk.sites.adexperiencereportSitesGet(req);
 
@@ -61,7 +55,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### sites

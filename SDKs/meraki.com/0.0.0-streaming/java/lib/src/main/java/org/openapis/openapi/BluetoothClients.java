@@ -42,13 +42,13 @@ public class BluetoothClients {
      */
     public org.openapis.openapi.models.operations.GetNetworkBluetoothClientResponse getNetworkBluetoothClient(org.openapis.openapi.models.operations.GetNetworkBluetoothClientRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkBluetoothClientPathParams.class, baseUrl, "/networks/{networkId}/bluetoothClients/{bluetoothClientId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkBluetoothClientRequest.class, baseUrl, "/networks/{networkId}/bluetoothClients/{bluetoothClientId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkBluetoothClientQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkBluetoothClientRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -88,13 +88,13 @@ public class BluetoothClients {
      */
     public org.openapis.openapi.models.operations.GetNetworkBluetoothClientsResponse getNetworkBluetoothClients(org.openapis.openapi.models.operations.GetNetworkBluetoothClientsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkBluetoothClientsPathParams.class, baseUrl, "/networks/{networkId}/bluetoothClients", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkBluetoothClientsRequest.class, baseUrl, "/networks/{networkId}/bluetoothClients", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkBluetoothClientsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkBluetoothClientsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

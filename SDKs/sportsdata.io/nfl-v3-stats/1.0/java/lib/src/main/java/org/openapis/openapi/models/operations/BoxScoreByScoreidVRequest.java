@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BoxScoreByScoreidVRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public BoxScoreByScoreidVFormatEnum format;
+    public BoxScoreByScoreidVRequest withFormat(BoxScoreByScoreidVFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public BoxScoreByScoreidVPathParams pathParams;
-    public BoxScoreByScoreidVRequest withPathParams(BoxScoreByScoreidVPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ScoreID of the game. Possible values include: &lt;code&gt;16247&lt;/code&gt;, &lt;code&gt;16245&lt;/code&gt;, etc.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scoreid")
+    public String scoreid;
+    public BoxScoreByScoreidVRequest withScoreid(String scoreid) {
+        this.scoreid = scoreid;
         return this;
     }
     

@@ -45,7 +45,7 @@ public class Groups {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsCountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsCountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -102,7 +102,7 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GroupsDeleteResponse groupsDelete(org.openapis.openapi.models.operations.GroupsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsDeletePathParams.class, baseUrl, "/groups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsDeleteRequest.class, baseUrl, "/groups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -165,7 +165,7 @@ public class Groups {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -212,13 +212,13 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GroupsGetDatapointsResponse groupsGetDatapoints(org.openapis.openapi.models.operations.GroupsGetDatapointsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsGetDatapointsPathParams.class, baseUrl, "/groups/{id}/datapoints", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsGetDatapointsRequest.class, baseUrl, "/groups/{id}/datapoints", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsGetDatapointsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsGetDatapointsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -265,13 +265,13 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GroupsGetDatapointsCountResponse groupsGetDatapointsCount(org.openapis.openapi.models.operations.GroupsGetDatapointsCountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsGetDatapointsCountPathParams.class, baseUrl, "/groups/{id}/datapoints/count", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsGetDatapointsCountRequest.class, baseUrl, "/groups/{id}/datapoints/count", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsGetDatapointsCountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsGetDatapointsCountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -328,13 +328,13 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GroupsGetDatapointsSummaryResponse groupsGetDatapointsSummary(org.openapis.openapi.models.operations.GroupsGetDatapointsSummaryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsGetDatapointsSummaryPathParams.class, baseUrl, "/groups/{id}/aggregated/summary", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsGetDatapointsSummaryRequest.class, baseUrl, "/groups/{id}/aggregated/summary", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsGetDatapointsSummaryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsGetDatapointsSummaryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -381,13 +381,13 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GroupsGetHitsResponse groupsGetHits(org.openapis.openapi.models.operations.GroupsGetHitsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsGetHitsPathParams.class, baseUrl, "/groups/{id}/hits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsGetHitsRequest.class, baseUrl, "/groups/{id}/hits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsGetHitsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsGetHitsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -440,7 +440,7 @@ public class Groups {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsGetStatisticsAggregatedSingleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsGetStatisticsAggregatedSingleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -493,7 +493,7 @@ public class Groups {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsGetStatisticsAllListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsGetStatisticsAllListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -540,13 +540,13 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GroupsGetStatisticsListResponse groupsGetStatisticsList(org.openapis.openapi.models.operations.GroupsGetStatisticsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsGetStatisticsListPathParams.class, baseUrl, "/groups/{id}/aggregated/list", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsGetStatisticsListRequest.class, baseUrl, "/groups/{id}/aggregated/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsGetStatisticsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsGetStatisticsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -593,13 +593,13 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GroupsGetStatisticsSingleResponse groupsGetStatisticsSingle(org.openapis.openapi.models.operations.GroupsGetStatisticsSingleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsGetStatisticsSinglePathParams.class, baseUrl, "/groups/{id}/aggregated", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsGetStatisticsSingleRequest.class, baseUrl, "/groups/{id}/aggregated", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsGetStatisticsSingleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsGetStatisticsSingleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -646,7 +646,7 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GroupsPatchFavouriteResponse groupsPatchFavourite(org.openapis.openapi.models.operations.GroupsPatchFavouriteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsPatchFavouritePathParams.class, baseUrl, "/groups/{id}/favourite", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsPatchFavouriteRequest.class, baseUrl, "/groups/{id}/favourite", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -703,12 +703,12 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GroupsPatchNotesFormResponse groupsPatchNotesForm(org.openapis.openapi.models.operations.GroupsPatchNotesFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsPatchNotesFormPathParams.class, baseUrl, "/groups/{id}/notes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsPatchNotesFormRequest.class, baseUrl, "/groups/{id}/notes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreRequestsGenericTextPatch", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -765,12 +765,12 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GroupsPatchNotesJsonResponse groupsPatchNotesJson(org.openapis.openapi.models.operations.GroupsPatchNotesJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsPatchNotesJsonPathParams.class, baseUrl, "/groups/{id}/notes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsPatchNotesJsonRequest.class, baseUrl, "/groups/{id}/notes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreRequestsGenericTextPatch", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -827,12 +827,12 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GroupsPatchNotesRawResponse groupsPatchNotesRaw(org.openapis.openapi.models.operations.GroupsPatchNotesRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsPatchNotesRawPathParams.class, baseUrl, "/groups/{id}/notes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsPatchNotesRawRequest.class, baseUrl, "/groups/{id}/notes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -889,12 +889,12 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GroupsPostResponse groupsPost(org.openapis.openapi.models.operations.GroupsPostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsPostPathParams.class, baseUrl, "/groups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsPostRequest.class, baseUrl, "/groups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreDtoGroupsGroup", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -949,7 +949,7 @@ public class Groups {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupsPutResponse groupsPut(org.openapis.openapi.models.operations.GroupsPutRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupsPutResponse groupsPut(org.openapis.openapi.models.shared.ApiCoreDtoGroupsGroup request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/groups");
         
@@ -1013,12 +1013,12 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GroupsPutDatapointResponse groupsPutDatapoint(org.openapis.openapi.models.operations.GroupsPutDatapointRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsPutDatapointPathParams.class, baseUrl, "/groups/{id}/datapoints", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsPutDatapointRequest.class, baseUrl, "/groups/{id}/datapoints", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreDtoDatapointsDatapoint", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1075,7 +1075,7 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GetGroupsIdResponse getGroupsId(org.openapis.openapi.models.operations.GetGroupsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGroupsIdPathParams.class, baseUrl, "/groups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGroupsIdRequest.class, baseUrl, "/groups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

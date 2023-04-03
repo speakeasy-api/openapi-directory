@@ -4,13 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LeagueLeadersBySeasonRequest {
+    /**
+     * Response member you would like results sorted by.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=column")
+    public LeagueLeadersBySeasonColumnEnum column;
+    public LeagueLeadersBySeasonRequest withColumn(LeagueLeadersBySeasonColumnEnum column) {
+        this.column = column;
+        return this;
+    }
     
-    public LeagueLeadersBySeasonPathParams pathParams;
-    public LeagueLeadersBySeasonRequest withPathParams(LeagueLeadersBySeasonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public LeagueLeadersBySeasonFormatEnum format;
+    public LeagueLeadersBySeasonRequest withFormat(LeagueLeadersBySeasonFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * Player\u00e2\u20ac\u2122s position that you would like to filter by.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=position")
+    public LeagueLeadersBySeasonPositionEnum position;
+    public LeagueLeadersBySeasonRequest withPosition(LeagueLeadersBySeasonPositionEnum position) {
+        this.position = position;
+        return this;
+    }
+    
+    /**
+     *           Year of the season and the season type. If no season type is provided, then the default is regular season.
+     *           &lt;br&gt;Examples: &lt;code&gt;2015REG&lt;/code&gt;, &lt;code&gt;2015PRE&lt;/code&gt;, &lt;code&gt;2015POST&lt;/code&gt;.
+     *         
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
+    public String season;
+    public LeagueLeadersBySeasonRequest withSeason(String season) {
+        this.season = season;
         return this;
     }
     

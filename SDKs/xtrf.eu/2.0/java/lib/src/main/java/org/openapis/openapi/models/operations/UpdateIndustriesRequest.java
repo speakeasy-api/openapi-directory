@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateIndustriesRequest {
-    
-    public UpdateIndustriesPathParams pathParams;
-    public UpdateIndustriesRequest withPathParams(UpdateIndustriesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated industries of a given client.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Long[] request;
-    public UpdateIndustriesRequest withRequest(Long[] request) {
-        this.request = request;
+    public Long[] requestBody;
+    public UpdateIndustriesRequest withRequestBody(Long[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * client's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
+    public Long customerId;
+    public UpdateIndustriesRequest withCustomerId(Long customerId) {
+        this.customerId = customerId;
         return this;
     }
     

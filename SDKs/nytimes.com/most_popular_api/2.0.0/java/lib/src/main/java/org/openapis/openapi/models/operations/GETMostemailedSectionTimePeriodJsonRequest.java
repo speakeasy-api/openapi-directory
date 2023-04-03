@@ -4,20 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETMostemailedSectionTimePeriodJsonRequest {
-    
-    public GETMostemailedSectionTimePeriodJsonPathParams pathParams;
-    public GETMostemailedSectionTimePeriodJsonRequest withPathParams(GETMostemailedSectionTimePeriodJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Limits the results by one or more sections. You can use
+     * `all-sections` or one or more section names seperated by semicolons. See `viewed/sections.json` call to get a list of sections. 
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=section")
+    public org.openapis.openapi.models.shared.SectionEnum section;
+    public GETMostemailedSectionTimePeriodJsonRequest withSection(org.openapis.openapi.models.shared.SectionEnum section) {
+        this.section = section;
         return this;
     }
     
-    
-    public GETMostemailedSectionTimePeriodJsonSecurity security;
-    public GETMostemailedSectionTimePeriodJsonRequest withSecurity(GETMostemailedSectionTimePeriodJsonSecurity security) {
-        this.security = security;
+    /**
+     * Number of days `1 | 7 | 30 ` corresponds to a day, a week, or a month of content.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=time-period")
+    public org.openapis.openapi.models.shared.TimePeriodEnum timePeriod;
+    public GETMostemailedSectionTimePeriodJsonRequest withTimePeriod(org.openapis.openapi.models.shared.TimePeriodEnum timePeriod) {
+        this.timePeriod = timePeriod;
         return this;
     }
     

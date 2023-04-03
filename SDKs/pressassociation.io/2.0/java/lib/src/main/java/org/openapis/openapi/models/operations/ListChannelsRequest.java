@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListChannelsRequest {
-    
-    public ListChannelsQueryParams queryParams;
-    public ListChannelsRequest withQueryParams(ListChannelsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Flag to display Legacy and Provider Ids.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliases")
+    public Boolean aliases;
+    public ListChannelsRequest withAliases(Boolean aliases) {
+        this.aliases = aliases;
         return this;
     }
     
+    /**
+     * Date of the Channel State to select, this will display channel names and attributes in the future or past.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public String date;
+    public ListChannelsRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
     
-    public ListChannelsSecurity security;
-    public ListChannelsRequest withSecurity(ListChannelsSecurity security) {
-        this.security = security;
+    /**
+     * The identifier for the selected platform. Multiple platforms can be passed to the API without a region Id. Passing multiple platforms without a region will not return epg numbers as these are linked to a platform and region.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=platformId")
+    public String platformId;
+    public ListChannelsRequest withPlatformId(String platformId) {
+        this.platformId = platformId;
+        return this;
+    }
+    
+    /**
+     * The platform region ID for the channel selection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regionId")
+    public String regionId;
+    public ListChannelsRequest withRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    
+    /**
+     * The End Date for the schedule.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scheduleEnd")
+    public String scheduleEnd;
+    public ListChannelsRequest withScheduleEnd(String scheduleEnd) {
+        this.scheduleEnd = scheduleEnd;
+        return this;
+    }
+    
+    /**
+     * The Start Date for the schedule.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scheduleStart")
+    public String scheduleStart;
+    public ListChannelsRequest withScheduleStart(String scheduleStart) {
+        this.scheduleStart = scheduleStart;
+        return this;
+    }
+    
+    /**
+     * Schedule Updated Since
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scheduleUpdatedSince")
+    public String scheduleUpdatedSince;
+    public ListChannelsRequest withScheduleUpdatedSince(String scheduleUpdatedSince) {
+        this.scheduleUpdatedSince = scheduleUpdatedSince;
         return this;
     }
     

@@ -141,7 +141,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DriverDetailsResponse driverDetails(org.openapis.openapi.models.operations.DriverDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DriverDetailsPathParams.class, baseUrl, "/{format}/driver/{driverid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DriverDetailsRequest.class, baseUrl, "/{format}/driver/{driverid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -180,7 +180,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DriverRaceProjectionsEntryListResponse driverRaceProjectionsEntryList(org.openapis.openapi.models.operations.DriverRaceProjectionsEntryListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DriverRaceProjectionsEntryListPathParams.class, baseUrl, "/{format}/DriverRaceProjections/{raceid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DriverRaceProjectionsEntryListRequest.class, baseUrl, "/{format}/DriverRaceProjections/{raceid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -219,7 +219,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DriversResponse drivers(org.openapis.openapi.models.operations.DriversRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DriversPathParams.class, baseUrl, "/{format}/drivers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DriversRequest.class, baseUrl, "/{format}/drivers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -258,7 +258,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RaceResultsResponse raceResults(org.openapis.openapi.models.operations.RaceResultsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RaceResultsPathParams.class, baseUrl, "/{format}/raceresult/{raceid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RaceResultsRequest.class, baseUrl, "/{format}/raceresult/{raceid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -297,7 +297,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RacesScheduleResponse racesSchedule(org.openapis.openapi.models.operations.RacesScheduleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RacesSchedulePathParams.class, baseUrl, "/{format}/races/{season}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RacesScheduleRequest.class, baseUrl, "/{format}/races/{season}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -336,7 +336,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.SeriesResponse series(org.openapis.openapi.models.operations.SeriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SeriesPathParams.class, baseUrl, "/{format}/series", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SeriesRequest.class, baseUrl, "/{format}/series", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

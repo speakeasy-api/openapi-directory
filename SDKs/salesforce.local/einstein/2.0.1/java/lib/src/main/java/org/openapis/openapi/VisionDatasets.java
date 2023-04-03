@@ -39,10 +39,11 @@ public class VisionDatasets {
      * Create a Dataset
      * Creates a dataset and labels, if they're specified.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDatasetResponse createDataset(org.openapis.openapi.models.operations.CreateDatasetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDatasetResponse createDataset(org.openapis.openapi.models.operations.CreateDatasetRequestBody request, org.openapis.openapi.models.operations.CreateDatasetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/vision/datasets");
         
@@ -53,7 +54,7 @@ public class VisionDatasets {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,19 +82,20 @@ public class VisionDatasets {
      * Delete a Dataset
      * Deletes the specified dataset and associated labels and examples.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteDataset1Response deleteDataset1(org.openapis.openapi.models.operations.DeleteDataset1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteDataset1Response deleteDataset1(org.openapis.openapi.models.operations.DeleteDataset1Request request, org.openapis.openapi.models.operations.DeleteDataset1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDataset1PathParams.class, baseUrl, "/v2/vision/datasets/{datasetId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDataset1Request.class, baseUrl, "/v2/vision/datasets/{datasetId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -121,19 +123,20 @@ public class VisionDatasets {
      * Get a Dataset
      * Returns a single dataset.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDataset1Response getDataset1(org.openapis.openapi.models.operations.GetDataset1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDataset1Response getDataset1(org.openapis.openapi.models.operations.GetDataset1Request request, org.openapis.openapi.models.operations.GetDataset1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDataset1PathParams.class, baseUrl, "/v2/vision/datasets/{datasetId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDataset1Request.class, baseUrl, "/v2/vision/datasets/{datasetId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -161,19 +164,20 @@ public class VisionDatasets {
      * Get Deletion Status
      * Returns the status of an image dataset or model deletion. When you delete a dataset or model, the deletion may not occur immediately. Use this call to find out when the deletion is complete.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Get1Response get1(org.openapis.openapi.models.operations.Get1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.Get1Response get1(org.openapis.openapi.models.operations.Get1Request request, org.openapis.openapi.models.operations.Get1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Get1PathParams.class, baseUrl, "/v2/vision/deletion/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Get1Request.class, baseUrl, "/v2/vision/deletion/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -201,10 +205,11 @@ public class VisionDatasets {
      * Get All Datasets
      * Returns a list of datasets and their labels that were created by the current user. The response is sorted by dataset ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListDatasets1Response listDatasets1(org.openapis.openapi.models.operations.ListDatasets1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.ListDatasets1Response listDatasets1(org.openapis.openapi.models.operations.ListDatasets1Request request, org.openapis.openapi.models.operations.ListDatasets1Security security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/vision/datasets");
         
@@ -212,14 +217,14 @@ public class VisionDatasets {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDatasets1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDatasets1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -247,10 +252,11 @@ public class VisionDatasets {
      * Create a Dataset From a Zip File Asynchronously
      * Creates a dataset, labels, and examples from the specified .zip file. The call returns immediately and continues to upload the images in the background.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UploadDatasetAsync1Response uploadDatasetAsync1(org.openapis.openapi.models.operations.UploadDatasetAsync1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.UploadDatasetAsync1Response uploadDatasetAsync1(org.openapis.openapi.models.operations.UploadDatasetAsync1RequestBody request, org.openapis.openapi.models.operations.UploadDatasetAsync1Security security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/vision/datasets/upload");
         
@@ -261,7 +267,7 @@ public class VisionDatasets {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -289,10 +295,11 @@ public class VisionDatasets {
      * Create a Dataset From a Zip File Synchronously
      * Creates a dataset, labels, and examples from the specified .zip file. The call returns after the dataset is created and all of the images are uploaded.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UploadDatasetSync1Response uploadDatasetSync1(org.openapis.openapi.models.operations.UploadDatasetSync1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.UploadDatasetSync1Response uploadDatasetSync1(org.openapis.openapi.models.operations.UploadDatasetSync1RequestBody request, org.openapis.openapi.models.operations.UploadDatasetSync1Security security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/vision/datasets/upload/sync");
         
@@ -303,7 +310,7 @@ public class VisionDatasets {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

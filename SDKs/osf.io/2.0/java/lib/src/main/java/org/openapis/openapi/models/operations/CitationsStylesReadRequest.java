@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CitationsStylesReadRequest {
-    
-    public CitationsStylesReadPathParams pathParams;
-    public CitationsStylesReadRequest withPathParams(CitationsStylesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the citation style.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=style_id")
+    public String styleId;
+    public CitationsStylesReadRequest withStyleId(String styleId) {
+        this.styleId = styleId;
         return this;
     }
     

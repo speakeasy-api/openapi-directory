@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAuthorizeClusterSecurityGroupIngressRequest {
-    
-    public GETAuthorizeClusterSecurityGroupIngressQueryParams queryParams;
-    public GETAuthorizeClusterSecurityGroupIngressRequest withQueryParams(GETAuthorizeClusterSecurityGroupIngressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETAuthorizeClusterSecurityGroupIngressActionEnum action;
+    public GETAuthorizeClusterSecurityGroupIngressRequest withAction(GETAuthorizeClusterSecurityGroupIngressActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The IP range to be added the Amazon Redshift security group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CIDRIP")
+    public String cidrip;
+    public GETAuthorizeClusterSecurityGroupIngressRequest withCidrip(String cidrip) {
+        this.cidrip = cidrip;
+        return this;
+    }
     
-    public GETAuthorizeClusterSecurityGroupIngressHeaders headers;
-    public GETAuthorizeClusterSecurityGroupIngressRequest withHeaders(GETAuthorizeClusterSecurityGroupIngressHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the security group to which the ingress rule is added.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterSecurityGroupName")
+    public String clusterSecurityGroupName;
+    public GETAuthorizeClusterSecurityGroupIngressRequest withClusterSecurityGroupName(String clusterSecurityGroupName) {
+        this.clusterSecurityGroupName = clusterSecurityGroupName;
+        return this;
+    }
+    
+    /**
+     * The EC2 security group to be added the Amazon Redshift security group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EC2SecurityGroupName")
+    public String ec2SecurityGroupName;
+    public GETAuthorizeClusterSecurityGroupIngressRequest withEc2SecurityGroupName(String ec2SecurityGroupName) {
+        this.ec2SecurityGroupName = ec2SecurityGroupName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The Amazon Web Services account number of the owner of the security group specified by the &lt;i&gt;EC2SecurityGroupName&lt;/i&gt; parameter. The Amazon Web Services Access Key ID is not an acceptable value. &lt;/p&gt; &lt;p&gt;Example: &lt;code&gt;111122223333&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EC2SecurityGroupOwnerId")
+    public String ec2SecurityGroupOwnerId;
+    public GETAuthorizeClusterSecurityGroupIngressRequest withEc2SecurityGroupOwnerId(String ec2SecurityGroupOwnerId) {
+        this.ec2SecurityGroupOwnerId = ec2SecurityGroupOwnerId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETAuthorizeClusterSecurityGroupIngressVersionEnum version;
+    public GETAuthorizeClusterSecurityGroupIngressRequest withVersion(GETAuthorizeClusterSecurityGroupIngressVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETAuthorizeClusterSecurityGroupIngressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETAuthorizeClusterSecurityGroupIngressRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETAuthorizeClusterSecurityGroupIngressRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETAuthorizeClusterSecurityGroupIngressRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETAuthorizeClusterSecurityGroupIngressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETAuthorizeClusterSecurityGroupIngressRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETAuthorizeClusterSecurityGroupIngressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

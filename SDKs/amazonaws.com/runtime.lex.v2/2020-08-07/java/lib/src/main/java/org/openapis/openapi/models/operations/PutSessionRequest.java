@@ -7,24 +7,109 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSessionRequest {
-    
-    public PutSessionPathParams pathParams;
-    public PutSessionRequest withPathParams(PutSessionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutSessionHeaders headers;
-    public PutSessionRequest withHeaders(PutSessionHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutSessionRequestBody request;
-    public PutSessionRequest withRequest(PutSessionRequestBody request) {
-        this.request = request;
+    public PutSessionRequestBody requestBody;
+    public PutSessionRequest withRequestBody(PutSessionRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The message that Amazon Lex V2 returns in the response can be either text or speech depending on the value of this parameter. &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;If the value is &lt;code&gt;text/plain; charset=utf-8&lt;/code&gt;, Amazon Lex V2 returns text in the response.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ResponseContentType")
+    public String responseContentType;
+    public PutSessionRequest withResponseContentType(String responseContentType) {
+        this.responseContentType = responseContentType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public PutSessionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public PutSessionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public PutSessionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public PutSessionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public PutSessionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public PutSessionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public PutSessionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The alias identifier of the bot that receives the session data.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botAliasId")
+    public String botAliasId;
+    public PutSessionRequest withBotAliasId(String botAliasId) {
+        this.botAliasId = botAliasId;
+        return this;
+    }
+    
+    /**
+     * The identifier of the bot that receives the session data.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botId")
+    public String botId;
+    public PutSessionRequest withBotId(String botId) {
+        this.botId = botId;
+        return this;
+    }
+    
+    /**
+     * The locale where the session is in use.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=localeId")
+    public String localeId;
+    public PutSessionRequest withLocaleId(String localeId) {
+        this.localeId = localeId;
+        return this;
+    }
+    
+    /**
+     * The identifier of the session that receives the session data.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sessionId")
+    public String sessionId;
+    public PutSessionRequest withSessionId(String sessionId) {
+        this.sessionId = sessionId;
         return this;
     }
     

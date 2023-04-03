@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateVersionRequest {
-    
-    public UpdateVersionPathParams pathParams;
-    public UpdateVersionRequest withPathParams(UpdateVersionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Version object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Version request;
-    public UpdateVersionRequest withRequest(org.openapis.openapi.models.shared.Version request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Version version;
+    public UpdateVersionRequest withVersion(org.openapis.openapi.models.shared.Version version) {
+        this.version = version;
         return this;
     }
     
-    
-    public UpdateVersionSecurity security;
-    public UpdateVersionRequest withSecurity(UpdateVersionSecurity security) {
-        this.security = security;
+    /**
+     * Semver version indentifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionId")
+    public String versionId;
+    public UpdateVersionRequest withVersionId(String versionId) {
+        this.versionId = versionId;
         return this;
     }
     

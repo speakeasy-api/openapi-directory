@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsGroupModelCountsRequest {
-    
-    public ErrorsGroupModelCountsPathParams pathParams;
-    public ErrorsGroupModelCountsRequest withPathParams(ErrorsGroupModelCountsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The maximum number of results to return. (0 will fetch all results till the max number.)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$top")
+    public Long dollarTop;
+    public ErrorsGroupModelCountsRequest withDollarTop(Long dollarTop) {
+        this.dollarTop = dollarTop;
         return this;
     }
     
-    
-    public ErrorsGroupModelCountsQueryParams queryParams;
-    public ErrorsGroupModelCountsRequest withQueryParams(ErrorsGroupModelCountsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ErrorsGroupModelCountsRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The id of the error group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorGroupId")
+    public String errorGroupId;
+    public ErrorsGroupModelCountsRequest withErrorGroupId(String errorGroupId) {
+        this.errorGroupId = errorGroupId;
+        return this;
+    }
     
-    public ErrorsGroupModelCountsSecurity security;
-    public ErrorsGroupModelCountsRequest withSecurity(ErrorsGroupModelCountsSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ErrorsGroupModelCountsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

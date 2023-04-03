@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportNessusScanDataRequest {
-    
-    public ImportNessusScanDataPathParams pathParams;
-    public ImportNessusScanDataRequest withPathParams(ImportNessusScanDataPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/octet-stream")
-    public byte[] request;
-    public ImportNessusScanDataRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public ImportNessusScanDataRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public ImportNessusScanDataSecurity security;
-    public ImportNessusScanDataRequest withSecurity(ImportNessusScanDataSecurity security) {
-        this.security = security;
+    /**
+     * UUID or name of the site to import Nessus scan data into
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=site_id")
+    public String siteId;
+    public ImportNessusScanDataRequest withSiteId(String siteId) {
+        this.siteId = siteId;
         return this;
     }
     

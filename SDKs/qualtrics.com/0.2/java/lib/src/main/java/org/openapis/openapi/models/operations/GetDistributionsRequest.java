@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDistributionsRequest {
-    
-    public GetDistributionsQueryParams queryParams;
-    public GetDistributionsRequest withQueryParams(GetDistributionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The survey for which to load the distributions
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=surveyId")
+    public String surveyId;
+    public GetDistributionsRequest withSurveyId(String surveyId) {
+        this.surveyId = surveyId;
         return this;
     }
     

@@ -39,7 +39,7 @@ public class Rfe {
      */
     public org.openapis.openapi.models.operations.GetRfeResponse getRfe(org.openapis.openapi.models.operations.GetRfeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRfePathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfes/{rfe_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRfeRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfes/{rfe_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -158,7 +158,7 @@ public class Rfe {
      */
     public org.openapis.openapi.models.operations.GetRfeListResponse getRfeList(org.openapis.openapi.models.operations.GetRfeListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRfeListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRfeListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -277,12 +277,12 @@ public class Rfe {
      */
     public org.openapis.openapi.models.operations.PostRfeJsonResponse postRfeJson(org.openapis.openapi.models.operations.PostRfeJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRfeJsonPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRfeJsonRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rfePO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -398,12 +398,12 @@ public class Rfe {
      */
     public org.openapis.openapi.models.operations.PostRfeRawResponse postRfeRaw(org.openapis.openapi.models.operations.PostRfeRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRfeRawPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRfeRawRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/rfes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         

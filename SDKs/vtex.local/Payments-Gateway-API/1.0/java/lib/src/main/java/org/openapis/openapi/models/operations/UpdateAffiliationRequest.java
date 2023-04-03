@@ -7,24 +7,57 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAffiliationRequest {
-    
-    public UpdateAffiliationPathParams pathParams;
-    public UpdateAffiliationRequest withPathParams(UpdateAffiliationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public UpdateAffiliationRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public UpdateAffiliationHeaders headers;
-    public UpdateAffiliationRequest withHeaders(UpdateAffiliationHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Media type of the body of the request.  Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public UpdateAffiliationRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateAffiliationRequest request;
-    public UpdateAffiliationRequest withRequest(org.openapis.openapi.models.shared.UpdateAffiliationRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateAffiliationRequest updateAffiliationRequest;
+    public UpdateAffiliationRequest withUpdateAffiliationRequest(org.openapis.openapi.models.shared.UpdateAffiliationRequest updateAffiliationRequest) {
+        this.updateAffiliationRequest = updateAffiliationRequest;
+        return this;
+    }
+    
+    /**
+     * The AppKey configured by the merchant (optional configuration)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppKey")
+    public String xPROVIDERAPIAppKey;
+    public UpdateAffiliationRequest withXPROVIDERAPIAppKey(String xPROVIDERAPIAppKey) {
+        this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
+        return this;
+    }
+    
+    /**
+     * The AppToken configured by the merchant (optional configuration)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppToken")
+    public String xPROVIDERAPIAppToken;
+    public UpdateAffiliationRequest withXPROVIDERAPIAppToken(String xPROVIDERAPIAppToken) {
+        this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=affiliationId")
+    public String affiliationId;
+    public UpdateAffiliationRequest withAffiliationId(String affiliationId) {
+        this.affiliationId = affiliationId;
         return this;
     }
     

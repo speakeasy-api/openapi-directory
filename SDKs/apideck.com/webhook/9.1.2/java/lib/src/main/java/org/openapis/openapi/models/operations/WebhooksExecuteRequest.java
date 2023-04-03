@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebhooksExecuteRequest {
-    
-    public WebhooksExecutePathParams pathParams;
-    public WebhooksExecuteRequest withPathParams(WebhooksExecutePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public WebhooksExecuteRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public WebhooksExecuteRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * JWT Webhook token that represents the unifiedApi and applicationId associated to the event source.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public WebhooksExecuteRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public WebhooksExecuteSecurity security;
-    public WebhooksExecuteRequest withSecurity(WebhooksExecuteSecurity security) {
-        this.security = security;
+    /**
+     * Service provider ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceId")
+    public String serviceId;
+    public WebhooksExecuteRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
         return this;
     }
     

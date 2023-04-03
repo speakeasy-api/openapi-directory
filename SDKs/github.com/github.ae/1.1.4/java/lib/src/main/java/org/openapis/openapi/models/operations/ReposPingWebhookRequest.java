@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposPingWebhookRequest {
+    /**
+     * The unique identifier of the hook.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
+    public Long hookId;
+    public ReposPingWebhookRequest withHookId(Long hookId) {
+        this.hookId = hookId;
+        return this;
+    }
     
-    public ReposPingWebhookPathParams pathParams;
-    public ReposPingWebhookRequest withPathParams(ReposPingWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposPingWebhookRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposPingWebhookRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -17,9 +17,7 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetProgrammesAtoZSearchPathParams;
 import org.openapis.openapi.models.operations.GetProgrammesAtoZSearchSortEnum;
-import org.openapis.openapi.models.operations.GetProgrammesAtoZSearchQueryParams;
 import org.openapis.openapi.models.operations.GetProgrammesAtoZSearchRequest;
 import org.openapis.openapi.models.operations.GetProgrammesAtoZSearchResponse;
 import org.openapis.openapi.models.shared.SortDirectionEnum;
@@ -31,26 +29,20 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetProgrammesAtoZSearchRequest req = new GetProgrammesAtoZSearchRequest() {{
-                pathParams = new GetProgrammesAtoZSearchPathParams() {{
-                    letter = "corrupti";
-                }};
-                queryParams = new GetProgrammesAtoZSearchQueryParams() {{
-                    availability = "available";
-                    initialChildCount = 715190;
-                    page = 844266;
-                    perPage = 602763;
-                    rights = "web";
-                    sort = "title";
-                    sortDirection = "desc";
-                }};
-            }};            
+                availability = "available";
+                initialChildCount = 592845;
+                letter = "distinctio";
+                page = 844266;
+                perPage = 602763;
+                rights = "web";
+                sort = "title";
+                sortDirection = "desc";
+            }}            
 
             GetProgrammesAtoZSearchResponse res = sdk.aToZ.getProgrammesAtoZSearch(req);
 
@@ -64,7 +56,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### aToZ

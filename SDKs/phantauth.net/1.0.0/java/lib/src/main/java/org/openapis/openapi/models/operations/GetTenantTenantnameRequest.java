@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTenantTenantnameRequest {
-    
-    public GetTenantTenantnamePathParams pathParams;
-    public GetTenantTenantnameRequest withPathParams(GetTenantTenantnamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The tenant ID integrated in the `sub` property.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantname")
+    public String tenantname;
+    public GetTenantTenantnameRequest withTenantname(String tenantname) {
+        this.tenantname = tenantname;
         return this;
     }
     

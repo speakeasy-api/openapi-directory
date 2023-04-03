@@ -4,27 +4,216 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BooksLayersAnnotationDataGetRequest {
-    
-    public BooksLayersAnnotationDataGetPathParams pathParams;
-    public BooksLayersAnnotationDataGetRequest withPathParams(BooksLayersAnnotationDataGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public BooksLayersAnnotationDataGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public BooksLayersAnnotationDataGetQueryParams queryParams;
-    public BooksLayersAnnotationDataGetRequest withQueryParams(BooksLayersAnnotationDataGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public BooksLayersAnnotationDataGetRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * For the dictionary layer. Whether or not to allow web definitions.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allowWebDefinitions")
+    public Boolean allowWebDefinitions;
+    public BooksLayersAnnotationDataGetRequest withAllowWebDefinitions(Boolean allowWebDefinitions) {
+        this.allowWebDefinitions = allowWebDefinitions;
+        return this;
+    }
     
-    public BooksLayersAnnotationDataGetSecurity security;
-    public BooksLayersAnnotationDataGetRequest withSecurity(BooksLayersAnnotationDataGetSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public BooksLayersAnnotationDataGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * The ID of the annotation data to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=annotationDataId")
+    public String annotationDataId;
+    public BooksLayersAnnotationDataGetRequest withAnnotationDataId(String annotationDataId) {
+        this.annotationDataId = annotationDataId;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public BooksLayersAnnotationDataGetRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * The content version for the volume you are trying to retrieve.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentVersion")
+    public String contentVersion;
+    public BooksLayersAnnotationDataGetRequest withContentVersion(String contentVersion) {
+        this.contentVersion = contentVersion;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public BooksLayersAnnotationDataGetRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * The requested pixel height for any images. If height is provided width must also be provided.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=h")
+    public Long h;
+    public BooksLayersAnnotationDataGetRequest withH(Long h) {
+        this.h = h;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public BooksLayersAnnotationDataGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The ID for the layer to get the annotations.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=layerId")
+    public String layerId;
+    public BooksLayersAnnotationDataGetRequest withLayerId(String layerId) {
+        this.layerId = layerId;
+        return this;
+    }
+    
+    /**
+     * The locale information for the data. ISO-639-1 language and ISO-3166-1 country code. Ex: 'en_US'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public BooksLayersAnnotationDataGetRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public BooksLayersAnnotationDataGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public BooksLayersAnnotationDataGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public BooksLayersAnnotationDataGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The requested scale for the image.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scale")
+    public Long scale;
+    public BooksLayersAnnotationDataGetRequest withScale(Long scale) {
+        this.scale = scale;
+        return this;
+    }
+    
+    /**
+     * String to identify the originator of this request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public String source;
+    public BooksLayersAnnotationDataGetRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public BooksLayersAnnotationDataGetRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public BooksLayersAnnotationDataGetRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * The volume to retrieve annotations for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=volumeId")
+    public String volumeId;
+    public BooksLayersAnnotationDataGetRequest withVolumeId(String volumeId) {
+        this.volumeId = volumeId;
+        return this;
+    }
+    
+    /**
+     * The requested pixel width for any images. If width is provided height must also be provided.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=w")
+    public Long w;
+    public BooksLayersAnnotationDataGetRequest withW(Long w) {
+        this.w = w;
         return this;
     }
     

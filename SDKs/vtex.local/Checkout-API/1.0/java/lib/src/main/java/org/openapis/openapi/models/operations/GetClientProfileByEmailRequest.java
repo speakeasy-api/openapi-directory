@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetClientProfileByEmailRequest {
-    
-    public GetClientProfileByEmailQueryParams queryParams;
-    public GetClientProfileByEmailRequest withQueryParams(GetClientProfileByEmailQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetClientProfileByEmailRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetClientProfileByEmailRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetClientProfileByEmailHeaders headers;
-    public GetClientProfileByEmailRequest withHeaders(GetClientProfileByEmailHeaders headers) {
-        this.headers = headers;
+    /**
+     * Client's email address to be searched.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public GetClientProfileByEmailRequest withEmail(String email) {
+        this.email = email;
         return this;
     }
     

@@ -41,7 +41,7 @@ public class User {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateUserResponse createUser(org.openapis.openapi.models.operations.CreateUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateUserResponse createUser(org.openapis.openapi.models.operations.CreateUserRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users");
         
@@ -84,7 +84,7 @@ public class User {
      */
     public org.openapis.openapi.models.operations.DeleteUserResponse deleteUser(org.openapis.openapi.models.operations.DeleteUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserPathParams.class, baseUrl, "/users/{user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserRequest.class, baseUrl, "/users/{user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -123,7 +123,7 @@ public class User {
      */
     public org.openapis.openapi.models.operations.GetUserResponse getUser(org.openapis.openapi.models.operations.GetUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserPathParams.class, baseUrl, "/users/{user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserRequest.class, baseUrl, "/users/{user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -201,7 +201,7 @@ public class User {
      */
     public org.openapis.openapi.models.operations.GetuserConversationsResponse getuserConversations(org.openapis.openapi.models.operations.GetuserConversationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetuserConversationsPathParams.class, baseUrl, "/users/{user_id}/conversations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetuserConversationsRequest.class, baseUrl, "/users/{user_id}/conversations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -240,12 +240,12 @@ public class User {
      */
     public org.openapis.openapi.models.operations.UpdateUserResponse updateUser(org.openapis.openapi.models.operations.UpdateUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserPathParams.class, baseUrl, "/users/{user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserRequest.class, baseUrl, "/users/{user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

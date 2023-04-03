@@ -4,13 +4,319 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchedulesScheduleBRequest {
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetSchedulesScheduleBRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetSchedulesScheduleBQueryParams queryParams;
-    public GetSchedulesScheduleBRequest withQueryParams(GetSchedulesScheduleBQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
+    public String[] committeeId;
+    public GetSchedulesScheduleBRequest withCommitteeId(String[] committeeId) {
+        this.committeeId = committeeId;
+        return this;
+    }
+    
+    /**
+     * Description of disbursement
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disbursement_description")
+    public String[] disbursementDescription;
+    public GetSchedulesScheduleBRequest withDisbursementDescription(String[] disbursementDescription) {
+        this.disbursementDescription = disbursementDescription;
+        return this;
+    }
+    
+    /**
+     * Disbursement purpose category
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disbursement_purpose_category")
+    public String[] disbursementPurposeCategory;
+    public GetSchedulesScheduleBRequest withDisbursementPurposeCategory(String[] disbursementPurposeCategory) {
+        this.disbursementPurposeCategory = disbursementPurposeCategory;
+        return this;
+    }
+    
+    /**
+     * An unique identifier for each page where the electronic or paper filing is reported.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=image_number")
+    public String[] imageNumber;
+    public GetSchedulesScheduleBRequest withImageNumber(String[] imageNumber) {
+        this.imageNumber = imageNumber;
+        return this;
+    }
+    
+    /**
+     * When sorting by `disbursement_amount`, this is populated with the `disbursement_amount` of the last result.  However, you will need to pass the index of that last result to `last_index` to get the next page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_disbursement_amount")
+    public Float lastDisbursementAmount;
+    public GetSchedulesScheduleBRequest withLastDisbursementAmount(Float lastDisbursementAmount) {
+        this.lastDisbursementAmount = lastDisbursementAmount;
+        return this;
+    }
+    
+    /**
+     * When sorting by `disbursement_date`, this is populated with the `disbursement_date` of the last result. However, you will need to pass the index of that last result to `last_index` to get the next page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_disbursement_date")
+    public LocalDate lastDisbursementDate;
+    public GetSchedulesScheduleBRequest withLastDisbursementDate(LocalDate lastDisbursementDate) {
+        this.lastDisbursementDate = lastDisbursementDate;
+        return this;
+    }
+    
+    /**
+     * Index of last result from previous page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_index")
+    public Integer lastIndex;
+    public GetSchedulesScheduleBRequest withLastIndex(Integer lastIndex) {
+        this.lastIndex = lastIndex;
+        return this;
+    }
+    
+    /**
+     * Filter for form and line number using the following format: `FORM-LINENUMBER`.  For example an argument such as `F3X-16` would filter down to all entries from form `F3X` line number `16`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=line_number")
+    public String lineNumber;
+    public GetSchedulesScheduleBRequest withLineNumber(String lineNumber) {
+        this.lineNumber = lineNumber;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts less than a value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_amount")
+    public String maxAmount;
+    public GetSchedulesScheduleBRequest withMaxAmount(String maxAmount) {
+        this.maxAmount = maxAmount;
+        return this;
+    }
+    
+    /**
+     * Maximum date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
+    public LocalDate maxDate;
+    public GetSchedulesScheduleBRequest withMaxDate(LocalDate maxDate) {
+        this.maxDate = maxDate;
+        return this;
+    }
+    
+    /**
+     * Maxium image number of the page where the schedule item is reported
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_image_number")
+    public String maxImageNumber;
+    public GetSchedulesScheduleBRequest withMaxImageNumber(String maxImageNumber) {
+        this.maxImageNumber = maxImageNumber;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts greater than a value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_amount")
+    public String minAmount;
+    public GetSchedulesScheduleBRequest withMinAmount(String minAmount) {
+        this.minAmount = minAmount;
+        return this;
+    }
+    
+    /**
+     * Minimum date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
+    public LocalDate minDate;
+    public GetSchedulesScheduleBRequest withMinDate(LocalDate minDate) {
+        this.minDate = minDate;
+        return this;
+    }
+    
+    /**
+     * Minium image number of the page where the schedule item is reported
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_image_number")
+    public String minImageNumber;
+    public GetSchedulesScheduleBRequest withMinImageNumber(String minImageNumber) {
+        this.minImageNumber = minImageNumber;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetSchedulesScheduleBRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * City of recipient
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recipient_city")
+    public String[] recipientCity;
+    public GetSchedulesScheduleBRequest withRecipientCity(String[] recipientCity) {
+        this.recipientCity = recipientCity;
+        return this;
+    }
+    
+    /**
+     * The FEC identifier should be represented here if the contributor is registered with the FEC.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recipient_committee_id")
+    public String[] recipientCommitteeId;
+    public GetSchedulesScheduleBRequest withRecipientCommitteeId(String[] recipientCommitteeId) {
+        this.recipientCommitteeId = recipientCommitteeId;
+        return this;
+    }
+    
+    /**
+     * Name of the entity receiving the disbursement
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recipient_name")
+    public String[] recipientName;
+    public GetSchedulesScheduleBRequest withRecipientName(String[] recipientName) {
+        this.recipientName = recipientName;
+        return this;
+    }
+    
+    /**
+     * State of recipient
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recipient_state")
+    public String[] recipientState;
+    public GetSchedulesScheduleBRequest withRecipientState(String[] recipientState) {
+        this.recipientState = recipientState;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetSchedulesScheduleBRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetSchedulesScheduleBRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetSchedulesScheduleBRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * The one-letter designation code of the organization:
+     *          - A authorized by a candidate
+     *          - J joint fundraising committee
+     *          - P principal campaign committee of a candidate
+     *          - U unauthorized
+     *          - B lobbyist/registrant PAC
+     *          - D leadership PAC
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=spender_committee_designation")
+    public GetSchedulesScheduleBSpenderCommitteeDesignationEnum[] spenderCommitteeDesignation;
+    public GetSchedulesScheduleBRequest withSpenderCommitteeDesignation(GetSchedulesScheduleBSpenderCommitteeDesignationEnum[] spenderCommitteeDesignation) {
+        this.spenderCommitteeDesignation = spenderCommitteeDesignation;
+        return this;
+    }
+    
+    /**
+     * The one-letter code for the kind for organization:
+     *         - C corporation
+     *         - L labor organization
+     *         - M membership organization
+     *         - T trade association
+     *         - V cooperative
+     *         - W corporation without capital stock
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=spender_committee_org_type")
+    public GetSchedulesScheduleBSpenderCommitteeOrgTypeEnum[] spenderCommitteeOrgType;
+    public GetSchedulesScheduleBRequest withSpenderCommitteeOrgType(GetSchedulesScheduleBSpenderCommitteeOrgTypeEnum[] spenderCommitteeOrgType) {
+        this.spenderCommitteeOrgType = spenderCommitteeOrgType;
+        return this;
+    }
+    
+    /**
+     * The one-letter type code of the organization:
+     *         - C communication cost
+     *         - D delegate
+     *         - E electioneering communication
+     *         - H House
+     *         - I independent expenditure filer (not a committee)
+     *         - N PAC - nonqualified
+     *         - O independent expenditure-only (super PACs)
+     *         - P presidential
+     *         - Q PAC - qualified
+     *         - S Senate
+     *         - U single candidate independent expenditure
+     *         - V PAC with non-contribution account, nonqualified
+     *         - W PAC with non-contribution account, qualified
+     *         - X party, nonqualified
+     *         - Y party, qualified
+     *         - Z national party non-federal account
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=spender_committee_type")
+    public GetSchedulesScheduleBSpenderCommitteeTypeEnum[] spenderCommitteeType;
+    public GetSchedulesScheduleBRequest withSpenderCommitteeType(GetSchedulesScheduleBSpenderCommitteeTypeEnum[] spenderCommitteeType) {
+        this.spenderCommitteeType = spenderCommitteeType;
+        return this;
+    }
+    
+    /**
+     * This is a two-year period that is derived from the year a transaction took place in the
+     * Itemized Schedule A and Schedule B tables. In cases where we have the date of the transaction
+     * (contribution_receipt_date in schedules/schedule_a, disbursement_date in schedules/schedule_b)
+     * the two_year_transaction_period is named after the ending, even-numbered year. If we do not
+     * have the date  of the transaction, we fall back to using the report year (report_year in both
+     * tables) instead,  making the same cycle adjustment as necessary. If no transaction year is
+     * specified, the results default to the most current cycle.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=two_year_transaction_period")
+    public Integer[] twoYearTransactionPeriod;
+    public GetSchedulesScheduleBRequest withTwoYearTransactionPeriod(Integer[] twoYearTransactionPeriod) {
+        this.twoYearTransactionPeriod = twoYearTransactionPeriod;
         return this;
     }
     

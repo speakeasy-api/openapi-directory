@@ -4,27 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CrashesListSessionLogsRequest {
-    
-    public CrashesListSessionLogsPathParams pathParams;
-    public CrashesListSessionLogsRequest withPathParams(CrashesListSessionLogsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CrashesListSessionLogsRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public CrashesListSessionLogsQueryParams queryParams;
-    public CrashesListSessionLogsRequest withQueryParams(CrashesListSessionLogsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id of the a crash
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_id")
+    public String crashId;
+    public CrashesListSessionLogsRequest withCrashId(String crashId) {
+        this.crashId = crashId;
         return this;
     }
     
+    /**
+     * Date of data requested
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public OffsetDateTime date;
+    public CrashesListSessionLogsRequest withDate(OffsetDateTime date) {
+        this.date = date;
+        return this;
+    }
     
-    public CrashesListSessionLogsSecurity security;
-    public CrashesListSessionLogsRequest withSecurity(CrashesListSessionLogsSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CrashesListSessionLogsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

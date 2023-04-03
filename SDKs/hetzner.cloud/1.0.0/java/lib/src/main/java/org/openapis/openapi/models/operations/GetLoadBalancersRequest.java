@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLoadBalancersRequest {
+    /**
+     * Can be used to filter resources by labels. The response will only contain resources matching the label selector.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label_selector")
+    public String labelSelector;
+    public GetLoadBalancersRequest withLabelSelector(String labelSelector) {
+        this.labelSelector = labelSelector;
+        return this;
+    }
     
-    public GetLoadBalancersQueryParams queryParams;
-    public GetLoadBalancersRequest withQueryParams(GetLoadBalancersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used to filter resources by their name. The response will only contain the resources matching the specified name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetLoadBalancersRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Can be used multiple times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetLoadBalancersSortEnum sort;
+    public GetLoadBalancersRequest withSort(GetLoadBalancersSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

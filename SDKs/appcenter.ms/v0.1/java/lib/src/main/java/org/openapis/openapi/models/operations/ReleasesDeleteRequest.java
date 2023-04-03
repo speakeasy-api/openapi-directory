@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesDeleteRequest {
-    
-    public ReleasesDeletePathParams pathParams;
-    public ReleasesDeleteRequest withPathParams(ReleasesDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ReleasesDeleteRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ReleasesDeleteRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public ReleasesDeleteSecurity security;
-    public ReleasesDeleteRequest withSecurity(ReleasesDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the release
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
+    public Long releaseId;
+    public ReleasesDeleteRequest withReleaseId(Long releaseId) {
+        this.releaseId = releaseId;
         return this;
     }
     

@@ -4,34 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStatementRequest {
-    
-    public GetStatementPathParams pathParams;
-    public GetStatementRequest withPathParams(GetStatementPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public GetStatementRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     
-    
-    public GetStatementQueryParams queryParams;
-    public GetStatementRequest withQueryParams(GetStatementQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=statementID")
+    public String statementIDPathParameter;
+    public GetStatementRequest withStatementIDPathParameter(String statementIDPathParameter) {
+        this.statementIDPathParameter = statementIDPathParameter;
         return this;
     }
     
-    
-    public GetStatementHeaders headers;
-    public GetStatementRequest withHeaders(GetStatementHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetStatementSecurity security;
-    public GetStatementRequest withSecurity(GetStatementSecurity security) {
-        this.security = security;
+    /**
+     * statement id for single object
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=statementId")
+    public String statementIdQueryParameter;
+    public GetStatementRequest withStatementIdQueryParameter(String statementIdQueryParameter) {
+        this.statementIdQueryParameter = statementIdQueryParameter;
         return this;
     }
     

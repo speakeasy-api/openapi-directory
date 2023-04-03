@@ -4,34 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPotTransactionsRequest {
-    
-    public GetPotTransactionsPathParams pathParams;
-    public GetPotTransactionsRequest withPathParams(GetPotTransactionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * From timestamp for the query. This must be in ISO format. Eg. 2021-08-12T07:54:47.011Z. If not present the from is set to 2000-01-01T00:00:00.000Z
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public String from;
+    public GetPotTransactionsRequest withFrom(String from) {
+        this.from = from;
         return this;
     }
     
-    
-    public GetPotTransactionsQueryParams queryParams;
-    public GetPotTransactionsRequest withQueryParams(GetPotTransactionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number for the query. This end-point has paginations capabilities. This value should be a positive integer value. If this is not provided, both page_size and page_number will be defaulted to 1000 and 1. Results are sorted decending order of the created date &amp; time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_number")
+    public String pageNumber;
+    public GetPotTransactionsRequest withPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
     
-    
-    public GetPotTransactionsHeaders headers;
-    public GetPotTransactionsRequest withHeaders(GetPotTransactionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Page size for the query. This end-point has paginations capabilities. This value should be a positive integer value. If this is not provided, both page_size and page_number will be defaulted to 1000 and 1. Results are sorted decending order of the created date &amp; time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public String pageSize;
+    public GetPotTransactionsRequest withPageSize(String pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
+    /**
+     * Pot Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pot_id")
+    public String potId;
+    public GetPotTransactionsRequest withPotId(String potId) {
+        this.potId = potId;
+        return this;
+    }
     
-    public GetPotTransactionsSecurity security;
-    public GetPotTransactionsRequest withSecurity(GetPotTransactionsSecurity security) {
-        this.security = security;
+    /**
+     * Sorting order; results are sorted by creation time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetPotTransactionsSortEnum sort;
+    public GetPotTransactionsRequest withSort(GetPotTransactionsSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Sub transaction type of the transactions to be retrieved from the API
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub_transaction_type")
+    public String subTransactionType;
+    public GetPotTransactionsRequest withSubTransactionType(String subTransactionType) {
+        this.subTransactionType = subTransactionType;
+        return this;
+    }
+    
+    /**
+     * To timestamp for the query. This must be in ISO format. Eg. 2021-08-12T07:54:47.011Z. If not present the to is set to current time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public String to;
+    public GetPotTransactionsRequest withTo(String to) {
+        this.to = to;
+        return this;
+    }
+    
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetPotTransactionsRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

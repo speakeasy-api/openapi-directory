@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAdConfigRequest {
-    
-    public CreateAdConfigHeaders headers;
-    public CreateAdConfigRequest withHeaders(CreateAdConfigHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateActiveDirectoryConfigRequest createActiveDirectoryConfigRequest;
+    public CreateAdConfigRequest withCreateActiveDirectoryConfigRequest(org.openapis.openapi.models.shared.CreateActiveDirectoryConfigRequest createActiveDirectoryConfigRequest) {
+        this.createActiveDirectoryConfigRequest = createActiveDirectoryConfigRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateActiveDirectoryConfigRequest request;
-    public CreateAdConfigRequest withRequest(org.openapis.openapi.models.shared.CreateActiveDirectoryConfigRequest request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public CreateAdConfigRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

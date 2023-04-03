@@ -39,7 +39,7 @@ public class DscpTaggingOptions {
      */
     public org.openapis.openapi.models.operations.GetNetworkTrafficShapingDscpTaggingOptionsResponse getNetworkTrafficShapingDscpTaggingOptions(org.openapis.openapi.models.operations.GetNetworkTrafficShapingDscpTaggingOptionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkTrafficShapingDscpTaggingOptionsPathParams.class, baseUrl, "/networks/{networkId}/trafficShaping/dscpTaggingOptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkTrafficShapingDscpTaggingOptionsRequest.class, baseUrl, "/networks/{networkId}/trafficShaping/dscpTaggingOptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FollowUsersRequest {
-    
-    public FollowUsersPathParams pathParams;
-    public FollowUsersRequest withPathParams(FollowUsersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public FollowUsersRequestBody request;
-    public FollowUsersRequest withRequest(FollowUsersRequestBody request) {
-        this.request = request;
+    public FollowUsersRequestBody requestBody;
+    public FollowUsersRequest withRequestBody(FollowUsersRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public FollowUsersSecurity security;
-    public FollowUsersRequest withSecurity(FollowUsersSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public FollowUsersRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

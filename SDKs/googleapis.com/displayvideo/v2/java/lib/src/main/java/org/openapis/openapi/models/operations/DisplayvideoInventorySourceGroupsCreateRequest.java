@@ -7,24 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisplayvideoInventorySourceGroupsCreateRequest {
-    
-    public DisplayvideoInventorySourceGroupsCreateQueryParams queryParams;
-    public DisplayvideoInventorySourceGroupsCreateRequest withQueryParams(DisplayvideoInventorySourceGroupsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DisplayvideoInventorySourceGroupsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.InventorySourceGroupInput request;
-    public DisplayvideoInventorySourceGroupsCreateRequest withRequest(org.openapis.openapi.models.shared.InventorySourceGroupInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.InventorySourceGroupInput inventorySourceGroupInput;
+    public DisplayvideoInventorySourceGroupsCreateRequest withInventorySourceGroupInput(org.openapis.openapi.models.shared.InventorySourceGroupInput inventorySourceGroupInput) {
+        this.inventorySourceGroupInput = inventorySourceGroupInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DisplayvideoInventorySourceGroupsCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public DisplayvideoInventorySourceGroupsCreateSecurity security;
-    public DisplayvideoInventorySourceGroupsCreateRequest withSecurity(DisplayvideoInventorySourceGroupsCreateSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the advertiser that owns the inventory source group. The parent partner will not have access to this group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=advertiserId")
+    public String advertiserId;
+    public DisplayvideoInventorySourceGroupsCreateRequest withAdvertiserId(String advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+    }
+    
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DisplayvideoInventorySourceGroupsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DisplayvideoInventorySourceGroupsCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DisplayvideoInventorySourceGroupsCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DisplayvideoInventorySourceGroupsCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DisplayvideoInventorySourceGroupsCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The ID of the partner that owns the inventory source group. Only this partner will have write access to this group. Only advertisers to which this group is explicitly shared will have read access to this group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partnerId")
+    public String partnerId;
+    public DisplayvideoInventorySourceGroupsCreateRequest withPartnerId(String partnerId) {
+        this.partnerId = partnerId;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DisplayvideoInventorySourceGroupsCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DisplayvideoInventorySourceGroupsCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DisplayvideoInventorySourceGroupsCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DisplayvideoInventorySourceGroupsCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

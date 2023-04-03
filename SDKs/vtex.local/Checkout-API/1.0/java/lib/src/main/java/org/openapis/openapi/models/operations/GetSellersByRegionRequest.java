@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSellersByRegionRequest {
-    
-    public GetSellersByRegionPathParams pathParams;
-    public GetSellersByRegionRequest withPathParams(GetSellersByRegionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetSellersByRegionRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetSellersByRegionQueryParams queryParams;
-    public GetSellersByRegionRequest withQueryParams(GetSellersByRegionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetSellersByRegionRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Three letter country code refering to the `postalCode` field.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public GetSellersByRegionRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
     
-    public GetSellersByRegionHeaders headers;
-    public GetSellersByRegionRequest withHeaders(GetSellersByRegionHeaders headers) {
-        this.headers = headers;
+    /**
+     * Geocoordinates (first longitude, semicolon, then latitude) corresponding to the shopper's location.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geoCoordinates")
+    public Double[] geoCoordinates;
+    public GetSellersByRegionRequest withGeoCoordinates(Double[] geoCoordinates) {
+        this.geoCoordinates = geoCoordinates;
+        return this;
+    }
+    
+    /**
+     * Postal code corresponding to the shopper's location.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=postalCode")
+    public String postalCode;
+    public GetSellersByRegionRequest withPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+        return this;
+    }
+    
+    /**
+     * ID of the region corresponding to the shopper's location.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=regionId")
+    public String regionId;
+    public GetSellersByRegionRequest withRegionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
     

@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateFileRequest {
-    
-    public UpdateFilePathParams pathParams;
-    public UpdateFileRequest withPathParams(UpdateFilePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateFileHeaders headers;
-    public UpdateFileRequest withHeaders(UpdateFileHeaders headers) {
-        this.headers = headers;
+    /**
+     * File id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FileId")
+    public String fileId;
+    public UpdateFileRequest withFileId(String fileId) {
+        this.fileId = fileId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FileObject request;
-    public UpdateFileRequest withRequest(org.openapis.openapi.models.shared.FileObject request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FileObject fileObject;
+    public UpdateFileRequest withFileObject(org.openapis.openapi.models.shared.FileObject fileObject) {
+        this.fileObject = fileObject;
         return this;
     }
     
-    
-    public UpdateFileSecurity security;
-    public UpdateFileRequest withSecurity(UpdateFileSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
+    public String xeroTenantId;
+    public UpdateFileRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

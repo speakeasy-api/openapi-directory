@@ -43,7 +43,7 @@ public class CellularGateway {
      */
     public org.openapis.openapi.models.operations.GetDeviceCellularGatewayLanResponse getDeviceCellularGatewayLan(org.openapis.openapi.models.operations.GetDeviceCellularGatewayLanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCellularGatewayLanPathParams.class, baseUrl, "/devices/{serial}/cellularGateway/lan", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCellularGatewayLanRequest.class, baseUrl, "/devices/{serial}/cellularGateway/lan", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -83,7 +83,7 @@ public class CellularGateway {
      */
     public org.openapis.openapi.models.operations.GetDeviceCellularGatewayPortForwardingRulesResponse getDeviceCellularGatewayPortForwardingRules(org.openapis.openapi.models.operations.GetDeviceCellularGatewayPortForwardingRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCellularGatewayPortForwardingRulesPathParams.class, baseUrl, "/devices/{serial}/cellularGateway/portForwardingRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCellularGatewayPortForwardingRulesRequest.class, baseUrl, "/devices/{serial}/cellularGateway/portForwardingRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -123,7 +123,7 @@ public class CellularGateway {
      */
     public org.openapis.openapi.models.operations.GetNetworkCellularGatewayConnectivityMonitoringDestinationsResponse getNetworkCellularGatewayConnectivityMonitoringDestinations(org.openapis.openapi.models.operations.GetNetworkCellularGatewayConnectivityMonitoringDestinationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCellularGatewayConnectivityMonitoringDestinationsPathParams.class, baseUrl, "/networks/{networkId}/cellularGateway/connectivityMonitoringDestinations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCellularGatewayConnectivityMonitoringDestinationsRequest.class, baseUrl, "/networks/{networkId}/cellularGateway/connectivityMonitoringDestinations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -163,7 +163,7 @@ public class CellularGateway {
      */
     public org.openapis.openapi.models.operations.GetNetworkCellularGatewayDhcpResponse getNetworkCellularGatewayDhcp(org.openapis.openapi.models.operations.GetNetworkCellularGatewayDhcpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCellularGatewayDhcpPathParams.class, baseUrl, "/networks/{networkId}/cellularGateway/dhcp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCellularGatewayDhcpRequest.class, baseUrl, "/networks/{networkId}/cellularGateway/dhcp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -203,7 +203,7 @@ public class CellularGateway {
      */
     public org.openapis.openapi.models.operations.GetNetworkCellularGatewaySubnetPoolResponse getNetworkCellularGatewaySubnetPool(org.openapis.openapi.models.operations.GetNetworkCellularGatewaySubnetPoolRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCellularGatewaySubnetPoolPathParams.class, baseUrl, "/networks/{networkId}/cellularGateway/subnetPool", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCellularGatewaySubnetPoolRequest.class, baseUrl, "/networks/{networkId}/cellularGateway/subnetPool", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -243,7 +243,7 @@ public class CellularGateway {
      */
     public org.openapis.openapi.models.operations.GetNetworkCellularGatewayUplinkResponse getNetworkCellularGatewayUplink(org.openapis.openapi.models.operations.GetNetworkCellularGatewayUplinkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCellularGatewayUplinkPathParams.class, baseUrl, "/networks/{networkId}/cellularGateway/uplink", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCellularGatewayUplinkRequest.class, baseUrl, "/networks/{networkId}/cellularGateway/uplink", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -283,13 +283,13 @@ public class CellularGateway {
      */
     public org.openapis.openapi.models.operations.GetOrganizationCellularGatewayUplinkStatusesResponse getOrganizationCellularGatewayUplinkStatuses(org.openapis.openapi.models.operations.GetOrganizationCellularGatewayUplinkStatusesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationCellularGatewayUplinkStatusesPathParams.class, baseUrl, "/organizations/{organizationId}/cellularGateway/uplink/statuses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationCellularGatewayUplinkStatusesRequest.class, baseUrl, "/organizations/{organizationId}/cellularGateway/uplink/statuses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationCellularGatewayUplinkStatusesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationCellularGatewayUplinkStatusesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -331,12 +331,12 @@ public class CellularGateway {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceCellularGatewayLanResponse updateDeviceCellularGatewayLan(org.openapis.openapi.models.operations.UpdateDeviceCellularGatewayLanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCellularGatewayLanPathParams.class, baseUrl, "/devices/{serial}/cellularGateway/lan", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCellularGatewayLanRequest.class, baseUrl, "/devices/{serial}/cellularGateway/lan", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -373,12 +373,12 @@ public class CellularGateway {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceCellularGatewayPortForwardingRulesResponse updateDeviceCellularGatewayPortForwardingRules(org.openapis.openapi.models.operations.UpdateDeviceCellularGatewayPortForwardingRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCellularGatewayPortForwardingRulesPathParams.class, baseUrl, "/devices/{serial}/cellularGateway/portForwardingRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCellularGatewayPortForwardingRulesRequest.class, baseUrl, "/devices/{serial}/cellularGateway/portForwardingRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -415,12 +415,12 @@ public class CellularGateway {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsResponse updateNetworkCellularGatewayConnectivityMonitoringDestinations(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsPathParams.class, baseUrl, "/networks/{networkId}/cellularGateway/connectivityMonitoringDestinations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequest.class, baseUrl, "/networks/{networkId}/cellularGateway/connectivityMonitoringDestinations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -457,12 +457,12 @@ public class CellularGateway {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayDhcpResponse updateNetworkCellularGatewayDhcp(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayDhcpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayDhcpPathParams.class, baseUrl, "/networks/{networkId}/cellularGateway/dhcp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayDhcpRequest.class, baseUrl, "/networks/{networkId}/cellularGateway/dhcp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -499,12 +499,12 @@ public class CellularGateway {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkCellularGatewaySubnetPoolResponse updateNetworkCellularGatewaySubnetPool(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewaySubnetPoolRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewaySubnetPoolPathParams.class, baseUrl, "/networks/{networkId}/cellularGateway/subnetPool", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewaySubnetPoolRequest.class, baseUrl, "/networks/{networkId}/cellularGateway/subnetPool", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -541,12 +541,12 @@ public class CellularGateway {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayUplinkResponse updateNetworkCellularGatewayUplink(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayUplinkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayUplinkPathParams.class, baseUrl, "/networks/{networkId}/cellularGateway/uplink", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayUplinkRequest.class, baseUrl, "/networks/{networkId}/cellularGateway/uplink", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

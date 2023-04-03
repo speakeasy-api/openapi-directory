@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateMarketplaceInstalledAddOnExtensionRequest {
-    
-    public UpdateMarketplaceInstalledAddOnExtensionPathParams pathParams;
-    public UpdateMarketplaceInstalledAddOnExtensionRequest withPathParams(UpdateMarketplaceInstalledAddOnExtensionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the InstalledAddOn resource with the extension to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=InstalledAddOnSid")
+    public String installedAddOnSid;
+    public UpdateMarketplaceInstalledAddOnExtensionRequest withInstalledAddOnSid(String installedAddOnSid) {
+        this.installedAddOnSid = installedAddOnSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateMarketplaceInstalledAddOnExtensionUpdateMarketplaceInstalledAddOnExtensionRequest request;
-    public UpdateMarketplaceInstalledAddOnExtensionRequest withRequest(UpdateMarketplaceInstalledAddOnExtensionUpdateMarketplaceInstalledAddOnExtensionRequest request) {
-        this.request = request;
+    public UpdateMarketplaceInstalledAddOnExtensionUpdateMarketplaceInstalledAddOnExtensionRequest requestBody;
+    public UpdateMarketplaceInstalledAddOnExtensionRequest withRequestBody(UpdateMarketplaceInstalledAddOnExtensionUpdateMarketplaceInstalledAddOnExtensionRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateMarketplaceInstalledAddOnExtensionSecurity security;
-    public UpdateMarketplaceInstalledAddOnExtensionRequest withSecurity(UpdateMarketplaceInstalledAddOnExtensionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateMarketplaceInstalledAddOnExtensionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the InstalledAddOn Extension resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateMarketplaceInstalledAddOnExtensionRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

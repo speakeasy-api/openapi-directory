@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateQueueRequest {
-    
-    public UpdateQueuePathParams pathParams;
-    public UpdateQueueRequest withPathParams(UpdateQueuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Queue resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateQueueRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateQueueUpdateQueueRequest request;
-    public UpdateQueueRequest withRequest(UpdateQueueUpdateQueueRequest request) {
-        this.request = request;
+    public UpdateQueueUpdateQueueRequest requestBody;
+    public UpdateQueueRequest withRequestBody(UpdateQueueUpdateQueueRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateQueueSecurity security;
-    public UpdateQueueRequest withSecurity(UpdateQueueSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateQueueRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Queue resource to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateQueueRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

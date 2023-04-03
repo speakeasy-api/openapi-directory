@@ -40,7 +40,7 @@ public class Wifi {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConnecttoWiFiNetworkResponse connecttoWiFiNetwork(org.openapis.openapi.models.operations.ConnecttoWiFiNetworkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConnecttoWiFiNetworkResponse connecttoWiFiNetwork(org.openapis.openapi.models.shared.ConnecttoWiFiNetworkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/connect_wifi");
         
@@ -79,7 +79,7 @@ public class Wifi {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ForgetWiFiNetworkResponse forgetWiFiNetwork(org.openapis.openapi.models.operations.ForgetWiFiNetworkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ForgetWiFiNetworkResponse forgetWiFiNetwork(org.openapis.openapi.models.shared.ForgetWiFiNetworkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/forget_wifi");
         

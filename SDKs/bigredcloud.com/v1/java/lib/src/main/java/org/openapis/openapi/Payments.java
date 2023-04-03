@@ -41,13 +41,13 @@ public class Payments {
      */
     public org.openapis.openapi.models.operations.PaymentsDeleteResponse paymentsDelete(org.openapis.openapi.models.operations.PaymentsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsDeletePathParams.class, baseUrl, "/v1/payments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsDeleteRequest.class, baseUrl, "/v1/payments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -120,7 +120,7 @@ public class Payments {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PaymentsPostResponse paymentsPost(org.openapis.openapi.models.operations.PaymentsPostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PaymentsPostResponse paymentsPost(org.openapis.openapi.models.shared.PaymentDto request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/payments");
         
@@ -163,7 +163,7 @@ public class Payments {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PaymentsProcessBatchResponse paymentsProcessBatch(org.openapis.openapi.models.operations.PaymentsProcessBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PaymentsProcessBatchResponse paymentsProcessBatch(org.openapis.openapi.models.shared.BatchItemPaymentDto[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/payments/batch");
         
@@ -208,12 +208,12 @@ public class Payments {
      */
     public org.openapis.openapi.models.operations.PaymentsPutResponse paymentsPut(org.openapis.openapi.models.operations.PaymentsPutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsPutPathParams.class, baseUrl, "/v1/payments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsPutRequest.class, baseUrl, "/v1/payments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "paymentDto", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -251,7 +251,7 @@ public class Payments {
      */
     public org.openapis.openapi.models.operations.GetV1PaymentsIdResponse getV1PaymentsId(org.openapis.openapi.models.operations.GetV1PaymentsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1PaymentsIdPathParams.class, baseUrl, "/v1/payments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1PaymentsIdRequest.class, baseUrl, "/v1/payments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

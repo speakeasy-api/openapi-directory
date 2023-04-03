@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmUsersIdCredentialsCredentialIdMoveToFirstRequest {
+    /**
+     * The credential to move
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=credentialId")
+    public String credentialId;
+    public PostRealmUsersIdCredentialsCredentialIdMoveToFirstRequest withCredentialId(String credentialId) {
+        this.credentialId = credentialId;
+        return this;
+    }
     
-    public PostRealmUsersIdCredentialsCredentialIdMoveToFirstPathParams pathParams;
-    public PostRealmUsersIdCredentialsCredentialIdMoveToFirstRequest withPathParams(PostRealmUsersIdCredentialsCredentialIdMoveToFirstPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * User id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostRealmUsersIdCredentialsCredentialIdMoveToFirstRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmUsersIdCredentialsCredentialIdMoveToFirstRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

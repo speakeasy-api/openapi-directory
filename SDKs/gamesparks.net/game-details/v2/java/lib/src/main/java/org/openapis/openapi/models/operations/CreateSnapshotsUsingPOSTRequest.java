@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSnapshotsUsingPOSTRequest {
-    
-    public CreateSnapshotsUsingPOSTPathParams pathParams;
-    public CreateSnapshotsUsingPOSTRequest withPathParams(CreateSnapshotsUsingPOSTPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * description
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SnapshotCreationModel request;
-    public CreateSnapshotsUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.SnapshotCreationModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SnapshotCreationModel snapshotCreationModel;
+    public CreateSnapshotsUsingPOSTRequest withSnapshotCreationModel(org.openapis.openapi.models.shared.SnapshotCreationModel snapshotCreationModel) {
+        this.snapshotCreationModel = snapshotCreationModel;
+        return this;
+    }
+    
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public CreateSnapshotsUsingPOSTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

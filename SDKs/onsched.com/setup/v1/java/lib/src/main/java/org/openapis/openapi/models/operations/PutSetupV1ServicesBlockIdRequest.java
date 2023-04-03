@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1ServicesBlockIdRequest {
-    
-    public PutSetupV1ServicesBlockIdPathParams pathParams;
-    public PutSetupV1ServicesBlockIdRequest withPathParams(PutSetupV1ServicesBlockIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Service Block update model
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ServiceBlockUpdateModel request;
-    public PutSetupV1ServicesBlockIdRequest withRequest(org.openapis.openapi.models.shared.ServiceBlockUpdateModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ServiceBlockUpdateModel serviceBlockUpdateModel;
+    public PutSetupV1ServicesBlockIdRequest withServiceBlockUpdateModel(org.openapis.openapi.models.shared.ServiceBlockUpdateModel serviceBlockUpdateModel) {
+        this.serviceBlockUpdateModel = serviceBlockUpdateModel;
+        return this;
+    }
+    
+    /**
+     * id of serviceBlock object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutSetupV1ServicesBlockIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

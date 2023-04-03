@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetArtifactVersionMetaDataByContentRequest {
-    
-    public GetArtifactVersionMetaDataByContentPathParams pathParams;
-    public GetArtifactVersionMetaDataByContentRequest withPathParams(GetArtifactVersionMetaDataByContentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetArtifactVersionMetaDataByContentQueryParams queryParams;
-    public GetArtifactVersionMetaDataByContentRequest withQueryParams(GetArtifactVersionMetaDataByContentQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The content of an artifact version.
      */
     @SpeakeasyMetadata("request:mediaType=*/*")
-    public byte[] request;
-    public GetArtifactVersionMetaDataByContentRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public GetArtifactVersionMetaDataByContentRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public GetArtifactVersionMetaDataByContentRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
+        return this;
+    }
+    
+    /**
+     * Parameter that can be set to `true` to indicate that the server should "canonicalize" the content when searching for a matching version.  Canonicalization is unique to each artifact type, but typically involves removing any extra whitespace and formatting the content in a consistent manner.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=canonical")
+    public Boolean canonical;
+    public GetArtifactVersionMetaDataByContentRequest withCanonical(Boolean canonical) {
+        this.canonical = canonical;
+        return this;
+    }
+    
+    /**
+     * The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public GetArtifactVersionMetaDataByContentRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

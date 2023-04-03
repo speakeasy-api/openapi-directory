@@ -34,27 +34,28 @@ public class SslCerts {
     /**
      * Generates a short-lived X509 certificate containing the provided public key and signed by a private key specific to the target instance. Users may use the certificate to authenticate as themselves when connecting to the database.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlSslCertsCreateEphemeralResponse sqlSslCertsCreateEphemeral(org.openapis.openapi.models.operations.SqlSslCertsCreateEphemeralRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlSslCertsCreateEphemeralResponse sqlSslCertsCreateEphemeral(org.openapis.openapi.models.operations.SqlSslCertsCreateEphemeralRequest request, org.openapis.openapi.models.operations.SqlSslCertsCreateEphemeralSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlSslCertsCreateEphemeralPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/createEphemeral", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlSslCertsCreateEphemeralRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/createEphemeral", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sslCertsCreateEphemeralRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlSslCertsCreateEphemeralQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlSslCertsCreateEphemeralRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class SslCerts {
     /**
      * Deletes the SSL certificate. For First Generation instances, the certificate remains valid until the instance is restarted.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlSslCertsDeleteResponse sqlSslCertsDelete(org.openapis.openapi.models.operations.SqlSslCertsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlSslCertsDeleteResponse sqlSslCertsDelete(org.openapis.openapi.models.operations.SqlSslCertsDeleteRequest request, org.openapis.openapi.models.operations.SqlSslCertsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlSslCertsDeletePathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/sslCerts/{sha1Fingerprint}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlSslCertsDeleteRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/sslCerts/{sha1Fingerprint}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlSslCertsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlSslCertsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class SslCerts {
     /**
      * Retrieves a particular SSL certificate. Does not include the private key (required for usage). The private key must be saved from the response to initial creation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlSslCertsGetResponse sqlSslCertsGet(org.openapis.openapi.models.operations.SqlSslCertsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlSslCertsGetResponse sqlSslCertsGet(org.openapis.openapi.models.operations.SqlSslCertsGetRequest request, org.openapis.openapi.models.operations.SqlSslCertsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlSslCertsGetPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/sslCerts/{sha1Fingerprint}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlSslCertsGetRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/sslCerts/{sha1Fingerprint}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlSslCertsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlSslCertsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,27 +174,28 @@ public class SslCerts {
     /**
      * Creates an SSL certificate and returns it along with the private key and server certificate authority. The new certificate will not be usable until the instance is restarted.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlSslCertsInsertResponse sqlSslCertsInsert(org.openapis.openapi.models.operations.SqlSslCertsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlSslCertsInsertResponse sqlSslCertsInsert(org.openapis.openapi.models.operations.SqlSslCertsInsertRequest request, org.openapis.openapi.models.operations.SqlSslCertsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlSslCertsInsertPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/sslCerts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlSslCertsInsertRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/sslCerts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sslCertsInsertRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlSslCertsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlSslCertsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,25 +222,26 @@ public class SslCerts {
     /**
      * Lists all of the current SSL certificates for the instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlSslCertsListResponse sqlSslCertsList(org.openapis.openapi.models.operations.SqlSslCertsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlSslCertsListResponse sqlSslCertsList(org.openapis.openapi.models.operations.SqlSslCertsListRequest request, org.openapis.openapi.models.operations.SqlSslCertsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlSslCertsListPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/sslCerts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlSslCertsListRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/sslCerts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlSslCertsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlSslCertsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

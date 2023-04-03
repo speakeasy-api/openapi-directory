@@ -4,27 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApplicationDateRangeKpiRequest {
-    
-    public GetApplicationDateRangeKpiPathParams pathParams;
-    public GetApplicationDateRangeKpiRequest withPathParams(GetApplicationDateRangeKpiPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetApplicationDateRangeKpiRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public GetApplicationDateRangeKpiQueryParams queryParams;
-    public GetApplicationDateRangeKpiRequest withQueryParams(GetApplicationDateRangeKpiQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetApplicationDateRangeKpiRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetApplicationDateRangeKpiRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public GetApplicationDateRangeKpiHeaders headers;
-    public GetApplicationDateRangeKpiRequest withHeaders(GetApplicationDateRangeKpiHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetApplicationDateRangeKpiRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetApplicationDateRangeKpiRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetApplicationDateRangeKpiRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetApplicationDateRangeKpiRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The unique identifier for the application. This identifier is displayed as the &lt;b&gt;Project ID&lt;/b&gt; on the Amazon Pinpoint console.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application-id")
+    public String applicationId;
+    public GetApplicationDateRangeKpiRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
+    
+    /**
+     * The last date and time to retrieve data for, as part of an inclusive date range that filters the query results. This value should be in extended ISO 8601 format and use Coordinated Universal Time (UTC), for example: 2019-07-26T20:00:00Z for 8:00 PM UTC July 26, 2019.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end-time")
+    public OffsetDateTime endTime;
+    public GetApplicationDateRangeKpiRequest withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    /**
+     * The name of the metric, also referred to as a &lt;i&gt;key performance indicator (KPI)&lt;/i&gt;, to retrieve data for. This value describes the associated metric and consists of two or more terms, which are comprised of lowercase alphanumeric characters, separated by a hyphen. Examples are email-open-rate and successful-delivery-rate. For a list of valid values, see the &lt;a href="https://docs.aws.amazon.com/pinpoint/latest/developerguide/analytics-standard-metrics.html"&gt;Amazon Pinpoint Developer Guide&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=kpi-name")
+    public String kpiName;
+    public GetApplicationDateRangeKpiRequest withKpiName(String kpiName) {
+        this.kpiName = kpiName;
+        return this;
+    }
+    
+    /**
+     * The  string that specifies which page of results to return in a paginated response. This parameter is not supported for application, campaign, and journey metrics.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next-token")
+    public String nextToken;
+    public GetApplicationDateRangeKpiRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The maximum number of items to include in each page of a paginated response. This parameter is not supported for application, campaign, and journey metrics.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page-size")
+    public String pageSize;
+    public GetApplicationDateRangeKpiRequest withPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The first date and time to retrieve data for, as part of an inclusive date range that filters the query results. This value should be in extended ISO 8601 format and use Coordinated Universal Time (UTC), for example: 2019-07-19T20:00:00Z for 8:00 PM UTC July 19, 2019. This value should also be fewer than 90 days from the current day.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start-time")
+    public OffsetDateTime startTime;
+    public GetApplicationDateRangeKpiRequest withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
         return this;
     }
     

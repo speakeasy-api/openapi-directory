@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetcurrencyrateQueryParams;
 import org.openapis.openapi.models.operations.GetcurrencyrateRequest;
 import org.openapis.openapi.models.operations.GetcurrencyrateResponse;
 
@@ -28,11 +27,9 @@ public class Application {
                 .build();
 
             GetcurrencyrateRequest req = new GetcurrencyrateRequest() {{
-                queryParams = new GetcurrencyrateQueryParams() {{
-                    license = "corrupti";
-                    symbol = "provident";
-                }};
-            }};            
+                license = "corrupti";
+                symbol = "provident";
+            }}            
 
             GetcurrencyrateResponse res = sdk.currencyRates.getcurrencyrate(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### currencyRates

@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchContainersGroupsNameOrIdRequest {
-    
-    public PatchContainersGroupsNameOrIdPathParams pathParams;
-    public PatchContainersGroupsNameOrIdRequest withPathParams(PatchContainersGroupsNameOrIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PatchContainersGroupsNameOrIdHeaders headers;
-    public PatchContainersGroupsNameOrIdRequest withHeaders(PatchContainersGroupsNameOrIdHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The container group parameter that you want to update.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ContainersGroupsNameOrIdPatchUpdatedInfo request;
-    public PatchContainersGroupsNameOrIdRequest withRequest(org.openapis.openapi.models.shared.ContainersGroupsNameOrIdPatchUpdatedInfo request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ContainersGroupsNameOrIdPatchUpdatedInfo containersGroupsNameOrIdPatchUpdatedInfo;
+    public PatchContainersGroupsNameOrIdRequest withContainersGroupsNameOrIdPatchUpdatedInfo(org.openapis.openapi.models.shared.ContainersGroupsNameOrIdPatchUpdatedInfo containersGroupsNameOrIdPatchUpdatedInfo) {
+        this.containersGroupsNameOrIdPatchUpdatedInfo = containersGroupsNameOrIdPatchUpdatedInfo;
+        return this;
+    }
+    
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space &lt;space_name&gt; --guid`, where `&lt;space_name&gt;` is the name of your space, to retrieve your space ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public PatchContainersGroupsNameOrIdRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
+        return this;
+    }
+    
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public PatchContainersGroupsNameOrIdRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
+        return this;
+    }
+    
+    /**
+     * The name or unique ID of the container group that you want to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name_or_id")
+    public String nameOrId;
+    public PatchContainersGroupsNameOrIdRequest withNameOrId(String nameOrId) {
+        this.nameOrId = nameOrId;
         return this;
     }
     

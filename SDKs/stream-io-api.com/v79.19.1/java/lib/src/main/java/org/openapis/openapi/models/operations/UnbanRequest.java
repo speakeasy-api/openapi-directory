@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnbanRequest {
+    @SpeakeasyMetadata("queryParam:serialization=json,name=id")
+    public String id;
+    public UnbanRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public UnbanQueryParams queryParams;
-    public UnbanRequest withQueryParams(UnbanQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:serialization=json,name=target_user_id")
+    public String targetUserId;
+    public UnbanRequest withTargetUserId(String targetUserId) {
+        this.targetUserId = targetUserId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:serialization=json,name=type")
+    public String type;
+    public UnbanRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationNetworksRequest {
-    
-    public GetOrganizationNetworksPathParams pathParams;
-    public GetOrganizationNetworksRequest withPathParams(GetOrganizationNetworksPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An optional parameter that is the ID of a config template. Will return all networks bound to that template.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=configTemplateId")
+    public String configTemplateId;
+    public GetOrganizationNetworksRequest withConfigTemplateId(String configTemplateId) {
+        this.configTemplateId = configTemplateId;
         return this;
     }
     
-    
-    public GetOrganizationNetworksQueryParams queryParams;
-    public GetOrganizationNetworksRequest withQueryParams(GetOrganizationNetworksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationNetworksRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

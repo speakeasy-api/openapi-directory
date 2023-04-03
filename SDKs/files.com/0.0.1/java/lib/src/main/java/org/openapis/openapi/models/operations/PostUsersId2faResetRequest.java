@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersId2faResetRequest {
-    
-    public PostUsersId2faResetPathParams pathParams;
-    public PostUsersId2faResetRequest withPathParams(PostUsersId2faResetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * User ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PostUsersId2faResetRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

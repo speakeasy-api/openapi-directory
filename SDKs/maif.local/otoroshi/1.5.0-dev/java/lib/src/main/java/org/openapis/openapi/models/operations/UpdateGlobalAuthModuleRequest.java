@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateGlobalAuthModuleRequest {
-    
-    public UpdateGlobalAuthModulePathParams pathParams;
-    public UpdateGlobalAuthModuleRequest withPathParams(UpdateGlobalAuthModulePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public UpdateGlobalAuthModuleRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public UpdateGlobalAuthModuleRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateGlobalAuthModuleSecurity security;
-    public UpdateGlobalAuthModuleRequest withSecurity(UpdateGlobalAuthModuleSecurity security) {
-        this.security = security;
+    /**
+     * The auth. config id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateGlobalAuthModuleRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

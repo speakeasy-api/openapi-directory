@@ -4,27 +4,106 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveDrivesDeleteRequest {
-    
-    public DriveDrivesDeletePathParams pathParams;
-    public DriveDrivesDeleteRequest withPathParams(DriveDrivesDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Whether any items inside the shared drive should also be deleted. This option is only supported when useDomainAdminAccess is also set to true.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allowItemDeletion")
+    public Boolean allowItemDeletion;
+    public DriveDrivesDeleteRequest withAllowItemDeletion(Boolean allowItemDeletion) {
+        this.allowItemDeletion = allowItemDeletion;
         return this;
     }
     
-    
-    public DriveDrivesDeleteQueryParams queryParams;
-    public DriveDrivesDeleteRequest withQueryParams(DriveDrivesDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DriveDrivesDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
+    /**
+     * The ID of the shared drive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=driveId")
+    public String driveId;
+    public DriveDrivesDeleteRequest withDriveId(String driveId) {
+        this.driveId = driveId;
+        return this;
+    }
     
-    public DriveDrivesDeleteSecurity security;
-    public DriveDrivesDeleteRequest withSecurity(DriveDrivesDeleteSecurity security) {
-        this.security = security;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DriveDrivesDeleteRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DriveDrivesDeleteRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DriveDrivesDeleteRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DriveDrivesDeleteRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DriveDrivesDeleteRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Issue the request as a domain administrator; if set to true, then the requester will be granted access if they are an administrator of the domain to which the shared drive belongs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useDomainAdminAccess")
+    public Boolean useDomainAdminAccess;
+    public DriveDrivesDeleteRequest withUseDomainAdminAccess(Boolean useDomainAdminAccess) {
+        this.useDomainAdminAccess = useDomainAdminAccess;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public DriveDrivesDeleteRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

@@ -4,20 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivityListReposStarredByUserRequest {
-    
-    public ActivityListReposStarredByUserPathParams pathParams;
-    public ActivityListReposStarredByUserRequest withPathParams(ActivityListReposStarredByUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * One of `asc` (ascending) or `desc` (descending).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public org.openapis.openapi.models.shared.DirectionEnum direction;
+    public ActivityListReposStarredByUserRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ActivityListReposStarredByUserRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ActivityListReposStarredByUserQueryParams queryParams;
-    public ActivityListReposStarredByUserRequest withQueryParams(ActivityListReposStarredByUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ActivityListReposStarredByUserRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * One of `created` (when the repository was starred) or `updated` (when it was last pushed to).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public org.openapis.openapi.models.shared.SortEnum sort;
+    public ActivityListReposStarredByUserRequest withSort(org.openapis.openapi.models.shared.SortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public ActivityListReposStarredByUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

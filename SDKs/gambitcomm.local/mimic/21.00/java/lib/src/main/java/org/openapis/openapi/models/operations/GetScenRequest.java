@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScenRequest {
-    
-    public GetScenPathParams pathParams;
-    public GetScenRequest withPathParams(GetScenPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the first scenario number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public GetScenRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

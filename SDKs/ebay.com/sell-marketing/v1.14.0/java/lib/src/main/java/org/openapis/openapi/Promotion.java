@@ -33,25 +33,26 @@ public class Promotion {
     /**
      * This method returns the set of listings associated with the &lt;b&gt;promotion_id&lt;/b&gt; specified in the path parameter. Call &lt;a href="/api-docs/sell/marketing/resources/promotion/methods/getPromotions"&gt;getPromotions&lt;/a&gt; to retrieve the IDs of a seller's promotions.  &lt;p&gt;The listing details are returned in a paginated set and you can control and results returned using the following query parameters: &lt;b&gt;limit&lt;/b&gt;, &lt;b&gt;offset&lt;/b&gt;, &lt;b&gt;q&lt;/b&gt;, &lt;b&gt;sort&lt;/b&gt;, and &lt;b&gt;status&lt;/b&gt;.&lt;/p&gt;  &lt;ul&gt;&lt;li&gt;&lt;b&gt;Maximum associated listings returned:&lt;/b&gt; 200&lt;/li&gt;  &lt;li&gt;&lt;b&gt;Default number of listings returned:&lt;/b&gt; 200&lt;/li&gt;&lt;/ul&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetListingSetResponse getListingSet(org.openapis.openapi.models.operations.GetListingSetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetListingSetResponse getListingSet(org.openapis.openapi.models.operations.GetListingSetRequest request, org.openapis.openapi.models.operations.GetListingSetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetListingSetPathParams.class, baseUrl, "/promotion/{promotion_id}/get_listing_set", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetListingSetRequest.class, baseUrl, "/promotion/{promotion_id}/get_listing_set", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListingSetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListingSetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,10 +81,11 @@ public class Promotion {
     /**
      * This method returns a list of a seller's undeleted promotions. &lt;p&gt;The call returns up to 200 currently-available promotions on the specified marketplace. While the response body does not include the promotion's &lt;b&gt;discountRules&lt;/b&gt; or &lt;b&gt;inventoryCriterion&lt;/b&gt; containers, it does include the &lt;b&gt;promotionHref&lt;/b&gt; (which you can use to retrieve the complete details of the promotion).&lt;/p&gt;  &lt;p&gt;Use query parameters to sort and filter the results by the number of promotions to return, the promotion state or type, and the eBay marketplace. You can also supply keywords to limit the response to the promotions that contain that keywords in the title of the promotion.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Maximum returned:&lt;/b&gt; 200&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPromotionsResponse getPromotions(org.openapis.openapi.models.operations.GetPromotionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPromotionsResponse getPromotions(org.openapis.openapi.models.operations.GetPromotionsRequest request, org.openapis.openapi.models.operations.GetPromotionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/promotion");
         
@@ -91,14 +93,14 @@ public class Promotion {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPromotionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPromotionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,19 +129,20 @@ public class Promotion {
     /**
      * This method pauses a currently-active (RUNNING) threshold promotion and changes the state of the promotion from &lt;code&gt;RUNNING&lt;/code&gt; to &lt;code&gt;PAUSED&lt;/code&gt;. Pausing a promotion makes the promotion temporarily unavailable to buyers and any currently-incomplete transactions will not receive the promotional offer until the promotion is resumed. Also, promotion teasers are not displayed when a promotion is paused.  &lt;br&gt;&lt;br&gt;Pass the ID of the promotion you want to pause using the &lt;b&gt;promotion_id&lt;/b&gt; path parameter. Call &lt;a href="/api-docs/sell/marketing/resources/promotion/methods/getPromotions"&gt;getPromotions&lt;/a&gt; to retrieve the IDs of the seller's promotions. &lt;br&gt;&lt;br&gt;&lt;b&gt;Note:&lt;/b&gt; You can only pause threshold promotions (you cannot pause markdown promotions).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PausePromotionResponse pausePromotion(org.openapis.openapi.models.operations.PausePromotionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PausePromotionResponse pausePromotion(org.openapis.openapi.models.operations.PausePromotionRequest request, org.openapis.openapi.models.operations.PausePromotionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PausePromotionPathParams.class, baseUrl, "/promotion/{promotion_id}/pause", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PausePromotionRequest.class, baseUrl, "/promotion/{promotion_id}/pause", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -160,19 +163,20 @@ public class Promotion {
     /**
      * This method restarts a threshold promotion that was previously paused and changes the state of the promotion from &lt;code&gt;PAUSED&lt;/code&gt; to &lt;code&gt;RUNNING&lt;/code&gt;. Only promotions that have been previously paused can be resumed. Resuming a promotion reinstates the promotional teasers and any transactions that were in motion before the promotion was paused will again be eligible for the promotion.  &lt;br&gt;&lt;br&gt;Pass the ID of the promotion you want to resume using the &lt;b&gt;promotion_id&lt;/b&gt; path parameter. Call &lt;a href="/api-docs/sell/marketing/resources/promotion/methods/getPromotions"&gt;getPromotions&lt;/a&gt; to retrieve the IDs of the seller's promotions.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ResumePromotionResponse resumePromotion(org.openapis.openapi.models.operations.ResumePromotionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ResumePromotionResponse resumePromotion(org.openapis.openapi.models.operations.ResumePromotionRequest request, org.openapis.openapi.models.operations.ResumePromotionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResumePromotionPathParams.class, baseUrl, "/promotion/{promotion_id}/resume", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResumePromotionRequest.class, baseUrl, "/promotion/{promotion_id}/resume", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

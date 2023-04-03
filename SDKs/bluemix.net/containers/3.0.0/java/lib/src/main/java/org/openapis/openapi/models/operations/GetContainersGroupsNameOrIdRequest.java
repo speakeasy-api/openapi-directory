@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContainersGroupsNameOrIdRequest {
-    
-    public GetContainersGroupsNameOrIdPathParams pathParams;
-    public GetContainersGroupsNameOrIdRequest withPathParams(GetContainersGroupsNameOrIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space &lt;space_name&gt; --guid`, where `&lt;space_name&gt;` is the name of your space, to retrieve your space ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public GetContainersGroupsNameOrIdRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
         return this;
     }
     
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public GetContainersGroupsNameOrIdRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
+        return this;
+    }
     
-    public GetContainersGroupsNameOrIdHeaders headers;
-    public GetContainersGroupsNameOrIdRequest withHeaders(GetContainersGroupsNameOrIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name or unique ID of the container group that you want to inspect. Run `cf ic group list` or call the `GET /containers/groups` endpoint to retrieve a list of container groups in your space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name_or_id")
+    public String nameOrId;
+    public GetContainersGroupsNameOrIdRequest withNameOrId(String nameOrId) {
+        this.nameOrId = nameOrId;
         return this;
     }
     

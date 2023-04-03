@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DELETEAccountUsingDELETERequest {
-    
-    public DELETEAccountUsingDELETEHeaders headers;
-    public DELETEAccountUsingDELETERequest withHeaders(DELETEAccountUsingDELETEHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public DELETEAccountUsingDELETERequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
-    
-    public DELETEAccountUsingDELETESecurity security;
-    public DELETEAccountUsingDELETERequest withSecurity(DELETEAccountUsingDELETESecurity security) {
-        this.security = security;
+    /**
+     * Auth Token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Token")
+    public String xToken;
+    public DELETEAccountUsingDELETERequest withXToken(String xToken) {
+        this.xToken = xToken;
         return this;
     }
     

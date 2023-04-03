@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetUsersQueryParams;
 import org.openapis.openapi.models.operations.GetUsersRequest;
 import org.openapis.openapi.models.operations.GetUsersResponse;
 import org.openapis.openapi.models.shared.OrderEnum;
@@ -16,12 +15,10 @@ public class Application {
                 .build();
 
             GetUsersRequest req = new GetUsersRequest() {{
-                queryParams = new GetUsersQueryParams() {{
-                    cursor = "corrupti";
-                    order = "desc";
-                    pageSize = 715190;
-                }};
-            }};            
+                cursor = "corrupti";
+                order = "desc";
+                pageSize = 715190;
+            }}            
 
             GetUsersResponse res = sdk.getUsers(req);
 

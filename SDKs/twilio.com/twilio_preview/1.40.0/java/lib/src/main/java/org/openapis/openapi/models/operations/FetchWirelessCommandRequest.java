@@ -4,27 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchWirelessCommandRequest {
-    
-    public FetchWirelessCommandPathParams pathParams;
-    public FetchWirelessCommandRequest withPathParams(FetchWirelessCommandPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchWirelessCommandSecurity security;
-    public FetchWirelessCommandRequest withSecurity(FetchWirelessCommandSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchWirelessCommandRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchWirelessCommandRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

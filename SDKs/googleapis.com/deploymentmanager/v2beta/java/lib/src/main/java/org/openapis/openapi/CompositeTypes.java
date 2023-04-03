@@ -34,25 +34,26 @@ public class CompositeTypes {
     /**
      * Deletes a composite type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesDeleteResponse deploymentmanagerCompositeTypesDelete(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesDeleteResponse deploymentmanagerCompositeTypesDelete(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesDeleteRequest request, org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesDeletePathParams.class, baseUrl, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes/{compositeType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesDeleteRequest.class, baseUrl, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes/{compositeType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class CompositeTypes {
     /**
      * Gets information about a specific composite type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesGetResponse deploymentmanagerCompositeTypesGet(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesGetResponse deploymentmanagerCompositeTypesGet(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesGetRequest request, org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesGetPathParams.class, baseUrl, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes/{compositeType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesGetRequest.class, baseUrl, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes/{compositeType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class CompositeTypes {
     /**
      * Creates a composite type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesInsertResponse deploymentmanagerCompositeTypesInsert(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesInsertResponse deploymentmanagerCompositeTypesInsert(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesInsertRequest request, org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesInsertPathParams.class, baseUrl, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesInsertRequest.class, baseUrl, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "compositeType", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class CompositeTypes {
     /**
      * Lists all composite types for Deployment Manager.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesListResponse deploymentmanagerCompositeTypesList(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesListResponse deploymentmanagerCompositeTypesList(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesListRequest request, org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesListPathParams.class, baseUrl, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesListRequest.class, baseUrl, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,27 +220,28 @@ public class CompositeTypes {
     /**
      * Patches a composite type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesPatchResponse deploymentmanagerCompositeTypesPatch(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesPatchResponse deploymentmanagerCompositeTypesPatch(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesPatchRequest request, org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesPatchPathParams.class, baseUrl, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes/{compositeType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesPatchRequest.class, baseUrl, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes/{compositeType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "compositeType1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,27 +268,28 @@ public class CompositeTypes {
     /**
      * Updates a composite type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesUpdateResponse deploymentmanagerCompositeTypesUpdate(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesUpdateResponse deploymentmanagerCompositeTypesUpdate(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesUpdateRequest request, org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesUpdatePathParams.class, baseUrl, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes/{compositeType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesUpdateRequest.class, baseUrl, "/deploymentmanager/v2beta/projects/{project}/global/compositeTypes/{compositeType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "compositeType1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

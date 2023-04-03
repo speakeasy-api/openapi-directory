@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EvalValueRequest {
+    /**
+     * Agent of the value space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public EvalValueRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public EvalValuePathParams pathParams;
-    public EvalValueRequest withPathParams(EvalValuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Row of the table in the agent's value space. 0 for single instance objects
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instance")
+    public String instance;
+    public EvalValueRequest withInstance(String instance) {
+        this.instance = instance;
+        return this;
+    }
+    
+    /**
+     * Single instance object or object (column) of the table in the agent's value space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object")
+    public String object;
+    public EvalValueRequest withObject(String object) {
+        this.object = object;
         return this;
     }
     

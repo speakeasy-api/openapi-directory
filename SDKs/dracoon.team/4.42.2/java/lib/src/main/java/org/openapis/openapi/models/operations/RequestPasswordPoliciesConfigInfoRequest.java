@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestPasswordPoliciesConfigInfoRequest {
-    
-    public RequestPasswordPoliciesConfigInfoHeaders headers;
-    public RequestPasswordPoliciesConfigInfoRequest withHeaders(RequestPasswordPoliciesConfigInfoHeaders headers) {
-        this.headers = headers;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestPasswordPoliciesConfigInfoRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

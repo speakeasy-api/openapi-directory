@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistrationsFilesReadRequest {
+    /**
+     * The unique identifier of the file path.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public RegistrationsFilesReadRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
     
-    public RegistrationsFilesReadPathParams pathParams;
-    public RegistrationsFilesReadRequest withPathParams(RegistrationsFilesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the storage provider.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=provider")
+    public String provider;
+    public RegistrationsFilesReadRequest withProvider(String provider) {
+        this.provider = provider;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the registration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registration_id")
+    public String registrationId;
+    public RegistrationsFilesReadRequest withRegistrationId(String registrationId) {
+        this.registrationId = registrationId;
         return this;
     }
     

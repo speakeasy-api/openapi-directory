@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClickStreamGetRequest {
+    /**
+     * Filter by this conversion id (mutually exclusive with "datapoint" and "group")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conversion")
+    public Long conversion;
+    public ClickStreamGetRequest withConversion(Long conversion) {
+        this.conversion = conversion;
+        return this;
+    }
     
-    public ClickStreamGetQueryParams queryParams;
-    public ClickStreamGetRequest withQueryParams(ClickStreamGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter by this datapoint id (mutually exclusive with "group" and "conversion")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=datapoint")
+    public Long datapoint;
+    public ClickStreamGetRequest withDatapoint(Long datapoint) {
+        this.datapoint = datapoint;
+        return this;
+    }
+    
+    /**
+     * Filter event type ("spiders"/"uniques"/"nonuniques"/"conversions")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public ClickStreamGetFilterEnum filter;
+    public ClickStreamGetRequest withFilter(ClickStreamGetFilterEnum filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * Filter by this group id (mutually exclusive with "datapoint" and "conversion")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public Long group;
+    public ClickStreamGetRequest withGroup(Long group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * Limit results to this number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public ClickStreamGetRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

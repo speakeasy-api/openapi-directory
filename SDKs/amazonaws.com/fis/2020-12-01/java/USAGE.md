@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateExperimentTemplateHeaders;
 import org.openapis.openapi.models.operations.CreateExperimentTemplateRequestBodyLogConfiguration;
 import org.openapis.openapi.models.operations.CreateExperimentTemplateRequestBody;
 import org.openapis.openapi.models.operations.CreateExperimentTemplateRequest;
@@ -21,229 +20,197 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateExperimentTemplateRequest req = new CreateExperimentTemplateRequest() {{
-                headers = new CreateExperimentTemplateHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateExperimentTemplateRequestBody() {{
+                requestBody = new CreateExperimentTemplateRequestBody() {{
                     actions = new java.util.HashMap<String, org.openapis.openapi.models.shared.CreateExperimentTemplateActionInput>() {{
-                        put("vel", new CreateExperimentTemplateActionInput() {{
-                            actionId = "error";
-                            description = "deserunt";
+                        put("provident", new CreateExperimentTemplateActionInput() {{
+                            actionId = "distinctio";
+                            description = "quibusdam";
                             parameters = new java.util.HashMap<String, String>() {{
-                                put("iure", "magnam");
-                                put("debitis", "ipsa");
+                                put("nulla", "corrupti");
+                                put("illum", "vel");
+                                put("error", "deserunt");
                             }};
                             startAfter = new String[]{{
-                                add("tempora"),
-                                add("suscipit"),
-                                add("molestiae"),
-                                add("minus"),
+                                add("iure"),
+                                add("magnam"),
                             }};
                             targets = new java.util.HashMap<String, String>() {{
-                                put("voluptatum", "iusto");
-                                put("excepturi", "nisi");
-                                put("recusandae", "temporibus");
-                                put("ab", "quis");
+                                put("ipsa", "delectus");
+                                put("tempora", "suscipit");
+                                put("molestiae", "minus");
+                                put("placeat", "voluptatum");
                             }};
                         }});
-                        put("veritatis", new CreateExperimentTemplateActionInput() {{
-                            actionId = "deserunt";
-                            description = "perferendis";
+                        put("iusto", new CreateExperimentTemplateActionInput() {{
+                            actionId = "excepturi";
+                            description = "nisi";
                             parameters = new java.util.HashMap<String, String>() {{
-                                put("repellendus", "sapiente");
-                                put("quo", "odit");
+                                put("temporibus", "ab");
+                                put("quis", "veritatis");
+                                put("deserunt", "perferendis");
+                                put("ipsam", "repellendus");
                             }};
                             startAfter = new String[]{{
+                                add("quo"),
+                                add("odit"),
                                 add("at"),
-                                add("maiores"),
+                                add("at"),
+                            }};
+                            targets = new java.util.HashMap<String, String>() {{
+                                put("molestiae", "quod");
+                                put("quod", "esse");
+                                put("totam", "porro");
+                                put("dolorum", "dicta");
+                            }};
+                        }});
+                        put("nam", new CreateExperimentTemplateActionInput() {{
+                            actionId = "officia";
+                            description = "occaecati";
+                            parameters = new java.util.HashMap<String, String>() {{
+                                put("deleniti", "hic");
+                            }};
+                            startAfter = new String[]{{
+                                add("totam"),
+                                add("beatae"),
+                                add("commodi"),
                                 add("molestiae"),
-                                add("quod"),
                             }};
                             targets = new java.util.HashMap<String, String>() {{
-                                put("esse", "totam");
-                                put("porro", "dolorum");
-                                put("dicta", "nam");
-                                put("officia", "occaecati");
-                            }};
-                        }});
-                        put("fugit", new CreateExperimentTemplateActionInput() {{
-                            actionId = "deleniti";
-                            description = "hic";
-                            parameters = new java.util.HashMap<String, String>() {{
-                                put("totam", "beatae");
-                                put("commodi", "molestiae");
-                                put("modi", "qui");
-                                put("impedit", "cum");
-                            }};
-                            startAfter = new String[]{{
-                                add("ipsum"),
-                                add("excepturi"),
-                            }};
-                            targets = new java.util.HashMap<String, String>() {{
-                                put("perferendis", "ad");
-                            }};
-                        }});
-                        put("natus", new CreateExperimentTemplateActionInput() {{
-                            actionId = "sed";
-                            description = "iste";
-                            parameters = new java.util.HashMap<String, String>() {{
-                                put("natus", "laboriosam");
-                            }};
-                            startAfter = new String[]{{
-                                add("saepe"),
-                                add("fuga"),
-                                add("in"),
-                                add("corporis"),
-                            }};
-                            targets = new java.util.HashMap<String, String>() {{
-                                put("iure", "saepe");
-                                put("quidem", "architecto");
-                                put("ipsa", "reiciendis");
+                                put("qui", "impedit");
+                                put("cum", "esse");
                             }};
                         }});
                     }};
-                    clientToken = "est";
-                    description = "mollitia";
+                    clientToken = "ipsum";
+                    description = "excepturi";
                     logConfiguration = new CreateExperimentTemplateRequestBodyLogConfiguration() {{
                         cloudWatchLogsConfiguration = new ExperimentTemplateCloudWatchLogsLogConfigurationInput() {{
-                            logGroupArn = "laborum";
+                            logGroupArn = "aspernatur";
                         }};
-                        logSchemaVersion = 170909;
+                        logSchemaVersion = 18789;
                         s3Configuration = new ExperimentTemplateS3LogConfigurationInput() {{
-                            bucketName = "dolorem";
-                            prefix = "corporis";
+                            bucketName = "ad";
+                            prefix = "natus";
                         }};
                     }};
-                    roleArn = "explicabo";
+                    roleArn = "sed";
                     stopConditions = new org.openapis.openapi.models.shared.CreateExperimentTemplateStopConditionInput[]{{
                         add(new CreateExperimentTemplateStopConditionInput() {{
-                            source = "enim";
-                            value = "omnis";
+                            source = "dolor";
+                            value = "natus";
                         }}),
                         add(new CreateExperimentTemplateStopConditionInput() {{
-                            source = "nemo";
-                            value = "minima";
+                            source = "laboriosam";
+                            value = "hic";
                         }}),
                         add(new CreateExperimentTemplateStopConditionInput() {{
-                            source = "excepturi";
-                            value = "accusantium";
-                        }}),
-                        add(new CreateExperimentTemplateStopConditionInput() {{
-                            source = "iure";
-                            value = "culpa";
+                            source = "saepe";
+                            value = "fuga";
                         }}),
                     }};
                     tags = new java.util.HashMap<String, String>() {{
-                        put("sapiente", "architecto");
-                        put("mollitia", "dolorem");
-                        put("culpa", "consequuntur");
-                        put("repellat", "mollitia");
+                        put("corporis", "iste");
+                        put("iure", "saepe");
                     }};
                     targets = new java.util.HashMap<String, org.openapis.openapi.models.shared.CreateExperimentTemplateTargetInput>() {{
-                        put("numquam", new CreateExperimentTemplateTargetInput() {{
+                        put("architecto", new CreateExperimentTemplateTargetInput() {{
                             filters = new org.openapis.openapi.models.shared.ExperimentTemplateTargetInputFilter[]{{
                                 add(new ExperimentTemplateTargetInputFilter() {{
-                                    path = "quam";
+                                    path = "reiciendis";
                                     values = new String[]{{
-                                        add("velit"),
-                                        add("error"),
-                                    }};
-                                }}),
-                                add(new ExperimentTemplateTargetInputFilter() {{
-                                    path = "quia";
-                                    values = new String[]{{
-                                        add("vitae"),
+                                        add("mollitia"),
                                         add("laborum"),
+                                        add("dolores"),
                                     }};
                                 }}),
                             }};
                             parameters = new java.util.HashMap<String, String>() {{
+                                put("corporis", "explicabo");
+                            }};
+                            resourceArns = new String[]{{
+                                add("enim"),
+                                add("omnis"),
+                                add("nemo"),
+                                add("minima"),
+                            }};
+                            resourceTags = new java.util.HashMap<String, String>() {{
+                                put("accusantium", "iure");
+                                put("culpa", "doloribus");
+                                put("sapiente", "architecto");
+                            }};
+                            resourceType = "mollitia";
+                            selectionMode = "dolorem";
+                        }});
+                        put("culpa", new CreateExperimentTemplateTargetInput() {{
+                            filters = new org.openapis.openapi.models.shared.ExperimentTemplateTargetInputFilter[]{{
+                                add(new ExperimentTemplateTargetInputFilter() {{
+                                    path = "repellat";
+                                    values = new String[]{{
+                                        add("occaecati"),
+                                        add("numquam"),
+                                        add("commodi"),
+                                    }};
+                                }}),
+                            }};
+                            parameters = new java.util.HashMap<String, String>() {{
+                                put("molestiae", "velit");
+                                put("error", "quia");
+                            }};
+                            resourceArns = new String[]{{
+                                add("vitae"),
+                                add("laborum"),
+                            }};
+                            resourceTags = new java.util.HashMap<String, String>() {{
                                 put("enim", "odit");
                                 put("quo", "sequi");
                                 put("tenetur", "ipsam");
                             }};
-                            resourceArns = new String[]{{
-                                add("possimus"),
-                                add("aut"),
-                                add("quasi"),
-                            }};
-                            resourceTags = new java.util.HashMap<String, String>() {{
-                                put("temporibus", "laborum");
-                                put("quasi", "reiciendis");
-                                put("voluptatibus", "vero");
-                            }};
-                            resourceType = "nihil";
-                            selectionMode = "praesentium";
+                            resourceType = "id";
+                            selectionMode = "possimus";
                         }});
-                        put("voluptatibus", new CreateExperimentTemplateTargetInput() {{
+                        put("aut", new CreateExperimentTemplateTargetInput() {{
                             filters = new org.openapis.openapi.models.shared.ExperimentTemplateTargetInputFilter[]{{
                                 add(new ExperimentTemplateTargetInputFilter() {{
-                                    path = "omnis";
+                                    path = "error";
                                     values = new String[]{{
-                                        add("cum"),
-                                        add("perferendis"),
+                                        add("laborum"),
+                                        add("quasi"),
+                                        add("reiciendis"),
+                                        add("voluptatibus"),
                                     }};
                                 }}),
                             }};
                             parameters = new java.util.HashMap<String, String>() {{
-                                put("reprehenderit", "ut");
+                                put("nihil", "praesentium");
+                                put("voluptatibus", "ipsa");
+                                put("omnis", "voluptate");
+                                put("cum", "perferendis");
                             }};
                             resourceArns = new String[]{{
-                                add("dicta"),
-                                add("corporis"),
-                                add("dolore"),
-                                add("iusto"),
+                                add("reprehenderit"),
                             }};
                             resourceTags = new java.util.HashMap<String, String>() {{
-                                put("harum", "enim");
+                                put("maiores", "dicta");
+                                put("corporis", "dolore");
                             }};
-                            resourceType = "accusamus";
-                            selectionMode = "commodi";
-                        }});
-                        put("repudiandae", new CreateExperimentTemplateTargetInput() {{
-                            filters = new org.openapis.openapi.models.shared.ExperimentTemplateTargetInputFilter[]{{
-                                add(new ExperimentTemplateTargetInputFilter() {{
-                                    path = "ipsum";
-                                    values = new String[]{{
-                                        add("molestias"),
-                                        add("excepturi"),
-                                        add("pariatur"),
-                                    }};
-                                }}),
-                            }};
-                            parameters = new java.util.HashMap<String, String>() {{
-                                put("praesentium", "rem");
-                                put("voluptates", "quasi");
-                            }};
-                            resourceArns = new String[]{{
-                                add("sint"),
-                                add("veritatis"),
-                                add("itaque"),
-                                add("incidunt"),
-                            }};
-                            resourceTags = new java.util.HashMap<String, String>() {{
-                                put("consequatur", "est");
-                                put("quibusdam", "explicabo");
-                            }};
-                            resourceType = "deserunt";
-                            selectionMode = "distinctio";
+                            resourceType = "iusto";
+                            selectionMode = "dicta";
                         }});
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "harum";
+                xAmzContentSha256 = "enim";
+                xAmzCredential = "accusamus";
+                xAmzDate = "commodi";
+                xAmzSecurityToken = "repudiandae";
+                xAmzSignature = "quae";
+                xAmzSignedHeaders = "ipsum";
+            }}            
 
             CreateExperimentTemplateResponse res = sdk.createExperimentTemplate(req);
 

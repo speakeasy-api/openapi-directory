@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1WebhookSubscriptionsIdSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeBearerHeader bearerHeader;
-    public GetApiV1WebhookSubscriptionsIdSecurity withBearerHeader(org.openapis.openapi.models.shared.SchemeBearerHeader bearerHeader) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
+    public String bearerHeader;
+    public GetApiV1WebhookSubscriptionsIdSecurity withBearerHeader(String bearerHeader) {
         this.bearerHeader = bearerHeader;
         return this;
     }

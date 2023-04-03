@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdCommonFoldersRequest {
-    
-    public PostSpacesSpaceIdFoldersIdCommonFoldersPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdCommonFoldersRequest withPathParams(PostSpacesSpaceIdFoldersIdCommonFoldersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Common Folder to add
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSpacesSpaceIdFoldersIdCommonFoldersRequestBody request;
-    public PostSpacesSpaceIdFoldersIdCommonFoldersRequest withRequest(PostSpacesSpaceIdFoldersIdCommonFoldersRequestBody request) {
-        this.request = request;
+    public PostSpacesSpaceIdFoldersIdCommonFoldersRequestBody requestBody;
+    public PostSpacesSpaceIdFoldersIdCommonFoldersRequest withRequestBody(PostSpacesSpaceIdFoldersIdCommonFoldersRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdCommonFoldersRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdCommonFoldersSecurity security;
-    public PostSpacesSpaceIdFoldersIdCommonFoldersRequest withSecurity(PostSpacesSpaceIdFoldersIdCommonFoldersSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdCommonFoldersRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

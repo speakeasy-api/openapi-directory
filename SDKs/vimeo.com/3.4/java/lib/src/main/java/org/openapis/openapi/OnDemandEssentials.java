@@ -39,12 +39,12 @@ public class OnDemandEssentials {
      */
     public org.openapis.openapi.models.operations.CreateVodResponse createVod(org.openapis.openapi.models.operations.CreateVodRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateVodPathParams.class, baseUrl, "/users/{user_id}/ondemand/pages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateVodRequest.class, baseUrl, "/users/{user_id}/ondemand/pages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -81,7 +81,7 @@ public class OnDemandEssentials {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateVodAlt1Response createVodAlt1(org.openapis.openapi.models.operations.CreateVodAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateVodAlt1Response createVodAlt1(org.openapis.openapi.models.operations.CreateVodAlt1RequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/ondemand/pages");
         
@@ -122,19 +122,20 @@ public class OnDemandEssentials {
     /**
      * Delete a draft of an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVodDraftResponse deleteVodDraft(org.openapis.openapi.models.operations.DeleteVodDraftRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVodDraftResponse deleteVodDraft(org.openapis.openapi.models.operations.DeleteVodDraftRequest request, org.openapis.openapi.models.operations.DeleteVodDraftSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVodDraftPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVodDraftRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -164,21 +165,22 @@ public class OnDemandEssentials {
      * Edit an On Demand page
      * Enable preorders or publish the page.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EditVodResponse editVod(org.openapis.openapi.models.operations.EditVodRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EditVodResponse editVod(org.openapis.openapi.models.operations.EditVodRequest request, org.openapis.openapi.models.operations.EditVodSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditVodPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditVodRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,13 +220,13 @@ public class OnDemandEssentials {
      */
     public org.openapis.openapi.models.operations.GetUserVodsResponse getUserVods(org.openapis.openapi.models.operations.GetUserVodsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserVodsPathParams.class, baseUrl, "/users/{user_id}/ondemand/pages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserVodsRequest.class, baseUrl, "/users/{user_id}/ondemand/pages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserVodsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserVodsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -277,7 +279,7 @@ public class OnDemandEssentials {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserVodsAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserVodsAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -324,7 +326,7 @@ public class OnDemandEssentials {
      */
     public org.openapis.openapi.models.operations.GetVodResponse getVod(org.openapis.openapi.models.operations.GetVodRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

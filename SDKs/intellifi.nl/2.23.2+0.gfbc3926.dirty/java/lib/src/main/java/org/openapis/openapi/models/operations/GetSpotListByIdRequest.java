@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpotListByIdRequest {
-    
-    public GetSpotListByIdPathParams pathParams;
-    public GetSpotListByIdRequest withPathParams(GetSpotListByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpotListByIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,34 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchWorkflowRealTimeStatisticsRequest {
-    
-    public FetchWorkflowRealTimeStatisticsPathParams pathParams;
-    public FetchWorkflowRealTimeStatisticsRequest withPathParams(FetchWorkflowRealTimeStatisticsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Only calculate real-time statistics on this TaskChannel. Can be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or `default`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TaskChannel")
+    public String taskChannel;
+    public FetchWorkflowRealTimeStatisticsRequest withTaskChannel(String taskChannel) {
+        this.taskChannel = taskChannel;
         return this;
     }
     
-    
-    public FetchWorkflowRealTimeStatisticsQueryParams queryParams;
-    public FetchWorkflowRealTimeStatisticsRequest withQueryParams(FetchWorkflowRealTimeStatisticsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Returns the list of Tasks that are being controlled by the Workflow with the specified SID value.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkflowSid")
+    public String workflowSid;
+    public FetchWorkflowRealTimeStatisticsRequest withWorkflowSid(String workflowSid) {
+        this.workflowSid = workflowSid;
         return this;
     }
     
-    
-    public FetchWorkflowRealTimeStatisticsSecurity security;
-    public FetchWorkflowRealTimeStatisticsRequest withSecurity(FetchWorkflowRealTimeStatisticsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchWorkflowRealTimeStatisticsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the Workflow to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public FetchWorkflowRealTimeStatisticsRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsAddOrUpdateMembershipForUserRequest {
-    
-    public TeamsAddOrUpdateMembershipForUserPathParams pathParams;
-    public TeamsAddOrUpdateMembershipForUserRequest withPathParams(TeamsAddOrUpdateMembershipForUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public TeamsAddOrUpdateMembershipForUserRequestBody requestBody;
+    public TeamsAddOrUpdateMembershipForUserRequest withRequestBody(TeamsAddOrUpdateMembershipForUserRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsAddOrUpdateMembershipForUserRequestBody request;
-    public TeamsAddOrUpdateMembershipForUserRequest withRequest(TeamsAddOrUpdateMembershipForUserRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsAddOrUpdateMembershipForUserRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public TeamsAddOrUpdateMembershipForUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

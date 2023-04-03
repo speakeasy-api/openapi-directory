@@ -4,27 +4,126 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalendarEventsGetRequest {
-    
-    public CalendarEventsGetPathParams pathParams;
-    public CalendarEventsGetRequest withPathParams(CalendarEventsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public CalendarEventsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public CalendarEventsGetQueryParams queryParams;
-    public CalendarEventsGetRequest withQueryParams(CalendarEventsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Deprecated and ignored. A value will always be returned in the email field for the organizer, creator and attendees, even if no real email address is available (i.e. a generated, non-working value will be provided).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alwaysIncludeEmail")
+    public Boolean alwaysIncludeEmail;
+    public CalendarEventsGetRequest withAlwaysIncludeEmail(Boolean alwaysIncludeEmail) {
+        this.alwaysIncludeEmail = alwaysIncludeEmail;
         return this;
     }
     
+    /**
+     * Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=calendarId")
+    public String calendarId;
+    public CalendarEventsGetRequest withCalendarId(String calendarId) {
+        this.calendarId = calendarId;
+        return this;
+    }
     
-    public CalendarEventsGetSecurity security;
-    public CalendarEventsGetRequest withSecurity(CalendarEventsGetSecurity security) {
-        this.security = security;
+    /**
+     * Event identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=eventId")
+    public String eventId;
+    public CalendarEventsGetRequest withEventId(String eventId) {
+        this.eventId = eventId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public CalendarEventsGetRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public CalendarEventsGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The maximum number of attendees to include in the response. If there are more than the specified number of attendees, only the participant is returned. Optional.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxAttendees")
+    public Long maxAttendees;
+    public CalendarEventsGetRequest withMaxAttendees(Long maxAttendees) {
+        this.maxAttendees = maxAttendees;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public CalendarEventsGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public CalendarEventsGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public CalendarEventsGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Time zone used in the response. Optional. The default is the time zone of the calendar.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeZone")
+    public String timeZone;
+    public CalendarEventsGetRequest withTimeZone(String timeZone) {
+        this.timeZone = timeZone;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public CalendarEventsGetRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

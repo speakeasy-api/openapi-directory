@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteImagesRequest {
-    
-    public DeleteImagesPathParams pathParams;
-    public DeleteImagesRequest withPathParams(DeleteImagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public DeleteImagesRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
         return this;
     }
     
-    
-    public DeleteImagesQueryParams queryParams;
-    public DeleteImagesRequest withQueryParams(DeleteImagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Ids of the images to be deleted. Limited to 256 images per batch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=imageIds")
+    public String[] imageIds;
+    public DeleteImagesRequest withImageIds(String[] imageIds) {
+        this.imageIds = imageIds;
         return this;
     }
     
-    
-    public DeleteImagesHeaders headers;
-    public DeleteImagesRequest withHeaders(DeleteImagesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public DeleteImagesRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

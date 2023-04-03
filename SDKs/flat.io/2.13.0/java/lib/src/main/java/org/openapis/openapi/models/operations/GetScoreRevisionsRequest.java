@@ -4,27 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScoreRevisionsRequest {
-    
-    public GetScoreRevisionsPathParams pathParams;
-    public GetScoreRevisionsRequest withPathParams(GetScoreRevisionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
+    public String score;
+    public GetScoreRevisionsRequest withScore(String score) {
+        this.score = score;
         return this;
     }
     
-    
-    public GetScoreRevisionsQueryParams queryParams;
-    public GetScoreRevisionsRequest withQueryParams(GetScoreRevisionsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetScoreRevisionsSecurity security;
-    public GetScoreRevisionsRequest withSecurity(GetScoreRevisionsSecurity security) {
-        this.security = security;
+    /**
+     * This sharing key must be specified to access to a score or collection with a `privacy` mode set to `privateLink` and the current user is not a collaborator of the document.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharingKey")
+    public String sharingKey;
+    public GetScoreRevisionsRequest withSharingKey(String sharingKey) {
+        this.sharingKey = sharingKey;
         return this;
     }
     

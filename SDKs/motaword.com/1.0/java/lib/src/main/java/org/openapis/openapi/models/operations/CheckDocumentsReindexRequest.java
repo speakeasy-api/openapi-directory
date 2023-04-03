@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckDocumentsReindexRequest {
-    
-    public CheckDocumentsReindexQueryParams queryParams;
-    public CheckDocumentsReindexRequest withQueryParams(CheckDocumentsReindexQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Async operation key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=async_request_key")
+    public String asyncRequestKey;
+    public CheckDocumentsReindexRequest withAsyncRequestKey(String asyncRequestKey) {
+        this.asyncRequestKey = asyncRequestKey;
         return this;
     }
     

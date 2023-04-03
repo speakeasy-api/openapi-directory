@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRecruitingTeamsRequest {
+    /**
+     * Team filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public GetRecruitingTeamsRequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
     
-    public GetRecruitingTeamsQueryParams queryParams;
-    public GetRecruitingTeamsRequest withQueryParams(GetRecruitingTeamsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Recruiting class year
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetRecruitingTeamsRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

@@ -4,27 +4,70 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListTransactionsRequest {
-    
-    public ListTransactionsPathParams pathParams;
-    public ListTransactionsRequest withPathParams(ListTransactionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The beginning of the requested reporting period, in RFC 3339 format.
+     * 
+     * See [Date ranges](https://developer.squareup.com/docs/build-basics/working-with-dates) for details on date inclusivity/exclusivity.
+     * 
+     * Default value: The current time minus one year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_time")
+    public String beginTime;
+    public ListTransactionsRequest withBeginTime(String beginTime) {
+        this.beginTime = beginTime;
         return this;
     }
     
-    
-    public ListTransactionsQueryParams queryParams;
-    public ListTransactionsRequest withQueryParams(ListTransactionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A pagination cursor returned by a previous call to this endpoint.
+     * Provide this to retrieve the next set of results for your original query.
+     * 
+     * See [Paginating results](https://developer.squareup.com/docs/working-with-apis/pagination) for more information.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListTransactionsRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * The end of the requested reporting period, in RFC 3339 format.
+     * 
+     * See [Date ranges](https://developer.squareup.com/docs/build-basics/working-with-dates) for details on date inclusivity/exclusivity.
+     * 
+     * Default value: The current time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
+    public String endTime;
+    public ListTransactionsRequest withEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
     
-    public ListTransactionsSecurity security;
-    public ListTransactionsRequest withSecurity(ListTransactionsSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the location to list transactions for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public ListTransactionsRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * The order in which results are listed in the response (`ASC` for
+     * oldest first, `DESC` for newest first).
+     * 
+     * Default value: `DESC`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
+    public String sortOrder;
+    public ListTransactionsRequest withSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
         return this;
     }
     

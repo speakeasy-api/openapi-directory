@@ -41,12 +41,12 @@ public class CatalogsAuto {
      */
     public org.openapis.openapi.models.operations.AutoConfigureAutoImportIntervalResponse autoConfigureAutoImportInterval(org.openapis.openapi.models.operations.AutoConfigureAutoImportIntervalRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AutoConfigureAutoImportIntervalPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/autoImport/scheduling/interval", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AutoConfigureAutoImportIntervalRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/autoImport/scheduling/interval", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "configureAutoImportIntervalRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -86,7 +86,7 @@ public class CatalogsAuto {
      */
     public org.openapis.openapi.models.operations.AutoDeleteAutoImportResponse autoDeleteAutoImport(org.openapis.openapi.models.operations.AutoDeleteAutoImportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AutoDeleteAutoImportPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/autoImport", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AutoDeleteAutoImportRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/autoImport", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -126,7 +126,7 @@ public class CatalogsAuto {
      */
     public org.openapis.openapi.models.operations.AutoGetAutoImportConfigurationResponse autoGetAutoImportConfiguration(org.openapis.openapi.models.operations.AutoGetAutoImportConfigurationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AutoGetAutoImportConfigurationPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/autoImport", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AutoGetAutoImportConfigurationRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/autoImport", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -172,7 +172,7 @@ public class CatalogsAuto {
      */
     public org.openapis.openapi.models.operations.AutoPauseAutoImportResponse autoPauseAutoImport(org.openapis.openapi.models.operations.AutoPauseAutoImportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AutoPauseAutoImportPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/autoImport/pause", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AutoPauseAutoImportRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/autoImport/pause", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -212,7 +212,7 @@ public class CatalogsAuto {
      */
     public org.openapis.openapi.models.operations.AutoResumeAutoImportResponse autoResumeAutoImport(org.openapis.openapi.models.operations.AutoResumeAutoImportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AutoResumeAutoImportPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/autoImport/resume", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AutoResumeAutoImportRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/autoImport/resume", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -252,12 +252,12 @@ public class CatalogsAuto {
      */
     public org.openapis.openapi.models.operations.AutoScheduleAutoImportResponse autoScheduleAutoImport(org.openapis.openapi.models.operations.AutoScheduleAutoImportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AutoScheduleAutoImportPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/autoImport/scheduling/schedules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AutoScheduleAutoImportRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/autoImport/scheduling/schedules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "scheduleAutoImportRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -297,7 +297,7 @@ public class CatalogsAuto {
      */
     public org.openapis.openapi.models.operations.AutoStartAutoImportResponse autoStartAutoImport(org.openapis.openapi.models.operations.AutoStartAutoImportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AutoStartAutoImportPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/autoImport/start", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AutoStartAutoImportRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/autoImport/start", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -346,7 +346,7 @@ public class CatalogsAuto {
      */
     public org.openapis.openapi.models.operations.ImportationActivateAutoImportResponse importationActivateAutoImport(org.openapis.openapi.models.operations.ImportationActivateAutoImportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationActivateAutoImportPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/autoImport/activate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationActivateAutoImportRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/autoImport/activate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

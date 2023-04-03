@@ -4,20 +4,167 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRestoreDBInstanceFromDBSnapshotRequest {
-    
-    public GETRestoreDBInstanceFromDBSnapshotQueryParams queryParams;
-    public GETRestoreDBInstanceFromDBSnapshotRequest withQueryParams(GETRestoreDBInstanceFromDBSnapshotQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRestoreDBInstanceFromDBSnapshotActionEnum action;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withAction(GETRestoreDBInstanceFromDBSnapshotActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoMinorVersionUpgrade")
+    public Boolean autoMinorVersionUpgrade;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
+        this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
+        return this;
+    }
     
-    public GETRestoreDBInstanceFromDBSnapshotHeaders headers;
-    public GETRestoreDBInstanceFromDBSnapshotRequest withHeaders(GETRestoreDBInstanceFromDBSnapshotHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AvailabilityZone")
+    public String availabilityZone;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withAvailabilityZone(String availabilityZone) {
+        this.availabilityZone = availabilityZone;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceClass")
+    public String dbInstanceClass;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withDBInstanceClass(String dbInstanceClass) {
+        this.dbInstanceClass = dbInstanceClass;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceIdentifier")
+    public String dbInstanceIdentifier;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withDBInstanceIdentifier(String dbInstanceIdentifier) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBName")
+    public String dbName;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withDBName(String dbName) {
+        this.dbName = dbName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBSnapshotIdentifier")
+    public String dbSnapshotIdentifier;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withDBSnapshotIdentifier(String dbSnapshotIdentifier) {
+        this.dbSnapshotIdentifier = dbSnapshotIdentifier;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBSubnetGroupName")
+    public String dbSubnetGroupName;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withDBSubnetGroupName(String dbSubnetGroupName) {
+        this.dbSubnetGroupName = dbSubnetGroupName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Engine")
+    public String engine;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Iops")
+    public Long iops;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withIops(Long iops) {
+        this.iops = iops;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LicenseModel")
+    public String licenseModel;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withLicenseModel(String licenseModel) {
+        this.licenseModel = licenseModel;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MultiAZ")
+    public Boolean multiAZ;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withMultiAZ(Boolean multiAZ) {
+        this.multiAZ = multiAZ;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OptionGroupName")
+    public String optionGroupName;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withOptionGroupName(String optionGroupName) {
+        this.optionGroupName = optionGroupName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Port")
+    public Long port;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withPort(Long port) {
+        this.port = port;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PubliclyAccessible")
+    public Boolean publiclyAccessible;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withPubliclyAccessible(Boolean publiclyAccessible) {
+        this.publiclyAccessible = publiclyAccessible;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRestoreDBInstanceFromDBSnapshotVersionEnum version;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withVersion(GETRestoreDBInstanceFromDBSnapshotVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRestoreDBInstanceFromDBSnapshotRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

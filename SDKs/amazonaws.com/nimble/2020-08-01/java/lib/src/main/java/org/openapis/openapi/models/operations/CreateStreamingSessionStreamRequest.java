@@ -7,24 +7,89 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateStreamingSessionStreamRequest {
-    
-    public CreateStreamingSessionStreamPathParams pathParams;
-    public CreateStreamingSessionStreamRequest withPathParams(CreateStreamingSessionStreamPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateStreamingSessionStreamHeaders headers;
-    public CreateStreamingSessionStreamRequest withHeaders(CreateStreamingSessionStreamHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateStreamingSessionStreamRequestBody request;
-    public CreateStreamingSessionStreamRequest withRequest(CreateStreamingSessionStreamRequestBody request) {
-        this.request = request;
+    public CreateStreamingSessionStreamRequestBody requestBody;
+    public CreateStreamingSessionStreamRequest withRequestBody(CreateStreamingSessionStreamRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public CreateStreamingSessionStreamRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    /**
+     * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If you don\u2019t specify a client token, the Amazon Web Services SDK automatically generates a client token and uses it for the request to ensure idempotency.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Client-Token")
+    public String xAmzClientToken;
+    public CreateStreamingSessionStreamRequest withXAmzClientToken(String xAmzClientToken) {
+        this.xAmzClientToken = xAmzClientToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public CreateStreamingSessionStreamRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public CreateStreamingSessionStreamRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public CreateStreamingSessionStreamRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public CreateStreamingSessionStreamRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public CreateStreamingSessionStreamRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public CreateStreamingSessionStreamRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The streaming session ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sessionId")
+    public String sessionId;
+    public CreateStreamingSessionStreamRequest withSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    
+    /**
+     * The studio ID. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=studioId")
+    public String studioId;
+    public CreateStreamingSessionStreamRequest withStudioId(String studioId) {
+        this.studioId = studioId;
         return this;
     }
     

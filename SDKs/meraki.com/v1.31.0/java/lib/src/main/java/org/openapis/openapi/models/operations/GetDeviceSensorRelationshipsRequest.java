@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceSensorRelationshipsRequest {
-    
-    public GetDeviceSensorRelationshipsPathParams pathParams;
-    public GetDeviceSensorRelationshipsRequest withPathParams(GetDeviceSensorRelationshipsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetDeviceSensorRelationshipsRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

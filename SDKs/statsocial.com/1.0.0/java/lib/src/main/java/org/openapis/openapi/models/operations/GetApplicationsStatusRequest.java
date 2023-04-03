@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApplicationsStatusRequest {
-    
-    public GetApplicationsStatusQueryParams queryParams;
-    public GetApplicationsStatusRequest withQueryParams(GetApplicationsStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * User application key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetApplicationsStatusRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

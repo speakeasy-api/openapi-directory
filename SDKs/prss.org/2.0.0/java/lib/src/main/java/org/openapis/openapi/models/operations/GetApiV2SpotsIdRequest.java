@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2SpotsIdRequest {
-    
-    public GetApiV2SpotsIdPathParams pathParams;
-    public GetApiV2SpotsIdRequest withPathParams(GetApiV2SpotsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetApiV2SpotsIdSecurity security;
-    public GetApiV2SpotsIdRequest withSecurity(GetApiV2SpotsIdSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetApiV2SpotsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

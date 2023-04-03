@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCheckDetailsRequest {
-    
-    public ListCheckDetailsPathParams pathParams;
-    public ListCheckDetailsRequest withPathParams(ListCheckDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Check
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=check_id")
+    public String checkId;
+    public ListCheckDetailsRequest withCheckId(String checkId) {
+        this.checkId = checkId;
         return this;
     }
     
-    
-    public ListCheckDetailsQueryParams queryParams;
-    public ListCheckDetailsRequest withQueryParams(ListCheckDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * This parameter is used to specify the language wanted for details, if not specified details will come in their original language.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public ListCheckDetailsRequest withLang(String lang) {
+        this.lang = lang;
         return this;
     }
     
-    
-    public ListCheckDetailsSecurity security;
-    public ListCheckDetailsRequest withSecurity(ListCheckDetailsSecurity security) {
-        this.security = security;
+    /**
+     * Start key value for the pagination
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_key")
+    public String startKey;
+    public ListCheckDetailsRequest withStartKey(String startKey) {
+        this.startKey = startKey;
         return this;
     }
     

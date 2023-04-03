@@ -5,10 +5,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesCreateSecurity;
-import org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesCreatePathParams;
-import org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesCreateQueryParams;
 import org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesCreateRequest;
 import org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.InstanceConnectModeEnum;
 import org.openapis.openapi.models.shared.InstanceReadReplicasModeEnum;
 import org.openapis.openapi.models.shared.InstanceSuspensionReasonsEnum;
@@ -23,10 +22,7 @@ import org.openapis.openapi.models.shared.MaintenancePolicyInput;
 import org.openapis.openapi.models.shared.WeeklyMaintenanceWindowDayEnum;
 import org.openapis.openapi.models.shared.WeeklyMaintenanceWindowInput;
 import org.openapis.openapi.models.shared.TimeOfDay;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -35,78 +31,44 @@ public class Application {
                 .build();
 
             RedisProjectsLocationsInstancesCreateRequest req = new RedisProjectsLocationsInstancesCreateRequest() {{
-                security = new RedisProjectsLocationsInstancesCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new RedisProjectsLocationsInstancesCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new RedisProjectsLocationsInstancesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    instanceId = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    uploadType = "deserunt";
-                    uploadProtocol = "suscipit";
-                }};
-                request = new InstanceInput() {{
-                    alternativeLocationId = "iure";
+                dollarXgafv = "2";
+                instanceInput = new InstanceInput() {{
+                    alternativeLocationId = "provident";
                     authEnabled = false;
-                    authorizedNetwork = "magnam";
+                    authorizedNetwork = "distinctio";
                     availableMaintenanceVersions = new String[]{{
-                        add("ipsa"),
-                        add("delectus"),
-                        add("tempora"),
-                        add("suscipit"),
+                        add("unde"),
+                        add("nulla"),
+                        add("corrupti"),
+                        add("illum"),
                     }};
                     connectMode = "DIRECT_PEERING";
-                    customerManagedKey = "minus";
-                    displayName = "placeat";
+                    customerManagedKey = "error";
+                    displayName = "deserunt";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("iusto", "excepturi");
-                        put("nisi", "recusandae");
-                        put("temporibus", "ab");
+                        put("iure", "magnam");
+                        put("debitis", "ipsa");
                     }};
-                    locationId = "quis";
+                    locationId = "delectus";
                     maintenancePolicy = new MaintenancePolicyInput() {{
-                        description = "veritatis";
+                        description = "tempora";
                         weeklyMaintenanceWindow = new org.openapis.openapi.models.shared.WeeklyMaintenanceWindowInput[]{{
                             add(new WeeklyMaintenanceWindowInput() {{
-                                day = "DAY_OF_WEEK_UNSPECIFIED";
+                                day = "WEDNESDAY";
                                 startTime = new TimeOfDay() {{
-                                    hours = 368241;
-                                    minutes = 832620;
-                                    nanos = 957156;
-                                    seconds = 778157;
+                                    hours = 791725;
+                                    minutes = 812169;
+                                    nanos = 528895;
+                                    seconds = 479977;
                                 }};
                             }}),
                             add(new WeeklyMaintenanceWindowInput() {{
-                                day = "MONDAY";
+                                day = "THURSDAY";
                                 startTime = new TimeOfDay() {{
-                                    hours = 870013;
-                                    minutes = 870088;
-                                    nanos = 978619;
-                                    seconds = 473608;
-                                }};
-                            }}),
-                            add(new WeeklyMaintenanceWindowInput() {{
-                                day = "SATURDAY";
-                                startTime = new TimeOfDay() {{
-                                    hours = 800911;
-                                    minutes = 461479;
-                                    nanos = 520478;
-                                    seconds = 780529;
+                                    hours = 392785;
+                                    minutes = 925597;
+                                    nanos = 836079;
+                                    seconds = 71036;
                                 }};
                             }}),
                         }};
@@ -114,34 +76,51 @@ public class Application {
                     maintenanceSchedule = new MaintenanceScheduleInput() {{
                         canReschedule = false;
                     }};
-                    maintenanceVersion = "dolorum";
-                    memorySizeGb = 118274;
-                    name = "nam";
+                    maintenanceVersion = "quis";
+                    memorySizeGb = 87129;
+                    name = "deserunt";
                     persistenceConfig = new PersistenceConfigInput() {{
-                        persistenceMode = "DISABLED";
-                        rdbSnapshotPeriod = "SIX_HOURS";
-                        rdbSnapshotStartTime = "fugit";
+                        persistenceMode = "PERSISTENCE_MODE_UNSPECIFIED";
+                        rdbSnapshotPeriod = "ONE_HOUR";
+                        rdbSnapshotStartTime = "repellendus";
                     }};
-                    readReplicasMode = "READ_REPLICAS_DISABLED";
+                    readReplicasMode = "READ_REPLICAS_ENABLED";
                     redisConfigs = new java.util.HashMap<String, String>() {{
-                        put("optio", "totam");
-                        put("beatae", "commodi");
-                        put("molestiae", "modi");
-                        put("qui", "impedit");
+                        put("odit", "at");
+                        put("at", "maiores");
+                        put("molestiae", "quod");
+                        put("quod", "esse");
                     }};
-                    redisVersion = "cum";
-                    replicaCount = 456150;
-                    reservedIpRange = "ipsum";
-                    secondaryIpRange = "excepturi";
+                    redisVersion = "totam";
+                    replicaCount = 780529;
+                    reservedIpRange = "dolorum";
+                    secondaryIpRange = "dicta";
                     suspensionReasons = new org.openapis.openapi.models.shared.InstanceSuspensionReasonsEnum[]{{
+                        add("CUSTOMER_MANAGED_KEY_ISSUE"),
+                        add("CUSTOMER_MANAGED_KEY_ISSUE"),
                         add("SUSPENSION_REASON_UNSPECIFIED"),
                     }};
-                    tier = "TIER_UNSPECIFIED";
-                    transitEncryptionMode = "SERVER_AUTHENTICATION";
+                    tier = "BASIC";
+                    transitEncryptionMode = "DISABLED";
                 }};
-            }};            
+                accessToken = "optio";
+                alt = "media";
+                callback = "beatae";
+                fields = "commodi";
+                instanceId = "molestiae";
+                key = "modi";
+                oauthToken = "qui";
+                parent = "impedit";
+                prettyPrint = false;
+                quotaUser = "cum";
+                uploadType = "esse";
+                uploadProtocol = "ipsum";
+            }}            
 
-            RedisProjectsLocationsInstancesCreateResponse res = sdk.projects.redisProjectsLocationsInstancesCreate(req);
+            RedisProjectsLocationsInstancesCreateResponse res = sdk.projects.redisProjectsLocationsInstancesCreate(req, new RedisProjectsLocationsInstancesCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response

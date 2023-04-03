@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductsIdOptionsJsonRequest {
-    
-    public GetProductsIdOptionsJsonPathParams pathParams;
-    public GetProductsIdOptionsJsonRequest withPathParams(GetProductsIdOptionsJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public GetProductsIdOptionsJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * ID of the Product
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetProductsIdOptionsJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetProductsIdOptionsJsonQueryParams queryParams;
-    public GetProductsIdOptionsJsonRequest withQueryParams(GetProductsIdOptionsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public GetProductsIdOptionsJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

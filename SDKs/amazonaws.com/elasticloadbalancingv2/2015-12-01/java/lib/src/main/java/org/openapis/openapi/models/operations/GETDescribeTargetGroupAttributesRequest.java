@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeTargetGroupAttributesRequest {
-    
-    public GETDescribeTargetGroupAttributesQueryParams queryParams;
-    public GETDescribeTargetGroupAttributesRequest withQueryParams(GETDescribeTargetGroupAttributesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeTargetGroupAttributesActionEnum action;
+    public GETDescribeTargetGroupAttributesRequest withAction(GETDescribeTargetGroupAttributesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The Amazon Resource Name (ARN) of the target group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetGroupArn")
+    public String targetGroupArn;
+    public GETDescribeTargetGroupAttributesRequest withTargetGroupArn(String targetGroupArn) {
+        this.targetGroupArn = targetGroupArn;
+        return this;
+    }
     
-    public GETDescribeTargetGroupAttributesHeaders headers;
-    public GETDescribeTargetGroupAttributesRequest withHeaders(GETDescribeTargetGroupAttributesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeTargetGroupAttributesVersionEnum version;
+    public GETDescribeTargetGroupAttributesRequest withVersion(GETDescribeTargetGroupAttributesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeTargetGroupAttributesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeTargetGroupAttributesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeTargetGroupAttributesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeTargetGroupAttributesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeTargetGroupAttributesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeTargetGroupAttributesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeTargetGroupAttributesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutCustomFieldsIdJsonRequest {
-    
-    public PutCustomFieldsIdJsonPathParams pathParams;
-    public PutCustomFieldsIdJsonRequest withPathParams(PutCustomFieldsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutCustomFieldsIdJsonQueryParams queryParams;
-    public PutCustomFieldsIdJsonRequest withQueryParams(PutCustomFieldsIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * CustomField parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CustomFieldEdit request;
-    public PutCustomFieldsIdJsonRequest withRequest(org.openapis.openapi.models.shared.CustomFieldEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CustomFieldEdit customFieldEdit;
+    public PutCustomFieldsIdJsonRequest withCustomFieldEdit(org.openapis.openapi.models.shared.CustomFieldEdit customFieldEdit) {
+        this.customFieldEdit = customFieldEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PutCustomFieldsIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the CustomField
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PutCustomFieldsIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PutCustomFieldsIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

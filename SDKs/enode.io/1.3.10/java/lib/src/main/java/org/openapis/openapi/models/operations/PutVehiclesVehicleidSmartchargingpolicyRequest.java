@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutVehiclesVehicleidSmartchargingpolicyRequest {
-    
-    public PutVehiclesVehicleidSmartchargingpolicyPathParams pathParams;
-    public PutVehiclesVehicleidSmartchargingpolicyRequest withPathParams(PutVehiclesVehicleidSmartchargingpolicyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutVehiclesVehicleidSmartchargingpolicyRequestBody request;
-    public PutVehiclesVehicleidSmartchargingpolicyRequest withRequest(PutVehiclesVehicleidSmartchargingpolicyRequestBody request) {
-        this.request = request;
+    public PutVehiclesVehicleidSmartchargingpolicyRequestBody requestBody;
+    public PutVehiclesVehicleidSmartchargingpolicyRequest withRequestBody(PutVehiclesVehicleidSmartchargingpolicyRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PutVehiclesVehicleidSmartchargingpolicySecurity security;
-    public PutVehiclesVehicleidSmartchargingpolicyRequest withSecurity(PutVehiclesVehicleidSmartchargingpolicySecurity security) {
-        this.security = security;
+    /**
+     * ID of the Vehicle
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vehicleId")
+    public String vehicleId;
+    public PutVehiclesVehicleidSmartchargingpolicyRequest withVehicleId(String vehicleId) {
+        this.vehicleId = vehicleId;
         return this;
     }
     

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePhoneNumberRequest {
-    
-    public DeletePhoneNumberPathParams pathParams;
-    public DeletePhoneNumberRequest withPathParams(DeletePhoneNumberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string that we created to identify the PhoneNumber resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeletePhoneNumberRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public DeletePhoneNumberSecurity security;
-    public DeletePhoneNumberRequest withSecurity(DeletePhoneNumberSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeletePhoneNumberRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Trunk from which to delete the PhoneNumber resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrunkSid")
+    public String trunkSid;
+    public DeletePhoneNumberRequest withTrunkSid(String trunkSid) {
+        this.trunkSid = trunkSid;
         return this;
     }
     

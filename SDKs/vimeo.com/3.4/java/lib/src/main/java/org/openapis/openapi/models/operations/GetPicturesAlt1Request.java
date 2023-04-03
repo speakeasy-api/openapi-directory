@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPicturesAlt1Request {
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetPicturesAlt1Request withPage(Double page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetPicturesAlt1QueryParams queryParams;
-    public GetPicturesAlt1Request withQueryParams(GetPicturesAlt1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetPicturesAlt1Request withPerPage(Double perPage) {
+        this.perPage = perPage;
         return this;
     }
     

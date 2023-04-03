@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GitGetTagRequest {
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public GitGetTagRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public GitGetTagPathParams pathParams;
-    public GitGetTagRequest withPathParams(GitGetTagPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public GitGetTagRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag_sha")
+    public String tagSha;
+    public GitGetTagRequest withTagSha(String tagSha) {
+        this.tagSha = tagSha;
         return this;
     }
     

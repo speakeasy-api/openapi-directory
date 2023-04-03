@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateServiceRoleRequest {
-    
-    public CreateServiceRolePathParams pathParams;
-    public CreateServiceRoleRequest withPathParams(CreateServiceRolePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) to create the Role resource under.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public CreateServiceRoleRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateServiceRoleCreateServiceRoleRequest request;
-    public CreateServiceRoleRequest withRequest(CreateServiceRoleCreateServiceRoleRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateServiceRoleSecurity security;
-    public CreateServiceRoleRequest withSecurity(CreateServiceRoleSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateServiceRoleRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateServiceRoleCreateServiceRoleRequest requestBody;
+    public CreateServiceRoleRequest withRequestBody(CreateServiceRoleCreateServiceRoleRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

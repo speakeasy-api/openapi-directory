@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMarketplaceChannelCatalogsRequest {
-    
-    public GetMarketplaceChannelCatalogsQueryParams queryParams;
-    public GetMarketplaceChannelCatalogsRequest withQueryParams(GetMarketplaceChannelCatalogsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The StoreId to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=storeId")
+    public String storeId;
+    public GetMarketplaceChannelCatalogsRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

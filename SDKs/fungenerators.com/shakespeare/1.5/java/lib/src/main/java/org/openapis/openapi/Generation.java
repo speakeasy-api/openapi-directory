@@ -34,10 +34,11 @@ public class Generation {
     /**
      * Generate random Shakespeare style insults.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetShakespeareGenerateInsultResponse getShakespeareGenerateInsult(org.openapis.openapi.models.operations.GetShakespeareGenerateInsultRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetShakespeareGenerateInsultResponse getShakespeareGenerateInsult(org.openapis.openapi.models.operations.GetShakespeareGenerateInsultRequest request, org.openapis.openapi.models.operations.GetShakespeareGenerateInsultSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/shakespeare/generate/insult");
         
@@ -45,14 +46,14 @@ public class Generation {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetShakespeareGenerateInsultQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetShakespeareGenerateInsultRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,10 +74,11 @@ public class Generation {
     /**
      * Generate Shakespeare lorem ipsum.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetShakespeareGenerateLoremIpsumResponse getShakespeareGenerateLoremIpsum(org.openapis.openapi.models.operations.GetShakespeareGenerateLoremIpsumRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetShakespeareGenerateLoremIpsumResponse getShakespeareGenerateLoremIpsum(org.openapis.openapi.models.operations.GetShakespeareGenerateLoremIpsumRequest request, org.openapis.openapi.models.operations.GetShakespeareGenerateLoremIpsumSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/shakespeare/generate/lorem-ipsum");
         
@@ -84,14 +86,14 @@ public class Generation {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetShakespeareGenerateLoremIpsumQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetShakespeareGenerateLoremIpsumRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -112,10 +114,11 @@ public class Generation {
     /**
      * Generate random Shakespearen names.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetShakespeareGenerateNameResponse getShakespeareGenerateName(org.openapis.openapi.models.operations.GetShakespeareGenerateNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetShakespeareGenerateNameResponse getShakespeareGenerateName(org.openapis.openapi.models.operations.GetShakespeareGenerateNameRequest request, org.openapis.openapi.models.operations.GetShakespeareGenerateNameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/shakespeare/generate/name");
         
@@ -123,14 +126,14 @@ public class Generation {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetShakespeareGenerateNameQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetShakespeareGenerateNameRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

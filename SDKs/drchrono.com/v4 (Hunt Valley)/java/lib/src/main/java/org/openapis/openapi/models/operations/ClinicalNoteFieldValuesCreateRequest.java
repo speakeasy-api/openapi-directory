@@ -4,20 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClinicalNoteFieldValuesCreateRequest {
-    
-    public ClinicalNoteFieldValuesCreateQueryParams queryParams;
-    public ClinicalNoteFieldValuesCreateRequest withQueryParams(ClinicalNoteFieldValuesCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
+    public Long appointment;
+    public ClinicalNoteFieldValuesCreateRequest withAppointment(Long appointment) {
+        this.appointment = appointment;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clinical_note_field")
+    public Long clinicalNoteField;
+    public ClinicalNoteFieldValuesCreateRequest withClinicalNoteField(Long clinicalNoteField) {
+        this.clinicalNoteField = clinicalNoteField;
+        return this;
+    }
     
-    public ClinicalNoteFieldValuesCreateSecurity security;
-    public ClinicalNoteFieldValuesCreateRequest withSecurity(ClinicalNoteFieldValuesCreateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clinical_note_template")
+    public Long clinicalNoteTemplate;
+    public ClinicalNoteFieldValuesCreateRequest withClinicalNoteTemplate(Long clinicalNoteTemplate) {
+        this.clinicalNoteTemplate = clinicalNoteTemplate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public ClinicalNoteFieldValuesCreateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public ClinicalNoteFieldValuesCreateRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

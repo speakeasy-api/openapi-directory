@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtrasImageAttachmentsUpdateRequest {
-    
-    public ExtrasImageAttachmentsUpdatePathParams pathParams;
-    public ExtrasImageAttachmentsUpdateRequest withPathParams(ExtrasImageAttachmentsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ImageAttachmentInput imageAttachmentInput;
+    public ExtrasImageAttachmentsUpdateRequest withImageAttachmentInput(org.openapis.openapi.models.shared.ImageAttachmentInput imageAttachmentInput) {
+        this.imageAttachmentInput = imageAttachmentInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ImageAttachmentInput request;
-    public ExtrasImageAttachmentsUpdateRequest withRequest(org.openapis.openapi.models.shared.ImageAttachmentInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this image attachment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ExtrasImageAttachmentsUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

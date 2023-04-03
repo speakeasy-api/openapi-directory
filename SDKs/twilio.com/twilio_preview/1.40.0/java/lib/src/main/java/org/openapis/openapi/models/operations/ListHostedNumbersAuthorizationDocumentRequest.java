@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListHostedNumbersAuthorizationDocumentRequest {
-    
-    public ListHostedNumbersAuthorizationDocumentQueryParams queryParams;
-    public ListHostedNumbersAuthorizationDocumentRequest withQueryParams(ListHostedNumbersAuthorizationDocumentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Email that this AuthorizationDocument will be sent to for signing.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Email")
+    public String email;
+    public ListHostedNumbersAuthorizationDocumentRequest withEmail(String email) {
+        this.email = email;
         return this;
     }
     
-    
-    public ListHostedNumbersAuthorizationDocumentSecurity security;
-    public ListHostedNumbersAuthorizationDocumentRequest withSecurity(ListHostedNumbersAuthorizationDocumentSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListHostedNumbersAuthorizationDocumentRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListHostedNumbersAuthorizationDocumentRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListHostedNumbersAuthorizationDocumentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListHostedNumbersAuthorizationDocumentRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Status of an instance resource. It can hold one of the values: 1. opened 2. signing, 3. signed LOA, 4. canceled, 5. failed. See the section entitled [Status Values](https://www.twilio.com/docs/api/phone-numbers/hosted-number-authorization-documents#status-values) for more information on each of these statuses.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public org.openapis.openapi.models.shared.AuthorizationDocumentEnumStatusEnum status;
+    public ListHostedNumbersAuthorizationDocumentRequest withStatus(org.openapis.openapi.models.shared.AuthorizationDocumentEnumStatusEnum status) {
+        this.status = status;
         return this;
     }
     

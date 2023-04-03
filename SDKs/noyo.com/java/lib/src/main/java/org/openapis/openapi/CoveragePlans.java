@@ -39,12 +39,12 @@ public class CoveragePlans {
      */
     public org.openapis.openapi.models.operations.CreateCoveragePlanResponse createCoveragePlan(org.openapis.openapi.models.operations.CreateCoveragePlanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateCoveragePlanPathParams.class, baseUrl, "/api/v1/group_coverages/{group_coverage_id}/coverage_plans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateCoveragePlanRequest.class, baseUrl, "/api/v1/group_coverages/{group_coverage_id}/coverage_plans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "coveragePlanCreateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -83,12 +83,12 @@ public class CoveragePlans {
      */
     public org.openapis.openapi.models.operations.EditCoveragePlanResponse editCoveragePlan(org.openapis.openapi.models.operations.EditCoveragePlanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditCoveragePlanPathParams.class, baseUrl, "/api/v1/coverage_plans/{plan_id}/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditCoveragePlanRequest.class, baseUrl, "/api/v1/coverage_plans/{plan_id}/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "coveragePlanEditRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -127,7 +127,7 @@ public class CoveragePlans {
      */
     public org.openapis.openapi.models.operations.GetCoveragePlanResponse getCoveragePlan(org.openapis.openapi.models.operations.GetCoveragePlanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCoveragePlanPathParams.class, baseUrl, "/api/v1/coverage_plans/{plan_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCoveragePlanRequest.class, baseUrl, "/api/v1/coverage_plans/{plan_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -166,7 +166,7 @@ public class CoveragePlans {
      */
     public org.openapis.openapi.models.operations.GetGroupCoveragePlansResponse getGroupCoveragePlans(org.openapis.openapi.models.operations.GetGroupCoveragePlansRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGroupCoveragePlansPathParams.class, baseUrl, "/api/v1/group_coverages/{group_coverage_id}/coverage_plans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGroupCoveragePlansRequest.class, baseUrl, "/api/v1/group_coverages/{group_coverage_id}/coverage_plans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

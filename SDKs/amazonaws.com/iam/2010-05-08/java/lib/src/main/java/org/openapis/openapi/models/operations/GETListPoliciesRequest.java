@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListPoliciesRequest {
-    
-    public GETListPoliciesQueryParams queryParams;
-    public GETListPoliciesRequest withQueryParams(GETListPoliciesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETListPoliciesActionEnum action;
+    public GETListPoliciesRequest withAction(GETListPoliciesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Use this parameter only when paginating results and only after you receive a response indicating that the results are truncated. Set it to the value of the &lt;code&gt;Marker&lt;/code&gt; element in the response that you received to indicate where the next call should start.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETListPoliciesRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
     
-    public GETListPoliciesHeaders headers;
-    public GETListPoliciesRequest withHeaders(GETListPoliciesHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;Use this only when paginating results to indicate the maximum number of items you want in the response. If additional items exist beyond the maximum you specify, the &lt;code&gt;IsTruncated&lt;/code&gt; response element is &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;If you do not include this parameter, the number of items defaults to 100. Note that IAM might return fewer results, even when there are more results available. In that case, the &lt;code&gt;IsTruncated&lt;/code&gt; response element returns &lt;code&gt;true&lt;/code&gt;, and &lt;code&gt;Marker&lt;/code&gt; contains a value to include in the subsequent call that tells the service where to continue from.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
+    public Long maxItems;
+    public GETListPoliciesRequest withMaxItems(Long maxItems) {
+        this.maxItems = maxItems;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A flag to filter the results to only the attached policies.&lt;/p&gt; &lt;p&gt;When &lt;code&gt;OnlyAttached&lt;/code&gt; is &lt;code&gt;true&lt;/code&gt;, the returned list contains only the policies that are attached to an IAM user, group, or role. When &lt;code&gt;OnlyAttached&lt;/code&gt; is &lt;code&gt;false&lt;/code&gt;, or when the parameter is not included, all policies are returned.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OnlyAttached")
+    public Boolean onlyAttached;
+    public GETListPoliciesRequest withOnlyAttached(Boolean onlyAttached) {
+        this.onlyAttached = onlyAttached;
+        return this;
+    }
+    
+    /**
+     * The path prefix for filtering the results. This parameter is optional. If it is not included, it defaults to a slash (/), listing all policies. This parameter allows (through its &lt;a href="http://wikipedia.org/wiki/regex"&gt;regex pattern&lt;/a&gt;) a string of characters consisting of either a forward slash (/) by itself or a string that must begin and end with forward slashes. In addition, it can contain any ASCII character from the ! (&lt;code&gt;\ u0021&lt;/code&gt;) through the DEL character (&lt;code&gt;\ u007F&lt;/code&gt;), including most punctuation characters, digits, and upper and lowercased letters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PathPrefix")
+    public String pathPrefix;
+    public GETListPoliciesRequest withPathPrefix(String pathPrefix) {
+        this.pathPrefix = pathPrefix;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The policy usage method to use for filtering the results.&lt;/p&gt; &lt;p&gt;To list only permissions policies, set\u00a0&lt;code&gt;PolicyUsageFilter&lt;/code&gt;\u00a0to\u00a0&lt;code&gt;PermissionsPolicy&lt;/code&gt;. To list only the policies used to set permissions boundaries, set\u00a0the value to\u00a0&lt;code&gt;PermissionsBoundary&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;This parameter is optional. If it is not included, all policies are returned. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyUsageFilter")
+    public GETListPoliciesPolicyUsageFilterEnum policyUsageFilter;
+    public GETListPoliciesRequest withPolicyUsageFilter(GETListPoliciesPolicyUsageFilterEnum policyUsageFilter) {
+        this.policyUsageFilter = policyUsageFilter;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The scope to use for filtering the results.&lt;/p&gt; &lt;p&gt;To list only Amazon Web Services managed policies, set &lt;code&gt;Scope&lt;/code&gt; to &lt;code&gt;AWS&lt;/code&gt;. To list only the customer managed policies in your Amazon Web Services account, set &lt;code&gt;Scope&lt;/code&gt; to &lt;code&gt;Local&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;This parameter is optional. If it is not included, or if it is set to &lt;code&gt;All&lt;/code&gt;, all policies are returned.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Scope")
+    public GETListPoliciesScopeEnum scope;
+    public GETListPoliciesRequest withScope(GETListPoliciesScopeEnum scope) {
+        this.scope = scope;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETListPoliciesVersionEnum version;
+    public GETListPoliciesRequest withVersion(GETListPoliciesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETListPoliciesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETListPoliciesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETListPoliciesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETListPoliciesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETListPoliciesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETListPoliciesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETListPoliciesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

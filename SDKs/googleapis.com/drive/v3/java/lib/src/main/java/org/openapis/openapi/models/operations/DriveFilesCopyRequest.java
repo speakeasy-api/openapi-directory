@@ -7,31 +7,170 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveFilesCopyRequest {
-    
-    public DriveFilesCopyPathParams pathParams;
-    public DriveFilesCopyRequest withPathParams(DriveFilesCopyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DriveFilesCopyQueryParams queryParams;
-    public DriveFilesCopyRequest withQueryParams(DriveFilesCopyQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FileInput request;
-    public DriveFilesCopyRequest withRequest(org.openapis.openapi.models.shared.FileInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FileInput fileInput;
+    public DriveFilesCopyRequest withFileInput(org.openapis.openapi.models.shared.FileInput fileInput) {
+        this.fileInput = fileInput;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DriveFilesCopyRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public DriveFilesCopySecurity security;
-    public DriveFilesCopyRequest withSecurity(DriveFilesCopySecurity security) {
-        this.security = security;
+    /**
+     * Deprecated. Copying files into multiple folders is no longer supported. Use shortcuts instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enforceSingleParent")
+    public Boolean enforceSingleParent;
+    public DriveFilesCopyRequest withEnforceSingleParent(Boolean enforceSingleParent) {
+        this.enforceSingleParent = enforceSingleParent;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DriveFilesCopyRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * The ID of the file.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
+    public String fileId;
+    public DriveFilesCopyRequest withFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    
+    /**
+     * Whether to ignore the domain's default visibility settings for the created file. Domain administrators can choose to make all uploaded files visible to the domain by default; this parameter bypasses that behavior for the request. Permissions are still inherited from parent folders.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ignoreDefaultVisibility")
+    public Boolean ignoreDefaultVisibility;
+    public DriveFilesCopyRequest withIgnoreDefaultVisibility(Boolean ignoreDefaultVisibility) {
+        this.ignoreDefaultVisibility = ignoreDefaultVisibility;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLabels")
+    public String includeLabels;
+    public DriveFilesCopyRequest withIncludeLabels(String includeLabels) {
+        this.includeLabels = includeLabels;
+        return this;
+    }
+    
+    /**
+     * Specifies which additional view's permissions to include in the response. Only 'published' is supported.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includePermissionsForView")
+    public String includePermissionsForView;
+    public DriveFilesCopyRequest withIncludePermissionsForView(String includePermissionsForView) {
+        this.includePermissionsForView = includePermissionsForView;
+        return this;
+    }
+    
+    /**
+     * Whether to set the 'keepForever' field in the new head revision. This is only applicable to files with binary content in Google Drive. Only 200 revisions for the file can be kept forever. If the limit is reached, try deleting pinned revisions.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keepRevisionForever")
+    public Boolean keepRevisionForever;
+    public DriveFilesCopyRequest withKeepRevisionForever(Boolean keepRevisionForever) {
+        this.keepRevisionForever = keepRevisionForever;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DriveFilesCopyRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DriveFilesCopyRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * A language hint for OCR processing during image import (ISO 639-1 code).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ocrLanguage")
+    public String ocrLanguage;
+    public DriveFilesCopyRequest withOcrLanguage(String ocrLanguage) {
+        this.ocrLanguage = ocrLanguage;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DriveFilesCopyRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DriveFilesCopyRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Whether the requesting application supports both My Drives and shared drives.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsAllDrives")
+    public Boolean supportsAllDrives;
+    public DriveFilesCopyRequest withSupportsAllDrives(Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+    }
+    
+    /**
+     * Deprecated use supportsAllDrives instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsTeamDrives")
+    public Boolean supportsTeamDrives;
+    public DriveFilesCopyRequest withSupportsTeamDrives(Boolean supportsTeamDrives) {
+        this.supportsTeamDrives = supportsTeamDrives;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public DriveFilesCopyRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

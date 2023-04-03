@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LeadsDeleteRequest {
-    
-    public LeadsDeletePathParams pathParams;
-    public LeadsDeleteRequest withPathParams(LeadsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public LeadsDeleteRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public LeadsDeleteQueryParams queryParams;
-    public LeadsDeleteRequest withQueryParams(LeadsDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public LeadsDeleteRequest withRaw(Boolean raw) {
+        this.raw = raw;
         return this;
     }
     
-    
-    public LeadsDeleteHeaders headers;
-    public LeadsDeleteRequest withHeaders(LeadsDeleteHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public LeadsDeleteRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
         return this;
     }
     
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public LeadsDeleteRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
     
-    public LeadsDeleteSecurity security;
-    public LeadsDeleteRequest withSecurity(LeadsDeleteSecurity security) {
-        this.security = security;
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public LeadsDeleteRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

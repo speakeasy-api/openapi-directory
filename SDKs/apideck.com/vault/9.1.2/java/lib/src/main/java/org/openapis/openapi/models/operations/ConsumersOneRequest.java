@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConsumersOneRequest {
-    
-    public ConsumersOnePathParams pathParams;
-    public ConsumersOneRequest withPathParams(ConsumersOnePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the consumer to return
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=consumer_id")
+    public String consumerId;
+    public ConsumersOneRequest withConsumerId(String consumerId) {
+        this.consumerId = consumerId;
         return this;
     }
     
-    
-    public ConsumersOneHeaders headers;
-    public ConsumersOneRequest withHeaders(ConsumersOneHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public ConsumersOneSecurity security;
-    public ConsumersOneRequest withSecurity(ConsumersOneSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public ConsumersOneRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
         return this;
     }
     

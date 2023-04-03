@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBanksIdConnectorLogosThumbnailRequest {
-    
-    public GetBanksIdConnectorLogosThumbnailPathParams pathParams;
-    public GetBanksIdConnectorLogosThumbnailRequest withPathParams(GetBanksIdConnectorLogosThumbnailPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetBanksIdConnectorLogosThumbnailRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
-    
-    public GetBanksIdConnectorLogosThumbnailQueryParams queryParams;
-    public GetBanksIdConnectorLogosThumbnailRequest withQueryParams(GetBanksIdConnectorLogosThumbnailQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connector")
+    public Long idConnector;
+    public GetBanksIdConnectorLogosThumbnailRequest withIdConnector(Long idConnector) {
+        this.idConnector = idConnector;
         return this;
     }
     

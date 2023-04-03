@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishExtensionRequest {
-    
-    public PublishExtensionHeaders headers;
-    public PublishExtensionRequest withHeaders(PublishExtensionHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Extension information to add to the entity
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ExtensionData request;
-    public PublishExtensionRequest withRequest(org.openapis.openapi.models.shared.ExtensionData request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ExtensionData extensionData;
+    public PublishExtensionRequest withExtensionData(org.openapis.openapi.models.shared.ExtensionData extensionData) {
+        this.extensionData = extensionData;
+        return this;
+    }
+    
+    /**
+     * Unique correlation id to be able to trace the request in our system
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=TMPS-Correlation-Id")
+    public String tmpsCorrelationId;
+    public PublishExtensionRequest withTMPSCorrelationId(String tmpsCorrelationId) {
+        this.tmpsCorrelationId = tmpsCorrelationId;
         return this;
     }
     

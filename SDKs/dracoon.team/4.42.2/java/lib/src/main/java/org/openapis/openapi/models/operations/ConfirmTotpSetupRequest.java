@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfirmTotpSetupRequest {
-    
-    public ConfirmTotpSetupHeaders headers;
-    public ConfirmTotpSetupRequest withHeaders(ConfirmTotpSetupHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.MfaTotpConfirmationRequest mfaTotpConfirmationRequest;
+    public ConfirmTotpSetupRequest withMfaTotpConfirmationRequest(org.openapis.openapi.models.shared.MfaTotpConfirmationRequest mfaTotpConfirmationRequest) {
+        this.mfaTotpConfirmationRequest = mfaTotpConfirmationRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.MfaTotpConfirmationRequest request;
-    public ConfirmTotpSetupRequest withRequest(org.openapis.openapi.models.shared.MfaTotpConfirmationRequest request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public ConfirmTotpSetupRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

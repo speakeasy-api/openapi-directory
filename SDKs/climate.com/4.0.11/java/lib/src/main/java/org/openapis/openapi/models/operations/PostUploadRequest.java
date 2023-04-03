@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUploadRequest {
-    
-    public PostUploadHeaders headers;
-    public PostUploadRequest withHeaders(PostUploadHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Upload request;
-    public PostUploadRequest withRequest(org.openapis.openapi.models.shared.Upload request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Upload upload;
+    public PostUploadRequest withUpload(org.openapis.openapi.models.shared.Upload upload) {
+        this.upload = upload;
         return this;
     }
     
-    
-    public PostUploadSecurity security;
-    public PostUploadRequest withSecurity(PostUploadSecurity security) {
-        this.security = security;
+    /**
+     * Email address associated with a Climate account, used when to sending to another user.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Recipient-Email")
+    public String xRecipientEmail;
+    public PostUploadRequest withXRecipientEmail(String xRecipientEmail) {
+        this.xRecipientEmail = xRecipientEmail;
         return this;
     }
     

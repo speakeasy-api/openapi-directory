@@ -4,27 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSnippetsWorkspaceRequest {
-    
-    public GetSnippetsWorkspacePathParams pathParams;
-    public GetSnippetsWorkspaceRequest withPathParams(GetSnippetsWorkspacePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter down the result based on the authenticated user's role (`owner`, `contributor`, or `member`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
+    public GetSnippetsWorkspaceRoleEnum role;
+    public GetSnippetsWorkspaceRequest withRole(GetSnippetsWorkspaceRoleEnum role) {
+        this.role = role;
         return this;
     }
     
-    
-    public GetSnippetsWorkspaceQueryParams queryParams;
-    public GetSnippetsWorkspaceRequest withQueryParams(GetSnippetsWorkspaceQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetSnippetsWorkspaceSecurity security;
-    public GetSnippetsWorkspaceRequest withSecurity(GetSnippetsWorkspaceSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetSnippetsWorkspaceRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestOAuthClientRequest {
-    
-    public RequestOAuthClientPathParams pathParams;
-    public RequestOAuthClientRequest withPathParams(RequestOAuthClientPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestOAuthClientRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestOAuthClientHeaders headers;
-    public RequestOAuthClientRequest withHeaders(RequestOAuthClientHeaders headers) {
-        this.headers = headers;
+    /**
+     * OAuth client ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
+    public String clientId;
+    public RequestOAuthClientRequest withClientId(String clientId) {
+        this.clientId = clientId;
         return this;
     }
     

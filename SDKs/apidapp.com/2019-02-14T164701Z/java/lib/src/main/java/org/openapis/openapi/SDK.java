@@ -171,7 +171,7 @@ public class SDK {
 
     public org.openapis.openapi.models.operations.DeleteKeyKeyResponse deleteKeyKey(org.openapis.openapi.models.operations.DeleteKeyKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteKeyKeyPathParams.class, baseUrl, "/key/{key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteKeyKeyRequest.class, baseUrl, "/key/{key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -204,19 +204,20 @@ public class SDK {
     /**
      * Get account balance
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAccountIdResponse getAccountId(org.openapis.openapi.models.operations.GetAccountIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAccountIdResponse getAccountId(org.openapis.openapi.models.operations.GetAccountIdRequest request, org.openapis.openapi.models.operations.GetAccountIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountIdPathParams.class, baseUrl, "/account/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountIdRequest.class, baseUrl, "/account/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -244,11 +245,10 @@ public class SDK {
 
     /**
      * Access detailed block information
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBlockResponse getBlock(org.openapis.openapi.models.operations.GetBlockRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBlockResponse getBlock() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/block");
         
@@ -257,8 +257,7 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -286,19 +285,20 @@ public class SDK {
     /**
      * Get information about particular block
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBlockIdResponse getBlockId(org.openapis.openapi.models.operations.GetBlockIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBlockIdResponse getBlockId(org.openapis.openapi.models.operations.GetBlockIdRequest request, org.openapis.openapi.models.operations.GetBlockIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBlockIdPathParams.class, baseUrl, "/block/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBlockIdRequest.class, baseUrl, "/block/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -327,19 +327,20 @@ public class SDK {
     /**
      * Get transaction count within block
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBlockIdTransactionResponse getBlockIdTransaction(org.openapis.openapi.models.operations.GetBlockIdTransactionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBlockIdTransactionResponse getBlockIdTransaction(org.openapis.openapi.models.operations.GetBlockIdTransactionRequest request, org.openapis.openapi.models.operations.GetBlockIdTransactionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBlockIdTransactionPathParams.class, baseUrl, "/block/{id}/transaction", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBlockIdTransactionRequest.class, baseUrl, "/block/{id}/transaction", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -368,19 +369,20 @@ public class SDK {
     /**
      * Get information about particular transaction within block
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBlockIdTransactionIndexResponse getBlockIdTransactionIndex(org.openapis.openapi.models.operations.GetBlockIdTransactionIndexRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBlockIdTransactionIndexResponse getBlockIdTransactionIndex(org.openapis.openapi.models.operations.GetBlockIdTransactionIndexRequest request, org.openapis.openapi.models.operations.GetBlockIdTransactionIndexSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBlockIdTransactionIndexPathParams.class, baseUrl, "/block/{id}/transaction/{index}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBlockIdTransactionIndexRequest.class, baseUrl, "/block/{id}/transaction/{index}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -408,11 +410,10 @@ public class SDK {
 
     /**
      * Get a list of supported blockchains
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBlockchainResponse getBlockchain(org.openapis.openapi.models.operations.GetBlockchainRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBlockchainResponse getBlockchain() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/blockchain");
         
@@ -421,8 +422,7 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -450,19 +450,20 @@ public class SDK {
     /**
      * Get information about blockchain woth given id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBlockchainIdResponse getBlockchainId(org.openapis.openapi.models.operations.GetBlockchainIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBlockchainIdResponse getBlockchainId(org.openapis.openapi.models.operations.GetBlockchainIdRequest request, org.openapis.openapi.models.operations.GetBlockchainIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBlockchainIdPathParams.class, baseUrl, "/blockchain/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBlockchainIdRequest.class, baseUrl, "/blockchain/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -491,19 +492,20 @@ public class SDK {
     /**
      * Get contract balance
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetContractIdResponse getContractId(org.openapis.openapi.models.operations.GetContractIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetContractIdResponse getContractId(org.openapis.openapi.models.operations.GetContractIdRequest request, org.openapis.openapi.models.operations.GetContractIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContractIdPathParams.class, baseUrl, "/contract/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContractIdRequest.class, baseUrl, "/contract/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -574,7 +576,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetErc20AddressResponse getErc20Address(org.openapis.openapi.models.operations.GetErc20AddressRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetErc20AddressPathParams.class, baseUrl, "/erc20/{address}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetErc20AddressRequest.class, baseUrl, "/erc20/{address}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -612,7 +614,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetKeyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetKeyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -645,19 +647,20 @@ public class SDK {
     /**
      * Get information about transaction by the transaction hash value
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTransactionHashResponse getTransactionHash(org.openapis.openapi.models.operations.GetTransactionHashRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTransactionHashResponse getTransactionHash(org.openapis.openapi.models.operations.GetTransactionHashRequest request, org.openapis.openapi.models.operations.GetTransactionHashSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionHashPathParams.class, baseUrl, "/transaction/{hash}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionHashRequest.class, baseUrl, "/transaction/{hash}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -686,19 +689,20 @@ public class SDK {
     /**
      * Get receipt detail information
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTransactionHashReceiptResponse getTransactionHashReceipt(org.openapis.openapi.models.operations.GetTransactionHashReceiptRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTransactionHashReceiptResponse getTransactionHashReceipt(org.openapis.openapi.models.operations.GetTransactionHashReceiptRequest request, org.openapis.openapi.models.operations.GetTransactionHashReceiptSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionHashReceiptPathParams.class, baseUrl, "/transaction/{hash}/receipt", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionHashReceiptRequest.class, baseUrl, "/transaction/{hash}/receipt", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -840,7 +844,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetWalletAccountIdResponse getWalletAccountId(org.openapis.openapi.models.operations.GetWalletAccountIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWalletAccountIdPathParams.class, baseUrl, "/wallet/account/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWalletAccountIdRequest.class, baseUrl, "/wallet/account/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -940,7 +944,7 @@ public class SDK {
 
     public org.openapis.openapi.models.operations.OptionsAccountIdResponse optionsAccountId(org.openapis.openapi.models.operations.OptionsAccountIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsAccountIdPathParams.class, baseUrl, "/account/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsAccountIdRequest.class, baseUrl, "/account/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("OPTIONS");
@@ -1008,7 +1012,7 @@ public class SDK {
 
     public org.openapis.openapi.models.operations.OptionsBlockIdResponse optionsBlockId(org.openapis.openapi.models.operations.OptionsBlockIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsBlockIdPathParams.class, baseUrl, "/block/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsBlockIdRequest.class, baseUrl, "/block/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("OPTIONS");
@@ -1042,7 +1046,7 @@ public class SDK {
 
     public org.openapis.openapi.models.operations.OptionsBlockIdTransactionResponse optionsBlockIdTransaction(org.openapis.openapi.models.operations.OptionsBlockIdTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsBlockIdTransactionPathParams.class, baseUrl, "/block/{id}/transaction", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsBlockIdTransactionRequest.class, baseUrl, "/block/{id}/transaction", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("OPTIONS");
@@ -1076,7 +1080,7 @@ public class SDK {
 
     public org.openapis.openapi.models.operations.OptionsBlockIdTransactionIndexResponse optionsBlockIdTransactionIndex(org.openapis.openapi.models.operations.OptionsBlockIdTransactionIndexRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsBlockIdTransactionIndexPathParams.class, baseUrl, "/block/{id}/transaction/{index}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsBlockIdTransactionIndexRequest.class, baseUrl, "/block/{id}/transaction/{index}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("OPTIONS");
@@ -1144,7 +1148,7 @@ public class SDK {
 
     public org.openapis.openapi.models.operations.OptionsBlockchainIdResponse optionsBlockchainId(org.openapis.openapi.models.operations.OptionsBlockchainIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsBlockchainIdPathParams.class, baseUrl, "/blockchain/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsBlockchainIdRequest.class, baseUrl, "/blockchain/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("OPTIONS");
@@ -1212,7 +1216,7 @@ public class SDK {
 
     public org.openapis.openapi.models.operations.OptionsContractIdResponse optionsContractId(org.openapis.openapi.models.operations.OptionsContractIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsContractIdPathParams.class, baseUrl, "/contract/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsContractIdRequest.class, baseUrl, "/contract/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("OPTIONS");
@@ -1314,7 +1318,7 @@ public class SDK {
 
     public org.openapis.openapi.models.operations.OptionsErc20AddressResponse optionsErc20Address(org.openapis.openapi.models.operations.OptionsErc20AddressRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsErc20AddressPathParams.class, baseUrl, "/erc20/{address}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsErc20AddressRequest.class, baseUrl, "/erc20/{address}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("OPTIONS");
@@ -1382,7 +1386,7 @@ public class SDK {
 
     public org.openapis.openapi.models.operations.OptionsKeyKeyResponse optionsKeyKey(org.openapis.openapi.models.operations.OptionsKeyKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsKeyKeyPathParams.class, baseUrl, "/key/{key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsKeyKeyRequest.class, baseUrl, "/key/{key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("OPTIONS");
@@ -1450,7 +1454,7 @@ public class SDK {
 
     public org.openapis.openapi.models.operations.OptionsTransactionHashResponse optionsTransactionHash(org.openapis.openapi.models.operations.OptionsTransactionHashRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsTransactionHashPathParams.class, baseUrl, "/transaction/{hash}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsTransactionHashRequest.class, baseUrl, "/transaction/{hash}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("OPTIONS");
@@ -1484,7 +1488,7 @@ public class SDK {
 
     public org.openapis.openapi.models.operations.OptionsTransactionHashReceiptResponse optionsTransactionHashReceipt(org.openapis.openapi.models.operations.OptionsTransactionHashReceiptRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsTransactionHashReceiptPathParams.class, baseUrl, "/transaction/{hash}/receipt", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsTransactionHashReceiptRequest.class, baseUrl, "/transaction/{hash}/receipt", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("OPTIONS");
@@ -1620,7 +1624,7 @@ public class SDK {
 
     public org.openapis.openapi.models.operations.OptionsWalletAccountIdResponse optionsWalletAccountId(org.openapis.openapi.models.operations.OptionsWalletAccountIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsWalletAccountIdPathParams.class, baseUrl, "/wallet/account/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsWalletAccountIdRequest.class, baseUrl, "/wallet/account/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("OPTIONS");
@@ -1654,7 +1658,7 @@ public class SDK {
 
     public org.openapis.openapi.models.operations.OptionsWalletAccountIdPayResponse optionsWalletAccountIdPay(org.openapis.openapi.models.operations.OptionsWalletAccountIdPayRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsWalletAccountIdPayPathParams.class, baseUrl, "/wallet/account/{id}/pay", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OptionsWalletAccountIdPayRequest.class, baseUrl, "/wallet/account/{id}/pay", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("OPTIONS");
@@ -1688,11 +1692,10 @@ public class SDK {
 
     /**
      * Create new account
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAccountResponse postAccount(org.openapis.openapi.models.operations.PostAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAccountResponse postAccount() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account");
         
@@ -1701,8 +1704,7 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -1767,19 +1769,20 @@ public class SDK {
     /**
      * Call the contract
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostContractIdResponse postContractId(org.openapis.openapi.models.operations.PostContractIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostContractIdResponse postContractId(org.openapis.openapi.models.operations.PostContractIdRequest request, org.openapis.openapi.models.operations.PostContractIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostContractIdPathParams.class, baseUrl, "/contract/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostContractIdRequest.class, baseUrl, "/contract/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1845,7 +1848,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PostErc20AddressResponse postErc20Address(org.openapis.openapi.models.operations.PostErc20AddressRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostErc20AddressPathParams.class, baseUrl, "/erc20/{address}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostErc20AddressRequest.class, baseUrl, "/erc20/{address}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1909,11 +1912,10 @@ public class SDK {
 
     /**
      * Create a new transaction. Transfer Ether between accounts
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostTransactionResponse postTransaction(org.openapis.openapi.models.operations.PostTransactionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostTransactionResponse postTransaction() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transaction");
         
@@ -1922,8 +1924,7 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -2019,7 +2020,7 @@ public class SDK {
 
     public org.openapis.openapi.models.operations.PostWalletAccountIdContractResponse postWalletAccountIdContract(org.openapis.openapi.models.operations.PostWalletAccountIdContractRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWalletAccountIdContractPathParams.class, baseUrl, "/wallet/account/{id}/contract", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWalletAccountIdContractRequest.class, baseUrl, "/wallet/account/{id}/contract", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -2051,7 +2052,7 @@ public class SDK {
 
     public org.openapis.openapi.models.operations.PostWalletAccountIdErc20Response postWalletAccountIdErc20(org.openapis.openapi.models.operations.PostWalletAccountIdErc20Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWalletAccountIdErc20PathParams.class, baseUrl, "/wallet/account/{id}/erc20", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWalletAccountIdErc20Request.class, baseUrl, "/wallet/account/{id}/erc20", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -2089,7 +2090,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PostWalletAccountIdPayResponse postWalletAccountIdPay(org.openapis.openapi.models.operations.PostWalletAccountIdPayRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWalletAccountIdPayPathParams.class, baseUrl, "/wallet/account/{id}/pay", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWalletAccountIdPayRequest.class, baseUrl, "/wallet/account/{id}/pay", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

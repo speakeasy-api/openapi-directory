@@ -38,7 +38,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesList
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesListSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesListSecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchCreateSecurityOption1.java
@@ -46,8 +45,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRows
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchCreateSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchCreateSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchCreateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchCreatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchCreateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchCreateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchCreateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchDeleteSecurityOption1.java
@@ -55,8 +52,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRows
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchDeleteSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchDeleteSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchDeleteSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchDeletePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchDeleteQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchDeleteRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchDeleteResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchUpdateSecurityOption1.java
@@ -64,8 +59,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRows
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchUpdateSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchUpdateSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchUpdateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchUpdatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchUpdateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchUpdateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsBatchUpdateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsCreateSecurityOption1.java
@@ -73,9 +66,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRows
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsCreateSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsCreateSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsCreateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsCreatePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsCreateViewEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsCreateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsCreateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsCreateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsDeleteSecurityOption1.java
@@ -83,8 +74,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRows
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsDeleteSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsDeleteSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsDeleteSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsDeletePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsDeleteQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsDeleteRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsDeleteResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsListSecurityOption1.java
@@ -94,9 +83,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRows
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsListSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsListSecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsListPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsListViewEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsPatchSecurityOption1.java
@@ -104,9 +91,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRows
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsPatchSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsPatchSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsPatchSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsPatchPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsPatchViewEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsPatchQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsPatchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesTablesRowsPatchResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesWorkspacesGetSecurityOption1.java
@@ -116,9 +101,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesWorkspaces
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesWorkspacesGetSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesWorkspacesGetSecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesWorkspacesGetSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesWorkspacesGetPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesWorkspacesGetViewEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesWorkspacesGetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesWorkspacesGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesWorkspacesGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesWorkspacesListSecurityOption1.java
@@ -128,7 +111,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesWorkspaces
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesWorkspacesListSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesWorkspacesListSecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesWorkspacesListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesWorkspacesListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesWorkspacesListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Area120tablesWorkspacesListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListTablesResponse.java
@@ -141,8 +123,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/LabeledItem.java
 lib/src/main/java/org/openapis/openapi/models/shared/DateDetails.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 lib/src/main/java/org/openapis/openapi/models/shared/BatchCreateRowsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Row.java
 lib/src/main/java/org/openapis/openapi/models/shared/BatchCreateRowsRequest.java

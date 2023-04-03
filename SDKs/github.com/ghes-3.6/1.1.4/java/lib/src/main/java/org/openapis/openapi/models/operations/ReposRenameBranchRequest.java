@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposRenameBranchRequest {
-    
-    public ReposRenameBranchPathParams pathParams;
-    public ReposRenameBranchRequest withPathParams(ReposRenameBranchPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReposRenameBranchRequestBody requestBody;
+    public ReposRenameBranchRequest withRequestBody(ReposRenameBranchRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReposRenameBranchRequestBody request;
-    public ReposRenameBranchRequest withRequest(ReposRenameBranchRequestBody request) {
-        this.request = request;
+    /**
+     * The name of the branch. Cannot contain wildcard characters. To use wildcard characters in branch names, use [the GraphQL API](https://docs.github.com/enterprise-server@3.6/graphql).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
+    public String branch;
+    public ReposRenameBranchRequest withBranch(String branch) {
+        this.branch = branch;
+        return this;
+    }
+    
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposRenameBranchRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposRenameBranchRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

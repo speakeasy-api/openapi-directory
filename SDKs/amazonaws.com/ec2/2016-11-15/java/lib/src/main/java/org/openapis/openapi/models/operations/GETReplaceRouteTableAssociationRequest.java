@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETReplaceRouteTableAssociationRequest {
-    
-    public GETReplaceRouteTableAssociationQueryParams queryParams;
-    public GETReplaceRouteTableAssociationRequest withQueryParams(GETReplaceRouteTableAssociationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETReplaceRouteTableAssociationActionEnum action;
+    public GETReplaceRouteTableAssociationRequest withAction(GETReplaceRouteTableAssociationActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The association ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AssociationId")
+    public String associationId;
+    public GETReplaceRouteTableAssociationRequest withAssociationId(String associationId) {
+        this.associationId = associationId;
+        return this;
+    }
     
-    public GETReplaceRouteTableAssociationHeaders headers;
-    public GETReplaceRouteTableAssociationRequest withHeaders(GETReplaceRouteTableAssociationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETReplaceRouteTableAssociationRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The ID of the new route table to associate with the subnet.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RouteTableId")
+    public String routeTableId;
+    public GETReplaceRouteTableAssociationRequest withRouteTableId(String routeTableId) {
+        this.routeTableId = routeTableId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETReplaceRouteTableAssociationVersionEnum version;
+    public GETReplaceRouteTableAssociationRequest withVersion(GETReplaceRouteTableAssociationVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETReplaceRouteTableAssociationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETReplaceRouteTableAssociationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETReplaceRouteTableAssociationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETReplaceRouteTableAssociationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETReplaceRouteTableAssociationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETReplaceRouteTableAssociationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETReplaceRouteTableAssociationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

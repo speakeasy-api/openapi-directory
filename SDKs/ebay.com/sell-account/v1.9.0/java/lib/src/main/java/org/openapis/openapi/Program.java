@@ -33,11 +33,10 @@ public class Program {
 
     /**
      * This method gets a list of the seller programs that the seller has opted-in to.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetOptedInProgramsResponse getOptedInPrograms(org.openapis.openapi.models.operations.GetOptedInProgramsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetOptedInProgramsResponse getOptedInPrograms() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/program/get_opted_in_programs");
         
@@ -46,8 +45,7 @@ public class Program {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -75,10 +73,11 @@ public class Program {
     /**
      * This method opts the seller in to an eBay seller program. Refer to the &lt;a href="/api-docs/sell/account/overview.html#opt-in" target="_blank"&gt;Account API overview&lt;/a&gt; for information about available eBay seller programs.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; It can take up to 24-hours for eBay to process your request to opt-in to a Seller Program. Use the &lt;a href="/api-docs/sell/account/resources/program/methods/getOptedInPrograms" target="_blank"&gt;getOptedInPrograms&lt;/a&gt; call to check the status of your request after the processing period has passed.&lt;/span&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OptInToProgramResponse optInToProgram(org.openapis.openapi.models.operations.OptInToProgramRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OptInToProgramResponse optInToProgram(org.openapis.openapi.models.shared.Program request, org.openapis.openapi.models.operations.OptInToProgramSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/program/opt_in");
         
@@ -92,7 +91,7 @@ public class Program {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -121,10 +120,11 @@ public class Program {
     /**
      * This method opts the seller out of a seller program to which you have previously opted-in to. Get a list of the seller programs you have opted-in to using the &lt;b&gt;getOptedInPrograms&lt;/b&gt; call.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OptOutOfProgramResponse optOutOfProgram(org.openapis.openapi.models.operations.OptOutOfProgramRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OptOutOfProgramResponse optOutOfProgram(org.openapis.openapi.models.shared.Program request, org.openapis.openapi.models.operations.OptOutOfProgramSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/program/opt_out");
         
@@ -138,7 +138,7 @@ public class Program {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

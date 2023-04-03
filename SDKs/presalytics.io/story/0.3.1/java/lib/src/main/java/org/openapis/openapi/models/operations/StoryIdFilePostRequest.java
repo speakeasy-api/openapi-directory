@@ -7,27 +7,53 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdFilePostRequest {
-    
-    public StoryIdFilePostPathParams pathParams;
-    public StoryIdFilePostRequest withPathParams(StoryIdFilePostPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public StoryIdFilePostQueryParams queryParams;
-    public StoryIdFilePostRequest withQueryParams(StoryIdFilePostQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * A pptx or xlsx file upload or story outline json object
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public StoryIdFilePostOpenOfficeXmlDocumentEGXlsxPptxFile request;
-    public StoryIdFilePostRequest withRequest(StoryIdFilePostOpenOfficeXmlDocumentEGXlsxPptxFile request) {
-        this.request = request;
+    public StoryIdFilePostOpenOfficeXmlDocumentEGXlsxPptxFile requestBody;
+    public StoryIdFilePostRequest withRequestBody(StoryIdFilePostOpenOfficeXmlDocumentEGXlsxPptxFile requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * the id from the story object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public StoryIdFilePostRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Determines whether a repsonse including story objects should include the story outline.  Defaults to true. Useful for speeding up processing times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_outline")
+    public Boolean includeOutline;
+    public StoryIdFilePostRequest withIncludeOutline(Boolean includeOutline) {
+        this.includeOutline = includeOutline;
+        return this;
+    }
+    
+    /**
+     * A primary key pointing to an obsolete item in the story. Item type is context-dependent
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=obsolete_id")
+    public String obsoleteId;
+    public StoryIdFilePostRequest withObsoleteId(String obsoleteId) {
+        this.obsoleteId = obsoleteId;
+        return this;
+    }
+    
+    /**
+     * Indicates whether a put or post method would replace the existing contents
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=replace_existing")
+    public Boolean replaceExisting;
+    public StoryIdFilePostRequest withReplaceExisting(Boolean replaceExisting) {
+        this.replaceExisting = replaceExisting;
         return this;
     }
     

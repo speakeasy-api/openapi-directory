@@ -5,16 +5,12 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity;
-import org.openapis.openapi.models.operations.NetworkconnectivityProjectsLocationsGlobalHubsCreatePathParams;
-import org.openapis.openapi.models.operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateQueryParams;
 import org.openapis.openapi.models.operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest;
 import org.openapis.openapi.models.operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.HubInput;
 import org.openapis.openapi.models.shared.RoutingVPCInput;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -23,56 +19,46 @@ public class Application {
                 .build();
 
             NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest req = new NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest() {{
-                security = new NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new NetworkconnectivityProjectsLocationsGlobalHubsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new NetworkconnectivityProjectsLocationsGlobalHubsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    hubId = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    requestId = "deserunt";
-                    uploadType = "suscipit";
-                    uploadProtocol = "iure";
-                }};
-                request = new HubInput() {{
-                    description = "magnam";
+                dollarXgafv = "2";
+                hubInput = new HubInput() {{
+                    description = "provident";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("ipsa", "delectus");
-                        put("tempora", "suscipit");
-                        put("molestiae", "minus");
-                        put("placeat", "voluptatum");
+                        put("quibusdam", "unde");
+                        put("nulla", "corrupti");
+                        put("illum", "vel");
                     }};
-                    name = "iusto";
+                    name = "error";
                     routingVpcs = new org.openapis.openapi.models.shared.RoutingVPCInput[]{{
                         add(new RoutingVPCInput() {{
-                            uri = "http://velvety-spiderling.com";
+                            uri = "http://innocent-effect.org";
                         }}),
                         add(new RoutingVPCInput() {{
-                            uri = "http://bountiful-pension.com";
+                            uri = "http://whirlwind-diver.info";
                         }}),
                         add(new RoutingVPCInput() {{
-                            uri = "http://sympathetic-viewer.net";
+                            uri = "http://spotted-skyline.name";
                         }}),
                     }};
                 }};
-            }};            
+                accessToken = "iusto";
+                alt = "media";
+                callback = "nisi";
+                fields = "recusandae";
+                hubId = "temporibus";
+                key = "ab";
+                oauthToken = "quis";
+                parent = "veritatis";
+                prettyPrint = false;
+                quotaUser = "deserunt";
+                requestId = "perferendis";
+                uploadType = "ipsam";
+                uploadProtocol = "repellendus";
+            }}            
 
-            NetworkconnectivityProjectsLocationsGlobalHubsCreateResponse res = sdk.projects.networkconnectivityProjectsLocationsGlobalHubsCreate(req);
+            NetworkconnectivityProjectsLocationsGlobalHubsCreateResponse res = sdk.projects.networkconnectivityProjectsLocationsGlobalHubsCreate(req, new NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.googleLongrunningOperation.isPresent()) {
                 // handle response

@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05LinksLinkConfirmRawRequest {
-    
-    public PostV05LinksLinkConfirmRawHeaders headers;
-    public PostV05LinksLinkConfirmRawRequest withHeaders(PostV05LinksLinkConfirmRawHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05LinksLinkConfirmRawRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/xml")
-    public byte[] request;
-    public PostV05LinksLinkConfirmRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public PostV05LinksLinkConfirmRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Identifier of the health information provider to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
+    public String xHipId;
+    public PostV05LinksLinkConfirmRawRequest withXHipId(String xHipId) {
+        this.xHipId = xHipId;
         return this;
     }
     

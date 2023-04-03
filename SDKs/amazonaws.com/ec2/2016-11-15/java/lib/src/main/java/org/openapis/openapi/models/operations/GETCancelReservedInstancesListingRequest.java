@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCancelReservedInstancesListingRequest {
-    
-    public GETCancelReservedInstancesListingQueryParams queryParams;
-    public GETCancelReservedInstancesListingRequest withQueryParams(GETCancelReservedInstancesListingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETCancelReservedInstancesListingActionEnum action;
+    public GETCancelReservedInstancesListingRequest withAction(GETCancelReservedInstancesListingActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The ID of the Reserved Instance listing.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReservedInstancesListingId")
+    public String reservedInstancesListingId;
+    public GETCancelReservedInstancesListingRequest withReservedInstancesListingId(String reservedInstancesListingId) {
+        this.reservedInstancesListingId = reservedInstancesListingId;
+        return this;
+    }
     
-    public GETCancelReservedInstancesListingHeaders headers;
-    public GETCancelReservedInstancesListingRequest withHeaders(GETCancelReservedInstancesListingHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETCancelReservedInstancesListingVersionEnum version;
+    public GETCancelReservedInstancesListingRequest withVersion(GETCancelReservedInstancesListingVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETCancelReservedInstancesListingRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETCancelReservedInstancesListingRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETCancelReservedInstancesListingRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETCancelReservedInstancesListingRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETCancelReservedInstancesListingRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETCancelReservedInstancesListingRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETCancelReservedInstancesListingRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersIdUserTokenRequest {
-    
-    public PostUsersIdUserTokenPathParams pathParams;
-    public PostUsersIdUserTokenRequest withPathParams(PostUsersIdUserTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public PostUsersIdUserTokenRequestBody requestBody;
+    public PostUsersIdUserTokenRequest withRequestBody(PostUsersIdUserTokenRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostUsersIdUserTokenRequestBody request;
-    public PostUsersIdUserTokenRequest withRequest(PostUsersIdUserTokenRequestBody request) {
-        this.request = request;
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public PostUsersIdUserTokenRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

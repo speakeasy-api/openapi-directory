@@ -37,7 +37,7 @@ public class ConversationsCalls {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV2ConversationsCallsResponse postV2ConversationsCalls(org.openapis.openapi.models.operations.PostV2ConversationsCallsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV2ConversationsCallsResponse postV2ConversationsCalls(org.openapis.openapi.models.operations.PostV2ConversationsCallsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/conversations/calls");
         

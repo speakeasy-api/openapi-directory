@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDates2Request {
-    
-    public UpdateDates2PathParams pathParams;
-    public UpdateDates2Request withPathParams(UpdateDates2PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated dates of a given task.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProjectDatesDTO request;
-    public UpdateDates2Request withRequest(org.openapis.openapi.models.shared.ProjectDatesDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ProjectDatesDTO projectDatesDTO;
+    public UpdateDates2Request withProjectDatesDTO(org.openapis.openapi.models.shared.ProjectDatesDTO projectDatesDTO) {
+        this.projectDatesDTO = projectDatesDTO;
+        return this;
+    }
+    
+    /**
+     * task's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
+    public String taskId;
+    public UpdateDates2Request withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

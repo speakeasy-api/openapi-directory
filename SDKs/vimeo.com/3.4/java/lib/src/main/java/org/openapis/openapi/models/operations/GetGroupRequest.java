@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupRequest {
-    
-    public GetGroupPathParams pathParams;
-    public GetGroupRequest withPathParams(GetGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Double groupId;
+    public GetGroupRequest withGroupId(Double groupId) {
+        this.groupId = groupId;
         return this;
     }
     

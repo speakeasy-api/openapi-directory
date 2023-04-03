@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RenameCategorySecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeZettleOauth zettleOauth;
-    public RenameCategorySecurity withZettleOauth(org.openapis.openapi.models.shared.SchemeZettleOauth zettleOauth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String zettleOauth;
+    public RenameCategorySecurity withZettleOauth(String zettleOauth) {
         this.zettleOauth = zettleOauth;
         return this;
     }

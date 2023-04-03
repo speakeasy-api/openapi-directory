@@ -7,31 +7,89 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListProfileObjectsRequest {
-    
-    public ListProfileObjectsPathParams pathParams;
-    public ListProfileObjectsRequest withPathParams(ListProfileObjectsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ListProfileObjectsQueryParams queryParams;
-    public ListProfileObjectsRequest withQueryParams(ListProfileObjectsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListProfileObjectsHeaders headers;
-    public ListProfileObjectsRequest withHeaders(ListProfileObjectsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique name of the domain.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainName")
+    public String domainName;
+    public ListProfileObjectsRequest withDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ListProfileObjectsRequestBody request;
-    public ListProfileObjectsRequest withRequest(ListProfileObjectsRequestBody request) {
-        this.request = request;
+    public ListProfileObjectsRequestBody requestBody;
+    public ListProfileObjectsRequest withRequestBody(ListProfileObjectsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListProfileObjectsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListProfileObjectsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListProfileObjectsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListProfileObjectsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListProfileObjectsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListProfileObjectsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListProfileObjectsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The maximum number of objects returned per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max-results")
+    public Long maxResults;
+    public ListProfileObjectsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The pagination token from the previous call to ListProfileObjects.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next-token")
+    public String nextToken;
+    public ListProfileObjectsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DelUserVBRequest {
-    
-    public DelUserVBPathParams pathParams;
-    public DelUserVBRequest withPathParams(DelUserVBPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Provide the id of the file that is to be deleted. To delete multiple files, provide comma separated values for this field.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=file_ids")
+    public String fileIds;
+    public DelUserVBRequest withFileIds(String fileIds) {
+        this.fileIds = fileIds;
         return this;
     }
     
-    
-    public DelUserVBQueryParams queryParams;
-    public DelUserVBRequest withQueryParams(DelUserVBQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Unique identifier of the user. Retrieve the value of this field by calling the [List users](https://marketplace.zoom.us/docs/api-reference/zoom-api/users/users) API. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public DelUserVBRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

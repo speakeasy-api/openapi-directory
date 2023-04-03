@@ -42,7 +42,7 @@ public class SlackIntegration {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdIntegrationsSlackResponse getTargetsTargetIdIntegrationsSlack(org.openapis.openapi.models.operations.GetTargetsTargetIdIntegrationsSlackRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdIntegrationsSlackPathParams.class, baseUrl, "/targets/{target_id}/integrations/slack/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdIntegrationsSlackRequest.class, baseUrl, "/targets/{target_id}/integrations/slack/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -97,12 +97,12 @@ public class SlackIntegration {
      */
     public org.openapis.openapi.models.operations.PatchTargetsTargetIdIntegrationsSlackResponse patchTargetsTargetIdIntegrationsSlack(org.openapis.openapi.models.operations.PatchTargetsTargetIdIntegrationsSlackRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsTargetIdIntegrationsSlackPathParams.class, baseUrl, "/targets/{target_id}/integrations/slack/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsTargetIdIntegrationsSlackRequest.class, baseUrl, "/targets/{target_id}/integrations/slack/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "slack", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -165,12 +165,12 @@ public class SlackIntegration {
      */
     public org.openapis.openapi.models.operations.PutTargetsTargetIdIntegrationsSlackResponse putTargetsTargetIdIntegrationsSlack(org.openapis.openapi.models.operations.PutTargetsTargetIdIntegrationsSlackRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTargetsTargetIdIntegrationsSlackPathParams.class, baseUrl, "/targets/{target_id}/integrations/slack/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTargetsTargetIdIntegrationsSlackRequest.class, baseUrl, "/targets/{target_id}/integrations/slack/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "slack", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

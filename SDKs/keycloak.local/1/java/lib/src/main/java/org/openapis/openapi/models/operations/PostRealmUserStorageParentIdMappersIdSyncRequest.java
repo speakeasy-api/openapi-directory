@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmUserStorageParentIdMappersIdSyncRequest {
-    
-    public PostRealmUserStorageParentIdMappersIdSyncPathParams pathParams;
-    public PostRealmUserStorageParentIdMappersIdSyncRequest withPathParams(PostRealmUserStorageParentIdMappersIdSyncPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public String direction;
+    public PostRealmUserStorageParentIdMappersIdSyncRequest withDirection(String direction) {
+        this.direction = direction;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostRealmUserStorageParentIdMappersIdSyncRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostRealmUserStorageParentIdMappersIdSyncQueryParams queryParams;
-    public PostRealmUserStorageParentIdMappersIdSyncRequest withQueryParams(PostRealmUserStorageParentIdMappersIdSyncQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parentId")
+    public String parentId;
+    public PostRealmUserStorageParentIdMappersIdSyncRequest withParentId(String parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmUserStorageParentIdMappersIdSyncRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

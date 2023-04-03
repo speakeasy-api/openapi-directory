@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagsPatchDataPointJsonRequest {
-    
-    public TagsPatchDataPointJsonPathParams pathParams;
-    public TagsPatchDataPointJsonRequest withPathParams(TagsPatchDataPointJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The body patch
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiCoreRequestsPatchBody request;
-    public TagsPatchDataPointJsonRequest withRequest(org.openapis.openapi.models.shared.ApiCoreRequestsPatchBody request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiCoreRequestsPatchBody apiCoreRequestsPatchBody;
+    public TagsPatchDataPointJsonRequest withApiCoreRequestsPatchBody(org.openapis.openapi.models.shared.ApiCoreRequestsPatchBody apiCoreRequestsPatchBody) {
+        this.apiCoreRequestsPatchBody = apiCoreRequestsPatchBody;
+        return this;
+    }
+    
+    /**
+     * Id of the tag
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
+    public Long tagId;
+    public TagsPatchDataPointJsonRequest withTagId(Long tagId) {
+        this.tagId = tagId;
         return this;
     }
     

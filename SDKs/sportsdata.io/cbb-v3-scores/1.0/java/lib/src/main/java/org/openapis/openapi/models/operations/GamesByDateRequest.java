@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GamesByDateRequest {
+    /**
+     * The date of the game(s).
+     * &lt;br&gt;Examples: &lt;code&gt;2018-FEB-27&lt;/code&gt;, &lt;code&gt;2017-DEC-01&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
+    public String date;
+    public GamesByDateRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
     
-    public GamesByDatePathParams pathParams;
-    public GamesByDateRequest withPathParams(GamesByDatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public GamesByDateFormatEnum format;
+    public GamesByDateRequest withFormat(GamesByDateFormatEnum format) {
+        this.format = format;
         return this;
     }
     

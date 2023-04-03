@@ -4,13 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppendChatMessageUsingGETRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authorID")
+    public String authorID;
+    public AppendChatMessageUsingGETRequest withAuthorID(String authorID) {
+        this.authorID = authorID;
+        return this;
+    }
     
-    public AppendChatMessageUsingGETQueryParams queryParams;
-    public AppendChatMessageUsingGETRequest withQueryParams(AppendChatMessageUsingGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
+    public String padID;
+    public AppendChatMessageUsingGETRequest withPadID(String padID) {
+        this.padID = padID;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public AppendChatMessageUsingGETRequest withText(String text) {
+        this.text = text;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time")
+    public String time;
+    public AppendChatMessageUsingGETRequest withTime(String time) {
+        this.time = time;
         return this;
     }
     

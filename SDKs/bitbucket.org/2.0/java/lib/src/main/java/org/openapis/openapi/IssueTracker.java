@@ -50,19 +50,20 @@ public class IssueTracker {
      * Deletes the specified issue. This requires write access to the
      * repository.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse deleteRepositoriesWorkspaceRepoSlugIssuesIssueId(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse deleteRepositoriesWorkspaceRepoSlugIssuesIssueId(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdRequest request, org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -98,19 +99,20 @@ public class IssueTracker {
      * Delete an attachment for an issue
      * Deletes an attachment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathResponse deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPath(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathResponse deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPath(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest request, org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments/{path}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -140,19 +142,20 @@ public class IssueTracker {
      * Delete a comment on an issue
      * Deletes the specified comment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest request, org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments/{comment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments/{comment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,19 +177,20 @@ public class IssueTracker {
      * Remove vote for an issue
      * Retract your vote.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVote(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVote(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteRequest request, org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVotePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/vote", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/vote", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -214,19 +218,20 @@ public class IssueTracker {
      * Stop watching an issue
      * Stop watching this issue.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse deleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest request, org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/watch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/watch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -257,19 +262,20 @@ public class IssueTracker {
      * This resource is only available on repositories that have the issue
      * tracker enabled.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsResponse getRepositoriesWorkspaceRepoSlugComponents(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsResponse getRepositoriesWorkspaceRepoSlugComponents(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/components", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/components", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -305,19 +311,20 @@ public class IssueTracker {
      * Get a component for issues
      * Returns the specified issue tracker component object.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIdResponse getRepositoriesWorkspaceRepoSlugComponentsComponentId(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIdResponse getRepositoriesWorkspaceRepoSlugComponentsComponentId(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIdRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIdPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/components/{component_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIdRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/components/{component_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -353,19 +360,20 @@ public class IssueTracker {
      * List issues
      * Returns the issues in the issue tracker.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesResponse getRepositoriesWorkspaceRepoSlugIssues(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesResponse getRepositoriesWorkspaceRepoSlugIssues(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -430,19 +438,20 @@ public class IssueTracker {
      * 
      * Once the job has successfully completed, it returns a stream of the zip file.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipResponse getRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZip(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipResponse getRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZip(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/export/{repo_name}-issues-{task_id}.zip", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/export/{repo_name}-issues-{task_id}.zip", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -500,19 +509,20 @@ public class IssueTracker {
      * 
      * After it is finished, it becomes a 200 response with status SUCCESS or FAILURE.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesImportResponse getRepositoriesWorkspaceRepoSlugIssuesImport(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesImportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesImportResponse getRepositoriesWorkspaceRepoSlugIssuesImport(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesImportRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesImportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesImportPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/import", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesImportRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/import", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -548,19 +558,20 @@ public class IssueTracker {
      * Get an issue
      * Returns the specified issue.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse getRepositoriesWorkspaceRepoSlugIssuesIssueId(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse getRepositoriesWorkspaceRepoSlugIssuesIssueId(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -601,19 +612,20 @@ public class IssueTracker {
      * 
      * The files are always ordered by their upload date.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse getRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachments(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse getRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachments(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -658,19 +670,20 @@ public class IssueTracker {
      * The redirect URL contains a one-time token that has a limited lifetime.
      * As a result, the link should not be persisted, stored, or shared.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathResponse getRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPath(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathResponse getRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPath(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments/{path}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -829,25 +842,26 @@ public class IssueTracker {
      * The `changes.assignee` field is deprecated will disappear in the
      * future. Use `changes.assignee_account_id` instead.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse getRepositoriesWorkspaceRepoSlugIssuesIssueIdChanges(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse getRepositoriesWorkspaceRepoSlugIssuesIssueIdChanges(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/changes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/changes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -886,19 +900,20 @@ public class IssueTracker {
      * This resource is only available on repositories that have the issue
      * tracker enabled.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdResponse getRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeId(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdResponse getRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeId(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/changes/{change_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/changes/{change_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -941,25 +956,26 @@ public class IssueTracker {
      * This endpoint also supports filtering and sorting of the results. See
      * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more details.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsResponse getRepositoriesWorkspaceRepoSlugIssuesIssueIdComments(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsResponse getRepositoriesWorkspaceRepoSlugIssuesIssueIdComments(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -987,19 +1003,20 @@ public class IssueTracker {
      * Get a comment on an issue
      * Returns the specified issue comment object.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse getRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse getRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments/{comment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments/{comment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1029,19 +1046,20 @@ public class IssueTracker {
      * A 204 status code indicates that the user has voted, while a 404
      * implies they haven't.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse getRepositoriesWorkspaceRepoSlugIssuesIssueIdVote(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse getRepositoriesWorkspaceRepoSlugIssuesIssueIdVote(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdVotePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/vote", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/vote", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1070,19 +1088,20 @@ public class IssueTracker {
      * Indicated whether or not the authenticated user is watching this
      * issue.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse getRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse getRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/watch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/watch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1113,19 +1132,20 @@ public class IssueTracker {
      * This resource is only available on repositories that have the issue
      * tracker enabled.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesResponse getRepositoriesWorkspaceRepoSlugMilestones(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesResponse getRepositoriesWorkspaceRepoSlugMilestones(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/milestones", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/milestones", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1161,19 +1181,20 @@ public class IssueTracker {
      * Get a milestone
      * Returns the specified issue tracker milestone object.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse getRepositoriesWorkspaceRepoSlugMilestonesMilestoneId(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse getRepositoriesWorkspaceRepoSlugMilestonesMilestoneId(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/milestones/{milestone_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/milestones/{milestone_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1212,19 +1233,20 @@ public class IssueTracker {
      * This resource is only available on repositories that have the issue
      * tracker enabled.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsResponse getRepositoriesWorkspaceRepoSlugVersions(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsResponse getRepositoriesWorkspaceRepoSlugVersions(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1260,19 +1282,20 @@ public class IssueTracker {
      * Get a defined version for issues
      * Returns the specified issue tracker version object.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIdResponse getRepositoriesWorkspaceRepoSlugVersionsVersionId(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIdResponse getRepositoriesWorkspaceRepoSlugVersionsVersionId(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIdRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIdPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/versions/{version_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIdRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/versions/{version_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1314,24 +1337,25 @@ public class IssueTracker {
      * 
      * The authenticated user is used for the issue's `reporter` field.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesResponse postRepositoriesWorkspaceRepoSlugIssues(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesResponse postRepositoriesWorkspaceRepoSlugIssues(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesRequest request, org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1377,21 +1401,22 @@ public class IssueTracker {
      * When the job has been accepted, it will return a 202 (Accepted) along with a unique url to this job in the
      * 'Location' response header. This url is the endpoint for where the user can obtain their zip files."
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesExportResponse postRepositoriesWorkspaceRepoSlugIssuesExport(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesExportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesExportResponse postRepositoriesWorkspaceRepoSlugIssuesExport(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesExportRequest request, org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesExportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesExportPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/export", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesExportRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/export", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1444,19 +1469,20 @@ public class IssueTracker {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesImportResponse postRepositoriesWorkspaceRepoSlugIssuesImport(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesImportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesImportResponse postRepositoriesWorkspaceRepoSlugIssuesImport(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesImportRequest request, org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesImportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesImportPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/import", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesImportRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/import", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1498,19 +1524,20 @@ public class IssueTracker {
      * When a file is uploaded with the same name as an existing attachment,
      * then the existing file will be replaced.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse postRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachments(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse postRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachments(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsRequest request, org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1581,24 +1608,25 @@ public class IssueTracker {
      * issue trackers require the caller to authenticate with an account that
      * has appropriate authorization.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse postRepositoriesWorkspaceRepoSlugIssuesIssueIdChanges(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse postRepositoriesWorkspaceRepoSlugIssuesIssueIdChanges(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesRequest request, org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/changes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/changes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1643,24 +1671,25 @@ public class IssueTracker {
      *   -d '{"content": {"raw": "Lorem ipsum."}}'
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsResponse postRepositoriesWorkspaceRepoSlugIssuesIssueIdComments(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsResponse postRepositoriesWorkspaceRepoSlugIssuesIssueIdComments(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsRequest request, org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1717,19 +1746,20 @@ public class IssueTracker {
      * change record is created under the `/issues/123/changes` endpoint. It
      * also has a comment associated with the change.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse putRepositoriesWorkspaceRepoSlugIssuesIssueId(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse putRepositoriesWorkspaceRepoSlugIssuesIssueId(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdRequest request, org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1773,24 +1803,25 @@ public class IssueTracker {
      *   -d '{"content": {"raw": "Lorem ipsum."}'
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse putRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse putRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentId(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest request, org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments/{comment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments/{comment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1829,19 +1860,20 @@ public class IssueTracker {
      * To cast your vote, do an empty PUT. The 204 status code indicates that
      * the operation was successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse putRepositoriesWorkspaceRepoSlugIssuesIssueIdVote(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse putRepositoriesWorkspaceRepoSlugIssuesIssueIdVote(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteRequest request, org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdVotePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/vote", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/vote", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1872,19 +1904,20 @@ public class IssueTracker {
      * To start watching this issue, do an empty PUT. The 204 status code
      * indicates that the operation was successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse putRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse putRepositoriesWorkspaceRepoSlugIssuesIssueIdWatch(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest request, org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/watch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/watch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

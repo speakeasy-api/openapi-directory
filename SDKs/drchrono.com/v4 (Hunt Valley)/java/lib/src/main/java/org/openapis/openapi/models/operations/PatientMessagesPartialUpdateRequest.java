@@ -4,27 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientMessagesPartialUpdateRequest {
-    
-    public PatientMessagesPartialUpdatePathParams pathParams;
-    public PatientMessagesPartialUpdateRequest withPathParams(PatientMessagesPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientMessagesPartialUpdateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public PatientMessagesPartialUpdateQueryParams queryParams;
-    public PatientMessagesPartialUpdateRequest withQueryParams(PatientMessagesPartialUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatientMessagesPartialUpdateRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public PatientMessagesPartialUpdateRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
     
-    public PatientMessagesPartialUpdateSecurity security;
-    public PatientMessagesPartialUpdateRequest withSecurity(PatientMessagesPartialUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public PatientMessagesPartialUpdateRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

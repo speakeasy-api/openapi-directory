@@ -4,20 +4,67 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStoriesRequest {
-    
-    public GetStoriesQueryParams queryParams;
-    public GetStoriesRequest withQueryParams(GetStoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Client device pixel ratio used to determine thumbnail size (default 1.0).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_pixel_ratio")
+    public Double devicePixelRatio;
+    public GetStoriesRequest withDevicePixelRatio(Double devicePixelRatio) {
+        this.devicePixelRatio = devicePixelRatio;
         return this;
     }
     
+    /**
+     * Find groups near the given latitude and longitude.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latitude")
+    public Double latitude;
+    public GetStoriesRequest withLatitude(Double latitude) {
+        this.latitude = latitude;
+        return this;
+    }
     
-    public GetStoriesSecurity security;
-    public GetStoriesRequest withSecurity(GetStoriesSecurity security) {
-        this.security = security;
+    /**
+     * Find groups near the given latitude and longitude.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longitude")
+    public Double longitude;
+    public GetStoriesRequest withLongitude(Double longitude) {
+        this.longitude = longitude;
+        return this;
+    }
+    
+    /**
+     * The page of stories to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetStoriesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of stories to return per page (must be &gt;= 1 and &lt;= 50).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetStoriesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * How to sort the stories that are returned.  One of: date, distance, likes, views &lt;br /&gt;&lt;br /&gt; Setting sort_by to date will sort posts from newest to oldest.  Setting sort_by to distance will sort posts from nearest to farthest.  Setting sort_by to likes will sort posts with the most likes first.  Setting sort_by to views will show the posts with the most views first.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public String sortBy;
+    public GetStoriesRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
         return this;
     }
     

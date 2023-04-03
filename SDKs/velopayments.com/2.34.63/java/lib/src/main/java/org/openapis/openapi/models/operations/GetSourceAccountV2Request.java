@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSourceAccountV2Request {
-    
-    public GetSourceAccountV2PathParams pathParams;
-    public GetSourceAccountV2Request withPathParams(GetSourceAccountV2PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Source account id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sourceAccountId")
+    public String sourceAccountId;
+    public GetSourceAccountV2Request withSourceAccountId(String sourceAccountId) {
+        this.sourceAccountId = sourceAccountId;
         return this;
     }
     

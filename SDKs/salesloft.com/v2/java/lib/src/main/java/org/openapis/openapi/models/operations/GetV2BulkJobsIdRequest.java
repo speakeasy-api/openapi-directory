@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2BulkJobsIdRequest {
-    
-    public GetV2BulkJobsIdPathParams pathParams;
-    public GetV2BulkJobsIdRequest withPathParams(GetV2BulkJobsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id for the Bulk Job
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetV2BulkJobsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

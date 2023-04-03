@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomPoliciesRequest {
-    
-    public GetCustomPoliciesQueryParams queryParams;
-    public GetCustomPoliciesRequest withQueryParams(GetCustomPoliciesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * This header parameter specifies the eBay marketplace for the custom policy that is being created. Supported values for this header can be found in the &lt;a href="/api-docs/sell/account/types/ba:MarketplaceIdEnum" target="_blank"&gt;MarketplaceIdEnum&lt;/a&gt; type definition.&lt;br/&gt; &lt;br/&gt; &lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; The following eBay marketplaces support Custom Policies: &lt;ul&gt;&lt;li&gt;Germany (EBAY_DE)&lt;/li&gt; &lt;li&gt;Canada (EBAY_CA)&lt;/li&gt; &lt;li&gt;Australia (EBAY_AU)&lt;/li&gt; &lt;li&gt;United States (EBAY_US)&lt;/li&gt; &lt;li&gt;France (EBAY_FR)&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public GetCustomPoliciesRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     
-    
-    public GetCustomPoliciesHeaders headers;
-    public GetCustomPoliciesRequest withHeaders(GetCustomPoliciesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetCustomPoliciesSecurity security;
-    public GetCustomPoliciesRequest withSecurity(GetCustomPoliciesSecurity security) {
-        this.security = security;
+    /**
+     * This query parameter specifies the type of custom policies to be returned.&lt;br /&gt;&lt;br /&gt;Multiple policy types may be requested in a single call by providing a comma-delimited set of all policy types to be returned.&lt;br/&gt;&lt;br/&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; Omitting this query parameter from a request will also return policies of all policy types.&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;Two Custom Policy types are supported: &lt;ul&gt;&lt;li&gt;Product Compliance (PRODUCT_COMPLIANCE)&lt;/li&gt; &lt;li&gt;Takeback (TAKE_BACK)&lt;/li&gt;&lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=policy_types")
+    public String policyTypes;
+    public GetCustomPoliciesRequest withPolicyTypes(String policyTypes) {
+        this.policyTypes = policyTypes;
         return this;
     }
     

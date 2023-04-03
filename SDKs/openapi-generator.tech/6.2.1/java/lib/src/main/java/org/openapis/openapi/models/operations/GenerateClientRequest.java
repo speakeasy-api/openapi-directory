@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateClientRequest {
-    
-    public GenerateClientPathParams pathParams;
-    public GenerateClientRequest withPathParams(GenerateClientPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Configuration for building the client library
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GeneratorInput request;
-    public GenerateClientRequest withRequest(org.openapis.openapi.models.shared.GeneratorInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GeneratorInput generatorInput;
+    public GenerateClientRequest withGeneratorInput(org.openapis.openapi.models.shared.GeneratorInput generatorInput) {
+        this.generatorInput = generatorInput;
+        return this;
+    }
+    
+    /**
+     * The target language for the client library
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=language")
+    public String language;
+    public GenerateClientRequest withLanguage(String language) {
+        this.language = language;
         return this;
     }
     

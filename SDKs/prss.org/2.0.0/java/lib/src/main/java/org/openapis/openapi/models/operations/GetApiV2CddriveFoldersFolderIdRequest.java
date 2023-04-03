@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2CddriveFoldersFolderIdRequest {
-    
-    public GetApiV2CddriveFoldersFolderIdPathParams pathParams;
-    public GetApiV2CddriveFoldersFolderIdRequest withPathParams(GetApiV2CddriveFoldersFolderIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetApiV2CddriveFoldersFolderIdSecurity security;
-    public GetApiV2CddriveFoldersFolderIdRequest withSecurity(GetApiV2CddriveFoldersFolderIdSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the folder to get.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=folder-id")
+    public Long folderId;
+    public GetApiV2CddriveFoldersFolderIdRequest withFolderId(Long folderId) {
+        this.folderId = folderId;
         return this;
     }
     

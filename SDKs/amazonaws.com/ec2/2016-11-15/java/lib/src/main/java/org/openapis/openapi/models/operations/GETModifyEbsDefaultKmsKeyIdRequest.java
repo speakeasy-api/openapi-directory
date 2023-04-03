@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyEbsDefaultKmsKeyIdRequest {
-    
-    public GETModifyEbsDefaultKmsKeyIdQueryParams queryParams;
-    public GETModifyEbsDefaultKmsKeyIdRequest withQueryParams(GETModifyEbsDefaultKmsKeyIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyEbsDefaultKmsKeyIdActionEnum action;
+    public GETModifyEbsDefaultKmsKeyIdRequest withAction(GETModifyEbsDefaultKmsKeyIdActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETModifyEbsDefaultKmsKeyIdRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETModifyEbsDefaultKmsKeyIdHeaders headers;
-    public GETModifyEbsDefaultKmsKeyIdRequest withHeaders(GETModifyEbsDefaultKmsKeyIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this parameter is not specified, your KMS key for Amazon EBS is used. If &lt;code&gt;KmsKeyId&lt;/code&gt; is specified, the encrypted state must be &lt;code&gt;true&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;You can specify the KMS key using any of the following:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Key ID. For example, 1234abcd-12ab-34cd-56ef-1234567890ab.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Key alias. For example, alias/ExampleAlias.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Key ARN. For example, arn:aws:kms:us-east-1:012345678910:key/1234abcd-12ab-34cd-56ef-1234567890ab.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Alias ARN. For example, arn:aws:kms:us-east-1:012345678910:alias/ExampleAlias.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Amazon Web Services authenticates the KMS key asynchronously. Therefore, if you specify an ID, alias, or ARN that is not valid, the action can appear to complete, but eventually fails.&lt;/p&gt; &lt;p&gt;Amazon EBS does not support asymmetric KMS keys.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=KmsKeyId")
+    public String kmsKeyId;
+    public GETModifyEbsDefaultKmsKeyIdRequest withKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyEbsDefaultKmsKeyIdVersionEnum version;
+    public GETModifyEbsDefaultKmsKeyIdRequest withVersion(GETModifyEbsDefaultKmsKeyIdVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyEbsDefaultKmsKeyIdRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyEbsDefaultKmsKeyIdRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyEbsDefaultKmsKeyIdRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyEbsDefaultKmsKeyIdRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyEbsDefaultKmsKeyIdRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyEbsDefaultKmsKeyIdRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyEbsDefaultKmsKeyIdRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

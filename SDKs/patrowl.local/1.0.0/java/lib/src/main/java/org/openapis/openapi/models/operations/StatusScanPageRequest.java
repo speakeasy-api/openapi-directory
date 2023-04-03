@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StatusScanPageRequest {
-    
-    public StatusScanPagePathParams pathParams;
-    public StatusScanPageRequest withPathParams(StatusScanPagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Numeric ID of the scan to get status
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scanId")
+    public Long scanId;
+    public StatusScanPageRequest withScanId(Long scanId) {
+        this.scanId = scanId;
         return this;
     }
     

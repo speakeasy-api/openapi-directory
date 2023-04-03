@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateArticleResourceRequest {
-    
-    public PrivateArticleResourcePathParams pathParams;
-    public PrivateArticleResourceRequest withPathParams(PrivateArticleResourcePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Resource data
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Resource request;
-    public PrivateArticleResourceRequest withRequest(org.openapis.openapi.models.shared.Resource request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Resource resource;
+    public PrivateArticleResourceRequest withResource(org.openapis.openapi.models.shared.Resource resource) {
+        this.resource = resource;
         return this;
     }
     
-    
-    public PrivateArticleResourceSecurity security;
-    public PrivateArticleResourceRequest withSecurity(PrivateArticleResourceSecurity security) {
-        this.security = security;
+    /**
+     * Article unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
+    public Long articleId;
+    public PrivateArticleResourceRequest withArticleId(Long articleId) {
+        this.articleId = articleId;
         return this;
     }
     

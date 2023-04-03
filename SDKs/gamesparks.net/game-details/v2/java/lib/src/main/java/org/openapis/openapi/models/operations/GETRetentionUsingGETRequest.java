@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRetentionUsingGETRequest {
-    
-    public GETRetentionUsingGETPathParams pathParams;
-    public GETRetentionUsingGETRequest withPathParams(GETRetentionUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public GETRetentionUsingGETRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public GETRetentionUsingGETQueryParams queryParams;
-    public GETRetentionUsingGETRequest withQueryParams(GETRetentionUsingGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * stage
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stage")
+    public GETRetentionUsingGETStageEnum stage;
+    public GETRetentionUsingGETRequest withStage(GETRetentionUsingGETStageEnum stage) {
+        this.stage = stage;
         return this;
     }
     

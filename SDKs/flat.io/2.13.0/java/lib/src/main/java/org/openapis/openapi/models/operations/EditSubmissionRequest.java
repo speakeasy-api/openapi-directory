@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditSubmissionRequest {
-    
-    public EditSubmissionPathParams pathParams;
-    public EditSubmissionRequest withPathParams(EditSubmissionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AssignmentSubmissionUpdate request;
-    public EditSubmissionRequest withRequest(org.openapis.openapi.models.shared.AssignmentSubmissionUpdate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AssignmentSubmissionUpdate assignmentSubmissionUpdate;
+    public EditSubmissionRequest withAssignmentSubmissionUpdate(org.openapis.openapi.models.shared.AssignmentSubmissionUpdate assignmentSubmissionUpdate) {
+        this.assignmentSubmissionUpdate = assignmentSubmissionUpdate;
         return this;
     }
     
+    /**
+     * Unique identifier of the assignment
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignment")
+    public String assignment;
+    public EditSubmissionRequest withAssignment(String assignment) {
+        this.assignment = assignment;
+        return this;
+    }
     
-    public EditSubmissionSecurity security;
-    public EditSubmissionRequest withSecurity(EditSubmissionSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the class
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
+    public String class_;
+    public EditSubmissionRequest withClass(String class_) {
+        this.class_ = class_;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the submission
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=submission")
+    public String submission;
+    public EditSubmissionRequest withSubmission(String submission) {
+        this.submission = submission;
         return this;
     }
     

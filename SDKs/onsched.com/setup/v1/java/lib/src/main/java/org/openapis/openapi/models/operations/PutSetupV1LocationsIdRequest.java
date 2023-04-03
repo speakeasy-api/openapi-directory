@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1LocationsIdRequest {
-    
-    public PutSetupV1LocationsIdPathParams pathParams;
-    public PutSetupV1LocationsIdRequest withPathParams(PutSetupV1LocationsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutSetupV1LocationsIdQueryParams queryParams;
-    public PutSetupV1LocationsIdRequest withQueryParams(PutSetupV1LocationsIdQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LocationUpdateModel request;
-    public PutSetupV1LocationsIdRequest withRequest(org.openapis.openapi.models.shared.LocationUpdateModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.LocationUpdateModel locationUpdateModel;
+    public PutSetupV1LocationsIdRequest withLocationUpdateModel(org.openapis.openapi.models.shared.LocationUpdateModel locationUpdateModel) {
+        this.locationUpdateModel = locationUpdateModel;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutSetupV1LocationsIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=removeRegion")
+    public Boolean removeRegion;
+    public PutSetupV1LocationsIdRequest withRemoveRegion(Boolean removeRegion) {
+        this.removeRegion = removeRegion;
         return this;
     }
     

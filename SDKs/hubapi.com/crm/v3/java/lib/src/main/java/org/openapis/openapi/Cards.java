@@ -38,19 +38,20 @@ public class Cards {
      * Delete a card
      * Permanently deletes a card definition with the given ID. Once deleted, data fetch requests for this card will no longer be sent to your service. This can't be undone.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveResponse deleteCrmV3ExtensionsCardsAppIdCardIdArchive(org.openapis.openapi.models.operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveResponse deleteCrmV3ExtensionsCardsAppIdCardIdArchive(org.openapis.openapi.models.operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest request, org.openapis.openapi.models.operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchivePathParams.class, baseUrl, "/crm/v3/extensions/cards/{appId}/{cardId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest.class, baseUrl, "/crm/v3/extensions/cards/{appId}/{cardId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,19 +80,20 @@ public class Cards {
      * Get a card.
      * Returns the definition for a card with the given ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdCardIdGetByIdResponse getCrmV3ExtensionsCardsAppIdCardIdGetById(org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdCardIdGetByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdCardIdGetByIdResponse getCrmV3ExtensionsCardsAppIdCardIdGetById(org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdCardIdGetByIdRequest request, org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdCardIdGetByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdCardIdGetByIdPathParams.class, baseUrl, "/crm/v3/extensions/cards/{appId}/{cardId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdCardIdGetByIdRequest.class, baseUrl, "/crm/v3/extensions/cards/{appId}/{cardId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,19 +128,20 @@ public class Cards {
      * Get all cards
      * Returns a list of cards for a given app.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdGetAllResponse getCrmV3ExtensionsCardsAppIdGetAll(org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdGetAllRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdGetAllResponse getCrmV3ExtensionsCardsAppIdGetAll(org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdGetAllRequest request, org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdGetAllSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdGetAllPathParams.class, baseUrl, "/crm/v3/extensions/cards/{appId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCrmV3ExtensionsCardsAppIdGetAllRequest.class, baseUrl, "/crm/v3/extensions/cards/{appId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,24 +176,25 @@ public class Cards {
      * Update a card
      * Update a card definition with new details.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse patchCrmV3ExtensionsCardsAppIdCardIdUpdate(org.openapis.openapi.models.operations.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateResponse patchCrmV3ExtensionsCardsAppIdCardIdUpdate(org.openapis.openapi.models.operations.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest request, org.openapis.openapi.models.operations.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchCrmV3ExtensionsCardsAppIdCardIdUpdatePathParams.class, baseUrl, "/crm/v3/extensions/cards/{appId}/{cardId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest.class, baseUrl, "/crm/v3/extensions/cards/{appId}/{cardId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "cardPatchRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -225,24 +229,25 @@ public class Cards {
      * Create a new card
      * Defines a new card that will become active on an account when this app is installed.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCrmV3ExtensionsCardsAppIdCreateResponse postCrmV3ExtensionsCardsAppIdCreate(org.openapis.openapi.models.operations.PostCrmV3ExtensionsCardsAppIdCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCrmV3ExtensionsCardsAppIdCreateResponse postCrmV3ExtensionsCardsAppIdCreate(org.openapis.openapi.models.operations.PostCrmV3ExtensionsCardsAppIdCreateRequest request, org.openapis.openapi.models.operations.PostCrmV3ExtensionsCardsAppIdCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCrmV3ExtensionsCardsAppIdCreatePathParams.class, baseUrl, "/crm/v3/extensions/cards/{appId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCrmV3ExtensionsCardsAppIdCreateRequest.class, baseUrl, "/crm/v3/extensions/cards/{appId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "cardCreateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

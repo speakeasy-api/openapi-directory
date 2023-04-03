@@ -4,27 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllPaymentsRequest {
-    
-    public GetAllPaymentsQueryParams queryParams;
-    public GetAllPaymentsRequest withQueryParams(GetAllPaymentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number for the query. This end-point has paginations capabilities. This value should be a positive integer value. If this is not provided, both page_size and page_number will be defaulted to 1000 and 1. Results are sorted decending order of the created date &amp; time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_number")
+    public String pageNumber;
+    public GetAllPaymentsRequest withPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
     
-    
-    public GetAllPaymentsHeaders headers;
-    public GetAllPaymentsRequest withHeaders(GetAllPaymentsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Page size for the query. This end-point has paginations capabilities. This value should be a positive integer value. If this is not provided, both page_size and page_number will be defaulted to 1000 and 1. Results are sorted decending order of the created date &amp; time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public String pageSize;
+    public GetAllPaymentsRequest withPageSize(String pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
+    /**
+     * Payment type of the payment to be retrieved from the API (electronic_fund_transfer, card)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payment_type")
+    public String paymentType;
+    public GetAllPaymentsRequest withPaymentType(String paymentType) {
+        this.paymentType = paymentType;
+        return this;
+    }
     
-    public GetAllPaymentsSecurity security;
-    public GetAllPaymentsRequest withSecurity(GetAllPaymentsSecurity security) {
-        this.security = security;
+    /**
+     * Purpose of the payment to be retrieved from the API (cash, invest)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=purpose")
+    public String purpose;
+    public GetAllPaymentsRequest withPurpose(String purpose) {
+        this.purpose = purpose;
+        return this;
+    }
+    
+    /**
+     * Service provider of the payment to be retrieved from the API (truelayer, stripe, none)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service_provider")
+    public String serviceProvider;
+    public GetAllPaymentsRequest withServiceProvider(String serviceProvider) {
+        this.serviceProvider = serviceProvider;
+        return this;
+    }
+    
+    /**
+     * Sorting order; results are sorted by creation time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetAllPaymentsSortEnum sort;
+    public GetAllPaymentsRequest withSort(GetAllPaymentsSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetAllPaymentsRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

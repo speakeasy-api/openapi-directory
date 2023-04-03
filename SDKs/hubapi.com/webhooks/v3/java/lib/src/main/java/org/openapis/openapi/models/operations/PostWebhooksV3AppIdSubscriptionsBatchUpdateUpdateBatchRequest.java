@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchRequest {
-    
-    public PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchPathParams pathParams;
-    public PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchRequest withPathParams(PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BatchInputSubscriptionBatchUpdateRequest request;
-    public PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchRequest withRequest(org.openapis.openapi.models.shared.BatchInputSubscriptionBatchUpdateRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BatchInputSubscriptionBatchUpdateRequest batchInputSubscriptionBatchUpdateRequest;
+    public PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchRequest withBatchInputSubscriptionBatchUpdateRequest(org.openapis.openapi.models.shared.BatchInputSubscriptionBatchUpdateRequest batchInputSubscriptionBatchUpdateRequest) {
+        this.batchInputSubscriptionBatchUpdateRequest = batchInputSubscriptionBatchUpdateRequest;
         return this;
     }
     
-    
-    public PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchSecurity security;
-    public PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchRequest withSecurity(PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchRequest withAppId(Integer appId) {
+        this.appId = appId;
         return this;
     }
     

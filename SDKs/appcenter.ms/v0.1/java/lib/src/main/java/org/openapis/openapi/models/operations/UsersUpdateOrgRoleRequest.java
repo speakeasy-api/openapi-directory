@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersUpdateOrgRoleRequest {
-    
-    public UsersUpdateOrgRolePathParams pathParams;
-    public UsersUpdateOrgRoleRequest withPathParams(UsersUpdateOrgRolePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UsersUpdateOrgRoleRequestBody request;
-    public UsersUpdateOrgRoleRequest withRequest(UsersUpdateOrgRoleRequestBody request) {
-        this.request = request;
+    public UsersUpdateOrgRoleRequestBody requestBody;
+    public UsersUpdateOrgRoleRequest withRequestBody(UsersUpdateOrgRoleRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public UsersUpdateOrgRoleRequest withOrgName(String orgName) {
+        this.orgName = orgName;
+        return this;
+    }
     
-    public UsersUpdateOrgRoleSecurity security;
-    public UsersUpdateOrgRoleRequest withSecurity(UsersUpdateOrgRoleSecurity security) {
-        this.security = security;
+    /**
+     * The slug name of the user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_name")
+    public String userName;
+    public UsersUpdateOrgRoleRequest withUserName(String userName) {
+        this.userName = userName;
         return this;
     }
     

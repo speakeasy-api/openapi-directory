@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImporterExporterCodeVerificationAPIRequest {
-    
-    public ImporterExporterCodeVerificationAPIPathParams pathParams;
-    public ImporterExporterCodeVerificationAPIRequest withPathParams(ImporterExporterCodeVerificationAPIPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ImporterExporterCodeVerificationAPISecurity security;
-    public ImporterExporterCodeVerificationAPIRequest withSecurity(ImporterExporterCodeVerificationAPISecurity security) {
-        this.security = security;
+    /**
+     * Importer-Exporter code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=iec")
+    public String iec;
+    public ImporterExporterCodeVerificationAPIRequest withIec(String iec) {
+        this.iec = iec;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCharginglocationsCharginglocationidRequest {
-    
-    public DeleteCharginglocationsCharginglocationidPathParams pathParams;
-    public DeleteCharginglocationsCharginglocationidRequest withPathParams(DeleteCharginglocationsCharginglocationidPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteCharginglocationsCharginglocationidSecurity security;
-    public DeleteCharginglocationsCharginglocationidRequest withSecurity(DeleteCharginglocationsCharginglocationidSecurity security) {
-        this.security = security;
+    /**
+     * ID of the Charging Location
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=chargingLocationId")
+    public String chargingLocationId;
+    public DeleteCharginglocationsCharginglocationidRequest withChargingLocationId(String chargingLocationId) {
+        this.chargingLocationId = chargingLocationId;
         return this;
     }
     

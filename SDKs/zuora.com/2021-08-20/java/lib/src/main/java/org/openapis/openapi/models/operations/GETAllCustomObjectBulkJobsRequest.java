@@ -4,20 +4,72 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAllCustomObjectBulkJobsRequest {
-    
-    public GETAllCustomObjectBulkJobsQueryParams queryParams;
-    public GETAllCustomObjectBulkJobsRequest withQueryParams(GETAllCustomObjectBulkJobsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * `Bearer {token}` for a valid OAuth token.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GETAllCustomObjectBulkJobsRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public GETAllCustomObjectBulkJobsRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
+        return this;
+    }
     
-    public GETAllCustomObjectBulkJobsHeaders headers;
-    public GETAllCustomObjectBulkJobsRequest withHeaders(GETAllCustomObjectBulkJobsHeaders headers) {
-        this.headers = headers;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public GETAllCustomObjectBulkJobsRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
+        return this;
+    }
+    
+    /**
+     * API version that determines the response schema. The default version is used if this parameter is not included. Specify `Zuora-Version` in the request header if you expect a specific response schema.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Version")
+    public LocalDate zuoraVersion;
+    public GETAllCustomObjectBulkJobsRequest withZuoraVersion(LocalDate zuoraVersion) {
+        this.zuoraVersion = zuoraVersion;
+        return this;
+    }
+    
+    /**
+     * The `cursor` points to the last job of the previous result set. The cursor job is not included in this query result. The call returns the first page if `cursor` is not provided and `pageSize` is valid.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public GETAllCustomObjectBulkJobsRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    /**
+     * Page size of the result. The maximum page size is 100. The defaut page size is 25.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public GETAllCustomObjectBulkJobsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

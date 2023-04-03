@@ -35,25 +35,26 @@ public class Projects {
     /**
      * Lists information about the supported locations for this service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecretmanagerProjectsLocationsListResponse secretmanagerProjectsLocationsList(org.openapis.openapi.models.operations.SecretmanagerProjectsLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecretmanagerProjectsLocationsListResponse secretmanagerProjectsLocationsList(org.openapis.openapi.models.operations.SecretmanagerProjectsLocationsListRequest request, org.openapis.openapi.models.operations.SecretmanagerProjectsLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsLocationsListPathParams.class, baseUrl, "/v1/{name}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsLocationsListRequest.class, baseUrl, "/v1/{name}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,27 +81,28 @@ public class Projects {
     /**
      * Creates a new SecretVersion containing secret data and attaches it to an existing Secret.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsAddVersionResponse secretmanagerProjectsSecretsAddVersion(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsAddVersionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsAddVersionResponse secretmanagerProjectsSecretsAddVersion(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsAddVersionRequest request, org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsAddVersionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsAddVersionPathParams.class, baseUrl, "/v1/{parent}:addVersion", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsAddVersionRequest.class, baseUrl, "/v1/{parent}:addVersion", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addSecretVersionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsAddVersionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsAddVersionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Projects {
     /**
      * Creates a new Secret containing no SecretVersions.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsCreateResponse secretmanagerProjectsSecretsCreate(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsCreateResponse secretmanagerProjectsSecretsCreate(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsCreateRequest request, org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsCreatePathParams.class, baseUrl, "/v1/{parent}/secrets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsCreateRequest.class, baseUrl, "/v1/{parent}/secrets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "secretInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Projects {
     /**
      * Deletes a Secret.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsDeleteResponse secretmanagerProjectsSecretsDelete(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsDeleteResponse secretmanagerProjectsSecretsDelete(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsDeleteRequest request, org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,25 +223,26 @@ public class Projects {
     /**
      * Gets the access control policy for a secret. Returns empty policy if the secret exists and does not have a policy set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsGetIamPolicyResponse secretmanagerProjectsSecretsGetIamPolicy(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsGetIamPolicyResponse secretmanagerProjectsSecretsGetIamPolicy(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsGetIamPolicyRequest request, org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsGetIamPolicyPathParams.class, baseUrl, "/v1/{resource}:getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsGetIamPolicyRequest.class, baseUrl, "/v1/{resource}:getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,25 +269,26 @@ public class Projects {
     /**
      * Lists Secrets.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsListResponse secretmanagerProjectsSecretsList(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsListResponse secretmanagerProjectsSecretsList(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsListRequest request, org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsListPathParams.class, baseUrl, "/v1/{parent}/secrets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsListRequest.class, baseUrl, "/v1/{parent}/secrets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -309,27 +315,28 @@ public class Projects {
     /**
      * Updates metadata of an existing Secret.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsPatchResponse secretmanagerProjectsSecretsPatch(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsPatchResponse secretmanagerProjectsSecretsPatch(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsPatchRequest request, org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "secretInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -356,27 +363,28 @@ public class Projects {
     /**
      * Sets the access control policy on the specified secret. Replaces any existing policy. Permissions on SecretVersions are enforced according to the policy set on the associated Secret.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsSetIamPolicyResponse secretmanagerProjectsSecretsSetIamPolicy(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsSetIamPolicyResponse secretmanagerProjectsSecretsSetIamPolicy(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsSetIamPolicyRequest request, org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsSetIamPolicyPathParams.class, baseUrl, "/v1/{resource}:setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsSetIamPolicyRequest.class, baseUrl, "/v1/{resource}:setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -403,27 +411,28 @@ public class Projects {
     /**
      * Returns permissions that a caller has for the specified secret. If the secret does not exist, this call returns an empty set of permissions, not a NOT_FOUND error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsTestIamPermissionsResponse secretmanagerProjectsSecretsTestIamPermissions(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsTestIamPermissionsResponse secretmanagerProjectsSecretsTestIamPermissions(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsTestIamPermissionsRequest request, org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsTestIamPermissionsPathParams.class, baseUrl, "/v1/{resource}:testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsTestIamPermissionsRequest.class, baseUrl, "/v1/{resource}:testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testIamPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -450,25 +459,26 @@ public class Projects {
     /**
      * Accesses a SecretVersion. This call returns the secret data. `projects/* /secrets/* /versions/latest` is an alias to the most recently created SecretVersion.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsAccessResponse secretmanagerProjectsSecretsVersionsAccess(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsAccessRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsAccessResponse secretmanagerProjectsSecretsVersionsAccess(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsAccessRequest request, org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsAccessSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsAccessPathParams.class, baseUrl, "/v1/{name}:access", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsAccessRequest.class, baseUrl, "/v1/{name}:access", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsAccessQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsAccessRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -495,27 +505,28 @@ public class Projects {
     /**
      * Destroys a SecretVersion. Sets the state of the SecretVersion to DESTROYED and irrevocably destroys the secret data.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDestroyResponse secretmanagerProjectsSecretsVersionsDestroy(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDestroyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDestroyResponse secretmanagerProjectsSecretsVersionsDestroy(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDestroyRequest request, org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDestroySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDestroyPathParams.class, baseUrl, "/v1/{name}:destroy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDestroyRequest.class, baseUrl, "/v1/{name}:destroy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "destroySecretVersionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDestroyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDestroyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -542,27 +553,28 @@ public class Projects {
     /**
      * Disables a SecretVersion. Sets the state of the SecretVersion to DISABLED.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDisableResponse secretmanagerProjectsSecretsVersionsDisable(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDisableRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDisableResponse secretmanagerProjectsSecretsVersionsDisable(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDisableRequest request, org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDisableSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDisablePathParams.class, baseUrl, "/v1/{name}:disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDisableRequest.class, baseUrl, "/v1/{name}:disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "disableSecretVersionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDisableQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsDisableRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -589,27 +601,28 @@ public class Projects {
     /**
      * Enables a SecretVersion. Sets the state of the SecretVersion to ENABLED.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsEnableResponse secretmanagerProjectsSecretsVersionsEnable(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsEnableRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsEnableResponse secretmanagerProjectsSecretsVersionsEnable(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsEnableRequest request, org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsEnableSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsEnablePathParams.class, baseUrl, "/v1/{name}:enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsEnableRequest.class, baseUrl, "/v1/{name}:enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "enableSecretVersionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsEnableQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsEnableRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -636,25 +649,26 @@ public class Projects {
     /**
      * Gets metadata for a SecretVersion. `projects/* /secrets/* /versions/latest` is an alias to the most recently created SecretVersion.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsGetResponse secretmanagerProjectsSecretsVersionsGet(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsGetResponse secretmanagerProjectsSecretsVersionsGet(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsGetRequest request, org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -681,25 +695,26 @@ public class Projects {
     /**
      * Lists SecretVersions. This call does not return secret data.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsListResponse secretmanagerProjectsSecretsVersionsList(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsListResponse secretmanagerProjectsSecretsVersionsList(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsListRequest request, org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsListPathParams.class, baseUrl, "/v1/{parent}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsListRequest.class, baseUrl, "/v1/{parent}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretmanagerProjectsSecretsVersionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

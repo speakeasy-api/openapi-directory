@@ -34,19 +34,20 @@ public class Distribute {
     /**
      * Fetch all apple test flight groups
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppleMappingTestFlightGroupsResponse appleMappingTestFlightGroups(org.openapis.openapi.models.operations.AppleMappingTestFlightGroupsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppleMappingTestFlightGroupsResponse appleMappingTestFlightGroups(org.openapis.openapi.models.operations.AppleMappingTestFlightGroupsRequest request, org.openapis.openapi.models.operations.AppleMappingTestFlightGroupsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppleMappingTestFlightGroupsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/apple_test_flight_groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppleMappingTestFlightGroupsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/apple_test_flight_groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,24 +82,25 @@ public class Distribute {
     /**
      * Create a mapping for an existing app in apple store for the specified application.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppleMappingCreateResponse appleMappingCreate(org.openapis.openapi.models.operations.AppleMappingCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppleMappingCreateResponse appleMappingCreate(org.openapis.openapi.models.operations.AppleMappingCreateRequest request, org.openapis.openapi.models.operations.AppleMappingCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppleMappingCreatePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/apple_mapping", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppleMappingCreateRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/apple_mapping", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -133,21 +135,22 @@ public class Distribute {
     /**
      * Delete mapping of apple app to an existing app in apple store.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppleMappingDeleteResponse appleMappingDelete(org.openapis.openapi.models.operations.AppleMappingDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppleMappingDeleteResponse appleMappingDelete(org.openapis.openapi.models.operations.AppleMappingDeleteRequest request, org.openapis.openapi.models.operations.AppleMappingDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppleMappingDeletePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/apple_mapping", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppleMappingDeleteRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/apple_mapping", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "string");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "string");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -176,19 +179,20 @@ public class Distribute {
     /**
      * Get mapping of apple app to an existing app in apple store.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppleMappingGetResponse appleMappingGet(org.openapis.openapi.models.operations.AppleMappingGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppleMappingGetResponse appleMappingGet(org.openapis.openapi.models.operations.AppleMappingGetRequest request, org.openapis.openapi.models.operations.AppleMappingGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppleMappingGetPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/apple_mapping", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AppleMappingGetRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/apple_mapping", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -223,19 +227,20 @@ public class Distribute {
     /**
      * Returns the device details.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DevicesDeviceDetailsResponse devicesDeviceDetails(org.openapis.openapi.models.operations.DevicesDeviceDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DevicesDeviceDetailsResponse devicesDeviceDetails(org.openapis.openapi.models.operations.DevicesDeviceDetailsRequest request, org.openapis.openapi.models.operations.DevicesDeviceDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DevicesDeviceDetailsPathParams.class, baseUrl, "/v0.1/user/devices/{device_udid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DevicesDeviceDetailsRequest.class, baseUrl, "/v0.1/user/devices/{device_udid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -286,25 +291,26 @@ public class Distribute {
     /**
      * Returns the resign status to the caller
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DevicesGetReleaseUpdateDevicesStatusResponse devicesGetReleaseUpdateDevicesStatus(org.openapis.openapi.models.operations.DevicesGetReleaseUpdateDevicesStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DevicesGetReleaseUpdateDevicesStatusResponse devicesGetReleaseUpdateDevicesStatus(org.openapis.openapi.models.operations.DevicesGetReleaseUpdateDevicesStatusRequest request, org.openapis.openapi.models.operations.DevicesGetReleaseUpdateDevicesStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DevicesGetReleaseUpdateDevicesStatusPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/update_devices/{resign_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DevicesGetReleaseUpdateDevicesStatusRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/update_devices/{resign_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DevicesGetReleaseUpdateDevicesStatusQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DevicesGetReleaseUpdateDevicesStatusRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -347,25 +353,26 @@ public class Distribute {
     /**
      * Returns all devices associated with the given distribution group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DevicesListResponse devicesList(org.openapis.openapi.models.operations.DevicesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DevicesListResponse devicesList(org.openapis.openapi.models.operations.DevicesListRequest request, org.openapis.openapi.models.operations.DevicesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DevicesListPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/devices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DevicesListRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/devices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DevicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DevicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -408,25 +415,26 @@ public class Distribute {
     /**
      * Returns all devices associated with the given distribution group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DevicesListCsvFormatResponse devicesListCsvFormat(org.openapis.openapi.models.operations.DevicesListCsvFormatRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DevicesListCsvFormatResponse devicesListCsvFormat(org.openapis.openapi.models.operations.DevicesListCsvFormatRequest request, org.openapis.openapi.models.operations.DevicesListCsvFormatSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DevicesListCsvFormatPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/devices/download_devices_list", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DevicesListCsvFormatRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/devices/download_devices_list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DevicesListCsvFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DevicesListCsvFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -454,24 +462,25 @@ public class Distribute {
     /**
      * Registers a user for an existing device
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DevicesRegisterUserForDeviceResponse devicesRegisterUserForDevice(org.openapis.openapi.models.operations.DevicesRegisterUserForDeviceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DevicesRegisterUserForDeviceResponse devicesRegisterUserForDevice(org.openapis.openapi.models.operations.DevicesRegisterUserForDeviceRequest request, org.openapis.openapi.models.operations.DevicesRegisterUserForDeviceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DevicesRegisterUserForDevicePathParams.class, baseUrl, "/v0.1/users/{user_id}/devices/register", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DevicesRegisterUserForDeviceRequest.class, baseUrl, "/v0.1/users/{user_id}/devices/register", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -506,19 +515,20 @@ public class Distribute {
     /**
      * Removes an existing device from a user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DevicesRemoveUserDeviceResponse devicesRemoveUserDevice(org.openapis.openapi.models.operations.DevicesRemoveUserDeviceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DevicesRemoveUserDeviceResponse devicesRemoveUserDevice(org.openapis.openapi.models.operations.DevicesRemoveUserDeviceRequest request, org.openapis.openapi.models.operations.DevicesRemoveUserDeviceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DevicesRemoveUserDevicePathParams.class, baseUrl, "/v0.1/user/devices/{device_udid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DevicesRemoveUserDeviceRequest.class, baseUrl, "/v0.1/user/devices/{device_udid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -554,11 +564,10 @@ public class Distribute {
 
     /**
      * Returns all devices associated with the given user.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DevicesUserDevicesListResponse devicesUserDevicesList(org.openapis.openapi.models.operations.DevicesUserDevicesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DevicesUserDevicesListResponse devicesUserDevicesList() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/user/devices");
         
@@ -567,8 +576,7 @@ public class Distribute {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -615,12 +623,12 @@ public class Distribute {
      */
     public org.openapis.openapi.models.operations.DistibutionReleasesInstallAnalyticsResponse distibutionReleasesInstallAnalytics(org.openapis.openapi.models.operations.DistibutionReleasesInstallAnalyticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistibutionReleasesInstallAnalyticsPathParams.class, baseUrl, "/v0.1/public/apps/{owner_name}/{app_name}/install_analytics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DistibutionReleasesInstallAnalyticsRequest.class, baseUrl, "/v0.1/public/apps/{owner_name}/{app_name}/install_analytics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -647,19 +655,20 @@ public class Distribute {
     /**
      * Return information about the provisioning profile. Only available for iOS.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProvisioningProfileResponse provisioningProfile(org.openapis.openapi.models.operations.ProvisioningProfileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProvisioningProfileResponse provisioningProfile(org.openapis.openapi.models.operations.ProvisioningProfileRequest request, org.openapis.openapi.models.operations.ProvisioningProfileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProvisioningProfilePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/provisioning_profile", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProvisioningProfileRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/provisioning_profile", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -694,24 +703,25 @@ public class Distribute {
     /**
      * Distributes a release to a group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesAddDistributionGroupResponse releasesAddDistributionGroup(org.openapis.openapi.models.operations.ReleasesAddDistributionGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesAddDistributionGroupResponse releasesAddDistributionGroup(org.openapis.openapi.models.operations.ReleasesAddDistributionGroupRequest request, org.openapis.openapi.models.operations.ReleasesAddDistributionGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesAddDistributionGroupPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesAddDistributionGroupRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -754,24 +764,25 @@ public class Distribute {
     /**
      * Distributes a release to a store
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesAddStoreResponse releasesAddStore(org.openapis.openapi.models.operations.ReleasesAddStoreRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesAddStoreResponse releasesAddStore(org.openapis.openapi.models.operations.ReleasesAddStoreRequest request, org.openapis.openapi.models.operations.ReleasesAddStoreSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesAddStorePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesAddStoreRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -814,24 +825,25 @@ public class Distribute {
     /**
      * Distributes a release to a user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesAddTestersResponse releasesAddTesters(org.openapis.openapi.models.operations.ReleasesAddTestersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesAddTestersResponse releasesAddTesters(org.openapis.openapi.models.operations.ReleasesAddTestersRequest request, org.openapis.openapi.models.operations.ReleasesAddTestersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesAddTestersPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesAddTestersRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -874,25 +886,26 @@ public class Distribute {
     /**
      * Return detailed information about releases avaiable to a tester.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesAvailableToTesterResponse releasesAvailableToTester(org.openapis.openapi.models.operations.ReleasesAvailableToTesterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesAvailableToTesterResponse releasesAvailableToTester(org.openapis.openapi.models.operations.ReleasesAvailableToTesterRequest request, org.openapis.openapi.models.operations.ReleasesAvailableToTesterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesAvailableToTesterPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/filter_by_tester", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesAvailableToTesterRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/filter_by_tester", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReleasesAvailableToTesterQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReleasesAvailableToTesterRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -919,21 +932,22 @@ public class Distribute {
     /**
      * Initiate a new release upload. This API is part of multi-step upload process.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesCreateReleaseUploadResponse releasesCreateReleaseUpload(org.openapis.openapi.models.operations.ReleasesCreateReleaseUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesCreateReleaseUploadResponse releasesCreateReleaseUpload(org.openapis.openapi.models.operations.ReleasesCreateReleaseUploadRequest request, org.openapis.openapi.models.operations.ReleasesCreateReleaseUploadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesCreateReleaseUploadPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/uploads/releases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesCreateReleaseUploadRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/uploads/releases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -976,19 +990,20 @@ public class Distribute {
     /**
      * Deletes a release.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesDeleteResponse releasesDelete(org.openapis.openapi.models.operations.ReleasesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesDeleteResponse releasesDelete(org.openapis.openapi.models.operations.ReleasesDeleteRequest request, org.openapis.openapi.models.operations.ReleasesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesDeletePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesDeleteRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1025,19 +1040,20 @@ public class Distribute {
     /**
      * Delete the given distribution group from the release
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesDeleteDistributionGroupResponse releasesDeleteDistributionGroup(org.openapis.openapi.models.operations.ReleasesDeleteDistributionGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesDeleteDistributionGroupResponse releasesDeleteDistributionGroup(org.openapis.openapi.models.operations.ReleasesDeleteDistributionGroupRequest request, org.openapis.openapi.models.operations.ReleasesDeleteDistributionGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesDeleteDistributionGroupPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups/{group_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesDeleteDistributionGroupRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups/{group_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1066,19 +1082,20 @@ public class Distribute {
     /**
      * Delete the given distribution store from the release
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesDeleteDistributionStoreResponse releasesDeleteDistributionStore(org.openapis.openapi.models.operations.ReleasesDeleteDistributionStoreRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesDeleteDistributionStoreResponse releasesDeleteDistributionStore(org.openapis.openapi.models.operations.ReleasesDeleteDistributionStoreRequest request, org.openapis.openapi.models.operations.ReleasesDeleteDistributionStoreSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesDeleteDistributionStorePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores/{store_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesDeleteDistributionStoreRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores/{store_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1107,19 +1124,20 @@ public class Distribute {
     /**
      * Delete the given tester from the release
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesDeleteDistributionTesterResponse releasesDeleteDistributionTester(org.openapis.openapi.models.operations.ReleasesDeleteDistributionTesterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesDeleteDistributionTesterResponse releasesDeleteDistributionTester(org.openapis.openapi.models.operations.ReleasesDeleteDistributionTesterRequest request, org.openapis.openapi.models.operations.ReleasesDeleteDistributionTesterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesDeleteDistributionTesterPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers/{tester_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesDeleteDistributionTesterRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers/{tester_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1148,19 +1166,20 @@ public class Distribute {
     /**
      * Delete the given tester from the all releases
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesDeleteTesterFromDestinationsResponse releasesDeleteTesterFromDestinations(org.openapis.openapi.models.operations.ReleasesDeleteTesterFromDestinationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesDeleteTesterFromDestinationsResponse releasesDeleteTesterFromDestinations(org.openapis.openapi.models.operations.ReleasesDeleteTesterFromDestinationsRequest request, org.openapis.openapi.models.operations.ReleasesDeleteTesterFromDestinationsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesDeleteTesterFromDestinationsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/testers/{tester_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesDeleteTesterFromDestinationsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/testers/{tester_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1189,19 +1208,20 @@ public class Distribute {
     /**
      * Deletes a release with id 'release_id' in a given distribution group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesDeleteWithDistributionGroupIdResponse releasesDeleteWithDistributionGroupId(org.openapis.openapi.models.operations.ReleasesDeleteWithDistributionGroupIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesDeleteWithDistributionGroupIdResponse releasesDeleteWithDistributionGroupId(org.openapis.openapi.models.operations.ReleasesDeleteWithDistributionGroupIdRequest request, org.openapis.openapi.models.operations.ReleasesDeleteWithDistributionGroupIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesDeleteWithDistributionGroupIdPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/releases/{release_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesDeleteWithDistributionGroupIdRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/releases/{release_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1227,13 +1247,13 @@ public class Distribute {
      */
     public org.openapis.openapi.models.operations.ReleasesGetIosManifestResponse releasesGetIosManifest(org.openapis.openapi.models.operations.ReleasesGetIosManifestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetIosManifestPathParams.class, baseUrl, "/v0.1/public/apps/{app_id}/releases/{release_id}/ios_manifest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetIosManifestRequest.class, baseUrl, "/v0.1/public/apps/{app_id}/releases/{release_id}/ios_manifest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReleasesGetIosManifestQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReleasesGetIosManifestRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1284,25 +1304,26 @@ public class Distribute {
     /**
      * Return detailed information about a distributed release in a given distribution group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesGetLatestByDistributionGroupResponse releasesGetLatestByDistributionGroup(org.openapis.openapi.models.operations.ReleasesGetLatestByDistributionGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesGetLatestByDistributionGroupResponse releasesGetLatestByDistributionGroup(org.openapis.openapi.models.operations.ReleasesGetLatestByDistributionGroupRequest request, org.openapis.openapi.models.operations.ReleasesGetLatestByDistributionGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetLatestByDistributionGroupPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/releases/{release_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetLatestByDistributionGroupRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/releases/{release_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReleasesGetLatestByDistributionGroupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReleasesGetLatestByDistributionGroupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1345,25 +1366,26 @@ public class Distribute {
     /**
      * If 'latest' is not specified then it will return the specified release if it's enabled. If 'latest' is specified, regardless of whether a release hash is provided, the latest enabled release is returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesGetLatestByHashResponse releasesGetLatestByHash(org.openapis.openapi.models.operations.ReleasesGetLatestByHashRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesGetLatestByHashResponse releasesGetLatestByHash(org.openapis.openapi.models.operations.ReleasesGetLatestByHashRequest request, org.openapis.openapi.models.operations.ReleasesGetLatestByHashSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetLatestByHashPathParams.class, baseUrl, "/v0.1/sdk/apps/{app_secret}/releases/{release_hash}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetLatestByHashRequest.class, baseUrl, "/v0.1/sdk/apps/{app_secret}/releases/{release_hash}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReleasesGetLatestByHashQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReleasesGetLatestByHashRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1403,13 +1425,13 @@ public class Distribute {
      */
     public org.openapis.openapi.models.operations.ReleasesGetLatestByPublicDistributionGroupResponse releasesGetLatestByPublicDistributionGroup(org.openapis.openapi.models.operations.ReleasesGetLatestByPublicDistributionGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetLatestByPublicDistributionGroupPathParams.class, baseUrl, "/v0.1/public/sdk/apps/{app_secret}/distribution_groups/{distribution_group_id}/releases/latest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetLatestByPublicDistributionGroupRequest.class, baseUrl, "/v0.1/public/sdk/apps/{app_secret}/distribution_groups/{distribution_group_id}/releases/latest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReleasesGetLatestByPublicDistributionGroupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReleasesGetLatestByPublicDistributionGroupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1458,25 +1480,26 @@ public class Distribute {
     /**
      * Get a release with id `release_id`. If `release_id` is `latest`, return the latest release that was distributed to the current user (from all the distribution groups).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesGetLatestByUserResponse releasesGetLatestByUser(org.openapis.openapi.models.operations.ReleasesGetLatestByUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesGetLatestByUserResponse releasesGetLatestByUser(org.openapis.openapi.models.operations.ReleasesGetLatestByUserRequest request, org.openapis.openapi.models.operations.ReleasesGetLatestByUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetLatestByUserPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetLatestByUserRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReleasesGetLatestByUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReleasesGetLatestByUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1519,25 +1542,26 @@ public class Distribute {
     /**
      * Get the latest release distributed to a private group the given user is a member of for the given app.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesGetLatestPrivateReleaseResponse releasesGetLatestPrivateRelease(org.openapis.openapi.models.operations.ReleasesGetLatestPrivateReleaseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesGetLatestPrivateReleaseResponse releasesGetLatestPrivateRelease(org.openapis.openapi.models.operations.ReleasesGetLatestPrivateReleaseRequest request, org.openapis.openapi.models.operations.ReleasesGetLatestPrivateReleaseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetLatestPrivateReleasePathParams.class, baseUrl, "/v0.1/sdk/apps/{app_secret}/releases/private/latest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetLatestPrivateReleaseRequest.class, baseUrl, "/v0.1/sdk/apps/{app_secret}/releases/private/latest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReleasesGetLatestPrivateReleaseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReleasesGetLatestPrivateReleaseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1577,7 +1601,7 @@ public class Distribute {
      */
     public org.openapis.openapi.models.operations.ReleasesGetLatestPublicReleaseResponse releasesGetLatestPublicRelease(org.openapis.openapi.models.operations.ReleasesGetLatestPublicReleaseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetLatestPublicReleasePathParams.class, baseUrl, "/v0.1/public/sdk/apps/{app_secret}/releases/latest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetLatestPublicReleaseRequest.class, baseUrl, "/v0.1/public/sdk/apps/{app_secret}/releases/latest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1623,7 +1647,7 @@ public class Distribute {
      */
     public org.openapis.openapi.models.operations.ReleasesGetPublicGroupsForReleaseByHashResponse releasesGetPublicGroupsForReleaseByHash(org.openapis.openapi.models.operations.ReleasesGetPublicGroupsForReleaseByHashRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetPublicGroupsForReleaseByHashPathParams.class, baseUrl, "/v0.1/public/sdk/apps/{app_secret}/releases/{release_hash}/public_distribution_groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetPublicGroupsForReleaseByHashRequest.class, baseUrl, "/v0.1/public/sdk/apps/{app_secret}/releases/{release_hash}/public_distribution_groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1664,19 +1688,20 @@ public class Distribute {
     /**
      * Get the current status of the release upload.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesGetReleaseUploadStatusResponse releasesGetReleaseUploadStatus(org.openapis.openapi.models.operations.ReleasesGetReleaseUploadStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesGetReleaseUploadStatusResponse releasesGetReleaseUploadStatus(org.openapis.openapi.models.operations.ReleasesGetReleaseUploadStatusRequest request, org.openapis.openapi.models.operations.ReleasesGetReleaseUploadStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetReleaseUploadStatusPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/uploads/releases/{upload_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetReleaseUploadStatusRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/uploads/releases/{upload_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1724,7 +1749,7 @@ public class Distribute {
      */
     public org.openapis.openapi.models.operations.ReleasesGetSparkleFeedResponse releasesGetSparkleFeed(org.openapis.openapi.models.operations.ReleasesGetSparkleFeedRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetSparkleFeedPathParams.class, baseUrl, "/v0.1/public/sparkle/apps/{app_secret}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesGetSparkleFeedRequest.class, baseUrl, "/v0.1/public/sparkle/apps/{app_secret}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1759,25 +1784,26 @@ public class Distribute {
     /**
      * Return basic information about releases.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesListResponse releasesList(org.openapis.openapi.models.operations.ReleasesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesListResponse releasesList(org.openapis.openapi.models.operations.ReleasesListRequest request, org.openapis.openapi.models.operations.ReleasesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesListPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesListRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReleasesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReleasesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1804,19 +1830,20 @@ public class Distribute {
     /**
      * Return basic information about distributed releases in a given distribution group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesListByDistributionGroupResponse releasesListByDistributionGroup(org.openapis.openapi.models.operations.ReleasesListByDistributionGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesListByDistributionGroupResponse releasesListByDistributionGroup(org.openapis.openapi.models.operations.ReleasesListByDistributionGroupRequest request, org.openapis.openapi.models.operations.ReleasesListByDistributionGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesListByDistributionGroupPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/releases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesListByDistributionGroupRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/releases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1851,19 +1878,20 @@ public class Distribute {
     /**
      * Get the latest release from every distribution group associated with an application.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesListLatestResponse releasesListLatest(org.openapis.openapi.models.operations.ReleasesListLatestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesListLatestResponse releasesListLatest(org.openapis.openapi.models.operations.ReleasesListLatestRequest request, org.openapis.openapi.models.operations.ReleasesListLatestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesListLatestPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/recent_releases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesListLatestRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/recent_releases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1890,21 +1918,22 @@ public class Distribute {
     /**
      * Update details about the specified distribution group associated with the release
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesPutDistributionGroupResponse releasesPutDistributionGroup(org.openapis.openapi.models.operations.ReleasesPutDistributionGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesPutDistributionGroupResponse releasesPutDistributionGroup(org.openapis.openapi.models.operations.ReleasesPutDistributionGroupRequest request, org.openapis.openapi.models.operations.ReleasesPutDistributionGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesPutDistributionGroupPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups/{group_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesPutDistributionGroupRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups/{group_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1933,21 +1962,22 @@ public class Distribute {
     /**
      * Update details about the specified tester associated with the release
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesPutDistributionTesterResponse releasesPutDistributionTester(org.openapis.openapi.models.operations.ReleasesPutDistributionTesterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesPutDistributionTesterResponse releasesPutDistributionTester(org.openapis.openapi.models.operations.ReleasesPutDistributionTesterRequest request, org.openapis.openapi.models.operations.ReleasesPutDistributionTesterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesPutDistributionTesterPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers/{tester_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesPutDistributionTesterRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers/{tester_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1976,24 +2006,25 @@ public class Distribute {
     /**
      * Updates a release.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesUpdateResponse releasesUpdate(org.openapis.openapi.models.operations.ReleasesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesUpdateResponse releasesUpdate(org.openapis.openapi.models.operations.ReleasesUpdateRequest request, org.openapis.openapi.models.operations.ReleasesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesUpdatePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesUpdateRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2036,24 +2067,25 @@ public class Distribute {
     /**
      * Update details of a release.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesUpdateDetailsResponse releasesUpdateDetails(org.openapis.openapi.models.operations.ReleasesUpdateDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesUpdateDetailsResponse releasesUpdateDetails(org.openapis.openapi.models.operations.ReleasesUpdateDetailsRequest request, org.openapis.openapi.models.operations.ReleasesUpdateDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesUpdateDetailsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesUpdateDetailsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/releases/{release_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2096,30 +2128,31 @@ public class Distribute {
     /**
      * Update the current status of the release upload.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReleasesUpdateReleaseUploadStatusResponse releasesUpdateReleaseUploadStatus(org.openapis.openapi.models.operations.ReleasesUpdateReleaseUploadStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReleasesUpdateReleaseUploadStatusResponse releasesUpdateReleaseUploadStatus(org.openapis.openapi.models.operations.ReleasesUpdateReleaseUploadStatusRequest request, org.openapis.openapi.models.operations.ReleasesUpdateReleaseUploadStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesUpdateReleaseUploadStatusPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/uploads/releases/{upload_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReleasesUpdateReleaseUploadStatusRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/uploads/releases/{upload_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReleasesUpdateReleaseUploadStatusQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReleasesUpdateReleaseUploadStatusRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2162,19 +2195,20 @@ public class Distribute {
     /**
      * Application specific store service status
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StoreNotificationsGetNotificationByAppIdResponse storeNotificationsGetNotificationByAppId(org.openapis.openapi.models.operations.StoreNotificationsGetNotificationByAppIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StoreNotificationsGetNotificationByAppIdResponse storeNotificationsGetNotificationByAppId(org.openapis.openapi.models.operations.StoreNotificationsGetNotificationByAppIdRequest request, org.openapis.openapi.models.operations.StoreNotificationsGetNotificationByAppIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreNotificationsGetNotificationByAppIdPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/store_service_status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreNotificationsGetNotificationByAppIdRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/store_service_status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2209,19 +2243,20 @@ public class Distribute {
     /**
      * Returns publish logs for a particular release published to a particular store
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StoreReleasePublishLogsGetResponse storeReleasePublishLogsGet(org.openapis.openapi.models.operations.StoreReleasePublishLogsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StoreReleasePublishLogsGetResponse storeReleasePublishLogsGet(org.openapis.openapi.models.operations.StoreReleasePublishLogsGetRequest request, org.openapis.openapi.models.operations.StoreReleasePublishLogsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreReleasePublishLogsGetPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}/publish_logs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreReleasePublishLogsGetRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}/publish_logs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2250,21 +2285,22 @@ public class Distribute {
     /**
      * delete the release with release Id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StoreReleasesDeleteResponse storeReleasesDelete(org.openapis.openapi.models.operations.StoreReleasesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StoreReleasesDeleteResponse storeReleasesDelete(org.openapis.openapi.models.operations.StoreReleasesDeleteRequest request, org.openapis.openapi.models.operations.StoreReleasesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreReleasesDeletePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreReleasesDeleteRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "string");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "string");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2293,19 +2329,20 @@ public class Distribute {
     /**
      * Return releases published in a store for releaseId and storeId
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StoreReleasesGetResponse storeReleasesGet(org.openapis.openapi.models.operations.StoreReleasesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StoreReleasesGetResponse storeReleasesGet(org.openapis.openapi.models.operations.StoreReleasesGetRequest request, org.openapis.openapi.models.operations.StoreReleasesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreReleasesGetPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreReleasesGetRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2340,19 +2377,20 @@ public class Distribute {
     /**
      * Returns the latest release published in a store.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StoreReleasesGetLatestResponse storeReleasesGetLatest(org.openapis.openapi.models.operations.StoreReleasesGetLatestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StoreReleasesGetLatestResponse storeReleasesGetLatest(org.openapis.openapi.models.operations.StoreReleasesGetLatestRequest request, org.openapis.openapi.models.operations.StoreReleasesGetLatestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreReleasesGetLatestPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/latest_release", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreReleasesGetLatestRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/latest_release", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2387,19 +2425,20 @@ public class Distribute {
     /**
      * Return the Error Details of release which failed in publishing.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StoreReleasesGetPublishErrorResponse storeReleasesGetPublishError(org.openapis.openapi.models.operations.StoreReleasesGetPublishErrorRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StoreReleasesGetPublishErrorResponse storeReleasesGetPublishError(org.openapis.openapi.models.operations.StoreReleasesGetPublishErrorRequest request, org.openapis.openapi.models.operations.StoreReleasesGetPublishErrorSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreReleasesGetPublishErrorPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}/publish_error_details", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreReleasesGetPublishErrorRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}/publish_error_details", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2434,19 +2473,20 @@ public class Distribute {
     /**
      * Return the Real time Status publishing of release from store.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StoreReleasesGetRealTimeStatusByReleaseIdResponse storeReleasesGetRealTimeStatusByReleaseId(org.openapis.openapi.models.operations.StoreReleasesGetRealTimeStatusByReleaseIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StoreReleasesGetRealTimeStatusByReleaseIdResponse storeReleasesGetRealTimeStatusByReleaseId(org.openapis.openapi.models.operations.StoreReleasesGetRealTimeStatusByReleaseIdRequest request, org.openapis.openapi.models.operations.StoreReleasesGetRealTimeStatusByReleaseIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreReleasesGetRealTimeStatusByReleaseIdPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}/realtimestatus", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreReleasesGetRealTimeStatusByReleaseIdRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases/{release_id}/realtimestatus", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2481,19 +2521,20 @@ public class Distribute {
     /**
      * Return all releases published  in a store
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StoreReleasesListResponse storeReleasesList(org.openapis.openapi.models.operations.StoreReleasesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StoreReleasesListResponse storeReleasesList(org.openapis.openapi.models.operations.StoreReleasesListRequest request, org.openapis.openapi.models.operations.StoreReleasesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreReleasesListPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreReleasesListRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}/releases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2528,24 +2569,25 @@ public class Distribute {
     /**
      * Create a new external store for the specified application.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StoresCreateResponse storesCreate(org.openapis.openapi.models.operations.StoresCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StoresCreateResponse storesCreate(org.openapis.openapi.models.operations.StoresCreateRequest request, org.openapis.openapi.models.operations.StoresCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoresCreatePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoresCreateRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2580,21 +2622,22 @@ public class Distribute {
     /**
      * delete the store based on specific store name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StoresDeleteResponse storesDelete(org.openapis.openapi.models.operations.StoresDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StoresDeleteResponse storesDelete(org.openapis.openapi.models.operations.StoresDeleteRequest request, org.openapis.openapi.models.operations.StoresDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoresDeletePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoresDeleteRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "string");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "string");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2623,19 +2666,20 @@ public class Distribute {
     /**
      * Return the store details for specified store name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StoresGetResponse storesGet(org.openapis.openapi.models.operations.StoresGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StoresGetResponse storesGet(org.openapis.openapi.models.operations.StoresGetRequest request, org.openapis.openapi.models.operations.StoresGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoresGetPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoresGetRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2670,19 +2714,20 @@ public class Distribute {
     /**
      * Get all the store details from Storage store table for a particular application.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StoresListResponse storesList(org.openapis.openapi.models.operations.StoresListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StoresListResponse storesList(org.openapis.openapi.models.operations.StoresListRequest request, org.openapis.openapi.models.operations.StoresListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoresListPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoresListRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2709,24 +2754,25 @@ public class Distribute {
     /**
      * Update the store.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StoresPatchResponse storesPatch(org.openapis.openapi.models.operations.StoresPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StoresPatchResponse storesPatch(org.openapis.openapi.models.operations.StoresPatchRequest request, org.openapis.openapi.models.operations.StoresPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoresPatchPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoresPatchRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/distribution_stores/{store_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

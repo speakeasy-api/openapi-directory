@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.BatchDeleteBuildsXAmzTargetEnum;
-import org.openapis.openapi.models.operations.BatchDeleteBuildsHeaders;
 import org.openapis.openapi.models.operations.BatchDeleteBuildsRequest;
 import org.openapis.openapi.models.operations.BatchDeleteBuildsResponse;
 import org.openapis.openapi.models.shared.BatchDeleteBuildsInput;
@@ -15,32 +14,27 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchDeleteBuildsRequest req = new BatchDeleteBuildsRequest() {{
-                headers = new BatchDeleteBuildsHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "CodeBuild_20161006.BatchDeleteBuilds";
-                }};
-                request = new BatchDeleteBuildsInput() {{
+                batchDeleteBuildsInput = new BatchDeleteBuildsInput() {{
                     ids = new String[]{{
-                        add("vel"),
-                        add("error"),
-                        add("deserunt"),
-                        add("suscipit"),
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "unde";
+                xAmzContentSha256 = "nulla";
+                xAmzCredential = "corrupti";
+                xAmzDate = "illum";
+                xAmzSecurityToken = "vel";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "deserunt";
+                xAmzTarget = "CodeBuild_20161006.BatchDeleteBuilds";
+            }}            
 
             BatchDeleteBuildsResponse res = sdk.batchDeleteBuilds(req);
 

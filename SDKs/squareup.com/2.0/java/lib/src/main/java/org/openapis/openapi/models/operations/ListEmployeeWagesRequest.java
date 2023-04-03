@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListEmployeeWagesRequest {
-    
-    public ListEmployeeWagesQueryParams queryParams;
-    public ListEmployeeWagesRequest withQueryParams(ListEmployeeWagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A pointer to the next page of `EmployeeWage` results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListEmployeeWagesRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * Filter the returned wages to only those that are associated with the specified employee.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=employee_id")
+    public String employeeId;
+    public ListEmployeeWagesRequest withEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
+        return this;
+    }
     
-    public ListEmployeeWagesSecurity security;
-    public ListEmployeeWagesRequest withSecurity(ListEmployeeWagesSecurity security) {
-        this.security = security;
+    /**
+     * The maximum number of `EmployeeWage` results to return per page. The number can range between
+     * 1 and 200. The default is 200.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListEmployeeWagesRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

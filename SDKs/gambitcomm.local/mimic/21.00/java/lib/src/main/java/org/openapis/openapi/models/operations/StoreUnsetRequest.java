@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoreUnsetRequest {
-    
-    public StoreUnsetPathParams pathParams;
-    public StoreUnsetRequest withPathParams(StoreUnsetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Variable name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=var")
+    public String var;
+    public StoreUnsetRequest withVar(String var) {
+        this.var = var;
         return this;
     }
     

@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserRequest {
-    
-    public GetUserPathParams pathParams;
-    public GetUserRequest withPathParams(GetUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/octet-stream")
+    public byte[] requestBody;
+    public GetUserRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/octet-stream")
-    public byte[] request;
-    public GetUserRequest withRequest(byte[] request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public GetUserRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

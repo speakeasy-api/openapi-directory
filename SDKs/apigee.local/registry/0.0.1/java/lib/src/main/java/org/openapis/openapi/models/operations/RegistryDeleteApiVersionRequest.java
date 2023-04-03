@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryDeleteApiVersionRequest {
-    
-    public RegistryDeleteApiVersionPathParams pathParams;
-    public RegistryDeleteApiVersionRequest withPathParams(RegistryDeleteApiVersionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The api id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
+    public String api;
+    public RegistryDeleteApiVersionRequest withApi(String api) {
+        this.api = api;
         return this;
     }
     
+    /**
+     * If set to true, any child resources will also be deleted. (Otherwise, the request will only work if there are no child resources.)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=force")
+    public Boolean force;
+    public RegistryDeleteApiVersionRequest withForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
     
-    public RegistryDeleteApiVersionQueryParams queryParams;
-    public RegistryDeleteApiVersionRequest withQueryParams(RegistryDeleteApiVersionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryDeleteApiVersionRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryDeleteApiVersionRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * The version id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public RegistryDeleteApiVersionRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

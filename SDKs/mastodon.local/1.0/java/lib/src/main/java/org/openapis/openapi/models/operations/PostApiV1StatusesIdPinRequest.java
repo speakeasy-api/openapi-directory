@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV1StatusesIdPinRequest {
-    
-    public PostApiV1StatusesIdPinPathParams pathParams;
-    public PostApiV1StatusesIdPinRequest withPathParams(PostApiV1StatusesIdPinPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostApiV1StatusesIdPinSecurity security;
-    public PostApiV1StatusesIdPinRequest withSecurity(PostApiV1StatusesIdPinSecurity security) {
-        this.security = security;
+    /**
+     * Local ID of a status in the database.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostApiV1StatusesIdPinRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

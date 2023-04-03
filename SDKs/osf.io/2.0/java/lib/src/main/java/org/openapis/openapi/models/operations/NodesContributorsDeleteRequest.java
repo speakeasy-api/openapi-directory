@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesContributorsDeleteRequest {
+    /**
+     * The unique identifier of the node.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public String nodeId;
+    public NodesContributorsDeleteRequest withNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
     
-    public NodesContributorsDeletePathParams pathParams;
-    public NodesContributorsDeleteRequest withPathParams(NodesContributorsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public String userId;
+    public NodesContributorsDeleteRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

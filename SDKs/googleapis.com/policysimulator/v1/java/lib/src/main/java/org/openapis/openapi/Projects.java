@@ -34,27 +34,28 @@ public class Projects {
     /**
      * Creates and starts a Replay using the given ReplayConfig.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysCreateResponse policysimulatorProjectsLocationsReplaysCreate(org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysCreateResponse policysimulatorProjectsLocationsReplaysCreate(org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysCreateRequest request, org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysCreatePathParams.class, baseUrl, "/v1/{parent}/replays", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysCreateRequest.class, baseUrl, "/v1/{parent}/replays", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudPolicysimulatorV1ReplayInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class Projects {
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysOperationsListResponse policysimulatorProjectsLocationsReplaysOperationsList(org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysOperationsListResponse policysimulatorProjectsLocationsReplaysOperationsList(org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysOperationsListRequest request, org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysOperationsListPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysOperationsListRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class Projects {
     /**
      * Lists the results of running a Replay.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysResultsListResponse policysimulatorProjectsLocationsReplaysResultsList(org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysResultsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysResultsListResponse policysimulatorProjectsLocationsReplaysResultsList(org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysResultsListRequest request, org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysResultsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysResultsListPathParams.class, baseUrl, "/v1/{parent}/results", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysResultsListRequest.class, baseUrl, "/v1/{parent}/results", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysResultsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysResultsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

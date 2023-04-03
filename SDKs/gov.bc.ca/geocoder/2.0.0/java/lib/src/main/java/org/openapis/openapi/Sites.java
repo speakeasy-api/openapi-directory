@@ -36,13 +36,13 @@ public class Sites {
      */
     public org.openapis.openapi.models.operations.GetAddressesOutputFormatResponse getAddressesOutputFormat(org.openapis.openapi.models.operations.GetAddressesOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddressesOutputFormatPathParams.class, baseUrl, "/addresses.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddressesOutputFormatRequest.class, baseUrl, "/addresses.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAddressesOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAddressesOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -76,13 +76,13 @@ public class Sites {
      */
     public org.openapis.openapi.models.operations.GetSitesNearOutputFormatResponse getSitesNearOutputFormat(org.openapis.openapi.models.operations.GetSitesNearOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSitesNearOutputFormatPathParams.class, baseUrl, "/sites/near.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSitesNearOutputFormatRequest.class, baseUrl, "/sites/near.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSitesNearOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSitesNearOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -116,13 +116,13 @@ public class Sites {
      */
     public org.openapis.openapi.models.operations.GetSitesNearestOutputFormatResponse getSitesNearestOutputFormat(org.openapis.openapi.models.operations.GetSitesNearestOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSitesNearestOutputFormatPathParams.class, baseUrl, "/sites/nearest.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSitesNearestOutputFormatRequest.class, baseUrl, "/sites/nearest.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSitesNearestOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSitesNearestOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -156,13 +156,13 @@ public class Sites {
      */
     public org.openapis.openapi.models.operations.GetSitesWithinOutputFormatResponse getSitesWithinOutputFormat(org.openapis.openapi.models.operations.GetSitesWithinOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSitesWithinOutputFormatPathParams.class, baseUrl, "/sites/within.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSitesWithinOutputFormatRequest.class, baseUrl, "/sites/within.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSitesWithinOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSitesWithinOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -196,13 +196,13 @@ public class Sites {
      */
     public org.openapis.openapi.models.operations.GetSitesSiteIDOutputFormatResponse getSitesSiteIDOutputFormat(org.openapis.openapi.models.operations.GetSitesSiteIDOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSitesSiteIDOutputFormatPathParams.class, baseUrl, "/sites/{siteID}.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSitesSiteIDOutputFormatRequest.class, baseUrl, "/sites/{siteID}.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSitesSiteIDOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSitesSiteIDOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -236,13 +236,13 @@ public class Sites {
      */
     public org.openapis.openapi.models.operations.GetSitesSiteIDSubsitesOutputFormatResponse getSitesSiteIDSubsitesOutputFormat(org.openapis.openapi.models.operations.GetSitesSiteIDSubsitesOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSitesSiteIDSubsitesOutputFormatPathParams.class, baseUrl, "/sites/{siteID}/subsites.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSitesSiteIDSubsitesOutputFormatRequest.class, baseUrl, "/sites/{siteID}/subsites.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSitesSiteIDSubsitesOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSitesSiteIDSubsitesOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

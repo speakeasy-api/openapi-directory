@@ -38,7 +38,7 @@ public class Pulses {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsPulsesResponse getOfferingsOfferingIdAnalyticsPulses(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsPulsesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsPulsesPathParams.class, baseUrl, "/offerings/{offeringId}/analytics/pulses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsPulsesRequest.class, baseUrl, "/offerings/{offeringId}/analytics/pulses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -86,7 +86,7 @@ public class Pulses {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsPulsesPulseIdResponsesResponse getOfferingsOfferingIdAnalyticsPulsesPulseIdResponses(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsPulsesPulseIdResponsesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsPulsesPulseIdResponsesPathParams.class, baseUrl, "/offerings/{offeringId}/analytics/pulses/{pulseId}/responses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsPulsesPulseIdResponsesRequest.class, baseUrl, "/offerings/{offeringId}/analytics/pulses/{pulseId}/responses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

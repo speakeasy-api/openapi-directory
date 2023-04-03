@@ -39,13 +39,13 @@ public class DeletedApplications {
      */
     public org.openapis.openapi.models.operations.DeletedApplicationsListResponse deletedApplicationsList(org.openapis.openapi.models.operations.DeletedApplicationsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletedApplicationsListPathParams.class, baseUrl, "/{tenantID}/deletedApplications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletedApplicationsListRequest.class, baseUrl, "/{tenantID}/deletedApplications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeletedApplicationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeletedApplicationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -104,13 +104,13 @@ public class DeletedApplications {
      */
     public org.openapis.openapi.models.operations.DeletedApplicationsRestoreResponse deletedApplicationsRestore(org.openapis.openapi.models.operations.DeletedApplicationsRestoreRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletedApplicationsRestorePathParams.class, baseUrl, "/{tenantID}/deletedApplications/{objectId}/restore", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletedApplicationsRestoreRequest.class, baseUrl, "/{tenantID}/deletedApplications/{objectId}/restore", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeletedApplicationsRestoreQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeletedApplicationsRestoreRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

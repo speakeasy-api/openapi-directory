@@ -39,7 +39,7 @@ public class Web {
      */
     public org.openapis.openapi.models.operations.ProtocolWebGetArgsResponse protocolWebGetArgs(org.openapis.openapi.models.operations.ProtocolWebGetArgsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebGetArgsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/get/args", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebGetArgsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/get/args", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -81,7 +81,7 @@ public class Web {
      */
     public org.openapis.openapi.models.operations.ProtocolWebGetConfigResponse protocolWebGetConfig(org.openapis.openapi.models.operations.ProtocolWebGetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebGetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/get/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebGetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/get/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -123,7 +123,7 @@ public class Web {
      */
     public org.openapis.openapi.models.operations.ProtocolWebGetStatisticsResponse protocolWebGetStatistics(org.openapis.openapi.models.operations.ProtocolWebGetStatisticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebGetStatisticsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/get/statistics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebGetStatisticsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/get/statistics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -206,7 +206,7 @@ public class Web {
      */
     public org.openapis.openapi.models.operations.ProtocolWebGetTraceResponse protocolWebGetTrace(org.openapis.openapi.models.operations.ProtocolWebGetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebGetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/get/trace", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebGetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/get/trace", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -248,7 +248,7 @@ public class Web {
      */
     public org.openapis.openapi.models.operations.ProtocolWebPortAddResponse protocolWebPortAdd(org.openapis.openapi.models.operations.ProtocolWebPortAddRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebPortAddPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/port/add/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebPortAddRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/port/add/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -289,7 +289,7 @@ public class Web {
      */
     public org.openapis.openapi.models.operations.ProtocolWebPortExistsResponse protocolWebPortExists(org.openapis.openapi.models.operations.ProtocolWebPortExistsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebPortExistsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/port/exists/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebPortExistsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/port/exists/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -331,7 +331,7 @@ public class Web {
      */
     public org.openapis.openapi.models.operations.ProtocolWebPortRemoveResponse protocolWebPortRemove(org.openapis.openapi.models.operations.ProtocolWebPortRemoveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebPortRemovePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/port/remove/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebPortRemoveRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/port/remove/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -372,7 +372,7 @@ public class Web {
      */
     public org.openapis.openapi.models.operations.ProtocolWebPortSetResponse protocolWebPortSet(org.openapis.openapi.models.operations.ProtocolWebPortSetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebPortSetPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/port/set/{port}/{protocol}/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebPortSetRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/port/set/{port}/{protocol}/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -413,7 +413,7 @@ public class Web {
      */
     public org.openapis.openapi.models.operations.ProtocolWebPortStartResponse protocolWebPortStart(org.openapis.openapi.models.operations.ProtocolWebPortStartRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebPortStartPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/port/start/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebPortStartRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/port/start/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -454,7 +454,7 @@ public class Web {
      */
     public org.openapis.openapi.models.operations.ProtocolWebPortStopResponse protocolWebPortStop(org.openapis.openapi.models.operations.ProtocolWebPortStopRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebPortStopPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/port/stop/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebPortStopRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/port/stop/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -495,7 +495,7 @@ public class Web {
      */
     public org.openapis.openapi.models.operations.ProtocolWebSetConfigResponse protocolWebSetConfig(org.openapis.openapi.models.operations.ProtocolWebSetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebSetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/set/config/{argument}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebSetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/set/config/{argument}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -536,7 +536,7 @@ public class Web {
      */
     public org.openapis.openapi.models.operations.ProtocolWebSetTraceResponse protocolWebSetTrace(org.openapis.openapi.models.operations.ProtocolWebSetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebSetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/set/trace/{enableOrNot}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolWebSetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/web/set/trace/{enableOrNot}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

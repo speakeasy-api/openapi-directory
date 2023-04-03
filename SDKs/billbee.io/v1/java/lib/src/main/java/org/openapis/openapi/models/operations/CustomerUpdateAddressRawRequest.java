@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomerUpdateAddressRawRequest {
-    
-    public CustomerUpdateAddressRawPathParams pathParams;
-    public CustomerUpdateAddressRawRequest withPathParams(CustomerUpdateAddressRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The updated address. Please query an address via (todo) to see all fields. Note that Id and CustomerId cannot be changed.
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public CustomerUpdateAddressRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public CustomerUpdateAddressRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The id of the address
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CustomerUpdateAddressRawRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

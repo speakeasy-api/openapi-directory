@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FolderSettingsPostFormRequest {
-    
-    public FolderSettingsPostFormPathParams pathParams;
-    public FolderSettingsPostFormRequest withPathParams(FolderSettingsPostFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The folder or meter data
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.FolderSettings request;
-    public FolderSettingsPostFormRequest withRequest(org.openapis.openapi.models.shared.FolderSettings request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FolderSettings folderSettings;
+    public FolderSettingsPostFormRequest withFolderSettings(org.openapis.openapi.models.shared.FolderSettings folderSettings) {
+        this.folderSettings = folderSettings;
+        return this;
+    }
+    
+    /**
+     * The ID of the folder or meter to edit. Use and empty ID to add a new folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public FolderSettingsPostFormRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

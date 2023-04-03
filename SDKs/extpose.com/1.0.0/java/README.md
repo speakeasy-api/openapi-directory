@@ -17,10 +17,7 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetUserExtensionsSecurity;
-import org.openapis.openapi.models.operations.GetUserExtensionsRequest;
 import org.openapis.openapi.models.operations.GetUserExtensionsResponse;
-import org.openapis.openapi.models.shared.SchemeAPIKey;
 
 public class Application {
     public static void main(String[] args) {
@@ -28,15 +25,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetUserExtensionsRequest req = new GetUserExtensionsRequest() {{
-                security = new GetUserExtensionsSecurity() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-            }};            
-
-            GetUserExtensionsResponse res = sdk.user.getUserExtensions(req);
+            GetUserExtensionsResponse res = sdk.user.getUserExtensions();
 
             if (res.extensions.isPresent()) {
                 // handle response
@@ -48,7 +37,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### user

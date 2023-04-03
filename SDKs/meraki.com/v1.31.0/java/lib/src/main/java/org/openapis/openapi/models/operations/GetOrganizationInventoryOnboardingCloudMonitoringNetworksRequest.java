@@ -4,20 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationInventoryOnboardingCloudMonitoringNetworksRequest {
-    
-    public GetOrganizationInventoryOnboardingCloudMonitoringNetworksPathParams pathParams;
-    public GetOrganizationInventoryOnboardingCloudMonitoringNetworksRequest withPathParams(GetOrganizationInventoryOnboardingCloudMonitoringNetworksPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Device Type switch or wireless controller
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceType")
+    public GetOrganizationInventoryOnboardingCloudMonitoringNetworksDeviceTypeEnum deviceType;
+    public GetOrganizationInventoryOnboardingCloudMonitoringNetworksRequest withDeviceType(GetOrganizationInventoryOnboardingCloudMonitoringNetworksDeviceTypeEnum deviceType) {
+        this.deviceType = deviceType;
         return this;
     }
     
+    /**
+     * A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
+    public String endingBefore;
+    public GetOrganizationInventoryOnboardingCloudMonitoringNetworksRequest withEndingBefore(String endingBefore) {
+        this.endingBefore = endingBefore;
+        return this;
+    }
     
-    public GetOrganizationInventoryOnboardingCloudMonitoringNetworksQueryParams queryParams;
-    public GetOrganizationInventoryOnboardingCloudMonitoringNetworksRequest withQueryParams(GetOrganizationInventoryOnboardingCloudMonitoringNetworksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationInventoryOnboardingCloudMonitoringNetworksRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    
+    /**
+     * The number of entries per page returned. Acceptable range is 3 - 100000. Default is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public Long perPage;
+    public GetOrganizationInventoryOnboardingCloudMonitoringNetworksRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
+    public String startingAfter;
+    public GetOrganizationInventoryOnboardingCloudMonitoringNetworksRequest withStartingAfter(String startingAfter) {
+        this.startingAfter = startingAfter;
         return this;
     }
     

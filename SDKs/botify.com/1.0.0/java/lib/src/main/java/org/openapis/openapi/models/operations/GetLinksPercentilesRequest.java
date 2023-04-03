@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLinksPercentilesRequest {
+    /**
+     * Analysis' identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
+    public String analysisSlug;
+    public GetLinksPercentilesRequest withAnalysisSlug(String analysisSlug) {
+        this.analysisSlug = analysisSlug;
+        return this;
+    }
     
-    public GetLinksPercentilesPathParams pathParams;
-    public GetLinksPercentilesRequest withPathParams(GetLinksPercentilesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Project's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
+    public String projectSlug;
+    public GetLinksPercentilesRequest withProjectSlug(String projectSlug) {
+        this.projectSlug = projectSlug;
+        return this;
+    }
+    
+    /**
+     * User's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetLinksPercentilesRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AddNotificationChannelsPathParams;
-import org.openapis.openapi.models.operations.AddNotificationChannelsHeaders;
 import org.openapis.openapi.models.operations.AddNotificationChannelsRequestBody;
 import org.openapis.openapi.models.operations.AddNotificationChannelsRequest;
 import org.openapis.openapi.models.operations.AddNotificationChannelsResponse;
@@ -17,26 +15,12 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddNotificationChannelsRequest req = new AddNotificationChannelsRequest() {{
-                pathParams = new AddNotificationChannelsPathParams() {{
-                    profilingGroupName = "corrupti";
-                }};
-                headers = new AddNotificationChannelsHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-                request = new AddNotificationChannelsRequestBody() {{
+                requestBody = new AddNotificationChannelsRequestBody() {{
                     channels = new org.openapis.openapi.models.shared.Channel[]{{
                         add(new Channel() {{
                             eventPublishers = new org.openapis.openapi.models.shared.EventPublisherEnum[]{{
@@ -44,19 +28,38 @@ public class Application {
                                 add("AnomalyDetection"),
                                 add("AnomalyDetection"),
                             }};
-                            id = "deserunt";
-                            uri = "http://innocent-effect.org";
+                            id = "distinctio";
+                            uri = "https://outstanding-strait.name";
                         }}),
                         add(new Channel() {{
                             eventPublishers = new org.openapis.openapi.models.shared.EventPublisherEnum[]{{
                                 add("AnomalyDetection"),
+                                add("AnomalyDetection"),
+                                add("AnomalyDetection"),
+                                add("AnomalyDetection"),
                             }};
-                            id = "delectus";
-                            uri = "http://hideous-jam.net";
+                            id = "vel";
+                            uri = "https://present-giggle.info";
+                        }}),
+                        add(new Channel() {{
+                            eventPublishers = new org.openapis.openapi.models.shared.EventPublisherEnum[]{{
+                                add("AnomalyDetection"),
+                                add("AnomalyDetection"),
+                            }};
+                            id = "debitis";
+                            uri = "http://whirlwind-diver.info";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "molestiae";
+                xAmzContentSha256 = "minus";
+                xAmzCredential = "placeat";
+                xAmzDate = "voluptatum";
+                xAmzSecurityToken = "iusto";
+                xAmzSignature = "excepturi";
+                xAmzSignedHeaders = "nisi";
+                profilingGroupName = "recusandae";
+            }}            
 
             AddNotificationChannelsResponse res = sdk.addNotificationChannels(req);
 

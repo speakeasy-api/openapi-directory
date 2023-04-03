@@ -4,27 +4,49 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupMembersRequest {
-    
-    public GroupMembersPathParams pathParams;
-    public GroupMembersRequest withPathParams(GroupMembersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The group ID.&lt;br&gt;
+     * Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public GroupMembersRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     
-    
-    public GroupMembersQueryParams queryParams;
-    public GroupMembersRequest withQueryParams(GroupMembersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public GroupMembersRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
         return this;
     }
     
+    /**
+     * **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use "next_page_token" for pagination instead of this field.
+     * 
+     * The page number of the current page in the returned records.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_number")
+    public Long pageNumber;
+    public GroupMembersRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
     
-    public GroupMembersSecurity security;
-    public GroupMembersRequest withSecurity(GroupMembersSecurity security) {
-        this.security = security;
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GroupMembersRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

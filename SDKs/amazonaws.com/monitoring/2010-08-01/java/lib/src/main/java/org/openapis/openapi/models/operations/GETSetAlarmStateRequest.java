@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetAlarmStateRequest {
-    
-    public GETSetAlarmStateQueryParams queryParams;
-    public GETSetAlarmStateRequest withQueryParams(GETSetAlarmStateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETSetAlarmStateActionEnum action;
+    public GETSetAlarmStateRequest withAction(GETSetAlarmStateActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the alarm.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AlarmName")
+    public String alarmName;
+    public GETSetAlarmStateRequest withAlarmName(String alarmName) {
+        this.alarmName = alarmName;
+        return this;
+    }
     
-    public GETSetAlarmStateHeaders headers;
-    public GETSetAlarmStateRequest withHeaders(GETSetAlarmStateHeaders headers) {
-        this.headers = headers;
+    /**
+     * The reason that this alarm is set to this specific state, in text format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StateReason")
+    public String stateReason;
+    public GETSetAlarmStateRequest withStateReason(String stateReason) {
+        this.stateReason = stateReason;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The reason that this alarm is set to this specific state, in JSON format.&lt;/p&gt; &lt;p&gt;For SNS or EC2 alarm actions, this is just informational. But for EC2 Auto Scaling or application Auto Scaling alarm actions, the Auto Scaling policy uses the information in this field to take the correct action.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StateReasonData")
+    public String stateReasonData;
+    public GETSetAlarmStateRequest withStateReasonData(String stateReasonData) {
+        this.stateReasonData = stateReasonData;
+        return this;
+    }
+    
+    /**
+     * The value of the state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StateValue")
+    public GETSetAlarmStateStateValueEnum stateValue;
+    public GETSetAlarmStateRequest withStateValue(GETSetAlarmStateStateValueEnum stateValue) {
+        this.stateValue = stateValue;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETSetAlarmStateVersionEnum version;
+    public GETSetAlarmStateRequest withVersion(GETSetAlarmStateVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETSetAlarmStateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETSetAlarmStateRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETSetAlarmStateRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETSetAlarmStateRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETSetAlarmStateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETSetAlarmStateRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETSetAlarmStateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

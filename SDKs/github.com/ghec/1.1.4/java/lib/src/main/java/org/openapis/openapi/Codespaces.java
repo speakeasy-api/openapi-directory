@@ -50,7 +50,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesAddRepositoryForSecretForAuthenticatedUserResponse codespacesAddRepositoryForSecretForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesAddRepositoryForSecretForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesAddRepositoryForSecretForAuthenticatedUserPathParams.class, baseUrl, "/user/codespaces/secrets/{secret_name}/repositories/{repository_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesAddRepositoryForSecretForAuthenticatedUserRequest.class, baseUrl, "/user/codespaces/secrets/{secret_name}/repositories/{repository_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -92,7 +92,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesAddSelectedRepoToOrgSecretResponse codespacesAddSelectedRepoToOrgSecret(org.openapis.openapi.models.operations.CodespacesAddSelectedRepoToOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesAddSelectedRepoToOrgSecretPathParams.class, baseUrl, "/orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesAddSelectedRepoToOrgSecretRequest.class, baseUrl, "/orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -146,7 +146,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesCodespaceMachinesForAuthenticatedUserResponse codespacesCodespaceMachinesForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesCodespaceMachinesForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesCodespaceMachinesForAuthenticatedUserPathParams.class, baseUrl, "/user/codespaces/{codespace_name}/machines", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesCodespaceMachinesForAuthenticatedUserRequest.class, baseUrl, "/user/codespaces/{codespace_name}/machines", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -200,7 +200,7 @@ public class Codespaces {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CodespacesCreateForAuthenticatedUserResponse codespacesCreateForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesCreateForAuthenticatedUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CodespacesCreateForAuthenticatedUserResponse codespacesCreateForAuthenticatedUser(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user/codespaces");
         
@@ -337,12 +337,12 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesCreateOrUpdateOrgSecretResponse codespacesCreateOrUpdateOrgSecret(org.openapis.openapi.models.operations.CodespacesCreateOrUpdateOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesCreateOrUpdateOrgSecretPathParams.class, baseUrl, "/orgs/{org}/codespaces/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesCreateOrUpdateOrgSecretRequest.class, baseUrl, "/orgs/{org}/codespaces/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -475,12 +475,12 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesCreateOrUpdateRepoSecretResponse codespacesCreateOrUpdateRepoSecret(org.openapis.openapi.models.operations.CodespacesCreateOrUpdateRepoSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesCreateOrUpdateRepoSecretPathParams.class, baseUrl, "/repos/{owner}/{repo}/codespaces/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesCreateOrUpdateRepoSecretRequest.class, baseUrl, "/repos/{owner}/{repo}/codespaces/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -599,12 +599,12 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesCreateOrUpdateSecretForAuthenticatedUserResponse codespacesCreateOrUpdateSecretForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesCreateOrUpdateSecretForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesCreateOrUpdateSecretForAuthenticatedUserPathParams.class, baseUrl, "/user/codespaces/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesCreateOrUpdateSecretForAuthenticatedUserRequest.class, baseUrl, "/user/codespaces/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -666,12 +666,12 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesCreateWithPrForAuthenticatedUserResponse codespacesCreateWithPrForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesCreateWithPrForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesCreateWithPrForAuthenticatedUserPathParams.class, baseUrl, "/repos/{owner}/{repo}/pulls/{pull_number}/codespaces", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesCreateWithPrForAuthenticatedUserRequest.class, baseUrl, "/repos/{owner}/{repo}/pulls/{pull_number}/codespaces", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -731,12 +731,12 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesCreateWithRepoForAuthenticatedUserResponse codespacesCreateWithRepoForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesCreateWithRepoForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesCreateWithRepoForAuthenticatedUserPathParams.class, baseUrl, "/repos/{owner}/{repo}/codespaces", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesCreateWithRepoForAuthenticatedUserRequest.class, baseUrl, "/repos/{owner}/{repo}/codespaces", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -807,12 +807,12 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesDeleteCodespacesBillingUsersResponse codespacesDeleteCodespacesBillingUsers(org.openapis.openapi.models.operations.CodespacesDeleteCodespacesBillingUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesDeleteCodespacesBillingUsersPathParams.class, baseUrl, "/orgs/{org}/codespaces/billing/selected_users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesDeleteCodespacesBillingUsersRequest.class, baseUrl, "/orgs/{org}/codespaces/billing/selected_users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -866,7 +866,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesDeleteForAuthenticatedUserResponse codespacesDeleteForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesDeleteForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesDeleteForAuthenticatedUserPathParams.class, baseUrl, "/user/codespaces/{codespace_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesDeleteForAuthenticatedUserRequest.class, baseUrl, "/user/codespaces/{codespace_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -918,7 +918,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesDeleteFromOrganizationResponse codespacesDeleteFromOrganization(org.openapis.openapi.models.operations.CodespacesDeleteFromOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesDeleteFromOrganizationPathParams.class, baseUrl, "/orgs/{org}/members/{username}/codespaces/{codespace_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesDeleteFromOrganizationRequest.class, baseUrl, "/orgs/{org}/members/{username}/codespaces/{codespace_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -968,7 +968,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesDeleteOrgSecretResponse codespacesDeleteOrgSecret(org.openapis.openapi.models.operations.CodespacesDeleteOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesDeleteOrgSecretPathParams.class, baseUrl, "/orgs/{org}/codespaces/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesDeleteOrgSecretRequest.class, baseUrl, "/orgs/{org}/codespaces/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1010,7 +1010,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesDeleteRepoSecretResponse codespacesDeleteRepoSecret(org.openapis.openapi.models.operations.CodespacesDeleteRepoSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesDeleteRepoSecretPathParams.class, baseUrl, "/repos/{owner}/{repo}/codespaces/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesDeleteRepoSecretRequest.class, baseUrl, "/repos/{owner}/{repo}/codespaces/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1048,7 +1048,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesDeleteSecretForAuthenticatedUserResponse codespacesDeleteSecretForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesDeleteSecretForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesDeleteSecretForAuthenticatedUserPathParams.class, baseUrl, "/user/codespaces/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesDeleteSecretForAuthenticatedUserRequest.class, baseUrl, "/user/codespaces/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1088,7 +1088,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesExportForAuthenticatedUserResponse codespacesExportForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesExportForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesExportForAuthenticatedUserPathParams.class, baseUrl, "/user/codespaces/{codespace_name}/exports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesExportForAuthenticatedUserRequest.class, baseUrl, "/user/codespaces/{codespace_name}/exports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1146,13 +1146,13 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesGetCodespacesForUserInOrgResponse codespacesGetCodespacesForUserInOrg(org.openapis.openapi.models.operations.CodespacesGetCodespacesForUserInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesGetCodespacesForUserInOrgPathParams.class, baseUrl, "/orgs/{org}/members/{username}/codespaces", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesGetCodespacesForUserInOrgRequest.class, baseUrl, "/orgs/{org}/members/{username}/codespaces", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesGetCodespacesForUserInOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesGetCodespacesForUserInOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1206,7 +1206,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesGetExportDetailsForAuthenticatedUserResponse codespacesGetExportDetailsForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesGetExportDetailsForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesGetExportDetailsForAuthenticatedUserPathParams.class, baseUrl, "/user/codespaces/{codespace_name}/exports/{export_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesGetExportDetailsForAuthenticatedUserRequest.class, baseUrl, "/user/codespaces/{codespace_name}/exports/{export_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1258,7 +1258,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesGetForAuthenticatedUserResponse codespacesGetForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesGetForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesGetForAuthenticatedUserPathParams.class, baseUrl, "/user/codespaces/{codespace_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesGetForAuthenticatedUserRequest.class, baseUrl, "/user/codespaces/{codespace_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1308,7 +1308,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesGetOrgPublicKeyResponse codespacesGetOrgPublicKey(org.openapis.openapi.models.operations.CodespacesGetOrgPublicKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesGetOrgPublicKeyPathParams.class, baseUrl, "/orgs/{org}/codespaces/secrets/public-key", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesGetOrgPublicKeyRequest.class, baseUrl, "/orgs/{org}/codespaces/secrets/public-key", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1349,7 +1349,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesGetOrgSecretResponse codespacesGetOrgSecret(org.openapis.openapi.models.operations.CodespacesGetOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesGetOrgSecretPathParams.class, baseUrl, "/orgs/{org}/codespaces/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesGetOrgSecretRequest.class, baseUrl, "/orgs/{org}/codespaces/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1434,7 +1434,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesGetRepoPublicKeyResponse codespacesGetRepoPublicKey(org.openapis.openapi.models.operations.CodespacesGetRepoPublicKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesGetRepoPublicKeyPathParams.class, baseUrl, "/repos/{owner}/{repo}/codespaces/secrets/public-key", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesGetRepoPublicKeyRequest.class, baseUrl, "/repos/{owner}/{repo}/codespaces/secrets/public-key", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1474,7 +1474,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesGetRepoSecretResponse codespacesGetRepoSecret(org.openapis.openapi.models.operations.CodespacesGetRepoSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesGetRepoSecretPathParams.class, baseUrl, "/repos/{owner}/{repo}/codespaces/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesGetRepoSecretRequest.class, baseUrl, "/repos/{owner}/{repo}/codespaces/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1518,7 +1518,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesGetSecretForAuthenticatedUserResponse codespacesGetSecretForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesGetSecretForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesGetSecretForAuthenticatedUserPathParams.class, baseUrl, "/user/codespaces/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesGetSecretForAuthenticatedUserRequest.class, baseUrl, "/user/codespaces/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1563,13 +1563,13 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesListDevcontainersInRepositoryForAuthenticatedUserResponse codespacesListDevcontainersInRepositoryForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesListDevcontainersInRepositoryForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesListDevcontainersInRepositoryForAuthenticatedUserPathParams.class, baseUrl, "/repos/{owner}/{repo}/codespaces/devcontainers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesListDevcontainersInRepositoryForAuthenticatedUserRequest.class, baseUrl, "/repos/{owner}/{repo}/codespaces/devcontainers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesListDevcontainersInRepositoryForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesListDevcontainersInRepositoryForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1641,7 +1641,7 @@ public class Codespaces {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesListForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesListForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1693,13 +1693,13 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesListInOrganizationResponse codespacesListInOrganization(org.openapis.openapi.models.operations.CodespacesListInOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesListInOrganizationPathParams.class, baseUrl, "/orgs/{org}/codespaces", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesListInOrganizationRequest.class, baseUrl, "/orgs/{org}/codespaces", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesListInOrganizationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesListInOrganizationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1753,13 +1753,13 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesListInRepositoryForAuthenticatedUserResponse codespacesListInRepositoryForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesListInRepositoryForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesListInRepositoryForAuthenticatedUserPathParams.class, baseUrl, "/repos/{owner}/{repo}/codespaces", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesListInRepositoryForAuthenticatedUserRequest.class, baseUrl, "/repos/{owner}/{repo}/codespaces", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesListInRepositoryForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesListInRepositoryForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1808,13 +1808,13 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesListOrgSecretsResponse codespacesListOrgSecrets(org.openapis.openapi.models.operations.CodespacesListOrgSecretsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesListOrgSecretsPathParams.class, baseUrl, "/orgs/{org}/codespaces/secrets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesListOrgSecretsRequest.class, baseUrl, "/orgs/{org}/codespaces/secrets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesListOrgSecretsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesListOrgSecretsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1856,13 +1856,13 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesListRepoSecretsResponse codespacesListRepoSecrets(org.openapis.openapi.models.operations.CodespacesListRepoSecretsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesListRepoSecretsPathParams.class, baseUrl, "/repos/{owner}/{repo}/codespaces/secrets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesListRepoSecretsRequest.class, baseUrl, "/repos/{owner}/{repo}/codespaces/secrets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesListRepoSecretsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesListRepoSecretsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1908,7 +1908,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesListRepositoriesForSecretForAuthenticatedUserResponse codespacesListRepositoriesForSecretForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesListRepositoriesForSecretForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesListRepositoriesForSecretForAuthenticatedUserPathParams.class, baseUrl, "/user/codespaces/secrets/{secret_name}/repositories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesListRepositoriesForSecretForAuthenticatedUserRequest.class, baseUrl, "/user/codespaces/secrets/{secret_name}/repositories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1967,7 +1967,7 @@ public class Codespaces {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesListSecretsForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesListSecretsForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2009,13 +2009,13 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesListSelectedReposForOrgSecretResponse codespacesListSelectedReposForOrgSecret(org.openapis.openapi.models.operations.CodespacesListSelectedReposForOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesListSelectedReposForOrgSecretPathParams.class, baseUrl, "/orgs/{org}/codespaces/secrets/{secret_name}/repositories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesListSelectedReposForOrgSecretRequest.class, baseUrl, "/orgs/{org}/codespaces/secrets/{secret_name}/repositories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesListSelectedReposForOrgSecretQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesListSelectedReposForOrgSecretRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2067,13 +2067,13 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesPreFlightWithRepoForAuthenticatedUserResponse codespacesPreFlightWithRepoForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesPreFlightWithRepoForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesPreFlightWithRepoForAuthenticatedUserPathParams.class, baseUrl, "/repos/{owner}/{repo}/codespaces/new", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesPreFlightWithRepoForAuthenticatedUserRequest.class, baseUrl, "/repos/{owner}/{repo}/codespaces/new", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesPreFlightWithRepoForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesPreFlightWithRepoForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2129,12 +2129,12 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesPublishForAuthenticatedUserResponse codespacesPublishForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesPublishForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesPublishForAuthenticatedUserPathParams.class, baseUrl, "/user/codespaces/{codespace_name}/publish", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesPublishForAuthenticatedUserRequest.class, baseUrl, "/user/codespaces/{codespace_name}/publish", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2192,7 +2192,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesRemoveRepositoryForSecretForAuthenticatedUserResponse codespacesRemoveRepositoryForSecretForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesRemoveRepositoryForSecretForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesRemoveRepositoryForSecretForAuthenticatedUserPathParams.class, baseUrl, "/user/codespaces/secrets/{secret_name}/repositories/{repository_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesRemoveRepositoryForSecretForAuthenticatedUserRequest.class, baseUrl, "/user/codespaces/secrets/{secret_name}/repositories/{repository_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -2234,7 +2234,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesRemoveSelectedRepoFromOrgSecretResponse codespacesRemoveSelectedRepoFromOrgSecret(org.openapis.openapi.models.operations.CodespacesRemoveSelectedRepoFromOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesRemoveSelectedRepoFromOrgSecretPathParams.class, baseUrl, "/orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesRemoveSelectedRepoFromOrgSecretRequest.class, baseUrl, "/orgs/{org}/codespaces/secrets/{secret_name}/repositories/{repository_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -2288,13 +2288,13 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesRepoMachinesForAuthenticatedUserResponse codespacesRepoMachinesForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesRepoMachinesForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesRepoMachinesForAuthenticatedUserPathParams.class, baseUrl, "/repos/{owner}/{repo}/codespaces/machines", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesRepoMachinesForAuthenticatedUserRequest.class, baseUrl, "/repos/{owner}/{repo}/codespaces/machines", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesRepoMachinesForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodespacesRepoMachinesForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2345,12 +2345,12 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesSetCodespacesBillingResponse codespacesSetCodespacesBilling(org.openapis.openapi.models.operations.CodespacesSetCodespacesBillingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesSetCodespacesBillingPathParams.class, baseUrl, "/orgs/{org}/codespaces/billing", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesSetCodespacesBillingRequest.class, baseUrl, "/orgs/{org}/codespaces/billing", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2401,12 +2401,12 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesSetCodespacesBillingUsersResponse codespacesSetCodespacesBillingUsers(org.openapis.openapi.models.operations.CodespacesSetCodespacesBillingUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesSetCodespacesBillingUsersPathParams.class, baseUrl, "/orgs/{org}/codespaces/billing/selected_users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesSetCodespacesBillingUsersRequest.class, baseUrl, "/orgs/{org}/codespaces/billing/selected_users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2460,12 +2460,12 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesSetRepositoriesForSecretForAuthenticatedUserResponse codespacesSetRepositoriesForSecretForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesSetRepositoriesForSecretForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesSetRepositoriesForSecretForAuthenticatedUserPathParams.class, baseUrl, "/user/codespaces/secrets/{secret_name}/repositories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesSetRepositoriesForSecretForAuthenticatedUserRequest.class, baseUrl, "/user/codespaces/secrets/{secret_name}/repositories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2507,12 +2507,12 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesSetSelectedReposForOrgSecretResponse codespacesSetSelectedReposForOrgSecret(org.openapis.openapi.models.operations.CodespacesSetSelectedReposForOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesSetSelectedReposForOrgSecretPathParams.class, baseUrl, "/orgs/{org}/codespaces/secrets/{secret_name}/repositories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesSetSelectedReposForOrgSecretRequest.class, baseUrl, "/orgs/{org}/codespaces/secrets/{secret_name}/repositories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2558,7 +2558,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesStartForAuthenticatedUserResponse codespacesStartForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesStartForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesStartForAuthenticatedUserPathParams.class, baseUrl, "/user/codespaces/{codespace_name}/start", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesStartForAuthenticatedUserRequest.class, baseUrl, "/user/codespaces/{codespace_name}/start", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -2626,7 +2626,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesStopForAuthenticatedUserResponse codespacesStopForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesStopForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesStopForAuthenticatedUserPathParams.class, baseUrl, "/user/codespaces/{codespace_name}/stop", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesStopForAuthenticatedUserRequest.class, baseUrl, "/user/codespaces/{codespace_name}/stop", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -2676,7 +2676,7 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesStopInOrganizationResponse codespacesStopInOrganization(org.openapis.openapi.models.operations.CodespacesStopInOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesStopInOrganizationPathParams.class, baseUrl, "/orgs/{org}/members/{username}/codespaces/{codespace_name}/stop", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesStopInOrganizationRequest.class, baseUrl, "/orgs/{org}/members/{username}/codespaces/{codespace_name}/stop", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -2732,12 +2732,12 @@ public class Codespaces {
      */
     public org.openapis.openapi.models.operations.CodespacesUpdateForAuthenticatedUserResponse codespacesUpdateForAuthenticatedUser(org.openapis.openapi.models.operations.CodespacesUpdateForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesUpdateForAuthenticatedUserPathParams.class, baseUrl, "/user/codespaces/{codespace_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodespacesUpdateForAuthenticatedUserRequest.class, baseUrl, "/user/codespaces/{codespace_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

@@ -7,31 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateResourcePolicyStatementRequest {
-    
-    public CreateResourcePolicyStatementPathParams pathParams;
-    public CreateResourcePolicyStatementRequest withPathParams(CreateResourcePolicyStatementPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateResourcePolicyStatementQueryParams queryParams;
-    public CreateResourcePolicyStatementRequest withQueryParams(CreateResourcePolicyStatementQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public CreateResourcePolicyStatementHeaders headers;
-    public CreateResourcePolicyStatementRequest withHeaders(CreateResourcePolicyStatementHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateResourcePolicyStatementRequestBody request;
-    public CreateResourcePolicyStatementRequest withRequest(CreateResourcePolicyStatementRequestBody request) {
-        this.request = request;
+    public CreateResourcePolicyStatementRequestBody requestBody;
+    public CreateResourcePolicyStatementRequest withRequestBody(CreateResourcePolicyStatementRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public CreateResourcePolicyStatementRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public CreateResourcePolicyStatementRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public CreateResourcePolicyStatementRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public CreateResourcePolicyStatementRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public CreateResourcePolicyStatementRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public CreateResourcePolicyStatementRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public CreateResourcePolicyStatementRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The identifier of the revision of the policy to edit. If this revision ID doesn't match the current revision ID, Amazon Lex throws an exception.&lt;/p&gt; &lt;p&gt;If you don't specify a revision, Amazon Lex overwrites the contents of the policy with the new values.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expectedRevisionId")
+    public String expectedRevisionId;
+    public CreateResourcePolicyStatementRequest withExpectedRevisionId(String expectedRevisionId) {
+        this.expectedRevisionId = expectedRevisionId;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is attached to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resourceArn")
+    public String resourceArn;
+    public CreateResourcePolicyStatementRequest withResourceArn(String resourceArn) {
+        this.resourceArn = resourceArn;
         return this;
     }
     

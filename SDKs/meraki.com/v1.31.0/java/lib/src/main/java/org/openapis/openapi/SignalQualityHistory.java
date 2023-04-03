@@ -39,13 +39,13 @@ public class SignalQualityHistory {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSignalQualityHistoryResponse getNetworkWirelessSignalQualityHistory(org.openapis.openapi.models.operations.GetNetworkWirelessSignalQualityHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSignalQualityHistoryPathParams.class, baseUrl, "/networks/{networkId}/wireless/signalQualityHistory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSignalQualityHistoryRequest.class, baseUrl, "/networks/{networkId}/wireless/signalQualityHistory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessSignalQualityHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessSignalQualityHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -33,25 +33,26 @@ public class RegionDiskTypes {
     /**
      * Returns the specified regional disk type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionDiskTypesGetResponse computeRegionDiskTypesGet(org.openapis.openapi.models.operations.ComputeRegionDiskTypesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionDiskTypesGetResponse computeRegionDiskTypesGet(org.openapis.openapi.models.operations.ComputeRegionDiskTypesGetRequest request, org.openapis.openapi.models.operations.ComputeRegionDiskTypesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionDiskTypesGetPathParams.class, baseUrl, "/projects/{project}/regions/{region}/diskTypes/{diskType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionDiskTypesGetRequest.class, baseUrl, "/projects/{project}/regions/{region}/diskTypes/{diskType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionDiskTypesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionDiskTypesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class RegionDiskTypes {
     /**
      * Retrieves a list of regional disk types available to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionDiskTypesListResponse computeRegionDiskTypesList(org.openapis.openapi.models.operations.ComputeRegionDiskTypesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionDiskTypesListResponse computeRegionDiskTypesList(org.openapis.openapi.models.operations.ComputeRegionDiskTypesListRequest request, org.openapis.openapi.models.operations.ComputeRegionDiskTypesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionDiskTypesListPathParams.class, baseUrl, "/projects/{project}/regions/{region}/diskTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionDiskTypesListRequest.class, baseUrl, "/projects/{project}/regions/{region}/diskTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionDiskTypesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionDiskTypesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

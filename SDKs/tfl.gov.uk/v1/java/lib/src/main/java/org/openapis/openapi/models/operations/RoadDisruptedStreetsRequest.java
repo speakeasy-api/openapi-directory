@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RoadDisruptedStreetsRequest {
+    /**
+     * Optional, The end time to filter on.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public OffsetDateTime endDate;
+    public RoadDisruptedStreetsRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
+        return this;
+    }
     
-    public RoadDisruptedStreetsQueryParams queryParams;
-    public RoadDisruptedStreetsRequest withQueryParams(RoadDisruptedStreetsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Optional, the start time to filter on.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public OffsetDateTime startDate;
+    public RoadDisruptedStreetsRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
         return this;
     }
     

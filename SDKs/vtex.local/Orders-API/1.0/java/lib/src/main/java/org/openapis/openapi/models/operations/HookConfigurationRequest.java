@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HookConfigurationRequest {
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public HookConfigurationRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public HookConfigurationHeaders headers;
-    public HookConfigurationRequest withHeaders(HookConfigurationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public HookConfigurationRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.HookConfigurationRequest request;
-    public HookConfigurationRequest withRequest(org.openapis.openapi.models.shared.HookConfigurationRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.HookConfigurationRequest hookConfigurationRequest;
+    public HookConfigurationRequest withHookConfigurationRequest(org.openapis.openapi.models.shared.HookConfigurationRequest hookConfigurationRequest) {
+        this.hookConfigurationRequest = hookConfigurationRequest;
         return this;
     }
     

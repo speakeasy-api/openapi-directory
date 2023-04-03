@@ -86,18 +86,30 @@ public class CrossSelling {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.ProductSearchAccessoriesResponse productSearchAccessories(org.openapis.openapi.models.operations.ProductSearchAccessoriesRequest request) throws Exception {
+        return this.productSearchAccessories(request, null);
+    }
+
+    /**
+     * Get Product Search of Accessories
+     * Retrieves general information about the product's accessories.
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ProductSearchAccessoriesResponse productSearchAccessories(org.openapis.openapi.models.operations.ProductSearchAccessoriesRequest request, String serverURL) throws Exception {
         String baseUrl = PRODUCT_SEARCH_ACCESSORIES_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductSearchAccessoriesPathParams.class, baseUrl, "/api/catalog_system/pub/products/crossselling/accessories/{productId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductSearchAccessoriesRequest.class, baseUrl, "/api/catalog_system/pub/products/crossselling/accessories/{productId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -132,18 +144,30 @@ public class CrossSelling {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.ProductSearchShowTogetherResponse productSearchShowTogether(org.openapis.openapi.models.operations.ProductSearchShowTogetherRequest request) throws Exception {
+        return this.productSearchShowTogether(request, null);
+    }
+
+    /**
+     * Get Product Search of Show Together
+     * Retrieves general information about the products that are show together with the product in question.
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ProductSearchShowTogetherResponse productSearchShowTogether(org.openapis.openapi.models.operations.ProductSearchShowTogetherRequest request, String serverURL) throws Exception {
         String baseUrl = PRODUCT_SEARCH_SHOW_TOGETHER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductSearchShowTogetherPathParams.class, baseUrl, "/api/catalog_system/pub/products/crossselling/showtogether/{productId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductSearchShowTogetherRequest.class, baseUrl, "/api/catalog_system/pub/products/crossselling/showtogether/{productId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -178,18 +202,30 @@ public class CrossSelling {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.ProductSearchSimilarsResponse productSearchSimilars(org.openapis.openapi.models.operations.ProductSearchSimilarsRequest request) throws Exception {
+        return this.productSearchSimilars(request, null);
+    }
+
+    /**
+     * Get Product Search of Similars
+     * Retrieves general information about related product searches.
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ProductSearchSimilarsResponse productSearchSimilars(org.openapis.openapi.models.operations.ProductSearchSimilarsRequest request, String serverURL) throws Exception {
         String baseUrl = PRODUCT_SEARCH_SIMILARS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductSearchSimilarsPathParams.class, baseUrl, "/api/catalog_system/pub/products/crossselling/similars/{productId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductSearchSimilarsRequest.class, baseUrl, "/api/catalog_system/pub/products/crossselling/similars/{productId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -224,18 +260,30 @@ public class CrossSelling {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.ProductSearchSuggestionsResponse productSearchSuggestions(org.openapis.openapi.models.operations.ProductSearchSuggestionsRequest request) throws Exception {
+        return this.productSearchSuggestions(request, null);
+    }
+
+    /**
+     * Get Product Search of Suggestions
+     * Retrieves general information about other product suggestions related to the product.
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ProductSearchSuggestionsResponse productSearchSuggestions(org.openapis.openapi.models.operations.ProductSearchSuggestionsRequest request, String serverURL) throws Exception {
         String baseUrl = PRODUCT_SEARCH_SUGGESTIONS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductSearchSuggestionsPathParams.class, baseUrl, "/api/catalog_system/pub/products/crossselling/suggestions/{productId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductSearchSuggestionsRequest.class, baseUrl, "/api/catalog_system/pub/products/crossselling/suggestions/{productId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -270,18 +318,30 @@ public class CrossSelling {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.ProductSearchWhoBoughtAlsoBoughtResponse productSearchWhoBoughtAlsoBought(org.openapis.openapi.models.operations.ProductSearchWhoBoughtAlsoBoughtRequest request) throws Exception {
+        return this.productSearchWhoBoughtAlsoBought(request, null);
+    }
+
+    /**
+     * Get Product Search of Who Bought Also Bought
+     * Retrieves general information about other related products that the user also bought.
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ProductSearchWhoBoughtAlsoBoughtResponse productSearchWhoBoughtAlsoBought(org.openapis.openapi.models.operations.ProductSearchWhoBoughtAlsoBoughtRequest request, String serverURL) throws Exception {
         String baseUrl = PRODUCT_SEARCH_WHO_BOUGHT_ALSO_BOUGHT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductSearchWhoBoughtAlsoBoughtPathParams.class, baseUrl, "/api/catalog_system/pub/products/crossselling/whoboughtalsobought/{productId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductSearchWhoBoughtAlsoBoughtRequest.class, baseUrl, "/api/catalog_system/pub/products/crossselling/whoboughtalsobought/{productId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -322,18 +382,30 @@ public class CrossSelling {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.ProductSearchWhoSawAlsoBoughtResponse productSearchWhoSawAlsoBought(org.openapis.openapi.models.operations.ProductSearchWhoSawAlsoBoughtRequest request) throws Exception {
+        return this.productSearchWhoSawAlsoBought(request, null);
+    }
+
+    /**
+     * Get Product Search of Who Saw Also Bought
+     * Retrieves general information about other related products that the users saw and also bought.
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ProductSearchWhoSawAlsoBoughtResponse productSearchWhoSawAlsoBought(org.openapis.openapi.models.operations.ProductSearchWhoSawAlsoBoughtRequest request, String serverURL) throws Exception {
         String baseUrl = PRODUCT_SEARCH_WHO_SAW_ALSO_BOUGHT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductSearchWhoSawAlsoBoughtPathParams.class, baseUrl, "/api/catalog_system/pub/products/crossselling/whosawalsobought/{productId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductSearchWhoSawAlsoBoughtRequest.class, baseUrl, "/api/catalog_system/pub/products/crossselling/whosawalsobought/{productId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -374,18 +446,30 @@ public class CrossSelling {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.ProductSearchWhoSawAlsoSawResponse productSearchWhoSawAlsoSaw(org.openapis.openapi.models.operations.ProductSearchWhoSawAlsoSawRequest request) throws Exception {
+        return this.productSearchWhoSawAlsoSaw(request, null);
+    }
+
+    /**
+     * Get Product Search of Who Saw Also Saw
+     * Retrieves general information about other related products that the users also saw.
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ProductSearchWhoSawAlsoSawResponse productSearchWhoSawAlsoSaw(org.openapis.openapi.models.operations.ProductSearchWhoSawAlsoSawRequest request, String serverURL) throws Exception {
         String baseUrl = PRODUCT_SEARCH_WHO_SAW_ALSO_SAW_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductSearchWhoSawAlsoSawPathParams.class, baseUrl, "/api/catalog_system/pub/products/crossselling/whosawalsosaw/{productId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductSearchWhoSawAlsoSawRequest.class, baseUrl, "/api/catalog_system/pub/products/crossselling/whosawalsosaw/{productId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

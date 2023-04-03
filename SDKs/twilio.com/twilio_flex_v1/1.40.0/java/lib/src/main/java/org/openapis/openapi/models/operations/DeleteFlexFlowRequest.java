@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFlexFlowRequest {
-    
-    public DeleteFlexFlowPathParams pathParams;
-    public DeleteFlexFlowRequest withPathParams(DeleteFlexFlowPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteFlexFlowSecurity security;
-    public DeleteFlexFlowRequest withSecurity(DeleteFlexFlowSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteFlexFlowRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Flex Flow resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteFlexFlowRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

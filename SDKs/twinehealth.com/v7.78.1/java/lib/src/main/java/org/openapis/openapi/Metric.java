@@ -78,7 +78,7 @@ public class Metric {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreatePatientHealthMetricResponse createPatientHealthMetric(org.openapis.openapi.models.operations.CreatePatientHealthMetricRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreatePatientHealthMetricResponse createPatientHealthMetric(org.openapis.openapi.models.shared.CreatePatientHealthMetricRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/patient_health_metric");
         
@@ -132,7 +132,7 @@ public class Metric {
      */
     public org.openapis.openapi.models.operations.FetchPatientHealthMetricResponse fetchPatientHealthMetric(org.openapis.openapi.models.operations.FetchPatientHealthMetricRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchPatientHealthMetricPathParams.class, baseUrl, "/patient_health_metric/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchPatientHealthMetricRequest.class, baseUrl, "/patient_health_metric/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -185,7 +185,7 @@ public class Metric {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchPatientHealthMetricsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchPatientHealthMetricsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

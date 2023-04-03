@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestViberIntegrationNotificationsUsingPOSTRequest {
-    
-    public TestViberIntegrationNotificationsUsingPOSTPathParams pathParams;
-    public TestViberIntegrationNotificationsUsingPOSTRequest withPathParams(TestViberIntegrationNotificationsUsingPOSTPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * messageDetails
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PushNotificationTestModel request;
-    public TestViberIntegrationNotificationsUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.PushNotificationTestModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PushNotificationTestModel pushNotificationTestModel;
+    public TestViberIntegrationNotificationsUsingPOSTRequest withPushNotificationTestModel(org.openapis.openapi.models.shared.PushNotificationTestModel pushNotificationTestModel) {
+        this.pushNotificationTestModel = pushNotificationTestModel;
+        return this;
+    }
+    
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public TestViberIntegrationNotificationsUsingPOSTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

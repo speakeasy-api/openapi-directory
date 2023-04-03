@@ -4,13 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProfileRequest {
+    /**
+     * Number of results to return per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
+    public Long length;
+    public GetProfileRequest withLength(Long length) {
+        this.length = length;
+        return this;
+    }
     
-    public GetProfileQueryParams queryParams;
-    public GetProfileRequest withQueryParams(GetProfileQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Which field to use when ordering the results, prefix with `-` to invert ordering.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering")
+    public String ordering;
+    public GetProfileRequest withOrdering(String ordering) {
+        this.ordering = ordering;
+        return this;
+    }
+    
+    /**
+     * Page number within the paginated result set
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetProfileRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Search term
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetProfileRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

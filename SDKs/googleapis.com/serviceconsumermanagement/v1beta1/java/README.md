@@ -18,18 +18,14 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesSecurity;
-import org.openapis.openapi.models.operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesPathParams;
-import org.openapis.openapi.models.operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesQueryParams;
 import org.openapis.openapi.models.operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest;
 import org.openapis.openapi.models.operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.V1Beta1ImportProducerOverridesRequestForceOnlyEnum;
 import org.openapis.openapi.models.shared.V1Beta1ImportProducerOverridesRequest;
 import org.openapis.openapi.models.shared.V1Beta1OverrideInlineSource;
 import org.openapis.openapi.models.shared.V1Beta1QuotaOverride;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -38,90 +34,87 @@ public class Application {
                 .build();
 
             ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest req = new ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest() {{
-                security = new ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesPathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new V1Beta1ImportProducerOverridesRequest() {{
+                dollarXgafv = "2";
+                v1Beta1ImportProducerOverridesRequest = new V1Beta1ImportProducerOverridesRequest() {{
                     force = false;
                     forceOnly = new org.openapis.openapi.models.shared.V1Beta1ImportProducerOverridesRequestForceOnlyEnum[]{{
+                        add("LIMIT_DECREASE_PERCENTAGE_TOO_HIGH"),
+                        add("LIMIT_DECREASE_PERCENTAGE_TOO_HIGH"),
                         add("LIMIT_DECREASE_BELOW_USAGE"),
-                        add("QUOTA_SAFETY_CHECK_UNSPECIFIED"),
                     }};
                     inlineSource = new V1Beta1OverrideInlineSource() {{
                         overrides = new org.openapis.openapi.models.shared.V1Beta1QuotaOverride[]{{
                             add(new V1Beta1QuotaOverride() {{
-                                adminOverrideAncestor = "ipsa";
+                                adminOverrideAncestor = "corrupti";
                                 dimensions = new java.util.HashMap<String, String>() {{
-                                    put("tempora", "suscipit");
-                                    put("molestiae", "minus");
-                                    put("placeat", "voluptatum");
-                                    put("iusto", "excepturi");
+                                    put("vel", "error");
+                                    put("deserunt", "suscipit");
+                                    put("iure", "magnam");
+                                    put("debitis", "ipsa");
                                 }};
-                                metric = "nisi";
-                                name = "recusandae";
-                                overrideValue = "temporibus";
-                                unit = "ab";
+                                metric = "delectus";
+                                name = "tempora";
+                                overrideValue = "suscipit";
+                                unit = "molestiae";
                             }}),
                             add(new V1Beta1QuotaOverride() {{
-                                adminOverrideAncestor = "quis";
+                                adminOverrideAncestor = "minus";
                                 dimensions = new java.util.HashMap<String, String>() {{
-                                    put("deserunt", "perferendis");
+                                    put("voluptatum", "iusto");
+                                    put("excepturi", "nisi");
+                                    put("recusandae", "temporibus");
+                                    put("ab", "quis");
                                 }};
-                                metric = "ipsam";
-                                name = "repellendus";
-                                overrideValue = "sapiente";
-                                unit = "quo";
+                                metric = "veritatis";
+                                name = "deserunt";
+                                overrideValue = "perferendis";
+                                unit = "ipsam";
                             }}),
                             add(new V1Beta1QuotaOverride() {{
-                                adminOverrideAncestor = "odit";
+                                adminOverrideAncestor = "repellendus";
                                 dimensions = new java.util.HashMap<String, String>() {{
-                                    put("at", "maiores");
-                                    put("molestiae", "quod");
-                                    put("quod", "esse");
-                                    put("totam", "porro");
+                                    put("quo", "odit");
+                                    put("at", "at");
+                                    put("maiores", "molestiae");
+                                    put("quod", "quod");
                                 }};
-                                metric = "dolorum";
-                                name = "dicta";
-                                overrideValue = "nam";
-                                unit = "officia";
-                            }}),
-                            add(new V1Beta1QuotaOverride() {{
-                                adminOverrideAncestor = "occaecati";
-                                dimensions = new java.util.HashMap<String, String>() {{
-                                    put("deleniti", "hic");
-                                }};
-                                metric = "optio";
+                                metric = "esse";
                                 name = "totam";
-                                overrideValue = "beatae";
-                                unit = "commodi";
+                                overrideValue = "porro";
+                                unit = "dolorum";
+                            }}),
+                            add(new V1Beta1QuotaOverride() {{
+                                adminOverrideAncestor = "dicta";
+                                dimensions = new java.util.HashMap<String, String>() {{
+                                    put("officia", "occaecati");
+                                    put("fugit", "deleniti");
+                                    put("hic", "optio");
+                                }};
+                                metric = "totam";
+                                name = "beatae";
+                                overrideValue = "commodi";
+                                unit = "molestiae";
                             }}),
                         }};
                     }};
                 }};
-            }};            
+                accessToken = "modi";
+                alt = "json";
+                callback = "impedit";
+                fields = "cum";
+                key = "esse";
+                oauthToken = "ipsum";
+                parent = "excepturi";
+                prettyPrint = false;
+                quotaUser = "aspernatur";
+                uploadType = "perferendis";
+                uploadProtocol = "ad";
+            }}            
 
-            ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesResponse res = sdk.services.serviceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverrides(req);
+            ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesResponse res = sdk.services.serviceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverrides(req, new ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response
@@ -133,7 +126,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### services

@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectVideosAlt1Request {
-    
-    public GetProjectVideosAlt1PathParams pathParams;
-    public GetProjectVideosAlt1Request withPathParams(GetProjectVideosAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetProjectVideosAlt1DirectionEnum direction;
+    public GetProjectVideosAlt1Request withDirection(GetProjectVideosAlt1DirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
-    
-    public GetProjectVideosAlt1QueryParams queryParams;
-    public GetProjectVideosAlt1Request withQueryParams(GetProjectVideosAlt1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetProjectVideosAlt1Request withPage(Double page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetProjectVideosAlt1Request withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public GetProjectVideosAlt1Security security;
-    public GetProjectVideosAlt1Request withSecurity(GetProjectVideosAlt1Security security) {
-        this.security = security;
+    /**
+     * The ID of the project.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Double projectId;
+    public GetProjectVideosAlt1Request withProjectId(Double projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetProjectVideosAlt1SortEnum sort;
+    public GetProjectVideosAlt1Request withSort(GetProjectVideosAlt1SortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

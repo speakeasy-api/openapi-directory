@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdLinkedTypeRequest {
+    /**
+     * Id of the user to return
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetUsersIdLinkedTypeRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetUsersIdLinkedTypePathParams pathParams;
-    public GetUsersIdLinkedTypeRequest withPathParams(GetUsersIdLinkedTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Type of the linked profile to fetch
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public String type;
+    public GetUsersIdLinkedTypeRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

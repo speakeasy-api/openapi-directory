@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSpacesSpaceIdPersonsIdInvitationRequest {
-    
-    public DeleteSpacesSpaceIdPersonsIdInvitationPathParams pathParams;
-    public DeleteSpacesSpaceIdPersonsIdInvitationRequest withPathParams(DeleteSpacesSpaceIdPersonsIdInvitationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the person
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteSpacesSpaceIdPersonsIdInvitationRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public DeleteSpacesSpaceIdPersonsIdInvitationSecurity security;
-    public DeleteSpacesSpaceIdPersonsIdInvitationRequest withSecurity(DeleteSpacesSpaceIdPersonsIdInvitationSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public DeleteSpacesSpaceIdPersonsIdInvitationRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReferencesCountriesByCountryCodeGetRequest {
-    
-    public ReferencesCountriesByCountryCodeGetPathParams pathParams;
-    public ReferencesCountriesByCountryCodeGetRequest withPathParams(ReferencesCountriesByCountryCodeGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ReferencesCountriesByCountryCodeGetRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public ReferencesCountriesByCountryCodeGetQueryParams queryParams;
-    public ReferencesCountriesByCountryCodeGetRequest withQueryParams(ReferencesCountriesByCountryCodeGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * 2-letter ISO 3166-1 country code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryCode")
+    public String countryCode;
+    public ReferencesCountriesByCountryCodeGetRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
         return this;
     }
     
-    
-    public ReferencesCountriesByCountryCodeGetHeaders headers;
-    public ReferencesCountriesByCountryCodeGetRequest withHeaders(ReferencesCountriesByCountryCodeGetHeaders headers) {
-        this.headers = headers;
+    /**
+     * 2 letter ISO 3166-1 language code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public ReferencesCountriesByCountryCodeGetRequest withLang(String lang) {
+        this.lang = lang;
         return this;
     }
     
+    /**
+     * Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public ReferencesCountriesByCountryCodeGetRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public ReferencesCountriesByCountryCodeGetSecurity security;
-    public ReferencesCountriesByCountryCodeGetRequest withSecurity(ReferencesCountriesByCountryCodeGetSecurity security) {
-        this.security = security;
+    /**
+     * Number of records skipped. Defaults to 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public ReferencesCountriesByCountryCodeGetRequest withOffset(String offset) {
+        this.offset = offset;
         return this;
     }
     

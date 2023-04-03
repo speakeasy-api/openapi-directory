@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ForumGetTopicForContentRequest {
-    
-    public ForumGetTopicForContentPathParams pathParams;
-    public ForumGetTopicForContentRequest withPathParams(ForumGetTopicForContentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contentId")
+    public Long contentId;
+    public ForumGetTopicForContentRequest withContentId(Long contentId) {
+        this.contentId = contentId;
         return this;
     }
     

@@ -4,20 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssetPropertyValueRequest {
-    
-    public GetAssetPropertyValueQueryParams queryParams;
-    public GetAssetPropertyValueRequest withQueryParams(GetAssetPropertyValueQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetAssetPropertyValueRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetAssetPropertyValueRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public GetAssetPropertyValueHeaders headers;
-    public GetAssetPropertyValueRequest withHeaders(GetAssetPropertyValueHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetAssetPropertyValueRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetAssetPropertyValueRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetAssetPropertyValueRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetAssetPropertyValueRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetAssetPropertyValueRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The ID of the asset.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assetId")
+    public String assetId;
+    public GetAssetPropertyValueRequest withAssetId(String assetId) {
+        this.assetId = assetId;
+        return this;
+    }
+    
+    /**
+     * The alias that identifies the property, such as an OPC-UA server data stream path (for example, &lt;code&gt;/company/windfarm/3/turbine/7/temperature&lt;/code&gt;). For more information, see &lt;a href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/connect-data-streams.html"&gt;Mapping industrial data streams to asset properties&lt;/a&gt; in the &lt;i&gt;IoT SiteWise User Guide&lt;/i&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyAlias")
+    public String propertyAlias;
+    public GetAssetPropertyValueRequest withPropertyAlias(String propertyAlias) {
+        this.propertyAlias = propertyAlias;
+        return this;
+    }
+    
+    /**
+     * The ID of the asset property.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyId")
+    public String propertyId;
+    public GetAssetPropertyValueRequest withPropertyId(String propertyId) {
+        this.propertyId = propertyId;
         return this;
     }
     

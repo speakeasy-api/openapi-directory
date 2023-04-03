@@ -4,13 +4,21 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAboutRequest {
-    
-    public GetAboutQueryParams queryParams;
-    public GetAboutRequest withQueryParams(GetAboutQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * **The format of the returned metadata.**
+     * 
+     * Allowed values are *json*, *xml* and *yaml*.
+     * 
+     * The default value is *xml*.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputFormat")
+    public String outputFormat;
+    public GetAboutRequest withOutputFormat(String outputFormat) {
+        this.outputFormat = outputFormat;
         return this;
     }
     

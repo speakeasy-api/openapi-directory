@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeMaintenanceWindowsForTargetRequest {
-    
-    public DescribeMaintenanceWindowsForTargetQueryParams queryParams;
-    public DescribeMaintenanceWindowsForTargetRequest withQueryParams(DescribeMaintenanceWindowsForTargetQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DescribeMaintenanceWindowsForTargetHeaders headers;
-    public DescribeMaintenanceWindowsForTargetRequest withHeaders(DescribeMaintenanceWindowsForTargetHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DescribeMaintenanceWindowsForTargetRequest request;
-    public DescribeMaintenanceWindowsForTargetRequest withRequest(org.openapis.openapi.models.shared.DescribeMaintenanceWindowsForTargetRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DescribeMaintenanceWindowsForTargetRequest describeMaintenanceWindowsForTargetRequest;
+    public DescribeMaintenanceWindowsForTargetRequest withDescribeMaintenanceWindowsForTargetRequest(org.openapis.openapi.models.shared.DescribeMaintenanceWindowsForTargetRequest describeMaintenanceWindowsForTargetRequest) {
+        this.describeMaintenanceWindowsForTargetRequest = describeMaintenanceWindowsForTargetRequest;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public String maxResults;
+    public DescribeMaintenanceWindowsForTargetRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public DescribeMaintenanceWindowsForTargetRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeMaintenanceWindowsForTargetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeMaintenanceWindowsForTargetRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeMaintenanceWindowsForTargetRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeMaintenanceWindowsForTargetRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeMaintenanceWindowsForTargetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeMaintenanceWindowsForTargetRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeMaintenanceWindowsForTargetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public DescribeMaintenanceWindowsForTargetXAmzTargetEnum xAmzTarget;
+    public DescribeMaintenanceWindowsForTargetRequest withXAmzTarget(DescribeMaintenanceWindowsForTargetXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

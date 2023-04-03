@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkFirmwareUpgradesStagedEventsRequest {
-    
-    public UpdateNetworkFirmwareUpgradesStagedEventsPathParams pathParams;
-    public UpdateNetworkFirmwareUpgradesStagedEventsRequest withPathParams(UpdateNetworkFirmwareUpgradesStagedEventsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkFirmwareUpgradesStagedEventsRequestBody requestBody;
+    public UpdateNetworkFirmwareUpgradesStagedEventsRequest withRequestBody(UpdateNetworkFirmwareUpgradesStagedEventsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkFirmwareUpgradesStagedEventsRequestBody request;
-    public UpdateNetworkFirmwareUpgradesStagedEventsRequest withRequest(UpdateNetworkFirmwareUpgradesStagedEventsRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkFirmwareUpgradesStagedEventsRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SegmentListRequest {
+    /**
+     * (Optional) Integer
+     * 
+     * The page of segments to return, defaults to 0 (returns the first set of up to 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public SegmentListRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
     
-    public SegmentListQueryParams queryParams;
-    public SegmentListRequest withQueryParams(SegmentListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Optional) String
+     * 
+     * Pass in the value `desc` to sort by creation time from newest to oldest. Pass in `asc` to sort from oldest to newest. If `sort_direction` is not included, the default order is oldest to newest.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
+    public String sortDirection;
+    public SegmentListRequest withSortDirection(String sortDirection) {
+        this.sortDirection = sortDirection;
         return this;
     }
     

@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkflowRequest {
-    
-    public GetWorkflowPathParams pathParams;
-    public GetWorkflowRequest withPathParams(GetWorkflowPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetWorkflowRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public GetWorkflowQueryParams queryParams;
-    public GetWorkflowRequest withQueryParams(GetWorkflowQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetWorkflowRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetWorkflowRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public GetWorkflowHeaders headers;
-    public GetWorkflowRequest withHeaders(GetWorkflowHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetWorkflowRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetWorkflowRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetWorkflowRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetWorkflowRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The export format for the workflow.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=export")
+    public org.openapis.openapi.models.shared.WorkflowExportEnum[] export;
+    public GetWorkflowRequest withExport(org.openapis.openapi.models.shared.WorkflowExportEnum[] export) {
+        this.export = export;
+        return this;
+    }
+    
+    /**
+     * The workflow's ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetWorkflowRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * The workflow's type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GetWorkflowTypeEnum type;
+    public GetWorkflowRequest withType(GetWorkflowTypeEnum type) {
+        this.type = type;
         return this;
     }
     

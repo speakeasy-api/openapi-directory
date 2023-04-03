@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutV2ImportsIdJsonRequest {
-    
-    public PutV2ImportsIdJsonPathParams pathParams;
-    public PutV2ImportsIdJsonRequest withPathParams(PutV2ImportsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public PutV2ImportsIdJsonRequestBody requestBody;
+    public PutV2ImportsIdJsonRequest withRequestBody(PutV2ImportsIdJsonRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public PutV2ImportsIdJsonRequestBody request;
-    public PutV2ImportsIdJsonRequest withRequest(PutV2ImportsIdJsonRequestBody request) {
-        this.request = request;
+    /**
+     * Import ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutV2ImportsIdJsonRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

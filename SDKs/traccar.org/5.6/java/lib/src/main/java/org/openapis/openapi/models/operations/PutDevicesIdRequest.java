@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutDevicesIdRequest {
-    
-    public PutDevicesIdPathParams pathParams;
-    public PutDevicesIdRequest withPathParams(PutDevicesIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Device device;
+    public PutDevicesIdRequest withDevice(org.openapis.openapi.models.shared.Device device) {
+        this.device = device;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Device request;
-    public PutDevicesIdRequest withRequest(org.openapis.openapi.models.shared.Device request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PutDevicesIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

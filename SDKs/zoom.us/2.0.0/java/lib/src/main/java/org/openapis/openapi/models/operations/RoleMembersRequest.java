@@ -4,27 +4,58 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RoleMembersRequest {
-    
-    public RoleMembersPathParams pathParams;
-    public RoleMembersRequest withPathParams(RoleMembersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public RoleMembersRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
         return this;
     }
     
-    
-    public RoleMembersQueryParams queryParams;
-    public RoleMembersRequest withQueryParams(RoleMembersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of pages returned for this request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_count")
+    public String pageCount;
+    public RoleMembersRequest withPageCount(String pageCount) {
+        this.pageCount = pageCount;
         return this;
     }
     
+    /**
+     * **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use "next_page_token" for pagination instead of this field.
+     * 
+     * The page number of the current page in the returned records.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_number")
+    public Long pageNumber;
+    public RoleMembersRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
     
-    public RoleMembersSecurity security;
-    public RoleMembersRequest withSecurity(RoleMembersSecurity security) {
-        this.security = security;
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public RoleMembersRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The role ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roleId")
+    public String roleId;
+    public RoleMembersRequest withRoleId(String roleId) {
+        this.roleId = roleId;
         return this;
     }
     

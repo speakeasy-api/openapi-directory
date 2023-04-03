@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSigninSigninIdRequest {
-    
-    public DeleteSigninSigninIdPathParams pathParams;
-    public DeleteSigninSigninIdRequest withPathParams(DeleteSigninSigninIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the signin record to be deleted.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=signinId")
+    public Long signinId;
+    public DeleteSigninSigninIdRequest withSigninId(Long signinId) {
+        this.signinId = signinId;
         return this;
     }
     

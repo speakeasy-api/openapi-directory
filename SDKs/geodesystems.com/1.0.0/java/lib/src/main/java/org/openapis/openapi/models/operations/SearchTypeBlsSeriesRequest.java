@@ -4,13 +4,247 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchTypeBlsSeriesRequest {
+    /**
+     * Archive change date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
+    public OffsetDateTime changedateFrom;
+    public SearchTypeBlsSeriesRequest withChangedateFrom(OffsetDateTime changedateFrom) {
+        this.changedateFrom = changedateFrom;
+        return this;
+    }
     
-    public SearchTypeBlsSeriesQueryParams queryParams;
-    public SearchTypeBlsSeriesRequest withQueryParams(SearchTypeBlsSeriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Archive change date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
+    public OffsetDateTime changedateTo;
+    public SearchTypeBlsSeriesRequest withChangedateTo(OffsetDateTime changedateTo) {
+        this.changedateTo = changedateTo;
+        return this;
+    }
+    
+    /**
+     * Archive create date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
+    public OffsetDateTime createdateFrom;
+    public SearchTypeBlsSeriesRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
+        this.createdateFrom = createdateFrom;
+        return this;
+    }
+    
+    /**
+     * Archive create date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
+    public OffsetDateTime createdateTo;
+    public SearchTypeBlsSeriesRequest withCreatedateTo(OffsetDateTime createdateTo) {
+        this.createdateTo = createdateTo;
+        return this;
+    }
+    
+    /**
+     * Search description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public SearchTypeBlsSeriesRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    /**
+     * File suffix
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
+    public String filesuffix;
+    public SearchTypeBlsSeriesRequest withFilesuffix(String filesuffix) {
+        this.filesuffix = filesuffix;
+        return this;
+    }
+    
+    /**
+     * From date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
+    public OffsetDateTime fromdate;
+    public SearchTypeBlsSeriesRequest withFromdate(OffsetDateTime fromdate) {
+        this.fromdate = fromdate;
+        return this;
+    }
+    
+    /**
+     * Parent entry
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public String group;
+    public SearchTypeBlsSeriesRequest withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * Max number of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Long max;
+    public SearchTypeBlsSeriesRequest withMax(Long max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * Northern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
+    public Float maxlatitude;
+    public SearchTypeBlsSeriesRequest withMaxlatitude(Float maxlatitude) {
+        this.maxlatitude = maxlatitude;
+        return this;
+    }
+    
+    /**
+     * Eastern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
+    public Float maxlongitude;
+    public SearchTypeBlsSeriesRequest withMaxlongitude(Float maxlongitude) {
+        this.maxlongitude = maxlongitude;
+        return this;
+    }
+    
+    /**
+     * Southern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
+    public Float minlatitude;
+    public SearchTypeBlsSeriesRequest withMinlatitude(Float minlatitude) {
+        this.minlatitude = minlatitude;
+        return this;
+    }
+    
+    /**
+     * Western bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
+    public Float minlongitude;
+    public SearchTypeBlsSeriesRequest withMinlongitude(Float minlongitude) {
+        this.minlongitude = minlongitude;
+        return this;
+    }
+    
+    /**
+     * Search name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public SearchTypeBlsSeriesRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Area
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_bls_series.area")
+    public String searchTypeBlsSeriesArea;
+    public SearchTypeBlsSeriesRequest withSearchTypeBlsSeriesArea(String searchTypeBlsSeriesArea) {
+        this.searchTypeBlsSeriesArea = searchTypeBlsSeriesArea;
+        return this;
+    }
+    
+    /**
+     * Industry
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_bls_series.industry")
+    public String searchTypeBlsSeriesIndustry;
+    public SearchTypeBlsSeriesRequest withSearchTypeBlsSeriesIndustry(String searchTypeBlsSeriesIndustry) {
+        this.searchTypeBlsSeriesIndustry = searchTypeBlsSeriesIndustry;
+        return this;
+    }
+    
+    /**
+     * Item
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_bls_series.item")
+    public String searchTypeBlsSeriesItem;
+    public SearchTypeBlsSeriesRequest withSearchTypeBlsSeriesItem(String searchTypeBlsSeriesItem) {
+        this.searchTypeBlsSeriesItem = searchTypeBlsSeriesItem;
+        return this;
+    }
+    
+    /**
+     * Measure Data Type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_bls_series.measure_data_type")
+    public String searchTypeBlsSeriesMeasureDataType;
+    public SearchTypeBlsSeriesRequest withSearchTypeBlsSeriesMeasureDataType(String searchTypeBlsSeriesMeasureDataType) {
+        this.searchTypeBlsSeriesMeasureDataType = searchTypeBlsSeriesMeasureDataType;
+        return this;
+    }
+    
+    /**
+     * Seasonality
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_bls_series.seasonality")
+    public String searchTypeBlsSeriesSeasonality;
+    public SearchTypeBlsSeriesRequest withSearchTypeBlsSeriesSeasonality(String searchTypeBlsSeriesSeasonality) {
+        this.searchTypeBlsSeriesSeasonality = searchTypeBlsSeriesSeasonality;
+        return this;
+    }
+    
+    /**
+     * Sector
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_bls_series.sector")
+    public String searchTypeBlsSeriesSector;
+    public SearchTypeBlsSeriesRequest withSearchTypeBlsSeriesSector(String searchTypeBlsSeriesSector) {
+        this.searchTypeBlsSeriesSector = searchTypeBlsSeriesSector;
+        return this;
+    }
+    
+    /**
+     * Survey Name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_bls_series.survey_name")
+    public String searchTypeBlsSeriesSurveyName;
+    public SearchTypeBlsSeriesRequest withSearchTypeBlsSeriesSurveyName(String searchTypeBlsSeriesSurveyName) {
+        this.searchTypeBlsSeriesSurveyName = searchTypeBlsSeriesSurveyName;
+        return this;
+    }
+    
+    /**
+     * Number to skip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Long skip;
+    public SearchTypeBlsSeriesRequest withSkip(Long skip) {
+        this.skip = skip;
+        return this;
+    }
+    
+    /**
+     * Search text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public SearchTypeBlsSeriesRequest withText(String text) {
+        this.text = text;
+        return this;
+    }
+    
+    /**
+     * To date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
+    public OffsetDateTime todate;
+    public SearchTypeBlsSeriesRequest withTodate(OffsetDateTime todate) {
+        this.todate = todate;
         return this;
     }
     

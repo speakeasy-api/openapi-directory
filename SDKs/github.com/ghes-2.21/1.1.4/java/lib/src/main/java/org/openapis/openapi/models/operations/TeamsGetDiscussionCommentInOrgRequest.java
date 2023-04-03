@@ -4,13 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsGetDiscussionCommentInOrgRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_number")
+    public Long commentNumber;
+    public TeamsGetDiscussionCommentInOrgRequest withCommentNumber(Long commentNumber) {
+        this.commentNumber = commentNumber;
+        return this;
+    }
     
-    public TeamsGetDiscussionCommentInOrgPathParams pathParams;
-    public TeamsGetDiscussionCommentInOrgRequest withPathParams(TeamsGetDiscussionCommentInOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
+    public Long discussionNumber;
+    public TeamsGetDiscussionCommentInOrgRequest withDiscussionNumber(Long discussionNumber) {
+        this.discussionNumber = discussionNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public TeamsGetDiscussionCommentInOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * team_slug parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
+    public String teamSlug;
+    public TeamsGetDiscussionCommentInOrgRequest withTeamSlug(String teamSlug) {
+        this.teamSlug = teamSlug;
         return this;
     }
     

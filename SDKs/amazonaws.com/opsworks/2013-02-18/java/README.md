@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AssignInstanceXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AssignInstanceHeaders;
 import org.openapis.openapi.models.operations.AssignInstanceRequest;
 import org.openapis.openapi.models.operations.AssignInstanceResponse;
 import org.openapis.openapi.models.shared.AssignInstanceRequest;
@@ -28,31 +27,28 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssignInstanceRequest req = new AssignInstanceRequest() {{
-                headers = new AssignInstanceHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "OpsWorks_20130218.AssignInstance";
-                }};
-                request = new AssignInstanceRequest() {{
-                    instanceId = "illum";
+                assignInstanceRequest = new AssignInstanceRequest() {{
+                    instanceId = "corrupti";
                     layerIds = new String[]{{
-                        add("error"),
-                        add("deserunt"),
+                        add("distinctio"),
+                        add("quibusdam"),
+                        add("unde"),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "nulla";
+                xAmzContentSha256 = "corrupti";
+                xAmzCredential = "illum";
+                xAmzDate = "vel";
+                xAmzSecurityToken = "error";
+                xAmzSignature = "deserunt";
+                xAmzSignedHeaders = "suscipit";
+                xAmzTarget = "OpsWorks_20130218.AssignInstance";
+            }}            
 
             AssignInstanceResponse res = sdk.assignInstance(req);
 
@@ -66,7 +62,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

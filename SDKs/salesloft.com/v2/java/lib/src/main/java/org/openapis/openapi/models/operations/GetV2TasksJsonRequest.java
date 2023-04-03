@@ -4,13 +4,156 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2TasksJsonRequest {
+    /**
+     * Filters tasks by the account to which they are associated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=account_id")
+    public Long[] accountId;
+    public GetV2TasksJsonRequest withAccountId(Long[] accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public GetV2TasksJsonQueryParams queryParams;
-    public GetV2TasksJsonRequest withQueryParams(GetV2TasksJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filters tasks by their current state. Valid current_states include: ['scheduled', 'completed'].
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=current_state")
+    public String[] currentState;
+    public GetV2TasksJsonRequest withCurrentState(String[] currentState) {
+        this.currentState = currentState;
+        return this;
+    }
+    
+    /**
+     * Filters tasks by idempotency key.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idempotency_key")
+    public String idempotencyKey;
+    public GetV2TasksJsonRequest withIdempotencyKey(String idempotencyKey) {
+        this.idempotencyKey = idempotencyKey;
+        return this;
+    }
+    
+    /**
+     * IDs of tasks to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
+    public Long[] ids;
+    public GetV2TasksJsonRequest withIds(Long[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    /**
+     * Whether to include total_pages and total_count in the metadata. Defaults to false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
+    public Boolean includePagingCounts;
+    public GetV2TasksJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
+        this.includePagingCounts = includePagingCounts;
+        return this;
+    }
+    
+    /**
+     * Specifies whether the max limit of 10k records should be applied to pagination counts. Affects the total_count and total_pages data
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
+    public Boolean limitPagingCounts;
+    public GetV2TasksJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
+        this.limitPagingCounts = limitPagingCounts;
+        return this;
+    }
+    
+    /**
+     * Filters tasks by locale of the person to which they are associated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=locale")
+    public String[] locale;
+    public GetV2TasksJsonRequest withLocale(String[] locale) {
+        this.locale = locale;
+        return this;
+    }
+    
+    /**
+     * The current page to fetch results from. Defaults to 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetV2TasksJsonRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many records to show per page in the range [1, 100]. Defaults to 25
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetV2TasksJsonRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Filters tasks by the person to which they are associated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=person_id")
+    public Long[] personId;
+    public GetV2TasksJsonRequest withPersonId(Long[] personId) {
+        this.personId = personId;
+        return this;
+    }
+    
+    /**
+     * Key to sort on, must be one of: due_date, due_at. Defaults to due_date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public String sortBy;
+    public GetV2TasksJsonRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Direction to sort in, must be one of: ASC, DESC. Defaults to ASC
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
+    public String sortDirection;
+    public GetV2TasksJsonRequest withSortDirection(String sortDirection) {
+        this.sortDirection = sortDirection;
+        return this;
+    }
+    
+    /**
+     * Filters tasks by their task type. Valid task_types include: ['call', 'email', 'general'].
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=task_type")
+    public String[] taskType;
+    public GetV2TasksJsonRequest withTaskType(String[] taskType) {
+        this.taskType = taskType;
+        return this;
+    }
+    
+    /**
+     * Filters tasks by time interval. Valid time_intervals include: ['overdue', 'today', 'tomorrow', 'this_week', 'next_week'].
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time_interval_filter")
+    public String timeIntervalFilter;
+    public GetV2TasksJsonRequest withTimeIntervalFilter(String timeIntervalFilter) {
+        this.timeIntervalFilter = timeIntervalFilter;
+        return this;
+    }
+    
+    /**
+     * Filters tasks by the user to which they are assigned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=user_id")
+    public Long[] userId;
+    public GetV2TasksJsonRequest withUserId(Long[] userId) {
+        this.userId = userId;
         return this;
     }
     

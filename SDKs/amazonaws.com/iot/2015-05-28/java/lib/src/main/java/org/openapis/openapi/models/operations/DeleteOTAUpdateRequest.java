@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteOTAUpdateRequest {
-    
-    public DeleteOTAUpdatePathParams pathParams;
-    public DeleteOTAUpdateRequest withPathParams(DeleteOTAUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DeleteOTAUpdateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public DeleteOTAUpdateQueryParams queryParams;
-    public DeleteOTAUpdateRequest withQueryParams(DeleteOTAUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DeleteOTAUpdateRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DeleteOTAUpdateRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public DeleteOTAUpdateHeaders headers;
-    public DeleteOTAUpdateRequest withHeaders(DeleteOTAUpdateHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DeleteOTAUpdateRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DeleteOTAUpdateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DeleteOTAUpdateRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DeleteOTAUpdateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * When true, the stream created by the OTAUpdate process is deleted when the OTA update is deleted. Ignored if the stream specified in the OTAUpdate is supplied by the user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deleteStream")
+    public Boolean deleteStream;
+    public DeleteOTAUpdateRequest withDeleteStream(Boolean deleteStream) {
+        this.deleteStream = deleteStream;
+        return this;
+    }
+    
+    /**
+     * When true, deletes the IoT job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise, if the job is not in a terminal state ("COMPLETED" or "CANCELED") an exception will occur. The default is false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forceDeleteAWSJob")
+    public Boolean forceDeleteAWSJob;
+    public DeleteOTAUpdateRequest withForceDeleteAWSJob(Boolean forceDeleteAWSJob) {
+        this.forceDeleteAWSJob = forceDeleteAWSJob;
+        return this;
+    }
+    
+    /**
+     * The ID of the OTA update to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=otaUpdateId")
+    public String otaUpdateId;
+    public DeleteOTAUpdateRequest withOtaUpdateId(String otaUpdateId) {
+        this.otaUpdateId = otaUpdateId;
         return this;
     }
     

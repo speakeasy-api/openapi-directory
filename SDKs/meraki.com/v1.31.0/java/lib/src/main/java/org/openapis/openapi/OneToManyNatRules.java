@@ -40,7 +40,7 @@ public class OneToManyNatRules {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceFirewallOneToManyNatRulesResponse getNetworkApplianceFirewallOneToManyNatRules(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallOneToManyNatRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallOneToManyNatRulesPathParams.class, baseUrl, "/networks/{networkId}/appliance/firewall/oneToManyNatRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceFirewallOneToManyNatRulesRequest.class, baseUrl, "/networks/{networkId}/appliance/firewall/oneToManyNatRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class OneToManyNatRules {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceFirewallOneToManyNatRulesResponse updateNetworkApplianceFirewallOneToManyNatRules(org.openapis.openapi.models.operations.UpdateNetworkApplianceFirewallOneToManyNatRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceFirewallOneToManyNatRulesPathParams.class, baseUrl, "/networks/{networkId}/appliance/firewall/oneToManyNatRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceFirewallOneToManyNatRulesRequest.class, baseUrl, "/networks/{networkId}/appliance/firewall/oneToManyNatRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

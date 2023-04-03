@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSpacesIdRequest {
-    
-    public PatchSpacesIdPathParams pathParams;
-    public PatchSpacesIdRequest withPathParams(PatchSpacesIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Space to modify (except private)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchSpacesIdRequestBody request;
-    public PatchSpacesIdRequest withRequest(PatchSpacesIdRequestBody request) {
-        this.request = request;
+    public PatchSpacesIdRequestBody requestBody;
+    public PatchSpacesIdRequest withRequestBody(PatchSpacesIdRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchSpacesIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

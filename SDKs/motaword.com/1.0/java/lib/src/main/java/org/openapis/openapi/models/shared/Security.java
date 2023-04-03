@@ -7,9 +7,9 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public SchemeMwoAuth mwoAuth;
-    public Security withMwoAuth(SchemeMwoAuth mwoAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String mwoAuth;
+    public Security withMwoAuth(String mwoAuth) {
         this.mwoAuth = mwoAuth;
         return this;
     }

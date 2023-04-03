@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CampaignsRemoveRequest {
-    
-    public CampaignsRemovePathParams pathParams;
-    public CampaignsRemoveRequest withPathParams(CampaignsRemovePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public CampaignsRemoveRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public CampaignsRemoveSecurity security;
-    public CampaignsRemoveRequest withSecurity(CampaignsRemoveSecurity security) {
-        this.security = security;
+    /**
+     * Campaign id to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaignId")
+    public String campaignId;
+    public CampaignsRemoveRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
         return this;
     }
     

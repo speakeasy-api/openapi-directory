@@ -5,14 +5,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.WorkstationsProjectsLocationsOperationsCancelSecurity;
-import org.openapis.openapi.models.operations.WorkstationsProjectsLocationsOperationsCancelPathParams;
-import org.openapis.openapi.models.operations.WorkstationsProjectsLocationsOperationsCancelQueryParams;
 import org.openapis.openapi.models.operations.WorkstationsProjectsLocationsOperationsCancelRequest;
 import org.openapis.openapi.models.operations.WorkstationsProjectsLocationsOperationsCancelResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -21,37 +17,29 @@ public class Application {
                 .build();
 
             WorkstationsProjectsLocationsOperationsCancelRequest req = new WorkstationsProjectsLocationsOperationsCancelRequest() {{
-                security = new WorkstationsProjectsLocationsOperationsCancelSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                dollarXgafv = "2";
+                requestBody = new java.util.HashMap<String, Object>() {{
+                    put("distinctio", "quibusdam");
+                    put("unde", "nulla");
+                    put("corrupti", "illum");
                 }};
-                pathParams = new WorkstationsProjectsLocationsOperationsCancelPathParams() {{
-                    name = "corrupti";
-                }};
-                queryParams = new WorkstationsProjectsLocationsOperationsCancelQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new java.util.HashMap<String, Object>() {{
-                    put("iure", "magnam");
-                    put("debitis", "ipsa");
-                }};
-            }};            
+                accessToken = "vel";
+                alt = "media";
+                callback = "deserunt";
+                fields = "suscipit";
+                key = "iure";
+                name = "magnam";
+                oauthToken = "debitis";
+                prettyPrint = false;
+                quotaUser = "ipsa";
+                uploadType = "delectus";
+                uploadProtocol = "tempora";
+            }}            
 
-            WorkstationsProjectsLocationsOperationsCancelResponse res = sdk.projects.workstationsProjectsLocationsOperationsCancel(req);
+            WorkstationsProjectsLocationsOperationsCancelResponse res = sdk.projects.workstationsProjectsLocationsOperationsCancel(req, new WorkstationsProjectsLocationsOperationsCancelSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.googleProtobufEmpty.isPresent()) {
                 // handle response

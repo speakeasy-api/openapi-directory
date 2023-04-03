@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestCreateTestSeriesRequest {
-    
-    public TestCreateTestSeriesPathParams pathParams;
-    public TestCreateTestSeriesRequest withPathParams(TestCreateTestSeriesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public TestCreateTestSeriesNameOfTheTestSeries request;
-    public TestCreateTestSeriesRequest withRequest(TestCreateTestSeriesNameOfTheTestSeries request) {
-        this.request = request;
+    public TestCreateTestSeriesNameOfTheTestSeries requestBody;
+    public TestCreateTestSeriesRequest withRequestBody(TestCreateTestSeriesNameOfTheTestSeries requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public TestCreateTestSeriesRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public TestCreateTestSeriesSecurity security;
-    public TestCreateTestSeriesRequest withSecurity(TestCreateTestSeriesSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public TestCreateTestSeriesRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

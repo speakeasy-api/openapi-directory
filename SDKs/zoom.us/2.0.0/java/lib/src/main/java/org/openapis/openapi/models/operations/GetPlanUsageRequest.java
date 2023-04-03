@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlanUsageRequest {
-    
-    public GetPlanUsagePathParams pathParams;
-    public GetPlanUsageRequest withPathParams(GetPlanUsagePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetPlanUsageSecurity security;
-    public GetPlanUsageRequest withSecurity(GetPlanUsageSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public GetPlanUsageRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

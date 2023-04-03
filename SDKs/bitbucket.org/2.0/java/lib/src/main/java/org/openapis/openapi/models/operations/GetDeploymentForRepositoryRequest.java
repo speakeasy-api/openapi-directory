@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeploymentForRepositoryRequest {
+    /**
+     * The deployment UUID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment_uuid")
+    public String deploymentUuid;
+    public GetDeploymentForRepositoryRequest withDeploymentUuid(String deploymentUuid) {
+        this.deploymentUuid = deploymentUuid;
+        return this;
+    }
     
-    public GetDeploymentForRepositoryPathParams pathParams;
-    public GetDeploymentForRepositoryRequest withPathParams(GetDeploymentForRepositoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetDeploymentForRepositoryRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetDeploymentForRepositoryRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

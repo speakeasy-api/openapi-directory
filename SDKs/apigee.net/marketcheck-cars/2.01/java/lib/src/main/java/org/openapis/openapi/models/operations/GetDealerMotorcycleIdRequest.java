@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDealerMotorcycleIdRequest {
-    
-    public GetDealerMotorcycleIdPathParams pathParams;
-    public GetDealerMotorcycleIdRequest withPathParams(GetDealerMotorcycleIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetDealerMotorcycleIdRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * Dealer id to get all the dealer info attributes
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetDealerMotorcycleIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetDealerMotorcycleIdQueryParams queryParams;
-    public GetDealerMotorcycleIdRequest withQueryParams(GetDealerMotorcycleIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * boolean param to include site providers name in response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=provider")
+    public Boolean provider;
+    public GetDealerMotorcycleIdRequest withProvider(Boolean provider) {
+        this.provider = provider;
         return this;
     }
     

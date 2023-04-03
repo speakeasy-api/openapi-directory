@@ -37,24 +37,25 @@ public class PlayDTMF {
      * Play DTMF tones into a call
      * Play DTMF tones into a call
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StartDTMFResponse startDTMF(org.openapis.openapi.models.operations.StartDTMFRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StartDTMFResponse startDTMF(org.openapis.openapi.models.operations.StartDTMFRequest request, org.openapis.openapi.models.operations.StartDTMFSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartDTMFPathParams.class, baseUrl, "/{uuid}/dtmf", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartDTMFRequest.class, baseUrl, "/{uuid}/dtmf", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "dtmfRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

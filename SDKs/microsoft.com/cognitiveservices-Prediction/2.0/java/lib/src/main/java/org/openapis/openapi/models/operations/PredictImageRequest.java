@@ -7,31 +7,48 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PredictImageRequest {
-    
-    public PredictImagePathParams pathParams;
-    public PredictImageRequest withPathParams(PredictImagePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PredictImageQueryParams queryParams;
-    public PredictImageRequest withQueryParams(PredictImageQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public PredictImageHeaders headers;
-    public PredictImageRequest withHeaders(PredictImageHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Prediction-Key")
+    public String predictionKey;
+    public PredictImageRequest withPredictionKey(String predictionKey) {
+        this.predictionKey = predictionKey;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PredictImageRequestBody request;
-    public PredictImageRequest withRequest(PredictImageRequestBody request) {
-        this.request = request;
+    public PredictImageRequestBody requestBody;
+    public PredictImageRequest withRequestBody(PredictImageRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Optional. Specifies the name of application using the endpoint
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application")
+    public String application;
+    public PredictImageRequest withApplication(String application) {
+        this.application = application;
+        return this;
+    }
+    
+    /**
+     * Optional. Specifies the id of a particular iteration to evaluate against.
+     *             The default iteration for the project will be used when not specified
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
+    public String iterationId;
+    public PredictImageRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
+        return this;
+    }
+    
+    /**
+     * The project id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public PredictImageRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CopyAssignmentRequest {
-    
-    public CopyAssignmentPathParams pathParams;
-    public CopyAssignmentRequest withPathParams(CopyAssignmentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AssignmentCopy request;
-    public CopyAssignmentRequest withRequest(org.openapis.openapi.models.shared.AssignmentCopy request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AssignmentCopy assignmentCopy;
+    public CopyAssignmentRequest withAssignmentCopy(org.openapis.openapi.models.shared.AssignmentCopy assignmentCopy) {
+        this.assignmentCopy = assignmentCopy;
         return this;
     }
     
+    /**
+     * Unique identifier of the assignment
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignment")
+    public String assignment;
+    public CopyAssignmentRequest withAssignment(String assignment) {
+        this.assignment = assignment;
+        return this;
+    }
     
-    public CopyAssignmentSecurity security;
-    public CopyAssignmentRequest withSecurity(CopyAssignmentSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the class
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
+    public String class_;
+    public CopyAssignmentRequest withClass(String class_) {
+        this.class_ = class_;
         return this;
     }
     

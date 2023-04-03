@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPortfoliosAlt1Request {
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetPortfoliosAlt1DirectionEnum direction;
+    public GetPortfoliosAlt1Request withDirection(GetPortfoliosAlt1DirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public GetPortfoliosAlt1QueryParams queryParams;
-    public GetPortfoliosAlt1Request withQueryParams(GetPortfoliosAlt1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetPortfoliosAlt1Request withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetPortfoliosAlt1Request withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The search query to use to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetPortfoliosAlt1Request withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetPortfoliosAlt1SortEnum sort;
+    public GetPortfoliosAlt1Request withSort(GetPortfoliosAlt1SortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssociationsToRequest {
-    
-    public GetAssociationsToPathParams pathParams;
-    public GetAssociationsToRequest withPathParams(GetAssociationsToPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default) or a specific publication or other supporting object, e.g. ZFIN:ZDB-PUB-060503-2
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
+    public String evidence;
+    public GetAssociationsToRequest withEvidence(String evidence) {
+        this.evidence = evidence;
         return this;
     }
     
+    /**
+     * If true, excludes associations that involve IEAs (ECO:0000501)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_automatic_assertions")
+    public Boolean excludeAutomaticAssertions;
+    public GetAssociationsToRequest withExcludeAutomaticAssertions(Boolean excludeAutomaticAssertions) {
+        this.excludeAutomaticAssertions = excludeAutomaticAssertions;
+        return this;
+    }
     
-    public GetAssociationsToQueryParams queryParams;
-    public GetAssociationsToRequest withQueryParams(GetAssociationsToQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return associations pointing to this node, e.g. specifying MP:0013765 will return all genes, variants, strains, etc. annotated with this term. Can also be a biological entity such as a gene
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object")
+    public String object;
+    public GetAssociationsToRequest withObject(String object) {
+        this.object = object;
+        return this;
+    }
+    
+    /**
+     * number of rows
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
+    public Long rows;
+    public GetAssociationsToRequest withRows(Long rows) {
+        this.rows = rows;
+        return this;
+    }
+    
+    /**
+     * beginning row
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Long start;
+    public GetAssociationsToRequest withStart(Long start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * If true, excludes evidence objects in response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unselect_evidence")
+    public Boolean unselectEvidence;
+    public GetAssociationsToRequest withUnselectEvidence(Boolean unselectEvidence) {
+        this.unselectEvidence = unselectEvidence;
+        return this;
+    }
+    
+    /**
+     * If true, returns results in compact associations format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=use_compact_associations")
+    public Boolean useCompactAssociations;
+    public GetAssociationsToRequest withUseCompactAssociations(Boolean useCompactAssociations) {
+        this.useCompactAssociations = useCompactAssociations;
         return this;
     }
     

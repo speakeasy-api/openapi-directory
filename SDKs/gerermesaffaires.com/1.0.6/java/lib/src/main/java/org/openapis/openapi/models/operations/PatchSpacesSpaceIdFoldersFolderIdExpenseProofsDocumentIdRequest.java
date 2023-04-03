@@ -7,20 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdRequest {
-    
-    public PatchSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdPathParams pathParams;
-    public PatchSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdRequest withPathParams(PatchSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An expense proof to modify
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdRequestBody request;
-    public PatchSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdRequest withRequest(PatchSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdRequestBody request) {
-        this.request = request;
+    public PatchSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdRequestBody requestBody;
+    public PatchSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdRequest withRequestBody(PatchSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public String documentId;
+    public PatchSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdRequest withDocumentId(String documentId) {
+        this.documentId = documentId;
+        return this;
+    }
+    
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=folderId")
+    public String folderId;
+    public PatchSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdRequest withFolderId(String folderId) {
+        this.folderId = folderId;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PatchSpacesSpaceIdFoldersFolderIdExpenseProofsDocumentIdRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

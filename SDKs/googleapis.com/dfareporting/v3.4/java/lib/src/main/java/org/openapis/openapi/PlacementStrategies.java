@@ -34,25 +34,26 @@ public class PlacementStrategies {
     /**
      * Deletes an existing placement strategy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingPlacementStrategiesDeleteResponse dfareportingPlacementStrategiesDelete(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingPlacementStrategiesDeleteResponse dfareportingPlacementStrategiesDelete(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesDeleteRequest request, org.openapis.openapi.models.operations.DfareportingPlacementStrategiesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesDeletePathParams.class, baseUrl, "/userprofiles/{profileId}/placementStrategies/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesDeleteRequest.class, baseUrl, "/userprofiles/{profileId}/placementStrategies/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,25 +74,26 @@ public class PlacementStrategies {
     /**
      * Gets one placement strategy by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingPlacementStrategiesGetResponse dfareportingPlacementStrategiesGet(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingPlacementStrategiesGetResponse dfareportingPlacementStrategiesGet(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesGetRequest request, org.openapis.openapi.models.operations.DfareportingPlacementStrategiesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesGetPathParams.class, baseUrl, "/userprofiles/{profileId}/placementStrategies/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesGetRequest.class, baseUrl, "/userprofiles/{profileId}/placementStrategies/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,27 +120,28 @@ public class PlacementStrategies {
     /**
      * Inserts a new placement strategy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingPlacementStrategiesInsertResponse dfareportingPlacementStrategiesInsert(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingPlacementStrategiesInsertResponse dfareportingPlacementStrategiesInsert(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesInsertRequest request, org.openapis.openapi.models.operations.DfareportingPlacementStrategiesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesInsertPathParams.class, baseUrl, "/userprofiles/{profileId}/placementStrategies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesInsertRequest.class, baseUrl, "/userprofiles/{profileId}/placementStrategies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "placementStrategy", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,25 +168,26 @@ public class PlacementStrategies {
     /**
      * Retrieves a list of placement strategies, possibly filtered. This method supports paging.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingPlacementStrategiesListResponse dfareportingPlacementStrategiesList(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingPlacementStrategiesListResponse dfareportingPlacementStrategiesList(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesListRequest request, org.openapis.openapi.models.operations.DfareportingPlacementStrategiesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesListPathParams.class, baseUrl, "/userprofiles/{profileId}/placementStrategies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesListRequest.class, baseUrl, "/userprofiles/{profileId}/placementStrategies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -210,27 +214,28 @@ public class PlacementStrategies {
     /**
      * Updates an existing placement strategy. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingPlacementStrategiesPatchResponse dfareportingPlacementStrategiesPatch(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingPlacementStrategiesPatchResponse dfareportingPlacementStrategiesPatch(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesPatchRequest request, org.openapis.openapi.models.operations.DfareportingPlacementStrategiesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesPatchPathParams.class, baseUrl, "/userprofiles/{profileId}/placementStrategies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesPatchRequest.class, baseUrl, "/userprofiles/{profileId}/placementStrategies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "placementStrategy", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -257,27 +262,28 @@ public class PlacementStrategies {
     /**
      * Updates an existing placement strategy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingPlacementStrategiesUpdateResponse dfareportingPlacementStrategiesUpdate(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingPlacementStrategiesUpdateResponse dfareportingPlacementStrategiesUpdate(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesUpdateRequest request, org.openapis.openapi.models.operations.DfareportingPlacementStrategiesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesUpdatePathParams.class, baseUrl, "/userprofiles/{profileId}/placementStrategies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesUpdateRequest.class, baseUrl, "/userprofiles/{profileId}/placementStrategies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "placementStrategy", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingPlacementStrategiesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

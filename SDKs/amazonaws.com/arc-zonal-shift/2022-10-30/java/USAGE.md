@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CancelZonalShiftPathParams;
-import org.openapis.openapi.models.operations.CancelZonalShiftHeaders;
 import org.openapis.openapi.models.operations.CancelZonalShiftRequest;
 import org.openapis.openapi.models.operations.CancelZonalShiftResponse;
 
@@ -14,26 +12,20 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CancelZonalShiftRequest req = new CancelZonalShiftRequest() {{
-                pathParams = new CancelZonalShiftPathParams() {{
-                    zonalShiftId = "corrupti";
-                }};
-                headers = new CancelZonalShiftHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "provident";
+                xAmzCredential = "distinctio";
+                xAmzDate = "quibusdam";
+                xAmzSecurityToken = "unde";
+                xAmzSignature = "nulla";
+                xAmzSignedHeaders = "corrupti";
+                zonalShiftId = "illum";
+            }}            
 
             CancelZonalShiftResponse res = sdk.cancelZonalShift(req);
 

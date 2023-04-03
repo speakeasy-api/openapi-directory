@@ -4,20 +4,73 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkBluetoothClientsRequest {
-    
-    public GetNetworkBluetoothClientsPathParams pathParams;
-    public GetNetworkBluetoothClientsRequest withPathParams(GetNetworkBluetoothClientsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
+    public String endingBefore;
+    public GetNetworkBluetoothClientsRequest withEndingBefore(String endingBefore) {
+        this.endingBefore = endingBefore;
         return this;
     }
     
+    /**
+     * Include the connectivity history for this client
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeConnectivityHistory")
+    public Boolean includeConnectivityHistory;
+    public GetNetworkBluetoothClientsRequest withIncludeConnectivityHistory(Boolean includeConnectivityHistory) {
+        this.includeConnectivityHistory = includeConnectivityHistory;
+        return this;
+    }
     
-    public GetNetworkBluetoothClientsQueryParams queryParams;
-    public GetNetworkBluetoothClientsRequest withQueryParams(GetNetworkBluetoothClientsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkBluetoothClientsRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    /**
+     * The number of entries per page returned. Acceptable range is 5 - 1000. Default is 10.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public Long perPage;
+    public GetNetworkBluetoothClientsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
+    public String startingAfter;
+    public GetNetworkBluetoothClientsRequest withStartingAfter(String startingAfter) {
+        this.startingAfter = startingAfter;
+        return this;
+    }
+    
+    /**
+     * The beginning of the timespan for the data. The maximum lookback period is 7 days from today.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
+    public String t0;
+    public GetNetworkBluetoothClientsRequest withT0(String t0) {
+        this.t0 = t0;
+        return this;
+    }
+    
+    /**
+     * The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 7 days. The default is 1 day.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
+    public Float timespan;
+    public GetNetworkBluetoothClientsRequest withTimespan(Float timespan) {
+        this.timespan = timespan;
         return this;
     }
     

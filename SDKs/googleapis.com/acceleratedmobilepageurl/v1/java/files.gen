@@ -30,15 +30,14 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/AcceleratedmobilepageurlAmpUrlsBatchGetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/AcceleratedmobilepageurlAmpUrlsBatchGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AcceleratedmobilepageurlAmpUrlsBatchGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/BatchGetAmpUrlsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AmpUrlErrorErrorCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AmpUrlError.java
 lib/src/main/java/org/openapis/openapi/models/shared/AmpUrl.java
+lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/BatchGetAmpUrlsRequestLookupStrategyEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/BatchGetAmpUrlsRequest.java
-lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 USAGE.md

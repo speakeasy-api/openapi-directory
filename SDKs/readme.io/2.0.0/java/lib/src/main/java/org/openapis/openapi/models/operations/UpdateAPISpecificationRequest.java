@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAPISpecificationRequest {
-    
-    public UpdateAPISpecificationPathParams pathParams;
-    public UpdateAPISpecificationRequest withPathParams(UpdateAPISpecificationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public UpdateAPISpecificationRequestBody request;
-    public UpdateAPISpecificationRequest withRequest(UpdateAPISpecificationRequestBody request) {
-        this.request = request;
+    public UpdateAPISpecificationRequestBody requestBody;
+    public UpdateAPISpecificationRequest withRequestBody(UpdateAPISpecificationRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateAPISpecificationSecurity security;
-    public UpdateAPISpecificationRequest withSecurity(UpdateAPISpecificationSecurity security) {
-        this.security = security;
+    /**
+     * ID of the API specification. The unique ID for each API can be found by navigating to your **API Definitions** page.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateAPISpecificationRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

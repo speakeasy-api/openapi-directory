@@ -4,13 +4,59 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchRewardsRequest {
+    /**
+     * Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[groups]")
+    public String filterGroups;
+    public FetchRewardsRequest withFilterGroups(String filterGroups) {
+        this.filterGroups = filterGroups;
+        return this;
+    }
     
-    public FetchRewardsQueryParams queryParams;
-    public FetchRewardsRequest withQueryParams(FetchRewardsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[organization]")
+    public String filterOrganization;
+    public FetchRewardsRequest withFilterOrganization(String filterOrganization) {
+        this.filterOrganization = filterOrganization;
+        return this;
+    }
+    
+    /**
+     * Patient identifier. Note that one of the following filters must be specified: `filter[patient]`, `filter[groups]`, `filter[organization]`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[patient]")
+    public String filterPatient;
+    public FetchRewardsRequest withFilterPatient(String filterPatient) {
+        this.filterPatient = filterPatient;
+        return this;
+    }
+    
+    /**
+     * Reward program activation identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[reward_program_activation]")
+    public String filterRewardProgramActivation;
+    public FetchRewardsRequest withFilterRewardProgramActivation(String filterRewardProgramActivation) {
+        this.filterRewardProgramActivation = filterRewardProgramActivation;
+        return this;
+    }
+    
+    /**
+     * Thread identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[thread]")
+    public String filterThread;
+    public FetchRewardsRequest withFilterThread(String filterThread) {
+        this.filterThread = filterThread;
         return this;
     }
     

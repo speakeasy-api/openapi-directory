@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomerCertificatesByCustomerIdRequest {
-    
-    public GetCustomerCertificatesByCustomerIdPathParams pathParams;
-    public GetCustomerCertificatesByCustomerIdRequest withPathParams(GetCustomerCertificatesByCustomerIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An identifier for a customer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
+    public String customerId;
+    public GetCustomerCertificatesByCustomerIdRequest withCustomerId(String customerId) {
+        this.customerId = customerId;
         return this;
     }
     
+    /**
+     * Maximum number of items to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetCustomerCertificatesByCustomerIdRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetCustomerCertificatesByCustomerIdQueryParams queryParams;
-    public GetCustomerCertificatesByCustomerIdRequest withQueryParams(GetCustomerCertificatesByCustomerIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of results to skip for pagination
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetCustomerCertificatesByCustomerIdRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

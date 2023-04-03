@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateAccessKeyRequest {
-    
-    public GETUpdateAccessKeyQueryParams queryParams;
-    public GETUpdateAccessKeyRequest withQueryParams(GETUpdateAccessKeyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * &lt;p&gt;The access key ID of the secret access key you want to update.&lt;/p&gt; &lt;p&gt;This parameter allows (through its &lt;a href="http://wikipedia.org/wiki/regex"&gt;regex pattern&lt;/a&gt;) a string of characters that can consist of any upper or lowercased letter or digit.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccessKeyId")
+    public String accessKeyId;
+    public GETUpdateAccessKeyRequest withAccessKeyId(String accessKeyId) {
+        this.accessKeyId = accessKeyId;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETUpdateAccessKeyActionEnum action;
+    public GETUpdateAccessKeyRequest withAction(GETUpdateAccessKeyActionEnum action) {
+        this.action = action;
+        return this;
+    }
     
-    public GETUpdateAccessKeyHeaders headers;
-    public GETUpdateAccessKeyRequest withHeaders(GETUpdateAccessKeyHeaders headers) {
-        this.headers = headers;
+    /**
+     *  The status you want to assign to the secret access key. &lt;code&gt;Active&lt;/code&gt; means that the key can be used for programmatic calls to Amazon Web Services, while &lt;code&gt;Inactive&lt;/code&gt; means that the key cannot be used.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public GETUpdateAccessKeyStatusEnum status;
+    public GETUpdateAccessKeyRequest withStatus(GETUpdateAccessKeyStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the user whose key you want to update.&lt;/p&gt; &lt;p&gt;This parameter allows (through its &lt;a href="http://wikipedia.org/wiki/regex"&gt;regex pattern&lt;/a&gt;) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserName")
+    public String userName;
+    public GETUpdateAccessKeyRequest withUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETUpdateAccessKeyVersionEnum version;
+    public GETUpdateAccessKeyRequest withVersion(GETUpdateAccessKeyVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETUpdateAccessKeyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETUpdateAccessKeyRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETUpdateAccessKeyRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETUpdateAccessKeyRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETUpdateAccessKeyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETUpdateAccessKeyRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETUpdateAccessKeyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

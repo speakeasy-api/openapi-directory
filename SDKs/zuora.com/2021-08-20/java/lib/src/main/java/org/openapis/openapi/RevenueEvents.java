@@ -44,13 +44,13 @@ public class RevenueEvents {
      */
     public org.openapis.openapi.models.operations.GETRevenueEventDetailsResponse getRevenueEventDetails(org.openapis.openapi.models.operations.GETRevenueEventDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRevenueEventDetailsPathParams.class, baseUrl, "/v1/revenue-events/{event-number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRevenueEventDetailsRequest.class, baseUrl, "/v1/revenue-events/{event-number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -95,19 +95,19 @@ public class RevenueEvents {
      */
     public org.openapis.openapi.models.operations.GETRevenueEventForRevenueScheduleResponse getRevenueEventForRevenueSchedule(org.openapis.openapi.models.operations.GETRevenueEventForRevenueScheduleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRevenueEventForRevenueSchedulePathParams.class, baseUrl, "/v1/revenue-events/revenue-schedules/{rs-number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRevenueEventForRevenueScheduleRequest.class, baseUrl, "/v1/revenue-events/revenue-schedules/{rs-number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETRevenueEventForRevenueScheduleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETRevenueEventForRevenueScheduleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

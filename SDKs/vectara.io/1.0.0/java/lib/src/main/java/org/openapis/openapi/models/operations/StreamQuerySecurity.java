@@ -7,16 +7,16 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StreamQuerySecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAPIKeyAuth apiKeyAuth;
-    public StreamQuerySecurity withApiKeyAuth(org.openapis.openapi.models.shared.SchemeAPIKeyAuth apiKeyAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=x-api-key")
+    public String apiKeyAuth;
+    public StreamQuerySecurity withApiKeyAuth(String apiKeyAuth) {
         this.apiKeyAuth = apiKeyAuth;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOAuth oAuth;
-    public StreamQuerySecurity withOAuth(org.openapis.openapi.models.shared.SchemeOAuth oAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oAuth;
+    public StreamQuerySecurity withOAuth(String oAuth) {
         this.oAuth = oAuth;
         return this;
     }

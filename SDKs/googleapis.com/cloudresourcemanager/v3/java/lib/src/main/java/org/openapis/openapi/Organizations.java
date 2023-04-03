@@ -33,10 +33,11 @@ public class Organizations {
     /**
      * Searches organization resources that are visible to the user and satisfy the specified filter. This method returns organizations in an unspecified order. New organizations do not necessarily appear at the end of the results, and may take a small amount of time to appear. Search will only return organizations on which the user has the permission `resourcemanager.organizations.get`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsSearchResponse cloudresourcemanagerOrganizationsSearch(org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsSearchResponse cloudresourcemanagerOrganizationsSearch(org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsSearchRequest request, org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v3/organizations:search");
         
@@ -44,14 +45,14 @@ public class Organizations {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

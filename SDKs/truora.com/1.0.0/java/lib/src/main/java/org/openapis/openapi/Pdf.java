@@ -36,7 +36,7 @@ public class Pdf {
      */
     public org.openapis.openapi.models.operations.CreatePDFResponse createPDF(org.openapis.openapi.models.operations.CreatePDFRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePDFPathParams.class, baseUrl, "/v1/checks/{check_id}/pdf", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePDFRequest.class, baseUrl, "/v1/checks/{check_id}/pdf", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -70,13 +70,13 @@ public class Pdf {
      */
     public org.openapis.openapi.models.operations.GetPDFResponse getPDF(org.openapis.openapi.models.operations.GetPDFRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPDFPathParams.class, baseUrl, "/v1/checks/{check_id}/pdf", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPDFRequest.class, baseUrl, "/v1/checks/{check_id}/pdf", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPDFQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPDFRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

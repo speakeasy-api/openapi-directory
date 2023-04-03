@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListimmessagesRequest {
-    
-    public ListimmessagesPathParams pathParams;
-    public ListimmessagesRequest withPathParams(ListimmessagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * IM Channel's ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=channel")
+    public String channel;
+    public ListimmessagesRequest withChannel(String channel) {
+        this.channel = channel;
         return this;
     }
     
-    
-    public ListimmessagesQueryParams queryParams;
-    public ListimmessagesRequest withQueryParams(ListimmessagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Chat user's ID or email address.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=chat_user")
+    public String chatUser;
+    public ListimmessagesRequest withChatUser(String chatUser) {
+        this.chatUser = chatUser;
         return this;
     }
     
+    /**
+     * IM message's query date time, format as yyyy-MM-dd.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public String date;
+    public ListimmessagesRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
     
-    public ListimmessagesSecurity security;
-    public ListimmessagesRequest withSecurity(ListimmessagesSecurity security) {
-        this.security = security;
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public ListimmessagesRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
+    
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public ListimmessagesRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The user ID or email address.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public ListimmessagesRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

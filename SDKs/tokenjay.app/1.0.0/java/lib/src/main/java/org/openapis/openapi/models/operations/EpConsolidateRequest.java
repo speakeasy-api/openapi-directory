@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EpConsolidateRequest {
-    
-    public EpConsolidatePathParams pathParams;
-    public EpConsolidateRequest withPathParams(EpConsolidatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=p2pkaddress")
+    public String p2pkaddress;
+    public EpConsolidateRequest withP2pkaddress(String p2pkaddress) {
+        this.p2pkaddress = p2pkaddress;
         return this;
     }
     

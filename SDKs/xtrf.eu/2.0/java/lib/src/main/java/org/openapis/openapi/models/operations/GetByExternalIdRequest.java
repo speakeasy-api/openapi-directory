@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetByExternalIdRequest {
+    /**
+     * job's external identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=externalId")
+    public String externalId;
+    public GetByExternalIdRequest withExternalId(String externalId) {
+        this.externalId = externalId;
+        return this;
+    }
     
-    public GetByExternalIdQueryParams queryParams;
-    public GetByExternalIdRequest withQueryParams(GetByExternalIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * job's externalProjectId
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=externalProjectId")
+    public String externalProjectId;
+    public GetByExternalIdRequest withExternalProjectId(String externalProjectId) {
+        this.externalProjectId = externalProjectId;
         return this;
     }
     

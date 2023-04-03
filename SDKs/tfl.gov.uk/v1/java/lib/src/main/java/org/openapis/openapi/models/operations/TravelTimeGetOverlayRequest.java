@@ -4,20 +4,126 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TravelTimeGetOverlayRequest {
-    
-    public TravelTimeGetOverlayPathParams pathParams;
-    public TravelTimeGetOverlayRequest withPathParams(TravelTimeGetOverlayPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The direction of travel.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public TravelTimeGetOverlayDirectionEnum direction;
+    public TravelTimeGetOverlayRequest withDirection(TravelTimeGetOverlayDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * The height of the requested overlay.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=height")
+    public Integer height;
+    public TravelTimeGetOverlayRequest withHeight(Integer height) {
+        this.height = height;
+        return this;
+    }
     
-    public TravelTimeGetOverlayQueryParams queryParams;
-    public TravelTimeGetOverlayRequest withQueryParams(TravelTimeGetOverlayQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The map center latitude.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mapCenterLat")
+    public Double mapCenterLat;
+    public TravelTimeGetOverlayRequest withMapCenterLat(Double mapCenterLat) {
+        this.mapCenterLat = mapCenterLat;
+        return this;
+    }
+    
+    /**
+     * The map center longitude.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mapCenterLon")
+    public Double mapCenterLon;
+    public TravelTimeGetOverlayRequest withMapCenterLon(Double mapCenterLon) {
+        this.mapCenterLon = mapCenterLon;
+        return this;
+    }
+    
+    /**
+     * The id of the mode.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modeId")
+    public String modeId;
+    public TravelTimeGetOverlayRequest withModeId(String modeId) {
+        this.modeId = modeId;
+        return this;
+    }
+    
+    /**
+     * The latitude of the pin.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pinLat")
+    public Double pinLat;
+    public TravelTimeGetOverlayRequest withPinLat(Double pinLat) {
+        this.pinLat = pinLat;
+        return this;
+    }
+    
+    /**
+     * The longitude of the pin.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pinLon")
+    public Double pinLon;
+    public TravelTimeGetOverlayRequest withPinLon(Double pinLon) {
+        this.pinLon = pinLon;
+        return this;
+    }
+    
+    /**
+     * The title of the scenario.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scenarioTitle")
+    public String scenarioTitle;
+    public TravelTimeGetOverlayRequest withScenarioTitle(String scenarioTitle) {
+        this.scenarioTitle = scenarioTitle;
+        return this;
+    }
+    
+    /**
+     * The id for the time of day (AM/INTER/PM)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeOfDayId")
+    public String timeOfDayId;
+    public TravelTimeGetOverlayRequest withTimeOfDayId(String timeOfDayId) {
+        this.timeOfDayId = timeOfDayId;
+        return this;
+    }
+    
+    /**
+     * The total minutes between the travel time bands
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelTimeInterval")
+    public Integer travelTimeInterval;
+    public TravelTimeGetOverlayRequest withTravelTimeInterval(Integer travelTimeInterval) {
+        this.travelTimeInterval = travelTimeInterval;
+        return this;
+    }
+    
+    /**
+     * The width of the requested overlay.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=width")
+    public Integer width;
+    public TravelTimeGetOverlayRequest withWidth(Integer width) {
+        this.width = width;
+        return this;
+    }
+    
+    /**
+     * The zoom level.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=z")
+    public Integer z;
+    public TravelTimeGetOverlayRequest withZ(Integer z) {
+        this.z = z;
         return this;
     }
     

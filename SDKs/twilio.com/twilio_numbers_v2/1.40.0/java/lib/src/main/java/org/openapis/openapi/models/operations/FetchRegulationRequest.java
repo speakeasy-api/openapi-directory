@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchRegulationRequest {
-    
-    public FetchRegulationPathParams pathParams;
-    public FetchRegulationRequest withPathParams(FetchRegulationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchRegulationSecurity security;
-    public FetchRegulationRequest withSecurity(FetchRegulationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchRegulationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that identifies the Regulation resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchRegulationRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

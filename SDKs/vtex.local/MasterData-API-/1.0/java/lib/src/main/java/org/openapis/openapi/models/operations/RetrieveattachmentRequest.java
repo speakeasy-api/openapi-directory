@@ -4,13 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveattachmentRequest {
+    /**
+     * Two letter word that identifies the data structure
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=acronym")
+    public String acronym;
+    public RetrieveattachmentRequest withAcronym(String acronym) {
+        this.acronym = acronym;
+        return this;
+    }
     
-    public RetrieveattachmentPathParams pathParams;
-    public RetrieveattachmentRequest withPathParams(RetrieveattachmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Field to attach the file to, as described in admin
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=field")
+    public String field;
+    public RetrieveattachmentRequest withField(String field) {
+        this.field = field;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=file-name")
+    public String fileName;
+    public RetrieveattachmentRequest withFileName(String fileName) {
+        this.fileName = fileName;
+        return this;
+    }
+    
+    /**
+     * Id of the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public RetrieveattachmentRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

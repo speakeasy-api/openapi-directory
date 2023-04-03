@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubscribeToCategoryRequest {
-    
-    public SubscribeToCategoryPathParams pathParams;
-    public SubscribeToCategoryRequest withPathParams(SubscribeToCategoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the category.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category")
+    public Double category;
+    public SubscribeToCategoryRequest withCategory(Double category) {
+        this.category = category;
         return this;
     }
     
-    
-    public SubscribeToCategorySecurity security;
-    public SubscribeToCategoryRequest withSecurity(SubscribeToCategorySecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public SubscribeToCategoryRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

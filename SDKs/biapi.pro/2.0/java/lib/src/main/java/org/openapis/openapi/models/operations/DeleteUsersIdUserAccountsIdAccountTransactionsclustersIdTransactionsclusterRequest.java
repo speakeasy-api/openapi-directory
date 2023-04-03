@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest {
-    
-    public DeleteUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterPathParams pathParams;
-    public DeleteUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withPathParams(DeleteUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public DeleteUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account")
+    public Long idAccount;
+    public DeleteUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withIdAccount(Long idAccount) {
+        this.idAccount = idAccount;
+        return this;
+    }
     
-    public DeleteUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterQueryParams queryParams;
-    public DeleteUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withQueryParams(DeleteUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_transactionscluster")
+    public Long idTransactionscluster;
+    public DeleteUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withIdTransactionscluster(Long idTransactionscluster) {
+        this.idTransactionscluster = idTransactionscluster;
+        return this;
+    }
+    
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public DeleteUsersIdUserAccountsIdAccountTransactionsclustersIdTransactionsclusterRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateProjectArticlesListRequest {
-    
-    public PrivateProjectArticlesListPathParams pathParams;
-    public PrivateProjectArticlesListRequest withPathParams(PrivateProjectArticlesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Number of results included on a page. Used for pagination with query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public PrivateProjectArticlesListRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public PrivateProjectArticlesListQueryParams queryParams;
-    public PrivateProjectArticlesListRequest withQueryParams(PrivateProjectArticlesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Where to start the listing(the offset of the first result). Used for pagination with limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public PrivateProjectArticlesListRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     
+    /**
+     * Page number. Used for pagination with page_size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public PrivateProjectArticlesListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public PrivateProjectArticlesListSecurity security;
-    public PrivateProjectArticlesListRequest withSecurity(PrivateProjectArticlesListSecurity security) {
-        this.security = security;
+    /**
+     * The number of results included on a page. Used for pagination with page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public PrivateProjectArticlesListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Project unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Long projectId;
+    public PrivateProjectArticlesListRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchPathwaysUsingGETRequest {
-    
-    public SearchPathwaysUsingGETPathParams pathParams;
-    public SearchPathwaysUsingGETRequest withPathParams(SearchPathwaysUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Free text search string
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=searchString")
+    public String searchString;
+    public SearchPathwaysUsingGETRequest withSearchString(String searchString) {
+        this.searchString = searchString;
         return this;
     }
     

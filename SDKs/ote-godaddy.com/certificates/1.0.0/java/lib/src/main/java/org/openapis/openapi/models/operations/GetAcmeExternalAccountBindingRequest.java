@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAcmeExternalAccountBindingRequest {
-    
-    public GetAcmeExternalAccountBindingPathParams pathParams;
-    public GetAcmeExternalAccountBindingRequest withPathParams(GetAcmeExternalAccountBindingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An identifier for a customer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
+    public String customerId;
+    public GetAcmeExternalAccountBindingRequest withCustomerId(String customerId) {
+        this.customerId = customerId;
         return this;
     }
     

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateKvPairRequest {
-    
-    public UpdateKvPairPathParams pathParams;
-    public UpdateKvPairRequest withPathParams(UpdateKvPairPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A JSON object containing Key-value information
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.KeyValuePairUpdate request;
-    public UpdateKvPairRequest withRequest(org.openapis.openapi.models.shared.KeyValuePairUpdate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.KeyValuePairUpdate keyValuePairUpdate;
+    public UpdateKvPairRequest withKeyValuePairUpdate(org.openapis.openapi.models.shared.KeyValuePairUpdate keyValuePairUpdate) {
+        this.keyValuePairUpdate = keyValuePairUpdate;
+        return this;
+    }
+    
+    /**
+     * Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateKvPairRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddMemberToGroupRequest {
-    
-    public AddMemberToGroupPathParams pathParams;
-    public AddMemberToGroupRequest withPathParams(AddMemberToGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AddUserToGroupRequest addUserToGroupRequest;
+    public AddMemberToGroupRequest withAddUserToGroupRequest(org.openapis.openapi.models.shared.AddUserToGroupRequest addUserToGroupRequest) {
+        this.addUserToGroupRequest = addUserToGroupRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AddUserToGroupRequest request;
-    public AddMemberToGroupRequest withRequest(org.openapis.openapi.models.shared.AddUserToGroupRequest request) {
-        this.request = request;
+    /**
+     * The identifier of the Organization.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public AddMemberToGroupRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    
+    /**
+     * The identifier of the Member.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public AddMemberToGroupRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

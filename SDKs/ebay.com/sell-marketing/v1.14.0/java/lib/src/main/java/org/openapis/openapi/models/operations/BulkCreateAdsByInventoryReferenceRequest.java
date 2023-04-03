@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BulkCreateAdsByInventoryReferenceRequest {
-    
-    public BulkCreateAdsByInventoryReferencePathParams pathParams;
-    public BulkCreateAdsByInventoryReferenceRequest withPathParams(BulkCreateAdsByInventoryReferencePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The container for the bulk request to create ads for eBay inventory reference IDs. eBay inventory reference IDs are seller-defined IDs used by theInventory API.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BulkCreateAdsByInventoryReferenceRequest request;
-    public BulkCreateAdsByInventoryReferenceRequest withRequest(org.openapis.openapi.models.shared.BulkCreateAdsByInventoryReferenceRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BulkCreateAdsByInventoryReferenceRequest bulkCreateAdsByInventoryReferenceRequest;
+    public BulkCreateAdsByInventoryReferenceRequest withBulkCreateAdsByInventoryReferenceRequest(org.openapis.openapi.models.shared.BulkCreateAdsByInventoryReferenceRequest bulkCreateAdsByInventoryReferenceRequest) {
+        this.bulkCreateAdsByInventoryReferenceRequest = bulkCreateAdsByInventoryReferenceRequest;
         return this;
     }
     
-    
-    public BulkCreateAdsByInventoryReferenceSecurity security;
-    public BulkCreateAdsByInventoryReferenceRequest withSecurity(BulkCreateAdsByInventoryReferenceSecurity security) {
-        this.security = security;
+    /**
+     * A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created. Get a seller's campaign IDs by calling &lt;a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns"&gt;getCampaigns&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaign_id")
+    public String campaignId;
+    public BulkCreateAdsByInventoryReferenceRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
         return this;
     }
     

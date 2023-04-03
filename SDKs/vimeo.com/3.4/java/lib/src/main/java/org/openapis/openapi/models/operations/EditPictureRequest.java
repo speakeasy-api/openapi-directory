@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditPictureRequest {
-    
-    public EditPicturePathParams pathParams;
-    public EditPictureRequest withPathParams(EditPicturePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.picture+json")
-    public EditPictureRequestBody request;
-    public EditPictureRequest withRequest(EditPictureRequestBody request) {
-        this.request = request;
+    public EditPictureRequestBody requestBody;
+    public EditPictureRequest withRequestBody(EditPictureRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The ID of the picture.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portraitset_id")
+    public Double portraitsetId;
+    public EditPictureRequest withPortraitsetId(Double portraitsetId) {
+        this.portraitsetId = portraitsetId;
+        return this;
+    }
     
-    public EditPictureSecurity security;
-    public EditPictureRequest withSecurity(EditPictureSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public EditPictureRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FaresRequest {
-    
-    public FaresQueryParams queryParams;
-    public FaresRequest withQueryParams(FaresQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public FaresRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public FaresHeaders headers;
-    public FaresRequest withHeaders(FaresHeaders headers) {
-        this.headers = headers;
+    /**
+     * Include fares for these carriers e.g. ('4U;LH')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=carriers")
+    public String carriers;
+    public FaresRequest withCarriers(String carriers) {
+        this.carriers = carriers;
         return this;
     }
     
+    /**
+     * Search fares from these carriers' catalogues - currently active for Germanwings only  (4U)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=catalogues")
+    public String catalogues;
+    public FaresRequest withCatalogues(String catalogues) {
+        this.catalogues = catalogues;
+        return this;
+    }
     
-    public FaresSecurity security;
-    public FaresRequest withSecurity(FaresSecurity security) {
-        this.security = security;
+    /**
+     * Fares family: basic,smart, best, smartflex, bestflex - Germanwings only (Acceptable values are: "", "basic", "smart", "best", "smartflex", "bestflex")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fare-types")
+    public String fareTypes;
+    public FaresRequest withFareTypes(String fareTypes) {
+        this.fareTypes = fareTypes;
+        return this;
+    }
+    
+    /**
+     * Journey details  e.g. (origin=TXL;destination=CGN;travel-date=2016-12-15;return-date=2016-12-20;cabin=Economy)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=segments")
+    public String segments;
+    public FaresRequest withSegments(String segments) {
+        this.segments = segments;
+        return this;
+    }
+    
+    /**
+     * Type and number of travelers e.g. (adult=1;child=1;infant=1)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelers")
+    public String travelers;
+    public FaresRequest withTravelers(String travelers) {
+        this.travelers = travelers;
         return this;
     }
     

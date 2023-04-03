@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCustomPolicyRequest {
-    
-    public CreateCustomPolicyHeaders headers;
-    public CreateCustomPolicyRequest withHeaders(CreateCustomPolicyHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Request to create a new Custom Policy.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CustomPolicyCreateRequest request;
-    public CreateCustomPolicyRequest withRequest(org.openapis.openapi.models.shared.CustomPolicyCreateRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CustomPolicyCreateRequest customPolicyCreateRequest;
+    public CreateCustomPolicyRequest withCustomPolicyCreateRequest(org.openapis.openapi.models.shared.CustomPolicyCreateRequest customPolicyCreateRequest) {
+        this.customPolicyCreateRequest = customPolicyCreateRequest;
         return this;
     }
     
-    
-    public CreateCustomPolicySecurity security;
-    public CreateCustomPolicyRequest withSecurity(CreateCustomPolicySecurity security) {
-        this.security = security;
+    /**
+     * This header parameter specifies the eBay marketplace for the custom policy that is being created. Supported values for this header can be found in the &lt;a href="/api-docs/sell/account/types/ba:MarketplaceIdEnum" target="_blank"&gt;MarketplaceIdEnum&lt;/a&gt; type definition.&lt;br/&gt; &lt;br/&gt; &lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; The following eBay marketplaces support Custom Policies: &lt;ul&gt;&lt;li&gt;Germany (EBAY_DE)&lt;/li&gt; &lt;li&gt;Canada (EBAY_CA)&lt;/li&gt; &lt;li&gt;Australia (EBAY_AU)&lt;/li&gt; &lt;li&gt;United States (EBAY_US)&lt;/li&gt; &lt;li&gt;France (EBAY_FR)&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public CreateCustomPolicyRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     

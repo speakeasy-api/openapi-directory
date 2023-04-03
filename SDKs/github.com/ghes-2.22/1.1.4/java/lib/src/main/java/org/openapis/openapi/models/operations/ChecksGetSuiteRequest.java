@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChecksGetSuiteRequest {
+    /**
+     * check_suite_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=check_suite_id")
+    public Long checkSuiteId;
+    public ChecksGetSuiteRequest withCheckSuiteId(Long checkSuiteId) {
+        this.checkSuiteId = checkSuiteId;
+        return this;
+    }
     
-    public ChecksGetSuitePathParams pathParams;
-    public ChecksGetSuiteRequest withPathParams(ChecksGetSuitePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ChecksGetSuiteRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ChecksGetSuiteRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

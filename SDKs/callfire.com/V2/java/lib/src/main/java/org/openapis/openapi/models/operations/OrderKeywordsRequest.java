@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderKeywordsRequest {
-    
-    public OrderKeywordsQueryParams queryParams;
-    public OrderKeywordsRequest withQueryParams(OrderKeywordsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Request object which contains a list of keywords to buy
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.KeywordPurchaseRequest request;
-    public OrderKeywordsRequest withRequest(org.openapis.openapi.models.shared.KeywordPurchaseRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.KeywordPurchaseRequest keywordPurchaseRequest;
+    public OrderKeywordsRequest withKeywordPurchaseRequest(org.openapis.openapi.models.shared.KeywordPurchaseRequest keywordPurchaseRequest) {
+        this.keywordPurchaseRequest = keywordPurchaseRequest;
         return this;
     }
     
-    
-    public OrderKeywordsSecurity security;
-    public OrderKeywordsRequest withSecurity(OrderKeywordsSecurity security) {
-        this.security = security;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public OrderKeywordsRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     

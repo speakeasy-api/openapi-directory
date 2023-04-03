@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomerUpdateAddressFormRequest {
-    
-    public CustomerUpdateAddressFormPathParams pathParams;
-    public CustomerUpdateAddressFormRequest withPathParams(CustomerUpdateAddressFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The updated address. Please query an address via (todo) to see all fields. Note that Id and CustomerId cannot be changed.
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel request;
-    public CustomerUpdateAddressFormRequest withRequest(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel;
+    public CustomerUpdateAddressFormRequest withBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel) {
+        this.billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel;
+        return this;
+    }
+    
+    /**
+     * The id of the address
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CustomerUpdateAddressFormRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

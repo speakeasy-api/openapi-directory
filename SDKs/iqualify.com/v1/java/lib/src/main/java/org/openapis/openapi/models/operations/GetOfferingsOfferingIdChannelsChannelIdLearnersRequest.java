@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOfferingsOfferingIdChannelsChannelIdLearnersRequest {
+    /**
+     * channel's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
+    public String channelId;
+    public GetOfferingsOfferingIdChannelsChannelIdLearnersRequest withChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
     
-    public GetOfferingsOfferingIdChannelsChannelIdLearnersPathParams pathParams;
-    public GetOfferingsOfferingIdChannelsChannelIdLearnersRequest withPathParams(GetOfferingsOfferingIdChannelsChannelIdLearnersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public GetOfferingsOfferingIdChannelsChannelIdLearnersRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
         return this;
     }
     

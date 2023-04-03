@@ -14,9 +14,9 @@ public class DeleteMessengerAccountSecurity {
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer")
-    public org.openapis.openapi.models.shared.SchemeBearerAuth bearerAuth;
-    public DeleteMessengerAccountSecurity withBearerAuth(org.openapis.openapi.models.shared.SchemeBearerAuth bearerAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
+    public String bearerAuth;
+    public DeleteMessengerAccountSecurity withBearerAuth(String bearerAuth) {
         this.bearerAuth = bearerAuth;
         return this;
     }

@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsGetDatapointsCountRequest {
-    
-    public GroupsGetDatapointsCountPathParams pathParams;
-    public GroupsGetDatapointsCountRequest withPathParams(GroupsGetDatapointsCountPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Exclude datapoints created before this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
+    public String createdAfter;
+    public GroupsGetDatapointsCountRequest withCreatedAfter(String createdAfter) {
+        this.createdAfter = createdAfter;
         return this;
     }
     
+    /**
+     * Exclude datapoints created after this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
+    public String createdBefore;
+    public GroupsGetDatapointsCountRequest withCreatedBefore(String createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
     
-    public GroupsGetDatapointsCountQueryParams queryParams;
-    public GroupsGetDatapointsCountRequest withQueryParams(GroupsGetDatapointsCountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GroupsGetDatapointsCountRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Filter fields by favourite status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlyFavorites")
+    public Boolean onlyFavorites;
+    public GroupsGetDatapointsCountRequest withOnlyFavorites(Boolean onlyFavorites) {
+        this.onlyFavorites = onlyFavorites;
+        return this;
+    }
+    
+    /**
+     * Status of the datapoint
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GroupsGetDatapointsCountStatusEnum status;
+    public GroupsGetDatapointsCountRequest withStatus(GroupsGetDatapointsCountStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of tags you want to filter with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public GroupsGetDatapointsCountRequest withTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    
+    /**
+     * Filter fields by this pattern
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
+    public String textSearch;
+    public GroupsGetDatapointsCountRequest withTextSearch(String textSearch) {
+        this.textSearch = textSearch;
+        return this;
+    }
+    
+    /**
+     * Type of the datapoint ("tp"/"tl")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GroupsGetDatapointsCountTypeEnum type;
+    public GroupsGetDatapointsCountRequest withType(GroupsGetDatapointsCountTypeEnum type) {
+        this.type = type;
         return this;
     }
     

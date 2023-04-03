@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStoresRequest {
-    
-    public GetStoresQueryParams queryParams;
-    public GetStoresRequest withQueryParams(GetStoresQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=merchantId")
+    public String merchantId;
+    public GetStoresRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     
+    /**
+     * The number of the page to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Integer pageNumber;
+    public GetStoresRequest withPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
     
-    public GetStoresSecurity security;
-    public GetStoresRequest withSecurity(GetStoresSecurity security) {
-        this.security = security;
+    /**
+     * The number of items to have on a page, maximum 100. The default is 10 items on a page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetStoresRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The reference of the store.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reference")
+    public String reference;
+    public GetStoresRequest withReference(String reference) {
+        this.reference = reference;
         return this;
     }
     

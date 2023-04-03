@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAddRoleToDBClusterRequest {
-    
-    public GETAddRoleToDBClusterQueryParams queryParams;
-    public GETAddRoleToDBClusterRequest withQueryParams(GETAddRoleToDBClusterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETAddRoleToDBClusterActionEnum action;
+    public GETAddRoleToDBClusterRequest withAction(GETAddRoleToDBClusterActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the DB cluster to associate the IAM role with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterIdentifier")
+    public String dbClusterIdentifier;
+    public GETAddRoleToDBClusterRequest withDBClusterIdentifier(String dbClusterIdentifier) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        return this;
+    }
     
-    public GETAddRoleToDBClusterHeaders headers;
-    public GETAddRoleToDBClusterRequest withHeaders(GETAddRoleToDBClusterHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the feature for the DB cluster that the IAM role is to be associated with. For information about supported feature names, see &lt;a&gt;DBEngineVersion&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FeatureName")
+    public String featureName;
+    public GETAddRoleToDBClusterRequest withFeatureName(String featureName) {
+        this.featureName = featureName;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role to associate with the Aurora DB cluster, for example &lt;code&gt;arn:aws:iam::123456789012:role/AuroraAccessRole&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RoleArn")
+    public String roleArn;
+    public GETAddRoleToDBClusterRequest withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETAddRoleToDBClusterVersionEnum version;
+    public GETAddRoleToDBClusterRequest withVersion(GETAddRoleToDBClusterVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETAddRoleToDBClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETAddRoleToDBClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETAddRoleToDBClusterRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETAddRoleToDBClusterRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETAddRoleToDBClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETAddRoleToDBClusterRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETAddRoleToDBClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

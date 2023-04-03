@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolNetflowSetConfigRequest {
+    /**
+     * Agent to set the NETFLOW configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolNetflowSetConfigRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolNetflowSetConfigPathParams pathParams;
-    public ProtocolNetflowSetConfigRequest withPathParams(ProtocolNetflowSetConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Parameter to set the NETFLOW configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=argument")
+    public String argument;
+    public ProtocolNetflowSetConfigRequest withArgument(String argument) {
+        this.argument = argument;
+        return this;
+    }
+    
+    /**
+     * Value to set the NETFLOW configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=value")
+    public String value;
+    public ProtocolNetflowSetConfigRequest withValue(String value) {
+        this.value = value;
         return this;
     }
     

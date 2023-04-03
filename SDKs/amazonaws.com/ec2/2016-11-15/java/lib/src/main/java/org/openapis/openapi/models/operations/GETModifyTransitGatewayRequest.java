@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyTransitGatewayRequest {
-    
-    public GETModifyTransitGatewayQueryParams queryParams;
-    public GETModifyTransitGatewayRequest withQueryParams(GETModifyTransitGatewayQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyTransitGatewayActionEnum action;
+    public GETModifyTransitGatewayRequest withAction(GETModifyTransitGatewayActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The description for the transit gateway.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Description")
+    public String description;
+    public GETModifyTransitGatewayRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
     
-    public GETModifyTransitGatewayHeaders headers;
-    public GETModifyTransitGatewayRequest withHeaders(GETModifyTransitGatewayHeaders headers) {
-        this.headers = headers;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETModifyTransitGatewayRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The options to modify.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Options")
+    public GETModifyTransitGatewayOptions options;
+    public GETModifyTransitGatewayRequest withOptions(GETModifyTransitGatewayOptions options) {
+        this.options = options;
+        return this;
+    }
+    
+    /**
+     * The ID of the transit gateway.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayId")
+    public String transitGatewayId;
+    public GETModifyTransitGatewayRequest withTransitGatewayId(String transitGatewayId) {
+        this.transitGatewayId = transitGatewayId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyTransitGatewayVersionEnum version;
+    public GETModifyTransitGatewayRequest withVersion(GETModifyTransitGatewayVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyTransitGatewayRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyTransitGatewayRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyTransitGatewayRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyTransitGatewayRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyTransitGatewayRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyTransitGatewayRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyTransitGatewayRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

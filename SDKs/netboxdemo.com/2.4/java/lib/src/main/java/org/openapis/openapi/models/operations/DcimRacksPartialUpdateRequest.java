@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimRacksPartialUpdateRequest {
-    
-    public DcimRacksPartialUpdatePathParams pathParams;
-    public DcimRacksPartialUpdateRequest withPathParams(DcimRacksPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableRackInput writableRackInput;
+    public DcimRacksPartialUpdateRequest withWritableRackInput(org.openapis.openapi.models.shared.WritableRackInput writableRackInput) {
+        this.writableRackInput = writableRackInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableRackInput request;
-    public DcimRacksPartialUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableRackInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this rack.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimRacksPartialUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

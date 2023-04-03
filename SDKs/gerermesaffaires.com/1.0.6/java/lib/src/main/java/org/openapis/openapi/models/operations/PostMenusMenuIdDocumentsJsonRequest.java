@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMenusMenuIdDocumentsJsonRequest {
-    
-    public PostMenusMenuIdDocumentsJsonPathParams pathParams;
-    public PostMenusMenuIdDocumentsJsonRequest withPathParams(PostMenusMenuIdDocumentsJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Document to add
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostMenusMenuIdDocumentsApplicationJSON request;
-    public PostMenusMenuIdDocumentsJsonRequest withRequest(PostMenusMenuIdDocumentsApplicationJSON request) {
-        this.request = request;
+    public PostMenusMenuIdDocumentsApplicationJSON requestBody;
+    public PostMenusMenuIdDocumentsJsonRequest withRequestBody(PostMenusMenuIdDocumentsApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostMenusMenuIdDocumentsJsonSecurity security;
-    public PostMenusMenuIdDocumentsJsonRequest withSecurity(PostMenusMenuIdDocumentsJsonSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=menuId")
+    public String menuId;
+    public PostMenusMenuIdDocumentsJsonRequest withMenuId(String menuId) {
+        this.menuId = menuId;
         return this;
     }
     

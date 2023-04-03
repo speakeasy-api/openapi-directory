@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateNetworkWirelessRfProfileRequest {
-    
-    public CreateNetworkWirelessRfProfilePathParams pathParams;
-    public CreateNetworkWirelessRfProfileRequest withPathParams(CreateNetworkWirelessRfProfilePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateNetworkWirelessRfProfileRequestBody requestBody;
+    public CreateNetworkWirelessRfProfileRequest withRequestBody(CreateNetworkWirelessRfProfileRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateNetworkWirelessRfProfileRequestBody request;
-    public CreateNetworkWirelessRfProfileRequest withRequest(CreateNetworkWirelessRfProfileRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public CreateNetworkWirelessRfProfileRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

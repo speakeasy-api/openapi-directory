@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InstitutionArticlesRequest {
-    
-    public InstitutionArticlesPathParams pathParams;
-    public InstitutionArticlesRequest withPathParams(InstitutionArticlesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filename")
+    public String filename;
+    public InstitutionArticlesRequest withFilename(String filename) {
+        this.filename = filename;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=institution_string_id")
+    public String institutionStringId;
+    public InstitutionArticlesRequest withInstitutionStringId(String institutionStringId) {
+        this.institutionStringId = institutionStringId;
+        return this;
+    }
     
-    public InstitutionArticlesQueryParams queryParams;
-    public InstitutionArticlesRequest withQueryParams(InstitutionArticlesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resource_id")
+    public String resourceId;
+    public InstitutionArticlesRequest withResourceId(String resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
     

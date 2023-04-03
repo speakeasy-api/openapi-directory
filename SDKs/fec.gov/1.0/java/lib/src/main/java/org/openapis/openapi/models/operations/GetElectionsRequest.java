@@ -4,13 +4,136 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetElectionsRequest {
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetElectionsRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetElectionsQueryParams queryParams;
-    public GetElectionsRequest withQueryParams(GetElectionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Two-year election cycle in which a candidate runs for office.
+     * Calculated from Form 2. The cycle begins with
+     * an odd year and is named for its ending, even year. This cycle follows
+     * the traditional house election cycle and subdivides the presidential
+     * and Senate elections into comparable two-year blocks. To retrieve data for
+     * the entire four years of a presidential term or six years of a senatorial term,
+     * you will need the `election_full` flag.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
+    public Integer cycle;
+    public GetElectionsRequest withCycle(Integer cycle) {
+        this.cycle = cycle;
+        return this;
+    }
+    
+    /**
+     * Two-digit US House distirict of the office the candidate is running for. Presidential, Senate and House at-large candidates will have District 00.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=district")
+    public String district;
+    public GetElectionsRequest withDistrict(String district) {
+        this.district = district;
+        return this;
+    }
+    
+    /**
+     * `True` indicates that full election period of a candidate.
+     * `False` indicates that two year election cycle.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_full")
+    public Boolean electionFull;
+    public GetElectionsRequest withElectionFull(Boolean electionFull) {
+        this.electionFull = electionFull;
+        return this;
+    }
+    
+    /**
+     * Federal office candidate runs for: H, S or P
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
+    public GetElectionsOfficeEnum office;
+    public GetElectionsRequest withOffice(GetElectionsOfficeEnum office) {
+        this.office = office;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetElectionsRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetElectionsRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetElectionsRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetElectionsRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetElectionsRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetElectionsRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
+        return this;
+    }
+    
+    /**
+     * US state or territory where a candidate runs for office
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public GetElectionsRequest withState(String state) {
+        this.state = state;
         return this;
     }
     

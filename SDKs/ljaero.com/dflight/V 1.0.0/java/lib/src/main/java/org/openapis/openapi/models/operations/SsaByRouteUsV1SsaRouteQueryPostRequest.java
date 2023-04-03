@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SsaByRouteUsV1SsaRouteQueryPostRequest {
-    
-    public SsaByRouteUsV1SsaRouteQueryPostHeaders headers;
-    public SsaByRouteUsV1SsaRouteQueryPostRequest withHeaders(SsaByRouteUsV1SsaRouteQueryPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.SSAByRoute ssaByRoute;
+    public SsaByRouteUsV1SsaRouteQueryPostRequest withSSAByRoute(org.openapis.openapi.models.shared.SSAByRoute ssaByRoute) {
+        this.ssaByRoute = ssaByRoute;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SSAByRoute request;
-    public SsaByRouteUsV1SsaRouteQueryPostRequest withRequest(org.openapis.openapi.models.shared.SSAByRoute request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public SsaByRouteUsV1SsaRouteQueryPostRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

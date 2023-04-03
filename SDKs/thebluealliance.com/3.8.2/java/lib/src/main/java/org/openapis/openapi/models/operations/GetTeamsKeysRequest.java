@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamsKeysRequest {
-    
-    public GetTeamsKeysPathParams pathParams;
-    public GetTeamsKeysRequest withPathParams(GetTeamsKeysPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Value of the `ETag` header in the most recently cached response by the client.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetTeamsKeysRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
-    
-    public GetTeamsKeysHeaders headers;
-    public GetTeamsKeysRequest withHeaders(GetTeamsKeysHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetTeamsKeysSecurity security;
-    public GetTeamsKeysRequest withSecurity(GetTeamsKeysSecurity security) {
-        this.security = security;
+    /**
+     * Page number of results to return, zero-indexed
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page_num")
+    public Long pageNum;
+    public GetTeamsKeysRequest withPageNum(Long pageNum) {
+        this.pageNum = pageNum;
         return this;
     }
     

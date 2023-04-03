@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStatisticsRequest {
-    
-    public GetStatisticsPathParams pathParams;
-    public GetStatisticsRequest withPathParams(GetStatisticsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the statistics
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public GetStatisticsRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

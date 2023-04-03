@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteBucketRequest {
-    
-    public DeleteBucketPathParams pathParams;
-    public DeleteBucketRequest withPathParams(DeleteBucketPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Twilio-provided string that uniquely identifies the Rate Limit resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=RateLimitSid")
+    public String rateLimitSid;
+    public DeleteBucketRequest withRateLimitSid(String rateLimitSid) {
+        this.rateLimitSid = rateLimitSid;
         return this;
     }
     
-    
-    public DeleteBucketSecurity security;
-    public DeleteBucketRequest withSecurity(DeleteBucketSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteBucketRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteBucketRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies this Bucket.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteBucketRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -37,7 +37,7 @@ public class Article {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ArticleAddMeasureUnitResponse articleAddMeasureUnit(org.openapis.openapi.models.operations.ArticleAddMeasureUnitRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ArticleAddMeasureUnitResponse articleAddMeasureUnit(org.openapis.openapi.models.shared.MeasureUnitDTO[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/Article/MeasureUnit");
         
@@ -97,7 +97,7 @@ public class Article {
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArticleDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArticleDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -144,7 +144,7 @@ public class Article {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArticleGetAddonsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArticleGetAddonsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -197,7 +197,7 @@ public class Article {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArticleGetMeasureUnitsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArticleGetMeasureUnitsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -290,7 +290,7 @@ public class Article {
      */
     public org.openapis.openapi.models.operations.ArticleGymArticleDetailsResponse articleGymArticleDetails(org.openapis.openapi.models.operations.ArticleGymArticleDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleGymArticleDetailsPathParams.class, baseUrl, "/api/Article/GymArticle/{articleId}/{gymId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleGymArticleDetailsRequest.class, baseUrl, "/api/Article/GymArticle/{articleId}/{gymId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -343,7 +343,7 @@ public class Article {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ArticlePostResponse articlePost(org.openapis.openapi.models.operations.ArticlePostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ArticlePostResponse articlePost(org.openapis.openapi.models.shared.ArticleDTO request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/Article");
         
@@ -395,7 +395,7 @@ public class Article {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ArticlePutResponse articlePut(org.openapis.openapi.models.operations.ArticlePutRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ArticlePutResponse articlePut(org.openapis.openapi.models.shared.ArticleDTO request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/Article");
         
@@ -455,7 +455,7 @@ public class Article {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArticleSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArticleSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -500,7 +500,7 @@ public class Article {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ArticleUpdateArticleGymDetailsResponse articleUpdateArticleGymDetails(org.openapis.openapi.models.operations.ArticleUpdateArticleGymDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ArticleUpdateArticleGymDetailsResponse articleUpdateArticleGymDetails(org.openapis.openapi.models.shared.GymArticleDetailsDTO[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/Article/ArticleGymDetails");
         
@@ -560,7 +560,7 @@ public class Article {
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArticleUpdateStatusQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArticleUpdateStatusRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -607,7 +607,7 @@ public class Article {
      */
     public org.openapis.openapi.models.operations.ArticleGetResponse articleGet(org.openapis.openapi.models.operations.ArticleGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleGetPathParams.class, baseUrl, "/api/Article/{articleID}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleGetRequest.class, baseUrl, "/api/Article/{articleID}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

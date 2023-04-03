@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetVodRegionsRequest {
-    
-    public SetVodRegionsPathParams pathParams;
-    public SetVodRegionsRequest withPathParams(SetVodRegionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.ondemand.region+json")
-    public SetVodRegionsRequestBody request;
-    public SetVodRegionsRequest withRequest(SetVodRegionsRequestBody request) {
-        this.request = request;
+    public SetVodRegionsRequestBody requestBody;
+    public SetVodRegionsRequest withRequestBody(SetVodRegionsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public SetVodRegionsSecurity security;
-    public SetVodRegionsRequest withSecurity(SetVodRegionsSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public SetVodRegionsRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
         return this;
     }
     

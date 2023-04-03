@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMeConnectionsConnectionIdRequest {
-    
-    public GetMeConnectionsConnectionIdPathParams pathParams;
-    public GetMeConnectionsConnectionIdRequest withPathParams(GetMeConnectionsConnectionIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetMeConnectionsConnectionIdSecurity security;
-    public GetMeConnectionsConnectionIdRequest withSecurity(GetMeConnectionsConnectionIdSecurity security) {
-        this.security = security;
+    /**
+     * SoundCloud connection id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
+    public Long connectionId;
+    public GetMeConnectionsConnectionIdRequest withConnectionId(Long connectionId) {
+        this.connectionId = connectionId;
         return this;
     }
     

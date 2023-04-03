@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsCreateCardRequest {
-    
-    public ProjectsCreateCardPathParams pathParams;
-    public ProjectsCreateCardRequest withPathParams(ProjectsCreateCardPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public Object requestBody;
+    public ProjectsCreateCardRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public ProjectsCreateCardRequest withRequest(Object request) {
-        this.request = request;
+    /**
+     * column_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=column_id")
+    public Long columnId;
+    public ProjectsCreateCardRequest withColumnId(Long columnId) {
+        this.columnId = columnId;
         return this;
     }
     

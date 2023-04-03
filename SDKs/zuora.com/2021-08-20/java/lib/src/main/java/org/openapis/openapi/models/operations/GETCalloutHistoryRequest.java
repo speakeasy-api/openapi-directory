@@ -4,20 +4,112 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCalloutHistoryRequest {
-    
-    public GETCalloutHistoryQueryParams queryParams;
-    public GETCalloutHistoryRequest withQueryParams(GETCalloutHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public GETCalloutHistoryRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
         return this;
     }
     
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public GETCalloutHistoryRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
+        return this;
+    }
     
-    public GETCalloutHistoryHeaders headers;
-    public GETCalloutHistoryRequest withHeaders(GETCalloutHistoryHeaders headers) {
-        this.headers = headers;
+    /**
+     * The final date and time of records to be returned. Defaults to now. Use format yyyy-MM-ddTHH:mm:ss.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTime")
+    public OffsetDateTime endTime;
+    public GETCalloutHistoryRequest withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    /**
+     * Category of records to be returned by event category.
+     * 
+     * The following formats are supported:
+     * * `{Event Type Namespace}:{Event Type Name}` if the Custom Events feature is enabled in your tenant. For example: `user.notification:NewSubscriptionCreated`.
+     * * Numeric code of the event category if the Custom Events feature is not enabled in your tenant. For example, `1210`. See [Event Category Code](https://knowledgecenter.zuora.com/DC_Developers/AA_REST_API/Event_Categories_for_Notification_Histories) for more information.
+     * 
+     * **Note**: The `eventCategory` will be ignored if the `objectId` is present in query parameters.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=eventCategory")
+    public String eventCategory;
+    public GETCalloutHistoryRequest withEventCategory(String eventCategory) {
+        this.eventCategory = eventCategory;
+        return this;
+    }
+    
+    /**
+     * If `true`, only return failed records. If `false`, return all records in the given date range. The default value is `true`.
+     * 
+     * **Note**: The `failedOnly` will be treated as `false` if the `objectId` is present in query parameters.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=failedOnly")
+    public Boolean failedOnly;
+    public GETCalloutHistoryRequest withFailedOnly(Boolean failedOnly) {
+        this.failedOnly = failedOnly;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeResponseContent")
+    public Boolean includeResponseContent;
+    public GETCalloutHistoryRequest withIncludeResponseContent(Boolean includeResponseContent) {
+        this.includeResponseContent = includeResponseContent;
+        return this;
+    }
+    
+    /**
+     * The ID of an object that triggered a callout notification. 
+     * 
+     * **Note**: If the `objectId` is present in query parameters, the `eventCategory` will be ignored and the `failedOnly` will be treated as `false`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=objectId")
+    public String objectId;
+    public GETCalloutHistoryRequest withObjectId(String objectId) {
+        this.objectId = objectId;
+        return this;
+    }
+    
+    /**
+     * Number of rows returned per page.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public GETCalloutHistoryRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The initial date and time of records to be returned. Defaults to (end time - 1 day). Use format yyyy-MM-ddTHH:mm:ss.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTime")
+    public OffsetDateTime startTime;
+    public GETCalloutHistoryRequest withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
         return this;
     }
     

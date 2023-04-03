@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2AccessTokensRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetV2AccessTokensRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetV2AccessTokensQueryParams queryParams;
-    public GetV2AccessTokensRequest withQueryParams(GetV2AccessTokensQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Double pageSize;
+    public GetV2AccessTokensRequest withPageSize(Double pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

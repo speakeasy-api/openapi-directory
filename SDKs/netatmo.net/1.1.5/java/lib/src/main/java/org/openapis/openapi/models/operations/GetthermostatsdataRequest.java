@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetthermostatsdataRequest {
-    
-    public GetthermostatsdataQueryParams queryParams;
-    public GetthermostatsdataRequest withQueryParams(GetthermostatsdataQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetthermostatsdataSecurity security;
-    public GetthermostatsdataRequest withSecurity(GetthermostatsdataSecurity security) {
-        this.security = security;
+    /**
+     * Id of the device you want to retrieve information of
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
+    public String deviceId;
+    public GetthermostatsdataRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
     

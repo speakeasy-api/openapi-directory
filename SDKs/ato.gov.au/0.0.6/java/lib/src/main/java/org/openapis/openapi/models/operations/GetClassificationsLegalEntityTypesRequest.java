@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetClassificationsLegalEntityTypesRequest {
-    
-    public GetClassificationsLegalEntityTypesHeaders headers;
-    public GetClassificationsLegalEntityTypesRequest withHeaders(GetClassificationsLegalEntityTypesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public GetClassificationsLegalEntityTypesRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

@@ -43,19 +43,19 @@ public class RevenueItems {
      */
     public org.openapis.openapi.models.operations.GETRevenueItemsByChargeRevenueEventNumberResponse getRevenueItemsByChargeRevenueEventNumber(org.openapis.openapi.models.operations.GETRevenueItemsByChargeRevenueEventNumberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRevenueItemsByChargeRevenueEventNumberPathParams.class, baseUrl, "/v1/revenue-items/revenue-events/{event-number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRevenueItemsByChargeRevenueEventNumberRequest.class, baseUrl, "/v1/revenue-items/revenue-events/{event-number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETRevenueItemsByChargeRevenueEventNumberQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETRevenueItemsByChargeRevenueEventNumberRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -99,19 +99,19 @@ public class RevenueItems {
      */
     public org.openapis.openapi.models.operations.GETRevenueItemsByChargeRevenueSummaryNumberResponse getRevenueItemsByChargeRevenueSummaryNumber(org.openapis.openapi.models.operations.GETRevenueItemsByChargeRevenueSummaryNumberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRevenueItemsByChargeRevenueSummaryNumberPathParams.class, baseUrl, "/v1/revenue-items/charge-revenue-summaries/{crs-number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRevenueItemsByChargeRevenueSummaryNumberRequest.class, baseUrl, "/v1/revenue-items/charge-revenue-summaries/{crs-number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETRevenueItemsByChargeRevenueSummaryNumberQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETRevenueItemsByChargeRevenueSummaryNumberRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -155,19 +155,19 @@ public class RevenueItems {
      */
     public org.openapis.openapi.models.operations.GETRevenueItemsByRevenueScheduleResponse getRevenueItemsByRevenueSchedule(org.openapis.openapi.models.operations.GETRevenueItemsByRevenueScheduleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRevenueItemsByRevenueSchedulePathParams.class, baseUrl, "/v1/revenue-items/revenue-schedules/{rs-number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRevenueItemsByRevenueScheduleRequest.class, baseUrl, "/v1/revenue-items/revenue-schedules/{rs-number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETRevenueItemsByRevenueScheduleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETRevenueItemsByRevenueScheduleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -211,18 +211,18 @@ public class RevenueItems {
      */
     public org.openapis.openapi.models.operations.PUTCustomFieldsonRevenueItemsByRevenueEventResponse putCustomFieldsonRevenueItemsByRevenueEvent(org.openapis.openapi.models.operations.PUTCustomFieldsonRevenueItemsByRevenueEventRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PUTCustomFieldsonRevenueItemsByRevenueEventPathParams.class, baseUrl, "/v1/revenue-items/revenue-events/{event-number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PUTCustomFieldsonRevenueItemsByRevenueEventRequest.class, baseUrl, "/v1/revenue-items/revenue-events/{event-number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "putEventRIDetailType", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -266,18 +266,18 @@ public class RevenueItems {
      */
     public org.openapis.openapi.models.operations.PUTCustomFieldsonRevenueItemsByRevenueScheduleResponse putCustomFieldsonRevenueItemsByRevenueSchedule(org.openapis.openapi.models.operations.PUTCustomFieldsonRevenueItemsByRevenueScheduleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PUTCustomFieldsonRevenueItemsByRevenueSchedulePathParams.class, baseUrl, "/v1/revenue-items/revenue-schedules/{rs-number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PUTCustomFieldsonRevenueItemsByRevenueScheduleRequest.class, baseUrl, "/v1/revenue-items/revenue-schedules/{rs-number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "putScheduleRIDetailType", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

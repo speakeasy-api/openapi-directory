@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageUpdateFileRequest {
-    
-    public StorageUpdateFilePathParams pathParams;
-    public StorageUpdateFileRequest withPathParams(StorageUpdateFilePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public StorageUpdateFileRequestBody request;
-    public StorageUpdateFileRequest withRequest(StorageUpdateFileRequestBody request) {
-        this.request = request;
+    public StorageUpdateFileRequestBody requestBody;
+    public StorageUpdateFileRequest withRequestBody(StorageUpdateFileRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public StorageUpdateFileSecurity security;
-    public StorageUpdateFileRequest withSecurity(StorageUpdateFileSecurity security) {
-        this.security = security;
+    /**
+     * File unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
+    public String fileId;
+    public StorageUpdateFileRequest withFileId(String fileId) {
+        this.fileId = fileId;
         return this;
     }
     

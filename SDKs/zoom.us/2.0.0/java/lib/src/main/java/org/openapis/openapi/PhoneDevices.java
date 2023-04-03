@@ -44,10 +44,11 @@ public class PhoneDevices {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddPhoneDeviceResponse addPhoneDevice(org.openapis.openapi.models.operations.AddPhoneDeviceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddPhoneDeviceResponse addPhoneDevice(org.openapis.openapi.models.operations.AddPhoneDeviceApplicationJSON request, org.openapis.openapi.models.operations.AddPhoneDeviceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone/devices");
         
@@ -58,7 +59,7 @@ public class PhoneDevices {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -101,19 +102,20 @@ public class PhoneDevices {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteADeviceResponse deleteADevice(org.openapis.openapi.models.operations.DeleteADeviceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteADeviceResponse deleteADevice(org.openapis.openapi.models.operations.DeleteADeviceRequest request, org.openapis.openapi.models.operations.DeleteADeviceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteADevicePathParams.class, baseUrl, "/phone/devices/{deviceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteADeviceRequest.class, baseUrl, "/phone/devices/{deviceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -155,19 +157,20 @@ public class PhoneDevices {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetADeviceResponse getADevice(org.openapis.openapi.models.operations.GetADeviceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetADeviceResponse getADevice(org.openapis.openapi.models.operations.GetADeviceRequest request, org.openapis.openapi.models.operations.GetADeviceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetADevicePathParams.class, baseUrl, "/phone/devices/{deviceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetADeviceRequest.class, baseUrl, "/phone/devices/{deviceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -209,10 +212,11 @@ public class PhoneDevices {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListPhoneDevicesResponse listPhoneDevices(org.openapis.openapi.models.operations.ListPhoneDevicesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListPhoneDevicesResponse listPhoneDevices(org.openapis.openapi.models.operations.ListPhoneDevicesRequest request, org.openapis.openapi.models.operations.ListPhoneDevicesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone/devices");
         
@@ -220,14 +224,14 @@ public class PhoneDevices {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPhoneDevicesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPhoneDevicesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -267,21 +271,22 @@ public class PhoneDevices {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateADeviceResponse updateADevice(org.openapis.openapi.models.operations.UpdateADeviceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateADeviceResponse updateADevice(org.openapis.openapi.models.operations.UpdateADeviceRequest request, org.openapis.openapi.models.operations.UpdateADeviceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateADevicePathParams.class, baseUrl, "/phone/devices/{deviceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateADeviceRequest.class, baseUrl, "/phone/devices/{deviceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetPublicHistoryQueryParams;
 import org.openapis.openapi.models.operations.GetPublicHistoryRequest;
 import org.openapis.openapi.models.operations.GetPublicHistoryResponse;
 
@@ -15,12 +14,10 @@ public class Application {
                 .build();
 
             GetPublicHistoryRequest req = new GetPublicHistoryRequest() {{
-                queryParams = new GetPublicHistoryQueryParams() {{
-                    from = "corrupti";
-                    q = "provident";
-                    to = "distinctio";
-                }};
-            }};            
+                from = "corrupti";
+                q = "provident";
+                to = "distinctio";
+            }}            
 
             GetPublicHistoryResponse res = sdk.default_.getPublicHistory(req);
 

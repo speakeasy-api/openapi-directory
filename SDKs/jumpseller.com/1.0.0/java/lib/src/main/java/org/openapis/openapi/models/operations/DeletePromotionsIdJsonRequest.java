@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePromotionsIdJsonRequest {
-    
-    public DeletePromotionsIdJsonPathParams pathParams;
-    public DeletePromotionsIdJsonRequest withPathParams(DeletePromotionsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public DeletePromotionsIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Id of the Promotion
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public DeletePromotionsIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
     
-    public DeletePromotionsIdJsonQueryParams queryParams;
-    public DeletePromotionsIdJsonRequest withQueryParams(DeletePromotionsIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public DeletePromotionsIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

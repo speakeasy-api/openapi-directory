@@ -7,31 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSipDomainRequest {
-    
-    public UpdateSipDomainPathParams pathParams;
-    public UpdateSipDomainRequest withPathParams(UpdateSipDomainPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSipDomainUpdateSipDomainRequest request;
-    public UpdateSipDomainRequest withRequest(UpdateSipDomainUpdateSipDomainRequest request) {
-        this.request = request;
+    public UpdateSipDomainUpdateSipDomainRequest requestBody;
+    public UpdateSipDomainRequest withRequestBody(UpdateSipDomainUpdateSipDomainRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSipDomainSecurity security;
-    public UpdateSipDomainRequest withSecurity(UpdateSipDomainSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateSipDomainRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SipDomain")
+    public String sipDomain;
+    public UpdateSipDomainRequest withSipDomain(String sipDomain) {
+        this.sipDomain = sipDomain;
         return this;
     }
     

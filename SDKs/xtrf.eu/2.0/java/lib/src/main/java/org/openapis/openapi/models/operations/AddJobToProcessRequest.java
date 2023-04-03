@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddJobToProcessRequest {
-    
-    public AddJobToProcessPathParams pathParams;
-    public AddJobToProcessRequest withPathParams(AddJobToProcessPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public AddJobToProcessRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

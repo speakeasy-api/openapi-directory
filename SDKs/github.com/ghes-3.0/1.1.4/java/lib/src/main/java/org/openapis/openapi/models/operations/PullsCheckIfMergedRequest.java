@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsCheckIfMergedRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public PullsCheckIfMergedRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public PullsCheckIfMergedPathParams pathParams;
-    public PullsCheckIfMergedRequest withPathParams(PullsCheckIfMergedPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_number")
+    public Long pullNumber;
+    public PullsCheckIfMergedRequest withPullNumber(Long pullNumber) {
+        this.pullNumber = pullNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public PullsCheckIfMergedRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

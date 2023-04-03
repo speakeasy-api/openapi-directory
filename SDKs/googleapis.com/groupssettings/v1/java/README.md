@@ -18,13 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GroupsSettingsGroupsGetSecurity;
-import org.openapis.openapi.models.operations.GroupsSettingsGroupsGetPathParams;
-import org.openapis.openapi.models.operations.GroupsSettingsGroupsGetQueryParams;
 import org.openapis.openapi.models.operations.GroupsSettingsGroupsGetRequest;
 import org.openapis.openapi.models.operations.GroupsSettingsGroupsGetResponse;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -33,29 +29,20 @@ public class Application {
                 .build();
 
             GroupsSettingsGroupsGetRequest req = new GroupsSettingsGroupsGetRequest() {{
-                security = new GroupsSettingsGroupsGetSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new GroupsSettingsGroupsGetPathParams() {{
-                    groupUniqueId = "corrupti";
-                }};
-                queryParams = new GroupsSettingsGroupsGetQueryParams() {{
-                    alt = "json";
-                    fields = "distinctio";
-                    key = "quibusdam";
-                    oauthToken = "unde";
-                    prettyPrint = false;
-                    quotaUser = "nulla";
-                    userIp = "corrupti";
-                }};
-            }};            
+                alt = "json";
+                fields = "provident";
+                groupUniqueId = "distinctio";
+                key = "quibusdam";
+                oauthToken = "unde";
+                prettyPrint = false;
+                quotaUser = "nulla";
+                userIp = "corrupti";
+            }}            
 
-            GroupsSettingsGroupsGetResponse res = sdk.groups.groupsSettingsGroupsGet(req);
+            GroupsSettingsGroupsGetResponse res = sdk.groups.groupsSettingsGroupsGet(req, new GroupsSettingsGroupsGetSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.groups.isPresent()) {
                 // handle response
@@ -67,7 +54,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### groups

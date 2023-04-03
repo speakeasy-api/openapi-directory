@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest {
-    
-    public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetPathParams pathParams;
-    public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest withPathParams(OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetHeaders headers;
-    public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest withHeaders(OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetHeaders headers) {
-        this.headers = headers;
+    /**
+     * Cabin class: 'M', 'E', 'C', 'F'. Some flights have fewer classes (Acceptable values are: "M", "E", "C", "F")
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cabinClass")
+    public String cabinClass;
+    public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest withCabinClass(String cabinClass) {
+        this.cabinClass = cabinClass;
         return this;
     }
     
+    /**
+     * Departure date (YYYY-MM-DD)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
+    public String date;
+    public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
     
-    public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetSecurity security;
-    public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest withSecurity(OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetSecurity security) {
-        this.security = security;
+    /**
+     * Destination airport. 3-letter IATA airport code (e.g. 'MUC')
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destination")
+    public String destination;
+    public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest withDestination(String destination) {
+        this.destination = destination;
+        return this;
+    }
+    
+    /**
+     * Flight number including carrier code and any suffix (e.g. 'LH2037')
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=flightNumber")
+    public String flightNumber;
+    public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest withFlightNumber(String flightNumber) {
+        this.flightNumber = flightNumber;
+        return this;
+    }
+    
+    /**
+     * Departure airport. 3-letter IATA airport code (e.g. 'TXL')
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=origin")
+    public String origin;
+    public OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest withOrigin(String origin) {
+        this.origin = origin;
         return this;
     }
     

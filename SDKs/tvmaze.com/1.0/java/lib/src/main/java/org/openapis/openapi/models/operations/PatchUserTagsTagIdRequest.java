@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchUserTagsTagIdRequest {
-    
-    public PatchUserTagsTagIdPathParams pathParams;
-    public PatchUserTagsTagIdRequest withPathParams(PatchUserTagsTagIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.TagInput tagInput;
+    public PatchUserTagsTagIdRequest withTagInput(org.openapis.openapi.models.shared.TagInput tagInput) {
+        this.tagInput = tagInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TagInput request;
-    public PatchUserTagsTagIdRequest withRequest(org.openapis.openapi.models.shared.TagInput request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag_id")
+    public Long tagId;
+    public PatchUserTagsTagIdRequest withTagId(Long tagId) {
+        this.tagId = tagId;
         return this;
     }
     

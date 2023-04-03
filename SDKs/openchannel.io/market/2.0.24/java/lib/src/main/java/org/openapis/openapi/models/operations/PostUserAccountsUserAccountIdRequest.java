@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUserAccountsUserAccountIdRequest {
-    
-    public PostUserAccountsUserAccountIdPathParams pathParams;
-    public PostUserAccountsUserAccountIdRequest withPathParams(PostUserAccountsUserAccountIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A custom JSON object that you can create and attach to this record
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
+    public String customData;
+    public PostUserAccountsUserAccountIdRequest withCustomData(String customData) {
+        this.customData = customData;
         return this;
     }
     
+    /**
+     * The contact email address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public PostUserAccountsUserAccountIdRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
     
-    public PostUserAccountsUserAccountIdQueryParams queryParams;
-    public PostUserAccountsUserAccountIdRequest withQueryParams(PostUserAccountsUserAccountIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The user account name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public PostUserAccountsUserAccountIdRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The id of the user account to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userAccountId")
+    public String userAccountId;
+    public PostUserAccountsUserAccountIdRequest withUserAccountId(String userAccountId) {
+        this.userAccountId = userAccountId;
+        return this;
+    }
+    
+    /**
+     * The Id of the user that this account belongs to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
+    public String userId;
+    public PostUserAccountsUserAccountIdRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

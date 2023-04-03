@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationWebhooksAlertTypesRequest {
-    
-    public GetOrganizationWebhooksAlertTypesPathParams pathParams;
-    public GetOrganizationWebhooksAlertTypesRequest withPathParams(GetOrganizationWebhooksAlertTypesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationWebhooksAlertTypesRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     
-    
-    public GetOrganizationWebhooksAlertTypesQueryParams queryParams;
-    public GetOrganizationWebhooksAlertTypesRequest withQueryParams(GetOrganizationWebhooksAlertTypesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter sample alerts to a specific product type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=productType")
+    public GetOrganizationWebhooksAlertTypesProductTypeEnum productType;
+    public GetOrganizationWebhooksAlertTypesRequest withProductType(GetOrganizationWebhooksAlertTypesProductTypeEnum productType) {
+        this.productType = productType;
         return this;
     }
     

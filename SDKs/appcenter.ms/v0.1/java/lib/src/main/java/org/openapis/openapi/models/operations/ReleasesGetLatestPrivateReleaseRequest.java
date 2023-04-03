@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesGetLatestPrivateReleaseRequest {
-    
-    public ReleasesGetLatestPrivateReleasePathParams pathParams;
-    public ReleasesGetLatestPrivateReleaseRequest withPathParams(ReleasesGetLatestPrivateReleasePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The secret of the target application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_secret")
+    public String appSecret;
+    public ReleasesGetLatestPrivateReleaseRequest withAppSecret(String appSecret) {
+        this.appSecret = appSecret;
         return this;
     }
     
-    
-    public ReleasesGetLatestPrivateReleaseQueryParams queryParams;
-    public ReleasesGetLatestPrivateReleaseRequest withQueryParams(ReleasesGetLatestPrivateReleaseQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ReleasesGetLatestPrivateReleaseSecurity security;
-    public ReleasesGetLatestPrivateReleaseRequest withSecurity(ReleasesGetLatestPrivateReleaseSecurity security) {
-        this.security = security;
+    /**
+     * When passing `udid` in the query string, a provisioning check for the given device ID will be done. Will be ignored for non-iOS platforms.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=udid")
+    public String udid;
+    public ReleasesGetLatestPrivateReleaseRequest withUdid(String udid) {
+        this.udid = udid;
         return this;
     }
     

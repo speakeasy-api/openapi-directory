@@ -4,13 +4,97 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OpenSearchRequest {
+    /**
+     * The number of search results per page desired by the client; OpenSearch 1.1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Long count;
+    public OpenSearchRequest withCount(Long count) {
+        this.count = count;
+        return this;
+    }
     
-    public OpenSearchQueryParams queryParams;
-    public OpenSearchRequest withQueryParams(OpenSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The end date in yyyy-mm-dd format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public LocalDate endDate;
+    public OpenSearchRequest withEndDate(LocalDate endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * Describes faceted restrictions on the search. A URL-encoded JSON object where the keys are the names of the facet, and the values are arrays of the selected facet values
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facetFilters")
+    public String facetFilters;
+    public OpenSearchRequest withFacetFilters(String facetFilters) {
+        this.facetFilters = facetFilters;
+        return this;
+    }
+    
+    /**
+     * URL-encoded keyword or keywords desired by the client; OpenSearch 1.1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchTerms")
+    public String searchTerms;
+    public OpenSearchRequest withSearchTerms(String searchTerms) {
+        this.searchTerms = searchTerms;
+        return this;
+    }
+    
+    /**
+     * Sort the results by most relevant (default), smallest or largest spatial area, shortest or longest temporal duration, or most recently updated; partial implementation of OpenSearch SRU 1.0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortKeys")
+    public OpenSearchSortKeysEnum sortKeys;
+    public OpenSearchRequest withSortKeys(OpenSearchSortKeysEnum sortKeys) {
+        this.sortKeys = sortKeys;
+        return this;
+    }
+    
+    /**
+     * Custom parameter for selecting which source to use; the Arctic Data Explorer (ADE) uses data aggregated from many sources, including, but not limited to, NSIDC
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public OpenSearchSourceEnum source;
+    public OpenSearchRequest withSource(OpenSearchSourceEnum source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * 4 comma separated values - W, S, E, N; OpenSearch-Geo 1.0, "box" parameter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=spatial")
+    public String spatial;
+    public OpenSearchRequest withSpatial(String spatial) {
+        this.spatial = spatial;
+        return this;
+    }
+    
+    /**
+     * The start date in yyyy-mm-dd format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public LocalDate startDate;
+    public OpenSearchRequest withStartDate(LocalDate startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * First search result desired by the search client; OpenSearch 1.1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
+    public Long startIndex;
+    public OpenSearchRequest withStartIndex(Long startIndex) {
+        this.startIndex = startIndex;
         return this;
     }
     

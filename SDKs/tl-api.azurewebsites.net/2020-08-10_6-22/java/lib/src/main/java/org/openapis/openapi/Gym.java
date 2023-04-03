@@ -37,7 +37,7 @@ public class Gym {
      */
     public org.openapis.openapi.models.operations.GymGetResponse gymGet(org.openapis.openapi.models.operations.GymGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GymGetPathParams.class, baseUrl, "/api/Gym/{gymID}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GymGetRequest.class, baseUrl, "/api/Gym/{gymID}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

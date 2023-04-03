@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteScriptTagRequest {
-    
-    public DeleteScriptTagPathParams pathParams;
-    public DeleteScriptTagRequest withPathParams(DeleteScriptTagPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteScriptTagSecurity security;
-    public DeleteScriptTagRequest withSecurity(DeleteScriptTagSecurity security) {
-        this.security = security;
+    /**
+     * \u30b9\u30af\u30ea\u30d7\u30c8\u30bf\u30b0ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scriptTagId")
+    public Long scriptTagId;
+    public DeleteScriptTagRequest withScriptTagId(Long scriptTagId) {
+        this.scriptTagId = scriptTagId;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLocationRequest {
+    /**
+     * The unique identifier of the group in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public GetLocationRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
     
-    public GetLocationPathParams pathParams;
-    public GetLocationRequest withPathParams(GetLocationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the location in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public GetLocationRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFormMessageByIdRequest {
-    
-    public DeleteFormMessageByIdPathParams pathParams;
-    public DeleteFormMessageByIdRequest withPathParams(DeleteFormMessageByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public DeleteFormMessageByIdRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
         return this;
     }
     
+    /**
+     * API Key required to make the API call. 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public DeleteFormMessageByIdRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
     
-    public DeleteFormMessageByIdHeaders headers;
-    public DeleteFormMessageByIdRequest withHeaders(DeleteFormMessageByIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID of the entry to be deleted data for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DeleteFormMessageByIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

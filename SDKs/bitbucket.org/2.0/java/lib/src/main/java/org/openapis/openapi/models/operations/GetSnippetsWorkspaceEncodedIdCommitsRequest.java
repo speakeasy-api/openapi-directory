@@ -4,20 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSnippetsWorkspaceEncodedIdCommitsRequest {
-    
-    public GetSnippetsWorkspaceEncodedIdCommitsPathParams pathParams;
-    public GetSnippetsWorkspaceEncodedIdCommitsRequest withPathParams(GetSnippetsWorkspaceEncodedIdCommitsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The snippet id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=encoded_id")
+    public String encodedId;
+    public GetSnippetsWorkspaceEncodedIdCommitsRequest withEncodedId(String encodedId) {
+        this.encodedId = encodedId;
         return this;
     }
     
-    
-    public GetSnippetsWorkspaceEncodedIdCommitsSecurity security;
-    public GetSnippetsWorkspaceEncodedIdCommitsRequest withSecurity(GetSnippetsWorkspaceEncodedIdCommitsSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetSnippetsWorkspaceEncodedIdCommitsRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

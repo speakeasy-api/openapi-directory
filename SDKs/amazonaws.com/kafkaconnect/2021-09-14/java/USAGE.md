@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateConnectorHeaders;
 import org.openapis.openapi.models.operations.CreateConnectorRequestBodyCapacity;
 import org.openapis.openapi.models.operations.CreateConnectorRequestBodyKafkaCluster;
 import org.openapis.openapi.models.operations.CreateConnectorRequestBodyKafkaClusterClientAuthentication;
@@ -34,62 +33,49 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateConnectorRequest req = new CreateConnectorRequest() {{
-                headers = new CreateConnectorHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateConnectorRequestBody() {{
+                requestBody = new CreateConnectorRequestBody() {{
                     capacity = new CreateConnectorRequestBodyCapacity() {{
                         autoScaling = new AutoScaling() {{
-                            maxWorkerCount = 847252;
-                            mcuCount = 423655;
-                            minWorkerCount = 623564;
+                            maxWorkerCount = 548814;
+                            mcuCount = 592845;
+                            minWorkerCount = 715190;
                             scaleInPolicy = new ScaleInPolicy() {{
-                                cpuUtilizationPercentage = 645894;
+                                cpuUtilizationPercentage = 844266;
                             }};
                             scaleOutPolicy = new ScaleOutPolicy() {{
-                                cpuUtilizationPercentage = 384382;
+                                cpuUtilizationPercentage = 602763;
                             }};
                         }};
                         provisionedCapacity = new ProvisionedCapacity() {{
-                            mcuCount = 437587;
-                            workerCount = 297534;
+                            mcuCount = 857946;
+                            workerCount = 544883;
                         }};
                     }};
                     connectorConfiguration = new java.util.HashMap<String, String>() {{
-                        put("ipsa", "delectus");
-                        put("tempora", "suscipit");
-                        put("molestiae", "minus");
-                        put("placeat", "voluptatum");
+                        put("vel", "error");
+                        put("deserunt", "suscipit");
+                        put("iure", "magnam");
+                        put("debitis", "ipsa");
                     }};
-                    connectorDescription = "iusto";
-                    connectorName = "excepturi";
+                    connectorDescription = "delectus";
+                    connectorName = "tempora";
                     kafkaCluster = new CreateConnectorRequestBodyKafkaCluster() {{
                         apacheKafkaCluster = new ApacheKafkaCluster() {{
-                            bootstrapServers = "nisi";
+                            bootstrapServers = "suscipit";
                             vpc = new Vpc() {{
                                 securityGroups = new String[]{{
-                                    add("temporibus"),
-                                    add("ab"),
-                                    add("quis"),
-                                    add("veritatis"),
+                                    add("minus"),
+                                    add("placeat"),
                                 }};
                                 subnets = new String[]{{
-                                    add("perferendis"),
-                                    add("ipsam"),
-                                    add("repellendus"),
+                                    add("iusto"),
+                                    add("excepturi"),
+                                    add("nisi"),
                                 }};
                             }};
                         }};
@@ -100,57 +86,52 @@ public class Application {
                     kafkaClusterEncryptionInTransit = new CreateConnectorRequestBodyKafkaClusterEncryptionInTransit() {{
                         encryptionType = "TLS";
                     }};
-                    kafkaConnectVersion = "odit";
+                    kafkaConnectVersion = "ab";
                     logDelivery = new CreateConnectorRequestBodyLogDelivery() {{
                         workerLogDelivery = new WorkerLogDelivery() {{
                             cloudWatchLogs = new CloudWatchLogsLogDelivery() {{
                                 enabled = false;
-                                logGroup = "at";
+                                logGroup = "quis";
                             }};
                             firehose = new FirehoseLogDelivery() {{
-                                deliveryStream = "at";
+                                deliveryStream = "veritatis";
                                 enabled = false;
                             }};
                             s3 = new S3LogDelivery() {{
-                                bucket = "maiores";
+                                bucket = "deserunt";
                                 enabled = false;
-                                prefix = "molestiae";
+                                prefix = "perferendis";
                             }};
                         }};
                     }};
                     plugins = new org.openapis.openapi.models.shared.Plugin[]{{
                         add(new Plugin() {{
                             customPlugin = new CustomPlugin() {{
-                                customPluginArn = "quod";
-                                revision = 461479;
+                                customPluginArn = "repellendus";
+                                revision = 957156;
                             }};
                         }}),
                         add(new Plugin() {{
                             customPlugin = new CustomPlugin() {{
-                                customPluginArn = "totam";
-                                revision = 780529;
-                            }};
-                        }}),
-                        add(new Plugin() {{
-                            customPlugin = new CustomPlugin() {{
-                                customPluginArn = "dolorum";
-                                revision = 118274;
-                            }};
-                        }}),
-                        add(new Plugin() {{
-                            customPlugin = new CustomPlugin() {{
-                                customPluginArn = "nam";
-                                revision = 639921;
+                                customPluginArn = "quo";
+                                revision = 140350;
                             }};
                         }}),
                     }};
-                    serviceExecutionRoleArn = "occaecati";
+                    serviceExecutionRoleArn = "at";
                     workerConfiguration = new CreateConnectorRequestBodyWorkerConfiguration() {{
-                        revision = 143353;
-                        workerConfigurationArn = "deleniti";
+                        revision = 870088;
+                        workerConfigurationArn = "maiores";
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "molestiae";
+                xAmzContentSha256 = "quod";
+                xAmzCredential = "quod";
+                xAmzDate = "esse";
+                xAmzSecurityToken = "totam";
+                xAmzSignature = "porro";
+                xAmzSignedHeaders = "dolorum";
+            }}            
 
             CreateConnectorResponse res = sdk.createConnector(req);
 

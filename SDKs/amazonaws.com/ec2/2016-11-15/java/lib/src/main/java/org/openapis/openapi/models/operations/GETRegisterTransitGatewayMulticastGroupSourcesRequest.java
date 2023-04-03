@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRegisterTransitGatewayMulticastGroupSourcesRequest {
-    
-    public GETRegisterTransitGatewayMulticastGroupSourcesQueryParams queryParams;
-    public GETRegisterTransitGatewayMulticastGroupSourcesRequest withQueryParams(GETRegisterTransitGatewayMulticastGroupSourcesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRegisterTransitGatewayMulticastGroupSourcesActionEnum action;
+    public GETRegisterTransitGatewayMulticastGroupSourcesRequest withAction(GETRegisterTransitGatewayMulticastGroupSourcesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETRegisterTransitGatewayMulticastGroupSourcesRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETRegisterTransitGatewayMulticastGroupSourcesHeaders headers;
-    public GETRegisterTransitGatewayMulticastGroupSourcesRequest withHeaders(GETRegisterTransitGatewayMulticastGroupSourcesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The IP address assigned to the transit gateway multicast group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GroupIpAddress")
+    public String groupIpAddress;
+    public GETRegisterTransitGatewayMulticastGroupSourcesRequest withGroupIpAddress(String groupIpAddress) {
+        this.groupIpAddress = groupIpAddress;
+        return this;
+    }
+    
+    /**
+     * The group sources' network interface IDs to register with the transit gateway multicast group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInterfaceIds")
+    public String[] networkInterfaceIds;
+    public GETRegisterTransitGatewayMulticastGroupSourcesRequest withNetworkInterfaceIds(String[] networkInterfaceIds) {
+        this.networkInterfaceIds = networkInterfaceIds;
+        return this;
+    }
+    
+    /**
+     * The ID of the transit gateway multicast domain.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayMulticastDomainId")
+    public String transitGatewayMulticastDomainId;
+    public GETRegisterTransitGatewayMulticastGroupSourcesRequest withTransitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
+        this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRegisterTransitGatewayMulticastGroupSourcesVersionEnum version;
+    public GETRegisterTransitGatewayMulticastGroupSourcesRequest withVersion(GETRegisterTransitGatewayMulticastGroupSourcesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRegisterTransitGatewayMulticastGroupSourcesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRegisterTransitGatewayMulticastGroupSourcesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRegisterTransitGatewayMulticastGroupSourcesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRegisterTransitGatewayMulticastGroupSourcesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRegisterTransitGatewayMulticastGroupSourcesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRegisterTransitGatewayMulticastGroupSourcesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRegisterTransitGatewayMulticastGroupSourcesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

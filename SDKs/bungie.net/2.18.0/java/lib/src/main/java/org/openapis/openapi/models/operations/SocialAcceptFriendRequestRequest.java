@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SocialAcceptFriendRequestRequest {
-    
-    public SocialAcceptFriendRequestPathParams pathParams;
-    public SocialAcceptFriendRequestRequest withPathParams(SocialAcceptFriendRequestPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SocialAcceptFriendRequestSecurity security;
-    public SocialAcceptFriendRequestRequest withSecurity(SocialAcceptFriendRequestSecurity security) {
-        this.security = security;
+    /**
+     * The membership id of the user you wish to accept.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
+    public String membershipId;
+    public SocialAcceptFriendRequestRequest withMembershipId(String membershipId) {
+        this.membershipId = membershipId;
         return this;
     }
     

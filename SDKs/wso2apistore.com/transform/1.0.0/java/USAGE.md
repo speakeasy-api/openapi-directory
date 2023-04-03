@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.PostJsontoxmlRequest;
 import org.openapis.openapi.models.operations.PostJsontoxmlResponse;
 
 public class Application {
@@ -13,9 +12,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            PostJsontoxmlRequest req = new PostJsontoxmlRequest() {{
-                request = "corrupti";
-            }};            
+            org.openapis.openapi.models.. req = "corrupti"            
 
             PostJsontoxmlResponse res = sdk.postJsontoxml(req);
 

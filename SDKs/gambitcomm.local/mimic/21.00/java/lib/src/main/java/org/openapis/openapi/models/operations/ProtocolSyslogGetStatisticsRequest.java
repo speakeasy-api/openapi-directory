@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSyslogGetStatisticsRequest {
-    
-    public ProtocolSyslogGetStatisticsPathParams pathParams;
-    public ProtocolSyslogGetStatisticsRequest withPathParams(ProtocolSyslogGetStatisticsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show SYSLOG statistics
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSyslogGetStatisticsRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

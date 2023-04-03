@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCustomPageRequest {
-    
-    public UpdateCustomPagePathParams pathParams;
-    public UpdateCustomPageRequest withPathParams(UpdateCustomPagePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * CustomPage object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CustomPage request;
-    public UpdateCustomPageRequest withRequest(org.openapis.openapi.models.shared.CustomPage request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CustomPage customPage;
+    public UpdateCustomPageRequest withCustomPage(org.openapis.openapi.models.shared.CustomPage customPage) {
+        this.customPage = customPage;
         return this;
     }
     
-    
-    public UpdateCustomPageSecurity security;
-    public UpdateCustomPageRequest withSecurity(UpdateCustomPageSecurity security) {
-        this.security = security;
+    /**
+     * Slug of custom page
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slug")
+    public String slug;
+    public UpdateCustomPageRequest withSlug(String slug) {
+        this.slug = slug;
         return this;
     }
     

@@ -33,25 +33,26 @@ public class AccountPermissions {
     /**
      * Gets one account permission by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingAccountPermissionsGetResponse dfareportingAccountPermissionsGet(org.openapis.openapi.models.operations.DfareportingAccountPermissionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingAccountPermissionsGetResponse dfareportingAccountPermissionsGet(org.openapis.openapi.models.operations.DfareportingAccountPermissionsGetRequest request, org.openapis.openapi.models.operations.DfareportingAccountPermissionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAccountPermissionsGetPathParams.class, baseUrl, "/userprofiles/{profileId}/accountPermissions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAccountPermissionsGetRequest.class, baseUrl, "/userprofiles/{profileId}/accountPermissions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAccountPermissionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAccountPermissionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class AccountPermissions {
     /**
      * Retrieves the list of account permissions.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingAccountPermissionsListResponse dfareportingAccountPermissionsList(org.openapis.openapi.models.operations.DfareportingAccountPermissionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingAccountPermissionsListResponse dfareportingAccountPermissionsList(org.openapis.openapi.models.operations.DfareportingAccountPermissionsListRequest request, org.openapis.openapi.models.operations.DfareportingAccountPermissionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAccountPermissionsListPathParams.class, baseUrl, "/userprofiles/{profileId}/accountPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAccountPermissionsListRequest.class, baseUrl, "/userprofiles/{profileId}/accountPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAccountPermissionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAccountPermissionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

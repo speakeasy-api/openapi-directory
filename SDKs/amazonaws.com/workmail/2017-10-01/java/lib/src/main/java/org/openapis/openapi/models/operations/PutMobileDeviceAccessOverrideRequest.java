@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutMobileDeviceAccessOverrideRequest {
-    
-    public PutMobileDeviceAccessOverrideHeaders headers;
-    public PutMobileDeviceAccessOverrideRequest withHeaders(PutMobileDeviceAccessOverrideHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.PutMobileDeviceAccessOverrideRequest putMobileDeviceAccessOverrideRequest;
+    public PutMobileDeviceAccessOverrideRequest withPutMobileDeviceAccessOverrideRequest(org.openapis.openapi.models.shared.PutMobileDeviceAccessOverrideRequest putMobileDeviceAccessOverrideRequest) {
+        this.putMobileDeviceAccessOverrideRequest = putMobileDeviceAccessOverrideRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PutMobileDeviceAccessOverrideRequest request;
-    public PutMobileDeviceAccessOverrideRequest withRequest(org.openapis.openapi.models.shared.PutMobileDeviceAccessOverrideRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public PutMobileDeviceAccessOverrideRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public PutMobileDeviceAccessOverrideRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public PutMobileDeviceAccessOverrideRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public PutMobileDeviceAccessOverrideRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public PutMobileDeviceAccessOverrideRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public PutMobileDeviceAccessOverrideRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public PutMobileDeviceAccessOverrideRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public PutMobileDeviceAccessOverrideXAmzTargetEnum xAmzTarget;
+    public PutMobileDeviceAccessOverrideRequest withXAmzTarget(PutMobileDeviceAccessOverrideXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/LlcerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/LlcerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/LlcerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/LlcerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/LlcerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Llcer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Llcer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Llcer504ApplicationJSON.java
@@ -68,6 +67,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 USAGE.md

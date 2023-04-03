@@ -49,12 +49,12 @@ public class Spots {
      */
     public org.openapis.openapi.models.operations.AddSpotSetResponse addSpotSet(org.openapis.openapi.models.operations.AddSpotSetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddSpotSetPathParams.class, baseUrl, "/spots/{id}/sets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddSpotSetRequest.class, baseUrl, "/spots/{id}/sets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -93,7 +93,7 @@ public class Spots {
      */
     public org.openapis.openapi.models.operations.GetSpotByIdResponse getSpotById(org.openapis.openapi.models.operations.GetSpotByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpotByIdPathParams.class, baseUrl, "/spots/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpotByIdRequest.class, baseUrl, "/spots/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -132,7 +132,7 @@ public class Spots {
      */
     public org.openapis.openapi.models.operations.GetSpotSetByIdResponse getSpotSetById(org.openapis.openapi.models.operations.GetSpotSetByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpotSetByIdPathParams.class, baseUrl, "/spots/{id}/sets/{setId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpotSetByIdRequest.class, baseUrl, "/spots/{id}/sets/{setId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -171,7 +171,7 @@ public class Spots {
      */
     public org.openapis.openapi.models.operations.GetSpotSetsByIdResponse getSpotSetsById(org.openapis.openapi.models.operations.GetSpotSetsByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpotSetsByIdPathParams.class, baseUrl, "/spots/{id}/sets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpotSetsByIdRequest.class, baseUrl, "/spots/{id}/sets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -216,7 +216,7 @@ public class Spots {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpotsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpotsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -255,12 +255,12 @@ public class Spots {
      */
     public org.openapis.openapi.models.operations.UpdateSpotResponse updateSpot(org.openapis.openapi.models.operations.UpdateSpotRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSpotPathParams.class, baseUrl, "/spots/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSpotRequest.class, baseUrl, "/spots/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "spotUpdateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -299,12 +299,12 @@ public class Spots {
      */
     public org.openapis.openapi.models.operations.UpdateSpotSetResponse updateSpotSet(org.openapis.openapi.models.operations.UpdateSpotSetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSpotSetPathParams.class, baseUrl, "/spots/{id}/sets/{setId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSpotSetRequest.class, baseUrl, "/spots/{id}/sets/{setId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "spotSetUpdate", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

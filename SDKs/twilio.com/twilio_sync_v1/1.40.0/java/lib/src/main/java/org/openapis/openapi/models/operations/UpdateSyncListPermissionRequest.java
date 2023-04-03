@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSyncListPermissionRequest {
+    /**
+     * The application-defined string that uniquely identifies the User's Sync List Permission resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Identity")
+    public String identity;
+    public UpdateSyncListPermissionRequest withIdentity(String identity) {
+        this.identity = identity;
+        return this;
+    }
     
-    public UpdateSyncListPermissionPathParams pathParams;
-    public UpdateSyncListPermissionRequest withPathParams(UpdateSyncListPermissionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Sync List with the Sync List Permission resource to update. Can be the Sync List resource's `sid` or its `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ListSid")
+    public String listSid;
+    public UpdateSyncListPermissionRequest withListSid(String listSid) {
+        this.listSid = listSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSyncListPermissionUpdateSyncListPermissionRequest request;
-    public UpdateSyncListPermissionRequest withRequest(UpdateSyncListPermissionUpdateSyncListPermissionRequest request) {
-        this.request = request;
+    public UpdateSyncListPermissionUpdateSyncListPermissionRequest requestBody;
+    public UpdateSyncListPermissionRequest withRequestBody(UpdateSyncListPermissionUpdateSyncListPermissionRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSyncListPermissionSecurity security;
-    public UpdateSyncListPermissionRequest withSecurity(UpdateSyncListPermissionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateSyncListPermissionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List Permission resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateSyncListPermissionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

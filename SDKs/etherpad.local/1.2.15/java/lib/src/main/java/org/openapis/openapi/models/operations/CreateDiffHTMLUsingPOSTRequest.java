@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDiffHTMLUsingPOSTRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endRev")
+    public String endRev;
+    public CreateDiffHTMLUsingPOSTRequest withEndRev(String endRev) {
+        this.endRev = endRev;
+        return this;
+    }
     
-    public CreateDiffHTMLUsingPOSTQueryParams queryParams;
-    public CreateDiffHTMLUsingPOSTRequest withQueryParams(CreateDiffHTMLUsingPOSTQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
+    public String padID;
+    public CreateDiffHTMLUsingPOSTRequest withPadID(String padID) {
+        this.padID = padID;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startRev")
+    public String startRev;
+    public CreateDiffHTMLUsingPOSTRequest withStartRev(String startRev) {
+        this.startRev = startRev;
         return this;
     }
     

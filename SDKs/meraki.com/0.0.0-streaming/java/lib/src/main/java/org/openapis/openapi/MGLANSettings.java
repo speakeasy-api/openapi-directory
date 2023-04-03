@@ -40,7 +40,7 @@ public class MGLANSettings {
      */
     public org.openapis.openapi.models.operations.GetDeviceCellularGatewaySettingsResponse getDeviceCellularGatewaySettings(org.openapis.openapi.models.operations.GetDeviceCellularGatewaySettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCellularGatewaySettingsPathParams.class, baseUrl, "/devices/{serial}/cellularGateway/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCellularGatewaySettingsRequest.class, baseUrl, "/devices/{serial}/cellularGateway/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class MGLANSettings {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceCellularGatewaySettingsResponse updateDeviceCellularGatewaySettings(org.openapis.openapi.models.operations.UpdateDeviceCellularGatewaySettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCellularGatewaySettingsPathParams.class, baseUrl, "/devices/{serial}/cellularGateway/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCellularGatewaySettingsRequest.class, baseUrl, "/devices/{serial}/cellularGateway/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

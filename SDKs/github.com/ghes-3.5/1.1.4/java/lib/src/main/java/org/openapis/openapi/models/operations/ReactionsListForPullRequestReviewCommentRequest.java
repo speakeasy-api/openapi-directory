@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsListForPullRequestReviewCommentRequest {
-    
-    public ReactionsListForPullRequestReviewCommentPathParams pathParams;
-    public ReactionsListForPullRequestReviewCommentRequest withPathParams(ReactionsListForPullRequestReviewCommentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the comment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
+    public Long commentId;
+    public ReactionsListForPullRequestReviewCommentRequest withCommentId(Long commentId) {
+        this.commentId = commentId;
         return this;
     }
     
+    /**
+     * Returns a single [reaction type](https://docs.github.com/enterprise-server@3.5/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a pull request review comment.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content")
+    public ReactionsListForPullRequestReviewCommentContentEnum content;
+    public ReactionsListForPullRequestReviewCommentRequest withContent(ReactionsListForPullRequestReviewCommentContentEnum content) {
+        this.content = content;
+        return this;
+    }
     
-    public ReactionsListForPullRequestReviewCommentQueryParams queryParams;
-    public ReactionsListForPullRequestReviewCommentRequest withQueryParams(ReactionsListForPullRequestReviewCommentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReactionsListForPullRequestReviewCommentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReactionsListForPullRequestReviewCommentRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReactionsListForPullRequestReviewCommentRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReactionsListForPullRequestReviewCommentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

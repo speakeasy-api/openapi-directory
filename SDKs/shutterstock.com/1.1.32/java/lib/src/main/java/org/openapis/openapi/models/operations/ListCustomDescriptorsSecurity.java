@@ -14,9 +14,9 @@ public class ListCustomDescriptorsSecurity {
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeCustomerAccessCode customerAccessCode;
-    public ListCustomDescriptorsSecurity withCustomerAccessCode(org.openapis.openapi.models.shared.SchemeCustomerAccessCode customerAccessCode) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String customerAccessCode;
+    public ListCustomDescriptorsSecurity withCustomerAccessCode(String customerAccessCode) {
         this.customerAccessCode = customerAccessCode;
         return this;
     }

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequest {
-    
-    public EnterpriseAdminCreateSelfHostedRunnerGroupForEnterprisePathParams pathParams;
-    public EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequest withPathParams(EnterpriseAdminCreateSelfHostedRunnerGroupForEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBody requestBody;
+    public EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequest withRequestBody(EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBody request;
-    public EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequest withRequest(EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequestBody request) {
-        this.request = request;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
         return this;
     }
     

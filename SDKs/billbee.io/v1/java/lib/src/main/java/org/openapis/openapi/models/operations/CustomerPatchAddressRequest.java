@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomerPatchAddressRequest {
-    
-    public CustomerPatchAddressPathParams pathParams;
-    public CustomerPatchAddressRequest withPathParams(CustomerPatchAddressPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The address fields to be changed. Please query an address via (todo) to see all fields. Note that Id and CustomerId cannot be changed.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public CustomerPatchAddressRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public CustomerPatchAddressRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The id of the address
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CustomerPatchAddressRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -44,7 +44,7 @@ public class PhoneAutoReceptionists {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddAutoReceptionistResponse addAutoReceptionist(org.openapis.openapi.models.operations.AddAutoReceptionistRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddAutoReceptionistResponse addAutoReceptionist(org.openapis.openapi.models.operations.AddAutoReceptionistApplicationJSON request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone/auto_receptionists");
         
@@ -98,21 +98,22 @@ public class PhoneAutoReceptionists {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssignPhoneNumbersAutoReceptionistResponse assignPhoneNumbersAutoReceptionist(org.openapis.openapi.models.operations.AssignPhoneNumbersAutoReceptionistRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssignPhoneNumbersAutoReceptionistResponse assignPhoneNumbersAutoReceptionist(org.openapis.openapi.models.operations.AssignPhoneNumbersAutoReceptionistRequest request, org.openapis.openapi.models.operations.AssignPhoneNumbersAutoReceptionistSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssignPhoneNumbersAutoReceptionistPathParams.class, baseUrl, "/phone/auto_receptionists/{autoReceptionistId}/phone_numbers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssignPhoneNumbersAutoReceptionistRequest.class, baseUrl, "/phone/auto_receptionists/{autoReceptionistId}/phone_numbers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -155,19 +156,20 @@ public class PhoneAutoReceptionists {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnassignAPhoneNumAutoReceptionistResponse unassignAPhoneNumAutoReceptionist(org.openapis.openapi.models.operations.UnassignAPhoneNumAutoReceptionistRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnassignAPhoneNumAutoReceptionistResponse unassignAPhoneNumAutoReceptionist(org.openapis.openapi.models.operations.UnassignAPhoneNumAutoReceptionistRequest request, org.openapis.openapi.models.operations.UnassignAPhoneNumAutoReceptionistSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnassignAPhoneNumAutoReceptionistPathParams.class, baseUrl, "/phone/auto_receptionists/{autoReceptionistId}/phone_numbers/{phoneNumberId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnassignAPhoneNumAutoReceptionistRequest.class, baseUrl, "/phone/auto_receptionists/{autoReceptionistId}/phone_numbers/{phoneNumberId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -210,19 +212,20 @@ public class PhoneAutoReceptionists {
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnassignAllPhoneNumsAutoReceptionistResponse unassignAllPhoneNumsAutoReceptionist(org.openapis.openapi.models.operations.UnassignAllPhoneNumsAutoReceptionistRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnassignAllPhoneNumsAutoReceptionistResponse unassignAllPhoneNumsAutoReceptionist(org.openapis.openapi.models.operations.UnassignAllPhoneNumsAutoReceptionistRequest request, org.openapis.openapi.models.operations.UnassignAllPhoneNumsAutoReceptionistSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnassignAllPhoneNumsAutoReceptionistPathParams.class, baseUrl, "/phone/auto_receptionists/{autoReceptionistId}/phone_numbers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnassignAllPhoneNumsAutoReceptionistRequest.class, baseUrl, "/phone/auto_receptionists/{autoReceptionistId}/phone_numbers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,21 +267,22 @@ public class PhoneAutoReceptionists {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateAutoReceptionistResponse updateAutoReceptionist(org.openapis.openapi.models.operations.UpdateAutoReceptionistRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateAutoReceptionistResponse updateAutoReceptionist(org.openapis.openapi.models.operations.UpdateAutoReceptionistRequest request, org.openapis.openapi.models.operations.UpdateAutoReceptionistSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAutoReceptionistPathParams.class, baseUrl, "/phone/auto_receptionists/{autoReceptionistId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAutoReceptionistRequest.class, baseUrl, "/phone/auto_receptionists/{autoReceptionistId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

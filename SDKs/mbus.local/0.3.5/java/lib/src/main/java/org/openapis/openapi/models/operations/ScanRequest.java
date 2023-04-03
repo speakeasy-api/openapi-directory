@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ScanRequest {
+    /**
+     * Baudrate to communicate with M-Bus devices
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=baudrate")
+    public org.openapis.openapi.models.shared.BaudrateEnum baudrate;
+    public ScanRequest withBaudrate(org.openapis.openapi.models.shared.BaudrateEnum baudrate) {
+        this.baudrate = baudrate;
+        return this;
+    }
     
-    public ScanPathParams pathParams;
-    public ScanRequest withPathParams(ScanPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The serial device to scan - /dev/ is pre-pended to {device} by M-Bus HTTPD before scanning
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=device")
+    public String device;
+    public ScanRequest withDevice(String device) {
+        this.device = device;
         return this;
     }
     

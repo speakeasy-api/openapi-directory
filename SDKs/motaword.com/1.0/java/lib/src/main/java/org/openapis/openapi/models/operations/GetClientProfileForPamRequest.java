@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetClientProfileForPamRequest {
-    
-    public GetClientProfileForPamPathParams pathParams;
-    public GetClientProfileForPamRequest withPathParams(GetClientProfileForPamPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")
+    public Long clientId;
+    public GetClientProfileForPamRequest withClientId(Long clientId) {
+        this.clientId = clientId;
         return this;
     }
     

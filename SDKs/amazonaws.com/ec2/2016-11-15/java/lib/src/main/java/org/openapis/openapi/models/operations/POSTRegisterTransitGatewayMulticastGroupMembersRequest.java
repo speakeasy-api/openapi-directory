@@ -7,24 +7,73 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTRegisterTransitGatewayMulticastGroupMembersRequest {
-    
-    public POSTRegisterTransitGatewayMulticastGroupMembersQueryParams queryParams;
-    public POSTRegisterTransitGatewayMulticastGroupMembersRequest withQueryParams(POSTRegisterTransitGatewayMulticastGroupMembersQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public POSTRegisterTransitGatewayMulticastGroupMembersHeaders headers;
-    public POSTRegisterTransitGatewayMulticastGroupMembersRequest withHeaders(POSTRegisterTransitGatewayMulticastGroupMembersHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public POSTRegisterTransitGatewayMulticastGroupMembersActionEnum action;
+    public POSTRegisterTransitGatewayMulticastGroupMembersRequest withAction(POSTRegisterTransitGatewayMulticastGroupMembersActionEnum action) {
+        this.action = action;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public POSTRegisterTransitGatewayMulticastGroupMembersRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public POSTRegisterTransitGatewayMulticastGroupMembersRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public POSTRegisterTransitGatewayMulticastGroupMembersVersionEnum version;
+    public POSTRegisterTransitGatewayMulticastGroupMembersRequest withVersion(POSTRegisterTransitGatewayMulticastGroupMembersVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public POSTRegisterTransitGatewayMulticastGroupMembersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public POSTRegisterTransitGatewayMulticastGroupMembersRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public POSTRegisterTransitGatewayMulticastGroupMembersRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public POSTRegisterTransitGatewayMulticastGroupMembersRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public POSTRegisterTransitGatewayMulticastGroupMembersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public POSTRegisterTransitGatewayMulticastGroupMembersRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public POSTRegisterTransitGatewayMulticastGroupMembersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

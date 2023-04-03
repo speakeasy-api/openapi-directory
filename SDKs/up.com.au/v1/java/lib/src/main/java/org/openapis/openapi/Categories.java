@@ -57,7 +57,7 @@ public class Categories {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCategoriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCategoriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -98,7 +98,7 @@ public class Categories {
      */
     public org.openapis.openapi.models.operations.GetCategoriesIdResponse getCategoriesId(org.openapis.openapi.models.operations.GetCategoriesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCategoriesIdPathParams.class, baseUrl, "/categories/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCategoriesIdRequest.class, baseUrl, "/categories/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -146,12 +146,12 @@ public class Categories {
      */
     public org.openapis.openapi.models.operations.PatchTransactionsTransactionIdRelationshipsCategoryResponse patchTransactionsTransactionIdRelationshipsCategory(org.openapis.openapi.models.operations.PatchTransactionsTransactionIdRelationshipsCategoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTransactionsTransactionIdRelationshipsCategoryPathParams.class, baseUrl, "/transactions/{transactionId}/relationships/category", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTransactionsTransactionIdRelationshipsCategoryRequest.class, baseUrl, "/transactions/{transactionId}/relationships/category", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateTransactionCategoryRequest", "json");
         req.setBody(serializedRequestBody);
         
         

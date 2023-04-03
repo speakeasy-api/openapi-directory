@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesUnlockRequest {
+    /**
+     * issue_number parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_number")
+    public Long issueNumber;
+    public IssuesUnlockRequest withIssueNumber(Long issueNumber) {
+        this.issueNumber = issueNumber;
+        return this;
+    }
     
-    public IssuesUnlockPathParams pathParams;
-    public IssuesUnlockRequest withPathParams(IssuesUnlockPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssuesUnlockRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssuesUnlockRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

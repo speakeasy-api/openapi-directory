@@ -4,13 +4,118 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchPatientHealthResultsRequest {
+    /**
+     * A comma-separated list of action identifiers
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[actions]")
+    public String filterActions;
+    public FetchPatientHealthResultsRequest withFilterActions(String filterActions) {
+        this.filterActions = filterActions;
+        return this;
+    }
     
-    public FetchPatientHealthResultsQueryParams queryParams;
-    public FetchPatientHealthResultsRequest withQueryParams(FetchPatientHealthResultsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for results created in November 2017 (America/New_York): `filter[created_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[created_at]")
+    public String filterCreatedAt;
+    public FetchPatientHealthResultsRequest withFilterCreatedAt(String filterCreatedAt) {
+        this.filterCreatedAt = filterCreatedAt;
+        return this;
+    }
+    
+    /**
+     * Filter results that occurred before the passed ISO date and time string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[end_at]")
+    public String filterEndAt;
+    public FetchPatientHealthResultsRequest withFilterEndAt(String filterEndAt) {
+        this.filterEndAt = filterEndAt;
+        return this;
+    }
+    
+    /**
+     * Filter the patient health results for a specified patient
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[patient]")
+    public String filterPatient;
+    public FetchPatientHealthResultsRequest withFilterPatient(String filterPatient) {
+        this.filterPatient = filterPatient;
+        return this;
+    }
+    
+    /**
+     * Filter results that occurred after the passed ISO date and time string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[start_at]")
+    public String filterStartAt;
+    public FetchPatientHealthResultsRequest withFilterStartAt(String filterStartAt) {
+        this.filterStartAt = filterStartAt;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of thread identifiers
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[threads]")
+    public String filterThreads;
+    public FetchPatientHealthResultsRequest withFilterThreads(String filterThreads) {
+        this.filterThreads = filterThreads;
+        return this;
+    }
+    
+    /**
+     * The start (inclusive) and end (exclusive) dates are ISO date and time strings separated by `..`. Example for results updated in November 2017 (America/New_York): `filter[updated_at]=2017-11-01T00:00:00-04:00..2017-12-01T00:00:00-05:00`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[updated_at]")
+    public String filterUpdatedAt;
+    public FetchPatientHealthResultsRequest withFilterUpdatedAt(String filterUpdatedAt) {
+        this.filterUpdatedAt = filterUpdatedAt;
+        return this;
+    }
+    
+    /**
+     * Page cursor
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[after]")
+    public String pageAfter;
+    public FetchPatientHealthResultsRequest withPageAfter(String pageAfter) {
+        this.pageAfter = pageAfter;
+        return this;
+    }
+    
+    /**
+     * Page limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[limit]")
+    public Long pageLimit;
+    public FetchPatientHealthResultsRequest withPageLimit(Long pageLimit) {
+        this.pageLimit = pageLimit;
+        return this;
+    }
+    
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
+    public Long pageNumber;
+    public FetchPatientHealthResultsRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    
+    /**
+     * Page size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
+    public Long pageSize;
+    public FetchPatientHealthResultsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

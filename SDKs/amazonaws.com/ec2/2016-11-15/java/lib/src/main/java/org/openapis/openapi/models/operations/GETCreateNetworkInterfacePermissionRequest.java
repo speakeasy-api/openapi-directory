@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateNetworkInterfacePermissionRequest {
-    
-    public GETCreateNetworkInterfacePermissionQueryParams queryParams;
-    public GETCreateNetworkInterfacePermissionRequest withQueryParams(GETCreateNetworkInterfacePermissionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETCreateNetworkInterfacePermissionActionEnum action;
+    public GETCreateNetworkInterfacePermissionRequest withAction(GETCreateNetworkInterfacePermissionActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The Amazon Web Services account ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AwsAccountId")
+    public String awsAccountId;
+    public GETCreateNetworkInterfacePermissionRequest withAwsAccountId(String awsAccountId) {
+        this.awsAccountId = awsAccountId;
+        return this;
+    }
     
-    public GETCreateNetworkInterfacePermissionHeaders headers;
-    public GETCreateNetworkInterfacePermissionRequest withHeaders(GETCreateNetworkInterfacePermissionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Amazon Web Service. Currently not supported.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AwsService")
+    public String awsService;
+    public GETCreateNetworkInterfacePermissionRequest withAwsService(String awsService) {
+        this.awsService = awsService;
+        return this;
+    }
+    
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETCreateNetworkInterfacePermissionRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The ID of the network interface.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInterfaceId")
+    public String networkInterfaceId;
+    public GETCreateNetworkInterfacePermissionRequest withNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    
+    /**
+     * The type of permission to grant.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Permission")
+    public GETCreateNetworkInterfacePermissionPermissionEnum permission;
+    public GETCreateNetworkInterfacePermissionRequest withPermission(GETCreateNetworkInterfacePermissionPermissionEnum permission) {
+        this.permission = permission;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETCreateNetworkInterfacePermissionVersionEnum version;
+    public GETCreateNetworkInterfacePermissionRequest withVersion(GETCreateNetworkInterfacePermissionVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETCreateNetworkInterfacePermissionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETCreateNetworkInterfacePermissionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETCreateNetworkInterfacePermissionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETCreateNetworkInterfacePermissionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETCreateNetworkInterfacePermissionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETCreateNetworkInterfacePermissionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETCreateNetworkInterfacePermissionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

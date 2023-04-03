@@ -7,31 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSyncSyncListRequest {
-    
-    public CreateSyncSyncListPathParams pathParams;
-    public CreateSyncSyncListRequest withPathParams(CreateSyncSyncListPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateSyncSyncListCreateSyncSyncListRequest request;
-    public CreateSyncSyncListRequest withRequest(CreateSyncSyncListCreateSyncSyncListRequest request) {
-        this.request = request;
+    public CreateSyncSyncListCreateSyncSyncListRequest requestBody;
+    public CreateSyncSyncListRequest withRequestBody(CreateSyncSyncListCreateSyncSyncListRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateSyncSyncListSecurity security;
-    public CreateSyncSyncListRequest withSecurity(CreateSyncSyncListSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateSyncSyncListRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateSyncSyncListRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

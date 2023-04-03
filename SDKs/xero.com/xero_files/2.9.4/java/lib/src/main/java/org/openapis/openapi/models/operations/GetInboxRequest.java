@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInboxRequest {
-    
-    public GetInboxHeaders headers;
-    public GetInboxRequest withHeaders(GetInboxHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetInboxSecurity security;
-    public GetInboxRequest withSecurity(GetInboxSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
+    public String xeroTenantId;
+    public GetInboxRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

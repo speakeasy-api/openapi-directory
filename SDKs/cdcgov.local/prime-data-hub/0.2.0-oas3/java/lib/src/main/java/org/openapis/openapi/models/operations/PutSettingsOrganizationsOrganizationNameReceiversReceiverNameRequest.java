@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest {
-    
-    public PutSettingsOrganizationsOrganizationNameReceiversReceiverNamePathParams pathParams;
-    public PutSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest withPathParams(PutSettingsOrganizationsOrganizationNameReceiversReceiverNamePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ReceiverInput request;
-    public PutSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest withRequest(org.openapis.openapi.models.shared.ReceiverInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ReceiverInput receiverInput;
+    public PutSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest withReceiverInput(org.openapis.openapi.models.shared.ReceiverInput receiverInput) {
+        this.receiverInput = receiverInput;
         return this;
     }
     
+    /**
+     * Create receivers under this organization name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationName")
+    public String organizationName;
+    public PutSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest withOrganizationName(String organizationName) {
+        this.organizationName = organizationName;
+        return this;
+    }
     
-    public PutSettingsOrganizationsOrganizationNameReceiversReceiverNameSecurity security;
-    public PutSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest withSecurity(PutSettingsOrganizationsOrganizationNameReceiversReceiverNameSecurity security) {
-        this.security = security;
+    /**
+     * The name of the receiver
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=receiverName")
+    public String receiverName;
+    public PutSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest withReceiverName(String receiverName) {
+        this.receiverName = receiverName;
         return this;
     }
     

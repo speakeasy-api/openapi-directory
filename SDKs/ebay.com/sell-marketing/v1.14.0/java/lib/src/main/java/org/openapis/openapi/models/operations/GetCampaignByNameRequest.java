@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCampaignByNameRequest {
-    
-    public GetCampaignByNameQueryParams queryParams;
-    public GetCampaignByNameRequest withQueryParams(GetCampaignByNameQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetCampaignByNameSecurity security;
-    public GetCampaignByNameRequest withSecurity(GetCampaignByNameSecurity security) {
-        this.security = security;
+    /**
+     * The name of the campaign.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaign_name")
+    public String campaignName;
+    public GetCampaignByNameRequest withCampaignName(String campaignName) {
+        this.campaignName = campaignName;
         return this;
     }
     

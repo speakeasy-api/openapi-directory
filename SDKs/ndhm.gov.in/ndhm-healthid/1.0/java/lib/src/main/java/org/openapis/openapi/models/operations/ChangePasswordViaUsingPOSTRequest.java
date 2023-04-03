@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangePasswordViaUsingPOSTRequest {
-    
-    public ChangePasswordViaUsingPOSTHeaders headers;
-    public ChangePasswordViaUsingPOSTRequest withHeaders(ChangePasswordViaUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public ChangePasswordViaUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,19 @@ public class ChangePasswordViaUsingPOSTRequest {
      * healthFacilityPasswordRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.HidChangePasswordRequestPayload request;
-    public ChangePasswordViaUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.HidChangePasswordRequestPayload request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.HidChangePasswordRequestPayload hidChangePasswordRequestPayload;
+    public ChangePasswordViaUsingPOSTRequest withHidChangePasswordRequestPayload(org.openapis.openapi.models.shared.HidChangePasswordRequestPayload hidChangePasswordRequestPayload) {
+        this.hidChangePasswordRequestPayload = hidChangePasswordRequestPayload;
         return this;
     }
     
-    
-    public ChangePasswordViaUsingPOSTSecurity security;
-    public ChangePasswordViaUsingPOSTRequest withSecurity(ChangePasswordViaUsingPOSTSecurity security) {
-        this.security = security;
+    /**
+     * Auth Token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Token")
+    public String xToken;
+    public ChangePasswordViaUsingPOSTRequest withXToken(String xToken) {
+        this.xToken = xToken;
         return this;
     }
     

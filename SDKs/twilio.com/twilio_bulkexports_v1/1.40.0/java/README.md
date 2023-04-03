@@ -18,11 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateExportCustomJobSecurity;
-import org.openapis.openapi.models.operations.CreateExportCustomJobPathParams;
 import org.openapis.openapi.models.operations.CreateExportCustomJobCreateExportCustomJobRequest;
 import org.openapis.openapi.models.operations.CreateExportCustomJobRequest;
 import org.openapis.openapi.models.operations.CreateExportCustomJobResponse;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,26 +29,21 @@ public class Application {
                 .build();
 
             CreateExportCustomJobRequest req = new CreateExportCustomJobRequest() {{
-                security = new CreateExportCustomJobSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                pathParams = new CreateExportCustomJobPathParams() {{
-                    resourceType = "corrupti";
-                }};
-                request = new CreateExportCustomJobCreateExportCustomJobRequest() {{
-                    email = "Micheal_Sporer@yahoo.com";
+                requestBody = new CreateExportCustomJobCreateExportCustomJobRequest() {{
+                    email = "Larue_Rau85@yahoo.com";
                     endDay = "corrupti";
                     friendlyName = "illum";
                     startDay = "vel";
                     webhookMethod = "error";
                     webhookUrl = "deserunt";
                 }};
-            }};            
+                resourceType = "suscipit";
+            }}            
 
-            CreateExportCustomJobResponse res = sdk.createExportCustomJob(req);
+            CreateExportCustomJobResponse res = sdk.createExportCustomJob(req, new CreateExportCustomJobSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.bulkexportsV1ExportExportCustomJob.isPresent()) {
                 // handle response
@@ -62,7 +55,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

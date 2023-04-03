@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishedEarlyDayMotionGetRequest {
-    
-    public PublishedEarlyDayMotionGetPathParams pathParams;
-    public PublishedEarlyDayMotionGetRequest withPathParams(PublishedEarlyDayMotionGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Early Day Motion with the ID specified.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PublishedEarlyDayMotionGetRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

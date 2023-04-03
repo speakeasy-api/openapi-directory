@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1LocationsIdAppointmentremindersRequest {
-    
-    public PutSetupV1LocationsIdAppointmentremindersPathParams pathParams;
-    public PutSetupV1LocationsIdAppointmentremindersRequest withPathParams(PutSetupV1LocationsIdAppointmentremindersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * input model for reminders
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AppointmentRemindersInputModel request;
-    public PutSetupV1LocationsIdAppointmentremindersRequest withRequest(org.openapis.openapi.models.shared.AppointmentRemindersInputModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AppointmentRemindersInputModel appointmentRemindersInputModel;
+    public PutSetupV1LocationsIdAppointmentremindersRequest withAppointmentRemindersInputModel(org.openapis.openapi.models.shared.AppointmentRemindersInputModel appointmentRemindersInputModel) {
+        this.appointmentRemindersInputModel = appointmentRemindersInputModel;
+        return this;
+    }
+    
+    /**
+     * id of business location, defaults to primary business location
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutSetupV1LocationsIdAppointmentremindersRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -17,14 +17,13 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsCreateQueryParams;
 import org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsCreateRequest;
 import org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.AccountTypeEnum;
 import org.openapis.openapi.models.shared.AccountInput;
 import org.openapis.openapi.models.shared.OrganizationInfoInput;
 import org.openapis.openapi.models.shared.PostalAddress;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -34,47 +33,47 @@ public class Application {
                 .build();
 
             MybusinessaccountmanagementAccountsCreateRequest req = new MybusinessaccountmanagementAccountsCreateRequest() {{
-                queryParams = new MybusinessaccountmanagementAccountsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    key = "nulla";
-                    oauthToken = "corrupti";
-                    prettyPrint = false;
-                    quotaUser = "illum";
-                    uploadType = "vel";
-                    uploadProtocol = "error";
-                }};
-                request = new AccountInput() {{
-                    accountName = "deserunt";
-                    name = "suscipit";
+                dollarXgafv = "2";
+                accountInput = new AccountInput() {{
+                    accountName = "provident";
+                    name = "distinctio";
                     organizationInfo = new OrganizationInfoInput() {{
                         address = new PostalAddress() {{
                             addressLines = new String[]{{
-                                add("magnam"),
-                                add("debitis"),
+                                add("unde"),
+                                add("nulla"),
+                                add("corrupti"),
+                                add("illum"),
                             }};
-                            administrativeArea = "ipsa";
-                            languageCode = "delectus";
-                            locality = "tempora";
+                            administrativeArea = "vel";
+                            languageCode = "error";
+                            locality = "deserunt";
                             organization = "suscipit";
-                            postalCode = "78545";
+                            postalCode = "28092";
                             recipients = new String[]{{
-                                add("recusandae"),
-                                add("temporibus"),
+                                add("molestiae"),
+                                add("minus"),
                             }};
-                            regionCode = "ab";
-                            revision = 337396;
-                            sortingCode = "veritatis";
-                            sublocality = "deserunt";
+                            regionCode = "placeat";
+                            revision = 528895;
+                            sortingCode = "iusto";
+                            sublocality = "excepturi";
                         }};
                     }};
-                    primaryOwner = "perferendis";
-                    type = "PERSONAL";
+                    primaryOwner = "nisi";
+                    type = "ORGANIZATION";
                 }};
-            }};            
+                accessToken = "temporibus";
+                alt = "json";
+                callback = "quis";
+                fields = "veritatis";
+                key = "deserunt";
+                oauthToken = "perferendis";
+                prettyPrint = false;
+                quotaUser = "ipsam";
+                uploadType = "repellendus";
+                uploadProtocol = "sapiente";
+            }}            
 
             MybusinessaccountmanagementAccountsCreateResponse res = sdk.accounts.mybusinessaccountmanagementAccountsCreate(req);
 
@@ -88,7 +87,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### accounts

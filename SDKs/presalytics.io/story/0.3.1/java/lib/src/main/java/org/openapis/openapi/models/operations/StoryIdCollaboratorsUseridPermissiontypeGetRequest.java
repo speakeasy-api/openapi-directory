@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdCollaboratorsUseridPermissiontypeGetRequest {
+    /**
+     * the id from the story object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public StoryIdCollaboratorsUseridPermissiontypeGetRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public StoryIdCollaboratorsUseridPermissiontypeGetPathParams pathParams;
-    public StoryIdCollaboratorsUseridPermissiontypeGetRequest withPathParams(StoryIdCollaboratorsUseridPermissiontypeGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * the type of permission requested.  can be a permission_type object name (e.g., owner, editor, create, viewer, admin) or a permission type field (e.g., can_edit, can_view, can_add_collaborators, can_delete)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=permissiontype")
+    public String permissiontype;
+    public StoryIdCollaboratorsUseridPermissiontypeGetRequest withPermissiontype(String permissiontype) {
+        this.permissiontype = permissiontype;
+        return this;
+    }
+    
+    /**
+     * The presalytics userid (NOT the Id of the story_collaborator object)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=story_collaborator_userid")
+    public String storyCollaboratorUserid;
+    public StoryIdCollaboratorsUseridPermissiontypeGetRequest withStoryCollaboratorUserid(String storyCollaboratorUserid) {
+        this.storyCollaboratorUserid = storyCollaboratorUserid;
         return this;
     }
     

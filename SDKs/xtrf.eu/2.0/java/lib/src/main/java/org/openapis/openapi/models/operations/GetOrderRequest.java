@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrderRequest {
-    
-    public GetOrderPathParams pathParams;
-    public GetOrderRequest withPathParams(GetOrderPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * view's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
+    public Long viewId;
+    public GetOrderRequest withViewId(Long viewId) {
+        this.viewId = viewId;
         return this;
     }
     

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDlQueryRequest {
-    
-    public GetDlQueryPathParams pathParams;
-    public GetDlQueryRequest withPathParams(GetDlQueryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=query")
+    public String query;
+    public GetDlQueryRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

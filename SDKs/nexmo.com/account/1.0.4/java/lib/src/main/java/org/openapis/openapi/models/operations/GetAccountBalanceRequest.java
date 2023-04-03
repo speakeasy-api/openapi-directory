@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountBalanceRequest {
-    
-    public GetAccountBalanceQueryParams queryParams;
-    public GetAccountBalanceRequest withQueryParams(GetAccountBalanceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your Vonage API key. You can find this in the [dashboard](https://dashboard.nexmo.com)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetAccountBalanceRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public String serverURL;
-    public GetAccountBalanceRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Your Vonage API secret. You can find this in the [dashboard](https://dashboard.nexmo.com)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_secret")
+    public String apiSecret;
+    public GetAccountBalanceRequest withApiSecret(String apiSecret) {
+        this.apiSecret = apiSecret;
         return this;
     }
     

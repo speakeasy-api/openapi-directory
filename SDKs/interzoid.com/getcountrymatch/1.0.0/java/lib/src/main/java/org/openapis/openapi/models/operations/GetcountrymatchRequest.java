@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetcountrymatchRequest {
+    /**
+     * Country name from which to generate similarity key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public GetcountrymatchRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
     
-    public GetcountrymatchQueryParams queryParams;
-    public GetcountrymatchRequest withQueryParams(GetcountrymatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public String license;
+    public GetcountrymatchRequest withLicense(String license) {
+        this.license = license;
         return this;
     }
     

@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateArtifactVersionStateRequest {
-    
-    public UpdateArtifactVersionStatePathParams pathParams;
-    public UpdateArtifactVersionStateRequest withPathParams(UpdateArtifactVersionStatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UpdateState updateState;
+    public UpdateArtifactVersionStateRequest withUpdateState(org.openapis.openapi.models.shared.UpdateState updateState) {
+        this.updateState = updateState;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateState request;
-    public UpdateArtifactVersionStateRequest withRequest(org.openapis.openapi.models.shared.UpdateState request) {
-        this.request = request;
+    /**
+     * The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public UpdateArtifactVersionStateRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
+        return this;
+    }
+    
+    /**
+     * The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public UpdateArtifactVersionStateRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of a specific version of the artifact content.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public UpdateArtifactVersionStateRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

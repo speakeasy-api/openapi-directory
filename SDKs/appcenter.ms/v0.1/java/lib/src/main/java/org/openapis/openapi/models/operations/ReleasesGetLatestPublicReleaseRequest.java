@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesGetLatestPublicReleaseRequest {
-    
-    public ReleasesGetLatestPublicReleasePathParams pathParams;
-    public ReleasesGetLatestPublicReleaseRequest withPathParams(ReleasesGetLatestPublicReleasePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The secret of the target application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_secret")
+    public String appSecret;
+    public ReleasesGetLatestPublicReleaseRequest withAppSecret(String appSecret) {
+        this.appSecret = appSecret;
         return this;
     }
     

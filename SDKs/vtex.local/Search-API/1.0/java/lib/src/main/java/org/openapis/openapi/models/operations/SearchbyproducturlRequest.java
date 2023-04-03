@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchbyproducturlRequest {
-    
-    public SearchbyproducturlPathParams pathParams;
-    public SearchbyproducturlRequest withPathParams(SearchbyproducturlPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public SearchbyproducturlRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public SearchbyproducturlHeaders headers;
-    public SearchbyproducturlRequest withHeaders(SearchbyproducturlHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public SearchbyproducturlRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
-    
-    public String serverURL;
-    public SearchbyproducturlRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Product URL
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=product-text-link")
+    public String productTextLink;
+    public SearchbyproducturlRequest withProductTextLink(String productTextLink) {
+        this.productTextLink = productTextLink;
         return this;
     }
     

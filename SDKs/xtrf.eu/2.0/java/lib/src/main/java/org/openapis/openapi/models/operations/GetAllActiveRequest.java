@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllActiveRequest {
-    
-    public GetAllActiveQueryParams queryParams;
-    public GetAllActiveRequest withQueryParams(GetAllActiveQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * exact name of entity
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nameEquals")
+    public String nameEquals;
+    public GetAllActiveRequest withNameEquals(String nameEquals) {
+        this.nameEquals = nameEquals;
         return this;
     }
     

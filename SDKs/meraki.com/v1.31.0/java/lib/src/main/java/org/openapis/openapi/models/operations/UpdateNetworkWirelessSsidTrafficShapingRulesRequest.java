@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkWirelessSsidTrafficShapingRulesRequest {
-    
-    public UpdateNetworkWirelessSsidTrafficShapingRulesPathParams pathParams;
-    public UpdateNetworkWirelessSsidTrafficShapingRulesRequest withPathParams(UpdateNetworkWirelessSsidTrafficShapingRulesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkWirelessSsidTrafficShapingRulesRequestBody requestBody;
+    public UpdateNetworkWirelessSsidTrafficShapingRulesRequest withRequestBody(UpdateNetworkWirelessSsidTrafficShapingRulesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkWirelessSsidTrafficShapingRulesRequestBody request;
-    public UpdateNetworkWirelessSsidTrafficShapingRulesRequest withRequest(UpdateNetworkWirelessSsidTrafficShapingRulesRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkWirelessSsidTrafficShapingRulesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
+    public String number;
+    public UpdateNetworkWirelessSsidTrafficShapingRulesRequest withNumber(String number) {
+        this.number = number;
         return this;
     }
     

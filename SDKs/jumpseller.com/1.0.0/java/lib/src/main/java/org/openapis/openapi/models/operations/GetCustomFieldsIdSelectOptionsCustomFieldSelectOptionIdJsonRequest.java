@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest {
-    
-    public GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonPathParams pathParams;
-    public GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withPathParams(GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Id of the CustomFieldSelectOption
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=custom_field_select_option_id")
+    public Integer customFieldSelectOptionId;
+    public GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withCustomFieldSelectOptionId(Integer customFieldSelectOptionId) {
+        this.customFieldSelectOptionId = customFieldSelectOptionId;
+        return this;
+    }
     
-    public GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonQueryParams queryParams;
-    public GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withQueryParams(GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the CustomField
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

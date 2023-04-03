@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KeysApiExpiryRequest {
-    
-    public KeysApiExpiryPathParams pathParams;
-    public KeysApiExpiryRequest withPathParams(KeysApiExpiryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public KeysApiExpiryRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

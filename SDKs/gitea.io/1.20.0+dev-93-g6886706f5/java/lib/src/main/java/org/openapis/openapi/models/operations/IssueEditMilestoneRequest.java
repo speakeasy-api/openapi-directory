@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueEditMilestoneRequest {
-    
-    public IssueEditMilestonePathParams pathParams;
-    public IssueEditMilestoneRequest withPathParams(IssueEditMilestonePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EditMilestoneOption editMilestoneOption;
+    public IssueEditMilestoneRequest withEditMilestoneOption(org.openapis.openapi.models.shared.EditMilestoneOption editMilestoneOption) {
+        this.editMilestoneOption = editMilestoneOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditMilestoneOption request;
-    public IssueEditMilestoneRequest withRequest(org.openapis.openapi.models.shared.EditMilestoneOption request) {
-        this.request = request;
+    /**
+     * the milestone to edit, identified by ID and if not available by name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public IssueEditMilestoneRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueEditMilestoneRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueEditMilestoneRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

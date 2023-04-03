@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FileDownloadRequest {
-    
-    public FileDownloadPathParams pathParams;
-    public FileDownloadRequest withPathParams(FileDownloadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Can be blank, `redirect` or `stat`.  If set to `stat`, we will return file information but without a download URL, and without logging a download.  If set to `redirect` we will serve a 302 redirect directly to the file.  This is used for integrations with Zapier, and is not recommended for most integrations.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action")
+    public String action;
+    public FileDownloadRequest withAction(String action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Path to operate on.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public FileDownloadRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
     
-    public FileDownloadQueryParams queryParams;
-    public FileDownloadRequest withQueryParams(FileDownloadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Request a preview size.  Can be `small` (default), `large`, `xlarge`, or `pdf`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=preview_size")
+    public String previewSize;
+    public FileDownloadRequest withPreviewSize(String previewSize) {
+        this.previewSize = previewSize;
+        return this;
+    }
+    
+    /**
+     * Include file preview information?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with_previews")
+    public Boolean withPreviews;
+    public FileDownloadRequest withWithPreviews(Boolean withPreviews) {
+        this.withPreviews = withPreviews;
+        return this;
+    }
+    
+    /**
+     * Include file priority color information?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with_priority_color")
+    public Boolean withPriorityColor;
+    public FileDownloadRequest withWithPriorityColor(Boolean withPriorityColor) {
+        this.withPriorityColor = withPriorityColor;
         return this;
     }
     

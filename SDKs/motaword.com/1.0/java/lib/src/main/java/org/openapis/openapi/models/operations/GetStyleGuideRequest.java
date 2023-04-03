@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStyleGuideRequest {
-    
-    public GetStyleGuidePathParams pathParams;
-    public GetStyleGuideRequest withPathParams(GetStyleGuidePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public GetStyleGuideRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     
+    /**
+     * Style Guide ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=styleGuideId")
+    public Long styleGuideId;
+    public GetStyleGuideRequest withStyleGuideId(Long styleGuideId) {
+        this.styleGuideId = styleGuideId;
+        return this;
+    }
     
-    public GetStyleGuideQueryParams queryParams;
-    public GetStyleGuideRequest withQueryParams(GetStyleGuideQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Attach further information. Possible values 'preview' to fetch temporary preview URLs. This is NOT recommended to be used with list calls. Only use with[]=preview for single document/style guide calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with[]")
+    public GetStyleGuideWithEnum[] with;
+    public GetStyleGuideRequest withWith(GetStyleGuideWithEnum[] with) {
+        this.with = with;
         return this;
     }
     

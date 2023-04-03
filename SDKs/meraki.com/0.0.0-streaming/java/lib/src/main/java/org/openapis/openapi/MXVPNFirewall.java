@@ -40,7 +40,7 @@ public class MXVPNFirewall {
      */
     public org.openapis.openapi.models.operations.GetOrganizationVpnFirewallRulesResponse getOrganizationVpnFirewallRules(org.openapis.openapi.models.operations.GetOrganizationVpnFirewallRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationVpnFirewallRulesPathParams.class, baseUrl, "/organizations/{organizationId}/vpnFirewallRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationVpnFirewallRulesRequest.class, baseUrl, "/organizations/{organizationId}/vpnFirewallRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class MXVPNFirewall {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationVpnFirewallRulesResponse updateOrganizationVpnFirewallRules(org.openapis.openapi.models.operations.UpdateOrganizationVpnFirewallRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationVpnFirewallRulesPathParams.class, baseUrl, "/organizations/{organizationId}/vpnFirewallRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationVpnFirewallRulesRequest.class, baseUrl, "/organizations/{organizationId}/vpnFirewallRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

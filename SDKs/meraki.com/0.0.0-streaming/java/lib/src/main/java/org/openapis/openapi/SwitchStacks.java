@@ -40,12 +40,12 @@ public class SwitchStacks {
      */
     public org.openapis.openapi.models.operations.AddNetworkSwitchStackResponse addNetworkSwitchStack(org.openapis.openapi.models.operations.AddNetworkSwitchStackRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddNetworkSwitchStackPathParams.class, baseUrl, "/networks/{networkId}/switchStacks/{switchStackId}/add", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddNetworkSwitchStackRequest.class, baseUrl, "/networks/{networkId}/switchStacks/{switchStackId}/add", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -85,12 +85,12 @@ public class SwitchStacks {
      */
     public org.openapis.openapi.models.operations.CreateNetworkSwitchStackResponse createNetworkSwitchStack(org.openapis.openapi.models.operations.CreateNetworkSwitchStackRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchStackPathParams.class, baseUrl, "/networks/{networkId}/switchStacks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchStackRequest.class, baseUrl, "/networks/{networkId}/switchStacks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -130,7 +130,7 @@ public class SwitchStacks {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkSwitchStackResponse deleteNetworkSwitchStack(org.openapis.openapi.models.operations.DeleteNetworkSwitchStackRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchStackPathParams.class, baseUrl, "/networks/{networkId}/switchStacks/{switchStackId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchStackRequest.class, baseUrl, "/networks/{networkId}/switchStacks/{switchStackId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -164,7 +164,7 @@ public class SwitchStacks {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchStackResponse getNetworkSwitchStack(org.openapis.openapi.models.operations.GetNetworkSwitchStackRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStackPathParams.class, baseUrl, "/networks/{networkId}/switchStacks/{switchStackId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStackRequest.class, baseUrl, "/networks/{networkId}/switchStacks/{switchStackId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -204,7 +204,7 @@ public class SwitchStacks {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchStacksResponse getNetworkSwitchStacks(org.openapis.openapi.models.operations.GetNetworkSwitchStacksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStacksPathParams.class, baseUrl, "/networks/{networkId}/switchStacks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStacksRequest.class, baseUrl, "/networks/{networkId}/switchStacks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -244,12 +244,12 @@ public class SwitchStacks {
      */
     public org.openapis.openapi.models.operations.RemoveNetworkSwitchStackResponse removeNetworkSwitchStack(org.openapis.openapi.models.operations.RemoveNetworkSwitchStackRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveNetworkSwitchStackPathParams.class, baseUrl, "/networks/{networkId}/switchStacks/{switchStackId}/remove", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveNetworkSwitchStackRequest.class, baseUrl, "/networks/{networkId}/switchStacks/{switchStackId}/remove", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IpamVrfsUpdateRequest {
-    
-    public IpamVrfsUpdatePathParams pathParams;
-    public IpamVrfsUpdateRequest withPathParams(IpamVrfsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableVRFInput writableVRFInput;
+    public IpamVrfsUpdateRequest withWritableVRFInput(org.openapis.openapi.models.shared.WritableVRFInput writableVRFInput) {
+        this.writableVRFInput = writableVRFInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableVRFInput request;
-    public IpamVrfsUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableVRFInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this VRF.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public IpamVrfsUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

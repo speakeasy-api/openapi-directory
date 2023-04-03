@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddExampleRequest {
-    
-    public AddExamplePathParams pathParams;
-    public AddExampleRequest withPathParams(AddExamplePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public AddExampleRequestBody request;
-    public AddExampleRequest withRequest(AddExampleRequestBody request) {
-        this.request = request;
+    public AddExampleRequestBody requestBody;
+    public AddExampleRequest withRequestBody(AddExampleRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public AddExampleSecurity security;
-    public AddExampleRequest withSecurity(AddExampleSecurity security) {
-        this.security = security;
+    /**
+     * Dataset Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=datasetId")
+    public String datasetId;
+    public AddExampleRequest withDatasetId(String datasetId) {
+        this.datasetId = datasetId;
         return this;
     }
     

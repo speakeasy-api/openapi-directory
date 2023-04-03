@@ -36,13 +36,13 @@ public class Occupants {
      */
     public org.openapis.openapi.models.operations.GetOccupantsAddressesOutputFormatResponse getOccupantsAddressesOutputFormat(org.openapis.openapi.models.operations.GetOccupantsAddressesOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOccupantsAddressesOutputFormatPathParams.class, baseUrl, "/occupants/addresses.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOccupantsAddressesOutputFormatRequest.class, baseUrl, "/occupants/addresses.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOccupantsAddressesOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOccupantsAddressesOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -76,13 +76,13 @@ public class Occupants {
      */
     public org.openapis.openapi.models.operations.GetOccupantsNearOutputFormatResponse getOccupantsNearOutputFormat(org.openapis.openapi.models.operations.GetOccupantsNearOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOccupantsNearOutputFormatPathParams.class, baseUrl, "/occupants/near.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOccupantsNearOutputFormatRequest.class, baseUrl, "/occupants/near.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOccupantsNearOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOccupantsNearOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -116,13 +116,13 @@ public class Occupants {
      */
     public org.openapis.openapi.models.operations.GetOccupantsNearestOutputFormatResponse getOccupantsNearestOutputFormat(org.openapis.openapi.models.operations.GetOccupantsNearestOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOccupantsNearestOutputFormatPathParams.class, baseUrl, "/occupants/nearest.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOccupantsNearestOutputFormatRequest.class, baseUrl, "/occupants/nearest.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOccupantsNearestOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOccupantsNearestOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -156,13 +156,13 @@ public class Occupants {
      */
     public org.openapis.openapi.models.operations.GetOccupantsWithinOutputFormatResponse getOccupantsWithinOutputFormat(org.openapis.openapi.models.operations.GetOccupantsWithinOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOccupantsWithinOutputFormatPathParams.class, baseUrl, "/occupants/within.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOccupantsWithinOutputFormatRequest.class, baseUrl, "/occupants/within.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOccupantsWithinOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOccupantsWithinOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -196,13 +196,13 @@ public class Occupants {
      */
     public org.openapis.openapi.models.operations.GetOccupantsOccupantIDOutputFormatResponse getOccupantsOccupantIDOutputFormat(org.openapis.openapi.models.operations.GetOccupantsOccupantIDOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOccupantsOccupantIDOutputFormatPathParams.class, baseUrl, "/occupants/{occupantID}.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOccupantsOccupantIDOutputFormatRequest.class, baseUrl, "/occupants/{occupantID}.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOccupantsOccupantIDOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOccupantsOccupantIDOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

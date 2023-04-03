@@ -4,20 +4,97 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientsListRequest {
-    
-    public PatientsListQueryParams queryParams;
-    public PatientsListRequest withQueryParams(PatientsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=chart_id")
+    public String chartId;
+    public PatientsListRequest withChartId(String chartId) {
+        this.chartId = chartId;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public PatientsListRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public PatientsListSecurity security;
-    public PatientsListRequest withSecurity(PatientsListSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_of_birth")
+    public String dateOfBirth;
+    public PatientsListRequest withDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientsListRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public PatientsListRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ethnicity")
+    public String ethnicity;
+    public PatientsListRequest withEthnicity(String ethnicity) {
+        this.ethnicity = ethnicity;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_name")
+    public String firstName;
+    public PatientsListRequest withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gender")
+    public String gender;
+    public PatientsListRequest withGender(String gender) {
+        this.gender = gender;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_name")
+    public String lastName;
+    public PatientsListRequest withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public PatientsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=preferred_language")
+    public String preferredLanguage;
+    public PatientsListRequest withPreferredLanguage(String preferredLanguage) {
+        this.preferredLanguage = preferredLanguage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=race")
+    public String race;
+    public PatientsListRequest withRace(String race) {
+        this.race = race;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public PatientsListRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

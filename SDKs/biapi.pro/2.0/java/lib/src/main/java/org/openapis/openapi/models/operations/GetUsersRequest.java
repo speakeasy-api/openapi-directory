@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetUsersRequest withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
     
-    public GetUsersQueryParams queryParams;
-    public GetUsersRequest withQueryParams(GetUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * searches a user by mail (if it contains no '@', '@biapi.pro' will be added at the end)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetUsersRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

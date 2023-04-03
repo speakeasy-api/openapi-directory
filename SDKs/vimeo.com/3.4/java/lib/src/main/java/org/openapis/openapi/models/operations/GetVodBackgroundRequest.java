@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVodBackgroundRequest {
+    /**
+     * The ID of the background.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=background_id")
+    public Double backgroundId;
+    public GetVodBackgroundRequest withBackgroundId(Double backgroundId) {
+        this.backgroundId = backgroundId;
+        return this;
+    }
     
-    public GetVodBackgroundPathParams pathParams;
-    public GetVodBackgroundRequest withPathParams(GetVodBackgroundPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public GetVodBackgroundRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
         return this;
     }
     

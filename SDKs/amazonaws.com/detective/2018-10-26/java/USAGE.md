@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AcceptInvitationHeaders;
 import org.openapis.openapi.models.operations.AcceptInvitationRequestBody;
 import org.openapis.openapi.models.operations.AcceptInvitationRequest;
 import org.openapis.openapi.models.operations.AcceptInvitationResponse;
@@ -14,26 +13,22 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AcceptInvitationRequest req = new AcceptInvitationRequest() {{
-                headers = new AcceptInvitationHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
+                requestBody = new AcceptInvitationRequestBody() {{
+                    graphArn = "corrupti";
                 }};
-                request = new AcceptInvitationRequestBody() {{
-                    graphArn = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+            }}            
 
             AcceptInvitationResponse res = sdk.acceptInvitation(req);
 

@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CreatorRolesListQueryParams;
 import org.openapis.openapi.models.operations.CreatorRolesListRequest;
 import org.openapis.openapi.models.operations.CreatorRolesListResponse;
 
@@ -15,11 +14,9 @@ public class Application {
                 .build();
 
             CreatorRolesListRequest req = new CreatorRolesListRequest() {{
-                queryParams = new CreatorRolesListQueryParams() {{
-                    page = 548814;
-                    pageSize = 592845;
-                }};
-            }};            
+                page = 548814;
+                pageSize = 592845;
+            }}            
 
             CreatorRolesListResponse res = sdk.creatorRoles.creatorRolesList(req);
 

@@ -4,34 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSyncSyncListItemRequest {
-    
-    public DeleteSyncSyncListItemPathParams pathParams;
-    public DeleteSyncSyncListItemRequest withPathParams(DeleteSyncSyncListItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The If-Match HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public DeleteSyncSyncListItemRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
-    
-    public DeleteSyncSyncListItemHeaders headers;
-    public DeleteSyncSyncListItemRequest withHeaders(DeleteSyncSyncListItemHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Index")
+    public Long index;
+    public DeleteSyncSyncListItemRequest withIndex(Long index) {
+        this.index = index;
         return this;
     }
     
-    
-    public DeleteSyncSyncListItemSecurity security;
-    public DeleteSyncSyncListItemRequest withSecurity(DeleteSyncSyncListItemSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ListSid")
+    public String listSid;
+    public DeleteSyncSyncListItemRequest withListSid(String listSid) {
+        this.listSid = listSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteSyncSyncListItemRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteSyncSyncListItemRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

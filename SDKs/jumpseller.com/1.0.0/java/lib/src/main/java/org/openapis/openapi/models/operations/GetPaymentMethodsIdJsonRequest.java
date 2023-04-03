@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentMethodsIdJsonRequest {
-    
-    public GetPaymentMethodsIdJsonPathParams pathParams;
-    public GetPaymentMethodsIdJsonRequest withPathParams(GetPaymentMethodsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public GetPaymentMethodsIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Id of the Payment Method
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetPaymentMethodsIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetPaymentMethodsIdJsonQueryParams queryParams;
-    public GetPaymentMethodsIdJsonRequest withQueryParams(GetPaymentMethodsIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public GetPaymentMethodsIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

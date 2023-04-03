@@ -5,10 +5,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateSecurity;
-import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreatePathParams;
-import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateQueryParams;
 import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateRequest;
 import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.ScanConfigExportToSecurityCommandCenterEnum;
 import org.openapis.openapi.models.shared.ScanConfigRiskLevelEnum;
 import org.openapis.openapi.models.shared.ScanConfigUserAgentEnum;
@@ -19,10 +18,7 @@ import org.openapis.openapi.models.shared.IapCredential;
 import org.openapis.openapi.models.shared.IapTestServiceAccountInfo;
 import org.openapis.openapi.models.shared.GoogleAccount;
 import org.openapis.openapi.models.shared.CustomAccount;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,75 +27,67 @@ public class Application {
                 .build();
 
             WebsecurityscannerProjectsScanConfigsCreateRequest req = new WebsecurityscannerProjectsScanConfigsCreateRequest() {{
-                security = new WebsecurityscannerProjectsScanConfigsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new WebsecurityscannerProjectsScanConfigsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new WebsecurityscannerProjectsScanConfigsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new ScanConfig() {{
+                dollarXgafv = "2";
+                scanConfig = new ScanConfig() {{
                     authentication = new Authentication() {{
                         customAccount = new CustomAccount() {{
-                            loginUrl = "suscipit";
-                            password = "iure";
-                            username = "Eli96";
+                            loginUrl = "provident";
+                            password = "distinctio";
+                            username = "Rosalinda_Mitchell84";
                         }};
                         googleAccount = new GoogleAccount() {{
-                            password = "tempora";
-                            username = "Geraldine_Kreiger52";
+                            password = "vel";
+                            username = "Linda.Oberbrunner";
                         }};
                         iapCredential = new IapCredential() {{
                             iapTestServiceAccountInfo = new IapTestServiceAccountInfo() {{
-                                targetAudienceClientId = "iusto";
+                                targetAudienceClientId = "magnam";
                             }};
                         }};
                     }};
                     blacklistPatterns = new String[]{{
-                        add("nisi"),
-                        add("recusandae"),
-                        add("temporibus"),
+                        add("ipsa"),
+                        add("delectus"),
+                        add("tempora"),
+                        add("suscipit"),
                     }};
-                    displayName = "ab";
-                    exportToSecurityCommandCenter = "ENABLED";
+                    displayName = "molestiae";
+                    exportToSecurityCommandCenter = "DISABLED";
                     ignoreHttpStatusErrors = false;
                     managedScan = false;
-                    maxQps = 87129;
-                    name = "deserunt";
-                    riskLevel = "RISK_LEVEL_UNSPECIFIED";
+                    maxQps = 812169;
+                    name = "voluptatum";
+                    riskLevel = "NORMAL";
                     schedule = new Schedule() {{
-                        intervalDurationDays = 368241;
-                        scheduleTime = "repellendus";
+                        intervalDurationDays = 568045;
+                        scheduleTime = "nisi";
                     }};
                     startingUrls = new String[]{{
-                        add("quo"),
-                        add("odit"),
-                        add("at"),
-                        add("at"),
+                        add("temporibus"),
+                        add("ab"),
+                        add("quis"),
+                        add("veritatis"),
                     }};
                     staticIpScan = false;
-                    userAgent = "SAFARI_IPHONE";
+                    userAgent = "CHROME_ANDROID";
                 }};
-            }};            
+                accessToken = "perferendis";
+                alt = "media";
+                callback = "repellendus";
+                fields = "sapiente";
+                key = "quo";
+                oauthToken = "odit";
+                parent = "at";
+                prettyPrint = false;
+                quotaUser = "at";
+                uploadType = "maiores";
+                uploadProtocol = "molestiae";
+            }}            
 
-            WebsecurityscannerProjectsScanConfigsCreateResponse res = sdk.projects.websecurityscannerProjectsScanConfigsCreate(req);
+            WebsecurityscannerProjectsScanConfigsCreateResponse res = sdk.projects.websecurityscannerProjectsScanConfigsCreate(req, new WebsecurityscannerProjectsScanConfigsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.scanConfig.isPresent()) {
                 // handle response

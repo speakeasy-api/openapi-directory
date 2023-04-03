@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETStartDBInstanceAutomatedBackupsReplicationRequest {
-    
-    public GETStartDBInstanceAutomatedBackupsReplicationQueryParams queryParams;
-    public GETStartDBInstanceAutomatedBackupsReplicationRequest withQueryParams(GETStartDBInstanceAutomatedBackupsReplicationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETStartDBInstanceAutomatedBackupsReplicationActionEnum action;
+    public GETStartDBInstanceAutomatedBackupsReplicationRequest withAction(GETStartDBInstanceAutomatedBackupsReplicationActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The retention period for the replicated automated backups.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BackupRetentionPeriod")
+    public Long backupRetentionPeriod;
+    public GETStartDBInstanceAutomatedBackupsReplicationRequest withBackupRetentionPeriod(Long backupRetentionPeriod) {
+        this.backupRetentionPeriod = backupRetentionPeriod;
+        return this;
+    }
     
-    public GETStartDBInstanceAutomatedBackupsReplicationHeaders headers;
-    public GETStartDBInstanceAutomatedBackupsReplicationRequest withHeaders(GETStartDBInstanceAutomatedBackupsReplicationHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Amazon Web Services KMS key identifier for encryption of the replicated automated backups. The KMS key ID is the Amazon Resource Name (ARN) for the KMS encryption key in the destination Amazon Web Services Region, for example, &lt;code&gt;arn:aws:kms:us-east-1:123456789012:key/AKIAIOSFODNN7EXAMPLE&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=KmsKeyId")
+    public String kmsKeyId;
+    public GETStartDBInstanceAutomatedBackupsReplicationRequest withKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;In an Amazon Web Services GovCloud (US) Region, an URL that contains a Signature Version 4 signed request for the &lt;code&gt;StartDBInstanceAutomatedBackupsReplication&lt;/code&gt; operation to call in the Amazon Web Services Region of the source DB instance. The presigned URL must be a valid request for the &lt;code&gt;StartDBInstanceAutomatedBackupsReplication&lt;/code&gt; API operation that can run in the Amazon Web Services Region that contains the source DB instance.&lt;/p&gt; &lt;p&gt;This setting applies only to Amazon Web Services GovCloud (US) Regions. It's ignored in other Amazon Web Services Regions.&lt;/p&gt; &lt;p&gt;To learn how to generate a Signature Version 4 signed request, see &lt;a href="https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-query-string-auth.html"&gt; Authenticating Requests: Using Query Parameters (Amazon Web Services Signature Version 4)&lt;/a&gt; and &lt;a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html"&gt; Signature Version 4 Signing Process&lt;/a&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;If you are using an Amazon Web Services SDK tool or the CLI, you can specify &lt;code&gt;SourceRegion&lt;/code&gt; (or &lt;code&gt;--source-region&lt;/code&gt; for the CLI) instead of specifying &lt;code&gt;PreSignedUrl&lt;/code&gt; manually. Specifying &lt;code&gt;SourceRegion&lt;/code&gt; autogenerates a presigned URL that is a valid request for the operation that can run in the source Amazon Web Services Region.&lt;/p&gt; &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PreSignedUrl")
+    public String preSignedUrl;
+    public GETStartDBInstanceAutomatedBackupsReplicationRequest withPreSignedUrl(String preSignedUrl) {
+        this.preSignedUrl = preSignedUrl;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) of the source DB instance for the replicated automated backups, for example, &lt;code&gt;arn:aws:rds:us-west-2:123456789012:db:mydatabase&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceDBInstanceArn")
+    public String sourceDBInstanceArn;
+    public GETStartDBInstanceAutomatedBackupsReplicationRequest withSourceDBInstanceArn(String sourceDBInstanceArn) {
+        this.sourceDBInstanceArn = sourceDBInstanceArn;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETStartDBInstanceAutomatedBackupsReplicationVersionEnum version;
+    public GETStartDBInstanceAutomatedBackupsReplicationRequest withVersion(GETStartDBInstanceAutomatedBackupsReplicationVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETStartDBInstanceAutomatedBackupsReplicationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETStartDBInstanceAutomatedBackupsReplicationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETStartDBInstanceAutomatedBackupsReplicationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETStartDBInstanceAutomatedBackupsReplicationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETStartDBInstanceAutomatedBackupsReplicationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETStartDBInstanceAutomatedBackupsReplicationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETStartDBInstanceAutomatedBackupsReplicationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

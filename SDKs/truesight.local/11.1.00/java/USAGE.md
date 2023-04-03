@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CollectNowPathParams;
-import org.openapis.openapi.models.operations.CollectNowQueryParams;
 import org.openapis.openapi.models.operations.CollectNowRequest;
 import org.openapis.openapi.models.operations.CollectNowResponse;
 
@@ -16,13 +14,9 @@ public class Application {
                 .build();
 
             CollectNowRequest req = new CollectNowRequest() {{
-                pathParams = new CollectNowPathParams() {{
-                    deviceId = 548814;
-                }};
-                queryParams = new CollectNowQueryParams() {{
-                    monitorClass = "provident";
-                }};
-            }};            
+                deviceId = 548814;
+                monitorClass = "provident";
+            }}            
 
             CollectNowResponse res = sdk.actions.collectNow(req);
 

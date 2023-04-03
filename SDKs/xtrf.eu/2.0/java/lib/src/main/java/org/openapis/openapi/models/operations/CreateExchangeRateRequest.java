@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateExchangeRateRequest {
-    
-    public CreateExchangeRatePathParams pathParams;
-    public CreateExchangeRateRequest withPathParams(CreateExchangeRatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Adding new currency exchange rates
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CurrencyHistoryDTO request;
-    public CreateExchangeRateRequest withRequest(org.openapis.openapi.models.shared.CurrencyHistoryDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CurrencyHistoryDTO currencyHistoryDTO;
+    public CreateExchangeRateRequest withCurrencyHistoryDTO(org.openapis.openapi.models.shared.CurrencyHistoryDTO currencyHistoryDTO) {
+        this.currencyHistoryDTO = currencyHistoryDTO;
+        return this;
+    }
+    
+    /**
+     * iso code, https://www.xe.com/iso4217.php
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=isoCode")
+    public String isoCode;
+    public CreateExchangeRateRequest withIsoCode(String isoCode) {
+        this.isoCode = isoCode;
         return this;
     }
     

@@ -4,13 +4,156 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTaxonomyTermsRequest {
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetTaxonomyTermsRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetTaxonomyTermsQueryParams queryParams;
-    public GetTaxonomyTermsRequest withQueryParams(GetTaxonomyTermsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Body subtype to filter the listings on. Valid filter values are those that our Search facets API returns for unique body subtypes. You can pass in multiple body subtype values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=body_subtype")
+    public String bodySubtype;
+    public GetTaxonomyTermsRequest withBodySubtype(String bodySubtype) {
+        this.bodySubtype = bodySubtype;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their body type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=body_type")
+    public String bodyType;
+    public GetTaxonomyTermsRequest withBodyType(String bodyType) {
+        this.bodyType = bodyType;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their drivetrain
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=drivetrain")
+    public String drivetrain;
+    public GetTaxonomyTermsRequest withDrivetrain(String drivetrain) {
+        this.drivetrain = drivetrain;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their engine
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=engine")
+    public String engine;
+    public GetTaxonomyTermsRequest withEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    
+    /**
+     * Engine Block to match. Valid filter values are those that our Search facets API returns for unique Engine Block. You can pass in multiple Engine Block values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=engine_block")
+    public String engineBlock;
+    public GetTaxonomyTermsRequest withEngineBlock(String engineBlock) {
+        this.engineBlock = engineBlock;
+        return this;
+    }
+    
+    /**
+     * Engine Size to match. Valid filter values are those that our Search facets API returns for unique engine size. You can pass in multiple engine size values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=engine_size")
+    public String engineSize;
+    public GetTaxonomyTermsRequest withEngineSize(String engineSize) {
+        this.engineSize = engineSize;
+        return this;
+    }
+    
+    /**
+     * Comma separated list of fields to get terms for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=field")
+    public String field;
+    public GetTaxonomyTermsRequest withField(String field) {
+        this.field = field;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their fuel type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fuel_type")
+    public String fuelType;
+    public GetTaxonomyTermsRequest withFuelType(String fuelType) {
+        this.fuelType = fuelType;
+        return this;
+    }
+    
+    /**
+     * To filter listings on their make
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=make")
+    public String make;
+    public GetTaxonomyTermsRequest withMake(String make) {
+        this.make = make;
+        return this;
+    }
+    
+    /**
+     * To filter listings on their model
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
+    public String model;
+    public GetTaxonomyTermsRequest withModel(String model) {
+        this.model = model;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their transmission
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transmission")
+    public String transmission;
+    public GetTaxonomyTermsRequest withTransmission(String transmission) {
+        this.transmission = transmission;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their trim
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trim")
+    public String trim;
+    public GetTaxonomyTermsRequest withTrim(String trim) {
+        this.trim = trim;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their vehicle type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicle_type")
+    public String vehicleType;
+    public GetTaxonomyTermsRequest withVehicleType(String vehicleType) {
+        this.vehicleType = vehicleType;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their year
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public String year;
+    public GetTaxonomyTermsRequest withYear(String year) {
+        this.year = year;
         return this;
     }
     

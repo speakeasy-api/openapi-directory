@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesMediaIdYoutubeMetaDataJsonRequest {
-    
-    public GetResourcesMediaIdYoutubeMetaDataJsonPathParams pathParams;
-    public GetResourcesMediaIdYoutubeMetaDataJsonRequest withPathParams(GetResourcesMediaIdYoutubeMetaDataJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the video to show meta data for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetResourcesMediaIdYoutubeMetaDataJsonRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

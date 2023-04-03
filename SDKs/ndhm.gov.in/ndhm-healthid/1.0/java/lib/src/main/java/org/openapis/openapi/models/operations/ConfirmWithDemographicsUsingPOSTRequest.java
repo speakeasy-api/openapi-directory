@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfirmWithDemographicsUsingPOSTRequest {
-    
-    public ConfirmWithDemographicsUsingPOSTHeaders headers;
-    public ConfirmWithDemographicsUsingPOSTRequest withHeaders(ConfirmWithDemographicsUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public ConfirmWithDemographicsUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class ConfirmWithDemographicsUsingPOSTRequest {
      * authenticationRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AuthAccountWithDemographicsRequest request;
-    public ConfirmWithDemographicsUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.AuthAccountWithDemographicsRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public ConfirmWithDemographicsUsingPOSTSecurity security;
-    public ConfirmWithDemographicsUsingPOSTRequest withSecurity(ConfirmWithDemographicsUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.AuthAccountWithDemographicsRequest authAccountWithDemographicsRequest;
+    public ConfirmWithDemographicsUsingPOSTRequest withAuthAccountWithDemographicsRequest(org.openapis.openapi.models.shared.AuthAccountWithDemographicsRequest authAccountWithDemographicsRequest) {
+        this.authAccountWithDemographicsRequest = authAccountWithDemographicsRequest;
         return this;
     }
     

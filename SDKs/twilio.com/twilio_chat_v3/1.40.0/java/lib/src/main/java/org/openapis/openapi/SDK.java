@@ -126,24 +126,37 @@ public class SDK {
     /**
      * Update a specific Channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateChannelResponse updateChannel(org.openapis.openapi.models.operations.UpdateChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateChannelResponse updateChannel(org.openapis.openapi.models.operations.UpdateChannelRequest request, org.openapis.openapi.models.operations.UpdateChannelSecurity security) throws Exception {
+        return this.updateChannel(request, security, null);
+    }
+
+    /**
+     * Update a specific Channel.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateChannelResponse updateChannel(org.openapis.openapi.models.operations.UpdateChannelRequest request, org.openapis.openapi.models.operations.UpdateChannelSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_CHANNEL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateChannelPathParams.class, baseUrl, "/v3/Services/{ServiceSid}/Channels/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateChannelRequest.class, baseUrl, "/v3/Services/{ServiceSid}/Channels/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -152,7 +165,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

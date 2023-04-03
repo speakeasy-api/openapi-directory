@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateExperimentUsingPUTRequest {
-    
-    public UpdateExperimentUsingPUTPathParams pathParams;
-    public UpdateExperimentUsingPUTRequest withPathParams(UpdateExperimentUsingPUTPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * input
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ExperimentModel request;
-    public UpdateExperimentUsingPUTRequest withRequest(org.openapis.openapi.models.shared.ExperimentModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ExperimentModel experimentModel;
+    public UpdateExperimentUsingPUTRequest withExperimentModel(org.openapis.openapi.models.shared.ExperimentModel experimentModel) {
+        this.experimentModel = experimentModel;
+        return this;
+    }
+    
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public UpdateExperimentUsingPUTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    
+    /**
+     * id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UpdateExperimentUsingPUTRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

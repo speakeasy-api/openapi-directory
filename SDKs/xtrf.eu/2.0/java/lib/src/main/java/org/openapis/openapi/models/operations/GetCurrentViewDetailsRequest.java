@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCurrentViewDetailsRequest {
-    
-    public GetCurrentViewDetailsPathParams pathParams;
-    public GetCurrentViewDetailsRequest withPathParams(GetCurrentViewDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * views' class name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=className")
+    public String className;
+    public GetCurrentViewDetailsRequest withClassName(String className) {
+        this.className = className;
         return this;
     }
     
-    
-    public GetCurrentViewDetailsQueryParams queryParams;
-    public GetCurrentViewDetailsRequest withQueryParams(GetCurrentViewDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * place name (denotes specific place in system with the table)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placeName")
+    public String placeName;
+    public GetCurrentViewDetailsRequest withPlaceName(String placeName) {
+        this.placeName = placeName;
         return this;
     }
     

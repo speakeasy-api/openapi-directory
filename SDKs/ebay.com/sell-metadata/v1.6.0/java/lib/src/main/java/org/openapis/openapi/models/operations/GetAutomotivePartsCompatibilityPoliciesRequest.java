@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAutomotivePartsCompatibilityPoliciesRequest {
-    
-    public GetAutomotivePartsCompatibilityPoliciesPathParams pathParams;
-    public GetAutomotivePartsCompatibilityPoliciesRequest withPathParams(GetAutomotivePartsCompatibilityPoliciesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This query parameter limits the response by returning policy information for only the selected sections of the category tree. Supply &lt;b&gt;categoryId&lt;/b&gt; values for the sections of the tree you want returned.  &lt;br&gt;&lt;br&gt;When you specify a &lt;b&gt;categoryId&lt;/b&gt; value, the returned category tree includes the policies for that parent node, plus the policies for any leaf nodes below that parent node.  &lt;br&gt;&lt;br&gt;The parameter takes a list of &lt;b&gt;categoryId&lt;/b&gt; values and you can specify up to 50 separate category IDs. Separate multiple values with a pipe character ('|'). If you specify more than 50 &lt;code&gt;categoryId&lt;/code&gt; values, eBay returns the policies for the first 50 IDs and a warning that not all categories were returned.  &lt;br&gt;&lt;br&gt;&lt;b&gt;Example:&lt;/b&gt; &lt;code&gt;filter=categoryIds:{100|101|102}&lt;/code&gt;  &lt;br&gt;&lt;br&gt;Note that you must URL-encode the parameter list, which results in the following filter for the above example: &lt;br&gt;&lt;br&gt; &amp;nbsp;&amp;nbsp;&lt;code&gt;filter=categoryIds%3A%7B100%7C101%7C102%7D&lt;/code&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public GetAutomotivePartsCompatibilityPoliciesRequest withFilter(String filter) {
+        this.filter = filter;
         return this;
     }
     
-    
-    public GetAutomotivePartsCompatibilityPoliciesQueryParams queryParams;
-    public GetAutomotivePartsCompatibilityPoliciesRequest withQueryParams(GetAutomotivePartsCompatibilityPoliciesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetAutomotivePartsCompatibilityPoliciesSecurity security;
-    public GetAutomotivePartsCompatibilityPoliciesRequest withSecurity(GetAutomotivePartsCompatibilityPoliciesSecurity security) {
-        this.security = security;
+    /**
+     * This path parameter specifies the eBay marketplace for which policy information is retrieved.  &lt;br&gt;&lt;br&gt;&lt;b&gt;Note:&lt;/b&gt; Only the following eBay marketplaces support automotive parts compatibility: &lt;ul&gt; &lt;li&gt;EBAY_US&lt;/li&gt; &lt;li&gt;EBAY_AU&lt;/li&gt; &lt;li&gt;EBAY_CA&lt;/li&gt; &lt;li&gt;EBAY_DE&lt;/li&gt; &lt;li&gt;EBAY_ES&lt;/li&gt; &lt;li&gt;EBAY_FR&lt;/li&gt; &lt;li&gt;EBAY_GB&lt;/li&gt; &lt;li&gt;EBAY_IT&lt;/li&gt;&lt;ul&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplace_id")
+    public String marketplaceId;
+    public GetAutomotivePartsCompatibilityPoliciesRequest withMarketplaceId(String marketplaceId) {
+        this.marketplaceId = marketplaceId;
         return this;
     }
     

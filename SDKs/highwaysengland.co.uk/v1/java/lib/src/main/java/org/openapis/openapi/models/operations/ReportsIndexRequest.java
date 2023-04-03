@@ -4,20 +4,80 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReportsIndexRequest {
-    
-    public ReportsIndexPathParams pathParams;
-    public ReportsIndexRequest withPathParams(ReportsIndexPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The end date of the report in the format ddmmyyyy (i.e 31012016)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public String endDate;
+    public ReportsIndexRequest withEndDate(String endDate) {
+        this.endDate = endDate;
         return this;
     }
     
+    /**
+     * The page offset to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public ReportsIndexRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public ReportsIndexQueryParams queryParams;
-    public ReportsIndexRequest withQueryParams(ReportsIndexQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of rows to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Integer pageSize;
+    public ReportsIndexRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reportSubTypeId")
+    public Integer reportSubTypeId;
+    public ReportsIndexRequest withReportSubTypeId(Integer reportSubTypeId) {
+        this.reportSubTypeId = reportSubTypeId;
+        return this;
+    }
+    
+    /**
+     * Report Type Id (i.e Daily, Monthly, Annual)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=report_type")
+    public String reportType;
+    public ReportsIndexRequest withReportType(String reportType) {
+        this.reportType = reportType;
+        return this;
+    }
+    
+    /**
+     * Comma separated list of site Ids.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sites")
+    public String sites;
+    public ReportsIndexRequest withSites(String sites) {
+        this.sites = sites;
+        return this;
+    }
+    
+    /**
+     * The start date of the report in the format ddmmyyyy (i.e 31012016)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public String startDate;
+    public ReportsIndexRequest withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public ReportsIndexRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

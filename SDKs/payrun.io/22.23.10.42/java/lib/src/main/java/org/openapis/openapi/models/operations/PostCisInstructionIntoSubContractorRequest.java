@@ -7,17 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCisInstructionIntoSubContractorRequest {
-    
-    public PostCisInstructionIntoSubContractorPathParams pathParams;
-    public PostCisInstructionIntoSubContractorRequest withPathParams(PostCisInstructionIntoSubContractorPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public PostCisInstructionIntoSubContractorRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
-    
-    public PostCisInstructionIntoSubContractorHeaders headers;
-    public PostCisInstructionIntoSubContractorRequest withHeaders(PostCisInstructionIntoSubContractorHeaders headers) {
-        this.headers = headers;
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostCisInstructionIntoSubContractorRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
@@ -25,9 +31,29 @@ public class PostCisInstructionIntoSubContractorRequest {
      * The CIS instruction object.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CisInstruction request;
-    public PostCisInstructionIntoSubContractorRequest withRequest(org.openapis.openapi.models.shared.CisInstruction request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CisInstruction cisInstruction;
+    public PostCisInstructionIntoSubContractorRequest withCisInstruction(org.openapis.openapi.models.shared.CisInstruction cisInstruction) {
+        this.cisInstruction = cisInstruction;
+        return this;
+    }
+    
+    /**
+     * The employers' unique identifier. E.g ER001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmployerId")
+    public String employerId;
+    public PostCisInstructionIntoSubContractorRequest withEmployerId(String employerId) {
+        this.employerId = employerId;
+        return this;
+    }
+    
+    /**
+     * The sub contractors' unique identifier. E.g SUB001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SubContractorId")
+    public String subContractorId;
+    public PostCisInstructionIntoSubContractorRequest withSubContractorId(String subContractorId) {
+        this.subContractorId = subContractorId;
         return this;
     }
     

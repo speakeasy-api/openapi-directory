@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLookupMd5Request {
-    
-    public GetLookupMd5PathParams pathParams;
-    public GetLookupMd5Request withPathParams(GetLookupMd5PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=md5")
+    public String md5;
+    public GetLookupMd5Request withMd5(String md5) {
+        this.md5 = md5;
         return this;
     }
     

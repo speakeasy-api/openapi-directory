@@ -39,18 +39,19 @@ public class Uploads {
      * Chunked upload of data
      * Send chunked data for an **Upload**.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChunkedUploadResponse chunkedUpload(org.openapis.openapi.models.operations.ChunkedUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChunkedUploadResponse chunkedUpload(org.openapis.openapi.models.operations.ChunkedUploadRequest request, org.openapis.openapi.models.operations.ChunkedUploadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChunkedUploadPathParams.class, baseUrl, "/v4/uploads/{uploadId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChunkedUploadRequest.class, baseUrl, "/v4/uploads/{uploadId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -59,7 +60,7 @@ public class Uploads {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -93,19 +94,20 @@ public class Uploads {
      * Retrieve Upload status
      * Check the status of an **Upload** by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchUploadStatusByIdResponse fetchUploadStatusById(org.openapis.openapi.models.operations.FetchUploadStatusByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchUploadStatusByIdResponse fetchUploadStatusById(org.openapis.openapi.models.operations.FetchUploadStatusByIdRequest request, org.openapis.openapi.models.operations.FetchUploadStatusByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchUploadStatusByIdPathParams.class, baseUrl, "/v4/uploads/{uploadId}/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchUploadStatusByIdRequest.class, baseUrl, "/v4/uploads/{uploadId}/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -143,10 +145,11 @@ public class Uploads {
      * Retrieve Upload statuses in batch
      * Check the status of multiple **Uploads** (up to 100 per request).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchUploadStatusesResponse fetchUploadStatuses(org.openapis.openapi.models.operations.FetchUploadStatusesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchUploadStatusesResponse fetchUploadStatuses(org.openapis.openapi.models.shared.UploadStatusQuery request, org.openapis.openapi.models.operations.FetchUploadStatusesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v4/uploads/status/query");
         
@@ -157,7 +160,7 @@ public class Uploads {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -391,20 +394,21 @@ public class Uploads {
      *     Requires `asHarvested:write` scope.
      *    &lt;/details&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUploadResponse postUpload(org.openapis.openapi.models.operations.PostUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUploadResponse postUpload(org.openapis.openapi.models.operations.PostUploadRequest request, org.openapis.openapi.models.operations.PostUploadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v4/uploads");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "upload", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -413,7 +417,7 @@ public class Uploads {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

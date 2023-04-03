@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetClientsIdClientRequest {
-    
-    public GetClientsIdClientPathParams pathParams;
-    public GetClientsIdClientRequest withPathParams(GetClientsIdClientPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetClientsIdClientRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
-    
-    public GetClientsIdClientQueryParams queryParams;
-    public GetClientsIdClientRequest withQueryParams(GetClientsIdClientQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_client")
+    public Long idClient;
+    public GetClientsIdClientRequest withIdClient(Long idClient) {
+        this.idClient = idClient;
         return this;
     }
     

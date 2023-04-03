@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AbusiveexperiencereportSitesGetPathParams;
-import org.openapis.openapi.models.operations.AbusiveexperiencereportSitesGetQueryParams;
 import org.openapis.openapi.models.operations.AbusiveexperiencereportSitesGetRequest;
 import org.openapis.openapi.models.operations.AbusiveexperiencereportSitesGetResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -31,23 +29,19 @@ public class Application {
                 .build();
 
             AbusiveexperiencereportSitesGetRequest req = new AbusiveexperiencereportSitesGetRequest() {{
-                pathParams = new AbusiveexperiencereportSitesGetPathParams() {{
-                    name = "corrupti";
-                }};
-                queryParams = new AbusiveexperiencereportSitesGetQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                key = "nulla";
+                name = "corrupti";
+                oauthToken = "illum";
+                prettyPrint = false;
+                quotaUser = "vel";
+                uploadType = "error";
+                uploadProtocol = "deserunt";
+            }}            
 
             AbusiveexperiencereportSitesGetResponse res = sdk.sites.abusiveexperiencereportSitesGet(req);
 
@@ -61,7 +55,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### sites

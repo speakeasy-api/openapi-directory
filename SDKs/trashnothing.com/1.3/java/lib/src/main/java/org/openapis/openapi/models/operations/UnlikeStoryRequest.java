@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnlikeStoryRequest {
-    
-    public UnlikeStoryPathParams pathParams;
-    public UnlikeStoryRequest withPathParams(UnlikeStoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client device pixel ratio used to determine thumbnail size (default 1.0).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_pixel_ratio")
+    public Double devicePixelRatio;
+    public UnlikeStoryRequest withDevicePixelRatio(Double devicePixelRatio) {
+        this.devicePixelRatio = devicePixelRatio;
         return this;
     }
     
-    
-    public UnlikeStoryQueryParams queryParams;
-    public UnlikeStoryRequest withQueryParams(UnlikeStoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the story to unlike.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=story_id")
+    public String storyId;
+    public UnlikeStoryRequest withStoryId(String storyId) {
+        this.storyId = storyId;
         return this;
     }
     

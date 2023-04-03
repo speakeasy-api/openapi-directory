@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsUpdateDiscussionCommentLegacyRequest {
-    
-    public TeamsUpdateDiscussionCommentLegacyPathParams pathParams;
-    public TeamsUpdateDiscussionCommentLegacyRequest withPathParams(TeamsUpdateDiscussionCommentLegacyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public TeamsUpdateDiscussionCommentLegacyRequestBody requestBody;
+    public TeamsUpdateDiscussionCommentLegacyRequest withRequestBody(TeamsUpdateDiscussionCommentLegacyRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsUpdateDiscussionCommentLegacyRequestBody request;
-    public TeamsUpdateDiscussionCommentLegacyRequest withRequest(TeamsUpdateDiscussionCommentLegacyRequestBody request) {
-        this.request = request;
+    /**
+     * The number that identifies the comment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_number")
+    public Long commentNumber;
+    public TeamsUpdateDiscussionCommentLegacyRequest withCommentNumber(Long commentNumber) {
+        this.commentNumber = commentNumber;
+        return this;
+    }
+    
+    /**
+     * The number that identifies the discussion.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
+    public Long discussionNumber;
+    public TeamsUpdateDiscussionCommentLegacyRequest withDiscussionNumber(Long discussionNumber) {
+        this.discussionNumber = discussionNumber;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the team.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsUpdateDiscussionCommentLegacyRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

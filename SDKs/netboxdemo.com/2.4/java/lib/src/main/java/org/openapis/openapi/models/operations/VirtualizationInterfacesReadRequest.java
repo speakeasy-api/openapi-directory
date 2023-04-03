@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VirtualizationInterfacesReadRequest {
-    
-    public VirtualizationInterfacesReadPathParams pathParams;
-    public VirtualizationInterfacesReadRequest withPathParams(VirtualizationInterfacesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this interface.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public VirtualizationInterfacesReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

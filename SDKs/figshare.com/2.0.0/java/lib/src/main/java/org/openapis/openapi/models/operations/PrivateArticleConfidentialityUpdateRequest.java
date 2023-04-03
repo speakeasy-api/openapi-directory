@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateArticleConfidentialityUpdateRequest {
-    
-    public PrivateArticleConfidentialityUpdatePathParams pathParams;
-    public PrivateArticleConfidentialityUpdateRequest withPathParams(PrivateArticleConfidentialityUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ConfidentialityCreator request;
-    public PrivateArticleConfidentialityUpdateRequest withRequest(org.openapis.openapi.models.shared.ConfidentialityCreator request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ConfidentialityCreator confidentialityCreator;
+    public PrivateArticleConfidentialityUpdateRequest withConfidentialityCreator(org.openapis.openapi.models.shared.ConfidentialityCreator confidentialityCreator) {
+        this.confidentialityCreator = confidentialityCreator;
         return this;
     }
     
-    
-    public PrivateArticleConfidentialityUpdateSecurity security;
-    public PrivateArticleConfidentialityUpdateRequest withSecurity(PrivateArticleConfidentialityUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Article unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
+    public Long articleId;
+    public PrivateArticleConfidentialityUpdateRequest withArticleId(Long articleId) {
+        this.articleId = articleId;
         return this;
     }
     

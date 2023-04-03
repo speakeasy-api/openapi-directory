@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsGetDiscussionCommentLegacyRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_number")
+    public Long commentNumber;
+    public TeamsGetDiscussionCommentLegacyRequest withCommentNumber(Long commentNumber) {
+        this.commentNumber = commentNumber;
+        return this;
+    }
     
-    public TeamsGetDiscussionCommentLegacyPathParams pathParams;
-    public TeamsGetDiscussionCommentLegacyRequest withPathParams(TeamsGetDiscussionCommentLegacyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
+    public Long discussionNumber;
+    public TeamsGetDiscussionCommentLegacyRequest withDiscussionNumber(Long discussionNumber) {
+        this.discussionNumber = discussionNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsGetDiscussionCommentLegacyRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

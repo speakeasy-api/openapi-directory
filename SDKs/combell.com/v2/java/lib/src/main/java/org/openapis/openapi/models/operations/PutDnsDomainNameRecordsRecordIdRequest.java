@@ -7,27 +7,53 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutDnsDomainNameRecordsRecordIdRequest {
-    
-    public PutDnsDomainNameRecordsRecordIdPathParams pathParams;
-    public PutDnsDomainNameRecordsRecordIdRequest withPathParams(PutDnsDomainNameRecordsRecordIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutDnsDomainNameRecordsRecordIdQueryParams queryParams;
-    public PutDnsDomainNameRecordsRecordIdRequest withQueryParams(PutDnsDomainNameRecordsRecordIdQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The record with updated values.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DnsRecord request;
-    public PutDnsDomainNameRecordsRecordIdRequest withRequest(org.openapis.openapi.models.shared.DnsRecord request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DnsRecord dnsRecord;
+    public PutDnsDomainNameRecordsRecordIdRequest withDnsRecord(org.openapis.openapi.models.shared.DnsRecord dnsRecord) {
+        this.dnsRecord = dnsRecord;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public PutDnsDomainNameRecordsRecordIdRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * The domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public PutDnsDomainNameRecordsRecordIdRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=recordId")
+    public String recordIdPathParameter;
+    public PutDnsDomainNameRecordsRecordIdRequest withRecordIdPathParameter(String recordIdPathParameter) {
+        this.recordIdPathParameter = recordIdPathParameter;
+        return this;
+    }
+    
+    /**
+     * The id of the record.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=record_id")
+    public String recordIdQueryParameter;
+    public PutDnsDomainNameRecordsRecordIdRequest withRecordIdQueryParameter(String recordIdQueryParameter) {
+        this.recordIdQueryParameter = recordIdQueryParameter;
         return this;
     }
     

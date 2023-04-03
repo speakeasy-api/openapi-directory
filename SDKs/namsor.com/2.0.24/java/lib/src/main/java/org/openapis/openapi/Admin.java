@@ -40,7 +40,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.AnonymizeResponse anonymize(org.openapis.openapi.models.operations.AnonymizeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnonymizePathParams.class, baseUrl, "/api2/json/anonymize/{source}/{anonymized}/{token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnonymizeRequest.class, baseUrl, "/api2/json/anonymize/{source}/{anonymized}/{token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -155,11 +155,10 @@ public class Admin {
 
     /**
      * Print current API usage.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApiUsageResponse apiUsage(org.openapis.openapi.models.operations.ApiUsageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApiUsageResponse apiUsage() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/apiUsage");
         
@@ -168,7 +167,7 @@ public class Admin {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -196,11 +195,10 @@ public class Admin {
 
     /**
      * Print historical API usage.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApiUsageHistoryResponse apiUsageHistory(org.openapis.openapi.models.operations.ApiUsageHistoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApiUsageHistoryResponse apiUsageHistory() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/apiUsageHistory");
         
@@ -209,7 +207,7 @@ public class Admin {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -237,11 +235,10 @@ public class Admin {
 
     /**
      * Print historical API usage (in an aggregated view, by service, by day/hour/min).
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApiUsageHistoryAggregateResponse apiUsageHistoryAggregate(org.openapis.openapi.models.operations.ApiUsageHistoryAggregateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApiUsageHistoryAggregateResponse apiUsageHistoryAggregate() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/apiUsageHistoryAggregate");
         
@@ -250,7 +247,7 @@ public class Admin {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -324,7 +321,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.LearnableResponse learnable(org.openapis.openapi.models.operations.LearnableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LearnablePathParams.class, baseUrl, "/api2/json/learnable/{source}/{learnable}/{token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LearnableRequest.class, baseUrl, "/api2/json/learnable/{source}/{learnable}/{token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -445,7 +442,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.TaxonomyClassesResponse taxonomyClasses(org.openapis.openapi.models.operations.TaxonomyClassesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TaxonomyClassesPathParams.class, baseUrl, "/api2/json/taxonomyClasses/{classifierName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TaxonomyClassesRequest.class, baseUrl, "/api2/json/taxonomyClasses/{classifierName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

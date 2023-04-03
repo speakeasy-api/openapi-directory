@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateGroupApplicationRequest {
-    
-    public CreateGroupApplicationPathParams pathParams;
-    public CreateGroupApplicationRequest withPathParams(CreateGroupApplicationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ApplicationCreateRequest applicationCreateRequest;
+    public CreateGroupApplicationRequest withApplicationCreateRequest(org.openapis.openapi.models.shared.ApplicationCreateRequest applicationCreateRequest) {
+        this.applicationCreateRequest = applicationCreateRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApplicationCreateRequest request;
-    public CreateGroupApplicationRequest withRequest(org.openapis.openapi.models.shared.ApplicationCreateRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the group in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public CreateGroupApplicationRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

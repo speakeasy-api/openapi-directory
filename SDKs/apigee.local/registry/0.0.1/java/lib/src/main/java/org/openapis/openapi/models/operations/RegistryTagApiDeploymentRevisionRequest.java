@@ -7,17 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryTagApiDeploymentRevisionRequest {
-    
-    public RegistryTagApiDeploymentRevisionPathParams pathParams;
-    public RegistryTagApiDeploymentRevisionRequest withPathParams(RegistryTagApiDeploymentRevisionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.TagApiDeploymentRevisionRequest tagApiDeploymentRevisionRequest;
+    public RegistryTagApiDeploymentRevisionRequest withTagApiDeploymentRevisionRequest(org.openapis.openapi.models.shared.TagApiDeploymentRevisionRequest tagApiDeploymentRevisionRequest) {
+        this.tagApiDeploymentRevisionRequest = tagApiDeploymentRevisionRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TagApiDeploymentRevisionRequest request;
-    public RegistryTagApiDeploymentRevisionRequest withRequest(org.openapis.openapi.models.shared.TagApiDeploymentRevisionRequest request) {
-        this.request = request;
+    /**
+     * The api id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
+    public String api;
+    public RegistryTagApiDeploymentRevisionRequest withApi(String api) {
+        this.api = api;
+        return this;
+    }
+    
+    /**
+     * The deployment id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment")
+    public String deployment;
+    public RegistryTagApiDeploymentRevisionRequest withDeployment(String deployment) {
+        this.deployment = deployment;
+        return this;
+    }
+    
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryTagApiDeploymentRevisionRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryTagApiDeploymentRevisionRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

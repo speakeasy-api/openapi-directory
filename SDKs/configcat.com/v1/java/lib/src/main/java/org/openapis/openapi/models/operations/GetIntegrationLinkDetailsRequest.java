@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIntegrationLinkDetailsRequest {
+    /**
+     * The integration link's type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=integrationLinkType")
+    public org.openapis.openapi.models.shared.IntegrationLinkTypeEnum integrationLinkType;
+    public GetIntegrationLinkDetailsRequest withIntegrationLinkType(org.openapis.openapi.models.shared.IntegrationLinkTypeEnum integrationLinkType) {
+        this.integrationLinkType = integrationLinkType;
+        return this;
+    }
     
-    public GetIntegrationLinkDetailsPathParams pathParams;
-    public GetIntegrationLinkDetailsRequest withPathParams(GetIntegrationLinkDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The key of the integration link.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public GetIntegrationLinkDetailsRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

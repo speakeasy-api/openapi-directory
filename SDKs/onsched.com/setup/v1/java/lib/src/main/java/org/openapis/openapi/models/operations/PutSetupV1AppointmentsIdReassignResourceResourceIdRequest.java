@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1AppointmentsIdReassignResourceResourceIdRequest {
+    /**
+     * id of appointment object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutSetupV1AppointmentsIdReassignResourceResourceIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PutSetupV1AppointmentsIdReassignResourceResourceIdPathParams pathParams;
-    public PutSetupV1AppointmentsIdReassignResourceResourceIdRequest withPathParams(PutSetupV1AppointmentsIdReassignResourceResourceIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of target resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resourceId")
+    public String resourceId;
+    public PutSetupV1AppointmentsIdReassignResourceResourceIdRequest withResourceId(String resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
     

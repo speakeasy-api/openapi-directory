@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Associates the device with the gateway.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayResponse cloudiotProjectsLocationsRegistriesBindDeviceToGateway(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayResponse cloudiotProjectsLocationsRegistriesBindDeviceToGateway(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayRequest request, org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewaySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayPathParams.class, baseUrl, "/v1/{parent}:bindDeviceToGateway", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayRequest.class, baseUrl, "/v1/{parent}:bindDeviceToGateway", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "bindDeviceToGatewayRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Projects {
     /**
      * Creates a device registry that contains devices.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesCreateResponse cloudiotProjectsLocationsRegistriesCreate(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesCreateResponse cloudiotProjectsLocationsRegistriesCreate(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesCreateRequest request, org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesCreatePathParams.class, baseUrl, "/v1/{parent}/registries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesCreateRequest.class, baseUrl, "/v1/{parent}/registries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "deviceRegistry", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,25 +131,26 @@ public class Projects {
     /**
      * Lists the last few versions of the device configuration in descending order (i.e.: newest first).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListResponse cloudiotProjectsLocationsRegistriesDevicesConfigVersionsList(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListResponse cloudiotProjectsLocationsRegistriesDevicesConfigVersionsList(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListRequest request, org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListPathParams.class, baseUrl, "/v1/{name}/configVersions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListRequest.class, baseUrl, "/v1/{name}/configVersions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,27 +177,28 @@ public class Projects {
     /**
      * Creates a device in a device registry.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesCreateResponse cloudiotProjectsLocationsRegistriesDevicesCreate(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesCreateResponse cloudiotProjectsLocationsRegistriesDevicesCreate(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesCreateRequest request, org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesCreatePathParams.class, baseUrl, "/v1/{parent}/devices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesCreateRequest.class, baseUrl, "/v1/{parent}/devices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "device", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -221,25 +225,26 @@ public class Projects {
     /**
      * Deletes a device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesDeleteResponse cloudiotProjectsLocationsRegistriesDevicesDelete(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesDeleteResponse cloudiotProjectsLocationsRegistriesDevicesDelete(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesDeleteRequest request, org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,25 +271,26 @@ public class Projects {
     /**
      * Gets details about a device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesGetResponse cloudiotProjectsLocationsRegistriesDevicesGet(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesGetResponse cloudiotProjectsLocationsRegistriesDevicesGet(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesGetRequest request, org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,27 +317,28 @@ public class Projects {
     /**
      * Modifies the configuration for the device, which is eventually sent from the Cloud IoT Core servers. Returns the modified configuration version and its metadata.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfigResponse cloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfig(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfigResponse cloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfig(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfigRequest request, org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfigPathParams.class, baseUrl, "/v1/{name}:modifyCloudToDeviceConfig", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfigRequest.class, baseUrl, "/v1/{name}:modifyCloudToDeviceConfig", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "modifyCloudToDeviceConfigRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfigQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfigRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,27 +365,28 @@ public class Projects {
     /**
      * Updates a device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesPatchResponse cloudiotProjectsLocationsRegistriesDevicesPatch(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesPatchResponse cloudiotProjectsLocationsRegistriesDevicesPatch(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesPatchRequest request, org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "device", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -405,27 +413,28 @@ public class Projects {
     /**
      * Sends a command to the specified device. In order for a device to be able to receive commands, it must: 1) be connected to Cloud IoT Core using the MQTT protocol, and 2) be subscribed to the group of MQTT topics specified by /devices/{device-id}/commands/#. This subscription will receive commands at the top-level topic /devices/{device-id}/commands as well as commands for subfolders, like /devices/{device-id}/commands/subfolder. Note that subscribing to specific subfolders is not supported. If the command could not be delivered to the device, this method will return an error; in particular, if the device is not subscribed, this method will return FAILED_PRECONDITION. Otherwise, this method will return OK. If the subscription is QoS 1, at least once delivery will be guaranteed; for QoS 0, no acknowledgment will be expected from the device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceResponse cloudiotProjectsLocationsRegistriesDevicesSendCommandToDevice(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceResponse cloudiotProjectsLocationsRegistriesDevicesSendCommandToDevice(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceRequest request, org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesSendCommandToDevicePathParams.class, baseUrl, "/v1/{name}:sendCommandToDevice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceRequest.class, baseUrl, "/v1/{name}:sendCommandToDevice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sendCommandToDeviceRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -452,25 +461,26 @@ public class Projects {
     /**
      * Lists the last few versions of the device state in descending order (i.e.: newest first).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesStatesListResponse cloudiotProjectsLocationsRegistriesDevicesStatesList(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesStatesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesStatesListResponse cloudiotProjectsLocationsRegistriesDevicesStatesList(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesStatesListRequest request, org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesStatesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesStatesListPathParams.class, baseUrl, "/v1/{name}/states", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesStatesListRequest.class, baseUrl, "/v1/{name}/states", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesStatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesStatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,25 +507,26 @@ public class Projects {
     /**
      * List devices in a device registry.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsDevicesListResponse cloudiotProjectsLocationsRegistriesGroupsDevicesList(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsDevicesListResponse cloudiotProjectsLocationsRegistriesGroupsDevicesList(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest request, org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsDevicesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsDevicesListPathParams.class, baseUrl, "/v1/{parent}/devices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest.class, baseUrl, "/v1/{parent}/devices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsDevicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsDevicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -542,27 +553,28 @@ public class Projects {
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsGetIamPolicyResponse cloudiotProjectsLocationsRegistriesGroupsGetIamPolicy(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsGetIamPolicyResponse cloudiotProjectsLocationsRegistriesGroupsGetIamPolicy(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsGetIamPolicyRequest request, org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsGetIamPolicyPathParams.class, baseUrl, "/v1/{resource}:getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsGetIamPolicyRequest.class, baseUrl, "/v1/{resource}:getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "getIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -589,27 +601,28 @@ public class Projects {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsSetIamPolicyResponse cloudiotProjectsLocationsRegistriesGroupsSetIamPolicy(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsSetIamPolicyResponse cloudiotProjectsLocationsRegistriesGroupsSetIamPolicy(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsSetIamPolicyRequest request, org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsSetIamPolicyPathParams.class, baseUrl, "/v1/{resource}:setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsSetIamPolicyRequest.class, baseUrl, "/v1/{resource}:setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -636,27 +649,28 @@ public class Projects {
     /**
      * Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a NOT_FOUND error.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsTestIamPermissionsResponse cloudiotProjectsLocationsRegistriesGroupsTestIamPermissions(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsTestIamPermissionsResponse cloudiotProjectsLocationsRegistriesGroupsTestIamPermissions(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsTestIamPermissionsRequest request, org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsTestIamPermissionsPathParams.class, baseUrl, "/v1/{resource}:testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsTestIamPermissionsRequest.class, baseUrl, "/v1/{resource}:testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testIamPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -683,25 +697,26 @@ public class Projects {
     /**
      * Lists device registries.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesListResponse cloudiotProjectsLocationsRegistriesList(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesListResponse cloudiotProjectsLocationsRegistriesList(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesListRequest request, org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesListPathParams.class, baseUrl, "/v1/{parent}/registries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesListRequest.class, baseUrl, "/v1/{parent}/registries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -728,27 +743,28 @@ public class Projects {
     /**
      * Deletes the association between the device and the gateway.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayResponse cloudiotProjectsLocationsRegistriesUnbindDeviceFromGateway(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayResponse cloudiotProjectsLocationsRegistriesUnbindDeviceFromGateway(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayRequest request, org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewaySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayPathParams.class, baseUrl, "/v1/{parent}:unbindDeviceFromGateway", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayRequest.class, baseUrl, "/v1/{parent}:unbindDeviceFromGateway", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "unbindDeviceFromGatewayRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

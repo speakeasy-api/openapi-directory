@@ -4,27 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsListSessionLogsRequest {
-    
-    public ErrorsListSessionLogsPathParams pathParams;
-    public ErrorsListSessionLogsRequest withPathParams(ErrorsListSessionLogsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ErrorsListSessionLogsRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public ErrorsListSessionLogsQueryParams queryParams;
-    public ErrorsListSessionLogsRequest withQueryParams(ErrorsListSessionLogsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Date of data requested
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public OffsetDateTime date;
+    public ErrorsListSessionLogsRequest withDate(OffsetDateTime date) {
+        this.date = date;
         return this;
     }
     
+    /**
+     * The id of the error
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorId")
+    public String errorId;
+    public ErrorsListSessionLogsRequest withErrorId(String errorId) {
+        this.errorId = errorId;
+        return this;
+    }
     
-    public ErrorsListSessionLogsSecurity security;
-    public ErrorsListSessionLogsRequest withSecurity(ErrorsListSessionLogsSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ErrorsListSessionLogsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

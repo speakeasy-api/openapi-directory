@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.ActivatePipelineXAmzTargetEnum;
-import org.openapis.openapi.models.operations.ActivatePipelineHeaders;
 import org.openapis.openapi.models.operations.ActivatePipelineRequest;
 import org.openapis.openapi.models.operations.ActivatePipelineResponse;
 import org.openapis.openapi.models.shared.ActivatePipelineInput;
@@ -16,46 +15,38 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             ActivatePipelineRequest req = new ActivatePipelineRequest() {{
-                headers = new ActivatePipelineHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "DataPipeline.ActivatePipeline";
-                }};
-                request = new ActivatePipelineInput() {{
+                activatePipelineInput = new ActivatePipelineInput() {{
                     parameterValues = new org.openapis.openapi.models.shared.ParameterValue[]{{
                         add(new ParameterValue() {{
-                            id = "vel";
-                            stringValue = "error";
+                            id = "provident";
+                            stringValue = "distinctio";
                         }}),
                         add(new ParameterValue() {{
-                            id = "deserunt";
-                            stringValue = "suscipit";
+                            id = "quibusdam";
+                            stringValue = "unde";
                         }}),
                         add(new ParameterValue() {{
-                            id = "iure";
-                            stringValue = "magnam";
-                        }}),
-                        add(new ParameterValue() {{
-                            id = "debitis";
-                            stringValue = "ipsa";
+                            id = "nulla";
+                            stringValue = "corrupti";
                         }}),
                     }};
-                    pipelineId = "delectus";
-                    startTimestamp = "2022-08-14T01:03:07.567Z";
+                    pipelineId = "illum";
+                    startTimestamp = "2022-05-18T09:34:54.894Z";
                 }};
-            }};            
+                xAmzAlgorithm = "deserunt";
+                xAmzContentSha256 = "suscipit";
+                xAmzCredential = "iure";
+                xAmzDate = "magnam";
+                xAmzSecurityToken = "debitis";
+                xAmzSignature = "ipsa";
+                xAmzSignedHeaders = "delectus";
+                xAmzTarget = "DataPipeline.ActivatePipeline";
+            }}            
 
             ActivatePipelineResponse res = sdk.activatePipeline(req);
 

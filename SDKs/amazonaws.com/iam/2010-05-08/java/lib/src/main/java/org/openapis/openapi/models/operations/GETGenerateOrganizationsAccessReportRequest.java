@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGenerateOrganizationsAccessReportRequest {
-    
-    public GETGenerateOrganizationsAccessReportQueryParams queryParams;
-    public GETGenerateOrganizationsAccessReportRequest withQueryParams(GETGenerateOrganizationsAccessReportQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGenerateOrganizationsAccessReportActionEnum action;
+    public GETGenerateOrganizationsAccessReportRequest withAction(GETGenerateOrganizationsAccessReportActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The path of the Organizations entity (root, OU, or account). You can build an entity path using the known structure of your organization. For example, assume that your account ID is &lt;code&gt;123456789012&lt;/code&gt; and its parent OU ID is &lt;code&gt;ou-rge0-awsabcde&lt;/code&gt;. The organization root ID is &lt;code&gt;r-f6g7h8i9j0example&lt;/code&gt; and your organization ID is &lt;code&gt;o-a1b2c3d4e5&lt;/code&gt;. Your entity path is &lt;code&gt;o-a1b2c3d4e5/r-f6g7h8i9j0example/ou-rge0-awsabcde/123456789012&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EntityPath")
+    public String entityPath;
+    public GETGenerateOrganizationsAccessReportRequest withEntityPath(String entityPath) {
+        this.entityPath = entityPath;
+        return this;
+    }
     
-    public GETGenerateOrganizationsAccessReportHeaders headers;
-    public GETGenerateOrganizationsAccessReportRequest withHeaders(GETGenerateOrganizationsAccessReportHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The identifier of the Organizations service control policy (SCP). This parameter is optional.&lt;/p&gt; &lt;p&gt;This ID is used to generate information about when an account principal that is limited by the SCP attempted to access an Amazon Web Services service.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OrganizationsPolicyId")
+    public String organizationsPolicyId;
+    public GETGenerateOrganizationsAccessReportRequest withOrganizationsPolicyId(String organizationsPolicyId) {
+        this.organizationsPolicyId = organizationsPolicyId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGenerateOrganizationsAccessReportVersionEnum version;
+    public GETGenerateOrganizationsAccessReportRequest withVersion(GETGenerateOrganizationsAccessReportVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGenerateOrganizationsAccessReportRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGenerateOrganizationsAccessReportRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGenerateOrganizationsAccessReportRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGenerateOrganizationsAccessReportRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGenerateOrganizationsAccessReportRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGenerateOrganizationsAccessReportRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGenerateOrganizationsAccessReportRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

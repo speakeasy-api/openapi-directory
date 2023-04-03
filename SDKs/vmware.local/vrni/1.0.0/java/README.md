@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.AddApplicationSecurity;
-import org.openapis.openapi.models.operations.AddApplicationRequest;
 import org.openapis.openapi.models.operations.AddApplicationResponse;
 import org.openapis.openapi.models.shared.ApplicationRequest;
-import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -29,18 +27,13 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AddApplicationRequest req = new AddApplicationRequest() {{
-                security = new AddApplicationSecurity() {{
-                    apiKeyAuth = new SchemeAPIKeyAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                request = new ApplicationRequest() {{
-                    name = "corrupti";
-                }};
-            }};            
+            org.openapis.openapi.models.shared.ApplicationRequest req = new ApplicationRequest() {{
+                name = "corrupti";
+            }}            
 
-            AddApplicationResponse res = sdk.applications.addApplication(req);
+            AddApplicationResponse res = sdk.applications.addApplication(req, new AddApplicationSecurity() {{
+                apiKeyAuth = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.application.isPresent()) {
                 // handle response
@@ -52,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### applications

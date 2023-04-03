@@ -42,7 +42,7 @@ public class Job {
      */
     public org.openapis.openapi.models.operations.JobSearchReadResponse jobSearchRead(org.openapis.openapi.models.operations.JobSearchReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobSearchReadPathParams.class, baseUrl, "/api/v1/job/search/{job_title}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobSearchReadRequest.class, baseUrl, "/api/v1/job/search/{job_title}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -82,7 +82,7 @@ public class Job {
      */
     public org.openapis.openapi.models.operations.JobSearchallReadResponse jobSearchallRead(org.openapis.openapi.models.operations.JobSearchallReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobSearchallReadPathParams.class, baseUrl, "/api/v1/job/searchall/{company_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JobSearchallReadRequest.class, baseUrl, "/api/v1/job/searchall/{company_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

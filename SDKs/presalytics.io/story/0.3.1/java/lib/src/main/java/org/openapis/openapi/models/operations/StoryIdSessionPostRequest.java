@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdSessionPostRequest {
-    
-    public StoryIdSessionPostPathParams pathParams;
-    public StoryIdSessionPostRequest withPathParams(StoryIdSessionPostPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Collaborator user id and permission type
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateSessionRequest request;
-    public StoryIdSessionPostRequest withRequest(org.openapis.openapi.models.shared.CreateSessionRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateSessionRequest createSessionRequest;
+    public StoryIdSessionPostRequest withCreateSessionRequest(org.openapis.openapi.models.shared.CreateSessionRequest createSessionRequest) {
+        this.createSessionRequest = createSessionRequest;
+        return this;
+    }
+    
+    /**
+     * the id from the story object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public StoryIdSessionPostRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

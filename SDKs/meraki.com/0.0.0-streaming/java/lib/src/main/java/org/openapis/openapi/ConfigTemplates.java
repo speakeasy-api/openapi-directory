@@ -39,7 +39,7 @@ public class ConfigTemplates {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationConfigTemplateResponse deleteOrganizationConfigTemplate(org.openapis.openapi.models.operations.DeleteOrganizationConfigTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationConfigTemplatePathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationConfigTemplateRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -73,7 +73,7 @@ public class ConfigTemplates {
      */
     public org.openapis.openapi.models.operations.GetOrganizationConfigTemplatesResponse getOrganizationConfigTemplates(org.openapis.openapi.models.operations.GetOrganizationConfigTemplatesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplatesPathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplatesRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

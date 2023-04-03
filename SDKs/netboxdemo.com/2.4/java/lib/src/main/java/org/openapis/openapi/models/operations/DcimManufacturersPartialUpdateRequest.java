@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimManufacturersPartialUpdateRequest {
-    
-    public DcimManufacturersPartialUpdatePathParams pathParams;
-    public DcimManufacturersPartialUpdateRequest withPathParams(DcimManufacturersPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ManufacturerInput manufacturerInput;
+    public DcimManufacturersPartialUpdateRequest withManufacturerInput(org.openapis.openapi.models.shared.ManufacturerInput manufacturerInput) {
+        this.manufacturerInput = manufacturerInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ManufacturerInput request;
-    public DcimManufacturersPartialUpdateRequest withRequest(org.openapis.openapi.models.shared.ManufacturerInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this manufacturer.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimManufacturersPartialUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

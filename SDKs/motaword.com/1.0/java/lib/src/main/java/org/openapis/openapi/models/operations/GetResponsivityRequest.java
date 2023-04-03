@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResponsivityRequest {
-    
-    public GetResponsivityQueryParams queryParams;
-    public GetResponsivityRequest withQueryParams(GetResponsivityQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Time period to calculate your responsiveness
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
+    public GetResponsivityPeriodEnum period;
+    public GetResponsivityRequest withPeriod(GetResponsivityPeriodEnum period) {
+        this.period = period;
         return this;
     }
     

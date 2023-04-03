@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetByExternalId1Request {
-    
-    public GetByExternalId1PathParams pathParams;
-    public GetByExternalId1Request withPathParams(GetByExternalId1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * project's external identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalProjectId")
+    public String externalProjectId;
+    public GetByExternalId1Request withExternalProjectId(String externalProjectId) {
+        this.externalProjectId = externalProjectId;
         return this;
     }
     

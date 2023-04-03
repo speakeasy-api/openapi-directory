@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AssociateEntitiesToExperienceXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AssociateEntitiesToExperienceHeaders;
 import org.openapis.openapi.models.operations.AssociateEntitiesToExperienceRequest;
 import org.openapis.openapi.models.operations.AssociateEntitiesToExperienceResponse;
 import org.openapis.openapi.models.shared.AssociateEntitiesToExperienceRequest;
@@ -17,46 +16,38 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateEntitiesToExperienceRequest req = new AssociateEntitiesToExperienceRequest() {{
-                headers = new AssociateEntitiesToExperienceHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AWSKendraFrontendService.AssociateEntitiesToExperience";
-                }};
-                request = new AssociateEntitiesToExperienceRequest() {{
+                associateEntitiesToExperienceRequest = new AssociateEntitiesToExperienceRequest() {{
                     entityList = new org.openapis.openapi.models.shared.EntityConfiguration[]{{
                         add(new EntityConfiguration() {{
-                            entityId = "vel";
+                            entityId = "provident";
                             entityType = "GROUP";
                         }}),
                         add(new EntityConfiguration() {{
-                            entityId = "deserunt";
-                            entityType = "USER";
+                            entityId = "quibusdam";
+                            entityType = "GROUP";
                         }}),
                         add(new EntityConfiguration() {{
-                            entityId = "iure";
-                            entityType = "USER";
-                        }}),
-                        add(new EntityConfiguration() {{
-                            entityId = "debitis";
-                            entityType = "USER";
+                            entityId = "nulla";
+                            entityType = "GROUP";
                         }}),
                     }};
-                    id = "delectus";
-                    indexId = "tempora";
+                    id = "illum";
+                    indexId = "vel";
                 }};
-            }};            
+                xAmzAlgorithm = "error";
+                xAmzContentSha256 = "deserunt";
+                xAmzCredential = "suscipit";
+                xAmzDate = "iure";
+                xAmzSecurityToken = "magnam";
+                xAmzSignature = "debitis";
+                xAmzSignedHeaders = "ipsa";
+                xAmzTarget = "AWSKendraFrontendService.AssociateEntitiesToExperience";
+            }}            
 
             AssociateEntitiesToExperienceResponse res = sdk.associateEntitiesToExperience(req);
 

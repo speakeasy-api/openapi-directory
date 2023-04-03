@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendDownloadShareLinkViaEmailRequest {
-    
-    public SendDownloadShareLinkViaEmailPathParams pathParams;
-    public SendDownloadShareLinkViaEmailRequest withPathParams(SendDownloadShareLinkViaEmailPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SendDownloadShareLinkViaEmailHeaders headers;
-    public SendDownloadShareLinkViaEmailRequest withHeaders(SendDownloadShareLinkViaEmailHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DownloadShareLinkEmail request;
-    public SendDownloadShareLinkViaEmailRequest withRequest(org.openapis.openapi.models.shared.DownloadShareLinkEmail request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DownloadShareLinkEmail downloadShareLinkEmail;
+    public SendDownloadShareLinkViaEmailRequest withDownloadShareLinkEmail(org.openapis.openapi.models.shared.DownloadShareLinkEmail downloadShareLinkEmail) {
+        this.downloadShareLinkEmail = downloadShareLinkEmail;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public SendDownloadShareLinkViaEmailRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Share ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=share_id")
+    public Long shareId;
+    public SendDownloadShareLinkViaEmailRequest withShareId(Long shareId) {
+        this.shareId = shareId;
         return this;
     }
     

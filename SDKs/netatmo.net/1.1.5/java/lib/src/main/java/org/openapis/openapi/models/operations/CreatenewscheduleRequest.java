@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatenewscheduleRequest {
-    
-    public CreatenewscheduleQueryParams queryParams;
-    public CreatenewscheduleRequest withQueryParams(CreatenewscheduleQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The thermostat program (zones and timetable)
      */
     @SpeakeasyMetadata("request:mediaType=text/plain")
-    public byte[] request;
-    public CreatenewscheduleRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public CreatenewscheduleRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The relay id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
+    public String deviceId;
+    public CreatenewscheduleRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
     
-    public CreatenewscheduleSecurity security;
-    public CreatenewscheduleRequest withSecurity(CreatenewscheduleSecurity security) {
-        this.security = security;
+    /**
+     * The thermostat id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=module_id")
+    public String moduleId;
+    public CreatenewscheduleRequest withModuleId(String moduleId) {
+        this.moduleId = moduleId;
         return this;
     }
     

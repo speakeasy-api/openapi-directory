@@ -31,11 +31,9 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetCmsV3DomainsGetPageSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetCmsV3DomainsGetPageQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCmsV3DomainsGetPageRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCmsV3DomainsGetPageResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCmsV3DomainsDomainIdGetByIdSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetCmsV3DomainsDomainIdGetByIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCmsV3DomainsDomainIdGetByIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCmsV3DomainsDomainIdGetByIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/CollectionResponseWithTotalDomainForwardPaging.java
@@ -44,9 +42,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/ForwardPaging.java
 lib/src/main/java/org/openapis/openapi/models/shared/NextPage.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorDetail.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHapikey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2Legacy.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemePrivateApps.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemePrivateAppsLegacy.java
 USAGE.md

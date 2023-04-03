@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifySslCertificateRequestDomainValidationsRequest {
-    
-    public VerifySslCertificateRequestDomainValidationsPathParams pathParams;
-    public VerifySslCertificateRequestDomainValidationsRequest withPathParams(VerifySslCertificateRequestDomainValidationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the certificate request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public VerifySslCertificateRequestDomainValidationsRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

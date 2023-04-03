@@ -7,24 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiChangeShippingDetailsRawRequest {
-    
-    public OrderApiChangeShippingDetailsRawQueryParams queryParams;
-    public OrderApiChangeShippingDetailsRawRequest withQueryParams(OrderApiChangeShippingDetailsRawQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public OrderApiChangeShippingDetailsRawHeaders headers;
-    public OrderApiChangeShippingDetailsRawRequest withHeaders(OrderApiChangeShippingDetailsRawHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public OrderApiChangeShippingDetailsRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public OrderApiChangeShippingDetailsRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderId")
+    public Integer orderId;
+    public OrderApiChangeShippingDetailsRawRequest withOrderId(Integer orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public OrderApiChangeShippingDetailsRawRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public OrderApiChangeShippingDetailsRawRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

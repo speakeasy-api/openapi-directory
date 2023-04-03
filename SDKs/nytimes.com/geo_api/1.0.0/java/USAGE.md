@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetQueryJsonFacetsEnum;
-import org.openapis.openapi.models.operations.GetQueryJsonQueryParams;
 import org.openapis.openapi.models.operations.GetQueryJsonRequest;
 import org.openapis.openapi.models.operations.GetQueryJsonResponse;
 
@@ -14,28 +13,24 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apikey = new SchemeApikey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apikey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetQueryJsonRequest req = new GetQueryJsonRequest() {{
-                queryParams = new GetQueryJsonQueryParams() {{
-                    dateRange = "corrupti";
-                    elevation = 592845;
-                    facets = "1";
-                    filter = "quibusdam";
-                    latitude = "unde";
-                    limit = 857946;
-                    longitude = "corrupti";
-                    name = "illum";
-                    offset = 423655;
-                    query = "error";
-                    sort = "deserunt";
-                    sw = "suscipit";
-                }};
-            }};            
+                dateRange = "corrupti";
+                elevation = 592845;
+                facets = "1";
+                filter = "quibusdam";
+                latitude = "unde";
+                limit = 857946;
+                longitude = "corrupti";
+                name = "illum";
+                offset = 423655;
+                query = "error";
+                sort = "deserunt";
+                sw = "suscipit";
+            }}            
 
             GetQueryJsonResponse res = sdk.events.getQueryJson(req);
 

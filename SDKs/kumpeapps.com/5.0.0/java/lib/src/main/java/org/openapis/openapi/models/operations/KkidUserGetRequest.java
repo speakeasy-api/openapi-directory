@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidUserGetRequest {
-    
-    public KkidUserGetQueryParams queryParams;
-    public KkidUserGetRequest withQueryParams(KkidUserGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Use bool values instead of Int 0/1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enableBool")
+    public Boolean enableBool;
+    public KkidUserGetRequest withEnableBool(Boolean enableBool) {
+        this.enableBool = enableBool;
         return this;
     }
     

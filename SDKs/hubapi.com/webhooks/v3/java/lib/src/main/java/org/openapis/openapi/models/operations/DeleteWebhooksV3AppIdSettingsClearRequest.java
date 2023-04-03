@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWebhooksV3AppIdSettingsClearRequest {
-    
-    public DeleteWebhooksV3AppIdSettingsClearPathParams pathParams;
-    public DeleteWebhooksV3AppIdSettingsClearRequest withPathParams(DeleteWebhooksV3AppIdSettingsClearPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteWebhooksV3AppIdSettingsClearSecurity security;
-    public DeleteWebhooksV3AppIdSettingsClearRequest withSecurity(DeleteWebhooksV3AppIdSettingsClearSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public DeleteWebhooksV3AppIdSettingsClearRequest withAppId(Integer appId) {
+        this.appId = appId;
         return this;
     }
     

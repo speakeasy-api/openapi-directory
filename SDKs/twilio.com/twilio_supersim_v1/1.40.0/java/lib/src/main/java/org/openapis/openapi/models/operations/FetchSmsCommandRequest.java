@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSmsCommandRequest {
-    
-    public FetchSmsCommandPathParams pathParams;
-    public FetchSmsCommandRequest withPathParams(FetchSmsCommandPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchSmsCommandSecurity security;
-    public FetchSmsCommandRequest withSecurity(FetchSmsCommandSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchSmsCommandRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the SMS Command resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchSmsCommandRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

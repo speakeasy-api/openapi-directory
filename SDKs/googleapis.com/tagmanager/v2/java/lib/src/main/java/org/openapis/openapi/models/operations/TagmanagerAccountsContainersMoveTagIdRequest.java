@@ -4,27 +4,186 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagmanagerAccountsContainersMoveTagIdRequest {
-    
-    public TagmanagerAccountsContainersMoveTagIdPathParams pathParams;
-    public TagmanagerAccountsContainersMoveTagIdRequest withPathParams(TagmanagerAccountsContainersMoveTagIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public TagmanagerAccountsContainersMoveTagIdRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public TagmanagerAccountsContainersMoveTagIdQueryParams queryParams;
-    public TagmanagerAccountsContainersMoveTagIdRequest withQueryParams(TagmanagerAccountsContainersMoveTagIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public TagmanagerAccountsContainersMoveTagIdRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Must be set to true to allow features.user_permissions to change from false to true. If this operation causes an update but this bit is false, the operation will fail.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allowUserPermissionFeatureUpdate")
+    public Boolean allowUserPermissionFeatureUpdate;
+    public TagmanagerAccountsContainersMoveTagIdRequest withAllowUserPermissionFeatureUpdate(Boolean allowUserPermissionFeatureUpdate) {
+        this.allowUserPermissionFeatureUpdate = allowUserPermissionFeatureUpdate;
+        return this;
+    }
     
-    public TagmanagerAccountsContainersMoveTagIdSecurity security;
-    public TagmanagerAccountsContainersMoveTagIdRequest withSecurity(TagmanagerAccountsContainersMoveTagIdSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public TagmanagerAccountsContainersMoveTagIdRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public TagmanagerAccountsContainersMoveTagIdRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Whether or not to copy tag settings from this tag to the new tag.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=copySettings")
+    public Boolean copySettings;
+    public TagmanagerAccountsContainersMoveTagIdRequest withCopySettings(Boolean copySettings) {
+        this.copySettings = copySettings;
+        return this;
+    }
+    
+    /**
+     * Must be set to true to accept all terms of service agreements copied from the current tag to the newly created tag. If this bit is false, the operation will fail.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=copyTermsOfService")
+    public Boolean copyTermsOfService;
+    public TagmanagerAccountsContainersMoveTagIdRequest withCopyTermsOfService(Boolean copyTermsOfService) {
+        this.copyTermsOfService = copyTermsOfService;
+        return this;
+    }
+    
+    /**
+     * Whether or not to copy users from this tag to the new tag.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=copyUsers")
+    public Boolean copyUsers;
+    public TagmanagerAccountsContainersMoveTagIdRequest withCopyUsers(Boolean copyUsers) {
+        this.copyUsers = copyUsers;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public TagmanagerAccountsContainersMoveTagIdRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public TagmanagerAccountsContainersMoveTagIdRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public TagmanagerAccountsContainersMoveTagIdRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public TagmanagerAccountsContainersMoveTagIdRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public TagmanagerAccountsContainersMoveTagIdRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public TagmanagerAccountsContainersMoveTagIdRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Tag ID to be removed from the current Container.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagId")
+    public String tagId;
+    public TagmanagerAccountsContainersMoveTagIdRequest withTagId(String tagId) {
+        this.tagId = tagId;
+        return this;
+    }
+    
+    /**
+     * The name for the newly created tag.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagName")
+    public String tagName;
+    public TagmanagerAccountsContainersMoveTagIdRequest withTagName(String tagName) {
+        this.tagName = tagName;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public TagmanagerAccountsContainersMoveTagIdRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public TagmanagerAccountsContainersMoveTagIdRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

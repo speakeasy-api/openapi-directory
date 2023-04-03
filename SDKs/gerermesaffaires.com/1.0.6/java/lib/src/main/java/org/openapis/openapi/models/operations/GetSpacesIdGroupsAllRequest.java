@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesIdGroupsAllRequest {
-    
-    public GetSpacesIdGroupsAllPathParams pathParams;
-    public GetSpacesIdGroupsAllRequest withPathParams(GetSpacesIdGroupsAllPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Name of the group
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Name")
+    public String name;
+    public GetSpacesIdGroupsAllRequest withName(String name) {
+        this.name = name;
         return this;
     }
     
-    
-    public GetSpacesIdGroupsAllQueryParams queryParams;
-    public GetSpacesIdGroupsAllRequest withQueryParams(GetSpacesIdGroupsAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesIdGroupsAllRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

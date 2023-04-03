@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifySnapshotScheduleRequest {
-    
-    public GETModifySnapshotScheduleQueryParams queryParams;
-    public GETModifySnapshotScheduleRequest withQueryParams(GETModifySnapshotScheduleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifySnapshotScheduleActionEnum action;
+    public GETModifySnapshotScheduleRequest withAction(GETModifySnapshotScheduleActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * An updated list of schedule definitions. A schedule definition is made up of schedule expressions, for example, "cron(30 12 *)" or "rate(12 hours)".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ScheduleDefinitions")
+    public String[] scheduleDefinitions;
+    public GETModifySnapshotScheduleRequest withScheduleDefinitions(String[] scheduleDefinitions) {
+        this.scheduleDefinitions = scheduleDefinitions;
+        return this;
+    }
     
-    public GETModifySnapshotScheduleHeaders headers;
-    public GETModifySnapshotScheduleRequest withHeaders(GETModifySnapshotScheduleHeaders headers) {
-        this.headers = headers;
+    /**
+     * A unique alphanumeric identifier of the schedule to modify.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ScheduleIdentifier")
+    public String scheduleIdentifier;
+    public GETModifySnapshotScheduleRequest withScheduleIdentifier(String scheduleIdentifier) {
+        this.scheduleIdentifier = scheduleIdentifier;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifySnapshotScheduleVersionEnum version;
+    public GETModifySnapshotScheduleRequest withVersion(GETModifySnapshotScheduleVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifySnapshotScheduleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifySnapshotScheduleRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifySnapshotScheduleRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifySnapshotScheduleRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifySnapshotScheduleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifySnapshotScheduleRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifySnapshotScheduleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

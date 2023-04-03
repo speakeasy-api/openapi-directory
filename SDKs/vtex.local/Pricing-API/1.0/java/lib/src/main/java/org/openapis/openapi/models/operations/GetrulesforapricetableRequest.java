@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetrulesforapricetableRequest {
-    
-    public GetrulesforapricetablePathParams pathParams;
-    public GetrulesforapricetableRequest withPathParams(GetrulesforapricetablePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetrulesforapricetableRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetrulesforapricetableHeaders headers;
-    public GetrulesforapricetableRequest withHeaders(GetrulesforapricetableHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetrulesforapricetableRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
-    
-    public String serverURL;
-    public GetrulesforapricetableRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Price Table Name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=priceTableId")
+    public String priceTableId;
+    public GetrulesforapricetableRequest withPriceTableId(String priceTableId) {
+        this.priceTableId = priceTableId;
         return this;
     }
     

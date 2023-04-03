@@ -47,13 +47,13 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingGheResponse billingGetGithubAdvancedSecurityBillingGhe(org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingGheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingGhePathParams.class, baseUrl, "/enterprises/{enterprise}/settings/billing/advanced-security", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingGheRequest.class, baseUrl, "/enterprises/{enterprise}/settings/billing/advanced-security", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingGheQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingGheRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -107,13 +107,13 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingOrgResponse billingGetGithubAdvancedSecurityBillingOrg(org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingOrgPathParams.class, baseUrl, "/orgs/{org}/settings/billing/advanced-security", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingOrgRequest.class, baseUrl, "/orgs/{org}/settings/billing/advanced-security", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingGetGithubAdvancedSecurityBillingOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

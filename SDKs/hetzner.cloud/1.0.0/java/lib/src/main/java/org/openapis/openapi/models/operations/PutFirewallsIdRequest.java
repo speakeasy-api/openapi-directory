@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutFirewallsIdRequest {
-    
-    public PutFirewallsIdPathParams pathParams;
-    public PutFirewallsIdRequest withPathParams(PutFirewallsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PutFirewallsIdUpdateFirewallRequest requestBody;
+    public PutFirewallsIdRequest withRequestBody(PutFirewallsIdUpdateFirewallRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutFirewallsIdUpdateFirewallRequest request;
-    public PutFirewallsIdRequest withRequest(PutFirewallsIdUpdateFirewallRequest request) {
-        this.request = request;
+    /**
+     * ID of the resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PutFirewallsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

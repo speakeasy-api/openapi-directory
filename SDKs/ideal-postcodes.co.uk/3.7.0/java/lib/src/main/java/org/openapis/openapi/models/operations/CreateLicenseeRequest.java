@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateLicenseeRequest {
-    
-    public CreateLicenseePathParams pathParams;
-    public CreateLicenseeRequest withPathParams(CreateLicenseePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateLicenseeQueryParams queryParams;
-    public CreateLicenseeRequest withQueryParams(CreateLicenseeQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LicenseeEditable request;
-    public CreateLicenseeRequest withRequest(org.openapis.openapi.models.shared.LicenseeEditable request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.LicenseeEditable licenseeEditable;
+    public CreateLicenseeRequest withLicenseeEditable(org.openapis.openapi.models.shared.LicenseeEditable licenseeEditable) {
+        this.licenseeEditable = licenseeEditable;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public CreateLicenseeRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=user_token")
+    public String userToken;
+    public CreateLicenseeRequest withUserToken(String userToken) {
+        this.userToken = userToken;
         return this;
     }
     

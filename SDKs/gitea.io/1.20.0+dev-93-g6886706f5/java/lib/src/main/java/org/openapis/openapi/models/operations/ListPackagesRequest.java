@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPackagesRequest {
-    
-    public ListPackagesPathParams pathParams;
-    public ListPackagesRequest withPathParams(ListPackagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListPackagesRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * owner of the packages
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ListPackagesRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ListPackagesQueryParams queryParams;
-    public ListPackagesRequest withQueryParams(ListPackagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ListPackagesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * name filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public ListPackagesRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * package type filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public ListPackagesTypeEnum type;
+    public ListPackagesRequest withType(ListPackagesTypeEnum type) {
+        this.type = type;
         return this;
     }
     

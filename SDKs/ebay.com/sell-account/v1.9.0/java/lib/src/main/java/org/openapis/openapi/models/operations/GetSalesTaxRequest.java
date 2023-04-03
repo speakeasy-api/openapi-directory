@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSalesTaxRequest {
-    
-    public GetSalesTaxPathParams pathParams;
-    public GetSalesTaxRequest withPathParams(GetSalesTaxPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This path parameter specifies the two-letter &lt;a href="https://www.iso.org/iso-3166-country-codes.html " title="https://www.iso.org " target="_blank"&gt;ISO 3166&lt;/a&gt; code for the country whose sales tax table you want to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryCode")
+    public String countryCode;
+    public GetSalesTaxRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
         return this;
     }
     
-    
-    public GetSalesTaxSecurity security;
-    public GetSalesTaxRequest withSecurity(GetSalesTaxSecurity security) {
-        this.security = security;
+    /**
+     * This path parameter specifies the ID of the sales tax jurisdiction for the tax table entry you want to retrieve. Retrieve valid jurisdiction IDs using &lt;b&gt;getSalesTaxJurisdictions&lt;/b&gt; in the Metadata API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jurisdictionId")
+    public String jurisdictionId;
+    public GetSalesTaxRequest withJurisdictionId(String jurisdictionId) {
+        this.jurisdictionId = jurisdictionId;
         return this;
     }
     

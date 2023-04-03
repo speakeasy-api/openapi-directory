@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompetitionHierarchyLeagueHierarchyRequest {
-    
-    public CompetitionHierarchyLeagueHierarchyPathParams pathParams;
-    public CompetitionHierarchyLeagueHierarchyRequest withPathParams(CompetitionHierarchyLeagueHierarchyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public CompetitionHierarchyLeagueHierarchyFormatEnum format;
+    public CompetitionHierarchyLeagueHierarchyRequest withFormat(CompetitionHierarchyLeagueHierarchyFormatEnum format) {
+        this.format = format;
         return this;
     }
     

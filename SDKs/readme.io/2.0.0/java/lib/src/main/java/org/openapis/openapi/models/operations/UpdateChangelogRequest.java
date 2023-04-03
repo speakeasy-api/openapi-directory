@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateChangelogRequest {
-    
-    public UpdateChangelogPathParams pathParams;
-    public UpdateChangelogRequest withPathParams(UpdateChangelogPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Changelog object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Changelog request;
-    public UpdateChangelogRequest withRequest(org.openapis.openapi.models.shared.Changelog request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Changelog changelog;
+    public UpdateChangelogRequest withChangelog(org.openapis.openapi.models.shared.Changelog changelog) {
+        this.changelog = changelog;
         return this;
     }
     
-    
-    public UpdateChangelogSecurity security;
-    public UpdateChangelogRequest withSecurity(UpdateChangelogSecurity security) {
-        this.security = security;
+    /**
+     * Slug of changelog
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slug")
+    public String slug;
+    public UpdateChangelogRequest withSlug(String slug) {
+        this.slug = slug;
         return this;
     }
     

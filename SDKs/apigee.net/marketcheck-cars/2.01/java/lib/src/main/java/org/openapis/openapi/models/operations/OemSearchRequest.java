@@ -4,13 +4,436 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OemSearchRequest {
+    /**
+     * To filter listing on acquisition fee of the car
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=acquisition_fee")
+    public String acquisitionFee;
+    public OemSearchRequest withAcquisitionFee(String acquisitionFee) {
+        this.acquisitionFee = acquisitionFee;
+        return this;
+    }
     
-    public OemSearchQueryParams queryParams;
-    public OemSearchRequest withQueryParams(OemSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public OemSearchRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    
+    /**
+     * APR range to filter listings with the msrp in the range given. Range to be given in the format - min-max e.g. 1000-5000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apr")
+    public String apr;
+    public OemSearchRequest withApr(String apr) {
+        this.apr = apr;
+        return this;
+    }
+    
+    /**
+     * To filter listing on cashback amounts listed in offer
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cashback_amount")
+    public String cashbackAmount;
+    public OemSearchRequest withCashbackAmount(String cashbackAmount) {
+        this.cashbackAmount = cashbackAmount;
+        return this;
+    }
+    
+    /**
+     * To filter listing on the demographic or any other entity for whom this cashback offer is for. Not all target groups are identified but the most common ones are tagged like Military, Grad students Current owners etc
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cashback_target_group")
+    public String cashbackTargetGroup;
+    public OemSearchRequest withCashbackTargetGroup(String cashbackTargetGroup) {
+        this.cashbackTargetGroup = cashbackTargetGroup;
+        return this;
+    }
+    
+    /**
+     * To filter listing on City in which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
+    public String city;
+    public OemSearchRequest withCity(String city) {
+        this.city = city;
+        return this;
+    }
+    
+    /**
+     * To filter listing on Country in which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public org.openapis.openapi.models.shared.CountryEnum country;
+    public OemSearchRequest withCountry(org.openapis.openapi.models.shared.CountryEnum country) {
+        this.country = country;
+        return this;
+    }
+    
+    /**
+     * To filter listing on any contribution from dealer's side
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dealer_contribution")
+    public String dealerContribution;
+    public OemSearchRequest withDealerContribution(String dealerContribution) {
+        this.dealerContribution = dealerContribution;
+        return this;
+    }
+    
+    /**
+     * To filter listing on disposition fee of the car
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disposition_fee")
+    public String dispositionFee;
+    public OemSearchRequest withDispositionFee(String dispositionFee) {
+        this.dispositionFee = dispositionFee;
+        return this;
+    }
+    
+    /**
+     * To filter listing on down payment offer on car
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=down_payment")
+    public String downPayment;
+    public OemSearchRequest withDownPayment(String downPayment) {
+        this.downPayment = downPayment;
+        return this;
+    }
+    
+    /**
+     * To filter listing on total amount due at signing, that usually includes first month payment, down payment, acquisition fee etc
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=due_at_signing")
+    public String dueAtSigning;
+    public OemSearchRequest withDueAtSigning(String dueAtSigning) {
+        this.dueAtSigning = dueAtSigning;
+        return this;
+    }
+    
+    /**
+     * To filter listing on offer duration in months
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duration")
+    public String duration;
+    public OemSearchRequest withDuration(String duration) {
+        this.duration = duration;
+        return this;
+    }
+    
+    /**
+     * Control sort order of facets with this parameter with default sort being on count, Other available sort is alphabetical sort, which can be obtained by using index as value for this param
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facet_sort")
+    public org.openapis.openapi.models.shared.FacetSortEnum facetSort;
+    public OemSearchRequest withFacetSort(org.openapis.openapi.models.shared.FacetSortEnum facetSort) {
+        this.facetSort = facetSort;
+        return this;
+    }
+    
+    /**
+     * The comma separated list of fields for which facets are requested. Facets could be requested in addition to the listings for the search. Please note - The API calls with lots of facet fields may take longer to respond.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facets")
+    public String facets;
+    public OemSearchRequest withFacets(String facets) {
+        this.facets = facets;
+        return this;
+    }
+    
+    /**
+     * First seen date range to filter listings with the first seen in the range given. Range to be given in the format [YYYYMMDD] - min-max e.g. 20190523-20190623
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_seen_range")
+    public String firstSeenRange;
+    public OemSearchRequest withFirstSeenRange(String firstSeenRange) {
+        this.firstSeenRange = firstSeenRange;
+        return this;
+    }
+    
+    /**
+     * To filter listing on gross capitalised cost of the car
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gross_capitalised_cost")
+    public String grossCapitalisedCost;
+    public OemSearchRequest withGrossCapitalisedCost(String grossCapitalisedCost) {
+        this.grossCapitalisedCost = grossCapitalisedCost;
+        return this;
+    }
+    
+    /**
+     * Last seen date range to filter listings with the last seen in the range given. Range to be given in the format [YYYYMMDD] - min-max e.g. 20190523-20190623
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_seen_range")
+    public String lastSeenRange;
+    public OemSearchRequest withLastSeenRange(String lastSeenRange) {
+        this.lastSeenRange = lastSeenRange;
+        return this;
+    }
+    
+    /**
+     * Latitude component of location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latitude")
+    public Double latitude;
+    public OemSearchRequest withLatitude(Double latitude) {
+        this.latitude = latitude;
+        return this;
+    }
+    
+    /**
+     * To filter listing on amount at the lease end to pay for buying the car
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lease_end_purchase_option")
+    public String leaseEndPurchaseOption;
+    public OemSearchRequest withLeaseEndPurchaseOption(String leaseEndPurchaseOption) {
+        this.leaseEndPurchaseOption = leaseEndPurchaseOption;
+        return this;
+    }
+    
+    /**
+     * Longitude component of location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longitude")
+    public Double longitude;
+    public OemSearchRequest withLongitude(Double longitude) {
+        this.longitude = longitude;
+        return this;
+    }
+    
+    /**
+     * To filter listings on their make
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=make")
+    public String make;
+    public OemSearchRequest withMake(String make) {
+        this.make = make;
+        return this;
+    }
+    
+    /**
+     * Mileage Charge Range range to filter listings with the msrp in the range given. Range to be given in the format - min-max e.g. 100-1000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mileage_charge")
+    public String mileageCharge;
+    public OemSearchRequest withMileageCharge(String mileageCharge) {
+        this.mileageCharge = mileageCharge;
+        return this;
+    }
+    
+    /**
+     * To filter listing on mileage charge limit the offer is valid up to under the default clauses
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mileage_charge_limit")
+    public String mileageChargeLimit;
+    public OemSearchRequest withMileageChargeLimit(String mileageChargeLimit) {
+        this.mileageChargeLimit = mileageChargeLimit;
+        return this;
+    }
+    
+    /**
+     * To filter listings on their model
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
+    public String model;
+    public OemSearchRequest withModel(String model) {
+        this.model = model;
+        return this;
+    }
+    
+    /**
+     * To filter listing on Monthly payment amount, usually populated in Lease offers
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=monthly")
+    public String monthly;
+    public OemSearchRequest withMonthly(String monthly) {
+        this.monthly = monthly;
+        return this;
+    }
+    
+    /**
+     * To filter listing on monthly amount to be paid by customer for every $1000 financed at the advertised APR rate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=monthly_per_thousand")
+    public String monthlyPerThousand;
+    public OemSearchRequest withMonthlyPerThousand(String monthlyPerThousand) {
+        this.monthlyPerThousand = monthlyPerThousand;
+        return this;
+    }
+    
+    /**
+     * MSRP range to filter listings with the msrp in the range given. Range to be given in the format - min-max e.g. 1000-5000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=msrp")
+    public String msrp;
+    public OemSearchRequest withMsrp(String msrp) {
+        this.msrp = msrp;
+        return this;
+    }
+    
+    /**
+     * To filter listing on net capitalised cost of the car
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=net_capitalised_cost")
+    public String netCapitalisedCost;
+    public OemSearchRequest withNetCapitalisedCost(String netCapitalisedCost) {
+        this.netCapitalisedCost = netCapitalisedCost;
+        return this;
+    }
+    
+    /**
+     * The type of the incentive
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offer_type")
+    public OemSearchOfferTypeEnum offerType;
+    public OemSearchRequest withOfferType(OemSearchOfferTypeEnum offerType) {
+        this.offerType = offerType;
+        return this;
+    }
+    
+    /**
+     * Radius around the search location (Unit - Miles)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
+    public Integer radius;
+    public OemSearchRequest withRadius(Integer radius) {
+        this.radius = radius;
+        return this;
+    }
+    
+    /**
+     * The comma separated list of numeric fields for which range facets are requested. Range facets could be requested in addition to the listings for the search. Please note - The API calls with lots of range facet fields may take longer to respond.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=range_facets")
+    public String rangeFacets;
+    public OemSearchRequest withRangeFacets(String rangeFacets) {
+        this.rangeFacets = rangeFacets;
+        return this;
+    }
+    
+    /**
+     * Number of results to return. Default is 10. Max is 50
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
+    public Integer rows;
+    public OemSearchRequest withRows(Integer rows) {
+        this.rows = rows;
+        return this;
+    }
+    
+    /**
+     * To search a substring across entire document
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_text")
+    public String searchText;
+    public OemSearchRequest withSearchText(String searchText) {
+        this.searchText = searchText;
+        return this;
+    }
+    
+    /**
+     * To filter listing on security deposit required for the offer
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=security_deposit")
+    public String securityDeposit;
+    public OemSearchRequest withSecurityDeposit(String securityDeposit) {
+        this.securityDeposit = securityDeposit;
+        return this;
+    }
+    
+    /**
+     * Sort by field. Default sort field is distance from the given point
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public String sortBy;
+    public OemSearchRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Sort order - asc or desc. Default sort order is asc
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
+    public org.openapis.openapi.models.shared.SortOrderEnum sortOrder;
+    public OemSearchRequest withSortOrder(org.openapis.openapi.models.shared.SortOrderEnum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * Page number to fetch the results for the given criteria. Default is 0. Pagination is allowed only till first 10000 results for the search and sort criteria. The page value can be only between 1 to 10000/rows
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Integer start;
+    public OemSearchRequest withStart(Integer start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * To filter listing on State in which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public OemSearchRequest withState(String state) {
+        this.state = state;
+        return this;
+    }
+    
+    /**
+     * The list of fields for which stats need to be generated based on the matching listings for the search criteria. The stats consists of mean, max, average and count of listings based on which the stats are calculated for the field. Stats could be requested in addition to the listings for the search. Please note - The API calls with the stats fields may take longer to respond.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stats")
+    public String stats;
+    public OemSearchRequest withStats(String stats) {
+        this.stats = stats;
+        return this;
+    }
+    
+    /**
+     * To filter listing on gross capitalised cost of the car
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=total_monthly_payment")
+    public String totalMonthlyPayment;
+    public OemSearchRequest withTotalMonthlyPayment(String totalMonthlyPayment) {
+        this.totalMonthlyPayment = totalMonthlyPayment;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their trim
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trim")
+    public String trim;
+    public OemSearchRequest withTrim(String trim) {
+        this.trim = trim;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their year
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public String year;
+    public OemSearchRequest withYear(String year) {
+        this.year = year;
+        return this;
+    }
+    
+    /**
+     * To filter listing on ZIP around which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
+    public String zip;
+    public OemSearchRequest withZip(String zip) {
+        this.zip = zip;
         return this;
     }
     

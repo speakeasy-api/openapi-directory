@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAPIKey apiKey;
-    public GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsSecurity withApiKey(org.openapis.openapi.models.shared.SchemeAPIKey apiKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
+    public String apiKey;
+    public GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
@@ -21,9 +21,9 @@ public class GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsSecurity {
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOauth2 oauth2;
-    public GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsSecurity withOauth2(org.openapis.openapi.models.shared.SchemeOauth2 oauth2) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oauth2;
+    public GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsSecurity withOauth2(String oauth2) {
         this.oauth2 = oauth2;
         return this;
     }

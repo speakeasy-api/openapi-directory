@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesDeleteTesterFromDestinationsRequest {
-    
-    public ReleasesDeleteTesterFromDestinationsPathParams pathParams;
-    public ReleasesDeleteTesterFromDestinationsRequest withPathParams(ReleasesDeleteTesterFromDestinationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ReleasesDeleteTesterFromDestinationsRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ReleasesDeleteTesterFromDestinationsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public ReleasesDeleteTesterFromDestinationsSecurity security;
-    public ReleasesDeleteTesterFromDestinationsRequest withSecurity(ReleasesDeleteTesterFromDestinationsSecurity security) {
-        this.security = security;
+    /**
+     * The id of the tester
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tester_id")
+    public String testerId;
+    public ReleasesDeleteTesterFromDestinationsRequest withTesterId(String testerId) {
+        this.testerId = testerId;
         return this;
     }
     

@@ -50,7 +50,7 @@ public class CallDataRecords {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2CallDataRecordsJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2CallDataRecordsJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -89,7 +89,7 @@ public class CallDataRecords {
      */
     public org.openapis.openapi.models.operations.GetV2CallDataRecordsIdJsonResponse getV2CallDataRecordsIdJson(org.openapis.openapi.models.operations.GetV2CallDataRecordsIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2CallDataRecordsIdJsonPathParams.class, baseUrl, "/v2/call_data_records/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2CallDataRecordsIdJsonRequest.class, baseUrl, "/v2/call_data_records/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

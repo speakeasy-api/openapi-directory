@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelRequest withPathParams(GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
         return this;
     }
     
-    
-    public GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelSecurity security;
-    public GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelRequest withSecurity(GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateRefundRequest {
-    
-    public CreateRefundPathParams pathParams;
-    public CreateRefundRequest withPathParams(CreateRefundPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.V1CreateRefundRequest request;
-    public CreateRefundRequest withRequest(org.openapis.openapi.models.shared.V1CreateRefundRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.V1CreateRefundRequest v1CreateRefundRequest;
+    public CreateRefundRequest withV1CreateRefundRequest(org.openapis.openapi.models.shared.V1CreateRefundRequest v1CreateRefundRequest) {
+        this.v1CreateRefundRequest = v1CreateRefundRequest;
         return this;
     }
     
-    
-    public CreateRefundSecurity security;
-    public CreateRefundRequest withSecurity(CreateRefundSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the original payment's associated location.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public CreateRefundRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     

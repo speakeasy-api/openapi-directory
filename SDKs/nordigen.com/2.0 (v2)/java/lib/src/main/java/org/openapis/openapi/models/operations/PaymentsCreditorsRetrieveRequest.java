@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PaymentsCreditorsRetrieveRequest {
-    
-    public PaymentsCreditorsRetrievePathParams pathParams;
-    public PaymentsCreditorsRetrieveRequest withPathParams(PaymentsCreditorsRetrievePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PaymentsCreditorsRetrieveRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

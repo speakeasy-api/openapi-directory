@@ -4,20 +4,153 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkEventsRequest {
-    
-    public GetNetworkEventsPathParams pathParams;
-    public GetNetworkEventsRequest withPathParams(GetNetworkEventsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The IP of the client which the list of events will be filtered with. Only supported for track-by-IP networks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientIp")
+    public String clientIp;
+    public GetNetworkEventsRequest withClientIp(String clientIp) {
+        this.clientIp = clientIp;
         return this;
     }
     
+    /**
+     * The MAC address of the client which the list of events will be filtered with. Only supported for track-by-MAC networks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientMac")
+    public String clientMac;
+    public GetNetworkEventsRequest withClientMac(String clientMac) {
+        this.clientMac = clientMac;
+        return this;
+    }
     
-    public GetNetworkEventsQueryParams queryParams;
-    public GetNetworkEventsRequest withQueryParams(GetNetworkEventsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name, or partial name, of the client which the list of events will be filtered with
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientName")
+    public String clientName;
+    public GetNetworkEventsRequest withClientName(String clientName) {
+        this.clientName = clientName;
+        return this;
+    }
+    
+    /**
+     * The MAC address of the Meraki device which the list of events will be filtered with
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceMac")
+    public String deviceMac;
+    public GetNetworkEventsRequest withDeviceMac(String deviceMac) {
+        this.deviceMac = deviceMac;
+        return this;
+    }
+    
+    /**
+     * The name of the Meraki device which the list of events will be filtered with
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceName")
+    public String deviceName;
+    public GetNetworkEventsRequest withDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    
+    /**
+     * The serial of the Meraki device which the list of events will be filtered with
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceSerial")
+    public String deviceSerial;
+    public GetNetworkEventsRequest withDeviceSerial(String deviceSerial) {
+        this.deviceSerial = deviceSerial;
+        return this;
+    }
+    
+    /**
+     * A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
+    public String endingBefore;
+    public GetNetworkEventsRequest withEndingBefore(String endingBefore) {
+        this.endingBefore = endingBefore;
+        return this;
+    }
+    
+    /**
+     * A list of event types. The returned events will be filtered to exclude events with these types.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=excludedEventTypes")
+    public String[] excludedEventTypes;
+    public GetNetworkEventsRequest withExcludedEventTypes(String[] excludedEventTypes) {
+        this.excludedEventTypes = excludedEventTypes;
+        return this;
+    }
+    
+    /**
+     * A list of event types. The returned events will be filtered to only include events with these types.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=includedEventTypes")
+    public String[] includedEventTypes;
+    public GetNetworkEventsRequest withIncludedEventTypes(String[] includedEventTypes) {
+        this.includedEventTypes = includedEventTypes;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkEventsRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    /**
+     * The number of entries per page returned. Acceptable range is 3 - 1000. Default is 10.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public Long perPage;
+    public GetNetworkEventsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The product type to fetch events for. This parameter is required for networks with multiple device types. Valid types are wireless, appliance, switch, systemsManager, camera, and cellularGateway
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=productType")
+    public GetNetworkEventsProductTypeEnum productType;
+    public GetNetworkEventsRequest withProductType(GetNetworkEventsProductTypeEnum productType) {
+        this.productType = productType;
+        return this;
+    }
+    
+    /**
+     * The MAC address of the Systems Manager device which the list of events will be filtered with
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=smDeviceMac")
+    public String smDeviceMac;
+    public GetNetworkEventsRequest withSmDeviceMac(String smDeviceMac) {
+        this.smDeviceMac = smDeviceMac;
+        return this;
+    }
+    
+    /**
+     * The name of the Systems Manager device which the list of events will be filtered with
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=smDeviceName")
+    public String smDeviceName;
+    public GetNetworkEventsRequest withSmDeviceName(String smDeviceName) {
+        this.smDeviceName = smDeviceName;
+        return this;
+    }
+    
+    /**
+     * A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
+    public String startingAfter;
+    public GetNetworkEventsRequest withStartingAfter(String startingAfter) {
+        this.startingAfter = startingAfter;
         return this;
     }
     

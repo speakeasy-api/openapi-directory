@@ -29,15 +29,11 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/BatchReadFileRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BatchReadFileResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetReadOperationResultPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetReadOperationResultRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetReadOperationResultResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetTextOperationResultPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTextOperationResultRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTextOperationResultResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RecognizeTextQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RecognizeTextRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RecognizeTextResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ComputerVisionErrorCodeEnum.java
@@ -52,6 +48,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/WordConfidenceEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Word.java
 lib/src/main/java/org/openapis/openapi/models/shared/TextOperationResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/TextRecognitionModeEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeApimKey.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

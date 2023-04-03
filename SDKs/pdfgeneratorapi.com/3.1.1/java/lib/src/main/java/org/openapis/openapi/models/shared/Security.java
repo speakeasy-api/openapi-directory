@@ -7,9 +7,9 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer")
-    public SchemeJSONWebTokenAuth jsonWebTokenAuth;
-    public Security withJSONWebTokenAuth(SchemeJSONWebTokenAuth jsonWebTokenAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
+    public String jsonWebTokenAuth;
+    public Security withJSONWebTokenAuth(String jsonWebTokenAuth) {
         this.jsonWebTokenAuth = jsonWebTokenAuth;
         return this;
     }

@@ -35,25 +35,26 @@ public class Projects {
     /**
      * Lists the field configuration and metadata for this database. Currently, FirestoreAdmin.ListFields only supports listing fields that have been explicitly overridden. To issue this query, call FirestoreAdmin.ListFields with the filter set to `indexConfig.usesAncestorConfig:false`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListResponse firestoreProjectsDatabasesCollectionGroupsFieldsList(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListResponse firestoreProjectsDatabasesCollectionGroupsFieldsList(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListRequest request, org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListPathParams.class, baseUrl, "/v1beta2/{parent}/fields", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListRequest.class, baseUrl, "/v1beta2/{parent}/fields", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,27 +81,28 @@ public class Projects {
     /**
      * Updates a field configuration. Currently, field updates apply only to single field index configuration. However, calls to FirestoreAdmin.UpdateField should provide a field mask to avoid changing any configuration that the caller isn't aware of. The field mask should be specified as: `{ paths: "index_config" }`. This call returns a google.longrunning.Operation which may be used to track the status of the field update. The metadata for the operation will be the type FieldOperationMetadata. To configure the default field settings for the database, use the special `Field` with resource name: `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields/*`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsPatchResponse firestoreProjectsDatabasesCollectionGroupsFieldsPatch(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsPatchResponse firestoreProjectsDatabasesCollectionGroupsFieldsPatch(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsPatchRequest request, org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsPatchPathParams.class, baseUrl, "/v1beta2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsPatchRequest.class, baseUrl, "/v1beta2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirestoreAdminV1beta2Field", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsFieldsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Projects {
     /**
      * Creates a composite index. This returns a google.longrunning.Operation which may be used to track the status of the creation. The metadata for the operation will be the type IndexOperationMetadata.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesCreateResponse firestoreProjectsDatabasesCollectionGroupsIndexesCreate(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesCreateResponse firestoreProjectsDatabasesCollectionGroupsIndexesCreate(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest request, org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesCreatePathParams.class, baseUrl, "/v1beta2/{parent}/indexes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest.class, baseUrl, "/v1beta2/{parent}/indexes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirestoreAdminV1beta2Index", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Projects {
     /**
      * Deletes a composite index.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesDeleteResponse firestoreProjectsDatabasesCollectionGroupsIndexesDelete(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesDeleteResponse firestoreProjectsDatabasesCollectionGroupsIndexesDelete(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesDeleteRequest request, org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesDeletePathParams.class, baseUrl, "/v1beta2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesDeleteRequest.class, baseUrl, "/v1beta2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,25 +223,26 @@ public class Projects {
     /**
      * Gets a composite index.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesGetResponse firestoreProjectsDatabasesCollectionGroupsIndexesGet(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesGetResponse firestoreProjectsDatabasesCollectionGroupsIndexesGet(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesGetRequest request, org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesGetPathParams.class, baseUrl, "/v1beta2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesGetRequest.class, baseUrl, "/v1beta2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,25 +269,26 @@ public class Projects {
     /**
      * Lists composite indexes.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesListResponse firestoreProjectsDatabasesCollectionGroupsIndexesList(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesListResponse firestoreProjectsDatabasesCollectionGroupsIndexesList(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesListRequest request, org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesListPathParams.class, baseUrl, "/v1beta2/{parent}/indexes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesListRequest.class, baseUrl, "/v1beta2/{parent}/indexes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesCollectionGroupsIndexesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -309,27 +315,28 @@ public class Projects {
     /**
      * Exports a copy of all or a subset of documents from Google Cloud Firestore to another storage system, such as Google Cloud Storage. Recent updates to documents may not be reflected in the export. The export occurs in the background and its progress can be monitored and managed via the Operation resource that is created. The output of an export may only be used once the associated operation is done. If an export operation is cancelled before completion it may leave partial data behind in Google Cloud Storage.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirestoreProjectsDatabasesExportDocumentsResponse firestoreProjectsDatabasesExportDocuments(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesExportDocumentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirestoreProjectsDatabasesExportDocumentsResponse firestoreProjectsDatabasesExportDocuments(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesExportDocumentsRequest request, org.openapis.openapi.models.operations.FirestoreProjectsDatabasesExportDocumentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesExportDocumentsPathParams.class, baseUrl, "/v1beta2/{name}:exportDocuments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesExportDocumentsRequest.class, baseUrl, "/v1beta2/{name}:exportDocuments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirestoreAdminV1beta2ExportDocumentsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesExportDocumentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesExportDocumentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -356,27 +363,28 @@ public class Projects {
     /**
      * Imports documents into Google Cloud Firestore. Existing documents with the same name are overwritten. The import occurs in the background and its progress can be monitored and managed via the Operation resource that is created. If an ImportDocuments operation is cancelled, it is possible that a subset of the data has already been imported to Cloud Firestore.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirestoreProjectsDatabasesImportDocumentsResponse firestoreProjectsDatabasesImportDocuments(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesImportDocumentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirestoreProjectsDatabasesImportDocumentsResponse firestoreProjectsDatabasesImportDocuments(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesImportDocumentsRequest request, org.openapis.openapi.models.operations.FirestoreProjectsDatabasesImportDocumentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesImportDocumentsPathParams.class, baseUrl, "/v1beta2/{name}:importDocuments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesImportDocumentsRequest.class, baseUrl, "/v1beta2/{name}:importDocuments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirestoreAdminV1beta2ImportDocumentsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesImportDocumentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirestoreProjectsDatabasesImportDocumentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

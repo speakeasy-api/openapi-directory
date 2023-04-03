@@ -18,8 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetBestPodcastsSortEnum;
-import org.openapis.openapi.models.operations.GetBestPodcastsQueryParams;
-import org.openapis.openapi.models.operations.GetBestPodcastsHeaders;
 import org.openapis.openapi.models.operations.GetBestPodcastsRequest;
 import org.openapis.openapi.models.operations.GetBestPodcastsResponse;
 import org.openapis.openapi.models.shared.SafeModeParamEnum;
@@ -31,19 +29,15 @@ public class Application {
                 .build();
 
             GetBestPodcastsRequest req = new GetBestPodcastsRequest() {{
-                queryParams = new GetBestPodcastsQueryParams() {{
-                    genreId = "corrupti";
-                    language = "provident";
-                    page = 715190;
-                    publisherRegion = "quibusdam";
-                    region = "unde";
-                    safeMode = "1";
-                    sort = "recent_published_first";
-                }};
-                headers = new GetBestPodcastsHeaders() {{
-                    xListenAPIKey = "illum";
-                }};
-            }};            
+                xListenAPIKey = "corrupti";
+                genreId = "provident";
+                language = "distinctio";
+                page = 844266;
+                publisherRegion = "unde";
+                region = "nulla";
+                safeMode = "1";
+                sort = "listen_score";
+            }}            
 
             GetBestPodcastsResponse res = sdk.directoryAPI.getBestPodcasts(req);
 
@@ -57,7 +51,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### directoryAPI

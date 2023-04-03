@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreatePipePathParams;
-import org.openapis.openapi.models.operations.CreatePipeHeaders;
 import org.openapis.openapi.models.operations.CreatePipeRequestBodyDesiredStateEnum;
 import org.openapis.openapi.models.operations.CreatePipeRequestBodyEnrichmentParameters;
 import org.openapis.openapi.models.operations.CreatePipeRequestBodySourceParameters;
@@ -80,240 +78,216 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreatePipeRequest req = new CreatePipeRequest() {{
-                pathParams = new CreatePipePathParams() {{
-                    name = "corrupti";
-                }};
-                headers = new CreatePipeHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-                request = new CreatePipeRequestBody() {{
-                    description = "vel";
+                name = "corrupti";
+                requestBody = new CreatePipeRequestBody() {{
+                    description = "provident";
                     desiredState = "STOPPED";
-                    enrichment = "deserunt";
+                    enrichment = "quibusdam";
                     enrichmentParameters = new CreatePipeRequestBodyEnrichmentParameters() {{
                         httpParameters = new PipeEnrichmentHttpParameters() {{
                             headerParameters = new java.util.HashMap<String, String>() {{
-                                put("iure", "magnam");
-                                put("debitis", "ipsa");
+                                put("nulla", "corrupti");
+                                put("illum", "vel");
+                                put("error", "deserunt");
                             }};
                             pathParameterValues = new String[]{{
-                                add("tempora"),
-                                add("suscipit"),
-                                add("molestiae"),
-                                add("minus"),
+                                add("iure"),
+                                add("magnam"),
                             }};
                             queryStringParameters = new java.util.HashMap<String, String>() {{
-                                put("voluptatum", "iusto");
-                                put("excepturi", "nisi");
-                                put("recusandae", "temporibus");
-                                put("ab", "quis");
+                                put("ipsa", "delectus");
+                                put("tempora", "suscipit");
+                                put("molestiae", "minus");
+                                put("placeat", "voluptatum");
                             }};
                         }};
-                        inputTemplate = "veritatis";
+                        inputTemplate = "iusto";
                     }};
-                    roleArn = "deserunt";
-                    source = "perferendis";
+                    roleArn = "excepturi";
+                    source = "nisi";
                     sourceParameters = new CreatePipeRequestBodySourceParameters() {{
                         activeMQBrokerParameters = new PipeSourceActiveMQBrokerParameters() {{
-                            batchSize = 368241;
+                            batchSize = 925597;
                             credentials = new MQBrokerAccessCredentials() {{
-                                basicAuth = "repellendus";
+                                basicAuth = "temporibus";
                             }};
-                            maximumBatchingWindowInSeconds = 957156;
-                            queueName = "quo";
+                            maximumBatchingWindowInSeconds = 71036;
+                            queueName = "quis";
                         }};
                         dynamoDBStreamParameters = new PipeSourceDynamoDBStreamParameters() {{
-                            batchSize = 140350;
+                            batchSize = 87129;
                             deadLetterConfig = new DeadLetterConfig() {{
-                                arn = "at";
+                                arn = "deserunt";
                             }};
-                            maximumBatchingWindowInSeconds = 870088;
-                            maximumRecordAgeInSeconds = 978619;
-                            maximumRetryAttempts = 473608;
+                            maximumBatchingWindowInSeconds = 20218;
+                            maximumRecordAgeInSeconds = 368241;
+                            maximumRetryAttempts = 832620;
                             onPartialBatchItemFailure = "AUTOMATIC_BISECT";
-                            parallelizationFactor = 799159;
+                            parallelizationFactor = 957156;
                             startingPosition = "LATEST";
                         }};
                         filterCriteria = new FilterCriteria() {{
                             filters = new org.openapis.openapi.models.shared.Filter[]{{
                                 add(new Filter() {{
-                                    pattern = "totam";
-                                }}),
-                                add(new Filter() {{
-                                    pattern = "porro";
+                                    pattern = "at";
                                 }}),
                             }};
                         }};
                         kinesisStreamParameters = new PipeSourceKinesisStreamParameters() {{
-                            batchSize = 678880;
+                            batchSize = 870088;
                             deadLetterConfig = new DeadLetterConfig() {{
-                                arn = "dicta";
+                                arn = "maiores";
                             }};
-                            maximumBatchingWindowInSeconds = 720633;
-                            maximumRecordAgeInSeconds = 639921;
-                            maximumRetryAttempts = 582020;
+                            maximumBatchingWindowInSeconds = 473608;
+                            maximumRecordAgeInSeconds = 799159;
+                            maximumRetryAttempts = 800911;
                             onPartialBatchItemFailure = "AUTOMATIC_BISECT";
-                            parallelizationFactor = 143353;
+                            parallelizationFactor = 461479;
                             startingPosition = "LATEST";
-                            startingPositionTimestamp = "2020-09-22T07:34:53.140Z";
+                            startingPositionTimestamp = "2020-12-18T15:02:44.758Z";
                         }};
                         managedStreamingKafkaParameters = new PipeSourceManagedStreamingKafkaParameters() {{
-                            batchSize = 521848;
-                            consumerGroupID = "beatae";
+                            batchSize = 118274;
+                            consumerGroupID = "nam";
                             credentials = new MSKAccessCredentials() {{
-                                clientCertificateTlsAuth = "commodi";
-                                saslScram512Auth = "molestiae";
+                                clientCertificateTlsAuth = "officia";
+                                saslScram512Auth = "occaecati";
                             }};
-                            maximumBatchingWindowInSeconds = 264555;
-                            startingPosition = "TRIM_HORIZON";
-                            topicName = "impedit";
+                            maximumBatchingWindowInSeconds = 143353;
+                            startingPosition = "LATEST";
+                            topicName = "hic";
                         }};
                         rabbitMQBrokerParameters = new PipeSourceRabbitMQBrokerParameters() {{
-                            batchSize = 736918;
+                            batchSize = 758616;
                             credentials = new MQBrokerAccessCredentials() {{
-                                basicAuth = "esse";
+                                basicAuth = "totam";
                             }};
-                            maximumBatchingWindowInSeconds = 216550;
-                            queueName = "excepturi";
-                            virtualHost = "aspernatur";
+                            maximumBatchingWindowInSeconds = 105907;
+                            queueName = "commodi";
+                            virtualHost = "molestiae";
                         }};
                         selfManagedKafkaParameters = new PipeSourceSelfManagedKafkaParameters() {{
                             additionalBootstrapServers = new String[]{{
-                                add("ad"),
+                                add("qui"),
+                                add("impedit"),
                             }};
-                            batchSize = 617636;
-                            consumerGroupID = "sed";
+                            batchSize = 736918;
+                            consumerGroupID = "esse";
                             credentials = new SelfManagedKafkaAccessConfigurationCredentials() {{
-                                basicAuth = "iste";
-                                clientCertificateTlsAuth = "dolor";
-                                saslScram256Auth = "natus";
-                                saslScram512Auth = "laboriosam";
+                                basicAuth = "ipsum";
+                                clientCertificateTlsAuth = "excepturi";
+                                saslScram256Auth = "aspernatur";
+                                saslScram512Auth = "perferendis";
                             }};
-                            maximumBatchingWindowInSeconds = 943749;
-                            serverRootCaCertificate = "saepe";
-                            startingPosition = "LATEST";
-                            topicName = "in";
+                            maximumBatchingWindowInSeconds = 324141;
+                            serverRootCaCertificate = "natus";
+                            startingPosition = "TRIM_HORIZON";
+                            topicName = "iste";
                             vpc = new SelfManagedKafkaAccessConfigurationVpc() {{
                                 securityGroup = new String[]{{
-                                    add("iste"),
-                                    add("iure"),
+                                    add("natus"),
                                 }};
                                 subnets = new String[]{{
-                                    add("quidem"),
-                                    add("architecto"),
-                                    add("ipsa"),
-                                    add("reiciendis"),
+                                    add("hic"),
+                                    add("saepe"),
                                 }};
                             }};
                         }};
                         sqsQueueParameters = new PipeSourceSqsQueueParameters() {{
-                            batchSize = 666767;
-                            maximumBatchingWindowInSeconds = 653140;
+                            batchSize = 681820;
+                            maximumBatchingWindowInSeconds = 449950;
                         }};
                     }};
                     tags = new java.util.HashMap<String, String>() {{
-                        put("dolores", "dolorem");
-                        put("corporis", "explicabo");
-                        put("nobis", "enim");
+                        put("iste", "iure");
+                        put("saepe", "quidem");
                     }};
-                    target = "omnis";
+                    target = "architecto";
                     targetParameters = new CreatePipeRequestBodyTargetParameters() {{
                         batchJobParameters = new PipeTargetBatchJobParameters() {{
                             arrayProperties = new BatchArrayProperties() {{
-                                size = 363711;
+                                size = 60225;
                             }};
                             containerOverrides = new BatchContainerOverrides() {{
                                 command = new String[]{{
-                                    add("excepturi"),
-                                    add("accusantium"),
+                                    add("est"),
+                                    add("mollitia"),
+                                    add("laborum"),
+                                    add("dolores"),
                                 }};
                                 environment = new org.openapis.openapi.models.shared.BatchEnvironmentVariable[]{{
                                     add(new BatchEnvironmentVariable() {{
-                                        name = "culpa";
-                                        value = "doloribus";
-                                    }}),
-                                    add(new BatchEnvironmentVariable() {{
-                                        name = "sapiente";
-                                        value = "architecto";
+                                        name = "corporis";
+                                        value = "explicabo";
                                     }}),
                                 }};
-                                instanceType = "mollitia";
+                                instanceType = "nobis";
                                 resourceRequirements = new org.openapis.openapi.models.shared.BatchResourceRequirement[]{{
                                     add(new BatchResourceRequirement() {{
                                         type = "MEMORY";
-                                        value = "consequuntur";
+                                        value = "nemo";
+                                    }}),
+                                    add(new BatchResourceRequirement() {{
+                                        type = "GPU";
+                                        value = "excepturi";
                                     }}),
                                 }};
                             }};
                             dependsOn = new org.openapis.openapi.models.shared.BatchJobDependency[]{{
                                 add(new BatchJobDependency() {{
-                                    jobId = "mollitia";
-                                    type = "SEQUENTIAL";
-                                }}),
-                                add(new BatchJobDependency() {{
-                                    jobId = "numquam";
-                                    type = "N_TO_N";
-                                }}),
-                                add(new BatchJobDependency() {{
-                                    jobId = "quam";
-                                    type = "N_TO_N";
-                                }}),
-                                add(new BatchJobDependency() {{
-                                    jobId = "velit";
+                                    jobId = "iure";
                                     type = "SEQUENTIAL";
                                 }}),
                             }};
-                            jobDefinition = "quia";
-                            jobName = "quis";
+                            jobDefinition = "doloribus";
+                            jobName = "sapiente";
                             parameters = new java.util.HashMap<String, String>() {{
-                                put("laborum", "animi");
+                                put("mollitia", "dolorem");
                             }};
                             retryStrategy = new BatchRetryStrategy() {{
-                                attempts = 317202;
+                                attempts = 635059;
                             }};
                         }};
                         cloudWatchLogsParameters = new PipeTargetCloudWatchLogsParameters() {{
-                            logStreamName = "odit";
-                            timestamp = "quo";
+                            logStreamName = "consequuntur";
+                            timestamp = "repellat";
                         }};
                         ecsTaskParameters = new PipeTargetEcsTaskParameters() {{
                             capacityProviderStrategy = new org.openapis.openapi.models.shared.CapacityProviderStrategyItem[]{{
                                 add(new CapacityProviderStrategyItem() {{
-                                    base = 949572;
-                                    capacityProvider = "ipsam";
-                                    weight = 662527;
+                                    base = 581850;
+                                    capacityProvider = "numquam";
+                                    weight = 414369;
+                                }}),
+                                add(new CapacityProviderStrategyItem() {{
+                                    base = 466311;
+                                    capacityProvider = "molestiae";
+                                    weight = 244425;
+                                }}),
+                                add(new CapacityProviderStrategyItem() {{
+                                    base = 623510;
+                                    capacityProvider = "quia";
+                                    weight = 338007;
                                 }}),
                             }};
                             enableECSManagedTags = false;
                             enableExecuteCommand = false;
-                            group = "possimus";
-                            launchType = "EC2";
+                            group = "vitae";
+                            launchType = "EXTERNAL";
                             networkConfiguration = new NetworkConfiguration() {{
                                 awsvpcConfiguration = new AwsVpcConfiguration() {{
-                                    assignPublicIp = "ENABLED";
+                                    assignPublicIp = "DISABLED";
                                     securityGroups = new String[]{{
-                                        add("temporibus"),
-                                        add("laborum"),
-                                        add("quasi"),
+                                        add("odit"),
+                                        add("quo"),
                                     }};
                                     subnets = new String[]{{
-                                        add("voluptatibus"),
-                                        add("vero"),
-                                        add("nihil"),
-                                        add("praesentium"),
+                                        add("tenetur"),
                                     }};
                                 }};
                             }};
@@ -321,326 +295,231 @@ public class Application {
                                 containerOverrides = new org.openapis.openapi.models.shared.EcsContainerOverride[]{{
                                     add(new EcsContainerOverride() {{
                                         command = new String[]{{
-                                            add("omnis"),
+                                            add("possimus"),
+                                            add("aut"),
+                                            add("quasi"),
                                         }};
-                                        cpu = 451159;
+                                        cpu = 622846;
                                         environment = new org.openapis.openapi.models.shared.EcsEnvironmentVariable[]{{
                                             add(new EcsEnvironmentVariable() {{
-                                                name = "perferendis";
-                                                value = "doloremque";
+                                                name = "laborum";
+                                                value = "quasi";
                                             }}),
                                             add(new EcsEnvironmentVariable() {{
-                                                name = "reprehenderit";
+                                                name = "reiciendis";
+                                                value = "voluptatibus";
+                                            }}),
+                                            add(new EcsEnvironmentVariable() {{
+                                                name = "vero";
+                                                value = "nihil";
+                                            }}),
+                                            add(new EcsEnvironmentVariable() {{
+                                                name = "praesentium";
+                                                value = "voluptatibus";
+                                            }}),
+                                        }};
+                                        environmentFiles = new org.openapis.openapi.models.shared.EcsEnvironmentFile[]{{
+                                            add(new EcsEnvironmentFile() {{
+                                                type = "s3";
+                                                value = "omnis";
+                                            }}),
+                                        }};
+                                        memory = 451159;
+                                        memoryReservation = 739264;
+                                        name = "perferendis";
+                                        resourceRequirements = new org.openapis.openapi.models.shared.EcsResourceRequirement[]{{
+                                            add(new EcsResourceRequirement() {{
+                                                type = "GPU";
                                                 value = "ut";
                                             }}),
+                                        }};
+                                    }}),
+                                    add(new EcsContainerOverride() {{
+                                        command = new String[]{{
+                                            add("dicta"),
+                                            add("corporis"),
+                                            add("dolore"),
+                                            add("iusto"),
+                                        }};
+                                        cpu = 118727;
+                                        environment = new org.openapis.openapi.models.shared.EcsEnvironmentVariable[]{{
                                             add(new EcsEnvironmentVariable() {{
-                                                name = "maiores";
-                                                value = "dicta";
+                                                name = "enim";
+                                                value = "accusamus";
                                             }}),
-                                        }};
-                                        environmentFiles = new org.openapis.openapi.models.shared.EcsEnvironmentFile[]{{
-                                            add(new EcsEnvironmentFile() {{
-                                                type = "s3";
-                                                value = "dolore";
-                                            }}),
-                                            add(new EcsEnvironmentFile() {{
-                                                type = "s3";
-                                                value = "iusto";
-                                            }}),
-                                        }};
-                                        memory = 118727;
-                                        memoryReservation = 688661;
-                                        name = "enim";
-                                        resourceRequirements = new org.openapis.openapi.models.shared.EcsResourceRequirement[]{{
-                                            add(new EcsResourceRequirement() {{
-                                                type = "GPU";
+                                            add(new EcsEnvironmentVariable() {{
+                                                name = "commodi";
                                                 value = "repudiandae";
                                             }}),
-                                            add(new EcsResourceRequirement() {{
-                                                type = "GPU";
-                                                value = "ipsum";
-                                            }}),
-                                            add(new EcsResourceRequirement() {{
-                                                type = "InferenceAccelerator";
-                                                value = "molestias";
-                                            }}),
-                                            add(new EcsResourceRequirement() {{
-                                                type = "InferenceAccelerator";
-                                                value = "pariatur";
-                                            }}),
-                                        }};
-                                    }}),
-                                    add(new EcsContainerOverride() {{
-                                        command = new String[]{{
-                                            add("praesentium"),
-                                            add("rem"),
-                                        }};
-                                        cpu = 916723;
-                                        environment = new org.openapis.openapi.models.shared.EcsEnvironmentVariable[]{{
                                             add(new EcsEnvironmentVariable() {{
-                                                name = "repudiandae";
-                                                value = "sint";
+                                                name = "quae";
+                                                value = "ipsum";
                                             }}),
                                         }};
                                         environmentFiles = new org.openapis.openapi.models.shared.EcsEnvironmentFile[]{{
                                             add(new EcsEnvironmentFile() {{
                                                 type = "s3";
-                                                value = "itaque";
+                                                value = "molestias";
                                             }}),
-                                        }};
-                                        memory = 277718;
-                                        memoryReservation = 318569;
-                                        name = "consequatur";
-                                        resourceRequirements = new org.openapis.openapi.models.shared.EcsResourceRequirement[]{{
-                                            add(new EcsResourceRequirement() {{
-                                                type = "InferenceAccelerator";
-                                                value = "explicabo";
-                                            }}),
-                                            add(new EcsResourceRequirement() {{
-                                                type = "InferenceAccelerator";
-                                                value = "distinctio";
-                                            }}),
-                                            add(new EcsResourceRequirement() {{
-                                                type = "InferenceAccelerator";
-                                                value = "labore";
-                                            }}),
-                                        }};
-                                    }}),
-                                    add(new EcsContainerOverride() {{
-                                        command = new String[]{{
-                                            add("qui"),
-                                            add("aliquid"),
-                                        }};
-                                        cpu = 586513;
-                                        environment = new org.openapis.openapi.models.shared.EcsEnvironmentVariable[]{{
-                                            add(new EcsEnvironmentVariable() {{
-                                                name = "perferendis";
-                                                value = "magni";
-                                            }}),
-                                            add(new EcsEnvironmentVariable() {{
-                                                name = "assumenda";
-                                                value = "ipsam";
-                                            }}),
-                                            add(new EcsEnvironmentVariable() {{
-                                                name = "alias";
-                                                value = "fugit";
-                                            }}),
-                                        }};
-                                        environmentFiles = new org.openapis.openapi.models.shared.EcsEnvironmentFile[]{{
                                             add(new EcsEnvironmentFile() {{
                                                 type = "s3";
                                                 value = "excepturi";
                                             }}),
                                             add(new EcsEnvironmentFile() {{
                                                 type = "s3";
-                                                value = "tempora";
-                                            }}),
-                                            add(new EcsEnvironmentFile() {{
-                                                type = "s3";
-                                                value = "facilis";
+                                                value = "pariatur";
                                             }}),
                                         }};
-                                        memory = 735194;
-                                        memoryReservation = 288476;
-                                        name = "delectus";
+                                        memory = 265389;
+                                        memoryReservation = 508969;
+                                        name = "rem";
                                         resourceRequirements = new org.openapis.openapi.models.shared.EcsResourceRequirement[]{{
                                             add(new EcsResourceRequirement() {{
                                                 type = "GPU";
-                                                value = "eligendi";
+                                                value = "repudiandae";
                                             }}),
                                             add(new EcsResourceRequirement() {{
                                                 type = "InferenceAccelerator";
-                                                value = "aliquid";
+                                                value = "veritatis";
                                             }}),
-                                        }};
-                                    }}),
-                                    add(new EcsContainerOverride() {{
-                                        command = new String[]{{
-                                            add("necessitatibus"),
-                                            add("sint"),
-                                            add("officia"),
-                                        }};
-                                        cpu = 223081;
-                                        environment = new org.openapis.openapi.models.shared.EcsEnvironmentVariable[]{{
-                                            add(new EcsEnvironmentVariable() {{
-                                                name = "a";
-                                                value = "dolorum";
-                                            }}),
-                                            add(new EcsEnvironmentVariable() {{
-                                                name = "in";
-                                                value = "in";
-                                            }}),
-                                            add(new EcsEnvironmentVariable() {{
-                                                name = "illum";
-                                                value = "maiores";
-                                            }}),
-                                            add(new EcsEnvironmentVariable() {{
-                                                name = "rerum";
-                                                value = "dicta";
-                                            }}),
-                                        }};
-                                        environmentFiles = new org.openapis.openapi.models.shared.EcsEnvironmentFile[]{{
-                                            add(new EcsEnvironmentFile() {{
-                                                type = "s3";
-                                                value = "cumque";
-                                            }}),
-                                            add(new EcsEnvironmentFile() {{
-                                                type = "s3";
-                                                value = "facere";
-                                            }}),
-                                        }};
-                                        memory = 411820;
-                                        memoryReservation = 396506;
-                                        name = "laborum";
-                                        resourceRequirements = new org.openapis.openapi.models.shared.EcsResourceRequirement[]{{
                                             add(new EcsResourceRequirement() {{
-                                                type = "GPU";
-                                                value = "occaecati";
+                                                type = "InferenceAccelerator";
+                                                value = "incidunt";
                                             }}),
                                             add(new EcsResourceRequirement() {{
                                                 type = "GPU";
-                                                value = "accusamus";
-                                            }}),
-                                            add(new EcsResourceRequirement() {{
-                                                type = "InferenceAccelerator";
-                                                value = "quidem";
-                                            }}),
-                                            add(new EcsResourceRequirement() {{
-                                                type = "InferenceAccelerator";
-                                                value = "nam";
+                                                value = "consequatur";
                                             }}),
                                         }};
                                     }}),
                                 }};
-                                cpu = "id";
+                                cpu = "est";
                                 ephemeralStorage = new EcsEphemeralStorage() {{
-                                    sizeInGiB = 501324;
+                                    sizeInGiB = 842342;
                                 }};
-                                executionRoleArn = "deleniti";
+                                executionRoleArn = "explicabo";
                                 inferenceAcceleratorOverrides = new org.openapis.openapi.models.shared.EcsInferenceAcceleratorOverride[]{{
                                     add(new EcsInferenceAcceleratorOverride() {{
-                                        deviceName = "amet";
-                                        deviceType = "deserunt";
+                                        deviceName = "distinctio";
+                                        deviceType = "quibusdam";
                                     }}),
                                     add(new EcsInferenceAcceleratorOverride() {{
-                                        deviceName = "nisi";
-                                        deviceType = "vel";
+                                        deviceName = "labore";
+                                        deviceType = "modi";
                                     }}),
                                     add(new EcsInferenceAcceleratorOverride() {{
-                                        deviceName = "natus";
-                                        deviceType = "omnis";
-                                    }}),
-                                    add(new EcsInferenceAcceleratorOverride() {{
-                                        deviceName = "molestiae";
-                                        deviceType = "perferendis";
+                                        deviceName = "qui";
+                                        deviceType = "aliquid";
                                     }}),
                                 }};
-                                memory = "nihil";
-                                taskRoleArn = "magnam";
+                                memory = "cupiditate";
+                                taskRoleArn = "quos";
                             }};
                             placementConstraints = new org.openapis.openapi.models.shared.PlacementConstraint[]{{
                                 add(new PlacementConstraint() {{
-                                    expression = "id";
-                                    type = "distinctInstance";
-                                }}),
-                                add(new PlacementConstraint() {{
-                                    expression = "labore";
-                                    type = "distinctInstance";
-                                }}),
-                                add(new PlacementConstraint() {{
-                                    expression = "natus";
+                                    expression = "magni";
                                     type = "memberOf";
                                 }}),
                             }};
                             placementStrategy = new org.openapis.openapi.models.shared.PlacementStrategy[]{{
                                 add(new PlacementStrategy() {{
-                                    field = "vero";
+                                    field = "alias";
                                     type = "random";
                                 }}),
                                 add(new PlacementStrategy() {{
-                                    field = "architecto";
-                                    type = "random";
+                                    field = "dolorum";
+                                    type = "spread";
                                 }}),
                             }};
-                            platformVersion = "et";
+                            platformVersion = "tempora";
                             propagateTags = "TASK_DEFINITION";
-                            referenceId = "excepturi";
+                            referenceId = "facilis";
                             tags = new org.openapis.openapi.models.shared.Tag[]{{
                                 add(new Tag() {{
-                                    key = "provident";
-                                    value = "quos";
+                                    key = "labore";
+                                    value = "delectus";
                                 }}),
                                 add(new Tag() {{
-                                    key = "sint";
-                                    value = "accusantium";
+                                    key = "eum";
+                                    value = "non";
+                                }}),
+                                add(new Tag() {{
+                                    key = "eligendi";
+                                    value = "sint";
                                 }}),
                             }};
-                            taskCount = 653201;
-                            taskDefinitionArn = "reiciendis";
+                            taskCount = 396098;
+                            taskDefinitionArn = "provident";
                         }};
                         eventBridgeEventBusParameters = new PipeTargetEventBridgeEventBusParameters() {{
-                            detailType = "mollitia";
-                            endpointId = "ad";
+                            detailType = "necessitatibus";
+                            endpointId = "sint";
                             resources = new String[]{{
                                 add("dolor"),
-                                add("necessitatibus"),
+                                add("debitis"),
+                                add("a"),
                             }};
-                            source = "odit";
-                            time = "nemo";
+                            source = "dolorum";
+                            time = "in";
                         }};
                         httpParameters = new PipeTargetHttpParameters() {{
                             headerParameters = new java.util.HashMap<String, String>() {{
-                                put("iure", "doloribus");
+                                put("illum", "maiores");
+                                put("rerum", "dicta");
                             }};
                             pathParameterValues = new String[]{{
-                                add("eius"),
-                                add("maxime"),
-                                add("deleniti"),
-                                add("facilis"),
+                                add("cumque"),
+                                add("facere"),
                             }};
                             queryStringParameters = new java.util.HashMap<String, String>() {{
-                                put("architecto", "architecto");
-                                put("repudiandae", "ullam");
+                                put("aliquid", "laborum");
+                                put("accusamus", "non");
                             }};
                         }};
-                        inputTemplate = "expedita";
+                        inputTemplate = "occaecati";
                         kinesisStreamParameters = new PipeTargetKinesisStreamParameters() {{
-                            partitionKey = "nihil";
+                            partitionKey = "enim";
                         }};
                         lambdaFunctionParameters = new PipeTargetLambdaFunctionParameters() {{
                             invocationType = "FIRE_AND_FORGET";
                         }};
                         redshiftDataParameters = new PipeTargetRedshiftDataParameters() {{
-                            database = "quibusdam";
-                            dbUser = "sed";
-                            secretManagerArn = "saepe";
+                            database = "delectus";
+                            dbUser = "quidem";
+                            secretManagerArn = "provident";
                             sqls = new String[]{{
-                                add("accusantium"),
-                                add("consequuntur"),
-                                add("praesentium"),
-                                add("natus"),
+                                add("id"),
+                                add("blanditiis"),
+                                add("deleniti"),
                             }};
-                            statementName = "magni";
+                            statementName = "sapiente";
                             withEvent = false;
                         }};
                         sageMakerPipelineParameters = new PipeTargetSageMakerPipelineParameters() {{
                             pipelineParameterList = new org.openapis.openapi.models.shared.SageMakerPipelineParameter[]{{
                                 add(new SageMakerPipelineParameter() {{
-                                    name = "quo";
-                                    value = "illum";
+                                    name = "deserunt";
+                                    value = "nisi";
                                 }}),
                             }};
                         }};
                         sqsQueueParameters = new PipeTargetSqsQueueParameters() {{
-                            messageDeduplicationId = "pariatur";
-                            messageGroupId = "maxime";
+                            messageDeduplicationId = "vel";
+                            messageGroupId = "natus";
                         }};
                         stepFunctionStateMachineParameters = new PipeTargetStateMachineParameters() {{
-                            invocationType = "REQUEST_RESPONSE";
+                            invocationType = "FIRE_AND_FORGET";
                         }};
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "molestiae";
+                xAmzContentSha256 = "perferendis";
+                xAmzCredential = "nihil";
+                xAmzDate = "magnam";
+                xAmzSecurityToken = "distinctio";
+                xAmzSignature = "id";
+                xAmzSignedHeaders = "labore";
+            }}            
 
             CreatePipeResponse res = sdk.createPipe(req);
 

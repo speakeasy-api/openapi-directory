@@ -4,20 +4,93 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationDevicesPowerModulesStatusesByDeviceRequest {
-    
-    public GetOrganizationDevicesPowerModulesStatusesByDevicePathParams pathParams;
-    public GetOrganizationDevicesPowerModulesStatusesByDeviceRequest withPathParams(GetOrganizationDevicesPowerModulesStatusesByDevicePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
+    public String endingBefore;
+    public GetOrganizationDevicesPowerModulesStatusesByDeviceRequest withEndingBefore(String endingBefore) {
+        this.endingBefore = endingBefore;
         return this;
     }
     
+    /**
+     * Optional parameter to filter device availabilities by network ID. This filter uses multiple exact matches.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=networkIds")
+    public String[] networkIds;
+    public GetOrganizationDevicesPowerModulesStatusesByDeviceRequest withNetworkIds(String[] networkIds) {
+        this.networkIds = networkIds;
+        return this;
+    }
     
-    public GetOrganizationDevicesPowerModulesStatusesByDeviceQueryParams queryParams;
-    public GetOrganizationDevicesPowerModulesStatusesByDeviceRequest withQueryParams(GetOrganizationDevicesPowerModulesStatusesByDeviceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationDevicesPowerModulesStatusesByDeviceRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    
+    /**
+     * The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public Long perPage;
+    public GetOrganizationDevicesPowerModulesStatusesByDeviceRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Optional parameter to filter device availabilities by device product types. This filter uses multiple exact matches.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=productTypes")
+    public String[] productTypes;
+    public GetOrganizationDevicesPowerModulesStatusesByDeviceRequest withProductTypes(String[] productTypes) {
+        this.productTypes = productTypes;
+        return this;
+    }
+    
+    /**
+     * Optional parameter to filter device availabilities by device serial numbers. This filter uses multiple exact matches.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=serials")
+    public String[] serials;
+    public GetOrganizationDevicesPowerModulesStatusesByDeviceRequest withSerials(String[] serials) {
+        this.serials = serials;
+        return this;
+    }
+    
+    /**
+     * A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
+    public String startingAfter;
+    public GetOrganizationDevicesPowerModulesStatusesByDeviceRequest withStartingAfter(String startingAfter) {
+        this.startingAfter = startingAfter;
+        return this;
+    }
+    
+    /**
+     * An optional parameter to filter devices by tags. The filtering is case-sensitive. If tags are included, 'tagsFilterType' should also be included (see below). This filter uses multiple exact matches.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tags")
+    public String[] tags;
+    public GetOrganizationDevicesPowerModulesStatusesByDeviceRequest withTags(String[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    
+    /**
+     * An optional parameter of value 'withAnyTags' or 'withAllTags' to indicate whether to return devices which contain ANY or ALL of the included tags. If no type is included, 'withAnyTags' will be selected.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagsFilterType")
+    public GetOrganizationDevicesPowerModulesStatusesByDeviceTagsFilterTypeEnum tagsFilterType;
+    public GetOrganizationDevicesPowerModulesStatusesByDeviceRequest withTagsFilterType(GetOrganizationDevicesPowerModulesStatusesByDeviceTagsFilterTypeEnum tagsFilterType) {
+        this.tagsFilterType = tagsFilterType;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOwnershipOwnershipIdRequest {
-    
-    public PostOwnershipOwnershipIdPathParams pathParams;
-    public PostOwnershipOwnershipIdRequest withPathParams(PostOwnershipOwnershipIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Custom JSON object that will be attached to this ownership record
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
+    public String customData;
+    public PostOwnershipOwnershipIdRequest withCustomData(String customData) {
+        this.customData = customData;
         return this;
     }
     
+    /**
+     * The date (in millis) of when this app ownership expires
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expires")
+    public Long expires;
+    public PostOwnershipOwnershipIdRequest withExpires(Long expires) {
+        this.expires = expires;
+        return this;
+    }
     
-    public PostOwnershipOwnershipIdQueryParams queryParams;
-    public PostOwnershipOwnershipIdRequest withQueryParams(PostOwnershipOwnershipIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id of the ownership to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ownershipId")
+    public String ownershipId;
+    public PostOwnershipOwnershipIdRequest withOwnershipId(String ownershipId) {
+        this.ownershipId = ownershipId;
         return this;
     }
     

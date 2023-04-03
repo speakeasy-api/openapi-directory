@@ -40,7 +40,7 @@ public class Action {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateActionResponse createAction(org.openapis.openapi.models.operations.CreateActionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateActionResponse createAction(org.openapis.openapi.models.shared.CreateActionRequestInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/action");
         
@@ -94,7 +94,7 @@ public class Action {
      */
     public org.openapis.openapi.models.operations.FetchActionResponse fetchAction(org.openapis.openapi.models.operations.FetchActionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchActionPathParams.class, baseUrl, "/action/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchActionRequest.class, baseUrl, "/action/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -141,12 +141,12 @@ public class Action {
      */
     public org.openapis.openapi.models.operations.UpdateActionResponse updateAction(org.openapis.openapi.models.operations.UpdateActionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateActionPathParams.class, baseUrl, "/action/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateActionRequest.class, baseUrl, "/action/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateActionRequestInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

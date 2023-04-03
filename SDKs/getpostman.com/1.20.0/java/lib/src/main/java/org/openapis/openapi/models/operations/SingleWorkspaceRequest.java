@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SingleWorkspaceRequest {
-    
-    public SingleWorkspacePathParams pathParams;
-    public SingleWorkspaceRequest withPathParams(SingleWorkspacePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_id")
+    public String workspaceId;
+    public SingleWorkspaceRequest withWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
         return this;
     }
     

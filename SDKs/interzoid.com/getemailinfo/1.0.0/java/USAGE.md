@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetemailinfoQueryParams;
 import org.openapis.openapi.models.operations.GetemailinfoRequest;
 import org.openapis.openapi.models.operations.GetemailinfoResponse;
 
@@ -15,11 +14,9 @@ public class Application {
                 .build();
 
             GetemailinfoRequest req = new GetemailinfoRequest() {{
-                queryParams = new GetemailinfoQueryParams() {{
-                    email = "Larue_Rau85@yahoo.com";
-                    license = "corrupti";
-                }};
-            }};            
+                email = "Larue_Rau85@yahoo.com";
+                license = "corrupti";
+            }}            
 
             GetemailinfoResponse res = sdk.emailAddressInformation.getemailinfo(req);
 

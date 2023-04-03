@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SessionControllerLoginRequest {
-    
-    public SessionControllerLoginPathParams pathParams;
-    public SessionControllerLoginRequest withPathParams(SessionControllerLoginPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The user's password.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=password")
+    public String password;
+    public SessionControllerLoginRequest withPassword(String password) {
+        this.password = password;
         return this;
     }
     
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public SessionControllerLoginRequest withShortName(String shortName) {
+        this.shortName = shortName;
+        return this;
+    }
     
-    public SessionControllerLoginQueryParams queryParams;
-    public SessionControllerLoginRequest withQueryParams(SessionControllerLoginQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The user's username.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public SessionControllerLoginRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

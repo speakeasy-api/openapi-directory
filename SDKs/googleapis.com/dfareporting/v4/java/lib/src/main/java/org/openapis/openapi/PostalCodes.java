@@ -33,25 +33,26 @@ public class PostalCodes {
     /**
      * Gets one postal code by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingPostalCodesGetResponse dfareportingPostalCodesGet(org.openapis.openapi.models.operations.DfareportingPostalCodesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingPostalCodesGetResponse dfareportingPostalCodesGet(org.openapis.openapi.models.operations.DfareportingPostalCodesGetRequest request, org.openapis.openapi.models.operations.DfareportingPostalCodesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingPostalCodesGetPathParams.class, baseUrl, "/userprofiles/{profileId}/postalCodes/{code}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingPostalCodesGetRequest.class, baseUrl, "/userprofiles/{profileId}/postalCodes/{code}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingPostalCodesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingPostalCodesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class PostalCodes {
     /**
      * Retrieves a list of postal codes.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingPostalCodesListResponse dfareportingPostalCodesList(org.openapis.openapi.models.operations.DfareportingPostalCodesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingPostalCodesListResponse dfareportingPostalCodesList(org.openapis.openapi.models.operations.DfareportingPostalCodesListRequest request, org.openapis.openapi.models.operations.DfareportingPostalCodesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingPostalCodesListPathParams.class, baseUrl, "/userprofiles/{profileId}/postalCodes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingPostalCodesListRequest.class, baseUrl, "/userprofiles/{profileId}/postalCodes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingPostalCodesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingPostalCodesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

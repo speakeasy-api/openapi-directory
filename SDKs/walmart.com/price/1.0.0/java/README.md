@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.OptCapProgramInPriceHeaders;
 import org.openapis.openapi.models.operations.OptCapProgramInPriceRequestBody;
 import org.openapis.openapi.models.operations.OptCapProgramInPriceRequest;
 import org.openapis.openapi.models.operations.OptCapProgramInPriceResponse;
@@ -29,17 +28,15 @@ public class Application {
                 .build();
 
             OptCapProgramInPriceRequest req = new OptCapProgramInPriceRequest() {{
-                headers = new OptCapProgramInPriceHeaders() {{
-                    wmConsumerChannelType = "corrupti";
-                    wmQosCorrelationId = "provident";
-                    wmSecAccessToken = "distinctio";
-                    wmSvcName = "quibusdam";
-                }};
-                request = new OptCapProgramInPriceRequestBody() {{
+                requestBody = new OptCapProgramInPriceRequestBody() {{
                     subsidyEnrolled = false;
                     subsidyPreference = false;
                 }};
-            }};            
+                wmConsumerChannelType = "corrupti";
+                wmQosCorrelationId = "provident";
+                wmSecAccessToken = "distinctio";
+                wmSvcName = "quibusdam";
+            }}            
 
             OptCapProgramInPriceResponse res = sdk.prices.optCapProgramInPrice(req);
 
@@ -53,7 +50,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### prices

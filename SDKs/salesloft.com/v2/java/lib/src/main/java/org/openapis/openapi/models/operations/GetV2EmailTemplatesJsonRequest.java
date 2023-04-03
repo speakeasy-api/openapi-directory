@@ -4,13 +4,180 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2EmailTemplatesJsonRequest {
+    /**
+     * Filters email templates to those belonging to the cadence. Not to exceed 100 IDs. If a record can't be found, that record won't be returned and your request will be successful
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=cadence_id")
+    public Long[] cadenceId;
+    public GetV2EmailTemplatesJsonRequest withCadenceId(Long[] cadenceId) {
+        this.cadenceId = cadenceId;
+        return this;
+    }
     
-    public GetV2EmailTemplatesJsonQueryParams queryParams;
-    public GetV2EmailTemplatesJsonRequest withQueryParams(GetV2EmailTemplatesJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filters email templates by current authenticated user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_by_owner")
+    public Boolean filterByOwner;
+    public GetV2EmailTemplatesJsonRequest withFilterByOwner(Boolean filterByOwner) {
+        this.filterByOwner = filterByOwner;
+        return this;
+    }
+    
+    /**
+     * Filters email templates by groups applied to the template by group ID. Not to exceed 500 IDs. Returns templates that are assigned to any of the group ids.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=group_id")
+    public Long[] groupId;
+    public GetV2EmailTemplatesJsonRequest withGroupId(Long[] groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * IDs of email templates to fetch. If a record can't be found, that record won't be returned and your request will be successful
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
+    public Long[] ids;
+    public GetV2EmailTemplatesJsonRequest withIds(Long[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    /**
+     * Filters email templates to include archived templates or not
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_archived_templates")
+    public Boolean includeArchivedTemplates;
+    public GetV2EmailTemplatesJsonRequest withIncludeArchivedTemplates(Boolean includeArchivedTemplates) {
+        this.includeArchivedTemplates = includeArchivedTemplates;
+        return this;
+    }
+    
+    /**
+     * Filters email templates based on whether or not the template has been used on a cadence
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_cadence_templates")
+    public Boolean includeCadenceTemplates;
+    public GetV2EmailTemplatesJsonRequest withIncludeCadenceTemplates(Boolean includeCadenceTemplates) {
+        this.includeCadenceTemplates = includeCadenceTemplates;
+        return this;
+    }
+    
+    /**
+     * Whether to include total_pages and total_count in the metadata. Defaults to false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
+    public Boolean includePagingCounts;
+    public GetV2EmailTemplatesJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
+        this.includePagingCounts = includePagingCounts;
+        return this;
+    }
+    
+    /**
+     * Specifies whether the max limit of 10k records should be applied to pagination counts. Affects the total_count and total_pages data
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
+    public Boolean limitPagingCounts;
+    public GetV2EmailTemplatesJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
+        this.limitPagingCounts = limitPagingCounts;
+        return this;
+    }
+    
+    /**
+     * Filters email templates by whether they are linked to a team template or not
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linked_to_team_template")
+    public Boolean linkedToTeamTemplate;
+    public GetV2EmailTemplatesJsonRequest withLinkedToTeamTemplate(Boolean linkedToTeamTemplate) {
+        this.linkedToTeamTemplate = linkedToTeamTemplate;
+        return this;
+    }
+    
+    /**
+     * The current page to fetch results from. Defaults to 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetV2EmailTemplatesJsonRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many records to show per page in the range [1, 100]. Defaults to 25
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetV2EmailTemplatesJsonRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Filters email templates by title or subject
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetV2EmailTemplatesJsonRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * Key to sort on, must be one of: created_at, updated_at, last_used_at. Defaults to updated_at
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public String sortBy;
+    public GetV2EmailTemplatesJsonRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
+    public String sortDirection;
+    public GetV2EmailTemplatesJsonRequest withSortDirection(String sortDirection) {
+        this.sortDirection = sortDirection;
+        return this;
+    }
+    
+    /**
+     * Filters email templates by tags applied to the template, not to exceed 100 tags
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tag")
+    public String[] tag;
+    public GetV2EmailTemplatesJsonRequest withTag(String[] tag) {
+        this.tag = tag;
+        return this;
+    }
+    
+    /**
+     * Filters email templates by tags applied to the template by tag ID, not to exceed 100 IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tag_ids")
+    public Long[] tagIds;
+    public GetV2EmailTemplatesJsonRequest withTagIds(Long[] tagIds) {
+        this.tagIds = tagIds;
+        return this;
+    }
+    
+    /**
+     * Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range.
+     * 
+     * ---CUSTOM---
+     * {"type":"object","keys":[{"name":"gt","type":"iso8601 string","description":"Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"gte","type":"iso8601 string","description":"Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lt","type":"iso8601 string","description":"Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lte","type":"iso8601 string","description":"Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."}]}
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=updated_at")
+    public String[] updatedAt;
+    public GetV2EmailTemplatesJsonRequest withUpdatedAt(String[] updatedAt) {
+        this.updatedAt = updatedAt;
         return this;
     }
     

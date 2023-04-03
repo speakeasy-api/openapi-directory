@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AddClientPreferencesPathParams;
-import org.openapis.openapi.models.operations.AddClientPreferencesHeaders;
 import org.openapis.openapi.models.operations.AddClientPreferencesRequestBody;
 import org.openapis.openapi.models.operations.AddClientPreferencesRequest;
 import org.openapis.openapi.models.operations.AddClientPreferencesResponse;
@@ -28,28 +26,20 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    appKey = new SchemeAppKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                    appToken = new SchemeAppToken() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    appKey = "YOUR_API_KEY_HERE";
+                    appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddClientPreferencesRequest req = new AddClientPreferencesRequest() {{
-                pathParams = new AddClientPreferencesPathParams() {{
-                    orderFormId = "corrupti";
-                }};
-                headers = new AddClientPreferencesHeaders() {{
-                    accept = "provident";
-                    contentType = "distinctio";
-                }};
-                request = new AddClientPreferencesRequestBody() {{
-                    locale = "quibusdam";
+                accept = "corrupti";
+                contentType = "provident";
+                requestBody = new AddClientPreferencesRequestBody() {{
+                    locale = "distinctio";
                     optinNewsLetter = false;
                 }};
-            }};            
+                orderFormId = "quibusdam";
+            }}            
 
             AddClientPreferencesResponse res = sdk.cartAttachments.addClientPreferences(req);
 
@@ -63,7 +53,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### cartAttachments

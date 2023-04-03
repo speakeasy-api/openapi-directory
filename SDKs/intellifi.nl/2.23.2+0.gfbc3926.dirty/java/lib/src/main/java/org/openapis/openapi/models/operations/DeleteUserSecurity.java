@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUserSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=cookie")
-    public org.openapis.openapi.models.shared.SchemeCookieSid cookieSid;
-    public DeleteUserSecurity withCookieSid(org.openapis.openapi.models.shared.SchemeCookieSid cookieSid) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=cookie,name=brain.sid")
+    public String cookieSid;
+    public DeleteUserSecurity withCookieSid(String cookieSid) {
         this.cookieSid = cookieSid;
         return this;
     }

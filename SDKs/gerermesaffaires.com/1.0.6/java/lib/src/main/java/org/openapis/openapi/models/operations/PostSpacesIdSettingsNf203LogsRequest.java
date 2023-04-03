@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesIdSettingsNf203LogsRequest {
-    
-    public PostSpacesIdSettingsNf203LogsPathParams pathParams;
-    public PostSpacesIdSettingsNf203LogsRequest withPathParams(PostSpacesIdSettingsNf203LogsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * State of activation of the logs
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSpacesIdSettingsNf203LogsRequestBody request;
-    public PostSpacesIdSettingsNf203LogsRequest withRequest(PostSpacesIdSettingsNf203LogsRequestBody request) {
-        this.request = request;
+    public PostSpacesIdSettingsNf203LogsRequestBody requestBody;
+    public PostSpacesIdSettingsNf203LogsRequest withRequestBody(PostSpacesIdSettingsNf203LogsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostSpacesIdSettingsNf203LogsSecurity security;
-    public PostSpacesIdSettingsNf203LogsRequest withSecurity(PostSpacesIdSettingsNf203LogsSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesIdSettingsNf203LogsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

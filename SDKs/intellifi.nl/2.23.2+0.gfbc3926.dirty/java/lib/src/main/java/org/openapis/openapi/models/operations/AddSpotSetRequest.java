@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddSpotSetRequest {
-    
-    public AddSpotSetPathParams pathParams;
-    public AddSpotSetRequest withPathParams(AddSpotSetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A JSON object containing spot set information
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public AddSpotSetRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public AddSpotSetRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public AddSpotSetRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -7,7 +7,6 @@ import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateApplicationRequestBodyKeys;
 import org.openapis.openapi.models.operations.CreateApplicationRequestBodyPrivacy;
 import org.openapis.openapi.models.operations.CreateApplicationRequestBody;
-import org.openapis.openapi.models.operations.CreateApplicationRequest;
 import org.openapis.openapi.models.operations.CreateApplicationResponse;
 import org.openapis.openapi.models.shared.Capabilities;
 import org.openapis.openapi.models.shared.VoiceCapabilityPaymentsGatewaysModeEnum;
@@ -50,126 +49,122 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    basicAuth = new SchemeBasicAuth() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
+                    password = "YOUR_PASSWORD_HERE";
+                    username = "YOUR_USERNAME_HERE";
                 }})
                 .build();
 
-            CreateApplicationRequest req = new CreateApplicationRequest() {{
-                request = new CreateApplicationRequestBody() {{
-                    capabilities = new Capabilities() {{
-                        meetings = new MeetingsCapability() {{
-                            webhooks = new MeetingsCapabilityWebhooks() {{
-                                recordingChanged = new MeetingsCapabilityWebhooksRecordingChanged() {{
-                                    address = "https://example.com/webhooks/event";
-                                    httpMethod = "POST";
-                                }};
-                                roomChanged = new MeetingsCapabilityWebhooksRoomChanged() {{
-                                    address = "https://example.com/webhooks/event";
-                                    httpMethod = "POST";
-                                }};
-                                sessionChanged = new MeetingsCapabilityWebhooksSessionChanged() {{
-                                    address = "https://example.com/webhooks/event";
-                                    httpMethod = "POST";
-                                }};
+            CreateApplicationRequestBody req = new CreateApplicationRequestBody() {{
+                capabilities = new Capabilities() {{
+                    meetings = new MeetingsCapability() {{
+                        webhooks = new MeetingsCapabilityWebhooks() {{
+                            recordingChanged = new MeetingsCapabilityWebhooksRecordingChanged() {{
+                                address = "https://example.com/webhooks/event";
+                                httpMethod = "POST";
                             }};
-                        }};
-                        messages = new MessagesCapability() {{
-                            version = "corrupti";
-                            webhooks = new MessagesCapabilityWebhooks() {{
-                                inboundUrl = new MessagesCapabilityWebhooksInboundUrl() {{
-                                    address = "https://example.com/webhooks/inbound";
-                                    httpMethod = "POST";
-                                }};
-                                statusUrl = new MessagesCapabilityWebhooksStatusUrl() {{
-                                    address = "https://example.com/webhooks/status";
-                                    httpMethod = "POST";
-                                }};
+                            roomChanged = new MeetingsCapabilityWebhooksRoomChanged() {{
+                                address = "https://example.com/webhooks/event";
+                                httpMethod = "POST";
                             }};
-                        }};
-                        rtc = new RtcCapability() {{
-                            legPersistenceTime = 5;
-                            signedCallbacks = true;
-                            webhooks = new RtcCapabilityWebhooks() {{
-                                eventUrl = new RtcCapabilityWebhooksEventUrl() {{
-                                    address = "https://example.com/webhooks/event";
-                                    httpMethod = "POST";
-                                }};
-                            }};
-                        }};
-                        vbc = new java.util.HashMap<String, Object>() {{
-                            put("distinctio", "quibusdam");
-                            put("unde", "nulla");
-                            put("corrupti", "illum");
-                        }};
-                        verify = new VerifyCapability() {{
-                            version = "v2";
-                            webhooks = new VerifyCapabilityWebhooks() {{
-                                statusUrl = new VerifyCapabilityWebhooksStatusUrl() {{
-                                    address = "https://example.com/webhooks/event";
-                                    httpMethod = "POST";
-                                }};
-                            }};
-                        }};
-                        voice = new VoiceCapability() {{
-                            conversationTtl = 30;
-                            payments = new VoiceCapabilityPayments() {{
-                                gateways = new org.openapis.openapi.models.shared.VoiceCapabilityPaymentsGateways[]{{
-                                    add(new VoiceCapabilityPaymentsGateways() {{
-                                        credential = "26f2a89e-6fcd-11ed-a1eb-0242ac120002";
-                                        mode = "live";
-                                        type = "Stripe";
-                                    }}),
-                                    add(new VoiceCapabilityPaymentsGateways() {{
-                                        credential = "26f2a89e-6fcd-11ed-a1eb-0242ac120002";
-                                        mode = "live";
-                                        type = "Stripe";
-                                    }}),
-                                }};
-                            }};
-                            signedCallbacks = true;
-                            webhooks = new VoiceCapabilityWebhooks() {{
-                                answerUrl = new VoiceCapabilityWebhooksAnswerUrl() {{
-                                    address = "https://example.com/webhooks/answer";
-                                    connectionTimeout = 500;
-                                    httpMethod = "POST";
-                                    socketTimeout = 3000;
-                                }};
-                                eventUrl = new VoiceCapabilityWebhooksEventUrl() {{
-                                    address = "https://example.com/webhooks/event";
-                                    connectionTimeout = 500;
-                                    httpMethod = "POST";
-                                    socketTimeout = 3000;
-                                }};
-                                fallbackAnswerUrl = new VoiceCapabilityWebhooksFallbackAnswerUrl() {{
-                                    address = "https://fallback.example.com/webhooks/answer";
-                                    connectionTimeout = 500;
-                                    httpMethod = "POST";
-                                    socketTimeout = 3000;
-                                }};
+                            sessionChanged = new MeetingsCapabilityWebhooksSessionChanged() {{
+                                address = "https://example.com/webhooks/event";
+                                httpMethod = "POST";
                             }};
                         }};
                     }};
-                    keys = new CreateApplicationRequestBodyKeys() {{
-                        publicKey = "-----BEGIN PUBLIC KEY-----
-                    MIIBIjANBgkqhkiG9w0BAQEFAAOCA
-                    KOxjsU4pf/sMFi9N0jqcSLcjxu33G
-                    d/vynKnlw9SENi+UZR44GdjGdmfm1
-                    tL1eA7IBh2HNnkYXnAwYzKJoa4eO3
-                    0kYWekeIZawIwe/g9faFgkev+1xsO
-                    OUNhPx2LhuLmgwWSRS4L5W851Xe3f
-                    UQIDAQAB
-                    -----END PUBLIC KEY-----
-                    ";
+                    messages = new MessagesCapability() {{
+                        version = "corrupti";
+                        webhooks = new MessagesCapabilityWebhooks() {{
+                            inboundUrl = new MessagesCapabilityWebhooksInboundUrl() {{
+                                address = "https://example.com/webhooks/inbound";
+                                httpMethod = "POST";
+                            }};
+                            statusUrl = new MessagesCapabilityWebhooksStatusUrl() {{
+                                address = "https://example.com/webhooks/status";
+                                httpMethod = "POST";
+                            }};
+                        }};
                     }};
-                    name = "Demo Application";
-                    privacy = new CreateApplicationRequestBodyPrivacy() {{
-                        improveAi = true;
+                    rtc = new RtcCapability() {{
+                        legPersistenceTime = 5;
+                        signedCallbacks = true;
+                        webhooks = new RtcCapabilityWebhooks() {{
+                            eventUrl = new RtcCapabilityWebhooksEventUrl() {{
+                                address = "https://example.com/webhooks/event";
+                                httpMethod = "POST";
+                            }};
+                        }};
+                    }};
+                    vbc = new java.util.HashMap<String, Object>() {{
+                        put("distinctio", "quibusdam");
+                        put("unde", "nulla");
+                        put("corrupti", "illum");
+                    }};
+                    verify = new VerifyCapability() {{
+                        version = "v2";
+                        webhooks = new VerifyCapabilityWebhooks() {{
+                            statusUrl = new VerifyCapabilityWebhooksStatusUrl() {{
+                                address = "https://example.com/webhooks/event";
+                                httpMethod = "POST";
+                            }};
+                        }};
+                    }};
+                    voice = new VoiceCapability() {{
+                        conversationTtl = 30;
+                        payments = new VoiceCapabilityPayments() {{
+                            gateways = new org.openapis.openapi.models.shared.VoiceCapabilityPaymentsGateways[]{{
+                                add(new VoiceCapabilityPaymentsGateways() {{
+                                    credential = "26f2a89e-6fcd-11ed-a1eb-0242ac120002";
+                                    mode = "live";
+                                    type = "Stripe";
+                                }}),
+                                add(new VoiceCapabilityPaymentsGateways() {{
+                                    credential = "26f2a89e-6fcd-11ed-a1eb-0242ac120002";
+                                    mode = "live";
+                                    type = "Stripe";
+                                }}),
+                            }};
+                        }};
+                        signedCallbacks = true;
+                        webhooks = new VoiceCapabilityWebhooks() {{
+                            answerUrl = new VoiceCapabilityWebhooksAnswerUrl() {{
+                                address = "https://example.com/webhooks/answer";
+                                connectionTimeout = 500;
+                                httpMethod = "POST";
+                                socketTimeout = 3000;
+                            }};
+                            eventUrl = new VoiceCapabilityWebhooksEventUrl() {{
+                                address = "https://example.com/webhooks/event";
+                                connectionTimeout = 500;
+                                httpMethod = "POST";
+                                socketTimeout = 3000;
+                            }};
+                            fallbackAnswerUrl = new VoiceCapabilityWebhooksFallbackAnswerUrl() {{
+                                address = "https://fallback.example.com/webhooks/answer";
+                                connectionTimeout = 500;
+                                httpMethod = "POST";
+                                socketTimeout = 3000;
+                            }};
+                        }};
                     }};
                 }};
-            }};            
+                keys = new CreateApplicationRequestBodyKeys() {{
+                    publicKey = "-----BEGIN PUBLIC KEY-----
+                MIIBIjANBgkqhkiG9w0BAQEFAAOCA
+                KOxjsU4pf/sMFi9N0jqcSLcjxu33G
+                d/vynKnlw9SENi+UZR44GdjGdmfm1
+                tL1eA7IBh2HNnkYXnAwYzKJoa4eO3
+                0kYWekeIZawIwe/g9faFgkev+1xsO
+                OUNhPx2LhuLmgwWSRS4L5W851Xe3f
+                UQIDAQAB
+                -----END PUBLIC KEY-----
+                ";
+                }};
+                name = "Demo Application";
+                privacy = new CreateApplicationRequestBodyPrivacy() {{
+                    improveAi = true;
+                }};
+            }}            
 
             CreateApplicationResponse res = sdk.createApplication(req);
 

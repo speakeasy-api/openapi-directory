@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDisassociateDataShareConsumerRequest {
-    
-    public GETDisassociateDataShareConsumerQueryParams queryParams;
-    public GETDisassociateDataShareConsumerRequest withQueryParams(GETDisassociateDataShareConsumerQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDisassociateDataShareConsumerActionEnum action;
+    public GETDisassociateDataShareConsumerRequest withAction(GETDisassociateDataShareConsumerActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The Amazon Resource Name (ARN) of the consumer that association for the datashare is removed from.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConsumerArn")
+    public String consumerArn;
+    public GETDisassociateDataShareConsumerRequest withConsumerArn(String consumerArn) {
+        this.consumerArn = consumerArn;
+        return this;
+    }
     
-    public GETDisassociateDataShareConsumerHeaders headers;
-    public GETDisassociateDataShareConsumerRequest withHeaders(GETDisassociateDataShareConsumerHeaders headers) {
-        this.headers = headers;
+    /**
+     * From a datashare consumer account, removes association of a datashare from all the existing and future namespaces in the specified Amazon Web Services Region.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConsumerRegion")
+    public String consumerRegion;
+    public GETDisassociateDataShareConsumerRequest withConsumerRegion(String consumerRegion) {
+        this.consumerRegion = consumerRegion;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) of the datashare to remove association for. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DataShareArn")
+    public String dataShareArn;
+    public GETDisassociateDataShareConsumerRequest withDataShareArn(String dataShareArn) {
+        this.dataShareArn = dataShareArn;
+        return this;
+    }
+    
+    /**
+     * A value that specifies whether association for the datashare is removed from the entire account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DisassociateEntireAccount")
+    public Boolean disassociateEntireAccount;
+    public GETDisassociateDataShareConsumerRequest withDisassociateEntireAccount(Boolean disassociateEntireAccount) {
+        this.disassociateEntireAccount = disassociateEntireAccount;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDisassociateDataShareConsumerVersionEnum version;
+    public GETDisassociateDataShareConsumerRequest withVersion(GETDisassociateDataShareConsumerVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDisassociateDataShareConsumerRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDisassociateDataShareConsumerRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDisassociateDataShareConsumerRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDisassociateDataShareConsumerRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDisassociateDataShareConsumerRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDisassociateDataShareConsumerRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDisassociateDataShareConsumerRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserStatisticsAccumulatedValueV1StatisticsIndividualRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public String endDate;
+    public UserStatisticsAccumulatedValueV1StatisticsIndividualRequest withEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
     
-    public UserStatisticsAccumulatedValueV1StatisticsIndividualQueryParams queryParams;
-    public UserStatisticsAccumulatedValueV1StatisticsIndividualRequest withQueryParams(UserStatisticsAccumulatedValueV1StatisticsIndividualQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public String startDate;
+    public UserStatisticsAccumulatedValueV1StatisticsIndividualRequest withStartDate(String startDate) {
+        this.startDate = startDate;
         return this;
     }
     

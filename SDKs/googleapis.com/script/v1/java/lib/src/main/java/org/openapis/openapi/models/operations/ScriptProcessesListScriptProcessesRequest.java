@@ -4,20 +4,216 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ScriptProcessesListScriptProcessesRequest {
-    
-    public ScriptProcessesListScriptProcessesQueryParams queryParams;
-    public ScriptProcessesListScriptProcessesRequest withQueryParams(ScriptProcessesListScriptProcessesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ScriptProcessesListScriptProcessesRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ScriptProcessesListScriptProcessesRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public ScriptProcessesListScriptProcessesSecurity security;
-    public ScriptProcessesListScriptProcessesRequest withSecurity(ScriptProcessesListScriptProcessesSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ScriptProcessesListScriptProcessesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ScriptProcessesListScriptProcessesRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ScriptProcessesListScriptProcessesRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ScriptProcessesListScriptProcessesRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ScriptProcessesListScriptProcessesRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The maximum number of returned processes per page of results. Defaults to 50.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public ScriptProcessesListScriptProcessesRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The token for continuing a previous list request on the next page. This should be set to the value of `nextPageToken` from a previous response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public ScriptProcessesListScriptProcessesRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ScriptProcessesListScriptProcessesRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ScriptProcessesListScriptProcessesRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The script ID of the project whose processes are listed.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scriptId")
+    public String scriptId;
+    public ScriptProcessesListScriptProcessesRequest withScriptId(String scriptId) {
+        this.scriptId = scriptId;
+        return this;
+    }
+    
+    /**
+     * Optional field used to limit returned processes to those originating from projects with a specific deployment ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scriptProcessFilter.deploymentId")
+    public String scriptProcessFilterDeploymentId;
+    public ScriptProcessesListScriptProcessesRequest withScriptProcessFilterDeploymentId(String scriptProcessFilterDeploymentId) {
+        this.scriptProcessFilterDeploymentId = scriptProcessFilterDeploymentId;
+        return this;
+    }
+    
+    /**
+     * Optional field used to limit returned processes to those that completed on or before the given timestamp.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scriptProcessFilter.endTime")
+    public String scriptProcessFilterEndTime;
+    public ScriptProcessesListScriptProcessesRequest withScriptProcessFilterEndTime(String scriptProcessFilterEndTime) {
+        this.scriptProcessFilterEndTime = scriptProcessFilterEndTime;
+        return this;
+    }
+    
+    /**
+     * Optional field used to limit returned processes to those originating from a script function with the given function name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scriptProcessFilter.functionName")
+    public String scriptProcessFilterFunctionName;
+    public ScriptProcessesListScriptProcessesRequest withScriptProcessFilterFunctionName(String scriptProcessFilterFunctionName) {
+        this.scriptProcessFilterFunctionName = scriptProcessFilterFunctionName;
+        return this;
+    }
+    
+    /**
+     * Optional field used to limit returned processes to those that were started on or after the given timestamp.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scriptProcessFilter.startTime")
+    public String scriptProcessFilterStartTime;
+    public ScriptProcessesListScriptProcessesRequest withScriptProcessFilterStartTime(String scriptProcessFilterStartTime) {
+        this.scriptProcessFilterStartTime = scriptProcessFilterStartTime;
+        return this;
+    }
+    
+    /**
+     * Optional field used to limit returned processes to those having one of the specified process statuses.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scriptProcessFilter.statuses")
+    public ScriptProcessesListScriptProcessesScriptProcessFilterStatusesEnum[] scriptProcessFilterStatuses;
+    public ScriptProcessesListScriptProcessesRequest withScriptProcessFilterStatuses(ScriptProcessesListScriptProcessesScriptProcessFilterStatusesEnum[] scriptProcessFilterStatuses) {
+        this.scriptProcessFilterStatuses = scriptProcessFilterStatuses;
+        return this;
+    }
+    
+    /**
+     * Optional field used to limit returned processes to those having one of the specified process types.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scriptProcessFilter.types")
+    public ScriptProcessesListScriptProcessesScriptProcessFilterTypesEnum[] scriptProcessFilterTypes;
+    public ScriptProcessesListScriptProcessesRequest withScriptProcessFilterTypes(ScriptProcessesListScriptProcessesScriptProcessFilterTypesEnum[] scriptProcessFilterTypes) {
+        this.scriptProcessFilterTypes = scriptProcessFilterTypes;
+        return this;
+    }
+    
+    /**
+     * Optional field used to limit returned processes to those having one of the specified user access levels.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scriptProcessFilter.userAccessLevels")
+    public ScriptProcessesListScriptProcessesScriptProcessFilterUserAccessLevelsEnum[] scriptProcessFilterUserAccessLevels;
+    public ScriptProcessesListScriptProcessesRequest withScriptProcessFilterUserAccessLevels(ScriptProcessesListScriptProcessesScriptProcessFilterUserAccessLevelsEnum[] scriptProcessFilterUserAccessLevels) {
+        this.scriptProcessFilterUserAccessLevels = scriptProcessFilterUserAccessLevels;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ScriptProcessesListScriptProcessesRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ScriptProcessesListScriptProcessesRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

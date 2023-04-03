@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETVariantsForTaxonUsingGETRequest {
-    
-    public GETVariantsForTaxonUsingGETPathParams pathParams;
-    public GETVariantsForTaxonUsingGETRequest withPathParams(GETVariantsForTaxonUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The taxon ID for species
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxonId")
+    public String taxonId;
+    public GETVariantsForTaxonUsingGETRequest withTaxonId(String taxonId) {
+        this.taxonId = taxonId;
         return this;
     }
     

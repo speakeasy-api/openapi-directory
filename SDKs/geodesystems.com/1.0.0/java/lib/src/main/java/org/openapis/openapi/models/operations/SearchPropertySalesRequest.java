@@ -4,13 +4,297 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchPropertySalesRequest {
+    /**
+     * Archive change date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
+    public OffsetDateTime changedateFrom;
+    public SearchPropertySalesRequest withChangedateFrom(OffsetDateTime changedateFrom) {
+        this.changedateFrom = changedateFrom;
+        return this;
+    }
     
-    public SearchPropertySalesQueryParams queryParams;
-    public SearchPropertySalesRequest withQueryParams(SearchPropertySalesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Archive change date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
+    public OffsetDateTime changedateTo;
+    public SearchPropertySalesRequest withChangedateTo(OffsetDateTime changedateTo) {
+        this.changedateTo = changedateTo;
+        return this;
+    }
+    
+    /**
+     * Archive create date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
+    public OffsetDateTime createdateFrom;
+    public SearchPropertySalesRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
+        this.createdateFrom = createdateFrom;
+        return this;
+    }
+    
+    /**
+     * Archive create date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
+    public OffsetDateTime createdateTo;
+    public SearchPropertySalesRequest withCreatedateTo(OffsetDateTime createdateTo) {
+        this.createdateTo = createdateTo;
+        return this;
+    }
+    
+    /**
+     * Search description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public SearchPropertySalesRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    /**
+     * File suffix
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
+    public String filesuffix;
+    public SearchPropertySalesRequest withFilesuffix(String filesuffix) {
+        this.filesuffix = filesuffix;
+        return this;
+    }
+    
+    /**
+     * From date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
+    public OffsetDateTime fromdate;
+    public SearchPropertySalesRequest withFromdate(OffsetDateTime fromdate) {
+        this.fromdate = fromdate;
+        return this;
+    }
+    
+    /**
+     * Parent entry
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public String group;
+    public SearchPropertySalesRequest withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * Max number of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Long max;
+    public SearchPropertySalesRequest withMax(Long max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * Northern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
+    public Float maxlatitude;
+    public SearchPropertySalesRequest withMaxlatitude(Float maxlatitude) {
+        this.maxlatitude = maxlatitude;
+        return this;
+    }
+    
+    /**
+     * Eastern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
+    public Float maxlongitude;
+    public SearchPropertySalesRequest withMaxlongitude(Float maxlongitude) {
+        this.maxlongitude = maxlongitude;
+        return this;
+    }
+    
+    /**
+     * Southern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
+    public Float minlatitude;
+    public SearchPropertySalesRequest withMinlatitude(Float minlatitude) {
+        this.minlatitude = minlatitude;
+        return this;
+    }
+    
+    /**
+     * Western bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
+    public Float minlongitude;
+    public SearchPropertySalesRequest withMinlongitude(Float minlongitude) {
+        this.minlongitude = minlongitude;
+        return this;
+    }
+    
+    /**
+     * Search name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public SearchPropertySalesRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Building Description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.building_description")
+    public String searchDbPropertySalesBuildingDescription;
+    public SearchPropertySalesRequest withSearchDbPropertySalesBuildingDescription(String searchDbPropertySalesBuildingDescription) {
+        this.searchDbPropertySalesBuildingDescription = searchDbPropertySalesBuildingDescription;
+        return this;
+    }
+    
+    /**
+     * Building Design
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.building_design")
+    public String searchDbPropertySalesBuildingDesign;
+    public SearchPropertySalesRequest withSearchDbPropertySalesBuildingDesign(String searchDbPropertySalesBuildingDesign) {
+        this.searchDbPropertySalesBuildingDesign = searchDbPropertySalesBuildingDesign;
+        return this;
+    }
+    
+    /**
+     * Buyer
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.buyer")
+    public String searchDbPropertySalesBuyer;
+    public SearchPropertySalesRequest withSearchDbPropertySalesBuyer(String searchDbPropertySalesBuyer) {
+        this.searchDbPropertySalesBuyer = searchDbPropertySalesBuyer;
+        return this;
+    }
+    
+    /**
+     * City
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.city")
+    public String searchDbPropertySalesCity;
+    public SearchPropertySalesRequest withSearchDbPropertySalesCity(String searchDbPropertySalesCity) {
+        this.searchDbPropertySalesCity = searchDbPropertySalesCity;
+        return this;
+    }
+    
+    /**
+     * Location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.location")
+    public String searchDbPropertySalesLocation;
+    public SearchPropertySalesRequest withSearchDbPropertySalesLocation(String searchDbPropertySalesLocation) {
+        this.searchDbPropertySalesLocation = searchDbPropertySalesLocation;
+        return this;
+    }
+    
+    /**
+     * Property Address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.property_address")
+    public String searchDbPropertySalesPropertyAddress;
+    public SearchPropertySalesRequest withSearchDbPropertySalesPropertyAddress(String searchDbPropertySalesPropertyAddress) {
+        this.searchDbPropertySalesPropertyAddress = searchDbPropertySalesPropertyAddress;
+        return this;
+    }
+    
+    /**
+     * Sale Date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.sale_date")
+    public String searchDbPropertySalesSaleDate;
+    public SearchPropertySalesRequest withSearchDbPropertySalesSaleDate(String searchDbPropertySalesSaleDate) {
+        this.searchDbPropertySalesSaleDate = searchDbPropertySalesSaleDate;
+        return this;
+    }
+    
+    /**
+     * Sale Price
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.sale_price")
+    public Double searchDbPropertySalesSalePrice;
+    public SearchPropertySalesRequest withSearchDbPropertySalesSalePrice(Double searchDbPropertySalesSalePrice) {
+        this.searchDbPropertySalesSalePrice = searchDbPropertySalesSalePrice;
+        return this;
+    }
+    
+    /**
+     * Seller
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.seller")
+    public String searchDbPropertySalesSeller;
+    public SearchPropertySalesRequest withSearchDbPropertySalesSeller(String searchDbPropertySalesSeller) {
+        this.searchDbPropertySalesSeller = searchDbPropertySalesSeller;
+        return this;
+    }
+    
+    /**
+     * Subdivision
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.subdivision")
+    public String searchDbPropertySalesSubdivision;
+    public SearchPropertySalesRequest withSearchDbPropertySalesSubdivision(String searchDbPropertySalesSubdivision) {
+        this.searchDbPropertySalesSubdivision = searchDbPropertySalesSubdivision;
+        return this;
+    }
+    
+    /**
+     * Property Type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.type")
+    public String searchDbPropertySalesType;
+    public SearchPropertySalesRequest withSearchDbPropertySalesType(String searchDbPropertySalesType) {
+        this.searchDbPropertySalesType = searchDbPropertySalesType;
+        return this;
+    }
+    
+    /**
+     * Zip Code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_property_sales.zipcode")
+    public String searchDbPropertySalesZipcode;
+    public SearchPropertySalesRequest withSearchDbPropertySalesZipcode(String searchDbPropertySalesZipcode) {
+        this.searchDbPropertySalesZipcode = searchDbPropertySalesZipcode;
+        return this;
+    }
+    
+    /**
+     * Number to skip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Long skip;
+    public SearchPropertySalesRequest withSkip(Long skip) {
+        this.skip = skip;
+        return this;
+    }
+    
+    /**
+     * Search text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public SearchPropertySalesRequest withText(String text) {
+        this.text = text;
+        return this;
+    }
+    
+    /**
+     * To date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
+    public OffsetDateTime todate;
+    public SearchPropertySalesRequest withTodate(OffsetDateTime todate) {
+        this.todate = todate;
         return this;
     }
     

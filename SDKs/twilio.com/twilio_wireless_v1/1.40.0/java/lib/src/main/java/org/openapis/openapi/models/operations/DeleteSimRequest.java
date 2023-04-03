@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSimRequest {
-    
-    public DeleteSimPathParams pathParams;
-    public DeleteSimRequest withPathParams(DeleteSimPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteSimSecurity security;
-    public DeleteSimRequest withSecurity(DeleteSimSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteSimRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID or the `unique_name` of the Sim resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteSimRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

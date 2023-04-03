@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiCreateDeliveryNoteRequest {
-    
-    public OrderApiCreateDeliveryNotePathParams pathParams;
-    public OrderApiCreateDeliveryNoteRequest withPathParams(OrderApiCreateDeliveryNotePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The internal billbee id of the order
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrderApiCreateDeliveryNoteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * If true, the PDF is included in the response as base64 encoded string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includePdf")
+    public Boolean includePdf;
+    public OrderApiCreateDeliveryNoteRequest withIncludePdf(Boolean includePdf) {
+        this.includePdf = includePdf;
+        return this;
+    }
     
-    public OrderApiCreateDeliveryNoteQueryParams queryParams;
-    public OrderApiCreateDeliveryNoteRequest withQueryParams(OrderApiCreateDeliveryNoteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Optionally specify the id of a billbee connected cloud device to send the pdf to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sendToCloudId")
+    public Long sendToCloudId;
+    public OrderApiCreateDeliveryNoteRequest withSendToCloudId(Long sendToCloudId) {
+        this.sendToCloudId = sendToCloudId;
         return this;
     }
     

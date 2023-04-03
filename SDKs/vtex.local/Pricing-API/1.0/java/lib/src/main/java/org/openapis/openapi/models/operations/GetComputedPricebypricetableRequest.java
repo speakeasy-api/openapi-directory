@@ -4,34 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetComputedPricebypricetableRequest {
-    
-    public GetComputedPricebypricetablePathParams pathParams;
-    public GetComputedPricebypricetableRequest withPathParams(GetComputedPricebypricetablePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetComputedPricebypricetableRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetComputedPricebypricetableQueryParams queryParams;
-    public GetComputedPricebypricetableRequest withQueryParams(GetComputedPricebypricetableQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetComputedPricebypricetableRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
-    
-    public GetComputedPricebypricetableHeaders headers;
-    public GetComputedPricebypricetableRequest withHeaders(GetComputedPricebypricetableHeaders headers) {
-        this.headers = headers;
+    /**
+     * Brand ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=brandId")
+    public Long brandId;
+    public GetComputedPricebypricetableRequest withBrandId(Long brandId) {
+        this.brandId = brandId;
         return this;
     }
     
+    /**
+     * Category ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categoryIds")
+    public Long categoryIds;
+    public GetComputedPricebypricetableRequest withCategoryIds(Long categoryIds) {
+        this.categoryIds = categoryIds;
+        return this;
+    }
     
-    public String serverURL;
-    public GetComputedPricebypricetableRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * SKU ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
+    public Long itemId;
+    public GetComputedPricebypricetableRequest withItemId(Long itemId) {
+        this.itemId = itemId;
+        return this;
+    }
+    
+    /**
+     * SKU Price Table Name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=priceTableId")
+    public String priceTableId;
+    public GetComputedPricebypricetableRequest withPriceTableId(String priceTableId) {
+        this.priceTableId = priceTableId;
+        return this;
+    }
+    
+    /**
+     * SKU quantity.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quantity")
+    public Long quantity;
+    public GetComputedPricebypricetableRequest withQuantity(Long quantity) {
+        this.quantity = quantity;
         return this;
     }
     

@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAppearancesRequest {
-    
-    public GetAppearancesPathParams pathParams;
-    public GetAppearancesRequest withPathParams(GetAppearancesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetAppearancesDirectionEnum direction;
+    public GetAppearancesRequest withDirection(GetAppearancesDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * The attribute by which to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public GetAppearancesFilterEnum filter;
+    public GetAppearancesRequest withFilter(GetAppearancesFilterEnum filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public GetAppearancesQueryParams queryParams;
-    public GetAppearancesRequest withQueryParams(GetAppearancesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_embeddable")
+    public Boolean filterEmbeddable;
+    public GetAppearancesRequest withFilterEmbeddable(Boolean filterEmbeddable) {
+        this.filterEmbeddable = filterEmbeddable;
+        return this;
+    }
+    
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetAppearancesRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetAppearancesRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The search query to use to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetAppearancesRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetAppearancesSortEnum sort;
+    public GetAppearancesRequest withSort(GetAppearancesSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public GetAppearancesRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

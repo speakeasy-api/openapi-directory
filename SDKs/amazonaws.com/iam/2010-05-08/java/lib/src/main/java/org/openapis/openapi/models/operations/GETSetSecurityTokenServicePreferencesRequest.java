@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetSecurityTokenServicePreferencesRequest {
-    
-    public GETSetSecurityTokenServicePreferencesQueryParams queryParams;
-    public GETSetSecurityTokenServicePreferencesRequest withQueryParams(GETSetSecurityTokenServicePreferencesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETSetSecurityTokenServicePreferencesActionEnum action;
+    public GETSetSecurityTokenServicePreferencesRequest withAction(GETSetSecurityTokenServicePreferencesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The version of the global endpoint token. Version 1 tokens are valid only in Amazon Web Services Regions that are available by default. These tokens do not work in manually enabled Regions, such as Asia Pacific (Hong Kong). Version 2 tokens are valid in all Regions. However, version 2 tokens are longer and might affect systems where you temporarily store tokens.&lt;/p&gt; &lt;p&gt;For information, see &lt;a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html"&gt;Activating and deactivating STS in an Amazon Web Services Region&lt;/a&gt; in the &lt;i&gt;IAM User Guide&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalEndpointTokenVersion")
+    public GETSetSecurityTokenServicePreferencesGlobalEndpointTokenVersionEnum globalEndpointTokenVersion;
+    public GETSetSecurityTokenServicePreferencesRequest withGlobalEndpointTokenVersion(GETSetSecurityTokenServicePreferencesGlobalEndpointTokenVersionEnum globalEndpointTokenVersion) {
+        this.globalEndpointTokenVersion = globalEndpointTokenVersion;
+        return this;
+    }
     
-    public GETSetSecurityTokenServicePreferencesHeaders headers;
-    public GETSetSecurityTokenServicePreferencesRequest withHeaders(GETSetSecurityTokenServicePreferencesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETSetSecurityTokenServicePreferencesVersionEnum version;
+    public GETSetSecurityTokenServicePreferencesRequest withVersion(GETSetSecurityTokenServicePreferencesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETSetSecurityTokenServicePreferencesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETSetSecurityTokenServicePreferencesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETSetSecurityTokenServicePreferencesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETSetSecurityTokenServicePreferencesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETSetSecurityTokenServicePreferencesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETSetSecurityTokenServicePreferencesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETSetSecurityTokenServicePreferencesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

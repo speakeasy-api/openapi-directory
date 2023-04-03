@@ -5,10 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetShakespeareGenerateInsultSecurity;
-import org.openapis.openapi.models.operations.GetShakespeareGenerateInsultQueryParams;
 import org.openapis.openapi.models.operations.GetShakespeareGenerateInsultRequest;
 import org.openapis.openapi.models.operations.GetShakespeareGenerateInsultResponse;
-import org.openapis.openapi.models.shared.SchemeXFungeneratorsAPISecret;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,17 +15,12 @@ public class Application {
                 .build();
 
             GetShakespeareGenerateInsultRequest req = new GetShakespeareGenerateInsultRequest() {{
-                security = new GetShakespeareGenerateInsultSecurity() {{
-                    xFungeneratorsApiSecret = new SchemeXFungeneratorsAPISecret() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                queryParams = new GetShakespeareGenerateInsultQueryParams() {{
-                    limit = 548814;
-                }};
-            }};            
+                limit = 548814;
+            }}            
 
-            GetShakespeareGenerateInsultResponse res = sdk.generation.getShakespeareGenerateInsult(req);
+            GetShakespeareGenerateInsultResponse res = sdk.generation.getShakespeareGenerateInsult(req, new GetShakespeareGenerateInsultSecurity() {{
+                xFungeneratorsApiSecret = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response

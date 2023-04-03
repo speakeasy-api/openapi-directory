@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAppRequest {
-    
-    public DeleteAppPathParams pathParams;
-    public DeleteAppRequest withPathParams(DeleteAppPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteAppSecurity security;
-    public DeleteAppRequest withSecurity(DeleteAppSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteAppRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34-character string that uniquely identifies this App.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteAppRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

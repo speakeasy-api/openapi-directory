@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolTodGetArgsRequest {
-    
-    public ProtocolTodGetArgsPathParams pathParams;
-    public ProtocolTodGetArgsRequest withPathParams(ProtocolTodGetArgsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show the TOD argument structure
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolTodGetArgsRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

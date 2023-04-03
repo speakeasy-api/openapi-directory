@@ -4,27 +4,146 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageObjectsListRequest {
-    
-    public StorageObjectsListPathParams pathParams;
-    public StorageObjectsListRequest withPathParams(StorageObjectsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public StorageObjectsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public StorageObjectsListQueryParams queryParams;
-    public StorageObjectsListRequest withQueryParams(StorageObjectsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Name of the bucket in which to look for objects.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket")
+    public String bucket;
+    public StorageObjectsListRequest withBucket(String bucket) {
+        this.bucket = bucket;
         return this;
     }
     
+    /**
+     * Returns results in a directory-like mode. items will contain only objects whose names, aside from the prefix, do not contain delimiter. Objects whose names, aside from the prefix, contain delimiter will have their name, truncated after the delimiter, returned in prefixes. Duplicate prefixes are omitted.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=delimiter")
+    public String delimiter;
+    public StorageObjectsListRequest withDelimiter(String delimiter) {
+        this.delimiter = delimiter;
+        return this;
+    }
     
-    public StorageObjectsListSecurity security;
-    public StorageObjectsListRequest withSecurity(StorageObjectsListSecurity security) {
-        this.security = security;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public StorageObjectsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public StorageObjectsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Maximum number of items plus prefixes to return. As duplicate prefixes are omitted, fewer total results may be returned than requested.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public StorageObjectsListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public StorageObjectsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * A previously-returned page token representing part of the larger set of results to view.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public StorageObjectsListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Filter results to objects whose names begin with this prefix.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prefix")
+    public String prefix;
+    public StorageObjectsListRequest withPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public StorageObjectsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Set of properties to return. Defaults to noAcl.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
+    public StorageObjectsListProjectionEnum projection;
+    public StorageObjectsListRequest withProjection(StorageObjectsListProjectionEnum projection) {
+        this.projection = projection;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public StorageObjectsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public StorageObjectsListRequest withUserIp(String userIp) {
+        this.userIp = userIp;
+        return this;
+    }
+    
+    /**
+     * If true, lists all versions of a file as distinct results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=versions")
+    public Boolean versions;
+    public StorageObjectsListRequest withVersions(Boolean versions) {
+        this.versions = versions;
         return this;
     }
     

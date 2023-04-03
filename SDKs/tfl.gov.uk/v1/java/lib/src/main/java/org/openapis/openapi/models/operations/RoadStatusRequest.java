@@ -4,20 +4,31 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RoadStatusRequest {
-    
-    public RoadStatusPathParams pathParams;
-    public RoadStatusRequest withPathParams(RoadStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateRangeNullable.endDate")
+    public OffsetDateTime dateRangeNullableEndDate;
+    public RoadStatusRequest withDateRangeNullableEndDate(OffsetDateTime dateRangeNullableEndDate) {
+        this.dateRangeNullableEndDate = dateRangeNullableEndDate;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateRangeNullable.startDate")
+    public OffsetDateTime dateRangeNullableStartDate;
+    public RoadStatusRequest withDateRangeNullableStartDate(OffsetDateTime dateRangeNullableStartDate) {
+        this.dateRangeNullableStartDate = dateRangeNullableStartDate;
+        return this;
+    }
     
-    public RoadStatusQueryParams queryParams;
-    public RoadStatusRequest withQueryParams(RoadStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Comma-separated list of road identifiers e.g. "A406, A2" or use "all" to ignore id filter (a full list of supported road identifiers can be found at the /Road/ endpoint)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
+    public String[] ids;
+    public RoadStatusRequest withIds(String[] ids) {
+        this.ids = ids;
         return this;
     }
     

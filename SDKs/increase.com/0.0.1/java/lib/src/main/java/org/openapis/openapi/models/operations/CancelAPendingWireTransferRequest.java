@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelAPendingWireTransferRequest {
-    
-    public CancelAPendingWireTransferPathParams pathParams;
-    public CancelAPendingWireTransferRequest withPathParams(CancelAPendingWireTransferPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=wire_transfer_id")
+    public String wireTransferId;
+    public CancelAPendingWireTransferRequest withWireTransferId(String wireTransferId) {
+        this.wireTransferId = wireTransferId;
         return this;
     }
     

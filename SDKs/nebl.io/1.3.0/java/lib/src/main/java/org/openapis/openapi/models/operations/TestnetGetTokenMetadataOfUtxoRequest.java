@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestnetGetTokenMetadataOfUtxoRequest {
-    
-    public TestnetGetTokenMetadataOfUtxoPathParams pathParams;
-    public TestnetGetTokenMetadataOfUtxoRequest withPathParams(TestnetGetTokenMetadataOfUtxoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * TokenId to request metadata for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tokenid")
+    public String tokenid;
+    public TestnetGetTokenMetadataOfUtxoRequest withTokenid(String tokenid) {
+        this.tokenid = tokenid;
         return this;
     }
     
+    /**
+     * Specific UTXO to request metadata for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=utxo")
+    public String utxo;
+    public TestnetGetTokenMetadataOfUtxoRequest withUtxo(String utxo) {
+        this.utxo = utxo;
+        return this;
+    }
     
-    public TestnetGetTokenMetadataOfUtxoQueryParams queryParams;
-    public TestnetGetTokenMetadataOfUtxoRequest withQueryParams(TestnetGetTokenMetadataOfUtxoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * 0 (Default) is fastest, 1 contains token stats, 2 contains token holding addresses
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=verbosity")
+    public Double verbosity;
+    public TestnetGetTokenMetadataOfUtxoRequest withVerbosity(Double verbosity) {
+        this.verbosity = verbosity;
         return this;
     }
     

@@ -35,24 +35,25 @@ public class ProjectsEssentials {
      * Create a project
      * This method creates a new project for the specified user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateProjectResponse createProject(org.openapis.openapi.models.operations.CreateProjectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateProjectResponse createProject(org.openapis.openapi.models.operations.CreateProjectRequest request, org.openapis.openapi.models.operations.CreateProjectSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateProjectPathParams.class, baseUrl, "/users/{user_id}/projects", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateProjectRequest.class, baseUrl, "/users/{user_id}/projects", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -88,10 +89,11 @@ public class ProjectsEssentials {
      * Create a project
      * This method creates a new project for the specified user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateProjectAlt1Response createProjectAlt1(org.openapis.openapi.models.operations.CreateProjectAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateProjectAlt1Response createProjectAlt1(org.openapis.openapi.models.operations.CreateProjectAlt1RequestBody request, org.openapis.openapi.models.operations.CreateProjectAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/projects");
         
@@ -105,7 +107,7 @@ public class ProjectsEssentials {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -141,25 +143,26 @@ public class ProjectsEssentials {
      * Delete a project
      * This method deletes a project and optionally also the videos that it contains.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteProjectResponse deleteProject(org.openapis.openapi.models.operations.DeleteProjectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteProjectResponse deleteProject(org.openapis.openapi.models.operations.DeleteProjectRequest request, org.openapis.openapi.models.operations.DeleteProjectSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProjectPathParams.class, baseUrl, "/users/{user_id}/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProjectRequest.class, baseUrl, "/users/{user_id}/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteProjectQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteProjectRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -189,25 +192,26 @@ public class ProjectsEssentials {
      * Delete a project
      * This method deletes a project and optionally also the videos that it contains.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteProjectAlt1Response deleteProjectAlt1(org.openapis.openapi.models.operations.DeleteProjectAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteProjectAlt1Response deleteProjectAlt1(org.openapis.openapi.models.operations.DeleteProjectAlt1Request request, org.openapis.openapi.models.operations.DeleteProjectAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProjectAlt1PathParams.class, baseUrl, "/me/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProjectAlt1Request.class, baseUrl, "/me/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteProjectAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteProjectAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -237,24 +241,25 @@ public class ProjectsEssentials {
      * Edit a project
      * This method edits an existing project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EditProjectResponse editProject(org.openapis.openapi.models.operations.EditProjectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EditProjectResponse editProject(org.openapis.openapi.models.operations.EditProjectRequest request, org.openapis.openapi.models.operations.EditProjectSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditProjectPathParams.class, baseUrl, "/users/{user_id}/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditProjectRequest.class, baseUrl, "/users/{user_id}/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -290,24 +295,25 @@ public class ProjectsEssentials {
      * Edit a project
      * This method edits an existing project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EditProjectAlt1Response editProjectAlt1(org.openapis.openapi.models.operations.EditProjectAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.EditProjectAlt1Response editProjectAlt1(org.openapis.openapi.models.operations.EditProjectAlt1Request request, org.openapis.openapi.models.operations.EditProjectAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditProjectAlt1PathParams.class, baseUrl, "/me/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditProjectAlt1Request.class, baseUrl, "/me/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -343,19 +349,20 @@ public class ProjectsEssentials {
      * Get a specific project
      * This method gets a single project that belongs to the specified user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetProjectResponse getProject(org.openapis.openapi.models.operations.GetProjectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetProjectResponse getProject(org.openapis.openapi.models.operations.GetProjectRequest request, org.openapis.openapi.models.operations.GetProjectSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectPathParams.class, baseUrl, "/users/{user_id}/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectRequest.class, baseUrl, "/users/{user_id}/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -391,19 +398,20 @@ public class ProjectsEssentials {
      * Get a specific project
      * This method gets a single project that belongs to the specified user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetProjectAlt1Response getProjectAlt1(org.openapis.openapi.models.operations.GetProjectAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GetProjectAlt1Response getProjectAlt1(org.openapis.openapi.models.operations.GetProjectAlt1Request request, org.openapis.openapi.models.operations.GetProjectAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectAlt1PathParams.class, baseUrl, "/me/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectAlt1Request.class, baseUrl, "/me/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -439,25 +447,26 @@ public class ProjectsEssentials {
      * Get all the projects that belong to a user
      * This method gets all the projects that belong to the specified user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetProjectsResponse getProjects(org.openapis.openapi.models.operations.GetProjectsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetProjectsResponse getProjects(org.openapis.openapi.models.operations.GetProjectsRequest request, org.openapis.openapi.models.operations.GetProjectsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectsPathParams.class, baseUrl, "/users/{user_id}/projects", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectsRequest.class, baseUrl, "/users/{user_id}/projects", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProjectsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProjectsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -493,10 +502,11 @@ public class ProjectsEssentials {
      * Get all the projects that belong to a user
      * This method gets all the projects that belong to the specified user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetProjectsAlt1Response getProjectsAlt1(org.openapis.openapi.models.operations.GetProjectsAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GetProjectsAlt1Response getProjectsAlt1(org.openapis.openapi.models.operations.GetProjectsAlt1Request request, org.openapis.openapi.models.operations.GetProjectsAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/projects");
         
@@ -504,14 +514,14 @@ public class ProjectsEssentials {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProjectsAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProjectsAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

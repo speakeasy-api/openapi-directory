@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETStartActivityStreamRequest {
-    
-    public GETStartActivityStreamQueryParams queryParams;
-    public GETStartActivityStreamRequest withQueryParams(GETStartActivityStreamQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETStartActivityStreamActionEnum action;
+    public GETStartActivityStreamRequest withAction(GETStartActivityStreamActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Specifies whether or not the database activity stream is to start as soon as possible, regardless of the maintenance window for the database.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplyImmediately")
+    public Boolean applyImmediately;
+    public GETStartActivityStreamRequest withApplyImmediately(Boolean applyImmediately) {
+        this.applyImmediately = applyImmediately;
+        return this;
+    }
     
-    public GETStartActivityStreamHeaders headers;
-    public GETStartActivityStreamRequest withHeaders(GETStartActivityStreamHeaders headers) {
-        this.headers = headers;
+    /**
+     * Specifies whether the database activity stream includes engine-native audit fields. This option applies to an Oracle or Microsoft SQL Server DB instance. By default, no engine-native audit fields are included.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EngineNativeAuditFieldsIncluded")
+    public Boolean engineNativeAuditFieldsIncluded;
+    public GETStartActivityStreamRequest withEngineNativeAuditFieldsIncluded(Boolean engineNativeAuditFieldsIncluded) {
+        this.engineNativeAuditFieldsIncluded = engineNativeAuditFieldsIncluded;
+        return this;
+    }
+    
+    /**
+     * The Amazon Web Services KMS key identifier for encrypting messages in the database activity stream. The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=KmsKeyId")
+    public String kmsKeyId;
+    public GETStartActivityStreamRequest withKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+        return this;
+    }
+    
+    /**
+     * Specifies the mode of the database activity stream. Database events such as a change or access generate an activity stream event. The database session can handle these events either synchronously or asynchronously.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Mode")
+    public GETStartActivityStreamModeEnum mode;
+    public GETStartActivityStreamRequest withMode(GETStartActivityStreamModeEnum mode) {
+        this.mode = mode;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) of the DB cluster, for example, &lt;code&gt;arn:aws:rds:us-east-1:12345667890:cluster:das-cluster&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceArn")
+    public String resourceArn;
+    public GETStartActivityStreamRequest withResourceArn(String resourceArn) {
+        this.resourceArn = resourceArn;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETStartActivityStreamVersionEnum version;
+    public GETStartActivityStreamRequest withVersion(GETStartActivityStreamVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETStartActivityStreamRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETStartActivityStreamRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETStartActivityStreamRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETStartActivityStreamRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETStartActivityStreamRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETStartActivityStreamRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETStartActivityStreamRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

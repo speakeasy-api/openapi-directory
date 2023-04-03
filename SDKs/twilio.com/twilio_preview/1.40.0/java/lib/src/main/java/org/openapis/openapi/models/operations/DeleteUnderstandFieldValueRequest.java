@@ -4,27 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUnderstandFieldValueRequest {
-    
-    public DeleteUnderstandFieldValuePathParams pathParams;
-    public DeleteUnderstandFieldValueRequest withPathParams(DeleteUnderstandFieldValuePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public DeleteUnderstandFieldValueRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
-    
-    public DeleteUnderstandFieldValueSecurity security;
-    public DeleteUnderstandFieldValueRequest withSecurity(DeleteUnderstandFieldValueSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FieldTypeSid")
+    public String fieldTypeSid;
+    public DeleteUnderstandFieldValueRequest withFieldTypeSid(String fieldTypeSid) {
+        this.fieldTypeSid = fieldTypeSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteUnderstandFieldValueRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteUnderstandFieldValueRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

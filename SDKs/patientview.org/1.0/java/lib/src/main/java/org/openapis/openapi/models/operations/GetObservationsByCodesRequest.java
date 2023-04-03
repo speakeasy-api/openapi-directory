@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetObservationsByCodesRequest {
-    
-    public GetObservationsByCodesPathParams pathParams;
-    public GetObservationsByCodesRequest withPathParams(GetObservationsByCodesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code")
+    public String[] code;
+    public GetObservationsByCodesRequest withCode(String[] code) {
+        this.code = code;
         return this;
     }
     
+    /**
+     * limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetObservationsByCodesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetObservationsByCodesQueryParams queryParams;
-    public GetObservationsByCodesRequest withQueryParams(GetObservationsByCodesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetObservationsByCodesRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * orderDirection
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderDirection")
+    public String orderDirection;
+    public GetObservationsByCodesRequest withOrderDirection(String orderDirection) {
+        this.orderDirection = orderDirection;
+        return this;
+    }
+    
+    /**
+     * userId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public GetObservationsByCodesRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

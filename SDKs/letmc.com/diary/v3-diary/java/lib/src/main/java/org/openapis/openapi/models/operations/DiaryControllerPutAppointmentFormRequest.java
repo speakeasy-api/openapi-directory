@@ -7,17 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerPutAppointmentFormRequest {
-    
-    public DiaryControllerPutAppointmentFormPathParams pathParams;
-    public DiaryControllerPutAppointmentFormRequest withPathParams(DiaryControllerPutAppointmentFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DiaryControllerPutAppointmentFormQueryParams queryParams;
-    public DiaryControllerPutAppointmentFormRequest withQueryParams(DiaryControllerPutAppointmentFormQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Sales or Lettings property?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowMarketingCorrespondence")
+    public Boolean allowMarketingCorrespondence;
+    public DiaryControllerPutAppointmentFormRequest withAllowMarketingCorrespondence(Boolean allowMarketingCorrespondence) {
+        this.allowMarketingCorrespondence = allowMarketingCorrespondence;
         return this;
     }
     
@@ -25,9 +21,39 @@ public class DiaryControllerPutAppointmentFormRequest {
      * The appointment details model
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.DiaryAppointmentDetails request;
-    public DiaryControllerPutAppointmentFormRequest withRequest(org.openapis.openapi.models.shared.DiaryAppointmentDetails request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DiaryAppointmentDetails diaryAppointmentDetails;
+    public DiaryControllerPutAppointmentFormRequest withDiaryAppointmentDetails(org.openapis.openapi.models.shared.DiaryAppointmentDetails diaryAppointmentDetails) {
+        this.diaryAppointmentDetails = diaryAppointmentDetails;
+        return this;
+    }
+    
+    /**
+     * The unique appointment id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointmentID")
+    public String appointmentID;
+    public DiaryControllerPutAppointmentFormRequest withAppointmentID(String appointmentID) {
+        this.appointmentID = appointmentID;
+        return this;
+    }
+    
+    /**
+     * Sales or Lettings property?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lettings")
+    public Boolean lettings;
+    public DiaryControllerPutAppointmentFormRequest withLettings(Boolean lettings) {
+        this.lettings = lettings;
+        return this;
+    }
+    
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public DiaryControllerPutAppointmentFormRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     

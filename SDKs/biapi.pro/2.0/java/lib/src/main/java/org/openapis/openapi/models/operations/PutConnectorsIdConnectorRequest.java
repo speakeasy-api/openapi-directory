@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutConnectorsIdConnectorRequest {
-    
-    public PutConnectorsIdConnectorPathParams pathParams;
-    public PutConnectorsIdConnectorRequest withPathParams(PutConnectorsIdConnectorPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutConnectorsIdConnectorQueryParams queryParams;
-    public PutConnectorsIdConnectorRequest withQueryParams(PutConnectorsIdConnectorQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PutConnectorsIdConnectorRequestBody request;
-    public PutConnectorsIdConnectorRequest withRequest(PutConnectorsIdConnectorRequestBody request) {
-        this.request = request;
+    public PutConnectorsIdConnectorRequestBody requestBody;
+    public PutConnectorsIdConnectorRequest withRequestBody(PutConnectorsIdConnectorRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PutConnectorsIdConnectorRequest withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connector")
+    public Long idConnector;
+    public PutConnectorsIdConnectorRequest withIdConnector(Long idConnector) {
+        this.idConnector = idConnector;
         return this;
     }
     

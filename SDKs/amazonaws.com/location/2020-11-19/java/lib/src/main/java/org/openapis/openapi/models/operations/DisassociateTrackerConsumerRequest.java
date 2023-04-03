@@ -4,20 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisassociateTrackerConsumerRequest {
-    
-    public DisassociateTrackerConsumerPathParams pathParams;
-    public DisassociateTrackerConsumerRequest withPathParams(DisassociateTrackerConsumerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * &lt;p&gt;The Amazon Resource Name (ARN) for the geofence collection to be disassociated from the tracker resource. Used when you need to specify a resource across all Amazon Web Services. &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Format example: &lt;code&gt;arn:aws:geo:region:account-id:geofence-collection/ExampleGeofenceCollectionConsumer&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConsumerArn")
+    public String consumerArn;
+    public DisassociateTrackerConsumerRequest withConsumerArn(String consumerArn) {
+        this.consumerArn = consumerArn;
         return this;
     }
     
+    /**
+     * The name of the tracker resource to be dissociated from the consumer.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrackerName")
+    public String trackerName;
+    public DisassociateTrackerConsumerRequest withTrackerName(String trackerName) {
+        this.trackerName = trackerName;
+        return this;
+    }
     
-    public DisassociateTrackerConsumerHeaders headers;
-    public DisassociateTrackerConsumerRequest withHeaders(DisassociateTrackerConsumerHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DisassociateTrackerConsumerRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DisassociateTrackerConsumerRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DisassociateTrackerConsumerRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DisassociateTrackerConsumerRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DisassociateTrackerConsumerRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DisassociateTrackerConsumerRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DisassociateTrackerConsumerRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

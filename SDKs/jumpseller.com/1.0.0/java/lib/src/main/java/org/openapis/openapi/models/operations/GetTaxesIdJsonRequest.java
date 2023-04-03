@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTaxesIdJsonRequest {
-    
-    public GetTaxesIdJsonPathParams pathParams;
-    public GetTaxesIdJsonRequest withPathParams(GetTaxesIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public GetTaxesIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Id of the Tax
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetTaxesIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetTaxesIdJsonQueryParams queryParams;
-    public GetTaxesIdJsonRequest withQueryParams(GetTaxesIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public GetTaxesIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

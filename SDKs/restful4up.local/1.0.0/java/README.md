@@ -20,7 +20,6 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.ApplyYaraRulesRequestBodyFile;
 import org.openapis.openapi.models.operations.ApplyYaraRulesRequestBodyIsUnpackingRequiredEnum;
 import org.openapis.openapi.models.operations.ApplyYaraRulesRequestBody;
-import org.openapis.openapi.models.operations.ApplyYaraRulesRequest;
 import org.openapis.openapi.models.operations.ApplyYaraRulesResponse;
 
 public class Application {
@@ -29,21 +28,19 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ApplyYaraRulesRequest req = new ApplyYaraRulesRequest() {{
-                request = new ApplyYaraRulesRequestBody() {{
-                    file = new ApplyYaraRulesRequestBodyFile() {{
-                        content = "corrupti".getBytes();
-                        file = "provident";
-                    }};
-                    isUnpackingRequired = "false";
-                    rules = new String[]{{
-                        add("unde"),
-                        add("nulla"),
-                        add("corrupti"),
-                        add("illum"),
-                    }};
+            ApplyYaraRulesRequestBody req = new ApplyYaraRulesRequestBody() {{
+                file = new ApplyYaraRulesRequestBodyFile() {{
+                    content = "corrupti".getBytes();
+                    file = "provident";
                 }};
-            }};            
+                isUnpackingRequired = "false";
+                rules = new String[]{{
+                    add("unde"),
+                    add("nulla"),
+                    add("corrupti"),
+                    add("illum"),
+                }};
+            }}            
 
             ApplyYaraRulesResponse res = sdk.applyYaraRules(req);
 
@@ -57,7 +54,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

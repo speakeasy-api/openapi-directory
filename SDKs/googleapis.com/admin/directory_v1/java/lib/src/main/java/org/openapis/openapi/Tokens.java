@@ -33,25 +33,26 @@ public class Tokens {
     /**
      * Deletes all access tokens issued by a user for an application.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryTokensDeleteResponse directoryTokensDelete(org.openapis.openapi.models.operations.DirectoryTokensDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryTokensDeleteResponse directoryTokensDelete(org.openapis.openapi.models.operations.DirectoryTokensDeleteRequest request, org.openapis.openapi.models.operations.DirectoryTokensDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryTokensDeletePathParams.class, baseUrl, "/admin/directory/v1/users/{userKey}/tokens/{clientId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryTokensDeleteRequest.class, baseUrl, "/admin/directory/v1/users/{userKey}/tokens/{clientId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryTokensDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryTokensDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -72,25 +73,26 @@ public class Tokens {
     /**
      * Gets information about an access token issued by a user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryTokensGetResponse directoryTokensGet(org.openapis.openapi.models.operations.DirectoryTokensGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryTokensGetResponse directoryTokensGet(org.openapis.openapi.models.operations.DirectoryTokensGetRequest request, org.openapis.openapi.models.operations.DirectoryTokensGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryTokensGetPathParams.class, baseUrl, "/admin/directory/v1/users/{userKey}/tokens/{clientId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryTokensGetRequest.class, baseUrl, "/admin/directory/v1/users/{userKey}/tokens/{clientId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryTokensGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryTokensGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -117,25 +119,26 @@ public class Tokens {
     /**
      * Returns the set of tokens specified user has issued to 3rd party applications.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryTokensListResponse directoryTokensList(org.openapis.openapi.models.operations.DirectoryTokensListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryTokensListResponse directoryTokensList(org.openapis.openapi.models.operations.DirectoryTokensListRequest request, org.openapis.openapi.models.operations.DirectoryTokensListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryTokensListPathParams.class, baseUrl, "/admin/directory/v1/users/{userKey}/tokens", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryTokensListRequest.class, baseUrl, "/admin/directory/v1/users/{userKey}/tokens", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryTokensListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryTokensListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

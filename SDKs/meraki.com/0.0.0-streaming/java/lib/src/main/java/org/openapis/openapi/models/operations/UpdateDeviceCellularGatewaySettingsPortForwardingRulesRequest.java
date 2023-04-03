@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequest {
-    
-    public UpdateDeviceCellularGatewaySettingsPortForwardingRulesPathParams pathParams;
-    public UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequest withPathParams(UpdateDeviceCellularGatewaySettingsPortForwardingRulesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBody requestBody;
+    public UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequest withRequestBody(UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBody request;
-    public UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequest withRequest(UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

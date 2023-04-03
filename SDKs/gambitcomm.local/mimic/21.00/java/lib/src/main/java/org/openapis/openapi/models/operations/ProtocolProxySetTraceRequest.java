@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolProxySetTraceRequest {
+    /**
+     * Agent to set the PROXY tracing
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolProxySetTraceRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolProxySetTracePathParams pathParams;
-    public ProtocolProxySetTraceRequest withPathParams(ProtocolProxySetTracePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Value to set the PROXY tracing
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enableOrNot")
+    public String enableOrNot;
+    public ProtocolProxySetTraceRequest withEnableOrNot(String enableOrNot) {
+        this.enableOrNot = enableOrNot;
         return this;
     }
     

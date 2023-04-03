@@ -4,20 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClaimBillingNotesListRequest {
-    
-    public ClaimBillingNotesListQueryParams queryParams;
-    public ClaimBillingNotesListRequest withQueryParams(ClaimBillingNotesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
+    public Long appointment;
+    public ClaimBillingNotesListRequest withAppointment(Long appointment) {
+        this.appointment = appointment;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ClaimBillingNotesListRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public ClaimBillingNotesListSecurity security;
-    public ClaimBillingNotesListRequest withSecurity(ClaimBillingNotesListSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public ClaimBillingNotesListRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public ClaimBillingNotesListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

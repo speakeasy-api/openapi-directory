@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRequest {
-    
-    public DeleteHeaders headers;
-    public DeleteRequest withHeaders(DeleteHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Customer ID to use for the request.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=customer-id")
+    public Long customerId;
+    public DeleteRequest withCustomerId(Long customerId) {
+        this.customerId = customerId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.VectaraDeleteDocumentRequest request;
-    public DeleteRequest withRequest(org.openapis.openapi.models.shared.VectaraDeleteDocumentRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public DeleteSecurity security;
-    public DeleteRequest withSecurity(DeleteSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.VectaraDeleteDocumentRequest vectaraDeleteDocumentRequest;
+    public DeleteRequest withVectaraDeleteDocumentRequest(org.openapis.openapi.models.shared.VectaraDeleteDocumentRequest vectaraDeleteDocumentRequest) {
+        this.vectaraDeleteDocumentRequest = vectaraDeleteDocumentRequest;
         return this;
     }
     

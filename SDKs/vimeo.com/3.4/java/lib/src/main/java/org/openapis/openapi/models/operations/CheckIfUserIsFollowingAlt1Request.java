@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckIfUserIsFollowingAlt1Request {
-    
-    public CheckIfUserIsFollowingAlt1PathParams pathParams;
-    public CheckIfUserIsFollowingAlt1Request withPathParams(CheckIfUserIsFollowingAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the following user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=follow_user_id")
+    public Double followUserId;
+    public CheckIfUserIsFollowingAlt1Request withFollowUserId(Double followUserId) {
+        this.followUserId = followUserId;
         return this;
     }
     

@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlaceGetStreetsByPostCodeRequest {
-    
-    public PlaceGetStreetsByPostCodePathParams pathParams;
-    public PlaceGetStreetsByPostCodeRequest withPathParams(PlaceGetStreetsByPostCodePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Postcode")
+    public String postcodePathParameter;
+    public PlaceGetStreetsByPostCodeRequest withPostcodePathParameter(String postcodePathParameter) {
+        this.postcodePathParameter = postcodePathParameter;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=postcodeInput.postcode")
+    public String postcodeInputPostcode;
+    public PlaceGetStreetsByPostCodeRequest withPostcodeInputPostcode(String postcodeInputPostcode) {
+        this.postcodeInputPostcode = postcodeInputPostcode;
+        return this;
+    }
     
-    public PlaceGetStreetsByPostCodeQueryParams queryParams;
-    public PlaceGetStreetsByPostCodeRequest withQueryParams(PlaceGetStreetsByPostCodeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=postcode")
+    public String postcodeQueryParameter;
+    public PlaceGetStreetsByPostCodeRequest withPostcodeQueryParameter(String postcodeQueryParameter) {
+        this.postcodeQueryParameter = postcodeQueryParameter;
         return this;
     }
     

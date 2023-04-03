@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrdersRequest {
-    
-    public OrdersPathParams pathParams;
-    public OrdersRequest withPathParams(OrdersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public OrdersRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public OrdersHeaders headers;
-    public OrdersRequest withHeaders(OrdersHeaders headers) {
-        this.headers = headers;
+    /**
+     * Surname of traveller
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public OrdersRequest withName(String name) {
+        this.name = name;
         return this;
     }
     
-    
-    public OrdersSecurity security;
-    public OrdersRequest withSecurity(OrdersSecurity security) {
-        this.security = security;
+    /**
+     * Unique order identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderID")
+    public String orderID;
+    public OrdersRequest withOrderID(String orderID) {
+        this.orderID = orderID;
         return this;
     }
     

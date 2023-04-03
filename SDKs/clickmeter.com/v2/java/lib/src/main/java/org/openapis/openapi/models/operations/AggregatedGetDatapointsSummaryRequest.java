@@ -4,13 +4,136 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AggregatedGetDatapointsSummaryRequest {
+    /**
+     * Is the datapoint marked as favourite
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=favourite")
+    public Boolean favourite;
+    public AggregatedGetDatapointsSummaryRequest withFavourite(Boolean favourite) {
+        this.favourite = favourite;
+        return this;
+    }
     
-    public AggregatedGetDatapointsSummaryQueryParams queryParams;
-    public AggregatedGetDatapointsSummaryRequest withQueryParams(AggregatedGetDatapointsSummaryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
+    public String fromDay;
+    public AggregatedGetDatapointsSummaryRequest withFromDay(String fromDay) {
+        this.fromDay = fromDay;
+        return this;
+    }
+    
+    /**
+     * Filter by this group id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupId")
+    public Long groupId;
+    public AggregatedGetDatapointsSummaryRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * Limit results to this number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public AggregatedGetDatapointsSummaryRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset where to start from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public AggregatedGetDatapointsSummaryRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Field to sort by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
+    public String sortBy;
+    public AggregatedGetDatapointsSummaryRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Direction of sort "asc" or "desc"
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortDirection")
+    public AggregatedGetDatapointsSummarySortDirectionEnum sortDirection;
+    public AggregatedGetDatapointsSummaryRequest withSortDirection(AggregatedGetDatapointsSummarySortDirectionEnum sortDirection) {
+        this.sortDirection = sortDirection;
+        return this;
+    }
+    
+    /**
+     * Status of datapoint ("deleted"/"active"/"paused"/"spam")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public AggregatedGetDatapointsSummaryStatusEnum status;
+    public AggregatedGetDatapointsSummaryRequest withStatus(AggregatedGetDatapointsSummaryStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of tags you want to filter with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public AggregatedGetDatapointsSummaryRequest withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    
+    /**
+     * Filter fields by this pattern
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
+    public String textSearch;
+    public AggregatedGetDatapointsSummaryRequest withTextSearch(String textSearch) {
+        this.textSearch = textSearch;
+        return this;
+    }
+    
+    /**
+     * Timeframe of the request. See list at $timeframeList
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
+    public AggregatedGetDatapointsSummaryTimeFrameEnum timeFrame;
+    public AggregatedGetDatapointsSummaryRequest withTimeFrame(AggregatedGetDatapointsSummaryTimeFrameEnum timeFrame) {
+        this.timeFrame = timeFrame;
+        return this;
+    }
+    
+    /**
+     * If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
+    public String toDay;
+    public AggregatedGetDatapointsSummaryRequest withToDay(String toDay) {
+        this.toDay = toDay;
+        return this;
+    }
+    
+    /**
+     * Type of datapoint ("tl"/"tp")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public AggregatedGetDatapointsSummaryTypeEnum type;
+    public AggregatedGetDatapointsSummaryRequest withType(AggregatedGetDatapointsSummaryTypeEnum type) {
+        this.type = type;
         return this;
     }
     

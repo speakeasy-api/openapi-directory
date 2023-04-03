@@ -7,38 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUserRequest {
-    
-    public UpdateUserPathParams pathParams;
-    public UpdateUserRequest withPathParams(UpdateUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateUserHeaders headers;
-    public UpdateUserRequest withHeaders(UpdateUserHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateUserUpdateUserRequest request;
-    public UpdateUserRequest withRequest(UpdateUserUpdateUserRequest request) {
-        this.request = request;
+    public UpdateUserUpdateUserRequest requestBody;
+    public UpdateUserRequest withRequestBody(UpdateUserUpdateUserRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateUserSecurity security;
-    public UpdateUserRequest withSecurity(UpdateUserSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateUserRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateUserRequest withSid(String sid) {
+        this.sid = sid;
+        return this;
+    }
     
-    public String serverURL;
-    public UpdateUserRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.UserEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public UpdateUserRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.UserEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

@@ -48,12 +48,12 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsAddCollaboratorResponse projectsAddCollaborator(org.openapis.openapi.models.operations.ProjectsAddCollaboratorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsAddCollaboratorPathParams.class, baseUrl, "/projects/{project_id}/collaborators/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsAddCollaboratorRequest.class, baseUrl, "/projects/{project_id}/collaborators/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -99,12 +99,12 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsCreateCardResponse projectsCreateCard(org.openapis.openapi.models.operations.ProjectsCreateCardRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsCreateCardPathParams.class, baseUrl, "/projects/columns/{column_id}/cards", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsCreateCardRequest.class, baseUrl, "/projects/columns/{column_id}/cards", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -169,12 +169,12 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsCreateColumnResponse projectsCreateColumn(org.openapis.openapi.models.operations.ProjectsCreateColumnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsCreateColumnPathParams.class, baseUrl, "/projects/{project_id}/columns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsCreateColumnRequest.class, baseUrl, "/projects/{project_id}/columns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -229,7 +229,7 @@ public class Projects {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProjectsCreateForAuthenticatedUserResponse projectsCreateForAuthenticatedUser(org.openapis.openapi.models.operations.ProjectsCreateForAuthenticatedUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProjectsCreateForAuthenticatedUserResponse projectsCreateForAuthenticatedUser(org.openapis.openapi.models.operations.ProjectsCreateForAuthenticatedUserRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user/projects");
         
@@ -302,12 +302,12 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsCreateForOrgResponse projectsCreateForOrg(org.openapis.openapi.models.operations.ProjectsCreateForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsCreateForOrgPathParams.class, baseUrl, "/orgs/{org}/projects", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsCreateForOrgRequest.class, baseUrl, "/orgs/{org}/projects", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -363,12 +363,12 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsCreateForRepoResponse projectsCreateForRepo(org.openapis.openapi.models.operations.ProjectsCreateForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsCreateForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/projects", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsCreateForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/projects", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -424,7 +424,7 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsDeleteResponse projectsDelete(org.openapis.openapi.models.operations.ProjectsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsDeletePathParams.class, baseUrl, "/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsDeleteRequest.class, baseUrl, "/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -473,7 +473,7 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsDeleteCardResponse projectsDeleteCard(org.openapis.openapi.models.operations.ProjectsDeleteCardRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsDeleteCardPathParams.class, baseUrl, "/projects/columns/cards/{card_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsDeleteCardRequest.class, baseUrl, "/projects/columns/cards/{card_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -522,7 +522,7 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsDeleteColumnResponse projectsDeleteColumn(org.openapis.openapi.models.operations.ProjectsDeleteColumnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsDeleteColumnPathParams.class, baseUrl, "/projects/columns/{column_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsDeleteColumnRequest.class, baseUrl, "/projects/columns/{column_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -564,7 +564,7 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsGetResponse projectsGet(org.openapis.openapi.models.operations.ProjectsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsGetPathParams.class, baseUrl, "/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsGetRequest.class, baseUrl, "/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -613,7 +613,7 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsGetCardResponse projectsGetCard(org.openapis.openapi.models.operations.ProjectsGetCardRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsGetCardPathParams.class, baseUrl, "/projects/columns/cards/{card_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsGetCardRequest.class, baseUrl, "/projects/columns/cards/{card_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -662,7 +662,7 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsGetColumnResponse projectsGetColumn(org.openapis.openapi.models.operations.ProjectsGetColumnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsGetColumnPathParams.class, baseUrl, "/projects/columns/{column_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsGetColumnRequest.class, baseUrl, "/projects/columns/{column_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -712,7 +712,7 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsGetPermissionForUserResponse projectsGetPermissionForUser(org.openapis.openapi.models.operations.ProjectsGetPermissionForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsGetPermissionForUserPathParams.class, baseUrl, "/projects/{project_id}/collaborators/{username}/permission", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsGetPermissionForUserRequest.class, baseUrl, "/projects/{project_id}/collaborators/{username}/permission", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -769,13 +769,13 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsListCardsResponse projectsListCards(org.openapis.openapi.models.operations.ProjectsListCardsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsListCardsPathParams.class, baseUrl, "/projects/columns/{column_id}/cards", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsListCardsRequest.class, baseUrl, "/projects/columns/{column_id}/cards", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProjectsListCardsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProjectsListCardsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -827,13 +827,13 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsListCollaboratorsResponse projectsListCollaborators(org.openapis.openapi.models.operations.ProjectsListCollaboratorsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsListCollaboratorsPathParams.class, baseUrl, "/projects/{project_id}/collaborators", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsListCollaboratorsRequest.class, baseUrl, "/projects/{project_id}/collaborators", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProjectsListCollaboratorsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProjectsListCollaboratorsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -892,13 +892,13 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsListColumnsResponse projectsListColumns(org.openapis.openapi.models.operations.ProjectsListColumnsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsListColumnsPathParams.class, baseUrl, "/projects/{project_id}/columns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsListColumnsRequest.class, baseUrl, "/projects/{project_id}/columns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProjectsListColumnsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProjectsListColumnsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -950,13 +950,13 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsListForOrgResponse projectsListForOrg(org.openapis.openapi.models.operations.ProjectsListForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsListForOrgPathParams.class, baseUrl, "/orgs/{org}/projects", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsListForOrgRequest.class, baseUrl, "/orgs/{org}/projects", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProjectsListForOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProjectsListForOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1006,13 +1006,13 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsListForRepoResponse projectsListForRepo(org.openapis.openapi.models.operations.ProjectsListForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsListForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/projects", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsListForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/projects", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProjectsListForRepoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProjectsListForRepoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1069,13 +1069,13 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsListForUserResponse projectsListForUser(org.openapis.openapi.models.operations.ProjectsListForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsListForUserPathParams.class, baseUrl, "/users/{username}/projects", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsListForUserRequest.class, baseUrl, "/users/{username}/projects", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProjectsListForUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProjectsListForUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1124,12 +1124,12 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsMoveCardResponse projectsMoveCard(org.openapis.openapi.models.operations.ProjectsMoveCardRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsMoveCardPathParams.class, baseUrl, "/projects/columns/cards/{card_id}/moves", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsMoveCardRequest.class, baseUrl, "/projects/columns/cards/{card_id}/moves", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1202,12 +1202,12 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsMoveColumnResponse projectsMoveColumn(org.openapis.openapi.models.operations.ProjectsMoveColumnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsMoveColumnPathParams.class, baseUrl, "/projects/columns/{column_id}/moves", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsMoveColumnRequest.class, baseUrl, "/projects/columns/{column_id}/moves", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1265,7 +1265,7 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsRemoveCollaboratorResponse projectsRemoveCollaborator(org.openapis.openapi.models.operations.ProjectsRemoveCollaboratorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsRemoveCollaboratorPathParams.class, baseUrl, "/projects/{project_id}/collaborators/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsRemoveCollaboratorRequest.class, baseUrl, "/projects/{project_id}/collaborators/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1315,12 +1315,12 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsUpdateResponse projectsUpdate(org.openapis.openapi.models.operations.ProjectsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsUpdatePathParams.class, baseUrl, "/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsUpdateRequest.class, baseUrl, "/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1382,12 +1382,12 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsUpdateCardResponse projectsUpdateCard(org.openapis.openapi.models.operations.ProjectsUpdateCardRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsUpdateCardPathParams.class, baseUrl, "/projects/columns/cards/{card_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsUpdateCardRequest.class, baseUrl, "/projects/columns/cards/{card_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1441,12 +1441,12 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectsUpdateColumnResponse projectsUpdateColumn(org.openapis.openapi.models.operations.ProjectsUpdateColumnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsUpdateColumnPathParams.class, baseUrl, "/projects/columns/{column_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsUpdateColumnRequest.class, baseUrl, "/projects/columns/{column_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -42,13 +42,13 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.GetResourcesTagsFormatResponse getResourcesTagsFormat(org.openapis.openapi.models.operations.GetResourcesTagsFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesTagsFormatPathParams.class, baseUrl, "/resources/tags.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesTagsFormatRequest.class, baseUrl, "/resources/tags.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesTagsFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesTagsFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -89,7 +89,7 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.GetResourcesTagsTagLanguagesFormatResponse getResourcesTagsTagLanguagesFormat(org.openapis.openapi.models.operations.GetResourcesTagsTagLanguagesFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesTagsTagLanguagesFormatPathParams.class, baseUrl, "/resources/tags/tagLanguages.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesTagsTagLanguagesFormatRequest.class, baseUrl, "/resources/tags/tagLanguages.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -130,7 +130,7 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.GetResourcesTagsTagTypesFormatResponse getResourcesTagsTagTypesFormat(org.openapis.openapi.models.operations.GetResourcesTagsTagTypesFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesTagsTagTypesFormatPathParams.class, baseUrl, "/resources/tags/tagTypes.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesTagsTagTypesFormatRequest.class, baseUrl, "/resources/tags/tagTypes.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -171,7 +171,7 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.GetResourcesTagsIdFormatResponse getResourcesTagsIdFormat(org.openapis.openapi.models.operations.GetResourcesTagsIdFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesTagsIdFormatPathParams.class, baseUrl, "/resources/tags/{id}.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesTagsIdFormatRequest.class, baseUrl, "/resources/tags/{id}.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -212,13 +212,13 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.GetResourcesTagsIdMediaFormatResponse getResourcesTagsIdMediaFormat(org.openapis.openapi.models.operations.GetResourcesTagsIdMediaFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesTagsIdMediaFormatPathParams.class, baseUrl, "/resources/tags/{id}/media.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesTagsIdMediaFormatRequest.class, baseUrl, "/resources/tags/{id}/media.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesTagsIdMediaFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesTagsIdMediaFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -259,13 +259,13 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.GetResourcesTagsIdRelatedFormatResponse getResourcesTagsIdRelatedFormat(org.openapis.openapi.models.operations.GetResourcesTagsIdRelatedFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesTagsIdRelatedFormatPathParams.class, baseUrl, "/resources/tags/{id}/related.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesTagsIdRelatedFormatRequest.class, baseUrl, "/resources/tags/{id}/related.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesTagsIdRelatedFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesTagsIdRelatedFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -306,13 +306,13 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.GetResourcesTagsIdSyndicateFormatResponse getResourcesTagsIdSyndicateFormat(org.openapis.openapi.models.operations.GetResourcesTagsIdSyndicateFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesTagsIdSyndicateFormatPathParams.class, baseUrl, "/resources/tags/{id}/syndicate.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesTagsIdSyndicateFormatRequest.class, baseUrl, "/resources/tags/{id}/syndicate.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesTagsIdSyndicateFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesTagsIdSyndicateFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

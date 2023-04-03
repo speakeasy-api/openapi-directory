@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserEpisodesRequest {
-    
-    public GetUserEpisodesQueryParams queryParams;
-    public GetUserEpisodesRequest withQueryParams(GetUserEpisodesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only return episodes from this specific show
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=show_id")
+    public Long showId;
+    public GetUserEpisodesRequest withShowId(Long showId) {
+        this.showId = showId;
         return this;
     }
     

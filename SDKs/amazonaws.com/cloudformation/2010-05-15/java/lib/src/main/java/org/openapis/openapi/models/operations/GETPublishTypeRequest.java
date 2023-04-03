@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPublishTypeRequest {
-    
-    public GETPublishTypeQueryParams queryParams;
-    public GETPublishTypeRequest withQueryParams(GETPublishTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETPublishTypeActionEnum action;
+    public GETPublishTypeRequest withAction(GETPublishTypeActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the extension.&lt;/p&gt; &lt;p&gt;Conditional: You must specify &lt;code&gt;Arn&lt;/code&gt;, or &lt;code&gt;TypeName&lt;/code&gt; and &lt;code&gt;Type&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Arn")
+    public String arn;
+    public GETPublishTypeRequest withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
     
-    public GETPublishTypeHeaders headers;
-    public GETPublishTypeRequest withHeaders(GETPublishTypeHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The version number to assign to this version of the extension.&lt;/p&gt; &lt;p&gt;Use the following format, and adhere to semantic versioning when assigning a version number to your extension:&lt;/p&gt; &lt;p&gt; &lt;code&gt;MAJOR.MINOR.PATCH&lt;/code&gt; &lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://semver.org/"&gt;Semantic Versioning 2.0.0&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;If you don't specify a version number, CloudFormation increments the version number by one minor version release.&lt;/p&gt; &lt;p&gt;You cannot specify a version number the first time you publish a type. CloudFormation automatically sets the first version number to be &lt;code&gt;1.0.0&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PublicVersionNumber")
+    public String publicVersionNumber;
+    public GETPublishTypeRequest withPublicVersionNumber(String publicVersionNumber) {
+        this.publicVersionNumber = publicVersionNumber;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The type of the extension.&lt;/p&gt; &lt;p&gt;Conditional: You must specify &lt;code&gt;Arn&lt;/code&gt;, or &lt;code&gt;TypeName&lt;/code&gt; and &lt;code&gt;Type&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
+    public GETPublishTypeTypeEnum type;
+    public GETPublishTypeRequest withType(GETPublishTypeTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the extension.&lt;/p&gt; &lt;p&gt;Conditional: You must specify &lt;code&gt;Arn&lt;/code&gt;, or &lt;code&gt;TypeName&lt;/code&gt; and &lt;code&gt;Type&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeName")
+    public String typeName;
+    public GETPublishTypeRequest withTypeName(String typeName) {
+        this.typeName = typeName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETPublishTypeVersionEnum version;
+    public GETPublishTypeRequest withVersion(GETPublishTypeVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETPublishTypeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETPublishTypeRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETPublishTypeRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETPublishTypeRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETPublishTypeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETPublishTypeRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETPublishTypeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

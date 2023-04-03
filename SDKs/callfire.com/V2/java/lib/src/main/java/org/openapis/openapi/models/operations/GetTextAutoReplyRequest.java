@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTextAutoReplyRequest {
-    
-    public GetTextAutoReplyPathParams pathParams;
-    public GetTextAutoReplyRequest withPathParams(GetTextAutoReplyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GetTextAutoReplyRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
-    
-    public GetTextAutoReplyQueryParams queryParams;
-    public GetTextAutoReplyRequest withQueryParams(GetTextAutoReplyQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetTextAutoReplySecurity security;
-    public GetTextAutoReplyRequest withSecurity(GetTextAutoReplySecurity security) {
-        this.security = security;
+    /**
+     * An id of a text auto reply
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetTextAutoReplyRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

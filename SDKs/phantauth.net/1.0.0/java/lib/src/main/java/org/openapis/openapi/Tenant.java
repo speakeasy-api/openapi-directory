@@ -52,7 +52,7 @@ public class Tenant {
      */
     public org.openapis.openapi.models.operations.GetTenantTenantnameResponse getTenantTenantname(org.openapis.openapi.models.operations.GetTenantTenantnameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTenantTenantnamePathParams.class, baseUrl, "/tenant/{tenantname}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTenantTenantnameRequest.class, baseUrl, "/tenant/{tenantname}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

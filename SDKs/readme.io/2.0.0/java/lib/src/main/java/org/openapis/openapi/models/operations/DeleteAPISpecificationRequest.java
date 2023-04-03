@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAPISpecificationRequest {
-    
-    public DeleteAPISpecificationPathParams pathParams;
-    public DeleteAPISpecificationRequest withPathParams(DeleteAPISpecificationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteAPISpecificationSecurity security;
-    public DeleteAPISpecificationRequest withSecurity(DeleteAPISpecificationSecurity security) {
-        this.security = security;
+    /**
+     * ID of the API specification. The unique ID for each API can be found by navigating to your **API Definitions** page.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteAPISpecificationRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

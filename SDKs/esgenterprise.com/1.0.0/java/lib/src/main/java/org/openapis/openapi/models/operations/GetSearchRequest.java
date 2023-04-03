@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchRequest {
-    
-    public GetSearchQueryParams queryParams;
-    public GetSearchRequest withQueryParams(GetSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetSearchSecurity security;
-    public GetSearchRequest withSecurity(GetSearchSecurity security) {
-        this.security = security;
+    /**
+     * Company name or stock symbol
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetSearchRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     

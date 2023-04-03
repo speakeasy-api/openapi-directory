@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScheduledTasksRequest {
-    
-    public GetScheduledTasksPathParams pathParams;
-    public GetScheduledTasksRequest withPathParams(GetScheduledTasksPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public GetScheduledTasksRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
         return this;
     }
     
-    
-    public GetScheduledTasksQueryParams queryParams;
-    public GetScheduledTasksRequest withQueryParams(GetScheduledTasksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Linux hosting domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public GetScheduledTasksRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     

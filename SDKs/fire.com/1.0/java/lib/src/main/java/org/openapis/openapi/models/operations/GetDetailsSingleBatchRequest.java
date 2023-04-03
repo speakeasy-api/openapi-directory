@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDetailsSingleBatchRequest {
-    
-    public GetDetailsSingleBatchPathParams pathParams;
-    public GetDetailsSingleBatchRequest withPathParams(GetDetailsSingleBatchPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=batchUuid")
+    public String batchUuid;
+    public GetDetailsSingleBatchRequest withBatchUuid(String batchUuid) {
+        this.batchUuid = batchUuid;
         return this;
     }
     

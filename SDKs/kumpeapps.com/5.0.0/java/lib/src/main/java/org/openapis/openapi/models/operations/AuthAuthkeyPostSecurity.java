@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthAuthkeyPostSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAppKey appKey;
-    public AuthAuthkeyPostSecurity withAppKey(org.openapis.openapi.models.shared.SchemeAppKey appKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Auth")
+    public String appKey;
+    public AuthAuthkeyPostSecurity withAppKey(String appKey) {
         this.appKey = appKey;
         return this;
     }

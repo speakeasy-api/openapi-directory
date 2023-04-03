@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetClientOptionsRequest {
-    
-    public GetClientOptionsPathParams pathParams;
-    public GetClientOptionsRequest withPathParams(GetClientOptionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The target language for the client library
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=language")
+    public String language;
+    public GetClientOptionsRequest withLanguage(String language) {
+        this.language = language;
         return this;
     }
     

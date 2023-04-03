@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnableRuleRequest {
+    /**
+     * Your rule identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ruleId")
+    public String ruleId;
+    public EnableRuleRequest withRuleId(String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
     
-    public EnableRulePathParams pathParams;
-    public EnableRuleRequest withPathParams(EnableRulePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public EnableRuleRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnpublishUserRequest {
-    
-    public UnpublishUserPathParams pathParams;
-    public UnpublishUserRequest withPathParams(UnpublishUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the user to unpublish.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public UnpublishUserRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

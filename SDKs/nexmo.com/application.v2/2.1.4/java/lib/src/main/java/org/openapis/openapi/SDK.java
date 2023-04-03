@@ -145,7 +145,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateApplicationResponse createApplication(org.openapis.openapi.models.operations.CreateApplicationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateApplicationResponse createApplication(org.openapis.openapi.models.operations.CreateApplicationRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/");
         
@@ -232,7 +232,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteApplicationResponse deleteApplication(org.openapis.openapi.models.operations.DeleteApplicationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApplicationPathParams.class, baseUrl, "/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApplicationRequest.class, baseUrl, "/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -297,7 +297,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetApplicationResponse getApplication(org.openapis.openapi.models.operations.GetApplicationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApplicationPathParams.class, baseUrl, "/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApplicationRequest.class, baseUrl, "/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -374,7 +374,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListApplicationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListApplicationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -445,12 +445,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.UpdateApplicationResponse updateApplication(org.openapis.openapi.models.operations.UpdateApplicationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateApplicationPathParams.class, baseUrl, "/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateApplicationRequest.class, baseUrl, "/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -34,23 +34,24 @@ public class ForgotHealthIdNumber {
      * Generate Aadhaar OTP on registrered mobile number
      * Generate Aadhaar OTP on registrered mobile number
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOST1Response generateAadharOTPUsingPOST1(org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOST1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOST1Response generateAadharOTPUsingPOST1(org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOST1Request request, org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOST1Security security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/forgot/healthId/aadhaar/generateOtp");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "aadharOtpGenerateRequestPayLoad", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -59,7 +60,7 @@ public class ForgotHealthIdNumber {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -88,23 +89,24 @@ public class ForgotHealthIdNumber {
      * Generate Mobile OTP to start registration
      * Generate Mobile OTP to start registration transaction.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenerateMobileOTPUsingPOSTResponse generateMobileOTPUsingPOST(org.openapis.openapi.models.operations.GenerateMobileOTPUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenerateMobileOTPUsingPOSTResponse generateMobileOTPUsingPOST(org.openapis.openapi.models.operations.GenerateMobileOTPUsingPOSTRequest request, org.openapis.openapi.models.operations.GenerateMobileOTPUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/forgot/healthId/mobile/generateOtp");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "generateMobileOTPRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -113,7 +115,7 @@ public class ForgotHealthIdNumber {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -142,23 +144,24 @@ public class ForgotHealthIdNumber {
      * Verify aadhar OTP sent as part of forgetHealth id.
      * Verify aadhar OTP sent as part of forgetHealth id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrievalHealthIdByAadharUsingPOSTResponse retrievalHealthIdByAadharUsingPOST(org.openapis.openapi.models.operations.RetrievalHealthIdByAadharUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrievalHealthIdByAadharUsingPOSTResponse retrievalHealthIdByAadharUsingPOST(org.openapis.openapi.models.operations.RetrievalHealthIdByAadharUsingPOSTRequest request, org.openapis.openapi.models.operations.RetrievalHealthIdByAadharUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/forgot/healthId/aadhaar");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "authAccountAadhaarOTPRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -167,7 +170,7 @@ public class ForgotHealthIdNumber {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -196,23 +199,24 @@ public class ForgotHealthIdNumber {
      * Verify Mobile OTP sent as  part of forgetHealth id.
      * Verify Mobile OTP sent as  part of forgetHealth id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrievalHealthIdByMobileUsingPOSTResponse retrievalHealthIdByMobileUsingPOST(org.openapis.openapi.models.operations.RetrievalHealthIdByMobileUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrievalHealthIdByMobileUsingPOSTResponse retrievalHealthIdByMobileUsingPOST(org.openapis.openapi.models.operations.RetrievalHealthIdByMobileUsingPOSTRequest request, org.openapis.openapi.models.operations.RetrievalHealthIdByMobileUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/forgot/healthId/mobile");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "retriveHealthIdMobilePayLoad", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -221,7 +225,7 @@ public class ForgotHealthIdNumber {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

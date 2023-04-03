@@ -17,9 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AssociateBrowserSettingsPathParams;
-import org.openapis.openapi.models.operations.AssociateBrowserSettingsQueryParams;
-import org.openapis.openapi.models.operations.AssociateBrowserSettingsHeaders;
 import org.openapis.openapi.models.operations.AssociateBrowserSettingsRequest;
 import org.openapis.openapi.models.operations.AssociateBrowserSettingsResponse;
 
@@ -28,29 +25,21 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateBrowserSettingsRequest req = new AssociateBrowserSettingsRequest() {{
-                pathParams = new AssociateBrowserSettingsPathParams() {{
-                    portalArn = "corrupti";
-                }};
-                queryParams = new AssociateBrowserSettingsQueryParams() {{
-                    browserSettingsArn = "provident";
-                }};
-                headers = new AssociateBrowserSettingsHeaders() {{
-                    xAmzAlgorithm = "distinctio";
-                    xAmzContentSha256 = "quibusdam";
-                    xAmzCredential = "unde";
-                    xAmzDate = "nulla";
-                    xAmzSecurityToken = "corrupti";
-                    xAmzSignature = "illum";
-                    xAmzSignedHeaders = "vel";
-                }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "provident";
+                xAmzCredential = "distinctio";
+                xAmzDate = "quibusdam";
+                xAmzSecurityToken = "unde";
+                xAmzSignature = "nulla";
+                xAmzSignedHeaders = "corrupti";
+                browserSettingsArn = "illum";
+                portalArn = "vel";
+            }}            
 
             AssociateBrowserSettingsResponse res = sdk.associateBrowserSettings(req);
 
@@ -64,7 +53,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

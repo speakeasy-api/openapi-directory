@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserPermissionsWorkspacesRequest {
-    
-    public GetUserPermissionsWorkspacesQueryParams queryParams;
-    public GetUserPermissionsWorkspacesRequest withQueryParams(GetUserPermissionsWorkspacesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Query string to narrow down the response. See
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for details.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetUserPermissionsWorkspacesRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     
-    
-    public GetUserPermissionsWorkspacesSecurity security;
-    public GetUserPermissionsWorkspacesRequest withSecurity(GetUserPermissionsWorkspacesSecurity security) {
-        this.security = security;
+    /**
+     * Name of a response property to sort results. See
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#sorting-query-results)
+     * for details.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetUserPermissionsWorkspacesRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

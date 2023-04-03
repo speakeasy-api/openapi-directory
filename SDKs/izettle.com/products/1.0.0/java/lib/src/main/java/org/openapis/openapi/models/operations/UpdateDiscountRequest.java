@@ -7,31 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDiscountRequest {
-    
-    public UpdateDiscountPathParams pathParams;
-    public UpdateDiscountRequest withPathParams(UpdateDiscountPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateDiscountHeaders headers;
-    public UpdateDiscountRequest withHeaders(UpdateDiscountHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DiscountRequest request;
-    public UpdateDiscountRequest withRequest(org.openapis.openapi.models.shared.DiscountRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DiscountRequest discountRequest;
+    public UpdateDiscountRequest withDiscountRequest(org.openapis.openapi.models.shared.DiscountRequest discountRequest) {
+        this.discountRequest = discountRequest;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public UpdateDiscountRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
+        return this;
+    }
     
-    public UpdateDiscountSecurity security;
-    public UpdateDiscountRequest withSecurity(UpdateDiscountSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discountUuid")
+    public String discountUuid;
+    public UpdateDiscountRequest withDiscountUuid(String discountUuid) {
+        this.discountUuid = discountUuid;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
+    public String organizationUuid;
+    public UpdateDiscountRequest withOrganizationUuid(String organizationUuid) {
+        this.organizationUuid = organizationUuid;
         return this;
     }
     

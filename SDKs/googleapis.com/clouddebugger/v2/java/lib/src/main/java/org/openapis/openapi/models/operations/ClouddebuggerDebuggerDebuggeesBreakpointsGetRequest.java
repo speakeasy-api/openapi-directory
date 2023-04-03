@@ -4,27 +4,146 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest {
-    
-    public ClouddebuggerDebuggerDebuggeesBreakpointsGetPathParams pathParams;
-    public ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest withPathParams(ClouddebuggerDebuggerDebuggeesBreakpointsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public ClouddebuggerDebuggerDebuggeesBreakpointsGetQueryParams queryParams;
-    public ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest withQueryParams(ClouddebuggerDebuggerDebuggeesBreakpointsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public ClouddebuggerDebuggerDebuggeesBreakpointsGetSecurity security;
-    public ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest withSecurity(ClouddebuggerDebuggerDebuggeesBreakpointsGetSecurity security) {
-        this.security = security;
+    /**
+     * Required. ID of the breakpoint to get.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=breakpointId")
+    public String breakpointId;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest withBreakpointId(String breakpointId) {
+        this.breakpointId = breakpointId;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Required. The client version making the call. Schema: `domain/type/version` (e.g., `google.com/intellij/v1`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientVersion")
+    public String clientVersion;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest withClientVersion(String clientVersion) {
+        this.clientVersion = clientVersion;
+        return this;
+    }
+    
+    /**
+     * Required. ID of the debuggee whose breakpoint to get.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=debuggeeId")
+    public String debuggeeId;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest withDebuggeeId(String debuggeeId) {
+        this.debuggeeId = debuggeeId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

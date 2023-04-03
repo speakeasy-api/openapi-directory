@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPackageFilesRequest {
+    /**
+     * name of the package
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public ListPackageFilesRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public ListPackageFilesPathParams pathParams;
-    public ListPackageFilesRequest withPathParams(ListPackageFilesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * owner of the package
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ListPackageFilesRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * type of the package
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public String type;
+    public ListPackageFilesRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * version of the package
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public ListPackageFilesRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

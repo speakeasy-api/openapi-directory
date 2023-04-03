@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSubmissionCommentRequest {
-    
-    public PostSubmissionCommentPathParams pathParams;
-    public PostSubmissionCommentRequest withPathParams(PostSubmissionCommentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AssignmentSubmissionCommentCreation request;
-    public PostSubmissionCommentRequest withRequest(org.openapis.openapi.models.shared.AssignmentSubmissionCommentCreation request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AssignmentSubmissionCommentCreation assignmentSubmissionCommentCreation;
+    public PostSubmissionCommentRequest withAssignmentSubmissionCommentCreation(org.openapis.openapi.models.shared.AssignmentSubmissionCommentCreation assignmentSubmissionCommentCreation) {
+        this.assignmentSubmissionCommentCreation = assignmentSubmissionCommentCreation;
         return this;
     }
     
+    /**
+     * Unique identifier of the assignment
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignment")
+    public String assignment;
+    public PostSubmissionCommentRequest withAssignment(String assignment) {
+        this.assignment = assignment;
+        return this;
+    }
     
-    public PostSubmissionCommentSecurity security;
-    public PostSubmissionCommentRequest withSecurity(PostSubmissionCommentSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the class
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
+    public String class_;
+    public PostSubmissionCommentRequest withClass(String class_) {
+        this.class_ = class_;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the submission
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=submission")
+    public String submission;
+    public PostSubmissionCommentRequest withSubmission(String submission) {
+        this.submission = submission;
         return this;
     }
     

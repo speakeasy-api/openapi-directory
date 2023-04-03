@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FileActionFindRequest {
-    
-    public FileActionFindPathParams pathParams;
-    public FileActionFindRequest withPathParams(FileActionFindPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Path to operate on.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public FileActionFindRequest withPath(String path) {
+        this.path = path;
         return this;
     }
     
+    /**
+     * Request a preview size.  Can be `small` (default), `large`, `xlarge`, or `pdf`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=preview_size")
+    public String previewSize;
+    public FileActionFindRequest withPreviewSize(String previewSize) {
+        this.previewSize = previewSize;
+        return this;
+    }
     
-    public FileActionFindQueryParams queryParams;
-    public FileActionFindRequest withQueryParams(FileActionFindQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Include file preview information?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with_previews")
+    public Boolean withPreviews;
+    public FileActionFindRequest withWithPreviews(Boolean withPreviews) {
+        this.withPreviews = withPreviews;
+        return this;
+    }
+    
+    /**
+     * Include file priority color information?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with_priority_color")
+    public Boolean withPriorityColor;
+    public FileActionFindRequest withWithPriorityColor(Boolean withPriorityColor) {
+        this.withPriorityColor = withPriorityColor;
         return this;
     }
     

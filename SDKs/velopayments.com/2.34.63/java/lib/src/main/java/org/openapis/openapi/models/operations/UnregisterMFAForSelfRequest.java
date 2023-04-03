@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnregisterMFAForSelfRequest {
-    
-    public UnregisterMFAForSelfHeaders headers;
-    public UnregisterMFAForSelfRequest withHeaders(UnregisterMFAForSelfHeaders headers) {
-        this.headers = headers;
+    /**
+     * Bearer token authorization leg of validate
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public UnregisterMFAForSelfRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
@@ -18,9 +21,9 @@ public class UnregisterMFAForSelfRequest {
      * The MFA Type to unregister
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SelfMFATypeUnregisterRequest request;
-    public UnregisterMFAForSelfRequest withRequest(org.openapis.openapi.models.shared.SelfMFATypeUnregisterRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SelfMFATypeUnregisterRequest selfMFATypeUnregisterRequest;
+    public UnregisterMFAForSelfRequest withSelfMFATypeUnregisterRequest(org.openapis.openapi.models.shared.SelfMFATypeUnregisterRequest selfMFATypeUnregisterRequest) {
+        this.selfMFATypeUnregisterRequest = selfMFATypeUnregisterRequest;
         return this;
     }
     

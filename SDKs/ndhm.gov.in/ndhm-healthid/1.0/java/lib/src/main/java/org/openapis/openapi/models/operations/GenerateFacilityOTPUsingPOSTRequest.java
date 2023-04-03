@@ -7,27 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateFacilityOTPUsingPOSTRequest {
-    
-    public GenerateFacilityOTPUsingPOSTHeaders headers;
-    public GenerateFacilityOTPUsingPOSTRequest withHeaders(GenerateFacilityOTPUsingPOSTHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * generateOtpRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AadharOtpGenerateRequestPayLoad request;
-    public GenerateFacilityOTPUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.AadharOtpGenerateRequestPayLoad request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AadharOtpGenerateRequestPayLoad aadharOtpGenerateRequestPayLoad;
+    public GenerateFacilityOTPUsingPOSTRequest withAadharOtpGenerateRequestPayLoad(org.openapis.openapi.models.shared.AadharOtpGenerateRequestPayLoad aadharOtpGenerateRequestPayLoad) {
+        this.aadharOtpGenerateRequestPayLoad = aadharOtpGenerateRequestPayLoad;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public GenerateFacilityOTPUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
     
-    public GenerateFacilityOTPUsingPOSTSecurity security;
-    public GenerateFacilityOTPUsingPOSTRequest withSecurity(GenerateFacilityOTPUsingPOSTSecurity security) {
-        this.security = security;
+    /**
+     * Auth Token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Token")
+    public String xToken;
+    public GenerateFacilityOTPUsingPOSTRequest withXToken(String xToken) {
+        this.xToken = xToken;
         return this;
     }
     

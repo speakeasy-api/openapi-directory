@@ -4,13 +4,84 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
+    public GetProjectsOrderByEnum orderBy;
+    public GetProjectsRequest withOrderBy(GetProjectsOrderByEnum orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
     
-    public GetProjectsQueryParams queryParams;
-    public GetProjectsRequest withQueryParams(GetProjectsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_type")
+    public org.openapis.openapi.models.shared.ListOrderTypeEnum orderType;
+    public GetProjectsRequest withOrderType(org.openapis.openapi.models.shared.ListOrderTypeEnum orderType) {
+        this.orderType = orderType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetProjectsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetProjectsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Filter projects by status. Accepts multiple statuses. Possible values 'pending', 'started', 'completed'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status[]")
+    public org.openapis.openapi.models.shared.ProjectStatusEnum[] status;
+    public GetProjectsRequest withStatus(org.openapis.openapi.models.shared.ProjectStatusEnum[] status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Include detailed information. Possible values 'client', 'vendor'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with[]")
+    public GetProjectsWithEnum[] with;
+    public GetProjectsRequest withWith(GetProjectsWithEnum[] with) {
+        this.with = with;
+        return this;
+    }
+    
+    /**
+     * deprecated. use `status[]` param.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with_completed")
+    public Boolean withCompleted;
+    public GetProjectsRequest withWithCompleted(Boolean withCompleted) {
+        this.withCompleted = withCompleted;
+        return this;
+    }
+    
+    /**
+     * deprecated. use `status[]` param.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with_pending")
+    public Boolean withPending;
+    public GetProjectsRequest withWithPending(Boolean withPending) {
+        this.withPending = withPending;
+        return this;
+    }
+    
+    /**
+     * deprecated. use `status[]` param.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with_started")
+    public Boolean withStarted;
+    public GetProjectsRequest withWithStarted(Boolean withStarted) {
+        this.withStarted = withStarted;
         return this;
     }
     

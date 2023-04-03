@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsCreateOrUpdateAudienceRequest {
-    
-    public AnalyticsCreateOrUpdateAudiencePathParams pathParams;
-    public AnalyticsCreateOrUpdateAudienceRequest withPathParams(AnalyticsCreateOrUpdateAudiencePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Audience definition
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AnalyticsCreateOrUpdateAudienceRequestBody request;
-    public AnalyticsCreateOrUpdateAudienceRequest withRequest(AnalyticsCreateOrUpdateAudienceRequestBody request) {
-        this.request = request;
+    public AnalyticsCreateOrUpdateAudienceRequestBody requestBody;
+    public AnalyticsCreateOrUpdateAudienceRequest withRequestBody(AnalyticsCreateOrUpdateAudienceRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AnalyticsCreateOrUpdateAudienceRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public AnalyticsCreateOrUpdateAudienceSecurity security;
-    public AnalyticsCreateOrUpdateAudienceRequest withSecurity(AnalyticsCreateOrUpdateAudienceSecurity security) {
-        this.security = security;
+    /**
+     * The name of the audience
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=audience_name")
+    public String audienceName;
+    public AnalyticsCreateOrUpdateAudienceRequest withAudienceName(String audienceName) {
+        this.audienceName = audienceName;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AnalyticsCreateOrUpdateAudienceRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

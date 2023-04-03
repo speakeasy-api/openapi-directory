@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsGetErrorDetailsRequest {
-    
-    public ErrorsGetErrorDetailsPathParams pathParams;
-    public ErrorsGetErrorDetailsRequest withPathParams(ErrorsGetErrorDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ErrorsGetErrorDetailsRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The id of the error group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorGroupId")
+    public String errorGroupId;
+    public ErrorsGetErrorDetailsRequest withErrorGroupId(String errorGroupId) {
+        this.errorGroupId = errorGroupId;
+        return this;
+    }
     
-    public ErrorsGetErrorDetailsSecurity security;
-    public ErrorsGetErrorDetailsRequest withSecurity(ErrorsGetErrorDetailsSecurity security) {
-        this.security = security;
+    /**
+     * The id of the error
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorId")
+    public String errorId;
+    public ErrorsGetErrorDetailsRequest withErrorId(String errorId) {
+        this.errorId = errorId;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ErrorsGetErrorDetailsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

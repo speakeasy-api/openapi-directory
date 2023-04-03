@@ -17,12 +17,10 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsCreatePathParams;
-import org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsCreateQueryParams;
 import org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsCreateRequest;
 import org.openapis.openapi.models.operations.AndroiddeviceprovisioningCustomersConfigurationsCreateResponse;
-import org.openapis.openapi.models.shared.ConfigurationInput;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.ConfigurationInput;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -32,33 +30,29 @@ public class Application {
                 .build();
 
             AndroiddeviceprovisioningCustomersConfigurationsCreateRequest req = new AndroiddeviceprovisioningCustomersConfigurationsCreateRequest() {{
-                pathParams = new AndroiddeviceprovisioningCustomersConfigurationsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new AndroiddeviceprovisioningCustomersConfigurationsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new ConfigurationInput() {{
-                    companyName = "suscipit";
-                    configurationName = "iure";
-                    contactEmail = "magnam";
-                    contactPhone = "debitis";
-                    customMessage = "ipsa";
-                    dpcExtras = "delectus";
-                    dpcResourcePath = "tempora";
+                dollarXgafv = "2";
+                configurationInput = new ConfigurationInput() {{
+                    companyName = "provident";
+                    configurationName = "distinctio";
+                    contactEmail = "quibusdam";
+                    contactPhone = "unde";
+                    customMessage = "nulla";
+                    dpcExtras = "corrupti";
+                    dpcResourcePath = "illum";
                     isDefault = false;
                 }};
-            }};            
+                accessToken = "vel";
+                alt = "media";
+                callback = "deserunt";
+                fields = "suscipit";
+                key = "iure";
+                oauthToken = "magnam";
+                parent = "debitis";
+                prettyPrint = false;
+                quotaUser = "ipsa";
+                uploadType = "delectus";
+                uploadProtocol = "tempora";
+            }}            
 
             AndroiddeviceprovisioningCustomersConfigurationsCreateResponse res = sdk.customers.androiddeviceprovisioningCustomersConfigurationsCreate(req);
 
@@ -72,7 +66,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### customers

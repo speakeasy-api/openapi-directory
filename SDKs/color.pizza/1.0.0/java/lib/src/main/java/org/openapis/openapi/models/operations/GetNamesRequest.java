@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamesRequest {
+    /**
+     * The name of the color name list to use
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=list")
+    public org.openapis.openapi.models.shared.PossibleListsEnum list;
+    public GetNamesRequest withList(org.openapis.openapi.models.shared.PossibleListsEnum list) {
+        this.list = list;
+        return this;
+    }
     
-    public GetNamesQueryParams queryParams;
-    public GetNamesRequest withQueryParams(GetNamesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the color to retrieve (min 3 characters)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=name")
+    public String name;
+    public GetNamesRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

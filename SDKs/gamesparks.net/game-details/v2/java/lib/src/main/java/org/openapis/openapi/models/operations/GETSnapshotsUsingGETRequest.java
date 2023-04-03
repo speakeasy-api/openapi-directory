@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSnapshotsUsingGETRequest {
-    
-    public GETSnapshotsUsingGETPathParams pathParams;
-    public GETSnapshotsUsingGETRequest withPathParams(GETSnapshotsUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public GETSnapshotsUsingGETRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * page
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
+    public Integer page;
+    public GETSnapshotsUsingGETRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public GETSnapshotsUsingGETQueryParams queryParams;
-    public GETSnapshotsUsingGETRequest withQueryParams(GETSnapshotsUsingGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * pageSize
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GETSnapshotsUsingGETRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

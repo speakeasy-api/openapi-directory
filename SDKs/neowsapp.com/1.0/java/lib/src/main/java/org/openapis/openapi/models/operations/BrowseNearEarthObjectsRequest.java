@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BrowseNearEarthObjectsRequest {
+    /**
+     * page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public BrowseNearEarthObjectsRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public BrowseNearEarthObjectsQueryParams queryParams;
-    public BrowseNearEarthObjectsRequest withQueryParams(BrowseNearEarthObjectsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Integer size;
+    public BrowseNearEarthObjectsRequest withSize(Integer size) {
+        this.size = size;
         return this;
     }
     

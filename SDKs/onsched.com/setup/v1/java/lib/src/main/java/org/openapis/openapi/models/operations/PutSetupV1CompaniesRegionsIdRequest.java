@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1CompaniesRegionsIdRequest {
-    
-    public PutSetupV1CompaniesRegionsIdPathParams pathParams;
-    public PutSetupV1CompaniesRegionsIdRequest withPathParams(PutSetupV1CompaniesRegionsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Region Update Model
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RegionUpdateModel request;
-    public PutSetupV1CompaniesRegionsIdRequest withRequest(org.openapis.openapi.models.shared.RegionUpdateModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RegionUpdateModel regionUpdateModel;
+    public PutSetupV1CompaniesRegionsIdRequest withRegionUpdateModel(org.openapis.openapi.models.shared.RegionUpdateModel regionUpdateModel) {
+        this.regionUpdateModel = regionUpdateModel;
+        return this;
+    }
+    
+    /**
+     * id of Region
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutSetupV1CompaniesRegionsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

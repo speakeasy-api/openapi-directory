@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchPhoneNumberRequest {
-    
-    public FetchPhoneNumberPathParams pathParams;
-    public FetchPhoneNumberRequest withPathParams(FetchPhoneNumberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to fetch the resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchPhoneNumberRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public FetchPhoneNumberSecurity security;
-    public FetchPhoneNumberRequest withSecurity(FetchPhoneNumberSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchPhoneNumberRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the PhoneNumber resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchPhoneNumberRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

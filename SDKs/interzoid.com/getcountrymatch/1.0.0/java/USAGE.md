@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetcountrymatchQueryParams;
 import org.openapis.openapi.models.operations.GetcountrymatchRequest;
 import org.openapis.openapi.models.operations.GetcountrymatchResponse;
 
@@ -15,11 +14,9 @@ public class Application {
                 .build();
 
             GetcountrymatchRequest req = new GetcountrymatchRequest() {{
-                queryParams = new GetcountrymatchQueryParams() {{
-                    country = "Malta";
-                    license = "provident";
-                }};
-            }};            
+                country = "Malta";
+                license = "provident";
+            }}            
 
             GetcountrymatchResponse res = sdk.countryMatchSimilarityKey.getcountrymatch(req);
 

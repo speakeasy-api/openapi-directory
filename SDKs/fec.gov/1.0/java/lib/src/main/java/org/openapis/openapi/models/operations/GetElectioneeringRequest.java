@@ -4,13 +4,173 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetElectioneeringRequest {
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetElectioneeringRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetElectioneeringQueryParams queryParams;
-    public GetElectioneeringRequest withQueryParams(GetElectioneeringQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A unique identifier assigned to each candidate registered with the FEC.
+     * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
+    public String[] candidateId;
+    public GetElectioneeringRequest withCandidateId(String[] candidateId) {
+        this.candidateId = candidateId;
+        return this;
+    }
+    
+    /**
+     * A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
+    public String[] committeeId;
+    public GetElectioneeringRequest withCommitteeId(String[] committeeId) {
+        this.committeeId = committeeId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public GetElectioneeringRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    /**
+     * Index of last result from previous page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_index")
+    public Integer lastIndex;
+    public GetElectioneeringRequest withLastIndex(Integer lastIndex) {
+        this.lastIndex = lastIndex;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts less than a value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_amount")
+    public String maxAmount;
+    public GetElectioneeringRequest withMaxAmount(String maxAmount) {
+        this.maxAmount = maxAmount;
+        return this;
+    }
+    
+    /**
+     * Maximum disbursement date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
+    public LocalDate maxDate;
+    public GetElectioneeringRequest withMaxDate(LocalDate maxDate) {
+        this.maxDate = maxDate;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts greater than a value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_amount")
+    public String minAmount;
+    public GetElectioneeringRequest withMinAmount(String minAmount) {
+        this.minAmount = minAmount;
+        return this;
+    }
+    
+    /**
+     * Minimum disbursement date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
+    public LocalDate minDate;
+    public GetElectioneeringRequest withMinDate(LocalDate minDate) {
+        this.minDate = minDate;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetElectioneeringRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetElectioneeringRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Forms with coverage date - 
+     *     year from the coverage ending date.
+     * Forms without coverage date - 
+     *     year from the receipt date.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_year")
+    public Integer[] reportYear;
+    public GetElectioneeringRequest withReportYear(Integer[] reportYear) {
+        this.reportYear = reportYear;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetElectioneeringRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetElectioneeringRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetElectioneeringRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetElectioneeringRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
         return this;
     }
     

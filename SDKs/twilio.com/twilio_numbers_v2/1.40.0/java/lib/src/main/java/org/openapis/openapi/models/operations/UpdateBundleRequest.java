@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBundleRequest {
-    
-    public UpdateBundlePathParams pathParams;
-    public UpdateBundleRequest withPathParams(UpdateBundlePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateBundleUpdateBundleRequest request;
-    public UpdateBundleRequest withRequest(UpdateBundleUpdateBundleRequest request) {
-        this.request = request;
+    public UpdateBundleUpdateBundleRequest requestBody;
+    public UpdateBundleRequest withRequestBody(UpdateBundleUpdateBundleRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateBundleSecurity security;
-    public UpdateBundleRequest withSecurity(UpdateBundleSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateBundleRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that we created to identify the Bundle resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateBundleRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

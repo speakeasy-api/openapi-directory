@@ -4,27 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListDeadLetterSourceQueuesRequest {
-    
-    public GETListDeadLetterSourceQueuesPathParams pathParams;
-    public GETListDeadLetterSourceQueuesRequest withPathParams(GETListDeadLetterSourceQueuesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The AWS account number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountNumber")
+    public Long accountNumber;
+    public GETListDeadLetterSourceQueuesRequest withAccountNumber(Long accountNumber) {
+        this.accountNumber = accountNumber;
         return this;
     }
     
-    
-    public GETListDeadLetterSourceQueuesQueryParams queryParams;
-    public GETListDeadLetterSourceQueuesRequest withQueryParams(GETListDeadLetterSourceQueuesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETListDeadLetterSourceQueuesActionEnum action;
+    public GETListDeadLetterSourceQueuesRequest withAction(GETListDeadLetterSourceQueuesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Maximum number of results to include in the response. Value range is 1 to 1000. You must set &lt;code&gt;MaxResults&lt;/code&gt; to receive a value for &lt;code&gt;NextToken&lt;/code&gt; in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public GETListDeadLetterSourceQueuesRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
     
-    public GETListDeadLetterSourceQueuesHeaders headers;
-    public GETListDeadLetterSourceQueuesRequest withHeaders(GETListDeadLetterSourceQueuesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Pagination token to request the next set of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETListDeadLetterSourceQueuesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The name of the queue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=QueueName")
+    public String queueName;
+    public GETListDeadLetterSourceQueuesRequest withQueueName(String queueName) {
+        this.queueName = queueName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETListDeadLetterSourceQueuesVersionEnum version;
+    public GETListDeadLetterSourceQueuesRequest withVersion(GETListDeadLetterSourceQueuesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETListDeadLetterSourceQueuesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETListDeadLetterSourceQueuesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETListDeadLetterSourceQueuesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETListDeadLetterSourceQueuesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETListDeadLetterSourceQueuesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETListDeadLetterSourceQueuesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETListDeadLetterSourceQueuesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

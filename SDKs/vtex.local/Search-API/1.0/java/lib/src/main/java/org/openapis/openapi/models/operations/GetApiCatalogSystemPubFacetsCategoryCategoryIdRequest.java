@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest {
-    
-    public GetApiCatalogSystemPubFacetsCategoryCategoryIdPathParams pathParams;
-    public GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest withPathParams(GetApiCatalogSystemPubFacetsCategoryCategoryIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetApiCatalogSystemPubFacetsCategoryCategoryIdQueryParams queryParams;
-    public GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest withQueryParams(GetApiCatalogSystemPubFacetsCategoryCategoryIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Starter page range. These parameters allow the API to be paginated. Take into account that the initial and final pages cannot have a separation superior to 50 pages. Thus, it will be displayed 50 items per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_from")
+    public String from;
+    public GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest withFrom(String from) {
+        this.from = from;
+        return this;
+    }
     
-    public GetApiCatalogSystemPubFacetsCategoryCategoryIdHeaders headers;
-    public GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest withHeaders(GetApiCatalogSystemPubFacetsCategoryCategoryIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Finisher page range. These parameters allow the API to be paginated. Take into account that the initial and final pages cannot have a separation superior to 50 pages. Thus, it will be displayed 50 items per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_to")
+    public String to;
+    public GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest withTo(String to) {
+        this.to = to;
+        return this;
+    }
+    
+    /**
+     * Category unique number identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=categoryId")
+    public String categoryId;
+    public GetApiCatalogSystemPubFacetsCategoryCategoryIdRequest withCategoryId(String categoryId) {
+        this.categoryId = categoryId;
         return this;
     }
     

@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJsonRequest {
-    
-    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJsonPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJsonRequest withPathParams(PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Required Document to add
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidApplicationJSON request;
-    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJsonRequest withRequest(PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidApplicationJSON request) {
-        this.request = request;
+    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidApplicationJSON requestBody;
+    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJsonRequest withRequestBody(PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the folder exchange or followup
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJsonRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJsonSecurity security;
-    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJsonRequest withSecurity(PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJsonSecurity security) {
-        this.security = security;
+    /**
+     * Id of the requireddocument
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=requireddocumentid")
+    public String requireddocumentid;
+    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJsonRequest withRequireddocumentid(String requireddocumentid) {
+        this.requireddocumentid = requireddocumentid;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdRequiredDocumentsRequireddocumentidJsonRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

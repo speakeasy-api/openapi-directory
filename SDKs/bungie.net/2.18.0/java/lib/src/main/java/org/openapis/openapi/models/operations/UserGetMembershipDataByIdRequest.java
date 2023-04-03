@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserGetMembershipDataByIdRequest {
+    /**
+     * The membership ID of the target user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
+    public Long membershipId;
+    public UserGetMembershipDataByIdRequest withMembershipId(Long membershipId) {
+        this.membershipId = membershipId;
+        return this;
+    }
     
-    public UserGetMembershipDataByIdPathParams pathParams;
-    public UserGetMembershipDataByIdRequest withPathParams(UserGetMembershipDataByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Type of the supplied membership ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public UserGetMembershipDataByIdRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

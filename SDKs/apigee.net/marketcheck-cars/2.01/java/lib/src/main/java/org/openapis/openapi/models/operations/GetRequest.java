@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRequest {
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetQueryParams queryParams;
-    public GetRequest withQueryParams(GetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * To filter listing on Country in which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public GetCountryEnum country;
+    public GetRequest withCountry(GetCountryEnum country) {
+        this.country = country;
         return this;
     }
     

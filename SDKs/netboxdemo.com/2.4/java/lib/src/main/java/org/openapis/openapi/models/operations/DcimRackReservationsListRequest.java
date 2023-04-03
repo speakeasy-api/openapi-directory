@@ -4,13 +4,113 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimRackReservationsListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created")
+    public String created;
+    public DcimRackReservationsListRequest withCreated(String created) {
+        this.created = created;
+        return this;
+    }
     
-    public DcimRackReservationsListQueryParams queryParams;
-    public DcimRackReservationsListRequest withQueryParams(DcimRackReservationsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public String group;
+    public DcimRackReservationsListRequest withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
+    public String groupId;
+    public DcimRackReservationsListRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * Multiple values may be separated by commas.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__in")
+    public String idIn;
+    public DcimRackReservationsListRequest withIdIn(String idIn) {
+        this.idIn = idIn;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public DcimRackReservationsListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public DcimRackReservationsListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public DcimRackReservationsListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rack_id")
+    public String rackId;
+    public DcimRackReservationsListRequest withRackId(String rackId) {
+        this.rackId = rackId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
+    public String site;
+    public DcimRackReservationsListRequest withSite(String site) {
+        this.site = site;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site_id")
+    public String siteId;
+    public DcimRackReservationsListRequest withSiteId(String siteId) {
+        this.siteId = siteId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant")
+    public String tenant;
+    public DcimRackReservationsListRequest withTenant(String tenant) {
+        this.tenant = tenant;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant_id")
+    public String tenantId;
+    public DcimRackReservationsListRequest withTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
+    public String user;
+    public DcimRackReservationsListRequest withUser(String user) {
+        this.user = user;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
+    public String userId;
+    public DcimRackReservationsListRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

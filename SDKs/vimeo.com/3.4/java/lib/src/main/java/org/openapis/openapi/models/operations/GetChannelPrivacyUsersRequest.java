@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelPrivacyUsersRequest {
-    
-    public GetChannelPrivacyUsersPathParams pathParams;
-    public GetChannelPrivacyUsersRequest withPathParams(GetChannelPrivacyUsersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public GetChannelPrivacyUsersRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetChannelPrivacyUsersDirectionEnum direction;
+    public GetChannelPrivacyUsersRequest withDirection(GetChannelPrivacyUsersDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public GetChannelPrivacyUsersQueryParams queryParams;
-    public GetChannelPrivacyUsersRequest withQueryParams(GetChannelPrivacyUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetChannelPrivacyUsersRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetChannelPrivacyUsersRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
         return this;
     }
     

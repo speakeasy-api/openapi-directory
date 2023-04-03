@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateConfigRequest {
-    
-    public CreateConfigPathParams pathParams;
-    public CreateConfigRequest withPathParams(CreateConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateConfigRequest createConfigRequest;
+    public CreateConfigRequest withCreateConfigRequest(org.openapis.openapi.models.shared.CreateConfigRequest createConfigRequest) {
+        this.createConfigRequest = createConfigRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateConfigRequest request;
-    public CreateConfigRequest withRequest(org.openapis.openapi.models.shared.CreateConfigRequest request) {
-        this.request = request;
+    /**
+     * The identifier of the Product.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public CreateConfigRequest withProductId(String productId) {
+        this.productId = productId;
         return this;
     }
     

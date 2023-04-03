@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOntolLabelerResourceRequest {
-    
-    public GetOntolLabelerResourceQueryParams queryParams;
-    public GetOntolLabelerResourceRequest withQueryParams(GetOntolLabelerResourceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * List of ids
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String[] id;
+    public GetOntolLabelerResourceRequest withId(String[] id) {
+        this.id = id;
         return this;
     }
     

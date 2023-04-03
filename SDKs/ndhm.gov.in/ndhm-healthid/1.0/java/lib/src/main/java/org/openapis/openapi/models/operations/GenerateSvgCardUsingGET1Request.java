@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateSvgCardUsingGET1Request {
-    
-    public GenerateSvgCardUsingGET1Headers headers;
-    public GenerateSvgCardUsingGET1Request withHeaders(GenerateSvgCardUsingGET1Headers headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public GenerateSvgCardUsingGET1Request withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
+    /**
+     * Your health id
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Health-ID")
+    public String healthID;
+    public GenerateSvgCardUsingGET1Request withHealthID(String healthID) {
+        this.healthID = healthID;
+        return this;
+    }
     
-    public GenerateSvgCardUsingGET1Security security;
-    public GenerateSvgCardUsingGET1Request withSecurity(GenerateSvgCardUsingGET1Security security) {
-        this.security = security;
+    /**
+     * Auth Token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Token")
+    public String xToken;
+    public GenerateSvgCardUsingGET1Request withXToken(String xToken) {
+        this.xToken = xToken;
         return this;
     }
     

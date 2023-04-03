@@ -20,19 +20,15 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1;
 import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption2;
 import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity;
-import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreatePathParams;
-import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateQueryParams;
 import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest;
 import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.CapacityCommitmentEditionEnum;
 import org.openapis.openapi.models.shared.CapacityCommitmentPlanEnum;
 import org.openapis.openapi.models.shared.CapacityCommitmentRenewalPlanEnum;
 import org.openapis.openapi.models.shared.CapacityCommitmentInput;
 import org.openapis.openapi.models.shared.Status;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -41,64 +37,60 @@ public class Application {
                 .build();
 
             BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest req = new BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest() {{
-                security = new BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity() {{
-                    option1 = new BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new BigqueryreservationProjectsLocationsCapacityCommitmentsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new BigqueryreservationProjectsLocationsCapacityCommitmentsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    capacityCommitmentId = "nulla";
-                    enforceSingleAdminProjectPerOrg = false;
-                    fields = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    uploadType = "deserunt";
-                    uploadProtocol = "suscipit";
-                }};
-                request = new CapacityCommitmentInput() {{
-                    edition = "STANDARD";
+                dollarXgafv = "2";
+                capacityCommitmentInput = new CapacityCommitmentInput() {{
+                    edition = "ENTERPRISE";
                     failureStatus = new Status() {{
-                        code = 297534;
+                        code = 715190;
                         details = new java.util.HashMap<String, Object>[]{{
                             add(new java.util.HashMap<String, Object>() {{
-                                put("delectus", "tempora");
+                                put("nulla", "corrupti");
+                                put("illum", "vel");
+                                put("error", "deserunt");
                             }}),
                             add(new java.util.HashMap<String, Object>() {{
+                                put("iure", "magnam");
+                                put("debitis", "ipsa");
+                            }}),
+                            add(new java.util.HashMap<String, Object>() {{
+                                put("tempora", "suscipit");
                                 put("molestiae", "minus");
                                 put("placeat", "voluptatum");
+                                put("iusto", "excepturi");
                             }}),
                             add(new java.util.HashMap<String, Object>() {{
-                                put("excepturi", "nisi");
                                 put("recusandae", "temporibus");
-                            }}),
-                            add(new java.util.HashMap<String, Object>() {{
-                                put("quis", "veritatis");
+                                put("ab", "quis");
                             }}),
                         }};
-                        message = "deserunt";
+                        message = "veritatis";
                     }};
                     multiRegionAuxiliary = false;
-                    plan = "COMMITMENT_PLAN_UNSPECIFIED";
-                    renewalPlan = "TRIAL";
-                    slotCount = "repellendus";
+                    plan = "ANNUAL";
+                    renewalPlan = "COMMITMENT_PLAN_UNSPECIFIED";
+                    slotCount = "ipsam";
                 }};
-            }};            
+                accessToken = "repellendus";
+                alt = "proto";
+                callback = "quo";
+                capacityCommitmentId = "odit";
+                enforceSingleAdminProjectPerOrg = false;
+                fields = "at";
+                key = "at";
+                oauthToken = "maiores";
+                parent = "molestiae";
+                prettyPrint = false;
+                quotaUser = "quod";
+                uploadType = "quod";
+                uploadProtocol = "esse";
+            }}            
 
-            BigqueryreservationProjectsLocationsCapacityCommitmentsCreateResponse res = sdk.projects.bigqueryreservationProjectsLocationsCapacityCommitmentsCreate(req);
+            BigqueryreservationProjectsLocationsCapacityCommitmentsCreateResponse res = sdk.projects.bigqueryreservationProjectsLocationsCapacityCommitmentsCreate(req, new BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity() {{
+                option1 = new BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.capacityCommitment.isPresent()) {
                 // handle response
@@ -110,7 +102,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

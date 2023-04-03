@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveALimitRequest {
-    
-    public RetrieveALimitPathParams pathParams;
-    public RetrieveALimitRequest withPathParams(RetrieveALimitPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=limit_id")
+    public String limitId;
+    public RetrieveALimitRequest withLimitId(String limitId) {
+        this.limitId = limitId;
         return this;
     }
     

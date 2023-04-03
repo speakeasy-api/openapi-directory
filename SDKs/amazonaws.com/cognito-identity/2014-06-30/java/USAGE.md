@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateIdentityPoolXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CreateIdentityPoolHeaders;
 import org.openapis.openapi.models.operations.CreateIdentityPoolRequest;
 import org.openapis.openapi.models.operations.CreateIdentityPoolResponse;
 import org.openapis.openapi.models.shared.CreateIdentityPoolInput;
@@ -16,71 +15,66 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateIdentityPoolRequest req = new CreateIdentityPoolRequest() {{
-                headers = new CreateIdentityPoolHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AWSCognitoIdentityService.CreateIdentityPool";
-                }};
-                request = new CreateIdentityPoolInput() {{
+                createIdentityPoolInput = new CreateIdentityPoolInput() {{
                     allowClassicFlow = false;
                     allowUnauthenticatedIdentities = false;
                     cognitoIdentityProviders = new org.openapis.openapi.models.shared.CognitoIdentityProvider[]{{
                         add(new CognitoIdentityProvider() {{
-                            clientId = "vel";
-                            providerName = "error";
+                            clientId = "provident";
+                            providerName = "distinctio";
                             serverSideTokenCheck = false;
                         }}),
                         add(new CognitoIdentityProvider() {{
-                            clientId = "deserunt";
-                            providerName = "suscipit";
+                            clientId = "quibusdam";
+                            providerName = "unde";
                             serverSideTokenCheck = false;
                         }}),
                         add(new CognitoIdentityProvider() {{
-                            clientId = "iure";
-                            providerName = "magnam";
-                            serverSideTokenCheck = false;
-                        }}),
-                        add(new CognitoIdentityProvider() {{
-                            clientId = "debitis";
-                            providerName = "ipsa";
+                            clientId = "nulla";
+                            providerName = "corrupti";
                             serverSideTokenCheck = false;
                         }}),
                     }};
-                    developerProviderName = "delectus";
-                    identityPoolName = "tempora";
+                    developerProviderName = "illum";
+                    identityPoolName = "vel";
                     identityPoolTags = new java.util.HashMap<String, String>() {{
-                        put("molestiae", "minus");
-                        put("placeat", "voluptatum");
+                        put("deserunt", "suscipit");
+                        put("iure", "magnam");
+                        put("debitis", "ipsa");
                     }};
                     openIdConnectProviderARNs = new String[]{{
+                        add("tempora"),
+                        add("suscipit"),
+                        add("molestiae"),
+                        add("minus"),
+                    }};
+                    samlProviderARNs = new String[]{{
+                        add("voluptatum"),
+                        add("iusto"),
                         add("excepturi"),
                         add("nisi"),
                     }};
-                    samlProviderARNs = new String[]{{
-                        add("temporibus"),
-                        add("ab"),
-                        add("quis"),
-                        add("veritatis"),
-                    }};
                     supportedLoginProviders = new java.util.HashMap<String, String>() {{
-                        put("perferendis", "ipsam");
-                        put("repellendus", "sapiente");
-                        put("quo", "odit");
+                        put("temporibus", "ab");
+                        put("quis", "veritatis");
+                        put("deserunt", "perferendis");
+                        put("ipsam", "repellendus");
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "sapiente";
+                xAmzContentSha256 = "quo";
+                xAmzCredential = "odit";
+                xAmzDate = "at";
+                xAmzSecurityToken = "at";
+                xAmzSignature = "maiores";
+                xAmzSignedHeaders = "molestiae";
+                xAmzTarget = "AWSCognitoIdentityService.CreateIdentityPool";
+            }}            
 
             CreateIdentityPoolResponse res = sdk.createIdentityPool(req);
 

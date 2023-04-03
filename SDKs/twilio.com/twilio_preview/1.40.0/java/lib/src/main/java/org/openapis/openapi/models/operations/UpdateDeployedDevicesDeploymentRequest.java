@@ -7,31 +7,27 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeployedDevicesDeploymentRequest {
-    
-    public UpdateDeployedDevicesDeploymentPathParams pathParams;
-    public UpdateDeployedDevicesDeploymentRequest withPathParams(UpdateDeployedDevicesDeploymentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FleetSid")
+    public String fleetSid;
+    public UpdateDeployedDevicesDeploymentRequest withFleetSid(String fleetSid) {
+        this.fleetSid = fleetSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateDeployedDevicesDeploymentUpdateDeployedDevicesDeploymentRequest request;
-    public UpdateDeployedDevicesDeploymentRequest withRequest(UpdateDeployedDevicesDeploymentUpdateDeployedDevicesDeploymentRequest request) {
-        this.request = request;
+    public UpdateDeployedDevicesDeploymentUpdateDeployedDevicesDeploymentRequest requestBody;
+    public UpdateDeployedDevicesDeploymentRequest withRequestBody(UpdateDeployedDevicesDeploymentUpdateDeployedDevicesDeploymentRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateDeployedDevicesDeploymentSecurity security;
-    public UpdateDeployedDevicesDeploymentRequest withSecurity(UpdateDeployedDevicesDeploymentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateDeployedDevicesDeploymentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Provides a 34 character string that uniquely identifies the requested Deployment resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateDeployedDevicesDeploymentRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

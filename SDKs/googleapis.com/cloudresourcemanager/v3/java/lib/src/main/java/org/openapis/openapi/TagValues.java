@@ -34,27 +34,28 @@ public class TagValues {
     /**
      * Creates a TagValue as a child of the specified TagKey. If a another request with the same parameters is sent while the original request is in process the second request will receive an error. A maximum of 1000 TagValues can exist under a TagKey at any given time.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesCreateResponse cloudresourcemanagerTagValuesCreate(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesCreateResponse cloudresourcemanagerTagValuesCreate(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesCreateRequest request, org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v3/tagValues");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "tagValueInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class TagValues {
     /**
      * Retrieves a TagValue. This method will return `PERMISSION_DENIED` if the value does not exist or the user does not have permission to view it.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetResponse cloudresourcemanagerTagValuesGet(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetResponse cloudresourcemanagerTagValuesGet(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetRequest request, org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetPathParams.class, baseUrl, "/v3/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetRequest.class, baseUrl, "/v3/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,27 +128,28 @@ public class TagValues {
     /**
      * Gets the access control policy for a TagValue. The returned policy may be empty if no such policy or resource exists. The `resource` field should be the TagValue's resource name. For example: `tagValues/1234`. The caller must have the `cloudresourcemanager.googleapis.com/tagValues.getIamPolicy` permission on the identified TagValue to get the access control policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetIamPolicyResponse cloudresourcemanagerTagValuesGetIamPolicy(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetIamPolicyResponse cloudresourcemanagerTagValuesGetIamPolicy(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetIamPolicyRequest request, org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetIamPolicyPathParams.class, baseUrl, "/v3/{resource}:getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetIamPolicyRequest.class, baseUrl, "/v3/{resource}:getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "getIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,10 +176,11 @@ public class TagValues {
     /**
      * Lists all TagValues for a specific TagKey.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesListResponse cloudresourcemanagerTagValuesList(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesListResponse cloudresourcemanagerTagValuesList(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesListRequest request, org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v3/tagValues");
         
@@ -184,14 +188,14 @@ public class TagValues {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,27 +222,28 @@ public class TagValues {
     /**
      * Updates the attributes of the TagValue resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesPatchResponse cloudresourcemanagerTagValuesPatch(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesPatchResponse cloudresourcemanagerTagValuesPatch(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesPatchRequest request, org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesPatchPathParams.class, baseUrl, "/v3/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesPatchRequest.class, baseUrl, "/v3/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "tagValueInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -265,27 +270,28 @@ public class TagValues {
     /**
      * Sets the access control policy on a TagValue, replacing any existing policy. The `resource` field should be the TagValue's resource name. For example: `tagValues/1234`. The caller must have `resourcemanager.tagValues.setIamPolicy` permission on the identified tagValue.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesSetIamPolicyResponse cloudresourcemanagerTagValuesSetIamPolicy(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesSetIamPolicyResponse cloudresourcemanagerTagValuesSetIamPolicy(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesSetIamPolicyRequest request, org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesSetIamPolicyPathParams.class, baseUrl, "/v3/{resource}:setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesSetIamPolicyRequest.class, baseUrl, "/v3/{resource}:setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -312,27 +318,28 @@ public class TagValues {
     /**
      * Creates a TagHold. Returns ALREADY_EXISTS if a TagHold with the same resource and origin exists under the same TagValue.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsCreateResponse cloudresourcemanagerTagValuesTagHoldsCreate(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsCreateResponse cloudresourcemanagerTagValuesTagHoldsCreate(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsCreateRequest request, org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsCreatePathParams.class, baseUrl, "/v3/{parent}/tagHolds", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsCreateRequest.class, baseUrl, "/v3/{parent}/tagHolds", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "tagHoldInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -359,25 +366,26 @@ public class TagValues {
     /**
      * Deletes a TagHold.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsDeleteResponse cloudresourcemanagerTagValuesTagHoldsDelete(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsDeleteResponse cloudresourcemanagerTagValuesTagHoldsDelete(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsDeleteRequest request, org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsDeletePathParams.class, baseUrl, "/v3/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsDeleteRequest.class, baseUrl, "/v3/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -404,25 +412,26 @@ public class TagValues {
     /**
      * Lists TagHolds under a TagValue.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsListResponse cloudresourcemanagerTagValuesTagHoldsList(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsListResponse cloudresourcemanagerTagValuesTagHoldsList(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsListRequest request, org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsListPathParams.class, baseUrl, "/v3/{parent}/tagHolds", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsListRequest.class, baseUrl, "/v3/{parent}/tagHolds", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTagHoldsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -449,27 +458,28 @@ public class TagValues {
     /**
      * Returns permissions that a caller has on the specified TagValue. The `resource` field should be the TagValue's resource name. For example: `tagValues/1234`. There are no permissions required for making this API call.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTestIamPermissionsResponse cloudresourcemanagerTagValuesTestIamPermissions(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTestIamPermissionsResponse cloudresourcemanagerTagValuesTestIamPermissions(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTestIamPermissionsRequest request, org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTestIamPermissionsPathParams.class, baseUrl, "/v3/{resource}:testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTestIamPermissionsRequest.class, baseUrl, "/v3/{resource}:testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testIamPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudresourcemanagerTagValuesTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

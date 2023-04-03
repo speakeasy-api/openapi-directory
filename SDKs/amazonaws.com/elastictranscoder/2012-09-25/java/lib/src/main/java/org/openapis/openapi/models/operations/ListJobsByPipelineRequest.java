@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListJobsByPipelineRequest {
-    
-    public ListJobsByPipelinePathParams pathParams;
-    public ListJobsByPipelineRequest withPathParams(ListJobsByPipelinePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     *  To list jobs in chronological order by the date and time that they were submitted, enter &lt;code&gt;true&lt;/code&gt;. To list jobs in reverse chronological order, enter &lt;code&gt;false&lt;/code&gt;. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ascending")
+    public String ascending;
+    public ListJobsByPipelineRequest withAscending(String ascending) {
+        this.ascending = ascending;
         return this;
     }
     
-    
-    public ListJobsByPipelineQueryParams queryParams;
-    public ListJobsByPipelineRequest withQueryParams(ListJobsByPipelineQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     *  When Elastic Transcoder returns more than one page of results, use &lt;code&gt;pageToken&lt;/code&gt; in subsequent &lt;code&gt;GET&lt;/code&gt; requests to get each successive page of results. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListJobsByPipelineRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     
+    /**
+     * The ID of the pipeline for which you want to get job information.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PipelineId")
+    public String pipelineId;
+    public ListJobsByPipelineRequest withPipelineId(String pipelineId) {
+        this.pipelineId = pipelineId;
+        return this;
+    }
     
-    public ListJobsByPipelineHeaders headers;
-    public ListJobsByPipelineRequest withHeaders(ListJobsByPipelineHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListJobsByPipelineRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListJobsByPipelineRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListJobsByPipelineRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListJobsByPipelineRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListJobsByPipelineRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListJobsByPipelineRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListJobsByPipelineRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

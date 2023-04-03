@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateAwsLogSourceHeaders;
 import org.openapis.openapi.models.operations.CreateAwsLogSourceRequestBody;
 import org.openapis.openapi.models.operations.CreateAwsLogSourceRequest;
 import org.openapis.openapi.models.operations.CreateAwsLogSourceResponse;
@@ -28,44 +27,40 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateAwsLogSourceRequest req = new CreateAwsLogSourceRequest() {{
-                headers = new CreateAwsLogSourceHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateAwsLogSourceRequestBody() {{
+                requestBody = new CreateAwsLogSourceRequestBody() {{
                     enableAllDimensions = new java.util.HashMap<String, java.util.HashMap<String, String[]>>() {{
-                        put("vel", new java.util.HashMap<String, String[]>() {{
-                            put("deserunt", new String[]{{
+                        put("provident", new java.util.HashMap<String, String[]>() {{
+                            put("quibusdam", new String[]{{
+                                add("nulla"),
+                                add("corrupti"),
+                                add("illum"),
+                            }});
+                            put("vel", new String[]{{
+                                add("deserunt"),
+                                add("suscipit"),
                                 add("iure"),
-                                add("magnam"),
                             }});
-                            put("debitis", new String[]{{
+                            put("magnam", new String[]{{
+                                add("ipsa"),
                                 add("delectus"),
-                            }});
-                            put("tempora", new String[]{{
-                                add("molestiae"),
-                                add("minus"),
+                                add("tempora"),
+                                add("suscipit"),
                             }});
                         }});
-                        put("placeat", new java.util.HashMap<String, String[]>() {{
-                            put("iusto", new String[]{{
+                        put("molestiae", new java.util.HashMap<String, String[]>() {{
+                            put("placeat", new String[]{{
+                                add("iusto"),
+                                add("excepturi"),
                                 add("nisi"),
-                                add("recusandae"),
-                                add("temporibus"),
                             }});
-                            put("ab", new String[]{{
+                            put("recusandae", new String[]{{
+                                add("ab"),
+                                add("quis"),
                                 add("veritatis"),
                                 add("deserunt"),
                             }});
@@ -73,26 +68,26 @@ public class Application {
                                 add("repellendus"),
                                 add("sapiente"),
                             }});
-                        }});
-                        put("quo", new java.util.HashMap<String, String[]>() {{
-                            put("at", new String[]{{
-                                add("maiores"),
-                                add("molestiae"),
-                                add("quod"),
-                                add("quod"),
+                            put("quo", new String[]{{
+                                add("at"),
                             }});
                         }});
-                        put("esse", new java.util.HashMap<String, String[]>() {{
-                            put("porro", new String[]{{
-                                add("dicta"),
-                                add("nam"),
-                                add("officia"),
-                            }});
-                            put("occaecati", new String[]{{
-                                add("deleniti"),
-                            }});
-                            put("hic", new String[]{{
+                        put("at", new java.util.HashMap<String, String[]>() {{
+                            put("molestiae", new String[]{{
+                                add("quod"),
+                                add("esse"),
                                 add("totam"),
+                                add("porro"),
+                            }});
+                            put("dolorum", new String[]{{
+                                add("nam"),
+                            }});
+                            put("officia", new String[]{{
+                                add("fugit"),
+                                add("deleniti"),
+                                add("hic"),
+                            }});
+                            put("optio", new String[]{{
                                 add("beatae"),
                                 add("commodi"),
                                 add("molestiae"),
@@ -118,7 +113,14 @@ public class Application {
                         add("SOURCE_TYPE"),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "laboriosam";
+                xAmzContentSha256 = "hic";
+                xAmzCredential = "saepe";
+                xAmzDate = "fuga";
+                xAmzSecurityToken = "in";
+                xAmzSignature = "corporis";
+                xAmzSignedHeaders = "iste";
+            }}            
 
             CreateAwsLogSourceResponse res = sdk.createAwsLogSource(req);
 
@@ -132,7 +134,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

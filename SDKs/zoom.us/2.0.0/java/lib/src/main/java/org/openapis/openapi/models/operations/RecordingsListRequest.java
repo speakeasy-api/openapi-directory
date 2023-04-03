@@ -4,27 +4,92 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RecordingsListRequest {
-    
-    public RecordingsListPathParams pathParams;
-    public RecordingsListRequest withPathParams(RecordingsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The start date in 'yyyy-mm-dd' UTC format for the date range for which you would like to retrieve recordings. The maximum range can be a month. If no value is provided for this field, the default will be current date. For example, if you make the API request on June 30, 2020, without providing the \u201cfrom\u201d and \u201cto\u201d parameters, by default the value of 'from' field will be \u201c2020-06-30\u201d and the value of the 'to' field will be \u201c2020-07-01\u201d. 
+     * 
+     * **Note**: The "trash" files cannot be filtered by date range and thus, the "from" and "to" fields should not be used for trash files.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public LocalDate from;
+    public RecordingsListRequest withFrom(LocalDate from) {
+        this.from = from;
         return this;
     }
     
-    
-    public RecordingsListQueryParams queryParams;
-    public RecordingsListRequest withQueryParams(RecordingsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Query Metadata of Recording if an On-Premise Meeting Connector was used for the meeting.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mc")
+    public String mc;
+    public RecordingsListRequest withMc(String mc) {
+        this.mc = mc;
         return this;
     }
     
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public RecordingsListRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
     
-    public RecordingsListSecurity security;
-    public RecordingsListRequest withSecurity(RecordingsListSecurity security) {
-        this.security = security;
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public RecordingsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * End date in 'yyyy-mm-dd' 'yyyy-mm-dd' UTC format. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public LocalDate to;
+    public RecordingsListRequest withTo(LocalDate to) {
+        this.to = to;
+        return this;
+    }
+    
+    /**
+     * Query trash.
+     * `true`: List recordings from trash.&lt;br&gt; `false`: Do not list recordings from the trash.&lt;br&gt; The default value is `false`. If you set it to `true`, you can use the `trash_type` property to indicate the type of Cloud recording that you need to retrieve. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trash")
+    public Boolean trash;
+    public RecordingsListRequest withTrash(Boolean trash) {
+        this.trash = trash;
+        return this;
+    }
+    
+    /**
+     * The type of Cloud recording that you would like to retrieve from the trash. The value can be one of the following:&lt;br&gt;
+     *     `meeting_recordings`: List all meeting recordings from the trash.&lt;br&gt;
+     *     `recording_file`: List all individual recording files from the trash. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trash_type")
+    public String trashType;
+    public RecordingsListRequest withTrashType(String trashType) {
+        this.trashType = trashType;
+        return this;
+    }
+    
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public RecordingsListRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProcessOrderRequest {
-    
-    public ProcessOrderPathParams pathParams;
-    public ProcessOrderRequest withPathParams(ProcessOrderPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ProcessOrderRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ProcessOrderRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public ProcessOrderHeaders headers;
-    public ProcessOrderRequest withHeaders(ProcessOrderHeaders headers) {
-        this.headers = headers;
+    /**
+     * VTEX Chekout cookie associated with a specific order. Use the `Vtex_CHKO_Auth` and the `CheckoutDataAccess` cookies returned by the [Place order](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorder) or [Place order from existing cart](https://developers.vtex.com/vtex-rest-api/reference/order-placement-1#placeorderfromexistingorderform) API requests, like a browser would.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Cookie")
+    public String cookie;
+    public ProcessOrderRequest withCookie(String cookie) {
+        this.cookie = cookie;
+        return this;
+    }
+    
+    /**
+     * Order group. It is the part of the `orderId` that comes before the `-`. For example, the `orderGroup` of the order `123456789-01` is `123456789`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderGroup")
+    public String orderGroup;
+    public ProcessOrderRequest withOrderGroup(String orderGroup) {
+        this.orderGroup = orderGroup;
         return this;
     }
     

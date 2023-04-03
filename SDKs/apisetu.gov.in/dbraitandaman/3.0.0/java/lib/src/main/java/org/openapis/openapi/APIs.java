@@ -34,10 +34,11 @@ public class APIs {
      * Transfer Certificate
      * API to verify Transfer Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TrcerResponse trcer(org.openapis.openapi.models.operations.TrcerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TrcerResponse trcer(org.openapis.openapi.models.operations.TrcerRequestBody request, org.openapis.openapi.models.operations.TrcerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/trcer/certificate");
         
@@ -48,7 +49,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

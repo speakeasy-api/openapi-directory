@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSetupV1LocationsIdDeleteallimagesRequest {
-    
-    public DeleteSetupV1LocationsIdDeleteallimagesPathParams pathParams;
-    public DeleteSetupV1LocationsIdDeleteallimagesRequest withPathParams(DeleteSetupV1LocationsIdDeleteallimagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteSetupV1LocationsIdDeleteallimagesRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public DeleteSetupV1LocationsIdDeleteallimagesQueryParams queryParams;
-    public DeleteSetupV1LocationsIdDeleteallimagesRequest withQueryParams(DeleteSetupV1LocationsIdDeleteallimagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uppercase")
+    public Boolean uppercase;
+    public DeleteSetupV1LocationsIdDeleteallimagesRequest withUppercase(Boolean uppercase) {
+        this.uppercase = uppercase;
         return this;
     }
     

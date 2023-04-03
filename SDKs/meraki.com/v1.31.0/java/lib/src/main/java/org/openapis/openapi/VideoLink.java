@@ -40,13 +40,13 @@ public class VideoLink {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraVideoLinkResponse getDeviceCameraVideoLink(org.openapis.openapi.models.operations.GetDeviceCameraVideoLinkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraVideoLinkPathParams.class, baseUrl, "/devices/{serial}/camera/videoLink", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraVideoLinkRequest.class, baseUrl, "/devices/{serial}/camera/videoLink", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceCameraVideoLinkQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceCameraVideoLinkRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

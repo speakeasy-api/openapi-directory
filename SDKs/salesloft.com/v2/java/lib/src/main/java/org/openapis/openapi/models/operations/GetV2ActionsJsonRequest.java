@@ -4,13 +4,164 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2ActionsJsonRequest {
+    /**
+     * Filters actions by cadence_id. Multiple cadence ids can be applied
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=cadence_id")
+    public Long[] cadenceId;
+    public GetV2ActionsJsonRequest withCadenceId(Long[] cadenceId) {
+        this.cadenceId = cadenceId;
+        return this;
+    }
     
-    public GetV2ActionsJsonQueryParams queryParams;
-    public GetV2ActionsJsonRequest withQueryParams(GetV2ActionsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Equality filters that are applied to the due_on field. A single filter can be used by itself or combined with other filters to create a range.
+     * 
+     * ---CUSTOM---
+     * {"type":"object","keys":[{"name":"gt","type":"iso8601 string","description":"Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"gte","type":"iso8601 string","description":"Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lt","type":"iso8601 string","description":"Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lte","type":"iso8601 string","description":"Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."}]}
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=due_on")
+    public String[] dueOn;
+    public GetV2ActionsJsonRequest withDueOn(String[] dueOn) {
+        this.dueOn = dueOn;
+        return this;
+    }
+    
+    /**
+     * IDs of actions to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
+    public Long[] ids;
+    public GetV2ActionsJsonRequest withIds(Long[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    /**
+     * Whether to include total_pages and total_count in the metadata. Defaults to false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
+    public Boolean includePagingCounts;
+    public GetV2ActionsJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
+        this.includePagingCounts = includePagingCounts;
+        return this;
+    }
+    
+    /**
+     * Specifies whether the max limit of 10k records should be applied to pagination counts. Affects the total_count and total_pages data
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
+    public Boolean limitPagingCounts;
+    public GetV2ActionsJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
+        this.limitPagingCounts = limitPagingCounts;
+        return this;
+    }
+    
+    /**
+     * Filters actions by multitouch_group_id. Multiple multitouch group ids can be applied
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=multitouch_group_id")
+    public Long[] multitouchGroupId;
+    public GetV2ActionsJsonRequest withMultitouchGroupId(Long[] multitouchGroupId) {
+        this.multitouchGroupId = multitouchGroupId;
+        return this;
+    }
+    
+    /**
+     * The current page to fetch results from. Defaults to 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetV2ActionsJsonRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many records to show per page in the range [1, 100]. Defaults to 25
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetV2ActionsJsonRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Filters actions by person_id. Multiple person ids can be applied
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=person_id")
+    public Long[] personId;
+    public GetV2ActionsJsonRequest withPersonId(Long[] personId) {
+        this.personId = personId;
+        return this;
+    }
+    
+    /**
+     * Key to sort on, must be one of: created_at, updated_at. Defaults to updated_at
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public String sortBy;
+    public GetV2ActionsJsonRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
+    public String sortDirection;
+    public GetV2ActionsJsonRequest withSortDirection(String sortDirection) {
+        this.sortDirection = sortDirection;
+        return this;
+    }
+    
+    /**
+     * Fetch actions by step ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=step_id")
+    public Long stepId;
+    public GetV2ActionsJsonRequest withStepId(Long stepId) {
+        this.stepId = stepId;
+        return this;
+    }
+    
+    /**
+     * Filter actions by type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public GetV2ActionsJsonRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range.
+     * 
+     * ---CUSTOM---
+     * {"type":"object","keys":[{"name":"gt","type":"iso8601 string","description":"Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"gte","type":"iso8601 string","description":"Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lt","type":"iso8601 string","description":"Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lte","type":"iso8601 string","description":"Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."}]}
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=updated_at")
+    public String[] updatedAt;
+    public GetV2ActionsJsonRequest withUpdatedAt(String[] updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+    
+    /**
+     * Filters actions by the user's guid. Multiple user guids can be applied. The user must be a team admin to filter other users' actions
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=user_guid")
+    public String[] userGuid;
+    public GetV2ActionsJsonRequest withUserGuid(String[] userGuid) {
+        this.userGuid = userGuid;
         return this;
     }
     

@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/KecerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/KecerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/KecerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/KecerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/KecerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Kecer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Kecer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Kecer504ApplicationJSON.java
@@ -61,7 +60,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/TapcnSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/TapcnRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/TapcnRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/TapcnRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/TapcnRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Tapcn504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Tapcn504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Tapcn504ApplicationJSON.java
@@ -88,7 +86,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/TdlcsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/TdlcsRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/TdlcsRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/TdlcsRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/TdlcsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Tdlcs504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Tdlcs504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Tdlcs504ApplicationJSON.java
@@ -115,7 +112,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/UgdcnSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/UgdcnRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/UgdcnRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UgdcnRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/UgdcnRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Ugdcn504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Ugdcn504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Ugdcn504ApplicationJSON.java
@@ -149,6 +145,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 USAGE.md

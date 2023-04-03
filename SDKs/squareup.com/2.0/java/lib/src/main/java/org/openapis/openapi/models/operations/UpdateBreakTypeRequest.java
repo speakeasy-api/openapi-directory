@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBreakTypeRequest {
-    
-    public UpdateBreakTypePathParams pathParams;
-    public UpdateBreakTypeRequest withPathParams(UpdateBreakTypePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateBreakTypeRequest request;
-    public UpdateBreakTypeRequest withRequest(org.openapis.openapi.models.shared.UpdateBreakTypeRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateBreakTypeRequest updateBreakTypeRequest;
+    public UpdateBreakTypeRequest withUpdateBreakTypeRequest(org.openapis.openapi.models.shared.UpdateBreakTypeRequest updateBreakTypeRequest) {
+        this.updateBreakTypeRequest = updateBreakTypeRequest;
         return this;
     }
     
-    
-    public UpdateBreakTypeSecurity security;
-    public UpdateBreakTypeRequest withSecurity(UpdateBreakTypeSecurity security) {
-        this.security = security;
+    /**
+     *  The UUID for the `BreakType` being updated.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateBreakTypeRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

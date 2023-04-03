@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureSshRequest {
-    
-    public ConfigureSshPathParams pathParams;
-    public ConfigureSshRequest withPathParams(ConfigureSshPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ConfigureSshQueryParams queryParams;
-    public ConfigureSshRequest withQueryParams(ConfigureSshQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SshConfiguration request;
-    public ConfigureSshRequest withRequest(org.openapis.openapi.models.shared.SshConfiguration request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SshConfiguration sshConfiguration;
+    public ConfigureSshRequest withSshConfiguration(org.openapis.openapi.models.shared.SshConfiguration sshConfiguration) {
+        this.sshConfiguration = sshConfiguration;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public ConfigureSshRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Linux hosting domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public ConfigureSshRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     

@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateChannelRequest {
-    
-    public CreateChannelPathParams pathParams;
-    public CreateChannelRequest withPathParams(CreateChannelPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateChannelCreateChannelRequest request;
-    public CreateChannelRequest withRequest(CreateChannelCreateChannelRequest request) {
-        this.request = request;
+    public CreateChannelCreateChannelRequest requestBody;
+    public CreateChannelRequest withRequestBody(CreateChannelCreateChannelRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateChannelSecurity security;
-    public CreateChannelRequest withSecurity(CreateChannelSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to create the resource under.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateChannelRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

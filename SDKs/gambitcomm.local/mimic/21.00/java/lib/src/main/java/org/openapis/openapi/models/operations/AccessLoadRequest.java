@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccessLoadRequest {
-    
-    public AccessLoadPathParams pathParams;
-    public AccessLoadRequest withPathParams(AccessLoadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filename to load
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filename")
+    public String filename;
+    public AccessLoadRequest withFilename(String filename) {
+        this.filename = filename;
         return this;
     }
     

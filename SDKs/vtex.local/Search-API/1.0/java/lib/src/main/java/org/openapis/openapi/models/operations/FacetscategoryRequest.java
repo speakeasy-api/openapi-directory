@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FacetscategoryRequest {
-    
-    public FacetscategoryPathParams pathParams;
-    public FacetscategoryRequest withPathParams(FacetscategoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public FacetscategoryRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public FacetscategoryQueryParams queryParams;
-    public FacetscategoryRequest withQueryParams(FacetscategoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public FacetscategoryRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Starter page range. These parameters allow the API to be paginated. Take into account that the initial and final pages cannot have a separation superior to 50 pages. Thus, it will be displayed 50 items per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_from")
+    public String from;
+    public FacetscategoryRequest withFrom(String from) {
+        this.from = from;
+        return this;
+    }
     
-    public FacetscategoryHeaders headers;
-    public FacetscategoryRequest withHeaders(FacetscategoryHeaders headers) {
-        this.headers = headers;
+    /**
+     * Finisher page range. These parameters allow the API to be paginated. Take into account that the initial and final pages cannot have a separation superior to 50 pages. Thus, it will be displayed 50 items per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_to")
+    public String to;
+    public FacetscategoryRequest withTo(String to) {
+        this.to = to;
+        return this;
+    }
+    
+    /**
+     * Mapping of the term. It can be `c` for a category, `b` for a brand, or `specificationFilter_{specificationId}` for a specification. You need to include a map for each term you are searching for in the same term's order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=map")
+    public String map;
+    public FacetscategoryRequest withMap(String map) {
+        this.map = map;
+        return this;
+    }
+    
+    /**
+     * Term used for the facet's search. You can search for as much term as you want. The term can be: `categoryId`, `brandId`, `specificationId`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=term")
+    public String term;
+    public FacetscategoryRequest withTerm(String term) {
+        this.term = term;
         return this;
     }
     

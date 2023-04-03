@@ -4,13 +4,232 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetElectionDatesRequest {
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetElectionDatesRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetElectionDatesQueryParams queryParams;
-    public GetElectionDatesRequest withQueryParams(GetElectionDatesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * House district of the office sought, if applicable.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_district")
+    public String[] electionDistrict;
+    public GetElectionDatesRequest withElectionDistrict(String[] electionDistrict) {
+        this.electionDistrict = electionDistrict;
+        return this;
+    }
+    
+    /**
+     * Party, if applicable.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_party")
+    public String[] electionParty;
+    public GetElectionDatesRequest withElectionParty(String[] electionParty) {
+        this.electionParty = electionParty;
+        return this;
+    }
+    
+    /**
+     * State or territory of the office sought.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_state")
+    public String[] electionState;
+    public GetElectionDatesRequest withElectionState(String[] electionState) {
+        this.electionState = electionState;
+        return this;
+    }
+    
+    /**
+     * Election type id
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_type_id")
+    public String[] electionTypeId;
+    public GetElectionDatesRequest withElectionTypeId(String[] electionTypeId) {
+        this.electionTypeId = electionTypeId;
+        return this;
+    }
+    
+    /**
+     * Year of election
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_year")
+    public String[] electionYear;
+    public GetElectionDatesRequest withElectionYear(String[] electionYear) {
+        this.electionYear = electionYear;
+        return this;
+    }
+    
+    /**
+     * The maximum date this record was added to the system.(MM/DD/YYYY or YYYY-MM-DD)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_create_date")
+    public LocalDate maxCreateDate;
+    public GetElectionDatesRequest withMaxCreateDate(LocalDate maxCreateDate) {
+        this.maxCreateDate = maxCreateDate;
+        return this;
+    }
+    
+    /**
+     * The maximum date of election.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_election_date")
+    public LocalDate maxElectionDate;
+    public GetElectionDatesRequest withMaxElectionDate(LocalDate maxElectionDate) {
+        this.maxElectionDate = maxElectionDate;
+        return this;
+    }
+    
+    /**
+     * The maximum date of primary or general election.(MM/DD/YYYY or YYYY-MM-DD)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_primary_general_date")
+    public LocalDate maxPrimaryGeneralDate;
+    public GetElectionDatesRequest withMaxPrimaryGeneralDate(LocalDate maxPrimaryGeneralDate) {
+        this.maxPrimaryGeneralDate = maxPrimaryGeneralDate;
+        return this;
+    }
+    
+    /**
+     * The maximum date this record was last updated.(MM/DD/YYYY or YYYY-MM-DD)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_update_date")
+    public LocalDate maxUpdateDate;
+    public GetElectionDatesRequest withMaxUpdateDate(LocalDate maxUpdateDate) {
+        this.maxUpdateDate = maxUpdateDate;
+        return this;
+    }
+    
+    /**
+     * The minimum date this record was added to the system.(MM/DD/YYYY or YYYY-MM-DD)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_create_date")
+    public LocalDate minCreateDate;
+    public GetElectionDatesRequest withMinCreateDate(LocalDate minCreateDate) {
+        this.minCreateDate = minCreateDate;
+        return this;
+    }
+    
+    /**
+     * The minimum date of election.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_election_date")
+    public LocalDate minElectionDate;
+    public GetElectionDatesRequest withMinElectionDate(LocalDate minElectionDate) {
+        this.minElectionDate = minElectionDate;
+        return this;
+    }
+    
+    /**
+     * The minimum date of primary or general election.(MM/DD/YYYY or YYYY-MM-DD)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_primary_general_date")
+    public LocalDate minPrimaryGeneralDate;
+    public GetElectionDatesRequest withMinPrimaryGeneralDate(LocalDate minPrimaryGeneralDate) {
+        this.minPrimaryGeneralDate = minPrimaryGeneralDate;
+        return this;
+    }
+    
+    /**
+     * The minimum date this record was last updated.(MM/DD/YYYY or YYYY-MM-DD)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_update_date")
+    public LocalDate minUpdateDate;
+    public GetElectionDatesRequest withMinUpdateDate(LocalDate minUpdateDate) {
+        this.minUpdateDate = minUpdateDate;
+        return this;
+    }
+    
+    /**
+     * House, Senate or presidential office.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office_sought")
+    public GetElectionDatesOfficeSoughtEnum[] officeSought;
+    public GetElectionDatesRequest withOfficeSought(GetElectionDatesOfficeSoughtEnum[] officeSought) {
+        this.officeSought = officeSought;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetElectionDatesRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetElectionDatesRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetElectionDatesRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetElectionDatesRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetElectionDatesRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetElectionDatesRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
         return this;
     }
     

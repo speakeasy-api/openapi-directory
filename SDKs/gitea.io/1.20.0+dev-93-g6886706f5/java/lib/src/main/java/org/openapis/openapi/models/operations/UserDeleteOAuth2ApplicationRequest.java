@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserDeleteOAuth2ApplicationRequest {
-    
-    public UserDeleteOAuth2ApplicationPathParams pathParams;
-    public UserDeleteOAuth2ApplicationRequest withPathParams(UserDeleteOAuth2ApplicationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * token to be deleted
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UserDeleteOAuth2ApplicationRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

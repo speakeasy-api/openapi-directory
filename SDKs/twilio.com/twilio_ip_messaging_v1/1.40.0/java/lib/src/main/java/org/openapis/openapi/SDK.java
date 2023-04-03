@@ -397,22 +397,26 @@ public class SDK {
 		
 	}
 
-    public org.openapis.openapi.models.operations.CreateChannelResponse createChannel(org.openapis.openapi.models.operations.CreateChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateChannelResponse createChannel(org.openapis.openapi.models.operations.CreateChannelRequest request, org.openapis.openapi.models.operations.CreateChannelSecurity security) throws Exception {
+        return this.createChannel(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreateChannelResponse createChannel(org.openapis.openapi.models.operations.CreateChannelRequest request, org.openapis.openapi.models.operations.CreateChannelSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_CHANNEL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateChannelPathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Channels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateChannelRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Channels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -436,10 +440,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CreateCredentialResponse createCredential(org.openapis.openapi.models.operations.CreateCredentialRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCredentialResponse createCredential(org.openapis.openapi.models.operations.CreateCredentialCreateCredentialRequest request, org.openapis.openapi.models.operations.CreateCredentialSecurity security) throws Exception {
+        return this.createCredential(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreateCredentialResponse createCredential(org.openapis.openapi.models.operations.CreateCredentialCreateCredentialRequest request, org.openapis.openapi.models.operations.CreateCredentialSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_CREDENTIAL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Credentials");
@@ -451,7 +459,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -475,22 +483,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CreateInviteResponse createInvite(org.openapis.openapi.models.operations.CreateInviteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInviteResponse createInvite(org.openapis.openapi.models.operations.CreateInviteRequest request, org.openapis.openapi.models.operations.CreateInviteSecurity security) throws Exception {
+        return this.createInvite(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreateInviteResponse createInvite(org.openapis.openapi.models.operations.CreateInviteRequest request, org.openapis.openapi.models.operations.CreateInviteSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_INVITE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateInvitePathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Invites", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateInviteRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Invites", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -514,22 +526,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CreateMemberResponse createMember(org.openapis.openapi.models.operations.CreateMemberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateMemberResponse createMember(org.openapis.openapi.models.operations.CreateMemberRequest request, org.openapis.openapi.models.operations.CreateMemberSecurity security) throws Exception {
+        return this.createMember(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreateMemberResponse createMember(org.openapis.openapi.models.operations.CreateMemberRequest request, org.openapis.openapi.models.operations.CreateMemberSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_MEMBER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateMemberPathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateMemberRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -553,22 +569,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CreateMessageResponse createMessage(org.openapis.openapi.models.operations.CreateMessageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateMessageResponse createMessage(org.openapis.openapi.models.operations.CreateMessageRequest request, org.openapis.openapi.models.operations.CreateMessageSecurity security) throws Exception {
+        return this.createMessage(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreateMessageResponse createMessage(org.openapis.openapi.models.operations.CreateMessageRequest request, org.openapis.openapi.models.operations.CreateMessageSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_MESSAGE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateMessagePathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Messages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateMessageRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Messages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -592,22 +612,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CreateRoleResponse createRole(org.openapis.openapi.models.operations.CreateRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateRoleResponse createRole(org.openapis.openapi.models.operations.CreateRoleRequest request, org.openapis.openapi.models.operations.CreateRoleSecurity security) throws Exception {
+        return this.createRole(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreateRoleResponse createRole(org.openapis.openapi.models.operations.CreateRoleRequest request, org.openapis.openapi.models.operations.CreateRoleSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_ROLE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRolePathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Roles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRoleRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Roles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -631,10 +655,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CreateServiceResponse createService(org.openapis.openapi.models.operations.CreateServiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateServiceResponse createService(org.openapis.openapi.models.operations.CreateServiceCreateServiceRequest request, org.openapis.openapi.models.operations.CreateServiceSecurity security) throws Exception {
+        return this.createService(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreateServiceResponse createService(org.openapis.openapi.models.operations.CreateServiceCreateServiceRequest request, org.openapis.openapi.models.operations.CreateServiceSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_SERVICE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Services");
@@ -646,7 +674,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -670,22 +698,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CreateUserResponse createUser(org.openapis.openapi.models.operations.CreateUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateUserResponse createUser(org.openapis.openapi.models.operations.CreateUserRequest request, org.openapis.openapi.models.operations.CreateUserSecurity security) throws Exception {
+        return this.createUser(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreateUserResponse createUser(org.openapis.openapi.models.operations.CreateUserRequest request, org.openapis.openapi.models.operations.CreateUserSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_USER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateUserPathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateUserRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -709,20 +741,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DeleteChannelResponse deleteChannel(org.openapis.openapi.models.operations.DeleteChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteChannelResponse deleteChannel(org.openapis.openapi.models.operations.DeleteChannelRequest request, org.openapis.openapi.models.operations.DeleteChannelSecurity security) throws Exception {
+        return this.deleteChannel(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.DeleteChannelResponse deleteChannel(org.openapis.openapi.models.operations.DeleteChannelRequest request, org.openapis.openapi.models.operations.DeleteChannelSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_CHANNEL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteChannelPathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteChannelRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -740,20 +776,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DeleteCredentialResponse deleteCredential(org.openapis.openapi.models.operations.DeleteCredentialRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteCredentialResponse deleteCredential(org.openapis.openapi.models.operations.DeleteCredentialRequest request, org.openapis.openapi.models.operations.DeleteCredentialSecurity security) throws Exception {
+        return this.deleteCredential(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.DeleteCredentialResponse deleteCredential(org.openapis.openapi.models.operations.DeleteCredentialRequest request, org.openapis.openapi.models.operations.DeleteCredentialSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_CREDENTIAL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCredentialPathParams.class, baseUrl, "/v1/Credentials/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCredentialRequest.class, baseUrl, "/v1/Credentials/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -771,20 +811,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DeleteInviteResponse deleteInvite(org.openapis.openapi.models.operations.DeleteInviteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteInviteResponse deleteInvite(org.openapis.openapi.models.operations.DeleteInviteRequest request, org.openapis.openapi.models.operations.DeleteInviteSecurity security) throws Exception {
+        return this.deleteInvite(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.DeleteInviteResponse deleteInvite(org.openapis.openapi.models.operations.DeleteInviteRequest request, org.openapis.openapi.models.operations.DeleteInviteSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_INVITE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInvitePathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Invites/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInviteRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Invites/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -802,20 +846,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DeleteMemberResponse deleteMember(org.openapis.openapi.models.operations.DeleteMemberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteMemberResponse deleteMember(org.openapis.openapi.models.operations.DeleteMemberRequest request, org.openapis.openapi.models.operations.DeleteMemberSecurity security) throws Exception {
+        return this.deleteMember(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.DeleteMemberResponse deleteMember(org.openapis.openapi.models.operations.DeleteMemberRequest request, org.openapis.openapi.models.operations.DeleteMemberSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_MEMBER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMemberPathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Members/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMemberRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Members/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -833,20 +881,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DeleteMessageResponse deleteMessage(org.openapis.openapi.models.operations.DeleteMessageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteMessageResponse deleteMessage(org.openapis.openapi.models.operations.DeleteMessageRequest request, org.openapis.openapi.models.operations.DeleteMessageSecurity security) throws Exception {
+        return this.deleteMessage(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.DeleteMessageResponse deleteMessage(org.openapis.openapi.models.operations.DeleteMessageRequest request, org.openapis.openapi.models.operations.DeleteMessageSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_MESSAGE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMessagePathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Messages/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMessageRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Messages/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -864,20 +916,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DeleteRoleResponse deleteRole(org.openapis.openapi.models.operations.DeleteRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteRoleResponse deleteRole(org.openapis.openapi.models.operations.DeleteRoleRequest request, org.openapis.openapi.models.operations.DeleteRoleSecurity security) throws Exception {
+        return this.deleteRole(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.DeleteRoleResponse deleteRole(org.openapis.openapi.models.operations.DeleteRoleRequest request, org.openapis.openapi.models.operations.DeleteRoleSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_ROLE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRolePathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Roles/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRoleRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Roles/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -895,20 +951,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DeleteServiceResponse deleteService(org.openapis.openapi.models.operations.DeleteServiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteServiceResponse deleteService(org.openapis.openapi.models.operations.DeleteServiceRequest request, org.openapis.openapi.models.operations.DeleteServiceSecurity security) throws Exception {
+        return this.deleteService(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.DeleteServiceResponse deleteService(org.openapis.openapi.models.operations.DeleteServiceRequest request, org.openapis.openapi.models.operations.DeleteServiceSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_SERVICE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServicePathParams.class, baseUrl, "/v1/Services/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceRequest.class, baseUrl, "/v1/Services/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -926,20 +986,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DeleteUserResponse deleteUser(org.openapis.openapi.models.operations.DeleteUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteUserResponse deleteUser(org.openapis.openapi.models.operations.DeleteUserRequest request, org.openapis.openapi.models.operations.DeleteUserSecurity security) throws Exception {
+        return this.deleteUser(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.DeleteUserResponse deleteUser(org.openapis.openapi.models.operations.DeleteUserRequest request, org.openapis.openapi.models.operations.DeleteUserSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_USER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserPathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Users/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Users/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -957,20 +1021,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchChannelResponse fetchChannel(org.openapis.openapi.models.operations.FetchChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchChannelResponse fetchChannel(org.openapis.openapi.models.operations.FetchChannelRequest request, org.openapis.openapi.models.operations.FetchChannelSecurity security) throws Exception {
+        return this.fetchChannel(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchChannelResponse fetchChannel(org.openapis.openapi.models.operations.FetchChannelRequest request, org.openapis.openapi.models.operations.FetchChannelSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_CHANNEL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchChannelPathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchChannelRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -994,20 +1062,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchCredentialResponse fetchCredential(org.openapis.openapi.models.operations.FetchCredentialRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchCredentialResponse fetchCredential(org.openapis.openapi.models.operations.FetchCredentialRequest request, org.openapis.openapi.models.operations.FetchCredentialSecurity security) throws Exception {
+        return this.fetchCredential(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchCredentialResponse fetchCredential(org.openapis.openapi.models.operations.FetchCredentialRequest request, org.openapis.openapi.models.operations.FetchCredentialSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_CREDENTIAL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchCredentialPathParams.class, baseUrl, "/v1/Credentials/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchCredentialRequest.class, baseUrl, "/v1/Credentials/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1031,20 +1103,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchInviteResponse fetchInvite(org.openapis.openapi.models.operations.FetchInviteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchInviteResponse fetchInvite(org.openapis.openapi.models.operations.FetchInviteRequest request, org.openapis.openapi.models.operations.FetchInviteSecurity security) throws Exception {
+        return this.fetchInvite(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchInviteResponse fetchInvite(org.openapis.openapi.models.operations.FetchInviteRequest request, org.openapis.openapi.models.operations.FetchInviteSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_INVITE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchInvitePathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Invites/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchInviteRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Invites/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1068,20 +1144,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchMemberResponse fetchMember(org.openapis.openapi.models.operations.FetchMemberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchMemberResponse fetchMember(org.openapis.openapi.models.operations.FetchMemberRequest request, org.openapis.openapi.models.operations.FetchMemberSecurity security) throws Exception {
+        return this.fetchMember(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchMemberResponse fetchMember(org.openapis.openapi.models.operations.FetchMemberRequest request, org.openapis.openapi.models.operations.FetchMemberSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_MEMBER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchMemberPathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Members/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchMemberRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Members/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1105,20 +1185,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchMessageResponse fetchMessage(org.openapis.openapi.models.operations.FetchMessageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchMessageResponse fetchMessage(org.openapis.openapi.models.operations.FetchMessageRequest request, org.openapis.openapi.models.operations.FetchMessageSecurity security) throws Exception {
+        return this.fetchMessage(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchMessageResponse fetchMessage(org.openapis.openapi.models.operations.FetchMessageRequest request, org.openapis.openapi.models.operations.FetchMessageSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_MESSAGE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchMessagePathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Messages/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchMessageRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Messages/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1142,20 +1226,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchRoleResponse fetchRole(org.openapis.openapi.models.operations.FetchRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchRoleResponse fetchRole(org.openapis.openapi.models.operations.FetchRoleRequest request, org.openapis.openapi.models.operations.FetchRoleSecurity security) throws Exception {
+        return this.fetchRole(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchRoleResponse fetchRole(org.openapis.openapi.models.operations.FetchRoleRequest request, org.openapis.openapi.models.operations.FetchRoleSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_ROLE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchRolePathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Roles/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchRoleRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Roles/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1179,20 +1267,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchServiceResponse fetchService(org.openapis.openapi.models.operations.FetchServiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchServiceResponse fetchService(org.openapis.openapi.models.operations.FetchServiceRequest request, org.openapis.openapi.models.operations.FetchServiceSecurity security) throws Exception {
+        return this.fetchService(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchServiceResponse fetchService(org.openapis.openapi.models.operations.FetchServiceRequest request, org.openapis.openapi.models.operations.FetchServiceSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_SERVICE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServicePathParams.class, baseUrl, "/v1/Services/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceRequest.class, baseUrl, "/v1/Services/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1216,20 +1308,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchUserResponse fetchUser(org.openapis.openapi.models.operations.FetchUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchUserResponse fetchUser(org.openapis.openapi.models.operations.FetchUserRequest request, org.openapis.openapi.models.operations.FetchUserSecurity security) throws Exception {
+        return this.fetchUser(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchUserResponse fetchUser(org.openapis.openapi.models.operations.FetchUserRequest request, org.openapis.openapi.models.operations.FetchUserSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_USER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchUserPathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Users/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchUserRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Users/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1253,26 +1349,30 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListChannelResponse listChannel(org.openapis.openapi.models.operations.ListChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListChannelResponse listChannel(org.openapis.openapi.models.operations.ListChannelRequest request, org.openapis.openapi.models.operations.ListChannelSecurity security) throws Exception {
+        return this.listChannel(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListChannelResponse listChannel(org.openapis.openapi.models.operations.ListChannelRequest request, org.openapis.openapi.models.operations.ListChannelSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_CHANNEL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListChannelPathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Channels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListChannelRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Channels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListChannelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListChannelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1296,10 +1396,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListCredentialResponse listCredential(org.openapis.openapi.models.operations.ListCredentialRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListCredentialResponse listCredential(org.openapis.openapi.models.operations.ListCredentialRequest request, org.openapis.openapi.models.operations.ListCredentialSecurity security) throws Exception {
+        return this.listCredential(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListCredentialResponse listCredential(org.openapis.openapi.models.operations.ListCredentialRequest request, org.openapis.openapi.models.operations.ListCredentialSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_CREDENTIAL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Credentials");
@@ -1308,14 +1412,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCredentialQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCredentialRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1339,26 +1443,30 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListInviteResponse listInvite(org.openapis.openapi.models.operations.ListInviteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListInviteResponse listInvite(org.openapis.openapi.models.operations.ListInviteRequest request, org.openapis.openapi.models.operations.ListInviteSecurity security) throws Exception {
+        return this.listInvite(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListInviteResponse listInvite(org.openapis.openapi.models.operations.ListInviteRequest request, org.openapis.openapi.models.operations.ListInviteSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_INVITE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListInvitePathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Invites", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListInviteRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Invites", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInviteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInviteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1382,26 +1490,30 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListMemberResponse listMember(org.openapis.openapi.models.operations.ListMemberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListMemberResponse listMember(org.openapis.openapi.models.operations.ListMemberRequest request, org.openapis.openapi.models.operations.ListMemberSecurity security) throws Exception {
+        return this.listMember(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListMemberResponse listMember(org.openapis.openapi.models.operations.ListMemberRequest request, org.openapis.openapi.models.operations.ListMemberSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_MEMBER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListMemberPathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListMemberRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListMemberQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListMemberRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1425,26 +1537,30 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListMessageResponse listMessage(org.openapis.openapi.models.operations.ListMessageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListMessageResponse listMessage(org.openapis.openapi.models.operations.ListMessageRequest request, org.openapis.openapi.models.operations.ListMessageSecurity security) throws Exception {
+        return this.listMessage(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListMessageResponse listMessage(org.openapis.openapi.models.operations.ListMessageRequest request, org.openapis.openapi.models.operations.ListMessageSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_MESSAGE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListMessagePathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Messages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListMessageRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Messages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListMessageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListMessageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1468,26 +1584,30 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListRoleResponse listRole(org.openapis.openapi.models.operations.ListRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListRoleResponse listRole(org.openapis.openapi.models.operations.ListRoleRequest request, org.openapis.openapi.models.operations.ListRoleSecurity security) throws Exception {
+        return this.listRole(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListRoleResponse listRole(org.openapis.openapi.models.operations.ListRoleRequest request, org.openapis.openapi.models.operations.ListRoleSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_ROLE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListRolePathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Roles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListRoleRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Roles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListRoleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListRoleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1511,10 +1631,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListServiceResponse listService(org.openapis.openapi.models.operations.ListServiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListServiceResponse listService(org.openapis.openapi.models.operations.ListServiceRequest request, org.openapis.openapi.models.operations.ListServiceSecurity security) throws Exception {
+        return this.listService(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListServiceResponse listService(org.openapis.openapi.models.operations.ListServiceRequest request, org.openapis.openapi.models.operations.ListServiceSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_SERVICE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Services");
@@ -1523,14 +1647,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1554,26 +1678,30 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListUserResponse listUser(org.openapis.openapi.models.operations.ListUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListUserResponse listUser(org.openapis.openapi.models.operations.ListUserRequest request, org.openapis.openapi.models.operations.ListUserSecurity security) throws Exception {
+        return this.listUser(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListUserResponse listUser(org.openapis.openapi.models.operations.ListUserRequest request, org.openapis.openapi.models.operations.ListUserSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_USER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListUserPathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListUserRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1597,26 +1725,30 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListUserChannelResponse listUserChannel(org.openapis.openapi.models.operations.ListUserChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListUserChannelResponse listUserChannel(org.openapis.openapi.models.operations.ListUserChannelRequest request, org.openapis.openapi.models.operations.ListUserChannelSecurity security) throws Exception {
+        return this.listUserChannel(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListUserChannelResponse listUserChannel(org.openapis.openapi.models.operations.ListUserChannelRequest request, org.openapis.openapi.models.operations.ListUserChannelSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_USER_CHANNEL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListUserChannelPathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Users/{UserSid}/Channels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListUserChannelRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Users/{UserSid}/Channels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListUserChannelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListUserChannelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1640,22 +1772,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UpdateChannelResponse updateChannel(org.openapis.openapi.models.operations.UpdateChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateChannelResponse updateChannel(org.openapis.openapi.models.operations.UpdateChannelRequest request, org.openapis.openapi.models.operations.UpdateChannelSecurity security) throws Exception {
+        return this.updateChannel(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.UpdateChannelResponse updateChannel(org.openapis.openapi.models.operations.UpdateChannelRequest request, org.openapis.openapi.models.operations.UpdateChannelSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_CHANNEL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateChannelPathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateChannelRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1679,22 +1815,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UpdateCredentialResponse updateCredential(org.openapis.openapi.models.operations.UpdateCredentialRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateCredentialResponse updateCredential(org.openapis.openapi.models.operations.UpdateCredentialRequest request, org.openapis.openapi.models.operations.UpdateCredentialSecurity security) throws Exception {
+        return this.updateCredential(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.UpdateCredentialResponse updateCredential(org.openapis.openapi.models.operations.UpdateCredentialRequest request, org.openapis.openapi.models.operations.UpdateCredentialSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_CREDENTIAL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCredentialPathParams.class, baseUrl, "/v1/Credentials/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCredentialRequest.class, baseUrl, "/v1/Credentials/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1718,22 +1858,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UpdateMemberResponse updateMember(org.openapis.openapi.models.operations.UpdateMemberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateMemberResponse updateMember(org.openapis.openapi.models.operations.UpdateMemberRequest request, org.openapis.openapi.models.operations.UpdateMemberSecurity security) throws Exception {
+        return this.updateMember(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.UpdateMemberResponse updateMember(org.openapis.openapi.models.operations.UpdateMemberRequest request, org.openapis.openapi.models.operations.UpdateMemberSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_MEMBER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateMemberPathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Members/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateMemberRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Members/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1757,22 +1901,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UpdateMessageResponse updateMessage(org.openapis.openapi.models.operations.UpdateMessageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateMessageResponse updateMessage(org.openapis.openapi.models.operations.UpdateMessageRequest request, org.openapis.openapi.models.operations.UpdateMessageSecurity security) throws Exception {
+        return this.updateMessage(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.UpdateMessageResponse updateMessage(org.openapis.openapi.models.operations.UpdateMessageRequest request, org.openapis.openapi.models.operations.UpdateMessageSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_MESSAGE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateMessagePathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Messages/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateMessageRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Channels/{ChannelSid}/Messages/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1796,22 +1944,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UpdateRoleResponse updateRole(org.openapis.openapi.models.operations.UpdateRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateRoleResponse updateRole(org.openapis.openapi.models.operations.UpdateRoleRequest request, org.openapis.openapi.models.operations.UpdateRoleSecurity security) throws Exception {
+        return this.updateRole(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.UpdateRoleResponse updateRole(org.openapis.openapi.models.operations.UpdateRoleRequest request, org.openapis.openapi.models.operations.UpdateRoleSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_ROLE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRolePathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Roles/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRoleRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Roles/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1835,22 +1987,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UpdateServiceResponse updateService(org.openapis.openapi.models.operations.UpdateServiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateServiceResponse updateService(org.openapis.openapi.models.operations.UpdateServiceRequest request, org.openapis.openapi.models.operations.UpdateServiceSecurity security) throws Exception {
+        return this.updateService(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.UpdateServiceResponse updateService(org.openapis.openapi.models.operations.UpdateServiceRequest request, org.openapis.openapi.models.operations.UpdateServiceSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_SERVICE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServicePathParams.class, baseUrl, "/v1/Services/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceRequest.class, baseUrl, "/v1/Services/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1874,22 +2030,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UpdateUserResponse updateUser(org.openapis.openapi.models.operations.UpdateUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateUserResponse updateUser(org.openapis.openapi.models.operations.UpdateUserRequest request, org.openapis.openapi.models.operations.UpdateUserSecurity security) throws Exception {
+        return this.updateUser(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.UpdateUserResponse updateUser(org.openapis.openapi.models.operations.UpdateUserRequest request, org.openapis.openapi.models.operations.UpdateUserSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_USER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserPathParams.class, baseUrl, "/v1/Services/{ServiceSid}/Users/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserRequest.class, baseUrl, "/v1/Services/{ServiceSid}/Users/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

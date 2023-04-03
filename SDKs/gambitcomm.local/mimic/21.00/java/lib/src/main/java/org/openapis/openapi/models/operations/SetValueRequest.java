@@ -7,20 +7,53 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetValueRequest {
-    
-    public SetValuePathParams pathParams;
-    public SetValueRequest withPathParams(SetValuePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Value
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String request;
-    public SetValueRequest withRequest(String request) {
-        this.request = request;
+    public String requestBody;
+    public SetValueRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Agent of the value space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public SetValueRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
+    
+    /**
+     * Row of the table in the agent's value space. 0 for single instance objects
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instance")
+    public String instance;
+    public SetValueRequest withInstance(String instance) {
+        this.instance = instance;
+        return this;
+    }
+    
+    /**
+     * Single instance object or object (column) of the table in the agent's value space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object")
+    public String object;
+    public SetValueRequest withObject(String object) {
+        this.object = object;
+        return this;
+    }
+    
+    /**
+     * Variable
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=variable")
+    public String variable;
+    public SetValueRequest withVariable(String variable) {
+        this.variable = variable;
         return this;
     }
     

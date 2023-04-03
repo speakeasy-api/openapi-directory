@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetRecoveryCredentialRequest {
-    
-    public SetRecoveryCredentialPathParams pathParams;
-    public SetRecoveryCredentialRequest withPathParams(SetRecoveryCredentialPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public SetRecoveryCredentialRequestBody requestBody;
+    public SetRecoveryCredentialRequest withRequestBody(SetRecoveryCredentialRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public SetRecoveryCredentialRequestBody request;
-    public SetRecoveryCredentialRequest withRequest(SetRecoveryCredentialRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public SetRecoveryCredentialRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

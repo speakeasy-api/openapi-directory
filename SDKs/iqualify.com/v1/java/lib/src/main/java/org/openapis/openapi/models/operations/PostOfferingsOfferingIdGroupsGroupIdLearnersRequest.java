@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOfferingsOfferingIdGroupsGroupIdLearnersRequest {
-    
-    public PostOfferingsOfferingIdGroupsGroupIdLearnersPathParams pathParams;
-    public PostOfferingsOfferingIdGroupsGroupIdLearnersRequest withPathParams(PostOfferingsOfferingIdGroupsGroupIdLearnersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostOfferingsOfferingIdGroupsGroupIdLearnersRequestBody requestBody;
+    public PostOfferingsOfferingIdGroupsGroupIdLearnersRequest withRequestBody(PostOfferingsOfferingIdGroupsGroupIdLearnersRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostOfferingsOfferingIdGroupsGroupIdLearnersRequestBody request;
-    public PostOfferingsOfferingIdGroupsGroupIdLearnersRequest withRequest(PostOfferingsOfferingIdGroupsGroupIdLearnersRequestBody request) {
-        this.request = request;
+    /**
+     * Assessment group id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public PostOfferingsOfferingIdGroupsGroupIdLearnersRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public PostOfferingsOfferingIdGroupsGroupIdLearnersRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
         return this;
     }
     

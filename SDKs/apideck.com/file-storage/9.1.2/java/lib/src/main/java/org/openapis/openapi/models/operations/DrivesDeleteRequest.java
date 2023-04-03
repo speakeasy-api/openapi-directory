@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DrivesDeleteRequest {
-    
-    public DrivesDeletePathParams pathParams;
-    public DrivesDeleteRequest withPathParams(DrivesDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DrivesDeleteRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public DrivesDeleteQueryParams queryParams;
-    public DrivesDeleteRequest withQueryParams(DrivesDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public DrivesDeleteRequest withRaw(Boolean raw) {
+        this.raw = raw;
         return this;
     }
     
-    
-    public DrivesDeleteHeaders headers;
-    public DrivesDeleteRequest withHeaders(DrivesDeleteHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public DrivesDeleteRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
         return this;
     }
     
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public DrivesDeleteRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
     
-    public DrivesDeleteSecurity security;
-    public DrivesDeleteRequest withSecurity(DrivesDeleteSecurity security) {
-        this.security = security;
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public DrivesDeleteRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

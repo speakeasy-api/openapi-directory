@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesTagsTagTypesFormatRequest {
-    
-    public GetResourcesTagsTagTypesFormatPathParams pathParams;
-    public GetResourcesTagsTagTypesFormatRequest withPathParams(GetResourcesTagsTagTypesFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public String format;
+    public GetResourcesTagsTagTypesFormatRequest withFormat(String format) {
+        this.format = format;
         return this;
     }
     

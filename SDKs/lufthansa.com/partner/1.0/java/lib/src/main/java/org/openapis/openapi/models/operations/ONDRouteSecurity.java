@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ONDRouteSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeAuth auth;
-    public ONDRouteSecurity withAuth(org.openapis.openapi.models.shared.SchemeAuth auth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String auth;
+    public ONDRouteSecurity withAuth(String auth) {
         this.auth = auth;
         return this;
     }

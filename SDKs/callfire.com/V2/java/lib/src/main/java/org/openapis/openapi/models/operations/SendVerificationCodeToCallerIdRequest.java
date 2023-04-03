@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendVerificationCodeToCallerIdRequest {
-    
-    public SendVerificationCodeToCallerIdPathParams pathParams;
-    public SendVerificationCodeToCallerIdRequest withPathParams(SendVerificationCodeToCallerIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SendVerificationCodeToCallerIdSecurity security;
-    public SendVerificationCodeToCallerIdRequest withSecurity(SendVerificationCodeToCallerIdSecurity security) {
-        this.security = security;
+    /**
+     * A phone number in E.164 format (11-digit) which needs to be verified. Example: 12132000384
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=callerid")
+    public String callerid;
+    public SendVerificationCodeToCallerIdRequest withCallerid(String callerid) {
+        this.callerid = callerid;
         return this;
     }
     

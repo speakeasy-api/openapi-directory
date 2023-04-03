@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutCategoriesIdJsonRequest {
-    
-    public PutCategoriesIdJsonPathParams pathParams;
-    public PutCategoriesIdJsonRequest withPathParams(PutCategoriesIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutCategoriesIdJsonQueryParams queryParams;
-    public PutCategoriesIdJsonRequest withQueryParams(PutCategoriesIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Category parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CategoryEdit request;
-    public PutCategoriesIdJsonRequest withRequest(org.openapis.openapi.models.shared.CategoryEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CategoryEdit categoryEdit;
+    public PutCategoriesIdJsonRequest withCategoryEdit(org.openapis.openapi.models.shared.CategoryEdit categoryEdit) {
+        this.categoryEdit = categoryEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PutCategoriesIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the Category
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PutCategoriesIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PutCategoriesIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

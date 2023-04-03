@@ -48,12 +48,12 @@ public class MarketplacesOrdersSubscriptionsSubscriptions {
      */
     public org.openapis.openapi.models.operations.ActivateSubscriptionResponse activateSubscription(org.openapis.openapi.models.operations.ActivateSubscriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivateSubscriptionPathParams.class, baseUrl, "/v2/user/marketplaces/orders/subscriptions/{id}/activate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivateSubscriptionRequest.class, baseUrl, "/v2/user/marketplaces/orders/subscriptions/{id}/activate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "activateSubscriptionRequest", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -99,12 +99,12 @@ public class MarketplacesOrdersSubscriptionsSubscriptions {
      */
     public org.openapis.openapi.models.operations.CreateSubscriptionResponse createSubscription(org.openapis.openapi.models.operations.CreateSubscriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSubscriptionPathParams.class, baseUrl, "/v2/user/marketplaces/orders/subscriptions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSubscriptionRequest.class, baseUrl, "/v2/user/marketplaces/orders/subscriptions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createSubscriptionRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -152,7 +152,7 @@ public class MarketplacesOrdersSubscriptionsSubscriptions {
      */
     public org.openapis.openapi.models.operations.DeactivateSubscriptionResponse deactivateSubscription(org.openapis.openapi.models.operations.DeactivateSubscriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeactivateSubscriptionPathParams.class, baseUrl, "/v2/user/marketplaces/orders/subscriptions/{id}/deactivate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeactivateSubscriptionRequest.class, baseUrl, "/v2/user/marketplaces/orders/subscriptions/{id}/deactivate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -200,7 +200,7 @@ public class MarketplacesOrdersSubscriptionsSubscriptions {
      */
     public org.openapis.openapi.models.operations.DeleteSubscriptionResponse deleteSubscription(org.openapis.openapi.models.operations.DeleteSubscriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubscriptionPathParams.class, baseUrl, "/v2/user/marketplaces/orders/subscriptions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubscriptionRequest.class, baseUrl, "/v2/user/marketplaces/orders/subscriptions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -248,7 +248,7 @@ public class MarketplacesOrdersSubscriptionsSubscriptions {
      */
     public org.openapis.openapi.models.operations.GetSubscriptionResponse getSubscription(org.openapis.openapi.models.operations.GetSubscriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubscriptionPathParams.class, baseUrl, "/v2/user/marketplaces/orders/subscriptions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubscriptionRequest.class, baseUrl, "/v2/user/marketplaces/orders/subscriptions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -347,13 +347,13 @@ public class MarketplacesOrdersSubscriptionsSubscriptions {
      */
     public org.openapis.openapi.models.operations.GetSubscriptionPushReportingResponse getSubscriptionPushReporting(org.openapis.openapi.models.operations.GetSubscriptionPushReportingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubscriptionPushReportingPathParams.class, baseUrl, "/v2/user/marketplaces/orders/subscriptions/{id}/reporting", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubscriptionPushReportingRequest.class, baseUrl, "/v2/user/marketplaces/orders/subscriptions/{id}/reporting", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSubscriptionPushReportingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSubscriptionPushReportingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -410,7 +410,7 @@ public class MarketplacesOrdersSubscriptionsSubscriptions {
      */
     public org.openapis.openapi.models.operations.RetryPushOrdersResponse retryPushOrders(org.openapis.openapi.models.operations.RetryPushOrdersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetryPushOrdersPathParams.class, baseUrl, "/v2/user/marketplaces/orders/subscriptions/{id}/retry", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetryPushOrdersRequest.class, baseUrl, "/v2/user/marketplaces/orders/subscriptions/{id}/retry", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

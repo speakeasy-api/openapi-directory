@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateServiceConversationScopedWebhookRequest {
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public CreateServiceConversationScopedWebhookRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
+        return this;
+    }
     
-    public CreateServiceConversationScopedWebhookPathParams pathParams;
-    public CreateServiceConversationScopedWebhookRequest withPathParams(CreateServiceConversationScopedWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConversationSid")
+    public String conversationSid;
+    public CreateServiceConversationScopedWebhookRequest withConversationSid(String conversationSid) {
+        this.conversationSid = conversationSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateServiceConversationScopedWebhookCreateServiceConversationScopedWebhookRequest request;
-    public CreateServiceConversationScopedWebhookRequest withRequest(CreateServiceConversationScopedWebhookCreateServiceConversationScopedWebhookRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateServiceConversationScopedWebhookSecurity security;
-    public CreateServiceConversationScopedWebhookRequest withSecurity(CreateServiceConversationScopedWebhookSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateServiceConversationScopedWebhookRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateServiceConversationScopedWebhookCreateServiceConversationScopedWebhookRequest requestBody;
+    public CreateServiceConversationScopedWebhookRequest withRequestBody(CreateServiceConversationScopedWebhookCreateServiceConversationScopedWebhookRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

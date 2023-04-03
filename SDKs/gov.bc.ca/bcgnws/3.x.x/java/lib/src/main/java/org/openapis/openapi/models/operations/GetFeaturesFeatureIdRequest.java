@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFeaturesFeatureIdRequest {
-    
-    public GetFeaturesFeatureIdPathParams pathParams;
-    public GetFeaturesFeatureIdRequest withPathParams(GetFeaturesFeatureIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier for a feature
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=featureId")
+    public Long featureId;
+    public GetFeaturesFeatureIdRequest withFeatureId(Long featureId) {
+        this.featureId = featureId;
         return this;
     }
     

@@ -4,20 +4,62 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectUsernameProjectRequest {
-    
-    public GetProjectUsernameProjectPathParams pathParams;
-    public GetProjectUsernameProjectRequest withPathParams(GetProjectUsernameProjectPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Restricts which builds are returned.
+     * Set to "completed", "successful", "failed", "running", or defaults to no filter.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public org.openapis.openapi.models.shared.FilterEnum filter;
+    public GetProjectUsernameProjectRequest withFilter(org.openapis.openapi.models.shared.FilterEnum filter) {
+        this.filter = filter;
         return this;
     }
     
+    /**
+     * The number of builds to return. Maximum 100, defaults to 30.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetProjectUsernameProjectRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetProjectUsernameProjectQueryParams queryParams;
-    public GetProjectUsernameProjectRequest withQueryParams(GetProjectUsernameProjectQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The API returns builds starting from this offset, defaults to 0.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetProjectUsernameProjectRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * XXXXXXXXX
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public GetProjectUsernameProjectRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * XXXXXXXXX
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetProjectUsernameProjectRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

@@ -34,25 +34,26 @@ public class V1 {
     /**
      * Fetches analytics stats of a short Dynamic Link for a given duration. Metrics include number of clicks, redirects, installs, app first opens, and app reopens.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasedynamiclinksGetLinkStatsResponse firebasedynamiclinksGetLinkStats(org.openapis.openapi.models.operations.FirebasedynamiclinksGetLinkStatsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasedynamiclinksGetLinkStatsResponse firebasedynamiclinksGetLinkStats(org.openapis.openapi.models.operations.FirebasedynamiclinksGetLinkStatsRequest request, org.openapis.openapi.models.operations.FirebasedynamiclinksGetLinkStatsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasedynamiclinksGetLinkStatsPathParams.class, baseUrl, "/v1/{dynamicLink}/linkStats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasedynamiclinksGetLinkStatsRequest.class, baseUrl, "/v1/{dynamicLink}/linkStats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasedynamiclinksGetLinkStatsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasedynamiclinksGetLinkStatsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class V1 {
     /**
      * Get iOS strong/weak-match info for post-install attribution.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasedynamiclinksInstallAttributionResponse firebasedynamiclinksInstallAttribution(org.openapis.openapi.models.operations.FirebasedynamiclinksInstallAttributionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasedynamiclinksInstallAttributionResponse firebasedynamiclinksInstallAttribution(org.openapis.openapi.models.operations.FirebasedynamiclinksInstallAttributionRequest request, org.openapis.openapi.models.operations.FirebasedynamiclinksInstallAttributionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/installAttribution");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "getIosPostInstallAttributionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasedynamiclinksInstallAttributionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasedynamiclinksInstallAttributionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,27 +128,28 @@ public class V1 {
     /**
      * Get iOS reopen attribution for app universal link open deeplinking.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasedynamiclinksReopenAttributionResponse firebasedynamiclinksReopenAttribution(org.openapis.openapi.models.operations.FirebasedynamiclinksReopenAttributionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasedynamiclinksReopenAttributionResponse firebasedynamiclinksReopenAttribution(org.openapis.openapi.models.operations.FirebasedynamiclinksReopenAttributionRequest request, org.openapis.openapi.models.operations.FirebasedynamiclinksReopenAttributionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/reopenAttribution");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "getIosReopenAttributionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasedynamiclinksReopenAttributionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasedynamiclinksReopenAttributionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AssociateWebACLXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AssociateWebACLHeaders;
 import org.openapis.openapi.models.operations.AssociateWebACLRequest;
 import org.openapis.openapi.models.operations.AssociateWebACLResponse;
 import org.openapis.openapi.models.shared.AssociateWebACLRequest;
@@ -15,28 +14,24 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateWebACLRequest req = new AssociateWebACLRequest() {{
-                headers = new AssociateWebACLHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AWSWAF_Regional_20161128.AssociateWebACL";
+                associateWebACLRequest = new AssociateWebACLRequest() {{
+                    resourceArn = "corrupti";
+                    webACLId = "provident";
                 }};
-                request = new AssociateWebACLRequest() {{
-                    resourceArn = "illum";
-                    webACLId = "vel";
-                }};
-            }};            
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+                xAmzTarget = "AWSWAF_Regional_20161128.AssociateWebACL";
+            }}            
 
             AssociateWebACLResponse res = sdk.associateWebACL(req);
 

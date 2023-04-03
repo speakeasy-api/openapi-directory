@@ -7,21 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountsAccountTradesRequest {
-    
-    public GetAccountsAccountTradesPathParams pathParams;
-    public GetAccountsAccountTradesRequest withPathParams(GetAccountsAccountTradesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Start time specified in UTC. Allowed formats are "yyyy-MM-dd" or "yyyy-MM-dd'T'HH:mm:ss". Time is optional and is set to midnight if omitted, e.g. "00:00:00 hh:mm:ss".
      * 
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String request;
-    public GetAccountsAccountTradesRequest withRequest(String request) {
-        this.request = request;
+    public String requestBody;
+    public GetAccountsAccountTradesRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Account Number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account")
+    public String account;
+    public GetAccountsAccountTradesRequest withAccount(String account) {
+        this.account = account;
         return this;
     }
     

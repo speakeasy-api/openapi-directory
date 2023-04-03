@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateAppHeaders;
 import org.openapis.openapi.models.operations.CreateAppRequestBodyAutoBranchCreationConfig;
 import org.openapis.openapi.models.operations.CreateAppRequestBodyPlatformEnum;
 import org.openapis.openapi.models.operations.CreateAppRequestBody;
@@ -18,78 +17,90 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateAppRequest req = new CreateAppRequest() {{
-                headers = new CreateAppHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateAppRequestBody() {{
-                    accessToken = "illum";
+                requestBody = new CreateAppRequestBody() {{
+                    accessToken = "corrupti";
                     autoBranchCreationConfig = new CreateAppRequestBodyAutoBranchCreationConfig() {{
-                        basicAuthCredentials = "vel";
-                        buildSpec = "error";
+                        basicAuthCredentials = "provident";
+                        buildSpec = "distinctio";
                         enableAutoBuild = false;
                         enableBasicAuth = false;
                         enablePerformanceMode = false;
                         enablePullRequestPreview = false;
                         environmentVariables = new java.util.HashMap<String, String>() {{
-                            put("suscipit", "iure");
-                            put("magnam", "debitis");
-                            put("ipsa", "delectus");
+                            put("unde", "nulla");
+                            put("corrupti", "illum");
+                            put("vel", "error");
+                            put("deserunt", "suscipit");
                         }};
-                        framework = "tempora";
-                        pullRequestEnvironmentName = "suscipit";
-                        stage = "DEVELOPMENT";
+                        framework = "iure";
+                        pullRequestEnvironmentName = "magnam";
+                        stage = "PULL_REQUEST";
                     }};
                     autoBranchCreationPatterns = new String[]{{
-                        add("placeat"),
-                        add("voluptatum"),
-                        add("iusto"),
-                        add("excepturi"),
+                        add("delectus"),
                     }};
-                    basicAuthCredentials = "nisi";
-                    buildSpec = "recusandae";
-                    customHeaders = "temporibus";
+                    basicAuthCredentials = "tempora";
+                    buildSpec = "suscipit";
+                    customHeaders = "molestiae";
                     customRules = new org.openapis.openapi.models.shared.CustomRule[]{{
+                        add(new CustomRule() {{
+                            condition = "placeat";
+                            source = "voluptatum";
+                            status = "iusto";
+                            target = "excepturi";
+                        }}),
+                        add(new CustomRule() {{
+                            condition = "nisi";
+                            source = "recusandae";
+                            status = "temporibus";
+                            target = "ab";
+                        }}),
                         add(new CustomRule() {{
                             condition = "quis";
                             source = "veritatis";
                             status = "deserunt";
                             target = "perferendis";
                         }}),
+                        add(new CustomRule() {{
+                            condition = "ipsam";
+                            source = "repellendus";
+                            status = "sapiente";
+                            target = "quo";
+                        }}),
                     }};
-                    description = "ipsam";
+                    description = "odit";
                     enableAutoBranchCreation = false;
                     enableBasicAuth = false;
                     enableBranchAutoBuild = false;
                     enableBranchAutoDeletion = false;
                     environmentVariables = new java.util.HashMap<String, String>() {{
-                        put("sapiente", "quo");
-                        put("odit", "at");
                         put("at", "maiores");
                         put("molestiae", "quod");
+                        put("quod", "esse");
+                        put("totam", "porro");
                     }};
-                    iamServiceRoleArn = "quod";
-                    name = "esse";
-                    oauthToken = "totam";
-                    platform = "WEB_COMPUTE";
-                    repository = "dolorum";
+                    iamServiceRoleArn = "dolorum";
+                    name = "dicta";
+                    oauthToken = "nam";
+                    platform = "WEB_DYNAMIC";
+                    repository = "occaecati";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("nam", "officia");
+                        put("deleniti", "hic");
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "optio";
+                xAmzContentSha256 = "totam";
+                xAmzCredential = "beatae";
+                xAmzDate = "commodi";
+                xAmzSecurityToken = "molestiae";
+                xAmzSignature = "modi";
+                xAmzSignedHeaders = "qui";
+            }}            
 
             CreateAppResponse res = sdk.createApp(req);
 

@@ -7,45 +7,80 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadSessionsUploadRequest {
-    
-    public UploadSessionsUploadPathParams pathParams;
-    public UploadSessionsUploadRequest withPathParams(UploadSessionsUploadPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UploadSessionsUploadQueryParams queryParams;
-    public UploadSessionsUploadRequest withQueryParams(UploadSessionsUploadQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public UploadSessionsUploadHeaders headers;
-    public UploadSessionsUploadRequest withHeaders(UploadSessionsUploadHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=*/*")
-    public byte[] request;
-    public UploadSessionsUploadRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public UploadSessionsUploadRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UploadSessionsUploadSecurity security;
-    public UploadSessionsUploadRequest withSecurity(UploadSessionsUploadSecurity security) {
-        this.security = security;
+    /**
+     * The RFC3230 message digest of the uploaded part. Only required for the Box connector. More information on the Box API docs [here](https://developer.box.com/reference/put-files-upload-sessions-id/#param-digest)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=digest")
+    public String digest;
+    public UploadSessionsUploadRequest withDigest(String digest) {
+        this.digest = digest;
         return this;
     }
     
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UploadSessionsUploadRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public String serverURL;
-    public UploadSessionsUploadRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Part number of the file part being uploaded.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_number")
+    public Double partNumber;
+    public UploadSessionsUploadRequest withPartNumber(Double partNumber) {
+        this.partNumber = partNumber;
+        return this;
+    }
+    
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public UploadSessionsUploadRequest withRaw(Boolean raw) {
+        this.raw = raw;
+        return this;
+    }
+    
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public UploadSessionsUploadRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public UploadSessionsUploadRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public UploadSessionsUploadRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

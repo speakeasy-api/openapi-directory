@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV1VerificationResultRequest {
+    /**
+     * Returns the API response in json (default) or xml format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetV1VerificationResultFormatEnum format;
+    public GetV1VerificationResultRequest withFormat(GetV1VerificationResultFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetV1VerificationResultQueryParams queryParams;
-    public GetV1VerificationResultRequest withQueryParams(GetV1VerificationResultQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * FraudLabs Pro API key.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetV1VerificationResultRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The OTP that was sent to the recipient\u2019s phone.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=otp")
+    public String otp;
+    public GetV1VerificationResultRequest withOtp(String otp) {
+        this.otp = otp;
+        return this;
+    }
+    
+    /**
+     * The unique ID that was returned by the Send Verification SMS API that triggered the OTP sms.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tran_id")
+    public String tranId;
+    public GetV1VerificationResultRequest withTranId(String tranId) {
+        this.tranId = tranId;
         return this;
     }
     

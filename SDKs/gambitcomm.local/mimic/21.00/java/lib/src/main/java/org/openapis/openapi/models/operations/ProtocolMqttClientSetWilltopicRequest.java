@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientSetWilltopicRequest {
+    /**
+     * Agent to set MQTT config
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolMqttClientSetWilltopicRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolMqttClientSetWilltopicPathParams pathParams;
-    public ProtocolMqttClientSetWilltopicRequest withPathParams(ProtocolMqttClientSetWilltopicPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * topic
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=topic")
+    public String topic;
+    public ProtocolMqttClientSetWilltopicRequest withTopic(String topic) {
+        this.topic = topic;
         return this;
     }
     

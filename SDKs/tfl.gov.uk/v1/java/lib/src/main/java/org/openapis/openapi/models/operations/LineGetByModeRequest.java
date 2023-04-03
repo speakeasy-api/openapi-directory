@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineGetByModeRequest {
-    
-    public LineGetByModePathParams pathParams;
-    public LineGetByModeRequest withPathParams(LineGetByModePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A comma-separated list of modes e.g. tube,dlr
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modes")
+    public String[] modes;
+    public LineGetByModeRequest withModes(String[] modes) {
+        this.modes = modes;
         return this;
     }
     

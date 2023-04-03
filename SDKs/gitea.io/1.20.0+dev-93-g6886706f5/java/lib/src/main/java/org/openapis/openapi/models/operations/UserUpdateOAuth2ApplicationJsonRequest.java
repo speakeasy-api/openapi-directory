@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserUpdateOAuth2ApplicationJsonRequest {
-    
-    public UserUpdateOAuth2ApplicationJsonPathParams pathParams;
-    public UserUpdateOAuth2ApplicationJsonRequest withPathParams(UserUpdateOAuth2ApplicationJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateOAuth2ApplicationOptions createOAuth2ApplicationOptions;
+    public UserUpdateOAuth2ApplicationJsonRequest withCreateOAuth2ApplicationOptions(org.openapis.openapi.models.shared.CreateOAuth2ApplicationOptions createOAuth2ApplicationOptions) {
+        this.createOAuth2ApplicationOptions = createOAuth2ApplicationOptions;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateOAuth2ApplicationOptions request;
-    public UserUpdateOAuth2ApplicationJsonRequest withRequest(org.openapis.openapi.models.shared.CreateOAuth2ApplicationOptions request) {
-        this.request = request;
+    /**
+     * application to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UserUpdateOAuth2ApplicationJsonRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

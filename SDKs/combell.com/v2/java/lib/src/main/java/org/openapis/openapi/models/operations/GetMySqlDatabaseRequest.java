@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMySqlDatabaseRequest {
-    
-    public GetMySqlDatabasePathParams pathParams;
-    public GetMySqlDatabaseRequest withPathParams(GetMySqlDatabasePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=databaseName")
+    public String databaseNamePathParameter;
+    public GetMySqlDatabaseRequest withDatabaseNamePathParameter(String databaseNamePathParameter) {
+        this.databaseNamePathParameter = databaseNamePathParameter;
         return this;
     }
     
-    
-    public GetMySqlDatabaseQueryParams queryParams;
-    public GetMySqlDatabaseRequest withQueryParams(GetMySqlDatabaseQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=database_name")
+    public String databaseNameQueryParameter;
+    public GetMySqlDatabaseRequest withDatabaseNameQueryParameter(String databaseNameQueryParameter) {
+        this.databaseNameQueryParameter = databaseNameQueryParameter;
         return this;
     }
     

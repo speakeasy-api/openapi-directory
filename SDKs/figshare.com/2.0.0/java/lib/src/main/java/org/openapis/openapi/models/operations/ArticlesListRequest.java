@@ -4,20 +4,153 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticlesListRequest {
-    
-    public ArticlesListQueryParams queryParams;
-    public ArticlesListRequest withQueryParams(ArticlesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Unique hash used for bypassing the item retrieval limit of 9,000 entities. When using this parameter, please note that the offset parameter will not be available, but the limit parameter will still work as expected.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Cursor")
+    public String xCursor;
+    public ArticlesListRequest withXCursor(String xCursor) {
+        this.xCursor = xCursor;
         return this;
     }
     
+    /**
+     * only return articles with this doi
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doi")
+    public String doi;
+    public ArticlesListRequest withDoi(String doi) {
+        this.doi = doi;
+        return this;
+    }
     
-    public ArticlesListHeaders headers;
-    public ArticlesListRequest withHeaders(ArticlesListHeaders headers) {
-        this.headers = headers;
+    /**
+     * only return articles from this group
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public Long group;
+    public ArticlesListRequest withGroup(Long group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * only return articles with this handle
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=handle")
+    public String handle;
+    public ArticlesListRequest withHandle(String handle) {
+        this.handle = handle;
+        return this;
+    }
+    
+    /**
+     * only return articles from this institution
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=institution")
+    public Long institution;
+    public ArticlesListRequest withInstitution(Long institution) {
+        this.institution = institution;
+        return this;
+    }
+    
+    /**
+     * Only return articles with the respective type. Mapping for item_type is: 1 - Figure, 2 - Media, 3 - Dataset, 5 - Poster, 6 - Journal contribution, 7 - Presentation, 8 - Thesis, 9 - Software, 11 - Online resource, 12 - Preprint, 13 - Book, 14 - Conference contribution, 15 - Chapter, 16 - Peer review, 17 - Educational resource, 18 - Report, 19 - Standard, 20 - Composition, 21 - Funding, 22 - Physical object, 23 - Data management plan, 24 - Workflow, 25 - Monograph, 26 - Performance, 27 - Event, 28 - Service, 29 - Model
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_type")
+    public Long itemType;
+    public ArticlesListRequest withItemType(Long itemType) {
+        this.itemType = itemType;
+        return this;
+    }
+    
+    /**
+     * Number of results included on a page. Used for pagination with query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ArticlesListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Filter by article modified date. Will only return articles published after the date. date(ISO 8601) YYYY-MM-DD
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modified_since")
+    public String modifiedSince;
+    public ArticlesListRequest withModifiedSince(String modifiedSince) {
+        this.modifiedSince = modifiedSince;
+        return this;
+    }
+    
+    /**
+     * Where to start the listing(the offset of the first result). Used for pagination with limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ArticlesListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The field by which to order. Default varies by endpoint/resource.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public ArticlesListOrderEnum order;
+    public ArticlesListRequest withOrder(ArticlesListOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_direction")
+    public ArticlesListOrderDirectionEnum orderDirection;
+    public ArticlesListRequest withOrderDirection(ArticlesListOrderDirectionEnum orderDirection) {
+        this.orderDirection = orderDirection;
+        return this;
+    }
+    
+    /**
+     * Page number. Used for pagination with page_size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ArticlesListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results included on a page. Used for pagination with page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public ArticlesListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Filter by article publishing date. Will only return articles published after the date. date(ISO 8601) YYYY-MM-DD
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=published_since")
+    public String publishedSince;
+    public ArticlesListRequest withPublishedSince(String publishedSince) {
+        this.publishedSince = publishedSince;
+        return this;
+    }
+    
+    /**
+     * only return articles with this resource_doi
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resource_doi")
+    public String resourceDoi;
+    public ArticlesListRequest withResourceDoi(String resourceDoi) {
+        this.resourceDoi = resourceDoi;
         return this;
     }
     

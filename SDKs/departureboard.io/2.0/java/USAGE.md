@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetArrivalsAndDeparturesByCRSPathParams;
-import org.openapis.openapi.models.operations.GetArrivalsAndDeparturesByCRSQueryParams;
 import org.openapis.openapi.models.operations.GetArrivalsAndDeparturesByCRSRequest;
 import org.openapis.openapi.models.operations.GetArrivalsAndDeparturesByCRSResponse;
 
@@ -16,19 +14,15 @@ public class Application {
                 .build();
 
             GetArrivalsAndDeparturesByCRSRequest req = new GetArrivalsAndDeparturesByCRSRequest() {{
-                pathParams = new GetArrivalsAndDeparturesByCRSPathParams() {{
-                    crs = "corrupti";
-                }};
-                queryParams = new GetArrivalsAndDeparturesByCRSQueryParams() {{
-                    apiKey = "provident";
-                    filterStation = "distinctio";
-                    filterType = "quibusdam";
-                    numServices = 602763;
-                    serviceDetails = false;
-                    timeOffset = 857946;
-                    timeWindow = 544883;
-                }};
-            }};            
+                crs = "corrupti";
+                apiKey = "provident";
+                filterStation = "distinctio";
+                filterType = "quibusdam";
+                numServices = 602763;
+                serviceDetails = false;
+                timeOffset = 857946;
+                timeWindow = 544883;
+            }}            
 
             GetArrivalsAndDeparturesByCRSResponse res = sdk.departuresAndArrivals.getArrivalsAndDeparturesByCRS(req);
 

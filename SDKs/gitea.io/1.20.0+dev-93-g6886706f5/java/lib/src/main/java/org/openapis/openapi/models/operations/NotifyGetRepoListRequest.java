@@ -4,20 +4,97 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NotifyGetRepoListRequest {
-    
-    public NotifyGetRepoListPathParams pathParams;
-    public NotifyGetRepoListRequest withPathParams(NotifyGetRepoListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If true, show notifications marked as read. Default value is false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
+    public Boolean all;
+    public NotifyGetRepoListRequest withAll(Boolean all) {
+        this.all = all;
         return this;
     }
     
+    /**
+     * Only show notifications updated before the given time. This is a timestamp in RFC 3339 format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public OffsetDateTime before;
+    public NotifyGetRepoListRequest withBefore(OffsetDateTime before) {
+        this.before = before;
+        return this;
+    }
     
-    public NotifyGetRepoListQueryParams queryParams;
-    public NotifyGetRepoListRequest withQueryParams(NotifyGetRepoListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public NotifyGetRepoListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public NotifyGetRepoListRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public NotifyGetRepoListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public NotifyGetRepoListRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * Only show notifications updated after the given time. This is a timestamp in RFC 3339 format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public OffsetDateTime since;
+    public NotifyGetRepoListRequest withSince(OffsetDateTime since) {
+        this.since = since;
+        return this;
+    }
+    
+    /**
+     * Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status-types")
+    public String[] statusTypes;
+    public NotifyGetRepoListRequest withStatusTypes(String[] statusTypes) {
+        this.statusTypes = statusTypes;
+        return this;
+    }
+    
+    /**
+     * filter notifications by subject type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject-type")
+    public NotifyGetRepoListSubjectTypeEnum[] subjectType;
+    public NotifyGetRepoListRequest withSubjectType(NotifyGetRepoListSubjectTypeEnum[] subjectType) {
+        this.subjectType = subjectType;
         return this;
     }
     

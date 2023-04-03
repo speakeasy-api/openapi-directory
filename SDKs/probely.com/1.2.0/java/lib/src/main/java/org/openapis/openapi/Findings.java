@@ -50,13 +50,13 @@ public class Findings {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsResponse getTargetsTargetIdFindings(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsPathParams.class, baseUrl, "/targets/{target_id}/findings/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsRequest.class, baseUrl, "/targets/{target_id}/findings/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -111,13 +111,13 @@ public class Findings {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsReportResponse getTargetsTargetIdFindingsReport(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsReportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsReportPathParams.class, baseUrl, "/targets/{target_id}/findings/report/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsReportRequest.class, baseUrl, "/targets/{target_id}/findings/report/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsReportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsReportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -179,7 +179,7 @@ public class Findings {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsIdResponse getTargetsTargetIdFindingsId(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsIdPathParams.class, baseUrl, "/targets/{target_id}/findings/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsIdRequest.class, baseUrl, "/targets/{target_id}/findings/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -235,7 +235,7 @@ public class Findings {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsIdLogResponse getTargetsTargetIdFindingsIdLog(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsIdLogRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsIdLogPathParams.class, baseUrl, "/targets/{target_id}/findings/{id}/log/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsIdLogRequest.class, baseUrl, "/targets/{target_id}/findings/{id}/log/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -290,12 +290,12 @@ public class Findings {
      */
     public org.openapis.openapi.models.operations.PatchTargetsTargetIdFindingsBulkUpdateResponse patchTargetsTargetIdFindingsBulkUpdate(org.openapis.openapi.models.operations.PatchTargetsTargetIdFindingsBulkUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsTargetIdFindingsBulkUpdatePathParams.class, baseUrl, "/targets/{target_id}/findings/bulk/update/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsTargetIdFindingsBulkUpdateRequest.class, baseUrl, "/targets/{target_id}/findings/bulk/update/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "findingBulkUpdateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -352,12 +352,12 @@ public class Findings {
      */
     public org.openapis.openapi.models.operations.PatchTargetsTargetIdFindingsIdResponse patchTargetsTargetIdFindingsId(org.openapis.openapi.models.operations.PatchTargetsTargetIdFindingsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsTargetIdFindingsIdPathParams.class, baseUrl, "/targets/{target_id}/findings/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsTargetIdFindingsIdRequest.class, baseUrl, "/targets/{target_id}/findings/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "findingUpdateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -428,12 +428,12 @@ public class Findings {
      */
     public org.openapis.openapi.models.operations.PostTargetsTargetIdFindingsBulkReportResponse postTargetsTargetIdFindingsBulkReport(org.openapis.openapi.models.operations.PostTargetsTargetIdFindingsBulkReportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTargetsTargetIdFindingsBulkReportPathParams.class, baseUrl, "/targets/{target_id}/findings/bulk/report/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTargetsTargetIdFindingsBulkReportRequest.class, baseUrl, "/targets/{target_id}/findings/bulk/report/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "findingBulkIds", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -490,12 +490,12 @@ public class Findings {
      */
     public org.openapis.openapi.models.operations.PostTargetsTargetIdFindingsBulkRetestResponse postTargetsTargetIdFindingsBulkRetest(org.openapis.openapi.models.operations.PostTargetsTargetIdFindingsBulkRetestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTargetsTargetIdFindingsBulkRetestPathParams.class, baseUrl, "/targets/{target_id}/findings/bulk/retest/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTargetsTargetIdFindingsBulkRetestRequest.class, baseUrl, "/targets/{target_id}/findings/bulk/retest/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "findingBulkRetest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -552,7 +552,7 @@ public class Findings {
      */
     public org.openapis.openapi.models.operations.PostTargetsTargetIdFindingsIdRetestResponse postTargetsTargetIdFindingsIdRetest(org.openapis.openapi.models.operations.PostTargetsTargetIdFindingsIdRetestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTargetsTargetIdFindingsIdRetestPathParams.class, baseUrl, "/targets/{target_id}/findings/{id}/retest/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTargetsTargetIdFindingsIdRetestRequest.class, baseUrl, "/targets/{target_id}/findings/{id}/retest/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -615,12 +615,12 @@ public class Findings {
      */
     public org.openapis.openapi.models.operations.PutTargetsTargetIdFindingsIdResponse putTargetsTargetIdFindingsId(org.openapis.openapi.models.operations.PutTargetsTargetIdFindingsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTargetsTargetIdFindingsIdPathParams.class, baseUrl, "/targets/{target_id}/findings/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTargetsTargetIdFindingsIdRequest.class, baseUrl, "/targets/{target_id}/findings/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "findingUpdateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

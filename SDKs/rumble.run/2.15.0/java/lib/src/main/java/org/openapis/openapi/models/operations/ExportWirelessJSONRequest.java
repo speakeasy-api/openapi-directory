@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportWirelessJSONRequest {
-    
-    public ExportWirelessJSONQueryParams queryParams;
-    public ExportWirelessJSONRequest withQueryParams(ExportWirelessJSONQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * an optional list of fields to export, comma-separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ExportWirelessJSONRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
-    
-    public ExportWirelessJSONSecurity security;
-    public ExportWirelessJSONRequest withSecurity(ExportWirelessJSONSecurity security) {
-        this.security = security;
+    /**
+     * an optional search string for filtering results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public ExportWirelessJSONRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

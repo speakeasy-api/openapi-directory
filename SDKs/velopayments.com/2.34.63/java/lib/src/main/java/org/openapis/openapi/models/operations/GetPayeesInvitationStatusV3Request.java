@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPayeesInvitationStatusV3Request {
-    
-    public GetPayeesInvitationStatusV3PathParams pathParams;
-    public GetPayeesInvitationStatusV3Request withPathParams(GetPayeesInvitationStatusV3PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The invitation status of the payees.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=invitationStatus")
+    public String invitationStatus;
+    public GetPayeesInvitationStatusV3Request withInvitationStatus(String invitationStatus) {
+        this.invitationStatus = invitationStatus;
         return this;
     }
     
+    /**
+     * Page number. Default is 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetPayeesInvitationStatusV3Request withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetPayeesInvitationStatusV3QueryParams queryParams;
-    public GetPayeesInvitationStatusV3Request withQueryParams(GetPayeesInvitationStatusV3QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page size. Default is 25. Max allowable is 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetPayeesInvitationStatusV3Request withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The UUID of the payee.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payeeId")
+    public String payeeId;
+    public GetPayeesInvitationStatusV3Request withPayeeId(String payeeId) {
+        this.payeeId = payeeId;
+        return this;
+    }
+    
+    /**
+     * The account owner Payor ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payorId")
+    public String payorId;
+    public GetPayeesInvitationStatusV3Request withPayorId(String payorId) {
+        this.payorId = payorId;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEmbedPresetVideosRequest {
-    
-    public GetEmbedPresetVideosPathParams pathParams;
-    public GetEmbedPresetVideosRequest withPathParams(GetEmbedPresetVideosPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetEmbedPresetVideosRequest withPage(Double page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetEmbedPresetVideosRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public GetEmbedPresetVideosQueryParams queryParams;
-    public GetEmbedPresetVideosRequest withQueryParams(GetEmbedPresetVideosQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the preset.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=preset_id")
+    public Double presetId;
+    public GetEmbedPresetVideosRequest withPresetId(Double presetId) {
+        this.presetId = presetId;
+        return this;
+    }
+    
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public GetEmbedPresetVideosRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

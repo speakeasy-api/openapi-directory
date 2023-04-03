@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceSwitchPortRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portId")
+    public String portId;
+    public GetDeviceSwitchPortRequest withPortId(String portId) {
+        this.portId = portId;
+        return this;
+    }
     
-    public GetDeviceSwitchPortPathParams pathParams;
-    public GetDeviceSwitchPortRequest withPathParams(GetDeviceSwitchPortPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetDeviceSwitchPortRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

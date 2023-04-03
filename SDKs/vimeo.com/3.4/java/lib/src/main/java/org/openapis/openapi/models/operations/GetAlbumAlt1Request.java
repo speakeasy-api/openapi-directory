@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAlbumAlt1Request {
-    
-    public GetAlbumAlt1PathParams pathParams;
-    public GetAlbumAlt1Request withPathParams(GetAlbumAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the album.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=album_id")
+    public Double albumId;
+    public GetAlbumAlt1Request withAlbumId(Double albumId) {
+        this.albumId = albumId;
         return this;
     }
     

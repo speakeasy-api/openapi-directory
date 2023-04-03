@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimRacksDeleteRequest {
-    
-    public DcimRacksDeletePathParams pathParams;
-    public DcimRacksDeleteRequest withPathParams(DcimRacksDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this rack.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimRacksDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -44,7 +44,7 @@ public class Subscriptions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddSubscriptionResponse addSubscription(org.openapis.openapi.models.operations.AddSubscriptionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddSubscriptionResponse addSubscription(org.openapis.openapi.models.shared.SubscriptionInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/subscriptions");
         
@@ -90,7 +90,7 @@ public class Subscriptions {
      */
     public org.openapis.openapi.models.operations.DeleteSubscriptionResponse deleteSubscription(org.openapis.openapi.models.operations.DeleteSubscriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubscriptionPathParams.class, baseUrl, "/subscriptions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubscriptionRequest.class, baseUrl, "/subscriptions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -129,13 +129,13 @@ public class Subscriptions {
      */
     public org.openapis.openapi.models.operations.GetEventsForSubscriptionByIdResponse getEventsForSubscriptionById(org.openapis.openapi.models.operations.GetEventsForSubscriptionByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventsForSubscriptionByIdPathParams.class, baseUrl, "/subscriptions/{id}/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventsForSubscriptionByIdRequest.class, baseUrl, "/subscriptions/{id}/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEventsForSubscriptionByIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEventsForSubscriptionByIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -174,7 +174,7 @@ public class Subscriptions {
      */
     public org.openapis.openapi.models.operations.GetSubscriptionByIdResponse getSubscriptionById(org.openapis.openapi.models.operations.GetSubscriptionByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubscriptionByIdPathParams.class, baseUrl, "/subscriptions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubscriptionByIdRequest.class, baseUrl, "/subscriptions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -219,7 +219,7 @@ public class Subscriptions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSubscriptionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSubscriptionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -258,12 +258,12 @@ public class Subscriptions {
      */
     public org.openapis.openapi.models.operations.UpdateSubscriptionResponse updateSubscription(org.openapis.openapi.models.operations.UpdateSubscriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSubscriptionPathParams.class, baseUrl, "/subscriptions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSubscriptionRequest.class, baseUrl, "/subscriptions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "subscriptionInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

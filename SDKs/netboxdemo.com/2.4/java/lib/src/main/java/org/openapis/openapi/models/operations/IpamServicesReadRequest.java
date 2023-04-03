@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IpamServicesReadRequest {
-    
-    public IpamServicesReadPathParams pathParams;
-    public IpamServicesReadRequest withPathParams(IpamServicesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this service.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public IpamServicesReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

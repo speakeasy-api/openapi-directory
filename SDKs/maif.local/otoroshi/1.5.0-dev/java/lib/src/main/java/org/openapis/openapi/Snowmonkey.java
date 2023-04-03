@@ -36,11 +36,10 @@ public class Snowmonkey {
     /**
      * Get current Snow Monkey config
      * Get current Snow Monkey config
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSnowMonkeyConfigResponse getSnowMonkeyConfig(org.openapis.openapi.models.operations.GetSnowMonkeyConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSnowMonkeyConfigResponse getSnowMonkeyConfig() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/snowmonkey/config");
         
@@ -49,8 +48,7 @@ public class Snowmonkey {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -78,11 +76,10 @@ public class Snowmonkey {
     /**
      * Get all current Snow Monkey ourages
      * Get all current Snow Monkey ourages
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSnowMonkeyOutagesResponse getSnowMonkeyOutages(org.openapis.openapi.models.operations.GetSnowMonkeyOutagesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSnowMonkeyOutagesResponse getSnowMonkeyOutages() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/snowmonkey/outages");
         
@@ -91,8 +88,7 @@ public class Snowmonkey {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -121,10 +117,11 @@ public class Snowmonkey {
      * Update current Snow Monkey config
      * Update current Snow Monkey config
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchSnowMonkeyResponse patchSnowMonkey(org.openapis.openapi.models.operations.PatchSnowMonkeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchSnowMonkeyResponse patchSnowMonkey(org.openapis.openapi.models.shared.Group request, org.openapis.openapi.models.operations.PatchSnowMonkeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/snowmonkey/config");
         
@@ -135,7 +132,7 @@ public class Snowmonkey {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -164,11 +161,10 @@ public class Snowmonkey {
     /**
      * Reset Snow Monkey Outages for the day
      * Reset Snow Monkey Outages for the day
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ResetSnowMonkeyResponse resetSnowMonkey(org.openapis.openapi.models.operations.ResetSnowMonkeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ResetSnowMonkeyResponse resetSnowMonkey() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/snowmonkey/outages");
         
@@ -177,8 +173,7 @@ public class Snowmonkey {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -206,11 +201,10 @@ public class Snowmonkey {
     /**
      * Start the Snow Monkey
      * Start the Snow Monkey
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StartSnowMonkeyResponse startSnowMonkey(org.openapis.openapi.models.operations.StartSnowMonkeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StartSnowMonkeyResponse startSnowMonkey() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/snowmonkey/_start");
         
@@ -219,8 +213,7 @@ public class Snowmonkey {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -248,11 +241,10 @@ public class Snowmonkey {
     /**
      * Stop the Snow Monkey
      * Stop the Snow Monkey
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StopSnowMonkeyResponse stopSnowMonkey(org.openapis.openapi.models.operations.StopSnowMonkeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StopSnowMonkeyResponse stopSnowMonkey() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/snowmonkey/_stop");
         
@@ -261,8 +253,7 @@ public class Snowmonkey {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -291,10 +282,11 @@ public class Snowmonkey {
      * Update current Snow Monkey config
      * Update current Snow Monkey config
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateSnowMonkeyResponse updateSnowMonkey(org.openapis.openapi.models.operations.UpdateSnowMonkeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateSnowMonkeyResponse updateSnowMonkey(org.openapis.openapi.models.shared.Group request, org.openapis.openapi.models.operations.UpdateSnowMonkeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/snowmonkey/config");
         
@@ -305,7 +297,7 @@ public class Snowmonkey {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

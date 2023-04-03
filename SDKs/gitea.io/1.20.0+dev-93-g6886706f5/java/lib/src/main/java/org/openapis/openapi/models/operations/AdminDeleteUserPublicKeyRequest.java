@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdminDeleteUserPublicKeyRequest {
+    /**
+     * id of the key to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public AdminDeleteUserPublicKeyRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public AdminDeleteUserPublicKeyPathParams pathParams;
-    public AdminDeleteUserPublicKeyRequest withPathParams(AdminDeleteUserPublicKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * username of user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public AdminDeleteUserPublicKeyRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

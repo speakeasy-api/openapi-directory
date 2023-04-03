@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetAccountInfoHeaders;
 import org.openapis.openapi.models.operations.GetAccountInfoRequest;
 import org.openapis.openapi.models.operations.GetAccountInfoResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             GetAccountInfoRequest req = new GetAccountInfoRequest() {{
-                headers = new GetAccountInfoHeaders() {{
-                    trainingKey = "corrupti";
-                }};
-            }};            
+                trainingKey = "corrupti";
+            }}            
 
             GetAccountInfoResponse res = sdk.accountApi.getAccountInfo(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### accountApi

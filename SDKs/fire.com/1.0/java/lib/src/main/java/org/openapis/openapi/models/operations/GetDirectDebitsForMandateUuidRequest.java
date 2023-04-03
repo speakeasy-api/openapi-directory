@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDirectDebitsForMandateUuidRequest {
-    
-    public GetDirectDebitsForMandateUuidQueryParams queryParams;
-    public GetDirectDebitsForMandateUuidRequest withQueryParams(GetDirectDebitsForMandateUuidQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The mandate UUID to retrieve
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mandateUuid")
+    public String mandateUuid;
+    public GetDirectDebitsForMandateUuidRequest withMandateUuid(String mandateUuid) {
+        this.mandateUuid = mandateUuid;
         return this;
     }
     

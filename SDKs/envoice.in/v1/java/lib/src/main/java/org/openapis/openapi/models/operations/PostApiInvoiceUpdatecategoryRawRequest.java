@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiInvoiceUpdatecategoryRawRequest {
-    
-    public PostApiInvoiceUpdatecategoryRawHeaders headers;
-    public PostApiInvoiceUpdatecategoryRawRequest withHeaders(PostApiInvoiceUpdatecategoryRawHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] requestBody;
+    public PostApiInvoiceUpdatecategoryRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public PostApiInvoiceUpdatecategoryRawRequest withRequest(byte[] request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public PostApiInvoiceUpdatecategoryRawRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public PostApiInvoiceUpdatecategoryRawRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

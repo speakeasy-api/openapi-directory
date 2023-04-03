@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TrackingfieldDeleteRequest {
-    
-    public TrackingfieldDeletePathParams pathParams;
-    public TrackingfieldDeleteRequest withPathParams(TrackingfieldDeletePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public TrackingfieldDeleteSecurity security;
-    public TrackingfieldDeleteRequest withSecurity(TrackingfieldDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The Tracking Field ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fieldId")
+    public String fieldId;
+    public TrackingfieldDeleteRequest withFieldId(String fieldId) {
+        this.fieldId = fieldId;
         return this;
     }
     

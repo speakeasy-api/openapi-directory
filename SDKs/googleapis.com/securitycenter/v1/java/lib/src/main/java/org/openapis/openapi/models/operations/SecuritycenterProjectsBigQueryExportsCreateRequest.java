@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SecuritycenterProjectsBigQueryExportsCreateRequest {
-    
-    public SecuritycenterProjectsBigQueryExportsCreatePathParams pathParams;
-    public SecuritycenterProjectsBigQueryExportsCreateRequest withPathParams(SecuritycenterProjectsBigQueryExportsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SecuritycenterProjectsBigQueryExportsCreateQueryParams queryParams;
-    public SecuritycenterProjectsBigQueryExportsCreateRequest withQueryParams(SecuritycenterProjectsBigQueryExportsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public SecuritycenterProjectsBigQueryExportsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1BigQueryExportInput request;
-    public SecuritycenterProjectsBigQueryExportsCreateRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1BigQueryExportInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1BigQueryExportInput googleCloudSecuritycenterV1BigQueryExportInput;
+    public SecuritycenterProjectsBigQueryExportsCreateRequest withGoogleCloudSecuritycenterV1BigQueryExportInput(org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1BigQueryExportInput googleCloudSecuritycenterV1BigQueryExportInput) {
+        this.googleCloudSecuritycenterV1BigQueryExportInput = googleCloudSecuritycenterV1BigQueryExportInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public SecuritycenterProjectsBigQueryExportsCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public SecuritycenterProjectsBigQueryExportsCreateSecurity security;
-    public SecuritycenterProjectsBigQueryExportsCreateRequest withSecurity(SecuritycenterProjectsBigQueryExportsCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public SecuritycenterProjectsBigQueryExportsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * Required. Unique identifier provided by the client within the parent scope. It must consist of lower case letters, numbers, and hyphen, with the first character a letter, the last a letter or a number, and a 63 character maximum.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bigQueryExportId")
+    public String bigQueryExportId;
+    public SecuritycenterProjectsBigQueryExportsCreateRequest withBigQueryExportId(String bigQueryExportId) {
+        this.bigQueryExportId = bigQueryExportId;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public SecuritycenterProjectsBigQueryExportsCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public SecuritycenterProjectsBigQueryExportsCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public SecuritycenterProjectsBigQueryExportsCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public SecuritycenterProjectsBigQueryExportsCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The name of the parent resource of the new BigQuery export. Its format is "organizations/[organization_id]", "folders/[folder_id]", or "projects/[project_id]".
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public SecuritycenterProjectsBigQueryExportsCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public SecuritycenterProjectsBigQueryExportsCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public SecuritycenterProjectsBigQueryExportsCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public SecuritycenterProjectsBigQueryExportsCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public SecuritycenterProjectsBigQueryExportsCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutV2CustomFieldsIdJsonRequest {
-    
-    public PutV2CustomFieldsIdJsonPathParams pathParams;
-    public PutV2CustomFieldsIdJsonRequest withPathParams(PutV2CustomFieldsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public PutV2CustomFieldsIdJsonRequestBody requestBody;
+    public PutV2CustomFieldsIdJsonRequest withRequestBody(PutV2CustomFieldsIdJsonRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public PutV2CustomFieldsIdJsonRequestBody request;
-    public PutV2CustomFieldsIdJsonRequest withRequest(PutV2CustomFieldsIdJsonRequestBody request) {
-        this.request = request;
+    /**
+     * Custom Field ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutV2CustomFieldsIdJsonRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

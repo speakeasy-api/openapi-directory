@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BatchCreateDelegationByAssessmentRequest {
-    
-    public BatchCreateDelegationByAssessmentPathParams pathParams;
-    public BatchCreateDelegationByAssessmentRequest withPathParams(BatchCreateDelegationByAssessmentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public BatchCreateDelegationByAssessmentHeaders headers;
-    public BatchCreateDelegationByAssessmentRequest withHeaders(BatchCreateDelegationByAssessmentHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public BatchCreateDelegationByAssessmentRequestBody request;
-    public BatchCreateDelegationByAssessmentRequest withRequest(BatchCreateDelegationByAssessmentRequestBody request) {
-        this.request = request;
+    public BatchCreateDelegationByAssessmentRequestBody requestBody;
+    public BatchCreateDelegationByAssessmentRequest withRequestBody(BatchCreateDelegationByAssessmentRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public BatchCreateDelegationByAssessmentRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public BatchCreateDelegationByAssessmentRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public BatchCreateDelegationByAssessmentRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public BatchCreateDelegationByAssessmentRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public BatchCreateDelegationByAssessmentRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public BatchCreateDelegationByAssessmentRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public BatchCreateDelegationByAssessmentRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     *  The identifier for the assessment. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assessmentId")
+    public String assessmentId;
+    public BatchCreateDelegationByAssessmentRequest withAssessmentId(String assessmentId) {
+        this.assessmentId = assessmentId;
         return this;
     }
     

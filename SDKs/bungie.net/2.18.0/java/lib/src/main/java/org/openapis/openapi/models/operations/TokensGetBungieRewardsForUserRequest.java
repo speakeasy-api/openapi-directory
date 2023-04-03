@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TokensGetBungieRewardsForUserRequest {
-    
-    public TokensGetBungieRewardsForUserPathParams pathParams;
-    public TokensGetBungieRewardsForUserRequest withPathParams(TokensGetBungieRewardsForUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public TokensGetBungieRewardsForUserSecurity security;
-    public TokensGetBungieRewardsForUserRequest withSecurity(TokensGetBungieRewardsForUserSecurity security) {
-        this.security = security;
+    /**
+     * bungie.net user membershipId for requested user rewards. If not self, elevated permissions are required.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
+    public Long membershipId;
+    public TokensGetBungieRewardsForUserRequest withMembershipId(Long membershipId) {
+        this.membershipId = membershipId;
         return this;
     }
     

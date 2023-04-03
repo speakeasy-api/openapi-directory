@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceCellularSimsRequest {
-    
-    public GetDeviceCellularSimsPathParams pathParams;
-    public GetDeviceCellularSimsRequest withPathParams(GetDeviceCellularSimsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetDeviceCellularSimsRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

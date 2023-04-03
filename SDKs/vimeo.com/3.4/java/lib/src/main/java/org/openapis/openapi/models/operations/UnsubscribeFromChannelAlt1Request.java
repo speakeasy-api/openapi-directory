@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnsubscribeFromChannelAlt1Request {
-    
-    public UnsubscribeFromChannelAlt1PathParams pathParams;
-    public UnsubscribeFromChannelAlt1Request withPathParams(UnsubscribeFromChannelAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UnsubscribeFromChannelAlt1Security security;
-    public UnsubscribeFromChannelAlt1Request withSecurity(UnsubscribeFromChannelAlt1Security security) {
-        this.security = security;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public UnsubscribeFromChannelAlt1Request withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     

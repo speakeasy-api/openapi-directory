@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetpagedbySellerIdRequest {
-    
-    public GetpagedbySellerIdPathParams pathParams;
-    public GetpagedbySellerIdRequest withPathParams(GetpagedbySellerIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetpagedbySellerIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetpagedbySellerIdQueryParams queryParams;
-    public GetpagedbySellerIdRequest withQueryParams(GetpagedbySellerIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetpagedbySellerIdRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Page number.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetpagedbySellerIdRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetpagedbySellerIdHeaders headers;
-    public GetpagedbySellerIdRequest withHeaders(GetpagedbySellerIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID that identifies the seller in the marketplace. It can be the same as the seller name or a unique number. Check the **Sellers management** section in the Admin to get the correct ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
+    public String sellerId;
+    public GetpagedbySellerIdRequest withSellerId(String sellerId) {
+        this.sellerId = sellerId;
+        return this;
+    }
+    
+    /**
+     * Amount of results per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public String size;
+    public GetpagedbySellerIdRequest withSize(String size) {
+        this.size = size;
         return this;
     }
     

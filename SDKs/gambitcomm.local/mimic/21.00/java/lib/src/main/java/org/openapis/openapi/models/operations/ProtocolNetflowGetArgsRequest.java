@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolNetflowGetArgsRequest {
-    
-    public ProtocolNetflowGetArgsPathParams pathParams;
-    public ProtocolNetflowGetArgsRequest withPathParams(ProtocolNetflowGetArgsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show the NETFLOW argument structure
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolNetflowGetArgsRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

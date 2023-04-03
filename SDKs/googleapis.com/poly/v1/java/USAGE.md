@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.PolyAssetsGetPathParams;
-import org.openapis.openapi.models.operations.PolyAssetsGetQueryParams;
 import org.openapis.openapi.models.operations.PolyAssetsGetRequest;
 import org.openapis.openapi.models.operations.PolyAssetsGetResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -18,23 +16,19 @@ public class Application {
                 .build();
 
             PolyAssetsGetRequest req = new PolyAssetsGetRequest() {{
-                pathParams = new PolyAssetsGetPathParams() {{
-                    name = "corrupti";
-                }};
-                queryParams = new PolyAssetsGetQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                key = "nulla";
+                name = "corrupti";
+                oauthToken = "illum";
+                prettyPrint = false;
+                quotaUser = "vel";
+                uploadType = "error";
+                uploadProtocol = "deserunt";
+            }}            
 
             PolyAssetsGetResponse res = sdk.assets.polyAssetsGet(req);
 

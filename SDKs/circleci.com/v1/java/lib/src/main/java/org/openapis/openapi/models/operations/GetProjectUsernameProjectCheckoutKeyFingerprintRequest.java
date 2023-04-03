@@ -4,13 +4,39 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectUsernameProjectCheckoutKeyFingerprintRequest {
+    /**
+     * XXXXXXXXXX
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fingerprint")
+    public String fingerprint;
+    public GetProjectUsernameProjectCheckoutKeyFingerprintRequest withFingerprint(String fingerprint) {
+        this.fingerprint = fingerprint;
+        return this;
+    }
     
-    public GetProjectUsernameProjectCheckoutKeyFingerprintPathParams pathParams;
-    public GetProjectUsernameProjectCheckoutKeyFingerprintRequest withPathParams(GetProjectUsernameProjectCheckoutKeyFingerprintPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * XXXXXXXXX
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public GetProjectUsernameProjectCheckoutKeyFingerprintRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * XXXXXXXXX
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetProjectUsernameProjectCheckoutKeyFingerprintRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

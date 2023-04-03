@@ -31,14 +31,10 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/AdvisorynotificationsOrganizationsLocationsNotificationsGetSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/AdvisorynotificationsOrganizationsLocationsNotificationsGetPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/AdvisorynotificationsOrganizationsLocationsNotificationsGetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/AdvisorynotificationsOrganizationsLocationsNotificationsGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AdvisorynotificationsOrganizationsLocationsNotificationsGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/AdvisorynotificationsOrganizationsLocationsNotificationsListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/AdvisorynotificationsOrganizationsLocationsNotificationsListPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/AdvisorynotificationsOrganizationsLocationsNotificationsListViewEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/AdvisorynotificationsOrganizationsLocationsNotificationsListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/AdvisorynotificationsOrganizationsLocationsNotificationsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AdvisorynotificationsOrganizationsLocationsNotificationsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAdvisorynotificationsV1Notification.java
@@ -52,7 +48,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAdvisorynotifica
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAdvisorynotificationsV1CsvCsvRow.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAdvisorynotificationsV1ListNotificationsResponse.java
 USAGE.md

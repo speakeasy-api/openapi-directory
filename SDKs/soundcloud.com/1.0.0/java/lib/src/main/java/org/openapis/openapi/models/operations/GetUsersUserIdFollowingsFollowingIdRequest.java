@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserIdFollowingsFollowingIdRequest {
-    
-    public GetUsersUserIdFollowingsFollowingIdPathParams pathParams;
-    public GetUsersUserIdFollowingsFollowingIdRequest withPathParams(GetUsersUserIdFollowingsFollowingIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * SoundCloud User id to denote a Following of a user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=following_id")
+    public Long followingId;
+    public GetUsersUserIdFollowingsFollowingIdRequest withFollowingId(Long followingId) {
+        this.followingId = followingId;
         return this;
     }
     
-    
-    public GetUsersUserIdFollowingsFollowingIdSecurity security;
-    public GetUsersUserIdFollowingsFollowingIdRequest withSecurity(GetUsersUserIdFollowingsFollowingIdSecurity security) {
-        this.security = security;
+    /**
+     * SoundCloud User id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Long userId;
+    public GetUsersUserIdFollowingsFollowingIdRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

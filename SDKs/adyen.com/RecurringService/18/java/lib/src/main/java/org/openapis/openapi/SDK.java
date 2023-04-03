@@ -127,7 +127,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostDisableResponse postDisable(org.openapis.openapi.models.operations.PostDisableRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostDisableResponse postDisable(org.openapis.openapi.models.shared.DisableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/disable");
         
@@ -172,7 +172,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostListRecurringDetailsResponse postListRecurringDetails(org.openapis.openapi.models.operations.PostListRecurringDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostListRecurringDetailsResponse postListRecurringDetails(org.openapis.openapi.models.shared.RecurringDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/listRecurringDetails");
         

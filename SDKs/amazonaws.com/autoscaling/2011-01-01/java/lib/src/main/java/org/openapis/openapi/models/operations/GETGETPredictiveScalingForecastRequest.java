@@ -4,20 +4,110 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETPredictiveScalingForecastRequest {
-    
-    public GETGETPredictiveScalingForecastQueryParams queryParams;
-    public GETGETPredictiveScalingForecastRequest withQueryParams(GETGETPredictiveScalingForecastQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETPredictiveScalingForecastActionEnum action;
+    public GETGETPredictiveScalingForecastRequest withAction(GETGETPredictiveScalingForecastActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the Auto Scaling group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
+    public String autoScalingGroupName;
+    public GETGETPredictiveScalingForecastRequest withAutoScalingGroupName(String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        return this;
+    }
     
-    public GETGETPredictiveScalingForecastHeaders headers;
-    public GETGETPredictiveScalingForecastRequest withHeaders(GETGETPredictiveScalingForecastHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The exclusive end time of the time range for the forecast data to get. The maximum time duration between the start and end time is 30 days. &lt;/p&gt; &lt;p&gt;Although this parameter can accept a date and time that is more than two days in the future, the availability of forecast data has limits. Amazon EC2 Auto Scaling only issues forecasts for periods of two days in advance.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndTime")
+    public OffsetDateTime endTime;
+    public GETGETPredictiveScalingForecastRequest withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    /**
+     * The name of the policy.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyName")
+    public String policyName;
+    public GETGETPredictiveScalingForecastRequest withPolicyName(String policyName) {
+        this.policyName = policyName;
+        return this;
+    }
+    
+    /**
+     * The inclusive start time of the time range for the forecast data to get. At most, the date and time can be one year before the current date and time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartTime")
+    public OffsetDateTime startTime;
+    public GETGETPredictiveScalingForecastRequest withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETPredictiveScalingForecastVersionEnum version;
+    public GETGETPredictiveScalingForecastRequest withVersion(GETGETPredictiveScalingForecastVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGETPredictiveScalingForecastRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGETPredictiveScalingForecastRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGETPredictiveScalingForecastRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGETPredictiveScalingForecastRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGETPredictiveScalingForecastRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGETPredictiveScalingForecastRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGETPredictiveScalingForecastRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

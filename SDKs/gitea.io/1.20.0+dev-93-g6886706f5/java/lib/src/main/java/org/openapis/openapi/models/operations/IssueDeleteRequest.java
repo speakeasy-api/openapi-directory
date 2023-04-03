@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueDeleteRequest {
+    /**
+     * index of issue to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public IssueDeleteRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
     
-    public IssueDeletePathParams pathParams;
-    public IssueDeleteRequest withPathParams(IssueDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueDeleteRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueDeleteRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

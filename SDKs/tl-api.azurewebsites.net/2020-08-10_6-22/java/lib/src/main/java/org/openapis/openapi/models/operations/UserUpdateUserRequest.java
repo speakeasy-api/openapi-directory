@@ -4,13 +4,105 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserUpdateUserRequest {
+    /**
+     * Account number of the user.It can be any stakeholder of the application.even can be a gym.
+     *             
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccountNumber")
+    public String accountNumber;
+    public UserUpdateUserRequest withAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+        return this;
+    }
     
-    public UserUpdateUserQueryParams queryParams;
-    public UserUpdateUserRequest withQueryParams(UserUpdateUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Entity number that make a relationship with BOX API DB.
+     *             
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ExternalEntityNumber")
+    public String externalEntityNumber;
+    public UserUpdateUserRequest withExternalEntityNumber(String externalEntityNumber) {
+        this.externalEntityNumber = externalEntityNumber;
+        return this;
+    }
+    
+    /**
+     * Gaurdian of the this user if he/she is under 18 years old.
+     *             
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Guardian")
+    public Integer guardian;
+    public UserUpdateUserRequest withGuardian(Integer guardian) {
+        this.guardian = guardian;
+        return this;
+    }
+    
+    /**
+     * If this user is a gym, then the gym number.
+     *             
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GymNumber")
+    public String gymNumber;
+    public UserUpdateUserRequest withGymNumber(String gymNumber) {
+        this.gymNumber = gymNumber;
+        return this;
+    }
+    
+    /**
+     * If Someone introduced this user to the system, then that user's UserId.
+     *             
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IntroduceBy")
+    public Integer introduceBy;
+    public UserUpdateUserRequest withIntroduceBy(Integer introduceBy) {
+        this.introduceBy = introduceBy;
+        return this;
+    }
+    
+    /**
+     * Name of the user.
+     *             
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Name")
+    public String name;
+    public UserUpdateUserRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Unique number maintain by application to idenify user.
+     *             
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Number")
+    public String number;
+    public UserUpdateUserRequest withNumber(String number) {
+        this.number = number;
+        return this;
+    }
+    
+    /**
+     * Type of the user.
+     *             
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeId")
+    public Integer typeId;
+    public UserUpdateUserRequest withTypeId(Integer typeId) {
+        this.typeId = typeId;
+        return this;
+    }
+    
+    /**
+     * Indentity number(primary key) for user object. Generated in DB table when inserting a record.
+     *             
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserId")
+    public Integer userId;
+    public UserUpdateUserRequest withUserId(Integer userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTrainedModels1Request {
-    
-    public GetTrainedModels1PathParams pathParams;
-    public GetTrainedModels1Request withPathParams(GetTrainedModels1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Number of models to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public String count;
+    public GetTrainedModels1Request withCount(String count) {
+        this.count = count;
         return this;
     }
     
-    
-    public GetTrainedModels1QueryParams queryParams;
-    public GetTrainedModels1Request withQueryParams(GetTrainedModels1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Dataset Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=datasetId")
+    public String datasetId;
+    public GetTrainedModels1Request withDatasetId(String datasetId) {
+        this.datasetId = datasetId;
         return this;
     }
     
-    
-    public GetTrainedModels1Security security;
-    public GetTrainedModels1Request withSecurity(GetTrainedModels1Security security) {
-        this.security = security;
+    /**
+     * Index of the model from which you want to start paging.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetTrainedModels1Request withOffset(String offset) {
+        this.offset = offset;
         return this;
     }
     

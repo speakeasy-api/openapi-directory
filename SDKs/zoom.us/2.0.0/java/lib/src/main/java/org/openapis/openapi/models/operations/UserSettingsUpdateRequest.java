@@ -7,34 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserSettingsUpdateRequest {
-    
-    public UserSettingsUpdatePathParams pathParams;
-    public UserSettingsUpdateRequest withPathParams(UserSettingsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UserSettingsUpdateQueryParams queryParams;
-    public UserSettingsUpdateRequest withQueryParams(UserSettingsUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * User Settings
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public UserSettingsUpdateRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public UserSettingsUpdateRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=option")
+    public UserSettingsUpdateOptionEnum option;
+    public UserSettingsUpdateRequest withOption(UserSettingsUpdateOptionEnum option) {
+        this.option = option;
+        return this;
+    }
     
-    public UserSettingsUpdateSecurity security;
-    public UserSettingsUpdateRequest withSecurity(UserSettingsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UserSettingsUpdateRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

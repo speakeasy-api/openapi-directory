@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductApiDeleteJsonRequest {
-    
-    public ProductApiDeleteJsonHeaders headers;
-    public ProductApiDeleteJsonRequest withHeaders(ProductApiDeleteJsonHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ProductDeleteApiModel productDeleteApiModel;
+    public ProductApiDeleteJsonRequest withProductDeleteApiModel(org.openapis.openapi.models.shared.ProductDeleteApiModel productDeleteApiModel) {
+        this.productDeleteApiModel = productDeleteApiModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProductDeleteApiModel request;
-    public ProductApiDeleteJsonRequest withRequest(org.openapis.openapi.models.shared.ProductDeleteApiModel request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public ProductApiDeleteJsonRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public ProductApiDeleteJsonRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

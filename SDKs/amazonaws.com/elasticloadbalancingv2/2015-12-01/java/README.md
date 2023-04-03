@@ -19,8 +19,6 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GETDeleteListenerActionEnum;
 import org.openapis.openapi.models.operations.GETDeleteListenerVersionEnum;
-import org.openapis.openapi.models.operations.GETDeleteListenerQueryParams;
-import org.openapis.openapi.models.operations.GETDeleteListenerHeaders;
 import org.openapis.openapi.models.operations.GETDeleteListenerRequest;
 import org.openapis.openapi.models.operations.GETDeleteListenerResponse;
 
@@ -29,28 +27,22 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GETDeleteListenerRequest req = new GETDeleteListenerRequest() {{
-                queryParams = new GETDeleteListenerQueryParams() {{
-                    action = "DeleteListener";
-                    listenerArn = "corrupti";
-                    version = "2015-12-01";
-                }};
-                headers = new GETDeleteListenerHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-            }};            
+                action = "DeleteListener";
+                listenerArn = "corrupti";
+                version = "2015-12-01";
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+            }}            
 
             GETDeleteListenerResponse res = sdk.getDeleteListener(req);
 
@@ -64,7 +56,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

@@ -48,7 +48,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersAddonAccountsListResponse usersAddonAccountsList(org.openapis.openapi.models.operations.UsersAddonAccountsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersAddonAccountsListPathParams.class, baseUrl, "/users/{user_id}/addons/{provider}/accounts/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersAddonAccountsListRequest.class, baseUrl, "/users/{user_id}/addons/{provider}/accounts/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -95,7 +95,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersAddonAccountsReadResponse usersAddonAccountsRead(org.openapis.openapi.models.operations.UsersAddonAccountsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersAddonAccountsReadPathParams.class, baseUrl, "/users/{user_id}/addons/{provider}/accounts/{account_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersAddonAccountsReadRequest.class, baseUrl, "/users/{user_id}/addons/{provider}/accounts/{account_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -149,7 +149,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersAddonsListResponse usersAddonsList(org.openapis.openapi.models.operations.UsersAddonsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersAddonsListPathParams.class, baseUrl, "/users/{user_id}/addons/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersAddonsListRequest.class, baseUrl, "/users/{user_id}/addons/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -198,7 +198,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersAddonsReadResponse usersAddonsRead(org.openapis.openapi.models.operations.UsersAddonsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersAddonsReadPathParams.class, baseUrl, "/users/{user_id}/addons/{provider}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersAddonsReadRequest.class, baseUrl, "/users/{user_id}/addons/{provider}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -242,7 +242,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersInstitutionsListResponse usersInstitutionsList(org.openapis.openapi.models.operations.UsersInstitutionsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersInstitutionsListPathParams.class, baseUrl, "/users/{user_id}/institutions/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersInstitutionsListRequest.class, baseUrl, "/users/{user_id}/institutions/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -348,7 +348,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersNodesListResponse usersNodesList(org.openapis.openapi.models.operations.UsersNodesListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersNodesListPathParams.class, baseUrl, "/users/{user_id}/nodes/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersNodesListRequest.class, baseUrl, "/users/{user_id}/nodes/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -394,12 +394,12 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersPartialUpdateResponse usersPartialUpdate(org.openapis.openapi.models.operations.UsersPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersPartialUpdatePathParams.class, baseUrl, "/users/{user_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersPartialUpdateRequest.class, baseUrl, "/users/{user_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -442,7 +442,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersPreprintsListResponse usersPreprintsList(org.openapis.openapi.models.operations.UsersPreprintsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersPreprintsListPathParams.class, baseUrl, "/users/{user_id}/preprints/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersPreprintsListRequest.class, baseUrl, "/users/{user_id}/preprints/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -490,7 +490,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersReadResponse usersRead(org.openapis.openapi.models.operations.UsersReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersReadPathParams.class, baseUrl, "/users/{user_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersReadRequest.class, baseUrl, "/users/{user_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -542,7 +542,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UsersRegistrationsListResponse usersRegistrationsList(org.openapis.openapi.models.operations.UsersRegistrationsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersRegistrationsListPathParams.class, baseUrl, "/users/{user_id}/registrations/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UsersRegistrationsListRequest.class, baseUrl, "/users/{user_id}/registrations/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

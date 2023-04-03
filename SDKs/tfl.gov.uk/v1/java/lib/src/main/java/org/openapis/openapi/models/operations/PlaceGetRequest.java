@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlaceGetRequest {
-    
-    public PlaceGetPathParams pathParams;
-    public PlaceGetRequest withPathParams(PlaceGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the place, you can use the /Place/Types/{types} endpoint to get a list of places for a given type including their ids
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PlaceGetRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public PlaceGetQueryParams queryParams;
-    public PlaceGetRequest withQueryParams(PlaceGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Defaults to false. If true child places e.g. individual charging stations at a charge point while be included, otherwise just the URLs of any child places will be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeChildren")
+    public Boolean includeChildren;
+    public PlaceGetRequest withIncludeChildren(Boolean includeChildren) {
+        this.includeChildren = includeChildren;
         return this;
     }
     

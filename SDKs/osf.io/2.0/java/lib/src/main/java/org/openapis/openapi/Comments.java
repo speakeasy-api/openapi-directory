@@ -40,7 +40,7 @@ public class Comments {
      */
     public org.openapis.openapi.models.operations.CommentsDeleteResponse commentsDelete(org.openapis.openapi.models.operations.CommentsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CommentsDeletePathParams.class, baseUrl, "/comments/{comment_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CommentsDeleteRequest.class, baseUrl, "/comments/{comment_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -77,12 +77,12 @@ public class Comments {
      */
     public org.openapis.openapi.models.operations.CommentsPutResponse commentsPut(org.openapis.openapi.models.operations.CommentsPutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CommentsPutPathParams.class, baseUrl, "/comments/{comment_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CommentsPutRequest.class, baseUrl, "/comments/{comment_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -119,7 +119,7 @@ public class Comments {
      */
     public org.openapis.openapi.models.operations.CommentsReadResponse commentsRead(org.openapis.openapi.models.operations.CommentsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CommentsReadPathParams.class, baseUrl, "/comments/{comment_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CommentsReadRequest.class, baseUrl, "/comments/{comment_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,20 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PhoneCodeGeoFeedbackLoopRequest {
-    
-    public PhoneCodeGeoFeedbackLoopPathParams pathParams;
-    public PhoneCodeGeoFeedbackLoopRequest withPathParams(PhoneCodeGeoFeedbackLoopPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryIso2")
+    public String countryIso2;
+    public PhoneCodeGeoFeedbackLoopRequest withCountryIso2(String countryIso2) {
+        this.countryIso2 = countryIso2;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstName")
+    public String firstName;
+    public PhoneCodeGeoFeedbackLoopRequest withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
     
-    public PhoneCodeGeoFeedbackLoopSecurity security;
-    public PhoneCodeGeoFeedbackLoopRequest withSecurity(PhoneCodeGeoFeedbackLoopSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lastName")
+    public String lastName;
+    public PhoneCodeGeoFeedbackLoopRequest withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=phoneNumber")
+    public String phoneNumber;
+    public PhoneCodeGeoFeedbackLoopRequest withPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=phoneNumberE164")
+    public String phoneNumberE164;
+    public PhoneCodeGeoFeedbackLoopRequest withPhoneNumberE164(String phoneNumberE164) {
+        this.phoneNumberE164 = phoneNumberE164;
         return this;
     }
     

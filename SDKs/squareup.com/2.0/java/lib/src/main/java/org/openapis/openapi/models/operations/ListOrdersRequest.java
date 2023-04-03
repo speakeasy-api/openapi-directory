@@ -4,27 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListOrdersRequest {
-    
-    public ListOrdersPathParams pathParams;
-    public ListOrdersRequest withPathParams(ListOrdersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A pagination cursor to retrieve the next set of results for your
+     * original query to the endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batch_token")
+    public String batchToken;
+    public ListOrdersRequest withBatchToken(String batchToken) {
+        this.batchToken = batchToken;
         return this;
     }
     
-    
-    public ListOrdersQueryParams queryParams;
-    public ListOrdersRequest withQueryParams(ListOrdersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum number of payments to return in a single response. This value cannot exceed 200.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListOrdersRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * The ID of the location to list online store orders for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public ListOrdersRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
     
-    public ListOrdersSecurity security;
-    public ListOrdersRequest withSecurity(ListOrdersSecurity security) {
-        this.security = security;
+    /**
+     * The order in which payments are listed in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public String order;
+    public ListOrdersRequest withOrder(String order) {
+        this.order = order;
         return this;
     }
     

@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EstimationApiDeleteFormRequest {
-    
-    public EstimationApiDeleteFormHeaders headers;
-    public EstimationApiDeleteFormRequest withHeaders(EstimationApiDeleteFormHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public org.openapis.openapi.models.shared.EstimationDeleteApiModel estimationDeleteApiModel;
+    public EstimationApiDeleteFormRequest withEstimationDeleteApiModel(org.openapis.openapi.models.shared.EstimationDeleteApiModel estimationDeleteApiModel) {
+        this.estimationDeleteApiModel = estimationDeleteApiModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.EstimationDeleteApiModel request;
-    public EstimationApiDeleteFormRequest withRequest(org.openapis.openapi.models.shared.EstimationDeleteApiModel request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public EstimationApiDeleteFormRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public EstimationApiDeleteFormRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

@@ -46,19 +46,20 @@ public class Phone {
      * 2. A Zoom Phone license
      * 3. User must have been previously assigned a Zoom Phone number.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnassignPhoneNumberResponse unassignPhoneNumber(org.openapis.openapi.models.operations.UnassignPhoneNumberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnassignPhoneNumberResponse unassignPhoneNumber(org.openapis.openapi.models.operations.UnassignPhoneNumberRequest request, org.openapis.openapi.models.operations.UnassignPhoneNumberSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnassignPhoneNumberPathParams.class, baseUrl, "/phone/users/{userId}/phone_numbers/{phoneNumberId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnassignPhoneNumberRequest.class, baseUrl, "/phone/users/{userId}/phone_numbers/{phoneNumberId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -100,10 +101,11 @@ public class Phone {
      * 2. A Zoom Phone license&lt;br&gt;
      * 3. Account Owner and a [role](https://support.zoom.us/hc/en-us/articles/115001078646-Role-Based-Access-Control) with Zoom Phone Management&lt;br&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountCallLogsResponse accountCallLogs(org.openapis.openapi.models.operations.AccountCallLogsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountCallLogsResponse accountCallLogs(org.openapis.openapi.models.operations.AccountCallLogsRequest request, org.openapis.openapi.models.operations.AccountCallLogsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone/call_logs");
         
@@ -111,14 +113,14 @@ public class Phone {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountCallLogsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountCallLogsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -166,7 +168,7 @@ public class Phone {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddBYOCNumberResponse addBYOCNumber(org.openapis.openapi.models.operations.AddBYOCNumberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddBYOCNumberResponse addBYOCNumber(org.openapis.openapi.models.operations.AddBYOCNumberApplicationJSON request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone/byoc_numbers");
         
@@ -228,7 +230,7 @@ public class Phone {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddSettingTemplateResponse addSettingTemplate(org.openapis.openapi.models.operations.AddSettingTemplateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddSettingTemplateResponse addSettingTemplate(org.openapis.openapi.models.operations.AddSettingTemplateApplicationJSON request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone/setting_templates");
         
@@ -284,21 +286,22 @@ public class Phone {
      * **Prerequisites**: &lt;br&gt;
      * Business or Enterprise Account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddUserSettingResponse addUserSetting(org.openapis.openapi.models.operations.AddUserSettingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddUserSettingResponse addUserSetting(org.openapis.openapi.models.operations.AddUserSettingRequest request, org.openapis.openapi.models.operations.AddUserSettingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddUserSettingPathParams.class, baseUrl, "/phone/users/{userId}/settings/{settingType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddUserSettingRequest.class, baseUrl, "/phone/users/{userId}/settings/{settingType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -354,21 +357,22 @@ public class Phone {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssignCallingPlanResponse assignCallingPlan(org.openapis.openapi.models.operations.AssignCallingPlanRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssignCallingPlanResponse assignCallingPlan(org.openapis.openapi.models.operations.AssignCallingPlanRequest request, org.openapis.openapi.models.operations.AssignCallingPlanSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssignCallingPlanPathParams.class, baseUrl, "/phone/users/{userId}/calling_plans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssignCallingPlanRequest.class, baseUrl, "/phone/users/{userId}/calling_plans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -409,21 +413,22 @@ public class Phone {
      * 1. Business or Enterprise account
      * 2. A Zoom Phone license
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssignPhoneNumberResponse assignPhoneNumber(org.openapis.openapi.models.operations.AssignPhoneNumberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssignPhoneNumberResponse assignPhoneNumber(org.openapis.openapi.models.operations.AssignPhoneNumberRequest request, org.openapis.openapi.models.operations.AssignPhoneNumberSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssignPhoneNumberPathParams.class, baseUrl, "/phone/users/{userId}/phone_numbers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssignPhoneNumberRequest.class, baseUrl, "/phone/users/{userId}/phone_numbers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -465,10 +470,11 @@ public class Phone {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChangeMainCompanyNumberResponse changeMainCompanyNumber(org.openapis.openapi.models.operations.ChangeMainCompanyNumberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChangeMainCompanyNumberResponse changeMainCompanyNumber(org.openapis.openapi.models.operations.ChangeMainCompanyNumberApplicationJSON request, org.openapis.openapi.models.operations.ChangeMainCompanyNumberSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone/company_number");
         
@@ -479,7 +485,7 @@ public class Phone {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -526,7 +532,7 @@ public class Phone {
      */
     public org.openapis.openapi.models.operations.DeleteCallLogResponse deleteCallLog(org.openapis.openapi.models.operations.DeleteCallLogRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCallLogPathParams.class, baseUrl, "/phone/users/{userId}/call_logs/{callLogId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCallLogRequest.class, baseUrl, "/phone/users/{userId}/call_logs/{callLogId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -577,25 +583,26 @@ public class Phone {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteUserSettingResponse deleteUserSetting(org.openapis.openapi.models.operations.DeleteUserSettingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteUserSettingResponse deleteUserSetting(org.openapis.openapi.models.operations.DeleteUserSettingRequest request, org.openapis.openapi.models.operations.DeleteUserSettingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserSettingPathParams.class, baseUrl, "/phone/users/{userId}/settings/{settingType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserSettingRequest.class, baseUrl, "/phone/users/{userId}/settings/{settingType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteUserSettingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteUserSettingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -646,7 +653,7 @@ public class Phone {
      */
     public org.openapis.openapi.models.operations.DeleteVoicemailResponse deleteVoicemail(org.openapis.openapi.models.operations.DeleteVoicemailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVoicemailPathParams.class, baseUrl, "/phone/voice_mails/{voicemailId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVoicemailRequest.class, baseUrl, "/phone/voice_mails/{voicemailId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -694,19 +701,20 @@ public class Phone {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPhoneNumberDetailsResponse getPhoneNumberDetails(org.openapis.openapi.models.operations.GetPhoneNumberDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPhoneNumberDetailsResponse getPhoneNumberDetails(org.openapis.openapi.models.operations.GetPhoneNumberDetailsRequest request, org.openapis.openapi.models.operations.GetPhoneNumberDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhoneNumberDetailsPathParams.class, baseUrl, "/phone/numbers/{numberId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhoneNumberDetailsRequest.class, baseUrl, "/phone/numbers/{numberId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -750,10 +758,11 @@ public class Phone {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPhoneRecordingsResponse getPhoneRecordings(org.openapis.openapi.models.operations.GetPhoneRecordingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPhoneRecordingsResponse getPhoneRecordings(org.openapis.openapi.models.operations.GetPhoneRecordingsRequest request, org.openapis.openapi.models.operations.GetPhoneRecordingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone/recordings");
         
@@ -761,14 +770,14 @@ public class Phone {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhoneRecordingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhoneRecordingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -826,25 +835,26 @@ public class Phone {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSettingTemplateResponse getSettingTemplate(org.openapis.openapi.models.operations.GetSettingTemplateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSettingTemplateResponse getSettingTemplate(org.openapis.openapi.models.operations.GetSettingTemplateRequest request, org.openapis.openapi.models.operations.GetSettingTemplateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSettingTemplatePathParams.class, baseUrl, "/phone/setting_templates/{templateId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSettingTemplateRequest.class, baseUrl, "/phone/setting_templates/{templateId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSettingTemplateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSettingTemplateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -897,10 +907,11 @@ public class Phone {
      * **Scope:** `phone:read:admin`&lt;br&gt; 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListAccountPhoneNumbersResponse listAccountPhoneNumbers(org.openapis.openapi.models.operations.ListAccountPhoneNumbersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListAccountPhoneNumbersResponse listAccountPhoneNumbers(org.openapis.openapi.models.operations.ListAccountPhoneNumbersRequest request, org.openapis.openapi.models.operations.ListAccountPhoneNumbersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone/numbers");
         
@@ -908,14 +919,14 @@ public class Phone {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAccountPhoneNumbersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAccountPhoneNumbersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -957,10 +968,11 @@ public class Phone {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListBYOCSIPTrunkResponse listBYOCSIPTrunk(org.openapis.openapi.models.operations.ListBYOCSIPTrunkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListBYOCSIPTrunkResponse listBYOCSIPTrunk(org.openapis.openapi.models.operations.ListBYOCSIPTrunkRequest request, org.openapis.openapi.models.operations.ListBYOCSIPTrunkSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone/sip_trunk/trunks");
         
@@ -968,14 +980,14 @@ public class Phone {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListBYOCSIPTrunkQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListBYOCSIPTrunkRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1011,11 +1023,10 @@ public class Phone {
      * * Pro or a higher account with Zoom phone license. &lt;br&gt;
      * **Scope:** `phone:read:admin`&lt;br&gt; 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCallingPlansResponse listCallingPlans(org.openapis.openapi.models.operations.ListCallingPlansRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListCallingPlansResponse listCallingPlans() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone/calling_plans");
         
@@ -1024,7 +1035,7 @@ public class Phone {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1061,10 +1072,11 @@ public class Phone {
      * **Scope:** `phone:read:admin`&lt;br&gt;
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListPhoneUsersResponse listPhoneUsers(org.openapis.openapi.models.operations.ListPhoneUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListPhoneUsersResponse listPhoneUsers(org.openapis.openapi.models.operations.ListPhoneUsersRequest request, org.openapis.openapi.models.operations.ListPhoneUsersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone/users");
         
@@ -1072,14 +1084,14 @@ public class Phone {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPhoneUsersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPhoneUsersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1122,10 +1134,11 @@ public class Phone {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListSettingTemplatesResponse listSettingTemplates(org.openapis.openapi.models.operations.ListSettingTemplatesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListSettingTemplatesResponse listSettingTemplates(org.openapis.openapi.models.operations.ListSettingTemplatesRequest request, org.openapis.openapi.models.operations.ListSettingTemplatesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone/setting_templates");
         
@@ -1133,14 +1146,14 @@ public class Phone {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSettingTemplatesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSettingTemplatesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1183,19 +1196,20 @@ public class Phone {
      * 1. Business or Enterprise account 
      * 2. A Zoom Phone license
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PhoneUserResponse phoneUser(org.openapis.openapi.models.operations.PhoneUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PhoneUserResponse phoneUser(org.openapis.openapi.models.operations.PhoneUserRequest request, org.openapis.openapi.models.operations.PhoneUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PhoneUserPathParams.class, baseUrl, "/phone/users/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PhoneUserRequest.class, baseUrl, "/phone/users/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1236,25 +1250,26 @@ public class Phone {
      * 1. Business or Enterprise account
      * 2. A Zoom Phone license
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PhoneUserCallLogsResponse phoneUserCallLogs(org.openapis.openapi.models.operations.PhoneUserCallLogsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PhoneUserCallLogsResponse phoneUserCallLogs(org.openapis.openapi.models.operations.PhoneUserCallLogsRequest request, org.openapis.openapi.models.operations.PhoneUserCallLogsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PhoneUserCallLogsPathParams.class, baseUrl, "/phone/users/{userId}/call_logs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PhoneUserCallLogsRequest.class, baseUrl, "/phone/users/{userId}/call_logs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PhoneUserCallLogsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PhoneUserCallLogsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1295,25 +1310,26 @@ public class Phone {
      * 1. Business or Enterprise account
      * 2. A Zoom Phone license
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PhoneUserRecordingsResponse phoneUserRecordings(org.openapis.openapi.models.operations.PhoneUserRecordingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PhoneUserRecordingsResponse phoneUserRecordings(org.openapis.openapi.models.operations.PhoneUserRecordingsRequest request, org.openapis.openapi.models.operations.PhoneUserRecordingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PhoneUserRecordingsPathParams.class, baseUrl, "/phone/users/{userId}/recordings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PhoneUserRecordingsRequest.class, baseUrl, "/phone/users/{userId}/recordings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PhoneUserRecordingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PhoneUserRecordingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1354,19 +1370,20 @@ public class Phone {
      * 1. Business or Enterprise account
      * 2. A Zoom Phone license
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PhoneUserSettingsResponse phoneUserSettings(org.openapis.openapi.models.operations.PhoneUserSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PhoneUserSettingsResponse phoneUserSettings(org.openapis.openapi.models.operations.PhoneUserSettingsRequest request, org.openapis.openapi.models.operations.PhoneUserSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PhoneUserSettingsPathParams.class, baseUrl, "/phone/users/{userId}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PhoneUserSettingsRequest.class, baseUrl, "/phone/users/{userId}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1407,25 +1424,26 @@ public class Phone {
      * 1. Business or Enterprise account
      * 2. A Zoom Phone license
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PhoneUserVoiceMailsResponse phoneUserVoiceMails(org.openapis.openapi.models.operations.PhoneUserVoiceMailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PhoneUserVoiceMailsResponse phoneUserVoiceMails(org.openapis.openapi.models.operations.PhoneUserVoiceMailsRequest request, org.openapis.openapi.models.operations.PhoneUserVoiceMailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PhoneUserVoiceMailsPathParams.class, baseUrl, "/phone/users/{userId}/voice_mails", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PhoneUserVoiceMailsRequest.class, baseUrl, "/phone/users/{userId}/voice_mails", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PhoneUserVoiceMailsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PhoneUserVoiceMailsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1469,21 +1487,22 @@ public class Phone {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPhoneSIPTrunkResponse postPhoneSIPTrunk(org.openapis.openapi.models.operations.PostPhoneSIPTrunkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPhoneSIPTrunkResponse postPhoneSIPTrunk(org.openapis.openapi.models.operations.PostPhoneSIPTrunkRequest request, org.openapis.openapi.models.operations.PostPhoneSIPTrunkSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostPhoneSIPTrunkPathParams.class, baseUrl, "/accounts/{accountId}/phone/sip_trunk/trunks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostPhoneSIPTrunkRequest.class, baseUrl, "/accounts/{accountId}/phone/sip_trunk/trunks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1528,21 +1547,22 @@ public class Phone {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SetUpAccountResponse setUpAccount(org.openapis.openapi.models.operations.SetUpAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SetUpAccountResponse setUpAccount(org.openapis.openapi.models.operations.SetUpAccountRequest request, org.openapis.openapi.models.operations.SetUpAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetUpAccountPathParams.class, baseUrl, "/accounts/{accountId}/phone/setup", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetUpAccountRequest.class, baseUrl, "/accounts/{accountId}/phone/setup", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1570,19 +1590,20 @@ public class Phone {
      * 1. Business or Enterprise account
      * 2. A Zoom Phone license
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnassignCallingPlanResponse unassignCallingPlan(org.openapis.openapi.models.operations.UnassignCallingPlanRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnassignCallingPlanResponse unassignCallingPlan(org.openapis.openapi.models.operations.UnassignCallingPlanRequest request, org.openapis.openapi.models.operations.UnassignCallingPlanSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnassignCallingPlanPathParams.class, baseUrl, "/phone/users/{userId}/calling_plans/{type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnassignCallingPlanRequest.class, baseUrl, "/phone/users/{userId}/calling_plans/{type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1626,21 +1647,22 @@ public class Phone {
      * 
      * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdatePhoneNumberDetailsResponse updatePhoneNumberDetails(org.openapis.openapi.models.operations.UpdatePhoneNumberDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdatePhoneNumberDetailsResponse updatePhoneNumberDetails(org.openapis.openapi.models.operations.UpdatePhoneNumberDetailsRequest request, org.openapis.openapi.models.operations.UpdatePhoneNumberDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePhoneNumberDetailsPathParams.class, baseUrl, "/phone/numbers/{numberId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePhoneNumberDetailsRequest.class, baseUrl, "/phone/numbers/{numberId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1684,21 +1706,22 @@ public class Phone {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdatePhoneSIPTrunkResponse updatePhoneSIPTrunk(org.openapis.openapi.models.operations.UpdatePhoneSIPTrunkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdatePhoneSIPTrunkResponse updatePhoneSIPTrunk(org.openapis.openapi.models.operations.UpdatePhoneSIPTrunkRequest request, org.openapis.openapi.models.operations.UpdatePhoneSIPTrunkSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePhoneSIPTrunkPathParams.class, baseUrl, "/accounts/{accountId}/phone/sip_trunk/trunks/{sipTrunkId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePhoneSIPTrunkRequest.class, baseUrl, "/accounts/{accountId}/phone/sip_trunk/trunks/{sipTrunkId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1739,21 +1762,22 @@ public class Phone {
      * **Prerequisites**: &lt;br&gt;
      * * Business or enterprise Account.&lt;br&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdatePhoneSettingsResponse updatePhoneSettings(org.openapis.openapi.models.operations.UpdatePhoneSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdatePhoneSettingsResponse updatePhoneSettings(org.openapis.openapi.models.operations.UpdatePhoneSettingsRequest request, org.openapis.openapi.models.operations.UpdatePhoneSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePhoneSettingsPathParams.class, baseUrl, "/accounts/{accountId}/phone/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePhoneSettingsRequest.class, baseUrl, "/accounts/{accountId}/phone/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1798,21 +1822,22 @@ public class Phone {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateSettingTemplateResponse updateSettingTemplate(org.openapis.openapi.models.operations.UpdateSettingTemplateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateSettingTemplateResponse updateSettingTemplate(org.openapis.openapi.models.operations.UpdateSettingTemplateRequest request, org.openapis.openapi.models.operations.UpdateSettingTemplateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSettingTemplatePathParams.class, baseUrl, "/phone/setting_templates/{templateId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSettingTemplateRequest.class, baseUrl, "/phone/setting_templates/{templateId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1853,21 +1878,22 @@ public class Phone {
      * 1. Business or Enterprise account
      * 2. A Zoom Phone license
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateUserProfileResponse updateUserProfile(org.openapis.openapi.models.operations.UpdateUserProfileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateUserProfileResponse updateUserProfile(org.openapis.openapi.models.operations.UpdateUserProfileRequest request, org.openapis.openapi.models.operations.UpdateUserProfileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserProfilePathParams.class, baseUrl, "/phone/users/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserProfileRequest.class, baseUrl, "/phone/users/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1912,21 +1938,22 @@ public class Phone {
      * **Prerequisites**:&lt;br&gt;
      * Business or Enterprise Account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateUserSettingResponse updateUserSetting(org.openapis.openapi.models.operations.UpdateUserSettingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateUserSettingResponse updateUserSetting(org.openapis.openapi.models.operations.UpdateUserSettingRequest request, org.openapis.openapi.models.operations.UpdateUserSettingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserSettingPathParams.class, baseUrl, "/phone/users/{userId}/settings/{settingType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserSettingRequest.class, baseUrl, "/phone/users/{userId}/settings/{settingType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

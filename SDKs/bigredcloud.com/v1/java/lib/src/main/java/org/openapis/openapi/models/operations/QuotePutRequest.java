@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QuotePutRequest {
-    
-    public QuotePutPathParams pathParams;
-    public QuotePutRequest withPathParams(QuotePutPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Information of Quote to update.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.QuoteDto request;
-    public QuotePutRequest withRequest(org.openapis.openapi.models.shared.QuoteDto request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.QuoteDto quoteDto;
+    public QuotePutRequest withQuoteDto(org.openapis.openapi.models.shared.QuoteDto quoteDto) {
+        this.quoteDto = quoteDto;
+        return this;
+    }
+    
+    /**
+     * Id of Quote to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public QuotePutRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

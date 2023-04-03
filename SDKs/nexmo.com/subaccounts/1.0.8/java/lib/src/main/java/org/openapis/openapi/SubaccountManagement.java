@@ -38,24 +38,25 @@ public class SubaccountManagement {
      * Create a subaccount for a given primary account.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateSubAccountResponse createSubAccount(org.openapis.openapi.models.operations.CreateSubAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateSubAccountResponse createSubAccount(org.openapis.openapi.models.operations.CreateSubAccountRequest request, org.openapis.openapi.models.operations.CreateSubAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSubAccountPathParams.class, baseUrl, "/{api_key}/subaccounts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSubAccountRequest.class, baseUrl, "/{api_key}/subaccounts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "newSubaccountRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -116,24 +117,25 @@ public class SubaccountManagement {
      * Change one or more properties of a subaccount.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ModifySubaccountResponse modifySubaccount(org.openapis.openapi.models.operations.ModifySubaccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ModifySubaccountResponse modifySubaccount(org.openapis.openapi.models.operations.ModifySubaccountRequest request, org.openapis.openapi.models.operations.ModifySubaccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ModifySubaccountPathParams.class, baseUrl, "/{api_key}/subaccounts/{subaccount_key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ModifySubaccountRequest.class, baseUrl, "/{api_key}/subaccounts/{subaccount_key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "modifySubaccountRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -194,19 +196,20 @@ public class SubaccountManagement {
      * Get the information of a subaccount specified with its API key.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveSubaccountResponse retrieveSubaccount(org.openapis.openapi.models.operations.RetrieveSubaccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveSubaccountResponse retrieveSubaccount(org.openapis.openapi.models.operations.RetrieveSubaccountRequest request, org.openapis.openapi.models.operations.RetrieveSubaccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveSubaccountPathParams.class, baseUrl, "/{api_key}/subaccounts/{subaccount_key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveSubaccountRequest.class, baseUrl, "/{api_key}/subaccounts/{subaccount_key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -259,19 +262,20 @@ public class SubaccountManagement {
      * Get the information of all the subaccounts owned by the primary account.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveSubaccountsListResponse retrieveSubaccountsList(org.openapis.openapi.models.operations.RetrieveSubaccountsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveSubaccountsListResponse retrieveSubaccountsList(org.openapis.openapi.models.operations.RetrieveSubaccountsListRequest request, org.openapis.openapi.models.operations.RetrieveSubaccountsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveSubaccountsListPathParams.class, baseUrl, "/{api_key}/subaccounts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveSubaccountsListRequest.class, baseUrl, "/{api_key}/subaccounts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

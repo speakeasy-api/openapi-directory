@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QuoteReopenRequest {
-    
-    public QuoteReopenPathParams pathParams;
-    public QuoteReopenRequest withPathParams(QuoteReopenPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of Quote to reopen
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public QuoteReopenRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

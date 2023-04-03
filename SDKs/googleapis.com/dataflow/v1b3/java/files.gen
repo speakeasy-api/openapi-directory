@@ -35,8 +35,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsDeleteS
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsDeleteSnapshotsSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsDeleteSnapshotsSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsDeleteSnapshotsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsDeleteSnapshotsPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsDeleteSnapshotsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsDeleteSnapshotsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsDeleteSnapshotsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsAggregatedSecurityOption1.java
@@ -44,10 +42,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsAgg
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsAggregatedSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsAggregatedSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsAggregatedSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsAggregatedPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsAggregatedFilterEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsAggregatedViewEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsAggregatedQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsAggregatedRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsAggregatedResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsCreateSecurityOption1.java
@@ -55,9 +51,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsCre
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsCreateSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsCreateSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsCreateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsCreatePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsCreateViewEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsCreateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsCreateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsCreateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsDebugGetConfigSecurityOption1.java
@@ -65,8 +59,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsDeb
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsDebugGetConfigSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsDebugGetConfigSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsDebugGetConfigSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsDebugGetConfigPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsDebugGetConfigQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsDebugGetConfigRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsDebugGetConfigResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsDebugSendCaptureSecurityOption1.java
@@ -74,8 +66,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsDeb
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsDebugSendCaptureSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsDebugSendCaptureSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsDebugSendCaptureSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsDebugSendCapturePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsDebugSendCaptureQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsDebugSendCaptureRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsDebugSendCaptureResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsGetSecurityOption1.java
@@ -83,9 +73,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsGet
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsGetSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsGetSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsGetSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsGetPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsGetViewEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsGetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsGetMetricsSecurityOption1.java
@@ -93,8 +81,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsGet
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsGetMetricsSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsGetMetricsSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsGetMetricsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsGetMetricsPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsGetMetricsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsGetMetricsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsGetMetricsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsListSecurityOption1.java
@@ -102,10 +88,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsLis
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsListSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsListSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsListPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsListFilterEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsListViewEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsMessagesListSecurityOption1.java
@@ -113,9 +97,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsMes
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsMessagesListSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsMessagesListSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsMessagesListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsMessagesListPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsMessagesListMinimumImportanceEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsMessagesListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsMessagesListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsMessagesListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsSnapshotSecurityOption1.java
@@ -123,8 +105,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsSna
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsSnapshotSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsSnapshotSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsSnapshotSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsSnapshotPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsSnapshotQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsSnapshotRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsSnapshotResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsUpdateSecurityOption1.java
@@ -132,8 +112,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsUpd
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsUpdateSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsUpdateSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsUpdateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsUpdatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsUpdateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsUpdateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsUpdateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsWorkItemsLeaseSecurityOption1.java
@@ -141,8 +119,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsWor
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsWorkItemsLeaseSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsWorkItemsLeaseSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsWorkItemsLeaseSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsWorkItemsLeasePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsWorkItemsLeaseQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsWorkItemsLeaseRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsWorkItemsLeaseResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsWorkItemsReportStatusSecurityOption1.java
@@ -150,8 +126,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsWor
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsWorkItemsReportStatusSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsWorkItemsReportStatusSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsWorkItemsReportStatusSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsWorkItemsReportStatusPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsWorkItemsReportStatusQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsWorkItemsReportStatusRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsJobsWorkItemsReportStatusResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsFlexTemplatesLaunchSecurityOption1.java
@@ -159,8 +133,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsFlexTemplatesLaunchSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsFlexTemplatesLaunchSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsFlexTemplatesLaunchSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsFlexTemplatesLaunchPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsFlexTemplatesLaunchQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsFlexTemplatesLaunchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsFlexTemplatesLaunchResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsCreateSecurityOption1.java
@@ -168,9 +140,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsCreateSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsCreateSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsCreateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsCreatePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsCreateViewEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsCreateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsCreateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsCreateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsDebugGetConfigSecurityOption1.java
@@ -178,8 +148,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsDebugGetConfigSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsDebugGetConfigSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsDebugGetConfigSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsDebugGetConfigPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsDebugGetConfigQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsDebugGetConfigRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsDebugGetConfigResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsDebugSendCaptureSecurityOption1.java
@@ -187,8 +155,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsDebugSendCaptureSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsDebugSendCaptureSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsDebugSendCaptureSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsDebugSendCapturePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsDebugSendCaptureQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsDebugSendCaptureRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsDebugSendCaptureResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetSecurityOption1.java
@@ -196,9 +162,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetViewEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetExecutionDetailsSecurityOption1.java
@@ -206,8 +170,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetExecutionDetailsSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetExecutionDetailsSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetExecutionDetailsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetExecutionDetailsPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetExecutionDetailsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetExecutionDetailsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetExecutionDetailsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetMetricsSecurityOption1.java
@@ -215,8 +177,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetMetricsSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetMetricsSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetMetricsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetMetricsPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetMetricsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetMetricsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsGetMetricsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsListSecurityOption1.java
@@ -224,10 +184,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsListSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsListSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsListPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsListFilterEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsListViewEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsMessagesListSecurityOption1.java
@@ -235,9 +193,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsMessagesListSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsMessagesListSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsMessagesListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsMessagesListPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsMessagesListMinimumImportanceEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsMessagesListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsMessagesListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsMessagesListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsSnapshotSecurityOption1.java
@@ -245,8 +201,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsSnapshotSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsSnapshotSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsSnapshotSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsSnapshotPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsSnapshotQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsSnapshotRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsSnapshotResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsSnapshotsListSecurityOption1.java
@@ -254,8 +208,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsSnapshotsListSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsSnapshotsListSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsSnapshotsListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsSnapshotsListPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsSnapshotsListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsSnapshotsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsSnapshotsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurityOption1.java
@@ -263,8 +215,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsStagesGetExecutionDetailsPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsStagesGetExecutionDetailsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsStagesGetExecutionDetailsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsUpdateSecurityOption1.java
@@ -272,8 +222,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsUpdateSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsUpdateSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsUpdateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsUpdatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsUpdateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsUpdateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsUpdateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsWorkItemsLeaseSecurityOption1.java
@@ -281,8 +229,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsWorkItemsLeaseSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsWorkItemsLeaseSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsWorkItemsLeaseSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsWorkItemsLeasePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsWorkItemsLeaseQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsWorkItemsLeaseRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsWorkItemsLeaseResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsWorkItemsReportStatusSecurityOption1.java
@@ -290,8 +236,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsWorkItemsReportStatusSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsWorkItemsReportStatusSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsWorkItemsReportStatusSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsWorkItemsReportStatusPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsWorkItemsReportStatusQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsWorkItemsReportStatusRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsJobsWorkItemsReportStatusResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsDeleteSecurityOption1.java
@@ -299,8 +243,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsDeleteSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsDeleteSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsDeleteSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsDeletePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsDeleteQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsDeleteRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsDeleteResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsGetSecurityOption1.java
@@ -308,8 +250,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsGetSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsGetSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsGetSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsGetPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsGetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsListSecurityOption1.java
@@ -317,8 +257,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsListSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsListSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsListPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsSnapshotsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesCreateSecurityOption1.java
@@ -326,8 +264,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesCreateSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesCreateSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesCreateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesCreatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesCreateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesCreateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesCreateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesGetSecurityOption1.java
@@ -335,9 +271,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesGetSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesGetSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesGetSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesGetPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesGetViewEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesGetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesLaunchSecurityOption1.java
@@ -345,8 +279,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesLaunchSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesLaunchSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesLaunchSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesLaunchPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesLaunchQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesLaunchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsTemplatesLaunchResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsWorkerMessagesSecurityOption1.java
@@ -354,8 +286,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsWorkerMessagesSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsWorkerMessagesSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsWorkerMessagesSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsWorkerMessagesPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsWorkerMessagesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsWorkerMessagesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsLocationsWorkerMessagesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsSnapshotsGetSecurityOption1.java
@@ -363,8 +293,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsSnapsho
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsSnapshotsGetSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsSnapshotsGetSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsSnapshotsGetSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsSnapshotsGetPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsSnapshotsGetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsSnapshotsGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsSnapshotsGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsSnapshotsListSecurityOption1.java
@@ -372,8 +300,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsSnapsho
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsSnapshotsListSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsSnapshotsListSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsSnapshotsListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsSnapshotsListPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsSnapshotsListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsSnapshotsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsSnapshotsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesCreateSecurityOption1.java
@@ -381,8 +307,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplat
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesCreateSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesCreateSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesCreateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesCreatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesCreateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesCreateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesCreateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesGetSecurityOption1.java
@@ -390,9 +314,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplat
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesGetSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesGetSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesGetSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesGetPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesGetViewEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesGetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesLaunchSecurityOption1.java
@@ -400,8 +322,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplat
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesLaunchSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesLaunchSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesLaunchSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesLaunchPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesLaunchQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesLaunchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsTemplatesLaunchResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsWorkerMessagesSecurityOption1.java
@@ -409,14 +329,10 @@ lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsWorkerM
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsWorkerMessagesSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsWorkerMessagesSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsWorkerMessagesSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsWorkerMessagesPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsWorkerMessagesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsWorkerMessagesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DataflowProjectsWorkerMessagesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListJobsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/JobCurrentStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/JobRequestedStateEnum.java

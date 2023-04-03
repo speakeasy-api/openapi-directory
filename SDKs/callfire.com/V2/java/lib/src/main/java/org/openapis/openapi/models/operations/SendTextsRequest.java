@@ -7,27 +7,53 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendTextsRequest {
-    
-    public SendTextsQueryParams queryParams;
-    public SendTextsRequest withQueryParams(SendTextsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * List of TextRecipient objects. By recipient we mean either phone number or contact with user-defined attributes added to action. Text messaging supports media files, provide a list of ids of media files for recipient to attach media to the message.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TextRecipient[] request;
-    public SendTextsRequest withRequest(org.openapis.openapi.models.shared.TextRecipient[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TextRecipient[] requestBody;
+    public SendTextsRequest withRequestBody(org.openapis.openapi.models.shared.TextRecipient[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Specifies a campaignId to send texts through a previously created campaign
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaignId")
+    public Long campaignId;
+    public SendTextsRequest withCampaignId(Long campaignId) {
+        this.campaignId = campaignId;
+        return this;
+    }
     
-    public SendTextsSecurity security;
-    public SendTextsRequest withSecurity(SendTextsSecurity security) {
-        this.security = security;
+    /**
+     * Text message can be overridden by TextRecipient.message field. If multiple recipients have the same text message to a different recipients it is better to specify a single default message and do not duplicate it in each recipient.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultMessage")
+    public String defaultMessage;
+    public SendTextsRequest withDefaultMessage(String defaultMessage) {
+        this.defaultMessage = defaultMessage;
+        return this;
+    }
+    
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public SendTextsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Turns on strict validation for recipients
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=strictValidation")
+    public Boolean strictValidation;
+    public SendTextsRequest withStrictValidation(Boolean strictValidation) {
+        this.strictValidation = strictValidation;
         return this;
     }
     

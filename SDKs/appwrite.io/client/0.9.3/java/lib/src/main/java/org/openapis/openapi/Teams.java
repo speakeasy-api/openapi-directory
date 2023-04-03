@@ -38,10 +38,11 @@ public class Teams {
      * Create Team
      * Create a new team. The user who creates the team will automatically be assigned as the owner of the team. The team owner can invite new members, who will be able add new owners and update or delete the team from your project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsCreateResponse teamsCreate(org.openapis.openapi.models.operations.TeamsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsCreateResponse teamsCreate(org.openapis.openapi.models.operations.TeamsCreateRequestBody request, org.openapis.openapi.models.operations.TeamsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/teams");
         
@@ -52,7 +53,7 @@ public class Teams {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,21 +85,22 @@ public class Teams {
      * 
      * Please note that in order to avoid a [Redirect Attacks](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.md) the only valid redirect URL's are the once from domains you have set when added your platforms in the console interface.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsCreateMembershipResponse teamsCreateMembership(org.openapis.openapi.models.operations.TeamsCreateMembershipRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsCreateMembershipResponse teamsCreateMembership(org.openapis.openapi.models.operations.TeamsCreateMembershipRequest request, org.openapis.openapi.models.operations.TeamsCreateMembershipSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCreateMembershipPathParams.class, baseUrl, "/teams/{teamId}/memberships", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCreateMembershipRequest.class, baseUrl, "/teams/{teamId}/memberships", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,19 +128,20 @@ public class Teams {
      * Delete Team
      * Delete a team by its unique ID. Only team owners have write access for this resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsDeleteResponse teamsDelete(org.openapis.openapi.models.operations.TeamsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsDeleteResponse teamsDelete(org.openapis.openapi.models.operations.TeamsDeleteRequest request, org.openapis.openapi.models.operations.TeamsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeletePathParams.class, baseUrl, "/teams/{teamId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeleteRequest.class, baseUrl, "/teams/{teamId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -160,19 +163,20 @@ public class Teams {
      * Delete Team Membership
      * This endpoint allows a user to leave a team or for a team owner to delete the membership of any other team member. You can also use this endpoint to delete a user membership even if it is not accepted.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsDeleteMembershipResponse teamsDeleteMembership(org.openapis.openapi.models.operations.TeamsDeleteMembershipRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsDeleteMembershipResponse teamsDeleteMembership(org.openapis.openapi.models.operations.TeamsDeleteMembershipRequest request, org.openapis.openapi.models.operations.TeamsDeleteMembershipSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeleteMembershipPathParams.class, baseUrl, "/teams/{teamId}/memberships/{membershipId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeleteMembershipRequest.class, baseUrl, "/teams/{teamId}/memberships/{membershipId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -194,19 +198,20 @@ public class Teams {
      * Get Team
      * Get a team by its unique ID. All team members have read access for this resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsGetResponse teamsGet(org.openapis.openapi.models.operations.TeamsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsGetResponse teamsGet(org.openapis.openapi.models.operations.TeamsGetRequest request, org.openapis.openapi.models.operations.TeamsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetPathParams.class, baseUrl, "/teams/{teamId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetRequest.class, baseUrl, "/teams/{teamId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -234,25 +239,26 @@ public class Teams {
      * Get Team Memberships
      * Get a team members by the team unique ID. All team members have read access for this list of resources.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsGetMembershipsResponse teamsGetMemberships(org.openapis.openapi.models.operations.TeamsGetMembershipsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsGetMembershipsResponse teamsGetMemberships(org.openapis.openapi.models.operations.TeamsGetMembershipsRequest request, org.openapis.openapi.models.operations.TeamsGetMembershipsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetMembershipsPathParams.class, baseUrl, "/teams/{teamId}/memberships", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetMembershipsRequest.class, baseUrl, "/teams/{teamId}/memberships", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsGetMembershipsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsGetMembershipsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -280,10 +286,11 @@ public class Teams {
      * List Teams
      * Get a list of all the current user teams. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's teams. [Learn more about different API modes](/docs/admin).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsListResponse teamsList(org.openapis.openapi.models.operations.TeamsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsListResponse teamsList(org.openapis.openapi.models.operations.TeamsListRequest request, org.openapis.openapi.models.operations.TeamsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/teams");
         
@@ -291,14 +298,14 @@ public class Teams {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -326,21 +333,22 @@ public class Teams {
      * Update Team
      * Update a team by its unique ID. Only team owners have write access for this resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsUpdateResponse teamsUpdate(org.openapis.openapi.models.operations.TeamsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsUpdateResponse teamsUpdate(org.openapis.openapi.models.operations.TeamsUpdateRequest request, org.openapis.openapi.models.operations.TeamsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdatePathParams.class, baseUrl, "/teams/{teamId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateRequest.class, baseUrl, "/teams/{teamId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -367,21 +375,22 @@ public class Teams {
     /**
      * Update Membership Roles
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsUpdateMembershipRolesResponse teamsUpdateMembershipRoles(org.openapis.openapi.models.operations.TeamsUpdateMembershipRolesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsUpdateMembershipRolesResponse teamsUpdateMembershipRoles(org.openapis.openapi.models.operations.TeamsUpdateMembershipRolesRequest request, org.openapis.openapi.models.operations.TeamsUpdateMembershipRolesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateMembershipRolesPathParams.class, baseUrl, "/teams/{teamId}/memberships/{membershipId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateMembershipRolesRequest.class, baseUrl, "/teams/{teamId}/memberships/{membershipId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -409,21 +418,22 @@ public class Teams {
      * Update Team Membership Status
      * Use this endpoint to allow a user to accept an invitation to join a team after being redirected back to your app from the invitation email recieved by the user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TeamsUpdateMembershipStatusResponse teamsUpdateMembershipStatus(org.openapis.openapi.models.operations.TeamsUpdateMembershipStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TeamsUpdateMembershipStatusResponse teamsUpdateMembershipStatus(org.openapis.openapi.models.operations.TeamsUpdateMembershipStatusRequest request, org.openapis.openapi.models.operations.TeamsUpdateMembershipStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateMembershipStatusPathParams.class, baseUrl, "/teams/{teamId}/memberships/{membershipId}/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateMembershipStatusRequest.class, baseUrl, "/teams/{teamId}/memberships/{membershipId}/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

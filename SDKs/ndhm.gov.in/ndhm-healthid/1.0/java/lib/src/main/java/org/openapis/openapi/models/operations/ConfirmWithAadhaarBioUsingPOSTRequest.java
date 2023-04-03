@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfirmWithAadhaarBioUsingPOSTRequest {
-    
-    public ConfirmWithAadhaarBioUsingPOSTHeaders headers;
-    public ConfirmWithAadhaarBioUsingPOSTRequest withHeaders(ConfirmWithAadhaarBioUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public ConfirmWithAadhaarBioUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class ConfirmWithAadhaarBioUsingPOSTRequest {
      * authenticationRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AuthAccountAadhaarBioRequest request;
-    public ConfirmWithAadhaarBioUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.AuthAccountAadhaarBioRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public ConfirmWithAadhaarBioUsingPOSTSecurity security;
-    public ConfirmWithAadhaarBioUsingPOSTRequest withSecurity(ConfirmWithAadhaarBioUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.AuthAccountAadhaarBioRequest authAccountAadhaarBioRequest;
+    public ConfirmWithAadhaarBioUsingPOSTRequest withAuthAccountAadhaarBioRequest(org.openapis.openapi.models.shared.AuthAccountAadhaarBioRequest authAccountAadhaarBioRequest) {
+        this.authAccountAadhaarBioRequest = authAccountAadhaarBioRequest;
         return this;
     }
     

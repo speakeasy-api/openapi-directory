@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatabaseListCollectionsRequest {
-    
-    public DatabaseListCollectionsQueryParams queryParams;
-    public DatabaseListCollectionsRequest withQueryParams(DatabaseListCollectionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results limit value. By default will return maximum 25 results. Maximum of 100 results allowed per request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public DatabaseListCollectionsRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Results offset. The default value is 0. Use this param to manage pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public DatabaseListCollectionsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
     
-    public DatabaseListCollectionsSecurity security;
-    public DatabaseListCollectionsRequest withSecurity(DatabaseListCollectionsSecurity security) {
-        this.security = security;
+    /**
+     * Order result by ASC or DESC order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderType")
+    public String orderType;
+    public DatabaseListCollectionsRequest withOrderType(String orderType) {
+        this.orderType = orderType;
+        return this;
+    }
+    
+    /**
+     * Search term to filter your list results. Max length: 256 chars.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public DatabaseListCollectionsRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

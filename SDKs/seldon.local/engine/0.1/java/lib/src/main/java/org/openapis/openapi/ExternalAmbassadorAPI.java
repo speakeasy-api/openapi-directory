@@ -30,21 +30,21 @@ public class ExternalAmbassadorAPI {
 		this._genVersion = genVersion;
 	}
 
-    public org.openapis.openapi.models.operations.PredictJsonResponse predictJson(org.openapis.openapi.models.operations.PredictJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PredictJsonResponse predictJson(org.openapis.openapi.models.operations.PredictJsonRequest request, org.openapis.openapi.models.operations.PredictJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PredictJsonPathParams.class, baseUrl, "/seldon/{namespace}/{deployment}/api/v1.0/predictions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PredictJsonRequest.class, baseUrl, "/seldon/{namespace}/{deployment}/api/v1.0/predictions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "seldonMessage", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -68,21 +68,21 @@ public class ExternalAmbassadorAPI {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PredictRawResponse predictRaw(org.openapis.openapi.models.operations.PredictRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PredictRawResponse predictRaw(org.openapis.openapi.models.operations.PredictRawRequest request, org.openapis.openapi.models.operations.PredictRawSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PredictRawPathParams.class, baseUrl, "/seldon/{namespace}/{deployment}/api/v1.0/predictions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PredictRawRequest.class, baseUrl, "/seldon/{namespace}/{deployment}/api/v1.0/predictions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -106,21 +106,21 @@ public class ExternalAmbassadorAPI {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PredictStringResponse predictString(org.openapis.openapi.models.operations.PredictStringRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PredictStringResponse predictString(org.openapis.openapi.models.operations.PredictStringRequest request, org.openapis.openapi.models.operations.PredictStringSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PredictStringPathParams.class, baseUrl, "/seldon/{namespace}/{deployment}/api/v1.0/predictions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PredictStringRequest.class, baseUrl, "/seldon/{namespace}/{deployment}/api/v1.0/predictions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "string");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "string");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -144,21 +144,21 @@ public class ExternalAmbassadorAPI {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.SendFeedbackResponse sendFeedback(org.openapis.openapi.models.operations.SendFeedbackRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SendFeedbackResponse sendFeedback(org.openapis.openapi.models.operations.SendFeedbackRequest request, org.openapis.openapi.models.operations.SendFeedbackSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendFeedbackPathParams.class, baseUrl, "/seldon/{namespace}/{deployment}/api/v1.0/feedback", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendFeedbackRequest.class, baseUrl, "/seldon/{namespace}/{deployment}/api/v1.0/feedback", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "feedback", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

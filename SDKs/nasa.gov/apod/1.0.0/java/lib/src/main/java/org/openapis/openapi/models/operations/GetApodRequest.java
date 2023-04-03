@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApodRequest {
-    
-    public GetApodQueryParams queryParams;
-    public GetApodRequest withQueryParams(GetApodQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The date of the APOD image to retrieve
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public String date;
+    public GetApodRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     
-    
-    public GetApodSecurity security;
-    public GetApodRequest withSecurity(GetApodSecurity security) {
-        this.security = security;
+    /**
+     * Retrieve the URL for the high resolution image
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hd")
+    public Boolean hd;
+    public GetApodRequest withHd(Boolean hd) {
+        this.hd = hd;
         return this;
     }
     

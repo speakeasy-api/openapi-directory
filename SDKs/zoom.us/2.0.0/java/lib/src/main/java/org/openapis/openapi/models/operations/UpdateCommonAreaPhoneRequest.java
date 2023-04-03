@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCommonAreaPhoneRequest {
-    
-    public UpdateCommonAreaPhonePathParams pathParams;
-    public UpdateCommonAreaPhoneRequest withPathParams(UpdateCommonAreaPhonePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateCommonAreaPhoneApplicationJSON request;
-    public UpdateCommonAreaPhoneRequest withRequest(UpdateCommonAreaPhoneApplicationJSON request) {
-        this.request = request;
+    public UpdateCommonAreaPhoneApplicationJSON requestBody;
+    public UpdateCommonAreaPhoneRequest withRequestBody(UpdateCommonAreaPhoneApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateCommonAreaPhoneSecurity security;
-    public UpdateCommonAreaPhoneRequest withSecurity(UpdateCommonAreaPhoneSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commonAreaPhoneId")
+    public String commonAreaPhoneId;
+    public UpdateCommonAreaPhoneRequest withCommonAreaPhoneId(String commonAreaPhoneId) {
+        this.commonAreaPhoneId = commonAreaPhoneId;
         return this;
     }
     

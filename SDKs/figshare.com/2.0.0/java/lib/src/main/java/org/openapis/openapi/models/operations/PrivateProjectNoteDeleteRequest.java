@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateProjectNoteDeleteRequest {
-    
-    public PrivateProjectNoteDeletePathParams pathParams;
-    public PrivateProjectNoteDeleteRequest withPathParams(PrivateProjectNoteDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Note unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=note_id")
+    public Long noteId;
+    public PrivateProjectNoteDeleteRequest withNoteId(Long noteId) {
+        this.noteId = noteId;
         return this;
     }
     
-    
-    public PrivateProjectNoteDeleteSecurity security;
-    public PrivateProjectNoteDeleteRequest withSecurity(PrivateProjectNoteDeleteSecurity security) {
-        this.security = security;
+    /**
+     * Project unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Long projectId;
+    public PrivateProjectNoteDeleteRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

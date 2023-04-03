@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.DeleteAssignmentsIdPathParams;
 import org.openapis.openapi.models.operations.DeleteAssignmentsIdRequest;
 import org.openapis.openapi.models.operations.DeleteAssignmentsIdResponse;
 
@@ -15,10 +14,8 @@ public class Application {
                 .build();
 
             DeleteAssignmentsIdRequest req = new DeleteAssignmentsIdRequest() {{
-                pathParams = new DeleteAssignmentsIdPathParams() {{
-                    id = "corrupti";
-                }};
-            }};            
+                id = "corrupti";
+            }}            
 
             DeleteAssignmentsIdResponse res = sdk.assignment.deleteAssignmentsId(req);
 

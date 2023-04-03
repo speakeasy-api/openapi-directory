@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCalendarRequest {
-    
-    public GetCalendarQueryParams queryParams;
-    public GetCalendarRequest withQueryParams(GetCalendarQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Year filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetCalendarRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

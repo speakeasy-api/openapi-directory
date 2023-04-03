@@ -41,13 +41,13 @@ public class Inventory {
      */
     public org.openapis.openapi.models.operations.GetSupplyLotsResponse getSupplyLots(org.openapis.openapi.models.operations.GetSupplyLotsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSupplyLotsPathParams.class, baseUrl, "/api/logistics/pvt/inventory/items/{skuId}/warehouses/{warehouseId}/supplyLots", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSupplyLotsRequest.class, baseUrl, "/api/logistics/pvt/inventory/items/{skuId}/warehouses/{warehouseId}/supplyLots", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -83,13 +83,13 @@ public class Inventory {
      */
     public org.openapis.openapi.models.operations.GetinventorywithdispatchedreservationsResponse getinventorywithdispatchedreservations(org.openapis.openapi.models.operations.GetinventorywithdispatchedreservationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetinventorywithdispatchedreservationsPathParams.class, baseUrl, "/api/logistics/pvt/inventory/items/{itemId}/warehouses/{warehouseId}/dispatched", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetinventorywithdispatchedreservationsRequest.class, baseUrl, "/api/logistics/pvt/inventory/items/{itemId}/warehouses/{warehouseId}/dispatched", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -131,13 +131,13 @@ public class Inventory {
      */
     public org.openapis.openapi.models.operations.InventoryBySkuResponse inventoryBySku(org.openapis.openapi.models.operations.InventoryBySkuRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InventoryBySkuPathParams.class, baseUrl, "/api/logistics/pvt/inventory/skus/{skuId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InventoryBySkuRequest.class, baseUrl, "/api/logistics/pvt/inventory/skus/{skuId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -181,13 +181,13 @@ public class Inventory {
      */
     public org.openapis.openapi.models.operations.InventoryperdockResponse inventoryperdock(org.openapis.openapi.models.operations.InventoryperdockRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InventoryperdockPathParams.class, baseUrl, "/api/logistics/pvt/inventory/items/{skuId}/docks/{dockId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InventoryperdockRequest.class, baseUrl, "/api/logistics/pvt/inventory/items/{skuId}/docks/{dockId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -229,13 +229,13 @@ public class Inventory {
      */
     public org.openapis.openapi.models.operations.InventoryperdockandwarehouseResponse inventoryperdockandwarehouse(org.openapis.openapi.models.operations.InventoryperdockandwarehouseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InventoryperdockandwarehousePathParams.class, baseUrl, "/api/logistics/pvt/inventory/items/{skuId}/docks/{dockId}/warehouses/{warehouseId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InventoryperdockandwarehouseRequest.class, baseUrl, "/api/logistics/pvt/inventory/items/{skuId}/docks/{dockId}/warehouses/{warehouseId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -277,13 +277,13 @@ public class Inventory {
      */
     public org.openapis.openapi.models.operations.InventoryperwarehouseResponse inventoryperwarehouse(org.openapis.openapi.models.operations.InventoryperwarehouseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InventoryperwarehousePathParams.class, baseUrl, "/api/logistics/pvt/inventory/items/{skuId}/warehouses/{warehouseId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InventoryperwarehouseRequest.class, baseUrl, "/api/logistics/pvt/inventory/items/{skuId}/warehouses/{warehouseId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -327,18 +327,18 @@ public class Inventory {
      */
     public org.openapis.openapi.models.operations.SaveSupplyLotResponse saveSupplyLot(org.openapis.openapi.models.operations.SaveSupplyLotRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SaveSupplyLotPathParams.class, baseUrl, "/api/logistics/pvt/inventory/items/{skuId}/warehouses/{warehouseId}/supplyLots/{supplyLotId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SaveSupplyLotRequest.class, baseUrl, "/api/logistics/pvt/inventory/items/{skuId}/warehouses/{warehouseId}/supplyLots/{supplyLotId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -376,13 +376,13 @@ public class Inventory {
      */
     public org.openapis.openapi.models.operations.TransferSupplyLotResponse transferSupplyLot(org.openapis.openapi.models.operations.TransferSupplyLotRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TransferSupplyLotPathParams.class, baseUrl, "/api/logistics/pvt/inventory/items/{skuId}/warehouses/{warehouseId}/supplyLots/{supplyLotId}/transfer", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TransferSupplyLotRequest.class, baseUrl, "/api/logistics/pvt/inventory/items/{skuId}/warehouses/{warehouseId}/supplyLots/{supplyLotId}/transfer", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -418,18 +418,18 @@ public class Inventory {
      */
     public org.openapis.openapi.models.operations.UpdateInventoryBySkuandWarehouseResponse updateInventoryBySkuandWarehouse(org.openapis.openapi.models.operations.UpdateInventoryBySkuandWarehouseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInventoryBySkuandWarehousePathParams.class, baseUrl, "/api/logistics/pvt/inventory/skus/{skuId}/warehouses/{warehouseId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInventoryBySkuandWarehouseRequest.class, baseUrl, "/api/logistics/pvt/inventory/skus/{skuId}/warehouses/{warehouseId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

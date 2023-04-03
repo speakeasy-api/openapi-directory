@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateSuiteDefinitionHeaders;
 import org.openapis.openapi.models.operations.CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration;
 import org.openapis.openapi.models.operations.CreateSuiteDefinitionRequestBody;
 import org.openapis.openapi.models.operations.CreateSuiteDefinitionRequest;
@@ -17,49 +16,47 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateSuiteDefinitionRequest req = new CreateSuiteDefinitionRequest() {{
-                headers = new CreateSuiteDefinitionHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateSuiteDefinitionRequestBody() {{
+                requestBody = new CreateSuiteDefinitionRequestBody() {{
                     suiteDefinitionConfiguration = new CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration() {{
-                        devicePermissionRoleArn = "illum";
+                        devicePermissionRoleArn = "corrupti";
                         devices = new org.openapis.openapi.models.shared.DeviceUnderTest[]{{
                             add(new DeviceUnderTest() {{
-                                certificateArn = "error";
-                                thingArn = "deserunt";
+                                certificateArn = "distinctio";
+                                thingArn = "quibusdam";
                             }}),
                             add(new DeviceUnderTest() {{
-                                certificateArn = "suscipit";
-                                thingArn = "iure";
+                                certificateArn = "unde";
+                                thingArn = "nulla";
+                            }}),
+                            add(new DeviceUnderTest() {{
+                                certificateArn = "corrupti";
+                                thingArn = "illum";
                             }}),
                         }};
                         intendedForQualification = false;
                         isLongDurationTest = false;
                         protocol = "MqttV3_1_1";
-                        rootGroup = "debitis";
-                        suiteDefinitionName = "ipsa";
+                        rootGroup = "error";
+                        suiteDefinitionName = "deserunt";
                     }};
                     tags = new java.util.HashMap<String, String>() {{
-                        put("tempora", "suscipit");
-                        put("molestiae", "minus");
-                        put("placeat", "voluptatum");
-                        put("iusto", "excepturi");
+                        put("iure", "magnam");
+                        put("debitis", "ipsa");
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "delectus";
+                xAmzContentSha256 = "tempora";
+                xAmzCredential = "suscipit";
+                xAmzDate = "molestiae";
+                xAmzSecurityToken = "minus";
+                xAmzSignature = "placeat";
+                xAmzSignedHeaders = "voluptatum";
+            }}            
 
             CreateSuiteDefinitionResponse res = sdk.createSuiteDefinition(req);
 

@@ -20,14 +20,10 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.ServicemanagementOperationsGetSecurityOption1;
 import org.openapis.openapi.models.operations.ServicemanagementOperationsGetSecurityOption2;
 import org.openapis.openapi.models.operations.ServicemanagementOperationsGetSecurity;
-import org.openapis.openapi.models.operations.ServicemanagementOperationsGetPathParams;
-import org.openapis.openapi.models.operations.ServicemanagementOperationsGetQueryParams;
 import org.openapis.openapi.models.operations.ServicemanagementOperationsGetRequest;
 import org.openapis.openapi.models.operations.ServicemanagementOperationsGetResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -36,35 +32,26 @@ public class Application {
                 .build();
 
             ServicemanagementOperationsGetRequest req = new ServicemanagementOperationsGetRequest() {{
-                security = new ServicemanagementOperationsGetSecurity() {{
-                    option1 = new ServicemanagementOperationsGetSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new ServicemanagementOperationsGetPathParams() {{
-                    name = "corrupti";
-                }};
-                queryParams = new ServicemanagementOperationsGetQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                key = "nulla";
+                name = "corrupti";
+                oauthToken = "illum";
+                prettyPrint = false;
+                quotaUser = "vel";
+                uploadType = "error";
+                uploadProtocol = "deserunt";
+            }}            
 
-            ServicemanagementOperationsGetResponse res = sdk.operations.servicemanagementOperationsGet(req);
+            ServicemanagementOperationsGetResponse res = sdk.operations.servicemanagementOperationsGet(req, new ServicemanagementOperationsGetSecurity() {{
+                option1 = new ServicemanagementOperationsGetSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response
@@ -76,7 +63,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### operations

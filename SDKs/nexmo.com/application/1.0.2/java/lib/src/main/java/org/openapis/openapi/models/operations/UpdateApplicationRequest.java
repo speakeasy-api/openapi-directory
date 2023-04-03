@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateApplicationRequest {
-    
-    public UpdateApplicationPathParams pathParams;
-    public UpdateApplicationRequest withPathParams(UpdateApplicationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateApplicationRequestBody requestBody;
+    public UpdateApplicationRequest withRequestBody(UpdateApplicationRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateApplicationRequestBody request;
-    public UpdateApplicationRequest withRequest(UpdateApplicationRequestBody request) {
-        this.request = request;
+    /**
+     * The ID allocated to your application by Nexmo.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_id")
+    public String appId;
+    public UpdateApplicationRequest withAppId(String appId) {
+        this.appId = appId;
         return this;
     }
     

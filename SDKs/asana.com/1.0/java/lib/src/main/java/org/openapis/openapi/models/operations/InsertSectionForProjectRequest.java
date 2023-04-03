@@ -7,27 +7,46 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InsertSectionForProjectRequest {
-    
-    public InsertSectionForProjectPathParams pathParams;
-    public InsertSectionForProjectRequest withPathParams(InsertSectionForProjectPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public InsertSectionForProjectQueryParams queryParams;
-    public InsertSectionForProjectRequest withQueryParams(InsertSectionForProjectQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The section's move action.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public InsertSectionForProjectRequestBody request;
-    public InsertSectionForProjectRequest withRequest(InsertSectionForProjectRequestBody request) {
-        this.request = request;
+    public InsertSectionForProjectRequestBody requestBody;
+    public InsertSectionForProjectRequest withRequestBody(InsertSectionForProjectRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Defines fields to return.
+     * Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
+     * The id of included objects will always be returned, regardless of the field options.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
+    public String[] optFields;
+    public InsertSectionForProjectRequest withOptFields(String[] optFields) {
+        this.optFields = optFields;
+        return this;
+    }
+    
+    /**
+     * Provides \u201cpretty\u201d output.
+     * Provides the response in a \u201cpretty\u201d format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
+    public Boolean optPretty;
+    public InsertSectionForProjectRequest withOptPretty(Boolean optPretty) {
+        this.optPretty = optPretty;
+        return this;
+    }
+    
+    /**
+     * Globally unique identifier for the project.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_gid")
+    public String projectGid;
+    public InsertSectionForProjectRequest withProjectGid(String projectGid) {
+        this.projectGid = projectGid;
         return this;
     }
     

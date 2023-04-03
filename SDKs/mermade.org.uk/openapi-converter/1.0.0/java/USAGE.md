@@ -6,7 +6,6 @@ import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.ConvertRequestBodyValidateEnum;
 import org.openapis.openapi.models.operations.ConvertRequestBody;
-import org.openapis.openapi.models.operations.ConvertRequest;
 import org.openapis.openapi.models.operations.ConvertResponse;
 
 public class Application {
@@ -15,13 +14,11 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ConvertRequest req = new ConvertRequest() {{
-                request = new ConvertRequestBody() {{
-                    filename = "corrupti";
-                    source = "provident";
-                    validate = "on";
-                }};
-            }};            
+            ConvertRequestBody req = new ConvertRequestBody() {{
+                filename = "corrupti";
+                source = "provident";
+                validate = "on";
+            }}            
 
             ConvertResponse res = sdk.conversion.convert(req);
 

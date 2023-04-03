@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorePersistsRequest {
-    
-    public StorePersistsPathParams pathParams;
-    public StorePersistsRequest withPathParams(StorePersistsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Variable name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=var")
+    public String var;
+    public StorePersistsRequest withVar(String var) {
+        this.var = var;
         return this;
     }
     

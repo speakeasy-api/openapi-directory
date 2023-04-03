@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MigrationsListReposForOrgRequest {
-    
-    public MigrationsListReposForOrgPathParams pathParams;
-    public MigrationsListReposForOrgRequest withPathParams(MigrationsListReposForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the migration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=migration_id")
+    public Long migrationId;
+    public MigrationsListReposForOrgRequest withMigrationId(Long migrationId) {
+        this.migrationId = migrationId;
         return this;
     }
     
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public MigrationsListReposForOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public MigrationsListReposForOrgQueryParams queryParams;
-    public MigrationsListReposForOrgRequest withQueryParams(MigrationsListReposForOrgQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public MigrationsListReposForOrgRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public MigrationsListReposForOrgRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

@@ -4,27 +4,84 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScoreRevisionDataRequest {
-    
-    public GetScoreRevisionDataPathParams pathParams;
-    public GetScoreRevisionDataRequest withPathParams(GetScoreRevisionDataPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The format of the file you will retrieve
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public GetScoreRevisionDataFormatEnum format;
+    public GetScoreRevisionDataRequest withFormat(GetScoreRevisionDataFormatEnum format) {
+        this.format = format;
         return this;
     }
     
-    
-    public GetScoreRevisionDataQueryParams queryParams;
-    public GetScoreRevisionDataRequest withQueryParams(GetScoreRevisionDataQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only return files already generated and cached in Flat's production
+     * cache. If the file is not availabe, a 404 will be returned
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlyCached")
+    public Boolean onlyCached;
+    public GetScoreRevisionDataRequest withOnlyCached(Boolean onlyCached) {
+        this.onlyCached = onlyCached;
         return this;
     }
     
+    /**
+     * An optional a set of parts uuid to be exported. This parameter must be composed of parts uuids
+     * separated by commas. For example "59df645f-bb1c-f1b4-b573-d2afc4491f94,34ef645f-1aef-f3bc-1564-34cca4492b87".
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parts")
+    public String parts;
+    public GetScoreRevisionDataRequest withParts(String parts) {
+        this.parts = parts;
+        return this;
+    }
     
-    public GetScoreRevisionDataSecurity security;
-    public GetScoreRevisionDataRequest withSecurity(GetScoreRevisionDataSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of a score revision. You can use `last` to fetch the information related to the last version created.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=revision")
+    public String revision;
+    public GetScoreRevisionDataRequest withRevision(String revision) {
+        this.revision = revision;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
+    public String score;
+    public GetScoreRevisionDataRequest withScore(String score) {
+        this.score = score;
+        return this;
+    }
+    
+    /**
+     * This sharing key must be specified to access to a score or collection with a `privacy` mode set to `privateLink` and the current user is not a collaborator of the document.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharingKey")
+    public String sharingKey;
+    public GetScoreRevisionDataRequest withSharingKey(String sharingKey) {
+        this.sharingKey = sharingKey;
+        return this;
+    }
+    
+    /**
+     * Returns a json with the `url` in it instead of redirecting
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public Boolean url;
+    public GetScoreRevisionDataRequest withUrl(Boolean url) {
+        this.url = url;
         return this;
     }
     

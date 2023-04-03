@@ -7,17 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProjectUsernameProjectTreeBranchRequest {
-    
-    public PostProjectUsernameProjectTreeBranchPathParams pathParams;
-    public PostProjectUsernameProjectTreeBranchRequest withPathParams(PostProjectUsernameProjectTreeBranchPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostProjectUsernameProjectTreeBranchRequestBody requestBody;
+    public PostProjectUsernameProjectTreeBranchRequest withRequestBody(PostProjectUsernameProjectTreeBranchRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostProjectUsernameProjectTreeBranchRequestBody request;
-    public PostProjectUsernameProjectTreeBranchRequest withRequest(PostProjectUsernameProjectTreeBranchRequestBody request) {
-        this.request = request;
+    /**
+     * The branch name should be url-encoded.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
+    public String branch;
+    public PostProjectUsernameProjectTreeBranchRequest withBranch(String branch) {
+        this.branch = branch;
+        return this;
+    }
+    
+    /**
+     * XXXXXXXXX
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public PostProjectUsernameProjectTreeBranchRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * XXXXXXXXX
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public PostProjectUsernameProjectTreeBranchRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

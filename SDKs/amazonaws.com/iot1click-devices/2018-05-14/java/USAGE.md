@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.ClaimDevicesByClaimCodePathParams;
-import org.openapis.openapi.models.operations.ClaimDevicesByClaimCodeHeaders;
 import org.openapis.openapi.models.operations.ClaimDevicesByClaimCodeRequest;
 import org.openapis.openapi.models.operations.ClaimDevicesByClaimCodeResponse;
 
@@ -14,26 +12,20 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             ClaimDevicesByClaimCodeRequest req = new ClaimDevicesByClaimCodeRequest() {{
-                pathParams = new ClaimDevicesByClaimCodePathParams() {{
-                    claimCode = "corrupti";
-                }};
-                headers = new ClaimDevicesByClaimCodeHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "provident";
+                xAmzCredential = "distinctio";
+                xAmzDate = "quibusdam";
+                xAmzSecurityToken = "unde";
+                xAmzSignature = "nulla";
+                xAmzSignedHeaders = "corrupti";
+                claimCode = "illum";
+            }}            
 
             ClaimDevicesByClaimCodeResponse res = sdk.claimDevicesByClaimCode(req);
 

@@ -30,11 +30,8 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/DiscoveryApisGetRestPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/DiscoveryApisGetRestQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DiscoveryApisGetRestRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DiscoveryApisGetRestResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/DiscoveryApisListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DiscoveryApisListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DiscoveryApisListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/RestDescriptionAuthOauth2Scopes.java

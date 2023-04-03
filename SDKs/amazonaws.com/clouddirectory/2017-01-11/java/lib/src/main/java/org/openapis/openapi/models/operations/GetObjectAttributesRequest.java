@@ -7,17 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetObjectAttributesRequest {
-    
-    public GetObjectAttributesHeaders headers;
-    public GetObjectAttributesRequest withHeaders(GetObjectAttributesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public GetObjectAttributesRequestBody requestBody;
+    public GetObjectAttributesRequest withRequestBody(GetObjectAttributesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public GetObjectAttributesRequestBody request;
-    public GetObjectAttributesRequest withRequest(GetObjectAttributesRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetObjectAttributesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetObjectAttributesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetObjectAttributesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetObjectAttributesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetObjectAttributesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetObjectAttributesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetObjectAttributesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The consistency level at which to retrieve the attributes on an object.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-consistency-level")
+    public GetObjectAttributesXAmzConsistencyLevelEnum xAmzConsistencyLevel;
+    public GetObjectAttributesRequest withXAmzConsistencyLevel(GetObjectAttributesXAmzConsistencyLevelEnum xAmzConsistencyLevel) {
+        this.xAmzConsistencyLevel = xAmzConsistencyLevel;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) that is associated with the &lt;a&gt;Directory&lt;/a&gt; where the object resides.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-data-partition")
+    public String xAmzDataPartition;
+    public GetObjectAttributesRequest withXAmzDataPartition(String xAmzDataPartition) {
+        this.xAmzDataPartition = xAmzDataPartition;
         return this;
     }
     

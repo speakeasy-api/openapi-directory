@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetACallQueueRequest {
-    
-    public GetACallQueuePathParams pathParams;
-    public GetACallQueueRequest withPathParams(GetACallQueuePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetACallQueueSecurity security;
-    public GetACallQueueRequest withSecurity(GetACallQueueSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the Call Queue. This can be retrieved from [List Call Queues API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-call-queues/listcallqueues).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=callQueueId")
+    public String callQueueId;
+    public GetACallQueueRequest withCallQueueId(String callQueueId) {
+        this.callQueueId = callQueueId;
         return this;
     }
     

@@ -4,27 +4,156 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MonitoringProjectsLocationPrometheusApiV1MetadataListRequest {
-    
-    public MonitoringProjectsLocationPrometheusApiV1MetadataListPathParams pathParams;
-    public MonitoringProjectsLocationPrometheusApiV1MetadataListRequest withPathParams(MonitoringProjectsLocationPrometheusApiV1MetadataListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public MonitoringProjectsLocationPrometheusApiV1MetadataListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public MonitoringProjectsLocationPrometheusApiV1MetadataListQueryParams queryParams;
-    public MonitoringProjectsLocationPrometheusApiV1MetadataListRequest withQueryParams(MonitoringProjectsLocationPrometheusApiV1MetadataListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public MonitoringProjectsLocationPrometheusApiV1MetadataListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public MonitoringProjectsLocationPrometheusApiV1MetadataListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public MonitoringProjectsLocationPrometheusApiV1MetadataListSecurity security;
-    public MonitoringProjectsLocationPrometheusApiV1MetadataListRequest withSecurity(MonitoringProjectsLocationPrometheusApiV1MetadataListSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public MonitoringProjectsLocationPrometheusApiV1MetadataListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public MonitoringProjectsLocationPrometheusApiV1MetadataListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public MonitoringProjectsLocationPrometheusApiV1MetadataListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Maximum number of metrics to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public MonitoringProjectsLocationPrometheusApiV1MetadataListRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Location of the resource information. Has to be "global" for now.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public MonitoringProjectsLocationPrometheusApiV1MetadataListRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The metric name for which to query metadata. If unset, all metric metadata is returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metric")
+    public String metric;
+    public MonitoringProjectsLocationPrometheusApiV1MetadataListRequest withMetric(String metric) {
+        this.metric = metric;
+        return this;
+    }
+    
+    /**
+     * Required. The workspace on which to execute the request. It is not part of the open source API but used as a request path prefix to distinguish different virtual Prometheus instances of Google Prometheus Engine. The format is: projects/PROJECT_ID_OR_NUMBER.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public MonitoringProjectsLocationPrometheusApiV1MetadataListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public MonitoringProjectsLocationPrometheusApiV1MetadataListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public MonitoringProjectsLocationPrometheusApiV1MetadataListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public MonitoringProjectsLocationPrometheusApiV1MetadataListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public MonitoringProjectsLocationPrometheusApiV1MetadataListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public MonitoringProjectsLocationPrometheusApiV1MetadataListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

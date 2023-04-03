@@ -53,7 +53,7 @@ public class ISOs {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetIsosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetIsosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -92,7 +92,7 @@ public class ISOs {
      */
     public org.openapis.openapi.models.operations.GetIsosIdResponse getIsosId(org.openapis.openapi.models.operations.GetIsosIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIsosIdPathParams.class, baseUrl, "/isos/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIsosIdRequest.class, baseUrl, "/isos/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

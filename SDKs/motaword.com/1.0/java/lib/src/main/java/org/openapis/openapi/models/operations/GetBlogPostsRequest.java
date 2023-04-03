@@ -4,13 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBlogPostsRequest {
+    /**
+     * When `true`, and no article is found in the locale, it falls back to `locale=en`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fallback")
+    public Boolean fallback;
+    public GetBlogPostsRequest withFallback(Boolean fallback) {
+        this.fallback = fallback;
+        return this;
+    }
     
-    public GetBlogPostsQueryParams queryParams;
-    public GetBlogPostsRequest withQueryParams(GetBlogPostsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Article language, default `en`. When no blog article is available and `fallback=true` is specified, it falls back to `en`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public GetBlogPostsRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetBlogPostsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetBlogPostsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

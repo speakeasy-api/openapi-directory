@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GitCreateTagRequest {
-    
-    public GitCreateTagPathParams pathParams;
-    public GitCreateTagRequest withPathParams(GitCreateTagPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public GitCreateTagRequestBody requestBody;
+    public GitCreateTagRequest withRequestBody(GitCreateTagRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public GitCreateTagRequestBody request;
-    public GitCreateTagRequest withRequest(GitCreateTagRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public GitCreateTagRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public GitCreateTagRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

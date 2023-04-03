@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportationReattendColumnRequest {
+    /**
+     * The custom column identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnId")
+    public String columnId;
+    public ImportationReattendColumnRequest withColumnId(String columnId) {
+        this.columnId = columnId;
+        return this;
+    }
     
-    public ImportationReattendColumnPathParams pathParams;
-    public ImportationReattendColumnRequest withPathParams(ImportationReattendColumnPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The execution identifier of you catalog importation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
+    public String executionId;
+    public ImportationReattendColumnRequest withExecutionId(String executionId) {
+        this.executionId = executionId;
+        return this;
+    }
+    
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public ImportationReattendColumnRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

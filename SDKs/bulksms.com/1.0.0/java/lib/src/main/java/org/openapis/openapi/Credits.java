@@ -34,10 +34,11 @@ public class Credits {
      * The recipient must be an enabled account that uses the same currency as your account.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCreditTransferResponse postCreditTransfer(org.openapis.openapi.models.operations.PostCreditTransferRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCreditTransferResponse postCreditTransfer(org.openapis.openapi.models.shared.TransferEntry request, org.openapis.openapi.models.operations.PostCreditTransferSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/credit/transfer");
         
@@ -51,7 +52,7 @@ public class Credits {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

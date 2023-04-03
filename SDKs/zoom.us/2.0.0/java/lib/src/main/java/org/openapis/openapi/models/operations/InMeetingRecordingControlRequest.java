@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InMeetingRecordingControlRequest {
-    
-    public InMeetingRecordingControlPathParams pathParams;
-    public InMeetingRecordingControlRequest withPathParams(InMeetingRecordingControlPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public InMeetingRecordingControlApplicationJSON requestBody;
+    public InMeetingRecordingControlRequest withRequestBody(InMeetingRecordingControlApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public InMeetingRecordingControlApplicationJSON request;
-    public InMeetingRecordingControlRequest withRequest(InMeetingRecordingControlApplicationJSON request) {
-        this.request = request;
+    /**
+     * Unique identifier of the live meeting.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public String meetingId;
+    public InMeetingRecordingControlRequest withMeetingId(String meetingId) {
+        this.meetingId = meetingId;
         return this;
     }
     

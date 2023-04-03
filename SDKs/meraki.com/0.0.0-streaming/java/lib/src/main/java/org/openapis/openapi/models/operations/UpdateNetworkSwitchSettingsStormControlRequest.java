@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkSwitchSettingsStormControlRequest {
-    
-    public UpdateNetworkSwitchSettingsStormControlPathParams pathParams;
-    public UpdateNetworkSwitchSettingsStormControlRequest withPathParams(UpdateNetworkSwitchSettingsStormControlPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkSwitchSettingsStormControlRequestBody requestBody;
+    public UpdateNetworkSwitchSettingsStormControlRequest withRequestBody(UpdateNetworkSwitchSettingsStormControlRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkSwitchSettingsStormControlRequestBody request;
-    public UpdateNetworkSwitchSettingsStormControlRequest withRequest(UpdateNetworkSwitchSettingsStormControlRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkSwitchSettingsStormControlRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

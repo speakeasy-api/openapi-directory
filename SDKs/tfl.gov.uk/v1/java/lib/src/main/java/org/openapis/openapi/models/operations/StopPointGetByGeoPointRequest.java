@@ -4,13 +4,80 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointGetByGeoPointRequest {
+    /**
+     * an optional list of comma separated property categories to return in the StopPoint's property bag. If null or empty, all categories of property are returned. Pass the keyword "none" to return no properties (a valid list of categories can be obtained from the /StopPoint/Meta/categories endpoint)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categories")
+    public String[] categories;
+    public StopPointGetByGeoPointRequest withCategories(String[] categories) {
+        this.categories = categories;
+        return this;
+    }
     
-    public StopPointGetByGeoPointQueryParams queryParams;
-    public StopPointGetByGeoPointRequest withQueryParams(StopPointGetByGeoPointQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location.lat")
+    public Double locationLat;
+    public StopPointGetByGeoPointRequest withLocationLat(Double locationLat) {
+        this.locationLat = locationLat;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location.lon")
+    public Double locationLon;
+    public StopPointGetByGeoPointRequest withLocationLon(Double locationLon) {
+        this.locationLon = locationLon;
+        return this;
+    }
+    
+    /**
+     * the list of modes to search (comma separated mode names e.g. tube,dlr)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modes")
+    public String[] modes;
+    public StopPointGetByGeoPointRequest withModes(String[] modes) {
+        this.modes = modes;
+        return this;
+    }
+    
+    /**
+     * the radius of the bounding circle in metres (default : 200)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
+    public Integer radius;
+    public StopPointGetByGeoPointRequest withRadius(Integer radius) {
+        this.radius = radius;
+        return this;
+    }
+    
+    /**
+     * true to return the lines that each stop point serves as a nested resource
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=returnLines")
+    public Boolean returnLines;
+    public StopPointGetByGeoPointRequest withReturnLines(Boolean returnLines) {
+        this.returnLines = returnLines;
+        return this;
+    }
+    
+    /**
+     * a list of stopTypes that should be returned (a list of valid stop types can be obtained from the StopPoint/meta/stoptypes endpoint)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stopTypes")
+    public String[] stopTypes;
+    public StopPointGetByGeoPointRequest withStopTypes(String[] stopTypes) {
+        this.stopTypes = stopTypes;
+        return this;
+    }
+    
+    /**
+     * Re-arrange the output into a parent/child hierarchy
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useStopPointHierarchy")
+    public Boolean useStopPointHierarchy;
+    public StopPointGetByGeoPointRequest withUseStopPointHierarchy(Boolean useStopPointHierarchy) {
+        this.useStopPointHierarchy = useStopPointHierarchy;
         return this;
     }
     

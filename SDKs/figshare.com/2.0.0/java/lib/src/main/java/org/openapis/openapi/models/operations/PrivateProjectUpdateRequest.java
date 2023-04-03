@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateProjectUpdateRequest {
-    
-    public PrivateProjectUpdatePathParams pathParams;
-    public PrivateProjectUpdateRequest withPathParams(PrivateProjectUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Project description
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProjectUpdate request;
-    public PrivateProjectUpdateRequest withRequest(org.openapis.openapi.models.shared.ProjectUpdate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ProjectUpdate projectUpdate;
+    public PrivateProjectUpdateRequest withProjectUpdate(org.openapis.openapi.models.shared.ProjectUpdate projectUpdate) {
+        this.projectUpdate = projectUpdate;
         return this;
     }
     
-    
-    public PrivateProjectUpdateSecurity security;
-    public PrivateProjectUpdateRequest withSecurity(PrivateProjectUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Project unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Long projectId;
+    public PrivateProjectUpdateRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

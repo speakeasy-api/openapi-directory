@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIdentifierMapperRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=source")
+    public String source;
+    public GetIdentifierMapperRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
     
-    public GetIdentifierMapperPathParams pathParams;
-    public GetIdentifierMapperRequest withPathParams(GetIdentifierMapperPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target")
+    public String target;
+    public GetIdentifierMapperRequest withTarget(String target) {
+        this.target = target;
         return this;
     }
     

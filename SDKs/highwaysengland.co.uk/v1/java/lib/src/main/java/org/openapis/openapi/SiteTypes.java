@@ -37,7 +37,7 @@ public class SiteTypes {
      */
     public org.openapis.openapi.models.operations.SiteTypesGetSitesForPublicFacingAPIResponse siteTypesGetSitesForPublicFacingAPI(org.openapis.openapi.models.operations.SiteTypesGetSitesForPublicFacingAPIRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SiteTypesGetSitesForPublicFacingAPIPathParams.class, baseUrl, "/v{version}/sitetypes/{siteType_Id}/sites", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SiteTypesGetSitesForPublicFacingAPIRequest.class, baseUrl, "/v{version}/sitetypes/{siteType_Id}/sites", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -77,7 +77,7 @@ public class SiteTypes {
      */
     public org.openapis.openapi.models.operations.SiteTypesIndexResponse siteTypesIndex(org.openapis.openapi.models.operations.SiteTypesIndexRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SiteTypesIndexPathParams.class, baseUrl, "/v{version}/sitetypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SiteTypesIndexRequest.class, baseUrl, "/v{version}/sitetypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteListRequest {
-    
-    public GetQuoteListPathParams pathParams;
-    public GetQuoteListRequest withPathParams(GetQuoteListPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public GetQuoteListRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     
+    /**
+     * Quote Object State Id, use /workgroups/{workgroup_id}/quoteStates to get correct value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quote_state_id, use filters={\"quote_state_id\":111111}")
+    public String quoteStateIdUseFiltersEqualQuoteStateId111111;
+    public GetQuoteListRequest withQuoteStateIdUseFiltersEqualQuoteStateId111111(String quoteStateIdUseFiltersEqualQuoteStateId111111) {
+        this.quoteStateIdUseFiltersEqualQuoteStateId111111 = quoteStateIdUseFiltersEqualQuoteStateId111111;
+        return this;
+    }
     
-    public GetQuoteListQueryParams queryParams;
-    public GetQuoteListRequest withQueryParams(GetQuoteListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public GetQuoteListRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

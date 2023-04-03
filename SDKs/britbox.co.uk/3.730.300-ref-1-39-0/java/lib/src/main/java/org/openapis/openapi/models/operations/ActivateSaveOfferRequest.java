@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivateSaveOfferRequest {
-    
-    public ActivateSaveOfferQueryParams queryParams;
-    public ActivateSaveOfferRequest withQueryParams(ActivateSaveOfferQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The coupon id to be checked.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String request;
-    public ActivateSaveOfferRequest withRequest(String request) {
-        this.request = request;
+    public String requestBody;
+    public ActivateSaveOfferRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public ActivateSaveOfferSecurity security;
-    public ActivateSaveOfferRequest withSecurity(ActivateSaveOfferSecurity security) {
-        this.security = security;
+    /**
+     * Language code for the preferred language to be returned in the response.
+     * 
+     * Parameter value is case-insensitive and should be
+     *   - a valid 2 letter language code without region such as en, de
+     *   - or with region such as en_us, en_au
+     * 
+     * If undefined then defaults to 'en', unless the server has been configured
+     * with a custom default.
+     * 
+     * See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public ActivateSaveOfferRequest withLang(String lang) {
+        this.lang = lang;
         return this;
     }
     

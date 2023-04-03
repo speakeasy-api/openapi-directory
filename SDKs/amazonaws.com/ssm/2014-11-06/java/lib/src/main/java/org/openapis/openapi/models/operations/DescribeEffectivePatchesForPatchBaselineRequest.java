@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeEffectivePatchesForPatchBaselineRequest {
-    
-    public DescribeEffectivePatchesForPatchBaselineQueryParams queryParams;
-    public DescribeEffectivePatchesForPatchBaselineRequest withQueryParams(DescribeEffectivePatchesForPatchBaselineQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DescribeEffectivePatchesForPatchBaselineHeaders headers;
-    public DescribeEffectivePatchesForPatchBaselineRequest withHeaders(DescribeEffectivePatchesForPatchBaselineHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DescribeEffectivePatchesForPatchBaselineRequest request;
-    public DescribeEffectivePatchesForPatchBaselineRequest withRequest(org.openapis.openapi.models.shared.DescribeEffectivePatchesForPatchBaselineRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DescribeEffectivePatchesForPatchBaselineRequest describeEffectivePatchesForPatchBaselineRequest;
+    public DescribeEffectivePatchesForPatchBaselineRequest withDescribeEffectivePatchesForPatchBaselineRequest(org.openapis.openapi.models.shared.DescribeEffectivePatchesForPatchBaselineRequest describeEffectivePatchesForPatchBaselineRequest) {
+        this.describeEffectivePatchesForPatchBaselineRequest = describeEffectivePatchesForPatchBaselineRequest;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public String maxResults;
+    public DescribeEffectivePatchesForPatchBaselineRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public DescribeEffectivePatchesForPatchBaselineRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeEffectivePatchesForPatchBaselineRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeEffectivePatchesForPatchBaselineRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeEffectivePatchesForPatchBaselineRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeEffectivePatchesForPatchBaselineRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeEffectivePatchesForPatchBaselineRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeEffectivePatchesForPatchBaselineRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeEffectivePatchesForPatchBaselineRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public DescribeEffectivePatchesForPatchBaselineXAmzTargetEnum xAmzTarget;
+    public DescribeEffectivePatchesForPatchBaselineRequest withXAmzTarget(DescribeEffectivePatchesForPatchBaselineXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

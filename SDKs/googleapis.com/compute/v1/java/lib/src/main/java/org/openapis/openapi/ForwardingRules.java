@@ -34,25 +34,26 @@ public class ForwardingRules {
     /**
      * Retrieves an aggregated list of forwarding rules.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeForwardingRulesAggregatedListResponse computeForwardingRulesAggregatedList(org.openapis.openapi.models.operations.ComputeForwardingRulesAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeForwardingRulesAggregatedListResponse computeForwardingRulesAggregatedList(org.openapis.openapi.models.operations.ComputeForwardingRulesAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeForwardingRulesAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeForwardingRulesAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/forwardingRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeForwardingRulesAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/forwardingRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeForwardingRulesAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeForwardingRulesAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class ForwardingRules {
     /**
      * Deletes the specified ForwardingRule resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeForwardingRulesDeleteResponse computeForwardingRulesDelete(org.openapis.openapi.models.operations.ComputeForwardingRulesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeForwardingRulesDeleteResponse computeForwardingRulesDelete(org.openapis.openapi.models.operations.ComputeForwardingRulesDeleteRequest request, org.openapis.openapi.models.operations.ComputeForwardingRulesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeForwardingRulesDeletePathParams.class, baseUrl, "/projects/{project}/regions/{region}/forwardingRules/{forwardingRule}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeForwardingRulesDeleteRequest.class, baseUrl, "/projects/{project}/regions/{region}/forwardingRules/{forwardingRule}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeForwardingRulesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeForwardingRulesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,25 +126,26 @@ public class ForwardingRules {
     /**
      * Returns the specified ForwardingRule resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeForwardingRulesGetResponse computeForwardingRulesGet(org.openapis.openapi.models.operations.ComputeForwardingRulesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeForwardingRulesGetResponse computeForwardingRulesGet(org.openapis.openapi.models.operations.ComputeForwardingRulesGetRequest request, org.openapis.openapi.models.operations.ComputeForwardingRulesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeForwardingRulesGetPathParams.class, baseUrl, "/projects/{project}/regions/{region}/forwardingRules/{forwardingRule}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeForwardingRulesGetRequest.class, baseUrl, "/projects/{project}/regions/{region}/forwardingRules/{forwardingRule}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeForwardingRulesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeForwardingRulesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,27 +172,28 @@ public class ForwardingRules {
     /**
      * Creates a ForwardingRule resource in the specified project and region using the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeForwardingRulesInsertResponse computeForwardingRulesInsert(org.openapis.openapi.models.operations.ComputeForwardingRulesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeForwardingRulesInsertResponse computeForwardingRulesInsert(org.openapis.openapi.models.operations.ComputeForwardingRulesInsertRequest request, org.openapis.openapi.models.operations.ComputeForwardingRulesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeForwardingRulesInsertPathParams.class, baseUrl, "/projects/{project}/regions/{region}/forwardingRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeForwardingRulesInsertRequest.class, baseUrl, "/projects/{project}/regions/{region}/forwardingRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "forwardingRule", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeForwardingRulesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeForwardingRulesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,25 +220,26 @@ public class ForwardingRules {
     /**
      * Retrieves a list of ForwardingRule resources available to the specified project and region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeForwardingRulesListResponse computeForwardingRulesList(org.openapis.openapi.models.operations.ComputeForwardingRulesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeForwardingRulesListResponse computeForwardingRulesList(org.openapis.openapi.models.operations.ComputeForwardingRulesListRequest request, org.openapis.openapi.models.operations.ComputeForwardingRulesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeForwardingRulesListPathParams.class, baseUrl, "/projects/{project}/regions/{region}/forwardingRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeForwardingRulesListRequest.class, baseUrl, "/projects/{project}/regions/{region}/forwardingRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeForwardingRulesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeForwardingRulesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,27 +266,28 @@ public class ForwardingRules {
     /**
      * Updates the specified forwarding rule with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. Currently, you can only patch the network_tier field.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeForwardingRulesPatchResponse computeForwardingRulesPatch(org.openapis.openapi.models.operations.ComputeForwardingRulesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeForwardingRulesPatchResponse computeForwardingRulesPatch(org.openapis.openapi.models.operations.ComputeForwardingRulesPatchRequest request, org.openapis.openapi.models.operations.ComputeForwardingRulesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeForwardingRulesPatchPathParams.class, baseUrl, "/projects/{project}/regions/{region}/forwardingRules/{forwardingRule}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeForwardingRulesPatchRequest.class, baseUrl, "/projects/{project}/regions/{region}/forwardingRules/{forwardingRule}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "forwardingRule1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeForwardingRulesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeForwardingRulesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -308,27 +314,28 @@ public class ForwardingRules {
     /**
      * Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeForwardingRulesSetLabelsResponse computeForwardingRulesSetLabels(org.openapis.openapi.models.operations.ComputeForwardingRulesSetLabelsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeForwardingRulesSetLabelsResponse computeForwardingRulesSetLabels(org.openapis.openapi.models.operations.ComputeForwardingRulesSetLabelsRequest request, org.openapis.openapi.models.operations.ComputeForwardingRulesSetLabelsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeForwardingRulesSetLabelsPathParams.class, baseUrl, "/projects/{project}/regions/{region}/forwardingRules/{resource}/setLabels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeForwardingRulesSetLabelsRequest.class, baseUrl, "/projects/{project}/regions/{region}/forwardingRules/{resource}/setLabels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "regionSetLabelsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeForwardingRulesSetLabelsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeForwardingRulesSetLabelsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -355,27 +362,28 @@ public class ForwardingRules {
     /**
      * Changes target URL for forwarding rule. The new target should be of the same type as the old target.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeForwardingRulesSetTargetResponse computeForwardingRulesSetTarget(org.openapis.openapi.models.operations.ComputeForwardingRulesSetTargetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeForwardingRulesSetTargetResponse computeForwardingRulesSetTarget(org.openapis.openapi.models.operations.ComputeForwardingRulesSetTargetRequest request, org.openapis.openapi.models.operations.ComputeForwardingRulesSetTargetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeForwardingRulesSetTargetPathParams.class, baseUrl, "/projects/{project}/regions/{region}/forwardingRules/{forwardingRule}/setTarget", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeForwardingRulesSetTargetRequest.class, baseUrl, "/projects/{project}/regions/{region}/forwardingRules/{forwardingRule}/setTarget", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "targetReference", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeForwardingRulesSetTargetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeForwardingRulesSetTargetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

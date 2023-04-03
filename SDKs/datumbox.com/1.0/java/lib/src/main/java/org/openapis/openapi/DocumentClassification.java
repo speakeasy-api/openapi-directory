@@ -37,7 +37,7 @@ public class DocumentClassification {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdultContentDetectionResponse adultContentDetection(org.openapis.openapi.models.operations.AdultContentDetectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdultContentDetectionResponse adultContentDetection(org.openapis.openapi.models.operations.AdultContentDetectionRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/1.0/AdultContentDetection.json");
         
@@ -72,7 +72,7 @@ public class DocumentClassification {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CommercialDetectionResponse commercialDetection(org.openapis.openapi.models.operations.CommercialDetectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CommercialDetectionResponse commercialDetection(org.openapis.openapi.models.operations.CommercialDetectionRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/1.0/CommercialDetection.json");
         
@@ -107,7 +107,7 @@ public class DocumentClassification {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EducationalDetectionResponse educationalDetection(org.openapis.openapi.models.operations.EducationalDetectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EducationalDetectionResponse educationalDetection(org.openapis.openapi.models.operations.EducationalDetectionRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/1.0/EducationalDetection.json");
         
@@ -142,7 +142,7 @@ public class DocumentClassification {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenderDetectionResponse genderDetection(org.openapis.openapi.models.operations.GenderDetectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenderDetectionResponse genderDetection(org.openapis.openapi.models.operations.GenderDetectionRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/1.0/GenderDetection.json");
         
@@ -177,7 +177,7 @@ public class DocumentClassification {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LanguageDetectionResponse languageDetection(org.openapis.openapi.models.operations.LanguageDetectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LanguageDetectionResponse languageDetection(org.openapis.openapi.models.operations.LanguageDetectionRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/1.0/LanguageDetection.json");
         
@@ -212,7 +212,7 @@ public class DocumentClassification {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReadabilityAssessmentResponse readabilityAssessment(org.openapis.openapi.models.operations.ReadabilityAssessmentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReadabilityAssessmentResponse readabilityAssessment(org.openapis.openapi.models.operations.ReadabilityAssessmentRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/1.0/ReadabilityAssessment.json");
         
@@ -247,7 +247,7 @@ public class DocumentClassification {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SentimentAnalysisResponse sentimentAnalysis(org.openapis.openapi.models.operations.SentimentAnalysisRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SentimentAnalysisResponse sentimentAnalysis(org.openapis.openapi.models.operations.SentimentAnalysisRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/1.0/SentimentAnalysis.json");
         
@@ -282,7 +282,7 @@ public class DocumentClassification {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SpamDetectionResponse spamDetection(org.openapis.openapi.models.operations.SpamDetectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SpamDetectionResponse spamDetection(org.openapis.openapi.models.operations.SpamDetectionRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/1.0/SpamDetection.json");
         
@@ -317,7 +317,7 @@ public class DocumentClassification {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubjectivityAnalysisResponse subjectivityAnalysis(org.openapis.openapi.models.operations.SubjectivityAnalysisRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubjectivityAnalysisResponse subjectivityAnalysis(org.openapis.openapi.models.operations.SubjectivityAnalysisRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/1.0/SubjectivityAnalysis.json");
         
@@ -352,7 +352,7 @@ public class DocumentClassification {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TopicClassificationResponse topicClassification(org.openapis.openapi.models.operations.TopicClassificationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TopicClassificationResponse topicClassification(org.openapis.openapi.models.operations.TopicClassificationRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/1.0/TopicClassification.json");
         
@@ -387,7 +387,7 @@ public class DocumentClassification {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TwitterSentimentAnalysisResponse twitterSentimentAnalysis(org.openapis.openapi.models.operations.TwitterSentimentAnalysisRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TwitterSentimentAnalysisResponse twitterSentimentAnalysis(org.openapis.openapi.models.operations.TwitterSentimentAnalysisRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/1.0/TwitterSentimentAnalysis.json");
         

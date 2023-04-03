@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetreportstatusbyIDPathParams;
-import org.openapis.openapi.models.operations.GetreportstatusbyIDHeaders;
 import org.openapis.openapi.models.operations.GetreportstatusbyIDRequest;
 import org.openapis.openapi.models.operations.GetreportstatusbyIDResponse;
 
@@ -27,24 +25,16 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    appKey = new SchemeAppKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                    appToken = new SchemeAppToken() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    appKey = "YOUR_API_KEY_HERE";
+                    appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetreportstatusbyIDRequest req = new GetreportstatusbyIDRequest() {{
-                pathParams = new GetreportstatusbyIDPathParams() {{
-                    reportId = "corrupti";
-                }};
-                headers = new GetreportstatusbyIDHeaders() {{
-                    accept = "provident";
-                    contentType = "distinctio";
-                }};
-            }};            
+                accept = "corrupti";
+                contentType = "provident";
+                reportId = "distinctio";
+            }}            
 
             GetreportstatusbyIDResponse res = sdk.report.getreportstatusbyID(req);
 
@@ -58,7 +48,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### report

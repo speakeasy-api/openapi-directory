@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListExternalAccountsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListExternalAccountsRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public ListExternalAccountsQueryParams queryParams;
-    public ListExternalAccountsRequest withQueryParams(ListExternalAccountsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListExternalAccountsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status.in")
+    public ListExternalAccountsStatusInEnum[] statusIn;
+    public ListExternalAccountsRequest withStatusIn(ListExternalAccountsStatusInEnum[] statusIn) {
+        this.statusIn = statusIn;
         return this;
     }
     

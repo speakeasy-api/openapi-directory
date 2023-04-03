@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActiveWidgetRequest {
+    /**
+     * Continuous Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public GetActiveWidgetRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
     
-    public GetActiveWidgetPathParams pathParams;
-    public GetActiveWidgetRequest withPathParams(GetActiveWidgetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Active widget ID belonging to this Continuous Project
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=widgetId")
+    public Long widgetId;
+    public GetActiveWidgetRequest withWidgetId(Long widgetId) {
+        this.widgetId = widgetId;
         return this;
     }
     

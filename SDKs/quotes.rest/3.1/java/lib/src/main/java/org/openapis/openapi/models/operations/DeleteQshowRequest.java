@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteQshowRequest {
-    
-    public DeleteQshowQueryParams queryParams;
-    public DeleteQshowRequest withQueryParams(DeleteQshowQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteQshowSecurity security;
-    public DeleteQshowRequest withSecurity(DeleteQshowSecurity security) {
-        this.security = security;
+    /**
+     * Qshow ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public DeleteQshowRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

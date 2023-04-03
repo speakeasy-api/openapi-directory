@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImageCollectionRequest {
-    
-    public GetImageCollectionPathParams pathParams;
-    public GetImageCollectionRequest withPathParams(GetImageCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Which sharing information to include in the response, such as a URL to the collection
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
+    public GetImageCollectionEmbedEnum[] embed;
+    public GetImageCollectionRequest withEmbed(GetImageCollectionEmbedEnum[] embed) {
+        this.embed = embed;
         return this;
     }
     
-    
-    public GetImageCollectionQueryParams queryParams;
-    public GetImageCollectionRequest withQueryParams(GetImageCollectionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Collection ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetImageCollectionRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetImageCollectionSecurity security;
-    public GetImageCollectionRequest withSecurity(GetImageCollectionSecurity security) {
-        this.security = security;
+    /**
+     * Code to retrieve a shared collection
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=share_code")
+    public String shareCode;
+    public GetImageCollectionRequest withShareCode(String shareCode) {
+        this.shareCode = shareCode;
         return this;
     }
     

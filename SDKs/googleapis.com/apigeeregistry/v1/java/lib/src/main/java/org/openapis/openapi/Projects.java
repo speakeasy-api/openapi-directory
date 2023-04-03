@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates a specified API.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateResponse apigeeregistryProjectsLocationsApisCreate(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateResponse apigeeregistryProjectsLocationsApisCreate(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreatePathParams.class, baseUrl, "/v1/{parent}/apis", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateRequest.class, baseUrl, "/v1/{parent}/apis", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Projects {
     /**
      * Creates a specified deployment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsCreateResponse apigeeregistryProjectsLocationsApisDeploymentsCreate(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsCreateResponse apigeeregistryProjectsLocationsApisDeploymentsCreate(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsCreateRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsCreatePathParams.class, baseUrl, "/v1/{parent}/deployments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsCreateRequest.class, baseUrl, "/v1/{parent}/deployments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiDeploymentInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,25 +131,26 @@ public class Projects {
     /**
      * Returns matching deployments.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsListResponse apigeeregistryProjectsLocationsApisDeploymentsList(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsListResponse apigeeregistryProjectsLocationsApisDeploymentsList(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsListRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsListPathParams.class, baseUrl, "/v1/{parent}/deployments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsListRequest.class, baseUrl, "/v1/{parent}/deployments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisDeploymentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Projects {
     /**
      * Returns matching APIs.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisListResponse apigeeregistryProjectsLocationsApisList(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisListResponse apigeeregistryProjectsLocationsApisList(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisListRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisListPathParams.class, baseUrl, "/v1/{parent}/apis", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisListRequest.class, baseUrl, "/v1/{parent}/apis", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,27 +223,28 @@ public class Projects {
     /**
      * Creates a specified version.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsCreateResponse apigeeregistryProjectsLocationsApisVersionsCreate(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsCreateResponse apigeeregistryProjectsLocationsApisVersionsCreate(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsCreateRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsCreatePathParams.class, baseUrl, "/v1/{parent}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsCreateRequest.class, baseUrl, "/v1/{parent}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiVersionInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,25 +271,26 @@ public class Projects {
     /**
      * Returns matching versions.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsListResponse apigeeregistryProjectsLocationsApisVersionsList(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsListResponse apigeeregistryProjectsLocationsApisVersionsList(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsListRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsListPathParams.class, baseUrl, "/v1/{parent}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsListRequest.class, baseUrl, "/v1/{parent}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,27 +317,28 @@ public class Projects {
     /**
      * Creates a specified spec.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsCreateResponse apigeeregistryProjectsLocationsApisVersionsSpecsCreate(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsCreateResponse apigeeregistryProjectsLocationsApisVersionsSpecsCreate(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsCreateRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsCreatePathParams.class, baseUrl, "/v1/{parent}/specs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsCreateRequest.class, baseUrl, "/v1/{parent}/specs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiSpecInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,25 +365,26 @@ public class Projects {
     /**
      * Deletes a revision of a spec.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionResponse apigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevision(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionResponse apigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevision(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionPathParams.class, baseUrl, "/v1/{name}:deleteRevision", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionRequest.class, baseUrl, "/v1/{name}:deleteRevision", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -403,25 +411,26 @@ public class Projects {
     /**
      * Returns matching specs.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListResponse apigeeregistryProjectsLocationsApisVersionsSpecsList(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListResponse apigeeregistryProjectsLocationsApisVersionsSpecsList(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListPathParams.class, baseUrl, "/v1/{parent}/specs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRequest.class, baseUrl, "/v1/{parent}/specs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -448,25 +457,26 @@ public class Projects {
     /**
      * Lists all revisions of a spec. Revisions are returned in descending order of revision creation time.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsResponse apigeeregistryProjectsLocationsApisVersionsSpecsListRevisions(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsResponse apigeeregistryProjectsLocationsApisVersionsSpecsListRevisions(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsPathParams.class, baseUrl, "/v1/{name}:listRevisions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest.class, baseUrl, "/v1/{name}:listRevisions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -493,27 +503,28 @@ public class Projects {
     /**
      * Used to modify a specified spec.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsPatchResponse apigeeregistryProjectsLocationsApisVersionsSpecsPatch(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsPatchResponse apigeeregistryProjectsLocationsApisVersionsSpecsPatch(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsPatchRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiSpecInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -540,27 +551,28 @@ public class Projects {
     /**
      * Sets the current revision to a specified prior revision. Note that this creates a new revision with a new revision ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsRollbackResponse apigeeregistryProjectsLocationsApisVersionsSpecsRollback(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsRollbackRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsRollbackResponse apigeeregistryProjectsLocationsApisVersionsSpecsRollback(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsRollbackRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsRollbackSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsRollbackPathParams.class, baseUrl, "/v1/{name}:rollback", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsRollbackRequest.class, baseUrl, "/v1/{name}:rollback", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rollbackApiSpecRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsRollbackQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsRollbackRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -587,27 +599,28 @@ public class Projects {
     /**
      * Adds a tag to a specified revision of a spec.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsTagRevisionResponse apigeeregistryProjectsLocationsApisVersionsSpecsTagRevision(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsTagRevisionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsTagRevisionResponse apigeeregistryProjectsLocationsApisVersionsSpecsTagRevision(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsTagRevisionRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsTagRevisionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsTagRevisionPathParams.class, baseUrl, "/v1/{name}:tagRevision", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsTagRevisionRequest.class, baseUrl, "/v1/{name}:tagRevision", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "tagApiSpecRevisionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsTagRevisionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisVersionsSpecsTagRevisionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -634,27 +647,28 @@ public class Projects {
     /**
      * Creates a specified artifact.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsCreateResponse apigeeregistryProjectsLocationsArtifactsCreate(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsCreateResponse apigeeregistryProjectsLocationsArtifactsCreate(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsCreateRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsCreatePathParams.class, baseUrl, "/v1/{parent}/artifacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsCreateRequest.class, baseUrl, "/v1/{parent}/artifacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "artifactInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -681,25 +695,26 @@ public class Projects {
     /**
      * Returns the contents of a specified artifact. If artifacts are stored with GZip compression, the default behavior is to return the artifact uncompressed (the mime_type response field indicates the exact format returned).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsGetContentsResponse apigeeregistryProjectsLocationsArtifactsGetContents(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsGetContentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsGetContentsResponse apigeeregistryProjectsLocationsArtifactsGetContents(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsGetContentsRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsGetContentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsGetContentsPathParams.class, baseUrl, "/v1/{name}:getContents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsGetContentsRequest.class, baseUrl, "/v1/{name}:getContents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsGetContentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsGetContentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -726,25 +741,26 @@ public class Projects {
     /**
      * Returns matching artifacts.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsListResponse apigeeregistryProjectsLocationsArtifactsList(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsListResponse apigeeregistryProjectsLocationsArtifactsList(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsListRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsListPathParams.class, baseUrl, "/v1/{parent}/artifacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsListRequest.class, baseUrl, "/v1/{parent}/artifacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -771,27 +787,28 @@ public class Projects {
     /**
      * Used to replace a specified artifact.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsReplaceArtifactResponse apigeeregistryProjectsLocationsArtifactsReplaceArtifact(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsReplaceArtifactRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsReplaceArtifactResponse apigeeregistryProjectsLocationsArtifactsReplaceArtifact(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsReplaceArtifactRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsReplaceArtifactSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsReplaceArtifactPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsReplaceArtifactRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "artifactInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsReplaceArtifactQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsArtifactsReplaceArtifactRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -818,27 +835,28 @@ public class Projects {
     /**
      * Provisions instance resources for the Registry.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsInstancesCreateResponse apigeeregistryProjectsLocationsInstancesCreate(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsInstancesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsInstancesCreateResponse apigeeregistryProjectsLocationsInstancesCreate(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsInstancesCreateRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsInstancesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsInstancesCreatePathParams.class, baseUrl, "/v1/{parent}/instances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsInstancesCreateRequest.class, baseUrl, "/v1/{parent}/instances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instanceInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsInstancesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsInstancesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -865,25 +883,26 @@ public class Projects {
     /**
      * Lists information about the supported locations for this service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsListResponse apigeeregistryProjectsLocationsList(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsListResponse apigeeregistryProjectsLocationsList(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsListRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsListPathParams.class, baseUrl, "/v1/{name}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsListRequest.class, baseUrl, "/v1/{name}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -910,27 +929,28 @@ public class Projects {
     /**
      * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsCancelResponse apigeeregistryProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsCancelResponse apigeeregistryProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsCancelRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsCancelPathParams.class, baseUrl, "/v1/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsCancelRequest.class, baseUrl, "/v1/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -957,25 +977,26 @@ public class Projects {
     /**
      * Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsDeleteResponse apigeeregistryProjectsLocationsOperationsDelete(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsDeleteResponse apigeeregistryProjectsLocationsOperationsDelete(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsDeleteRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1002,25 +1023,26 @@ public class Projects {
     /**
      * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsGetResponse apigeeregistryProjectsLocationsOperationsGet(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsGetResponse apigeeregistryProjectsLocationsOperationsGet(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsGetRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1047,25 +1069,26 @@ public class Projects {
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/* /operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsListResponse apigeeregistryProjectsLocationsOperationsList(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsListResponse apigeeregistryProjectsLocationsOperationsList(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsListRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsListPathParams.class, baseUrl, "/v1/{name}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsListRequest.class, baseUrl, "/v1/{name}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1092,25 +1115,26 @@ public class Projects {
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeGetIamPolicyResponse apigeeregistryProjectsLocationsRuntimeGetIamPolicy(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeGetIamPolicyResponse apigeeregistryProjectsLocationsRuntimeGetIamPolicy(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeGetIamPolicyRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeGetIamPolicyPathParams.class, baseUrl, "/v1/{resource}:getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeGetIamPolicyRequest.class, baseUrl, "/v1/{resource}:getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1137,27 +1161,28 @@ public class Projects {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeSetIamPolicyResponse apigeeregistryProjectsLocationsRuntimeSetIamPolicy(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeSetIamPolicyResponse apigeeregistryProjectsLocationsRuntimeSetIamPolicy(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeSetIamPolicyRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeSetIamPolicyPathParams.class, baseUrl, "/v1/{resource}:setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeSetIamPolicyRequest.class, baseUrl, "/v1/{resource}:setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1184,27 +1209,28 @@ public class Projects {
     /**
      * Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeTestIamPermissionsResponse apigeeregistryProjectsLocationsRuntimeTestIamPermissions(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeTestIamPermissionsResponse apigeeregistryProjectsLocationsRuntimeTestIamPermissions(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeTestIamPermissionsRequest request, org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeTestIamPermissionsPathParams.class, baseUrl, "/v1/{resource}:testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeTestIamPermissionsRequest.class, baseUrl, "/v1/{resource}:testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testIamPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsRuntimeTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

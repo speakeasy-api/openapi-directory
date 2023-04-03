@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPayoutSummaryV3Request {
-    
-    public GetPayoutSummaryV3PathParams pathParams;
-    public GetPayoutSummaryV3Request withPathParams(GetPayoutSummaryV3PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the payout
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payoutId")
+    public String payoutId;
+    public GetPayoutSummaryV3Request withPayoutId(String payoutId) {
+        this.payoutId = payoutId;
         return this;
     }
     

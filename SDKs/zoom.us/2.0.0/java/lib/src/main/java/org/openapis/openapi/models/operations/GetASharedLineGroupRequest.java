@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetASharedLineGroupRequest {
-    
-    public GetASharedLineGroupPathParams pathParams;
-    public GetASharedLineGroupRequest withPathParams(GetASharedLineGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique Identifier of the Shared Line Group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sharedLineGroupId")
+    public String sharedLineGroupId;
+    public GetASharedLineGroupRequest withSharedLineGroupId(String sharedLineGroupId) {
+        this.sharedLineGroupId = sharedLineGroupId;
         return this;
     }
     

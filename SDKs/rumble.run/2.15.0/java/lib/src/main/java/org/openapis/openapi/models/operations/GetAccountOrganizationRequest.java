@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountOrganizationRequest {
-    
-    public GetAccountOrganizationPathParams pathParams;
-    public GetAccountOrganizationRequest withPathParams(GetAccountOrganizationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetAccountOrganizationSecurity security;
-    public GetAccountOrganizationRequest withSecurity(GetAccountOrganizationSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the organization to retrieve
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_id")
+    public String orgId;
+    public GetAccountOrganizationRequest withOrgId(String orgId) {
+        this.orgId = orgId;
         return this;
     }
     

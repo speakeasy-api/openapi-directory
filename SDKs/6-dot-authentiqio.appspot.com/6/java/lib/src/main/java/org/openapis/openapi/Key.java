@@ -40,7 +40,7 @@ public class Key {
      */
     public org.openapis.openapi.models.operations.HeadKeyPKResponse headKeyPK(org.openapis.openapi.models.operations.HeadKeyPKRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.HeadKeyPKPathParams.class, baseUrl, "/key/{PK}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.HeadKeyPKRequest.class, baseUrl, "/key/{PK}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("HEAD");
@@ -79,12 +79,12 @@ public class Key {
      */
     public org.openapis.openapi.models.operations.KeyBindResponse keyBind(org.openapis.openapi.models.operations.KeyBindRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.KeyBindPathParams.class, baseUrl, "/key/{PK}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.KeyBindRequest.class, baseUrl, "/key/{PK}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -135,7 +135,7 @@ public class Key {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.KeyRegisterResponse keyRegister(org.openapis.openapi.models.operations.KeyRegisterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.KeyRegisterResponse keyRegister(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/key");
         
@@ -195,7 +195,7 @@ public class Key {
      */
     public org.openapis.openapi.models.operations.KeyRetrieveResponse keyRetrieve(org.openapis.openapi.models.operations.KeyRetrieveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.KeyRetrievePathParams.class, baseUrl, "/key/{PK}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.KeyRetrieveRequest.class, baseUrl, "/key/{PK}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -248,13 +248,13 @@ public class Key {
      */
     public org.openapis.openapi.models.operations.KeyRevokeResponse keyRevoke(org.openapis.openapi.models.operations.KeyRevokeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.KeyRevokePathParams.class, baseUrl, "/key/{PK}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.KeyRevokeRequest.class, baseUrl, "/key/{PK}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.KeyRevokeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.KeyRevokeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -313,7 +313,7 @@ public class Key {
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.KeyRevokeNosecretQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.KeyRevokeNosecretRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -366,12 +366,12 @@ public class Key {
      */
     public org.openapis.openapi.models.operations.KeyUpdateResponse keyUpdate(org.openapis.openapi.models.operations.KeyUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.KeyUpdatePathParams.class, baseUrl, "/key/{PK}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.KeyUpdateRequest.class, baseUrl, "/key/{PK}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutDriversIdRequest {
-    
-    public PutDriversIdPathParams pathParams;
-    public PutDriversIdRequest withPathParams(PutDriversIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Driver driver;
+    public PutDriversIdRequest withDriver(org.openapis.openapi.models.shared.Driver driver) {
+        this.driver = driver;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Driver request;
-    public PutDriversIdRequest withRequest(org.openapis.openapi.models.shared.Driver request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PutDriversIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSiteRequest {
-    
-    public UpdateSitePathParams pathParams;
-    public UpdateSiteRequest withPathParams(UpdateSitePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * site object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SiteOptions request;
-    public UpdateSiteRequest withRequest(org.openapis.openapi.models.shared.SiteOptions request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SiteOptions siteOptions;
+    public UpdateSiteRequest withSiteOptions(org.openapis.openapi.models.shared.SiteOptions siteOptions) {
+        this.siteOptions = siteOptions;
         return this;
     }
     
-    
-    public UpdateSiteSecurity security;
-    public UpdateSiteRequest withSecurity(UpdateSiteSecurity security) {
-        this.security = security;
+    /**
+     * UUID or name of the site to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=site_id")
+    public String siteId;
+    public UpdateSiteRequest withSiteId(String siteId) {
+        this.siteId = siteId;
         return this;
     }
     

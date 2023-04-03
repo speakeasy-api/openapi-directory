@@ -83,7 +83,7 @@ public class Spotsets {
      */
     public org.openapis.openapi.models.operations.GetSpotsetsIdResponse getSpotsetsId(org.openapis.openapi.models.operations.GetSpotsetsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpotsetsIdPathParams.class, baseUrl, "/spotsets/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpotsetsIdRequest.class, baseUrl, "/spotsets/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,7 +120,7 @@ public class Spotsets {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSpotsetsResponse postSpotsets(org.openapis.openapi.models.operations.PostSpotsetsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSpotsetsResponse postSpotsets(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/spotsets");
         
@@ -166,12 +166,12 @@ public class Spotsets {
      */
     public org.openapis.openapi.models.operations.PutSpotsetsIdResponse putSpotsetsId(org.openapis.openapi.models.operations.PutSpotsetsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSpotsetsIdPathParams.class, baseUrl, "/spotsets/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSpotsetsIdRequest.class, baseUrl, "/spotsets/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "spotSetUpdate", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

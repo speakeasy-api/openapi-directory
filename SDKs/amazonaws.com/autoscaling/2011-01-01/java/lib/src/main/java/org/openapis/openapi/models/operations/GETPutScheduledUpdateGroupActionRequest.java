@@ -4,20 +4,170 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPutScheduledUpdateGroupActionRequest {
-    
-    public GETPutScheduledUpdateGroupActionQueryParams queryParams;
-    public GETPutScheduledUpdateGroupActionRequest withQueryParams(GETPutScheduledUpdateGroupActionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETPutScheduledUpdateGroupActionActionEnum action;
+    public GETPutScheduledUpdateGroupActionRequest withAction(GETPutScheduledUpdateGroupActionActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the Auto Scaling group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
+    public String autoScalingGroupName;
+    public GETPutScheduledUpdateGroupActionRequest withAutoScalingGroupName(String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        return this;
+    }
     
-    public GETPutScheduledUpdateGroupActionHeaders headers;
-    public GETPutScheduledUpdateGroupActionRequest withHeaders(GETPutScheduledUpdateGroupActionHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The desired capacity is the initial capacity of the Auto Scaling group after the scheduled action runs and the capacity it attempts to maintain. It can scale beyond this capacity if you add more scaling conditions. &lt;/p&gt; &lt;note&gt; &lt;p&gt;You must specify at least one of the following properties: &lt;code&gt;MaxSize&lt;/code&gt;, &lt;code&gt;MinSize&lt;/code&gt;, or &lt;code&gt;DesiredCapacity&lt;/code&gt;. &lt;/p&gt; &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DesiredCapacity")
+    public Long desiredCapacity;
+    public GETPutScheduledUpdateGroupActionRequest withDesiredCapacity(Long desiredCapacity) {
+        this.desiredCapacity = desiredCapacity;
+        return this;
+    }
+    
+    /**
+     * The date and time for the recurring schedule to end, in UTC. For example, &lt;code&gt;"2021-06-01T00:00:00Z"&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndTime")
+    public OffsetDateTime endTime;
+    public GETPutScheduledUpdateGroupActionRequest withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    /**
+     * The maximum size of the Auto Scaling group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxSize")
+    public Long maxSize;
+    public GETPutScheduledUpdateGroupActionRequest withMaxSize(Long maxSize) {
+        this.maxSize = maxSize;
+        return this;
+    }
+    
+    /**
+     * The minimum size of the Auto Scaling group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MinSize")
+    public Long minSize;
+    public GETPutScheduledUpdateGroupActionRequest withMinSize(Long minSize) {
+        this.minSize = minSize;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The recurring schedule for this action. This format consists of five fields separated by white spaces: [Minute] [Hour] [Day_of_Month] [Month_of_Year] [Day_of_Week]. The value must be in quotes (for example, &lt;code&gt;"30 0 1 1,6,12 *"&lt;/code&gt;). For more information about this format, see &lt;a href="http://crontab.org"&gt;Crontab&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;When &lt;code&gt;StartTime&lt;/code&gt; and &lt;code&gt;EndTime&lt;/code&gt; are specified with &lt;code&gt;Recurrence&lt;/code&gt;, they form the boundaries of when the recurring action starts and stops.&lt;/p&gt; &lt;p&gt;Cron expressions use Universal Coordinated Time (UTC) by default.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Recurrence")
+    public String recurrence;
+    public GETPutScheduledUpdateGroupActionRequest withRecurrence(String recurrence) {
+        this.recurrence = recurrence;
+        return this;
+    }
+    
+    /**
+     * The name of this scaling action.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ScheduledActionName")
+    public String scheduledActionName;
+    public GETPutScheduledUpdateGroupActionRequest withScheduledActionName(String scheduledActionName) {
+        this.scheduledActionName = scheduledActionName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The date and time for this action to start, in YYYY-MM-DDThh:mm:ssZ format in UTC/GMT only and in quotes (for example, &lt;code&gt;"2021-06-01T00:00:00Z"&lt;/code&gt;).&lt;/p&gt; &lt;p&gt;If you specify &lt;code&gt;Recurrence&lt;/code&gt; and &lt;code&gt;StartTime&lt;/code&gt;, Amazon EC2 Auto Scaling performs the action at this time, and then performs the action based on the specified recurrence.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartTime")
+    public OffsetDateTime startTime;
+    public GETPutScheduledUpdateGroupActionRequest withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    
+    /**
+     * This property is no longer used.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Time")
+    public OffsetDateTime time;
+    public GETPutScheduledUpdateGroupActionRequest withTime(OffsetDateTime time) {
+        this.time = time;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Specifies the time zone for a cron expression. If a time zone is not provided, UTC is used by default. &lt;/p&gt; &lt;p&gt;Valid values are the canonical names of the IANA time zones, derived from the IANA Time Zone Database (such as &lt;code&gt;Etc/GMT+9&lt;/code&gt; or &lt;code&gt;Pacific/Tahiti&lt;/code&gt;). For more information, see &lt;a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"&gt;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&lt;/a&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TimeZone")
+    public String timeZone;
+    public GETPutScheduledUpdateGroupActionRequest withTimeZone(String timeZone) {
+        this.timeZone = timeZone;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETPutScheduledUpdateGroupActionVersionEnum version;
+    public GETPutScheduledUpdateGroupActionRequest withVersion(GETPutScheduledUpdateGroupActionVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETPutScheduledUpdateGroupActionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETPutScheduledUpdateGroupActionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETPutScheduledUpdateGroupActionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETPutScheduledUpdateGroupActionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETPutScheduledUpdateGroupActionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETPutScheduledUpdateGroupActionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETPutScheduledUpdateGroupActionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

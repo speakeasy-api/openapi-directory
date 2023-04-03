@@ -4,20 +4,93 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkWirelessDevicesLatencyStatsRequest {
-    
-    public GetNetworkWirelessDevicesLatencyStatsPathParams pathParams;
-    public GetNetworkWirelessDevicesLatencyStatsRequest withPathParams(GetNetworkWirelessDevicesLatencyStatsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter results by AP Tag
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apTag")
+    public String apTag;
+    public GetNetworkWirelessDevicesLatencyStatsRequest withApTag(String apTag) {
+        this.apTag = apTag;
         return this;
     }
     
+    /**
+     * Filter results by band (either '2.4', '5' or '6'). Note that data prior to February 2020 will not have band information.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=band")
+    public GetNetworkWirelessDevicesLatencyStatsBandEnum band;
+    public GetNetworkWirelessDevicesLatencyStatsRequest withBand(GetNetworkWirelessDevicesLatencyStatsBandEnum band) {
+        this.band = band;
+        return this;
+    }
     
-    public GetNetworkWirelessDevicesLatencyStatsQueryParams queryParams;
-    public GetNetworkWirelessDevicesLatencyStatsRequest withQueryParams(GetNetworkWirelessDevicesLatencyStatsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GetNetworkWirelessDevicesLatencyStatsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkWirelessDevicesLatencyStatsRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    /**
+     * Filter results by SSID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ssid")
+    public Long ssid;
+    public GetNetworkWirelessDevicesLatencyStatsRequest withSsid(Long ssid) {
+        this.ssid = ssid;
+        return this;
+    }
+    
+    /**
+     * The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
+    public String t0;
+    public GetNetworkWirelessDevicesLatencyStatsRequest withT0(String t0) {
+        this.t0 = t0;
+        return this;
+    }
+    
+    /**
+     * The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t1")
+    public String t1;
+    public GetNetworkWirelessDevicesLatencyStatsRequest withT1(String t1) {
+        this.t1 = t1;
+        return this;
+    }
+    
+    /**
+     * The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
+    public Float timespan;
+    public GetNetworkWirelessDevicesLatencyStatsRequest withTimespan(Float timespan) {
+        this.timespan = timespan;
+        return this;
+    }
+    
+    /**
+     * Filter results by VLAN
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vlan")
+    public Long vlan;
+    public GetNetworkWirelessDevicesLatencyStatsRequest withVlan(Long vlan) {
+        this.vlan = vlan;
         return this;
     }
     

@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.BatchCreatePartitionXAmzTargetEnum;
-import org.openapis.openapi.models.operations.BatchCreatePartitionHeaders;
 import org.openapis.openapi.models.operations.BatchCreatePartitionRequest;
 import org.openapis.openapi.models.operations.BatchCreatePartitionResponse;
 import org.openapis.openapi.models.shared.BatchCreatePartitionRequest;
@@ -23,115 +22,111 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchCreatePartitionRequest req = new BatchCreatePartitionRequest() {{
-                headers = new BatchCreatePartitionHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AWSGlue.BatchCreatePartition";
-                }};
-                request = new BatchCreatePartitionRequest() {{
-                    catalogId = "illum";
-                    databaseName = "vel";
+                batchCreatePartitionRequest = new BatchCreatePartitionRequest() {{
+                    catalogId = "corrupti";
+                    databaseName = "provident";
                     partitionInputList = new org.openapis.openapi.models.shared.PartitionInput[]{{
                         add(new PartitionInput() {{
-                            lastAccessTime = "2022-03-26T09:37:56.283Z";
-                            lastAnalyzedTime = "2022-09-14T09:35:47.986Z";
+                            lastAccessTime = "2021-03-11T23:22:42.658Z";
+                            lastAnalyzedTime = "2021-05-14T08:28:11.899Z";
                             parameters = new java.util.HashMap<String, String>() {{
-                                put("ipsa", "delectus");
-                                put("tempora", "suscipit");
-                                put("molestiae", "minus");
-                                put("placeat", "voluptatum");
+                                put("vel", "error");
+                                put("deserunt", "suscipit");
+                                put("iure", "magnam");
+                                put("debitis", "ipsa");
                             }};
                             storageDescriptor = new StorageDescriptor() {{
                                 additionalLocations = new String[]{{
+                                    add("tempora"),
+                                    add("suscipit"),
+                                    add("molestiae"),
+                                    add("minus"),
+                                }};
+                                bucketColumns = new String[]{{
+                                    add("voluptatum"),
+                                    add("iusto"),
                                     add("excepturi"),
                                     add("nisi"),
                                 }};
-                                bucketColumns = new String[]{{
-                                    add("temporibus"),
-                                    add("ab"),
-                                    add("quis"),
-                                    add("veritatis"),
-                                }};
                                 columns = new org.openapis.openapi.models.shared.Column[]{{
                                     add(new Column() {{
-                                        comment = "perferendis";
-                                        name = "ipsam";
+                                        comment = "temporibus";
+                                        name = "ab";
                                         parameters = new java.util.HashMap<String, String>() {{
-                                            put("sapiente", "quo");
-                                            put("odit", "at");
-                                            put("at", "maiores");
-                                            put("molestiae", "quod");
+                                            put("veritatis", "deserunt");
+                                            put("perferendis", "ipsam");
                                         }};
-                                        type = "quod";
+                                        type = "repellendus";
                                     }}),
                                     add(new Column() {{
-                                        comment = "esse";
-                                        name = "totam";
+                                        comment = "sapiente";
+                                        name = "quo";
                                         parameters = new java.util.HashMap<String, String>() {{
-                                            put("dolorum", "dicta");
-                                            put("nam", "officia");
-                                            put("occaecati", "fugit");
-                                            put("deleniti", "hic");
+                                            put("at", "at");
                                         }};
-                                        type = "optio";
+                                        type = "maiores";
                                     }}),
                                     add(new Column() {{
-                                        comment = "totam";
-                                        name = "beatae";
+                                        comment = "molestiae";
+                                        name = "quod";
                                         parameters = new java.util.HashMap<String, String>() {{
-                                            put("molestiae", "modi");
-                                            put("qui", "impedit");
+                                            put("esse", "totam");
+                                            put("porro", "dolorum");
+                                            put("dicta", "nam");
+                                            put("officia", "occaecati");
                                         }};
-                                        type = "cum";
+                                        type = "fugit";
+                                    }}),
+                                    add(new Column() {{
+                                        comment = "deleniti";
+                                        name = "hic";
+                                        parameters = new java.util.HashMap<String, String>() {{
+                                            put("totam", "beatae");
+                                            put("commodi", "molestiae");
+                                            put("modi", "qui");
+                                            put("impedit", "cum");
+                                        }};
+                                        type = "esse";
                                     }}),
                                 }};
                                 compressed = false;
-                                inputFormat = "esse";
-                                location = "ipsum";
-                                numberOfBuckets = 568434;
-                                outputFormat = "aspernatur";
+                                inputFormat = "ipsum";
+                                location = "excepturi";
+                                numberOfBuckets = 135218;
+                                outputFormat = "perferendis";
                                 parameters = new java.util.HashMap<String, String>() {{
-                                    put("ad", "natus");
+                                    put("natus", "sed");
+                                    put("iste", "dolor");
                                 }};
                                 schemaReference = new SchemaReference() {{
                                     schemaId = new SchemaId() {{
-                                        registryName = "sed";
-                                        schemaArn = "iste";
-                                        schemaName = "dolor";
+                                        registryName = "natus";
+                                        schemaArn = "laboriosam";
+                                        schemaName = "hic";
                                     }};
-                                    schemaVersionId = "natus";
-                                    schemaVersionNumber = 386489;
+                                    schemaVersionId = "saepe";
+                                    schemaVersionNumber = 681820;
                                 }};
                                 serdeInfo = new SerDeInfo() {{
-                                    name = "hic";
+                                    name = "in";
                                     parameters = new java.util.HashMap<String, String>() {{
-                                        put("fuga", "in");
-                                        put("corporis", "iste");
-                                        put("iure", "saepe");
-                                        put("quidem", "architecto");
+                                        put("iste", "iure");
+                                        put("saepe", "quidem");
                                     }};
-                                    serializationLibrary = "ipsa";
+                                    serializationLibrary = "architecto";
                                 }};
                                 skewedInfo = new SkewedInfo() {{
                                     skewedColumnNames = new String[]{{
-                                        add("est"),
-                                        add("mollitia"),
-                                        add("laborum"),
-                                        add("dolores"),
+                                        add("reiciendis"),
                                     }};
                                     skewedColumnValueLocationMaps = new java.util.HashMap<String, String>() {{
+                                        put("mollitia", "laborum");
+                                        put("dolores", "dolorem");
                                         put("corporis", "explicabo");
                                     }};
                                     skewedColumnValues = new String[]{{
@@ -403,7 +398,15 @@ public class Application {
                     }};
                     tableName = "accusantium";
                 }};
-            }};            
+                xAmzAlgorithm = "ab";
+                xAmzContentSha256 = "maiores";
+                xAmzCredential = "quidem";
+                xAmzDate = "ipsam";
+                xAmzSecurityToken = "voluptate";
+                xAmzSignature = "autem";
+                xAmzSignedHeaders = "nam";
+                xAmzTarget = "AWSGlue.BatchCreatePartition";
+            }}            
 
             BatchCreatePartitionResponse res = sdk.batchCreatePartition(req);
 

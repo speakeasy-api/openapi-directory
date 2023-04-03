@@ -45,10 +45,11 @@ public class MobileAuthorization {
      * Replace `ACCESS_TOKEN` with a
      * [valid production authorization credential](https://developer.squareup.com/docs/build-basics/access-tokens).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateMobileAuthorizationCodeResponse createMobileAuthorizationCode(org.openapis.openapi.models.operations.CreateMobileAuthorizationCodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateMobileAuthorizationCodeResponse createMobileAuthorizationCode(org.openapis.openapi.models.shared.CreateMobileAuthorizationCodeRequest request, org.openapis.openapi.models.operations.CreateMobileAuthorizationCodeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/mobile/authorization-code");
         
@@ -62,7 +63,7 @@ public class MobileAuthorization {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

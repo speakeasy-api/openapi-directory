@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRealmAuthenticationRequiredActionsAliasRequest {
-    
-    public PutRealmAuthenticationRequiredActionsAliasPathParams pathParams;
-    public PutRealmAuthenticationRequiredActionsAliasRequest withPathParams(PutRealmAuthenticationRequiredActionsAliasPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * JSON describing new state of required action
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RequiredActionProviderRepresentation request;
-    public PutRealmAuthenticationRequiredActionsAliasRequest withRequest(org.openapis.openapi.models.shared.RequiredActionProviderRepresentation request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RequiredActionProviderRepresentation requiredActionProviderRepresentation;
+    public PutRealmAuthenticationRequiredActionsAliasRequest withRequiredActionProviderRepresentation(org.openapis.openapi.models.shared.RequiredActionProviderRepresentation requiredActionProviderRepresentation) {
+        this.requiredActionProviderRepresentation = requiredActionProviderRepresentation;
+        return this;
+    }
+    
+    /**
+     * Alias of required action
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=alias")
+    public String alias;
+    public PutRealmAuthenticationRequiredActionsAliasRequest withAlias(String alias) {
+        this.alias = alias;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PutRealmAuthenticationRequiredActionsAliasRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

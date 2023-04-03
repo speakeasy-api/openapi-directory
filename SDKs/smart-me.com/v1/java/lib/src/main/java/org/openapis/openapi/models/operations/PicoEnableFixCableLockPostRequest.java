@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PicoEnableFixCableLockPostRequest {
-    
-    public PicoEnableFixCableLockPostPathParams pathParams;
-    public PicoEnableFixCableLockPostRequest withPathParams(PicoEnableFixCableLockPostPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the pico
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PicoEnableFixCableLockPostRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

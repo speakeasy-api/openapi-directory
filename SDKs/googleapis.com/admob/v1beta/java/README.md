@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AdmobAccountsAdSourcesListPathParams;
-import org.openapis.openapi.models.operations.AdmobAccountsAdSourcesListQueryParams;
 import org.openapis.openapi.models.operations.AdmobAccountsAdSourcesListRequest;
 import org.openapis.openapi.models.operations.AdmobAccountsAdSourcesListResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -31,25 +29,21 @@ public class Application {
                 .build();
 
             AdmobAccountsAdSourcesListRequest req = new AdmobAccountsAdSourcesListRequest() {{
-                pathParams = new AdmobAccountsAdSourcesListPathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new AdmobAccountsAdSourcesListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    pageSize = 423655;
-                    pageToken = "error";
-                    prettyPrint = false;
-                    quotaUser = "deserunt";
-                    uploadType = "suscipit";
-                    uploadProtocol = "iure";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                key = "nulla";
+                oauthToken = "corrupti";
+                pageSize = 847252;
+                pageToken = "vel";
+                parent = "error";
+                prettyPrint = false;
+                quotaUser = "deserunt";
+                uploadType = "suscipit";
+                uploadProtocol = "iure";
+            }}            
 
             AdmobAccountsAdSourcesListResponse res = sdk.accounts.admobAccountsAdSourcesList(req);
 
@@ -63,7 +57,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### accounts

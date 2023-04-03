@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GeocodeReverseRequest {
+    /**
+     * The language to display results in, available languages are: &lt;ul&gt; &lt;li&gt;de, en, es, fr, it, pt, ru&lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language-code")
+    public String languageCode;
+    public GeocodeReverseRequest withLanguageCode(String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+    }
     
-    public GeocodeReverseQueryParams queryParams;
-    public GeocodeReverseRequest withQueryParams(GeocodeReverseQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The location latitude in decimal degrees format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latitude")
+    public String latitude;
+    public GeocodeReverseRequest withLatitude(String latitude) {
+        this.latitude = latitude;
+        return this;
+    }
+    
+    /**
+     * The location longitude in decimal degrees format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longitude")
+    public String longitude;
+    public GeocodeReverseRequest withLongitude(String longitude) {
+        this.longitude = longitude;
+        return this;
+    }
+    
+    /**
+     * The zoom level to respond with: &lt;br&gt; &lt;ul&gt; &lt;li&gt;address - the most precise address available&lt;/li&gt; &lt;li&gt;street - the street level&lt;/li&gt; &lt;li&gt;city - the city level&lt;/li&gt; &lt;li&gt;state - the state level&lt;/li&gt; &lt;li&gt;country - the country level&lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zoom")
+    public String zoom;
+    public GeocodeReverseRequest withZoom(String zoom) {
+        this.zoom = zoom;
         return this;
     }
     

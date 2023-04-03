@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScoreboardRequest {
+    /**
+     * Classification filter (fbs, fcs, ii, or iii). Defaults to fbs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classification")
+    public String classification;
+    public GetScoreboardRequest withClassification(String classification) {
+        this.classification = classification;
+        return this;
+    }
     
-    public GetScoreboardQueryParams queryParams;
-    public GetScoreboardRequest withQueryParams(GetScoreboardQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Conference abbreviation filter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
+    public String conference;
+    public GetScoreboardRequest withConference(String conference) {
+        this.conference = conference;
         return this;
     }
     

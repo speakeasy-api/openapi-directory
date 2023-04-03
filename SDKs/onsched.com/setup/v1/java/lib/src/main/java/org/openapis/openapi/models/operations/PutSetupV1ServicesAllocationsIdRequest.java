@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1ServicesAllocationsIdRequest {
-    
-    public PutSetupV1ServicesAllocationsIdPathParams pathParams;
-    public PutSetupV1ServicesAllocationsIdRequest withPathParams(PutSetupV1ServicesAllocationsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Service allocation update model
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ServiceAllocationUpdateModel request;
-    public PutSetupV1ServicesAllocationsIdRequest withRequest(org.openapis.openapi.models.shared.ServiceAllocationUpdateModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ServiceAllocationUpdateModel serviceAllocationUpdateModel;
+    public PutSetupV1ServicesAllocationsIdRequest withServiceAllocationUpdateModel(org.openapis.openapi.models.shared.ServiceAllocationUpdateModel serviceAllocationUpdateModel) {
+        this.serviceAllocationUpdateModel = serviceAllocationUpdateModel;
+        return this;
+    }
+    
+    /**
+     * id of serviceAllocation object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutSetupV1ServicesAllocationsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

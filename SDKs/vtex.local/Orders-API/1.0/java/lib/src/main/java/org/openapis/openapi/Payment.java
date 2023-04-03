@@ -40,13 +40,13 @@ public class Payment {
      */
     public org.openapis.openapi.models.operations.GetPaymenttransactionResponse getPaymenttransaction(org.openapis.openapi.models.operations.GetPaymenttransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymenttransactionPathParams.class, baseUrl, "/api/oms/pvt/orders/{orderId}/payment-transaction", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymenttransactionRequest.class, baseUrl, "/api/oms/pvt/orders/{orderId}/payment-transaction", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -90,13 +90,13 @@ public class Payment {
      */
     public org.openapis.openapi.models.operations.SendPaymentNotificationResponse sendPaymentNotification(org.openapis.openapi.models.operations.SendPaymentNotificationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendPaymentNotificationPathParams.class, baseUrl, "/api/oms/pvt/orders/{orderId}/payments/{paymentId}/payment-notification", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendPaymentNotificationRequest.class, baseUrl, "/api/oms/pvt/orders/{orderId}/payments/{paymentId}/payment-notification", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

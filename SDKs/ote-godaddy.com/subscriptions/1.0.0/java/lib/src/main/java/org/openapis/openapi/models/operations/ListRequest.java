@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRequest {
-    
-    public ListQueryParams queryParams;
-    public ListRequest withQueryParams(ListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The market that the response should be formatted for
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Market-Id")
+    public String xMarketId;
+    public ListRequest withXMarketId(String xMarketId) {
+        this.xMarketId = xMarketId;
         return this;
     }
     
+    /**
+     * Shopper ID to return subscriptions for when not using JWT
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Shopper-Id")
+    public String xShopperId;
+    public ListRequest withXShopperId(String xShopperId) {
+        this.xShopperId = xShopperId;
+        return this;
+    }
     
-    public ListHeaders headers;
-    public ListRequest withHeaders(ListHeaders headers) {
-        this.headers = headers;
+    /**
+     * Optional details to be included in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=includes")
+    public ListIncludesEnum includes;
+    public ListRequest withIncludes(ListIncludesEnum includes) {
+        this.includes = includes;
+        return this;
+    }
+    
+    /**
+     * Number of Subscriptions to retrieve in this page, starting after offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Number of Subscriptions to skip before starting to return paged results (must be a multiple of the limit)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Only return Subscriptions with the specified product groups
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=productGroupKeys")
+    public String[] productGroupKeys;
+    public ListRequest withProductGroupKeys(String[] productGroupKeys) {
+        this.productGroupKeys = productGroupKeys;
+        return this;
+    }
+    
+    /**
+     * Property name that will be used to sort results. "-" indicates descending
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public ListSortEnum sort;
+    public ListRequest withSort(ListSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

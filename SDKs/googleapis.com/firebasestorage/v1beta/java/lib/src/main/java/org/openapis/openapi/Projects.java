@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Links a Google Cloud Storage bucket to a Firebase project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseResponse firebasestorageProjectsBucketsAddFirebase(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseResponse firebasestorageProjectsBucketsAddFirebase(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseRequest request, org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebasePathParams.class, baseUrl, "/v1beta/{bucket}:addFirebase", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseRequest.class, baseUrl, "/v1beta/{bucket}:addFirebase", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Gets a single linked storage bucket.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsGetResponse firebasestorageProjectsBucketsGet(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsGetResponse firebasestorageProjectsBucketsGet(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsGetRequest request, org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsGetPathParams.class, baseUrl, "/v1beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsGetRequest.class, baseUrl, "/v1beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Projects {
     /**
      * Lists the linked storage buckets for a project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsListResponse firebasestorageProjectsBucketsList(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsListResponse firebasestorageProjectsBucketsList(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsListRequest request, org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsListPathParams.class, baseUrl, "/v1beta/{parent}/buckets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsListRequest.class, baseUrl, "/v1beta/{parent}/buckets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,27 +175,28 @@ public class Projects {
     /**
      * Unlinks a linked Google Cloud Storage bucket from a Firebase project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsRemoveFirebaseResponse firebasestorageProjectsBucketsRemoveFirebase(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsRemoveFirebaseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsRemoveFirebaseResponse firebasestorageProjectsBucketsRemoveFirebase(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsRemoveFirebaseRequest request, org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsRemoveFirebaseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsRemoveFirebasePathParams.class, baseUrl, "/v1beta/{bucket}:removeFirebase", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsRemoveFirebaseRequest.class, baseUrl, "/v1beta/{bucket}:removeFirebase", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsRemoveFirebaseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsRemoveFirebaseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

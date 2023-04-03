@@ -39,7 +39,7 @@ public class Ssh {
      */
     public org.openapis.openapi.models.operations.ProtocolSshGetArgsResponse protocolSshGetArgs(org.openapis.openapi.models.operations.ProtocolSshGetArgsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSshGetArgsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ssh/get/args", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSshGetArgsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ssh/get/args", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -81,7 +81,7 @@ public class Ssh {
      */
     public org.openapis.openapi.models.operations.ProtocolSshGetConfigResponse protocolSshGetConfig(org.openapis.openapi.models.operations.ProtocolSshGetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSshGetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ssh/get/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSshGetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ssh/get/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -123,7 +123,7 @@ public class Ssh {
      */
     public org.openapis.openapi.models.operations.ProtocolSshGetStatisticsResponse protocolSshGetStatistics(org.openapis.openapi.models.operations.ProtocolSshGetStatisticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSshGetStatisticsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ssh/get/statistics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSshGetStatisticsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ssh/get/statistics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -206,7 +206,7 @@ public class Ssh {
      */
     public org.openapis.openapi.models.operations.ProtocolSshGetTraceResponse protocolSshGetTrace(org.openapis.openapi.models.operations.ProtocolSshGetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSshGetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ssh/get/trace", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSshGetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ssh/get/trace", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -248,7 +248,7 @@ public class Ssh {
      */
     public org.openapis.openapi.models.operations.ProtocolSshIpaliasDisableResponse protocolSshIpaliasDisable(org.openapis.openapi.models.operations.ProtocolSshIpaliasDisableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSshIpaliasDisablePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ssh/ipalias/disable/{ipaddress}/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSshIpaliasDisableRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ssh/ipalias/disable/{ipaddress}/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -289,7 +289,7 @@ public class Ssh {
      */
     public org.openapis.openapi.models.operations.ProtocolSshIpaliasEnableResponse protocolSshIpaliasEnable(org.openapis.openapi.models.operations.ProtocolSshIpaliasEnableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSshIpaliasEnablePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ssh/ipalias/enable/{ipaddress}/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSshIpaliasEnableRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ssh/ipalias/enable/{ipaddress}/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -330,7 +330,7 @@ public class Ssh {
      */
     public org.openapis.openapi.models.operations.ProtocolSshIpaliasIsenabledResponse protocolSshIpaliasIsenabled(org.openapis.openapi.models.operations.ProtocolSshIpaliasIsenabledRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSshIpaliasIsenabledPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ssh/ipalias/isenabled/{ipaddress}/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSshIpaliasIsenabledRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ssh/ipalias/isenabled/{ipaddress}/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -371,7 +371,7 @@ public class Ssh {
      */
     public org.openapis.openapi.models.operations.ProtocolSshIpaliasListResponse protocolSshIpaliasList(org.openapis.openapi.models.operations.ProtocolSshIpaliasListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSshIpaliasListPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ssh/ipalias/list", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSshIpaliasListRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ssh/ipalias/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -413,7 +413,7 @@ public class Ssh {
      */
     public org.openapis.openapi.models.operations.ProtocolSshSetConfigResponse protocolSshSetConfig(org.openapis.openapi.models.operations.ProtocolSshSetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSshSetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ssh/set/config/{argument}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSshSetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ssh/set/config/{argument}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -454,7 +454,7 @@ public class Ssh {
      */
     public org.openapis.openapi.models.operations.ProtocolSshSetTraceResponse protocolSshSetTrace(org.openapis.openapi.models.operations.ProtocolSshSetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSshSetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ssh/set/trace/{enableOrNot}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSshSetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ssh/set/trace/{enableOrNot}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

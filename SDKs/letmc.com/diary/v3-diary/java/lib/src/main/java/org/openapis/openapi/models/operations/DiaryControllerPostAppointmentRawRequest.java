@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerPostAppointmentRawRequest {
-    
-    public DiaryControllerPostAppointmentRawPathParams pathParams;
-    public DiaryControllerPostAppointmentRawRequest withPathParams(DiaryControllerPostAppointmentRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DiaryControllerPostAppointmentRawQueryParams queryParams;
-    public DiaryControllerPostAppointmentRawRequest withQueryParams(DiaryControllerPostAppointmentRawQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The appointment details model
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public DiaryControllerPostAppointmentRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public DiaryControllerPostAppointmentRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Sales or Lettings property?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lettings")
+    public Boolean lettings;
+    public DiaryControllerPostAppointmentRawRequest withLettings(Boolean lettings) {
+        this.lettings = lettings;
+        return this;
+    }
+    
+    /**
+     * The unique property identifier (Sales or Lettings)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyIdentifier")
+    public String[] propertyIdentifier;
+    public DiaryControllerPostAppointmentRawRequest withPropertyIdentifier(String[] propertyIdentifier) {
+        this.propertyIdentifier = propertyIdentifier;
+        return this;
+    }
+    
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public DiaryControllerPostAppointmentRawRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     
